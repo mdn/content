@@ -94,8 +94,3 @@ The following attributes can be set on `<annotation>` and `<annotation-xml>`:
 ## Browser compatibility
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- The algorithm of determining the visible child in `<semantics>` has been corrected in {{geckoRelease("23")}} to match the MathML specification. In prior versions the first child element has been rendered.
-- In Gecko `<annotation>` and `<annotation-xml>` elements are ignored if the `src` attribute is set.
