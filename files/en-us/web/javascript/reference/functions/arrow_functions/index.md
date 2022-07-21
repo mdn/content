@@ -199,8 +199,8 @@ const obj = { // does not create a new scope
   },
 }
 
-obj.b(); // prints undefined, Window { } (or the global object)
-obj.c(); // prints 10, Object { }
+obj.b(); // prints undefined, Window { /* … */ } (or the global object)
+obj.c(); // prints 10, Object { /* … */ }
 ```
 
 Arrow functions do not have their own `this`. Another example involving
