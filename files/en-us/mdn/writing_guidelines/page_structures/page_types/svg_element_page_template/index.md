@@ -1,11 +1,10 @@
 ---
 title: SVG element page template
-slug: MDN/Writing_guidelines/Page_structures/SVG_element_page_template
+slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
+page-type: mdn-writing-guide
 tags:
-  - Element
-  - SVG
-  - Template
-  - reference page
+  - meta
+  - writing-guide
 browser-compat: path.to.feature.NameOfTheElement
 ---
 {{MDNSidebar}}

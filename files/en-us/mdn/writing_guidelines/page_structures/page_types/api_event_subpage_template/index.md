@@ -1,12 +1,10 @@
 ---
 title: API event subpage template
-slug: MDN/Writing_guidelines/Page_structures/API_event_subpage_template
+slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
+page-type: mdn-writing-guide
 tags:
-  - API
-  - Event
-  - Event subpage
-  - Template
-  - Reference
+  - meta
+  - writing-guide
 browser-compat: path.to.feature.NameOfTheEvent_event
 ---
 {{MDNSidebar}}

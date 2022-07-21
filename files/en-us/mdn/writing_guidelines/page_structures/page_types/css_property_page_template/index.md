@@ -1,11 +1,10 @@
 ---
 title: CSS property page template
-slug: MDN/Writing_guidelines/Page_structures/CSS_property_page_template
+slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
+page-type: mdn-writing-guide
 tags:
-  - CSS
-  - Property
-  - Reference
-  - Template
+  - meta
+  - writing-guide
 browser-compat: css.properties.NameOfTheProperty
 ---
 {{MDNSidebar}}

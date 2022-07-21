@@ -1,12 +1,10 @@
 ---
 title: Page types
-slug: MDN/Writing_guidelines/Page_structures
+slug: MDN/Writing_guidelines/Page_structures/Page_types
+page-type: mdn-writing-guide
 tags:
-  - Documentation
-  - Guide
-  - MDN Meta
-  - Structures
-  - Template
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

@@ -1,12 +1,10 @@
 ---
 title: API constructor subpage template
-slug: MDN/Writing_guidelines/Page_structures/API_constructor_subpage_template
+slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
+page-type: mdn-writing-guide
 tags:
-  - API
-  - Constructor
-  - Template
-  - constructor subpage
-  - Reference
+  - meta
+  - writing-guide
 browser-compat: path.to.feature.NameOfTheConstructor
 ---
 {{MDNSidebar}}

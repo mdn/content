@@ -3,16 +3,8 @@ title: How to write and reference an entry in the glossary
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 page-type: mdn-writing-guide
 tags:
-  - Contributing
-  - Definition
-  - Entry
-  - Glossary
-  - Guide
-  - Howto
-  - MDN Meta
-  - Term
-  - Word
-  - define
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

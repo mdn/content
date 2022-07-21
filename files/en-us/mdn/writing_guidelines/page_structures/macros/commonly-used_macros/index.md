@@ -1,11 +1,10 @@
 ---
 title: Commonly-used macros
-slug: MDN/Writing_guidelines/Page_structures/Commonly-used_macros
+slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly-used_macros
+page-type: mdn-writing-guide
 tags:
-  - CSS
-  - Macros
-  - Reference
-  - Structures
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

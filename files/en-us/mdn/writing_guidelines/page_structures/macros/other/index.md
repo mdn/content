@@ -1,9 +1,10 @@
 ---
 title: Other macros
-slug: MDN/Writing_guidelines/Page_structures/Other
+slug: MDN/Writing_guidelines/Page_structures/Macros/Other
+page-type: mdn-writing-guide
 tags:
-  - Macros
-  - Reference
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

@@ -1,10 +1,10 @@
 ---
 title: Glossary page template
-slug: MDN/Writing_guidelines/Page_structures/Glossary_page_template
+slug: MDN/Writing_guidelines/Page_structures/Page_types/Glossary_page_template
+page-type: mdn-writing-guide
 tags:
-  - Glossary
-  - Template
-  - reference page
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

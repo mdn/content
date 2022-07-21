@@ -1,10 +1,9 @@
 ---
 title: Structured data on MDN
-slug: MDN/Guidelines/JSON_Structured_Data
+slug: MDN/Writing_guidelines/Howto/JSON_Structured_data
 tags:
-  - Guide
-  - Guidelines
-  - MDN Meta
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

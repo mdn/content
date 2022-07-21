@@ -1,9 +1,11 @@
 ---
 title: Markdown in MDN
-slug: MDN/Contribute/Markdown_in_MDN
+slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
 tags:
-  - MDN
+  - meta
+  - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This page describes how we use Markdown to write documentation on MDN. We have chosen GitHub-Flavored Markdown (GFM) as a baseline, and added some extensions to support some of the things we need to do on MDN that aren't readily supported in GFM.

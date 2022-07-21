@@ -3,10 +3,10 @@ title: How to document an HTTP header
 slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
 page-type: mdn-writing-guide
 tags:
-  - Howto
-  - MDN
-  - Meta
+  - meta
+  - writing-guide
 ---
+
 {{MDNSidebar}}
 
 The MDN [HTTP header reference](/en-US/docs/Web/HTTP/Headers) documents HTTP header fields are components of the header section of request and response messages in the Hypertext Transfer Protocol ([HTTP](/en-US/docs/Web/HTTP)). They define the operating parameters of an HTTP transaction. This page explains how to create a new MDN reference page for an HTTP header.

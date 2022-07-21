@@ -1,11 +1,10 @@
 ---
 title: HTTP header page template
-slug: MDN/Writing_guidelines/Page_structures/HTTP_header_page_template
+slug: MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
+page-type: mdn-writing-guide
 tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Template
+  - meta
+  - writing-guide
 browser-compat: path.to.feature.NameOfTheHeader
 ---
 {{MDNSidebar}}

@@ -1,12 +1,10 @@
 ---
 title: API property subpage template
-slug: MDN/Writing_guidelines/Page_structures/API_property_subpage_template
+slug: MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
+page-type: mdn-writing-guide
 tags:
-  - API
-  - Property
-  - Template
-  - property subpage
-  - reference page
+  - meta
+  - writing-guide
 browser-compat: path.to.feature.NameOfTheProperty
 ---
 {{MDNSidebar}}

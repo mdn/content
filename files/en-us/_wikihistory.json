@@ -13326,38 +13326,6 @@
       "jswisher"
     ]
   },
-  "MDN/Contribute/Howto/Convert_code_samples_to_be_live": {
-    "modified": "2020-09-28T14:41:41.230Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "atu6581",
-      "chrisdavidmills",
-      "AleksandrK69",
-      "wbamberg",
-      "jswisher",
-      "daisyrowley777",
-      "BM802",
-      "ErvisTusha",
-      "audiodude",
-      "stephaniehobson",
-      "Sheppy",
-      "ilyakamens"
-    ]
-  },
-  "MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web": {
-    "modified": "2019-05-03T10:17:52.496Z",
-    "contributors": [
-      "wbamberg",
-      "Sheppy",
-      "xfq",
-      "ifilin",
-      "jswisher",
-      "markg",
-      "hbloomer",
-      "Jeremie"
-    ]
-  },
   "MDN/Contribute/Howto/Migrate_external_content_to_MDN": {
     "modified": "2019-07-15T08:26:43.504Z",
     "contributors": [

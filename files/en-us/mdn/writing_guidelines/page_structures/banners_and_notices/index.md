@@ -1,10 +1,10 @@
 ---
 title: Banners and notices
-slug: MDN/Writing_guidelines/Page_structures
+slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
+page-type: mdn-writing-guide
 tags:
-  - Guide
-  - MDN Meta
-  - Structures
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

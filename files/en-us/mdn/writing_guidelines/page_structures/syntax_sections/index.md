@@ -1,14 +1,10 @@
 ---
 title: Syntax sections
-slug: MDN/Writing_guidelines/Page_structures
+slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
+page-type: mdn-writing-guide
 tags:
-  - API
-  - CSS
-  - HTML
-  - MDN Meta
-  - Structure
-  - Syntax
-  - onboarding
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

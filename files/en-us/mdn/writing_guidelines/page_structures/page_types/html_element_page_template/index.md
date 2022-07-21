@@ -1,11 +1,10 @@
 ---
 title: HTML element page template
-slug: MDN/Writing_guidelines/Page_structures/HTML_element_page_template
+slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
+page-type: mdn-writing-guide
 tags:
-  - Element
-  - HTML
-  - Template
-  - Reference
+  - meta
+  - writing-guide
 browser-compat: path.to.feature.NameOfTheElement
 ---
 {{MDNSidebar}}

@@ -1,5 +1,5 @@
 ---
-title: TBD
+title: Images and media
 slug: MDN/Writing_guidelines/Page_structure/Images_media
 page-type: mdn-writing-guide
 tags:

@@ -1,12 +1,10 @@
 ---
 title: Using macros
-slug: MDN/Writing_guidelines/Page_structures
+slug: MDN/Writing_guidelines/Page_structures/Macros
+page-type: mdn-writing-guide
 tags:
-  - Guide
-  - Kuma
-  - KumaScript
-  - MDN Meta
-  - Structures
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

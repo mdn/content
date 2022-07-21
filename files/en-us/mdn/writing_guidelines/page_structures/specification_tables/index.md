@@ -1,10 +1,10 @@
 ---
 title: Specification tables
-slug: MDN/Writing_guidelines/Page_structures
+slug: MDN/Writing_guidelines/Page_structures/Specifications_tables
+page-type: mdn-writing-guide
 tags:
-  - Guide
-  - MDN Meta
-  - Structures
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

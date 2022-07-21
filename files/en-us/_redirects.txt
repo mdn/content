@@ -5395,7 +5395,7 @@
 /en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Content	/en-US/docs/MDN/Guidelines
-/en-US/docs/MDN/Contribute/Content/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
+/en-US/docs/MDN/Contribute/Content/Content_blocks	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Content/Custom_macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Commonly-used_macros
 /en-US/docs/MDN/Contribute/Content/Layout/API_landing_page	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Content/Layout/Reference_page	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
@@ -5411,7 +5411,7 @@
 /en-US/docs/MDN/Contribute/FAQ	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Guidelines	/en-US/docs/MDN/Guidelines
 /en-US/docs/MDN/Contribute/Guidelines/Best_practices	/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
-/en-US/docs/MDN/Contribute/Guidelines/CSS_style_guide	/en-US/docs/MDN/Contribute/Markdown_in_MDN
+/en-US/docs/MDN/Contribute/Guidelines/CSS_style_guide	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Guidelines/Code_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 /en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
@@ -5420,7 +5420,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/Shell	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
 /en-US/docs/MDN/Contribute/Guidelines/Code_samples	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Guidelines/Content	/en-US/docs/MDN/Writing_guidelines/What_we_write
-/en-US/docs/MDN/Contribute/Guidelines/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
+/en-US/docs/MDN/Contribute/Guidelines/Content_blocks	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions	/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /en-US/docs/MDN/Contribute/Guidelines/Custom_macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Commonly-used_macros
 /en-US/docs/MDN/Contribute/Guidelines/Does_this_belong_on_MDN	/en-US/docs/MDN/Writing_guidelines/What_we_write
@@ -5436,7 +5436,8 @@
 /en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/How_to_document_a_CSS_property	/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property
 /en-US/docs/MDN/Contribute/Howto/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures
-/en-US/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/en-US/docs/mdn/contribute/howto/create_an_interactive_exercise_to_help_learning_the_web
+/en-US/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
+/en-US/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages	/en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting
 /en-US/docs/MDN/Contribute/Howto/Document_a_CSS_property	/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property
 /en-US/docs/MDN/Contribute/Howto/Document_an_HTTP_header	/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header
@@ -5449,6 +5450,7 @@
 /en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 /en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
 /en-US/docs/MDN/Contribute/Howto/Write_for_SEO	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
+/en-US/docs/MDN/Contribute/Markdown_in_MDN	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Processes/Locating_browser-specific_information	/en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_versiosn	/en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version
 /en-US/docs/MDN/Contribute/Sample_app_coding_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
@@ -5459,7 +5461,7 @@
 /en-US/docs/MDN/Contribute/Structures/Banners_and_notices	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Structures/Code_examples	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Structures/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures
-/en-US/docs/MDN/Contribute/Structures/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
+/en-US/docs/MDN/Contribute/Structures/Content_blocks	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Structures/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Structures/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Commonly-used_macros
@@ -5484,7 +5486,7 @@
 /en-US/docs/MDN/Contribute/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Style_guide	/en-US/docs/MDN/Guidelines
 /en-US/docs/MDN/Contribute/Style_guide/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures
-/en-US/docs/MDN/Contribute/Style_guide/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
+/en-US/docs/MDN/Contribute/Style_guide/Content_blocks	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Style_guide/Custom_macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Commonly-used_macros
 /en-US/docs/MDN/Contribute/Style_guide/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Style_guide/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures
@@ -5500,7 +5502,7 @@
 /en-US/docs/MDN/Doc_status/NSPR	https://firefox-source-docs.mozilla.org/nspr/index.html
 /en-US/docs/MDN/Feedback	/en-US/docs/MDN/Contribute/Feedback
 /en-US/docs/MDN/Getting_started	/en-US/docs/MDN/Contribute/Getting_started
-/en-US/docs/MDN/Guidelines/CSS_style_guide	/en-US/docs/MDN/Contribute/Markdown_in_MDN
+/en-US/docs/MDN/Guidelines/CSS_style_guide	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Guidelines/Code_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Guidelines/Code_guidelines/CSS	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 /en-US/docs/MDN/Guidelines/Code_guidelines/General	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
@@ -5511,6 +5513,7 @@
 /en-US/docs/MDN/Guidelines/Conventions_definitions	/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/Guidelines/Editorial	/en-US/docs/MDN/Writing_guidelines/What_we_write
+/en-US/docs/MDN/Guidelines/JSON_Structured_Data	/en-US/docs/MDN/Writing_guidelines/Howto/JSON_Structured_data
 /en-US/docs/MDN/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/MDN/Kuma	/en-US/docs/MDN/Yari
@@ -5532,7 +5535,7 @@
 /en-US/docs/MDN/Structures/Banners_and_notices	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Structures/Code_examples	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Structures/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures
-/en-US/docs/MDN/Structures/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
+/en-US/docs/MDN/Structures/Content_blocks	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Structures/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Structures/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Structures/Macros/Commonly-used_macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Commonly-used_macros
@@ -12977,6 +12980,7 @@
 /en-US/docs/layerY	/en-US/docs/Web/API/MouseEvent/layerY
 /en-US/docs/length	/en-US/docs/Web/CSS/length
 /en-US/docs/localName	/en-US/docs/Web/API/Element/localName
+/en-US/docs/mdn/contribute/howto/create_an_interactive_exercise_to_help_learning_the_web	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /en-US/docs/metaKey	/en-US/docs/Web/API/MouseEvent/metaKey
 /en-US/docs/mfs_temp	/en-US/docs/Web/API/Document/fullscreen
 /en-US/docs/msFrameStep	/en-US/docs/Web/API/HTMLVideoElement/msFrameStep

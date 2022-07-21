@@ -3,14 +3,8 @@ title: How to properly tag pages
 slug: MDN/Writing_guidelines/Howto/Tag
 page-type: mdn-writing-guide
 tags:
-  - Beginner
-  - Contribute
-  - Glossary
-  - Guide
-  - Howto
-  - Intro
-  - MDN Meta
-  - Tutorial
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 
