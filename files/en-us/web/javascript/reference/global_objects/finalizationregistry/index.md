@@ -22,7 +22,7 @@ You create the registry passing in the callback:
 
 ```js
 const registry = new FinalizationRegistry(heldValue => {
-  // ....
+  // …
 });
 ```
 
@@ -42,7 +42,9 @@ It's common to use the object itself as the unregister token, which is just fine
 
 ```js
 registry.register(theObject, "some value", theObject);
-// ...some time later, if you don't care about `theObject` anymore...
+// …
+
+// some time later, if you don't care about `theObject` anymore unregister it
 registry.unregister(theObject);
 ```
 
@@ -50,7 +52,9 @@ It doesn't have to be the same object, though; it can be a different one:
 
 ```js
 registry.register(theObject, "some value", tokenObject);
-// ...some time later, if you don't care about `theObject` anymore...
+// …
+
+// some time later
 registry.unregister(tokenObject);
 ```
 
@@ -101,7 +105,7 @@ You create the registry passing in the callback:
 
 ```js
 const registry = new FinalizationRegistry(heldValue => {
-  // ....
+  // …
 });
 ```
 

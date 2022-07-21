@@ -42,7 +42,7 @@ The completion value of evaluating the given code. If the completion value is em
 
 The argument of the `eval()` function is a string. It will evaluate the source string as a script body, which means both statements and expressions are allowed. It returns the completion value of the code. For expressions, it's the value the expression evaluates to. Many statements and declarations have completion values as well, but the result may be surprising (for example, the completion value of an assignment is the assigned value, but the completion value of [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) is undefined), so it's recommended to not rely on statements' completion values.
 
-There are two modes of `eval()` calls: _direct_ eval and _indirect_ eval. Direct eval only has one form: `eval(...)` (the invoked function's name is `eval` and its value is the global `eval` function). Everything else, including invoking it via an aliased variable, via a member access or other expression, or through the optional chaining [`?.`](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator, is indirect.
+There are two modes of `eval()` calls: _direct_ eval and _indirect_ eval. Direct eval only has one form: `eval( )` (the invoked function's name is `eval` and its value is the global `eval` function). Everything else, including invoking it via an aliased variable, via a member access or other expression, or through the optional chaining [`?.`](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator, is indirect.
 
 ```js
 // Indirect call using the comma operator to return eval
@@ -364,11 +364,11 @@ and objects' properties, and so on. Many DOM APIs are designed with this in mind
 can (and should) write:
 
 ```js
-// instead of setTimeout(" ... ", 1000) use:
-setTimeout(function() { /* ... */ }, 1000);
+// instead of setTimeout(" … ", 1000) use:
+setTimeout(function() { /* … */ }, 1000);
 
-// instead of elt.setAttribute("onclick", "...") use:
-elt.addEventListener('click', function() { /* ... */ } , false);
+// instead of elt.setAttribute("onclick", "…") use:
+elt.addEventListener('click', function() { /* … */ } , false);
 ```
 
 [Closures](/en-US/docs/Web/JavaScript/Closures) are also helpful as a way to

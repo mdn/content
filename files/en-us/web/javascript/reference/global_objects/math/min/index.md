@@ -29,12 +29,12 @@ isn't a number and can't be converted into one.
 Math.min()
 Math.min(value0)
 Math.min(value0, value1)
-Math.min(value0, value1, ... , valueN)
+Math.min(value0, value1, /* … ,*/ valueN)
 ```
 
 ### Parameters
 
-- `value1, value2, ...`
+- `value1`, …, `valueN`
   - : Zero or more numbers among which the lowest value will be selected and returned.
 
 ### Return value

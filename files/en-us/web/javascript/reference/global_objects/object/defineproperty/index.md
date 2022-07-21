@@ -137,7 +137,7 @@ function withValue(value) {
 
   return d;
 }
-// ... and ...
+// and
 Object.defineProperty(obj, 'key', withValue('static'));
 
 // if freeze is available, prevents adding or

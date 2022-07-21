@@ -39,8 +39,8 @@ if (x) {
 Do not use a `Boolean` object to convert a non-boolean value to a boolean value. To perform this task, instead, use `Boolean` as a function, or a [double NOT operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!):
 
 ```js
-const x = Boolean(expression);     // use this...
-const x = !!(expression);          // ...or this
+const x = Boolean(expression);     // use this
+const x = !!(expression);          // or this
 const x = new Boolean(expression); // don't use this!
 ```
 
