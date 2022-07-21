@@ -113,7 +113,7 @@ logIterable('abc');
 // c
 
 logIterable(123);
-// 123 is not an iterable object…
+// 123 is not an iterable object.
 ```
 
 ## Specifications

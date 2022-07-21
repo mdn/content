@@ -61,7 +61,7 @@ Note the following when working with the `get` syntax:
 
   ```js example-bad
   {
-    x: …, get x() { }
+    x: /* … */, get x() { /* … */ }
   }
   ```
 
