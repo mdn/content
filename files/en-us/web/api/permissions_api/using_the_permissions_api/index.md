@@ -73,7 +73,7 @@ function handlePermission() {
 }
 
 function report(state) {
-  console.log('Permission ' + state);
+  console.log(`Permission ${state}`);
 }
 
 handlePermission();

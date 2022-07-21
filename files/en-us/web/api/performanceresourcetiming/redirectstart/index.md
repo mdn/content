@@ -55,9 +55,9 @@ function print_start_and_end_properties(perfEntry) {
     // check each property
     const value = perfEntry[properties[i]];
     if (properties[i] in perfEntry) {
-      console.log("… " + properties[i] + " = " + value);
+      console.log(`… ${properties[i]} = ${value}`);
     } else {
-      console.log("… " + properties[i] + " = NOT supported");
+      console.log(`… ${properties[i]} = NOT supported`);
     }
   }
 }

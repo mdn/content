@@ -42,7 +42,7 @@ function print_PerformanceEntries() {
 function print_nextHopProtocol(perfEntry) {
   const value = "nextHopProtocol" in perfEntry;
   if (value)
-    console.log("nextHopProtocol = " + perfEntry.nextHopProtocol);
+    console.log(`nextHopProtocol = ${perfEntry.nextHopProtocol}`);
   else
     console.log("nextHopProtocol = NOT supported");
 }

@@ -36,7 +36,7 @@ This example watches for changes to the user's connection.
 let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
-  console.log("Connection type changed from " + type + " to " + connection.effectiveType);
+  console.log(`Connection type changed from ${type} to ${connection.effectiveType}`);
   type = navigation.connection.effectiveType;
 }
 
