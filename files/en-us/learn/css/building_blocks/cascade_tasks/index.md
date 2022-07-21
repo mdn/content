@@ -16,9 +16,9 @@ The aim of this skill test is to assess whether you understand universal propert
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
-## Task
+## Task 1
 
-In this task, we want you to use one of the special values we looked at in the [controlling inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#controlling_inheritance) section. To write a declaration in a new rule that will reset the background color to white, without using an actual color value and without touching the lightgreen declaration, use the cascade layer order to make the links rebeccapurple.
+In this task, we want you to use one of the special values we looked at in the [controlling inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#controlling_inheritance) section. To write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
 
 Your final result should look like the image below:
 
@@ -31,6 +31,22 @@ Try updating the live code below to recreate the finished example:
 > **Callout:**
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/cascade/cascade-download.html) to work in your own editor or in an online editor.
+
+## Task 2
+
+In this task, we want you to make your changes by leveraging the [order of cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#order_of_cascade_layers) section. Edit an existing declaration, without touching the lightgreen declaration, using the cascade layer order to make the links rebeccapurple.
+
+Your final result should look like the image below:
+
+![Barely visible yellow links on a white background.](mdn-cascade.png)
+
+Try updating the live code below to recreate the finished example:
+
+{{EmbedGHLiveSample("css-examples/learn/tasks/cascade/cascadelayers.html", '100%', 700)}}
+
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/cascade/cascadelayers-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 
