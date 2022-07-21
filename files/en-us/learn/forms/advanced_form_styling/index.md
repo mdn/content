@@ -168,19 +168,19 @@ As we showed before, you can remove the default appearance of a checkbox or radi
 
     <p>
       <label>
-        <input type="checkbox" name="fruit-1" value="cherry">
+        <input type="checkbox" name="fruit" value="cherry">
         I like cherry
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit-2" value="banana" disabled>
+        <input type="checkbox" name="fruit" value="banana" disabled>
         I can't like banana
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit-3" value="strawberry">
+        <input type="checkbox" name="fruit" value="strawberry">
         I like strawberry
       </label>
     </p>
