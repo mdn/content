@@ -47,7 +47,6 @@ Note that some common attributes like `mathcolor`, `mathvariant` or `dir` have n
 
 ## Gecko-specific notes
 
-- [Indentation attributes](https://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs) are not implemented yet (for Gecko see {{ bug("534962") }}).
 - Support for negative values for the `width` attribute has been implemented in Gecko 23.0 {{geckoRelease("23.0")}}.
 
 ## See also
