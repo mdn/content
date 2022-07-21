@@ -60,8 +60,8 @@ The event object is a {{domxref("UIEvent")}} instance if it was generated from a
 </div>
 
 <div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+  <label for="eventLog">Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30" id="eventLog"></textarea>
 </div>
 ```
 
