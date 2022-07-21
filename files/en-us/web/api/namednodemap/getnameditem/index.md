@@ -45,7 +45,7 @@ if (attrMap["boum"]) {
   result += "And `boum` has been found.";
 }
 else {
-  result += "And `boum` has not been found.";
+  result += "And 'boum' has not been found.";
 }
 
 pre.textContent = result;
