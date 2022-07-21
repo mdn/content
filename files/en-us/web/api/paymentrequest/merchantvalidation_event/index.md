@@ -59,8 +59,7 @@ In this example, an event handler is established for the `merchantvalidation` ev
 ```js
 request.addEventListener("merchantvalidation", event => {
   event.complete(async () => {
-    const merchantServerUrl = window.location.origin +
-        '/validate?url=' + encodeURIComponent(event.validationURL);
+    const merchantServerUrl = `${window.location.origin}/validate?url=${encodeURIComponent(event.validationURL)}`;
     // get validation data, and complete validation;
     return await fetch(merchantServerUrl).then(response => response.text());
   }, false);
@@ -76,8 +75,7 @@ You can also use the `onmerchantvalidation` event handler property to set up the
 ```js
 request.onmerchantvalidation = event => {
   event.complete(async () => {
-    const merchantServerUrl = window.location.origin +
-        '/validate?url=' + encodeURIComponent(event.validationURL);
+    const merchantServerUrl = `${window.location.origin}/validate?url=${encodeURIComponent(event.validationURL)}`;
     // get validation data, and complete validation;
     return await fetch(merchantServerUrl).then(response => response.text());
   });

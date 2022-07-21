@@ -66,7 +66,7 @@ const list = node.childNodes;
 
 list.forEach(
   function(currentValue, currentIndex, listObj) {
-    console.log(currentValue + ', ' + currentIndex + ', ' + this);
+    console.log(`${currentValue}, ${currentIndex}, ${this}`);
   },
   'myThisArg'
 );

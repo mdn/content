@@ -35,10 +35,10 @@ A list of explicitly _observed_ {{domxref("PerformanceEntry")}} objects that hav
 
 ```js
 function print_perf_entry(pe) {
-  console.log("name: "        + pe.name      +
-              "; entryType: " + pe.entryType +
-              "; startTime: " + pe.startTime +
-              "; duration: "  + pe.duration);
+  console.log(`name: ${pe.name}`);
+  console.log(`entryType: ${pe.entryType}`);
+  console.log(`startTime: ${pe.startTime}`);
+  console.log(`duration: ${pe.duration}`);
 }
 
 // Create observer for all performance event types

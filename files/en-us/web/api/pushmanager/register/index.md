@@ -44,11 +44,11 @@ const req = navigator.push.register();
 
 req.onsuccess = function(e) {
   const endpoint = req.result;
-  debug("New endpoint: " + endpoint );
+  debug(`New endpoint: ${endpoint}` );
 }
 
 req.onerror = function(e) {
-  debug("Error getting a new endpoint: " + JSON.stringify(e));
+  debug(`Error getting a new endpoint: ${JSON.stringify(e)}`);
 }
 ```
 

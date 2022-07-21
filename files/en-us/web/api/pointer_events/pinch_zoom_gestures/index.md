@@ -207,10 +207,11 @@ function enableLog(ev) {
 function log(prefix, ev) {
   if (!logEvents) return;
   const o = document.getElementsByTagName('output')[0];
-  const s = prefix + ": pointerID = " + ev.pointerId +
-                " ; pointerType = " + ev.pointerType +
-                " ; isPrimary = " + ev.isPrimary;
-  o.innerHTML += s + "<br>";
+  const s = `${name}:<br>`;
+  s += `  pointerID   = ${ev.pointerId}<br>`;
+  s += `  pointerType = ${ev.pointerType}<br>`;
+  s += `  isPrimary   = ${ev.isPrimary}`;
+  o.innerHTML += `${s}<br>`;
 }
 
 function clearLog(event) {
