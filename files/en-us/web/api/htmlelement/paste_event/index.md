@@ -57,11 +57,11 @@ This example logs every copy and paste attempt to the {{htmlElement("textarea")}
 
 ```js
 function logCopy(event) {
-  log.innerText = 'Copied!\n' + log.innerText;
+  log.innerText = `Copied!\n${log.innerText}`;
 }
 
 function logPaste(event) {
-  log.innerText = 'Pasted!\n' + log.innerText;
+  log.innerText = `Pasted!\n${log.innerText}`;
 }
 
 const editor = document.getElementById('editor');

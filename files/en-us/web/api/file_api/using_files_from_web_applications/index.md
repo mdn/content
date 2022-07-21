@@ -316,7 +316,7 @@ function handleFiles() {
       }
       li.appendChild(img);
       const info = document.createElement("span");
-      info.innerHTML = this.files[i].name + ": " + this.files[i].size + " bytes";
+      info.innerHTML = `${this.files[i].name}: ${this.files[i].size} bytes`;
       li.appendChild(info);
     }
   }

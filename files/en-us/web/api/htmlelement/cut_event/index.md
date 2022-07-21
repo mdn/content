@@ -63,12 +63,12 @@ allow text to be cut. It also logs each copy and cut attempt.
 
 ```js
 function logCopy(event) {
-  log.innerText = 'Copied!\n' + log.innerText;
+  log.innerText = `Copied!\n${log.innerText}`;
 }
 
 function preventCut(event) {
   event.preventDefault();
-  log.innerText = 'Cut blocked!\n' + log.innerText;
+  log.innerText = `Cut blocked!\n${log.innerText}`;
 }
 
 const editor = document.getElementById('editor');

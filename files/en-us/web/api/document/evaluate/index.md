@@ -105,7 +105,7 @@ var headings = document.evaluate("/html/body//h2", document, null, XPathResult.A
 var thisHeading = headings.iterateNext();
 var alertText = "Level 2 headings in this document are:\n";
 while (thisHeading) {
-  alertText += thisHeading.textContent + "\n";
+  alertText += `${thisHeading.textContent}\n`;
   thisHeading = headings.iterateNext();
 }
 alert(alertText); // Alerts the text of all h2 elements

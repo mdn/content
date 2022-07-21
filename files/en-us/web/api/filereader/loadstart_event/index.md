@@ -120,7 +120,7 @@ const eventLog = document.querySelector('.event-log-contents');
 const reader = new FileReader();
 
 function handleEvent(event) {
-    eventLog.textContent = eventLog.textContent + `${event.type}: ${event.loaded} bytes transferred\n`;
+    eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
 
     if (event.type === "load") {
         preview.src = reader.result;

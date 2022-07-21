@@ -68,7 +68,7 @@ function getAllEntries(dirReader) {
 
 // Forward the error to main app.
 function onError(e) {
-  postMessage('ERROR: ' + e.toString());
+  postMessage(`ERROR: ${e.toString()}`);
 }
 
 self.onmessage = function(e) {
