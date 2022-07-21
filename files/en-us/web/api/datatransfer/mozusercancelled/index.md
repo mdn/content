@@ -38,7 +38,7 @@ This example shows the use of the `mozUserCancelled` property in the
 function dragend_handler(event)
 {
   const dragData = event.dataTransfer;
-  console.log("mozUserCancelled = " + dragData.mozUserCancelled);
+  console.log(`mozUserCancelled = ${dragData.mozUserCancelled}`);
 }
 ```
 

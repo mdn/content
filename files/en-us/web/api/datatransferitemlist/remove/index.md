@@ -107,13 +107,13 @@ function drop_handler(ev) {
                (item.type.match('^text/html'))) {
       // Drag data item is HTML
       item.getAsString(function (s){
-        console.log('… Drop: HTML = ' + s);
+        console.log(`… Drop: HTML = ${s}`);
       });
     } else if ((item.kind == 'string') &&
                (item.type.match('^text/uri-list'))) {
       // Drag data item is URI
       item.getAsString(function (s){
-        console.log('… Drop: URI = ' + s);
+        console.log(`… Drop: URI = ${s}`);
       });
     }
   }

@@ -102,7 +102,7 @@ const eventLog = document.querySelector('.event-log-contents');
 let source = null;
 
 function handleEvent(event) {
-    eventLog.textContent = eventLog.textContent + `${event.type}\n`;
+    eventLog.textContent += `${event.type}\n`;
 }
 
 video.addEventListener('loadstart', handleEvent);

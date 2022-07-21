@@ -23,7 +23,7 @@ label = element.accessKeyLabel
 ```js
 const btn = document.getElementById('btn1');
 const shortcutLabel = btn.accessKeyLabel || btn.accessKey;
-btn.title += ' [' + shortcutLabel.toUpperCase() + ']';
+btn.title += ` [${shortcutLabel.toUpperCase()}]`;
 
 btn.onclick = function () {
   const feedback = document.createElement('output');
