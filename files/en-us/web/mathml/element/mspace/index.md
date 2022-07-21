@@ -45,10 +45,6 @@ Note that some common attributes like `mathcolor`, `mathvariant` or `dir` have n
 
 {{Compat}}
 
-## Gecko-specific notes
-
-- Support for negative values for the `width` attribute has been implemented in Gecko 23.0 {{geckoRelease("23.0")}}.
-
 ## See also
 
 - {{ MathMLElement("mpadded") }}
