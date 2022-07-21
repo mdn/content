@@ -48,7 +48,7 @@ const pElem = document.getElementById('p')
 selectElem.addEventListener('change', function() {
   const index = selectElem.selectedIndex;
   // Add that data to the <p>
-  pElem.innerHTML = `selectedIndex: ${index}`;
+  pElem.textContent = `selectedIndex: ${index}`;
 })
 ```
 
