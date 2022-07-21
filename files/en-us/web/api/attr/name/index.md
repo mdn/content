@@ -31,7 +31,7 @@ The following example displays the qualified name of the first attribute of the 
 <button>Click me for &lt;svg&gt;…</button>
 <button>Click me for &lt;label&gt;…</button>
 <br><br>
-Qualified name of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+Qualified name of the attribute <code>xml:lang</code>: <output id="result">None.</output>
 ```
 
 ### JavaScript Content

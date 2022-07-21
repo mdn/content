@@ -35,7 +35,7 @@ The following example displays the local name of the first attribute of the two 
 <button>Click me for &lt;svg&gt;…</button>
 <button>Click me for &lt;label&gt;…</button>
 <br><br>
-Local part of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+Local part of the attribute <code>xml:lang</code>: <output id="result">None.</output>
 ```
 
 ### JavaScript Content

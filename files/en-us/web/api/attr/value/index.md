@@ -26,7 +26,7 @@ The following example displays the current value of the attribute `test`. Clicki
 
 <button>Click me to set test to <code>"a new value"</code>…</button>
 <br><br>
-Current value of the <code>test</code> attribute: <output id="result"><i>None.</i></output>
+Current value of the <code>test</code> attribute: <output id="result">None.</output>
 ```
 
 ### JavaScript Content
