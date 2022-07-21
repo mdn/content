@@ -21,19 +21,19 @@ The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_
 
 ```js
 // Arrow function
-filter((element) => { /* ... */ } )
-filter((element, index) => { /* ... */ } )
-filter((element, index, array) => { /* ... */ } )
+filter((element) => { /* … */ } )
+filter((element, index) => { /* … */ } )
+filter((element, index, array) => { /* … */ } )
 
 // Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function(element) { /* ... */ })
-filter(function(element, index) { /* ... */ })
-filter(function(element, index, array){ /* ... */ })
-filter(function(element, index, array) { /* ... */ }, thisArg)
+filter(function(element) { /* … */ })
+filter(function(element, index) { /* … */ })
+filter(function(element, index, array){ /* … */ })
+filter(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters

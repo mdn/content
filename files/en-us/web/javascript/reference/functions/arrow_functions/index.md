@@ -199,8 +199,8 @@ const obj = { // does not create a new scope
   },
 }
 
-obj.b(); // prints undefined, Window {...} (or the global object)
-obj.c(); // prints 10, Object {...}
+obj.b(); // prints undefined, Window { } (or the global object)
+obj.c(); // prints 10, Object { }
 ```
 
 Arrow functions do not have their own `this`. Another example involving
@@ -215,7 +215,7 @@ const obj = {
 
 Object.defineProperty(obj, 'b', {
   get: () => {
-    console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (or the global object)
+    console.log(this.a, typeof this.a, this); // undefined 'undefined' Window { } (or the global object)
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
   },
 });
@@ -541,7 +541,7 @@ simple(10); // 10
 
 const max = (a, b) => a > b ? a : b;
 
-// Easy array filtering, mapping, ...
+// Easy array filtering, mapping, etc.
 
 const arr = [5, 6, 13, 0, 1, 18, 23];
 
@@ -557,10 +557,10 @@ const double = arr.map(v => v * 2);
 // More concise promise chains
 promise
   .then(a => {
-  // ...
+  // …
   })
   .then(b => {
-    // ...
+    // …
   });
 
 // Parameterless arrow functions that are visually easier to parse

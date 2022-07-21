@@ -20,8 +20,8 @@ that will be called when that property is looked up.
 ## Syntax
 
 ```js
-{get prop() { /* ... */ } }
-{get [expression]() { /* ... */ } }
+{get prop() { /* … */ } }
+{get [expression]() { /* … */ } }
 ```
 
 ### Parameters
@@ -61,7 +61,7 @@ Note the following when working with the `get` syntax:
 
   ```js example-bad
   {
-    x: ..., get x() { }
+    x: …, get x() { }
   }
   ```
 

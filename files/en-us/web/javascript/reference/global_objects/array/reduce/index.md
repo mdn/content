@@ -32,26 +32,26 @@ The reducer walks through the array element-by-element, at each step adding the 
 
 ```js
 // Arrow function
-reduce((previousValue, currentValue) => { /* ... */ } )
-reduce((previousValue, currentValue, currentIndex) => { /* ... */ } )
-reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ } )
+reduce((previousValue, currentValue) => { /* … */ } )
+reduce((previousValue, currentValue, currentIndex) => { /* … */ } )
+reduce((previousValue, currentValue, currentIndex, array) => { /* … */ } )
 
-reduce((previousValue, currentValue) => { /* ... */ } , initialValue)
-reduce((previousValue, currentValue, currentIndex) => { /* ... */ } , initialValue)
-reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
+reduce((previousValue, currentValue) => { /* … */ } , initialValue)
+reduce((previousValue, currentValue, currentIndex) => { /* … */ } , initialValue)
+reduce((previousValue, currentValue, currentIndex, array) => { /* … */ }, initialValue)
 
 // Callback function
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
 // Inline callback function
-reduce(function(previousValue, currentValue) { /* ... */ })
-reduce(function(previousValue, currentValue, currentIndex) { /* ... */ })
-reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
+reduce(function(previousValue, currentValue) { /* … */ })
+reduce(function(previousValue, currentValue, currentIndex) { /* … */ })
+reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ })
 
-reduce(function(previousValue, currentValue) { /* ... */ }, initialValue)
-reduce(function(previousValue, currentValue, currentIndex) { /* ... */ }, initialValue)
-reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ }, initialValue)
+reduce(function(previousValue, currentValue) { /* … */ }, initialValue)
+reduce(function(previousValue, currentValue, currentIndex) { /* … */ }, initialValue)
+reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
