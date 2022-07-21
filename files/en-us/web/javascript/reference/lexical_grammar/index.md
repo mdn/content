@@ -110,9 +110,7 @@ comment();
 
 In this case, the `console.log()` call is never issued, since it's inside a comment. Any number of lines of code can be disabled this way.
 
-A specialized third comment syntax, the **hashbang comment**, is in the process of being standardized in ECMAScript (see the [Hashbang Grammar proposal](https://github.com/tc39/proposal-hashbang)).
-
-A hashbang comment behaves exactly like a single line-only (`//`) comment, except that it begins with `#!` and **is only valid at the absolute start of a script or module**. Note also that no whitespace of any kind is permitted before the `#!`. The comment consists of all the characters after `#!` up to the end of the first line; only one such comment is permitted.
+There's a special third comment syntax, the **hashbang comment**. A hashbang comment behaves exactly like a single line-only (`//`) comment, except that it begins with `#!` and **is only valid at the absolute start of a script or module**. Note also that no whitespace of any kind is permitted before the `#!`. The comment consists of all the characters after `#!` up to the end of the first line; only one such comment is permitted.
 
 Hashbang comments in JavaScript resemble [shebangs in Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) used to run files with proper interpreter. Before the hashbang comment became standardized, it had already been de-facto implemented in non-browser hosts like Node.js, where it was stripped from the source text before being passed to the engine. The hashbang comment specifies the path to a specific JavaScript interpreter that you want to use to execute the script. An example is as follows:
 
@@ -431,8 +429,6 @@ A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is ze
 - U+005C \ (backslash),
 - U+000D \<CR>,
 - and U+000A \<LF>.
-
-Prior to the [proposal to make all JSON text valid ECMA-262](https://github.com/tc39/proposal-json-superset), U+2028 \<LS> and U+2029 \<PS> were also disallowed from appearing unescaped in string literals.
 
 Any code points may appear in the form of an escape sequence. String literals evaluate to ECMAScript String values. When generating these String values Unicode code points are UTF-16 encoded.
 
