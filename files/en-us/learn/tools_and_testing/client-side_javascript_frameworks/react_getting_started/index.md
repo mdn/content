@@ -253,8 +253,6 @@ The second statement imports a logo from `'./logo.svg'`. Note the use of `./` at
 
 The third statement imports the CSS related to our App component. Note that there is no variable name and no `from` directive. This particular import syntax is not native to JavaScript module syntax — it comes from Webpack, the tool create-react-app uses to bundle all our JavaScript files together and serve them to the browser.
 
-Previously, the first statement would have been `import React from 'react';` to import the React library itself: because React turns the JSX we write into `React.createElement()`, all React components must import the `React` module. Skipping this step used to result in an error. However, the React 17 release has made this unnecessary (read more on the [official React doc](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html)).
-
 ### The `App` component
 
 After the imports, we have a function named `App`. Whereas most of the JavaScript community prefers camel-case names like `helloWorld`, React components use pascal-case variable names, like `HelloWorld`, to make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to rename the `App` function to `app`, your browser would show you an error.
