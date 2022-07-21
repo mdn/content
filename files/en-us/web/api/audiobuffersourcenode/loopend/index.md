@@ -74,7 +74,7 @@ function getData() {
         loopendControl.setAttribute('max', Math.floor(songLength));
       },
 
-      function(e){`Error with decoding audio data${e.err}`});
+      function(e){`Error with decoding audio data: ${e.err}`});
 
   }
 

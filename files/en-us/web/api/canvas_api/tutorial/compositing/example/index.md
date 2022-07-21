@@ -202,7 +202,7 @@ const colorSphere = function(element) {
         const gradient = ctx.createLinearGradient(oleft + halfWidth, otop, oleft + halfWidth, otop + halfWidth);
         const color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
         gradient.addColorStop(0, "rgba(0,0,0,0)");
-        gradient.addColorStop(0.7, `rgba(${color.R},${color.G},${color.B},1)`);
+        gradient.addColorStop(0.7, `rgba(${color.R}, ${color.G}, ${color.B}, 1)`);
         gradient.addColorStop(1, "rgba(255,255,255,1)");
         ctx.beginPath();
         ctx.moveTo(oleft + halfWidth, otop);
