@@ -120,7 +120,7 @@ Next we use the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}}
 ```js
 window.addEventListener("gamepadconnected", function(e) {
   const gp = navigator.getGamepads()[e.gamepad.index];
-  gamepadInfo.innerHTML = `Gamepad connected at index ${gp.index}: ${gp.id}. It has ${gp.buttons.length} buttons and ${gp.axes.length} axes.`;
+  gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}. It has ${gp.buttons.length} buttons and ${gp.axes.length} axes.`;
 
   gameLoop();
 });
@@ -151,7 +151,7 @@ function pollGamepads() {
   for (let i = 0; i < gamepads.length; i++) {
     const gp = gamepads[i];
     if (gp) {
-      gamepadInfo.innerHTML = `Gamepad connected at index ${gp.index}: ${gp.id}. It has ${gp.buttons.length} buttons and ${gp.axes.length} axes.`;
+      gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}. It has ${gp.buttons.length} buttons and ${gp.axes.length} axes.`;
       gameLoop();
       clearInterval(interval);
     }
@@ -215,7 +215,7 @@ function addgamepad(gamepad) {
   d.setAttribute("id", `controller${gamepad.index}`);
 
   const t = document.createElement("h1");
-  t.appendChild(document.createTextNode(`gamepad: ${gamepad.id}`));
+  t.textContent = `gamepad: ${gamepad.id}`;
   d.appendChild(t);
 
   const b = document.createElement("div");
@@ -300,7 +300,7 @@ function updateStatus() {
     const axes = d.getElementsByClassName("axis");
     for (let i = 0; i < controller.axes.length; i++) {
       const a = axes[i];
-      a.innerHTML = `${i}: ${controller.axes[i].toFixed(4)}`;
+      a.textContent = `${i}: ${controller.axes[i].toFixed(4)}`;
       a.setAttribute("value", controller.axes[i] + 1);
     }
   }
