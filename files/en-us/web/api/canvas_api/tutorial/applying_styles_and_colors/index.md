@@ -47,8 +47,8 @@ function draw() {
   const ctx = document.getElementById('canvas').getContext('2d');
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 6; j++) {
-      ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
-                       Math.floor(255 - 42.5 * j) + ', 0)';
+      ctx.fillStyle = `rgb(${Math.floor(255 - 42.5 * i)}, ${ 
+                       Math.floor(255 - 42.5 * j)}, 0)`;
       ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
@@ -76,8 +76,8 @@ This example is similar to the one above, but uses the `strokeStyle` property to
     const ctx = document.getElementById('canvas').getContext('2d');
     for (let i = 0; i < 6; i++) {
       for (let j = 0; j < 6; j++) {
-        ctx.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +
-                         Math.floor(255 - 42.5 * j) + ')';
+        ctx.strokeStyle = `rgb(0, ${Math.floor(255 - 42.5 * i)}, ${ 
+                         Math.floor(255 - 42.5 * j)})`;
         ctx.beginPath();
         ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
         ctx.stroke();
@@ -178,7 +178,7 @@ function draw() {
 
   // Draw semi transparent rectangles
   for (let i = 0; i < 10; i++) {
-    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
+    ctx.fillStyle = `rgba(255, 255, 255, ${(i + 1) / 10})`;
     for (let j = 0; j < 4; j++) {
       ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
     }

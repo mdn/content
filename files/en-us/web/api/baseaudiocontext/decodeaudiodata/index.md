@@ -113,7 +113,7 @@ function getData() {
         source.loop = true;
       },
 
-      function(e){ console.log("Error with decoding audio data" + e.err); });
+      function(e){ console.log(`Error with decoding audio data${e.err}`); });
 
   }
 
