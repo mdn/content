@@ -265,8 +265,8 @@ if (document.readyState === 'loading') {  // Loading hasn't finished yet
 </div>
 
 <div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+  <label for="eventLog">Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30" id="leventLog"></textarea>
 </div>
 ```
 
