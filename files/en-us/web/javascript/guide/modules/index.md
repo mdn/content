@@ -232,7 +232,7 @@ We could instead prepend `export default` onto the function and define it as an 
 
 ```js
 export default function(ctx) {
-  ...
+  // …
 }
 ```
 
@@ -387,14 +387,14 @@ You can see an example of our shape drawing module rewritten with ES classes in 
 ```js
 class Square {
   constructor(ctx, listId, length, x, y, color) {
-    ...
+    // …
   }
 
   draw() {
-    ...
+    // …
   }
 
-  ...
+  // …
 }
 ```
 
@@ -508,7 +508,7 @@ squareBtn.addEventListener('click', () => {
 });
 ```
 
-Note that, because the promise fulfillment returns a module object, the class is then made a subfeature of the object, hence we now need to access the constructor with `Module.` prepended to it, e.g. `Module.Square( ... )`.
+Note that, because the promise fulfillment returns a module object, the class is then made a subfeature of the object, hence we now need to access the constructor with `Module.` prepended to it, e.g. `Module.Square( /* … */ )`.
 
 Another advantage of dynamic imports is that they are always available, even in script environments. Therefore, if you have an existing `<script>` tag in your HTML that doesn't have `type="module"`, you can still reuse code distributed as modules by dynamically importing it.
 
@@ -564,25 +564,17 @@ import { Canvas } from './modules/canvas.js';
 
 let circleBtn = document.querySelector('.circle');
 
-...
+// …
 ```
 
 We'll use `colors` instead of the previously used strings when calling our shape functions:
 
 ```js
-...
-
 let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, colors.blue);
-
-...
 
 let circle1 = new Module.Circle(myCanvas.ctx, myCanvas.listId, 75, 200, 100, colors.green);
 
-...
-
 let triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190, colors.yellow);
-
-...
 ```
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
@@ -620,7 +612,7 @@ In order to maximize the reusability of a module, it is often advised to make th
     // We are running in Node.js; use node-fetch
     globalThis.fetch = (await import("node-fetch")).default;
   }
-  // ...
+  // …
   ```
 
   The [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) variable is a global object that is available in every environment and is useful if you want to read or create global variables within modules.

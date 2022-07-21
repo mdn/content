@@ -576,8 +576,8 @@ So, when the bitwise operators are applied to these values, the results are as f
 | `15 & 9`   | `9`    | `1111 & 1001 = 1001`                                  |
 | `15 \| 9`  | `15`   | `1111 \| 1001 = 1111`                                 |
 | `15 ^ 9`   | `6`    | `1111 ^ 1001 = 0110`                                  |
-| `~15`      | `-16`  | `~ 0000 0000 ... 0000 1111 = 1111 1111 ... 1111 0000` |
-| `~9`       | `-10`  | `~ 0000 0000 ... 0000 1001 = 1111 1111 ... 1111 0110` |
+| `~15`      | `-16`  | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
+| `~9`       | `-10`  | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
 Note that all 32 bits are inverted using the Bitwise NOT operator, and that values with
 the most significant (left-most) bit set to 1 represent negative numbers
