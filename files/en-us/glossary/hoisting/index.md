@@ -10,7 +10,7 @@ JavaScript **Hoisting** refers to the process whereby the interpreter appears to
 
 Hoisting allows functions to be safely used in code before they are declared.
 
-Variable and class _declarations_ are also hoisted, but they cannot be referenced before initialization. Doing so will result in a `ReferenceError` exception.
+Variable and class _declarations_ are also hoisted, but only `var` _declarations_ be referenced before initialization.
 
 > **Note:** The term hoisting is not used in any normative specification prose prior to [ECMAScript® 2015 Language Specification](https://262.ecma-international.org/6.0/).
 > Hoisting was thought up as a general way of thinking about how execution contexts (specifically the creation and execution phases) work in JavaScript.
