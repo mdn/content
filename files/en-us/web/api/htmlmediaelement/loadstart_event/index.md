@@ -51,8 +51,8 @@ The **`loadstart`** event is fired when the browser has started to load a resour
     <video controls width="250"></video>
 
     <div class="event-log">
-        <label>Event log:</label>
-        <textarea readonly class="event-log-contents"></textarea>
+        <label for="eventLog">Event log:</label>
+        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
     </div>
 
 </div>
