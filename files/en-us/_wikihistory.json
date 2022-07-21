@@ -13618,337 +13618,6 @@
       "KadirTopal"
     ]
   },
-  "MDN/Structures": {
-    "modified": "2020-09-30T09:04:05.517Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jswisher"
-    ]
-  },
-  "MDN/Structures/Banners_and_notices": {
-    "modified": "2020-09-30T09:04:05.678Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "MDN/Structures/Code_examples": {
-    "modified": "2020-09-30T09:04:12.637Z",
-    "contributors": [
-      "chrisdavidmills",
-      "onurbasturk",
-      "wbamberg",
-      "Sheppy",
-      "jswisher",
-      "KadirTopal"
-    ]
-  },
-  "MDN/Structures/Compatibility_tables": {
-    "modified": "2020-10-15T21:08:46.049Z",
-    "contributors": [
-      "ryokohbato",
-      "chrisdavidmills",
-      "mfuji09",
-      "Sheppy",
-      "valgrimm",
-      "fscholz",
-      "yumetodo",
-      "jswisher",
-      "Akh-rman",
-      "ExE-Boss",
-      "wbamberg",
-      "paul-mitchell",
-      "raju_dasa",
-      "germain",
-      "tyreer",
-      "abrahamwilliams",
-      "jpmedley",
-      "ddbeck",
-      "Sebastianz",
-      "teoli",
-      "Julee",
-      "LuisArt",
-      "Wladimir_Palant",
-      "GijsKruitbosch",
-      "Manuel_Strehl",
-      "paul.irish",
-      "dbruant"
-    ]
-  },
-  "MDN/Structures/Live_samples": {
-    "modified": "2020-09-30T09:04:06.295Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jswisher",
-      "garvitmangal",
-      "wbamberg",
-      "SphinxKnight",
-      "dima74",
-      "sideshowbarker",
-      "ajith913",
-      "Purnima-Ahirao",
-      "xfq",
-      "mfluehr",
-      "jwhitlock",
-      "pra92",
-      "duncanmcdonald",
-      "jsx",
-      "vidhi1902",
-      "Sheppy",
-      "technoAri",
-      "trevorh",
-      "DevVikram",
-      "dbs",
-      "prasannamoharana",
-      "Rupesh",
-      "codepo8"
-    ]
-  },
-  "MDN/Structures/Macros": {
-    "modified": "2020-09-30T09:04:05.878Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "xfq",
-      "jswisher",
-      "Sheppy"
-    ]
-  },
-  "MDN/Structures/Macros/Commonly-used_macros": {
-    "modified": "2020-09-30T09:04:07.403Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "escattone",
-      "sideshowbarker",
-      "jswisher",
-      "hinell",
-      "walonge",
-      "ExE-Boss",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "jameshkramer",
-      "jwhitlock",
-      "david_ross",
-      "arai",
-      "Sheppy",
-      "Nickolay",
-      "AFBarstow",
-      "pcat",
-      "jpmedley",
-      "cdr",
-      "trevorh",
-      "madarche",
-      "ethertank",
-      "lmorchard",
-      "myakura",
-      "markg",
-      "SamB",
-      "Ruakh",
-      "IgorKitsa",
-      "mattmccutchen",
-      "Potappo",
-      "Jürgen Jeka",
-      "jenzed",
-      "Mook",
-      "Waldo",
-      "Jorend",
-      "Sevenspade",
-      "Diablownik",
-      "Yorfeix",
-      "Nc15",
-      "Taken",
-      "Okome",
-      "Leandro Mercês Xavier",
-      "Dria",
-      "Brcrgw",
-      "Banan",
-      "Maian",
-      "Prodoc",
-      "Wladimir_Palant"
-    ]
-  },
-  "MDN/Structures/Macros/Other": {
-    "modified": "2020-09-30T09:04:07.313Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "SphinxKnight",
-      "alattalatta",
-      "fscholz",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "MDN/Structures/Page_types": {
-    "modified": "2020-09-30T09:04:07.040Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "ExE-Boss",
-      "wbamberg",
-      "SphinxKnight",
-      "MrZhangJunShuai",
-      "Sheppy",
-      "jswisher",
-      "david_ross"
-    ]
-  },
-  "MDN/Structures/Page_types/API_constructor_subpage_template": {
-    "modified": "2020-10-15T21:57:17.349Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/Page_types/API_event_subpage_template": {
-    "modified": "2020-10-15T22:16:13.572Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "Zearin_Galaurum"
-    ]
-  },
-  "MDN/Structures/Page_types/API_landing_page_template": {
-    "modified": "2020-10-15T21:56:39.044Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "wbamberg",
-      "Sheppy"
-    ]
-  },
-  "MDN/Structures/Page_types/API_method_subpage_template": {
-    "modified": "2020-10-15T21:57:18.954Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "ExE-Boss",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/Page_types/API_property_subpage_template": {
-    "modified": "2020-10-15T21:57:15.719Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "ExE-Boss",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/Page_types/API_reference_page_template": {
-    "modified": "2020-10-15T21:57:16.658Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "ExE-Boss",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/Page_types/ARIA_Page_Template": {
-    "modified": "2020-09-30T09:04:12.619Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jennyevans",
-      "estelle",
-      "irenesmith",
-      "yatil"
-    ]
-  },
-  "MDN/Structures/Page_types/CSS_property_page_template": {
-    "modified": "2020-10-15T21:57:23.996Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "jpmedley",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/Page_types/CSS_selector_page_template": {
-    "modified": "2020-10-15T21:57:24.149Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "ExE-Boss",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/Page_types/Glossary_page_template": {
-    "modified": "2020-09-30T09:04:10.557Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/Page_types/HTML_element_page_template": {
-    "modified": "2020-10-15T21:57:28.232Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/Page_types/HTTP_header_page_template": {
-    "modified": "2020-10-15T21:57:21.725Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "jpmedley",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/Page_types/SVG_element_page_template": {
-    "modified": "2020-10-15T21:57:23.797Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/Quicklinks": {
-    "modified": "2020-09-30T09:04:06.614Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "ExE-Boss",
-      "wbamberg",
-      "jswisher",
-      "Sheppy"
-    ]
-  },
-  "MDN/Structures/Specification_tables": {
-    "modified": "2020-09-30T09:04:06.743Z",
-    "contributors": [
-      "chrisdavidmills",
-      "TrevorKarjanis",
-      "mfuji09",
-      "wbamberg",
-      "krosylight",
-      "Sheppy",
-      "SphinxKnight",
-      "fscholz",
-      "jswisher",
-      "Ms2ger",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
-  "MDN/Structures/Syntax_sections": {
-    "modified": "2020-09-30T09:04:08.762Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "ExE-Boss",
-      "Sheppy",
-      "jpmedley",
-      "wbamberg"
-    ]
-  },
   "MDN/Tools": {
     "modified": "2020-09-30T16:47:37.562Z",
     "contributors": [
@@ -14146,6 +13815,196 @@
       "Sheppy",
       "wbamberg",
       "Thw0rted"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures": {
+    "modified": "2020-09-30T09:04:08.762Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "ExE-Boss",
+      "Sheppy",
+      "jpmedley",
+      "wbamberg"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/API_constructor_subpage_template": {
+    "modified": "2020-10-15T21:57:17.349Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "wbamberg"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/API_event_subpage_template": {
+    "modified": "2020-10-15T22:16:13.572Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "Zearin_Galaurum"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/API_landing_page_template": {
+    "modified": "2020-10-15T21:56:39.044Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "wbamberg",
+      "Sheppy"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/API_method_subpage_template": {
+    "modified": "2020-10-15T21:57:18.954Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "ExE-Boss",
+      "wbamberg"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/API_property_subpage_template": {
+    "modified": "2020-10-15T21:57:15.719Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "ExE-Boss",
+      "wbamberg"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/API_reference_page_template": {
+    "modified": "2020-10-15T21:57:16.658Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "ExE-Boss",
+      "wbamberg"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/ARIA_Page_Template": {
+    "modified": "2020-09-30T09:04:12.619Z",
+    "contributors": [
+      "chrisdavidmills",
+      "jennyevans",
+      "estelle",
+      "irenesmith",
+      "yatil"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/CSS_property_page_template": {
+    "modified": "2020-10-15T21:57:23.996Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "jpmedley",
+      "wbamberg"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/CSS_selector_page_template": {
+    "modified": "2020-10-15T21:57:24.149Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "ExE-Boss",
+      "wbamberg"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/Commonly-used_macros": {
+    "modified": "2020-09-30T09:04:07.403Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "escattone",
+      "sideshowbarker",
+      "jswisher",
+      "hinell",
+      "walonge",
+      "ExE-Boss",
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "jameshkramer",
+      "jwhitlock",
+      "david_ross",
+      "arai",
+      "Sheppy",
+      "Nickolay",
+      "AFBarstow",
+      "pcat",
+      "jpmedley",
+      "cdr",
+      "trevorh",
+      "madarche",
+      "ethertank",
+      "lmorchard",
+      "myakura",
+      "markg",
+      "SamB",
+      "Ruakh",
+      "IgorKitsa",
+      "mattmccutchen",
+      "Potappo",
+      "Jürgen Jeka",
+      "jenzed",
+      "Mook",
+      "Waldo",
+      "Jorend",
+      "Sevenspade",
+      "Diablownik",
+      "Yorfeix",
+      "Nc15",
+      "Taken",
+      "Okome",
+      "Leandro Mercês Xavier",
+      "Dria",
+      "Brcrgw",
+      "Banan",
+      "Maian",
+      "Prodoc",
+      "Wladimir_Palant"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/Glossary_page_template": {
+    "modified": "2020-09-30T09:04:10.557Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/HTML_element_page_template": {
+    "modified": "2020-10-15T21:57:28.232Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "wbamberg"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/HTTP_header_page_template": {
+    "modified": "2020-10-15T21:57:21.725Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "jpmedley",
+      "wbamberg"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/Other": {
+    "modified": "2020-09-30T09:04:07.313Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "SphinxKnight",
+      "alattalatta",
+      "fscholz",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/SVG_element_page_template": {
+    "modified": "2020-10-15T21:57:23.797Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "wbamberg"
     ]
   },
   "MDN/Yari": {
