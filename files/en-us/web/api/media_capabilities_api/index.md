@@ -33,7 +33,9 @@ if ('mediaCapabilities' in navigator) {
   };
 
   navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then(result => {
-    console.log(`This configuration is ${result.supported ? '' : 'not '}supported, ${result.smooth ? '' : 'not '}smooth, and ${result.powerEfficient ? '' : 'not '}power efficient.`)
+    console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
+    console.log(`${result.smooth ? '' : 'not '}smooth, and`);
+    console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
     })
     .catch(() => {
       console.log(`decodingInfo error: ${contentType}`)
