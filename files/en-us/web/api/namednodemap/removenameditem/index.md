@@ -48,10 +48,10 @@ result += "We remove it.\n\n";
 attrMap.removeNamedItem("test");
 
 if (attrMap.getNamedItem("test")) {
-  result += "And `test` still exists.";
+  result += "And 'test' still exists.";
 }
 else {
-  result += "And `test` is no more to be found.";
+  result += "And 'test' is no more to be found.";
 }
 
 pre.textContent = result;
