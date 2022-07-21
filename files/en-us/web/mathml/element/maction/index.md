@@ -73,17 +73,3 @@ The following example uses the "toggle" `actiontype`:
 ## Browser compatibility
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- Prior to Gecko 9.0 {{ geckoRelease("9.0") }} the non-standard `restyle` value on the `actiontype` attribute was supported. This value has been removed.
-- Prior to Gecko 14.0 {{ geckoRelease("14.0") }} the `statusline` action type was using a non-standard syntax (see below). This has been fixed to follow the MathML specification.
-
-  ```html
-  <maction actiontype="statusline#(message)">
-  (expression)
-  </maction>
-  ```
-
-- With Gecko 15.0 {{geckoRelease("15.0")}} the `selection` attribute is only taken into account with the actiontype `"toggle"`.
-- Starting with Gecko 16.0 {{geckoRelease("16.0")}} the `selection` attribute is also taken into account when an unknown `actiontype` is specified. If an `actiontype` is not specified (is empty) or when the `selection` attribute is invalid, the markup will throw an MathML error (invalid-markup).
