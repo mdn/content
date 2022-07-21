@@ -55,7 +55,7 @@ Fiddle: <https://jsfiddle.net/jonathansampson/mqcHA/1/>
     </script>
 </head>
 <body>
-<label>Type a password: input type="password" /></label><br />
+<label>Type a password: <input type="password" name="password"/></label><br />
 <button id="caps" onclick="capsOff();">Warning off</button>
 </body>
 </html>
