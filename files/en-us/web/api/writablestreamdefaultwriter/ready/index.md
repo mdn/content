@@ -48,7 +48,7 @@ function sendMessage(message, writableStream) {
         console.log("Chunk written to sink.");
       })
       .catch(function(err) {
-        console.log("Chunk error: " + err);
+        console.log(`Chunk error: ${err}`);
       });
     });
     // Call ready again to ensure that all chunks are written
@@ -60,7 +60,7 @@ function sendMessage(message, writableStream) {
         console.log("All chunks written");
       })
       .catch(function(err) {
-        console.log("Stream error: " + err);
+        console.log(`Stream error: ${err}`);
       });
     });
   });

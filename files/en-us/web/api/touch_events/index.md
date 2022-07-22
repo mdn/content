@@ -222,7 +222,7 @@ function colorForTouch(touch) {
   r = r.toString(16); // make it a hex digit
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
-  const color = "#" + r + g + b;
+  const color = `#${r}${g}${b}`;
   return color;
 }
 ```

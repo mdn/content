@@ -169,7 +169,7 @@ As each side of the peer-to-peer connection is successfully linked up, the corre
 
 ```js
   function handleCreateDescriptionError(error) {
-    console.log("Unable to create an offer: " + error.toString());
+    console.log(`Unable to create an offer: ${error.toString()}`);
   }
 
   function handleLocalAddCandidateSuccess() {
@@ -238,8 +238,7 @@ Our example's remote peer, on the other hand, ignores the status change events, 
 ```js
   function handleReceiveChannelStatusChange(event) {
     if (receiveChannel) {
-      console.log("Receive channel's status has changed to " +
-                  receiveChannel.readyState);
+      console.log(`Receive channel's status has changed to ${receiveChannel.readyState}`);
     }
   }
 ```

@@ -44,9 +44,9 @@ function rotate(e) {
   e.preventDefault();
 
   // Rotate element 'src'.
-  src.style.width = touch.radiusX * 2 + 'px';
-  src.style.height = touch.radiusY * 2 + 'px';
-  src.style.transform = "rotate(" + touch.rotationAngle + "deg)";
+  src.style.width = `${touch.radiusX * 2}px`;
+  src.style.height = `${touch.radiusY * 2}px`;
+  src.style.transform = `rotate(${touch.rotationAngle}deg)`;
 };
 ```
 

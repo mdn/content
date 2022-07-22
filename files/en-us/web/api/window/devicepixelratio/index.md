@@ -66,8 +66,8 @@ var ctx = canvas.getContext('2d');
 
 // Set display size (css pixels).
 var size = 200;
-canvas.style.width = size + "px";
-canvas.style.height = size + "px";
+canvas.style.width = `${size}px`;
+canvas.style.height = `${size}px`;
 
 // Set actual size in memory (scaled to account for extra pixel density).
 var scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.

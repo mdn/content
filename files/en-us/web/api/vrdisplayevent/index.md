@@ -37,7 +37,7 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 
 ```js
 window.addEventListener('vrdisplaypresentchange', function(e) {
-  console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
+  console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
 })
 ```
 

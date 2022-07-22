@@ -26,7 +26,7 @@ browser.
 ## Examples
 
 ```js
-alert('Your browser version is reported as ' + navigator.appVersion);
+alert(`Your browser version is reported as ${navigator.appVersion}`);
 ```
 
 ## Notes
