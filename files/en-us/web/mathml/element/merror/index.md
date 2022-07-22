@@ -23,10 +23,10 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
 <merror>
   <mrow>
-    <mtext> Division by zero: </mtext>
+    <mtext>Division by zero:</mtext>
     <mfrac>
-      <mn> 1 </mn>
-      <mn> 0 </mn>
+      <mn>1</mn>
+      <mn>0</mn>
     </mfrac>
   </mrow>
 </merror>

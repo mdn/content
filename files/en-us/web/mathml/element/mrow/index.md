@@ -27,19 +27,19 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 <math>
 
   <mrow>
-    <mn> 1 </mn>
-    <mo> + </mo>
-    <mn> 1 </mn>
+    <mn>1</mn>
+    <mo>+</mo>
+    <mn>1</mn>
   </mrow>
 
   <mrow>
-    <mo> ( </mo>
+    <mo>(</mo>
     <mrow>
-      <mi> x </mi>
-      <mo> , </mo>
-      <mi> y </mi>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
     </mrow>
-    <mo> ) </mo>
+    <mo>)</mo>
   </mrow>
 
 </math>

@@ -66,13 +66,13 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 </mrow>
 
 <mrow>
-  <mo> [ </mo> <!-- default form value: prefix -->
+  <mo>[</mo> <!-- default form value: prefix -->
   <mrow>
-    <mn> 0 </mn>
-    <mo> ; </mo> <!-- default form value: infix -->
-    <mn> 1 </mn>
+    <mn>0</mn>
+    <mo>;</mo> <!-- default form value: infix -->
+    <mn>1</mn>
   </mrow>
-  <mo> ) </mo> <!-- default form value: postfix -->
+  <mo>)</mo> <!-- default form value: postfix -->
 </mrow>
 
 </math>

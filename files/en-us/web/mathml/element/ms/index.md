@@ -27,7 +27,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ```html
 <math>
 
-  <ms lquote="„" rquote="""> abc </ms>
+  <ms lquote="„" rquote=""">abc</ms>
 
 </math>
 ```

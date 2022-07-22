@@ -27,20 +27,20 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 Sample rendering: ![x+y+z](mover.png)
 
-Rendering in your browser: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mrow><mo>⏞</mo></mover></math>
+Rendering in your browser: <math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>⏞</mo></mover></math>
 
 ```html
 <math>
 
 <mover accent="true">
   <mrow>
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-    <mo> + </mo>
-    <mi> z </mi>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mi>y</mi>
+    <mo>+</mo>
+    <mi>z</mi>
   </mrow>
-  <mo> &#x23DE; <!--TOP CURLY BRACKET--> </mo>
+  <mo>&#x23DE;<!--TOP CURLY BRACKET--></mo>
 </mover>
 
 </math>
