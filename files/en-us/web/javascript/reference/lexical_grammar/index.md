@@ -155,6 +155,15 @@ Not all places accept the full range of identifiers. Certain syntaxes, such as f
 function import() {} // Illegal: import is a reserved word.
 ```
 
+Most notably, private properties and object properties allow reserved words.
+
+```js
+const obj = { import: "value" }; // Legal despite `import` being reserved
+class C {
+  #import = "value";
+}
+```
+
 ## Keywords
 
 _Keywords_ are tokens that look like identifiers but have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous.
