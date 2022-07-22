@@ -6658,7 +6658,6 @@
 /en-US/docs/SVG:use	/en-US/docs/Web/SVG/Element/use
 /en-US/docs/SVGFEBlendElement	/en-US/docs/Web/API/SVGFEBlendElement
 /en-US/docs/SVGFEComponentTransferElement	/en-US/docs/Web/API/SVGFEComponentTransferElement
-/en-US/docs/SVG_In_HTML_Introduction	/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /en-US/docs/SVG_Namespace_Tips_(external)	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG_Reference	/en-US/docs/Web/SVG/Element
 /en-US/docs/SVG_Tutorial	/en-US/docs/Web/SVG/Tutorial
