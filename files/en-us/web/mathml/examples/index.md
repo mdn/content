@@ -30,7 +30,7 @@ Below you'll find demos of MathML mixed with other Web technologies to produce a
   - : A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) that accepts [LaTeX](https://en.wikipedia.org/wiki/LaTeX) content.
 
 - [Magnetic field demo](https://fred-wang.github.io/TeXZilla/examples/toImageWebGL.html)
-  - : A 3D representation of a magnetic field, using [SVG](/en-US/docs/Web/SVG) and [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API).
+  - : A 3D representation of a magnetic field, using [SVG](/en-US/docs/Web/SVG) and [WebGL](/en-US/docs/Web/API/WebGL_API).
 
 - [Συνάρτηση ζήτα Ρήμαν (el)](https://fred-wang.github.io/MathFonts/%CE%A3%CF%85%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7_%CE%B6%CE%AE%CF%84%CE%B1_%CE%A1%CE%AE%CE%BC%CE%B1%CE%BD.html)
   - : A greek article about the Riemann zeta function, with [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) from the [Greek Font Society](https://greekfontsociety-gfs.gr/).
@@ -39,4 +39,4 @@ Below you'll find demos of MathML mixed with other Web technologies to produce a
   - : A JavaScript program to solve Pell's equation using [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
 
 - [Lovelace's program for Bernouilli numbers](https://people.igalia.com/fwang/lovelace-jsclass-mathml/)
-  - : An emulator for Ada Lovelace's program to calculate Bernouilli numbers, using [Private class features](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+  - : An emulator for Ada Lovelace's program to calculate Bernouilli numbers, using [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
