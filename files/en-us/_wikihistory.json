@@ -44357,16 +44357,6 @@
       "Guillaume-Heras"
     ]
   },
-  "Web/API/GlobalEventHandlers/onloadend": {
-    "modified": "2020-10-15T21:51:38.006Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "fscholz",
-      "Sebastianz",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onloadstart": {
     "modified": "2019-03-23T22:36:54.161Z",
     "contributors": [

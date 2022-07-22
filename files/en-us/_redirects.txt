@@ -8169,6 +8169,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeyup	/en-US/docs/Web/API/Element/keyup_event
+/en-US/docs/Web/API/GlobalEventHandlers/onloadend	/en-US/docs/Web/API/XMLHttpRequest/loadend_event
 /en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmouseenter	/en-US/docs/Web/API/Element/mouseenter_event
