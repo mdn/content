@@ -6,7 +6,6 @@ tags:
   - Example
   - Guide
   - MathML
-  - NeedsBeginnerUpdate
 ---
 
 ## MathML formulas
