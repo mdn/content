@@ -11,7 +11,7 @@ browser-compat: javascript.grammar
 ---
 {{JsSidebar("More")}}
 
-This page describes JavaScript's lexical grammar. The source text of ECMAScript scripts gets scanned from left to right and is converted into a sequence of input elements which are tokens, control characters, line terminators, comments or [white space](/en-US/docs/Glossary/Whitespace). ECMAScript also defines certain keywords and literals and has rules for automatic insertion of semicolons to end statements.
+This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include control characters, line terminators, [white space](/en-US/docs/Glossary/Whitespace), and comments. The others, such as identifiers and punctuators, will be used for further syntax analysis. ECMAScript also defines certain keywords and literals and has rules for automatic insertion of semicolons to make certain invalid token sequences become valid.
 
 ## Format-control characters
 
@@ -193,7 +193,7 @@ These keywords cannot be used as identifiers for variables, functions, classes, 
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
 - {{jsxref("Statements/export", "export")}}
-- {{jsxref("Statements/class", "extends")}}
+- [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends)
 - `false`
 - {{jsxref("Statements/try...catch", "finally")}}
 - {{jsxref("Statements/for", "for")}}
@@ -220,7 +220,7 @@ These keywords cannot be used as identifiers for variables, functions, classes, 
 
 The following are only reserved when they are found in strict mode code:
 
-- {{jsxref("Statements/let", "let")}} (also reserved in `const`- or `let`-declarations)
+- {{jsxref("Statements/let", "let")}} (also reserved in `const`, `let`, and class declarations)
 - {{jsxref("Operators/yield", "yield")}} (also reserved in generator function bodies)
 
 The following are only reserved when they are found in module code or async function bodies:
@@ -270,9 +270,9 @@ The following are reserved as future keywords by older ECMAScript specifications
 
 A few identifiers have a special meaning in some contexts without being reserved words of any kind. They include:
 
-- {{jsxref("Functions/arguments", "arguments")}} (cannot be declared as identifier in strict mode)
+- {{jsxref("Functions/arguments", "arguments")}} (not a keyword, but cannot be declared as identifier in strict mode)
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-- {{jsxref("Global_Objects/eval", "eval")}} (cannot be declared as identifier in strict mode)
+- {{jsxref("Global_Objects/eval", "eval")}} (not a keyword, but cannot be declared as identifier in strict mode)
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Functions/set", "set")}}
 
@@ -314,7 +314,7 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 
 ##### Exponential
 
-The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is *exponent* or *power* number – a signed integer (as per 2019 ECMA-262 specs):
+The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is *exponent* or *power* number – a signed integer.
 
 ```js
 0e-5   // => 0
@@ -576,7 +576,7 @@ Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Refe
 a = b
 ++c
 
-// is transformend by ASI into
+// is transformed by ASI into
 
 a = b;
 ++c;
