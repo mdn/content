@@ -16,41 +16,41 @@ The MathML `<mo>` element represents an operator in a broad sense. Besides opera
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- accent
+- `accent`
   - : If the operator is used as an [under](/en-US/docs/Web/MathML/Element/munder)- or [overscript](/en-US/docs/Web/MathML/Element/mover) this attribute specifies whether the operator should be treated as an accent.
     Allowed values are `true` or `false`.
-- fence
+- `fence`
   - : There is no visual effect for this attribute, but it specifies whether the operator is a fence (such as parentheses).
     Allowed values are `true` or `false`.
-- lspace
+- `lspace`
   - : The amount of space before the operator (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units). The constant `thickmathspace` (5/18em) is the default value.
 
-- maxsize
+- `maxsize`
 
   - : If `stretchy` is `true`, this attribute specifies the maximum size of the operator. Allowed values are:
 
     - `infinity`
     - an arbitrary [length](/en-US/docs/Web/MathML/Attribute/Values#lengths)
 
-- minsize
+- `minsize`
 
   - : If `stretchy` is `true`, this attribute specifies the minimum size of the operator. Allowed values are:
 
     - `infinity`
     - an arbitrary [length](/en-US/docs/Web/MathML/Attribute/Values#lengths)
 
-- movablelimits
+- `movablelimits`
   - : Specifies whether attached under- and overscripts move to sub- and superscript positions when `displaystyle` is `false`.
     Allowed values are either `true` or `false.`
-- rspace
+- `rspace`
   - : The amount of space after the operator (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units). The constant `thickmathspace` (5/18em) is the default value.
-- separator
+- `separator`
   - : There is no visual effect for this attribute, but it specifies whether the operator is a separator (such as commas).
     Allowed values are `true` or `false`.
-- stretchy
+- `stretchy`
   - : Specifies whether the operator stretches to the size of the adjacent element.
     Allowed values are `true` or `false`.
-- symmetric
+- `symmetric`
   - : If `stretchy` is `true`, this attribute specifies whether the operator should be vertically symmetric around the imaginary math axis (centered fraction line).
     The default value is `true` if **stretchy** is set to `true` and otherwise `false`. Allowed values are `true` or `false`.
 

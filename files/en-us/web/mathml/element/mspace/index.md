@@ -16,11 +16,11 @@ The MathML `<mspace>` element is used to display a blank space, whose size is se
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- depth
+- `depth`
   - : The desired depth (below the baseline) of the space (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units).
-- height
+- `height`
   - : The desired height (above the baseline) of the space (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units).
-- width
+- `width`
   - : The desired width of the space (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units).
 
 Note that some common attributes like `mathcolor`, `mathvariant` or `dir` have no effect on `<mspace>`.

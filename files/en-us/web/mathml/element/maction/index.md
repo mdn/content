@@ -16,7 +16,7 @@ The MathML **`<maction>`** element provides a possibility to bind actions to (su
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- actiontype
+- `actiontype`
 
   - : The action which specifies what happens for this element. Possible values are:
 
@@ -26,7 +26,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
     - `tooltip`: When the pointer moves over the _expression_, a tooltip box with a _message_ is displayed near the expression.
       The syntax is: `<maction actiontype="tooltip"> expression message </maction>.`
 
-- selection
+- `selection`
   - : The child element which is addressed by the action. The default value is `1`, which is the first child element.
 
 ## Examples
