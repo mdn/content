@@ -16,10 +16,10 @@ The MathML `<ms>` element represents a _string literal_ meant to be interpreted 
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- lquote
+- `lquote`
   - : The opening quote character (depends on [`dir`](#attr-dir)) to enclose the content. The default value is "`&quot;".`
 
-- rquote
+- `rquote`
   - : The closing quote mark (depends on [`dir`](#attr-dir)) to enclose the content. The default value is "`&quot;".`
 
 ## Examples

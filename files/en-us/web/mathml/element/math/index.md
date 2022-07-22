@@ -17,7 +17,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 In addition to the following attributes, the `<math>` element accepts any attributes of the {{ MathMLElement("mstyle") }} element.
 
-- display
+- `display`
 
   - : This enumerated attribute specifies how the enclosed MathML markup should be rendered. It can have one of the following values:
 
@@ -26,7 +26,7 @@ In addition to the following attributes, the `<math>` element accepts any attrib
 
     If not present, its default value is `inline`.
 
-- mode {{deprecated_inline}}
+- `mode` {{deprecated_inline}}
   - : Deprecated in favor of the [display attribute](#attr-display).
     Possible values are: `display` (which has the same effect as `display="block"`) and `inline`.
 

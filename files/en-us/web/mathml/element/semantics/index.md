@@ -35,15 +35,15 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 The following attributes can be set on `<annotation>` and `<annotation-xml>`:
 
-- definitionURL
+- `definitionURL`
   - : The location of the annotation key symbol.
-- encoding
+- `encoding`
   - : The encoding of the semantic information in the annotation (e.g. "MathML-Content", "MathML-Presentation", "application/openmath+xml", "image/png")
-- cd
+- `cd`
   - : The content dictionary that contains the annotation key symbol.
-- name
+- `name`
   - : The name of the annotation key symbol.
-- src
+- `src`
   - : The location of an external source for semantic information.
 
 ## Example

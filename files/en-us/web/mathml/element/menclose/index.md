@@ -16,7 +16,7 @@ The MathML `<menclose>` element renders its content inside an enclosing notation
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- notation
+- `notation`
 
   - : A list of notations, separated by white space, to apply to the child elements. The symbols are each drawn as if the others are not present, and therefore may overlap. Possible values are:
 

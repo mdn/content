@@ -16,10 +16,10 @@ The MathML `<munder>` element is used to attach an accent or a limit under an ex
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- accentunder
+- `accentunder`
   - : If `true`, the element is an _accent_, which is drawn closer to the base expression.
     If `false` (default value), the element is a _limit_ under the base expression.
-- align {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : The alignment of the underscript. Possible values are: `left`, `center`, and `right`.
     This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
 
