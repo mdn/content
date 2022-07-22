@@ -54,10 +54,10 @@ Congratulations, you've just created your first object. Job done! But this is an
 const person = {
   name: ['Bob', 'Smith'],
   age: 32,
-  bio: function() {
+  bio: function () {
     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
   },
-  introduceSelf: function() {
+  introduceSelf: function () {
     console.log(`Hi! I'm ${this.name[0]}.`);
   }
 };
@@ -87,7 +87,7 @@ const objectName = {
 
 The value of an object member can be pretty much anything — in our person object we've got a number, an array, and two functions. The first two items are data items, and are referred to as the object's **properties**. The last two items are functions that allow the object to do something with that data, and are referred to as the object's **methods**.
 
-When the object's members are functions there's a simpler syntax. Instead of `bio: function()` we can write `bio()`. Like this:
+When the object's members are functions there's a simpler syntax. Instead of `bio: function ()` we can write `bio()`. Like this:
 
 ```js
 const person = {
