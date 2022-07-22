@@ -38,7 +38,7 @@ new Sanitizer(config)
     - `allowAttributes` {{optional_inline}}
       - : An {{jsxref("Object")}} where each key is the attribute name and the value is an {{jsxref("Array")}} of allowed tag names. Matching attributes will not be removed.
     - `dropAttributes` {{optional_inline}}
-      - : An {{jsxref('Object')}} of AttributeMatchList indicating attributes that the sanitizer should remove.
+      - : An {{jsxref('Object')}} where each key is the attribute name and the value is an {{jsxref("Array")}} of dropped tag names. Matching attributes will be removed.
     - `allowCustomElements` {{optional_inline}}
       - : A {{jsxref('Boolean')}} value set to `false` (default) to remove custom elements and their children.
         If set to `true`, custom elements will be subject to built-in and custom configuration checks (and will be retained or dropped based on those checks).
