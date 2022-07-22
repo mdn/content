@@ -56,7 +56,7 @@ Bitwise NOTing any number `x` yields `-(x + 1)`. For example,
 `~-5` yields `4`.
 
 Note that due to using 32-bit representation for numbers both `~-1` and
-`~4294967295` (2^32 - 1) results in `0`.
+`~4294967295` (2<sup>32</sup> - 1) results in `0`.
 
 ## Examples
 

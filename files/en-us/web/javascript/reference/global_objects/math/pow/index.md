@@ -35,7 +35,7 @@ A number representing the given base taken to the power of the given exponent.
 
 The **`Math.pow()`** function returns the
 `base` to the `exponent` power, as in
-`base^exponent`, the `base` and the
+`base`<sup><code>exponent</code></sup>, the `base` and the
 `exponent` are in decimal numeral system.
 
 Because `pow()` is a static method of `Math`, use it
