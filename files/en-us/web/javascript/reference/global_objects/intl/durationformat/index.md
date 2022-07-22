@@ -11,10 +11,10 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DurationFormat
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 The **`Intl.DurationFormat`** object enables language-sensitive duration formatting.
-
 
 ## Constructor
 
@@ -27,6 +27,8 @@ The **`Intl.DurationFormat`** object enables language-sensitive duration formatt
   - : Getter function that formats a duration according to the locale and formatting options of this {{jsxref("Intl/DurationFormat", "DurationFormat")}} object.
 - {{jsxref("Intl/DurationFormat/formatToParts", "Intl.DurationFormat.prototype.formatToParts()")}}
   - : Returns an {{jsxref("Array")}} of objects representing the formatted duration in parts.
+- {{jsxref("Intl/DurationFormat/resolvedOptions", "Intl.DurationFormat.prototype.resolvedOptions()")}}
+  - : Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.
 
 ## Examples
 
@@ -43,6 +45,7 @@ new Intl.DurationFormat('en', { fractionalDigits: 2 }).format('PT12.3456S');
 new Intl.DurationFormat('en', { milliseconds: 'narrow', fractionalDigits: 2 }).format('PT12.3456S');
 // => 12s 345.60ms
 ```
+
 ## Specifications
 
 {{Specifications}}

@@ -1,0 +1,115 @@
+---
+title: Intl.DurationFormat.resolvedOptions()
+slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/resolvedOptions
+tags:
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Localization
+  - Method
+  - DurationFormat
+  - ResolvedOptions
+  - Prototype
+  - Reference
+browser-compat: javascript.builtins.Intl.DurationFormat.resolvedOptions
+---
+
+{{JSRef}} {{SeeCompatTable}}
+
+The **`Intl.DurationFormat.prototype.resolvedOptions()`** method returns a new object with properties reflecting the locale and date and time formatting options computed during initialization of this {{jsxref("Intl.DurationFormat")}} object.
+
+## Syntax
+
+```js
+resolvedOptions();
+```
+
+### Return value
+
+A new object with properties reflecting the locale and date and time formatting options
+computed during the initialization of the given {{jsxref("Intl.DateTimeFormat")}} object.
+
+## Description
+
+The resulting object has the following properties:
+
+- `locale`
+  - : The BCP 47 language tag for the locale actually used. If any Unicode extension
+    values were requested in the input BCP 47 language tag that led to this locale,
+    the key-value pairs that were requested and are supported for this locale are
+    included in `locale`.
+- `style`
+  - : Is one of the String values `long`, `short`, `narrow`, or "digital" identifying the duration formatting style used.
+- `years`
+  - : Is one of the String values `long`, `short`, `narrow` identifying the formatting style used for the years field.
+- `yearsDisplay`
+  - : Is one of the String values `auto` or `always` identifying when to display the years field.
+- `months`
+  - : Is one of the String values `long`, `short`, `narrow` identifying the formatting style used for the months field.
+- `monthsDisplay`
+  - : Is one of the String values `auto` or `always` identifying when to display the months field.
+- `weeks`
+  - : Is one of the String values `long`, `short`, `narrow` identifying the formatting style used for the weeks field.
+- `weeksDisplay`
+  - : Is one of the String values `auto` or `always` identifying when to display the weeks field.
+- `days`
+  - : Is one of the String values `long`, `short`, `narrow` identifying the formatting style used for the days field.
+- `daysDisplay`
+  - : Is one of the String values `auto` or `always` identifying when to display the days field.
+- `hours`
+  - : Is one of the String values `long`, `short`, `narrow`, `2-digit`, or `numeric` identifying the formatting style used for the hours field.
+- `hoursDisplay`
+  - : Is one of the String values `auto` or `always` identifying when to display the hours field.
+- `minutes`
+  - : Is one of the String values `long`, `short`, `narrow`, `2-digit`, or `numeric` identifying the formatting style used for the minutes field.
+- `minutesDisplay`
+  - : Is one of the String values `auto` or `always` identifying when to display the minutes field.
+- `seconds`
+  - : Is one of the String values `long`, `short`, `narrow`, `2-digit`, or `numeric` identifying the formatting style used for the seconds field.
+- `secondsDisplay`
+  - : Is one of the String values `auto` or `always` identifying when to display the seconds field.
+- `milliseconds`
+  - : Is one of the String values `long`, `short`, `narrow`, or `numeric` identifying the formatting style used for the milliseconds field.
+- `millisecondsDisplay`
+  - : Is one of the String values `auto` or `always` identifying when to display the millisecondsDisplay field.
+- `microseconds`
+  - : Is one of the String values `long`, `short`, `narrow`, or `numeric` identifying the formatting style used for the microseconds field.
+- `microsecondsDisplay`
+  - : Is one of the String values `auto` or `always` identifying when to display the microsecondsDisplay field.
+- `nanoseconds`
+  - : Is one of the String values `long`, `short`, `narrow`, or `numeric` identifying the formatting style used for the nanoseconds field.
+- `nanosecondsDisplay`
+  - : Is one of the String values `auto` or `always` identifying when to display the nanosecondsDisplay field.
+- `fractionalDigits`
+  - : Is a Number value, identifying the number of fractional digits to be used with numeric styles.
+- `numberingSystem`
+  - : The value provided for this properties in the options argument, if present, or the value requested using the Unicode extension key `nu` or filled in as a default.
+
+## Examples
+
+### Using the resolvedOptions method
+
+```js
+const duration = new Intl.DurationFormat('en');
+const usedOptions = duration.resolvedOptions();
+
+usedOptions.locale; // "en"
+usedOptions.numberingSystem; // "latn"
+usedOptions.years; // "long"
+usedOptions.yearsDisplay; // "auto"
+usedOptions.style; // "long"
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{jsxref("Intl.DurationFormat")}}
+- {{jsxref("Intl.supportedValuesOf()")}}
+- {{jsxref("Global_Objects/Intl", "Intl")}}
