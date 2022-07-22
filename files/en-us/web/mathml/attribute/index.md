@@ -235,76 +235,6 @@ Notes:
       <td>Sets up a unique identifier associated with the element.</td>
     </tr>
     <tr>
-      <td>{{ unimplemented_inline() }} <code>indentalign</code></td>
-      <td>
-        {{ MathMLElement("mo") }},
-        {{ MathMLElement("mspace") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{ unimplemented_inline() }} <code>indentalignfirst</code>
-      </td>
-      <td>
-        {{ MathMLElement("mo") }},
-        {{ MathMLElement("mspace") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{ unimplemented_inline() }} <code>indentalignlast</code></td>
-      <td>
-        {{ MathMLElement("mo") }},
-        {{ MathMLElement("mspace") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{ unimplemented_inline() }} <code>indentshift</code></td>
-      <td>
-        {{ MathMLElement("mo") }},
-        {{ MathMLElement("mspace") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{ unimplemented_inline() }} <code>indentshiftfirst</code>
-      </td>
-      <td>
-        {{ MathMLElement("mo") }},
-        {{ MathMLElement("mspace") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{ unimplemented_inline() }} <code>indentshiftlast</code></td>
-      <td>
-        {{ MathMLElement("mo") }},
-        {{ MathMLElement("mspace") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{ unimplemented_inline() }} <code>indenttarget</code></td>
-      <td>
-        {{ MathMLElement("mo") }},
-        {{ MathMLElement("mspace") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{ unimplemented_inline() }} <code>infixlinebreakstyle</code>
-      </td>
-      <td>{{ MathMLElement("mstyle") }}</td>
-      <td>
-        Specifies the default <code>linebreakstyle</code> to use for infix
-        operators.
-      </td>
-    </tr>
-    <tr>
       <td><code>length</code></td>
       <td>{{ MathMLElement("msline") }}</td>
       <td></td>
@@ -511,7 +441,7 @@ Notes:
       </td>
     </tr>
     <tr>
-      <td><code>scriptminsize</code></td>
+      <td><code>scriptminsize</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
         Specifies a minimum font size allowed due to changes in
@@ -519,7 +449,7 @@ Notes:
       </td>
     </tr>
     <tr>
-      <td><code>scriptsizemultiplier</code></td>
+      <td><code>scriptsizemultiplier</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
         Specifies the multiplier to be used to adjust font size due to changes

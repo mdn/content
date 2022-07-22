@@ -24,11 +24,11 @@ the console if the assertion is false. If the assertion is true, nothing happens
 ```js
 assert(assertion, obj1)
 assert(assertion, obj1, obj2)
-assert(assertion, obj1, obj2, /* ... ,*/ objN)
+assert(assertion, obj1, obj2, /* … ,*/ objN)
 
 assert(assertion, msg)
 assert(assertion, msg, subst1)
-assert(assertion, msg, subst1, /* ... ,*/ substN)
+assert(assertion, msg, subst1, /* … ,*/ substN)
 ```
 
 ### Parameters
@@ -58,7 +58,7 @@ assertion:
 ```js
 const errorMsg = 'the # is not even';
 for (let number = 2; number <= 5; number += 1) {
-    console.log('the # is ' + number);
+    console.log(`the # is ${number}`);
     console.assert(number % 2 === 0, {number: number, errorMsg: errorMsg});
     // or, using ES2015 object property shorthand:
     // console.assert(number % 2 === 0, {number, errorMsg});

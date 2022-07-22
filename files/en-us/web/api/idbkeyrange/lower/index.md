@@ -39,7 +39,7 @@ After declaring the key range, we log its `lower` property value to the
 console, which should appear as "F".
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/indexeddb-examples/tree/master/idbkeyrange) repo.
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbkeyrange) repo.
 > (View the example [live](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/) too.
 
 ```js
@@ -54,7 +54,7 @@ function displayData() {
     const cursor = event.target.result;
       if(cursor) {
         const listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
+        listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
         list.appendChild(listItem);
 
         cursor.continue();

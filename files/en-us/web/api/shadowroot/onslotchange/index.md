@@ -47,4 +47,4 @@ this.shadowRoot.onslotchange = function(e) {
 - [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots)
 - {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event
 - {{domxref("HTMLSlotElement")}}
-- {{domxref("GlobalEventHandlers.onslotchange")}}
+- {{domxref("HTMLSlotElement.onslotchange")}}

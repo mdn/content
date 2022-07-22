@@ -33,7 +33,7 @@ A generic {{domxref("Event")}}.
 
 ```js
 function starting(e) {
-  logMessage("Starting script with ID: " + e.target.id);
+  logMessage(`Starting script with ID: ${e.target.id}`);
 }
 
 document.addEventListener('beforescriptexecute', starting, true);

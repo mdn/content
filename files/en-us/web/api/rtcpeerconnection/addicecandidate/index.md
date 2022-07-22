@@ -179,12 +179,12 @@ signalingChannel.onmessage = receivedString => {
   if (message.ice) {
     // A typical value of ice here might look something like this:
     //
-    // {candidate: "candidate:0 1 UDP 2122154243 192.168.1.9 53421 typ host", sdpMid: "0", ...}
+    // {candidate: "candidate:0 1 UDP 2122154243 192.168.1.9 53421 typ host", sdpMid: "0", …}
     //
     // Pass the whole thing to addIceCandidate:
 
     pc.addIceCandidate(message.ice).catch(e => {
-      console.log("Failure during addIceCandidate(): " + e.name);
+      console.log(`Failure during addIceCandidate(): ${e.name}`);
     });
   } else {
     // handle other things you might be signaling, like sdp

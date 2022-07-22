@@ -62,11 +62,10 @@ The following example demonstrates updating the UI with a title and image icon o
 
 ```js
 addEventListener('backgroundfetchsuccess', (event) => {
-    event.updateUI({ title: 'Episode 5 ready to listen!', 'icon: {
-      src: "path/to/success.ico",
-      sizes: "16x16 32x32 64x64",
-    }' });
-  }());
+  event.updateUI({ title: 'Episode 5 ready to listen!', icon: {
+    src: "path/to/success.ico",
+    sizes: "16x16 32x32 64x64",
+  }});
 });
 ```
 

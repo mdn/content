@@ -37,7 +37,7 @@ _This interface also inherits properties from {{domxref("EventTarget")}}._
 - {{domxref("TextTrack.language")}} {{readonlyInline}}
   - : A string which specifies the text language in which the text track's contents is written. The value must adhere to the format specified in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}, just like the HTML {{htmlattrxref("lang")}} attribute. For example, this can be `"en-US"` for United States English or `"pt-BR"` for Brazilian Portuguese.
 - {{domxref("TextTrack.mode")}}
-  - : A string specifying the track's current mode, which must be one of the permitted values. Changing this property's value changes the track's current mode to match. The default is `disabled`, unless the {{HTMLElement("track")}} element's {{htmlattrxref("default", "track")}} Boolean attribute is specified, in which case the default mode is `started`.
+  - : A string specifying the track's current mode, which must be one of the permitted values. Changing this property's value changes the track's current mode to match. The default is `disabled`, unless the {{HTMLElement("track")}} element's {{htmlattrxref("default", "track")}} boolean attribute is set to `true` — in which case the default mode is `showing`.
 
 ## Methods
 

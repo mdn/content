@@ -10,7 +10,7 @@ tags:
   - Security
   - connect-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.connect-src
+browser-compat: http.headers.Content-Security-Policy.connect-src
 ---
 {{HTTPSidebar}}
 
@@ -87,7 +87,7 @@ The following connections are blocked and won't load:
 
   var es = new EventSource("https://not-example.com/");
 
-  navigator.sendBeacon("https://not-example.com/", { ... });
+  navigator.sendBeacon("https://not-example.com/", { /* … */ });
 </script>
 ```
 

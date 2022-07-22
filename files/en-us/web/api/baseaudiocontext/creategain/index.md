@@ -78,7 +78,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
    // Error callback
    function(err) {
-     console.log('The following gUM error occurred: ' + err);
+     console.log(`The following gUM error occurred: ${err}`);
    }
   );
 } else {
@@ -88,7 +88,7 @@ if (navigator.mediaDevices.getUserMedia) {
 source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-  ...
+// …
 
 mute.onclick = voiceMute;
 

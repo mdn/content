@@ -16,7 +16,7 @@ The MathML **`<maction>`** element provides a possibility to bind actions to (su
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- actiontype
+- `actiontype`
 
   - : The action which specifies what happens for this element. Possible values are:
 
@@ -26,7 +26,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
     - `tooltip`: When the pointer moves over the _expression_, a tooltip box with a _message_ is displayed near the expression.
       The syntax is: `<maction actiontype="tooltip"> expression message </maction>.`
 
-- selection
+- `selection`
   - : The child element which is addressed by the action. The default value is `1`, which is the first child element.
 
 ## Examples
@@ -73,17 +73,3 @@ The following example uses the "toggle" `actiontype`:
 ## Browser compatibility
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- Prior to Gecko 9.0 {{ geckoRelease("9.0") }} the non-standard `restyle` value on the `actiontype` attribute was supported. This value has been removed.
-- Prior to Gecko 14.0 {{ geckoRelease("14.0") }} the `statusline` action type was using a non-standard syntax (see below). This has been fixed to follow the MathML specification.
-
-  ```html
-  <maction actiontype="statusline#(message)">
-  (expression)
-  </maction>
-  ```
-
-- With Gecko 15.0 {{geckoRelease("15.0")}} the `selection` attribute is only taken into account with the actiontype `"toggle"`.
-- Starting with Gecko 16.0 {{geckoRelease("16.0")}} the `selection` attribute is also taken into account when an unknown `actiontype` is specified. If an `actiontype` is not specified (is empty) or when the `selection` attribute is invalid, the markup will throw an MathML error (invalid-markup).

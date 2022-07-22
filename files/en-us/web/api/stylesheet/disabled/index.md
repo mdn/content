@@ -28,9 +28,9 @@ A boolean.
 ## Examples
 
 ```js
-// If the stylesheet is disabled...
+// If the stylesheet is disabled
 if (stylesheet.disabled) {
-  // ... apply styles in-line.
+  // Apply styles in-line
 }
 ```
 

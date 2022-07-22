@@ -61,50 +61,26 @@ Strict equality is almost always the correct comparison operation to use. For al
 
 ## Loose equality using ==
 
-The behavior for performing loose equality using `==` is as follows:
+Loose equality is _symmetric_: `A == B` always has identical semantics to `B == A` for any values of `A` and `B` (except for the order of applied conversions). The behavior for performing loose equality using `==` is as follows:
 
-- Loose equality compares two values for equality _after_ converting both values to a common type. After conversions (one or both sides may undergo conversions), the final equality comparison is performed exactly as `===` performs it.
-- Loose equality is _symmetric_: `A == B` always has identical semantics to `B == A` for any values of `A` and `B` (except for the order of applied conversions).
-- `undefined` and `null` are loosely equal; that is, `undefined == null` is true, and `null == undefined` is true
+1. If the operands have the same type, they are compared as follows:
+    - Object: return `true` only if both operands reference the same object.
+    - String: return `true` only if both operands have the same characters in the same order.
+    - Number: return `true` only if both operands have the same value. `+0` and `-0` are treated as the same value. If either operand is `NaN`, return `false`; so `NaN` is never equal to `NaN`.
+    - Boolean: return `true` only if operands are both `true` or both `false`.
+    - BigInt: return `true` only if both operands have the same value.
+    - Symbol: return `true` only if both operands reference the same symbol.
+2. If one of the operands is `null` or `undefined`, the other must also be `null` or `undefined` to return `true`. Otherwise return `false`.
+3. If one of the operands is an object and the other is a primitive, convert the object to a primitive using the object's [`@@toPrimitive()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"default"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. (This primitive conversion is the same as the one used in [addition](/en-US/docs/Web/JavaScript/Reference/Operators/Addition).)
+4. At this step, both operands are converted to primitives (one of String, Number, Boolean, Symbol, and BigInt). The rest of the conversion is done case-by-case.
+    - If they are of the same type, compare them using step 1.
+    - If one of the operands is a Symbol but the other is not, return `false`.
+    - If one of the operands is a Boolean but the other is not, convert the boolean to a number: `true` is converted to 1, and `false` is converted to 0. Then compare the two operands loosely again.
+    - Number to String: convert the string to a Number using the same algorithm as the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) constructor. Conversion failure would result in `NaN`, which will guarantee the equality to be `false`.
+    - Number to BigInt: compare by their numeric value. If the number is ±Infinity or `NaN`, return `false`.
+    - String to BigInt: convert the string to a BigInt using the same algorithm as the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) constructor. If conversion fails, return `false`.
 
 Traditionally, and according to ECMAScript, all primitives and objects are loosely unequal to `undefined` and `null`. But most browsers permit a very narrow class of objects (specifically, the `document.all` object for any page), in some contexts, to act as if they _emulate_ the value `undefined`. Loose equality is one such context: `null == A` and `undefined == A` evaluate to true if, and only if, A is an object that _emulates_ `undefined`. In all other cases an object is never loosely equal to `undefined` or `null`.
-
-Loose equality comparisons among other combinations of operand types are performed as shown in the tables below. The following notations are used in the tables:
-
-- `ToNumber(A)` attempts to convert its argument to a number before comparison. Its behavior is equivalent to `+A` (the unary + operator).
-- `ToPrimitive(A)` attempts to convert its object argument to a primitive value, by invoking varying sequences of `A[Symbol.toPrimitive]()`, `A.valueOf()` and `A.toString()` methods on `A`.
-- `ℝ(A)` attempts to convert its argument to an ECMAScript [mathematical value](https://tc39.es/ecma262/#mathematical-value).
-- `StringToBigInt(A)` attempts to convert its argument to a `BigInt` by applying the ECMAScript [`StringToBigInt`](https://tc39.es/ecma262/#sec-stringtobigint) algorithm.
-
-**number** primitive `A` compared to operand `B`:
-
-| number    | bigint             | string              | boolean             | Object                |
-| --------- | ------------------ | ------------------- | ------------------- | --------------------- |
-| `A === B` | `ℝ(A) equals ℝ(B)` | `A === ToNumber(B)` | `A === ToNumber(B)` | `A == ToPrimitive(B)` |
-
-**bigint** primitive `A` compared to operand `B`:
-
-| number             | bigint    | string                    | boolean            | Object                |
-| ------------------ | --------- | ------------------------- | ------------------ | --------------------- |
-| `ℝ(A) equals ℝ(B)` | `A === B` | `A === StringToBigInt(B)` | `A == ToNumber(B)` | `A == ToPrimitive(B)` |
-
-**string** primitive `A` compared to operand `B`:
-
-| number              | bigint                    | string    | boolean                       | Object                |
-| ------------------- | ------------------------- | --------- | ----------------------------- | --------------------- |
-| `ToNumber(A) === B` | `StringToBigInt(A) === B` | `A === B` | `ToNumber(A) === ToNumber(B)` | `A == ToPrimitive(B)` |
-
-**boolean** primitive `A` compared to operand `B`:
-
-| number              | bigint             | string                        | boolean   | Object                          |
-| ------------------- | ------------------ | ----------------------------- | --------- | ------------------------------- |
-| `ToNumber(A) === B` | `ToNumber(A) == B` | `ToNumber(A) === ToNumber(B)` | `A === B` | `ToNumber(A) == ToPrimitive(B)` |
-
-**Object** `A` compared to operand `B`:
-
-| number                | bigint                | string                | boolean                         | Object    |
-| --------------------- | --------------------- | --------------------- | ------------------------------- | --------- |
-| `ToPrimitive(A) == B` | `ToPrimitive(A) == B` | `ToPrimitive(A) == B` | `ToPrimitive(A) == ToNumber(B)` | `A === B` |
 
 In most cases, using loose equality is discouraged. The result of a comparison using strict equality is easier to predict, and may evaluate more quickly due to the lack of type coercion.
 

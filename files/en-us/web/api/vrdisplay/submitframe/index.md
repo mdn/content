@@ -74,7 +74,7 @@ function drawVRScene() {
   // for passing into the uniformMatrix4fv methods below
 
   const projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
-  cosnt viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
+  const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 
   // WebVR: Render the left eye's view to the left half of the canvas
   gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
@@ -92,7 +92,7 @@ function drawVRScene() {
     // draw the view for each eye
   }
 
-  // ...
+  // …
 
   // WebVR: Indicate that we are ready to present the rendered frame to the VR display
   vrDisplay.submitFrame();

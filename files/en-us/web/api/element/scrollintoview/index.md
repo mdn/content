@@ -17,8 +17,8 @@ browser-compat: api.Element.scrollIntoView
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} interface's
-**`scrollIntoView()`** method scrolls the element's parent
-container such that the element on which `scrollIntoView()` is called is
+**`scrollIntoView()`** method scrolls the element's ancestor
+containers such that the element on which `scrollIntoView()` is called is
 visible to the user.
 
 ## Syntax

@@ -31,7 +31,7 @@ let a = 'foo', b = 42, c = {}
 let o = {a: a, b: b, c: c}
 
 let o = {
-  property: function (parameters) {},
+  property(parameters) {},
   get property() {},
   set property(value) {}
 };
@@ -168,7 +168,7 @@ A property of an object can also refer to a [function](/en-US/docs/Web/JavaScrip
 
 ```js
 let o = {
-  property: function (parameters) {},
+  property(parameters) {},
   get property() {},
   set property(value) {}
 }

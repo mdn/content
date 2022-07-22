@@ -16,7 +16,7 @@ The MathML `<menclose>` element renders its content inside an enclosing notation
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- notation
+- `notation`
 
   - : A list of notations, separated by white space, to apply to the child elements. The symbols are each drawn as if the others are not present, and therefore may overlap. Possible values are:
 
@@ -46,9 +46,9 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 <math>
 
   <menclose notation="circle box">
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mi>y</mi>
   </menclose>
 
 </math>
@@ -61,11 +61,3 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ## Browser compatibility
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- Additional values for the `notation` attribute have been added in the following releases:
-
-  - `madruwb` in Gecko 2.0 {{GeckoRelease("2.0")}}.
-  - `updiagonalarrow` in Gecko 24.0 {{GeckoRelease("24.0")}}
-  - `phasorangle` in Gecko 32.0 {{GeckoRelease("32.0")}}

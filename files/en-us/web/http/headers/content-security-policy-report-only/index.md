@@ -102,7 +102,7 @@ The HTML of `signup.html` looks like this:
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    ... Content ...
+    Page content
   </body>
 </html>
 ```

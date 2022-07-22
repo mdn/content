@@ -17,7 +17,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 In addition to the following attributes, the `<math>` element accepts any attributes of the {{ MathMLElement("mstyle") }} element.
 
-- display
+- `display`
 
   - : This enumerated attribute specifies how the enclosed MathML markup should be rendered. It can have one of the following values:
 
@@ -26,7 +26,7 @@ In addition to the following attributes, the `<math>` element accepts any attrib
 
     If not present, its default value is `inline`.
 
-- mode {{deprecated_inline}}
+- `mode` {{deprecated_inline}}
   - : Deprecated in favor of the [display attribute](#attr-display).
     Possible values are: `display` (which has the same effect as `display="block"`) and `inline`.
 
@@ -117,12 +117,6 @@ In addition to the following attributes, the `<math>` element accepts any attrib
 ## Browser compatibility
 
 {{Compat}}
-
-## Firefox-specific notes
-
-Firefox 7 introduced support for accepting all MathML attributes on the top-level math element (i.e. the same behavior as a {{ MathMLElement("mstyle") }} element). However, the `displaystyle` attribute was not taken into account and [has been added](https://bugzilla.mozilla.org/show_bug.cgi?id=669719) in Firefox 8.
-
-A textual fall-back (`alttext`) or referring to an alternative image using the attributes `altimg`, `altimg-width`, `altimg-height` or `altimg-valign` is currently not implemented in Firefox.
 
 ## See also
 

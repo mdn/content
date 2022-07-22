@@ -15,7 +15,7 @@ The **`Object.getPrototypeOf()`** method returns the prototype
 (i.e. the value of the internal `[[Prototype]]` property) of the specified
 object.
 
-{{EmbedInteractiveExample("pages/js/object-getprototypeof.html")}}
+{{EmbedInteractiveExample("pages/js/object-getprototypeof.html", "shorter")}}
 
 ## Syntax
 

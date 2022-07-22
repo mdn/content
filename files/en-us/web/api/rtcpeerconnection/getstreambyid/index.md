@@ -45,7 +45,7 @@ The {{DOMxRef("MediaStream")}} with the given id.
 ```js
 var stream = pc.getStreamById(myTrackId);
 if (stream) {
-  console.log("Found stream: " + stream.id);
+  console.log(`Found stream: ${stream.id}`);
 }
 ```
 

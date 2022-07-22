@@ -91,8 +91,8 @@ function displayDataByIndex() {
     const cursor = event.target.result;
     if(cursor) {
       const tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.key + '</td>'
-                           + '<td>' + cursor.primaryKey + '</td>';
+      tableRow.innerHTML = `<td>${cursor.key}</td>`
+                         + `<td>${cursor.primaryKey}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();

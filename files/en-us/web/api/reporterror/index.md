@@ -58,7 +58,7 @@ const newError = new Error('Some error message', "someFile.js", 11);
 self.reportError(newError);
 
 window.onerror = function(message, source, lineno, colno, error) {
-  console.log('message:' + error.message + ', lineno: ' + lineno );
+  console.log(`message: ${error.message}, lineno: ${lineno}` );
   return true;
 };
 

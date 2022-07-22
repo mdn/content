@@ -16,9 +16,9 @@ condition is written. It must appear in parenthesis after the `if` keyword.
 
 ## Message
 
-```js
-SyntaxError: Expected ')' (Edge)
+```
 SyntaxError: missing ) after condition (Firefox)
+SyntaxError: Unexpected token '{'. Expected ')' to end an 'if' condition. (Safari)
 ```
 
 ## Error type

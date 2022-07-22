@@ -52,6 +52,8 @@ For an alphabetical listing see the sidebar on the left.
   - : Generator Functions enable writing [iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) more easily.
 - {{jsxref("Statements/async_function", "async function")}}
   - : Declares an async function with the specified parameters.
+- {{jsxref("Statements/async_function*", "async function*")}}
+  - : Asynchronous Generator Functions enable writing async [iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) more easily.
 - {{jsxref("Statements/return", "return")}}
   - : Specifies the value to be returned by a function.
 - {{jsxref("Statements/class", "class")}}

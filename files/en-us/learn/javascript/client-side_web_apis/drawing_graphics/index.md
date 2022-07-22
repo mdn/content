@@ -543,7 +543,7 @@ Now let's create our own simple animation — we'll get a character from a certa
     let posX = 0;
     ```
 
-    Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' [Create a sprite sheet walk cycle using CSS animation](https://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/ "Permanent Link to Create a sprite sheet walk cycle using CSS animation")). The image looks like this:
+    Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' [Walking cycle using CSS animation](https://codepen.io/mikethomas/pen/kQjKLW) CodePen). The image looks like this:
 
     ![](walk-right.png)
 
@@ -807,7 +807,7 @@ Here we have covered only the real basics of canvas — there is so much more to
 
 ## Examples
 
-- [Violent theremin](https://github.com/mdn/webaudio-examples/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
+- [Violent theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
 - [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic) — Uses a canvas to visualize real-time audio data from the Web Audio API.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

@@ -55,7 +55,7 @@ A {{jsxref("Promise")}}.
 Before communicating on a serial port it must be opened. Opening the port allows the site to specify the necessary parameters that control how data is transmitted and received. Developers should check the documentation for the device they are connecting to for the appropriate parameters.
 
 ```js
-await port.open({ baudRate: /* pick your baud rate */ });
+await port.open({ baudRate: 9600 /* pick your baud rate */ });
 ```
 
 ## Specifications

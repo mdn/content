@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 ```js
 var transformFeedback = gl.createTransformFeedback();
 
-// ...
+// …
 
 gl.deleteTransformFeedback(transformFeedback);
 ```

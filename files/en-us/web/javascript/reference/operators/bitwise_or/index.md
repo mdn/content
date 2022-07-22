@@ -14,7 +14,7 @@ browser-compat: javascript.operators.bitwise_or
 The bitwise OR operator (`|`) returns a `1` in each bit position
 for which the corresponding bits of either or both operands are `1`s.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-or.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-or.html", "shorter")}}
 
 ## Syntax
 

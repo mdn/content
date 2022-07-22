@@ -55,7 +55,7 @@ The application uses {{HTMLElement("div")}} elements to represent four touch are
 const logEvents = false;
 
 // Touch Point cache
-cosnt tpCache = new Array();
+const tpCache = [];
 ```
 
 ### Register event handlers
@@ -111,7 +111,7 @@ function handle_pinch_zoom(ev) {
    }
    else {
      // empty tpCache
-     tpCache = new Array();
+     tpCache = [];
    }
  }
 }
@@ -244,17 +244,15 @@ function enableLog(ev) {
 
 function log(name, ev, printTargetIds) {
   const o = document.getElementsByTagName('output')[0];
-  let s = name + ": touches = " + ev.touches.length +
-                " ; targetTouches = " + ev.targetTouches.length +
-                " ; changedTouches = " + ev.changedTouches.length;
-  o.innerHTML += s + "
-";
+  let s = `${name}: touches = ${ev.touches.length} ; ` +
+    `targetTouches = ${ev.targetTouches.length} ; ` +
+    `changedTouches = ${ev.changedTouches.length}`;
+  o.innerHTML += `${s}<br>`;
 
   if (printTargetIds) {
     s = "";
     for (var i=0; i < ev.targetTouches.length; i++) {
-      s += "... id = " + ev.targetTouches[i].identifier + "
-";
+      s += `... id = ${ev.targetTouches[i].identifier}<br>`;
     }
     o.innerHTML += s;
   }

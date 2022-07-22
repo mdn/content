@@ -91,7 +91,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
     facingMode: { exact: "user" }
   };
 
-  myTrack.applyConstraints(constraints).then(function() => {
+  myTrack.applyConstraints(constraints).then(() => {
     /* do stuff if constraints applied successfully */
   }).catch(function(reason) {
     /* failed to apply constraints; reason is why */
@@ -493,8 +493,7 @@ function keyDownHandler(event) {
     let str = elem.value;
 
     let position = elem.selectionStart;
-    let newStr = str.substring(0, position) + "  " +
-            str.substring(position, str.length);
+    let newStr = `${str.substring(0, position)}  ${str.substring(position, str.length)}`;
     elem.value = newStr;
     elem.selectionStart = elem.selectionEnd = position + 2;
     event.preventDefault();
@@ -517,8 +516,7 @@ for (let constraint in supportedConstraints) {
   if (Object.hasOwn(supportedConstraints, constraint)) {
     let elem = document.createElement("li");
 
-    elem.innerHTML = "<code><a href='https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/"
-        .concat(constraint) + "' target='_blank'>" + constraint + "</a></code>";
+    elem.innerHTML = `<code><a href='https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/${constraint}' target='_blank'>${constraint}</a></code>`;
     supportedConstraintList.appendChild(elem);
   }
 }
@@ -530,13 +528,11 @@ We also have some simple error handling code; `handleError()` is called to handl
 
 ```js
 function log(msg) {
-  logElement.innerHTML += (msg + "<br>");
+  logElement.innerHTML += `${msg}<br>`;
 }
 
 function handleError(reason) {
-  log("Error <code>" + reason.name +
-      "</code> in constraint <code>" + reason.constraint +
-      "</code>: " + reason.message);
+  log(`Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`);
 }
 ```
 

@@ -53,7 +53,7 @@ URL is from the same origin as the service worker or a {{Glossary("null", "null
 if (self.Notification.permission === 'granted') {
   const notificationObject = {
     body: 'Click here to view your messages.',
-    data: { url: self.location.origin + '/some/path' },
+    data: { url: `${self.location.origin}/some/path` },
     // data: { url: 'http://example.com' },
   };
   self.registration.showNotification('You\'ve got messages!', notificationObject);

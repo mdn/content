@@ -8,6 +8,7 @@ tags:
   - Reference
   - Regular Expressions
   - String
+  - Polyfill
 browser-compat: javascript.builtins.String.split
 ---
 {{JSRef}}
@@ -297,6 +298,7 @@ console.log(commands.split(splitCommands, 3)); // => ["light on", "brightness up
 
 ## See also
 
+- [Polyfill of `String.prototype.split` in `core-js` with fixes and implementation of modern behavior like `Symbol.split` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}

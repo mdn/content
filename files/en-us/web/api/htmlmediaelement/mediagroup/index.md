@@ -19,12 +19,6 @@ The **`HTMLMediaElement.mediaGroup`** property reflects the {{htmlattrxref("medi
 
 A string.
 
-## Examples
-
-```js
-...
-```
-
 ## Specifications
 
 In 2016, the whole Media Controller feature was [removed from the HTML specification](https://github.com/w3c/html/issues/246). It is no longer on track to become a standard.

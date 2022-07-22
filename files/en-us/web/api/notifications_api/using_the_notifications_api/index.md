@@ -137,7 +137,7 @@ For example, in the to-do-list example we use the following snippet to create a 
 
 ```js
 const img = '/to-do-notifications/img/icon-128.png';
-const text = 'HEY! Your task "' + title + '" is now overdue.';
+const text = `HEY! Your task "${title}" is now overdue.`;
 const notification = new Notification('To do list', { body: text, icon: img });
 ```
 
@@ -211,7 +211,7 @@ window.addEventListener('load', function () {
       // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
       const interval = window.setInterval(function () {
         // Thanks to the tag, we should only see the "Hi! 9" notification
-        const n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+        const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
         if (i++ == 9) {
           window.clearInterval(interval);
         }
@@ -229,7 +229,7 @@ window.addEventListener('load', function () {
           // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
           const interval = window.setInterval(function () {
             // Thanks to the tag, we should only see the "Hi! 9" notification
-            const n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+            const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
             if (i++ == 9) {
               window.clearInterval(interval);
             }

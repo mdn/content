@@ -58,7 +58,7 @@ videoElem.textTracks.addEventListener("addtrack", handleTrackEvent, false);
 videoElem.textTracks.addEventListener("removetrack", handleTrackEvent, false);
 
 function handleTrackEvent(event) {
-  const trackKind;
+  let trackKind;
 
   if (event.target instanceof VideoTrackList) {
     trackKind = "video";
@@ -72,10 +72,10 @@ function handleTrackEvent(event) {
 
   switch(event.type) {
     case "addtrack":
-      console.log("Added a " + trackKind + " track");
+      console.log(`Added a ${trackKind} track`);
       break;
     case "removetrack":
-      console.log("Removed a " + trackKind + " track");
+      console.log(`Removed a ${trackKind} track`);
       break;
   }
 }

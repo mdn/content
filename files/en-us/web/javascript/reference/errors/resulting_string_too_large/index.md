@@ -15,10 +15,12 @@ argument that is infinity.
 
 ## Message
 
-```js
-RangeError: argument out of range (Edge)
+```
+RangeError: Invalid string length (V8-based)
+RangeError: Invalid count value: Infinity (V8-based)
 RangeError: repeat count must be less than infinity and not overflow maximum string size (Firefox)
-RangeError: Invalid count value (Chrome)
+RangeError: Out of memory (Safari)
+RangeError: String.prototype.repeat argument must be greater than or equal to 0 and not be Infinity (Safari)
 ```
 
 ## Error type

@@ -59,7 +59,7 @@ var computedStyle = window.getComputedStyle(element, null);
 
 for (prop in elementStyle) {
   if (Object.hasOwn(elementStyle, prop)) {
-    out += "  " + prop + " = '" + elementStyle[prop] + "' > '" + computedStyle[prop] + "'\n";
+    out += `  ${prop} = '${elementStyle[prop]}' > '${computedStyle[prop]}'\n`;
   }
 }
 console.log(out)
@@ -68,10 +68,10 @@ console.log(out)
 The output would be something like:
 
 ```
-...
+…
 fontWeight = '' > 'bold'
 color = 'red' > 'rgb(255, 0, 0)'
-...
+…
 ```
 
 Note the presence of the value `bold` for `font-weight` in the computed style and the absence of it in the element's `style` property.

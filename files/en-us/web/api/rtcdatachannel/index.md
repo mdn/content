@@ -130,7 +130,7 @@ const pc = new RTCPeerConnection();
 const dc = pc.createDataChannel("my channel");
 
 dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+  console.log(`received: ${event.data}`);
 };
 
 dc.onopen = function () {

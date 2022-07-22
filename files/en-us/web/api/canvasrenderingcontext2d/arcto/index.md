@@ -134,7 +134,7 @@ const p2 = { x: 20,  y: 20  }
 
 const labelPoint = function (p) {
   const offset = 15;
-  ctx.fillText('(' + p.x + ',' + p.y + ')', p.x + offset, p.y + offset);
+  ctx.fillText(`(${p.x},${p.y})`, p.x + offset, p.y + offset);
 }
 
 ctx.beginPath();

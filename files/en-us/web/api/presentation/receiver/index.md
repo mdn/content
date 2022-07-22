@@ -56,12 +56,10 @@ to build and display a list of those connections' ID strings.
 ```js
 let listElem = document.getElementById("connectionview");
 
-navigator.presentation.receiver.connectionList
-          .then(function(connections) {
-    connections.forEach(function(aConnection)) {
-      listElem.innerHTML += "<li>" + aConnection.id
-            + "</li>";
-    });
+navigator.presentation.receiver.connectionList.then(function(connections) {
+  connections.forEach(function(aConnection) {
+    listElem.innerHTML += `<li>${aConnection.id}</li>`;
+  });
 });
 ```
 

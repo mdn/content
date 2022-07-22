@@ -59,7 +59,7 @@ fetch('./tortoise.png')
 .then(response => response.body)
 .then(body => {
   const reader = body.getReader();
-  // ...
+  // …
   });
 ```
 
@@ -73,7 +73,7 @@ Also note that the previous example can be reduced by one step, as `response.bod
   // Retrieve its body as ReadableStream
   .then(response => {
     const reader = response.body.getReader();
-    // ...
+    // …
   });
 ```
 
@@ -177,8 +177,8 @@ const stream = new ReadableStream({
   type,
   autoAllocateChunkSize
 }, {
-  highWaterMark,
-  size()
+  highWaterMark: 3,
+  size: () => 1
 });
 ```
 
@@ -232,11 +232,12 @@ In addition, when we are done reading the fetch body we use the controller's {{d
 In our Simple stream pump example, we consume the custom readable stream by passing it into a {{domxref("Response.Response", "Response")}} constructor call, after which we consume it as a `blob()`.
 
 ```js
-.then(stream => new Response(stream))
-.then(response => response.blob())
-.then(blob => URL.createObjectURL(blob))
-.then(url => console.log(image.src = url))
-.catch(err => console.error(err));
+readableStream
+  .then(stream => new Response(stream))
+  .then(response => response.blob())
+  .then(blob => URL.createObjectURL(blob))
+  .then(url => console.log(image.src = url))
+  .catch(err => console.error(err));
 ```
 
 But a custom stream is still a `ReadableStream` instance, meaning you can attach a reader to it. As an example, have a look at our [Simple random stream demo](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-random-stream/)), which creates a custom stream, enqueues some random strings into it, and then reads the data out of the stream again once the _Stop string generation_ button is pressed.

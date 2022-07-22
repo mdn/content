@@ -21,8 +21,14 @@ You can also define functions using the {{jsxref("Function")}} constructor and a
 ## Syntax
 
 ```js
-function name([param[, param,[..., param]]]) {
-   [statements]
+function name(param0) {
+  statements
+}
+function name(param0, param1) {
+  statements
+}
+function name(param0, param1, /* … ,*/ paramN) {
+  statements
 }
 ```
 

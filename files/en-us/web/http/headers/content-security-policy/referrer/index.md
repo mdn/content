@@ -10,7 +10,7 @@ tags:
   - Reference
   - Security
   - referrer
-browser-compat: http.headers.csp.Content-Security-Policy.referrer
+browser-compat: http.headers.Content-Security-Policy.referrer
 ---
 {{HTTPSidebar}} {{deprecated_header}}
 

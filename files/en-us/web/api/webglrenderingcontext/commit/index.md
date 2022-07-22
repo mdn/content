@@ -39,7 +39,7 @@ var htmlCanvas = document.createElement('canvas');
 var offscreen = htmlCanvas.transferControlToOffscreen();
 var gl = offscreen.getContext('webgl');
 
-// ... some drawing using the gl context ...
+// Perform some drawing using the gl context
 
 // Push frames back to the original HTMLCanvasElement
 gl.commit();

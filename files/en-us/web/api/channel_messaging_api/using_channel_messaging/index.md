@@ -97,7 +97,7 @@ In the {{HTMLElement("iframe")}} elements, we have the following JavaScript:
 
 ```js
 const list = document.querySelector('ul');
-const port2;
+let port2;
 
 // Listen for the initial port transfer message
 window.addEventListener('message', initPort);
@@ -113,7 +113,7 @@ function onMessage(e) {
   const listItem = document.createElement('li');
   listItem.textContent = e.data;
   list.appendChild(listItem);
-  port2.postMessage('Message received by IFrame: "' + e.data + '"');
+  port2.postMessage(`Message received by IFrame: "${e.data}"`);
 }
 ```
 

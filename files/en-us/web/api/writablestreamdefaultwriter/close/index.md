@@ -95,20 +95,20 @@ const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(1);
-      var view = new Uint8Array(buffer);
+      const buffer = new ArrayBuffer(1);
+      const view = new Uint8Array(buffer);
       view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      const decoded = decoder.decode(view, { stream: true });
+      const listItem = document.createElement('li');
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
     });
   },
   close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    const listItem = document.createElement('li');
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {

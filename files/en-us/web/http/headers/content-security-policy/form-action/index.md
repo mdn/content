@@ -10,7 +10,7 @@ tags:
   - action
   - form
   - form-action
-browser-compat: http.headers.csp.Content-Security-Policy.form-action
+browser-compat: http.headers.Content-Security-Policy.form-action
 ---
 {{HTTPSidebar}}
 

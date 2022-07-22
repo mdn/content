@@ -64,10 +64,10 @@ const filters = [
       ];
 navigator.usb.requestDevice({filters: filters})
 .then(usbDevice => {
-  console.log("Product name: " + usbDevice.productName);
+  console.log(`Product name: ${usbDevice.productName}`);
 })
 .catch(e => {
-  console.log("There is no device. " + e);
+  console.log(`There is no device. ${e}`);
 });
 ```
 

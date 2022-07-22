@@ -63,7 +63,7 @@ paymentRequest.addEventListener("paymentmethodchange", handlePaymentChange, fals
 
 paymentRequest.show()
 .then(response => response.complete("success"))
-.catch(err => console.log("Error handling payment request: " + err));
+.catch(err => console.error(`Error handling payment request: ${err}`));
 ```
 
 The event handler function itself, `handlePaymentChange()`, looks like this:
@@ -78,7 +78,7 @@ handlePaymentChange = event => {
   }
 
   event.updateWith(detailsUpdate);
-}, false);
+};
 ```
 
 This begins by looking at the event's {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} property; if that indicates that the user is trying to use Apple Pay, we pass the {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} into a function called `calculateServiceFee()`, which we might create to take the information about the transaction, such as the underlying credit card being used to service the Apple Pay request, and compute and return an object that specifies changes to be applied to the {{domxref("PaymentRequest")}} in order to add any service fees that the payment method might require.

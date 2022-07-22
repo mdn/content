@@ -28,7 +28,7 @@ To discourage the synchronous use of `XMLHttpRequest`, HTML support is not avail
 Retrieving an HTML resource as a DOM using {{domxref("XMLHttpRequest")}} works just like retrieving an XML resource as a DOM using `XMLHttpRequest`, except you can't use the synchronous mode and you have to explicitly request a document by assigning the string `"document"` to the {{domxref("XMLHttpRequest.responseType", "responseType")}} property of the `XMLHttpRequest` object after calling {{domxref("XMLHttpRequest.open", "open()")}} but before calling {{domxref("XMLHttpRequest.send", "send()")}}.
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.onload = function() {
   console.log(this.responseXML.title);
 }
@@ -47,7 +47,7 @@ This method relies on the "force async" nature of the feature. When you try to s
 function HTMLinXHR() {
   if (!window.XMLHttpRequest)
     return false;
-  var req = new window.XMLHttpRequest();
+  const req = new window.XMLHttpRequest();
   req.open('GET', window.location.href, false);
   try {
     req.responseType = 'document';
@@ -80,8 +80,8 @@ function detectHtmlInXhr(callback) {
     window.setTimeout(function() { callback(false); }, 0);
     return;
   }
-  var done = false;
-  var xhr = new window.XMLHttpRequest();
+  let done = false;
+  const xhr = new window.XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (this.readyState == 4 && !done) {
       done = true;
@@ -123,13 +123,13 @@ If the character encoding is declared in the HTTP {{HTTPHeader("Content-Type")}}
 
 ```js
 function getHTML (oXHR, sTargetId) {
-  var rOpen = new RegExp("<(?!\!)\\s*([^\\s>]+)[^>]*\\s+id\\=[\"\']" + sTargetId + "[\"\'][^>]*>" ,"i"),
+  const rOpen = new RegExp(`<(?!\!)\\s*([^\\s>]+)[^>]*\\s+id\\=["\']${sTargetId}["\'][^>]*>` ,"i"),
        sSrc = oXHR.responseText, aExec = rOpen.exec(sSrc);
 
-  return aExec ? (new RegExp("(?:(?:.(?!<\\s*" + aExec[1] + "[^>]*[>]))*.?<\\s*" + aExec[1] + "[^>]*[>](?:.(?!<\\s*\/\\s*" + aExec[1] + "\\s*>))*.?<\\s*\/\\s*" + aExec[1] + "\\s*>)*(?:.(?!<\\s*\/\\s*" + aExec[1] + "\\s*>))*.?", "i")).exec(sSrc.slice(sSrc.indexOf(aExec[0]) + aExec[0].length)) || "" : "";
+  return aExec ? (new RegExp(`(?:(?:.(?!<\\s*${aExec[1]}[^>]*[>]))*.?<\\s*${aExec[1]}[^>]*[>](?:.(?!<\\s*\/\\s*${aExec[1]}\\s*>))*.?<\\s*\/\\s*${aExec[1]}\\s*>)*(?:.(?!<\\s*\/\\s*${aExec[1]}\\s*>))*.?`, "i")).exec(sSrc.slice(sSrc.indexOf(aExec[0]) + aExec[0].length)) || "" : "";
 }
 
-var oReq = new XMLHttpRequest();
+const oReq = new XMLHttpRequest();
 oReq.open("GET", "yourPage.html", true);
 oReq.onload = function () { console.log(getHTML(this, "intro")); };
 oReq.send(null);

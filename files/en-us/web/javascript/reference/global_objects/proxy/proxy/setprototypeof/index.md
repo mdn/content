@@ -14,14 +14,13 @@ browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
 The **`handler.setPrototypeOf()`** method is a trap for
 {{jsxref("Object.setPrototypeOf()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller",
-  "taller")}}
+{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller")}}
 
 ## Syntax
 
 ```js
 new Proxy(target, {
-  setPrototypeOf: function(target, prototype) {
+  setPrototypeOf(target, prototype) {
   }
 });
 ```

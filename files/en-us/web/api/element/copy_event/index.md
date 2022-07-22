@@ -51,8 +51,8 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 #### HTML
 
 ```html
-<div class="source" contenteditable="true">Try copying text from this box...</div>
-<div class="target" contenteditable="true">...and pasting it into this one</div>
+<div class="source" contenteditable="true">Copy text from this box.</div>
+<div class="target" contenteditable="true">And paste it into this one.</div>
 ```
 
 ```css hidden

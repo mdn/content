@@ -1,5 +1,5 @@
 ---
-title: Function.name
+title: Function.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 tags:
   - ECMAScript 2015
@@ -19,7 +19,7 @@ A {{jsxref("Function")}} object's read-only **`name`** property indicates the fu
 
 ## JavaScript compressors and minifiers
 
-> **Warning:** Be careful when using `Function.name` and source code transformations, such as those carried out by JavaScript compressors (minifiers) or obfuscators. These tools are often used as part of a JavaScript build pipeline to reduce the size of a program prior to deploying it to production. Such transformations often change a function's name at build-time.
+> **Warning:** Be careful when using the `name` property with source code transformations, such as those carried out by JavaScript compressors (minifiers) or obfuscators. These tools are often used as part of a JavaScript build pipeline to reduce the size of a program prior to deploying it to production. Such transformations often change a function's name at build-time.
 
 Source code such as:
 
@@ -46,7 +46,7 @@ if (b.constructor.name === 'Foo') {
 }
 ```
 
-In the uncompressed version, the program runs into the truthy-branch and logs "`'foo' is an instance of 'Foo'`". Whereas, in the compressed version it behaves differently, and runs into the else-branch. If you rely on `Function.name`, like in the example above, make sure your build pipeline doesn't change function names, or don't assume a function to have a particular name.
+In the uncompressed version, the program runs into the truthy-branch and logs "`'foo' is an instance of 'Foo'`". Whereas, in the compressed version it behaves differently, and runs into the else-branch. If you rely on the `name` property, like in the example above, make sure your build pipeline doesn't change function names, or don't assume a function to have a particular name.
 
 ## Examples
 
@@ -61,7 +61,7 @@ doSomething.name; // "doSomething"
 
 ### Function constructor name
 
-Functions created with the syntax `new Function(...)` or just `Function(...)` create {{jsxref("Function")}} objects and their name is "anonymous".
+Functions created with the syntax `new Function()` or just `Function()` create {{jsxref("Function")}} objects and their name is "anonymous".
 
 ```js
 (new Function).name; // "anonymous"
@@ -81,9 +81,9 @@ Anonymous function expressions that were created using the keyword `function` or
 Variables and methods can infer the name of an anonymous function from its syntactic position (new in ECMAScript 2015).
 
 ```js
-let f = function() {};
-let object = {
-  someMethod: function() {}
+const f = function() {};
+const object = {
+  someMethod() {}
 };
 
 console.log(f.name); // "f"
@@ -93,7 +93,7 @@ console.log(object.someMethod.name); // "someMethod"
 You can define a function with a name in a {{jsxref("Operators/Function", "function expression", "", 1)}}:
 
 ```js
-let object = {
+const object = {
   someMethod: function object_someMethod() {}
 };
 console.log(object.someMethod.name); // logs "object_someMethod"
@@ -105,7 +105,7 @@ try { object_someMethod } catch(e) { console.log(e); }
 The name property is read-only and cannot be changed by the assignment operator:
 
 ```js
- let object = {
+const object = {
   // anonymous
   someMethod: function() {}
 };
@@ -120,14 +120,14 @@ To change it, use {{jsxref("Object.defineProperty()")}}.
 
 ```js
 const o = {
-  foo(){}
+  foo() {}
 };
 o.foo.name; // "foo";
 ```
 
 ### Bound function names
 
-{{jsxref("Function.bind()")}} produces a function whose name is "bound " plus the function name.
+{{jsxref("Function.prototype.bind()")}} produces a function whose name is "bound " plus the function name.
 
 ```js
 function foo() {};
@@ -139,7 +139,7 @@ foo.bind({}).name; // "bound foo"
 When using [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set) accessor properties, "get" or "set" will appear in the function name.
 
 ```js
-let o = {
+const o = {
   get foo(){},
   set foo(x){}
 };
@@ -182,7 +182,7 @@ Foo.name = function() {};
 Trying to obtain the class of `fooInstance` via `fooInstance.constructor.name` won't give us the class name at all but a reference to the static class method. Example:
 
 ```js
-let fooInstance = new Foo();
+const fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs function name()
 ```
 
@@ -200,15 +200,16 @@ Therefore you may not rely on the built-in `Function.name` property to always ho
 If a {{jsxref("Symbol")}} is used a function name and the symbol has a description, the method's name is the description in square brackets.
 
 ```js
-let sym1 = Symbol("foo");
-let sym2 = Symbol();
-let o = {
-  [sym1]: function(){},
-  [sym2]: function(){}
+const sym1 = Symbol("foo");
+const sym2 = Symbol();
+
+const o = {
+  [sym1](){},
+  [sym2](){}
 };
 
 o[sym1].name; // "[foo]"
-o[sym2].name; // ""
+o[sym2].name; // "[]"
 ```
 
 ## Specifications
@@ -221,5 +222,5 @@ o[sym2].name; // ""
 
 ## See also
 
-- A polyfill for functions `.name` property is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- A polyfill for functions' `.name` property is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
 - {{jsxref("Function")}}

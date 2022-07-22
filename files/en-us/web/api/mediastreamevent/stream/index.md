@@ -25,11 +25,9 @@ the {{domxref("MediaStream")}} associated with the event.
 ## Example
 
 ```js
-pc.onaddstream = function( ev ) {
-                      alert("A stream (id: '" +
-                            ev.stream.id +
-                            "') has been added to this connection.");
-                   };
+pc.onaddstream = function(ev) {
+  alert(`A stream (id: '${ev.stream.id}') has been added to this connection.`);
+};
 ```
 
 ## Browser compatibility

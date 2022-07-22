@@ -54,16 +54,16 @@ function drop_handler(event)
 {
   const dt = event.dataTransfer;
   const count = dt.mozItemCount;
-  output("Items: " + count + "\n");
+  output(`Items: ${count}\n`);
 
   for (let i = 0; i < count; i++) {
-    output(" Item " + i + ":\n");
+    output(` Item ${i}:\n`);
     const types = dt.mozTypesAt(i);
     for (let t = 0; t < types.length; t++) {
-      output("  " + types[t] + ": ");
+      output(`  ${types[t]}: `);
       try {
         const data = dt.mozGetDataAt(types[t], i);
-        output("(" + (typeof data) + ") : <" + data + " >\n");
+        output(`(${typeof data}) : <${data}>\n`);
       } catch (ex) {
         output("<>\n");
         dump(ex);

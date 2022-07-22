@@ -59,12 +59,12 @@ This example blocks every copy and paste attempt from the {{htmlElement("textare
 const log = document.getElementById('log');
 
 function logCopy(event) {
-  log.innerText = 'Copy blocked!\n' + log.innerText;
+  log.innerText = `Copy blocked!\n${log.innerText}`;
   event.preventDefault();
 }
 
 function logPaste(event) {
-  log.innerText = 'Paste blocked!\n' + log.innerText;
+  log.innerText = `Paste blocked!\n${log.innerText}`;
   event.preventDefault();
 }
 

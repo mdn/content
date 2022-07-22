@@ -43,7 +43,7 @@ In case you want to test your code in browsers that still use a prefix, you can 
 ```js
 // In the following line, you should include the prefixes of implementations you want to test.
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-// DON'T use "var indexedDB = ..." if you're not in a function.
+// DON'T use "var indexedDB = …" if you're not in a function.
 // Moreover, you may need references to some window.IDB* objects:
 window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction || {READ_WRITE: "readwrite"}; // This line should only be needed if it is needed to support the object's constants for older browsers
 window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
@@ -116,7 +116,7 @@ As mentioned above, error events bubble. Error events are targeted at the reques
 db.onerror = event => {
   // Generic error handler for all errors targeted at this database's
   // requests!
-  console.error("Database error: " + event.target.errorCode);
+  console.error(`Database error: ${event.target.errorCode}`);
 };
 ```
 
@@ -372,7 +372,7 @@ request.onerror = event => {
 };
 request.onsuccess = event => {
   // Do something with the request.result!
-  console.log("Name for SSN 444-44-4444 is " + request.result.name);
+  console.log(`Name for SSN 444-44-4444 is ${request.result.name}`);
 };
 ```
 
@@ -380,7 +380,7 @@ That's a lot of code for a "simple" retrieval. Here's how you can shorten it up 
 
 ```js
 db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = event => {
-  console.log("Name for SSN 444-44-4444 is " + event.target.result.name);
+  console.log(`Name for SSN 444-44-4444 is ${event.target.result.name}`);
 };
 ```
 
@@ -433,7 +433,7 @@ const objectStore = db.transaction("customers").objectStore("customers");
 objectStore.openCursor().onsuccess = event => {
   const cursor = event.target.result;
   if (cursor) {
-    console.log("Name for SSN " + cursor.key + " is " + cursor.value.name);
+    console.log(`Name for SSN ${cursor.key} is ${cursor.value.name}`);
     cursor.continue();
   }
   else {
@@ -456,7 +456,7 @@ objectStore.openCursor().onsuccess = event => {
     cursor.continue();
   }
   else {
-    console.log("Got all customers: " + customers);
+    console.log(`Got all customers: ${customers}`);
   }
 };
 ```
@@ -465,7 +465,7 @@ objectStore.openCursor().onsuccess = event => {
 >
 > ```js
 > objectStore.getAll().onsuccess = event => {
->   console.log("Got all customers: " + event.target.result);
+>   console.log(`Got all customers: ${event.target.result}`);
 > };
 > ```
 >
@@ -483,7 +483,7 @@ Storing customer data using the SSN as a key is logical since the SSN uniquely i
 const index = objectStore.index("name");
 
 index.get("Donna").onsuccess = event => {
-  console.log("Donna's SSN is " + event.target.result.ssn);
+  console.log(`Donna's SSN is ${event.target.result.ssn}`);
 };
 ```
 
@@ -497,7 +497,7 @@ index.openCursor().onsuccess = event => {
   const cursor = event.target.result;
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the whole object.
-    console.log("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
+    console.log(`Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`);
     cursor.continue();
   }
 };
@@ -508,7 +508,7 @@ index.openKeyCursor().onsuccess = event => {
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the SSN.
     // No way to directly get the rest of the stored object.
-    console.log("Name: " + cursor.key + ", SSN: " + cursor.primaryKey);
+    console.log(`Name: ${cursor.key}, SSN: ${cursor.primaryKey}`);
     cursor.continue();
   }
 };
@@ -597,7 +597,7 @@ openReq.onblocked = event => {
 
 openReq.onupgradeneeded = event => {
   // All other databases have been closed. Set everything up.
-  db.createObjectStore(/* ... */);
+  db.createObjectStore(/* … */);
   useDatabase(db);
 };
 

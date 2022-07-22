@@ -38,18 +38,18 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 Sample rendering: ![(a/b)/(c/d)](mfrac.png)
 
-Your browser rendering: <math><mfrac bevelled="true"><mfrac><mi>a </mi><mi>b </mi></mfrac><mfrac><mi>c </mi><mi>d</mi></mfrac></mfrac></math>
+Your browser rendering: <math><mfrac bevelled="true"><mfrac><mi>a</mi><mi>b</mi></mfrac><mfrac><mi>c</mi><mi>d</mi></mfrac></mfrac></math>
 
 ```html
 <math>
   <mfrac bevelled="true">
      <mfrac>
-        <mi> a </mi>
-        <mi> b </mi>
+        <mi>a</mi>
+        <mi>b</mi>
      </mfrac>
      <mfrac>
-        <mi> c </mi>
-        <mi> d </mi>
+        <mi>c</mi>
+        <mi>d</mi>
      </mfrac>
   </mfrac>
 </math>

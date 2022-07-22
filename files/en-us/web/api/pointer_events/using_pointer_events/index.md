@@ -66,7 +66,7 @@ This sets up all the event listeners for our {{HTMLElement("canvas")}} element s
 We'll keep track of the touches in-progress.
 
 ```js
-const ongoingTouches = new Array();
+const ongoingTouches = [];
 ```
 
 When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
@@ -77,7 +77,7 @@ function handleStart(evt) {
   const el = document.getElementsByTagName("canvas")[0];
   const ctx = el.getContext("2d");
 
-  log("pointerdown: id = " + evt.pointerId);
+  log(`pointerdown: id = ${evt.pointerId}`);
   ongoingTouches.push(copyTouch(evt));
   const color = colorForTouch(evt);
   ctx.beginPath();
@@ -101,12 +101,12 @@ function handleMove(evt) {
   const color = colorForTouch(evt);
   const idx = ongoingTouchIndexById(evt.pointerId);
 
-  log("continuing touch: idx =  " + idx);
+  log(`continuing touch: idx =  ${idx}`);
   if (idx >= 0) {
     ctx.beginPath();
-    log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
+    log(`ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`);
     ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-    log("ctx.lineTo(" + evt.clientX + ", " + evt.clientY + ");");
+    log(`ctx.lineTo(${evt.clientX}, ${evt.clientY});`);
     ctx.lineTo(evt.clientX, evt.clientY);
     ctx.lineWidth = 4;
     ctx.strokeStyle = color;
@@ -115,7 +115,7 @@ function handleMove(evt) {
     ongoingTouches.splice(idx, 1, copyTouch(evt));  // swap in the new touch record
     log(".");
   } else {
-    log("can't figure out which touch to continue: idx = " + idx);
+    log(`can't figure out which touch to continue: idx = ${idx}`);
   }
 }
 ```
@@ -160,7 +160,7 @@ If the user's finger wanders into browser UI, or the touch otherwise needs to be
 
 ```js
 function handleCancel(evt) {
-  log("pointercancel: id = " + evt.pointerId);
+  log(`pointercancel: id = ${evt.pointerId}`);
   const idx = ongoingTouchIndexById(evt.pointerId);
   ongoingTouches.splice(idx, 1);  // remove it; we're done
 }
@@ -184,8 +184,8 @@ function colorForTouch(touch) {
   r = r.toString(16); // make it a hex digit
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
-  const color = "#" + r + g + b;
-  log("color for touch with identifier " + touch.pointerId + " = " + color);
+  const color = `#${r}${g}${b}`;
+  log(`color for touch with identifier ${touch.pointerId} = ${color}`);
   return color;
 }
 ```
@@ -224,7 +224,7 @@ function ongoingTouchIndexById(idToFind) {
 ```js
 function log(msg) {
   const p = document.getElementById('log');
-  p.innerHTML = msg + "\n" + p.innerHTML;
+  p.innerHTML = `${msg}\n${p.innerHTML}`;
 }
 ```
 

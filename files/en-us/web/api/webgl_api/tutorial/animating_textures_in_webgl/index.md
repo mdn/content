@@ -20,13 +20,13 @@ The first step is to create the {{ HTMLElement("video") }} element that we'll us
 
 ```js
 // will set to true when video can be copied to texture
-var copyVideo = false;
+let copyVideo = false;
 
 function setupVideo(url) {
   const video = document.createElement('video');
 
-  var playing = false;
-  var timeupdate = false;
+  let playing = false;
+  let timeupdate = false;
 
   video.autoplay = true;
   video.muted = true;
@@ -124,7 +124,7 @@ In the definition of `render()` if `copyVideo` is true, then we call `updateText
 
   const video = setupVideo('Firefox.mp4');
 
-  var then = 0;
+  let then = 0;
 
   // Draw the scene repeatedly
   function render(now) {

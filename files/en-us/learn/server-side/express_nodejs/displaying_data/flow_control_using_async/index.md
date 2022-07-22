@@ -52,10 +52,10 @@ The example below shows how this works when we pass an object as the first argum
 
 ```js
 async.parallel({
-  one: function(callback) { /* … */ },
-  two: function(callback) { /* … */ },
+  one(callback) { /* … */ },
+  two(callback) { /* … */ },
   // …
-  something_else: function(callback) { /* … */ }
+  something_else(callback) { /* … */ }
   },
   // optional callback
   function(err, results) {
@@ -72,10 +72,10 @@ The method [`async.series()`](https://caolan.github.io/async/v3/docs.html#series
 
 ```js
 async.series({
-  one: function(callback) { /* … */ },
-  two: function(callback) { /* … */ },
+  one(callback) { /* … */ },
+  two(callback) { /* … */ },
   …
-  something_else: function(callback) { /* … */ }
+  something_else(callback) { /* … */ }
   },
   // optional callback after the last asynchronous function completes.
   function(err, results) {

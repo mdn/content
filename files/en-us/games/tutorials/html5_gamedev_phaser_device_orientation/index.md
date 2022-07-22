@@ -108,11 +108,11 @@ var Ball = {
 };
 Ball.Boot = function(game) {};
 Ball.Boot.prototype = {
-    preload: function() {
+    preload() {
         this.load.image('preloaderBg', 'img/loading-bg.png');
         this.load.image('preloaderBar', 'img/loading-bar.png');
     },
-    create: function() {
+    create() {
         this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         this.game.scale.pageAlignHorizontally = true;
         this.game.scale.pageAlignVertically = true;
@@ -130,7 +130,7 @@ The `Preloader` state takes care of loading all the assets:
 ```js
 Ball.Preloader = function(game) {};
 Ball.Preloader.prototype = {
-    preload: function() {
+    preload() {
         this.preloadBg = this.add.sprite((Ball._WIDTH-297)*0.5, (Ball._HEIGHT-145)*0.5, 'preloaderBg');
         this.preloadBar = this.add.sprite((Ball._WIDTH-158)*0.5, (Ball._HEIGHT-50)*0.5, 'preloaderBar');
         this.load.setPreloadSprite(this.preloadBar);
@@ -141,7 +141,7 @@ Ball.Preloader.prototype = {
         // …
         this.load.audio('audio-bounce', ['audio/bounce.ogg', 'audio/bounce.mp3', 'audio/bounce.m4a']);
     },
-    create: function() {
+    create() {
         this.game.state.start('MainMenu');
     }
 };
@@ -156,7 +156,7 @@ The `MainMenu` state shows the main menu of the game, where you can start playin
 ```js
 Ball.MainMenu = function(game) {};
 Ball.MainMenu.prototype = {
-    create: function() {
+    create() {
         this.add.sprite(0, 0, 'screen-mainmenu');
         this.gameTitle = this.add.sprite(Ball._WIDTH*0.5, 40, 'title');
         this.gameTitle.anchor.set(0.5,0);
@@ -164,7 +164,7 @@ Ball.MainMenu.prototype = {
         this.startButton.anchor.set(0.5,0);
         this.startButton.input.useHandCursor = true;
     },
-    startGame: function() {
+    startGame() {
         this.game.state.start('Howto');
     }
 };
@@ -191,10 +191,10 @@ When the start button is pressed, instead of jumping directly into the action th
 Ball.Howto = function(game) {
 };
 Ball.Howto.prototype = {
-    create: function() {
+    create() {
         this.buttonContinue = this.add.button(0, 0, 'screen-howtoplay', this.startGame, this);
     },
-    startGame: function() {
+    startGame() {
         this.game.state.start('Game');
     }
 };
@@ -209,16 +209,16 @@ The `Game` state from the `Game.js` file is where all the magic happens. All the
 ```js
 Ball.Game = function(game) {};
 Ball.Game.prototype = {
-    create: function() {},
-    initLevels: function() {},
-    showLevel: function(level) {},
-    updateCounter: function() {},
-    managePause: function() {},
-    manageAudio: function() {},
-    update: function() {},
-    wallCollision: function() {},
-    handleOrientation: function(e) {},
-    finishLevel: function() {}
+    create() {},
+    initLevels() {},
+    showLevel(level) {},
+    updateCounter() {},
+    managePause() {},
+    manageAudio() {},
+    update() {},
+    wallCollision() {},
+    handleOrientation(e) {},
+    finishLevel() {}
 };
 ```
 
@@ -287,9 +287,9 @@ window.addEventListener("deviceorientation", this.handleOrientation, true);
 We're adding an event listener to the `"deviceorientation"` event and binding the `handleOrientation` function which looks like this:
 
 ```js
-handleOrientation: function(e) {
-    var x = e.gamma;
-    var y = e.beta;
+handleOrientation(e) {
+    const x = e.gamma;
+    const y = e.beta;
     Ball._player.body.velocity.x += x;
     Ball._player.body.velocity.y += y;
 },
@@ -356,8 +356,8 @@ First, `add.group()` is used to create a new group of items. Then the `ARCADE` b
 The objects are stored in the `this.levels` array, which is by default invisible. To load specific levels, we make sure the previous levels are hidden, and show the current one:
 
 ```js
-showLevel: function(level) {
-    var lvl = level | this.level;
+showLevel(level) {
+    const lvl = level | this.level;
     if(this.levels[lvl-2]) {
         this.levels[lvl-2].visible = false;
     }
@@ -437,7 +437,7 @@ this.time.events.loop(Phaser.Timer.SECOND, this.updateCounter, this);
 This loop, also in the `create` function, will execute the `updateCounter` function every single second from the beginning of the game, so we can apply the changes accordingly. This is how the complete `updateCounter` function looks:
 
 ```js
-updateCounter: function() {
+updateCounter() {
     this.timer++;
     this.timerText.setText("Time: "+this.timer);
     this.totalTimeText.setText("Total time: "+(this.totalTimer+this.timer));
@@ -457,7 +457,7 @@ this.physics.arcade.overlap(this.ball, this.hole, this.finishLevel, null, this);
 This works similarly to the `collide` method explained earlier. When the ball overlaps with the hole (instead of colliding), the `finishLevel` function is executed:
 
 ```js
-finishLevel: function() {
+finishLevel() {
     if(this.level >= this.maxLevels) {
         this.totalTimer += this.timer;
         alert('Congratulations, game completed!\nTotal time of play: '+this.totalTimer+' seconds!');

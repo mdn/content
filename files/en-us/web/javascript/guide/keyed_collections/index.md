@@ -80,7 +80,8 @@ function Public() {
 
 Public.prototype.method = function () {
   const me = privates.get(this);
-  // Do stuff with private data in `me`...
+  // Do stuff with private data in `me`
+  // …
 };
 
 module.exports = Public;

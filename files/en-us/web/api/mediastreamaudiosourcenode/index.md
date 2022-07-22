@@ -48,10 +48,7 @@ The number of channels output by the node matches the number of tracks found in 
     <tr>
       <th scope="row">Channel count</th>
       <td>
-        defined by the first audio {{domxref("MediaStreamTrack")}}
-        passed to the
-        {{domxref("AudioContext.createMediaStreamSource()")}}
-        method that created it.
+        2 (but note that {{domxref("AudioNode.channelCount")}} is only used for up-mixing and down-mixing {{domxref("AudioNode")}} inputs, and {{domxref("MediaStreamAudioSourceNode")}} doesn't have any input)
       </td>
     </tr>
   </tbody>

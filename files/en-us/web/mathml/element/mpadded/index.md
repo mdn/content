@@ -16,15 +16,15 @@ The MathML `<mpadded>` element is used to add extra padding and to set the gener
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- depth
+- `depth`
   - : Sets or increments the depth. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
-- height
+- `height`
   - : Sets or increments the height. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
-- lspace
+- `lspace`
   - : Sets or increments the horizontal position. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
-- voffset
+- `voffset`
   - : Sets or increments the vertical position. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
-- width
+- `width`
   - : Sets or increments the width. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
 
 ### Pseudo-units
@@ -38,9 +38,9 @@ Prior to Gecko 7.0 {{ geckoRelease("7.0") }} the MathML2 pseudo-unit `lspace` wa
 <math>
 
   <mpadded height="+150px" width="100px" lspace="2height">
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mi>y</mi>
   </mpadded>
 
 </math>

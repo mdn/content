@@ -24,7 +24,7 @@ A {{HTMLElement("tfoot")}} element or `null`.
 
 ```js
 if (table.tFoot == my_foot) {
-  // ...
+  // …
 }
 ```
 

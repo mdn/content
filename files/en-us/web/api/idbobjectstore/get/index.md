@@ -89,7 +89,7 @@ function getData() {
   };
 
   transaction.onerror = function(event) {
-    note.innerHTML += '<li>Transaction not opened due to error: ' + transaction.error + '</li>';
+    note.innerHTML += `<li>Transaction not opened due to error: ${transaction.error}</li>`;
   };
 
   // create an object store on the transaction

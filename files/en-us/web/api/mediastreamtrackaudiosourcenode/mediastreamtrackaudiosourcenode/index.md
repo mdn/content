@@ -67,13 +67,13 @@ if (navigator.mediaDevices.getUserMedia) {
       video: false
     }).then(function(stream) {
       let options = {
-        mediaStreamTrack: stream.getAudioTracks()[0];
+        mediaStreamTrack: stream.getAudioTracks()[0]
       }
 
       let source = new MediaStreamTrackAudioSourceNode(audioCtx, options);
       source.connect(audioCtx.destination);
     }).catch(function(err) {
-      console.log('The following gUM error occurred: ' + err);
+      console.error(`The following gUM error occurred: ${err}`);
     });
 } else {
   console.log('new getUserMedia not supported on your browser!');

@@ -16,9 +16,11 @@ object's properties. Somehow, this colon is missing or misplaced.
 
 ## Message
 
-```js
-SyntaxError: Expected ':' (Edge)
+```
+SyntaxError: Invalid shorthand property initializer (V8-based)
 SyntaxError: missing : after property id (Firefox)
+SyntaxError: Unexpected token '='. Expected a ':' following the property name 'x'. (Safari)
+SyntaxError: Unexpected token '+'. Expected an identifier as property name. (Safari)
 ```
 
 ## Error type

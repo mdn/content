@@ -94,7 +94,7 @@ See also the [DOM chapter of the XUL Tutorial](/en-US/docs/XUL_Tutorial/Document
 
 You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en-US/docs/JXON#jxon_reverse_algorithms) in association with the following JSON representation:
 
-```js
+```json
 {
   "people": {
     "person": [{

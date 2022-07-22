@@ -17,7 +17,7 @@ The **[Performance Timeline](https://w3c.github.io/performance-timeline/)** stan
 ```js
 function log(s) {
   const o = document.getElementsByTagName("output")[0];
-  o.innerHTML += s + " <br>";
+  o.innerHTML += `${s} <br>`;
 }
 function do_work (n) {
   for (let i=0 ; i < n; i++) {
@@ -25,14 +25,14 @@ function do_work (n) {
   }
 }
 function print_perf_entry(pe) {
-  log("..name: "        + pe.name      +
-      "; entryType: " + pe.entryType +
-      "; startTime: " + pe.startTime +
-      "; duration: "  + pe.duration);
+  log(`name: ${pe.name}`);
+  log(`entryType: ${pe.entryType}`);
+  log(`startTime: ${pe.startTime}`);
+  log(`duration: ${pe.duration}`);
 }
 function print_PerformanceEntries() {
   if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
+    console.error("The property performance.mark is not supported.");
     return;
   }
 
@@ -46,28 +46,28 @@ function print_PerformanceEntries() {
   // Use getEntries() to iterate all entries
   let p = performance.getEntries();
   for (let i=0; i < p.length; i++) {
-    log("All Entry[" + i + "]");
+    log(`All Entry[${i}]`);
     print_perf_entry(p[i]);
   }
 
   // Use getEntries(name, entryType) to get specific entries
   p = performance.getEntries({name : "Measure1", entryType: "measure"});
   for (let i=0; i < p.length; i++) {
-    log("Begin and Measure [" + i + "]");
+    log(`Begin and Measure [${i}]`);
     print_perf_entry(p[i]);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
   for (let i=0; i < p.length; i++) {
-    log ("Mark only [" + i + "]");
+    log(`Mark only [${i}]`);
     print_perf_entry(p[i]);
   }
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
   for (let i=0; i < p.length; i++) {
-    log ("Begin and Mark [" + i + "]");
+    log(`Begin and Mark [${i}]`);
     print_perf_entry(p[i]);
   }
 }
@@ -89,15 +89,15 @@ function print_PerformanceEntry(ev) {
 
   const p = performance.getEntries();
   for (let i=0; i < p.length; i++) {
-    log("PerfEntry[" + i + "]");
+    log(`PerfEntry[${i}]`);
     for (let j=0; j < properties.length; j++) {
       // check each property in window.performance
-      var supported = properties[j] in p[i];
+      const supported = properties[j] in p[i];
       if (supported) {
-        var pe = p[i];
-        log("... " + properties[j] + " = " + pe[properties[j]]);
+        const pe = p[i];
+        console.log(`… ${properties[j]} = ${pe[properties[j]]}`);
       } else {
-        log("... " + properties[j] + " = Not supported");
+        console.log(`… ${properties[j]} = Not supported`);
       }
     }
   }
@@ -125,7 +125,7 @@ function PerfEntry_toJSON() {
   // Print the PerformanceEntry object
   const json = pe.toJSON();
   const s = JSON.stringify(json);
-  log("PerformanceEntry.toJSON = " + s);
+  log(`PerformanceEntry.toJSON = ${s}`);
 }
 ```
 
@@ -176,10 +176,10 @@ function PerformanceObservers() {
   observe_mark.observe({entryTypes: ['mark']});
 }
 function print_perf_entry(pe) {
-  log("name: "        + pe.name      +
-      "; entryType: " + pe.entryType +
-      "; startTime: " + pe.startTime +
-      "; duration: "  + pe.duration);
+  log(`name: ${pe.name}`);
+  log(`entryType: ${pe.entryType}`);
+  log(`startTime: ${pe.startTime}`);
+  log(`duration: ${pe.duration}`);
 }
 ```
 

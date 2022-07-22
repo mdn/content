@@ -57,7 +57,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 - The {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} constructor has been implemented (see {{bug(1002256)}}).
 - The {{domxref("MouseEvent.x")}} and {{domxref("MouseEvent.y")}} aliases of {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} have been implemented (see {{bug(424390)}}).
 - The {{domxref("Element/auxclick_event", "auxclick")}} event and corresponding event handler have been implemented (see {{bug(1304044)}}).
-- The {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled. See {{domxref("GlobalEventHandlers.ontransitioncancel")}} for more details and an example ({{bug("1264125")}}).
+- The {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled.
 
 ### DOM
 

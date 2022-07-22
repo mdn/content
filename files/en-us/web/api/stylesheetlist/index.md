@@ -49,7 +49,7 @@ const allCSS = [...document.styleSheets]
         .map(rule => rule.cssText)
         .join('');
     } catch (e) {
-      console.log('Access to stylesheet %s is denied. Ignoring...', styleSheet.href);
+      console.log('Access to stylesheet %s is denied. Ignoring…', styleSheet.href);
     }
   })
   .filter(Boolean)

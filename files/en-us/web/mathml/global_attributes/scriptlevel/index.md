@@ -52,10 +52,6 @@ If `<U>` is an unsigned [integer](/en-US/docs/Web/CSS/integer) (i.e. with prefix
       -: Sets the `math-depth` to value `add(-<U>)`. This will scale up
         `font-size` on the element `<U>` times.
 
-## Notes on MathML versions
-
-- MathML Core relies on `math-depth` to implement the `scriptlevel` attribute, but implementations of older MathML versions may follow a different approach to implement similar side-effect on the `font-size` within mathematical formulas.
-
 ## Specifications
 
 {{Specifications}}

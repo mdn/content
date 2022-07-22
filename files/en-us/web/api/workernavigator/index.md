@@ -67,5 +67,5 @@ _The `WorkerNavigator` interface neither inherits nor implements any method._
 
 ## See also
 
-- Other Worker-related interfaces: {{DOMxRef("Worker")}}, {{DOMxRef("WorkerLocation")}}, and {{DOMxRef("WorkerGlobalScope")}}.
-- [Using web workers.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- Other Worker-related interfaces: {{DOMxRef("Worker")}}, {{DOMxRef("WorkerLocation")}}, and {{DOMxRef("WorkerGlobalScope")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

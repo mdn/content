@@ -19,14 +19,14 @@ Open **/controllers/bookController.js**. Find the exported `book_detail()` contr
 exports.book_detail = function(req, res, next) {
 
     async.parallel({
-        book: function(callback) {
+        book(callback) {
 
             Book.findById(req.params.id)
               .populate('author')
               .populate('genre')
               .exec(callback);
         },
-        book_instance: function(callback) {
+        book_instance(callback) {
 
           BookInstance.find({ 'book': req.params.id })
           .exec(callback);

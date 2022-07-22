@@ -47,10 +47,10 @@ A list of {{domxref("PerformanceEntry")}} objects that have the specified
 
 ```js
 function use_PerformanceEntry_methods() {
-  log("PerformanceEntry tests ...");
+  console.log("PerformanceEntry tests…");
 
   if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
+    console.error("The property performance.mark is not supported.");
     return;
   }
 
@@ -67,31 +67,33 @@ function use_PerformanceEntry_methods() {
   // Use getEntries() to iterate through the each entry
   let p = performance.getEntries();
   for (let i=0; i < p.length; i++) {
-    log("Entry[" + i + "]");
+    log(`Entry[${i}]`);
     check_PerformanceEntry(p[i]);
   }
 
   // Use getEntries(name, entryType) to get specific entries
   p = performance.getEntries({name : "Begin", entryType: "mark"});
   for (let i=0; i < p.length; i++) {
-    log("Begin[" + i + "]");
+    log(`Begin[${i}]`);
     check_PerformanceEntry(p[i]);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
   for (let i=0; i < p.length; i++) {
-    log ("Mark only entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+    log(`Mark only entry[${i}]:`);
+    log(`  name      = ${p[i].name}`);
+    log(`  startTime = ${p[i].startTime}`);
+    log(`  duration  = ${p[i].duration}`);
   }
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
   for (let i=0; i < p.length; i++) {
-    log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+    log(`Mark and Begin entry[${i}]:`);
+    log(`  name      = ${p[i].name}`);
+    log(`  startTime = ${p[i].startTime}`);
+    log(`  duration  = ${p[i].duration}`);
   }
 }
 ```

@@ -183,13 +183,13 @@ currentEvent.dataTransfer.mozSetDataAt('application/x-moz-file-promise',
 function dataProvider(){}
 
 dataProvider.prototype = {
-  QueryInterface : function(iid) {
+  QueryInterface(iid) {
     if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
                   || iid.equals(Components.interfaces.nsISupports))
       return this;
     throw Components.results.NS_NOINTERFACE;
   },
-  getFlavorData : function(aTransferable, aFlavor, aData, aDataLen) {
+  getFlavorData(aTransferable, aFlavor, aData, aDataLen) {
     if (aFlavor == 'application/x-moz-file-promise') {
 
        const urlPrimitive = {};
@@ -197,25 +197,25 @@ dataProvider.prototype = {
 
        aTransferable.getTransferData('application/x-moz-file-promise-url', urlPrimitive, dataSize);
        const url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
-       console.log("URL file original is = " + url);
+       console.log(`URL file original is = ${url}`);
 
        const namePrimitive = {};
        aTransferable.getTransferData('application/x-moz-file-promise-dest-filename', namePrimitive, dataSize);
        const name = namePrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
 
-       console.log("target filename is = " + name);
+       console.log(`target filename is = ${name}`);
 
        const dirPrimitive = {};
        aTransferable.getTransferData('application/x-moz-file-promise-dir', dirPrimitive, dataSize);
        const dir = dirPrimitive.value.QueryInterface(Components.interfaces.nsILocalFile);
 
-       console.log("target folder is = " + dir.path);
+       console.log(`target folder is = ${dir.path}`);
 
        const file = Cc['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
        file.initWithPath(dir.path);
        file.appendRelativePath(name);
 
-       console.log("output final path is =" + file.path);
+       console.log(`output final path is = ${file.path}`);
 
        // now you can write or copy the file yourself…
     }

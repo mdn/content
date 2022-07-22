@@ -41,7 +41,7 @@ function populateVoiceList() {
 
   for(let i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+    option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
     if(voices[i].default) {
       option.textContent += ' — DEFAULT';
@@ -74,8 +74,7 @@ inputForm.onsubmit = function(event) {
 
   utterThis.onpause = function(event) {
     const char = event.utterance.text.charAt(event.charIndex);
-    console.log('Speech paused at character ' + event.charIndex + ' of "' +
-    event.utterance.text + '", which is "' + char + '".');
+    console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
   }
 
   inputTxt.blur();

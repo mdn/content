@@ -85,11 +85,8 @@ p {
 ```js
 let para = document.querySelector('p');
 let compStyles = window.getComputedStyle(para);
-para.textContent = 'My computed font-size is ' +
-    compStyles.getPropertyValue('font-size') +
-    ',\nand my computed line-height is ' +
-    compStyles.getPropertyValue('line-height') +
-    '.';
+para.textContent = `My computed font-size is ${compStyles.getPropertyValue('font-size')},\n` + 
+  `and my computed line-height is ${compStyles.getPropertyValue('line-height')}.`;
 ```
 
 ### Result
@@ -137,8 +134,8 @@ Java.
 <h3>Generated content</h3>
 
 <script>
-  var h3 = document.querySelector('h3');
-  var result = getComputedStyle(h3, ':after').content;
+  const h3 = document.querySelector('h3');
+  const result = getComputedStyle(h3, ':after').content;
 
   console.log('the generated content is: ', result); // returns ' rocks!'
 </script>

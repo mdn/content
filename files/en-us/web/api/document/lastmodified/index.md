@@ -57,7 +57,7 @@ an alert message when the page changes (see also: [JavaScript cookies API](/en-U
 
 ```js
 if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
-  document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;
+  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${location.pathname}`;
   alert("This page has changed!");
 }
 ```
@@ -70,7 +70,7 @@ var
   nLastModif = Date.parse(document.lastModified);
 
 if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
-  document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;
+  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${location.pathname}`;
 
   if (isFinite(nLastVisit)) {
     alert("This page has been changed!");

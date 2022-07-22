@@ -64,7 +64,7 @@ first.onchange = function() {
 
 self.onmessage = function(e) {
   console.log('Message received from main script');
-  const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  const workerResult = `Result: ${e.data[0] * e.data[1]}`;
   console.log('Posting message back to main script');
   postMessage(workerResult);
 }
@@ -89,7 +89,7 @@ Alternatively, the script can listen for the message using [`addEventListener()`
 self.addEventListener('message', function(e) {
   result.textContent = e.data;
   console.log('Message received from worker');
-}
+});
 ```
 
 Notice how in the main script, `onmessage` has to be called on `myWorker`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).

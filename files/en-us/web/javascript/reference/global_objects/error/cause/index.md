@@ -52,7 +52,7 @@ function makeRSA(p, q) {
       cause: { code: 'NonCoprime', values: [p, q] },
     })
   }
-  // rsa algorithm...
+  // rsa algorithm…
 }
 ```
 
