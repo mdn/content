@@ -83,9 +83,9 @@ fetch('https://www.example.org')
     }
   });
 })
-.then(stream => 
+.then((stream) => 
   // Respond with our stream
-  new Response((stream), { headers: { "Content-Type": "text/html" } }).text()
+  new Response(stream, { headers: { "Content-Type": "text/html" } }).text()
 )
 .then(result => {
   // Do things with result
