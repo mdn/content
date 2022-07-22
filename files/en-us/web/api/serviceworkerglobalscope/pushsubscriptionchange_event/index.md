@@ -51,8 +51,7 @@ This example, run in the context of a service worker, listens for a `pushsubscri
 ```js
 self.addEventListener("pushsubscriptionchange", event => {
   event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
-    .then(subscription => {
-      return fetch("register", {
+    .then(subscription => fetch("register", {
         method: "post",
         headers: {
           "Content-type": "application/json"
@@ -60,8 +59,7 @@ self.addEventListener("pushsubscriptionchange", event => {
         body: JSON.stringify({
           endpoint: subscription.endpoint
         })
-      });
-    })
+      }))
   );
 }, false);
 ```

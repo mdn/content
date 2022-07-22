@@ -46,9 +46,7 @@ The code below demonstrates how the value might be set.
 
 ```js
 navigator.serviceWorker.ready
-  .then((registration) => {
-    return registration.navigationPreload.setHeaderValue(newValue);
-  })
+  .then((registration) => registration.navigationPreload.setHeaderValue(newValue))
   .then(() => {
     console.log("Done!");
   })

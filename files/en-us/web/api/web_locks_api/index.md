@@ -92,12 +92,12 @@ let resolve, reject;
 const p = new Promise((res, rej) => { resolve = res; reject = rej; });
 
 // Request the lock:
-navigator.locks.request('my_resource', lock => {
+navigator.locks.request('my_resource', lock => 
   // Lock is acquired.
 
-  return p;
+  p
   // Now lock will be held until either resolve() or reject() is called.
-});
+);
 ```
 
 ### Deadlocks

@@ -39,11 +39,11 @@ Because the method returns a promise you can wait on its resolution asynchronous
 The callback function can be any kind of function (below we demonstrate an arrow function).
 
 ```js
-scheduler.postTask( ()=>{ return 'Task executing'; } )
+scheduler.postTask(() => 'Task executing')
  // Promise resolved: log task result when promise resolves
- .then( (taskResult) => { console.log(`${taskResult}`); })
+ .then((taskResult) => { console.log(`${taskResult}`); })
  // Promise rejected: log AbortError or errors thrown by task
- .catch( (error) => { console.log(`Error: ${error}`); });  
+ .catch((error) => { console.log(`Error: ${error}`); });  
 ```
 
 The same task might be waited on using `await`/`async` as shown below (note, this is run in an [Immediately Invoked Function Expression (IIFE)](/en-US/docs/Glossary/IIFE)):
@@ -51,7 +51,7 @@ The same task might be waited on using `await`/`async` as shown below (note, thi
 ```js
 (async function() {
   try {
-    const result = await scheduler.postTask( ()=>{ return 'Task executing'; } );
+    const result = await scheduler.postTask(() => 'Task executing');
     console.log(result);
   }
   catch (error) {
@@ -74,9 +74,9 @@ The options are:
 The same example as above with a priority option would look like this:
 
 ```js
-scheduler.postTask( ()=>{ return 'Task executing'; }, {priority: 'user-blocking'} )
- .then( (taskResult) => { console.log(`${taskResult}`); }) // Log the task result
- .catch( (error) => { console.log(`Error: ${error}`); });  // Log any errors
+scheduler.postTask(() => 'Task executing', {priority: 'user-blocking'})
+ .then((taskResult) => { console.log(`${taskResult}`); }) // Log the task result
+ .catch((error) => { console.log(`Error: ${error}`); });  // Log any errors
 ```
 
 ### Task priorities
@@ -388,10 +388,10 @@ The code below shows two tasks added (as arrow functions) with a delay.
 ```js
 if ('scheduler' in this) {
   // Post task as arrow function with delay of 2 seconds
-  scheduler.postTask( ()=>{ return 'Task delayed by 2000ms'; }, {delay: 2000} )
-    .then( (taskResult) => { mylog(`${taskResult}`); })
-  scheduler.postTask( ()=>{ return 'Next task should complete in about 2000ms'; }, {delay: 1} )
-    .then( (taskResult) => { mylog(`${taskResult}`); })
+  scheduler.postTask(()=> 'Task delayed by 2000ms', {delay: 2000})
+    .then((taskResult) => { mylog(`${taskResult}`); })
+  scheduler.postTask(() => 'Next task should complete in about 2000ms', {delay: 1})
+    .then((taskResult) => { mylog(`${taskResult}`); })
 }
 ```
 

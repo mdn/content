@@ -48,12 +48,10 @@ The following example uses a `contentdelete` event handler to remove cached cont
 ```js
 self.addEventListener('contentdelete', event => {
   event.waitUntil(
-    caches.open('cache-name').then(cache => {
-      return Promise.all([
+    caches.open('cache-name').then(cache => Promise.all([
         cache.delete(`/icon/${event.id}`),
         cache.delete(`/content/${event.id}`)
-      ])
-    })
+      ]))
   );
 });
 ```

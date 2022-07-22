@@ -233,10 +233,10 @@ The code below shows two tasks added (as arrow functions) with a delay.
 
 ```js
 // Post task as arrow function with delay of 2 seconds
-scheduler.postTask( ()=>{ return 'Task delayed by 2000ms'; }, {delay: 2000} )
-  .then( (taskResult) => { console.log(`${taskResult}`); })
-scheduler.postTask( ()=>{ return 'Next task should complete in about 2000ms'; }, {delay: 1} )
-  .then( (taskResult) => { console.log(`${taskResult}`); }) 
+scheduler.postTask(() => 'Task delayed by 2000ms', {delay: 2000})
+  .then((taskResult) => { console.log(`${taskResult}`); })
+scheduler.postTask(() => 'Next task should complete in about 2000ms', {delay: 1} )
+  .then((taskResult) => { console.log(`${taskResult}`); }) 
 ```
 
 ## Specifications

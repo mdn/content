@@ -179,9 +179,7 @@ window.crypto.subtle.generateKey(
   true,
   ["encrypt", "decrypt"]
 )
-.then((secretKey) => {
-  return wrapCryptoKey(secretKey);
-})
+.then((secretKey) => wrapCryptoKey(secretKey))
 .then((wrappedKey) => {
   console.log(wrappedKey);
 });
@@ -269,9 +267,7 @@ window.crypto.subtle.generateKey(
   true,
   ["sign", "verify"]
 )
-.then((keyPair) => {
-  return wrapCryptoKey(keyPair.privateKey);
-})
+.then((keyPair) => wrapCryptoKey(keyPair.privateKey))
 .then((wrappedKey) => {
   console.log(wrappedKey);
 });
@@ -359,9 +355,7 @@ window.crypto.subtle.generateKey(
   true,
   ["encrypt", "decrypt"]
 )
-.then((keyPair) => {
-  return wrapCryptoKey(keyPair.publicKey);
-})
+.then((keyPair) => wrapCryptoKey(keyPair.publicKey))
 .then((wrappedKey) => {
   console.log(wrappedKey);
 });
@@ -445,9 +439,7 @@ window.crypto.subtle.generateKey(
   true,
   ["sign", "verify"]
 )
-.then((keyPair) => {
-  return wrapCryptoKey(keyPair.privateKey);
-})
+.then((keyPair) => wrapCryptoKey(keyPair.privateKey))
 .then((wrappedKey) => {
   console.log(wrappedKey);
 });
