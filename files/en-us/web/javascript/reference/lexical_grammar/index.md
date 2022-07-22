@@ -565,7 +565,7 @@ a = b;
 ++c;
 ```
 
-Here the return statement returns `undefined`, and the `a + b` becomes an unreachable statement.
+Here the `return` statement returns `undefined`, and the `a + b` becomes an unreachable statement.
 
 ```js
 return
