@@ -37,12 +37,18 @@ The **`Intl.DurationFormat`** object enables language-sensitive duration formatt
 In basic use without specifying a locale, `DurationFormat` uses the default locale and default options.
 
 ```js
+const duration  = {
+  seconds: 12,
+  milliseconds: 345,
+  microseconds: 600
+}
+
 // Example using fractionalDigits
-new Intl.DurationFormat('en', { fractionalDigits: 2 }).format('PT12.3456S');
+new Intl.DurationFormat('en', { fractionalDigits: 2 }).format(duration);
 // => 12.34 sec
 
 // Example using fractionalDigits and milliseconds set to `narrow`
-new Intl.DurationFormat('en', { milliseconds: 'narrow', fractionalDigits: 2 }).format('PT12.3456S');
+new Intl.DurationFormat('en', { milliseconds: 'narrow', fractionalDigits: 2 }).format(duration);
 // => 12s 345.60ms
 ```
 
