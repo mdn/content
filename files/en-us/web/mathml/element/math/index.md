@@ -9,20 +9,20 @@ browser-compat: mathml.elements.math
 ---
 {{MathMLRef}}
 
-The top-level element in MathML is `<math>`. Every valid MathML instance must be wrapped in `<math>` tags. In addition you must not nest a second `<math>` element in another, but you can have an arbitrary number of other child elements in it.
+The `<math>` element is the top-level MathML element, used to write a single mathematical formula. It can be placed in HTML content where [flow content](/en-US/docs/Web/Guide/HTML/Content_categories#flow_content) is permitted.
+
+> **Note:** See the [Authoring MathML page](/en-US/docs/Web/MathML/Authoring#using_mathml) for tips to properly integrate MathML formulas in your web pages and the [Examples](/en-US/docs/Web/MathML/Examples) page for more demos.
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
-
-In addition to the following attributes, the `<math>` element accepts any attributes of the {{ MathMLElement("mstyle") }} element.
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
 - `display`
 
   - : This enumerated attribute specifies how the enclosed MathML markup should be rendered. It can have one of the following values:
 
-    - `block`, which means that this element will be displayed outside the current span of text, as a block that can be positioned anywhere without changing the meaning of the text;
-    - `inline`, which means that this element will be displayed inside the current span of text, and cannot be moved out of it without changing the meaning of that text.
+    - `block`, which means that this element will be displayed in its own block outside the current span of text and with [`math-style`](/en-US/docs/Web/CSS/math-style) set to `normal`.
+    - `inline`, which means that this element will be displayed inside the current span of text and with [`math-style`](/en-US/docs/Web/CSS/math-style) set to `compact`.
 
     If not present, its default value is `inline`.
 
@@ -32,83 +32,44 @@ In addition to the following attributes, the `<math>` element accepts any attrib
 
 ## Examples
 
-![Theorem of Pythagoras](math.jpg)
-
-### HTML5 notation
+This example contains two MathML formula. The first one is rendered in its own centered block, taking as much space as needed. The second one is rendered inside the paragraph of text, with reduced size and spacing in order to minimize its height.
 
 ```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>MathML in HTML5</title>
-  </head>
-  <body>
-
-  <math>
-    <mrow>
-      <mrow>
-        <msup>
-          <mi>a</mi>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
-          <mn>2</mn>
-        </msup>
-      </mrow>
-      <mo>=</mo>
+<p>The infinite sum
+  <math display="block">
+   <mrow>
+     <munderover>
+       <mo>∑</mo>
+       <mrow>
+         <mi>n</mi>
+         <mo>=</mo>
+         <mn>1</mn>
+       </mrow>
+       <mrow>
+         <mo>+</mo>
+         <mn>∞</mn>
+       </mrow>
+     </munderover>
+     <mfrac>
+       <mn>1</mn>
+       <msup>
+         <mi>n</mi>
+         <mn>2</mn>
+       </msup>
+     </mfrac>
+   </mrow>
+  </math>
+  is equal to the real number
+  <math display="inline">
+    <mfrac>
       <msup>
-        <mi>c</mi>
+        <mi>π</mi>
         <mn>2</mn>
       </msup>
-    </mrow>
-  </math>
-
-  </body>
-</html>
+      <mn>6</mn>
+    </mfrac>
+  </math>.</p>
 ```
-
-### XHTML notation
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
- <title>MathML in XHTML</title>
-</head>
-<body>
-
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
-    <mrow>
-      <mrow>
-        <msup>
-          <mi>a</mi>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
-          <mn>2</mn>
-        </msup>
-      </mrow>
-      <mo>=</mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
-    </mrow>
-  </math>
-
-</body>
-</html>
-```
-
-> **Note:** XHTML documents with MathML must be served as `application/xhtml+xml`.
-> You can achieve that easily by adding the `.xhtml` extension to your local files.
-> For Apache servers you can [configure your `.htaccess` file](https://httpd.apache.org/docs/2.4/mod/mod_mime.html#addtype) to map extensions to the correct Mime type.
-> Since you notate your MathML in an XML document, also be sure you write a well-formed XML document.
 
 ## Specifications
 
@@ -122,4 +83,3 @@ In addition to the following attributes, the `<math>` element accepts any attrib
 
 - HTML top-level element: {{ HTMLElement("html") }}
 - SVG top-level element: {{ SVGElement("svg") }}
-- [MathML browser test](http://eyeasme.com/Joe/MathML/MathML_browser_test.html)
