@@ -153,9 +153,9 @@ If you have a function defined in your C code that you want to call as needed fr
     document
       .getElementById("mybutton")
       .addEventListener("click", () => {
-        alert('check console');
+        alert("check console");
         const result = Module.ccall(
-          'myFunction',  // name of C function
+          "myFunction",  // name of C function
           null,  // return type
           null,  // argument types
           null,  // arguments
