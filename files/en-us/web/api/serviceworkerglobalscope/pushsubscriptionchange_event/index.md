@@ -49,9 +49,9 @@ Consider using another method to synchronize subscription information between yo
 This example, run in the context of a service worker, listens for a `pushsubscriptionchange` event and re-subscribes to the lapsed subscription.
 
 ```js
-self.addEventListener("pushsubscriptionchange", event => {
+self.addEventListener("pushsubscriptionchange", (event) => {
   event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
-    .then(subscription => fetch("register", {
+    .then((subscription) => fetch("register", {
         method: "post",
         headers: {
           "Content-type": "application/json"
