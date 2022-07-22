@@ -48,14 +48,14 @@ const sendQueue = [];
 function sendMessage(msg) {
   switch(dataChannel.readyState) {
     case "connecting":
-      console.log("Connection not open; queueing: " + msg);
+      console.log(`Connection not open; queueing: ${msg}`);
       sendQueue.push(msg);
       break;
     case "open":
       sendQueue.forEach((msg) => dataChannel.send(msg));
       break;
     case "closing":
-      console.log("Attempted to send message while closing: " + msg);
+      console.log(`Attempted to send message while closing: ${msg}`);
       break;
     case "closed":
       console.log("Error! Attempt to send while connection closed.");

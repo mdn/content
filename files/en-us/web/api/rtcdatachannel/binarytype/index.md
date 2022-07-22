@@ -51,7 +51,7 @@ dc.onmessage = function(event) {
   let hexString = "";
 
   byteArray.forEach(function(byte) {
-    hexString += byte.toString(16) + " ";
+    hexString += `${byte.toString(16)} `;
   });
 };
 ```

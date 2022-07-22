@@ -184,7 +184,7 @@ signalingChannel.onmessage = receivedString => {
     // Pass the whole thing to addIceCandidate:
 
     pc.addIceCandidate(message.ice).catch(e => {
-      console.log("Failure during addIceCandidate(): " + e.name);
+      console.log(`Failure during addIceCandidate(): ${e.name}`);
     });
   } else {
     // handle other things you might be signaling, like sdp
