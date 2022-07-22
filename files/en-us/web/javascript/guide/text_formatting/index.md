@@ -272,7 +272,8 @@ const options = { year: '2-digit', month: '2-digit', day: '2-digit',
                 hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
 const americanDateTime = new Intl.DateTimeFormat('en-US', options).format;
 
-console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
+// Log: 07/17/14, 02:00 AM GMT+2 (Local timezone vary depending of your settings)
+console.log(americanDateTime(july172014)); 
 ```
 
 ### Number formatting
