@@ -114,7 +114,7 @@ reload.addEventListener('click', () => {
 });
 
 window.addEventListener('load', (event) => {
-  log.textContent += 'load\n;
+  log.textContent += 'load\n';
 });
 
 document.addEventListener('readystatechange', (event) => {
