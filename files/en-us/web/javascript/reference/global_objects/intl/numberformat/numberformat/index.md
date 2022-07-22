@@ -141,7 +141,7 @@ new Intl.NumberFormat(locales, options)
         - `"floor"`: round to a "less positive" value (toward -∞).
         - `"expand"`: round away from 0 (positive numbers round more positive, negative numbers round more negative).
         - `"trunc"`: round toward 0 (positive numbers round less positive (down), negative numbers less negative).
-        - `"halfCeil"`: ties (at the half-rounding incremenet) toward +∞.
+        - `"halfCeil"`: ties (at the half-rounding increment) toward +∞.
         - `"halfFloor"`: ties toward -∞.
         - `"halfExpand"`: ties away from 0.
         - `"halfTrunc"`: ties toward 0.
@@ -150,17 +150,18 @@ new Intl.NumberFormat(locales, options)
         These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and"DOWN", respectively.
 
     - `roundingPriority` {{experimental_inline}}
-      - :  Specify how rounding conflicts between "FractionDigits" and "SignificantDigits" will be resolved:
+      - :  Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are specified:
 
         - `"auto"`: the result from the significant digits property is used (default).
         - `"morePrecision"`: the result from the property that results in more precision is used.
         - `"lessPrecision"`: the result from the property that results in less precision is used.
 
-        Note that if `auto` is not specified then the result is first calculated for both fractional and significant digits taking account of both minimum and maximum values (this includes default values if not explicitly specified).
-        A value with more precision has more digits in the fractional part.
+        Note that if `auto` is not specified then the result is first calculated for both fractional and significant digits, taking account of both minimum and maximum values — including default values if these not explicitly specified.
+        The value with more precision is the one that has more digits in the fractional part.
 
     - `roundingIncrement` {{experimental_inline}}
-      - : Specifies the rounding-increment precision. Must be one of the following integers:
+      - : Specifies the rounding-increment precision.
+        Must be one of the following integers:
         "`1`", " `2`", "`5`", "`10`", "`20`", " `25`", "`50`", "`100`", "`200`", "`250`", "`500`", "`1000`", "`2000`", "`2500`", " `5000`".
 
         > **Note:** The `roundingIncrement` option controls the rounding increment to be used when formatting numbers:
@@ -187,9 +188,10 @@ new Intl.NumberFormat(locales, options)
         > If you set `minimumFractionDigits` and `maximumFractionDigits`, they must set them to the same value; otherwise a `RangeError` is thrown.
 
     - `trailingZeroDisplay` {{experimental_inline}}
-      - : A string expressing the strategy for displaying trailing zeros on whole numbers. The default is "`auto`".
+      - : A string expressing the strategy for displaying trailing zeros on whole numbers.
+        The default is "`auto`".
 
-        - `"auto"`: keep trailing zeros according to minimumFractionDigits and minimumSignificantDigits
+        - `"auto"`: keep trailing zeros according to `minimumFractionDigits` and `minimumSignificantDigits`
         - `"stripIfInteger"`: the result with more precision wins a conflict
         - `"lessPrecision"`: same as "auto", but remove the fraction digits if they are all zero
 
