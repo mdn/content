@@ -36,7 +36,7 @@ to interact with the opener window until they close the modal dialog.
 openDialog(url)
 openDialog(url, name)
 openDialog(url, name, features)
-openDialog(url, name, features, arg0, arg1, /* ... ,*/ argN)
+openDialog(url, name, features, arg0, arg1, /* … ,*/ argN)
 ```
 
 ### Parameters

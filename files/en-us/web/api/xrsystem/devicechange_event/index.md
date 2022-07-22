@@ -71,7 +71,7 @@ You can also use the `ondevicechange` event handler property to set a single han
 ```js
 if (navigator.xr) {
   navigator.xr.ondevicechange = event => {
-    /* ... etc ... */
+    // …
   };
 }
 ```

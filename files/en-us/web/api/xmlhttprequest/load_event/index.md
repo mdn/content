@@ -82,7 +82,7 @@ const xhrButtonAbort = document.querySelector('.xhr.abort');
 const log = document.querySelector('.event-log');
 
 function handleEvent(e) {
-    log.textContent = log.textContent + `${e.type}: ${e.loaded} bytes transferred\n`;
+    log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
 }
 
 function addListeners(xhr) {

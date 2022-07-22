@@ -30,7 +30,7 @@ specifies one or more methods allowed when accessing a resource in response to a
 ## Syntax
 
 ```
-Access-Control-Allow-Methods: <method>, <method>, ...
+Access-Control-Allow-Methods: <method>, <method>, …
 Access-Control-Allow-Methods: *
 ```
 

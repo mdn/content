@@ -40,7 +40,7 @@ var entry = perfEntries[0];
 // Get the JSON and log it
 var json = entry.toJSON();
 var s = JSON.stringify(json);
-console.log("PerformanceNavigationTiming.toJSON() = " + s);
+console.log(`PerformanceNavigationTiming.toJSON() = ${s}`);
 ```
 
 ## Specifications

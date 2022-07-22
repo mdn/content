@@ -43,8 +43,8 @@ function gameLoop() {
     a--;
   }
 
-  ball.style.left = a*2 + "px";
-  ball.style.top = b*2 + "px";
+  ball.style.left = `${a * 2}px`;
+  ball.style.top = `${b * 2}px`;
 
   let start = rAF(gameLoop);
 };

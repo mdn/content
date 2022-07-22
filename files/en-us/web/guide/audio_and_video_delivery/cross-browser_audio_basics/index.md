@@ -53,7 +53,7 @@ Specifying `autoplay` will cause the audio to start playing as soon as possible 
 
 ```html
 <audio autoplay>
-  ...
+  …
 </audio>
 ```
 
@@ -65,7 +65,7 @@ The `loop` attribute will ensure that upon getting to the end of the audio clip,
 
 ```html
 <audio loop>
-  ...
+  …
 </audio>
 ```
 
@@ -75,7 +75,7 @@ If you want the audio to start muted (no volume), add the `muted` attribute.
 
 ```html
 <audio muted>
-  ...
+  …
 </audio>
 ```
 
@@ -95,7 +95,7 @@ The `preload` attribute allows you to specify a preference for how the browser p
 
 ```html
 <audio preload="auto">
-  ...
+  …
 </audio>
 ```
 
@@ -105,7 +105,7 @@ We specify the `controls` attribute when we require the browser to provide us wi
 
 ```html
 <audio controls>
-  ...
+  …
 </audio>
 ```
 
@@ -115,7 +115,7 @@ As mentioned above, you can use the {{ htmlelement("source") }} element to speci
 
 ```html
 <audio src="audiofile.mp3">
-  ...
+  …
 </audio>
 ```
 
@@ -125,7 +125,7 @@ As mentioned above, to be sure that the browser knows what type of file is being
 
 ```html
 <audio src="audiofile.mp3" type="audio/mpeg">
-  ...
+  …
 </audio>
 ```
 
@@ -137,7 +137,7 @@ Given the following HTML:
 
 ```html
 <audio id="my-audio" src="audiofile.mp3">
-  ...
+  …
 </audio>
 ```
 

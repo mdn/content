@@ -44,32 +44,28 @@ navigator.getBattery().then(battery => {
     updateChargeInfo();
   });
   function updateChargeInfo(){
-    console.log("Battery charging? "
-                + (battery.charging ? "Yes" : "No"));
+    console.log(`Battery charging? ${battery.charging ? "Yes" : "No"}`);
   }
 
   battery.addEventListener('levelchange', () => {
     updateLevelInfo();
   });
   function updateLevelInfo(){
-    console.log("Battery level: "
-                + battery.level * 100 + "%");
+    console.log(`Battery level: ${battery.level * 100}%`);
   }
 
   battery.addEventListener('chargingtimechange', () => {
     updateChargingInfo();
   });
   function updateChargingInfo(){
-    console.log("Battery charging time: "
-                 + battery.chargingTime + " seconds");
+    console.log(`Battery charging time: ${battery.chargingTime} seconds`);
   }
 
   battery.addEventListener('dischargingtimechange', () => {
     updateDischargingInfo();
   });
   function updateDischargingInfo(){
-    console.log("Battery discharging time: "
-                 + battery.dischargingTime + " seconds");
+    console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
   }
 
 });

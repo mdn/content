@@ -54,11 +54,11 @@ In this article we'll set up the server for our phone app. The server file will 
     app.use(express.static(path.join(__dirname)));
 
     app.get("/", (request, response) => {
-        response.sendFile(__dirname + "/index.html");
+        response.sendFile(`${__dirname}/index.html`);
     });
 
     server.listen(port);
-    console.log('Listening on: ' + port);
+    console.log(`Listening on: ${port}`);
     ```
 
 5. You should be able to connect to your app via `localhost` (in our `server.js` we're using port 8000 (defined on line 7) but you may be using another port number). Run `yarn start` (where `start` refers to the script you declared in `package.json` on the previous page) in your terminal. Visit `localhost:8000` in your browser and you should see a page that looks like this:

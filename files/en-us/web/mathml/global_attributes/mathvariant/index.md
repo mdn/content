@@ -92,12 +92,6 @@ which are by convention italic, no special classes are used by default.
 - `stretched`
    -: Try and use stretched characters e.g. "𞹢".
 
-## Notes on MathML versions
-
-- `mathvariant` values other than `normal` were designed for backward compatibility. Authors are encouraged to instead directly use the corresponding Unicode characters from the [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
-
-- MathML Core relies on `text-transform` to implement the `mathvariant` attribute, but implementations of older MathML versions may follow a different approach to implement similar behavior.
-
 ## Specifications
 
 {{Specifications}}
@@ -105,7 +99,6 @@ which are by convention italic, no special classes are used by default.
 ## Browser compatibility
 
 {{Compat}}
-On Firefox, some `mathvariant` values are only implemented starting with Firefox 28 and require appropriate [math fonts](/en-US/docs/Web/MathML/Fonts).
 
 ## See also
 

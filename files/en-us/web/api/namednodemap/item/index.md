@@ -42,12 +42,10 @@ the map.
 const pre = document.getElementsByTagName("pre")[0];
 const attrMap = pre.attributes;
 
-let result = "The attribute map contains: \n"
-result += "0: " + attrMap.item(0).name + "\n";
-result += "1: " + attrMap[1].name + "\n";
-result += "2: " + attrMap.item(2).name + "\n";
-
-pre.textContent = result;
+pre.textContent = `The attribute map contains:
+0: ${attrMap.item(0).name}
+1: ${attrMap[1].name}
+2: ${attrMap.item(2).name}`;
 ```
 
 {{EmbedLiveSample("Example", "100%", 120)}}

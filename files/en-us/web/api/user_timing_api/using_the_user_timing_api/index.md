@@ -39,7 +39,7 @@ function create_marks(ev) {
     performance.mark("mark-2");
     const marks = ["mark-1", "mark-2", "mark-2"];
     for (let i=0; i < marks.length; i++)
-      log("... Created mark = " + marks[i], 0);
+      log(`... Created mark = ${marks[i]}`, 0);
   }
 }
 ```
@@ -62,7 +62,7 @@ function display_marks(ev) {
   for (let i = 0; i < entries.length; i++) {
     if (entries[i].entryType == "mark") {
       if (j == 0) { log("= getEntries()", 0); j++ }
-      log("... [" + i + "] = " + entries[i].name, 0);
+      log(`... [${i}] = ${entries[i].name}`, 0);
     }
   }
 
@@ -70,19 +70,19 @@ function display_marks(ev) {
   entries = performance.getEntriesByType("mark");
   for (let i = 0; i < entries.length; i++) {
     if (i == 0) log("= getEntriesByType('mark')", 0);
-    log("... [" + i + "] = " + entries[i].name, 0);
+    log(`... [${i}] = ${entries[i].name}`, 0);
   }
 
   // Display each mark using getEntriesName(); must look for each mark separately
   entries = performance.getEntriesByName("mark-1","mark");
   for (let i = 0; i < entries.length; i++) {
     if (i == 0) log("= getEntriesByName('mark-1', 'mark')", 0);
-    log("... " + entries[i].name, 0);
+    log(`... ${entries[i].name}`, 0);
   }
   entries = performance.getEntriesByName("mark-2","mark");
   for (let i = 0; i < entries.length; i++) {
     if (i == 0) log("= getEntriesByName('mark-2', 'mark')", 0);
-    log("... " + entries[i].name, 0);
+    log(`... ${entries[i].name}`, 0);
   }
 }
 ```
@@ -100,7 +100,7 @@ function clear_marks(obj) {
   log("Clear marks", 0);
 
   if (typeof obj == "string") {
-    log("... cleared '" + obj + "' mark(s)", 0);
+    log(`... cleared '${obj}' mark(s)`, 0);
     performance.clearMarks(obj);
   } else {
     // No argument specified so clear all marks
@@ -142,10 +142,10 @@ function create_measures(ev) {
   // Log the marks and measures
   const marks = ["mark-A", "mark-B", "mark-C", "mark-D"];
   for (let i = 0; i < marks.length; i++)
-    log("... Created mark = " + marks[i], 1);
+    log(`... Created mark = ${marks[i]}`, 1);
   const measures = ["measures-1", "measures-2"];
   for (let i = 0; i < measures.length; i++)
-    log("... Created measure = " + measures[i], 1);
+    log(`... Created measure = ${measures[i]}`, 1);
 
 }
 ```
@@ -168,7 +168,7 @@ function display_measures(ev) {
   for (let i = 0; i < entries.length; i++) {
     if (entries[i].entryType == "measure") {
       if (j == 0) { log("= getEntries()", 1); j++ }
-      log("... [" + i + "] = " + entries[i].name, 1);
+      log(`... [${i}] = ${entries[i].name}`, 1);
     }
   }
 
@@ -176,19 +176,19 @@ function display_measures(ev) {
   entries = performance.getEntriesByType("measure");
   for (let i = 0; i < entries.length; i++) {
     if (i == 0) log("= getEntriesByType('measure')", 1);
-    log("... [" + i + "] = " + entries[i].name, 1);
+    log(`... [${i}] = ${entries[i].name}`, 1);
   }
 
   // Display each measure using getEntriesName() - have to look for each measure separately
   entries = performance.getEntriesByName("measure-1","measure");
   for (let i = 0; i < entries.length; i++) {
     if (i == 0) log("= getEntriesByName('measure-1', 'measure')", 1);
-    log("... " + entries[i].name, 1);
+    log(`... ${entries[i].name}`, 1);
   }
   entries = performance.getEntriesByName("measure-2","measure");
   for (let i = 0; i < entries.length; i++) {
     if (i == 0) log("= getEntriesByName('measure-2', 'measure')", 1);
-    log("... " + entries[i].name, 1);
+    log(`... ${entries[i].name}`, 1);
   }
 }
 ```
@@ -206,7 +206,7 @@ function clear_measures(obj) {
   log("Clear measures", 1);
 
   if (typeof obj == "string") {
-    log("... cleared '" + obj + "' measure(s)", 1);
+    log(`... cleared '${obj}' measure(s)`, 1);
     performance.clearMeasures(obj);
   } else {
     // No argument specified so clear all measures

@@ -401,7 +401,7 @@ function drawAdTimer(adBox) {
   let sec = Math.floor(totalSeconds % 60);
   let min = Math.floor(totalSeconds / 60);
 
-  timerBox.innerText = min + ":" + sec.toString().padStart(2, "0");
+  timerBox.innerText = `${min}:${sec.toString().padStart(2, "0")}`;
 }
 ```
 
@@ -448,7 +448,7 @@ function createArticle(contents) {
 
   let titleElem = document.createElement("h2");
   titleElem.id = nextArticleID;
-  titleElem.innerText = "Article " + nextArticleID + " title";
+  titleElem.innerText = `Article ${nextArticleID} title`;
   articleElem.appendChild(titleElem);
 
   articleElem.innerHTML += contents;
@@ -568,7 +568,7 @@ function replaceAd(adBox) {
   updateAdTimer(adBox);
 
   visibleTime = adBox.dataset.totalViewTime
-  console.log("  Replacing ad: " + adBox.querySelector("h2").innerText + " - visible for " + visibleTime)
+  console.log(`Replacing ad: ${adBox.querySelector("h2").innerText} - visible for ${visibleTime}`)
 
   loadRandomAd(adBox);
 }

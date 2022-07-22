@@ -42,7 +42,7 @@ In the case of the SVG element, it will return the URI of the XML namespace, `ht
 <button>Click me for &lt;svg&gt;…</button>
 <button>Click me for &lt;label&gt;…</button>
 <br><br>
-URI of the attribute <code>xml:lang</code> namespace: <output id="result"><i>None.</i></output>
+URI of the attribute <code>xml:lang</code> namespace: <output id="result">None.</output>
 ```
 
 ### JavaScript Content

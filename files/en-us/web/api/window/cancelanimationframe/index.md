@@ -49,7 +49,7 @@ let myReq;
 
 function step(timestamp) {
   const progress = timestamp - start;
-  d.style.left = Math.min(progress / 10, 200) + 'px';
+  d.style.left = `${Math.min(progress / 10, 200)}px`;
   if (progress < 2000) {
     // it's important to update the requestId each time you're calling requestAnimationFrame
     myReq = requestAnimationFrame(step);

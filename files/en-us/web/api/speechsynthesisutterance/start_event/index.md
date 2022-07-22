@@ -47,7 +47,7 @@ You can use the `start` event in an [`addEventListener`](/en-US/docs/Web/API/Eve
 
 ```js
 utterThis.addEventListener('start', function(event) {
-  console.log('We have started uttering this speech: ' + event.utterance.text);
+  console.log(`We have started uttering this speech: ${event.utterance.text}`);
 });
 ```
 
@@ -55,7 +55,7 @@ Or use the `onstart` event handler property:
 
 ```js
 utterThis.onstart = function(event) {
-  console.log('We have started uttering this speech: ' + event.utterance.text);
+  console.log(`We have started uttering this speech: ${event.utterance.text}`);
 }
 ```
 

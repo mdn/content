@@ -229,13 +229,13 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
     Ingredients:<br>
     <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
     <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
-    ...
+    …
   </p>
   Directions: <br>
   <div itemprop="recipeInstructions">
     1. Cut and peel apples<br>
     2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
-    ...
+    …
   </div>
 </div>
 ```

@@ -16,6 +16,8 @@ browser-compat: javascript.statements.for_await_of
 
 The **`for await...of` statement** creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. This statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.
 
+{{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
+
 > **Note:** `for await...of` doesn't work with async iterators that are not async iterables.
 
 ## Syntax

@@ -23,7 +23,7 @@ documents sent via an HTTP POST request to the specified URI.
 > you can specify both **`report-uri`** and {{CSP("report-to")}}:
 >
 > ```html
-> Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname
+> Content-Security-Policy: …; report-uri https://endpoint.com; report-to groupname
 > ```
 >
 > In browsers that support {{CSP("report-to")}},

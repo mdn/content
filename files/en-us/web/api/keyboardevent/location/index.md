@@ -142,7 +142,7 @@ A number.
 
 ```js
 function keyEvent(event) {
-  console.log("Location of key pressed: " + event.location);
+  console.log(`Location of key pressed: ${event.location}`);
 }
 ```
 

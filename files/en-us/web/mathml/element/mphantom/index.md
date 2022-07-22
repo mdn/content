@@ -20,19 +20,19 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
 Sample rendering: ![x+  z](mphantom.png)
 
-Rendering in your browser: <math><mrow><mi>x </mi><mo>+ </mo><mphantom><mi>y </mi><mo>+ </mo></mphantom><mi>z</mi></mrow></math>
+Rendering in your browser: <math><mrow><mi>x</mi><mo>+</mo><mphantom><mi>y</mi><mo>+</mo></mphantom><mi>z</mi></mrow></math>
 
 ```html
 <math>
 
 <mrow>
-  <mi> x </mi>
-  <mo> + </mo>
+  <mi>x</mi>
+  <mo>+</mo>
   <mphantom>
-    <mi> y </mi>
-    <mo> + </mo>
+    <mi>y</mi>
+    <mo>+</mo>
   </mphantom>
-  <mi> z </mi>
+  <mi>z</mi>
 </mrow>
 
 </math>

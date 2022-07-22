@@ -58,7 +58,7 @@ if (sUsrAg.indexOf("Firefox") > -1) {
   sBrowser = "unknown";
 }
 
-alert("You are using: " + sBrowser);
+alert(`You are using: ${sBrowser}`);
 ```
 
 ## Specifications

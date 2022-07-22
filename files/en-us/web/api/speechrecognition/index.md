@@ -116,7 +116,7 @@ document.body.onclick = function() {
 
 recognition.onresult = function(event) {
   const color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color;
+  diagnostic.textContent = `Result received: ${color}`;
   bg.style.backgroundColor = color;
 }
 ```

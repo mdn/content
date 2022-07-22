@@ -414,10 +414,10 @@ The function we'll be using as our task handler—that is, the function that wil
 
 ```js
 function logTaskHandler(data) {
-  log("Running task #" + currentTaskNumber);
+  log(`Running task #${currentTaskNumber}`);
 
   for (i=0; i<data.count; i+=1) {
-    log((i+1).toString() + ". " + data.text);
+    log(`${(i+1).toString()}. ${data.text}`);
   }
 }
 ```
@@ -445,7 +445,7 @@ function decodeTechnoStuff() {
   for (i=0; i<n; i++) {
     let taskData = {
       count: getRandomIntInclusive(75, 150),
-      text: "This text is from task number " + (i+1).toString() + " of " + n
+      text: `This text is from task number ${(i+1).toString()} of ${n}`
     };
 
     enqueueTask(logTaskHandler, taskData);

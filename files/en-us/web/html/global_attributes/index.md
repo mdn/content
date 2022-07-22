@@ -13,7 +13,7 @@ browser-compat: html.global_attributes
 
 **Global attributes** are attributes common to all HTML elements; they can be used on all elements, though they may have no effect on some elements.
 
-Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Element), _even those not specified in the standard_. That means that any non-standard elements must still permit these attributes, even though using those elements means that the document is no longer HTML5-compliant. For example, HTML5-compliant browsers hide content marked as `<foo hidden>...</foo>`, even though `<foo>` is not a valid HTML element.
+Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Element), _even those not specified in the standard_. That means that any non-standard elements must still permit these attributes, even though using those elements means that the document is no longer HTML5-compliant. For example, HTML5-compliant browsers hide content marked as `<foo hidden>…</foo>`, even though `<foo>` is not a valid HTML element.
 
 In addition to the basic HTML global attributes, the following global attributes also exist:
 

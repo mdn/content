@@ -24,8 +24,7 @@ var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
 canvas.addEventListener('webglcontextcreationerror', function(e) {
-  console.log('WebGL context creation failed:' +
-              e.statusMessage || 'Unknown error');
+  console.log(`WebGL context creation failed: ${e.statusMessage}` || 'Unknown error');
 }, false);
 ```
 

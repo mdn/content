@@ -15,6 +15,8 @@ browser-compat: javascript.builtins.Generator
 
 The **`Generator`** object is returned by a {{JSxRef("Statements/function*", "generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
 
+{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
+
 ## Constructor
 
 The `Generator` constructor is not available globally. Instances of `Generator` must be returned from [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
@@ -62,7 +64,7 @@ const generator = infinite(); // "Generator { }"
 console.log(generator.next().value); // 0
 console.log(generator.next().value); // 1
 console.log(generator.next().value); // 2
-// ...
+// …
 ```
 
 ## Specifications

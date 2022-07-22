@@ -15,8 +15,8 @@ After you've created the peer, you'll want to get the browser's permission to ac
             window.localStream = stream; // A
             window.localAudio.srcObject = stream; // B
             window.localAudio.autoplay = true; // C
-        }).catch( err => {
-            console.log("u got an error:" + err)
+        }).catch(err => {
+            console.error(`you got an error: ${err}`)
         });
     }
     ```
@@ -57,8 +57,8 @@ function getLocalStream() {
         window.localStream = stream;
         window.localAudio.srcObject = stream;
         window.localAudio.autoplay = true;
-    }).catch( err => {
-        console.log("u got an error:" + err)
+    }).catch(err => {
+        console.error(`you got an error: ${err}`)
     });
 }
 

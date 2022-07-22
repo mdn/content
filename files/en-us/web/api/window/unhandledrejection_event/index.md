@@ -84,7 +84,8 @@ Many environments (such as {{Glossary("Node.js")}}) report unhandled promise rej
 
 ```js
 window.addEventListener('unhandledrejection', function (event) {
-  // ...your code here to handle the unhandled rejection…
+  // code for handling the unhandled rejection
+  // …
 
   // Prevent the default handling (such as outputting the
   // error to the console)

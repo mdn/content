@@ -573,4 +573,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-In the two previous examples, the inherited prototype can be shared by all objects and the method definitions need not occur at every object creation. See [Details of the Object Model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model) for more.
+In the two previous examples, the inherited prototype can be shared by all objects and the method definitions need not occur at every object creation. See [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) for more.

@@ -38,7 +38,7 @@ These WebGL 1 extensions are universally supported, and can be relied upon to be
 - WEBGL_debug_renderer_info
 - WEBGL_lose_context
 
-_(see also: <https://jdashg.github.io/misc/webgl/webgl-feature-levels.html>)_
+_(see also: [WebGL feature levels and % support](https://kdashg.github.io/misc/webgl/webgl-feature-levels.html))_
 
 Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/jdashg/misc/blob/master/webgl/webgl-v1.1.js>
 
@@ -181,9 +181,9 @@ for (const [vs, fs, prog] of programs) {
   compileOnce(gl, fs);
   gl.linkProgram(prog);
   if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-    console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-    console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-    console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+    console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+    console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+    console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
   }
 }
 ```
@@ -205,9 +205,9 @@ for (const [vs, fs, prog] of programs) {
 }
 for (const [vs, fs, prog] of programs) {
   if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-    console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-    console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-    console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+    console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+    console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+    console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
   }
 }
 ```
@@ -261,17 +261,17 @@ Instead of:
 ```js
 gl.compileShader(vs);
 if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
-  console.error('vs compile failed: ' + gl.getShaderInfoLog(vs));
+  console.error(`vs compile failed: ${gl.getShaderInfoLog(vs)}`);
 }
 
 gl.compileShader(fs);
 if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
-  console.error('fs compile failed: ' + gl.getShaderInfoLog(fs));
+  console.error(`fs compile failed: ${gl.getShaderInfoLog(fs)}`);
 }
 
 gl.linkProgram(prog);
 if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
-  console.error('Link failed: ' + gl.getProgramInfoLog(prog));
+  console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
 }
 ```
 
@@ -282,9 +282,9 @@ gl.compileShader(vs);
 gl.compileShader(fs);
 gl.linkProgram(prog);
 if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
-  console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-  console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-  console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+  console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+  console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+  console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
 }
 ```
 
@@ -530,7 +530,7 @@ Storing data that you won't use again can have high cost, particularly on tiled-
 
 ## Use non-blocking async data readback
 
-Operations like `readPixels` and `getBufferSubData` are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: <https://jdashg.github.io/misc/async-gpu-downloads.html>
+Operations like `readPixels` and `getBufferSubData` are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: [Async downloads in blocking APIs](https://kdashg.github.io/misc/async-gpu-downloads.html)
 
 ```js
 function clientWaitAsync(gl, sync, flags, interval_ms) {
@@ -587,7 +587,7 @@ Handling `devicePixelRatio != 1.0` is tricky. While the common approach is to se
 
 Instead, we can use non-integer values for CSS's `top`/`bottom`/`left`/`right` to fairly reliably 'pre-snap' our canvas to whole integer device coordinates.
 
-Demo: <https://jdashg.github.io/misc/webgl/device-pixel-presnap.html>
+Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-presnap.html)
 
 ### ResizeObserver and 'device-pixel-content-box'
 
@@ -607,7 +607,7 @@ window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
             observer.disconnect();
             return;
          }
-         throw 'device-pixel-content-box not observed for elem ' + elem;
+         throw `device-pixel-content-box not observed for elem ${elem}`;
       });
       observer.observe(elem, {box: 'device-pixel-content-box'});
    });

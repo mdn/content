@@ -88,7 +88,7 @@ We set the source of the audio depending on the type of audio file the browser s
 It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing to generate audio on the fly:
 
 ```html
-<audio id="player" src="data:audio/x-wav;base64,UklGRvC..."></audio>
+<audio id="player" src="data:audio/x-wav;base64,UklGRvC…"></audio>
 ```
 
 [Speak.js](https://github.com/kripken/speak.js/) employs this technique. [Try the demo](https://speak-demo.herokuapp.com).

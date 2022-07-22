@@ -100,6 +100,7 @@ Next, it's necessary to add code to look up the attribute location for the color
       vertexColor: gl.getAttribLocation(shaderProgram, 'aVertexColor'),
     },
     // …
+  }
 ```
 
 Then, `drawScene()` can have the following added to it so it actually uses these colors when drawing the square:

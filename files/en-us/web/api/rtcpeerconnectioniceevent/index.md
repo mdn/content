@@ -41,9 +41,7 @@ _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this 
 ```js
 pc.onicecandidate = function (ev) {
   alert(
-    "The ICE candidate (transport address: '" +
-      ev.candidate.candidate +
-      "') has been added to this connection."
+    `The ICE candidate (transport address: '${ev.candidate.candidate}') has been added to this connection.`
   );
 };
 ```

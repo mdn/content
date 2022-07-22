@@ -52,7 +52,7 @@ class Server {
         TcpListener server = new TcpListener(IPAddress.Parse("127.0.0.1"), 80);
 
         server.Start();
-        Console.WriteLine("Server has started on 127.0.0.1:80.{0}Waiting for a connection...", Environment.NewLine);
+        Console.WriteLine("Server has started on 127.0.0.1:80.{0}Waiting for a connection…", Environment.NewLine);
 
         TcpClient client = server.AcceptTcpClient();
 
@@ -244,7 +244,7 @@ class Server {
         var server = new TcpListener(IPAddress.Parse(ip), port);
 
         server.Start();
-        Console.WriteLine("Server has started on {0}:{1}, Waiting for a connection...", ip, port);
+        Console.WriteLine("Server has started on {0}:{1}, Waiting for a connection…", ip, port);
 
         TcpClient client = server.AcceptTcpClient();
         Console.WriteLine("A client connected.");

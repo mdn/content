@@ -47,7 +47,7 @@ You can use the `resume` event in an [`addEventListener`](/en-US/docs/Web/API/Ev
 
 ```js
 utterThis.addEventListener('resume', function(event) {
-  console.log('Speech resumed after ' + event.elapsedTime + ' seconds.');
+  console.log(`Speech resumed after ${event.elapsedTime} seconds.`);
 });
 ```
 
@@ -55,7 +55,7 @@ Or use the `onresume` event handler property:
 
 ```js
 utterThis.onresume = function(event) {
-  console.log('Speech resumed after ' + event.elapsedTime + ' seconds.');
+  console.log(`Speech resumed after ${event.elapsedTime} seconds.`);
 }
 ```
 

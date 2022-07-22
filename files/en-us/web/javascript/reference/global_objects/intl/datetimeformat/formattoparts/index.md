@@ -18,6 +18,8 @@ The **`Intl.DateTimeFormat.prototype.formatToParts()`** method
 allows locale-aware formatting of strings produced by {{jsxref("Intl.DateTimeFormat")}}
 formatters.
 
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formattoparts.html")}}
+
 ## Syntax
 
 ```js

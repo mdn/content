@@ -64,7 +64,7 @@ In the code example, `caches` is a property of the {{domxref("ServiceWorkerGloba
 ```js
 const CACHE_VERSION = 1;
 const CURRENT_CACHES = {
-  font: 'font-cache-v' + CACHE_VERSION
+  font: `font-cache-v${CACHE_VERSION}`
 };
 
 self.addEventListener('activate', function(event) {

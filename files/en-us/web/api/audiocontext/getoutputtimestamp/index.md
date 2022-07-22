@@ -84,7 +84,7 @@ stop.addEventListener('click', () => {
 
 function outputTimestamps() {
   let ts = audioCtx.getOutputTimestamp()
-  console.log('Context time: ' + ts.contextTime + ' | Performance time: ' + ts.performanceTime);
+  console.log(`Context time: ${ts.contextTime} | Performance time: ${ts.performanceTime}`);
   rAF = requestAnimationFrame(outputTimestamps);
 }
 ```

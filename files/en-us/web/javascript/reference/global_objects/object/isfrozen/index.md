@@ -61,8 +61,7 @@ Object.isFrozen(oneProp); // === false
 Object.preventExtensions(oneProp);
 Object.isFrozen(oneProp); // === false
 
-// ...but then deleting that property makes the object
-// vacuously frozen.
+// Deleting that property makes the object vacuously frozen.
 delete oneProp.p;
 Object.isFrozen(oneProp); // === true
 
@@ -104,8 +103,7 @@ const accessor = { get food() { return 'yum'; } };
 Object.preventExtensions(accessor);
 Object.isFrozen(accessor); // === false
 
-// ...but make that property non-configurable
-// and it becomes frozen.
+// When we make that property non-configurable it becomes frozen.
 Object.defineProperty(accessor, 'food', {
   configurable: false
 });

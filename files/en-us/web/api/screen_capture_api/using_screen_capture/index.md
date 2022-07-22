@@ -37,7 +37,7 @@ async function startCapture(displayMediaOptions) {
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch(err) {
-    console.error("Error: " + err);
+    console.error(`Error: ${err}`);
   }
   return captureStream;
 }
@@ -50,7 +50,7 @@ You can write this code either using an asynchronous function and the [`await`](
 ```js
 function startCapture(displayMediaOptions) {
  return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
-    .catch(err => { console.error("Error:" + err); return null; });
+    .catch(err => { console.error(`Error:${err}`); return null; });
 }
 ```
 
@@ -218,7 +218,7 @@ async function startCapture() {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
   } catch(err) {
-    console.error("Error: " + err);
+    console.error(`Error: ${err}`);
   }
 }
 ```
