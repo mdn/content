@@ -150,15 +150,17 @@ If you have a function defined in your C code that you want to call as needed fr
 7. Now add the following code at the end of the first {{HTMLElement("script")}} element:
 
     ```js
-    document.getElementById("mybutton").onclick = () => {
-      alert('check console');
-      let result = Module.ccall(
-        'myFunction',  // name of C function
-        null,  // return type
-        null,  // argument types
-        null,  // arguments
-      );
-    };
+    document
+      .getElementById("mybutton")
+      .addEventListener("click", () => {
+        alert('check console');
+        const result = Module.ccall(
+          'myFunction',  // name of C function
+          null,  // return type
+          null,  // argument types
+          null,  // arguments
+        );
+      };
     ```
 
 This illustrates how `ccall()` is used to call the exported function.
