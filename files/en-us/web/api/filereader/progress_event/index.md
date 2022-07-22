@@ -64,8 +64,8 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
     <img src="" class="preview" height="200" alt="Image preview">
 
     <div class="event-log">
-        <label>Event log:</label>
-        <textarea readonly class="event-log-contents"></textarea>
+        <label for="eventLog">Event log:</label>
+        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
     </div>
 
   </div>

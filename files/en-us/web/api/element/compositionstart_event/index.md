@@ -58,8 +58,8 @@ inputElement.addEventListener('compositionstart', (event) => {
 </div>
 
 <div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="25"></textarea>
+  <label for="eventLog">Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="25" id="eventLog"></textarea>
   <button class="clear-log">Clear</button>
 </div>
 ```

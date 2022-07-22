@@ -85,13 +85,17 @@ Simple descriptions basically just involve usage of `aria-description` on an ele
 
 ```html
 <section aria-description="Choose your favorite fruit — the fruit with the highest number of votes will be added to the lunch options next week.">
-  <p>Pick your favorite fruit:</p>
   <form>
-    <ul>
-      <li><label>Apple: <input type="radio" name="fruit" value="apple"></label></li>
-      <li><label>Orange: <input type="radio" name="fruit" value="orange"></label></li>
-      <li><label>Banana: <input type="radio" name="fruit" value="banana"></label></li>
-    </ul>
+    <fieldset>
+      <legend>
+        <p>Pick your favorite fruit:</p>
+      </legend>
+      <ul>
+        <li><label>Apple: <input type="radio" name="fruit" value="apple"></label></li>
+        <li><label>Orange: <input type="radio" name="fruit" value="orange"></label></li>
+        <li><label>Banana: <input type="radio" name="fruit" value="banana"></label></li>
+      </ul>
+    </fieldset>
   </form>
 </section>
 ```
@@ -103,11 +107,16 @@ If the descriptive text does appear in the UI (it should for this example), you 
 
 <section aria-describedby="fruit-desc">
   <form>
-    <ul>
-      <li><label>Apple: <input type="radio" name="fruit" value="apple"></label></li>
-      <li><label>Orange: <input type="radio" name="fruit" value="orange"></label></li>
-      <li><label>Banana: <input type="radio" name="fruit" value="banana"></label></li>
-    </ul>
+    <fieldset>
+      <legend>
+        <p>Pick your favorite fruit:</p>
+      </legend>
+      <ul>
+        <li><label>Apple: <input type="radio" name="fruit" value="apple"></label></li>
+        <li><label>Orange: <input type="radio" name="fruit" value="orange"></label></li>
+        <li><label>Banana: <input type="radio" name="fruit" value="banana"></label></li>
+      </ul>
+    </fieldset>
   </form>
 </section>
 ```
