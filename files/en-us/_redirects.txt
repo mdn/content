@@ -5432,7 +5432,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Guidelines/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Guidelines/Style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
-/en-US/docs/MDN/Contribute/Guidelines/Video	/en-US/docs/MDN/Guidelines/Video
+/en-US/docs/MDN/Contribute/Guidelines/Video	/en-US/docs/MDN/Writing_guidelines/Howto/Images_media
 /en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/How_to_document_a_CSS_property	/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property
 /en-US/docs/MDN/Contribute/Howto/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures
@@ -5514,6 +5514,7 @@
 /en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/Guidelines/Editorial	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/Guidelines/JSON_Structured_Data	/en-US/docs/MDN/Writing_guidelines/Howto/JSON_Structured_data
+/en-US/docs/MDN/Guidelines/Video	/en-US/docs/MDN/Writing_guidelines/Howto/Images_media
 /en-US/docs/MDN/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/MDN/Kuma	/en-US/docs/MDN/Yari
