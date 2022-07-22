@@ -103,7 +103,7 @@ In most cases, the effect is to remove the stylized border, which makes CSS styl
 
 ### Taming search boxes
 
-[`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search) is basically just a text input, so why is `appearance: none;` useful here? The answer is that in Safari search boxes have some styling restrictions — you can't adjust their `height` or `font-size` freely, for example. 
+[`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search) is basically just a text input, so why is `appearance: none;` useful here? The answer is that in Safari search boxes have some styling restrictions — you can't adjust their `height` or `font-size` freely, for example.
 
 This can be fixed using our friend `appearance: none;`, which disables the default appearance:
 
@@ -121,7 +121,7 @@ Interestingly, setting border/background on the search field also fixes this pro
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
 
-> **Note:** You may have noticed that in the search field, the "x" delete icon, which appears when the value of the search is not null, disappears when the input loses focus in Edge and Chrome, but stays put in Safari. To remove via CSS, you can use `input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { display: none; }`. 
+> **Note:** You may have noticed that in the search field, the "x" delete icon, which appears when the value of the search is not null, disappears when the input loses focus in Edge and Chrome, but stays put in Safari. To remove via CSS, you can use `input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { display: none; }`.
 
 ### Styling checkboxes and radio buttons
 
