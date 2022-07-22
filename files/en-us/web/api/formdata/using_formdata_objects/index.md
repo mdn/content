@@ -81,9 +81,10 @@ You can also send files using `FormData`. Include an {{ HTMLElement("input") }} 
 
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
-  <p><label>Your email address:
+  <p>
+    <label>Your email address:
       <input type="email" autocomplete="on" name="userid" placeholder="email" required size="32" maxlength="64" />
-      </label>
+    </label>
   </p>
   <p>
     <label>Custom file label:
