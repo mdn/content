@@ -98,7 +98,7 @@ This code shows how to access a public static field.
 class A {
   static field = 'A static field';
   static {
-    const y = this.field;
+    console.log(this.field);
   }
 }
 ```
@@ -112,7 +112,7 @@ class A {
 }
 class B extends A {
   static {
-    let x = super.fieldA;
+    console.log(super.fieldA);
     // 'A.fieldA'
   }
 }
