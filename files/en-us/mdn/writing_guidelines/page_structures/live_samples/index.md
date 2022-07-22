@@ -1,6 +1,6 @@
 ---
 title: Live examples
-slug: MDN/Writing_guidelines/Page_structures/Live_examples
+slug: MDN/Writing_guidelines/Page_structures/Live_samples
 page-type: mdn-writing-guide
 tags:
   - meta
@@ -137,10 +137,10 @@ The CSS code styles the box as well as the text inside it.
 This code is very simple. All it does is attach an event handler to the "Hello world!" text that makes an alert appear when it is clicked.
 
 ```js
-const el = document.getElementById('item');
-el.onclick = function() {
-  alert('Owww, stop poking me!');
-}
+const el = document.getElementById("item");
+el.onclick = function () {
+  alert("Owww, stop poking me!");
+};
 ```
 
 ### Result
