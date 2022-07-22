@@ -151,13 +151,13 @@ If you have a function defined in your C code that you want to call as needed fr
 
     ```js
     document.getElementById("mybutton").onclick = () => {
-        alert('check console');
-        let result = Module.ccall(
-            'myFunction',  // name of C function
-            null,  // return type
-            null,  // argument types
-            null  // arguments
-        );
+      alert('check console');
+      let result = Module.ccall(
+        'myFunction',  // name of C function
+        null,  // return type
+        null,  // argument types
+        null,  // arguments
+      );
     };
     ```
 
