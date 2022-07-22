@@ -80,7 +80,7 @@ new Intl.NumberFormat(locales, options)
         For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
     - `notation`
 
-      - : The formatting that should be displayed for the number, the defaults is `"standard"`
+      - : The formatting that should be displayed for the number, the default is `"standard"`
 
         - `"standard"` plain number formatting.
         - `"scientific"` return the order-of-magnitude for formatted number.
@@ -103,7 +103,7 @@ new Intl.NumberFormat(locales, options)
 
     - `style`
 
-      - : The formatting style to use , the default is "`decimal`".
+      - : The formatting style to use, the default is "`decimal`".
 
         - `"decimal"` for plain number formatting.
         - `"currency"` for currency formatting.
@@ -116,6 +116,7 @@ new Intl.NumberFormat(locales, options)
         of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml) was selected for use in ECMAScript.
         Pairs of simple units can be concatenated with "`-per-`" to make a compound unit.
         There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
+
     - `unitDisplay`
 
       - : The unit formatting style to use in `unit` formatting, the
@@ -138,11 +139,11 @@ new Intl.NumberFormat(locales, options)
       - : Options for rounding modes. The default is `halfExpand`.
 
         - `"ceil"`: round to a "more positive" value (toward +∞).
-        - `"floor"`: round to a "less positive" value (toward -∞).
-        - `"expand"`: round away from 0 (positive numbers round more positive, negative numbers round more negative).
-        - `"trunc"`: round toward 0 (positive numbers round less positive (down), negative numbers less negative).
-        - `"halfCeil"`: ties (at the half-rounding increment) toward +∞.
-        - `"halfFloor"`: ties toward -∞.
+        - `"floor"`round to a "less positive" value (toward -∞).
+        - `"expand"`: round away from 0. Positive numbers round up, negative numbers round down (more negative).
+        - `"trunc"`:  round toward 0. Positive numbers round down, negative numbers round up (less negative).
+        - `"halfCeil"`: ties toward +∞.
+        - `"halfFloor"`: ties toward -∞..
         - `"halfExpand"`: ties away from 0.
         - `"halfTrunc"`: ties toward 0.
         - `"halfEven"`: ties toward the value with even cardinality.
@@ -150,7 +151,7 @@ new Intl.NumberFormat(locales, options)
         These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and"DOWN", respectively.
 
     - `roundingPriority` {{experimental_inline}}
-      - :  Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are specified:
+      - :  Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are specified:
 
         - `"auto"`: the result from the significant digits property is used (default).
         - `"morePrecision"`: the result from the property that results in more precision is used.
@@ -352,8 +353,10 @@ The `NumberFormat() constructor` can be used to specify the minimum or maximum n
 
 > **Note:** If both significant and fractional digit limits are specified then formatting depends on the [`roundingPriority`](#roundingpriority).
 
+#### Using FractionDigits and IntegerDigits
+
 The integer and fraction digit properties indicate the number of digits to display before and after the decimal point, respectively.
-If the value to display has fewer integer digits than specified it will be zero prefixed.
+If the value to display has fewer integer digits than specified it will be zero prefixed to the expected number.
 If it has fewer fractional digits it will be zero suffixed.
 Both cases are shown below:
 
@@ -365,7 +368,9 @@ console.log(new Intl.NumberFormat("en",
 // > "004.3300"
 ```
 
-If a value has more fractional digits than set for the maximum number of digits it will be rounded.
+If a value has more fractional digits than set for the maximum number of fraction digits it will be rounded.
+The _way_ that it is rounded depends on the [`roundingMode`](#roundingmode) property (more details are provided in the next section).
+Below the value is rounded from five fractional digits (`4.33145`) to two (`4.33`):
 
 ```js
 // Display value shortened to maximum number of digits
@@ -373,20 +378,39 @@ console.log(new Intl.NumberFormat("en", {maximumFractionDigits: 2}).format(4.331
 // > "4.33"
 ```
 
-The default value of `maximumFractionDigits` is three for a plain number and two for currency (and may have different values for other predefined types).
-For this reason the same value below truncates to `3` fractional digits even though the maximum number is not specified.
-Note that the minimum factional digits are ignored below because the value has more than 2 fractional digits.
+The minimum factional digits have no effect if the value already has more than 2 fractional digits, as shown below.
 
 ```js
-// Minimum has no effect if value is higher precision.
+// Minimum fractions have no effect if value is higher precision.
 console.log(new Intl.NumberFormat("en", {minimumFractionDigits: 2}).format(4.33145));
 // > "4.331"
 ```
 
+> **Warning:** Watch out for default values as they may affect formatting even if not specified in your code.
+> The default default maximum digit value is three for plain values, two for currency, and may have different values for other predefined types.
+
+The formatted value above is rounded to 3 digits, even though we didn't specify the maximum digits!
+This is because a default value of `maximumFractionDigits` is set when we specify `minimumFractionDigits`, and visa versa.
+
+This is demonstrated below, using [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) to inspect the formatter.
+Note that when either `maximumFractionDigits` or `minimumFractionDigits` is defined, so is its counterpart.
+Also note the default values of `maximumFractionDigits: 3` and `minimumFractionDigits: 0`.
+
+```js
+console.log(new Intl.NumberFormat("en", {maximumFractionDigits: 2}).resolvedOptions());
+// > Object { locale: "en", numberingSystem: "latn", style: "decimal", minimumIntegerDigits: 1, minimumFractionDigits: 0, maximumFractionDigits: 2, useGrouping: "auto", notation: "standard", signDisplay: "auto", roundingMode: "halfExpand", roundingIncrement: 1, trailingZeroDisplay: "auto", roundingPriority: "auto" }
+
+console.log(new Intl.NumberFormat("en", {minimumFractionDigits: 2}).resolvedOptions());
+// > Object { locale: "en", numberingSystem: "latn", style: "decimal", minimumIntegerDigits: 1, minimumFractionDigits: 2, maximumFractionDigits: 3, useGrouping: "auto", notation: "standard", signDisplay: "auto", roundingMode: "halfExpand", roundingIncrement: 1, trailingZeroDisplay: "auto", roundingPriority: "auto" }
+```
+
+#### Using SignificantDigits
+
 The number of _significant digits_ is the total number of digits including both integer and factional parts.
 The `maximumSignificantDigits` is used to indicate the total number of digits from the original value to display.
+
 The examples below show how this works.
-Note in particular the last case: only the first digit is retained and the others are discarded/set to zero. 
+Note in particular the last case: only the first digit is retained and the others are discarded/set to zero.
 
 ```js
 // Display 5 significant digits
@@ -402,13 +426,74 @@ console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 1}).format(54
 // > "50"
 ```
 
-The `minimumSignificantDigits` ensures that at least the minimum number of digits are displayed, adding zero suffixes if needed.
+The `minimumSignificantDigits` ensures that at least the minimum number of digits are displayed, adding zeros to the end of the value if needed.
 
 ```js
 // Minimum 10 significant digits
 console.log(new Intl.NumberFormat("en", {minimumSignificantDigits: 10}).format(54.33145));
 // > "54.33145000"
 ```
+
+> **Warning:** Watch out for default values as they may affect formatting even if not specified in your code.
+> The default default maximum and minimum significant digit values are 20 and 1, respectively.
+
+#### Specifying significant and fractional digits at the same time
+
+The fraction digits ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and significant digits ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are both ways of controlling how many fractional and leading digits should be formatted.
+If both are used at the same time, it is possible for them to conflict.
+
+These conflicts are resolved using the [`roundingPriority`](#roundingpriority) property.
+By default this has a value of `auto`, which means that if either [`minimumSignificantDigits`](#minimumsignificantdigits) or [`maximumSignificantDigits`](#minimumsignificantdigits) is specified the fractional and integer digit properties will be ignored.
+
+For example, the code below formats the value of `4.33145` with `maximumFractionDigits: 3`, and then `maximumSignificantDigits: 2`, and then both.
+The value with both is the one set with `maximumSignificantDigits`.
+
+```js
+console.log(new Intl.NumberFormat("en", {maximumFractionDigits: 3}).format(4.33145));
+// > "4.331"
+console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(4.33145));
+// > "4.3"
+console.log(new Intl.NumberFormat("en", {maximumFractionDigits: 3, maximumSignificantDigits: 2}).format(4.33145));
+// > "4.3"
+```
+
+Using [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) to inspect the formatter we can see that the returned object does not include `maximumFractionDigits` when `maximumSignificantDigits` or `minimumSignificantDigits` are specified.
+
+```js
+console.log(new Intl.NumberFormat("en", {maximumFractionDigits: 3, maximumSignificantDigits: 2}).resolvedOptions());
+// > Object { locale: "en", numberingSystem: "latn", style: "decimal", minimumIntegerDigits: 1, minimumSignificantDigits: 1, maximumSignificantDigits: 2, useGrouping: "auto", notation: "standard", signDisplay: "auto", roundingMode: "halfExpand", roundingIncrement: 1, trailingZeroDisplay: "auto", roundingPriority: "auto" }
+console.log(new Intl.NumberFormat("en", {maximumFractionDigits: 3, minimumSignificantDigits: 2}).resolvedOptions());
+// > Object { locale: "en", numberingSystem: "latn", style: "decimal", minimumIntegerDigits: 1, minimumSignificantDigits: 2, maximumSignificantDigits: 21, useGrouping: "auto", notation: "standard", signDisplay: "auto", roundingMode: "halfExpand", roundingIncrement: 1, trailingZeroDisplay: "auto", roundingPriority: "auto" }
+```
+
+In addition to `auto` you can resolve conflicts by specifying [`roundingPriority`](#roundingpriority) as `morePrecision` or `lessPrecision`.
+In this case the formatter should evaluate the result of using the specified fractional and significant digits independently (taking account of both minimum and maximum values).
+It will then select the option that displays more fractional digits if  `morePrecision` is set, and fewer if `lessPrecision` is set.
+
+The example below shows the formatting of 1 using 
+
+```js
+const minFracNF = new Intl.NumberFormat("en", {minimumFractionDigits: 2} )
+console.log(`minimumFractionDigits:2 - ${minFracNF.format(1)}`);
+// > "minimumFractionDigits:2 - 1.00"
+
+const minSigNS = new Intl.NumberFormat("en", {minimumSignificantDigits: 2} )
+console.log(`minimumSignificantDigits:2 - ${minSigNS.format(1)}`);
+// > "minimumSignificantDigits:2 - 1.0"
+
+const minFracSigNS = new Intl.NumberFormat("en", {minimumFractionDigits: 2, minimumSignificantDigits: 2} )
+console.log(`auto - ${minFracSigNS.format(1)}`);
+// > "auto - 1.0"
+
+const minFracSigNSless = new Intl.NumberFormat("en", {roundingPriority: 'lessPrecision', minimumFractionDigits: 2, minimumSignificantDigits: 2} )
+console.log(`lessPrecision - ${minFracSigNSless.format(1)}`);
+// > "lessPrecision - 1.00"
+
+const minFracSigNSmore = new Intl.NumberFormat("en", {roundingPriority: 'morePrecision', minimumFractionDigits: 2, minimumSignificantDigits: 2} )
+console.log(`morePrecision - ${minFracSigNSmore.format(1)}`);
+// > "morePrecision - 1.0"
+```
+
 
 
 ## Specifications
