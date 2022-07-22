@@ -274,7 +274,7 @@ const americanDateTime = new Intl.DateTimeFormat('en-US', options).format;
 
 // Local timezone vary depending on your settings
 // In CEST, logs: 07/17/14, 02:00 AM GMT+2
-// In PDT, logs: 07/16/14, 05:00 PM PDT
+// In PDT, logs: 07/16/14, 05:00 PM GMT-7
 console.log(americanDateTime(july172014)); 
 ```
 
