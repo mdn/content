@@ -19,11 +19,11 @@ An instance of this object is returned by calling {{domxref("Navigator.userAgent
 
 ## Properties
 
-- {{domxref("NavigatorUAData.brands")}}{{ReadOnlyInline}}
+- {{domxref("NavigatorUAData.brands")}} {{ReadOnlyInline}}
   - : Returns an array of brand information containing the browser name and version.
-- {{domxref("NavigatorUAData.mobile")}}{{ReadOnlyInline}}
+- {{domxref("NavigatorUAData.mobile")}} {{ReadOnlyInline}}
   - : Returns `true` if the user-agent is running on a mobile device.
-- {{domxref("NavigatorUAData.platform")}}{{ReadOnlyInline}}
+- {{domxref("NavigatorUAData.platform")}} {{ReadOnlyInline}}
   - : Returns the platform brand the user-agent is running on.
 
 ## Methods

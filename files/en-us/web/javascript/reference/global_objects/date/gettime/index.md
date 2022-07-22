@@ -44,14 +44,14 @@ new Date().getTime();
 // 1519211809934
 // 1519211810362
 // 1519211811670
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 new Date().getTime();
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// …
 ```
 
 In Firefox, you can also enable `privacy.resistFingerprinting`, the

@@ -233,7 +233,7 @@ Good:
 
 ```css example-good
 .editorial-summary {
-  ...
+  /* … */
 }
 ```
 
@@ -241,7 +241,7 @@ Bad:
 
 ```css example-bad
 #editorial-summary {
-  ...
+  /* … */
 }
 ```
 

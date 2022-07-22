@@ -42,7 +42,7 @@ function logClick(event) {
       log.innerText = 'Sorry, but you cannot visit this link!\n' + log.innerText;
     }
     else {
-      log.innerText = 'Visiting link...\n' + log.innerText;
+      log.innerText = 'Visiting link…\n' + log.innerText;
     }
   }
 }

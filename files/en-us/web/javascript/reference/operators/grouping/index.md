@@ -38,9 +38,9 @@ Overriding multiplication and division first, then addition and subtraction to e
 addition first.
 
 ```js
-var a = 1;
-var b = 2;
-var c = 3;
+const a = 1;
+const b = 2;
+const c = 3;
 
 // default precedence
 a + b * c     // 7

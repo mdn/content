@@ -49,13 +49,14 @@ This example creates a handler for `gatheringstatechange` events on each {{domxr
 ```js
 pc.getSenders().forEach(sender => {
   sender.transport.iceTransport.addEventListener("gatheringstatechange", ev => {
-  let transport = ev.target;
+    let transport = ev.target;
 
-  if (transport.gatheringState === "complete") {
-    /* this transport has finished gathering candidates,
-       but others may still be working on it */
-  }
-}, false);
+    if (transport.gatheringState === "complete") {
+      /* this transport has finished gathering candidates,
+        but others may still be working on it */
+    }
+  }, false);
+});
 ```
 
 Likewise, you can use the `ongatheringstatechange` event handler property:
@@ -88,7 +89,7 @@ pc.getSenders().forEach(sender => {
 
 ### Related RTCIceTransport events
 
-- {{event("statechange")}}
+- {{domxref("RTCIceTransport/statechange_event", "statechange")}}
 - {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
 
 ### Related RTCPeerConnection events

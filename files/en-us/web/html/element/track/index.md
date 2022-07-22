@@ -156,7 +156,7 @@ textTrackElem.addEventListener("cuechange", event => {
    <track kind="metadata" src="keyStage3.vtt" srclang="en"
      label="Key Stage 3">
    <!-- Fallback -->
-   ...
+   …
 </video>
 ```
 

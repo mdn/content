@@ -52,7 +52,7 @@ fetchPromise.then( response => {
   console.log(`Received response: ${response.status}`);
 });
 
-console.log("Started request...");
+console.log("Started request…");
 ```
 
 Here we are:
@@ -66,11 +66,11 @@ The complete output should be something like:
 
 ```
 Promise { <state>: "pending" }
-Started request...
+Started request…
 Received response: 200
 ```
 
-Note that `Started request...` is logged before we receive the response. Unlike a synchronous function, `fetch()` returns while the request is still going on, enabling our program to stay responsive. The response shows the `200` (OK) [status code](/en-US/docs/Web/HTTP/Status), meaning that our request succeeded.
+Note that `Started request…` is logged before we receive the response. Unlike a synchronous function, `fetch()` returns while the request is still going on, enabling our program to stay responsive. The response shows the `200` (OK) [status code](/en-US/docs/Web/HTTP/Status), meaning that our request succeeded.
 
 This probably seems a lot like the example in the last article, where we added event handlers to the {{domxref("XMLHttpRequest")}} object. Instead of that, we're passing a handler into the `then()` method of the returned promise.
 
@@ -237,7 +237,7 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
   });
 ```
 
-...then we can expect the `catch()` handler to run, and we should see something like:
+Then we can expect the `catch()` handler to run, and we should see something like:
 
 ```
 Failed to fetch: TypeError: Failed to fetch
@@ -303,7 +303,7 @@ Here we are calling `await fetch()`, and instead of getting a `Promise`, our cal
 
 We can even use a `try...catch` block for error handling, exactly as we would if the code were synchronous.
 
-Note though that this magic only works inside the async function. Async functions always return a promise, so you can't do something like:
+Note though that async functions always return a promise, so you can't do something like:
 
 ```js example-bad
 async function fetchProducts() {
@@ -341,9 +341,25 @@ async function fetchProducts() {
   }
 }
 
-// Note: We can't use `await` outside the context of an async function. So we'll use `.then()` here for simplicity.
 const promise = fetchProducts();
 promise.then(data => console.log(data[0].name));
+```
+
+Also, note that you can only use `await` inside an `async` function, unless your code is in a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). That means you can't do this in a normal script:
+
+```js
+try {
+  // using await outside an async function is only allowed in a module
+  const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+  if (!response.ok) {
+    throw new Error(`HTTP error: ${response.status}`);
+  }
+  const data = await response.json();
+  console.log(data[0].name);
+}
+catch(error) {
+  console.error(`Could not get products: ${error}`);
+}
 ```
 
 You'll probably use `async` functions a lot where you might otherwise use promise chains, and they make working with promises much more intuitive.

@@ -74,7 +74,7 @@ const offlineCtx = new OfflineAudioContext({
   sampleRate: 44100,
 });
 const source = offlineCtx.createBufferSource();
-// etc...
+// …
 ```
 
 For a full working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)

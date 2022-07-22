@@ -94,11 +94,11 @@ In this example, look at the image (B1) right underneath the header. It's relate
 
 ### It's a trap
 
-**[MICA](https://www.mica.edu/about-mica/)**. This is a bit trickier. It looks like a three-column layout...
+**[MICA](https://www.mica.edu/about-mica/)**. This is a bit trickier. It looks like a three-column layout:
 
 ![Example of a false 3 columns layout](screenshot-education.jpg)        ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
 
-...but it's not. B1 and B2 float around the main content. Remember that word "float"--it will ring a bell when you start learning about {{Glossary("CSS")}}.
+But it's not! B1 and B2 float around the main content. Remember that word "float"--it will ring a bell when you start learning about {{Glossary("CSS")}}.
 
 Why would you think it's a three-column layout? Because the image on the top-right is L-shaped, because B1 looks like a column supporting the shifted main content, and because the "M" and "I" of the MICA logo create a vertical line of force.
 
@@ -106,7 +106,7 @@ This is a good example of a classic layout supporting some design creativity. Si
 
 ### A much trickier layout
 
-**The [Opera de Paris](https://www.operadeparis.fr/en/saison-2014-2015/opera/la-boheme-puccini)**.
+**The Opera de Paris**.
 
 ![An example of a tricky layout.](screenshot-opera.jpg)        ![This is a 2 column layout but the header is overlapping the main content.](screenshot-opera-overlay.jpg)
 

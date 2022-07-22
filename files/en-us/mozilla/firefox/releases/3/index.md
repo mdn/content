@@ -215,7 +215,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Simplified add-on installation.** You can now install extensions from third-party download sites in fewer clicks, thanks to the removal of the add-on download site whitelist.
 - **New Download Manager.** The download manager makes it easier to locate your downloaded files.
 - **Resumable downloads.** You can now resume downloads after restarting the browser or resetting your network connection.
-- **Full page zoom.** From the View menu and using keyboard shortcuts, you can now zoom in and out on the content of entire pages -- this scales not just the text but the layout and images as well.
+- **Full page zoom.** From the View menu and using keyboard shortcuts, you can now zoom in and out on the content of entire pages — this scales not just the text but the layout and images as well.
 - **Tab scrolling and quickmenu.** Tabs are easier to locate with the new tab scrolling and tab quickmenu features.
 - **Save what you were doing.** Firefox 3 prompts you to see if you'd like to save your current tabs when you exit Firefox.
 - **Optimized Open in Tabs behavior.** Opening a folder of bookmarks in tabs now appends the new tabs instead of replacing the existing ones.
@@ -239,8 +239,8 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 ### Security and privacy
 
 - **One-click site information.** Want to know more about the site you're visiting? Click the site's icon in the location bar to see who owns it. Identify information is prominently displayed and easier than ever to understand.
-- **Malware protection.** Firefox 3 warns you if you arrive at a web site that is known to install viruses, spyware, trojans, or other dangerous software (known as malware). You can see what the warning looks like by [clicking here](https://www.mozilla.org/en-US/firefox/its-an-attack.html).
-- **Web forgery protection enhanced.** Now when you visit a page that's suspected of being a forgery, you're shown a special page instead of the contents of the page with a warning. [Click here](https://www.mozilla.org/en-US/firefox/its-a-trap.html) to see what it looks like.
+- **Malware protection.** Firefox 3 warns you if you arrive at a web site that is known to install viruses, spyware, trojans, or other dangerous software (known as malware).
+- **Web forgery protection enhanced.** Now when you visit a page that's suspected of being a forgery, you're shown a special page instead of the contents of the page with a warning.
 - **Easier to understand SSL errors.** The errors presented when an invalid SSL certificate is encountered have been clarified to make it easier to understand what the problem is.
 - **Out-of-date add-on protection.** Firefox 3 now automatically checks add-on and plugin versions and disables older, insecure versions.
 - **Secure add-on updates.** Add-on update security has been improved by disallowing add-ons that use an insecure update mechanism.

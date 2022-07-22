@@ -38,7 +38,7 @@ These WebGL 1 extensions are universally supported, and can be relied upon to be
 - WEBGL_debug_renderer_info
 - WEBGL_lose_context
 
-_(see also: <https://jdashg.github.io/misc/webgl/webgl-feature-levels.html>)_
+_(see also: [WebGL feature levels and % support](https://kdashg.github.io/misc/webgl/webgl-feature-levels.html))_
 
 Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/jdashg/misc/blob/master/webgl/webgl-v1.1.js>
 
@@ -443,7 +443,7 @@ Most texture uploads from DOM elements will incur a processing pass that will te
 In WebGL:
 
 ```
-    ...
+    …
     useProgram(prog1)
 <pipeline flush>
     bindFramebuffer(target)
@@ -451,13 +451,13 @@ In WebGL:
     bindTexture(webgl_texture)
     texImage2D(HTMLVideoElement)
     drawArrays()
-    ...
+    …
 ```
 
 Behind the scenes in the browser:
 
 ```
-    ...
+    …
     useProgram(prog1)
 <pipeline flush>
     bindFramebuffer(target)
@@ -474,7 +474,7 @@ Behind the scenes in the browser:
         +useProgram(prog1)
 <pipeline flush>
     drawArrays()
-    ...
+    …
 ```
 
 Prefer doing uploads before starting drawing, or at least between pipelines:
@@ -482,7 +482,7 @@ Prefer doing uploads before starting drawing, or at least between pipelines:
 In WebGL:
 
 ```
-    ...
+    …
     bindTexture(webgl_texture)
     texImage2D(HTMLVideoElement)
     useProgram(prog1)
@@ -491,13 +491,13 @@ In WebGL:
     drawArrays()
     bindTexture(webgl_texture)
     drawArrays()
-    ...
+    …
 ```
 
 Behind the scenes in the browser:
 
 ```
-    ...
+    …
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
         +useProgram(_internal_tex_tranform_prog)
@@ -513,7 +513,7 @@ Behind the scenes in the browser:
     drawArrays()
     bindTexture(webgl_texture)
     drawArrays()
-    ...
+    …
 ```
 
 ## Use texStorage to create textures
@@ -530,7 +530,7 @@ Storing data that you won't use again can have high cost, particularly on tiled-
 
 ## Use non-blocking async data readback
 
-Operations like `readPixels` and `getBufferSubData` are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: <https://jdashg.github.io/misc/async-gpu-downloads.html>
+Operations like `readPixels` and `getBufferSubData` are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: [Async downloads in blocking APIs](https://kdashg.github.io/misc/async-gpu-downloads.html)
 
 ```js
 function clientWaitAsync(gl, sync, flags, interval_ms) {
@@ -547,7 +547,7 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
       }
       resolve();
     }
-    test());
+    test();
   });
 }
 
@@ -587,7 +587,7 @@ Handling `devicePixelRatio != 1.0` is tricky. While the common approach is to se
 
 Instead, we can use non-integer values for CSS's `top`/`bottom`/`left`/`right` to fairly reliably 'pre-snap' our canvas to whole integer device coordinates.
 
-Demo: <https://jdashg.github.io/misc/webgl/device-pixel-presnap.html>
+Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-presnap.html)
 
 ### ResizeObserver and 'device-pixel-content-box'
 

@@ -18,6 +18,8 @@ The **`Intl.ListFormat.prototype.formatToParts()`** method
 returns an {{jsxref("Array")}} of objects representing the different components that
 can be used to format a list of values in a locale-aware fashion.
 
+{{EmbedInteractiveExample("pages/js/intl-listformat-prototype-formattoparts.html")}}
+
 ## Syntax
 
 ```js

@@ -43,7 +43,7 @@ The `{{htmlattrxref("draggable")}}` attribute may be used on any element, includ
 
 ## Starting a Drag Operation
 
-In this example, a listener is added for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event by using the {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} attribute.
+In this example, a listener is added for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event by using the `ondragstart` attribute.
 
 ```html
 <p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">

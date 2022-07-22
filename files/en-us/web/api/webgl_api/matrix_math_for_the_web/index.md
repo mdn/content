@@ -179,7 +179,7 @@ A really easy way to start using a matrix is to use the CSS {{cssxref("transform
 ```html
 <div id='move-me' class='transformable'>
   <h2>Move me with a matrix</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</p>
 </div>
 ```
 

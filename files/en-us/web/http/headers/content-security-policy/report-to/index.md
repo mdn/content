@@ -9,7 +9,7 @@ tags:
   - Reporting
   - Security
   - report-to
-browser-compat: http.headers.csp.Content-Security-Policy.report-to
+browser-compat: http.headers.Content-Security-Policy.report-to
 ---
 {{HTTPSidebar}}
 
@@ -18,7 +18,7 @@ The `Content-Security-Policy`
 instructs the user agent to store reporting endpoints for an origin.
 
 ```html
-Content-Security-Policy: ...; report-to groupname
+Content-Security-Policy: …; report-to groupname
 ```
 
 The directive has no effect in and of itself, but only gains meaning in combination
@@ -65,7 +65,7 @@ Report-To: { "group": "csp-endpoint",
               "endpoints": [
                 { "url": "https://example.com/hpkp-reports" }
               ] }
-Content-Security-Policy: ...; report-to csp-endpoint
+Content-Security-Policy: …; report-to csp-endpoint
 ```
 
 ```
@@ -76,7 +76,13 @@ Report-To: { "group": "endpoint-1",
                 { "url": "https://backup.com/reports" }
               ] }
 
-Content-Security-Policy: ...; report-to endpoint-1
+Content-Security-Policy: …; report-to endpoint-1
+```
+
+```
+Reporting-Endpoints: endpoint-1="https://example.com/reports"
+
+Content-Security-Policy: …; report-to endpoint-1
 ```
 
 ## Specifications

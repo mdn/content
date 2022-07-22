@@ -64,9 +64,9 @@ This code identifies the correct endpoints by searching for the interface implem
 let inEndpoint = undefined;
 let outEndpoint = undefined;
 
-for (const interface of device.configuration.interfaces) {
+for (const { alternates } of device.configuration.interfaces) {
   // Only support devices with out multiple alternate interfaces.
-  const alternate = interface.alternates[0];
+  const alternate = alternates[0];
 
   // Identify the interface implementing the USB CDC class.
   const USB_CDC_CLASS = 10;

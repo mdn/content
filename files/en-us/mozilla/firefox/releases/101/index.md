@@ -39,7 +39,7 @@ No notable changes.
 - [`DOMException`](/en-US/docs/Web/API/DOMException) is now a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}} ({{bug(1561357)}}).
 
 - _Constructable stylesheets_ are now supported, making it much easier to create reusable stylesheets for use with [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
-  The update includes the addition of a [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) for creating new stylesheets, and the {{domxref("CSSStyleSheet.replace()")}} and {{domxref("CSSStyleSheet.replaceSync()")}} methods that can be used to add CSS rules to them.
+  The update includes the addition of a [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) for creating new stylesheets, the {{domxref("CSSStyleSheet.replace()")}} and {{domxref("CSSStyleSheet.replaceSync()")}} methods that can be used to add/replace CSS rules in the sheet, and the [`Document.adoptedStyleSheets`](/en-US/docs/Web/API/Document/adoptedStyleSheets) and [`ShadowRoot.adoptedStyleSheets`](/en-US/docs/Web/API/ShadowRoot/adoptedStyleSheets) properties that are used to share sheets to a document and its shadow DOM subtrees.
   See {{bug(1520690)}} for more information.
 
 #### Media, WebRTC, and Web Audio

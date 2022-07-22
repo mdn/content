@@ -19,7 +19,7 @@ This the example for a basic payment form for the article [How to structure an H
 ```html
 <form method="post">
   <h1>Payment form</h1>
-  <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+  <p>Required fields are followed by <strong><span aria-label="required">*</span></strong>.</p>
   <section>
     <h2>Contact information</h2>
     <fieldset>
@@ -48,21 +48,21 @@ This the example for a basic payment form for the article [How to structure an H
     <p>
       <label for="name">
         <span>Name: </span>
-        <strong><abbr title="required">*</abbr></strong>
+        <strong><span aria-label="required">*</span></strong>
       </label>
       <input type="text" id="name" name="username">
     </p>
     <p>
       <label for="mail">
         <span>E-mail: </span>
-        <strong><abbr title="required">*</abbr></strong>
+        <strong><span aria-label="required">*</span></strong>
       </label>
       <input type="email" id="mail" name="usermail">
     </p>
     <p>
       <label for="pwd">
         <span>Password: </span>
-        <strong><abbr title="required">*</abbr></strong>
+        <strong><span aria-label="required">*</span></strong>
       </label>
       <input type="password" id="pwd" name="password">
     </p>
@@ -82,14 +82,14 @@ This the example for a basic payment form for the article [How to structure an H
     <p>
       <label for="number">
         <span>Card number:</span>
-        <strong><abbr title="required">*</abbr></strong>
+        <strong><span aria-label="required">*</span></strong>
       </label>
       <input type="tel" id="number" name="cardnumber">
     </p>
     <p>
       <label for="expiration">
         <span>Expiration date:</span>
-        <strong><abbr title="required">*</abbr></strong>
+        <strong><span aria-label="required">*</span></strong>
       </label>
       <input type="text" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
     </p>

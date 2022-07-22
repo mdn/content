@@ -22,7 +22,7 @@ The **`SpeechRecognitionAlternative`** interface of the [Web Speech API](/en-US/
 - {{domxref("SpeechRecognitionAlternative.transcript")}} {{readonlyinline}}
   - : Returns a string containing the transcript of the recognized word.
 - {{domxref("SpeechRecognitionAlternative.confidence")}} {{readonlyinline}}
-  - : Returns a numeric estimate of how confident the speech recognition system is that the recognition is correct.
+  - : Returns a numeric estimate between 0 and 1 of how confident the speech recognition system is that the recognition is correct.
 
 ## Examples
 
@@ -40,7 +40,7 @@ recognition.onresult = function(event) {
   // These also have getters so they can be accessed like arrays.
   // The second [0] returns the SpeechRecognitionAlternative at position 0.
   // We then return the transcript property of the SpeechRecognitionAlternative object
-  var color = event.results[0][0].transcript;
+  const color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
 }

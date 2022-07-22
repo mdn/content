@@ -20,9 +20,9 @@ The `article` role indicates a section of a page that could easily stand on its 
   <h2>Heading of the segment</h2>
   <p>Paragraph for the segment.</p>
   <p>Another paragraph.</p>
-... controls to interact with the article, share it, etc. ...
+  Controls to interact with the article, share it, etc.
 </div>
-<div role="article"> ... </div>
+<div role="article"> … </div>
 ```
 
 This example shows two articles side by side on one page that could be structured similarly and are related.
@@ -36,9 +36,9 @@ Don't use `role="article"`. Instead use the `<article>` element.
   <h2>Heading of the segment</h2>
   <p>Paragraph for the segment.</p>
   <p>Another paragraph.</p>
-... controls to interact with the article, share it, etc. ...
+  Controls to interact with the article, share it, etc.
 </article>
-<article> ... </article>
+<article> … </article>
 ```
 
 ## Description
@@ -77,7 +77,7 @@ This role does not support any specific keyboard interaction.
 
 ## Examples
 
-- The [restaurant recommendations feed display](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feedDisplay.html) along with its separate [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feed.html) from the WAI-ARIA 1.1 authoring practices feed design pattern
+- The [restaurant recommendations feed display](https://www.w3.org/WAI/ARIA/apg/example-index/feed/feedDisplay.html) along with its separate [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feed.html) from the WAI-ARIA 1.1 authoring practices feed design pattern
 
 ## Specifications
 
@@ -89,7 +89,7 @@ This role corresponds to the {{HTMLElement('article')}} element in HTML, and tha
 
 ## See also
 
-- [ARIA: using the `article` role](/en-US/docs/Web/Accessibility/ARIA/aria_techniques/using_the_article_role)
+- [ARIA: using the `article` role](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
 - [`feed` role](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role)
 - [`section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
 - The {{HTMLElement('article')}} element

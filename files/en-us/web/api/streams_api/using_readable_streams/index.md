@@ -24,7 +24,8 @@ As a JavaScript developer, programmatically reading and manipulating streams of 
 
 ## Browser support
 
-You can consume Fetch body objects as streams and create your own custom readable streams in Firefox 65+ and Chrome 42+ (and equivalent Chromium-based browsers). [Pipe chains](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) are only supported in Chrome at the moment, and that functionality is subject to change.
+You can consume Fetch body objects as streams and create your own custom readable streams most current browsers.
+[Pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) support is still not universal, and it may be worth checking compatibility tables (for example, see {{domxref("ReadableStream.pipeThrough()")}}).
 
 ## Finding some examples
 
@@ -58,7 +59,7 @@ fetch('./tortoise.png')
 .then(response => response.body)
 .then(body => {
   const reader = body.getReader();
-  // ...
+  // …
   });
 ```
 
@@ -72,7 +73,7 @@ Also note that the previous example can be reduced by one step, as `response.bod
   // Retrieve its body as ReadableStream
   .then(response => {
     const reader = response.body.getReader();
-    // ...
+    // …
   });
 ```
 
@@ -176,8 +177,8 @@ const stream = new ReadableStream({
   type,
   autoAllocateChunkSize
 }, {
-  highWaterMark,
-  size()
+  highWaterMark: 3,
+  size: () => 1
 });
 ```
 
@@ -231,11 +232,12 @@ In addition, when we are done reading the fetch body we use the controller's {{d
 In our Simple stream pump example, we consume the custom readable stream by passing it into a {{domxref("Response.Response", "Response")}} constructor call, after which we consume it as a `blob()`.
 
 ```js
-.then(stream => new Response(stream))
-.then(response => response.blob())
-.then(blob => URL.createObjectURL(blob))
-.then(url => console.log(image.src = url))
-.catch(err => console.error(err));
+readableStream
+  .then(stream => new Response(stream))
+  .then(response => response.blob())
+  .then(blob => URL.createObjectURL(blob))
+  .then(url => console.log(image.src = url))
+  .catch(err => console.error(err));
 ```
 
 But a custom stream is still a `ReadableStream` instance, meaning you can attach a reader to it. As an example, have a look at our [Simple random stream demo](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-random-stream/)), which creates a custom stream, enqueues some random strings into it, and then reads the data out of the stream again once the _Stop string generation_ button is pressed.
@@ -331,11 +333,9 @@ function teeStream() {
 
 ## Pipe chains
 
-One very experimental feature of streams is the ability to pipe streams into one another (called a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains)). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.
+Another feature of streams is the ability to pipe streams into one another (called a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains)). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.
 
-This functionality is at a very experimental stage and is subject to change, so we have no explored it too deeply as of yet.
-
-We have created an example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.
+We do have have a simple example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.
 
 ```js
 // Fetch the original image
@@ -348,6 +348,10 @@ fetch('png-logo.png')
 .then(rs => logReadableStream('PNG Chunk Stream', rs))
 ```
 
+We don't yet have an example that uses {{domxref("TransformStream")}}.
+
 ## Summary
 
-That explains the basics of "default" readable streams. We'll explain bytestreams in a separate future article, once they are available in browsers.
+That explains the basics of "default" readable streams.
+
+See [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) for information about how to use readable _byte_ streams: streams with an underlying byte source that can perform efficient zero-copy transfers to a consumer, bypassing the stream's internal queues.

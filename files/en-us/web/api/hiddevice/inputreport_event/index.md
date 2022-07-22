@@ -35,11 +35,11 @@ An {{domxref("HIDInputReportEvent")}}. Inherits from {{domxref("Event")}}.
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
-- {{domxref("HIDInputReportEvent.data")}}{{readonlyinline}}
+- {{domxref("HIDInputReportEvent.data")}} {{readonlyinline}}
   - : A {{jsxref("DataView")}} containing the data from the input report, excluding the `reportId` if the HID interface uses report IDs.
-- {{domxref("HIDInputReportEvent.device")}}{{readonlyinline}}
+- {{domxref("HIDInputReportEvent.device")}} {{readonlyinline}}
   - : The {{domxref("HIDDevice")}} instance that represents the HID interface that sent the input report.
-- {{domxref("HIDInputReportEvent.reportId")}}{{readonlyinline}}
+- {{domxref("HIDInputReportEvent.reportId")}} {{readonlyinline}}
   - : The one-byte identification prefix for this report, or 0 if the HID interface does not use report IDs.
 
 ## Example

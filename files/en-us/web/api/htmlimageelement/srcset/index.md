@@ -162,7 +162,7 @@ display results in selecting the 1x or the 2x version of the image. If you happe
 have both standard and high density displays, try moving this window between them and
 reloading the page to see the results change.
 
-{{EmbedLiveSample("Example", 640, 320)}}
+{{EmbedLiveSample("Examples", 640, 320)}}
 
 For additional examples, see our guide to [responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 

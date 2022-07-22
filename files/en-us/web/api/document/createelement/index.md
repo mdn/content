@@ -95,7 +95,7 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // constructor definition left out for brevity
-    ...
+    // …
   }
 }
 

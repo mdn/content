@@ -79,7 +79,7 @@ If there is more than one `navigation` landmark role or {{HTMLElement('nav')}} e
   <!-- content -->
 </div>
 
-...
+…
 
 <nav id="footer-nav" aria-label="Footer">
   <!-- content -->
@@ -97,7 +97,7 @@ If a `navigation` landmark role or {{HTMLElement('nav')}} element in a document 
   </nav>
 </header>
 
-...
+…
 
 <footer>
   <nav id="footer-nav" aria-label="Main">

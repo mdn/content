@@ -14,14 +14,8 @@ The MathML `<mstyle>` element is used change the style of its children. It accep
 
 ## Attributes
 
-- `dir`
-  - : Overall directionality of formulas. Possible values are either `ltr` (left to right) or `rtl` (right to left).
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
-- `infixlinebreakstyle`
-  - : Specifies the default `linebreakstyle` to use for infix operators. The values `before`, `after` and `duplicate` are allowed.
-- `scriptlevel`
-  - : Controls mostly the font-size. The higher the `scriptlevel`, the smaller the font size. This attribute accepts a non-negative integer, as well as a "+" or a "-" sign, which increments or decrements the current value. In addition, the `scriptlevel` attribute can never reduce the font size below `scriptminsize` in order to avoid unreadable small font sizes and depends on the multiplier specified in `scriptsizemultiplier`.
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - `scriptminsize`
   - : Specifies a minimum font size allowed due to changes in `scriptlevel`. The default value is 8pt.
 - `scriptsizemultiplier`

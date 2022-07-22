@@ -100,7 +100,7 @@ _No changes._
 #### DOM events
 
 - Going forward, only one {{domxref("Window.open()")}} call is allowed per event ({{bug(675574)}}).
-- The [`keyup`](/en-US/docs/Web/API/Document/keyup_event) and [`keydown`](/en-US/docs/Web/API/Document/keydown_event) events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}.
+- The [`keyup`](/en-US/docs/Web/API/Element/keyup_event) and [`keydown`](/en-US/docs/Web/API/Element/keydown_event) events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}.
 
 #### Web workers
 
@@ -129,7 +129,7 @@ _No changes._
 - The non-standard {{domxref("MediaStream")}} property `currentTime` has been removed ({{bug(1502927)}}).
 - The `dom.webcomponents.shadowdom.enabled` and `dom.webcomponents.customelements.enabled` prefs have been removed — Shadow DOM and Custom Elements can no longer be disabled in `about:config` ({{bug(1503019)}}).
 - The non-standard DOM `text` event — fired to notify the browser editor UI of IME composition string data and selection range — has been removed ({{bug(1288640)}}).
-- The {{event("keypress")}} event is no longer fired for [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) ({{bug(968056)}}), except for the `Enter` key, and the `Shift` + `Enter` and `Ctrl` + `Enter` key combinations (these were kept for cross-browser compatibility purposes).
+- The {{domxref("Element/keypress_event", "keypress")}} event is no longer fired for [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) ({{bug(968056)}}), except for the `Enter` key, and the `Shift` + `Enter` and `Ctrl` + `Enter` key combinations (these were kept for cross-browser compatibility purposes).
 
 ### Security
 

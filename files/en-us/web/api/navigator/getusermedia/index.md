@@ -56,8 +56,8 @@ getUserMedia(constraints, successCallback, errorCallback)
     shown in the following example:
 
     ```js
-    function(stream) {
-       var video = document.querySelector('video');
+    function successCallback(stream) {
+       const video = document.querySelector('video');
        video.srcObject = stream;
        video.onloadedmetadata = function(e) {
           // Do something with the video here.
@@ -92,7 +92,7 @@ navigator.getUserMedia = navigator.getUserMedia ||
 if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
       function(stream) {
-         var video = document.querySelector('video');
+         const video = document.querySelector('video');
          video.srcObject = stream;
          video.onloadedmetadata = function(e) {
            video.play();
@@ -112,13 +112,15 @@ if (navigator.getUserMedia) {
 To use `getUserMedia()` in an installable app, you need to specify one or both of the following fields inside your
 manifest file:
 
-```js
-"permissions": {
-  "audio-capture": {
-    "description": "Required to capture audio using getUserMedia()"
-  },
-  "video-capture": {
-    "description": "Required to capture video using getUserMedia()"
+```json
+{
+  "permissions": {
+    "audio-capture": {
+      "description": "Required to capture audio using getUserMedia()"
+    },
+    "video-capture": {
+      "description": "Required to capture video using getUserMedia()"
+    }
   }
 }
 ```

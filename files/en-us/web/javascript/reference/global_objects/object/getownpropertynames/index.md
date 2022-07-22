@@ -74,7 +74,7 @@ Object.getOwnPropertyNames(obj).forEach(
 // non-enumerable property
 const my_obj = Object.create({}, {
   getFoo: {
-    value: function() { return this.foo; },
+    value() { return this.foo; },
     enumerable: false
   }
 });
@@ -84,7 +84,7 @@ console.log(Object.getOwnPropertyNames(my_obj).sort());
 // logs ["foo", "getFoo"]
 ```
 
-If you want only the enumerable properties, see {{jsxref("Object.keys()")}} or use a {{jsxref("Statements/for...in", "for...in")}} loop (note that this will also return enumerable properties found along the prototype chain for the object unless the latter is filtered with {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).
+If you want only the enumerable properties, see {{jsxref("Object.keys()")}} or use a {{jsxref("Statements/for...in", "for...in")}} loop (note that this will also return enumerable properties found along the prototype chain for the object unless the latter is filtered with {{jsxref("Object.hasOwn()", "hasOwn()")}}).
 
 Items on the prototype chain are not listed:
 
@@ -141,7 +141,7 @@ console.log(nonenum_only);
 
 - [Polyfill of `Object.getOwnPropertyNames` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.keys()")}}

@@ -92,7 +92,7 @@ The first thing we need to do is generate the array of normals for all the verti
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertexNormals),
                 gl.STATIC_DRAW);
 
-...
+  // …
 
   return {
     position: positionBuffer,
@@ -135,7 +135,7 @@ Finally, we need to update the code that builds the uniform matrices to generate
   mat4.invert(normalMatrix, modelViewMatrix);
   mat4.transpose(normalMatrix, normalMatrix);
 
-...
+  // …
 
   gl.uniformMatrix4fv(
       programInfo.uniformLocations.normalMatrix,
@@ -230,9 +230,9 @@ The only thing left is to look up the location of the `aVertexNormal` attribute 
 
 And that's it!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample7/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample7) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample7/)
 
 ## Exercises for the reader
 

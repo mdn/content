@@ -245,9 +245,10 @@ function createNoteTable() {
   noteFreq[1]["A"] = 55.000000000000000;
   noteFreq[1]["A#"] = 58.270470189761239;
   noteFreq[1]["B"] = 61.735412657015513;
+  // …
 ```
 
-... several octaves not shown for brevity ...
+Several octaves not shown for brevity.
 
 ```js hidden
   noteFreq[2]["C"] = 65.406391325149658;
@@ -443,7 +444,7 @@ setup();
 ```
 
 1. The table which maps note names and octaves to their frequencies is created by calling `createNoteTable()`.
-2. An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{event("change")}} events on the main gain control. This will update the main gain node's volume to the new value of the control.
+2. An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{domxref("HTMLElement/change_event", "change")}} events on the main gain control. This will update the main gain node's volume to the new value of the control.
 3. Next, we iterate over each octave in the note frequencies table. For each octave, we use {{jsxref("Object.entries()")}} to get a list of the notes in that octave.
 4. Create a {{HTMLElement("div")}} to contain that octave's notes (so we can have a small bit of space drawn between octaves), and set its class name to "octave"
 5. For each key in the octave, we check to see if the note's name has more than one character. We skip these, because we're leaving out the sharp notes in this example. If the note's name is only one character, then we call `createKey()`, specifying the note string, octave, and frequency. The returned element is appended to the octave element created in step 4.
@@ -514,7 +515,7 @@ The oscillator's frequency is set to the value specified in the `freq` parameter
 
 #### Playing a tone
 
-When the {{event("mousedown")}} or {{domxref("mouseover")}} event occurs on a key, we want to start playing the corresponding note. The `notePressed()` function is used as the event handler for these events.
+When the {{domxref("Element/mousedown_event", "mousedown")}} or {{domxref("Element/mouseover_event", "mouseover")}} event occurs on a key, we want to start playing the corresponding note. The `notePressed()` function is used as the event handler for these events.
 
 ```js
 function notePressed(event) {
@@ -530,7 +531,7 @@ function notePressed(event) {
 }
 ```
 
-We start by checking whether the primary mouse button is pressed, for two reasons. First, we want to only allow the primary mouse button to trigger notes playing. Second, and more importantly, we are using this to handle {{event("mouseover")}} for cases where the user is dragging from note to note, and we only want to start playing the note if the mouse is pressed when it enters the element.
+We start by checking whether the primary mouse button is pressed, for two reasons. First, we want to only allow the primary mouse button to trigger notes playing. Second, and more importantly, we are using this to handle {{domxref("Element/mouseover_event", "mouseover")}} for cases where the user is dragging from note to note, and we only want to start playing the note if the mouse is pressed when it enters the element.
 
 If the mouse button is in fact down, we get the pressed key's {{htmlattrxref("dataset")}} attribute; this makes it easy to access the custom data attributes on the element. We look for a `data-pressed` attribute; if there isn't one (which indicates that the note isn't already playing), we call `playTone()` to start playing the note, passing in the value of the element's `data-frequency` attribute. The returned oscillator is stored into `oscList` for future reference, and `data-pressed` is set to `yes` to indicate that the note is playing so we don't start it again next time this is called.
 
@@ -555,7 +556,7 @@ function noteReleased(event) {
 
 #### Changing the main volume
 
-The volume slider in the settings bar provides a simple interface to change the gain value on the main gain node, thereby changing the loudness of all playing notes. The `changeVolume()` method is the handler for the {{event("change")}} event on the slider.
+The volume slider in the settings bar provides a simple interface to change the gain value on the main gain node, thereby changing the loudness of all playing notes. The `changeVolume()` method is the handler for the {{domxref("HTMLElement/change_event", "change")}} event on the slider.
 
 ```js
 function changeVolume(event) {

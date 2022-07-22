@@ -13,6 +13,8 @@ browser-compat: javascript.builtins.EvalError
 
 The **`EvalError`** object indicates an error regarding the global {{jsxref("Global_Objects/eval", "eval()")}} function. This exception is not thrown by JavaScript anymore, however the `EvalError` object remains for compatibility.
 
+`EvalError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+
 ## Constructor
 
 - {{jsxref("EvalError/EvalError", "EvalError()")}}
@@ -21,9 +23,11 @@ The **`EvalError`** object indicates an error regarding the global {{jsxref("Glo
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "EvalError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "EvalError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "EvalError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "EvalError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.lineNumber", "EvalError.prototype.lineNumber")}} {{non-standard_inline}}

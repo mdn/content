@@ -49,7 +49,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
     }).then(function (registration) {
-        var serviceWorker;
+        let serviceWorker;
         if (registration.installing) {
             serviceWorker = registration.installing;
             document.querySelector('#kind').textContent = 'installing';

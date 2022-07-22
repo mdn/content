@@ -54,6 +54,7 @@ solution is [`TypedArray.prototype.subarray()`](/en-US/docs/Web/JavaScript/Refer
 
 ```js
 const encoder = new TextEncoder();
+
 function encodeIntoAtPosition(string, u8array, position) {
     return encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
 }
@@ -101,7 +102,7 @@ reallocation steps and make the first reallocation step multiply the _remaining
 unconverted_ length by two instead of three. However, in that case, it makes
 sense not to implement the usual multiplying by two of the _already written_
 buffer length, because in such a case if a second reallocation happened, it would
-always overallocate compared to the original length times three.The above advice
+always overallocate compared to the original length times three. The above advice
 assumes that you don't need to allocate space for a zero terminator. That is, on the
 Wasm side you are working with Rust strings or a non-zero-terminating C++ class. If
 you are working with C++ `std::string`, even though the logical length is
@@ -121,6 +122,7 @@ string if the JavaScript string contained U+0000. Observe:
 
 ```js
 const encoder = new TextEncoder();
+
 function encodeIntoWithSentinel(string, u8array, position) {
     const stats = encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
     if (stats.written < u8array.length) u8array[stats.written] = 0; // append null if room

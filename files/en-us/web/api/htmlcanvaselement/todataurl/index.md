@@ -73,7 +73,7 @@ console.log(dataURL);
 
 ```js
 const fullQuality = canvas.toDataURL('image/jpeg', 1.0);
-// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
+// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ…9oADAMBAAIRAxEAPwD/AD/6AP/Z"
 const mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
 const lowQuality = canvas.toDataURL('image/jpeg', 0.1);
 ```

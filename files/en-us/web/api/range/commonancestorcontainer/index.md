@@ -110,7 +110,7 @@ function playAnimation(el) {
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 190)}}
+{{EmbedLiveSample("Examples", 700, 190)}}
 
 ## Specifications
 

@@ -13,6 +13,8 @@ browser-compat: javascript.builtins.ReferenceError
 
 The **`ReferenceError`** object represents an error when a variable that doesn't exist (or hasn't yet been initialized) in the current scope is referenced.
 
+`ReferenceError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+
 ## Constructor
 
 - {{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}
@@ -21,9 +23,11 @@ The **`ReferenceError`** object represents an error when a variable that doesn't
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "ReferenceError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "ReferenceError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.lineNumber", "ReferenceError.prototype.lineNumber")}} {{non-standard_inline}}

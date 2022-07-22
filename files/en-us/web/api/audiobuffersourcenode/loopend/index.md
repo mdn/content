@@ -81,7 +81,7 @@ function getData() {
   request.send();
 }
 
-  ...
+// …
 
 loopstartControl.oninput = function() {
   source.loopStart = loopstartControl.value;

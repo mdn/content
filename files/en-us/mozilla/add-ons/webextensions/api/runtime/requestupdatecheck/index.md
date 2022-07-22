@@ -35,7 +35,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 - `status`
   - : A {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}} value — the result of the update check.
-- `details`{{optional_inline}}
+- `details` {{optional_inline}}
 
   - : `object`. If `status` is `update_available`, this contains more information about the update. It is an object containing a single property:
 

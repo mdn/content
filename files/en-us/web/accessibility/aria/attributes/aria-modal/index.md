@@ -35,7 +35,7 @@ There is an [`inert`](/en-US/docs/Web/API/HTMLElement/inert) attribute that, whe
 
 When supported, including `aria-modal="true"` on a [`dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role), removes the requirement of putting [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) on background content, as the `aria-modal` informs assistive technologies that content outside a dialog is inert. Note that there are still compatibility issues for the `dialog` element, so using it in production is not recommended.
 
-If a dialog is not modal -- there is no inert background and focus isn't confined to the dialog -- either include `aria-modal="false"` or omit the attribute altogether.
+If a dialog is not modal — there is no inert background and focus isn't confined to the dialog — either include `aria-modal="false"` or omit the attribute altogether.
 
 ## Example
 

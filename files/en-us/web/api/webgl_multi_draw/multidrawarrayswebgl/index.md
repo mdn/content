@@ -82,8 +82,8 @@ None.
 ## Examples
 
 ```js
-// let firsts = new Int32Array(...);
-// let counts = new Int32Array(...);
+const firsts = new Int32Array(/* … */);
+const counts = new Int32Array(/* … */);
 ext.multiDrawArraysWEBGL(gl.TRIANGLES, firsts, 0, counts, 0, firsts.length);
 ```
 

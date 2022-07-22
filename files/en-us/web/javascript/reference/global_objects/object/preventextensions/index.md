@@ -69,7 +69,7 @@ obj === obj2; // true
 const empty = {};
 Object.isExtensible(empty); // === true
 
-// ...but that can be changed.
+// They can be made un-extensible
 Object.preventExtensions(empty);
 Object.isExtensible(empty); // === false
 

@@ -202,10 +202,10 @@ This HTML will be rendered as a highlighted box, like:
 For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:
 
 ```plain
-> Warnung: So schreibt man eine Warnung.
+> **Warnung:** So schreibt man eine Warnung.
 ```
 
-...and this will produce:
+And this will produce:
 
 ```html
 <div class="notecard warning">

@@ -58,11 +58,20 @@ ECMAScript has two built-in numeric types: [Number](#number-type) and [BigInt](#
 
 #### Number type
 
-The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). It is capable of storing floating-point numbers between 2^-1074 and 2^1024, but can only safely store integers in the range -(2^53 − 1) to 2^53 − 1. Values outside of the range from {{jsxref("Number.MIN_VALUE")}} to {{jsxref("Number.MAX_VALUE")}} are automatically converted to either `+Infinity` or `-Infinity`, which behave similarly to mathematical infinity, but with some slight differences; see {{jsxref("Number.POSITIVE_INFINITY")}} for details.
+The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). It is capable of storing positive floating-point numbers between 2^-1074 ({{jsxref("Number.MIN_VALUE")}}) and 2^1024 ({{jsxref("Number.MAX_VALUE")}}) as well as negative floating-point numbers between -(2^-1074) and -(2^1024), but it can only safely store integers in the range -(2^53 − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) to 2^53 − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}).
 
-> **Note:** You can check if a number is in the double-precision floating-point number range using {{jsxref("Number.isSafeInteger()")}} Outside the range from {{jsxref("Number.MIN_SAFE_INTEGER")}} to {{jsxref("Number.MAX_SAFE_INTEGER")}}, JavaScript can no longer safely represent integers; they will instead be represented by a double-precision floating point approximation.
+> **Note:** You can check if a number is within the range of safe integers using {{jsxref("Number.isSafeInteger()")}}. Outside the range from {{jsxref("Number.MIN_SAFE_INTEGER")}} to {{jsxref("Number.MAX_SAFE_INTEGER")}}, JavaScript can no longer safely represent integers; they will instead be represented by a double-precision floating point approximation.
 
-The number type has only one integer with multiple representations: `0` is represented as both `-0` and `+0` (where `0` is an alias for `+0`). In practice, there is almost no difference between the different representations; for example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
+Values outside the range ±(2^-1074 to 2^1024) are automatically converted:
+
+- Positive values greater than {{jsxref("Number.MAX_VALUE")}} are converted to `+Infinity`.
+- Positive values smaller than {{jsxref("Number.MIN_VALUE")}} are converted to `+0`.
+- Negative values smaller than -{{jsxref("Number.MAX_VALUE")}} are converted to `-Infinity`.
+- Negative values greater than -{{jsxref("Number.MIN_VALUE")}} are converted to `-0`.
+
+`+Infinity` and `-Infinity` behave similarly to mathematical infinity, but with some slight differences; see {{jsxref("Number.POSITIVE_INFINITY")}} and {{jsxref("Number.NEGATIVE_INFINITY")}} for details.
+
+The Number type has only one integer with multiple representations: `0` is represented as both `-0` and `+0` (where `0` is an alias for `+0`). In practice, there is almost no difference between the different representations; for example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
 
 ```js
 > 42 / +0
@@ -146,79 +155,20 @@ In computer science, an object is a value in memory which is possibly referenced
 
 In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using _key_ values. A _key_ value is either a {{Glossary("String", "String value")}} or a {{Glossary("Symbol", "Symbol value")}}.
 
-There are two types of object properties: The [_data_ property](#data_property) and the [_accessor_ property](#accessor_property).
-
-> **Note:** Each property has corresponding *attributes*. Attributes are used internally by the JavaScript engine, so you cannot directly access them. That's why attributes are listed in double square brackets, rather than single.
->
-> See {{jsxref("Object.defineProperty()")}} to learn more.
+There are two types of object properties: The [_data_ property](#data_property) and the [_accessor_ property](#accessor_property). Each property has corresponding _attributes_. Each attribute is accessed internally by the JavaScript engine, but you can set them through {{jsxref("Object.defineProperty()")}}, or read them through {{jsxref("Object.getOwnPropertyDescriptor()")}}. You can read more about the various nuances on the {{jsxref("Object.defineProperty()")}} page.
 
 #### Data property
 
-Associates a key with a value, and has the following attributes:
+Data properties associate a key with a value. It can be described by the following attributes:
 
-<table class="standard-table">
-  <caption>
-    Attributes of a data property
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">Attribute</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-      <th scope="col">Default value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>[[Value]]</td>
-      <td>Any JavaScript type</td>
-      <td>The value retrieved by a get access of the property.</td>
-      <td><code>undefined</code></td>
-    </tr>
-    <tr>
-      <td>[[Writable]]</td>
-      <td>Boolean</td>
-      <td>
-        If <code>false</code>, the property's [[Value]] cannot be changed.
-      </td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td>[[Enumerable]]</td>
-      <td>Boolean</td>
-      <td>
-        <p>
-          If <code>true</code>, the property will be enumerated in
-          <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"
-             ><code>for...in</code></a
-          >
-          loops.<br />See also
-          <a
-            href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties"
-            >Enumerability and ownership of properties</a
-          >.
-        </p>
-      </td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td>[[Configurable]]</td>
-      <td>Boolean</td>
-      <td>
-        If <code>false</code>, the property cannot be deleted, cannot be changed
-        to an accessor property, and attributes other than [[Value]] and
-        [[Writable]] cannot be changed.
-      </td>
-      <td><code>false</code></td>
-    </tr>
-  </tbody>
-</table>
-
-| Attribute  | Type    | Description                                           |
-| ---------- | ------- | ----------------------------------------------------- |
-| Read-only  | Boolean | Reversed state of the ES5 [[Writable]] attribute.     |
-| DontEnum   | Boolean | Reversed state of the ES5 [[Enumerable]] attribute.   |
-| DontDelete | Boolean | Reversed state of the ES5 [[Configurable]] attribute. |
+- `value`
+  - : The value retrieved by a get access of the property. Can be any JavaScript value.
+- `writable`
+  - : A boolean value indicating if the property can be changed with an assignment.
+- `enumerable`
+  - : A boolean value indicating if the property can be enumerated by a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
+- `configurable`
+  - : A boolean value indicating if the property can be deleted, can be changed to an accessor property, and can have its attributes changed.
 
 #### Accessor property
 
@@ -228,12 +178,14 @@ Associates a key with one of two accessor functions (`get` and `set`) to retriev
 
 An accessor property has the following attributes:
 
-| Attribute        | Type                           | Description                                                                                                                                                                                                              | Default value |
-| ---------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
-| [[Get]]          | Function object or `undefined` | The function is called with an empty argument list and retrieves the property value whenever a get access to the value is performed. See also [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get).               | `undefined`   |
-| [[Set]]          | Function object or `undefined` | The function is called with an argument that contains the assigned value and is executed whenever a specified property is attempted to be changed. See also [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set). | `undefined`   |
-| [[Enumerable]]   | Boolean                        | If `true`, the property will be enumerated in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                | `false`       |
-| [[Configurable]] | Boolean                        | If `false`, the property can't be deleted and can't be changed to a data property.                                                                                                                                       | `false`       |
+- `get`
+  - : A function called with an empty argument list to retrieve the property value whenever a get access to the value is performed. See also [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get). May be `undefined`.
+- `set`
+  - : A function called with an argument that contains the assigned value. Executed whenever a specified property is attempted to be changed. See also [setters](/en-US/docs/Web/JavaScript/Reference/Functions/get). May be `undefined`.
+- `enumerable`
+  - : A boolean value indicating if the property can be enumerated by a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
+- `configurable`
+  - : A boolean value indicating if the property can be deleted, can be changed to an data property, and can have its attributes changed.
 
 ### "Normal" objects, and functions
 
@@ -263,7 +215,7 @@ Additionally, arrays inherit from `Array.prototype`, which provides to them a ha
 | {{jsxref("Int32Array")}}         | `-2147483648` to `2147483647` | 4             | 32-bit two's complement signed integer                                       | `long`                | `int32_t`                       |
 | {{jsxref("Uint32Array")}}         | `0` to `4294967295`           | 4             | 32-bit unsigned integer                                                      | `unsigned long`       | `uint32_t`                      |
 | {{jsxref("Float32Array")}}     | `1.2E-38` to `3.4E38`         | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.1234567`)   | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123...15`) | `unrestricted double` | `double`                        |
+| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123…15`) | `unrestricted double` | `double`                        |
 | {{jsxref("BigInt64Array")}}     | `-2^63` to `2^63 - 1`         | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
 | {{jsxref("BigUint64Array")}}     | `0` to `2^64 - 1`             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
 

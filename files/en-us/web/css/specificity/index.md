@@ -100,7 +100,7 @@ input.myClass { color: yellow; /* 0-1-1 */}
 
 ### The `:is()` and `:not()` exceptions
 
-The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered as pseudo-classes in the specificity weight calculation. They themselves don't add any weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudo-class in the specificity value calculation is the weight of the parameter's [weight](#selector-weight-categories).
+The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered as pseudo-classes in the specificity weight calculation. They themselves don't add any weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudo-class in the specificity value calculation is the weight of the parameter's [weight](#selector_weight_categories).
 
 ```css
 p { /* 0-0-1 */ }

@@ -25,12 +25,12 @@ The **`Math.max()`** function returns the largest of the zero or more numbers gi
 Math.max()
 Math.max(value0)
 Math.max(value0, value1)
-Math.max(value0, value1, /* ... ,*/ valueN)
+Math.max(value0, value1, /* … ,*/ valueN)
 ```
 
 ### Parameters
 
-- `value1`, `value2`, ... , `valueN`
+- `value1`, `value2`, … , `valueN`
   - : Zero or more numbers among which the largest value will be selected and returned.
 
 ### Return value

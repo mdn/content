@@ -57,7 +57,7 @@ If you must ensure durability for some reason (e.g. you're storing critical data
 - {{domxref("IDBTransaction.durability")}} {{readonlyInline}}
   - : Returns the durability hint the transaction was created with.
 - {{domxref("IDBTransaction.error")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the{{domxref("IDBTransaction.abort()")}} function.
+  - : Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the {{domxref("IDBTransaction.abort()")}} function.
 - {{domxref("IDBTransaction.mode")}} {{readonlyInline}}
   - : The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is [`readonly`](#const_read_only).
 - {{domxref("IDBTransaction.objectStoreNames")}} {{readonlyInline}}
@@ -155,6 +155,11 @@ const myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction ||
 In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
+const note = document.getElementById('notifications');
+
+// an instance of a db object for us to store the IDB data in
+let db;
+
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 

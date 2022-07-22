@@ -41,7 +41,7 @@ var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var program = gl.createProgram();
 
-// ...
+// …
 
 gl.deleteProgram(program);
 ```

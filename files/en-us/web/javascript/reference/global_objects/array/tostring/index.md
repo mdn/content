@@ -68,4 +68,3 @@ console.log(array1.toString());
 ## See also
 
 - {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Object.prototype.toSource()")}}

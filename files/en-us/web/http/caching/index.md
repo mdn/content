@@ -47,7 +47,7 @@ The shared cache is located between the client and the server and can store resp
 
 In addition to the function of access control, some proxies implement caching to reduce traffic out of the network. This is usually not managed by the service developer, so it must be controlled by appropriate HTTP headers and so on. However, in the past, outdated proxy-cache implementations — such as implementations that do not properly understand the HTTP Caching standard — have often caused problems for developers.
 
-**Kitchen-sink headers** like following are used to try to work around "old and not updated proxy cache" implementations that do not understand current HTTP Caching spec directives like `no-store`.
+**Kitchen-sink headers** like the following are used to try to work around "old and not updated proxy cache" implementations that do not understand current HTTP Caching spec directives like `no-store`.
 
 ```http
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
@@ -55,7 +55,7 @@ Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 
 However, in recent years, as HTTPS has become more common and client/server communication has become encrypted, proxy caches in the path can only tunnel a response and can't behave as a cache, in many cases. So in that scenario, there is no need to worry about outdated proxy cache implementations that cannot even see the response.
 
-On the other hand, if a TLS bridge proxy decrypts all communications in a person-in-the-middle manner by installing a certificate from a CA managed by the organization on the PC, and performs access control, etc. — it is possible to see the contents of the response and cache it. However, since CT (certificate transparency) has become widespread in recent years, and some browsers only allow certificates issued with an SCT (signed certificate timestamp), this method requires the application of an enterprise policy. In such a controlled environment, there is no need to worry about the proxy cache being "out of date and not updated".
+On the other hand, if a {{Glossary("TLS")}} bridge proxy decrypts all communications in a person-in-the-middle manner by installing a certificate from a {{Glossary("Certificate_authority", "CA (certificate authority)")}} managed by the organization on the PC, and performs access control, etc. — it is possible to see the contents of the response and cache it. However, since [CT (certificate transparency)](/en-US/docs/Web/Security/Certificate_Transparency) has become widespread in recent years, and some browsers only allow certificates issued with an SCT (signed certificate timestamp), this method requires the application of an enterprise policy. In such a controlled environment, there is no need to worry about the proxy cache being "out of date and not updated".
 
 #### Managed caches
 
@@ -71,7 +71,7 @@ It is also possible to ignore the standard HTTP Caching spec protocols in favor 
 Cache-Control: no-store
 ```
 
-For example, Varnish uses VCL-based logic to handle cache storage, while service workers in combination with the Cache API allow you to create that logic in JavaScript.
+For example, Varnish Cache uses VCL (Varnish Configuration Language, a type of {{Glossary("DSL/Domain_specific_language", "DSL")}}) logic to handle cache storage, while service workers in combination with the Cache API allow you to create that logic in JavaScript.
 
 That means if a managed cache intentionally ignores a `no-store` directive, there is no need to perceive it as being "non-compliant" with the standard. What you should do is, avoid using kitchen-sink headers, but carefully read the documentation of whatever managed-cache mechanism you're using, and ensure you're controlling the cache properly in the ways provided by the mechanism you've chosen to use.
 
@@ -93,7 +93,7 @@ Date: Tue, 22 Feb 2022 22:22:22 GMT
 Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
 
 <!doctype html>
-...
+…
 ```
 
 It is heuristically known that content which has not been updated for a full year will not be updated for some time after that. Therefore, the client stores this response (despite the lack of `max-age`) and reuses it for a while. How long to reuse is up to the implementation, but the specification recommends about 10% (in this case 0.1 year) of the time after storing.
@@ -104,7 +104,7 @@ Heuristic caching is a workaround that came in being before `Cache-Control` supp
 
 Stored HTTP responses have two states: **fresh** and **stale**. The _fresh_ state usually indicates that the response is still valid and can be reused, while the _stale_ state means that the cached response has already expired.
 
-The criterion for determining when a response is fresh and when it is stale is **age**. In HTTP, age is the time elapsed since the response was generated. This is similar to the TTL in other caching mechanisms.
+The criterion for determining when a response is fresh and when it is stale is **age**. In HTTP, age is the time elapsed since the response was generated. This is similar to the {{Glossary("TTL")}} in other caching mechanisms.
 
 Take the following example (604800 seconds is one week).
 
@@ -116,7 +116,7 @@ Date: Tue, 22 Feb 2022 22:22:22 GMT
 Cache-Control: max-age=604800
 
 <!doctype html>
-...
+…
 ```
 
 The cache which stored that response counts the time elapsed since the response was generated as an age. The meaning of `max-age` is that if the age is less than one week, then the response is fresh — and if the age is greater than one week, the cached response is stale.
@@ -132,7 +132,7 @@ Cache-Control: max-age=604800
 Age: 86400
 
 <!doctype html>
-...
+…
 ```
 
 The client which receives that response will find it to be fresh for the remaining 604800-86400 seconds; that is, for 518400 seconds more.
@@ -192,7 +192,7 @@ Last-Modified: Tue, 22 Feb 2022 22:00:00 GMT
 Cache-Control: max-age=3600
 
 <!doctype html>
-...
+…
 ```
 
 At 23:22, the response becomes stale and the cache cannot be reused. So the request below shows a client sending a request with an `If-Modified-Since` request header, to ask the server if there have been any changes made since the specified time.
@@ -224,7 +224,7 @@ To solve such problems, the `ETag` response header was standardized as an altern
 
 ### ETag/If-None-Match
 
-The value of the`ETag` response header is an arbitrary value generated by the server. There are no restrictions on how the server must generate the value, so servers are free to set the value based on whatever means they choose — such as a hash of the body contents or a version number.
+The value of the `ETag` response header is an arbitrary value generated by the server. There are no restrictions on how the server must generate the value, so servers are free to set the value based on whatever means they choose — such as a hash of the body contents or a version number.
 
 As an example, if a hash value is used for the `ETag` header and the hash value of the `index.html` resource is `deadbeef`, the response will be as follows:
 
@@ -237,7 +237,7 @@ ETag: "deadbeef"
 Cache-Control: max-age=3600
 
 <!doctype html>
-...
+…
 ```
 
 If that response is stale, the client takes the value of the `ETag` response header for the cached response, and puts it into the `If-None-Match` request header, to ask the server if the resource has been modified:
@@ -275,7 +275,7 @@ ETag: deadbeef
 Cache-Control: no-cache
 
 <!doctype html>
-...
+…
 ```
 
 It is often stated that the combination of `max-age=0` and `must-revalidate` has the same meaning as `no-cache`.
@@ -382,7 +382,7 @@ If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
 
 (The requests from Chrome, Edge, and Firefox look very much like the above; the requests from Safari will look a bit different.)
 
-The `max-age=0` directive in the request specifies “reuse of responses with an age of 0 or less” — so in effect, intermediate stored responses are not reused.
+The `max-age=0` directive in the request specifies "reuse of responses with an age of 0 or less" — so in effect, intermediate stored responses are not reused.
 
 As a result, a request is validated by `If-None-Match` and `If-Modified-Since`.
 
@@ -446,7 +446,7 @@ Content-Length: 1024
 Cache-Control: max-age=31536000
 
 <!doctype html>
-...
+…
 ```
 
 You may want to overwrite that response once it expired on the server, but there is nothing the server can do once the response is stored — since no more requests reach the server due to caching.
@@ -581,13 +581,13 @@ Cache-Control: max-age=2592000
 
 ### Validation
 
-Don't forget to set the `If-Modified-Since` and `ETag` headers, so that you don't have to re-transmit a resource when reloading. It's easy to generate those headers for pre-built static files.
+Don't forget to set the `Last-Modified` and `ETag` headers, so that you don't have to re-transmit a resource when reloading. It's easy to generate those headers for pre-built static files.
 
 The `ETag` value here may be a hash of the file.
 
 ```http
 # response for bundle.v123.js
-If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
+Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
 ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 ```
 
@@ -601,7 +601,7 @@ The combined result is shown below.
 Content-Type: application/javascript
 Content-Length: 1024
 Cache-Control: public, max-age=31536000, immutable
-If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
+Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
 ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 ```
 
@@ -630,16 +630,16 @@ If the following HTML itself is stored, the latest version cannot be displayed e
 </body>
 ```
 
-For that case, `no-cache` would be appropriate — rather than`no-store` — since we don't want to store HTML, but instead just want it to always be up-to-date.
+For that case, `no-cache` would be appropriate — rather than `no-store` — since we don't want to store HTML, but instead just want it to always be up-to-date.
 
-Furthermore, adding `If-Modified-Since` and `If-None-Match` will allow clients to send conditional requests, and a `304 Not Modified` can be returned if there have been no updates to the HTML:
+Furthermore, adding `Last-Modified` and `ETag` will allow clients to send conditional requests, and a `304 Not Modified` can be returned if there have been no updates to the HTML:
 
 ```http
 200 OK HTTP/1.1
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache
-If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
+Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
 ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
 ```
 
@@ -650,7 +650,7 @@ That setting is appropriate for non-personalized HTML — but for a response whi
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache, private
-If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
+Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
 ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
 Set-Cookie: __Host-SID=AHNtAyt3fvJrUL5g5tnGwER; Secure; Path=/; HttpOnly
 ```

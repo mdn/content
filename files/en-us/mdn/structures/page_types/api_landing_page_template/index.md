@@ -109,8 +109,8 @@ In this section, describe the API's purpose and usage cases in a bit more detail
 What problems does it solve? What concepts does it involve? How do you use it, from a high level perspective?
 
 Don't go into a lot of detail in this section, and don't include code examples.
-If there are a lot of concepts to explain around this API, you should explain them in a separate "Fundamentals ..." or "Concepts..." article (e.g. [Fundamentals of WebXR](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals)).
-For a practical usage guide with code examples, you should include a "Usage..." article in your API docs (e.g. [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)).
+If there are a lot of concepts to explain around this API, you should explain them in a separate "Fundamentals" or "Concepts" article (e.g. [Fundamentals of WebXR](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals)).
+For a practical usage guide with code examples, you should include a "Usage…" article in your API docs (e.g. [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)).
 
 To help improve content discoverability and {{Glossary("SEO")}}, keep the following tips in mind:
 
@@ -153,10 +153,10 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_exam
 >  ## Examples
 >
 >  ### Using the fetch API
->  ... example of Fetch
+>  Example of Fetch
 >
 >  ### More examples
->  ...links to more examples on other pages
+>  Links to more examples on other pages
 >  ```
 >
 > **Scenario 2:** If you _only_ have examples on another page and none on this page:

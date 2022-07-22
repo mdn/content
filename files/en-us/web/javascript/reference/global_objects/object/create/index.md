@@ -131,7 +131,7 @@ Object.prototype.authenticated = true;
 
 // Unexpectedly allowing unauthenticated user to pass through
 if (user.authenticated) {
-  // access confidential data...
+  // access confidential data
 }
 ```
 
@@ -201,8 +201,8 @@ o = Object.create(Object.prototype, {
   // bar is a getter-and-setter (accessor) property
   bar: {
     configurable: false,
-    get: function() { return 10; },
-    set: function(value) {
+    get() { return 10; },
+    set(value) {
       console.log('Setting `o.bar` to', value);
     }
 /* with ES2015 Accessors our code can look like this

@@ -87,7 +87,7 @@ The following table shows the state of `result` after running this script:
       <td><code>"Quick Brown Fox Jumps"</code></td>
     </tr>
     <tr>
-      <td><code>[1], ...[<var>n</var>]</code></td>
+      <td><code>[1], …[<var>n</var>]</code></td>
       <td>
         <p>The parenthesized substring matches, if any.</p>
         <p>The number of possible parenthesized substrings is unlimited.</p>
@@ -222,7 +222,7 @@ property ({{jsxref("RegExp.prototype.test()", "test()")}} will also advance the
 {{jsxref("RegExp.lastIndex", "lastIndex")}} property). Note that the
 {{jsxref("RegExp.lastIndex", "lastIndex")}} property will not be reset when searching a
 different string, it will start its search at its existing {{jsxref("RegExp.lastIndex",
-  "lastIndex")}} .
+  "lastIndex")}}.
 
 For example, assume you have this script:
 

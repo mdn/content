@@ -42,13 +42,13 @@ _`DOMPoint` inherits methods from its parent, {{domxref("DOMPointReadOnly")}}._
 
 _`DOMPoint` inherits properties from its parent, {{domxref("DOMPointReadOnly")}}._
 
-- {{domxref("DOMPointReadOnly.x", "DOMPoint.x")}}
+- {{domxref("DOMPoint.x")}}
   - : The `x` coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.y", "DOMPoint.y")}}
+- {{domxref("DOMPoint.y")}}
   - : The `y` coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.z", "DOMPoint.z")}}
+- {{domxref("DOMPoint.z")}}
   - : The `z` coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.w", "DOMPoint.w")}}
+- {{domxref("DOMPoint.w")}}
   - : The perspective value of the `DOMPoint`.
 
 ## Examples

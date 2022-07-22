@@ -45,7 +45,7 @@ The following snippet is based on a simple example written by Nick Desaulniers (
 ```js
 function sourceOpen (_) {
   //console.log(this.readyState); // open
-  let mediaSource = this;
+  const mediaSource = this;
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
     sourceBuffer.addEventListener('updateend', function (_) {
@@ -58,7 +58,7 @@ function sourceOpen (_) {
   });
 };
 
-...
+// …
 ```
 
 ## Specifications

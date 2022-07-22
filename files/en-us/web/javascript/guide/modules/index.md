@@ -65,7 +65,7 @@ The modules directory's two modules are described below:
   - `reportArea()` — writes a square's area to a specific report list, given its length.
   - `reportPerimeter()` — writes a square's perimeter to a specific report list, given its length.
 
-## Aside — `.mjs` versus `.js`
+### Aside — .mjs versus .js
 
 Throughout this article, we've used `.js` extensions for our module files, but in other resources you may see the `.mjs` extension used instead. [V8's documentation recommends this](https://v8.dev/features/modules#mjs), for example. The reasons given are:
 
@@ -141,7 +141,7 @@ becomes
 
 You can see such lines in action in [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
 
-> **Note:** In some module systems, you can omit the file extension and the leading `/`, `./`, or `../` (e.g. `'modules/square'`). This doesn't work in native JavaScript modules.
+> **Note:** In some module systems, you can omit the file extension and the leading `/`, `./`, or `../` (e.g. `'modules/square'`). This doesn't work in the browser environment, as that can lead to multiple network roundtrips.
 
 Once you've imported the features into your script, you can use them just like they were defined inside the same file. The following is found in `main.js`, below the import lines:
 
@@ -186,6 +186,34 @@ You can only use `import` and `export` statements inside modules, not regular sc
 - Modules are only executed once, even if they have been referenced in multiple `<script>` tags.
 - Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.
 
+Module-defined variables are scoped to the module unless explicitly attached to the global object. On the other hand, globally-defined variables are available within the module. For example, given the following code:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <div id="main"></div>
+  <script>
+    // A var statement creates a global variable.
+    var text = "Hello";
+  </script>
+  <script type="module" src="./render.js"></script>
+</body>
+</html>
+```
+
+```js
+/* render.js */
+document.getElementById("main").innerText = text;
+```
+
+The page would still render `Hello`, because the global variables `text` and `document` are available in the module. (Also note from this example that a module doesn't necessarily need an import/export statement — the only thing needed is for the entry point to have `type="module"`.)
+
 ## Default exports versus named exports
 
 The functionality we've exported so far has been comprised of **named exports** — each item (be it a function, `const`, etc.) has been referred to by its name upon export, and that name has been used to refer to it on import as well.
@@ -204,7 +232,7 @@ We could instead prepend `export default` onto the function and define it as an 
 
 ```js
 export default function(ctx) {
-  ...
+  // …
 }
 ```
 
@@ -359,14 +387,14 @@ You can see an example of our shape drawing module rewritten with ES classes in 
 ```js
 class Square {
   constructor(ctx, listId, length, x, y, color) {
-    ...
+    // …
   }
 
   draw() {
-    ...
+    // …
   }
 
-  ...
+  // …
 }
 ```
 
@@ -480,9 +508,23 @@ squareBtn.addEventListener('click', () => {
 });
 ```
 
-Note that, because the promise fulfillment returns a module object, the class is then made a subfeature of the object, hence we now need to access the constructor with `Module.` prepended to it, e.g. `Module.Square( ... )`.
+Note that, because the promise fulfillment returns a module object, the class is then made a subfeature of the object, hence we now need to access the constructor with `Module.` prepended to it, e.g. `Module.Square( /* … */ )`.
 
-### Top level await
+Another advantage of dynamic imports is that they are always available, even in script environments. Therefore, if you have an existing `<script>` tag in your HTML that doesn't have `type="module"`, you can still reuse code distributed as modules by dynamically importing it.
+
+```html
+<script>
+  import('./modules/square.js')
+    .then((module) => {
+      // Do something with the module.
+    });
+  // Other code that operates on the global scope and is not
+  // ready to be refactored into modules yet.
+  var btn = document.querySelector('.square');
+</script>
+```
+
+## Top level await
 
 Top level await is a feature available within modules. This means the `await` keyword can be used. It allows modules to act as big [asynchronous functions](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing) meaning code can be evaluated before use in parent modules, but without blocking sibling modules from loading.
 
@@ -522,28 +564,60 @@ import { Canvas } from './modules/canvas.js';
 
 let circleBtn = document.querySelector('.circle');
 
-...
+// …
 ```
 
 We'll use `colors` instead of the previously used strings when calling our shape functions:
 
 ```js
-...
-
 let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, colors.blue);
-
-...
 
 let circle1 = new Module.Circle(myCanvas.ctx, myCanvas.listId, 75, 200, 100, colors.green);
 
-...
-
 let triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190, colors.yellow);
-
-...
 ```
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
+
+## Authoring "isomorphic" modules
+
+The introduction of modules encourages the JavaScript ecosystem to distribute and reuse code in a modular fashion. However, that doesn't necessarily mean a piece of JavaScript code can run in every environment. Suppose you discovered a module that generates SHA hashes of your user's password. Can you use it in the browser front end? Can you use it on your Node.js server? The answer is: it depends.
+
+Modules still have access to global variables, as demonstrated previously. If the module references globals like `window`, it can run in the browser, but will throw an error in your Node.js server, because `window` is not available there. Similarly, if the code requires access to `process` to be functional, it can only be used in Node.js.
+
+In order to maximize the reusability of a module, it is often advised to make the code "isomorphic" — that is, exhibits the same behavior in every runtime. This is commonly achieved in three ways:
+
+- Separate your modules into "core" and "binding". For the "core", focus on pure JavaScript logic like computing the hash, without any DOM, network, filesystem access, and expose utility functions. For the "binding" part, you can read from and write to the global context. For example, the "browser binding" may choose to read the value from an input box, while the "Node binding" may read it from `process.env`, but values read from either place will be piped to the same core function and handled in the same way. The core can be imported in every environment and used in the same way, while only the binding, which is usually lightweight, needs to be platform-specific.
+- Detect whether a particular global exists before using it. For example, if you test that `typeof window === "undefined"`, you know that you are probably in a Node.js environment, and should not read DOM.
+
+  ```js
+  // myModule.js
+  let password;
+  if (typeof process !== "undefined") {
+    // We are running in Node.js; read it from `process.env`
+    password = process.env.PASSWORD;
+  } else if (typeof window !== "undefined") {
+    // We are running in the browser; read it from the input box
+    password = document.getElementById('password').value;
+  }
+  ```
+
+  This is preferable if the two branches actually end up with the same behavior ("isomorphic"). If it's impossible to provide the same functionality, or if doing so involves loading significant amounts of code while a large part remains unused, better use different "bindings" instead.
+
+- Use a polyfill to provide a fallback for missing features. For example, if you want to use the [`fetch`](/en-US/docs/Web/API/Fetch_API) function, which is only supported in Node.js since v18, you can use a similar API, like the one provided by [`node-fetch`](https://www.npmjs.com/package/node-fetch). You can do so conditionally through dynamic imports:
+
+  ```js
+  // myModule.js
+  if (typeof fetch === "undefined") {
+    // We are running in Node.js; use node-fetch
+    globalThis.fetch = (await import("node-fetch")).default;
+  }
+  // …
+  ```
+
+  The [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) variable is a global object that is available in every environment and is useful if you want to read or create global variables within modules.
+
+These practices are not unique to modules. Still, with the trend of code reusability and modularization, you are encouraged to make your code cross-platform so that it can be enjoyed by as many people as possible. Runtimes like Node.js are also actively implementing web APIs where possible to improve interoperability with the web.
 
 ## Troubleshooting
 

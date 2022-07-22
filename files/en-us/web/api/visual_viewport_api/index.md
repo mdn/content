@@ -51,13 +51,13 @@ function viewportHandler(event) {
 
   requestAnimationFrame(() => {
     pendingUpdate = false;
-    var layoutViewport = document.getElementById('layoutViewport');
+    const layoutViewport = document.getElementById('layoutViewport');
 
     // Since the bar is position: fixed we need to offset it by the
     // visual viewport's offset from the layout viewport origin.
-    var viewport = event.target;
-    var offsetLeft = viewport.offsetLeft;
-    var offsetTop = viewport.height
+    const viewport = event.target;
+    const offsetLeft = viewport.offsetLeft;
+    const offsetTop = viewport.height
                 - layoutViewport.getBoundingClientRect().height
                 + viewport.offsetTop;
 

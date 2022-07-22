@@ -27,10 +27,10 @@ The default is `password`.
 
 ```js
 var iceServer = {
-                  ...
-                  credentialType = newCredentialType,
-                  ...
-                };
+  // ...
+  credentialType: newCredentialType,
+  // ...
+};
 
 var credentialType = iceServer.credentialType;
 

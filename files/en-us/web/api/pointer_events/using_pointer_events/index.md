@@ -50,7 +50,7 @@ When the page loads, the `startup()` function shown below should be called by ou
 
 ```js
 function startup() {
-  var el = document.getElementsByTagName("canvas")[0];
+  const el = document.getElementsByTagName("canvas")[0];
   el.addEventListener("pointerdown", handleStart, false);
   el.addEventListener("pointerup", handleEnd, false);
   el.addEventListener("pointercancel", handleCancel, false);
@@ -66,7 +66,7 @@ This sets up all the event listeners for our {{HTMLElement("canvas")}} element s
 We'll keep track of the touches in-progress.
 
 ```js
-var ongoingTouches = new Array();
+const ongoingTouches = [];
 ```
 
 When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
@@ -74,12 +74,12 @@ When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event occurs,
 ```js
 function handleStart(evt) {
   log("pointerdown.");
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
+  const el = document.getElementsByTagName("canvas")[0];
+  const ctx = el.getContext("2d");
 
   log("pointerdown: id = " + evt.pointerId);
   ongoingTouches.push(copyTouch(evt));
-  var color = colorForTouch(evt);
+  const color = colorForTouch(evt);
   ctx.beginPath();
   ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
   ctx.arc(evt.clientX, evt.clientY, 4, 0, 2 * Math.PI, false);  // a circle at the start
@@ -96,10 +96,10 @@ Each time one or more pointers moves, a {{domxref("HTMLElement/pointermove_event
 
 ```js
 function handleMove(evt) {
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
-  var color = colorForTouch(evt);
-  var idx = ongoingTouchIndexById(evt.pointerId);
+  const el = document.getElementsByTagName("canvas")[0];
+  const ctx = el.getContext("2d");
+  const color = colorForTouch(evt);
+  const idx = ongoingTouchIndexById(evt.pointerId);
 
   log("continuing touch: idx =  " + idx);
   if (idx >= 0) {
@@ -133,10 +133,10 @@ When the user lifts a finger off the surface, a {{domxref("HTMLElement/pointerup
 ```js
 function handleEnd(evt) {
   log("pointerup");
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
-  var color = colorForTouch(evt);
-  var idx = ongoingTouchIndexById(evt.pointerId);
+  const el = document.getElementsByTagName("canvas")[0];
+  const ctx = el.getContext("2d");
+  const color = colorForTouch(evt);
+  const idx = ongoingTouchIndexById(evt.pointerId);
 
   if (idx >= 0) {
     ctx.lineWidth = 4;
@@ -161,7 +161,7 @@ If the user's finger wanders into browser UI, or the touch otherwise needs to be
 ```js
 function handleCancel(evt) {
   log("pointercancel: id = " + evt.pointerId);
-  var idx = ongoingTouchIndexById(evt.pointerId);
+  const idx = ongoingTouchIndexById(evt.pointerId);
   ongoingTouches.splice(idx, 1);  // remove it; we're done
 }
 ```
@@ -178,13 +178,13 @@ In order to make each touch's drawing look different, the `colorForTouch()` func
 
 ```js
 function colorForTouch(touch) {
-  var r = touch.pointerId % 16;
-  var g = Math.floor(touch.pointerId / 3) % 16;
-  var b = Math.floor(touch.pointerId / 7) % 16;
+  let r = touch.pointerId % 16;
+  let g = Math.floor(touch.pointerId / 3) % 16;
+  let b = Math.floor(touch.pointerId / 7) % 16;
   r = r.toString(16); // make it a hex digit
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
-  var color = "#" + r + g + b;
+  const color = "#" + r + g + b;
   log("color for touch with identifier " + touch.pointerId + " = " + color);
   return color;
 }
@@ -208,8 +208,8 @@ The `ongoingTouchIndexById()` function below scans through the `ongoingTouches` 
 
 ```js
 function ongoingTouchIndexById(idToFind) {
-  for (var i = 0; i < ongoingTouches.length; i++) {
-    var id = ongoingTouches[i].identifier;
+  for (let i = 0; i < ongoingTouches.length; i++) {
+    const id = ongoingTouches[i].identifier;
 
     if (id == idToFind) {
       return i;
@@ -223,7 +223,7 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  var p = document.getElementById('log');
+  const p = document.getElementById('log');
   p.innerHTML = msg + "\n" + p.innerHTML;
 }
 ```

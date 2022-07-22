@@ -23,12 +23,12 @@ JavaScript does not have an explicit array data type. However, you can use the p
 The following statements create equivalent arrays:
 
 ```js
-let arr = new Array(element0, element1, ..., elementN)
-let arr = Array(element0, element1, ..., elementN)
-let arr = [element0, element1, ..., elementN]
+const arr1 = new Array(element0, element1, /* … ,*/ elementN)
+const arr2 = Array(element0, element1, /* … ,*/ elementN)
+const arr3 = [element0, element1, /* … ,*/ elementN]
 ```
 
-`element0, element1, ..., elementN` is a list of values for the array's elements. When these values are specified, the array is initialized with them as the array's elements. The array's `length` property is set to the number of arguments.
+`element0, element1, …, elementN` is a list of values for the array's elements. When these values are specified, the array is initialized with them as the array's elements. The array's `length` property is set to the number of arguments.
 
 The bracket syntax is called an "array literal" or "array initializer." It's shorter than other forms of array creation, and so is generally preferred. See [Array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) for details.
 
@@ -36,13 +36,13 @@ To create an array with non-zero length, but without any items, either of the fo
 
 ```js
 // This...
-let arr = new Array(arrayLength)
+const arr1 = new Array(arrayLength)
 
 // ...results in the same array as this
-let arr = Array(arrayLength)
+const arr2 = Array(arrayLength)
 
 // This has exactly the same effect
-let arr = []
+const arr3 = []
 arr.length = arrayLength
 ```
 
@@ -51,32 +51,32 @@ arr.length = arrayLength
 In addition to a newly defined variable as shown above, arrays can also be assigned as a property of a new or an existing object:
 
 ```js
-let obj = {}
-// ...
-obj.prop = [element0, element1, ..., elementN]
+const obj = {}
+// …
+obj.prop = [element0, element1, /* … ,*/ elementN]
 
 // OR
-let obj = {prop: [element0, element1, ...., elementN]}
+const obj = {prop: [element0, element1, /* … ,*/ elementN]}
 ```
 
 If you wish to initialize an array with a single element, and the element happens to be a `Number`, you must use the bracket syntax. When a single `Number` value is passed to the `Array()` constructor or function, it is interpreted as an `arrayLength`, not as a single element.
 
 ```js
-let arr = [42]       // Creates an array with only one element:
-                     // the number 42.
+const arr = [42]      // Creates an array with only one element:
+                      // the number 42.
 
-let arr = Array(42)  // Creates an array with no elements
-                     // and arr.length set to 42.
-                     //
-                     // This is equivalent to:
-let arr = []
+const arr = Array(42) // Creates an array with no elements
+                      // and arr.length set to 42.
+                      //
+                      // This is equivalent to:
+const arr = []
 arr.length = 42
 ```
 
 Calling `Array(N)` results in a `RangeError`, if `N` is a non-whole number whose fractional portion is non-zero. The following example illustrates this behavior.
 
 ```js
-let arr = Array(9.3)   // RangeError: Invalid array length
+const arr = Array(9.3)   // RangeError: Invalid array length
 ```
 
 If your code needs to create arrays with single elements of an arbitrary data type, it is safer to use array literals. Alternatively, create an empty array first before adding the single element to it.
@@ -84,7 +84,7 @@ If your code needs to create arrays with single elements of an arbitrary data ty
 In ES2015, you can use the {{jsxref("Array.of")}} static method to create arrays with single element.
 
 ```js
-let wisenArray = Array.of(9.3)   // wisenArray contains only one element 9.3
+const wisenArray = Array.of(9.3)   // wisenArray contains only one element 9.3
 ```
 
 ### Referring to array elements
@@ -92,7 +92,7 @@ let wisenArray = Array.of(9.3)   // wisenArray contains only one element 9.3
 Because elements are also properties, you can access the using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). Suppose you define the following array:
 
 ```js
-let myArray = ['Wind', 'Rain', 'Fire']
+const myArray = ['Wind', 'Rain', 'Fire']
 ```
 
 You can refer to the first element of the array as `myArray[0]`, the second element of the array as `myArray[1]`, etc… The index of the elements begins with zero.
@@ -100,7 +100,7 @@ You can refer to the first element of the array as `myArray[0]`, the second elem
 > **Note:** You can also use [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) to access other properties of the array, like with an object.
 >
 > ```js
-> let arr = ['one', 'two', 'three']
+> const arr = ['one', 'two', 'three']
 > arr[2]          // three
 > arr['length']   // 3
 > ```
@@ -110,7 +110,7 @@ You can refer to the first element of the array as `myArray[0]`, the second elem
 You can populate an array by assigning values to its elements. For example:
 
 ```js
-let emp = []
+const emp = []
 emp[0] = 'Casey Jones'
 emp[1] = 'Phil Lesh'
 emp[2] = 'August West'
@@ -119,18 +119,18 @@ emp[2] = 'August West'
 > **Note:** If you supply a non-integer value to the array operator in the code above, a property will be created in the object representing the array, instead of an array element.
 >
 > ```js
-> let arr = []
+> const arr = []
 > arr[3.4] = 'Oranges'
 > console.log(arr.length)                 // 0
-> console.log(arr.hasOwnProperty(3.4))    // true
+> console.log(Object.hasOwn(arr, 3.4))    // true
 > ```
 
 You can also populate an array when you create it:
 
 ```js
-let myArray = new Array('Hello', myVar, 3.14159)
+const myArray = new Array('Hello', myVar, 3.14159)
 // OR
-let myArray = ['Mango', 'Apple', 'Orange']
+const myArray = ['Mango', 'Apple', 'Orange']
 ```
 
 ### Understanding length
@@ -142,7 +142,7 @@ The `length` property is special. Its value is always a positive integer greater
 Remember, JavaScript Array indexes are 0-based: they start at `0`, not `1`. This means that the `length` property will be one more than the highest index stored in the array:
 
 ```js
-let cats = []
+const cats = []
 cats[30] = ['Dusty']
 console.log(cats.length) // 31
 ```
@@ -152,7 +152,7 @@ You can also assign to the `length` property.
 Writing a value that is shorter than the number of stored items truncates the array. Writing `0` empties it entirely:
 
 ```js
-let cats = ['Dusty', 'Misty', 'Twiggy']
+const cats = ['Dusty', 'Misty', 'Twiggy']
 console.log(cats.length)  // 3
 
 cats.length = 2
@@ -170,7 +170,7 @@ console.log(cats)  // logs [ <3 empty items> ]
 A common operation is to iterate over the values of an array, processing each one in some way. The simplest way to do this is as follows:
 
 ```js
-let colors = ['red', 'green', 'blue']
+const colors = ['red', 'green', 'blue']
 for (let i = 0; i < colors.length; i++) {
   console.log(colors[i])
 }
@@ -179,7 +179,7 @@ for (let i = 0; i < colors.length; i++) {
 If you know that none of the elements in your array evaluate to `false` in a boolean context—if your array consists only of [DOM](/en-US/docs/Web/API/Document_Object_Model) nodes, for example—you can use a more efficient idiom:
 
 ```js
-let divs = document.getElementsByTagName('div')
+const divs = document.getElementsByTagName('div')
 for (let i = 0, div; div = divs[i]; i++) {
   /* Process div in some way */
 }
@@ -190,7 +190,7 @@ This avoids the overhead of checking the length of the array, and ensures that t
 The {{jsxref("Array.forEach", "forEach()")}} method provides another way of iterating over an array:
 
 ```js
-let colors = ['red', 'green', 'blue']
+const colors = ['red', 'green', 'blue']
 colors.forEach(function(color) {
   console.log(color)
 })
@@ -202,7 +202,7 @@ colors.forEach(function(color) {
 Alternatively, you can shorten the code for the forEach parameter with ES2015 Arrow Functions:
 
 ```js
-let colors = ['red', 'green', 'blue']
+const colors = ['red', 'green', 'blue']
 colors.forEach(color => console.log(color))
 // red
 // green
@@ -214,7 +214,7 @@ The function passed to `forEach` is executed once for every item in the array, w
 Note that the elements of an array that are omitted when the array is defined are not listed when iterating by `forEach`, but _are_ listed when `undefined` has been manually assigned to the element:
 
 ```js
-let array = ['first', 'second', , 'fourth']
+const array = ['first', 'second', , 'fourth']
 
 array.forEach(function(element) {
   console.log(element)
@@ -247,7 +247,7 @@ The {{jsxref("Array")}} object has the following methods:
 {{jsxref("Array.concat", "concat()")}} joins two or more arrays and returns a new array.
 
 ```js
-let myArray = new Array('1', '2', '3')
+let myArray = ['1', '2', '3']
 myArray = myArray.concat('a', 'b', 'c')
 // myArray is now ["1", "2", "3", "a", "b", "c"]
 ```
@@ -255,37 +255,37 @@ myArray = myArray.concat('a', 'b', 'c')
 {{jsxref("Array.join", "join(delimiter = ',')")}} joins all elements of an array into a string.
 
 ```js
-let myArray = new Array('Wind', 'Rain', 'Fire')
-let list = myArray.join(' - ') // list is "Wind - Rain - Fire"
+const myArray = ['Wind', 'Rain', 'Fire']
+const list = myArray.join(' - ') // list is "Wind - Rain - Fire"
 ```
 
 {{jsxref("Array.push", "push()")}} adds one or more elements to the end of an array and returns the resulting `length` of the array.
 
 ```js
-let myArray = new Array('1', '2')
+const myArray = ['1', '2']
 myArray.push('3')  // myArray is now ["1", "2", "3"]
 ```
 
 {{jsxref("Array.pop", "pop()")}} removes the last element from an array and returns that element.
 
 ```js
-let myArray = new Array('1', '2', '3')
-let last = myArray.pop()
+const myArray = ['1', '2', '3']
+const last = myArray.pop()
 // myArray is now ["1", "2"], last = "3"
 ```
 
 {{jsxref("Array.shift", "shift()")}} removes the first element from an array and returns that element.
 
 ```js
-let myArray = new Array('1', '2', '3')
-let first = myArray.shift()
+const myArray = ['1', '2', '3']
+const first = myArray.shift()
 // myArray is now ["2", "3"], first is "1"
 ```
 
 {{jsxref("Array.unshift", "unshift()")}} adds one or more elements to the front of an array and returns the new length of the array.
 
 ```js
-let myArray = new Array('1', '2', '3')
+const myArray = ['1', '2', '3']
 myArray.unshift('4', '5')
 // myArray becomes ["4", "5", "1", "2", "3"]
 ```
@@ -293,7 +293,7 @@ myArray.unshift('4', '5')
 {{jsxref("Array.slice", "slice(start_index, up_to_index)")}} extracts a section of an array and returns a new array.
 
 ```js
-let myArray = new Array('a', 'b', 'c', 'd', 'e')
+let myArray = ['a', 'b', 'c', 'd', 'e']
 myArray = myArray.slice(1, 4)  // starts at index 1 and extracts all elements
                                // until index 3, returning [ "b", "c", "d"]
 ```
@@ -301,7 +301,7 @@ myArray = myArray.slice(1, 4)  // starts at index 1 and extracts all elements
 {{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} removes elements from an array and (optionally) replaces them. It returns the items which were removed from the array.
 
 ```js
-let myArray = new Array('1', '2', '3', '4', '5')
+const myArray = ['1', '2', '3', '4', '5']
 myArray.splice(1, 3, 'a', 'b', 'c', 'd')
 // myArray is now ["1", "a", "b", "c", "d", "5"]
 // This code started at index one (or where the "2" was),
@@ -312,7 +312,7 @@ myArray.splice(1, 3, 'a', 'b', 'c', 'd')
 {{jsxref("Array.reverse", "reverse()")}} transposes the elements of an array, in place: the first array element becomes the last and the last becomes the first. It returns a reference to the array.
 
 ```js
-let myArray = new Array('1', '2', '3')
+const myArray = ['1', '2', '3']
 myArray.reverse()
 // transposes the array so that myArray = ["3", "2", "1"]
 ```
@@ -320,7 +320,7 @@ myArray.reverse()
 {{jsxref("Array.sort", "sort()")}} sorts the elements of an array in place, and returns a reference to the array.
 
 ```js
-let myArray = new Array('Wind', 'Rain', 'Fire')
+const myArray = ['Wind', 'Rain', 'Fire']
 myArray.sort()
 // sorts the array so that myArray = ["Fire", "Rain", "Wind"]
 ```
@@ -336,10 +336,10 @@ The function below compares two values and returns one of three values:
 For instance, the following will sort by the last letter of a string:
 
 ```js
-let sortFn = function(a, b) {
+const sortFn = function (a, b) {
   if (a[a.length - 1] < b[b.length - 1]) return -1;
   if (a[a.length - 1] > b[b.length - 1]) return 1;
-  if (a[a.length - 1] == b[b.length - 1]) return 0;
+  if (a[a.length - 1] === b[b.length - 1]) return 0;
 }
 myArray.sort(sortFn)
 // sorts the array so that myArray = ["Wind","Fire","Rain"]
@@ -352,7 +352,7 @@ myArray.sort(sortFn)
 {{jsxref("Array.indexOf", "indexOf(searchElement[, fromIndex])")}} searches the array for `searchElement` and returns the index of the first match.
 
 ```js
-let a = ['a', 'b', 'a', 'b', 'a']
+const a = ['a', 'b', 'a', 'b', 'a']
 console.log(a.indexOf('b'))     // logs 1
 
 // Now try again, starting from after the last match
@@ -363,7 +363,7 @@ console.log(a.indexOf('z'))     // logs -1, because 'z' was not found
 {{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement[, fromIndex])")}} works like `indexOf`, but starts at the end and searches backwards.
 
 ```js
-let a = ['a', 'b', 'c', 'd', 'a', 'b']
+const a = ['a', 'b', 'c', 'd', 'a', 'b']
 console.log(a.lastIndexOf('b'))     // logs 5
 
 // Now try again, starting from before the last match
@@ -374,7 +374,7 @@ console.log(a.lastIndexOf('z'))     // logs -1
 {{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} executes `callback` on every array item and returns `undefined`.
 
 ```js
-let a = ['a', 'b', 'c']
+const a = ['a', 'b', 'c']
 a.forEach(function(element) { console.log(element) })
 // logs each item in turn
 ```
@@ -382,16 +382,16 @@ a.forEach(function(element) { console.log(element) })
 {{jsxref("Array.map", "map(callback[, thisObject])")}} returns a new array of the return value from executing `callback` on every array item.
 
 ```js
-let a1 = ['a', 'b', 'c']
-let a2 = a1.map(function(item) { return item.toUpperCase() })
+const a1 = ['a', 'b', 'c']
+const a2 = a1.map(function(item) { return item.toUpperCase() })
 console.log(a2) // logs ['A', 'B', 'C']
 ```
 
 {{jsxref("Array.filter", "filter(callback[, thisObject])")}} returns a new array containing the items for which `callback` returned `true`.
 
 ```js
-let a1 = ['a', 10, 'b', 20, 'c', 30]
-let a2 = a1.filter(function(item) { return typeof item === 'number'; })
+const a1 = ['a', 10, 'b', 20, 'c', 30]
+const a2 = a1.filter(function(item) { return typeof item === 'number'; })
 console.log(a2)  // logs [10, 20, 30]
 ```
 
@@ -401,9 +401,9 @@ console.log(a2)  // logs [10, 20, 30]
 function isNumber(value) {
   return typeof value === 'number'
 }
-let a1 = [1, 2, 3]
+const a1 = [1, 2, 3]
 console.log(a1.every(isNumber))  // logs true
-let a2 = [1, '2', 3]
+const a2 = [1, '2', 3]
 console.log(a2.every(isNumber))  // logs false
 ```
 
@@ -413,11 +413,11 @@ console.log(a2.every(isNumber))  // logs false
 function isNumber(value) {
   return typeof value === 'number'
 }
-let a1 = [1, 2, 3]
+const a1 = [1, 2, 3]
 console.log(a1.some(isNumber))  // logs true
-let a2 = [1, '2', 3]
+const a2 = [1, '2', 3]
 console.log(a2.some(isNumber))  // logs true
-let a3 = ['1', '2', '3']
+const a3 = ['1', '2', '3']
 console.log(a3.some(isNumber))  // logs false
 ```
 
@@ -430,8 +430,8 @@ If `initialValue` is _not_ specified, then `callback`'s first two parameter valu
 If `callback` needs access to the index of the item being processed, or access to the entire array, they are available as optional parameters.
 
 ```js
-let a = [10, 20, 30]
-let total = a.reduce(function(accumulator, currentValue) { return accumulator + currentValue }, 0)
+const a = [10, 20, 30]
+const total = a.reduce(function(accumulator, currentValue) { return accumulator + currentValue }, 0)
 console.log(total) // Prints 60
 ```
 
@@ -593,7 +593,7 @@ Typed array views have self descriptive names and provide views for all the usua
 | {{jsxref("Int32Array")}}         | `-2147483648` to `2147483647` | 4             | 32-bit two's complement signed integer                                       | `long`                | `int32_t`                       |
 | {{jsxref("Uint32Array")}}         | `0` to `4294967295`           | 4             | 32-bit unsigned integer                                                      | `unsigned long`       | `uint32_t`                      |
 | {{jsxref("Float32Array")}}     | `1.2E-38` to `3.4E38`         | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.1234567`)   | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123...15`) | `unrestricted double` | `double`                        |
+| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123…15`) | `unrestricted double` | `double`                        |
 | {{jsxref("BigInt64Array")}}     | `-2^63` to `2^63 - 1`         | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
 | {{jsxref("BigUint64Array")}}     | `0` to `2^64 - 1`             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
 

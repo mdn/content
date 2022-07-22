@@ -80,7 +80,7 @@ console.log(o.anotherValue); // 5
 // Using Object.defineProperty
 const o = {};
 Object.defineProperty(o, 'value', {
-  set: function(val) {
+  set(val) {
     this.anotherValue = val;
   }
 });

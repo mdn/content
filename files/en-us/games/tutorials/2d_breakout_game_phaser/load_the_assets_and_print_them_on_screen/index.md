@@ -22,7 +22,7 @@ Our game will feature a ball rolling around the screen, bouncing off a paddle, a
 
 ## Having a ball
 
-Let's start by creating a JavaScript variable to represent our ball. Add the following line between the game initialization code (our `var game...` block) and the `preload()` function:
+Let's start by creating a JavaScript variable to represent our ball. Add the following line between the game initialization code (our `var game` block) and the `preload()` function:
 
 ```js
 var ball;
@@ -36,7 +36,7 @@ Loading images and printing them on our canvas is a lot easier using Phaser than
 
 ```js
 function preload() {
-    // ...
+    // …
     game.load.image('ball', 'img/ball.png');
 }
 ```

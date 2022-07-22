@@ -53,7 +53,7 @@ method references.
     Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state",
     "state")}} becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is
     sent to the `MediaRecorder` with the remaining received data, and finally a
-    {{event("stop")}} event is sent.
+    {{domxref("MediaRecorder/stop_event", "stop")}} event is sent.
 
 ## Examples
 

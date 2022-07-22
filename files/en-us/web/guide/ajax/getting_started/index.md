@@ -28,7 +28,7 @@ In order to make an [HTTP](/en-US/docs/Web/HTTP) request to the server with Java
 
 ```js
 // Old compatibility code, no longer needed.
-if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
+if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+, etc.
     httpRequest = new XMLHttpRequest();
 } else if (window.ActiveXObject) { // IE 6 and older
     httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
@@ -248,7 +248,7 @@ We need to modify `makeRequest()` to accept the user data and pass it along to t
 ```js
 function makeRequest(url, userName) {
 
-  ...
+  // …
 
   httpRequest.onreadystatechange = alertContents;
   httpRequest.open('POST', url);

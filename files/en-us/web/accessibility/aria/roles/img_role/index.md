@@ -43,7 +43,7 @@ For example:
 
 ```html
 <div role="img" aria-labelledby="image-1">
-  ...
+  …
   <p id="image-1">Text that describes the group of images.</p>
 </div>
 ```

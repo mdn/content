@@ -8,7 +8,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers -- both of web content and of Firefox add-ons.
+Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers — both of web content and of Firefox add-ons.
 
 ## Changes for web developers
 
@@ -22,7 +22,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 #### Canvas
 
-- As part of the [Azure project](https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=651858) and will significantly improve the performance of the 2D canvas.
+- As part of the [Azure project](https://web.archive.org/web/20160304084025/https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=651858) and will significantly improve the performance of the 2D canvas.
 - Specifying invalid values when calling `setTransform()`, `bezierCurveTo()`, or `arcTo()` no longer throws an exception; these calls are now correctly silently ignored.
 - The [`isPointInPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/ispointinpath) method now correctly considers the transformation matrix when comparing the specified point to the current path.
 - Calling `strokeRect()` with a zero width and height now correctly does nothing.

@@ -19,7 +19,7 @@ to `true` if box mode is persistent for your site's storage.
 ## Syntax
 
 ```js
-navigator.storage.persisted().then(function(persistent) { /* ... */ })
+navigator.storage.persisted().then(function(persistent) { /* … */ })
 ```
 
 ### Parameters

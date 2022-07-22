@@ -92,7 +92,7 @@ This actually provides pretty easy simple recording facilities too:
 4. Press the _Start Recording_ button.
 5. Perform whatever actions you want to record.
 6. Press the _Stop_ button.
-7. Choose _File_ > _Export As..._ > _1080p_ from the main menu to save as hi definition.
+7. Choose _File_ > _Export As…_ > _1080p_ from the main menu to save as hi definition.
 
 ### Other resources
 

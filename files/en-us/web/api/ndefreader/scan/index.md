@@ -16,7 +16,7 @@ The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a readi
 ## Syntax
 
 ```js
-var readerPromise = NDEFReader.scan(options);
+scan(options)
 ```
 
 ### Parameters
@@ -25,8 +25,8 @@ var readerPromise = NDEFReader.scan(options);
 
   - : An object with the following properties:
 
-    - `signal` -- An {{DOMxRef("AbortSignal")}} that allows cancelling
-      this `scan()` operation.
+    - `signal`
+      - : An {{DOMxRef("AbortSignal")}} that allows cancelling this `scan()` operation.
 
 ### Return value
 

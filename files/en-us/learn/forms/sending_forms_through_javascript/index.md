@@ -212,10 +212,10 @@ window.addEventListener( "load", function () {
     XHR.send( FD );
   }
 
-  // Access the form element...
+  // Get the form element
   const form = document.getElementById( "myForm" );
 
-  // ...and take over its submit event.
+  // Add 'submit' event handler
   form.addEventListener( "submit", function ( event ) {
     event.preventDefault();
 
@@ -362,14 +362,14 @@ window.addEventListener( 'load', function () {
     // Add the required HTTP header to handle a multipart form data POST request
     XHR.setRequestHeader( 'Content-Type','multipart/form-data; boundary=' + boundary );
 
-    // And finally, send our data.
+    // Send the data
     XHR.send( data );
   }
 
-  // Access our form...
+  // Get the form element
   const form = document.getElementById( "theForm" );
 
-  // ...to take over the submit event
+  // Add 'submit' event handler
   form.addEventListener( 'submit', function ( event ) {
     event.preventDefault();
     sendData();

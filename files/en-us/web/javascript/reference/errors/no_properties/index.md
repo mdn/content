@@ -15,10 +15,11 @@ don't have any.
 
 ## Message
 
-```js
-TypeError: Unable to get property {x} of undefined or null reference (Edge)
+```
+TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
 TypeError: null has no properties (Firefox)
 TypeError: undefined has no properties (Firefox)
+TypeError: undefined is not an object (evaluating 'undefined.x') (Safari)
 ```
 
 ## Error type
@@ -27,7 +28,7 @@ TypeError: undefined has no properties (Firefox)
 
 ## What went wrong?
 
-Both, {{jsxref("null")}} and {{jsxref("undefined")}}, have no properties you could
+Both {{jsxref("null")}} and {{jsxref("undefined")}}, have no properties you could
 access.
 
 ## Examples

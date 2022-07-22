@@ -37,6 +37,8 @@ Basic keywords and general expressions in JavaScript.
   - : The `async function` defines an async function expression.
 - {{JSxRef("Operators/await", "await")}}
   - : Pause and resume an async function and wait for the promise's resolution/rejection.
+- {{JSxRef("Operators/async_function*", "async function*")}}
+  - : The `async function*` keywords define an async generator function expression.
 - {{JSxRef("Global_Objects/Array", "[]")}}
   - : Array initializer/literal syntax.
 - {{JSxRef("Operators/Object_initializer", "{}")}}
@@ -57,7 +59,7 @@ Left values are the destination of an assignment.
   - : The `new` operator creates an instance of a constructor.
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
   - : In constructors, `new.target` refers to the constructor that was invoked by {{JSxRef("Operators/new", "new")}}.
-- {{JSxRef("Statements/import%2Emeta", "import.meta")}}
+- {{JSxRef("Operators/import%2Emeta", "import.meta")}}
   - : An object exposing context-specific metadata to a JavaScript module.
 - {{JSxRef("Operators/super", "super")}}
   - : The `super` keyword calls the parent constructor.

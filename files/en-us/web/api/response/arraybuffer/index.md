@@ -59,26 +59,31 @@ when it is already playing (this would cause an error.)
 
 ```js
 function getData() {
-  source = audioCtx.createBufferSource();
+  const audioCtx = new AudioContext();
 
-  var myRequest = new Request('viper.ogg');
-
-  fetch(myRequest).then(function(response) {
-    return response.arrayBuffer();
-  }).then(function(buffer) {
-    audioCtx.decodeAudioData(buffer, function(decodedData) {
+  return fetch('viper.ogg')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error, status = ${response.status}`);
+      }
+      return response.arrayBuffer();
+    })
+    .then((buffer) => audioCtx.decodeAudioData(buffer))
+    .then((decodedData) => {
+      const source = new AudioBufferSourceNode();
       source.buffer = decodedData;
       source.connect(audioCtx.destination);
+      return source;
     });
-  });
 };
 
 // wire up buttons to stop and play audio
 
-play.onclick = function() {
-  getData();
-  source.start(0);
-  play.setAttribute('disabled', 'disabled');
+play.onclick = () => {
+  getData().then((source) => {
+    source.start(0);
+    play.setAttribute('disabled', 'disabled');
+  });
 }
 ```
 

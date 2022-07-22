@@ -14,22 +14,14 @@ The MathML `<mpadded>` element is used to add extra padding and to set the gener
 
 ## Attributes
 
-- class, id, style
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - depth
   - : Sets or increments the depth. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
 - height
   - : Sets or increments the height. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
-- href
-  - : Used to set a hyperlink to a specified URI.
 - lspace
   - : Sets or increments the horizontal position. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
 - voffset
   - : Sets or increments the vertical position. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
 - width

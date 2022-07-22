@@ -21,7 +21,7 @@ The value can be of any type. You should not make assumptions that the error you
 
 ## Examples
 
-### Rethrowing an error with a `cause`
+### Rethrowing an error with a cause
 
 It is sometimes useful to catch an error and re-throw it with a new message.
 In this case you should pass the original error into the constructor for the new `Error`, as shown.
@@ -38,7 +38,7 @@ For a more detailed example see [Error > Differentiate between similar errors](/
 
 ### Providing structured data as the error cause
 
-Error messages written for human consumption may be inappropriate for machine parsing — since they’re subject to rewording or punctuation changes that may break any existing parsing written to consume them. So when throwing an error from a function, as an alternative to a human-readable error message, you can instead provide the cause as structured data, for machine parsing.
+Error messages written for human consumption may be inappropriate for machine parsing — since they're subject to rewording or punctuation changes that may break any existing parsing written to consume them. So when throwing an error from a function, as an alternative to a human-readable error message, you can instead provide the cause as structured data, for machine parsing.
 
 ```js
 function makeRSA(p, q) {
@@ -52,7 +52,7 @@ function makeRSA(p, q) {
       cause: { code: 'NonCoprime', values: [p, q] },
     })
   }
-  // rsa algorithm...
+  // rsa algorithm…
 }
 ```
 

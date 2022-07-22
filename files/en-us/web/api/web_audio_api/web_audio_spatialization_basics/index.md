@@ -29,7 +29,7 @@ It's worth noting that you don't _have_ to move sound within a full 3D space eit
 ## 3D boombox demo
 
 To demonstrate 3D spatialization we've created a modified version of the boombox demo we created in our basic [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) guide.
-See the [3D spatialization demo live](https://mdn.github.io/webaudio-examples/spacialization/) (and see the [source code](https://github.com/mdn/webaudio-examples/tree/master/spacialization) also).
+See the [3D spatialization demo live](https://mdn.github.io/webaudio-examples/spatialization/) (and see the [source code](https://github.com/mdn/webaudio-examples/tree/master/spatialization) also).
 
 ![A simple UI with a rotated boombox and controls to move it left and right and in and out, and rotate it.](web-audio-spatialization.png)
 

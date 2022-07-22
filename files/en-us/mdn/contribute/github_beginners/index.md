@@ -232,7 +232,7 @@ That's it! You have now created a new branch to do your work in. This branch is 
 Tips:
 
 - Make sure that you always update your main branch to be in sync with the mozilla main branch, as discussed in the previous section, before creating a new branch.
-- Make sure that you always create your new branch based on main, and not some other branch.To do this, makes sure that the branch button shows "main" before starting the process. If you don't, your new branch will likely be really out of date, which will create content problems.
+- Make sure that you always create your new branch based on main, and not some other branch. To do this, makes sure that the branch button shows "main" before starting the process. If you don't, your new branch will likely be really out of date, which will create content problems.
 
 ### Get your branch locally and switch to it
 
@@ -416,7 +416,7 @@ At this point, there is not really any going back, or rewinding. Instead, you ne
 
 If you look at your remote fork's github.com page again, you'll see the commit that you wanted to reverse, plus the commit that reverses it.
 
-> **Note:** Another way to handle getting rid of files that have ended up in pull requests that you don't want to be there is to use the GitHub UI. Go to your pull request's page on github.com, go to the "Files changed" tab, and find the file you want to remove from the pull request. At the top right of the file's box in the page there will be a "three dot" (`...`) menu. Press this button and choose "Delete file". In the confirmation page, enter a title for the new commit, make sure the "Commit directly..." checkbox is selected, and press the "Commit changes" button.
+> **Note:** Another way to handle getting rid of files that have ended up in pull requests that you don't want to be there is to use the GitHub UI. Go to your pull request's page on github.com, go to the "Files changed" tab, and find the file you want to remove from the pull request. At the top right of the file's box in the page there will be a "three dot" (`...`) menu. Press this button and choose "Delete file". In the confirmation page, enter a title for the new commit, make sure the "Commit directly…" checkbox is selected, and press the "Commit changes" button.
 >
 > It is usually a good idea to get the rest of the pull request looking exactly how you want it before you make changes via the GitHub UI. If you do something like this and then end up having to make more changes, you'll need to remember to pull the changes you made to your remote branch down to your local branch (e.g. with `git pull`) before you can push more commits.
 

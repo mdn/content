@@ -38,7 +38,7 @@ This fragment produces the following DOM structure:
 
 ![](dom-screenshot.png)
 
-_Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which can be attached to any elements you want, in the same way as the normal DOM.
+_Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which you can attach any element, in the same way as the normal DOM.
 
 ![SVG version of the diagram showing the interaction of document, shadow root and shadow host.](shadowdom.svg)
 

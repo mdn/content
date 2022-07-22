@@ -68,7 +68,7 @@ navigator.serviceWorker.register('serviceworker.js');
 // Use serviceWorker.ready to ensure that you can subscribe for push
 navigator.serviceWorker.ready.then(
   function(serviceWorkerRegistration) {
-    var options = {
+    const options = {
       userVisibleOnly: true,
       applicationServerKey: applicationServerKey
     };

@@ -32,6 +32,8 @@ Int32Array.BYTES_PER_ELEMENT;        // 4
 Uint32Array.BYTES_PER_ELEMENT;       // 4
 Float32Array.BYTES_PER_ELEMENT;      // 4
 Float64Array.BYTES_PER_ELEMENT;      // 8
+BigInt64Array.BYTES_PER_ELEMENT;     // 8
+BigUint64Array.BYTES_PER_ELEMENT;    // 8
 ```
 
 ## Specifications

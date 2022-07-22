@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Number.NaN
 
 The **`Number.NaN`** property represents Not-A-Number. Equivalent of {{jsxref("NaN")}}.
 
-{{EmbedInteractiveExample("pages/js/number-nan.html")}}
+{{EmbedInteractiveExample("pages/js/number-nan.html", "taller")}}
 
 You do not have to create a {{jsxref("Number")}} object to access this static property (use `Number.NaN`).
 

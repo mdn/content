@@ -38,9 +38,7 @@ A new _array iterator_ object.
 ```js
 const array = new Uint8Array([10, 20, 30, 40, 50]);
 const arrayEntries = arr.entries();
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-for (let element of arrayEntries) {
+for (const element of arrayEntries) {
   console.log(element);
 }
 ```

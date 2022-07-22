@@ -87,7 +87,7 @@ That wraps up the basics of individual HTML elements, but they aren't handy on t
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>My test page</title>
@@ -174,7 +174,7 @@ Each item inside the lists is put inside an {{htmlelement("li")}} (list item) el
 For example, if we wanted to turn the part of the following paragraph fragment into a list
 
 ```html
-<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together ... </p>
+<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
 ```
 
 We could modify the markup to this
@@ -188,7 +188,7 @@ We could modify the markup to this
   <li>builders</li>
 </ul>
 
-<p>working together ... </p>
+<p>working together… </p>
 ```
 
 Try adding an ordered or unordered list to your example page.

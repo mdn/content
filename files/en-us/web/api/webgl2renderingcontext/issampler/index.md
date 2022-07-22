@@ -39,7 +39,7 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 ```js
 var sampler = gl.createSampler();
 
-// ...
+// …
 
 gl.isSampler(sampler);
 ```

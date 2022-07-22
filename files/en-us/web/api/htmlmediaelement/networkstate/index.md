@@ -39,12 +39,12 @@ still loading data.
 ```
 
 ```js
-var obj = document.getElementById('example');
+const obj = document.getElementById('example');
 
 obj.addEventListener('playing', function() {
 
   if (obj.networkState === 2) {
-    // Still loading...
+    // Still loading…
   }
 
 });

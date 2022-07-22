@@ -67,7 +67,7 @@ After this, the registration steps are:
     2. Ensuring that the origin was the origin expected
     3. Validating that the signature over the clientDataHash and the attestation using the certificate chain for that specific model of the authenticator
 
-    A complete list of validation steps [can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#registering-a-new-credential). Assuming that the checks pan out, the server will store the new public key associated with the user's account for future use -- that is, whenever the user desires to use the public key for authentication.
+    A complete list of validation steps [can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#registering-a-new-credential). Assuming that the checks pan out, the server will store the new public key associated with the user's account for future use — that is, whenever the user desires to use the public key for authentication.
 
 ### Authentication
 
@@ -132,7 +132,7 @@ After this, the authentication steps are:
 
 ```js
 // sample arguments for registration
-var createCredentialDefaultArgs = {
+const createCredentialDefaultArgs = {
     publicKey: {
         // Relying Party (a.k.a. - Service):
         rp: {
@@ -163,7 +163,7 @@ var createCredentialDefaultArgs = {
 };
 
 // sample arguments for login
-var getCredentialDefaultArgs = {
+const getCredentialDefaultArgs = {
     publicKey: {
         timeout: 60000,
         // allowCredentials: [newCredential] // see below
@@ -180,8 +180,8 @@ navigator.credentials.create(createCredentialDefaultArgs)
         console.log("NEW CREDENTIAL", cred);
 
         // normally the credential IDs available for an account would come from a server
-        // but we can just copy them from above...
-        var idList = [{
+        // but we can just copy them from above…
+        const idList = [{
             id: cred.rawId,
             transports: ["usb", "nfc", "ble"],
             type: "public-key"
