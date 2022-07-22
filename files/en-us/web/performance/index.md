@@ -183,11 +183,6 @@ Headers
 Tools
 
 - [Performance in Firefox Developer Tools](https://profiler.firefox.com/docs/#/)
-- Call tree
-- Flame graph
-- Stack chart
-- Marker chart
-- Network chart
 
 Additional Metrics
 
