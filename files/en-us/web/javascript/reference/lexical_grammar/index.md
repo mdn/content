@@ -112,13 +112,15 @@ In this case, the `console.log()` call is never issued, since it's inside a comm
 
 There's a special third comment syntax, the **hashbang comment**. A hashbang comment behaves exactly like a single line-only (`//`) comment, except that it begins with `#!` and **is only valid at the absolute start of a script or module**. Note also that no whitespace of any kind is permitted before the `#!`. The comment consists of all the characters after `#!` up to the end of the first line; only one such comment is permitted.
 
-Hashbang comments in JavaScript resemble [shebangs in Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) used to run files with proper interpreter. Before the hashbang comment became standardized, it had already been de-facto implemented in non-browser hosts like Node.js, where it was stripped from the source text before being passed to the engine. The hashbang comment specifies the path to a specific JavaScript interpreter that you want to use to execute the script. An example is as follows:
+Hashbang comments in JavaScript resemble [shebangs in Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) which provide the path to a specific JavaScript interpreter that you want to use to execute the script. Before the hashbang comment became standardized, it had already been de-facto implemented in non-browser hosts like Node.js, where it was stripped from the source text before being passed to the engine. An example is as follows:
 
 ```js
 #!/usr/bin/env node
 
 console.log("Hello world");
 ```
+
+The JavaScript interpreter will treat it as a normal comment — it only has semantic meaning to the shell if the script is directly run in a shell.
 
 > **Warning:** If you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a [BOM](https://en.wikipedia.org/wiki/Byte_order_mark). Although a BOM will not cause any problems for code running in a browser, it is not advised to use a BOM with a hashbang in a script — because the BOM will prevent the script from working when you try to run it in a Unix/Linux shell environment. So if you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a BOM.
 
@@ -163,11 +165,12 @@ Identifiers are always compared by _string value_, so escape sequences are inter
 
 ```js example-bad
 const els\u{65} = 1;
+// `els\u{65}` encodes the same identifier as `else`
 ```
 
 ### Reserved words
 
-These keywords cannot be used as identifiers for variables functions, classes, etc. anywhere in JavaScript source.
+These keywords cannot be used as identifiers for variables, functions, classes, etc. anywhere in JavaScript source.
 
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/switch", "case")}}
