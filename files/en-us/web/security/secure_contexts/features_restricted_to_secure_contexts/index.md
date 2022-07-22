@@ -36,6 +36,8 @@ This section lists all the APIs available only in secure contexts, along with br
 | [Web MIDI](https://webaudio.github.io/web-midi-api/) (see {{domxref("MIDIAccess")}}, for example)               | 43            | Not supported                                                                                                    | Not supported                                                                           | Not supported                                                    |
 | [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)                                                                   | 60            | 79                                                                                                               | Not supported                                                                           | 75                                                               |
 | [EyeDropper API](/en-US/docs/Web/API/EyeDropper)                                                                   | 96            | Not supported                                                                                                               | Not supported                                                                           | Not supported                                                               |
+| [Web Share API](/en-US/docs/Web/API/Web_Share_API) | 93            | 93                                                                                                                | 12.3  | In development (from 71 behind preference `dom.webshare.enable`).
+
 
 ## Secure context restrictions that vary by browser
 
