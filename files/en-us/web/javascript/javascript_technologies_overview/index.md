@@ -29,7 +29,7 @@ Among other things, ECMAScript defines:
 - Error handling mechanisms ({{jsxref("Statements/throw", "throw")}}, {{jsxref("Statements/try...catch", "try...catch")}}, ability to create user-defined {{jsxref("Error")}} types)
 - Types (boolean, number, string, function, object, ...)
 - A prototype-based inheritance mechanism
-- Built-in objects and functions ({{jsxref("JSON")}}, {{jsxref("Math")}}, [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) methods, {{jsxref("parseInt")}}, {{jsxref("decodeURI")}}, etc.)
+- Built-in objects and functions, including {{jsxref("JSON")}}, {{jsxref("Math")}}, [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) methods, {{jsxref("parseInt")}}, {{jsxref("decodeURI")}}, etc.
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - A [module system](/en-US/docs/Web/JavaScript/Guide/Modules)
 - Basic memory model
