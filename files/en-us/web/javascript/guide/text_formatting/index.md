@@ -264,7 +264,7 @@ The {{jsxref("Intl.DateTimeFormat")}} object is useful for formatting date and t
 
 ```js
 // July 17, 2014 00:00:00 UTC:
-const july172014 = new Date("2014-07-17"));
+const july172014 = new Date("2014-07-17");
 
 const options = { year: '2-digit', month: '2-digit', day: '2-digit',
                 hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
