@@ -9,12 +9,13 @@ tags:
 browser-compat: mathml.elements.maction
 ---
 {{MathMLRef}}
+{{deprecated_header}}
 
-The MathML **`<maction>`** element provides a possibility to bind actions to (sub-) expressions. The action itself is specified by the `actiontype` attribute, which accepts several values. To specify which child elements are addressed by the action, you can make use of the `selection` attribute.
+The deprecated MathML **`<maction>`** element used to provide a possibility to bind an actions to mathematical expressions. Nowadays, it is recommended to rely on [JavaScript](/en-US/docs/Web/JavaScript) and other Web technologies to implement this use case. Some browsers will just render the first child of an `<maction>` element and ignore its `actiontype` and `selection` attributes.
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
 - `actiontype`
 
@@ -27,7 +28,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
       The syntax is: `<maction actiontype="tooltip"> expression message </maction>.`
 
 - `selection`
-  - : The child element which is addressed by the action. The default value is `1`, which is the first child element.
+  - : The child element currently visible, only taken into account for `actiontype="toggle"` or non-standard `actiontype` values. The default value is `1`, which is the first child element.
 
 ## Examples
 
