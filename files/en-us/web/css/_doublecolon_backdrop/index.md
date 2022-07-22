@@ -22,7 +22,7 @@ The **`::backdrop`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web
 When multiple elements have been placed into fullscreen mode, the backdrop is drawn immediately beneath the frontmost such element, and on top of the older fullscreen elements.
 
 ```css
-/* Backdrop is only displayed when dialog is opened with dialog.showModal() */
+/* Backdrop is only displayed when dialog is opened with dialog.showModal() or dialog.show() */
 dialog::backdrop {
   background: rgba(255,0,0,.25);
 }
