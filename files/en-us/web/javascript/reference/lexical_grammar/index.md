@@ -129,7 +129,7 @@ You must only use the `#!` comment style to specify a JavaScript interpreter. In
 An _identifier_ is used to link a value with a name. Identifiers can be used in various places:
 
 ```js
-const decl = 1; // Variable declaration
+const decl = 1; // Variable declaration (may also be `let` or `var`)
 function fn() {} // Function declaration
 const obj = { key: 'value' }; // Object keys
 class C { // Class declaration
@@ -147,7 +147,7 @@ const 你好 = "Hello";
 console.log(\u4f60\u597d); // Hello
 ```
 
-Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifiers names that are not [reserved words](#reserved_keywords).
+Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifiers names that are not [reserved words](#reserved_words).
 
 ```js
 function import() {} // Illegal: import is a reserved word.
@@ -155,9 +155,9 @@ function import() {} // Illegal: import is a reserved word.
 
 ## Keywords
 
-_Keywords_ are identifiers that have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous.
+_Keywords_ are tokens that look like identifiers but have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous.
 
-A _reserved word_ is a keyword that cannot be used as an identifier for variable declarations, function declarations, etc. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const`- and `let`-declarations.
+Some keywords are _reserved_, meaning that cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const`- and `let`-declarations.
 
 Identifiers are always compared by _string value_, so escape sequences are interpreted. For example, this is still a syntax error:
 
@@ -165,7 +165,9 @@ Identifiers are always compared by _string value_, so escape sequences are inter
 const els\u{65} = 1;
 ```
 
-### Reserved keywords
+### Reserved words
+
+These keywords cannot be used as identifiers for variables functions, classes, etc. anywhere in JavaScript source.
 
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/switch", "case")}}
@@ -204,7 +206,16 @@ const els\u{65} = 1;
 - {{jsxref("Statements/with", "with")}}
 - {{jsxref("Operators/yield", "yield")}}
 
-### Future reserved keywords
+The following are only reserved when they are found in strict mode code:
+
+- {{jsxref("Statements/let", "let")}} (also reserved in `const`- or `let`-declarations)
+- {{jsxref("Operators/yield", "yield")}} (also reserved in generator function bodies)
+
+The following are only reserved when they are found in module code or async function bodies:
+
+- [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await)
+
+### Future reserved words
 
 The following are reserved as future keywords by the ECMAScript specification. They have no special functionality at present, but they might at some future time, so they cannot be used as identifiers.
 
@@ -216,19 +227,13 @@ The following are only reserved when they are found in strict mode code:
 
 - `implements`
 - `interface`
-- {{jsxref("Statements/let", "let")}} (also reserved in `const`- or `let`-declarations)
 - `package`
 - `private`
 - `protected`
 - `public`
 - `static`
-- {{jsxref("Operators/yield", "yield")}} (also reserved in generator function bodies)
 
-The following are only reserved when they are found in module code or async function bodies:
-
-- `await`
-
-#### Future reserved keywords in older standards
+#### Future reserved words in older standards
 
 The following are reserved as future keywords by older ECMAScript specifications (ECMAScript 1 till 3).
 
