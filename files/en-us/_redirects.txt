@@ -3417,8 +3417,8 @@
 /en-US/docs/DragDrop/Recommended_Drag_Types	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 /en-US/docs/Drawing_Graphics_with_Canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Drawing_text_using_a_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text
-/en-US/docs/ECMA-262	/en-US/docs/Web/JavaScript/Language_Resources
-/en-US/docs/ECMAScript	/en-US/docs/Web/JavaScript/Language_Resources
+/en-US/docs/ECMA-262	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
+/en-US/docs/ECMAScript	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/ECMAScript_DontEnum_attribute	/en-US/docs/Web/JavaScript/Data_structures#Properties
 /en-US/docs/ESLint	https://firefox-source-docs.mozilla.org/code-quality/lint/index.html
 /en-US/docs/EXSLT	/en-US/docs/Web/EXSLT
@@ -4166,7 +4166,7 @@
 /en-US/docs/JavaScript/Introduction_to_Object-Oriented_JavaScript	/en-US/docs/Learn/JavaScript/Objects
 /en-US/docs/JavaScript/JavaScript_technologies_overview	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript/Javascript_How_To_Tutorials	/en-US/docs/Web/JavaScript/Guide
-/en-US/docs/JavaScript/Language_Resources	/en-US/docs/Web/JavaScript/Language_Resources
+/en-US/docs/JavaScript/Language_Resources	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript/Memory_Management	/en-US/docs/Web/JavaScript/Memory_Management
 /en-US/docs/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/JavaScript/Reference	/en-US/docs/Web/JavaScript/Reference
@@ -4826,7 +4826,7 @@
 /en-US/docs/JavaScript_Documention/Guide/Working_with_Objects	/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 /en-US/docs/JavaScript_Documention/Introduction_to_Object-Oriented_JavaScript	/en-US/docs/Learn/JavaScript/Objects
 /en-US/docs/JavaScript_Documention/Javascript_How_To_Tutorials	/en-US/docs/Web/JavaScript/Guide
-/en-US/docs/JavaScript_Documention/Language_Resources	/en-US/docs/Web/JavaScript/Language_Resources
+/en-US/docs/JavaScript_Documention/Language_Resources	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript_Documention/Memory_Management	/en-US/docs/Web/JavaScript/Memory_Management
 /en-US/docs/JavaScript_Documention/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/JavaScript_Documention/Reference	/en-US/docs/Web/JavaScript/Reference
@@ -5145,7 +5145,7 @@
 /en-US/docs/JavaScript_Documention/Reference/Symbols	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /en-US/docs/JavaScript_Documention/Reference/rest_parameters	/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /en-US/docs/JavaScript_Documention/Shells	/en-US/docs/Web/JavaScript/Shells
-/en-US/docs/JavaScript_Language_Resources	/en-US/docs/Web/JavaScript/Language_Resources
+/en-US/docs/JavaScript_Language_Resources	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript_Methods_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/JavaScript_Methods_Index_(Alphabetical)	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/JavaScript_Properties_Index	/en-US/docs/Web/JavaScript/Reference
@@ -11945,6 +11945,7 @@
 /en-US/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Web/JavaScript/JavaScript_templates	/en-US/docs/Web/JavaScript/Reference/Template_literals
 /en-US/docs/Web/JavaScript/Javascript_How_To_Tutorials	/en-US/docs/Web/JavaScript/Guide
+/en-US/docs/Web/JavaScript/Language_Resources	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/Web/JavaScript/Microsoft_Extensions/debugger	/en-US/docs/Web/JavaScript/Reference/Statements/debugger
 /en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions/debugger	/en-US/docs/Web/JavaScript/Reference/Statements/debugger
 /en-US/docs/Web/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
