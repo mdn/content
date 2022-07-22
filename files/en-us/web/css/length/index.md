@@ -159,7 +159,7 @@ This allows you to compare and contrast the effect of different length units.
 ```html
 <div class="outer">
   <div class="input-container">
-    <label>Enter width:</label>
+    <label for="length">Enter width:</label>
     <input type="text" id="length">
   </div>
   <div class="inner">
