@@ -105,7 +105,7 @@ function loadFile(url, timeout, callback) {
     const args = Array.prototype.slice.call(arguments, 3);
     const xhr = new XMLHttpRequest();
     xhr.ontimeout = function () {
-        console.error("The request for " + url + " timed out.");
+        console.error(`The request for ${url} timed out.`);
     };
     xhr.onload = function() {
         if (xhr.readyState === 4) {

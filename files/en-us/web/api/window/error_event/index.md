@@ -98,7 +98,7 @@ img {
 const log = document.querySelector('.event-log-contents');
 
 window.addEventListener('error', (event) => {
-    log.textContent = log.textContent + `${event.type}: ${event.message}\n`;
+    log.textContent = `${log.textContent}${event.type}: ${event.message}\n`;
     console.log(event)
 });
 

@@ -72,10 +72,10 @@ function handleTrackEvent(event) {
 
   switch(event.type) {
     case "addtrack":
-      console.log("Added a " + trackKind + " track");
+      console.log(`Added a ${trackKind} track`);
       break;
     case "removetrack":
-      console.log("Removed a " + trackKind + " track");
+      console.log(`Removed a ${trackKind} track`);
       break;
   }
 }

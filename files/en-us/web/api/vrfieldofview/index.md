@@ -57,23 +57,23 @@ function reportFieldOfView() {
     const listitem1 = document.createElement('li');
     const listitem2 = document.createElement('li');
 
-    listitem1.innerHTML = '<strong>Left eye parameters</strong>'
-                 + '<br>Offset: ' + lEye.offset
-                 + '<br>Render width: ' + lEye.renderWidth
-                 + '<br>Render height: ' + lEye.renderHeight
-                 + '<br>Up degrees: ' + lFOV.upDegrees
-                 + '<br>Right degrees: ' + lFOV.rightDegrees
-                 + '<br>Down degrees: ' + lFOV.downDegrees
-                 + '<br>Left degrees: ' + lFOV.leftDegrees
+    listitem1.innerHTML = `<strong>Left eye parameters</strong><br>` +
+      `Offset: ${lEye.offset}<br>` +
+      `Render width: ${lEye.renderWidth}<br>` +
+      `Render height: ${lEye.renderHeight}<br>` +
+      `Up degrees: ${lFOV.upDegrees}<br>` +
+      `Right degrees: ${lFOV.rightDegrees}<br>` +
+      `Down degrees: ${lFOV.downDegrees}<br>` +
+      `Left degrees: ${lFOV.leftDegrees}`;
 
-   listitem2.innerHTML = '<strong>Right eye parameters</strong>'
-                + '<br>Offset: ' + rEye.offset
-                + '<br>Render width: ' + rEye.renderWidth
-                + '<br>Render height: ' + rEye.renderHeight
-                + '<br>Up degrees: ' + rFOV.upDegrees
-                + '<br>Right degrees: ' + rFOV.rightDegrees
-                + '<br>Down degrees: ' + rFOV.downDegrees
-                + '<br>Left degrees: ' + rFOV.leftDegrees
+    listitem2.innerHTML = `<strong>Right eye parameters</strong><br>` +
+      `Offset: ${rEye.offset}<br>` +
+      `Render width: ${rEye.renderWidth}<br>` +
+      `Render height: ${rEye.renderHeight}<br>` +
+      `Up degrees: ${rFOV.upDegrees}<br>` +
+      `Right degrees: ${rFOV.rightDegrees}<br>` +
+      `Down degrees: ${rFOV.downDegrees}<br>` +
+      `Left degrees: ${rFOV.leftDegrees}`;
 
     list.appendChild(listitem1);
     list.appendChild(listitem2);

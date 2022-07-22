@@ -827,11 +827,11 @@ Let's create two functions:
 
 ```js
 function getHeaderTime () {
-  const nLastVisit = parseFloat(window.localStorage.getItem('lm_' + this.filepath));
+  const nLastVisit = parseFloat(window.localStorage.getItem(`lm_${this.filepath}`));
   const nLastModified = Date.parse(this.getResponseHeader("Last-Modified"));
 
   if (isNaN(nLastVisit) || nLastModified > nLastVisit) {
-    window.localStorage.setItem('lm_' + this.filepath, Date.now());
+    window.localStorage.setItem(`lm_${this.filepath}`, Date.now());
     isFinite(nLastVisit) && this.callback(nLastModified, nLastVisit);
   }
 }
@@ -852,7 +852,7 @@ And to test:
 /* Let's test the file "yourpage.html"... */
 
 ifHasChanged("yourpage.html", function (nModified, nVisit) {
-  console.log("The page '" + this.filepath + "' has been changed on " + (new Date(nModified)).toLocaleString() + "!");
+  console.log(`The page '${this.filepath}' has been changed on ${(new Date(nModified)).toLocaleString()}!`);
 });
 ```
 

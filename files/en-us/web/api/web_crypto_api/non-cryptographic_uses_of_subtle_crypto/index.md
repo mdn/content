@@ -158,7 +158,7 @@ async function fileHash(file) {
   // different binary representations of the letters in our message will result in different hashes
   const encoder = new TextEncoder();
   // Null-terminated means the string ends in the null character which in JavaScript is '\0'
-  const view = encoder.encode('blob ' + length + '\0');
+  const view = encoder.encode(`blob ${length}\0`);
 
   // We then combine the 2 Array Buffers together into a new Array Buffer.
   const newBlob = new Blob([view.buffer, arrayBuffer], {

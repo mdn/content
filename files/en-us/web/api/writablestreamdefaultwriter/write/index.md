@@ -103,7 +103,7 @@ const writableStream = new WritableStream({
       view[0] = chunk;
       const decoded = decoder.decode(view, { stream: true });
       const listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
@@ -111,7 +111,7 @@ const writableStream = new WritableStream({
   },
   close() {
     const listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {

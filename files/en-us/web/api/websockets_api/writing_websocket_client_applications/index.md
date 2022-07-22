@@ -164,7 +164,7 @@ exampleSocket.onmessage = function(event) {
     case "userlist":
       let ul = "";
       for (let i=0; i < msg.users.length; i++) {
-        ul += msg.users[i] + "<br>";
+        ul += `${msg.users[i]}<br>`;
       }
       document.getElementById("userlistbox").innerHTML = ul;
       break;
