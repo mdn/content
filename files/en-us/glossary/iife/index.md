@@ -173,7 +173,6 @@ When clicked, these buttons alert 0 and 1.
 
 ## See also
 
-- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions) (at the end of the "Functions" section, right before "Custom objects")
 - {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} (Wikipedia)
 - [Glossary](/en-US/docs/Glossary)
 
