@@ -38,16 +38,16 @@ The scope of the variables declared inside the static block is local to the bloc
 Since `var`, `function`, `const` or  `let` declared in a `static {}` initialization block are local to the block, any `var` declarations in the block are not hoisted.
 
 ```js
-let y = 'Outer y';
+var y = 'Outer y';
 
 class A {
   static field = 'Inner y';
   static {
-    let y = this.field;
+    var y = this.field;
   }
 }
 
-// let defined in static block is not hoisted
+// var defined in static block is not hoisted
 console.log(y);
 // > 'Outer y'
 ```
