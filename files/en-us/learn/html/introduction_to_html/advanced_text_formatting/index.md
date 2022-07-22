@@ -299,8 +299,8 @@ Time for another active learning example! In this example we'd like you to:
 
 The citation sources you need are:
 
-- http\://www\.brainyquote.com/quotes/authors/c/confucius.html for the Confucius quote
-- http\://example.com/affirmationsforpositivethinking for "The Need To Eliminate Negative Self Talk".
+- `http://www.brainyquote.com/quotes/authors/c/confucius.html` for the Confucius quote
+- `http://example.com/affirmationsforpositivethinking` for "The Need To Eliminate Negative Self Talk".
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
