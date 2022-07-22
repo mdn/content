@@ -192,13 +192,13 @@ new Intl.NumberFormat(locales, options)
         The default is "`auto`".
 
         - `"auto"`: keep trailing zeros according to `minimumFractionDigits` and `minimumSignificantDigits`
-        - `"stripIfInteger"`: the result with more precision wins a conflict
-        - `"lessPrecision"`: same as "auto", but remove the fraction digits if they are all zero
+        - `"stripIfInteger"`: Remove the fraction digits _if_ they are all zero.
+          This is the same as `auto` if any of the fraction digits are non-zero.
 
     The following properties fall into two groups:
     `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group,
     `minimumSignificantDigits` and `maximumSignificantDigits` in the other.
-    If at least one property from the second group is defined, then the first group is ignored.
+    If properties from both groups are specified, conflicts in the resulting display format are resolved based on the value of the [`roundingPriority`](#roundingpriority) property.
 
     - `minimumIntegerDigits`
       - : The minimum number of integer digits to use.
@@ -409,7 +409,6 @@ The `minimumSignificantDigits` ensures that at least the minimum number of digit
 console.log(new Intl.NumberFormat("en", {minimumSignificantDigits: 10}).format(54.33145));
 // > "54.33145000"
 ```
-
 
 
 ## Specifications
