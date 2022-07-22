@@ -58,7 +58,7 @@ let listElem = document.getElementById("connectionview");
 
 navigator.presentation.receiver.connectionList.then(function(connections) {
   connections.forEach(function(aConnection) {
-    listElem.innerHTML += "<li>" + aConnection.id + "</li>";
+    listElem.innerHTML += `<li>${aConnection.id}</li>`;
   });
 });
 ```

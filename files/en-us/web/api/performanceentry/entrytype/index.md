@@ -116,7 +116,7 @@ function run_PerformanceEntry() {
   const entriesNamedBegin = performance.getEntriesByName("begin");
   for (let i=0; i < entriesNamedBegin.length; i++) {
       const typeOfEntry = entriesNamedBegin[i].entryType;
-      console.log("Entry is type: " + typeOfEntry);
+      console.log(`Entry is type: ${typeOfEntry}`);
   }
 
 }

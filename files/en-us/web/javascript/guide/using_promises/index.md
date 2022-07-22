@@ -116,7 +116,7 @@ doSomething()
 ```js example-bad
 doSomething()
   .then((url) => {
-    // I forgot to return this...
+    // I forgot to return this
     fetch(url);
   })
   .then((result) => {
@@ -134,7 +134,7 @@ const listOfIngredients = [];
 
 doSomething()
   .then((url) => {
-    // I forgot to return this...
+    // I forgot to return this
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

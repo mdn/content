@@ -19,6 +19,12 @@ This article provides information about the changes in Firefox 103 that will aff
 
 #### Removals
 
+### MathML
+
+#### Removals
+
+- The deprecated `scriptminsize` and `scriptsizemultipler` attributes have been removed ({{bug(1772697)}}).
+
 ### CSS
 
 #### Removals

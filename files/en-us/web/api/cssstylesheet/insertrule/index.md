@@ -117,11 +117,11 @@ function addStylesheetRules (rules) {
 
     for (let pl = rule.length; j < pl; j++) {
       const prop = rule[j];
-      propStr += prop[0] + ': ' + prop[1] + (prop[2] ? ' !important' : '') + ';\n';
+      propStr += `${prop[0]}: ${prop[1]}${prop[2] ? ' !important' : ''};\n`;
     }
 
     // Insert CSS Rule
-    styleSheet.insertRule(selector + '{' + propStr + '}', styleSheet.cssRules.length);
+    styleSheet.insertRule(`${selector}{${propStr}}`, styleSheet.cssRules.length);
   }
 }
 ```

@@ -64,7 +64,7 @@ for (let constraint in supportedConstraints) {
   if (Object.hasOwn(supportedConstraints, constraint)) {
     let elem = document.createElement("li");
 
-    elem.innerHTML = "<code>" + constraint + "</code>";
+    elem.innerHTML = `<code>${constraint}</code>`;
     constraintList.appendChild(elem);
   }
 }

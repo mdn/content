@@ -110,7 +110,7 @@ This snippet shows how the API can be used outside of a service worker context, 
 // Try to get data from the cache, but fall back to fetching it live.
 async function getData() {
    const cacheVersion = 1;
-   const cacheName    = `myapp-${ cacheVersion }`;
+   const cacheName    = `myapp-${cacheVersion}`;
    const url          = 'https://jsonplaceholder.typicode.com/todos/1';
    let cachedData     = await getCachedData( cacheName, url );
 

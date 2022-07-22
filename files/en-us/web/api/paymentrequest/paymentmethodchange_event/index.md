@@ -63,7 +63,7 @@ paymentRequest.addEventListener("paymentmethodchange", handlePaymentChange, fals
 
 paymentRequest.show()
 .then(response => response.complete("success"))
-.catch(err => console.log("Error handling payment request: " + err));
+.catch(err => console.error(`Error handling payment request: ${err}`));
 ```
 
 The event handler function itself, `handlePaymentChange()`, looks like this:

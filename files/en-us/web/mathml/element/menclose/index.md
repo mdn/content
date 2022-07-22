@@ -61,11 +61,3 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ## Browser compatibility
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- Additional values for the `notation` attribute have been added in the following releases:
-
-  - `madruwb` in Gecko 2.0 {{GeckoRelease("2.0")}}.
-  - `updiagonalarrow` in Gecko 24.0 {{GeckoRelease("24.0")}}
-  - `phasorangle` in Gecko 32.0 {{GeckoRelease("32.0")}}

@@ -109,7 +109,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   <details>
     <summary>
       <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
-      <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+      <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
     </summary>
     <div class="attributes">
       <h4>Attributes</h4>

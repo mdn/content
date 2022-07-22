@@ -114,7 +114,7 @@ let videoElement = document.getElementById("video");
 let logElement = document.getElementById("log");
 
 function log(msg) {
-  logElement.innerHTML += msg + "<br>";
+  logElement.innerHTML += `${msg}<br>`;
 }
 
 document.getElementById("startButton").addEventListener("click", function() {
@@ -133,7 +133,7 @@ document.getElementById("startButton").addEventListener("click", function() {
       videoElement.srcObject = stream;
       updateDeviceList();
     })
-    .catch(err => log(err.name + ": " + err.message));
+    .catch(err => log(`${err.name}: ${err.message}`));
 }, false);
 ```
 
@@ -162,7 +162,7 @@ function updateDeviceList() {
       let elem = document.createElement("li");
       let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
 
-      elem.innerHTML = "<strong>" + device.label + "</strong> (" + direction + ")";
+      elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
       if (type === "audio") {
         audioList.appendChild(elem);
       } else if (type === "video") {

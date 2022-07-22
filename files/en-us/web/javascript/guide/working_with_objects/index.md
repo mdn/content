@@ -184,9 +184,8 @@ The syntax for an object using an object initializer is:
 
 ```js
 const obj = {
-  property_1:   value_1,   // property name may be an identifier...
-  2:            value_2,   // or a number...
-  // ...,
+  property_1:   value_1,   // property name may be an identifier
+  2:            value_2,   // or a number
   'property n': value_n    // or a string
 };
 ```
@@ -350,12 +349,12 @@ objectName.methodName = functionName;
 
 const myObj = {
   myMethod: function(params) {
-    // ...do something
+    // do something
   },
 
   // this works too!
   myOtherMethod(params) {
-    // ...do something else
+    // do something else
   }
 };
 ```

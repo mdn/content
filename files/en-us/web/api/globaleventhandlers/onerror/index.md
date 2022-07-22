@@ -78,11 +78,11 @@ window.onerror = function (msg, url, lineNo, columnNo, error) {
     alert('Script Error: See Browser Console for Detail');
   } else {
     const message = [
-      'Message: ' + msg,
-      'URL: ' + url,
-      'Line: ' + lineNo,
-      'Column: ' + columnNo,
-      'Error object: ' + JSON.stringify(error)
+      `Message: ${msg}`,
+      `URL: ${url}`,
+      `Line: ${lineNo}`,
+      `Column: ${columnNo}`,
+      `Error object: ${JSON.stringify(error)}`
     ].join(' - ');
 
     alert(message);

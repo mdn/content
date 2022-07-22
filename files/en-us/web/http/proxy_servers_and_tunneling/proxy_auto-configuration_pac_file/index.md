@@ -13,7 +13,7 @@ A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determin
 
 ```js
 function FindProxyForURL(url, host) {
-  // ...
+  // …
 }
 ```
 
@@ -719,11 +719,9 @@ function FindProxyForURL(url, host) {
 For example:
 
 ```js
-// ...
 if (shExpMatch(url, "http:*")) {
   return "PROXY http-proxy.mydomain.com:8080";
 }
-// ...
 ```
 
 > **Note:** The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the `REMOTE_ADDR` environment variable in CGI).

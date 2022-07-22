@@ -61,7 +61,7 @@ function updateDetails(details, shippingOption, resolve, reject) {
     otherShippingOption = details.shippingOptions[0];
     details.total.amount.value = '67.00';
   } else {
-    reject('Unknown shipping option \'' + shippingOption + '\'');
+    reject(`Unknown shipping option '${shippingOption}'`);
     return;
   }
   selectedShippingOption.selected = true;
