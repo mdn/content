@@ -54,15 +54,13 @@ The [ECMAScript Internationalization API Specification](https://402.ecma-interna
 
 There are a variety of ways you can participate in or just track current work on the ECMAScript Language Specification and the ECMAScript Internationalization API Specification and related resources:
 
-Resource                          | Description
-----------------------------------|----------------------------------
-https://github.com/tc39/ecma262   | ECMAScript Language Specification repo
-https://github.com/tc39/ecma402   | ECMAScript Internationalization API Specification repo
-https://github.com/tc39/proposals | ECMAScript proposals repo
-https://github.com/tc39/test262   | ECMAScript conformance test suite repo
-https://github.com/tc39/notes     | TC39 meeting notes
-https://es.discourse.group/       | ECMAScript spec discussion; current mailing list
-https://esdiscuss.org/            | ECMAScript spec discussion; historical mailing-list archives (until March 2021)
+- [ECMAScript Language Specification repo](https://github.com/tc39/ecma262)
+- [ECMAScript Internationalization API Specification repo](https://github.com/tc39/ecma402)
+- [ECMAScript proposals repo](https://github.com/tc39/proposals)
+- [ECMAScript conformance test suite repo](https://github.com/tc39/test262)
+- [TC39 meeting notes](https://github.com/tc39/notes)
+- [ECMAScript spec discussion; current mailing list](https://es.discourse.group/)
+- [ECMAScript spec discussion; historical mailing-list archives (until March 2021)](https://esdiscuss.org/)
 
 ## DOM APIs
 
