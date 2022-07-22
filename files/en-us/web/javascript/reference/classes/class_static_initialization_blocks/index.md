@@ -89,7 +89,7 @@ class MyClass {
 
 Note that any static initialization of a super class is performed first, before that of its sub classes.
 
-### Using `this` and `super.property`
+### Using this and super
 
 The `this` inside a static block refers to the constructor object of the class.
 This code shows how to access a public static field.
