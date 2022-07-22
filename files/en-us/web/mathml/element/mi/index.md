@@ -21,13 +21,13 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 ```html
 <math>
 
-  <mi> y </mi>
+  <mi>y</mi>
 
-  <mi> sin </mi>
+  <mi>sin</mi>
 
-  <mi mathvariant="monospace"> x </mi>
+  <mi mathvariant="monospace">x</mi>
 
-  <mi mathvariant="bold"> &pi; </mi>
+  <mi mathvariant="bold">&pi;</mi>
 
 </math>
 ```

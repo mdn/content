@@ -27,20 +27,20 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 Sample rendering: ![x+y+z](munder.png)
 
-Rendering in your browser: <math><munder accentunder="true"><mrow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mrow><mo>⏟</mo></munder></math>
+Rendering in your browser: <math><munder accentunder="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>⏟</mo></munder></math>
 
 ```html
 <math>
 
 <munder accentunder="true">
   <mrow>
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-    <mo> + </mo>
-    <mi> z </mi>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mi>y</mi>
+    <mo>+</mo>
+    <mi>z</mi>
   </mrow>
-  <mo> &#x23DF; <!--BOTTOM CURLY BRACKET--> </mo>
+  <mo>&#x23DF;<!--BOTTOM CURLY BRACKET--></mo>
 </munder>
 
 </math>

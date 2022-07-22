@@ -32,15 +32,15 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 Sample rendering: ![integral-0-infinity](munderover.png)
 
-Rendering in your browser: <math><munderover><mo>∫ </mo><mn>0 </mn><mi>∞</mi></munderover></math>
+Rendering in your browser: <math><munderover><mo>∫</mo><mn>0</mn><mi>∞</mi></munderover></math>
 
 ```html
 <math displaystyle="true">
 
   <munderover >
-    <mo> &#x222B; <!--INTEGRAL--> </mo>
-    <mn> 0 </mn>
-    <mi> &#x221E; <!--INFINITY--> </mi>
+    <mo>&#x222B;<!--INTEGRAL--></mo>
+    <mn>0</mn>
+    <mi>&#x221E;<!--INFINITY--></mi>
   </munderover>
 
 </math>
