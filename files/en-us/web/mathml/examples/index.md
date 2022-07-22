@@ -8,9 +8,11 @@ tags:
   - MathML
 ---
 
+Below you'll find some examples you can look at to help you to understand how to use MathML.
+
 ## MathML formulas
 
-Below you'll find some examples you can look at to help you to understand how to use MathML to display increasingly complex mathematical concepts in Web content.
+The following demos display increasingly complex mathematical concepts in Web content.
 
 - [Pythagorean Theorem](/en-US/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem)
   - : Small example showing a proof of the Pythagorean Theorem.
@@ -23,7 +25,7 @@ Below you'll find some examples you can look at to help you to understand how to
 
 ## Other Web technologies
 
-Below you'll find demos of MathML mixed with other Web technologies to produce advanced content.
+The following demos mix MathML with other Web technologies to produce advanced content.
 
 - [`<la-tex>` custom element](https://fred-wang.github.io/TeXZilla/examples/customElement.html)
   - : A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) that accepts [LaTeX](https://en.wikipedia.org/wiki/LaTeX) content.
