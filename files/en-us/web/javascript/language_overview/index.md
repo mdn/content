@@ -8,164 +8,129 @@ tags:
 ---
 {{jsSidebar}}
 
-JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with object prototypes. JavaScript also supports functional programming — because they are objects, functions may be stored in variables and passed around like any other object.
+JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with object prototypes, and also supports functional programming — because they are objects, functions may be stored in variables and passed around like any other object.
 
 This page serves as a quick overview of various JavaScript language features, written for readers with background in other languages, such as C or Java.
 
-Let's start off by looking at the building blocks of any language: the types. JavaScript programs manipulate values, and those values all belong to a type. JavaScript's types are:
+## Data types
+
+Let's start off by looking at the building blocks of any language: the types. JavaScript programs manipulate values, and those values all belong to a type. JavaScript offers seven _primitive types_:
 
 - [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type)
 - [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type)
 - [String](/en-US/docs/Web/JavaScript/Data_structures#string_type)
 - [Boolean](/en-US/docs/Web/JavaScript/Data_structures#boolean_type)
+- [Symbol](/en-US/docs/Web/JavaScript/Data_structures#symbol_type)
+- [Undefined](/en-US/docs/Web/JavaScript/Data_structures#undefined_type)
+- [Null](/en-US/docs/Web/JavaScript/Data_structures#null_type)
+
+Everything else is known as an [Object](/en-US/docs/Web/JavaScript/Data_structures#objects). Functions are just a special type of object in JavaScript that can be called. Common object types include:
+
 - {{jsxref("Function")}}
-- [Object](/en-US/docs/Web/JavaScript/Data_structures#objects)
-- [Symbol](/en-US/docs/Web/JavaScript/Data_structures#symbol_type) (new in ES2015)
+- {{jsxref("Array")}}
+- {{jsxref("Date")}}
+- {{jsxref("RegExp")}}
+- {{jsxref("Error")}}
 
-In addition, there is also [undefined](/en-US/docs/Web/JavaScript/Data_structures#undefined_type) and [null](/en-US/docs/Web/JavaScript/Data_structures#null_type), which are slightly odd. And {{jsxref("Array")}}, which is a special kind of object. And {{jsxref("Date")}} and {{jsxref("RegExp")}}, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:
+### Numbers
 
-- [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type)
-- [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type)
-- [String](/en-US/docs/Web/JavaScript/Data_structures#string_type)
-- [Boolean](/en-US/docs/Web/JavaScript/Data_structures#boolean_type)
-- [Symbol](/en-US/docs/Web/JavaScript/Data_structures#symbol_type) (new in ES2015)
-- [Object](/en-US/docs/Web/JavaScript/Data_structures#objects)
+JavaScript has two built-in numeric types: **Number** and **BigInt**.
 
-  - {{jsxref("Function")}}
-  - {{jsxref("Array")}}
-  - {{jsxref("Date")}}
-  - {{jsxref("RegExp")}}
-
-- [null](/en-US/docs/Web/JavaScript/Data_structures#null_type)
-- [undefined](/en-US/docs/Web/JavaScript/Data_structures#undefined_type)
-
-And there are some built-in {{jsxref("Error")}} types as well. Things are a lot easier if we stick with the first diagram, however, so we'll discuss the types listed there for now.
-
-## Numbers
-
-ECMAScript has two built-in numeric types: **Number** and **BigInt**.
-
-The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). And where this article and other MDN articles refer to "integers", what's usually meant is a _representation_ of an integer using a Number value. But because such Number values aren't real integers, you have to be a little careful. For example:
+The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2<sup>53</sup> − 1) and 2<sup>53</sup> − 1). Within numbers, JavaScript does not distinguish between floating point numbers and integers.
 
 ```js
 console.log(3 / 2);             // 1.5, not 1
 console.log(Math.floor(3 / 2)); // 1
 ```
 
-So an _apparent integer_ is in fact _implicitly a float_.
-
-Also, watch out for stuff like:
+So an _apparent integer_ is in fact _implicitly a float_. Because of IEEE 754 encoding, sometimes floating point arithmetic can be imprecise.
 
 ```js
-0.1 + 0.2 == 0.30000000000000004;
+console.log(0.1 + 0.2); // 0.30000000000000004
 ```
 
-In practice, integer values are treated as 32-bit ints, and some implementations even store it that way until they are asked to perform an instruction that's valid on a Number but not on a 32-bit integer. This can be important for bit-wise operations.
+For operations that expect integers, such as bitwise operations, the number will be converted to a 32-bit integer.
 
-The standard [arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators) are supported, including addition, subtraction, modulus (or remainder) arithmetic, and so forth. There's also a built-in object that we did not mention earlier called {{jsxref("Math")}} that provides advanced mathematical functions and constants:
+The BigInt type is an arbitrary length integer. Its behavior is similar to C's integer types (e.g. division truncate to zero), except it can grow indefinitely. BigInts are specified with a number literal and an `n` suffix.
+
+```js
+console.log(-3n / 2n); // -1n
+```
+
+The standard [arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators) are supported, including addition, subtraction, modulus (or remainder) arithmetic, and so forth. BigInts and Numbers cannot be mixed in arithmetic operations.
+
+The {{jsxref("Math")}} object provides standard mathematical functions and constants.
 
 ```js
 Math.sin(3.5);
 const circumference = 2 * Math.PI * r;
 ```
 
-You can convert a string to an integer using the built-in {{jsxref("Global_Objects/parseInt", "parseInt()")}} function. This takes the base for the conversion as an optional second argument, which you should always provide:
+There are three ways to convert a string to a number:
+
+- {{jsxref("Global_Objects/parseInt", "parseInt()")}}, which parses the string for an integer.
+- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}, which parses the string for a floating-point number.
+- The [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) function, which parses a string as if it's a number literal, which supports much more variety of number representations.
+
+You can also use the [unary plus `+`](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus) as a shorthand for `Number()`.
+
+When using `parseInt()`, you can provide a radix. If omitted, it will be inferred based on the string's content — which may produce surprising results. You are advised to always provide a radix when using `parseInt()`.
 
 ```js
 parseInt('123', 10); // 123
 parseInt('010', 10); // 10
-```
-
-In older browsers, strings beginning with a "0" are assumed to be in octal (radix 8), but this hasn't been the case since 2013 or so. Unless you're certain of your string format, you can get surprising results on those older browsers:
-
-```js
-parseInt('010');  //  8
-parseInt('0x10'); // 16
-```
-
-Here, we see the {{jsxref("Global_Objects/parseInt", "parseInt()")}} function treat the first string as octal due to the leading 0, and the second string as hexadecimal due to the leading "0x". The _hexadecimal notation is still in place_; only octal has been removed.
-
-If you want to convert a binary number to an integer, just change the base:
-
-```js
 parseInt('11', 2); // 3
+
+parseFloat('3.14'); // 3.14
+parseFloat('1e3'); // 1000
+
+Number('42');   // 42
+Number('010');  // 10
+Number('0x10'); // 16
 ```
 
-Similarly, you can parse floating point numbers using the built-in {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} function. Unlike its {{jsxref("Global_Objects/parseInt", "parseInt()")}} cousin, `parseFloat()` always uses base 10.
-
-You can also use the unary `+` operator to convert values to numbers:
-
-```js
-+ '42';   // 42
-+ '010';  // 10
-+ '0x10'; // 16
-```
-
-A special value called {{jsxref("NaN")}} (short for "Not a Number") is returned if the string is non-numeric:
+By IEEE 754 specification, Number values also include {{jsxref("NaN")}} (short for "Not a Number") and {{jsxref("Infinity")}}. Many "invalid math" operations will return `NaN` — for example, if attempting to parse a non-numeric string, or using [`Math.log()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log) on a negative value.
 
 ```js
 parseInt('hello', 10); // NaN
+Math.log(-1); // NaN
 ```
 
-`NaN` is toxic: if you provide it as an operand to any mathematical operation, the result will also be `NaN`:
-
-```js
-NaN + 5; // NaN
-```
-
-You can reliably test for `NaN` using the built-in {{jsxref("Number.isNaN", "Number.isNaN()")}} function, [which behaves just as its name implies](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN#description):
-
-```js
-Number.isNaN(NaN); // true
-Number.isNaN('hello'); // false
-Number.isNaN('1'); // false
-Number.isNaN(undefined); // false
-Number.isNaN({}); // false
-Number.isNaN([1]) // false
-Number.isNaN([1,2]) // false
-```
-
-But don't test for `NaN` using the global {{jsxref("Global_Objects/isNaN", "isNaN()")}} function, [which has unintuitive behavior](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior):
-
-```js
-isNaN('hello'); // true
-isNaN('1'); // false
-isNaN(undefined); // true
-isNaN({}); // true
-isNaN([1]) // false
-isNaN([1,2]) // true
-```
-
-JavaScript also has the special values {{jsxref("Infinity")}} and `-Infinity`:
+Division by zero produces `Infinity`.
 
 ```js
  1 / 0; //  Infinity
 -1 / 0; // -Infinity
 ```
 
-You can test for `Infinity`, `-Infinity` and `NaN` values using the built-in {{jsxref("Global_Objects/isFinite", "isFinite()")}} function:
+`NaN` is toxic: if you provide it as an operand to any mathematical operation, the result will also be `NaN`.
 
 ```js
-isFinite(1 / 0); // false
-isFinite(-Infinity); // false
-isFinite(NaN); // false
+NaN + 5; // NaN
 ```
 
-> **Note:** The {{jsxref("Global_Objects/parseInt", "parseInt()")}} and {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} functions parse a string until they reach a character that isn't valid for the specified number format, then return the number parsed up to that point. However the "+" operator converts the string to `NaN` if there is an invalid character contained within it. Just try parsing the string "10.2abc" with each method by yourself in the console and you'll understand the differences better.
+`NaN`, per IEE 754 specification, is the only value in JavaScript that's not equal to itself.
 
-## Strings
+```js
+console.log(NaN === NaN); // false
+```
 
-Strings in JavaScript are sequences of [Unicode characters](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#unicode). This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are sequences of UTF-16 code units; each code unit is represented by a 16-bit number. Each Unicode character is represented by either 1 or 2 code units.
+### Strings
 
-If you want to represent a single character, you just use a string consisting of that single character.
+Strings in JavaScript are sequences of [Unicode characters](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#unicode). This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are sequences of UTF-16 code units; each code unit is represented by a 16-bit number. Each Unicode character is represented by either 1 or 2 code units. Strings can be written with either single or double quotes — JavaScript does not have the distinction between characters and strings. If you want to represent a single character, you just use a string consisting of that single character.
 
-To find the length of a string (in code units), access its [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) property:
+```js
+console.log('Hello, world');
+console.log("Hello, world");
+```
+
+To find the length of a string (in code units), access its [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) property.
 
 ```js
 'hello'.length; // 5
 ```
 
-There's our first brush with JavaScript objects! Did we mention that you can use strings like {{jsxref("Object", "objects", "", 1)}} too? They have {{jsxref("String", "methods", "#instance_methods", 1)}} as well that allow you to manipulate the string and access information about the string:
+Strings have {{jsxref("String", "utility methods", "#instance_methods", 1)}} to manipulate the string and access information about the string. Because all primitives are immutable by design, these methods would return new strings.
 
 ```js
 'hello'.charAt(0); // "h"
@@ -173,11 +138,19 @@ There's our first brush with JavaScript objects! Did we mention that you can use
 'hello'.toUpperCase(); // "HELLO"
 ```
 
-## Other types
+The `+` operator is overloaded for strings: when one of the operands is a string, it performs string concatenation instead of number addition. A special [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals) syntax allows you to write strings with embedded expressions more succinctly.
 
-JavaScript distinguishes between {{jsxref("null")}}, which is a value that indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which is a value of type `undefined` that indicates an uninitialized variable — that is, a value hasn't even been assigned yet. We'll talk about variables later, but in JavaScript it is possible to declare a variable without assigning a value to it. If you do this, the variable's type is `undefined`. `undefined` is actually a constant.
+```js
+const age = 25;
+console.log("I am " + age + " years old.");
+console.log(`I am ${age} years old.`);
+```
 
-JavaScript has a boolean type, with possible values `true` and `false` (both of which are keywords.) Any value can be converted to a boolean according to the following rules:
+### Other types
+
+JavaScript distinguishes between {{jsxref("null")}}, which is a value that indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which is a value of type `undefined` that indicates an uninitialized variable — that is, a value hasn't even been assigned yet. We'll talk about variables later, but in JavaScript it is possible to declare a variable without assigning a value to it. If you do this, the variable's type is `undefined`.
+
+JavaScript has a boolean type, with possible values `true` and `false` — both of which are keywords. Any value can be converted to a boolean according to the following rules:
 
 1. `false`, `0`, empty strings (`""`), `NaN`, `null`, and `undefined` all become `false`.
 2. All other values become `true`.
@@ -189,9 +162,11 @@ Boolean('');  // false
 Boolean(234); // true
 ```
 
-However, this is rarely necessary, as JavaScript will silently perform this conversion when it expects a boolean, such as in an `if` statement (see below). For this reason, we sometimes speak of "true values" and "false values," meaning values that become `true` and `false`, respectively, when converted to booleans. Alternatively, such values can be called "truthy" and "falsy", respectively.
+However, this is rarely necessary, as JavaScript will silently perform this conversion when it expects a boolean, such as in an `if` statement (see below). For this reason, we sometimes speak of "true values" and "false values", meaning values that become `true` and `false`, respectively, when converted to booleans. Alternatively, such values can be called "truthy" and "falsy", respectively.
 
 Boolean operations such as `&&` (logical _and_), `||` (logical _or_), and `!` (logical _not_) are supported; see below.
+
+The Symbol type is often used to create unique identifiers. Every symbol created with the [`Symbol()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) function is guaranteed to be unique. In addition, there are registered symbols, which are shared constants, and well-known symbols, which are utilized by the language as "protocols" for certain operations. You can read more about them in the [symbol description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
 
 ## Variables
 
@@ -202,11 +177,7 @@ New variables in JavaScript are declared using one of three keywords: [`let`](/e
 ```js
 let a;
 let name = 'Simon';
-```
 
-The following is an example of scope with a variable declared with **`let`**:
-
-```js
 // myLetVariable is *not* visible out here
 
 for (let myLetVariable = 0; myLetVariable < 5; myLetVariable++) {
@@ -223,32 +194,21 @@ const Pi = 3.14; // variable Pi is set
 Pi = 1; // will throw an error because you cannot change a constant variable.
 ```
 
-**`var`** does not have the restrictions that the other two keywords have. This is because it was traditionally the only way to declare a variable in JavaScript. A variable declared with the **`var`** keyword is available from the _function_ it is declared in.
+`const` declarations only prevent _re-assignments_ — they don't prevent _mutations_ of the variable's value, if it's an object.
 
 ```js
-var a;
-var name = 'Simon';
+const obj = {};
+obj.a = 1; // no error
+console.log(obj); // { a: 1 }
 ```
 
-An example of scope with a variable declared with **`var`:**
+`var` declarations can have surprising behaviors (for example, they are not block-scoped but function-scoped), and they are discouraged in modern JavaScript code.
 
-```js
-// myVarVariable *is* visible out here
-
-for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) {
-  // myVarVariable is visible to the whole function
-}
-
-// myVarVariable *is* visible out here
-```
-
-If you declare a variable without assigning any value to it, its type is `undefined`.
-
-An important difference between JavaScript and other languages like Java is that in JavaScript, blocks do not have scope; only functions have a scope. So if a variable is defined using `var` in a compound statement (for example inside an `if` control structure), it will be visible to the entire function. However, starting with ECMAScript 2015, [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declarations allow you to create block-scoped variables.
+If you declare a variable without assigning any value to it, its value is `undefined`. You can't declare a `const` variable without an initializer, because you can't change it later anyway.
 
 ## Operators
 
-JavaScript's numeric operators are `+`, `-`, `*`, `/` and `%` which is the [remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder). Values are assigned using `=`, and there are also compound assignment statements such as `+=` and `-=`. These extend out to `x = x operator y`.
+JavaScript's numeric operators include `+`, `-`, `*`, `/`, `%` (remainder), and `**` (exponentiation). Values are assigned using `=`. Each binary operator also has a compound assignment counterpart such as `+=` and `-=`, which extend out to `x = x operator y`.
 
 ```js
 x += 5;
@@ -272,23 +232,42 @@ If you add a string to a number (or other value) everything is converted into a 
 
 Adding an empty string to something is a useful way of converting it to a string itself.
 
-[Comparisons](/en-US/docs/Web/JavaScript/Reference/Operators) in JavaScript can be made using `<`, `>`, `<=` and `>=`. These work for both strings and numbers. Equality is a little less straightforward. The double-equals operator performs type coercion if you give it different types, with sometimes interesting results:
+[Comparisons](/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators) in JavaScript can be made using `<`, `>`, `<=` and `>=`, which work for both strings and numbers. For equality, the double-equals operator performs type coercion if you give it different types, with sometimes interesting results. On the other hand, the triple-equals operator does not attempt type coercion, and is usually preferred.
 
 ```js
 123 == '123'; // true
 1 == true; // true
-```
 
-To avoid type coercion, use the triple-equals operator:
-
-```js
 123 === '123'; // false
 1 === true;    // false
 ```
 
-There are also `!=` and `!==` operators.
+The double-equals and triple-equals also have their inequality counterparts: `!=` and `!==`.
 
-JavaScript also has [bitwise operations](/en-US/docs/Web/JavaScript/Reference/Operators). If you want to use them, they're there.
+JavaScript also has [bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators) and [logical operators](/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators). Notably, logical operators don't work with boolean values only — they work by the values "truthiness".
+
+```js
+const a = 0 && "Hello"; // "Hello" because 0 is "falsy"
+const b = "Hello" || "world"; // "Hello" because both "Hello" and "world" are "truthy"
+```
+
+The `&&` and `||` operators use short-circuit logic, which means whether they will execute their second operand is dependent on the first. This is useful for checking for null objects before accessing their attributes:
+
+```js
+const name = o && o.getName();
+```
+
+Or for caching values (when falsy values are invalid):
+
+```js
+const name = cachedName || (cachedName = getName());
+```
+
+JavaScript has a ternary operator for conditional expressions:
+
+```js
+const allowed = (age > 18) ? 'yes' : 'no';
+```
 
 ## Control structures
 
@@ -327,41 +306,19 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-JavaScript also contains two other prominent for loops: [`for`...`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+JavaScript also contains two other prominent for loops: [`for`...`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), which iterates over [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), most notably arrays, and [`for`...`in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), which visits all [enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) properties of an object.
 
 ```js
 for (const value of array) {
   // do something with value
 }
-```
 
-and [`for`...`in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in):
-
-```js
 for (const property in object) {
   // do something with object property
 }
 ```
 
-The `&&` and `||` operators use short-circuit logic, which means whether they will execute their second operand is dependent on the first. This is useful for checking for null objects before accessing their attributes:
-
-```js
-const name = o && o.getName();
-```
-
-Or for caching values (when falsy values are invalid):
-
-```js
-const name = cachedName || (cachedName = getName());
-```
-
-JavaScript has a ternary operator for conditional expressions:
-
-```js
-const allowed = (age > 18) ? 'yes' : 'no';
-```
-
-The `switch` statement can be used for multiple branches based on a number or string:
+The `switch` statement can be used for multiple branches based on equality checking.
 
 ```js
 switch (action) {
@@ -376,30 +333,11 @@ switch (action) {
 }
 ```
 
-If you don't add a `break` statement, execution will "fall through" to the next level. This is very rarely what you want — in fact it's worth specifically labeling deliberate fallthrough with a comment if you really meant it to aid debugging:
+Similar to the behavior in C, case labels act as jump tables, so if you don't add a `break` statement, execution will "fall through" to the next level.
 
-```js
-switch (a) {
-  case 1: // fallthrough
-  case 2:
-    eatIt();
-    break;
-  default:
-    doNothing();
-}
-```
+The default clause is optional. You can have expressions in both the switch part and the cases if you like; comparisons take place between the two using the `===` operator.
 
-The default clause is optional. You can have expressions in both the switch part and the cases if you like; comparisons take place between the two using the `===` operator:
-
-```js
-switch (1 + 3) {
-  case 2 + 2:
-    yay();
-    break;
-  default:
-    neverhappens();
-}
-```
+Unlike some languages like Rust, control-flow structures are statements in JavaScript, meaning you can't assign them to a value, like `const a = if (x) { 1 } else { 2 }`.
 
 ## Objects
 
