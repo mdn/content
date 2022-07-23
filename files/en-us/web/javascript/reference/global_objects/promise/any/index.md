@@ -97,7 +97,7 @@ In this example, we have a function that fetches an image and returns a blob. We
 
 ```js
 function fetchAndDecode(url) {
-  return fetch(url).then(response => {
+  return fetch(url).then((response) => {
     if(!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     } else {
@@ -109,13 +109,13 @@ function fetchAndDecode(url) {
 let coffee = fetchAndDecode('coffee.jpg');
 let tea = fetchAndDecode('tea.jpg');
 
-Promise.any([coffee, tea]).then(value => {
+Promise.any([coffee, tea]).then((value) => {
   let objectURL = URL.createObjectURL(value);
   let image = document.createElement('img');
   image.src = objectURL;
   document.body.appendChild(image);
 })
-.catch(e => {
+.catch((e) => {
   console.log(e.message);
 });
 ```

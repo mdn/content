@@ -149,7 +149,7 @@ if (startPlayPromise !== undefined) {
   startPlayPromise.then(() => {
     // Start whatever you need to do only after playback
     // has begun.
-  }).catch(error => {
+  }).catch((error) => {
     if (error.name === "NotAllowedError") {
       showPlayButton(videoElem);
     } else {
@@ -175,7 +175,7 @@ let playAttempt = setInterval(() => {
     .then(() => {
       clearInterval(playAttempt);
     })
-    .catch(error => {
+    .catch((error) => {
       console.log('Unable to play the video, User has not interacted yet.');
     });
 }, 3000);

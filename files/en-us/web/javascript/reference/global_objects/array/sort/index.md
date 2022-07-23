@@ -251,7 +251,7 @@ mapped.sort((a, b) => {
   return 0;
 });
 
-const result = mapped.map(v => data[v.i]);
+const result = mapped.map((v) => data[v.i]);
 ```
 
 There is an open source library available called [mapsort](https://github.com/Pimm/mapsort) which applies this approach.

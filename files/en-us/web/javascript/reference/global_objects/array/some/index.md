@@ -116,8 +116,8 @@ function isBiggerThan10(element, index, array) {
 provide a shorter syntax for the same test.
 
 ```js
-[2, 5, 8, 1, 4].some(x => x > 10);  // false
-[12, 5, 8, 1, 4].some(x => x > 10); // true
+[2, 5, 8, 1, 4].some((x) => x > 10);  // false
+[12, 5, 8, 1, 4].some((x) => x > 10); // true
 ```
 
 ### Checking whether a value exists in an array
@@ -144,7 +144,7 @@ checkAvailability(fruits, 'banana'); // true
 const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
-  return arr.some(arrVal => val === arrVal);
+  return arr.some((arrVal) => val === arrVal);
 }
 
 checkAvailability(fruits, 'kela');   // false

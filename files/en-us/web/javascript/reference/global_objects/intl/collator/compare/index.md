@@ -65,7 +65,7 @@ Use the `compare` getter function for finding matching strings in arrays:
 const a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
 const collator = new Intl.Collator('fr', { usage: 'search', sensitivity: 'base' });
 const s = 'congres';
-const matches = a.filter(v => collator.compare(v, s) === 0);
+const matches = a.filter((v) => collator.compare(v, s) === 0);
 console.log(matches.join(', '));
 // → "Congrès, congres"
 ```

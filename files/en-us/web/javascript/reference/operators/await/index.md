@@ -55,7 +55,7 @@ the `Promise` to be fulfilled and returns the fulfilled value.
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -137,7 +137,7 @@ Here is an example of a simple module using the [Fetch API](/en-US/docs/Web/API/
 ```js
 // fetch request
 const colors = fetch('../data/colors.json')
-  .then(response => response.json());
+  .then((response) => response.json());
 
 export default await colors;
 ```
