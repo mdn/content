@@ -63,9 +63,9 @@ A {{jsxref("Promise")}} that resolves when the piping process has completed.
 // Fetch the original image
 fetch('png-logo.png')
 // Retrieve its body as ReadableStream
-.then(response => response.body)
-.then(body => body.pipeThrough(new PNGTransformStream()))
-.then(rs => rs.pipeTo(new FinalDestinationStream()))
+.then((response) => response.body)
+.then((body) => body.pipeThrough(new PNGTransformStream()))
+.then((rs) => rs.pipeTo(new FinalDestinationStream()))
 ```
 
 ## Specifications

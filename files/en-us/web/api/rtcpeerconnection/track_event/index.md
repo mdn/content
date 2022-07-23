@@ -29,9 +29,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('track', event => { });
+addEventListener('track', (event) => { });
 
-ontrack = event => { };
+ontrack = (event) => { };
 ```
 
 ## Event type
@@ -68,7 +68,7 @@ pc = new RTCPeerConnection({
   ]
 });
 
-pc.addEventListener("track", e => {
+pc.addEventListener("track", (e) => {
   videoElement.srcObject = e.streams[0];
   hangupButton.disabled = false;
 }, false);
@@ -79,7 +79,7 @@ The event handler assigns the new track's first stream to an existing {{HTMLElem
 You can also assign the event handler function to the `ontrack` property, rather than use {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
 ```js
-pc.ontrack = e => {
+pc.ontrack = (e) => {
   videoElement.srcObject = e.streams[0];
   hangupButton.disabled = false;
   return false;

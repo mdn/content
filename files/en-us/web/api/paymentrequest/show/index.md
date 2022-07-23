@@ -144,8 +144,8 @@ async function processPayment() {
   try {
     const payRequest = new PaymentRequest(methodData, details, options);
 
-    payRequest.onshippingaddresschange = ev => ev.updateWith(checkAddress(payRequest));
-    payRequest.onshippingoptionchange = ev => ev.updateWith(checkShipping(payRequest));
+    payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
+    payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
 
     const response = await payRequest.show();
     await validateResponse(response);
@@ -208,12 +208,12 @@ functions on the promise returned by `show()`:
 function processPayment() {
   const payRequest = new PaymentRequest(methodData, details, options);
 
-  payRequest.onshippingaddresschange = ev => ev.updateWith(checkAddress(payRequest));
-  payRequest.onshippingoptionchange = ev => ev.updateWith(checkShipping(payRequest));
+  payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
+  payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
 
   payRequest.show()
-    .then(response => validateResponse(response))
-    .catch(err => handleError(err));
+    .then((response) => validateResponse(response))
+    .catch((err) => handleError(err));
 }
 ```
 
@@ -223,8 +223,8 @@ This is functionally equivalent to the `processPayment()` method using the
 ```js
 function validateResponse(response) {
   checkAllValues(response)
-    .then(response => response.complete("success"))
-    .catch(response => response.complete("fail"));
+    .then((response) => response.complete("success"))
+    .catch((response) => response.complete("fail"));
 }
 ```
 

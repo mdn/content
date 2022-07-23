@@ -67,7 +67,7 @@ const p = document.getElementById('p');
 const selectButton = document.getElementById('select-button');
 const deselectButton = document.getElementById('deselect-button');
 
-selectButton.addEventListener('click', e => {
+selectButton.addEventListener('click', (e) => {
   // Clear any current selection
   const selection = window.getSelection();
   selection.removeAllRanges();
@@ -78,7 +78,7 @@ selectButton.addEventListener('click', e => {
   selection.addRange(range);
 });
 
-deselectButton.addEventListener('click', e => {
+deselectButton.addEventListener('click', (e) => {
   const selection = window.getSelection();
   selection.removeAllRanges();
 });

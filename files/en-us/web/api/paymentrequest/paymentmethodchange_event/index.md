@@ -25,9 +25,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('paymentmethodchange', event => { });
+addEventListener('paymentmethodchange', (event) => { });
 
-onpaymentmethodchange = event => { };
+onpaymentmethodchange = (event) => { };
 ```
 
 ## Event type
@@ -62,14 +62,14 @@ const paymentRequest = new PaymentRequest(paymentMethods,
 paymentRequest.addEventListener("paymentmethodchange", handlePaymentChange, false);
 
 paymentRequest.show()
-.then(response => response.complete("success"))
-.catch(err => console.error(`Error handling payment request: ${err}`));
+.then((response) => response.complete("success"))
+.catch((err) => console.error(`Error handling payment request: ${err}`));
 ```
 
 The event handler function itself, `handlePaymentChange()`, looks like this:
 
 ```js
-handlePaymentChange = event => {
+handlePaymentChange = (event) => {
   const detailsUpdate = {};
 
   if (event.methodName === "https://apple.com/apple-pay") {
