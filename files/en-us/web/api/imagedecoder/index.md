@@ -80,7 +80,7 @@ function renderImage(result) {
   imageDecoder.decode({frameIndex: ++imageIndex})
       .then(
           (nextResult) => setTimeout(
-              (_) => {
+              () => {
                 renderImage(nextResult);
               },
               result.image.duration / 1000.0))
