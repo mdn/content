@@ -34,7 +34,7 @@ Array(1, 2, 3);    // [1, 2, 3]
 ```js
 Array.of(element0)
 Array.of(element0, element1)
-Array.of(element0, element1, /* ... ,*/ elementN)
+Array.of(element0, element1, /* … ,*/ elementN)
 ```
 
 ### Parameters

@@ -19,7 +19,7 @@ is passed.
 ## Syntax
 
 ```js
-function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { /* ... */ }
+function fnName(param1 = defaultValue1, /* … ,*/ paramN = defaultValueN) { /* … */ }
 ```
 
 ## Description

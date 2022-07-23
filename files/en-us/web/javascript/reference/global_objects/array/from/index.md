@@ -20,18 +20,18 @@ The **`Array.from()`** static method creates a new, shallow-copied `Array` insta
 
 ```js
 // Arrow function
-Array.from(arrayLike, (element) => { /* ... */ } )
-Array.from(arrayLike, (element, index) => { /* ... */ } )
+Array.from(arrayLike, (element) => { /* … */ } )
+Array.from(arrayLike, (element, index) => { /* … */ } )
 
 // Mapping function
 Array.from(arrayLike, mapFn)
 Array.from(arrayLike, mapFn, thisArg)
 
 // Inline mapping function
-Array.from(arrayLike, function mapFn(element) { /* ... */ })
-Array.from(arrayLike, function mapFn(element, index) { /* ... */ })
-Array.from(arrayLike, function mapFn(element) { /* ... */ }, thisArg)
-Array.from(arrayLike, function mapFn(element, index) { /* ... */ }, thisArg)
+Array.from(arrayLike, function mapFn(element) { /* … */ })
+Array.from(arrayLike, function mapFn(element, index) { /* … */ })
+Array.from(arrayLike, function mapFn(element) { /* … */ }, thisArg)
+Array.from(arrayLike, function mapFn(element, index) { /* … */ }, thisArg)
 ```
 
 ### Parameters

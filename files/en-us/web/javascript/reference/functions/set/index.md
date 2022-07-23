@@ -51,7 +51,7 @@ Note the following when working with the `set` syntax:
 - It must not appear in an object literal with another `set` or with a
   data entry for the same property.
   ( `{ set x(v) { }, set x(v) { } }` and
-  `{ x: ..., set x(v) { } }` are forbidden )
+  `{ x: …, set x(v) { } }` are forbidden )
 
 ## Examples
 
