@@ -58,7 +58,7 @@ const eventList = document.querySelector('ul');
 evtSource.addEventListener('message', (e) => {
   const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 });
 ```
@@ -69,7 +69,7 @@ evtSource.addEventListener('message', (e) => {
 evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 };
 ```

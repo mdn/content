@@ -16,41 +16,41 @@ The MathML `<mo>` element represents an operator in a broad sense. Besides opera
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- accent
+- `accent`
   - : If the operator is used as an [under](/en-US/docs/Web/MathML/Element/munder)- or [overscript](/en-US/docs/Web/MathML/Element/mover) this attribute specifies whether the operator should be treated as an accent.
     Allowed values are `true` or `false`.
-- fence
+- `fence`
   - : There is no visual effect for this attribute, but it specifies whether the operator is a fence (such as parentheses).
     Allowed values are `true` or `false`.
-- lspace
+- `lspace`
   - : The amount of space before the operator (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units). The constant `thickmathspace` (5/18em) is the default value.
 
-- maxsize
+- `maxsize`
 
   - : If `stretchy` is `true`, this attribute specifies the maximum size of the operator. Allowed values are:
 
     - `infinity`
     - an arbitrary [length](/en-US/docs/Web/MathML/Attribute/Values#lengths)
 
-- minsize
+- `minsize`
 
   - : If `stretchy` is `true`, this attribute specifies the minimum size of the operator. Allowed values are:
 
     - `infinity`
     - an arbitrary [length](/en-US/docs/Web/MathML/Attribute/Values#lengths)
 
-- movablelimits
+- `movablelimits`
   - : Specifies whether attached under- and overscripts move to sub- and superscript positions when `displaystyle` is `false`.
     Allowed values are either `true` or `false.`
-- rspace
+- `rspace`
   - : The amount of space after the operator (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units). The constant `thickmathspace` (5/18em) is the default value.
-- separator
+- `separator`
   - : There is no visual effect for this attribute, but it specifies whether the operator is a separator (such as commas).
     Allowed values are `true` or `false`.
-- stretchy
+- `stretchy`
   - : Specifies whether the operator stretches to the size of the adjacent element.
     Allowed values are `true` or `false`.
-- symmetric
+- `symmetric`
   - : If `stretchy` is `true`, this attribute specifies whether the operator should be vertically symmetric around the imaginary math axis (centered fraction line).
     The default value is `true` if **stretchy** is set to `true` and otherwise `false`. Allowed values are `true` or `false`.
 
@@ -66,13 +66,13 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 </mrow>
 
 <mrow>
-  <mo> [ </mo> <!-- default form value: prefix -->
+  <mo>[</mo> <!-- default form value: prefix -->
   <mrow>
-    <mn> 0 </mn>
-    <mo> ; </mo> <!-- default form value: infix -->
-    <mn> 1 </mn>
+    <mn>0</mn>
+    <mo>;</mo> <!-- default form value: infix -->
+    <mn>1</mn>
   </mrow>
-  <mo> ) </mo> <!-- default form value: postfix -->
+  <mo>)</mo> <!-- default form value: postfix -->
 </mrow>
 
 </math>
@@ -85,8 +85,3 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with Gecko 16.0 {{ geckoRelease("16.0") }} the default values for `lspace` and `rspace` have been corrected to match the MathML3 specification. They now default to the constant `thickmathspace` (5/18em).
-- Any [linebreaking](https://www.w3.org/TR/MathML3/chapter3.html#presm.lbattrs) or [indentation attributes](https://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs) are not implemented yet. See {{ bug("534962") }}.

@@ -59,8 +59,6 @@ In contrast, JavaScript descends in spirit from a line of smaller, dynamically t
 | Variable data types are not declared (dynamic typing, loosely typed).                                                                                                        | Variable data types must be declared (static typing, strongly typed).                                                                                                                    |
 | Cannot automatically write to hard disk.                                                                                                                                     | Can automatically write to hard disk.                                                                                                                                                    |
 
-For more information on the differences between JavaScript and Java, see the chapter [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
-
 ## JavaScript and the ECMAScript specification
 
 JavaScript is standardized at [Ecma International](https://www.ecma-international.org/) — the European association for standardizing information and communication systems (ECMA was formerly an acronym for the European Computer Manufacturers Association) to deliver a standardized, international programming language based on JavaScript. This standardized version of JavaScript, called ECMAScript, behaves the same way in all applications that support the standard. Companies can use the open standard language to develop their implementation of JavaScript. The ECMAScript standard is documented in the ECMA-262 specification.

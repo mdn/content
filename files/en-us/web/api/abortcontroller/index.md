@@ -63,7 +63,7 @@ function fetchVideo() {
       console.log('Download complete', response);
     })
     .catch(function(e) {
-      console.log('Download error: ' + e.message);
+      console.log(`Download error: ${e.message}`);
     });
 }
 ```

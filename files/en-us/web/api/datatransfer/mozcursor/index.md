@@ -45,7 +45,7 @@ This example shows the use of the `mozCursor` property.
 function drop_handler(event)
 {
   const dragData = event.dataTransfer;
-  console.log("mozCursor = " + dragData.mozCursor);
+  console.log(`mozCursor = ${dragData.mozCursor}`);
 }
 ```
 

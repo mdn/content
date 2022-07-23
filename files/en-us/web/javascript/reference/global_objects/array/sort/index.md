@@ -27,13 +27,13 @@ implementation.
 sort()
 
 // Arrow function
-sort((a, b) => { /* ... */ } )
+sort((a, b) => { /* … */ } )
 
 // Compare function
 sort(compareFn)
 
 // Inline compare function
-sort(function compareFn(a, b) { /* ... */ })
+sort(function compareFn(a, b) { /* … */ })
 ```
 
 ### Parameters

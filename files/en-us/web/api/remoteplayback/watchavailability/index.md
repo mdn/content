@@ -44,7 +44,7 @@ In the following example, after checking that there is no currently connected de
  if (video.remote.state == 'disconnected') {
   video.remote.watchAvailability(handleAvailabilityChange)
   .then(id => {
-    log('> Started watching remote device availability: ' + id);
+    log(`> Started watching remote device availability: ${id}`);
     callbackId = id
   });
 }

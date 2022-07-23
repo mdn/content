@@ -87,7 +87,7 @@ The following connections are blocked and won't load:
 
   var es = new EventSource("https://not-example.com/");
 
-  navigator.sendBeacon("https://not-example.com/", { ... });
+  navigator.sendBeacon("https://not-example.com/", { /* … */ });
 </script>
 ```
 

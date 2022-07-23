@@ -24026,12 +24026,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/AddressErrors/languageCode": {
-    "modified": "2020-10-15T22:08:58.855Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/AddressErrors/organization": {
     "modified": "2020-10-15T22:08:47.486Z",
     "contributors": [
@@ -60884,19 +60878,6 @@
     "modified": "2020-10-15T21:49:11.658Z",
     "contributors": [
       "Sheppy",
-      "fscholz",
-      "jpmedley",
-      "chrisdavidmills",
-      "libbymc",
-      "dgashmdn"
-    ]
-  },
-  "Web/API/PaymentAddress/languageCode": {
-    "modified": "2020-10-15T21:49:13.400Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy",
-      "marcoscaceres",
       "fscholz",
       "jpmedley",
       "chrisdavidmills",
@@ -120592,73 +120573,6 @@
       "JesseW"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-04-28T05:04:03.030Z",
-    "contributors": [
-      "xfq",
-      "wbamberg",
-      "kp2017",
-      "devoutprogrammer",
-      "MoTTs",
-      "chrisdavidmills",
-      "zhuzhangliang",
-      "AnirudhKishan",
-      "ytxmobile",
-      "dennisvang",
-      "shadowlion",
-      "krisb1220",
-      "Wenfang_Du",
-      "schlagi123",
-      "jamesray1",
-      "saintstarrow",
-      "gajjargaurav",
-      "fscholz",
-      "antalovc",
-      "cardin",
-      "rousan",
-      "jjperuzzi",
-      "SphinxKnight",
-      "andrpueb",
-      "nmve",
-      "crueschenberg",
-      "zhanglianxin",
-      "jwsohn",
-      "Jeremie",
-      "rishianand",
-      "taodo2291",
-      "gllona",
-      "an0o0nym",
-      "x2357",
-      "vivekoza",
-      "Pointy",
-      "gportioli",
-      "theironprice",
-      "romski",
-      "teoli",
-      "enTropy",
-      "ZiyiLIU",
-      "bergus",
-      "will279",
-      "maen78",
-      "NinjaTux",
-      "kscarfone",
-      "xflin",
-      "raztus",
-      "Sheppy",
-      "kro3mer",
-      "MDNion",
-      "manikk",
-      "MiroslavTrninic",
-      "ethertank",
-      "lmorchard",
-      "lincolnbrito",
-      "xorgnz",
-      "Johnjbarton",
-      "user01",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-11-19T11:36:18.318Z",
     "contributors": [
@@ -121832,43 +121746,6 @@
       "syssgx",
       "brtk",
       "Ms2ger"
-    ]
-  },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-06-04T11:09:31.571Z",
-    "contributors": [
-      "JonDevOps",
-      "fscholz",
-      "TejasC1990",
-      "walonge",
-      "Robg1",
-      "seeplusplus",
-      "AliMD",
-      "ple103",
-      "rwaldron",
-      "LJHarb",
-      "Annevk",
-      "kdex",
-      "MichelAlonso",
-      "xfq",
-      "Jeremie",
-      "Priyanka13",
-      "Timmi",
-      "Sheppy",
-      "ethertank",
-      "Norbert",
-      "F1Com",
-      "Sroucheray",
-      "Nickolay",
-      "user01",
-      "LiteralKa",
-      "DavidCary",
-      "Graydon",
-      "Dan Smith",
-      "Mgjbot",
-      "Ptak82",
-      "Waldo",
-      "Pmash"
     ]
   },
   "Web/JavaScript/Memory_Management": {

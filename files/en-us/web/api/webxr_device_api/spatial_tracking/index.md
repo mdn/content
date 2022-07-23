@@ -88,7 +88,7 @@ function myDrawFrame(currentFrameTime, frame) {
   animationFrameRequestID = session.requestAnimationFrame(myDrawFrame);
 
   if (viewerPose) {
-    /* ... render the frame ... */
+    // render the frame
   }
 }
 ```

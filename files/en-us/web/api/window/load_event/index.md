@@ -65,8 +65,8 @@ window.onload = (event) => {
 </div>
 
 <div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+  <label for="eventLog">Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30" id="eventLog"></textarea>
 </div>
 ```
 
@@ -114,15 +114,15 @@ reload.addEventListener('click', () => {
 });
 
 window.addEventListener('load', (event) => {
-    log.textContent = log.textContent + 'load\n';
+  log.textContent += 'load\n';
 });
 
 document.addEventListener('readystatechange', (event) => {
-    log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+  log.textContent += `readystate: ${document.readyState}\n`;
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent = log.textContent + `DOMContentLoaded\n`;
+  log.textContent += `DOMContentLoaded\n`;
 });
 ```
 

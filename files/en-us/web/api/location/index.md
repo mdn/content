@@ -46,7 +46,7 @@ document.body.addEventListener('click', function (evt) {
     evt.preventDefault();
 
     window.location.hash = evt.target.hasAttribute('id')
-        ? '#' + evt.target.getAttribute('id')
+        ? `#${evt.target.getAttribute('id')}`
         : '';
 });
 ```

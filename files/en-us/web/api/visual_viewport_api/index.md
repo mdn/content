@@ -63,11 +63,8 @@ function viewportHandler(event) {
 
     // You could also do this by setting style.left and style.top if you
     // use width: 100% instead.
-    bottomBar.style.transform = 'translate(' +
-                                offsetLeft + 'px,' +
-                                offsetTop + 'px) ' +
-                                'scale(' + 1/viewport.scale + ')'
-    })
+    bottomBar.style.transform = `translate(${offsetLeft}px, ${offsetTop}px) scale(${1 / viewport.scale})`;
+  });
 }
 
 window.visualViewport.addEventListener('scroll', viewportHandler);

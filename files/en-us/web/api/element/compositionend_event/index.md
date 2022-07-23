@@ -55,8 +55,8 @@ inputElement.addEventListener('compositionend', (event) => {
 </div>
 
 <div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="25"></textarea>
+  <label for="eventLog">Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="25" id="eventLog"></textarea>
   <button class="clear-log">Clear</button>
 </div>
 ```
@@ -107,7 +107,7 @@ clearLog.addEventListener('click', () => {
 });
 
 function handleEvent(event) {
-    log.textContent = log.textContent + `${event.type}: ${event.data}\n`;
+    log.textContent += `${event.type}: ${event.data}\n`;
 }
 
 inputElement.addEventListener('compositionstart', handleEvent);

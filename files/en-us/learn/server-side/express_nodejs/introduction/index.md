@@ -121,7 +121,7 @@ While _Express_ itself is fairly minimalist, developers have created compatible 
 
 Node was initially released, for Linux only, in 2009. The NPM package manager was released in 2010, and native Windows support was added in 2012. Delve into [Wikipedia](https://en.wikipedia.org/wiki/Node.js#History) if you want to know more.
 
-Express was initially released in November 2010 and is currently on version 4.17.3 of the API (with 5.0 in "beta"). You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
+Express was initially released in November 2010 and is currently on major version 4 of the API. You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
 
 ## How popular are Node and Express?
 

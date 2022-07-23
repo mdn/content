@@ -18,7 +18,7 @@ If an HTTP response includes the {{HTTPHeader("Accept-Ranges")}} header and its 
 curl -I http://i.imgur.com/z4d4kWk.jpg
 
 HTTP/1.1 200 OK
-...
+…
 Accept-Ranges: bytes
 Content-Length: 146515
 ```
@@ -31,7 +31,7 @@ If sites omit the `Accept-Ranges` header, they likely don't support partial requ
 curl -I https://www.youtube.com/watch?v=EwTZ2xpQwpA
 
 HTTP/1.1 200 OK
-...
+…
 Accept-Ranges: none
 ```
 
@@ -63,7 +63,7 @@ The server responses with the {{HTTPStatus("206")}} `Partial Content` status:
 HTTP/1.1 206 Partial Content
 Content-Range: bytes 0-1023/146515
 Content-Length: 1024
-...
+…
 (binary content)
 ```
 

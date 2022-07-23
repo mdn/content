@@ -66,9 +66,9 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 
 ## Other documentation
 
-- [Developer Tools Performance Features](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
-  - : This section provides information on how to use and understand the performance features in your developer tools, including [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html), [Call Tree](https://firefox-source-docs.mozilla.org/devtools-user/performance/call_tree/index.html), and [Flame Charts](https://firefox-source-docs.mozilla.org/devtools-user/performance/flame_chart/index.html).
-- [Profiling with the built-in profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
+- [Firefox Profiler Performance Features](https://profiler.firefox.com/docs/#/)
+  - : This website provides information on how to use and understand the performance features in your developer tools, including [Call Tree](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-call-tree), [Flame Graph](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-flame-graph), [Stack Chart](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-stack-chart), [Marker Chart](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-marker-chart) and [Network Chart](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-network-chart).
+- [Profiling with the built-in profiler](https://profiler.firefox.com/docs/#/./guide-getting-started)
   - : Learn how to profile app performance with Firefox's built-in profiler.
 
 ## Glossary Terms
@@ -182,10 +182,7 @@ Headers
 
 Tools
 
-- [Performance in Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
-- Flame charts
-- The Network panel
-- Waterfall charts
+- [Performance in Firefox Developer Tools](https://profiler.firefox.com/docs/#/)
 
 Additional Metrics
 

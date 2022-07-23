@@ -113,7 +113,7 @@ function onMessage(e) {
   const listItem = document.createElement('li');
   listItem.textContent = e.data;
   list.appendChild(listItem);
-  port2.postMessage('Message received by IFrame: "' + e.data + '"');
+  port2.postMessage(`Message received by IFrame: "${e.data}"`);
 }
 ```
 

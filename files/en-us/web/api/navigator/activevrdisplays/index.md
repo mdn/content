@@ -34,7 +34,7 @@ An array of {{domxref("VRDisplay")}} objects.
 function showActive() {
   const displays = navigator.activeVRDisplays;
   for(let i = 0; i < displays.length; i++) {
-    console.log('Display ' + displays[i].displayId + ' is active.');
+    console.log(`Display ${displays[i].displayId} is active.`);
   }
 }
 ```

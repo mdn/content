@@ -28,12 +28,10 @@ A {{domxref("DocumentType")}} object.
 ```js
 var doctypeObj = document.doctype;
 
-console.log(
-  "doctypeObj.name: "           + doctypeObj.name            + "\n" +
-  "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
-  "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
-  "doctypeObj.systemId: "       + doctypeObj.systemId
-);
+console.log(`doctypeObj.name: ${doctypeObj.name}`);
+console.log(`doctypeObj.internalSubset: ${doctypeObj.internalSubset}`);
+console.log(`doctypeObj.publicId: ${doctypeObj.publicId}`);
+console.log(`doctypeObj.systemId: ${doctypeObj.systemId}`);
 ```
 
 ## Notes

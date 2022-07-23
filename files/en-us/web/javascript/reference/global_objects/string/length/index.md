@@ -20,7 +20,7 @@ The **`length`** property of a {{jsxref("String")}} object contains the length o
 
 This property returns the number of code units in the string. {{interwiki("wikipedia", "UTF-16")}}, the string format used by JavaScript, uses a single 16-bit code unit to represent the most common characters, but needs to use two code units for less commonly-used characters, so it's possible for the value returned by `length` to not match the actual number of Unicode characters in the string.
 
-ECMAScript 2016 (ed. 7) established a maximum length of `2^53 - 1` elements. Previously, no maximum length was specified. In Firefox, strings have a maximum length of `2**30 - 2` (\~1GB). In versions prior to Firefox 65, the maximum length was `2**28 - 1` (\~256MB).
+ECMAScript 2016 (ed. 7) established a maximum length of 2<sup>53</sup> - 1 elements. Previously, no maximum length was specified. In Firefox, strings have a maximum length of 2<sup>30</sup> - 2 (\~1GB). In versions prior to Firefox 65, the maximum length was 2<sup>28</sup> - 1 (\~256MB).
 
 For an empty string, `length` is 0.
 

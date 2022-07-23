@@ -188,7 +188,7 @@ Finally, for each of the examples we will generate a 4x4 matrix, then update the
 ```js
 // Create the matrix3d style property from a matrix array
 function matrixArrayToCssMatrix(array) {
-  return 'matrix3d(' + array.join(',') + ')';
+  return `matrix3d(${array.join(',')})`;
 }
 
 // Grab the DOM element

@@ -42,8 +42,8 @@ A generic {{domxref("Event")}}.
     <video controls width="250"></video>
 
     <div class="event-log">
-        <label>Event log:</label>
-        <textarea readonly class="event-log-contents"></textarea>
+        <label for="eventLog">Event log:</label>
+        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
     </div>
 
 </div>
@@ -93,7 +93,7 @@ const eventLog = document.querySelector('.event-log-contents');
 let source = null;
 
 function handleEvent(event) {
-    eventLog.textContent = eventLog.textContent + `${event.type}\n`;
+    eventLog.textContent += `${event.type}\n`;
 }
 
 video.addEventListener('loadstart', handleEvent);

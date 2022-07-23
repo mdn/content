@@ -30,7 +30,7 @@ updates.
 setImmediate(func)
 setImmediate(func, param0)
 setImmediate(func, param0, param1)
-setImmediate(func, param0, param1, /* ... ,*/ paramN)
+setImmediate(func, param0, param1, /* … ,*/ paramN)
 ```
 
 ### Parameters
@@ -38,7 +38,7 @@ setImmediate(func, param0, param1, /* ... ,*/ paramN)
 - `func`
   - :  The function you wish to call.
 
-- `param0, ..., paramN`
+- `param0`, …, `paramN`
   - : All parameters will be passed directly to your function.
 
 ### Return value

@@ -26,7 +26,7 @@ A string representing the language of the device.
 ```js
 for(let i = 0; i < voices.length ; i++) {
   const option = document.createElement('option');
-  option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+  option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
   if(voices[i].default) {
     option.textContent += ' — DEFAULT';

@@ -79,7 +79,7 @@ In the worker, we can respond when the message is received by writing an event h
 ```js
 onmessage = function(e) {
   console.log('Message received from main script');
-  const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  const workerResult = `Result: ${e.data[0] * e.data[1]}`;
   console.log('Posting message back to main script');
   postMessage(workerResult);
 }
@@ -188,7 +188,7 @@ onconnect = function(e) {
   const port = e.ports[0];
 
   port.onmessage = function(e) {
-    const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   }
 }
@@ -239,7 +239,7 @@ To illustrate this, let's create a function named `emulateMessage()`, which will
 
 ```js
 function emulateMessage(vVal) {
-    return eval('(' + JSON.stringify(vVal) + ')');
+    return eval(`(${JSON.stringify(vVal)})`);
 }
 
 // Tests
@@ -285,7 +285,7 @@ A value that is cloned and not shared is called _message_. As you will probably 
 const myWorker = new Worker('my_task.js');
 
 myWorker.onmessage = function(oEvent) {
-  console.log('Worker said : ' + oEvent.data);
+  console.log(`Worker said : ${oEvent.data}`);
 };
 
 myWorker.postMessage('ali');
@@ -297,7 +297,7 @@ myWorker.postMessage('ali');
 postMessage("I\'m working before postMessage(\'ali\').");
 
 onmessage = function(oEvent) {
-  postMessage('Hi ' + oEvent.data);
+  postMessage(`Hi ${oEvent.data}`);
 };
 ```
 
@@ -628,7 +628,7 @@ It is also worth noting that you can also convert a function into a Blob, then g
 
 ```js
 function fn2workerURL(fn) {
-  const blob = new Blob(['('+fn.toString()+')()'], {type: 'text/javascript'})
+  const blob = new Blob([`(${fn.toString()})()`], {type: 'text/javascript'})
   return URL.createObjectURL(blob)
 }
 ```

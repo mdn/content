@@ -22,7 +22,7 @@ The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [
 
 Content within each `<a>` **should** indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{EmbedInteractiveExample("pages/tabbed/a.html", "tabbed-shorter")}}
 
 ## Attributes
 

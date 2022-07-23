@@ -19,7 +19,7 @@ Events can be created with the [`Event`](/en-US/docs/Web/API/Event) constructor 
 const event = new Event('build');
 
 // Listen for the event.
-elem.addEventListener('build', function (e) { /* ... */ }, false);
+elem.addEventListener('build', function (e) { /* … */ }, false);
 
 // Dispatch the event.
 elem.dispatchEvent(event);

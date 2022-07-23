@@ -33,8 +33,7 @@ Use the `needsRedraw` property to check if a layer needs to be redrawn and then 
 
 ```js
 function onXRFrame(time, frame) {
-
-  /* ... */
+  // …
 
   if (quadLayer.needsRedraw) {
     // redraw the layer

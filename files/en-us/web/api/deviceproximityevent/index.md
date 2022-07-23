@@ -29,7 +29,7 @@ The **`DeviceProximityEvent`** interface provides information about the distance
 
 ```js
 window.addEventListener('deviceproximity', function(event) {
-  console.log("value: " + event.value, "max: " + event.max, "min: " + event.min);
+  console.log(`value: ${event.value}`, `max: ${event.max}`, `min: ${event.min}`);
 });
 ```
 

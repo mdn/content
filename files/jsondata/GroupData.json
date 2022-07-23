@@ -750,7 +750,9 @@
       "overview": ["Intersection Observer API"],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": [],
+      "properties": [
+        "indexedDB"
+      ],
       "events": []
     },
     "Layout Instability API": {

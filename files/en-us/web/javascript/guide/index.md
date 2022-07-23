@@ -119,13 +119,14 @@ Overview: [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_O
 - [Defining methods](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods)
 - [Getter and setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
 
-## Details of the object model
+## Using classes
 
-Overview: [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+Overview: [Using classes](/en-US/docs/Web/JavaScript/Using_Classes)
 
-- [Prototype-based OOP](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages)
-- [Creating object hierarchies](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#creating_the_hierarchy)
-- [Inheritance](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#property_inheritance_revisited)
+- [Declaring a class](/en-US/docs/Web/JavaScript/Using_Classes#declaring_a_class)
+- [Various class features](/en-US/docs/Web/JavaScript/Guide/Using_Classes#constructor)
+- [Extends and inheritance](/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
+- [Why classes?](/en-US/docs/Web/JavaScript/Guide/Using_Classes#why_classes)
 
 ## Promises
 

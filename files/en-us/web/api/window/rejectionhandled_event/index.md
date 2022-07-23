@@ -60,7 +60,7 @@ You can use the `rejectionhandled` event to log promises that get rejected to th
 
 ```js
 window.addEventListener("rejectionhandled", event => {
-  console.log("Promise rejected; reason: " + event.reason);
+  console.log(`Promise rejected; reason: ${event.reason}`);
 }, false);
 ```
 

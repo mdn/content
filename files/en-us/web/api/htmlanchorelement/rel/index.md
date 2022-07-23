@@ -28,7 +28,7 @@ A string.
 var anchors = document.getElementsByTagName("a");
 var length = anchors.length;
 for (var i = 0; i < length; i++) {
-  alert("Rel: " + anchors[i].rel);
+  alert(`Rel: ${anchors[i].rel}`);
 }
 ```
 

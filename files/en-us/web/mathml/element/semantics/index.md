@@ -35,15 +35,15 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 The following attributes can be set on `<annotation>` and `<annotation-xml>`:
 
-- definitionURL
+- `definitionURL`
   - : The location of the annotation key symbol.
-- encoding
+- `encoding`
   - : The encoding of the semantic information in the annotation (e.g. "MathML-Content", "MathML-Presentation", "application/openmath+xml", "image/png")
-- cd
+- `cd`
   - : The content dictionary that contains the annotation key symbol.
-- name
+- `name`
   - : The name of the annotation key symbol.
-- src
+- `src`
   - : The location of an external source for semantic information.
 
 ## Example
@@ -94,8 +94,3 @@ The following attributes can be set on `<annotation>` and `<annotation-xml>`:
 ## Browser compatibility
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- The algorithm of determining the visible child in `<semantics>` has been corrected in {{geckoRelease("23")}} to match the MathML specification. In prior versions the first child element has been rendered.
-- In Gecko `<annotation>` and `<annotation-xml>` elements are ignored if the `src` attribute is set.

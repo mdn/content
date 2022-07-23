@@ -27,9 +27,9 @@ The following example shows how to read the contents of an NDEF message. It firs
 ndefReaderInst.onreading = event => {
   const ndefMessage = event.message;
   for (const record of ndefMessage.records) {
-    console.log("Record type:  " + record.recordType);
-    console.log("MIME type:    " + record.mediaType);
-    console.log("Record id:    " + record.id);
+    console.log(`Record type:  ${record.recordType}`);
+    console.log(`MIME type:    ${record.mediaType}`);
+    console.log(`Record id:    ${record.id}`);
     switch (record.recordType) {
       case "text":
         // TODO: Read text record with record data, lang, and encoding.

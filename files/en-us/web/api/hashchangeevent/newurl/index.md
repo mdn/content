@@ -24,7 +24,7 @@ A string.
 
 ```js
 window.addEventListener('hashchange', function(event) {
-  console.log('Hash changed to ' + event.newURL);
+  console.log(`Hash changed to ${event.newURL}`);
 });
 ```
 

@@ -146,7 +146,7 @@ The {{domxref("Window.orientationchange_event", "orientationchange")}} event is 
 
 ```js
 screen.addEventListener("orientationchange", function () {
-  console.log("The orientation of the screen is: " + screen.orientation);
+  console.log(`The orientation of the screen is: ${screen.orientation}`);
 });
 ```
 

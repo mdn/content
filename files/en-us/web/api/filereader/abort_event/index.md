@@ -64,8 +64,8 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
     <img src="" class="preview" height="200" alt="Image preview">
 
     <div class="event-log">
-        <label>Event log:</label>
-        <textarea readonly class="event-log-contents"></textarea>
+        <label for="eventLog">Event log:</label>
+        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
     </div>
 
   </div>
@@ -121,7 +121,7 @@ const eventLog = document.querySelector('.event-log-contents');
 const reader = new FileReader();
 
 function handleEvent(event) {
-    eventLog.textContent = eventLog.textContent + `${event.type}: ${event.loaded} bytes transferred\n`;
+    eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
 
     if (event.type === "load") {
         preview.src = reader.result;

@@ -43,7 +43,7 @@ someElement.addEventListener('touchstart', function(e) {
      // Add code to "switch" based on the force value. For example
      // minimum pressure vs. maximum pressure could result in
      // different handling of the user's input.
-     console.log("targetTouches[" + i + "].force = " + e.targetTouches[i].force);
+     console.log(`targetTouches[${i}].force = ${e.targetTouches[i].force}`);
    }
 }, false);
 ```

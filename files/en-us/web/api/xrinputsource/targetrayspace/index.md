@@ -93,7 +93,7 @@ function updateInputSources(session, frame, refSpace) {
       }
     }
 
-    /* ... */
+    // …
   }
 }
 ```

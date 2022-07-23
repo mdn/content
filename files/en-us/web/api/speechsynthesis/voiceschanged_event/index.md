@@ -37,7 +37,7 @@ synth.addEventListener('voiceschanged', function() {
   const voices = synth.getVoices();
   for(let i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+    option.textContent = `${voices[i].name} (${voices[i].lang})`;
     option.setAttribute('data-lang', voices[i].lang);
     option.setAttribute('data-name', voices[i].name);
     voiceSelect.appendChild(option);
@@ -53,7 +53,7 @@ synth.onvoiceschanged = function() {
   const voices = synth.getVoices();
   for(let i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+    option.textContent = `${voices[i].name} (${voices[i].lang})`;
     option.setAttribute('data-lang', voices[i].lang);
     option.setAttribute('data-name', voices[i].name);
     voiceSelect.appendChild(option);

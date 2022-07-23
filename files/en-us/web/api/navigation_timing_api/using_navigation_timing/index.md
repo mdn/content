@@ -24,8 +24,7 @@ window.addEventListener("load", function() {
   let now = new Date().getTime();
   let loadingTime = now - performance.timing.navigationStart;
 
-  document.querySelector(".output").innerText =
-        loadingTime + " ms";
+  document.querySelector(".output").innerText = `${loadingTime} ms`;
 }, false);
 ```
 
@@ -68,7 +67,7 @@ window.addEventListener("load", function() {
   let now = new Date().getTime();
   let loadingTime = now - performance.timing.navigationStart;
 
-  output = "Load time: " + loadingTime + " ms<br/>";
+  output = `Load time: ${loadingTime} ms<br/>`;
   output += "Navigation type: ";
 
   switch(performance.navigation.type) {
@@ -86,8 +85,7 @@ window.addEventListener("load", function() {
       break;
   }
 
-  output += "<br/>Redirects: " +
-      performance.navigation.redirectCount;
+  output += `<br/>Redirects: ${performance.navigation.redirectCount}`;
   document.querySelector(".output").innerHTML = output;
 }, false);
 ```

@@ -29,9 +29,9 @@ The **`dblclick`** event fires when a pointing device button (such as a mouse's 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('auxclick', (event) => {});
+addEventListener('dblclick', (event) => {});
 
-onauxclick = (event) => { };
+ondblclick = (event) => { };
 ```
 
 ## Event type

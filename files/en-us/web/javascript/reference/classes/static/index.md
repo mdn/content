@@ -19,7 +19,7 @@ Static methods are often utility functions, such as functions to create or clone
 
 > **Note:** In the context of classes, MDN Web Docs content uses the terms properties and [fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) interchangeably.
 
-{{EmbedInteractiveExample("pages/js/classes-static.html")}}
+{{EmbedInteractiveExample("pages/js/classes-static.html", "taller")}}
 
 ## Syntax
 

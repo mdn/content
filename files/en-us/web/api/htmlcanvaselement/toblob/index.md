@@ -105,7 +105,7 @@ function blobCallback(iconName) {
     a.textContent = 'Download';
     document.body.appendChild(a);
     a.style.display = 'block';
-    a.download = iconName + '.ico';
+    a.download = `${iconName}.ico`;
     a.href = window.URL.createObjectURL(b);
   }
 }
@@ -136,9 +136,9 @@ function blobCallback(iconName) {
     // r.result contains the ArrayBuffer.
     Cu.import('resource://gre/modules/osfile.jsm');
     const writePath = OS.Path.join(OS.Constants.Path.desktopDir,
-                                 iconName + '.ico');
+                                 `${iconName}.ico`);
     const promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result),
-                                      {tmpPath:writePath + '.tmp'});
+                                      {tmpPath:`${writePath}.tmp`});
     promise.then(
       function() {
         console.log('successfully wrote file');

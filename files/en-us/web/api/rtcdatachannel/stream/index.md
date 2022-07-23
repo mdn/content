@@ -36,7 +36,7 @@ uniquely identifies the data channel.
 ```js
 const dataChannel = pc.createDataChannel("SampleChannel");
 
-console.log("Data channel stream ID: " + dataChannel.stream);
+console.log(`Data channel stream ID: ${dataChannel.stream}`);
 ```
 
 ## Specifications
