@@ -400,7 +400,7 @@ Update the contents of `NewTodo.svelte` like so:
 
 </script>
 
-<form on:submit|preventDefault={addTodo} (on:keydown={e) => e.key === 'Escape' && onCancel()}>
+<form on:submit|preventDefault={addTodo} on:keydown={(e) => e.key === 'Escape' && onCancel()}>
   <h2 class="label-wrapper">
     <label for="todo-0" class="label__lg">What needs to be done?</label>
   </h2>
