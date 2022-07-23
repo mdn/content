@@ -47,7 +47,7 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 ```js
 const devices = await navigator.mediaDevices.enumerateDevices();
-const audioDevices = devices.filter(device => device.kind === 'audiooutput');
+const audioDevices = devices.filter((device) => device.kind === 'audiooutput');
 const audio = document.createElement('audio');
 await audio.setSinkId(audioDevices[0].deviceId);
 console.log(`Audio is being played on ${audio.sinkId}`);

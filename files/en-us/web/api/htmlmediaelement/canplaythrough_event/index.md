@@ -21,9 +21,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('canplaythrough', event => { });
+addEventListener('canplaythrough', (event) => { });
 
-oncanplaythrough = event => { };
+oncanplaythrough = (event) => { };
 ```
 
 ## Event type

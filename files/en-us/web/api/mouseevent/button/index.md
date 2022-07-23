@@ -53,7 +53,7 @@ Others may have many buttons mapped to different functions and button values.
 
 ```js
 let button = document.querySelector('#button');
-button.addEventListener('mouseup', e => {
+button.addEventListener('mouseup', (e) => {
   let log = document.querySelector('#log');
   switch (e.button) {
     case 0:
