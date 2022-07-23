@@ -379,7 +379,7 @@ For this example we call the method if a button is clicked with a reason "user c
 We also log when the cancel operation completes.
 
 ```js
-button.addEventListener('click', () => { reader.cancel("user choice").then() => { logConsumer(`reader.cancel complete`) }) } );
+button.addEventListener('click', () => { reader.cancel("user choice").then(() => { logConsumer(`reader.cancel complete`) }) } );
 ```
 
 {{domxref("ReadableStreamBYOBReader.releaseLock()")}} can be used to release the reader without cancelling the stream.
@@ -393,8 +393,8 @@ While no errors are expected in this case, the following code should log the com
 
 ```js
 reader.closed
-  .then() => { logConsumer("ReadableStreamBYOBReader.closed: resolved")} )
-  .catch() => { logConsumer("ReadableStreamBYOBReader.closed: rejected:")} );
+  .then(() => { logConsumer("ReadableStreamBYOBReader.closed: resolved")} )
+  .catch(() => { logConsumer("ReadableStreamBYOBReader.closed: rejected:")} );
 ```
 
 #### Result
