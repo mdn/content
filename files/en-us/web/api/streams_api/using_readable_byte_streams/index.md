@@ -273,7 +273,6 @@ function makeSocketStream(host, port) {
 
     start(controller) {
       readRepeatedly().catch((e) => controller.error(e));
-          
       function readRepeatedly() {
         return socket.select2().then(() => {
           // Since the socket can become readable even when there’s
