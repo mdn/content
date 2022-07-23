@@ -55,7 +55,7 @@ Let's decompose a "traditional anonymous function" down to the simplest "arrow f
 (a) => a + 100;
 
 // 3. Remove the argument parentheses
-(a) => a + 100;
+a => a + 100;
 ```
 
 The { braces } and ( parentheses ) and "return" are required in some cases.
