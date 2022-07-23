@@ -333,11 +333,11 @@ registerPaint('headerHighlight', class {
     for (let i = 0; i < 4; i++) {
       let start = i * 2;
       ctx.beginPath();
-      ctx.moveTo( (blockWidth) + (start * 10) + 10, y );
-      ctx.lineTo( (blockWidth) + (start * 10) + 20, y );
-      ctx.lineTo( (blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight );
-      ctx.lineTo( (blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight );
-      ctx.lineTo( (blockWidth) + (start * 10) + 10, y );
+      ctx.moveTo\(\(blockWidth) + (start * 10) + 10, y );
+      ctx.lineTo\(\(blockWidth) + (start * 10) + 20, y );
+      ctx.lineTo\(\(blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight );
+      ctx.lineTo\(\(blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight );
+      ctx.lineTo\(\(blockWidth) + (start * 10) + 10, y );
       ctx.closePath();
       ctx.fill();
     }

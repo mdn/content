@@ -119,7 +119,7 @@ const inventory = [
   {name: 'cherries', quantity: 5}
 ];
 
-const result = inventory.find( ({ name }) => name === 'cherries' );
+const result = inventory.find\(\({ name }) => name === 'cherries' );
 
 console.log(result) // { name: 'cherries', quantity: 5 }
 ```

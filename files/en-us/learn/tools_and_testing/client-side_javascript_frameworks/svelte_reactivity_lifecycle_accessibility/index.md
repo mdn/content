@@ -218,7 +218,7 @@ We could also access the `todos` array by index, like this:
 
 ```js
 const checkAllTodos = (completed) => {
-  todos.forEach( (t,i) => todos[i].completed = completed)
+  todos.forEach\(\(t,i) => todos[i].completed = completed)
 }
 ```
 
