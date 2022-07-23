@@ -188,7 +188,7 @@ fetch('products.json')
     return response.json();
   })
   .then((json) => initialize(json) )
-  .catch((err) => console.error(`Fetch problem: ${err.message}`) );
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 The `fetch()` function returns a promise. If this completes successfully, the function inside the first `.then()` block contains the `response` returned from the network.
