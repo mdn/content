@@ -134,7 +134,7 @@ fetch(url)
   })
   // When response.text() has succeeded, the `then()` handler is called with
   // the text, and we copy it into the `poemDisplay` box.
-  .then((text) => poemDisplay.textContent = text )
+  .then((text) => poemDisplay.textContent = text)
   // Catch any errors that might happen, and display a message
   // in the `poemDisplay` box.
   .catch((error) => poemDisplay.textContent = `Could not fetch verse: ${error}`);
