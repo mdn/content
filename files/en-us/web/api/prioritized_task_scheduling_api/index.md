@@ -43,7 +43,7 @@ scheduler.postTask(() => 'Task executing')
  // Promise resolved: log task result when promise resolves
  .then((taskResult) => { console.log(`${taskResult}`); })
  // Promise rejected: log AbortError or errors thrown by task
- .catch((error) => { console.log(`Error: ${error}`); });  
+ .catch((error) => { console.error(`Error: ${error}`); });  
 ```
 
 The same task might be waited on using `await`/`async` as shown below (note, this is run in an [Immediately Invoked Function Expression (IIFE)](/en-US/docs/Glossary/IIFE)):
