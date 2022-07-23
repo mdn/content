@@ -53,7 +53,7 @@ This what it should all look like together:
  */
 
 function getLocalStream() {
-    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( (stream) => {
+    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then((stream) => {
         window.localStream = stream;
         window.localAudio.srcObject = stream;
         window.localAudio.autoplay = true;
