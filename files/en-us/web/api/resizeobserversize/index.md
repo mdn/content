@@ -29,7 +29,7 @@ The **`ResizeObserverSize`** interface of the {{domxref('Resize Observer API')}}
 In this example the {{domxref("ResizeObserverEntry.contentBoxSize")}} property returns a `ResizeObserverSize` object. This is an array containing the sizing information for the content box of the observed element.
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
     console.log(entry.contentBoxSize[0]); // a ResizeObserverSize
   }

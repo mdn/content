@@ -125,7 +125,7 @@ async function recursiveValidate(request, response) {
 }
 
 function fixField(requestOrResponse, event, validator) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     // Browser keeps calling this until promise resolves.
     requestOrResponse.addEventListener(event, async function listener(ev) {
       const promiseToValidate = validator(requestOrResponse);

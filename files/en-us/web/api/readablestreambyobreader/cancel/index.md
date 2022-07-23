@@ -46,7 +46,7 @@ The promise resolves when cancellation completes.
 
 ```js
 button.addEventListener('click', () => 
-  { reader.cancel("user choice").then( () => { console.log(`cancel complete`) }) } 
+  { reader.cancel("user choice").then() => { console.log(`cancel complete`) }) } 
 );
 ```
 
