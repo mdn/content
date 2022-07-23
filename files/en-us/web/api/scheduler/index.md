@@ -38,8 +38,8 @@ if ('scheduler' in this) {
   // Post task with default priority: 'user-visible' (no other options)
   // When the task resolves, Promise.then() logs the result.
   scheduler.postTask(() => 'Task executing')
-    .then((taskResult) => { console.log(`${taskResult}`); }) // Log result
-    .catch((error) => { console.log(`Error: ${error}`); });  // Log errors
+    .then((taskResult) => console.log(`${taskResult}`)) // Log result
+    .catch((error) => console.error(`Error: ${error}`));  // Log errors
 }
 ```
 
