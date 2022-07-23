@@ -108,7 +108,7 @@ fetch(url).then((response) => {
     return reader.read().then(process);
   });
 }).catch((err) => {
-  console.log("Something went wrong. See devtools for details. Does the response lack CORS headers?");
+  console.error("Something went wrong. See devtools for details. Does the response lack CORS headers?");
   throw err;
 });
 ```
