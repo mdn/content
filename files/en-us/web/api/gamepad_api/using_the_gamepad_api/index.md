@@ -270,7 +270,7 @@ function updateStatus() {
     scangamepads();
   }
 
-  for (let j in controllers) {
+  for (const j in controllers) {
     const controller = controllers[j];
     const d = document.getElementById(`controller${j}`);
     const buttons = d.getElementsByClassName("button");
