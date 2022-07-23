@@ -17,9 +17,9 @@ The **`levelchange`** event of the [Battery Status API](/en-US/docs/Web/API/Batt
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('levelchange', event => { });
+addEventListener('levelchange', (event) => { });
 
-onlevelchange = event => { };
+onlevelchange = (event) => { };
 ```
 
 ## Event type
@@ -38,7 +38,7 @@ _A generic {{domxref("Event")}}._
 ### JavaScript
 
 ```js
-navigator.getBattery().then(battery => {
+navigator.getBattery().then((battery) => {
   battery.onlevelchange = () => {
     document.querySelector('#level').textContent = battery.level;
 

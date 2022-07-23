@@ -39,7 +39,7 @@ Instead of creating a `Clipboard` object through instantiation, you access the s
 
 ```js
 navigator.clipboard.readText().then(
-  clipText => document.querySelector(".editor").innerText += clipText);
+  (clipText) => document.querySelector(".editor").innerText += clipText);
 ```
 
 This snippet fetches the text from the clipboard and appends it to the first element found with the class `editor`. Since {{domxref("Clipboard.readText", "readText()")}} (and {{domxref("Clipboard.read", "read()")}}, for that matter) returns an empty string if the clipboard isn't text, this code is safe.

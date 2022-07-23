@@ -78,7 +78,7 @@ document.onreadystatechange = function () {
 ### readystatechange as event listener to insert or modify the DOM before DOMContentLoaded
 
 ```js
-document.addEventListener('readystatechange', event => {
+document.addEventListener('readystatechange', (event) => {
   if (event.target.readyState === 'interactive') {
     initLoader();
   }
