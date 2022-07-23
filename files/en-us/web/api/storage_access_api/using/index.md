@@ -39,13 +39,13 @@ document.hasStorageAccess().then((hasAccess) => {
   if (!hasAccess) {
     return document.requestStorageAccess();
   }
-}).then((_) => {
+}).then(() => {
   // Now we have first-party storage access!
 
   // Let's access some items from the first-party cookie jar
   document.cookie = "foo=bar";              // set a cookie
   localStorage.setItem("username", "John"); // access a localStorage entry
-}).catch((_) => {
+}).catch(() => {
   // error obtaining storage access.
 });
 ```
