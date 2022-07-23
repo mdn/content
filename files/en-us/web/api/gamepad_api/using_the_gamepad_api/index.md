@@ -270,7 +270,7 @@ function updateStatus() {
     scangamepads();
   }
 
-  const i = 0;
+  let i = 0;
   let j;
 
   for (j in controllers) {
@@ -280,8 +280,8 @@ function updateStatus() {
 
     for (i = 0; i < controller.buttons.length; i++) {
       const b = buttons[i];
-      const val = controller.buttons[i];
-      const pressed = val == 1.0;
+      let val = controller.buttons[i];
+      let pressed = val == 1.0;
       if (typeof(val) == "object") {
         pressed = val.pressed;
         val = val.value;

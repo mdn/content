@@ -322,11 +322,11 @@ const isFinished = (src.playbackState == src.FINISHED_STATE);
 
 ```js
 // New AudioContext code:
+let isFinished = false;
 const src = context.createBufferSource();
 function endedHandler(event) {
   isFinished = true;
 }
-const isFinished = false;
 src.onended = endedHandler;
 ```
 
