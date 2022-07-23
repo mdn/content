@@ -185,7 +185,7 @@ Next, we'll load our binary into a typed array called `addCode` (as described in
 
 ```js
 WebAssembly.instantiateStreaming(fetch('add.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.add(1, 2));  // "3"
   });
 ```
@@ -224,7 +224,7 @@ The JavaScript code to call our above module looks like so:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('call.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.getAnswerPlus1());  // "43"
   });
 ```
@@ -261,7 +261,7 @@ var importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     obj.instance.exports.logIt();
   });
 ```
@@ -356,7 +356,7 @@ var memory = new WebAssembly.Memory({initial:1});
 var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
 WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     obj.instance.exports.writeHi();
   });
 ```
@@ -472,7 +472,7 @@ We load it into a webpage using the following JavaScript:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.callByIndex(0)); // returns 42
     console.log(obj.instance.exports.callByIndex(1)); // returns 13
     console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table

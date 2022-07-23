@@ -71,7 +71,7 @@ Invoking the `AsyncFunction` constructor as a function (without using the
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -84,7 +84,7 @@ let a = new AsyncFunction('a',
                           'b',
                           'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
 
-a(10, 20).then(v => {
+a(10, 20).then((v) => {
   console.log(v); // prints 30 after 4 seconds
 });
 ```

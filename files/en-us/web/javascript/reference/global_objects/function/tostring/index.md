@@ -90,8 +90,8 @@ Since ES2018, the spec requires the return value of `toString()` to be the exact
       <td><pre class="brush: js">"function* g(){}"</pre></td>
     </tr>
     <tr>
-      <td><pre class="brush: js">a => a</pre></td>
-      <td><pre class="brush: js">"a => a"</pre></td>
+      <td><pre class="brush: (js">a) => a</pre></td>
+      <td><pre class="brush: (js">"a) => a"</pre></td>
     </tr>
     <tr>
       <td><pre class="brush: js">({ a(){} }.a)</pre></td>

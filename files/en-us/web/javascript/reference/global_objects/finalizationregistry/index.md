@@ -21,7 +21,7 @@ A **`FinalizationRegistry`** object lets you request a callback when an object i
 You create the registry passing in the callback:
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
+const registry = new FinalizationRegistry((heldValue) => {
   // …
 });
 ```
@@ -104,7 +104,7 @@ Some notes on cleanup callbacks:
 You create the registry passing in the callback:
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
+const registry = new FinalizationRegistry((heldValue) => {
   // …
 });
 ```

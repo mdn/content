@@ -76,7 +76,7 @@ of depth 1.
 ```js
 const arr = [1, 2, 3, 4];
 
-arr.flatMap(x => [x, x * 2]);
+arr.flatMap((x) => [x, x * 2]);
 // is equivalent to
 const n = arr.length;
 const acc = new Array(n * 2);
@@ -101,14 +101,14 @@ its flexibility and readability are desired.
 ```js
 const arr1 = [1, 2, 3, 4];
 
-arr1.map(x => [x * 2]);
+arr1.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
 // only one level is flattened
-arr1.flatMap(x => [[x * 2]]);
+arr1.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
@@ -120,10 +120,10 @@ Let's generate a list of words from a list of sentences.
 ```js
 const arr1 = ["it's Sunny in", "", "California"];
 
-arr1.map(x => x.split(" "));
+arr1.map((x) => x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap(x => x.split(" "));
+arr1.flatMap((x) => x.split(" "));
 // ["it's","Sunny","in", "", "California"]
 ```
 

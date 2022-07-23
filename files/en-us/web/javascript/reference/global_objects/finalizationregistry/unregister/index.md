@@ -50,7 +50,7 @@ token, then later unregistering it via `unregister`:
 
 ```js
 class Thingy {
-    #cleanup = label => {
+    #cleanup = (label) => {
     //         ^^^^^−−−−− held value
         console.error(
             `The \`release\` method was never called for the object with the label "${label}"`

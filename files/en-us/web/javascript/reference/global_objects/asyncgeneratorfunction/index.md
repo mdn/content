@@ -63,7 +63,7 @@ The following example uses the `AsyncGeneratorFunction` constructor to create an
 const AsyncGeneratorFunction = Object.getPrototypeOf(async function*() {}).constructor;
 const createAsyncGenerator = new AsyncGeneratorFunction('a', 'yield a * 2');
 const asyncGen = createAsyncGenerator(10);
-asyncGen.next().then(res => console.log(res.value)); // 20
+asyncGen.next().then((res) => console.log(res.value)); // 20
 ```
 
 ## Specifications

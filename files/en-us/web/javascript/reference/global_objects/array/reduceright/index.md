@@ -277,7 +277,7 @@ const waterfall = (...functions) => (callback, ...args) =>
     callback
   )(...args);
 
-const randInt = max => Math.floor(Math.random() * max)
+const randInt = (max) => Math.floor(Math.random() * max)
 
 const add5 = (callback, x) => {
   setTimeout(callback, randInt(1000), x + 5);
@@ -306,9 +306,9 @@ computation(console.log, 5) // -> 14
 const computation2 = (input, callback) => {
   const f6 = x=> div4(callback, x);
   const f5 = (x, y) => add(f6, x, y);
-  const f4 = x => split(f5, x);
-  const f3 = x => sub2(f4, x);
-  const f2 = x => mult3(f3, x);
+  const f4 = (x) => split(f5, x);
+  const f3 = (x) => sub2(f4, x);
+  const f2 = (x) => mult3(f3, x);
   add5(f2, input);
 }
 ```
