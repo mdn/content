@@ -78,7 +78,7 @@ navigator.mediaDevices.getUserMedia({video: true})
 .then((photoSettings) => {
   input.value = photoSettings.imageWidth;
 })
-.catch((error) => console.log('Argh!', error.name || error));
+.catch((error) => console.error('Argh!', error.name || error));
 ```
 
 ## Specifications
