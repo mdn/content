@@ -60,7 +60,7 @@ Details of all the keys you can include are given in the table below.
   <tbody>
     <tr>
       <td>
-        <a id="all_frames"><code>all_frames</code></a>
+        <code>all_frames</code>
       </td>
       <td><code>Boolean</code></td>
       <td>
@@ -96,7 +96,7 @@ Details of all the keys you can include are given in the table below.
     </tr>
     <tr>
       <td>
-        <a id="css"><code>css</code></a>
+        <code>css</code>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -120,7 +120,7 @@ Details of all the keys you can include are given in the table below.
     </tr>
     <tr>
       <td>
-        <a id="exclude_globs"><code>exclude_globs</code></a>
+        <code>exclude_globs</code>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -130,7 +130,7 @@ Details of all the keys you can include are given in the table below.
     </tr>
     <tr>
       <td>
-        <a id="exclude_matches"><code>exclude_matches</code></a>
+        <code>exclude_matches</code>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -142,7 +142,7 @@ Details of all the keys you can include are given in the table below.
     </tr>
     <tr>
       <td>
-        <a id="include_globs"><code>include_globs</code></a>
+        <code>include_globs</code>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -152,7 +152,7 @@ Details of all the keys you can include are given in the table below.
     </tr>
     <tr>
       <td>
-        <a id="js"><code>js</code></a>
+        <code>js</code>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -180,7 +180,7 @@ Details of all the keys you can include are given in the table below.
     </tr>
     <tr>
       <td>
-        <code><a id="match_about_blank">match_about_blank</a></code>
+        <code>match_about_blank</code>
       </td>
       <td><code>Boolean</code></td>
       <td>
@@ -230,7 +230,7 @@ Details of all the keys you can include are given in the table below.
     </tr>
     <tr>
       <td>
-        <a id="matches"><code>matches</code></a>
+        <code>matches</code>
       </td>
       <td><code>Array</code></td>
       <td>
@@ -246,7 +246,7 @@ Details of all the keys you can include are given in the table below.
     </tr>
     <tr>
       <td>
-        <a id="run_at"><code>run_at</code></a>
+        <code>run_at</code>
       </td>
       <td><code>String</code></td>
       <td>
