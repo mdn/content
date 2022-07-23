@@ -450,7 +450,7 @@ const func2 = (x, y) => { return x + y; };
 ### Returning object literals
 
 Keep in mind that returning object literals using the concise body syntax
-(`params) => {object:literal}` will not work as expected.
+`(params) => {object:literal}` will not work as expected.
 
 ```js
 const func = () => { foo: 1 };
