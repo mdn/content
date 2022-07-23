@@ -204,7 +204,7 @@ arc changes.
 ```js
 const canvas = document.getElementById('canvas');
 const ctx    = canvas.getContext('2d');
-let radius  = 100;
+let radius   = 100;
 
 const controlOut = document.getElementById('radius-output');
 const control    = document.getElementById('radius');
