@@ -58,7 +58,7 @@ function onGetUserMediaButtonClick() {
     const track = mediaStream.getVideoTracks()[0];
     imageCapture = new ImageCapture(track);
   })
-  .catch((error) => console.log(error));
+  .catch((error) => console.error(error));
 }
 
 function onGrabFrameButtonClick() {
@@ -67,7 +67,7 @@ function onGrabFrameButtonClick() {
     const canvas = document.querySelector('#grabFrameCanvas');
     drawCanvas(canvas, imageBitmap);
   })
-  .catch((error) => console.log(error));
+  .catch((error) => console.error(error));
 }
 
 function onTakePhotoButtonClick() {
