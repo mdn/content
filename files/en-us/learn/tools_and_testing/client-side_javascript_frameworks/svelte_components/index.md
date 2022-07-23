@@ -522,8 +522,8 @@ We also use `todo.id` to create unique ids for the new input controls and labels
     {#each filterTodos(filter, todos) as todo (todo.id)}
       <li class="todo">
         <Todo {todo}
-          (on:update={e) => updateTodo(e.detail)}
-          (on:remove={e) => removeTodo(e.detail)}
+          on:update={(e) => updateTodo(e.detail)}
+          on:remove={(e) => removeTodo(e.detail)}
         />
       </li>
     ```
