@@ -52,11 +52,11 @@ The following are possible:
   ```js
   { value: theChunk, done: false }
   ```
-  
+
   `theChunk` is a view containing the new data.
   This is a view of the same type and over the same backing memory as the `view` passed to the `read()` method.
   The original `view` will be detached and no longer usable.
-  
+
 - If the stream is closed, the promise fulfills with an object of the form (where `theChunk` has the same properties as above):
 
   ```js
@@ -102,13 +102,13 @@ function readStream(reader) {
   let bytesReceived = 0;
   let offset =  0;
 
-  while (offset < buffer.byteLength) {    
+  while (offset < buffer.byteLength) {
     // read() returns a promise that fulfills when a value has been received
     reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(function processBytes({ done, value }) {
       // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
         // value - some data. Always undefined when done is true.
-      
+
       if (done) {
         // There is no more data in the stream
         return;

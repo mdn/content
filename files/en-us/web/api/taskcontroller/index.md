@@ -63,25 +63,21 @@ We then add an event listener for [`prioritychange`](/en-US/docs/Web/API/TaskSig
 The handler uses [previousPolicy](/en-US/docs/Web/API/TaskPriorityChangeEvent/previousPriority) on the event to get the original priority and {{domxref("TaskSignal.priority")}} on the event target to get the new priority.
 
 ```js
-  // Listen for 'prioritychange' events on the controller's signal.
-controller.signal.addEventListener('prioritychange', 
-  event => { 
-    const previousPriority = event.previousPriority;
-    const newPriority = event.target.priority;
-    console.log(`Priority changed from ${previousPriority} to ${newPriority}.`);
-  }
-);
+// Listen for 'prioritychange' events on the controller's signal.
+controller.signal.addEventListener('prioritychange', (event) => {
+  const previousPriority = event.previousPriority;
+  const newPriority = event.target.priority;
+  console.log(`Priority changed from ${previousPriority} to ${newPriority}.`);
+});
 ```
 
 We can also listen for [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event) events as shown below.
 This same approach would be used if the controller was an `AbortController`.
 
 ```js
-controller.signal.addEventListener('abort', 
-  event => { 
-    console.log('Task aborted');
-  }
-);
+controller.signal.addEventListener('abort', (event) => {
+  console.log('Task aborted');
+});
 ```
 
 Next we post the task, passing the controller signal in the optional argument.

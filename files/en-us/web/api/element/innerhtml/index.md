@@ -181,8 +181,7 @@ We add a second method that logs information about {{domxref("MouseEvent")}} bas
 
 ```js
 function logEvent(event) {
-  const msg = `Event <strong>${event.type}</strong> at <em>${ 
-            event.clientX}, ${event.clientY}</em>`;
+  const msg = `Event <strong>${event.type}</strong> at <em>${event.clientX}, ${event.clientY}</em>`;
   log(msg);
 }
 ```
