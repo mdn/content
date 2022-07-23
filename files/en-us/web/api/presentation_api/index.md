@@ -152,7 +152,7 @@ Example codes below highlight the usage of main features of the Presentation API
   const reconnectBtn = document.querySelector("#reconnectBtn");
   const disconnectBtn = document.querySelector("#disconnectBtn");
 
-  stopBtn.onclick = (_) => {
+  stopBtn.onclick = () => {
     connection && connection.terminate();
   };
 
