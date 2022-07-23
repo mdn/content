@@ -82,21 +82,21 @@ start index and forwards from the start of the string by `16` to find the end
 index.
 
 ```js
-console.log(str.slice(-11, 16)); (//) => "is u"
+console.log(str.slice(-11, 16)); // => "is u"
 ```
 
 Here it counts forwards from the start by `11` to find the start index and
 backwards from the end by `7` to find the end index.
 
 ```js
-console.log(str.slice(11, -7)); (//) => " is u"
+console.log(str.slice(11, -7)); // => " is u"
 ```
 
 These arguments count backwards from the end by `5` to find the start index
 and backwards from the end by `1` to find the end index.
 
 ```js
-console.log(str.slice(-5, -1)); (//) => "n us"
+console.log(str.slice(-5, -1)); // => "n us"
 ```
 
 ## Specifications
