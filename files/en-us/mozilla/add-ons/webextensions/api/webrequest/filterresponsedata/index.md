@@ -52,7 +52,7 @@ filter.ondata = event => {
 filter.onstop = event => {
   // The extension should always call filter.close() or filter.disconnect()
   // after creating the StreamFilter, otherwise the response is kept alive forever.
-  // If processing of the response data is finished, use close. If any remaining 
+  // If processing of the response data is finished, use close. If any remaining
   // response data should be processed by Firefox, use disconnect.
   filter.close();
 };

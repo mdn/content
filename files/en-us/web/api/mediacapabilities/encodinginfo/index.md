@@ -29,7 +29,7 @@ encodingInfo(configuration)
 
 - `configuration`
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaEncodingConfiguration in the spec -->
-  
+
     - `type`
       - : The type of media being tested. This takes one of two values:
 

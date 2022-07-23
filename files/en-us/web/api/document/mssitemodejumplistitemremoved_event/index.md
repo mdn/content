@@ -4,7 +4,7 @@ slug: Web/API/Document/mssitemodejumplistitemremoved_event
 page-type: web-api-event
 tags:
   - Non-standard
-  - Event 
+  - Event
 ---
 {{APIRef("DOM")}}
 

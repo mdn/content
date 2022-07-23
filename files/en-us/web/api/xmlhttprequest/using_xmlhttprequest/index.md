@@ -446,7 +446,7 @@ const AJAXSubmit = (function () {
 
   function SubmitRequest (oTarget) {
     let nFile;
-    let sFieldType; 
+    let sFieldType;
     let oField;
     let oSegmReq;
     let oFile;

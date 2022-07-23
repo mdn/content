@@ -450,7 +450,7 @@ Also, since the inner function has access to the scope of the outer function, th
 const pet = function (name) {   // The outer function defines a variable called "name"
   const getName = function () {
     // The inner function has access to the "name" variable of the outer function
-    return name;             
+    return name;
   }
   return getName; // Return the inner function, thereby exposing it to outer scopes
 }

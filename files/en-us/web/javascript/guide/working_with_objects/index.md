@@ -90,7 +90,7 @@ console.log(myObj.myString);
     date created: "This key has a space"
     myString: "This key is in variable str"
     type: "Dot syntax for a key named type"
-*/ 
+*/
 // notice that in the log, the order of the properties listed is not the same as the order they were created.
 
 // [Log] This key is in variable str
