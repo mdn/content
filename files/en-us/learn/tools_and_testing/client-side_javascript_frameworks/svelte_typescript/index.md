@@ -860,7 +860,7 @@ This is our `Stack` class reimplemented using generics:
 export class Stack<T> {
   private elements: T[] = []
 
-  push = (element: T): (number) => this.elements.push(element)
+  push = (element: T): number => this.elements.push(element)
 
   pop(): T {
     if (this.elements.length === 0) throw new Error('The stack is empty!')

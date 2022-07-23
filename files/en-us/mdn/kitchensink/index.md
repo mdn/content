@@ -256,7 +256,7 @@ if (rect1.x < rect2.x + rect2.width &&
     // collision detected!
 }
 
-// filling in the (values) =>
+// filling in the values =>
 
 if (5 < 30 &&
     55 > 20 &&

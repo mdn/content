@@ -434,7 +434,7 @@ The next feature will add to our `NewTodo` component will be an `autofocus` prop
 
     ```html
     <!-- NewTodo -->
-    <NewTodo autofocus (on:addTodo={e) => addTodo(e.detail)} />
+    <NewTodo autofocus on:addTodo={(e) => addTodo(e.detail)} />
     ```
 
 3. If you try your app out now, you'll see that the page is now blank, and in your DevTools web console you'll see an error along the lines of: `TypeError: nameEl is undefined`.
@@ -769,7 +769,7 @@ We've already seen that Svelte uses `export let var = …` to [declare props](ht
 <script>
   export let bar = 'optional default initial value'       // prop
   export let baz = undefined                              // prop
-  export let format = (n) => n.toFixed(2)                   // prop
+  export let format = (n) => n.toFixed(2)                 // prop
 
   // these are readonly
   export const thisIs = 'readonly'                        // read-only export
