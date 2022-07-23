@@ -89,7 +89,7 @@ html,body,svg { height:100% }
   <!--
   In the following example we are applying the matrix:
   [a c e]    [3 -1 30]
-  [b d (f]) => [1  3 40]
+  [b d f) => [1  3 40]
   [0 0 1]    [0  0  1]
 
   which transform the rectangle as such:
