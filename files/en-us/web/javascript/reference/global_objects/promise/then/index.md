@@ -39,9 +39,9 @@ p.then((value) => {
 ### Parameters
 
 - `onFulfilled` {{optional_inline}}
-  - : A {{jsxref("Function")}} called if the `Promise` is fulfilled. This function has one argument, the `fulfillment value`. If it is not a function, it is internally replaced with an _identity_ function ((`x) => x`) which simply passes the fulfillment value forward.
+  - : A {{jsxref("Function")}} called if the `Promise` is fulfilled. This function has one argument, the `fulfillment value`. If it is not a function, it is internally replaced with an _identity_ function (`(x) => x`) which simply passes the fulfillment value forward.
 - `onRejected` {{optional_inline}}
-  - : A {{jsxref("Function")}} called if the `Promise` is rejected. This function has one argument, the `rejection reason`. If it is not a function, it is internally replaced with a _thrower_ function ((`x) => { throw x; }`) which throws the rejection reason it received.
+  - : A {{jsxref("Function")}} called if the `Promise` is rejected. This function has one argument, the `rejection reason`. If it is not a function, it is internally replaced with a _thrower_ function (`(x) => { throw x; }`) which throws the rejection reason it received.
 
 ### Return value
 
