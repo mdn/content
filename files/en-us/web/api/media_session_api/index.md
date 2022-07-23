@@ -88,7 +88,7 @@ playButton.addEventListener('pointerup', function(event) {
   // User interacted with the page. Let's play audio!
   audio.play()
   .then((_) => { /* Set up media session controls, as shown above. */ })
-  .catch((error) => { console.log(error) });
+  .catch((error) => { console.error(error) });
 });
 ```
 
