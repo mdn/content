@@ -66,7 +66,7 @@ barcodeDetector.detect(imageEl)
     barcodes.forEach((barcode) => console.log(barcode.rawData));
   })
   .catch((err) => {
-    console.log(err);
+    console.error(err);
   })
 ```
 
