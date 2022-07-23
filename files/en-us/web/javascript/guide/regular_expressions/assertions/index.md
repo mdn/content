@@ -192,11 +192,11 @@ tangs on ihe greon traa`;
 
 // 1) Use ^ to fix the matching at the beginning of the string, and right after newline.
 buggyMultiline = buggyMultiline.replace(/^t/gim,'h');
-console.log(1, buggyMultiline); // fix 'tey', 'tangs' => 'hey', 'hangs'. Avoid 'traa'.
+console.log(1, buggyMultiline); // fix 'tey', ('tangs') => 'hey', 'hangs'. Avoid 'traa'.
 
 // 2) Use $ to fix matching at the end of the text.
 buggyMultiline = buggyMultiline.replace(/aa$/gim,'ee.');
-console.log(2, buggyMultiline); // fix  'traa' => 'tree'.
+console.log(2, buggyMultiline); // fix  ('traa') => 'tree'.
 
 // 3) Use \b to match characters right on border between a word and a space.
 buggyMultiline = buggyMultiline.replace(/\bi/gim,'t');
@@ -217,7 +217,7 @@ let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 // Select fruits started with 'A' by /^A/ Regex.
 // Here '^' control symbol used only in one role: Matching beginning of an input.
 
-let fruitsStartsWithA = fruits.filter(fruit => /^A/.test(fruit));
+let fruitsStartsWithA = fruits.filter((fruit) => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
@@ -232,7 +232,7 @@ let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 // 2) A negated or complemented character class: [^A]
 // That is, it matches anything that is not enclosed in the brackets.
 
-let fruitsStartsWithNotA = fruits.filter(fruit => /^[^A]/.test(fruit));
+let fruitsStartsWithNotA = fruits.filter((fruit) => /^[^A]/.test(fruit));
 
 console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 ```
@@ -243,7 +243,7 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 let fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // Select descriptions that contains 'en' or 'ed' words endings:
-let enEdSelection = fruitsWithDescription.filter(descr => /(en|ed)\b/.test(descr));
+let enEdSelection = fruitsWithDescription.filter((descr) => /(en|ed)\b/.test(descr));
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 ```
@@ -289,7 +289,7 @@ console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not wa
 ```js
 let oranges = ['ripe orange A ', 'green orange B', 'ripe orange C',];
 
-let ripe_oranges = oranges.filter( fruit => fruit.match(/(?<=ripe )orange/));
+let ripe_oranges = oranges.filter( (fruit) => fruit.match(/(?<=ripe )orange/));
 console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
 ```
 

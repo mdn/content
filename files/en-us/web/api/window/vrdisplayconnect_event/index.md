@@ -23,9 +23,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplayconnect', event => { });
+addEventListener('vrdisplayconnect', (event) => { });
 
-onvrdisplayconnect = event => { };
+onvrdisplayconnect = (event) => { };
 ```
 
 ## Event type

@@ -34,8 +34,8 @@ This includes:
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pageshow', event => { });
-onpageshow = event => { };
+addEventListener('pageshow', (event) => { });
+onpageshow = (event) => { };
 ```
 
 ## Event type
@@ -69,7 +69,7 @@ const events = [
   "unload", "load"
 ];
 
-const eventLogger = event => {
+const eventLogger = (event) => {
   switch (event.type) {
     case "pagehide":
     case "pageshow":
@@ -82,7 +82,7 @@ const eventLogger = event => {
   }
 };
 
-events.forEach(eventName =>
+events.forEach((eventName) =>
   window.addEventListener(eventName, eventLogger)
 );
 ```

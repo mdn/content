@@ -120,7 +120,7 @@ function isBigEnough(element, index, array) {
 The following example tests if all the elements of an array are present in another array.
 
 ```js
-const isSubset = (array1, array2) => array2.every(element => array1.includes(element));
+const isSubset = (array1, array2) => array2.every((element) => array1.includes(element));
 
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
@@ -131,8 +131,8 @@ console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
-[12, 5, 8, 130, 44].every(x => x >= 10);   // false
-[12, 54, 18, 130, 44].every(x => x >= 10); // true
+[12, 5, 8, 130, 44].every((x) => x >= 10);   // false
+[12, 54, 18, 130, 44].every((x) => x >= 10); // true
 ```
 
 ### Affecting Initial Array (modifying, appending, and deleting)

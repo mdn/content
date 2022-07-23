@@ -203,7 +203,7 @@ Alternatively, you can shorten the code for the forEach parameter with ES2015 Ar
 
 ```js
 const colors = ['red', 'green', 'blue']
-colors.forEach(color => console.log(color))
+colors.forEach((color) => console.log(color))
 // red
 // green
 // blue

@@ -25,8 +25,8 @@ The HTML specification states that calls to {{domxref("window.alert()")}}, {{dom
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforeunload', event => { });
-onbeforeunload = event => { };
+addEventListener('beforeunload', (event) => { });
+onbeforeunload = (event) => { };
 ```
 
 ## Event type

@@ -119,7 +119,7 @@ Note that the result would be the same as if using {{jsxref("Array.findIndex()")
 ```js
 const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
 
-const index = fruits.findLastIndex(fruit => fruit === "blueberries");
+const index = fruits.findLastIndex((fruit) => fruit === "blueberries");
 
 console.log(index); // 3
 console.log(fruits[index]); // blueberries

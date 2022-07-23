@@ -25,8 +25,8 @@ The **`popstate`** event of the {{domxref("Window")}} interface is fired when th
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('popstate', event => { });
-onpopstate = event => { };
+addEventListener('popstate', (event) => { });
+onpopstate = (event) => { };
 ```
 
 ## Event type

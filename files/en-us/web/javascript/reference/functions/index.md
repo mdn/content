@@ -213,13 +213,13 @@ An arrow function expression has a shorter syntax and lexically binds its `this`
   statements
 }
 
-param => expression
+(param) => expression
 ```
 
 - `param`
   - : The name of an argument. Zero arguments need to be indicated with `()`.
     For only one argument, the parentheses are not required.
-    (like `foo => 1`)
+    (like (`foo) => 1`)
 - `statements` or `expression`
   - : Multiple statements need to be enclosed in brackets. A single expression requires
     no brackets. The expression is also the implicit return value of the function.
