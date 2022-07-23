@@ -56,7 +56,7 @@ The same task might be waited on using `await`/`async` as shown below (note, thi
     console.log(result);
   } catch (error) {
     // Log AbortError or error thrown in task function
-    console.log(`Error: ${error}`);
+    console.error(`Error: ${error}`);
   }
 })();
 ```
