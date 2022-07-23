@@ -281,7 +281,7 @@ We will add one usability detail to our component. We'll disable the buttons whe
 
     ```js
     <MoreActions {todos}
-        (on:checkAll={e) => checkAllTodos(e.detail)}
+        on:checkAll={(e) => checkAllTodos(e.detail)}
         on:removeCompleted={removeCompletedTodos}
       />
     ```
