@@ -24,7 +24,7 @@ In the following example {{domxref("MIDIInput.midimessage_event", "midimessage")
 
 ```js
 inputs.forEach((input) => {
-  input.onmidimessage = message => {
+  input.onmidimessage = (message) => {
     console.log(message.data);
   }
 })

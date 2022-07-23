@@ -50,7 +50,7 @@ listener to handle the floating window resizing.
 ```js
 function enterPictureInPicture() {
   videoElement.requestPictureInPicture()
-    .then(pictureInPictureWindow => {
+    .then((pictureInPictureWindow) => {
       pictureInPictureWindow.addEventListener("resize", () => onPipWindowResize(), false);
     })
 }
