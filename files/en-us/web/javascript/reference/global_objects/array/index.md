@@ -474,7 +474,7 @@ The result is an object that has properties named after the unique strings retur
 Each property is assigned an array containing the elements in the group.
 
 ```js
-let result = inventory.group(({ type }) => type );
+let result = inventory.group(({ type }) => type);
 console.log(result.vegetables)
 // expected output: Array [Object { name: "asparagus", type: "vegetables" }]
 ```
