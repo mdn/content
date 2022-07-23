@@ -50,7 +50,7 @@ Now you only need some HTML and JavaScript to load your new module:
 ```html
 <script src="./a.out.js"></script>
 <script>
-  Module.onRuntimeInitialized = async (_) => {
+  Module.onRuntimeInitialized = async () => {
     const api = {
       version: Module.cwrap('version', 'number', []),
     };
