@@ -118,7 +118,7 @@ The error can be due to the `type` not being one of the two possible values, the
 navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(
   console.log('It worked')
 ).catch((error) =>
-  console.log(`It failed: ${error}`)
+  console.error(`It failed: ${error}`)
 );
 ```
 
