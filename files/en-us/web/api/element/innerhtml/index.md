@@ -121,7 +121,7 @@ It is not uncommon to see `innerHTML` used to insert text into a web page.
 There is potential for this to become an attack vector on a site, creating a potential security risk.
 
 ```js
-const name = "John";
+let name = "John";
 // assuming 'el' is an HTML DOM element
 el.innerHTML = name; // harmless in this case
 
