@@ -50,7 +50,7 @@ The following example shows how to use a call to
     const track = mediaStream.getVideoTracks()[0];
     imageCapture = new ImageCapture(track);
   })
-  .catch((error) => console.log(error));
+  .catch((error) => console.error(error));
 ```
 
 ## Specifications
