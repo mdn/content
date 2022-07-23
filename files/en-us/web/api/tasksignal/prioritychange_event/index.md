@@ -69,7 +69,7 @@ if ('scheduler' in this) {
 
   // Post task using the controller's signal.
   // The signal priority sets the initial priority of the task
-  scheduler.postTask( () =>{ mylog('Task 1'); }, {signal: controller.signal} );
+  scheduler.postTask(() => { mylog('Task 1'); }, {signal: controller.signal});
 
   // Change the priority to 'background' using the controller
   controller.setPriority('background');
