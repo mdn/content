@@ -150,7 +150,7 @@ This example displays the number of consecutive clicks on a {{HtmlElement("butto
 ```js
 const button = document.querySelector('button');
 
-button.addEventListener('click', event => {
+button.addEventListener('click', (event) => {
   button.textContent = `Click count: ${event.detail}`;
 });
 ```

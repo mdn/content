@@ -24,7 +24,7 @@ A {{jsxref("DataView")}}.
 In the following example the returned `data` is logged to the console.
 
 ```js
-device.addEventListener("inputreport", event => {
+device.addEventListener("inputreport", (event) => {
   const { data, device, reportId } = event;
   console.log(data);
 });
