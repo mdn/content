@@ -50,17 +50,20 @@ This example, run in the context of a service worker, listens for a `pushsubscri
 
 ```js
 self.addEventListener("pushsubscriptionchange", (event) => {
-  event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
-    .then((subscription) => fetch("register", {
+  const subscription = swRegistration.pushManager
+    .subscribe(event.oldSubscription.options)
+    .then((subscription) =>
+      fetch("register", {
         method: "post",
         headers: {
-          "Content-type": "application/json"
+          "Content-type": "application/json",
         },
         body: JSON.stringify({
-          endpoint: subscription.endpoint
-        })
-      }))
-  );
+          endpoint: subscription.endpoint,
+        }),
+      }),
+    );
+  event.waitUntil(subscription);
 }, false);
 ```
 
@@ -69,7 +72,7 @@ When a `pushsubscriptionchange` event arrives, indicating that the subscription 
 You can also use the `onpushsubscriptionchange` event handler property to set up the event handler:
 
 ```js
-self.onpushsubscriptionchange = event => {
+self.onpushsubscriptionchange = (event) => {
   event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
     .then(subscription => {
       /* ... */
