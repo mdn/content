@@ -430,7 +430,7 @@ The editing UI (the upper half) will contain an `<input>` field and two buttons 
 ```html
 <div class="stack-small">
 {#if editing}
-  <form on:submit|preventDefault={onSave} class="stack-small" (on:keydown={e) => e.key === 'Escape' && onCancel()}>
+  <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={(e) => e.key === 'Escape' && onCancel()}>
     <div class="form-group">
       <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
       <input bind:value={name} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" />
