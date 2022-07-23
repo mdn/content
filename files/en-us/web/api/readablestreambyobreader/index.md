@@ -97,8 +97,8 @@ The {{domxref("ReadableStreamBYOBReader.closed")}} property returns a promise th
 
 ```js
 reader.closed
-  .then() => { /* Resolved - code to handle stream closing */ } )
-  .catch() => { /* Rejected - code to handle error */ } );
+  .then(() => { /* Resolved - code to handle stream closing */ } )
+  .catch(() => { /* Rejected - code to handle error */ } );
 ```
 
 To cancel the stream call {{domxref("ReadableStreamBYOBReader.cancel()")}}, optionally specifying a _reason_.
