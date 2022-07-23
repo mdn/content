@@ -104,7 +104,7 @@ rotate_btn.addEventListener('click', () => {
       log.textContent = `Locked to ${oppositeOrientation}\n`
       }
     )
-    .catch ((error) => {
+    .catch((error) => {
       log.textContent += `${error}\n`;
     });
 });
