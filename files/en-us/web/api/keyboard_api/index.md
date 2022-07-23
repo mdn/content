@@ -34,7 +34,7 @@ The following example demonstrates how to get the location-specific or layout-sp
 if (navigator.keyboard) {
   const keyboard = navigator.keyboard;
   keyboard.getLayoutMap()
-  .then(keyboardLayoutMap => {
+  .then((keyboardLayoutMap) => {
     const upKey = keyboardLayoutMap.get('KeyW');
     window.alert(`Press ${upKey} to move up.`);
   });

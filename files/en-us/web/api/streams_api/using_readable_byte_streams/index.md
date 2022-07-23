@@ -102,7 +102,7 @@ class MockHypotheticalSocket {
     this.max_per_read = 100; // max data per read
     this.min_per_read = 40; // min data per read
     this.data_read = 0; // total data read so far (capped is maxdata)
-    this.socketdata = null; // 
+    this.socketdata = null;
   }
 
   /* Method returning promise when this socket is readable. */
@@ -336,15 +336,15 @@ readStream(reader);
 
 function readStream(reader) {
   let bytesReceived = 0;
-  let offset =  0;
+  let offset = 0;
 
-  while (offset < buffer.byteLength) {    
+  while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received
     reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(async function processText({ done, value }) {
       // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
         // value - some data. Always undefined when done is true.
-      
+
       if (done) {
         logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
         return;
@@ -445,10 +445,10 @@ class MockUnderlyingFileHandle {
       for (let i = 0; i < length; i++) {
         myview[i]=this.filedata[position + i];
         resultobj["bytesRead"] = i;
-        if (position + i >= this.maxdata) {  
+        if (position + i >= this.maxdata) {
           break;
         }
-      }   
+      }
       // Emulate slow read of data
       window.setTimeout(() => { resolve(resultobj); }, 1000);
     });
@@ -565,7 +565,7 @@ function makeReadableByteFileStream(filename) {
     async pull(controller) {
       // Called when there is a pull request for data
       const theView = controller.byobRequest.view;
-      const {bytesRead, buffer} = 
+      const { bytesRead, buffer } =
         await fileHandle.read(theView.buffer, theView.offset, theView.length, position)
       if (bytesRead === 0) {
         await fileHandle.close();
@@ -603,13 +603,13 @@ function readStream(reader) {
   let bytesReceived = 0;
   let offset =  0;
 
-  while (offset < buffer.byteLength) {    
+  while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received
     reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(function processText({ done, value }) {
       // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
         // value - some data. Always undefined when done is true.
-      
+
       if (done) {
         logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
         return;
@@ -675,14 +675,14 @@ class MockUnderlyingFileHandle {
       const myview = new Uint8Array(buffer, offset, length);
       // Write the length of data specified
       for (let i = 0; i < length; i++) {
-        myview[i]=this.filedata[position + i];
+        myview[i] = this.filedata[position + i];
         resultobj["bytesRead"] = i;
-        if (position + i >= this.maxdata) {  
+        if (position + i >= this.maxdata) {
           break;
         }
-      }   
+      }
       // Emulate slow read of data
-      window.setTimeout(() => { resolve(resultobj); }, 1000);
+      window.setTimeout(() => resolve(resultobj), 1000);
     });
   }
 
@@ -788,7 +788,7 @@ function makeReadableByteFileStream(filename) {
     async pull(controller) {
       // Called when there is a pull request for data
       const theView = controller.byobRequest.view;
-      const {bytesRead, buffer} = 
+      const { bytesRead, buffer } =
         await fileHandle.read(theView.buffer, theView.offset, theView.length, position)
       if (bytesRead === 0) {
         await fileHandle.close();
@@ -892,10 +892,10 @@ class MockUnderlyingFileHandle {
       for (let i = 0; i < length; i++) {
         myview[i]=this.filedata[position + i];
         resultobj["bytesRead"] = i;
-        if (position + i >= this.maxdata) {  
+        if (position + i >= this.maxdata) {
           break;
         }
-      }   
+      }
       // Emulate slow read of data
       window.setTimeout(() => { resolve(resultobj); }, 1000);
     });
@@ -1016,7 +1016,7 @@ function makeReadableByteFileStream(filename) {
          }
       } else {
         // No BYOBRequest so enqueue data to stream
-        // NOTE, this branch would only execute for a default reader if autoAllocateChunkSize is not defined. 
+        // NOTE, this branch would only execute for a default reader if autoAllocateChunkSize is not defined.
         const mynewBuffer = new Uint8Array(DEFAULT_CHUNK_SIZE);
         const {bytesRead, buffer} = await fileHandle.read(mynewBuffer.buffer, mynewBuffer.offset, mynewBuffer.length, position);
         if (bytesRead === 0) {
@@ -1029,7 +1029,6 @@ function makeReadableByteFileStream(filename) {
            controller.enqueue(mynewBuffer);
            logSource(`pull() with no byobRequest. enqueue() ${bytesRead} bytes`);
         }
-        
       }
     },
     cancel(reason) {
@@ -1037,7 +1036,7 @@ function makeReadableByteFileStream(filename) {
       // Clean up any resources
       fileHandle.close();
       logSource(`cancel() with reason: ${reason}`);
-    }  
+    },
   });
 }
 ```

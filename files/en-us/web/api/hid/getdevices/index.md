@@ -36,7 +36,7 @@ The following example gets a list of devices and logs the device names to the co
 ```js
 document.addEventListener('DOMContentLoaded', async () => {
   let devices = await navigator.hid.getDevices();
-  devices.forEach(device => {
+  devices.forEach((device) => {
     console.log(`HID: ${device.productName}`);
   });
 });

@@ -43,7 +43,7 @@ being processed, so it will be able to call APIs that require user activation.
 ## Examples
 
 ```js
-document.hasStorageAccess().then(hasAccess => {
+document.hasStorageAccess().then((hasAccess) => {
   if (hasAccess) {
     // storage access has been granted already.
   } else {

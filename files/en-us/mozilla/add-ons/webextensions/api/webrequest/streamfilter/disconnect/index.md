@@ -42,7 +42,7 @@ This example will prepend "preface text" to the response body. It then disconnec
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     console.log("started");
     let encoder = new TextEncoder();
     filter.write(encoder.encode("preface text"));

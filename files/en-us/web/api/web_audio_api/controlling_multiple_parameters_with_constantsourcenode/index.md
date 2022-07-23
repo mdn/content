@@ -52,7 +52,7 @@ The HTML content for this example is primarily a checkbox, shaped as an actual b
 change the volume of the notes E and G in the chord.</p>
 ```
 
-````css hidden
+```css hidden
 .controls {
   width: 400px;
   position: relative;
@@ -183,7 +183,7 @@ function togglePlay(event) {
   } else {
     // If it is the first start, initialize the audio graph
     if (!context) {
-      setup(); 
+      setup();
     }
     startOscillators();
   }

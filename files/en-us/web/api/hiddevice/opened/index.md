@@ -26,7 +26,7 @@ The following example retrieves devices with {{domxref("HID.getDevices()")}} and
 ```js
 document.addEventListener('DOMContentLoaded', async () => {
   let devices = await navigator.hid.getDevices();
-  devices.forEach(device => {
+  devices.forEach((device) => {
     console.log(`HID: ${device.opened}`);
   });
 });

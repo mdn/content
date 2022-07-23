@@ -222,7 +222,7 @@ console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // logs 'xxx'
 const breakfasts = ['bacon', 'eggs', 'oatmeal', 'toast', 'cereal'];
 const order = 'Let me get some bacon and eggs, please';
 
-order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g')); 
+order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g'));
 // Returns ['bacon', 'eggs']
 ```
 

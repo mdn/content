@@ -16,8 +16,8 @@ The `message` event is fired on a {{domxref('BroadcastChannel')}} object when a 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { })
-onmessage = event => { }
+addEventListener('message', (event) => { })
+onmessage = (event) => { }
 ```
 
 ## Event type
@@ -114,7 +114,7 @@ h1 {
 
 ```js
 const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', event => {
+channel.addEventListener('message', (event) => {
   received.textContent = event.data;
 });
 ```
@@ -142,7 +142,7 @@ h1 {
 
 ```js
 const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', event => {
+channel.addEventListener('message', (event) => {
   received.textContent = event.data;
 });
 ```

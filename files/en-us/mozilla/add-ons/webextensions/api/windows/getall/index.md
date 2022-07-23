@@ -54,7 +54,7 @@ Log the URLs for the tabs across all "normal" browser windows. Note that you'll 
 function logTabsForWindows(windowInfoArray) {
   for (windowInfo of windowInfoArray) {
     console.log(`Window: ${windowInfo.id}`);
-    console.log(windowInfo.tabs.map(tab => tab.url));
+    console.log(windowInfo.tabs.map((tab) => tab.url));
   }
 }
 

@@ -38,7 +38,7 @@ In the following example the name of each `MIDIInput` is printed to the console.
 ```js
 inputs.forEach((input) => {
   console.log(input.name); /* inherited property from MIDIPort */
-  input.onmidimessage = message => {
+  input.onmidimessage = (message) => {
     console.log(message.data);
   }
 })
