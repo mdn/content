@@ -306,7 +306,7 @@ We'll edit our `Todo` component to emit a `remove` event, passing the to-do bein
 3. Now we have to listen to that event from inside `Todos.svelte` and act accordingly. Go back to this file and update your `<Todo>` component call like so:
 
     ```html
-    <Todo {todo} (on:remove={e) => removeTodo(e.detail)} />
+    <Todo {todo} on:remove={(e) => removeTodo(e.detail)} />
     ```
 
     Our handler receives the `e` parameter (the event object), which as described before holds the to-do being deleted in the `detail` property.
