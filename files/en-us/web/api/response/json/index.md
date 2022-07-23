@@ -50,7 +50,7 @@ fetch(myRequest)
   .then((response) => response.json())
   .then((data) => {
     for (const product of data.products) {
-      let listItem = document.createElement('li');
+      const listItem = document.createElement('li');
       listItem.appendChild(
         document.createElement('strong')
       ).textContent = product.Name;
