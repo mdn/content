@@ -267,9 +267,9 @@ Add the following code block inside the `fetchResults()` function, just above th
 ```js
 // Use fetch() to make the request to the API
 fetch(url)
-  .then\(\(response) => response.json() )
-  .then\(\(json) => displayResults(json) )
-  .catch\(\(error) => console.error(`Error fetching data: ${error.message}`) );
+  .then((response) => response.json() )
+  .then((json) => displayResults(json) )
+  .catch((error) => console.error(`Error fetching data: ${error.message}`) );
 ```
 
 Here we run the request by passing our `url` variable to [`fetch()`](/en-US/docs/Web/API/fetch), convert the response body to JSON using the [`json()`](/en-US/docs/Web/API/Response/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI. We also catch and log any errors that might be thrown.

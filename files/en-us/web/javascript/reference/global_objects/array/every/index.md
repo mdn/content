@@ -145,7 +145,7 @@ array is modified.
 // Modifying items
 // ---------------
 let arr = [1, 2, 3, 4];
-arr.every\(\(elem, index, arr) => {
+arr.every((elem, index, arr) => {
   arr[index+1] -= 1
   console.log(`[${arr}][${index}] -> ${elem}`)
   return elem < 2
@@ -162,7 +162,7 @@ arr.every\(\(elem, index, arr) => {
 // Appending items
 // ---------------
 arr = [1, 2, 3];
-arr.every\(\(elem, index, arr) => {
+arr.every((elem, index, arr) => {
   arr.push('new')
   console.log(`[${arr}][${index}] -> ${elem}`)
   return elem < 4
@@ -178,7 +178,7 @@ arr.every\(\(elem, index, arr) => {
 // Deleting items
 // ---------------
 arr = [1, 2, 3, 4];
-arr.every\(\(elem, index, arr) => {
+arr.every((elem, index, arr) => {
   arr.pop()
   console.log(`[${arr}][${index}] -> ${elem}`)
   return elem < 4
