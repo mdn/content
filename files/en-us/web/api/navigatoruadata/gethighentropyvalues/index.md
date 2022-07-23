@@ -72,7 +72,7 @@ navigator.userAgentData.getHighEntropyValues(
   "model",
   "platformVersion",
   "fullVersionList"])
-  .then(console.log);
+  .then((values) => console.log(values));
 ```
 
 ## Specifications
