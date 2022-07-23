@@ -99,7 +99,7 @@ fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: contro
       fetch("some.json", {cache: "no-cache", mode: "same-origin"}) // no cancellation or return value.
     return res
   })
-  .then(function(response) { /* consume the (possibly stale) response */ })
+  .then((response) => { /* consume the (possibly stale) response */ })
   .catch((error) => { /* Can be an AbortError/DOMError or a TypeError */ });
 ```
 
