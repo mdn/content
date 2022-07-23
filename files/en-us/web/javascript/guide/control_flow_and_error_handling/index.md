@@ -66,15 +66,15 @@ Here, `{ x++; }` is the block statement.
 > they would produce in C or Java. For example:
 >
 > ```js
-> var x = 1;
+> const x = 1;
 > {
->   var x = 2;
+>   const x = 2;
 > }
 > console.log(x); // outputs 2
 > ```
 >
-> This outputs `2` because the `var x` statement within the block
-> is in the same scope as the `var x` statement before the block. (In C or
+> This outputs `2` because the `const x` statement within the block
+> is in the same scope as the `const x` statement before the block. (In C or
 > Java, the equivalent code would have output `1`.)
 >
 > **Since ECMAScript2015**, the `let` and
