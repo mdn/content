@@ -27,7 +27,7 @@ Note that this is a read-only setting. To change the homepage, see [chrome_setti
 Get the current value of the homepage URL:
 
 ```js
-browser.browserSettings.homepageOverride.get({}).then(result => {
+browser.browserSettings.homepageOverride.get({}).then((result) => {
   console.log(result.value);
 });
 ```
