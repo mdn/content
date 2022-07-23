@@ -269,7 +269,7 @@ Doing so returns the local peer to the `stable` {{domxref("RTCPeerConnection.sig
 Using the previous API to implement incoming negotiation messages during perfect negotiation would look something like this:
 
 ```js example-bad
-signaler.onmessage = async({data: { description, candidate }}) => {
+signaler.onmessage = async ({data: { description, candidate }}) => {
   try {
     if (description) {
       if (description.type == "offer" && pc.signalingState != "stable") {
