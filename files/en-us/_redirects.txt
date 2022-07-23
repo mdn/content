@@ -8170,8 +8170,8 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeyup	/en-US/docs/Web/API/Element/keyup_event
 /en-US/docs/Web/API/GlobalEventHandlers/onloadeddata	/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event
-/en-US/docs/Web/API/GlobalEventHandlers/onloadend	/en-US/docs/Web/API/XMLHttpRequest/loadend_event
 /en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata	/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event
+/en-US/docs/Web/API/GlobalEventHandlers/onloadend	/en-US/docs/Web/API/XMLHttpRequest/loadend_event
 /en-US/docs/Web/API/GlobalEventHandlers/onloadstart	/en-US/docs/Web/API/HTMLMediaElement/loadstart_event
 /en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmousedown	/en-US/docs/Web/API/Element/mousedown_event
