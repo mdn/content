@@ -73,7 +73,7 @@ async function fileHash(file) {
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
   // We then convert it to a regular array so we can convert each item to hexadecimal strings
   // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte).
-  const hashAsString = Array.from(uint8ViewOfHash).map(b => b.toString(16).padStart(2, '0')).join('');
+  const hashAsString = Array.from(uint8ViewOfHash).map((b) => b.toString(16).padStart(2, '0')).join('');
   return hashAsString;
 }
 
@@ -173,7 +173,7 @@ async function fileHash(file) {
 
 function hashToString(arrayBuffer) {
   const uint8View = new Uint8Array(arrayBuffer);
-  return Array.from(uint8View).map(b => b.toString(16).padStart(2, '0')).join('');
+  return Array.from(uint8View).map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
 // like before we iterate over the files

@@ -21,9 +21,9 @@ The `removetrack` event is fired when a video track is removed from a [`VideoTra
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('removetrack', event => { })
+addEventListener('removetrack', (event) => { })
 
-onremovetrack = event => { }
+onremovetrack = (event) => { }
 ```
 
 ## Event type

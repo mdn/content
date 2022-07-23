@@ -595,8 +595,8 @@ On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-p
 
 ```js
 window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
-   await new Promise(fn_resolve => {
-      const observer = new ResizeObserver(entries => {
+   await new Promise((fn_resolve) => {
+      const observer = new ResizeObserver((entries) => {
          for (const cur of entries) {
             const dev_size = cur.devicePixelContentBoxSize;
             const ret = {

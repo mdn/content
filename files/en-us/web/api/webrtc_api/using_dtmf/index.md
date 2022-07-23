@@ -151,7 +151,7 @@ function connectAndDial() {
 
   navigator.mediaDevices.getUserMedia(mediaConstraints)
   .then(gotStream)
-  .catch(err => log(err.message));
+  .catch((err) => log(err.message));
 }
 ```
 
@@ -177,7 +177,7 @@ function gotStream(stream) {
 
   if (hasAddTrack) {
     if (audioTracks.length > 0) {
-      audioTracks.forEach(track => callerPC.addTrack(track, stream));
+      audioTracks.forEach((track) => callerPC.addTrack(track, stream));
     }
   } else {
     log("Your browser doesn't support RTCPeerConnection.addTrack(). Falling " +
@@ -257,7 +257,7 @@ function handleCallerIceEvent(event) {
     log(`Adding candidate to receiver: ${event.candidate.candidate}`);
 
     receiverPC.addIceCandidate(new RTCIceCandidate(event.candidate))
-    .catch(err => log(`Error adding candidate to receiver: ${err}`));
+    .catch((err) => log(`Error adding candidate to receiver: ${err}`));
   } else {
     log("Caller is out of candidates.");
   }
@@ -314,7 +314,7 @@ function handleCallerNegotiationNeeded() {
     log("Setting caller's remote description to match");
     return callerPC.setRemoteDescription(receiverPC.localDescription);
   })
-  .catch(err => log(`Error during negotiation: ${err.message}`));
+  .catch((err) => log(`Error during negotiation: ${err.message}`));
 }
 ```
 
@@ -354,7 +354,7 @@ function handleReceiverIceEvent(event) {
     log(`Adding candidate to caller: ${event.candidate.candidate}`);
 
     callerPC.addIceCandidate(new RTCIceCandidate(event.candidate))
-    .catch(err => log(`Error adding candidate to caller: ${err}`));
+    .catch((err) => log(`Error adding candidate to caller: ${err}`));
   } else {
     log("Receiver is out of candidates.");
   }

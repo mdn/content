@@ -19,9 +19,9 @@ This may involve some degree of recognition, which doesn't meet or exceed the {{
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('nomatch', event => { })
+addEventListener('nomatch', (event) => { })
 
-onnomatch = event => { }
+onnomatch = (event) => { }
 ```
 
 ## Event type

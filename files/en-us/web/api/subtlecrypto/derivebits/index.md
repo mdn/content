@@ -137,7 +137,7 @@ const generateBobsKeyPair = window.crypto.subtle.generateKey(
   ["deriveBits"]
 );
 
-Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then(values => {
+Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then((values) => {
   const alicesKeyPair = values[0];
   const bobsKeyPair = values[1];
 

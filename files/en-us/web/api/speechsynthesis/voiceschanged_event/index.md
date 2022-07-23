@@ -17,9 +17,9 @@ The **`voiceschanged`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Sp
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('voiceschanged', event => { })
+addEventListener('voiceschanged', (event) => { })
 
-onvoiceschanged = event => { }
+onvoiceschanged = (event) => { }
 ```
 
 ## Event type

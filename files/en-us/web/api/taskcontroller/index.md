@@ -65,7 +65,7 @@ The handler uses [previousPolicy](/en-US/docs/Web/API/TaskPriorityChangeEvent/pr
 ```js
   // Listen for 'prioritychange' events on the controller's signal.
 controller.signal.addEventListener('prioritychange', 
-  event => { 
+  (event) => { 
     const previousPriority = event.previousPriority;
     const newPriority = event.target.priority;
     console.log(`Priority changed from ${previousPriority} to ${newPriority}.`);
@@ -78,7 +78,7 @@ This same approach would be used if the controller was an `AbortController`.
 
 ```js
 controller.signal.addEventListener('abort', 
-  event => { 
+  (event) => { 
     console.log('Task aborted');
   }
 );
