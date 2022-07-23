@@ -192,11 +192,11 @@ tangs on ihe greon traa`;
 
 // 1) Use ^ to fix the matching at the beginning of the string, and right after newline.
 buggyMultiline = buggyMultiline.replace(/^t/gim,'h');
-console.log(1, buggyMultiline); // fix 'tey', ('tangs') => 'hey', 'hangs'. Avoid 'traa'.
+console.log(1, buggyMultiline); // fix 'tey', 'tangs' => 'hey', 'hangs'. Avoid 'traa'.
 
 // 2) Use $ to fix matching at the end of the text.
 buggyMultiline = buggyMultiline.replace(/aa$/gim,'ee.');
-console.log(2, buggyMultiline); // fix  ('traa') => 'tree'.
+console.log(2, buggyMultiline); // fix  'traa' => 'tree'.
 
 // 3) Use \b to match characters right on border between a word and a space.
 buggyMultiline = buggyMultiline.replace(/\bi/gim,'t');
