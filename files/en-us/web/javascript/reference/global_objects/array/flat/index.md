@@ -49,7 +49,7 @@ arr.reduce((acc, val) => acc.concat(val), []);
 // [1, 2, 3, 4]
 
 // or with decomposition syntax
-const flattened = arr => [].concat(...arr);
+const flattened = (arr) => [].concat(...arr);
 ```
 
 ### reduce + concat + isArray + recursivity

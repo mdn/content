@@ -20,9 +20,9 @@ The `load` event is fired when an {{domxref("XMLHttpRequest")}} transaction comp
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('load', event => { })
+addEventListener('load', (event) => { })
 
-onload = event => { }
+onload = (event) => { }
 ```
 
 ## Event type

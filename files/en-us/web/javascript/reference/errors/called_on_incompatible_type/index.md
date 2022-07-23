@@ -70,7 +70,7 @@ const mySet = new Set;
 const myFun = function () {
   console.log(this);
 };
-['bar', 'baz'].forEach(x => myFun.bind(x));
+['bar', 'baz'].forEach((x) => myFun.bind(x));
 // This works using the "bind" function. It creates a lambda forwarding the argument.
 ```
 

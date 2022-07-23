@@ -87,10 +87,10 @@ const eventAwesome = new CustomEvent('awesome', {
 });
 
 // The form element listens for the custom "awesome" event and then consoles the output of the passed text() method
-form.addEventListener('awesome', e => console.log(e.detail.text()));
+form.addEventListener('awesome', (e) => console.log(e.detail.text()));
 
 // As the user types, the textarea inside the form dispatches/triggers the event to fire, and uses itself as the starting point
-textarea.addEventListener('input', e => e.target.dispatchEvent(eventAwesome));
+textarea.addEventListener('input', (e) => e.target.dispatchEvent(eventAwesome));
 ```
 
 ### Creating and dispatching events dynamically
@@ -107,7 +107,7 @@ Elements can listen for events that haven't been created yet:
 const form = document.querySelector('form');
 const textarea = document.querySelector('textarea');
 
-form.addEventListener('awesome', e => console.log(e.detail.text()));
+form.addEventListener('awesome', (e) => console.log(e.detail.text()));
 
 textarea.addEventListener('input', function() {
   // Create and dispatch/trigger an event on the fly

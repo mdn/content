@@ -23,9 +23,9 @@ The **`loadend`** event is fired when a request has completed, whether successfu
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('loadend', event => { })
+addEventListener('loadend', (event) => { })
 
-onloadend = event => { }
+onloadend = (event) => { }
 ```
 
 ## Event type

@@ -120,7 +120,7 @@ The following example finds the index of a fruit using an arrow function:
 ```js
 const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
 
-const index = fruits.findIndex(fruit => fruit === "blueberries");
+const index = fruits.findIndex((fruit) => fruit === "blueberries");
 
 console.log(index); // 3
 console.log(fruits[index]); // blueberries

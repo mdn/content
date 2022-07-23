@@ -130,7 +130,7 @@ If the track _is_ associated with a media element, using the {{HTMLElement("trac
 ```js
 let textTrackElem = document.getElementById("texttrack");
 
-textTrackElem.addEventListener("cuechange", event => {
+textTrackElem.addEventListener("cuechange", (event) => {
   let cues = event.target.track.activeCues;
 });
 ```
