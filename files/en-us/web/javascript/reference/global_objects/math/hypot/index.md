@@ -116,8 +116,8 @@ Math.hypot(3, 4, 5);       // 7.0710678118654755
 Math.hypot();              // 0
 Math.hypot(NaN);           // NaN
 Math.hypot(NaN, Infinity); // Infinity
-Math.hypot(3, 4, 'foo');   // NaN, since (+'foo') => NaN
-Math.hypot(3, 4, '5');     // 7.0710678118654755, (+'5') => 5
+Math.hypot(3, 4, 'foo');   // NaN, since +'foo' => NaN
+Math.hypot(3, 4, '5');     // 7.0710678118654755, +'5' => 5
 Math.hypot(-3);            // 3, the same as Math.abs(-3)
 ```
 
