@@ -459,7 +459,7 @@ The one you'll use most frequently is `onMount()`, which lets us run a callback 
 
     ```js
     console.log('initializing:', nameEl)
-    onMount() => {
+    onMount(() => {
       console.log('mounted:', nameEl)
     })
     ```
