@@ -27,7 +27,7 @@ In this example we return an array of sizing information with {{domxref("ResizeO
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
-    let elemSize = entry.contentBoxSize[0];
+    const elemSize = entry.contentBoxSize[0];
     console.log(elemSize.blockSize); // a decimal
   }
 });
