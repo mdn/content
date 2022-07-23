@@ -146,7 +146,7 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
     ```html
     <!-- MoreActions -->
     <MoreActions
-      (on:checkAll={e) => checkAllTodos(e.detail)}
+      on:checkAll={(e) => checkAllTodos(e.detail)}
       on:removeCompleted={removeCompletedTodos}
     />
     ```
