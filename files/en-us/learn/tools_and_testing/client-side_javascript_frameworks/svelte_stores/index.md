@@ -359,7 +359,7 @@ Lets see how to do that. We'll specify a prop with the milliseconds to wait befo
       }
       $: onMessageChange($alert, ms)      // whenever the alert store or the ms props changes run onMessageChange
 
-      onDestroy(()=> clearTimeout(timeout))           // make sure we clean-up the timeout
+      onDestroy(() => clearTimeout(timeout))           // make sure we clean-up the timeout
 
     </script>
     ```
