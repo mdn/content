@@ -77,7 +77,7 @@ function onTakePhotoButtonClick() {
     const canvas = document.querySelector('#takePhotoCanvas');
     drawCanvas(canvas, imageBitmap);
   })
-  .catch((error) => console.log(error));
+  .catch((error) => console.error(error));
 }
 
 /* Utils */
