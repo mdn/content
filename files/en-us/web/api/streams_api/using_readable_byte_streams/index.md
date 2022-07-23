@@ -272,8 +272,7 @@ function makeSocketStream(host, port) {
     type: "bytes",
 
     start(controller) {
-      readRepeatedly().catch(e => controller.error(e));
-
+      readRepeatedly().catch((e) => controller.error(e));
       function readRepeatedly() {
         return socket.select2().then(() => {
           // Since the socket can become readable even when there’s
@@ -316,7 +315,7 @@ function makeSocketStream(host, port) {
 ```
 
 Note that `readRepeatedly()` returns a promise, and we use this to catch any errors from setting up or handling the read operation.
-The errors are then passed to the controller as shown above (see `readRepeatedly().catch(e => controller.error(e));`).
+The errors are then passed to the controller as shown above (see `readRepeatedly().catch((e) => controller.error(e));`).
 
 A `cancel()` method is provided at the end to close the underlying source; the `pull()` callback is not needed, and is therefore not implemented.
 
@@ -379,7 +378,9 @@ For this example we call the method if a button is clicked with a reason "user c
 We also log when the cancel operation completes.
 
 ```js
-button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
+button.addEventListener('click', () => {
+  reader.cancel("user choice").then(() => logConsumer('reader.cancel complete'));
+});
 ```
 
 {{domxref("ReadableStreamBYOBReader.releaseLock()")}} can be used to release the reader without cancelling the stream.
@@ -393,8 +394,8 @@ While no errors are expected in this case, the following code should log the com
 
 ```js
 reader.closed
-  .then( () => { logConsumer("ReadableStreamBYOBReader.closed: resolved")} )
-  .catch( () => { logConsumer("ReadableStreamBYOBReader.closed: rejected:")} );
+  .then(() => { logConsumer("ReadableStreamBYOBReader.closed: resolved")} )
+  .catch(() => { logConsumer("ReadableStreamBYOBReader.closed: rejected:")} );
 ```
 
 #### Result
@@ -632,7 +633,7 @@ function readStream(reader) {
 Lastly, we add a handler that will cancel the stream if a button is clicked (other HTML and code for the button not shown).
 
 ```js
-button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
+button.addEventListener('click', () => { reader.cancel("user choice").then(() => { logConsumer(`reader.cancel complete`) }) } );
 ```
 
 #### Result
@@ -849,7 +850,7 @@ function readStream(reader) {
 Lastly, we add a handler that will cancel the stream if a button is clicked (other HTML and code for the button not shown).
 
 ```js
-button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
+button.addEventListener('click', () => { reader.cancel("user choice").then(() => { logConsumer(`reader.cancel complete`) }) } );
 ```
 
 #### Result
@@ -1072,7 +1073,7 @@ function readStream(reader) {
 ```
 
 ```js hidden
-button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
+button.addEventListener('click', () => { reader.cancel("user choice").then(() => { logConsumer(`reader.cancel complete`) }) } );
 ```
 
 #### Result

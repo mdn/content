@@ -27,9 +27,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pushsubscriptionchange', event => { });
+addEventListener('pushsubscriptionchange', (event) => { });
 
-onpushsubscriptionchange = event => { };
+onpushsubscriptionchange = (event) => { };
 ```
 
 ## Event type
@@ -74,7 +74,7 @@ You can also use the `onpushsubscriptionchange` event handler property to set up
 ```js
 self.onpushsubscriptionchange = (event) => {
   event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
-    .then(subscription => {
+    .then((subscription) => {
       /* ... */
     })
   )
