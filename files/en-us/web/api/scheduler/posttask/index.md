@@ -82,7 +82,7 @@ For example, the code below logs "Feature: Supported" if the API is supported on
 if ('scheduler' in this) {
   console.log('Feature: Supported');
 } else {
-  console.log('Feature: NOT Supported');
+  console.error('Feature: NOT Supported');
 }
 ```
 
