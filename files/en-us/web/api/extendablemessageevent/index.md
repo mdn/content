@@ -58,7 +58,7 @@ if (navigator.serviceWorker) {
     console.log(`The service worker sent me a message: ${event.data}`);
   });
 
-  navigator.serviceWorker.ready.then( (registration) => {
+  navigator.serviceWorker.ready.then((registration) => {
     registration.active.postMessage("Hi service worker");
   });
 
