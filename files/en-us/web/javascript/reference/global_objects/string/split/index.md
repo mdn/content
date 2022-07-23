@@ -56,7 +56,7 @@ Any other value will be coerced to a string before being used as separator.
 
 ## Examples
 
-### Using `split()`
+### Using split()
 
 When the string is empty and no separator is specified, `split()` returns an array containing one empty
 string, rather than an empty array. If the string and separator are both empty
@@ -206,7 +206,7 @@ const splitByNumber = {
 };
 
 const myString = "a1bc2c5d3e4f";
-console.log(myString.split(splitByNumber)); (//) => [ "a", "bc", "c5d", "e", "f" ]
+console.log(myString.split(splitByNumber)); // => [ "a", "bc", "c5d", "e", "f" ]
 ```
 
 The following example uses an internal state to enforce certain behavior, and to ensure a "valid" result is produced.
@@ -284,7 +284,7 @@ const splitCommands = {
 };
 
 const commands = "light on; brightness up; brightness up; brightness up; light on; brightness down; brightness down; light off";
-console.log(commands.split(splitCommands, 3)); (//) => ["light on", "brightness up", "brightness down"]
+console.log(commands.split(splitCommands, 3)); // => ["light on", "brightness up", "brightness down"]
 
 ```
 
