@@ -30,7 +30,7 @@ In this example the {{domxref("ResizeObserverEntry.contentBoxSize")}} property r
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
+  for (const entry of entries) {
     console.log(entry.contentBoxSize[0]); // a ResizeObserverSize
   }
 });
