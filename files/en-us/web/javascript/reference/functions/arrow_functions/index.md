@@ -123,6 +123,7 @@ const bob = (a) => a + 100;
 One param. With simple expression return is not needed:
 
 ```js
+param => expression
 (param) => expression
 ```
 
@@ -136,6 +137,7 @@ expression return is not needed:
 Multiline statements require body braces and return:
 
 ```js
+// The parentheses are optional with one single parameter
 (param) => {
   const a = 1;
   return a + param;
