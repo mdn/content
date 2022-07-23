@@ -368,7 +368,7 @@ Let's begin by extracting our new to-do form out to its own component. With what
 
     ```html
     <!-- NewTodo -->
-    <NewTodo (on:addTodo={e) => addTodo(e.detail)} />
+    <NewTodo on:addTodo={(e) => addTodo(e.detail)} />
     ```
 
 ## Working with DOM nodes using the `bind:this={dom_node}` directive
