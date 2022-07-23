@@ -53,7 +53,7 @@ if ('OTPCredential' in window) {
       input.value = otp.code;
       if (form) form.submit();
     }).catch((err) => {
-      console.log(err);
+      console.error(err);
     });
   });
 }
