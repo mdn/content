@@ -71,7 +71,7 @@ function DOMContentLoaded() { "use strict";
        `@_jscript_version` is a special String variable defined only in IE conditional comments,
        which themselves only appear as regular comments to other browsers.
        Browsers not named IE interpret the following code as
-       `Number( new Function("")() )(`) => `Number(undefined)(`) => `NaN`.
+       `Number( new Function("")() )` => `Number(undefined)` => `NaN`.
        `NaN` is neither >, <, nor = to any other value.
        Values: IE5: 5?, IE5.5: 5.5?, IE6/7: 5.6/5.7, IE8: 5.8, IE9: 9, IE10: 10,
        (IE11 older doc mode*): 11, IE11 / NOT IE: undefined
