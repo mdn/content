@@ -39,23 +39,24 @@ Because the method returns a promise you can wait on its resolution asynchronous
 The callback function can be any kind of function (below we demonstrate an arrow function).
 
 ```js
-scheduler.postTask(() => 'Task executing')
+scheduler
+  .postTask(() => 'Task executing')
   // Promise resolved: log task result when promise resolves
   .then((taskResult) => console.log(`${taskResult}`))
   // Promise rejected: log AbortError or errors thrown by task
-  .catch((error) => console.error(`Error: ${error}`));  
+  .catch((error) => console.error(`Error: ${error}`));
 ```
 
 The same task might be waited on using `await`/`async` as shown below (note, this is run in an [Immediately Invoked Function Expression (IIFE)](/en-US/docs/Glossary/IIFE)):
 
 ```js
-(async function() {
+(async function () {
   try {
     const result = await scheduler.postTask(() => 'Task executing');
     console.log(result);
   } catch (error) {
     // Log AbortError or error thrown in task function
-    console.log(`Error: ${error}`)
+    console.log(`Error: ${error}`);
   }
 })();
 ```
@@ -73,9 +74,10 @@ The options are:
 The same example as above with a priority option would look like this:
 
 ```js
-scheduler.postTask(() => 'Task executing', { priority: 'user-blocking' })
+scheduler
+  .postTask(() => 'Task executing', { priority: 'user-blocking' })
   .then((taskResult) => console.log(`${taskResult}`)) // Log the task result
-  .catch((error) => console.error(`Error: ${error}`));  // Log any errors
+  .catch((error) => console.error(`Error: ${error}`)); // Log any errors
 ```
 
 ### Task priorities
@@ -226,7 +228,9 @@ function myTask2() {
 }
 
 async function runTask2() {
-  const result = await scheduler.postTask(myTask2, { priority: 'user-blocking' });
+  const result = await scheduler.postTask(myTask2, {
+    priority: 'user-blocking',
+  });
   mylog(result); // Logs 'Task 2: user-blocking'.
 }
 runTask2();
@@ -273,7 +277,7 @@ if ('scheduler' in this) {
   // three tasks, in reverse order of priority
   scheduler.postTask(() => mylog('bckg 1'), { priority: 'background' });
   scheduler.postTask(() => mylog('usr-vis 1'), { priority: 'user-visible' });
-  scheduler.postTask(() => mylog('usr-blk 1') , { priority: 'user-blocking' });
+  scheduler.postTask(() => mylog('usr-blk 1'), { priority: 'user-blocking' });
 
   // three more tasks, in reverse order of priority
   scheduler.postTask(() => mylog('bckg 2'), { priority: 'background' });
@@ -370,9 +374,12 @@ if ('scheduler' in this) {
   // Declare a TaskController with default priority
   const abortTaskController = new TaskController();
   // Post task passing the controller's signal
-  scheduler.postTask(() => mylog('Task executing'), { signal: abortTaskController.signal })
+  scheduler
+    .postTask(() => mylog('Task executing'), {
+      signal: abortTaskController.signal,
+    })
     .then((taskResult) => mylog(`${taskResult}`)) // This won't run!
-    .catch((error) => mylog(`Error: ${error}`));  // Log the error
+    .catch((error) => mylog(`Error: ${error}`)); // Log the error
 
   // Abort the task
   abortTaskController.abort();
@@ -405,10 +412,12 @@ The code below shows two tasks added (as arrow functions) with a delay.
 ```js
 if ('scheduler' in this) {
   // Post task as arrow function with delay of 2 seconds
-  scheduler.postTask(() => 'Task delayed by 2000ms', { delay: 2000 })
-    .then((taskResult) => mylog(`${taskResult}`))
-  scheduler.postTask(() => 'Next task should complete in about 2000ms', { delay: 1 })
-    .then((taskResult) => mylog(`${taskResult}`))
+  scheduler.
+    postTask(() => 'Task delayed by 2000ms', { delay: 2000 })
+    .then((taskResult) => mylog(`${taskResult}`));
+  scheduler
+    .postTask(() => 'Next task should complete in about 2000ms', { delay: 1 })
+    .then((taskResult) => mylog(`${taskResult}`));
 }
 ```
 
