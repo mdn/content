@@ -11,7 +11,7 @@ After you've created the peer, you'll want to get the browser's permission to ac
 
     ```js
     function getLocalStream() {
-        navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( (stream) => {
+        navigator.mediaDevices.getUserMedia({video: false, audio: true}).then((stream) => {
             window.localStream = stream; // A
             window.localAudio.srcObject = stream; // B
             window.localAudio.autoplay = true; // C
