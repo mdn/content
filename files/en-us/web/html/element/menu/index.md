@@ -38,7 +38,7 @@ In this example, a `<menu>` is used to create a toolbar for an editing applicati
   <li><button onclick="paste()">Paste</button></li>
 </menu>
 ```
-  
+
 Note that this is functionally no different than:
 
 ```html

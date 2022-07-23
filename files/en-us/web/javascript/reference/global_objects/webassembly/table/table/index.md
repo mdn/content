@@ -56,8 +56,8 @@ In `table2.html`, we create a `WebAssembly.Table`:
 
 ```js
 const tbl = new WebAssembly.Table({
-  initial: 2, 
-  element: "anyfunc"
+  initial: 2,
+  element: "anyfunc",
 });
 ```
 

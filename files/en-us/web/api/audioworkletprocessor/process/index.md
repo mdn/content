@@ -158,7 +158,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
     // take the first output
     const output = outputs[0]
     // fill each channel with random values multiplied by gain
-    output.forEach(channel => {
+    output.forEach((channel) => {
       for (let i = 0; i < channel.length; i++) {
         // generate random value for each sample
         // Math.random range is [0; 1); we need [-1; 1]

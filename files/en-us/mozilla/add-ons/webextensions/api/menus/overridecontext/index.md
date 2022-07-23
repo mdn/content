@@ -47,7 +47,7 @@ browser.menus.overrideContext(
 Open the tab context menu on your custom UI, in this case :
 
 ```js
-document.addEventListener('contextmenu', event => {
+document.addEventListener('contextmenu', (event) => {
   const foo = event.target.closest('.foo');
   if (foo) {
     // When the context menu is opened on an element with the foo class

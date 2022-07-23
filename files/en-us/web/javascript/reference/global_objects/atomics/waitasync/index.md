@@ -40,7 +40,7 @@ A {{jsxref("Promise")}} that resolves to one of the following result objects:
 
 ```js
 { async: false, value: 'ok' }
-{ async: false, value: 'not-equal' } 
+{ async: false, value: 'not-equal' }
 { async: false, value: 'timed-out' }
 { async: true, value: promise }
 ```

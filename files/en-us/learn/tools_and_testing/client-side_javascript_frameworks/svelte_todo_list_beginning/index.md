@@ -362,7 +362,7 @@ If you want to globally disable this warning, you can add this `onwarn` handler 
 plugins: [
   svelte({
     dev: !production,
-    css: css => {
+    css: (css) => {
       css.write('public/build/bundle.css');
     },
     // Warnings are normally passed straight to Rollup. You can

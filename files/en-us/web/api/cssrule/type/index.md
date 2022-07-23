@@ -21,7 +21,7 @@ If you need to distinguish different types of CSS rule, a good alternative is to
 
 ```js
 const sheets = Array.from(document.styleSheets);
-const rules = sheets.map(sheet => Array.from(sheet.cssRules)).flat();
+const rules = sheets.map((sheet) => Array.from(sheet.cssRules)).flat();
 
 for (const rule of rules) {
   console.log(rule.constructor.name);

@@ -60,7 +60,7 @@ If the password input type is nested in an element with `id="myApp"` set, the sp
 
 ```css
 [type="password"]             /* 0-1-0 */
-input:focus                   /* 0-1-1 */ 
+input:focus                   /* 0-1-1 */
 :root #myApp input:required   /* 1-2-1 */
 ```
 
@@ -266,7 +266,7 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
 <style>
   @import importantOverrides.css layer();
 </style>
-````
+```
 
 #### Method #2
 
@@ -275,22 +275,22 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
     ```css
     @layer importantOverrides;
     ```
-  
+
 2. Each time you need to override an important declaration, declare it within the named layer. Only declare important rules within the layer.
-  
- ```css
- [id="myElement"] p {
-   /* normal styles here */
- }
- @layer importantOverrides {
+
+    ```css
     [id="myElement"] p {
-      /* important style here */;
+      /* normal styles here */
     }
- }
-```
-  
+    @layer importantOverrides {
+      [id="myElement"] p {
+        /* important style here */;
+      }
+    }
+    ```
+
 The specificity of the selector of the important style within the layer can be low, as long as it matches the element you are trying to override. Normal layers should be declared outside the layer because layered styles have lower precedence than unlayered styles.
-  
+
 ### Tree proximity ignorance
 
 The proximity of an element to other elements that are referenced in a given selector has no impact on specificity.

@@ -415,7 +415,7 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 - [W3 CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/#color-conversion-code)
 
   Code examples for color conversions that are part of the CSS Color Module Level 4
-  
+
 ## Additional Resources
 
 #### MDN

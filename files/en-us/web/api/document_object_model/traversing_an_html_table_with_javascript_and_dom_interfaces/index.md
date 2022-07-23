@@ -166,7 +166,7 @@ function set_background() {
 
   // get the second paragraph from the list
   const secondParagraph = paragraphs[1];
-  
+
   // set the inline style
   secondParagraph.style.background = "red";
 }

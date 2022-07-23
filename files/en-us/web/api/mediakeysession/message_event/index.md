@@ -38,7 +38,7 @@ An {{domxref("MediaKeyMessageEvent")}}. Inherits from {{domxref("Event")}}.
   - : Returns an {{jsxref("ArrayBuffer")}} with a message from the content decryption module. Messages vary by key system.
 - {{domxref("MediaKeyMessageEvent.messageType")}} {{readonlyinline}}
   - : Indicates the type of message. May be one of `license-request`, `license-renewal`, `license-release`, or `individualization-request`.
-  
+
 ## Specifications
 
 {{Specifications}}

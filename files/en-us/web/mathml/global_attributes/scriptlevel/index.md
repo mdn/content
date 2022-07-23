@@ -43,14 +43,11 @@ The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Global_attribute
 If `<U>` is an unsigned [integer](/en-US/docs/Web/CSS/integer) (i.e. with prefix sign symbol removed) then the accepted values are:
 
 - `<U>`
-     -: Sets the `math-depth` to value `<U>`. This will set `font-size` of the
-        element to the same value as the one of elements at the specified depth.
+  - : Sets the `math-depth` to value `<U>`. This will set `font-size` of the element to the same value as the one of elements at the specified depth.
 - `+<U>`
-     -: Sets the `math-depth` to value `add(<U>)`. This will scale down
-        `font-size` on the element `<U>` times.
+  - : Sets the `math-depth` to value `add(<U>)`. This will scale down `font-size` on the element `<U>` times.
 - `-<U>`
-      -: Sets the `math-depth` to value `add(-<U>)`. This will scale up
-        `font-size` on the element `<U>` times.
+  - : Sets the `math-depth` to value `add(-<U>)`. This will scale up `font-size` on the element `<U>` times.
 
 ## Specifications
 

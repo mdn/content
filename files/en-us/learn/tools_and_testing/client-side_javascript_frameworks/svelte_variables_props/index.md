@@ -97,7 +97,7 @@ The state of our component will be represented by these three top-level variable
       ]
 
       let totalTodos = todos.length
-      let completedTodos = todos.filter(todo => todo.completed).length
+      let completedTodos = todos.filter((todo) => todo.completed).length
     </script>
     ```
 
@@ -230,7 +230,7 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
 
     ```js
     function removeTodo(todo) {
-      todos = todos.filter(t => t.id !== todo.id)
+      todos = todos.filter((t) => t.id !== todo.id)
     }
     ```
 
@@ -260,7 +260,7 @@ The same is not true for `totalTodos` and `completedTodos`, however. In the foll
 
 ```js
 let totalTodos = todos.length
-let completedTodos = todos.filter(todo => todo.completed).length
+let completedTodos = todos.filter((todo) => todo.completed).length
 ```
 
 We could recalculate them after toggling and removing to-dos, but there's an easier way to do it.
@@ -273,7 +273,7 @@ Update your `totalTodos` and `completedTodos` variable definitions inside `src/c
 
 ```js
 $: totalTodos = todos.length
-$: completedTodos = todos.filter(todo => todo.completed).length
+$: completedTodos = todos.filter((todo) => todo.completed).length
 ```
 
 If you check your app now, you'll see that the heading's numbers are updated when to-dos are completed or deleted. Nice!
@@ -365,12 +365,12 @@ If you try to add new to-dos in your app now, you'll be able to add a new to-do 
         if (totalTodos === 0) {
           newTodoId = 1;
         } else {
-          newTodoId = Math.max(...todos.map(t => t.id)) + 1;
+          newTodoId = Math.max(...todos.map((t) => t.id)) + 1;
         }
       }
     ```
 
-    > **Note:** As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map(t => t.id)) + 1 : 1`
+    > **Note:** As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
 2. How does Svelte achieve this? The compiler parses the whole reactive statement, and detects that it depends on the `totalTodos` variable and the `todos` array. So whenever either of them is modified, this code is re-evaluated, updating `newTodoId` accordingly.
 
@@ -392,8 +392,8 @@ Finally for this article, let's implement the ability to filter our to-dos by st
     ```js
     let filter = 'all'
     const filterTodos = (filter, todos) =>
-      filter === 'active' ? todos.filter(t => !t.completed) :
-      filter === 'completed' ? todos.filter(t => t.completed) :
+      filter === 'active' ? todos.filter((t) => !t.completed) :
+      filter === 'completed' ? todos.filter((t) => t.completed) :
       todos
     ```
 

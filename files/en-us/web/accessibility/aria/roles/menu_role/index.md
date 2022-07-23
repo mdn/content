@@ -151,7 +151,7 @@ The following snippet of code is a popup menu nested in a menubar. It is display
 
 The button that opens the menu has [`aria-haspopup="menu"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) set, explicitly indicating that the popup it controls is a `menu`.
 
-For a menu to open, the user generally interacts with a menu button as the opener. The menu button must be focusable and respond to both click and keyboard events. When focused, selecting <kbd>Enter</kbd>, <kbd>Space</kbd>, <kbd>Down Arrow</kbd>, or the <kbd>Up Arrow</kbd> should open the menu and place focus on a menu item.  
+For a menu to open, the user generally interacts with a menu button as the opener. The menu button must be focusable and respond to both click and keyboard events. When focused, selecting <kbd>Enter</kbd>, <kbd>Space</kbd>, <kbd>Down Arrow</kbd>, or the <kbd>Up Arrow</kbd> should open the menu and place focus on a menu item.
 
 The opening and closing of the menu toggles the [`aria-expanded="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute on the button. It is added when the menu is open. Removed or set to `false` when the menu is closed. The `true` value indicates that the menu is displayed and that activating the menu button closes the menu.
 
@@ -162,7 +162,7 @@ The `menu` role was set on the {{HTMLElement('ul')}}, identifying the `<ul>` ele
 The showing and hiding of the menu can be done with CSS. For example, in these code examples we can use the attribute and adjacent sibling selectors to toggle the visibility of the menu:
 
 ```css
-[role="menu"] { 
+[role="menu"] {
   display: none;
 }
 [aria-expanded="true"] + [role="menu"] {

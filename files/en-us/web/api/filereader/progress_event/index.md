@@ -23,9 +23,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('progress', event => { });
+addEventListener('progress', (event) => { });
 
-onprogress = event => { };
+onprogress = (event) => { };
 ```
 
 ## Event type
