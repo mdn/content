@@ -50,7 +50,7 @@ switch (expression) {
 
 A `switch` statement first evaluates its expression. It then looks for the first `case` clause whose expression evaluates to the same value as the result of the input expression (using the [strict comparison](/en-US/docs/Web/JavaScript/Reference/Operators), `===`) and transfers control to that clause, executing all statements following that clause.
 
-The clause values are only evaluated when necessary: if a match is already found, subsequent `case` clause values will not be evaluated, even when they will be visited by fall-through.
+The clause values are only evaluated when necessary — if a match is already found, subsequent `case` clause values will not be evaluated, even when they will be visited by [fall-through](#breaking_and_fall-through).
 
 ```js
 switch (undefined) {
@@ -64,7 +64,7 @@ If no matching `case` clause is found, the program looks for the optional `defau
 
 ### Breaking and fall-through
 
-You can use the [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement within a `switch` statement's body to break out early, often when all statements associated with a `case` clause have been executed. Execution will continue at the first statement following `switch`. You can use other control-flow statements to replace `break`, such as a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement.
+You can use the [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement within a `switch` statement's body to break out early, often when all statements between two `case` clauses have been executed. Execution will continue at the first statement following `switch`.
 
 If `break` is omitted, execution will proceed to the next `case` clause, regardless if the value of that clause matches. This behavior is called "fall-through".
 
@@ -88,6 +88,8 @@ switch (foo) {
 }
 // Logs "0" and "1"
 ```
+
+You can use other control-flow statements to replace `break`, such as a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement.
 
 ### Lexical scoping
 
@@ -245,6 +247,54 @@ The output from this example:
 | `3`                                                   | Output: Name?                     |
 | `4`                                                   | Output: ?                         |
 | `5`                                                   | Output: !                         |
+
+### An alternative to if...else chains
+
+You may often find yourself doing a series of [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) matches.
+
+```js
+if ('fetch' in globalThis) {
+  // Fetch a resource with fetch
+} else if ('XMLHttpRequest' in globalThis) {
+  // Fetch a resource with XMLHttpRequest
+} else {
+  // Fetch a resource with some custom AJAX logic
+}
+```
+
+This pattern is not doing a sequence of `===` comparisons, but you can still convert it to a `switch` construct.
+
+```js
+switch (true) {
+  case 'fetch' in globalThis:
+    // Fetch a resource with fetch
+    break;
+  case 'XMLHttpRequest' in globalThis:
+    // Fetch a resource with XMLHttpRequest
+    break;
+  default:
+    // Fetch a resource with some custom AJAX logic
+    break;
+}
+```
+
+The `switch (true)` pattern as an alternative to `if...else` is especially useful if you want to utilize the fall-through behavior.
+
+```js
+switch (true) {
+  case isSquare(shape):
+    console.log('This shape is a square.');
+    // Fall-through, since a square is a rectangle as well!
+  case isRectangle(shape):
+    console.log('This shape is a rectangle.');
+  case isQuadrilateral(shape):
+    console.log('This shape is a quadrilateral.');
+    break;
+  case isCircle(shape):
+    console.log('This shape is a circle.');
+    break;
+}
+```
 
 ## Specifications
 
