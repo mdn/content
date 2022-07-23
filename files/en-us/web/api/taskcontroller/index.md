@@ -92,9 +92,9 @@ Note that in a later code block we abort the task, so only the `catch()` block w
 ```js
 // Post task using the controller's signal.
 // The signal priority sets the initial priority of the task
-scheduler.postTask( ()=>{ return 'Task execute'; }, {signal: controller.signal} )
-  .then( (taskResult) => { console.log(`${taskResult}`); }) // Aborted (wont run)
-  .catch( (error) => { console.log(`Catch error: ${error}`); });  // Log error
+scheduler.postTask(() => 'Task execute', {signal: controller.signal})
+  .then((taskResult) => { console.log(`${taskResult}`); }) // Aborted (wont run)
+  .catch((error) => { console.log(`Catch error: ${error}`); });  // Log error
 ```
 
 We can use the controller to manage the task.

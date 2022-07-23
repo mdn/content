@@ -46,15 +46,13 @@ _In addition to the properties listed below, this interface inherits the propert
 The following example uses a `contentdelete` event handler to remove cached content related to the deleted index item.
 
 ```js
-self.addEventListener('contentdelete', event => {
-  event.waitUntil(
-    caches.open('cache-name').then(cache => {
-      return Promise.all([
-        cache.delete(`/icon/${event.id}`),
-        cache.delete(`/content/${event.id}`)
-      ])
-    })
-  );
+self.addEventListener('contentdelete', (event) => {
+  const deletion = caches.open('cache-name')
+    .then((cache) => Promise.all([
+      cache.delete(`/icon/${event.id}`),
+      cache.delete(`/content/${event.id}`),
+    ]));
+  event.waitUntil(deletion);
 });
 ```
 
