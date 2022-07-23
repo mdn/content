@@ -222,7 +222,7 @@ fetch(url)
     return response.blob();
   })
   .then((blob) => showProduct(blob, product) )
-  .catch((err) => console.error(`Fetch problem: ${err.message}`) );
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 This works in much the same way as the previous one, except that instead of using {{domxref("Response.json","json()")}}, we use {{domxref("Response.blob","blob()")}}. In this case we want to return our response as an image file, and the data format we use for that is [Blob](/en-US/docs/Web/API/Blob) (the term is an abbreviation of "Binary Large Object" and can basically be used to represent large file-like objects, such as images or video files).
