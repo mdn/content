@@ -150,14 +150,14 @@ window.addEventListener('DOMContentLoaded', () => {
   const tabList = document.querySelector('[role="tablist"]');
 
   // Add a click event handler to each tab
-  tabs.forEach(tab => {
+  tabs.forEach((tab) => {
     tab.addEventListener('click', changeTabs);
   });
 
   // Enable arrow navigation between tabs in the tab list
   let tabFocus = 0;
 
-  tabList.addEventListener('keydown', e => {
+  tabList.addEventListener('keydown', (e) => {
     // Move right
     if (e.keyCode === 39 || e.keyCode === 37) {
       tabs[tabFocus].setAttribute('tabindex', -1);
@@ -190,7 +190,7 @@ function changeTabs(e) {
   // Remove all current selected tabs
   parent
     .querySelectorAll('[aria-selected="true"]')
-    .forEach(t => t.setAttribute('aria-selected', false));
+    .forEach((t) => t.setAttribute('aria-selected', false));
 
   // Set this tab as selected
   target.setAttribute('aria-selected', true);
@@ -198,7 +198,7 @@ function changeTabs(e) {
   // Hide all tab panels
   grandparent
     .querySelectorAll('[role="tabpanel"]')
-    .forEach(p => p.setAttribute('hidden', true));
+    .forEach((p) => p.setAttribute('hidden', true));
 
   // Show the selected panel
   grandparent.parentNode

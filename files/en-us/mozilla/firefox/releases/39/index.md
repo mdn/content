@@ -48,7 +48,7 @@ Highlights:
   - The {{jsxref("Global_Objects/Proxy/Proxy/defineProperty", "defineProperty")}} and {{jsxref("Global_Objects/Proxy/Proxy/set", "set")}} handlers now need to explicitly return `true` to be successful, otherwise a {{jsxref("TypeError")}} exception will be thrown in strict mode ({{bug(1132522)}}).
   - If the {{domxref("window")}} object is set as the target, those handlers will now throw a `TypeError` ({{bug(828137)}}).
 
-- When using [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`), a line terminator (`\n`) is no longer allowed after arrow function arguments (`() \n => {}`) ({{bug(1141392)}}).
+- When using [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`), a line terminator (`\n`) is no longer allowed after arrow function arguments (`() (\n) => {}`) ({{bug(1141392)}}).
 - {{jsxref("RegExp.prototype.toString")}} is now a generic function ({{bug(1079919)}}).
 - The non-standard `flags` argument of {{jsxref("String.prototype.match()")}}, {{jsxref("String.prototype.search()")}}, and {{jsxref("String.prototype.replace()")}} is now deprecated and throws a console warning ({{bug(1142351)}}).
 - The try/catch behavior of {{jsxref("Object.assign()")}} has been removed to conform with the latest ES2015 draft ({{bug(1103344)}}).

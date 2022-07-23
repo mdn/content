@@ -258,7 +258,7 @@ textBox.addEventListener('keydown', (event) => console.log(`You pressed "${event
 If the function only takes one parameter, you can also omit the brackets around the parameter:
 
 ```js
-textBox.addEventListener('keydown', event => console.log(`You pressed "${event.key}".`));
+textBox.addEventListener('keydown', (event) => console.log(`You pressed "${event.key}".`));
 ```
 
 Finally, if your function needs to return a value, and contains only one line, you can also omit the `return` statement. In the following example we're using the {{jsxref("Array.prototype.map()","map()")}} method of `Array` to double every value in the original array:
@@ -266,14 +266,14 @@ Finally, if your function needs to return a value, and contains only one line, y
 ```js
 const originals = [1, 2, 3];
 
-const doubled = originals.map(item => item * 2);
+const doubled = originals.map((item) => item * 2);
 
 console.log(doubled); // [2, 4, 6]
 ```
 
 The `map()` method takes each item in the array in turn, passing it into the given function. It then takes the value returned by that function and adds it to a new array.
 
-So in the example above, `item => item * 2` is the arrow function equivalent of:
+So in the example above, (`item) => item * 2` is the arrow function equivalent of:
 
 ```js
 function doubleItem(item) {
@@ -302,7 +302,7 @@ The JavaScript:
 const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
 
-textBox.addEventListener('keydown', event => output.textContent = `You pressed "${event.key}".`);
+textBox.addEventListener('keydown', (event) => output.textContent = `You pressed "${event.key}".`);
 ```
 
 ```css hidden

@@ -350,14 +350,14 @@ Let's start with our `Alert.svelte` component.
 
 Now we'll do the same for the `MoreActions.svelte` component.
 
-1. Add the `lang='ts'` attribute, like before. TypeScript will warn us about the `todos` prop and the `t` variable in the call to `todos.filter(t =>...)`.
+1. Add the `lang='ts'` attribute, like before. TypeScript will warn us about the `todos` prop and the `t` variable in the call to `todos.filter((t) =>...)`.
 
     ```bash
     Warn: Variable 'todos' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
       export let todos
 
     Warn: Parameter 't' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
-      $: completedTodos = todos.filter(t => t.completed).length
+      $: completedTodos = todos.filter((t) => t.completed).length
     ```
 
 2. We will use the `TodoType` we already defined to tell TypeScript that `todos` is a `TodoType` array. Replace the `export let todos` line with the following:
@@ -368,7 +368,7 @@ Now we'll do the same for the `MoreActions.svelte` component.
     export let todos: TodoType[];
     ```
 
-Notice that now TypeScript can infer that the `t` variable in `todos.filter(t => t.completed)` is of type `TodoType`. Nevertheless, if we think it makes our code easier to read, we could specify it like this:
+Notice that now TypeScript can infer that the `t` variable in `todos.filter((t) => t.completed)` is of type `TodoType`. Nevertheless, if we think it makes our code easier to read, we could specify it like this:
 
 ```js
 $: completedTodos = todos.filter((t: TodoType) => t.completed).length;
@@ -490,7 +490,7 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
 
       let todosStatus: TodosStatus                   // reference to TodosStatus instance
 
-      $: newTodoId = todos.length > 0 ? Math.max(...todos.map(t => t.id)) + 1 : 1
+      $: newTodoId = todos.length > 0 ? Math.max(...todos.map((t) => t.id)) + 1 : 1
 
       function addTodo(name: string) {
         todos = [...todos, { id: newTodoId, name, completed: false }]
@@ -498,13 +498,13 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
       }
 
       function removeTodo(todo: TodoType) {
-        todos = todos.filter(t => t.id !== todo.id)
+        todos = todos.filter((t) => t.id !== todo.id)
         todosStatus.focus()             // give focus to status heading
         $alert = `Todo '${todo.name}' has been deleted`
       }
 
       function updateTodo(todo: TodoType) {
-        const i = todos.findIndex(t => t.id === todo.id)
+        const i = todos.findIndex((t) => t.id === todo.id)
         if (todos[i].name !== todo.name)            $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`
         if (todos[i].completed !== todo.completed)  $alert = `todo '${todos[i].name}' marked as ${todo.completed ? 'completed' : 'active'}`
         todos[i] = { ...todos[i], ...todo }
@@ -512,8 +512,8 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
 
       let filter: Filter = Filter.ALL
       const filterTodos = (filter: Filter, todos: TodoType[]) =>
-        filter === Filter.ACTIVE ? todos.filter(t => !t.completed) :
-        filter === Filter.COMPLETED ? todos.filter(t => t.completed) :
+        filter === Filter.ACTIVE ? todos.filter((t) => !t.completed) :
+        filter === Filter.COMPLETED ? todos.filter((t) => t.completed) :
         todos
 
       $: {
@@ -523,12 +523,12 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
       }
 
       const checkAllTodos = (completed: boolean) => {
-        todos = todos.map(t => ({...t, completed}))
+        todos = todos.map((t) => ({...t, completed}))
         $alert = `${completed ? 'Checked' : 'Unchecked'} ${todos.length} todos`
       }
       const removeCompletedTodos = () => {
-        $alert = `Removed ${todos.filter(t => t.completed).length} todos`
-        todos = todos.filter(t => !t.completed)
+        $alert = `Removed ${todos.filter((t) => t.completed).length} todos`
+        todos = todos.filter((t) => !t.completed)
       }
     </script>
     ```
@@ -860,7 +860,7 @@ This is our `Stack` class reimplemented using generics:
 export class Stack<T> {
   private elements: T[] = []
 
-  push = (element: T): number => this.elements.push(element)
+  push = (element: T): (number) => this.elements.push(element)
 
   pop(): T {
     if (this.elements.length === 0) throw new Error('The stack is empty!')

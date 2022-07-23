@@ -28,12 +28,12 @@ function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
 
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     // pass through all the response data
     filter.write(event.data);
   }
 
-  filter.onstop = event => {
+  filter.onstop = (event) => {
     filter.write(encoder.encode("extra stuff"));
     filter.disconnect();
   }
@@ -54,11 +54,11 @@ function listener(details) {
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     data.push(event.data);
   };
 
-  filter.onstop = event => {
+  filter.onstop = (event) => {
     for (let buffer of data) {
       filter.write(buffer);
     }
