@@ -262,7 +262,7 @@ If the asynchronous handler doesn't return a Promise, you can explicitly constru
 
 function handleMessage(request, sender, sendResponse) {
   return new Promise((resolve) => {
-    setTimeout() => {
+    setTimeout(() => {
       resolve({response: "async response from background script"});
     }, 1000);
   });
