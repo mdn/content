@@ -37,9 +37,9 @@ With a promise-based API, the asynchronous function starts the operation and ret
 > 2. in that tab, open the JavaScript console in your [browser's developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
 > 3. when we show an example, copy it into the console. You will have to reload the page each time you enter a new example, or the console will complain that you have redeclared `fetchPromise`.
 
-In this example, download the JSON file from <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>, and log some information about it.
+In this example, we'll download the JSON file from <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>, and log some information about it.
 
-To do this, we'll make an **HTTP request** to the server. In an HTTP request, we send a request message to a remote server, and it sends us back a response. In this case, we'll send a request to get a JSON file from the server. In the last article, we made HTTP requests using the {{domxref("XMLHttpRequest")}} API. In this article, we will use the {{domxref("fetch", "fetch()")}} API, which is the modern, promise-based replacement for `XMLHttpRequest`.
+To do this, we'll make an **HTTP request** to the server. In an HTTP request, we send a request message to a remote server, and it sends us back a response. In this case, we'll send a request to get a JSON file from the server. Remember in the last article, where we made HTTP requests using the {{domxref("XMLHttpRequest")}} API? Well, in this article, we'll use the {{domxref("fetch", "fetch()")}} API, which is the modern, promise-based replacement for `XMLHttpRequest`.
 
 Copy this into your browser's JavaScript console:
 
@@ -95,7 +95,7 @@ In this example, as before, we add a `then()` handler to the promise returned by
 
 This should log "baked beans" (the name of the first product listed in "products.json").
 
-But wait! In the last article, where we said that by calling a callback inside another callback, we got successively more nested levels of code. And we said that this "callback hell" made our code hard to understand! Isn't this just the same, only with `then()` calls?
+But wait! Remember the last article, where we said that by calling a callback inside another callback, we got successively more nested levels of code? And we said that this "callback hell" made our code hard to understand? Isn't this just the same, only with `then()` calls?
 
 It is, of course. But the elegant feature of promises is that *`then()` itself returns a promise, which will be completed with the result of the function that was passed to it*. This means that we can (and certainly should) rewrite the above code like this:
 
