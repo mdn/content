@@ -97,7 +97,7 @@ This should log "baked beans" (the name of the first product listed in "products
 
 But wait! Remember the last article, where we said that by calling a callback inside another callback, we got successively more nested levels of code? And we said that this "callback hell" made our code hard to understand? Isn't this just the same, only with `then()` calls?
 
-It is, of course. But the elegant feature of promises is that *`then()` itself returns a promise, which will be completed with the result of the function that was passed to it*. This means that we can (and certainly should) rewrite the above code like this:
+It is, of course. But the elegant feature of promises is that _`then()` itself returns a promise, which will be completed with the result of the function passed to it_. This means that we can (and certainly should) rewrite the above code like this:
 
 ```js
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
