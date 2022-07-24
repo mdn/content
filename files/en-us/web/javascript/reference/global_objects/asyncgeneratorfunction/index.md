@@ -18,6 +18,8 @@ Note that `AsyncGeneratorFunction` is not a global object. It could be obtained 
 
 ```js
 const AsyncGeneratorFunction = Object.getPrototypeOf(async function*() {}).constructor;
+// or you can evaluate async generator function and use returned object to access its constructor
+const AsyncGeneratorFunction = (async function*() {}).constructor
 ```
 
 ## Syntax
