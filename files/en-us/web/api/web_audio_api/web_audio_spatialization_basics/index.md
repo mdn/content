@@ -518,7 +518,7 @@ The values can be hard to manipulate sometimes and depending on your use case it
 > The panner node does some very involved maths under the hood;
 > there are a [number of tests here](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) so you can keep track of the status of the inner workings of this node across different platforms.
 
-Again, you can [check out the final demo here](https://mdn.github.io/webaudio-examples/spacialization/), and the [final source code is here](https://github.com/mdn/webaudio-examples/tree/master/spacialization).
+Again, you can [check out the final demo here](https://mdn.github.io/webaudio-examples/spatialization/), and the [final source code is here](https://github.com/mdn/webaudio-examples/tree/master/spacialization).
 There is also a [Codepen demo too](https://codepen.io/Rumyra/pen/MqayoK?editors=0100).
 
 If you are working with 3D games and/or WebXR it's a good idea to harness a 3D library to create such functionality, rather than trying to do this all yourself from first principles.
