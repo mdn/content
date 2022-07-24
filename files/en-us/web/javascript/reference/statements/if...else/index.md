@@ -12,20 +12,21 @@ browser-compat: javascript.statements.if_else
 ---
 {{jsSidebar("Statements")}}
 
-The **`if`** statement executes a
-statement if a specified condition is {{Glossary("truthy")}}. If the condition is
-{{Glossary("falsy")}}, another statement can be executed.
+The **`if`** statement executes a statement if a specified condition is {{Glossary("truthy")}}. If the condition is {{Glossary("falsy")}}, another statement in the optional `else` clause will be executed.
 
 {{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}
 
 ## Syntax
 
 ```js
-if (condition) {
-   statement1
-} else {
-   statement2
-}
+if (condition)
+  statement1
+
+// With an else clause
+if (condition)
+  statement1
+else
+  statement2
 ```
 
 - `condition`
@@ -54,7 +55,7 @@ else if (condition2)
   statement2
 else if (condition3)
   statement3
-...
+// …
 else
   statementN
 ```
@@ -69,19 +70,54 @@ else
     statement2
   else
     if (condition3)
-...
+// …
 ```
 
-To execute multiple statements within a clause, use a block statement
-(`{ /* ... */ }`) to group those statements. In general, it is a good practice to
-always use block statements, especially in code involving nested `if`
-statements:
+To execute multiple statements within a clause, use a block statement (`{ /* ... */ }`) to group those statements.
 
 ```js
 if (condition) {
   statements1
 } else {
   statements2
+}
+```
+
+Not using blocks may lead to confusing behavior, especially if the code is hand-formatted. For example:
+
+```js example-bad
+function checkValue(a, b) {
+  if (a === 1)
+    if (b === 2)
+      console.log("a is 1 and b is 2");
+  else
+    console.log("a is not 1");
+}
+```
+
+This code looks innocent — however, executing `checkValue(1, 3)` will log "a is not 1". This is because in the case of [dangling else](https://en.wikipedia.org/wiki/Dangling_else), the `else` clause will be connected to the closest `if` clause. Therefore, the code above, with proper indentation, would look like:
+
+```js
+function checkValue(a, b) {
+  if (a === 1)
+    if (b === 2)
+      console.log("a is 1 and b is 2");
+    else
+      console.log("a is not 1");
+}
+```
+
+In general, it is a good practice to always use block statements, especially in code involving nested `if` statements.
+
+```js example-good
+function checkValue(a, b) {
+  if (a === 1) {
+    if (b === 2) {
+      console.log("a is 1 and b is 2");
+    } else {
+      console.log("a is not 1");
+    }
+  }
 }
 ```
 
