@@ -88,12 +88,13 @@ function updateStyle(elem) {
   const childNodes = shadow.childNodes;
   for(let i = 0; i < childNodes.length; i++) {
     if(childNodes[i].nodeName === 'STYLE') {
-      childNodes[i].textContent =
-        `div {` +
-          `width: ${elem.getAttribute('l')}px;` +
-          `height: ${elem.getAttribute('l')}px;` +
-          `background-color: ${elem.getAttribute('c')};` +
-        `}`;
+      childNodes[i].textContent = `
+        div {
+          width: ${elem.getAttribute('l')}px;
+          height: ${elem.getAttribute('l')}px;
+          background-color: ${elem.getAttribute('c')};
+        }
+      `;
     }
   }
 }
