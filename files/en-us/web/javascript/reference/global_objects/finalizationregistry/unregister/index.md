@@ -86,7 +86,7 @@ unregister token:
  {
     //         ^^^^−−−−− held value
         console.error(
-            `The \`release\` method was never called for the \`Thingy\` for the file "${file.name}"`
+            `The "release" method was never called for the "Thingy" for the file "${file.name}"`
         );
     };
     #registry = new FinalizationRegistry(this.#cleanup);
