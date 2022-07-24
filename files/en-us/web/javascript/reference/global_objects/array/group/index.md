@@ -122,7 +122,7 @@ const inventory = [
 The code below groups the elements by the value of their `type` property.
 
 ```js
-let result = inventory.group( ({ type }) => type );
+let result = inventory.group(({ type }) => type);
 
 /* Result is:
 {

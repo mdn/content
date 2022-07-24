@@ -405,17 +405,17 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 
     ```html
     <div class="filters btn-group stack-exception">
-      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={()=> filter = 'all'} >
+      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={() => filter = 'all'} >
         <span class="visually-hidden">Show</span>
         <span>All</span>
         <span class="visually-hidden">tasks</span>
       </button>
-      <button class="btn toggle-btn" class:btn__primary={filter === 'active'} aria-pressed={filter === 'active'} on:click={()=> filter = 'active'} >
+      <button class="btn toggle-btn" class:btn__primary={filter === 'active'} aria-pressed={filter === 'active'} on:click={() => filter = 'active'} >
         <span class="visually-hidden">Show</span>
         <span>Active</span>
         <span class="visually-hidden">tasks</span>
       </button>
-      <button class="btn toggle-btn" class:btn__primary={filter === 'completed'} aria-pressed={filter === 'completed'} on:click={()=> filter = 'completed'} >
+      <button class="btn toggle-btn" class:btn__primary={filter === 'completed'} aria-pressed={filter === 'completed'} on:click={() => filter = 'completed'} >
         <span class="visually-hidden">Show</span>
         <span>Completed</span>
         <span class="visually-hidden">tasks</span>
@@ -431,7 +431,7 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 
     Something similar happens with `aria-pressed={filter === 'all'}`: when the JavaScript expression passed between curly braces evaluates to a truthy value, the `aria-pressed` attribute will be added to the button.
 
-    Whenever we click on a button, we update the filter variable by issuing `on:click={()=> filter = 'all'}`. Read on to find out how Svelte reactivity will take care of the rest.
+    Whenever we click on a button, we update the filter variable by issuing `on:click={() => filter = 'all'}`. Read on to find out how Svelte reactivity will take care of the rest.
 
 3. Now we just need to use the helper function in the `{#each}` loop; update it like this:
 
