@@ -41,7 +41,7 @@ WebXR supports a variety of different types of devices to handle targeting and a
 - Motion-sensing controllers, which use accelerometers, magnetometers, and other sensors for motion tracking and targeting and may additionally include any number of buttons, joysticks, thumbpads, touchpads, force sensors, and so on to provide additional input sources for both targeting and selection.
 - Squeezable triggers or glove grip pads to provide squeeze actions.
 - Voice commands using speech recognition.
-- Spatially-tracked articulated hands, such as [Wired glove](https://en.wikipedia.org/wiki/Wired_glove) can provide both targeting and squeeze actions, as well as selection if outfitted with buttons or other sources of selection actions.
+- Spatially-tracked articulated hands, such as [wired gloves](https://en.wikipedia.org/wiki/Wired_glove) can provide both targeting and squeeze actions, as well as selection if outfitted with buttons or other sources of selection actions.
 - Single-button click devices.
 - Gaze tracking (following the movements of the eye to choose targets).
 
