@@ -37,7 +37,7 @@ The `Int16Array` constructor requires being constructed with a {{jsxref("Operato
 
 ```js example-bad
 const dv = Int16Array([1, 2, 3]);
-// TypeError: calling a builtin Uint16Array constructor
+// TypeError: calling a builtin Int16Array constructor
 // without new is forbidden
 ```
 
