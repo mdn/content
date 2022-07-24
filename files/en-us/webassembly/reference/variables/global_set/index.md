@@ -25,4 +25,4 @@ global.set $val
 
 | Instruction  | Binary opcode |
 | ------------ | ------------- |
-| `global.set` | `0x21`        |
+| `global.set` | `0x24`        |
