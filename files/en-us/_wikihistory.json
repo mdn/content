@@ -44256,45 +44256,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/GlobalEventHandlers/onerror": {
-    "modified": "2020-10-15T21:07:20.884Z",
-    "contributors": [
-      "chrisdavidmills",
-      "MaximYaskov",
-      "atsang",
-      "AdriVanHoudt",
-      "xinganwang",
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "Peppesterest",
-      "jacquesdev",
-      "vrana",
-      "nickheiner-usds",
-      "jpmedley",
-      "leolux",
-      "mfiels",
-      "Brettz9",
-      "LeonardoBraga",
-      "RonRoyston",
-      "Nickolay",
-      "oldhill",
-      "cvrebert",
-      "Sebastianz",
-      "robatron",
-      "teoli",
-      "MHasan",
-      "diegocr",
-      "Delapouite",
-      "asassssssss",
-      "kscarfone",
-      "Sheppy",
-      "Nux",
-      "SergeG",
-      "Doekman",
-      "alecananian"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2020-10-15T21:12:46.292Z",
     "contributors": [
