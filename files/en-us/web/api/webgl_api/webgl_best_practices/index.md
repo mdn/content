@@ -40,7 +40,7 @@ These WebGL 1 extensions are universally supported, and can be relied upon to be
 
 _(see also: [WebGL feature levels and % support](https://kdashg.github.io/misc/webgl/webgl-feature-levels.html))_
 
-Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/jdashg/misc/blob/master/webgl/webgl-v1.1.js>
+Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/kdashg/misc/blob/tip/webgl/webgl-v1.1.js>
 
 ## Understand system limits
 
