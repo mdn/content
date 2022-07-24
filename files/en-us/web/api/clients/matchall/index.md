@@ -55,7 +55,7 @@ order, correct as per spec.
 ## Examples
 
 ```js
-clients.matchAll(options).then(function(clientList) {
+clients.matchAll(options).then((clientList) => {
   for (const client of clientList) {
     if (client.url === 'index.html') {
       clients.openWindow(client);
