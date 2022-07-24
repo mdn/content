@@ -44335,35 +44335,6 @@
       "alecananian"
     ]
   },
-  "Web/API/GlobalEventHandlers/onloadeddata": {
-    "modified": "2020-10-15T21:44:06.913Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onloadedmetadata": {
-    "modified": "2020-10-15T21:44:06.544Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onloadstart": {
-    "modified": "2019-03-23T22:36:54.161Z",
-    "contributors": [
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onpause": {
     "modified": "2020-10-15T21:44:06.725Z",
     "contributors": [

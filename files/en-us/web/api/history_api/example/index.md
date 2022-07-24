@@ -350,7 +350,7 @@ const ajaxRequest = new (function () {
         return (
             url.replace(searchRegex, "") +
             (
-                `?${ 
+                `?${
                 url
                     .replace(hostRegex, "&")
                     .replace(viewRegex, viewMode ? `&${viewKey}=${viewMode}` : "")

@@ -50,7 +50,7 @@ function* linkingProgress(programs) {
     let todo = programs.slice();
     while (todo.length) {
         if (ext) {
-            todo = todo.filter(x => !gl.getProgramParameter(x, ext.COMPLETION_STATUS_KHR));
+            todo = todo.filter((x) => !gl.getProgramParameter(x, ext.COMPLETION_STATUS_KHR));
         } else {
             const x = todo.pop();
             gl.getProgramParameter(x, gl.LINK_STATUS);

@@ -93,7 +93,7 @@ const p3 = new Promise((resolve, reject) => {
   }, 100);
 });
 
-Promise.all([p1, p2, p3]).then(values => {
+Promise.all([p1, p2, p3]).then((values) => {
   console.log(values); // [3, 1337, "foo"]
 });
 ```
@@ -210,10 +210,10 @@ const p5 = new Promise((resolve, reject) => {
 
 // Using .catch:
 Promise.all([p1, p2, p3, p4, p5])
-.then(values => {
+.then((values) => {
   console.log(values);
 })
-.catch(error => {
+.catch((error) => {
   console.error(error.message)
 });
 
@@ -233,9 +233,9 @@ const p2 = new Promise((resolve, reject) => {
 });
 
 Promise.all([
-  p1.catch(error => { return error }),
-  p2.catch(error => { return error }),
-]).then(values => {
+  p1.catch((error) => { return error }),
+  p2.catch((error) => { return error }),
+]).then((values) => {
   console.log(values[0]) // "p1_delayed_resolution"
   console.error(values[1]) // "Error: p2_immediate_rejection"
 })

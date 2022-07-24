@@ -56,7 +56,7 @@ const dbName = "sampleDB";
 const dbVersion = 2;
 const request = indexedDB.open(dbName, dbVersion);
 
-request.onupgradeneeded = event => {
+request.onupgradeneeded = (event) => {
   const db = request.result;
   if (event.oldVersion < 1) {
     db.createObjectStore("store1");

@@ -74,7 +74,7 @@ input {
 ### JavaScript
 
 ```js
-document.getElementById("element-to-paste-text").addEventListener("paste", evt => {
+document.getElementById("element-to-paste-text").addEventListener("paste", (evt) => {
   evt.target.textContent = evt.clipboardData.getData("text/plain").toUpperCase();
   evt.preventDefault();
 });

@@ -17,7 +17,7 @@ The **`AsyncGeneratorFunction` constructor** creates a new {{jsxref("Statements/
 Note that `AsyncGeneratorFunction` is not a global object. It could be obtained by evaluating the following code.
 
 ```js
-const AsyncGeneratorFunction = Object.getPrototypeOf(async function*() {}).constructor;
+const AsyncGeneratorFunction = (async function* () {}).constructor;
 ```
 
 ## Syntax
@@ -63,7 +63,7 @@ The following example uses the `AsyncGeneratorFunction` constructor to create an
 const AsyncGeneratorFunction = Object.getPrototypeOf(async function*() {}).constructor;
 const createAsyncGenerator = new AsyncGeneratorFunction('a', 'yield a * 2');
 const asyncGen = createAsyncGenerator(10);
-asyncGen.next().then(res => console.log(res.value)); // 20
+asyncGen.next().then((res) => console.log(res.value)); // 20
 ```
 
 ## Specifications

@@ -103,7 +103,7 @@ ndef.write(
   "Hello World"
 ).then(() => {
   console.log("Message written.");
-}).catch(error => {
+}).catch((error) => {
   console.log(`Write failed :-( try again: ${error}.`);
 });
 ```
@@ -137,7 +137,7 @@ function write(data, { timeout } = {}) {
     ctlr.signal.onabort = () => reject("Time is up, bailing out!");
     setTimeout(() => ctlr.abort(), timeout);
 
-    ndef.addEventListener("reading", event => {
+    ndef.addEventListener("reading", (event) => {
       ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
     }, { once: true });
   });

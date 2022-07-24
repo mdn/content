@@ -98,7 +98,7 @@ The `decodingInfo()` and {{domxref("MediaCapabilities.encodingInfo", "encodingIn
 Instead of the assigning the promise to a variable, we can output the values returned by the promise to the console:
 
 ```js
-navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(result => {
+navigator.mediaCapabilities.decodingInfo(videoConfiguration).then((result) => {
   console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
   console.log(`${result.smooth ? '' : 'not '}smooth, and`);
   console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
@@ -117,8 +117,8 @@ The error can be due to the `type` not being one of the two possible values, the
 ```js
 navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(
   console.log('It worked')
-).catch(error =>
-  console.log(`It failed: ${error}`)
+).catch((error) =>
+  console.error(`It failed: ${error}`)
 );
 ```
 
@@ -214,7 +214,7 @@ let mc = {
 
   testIt() {
     let content = '';
-    navigator.mediaCapabilities.decodingInfo(mc.videoConfiguration).then(result => {
+    navigator.mediaCapabilities.decodingInfo(mc.videoConfiguration).then((result) => {
       const li = document.createElement('li'),
         mcv = mc.videoConfiguration.video;
       content = `A ${mcv.width}x${mcv.height}, ${mcv.contentType} at ${mcv.framerate}fps and ${mcv.bitrate} bps video ${result.supported ? ' IS ' : 'IS NOT '} supported,`;

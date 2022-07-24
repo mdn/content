@@ -33,7 +33,7 @@ Let's look at an example to clear things up (you can find this on GitHub as [tab
 var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
 WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then(obj => {
+.then((obj) => {
   var tbl = obj.instance.exports.tbl;
   console.log(tbl.get(0)());  // 13
   console.log(tbl.get(1)());  // 42

@@ -23,9 +23,9 @@ The event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('visibilitychange', event => { });
+addEventListener('visibilitychange', (event) => { });
 
-onvisibilitychange = event => { };
+onvisibilitychange = (event) => { };
 ```
 
 ## Event type

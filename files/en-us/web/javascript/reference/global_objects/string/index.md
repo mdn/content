@@ -210,7 +210,7 @@ You must be careful which level of characters you are iterating on. For example,
 
 // "Backhand Index Pointing Right: Dark Skin Tone"
 [..."👉🏿"]; // ['👉', '🏿']
-// splits into the basic "Backhand Index Pointing Right" emoji and 
+// splits into the basic "Backhand Index Pointing Right" emoji and
 // the "Dark skin tone" emoji
 
 // "Family: Man, Boy"

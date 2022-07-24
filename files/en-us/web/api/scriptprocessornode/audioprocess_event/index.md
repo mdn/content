@@ -71,7 +71,7 @@ scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
 You could also set up the event handler using the `onaudioprocess` property:
 
 ```js
-scriptNode.onaudioprocess = audioProcessingEvent => {
+scriptNode.onaudioprocess = (audioProcessingEvent) => {
   // ...
 }
 ```

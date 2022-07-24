@@ -36,12 +36,12 @@ try {
 }
 
 function getConnectionStats() {
-  myPeerConnection.getStats(null).then(stats => {
+  myPeerConnection.getStats(null).then((stats) => {
     let statsOutput = "";
 
-    stats.forEach(report => {
+    stats.forEach((report) => {
       if (report.type === "inbound-rtp" && report.kind === "video") {
-        Object.keys(report).forEach(statName => {
+        Object.keys(report).forEach((statName) => {
           statsOutput += `<strong>${statName}:</strong> ${report[statName]}<br>\n`;
         });
       }

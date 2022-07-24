@@ -25,8 +25,8 @@ Practically, this event is fired when any of the following properties will retur
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set the `onprogress` event property on the relevant {{domxref("BackgroundFetchRegistration")}} object.
 
 ```js
-addEventListener('progress', event => { })
-onprogress = event => { }
+addEventListener('progress', (event) => { })
+onprogress = (event) => { }
 ```
 
 ## Event type

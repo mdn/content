@@ -48,10 +48,10 @@ candidates. Only candidates which have not been deleted are included in the outp
 
 ```js
 window.setInterval(function() {
-  myPeerConnection.getStats(null).then(stats => {
+  myPeerConnection.getStats(null).then((stats) => {
     let statsOutput = "";
 
-    stats.forEach(report => {
+    stats.forEach((report) => {
       if ((stats.type === "local-candidate" || stats.type === "remote.candidate") && !stats.deleted) {
         statsOutput += `<h2>Report: ${report.type}</h3>\n<strong>ID:</strong> ${report.id}<br>\n` +
                        `<strong>Timestamp:</strong> ${report.timestamp}<br>\n`;
@@ -59,7 +59,7 @@ window.setInterval(function() {
         // Now the statistics for this report; we intentionally drop the ones we
         // sorted to the top above
 
-        Object.keys(report).forEach(statName => {
+        Object.keys(report).forEach((statName) => {
           if (statName !== "id" && statName !== "timestamp" && statName !== "type") {
             statsOutput += `<strong>${statName}:</strong> ${report[statName]}<br>\n`;
           }

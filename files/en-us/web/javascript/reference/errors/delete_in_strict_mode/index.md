@@ -46,7 +46,7 @@ Attempting to delete a plain variable, doesn't work in JavaScript and it throws 
 
 var x;
 
-// ...
+// …
 
 delete x;
 
@@ -61,7 +61,7 @@ To free the contents of a variable, you can set it to {{jsxref("null")}}:
 
 var x;
 
-// ...
+// …
 
 x = null;
 

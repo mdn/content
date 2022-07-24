@@ -126,7 +126,7 @@ First of all, return once more to our `todo-data.js` file. It already contains a
 
 ```js
 get completed() {
-  return this.todos.filter(todo => todo.isCompleted);
+  return this.todos.filter((todo) => todo.isCompleted);
 }
 ```
 

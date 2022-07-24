@@ -211,7 +211,7 @@ If the newly opened browsing context does not share the same [origin](/en-US/doc
 const otherOriginContext = window.open("https://example.org");
 // example.com and example.org are not the same origin
 
-console.log(otherOriginContext.origin); 
+console.log(otherOriginContext.origin);
 // DOMException: Permission denied to access property "origin" on cross-origin object
 ```
 
@@ -220,7 +220,7 @@ console.log(otherOriginContext.origin);
 const sameOriginContext = window.open("https://example.com");
 // This time, the new browsing context has the same origin
 
-console.log(sameOriginContext.origin); 
+console.log(sameOriginContext.origin);
 // https://example.com
 ```
 

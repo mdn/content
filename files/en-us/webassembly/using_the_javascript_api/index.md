@@ -41,7 +41,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 
     ```js
     const importObject = {
-      imports: { imported_func: arg => console.log(arg) }
+      imports: { imported_func: (arg) => console.log(arg) }
     };
     ```
 
@@ -55,7 +55,7 @@ Add the following to your script, below the first block:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+.then((obj) => obj.instance.exports.exported_func());
 ```
 
 The net result of this is that we call our exported WebAssembly function `exported_func`, which in turn calls our imported JavaScript function `imported_func`, which logs the value provided inside the WebAssembly instance (42) to the console. If you save your example code now and load it a browser that supports WebAssembly, you'll see this in action!
@@ -71,11 +71,11 @@ These methods don't directly access the byte code, so require an extra step to t
 The equivalent code would look like this:
 
 ```js
-fetch('simple.wasm').then(response =>
+fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
-).then(bytes =>
+).then((bytes) =>
   WebAssembly.instantiate(bytes, importObject)
-).then(results => {
+).then((results) => {
   results.instance.exports.exported_func();
 });
 ```
@@ -147,7 +147,7 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 
     ```js
     WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-    .then(results => {
+    .then((results) => {
       // add code here
     });
     ```

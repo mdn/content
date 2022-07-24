@@ -152,11 +152,11 @@ Example codes below highlight the usage of main features of the Presentation API
   const reconnectBtn = document.querySelector("#reconnectBtn");
   const disconnectBtn = document.querySelector("#disconnectBtn");
 
-  stopBtn.onclick = _ => {
+  stopBtn.onclick = () => {
     connection && connection.terminate();
   };
 
-  disconnectBtn.onclick = _ => {
+  disconnectBtn.onclick = (_) => {
     connection && connection.close();
   };
 
@@ -185,11 +185,11 @@ Example codes below highlight the usage of main features of the Presentation API
     }
 
     // Monitor the connection state
-    connection.onconnect = _ => {
+    connection.onconnect = (_) => {
       showConnectedUI();
 
       // Register message handler
-      connection.onmessage = message => {
+      connection.onmessage = (message) => {
         console.log(`Received message: ${message.data}`);
       };
 
@@ -197,12 +197,12 @@ Example codes below highlight the usage of main features of the Presentation API
       connection.send("Say hello");
     };
 
-    connection.onclose = _ => {
+    connection.onclose = (_) => {
       connection = null;
       showDisconnectedUI();
     };
 
-    connection.onterminate = _ => {
+    connection.onterminate = (_) => {
       // Remove presId from localStorage if exists
       delete localStorage["presId"];
       connection = null;

@@ -87,7 +87,7 @@ const searchParams = new URLSearchParams(paramsObj);
 
 searchParams.toString();                 // "foo=bar&baz=bar"
 searchParams.has('foo');                 // true
-searchParams.get('foo');     
+searchParams.get('foo');                 // "bar"
 ```
 
 ### Duplicate search parameters

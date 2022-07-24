@@ -30,9 +30,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('bufferedamountlow', event => { });
+addEventListener('bufferedamountlow', (event) => { });
 
-onbufferedamountlow = event => { };
+onbufferedamountlow = (event) => { };
 ```
 
 ## Event type
@@ -50,7 +50,7 @@ let source = /* source data object */
 
 dc.bufferedAmountLowThreshold = 65536;
 
-pc.addEventListener("bufferedamountlow", ev => {
+pc.addEventListener("bufferedamountlow", (ev) => {
   if (source.position <= source.length) {
     dc.send(source.readFile(65536));
   }
@@ -62,7 +62,7 @@ After creating the `RTCPeerConnection`, this calls {{domxref("RTCPeerConnection.
 You can also set up a listener for `bufferedamountlow` using its event handler property, {{domxref("RTCDataChannel.bufferedamountlow_event", "onbufferedamountlow")}}:
 
 ```js
-pc.onbufferedamountlow = ev => {
+pc.onbufferedamountlow = (ev) => {
   if (source.position <= source.length) {
     dc.send(source.readFile(65536));
   }

@@ -33,11 +33,7 @@ A {{jsxref("Boolean")}} indicating whether or not the given object is extensible
 
 ## Description
 
-Objects are extensible by default: they can have new properties added to them, and (in
-engines that support {{jsxref("Object.proto", "__proto__")}}) their
-`__proto__` property can be modified. An object can be marked as
-non-extensible using {{jsxref("Object.preventExtensions()")}},
-{{jsxref("Object.seal()")}}, or {{jsxref("Object.freeze()")}}.
+Objects are extensible by default: they can have new properties added to them, and their `[[Prototype]]` can be re-assigned. An object can be marked as non-extensible using one of {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, {{jsxref("Object.freeze()")}}, or {{jsxref("Reflect.preventExtensions()")}}.
 
 ## Examples
 

@@ -270,18 +270,15 @@ function updateStatus() {
     scangamepads();
   }
 
-  const i = 0;
-  let j;
-
-  for (j in controllers) {
+  for (const j in controllers) {
     const controller = controllers[j];
     const d = document.getElementById(`controller${j}`);
     const buttons = d.getElementsByClassName("button");
 
-    for (i = 0; i < controller.buttons.length; i++) {
+    for (let i = 0; i < controller.buttons.length; i++) {
       const b = buttons[i];
-      const val = controller.buttons[i];
-      const pressed = val == 1.0;
+      let val = controller.buttons[i];
+      let pressed = val == 1.0;
       if (typeof(val) == "object") {
         pressed = val.pressed;
         val = val.value;

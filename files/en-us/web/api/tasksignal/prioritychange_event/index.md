@@ -19,9 +19,9 @@ The **`prioritychange`** event is sent to a {{domxref('TaskSignal')}} if its [pr
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('prioritychange', event => { });
+addEventListener('prioritychange', (event) => { });
 
-onprioritychange = event => { };
+onprioritychange = (event) => { };
 ```
 
 ## Event type
@@ -61,7 +61,7 @@ if ('scheduler' in this) {
 
   // Listen for 'prioritychange' events on the controller's signal.
   controller.signal.addEventListener('prioritychange',
-    event => {
+    (event) => {
       const previousPriority = event.previousPriority;
       const newPriority = event.target.priority;
       mylog(`Priority changed from ${previousPriority} to ${newPriority}.`);

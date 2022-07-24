@@ -22,9 +22,9 @@ is received by the {{domxref("NetworkInformation")}} object.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('change', event => { });
+addEventListener('change', (event) => { });
 
-onchange = event => { };
+onchange = (event) => { };
 ```
 
 ## Event type

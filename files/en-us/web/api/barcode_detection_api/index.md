@@ -262,8 +262,8 @@ The following example calls the `getSupportFormat()` method and logs the results
 ```js
 // check supported types
 BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats => {
-    supportedFormats.forEach(format => console.log(format));
+  .then((supportedFormats) => {
+    supportedFormats.forEach((format) => console.log(format));
   });
 ```
 
@@ -273,10 +273,10 @@ This example uses the `detect()` method to detect the barcodes within the given 
 
 ```js
   barcodeDetector.detect(imageEl)
-    .then(barcodes => {
-      barcodes.forEach(barcode => console.log(barcode.rawData));
+    .then((barcodes) => {
+      barcodes.forEach((barcode) => console.log(barcode.rawData));
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
     })
 ```

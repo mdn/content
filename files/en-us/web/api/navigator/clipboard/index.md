@@ -40,7 +40,7 @@ in order to read the contents of the clipboard.
 
 ```js
 navigator.clipboard.readText().then(
-  clipText => document.querySelector(".cliptext").innerText = clipText);
+  (clipText) => document.querySelector(".cliptext").innerText = clipText);
 ```
 
 This snippet replaces the contents of the element whose class is

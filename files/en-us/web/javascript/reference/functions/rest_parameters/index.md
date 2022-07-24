@@ -18,7 +18,7 @@ The **rest parameter** syntax allows a function to accept an indefinite number o
 
 ```js
 function f(a, b, ...theArgs) {
-  // ...
+  // …
 }
 ```
 
@@ -178,7 +178,7 @@ then multiplied by the first parameter, and the array is returned:
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(element => {
+  return theArgs.map((element) => {
     return multiplier * element
   })
 }

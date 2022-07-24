@@ -269,8 +269,8 @@ You can retrieve other types of data as well. If the data is a link, it should h
 ```js
 function doDrop(event) {
   const lines = event.dataTransfer.getData("text/uri-list").split("\n");
-  lines.filter(line => !line.startsWith("#"))
-    .forEach(line => {
+  lines.filter((line) => !line.startsWith("#"))
+    .forEach((line) => {
       const link = document.createElement("a");
       link.href = line;
       link.textContent = line;
@@ -299,7 +299,7 @@ The following example returns the data associated with the best-supported format
 ```js
 function doDrop(event) {
   const supportedTypes = ["application/x-moz-file", "text/uri-list", "text/plain"];
-  const types = event.dataTransfer.types.filter(type => supportedTypes.includes(type));
+  const types = event.dataTransfer.types.filter((type) => supportedTypes.includes(type));
   if (types.length) {
     const data = event.dataTransfer.getData(types[0]);
   }

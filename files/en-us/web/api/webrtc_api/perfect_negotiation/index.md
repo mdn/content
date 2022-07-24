@@ -377,7 +377,7 @@ The techniques previously used to trigger an [ICE restart](/en-US/docs/Web/API/W
 In the past, if you encountered an ICE error and needed to restart negotiation, you might have done something like this:
 
 ```js example-bad
-pc.onnegotiationneeded = async options => {
+pc.onnegotiationneeded = async (options) => {
   await pc.setLocalDescription(await pc.createOffer(options));
   signaler.send({ description: pc.localDescription });
 };

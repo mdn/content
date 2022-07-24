@@ -54,7 +54,7 @@ function updateMenuItem(linkHostname) {
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info => {
+browser.menus.onShown.addListener((info) => {
   if (!info.linkUrl) {
     return;
   }

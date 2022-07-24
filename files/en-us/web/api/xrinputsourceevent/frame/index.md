@@ -62,7 +62,7 @@ into a function called `myCheckAndHandleHit()` to see if the ray was pointing
 at anything when the select was triggered.
 
 ```js
-xrSession.onselectstart = event => {
+xrSession.onselectstart = (event) => {
   let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                             myRefSpace);
   if (targetRayPose) {

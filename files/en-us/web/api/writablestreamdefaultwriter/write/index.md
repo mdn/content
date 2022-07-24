@@ -67,9 +67,7 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
         console.log("Chunk written to sink.");
       })

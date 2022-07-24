@@ -79,7 +79,7 @@ modify the default behavior.
 class MyRegExp extends RegExp {
   [Symbol.split](str, limit) {
     let result = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return result.map(x => "(" + x + ")");
+    return result.map((x) => "(" + x + ")");
   }
 }
 

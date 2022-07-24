@@ -25,8 +25,8 @@ There are four built-in ways to query a property of an object. They all support 
 
 |  | Enumerable, own | Enumerable, inherited | Non-enumerable, own | Non-enumerable, inherited |
 |--|------------|-----------|------------|-----------|
-| [`propertyIsEnumerable()`]((/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)) | `true ✅`  | `false ❌` | `false ❌` | `false ❌` |
-| [`hasOwnProperty()`]((/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)) | `true ✅`  | `false ❌` | `true ✅`  | `false ❌` |
+| [`propertyIsEnumerable()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) | `true ✅`  | `false ❌` | `false ❌` | `false ❌` |
+| [`hasOwnProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) | `true ✅`  | `false ❌` | `true ✅`  | `false ❌` |
 | [`Object.hasOwn()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) | `true ✅`  | `false ❌` | `true ✅`  | `false ❌` |
 | [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) | `true ✅`  | `true ✅`  | `true ✅`  | `true ✅`  |
 
