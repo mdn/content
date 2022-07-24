@@ -520,7 +520,7 @@ Another advantage of dynamic imports is that they are always available, even in 
     });
   // Other code that operates on the global scope and is not
   // ready to be refactored into modules yet.
-  const btn = document.querySelector('.square');
+  var btn = document.querySelector('.square');
 </script>
 ```
 
