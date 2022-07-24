@@ -592,7 +592,7 @@ In order to maximize the reusability of a module, it is often advised to make th
 
   ```js
   // myModule.js
-  const password;
+  let password;
   if (typeof process !== "undefined") {
     // We are running in Node.js; read it from `process.env`
     password = process.env.PASSWORD;
