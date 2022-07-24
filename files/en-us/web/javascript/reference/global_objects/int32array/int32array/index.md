@@ -36,7 +36,7 @@ The `Int32Array` constructor requires being constructed with a {{jsxref("Operato
 
 ```js example-bad
 const dv = Int32Array([1, 2, 3]);
-// TypeError: calling a builtin Uint16Array constructor
+// TypeError: calling a builtin Int32Array constructor
 // without new is forbidden
 ```
 
