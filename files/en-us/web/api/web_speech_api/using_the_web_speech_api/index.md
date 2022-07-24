@@ -119,13 +119,13 @@ const bg = document.querySelector('html');
 const hints = document.querySelector('.hints');
 
 let colorHTML = '';
-colors.forEach(function(color, i) {
+colors.forEach((color, i) => {
   console.log(color, i);
   colorHTML += `<span style="background-color:${color};"> ${color} </span>`;
 });
 hints.innerHTML = `Tap or click then say a color to change the background color of the app. Try ${colorHTML}.`;
 
-document.body.onclick = function () {
+document.body.onclick = () => {
   recognition.start();
   console.log('Ready to receive a color command.');
 };

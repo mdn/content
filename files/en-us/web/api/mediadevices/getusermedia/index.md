@@ -447,7 +447,7 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: true })
     video.play();
   };
 })
-.catch(function(err) {
+.catch((err) => {
   console.error(`${err.name }: ${err.message}`);
 });
 ```
