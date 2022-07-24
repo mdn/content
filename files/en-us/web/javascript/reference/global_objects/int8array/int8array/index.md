@@ -35,7 +35,7 @@ The `Int8Array` constructor requires being constructed with a {{jsxref("Operator
 
 ```js example-bad
 const dv = Int8Array([1, 2, 3]);
-// TypeError: calling a builtin Uint16Array constructor
+// TypeError: calling a builtin Int8Array constructor
 // without new is forbidden
 ```
 
