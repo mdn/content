@@ -391,7 +391,8 @@ navigator.mediaDevices.getUserMedia(constraints)
     video.play();
   };
 })
-.catch(function(err) { // always check for errors at the end.
+.catch((err) => {
+  // always check for errors at the end.
   console.error(`${err.name}: ${err.message}`);
 });
 ```
