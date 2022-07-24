@@ -74,7 +74,7 @@ window.addEventListener("resize", updateHeight);
 
 {{EmbedLiveSample("Examples", 640, 450)}}
 
-This example may be easier to try out {{LiveSampleLink('Example', 'in its own window')}}.
+This example may be easier to try out {{LiveSampleLink('Examples', 'in its own window')}}.
 
 ## Specifications
 
