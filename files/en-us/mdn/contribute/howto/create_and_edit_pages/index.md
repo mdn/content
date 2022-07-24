@@ -28,7 +28,7 @@ You can add or remove tags, which describe the page's content and purpose, in th
 
 ### Attach files
 
-To attach a file to your article, you just need to include it in the same directory as the article's `index.html` file, and include it in your page, typically via an `<a>` element.
+To attach a file to your article, you just need to include it in the same directory as the article's `index.md` or `index.html` file, and include it in your page, typically via a link.
 
 ## Creating a new page
 

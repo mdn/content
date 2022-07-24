@@ -48,7 +48,7 @@ A promise that resolves either to an error or a list of dictionaries, each with 
 
 ```js
 const promise = indexedDB.databases()
-promise.then(databases => {
+promise.then((databases) => {
   console.log(databases)
 })
 ```

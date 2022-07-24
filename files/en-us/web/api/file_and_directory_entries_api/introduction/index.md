@@ -146,7 +146,7 @@ For security reasons, browsers impose restrictions on file access. If you ignore
 
 An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of file systems.
 
-The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in [http://www.example.com/app/](https://www.example.com/app/) can access files from [http://www.example.com/dir/](https://www.example.com/dir/), because they have the same origin, it cannot retrieve files from [http://www.example.com:8080/dir/](https://www.example.com:8080/dir/) (different port) or <https://www.example.com/dir/> (different protocol).
+The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in `http://www.example.com/app/` can access files from `http://www.example.com/dir/`, because they have the same origin, it cannot retrieve files from `http://www.example.com:8080/dir/` (different port) or `https://www.example.com/dir/` (different protocol).
 
 ### The File and Directory Entries API does not let you create and rename executable files
 

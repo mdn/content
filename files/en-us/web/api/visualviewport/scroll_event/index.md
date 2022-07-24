@@ -19,9 +19,9 @@ The **`scroll`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewp
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('scroll', event => { })
+addEventListener('scroll', (event) => { })
 
-onscroll = event => { }
+onscroll = (event) => { }
 ```
 
 ## Event type
@@ -34,7 +34,7 @@ You can use the `scroll` event in an [`addEventListener`](/en-US/docs/Web/API/Ev
 
 ```js
 visualViewport.addEventListener('scroll', function() {
-  /* ... */
+  // …
 });
 ```
 
@@ -42,7 +42,7 @@ Or use the `onscroll` event handler property:
 
 ```js
 visualViewport.onscroll = function() {
-  /* ... */
+  // …
 };
 ```
 

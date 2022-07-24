@@ -33,7 +33,7 @@ src.addEventListener('touchstart', function(e) {
   // Iterate through the touch points that were activated
   // for this element.
   for (var i=0; i < e.targetTouches.length; i++) {
-    console.log("touchpoint[" + i + "].target = " + e.targetTouches[i].target);
+    console.log(`touchpoint[${i}].target = ${e.targetTouches[i].target}`);
   }
 }, false);
 ```

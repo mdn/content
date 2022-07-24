@@ -95,14 +95,14 @@ const feedbackCoefficients = [0.5, 0.4, 0.3, 0.2, 0.1];
 
 const iirFilter = audioCtx.createIIRFilter(feedforwardCoefficients, feedbackCoefficients);
 
-  ...
+// …
 
 function calcFrequencyResponse() {
   iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
 
   for(i = 0; i <= myFrequencyArray.length-1;i++){
     const listItem = document.createElement('li');
-    listItem.innerHTML = '<strong>' + myFrequencyArray[i] + 'Hz</strong>: Magnitude ' + magResponseOutput[i] + ', Phase ' + phaseResponseOutput[i] + ' radians.';
+    listItem.textContent = `${myFrequencyArray[i]}Hz: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
     freqResponseOutput.appendChild(listItem);
   }
 }

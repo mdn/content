@@ -131,7 +131,7 @@ Let's now create our `Alert` component and see how we can read values from the s
 
       let alertContent = ''
 
-      const unsubscribe = alert.subscribe(value => alertContent = value)
+      const unsubscribe = alert.subscribe((value) => alertContent = value)
 
       onDestroy(unsubscribe)
     </script>
@@ -218,7 +218,7 @@ This works, but you'll have to copy and paste all this code every time you want 
 
   let myStoreContent = ''
 
-  const unsubscribe = myStore.subscribe(value => myStoreContent = value)
+  const unsubscribe = myStore.subscribe((value) => myStoreContent = value)
 
   onDestroy(unsubscribe)
 </script>
@@ -254,7 +254,7 @@ And `$myStore` will be fully reactive. This also applies to your own custom stor
 
 2. Check your app again and you'll see that this works just like before. That's much better!
 
-Behind the scenes Svelte has generated the code to declare the local variable `$alert`, subscribe to the `alert` store, update `$alert` whenever the store's content is modified, and unsubscribe when the component is unmounted. It will also generate the `alert.set(...)` statements whenever we assign a value to `$alert`.
+Behind the scenes Svelte has generated the code to declare the local variable `$alert`, subscribe to the `alert` store, update `$alert` whenever the store's content is modified, and unsubscribe when the component is unmounted. It will also generate the `alert.set()` statements whenever we assign a value to `$alert`.
 
 The end result of this nifty trick is that you can access global stores just as easily as using reactive local variables.
 
@@ -283,7 +283,7 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     function removeTodo(todo) {
-      todos = todos.filter(t => t.id !== todo.id)
+      todos = todos.filter((t) => t.id !== todo.id)
       todosStatus.focus()             // give focus to status heading
       $alert = `Todo '${todo.name}' has been deleted`
     }
@@ -293,7 +293,7 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     function updateTodo(todo) {
-      const i = todos.findIndex(t => t.id === todo.id)
+      const i = todos.findIndex((t) => t.id === todo.id)
       if (todos[i].name !== todo.name)            $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`
       if (todos[i].completed !== todo.completed)  $alert = `todo '${todos[i].name}' marked as ${todo.completed ? 'completed' : 'active'}`
       todos[i] = { ...todos[i], ...todo }
@@ -314,18 +314,18 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     const checkAllTodos = (completed) => {
-      todos = todos.map(t => ({...t, completed}))
+      todos = todos.map((t) => ({...t, completed}))
       $alert = `${completed ? 'Checked' : 'Unchecked'} ${todos.length} to-dos`
     }
     const removeCompletedTodos = () => {
-      $alert = `Removed ${todos.filter(t => t.completed).length} to-dos`
-      todos = todos.filter(t => !t.completed)
+      $alert = `Removed ${todos.filter((t) => t.completed).length} to-dos`
+      todos = todos.filter((t) => !t.completed)
     }
     ```
 
 7. So basically, we've imported the store and updated it on every event, which causes a new alert to show each time. Have a look at your app again, and try adding/deleting/updating a few to-dos!
 
-As soon as we execute `$alert = ...`, Svelte will run `alert.set(...)`. Our `Alert` component — like every subscriber to the alert store — will be notified when it receives a new value, and thanks to Svelte reactivity its markup will be updated.
+As soon as we execute `$alert = …`, Svelte will run `alert.set()`. Our `Alert` component — like every subscriber to the alert store — will be notified when it receives a new value, and thanks to Svelte reactivity its markup will be updated.
 
 We could do the same within any component or `.js` file.
 
@@ -359,7 +359,7 @@ Lets see how to do that. We'll specify a prop with the milliseconds to wait befo
       }
       $: onMessageChange($alert, ms)      // whenever the alert store or the ms props changes run onMessageChange
 
-      onDestroy(()=> clearTimeout(timeout))           // make sure we clean-up the timeout
+      onDestroy(() => clearTimeout(timeout))           // make sure we clean-up the timeout
 
     </script>
     ```
@@ -493,13 +493,13 @@ export const writable = (initial_value = 0) => {
   const subscribe = (handler) => {
     subs = [...subs, handler]                                 // add handler to the array of subscribers
     handler(value)                                            // call handler with current value
-    return () => subs = subs.filter(sub => sub !== handler)   // return unsubscribe function
+    return () => subs = subs.filter((sub) => sub !== handler)   // return unsubscribe function
   }
 
   const set = (new_value) => {
     if (value === new_value) return         // same value, exit
     value = new_value                       // update value
-    subs.forEach(sub => sub(value))         // update subscribers
+    subs.forEach((sub) => sub(value))         // update subscribers
   }
 
   const update = (update_fn) => set(update_fn(value))   // update function
@@ -521,7 +521,7 @@ function myStore() {
 
   return {
     subscribe,
-    addOne: () => update(n => n + 1),
+    addOne: () => update((n) => n + 1),
     reset: () => set(0)
   };
 }

@@ -23,9 +23,9 @@ The **`loadstart`** event is fired when a request has started to load data.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('loadstart', event => { })
+addEventListener('loadstart', (event) => { })
 
-onloadstart = event => { }
+onloadstart = (event) => { }
 ```
 
 ## Event type
@@ -85,7 +85,7 @@ const xhrButtonAbort = document.querySelector('.xhr.abort');
 const log = document.querySelector('.event-log');
 
 function handleEvent(e) {
-    log.textContent = log.textContent + `${e.type}: ${e.loaded} bytes transferred\n`;
+    log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
 }
 
 function addListeners(xhr) {

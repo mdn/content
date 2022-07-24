@@ -132,8 +132,8 @@ Choose one, and the transform is applied to the cube; after 2 seconds, the cube 
   </section>
 
   <div class="select-form">
-    <label>Select a transform function</label>
-    <select>
+    <label for="transfunction">Select a transform function</label>
+    <select id="transfunction">
       <option selected>Choose a function</option>
       <option>rotate(360deg)</option>
       <option>rotateX(360deg)</option>

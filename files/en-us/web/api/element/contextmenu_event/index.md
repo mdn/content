@@ -66,7 +66,7 @@ In this example, the default action of the `contextmenu` event is canceled using
 ```js
 const noContext = document.getElementById('noContextMenu');
 
-noContext.addEventListener('contextmenu', e => {
+noContext.addEventListener('contextmenu', (e) => {
   e.preventDefault();
 });
 ```

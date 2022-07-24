@@ -474,7 +474,7 @@ The result is an object that has properties named after the unique strings retur
 Each property is assigned an array containing the elements in the group.
 
 ```js
-let result = inventory.group( ({ type }) => type );
+let result = inventory.group(({ type }) => type);
 console.log(result.vegetables)
 // expected output: Array [Object { name: "asparagus", type: "vegetables" }]
 ```
@@ -668,7 +668,7 @@ The properties and elements returned from this match are as follows:
       <td><code>"dbBd"</code></td>
     </tr>
     <tr>
-      <td><code>[1], ...[n]</code><br />{{ReadOnlyInline}}</td>
+      <td><code>[1], …[n]</code><br />{{ReadOnlyInline}}</td>
       <td>
         Elements that specify the parenthesized substring matches (if included)
         in the regular expression. The number of possible parenthesized

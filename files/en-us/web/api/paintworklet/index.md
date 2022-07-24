@@ -78,11 +78,9 @@ registerPaint('checkerboard', CheckerboardPainter);
 The following example demonstrates loading the above worklet from its js file and does so by feature detection.
 
 ```js
-<script>
-  if ('paintWorklet' in CSS) {
-    CSS.paintWorklet.addModule('checkerboard.js');
-  }
-</script>
+if ('paintWorklet' in CSS) {
+  CSS.paintWorklet.addModule('checkerboard.js');
+}
 ```
 
 ### Use a PaintWorklet

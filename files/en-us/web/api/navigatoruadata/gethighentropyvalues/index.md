@@ -54,7 +54,7 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
   - : A string containing the full browser version. For example, `"91.0.4472.124"`.
 - `fullVersionList`
   - : An array of brand information containing the browser name and full version.
-    For example, `"Chromium";v="91.0.4472.124","Google Chrome";v="91.0.4472.124"`.
+    For example, `{"brand": "Google Chrome", "version": "103.0.5060.134"}, {"brand": "Chromium", "version": "103.0.5060.134"}`.
 
 ### Exceptions
 
@@ -72,7 +72,7 @@ navigator.userAgentData.getHighEntropyValues(
   "model",
   "platformVersion",
   "fullVersionList"])
-  .then(ua => { console.log(ua) });
+  .then((values) => console.log(values));
 ```
 
 ## Specifications

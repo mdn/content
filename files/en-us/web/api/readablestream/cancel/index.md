@@ -59,7 +59,7 @@ const url = 'https://html.spec.whatwg.org/';
 
 console.log(`Searching '${url}' for '${searchTerm}'`);
 
-fetch(url).then(response => {
+fetch(url).then((response) => {
   console.log('Received headers');
 
   const decoder = new TextDecoder();
@@ -107,8 +107,8 @@ fetch(url).then(response => {
     // keep reading
     return reader.read().then(process);
   });
-}).catch(err => {
-  console.log("Something went wrong. See devtools for details. Does the response lack CORS headers?");
+}).catch((err) => {
+  console.error("Something went wrong. See devtools for details. Does the response lack CORS headers?");
   throw err;
 });
 ```

@@ -61,7 +61,7 @@ When a `for` loop executes, the following occurs:
 
 1. The initializing expression `initialExpression`, if any, is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.
 2. The `conditionExpression` expression is evaluated. If the value of `conditionExpression` is true, the loop statements execute. Otherwise, the `for` loop terminates. (If the `conditionExpression` expression is omitted entirely, the condition is assumed to be true.)
-3. The `statement` executes. To execute multiple statements, use a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block) (`{ ... }`) to group those statements.
+3. The `statement` executes. To execute multiple statements, use a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block) (`{ }`) to group those statements.
 4. If present, the update expression `incrementExpression` is executed.
 5. Control returns to Step 2.
 
@@ -125,7 +125,7 @@ while (condition);
 ```
 
 _`statement`_ is always executed once before the condition is
-checked. (To execute multiple statements, use a block statement (`{ ... }`)
+checked. (To execute multiple statements, use a block statement (`{ }`)
 to group those statements.)
 
 If `condition` is `true`, the statement executes again. At the
@@ -167,7 +167,7 @@ and the _`condition`_ is tested again. If the condition returns
 `false`, execution stops, and control is passed to the statement following
 `while`.
 
-To execute multiple statements, use a block statement (`{ ... }`) to group
+To execute multiple statements, use a block statement (`{ }`) to group
 those statements.
 
 ### Example 1

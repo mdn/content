@@ -54,38 +54,38 @@ function calculate_load_times() {
 
   console.log("= Calculate Load Times");
   for (let i=0; i < resources.length; i++) {
-    console.log("== Resource[" + i + "] - " + resources[i].name);
+    console.log(`== Resource[${i}] - ${resources[i].name}`);
     // Redirect time
-    const t = resources[i].redirectEnd - resources[i].redirectStart;
-    console.log("... Redirect time = " + t);
+    let t = resources[i].redirectEnd - resources[i].redirectStart;
+    console.log(`… Redirect time = ${t}`);
 
     // DNS time
     t = resources[i].domainLookupEnd - resources[i].domainLookupStart;
-    console.log("... DNS lookup time = " + t);
+    console.log(`… DNS lookup time = ${t}`);
 
     // TCP handshake time
     t = resources[i].connectEnd - resources[i].connectStart;
-    console.log("... TCP time = " + t);
+    console.log(`… TCP time = ${t}`);
 
     // Secure connection time
     t = (resources[i].secureConnectionStart > 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
-    console.log("... Secure connection time = " + t);
+    console.log(`… Secure connection time = ${t}`);
 
     // Response time
     t = resources[i].responseEnd - resources[i].responseStart;
-    console.log("... Response time = " + t);
+    console.log(`… Response time = ${t}`);
 
     // Fetch until response end
     t = (resources[i].fetchStart > 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
-    console.log("... Fetch until response end time = " + t);
+    console.log(`… Fetch until response end time = ${t}`);
 
     // Request start until response end
     t = (resources[i].requestStart > 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
-    console.log("... Request start until response end time = " + t);
+    console.log(`… Request start until response end time = ${t}`);
 
     // Start until response end
     t = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
-    console.log("... Start until response end time = " + t);
+    console.log(`… Start until response end time = ${t}`);
   }
 }
 ```
@@ -114,21 +114,21 @@ function display_size_data(){
   // For each "resource", display its *Size property values
   console.log("= Display Size Data");
   for (let i=0; i < list.length; i++) {
-    console.log("== Resource[" + i + "] - " + list[i].name);
+    console.log(`== Resource[${i}] - ${list[i].name}`);
     if ("decodedBodySize" in list[i])
-      console.log("... decodedBodySize[" + i + "] = " + list[i].decodedBodySize);
+      console.log(`… decodedBodySize[${i}] = ${list[i].decodedBodySize}`);
     else
-      console.log("... decodedBodySize[" + i + "] = NOT supported");
+      console.log(`… decodedBodySize[${i}] = NOT supported`);
 
     if ("encodedBodySize" in list[i])
-      console.log("... encodedBodySize[" + i + "] = " + list[i].encodedBodySize);
+      console.log(`… encodedBodySize[${i}] = ${list[i].encodedBodySize}`);
     else
-      console.log("... encodedBodySize[" + i + "] = NOT supported");
+      console.log(`… encodedBodySize[${i}] = NOT supported`);
 
     if ("transferSize" in list[i])
-      console.log("... transferSize[" + i + "] = " + list[i].transferSize);
+      console.log(`… transferSize[${i}] = ${list[i].transferSize}`);
     else
-      console.log("... transferSize[" + i + "] = NOT supported");
+      console.log(`… transferSize[${i}] = NOT supported`);
   }
 }
 ```
@@ -149,18 +149,18 @@ function clear_resource_timings() {
   console.log ("= Print performance.clearResourceTimings()");
   const supported = typeof performance.clearResourceTimings == "function";
   if (supported) {
-    console.log("... Performance.clearResourceTimings() = supported");
+    console.log("… Performance.clearResourceTimings() = supported");
     performance.clearResourceTimings();
   } else {
-    console.log("... Performance.clearResourceTiming() = NOT supported");
+    console.log("… Performance.clearResourceTiming() = NOT supported");
     return;
   }
   // getEntries should now return zero
   const p = performance.getEntriesByType("resource");
   if (p.length == 0)
-    console.log("... Performance data buffer cleared");
+    console.log("… Performance data buffer cleared");
   else
-    console.log("... Performance data buffer NOT cleared (still have `" + p.length + "` items");
+    console.log(`… Performance data buffer NOT cleared (still have '${p.length}' items`);
 }
 
 function set_resource_timing_buffer_size(n) {
@@ -172,10 +172,10 @@ function set_resource_timing_buffer_size(n) {
   console.log ("= performance.setResourceTimingBufferSize()");
   const supported = typeof performance.setResourceTimingBufferSize == "function";
   if (supported) {
-    console.log("... Performance.setResourceTimingBufferSize() = supported");
+    console.log("… Performance.setResourceTimingBufferSize() = supported");
     performance.setResourceTimingBufferSize(n);
   } else {
-    console.log("... Performance.setResourceTimingBufferSize() = NOT supported");
+    console.log("… Performance.setResourceTimingBufferSize() = NOT supported");
   }
 }
 ```

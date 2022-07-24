@@ -73,10 +73,10 @@ The error handler looks like this:
     let message = err.message;
 
     if (message && message.length) {
-      s += " " + message;
+      s += ` ${message}`;
     }
 
-    displayErrorMessage("<strong>Error " + err.code + ":</strong> " + s + "<br>");
+    displayErrorMessage(`<strong>Error ${err.code}:</strong> ${s}<br>`);
   };
 ```
 

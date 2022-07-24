@@ -51,7 +51,7 @@ const permissionToRemove = {
 
 function remove() {
   console.log("removing");
-  browser.permissions.remove(permissionToRemove).then(result => {
+  browser.permissions.remove(permissionToRemove).then((result) => {
     console.log(result);
   });
 }

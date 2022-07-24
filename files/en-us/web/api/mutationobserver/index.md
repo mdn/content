@@ -57,7 +57,7 @@ const callback = function(mutationList, observer) {
             console.log('A child node has been added or removed.');
         }
         else if (mutation.type === 'attributes') {
-            console.log('The ' + mutation.attributeName + ' attribute was modified.');
+            console.log(`The ${mutation.attributeName} attribute was modified.`);
         }
     }
 };

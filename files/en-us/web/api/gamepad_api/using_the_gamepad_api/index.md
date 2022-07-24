@@ -120,7 +120,7 @@ Next we use the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}}
 ```js
 window.addEventListener("gamepadconnected", function(e) {
   const gp = navigator.getGamepads()[e.gamepad.index];
-  gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.";
+  gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}. It has ${gp.buttons.length} buttons and ${gp.axes.length} axes.`;
 
   gameLoop();
 });
@@ -151,8 +151,7 @@ function pollGamepads() {
   for (let i = 0; i < gamepads.length; i++) {
     const gp = gamepads[i];
     if (gp) {
-      gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id +
-        ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.";
+      gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}. It has ${gp.buttons.length} buttons and ${gp.axes.length} axes.`;
       gameLoop();
       clearInterval(interval);
     }
@@ -190,8 +189,8 @@ function gameLoop() {
     a--;
   }
 
-  ball.style.left = a * 2 + "px";
-  ball.style.top = b * 2 + "px";
+  ball.style.left = `${a * 2}px`;
+  ball.style.top = `${b * 2}px`;
 
   start = requestAnimationFrame(gameLoop);
 }
@@ -213,10 +212,10 @@ function addgamepad(gamepad) {
   controllers[gamepad.index] = gamepad;
 
   const d = document.createElement("div");
-  d.setAttribute("id", "controller" + gamepad.index);
+  d.setAttribute("id", `controller${gamepad.index}`);
 
   const t = document.createElement("h1");
-  t.appendChild(document.createTextNode("gamepad: " + gamepad.id));
+  t.textContent = `gamepad: ${gamepad.id}`;
   d.appendChild(t);
 
   const b = document.createElement("div");
@@ -261,7 +260,7 @@ function disconnecthandler(e) {
 }
 
 function removegamepad(gamepad) {
-  const d = document.getElementById("controller" + gamepad.index);
+  const d = document.getElementById(`controller${gamepad.index}`);
   document.body.removeChild(d);
   delete controllers[gamepad.index];
 }
@@ -271,25 +270,22 @@ function updateStatus() {
     scangamepads();
   }
 
-  const i = 0;
-  let j;
-
-  for (j in controllers) {
+  for (const j in controllers) {
     const controller = controllers[j];
-    const d = document.getElementById("controller" + j);
+    const d = document.getElementById(`controller${j}`);
     const buttons = d.getElementsByClassName("button");
 
-    for (i = 0; i < controller.buttons.length; i++) {
+    for (let i = 0; i < controller.buttons.length; i++) {
       const b = buttons[i];
-      const val = controller.buttons[i];
-      const pressed = val == 1.0;
+      let val = controller.buttons[i];
+      let pressed = val == 1.0;
       if (typeof(val) == "object") {
         pressed = val.pressed;
         val = val.value;
       }
 
-      const pct = Math.round(val * 100) + "%";
-      b.style.backgroundSize = pct + " " + pct;
+      const pct = `${Math.round(val * 100)}%`;
+      b.style.backgroundSize = `${pct} ${pct}`;
 
       if (pressed) {
         b.className = "button pressed";
@@ -301,7 +297,7 @@ function updateStatus() {
     const axes = d.getElementsByClassName("axis");
     for (let i = 0; i < controller.axes.length; i++) {
       const a = axes[i];
-      a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
+      a.textContent = `${i}: ${controller.axes[i].toFixed(4)}`;
       a.setAttribute("value", controller.axes[i] + 1);
     }
   }

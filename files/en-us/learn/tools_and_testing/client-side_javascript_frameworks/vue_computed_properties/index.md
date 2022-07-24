@@ -67,7 +67,7 @@ Add the following code to your `App` component object, below the `methods` prope
 ```js
 computed: {
   listSummary() {
-    const numberFinishedItems = this.ToDoItems.filter(item =>item.done).length
+    const numberFinishedItems = this.ToDoItems.filter((item) =>item.done).length
     return `${numberFinishedItems} out of ${this.ToDoItems.length} items completed`
   }
 }
@@ -107,7 +107,7 @@ In `App.vue`, add a new method called `updateDoneStatus()`, below your `addToDo(
 
 ```js
 updateDoneStatus(toDoId) {
-  const toDoToUpdate = this.ToDoItems.find(item => item.id === toDoId)
+  const toDoToUpdate = this.ToDoItems.find((item) => item.id === toDoId)
   toDoToUpdate.done = !toDoToUpdate.done
 }
 ```

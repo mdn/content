@@ -173,27 +173,27 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 ## Obsolete properties
 
-- {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
+- {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}} {{Deprecated_inline}} {{Readonlyinline}}
 
   - : Returns a string representing the character value of the key. If the key corresponds to a printable character, this value is a non-empty Unicode string containing that character. If the key doesn't have a printable representation, this is an empty string.
 
     > **Note:** If the key is used as a macro that inserts multiple characters, this property's value is the entire string, not just the first character.
 
-- {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
+- {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}} {{Readonlyinline}}
 
   - : Returns a number representing the Unicode reference number of the key; this property is used only by the `keypress` event. For keys whose `char` property contains multiple characters, this is the Unicode value of the first character in that property. In Firefox 26 this returns codes for printable characters.
 
     > **Warning:** This property is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.
 
-- {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}
+- {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}} {{Readonlyinline}}
 
   - : Returns a number representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
     > **Warning:** This property is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.
 
-- {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
+- {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}} {{deprecated_inline}} {{Readonlyinline}}
   - : This property is non-standard and has been deprecated in favor of {{domxref("KeyboardEvent.key")}}. It was part of an old version of DOM Level 3 Events.
-- {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
+- {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}} {{deprecated_inline}} {{Readonlyinline}}
   - : This is a non-standard deprecated alias for {{domxref("KeyboardEvent.location")}}. It was part of an old version of DOM Level 3 Events.
 - {{domxref("KeyboardEvent.which")}} {{deprecated_inline}} {{Readonlyinline}}
 
@@ -277,12 +277,6 @@ Before Gecko 5.0 {{geckoRelease('5.0')}}, keyboard handling was less consistent 
 ## Example
 
 ```js
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-'use strict';
-
 document.addEventListener('keydown', (event) => {
   const keyName = event.key;
 
@@ -309,13 +303,6 @@ document.addEventListener('keyup', (event) => {
     alert('Control key was released');
   }
 }, false);
-
-</script>
-</head>
-
-<body>
-</body>
-</html>
 ```
 
 ## Specifications

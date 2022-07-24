@@ -21,8 +21,14 @@ Async functions may also be defined {{jsxref("Operators/async_function", "as
 ## Syntax
 
 ```js
-async function name([param[, param[, ...param]]]) {
-   statements
+async function name(param0) {
+  statements
+}
+async function name(param0, param1) {
+  statements
+}
+async function name(param0, param1, /* … ,*/ paramN) {
+  statements
 }
 ```
 
@@ -30,9 +36,9 @@ async function name([param[, param[, ...param]]]) {
 
 - `name`
   - : The function's name.
-- `param`
+- `param` {{optional_inline}}
   - : The name of an argument to be passed to the function.
-- `statements`
+- `statements` {{optional_inline}}
   - : The statements comprising the body of the function. The `await`
     mechanism may be used.
 
@@ -58,7 +64,7 @@ Async functions can contain zero or more {{jsxref("Operators/await", "await")}} 
 Async functions always return a promise. If the return value of an async function is
 not explicitly a promise, it will be implicitly wrapped in a promise.
 
-For example, the following:
+For example, consider the following code:
 
 ```js
 async function foo() {
@@ -66,7 +72,7 @@ async function foo() {
 }
 ```
 
-...is similar to:
+It is similar to:
 
 ```js
 function foo() {
@@ -113,7 +119,7 @@ async function foo() {
 }
 ```
 
-...is equivalent to:
+It is also equivalent to:
 
 ```js
 function foo() {
@@ -179,7 +185,7 @@ foo().catch(() => {}) // Attempt to swallow all errors...
 ```js
 function resolveAfter2Seconds() {
   console.log("starting slow promise")
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(function() {
       resolve("slow")
       console.log("slow promise is done")
@@ -189,7 +195,7 @@ function resolveAfter2Seconds() {
 
 function resolveAfter1Second() {
   console.log("starting fast promise")
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(function() {
       resolve("fast")
       console.log("fast promise is done")
@@ -231,8 +237,8 @@ async function parallel() {
 
   // Start 2 "jobs" in parallel and wait for both of them to complete
   await Promise.all([
-      (async()=>console.log(await resolveAfter2Seconds()))(),
-      (async()=>console.log(await resolveAfter1Second()))()
+      (async () => console.log(await resolveAfter2Seconds()))(),
+      (async () => console.log(await resolveAfter1Second()))()
   ])
 }
 
@@ -287,10 +293,10 @@ splits the function into many parts. Consider the following code:
 ```js
 function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e => {
+    .catch((e) => {
       return downloadFallbackData(url)  // returns a promise
     })
-    .then(v => {
+    .then((v) => {
       return processDataInWorker(v)  // returns a promise
     })
 }
@@ -314,7 +320,7 @@ Alternatively, you can chain the promise with `catch()`:
 
 ```js
 async function getProcessedData(url) {
-  const v = await downloadData(url).catch(e => {
+  const v = await downloadData(url).catch((e) => {
     return downloadFallbackData(url)
   })
   return processDataInWorker(v)

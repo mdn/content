@@ -85,10 +85,10 @@ Some user agents disable autoplay for media elements on mobile devices and requi
 playButton.addEventListener('pointerup', function(event) {
   const audio = document.querySelector('audio');
 
-  // User interacted with the page. Let's play audio...
+  // User interacted with the page. Let's play audio!
   audio.play()
-  .then(_ => { /* Set up media session controls, as shown above. */ })
-  .catch(error => { console.log(error) });
+  .then(() => { /* Set up media session controls, as shown above. */ })
+  .catch((error) => { console.error(error) });
 });
 ```
 

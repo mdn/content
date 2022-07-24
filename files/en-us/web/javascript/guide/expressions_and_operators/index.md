@@ -576,8 +576,8 @@ So, when the bitwise operators are applied to these values, the results are as f
 | `15 & 9`   | `9`    | `1111 & 1001 = 1001`                                  |
 | `15 \| 9`  | `15`   | `1111 \| 1001 = 1111`                                 |
 | `15 ^ 9`   | `6`    | `1111 ^ 1001 = 0110`                                  |
-| `~15`      | `-16`  | `~ 0000 0000 ... 0000 1111 = 1111 1111 ... 1111 0000` |
-| `~9`       | `-10`  | `~ 0000 0000 ... 0000 1001 = 1111 1111 ... 1111 0110` |
+| `~15`      | `-16`  | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
+| `~9`       | `-10`  | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
 Note that all 32 bits are inverted using the Bitwise NOT operator, and that values with
 the most significant (left-most) bit set to 1 represent negative numbers
@@ -762,6 +762,45 @@ Note that for the second case, in modern code you can use the new [Nullish coale
 or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "The global undefined property represents the primitive value undefined.
 It is one of JavaScript's primitive types.").
 It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.
+
+### BigInt operators
+
+Most operators that can be used between numbers can be used between [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) values as well.
+
+```js
+// BigInt addition
+const a = 1n + 2n; // 3n
+// Division with BigInts round towards zero
+const b = 1n / 2n; // 0n
+// Bitwise operations with BigInts do not truncate either side
+const c = 40000000000000000n >> 2n; // 10000000000000000n
+```
+
+One exception is [unsigned right shift (`>>>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift), which is not defined for BigInt values. This is because a BigInt does not have a fixed width, so technically it does not have a "highest bit".
+
+```js
+const d = 8n >>> 2n; // TypeError: BigInts have no unsigned right shift, use >> instead
+```
+
+BigInts and numbers are not mutually replaceable — you cannot mix them in calculations.
+
+```js example-bad
+const a = 1n + 2; // TypeError: Cannot mix BigInt and other types
+```
+
+This is because BigInt is neither a subset nor a superset of numbers. BigInts have higher precision than numbers when representing large integers, but cannot represent decimals, so implicit conversion on either side might lose precision. Use explicit conversion to signal whether you wish the operation to be a number operation or a BigInt one.
+
+```js example-good
+const a = Number(1n) + 2; // 3
+const b = 1n + BigInt(2); // 3n
+```
+
+You can compare BigInts with numbers.
+
+```js
+const a = 1n > 2; // false
+const b = 3 > 2n; // true
+```
 
 ### String operators
 

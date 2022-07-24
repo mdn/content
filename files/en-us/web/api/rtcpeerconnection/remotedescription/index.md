@@ -45,12 +45,10 @@ containing the {{domxref("RTCSessionDescription")}} object's `type` and
 
 ```js
 var pc = new RTCPeerConnection();
-…
+// ...
 var sd = pc.remoteDescription;
 if (sd) {
-  alert("Remote session: type='" +
-        sd.type + "'; sdp description='" +
-        sd.sdp + "'");
+  alert(`Remote session: type='${sd.type}'; sdp description='${sd.sdp}'`);
 }
 else {
   alert("No remote session yet.");

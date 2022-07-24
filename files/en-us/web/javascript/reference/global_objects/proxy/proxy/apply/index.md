@@ -18,7 +18,7 @@ The **`handler.apply()`** method is a trap for a function call.
 
 ```js
 new Proxy(target, {
-  apply: function(target, thisArg, argumentsList) {
+  apply(target, thisArg, argumentsList) {
   }
 });
 ```
@@ -67,7 +67,7 @@ The following code traps a function call.
 
 ```js
 const p = new Proxy(function() {}, {
-  apply: function(target, thisArg, argumentsList) {
+  apply(target, thisArg, argumentsList) {
     console.log('called: ' + argumentsList.join(', '));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
   }

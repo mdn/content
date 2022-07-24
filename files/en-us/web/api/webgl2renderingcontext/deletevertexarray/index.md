@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 var vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
-// ...
+// …
 
 gl.deleteVertexArray(vao);
 ```

@@ -74,7 +74,7 @@ input {
 ### JavaScript
 
 ```js
-document.getElementsByTagName("text")[0].addEventListener("copy", evt => {
+document.getElementsByTagName("text")[0].addEventListener("copy", (evt) => {
   evt.clipboardData.setData('text/plain', document.getSelection().toString().toUpperCase());
   evt.preventDefault();
 });

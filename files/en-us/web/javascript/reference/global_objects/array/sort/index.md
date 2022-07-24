@@ -27,13 +27,13 @@ implementation.
 sort()
 
 // Arrow function
-sort((a, b) => { /* ... */ } )
+sort((a, b) => { /* … */ } )
 
 // Compare function
 sort(compareFn)
 
 // Inline compare function
-sort(function compareFn(a, b) { /* ... */ })
+sort(function compareFn(a, b) { /* … */ })
 ```
 
 ### Parameters
@@ -97,8 +97,10 @@ More formally, the comparator is expected to have the following properties, in o
 - _Pure_: The comparator does not mutate the objects being compared or any external state. (This is important because there's no guarantee _when_ and _how_ the comparator will be called, so any particular call should not produce visible effects to the outside.)
 - _Stable_: The comparator returns the same result with the same pair of input.
 - _Reflexive_: `compare(a, a) === 0`.
-- _Symmetric_: If `compare(a, b) === 0`, then `compare(b, a) === 0`.
+- _Symmetric_: `compare(a, b)` and `compare(b, a)` must both be `0` or have opposite signs.
 - _Transitive_: If `compare(a, b)` and `compare(b, c)` are both positive, zero, or negative, then `compare(a, c)` has the same positivity as the previous two.
+
+A comparator conforming to the constraints above will always be able to return all of `1`, `0`, and `-1`, or consistently return `0`. For example, if a comparator only returns `1` and `0`, or only returns `0` and `-1`, it will not be able to sort reliably because _symmetry_ is broken. A comparator that always returns `0` will cause the array to not be changed at all, but is reliable nonetheless.
 
 The default lexicographic comparator satisfies all constraints above.
 
@@ -249,7 +251,7 @@ mapped.sort((a, b) => {
   return 0;
 });
 
-const result = mapped.map(v => data[v.i]);
+const result = mapped.map((v) => data[v.i]);
 ```
 
 There is an open source library available called [mapsort](https://github.com/Pimm/mapsort) which applies this approach.
@@ -266,7 +268,7 @@ sorted[0] = 10;
 console.log(numbers[0]); // 10
 ```
 
-In case you want `sort()` to not mutate the original array, but return a [shallow-copied]((/en-US/docs/Glossary/Shallow_copy)) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+In case you want `sort()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
 ```js
 const numbers = [3, 1, 4, 1, 5];
@@ -320,6 +322,32 @@ Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meani
   { name: "Alex",   grade: 15 }  // original order not maintained
 ];
 ```
+
+### Sorting with non-well-formed comparator
+
+If a comparing function does not satisfy all of purity, stability, reflexivity, symmetry, and transitivity rules, as explained in the [description](#description), the program's behavior is not well-defined.
+
+For example, consider this code:
+
+```js
+const arr = [3, 1, 4, 1, 5, 9];
+const compare = (a, b) => a > b ? 1 : 0;
+arr.sort(compare);
+```
+
+The `compare` function here is not well-formed, because it does not satisfy symmetry: if `a > b`, it returns `1`; but by swapping `a` and `b`, it returns `0` instead of a negative value. Therefore, the resulting array will be different across engines. For example, V8 (used by Chrome, Node.js, etc.) and JavaScriptCore (used by Safari) would not sort the array at all and return `[3, 1, 4, 1, 5, 9]`, while SpiderMonkey (used by Firefox) will return the array sorted ascendingly, as `[1, 1, 3, 4, 5, 9]`.
+
+However, if the `compare` function is changed slightly so that it returns `-1` or `0`:
+
+```js
+const arr = [3, 1, 4, 1, 5, 9];
+const compare = (a, b) => a > b ? -1 : 0;
+arr.sort(compare);
+```
+
+Then V8 and JavaScriptCore sorts it descendingly, as `[9, 5, 4, 3, 1, 1]`, while SpiderMonkey returns it as-is: `[3, 1, 4, 1, 5, 9]`.
+
+Due to this implementation inconsistency, you are always advised to make your comparator well-formed by following the five constraints.
 
 ## Specifications
 

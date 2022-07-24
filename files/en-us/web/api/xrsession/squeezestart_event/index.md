@@ -36,9 +36,9 @@ Primary squeeze actions are actions which are meant to represent gripping or squ
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeezestart', event => { })
+addEventListener('squeezestart', (event) => { })
 
-onsqueezestart = event => { }
+onsqueezestart = (event) => { }
 ```
 
 ## Event type

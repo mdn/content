@@ -19,6 +19,8 @@ The **`@@iterator`** method is part of
 [The iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol),
 that defines how to synchronously iterate over a sequence of values.
 
+{{EmbedInteractiveExample("pages/js/array-iterator.html")}}
+
 The initial value of the **`@@iterator`** property is the same
 function object as the initial value of the {{jsxref("Array.prototype.values()",
   "values()")}} property.
@@ -52,9 +54,6 @@ return the {{jsxref("Array.prototype.values()", "values()")}} function.
 const arr = ['a', 'b', 'c'];
 const eArr = arr[Symbol.iterator]();
 const letterResult = document.getElementById('letterResult');
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-// const and var could also be used
 for (const letter of eArr) {
   const li = document.createElement('li');
   li.textContent = letter;
@@ -91,7 +90,7 @@ object or a custom object.
 ```js
 function logIterable(it) {
   if (!(Symbol.iterator in it)) {
-    console.log(it, ' is not an iterable object...');
+    console.log(it, ' is not an iterable object.');
     return;
   }
 
@@ -114,7 +113,7 @@ logIterable('abc');
 // c
 
 logIterable(123);
-// 123 is not an iterable object...
+// 123 is not an iterable object.
 ```
 
 ## Specifications

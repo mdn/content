@@ -54,7 +54,7 @@ var audioCtx = new AudioContext();
 
 var synthDelay = audioCtx.createDelay(5.0);
 
-  ...
+// …
 
 var synthSource;
 
@@ -75,7 +75,7 @@ stopSynth.onclick = function() {
   playSynth.removeAttribute('disabled');
 }
 
-...
+// …
 
 var delay1;
 rangeSynth.oninput = function() {

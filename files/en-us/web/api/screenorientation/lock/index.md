@@ -100,11 +100,11 @@ rotate_btn.addEventListener('click', () => {
 
   const oppositeOrientation = screen.orientation.type.startsWith("portrait") ? "landscape" : "portrait";
   screen.orientation.lock(oppositeOrientation)
-    .then( () => {
+    .then(() => {
       log.textContent = `Locked to ${oppositeOrientation}\n`
       }
     )
-    .catch ( error => {
+    .catch((error) => {
       log.textContent += `${error}\n`;
     });
 });
@@ -121,7 +121,7 @@ const fullscreen_btn = document.querySelector('#fullscreen_button');
 fullscreen_btn.addEventListener('click', () => {
   log.textContent+='Fullscreen pressed \n';
   const container = document.querySelector("#example_container");
-  container.requestFullscreen().catch( error => {
+  container.requestFullscreen().catch((error) => {
       log.textContent += `${error}\n`
   });
 } );

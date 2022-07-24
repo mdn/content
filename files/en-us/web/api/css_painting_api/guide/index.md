@@ -330,14 +330,13 @@ registerPaint('headerHighlight', class {
     ctx.fill();
 
     /* create the dashes */
-    for (let i = 0; i < 4; i++) {
-      let start = i * 2;
+    for (let start = 0; start < 8; start += 2) {
       ctx.beginPath();
-      ctx.moveTo( (blockWidth) + (start * 10) + 10, y );
-      ctx.lineTo( (blockWidth) + (start * 10) + 20, y );
-      ctx.lineTo( (blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight );
-      ctx.lineTo( (blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight );
-      ctx.lineTo( (blockWidth) + (start * 10) + 10, y );
+      ctx.moveTo((blockWidth) + (start * 10) + 10, y);
+      ctx.lineTo((blockWidth) + (start * 10) + 20, y);
+      ctx.lineTo((blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight);
+      ctx.lineTo((blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight);
+      ctx.lineTo((blockWidth) + (start * 10) + 10, y);
       ctx.closePath();
       ctx.fill();
     }
@@ -411,7 +410,7 @@ paint(ctx, size, props, args) {
     ctx.fillStyle = 'transparent';
     ctx.strokeStyle = color;
   }
-  ...
+  // …
 }
 ```
 
@@ -452,15 +451,15 @@ Now we can access the type and value properties, meaning we can get the number o
 ```js
 paint(ctx, size, props, args) {
 
-    const strokeWidth = args[1];
+  const strokeWidth = args[1];
 
-    if (strokeWidth.unit === 'px') {
-      ctx.lineWidth = strokeWidth.value;
-    } else {
-      ctx.lineWidth = 1.0;
-    }
+  if (strokeWidth.unit === 'px') {
+    ctx.lineWidth = strokeWidth.value;
+  } else {
+    ctx.lineWidth = 1.0;
+  }
 
-  ...
+  // …
 }
 ```
 

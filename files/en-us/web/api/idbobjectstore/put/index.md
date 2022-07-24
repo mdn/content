@@ -102,7 +102,7 @@ objectStoreTitleRequest.onsuccess = () => {
   const updateTitleRequest = objectStore.put(data);
 
   // Log the transaction that originated this request
-  console.log("The transaction that originated this request is " + updateTitleRequest.transaction);
+  console.log(`The transaction that originated this request is ${updateTitleRequest.transaction}`);
 
   // When this new request succeeds, run the displayData() function again to update the display
   updateTitleRequest.onsuccess = () => {

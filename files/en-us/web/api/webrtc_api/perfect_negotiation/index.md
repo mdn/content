@@ -269,7 +269,7 @@ Doing so returns the local peer to the `stable` {{domxref("RTCPeerConnection.sig
 Using the previous API to implement incoming negotiation messages during perfect negotiation would look something like this:
 
 ```js example-bad
-signaler.onmessage = async({data: { description, candidate }}) => {
+signaler.onmessage = async ({data: { description, candidate }}) => {
   try {
     if (description) {
       if (description.type == "offer" && pc.signalingState != "stable") {
@@ -370,14 +370,14 @@ On the other hand, if the received message is an ICE candidate—indicated by th
 
 ### Explicit restartIce() method added
 
-The techniques previously used to trigger an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to `RTCPeerConnection`.
+The techniques previously used to trigger an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) while handling the event {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to `RTCPeerConnection`.
 
 #### The old way
 
 In the past, if you encountered an ICE error and needed to restart negotiation, you might have done something like this:
 
 ```js example-bad
-pc.onnegotiationneeded = async options => {
+pc.onnegotiationneeded = async (options) => {
   await pc.setLocalDescription(await pc.createOffer(options));
   signaler.send({ description: pc.localDescription });
 };

@@ -14,15 +14,15 @@ The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-o
 
 ## Message
 
-```js
-ReferenceError: assignment to undeclared variable "x" (Firefox)
-ReferenceError: "x" is not defined (Chrome)
-ReferenceError: Variable undefined in strict mode (Edge)
+```
+ReferenceError: x is not defined (V8-based)
+ReferenceError: assignment to undeclared variable x (Firefox)
+ReferenceError: Can't find variable: x (Safari)
 ```
 
 ## Error type
 
-{{jsxref("ReferenceError")}} warning in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) only.
+{{jsxref("ReferenceError")}} in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) only.
 
 ## What went wrong?
 

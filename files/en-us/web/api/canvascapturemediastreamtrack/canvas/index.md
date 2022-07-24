@@ -35,7 +35,7 @@ var canvasElt = document.getElementsByTagName("canvas")[0];
 var stream = canvasElt.captureStream(25); // 25 FPS
 
 // Do things to the stream
-...
+// …
 
 // Obtain the canvas associated with the stream
 var canvas = stream.canvas;

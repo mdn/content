@@ -17,9 +17,9 @@ The **`soundstart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speec
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('soundstart', event => { })
+addEventListener('soundstart', (event) => { })
 
-onsoundstart = event => { }
+onsoundstart = (event) => { }
 ```
 
 ## Event type

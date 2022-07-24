@@ -37,7 +37,7 @@ The `CSSRule` interface specifies the properties common to all rules, while prop
   - : Returns the containing rule, otherwise `null`. E.g. if this rule is a style rule inside an {{cssxref("@media")}} block, the parent rule would be that {{domxref("CSSMediaRule")}}.
 - {{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}
   - : Returns the {{domxref("CSSStyleSheet")}} object for the style sheet that contains this rule
-- {{domxref("CSSRule.type")}} {{readonlyinline}}{{deprecated_inline}}
+- {{domxref("CSSRule.type")}} {{readonlyinline}} {{deprecated_inline}}
   - : Returns one of the Type constants to determine which type of rule is represented.
 
 ## Examples

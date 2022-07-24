@@ -251,7 +251,7 @@ p {
 
 However, in the case of our earlier example with the conflict between the class selector and the element selector, the class prevails, rendering the paragraph text red. How can this happen even though a conflicting style appears later in the stylesheet? A class is rated as being more specific, as in having more **specificity** than the element selector, so it cancels the other conflicting style declaration.
 
-Try this experiment for yourself! Add HTML, then add the two `p { ... }` rules to your stylesheet. Next, change the first `p` selector to `.special` to see how it changes the styling.
+Try this experiment for yourself! Add HTML, then add the two `p { }` rules to your stylesheet. Next, change the first `p` selector to `.special` to see how it changes the styling.
 
 The rules of specificity and the cascade can seem complicated at first. These rules are easier to understand as you become more familiar with CSS. The [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) section in the next module explains this in detail, including how to calculate specificity.
 
@@ -549,7 +549,7 @@ But these declarations are invalid:
 
 ```css
 margin: 0auto;
-padding- left: 10px;
+padding-left: 10px;
 ```
 
 Do you see the spacing errors? First, `0auto` is not recognized as a valid value for the `margin` property. The entry `0auto` is meant to be two separate values: `0` and `auto`. Second, the browser does not recognize `padding-` as a valid property. The correct property name (`padding-left`) is separated by an errant space.

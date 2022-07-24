@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Object
 ---
 {{JSRef}}
 
-The **`Object`** class represents one of [JavaScript's data types](/en-US/docs/Web/JavaScript/Data_structures). It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+The **`Object`** type represents one of [JavaScript's data types](/en-US/docs/Web/JavaScript/Data_structures). It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Description
 
@@ -157,7 +157,7 @@ const current = Object.prototype.valueOf;
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
 Object.prototype.valueOf = function() {
-  if (this.hasOwnProperty('-prop-value')) {
+  if (Object.hasOwn(this, '-prop-value')) {
     return this['-prop-value'];
   } else {
     // It doesn't look like one of my objects, so let's fall back on

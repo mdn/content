@@ -10,7 +10,7 @@ tags:
   - Object
   - l10n:priority
 ---
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_Classes")}}
 
 JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, functions, and methods, and how to create your own objects.
 
@@ -90,7 +90,7 @@ console.log(myObj.myString);
     date created: "This key has a space"
     myString: "This key is in variable str"
     type: "Dot syntax for a key named type"
-*/ 
+*/
 // notice that in the log, the order of the properties listed is not the same as the order they were created.
 
 // [Log] This key is in variable str
@@ -131,8 +131,8 @@ You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Re
 function showProps(obj, objName) {
   let result = '';
   for (const i in obj) {
-    // obj.hasOwnProperty() is used to exclude properties from the object's prototype chain
-    if (obj.hasOwnProperty(i)) {
+    // obj.hasOwn is used to exclude properties from the object's prototype chain and only show "own properties"
+    if (Object.hasOwn(obj, i)) {
       result += `${objName}.${i} = ${obj[i]}\n`;
     }
   }
@@ -184,9 +184,8 @@ The syntax for an object using an object initializer is:
 
 ```js
 const obj = {
-  property_1:   value_1,   // property name may be an identifier...
-  2:            value_2,   // or a number...
-  // ...,
+  property_1:   value_1,   // property name may be an identifier
+  2:            value_2,   // or a number
   'property n': value_n    // or a string
 };
 ```
@@ -303,7 +302,7 @@ Objects can also be created using the {{jsxref("Object.create()")}} method. This
 // Animal properties and method encapsulation
 const Animal = {
   type: 'Invertebrates', // Default value of properties
-  displayType: function() {  // Method which will display type of Animal
+  displayType() {  // Method which will display type of Animal
     console.log(this.type);
   }
 };
@@ -350,12 +349,12 @@ objectName.methodName = functionName;
 
 const myObj = {
   myMethod: function(params) {
-    // ...do something
+    // do something
   },
 
   // this works too!
   myOtherMethod(params) {
-    // ...do something else
+    // do something else
   }
 };
 ```
@@ -484,8 +483,8 @@ Getters and setters can also be added to an object at any time after creation us
 const myObj = { a: 0 };
 
 Object.defineProperties(myObj, {
-     'b': { get: function() { return this.a + 1; } },
-     'c': { set: function(x) { this.a = x / 2; } }
+     'b': { get() { return this.a + 1; } },
+     'c': { set(x) { this.a = x / 2; } }
 });
 
 myObj.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
@@ -539,7 +538,7 @@ For more information about comparison operators, see [equality operators](/en-US
 
 ## See also
 
-- To dive deeper, read about the [details of JavaScript's object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+- To dive deeper, read about [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 - To learn about ECMAScript 2015 classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Using_Classes")}}

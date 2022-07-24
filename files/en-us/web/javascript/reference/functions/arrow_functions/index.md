@@ -113,7 +113,7 @@ function bob(a) {
 }
 
 // Arrow Function
-const bob = a => a + 100;
+const bob = (a) => a + 100;
 ```
 
 ## Syntax
@@ -124,6 +124,7 @@ One param. With simple expression return is not needed:
 
 ```js
 param => expression
+(param) => expression
 ```
 
 Multiple params require parentheses. With simple
@@ -136,7 +137,8 @@ expression return is not needed:
 Multiline statements require body braces and return:
 
 ```js
-param => {
+// The parentheses are optional with one single parameter
+(param) => {
   const a = 1;
   return a + param;
 }
@@ -158,7 +160,7 @@ To return an object literal expression requires
 parentheses around expression:
 
 ```js
-params => ({ foo: "a" }) // returning the object { foo: "a" }
+(params) => ({ foo: "a" }) // returning the object { foo: "a" }
 ```
 
 [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are supported, and always require parentheses:
@@ -194,13 +196,13 @@ functions. Let's see what happens when we try to use them as methods:
 const obj = { // does not create a new scope
   i: 10,
   b: () => console.log(this.i, this),
-  c: function () {
+  c() {
     console.log(this.i, this);
   },
 }
 
-obj.b(); // prints undefined, Window {...} (or the global object)
-obj.c(); // prints 10, Object {...}
+obj.b(); // prints undefined, Window { /* … */ } (or the global object)
+obj.c(); // prints 10, Object { /* … */ }
 ```
 
 Arrow functions do not have their own `this`. Another example involving
@@ -215,7 +217,7 @@ const obj = {
 
 Object.defineProperty(obj, 'b', {
   get: () => {
-    console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (or the global object)
+    console.log(this.a, typeof this.a, this); // undefined 'undefined' Window { /* … */ } (or the global object)
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
   },
 });
@@ -341,7 +343,7 @@ Perhaps the greatest benefit of using Arrow functions is with methods like {{dom
 ```js
 const obj = {
   count: 10,
-  doSomethingLater: function () {
+  doSomethingLater() {
     setTimeout(function () { // the function executes on the window scope
       this.count++;
       console.log(this.count);
@@ -357,7 +359,7 @@ obj.doSomethingLater(); // console prints "NaN", because the property "count" is
 ```js
 const obj = {
   count: 10,
-  doSomethingLater: function () {
+  doSomethingLater () {
     // The traditional function binds "this" to the "obj" context.
     setTimeout(() => {
       // Since the arrow function doesn't have its own binding and
@@ -438,7 +440,7 @@ In a concise body, only an expression is specified, which becomes the implicit r
 value. In a block body, you must use an explicit `return` statement.
 
 ```js
-const func = x => x * x;
+const func = (x) => x * x;
 // concise body syntax, implied "return"
 
 const func2 = (x, y) => { return x + y; };
@@ -448,7 +450,7 @@ const func2 = (x, y) => { return x + y; };
 ### Returning object literals
 
 Keep in mind that returning object literals using the concise body syntax
-`params => {object:literal}` will not work as expected.
+`(params) => {object:literal}` will not work as expected.
 
 ```js
 const func = () => { foo: 1 };
@@ -456,6 +458,9 @@ const func = () => { foo: 1 };
 
 const func2 = () => { foo: function() {} };
 // SyntaxError: function statement requires a name
+
+const func3 = () => { foo() {} };
+// SyntaxError: Unexpected token '{'
 ```
 
 This is because the code inside braces ({}) is parsed as a sequence of statements (i.e.
@@ -532,32 +537,32 @@ const empty = () => {};
 // Returns "foobar"
 // (this is an Immediately Invoked Function Expression)
 
-const simple = a => a > 15 ? 15 : a;
+const simple = (a) => a > 15 ? 15 : a;
 simple(16); // 15
 simple(10); // 10
 
 const max = (a, b) => a > b ? a : b;
 
-// Easy array filtering, mapping, ...
+// Easy array filtering, mapping, etc.
 
 const arr = [5, 6, 13, 0, 1, 18, 23];
 
 const sum = arr.reduce((a, b) => a + b);
 // 66
 
-const even = arr.filter(v => v % 2 == 0);
+const even = arr.filter((v) => v % 2 == 0);
 // [6, 0, 18]
 
-const double = arr.map(v => v * 2);
+const double = arr.map((v) => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // More concise promise chains
 promise
-  .then(a => {
-  // ...
+  .then((a) => {
+  // …
   })
-  .then(b => {
-    // ...
+  .then((b) => {
+    // …
   });
 
 // Parameterless arrow functions that are visually easier to parse

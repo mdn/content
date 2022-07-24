@@ -74,7 +74,7 @@ array.
 var treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+  { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 
 var nodeList = [];

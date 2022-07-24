@@ -88,19 +88,19 @@ The second way to use Feature Policy is for controlling content within an iframe
 For example, allow all browsing contexts within this iframe to use fullscreen:
 
 ```html
-<iframe src="https://example.com..." allow="fullscreen"></iframe>
+<iframe src="https://example.com/…" allow="fullscreen"></iframe>
 ```
 
 The default `<iframe>` [allowlist](#allowlist) value is `'src'`, so this is equivalent to:
 
 ```html
-<iframe src="https://example.com..." allow="fullscreen 'src'"></iframe>
+<iframe src="https://example.com/…" allow="fullscreen 'src'"></iframe>
 ```
 
 This example allows `<iframe>` content on a particular origin to access the user's location:
 
 ```html
-<iframe src="https://google-developers.appspot.com/demos/..."
+<iframe src="https://google-developers.appspot.com/demos/…"
         allow="geolocation https://google-developers.appspot.com"></iframe>
 ```
 
@@ -148,7 +148,7 @@ Feature-Policy: layout-animations 'none'; unoptimized-images 'none'; oversized-i
 Using the `<iframe>` `allow` attribute:
 
 ```html
-<iframe src="https://example.com..." allow="layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';"></iframe>
+<iframe src="https://example.com/…" allow="layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';"></iframe>
 ```
 
 ## See also

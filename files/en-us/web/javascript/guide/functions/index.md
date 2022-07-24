@@ -22,7 +22,7 @@ A **function definition** (also called a **function declaration**, or **function
 
 - The name of the function.
 - A list of parameters to the function, enclosed in parentheses and separated by commas.
-- The JavaScript statements that define the function, enclosed in curly brackets, `{...}`.
+- The JavaScript statements that define the function, enclosed in curly brackets, `{ /* … */ }`.
 
 For example, the following code defines a simple function named `square`:
 
@@ -104,8 +104,8 @@ Function expressions are convenient when passing a function as an argument to an
 ```js
 function map(f, a) {
   const result = [];
-  for (const v of a) {
-    result[i] = f(v);
+  for (let i = 0; i < a.length; i++) {
+    result[i] = f(a[i]);
   }
   return result;
 }
@@ -164,7 +164,7 @@ Functions must be _in scope_ when they are called, but the function declaration 
 
 ```js
 console.log(square(5));
-/* ... */
+// …
 function square(n) {
   return n * n;
 }
@@ -271,7 +271,7 @@ Within the function body, the following are all equivalent:
 
 A function that calls itself is called a _recursive function_. In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case).
 
-For example, the following loop...
+For example, consider the following loop:
 
 ```js
 let x = 0;
@@ -281,7 +281,7 @@ while (x < 10) { // "x < 10" is the loop condition
 }
 ```
 
-...can be converted into a recursive function declaration, followed by a call to that function:
+It can be converted into a recursive function declaration, followed by a call to that function:
 
 ```js
 function loop(x) {
@@ -450,7 +450,7 @@ Also, since the inner function has access to the scope of the outer function, th
 const pet = function (name) {   // The outer function defines a variable called "name"
   const getName = function () {
     // The inner function has access to the "name" variable of the outer function
-    return name;             
+    return name;
   }
   return getName; // Return the inner function, thereby exposing it to outer scopes
 }
@@ -504,7 +504,7 @@ In the code above, the `name` variable of the outer function is accessible to th
 
 ```js
 const getCode = (function () {
-  const apiCode = '0]Eal(eh&2';    // A code we do not want outsiders to be able to modify...
+  const apiCode = '0]Eal(eh&2';    // A code we do not want outsiders to be able to modify…
 
   return function () {
     return apiCode;

@@ -53,9 +53,9 @@ To support multi-touch interaction, preserving a pointer's event state during va
 const logEvents = false;
 
 // Event caches, one per touch target
-const evCache1 = new Array();
-const evCache2 = new Array();
-const evCache3 = new Array();
+const evCache1 = [];
+const evCache2 = [];
+const evCache3 = [];
 ```
 
 ### Register event handlers
@@ -96,7 +96,7 @@ function pointerdown_handler(ev) {
  // Save this event for later processing (this could be part of a
  // multi-touch interaction) and update the background color
  push_event(ev);
- if (logEvents) log("pointerDown: name = " + ev.target.id, ev);
+ if (logEvents) log(`pointerDown: name = ${ev.target.id}`, ev);
  update_background(ev);
 }
 ```
@@ -241,11 +241,11 @@ function enableLog(ev) {
 
 function log(name, ev) {
   const o = document.getElementsByTagName('output')[0];
-  const s = name + ": pointerID = " + ev.pointerId +
-                " ; pointerType = " + ev.pointerType +
-                " ; isPrimary = " + ev.isPrimary;
-  o.innerHTML += s + "
-";
+  const s = `${name}:<br>`
+    + `  pointerID   = ${ev.pointerId}<br>`
+    + `  pointerType = ${ev.pointerType}<br>`
+    + `  isPrimary   = ${ev.isPrimary}`;
+  o.innerHTML += `${s}<br>`;
 }
 
 function clearLog(event) {

@@ -17,9 +17,9 @@ The **`abort`** event of the {{domxref("AbortSignal")}} is fired when the associ
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('abort', event => { })
+addEventListener('abort', (event) => { })
 
-onabort = event => { }
+onabort = (event) => { }
 ```
 
 ## Event type

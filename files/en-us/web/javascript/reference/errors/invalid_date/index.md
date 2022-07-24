@@ -14,11 +14,10 @@ has been provided to {{jsxref("Date")}} or {{jsxref("Date.parse()")}}.
 
 ## Message
 
-```js
-RangeError: invalid date (Edge)
+```
+RangeError: Invalid time value (V8-based)
 RangeError: invalid date (Firefox)
-RangeError: invalid time value (Chrome)
-RangeError: Provided date is not in valid range (Chrome)
+RangeError: Invalid Date (Safari)
 ```
 
 ## Error type

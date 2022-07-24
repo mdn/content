@@ -52,7 +52,7 @@ new WebAssembly.Module(bufferSource)
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func(arg) {
       console.log(arg);
     }
   }
@@ -62,12 +62,12 @@ function createWasmModule(bytes) {
   return new WebAssembly.Module(bytes);
 }
 
-fetch('simple.wasm').then(response =>
+fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
-).then(bytes => {
+).then((bytes) => {
   let mod = createWasmModule(bytes);
   WebAssembly.instantiate(mod, importObject)
-  .then(result =>
+  .then((result) =>
      result.exports.exported_func()
   );
 })

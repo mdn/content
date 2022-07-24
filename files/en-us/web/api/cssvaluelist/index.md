@@ -33,7 +33,7 @@ The items in the `CSSValueList` are accessible via an integral index, starting f
 
 _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
-- {{DOMxRef("CSSValueList.length")}}{{ReadOnlyInline}}
+- {{DOMxRef("CSSValueList.length")}} {{ReadOnlyInline}}
   - : An `unsigned long` representing the number of `CSSValues` in the list.
 
 ## Methods

@@ -27,7 +27,7 @@ defaults to 1 if not specified, and
 default value for `step` if not specified.
 
 Valid on all numeric, date, and time input types that support the step attribute,
-including{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
+including {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
 {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}},
 {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number",
   "number")}}, and {{HTMLElement("input/range", "range")}}.

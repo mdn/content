@@ -287,14 +287,14 @@ If you need to rely on `inline-block`, you could set the [`font-size`](/en-US/do
 ```css
 ul {
   font-size: 0;
-  ...
+  /* … */
 }
 
 li {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  ...
+  /* … */
 }
 ```
 
@@ -475,7 +475,7 @@ function data_of( txt )
 The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is `"This is the third paragraph"`, and then changes the class attribute and the contents of that paragraph.
 
 ```js
-const cur = first_child(document.getElementById("test"));
+let cur = first_child(document.getElementById("test"));
 while (cur)
 {
   if (data_of(cur.firstChild) == "This is the third paragraph.")

@@ -32,11 +32,11 @@ An {{domxref("XRHand")}} object or {{jsxref("null")}} if the {{domxref("XRSessio
 ```js
 
 navigator.xr.requestSession({optionalFeatures: ["hand-tracking"]}).then(
-  // ...
+  // …
 );
 
 function renderFrame(session, frame) {
-   // ...
+   // …
 
    for (inputSource of session.inputSources) {
       if (inputSource.hand) {

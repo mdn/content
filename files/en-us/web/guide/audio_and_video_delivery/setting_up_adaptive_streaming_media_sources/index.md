@@ -125,13 +125,13 @@ play list ->                /segments/news.mp4.mpd
 
 main segment folder ->      /segments/main/
 
-100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
+100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s … )
 
-200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
+200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s … )
 
-300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
+300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s … )
 
-400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )
+400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s … )
 ```
 
 The playlist or `.mpd` file contains XML that explicitly lists where all the various bitrate files reside.
@@ -178,7 +178,7 @@ The playlist or `.mpd` file contains XML that explicitly lists where all the var
           </SegmentList>
         </Representation>
 
-        ...
+        …
 
       </AdaptationSet>
     </Period>

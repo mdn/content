@@ -50,7 +50,7 @@ Now you only need some HTML and JavaScript to load your new module:
 ```html
 <script src="./a.out.js"></script>
 <script>
-  Module.onRuntimeInitialized = async _ => {
+  Module.onRuntimeInitialized = async () => {
     const api = {
       version: Module.cwrap('version', 'number', []),
     };
@@ -74,7 +74,7 @@ The first question you need to answer is: how do I get the image into wasm? Look
 ```js
  async function loadImage(src) {
   // Load image
-  const imgBlob = await fetch(src).then(resp => resp.blob());
+  const imgBlob = await fetch(src).then((resp) => resp.blob());
   const img = await createImageBitmap(imgBlob);
   // Make canvas same size as image
   const canvas = document.createElement('canvas');

@@ -23,7 +23,7 @@ user to select a display and grant permission to use that display.
 ```js
 const promise = presentationRequest.start()
 promise.then(function(PresentationConnection) { /* ... */ })
-       .catch(function(error) { ...})
+       .catch(function(error) { /* ... */ })
 ```
 
 ### Parameters

@@ -166,7 +166,7 @@ var compression = require('compression');
 // Create the Express application object
 var app = express();
 
-...
+// …
 
 app.use(compression()); //Compress all routes
 
@@ -176,7 +176,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
-...
+// …
 ```
 
 > **Note:** For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like [Nginx](https://nginx.org/).
@@ -202,7 +202,7 @@ var helmet = require('helmet');
 var app = express();
 
 app.use(helmet());
-...
+// …
 ```
 
 > **Note:** The command above adds a _subset_ of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
@@ -354,7 +354,7 @@ Open **package.json**, and add this information as an **engines > node** section
     "node": "12.18.4"
   },
   "private": true,
-  ...
+  // …
 ```
 
 #### Database configuration

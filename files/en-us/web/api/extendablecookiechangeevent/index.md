@@ -33,9 +33,9 @@ Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are
 
 _This interface also inherits properties from {{domxref("ExtendableEvent")}}._
 
-- {{domxref("ExtendableCookieChangeEvent.changed")}}{{ReadOnlyInline}}
+- {{domxref("ExtendableCookieChangeEvent.changed")}} {{ReadOnlyInline}}
   - : Returns an array containing the changed cookies.
-- {{domxref("ExtendableCookieChangeEvent.deleted")}}{{ReadOnlyInline}}
+- {{domxref("ExtendableCookieChangeEvent.deleted")}} {{ReadOnlyInline}}
   - : Returns an array containing the deleted cookies.
 
 ## Examples
@@ -56,7 +56,7 @@ self.addEventListener('activate', (event) => {
   });
 });
 
-self.addEventListener('cookiechange', event => {
+self.addEventListener('cookiechange', (event) => {
   console.log(event);
 });
 ```

@@ -156,7 +156,7 @@ function random(min,max) {
 }
 
 function randomColor() {
-  return 'rgb(' + random(0,255) + ', ' + random(0,255) + ', ' + random(0,255) +  ')';
+  return `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`;
 }
 
 const stylesheet = document.styleSheets[1];
@@ -169,7 +169,7 @@ for(let i = 0; i < stylesheet.cssRules.length; i++) {
 }
 
 function setRandomBorder() {
-  const newBorder = random(1, 50) + 'px solid ' + randomColor();
+  const newBorder = `${random(1, 50)}px solid ${randomColor()}`;
   boxParaRule.style.setProperty('border', newBorder);
 }
 

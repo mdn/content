@@ -79,7 +79,7 @@ Unless you're creating an HTML version of a productivity application, you should
 
 #### Consider language and keyboard differences
 
-Take into account the diversity of available keyboards and the various keyboard language preferences. Modifier keys are often used to create language specific common punctuation symbols and number characters. For example, numbers, when the keyboard language preference is set to French, use the Control key.
+Take into account the diversity of available keyboards and the various keyboard language preferences. Modifier keys are often used to create language specific common punctuation symbols and number characters. For example, numbers, when the keyboard language preference is set to French (France), use the Shift key.
 
 #### **Don't** use HTML instead
 

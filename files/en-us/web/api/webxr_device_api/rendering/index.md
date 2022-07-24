@@ -293,7 +293,7 @@ For that reason, you need to use the timestamp provided to ensure your animation
 let lastFrameTime = 0;
 
 function drawFrame(time, frame) {
-  /* ... schedule next frame, prepare the buffer, etc ... */
+  // schedule next frame, prepare the buffer, etc.
 
   const deltaTime = (time - lastFrameTime) * 0.001;
   lastFrameTime = time;

@@ -54,15 +54,17 @@ Current UA implementations of `<input type="search">` have an additional control
 const input = document.querySelector('input[type="search"]');
 
 input.addEventListener('search', () => {
- console.log("The term searched for was " + input.value);
-})
+ console.log(`The term searched for was ${input.value}`);
+});
+```
 
+```js
 // onsearch version
 const input = document.querySelector('input[type="search"]');
 
 input.onsearch = () => {
- console.log("The term searched for was " + input.value);
-})
+ console.log(`The term searched for was ${input.value}`);
+};
 ```
 
 ## Specifications

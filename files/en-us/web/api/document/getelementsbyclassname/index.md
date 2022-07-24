@@ -133,14 +133,14 @@ elements with ALL of the classNames specified are selected.
 const allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
 let result = "document.getElementsByClassName('orange juice')";
 for (let i=0; i < allOrangeJuiceByClass.length; i++) {
-    result += "\n  " + allOrangeJuiceByClass[i].textContent;
+    result += `\n  ${allOrangeJuiceByClass[i].textContent}`;
 }
 
 // querySelector only selects full complete matches
 const allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
 for (let i=0; i < allOrangeJuiceQuery.length; i++) {
-    result += "\n  " + allOrangeJuiceQuery[i].textContent;
+    result += `\n  ${allOrangeJuiceQuery[i].textContent}`;
 }
 
 document.getElementById("resultArea").value = result;

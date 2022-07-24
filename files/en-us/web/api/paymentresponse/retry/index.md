@@ -81,7 +81,7 @@ async function handlePayment() {
   try {
     let payResponse = await payRequest.show();
 
-    while (payResponse has errors) {
+    while (validate(payResponse)) {
       /* let the user edit the payment information,
          wait until they submit */
       await response.retry();
@@ -125,7 +125,7 @@ async function recursiveValidate(request, response) {
 }
 
 function fixField(requestOrResponse, event, validator) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     // Browser keeps calling this until promise resolves.
     requestOrResponse.addEventListener(event, async function listener(ev) {
       const promiseToValidate = validator(requestOrResponse);

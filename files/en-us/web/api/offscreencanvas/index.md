@@ -65,13 +65,13 @@ const two = document.getElementById("two").getContext("bitmaprenderer");
 const offscreen = new OffscreenCanvas(256, 256);
 const gl = offscreen.getContext('webgl');
 
-// ... some drawing for the first canvas using the gl context ...
+// Perform some drawing for the first canvas using the gl context
 
 // Commit rendering to the first canvas
 const bitmapOne = offscreen.transferToImageBitmap();
 one.transferFromImageBitmap(bitmapOne);
 
-// ... some more drawing for the second canvas using the gl context ...
+// Perform some more drawing for the second canvas
 
 // Commit rendering to the second canvas
 const bitmapTwo = offscreen.transferToImageBitmap();
@@ -99,7 +99,7 @@ onmessage = function(evt) {
   const canvas = evt.data.canvas;
   const gl = canvas.getContext("webgl");
 
-  // ... some drawing using the gl context ...
+  // Perform some drawing using the gl context
 };
 ```
 
@@ -111,7 +111,7 @@ onmessage = function(evt) {
   const gl = canvas.getContext("webgl");
 
   function render(time) {
-    // ... some drawing using the gl context ...
+    // Perform some drawing using the gl context
     requestAnimationFrame(render);
   }
   requestAnimationFrame(render);

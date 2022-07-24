@@ -60,7 +60,7 @@ class ClassWithStaticField {
   static staticField
 }
 
-console.assert(ClassWithStaticField.hasOwnProperty('staticField'))
+console.assert(Object.hasOwn(ClassWithStaticField, 'staticField'))
 console.log(ClassWithStaticField.staticField)
 // expected output: "undefined"
 ```
@@ -135,7 +135,7 @@ class ClassWithInstanceField {
 }
 
 const instance = new ClassWithInstanceField()
-console.assert(instance.hasOwnProperty('instanceField'))
+console.assert(Object.hasOwn(instance, 'instanceField'))
 console.log(instance.instanceField)
 // expected output: "undefined"
 ```
@@ -217,7 +217,7 @@ const instance = new Derived();
 // Derived constructor: 1
 ```
 
-Because class fields are added using the `[[Define]]` semantic (which is essentially {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}), field declarations in derived classes do not invoke setters in the base class. This behavior differs from using `this.field = ...` in the constructor.
+Because class fields are added using the `[[Define]]` semantic (which is essentially {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}), field declarations in derived classes do not invoke setters in the base class. This behavior differs from using `this.field = …` in the constructor.
 
 ```js
 class Base {

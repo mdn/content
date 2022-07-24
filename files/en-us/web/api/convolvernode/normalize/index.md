@@ -34,7 +34,7 @@ A boolean.
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const convolver = audioCtx.createConvolver();
 
-  ...
+// …
 
 // grab audio track via XHR for convolver node
 
@@ -51,12 +51,12 @@ ajaxRequest.onload = function() {
       concertHallBuffer = buffer;
       soundSource = audioCtx.createBufferSource();
       soundSource.buffer = concertHallBuffer;
-    }, function(e){"Error with decoding audio data" + e.err});
+    }, function(e){`Error with decoding audio data${e.err}`});
 }
 
 ajaxRequest.send();
 
-  ...
+// …
 
 convolver.normalize = false; // must be set before the buffer, to take effect
 convolver.buffer = concertHallBuffer;

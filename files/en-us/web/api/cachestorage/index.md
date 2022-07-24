@@ -18,9 +18,6 @@ The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}}
 The interface:
 
 - Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you're not limited to only using it with service workers).
-
-  > **Note:** [Chrome and Safari only expose \`CacheStorage\` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("caches")}} will be undefined unless an SSL certificate is configured.
-
 - Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.
 
 Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance.
@@ -113,7 +110,7 @@ This snippet shows how the API can be used outside of a service worker context, 
 // Try to get data from the cache, but fall back to fetching it live.
 async function getData() {
    const cacheVersion = 1;
-   const cacheName    = `myapp-${ cacheVersion }`;
+   const cacheName    = `myapp-${cacheVersion}`;
    const url          = 'https://jsonplaceholder.typicode.com/todos/1';
    let cachedData     = await getCachedData( cacheName, url );
 

@@ -49,7 +49,7 @@ final cleanup or other just-before-rendering tasks.
 ## Syntax
 
 ```js
-queueMicrotask(function)
+queueMicrotask(function() {/* ... */})
 ```
 
 ### Parameters
@@ -81,7 +81,7 @@ MyElement.prototype.loadData = function (url) {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(res => res.arrayBuffer()).then(data => {
+    fetch(url).then((res) => res.arrayBuffer()).then((data) => {
       this._cache[url] = data;
       this._setData(data);
       this.dispatchEvent(new Event("load"));
@@ -100,7 +100,7 @@ if (typeof self.queueMicrotask !== "function") {
   self.queueMicrotask = function (callback) {
     Promise.resolve()
       .then(callback)
-      .catch(e => setTimeout(() => { throw e; })); // report exceptions
+      .catch((e) => setTimeout(() => { throw e; })); // report exceptions
   };
 }
 ```

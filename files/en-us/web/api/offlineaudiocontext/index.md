@@ -100,7 +100,7 @@ function getData() {
           song.start();
         }
       }).catch(function(err) {
-          console.log('Rendering failed: ' + err);
+          console.error(`Rendering failed: ${err}`);
           // Note: The promise should reject when startRendering is called a second time on an OfflineAudioContext
       });
     });

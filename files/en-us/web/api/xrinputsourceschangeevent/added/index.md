@@ -41,7 +41,7 @@ removed devices whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}
 `tracked-pointer`.
 
 ```js
-xrSession.oninputsourcescchange = event => {
+xrSession.oninputsourcescchange = (event) => {
   for (let input of event.added) {
     if (input.targetRayMode == "tracked-pointer") {
       addedPointerDevice(input);

@@ -90,7 +90,7 @@ for (const match of matches) {
 
 // matches iterator is exhausted after the for..of iteration
 // Call matchAll again to create a new iterator
-Array.from(str.matchAll(regexp), m => m[0]);
+Array.from(str.matchAll(regexp), (m) => m[0]);
 // Array [ "football", "foosball" ]
 ```
 
@@ -111,7 +111,7 @@ str.matchAll(regexp);
 const regexp = new RegExp('[a-c]','g');
 regexp.lastIndex = 1;
 const str = 'abc';
-Array.from(str.matchAll(regexp), m => `${regexp.lastIndex} ${m[0]}`);
+Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 // Array [ "1 b", "1 c" ]
 ```
 

@@ -40,7 +40,7 @@ Inherits methods from its parent {{domxref('ExtendableEvent')}}.
 The following example shows how to respond to a periodic sync event in the service worker.
 
 ```js
-self.addEventListener('periodicsync', event => {
+self.addEventListener('periodicsync', (event) => {
   if (event.tag == 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }

@@ -158,7 +158,7 @@ The `refresh()` function handles applying the rotation and position by using an 
 function refresh() {
   let x = position.x - (shipSize.width/2);
   let y = position.y - (shipSize.height/2);
-  let transform = "translate(" + x + " " + y + ") rotate(" + angle + " 15 15) ";
+  let transform = `translate(${x} ${y}) rotate(${angle} 15 15) `;
 
   spaceship.setAttribute("transform", transform);
 }

@@ -13,8 +13,9 @@ non-existent variable referenced somewhere.
 
 ## Message
 
-```js
-ReferenceError: "x" is not defined
+```
+ReferenceError: "x" is not defined (V8-based & Firefox)
+ReferenceError: Can't find variable: x (Safari)
 ```
 
 ## Error type
@@ -43,7 +44,7 @@ The "foo" variable isn't defined anywhere. It needs to be some string, so that t
 {{jsxref("String.prototype.substring()")}} method will work.
 
 ```js example-good
-var foo = 'bar';
+const foo = 'bar';
 foo.substring(1); // "ar"
 ```
 

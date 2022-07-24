@@ -20,9 +20,9 @@ The `statechange` event fires anytime the {{domxref("ServiceWorker.state")}} cha
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('statechange', event => { });
+addEventListener('statechange', (event) => { });
 
-onstatechange = event => { };
+onstatechange = (event) => { };
 ```
 
 ## Event type
@@ -50,7 +50,7 @@ if (registration.installing) {
 if (serviceWorker) {
   logState(serviceWorker.state);
   serviceWorker.addEventListener('statechange', function(e) {
-  logState(e.target.state);
+    logState(e.target.state);
   });
 }
 ```
@@ -59,7 +59,7 @@ Note that when `statechange` fires, the service worker's references may have
 changed. For example:
 
 ```js
-navigator.serviceWorker.register(..).then(function(swr) {
+navigator.serviceWorker.register("/sw.js").then(function(swr) {
   swr.installing.state == "installing"
   swr.installing.onstatechange = function() {
     swr.installing == null;

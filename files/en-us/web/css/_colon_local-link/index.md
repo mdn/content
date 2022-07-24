@@ -51,4 +51,4 @@ This feature is a proposal integrated into the specification. Currently, no brow
 
 ## See also
 
-- Link-related pseudo-classes: {{ cssxref(":link") }},{{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}, {{ cssxref(":any-link") }}
+- Link-related pseudo-classes: {{ cssxref(":link") }}, {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}, {{ cssxref(":any-link") }}

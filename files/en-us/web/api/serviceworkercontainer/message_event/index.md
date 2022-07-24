@@ -20,9 +20,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type
@@ -60,7 +60,7 @@ async function messageClient(clientId) {
 addEventListener('fetch', (event) => {
     messageClient(event.clientId);
     event.respondWith(() => {
-      // ...
+      // …
     });
 });
 ```

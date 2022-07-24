@@ -124,12 +124,12 @@ transaction on the database. For a complete example, see our
 [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
-const db;
+let db;
 
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -146,11 +146,11 @@ DBOpenRequest.onsuccess = event => {
 const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
-transaction.oncomplete = event => {
+transaction.oncomplete = (event) => {
   note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
 };
 
-transaction.onerror = event => {
+transaction.onerror = (event) => {
   note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
 };
 

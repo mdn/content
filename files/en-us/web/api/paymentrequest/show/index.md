@@ -82,11 +82,11 @@ show(detailsPromise)
         - `pending`
           - : A Boolean value which is `true` if the specified `amount` has not yet been finalized. This can be used to show items such as shipping or tax amounts that depend upon the selection of shipping address, shipping option, or so forth. The user agent may show this information but is not required to do so.
 
-    - `error` {{optional_inline}}{{deprecated_inline}}
+    - `error` {{optional_inline}} {{deprecated_inline}}
       - : A string specifying an error message to present to the user*.* When calling {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}}, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address field specific errors, use `shippingAddressErrors`.
     - `modifiers` {{optional_inline}}
       - : An array of {{domxref("PaymentDetailsModifier")}} objects, each describing a modifier for particular payment method identifiers. For example, you can use one to adjust the total payment amount based on the selected payment method ("5% cash discount!").
-    - `shippingAddressErrors` {{optional_inline}}{{deprecated_inline}}
+    - `shippingAddressErrors` {{optional_inline}} {{deprecated_inline}}
       - : An {{domxref("AddressErrors")}} object which includes an error message for each property of the shipping address that could not be validated.
     - `shippingOptions` {{optional_inline}}
       - : An array of {{domxref("PaymentShippingOption")}} objects, each describing one available shipping option from which the user may choose.
@@ -144,8 +144,8 @@ async function processPayment() {
   try {
     const payRequest = new PaymentRequest(methodData, details, options);
 
-    payRequest.onshippingaddresschange = ev => ev.updateWith(checkAddress(payRequest));
-    payRequest.onshippingoptionchange = ev => ev.updateWith(checkShipping(payRequest));
+    payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
+    payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
 
     const response = await payRequest.show();
     await validateResponse(response);
@@ -208,12 +208,12 @@ functions on the promise returned by `show()`:
 function processPayment() {
   const payRequest = new PaymentRequest(methodData, details, options);
 
-  payRequest.onshippingaddresschange = ev => ev.updateWith(checkAddress(payRequest));
-  payRequest.onshippingoptionchange = ev => ev.updateWith(checkShipping(payRequest));
+  payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
+  payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
 
   payRequest.show()
-    .then(response => validateResponse(response))
-    .catch(err => handleError(err));
+    .then((response) => validateResponse(response))
+    .catch((err) => handleError(err));
 }
 ```
 
@@ -223,8 +223,8 @@ This is functionally equivalent to the `processPayment()` method using the
 ```js
 function validateResponse(response) {
   checkAllValues(response)
-    .then(response => response.complete("success"))
-    .catch(response => response.complete("fail"));
+    .then((response) => response.complete("success"))
+    .catch((response) => response.complete("fail"));
 }
 ```
 
@@ -233,7 +233,7 @@ that may have performance implications you don't want to deal with:
 
 ```js
 function validateResponse(response) {
-  if (checkAllValues(response) {
+  if (checkAllValues(response)) {
     response.complete("success");
   } else {
     response.complete("fail");
@@ -299,7 +299,7 @@ async function requestPayment() {
     },
   };
   const response = await request.show(updatedDetails);
-  // Check response, etc...
+  // Check response, etc.
 }
 
 document.getElementById("buyButton").onclick = requestPayment;

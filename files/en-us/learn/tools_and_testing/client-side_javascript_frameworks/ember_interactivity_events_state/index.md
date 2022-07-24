@@ -190,7 +190,7 @@ First add another `import` statement below the previous one, to make actions ava
 import { action } from '@ember/object';
 ```
 
-Update the existing `export default class TodoDataService extends Service { … }` block as follows:
+Update the existing `export default class TodoDataService extends Service { }` block as follows:
 
 ```js
 export default class TodoDataService extends Service {
@@ -223,7 +223,7 @@ First of all, the service needs to be injected into the template via the `@injec
 import { inject as service } from '@ember/service';
 ```
 
-With this import in place, we can now make the `todo-data` service available inside the `HeaderComponent` class via the `todos` object, using the `@service` decorator. Add the following line just below the opening `export...` line:
+With this import in place, we can now make the `todo-data` service available inside the `HeaderComponent` class via the `todos` object, using the `@service` decorator. Add the following line just below the opening `export…` line:
 
 ```js
 @service('todo-data') todos;

@@ -33,7 +33,7 @@ const analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
 
-  ...
+// …
 
 analyser.fftSize = 256;
 const bufferLength = analyser.frequencyBinCount;
@@ -57,7 +57,7 @@ function draw() {
   for(let i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
+    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
     canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
 
     x += barWidth + 1;

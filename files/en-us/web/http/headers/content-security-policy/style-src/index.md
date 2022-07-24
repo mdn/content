@@ -12,7 +12,7 @@ tags:
   - Style
   - source
   - style-src
-browser-compat: http.headers.csp.Content-Security-Policy.style-src
+browser-compat: http.headers.Content-Security-Policy.style-src
 ---
 {{HTTPSidebar}}
 

@@ -51,7 +51,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 observer.observe()
 
-...
+// ...
 
 observer.disconnect()
 ```

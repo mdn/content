@@ -115,7 +115,7 @@ function onXRSessionStarted(xrSession) {
     centralAngle : 60 * Math.PI / 180,
     aspectRatio : 2,
     radius : 2,
-    transform : new XRRigidTransform(/* ... */),
+    transform : new XRRigidTransform(/* … */),
   });
 
   xrSession.updateRenderState({

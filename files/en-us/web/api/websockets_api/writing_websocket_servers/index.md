@@ -136,6 +136,7 @@ If the MASK bit was set (and it should be, for client-to-server messages), read 
 var DECODED = "";
 for (var i = 0; i < ENCODED.length; i++) {
     DECODED[i] = ENCODED[i] ^ MASK[i % 4];
+}
 ```
 
 Now you can figure out what **DECODED** means depending on your application.

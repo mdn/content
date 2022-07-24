@@ -24,9 +24,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplaypointerunrestricted', event => { });
+addEventListener('vrdisplaypointerunrestricted', (event) => { });
 
-onvrdisplaypointerunrestricted = event => { };
+onvrdisplaypointerunrestricted = (event) => { };
 ```
 
 ## Event type
@@ -39,9 +39,9 @@ An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
 
-- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}} {{readonlyInline}}
   - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}} {{readonlyInline}}
   - : A human-readable reason why the event was fired.
 
 ## Examples

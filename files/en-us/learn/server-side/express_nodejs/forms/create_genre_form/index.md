@@ -114,18 +114,18 @@ After specifying the validators we create a middleware function to extract any v
   const errors = validationResult(req);
 
   // Create a genre object with escaped and trimmed data.
-  var genre = new Genre(
+  const genre = new Genre(
     { name: req.body.name }
   );
 
   if (!errors.isEmpty()) {
     // There are errors. Render the form again with sanitized values/error messages.
-    res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
-  return;
-  }
-  else {
-    // Data from form is valid.
-    ... <save the result/> ...
+    res.render('genre_form', { title: 'Create Genre', genre, errors: errors.array()});
+    return;
+  } else {
+    // Form data is valid.
+    // Save the result.
+    // …
   }
 };
 ```

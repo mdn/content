@@ -16,10 +16,10 @@ statement is called outside of a [function](/en-US/docs/Web/JavaScript/Guide/Fun
 
 ## Message
 
-```js
-SyntaxError: 'return' statement outside of function (Edge)
+```
+SyntaxError: Illegal return statement (V8-based)
 SyntaxError: return not in function (Firefox)
-SyntaxError: yield not in function (Firefox)
+SyntaxError: Return statements are only valid inside functions. (Safari)
 ```
 
 ## Error type

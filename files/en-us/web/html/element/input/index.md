@@ -458,7 +458,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
     Per the specifications, the `list` attribute is not supported by the `hidden`, `password`, `checkbox`, `radio`, `file`, or any of the button types.
 
-    Depending on the browser, the user may see a custom color palette suggested, tic marks along a range, or even a input that opens like a {{HTMLElement("select")}} but allows for non-listed values. Check out the [browser compatibility table](/en-US/docs/Web/HTML/Element/datalist#browser_compatibility) for the other input types.
+    Depending on the browser, the user may see a custom color palette suggested, tic marks along a range, or even an input that opens like a {{HTMLElement("select")}} but allows for non-listed values. Check out the [browser compatibility table](/en-US/docs/Web/HTML/Element/datalist#browser_compatibility) for the other input types.
 
     See the {{htmlelement('datalist')}} element.
 

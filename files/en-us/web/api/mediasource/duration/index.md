@@ -58,7 +58,7 @@ function sourceOpen (_) {
   });
 };
 
-...
+// …
 ```
 
 ## Specifications

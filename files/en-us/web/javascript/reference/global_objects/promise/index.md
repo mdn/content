@@ -83,12 +83,12 @@ Using {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)
 
 ```js
 myPromise
-  .then(value => { return value + ' and bar'; })
-  .then(value => { return value + ' and bar again'; })
-  .then(value => { return value + ' and again'; })
-  .then(value => { return value + ' and again'; })
-  .then(value => { console.log(value) })
-  .catch(err => { console.log(err) });
+  .then((value) => { return value + ' and bar'; })
+  .then((value) => { return value + ' and bar again'; })
+  .then((value) => { return value + ' and again'; })
+  .then((value) => { return value + ' and again'; })
+  .then((value) => { console.log(value) })
+  .catch((err) => { console.log(err) });
 ```
 
 The termination condition of a promise determines the "settled" state of the next promise in the chain. A "fulfilled" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each fulfilled promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.

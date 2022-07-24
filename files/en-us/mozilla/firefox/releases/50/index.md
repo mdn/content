@@ -90,7 +90,7 @@ tags:
 
 ### IndexedDB
 
-- A {{event("close")}} event is now sent to the {{domxref("IDBDatabase")}} object when the corresponding database is unexpectedly closed ({{bug(1151017)}}).
+- A {{domxref("IDBDatabase/close_event", "close")}} event is now sent to the {{domxref("IDBDatabase")}} object when the corresponding database is unexpectedly closed ({{bug(1151017)}}).
 
 ### Service Workers
 

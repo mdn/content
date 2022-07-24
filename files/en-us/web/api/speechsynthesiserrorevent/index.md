@@ -41,7 +41,7 @@ const voiceSelect = document.querySelector('select');
 
 const voices = synth.getVoices();
 
-  ...
+// ...
 
 inputForm.onsubmit = function(event) {
   event.preventDefault();
@@ -57,7 +57,7 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 
   utterThis.onerror = function(event) {
-    console.log('An error has occurred with the speech synthesis: ' + event.error);
+    console.log(`An error has occurred with the speech synthesis: ${event.error}`);
   }
 
   inputTxt.blur();

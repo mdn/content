@@ -70,7 +70,7 @@ Since we've added a z-component to our vertices, we need to update the `numCompo
 // buffer into the vertexPosition attribute
 {
   const numComponents = 3;
-  ...
+  // …
   gl.vertexAttribPointer(
       programInfo.attribLocations.vertexPosition,
       numComponents,
@@ -99,13 +99,13 @@ We also need to build an array of colors for each of the 24 vertices. This code 
 
   // Convert the array of colors into a table for all the vertices.
 
-  var colors = [];
+  const colors = [];
 
-  for (var j = 0; j < faceColors.length; ++j) {
+  for (let j = 0; j < faceColors.length; ++j) {
     const c = faceColors[j];
 
     // Repeat each color four times for the four vertices of the face
-    colors = colors.concat(c, c, c, c);
+    colors.push(c, c, c, c);
   }
 
   const colorBuffer = gl.createBuffer();
@@ -157,7 +157,7 @@ Next we need to add code to our `drawScene()` function to draw using the cube's 
   // Tell WebGL which indices to use to index the vertices
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
 
-...
+  // …
 
   {
     const vertexCount = 36;

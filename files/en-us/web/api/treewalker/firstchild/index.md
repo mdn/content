@@ -37,7 +37,7 @@ A {{domxref("Node")}} object or `null`.
 var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 var node = treeWalker.firstChild(); // returns the first child of the root element, or null if none

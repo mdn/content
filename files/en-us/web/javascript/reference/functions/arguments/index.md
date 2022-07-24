@@ -42,25 +42,25 @@ The `arguments` object is not an {{jsxref("Array")}}. It is similar, but lacks a
 However, it can be converted to a real `Array`:
 
 ```js
-var args = Array.prototype.slice.call(arguments);
+const args = Array.prototype.slice.call(arguments);
 // Using an array literal is shorter than above but allocates an empty array
-var args = [].slice.call(arguments);
+const args = [].slice.call(arguments);
 ```
 
 As you can do with any Array-like object, you can use ES2015's {{jsxref("Array.from()")}} method or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to convert `arguments` to a real Array:
 
 ```js
-let args = Array.from(arguments);
+const args = Array.from(arguments);
 // or
-let args = [...arguments];
+const args = [...arguments];
 ```
 
 The `arguments` object is useful for functions called with more arguments than they are formally declared to accept. This technique is useful for functions that can be passed a variable number of arguments, such as {{jsxref("Math.min()")}}. This example function accepts any number of string arguments and returns the longest one:
 
 ```js
 function longestString() {
-  var longest = '';
-  for (var i=0; i < arguments.length; i++) {
+  let longest = '';
+  for (let i = 0; i < arguments.length; i++) {
     if (arguments[i].length > longest.length) {
       longest = arguments[i];
     }
@@ -102,7 +102,7 @@ This example defines a function that concatenates several strings. The function'
 
 ```js
 function myConcat(separator) {
-  let args = Array.prototype.slice.call(arguments, 1);
+  const args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
 }
 ```
@@ -126,8 +126,8 @@ This example defines a function that creates a string containing HTML for a list
 
 ```js
 function list(type) {
-  var html = '<' + type + 'l><li>';
-  var args = Array.prototype.slice.call(arguments, 1);
+  let html = '<' + type + 'l><li>';
+  const args = Array.prototype.slice.call(arguments, 1);
   html += args.join('</li><li>');
   html += '</li></' + type + 'l>'; // end list
   return html;
@@ -137,7 +137,7 @@ function list(type) {
 You can pass any number of arguments to this function, and it adds each argument as a list item to a list of the type indicated. For example:
 
 ```js
-let listHTML = list('u', 'One', 'Two', 'Three');
+const listHTML = list('u', 'One', 'Two', 'Three');
 
 /* listHTML is:
 "<ul><li>One</li><li>Two</li><li>Three</li></ul>"

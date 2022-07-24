@@ -42,9 +42,9 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
           usually just the order of the capturing groups themselves. This
           becomes important when capturing groups are nested. Matches are
           accessed using the index of the result's elements (<code
-            >[1], ..., [n]</code
+            >[1], …, [n]</code
           >) or from the predefined <code>RegExp</code> object's properties
-          (<code>$1, ..., $9</code>).
+          (<code>$1, …, $9</code>).
         </p>
         <p>
           Capturing groups have a performance penalty. If you don't need the
@@ -91,8 +91,8 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
       <td>
         <strong>Non-capturing group: </strong>Matches "x" but does not remember
         the match. The matched substring cannot be recalled from the resulting
-        array's elements (<code>[1], ..., [n]</code>) or from the predefined
-        <code>RegExp</code> object's properties (<code>$1, ..., $9</code>).
+        array's elements (<code>[1], …, [n]</code>) or from the predefined
+        <code>RegExp</code> object's properties (<code>$1, …, $9</code>).
       </td>
     </tr>
     <tr>

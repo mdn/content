@@ -56,10 +56,10 @@ Here is a function that detects whether localStorage is both supported and avail
 
 ```js
 function storageAvailable(type) {
-    var storage;
+    let storage;
     try {
         storage = window[type];
-        var x = '__storage_test__';
+        const x = '__storage_test__';
         storage.setItem(x, x);
         storage.removeItem(x);
         return true;
@@ -133,15 +133,15 @@ For example:
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  const currentColor = localStorage.getItem('bgcolor');
+  const currentFont = localStorage.getItem('font');
+  const currentImage = localStorage.getItem('image');
 
   document.getElementById('bgcolor').value = currentColor;
   document.getElementById('font').value = currentFont;
   document.getElementById('image').value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = `#${currentColor}`;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
 }

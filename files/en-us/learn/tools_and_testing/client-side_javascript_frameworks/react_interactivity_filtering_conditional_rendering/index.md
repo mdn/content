@@ -51,7 +51,7 @@ Add the `editTask()` function inside your App component, in the same place as th
 
 ```js
 function editTask(id, newName) {
-  const editedTaskList = tasks.map(task => {
+  const editedTaskList = tasks.map((task) => {
   // if this task has the same ID as the edited task
     if (id === task.id) {
       //
@@ -66,7 +66,7 @@ function editTask(id, newName) {
 Pass `editTask` into our `<Todo />` components as a prop in the same way we did with `deleteTask`:
 
 ```js
-const taskList = tasks.map(task => (
+const taskList = tasks.map((task) => (
   <Todo
     id={task.id}
     name={task.name}
@@ -89,7 +89,7 @@ In order to allow users to edit a task, we have to provide a user interface for 
 import React, { useState } from "react";
 ```
 
-We'll now use this to set an `isEditing` state, the default state of which should be `false`. Add the following line just inside the top of your `Todo(props) { … }` component definition:
+We'll now use this to set an `isEditing` state, the default state of which should be `false`. Add the following line just inside the top of your `Todo(props) { }` component definition:
 
 ```js
 const [isEditing, setEditing] = useState(false);
@@ -281,8 +281,8 @@ At the top of `App.js`, beneath our imports but above our `App()` function, let'
 ```js
 const FILTER_MAP = {
   All: () => true,
-  Active: task => !task.completed,
-  Completed: task => task.completed
+  Active: (task) => !task.completed,
+  Completed: (task) => task.completed
 };
 ```
 
@@ -307,7 +307,7 @@ Now that we have the `FILTER_NAMES` array, we can use it to render all three of 
 Add the following underneath your `taskList` constant declaration:
 
 ```js
-const filterList = FILTER_NAMES.map(name => (
+const filterList = FILTER_NAMES.map((name) => (
   <FilterButton key={name} name={name}/>
 ));
 ```
@@ -338,7 +338,7 @@ To make our filter buttons interactive, we should consider what props they need 
 Update your `filterList` constant as follows:
 
 ```js
-const filterList = FILTER_NAMES.map(name => (
+const filterList = FILTER_NAMES.map((name) => (
   <FilterButton
     key={name}
     name={name}
@@ -388,7 +388,7 @@ Update your `taskList` like so:
 ```js
 const taskList = tasks
 .filter(FILTER_MAP[filter])
-.map(task => (
+.map((task) => (
   <Todo
     id={task.id}
     name={task.name}

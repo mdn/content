@@ -35,13 +35,13 @@ Every `SpeechSynthesisVoice` has its own relative speech service including infor
 The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speak-easy-synthesis/script.js).
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i < voices.length ; i++) {
-    var option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+  for(let i = 0; i < voices.length ; i++) {
+    const option = document.createElement('option');
+    option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
     if(voices[i].default) {
       option.textContent += ' — DEFAULT';
@@ -61,9 +61,9 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 inputForm.onsubmit = function(event) {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  for(let i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -73,9 +73,8 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 
   utterThis.onpause = function(event) {
-    var char = event.utterance.text.charAt(event.charIndex);
-    console.log('Speech paused at character ' + event.charIndex + ' of "' +
-    event.utterance.text + '", which is "' + char + '".');
+    const char = event.utterance.text.charAt(event.charIndex);
+    console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
   }
 
   inputTxt.blur();

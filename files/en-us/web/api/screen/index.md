@@ -39,7 +39,7 @@ _Also inherits properties from its parent {{domxref("EventTarget")}}_.
   - : Returns the {{DOMxRef("ScreenOrientation")}} instance associated with this screen.
 - {{DOMxRef("Screen.pixelDepth")}}
   - : Gets the bit depth of the screen.
-- {{DOMxRef("Screen.top")}} {{deprecated_inline}}{{Non-standard_Inline}}
+- {{DOMxRef("Screen.top")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Returns the distance in pixels from the top side of the current screen.
 - {{DOMxRef("Screen.width")}}
   - : Returns the width of the screen.
@@ -57,7 +57,7 @@ _Also inherits methods from its parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Screen.unlockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Unlock the screen orientation (only works in fullscreen or for installed apps)
 
-### Events
+## Events
 
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
   - : Fires when the screen orientation changes.

@@ -60,8 +60,8 @@ the list.
 ```js
 var remoteCandidates = pc.getSenders()[0].transport.transport.getRemoteCandidates();
 
-remoteCandidates.forEach(function(candidate, index)) {
-  console.log("Candidate " + index + ": " + candidate.candidate);
+remoteCandidates.forEach(function(candidate, index) {
+  console.log(`Candidate ${index}: ${candidate.candidate}`);
 });
 ```
 

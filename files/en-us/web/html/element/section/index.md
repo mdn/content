@@ -111,7 +111,7 @@ Also consider these cases:
 - If the contents represent the main content area of a document, use {{HTMLElement("main")}}.
 - If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}}. An unwritten rule is that a `<section>` should logically appear in the outline of a document.
 
-To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement('h1')}}-{{HTMLElement('h6')}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
+To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement('h1')}} - {{HTMLElement('h6')}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
 
 ## Examples
 

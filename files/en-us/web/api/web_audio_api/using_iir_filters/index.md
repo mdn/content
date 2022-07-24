@@ -97,7 +97,8 @@ And the `click` event listener starts like so:
 playButton.addEventListener('click', function() {
     if (this.dataset.playing === 'false') {
         srcNode = playSourceNode(audioCtx, sample);
-        ...
+        // …
+    }
 }, false);
 ```
 
@@ -114,7 +115,8 @@ filterButton.addEventListener('click', function() {
     if (this.dataset.filteron === 'false') {
         srcNode.disconnect(audioCtx.destination);
         srcNode.connect(iirfilter).connect(audioCtx.destination);
-        ...
+        // …
+    }
 }, false);
 ```
 
@@ -184,7 +186,7 @@ canvasCtx.lineTo(width-spacing, height-spacing);
 canvasCtx.stroke();
 
 // axis is gain by frequency -> make labels
-canvasCtx.font = fontSize+'px sans-serif';
+canvasCtx.font = `${fontSize}px sans-serif`;
 canvasCtx.fillStyle = 'grey';
 canvasCtx.fillText('1', spacing-fontSize, spacing+fontSize);
 canvasCtx.fillText('g', spacing-fontSize, (height-spacing+fontSize)/2);

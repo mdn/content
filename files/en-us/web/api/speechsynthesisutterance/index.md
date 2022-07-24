@@ -76,16 +76,28 @@ Inside the `inputForm.onsubmit` handler, we stop the form submitting with {{domx
 
 ```js
 const synth = window.speechSynthesis;
-const voices = synth.getVoices();
 
 const inputForm = document.querySelector('form');
 const inputTxt = document.querySelector('input');
 const voiceSelect = document.querySelector('select');
 
-for(let i = 0; i < voices.length; i++const option = document.createElement('option');
-  option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
-  option.value = i;
-  voiceSelect.appendChild(option);
+let voices;
+
+function loadVoices() {
+  voices = synth.getVoices();
+  for(let i = 0; i < voices.length; i++) {
+    const option = document.createElement('option');
+    option.textContent = `${voices[i].name} (${voices[i].lang})`;
+    option.value = i;
+    voiceSelect.appendChild(option);
+  }
+}
+
+// in Google Chrome the voices are not ready on page load
+if ('onvoiceschanged' in synth) {
+  synth.onvoiceschanged = loadVoices;
+} else {
+  loadVoices();
 }
 
 inputForm.onsubmit = function(event) {

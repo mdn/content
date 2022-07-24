@@ -53,7 +53,7 @@ const importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject )
-  .then(obj => {
+  .then((obj) => {
     ...
 ```
 

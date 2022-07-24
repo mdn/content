@@ -61,10 +61,10 @@ Transport-level errors will have one of the following values for the specified e
 In this example, the {{domxref("RTCDtlsTransport.onerror", "onerror")}} event handler property is used to set the handler for the `error` event.
 
 ```js
-transport.onerror = ev => {
+transport.onerror = (ev) => {
   const err = ev.error;
 
-  /* ... */
+  // …
 }
 ```
 

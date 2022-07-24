@@ -93,7 +93,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.close", "close()")}}
-  - : Closes the{{domxref("RTCDataChannel")}}.
+  - : Closes the {{domxref("RTCDataChannel")}}.
     Either peer is permitted to call this method
     to initiate closure of the channel.
 - {{DOMxRef("RTCDataChannel.send", "send()")}}
@@ -130,7 +130,7 @@ const pc = new RTCPeerConnection();
 const dc = pc.createDataChannel("my channel");
 
 dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+  console.log(`received: ${event.data}`);
 };
 
 dc.onopen = function () {

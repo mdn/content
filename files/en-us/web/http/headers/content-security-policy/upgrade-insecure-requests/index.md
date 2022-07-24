@@ -11,7 +11,7 @@ tags:
   - Security
   - Upgrade
   - upgrade-insecure-requests
-browser-compat: http.headers.csp.Content-Security-Policy.upgrade-insecure-requests
+browser-compat: http.headers.Content-Security-Policy.upgrade-insecure-requests
 ---
 {{HTTPSidebar}}
 

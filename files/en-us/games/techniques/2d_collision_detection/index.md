@@ -73,7 +73,7 @@ const dim1 = {x: 5, y: 5}
 const dim2 = {x: 20, y: 20}
 
 Crafty.c("Circle", {
-   circle: function(radius, color) {
+   circle(radius, color) {
         this.radius = radius;
         this.w = this.h = radius * 2;
         this.color = color || "#000000";

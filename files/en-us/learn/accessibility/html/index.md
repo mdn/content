@@ -496,7 +496,7 @@ Let's have another quick look at the fourth method:
 ```html
 <img src="dinosaur.png" aria-labelledby="dino-label">
 
-<p id="dino-label">The Mozilla red Tyrannosaurus ... </p>
+<p id="dino-label">The Mozilla red Tyrannosaurus… </p>
 ```
 
 In this case, we are not using the `alt` attribute at all — instead, we have presented our description of the image as a regular text paragraph, given it an `id`, and then used the `aria-labelledby` attribute to refer to that `id`, which causes screen readers to use that paragraph as the alt text/label for that image. This is especially useful if you want to use the same text as a label for multiple images — something that isn't possible with `alt`.

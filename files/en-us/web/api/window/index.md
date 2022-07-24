@@ -318,22 +318,10 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress.
-- {{domxref("GlobalEventHandlers.onclick")}}
-  - : Called after the ANY mouse button is pressed & released.
-- {{domxref("GlobalEventHandlers.ondblclick")}}
-  - : Called when a double click is made with ANY mouse button.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : Called when the RIGHT mouse button is pressed.
-- {{domxref("GlobalEventHandlers.onerror")}}
-  - : Called when a resource fails to load OR when an error occurs at runtime. See {{domxref("Window/error_event", "error")}} event.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
-- {{domxref("GlobalEventHandlers.onscroll")}}
-  - : Called when the scroll bar is moved via ANY means. If the resource fully fits in the window, then this event cannot be invoked.
-- {{domxref("GlobalEventHandlers.onwheel")}}
-  - : Called when the mouse wheel is rotated around any axis.
-- {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `selectionchange` event is raised.
 
 ## Events
 

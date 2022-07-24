@@ -46,7 +46,7 @@ self.addEventListener('push', function(event) {
     return;
   }
 
-  const data = {};
+  let data = {};
   if (event.data) {
     data = event.data.json();
   }
