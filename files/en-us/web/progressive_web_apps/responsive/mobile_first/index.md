@@ -237,7 +237,7 @@ You can write your own feature detects (Mark Pilgrim's [All-In-One Almost-Alphab
 
 I put Modernizr inside my `js/lib` directory, then included it by putting the following construct inside my HTML file:
 
-```js
+```html
 <script type="text/javascript" src="js/lib/modernizr.js"></script>
 ```
 

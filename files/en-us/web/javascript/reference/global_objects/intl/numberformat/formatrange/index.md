@@ -69,8 +69,8 @@ const nf = new Intl.NumberFormat("es-ES", {
   maximumFractionDigits: 0,
 });
 
-console.log(nf.formatRange(3, 5); // → "3-5 €"
-console.log(nf.formatRange(2.9, 3.1); // → "~3 €"
+console.log(nf.formatRange(3, 5)); // → "3-5 €"
+console.log(nf.formatRange(2.9, 3.1)); // → "~3 €"
 ```
 
 ## Specifications

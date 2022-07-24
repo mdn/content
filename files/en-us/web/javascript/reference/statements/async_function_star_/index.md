@@ -87,7 +87,7 @@ gen.next()
   .then((res) => {
     console.log(res); // { value: 4, done: false }
     return gen.next();
-  });
+  })
   .then((res) => {
     console.log(res); // { value: undefined, done: true }
     return gen.next();

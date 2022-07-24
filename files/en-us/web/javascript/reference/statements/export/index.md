@@ -253,14 +253,14 @@ This is what it would look like using code snippets:
 
 ```js
 // In childModule1.js
-const myFunction = ...; // assign something useful to myFunction
-const myVariable = ...; // assign something useful to myVariable
+const myFunction = () => { /* function body */ };
+const myVariable = "..."; // assign something useful to myVariable
 export { myFunction, myVariable };
 ```
 
 ```js
 // In childModule2.js
-const myClass = ...; // assign something useful to myClass
+const myClass = class ClassName { /* ... */ };
 export { myClass };
 ```
 

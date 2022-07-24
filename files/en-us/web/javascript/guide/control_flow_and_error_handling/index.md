@@ -534,7 +534,7 @@ function doSomethingErrorProne() {
     doSomethingToGetAJavascriptError();
   }
 }
-⋮
+
 try {
   doSomethingErrorProne();
 } catch (e) {               // NOW, we actually use `console.error()`
