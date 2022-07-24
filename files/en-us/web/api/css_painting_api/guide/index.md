@@ -330,8 +330,7 @@ registerPaint('headerHighlight', class {
     ctx.fill();
 
     /* create the dashes */
-    for (let i = 0; i < 4; i++) {
-      let start = i * 2;
+    for (let start = 0; start < 8; start += 2) {
       ctx.beginPath();
       ctx.moveTo((blockWidth) + (start * 10) + 10, y);
       ctx.lineTo((blockWidth) + (start * 10) + 20, y);
