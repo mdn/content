@@ -37,7 +37,7 @@ The `Uint32Array` constructor requires being constructed with a {{jsxref("Operat
 
 ```js example-bad
 const dv = Uint32Array([1, 2, 3]);
-// TypeError: calling a builtin Uint16Array constructor
+// TypeError: calling a builtin Uint32Array constructor
 // without new is forbidden
 ```
 
