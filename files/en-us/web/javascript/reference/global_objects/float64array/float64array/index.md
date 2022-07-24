@@ -38,7 +38,7 @@ The `Float64Array` constructor requires being constructed with a {{jsxref("Opera
 
 ```js example-bad
 const dv = Float64Array([1, 2, 3]);
-// TypeError: calling a builtin Uint16Array constructor
+// TypeError: calling a builtin Float64Array constructor
 // without new is forbidden
 ```
 
