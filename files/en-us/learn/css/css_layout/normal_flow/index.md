@@ -44,7 +44,7 @@ Before digging deeper into different layout methods, it's worth revisiting some 
 
 ## How are elements laid out by default?
 
-The process begins as the boxes of individual elements are laid out in such a way that any padding, margin, or border they happen to have is added to their content. This is what we call the **box model**.
+The process begins as the boxes of individual elements are laid out in such a way that any padding, border, or margin they happen to have is added to their content. This is what we call the **box model**.
 
 By default, a [block level element](/en-US/docs/Web/HTML/Block-level_elements)'s content fills the available inline space of the parent element containing it and grows along the block dimension to accommodate its content. The size of [Inline elements](/en-US/docs/Web/HTML/Inline_elements) is just the size of their content. You can't set width or height on inline elements — they just sit inside the content of block level elements. If you want to control the size of an inline element in this manner, you need to set it to behave like a block level element (e.g., with `display: block;` or `display: inline-block;`, which mixes characteristics from both).
 
