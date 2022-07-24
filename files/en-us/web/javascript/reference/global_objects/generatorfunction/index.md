@@ -16,6 +16,9 @@ In JavaScript, every generator function is actually a `GeneratorFunction` object
 
 ```js
 const GeneratorFunction = Object.getPrototypeOf(function*() {}).constructor;
+//or you can evaluate it and use the returned object to access its constructor 
+const GeneratorFunction = (function*() {}).constructor;
+
 ```
 
 ## Syntax
