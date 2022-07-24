@@ -86,7 +86,7 @@ function setupWebGL (evt) {
   if (!(gl = getRenderingContext()))
     return;
 
-  const source = document.querySelector("#vertex-shader").innerHTML;
+  let source = document.querySelector("#vertex-shader").innerHTML;
   const vertexShader = gl.createShader(gl.VERTEX_SHADER);
   gl.shaderSource(vertexShader,source);
   gl.compileShader(vertexShader);
