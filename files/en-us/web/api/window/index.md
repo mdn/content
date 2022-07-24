@@ -320,8 +320,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : Called when the RIGHT mouse button is pressed.
-- {{domxref("GlobalEventHandlers.onload")}}
-  - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 
 ## Events
 

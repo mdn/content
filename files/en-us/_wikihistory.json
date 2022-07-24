@@ -44256,46 +44256,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2020-10-15T21:12:46.292Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "wxdude225",
-      "roryokane",
-      "ilfroloff",
-      "erikadoyle",
-      "kdex",
-      "chrisdavidmills",
-      "mattjdev",
-      "xgqfrms-GitHub",
-      "jpmedley",
-      "cvrebert",
-      "Robg1",
-      "Sebastianz",
-      "teoli",
-      "MHasan",
-      "nighca",
-      "Havvy",
-      "kscarfone",
-      "Sheppy",
-      "pimmhogeling",
-      "trevorh",
-      "Ms2ger",
-      "gingacodemonkey",
-      "another_sam",
-      "Yanmorin",
-      "BijuGC",
-      "Niczar",
-      "Ptak82",
-      "Pmash",
-      "Jabez",
-      "Nickolay",
-      "Wkinney",
-      "BenoitL",
-      "alecananian"
-    ]
-  },
   "Web/API/Gyroscope": {
     "modified": "2020-10-15T22:08:47.425Z",
     "contributors": [

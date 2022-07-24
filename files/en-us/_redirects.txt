@@ -2189,7 +2189,7 @@
 /en-US/docs/DOM/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/DOM/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/DOM/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
-/en-US/docs/DOM/window.onload	/en-US/docs/Web/API/GlobalEventHandlers/onload
+/en-US/docs/DOM/window.onload	/en-US/docs/Web/API/Window/load_event
 /en-US/docs/DOM/window.onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/DOM/window.onmousemove	/en-US/docs/Web/API/Element/mousemove_event
 /en-US/docs/DOM/window.onmouseout	/en-US/docs/Web/API/Element/mouseout_event
@@ -2622,7 +2622,7 @@
 /en-US/docs/DOM:window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/DOM:window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/DOM:window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
-/en-US/docs/DOM:window.onload	/en-US/docs/Web/API/GlobalEventHandlers/onload
+/en-US/docs/DOM:window.onload	/en-US/docs/Web/API/Window/load_event
 /en-US/docs/DOM:window.onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/DOM:window.onmousemove	/en-US/docs/Web/API/Element/mousemove_event
 /en-US/docs/DOM:window.onmouseout	/en-US/docs/Web/API/Element/mouseout_event
@@ -3347,7 +3347,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
-/en-US/docs/Document_Object_Model_(DOM)/window.onload	/en-US/docs/Web/API/GlobalEventHandlers/onload
+/en-US/docs/Document_Object_Model_(DOM)/window.onload	/en-US/docs/Web/API/Window/load_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseout	/en-US/docs/Web/API/Element/mouseout_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseover	/en-US/docs/Web/API/Element/mouseover_event
@@ -7847,7 +7847,7 @@
 /en-US/docs/Web/API/Document/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/Document/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/Document/onkeyup	/en-US/docs/Web/API/Element/keyup_event
-/en-US/docs/Web/API/Document/onload	/en-US/docs/Web/API/GlobalEventHandlers/onload
+/en-US/docs/Web/API/Document/onload	/en-US/docs/Web/API/Window/load_event
 /en-US/docs/Web/API/Document/onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/Web/API/Document/onmousemove	/en-US/docs/Web/API/Element/mousemove_event
 /en-US/docs/Web/API/Document/onmouseout	/en-US/docs/Web/API/Element/mouseout_event
@@ -8108,7 +8108,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers.onkeyup	/en-US/docs/Web/API/Element/keyup_event
-/en-US/docs/Web/API/GlobalEventHandlers.onload	/en-US/docs/Web/API/GlobalEventHandlers/onload
+/en-US/docs/Web/API/GlobalEventHandlers.onload	/en-US/docs/Web/API/Window/load_event
 /en-US/docs/Web/API/GlobalEventHandlers.onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/Web/API/GlobalEventHandlers.onmousemove	/en-US/docs/Web/API/Element/mousemove_event
 /en-US/docs/Web/API/GlobalEventHandlers.onmouseout	/en-US/docs/Web/API/Element/mouseout_event
@@ -8170,6 +8170,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeyup	/en-US/docs/Web/API/Element/keyup_event
+/en-US/docs/Web/API/GlobalEventHandlers/onload	/en-US/docs/Web/API/Window/load_event
 /en-US/docs/Web/API/GlobalEventHandlers/onloadeddata	/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event
 /en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata	/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event
 /en-US/docs/Web/API/GlobalEventHandlers/onloadend	/en-US/docs/Web/API/XMLHttpRequest/loadend_event
@@ -8291,7 +8292,7 @@
 /en-US/docs/Web/API/HTMLElement/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/HTMLElement/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/HTMLElement/onkeyup	/en-US/docs/Web/API/Element/keyup_event
-/en-US/docs/Web/API/HTMLElement/onload	/en-US/docs/Web/API/GlobalEventHandlers/onload
+/en-US/docs/Web/API/HTMLElement/onload	/en-US/docs/Web/API/Window/load_event
 /en-US/docs/Web/API/HTMLElement/onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/Web/API/HTMLElement/onmousemove	/en-US/docs/Web/API/Element/mousemove_event
 /en-US/docs/Web/API/HTMLElement/onmouseout	/en-US/docs/Web/API/Element/mouseout_event
@@ -9342,7 +9343,7 @@
 /en-US/docs/Web/API/SVGElement/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/SVGElement/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/SVGElement/onkeyup	/en-US/docs/Web/API/Element/keyup_event
-/en-US/docs/Web/API/SVGElement/onload	/en-US/docs/Web/API/GlobalEventHandlers/onload
+/en-US/docs/Web/API/SVGElement/onload	/en-US/docs/Web/API/Window/load_event
 /en-US/docs/Web/API/SVGElement/onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/Web/API/SVGElement/onmousemove	/en-US/docs/Web/API/Element/mousemove_event
 /en-US/docs/Web/API/SVGElement/onmouseout	/en-US/docs/Web/API/Element/mouseout_event
@@ -9888,7 +9889,7 @@
 /en-US/docs/Web/API/Window/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/Window/onkeyup	/en-US/docs/Web/API/Element/keyup_event
 /en-US/docs/Web/API/Window/onlanguagechange	/en-US/docs/Web/API/Window/languagechange_event
-/en-US/docs/Web/API/Window/onload	/en-US/docs/Web/API/GlobalEventHandlers/onload
+/en-US/docs/Web/API/Window/onload	/en-US/docs/Web/API/Window/load_event
 /en-US/docs/Web/API/Window/onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/Web/API/Window/onmousemove	/en-US/docs/Web/API/Element/mousemove_event
 /en-US/docs/Web/API/Window/onmouseout	/en-US/docs/Web/API/Element/mouseout_event
@@ -10542,7 +10543,7 @@
 /en-US/docs/Web/API/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
-/en-US/docs/Web/API/window.onload	/en-US/docs/Web/API/GlobalEventHandlers/onload
+/en-US/docs/Web/API/window.onload	/en-US/docs/Web/API/Window/load_event
 /en-US/docs/Web/API/window.onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/Web/API/window.onmousemove	/en-US/docs/Web/API/Element/mousemove_event
 /en-US/docs/Web/API/window.onmouseout	/en-US/docs/Web/API/Element/mouseout_event
