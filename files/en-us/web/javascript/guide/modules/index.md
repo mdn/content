@@ -199,8 +199,8 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 <body>
   <div id="main"></div>
   <script>
-    // A const statement creates a global variable.
-    const text = "Hello";
+    // A var statement creates a global variable.
+    var text = "Hello";
   </script>
   <script type="module" src="./render.js"></script>
 </body>
