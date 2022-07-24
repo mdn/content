@@ -17,7 +17,7 @@ Note that `AsyncFunction` is _not_ a global object. It can be
 obtained with the following code:
 
 ```js
-const AsyncFunction = (async function(){}).constructor
+const AsyncFunction = (async function () {}).constructor;
 ```
 
 ## Syntax
