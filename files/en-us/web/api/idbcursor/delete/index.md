@@ -81,7 +81,7 @@ function deleteResult() {
         };
       } else {
         const listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+        listItem.innerHTML = `<strong>${cursor.value.albumTitle}</strong>, ${cursor.value.year}`;
         list.appendChild(listItem);
       }
       cursor.continue();

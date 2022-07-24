@@ -108,8 +108,7 @@ function setupWebGL (evt) {
     const linkErrLog = gl.getProgramInfoLog(program);
     cleanup();
     document.querySelector("p").innerHTML =
-      "Shader program did not link successfully. "
-      + "Error log: " + linkErrLog;
+      `Shader program did not link successfully. Error log: ${linkErrLog}`;
     return;
   }
 

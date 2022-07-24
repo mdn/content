@@ -391,7 +391,9 @@ navigator.mediaDevices.getUserMedia(constraints)
     video.play();
   };
 })
-.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+.catch(function(err) { // always check for errors at the end.
+  console.error(`${err.name}: ${err.message}`);
+});
 ```
 
 ### Using the new API in older browsers
@@ -445,7 +447,7 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: true })
   };
 })
 .catch(function(err) {
-  console.log(err.name + ": " + err.message);
+  console.error(`${err.name }: ${err.message}`);
 });
 ```
 

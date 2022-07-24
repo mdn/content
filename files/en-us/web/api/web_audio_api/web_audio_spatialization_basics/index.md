@@ -418,7 +418,7 @@ function moveBoombox(direction, prevMove) {
         break;
     }
 
-  boombox.style.transform = 'translateX('+transform.xAxis+'px) translateY('+transform.yAxis+'px) scale('+transform.zAxis+') rotateY('+transform.rotateY+'deg) rotateX('+transform.rotateX+'deg)';
+  boombox.style.transform = `translateX(${transform.xAxis}px) translateY(${transform.yAxis}px) scale(${transform.zAxis}) rotateY(${transform.rotateY}deg) rotateX(${transform.rotateX}deg)`;
 
   const move = prevMove || {};
   move.frameId = requestAnimationFrame(() => moveBoombox(direction, move));
