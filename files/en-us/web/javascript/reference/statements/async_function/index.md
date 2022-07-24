@@ -237,8 +237,8 @@ async function parallel() {
 
   // Start 2 "jobs" in parallel and wait for both of them to complete
   await Promise.all([
-      (async()=>console.log(await resolveAfter2Seconds()))(),
-      (async()=>console.log(await resolveAfter1Second()))()
+      (async () => console.log(await resolveAfter2Seconds()))(),
+      (async () => console.log(await resolveAfter1Second()))()
   ])
 }
 

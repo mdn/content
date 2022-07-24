@@ -82,7 +82,7 @@ Or in JavaScript:
 ```js
 function isPointInsideSphere(point, sphere) {
   // we are using multiplications because is faster than calling Math.pow
-  var distance = Math.sqrt((point.x - sphere.x) * (point.x - sphere.x) +
+  const distance = Math.sqrt((point.x - sphere.x) * (point.x - sphere.x) +
                            (point.y - sphere.y) * (point.y - sphere.y) +
                            (point.z - sphere.z) * (point.z - sphere.z));
   return distance < sphere.radius;
@@ -107,7 +107,7 @@ Or in JavaScript:
 ```js
 function intersect(sphere, other) {
   // we are using multiplications because it's faster than calling Math.pow
-  var distance = Math.sqrt((sphere.x - other.x) * (sphere.x - other.x) +
+  const distance = Math.sqrt((sphere.x - other.x) * (sphere.x - other.x) +
                            (sphere.y - other.y) * (sphere.y - other.y) +
                            (sphere.z - other.z) * (sphere.z - other.z));
   return distance < (sphere.radius + other.radius);
@@ -125,12 +125,12 @@ In JavaScript, we'd do this test like so:
 ```js
 function intersect(sphere, box) {
   // get box closest point to sphere center by clamping
-  var x = Math.max(box.minX, Math.min(sphere.x, box.maxX));
-  var y = Math.max(box.minY, Math.min(sphere.y, box.maxY));
-  var z = Math.max(box.minZ, Math.min(sphere.z, box.maxZ));
+  const x = Math.max(box.minX, Math.min(sphere.x, box.maxX));
+  const y = Math.max(box.minY, Math.min(sphere.y, box.maxY));
+  const z = Math.max(box.minZ, Math.min(sphere.z, box.maxZ));
 
   // this is the same as isPointInsideSphere
-  var distance = Math.sqrt((x - sphere.x) * (x - sphere.x) +
+  const distance = Math.sqrt((x - sphere.x) * (x - sphere.x) +
                            (y - sphere.y) * (y - sphere.y) +
                            (z - sphere.z) * (z - sphere.z));
 

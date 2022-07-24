@@ -304,7 +304,7 @@ computation(console.log, 5) // -> 14
 // same as:
 
 const computation2 = (input, callback) => {
-  const f6 = x=> div4(callback, x);
+  const f6 = (x) => div4(callback, x);
   const f5 = (x, y) => add(f6, x, y);
   const f4 = (x) => split(f5, x);
   const f3 = (x) => sub2(f4, x);

@@ -156,7 +156,7 @@ Example codes below highlight the usage of main features of the Presentation API
     connection && connection.terminate();
   };
 
-  disconnectBtn.onclick = (_) => {
+  disconnectBtn.onclick = () => {
     connection && connection.close();
   };
 
@@ -185,7 +185,7 @@ Example codes below highlight the usage of main features of the Presentation API
     }
 
     // Monitor the connection state
-    connection.onconnect = (_) => {
+    connection.onconnect = () => {
       showConnectedUI();
 
       // Register message handler
@@ -197,12 +197,12 @@ Example codes below highlight the usage of main features of the Presentation API
       connection.send("Say hello");
     };
 
-    connection.onclose = (_) => {
+    connection.onclose = () => {
       connection = null;
       showDisconnectedUI();
     };
 
-    connection.onterminate = (_) => {
+    connection.onterminate = () => {
       // Remove presId from localStorage if exists
       delete localStorage["presId"];
       connection = null;

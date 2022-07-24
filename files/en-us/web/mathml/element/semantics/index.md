@@ -24,14 +24,14 @@ By default, only the first child of the `<semantics>` element is rendered while 
 > - If no Presentation MathML is found, render the first `<annotation>` or `<annotation-xml>` child element of `<semantics>`.
 >  Beware that `<annotation-xml>` elements are only recognized, if the encoding attribute is set to one of the following:
 >
->  - `"application/mathml-presentation+xml"`
->  - `"MathML-Presentation"`
->  - `"SVG1.1"`
->  - `"text/html"`
->  - `"image/svg+xml"`
->  - `"application/xml`".
+> - `"application/mathml-presentation+xml"`
+> - `"MathML-Presentation"`
+> - `"SVG1.1"`
+> - `"text/html"`
+> - `"image/svg+xml"`
+> - `"application/xml`".
 >
->  Note that `"application/mathml+xml"` is _not_ mentioned here as it does not distinguish between Content or Presentation MathML.
+> Note that `"application/mathml+xml"` is _not_ mentioned here as it does not distinguish between Content or Presentation MathML.
 
 ## Attributes
 
