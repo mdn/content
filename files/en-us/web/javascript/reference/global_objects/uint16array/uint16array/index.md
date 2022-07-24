@@ -103,7 +103,7 @@ constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
 
 ```js example-bad
 const dv = Uint16Array([1, 2, 3]);
-// TypeError: calling a builtin Uint8ClampedArray constructor
+// TypeError: calling a builtin Uint16Array constructor
 // without new is forbidden
 ```
 
