@@ -18,6 +18,8 @@ obtained with the following code:
 
 ```js
 Object.getPrototypeOf(async function(){}).constructor
+// or you can evaluate async function and use returned object to access its constructor
+(async function(){}).constructor
 ```
 
 ## Syntax
