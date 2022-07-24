@@ -109,7 +109,6 @@ console.log(float32FromIterable);
 
 {{Compat}}
 
-
 ## See also
 
 - [Polyfill of `Float32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
