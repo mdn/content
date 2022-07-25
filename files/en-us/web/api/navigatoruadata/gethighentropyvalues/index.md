@@ -41,6 +41,7 @@ getHighEntropyValues(hints)
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to an object containing some or all of the following values (based on the hints requested):
+
 - `brands`
   - : A low-entropy hint provided automatically, for details see {{domxref("NavigatorUAData.brands")}}.
 - `mobile`
