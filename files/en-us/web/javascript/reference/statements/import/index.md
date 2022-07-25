@@ -192,6 +192,29 @@ getUsefulContents(
 );
 ```
 
+### Importing live bindings
+
+The identifier being imported is a _live binding_, because the module exporting it may mutate it and the imported value would change. However, the module importing it may not re-assign it.
+
+```js
+// my-module.js
+export let myValue = 1;
+setTimeout(() => {
+  myValue = 2;
+}, 500);
+```
+
+```js
+// main.js
+import { myValue } from '/modules/my-module.js';
+console.log(myValue); // 1
+setTimeout(() => {
+  console.log(myValue); // 2; my-module has updated its value
+  myValue = 3; // TypeError: Assignment to constant variable.
+  // The importing module can only read the value but can't re-assign it.
+}, 1000);
+```
+
 ## Specifications
 
 {{Specifications}}
