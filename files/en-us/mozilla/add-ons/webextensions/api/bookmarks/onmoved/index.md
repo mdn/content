@@ -15,7 +15,9 @@ browser-compat: webextensions.api.bookmarks.onMoved
 ---
 {{AddonSidebar()}}
 
-Fired when a bookmark or folder is moved to a different parent folder and/or position within a folder.
+Fired when a bookmark or folder is moved to a different parent folder or position within a folder.
+
+> **Note:** If you're moving multiple bookmarks, because this API is asynchronous, the moves may get processed in any order. Consequently, the value of each bookmark's index may change or be unknown until all the moves are completed. If you want to obtain the index values after a move, you must wait for all the calls to resolve or reject before reading the index values.
 
 ## Syntax
 
