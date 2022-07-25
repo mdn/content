@@ -78,13 +78,15 @@ function resolveAfter2Seconds(x) {
   });
 }
 
-let AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+const AsyncFunction = (async function () {}).constructor;
 
-let a = new AsyncFunction('a',
-                          'b',
-                          'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
+const fn = new AsyncFunction(
+  'a',
+  'b',
+  'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);',
+);
 
-a(10, 20).then((v) => {
+fn(10, 20).then((v) => {
   console.log(v); // prints 30 after 4 seconds
 });
 ```
