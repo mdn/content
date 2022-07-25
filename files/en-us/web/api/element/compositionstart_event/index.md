@@ -28,7 +28,7 @@ oncompositionstart = (event) => { };
 
 ## Event type
 
-An {{domxref("CompositionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("CompositionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("CompositionEvent")}}
 

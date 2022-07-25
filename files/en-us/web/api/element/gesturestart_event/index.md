@@ -26,7 +26,7 @@ onNameOfTheEvent = (event) => { };
 
 ## Event type
 
-An {{domxref("GestureEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("GestureEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("GestureEvent")}}
 

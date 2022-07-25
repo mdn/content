@@ -27,7 +27,7 @@ onformdata = (event) => { };
 
 ## Event type
 
-An {{domxref("FormDataEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FormDataEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("FormDataEvent")}}
 

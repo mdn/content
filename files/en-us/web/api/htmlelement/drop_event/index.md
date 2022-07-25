@@ -28,7 +28,7 @@ ondrop = (event) => { };
 
 ## Event type
 
-An {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DragEvent")}}
 
