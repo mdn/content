@@ -26,7 +26,7 @@ onwebglcontextrestored = (event) => { };
 
 ## Event type
 
-An {{domxref("WebGLContextEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("WebGLContextEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("WebGLContextEvent")}}
 
