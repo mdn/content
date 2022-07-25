@@ -251,7 +251,7 @@ Some examples follow:
 
 ```js
 if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
-       || class.YET_ANOTHER_CONDITION ) {
+       || class.YET_ANOTHER_CONDITION) {
   /* something */
 }
 

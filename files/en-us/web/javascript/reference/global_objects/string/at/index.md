@@ -47,12 +47,12 @@ function returnLast(arr) {
 
 let invoiceRef = 'myinvoice01';
 
-console.log( returnLast(invoiceRef) );
+console.log(returnLast(invoiceRef));
 // Logs: '1'
 
 invoiceRef = 'myinvoice02';
 
-console.log( returnLast(invoiceRef) );
+console.log(returnLast(invoiceRef));
 // Logs: '2'
 ```
 

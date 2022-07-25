@@ -69,7 +69,7 @@ Browsers offer much power to their users; it's just a matter of knowing where to
 
 ### Take advantage Operating System accessibility features
 
-Most operating systems such as Windows 10, have accessibility options that are surprisingly powerful. Usually they are quite easy to find by typing ( or saying) in the word, "Accessibility" in the search finder of the operating system.
+Most operating systems such as Windows 10, have accessibility options that are surprisingly powerful. Usually they are quite easy to find by typing (or saying) in the word, "Accessibility" in the search finder of the operating system.
 
 #### Turn off animations in the operating system
 
