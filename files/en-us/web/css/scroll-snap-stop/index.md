@@ -13,7 +13,9 @@ browser-compat: css.properties.scroll-snap-stop
 ---
 {{CSSRef}}
 
-The **`scroll-snap-stop`** [CSS](/en-US/docs/Web/CSS) property defines whether the scroll container is allowed to "pass over" possible snap positions.
+The **`scroll-snap-stop`** [CSS](/en-US/docs/Web/CSS) property defines whether or not the scroll container is allowed to "pass over" possible snap positions.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -27,8 +29,6 @@ scroll-snap-stop: revert;
 scroll-snap-stop: revert-layer;
 scroll-snap-stop: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -47,9 +47,45 @@ scroll-snap-stop: unset;
 
 ## Examples
 
-### Snapping in different axes
+### Setting different snap stops
 
-This example is duplicated from {{cssxref("scroll-snap-type")}} with minor variances.
+The example below demonstrates `scroll-snap-stop: always` in the blocks marked Mandatory and `scroll-snap-stop: normal` in the blocks marked Proximity.
+
+#### HTML
+
+```html
+<div class="container x mandatory-scroll-snapping" dir="ltr">
+  <div>X Mandatory LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
+<div class="container x proximity-scroll-snapping" dir="ltr">
+  <div>X Proximity LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
+<div class="container y mandatory-scroll-snapping" dir="ltr">
+  <div>Y Mandatory LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
+<div class="container y proximity-scroll-snapping" dir="ltr">
+  <div>Y Proximity LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+```
 
 #### CSS
 
@@ -63,6 +99,7 @@ This example is duplicated from {{cssxref("scroll-snap-type")}} with minor varia
   flex-flow: column nowrap;
   font-family: monospace;
 }
+
 .container {
   display: flex;
   overflow: auto;
@@ -77,18 +114,12 @@ This example is duplicated from {{cssxref("scroll-snap-type")}} with minor varia
 }
 
 .container.y {
-  width: 256px;
+  width: 384px;
   height: 256px;
   flex-flow: column nowrap;
 }
-/* definite scroll snap */
-.mandatory-scroll-snapping > div {
-  scroll-snap-stop: always;
-}
-.proximity-scroll-snapping > div {
-  scroll-snap-stop: normal;
-}
-/* scroll-snap */
+
+/* setting up scroll-snap */
 .x.mandatory-scroll-snapping {
   scroll-snap-type: x mandatory;
 }
@@ -105,10 +136,19 @@ This example is duplicated from {{cssxref("scroll-snap-type")}} with minor varia
   scroll-snap-type: y proximity;
 }
 
+/* defining scroll-snap alignment */
 .container > div {
   text-align: center;
   scroll-snap-align: center;
   flex: none;
+}
+
+/* defining scroll-snap stops */
+.mandatory-scroll-snapping > div {
+  scroll-snap-stop: always;
+}
+.proximity-scroll-snapping > div {
+  scroll-snap-stop: normal;
 }
 
 .x.container > div {
@@ -121,14 +161,16 @@ This example is duplicated from {{cssxref("scroll-snap-type")}} with minor varia
 .y.container > div {
   line-height: 256px;
   font-size: 128px;
-  width: 256px;
+  width: 100%;
   height: 256px;
 }
+
 /* appearance fixes */
 .y.container > div:first-child {
   line-height: 1.3;
   font-size: 64px;
 }
+
 /* coloration */
 .container > div:nth-child(even) {
   background-color: #87EA87;
@@ -136,80 +178,11 @@ This example is duplicated from {{cssxref("scroll-snap-type")}} with minor varia
 
 .container > div:nth-child(odd) {
   background-color: #87CCEA;
-}
-```
-
-#### HTML
-
-```html
-<div class="container x mandatory-scroll-snapping" dir="ltr">
-  <div>X Mand. LTR </div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container x proximity-scroll-snapping" dir="ltr">
-  <div>X Proximity LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container y mandatory-scroll-snapping" dir="ltr">
-  <div>Y Mand. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container y proximity-scroll-snapping" dir="ltr">
-  <div>Y Prox. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container x mandatory-scroll-snapping" dir="rtl">
-  <div>X Mandatory RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container x proximity-scroll-snapping" dir="rtl">
-  <div>X Proximity RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container y mandatory-scroll-snapping" dir="rtl">
-  <div>Y Mand. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container y proximity-scroll-snapping" dir="rtl">
-  <div>Y Prox. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
 ```
 
 #### Result
 
-{{EmbedLiveSample("Snapping_in_different_axes", "100%", "1630")}}
+{{EmbedLiveSample("Snapping_in_different_axes", "100%", "800")}}
 
 ## Specifications
 
@@ -222,4 +195,10 @@ This example is duplicated from {{cssxref("scroll-snap-type")}} with minor varia
 ## See also
 
 - [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- Other related CSS Scroll Snap properties:
+  - [scroll-snap-align](/en-US/docs/Web/CSS/scroll-snap-align)
+  - [scroll-snap-type](/en-US/docs/Web/CSS/scroll-snap-type)
+  - [scroll-behavior](/en-US/docs/Web/CSS/scroll-behavior)
+  - [scroll-margin](/en-US/docs/Web/CSS/scroll-margin)
+  - [scroll-padding](/en-US/docs/Web/CSS/scroll-padding)
+- [Well-controlled scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/) on web.dev
