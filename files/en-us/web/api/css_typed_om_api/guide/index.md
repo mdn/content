@@ -111,14 +111,14 @@ const allComputedStyles = myElement.computedStyleMap();
 const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
 
 // iterate through our properties of interest
-for ( let i = 0; i < ofInterest.length; i++ ) {
+for ( const value of ofInterest ) {
   // properties
   const cssProperty = document.createElement('dt');
-  cssProperty.appendChild(document.createTextNode(ofInterest[i]));
+  cssProperty.appendChild(document.createTextNode(value));
   stylesList.appendChild(cssProperty);
   // values
   const cssValue = document.createElement('dd');
-  cssValue.appendChild(document.createTextNode( allComputedStyles.get(ofInterest[i])));
+  cssValue.appendChild(document.createTextNode( allComputedStyles.get(value)));
   stylesList.appendChild(cssValue);
 }
 ```
@@ -171,26 +171,26 @@ const allComputedStyles = myElement.computedStyleMap();
 const ofInterest = ['padding-top', 'margin-bottom', 'font-size', 'font-stretch',
      'animation-duration', 'animation-iteration-count', 'width', 'height'];
 // iterate thru our properties of interest
-for ( let i = 0; i < ofInterest.length; i++ ) {
+for ( const value of ofInterest ) {
       // create a row
     const row = document.createElement( 'tr' );
 
       // add the name of the property
     const cssProperty = document.createElement( 'td' );
-    cssProperty.appendChild( document.createTextNode( ofInterest[i] ) );
+    cssProperty.appendChild( document.createTextNode( value ) );
     row.appendChild( cssProperty );
 
       // and the unitless value
     const cssValue = document.createElement( 'td' );
       // shrink long floats to 1 decimal point
-    let propVal = allComputedStyles.get( ofInterest[i] ).value;
+    let propVal = allComputedStyles.get( value ).value;
     propVal = ( propVal % 1 ) ? propVal.toFixed( 1 ) : propVal;
     cssValue.appendChild(document.createTextNode( propVal ));
     row.appendChild( cssValue );
 
       // and the type of unit
     const cssUnit = document.createElement( 'td' );
-    cssUnit.appendChild( document.createTextNode( allComputedStyles.get( ofInterest[i] ).unit ));
+    cssUnit.appendChild( document.createTextNode( allComputedStyles.get( value ).unit ));
     row.appendChild( cssUnit );
 
     //add the row to the table
