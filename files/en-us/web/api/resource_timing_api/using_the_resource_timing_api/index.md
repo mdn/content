@@ -56,7 +56,7 @@ function calculate_load_times() {
   for (let i=0; i < resources.length; i++) {
     console.log(`== Resource[${i}] - ${resources[i].name}`);
     // Redirect time
-    const t = resources[i].redirectEnd - resources[i].redirectStart;
+    let t = resources[i].redirectEnd - resources[i].redirectStart;
     console.log(`… Redirect time = ${t}`);
 
     // DNS time

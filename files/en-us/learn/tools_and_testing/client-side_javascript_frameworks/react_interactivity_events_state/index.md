@@ -307,7 +307,7 @@ const [tasks, setTasks] = useState(props.tasks);
 Now, we can change our `taskList` mapping so that it is the result of mapping `tasks`, instead of `props.tasks`. Your `taskList` constant declaration should now look like so:
 
 ```js
-const taskList = tasks.map(task => (
+const taskList = tasks.map((task) => (
     <Todo
         id={task.id}
         name={task.name}
@@ -407,7 +407,7 @@ function toggleTaskCompleted(id) {
 Next, we'll add `toggleTaskCompleted` to the props of each `<Todo />` component rendered inside our `taskList`; update it like so:
 
 ```js
-const taskList = tasks.map(task => (
+const taskList = tasks.map((task) => (
   <Todo
       id={task.id}
       name={task.name}
@@ -445,7 +445,7 @@ Update your `toggleTaskCompleted()` function to the following:
 
 ```js
 function toggleTaskCompleted(id) {
-  const updatedTasks = tasks.map(task => {
+  const updatedTasks = tasks.map((task) => {
     // if this task has the same ID as the edited task
     if (id === task.id) {
       // use object spread to make a new object
@@ -479,7 +479,7 @@ function deleteTask(id) {
 Next, add another callback prop to our array of `<Todo />` components:
 
 ```js
-const taskList = tasks.map(task => (
+const taskList = tasks.map((task) => (
   <Todo
     id={task.id}
     name={task.name}
@@ -517,7 +517,7 @@ Update the `deleteTask()` function inside your `App.js` file as follows:
 
 ```js
 function deleteTask(id) {
-  const remainingTasks = tasks.filter(task => id !== task.id);
+  const remainingTasks = tasks.filter((task) => id !== task.id);
   setTasks(remainingTasks);
 }
 ```

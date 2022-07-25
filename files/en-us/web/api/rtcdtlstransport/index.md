@@ -120,7 +120,7 @@ function tallySenders(pc) {
   };
 
   let senderList = pc.getSenders();
-  senderList.forEach(sender => {
+  senderList.forEach((sender) => {
     let transport = sender.transport;
 
     if (!transport) {

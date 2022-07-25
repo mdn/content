@@ -129,7 +129,7 @@ While we are on the topic of budgeting time, many web browsers have a tool calle
 This value is not too useful alone, since it is relative to a fairly uninteresting event, but it can be subtracted from another timestamp to accurately and precisely determine how much time elapsed between those two points. To acquire one of these timestamps, you can call `window.performance.now()` and store the result as a variable.
 
 ```js
-var tNow = window.performance.now();
+const tNow = window.performance.now();
 ```
 
 Back to the topic of the main loop. You will often want to know when your main function was invoked. Because this is common, `window.requestAnimationFrame()` always provides a `DOMHighResTimeStamp` to callbacks as an argument when they are executed. This leads to another enhancement to our previous main loops.
@@ -261,15 +261,15 @@ A separate update and draw method could look like the following example. For the
 ;(function () {
   function main( tFrame ) {
     MyGame.stopMain = window.requestAnimationFrame( main );
-    var nextTick = MyGame.lastTick + MyGame.tickLength;
-    var numTicks = 0;
+    const nextTick = MyGame.lastTick + MyGame.tickLength;
+    let numTicks = 0;
 
     // If tFrame < nextTick then 0 ticks need to be updated (0 is default for numTicks).
     // If tFrame = nextTick then 1 tick needs to be updated (and so forth).
     // Note: As we mention in summary, you should keep track of how large numTicks is.
     // If it is large, then either your game was asleep, or the machine cannot keep up.
     if (tFrame > nextTick) {
-      var timeSinceTick = tFrame - MyGame.lastTick;
+      const timeSinceTick = tFrame - MyGame.lastTick;
       numTicks = Math.floor( timeSinceTick / MyGame.tickLength );
     }
 
@@ -279,7 +279,7 @@ A separate update and draw method could look like the following example. For the
   }
 
   function queueUpdates( numTicks ) {
-    for(var i=0; i < numTicks; i++) {
+    for(let i=0; i < numTicks; i++) {
       MyGame.lastTick = MyGame.lastTick + MyGame.tickLength; // Now lastTick is this tick.
       update( MyGame.lastTick );
     }

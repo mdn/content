@@ -49,7 +49,7 @@ fetches a .wasm module and converts it into a typed array.
 The `validate()` method is then used to check whether the module is valid.
 
 ```js
-fetch('simple.wasm').then(response =>
+fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
 ).then(function(bytes) {
   const valid = WebAssembly.validate(bytes);

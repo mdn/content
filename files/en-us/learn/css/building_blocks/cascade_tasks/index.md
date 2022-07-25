@@ -42,7 +42,7 @@ Your final result should look like the image below:
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/cascade/cascadelayers.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/cascade/cascadelayer.html", '100%', 700)}}
 
 > **Callout:**
 >

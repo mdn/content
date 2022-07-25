@@ -10,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.Presentation
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}
+{{securecontext_header}}{{SeeCompatTable}}{{DefaultAPISidebar("Presentation API")}}
 
 The Presentation API lets a {{Glossary("user agent")}} (such as a Web browser) effectively display web content through large presentation devices such as projectors and network-connected televisions. Supported types of multimedia devices include both displays which are wired using HDMI, DVI, or the like, or wireless, using [DLNA](https://www.dlna.org/), [Chromecast](https://developers.google.com/cast/), [AirPlay](https://developer.apple.com/airplay/), or [Miracast](https://www.wi-fi.org/discover-wi-fi/miracast).
 
@@ -152,11 +152,11 @@ Example codes below highlight the usage of main features of the Presentation API
   const reconnectBtn = document.querySelector("#reconnectBtn");
   const disconnectBtn = document.querySelector("#disconnectBtn");
 
-  stopBtn.onclick = _ => {
+  stopBtn.onclick = () => {
     connection && connection.terminate();
   };
 
-  disconnectBtn.onclick = _ => {
+  disconnectBtn.onclick = () => {
     connection && connection.close();
   };
 
@@ -185,11 +185,11 @@ Example codes below highlight the usage of main features of the Presentation API
     }
 
     // Monitor the connection state
-    connection.onconnect = _ => {
+    connection.onconnect = () => {
       showConnectedUI();
 
       // Register message handler
-      connection.onmessage = message => {
+      connection.onmessage = (message) => {
         console.log(`Received message: ${message.data}`);
       };
 
@@ -197,12 +197,12 @@ Example codes below highlight the usage of main features of the Presentation API
       connection.send("Say hello");
     };
 
-    connection.onclose = _ => {
+    connection.onclose = () => {
       connection = null;
       showDisconnectedUI();
     };
 
-    connection.onterminate = _ => {
+    connection.onterminate = () => {
       // Remove presId from localStorage if exists
       delete localStorage["presId"];
       connection = null;

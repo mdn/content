@@ -87,7 +87,7 @@ In the live example below try combining the two selectors which have identical d
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1100)}}
 
-When you group selectors in this way, if any selector is invalid the whole rule will be ignored.
+When you group selectors in this way, if any selector is syntactically invalid, the whole rule will be ignored.
 
 In the following example, the invalid class selector rule will be ignored, whereas the `h1` would still be styled.
 

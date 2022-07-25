@@ -85,7 +85,7 @@ body {
 ### JavaScript
 
 ```js
-document.addEventListener('pointerup', e => {
+document.addEventListener('pointerup', (e) => {
   const selection = window.getSelection();
 
   if (selection.type === 'Range') {

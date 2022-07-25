@@ -123,7 +123,7 @@ export class AppComponent {
     if (this.filter === 'all') {
       return this.allItems;
     }
-    return this.allItems.filter(item => this.filter === 'done' ? item.done : !item.done);
+    return this.allItems.filter((item) => this.filter === 'done' ? item.done : !item.done);
   }
 
 }

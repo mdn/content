@@ -184,7 +184,7 @@ Child.prototype.constructor = Child;
 Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
   const position = this.position;
   // Using this.constructor, in hope that getStartPosition exists as a static method
-  const startPosition = this.constructor.getStartPosition(); 
+  const startPosition = this.constructor.getStartPosition();
 
   return {
     offsetX: startPosition.x - position.x,
@@ -227,7 +227,7 @@ Object.setPrototypeOf(Child, ParentWithStatic);
 
 Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
   let position = this.position;
-  let startPosition = this.constructor.getStartPosition(); 
+  let startPosition = this.constructor.getStartPosition();
 
   return {
     offsetX: startPosition.x - position.x,

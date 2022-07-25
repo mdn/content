@@ -56,7 +56,7 @@ self.addEventListener('activate', (event) => {
   });
 });
 
-self.addEventListener('cookiechange', event => {
+self.addEventListener('cookiechange', (event) => {
   console.log(event);
 });
 ```

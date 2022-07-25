@@ -47,7 +47,7 @@ function addMQListener(mq, callback) {
 }
 
 addMQListener(window.matchMedia("(orientation:landscape)"),
-  event => {
+  (event) => {
     if (event.matches) {
       /* now in landscape orientation */
     } else {

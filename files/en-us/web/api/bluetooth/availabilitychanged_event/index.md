@@ -19,9 +19,9 @@ The `availabilitychanged` event fires when the Bluetooth system as a whole becom
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('availabilitychanged', event => { });
+addEventListener('availabilitychanged', (event) => { });
 
-onavailabilitychanged = event => { };
+onavailabilitychanged = (event) => { };
 ```
 
 ## Event type

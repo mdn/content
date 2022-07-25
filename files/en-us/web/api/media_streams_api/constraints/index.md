@@ -128,7 +128,7 @@ navigator.mediaDevices.getUserMedia({
     sampleSize: 16,
     channelCount: 2
   }
-}).then(stream => {
+}).then((stream) => {
   videoElement.srcObject = stream;
 }).catch(handleError);
 ```

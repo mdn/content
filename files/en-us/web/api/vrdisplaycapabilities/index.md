@@ -44,12 +44,12 @@ function reportDisplays() {
       // cap is a VRDisplayCapabilities object
       const listItem = document.createElement('li');
       listItem.innerHTML = `<strong>Display ${i + 1}</strong><br>` +
-        `VR Display ID: ${displays[i].displayId}<br>` + 
-        `VR Display Name: ${displays[i].displayName}<br>` + 
-        `Display can present content: ${cap.canPresent}<br>` + 
-        `Display is separate from the computer's main display: ${cap.hasExternalDisplay}<br>` + 
-        `Display can return position info: ${cap.hasPosition}<br>` + 
-        `Display can return orientation info: ${cap.hasOrientation}<br>` + 
+        `VR Display ID: ${displays[i].displayId}<br>` +
+        `VR Display Name: ${displays[i].displayName}<br>` +
+        `Display can present content: ${cap.canPresent}<br>` +
+        `Display is separate from the computer's main display: ${cap.hasExternalDisplay}<br>` +
+        `Display can return position info: ${cap.hasPosition}<br>` +
+        `Display can return orientation info: ${cap.hasOrientation}<br>` +
         `Display max layers: ${cap.maxLayers}`;
       list.appendChild(listItem);
     }

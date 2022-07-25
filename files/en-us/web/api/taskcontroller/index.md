@@ -63,25 +63,21 @@ We then add an event listener for [`prioritychange`](/en-US/docs/Web/API/TaskSig
 The handler uses [previousPolicy](/en-US/docs/Web/API/TaskPriorityChangeEvent/previousPriority) on the event to get the original priority and {{domxref("TaskSignal.priority")}} on the event target to get the new priority.
 
 ```js
-  // Listen for 'prioritychange' events on the controller's signal.
-controller.signal.addEventListener('prioritychange', 
-  event => { 
-    const previousPriority = event.previousPriority;
-    const newPriority = event.target.priority;
-    console.log(`Priority changed from ${previousPriority} to ${newPriority}.`);
-  }
-);
+// Listen for 'prioritychange' events on the controller's signal.
+controller.signal.addEventListener('prioritychange', (event) => {
+  const previousPriority = event.previousPriority;
+  const newPriority = event.target.priority;
+  console.log(`Priority changed from ${previousPriority} to ${newPriority}.`);
+});
 ```
 
 We can also listen for [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event) events as shown below.
 This same approach would be used if the controller was an `AbortController`.
 
 ```js
-controller.signal.addEventListener('abort', 
-  event => { 
-    console.log('Task aborted');
-  }
-);
+controller.signal.addEventListener('abort', (event) => {
+  console.log('Task aborted');
+});
 ```
 
 Next we post the task, passing the controller signal in the optional argument.
@@ -92,9 +88,9 @@ Note that in a later code block we abort the task, so only the `catch()` block w
 ```js
 // Post task using the controller's signal.
 // The signal priority sets the initial priority of the task
-scheduler.postTask( ()=>{ return 'Task execute'; }, {signal: controller.signal} )
-  .then( (taskResult) => { console.log(`${taskResult}`); }) // Aborted (wont run)
-  .catch( (error) => { console.log(`Catch error: ${error}`); });  // Log error
+scheduler.postTask(() => 'Task execute', {signal: controller.signal})
+  .then((taskResult) => { console.log(`${taskResult}`); }) // Aborted (wont run)
+  .catch((error) => { console.log(`Catch error: ${error}`); });  // Log error
 ```
 
 We can use the controller to manage the task.

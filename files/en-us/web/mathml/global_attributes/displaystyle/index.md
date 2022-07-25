@@ -38,9 +38,9 @@ In this example, an [munder](/en-US/docs/Web/MathML/Element/munder) element is u
 ### Values
 
 - `true`
-   -: Sets the display style to `normal`.
+  - : Sets the display style to `normal`.
 - `false`
-   -: Sets the display style to `compact`.
+  - : Sets the display style to `compact`.
 
 ## Specifications
 

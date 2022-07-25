@@ -52,14 +52,14 @@ There are two ways to access an individual character in a string. The first is t
 {{jsxref("String.prototype.charAt()", "charAt()")}} method:
 
 ```js
-return 'cat'.charAt(1) // returns "a"
+'cat'.charAt(1) // gives value "a"
 ```
 
 The other way (introduced in ECMAScript 5) is to treat the string as an array-like
 object, where individual characters correspond to a numerical index:
 
 ```js
-return 'cat'[1] // returns "a"
+'cat'[1] // gives value "a"
 ```
 
 When using bracket notation for character access, attempting to delete or assign a
@@ -210,7 +210,7 @@ You must be careful which level of characters you are iterating on. For example,
 
 // "Backhand Index Pointing Right: Dark Skin Tone"
 [..."👉🏿"]; // ['👉', '🏿']
-// splits into the basic "Backhand Index Pointing Right" emoji and 
+// splits into the basic "Backhand Index Pointing Right" emoji and
 // the "Dark skin tone" emoji
 
 // "Family: Man, Boy"

@@ -123,7 +123,7 @@ function toggleFullscreen() {
   let elem = document.querySelector("video");
 
   if (!document.fullscreenElement) {
-    elem.requestFullscreen().catch(err => {
+    elem.requestFullscreen().catch((err) => {
       alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
     });
   } else {
@@ -153,7 +153,7 @@ In this example, the entire document is placed into fullscreen mode by calling
 ```js
 let elem = document.documentElement;
 
-elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch(err => {
+elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch((err) => {
   alert(`An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`);
 });
 ```

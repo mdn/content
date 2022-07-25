@@ -146,10 +146,10 @@ You can see such lines in action in [`main.js`](https://github.com/mdn/js-exampl
 Once you've imported the features into your script, you can use them just like they were defined inside the same file. The following is found in `main.js`, below the import lines:
 
 ```js
-let myCanvas = create('myCanvas', document.body, 480, 320);
-let reportList = createReportList(myCanvas.id);
+const myCanvas = create('myCanvas', document.body, 480, 320);
+const reportList = createReportList(myCanvas.id);
 
-let square1 = draw(myCanvas.ctx, 50, 50, 100, 'blue');
+const square1 = draw(myCanvas.ctx, 50, 50, 100, 'blue');
 reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 ```
@@ -371,7 +371,7 @@ import * as Triangle from './modules/triangle.js';
 In each case, you can now access the module's imports underneath the specified object name, for example:
 
 ```js
-let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
+const square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
 Square.reportArea(square1.length, reportList);
 Square.reportPerimeter(square1.length, reportList);
 ```
@@ -413,7 +413,7 @@ import { Square } from './modules/square.js';
 And then use the class to draw our square:
 
 ```js
-let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+const square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
 square1.draw();
 square1.reportArea();
 square1.reportPerimeter();
@@ -492,7 +492,7 @@ In this example we've only made changes to our [`index.html`](https://github.com
 Over in `main.js` we've grabbed a reference to each button using a [`Document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) call, for example:
 
 ```js
-let squareBtn = document.querySelector('.square');
+const squareBtn = document.querySelector('.square');
 ```
 
 We then attach an event listener to each button so that when pressed, the relevant module is dynamically loaded and used to draw the shape:
@@ -500,7 +500,7 @@ We then attach an event listener to each button so that when pressed, the releva
 ```js
 squareBtn.addEventListener('click', () => {
   import('./modules/square.js').then((Module) => {
-    let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+    const square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
     square1.draw();
     square1.reportArea();
     square1.reportPerimeter();
@@ -547,7 +547,7 @@ Then we'll create a module called [`getColors.js`](https://github.com/mdn/js-exa
 ```js
 // fetch request
 const colors = fetch('../data/colors.json')
-  .then(response => response.json());
+  .then((response) => response.json());
 
 export default await colors;
 ```
@@ -562,7 +562,7 @@ Let's include this module in our [`main.js`](https://github.com/mdn/js-examples/
 import colors from './modules/getColors.js';
 import { Canvas } from './modules/canvas.js';
 
-let circleBtn = document.querySelector('.circle');
+const circleBtn = document.querySelector('.circle');
 
 // …
 ```
@@ -570,11 +570,11 @@ let circleBtn = document.querySelector('.circle');
 We'll use `colors` instead of the previously used strings when calling our shape functions:
 
 ```js
-let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, colors.blue);
+const square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, colors.blue);
 
-let circle1 = new Module.Circle(myCanvas.ctx, myCanvas.listId, 75, 200, 100, colors.green);
+const circle1 = new Module.Circle(myCanvas.ctx, myCanvas.listId, 75, 200, 100, colors.green);
 
-let triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190, colors.yellow);
+const triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190, colors.yellow);
 ```
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.

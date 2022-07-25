@@ -68,7 +68,7 @@ const gl = offscreen.getContext("webgl");
 
 // Perform some drawing using the gl context
 
-offscreen.convertToBlob().then( blob => console.log(blob));
+offscreen.convertToBlob().then((blob) => console.log(blob));
 // Blob { size: 334, type: "image/png" }
 ```
 

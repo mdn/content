@@ -56,7 +56,7 @@ Any other value will be coerced to a string before being used as separator.
 
 ## Examples
 
-### Using `split()`
+### Using split()
 
 When the string is empty and no separator is specified, `split()` returns an array containing one empty
 string, rather than an empty array. If the string and separator are both empty

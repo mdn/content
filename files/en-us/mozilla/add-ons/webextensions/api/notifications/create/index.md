@@ -74,8 +74,8 @@ browser.alarms.onAlarm.addListener(function(alarm) {
   });
 });
 
-browser.browserAction.onClicked.addListener(()=> {
-  let clearing = browser.notifications.clear(cakeNotification);
+browser.browserAction.onClicked.addListener(() => {
+  const clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");
   });

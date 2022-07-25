@@ -68,13 +68,13 @@ function readStream(reader) {
   let bytesReceived = 0;
   let offset =  0;
 
-  while (offset < buffer.byteLength) {    
+  while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received
     reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(function processBytes({ done, value }) {
       // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
         // value - some data. Always undefined when done is true.
-      
+
       if (done) {
         // There is no more data in the stream
         return;
@@ -97,8 +97,8 @@ The {{domxref("ReadableStreamBYOBReader.closed")}} property returns a promise th
 
 ```js
 reader.closed
-  .then( () => { /* Resolved - code to handle stream closing */ } )
-  .catch( () => { /* Rejected - code to handle error */ } );
+  .then(() => { /* Resolved - code to handle stream closing */ } )
+  .catch(() => { /* Rejected - code to handle error */ } );
 ```
 
 To cancel the stream call {{domxref("ReadableStreamBYOBReader.cancel()")}}, optionally specifying a _reason_.
@@ -108,7 +108,9 @@ When the stream is cancelled the controller will in turn call `cancel()` on the 
 The example code in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#examples) calls the cancel method when a button is pressed, as shown:
 
 ```js
-button.addEventListener('click', () => { reader.cancel("user choice").then( () => { console.log(`cancel complete`) }) } );
+button.addEventListener('click', () => {
+  reader.cancel("user choice").then(() => console.log('cancel complete'));
+});
 ```
 
 The consumer can also call `releaseLock()` to release the reader's hold on the stream, but only when no read is pending:

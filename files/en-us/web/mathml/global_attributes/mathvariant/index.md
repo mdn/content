@@ -56,41 +56,41 @@ which are by convention italic, no special classes are used by default.
 ### Values
 
 - `normal`
-   -: Use default rendering (no transformations applied).
+  - : Use default rendering (no transformations applied).
 - `bold`
-   -: Try and use bold characters e.g. "𝐀".
+  - : Try and use bold characters e.g. "𝐀".
 - `italic`
-   -: Try and use italic characters e.g. "𝐴".
+  - : Try and use italic characters e.g. "𝐴".
 - `bold-italic`
-   -: Try and use bold-italic characters e.g. "𝑨".
+  - : Try and use bold-italic characters e.g. "𝑨".
 - `double-struck`
-   -: Try and use double-struck characters e.g. "𝔸".
+  - : Try and use double-struck characters e.g. "𝔸".
 - `bold-fraktur`
-   -: Try and use bold-fraktur characters e.g. "𝕬".
+  - : Try and use bold-fraktur characters e.g. "𝕬".
 - `script`
-   -: Try and use script characters e.g. "𝒜".
+  - : Try and use script characters e.g. "𝒜".
 - `bold-script`
-   -: Try and use bold-script characters e.g. "𝓐".
+  - : Try and use bold-script characters e.g. "𝓐".
 - `fraktur`
-   -: Try and use fraktur characters e.g. "𝔄".
+  - : Try and use fraktur characters e.g. "𝔄".
 - `sans-serif`
-   -: Try and use sans-serif characters e.g. "𝖠".
+  - : Try and use sans-serif characters e.g. "𝖠".
 - `bold-sans-serif`
-   -: Try and use bold-sans-serif characters e.g. "𝗔".
+  - : Try and use bold-sans-serif characters e.g. "𝗔".
 - `sans-serif-italic`
-   -: Try and use sans-serif-italic characters e.g. "𝘈".
+  - : Try and use sans-serif-italic characters e.g. "𝘈".
 - `sans-serif-bold-italic`
-   -: Try and use sans-serif-bold-italic characters e.g. "𝘼".
+  - : Try and use sans-serif-bold-italic characters e.g. "𝘼".
 - `monospace`
-   -: Try and use monospace characters e.g. "𝙰".
+  - : Try and use monospace characters e.g. "𝙰".
 - `initial`
-   -: Try and use initial characters e.g. "𞸢".
+  - : Try and use initial characters e.g. "𞸢".
 - `tailed`
-   -: Try and use tailed characters e.g. "𞹂".
+  - : Try and use tailed characters e.g. "𞹂".
 - `looped`
-   -: Try and use looped characters e.g. "𞺂".
+  - : Try and use looped characters e.g. "𞺂".
 - `stretched`
-   -: Try and use stretched characters e.g. "𞹢".
+  - : Try and use stretched characters e.g. "𞹢".
 
 ## Specifications
 

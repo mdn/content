@@ -756,7 +756,7 @@ Note that JavaScript functions are themselves objects — like everything else i
 ## Custom objects
 
 > **Note:** The content in this section does not cover modern JavaScript features, including support for [Classes](/en-US/docs/Web/JavaScript/Reference/Classes).
-> For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+> For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 In classic object-oriented programming, objects are collections of data and methods that operate on that data.
 JavaScript uses functions as classes.

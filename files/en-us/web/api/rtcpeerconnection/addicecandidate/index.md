@@ -166,7 +166,7 @@ channel.
 ```js
 // This example assumes that the other peer is using a signaling channel as follows:
 //
-// pc.onicecandidate = event => {
+// pc.onicecandidate = (event) => {
 //   if (event.candidate) {
 //     signalingChannel.send(JSON.stringify({ice: event.candidate})); // "ice" is arbitrary
 //   } else {
@@ -174,7 +174,7 @@ channel.
 //   }
 // }
 
-signalingChannel.onmessage = receivedString => {
+signalingChannel.onmessage = (receivedString) => {
   const message = JSON.parse(receivedString);
   if (message.ice) {
     // A typical value of ice here might look something like this:
@@ -183,7 +183,7 @@ signalingChannel.onmessage = receivedString => {
     //
     // Pass the whole thing to addIceCandidate:
 
-    pc.addIceCandidate(message.ice).catch(e => {
+    pc.addIceCandidate(message.ice).catch((e) => {
       console.log(`Failure during addIceCandidate(): ${e.name}`);
     });
   } else {

@@ -64,7 +64,7 @@ const memory = new WebAssembly.Memory({
 });
 
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), { js: { mem: memory } })
-.then(obj => {
+.then((obj) => {
   const summands = new Uint32Array(memory.buffer);
   for (let i = 0; i < 10; i++) {
     summands[i] = i;

@@ -27,10 +27,7 @@ createEvent(type)
 ### Parameters
 
 - `type`
-  - : A string that represents the type of event to be
-  created. Possible event types include `"UIEvents"`,
-  `"MouseEvents"`, `"MutationEvents"`, and
-  `"HTMLEvents"`. See [Notes](#notes) section for details.
+  - : A string that represents the type of event to be created. Possible event types include `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"`, and `"HTMLEvents"`. See [Notes](#notes) section for details.
 
 ### Return value
 
