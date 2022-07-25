@@ -14,33 +14,21 @@ browser-compat: api.HTMLDetailsElement.toggle_event
 
 The **`toggle`** event fires when the `open`/`closed` state of a {{HtmlElement("details")}} element is toggled.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>Default Action</th>
-      <td>
-        Toggles the <code>open</code> state of the
-        {{HtmlElement("details")}} element.
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('toggle', (event) => {});
+
+ontoggle = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

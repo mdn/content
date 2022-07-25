@@ -208,7 +208,7 @@ Here are some popular editors:
         <a href="irc://irc.kde.org/kate">IRC</a>
       </td>
       <td>
-        <a href="https://docs.kde.org/stable5/en/applications/kate/index.html"
+        <a href="https://docs.kde.org/index.php?application=kate&language=en"
           >Online Manual</a
         >
       </td>
