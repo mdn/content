@@ -6,3 +6,5 @@ on:
 jobs:
   lock:
     uses: mdn/workflows/.github/workflows/lock-closed.yml@main
+    with:
+      target-repo: "mdn/content"
