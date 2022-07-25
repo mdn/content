@@ -87,7 +87,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 
 - When the proper MIME type is passed, `image/svg+xml`, [the `DOMParser` now creates a `SVGDocument`](/en-US/docs/Web/API/DOMParser#parsing_a_svg_document) when given a string with SVG.
 - In the past, when {{ domxref("element.setAttribute()") }} parsed integers, it would report an error if the integer included any non-numeric characters (for example "42foo"). Now it correctly truncates this as the number 42, in accordance with the specification.
-- The ESC key no longer incorrectly results in the {{ domxref("GlobalEventHandlers/onkeydown") }} handler incorrectly getting called.
+- The ESC key no longer incorrectly results in the {{ domxref("Element.keydown_event", "onkeydown") }} handler incorrectly getting called.
 - The `NameList` interface is no longer implemented; it previously had an implementation with no way to actually get access to one.
 - The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.
 - The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9#dom) has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}

@@ -18,8 +18,8 @@ Most interactive elements are focusable by default; you can make an element focu
 ### See also
 
 - [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
-- Global event handlers: [onkeydown](/en-US/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Global event handlers: [onkeyup](/en-US/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
+- Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
 ## Avoid using `tabindex` attribute greater than zero
 
@@ -42,8 +42,8 @@ An element is clickable if it has an `onclick` event handler defined. You can ma
 ### See also
 
 - [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
-- Global event handlers: [onkeydown](/en-US/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Global event handlers: [onkeyup](/en-US/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
+- Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
 ## Interactive elements must be able to be activated using a keyboard
 
@@ -51,8 +51,8 @@ If the user can interact with an element using touch or a pointing device, then 
 
 ### See also
 
-- Global event handlers: [onkeydown](/en-US/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Global event handlers: [onkeyup](/en-US/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
+- Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
 ## Interactive elements must be focusable
 

@@ -28,7 +28,7 @@ HTML drag-and-drop uses the {{domxref("Event","DOM event model")}} and _{{domxre
 
 During drag operations, several event types are fired, and some events might fire many times, such as the {{domxref('Document/drag_event', 'drag')}} and {{domxref('Document/dragover_event', 'dragover')}} events.
 
-Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associated [global event handler](/en-US/docs/Web/API/DragEvent#globaleventhandlers):
+Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associated event handler:
 
 | Event | Fires when... |
 | ----- | ------------- |

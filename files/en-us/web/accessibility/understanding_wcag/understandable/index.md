@@ -199,7 +199,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         </p>
       </td>
       <td>
-        {{domxref("GlobalEventHandlers.onfocus")}} contains some
+        {{domxref("Element.focus_event")}} contains some
         useful information. Also see
         <a
           href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in"

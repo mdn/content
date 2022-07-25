@@ -31,10 +31,10 @@ el.addEventListener("touchcancel", handleCancel);
 
 This way, touching the game's {{htmlelement("canvas")}} on the mobile screen would emit events, and thus we could manipulate the game in any way we want (for example, moving the spaceship around). The events are as follows:
 
-- [touchstart](/en-US/docs/Web/API/GlobalEventHandlers/ontouchstart) is fired when the user puts a finger on the screen.
-- [touchmove](/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove) is fired when they move the finger on the screen while touching it
-- [touchend](/en-US/docs/Web/API/GlobalEventHandlers/ontouchend) is fired when the user stops touching the screen
-- [touchcancel](/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel) is fired when a touch is cancelled, for example when the user moves their finger out of the screen.
+- [touchstart](/en-US/docs/Web/API/Element/touchstart_event) is fired when the user puts a finger on the screen.
+- [touchmove](/en-US/docs/Web/API/Element/touchmove_event) is fired when they move the finger on the screen while touching it
+- [touchend](/en-US/docs/Web/API/Element/touchend_event) is fired when the user stops touching the screen
+- [touchcancel](/en-US/docs/Web/API/Element/touchcancel_event) is fired when a touch is cancelled, for example when the user moves their finger out of the screen.
 
 > **Note:** The [touch events](/en-US/docs/Web/API/Touch_events) reference article provides more examples and information.
 

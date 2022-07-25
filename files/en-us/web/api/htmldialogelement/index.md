@@ -40,10 +40,8 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : Fired when the user instructs the browser that they wish to dismiss the current open dialog.
-    Also available via the {{domxref("GlobalEventHandlers/oncancel", "oncancel")}} property.
 - {{domxref("HTMLDialogElement/close_event", "close")}}
   - : Fired when the dialog is closed.
-    Also available via the {{domxref("GlobalEventHandlers/onclose", "onclose")}} property.
 
 ## Examples
 

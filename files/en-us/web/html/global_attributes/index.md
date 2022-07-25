@@ -133,4 +133,4 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ## See also
 
-- {{DOMxRef("Element")}} and {{DOMxRef("GlobalEventHandlers")}} interfaces that allow to query most global attributes.
+- {{DOMxRef("Element")}} interface that allows querying most global attributes.
