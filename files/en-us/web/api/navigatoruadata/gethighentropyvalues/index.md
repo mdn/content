@@ -92,12 +92,12 @@ navigator.userAgentData.getHighEntropyValues(
 
 ## See also
 
- - These values are also alaviable as via HTTP request headers:
-   - {{HTTPHeader("Sec-CH-UA")}}
-   - {{HTTPHeader("Sec-CH-UA-Arch")}}
-   - {{HTTPHeader("Sec-CH-UA-Bitness")}}
-   - {{HTTPHeader("Sec-CH-UA-Full-Version")}}
-   - {{HTTPHeader("Sec-CH-UA-Mobile")}}
-   - {{HTTPHeader("Sec-CH-UA-Model")}}
-   - {{HTTPHeader("Sec-CH-UA-Platform")}}
-   - {{HTTPHeader("Sec-CH-UA-Platform-Version")}}
+- These values are also available as via HTTP request headers:
+  - {{HTTPHeader("Sec-CH-UA")}}
+  - {{HTTPHeader("Sec-CH-UA-Arch")}}
+  - {{HTTPHeader("Sec-CH-UA-Bitness")}}
+  - {{HTTPHeader("Sec-CH-UA-Full-Version")}}
+  - {{HTTPHeader("Sec-CH-UA-Mobile")}}
+  - {{HTTPHeader("Sec-CH-UA-Model")}}
+  - {{HTTPHeader("Sec-CH-UA-Platform")}}
+  - {{HTTPHeader("Sec-CH-UA-Platform-Version")}}
