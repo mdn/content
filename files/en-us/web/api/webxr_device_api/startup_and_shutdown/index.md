@@ -247,7 +247,7 @@ async function runSession(session) {
 
   const worldData = loadGLPrograms(session, "worlddata.xml");
   if (!worldData) {
-    return NULL;
+    return null;
   }
 
   // Finish configuring WebGL
