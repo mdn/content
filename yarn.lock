@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.5.tgz#d1c602801aa6ecab3f556a483d2182507bb9661e"
   integrity sha512-B86Pr/KsXRl/AG68KySjBWjrS3JlzhA0otCHnkDAfnePEveOTa6j//6pWp9RZvDcsAL1DJTvADcTkt2xX7xjDw==
 
-"@mdn/yari@1.11.1":
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.11.1.tgz#1a3a0bfabf7322ea9fe6e86e2c2cf59f9bc88544"
-  integrity sha512-o7R6U1GsorZ4+M7CuE+OcqhuKaosMCVB5coG9iLK/Y24wy0Lkps1gmLlcGPvSi5I8fxIdGepwiPz2D/wrSc30g==
+"@mdn/yari@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.12.0.tgz#9a14691e1fd0e522d449da2cf9a30edde9c6d55b"
+  integrity sha512-btyrmiKGWQ4Zxe3F8jsXIO71GNCrABWF4NN68+2EqqWenCGkTCXu6If5fjpQnGh/Yta5j2f3mJOqkorH2xXOog==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -65,7 +65,7 @@
     express "^4.18.1"
     fast-xml-parser "^4.0.9"
     fdir "^5.2.0"
-    file-type "^16.5.3"
+    file-type "^16.5.4"
     front-matter "^4.0.2"
     fs-extra "^10.1.0"
     got "^11.8.3"
@@ -1775,10 +1775,10 @@ file-type@^12.0.0:
   resolved "https://registry.yarnpkg.com/file-type/-/file-type-12.4.2.tgz#a344ea5664a1d01447ee7fb1b635f72feb6169d9"
   integrity sha512-UssQP5ZgIOKelfsaB5CuGAL+Y+q7EmONuiwF3N5HAH0t27rvrttgi6Ra9k/+DVaY9UF6+ybxu5pOXLUdA8N7Vg==
 
-file-type@^16.5.3:
-  version "16.5.3"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.5.3.tgz#474b7e88c74724046abb505e9b8ed4db30c4fc06"
-  integrity sha512-uVsl7iFhHSOY4bEONLlTK47iAHtNsFHWP5YE4xJfZ4rnX7S1Q3wce09XgqSC7E/xh8Ncv/be1lNoyprlUH/x6A==
+file-type@^16.5.4:
+  version "16.5.4"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.5.4.tgz#474fb4f704bee427681f98dd390058a172a6c2fd"
+  integrity sha512-/yFHK0aGjFEgDJjEKP0pWCplsPFPhwyfwevf/pVxiN0tmE4L9LmwWxWukdJSHdoCli4VgQLehjJtwQBnqmsKcw==
   dependencies:
     readable-web-to-node-stream "^3.0.0"
     strtok3 "^6.2.4"
