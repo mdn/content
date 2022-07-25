@@ -153,6 +153,29 @@ export * as ns from "mod";
 
 There is also `export * from "mod"`, although there's no `import * from "mod"`. This re-exports all **named** exports from `mod` as the named exports of the current module, but the default export of `mod` is not re-exported. If there are two wildcard exports statements that implicitly re-export the same name, neither one is re-exported.
 
+```js
+// -- mod1.js --
+export const a = 1;
+
+// -- mod2.js --
+export const a = 3;
+
+// -- barrel.js --
+export * from "./mod1.js";
+export * from "./mod2.js";
+
+// -- main.js --
+import * as ns from "./barrel.js";
+console.log(ns.a); // undefined
+```
+
+Attempting to import the duplicate name directly will throw an error.
+
+```js
+import { a } from "./barrel.js";
+// SyntaxError: The requested module './barrel.js' contains conflicting star exports for name 'a'
+```
+
 The following is syntactically invalid despite its import equivalent:
 
 ```js example-bad
