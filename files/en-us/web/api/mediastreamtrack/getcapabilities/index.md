@@ -12,7 +12,7 @@ tags:
   - getCapabilities
 browser-compat: api.MediaStreamTrack.getCapabilities
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The **`getCapabilities()`** method of
 the {{domxref("MediaStreamTrack")}} interface returns a

@@ -21,7 +21,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackSupportedConstraints.displaySurface
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`displaySurface`** property indicates whether or not the

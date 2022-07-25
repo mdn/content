@@ -15,7 +15,7 @@ tags:
   - groupId
 browser-compat: api.MediaTrackSupportedConstraints.groupId
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`groupId`** property is a read-only Boolean value which is

@@ -12,7 +12,7 @@ tags:
   - getTrackById
 browser-compat: api.MediaStream.getTrackById
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The **`MediaStream.getTrackById()`** method returns a
 {{domxref("MediaStreamTrack")}} object representing the track with the specified ID

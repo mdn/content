@@ -16,7 +16,7 @@ tags:
   - width
 browser-compat: api.MediaTrackSettings.width
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`width`**
 property is an integer indicating the number of pixels wide

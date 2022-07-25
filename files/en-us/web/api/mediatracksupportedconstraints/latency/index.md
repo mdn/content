@@ -16,7 +16,7 @@ tags:
   - latency
 browser-compat: api.MediaTrackSupportedConstraints.latency
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`latency`** property is a read-only Boolean value which is
