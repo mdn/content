@@ -42,7 +42,6 @@ This section lists APIs that specifications make available only in secure contex
 In addition, the following methods require a secure context (even if the associated API does not):
 
 - [`MediaDevices.getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia)
-- [`<a ping>` attribute](/en-US/docs/Web/HTML/Element/a#attr-ping)
 - [`Navigator.registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
 
 
