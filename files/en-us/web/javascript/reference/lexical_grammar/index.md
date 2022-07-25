@@ -140,7 +140,9 @@ class C { // Class declaration
 lbl: console.log(1); // Label
 ```
 
-In JavaScript, the range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (excluding unicode escape sequences). `\p{ID_Start}` includes any character with property "ID_Start", and `\p{ID_Continue}` includes any character with property "ID_Continue". `$` and `_` are allowed anywhere in a JavaScript identifier, while \<ZWNJ> and \<ZWJ> (described in [format-control characters](#format-control_characters)) are not allowed at the start.
+In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (`_`), and dollar signs (`$`). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to ASCII — most Unicode codepoints are allowed as well.
+
+> **Note:** If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e. ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (excluding unicode escape sequences).
 
 In addition, JavaScript allows using [Unicode escape sequences](#unicode_escape_sequences) in the form of `\u0000` or `\u{000000}` in identifiers, which encode the same string value as the actual Unicode characters. For example, `你好` and `\u4f60\u597d` are the same identifiers:
 
