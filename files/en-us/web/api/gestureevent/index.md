@@ -52,13 +52,3 @@ _Not part of any specification._ Apple has [a description at the Safari Develope
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("MSGestureEvent")}}
-- {{domxref("Element/MSGestureStart_event", "MSGestureStart")}}
-- {{domxref("Element/MSGestureEnd_event", "MSGestureEnd")}}
-- {{domxref("Element/MSGestureTap_event", "MSGestureTap")}}
-- {{domxref("Element/MSGestureHold_event", "MSGestureHold")}}
-- {{domxref("Element/MSGestureChange_event", "MSGestureChange")}}
-- {{domxref("Element/MSInertiaStart_event", "MSInertiaStart")}}

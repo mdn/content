@@ -525,5 +525,4 @@ For web-compatibility reasons, Blink, WebKit, and Gecko browsers treat all pseud
 ## See also
 
 - [Styling Form Controls on the WebKit Trac](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
-- [Microsoft CSS Extensions](/en-US/docs/Web/CSS/Microsoft_Extensions)
 - [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)

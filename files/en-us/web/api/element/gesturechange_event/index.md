@@ -47,12 +47,6 @@ Not part of any specification.
 
 - Related events:
 
-  - [`MSGestureStart`](/en-US/docs/Web/API/Element/MSGestureStart_event)
-  - [`MSGestureEnd`](/en-US/docs/Web/API/Element/MSGestureEnd_event)
-  - [`MSGestureTap`](/en-US/docs/Web/API/Element/MSGestureTap_event)
-  - [`MSGestureChange`](/en-US/docs/Web/API/Element/MSGestureChange_event)
-  - [`MSGestureHold`](/en-US/docs/Web/API/Element/MSGestureHold_event)
-  - [`MSInertiaStart`](/en-US/docs/Web/API/Element/MSInertiaStart_event)
   - [`gesturestart`](/en-US/docs/Web/API/Element/gesturestart_event)
   - [`gestureend`](/en-US/docs/Web/API/Element/gestureend_event)
 

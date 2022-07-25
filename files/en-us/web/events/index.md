@@ -311,27 +311,6 @@ This topic provides an index to the main _sorts_ of events you might be interest
             >.
           </li>
           <li>
-            Non-standard IE specific events on
-            <a href="/en-US/docs/Web/API/Element#touch_events"
-              ><code>Element</code></a
-            >:
-            <a href="/en-US/docs/Web/API/Element/MSGestureStart_event"
-              ><code>MSGestureStart</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureChange_event"
-              ><code>MSGestureChange</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureEnd_event"
-              ><code>MSGestureEnd</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureHold_event"
-              ><code>MSGestureHold</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureTap_event"
-              ><code>MSGestureTap</code></a
-            >.
-          </li>
-          <li>
             Deprecated/non-standard Mozilla touch events
             <a
               href="/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events"
@@ -985,14 +964,6 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [mouseover event](/en-US/docs/Web/API/Element/mouseover_event)
   - [mouseup event](/en-US/docs/Web/API/Element/mouseup_event)
   - [mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event)
-  - [msContentZoom event](/en-US/docs/Web/API/Element/msContentZoom_event)
-  - [MSGestureChange event](/en-US/docs/Web/API/Element/MSGestureChange_event)
-  - [MSGestureEnd event](/en-US/docs/Web/API/Element/MSGestureEnd_event)
-  - [MSGestureHold event](/en-US/docs/Web/API/Element/MSGestureHold_event)
-  - [MSGestureStart event](/en-US/docs/Web/API/Element/MSGestureStart_event)
-  - [MSGestureTap event](/en-US/docs/Web/API/Element/MSGestureTap_event)
-  - [MSInertiaStart event](/en-US/docs/Web/API/Element/MSInertiaStart_event)
-  - [MSManipulationStateChanged event](/en-US/docs/Web/API/Element/MSManipulationStateChanged_event)
   - [paste event](/en-US/docs/Web/API/Element/paste_event)
   - [scroll event](/en-US/docs/Web/API/Element/scroll_event)
   - [select event](/en-US/docs/Web/API/Element/select_event)

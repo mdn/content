@@ -4,7 +4,6 @@ slug: Web/API/Screen/left
 page-type: web-api-instance-property
 tags:
   - API
-  - API:Microsoft Extensions
   - API:Mozilla Extensions
   - API:WebKit Extensions
   - DOM
