@@ -1,6 +1,7 @@
 ---
 title: Range.collapse()
 slug: Web/API/Range/collapse
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -38,9 +39,9 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
-referenceNode = document.getElementsByTagName("div").item(0);
+const referenceNode = document.getElementsByTagName("div").item(0);
 range.selectNode(referenceNode);
 range.collapse(true);
 ```

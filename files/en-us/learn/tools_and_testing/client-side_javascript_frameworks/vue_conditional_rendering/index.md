@@ -278,11 +278,11 @@ Add the following new methods to your `App.vue`'s component object, below the ex
 
 ```js
 deleteToDo(toDoId) {
-  const itemIndex = this.ToDoItems.findIndex(item => item.id === toDoId);
+  const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
   this.ToDoItems.splice(itemIndex, 1);
 },
 editToDo(toDoId, newLabel) {
-  const toDoToEdit = this.ToDoItems.find(item => item.id === toDoId);
+  const toDoToEdit = this.ToDoItems.find((item) => item.id === toDoId);
   toDoToEdit.label = newLabel;
 }
 ```

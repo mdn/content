@@ -1,6 +1,7 @@
 ---
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
+page-type: web-api-instance-method
 tags:
   - API
   - Cross-origin Communication
@@ -74,7 +75,7 @@ window.addEventListener("message", (event) => {
   if (event.origin !== "http://example.org:8080")
     return;
 
-  // ...
+  // …
 }, false);
 ```
 
@@ -200,7 +201,7 @@ window.addEventListener("message", (event) => {
   event.source.postMessage("hi there yourself!  the secret response " +
                            "is: rheeeeet!",
                            event.origin);
-}, false);
+});
 ```
 
 ### Notes

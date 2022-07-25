@@ -1,6 +1,7 @@
 ---
 title: WheelEvent.deltaMode
 slug: Web/API/WheelEvent/deltaMode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -44,5 +45,5 @@ console.log(syntheticEvent.deltaMode);
 
 ## See also
 
-- {{ event("wheel") }}
+- {{domxref("Element/wheel_event","wheel")}}
 - {{domxref("WheelEvent")}}

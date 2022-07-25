@@ -1,6 +1,7 @@
 ---
 title: WakeLockSentinel
 slug: Web/API/WakeLockSentinel
+page-type: web-api-interface
 tags:
   - API
   - Interface

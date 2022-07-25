@@ -1,6 +1,7 @@
 ---
 title: WindowClient.navigate()
 slug: Web/API/WindowClient/navigate
+page-type: web-api-instance-method
 tags:
   - API
   - Client

@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaSetSize
 slug: Web/API/ElementInternals/ariaSetSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property

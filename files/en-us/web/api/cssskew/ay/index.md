@@ -1,6 +1,7 @@
 ---
 title: CSSSkew.ay
 slug: Web/API/CSSSkew/ay
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

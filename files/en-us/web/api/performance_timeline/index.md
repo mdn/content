@@ -1,6 +1,7 @@
 ---
 title: Performance Timeline
 slug: Web/API/Performance_Timeline
+page-type: web-api-overview
 tags:
   - Guide
   - Overview

@@ -1,6 +1,7 @@
 ---
 title: WakeLock.request()
 slug: Web/API/WakeLock/request
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.redirectStart
 slug: Web/API/PerformanceTiming/redirectStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

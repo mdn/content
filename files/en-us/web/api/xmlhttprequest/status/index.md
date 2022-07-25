@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
+page-type: web-api-instance-property
 tags:
   - API
   - Error

@@ -1,6 +1,7 @@
 ---
 title: Response.redirected
 slug: Web/API/Response/redirected
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -16,7 +17,7 @@ browser-compat: api.Response.redirected
 The read-only **`redirected`** property of the {{domxref("Response")}} interface indicates whether or not the response is the result of a request you made which was redirected.
 
 > **Note:** Relying on redirected to filter out redirects makes it easy for a forged redirect to prevent your content from working as expected.
-> Instead, you should actually instead do the filtering when you call {{domxref("fetch()")}}.
+> Instead, you should do the filtering when you call {{domxref("fetch()")}}.
 > See the example [Disallowing redirects](#disallowing_redirects), which shows this being done.
 
 ## Value

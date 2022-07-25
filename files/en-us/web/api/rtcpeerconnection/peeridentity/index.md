@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.peerIdentity
 slug: Web/API/RTCPeerConnection/peerIdentity
+page-type: web-api-instance-property
 tags:
   - API
   - Authentication
@@ -53,7 +54,7 @@ the console and returns `null` to the caller.
 ```js
 let pc = new RTCPeerConnection();
 
-/* ... */
+// …
 
 async function getIdentityAssertion(pc) {
   try {

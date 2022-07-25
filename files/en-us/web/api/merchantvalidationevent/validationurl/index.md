@@ -1,6 +1,7 @@
 ---
 title: MerchantValidationEvent.validationURL
 slug: Web/API/MerchantValidationEvent/validationURL
+page-type: web-api-instance-property
 tags:
   - API
   - Commerce
@@ -43,7 +44,5 @@ See {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchan
 ## See also
 
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
-- [Using
-  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- [Payment processing
-  concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

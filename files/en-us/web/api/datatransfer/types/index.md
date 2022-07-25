@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.types
 slug: Web/API/DataTransfer/types
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -13,7 +14,7 @@ browser-compat: api.DataTransfer.types
 
 The **`DataTransfer.types`** read-only property returns an
 array of the drag data formats (as strings) that were set in
-the {{event("dragstart")}} event. The order of the formats is the same order as the data
+the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event. The order of the formats is the same order as the data
 included in the drag operation.
 
 The formats are Unicode strings giving the type or format of the data, generally given
@@ -32,7 +33,7 @@ will be the string `Files`.
 This example shows the use of the `types` and
 {{domxref("DataTransfer.items","items")}} properties.
 
-```js
+```html
 <!DOCTYPE html>
 <html lang=en>
 <title>Examples of DataTransfer.{types,items} properties</title>
@@ -59,18 +60,18 @@ function drop_handler(ev) {
  console.log("drop: target.id = " + ev.target.id);
  ev.preventDefault();
  // Get the id of the target and add the moved element to the target's DOM
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
  // Print each format type
  if (ev.dataTransfer.types != null) {
-   for (var i=0; i < ev.dataTransfer.types.length; i++) {
-     console.log("... types[" + i + "] = " + ev.dataTransfer.types[i]);
+   for (let i=0; i < ev.dataTransfer.types.length; i++) {
+     console.log("… types[" + i + "] = " + ev.dataTransfer.types[i]);
    }
  }
  // Print each item's "kind" and "type"
  if (ev.dataTransfer.items != null) {
-   for (var i=0; i < ev.dataTransfer.items.length; i++) {
-     console.log("... items[" + i + "].kind = " + ev.dataTransfer.items[i].kind + " ; type = " + ev.dataTransfer.items[i].type);
+   for (let i=0; i < ev.dataTransfer.items.length; i++) {
+     console.log("… items[" + i + "].kind = " + ev.dataTransfer.items[i].kind + " ; type = " + ev.dataTransfer.items[i].type);
    }
  }
 }

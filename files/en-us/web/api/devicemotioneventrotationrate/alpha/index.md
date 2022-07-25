@@ -1,6 +1,7 @@
 ---
 title: 'DeviceMotionEventRotationRate: alpha'
 slug: Web/API/DeviceMotionEventRotationRate/alpha
+page-type: web-api-instance-property
 tags:
   - API
   - Device Orientation

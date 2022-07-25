@@ -1,6 +1,7 @@
 ---
 title: FileReader.readyState
 slug: Web/API/FileReader/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - File API

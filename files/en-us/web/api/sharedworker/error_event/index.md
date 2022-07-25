@@ -1,6 +1,7 @@
 ---
 title: 'SharedWorker: error event'
 slug: Web/API/SharedWorker/error_event
+page-type: web-api-event
 tags:
   - API
   - SharedWorker
@@ -21,9 +22,9 @@ The **`error`** event of the {{domxref("SharedWorker")}} interface fires when an
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
+addEventListener('error', (event) => { });
 
-onerror = event => { };
+onerror = (event) => { };
 ```
 
 ## Event type

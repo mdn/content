@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.rules
 slug: Web/API/HTMLTableElement/rules
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

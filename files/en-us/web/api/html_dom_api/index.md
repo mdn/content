@@ -1,6 +1,7 @@
 ---
 title: The HTML DOM API
 slug: Web/API/HTML_DOM_API
+page-type: web-api-overview
 tags:
   - API
   - Beginner
@@ -14,7 +15,7 @@ tags:
   - Web
   - Windows
   - hierarchy
-spec-urls: https://html.spec.whatwg.org/multipage/
+browser-compat: api.HTMLElement
 ---
 {{DefaultAPISidebar("HTML DOM")}}
 
@@ -163,7 +164,6 @@ These interfaces represent specific HTML elements (or sets of related elements w
 
 #### Obsolete HTML Element Interfaces
 
-- {{DOMxRef("HTMLBaseFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
@@ -321,7 +321,7 @@ sendButton.disabled = true;
 // [note: this is disabled since it causes this article to always load with this example focused and scrolled into view]
 //nameField.focus();
 
-nameField.addEventListener("input", event => {
+nameField.addEventListener("input", (event) => {
   const elem = event.target;
   const valid = elem.value.length != 0;
 
@@ -370,7 +370,7 @@ The HTML for the form looks like this:
 
 ## Browser compatibility
 
-{{Compat("api.HTMLElement")}}
+{{Compat}}
 
 ## See also
 

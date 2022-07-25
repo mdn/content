@@ -1,6 +1,7 @@
 ---
 title: ResizeObserverSize.blockSize
 slug: Web/API/ResizeObserverSize/blockSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -24,9 +25,9 @@ A decimal representing the block size in pixels.
 In this example we return an array of sizing information with {{domxref("ResizeObserverEntry.contentBoxSize")}}. The `blockSize` property returns the block dimension size of the observed element.
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    let elemSize = entry.contentBoxSize[0];
+const resizeObserver = new ResizeObserver((entries) => {
+  for (const entry of entries) {
+    const elemSize = entry.contentBoxSize[0];
     console.log(elemSize.blockSize); // a decimal
   }
 });

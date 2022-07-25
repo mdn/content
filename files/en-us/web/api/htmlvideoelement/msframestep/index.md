@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msFrameStep()
 slug: Web/API/HTMLVideoElement/msFrameStep
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions

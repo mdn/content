@@ -1,6 +1,7 @@
 ---
 title: Event.cancelable
 slug: Web/API/Event/cancelable
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only

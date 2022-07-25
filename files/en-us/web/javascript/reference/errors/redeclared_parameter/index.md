@@ -15,10 +15,10 @@ variable name occurs as a function parameter and is then redeclared using a
 
 ## Message
 
-```js
-SyntaxError: Let/Const redeclaration (Edge)
+```
+SyntaxError: Identifier "x" has already been declared (V8-based)
 SyntaxError: redeclaration of formal parameter "x" (Firefox)
-SyntaxError: Identifier "x" has already been declared (Chrome)
+SyntaxError: Cannot declare a let variable twice: 'x'. (Safari)
 ```
 
 ## Error type

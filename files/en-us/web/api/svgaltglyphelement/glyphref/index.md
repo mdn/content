@@ -1,6 +1,7 @@
 ---
 title: SVGAltGlyphElement.glyphRef
 slug: Web/API/SVGAltGlyphElement/glyphRef
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

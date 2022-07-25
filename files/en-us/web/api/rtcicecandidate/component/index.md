@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.component
 slug: Web/API/RTCIceCandidate/component
+page-type: web-api-instance-property
 tags:
   - API
   - ICE

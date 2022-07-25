@@ -1,6 +1,7 @@
 ---
 title: Capabilities, constraints, and settings
 slug: Web/API/Media_Streams_API/Constraints
+page-type: guide
 tags:
   - Advanced
   - Audio
@@ -13,7 +14,7 @@ tags:
   - Settings
   - Video
   - WebRTC
-spec-urls: https://w3c.github.io/mediacapture-main/#constrainable-interface
+browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
@@ -90,7 +91,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
     facingMode: { exact: "user" }
   };
 
-  myTrack.applyConstraints(constraints).then(function() => {
+  myTrack.applyConstraints(constraints).then(() => {
     /* do stuff if constraints applied successfully */
   }).catch(function(reason) {
     /* failed to apply constraints; reason is why */
@@ -127,7 +128,7 @@ navigator.mediaDevices.getUserMedia({
     sampleSize: 16,
     channelCount: 2
   }
-}).then(stream => {
+}).then((stream) => {
   videoElement.srcObject = stream;
 }).catch(handleError);
 ```
@@ -419,7 +420,7 @@ There are several steps here:
 1. It calls `buildConstraints()` to create the {{domxref("MediaTrackConstraints")}} objects for the two tracks from the code in the edit boxes.
 2. It calls {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}}, passing in the constraints objects for the video and audio tracks. This returns a {{domxref("MediaStream")}} with the audio and video from a source matching the inputs (typically a webcam, although if you provide the right constraints you can get media from other sources).
 3. When the stream is obtained, it's attached to the {{HTMLElement("video")}} element so that it's visible on screen, and we grab the audio track and video track into the variables `audioTrack` and `videoTrack`.
-4. Then we set up a promise which resolves when the {{event("onloadedmetadata")}} event occurs on the video element.
+4. Then we set up a promise which resolves when the {{domxref("HTMLMediaElement/loadedmetadata_event", "loadedmetadata")}} event occurs on the video element.
 5. When that happens, we know the video has started playing, so we call our `getCurrentSettings()` function (described above) to display the actual settings that the browser decided upon after considering our constraints and the capabilities of the hardware.
 6. If an error occurs, we log it using the `handleError()` method that we'll look at farther down in this article.
 
@@ -492,8 +493,7 @@ function keyDownHandler(event) {
     let str = elem.value;
 
     let position = elem.selectionStart;
-    let newStr = str.substring(0, position) + "  " +
-            str.substring(position, str.length);
+    let newStr = `${str.substring(0, position)}  ${str.substring(position, str.length)}`;
     elem.value = newStr;
     elem.selectionStart = elem.selectionEnd = position + 2;
     event.preventDefault();
@@ -513,11 +513,10 @@ The last significant piece of the puzzle: code that displays, for the user's ref
 ```js
 let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 for (let constraint in supportedConstraints) {
-  if (supportedConstraints.hasOwnProperty(constraint)) {
+  if (Object.hasOwn(supportedConstraints, constraint)) {
     let elem = document.createElement("li");
 
-    elem.innerHTML = "<code><a href='https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/"
-        .concat(constraint) + "' target='_blank'>" + constraint + "</a></code>";
+    elem.innerHTML = `<code><a href='https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/${constraint}' target='_blank'>${constraint}</a></code>`;
     supportedConstraintList.appendChild(elem);
   }
 }
@@ -529,13 +528,11 @@ We also have some simple error handling code; `handleError()` is called to handl
 
 ```js
 function log(msg) {
-  logElement.innerHTML += (msg + "<br>");
+  logElement.innerHTML += `${msg}<br>`;
 }
 
 function handleError(reason) {
-  log("Error <code>" + reason.name +
-      "</code> in constraint <code>" + reason.constraint +
-      "</code>: " + reason.message);
+  log(`Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`);
 }
 ```
 
@@ -551,9 +548,7 @@ Here you can see the complete example in action.
 
 ## Browser compatibility
 
-### `MediaDevices.getSupportedConstraints`
-
-{{Compat("api.MediaDevices.getSupportedConstraints")}}
+{{Compat}}
 
 ## See also
 

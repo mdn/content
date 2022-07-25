@@ -1,6 +1,7 @@
 ---
 title: Animation.startTime
 slug: Web/API/Animation/startTime
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -27,11 +28,11 @@ A floating-point number representing the current time in milliseconds, or `null`
 In the [Running on Web Animations API example](https://codepen.io/rachelnabors/pen/zxYexJ?editors=0010), the we can sync all new animated cats by giving them all the same `startTime` as the original running cat:
 
 ```js
-var catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
+const catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
 
 /* A function that makes new cats. */
 function addCat(){
-  var newCat = document.createElement("div");
+  const newCat = document.createElement("div");
   newCat.classList.add("cat");
   return newCat;
 }
@@ -39,10 +40,10 @@ function addCat(){
 /* This is the function that adds a cat to the WAAPI column */
 function animateNewCatWithWAAPI() {
   // make a new cat
-  var newCat = addCat();
+  const newCat = addCat();
 
   // animate said cat with the WAAPI's "animate" function
-  var newAnimationPlayer = newCat.animate(keyframes, timing);
+  const newAnimationPlayer = newCat.animate(keyframes, timing);
 
   // set the animation's start time to be the same as the original .cat#withWAAPI
   newAnimationPlayer.startTime = catRunning.startTime;
@@ -63,14 +64,14 @@ animation.startTime;
 // 23.404
 // 24.192
 // 25.514
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 animation.startTime;
 // 49.8
 // 50.6
 // 51.7
-// ...
+// …
 ```
 
 In Firefox, you can also enabled `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.

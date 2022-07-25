@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.removeStream()
 slug: Web/API/RTCPeerConnection/removeStream
+page-type: web-api-instance-method
 tags:
   - Deprecated
   - Media
@@ -50,7 +51,7 @@ navigator.getUserMedia({video: true}, function(stream) {
   pc = new RTCPeerConnection();
   videoStream = stream;
   pc.addStream(stream);
-}
+});
 document.getElementById("closeButton").addEventListener("click", function(event) {
   pc.removeStream(videoStream);
   pc.close();

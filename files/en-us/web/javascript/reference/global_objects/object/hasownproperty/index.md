@@ -28,7 +28,7 @@ hasOwnProperty(prop)
 
 ### Parameters
 
-- _prop_
+- `prop`
   - : The {{jsxref("String")}} name or {{Glossary("Symbol")}} of
     the property to test.
 
@@ -134,7 +134,7 @@ has a property with this name may return incorrect results:
 
 ```js
 let foo = {
-  hasOwnProperty: function() {
+  hasOwnProperty() {
     return false;
   },
   bar: 'Here be dragons'

@@ -1,6 +1,7 @@
 ---
 title: Event()
 slug: Web/API/Event/Event
+page-type: web-api-constructor
 tags:
   - Constructor
   - Reference

@@ -46,16 +46,20 @@ Number(undefined)  // NaN
 - [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
   - : Creates a new `Number` value.
 
+When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Number")}} object, which is **not** a primitive. For example, `typeof new Number(42) === "object"`, and `new Number(42) !== 42` (although `new Number(42) == 42`).
+
+> **Warning:** You should rarely find yourself using `Number` as a constructor.
+
 ## Static properties
 
 - {{jsxref("Number.EPSILON")}}
   - : The smallest interval between two representable numbers.
 - {{jsxref("Number.MAX_SAFE_INTEGER")}}
-  - : The maximum safe integer in JavaScript (`2^53 - 1`).
+  - : The maximum safe integer in JavaScript (2<sup>53</sup> - 1).
 - {{jsxref("Number.MAX_VALUE")}}
   - : The largest positive representable number.
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
-  - : The minimum safe integer in JavaScript (`-(2^53 - 1)`).
+  - : The minimum safe integer in JavaScript (-(2<sup>53</sup> - 1)).
 - {{jsxref("Number.MIN_VALUE")}}
   - : The smallest positive representable number—that is, the positive number closest to zero (without actually being zero).
 - {{jsxref("Number.NaN")}}
@@ -76,7 +80,7 @@ Number(undefined)  // NaN
 - {{jsxref("Number.isInteger()")}}
   - : Determine whether the passed value is an integer.
 - {{jsxref("Number.isSafeInteger()")}}
-  - : Determine whether the passed value is a safe integer (number between `-(2^53 - 1)` and `2^53 - 1`).
+  - : Determine whether the passed value is a safe integer (number between -(2<sup>53</sup> - 1) and 2<sup>53</sup> - 1).
 - {{jsxref("Number.parseFloat()", "Number.parseFloat(<var>string</var>)")}}
   - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
 - {{jsxref("Number.parseInt()", "Number.parseInt(<var>string</var>, [<var>radix</var>])")}}

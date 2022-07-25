@@ -23,7 +23,7 @@ The syntax is simple. Any attribute on any element whose attribute name starts w
   data-columns="3"
   data-index-number="12314"
   data-parent="cars">
-...
+…
 </article>
 ```
 
@@ -47,7 +47,7 @@ Each property is a string and can be read and written. In the above case setting
 
 ## CSS access
 
-Note that, as data attributes are plain HTML attributes, you can even access them from [CSS](/en-US/docs/Web/CSS). For example to show the parent data on the article you can use [generated content](/en-US/docs/Web/CSS/content) in CSS with the [`attr()`](</en-US/docs/Web/CSS/attr()>) function:
+Note that, as data attributes are plain HTML attributes, you can even access them from [CSS](/en-US/docs/Web/CSS). For example to show the parent data on the article you can use [generated content](/en-US/docs/Web/CSS/content) in CSS with the [`attr()`](/en-US/docs/Web/CSS/attr) function:
 
 ```css
 article::before {

@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchEvent()
 slug: Web/API/BackgroundFetchEvent/BackgroundFetchEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

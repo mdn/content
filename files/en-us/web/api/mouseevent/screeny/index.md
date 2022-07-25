@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.screenY
 slug: Web/API/MouseEvent/screenY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM Events
@@ -22,7 +23,7 @@ Early versions of the spec defined this as an integer referring to the number of
 
 ## Examples
 
-This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
+This example displays your mouse's coordinates whenever you trigger the {{domxref("Element/mousemove_event", "mousemove")}} event.
 
 ### HTML
 
@@ -46,7 +47,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

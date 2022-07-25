@@ -1,6 +1,7 @@
 ---
 title: Boilerplate 1
 slug: Web/API/WebGL_API/By_example/Boilerplate_1
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -58,13 +59,13 @@ button {
 
 ```js
 function getRenderingContext() {
-  var canvas = document.querySelector("canvas");
+  const canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  var gl = canvas.getContext("webgl")
+  const gl = canvas.getContext("webgl")
     || canvas.getContext("experimental-webgl");
   if (!gl) {
-    var paragraph = document.querySelector("p");
+    const paragraph = document.querySelector("p");
     paragraph.innerHTML = "Failed to get WebGL context."
       + "Your browser or device may not support WebGL.";
     return null;

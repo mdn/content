@@ -162,7 +162,7 @@ The most common values for the `[Exposed]` are:
 - `ServiceWorker`
   - : The partial interface is available to the {{domxref('ServiceWorkerGlobalScope')}} only.
 
-Another value is possible, like `System`, but this has a [special meaning](/en-US/docs/Mozilla/WebIDL_bindings#Exposed) and doesn't need to be documented.
+Another value is possible, like `System`, but this has a [special meaning](/en-US/docs/Mozilla/WebIDL_bindings#exposed) and doesn't need to be documented.
 
 Note that these possible values are themselves defined in WebIDL files. Interfaces may have a `[Global=xyz]` annotation. It means that when an object of this type is used as a global scope, any interface, property or method, with `xyz` as a value of `[Exposed]` is available.
 
@@ -565,7 +565,7 @@ There can also be several unnamed constructors, differing by their parameter lis
     interface HTMLImageElement : HTMLElement {…
 ```
 
-A named constructor is a constructor that has a different name than that of its interface. For example `new Image(…)` creates a new `HTMLImageElement` object. They are defined in the WebIDL using the `NamedConstructor` annotation on the interface, followed by the name of the constructor after the equality sign (`'='`) and the parameter inside the parenthesis, in the same format as you'll see for methods.
+A named constructor is a constructor that has a different name than that of its interface. For example `new Image()` creates a new `HTMLImageElement` object. They are defined in the WebIDL using the `NamedConstructor` annotation on the interface, followed by the name of the constructor after the equality sign (`'='`) and the parameter inside the parenthesis, in the same format as you'll see for methods.
 
 There can be several named constructors for a specific interface, but this is extremely rare; in such a case we include one sub-page per name.
 
@@ -573,10 +573,10 @@ There can be several named constructors for a specific interface, but this is ex
 
 As of September 2019, WebIDL constructor syntax was updated. Constructor syntax no longer involves an extended attribute on the interface:
 
-```js
+```webidl
 [Constructor(DOMString str)]
     interface MyInterface {
-      ...
+     // …
 };
 ```
 

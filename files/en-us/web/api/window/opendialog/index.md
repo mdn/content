@@ -1,6 +1,7 @@
 ---
 title: Window.openDialog()
 slug: Web/API/Window/openDialog
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko
@@ -35,7 +36,7 @@ to interact with the opener window until they close the modal dialog.
 openDialog(url)
 openDialog(url, name)
 openDialog(url, name, features)
-openDialog(url, name, features, arg0, arg1, /* ... ,*/ argN)
+openDialog(url, name, features, arg0, arg1, /* … ,*/ argN)
 ```
 
 ### Parameters
@@ -46,7 +47,7 @@ openDialog(url, name, features, arg0, arg1, /* ... ,*/ argN)
   - : The window name. See {{domxref("window.open()")}} description for detailed information.
 - `features` {{optional_inline}}
   - : See {{domxref("window.open()")}} for details.
-- `arg1`, `arg2`, ...
+- `arg1`, `arg2`, …
   - : The arguments to be passed to the new window (optional).
 
 ### Return value

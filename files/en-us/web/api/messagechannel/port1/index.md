@@ -1,6 +1,7 @@
 ---
 title: MessageChannel.port1
 slug: Web/API/MessageChannel/port1
+page-type: web-api-instance-property
 tags:
   - API
   - Channel messaging
@@ -64,5 +65,4 @@ function handleMessage(e) {
 
 ## See also
 
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

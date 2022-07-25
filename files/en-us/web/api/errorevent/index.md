@@ -1,6 +1,7 @@
 ---
 title: ErrorEvent
 slug: Web/API/ErrorEvent
+page-type: web-api-interface
 tags:
   - API
   - Event

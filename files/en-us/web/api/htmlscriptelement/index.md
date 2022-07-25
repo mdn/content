@@ -1,6 +1,7 @@
 ---
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -78,11 +79,11 @@ For more details, see the [`defer`](#defer_property) and [`async`](#async_proper
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(`The script ${oError.target.src} didn't load correctly.`);
 }
 
 function prefixScript(url, onloadFunction) {
-  var newScript = document.createElement("script");
+  const newScript = document.createElement("script");
   newScript.onerror = loadError;
   if (onloadFunction) { newScript.onload = onloadFunction; }
   document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
@@ -94,11 +95,11 @@ This next function, instead of prepending the new scripts immediately before the
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(`The script ${oError.target.src} didn't load correctly.`);
 }
 
 function affixScriptToHead(url, onloadFunction) {
-  var newScript = document.createElement("script");
+  const newScript = document.createElement("script");
   newScript.onerror = loadError;
   if (onloadFunction) { newScript.onload = onloadFunction; }
   document.head.appendChild(newScript);

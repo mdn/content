@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.contentWindow
 slug: Web/API/HTMLObjectElement/contentWindow
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: XRBoundedReferenceSpace
 slug: Web/API/XRBoundedReferenceSpace
+page-type: web-api-interface
 tags:
   - API
   - AR

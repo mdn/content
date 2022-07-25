@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isQuery()
 slug: Web/API/WebGL2RenderingContext/isQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -38,7 +39,7 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 ```js
 var query = gl.createQuery();
 
-// ...
+// …
 
 gl.isQuery(query);
 ```

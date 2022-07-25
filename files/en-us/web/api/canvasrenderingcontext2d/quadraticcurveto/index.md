@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

@@ -296,7 +296,7 @@ function bgChange() {
 }
 ```
 
-The earliest method of registering event handlers found on the Web involved **event handler HTML attributes** (or **inline event handlers**) like the one shown above — the attribute value is literally the JavaScript code you want to run when the event occurs.
+The earliest method of registering event handlers found on the Web involved [_event handler HTML attributes_](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) (or _inline event handlers_) like the one shown above — the attribute value is literally the JavaScript code you want to run when the event occurs.
 The above example invokes a function defined inside a {{htmlelement("script")}} element on the same page, but you could also insert JavaScript directly inside the attribute, for example:
 
 ```html
@@ -362,7 +362,7 @@ It's always good to be consistent — with yourself, and with others if possible
 
 Most event objects have a standard set of properties and methods available on the event object; see the {{domxref("Event")}} object reference for a full list.
 
-Some event objects add extra properties that are relevant to that particular type of event. For example, the {{domxref("Document/keydown_event", "keydown")}} event fires when the user presses a key. Its event object is a {{domxref("KeyboardEvent")}}, which is a specialized `Event` object with a `key` property that tells you which key was pressed:
+Some event objects add extra properties that are relevant to that particular type of event. For example, the {{domxref("Element/keydown_event", "keydown")}} event fires when the user presses a key. Its event object is a {{domxref("KeyboardEvent")}}, which is a specialized `Event` object with a `key` property that tells you which key was pressed:
 
 ```html
 <input id="textBox" type="text">
@@ -372,7 +372,7 @@ Some event objects add extra properties that are relevant to that particular typ
 ```js
 const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
-textBox.addEventListener('keydown', event => output.textContent = `You pressed "${event.key}".`);
+textBox.addEventListener('keydown', (event) => output.textContent = `You pressed "${event.key}".`);
 ```
 
 ```css hidden
@@ -429,7 +429,7 @@ const fname = document.getElementById('fname');
 const lname = document.getElementById('lname');
 const para = document.querySelector('p');
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
   if (fname.value === '' || lname.value === '') {
     e.preventDefault();
     para.textContent = 'You need to fill in both names!';
@@ -728,7 +728,7 @@ The standard [`Event`](/en-US/docs/Web/API/Event) object has a function availabl
 So we can fix our current problem by changing the second handler function in the previous code block to this:
 
 ```js
-video.addEventListener('click', e => {
+video.addEventListener('click', (e) => {
   e.stopPropagation();
   video.play();
 });
@@ -739,7 +739,7 @@ You can try making a local copy of the [show-video-box.html source code](https:/
 > **Note:** Why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than they are now, Netscape only used event capturing, and Internet Explorer used only event bubbling.
 > When the W3C decided to try to standardize the behavior and reach a consensus, they ended up with this system that included both, which is the one modern browsers implemented.
 
-> **Note:** As mentioned above, by default all event handlers are registered in the bubbling phase, and this makes more sense most of the time.
+> **Note:** As mentioned above, by default almost all event handlers are registered in the bubbling phase, and this makes more sense most of the time.
 > If you really want to register an event in the capturing phase instead, you can do so by registering your handler using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener), and setting the optional third property to `true`.
 
 ### Event delegation
@@ -795,7 +795,7 @@ function bgChange() {
 
 const container = document.querySelector('#container');
 
-container.addEventListener('click', event => event.target.style.backgroundColor = bgChange());
+container.addEventListener('click', (event) => event.target.style.backgroundColor = bgChange());
 ```
 
 The output is as follows (try clicking around on it):

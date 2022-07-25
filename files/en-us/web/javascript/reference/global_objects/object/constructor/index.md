@@ -16,7 +16,7 @@ The value is only read-only for primitive values such as `1`, `true`, and `"test
 
 ## Description
 
-All objects (with the exception of objects created with `Object.create(null)`) will have a `constructor` property. Objects created without the explicit use of a constructor function (such as object- and array-literals) will have a `constructor` property that points to the Fundamental Object constructor type for that object.
+Any object (with the exception of objects created with `Object.create(null)`) will have a `constructor` property on its `[[Prototype]]`. Objects created without the explicit use of a constructor function (such as object literals and array literals) will have a `constructor` property that points to the Fundamental Object constructor type for that object.
 
 ```js
 let o = {}
@@ -43,169 +43,202 @@ The following example creates a constructor (`Tree`) and an object of that type 
 
 ```js
 function Tree(name) {
-  this.name = name
+  this.name = name;
 }
 
-let theTree = new Tree('Redwood')
-console.log('theTree.constructor is ' + theTree.constructor)
+const theTree = new Tree('Redwood');
+console.log('theTree.constructor is ' + theTree.constructor);
 ```
 
 This example displays the following output:
 
-```js
+```
 theTree.constructor is function Tree(name) {
-  this.name = name
+  this.name = name;
 }
 ```
 
-### Changing the constructor of an object
+### Assigning the `constructor` property to an object
 
-One can assign the `constructor` property for any value except `null` and `undefined` since those don't have a corresponding constructor function (like `String`, `Number`, `Boolean` etc.), but values which are primitives won't keep the change (with no exception thrown). This is due to the same mechanism, which allows one to set any property on primitive values (except `null` and `undefined`) with no effect. Namely whenever one uses such a primitive as an object an instance of the corresponding constructor is created and discarded right after the statement was executed.
+One can assign the `constructor` property of non-primitives.
 
 ```js
-let val = null;
-val.constructor = 1; //TypeError: val is null
+const arr = [];
+arr.constructor = String
+arr.constructor === String // true
+arr instanceof String // false
+arr instanceof Array // true
 
-val = 'abc';
-val.constructor = Number; //val.constructor === String
+const foo = new Foo();
+foo.constructor = 'bar'
+foo.constructor === 'bar' // true
 
-val.foo = 'bar'; //An implicit instance of String('abc') was created and assigned the prop foo
-val.foo === undefined; //true, since a new instance of String('abc') was created for this comparison, which doesn't have the foo property
+// etc.
 ```
 
-So basically one can change the value of the `constructor` property for anything, except the primitives mentioned above, **note that changing the** `constructor` **property does not affect the instanceof operator**:
+This does not overwrite the old `constructor` property — it was originally present on the instance's `[[Prototype]]`, not as its own property.
 
 ```js
-let a = [];
-a.constructor = String
-a.constructor === String // true
-a instanceof String //false
-a instanceof Array //true
+const arr = [];
+Object.hasOwn(arr, "constructor") // false
+Object.hasOwn(Object.getPrototypeOf(arr), "constructor") // true
 
-a = new Foo();
-a.constructor = 'bar'
-a.constructor === 'bar' // true
-
-//etc.
+arr.constructor = String;
+Object.hasOwn(arr, "constructor") // true — the instance property shadows the one on its prototype
 ```
 
-If the object is sealed/frozen then the change has no effect and no exception is thrown:
+But even when `Object.getPrototypeOf(a).constructor` is re-assigned, it won't change other behaviors of the object. For example, the behavior of `instanceof` is controlled by [`Symbol.hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance), not `constructor`:
 
 ```js
-let a = Object.seal({});
-a.constructor = Number;
-a.constructor === Object; //true
+const arr = [];
+arr.constructor = String;
+arr instanceof String // false
+arr instanceof Array // true
 ```
 
-### Changing the constructor of a function
+There is nothing protecting the `constructor` property from being re-assigned or shadowed, so using it to detect the type of a variable should usually be avoided in favor of less fragile ways like `instanceof` and [`Symbol.toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) for objects, or [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) for primitives.
 
-Mostly this property is used for defining a function as a **function-constructor** with further calling it with **new** and prototype-inherits chain.
+### Changing the `constructor` of a constructor function's `prototype`
+
+Every function constructor will have a `prototype` property, which will become the instance's `[[Prototype]]` when called via the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. `ConstructorFunction.prototype.constructor` will therefore become a property on the instance's `[[Prototype]]`, as previously demonstrated.
+
+However, if `ConstructorFunction.prototype` is re-assigned, the `constructor` property will be lost. For example, the following is a common way to create an inheritance pattern:
 
 ```js
-function Parent() { /* ... */ }
+function Parent() { /* … */ }
 Parent.prototype.parentMethod = function parentMethod() {}
 
 function Child() {
-   Parent.call(this) // Make sure everything is initialized properly
+  Parent.call(this); // Make sure everything is initialized properly
 }
-Child.prototype = Object.create(Parent.prototype) // re-define child prototype to Parent prototype
-
-Child.prototype.constructor = Child // return original constructor to Child
+// Pointing the [[Prototype]] of Child.prototype to Parent.prototype
+Child.prototype = Object.create(Parent.prototype);
 ```
 
-But when do we need to perform the last line here? Unfortunately, the answer is: _it depends_.
-
-Let's try to define the cases in which re-assignment of the original constructor will play a major role, and when it will be one superfluous line of code.
-
-Take the following case: the object has the `create()` method to create itself.
+The `constructor` of instances of `Child` will be `Parent` due to `Child.prototype` being re-assigned. Ensuring that `Child.prototype.constructor` always points to `Child` itself is crucial when you are using `constructor` to access the original class from an instance. Take the following case: the object has the `create()` method to create itself.
 
 ```js
-function Parent() { /* ... */ }
+function Parent() { /* … */ }
 function CreatedConstructor() {
-   Parent.call(this)
+  Parent.call(this);
 }
 
-CreatedConstructor.prototype = Object.create(Parent.prototype)
+CreatedConstructor.prototype = Object.create(Parent.prototype);
 
 CreatedConstructor.prototype.create = function create() {
-  return new this.constructor()
-}
+  return new this.constructor();
+};
 
-new CreatedConstructor().create().create() // TypeError undefined is not a function since constructor === Parent
+new CreatedConstructor().create().create(); // TypeError: new CreatedConstructor().create().create is undefined, since constructor === Parent
 ```
 
-In the example above the exception will be shown since the constructor links to Parent.
-
-To avoid this, just assign the necessary constructor you are going to use.
+In the example above, an exception is thrown, since the `constructor` links to `Parent`. To avoid this, just assign the necessary constructor you are going to use.
 
 ```js
-function Parent() { /* ... */ }
-function CreatedConstructor() { /* ... */ }
+function Parent() { /* … */ }
+function CreatedConstructor() { /* … */ }
 
-CreatedConstructor.prototype = Object.create(Parent.prototype)
-CreatedConstructor.prototype.constructor = CreatedConstructor // sets the correct constructor for future use
+CreatedConstructor.prototype = Object.create(Parent.prototype);
+// Return original constructor to Child
+CreatedConstructor.prototype.constructor = CreatedConstructor;
 
 CreatedConstructor.prototype.create = function create() {
-  return new this.constructor()
-}
+  return new this.constructor();
+};
 
-new CreatedConstructor().create().create() // it's pretty fine
+new CreatedConstructor().create().create(); // it's pretty fine
 ```
 
-Ok, now it's pretty clear why changing the constructor can be useful.
+However, even better, do not re-assign `ConstructorFunction.prototype` — instead, use [`Object.setPrototypeOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) to manipulate the prototype chain.
 
-Let's consider one more case.
+```js
+function Parent() { /* … */ }
+function CreatedConstructor() { /* … */ }
+
+Object.setPrototypeOf(CreatedConstructor.prototype, Parent.prototype);
+
+CreatedConstructor.prototype.create = function create() {
+  return new this.constructor();
+};
+
+new CreatedConstructor().create().create(); // still works without re-creating constructor property
+```
+
+Let's consider one more involved case.
 
 ```js
 function ParentWithStatic() {}
 
-ParentWithStatic.startPosition = { x: 0, y:0 } // Static member property
+ParentWithStatic.startPosition = { x: 0, y: 0 }; // Static member property
 ParentWithStatic.getStartPosition = function getStartPosition() {
-  return this.startPosition
-}
+  return this.startPosition;
+};
 
 function Child(x, y) {
-  this.position = {
-    x: x,
-    y: y
-  }
+  this.position = { x, y };
 }
 
-Child.prototype = Object.create(ParentWithStatic.prototype)
-Child.prototype.constructor = Child
+Child.prototype = Object.create(ParentWithStatic.prototype);
+Child.prototype.constructor = Child;
 
 Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
-  let position = this.position
-  let startPosition = this.constructor.getStartPosition() // error undefined is not a function, since the constructor is Child
+  const position = this.position;
+  // Using this.constructor, in hope that getStartPosition exists as a static method
+  const startPosition = this.constructor.getStartPosition();
 
   return {
     offsetX: startPosition.x - position.x,
-    offsetY: startPosition.y - position.y
-  }
+    offsetY: startPosition.y - position.y,
+  };
 };
+
+new Child(1, 1).getOffsetByInitialPosition();
+// Error: this.constructor.getStartPosition is undefined, since the
+// constructor is Child, which doesn't have the getStartPosition static method
 ```
 
-For this example to work properly we need either to keep `Parent` as the constructor or reassign static properties to `Child`'s constructor:
+For this example to work properly, we can reassign the `Parent`'s static properties to `Child`:
 
 ```js
-...
-Child = Object.assign(Child, ParentWithStatic); // Notice that we assign it before we create(...) a prototype below
+// …
+Child = Object.assign(Child, ParentWithStatic); // Notice that we assign it before we create() a prototype below
 Child.prototype = Object.create(ParentWithStatic.prototype);
-...
+Child.prototype.constructor = Child;
+// …
 ```
 
-or assign `Parent`'s constructor identifier to a separate property on the `Child` constructor function and access it via that property:
+But even better, we can make the constructor functions themselves extend each other, as classes' [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) do.
 
 ```js
-...
-Child.parentConstructor = ParentWithStatic
-Child.prototype = Object.create(ParentWithStatic.prototype)
-...
-   let startPosition = this.constructor.parentConstructor.getStartPosition()
-...
+function ParentWithStatic() {}
+
+ParentWithStatic.startPosition = { x: 0, y: 0 }; // Static member property
+ParentWithStatic.getStartPosition = function getStartPosition() {
+  return this.startPosition;
+};
+
+function Child(x, y) {
+  this.position = { x, y };
+}
+
+// Properly create inheritance!
+Object.setPrototypeOf(Child.prototype, ParentWithStatic.prototype);
+Object.setPrototypeOf(Child, ParentWithStatic);
+
+Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
+  let position = this.position;
+  let startPosition = this.constructor.getStartPosition();
+
+  return {
+    offsetX: startPosition.x - position.x,
+    offsetY: startPosition.y - position.y,
+  };
+};
+
+console.log(new Child(1, 1).getOffsetByInitialPosition()); // { offsetX: -1, offsetY: -1 }
 ```
 
-> **Note:** Manually updating or setting the constructor can lead to different and sometimes confusing consequences. To prevent this, just define the role of `constructor` in each specific case. In most cases, `constructor` is not used and reassignment of it is not necessary.
+> **Note:** Manually updating or setting the constructor can lead to different and sometimes confusing consequences. To prevent this, just define the role of `constructor` in each specific case. In most cases, `constructor` is not used and reassigning it is not necessary.
 
 ## Specifications
 

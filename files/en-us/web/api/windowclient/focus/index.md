@@ -1,6 +1,7 @@
 ---
 title: WindowClient.focus()
 slug: Web/API/WindowClient/focus
+page-type: web-api-instance-method
 tags:
   - API
   - Client
@@ -45,8 +46,7 @@ self.addEventListener('notificationclick', function(event) {
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
+    for (const client of clientList) {
       if (client.url == '/' && 'focus' in client)
         return client.focus();
     }

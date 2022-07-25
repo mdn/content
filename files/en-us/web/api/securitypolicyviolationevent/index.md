@@ -1,6 +1,7 @@
 ---
 title: SecurityPolicyViolationEvent
 slug: Web/API/SecurityPolicyViolationEvent
+page-type: web-api-interface
 tags:
   - API
   - CSP
@@ -24,29 +25,29 @@ The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event"
 
 ## Properties
 
-- {{domxref("SecurityPolicyViolationEvent.blockedURI")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.blockedURI")}} {{readonlyInline}}
   - : A string representing the URI of the resource that was blocked because it violates a policy.
-- {{domxref("SecurityPolicyViolationEvent.columnNumber")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.columnNumber")}} {{readonlyInline}}
   - : The column number in the document or worker at which the violation occurred.
-- {{domxref("SecurityPolicyViolationEvent.disposition")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.disposition")}} {{readonlyInline}}
   - : Indicates how the violated policy is configured to be treated by the user agent. This will be `"enforce"` or `"report"`.
-- {{domxref("SecurityPolicyViolationEvent.documentURI")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.documentURI")}} {{readonlyInline}}
   - : A string representing the URI of the document or worker in which the violation was found.
-- {{domxref("SecurityPolicyViolationEvent.effectiveDirective")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.effectiveDirective")}} {{readonlyInline}}
   - : A string representing the directive whose enforcement uncovered the violation.
-- {{domxref("SecurityPolicyViolationEvent.lineNumber")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.lineNumber")}} {{readonlyInline}}
   - : The line number in the document or worker at which the violation occurred.
-- {{domxref("SecurityPolicyViolationEvent.originalPolicy")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.originalPolicy")}} {{readonlyInline}}
   - : A string containing the policy whose enforcement uncovered the violation.
-- {{domxref("SecurityPolicyViolationEvent.referrer")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.referrer")}} {{readonlyInline}}
   - : A string representing the referrer of the resources whose policy was violated. This will be a URL or `null`.
-- {{domxref("SecurityPolicyViolationEvent.sample")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.sample")}} {{readonlyInline}}
   - : A string representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
-- {{domxref("SecurityPolicyViolationEvent.sourceFile")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.sourceFile")}} {{readonlyInline}}
   - : A string representing the URI of the document or worker in which the violation was found.
-- {{domxref("SecurityPolicyViolationEvent.statusCode")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.statusCode")}} {{readonlyInline}}
   - : A number representing the HTTP status code of the document or worker in which the violation occurred.
-- {{domxref("SecurityPolicyViolationEvent.violatedDirective")}}{{readonlyInline}}
+- {{domxref("SecurityPolicyViolationEvent.violatedDirective")}} {{readonlyInline}}
   - : A string representing the directive whose enforcement uncovered the violation.
 
 ## Examples

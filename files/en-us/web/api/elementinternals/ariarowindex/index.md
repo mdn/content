@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaRowIndex
 slug: Web/API/ElementInternals/ariaRowIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Property

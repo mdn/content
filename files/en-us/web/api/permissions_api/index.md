@@ -1,6 +1,7 @@
 ---
 title: Permissions API
 slug: Web/API/Permissions_API
+page-type: web-api-overview
 tags:
   - API
   - Introduction

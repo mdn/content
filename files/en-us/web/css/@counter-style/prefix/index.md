@@ -34,7 +34,14 @@ prefix: url(bullet.png);
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol>
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 

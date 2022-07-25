@@ -1,6 +1,7 @@
 ---
 title: NDEFReader
 slug: Web/API/NDEFReader
+page-type: web-api-interface
 tags:
   - NDEF
   - Reference
@@ -57,7 +58,7 @@ ndef.onreading = (event) => {
 function write(data) {
   ignoreRead = true;
   return new Promise((resolve, reject) => {
-    ndef.addEventListener("reading", event => {
+    ndef.addEventListener("reading", (event) => {
       // Check if we want to write to this tag, or reject.
       ndef.write(data).then(resolve, reject).finally(() => ignoreRead = false);
     }, { once: true });

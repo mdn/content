@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.height
 slug: Web/API/MediaTrackSupportedConstraints/height
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -59,7 +60,7 @@ if (navigator.mediaDevices.getSupportedConstraints().height) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

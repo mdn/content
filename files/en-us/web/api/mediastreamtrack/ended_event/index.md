@@ -1,6 +1,7 @@
 ---
 title: 'MediaStreamTrack: ended event'
 slug: Web/API/MediaStreamTrack/ended_event
+page-type: web-api-event
 tags:
   - Audio
   - Event
@@ -25,9 +26,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('ended', event => { });
+addEventListener('ended', (event) => { });
 
-onended = event => { };
+onended = (event) => { };
 ```
 
 ## Event type

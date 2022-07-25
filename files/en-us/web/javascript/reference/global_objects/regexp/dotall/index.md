@@ -46,7 +46,7 @@ console.log(regex1.dotAll); // Output: true
 
 console.log(str1.replace(regex1,'')); // Output: foo example
 
-cosnt str2 = 'bar\nexample foo example';
+const str2 = 'bar\nexample foo example';
 
 const regex2 = new RegExp('bar.example');
 

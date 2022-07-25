@@ -215,7 +215,7 @@ You can provide a useful placeholder inside your search input that could give a 
 <form>
   <div>
     <input type="search" id="mySearch" name="q"
-     placeholder="Search the site...">
+     placeholder="Search the site…">
     <button>Search</button>
   </div>
 </form>
@@ -240,7 +240,7 @@ Let's have a look at an example:
 <form role="search">
   <div>
     <input type="search" id="mySearch" name="q"
-     placeholder="Search the site..."
+     placeholder="Search the site…"
      aria-label="Search through site content">
     <button>Search</button>
   </div>
@@ -263,7 +263,7 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 <form>
   <div>
     <input type="search" id="mySearch" name="q"
-    placeholder="Search the site..." size="30">
+    placeholder="Search the site…" size="30">
     <button>Search</button>
   </div>
 </form>
@@ -307,7 +307,7 @@ You can use the {{htmlattrxref("required", "input")}} attribute as an easy way o
 <form>
   <div>
     <input type="search" id="mySearch" name="q"
-    placeholder="Search the site..." required>
+    placeholder="Search the site…" required>
     <button>Search</button>
     <span class="validity"></span>
   </div>

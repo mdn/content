@@ -1,6 +1,7 @@
 ---
 title: Remote Playback API
 slug: Web/API/Remote_Playback_API
+page-type: web-api-overview
 tags:
   - API
   - Overview

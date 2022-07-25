@@ -1,6 +1,7 @@
 ---
 title: Metadata.modificationTime
 slug: Web/API/Metadata/modificationTime
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API

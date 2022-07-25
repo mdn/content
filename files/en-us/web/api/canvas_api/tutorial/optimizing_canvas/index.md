@@ -1,6 +1,7 @@
 ---
 title: Optimizing canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
+page-type: guide
 tags:
   - Advanced
   - Canvas
@@ -87,7 +88,7 @@ var scaleToFit = Math.min(scaleX, scaleY);
 var scaleToCover = Math.max(scaleX, scaleY);
 
 stage.style.transformOrigin = '0 0'; //scale from top left
-stage.style.transform = 'scale(' + scaleToFit + ')';
+stage.style.transform = `scale(${scaleToFit})`;
 ```
 
 ### Turn off transparency
@@ -115,8 +116,8 @@ canvas.height = rect.height * dpr;
 ctx.scale(dpr, dpr);
 
 // Set the "drawn" size of the canvas
-canvas.style.width = rect.width + 'px';
-canvas.style.height = rect.height + 'px';
+canvas.style.width = `${rect.width}px`;
+canvas.style.height = `${rect.height}px`;
 ```
 
 ### More tips

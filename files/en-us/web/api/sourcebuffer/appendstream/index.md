@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.appendStream()
 slug: Web/API/SourceBuffer/appendStream
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

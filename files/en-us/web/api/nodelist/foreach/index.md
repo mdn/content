@@ -1,6 +1,7 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
+page-type: web-api-instance-method
 tags:
   - DOM
   - Iterable
@@ -20,7 +21,8 @@ insertion order.
 ## Syntax
 
 ```js
-someNodeList.forEach(callback[, thisArg]);
+someNodeList.forEach(callback);
+someNodeList.forEach(callback, thisArg);
 ```
 
 ### Parameters
@@ -51,20 +53,20 @@ someNodeList.forEach(callback[, thisArg]);
 ## Example
 
 ```js
-let node = document.createElement("div");
-let kid1 = document.createElement("p");
-let kid2 = document.createTextNode("hey");
-let kid3 = document.createElement("span");
+const node = document.createElement("div");
+const kid1 = document.createElement("p");
+const kid2 = document.createTextNode("hey");
+const kid3 = document.createElement("span");
 
 node.appendChild(kid1);
 node.appendChild(kid2);
 node.appendChild(kid3);
 
-let list = node.childNodes;
+const list = node.childNodes;
 
 list.forEach(
   function(currentValue, currentIndex, listObj) {
-    console.log(currentValue + ', ' + currentIndex + ', ' + this);
+    console.log(`${currentValue}, ${currentIndex}, ${this}`);
   },
   'myThisArg'
 );
@@ -87,7 +89,7 @@ This {{Glossary("Polyfill","polyfill")}} adds compatibility to all Browsers supp
 if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = function (callback, thisArg) {
         thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
+        for (let i = 0; i < this.length; i++) {
             callback.call(thisArg, this[i], i, this);
         }
     };

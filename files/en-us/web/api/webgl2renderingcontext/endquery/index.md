@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.endQuery()
 slug: Web/API/WebGL2RenderingContext/endQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -47,7 +48,7 @@ None ({{jsxref("undefined")}}).
 var query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
-// ...
+// …
 
 gl.endQuery(gl.ANY_SAMPLES_PASSED);
 ```

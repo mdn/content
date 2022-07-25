@@ -1,6 +1,7 @@
 ---
 title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -62,12 +63,11 @@ new ReadableStream(underlyingSource, queuingStrategy)
         (bring your own buffer)/byte stream. If it is not included, the passed controller
         will be a {{domxref("ReadableStreamDefaultController")}}.
     - `autoAllocateChunkSize` {{optional_inline}}
-      - : For byte streams, the developer can set the `autoAllocateChunkSize`
-        with a positive integer value to turn on the stream's auto-allocation feature.
-        With this turned on, the stream implementation will automatically allocate an
-        {{jsxref("ArrayBuffer")}} with a size of the given integer, and the consumer can
-        also use a default reader.
+      - : For byte streams, the developer can set the `autoAllocateChunkSize` with a positive integer value to turn on the stream's auto-allocation feature.
+        With this is set, the stream implementation will automatically allocate a view buffer of the specified size in {{domxref("ReadableByteStreamController.byobRequest")}} when required.
 
+        This must be set to enable zero-copy transfers to be used with a default {{domxref("ReadableStreamDefaultReader")}}.
+        If not set, a default reader will still stream data, but {{domxref("ReadableByteStreamController.byobRequest")}} will always be `null` and transfers to the consumer must be via the stream's internal queues.
 - `queuingStrategy` {{optional_inline}}
 
   - : An object that optionally defines a queuing strategy for the stream. This takes two
@@ -99,8 +99,7 @@ An instance of the {{domxref("ReadableStream")}} object.
 ## Examples
 
 In the following simple example, a custom `ReadableStream` is created using
-a constructor (see our [Simple random
-stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
+a constructor (see our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
 random string of text every second and enqueues it into the stream. A
 `cancel()` function is also provided to stop the generation if
 {{domxref("ReadableStream.cancel()")}} is called for any reason.

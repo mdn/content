@@ -1,6 +1,7 @@
 ---
 title: 'Element: show event'
 slug: Web/API/Element/show_event
+page-type: web-api-event
 tags:
   - API
   - Deprecated
@@ -13,28 +14,21 @@ browser-compat: api.Element.show_event
 
 The **`show`** event is fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu` attribute](/en-US/docs/Web/HTML/Global_attributes/contextmenu).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onshow", "onshow")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('show', (event) => {});
+
+onshow = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -58,7 +52,3 @@ This event is not on any standards track.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("GlobalEventHandlers.onshow", "onshow")}}

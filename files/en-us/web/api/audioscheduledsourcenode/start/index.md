@@ -1,6 +1,7 @@
 ---
 title: AudioScheduledSourceNode.start()
 slug: Web/API/AudioScheduledSourceNode/start
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

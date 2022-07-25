@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.resetPose()
 slug: Web/API/VRDisplay/resetPose
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

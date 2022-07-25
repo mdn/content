@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createRadialGradient()
 slug: Web/API/CanvasRenderingContext2D/createRadialGradient
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

@@ -1,6 +1,7 @@
 ---
 title: Using the Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
+page-type: guide
 tags:
   - API
   - Capture
@@ -15,6 +16,7 @@ tags:
   - display
   - getDisplayMedia
   - screen
+browser-compat: api.MediaDevices.getDisplayMedia
 ---
 {{DefaultAPISidebar("Screen Capture API")}}
 
@@ -35,7 +37,7 @@ async function startCapture(displayMediaOptions) {
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch(err) {
-    console.error("Error: " + err);
+    console.error(`Error: ${err}`);
   }
   return captureStream;
 }
@@ -48,7 +50,7 @@ You can write this code either using an asynchronous function and the [`await`](
 ```js
 function startCapture(displayMediaOptions) {
  return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
-    .catch(err => { console.error("Error:" + err); return null; });
+    .catch((err) => { console.error(`Error:${err}`); return null; });
 }
 ```
 
@@ -196,10 +198,10 @@ stopElem.addEventListener("click", function(evt) {
 To make logging of errors and other issues easy, this example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
 
 ```js
-console.log = msg => logElem.innerHTML += `${msg}<br>`;
-console.error = msg => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
-console.warn = msg => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
-console.info = msg => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
+console.log = (msg) => logElem.innerHTML += `${msg}<br>`;
+console.error = (msg) => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
+console.warn = (msg) => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
+console.info = (msg) => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
 ```
 
 This allows us to use the familiar {{domxref("console.log()")}}, {{domxref("console.error()")}}, and so on to log information to the log box in the document.
@@ -216,7 +218,7 @@ async function startCapture() {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
   } catch(err) {
-    console.error("Error: " + err);
+    console.error(`Error: ${err}`);
   }
 }
 ```
@@ -237,7 +239,7 @@ The `stopCapture()` method is called when the "Stop Capture" button is clicked. 
 function stopCapture(evt) {
   let tracks = videoElem.srcObject.getTracks();
 
-  tracks.forEach(track => track.stop());
+  tracks.forEach((track) => track.stop());
   videoElem.srcObject = null;
 }
 ```
@@ -335,7 +337,7 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 
 ## Browser compatibility
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## See also
 

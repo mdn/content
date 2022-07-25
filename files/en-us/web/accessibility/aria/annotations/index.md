@@ -20,7 +20,7 @@ Below we'll introduce the new features associated with ARIA annotations, and hav
 
 The ARIA attributes providing these new abilities are as follows:
 
-- `aria-description=""` — provides a detailed description of an HTML element, as opposed to the brief label provided by [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute).
+- `aria-description=""` — provides a detailed description of an HTML element, as opposed to the brief label provided by [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 - `role="insertion"` and `role="deletion"` — semantically denote HTML elements whose contents represent an insertion to or deletion from the overall document. These are semantically equivalent to the HTML {{HTMLElement('ins')}} and {{HTMLElement('del')}} elements. Note that these aren't part of the new ARIA annotations features, but they are of central relevance.
 - `role="mark"` — semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element.
 - `role="suggestion"` — semantically denotes a single proposed change to an editable document. This should be used on an element that wraps a single insertion and deletion (see `role="insertion"` and `role="deletion"` above).
@@ -52,7 +52,7 @@ We have already alluded to the difference between these two above — `aria-desc
 `aria-describedby` is appropriate for associating an element with a simple text description, where you don't have much in the way of meaningful semantics contained within. For example:
 
 ```html
-<p id="description-id">An extended text description of some kind...</p>
+<p id="description-id">An extended text description of some kind.</p>
 
 <div aria-describedby="description-id">
   <!-- Some kind of UI feature that needs an accessible description  -->
@@ -65,7 +65,7 @@ We have already alluded to the difference between these two above — `aria-desc
 <div id="detail-id">
   <h2>A heading</h2>
   <p>An extended text description of some kind…</p>
-  <p><time datetime="...">A timestamp</time></p>
+  <p><time datetime="…">A timestamp</time></p>
 </div>
 
 <div aria-details="detail-id">
@@ -85,13 +85,17 @@ Simple descriptions basically just involve usage of `aria-description` on an ele
 
 ```html
 <section aria-description="Choose your favorite fruit — the fruit with the highest number of votes will be added to the lunch options next week.">
-  <p>Pick your favorite fruit:</p>
   <form>
-    <ul>
-      <li><label>Apple: <input type="radio" name="fruit" value="apple"></label></li>
-      <li><label>Orange: <input type="radio" name="fruit" value="orange"></label></li>
-      <li><label>Banana: <input type="radio" name="fruit" value="banana"></label></li>
-    </ul>
+    <fieldset>
+      <legend>
+        <p>Pick your favorite fruit:</p>
+      </legend>
+      <ul>
+        <li><label>Apple: <input type="radio" name="fruit" value="apple"></label></li>
+        <li><label>Orange: <input type="radio" name="fruit" value="orange"></label></li>
+        <li><label>Banana: <input type="radio" name="fruit" value="banana"></label></li>
+      </ul>
+    </fieldset>
   </form>
 </section>
 ```
@@ -103,11 +107,16 @@ If the descriptive text does appear in the UI (it should for this example), you 
 
 <section aria-describedby="fruit-desc">
   <form>
-    <ul>
-      <li><label>Apple: <input type="radio" name="fruit" value="apple"></label></li>
-      <li><label>Orange: <input type="radio" name="fruit" value="orange"></label></li>
-      <li><label>Banana: <input type="radio" name="fruit" value="banana"></label></li>
-    </ul>
+    <fieldset>
+      <legend>
+        <p>Pick your favorite fruit:</p>
+      </legend>
+      <ul>
+        <li><label>Apple: <input type="radio" name="fruit" value="apple"></label></li>
+        <li><label>Orange: <input type="radio" name="fruit" value="orange"></label></li>
+        <li><label>Banana: <input type="radio" name="fruit" value="banana"></label></li>
+      </ul>
+    </fieldset>
   </form>
 </section>
 ```

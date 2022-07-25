@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.accessKeyLabel
 ---
 {{ APIRef("HTML DOM") }}
@@ -20,12 +21,12 @@ label = element.accessKeyLabel
 ### JavaScript
 
 ```js
-var btn = document.getElementById('btn1');
-var shortcutLabel = btn.accessKeyLabel || btn.accessKey;
-btn.title += ' [' + shortcutLabel.toUpperCase() + ']';
+const btn = document.getElementById('btn1');
+const shortcutLabel = btn.accessKeyLabel || btn.accessKey;
+btn.title += ` [${shortcutLabel.toUpperCase()}]`;
 
 btn.onclick = function () {
-  var feedback = document.createElement('output');
+  const feedback = document.createElement('output');
   feedback.textContent = 'Pressed!';
   btn.insertAdjacentElement('afterend', feedback);
 };

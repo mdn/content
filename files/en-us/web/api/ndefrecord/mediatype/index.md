@@ -1,6 +1,7 @@
 ---
 title: NDEFRecord.mediaType
 slug: Web/API/NDEFRecord/mediaType
+page-type: web-api-instance-property
 tags:
   - NDEF
   - Reference

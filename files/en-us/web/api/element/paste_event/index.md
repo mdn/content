@@ -1,6 +1,7 @@
 ---
 title: 'Element: paste event'
 slug: Web/API/Element/paste_event
+page-type: web-api-event
 tags:
   - Clipboard API
   - Event
@@ -48,8 +49,8 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 #### HTML
 
 ```html
-<div class="source" contenteditable="true">Try copying text from this box...</div>
-<div class="target" contenteditable="true">...and pasting it into this one</div>
+<div class="source" contenteditable="true">Copy text from this box.</div>
+<div class="target" contenteditable="true">And paste it into this one.</div>
 ```
 
 ```css hidden
@@ -68,15 +69,14 @@ div.source, div.target {
 const target = document.querySelector('div.target');
 
 target.addEventListener('paste', (event) => {
+    event.preventDefault();
+
     let paste = (event.clipboardData || window.clipboardData).getData('text');
     paste = paste.toUpperCase();
-
     const selection = window.getSelection();
-    if (!selection.rangeCount) return false;
+    if (!selection.rangeCount) return;
     selection.deleteFromDocument();
     selection.getRangeAt(0).insertNode(document.createTextNode(paste));
-
-    event.preventDefault();
 });
 ```
 

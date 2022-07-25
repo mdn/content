@@ -1,6 +1,7 @@
 ---
 title: PresentationConnectionList
 slug: Web/API/PresentationConnectionList
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -11,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.PresentationConnectionList
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}
+{{securecontext_header}}{{SeeCompatTable}}{{DefaultAPISidebar("Presentation API")}}
 
 `PresentationConnectionList` is the collection of incoming presentation connections.
 

@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.getLayers()
 slug: Web/API/VRDisplay/getLayers
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

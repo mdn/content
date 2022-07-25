@@ -14,12 +14,7 @@ browser-compat: css.selectors.link
 
 The **`:link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has not yet been visited. It matches every unvisited {{HTMLElement("a")}} or {{HTMLElement("area")}} element that has an `href` attribute.
 
-```css
-/* Selects any <a> that has not been visited yet */
-a:link {
-  color: red;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-link.html", "tabbed-shorter")}}
 
 Styles defined by the `:link` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":active")}}, {{cssxref(":hover")}}, or {{cssxref(":visited")}}) that has at least equal specificity. To style links appropriately, put the `:link` rule before all other link-related rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
 
@@ -27,7 +22,9 @@ Styles defined by the `:link` pseudo-class will be overridden by any subsequent 
 
 ## Syntax
 
-{{csssyntax}}
+```
+:link
+```
 
 ## Examples
 

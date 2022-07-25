@@ -1,6 +1,7 @@
 ---
 title: Window.scrollX
 slug: Web/API/Window/scrollX
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

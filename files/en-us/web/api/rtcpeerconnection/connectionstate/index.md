@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.connectionState
 slug: Web/API/RTCPeerConnection/connectionState
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCPeerConnection
@@ -70,7 +71,7 @@ A string representing the current state of the connection, that is one of the fo
 ```js
 var pc = new RTCPeerConnection(configuration);
 
-/* ... */
+// …
 
 var connectionState = pc.connectionState;
 ```
@@ -85,8 +86,7 @@ var connectionState = pc.connectionState;
 
 ## See also
 
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

@@ -1,6 +1,7 @@
 ---
 title: Element.scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

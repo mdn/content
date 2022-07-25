@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioContext
 slug: Web/API/OfflineAudioContext
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -64,8 +65,8 @@ At this point we create another audio context, create an {{domxref("AudioBufferS
 ```js
 // define online and offline audio context
 
-var audioCtx = new AudioContext();
-var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+const audioCtx = new AudioContext();
+const offlineCtx = new OfflineAudioContext(2,44100*40,44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -80,7 +81,7 @@ function getData() {
   request.responseType = 'arraybuffer';
 
   request.onload = function() {
-    var audioData = request.response;
+    const audioData = request.response;
 
     audioCtx.decodeAudioData(audioData, function(buffer) {
       myBuffer = buffer;
@@ -90,7 +91,7 @@ function getData() {
       //source.loop = true;
       offlineCtx.startRendering().then(function(renderedBuffer) {
         console.log('Rendering completed successfully');
-        var song = audioCtx.createBufferSource();
+        const song = audioCtx.createBufferSource();
         song.buffer = renderedBuffer;
 
         song.connect(audioCtx.destination);
@@ -99,7 +100,7 @@ function getData() {
           song.start();
         }
       }).catch(function(err) {
-          console.log('Rendering failed: ' + err);
+          console.error(`Rendering failed: ${err}`);
           // Note: The promise should reject when startRendering is called a second time on an OfflineAudioContext
       });
     });

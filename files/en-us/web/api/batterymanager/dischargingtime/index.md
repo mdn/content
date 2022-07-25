@@ -1,6 +1,7 @@
 ---
 title: BatteryManager.dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -34,14 +35,14 @@ A number.
 ### JavaScript Content
 
 ```js
-navigator.getBattery().then(battery => {
-    const time = battery.dischargingTime;
+navigator.getBattery().then((battery) => {
+  const time = battery.dischargingTime;
 
-    document.querySelector('#dischargingTime').textContent = battery.dischargingTime;
+  document.querySelector('#dischargingTime').textContent = `Remaining time to fully discharge the battery: ${time}`;
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30) }}
+{{ EmbedLiveSample('Examples', '100%', 30) }}
 
 ## Specifications
 

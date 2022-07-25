@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.href
 slug: Web/API/WorkerLocation/href
+page-type: web-api-instance-property
 tags:
   - API
   - Property

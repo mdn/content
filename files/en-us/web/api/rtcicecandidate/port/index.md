@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.port
 slug: Web/API/RTCIceCandidate/port
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -52,7 +53,7 @@ This code snippet fetches the IP address and port number of the candidate, stori
 into an object for future use.
 
 ```js
-var candidateLoc = {
+const candidateLoc = {
   address: candidate.ip,
   port: candidate.port
 }

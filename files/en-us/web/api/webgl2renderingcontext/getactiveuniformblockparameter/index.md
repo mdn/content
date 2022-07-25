@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getActiveUniformBlockParameter()
 slug: Web/API/WebGL2RenderingContext/getActiveUniformBlockParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method

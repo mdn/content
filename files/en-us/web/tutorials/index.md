@@ -106,7 +106,7 @@ These resources are created by forward-thinking companies and web developers who
 
 <!---->
 
-- [Quick Guide to Implement Web Fonts  (with @font-face)](https://www.html5rocks.com/tutorials/webfonts/quick/)
+- [Quick Guide to Implement Web Fonts  (with @font-face)](https://www.html5rocks.com/en/tutorials/webfonts/quick/)
   - : The @font-face feature from CSS3 allows you to use custom typefaces on the web in an accessible, manipulatable, and scalable way.
 - [Starting to Write CSS](https://davidwalsh.name/starting-css)
   - : An introduction to tools and methodologies to write more succinct, maintainable, and scalable CSS.

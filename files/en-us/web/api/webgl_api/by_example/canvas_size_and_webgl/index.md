@@ -1,6 +1,7 @@
 ---
 title: Canvas size and WebGL
 slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -50,12 +51,11 @@ canvas {
 ```js
 window.addEventListener("load", function() {
   "use strict"
-  var firstCanvas = document.getElementsByTagName("canvas")[0],
-    secondCanvas = document.getElementsByTagName("canvas")[1];
+  const [ firstCanvas , secondCanvas ] = document.getElementsByTagName("canvas");
   firstCanvas.width = firstCanvas.clientWidth;
   firstCanvas.height = firstCanvas.clientHeight;
   [firstCanvas, secondCanvas].forEach(function(canvas) {
-    var gl = canvas.getContext("webgl")
+    const gl = canvas.getContext("webgl")
       || canvas.getContext("experimental-webgl");
     if (!gl) {
       document.querySelector("p").innerHTML =

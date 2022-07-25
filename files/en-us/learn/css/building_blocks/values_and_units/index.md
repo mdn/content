@@ -55,7 +55,7 @@ In CSS specifications and on the property pages here on MDN you will be able to 
 
 > **Note:** You'll also see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term *value* refers to any particular expression supported by a value type that you choose to use.
 
-> **Note:** Yes, CSS value types tend to be denoted using angle brackets to differentiate them from CSS properties (e.g., the {{cssxref("color")}} property, versus the [\<color>](/en-US/docs/Web/CSS/color_value) data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.
+> **Note:** Yes, CSS value types tend to be denoted using angle brackets to differentiate them from CSS properties (e.g., the {{cssxref("color")}} property, versus the [`<color>`](/en-US/docs/Web/CSS/color_value) data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.
 
 In the following example, we have set the color of our heading using a keyword, and the background using the `rgb()` function:
 
@@ -140,7 +140,7 @@ There are various numeric value types that you might find yourself using in CSS.
 
 ### Lengths
 
-The numeric type you will come across most frequently is `<length>`. For example, `10px` (pixels) or `30em`. There are two types of lengths used in CSS — relative and absolute. It's important to know the difference in order to understand how big things will become.
+The numeric type you will come across most frequently is [`<length>`](/en-US/docs/Web/CSS/length). For example, `10px` (pixels) or `30em`. There are two types of lengths used in CSS — relative and absolute. It's important to know the difference in order to understand how big things will become.
 
 #### Absolute length units
 
@@ -153,7 +153,7 @@ The following are all **absolute** length units — they are not relative to any
 | `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm   |
 | `in` | Inches              | 1in = 2.54cm = 96px  |
 | `pc` | Picas               | 1pc = 1/6th of 1in   |
-| `pt` | Points              | 1pt = 1/72th of 1in  |
+| `pt` | Points              | 1pt = 1/72nd of 1in  |
 | `px` | Pixels              | 1px = 1/96th of 1in  |
 
 Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use `cm` (centimeters) on screen. The only value that you will commonly use is `px` (pixels).
@@ -199,6 +199,11 @@ Relative length units are relative to something else, perhaps the size of the pa
       <td>Line height of the element.</td>
     </tr>
     <tr>
+      <td><code>rlh</code></td>
+      <td>Line height of the root element. When used on the <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code> or <code><a href="/en-US/docs/Web/CSS/line-height">line-height</a></code
+        > properties of the root element, it refers to the properties' initial value.</td>
+    </tr>
+    <tr>
       <td><code>vw</code></td>
       <td>1% of the viewport's width.</td>
     </tr>
@@ -213,6 +218,26 @@ Relative length units are relative to something else, perhaps the size of the pa
     <tr>
       <td><code>vmax</code></td>
       <td>1% of the viewport's larger dimension.</td>
+    </tr>
+    <tr>
+      <td><code>vb</code></td>
+      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">block axis</a>.</td>
+    </tr>
+    <tr>
+      <td><code>vi</code></td>
+      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">inline axis</a>.</td>
+    </tr>
+    <tr>
+      <td><code>svw, svh</code></td>
+      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">small viewport</a>'s width and height, respectively.</td>
+    </tr>
+    <tr>
+      <td><code>lvw, lvh</code></td>
+      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">large viewport</a>'s width and height, respectively.</td>
+    </tr>
+    <tr>
+      <td><code>dvw, dvh</code></td>
+      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">dynamic viewport</a>'s width and height, respectively.</td>
     </tr>
   </tbody>
 </table>
@@ -379,7 +404,7 @@ For example, below we are using `calc()` to make the box `20% + 100px` wide. The
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_tasks).
 
 ## Summary
 

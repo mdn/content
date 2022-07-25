@@ -1,6 +1,7 @@
 ---
 title: Window.clearImmediate()
 slug: Web/API/Window/clearImmediate
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -39,7 +40,7 @@ None ({{jsxref("undefined")}}).
 ```js
 let immediateID = setImmediate(() => {
   // Run some code
-}
+});
 
 document.getElementById("button")
   .addEventListener(() => {

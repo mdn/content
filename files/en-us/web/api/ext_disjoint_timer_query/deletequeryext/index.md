@@ -1,6 +1,7 @@
 ---
 title: EXT_disjoint_timer_query.deleteQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/deleteQueryEXT
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -36,7 +37,7 @@ None ({{jsxref("undefined")}}).
 var ext = gl.getExtension('EXT_disjoint_timer_query');
 var query = ext.createQueryEXT();
 
-// ...
+// …
 
 ext.deleteQueryEXT(query);
 ```

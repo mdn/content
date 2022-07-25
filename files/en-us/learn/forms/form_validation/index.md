@@ -315,7 +315,7 @@ First, some HTML:
 <form>
   <p>
     <fieldset>
-      <legend>Do you have a driver's license?<abbr title="This field is mandatory" aria-label="required">*</abbr></legend>
+      <legend>Do you have a driver's license?<span aria-label="required">*</span></legend>
       <!-- While only one radio button in a same-named group can be selected at a time,
            and therefore only one radio button in a same-named group having the "required"
            attribute suffices in making a selection a requirement -->
@@ -334,7 +334,7 @@ First, some HTML:
            pattern="\d+">
   </p>
   <p>
-    <label for="t1">What's your favorite fruit?<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+    <label for="t1">What's your favorite fruit?<span aria-label="required">*</span></label>
     <input type="text" id="t1" name="fruit" list="l1" required
            pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
     <datalist id="l1">
@@ -688,7 +688,7 @@ The HTML is almost the same; we just removed the HTML validation features.
     </label>
   </p>
   <!-- Some legacy browsers need to have the `type` attribute
-       explicitly set to `submit` on the `button`element -->
+       explicitly set to `submit` on the `button` element -->
   <button type="submit">Submit</button>
 </form>
 ```
@@ -772,7 +772,7 @@ const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z
 function addEvent(element, event, callback) {
   let previousEventCallBack = element["on"+event];
   element["on"+event] = function (e) {
-    const output = callback(e);
+    let output = callback(e);
 
     // A callback that returns `false` stops the callback chain
     // and interrupts the execution of the event callback.
@@ -782,8 +782,8 @@ function addEvent(element, event, callback) {
       output = previousEventCallBack(e);
       if(output === false) return false;
     }
-  }
-};
+  };
+}
 
 // Now we can rebuild our validation constraint
 // Because we do not rely on CSS pseudo-class, we have to

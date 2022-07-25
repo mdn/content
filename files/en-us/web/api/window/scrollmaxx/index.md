@@ -1,6 +1,7 @@
 ---
 title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
+page-type: web-api-instance-property
 tags:
   - API
   - Gecko

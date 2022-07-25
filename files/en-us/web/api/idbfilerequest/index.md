@@ -1,6 +1,7 @@
 ---
 title: IDBFileRequest
 slug: Web/API/IDBFileRequest
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -21,7 +22,7 @@ The **`IDBFileRequest`** interface provides some extra properties necessary for 
 ## Properties
 
 _`IDBFileRequest` also inherits properties from the {{domxref("EventTarget")}} interface
-as well as the `then()` method from the defunct `DOMRequest`interface described below_.
+as well as the `then()` method from the defunct `DOMRequest` interface described below_.
 
 - {{domxref("IDBFileRequest.lockedFile")}} {{readonlyinline}}
   - : The {{domxref("IDBMutableFile")}} object from which the request was started.

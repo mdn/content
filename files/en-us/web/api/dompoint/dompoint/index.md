@@ -1,6 +1,7 @@
 ---
 title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -67,6 +68,6 @@ newTopLeft.y += 100;
 
 ## See also
 
-- {{domxref("DOMPointReadOnly.DOMPoint", "DOMPointReadOnly()")}}
+- {{domxref("DOMPointReadOnly.DOMPointReadOnly", "DOMPointReadOnly()")}}
 - {{domxref("DOMRect")}}
 - {{domxref("DOMMatrix")}}

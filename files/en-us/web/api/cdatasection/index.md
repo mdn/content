@@ -1,6 +1,7 @@
 ---
 title: CDATASection
 slug: Web/API/CDATASection
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -15,8 +16,8 @@ as they normally do.
 
 In XML, a CDATA section looks like:
 
-```js
-<![CDATA[ ... ]]>
+```xml
+<![CDATA[ … ]]>
 ```
 
 For example:

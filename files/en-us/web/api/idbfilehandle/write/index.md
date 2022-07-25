@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.write()
 slug: Web/API/IDBFileHandle/write
+page-type: web-api-instance-method
 tags:
   - API
   - Files

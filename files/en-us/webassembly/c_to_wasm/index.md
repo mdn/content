@@ -132,7 +132,7 @@ If you have a function defined in your C code that you want to call as needed fr
 
     > **Note:** We are including the `#ifdef` blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.
 
-2. Now add `html_template/shell_minimal.html` into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).
+2. Now add `html_template/shell_minimal.html` with `\{\{{ SCRIPT }}}` as content into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).
 3. Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with `NO_EXIT_RUNTIME`, which is necessary as otherwise when `main()` exits the runtime would be shut down — necessary for proper C emulation, e.g., atexits are called — and it wouldn't be valid to call compiled code.)
 
     ```bash
@@ -144,22 +144,23 @@ If you have a function defined in your C code that you want to call as needed fr
 6. Add a {{HTMLElement("button")}} element as shown below, just above the first opening `<script type='text/javascript'>` tag.
 
     ```html
-    <button class="mybutton">Run myFunction</button>
+    <button id="mybutton">Run myFunction</button>
     ```
 
 7. Now add the following code at the end of the first {{HTMLElement("script")}} element:
 
     ```js
-    document.querySelector('.mybutton')
-        .addEventListener('click', function() {
-            alert('check console');
-            var result = Module.ccall(
-                'myFunction',  // name of C function
-                null,  // return type
-                null,  // argument types
-                null  // arguments
-            );
-        });
+    document
+      .getElementById("mybutton")
+      .addEventListener("click", () => {
+        alert("check console");
+        const result = Module.ccall(
+          "myFunction",  // name of C function
+          null,  // return type
+          null,  // argument types
+          null,  // arguments
+        );
+      };
     ```
 
 This illustrates how `ccall()` is used to call the exported function.

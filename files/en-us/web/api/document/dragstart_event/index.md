@@ -1,6 +1,7 @@
 ---
 title: 'Document: dragstart event'
 slug: Web/API/Document/dragstart_event
+page-type: web-api-event
 tags:
   - DOM
   - Event
@@ -88,12 +89,12 @@ body {
 #### JavaScript
 
 ```js
-document.addEventListener("dragstart", event => {
+document.addEventListener("dragstart", (event) => {
   // make it half transparent
   event.target.classList.add("dragging");
 });
 
-document.addEventListener("dragend", event => {
+document.addEventListener("dragend", (event) => {
   // reset the transparency
   event.target.classList.remove("dragging");
 });

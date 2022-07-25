@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.setData()
 slug: Web/API/DataTransfer/setData
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -48,7 +49,7 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 {{domxref("DataTransfer.setData","setData()")}} and
 {{domxref("DataTransfer.clearData","clearData()")}} methods.
 
-```js
+```html
 <!DOCTYPE html>
 <html lang=en>
 <title>Examples of DataTransfer's setData(), getData() and clearData()</title>
@@ -84,7 +85,7 @@ function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  // Get the data, which is the id of the drop target
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
  // Clear the drag data cache (for all formats/types)
  ev.dataTransfer.clearData();

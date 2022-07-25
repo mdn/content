@@ -1,6 +1,7 @@
 ---
 title: XRRay.origin
 slug: Web/API/XRRay/origin
+page-type: web-api-instance-property
 tags:
   - API
   - AR

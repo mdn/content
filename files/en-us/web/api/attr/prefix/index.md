@@ -1,6 +1,7 @@
 ---
 title: Attr.prefix
 slug: Web/API/Attr/prefix
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -19,7 +20,7 @@ Also, only the `xml` (for the `xml:lang` attribute), `xlink` (for the `xlink:hre
 
 ## Value
 
-A {{jsxref("String")}} containing the prefix of the namespace the attribute belongs too. If none, it returns `null`.
+A string containing the prefix of the namespace the attribute belongs too. If none, it returns `null`.
 
 ## Example
 
@@ -32,7 +33,7 @@ A {{jsxref("String")}} containing the prefix of the namespace the attribute belo
 <button>Click me for &lt;svg&gt;…</button>
 <button>Click me for &lt;label&gt;…</button>
 <br><br>
-Prefix of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+Prefix of the attribute <code>xml:lang</code>: <output id="result">None.</output>
 ```
 
 ### JavaScript Content

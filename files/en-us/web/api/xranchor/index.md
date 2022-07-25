@@ -1,6 +1,7 @@
 ---
 title: XRAnchor
 slug: Web/API/XRAnchor
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -32,7 +33,7 @@ The **`XRAnchor`** interface creates anchors which keep track of the pose that i
 ```js
 navigator.xr.requestSession("immersive-ar", {
   requireFeatures: ["anchors"],
-}
+});
 ```
 
 ### Adding anchors
@@ -45,7 +46,7 @@ frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
   // Do stuff with the anchor (assign objects that will be relative to this anchor)
 
 }, (error) => {
-  console.error("Could not create anchor: "" + error);
+  console.error(`Could not create anchor: ${error}`);
 });
 ```
 

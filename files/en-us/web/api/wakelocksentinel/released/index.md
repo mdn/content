@@ -1,6 +1,7 @@
 ---
 title: WakeLockSentinel.released
 slug: Web/API/WakeLockSentinel/released
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only

@@ -1,6 +1,7 @@
 ---
 title: Screen.availLeft
 slug: Web/API/Screen/availLeft
+page-type: web-api-instance-property
 tags:
   - API
   - API:Mozilla Extensions

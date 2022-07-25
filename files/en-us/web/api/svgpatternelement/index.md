@@ -1,6 +1,7 @@
 ---
 title: SVGPatternElement
 slug: Web/API/SVGPatternElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

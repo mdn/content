@@ -1,6 +1,7 @@
 ---
 title: SVG API
 slug: Web/API/SVG_API
+page-type: web-api-overview
 tags:
   - API
   - SVG

@@ -1,6 +1,7 @@
 ---
 title: Writing a WebSocket server in Java
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
+page-type: guide
 tags:
   - HTML5
   - Handshaking
@@ -49,7 +50,7 @@ public class WebSocket {
   public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
     ServerSocket server = new ServerSocket(80);
     try {
-      System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection...");
+      System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection…");
       Socket client = server.accept();
       System.out.println("A client connected.");
 ```

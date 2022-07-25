@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.target
 slug: Web/API/HTMLFormElement/target
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

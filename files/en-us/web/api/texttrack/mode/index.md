@@ -1,6 +1,7 @@
 ---
 title: TextTrack.mode
 slug: Web/API/TextTrack/mode
+page-type: web-api-instance-property
 tags:
   - Accessibility
   - NeedsExample
@@ -22,13 +23,6 @@ and you can change this value to switch modes.
 Safari additionally requires the **`default`**
 boolean attribute to be set to true when implementing your own video player controls in
 order for the subtitles cues to be shown.
-
-## Syntax
-
-```js
-let mode = textTrack.mode;
-textTrack.mode = a;
-```
 
 ### Value
 
@@ -94,7 +88,7 @@ finished, the video automatically pauses playback. This is done by setting the
 `mode` to `showing`.
 
 ```js
-window.addEventListener("load", event => {
+window.addEventListener("load", (event) => {
   let trackElem = document.querySelector("track");
   let track = trackElem.track;
 

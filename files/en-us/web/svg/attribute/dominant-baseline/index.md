@@ -90,11 +90,11 @@ text {
     If the computed {{SVGAttr("baseline-shift")}} value actually shifts the baseline, then the baseline-table font-size component is set to the value of the {{SVGAttr("font-size")}} attribute on the element on which the `dominant-baseline` attribute occurs, otherwise the baseline-table font-size remains the same as that of the element.
 
     If there is no parent text content element, the scaled-baseline-table value is constructed as above for {{SVGElement("text")}} elements.
-- `use-script`{{deprecated_inline}}
+- `use-script` {{deprecated_inline}}
   - : The dominant-baseline and the baseline-table components are set by determining the predominant script of the character data content. The {{SVGAttr("writing-mode")}}, whether horizontal or vertical, is used to select the appropriate set of baseline-tables and the dominant baseline is used to select the baseline-table that corresponds to that baseline. The baseline-table font-size component is set to the value of the {{SVGAttr("font-size")}} attribute on the element on which the `dominant-baseline` attribute occurs.
-- `no-change`{{deprecated_inline}}
+- `no-change` {{deprecated_inline}}
   - : The dominant-baseline, the baseline-table, and the baseline-table font-size remain the same as that of the parent text content element.
-- `reset-size`{{deprecated_inline}}
+- `reset-size` {{deprecated_inline}}
   - : The dominant-baseline and the baseline-table remain the same, but the baseline-table font-size is changed to the value of the {{SVGAttr("font-size")}} attribute on this element. This re-scales the baseline-table for the current {{SVGAttr("font-size")}}.
 - `ideographic`
   - : The baseline-identifier for the dominant-baseline is set to be `ideographic`, the derived baseline-table is constructed using the `ideographic` baseline-table in the font, and the baseline-table font-size is changed to the value of the {{SVGAttr("font-size")}} attribute on this element.

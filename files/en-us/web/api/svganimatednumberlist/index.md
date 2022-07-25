@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedNumberList
 slug: Web/API/SVGAnimatedNumberList
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

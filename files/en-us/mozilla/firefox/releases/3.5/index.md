@@ -99,9 +99,9 @@ tags:
   - : Firefox 3.5 supports mouse gesture events such as trackpad swipes.
 - [The `NodeIterator` object](/en-US/docs/Web/API/NodeIterator)
   - : The `NodeIterator` object provides support for iterating over the list of the nodes in a DOM subtree.
-- [The MozAfterPaint event](/en-US/docs/Gecko-Specific_DOM_Events#MozAfterPaint)
+- [The MozAfterPaint event](/en-US/docs/Gecko-Specific_DOM_Events#mozafterpaint)
   - : This new DOM event is sent after painting updates in windows.
-- [The MozMousePixelScroll event](/en-US/docs/Gecko-Specific_DOM_Events#MozMousePixelScroll)
+- [The MozMousePixelScroll event](/en-US/docs/Gecko-Specific_DOM_Events#mozmousepixelscroll)
   - : This new DOM event allows detection of pixel-based mouse scroll wheel events instead of line-based scroll events.
 
 #### New JavaScript features
@@ -130,7 +130,7 @@ tags:
 
 - [HTML 5 text API for `canvas` elements](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
   - : Canvas elements now support the HTML 5 text API.
-- [Shadow effects in a `canvas`](/en-US/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows)
+- [Shadow effects in a `canvas`](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#shadows)
   - : Canvas shadow effects are now supported.
 - [`createImageData()`](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas#creating_an_imagedata_object)
   - : The canvas method `createImageData()` is now supported, allowing code to specifically create an `ImageData` object instead of requiring it to be done automatically. This can improve performance of other `ImageData` methods by preventing them from having to create the object.
@@ -188,10 +188,10 @@ If you're an extension developer, you should start by reading [Updating extensio
 - The XUL [`textbox`](/en-US/docs/XUL/textbox) widget now offers a [`search`](/en-US/docs/XUL/Attribute/textbox.type) type, for use as search fields.
 - In order to support dragging and dropping tabs between windows, the [`browser`](/en-US/docs/XUL/browser) widget now has a [`swapDocShells()`](/en-US/XUL/Method/SwapDocShells) method.
 - Added the [`level`](/en-US/docs/XUL/Attribute/panel.level) attribute to the [`panel`](/en-US/docs/XUL/panel) element; this specifies whether panels appear on top of other applications, or just on top of the window the panel is contained within.
-- XUL elements now support the `clientHeight`,`clientWidth`,`scrollHeight`, and`scrollWidth`properties.
+- XUL elements now support the `clientHeight`,`clientWidth`,`scrollHeight`, and `scrollWidth` properties.
 - [`keyset`](/en-US/docs/XUL/keyset)s now include a `disabled` attribute.
 - In addition, `keyset`s can now be removed using the node's [`removeChild()`](/en-US/docs/Web/API/Node/removeChild) method.
-- [`mozIStorageStatement`](/en-US/docs/mozIStorageStatement) had the `initialize()` method removed; consumers should use the [`createStatement()`](</en-US/docs/mozIStorageConnection#createStatement()>) method instead to get a new statement object.
+- `mozIStorageStatement` had the `initialize()` method removed; consumers should use the `createStatement()` method instead to get a new statement object.
 - The [Storage](/en-US/docs/Storage) API now offers support for asynchronous requests.
 - The `nsICookie2` interface now exposes the time at which cookies were created in its new `creationTime` attribute.
 - Added a flag to `nsIProtocolHandler` (`URI_IS_LOCAL_RESOURCE`) that is checked during chrome registration to make sure a protocol is allowed to be registered.

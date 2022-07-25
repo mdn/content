@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.validationMessage
 slug: Web/API/HTMLObjectElement/validationMessage
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -22,7 +23,7 @@ constraints.
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

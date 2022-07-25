@@ -8,7 +8,7 @@ tags:
   - Reference
   - Roles
 ---
-ARIA roles provide semantic meaning to content, allowing screen readers and other tools to present and support interaction with object in a way that is consistent with user expectations of that type of object. ARIA roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support.
+ARIA roles provide semantic meaning to content, allowing screen readers and other tools to present and support interaction with object in a way that is consistent with user expectations of that type of object. <abbr>ARIA</abbr> roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support.
 
 By default, many semantic elements in HTML have a role; for example, `<input type="radio">` has the "radio" role. Non-semantic elements in HTML do not have a role; `<div>` and `<span>` without added semantics return *null*. The `role` attribute can provide semantics.
 
@@ -125,11 +125,11 @@ Avoid using [command](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role), [c
 
 > **Note:** Don't use abstract roles in your sites and applications. They are for use by browsers. They are included for reference only.
 
-> **Warning:** "Abstract roles are used for the ontology. Authors **MUST NOT** use abstract roles in content." - The WAI-ARIA specification
+> **Warning:** "Abstract roles are used for the ontology. Authors **MUST NOT** use abstract roles in content." - The <abbr>WAI-ARIA</abbr> specification
 
 ## Roles defined on MDN
 
-The following are the reference pages covering the WAI-ARIA roles discussed on <abbr title="Mozilla Developer Network">MDN</abbr>.
+The following are the reference pages covering the WAI-ARIA roles discussed on <abbr>MDN</abbr>.
 
 {{SubpagesWithSummaries}}
 

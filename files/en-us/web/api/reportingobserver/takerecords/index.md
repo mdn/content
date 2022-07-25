@@ -1,6 +1,7 @@
 ---
 title: ReportingObserver.takeRecords()
 slug: Web/API/ReportingObserver/takeRecords
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -44,7 +45,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 observer.observe()
 
-// ...
+// …
 
 let records = observer.takeRecords();
 console.log(records);

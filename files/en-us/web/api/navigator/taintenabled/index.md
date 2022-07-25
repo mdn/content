@@ -1,6 +1,7 @@
 ---
 title: Navigator.taintEnabled()
 slug: Web/API/Navigator/taintEnabled
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

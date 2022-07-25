@@ -1,6 +1,7 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
+page-type: web-api-global-function
 tags:
   - API
   - Gecko
@@ -36,7 +37,7 @@ setInterval(func)
 setInterval(func, delay)
 setInterval(func, delay, arg0)
 setInterval(func, delay, arg0, arg1)
-setInterval(func, delay, arg0, arg1, /* ... ,*/ argN)
+setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
 ```
 
 ### Parameters
@@ -48,11 +49,11 @@ setInterval(func, delay, arg0, arg1, /* ... ,*/ argN)
     compiled and executed every `delay` milliseconds. This syntax is _not
     recommended_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a
     security risk.
-- `delay`{{optional_inline}}
+- `delay` {{optional_inline}}
   - : The time, in milliseconds (thousandths of a second), the timer should delay in
     between executions of the specified function or code. Defaults to 0 if not specified. See [Delay restrictions](#delay_restrictions)
     below for details on the permitted range of `delay` values.
-- `arg0, ..., argN` {{optional_inline}}
+- `arg0, …, argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by
     _func_ once the timer expires.
 
@@ -159,8 +160,7 @@ See also: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
 
 When you pass a method to `setInterval()` or any other function, it is
 invoked with the wrong [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
-value. This problem is explained in detail in the [JavaScript
-reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+value. This problem is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
 
 ### Explanation
 
@@ -196,7 +196,7 @@ function in the legacy JavaScript.
 
 ### A possible solution
 
-All modern JavaScript runtimes (in browsers and elsewhere) support [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical `this` — allowing us to write `setInterval( () => this.myMethod)` if we're inside the `myArray` method.
+All modern JavaScript runtimes (in browsers and elsewhere) support [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical `this` — allowing us to write `setInterval(() => this.myMethod)` if we're inside the `myArray` method.
 
 If you need to support IE, use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. That lets you easily bypass problems where it's unclear what `this` will be, depending on the context from which your function was called.
 

@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode()
 slug: Web/API/ConvolverNode/ConvolverNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.getLocalCandidates()
 slug: Web/API/RTCIceTransport/getLocalCandidates
+page-type: web-api-instance-method
 tags:
   - API
   - Candidates
@@ -58,8 +59,8 @@ the list.
 ```js
 var localCandidates = pc.getSenders()[0].transport.transport.getLocalCandidates();
 
-localCandidates.forEach(function(candidate, index)) {
-  console.log("Candidate " + index + ": " + candidate.candidate);
+localCandidates.forEach(function(candidate, index) {
+  console.log(`Candidate ${index}: ${candidate.candidate}`);
 });
 ```
 

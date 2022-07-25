@@ -1,6 +1,7 @@
 ---
 title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
+page-type: web-api-instance-property
 tags:
   - API
   - Property

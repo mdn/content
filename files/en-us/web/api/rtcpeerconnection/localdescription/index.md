@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.localDescription
 slug: Web/API/RTCPeerConnection/localDescription
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCPeerConnection
@@ -31,12 +32,10 @@ This example looks at the `localDescription` and displays an alert containing th
 
 ```js
 var pc = new RTCPeerConnection();
-…
+// ...
 var sd = pc.localDescription;
 if (sd) {
-  alert("Local session: type='" +
-        sd.type + "'; sdp description='" +
-        sd.sdp + "'");
+  alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
 }
 else {
   alert("No local session yet.");

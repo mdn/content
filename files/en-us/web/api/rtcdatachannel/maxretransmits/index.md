@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.maxRetransmits
 slug: Web/API/RTCDataChannel/maxRetransmits
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -20,24 +21,12 @@ maximum. This can only be set when the {{domxref("RTCDataChannel")}} is created
 by calling {{domxref("RTCPeerConnection.createDataChannel()")}}, using the
 `maxRetransmits` field in the specified `options`.
 
-## Syntax
-
-```js
-var tries = aDataChannel.maxRetransmits;
-```
-
-### Value
+## Value
 
 The maximum number of times the browser will try to retransmit a message before giving
 up, or `null` if not set when
 {{domxref("RTCPeerConnection.createDataChannel()")}} was called. The default is
 `null`.
-
-## Example
-
-```js
-// TBD
-```
 
 ## Specifications
 

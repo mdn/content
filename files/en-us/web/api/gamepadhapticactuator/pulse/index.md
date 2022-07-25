@@ -1,6 +1,7 @@
 ---
 title: GamepadHapticActuator.pulse()
 slug: Web/API/GamepadHapticActuator/pulse
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: console.dir()
 slug: Web/API/console/dir
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

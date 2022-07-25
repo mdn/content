@@ -25,7 +25,7 @@ WebAssembly.Module.imports(module)
 
 ### Parameters
 
-- _module_
+- `module`
   - : A {{jsxref("WebAssembly.Module")}} object.
 
 ### Return value

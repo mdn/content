@@ -185,7 +185,7 @@ Next, we'll load our binary into a typed array called `addCode` (as described in
 
 ```js
 WebAssembly.instantiateStreaming(fetch('add.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.add(1, 2));  // "3"
   });
 ```
@@ -224,7 +224,7 @@ The JavaScript code to call our above module looks like so:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('call.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.getAnswerPlus1());  // "43"
   });
 ```
@@ -254,14 +254,14 @@ This would look like the following:
 ```js
 var importObject = {
   console: {
-    log: function(arg) {
+    log(arg) {
       console.log(arg);
     }
   }
 };
 
 WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     obj.instance.exports.logIt();
   });
 ```
@@ -356,7 +356,7 @@ var memory = new WebAssembly.Memory({initial:1});
 var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
 WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     obj.instance.exports.writeHi();
   });
 ```
@@ -472,7 +472,7 @@ We load it into a webpage using the following JavaScript:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.callByIndex(0)); // returns 42
     console.log(obj.instance.exports.callByIndex(1)); // returns 13
     console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
@@ -487,7 +487,7 @@ WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
 
 Because JavaScript has full access to function references, the Table object can be mutated from JavaScript using the [`grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) and [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) methods. And WebAssembly code is itself able to manipulate tables using instructions added as part of [Reference types](#reference_types), such as `table.get` and `table.set`.
 
-Because tables are mutable, they can be used to implement sophisticated load-time and run-time [dynamic linking schemes](https://webassembly.org/docs/dynamic-linking). When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled `.dll`s share a single process's address space.
+Because tables are mutable, they can be used to implement sophisticated load-time and run-time [dynamic linking schemes](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled `.dll`s share a single process's address space.
 
 To see this in action, we'll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple [`instantiate()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) calls.
 

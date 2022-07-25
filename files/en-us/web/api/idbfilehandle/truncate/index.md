@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.truncate()
 slug: Web/API/IDBFileHandle/truncate
+page-type: web-api-instance-method
 tags:
   - API
   - Files

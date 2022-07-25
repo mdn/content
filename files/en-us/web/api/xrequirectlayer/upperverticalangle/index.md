@@ -1,6 +1,7 @@
 ---
 title: XREquirectLayer.upperVerticalAngle
 slug: Web/API/XREquirectLayer/upperVerticalAngle
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -33,7 +34,7 @@ const equirectLayer = xrGlBinding.createEquirectLayer({
   viewPixelHeight: 600,
   centralHorizontalAngle: 2 * Math.PI,
   upperVerticalAngle: Math.PI / 2.0,
-  upperVerticalAngle: -Math.PI / 2.0,
+  lowerVerticalAngle: -Math.PI / 2.0,
   radius: 0
 });
 

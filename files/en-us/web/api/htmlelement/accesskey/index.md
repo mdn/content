@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.accessKey
 slug: Web/API/HTMLElement/accessKey
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.accessKey
 ---
 {{APIRef("DOM")}}

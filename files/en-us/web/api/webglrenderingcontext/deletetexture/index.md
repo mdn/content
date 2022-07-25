@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteTexture()
 slug: Web/API/WebGLRenderingContext/deleteTexture
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -41,7 +42,7 @@ var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var texture = gl.createTexture();
 
-// ...
+// …
 
 gl.deleteTexture(texture);
 ```

@@ -1,6 +1,7 @@
 ---
 title: Animation.reverse()
 slug: Web/API/Animation/reverse
+page-type: web-api-instance-method
 tags:
   - API
   - Animation

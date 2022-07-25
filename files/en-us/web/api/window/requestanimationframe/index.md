@@ -1,6 +1,7 @@
 ---
 title: Window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Animations
@@ -96,13 +97,15 @@ function step(timestamp) {
   if (previousTimeStamp !== timestamp) {
     // Math.min() is used here to make sure the element stops at exactly 200px
     const count = Math.min(0.1 * elapsed, 200);
-    element.style.transform = 'translateX(' + count + 'px)';
+    element.style.transform = `translateX(${count}px)`;
     if (count === 200) done = true;
   }
 
   if (elapsed < 2000) { // Stop the animation after 2 seconds
-    previousTimeStamp = timestamp
-    !done && window.requestAnimationFrame(step);
+    previousTimeStamp = timestamp;
+    if (!done) {
+      window.requestAnimationFrame(step);
+    }
   }
 }
 

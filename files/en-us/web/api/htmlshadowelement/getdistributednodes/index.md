@@ -1,6 +1,7 @@
 ---
 title: HTMLShadowElement.getDistributedNodes()
 slug: Web/API/HTMLShadowElement/getDistributedNodes
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

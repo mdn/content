@@ -1,6 +1,7 @@
 ---
 title: AbstractRange
 slug: Web/API/AbstractRange
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -80,11 +81,11 @@ To illustrate this, consider the HTML below:
   </div>
   <article>
     <section class="entry" id="entry1">
-      <h2>Section 1: An interesting thing...</h2>
-      <p>A <em>very</em> interesting thing happened on the way to the forum...</p>
+      <h2>Section 1: An interesting thing…</h2>
+      <p>A <em>very</em> interesting thing happened on the way to the forum…</p>
       <aside class="callout">
         <h2>Aside</h2>
-        <p>An interesting aside to share with you...</p>
+        <p>An interesting aside to share with you…</p>
       </aside>
     </section>
   </article>
@@ -98,7 +99,7 @@ After loading the HTML and constructing the DOM representation of the document, 
 
 In this diagram, the nodes representing HTML elements are shown in green. Eah row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
 
-If you want to create a range that incorporates the contents of the {{HTMLElement("p")}} element whose contents are `"A <em>very</em> interesting thing happened on the way to the forum..."`, you can do so like this:
+If you want to create a range that incorporates the contents of the {{HTMLElement("p")}} element whose contents are `"A <em>very</em> interesting thing happened on the way to the forum…"`, you can do so like this:
 
 ```js
 let pRange = document.createRange();
@@ -107,7 +108,7 @@ pRange.selectNodeContents(document.querySelector("#entry1 p"));
 
 Since we wish to select the entire contents of the `<p>` element, including its descendants, this works perfectly.
 
-If we wish to instead copy the text "An interesting thing..." from the {{HTMLElement("section")}}'s heading (an {{HTMLElement("Heading_Elements", "h2")}} element) through the end of the letters "ve" in the {{HTMLElement("em")}} within the paragraph below it, the following code would work:
+If we wish to instead copy the text "An interesting thing…" from the {{HTMLElement("section")}}'s heading (an {{HTMLElement("Heading_Elements", "h2")}} element) through the end of the letters "ve" in the {{HTMLElement("em")}} within the paragraph below it, the following code would work:
 
 ```html
 let r = document.createRange();
@@ -128,7 +129,7 @@ In this example, the start of the specified range is found within the text node 
 
 The range's end is located below the {{HTMLElement("p")}} element, so that will be needed within the new fragment. So will the text node containing the word "A", since that's included in the range. Finally, an `<em>` and a text node below it will be added below the `<p>` as well.
 
-The contents of the text nodes are then determined by the offsets into those text nodes given when calling {{domxref("Range.setStart", "setStart()")}} and {{domxref("Range.setEnd", "setEnd()")}}. Given the offset of 11 into the heading's text, that node will contain "An interesting thing...". Similarly, the last text node will contain "ve", given the request for the first two characters of the ending node.
+The contents of the text nodes are then determined by the offsets into those text nodes given when calling {{domxref("Range.setStart", "setStart()")}} and {{domxref("Range.setEnd", "setEnd()")}}. Given the offset of 11 into the heading's text, that node will contain "An interesting thing…". Similarly, the last text node will contain "ve", given the request for the first two characters of the ending node.
 
 The resulting document fragment looks like this:
 

@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.encrypt()
 slug: Web/API/SubtleCrypto/encrypt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -38,8 +39,8 @@ encrypt(algorithm, key, data)
 - `key`
   - : A {{domxref("CryptoKey")}} containing the key to be used for encryption.
 - `data`
-  - : A {{domxref("BufferSource")}} containing the data to
-    be encrypted (also known as the {{glossary("plaintext")}}).
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}
+    containing the data to be encrypted (also known as the {{glossary("plaintext")}}).
 
 ### Return value
 

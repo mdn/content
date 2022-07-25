@@ -1,6 +1,7 @@
 ---
 title: MerchantValidationEvent.complete()
 slug: Web/API/MerchantValidationEvent/complete
+page-type: web-api-instance-method
 tags:
   - API
   - Commerce
@@ -49,13 +50,14 @@ This exception may be passed into the rejection handler for the promise:
 In this example, we see the client-side code needed to support merchant validation for a payment request called `payRequest`:
 
 ```js
-payRequest.onmerchantvalidation = event => {
+payRequest.onmerchantvalidation = (event) => {
   const validationDataPromise = getValidationData(event.validationURL);
   event.complete(validationDataPromise);
 }
 
 function getValidationData(url) {
-  /* ...retrieve the validation data from the URL... */
+  // Retrieve the validation data from the URL
+  // …
 }
 ```
 

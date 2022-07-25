@@ -1,6 +1,7 @@
 ---
 title: UserProximityEvent
 slug: Web/API/UserProximityEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

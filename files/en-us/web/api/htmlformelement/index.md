@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
+page-type: web-api-interface
 tags:
   - API
   - Form Element
@@ -24,7 +25,7 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 
 - {{domxref("HTMLFormElement.elements")}} {{ReadOnlyInline}}
   - : A {{domxref("HTMLFormControlsCollection")}} holding all form controls belonging to this form element.
-- {{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}
+- {{domxref("HTMLFormElement.length")}} {{ReadOnlyInline}}
   - : A `long` reflecting the number of controls in the form.
 - {{domxref("HTMLFormElement.name")}}
   - : A string reflecting the value of the form's {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.
@@ -63,7 +64,7 @@ _This interface also inherits methods from its parent, {{domxref("HTMLElement")}
 ### Deprecated methods
 
 - {{domxref("HTMLFormElement.requestAutocomplete()")}} {{deprecated_inline}}
-  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be {{event("autocomplete")}} when the fields have been filled or {{event("autocompleteerror")}} when there was a problem.
+  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be `autocomplete` when the fields have been filled or `autocompleteerror` when there was a problem.
 
 ## Events
 
@@ -159,11 +160,11 @@ Extract information from a `<form>` element and set some of its attributes:
 <script>
   function getFormInfo(){
     // Get a reference to the form via its name
-    var f = document.forms["formA"];
+    const f = document.forms["formA"];
     // The form properties we're interested in
-    var properties = [ 'elements', 'length', 'name', 'charset', 'action', 'acceptCharset', 'action', 'enctype', 'method', 'target' ];
+    const properties = [ 'elements', 'length', 'name', 'charset', 'action', 'acceptCharset', 'action', 'enctype', 'method', 'target' ];
     // Iterate over the properties, turning them into a string that we can display to the user
-    var info = properties.map(function(property) { return property + ": " + f[property] }).join("\n");
+    const info = properties.map(function(property) { return property + ": " + f[property] }).join("\n");
 
     // Set the form's <textarea> to display the form's properties
     document.forms["formA"].elements['form-info'].value = info; // document.forms["formA"]['form-info'].value would also work

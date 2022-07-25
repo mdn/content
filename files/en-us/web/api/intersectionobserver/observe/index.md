@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
+page-type: web-api-instance-method
 tags:
   - API
   - Intersection Observer
@@ -49,8 +50,8 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Register IntersectionObserver
-const io = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     // Add 'active' class if observation target is inside viewport
     if (entry.intersectionRatio > 0) {
       entry.target.classList.add('active');

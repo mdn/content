@@ -1,6 +1,7 @@
 ---
 title: 'Element: beforescriptexecute event'
 slug: Web/API/Element/beforescriptexecute_event
+page-type: web-api-event
 tags:
   - DOM
   - Non-standard

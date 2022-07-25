@@ -1,6 +1,7 @@
 ---
 title: AudioListener
 slug: Web/API/AudioListener
+page-type: web-api-interface
 tags:
   - API
   - AudioListener

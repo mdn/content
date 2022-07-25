@@ -1,6 +1,7 @@
 ---
 title: HTMLTimeElement.dateTime
 slug: Web/API/HTMLTimeElement/dateTime
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: XRLightProbe
 slug: Web/API/XRLightProbe
+page-type: web-api-interface
 tags:
   - API
   - Interface

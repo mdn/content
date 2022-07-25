@@ -131,19 +131,19 @@ For methods with a callback function, the syntax for arrow functions, functions,
 
 ```js
 // Arrow function
-filter((currentValue) => { /* ... */ } )
-filter((currentValue, index) => { /* ... */ } )
-filter((currentValue, index, array) => { /* ... */ } )
+filter((currentValue) => { /* … */ } )
+filter((currentValue, index) => { /* … */ } )
+filter((currentValue, index, array) => { /* … */ } )
 
 // Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function(currentValue) { /* ... */ })
-filter(function(currentValue, index) { /* ... */ })
-filter(function(currentValue, index, array){ /* ... */ })
-filter(function(currentValue, index, array) { /* ... */ }, thisArg)
+filter(function(currentValue) { /* … */ })
+filter(function(currentValue, index) { /* … */ })
+filter(function(currentValue, index, array){ /* … */ })
+filter(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ##### Syntax for arbitrary number of parameters
@@ -153,7 +153,7 @@ For methods that accept an arbitrary number of parameters, the syntax block is w
 ```js
 unshift(element0)
 unshift(element0, element1)
-unshift(element0, element1, /* ... ,*/ elementN)
+unshift(element0, element1, /* … ,*/ elementN)
 ```
 
 #### Parameters section
@@ -291,4 +291,4 @@ SVG attribute reference pages also do not include syntax sections.
 
 ## See also
 
-- [Markdown in MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks)
+- [Markdown in MDN](/en-US/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks)

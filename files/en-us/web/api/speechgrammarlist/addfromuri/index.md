@@ -1,6 +1,7 @@
 ---
 title: SpeechGrammarList.addFromURI()
 slug: Web/API/SpeechGrammarList/addFromURI
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

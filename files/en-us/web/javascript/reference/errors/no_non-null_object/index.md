@@ -14,11 +14,14 @@ somewhere and wasn't provided. {{jsxref("null")}} is not an object and won't wor
 
 ## Message
 
-```js
-TypeError: Invalid descriptor for property {x} (Edge)
-TypeError: "x" is not a non-null object (Firefox)
-TypeError: Property description must be an object: "x" (Chrome)
-TypeError: Invalid value used in weak set (Chrome)
+```
+TypeError: Property description must be an object: x (V8-based)
+TypeError: Property descriptor must be an object, got "x" (Firefox)
+TypeError: Property description must be an object. (Safari)
+
+TypeError: Invalid value used in weak set (V8-based)
+TypeError: WeakSet value must be an object, got "x" (Firefox)
+TypeError: Attempted to add a non-object value to a WeakSet (Safari)
 ```
 
 ## Error type
@@ -53,13 +56,13 @@ A valid property descriptor object might look like this:
 Object.defineProperty({}, 'key', { value: 'foo', writable: false });
 ```
 
-### `WeakMap` and `WeakSet` objects require object keys
+### WeakMap and WeakSet objects require object keys
 
 {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} objects store object keys. You can't
 use other types as keys.
 
 ```js example-bad
-var ws = new WeakSet();
+const ws = new WeakSet();
 ws.add('foo');
 // TypeError: "foo" is not a non-null object
 ```
@@ -67,7 +70,7 @@ ws.add('foo');
 Use objects instead:
 
 ```js example-good
-ws.add({foo: 'bar'});
+ws.add({ foo: 'bar' });
 ws.add(window);
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: PannerNode.refDistance
 slug: Web/API/PannerNode/refDistance
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode

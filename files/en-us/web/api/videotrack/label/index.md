@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.label
 slug: Web/API/VideoTrack/label
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -41,7 +42,7 @@ only allow certain track kinds through.
 
 ```js
 function getTrackList(el) {
-  var trackList = [];
+  let trackList = [];
   const wantedKinds = [
     "main", "alternative", "commentary"
   ];

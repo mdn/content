@@ -1,6 +1,7 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -62,8 +63,7 @@ insert the value of `location.pathname` into the hash:
 
 ```js
 function reloadPageWithHash() {
-  var initialPage = location.pathname;
-  location.replace('http://example.com/#' + initialPage);
+  location.replace(`http://example.com/#${location.pathname}`);
 }
 ```
 
@@ -71,11 +71,11 @@ function reloadPageWithHash() {
 
 ```js
 function showLoc() {
-  var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
-  for (var sProp in oLocation){
-  aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " + (oLocation[sProp] || "n/a"));
+  const logLines = ["Property (Typeof): Value", `location (${typeof location}): ${location}`];
+  for (let prop in location) {
+    logLines.push(`${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`);
   }
-  alert(aLog.join("\n"));
+  alert(logLines.join("\n"));
 }
 
 // in html: <button onclick="showLoc();">Show location properties</button>
@@ -154,15 +154,22 @@ span.intLink {
 …the same thing but with an animated page scroll:
 
 ```js
-var showBookmark = (function () {
-  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
+const showBookmark = (function () {
+  let _useHash;
+  let _scrollX;
+  let _scrollY;
+  let _nodeX;
+  let _nodeY;
+  let _itFrame;
+  let _scrollId = -1;
+  let _bookMark;
    /*
    * nDuration: the duration in milliseconds of each frame
    * nFrames: number of frames for each scroll
    */
    nDuration = 200, nFrames = 10;
 
-  function _next () {
+  function _next() {
   if (_itFrame > nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
   _isBot = true;
   document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
@@ -180,7 +187,7 @@ var showBookmark = (function () {
   else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
 
   return function (sBookmark, bUseHash) {
-    var oNode = document.querySelector(sBookmark);
+    const oNode = document.querySelector(sBookmark);
   _scrollY = document.documentElement.scrollTop;
   _scrollX = document.documentElement.scrollLeft;
   _bookMark = sBookmark;
@@ -207,4 +214,4 @@ var showBookmark = (function () {
 - A similar information, but attached to the document,
   {{domxref("Document.location")}}.
 - [Manipulating the browser history](/en-US/docs/Web/API/History_API)
-- {{event("hashchange")}}
+- {{domxref("Window/hashchange_event", "hashchange")}}

@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer.url
 slug: Web/API/RTCIceServer/url
+page-type: web-api-instance-property
 tags:
   - Experimental
   - Deprecated
@@ -29,10 +30,10 @@ property instead.
 
 ```js
 var iceServer = {
-                  ...
-                  url = iceServerUrl,
-                  ...
-                };
+  // ...
+  url: iceServerUrl,
+  // ...
+};
 
 var serverUrl = iceServer.url;
 

@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform
 slug: Web/API/XRRigidTransform
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -65,6 +66,7 @@ xrSession.requestReferenceSpace(refSpaceType)
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
         new XRRigidTransform(viewerStartPosition, cubeOrientation));
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
+});
 ```
 
 ## Specifications

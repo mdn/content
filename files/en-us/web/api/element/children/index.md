@@ -1,6 +1,7 @@
 ---
 title: Element.children
 slug: Web/API/Element/children
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

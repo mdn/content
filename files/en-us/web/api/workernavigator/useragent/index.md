@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.userAgent
 slug: Web/API/WorkerNavigator/userAgent
+page-type: web-api-instance-property
 tags:
   - API
   - WorkerNavigator
@@ -48,7 +49,7 @@ several pieces of info. Each of these pieces of info comes from other navigator
 properties which are also settable by the user. Gecko-based browsers comply with the
 following general structure:
 
-```js
+```
 userAgent = appCodeName/appVersion number (Platform; Security; OS-or-CPU;
 Localization; rv: revision-version-number) product/productSub
 Application-Name Application-Name-version

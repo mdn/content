@@ -1,6 +1,7 @@
 ---
 title: RTCRtpEncodingParameters.maxFramerate
 slug: Web/API/RTCRtpEncodingParameters/maxFramerate
+page-type: web-api-instance-property
 tags:
   - API
   - BPS

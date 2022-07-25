@@ -1,6 +1,7 @@
 ---
 title: Request.priority
 slug: Web/API/Request/priority
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -36,8 +37,8 @@ In the following snippet, we create a new request using the
 at a low priority, then save the priority of the request in a variable:
 
 ```js
-var myRequest = new Request('/background-api-call', {priority: 'low'});
-var myPriority = myRequest.priority; // "low"
+const myRequest = new Request('/background-api-call', { priority: 'low' });
+const myPriority = myRequest.priority; // "low"
 ```
 
 ## Specifications

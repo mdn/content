@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.nextNode()
 slug: Web/API/TreeWalker/nextNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -36,7 +37,7 @@ A {{domxref("Node")}} object or `null`.
 var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 var node = treeWalker.nextNode(); // returns the first child of root, as it is the next node in document order

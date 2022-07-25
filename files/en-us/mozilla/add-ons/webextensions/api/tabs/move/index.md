@@ -38,7 +38,7 @@ let moving = browser.tabs.move(
 
   - : `object`. An object that specifies where to move the tab(s).
 
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. The ID of the window to which you want to move the tab(s). If you omit this, then each tab in `tabIds` will be moved to `index` in its current window. If you include this, and `tabIds` contains more than one tab, then the first tab in `tabIds` will be moved to `index`, and the other tabs will follow it in the order given in `tabIds`.
     - `index`
 
@@ -91,7 +91,7 @@ function onError(error) {
 }
 
 function moveMoz(tabs) {
-  let mozTabIds = tabs.map(tabInfo => tabInfo.id);
+  let mozTabIds = tabs.map((tabInfo) => tabInfo.id);
   let moving = browser.tabs.move(mozTabIds, {index: -1});
   moving.then(onMoved, onError);
 }
@@ -114,7 +114,7 @@ function onError(error) {
 }
 
 function moveMoz(tabs) {
-  let mozTabIds = tabs.map(tabInfo => tabInfo.id);
+  let mozTabIds = tabs.map((tabInfo) => tabInfo.id);
   let targetWindow = tabs[0].windowId;
   let moving = browser.tabs.move(mozTabIds, {windowId: targetWindow, index: 0});
   moving.then(onMoved, onError);

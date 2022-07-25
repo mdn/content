@@ -1,6 +1,7 @@
 ---
 title: Trusted Types API
 slug: Web/API/Trusted_Types_API
+page-type: web-api-overview
 tags:
   - API
   - Overview

@@ -21,12 +21,12 @@ A **`FinalizationRegistry`** object lets you request a callback when an object i
 You create the registry passing in the callback:
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
-  // ....
+const registry = new FinalizationRegistry((heldValue) => {
+  // …
 });
 ```
 
-Then you register any objects you want a cleanup callback for by calling the \`register\` method, passing in the object and a \*held value\* for it:
+Then you register any objects you want a cleanup callback for by calling the `register` method, passing in the object and a _held value_ for it:
 
 ```js
 registry.register(theObject, "some value");
@@ -42,7 +42,9 @@ It's common to use the object itself as the unregister token, which is just fine
 
 ```js
 registry.register(theObject, "some value", theObject);
-// ...some time later, if you don't care about `theObject` anymore...
+// …
+
+// some time later, if you don't care about `theObject` anymore unregister it
 registry.unregister(theObject);
 ```
 
@@ -50,7 +52,9 @@ It doesn't have to be the same object, though; it can be a different one:
 
 ```js
 registry.register(theObject, "some value", tokenObject);
-// ...some time later, if you don't care about `theObject` anymore...
+// …
+
+// some time later
 registry.unregister(tokenObject);
 ```
 
@@ -100,8 +104,8 @@ Some notes on cleanup callbacks:
 You create the registry passing in the callback:
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
-  // ....
+const registry = new FinalizationRegistry((heldValue) => {
+  // …
 });
 ```
 

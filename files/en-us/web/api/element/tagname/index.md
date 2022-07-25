@@ -1,6 +1,7 @@
 ---
 title: Element.tagName
 slug: Web/API/Element/tagName
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -46,7 +47,7 @@ inherits from {{domxref("Node")}}.
 ### HTML
 
 ```html
-<span id="born">When I was born...</span>
+<span id="born">When I was born…</span>
 ```
 
 ### JavaScript

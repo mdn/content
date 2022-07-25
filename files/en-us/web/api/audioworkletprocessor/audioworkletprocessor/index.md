@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletProcessor()
 slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -64,8 +65,7 @@ The newly constructed {{domxref("AudioWorkletProcessor")}} instance.
 
 In this example we pass custom options to the
 {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
-observe how a [structured
-clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) of them gets passed to our `AudioWorkletProcessor` constructor.
+observe how a [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) of them gets passed to our `AudioWorkletProcessor` constructor.
 
 First, we need to define a custom {{domxref("AudioWorkletProcessor")}} and register it.
 Note that this should be done in a separate file.
@@ -106,9 +106,9 @@ const testNode = new AudioWorkletNode(audioContext, 'test-processor', {
 
 The console output will be as follows:
 
-```js
+```
 > 1 // AudioWorkletNode options.numberOfInputs set to default
-> Map(2) {1 => "one", 2 => "two"} // A cloned map under someUsefulVariable
+> Map(2) { 1 => "one", 2 => "two" } // A cloned map under someUsefulVariable
 ```
 
 ## Specifications

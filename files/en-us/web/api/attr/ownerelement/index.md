@@ -1,6 +1,7 @@
 ---
 title: Attr.ownerElement
 slug: Web/API/Attr/ownerElement
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -11,7 +12,7 @@ browser-compat: api.Attr.ownerElement
 
 The read-only **`ownerElement`** property of the {{domxref("Attr")}} interface returns the {{domxref("Element")}} the attribute belongs to.
 
-### Value
+## Value
 
 The {{domxref("Element")}} the attribute belongs to, or `null` if the attribute is not linked to an element.
 
@@ -28,7 +29,7 @@ The following example displays the qualified name of the element of the two firs
 <button>Click me for &lt;svg&gt;…</button>
 <button>Click me for &lt;label&gt;…</button>
 <br><br>
-Qualified name of the owner element of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+Qualified name of the owner element of the attribute <code>xml:lang</code>: <output id="result">None.</output>
 ```
 
 ### JavaScript Content

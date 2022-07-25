@@ -1,6 +1,7 @@
 ---
 title: Geolocation
 slug: Web/API/Geolocation
+page-type: web-api-interface
 tags:
   - API
   - Advanced

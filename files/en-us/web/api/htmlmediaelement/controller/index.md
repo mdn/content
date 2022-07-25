@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.controller
 slug: Web/API/HTMLMediaElement/controller
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -17,12 +18,6 @@ The **`HTMLMediaElement.controller`** property represents the media controller a
 ## Value
 
 A `MediaController` object or `null` if no media controller is assigned to the element. The default is `null`.
-
-## Examples
-
-```js
-...
-```
 
 ## Specifications
 

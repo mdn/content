@@ -1,6 +1,7 @@
 ---
 title: 'WebSocket: open event'
 slug: Web/API/WebSocket/open_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -18,9 +19,9 @@ The `open` event is fired when a connection with a `WebSocket` is opened.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('open', event => { })
+addEventListener('open', (event) => { })
 
-onopen = event => { }
+onopen = (event) => { }
 ```
 
 ## Event type

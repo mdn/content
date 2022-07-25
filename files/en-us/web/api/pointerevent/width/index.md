@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.width
 slug: Web/API/PointerEvent/width
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -34,7 +35,7 @@ This example illustrates using the {{domxref("PointerEvent")}} interface's
 ```js
 target.addEventListener("pointerdown", function(ev) {
    // Calculate the contact area
-   var area = ev.width * ev.height;
+   const area = ev.width * ev.height;
  }, false);
 ```
 

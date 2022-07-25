@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: seeking event'
 slug: Web/API/HTMLMediaElement/seeking_event
+page-type: web-api-event
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: Element.ariaDisabled
 slug: Web/API/Element/ariaDisabled
+page-type: web-api-instance-property
 tags:
   - API
   - Property

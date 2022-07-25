@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnectionIceEvent()
 slug: Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

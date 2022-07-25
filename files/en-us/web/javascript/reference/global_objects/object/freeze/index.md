@@ -17,13 +17,9 @@ browser-compat: javascript.builtins.Object.freeze
 ---
 {{JSRef}}
 
-The **`Object.freeze()`** method **freezes** an
-object. A frozen object can no longer be changed; freezing an object prevents new
-properties from being added to it, existing properties from being removed, prevents
-changing the enumerability, configurability, or writability of existing properties, and
-prevents the values of existing properties from being changed. In addition, freezing an
-object also prevents its prototype from being changed. `freeze()` returns the
-same object that was passed in.
+The **`Object.freeze()`** method _freezes_ an object. Freezing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-writable and non-configurable. A frozen object can no longer be changed: new properties cannot be added, existing properties cannot be removed, their enumerability, configurability, writability, or value cannot be changed, and the object's prototype cannot be re-assigned. `freeze()` returns the same object that was passed in.
+
+Freezing an object is the highest integrity level that JavaScript provides.
 
 {{EmbedInteractiveExample("pages/js/object-freeze.html")}}
 
@@ -44,12 +40,9 @@ The object that was passed to the function.
 
 ## Description
 
-Nothing can be added to or removed from the properties set of a frozen object. Any
-attempt to do so will fail, either silently or by throwing a {{jsxref("TypeError")}}
-exception (most commonly, but not exclusively, when in {{jsxref("Strict_mode", "strict
-  mode", "", 1)}}).
+Freezing an object is equivalent to [preventing extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and then changing all existing [properties' descriptors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) to `configurable: false, writable: false`. Nothing can be added to or removed from the properties set of a frozen object. Any attempt to do so will fail, either silently or by throwing a {{jsxref("TypeError")}} exception (most commonly, but not exclusively, when in {{jsxref("Strict_mode", "strict mode", "", 1)}}).
 
-For data properties of a frozen object, values cannot be changed, the writable and
+For data properties of a frozen object, their values cannot be changed since the writable and
 configurable attributes are set to false. Accessor properties (getters and setters) work
 the same (and still give the illusion that you are changing the value). Note that values
 that are objects can still be modified, unless they are also frozen. As an object, an
@@ -59,48 +52,32 @@ be added to or removed from the array.
 `freeze()` returns the same object that was passed into the function. It
 _does not_ create a frozen copy.
 
-In ES5, if the argument to this method is not an object (a primitive), then it will
-cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-it were a frozen ordinary object, and be returned.
-
-```js
-> Object.freeze(1)
-TypeError: 1 is not an object // ES5 code
-
-> Object.freeze(1)
-1                             // ES2015 code
-```
-
-An {{domxref("ArrayBufferView")}} with elements will cause a {{jsxref("TypeError")}},
+A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} with elements will cause a {{jsxref("TypeError")}},
 as they are views over memory and will definitely cause other possible issues:
 
 ```js
-> Object.freeze(new Uint8Array(0)) // No elements
-Uint8Array []
+Object.freeze(new Uint8Array(0)) // No elements
+// Uint8Array []
 
-> Object.freeze(new Uint8Array(1)) // Has elements
-TypeError: Cannot freeze array buffer views with elements
+Object.freeze(new Uint8Array(1)) // Has elements
+// TypeError: Cannot freeze array buffer views with elements
 
-> Object.freeze(new DataView(new ArrayBuffer(32))) // No elements
-DataView {}
+Object.freeze(new DataView(new ArrayBuffer(32))) // No elements
+// DataView {}
 
-> Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // No elements
-Float64Array []
+Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // No elements
+// Float64Array []
 
-> Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // Has elements
-TypeError: Cannot freeze array buffer views with elements
+Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // Has elements
+// TypeError: Cannot freeze array buffer views with elements
 ```
 
-Note that; as the standard three properties (`buf.byteLength`,
+Note that as the standard three properties (`buf.byteLength`,
 `buf.byteOffset` and `buf.buffer`) are read-only (as are those of
 an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}), there is no reason for
 attempting to freeze these properties.
 
-### Comparison to Object.seal()
-
-Objects sealed with {{jsxref("Object.seal()")}} can have their existing properties
-changed. Existing properties in objects frozen with `Object.freeze()` are
-made immutable.
+Unlike {{jsxref("Object.seal()")}}, existing properties in objects frozen with `Object.freeze()` are made immutable and data properties cannot be re-assigned.
 
 ## Examples
 

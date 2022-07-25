@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.remove()
 slug: Web/API/SourceBuffer/remove
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

@@ -106,7 +106,7 @@ For further details and a full list of ARIA states and properties see the [`list
 
   , while navigating the list or an alternative model that does require modifier keys to be held while navigating in order to avoid losing selection states.
 
-  - Recommended selection model -- holding modifier keys is not necessary:
+  - Recommended selection model — holding modifier keys is not necessary:
 
     - <kbd>Space</kbd>
 

@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncManager.getTags()
 slug: Web/API/PeriodicSyncManager/getTags
+page-type: web-api-instance-method
 tags:
   - Background Sync
   - Method
@@ -22,7 +23,7 @@ currently registered for periodic syncing.
 ## Syntax
 
 ```js
-var tags = PeriodicSyncManager.getTags();
+getTags()
 ```
 
 ### Parameters
@@ -44,8 +45,8 @@ The following example uses the `getTags()` method to check if a periodic
 sync task with a given tag is registered.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
-  registration.periodicSync.getTags().then(tags => {
+navigator.serviceWorker.ready.then((registration) => {
+  registration.periodicSync.getTags().then((tags) => {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
   });
@@ -64,7 +65,5 @@ navigator.serviceWorker.ready.then(registration => {
 
 ## See also
 
-- [Richer offline experiences with
-  the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
-- [A
-  Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

@@ -1,13 +1,14 @@
 ---
 title: Element Timing API
 slug: Web/API/Element_timing_API
+page-type: web-api-overview
 tags:
   - API
   - ElementTiming
   - Performance
   - Overview
   - Reference
-spec-urls: https://wicg.github.io/element-timing/
+browser-compat: api.PerformanceElementTiming
 ---
 {{DefaultAPISidebar("Element Timing")}}
 
@@ -17,7 +18,7 @@ The **Element Timing API** provides features for monitoring the loading performa
 
 The aim of the Element Timing API is to give web developers or analytics tools the ability to measure rendering timestamps of critical elements on a page.
 
-The API supports timing information on {{htmlelement("img")}} elements, {{SVGElement("image")}} elements inside an {{htmlelement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and groups of text nodes, such as a {{htmlelement("p")}}.
+The API supports timing information on {{htmlelement("img")}} elements, {{SVGElement("image")}} elements inside an {{SVGElement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and groups of text nodes, such as a {{htmlelement("p")}}.
 
 The author flags an element for observation by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute on the element.
 
@@ -52,9 +53,7 @@ observer.observe({ entryTypes: ["element"] });
 
 ## Browser compatibility
 
-### PerformanceElementTiming
-
-{{Compat("api.PerformanceElementTiming")}}
+{{Compat}}
 
 ## See also
 

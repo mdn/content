@@ -1,6 +1,7 @@
 ---
 title: 'HTMLDetailsElement: toggle event'
 slug: Web/API/HTMLDetailsElement/toggle_event
+page-type: web-api-event
 tags:
   - Event
   - HTMLDetailsElement
@@ -49,13 +50,13 @@ This example logs chapters that are open. Chapters are removed from the log when
 
 ```html
 <aside id="log">
-  <b>Open chapters:</b>
+  <p>Open chapters:</p>
   <div data-id="ch1" hidden>I</div>
   <div data-id="ch2" hidden>II</div>
   <div data-id="ch3" hidden>III</div>
 </aside>
 <section id="summaries">
-  <b>Chapter summaries:</b>
+  <p>Chapter summaries:</p>
   <details id="ch1">
     <summary>Chapter I</summary>
     Philosophy reproves Boethius for the foolishness of his complaints against Fortune. Her very nature is caprice.

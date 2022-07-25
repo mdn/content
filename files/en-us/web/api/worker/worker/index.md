@@ -1,6 +1,7 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

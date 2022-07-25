@@ -1,6 +1,7 @@
 ---
 title: VRPose.linearVelocity
 slug: Web/API/VRPose/linearVelocity
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -38,14 +39,14 @@ function drawVRScene() {
 
   // Retrieve the linear velocity values for use in rendering
   // curFramePose is a VRPose object
-  var curFramePose = frameData.pose;
-  var linVel = curFramePose.linearVelocity;
-  var lvx = linVel[0];
-  var lvy = linVel[1];
-  var lvz = linVel[2];
+  const curFramePose = frameData.pose;
+  const linVel = curFramePose.linearVelocity;
+  const lvx = linVel[0];
+  const lvy = linVel[1];
+  const lvz = linVel[2];
 
   // render the scene
-  ...
+  // …
 
   // WebVR: submit the rendered frame to the VR display
   vrDisplay.submitFrame();

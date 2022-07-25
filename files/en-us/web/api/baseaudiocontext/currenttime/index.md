@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
+page-type: web-api-instance-property
 tags:
   - API
   - AudioContext
@@ -28,7 +29,7 @@ var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
-...
+// …
 
 console.log(audioCtx.currentTime);
 ```
@@ -46,14 +47,14 @@ audioCtx.currentTime;
 // 23.404
 // 24.192
 // 25.514
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 audioCtx.currentTime;
 // 49.8
 // 50.6
 // 51.7
-// ...
+// …
 ```
 
 In Firefox, you can also enabled `privacy.resistFingerprinting`, the

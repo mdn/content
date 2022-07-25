@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.rows
 slug: Web/API/HTMLTableElement/rows
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

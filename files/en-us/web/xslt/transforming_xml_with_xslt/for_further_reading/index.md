@@ -107,11 +107,3 @@ tags:
   - **Archives**: <https://www.biglist.com/lists/xsl-list/archives/>
 
     - The XSL-List is a very active general mailing list, hosted by [Mulberry Technologies](https://mulberrytech.com/)
-
-<!---->
-
-- **mozilla.dev.tech.xslt**
-
-  - **Google Groups**: <https://groups.google.com/g/mozilla.dev.tech.xslt>
-
-    - This is a newsgroup that discusses Netscape-specific XSLT issues.

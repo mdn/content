@@ -68,7 +68,7 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
 
 - `'<hash-algorithm>-<base64-value>'`
   - : A sha256, sha384 or sha512 hash of scripts or styles.
-    The use of this source consists of two portions separated by a dash: the encryption algorithm used to create the hash and the base64-encoded hash of the script or style.
+    The use of this source consists of two portions separated by a dash: the algorithm used to create the hash and the base64-encoded hash of the script or style.
     When generating the hash, don't include the \<script> or \<style> tags and note that capitalization and whitespace matter, including leading or trailing whitespace.
     See [unsafe inline script](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) for an example.
     In CSP 2.0, this is applied only to inline scripts. CSP 3.0 allows it in the case of `script-src` for external scripts.

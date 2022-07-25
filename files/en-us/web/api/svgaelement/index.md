@@ -1,6 +1,7 @@
 ---
 title: SVGAElement
 slug: Web/API/SVGAElement
+page-type: web-api-interface
 tags:
   - API
   - Reference

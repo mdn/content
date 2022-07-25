@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.blitFramebuffer()
 slug: Web/API/WebGL2RenderingContext/blitFramebuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

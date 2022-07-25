@@ -1,6 +1,7 @@
 ---
 title: Using the Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
+page-type: guide
 tags:
   - API
   - Advanced
@@ -135,9 +136,9 @@ Creating a notification is easy; just use the {{domxref("Notification")}} constr
 For example, in the to-do-list example we use the following snippet to create a notification when required (found inside the `createNotification()` function):
 
 ```js
-var img = '/to-do-notifications/img/icon-128.png';
-var text = 'HEY! Your task "' + title + '" is now overdue.';
-var notification = new Notification('To do list', { body: text, icon: img });
+const img = '/to-do-notifications/img/icon-128.png';
+const text = `HEY! Your task "${title}" is now overdue.`;
+const notification = new Notification('To do list', { body: text, icon: img });
 ```
 
 ## Closing notifications
@@ -145,7 +146,7 @@ var notification = new Notification('To do list', { body: text, icon: img });
 Used {{domxref("Notification.close","close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.
 
 ```js
-var n = new Notification('My Great Song');
+const n = new Notification('My Great Song');
 document.addEventListener('visibilitychange', function() {
   if (document.visibilityState === 'visible') {
     // The tab has become visible so clear the now-stale Notification.
@@ -191,7 +192,7 @@ It's possible to handle multiple notifications this way:
 
 ```js
 window.addEventListener('load', function () {
-  var button = document.getElementsByTagName('button')[0];
+  const button = document.getElementsByTagName('button')[0];
 
   if (window.self !== window.top) {
     // Ensure that if our document is in a frame, we get the user
@@ -206,11 +207,11 @@ window.addEventListener('load', function () {
     // If the user agreed to get notified
     // Let's try to send ten notifications
     if (window.Notification && Notification.permission === "granted") {
-      var i = 0;
+      let i = 0;
       // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-      var interval = window.setInterval(function () {
+      const interval = window.setInterval(function () {
         // Thanks to the tag, we should only see the "Hi! 9" notification
-        var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+        const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
         if (i++ == 9) {
           window.clearInterval(interval);
         }
@@ -224,11 +225,11 @@ window.addEventListener('load', function () {
       Notification.requestPermission(function (status) {
         // If the user said okay
         if (status === "granted") {
-          var i = 0;
+          let i = 0;
           // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-          var interval = window.setInterval(function () {
+          const interval = window.setInterval(function () {
             // Thanks to the tag, we should only see the "Hi! 9" notification
-            var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+            const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
             if (i++ == 9) {
               window.clearInterval(interval);
             }

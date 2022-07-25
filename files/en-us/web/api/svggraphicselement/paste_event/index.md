@@ -1,13 +1,14 @@
 ---
 title: 'SVGGraphicsElement: paste event'
 slug: Web/API/SVGGraphicsElement/paste_event
+page-type: web-api-event
 tags:
   - API
   - Event
   - Reference
   - SVG
   - SVG OM
-browser-compat: api.SVGGraphicsElement.paste_event
+browser-compat: api.Element.paste_event
 ---
 {{APIRef}}
 
@@ -73,7 +74,7 @@ input {
 ### JavaScript
 
 ```js
-document.getElementById("element-to-paste-text").addEventListener("paste", evt => {
+document.getElementById("element-to-paste-text").addEventListener("paste", (evt) => {
   evt.target.textContent = evt.clipboardData.getData("text/plain").toUpperCase();
   evt.preventDefault();
 });

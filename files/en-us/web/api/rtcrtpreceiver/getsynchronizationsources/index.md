@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.getSynchronizationSources()
 slug: Web/API/RTCRtpReceiver/getSynchronizationSources
+page-type: web-api-instance-method
 tags:
   - API
   - Media

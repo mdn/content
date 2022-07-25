@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.sctp
 slug: Web/API/RTCPeerConnection/sctp
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCPeerConnection

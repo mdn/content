@@ -1,6 +1,7 @@
 ---
 title: VRDisplayEvent.display
 slug: Web/API/VRDisplayEvent/display
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -27,7 +28,7 @@ A {{domxref("VRDisplay")}} object.
 
 ```js
 window.addEventListener('vrdisplaypresentchange', function(e) {
-    console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
+    console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
   })
 ```
 

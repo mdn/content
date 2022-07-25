@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteProgram()
 slug: Web/API/WebGLRenderingContext/deleteProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -40,7 +41,7 @@ var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var program = gl.createProgram();
 
-// ...
+// …
 
 gl.deleteProgram(program);
 ```

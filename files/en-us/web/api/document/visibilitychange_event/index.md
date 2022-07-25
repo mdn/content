@@ -1,6 +1,7 @@
 ---
 title: 'Document: visibilitychange event'
 slug: Web/API/Document/visibilitychange_event
+page-type: web-api-event
 tags:
   - API
   - Document
@@ -22,9 +23,9 @@ The event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('visibilitychange', event => { });
+addEventListener('visibilitychange', (event) => { });
 
-onvisibilitychange = event => { };
+onvisibilitychange = (event) => { };
 ```
 
 ## Event type

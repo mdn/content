@@ -1,6 +1,7 @@
 ---
 title: Managing screen orientation
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
+page-type: guide
 tags:
   - API
   - Advanced
@@ -145,7 +146,7 @@ The {{domxref("Window.orientationchange_event", "orientationchange")}} event is 
 
 ```js
 screen.addEventListener("orientationchange", function () {
-  console.log("The orientation of the screen is: " + screen.orientation);
+  console.log(`The orientation of the screen is: ${screen.orientation}`);
 });
 ```
 

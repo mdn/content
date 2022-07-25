@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule.cssRules
 slug: Web/API/CSSKeyframesRule/cssRules
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

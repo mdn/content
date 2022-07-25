@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isShader()
 slug: Web/API/WebGLRenderingContext/isShader
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -38,7 +39,7 @@ var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var shader = gl.createShader(gl.VERTEX_SHADER);
 
-// ...
+// …
 
 gl.isShader(shader);
 ```

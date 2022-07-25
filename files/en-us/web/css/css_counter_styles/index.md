@@ -8,7 +8,10 @@ tags:
   - NeedsContent
   - Overview
   - Reference
-spec-urls: https://drafts.csswg.org/css-counter-styles/
+browser-compat:
+  - css.at-rules.counter-style
+  - css.properties.counter-increment
+  - css.properties.counter-reset
 ---
 {{CSSRef}}
 
@@ -50,14 +53,4 @@ spec-urls: https://drafts.csswg.org/css-counter-styles/
 
 ## Browser compatibility
 
-### `@counter-style` rule
-
-{{Compat("css.at-rules.counter-style")}}
-
-### `counter-increment` property
-
-{{Compat("css.properties.counter-increment")}}
-
-### `counter-reset` property
-
-{{Compat("css.properties.counter-reset")}}
+{{Compat}}

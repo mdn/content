@@ -1,6 +1,7 @@
 ---
 title: Response.text()
 slug: Web/API/Response/text
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -39,25 +40,25 @@ When `getData()` is run, we create a new request using the {{domxref("Request.Re
 When the fetch is successful, we read a string out of the response using `text()`, then set the {{domxref("Element.innerHTML","innerHTML")}} of the {{htmlelement("article")}} element equal to the text object.
 
 ```js
-let myArticle = document.querySelector('article');
-let myLinks = document.querySelectorAll('ul a');
+const myArticle = document.querySelector('article');
+const myLinks = document.querySelectorAll('ul a');
 
-for(let i = 0; i <= myLinks.length-1; i++) {
-  myLinks[i].onclick = function(e) {
+for (const link of myLinks) {
+  link.onclick = (e) => {
     e.preventDefault();
-    let linkData = e.target.getAttribute('data-page');
+    const linkData = e.target.getAttribute('data-page');
     getData(linkData);
-  }
-};
+  };
+}
 
 function getData(pageId) {
   console.log(pageId);
-  var myRequest = new Request(pageId + '.txt');
-  fetch(myRequest).then(function(response) {
-    return response.text().then(function(text) {
+  const myRequest = new Request(`${pageId}.txt`);
+  fetch(myRequest)
+    .then((response) => response.text())
+    .then((text) => {
       myArticle.innerHTML = text;
     });
-  });
 }
 ```
 

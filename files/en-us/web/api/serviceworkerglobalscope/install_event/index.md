@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: install event'
 slug: Web/API/ServiceWorkerGlobalScope/install_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -21,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('install', event => { });
+addEventListener('install', (event) => { });
 
-oninstall = event => { };
+oninstall = (event) => { };
 ```
 
 ## Event type
@@ -65,7 +66,7 @@ You can also set up the event handler using the `oninstall` property:
 
 ```js
 globalScope.oninstall = function(event) {
-  ...
+  // ...
 };
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic
 slug: Web/API/BluetoothRemoteGATTCharacteristic
+page-type: web-api-interface
 tags:
   - API
   - Bluetooth
@@ -19,13 +20,13 @@ The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en
 
 ## Properties
 
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.service")}}{{ReadOnlyInline}}
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.service")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("BluetoothRemoteGATTService")}} this characteristic belongs to.
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.uuid")}}{{ReadOnlyInline}}
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.uuid")}} {{ReadOnlyInline}}
   - : Returns a string containing the UUID of the characteristic, for example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate Measurement characteristic.
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}}{{ReadOnlyInline}}
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}} {{ReadOnlyInline}}
   - : Returns the properties of this characteristic.
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.value")}}{{ReadOnlyInline}}
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.value")}} {{ReadOnlyInline}}
   - : The currently cached characteristic value. This value gets updated when the value of the characteristic is read or updated via a notification or indication.
 
 ### Events

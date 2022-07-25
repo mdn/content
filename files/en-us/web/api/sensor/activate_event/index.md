@@ -1,6 +1,7 @@
 ---
 title: 'Sensor: activate event'
 slug: Web/API/Sensor/activate_event
+page-type: web-api-event
 tags:
   - API
   - Generic Sensor API
@@ -23,9 +24,9 @@ on one of the [derived classes](/en-US/docs/Web/API/Sensor#interfaces_based_on_s
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('activate', event => { })
+addEventListener('activate', (event) => { })
 
-onactivate = event => { }
+onactivate = (event) => { }
 ```
 
 ## Event type

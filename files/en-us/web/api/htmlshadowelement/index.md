@@ -1,6 +1,7 @@
 ---
 title: HTMLShadowElement
 slug: Web/API/HTMLShadowElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

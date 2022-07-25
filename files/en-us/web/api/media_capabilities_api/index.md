@@ -1,6 +1,7 @@
 ---
 title: Media Capabilities API
 slug: Web/API/Media_Capabilities_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -31,14 +32,13 @@ if ('mediaCapabilities' in navigator) {
     }
   };
 
-  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then(result => {
-    console.log('This configuration is ' +
-        (result.supported ? '' : 'not ') + 'supported, ' +
-        (result.smooth ? '' : 'not ') + 'smooth, and ' +
-        (result.powerEfficient ? '' : 'not ') + 'power efficient.')
+  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then((result) => {
+    console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
+    console.log(`${result.smooth ? '' : 'not '}smooth, and`);
+    console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
     })
     .catch(() => {
-      console.log("decodingInfo error: " + contentType)
+      console.log(`decodingInfo error: ${contentType}`)
     });
 }
 ```

@@ -125,7 +125,7 @@ or
 > **Note:** An unnamed {{HTMLElement("slot")}} will be filled with all of the custom element's top-level child nodes that do not have the {{htmlattrxref("slot")}} attribute. This includes text nodes.
 
 And that's it for our trivial example.
-If you want to play with it some more, you can [find it on GitHub](https://github.com/mdn/web-components-examples/tree/master/simple-template) (see it [running live](https://mdn.github.io/web-components-examples/simple-template/) also).
+If you want to play with it some more, you can [find it on GitHub](https://github.com/mdn/web-components-examples/tree/main/simple-template) (see it [running live](https://mdn.github.io/web-components-examples/simple-template/) also).
 
 ## A more involved example
 
@@ -141,7 +141,7 @@ However, it is generally more practical to add slots within a {{HTMLElement("tem
 
 In addition, even if it is not already rendered, the purpose of the container as a template should be more semantically clear when using the {{HTMLElement("template")}}. In addition, {{HTMLElement("template")}} can have items directly added to it, like {{HTMLElement("td")}}, which would disappear when added to a {{HTMLElement("div")}}.
 
-> **Note:** You can find this complete example at [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/) also).
+> **Note:** You can find this complete example at [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/) also).
 
 ### Creating a template with some slots
 
@@ -163,7 +163,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
     <summary>
       <span>
         <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
-        <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+        <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
       </span>
     </summary>
     <div class="attributes">

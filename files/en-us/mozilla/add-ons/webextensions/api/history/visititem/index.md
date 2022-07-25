@@ -25,7 +25,7 @@ Values of this type are objects. They contain the following properties:
   - : `string`. The unique identifier for the {{WebExtAPIRef("history.HistoryItem")}} associated with this visit.
 - `visitId`
   - : `string`. The unique identifier for this visit.
-- `visitTime`{{optional_inline}}
+- `visitTime` {{optional_inline}}
   - : `number`. When this visit occurred, represented in milliseconds since the epoch.
 - `referringVisitId`
   - : `string`. The visit ID of the referrer.

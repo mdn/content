@@ -1,6 +1,7 @@
 ---
 title: TimeRanges.start()
 slug: Web/API/TimeRanges/start
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

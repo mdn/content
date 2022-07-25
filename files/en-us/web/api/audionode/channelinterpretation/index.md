@@ -1,6 +1,7 @@
 ---
 title: AudioNode.channelInterpretation
 slug: Web/API/AudioNode/channelInterpretation
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode

@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder.completed
 slug: Web/API/ImageDecoder/completed
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,9 +10,9 @@ tags:
   - ImageDecoder
 browser-compat: api.ImageDecoder.completed
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}
 
-The **`completed`** read-only property of the {{domxref("ImageDecoder")}} interface returns a promise that resolves once the data has finished buffering.
+The **`completed`** read-only property of the {{domxref("ImageDecoder")}} interface returns a promise that resolves once encoded data has finished buffering.
 
 ## Value
 

@@ -1,6 +1,7 @@
 ---
 title: BiquadFilterNode
 slug: Web/API/BiquadFilterNode
+page-type: web-api-interface
 tags:
   - API
   - BiquadFilterNode

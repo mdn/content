@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserver.supportedEntryTypes
 slug: Web/API/PerformanceObserver/supportedEntryTypes
+page-type: web-api-instance-property
 tags:
   - API
   - Property

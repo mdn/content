@@ -1,6 +1,7 @@
 ---
 title: Generating HTML
 slug: Web/API/XSLTProcessor/Generating_HTML
+page-type: guide
 ---
 ## Generating HTML
 
@@ -36,7 +37,7 @@ The XSL Stylesheet used will need to have two namespaces - one for the XSLT elem
                           xmlns:myNS="http://devedge.netscape.com/2002/de">
 
   <xsl:output method="html"/>
-  ...
+  …
 </xsl:stylesheet version="1.0">
 ```
 
@@ -45,7 +46,7 @@ A template matching the root node of the XML document is created and used to cre
 **Figure 4: Creating the basic HTML document**
 
 ```xml
-...
+…
 <xsl:template match="/">
 <html>
 
@@ -79,7 +80,7 @@ A template matching the root node of the XML document is created and used to cre
 
 </html>
 </xsl:template>
-...
+…
 ```
 
 Three more `xsl:template`'s are needed to complete the example. The first `xsl:template` is used for the author nodes, while the second one processes the body node. The third template has a general matching rule which will match any node and any attribute. It is needed in order to preserve the HTML elements in the XML document, since it matches all of them and copies them out into the HTML document the transformation creates.
@@ -87,7 +88,7 @@ Three more `xsl:template`'s are needed to complete the example. The first `xsl:t
 **Figure 5: Final 3 Templates**
 
 ```xml
-...
+…
 <xsl:template match="myNS:Author">
     --   <xsl:value-of select="." />
 
@@ -111,7 +112,7 @@ Three more `xsl:template`'s are needed to complete the example. The first `xsl:t
     <xsl:apply-templates select="@*|node()"/>
   </xsl:copy>
 </xsl:template>
-...
+…
 ```
 
 The final XSLT stylesheet looks as follows:

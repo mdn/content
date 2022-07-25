@@ -45,7 +45,9 @@ p {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:host-context( <compound-selector> )
+```
 
 ## Examples
 
@@ -92,4 +94,4 @@ The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { c
 
 - [Web components](/en-US/docs/Web/Web_Components)
 - {{cssxref(":host")}}
-- {{cssxref(":host", ":host()")}}
+- {{cssxref(":host_function", ":host()")}}

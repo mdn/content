@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.relList
 slug: Web/API/HTMLAreaElement/relList
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -28,14 +29,14 @@ A string.
 ## Examples
 
 ```js
-var areas = document.getElementsByTagName("area");
-var length = areas.length;
+const areas = document.getElementsByTagName("area");
+const length = areas.length;
 
-for (var i = 0; i < length; i++) {
-  var list = areas[i].relList;
-  var listLength = list.length;
+for (let i = 0; i < length; i++) {
+  const list = areas[i].relList;
+  const listLength = list.length;
   console.log("New area found.");
-  for (var j = 0; j < listLength; j++) {
+  for (let j = 0; j < listLength; j++) {
     console.log(list[j]);
   }
 }

@@ -1,6 +1,7 @@
 ---
 title: Starting up and shutting down a WebXR session
 slug: Web/API/WebXR_Device_API/Startup_and_shutdown
+page-type: guide
 tags:
   - 3D
   - API
@@ -79,7 +80,7 @@ Other improvements include updating the emulator to rename the `XR` interface to
 
 ### Context requirements
 
-A WebXR compatible environment starts with a securely-loaded document. Your document needs to either have been loaded from the local drive (such as by using a URL such as `http://localhost/...`), or using {{Glossary("HTTPS")}} when loading the page. The JavaScript code must, likewise, have been loaded securely.
+A WebXR compatible environment starts with a securely-loaded document. Your document needs to either have been loaded from the local drive (such as by using a URL such as `http://localhost/…`), or using {{Glossary("HTTPS")}} when loading the page. The JavaScript code must, likewise, have been loaded securely.
 
 If the document wasn't loaded securely, you won't get very far. The {{domxref("navigator.xr")}} property doesn't even exist if the document wasn't loaded securely. This may also be the case if there is no compatible XR hardware available. Either way, you need to be prepared for the lack of an `xr` property and either gracefully handle the error or provide some form of fallback.
 
@@ -116,8 +117,8 @@ function getXR(usePolyfill) {
   return tempXR;
 }
 
-const xr = getXR("no");  // Get the native XRSystem object
-const xr = getXR("yes"); // Always returns an XRSystem from the polyfill
+const nativeXr = getXR("no");  // Get the native XRSystem object
+const polyfilledXr = getXR("yes"); // Always returns an XRSystem from the polyfill
 const xr = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
 ```
 

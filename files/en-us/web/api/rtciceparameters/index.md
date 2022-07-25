@@ -1,6 +1,7 @@
 ---
 title: RTCIceParameters
 slug: Web/API/RTCIceParameters
+page-type: web-api-interface
 tags:
   - API
   - Candidate

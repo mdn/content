@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.labels
 slug: Web/API/HTMLInputElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -42,7 +43,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

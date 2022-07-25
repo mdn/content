@@ -1,6 +1,7 @@
 ---
 title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

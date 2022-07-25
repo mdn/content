@@ -1,6 +1,7 @@
 ---
 title: PannerNode.orientationX
 slug: Web/API/PannerNode/orientationX
+page-type: web-api-instance-property
 tags:
   - PannerNode
   - Property
@@ -60,7 +61,7 @@ It's more useful to offset the angle by -90°, which means the {{domxref("Panner
 ```js
 // this utility converts amount of rotation around the Y axis
 // (i.e. rotation in the 'horizontal plane') to an orientation vector
-const yRotationToVector = degrees => {
+const yRotationToVector = (degrees) => {
   // convert degrees to radians and offset the angle so 0 points towards the listener
   const radians = (degrees - 90) * (Math.PI / 180);
   // using cosine and sine here ensures the output values are always normalized
@@ -149,6 +150,5 @@ osc.start(0);
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

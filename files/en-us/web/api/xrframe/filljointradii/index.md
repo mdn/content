@@ -1,6 +1,7 @@
 ---
 title: XRFrame.fillJointRadii()
 slug: Web/API/XRFrame/fillJointRadii
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -34,7 +35,7 @@ A boolean indicating if all of the spaces have a valid pose.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  -: Thrown if the length of `jointSpaces` is larger than the number of elements in `radii`.
+  - : Thrown if the length of `jointSpaces` is larger than the number of elements in `radii`.
 
 ## Examples
 

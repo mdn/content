@@ -1,6 +1,7 @@
 ---
 title: PictureInPictureWindow
 slug: Web/API/PictureInPictureWindow
+page-type: web-api-interface
 tags:
   - API
   - Advanced
@@ -56,7 +57,7 @@ function printPipWindowDimensions(evt) {
 }
 
 button.onclick = function() {
-  video.requestPictureInPicture().then(pictureInPictureWindow => {
+  video.requestPictureInPicture().then((pictureInPictureWindow) => {
     pictureInPictureWindow.onresize = printPipWindowDimensions;
   });
 };

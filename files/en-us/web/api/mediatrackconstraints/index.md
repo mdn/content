@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
+page-type: web-api-interface
 tags:
   - API
   - Constraints

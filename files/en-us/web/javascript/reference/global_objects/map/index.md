@@ -21,9 +21,9 @@ either a key or a value.
 
 ## Description
 
-A `Map` object iterates its elements in insertion order — a
-{{jsxref("Statements/for...of", "for...of")}} loop returns an
-array of `[key, value]` for each iteration.
+`Map` objects are collections of key-value pairs. A key in the `Map` **may only occur once**; it is unique in the `Map`'s collection. A `Map` object is iterated by key-value pairs — a {{jsxref("Statements/for...of", "for...of")}} loop returns a 2-member array of `[key, value]` for each iteration. Iteration happens in _insertion order_, which corresponds to the order in which each key-value pair was first inserted into the map by the [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) method (that is, there wasn't a key with the same value already in the map when `set()` was called).
+
+The specification requires maps to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
 
 ### Key equality
 

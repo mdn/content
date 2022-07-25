@@ -1,6 +1,7 @@
 ---
 title: AudioBuffer()
 slug: Web/API/AudioBuffer/AudioBuffer
+page-type: web-api-constructor
 tags:
   - API
   - Audio

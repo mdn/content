@@ -1,6 +1,7 @@
 ---
 title: 'AudioTrackList: change event'
 slug: Web/API/AudioTrackList/change_event
+page-type: web-api-event
 tags:
   - API
   - Audio Tracks
@@ -25,9 +26,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('change', event => { })
+addEventListener('change', (event) => { })
 
-onchange = event => { }
+onchange = (event) => { }
 ```
 
 ## Event type

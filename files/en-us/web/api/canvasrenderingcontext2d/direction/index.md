@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

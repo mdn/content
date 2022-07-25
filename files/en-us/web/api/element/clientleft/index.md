@@ -1,6 +1,7 @@
 ---
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -66,7 +67,7 @@ In the following example, the client area has a white background and a 24px blac
 
 ### Result
 
-{{EmbedLiveSample("Example", 400, 350)}}
+{{EmbedLiveSample("Examples", 400, 350)}}
 
 ## Specifications
 

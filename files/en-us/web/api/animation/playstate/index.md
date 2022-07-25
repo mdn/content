@@ -1,6 +1,7 @@
 ---
 title: Animation.playState
 slug: Web/API/Animation/playState
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

@@ -1,6 +1,7 @@
 ---
 title: OTPCredential
 slug: Web/API/OTPCredential
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -37,11 +38,11 @@ The below code triggers the browser's permission flow when an SMS message arrive
 navigator.credentials.get({
   otp: { transport:['sms'] },
   signal: ac.signal
-}).then(otp => {
+}).then((otp) => {
   input.value = otp.code;
   if (form) form.submit();
-}).catch(err => {
-  console.log(err);
+}).catch((err) => {
+  console.error(err);
 });
 ```
 

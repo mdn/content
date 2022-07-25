@@ -1,6 +1,7 @@
 ---
 title: VideoColorSpace.primaries
 slug: Web/API/VideoColorSpace/primaries
+page-type: web-api-instance-property
 tags:
   - API
   - Property

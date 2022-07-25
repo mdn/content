@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaColIndexText
 slug: Web/API/ElementInternals/ariaColIndexText
+page-type: web-api-instance-property
 tags:
   - API
   - Property

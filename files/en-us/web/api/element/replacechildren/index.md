@@ -1,6 +1,7 @@
 ---
 title: Element.replaceChildren()
 slug: Web/API/Element/replaceChildren
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -22,7 +23,7 @@ can be string or {{domxref("Node")}} objects.
 ```js
 replaceChildren(param1)
 replaceChildren(param1, param2)
-replaceChildren(param1, param2, /* ... ,*/ paramN)
+replaceChildren(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

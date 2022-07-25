@@ -62,6 +62,6 @@ Helpful tools and resources for understanding and debugging HTTP.
 - [Mozilla Observatory](https://observatory.mozilla.org/)
   - : A project designed to help developers, system administrators, and security professionals configure their sites safely and securely.
 - [RedBot](https://redbot.org/)
-  - : Tools to check your cache-related headers
+  - : Tools to check your cache-related headers.
 - [How Browsers Work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
   - : A very comprehensive article on browser internals and request flow through HTTP protocol. A MUST-READ for any web developer.

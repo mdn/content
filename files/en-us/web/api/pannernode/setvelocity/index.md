@@ -1,6 +1,7 @@
 ---
 title: PannerNode.setVelocity()
 slug: Web/API/PannerNode/setVelocity
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

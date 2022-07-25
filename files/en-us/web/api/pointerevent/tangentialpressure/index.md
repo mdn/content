@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.tangentialPressure
 slug: Web/API/PointerEvent/tangentialPressure
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

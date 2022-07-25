@@ -9,9 +9,12 @@ tags:
   - Motion
   - Orientation
   - Reference
-spec-urls: https://w3c.github.io/deviceorientation/
+browser-compat:
+  - api.DeviceMotionEvent
+  - api.DeviceOrientationEvent
+
 ---
-{{DefaultAPISidebar("Device Orientation Events")}}
+{{DefaultAPISidebar("Device Orientation Events")}} {{securecontext_header}}
 
 Increasingly, web-enabled devices are capable of determining their **orientation**; that is, they can report data indicating changes to their orientation with relation to the pull of gravity. In particular, hand-held devices such as mobile phones can use this information to automatically rotate the display to remain upright, presenting a wide-screen view of the web content when the device is rotated so that its width is greater than its height.
 
@@ -176,13 +179,7 @@ Finally, {{domxref("DeviceMotionEvent.interval","interval")}} represents the int
 
 ## Browser compatibility
 
-### `DeviceMotionEvent`
-
-{{Compat("api.DeviceMotionEvent")}}
-
-### `DeviceOrientationEvent`
-
-{{Compat("api.DeviceOrientationEvent")}}
+{{Compat}}
 
 ## See also
 

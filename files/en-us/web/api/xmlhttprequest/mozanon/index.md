@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.mozAnon
 slug: Web/API/XMLHttpRequest/mozAnon
+page-type: web-api-instance-property
 tags:
   - API
   - Authentication

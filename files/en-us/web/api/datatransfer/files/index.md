@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.files
 slug: Web/API/DataTransfer/files
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

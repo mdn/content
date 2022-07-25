@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerContainer.startMessages()
 slug: Web/API/ServiceWorkerContainer/startMessages
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -56,10 +57,10 @@ if('serviceWorker' in navigator) {
            .then(function() { console.log('Service Worker Registered'); });
 }
 
-// ...
+// …
 
 navigator.serviceWorker.addEventListener('message', (e) => {
-  // ...
+  // …
 });
 
 navigator.serviceWorker.startMessages();

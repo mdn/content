@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.protocol
 slug: Web/API/HTMLAreaElement/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement

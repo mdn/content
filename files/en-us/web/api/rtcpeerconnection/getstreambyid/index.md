@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getStreamById()
 slug: Web/API/RTCPeerConnection/getStreamById
+page-type: web-api-instance-method
 tags:
   - Method
   - RTCPeerConnection
@@ -27,20 +28,24 @@ stream matches, it returns `null`.
 ## Syntax
 
 ```js
-var mediaStream = pc.getStream(id);
+getStream(id)
 ```
 
 ### Parameters
 
-- _id_
-  - : A {{domxref("DOMString")}} corresponding to the stream to return.
+- `id`
+  - : A string representing the ID of a stream.
+
+### Return value
+
+The {{DOMxRef("MediaStream")}} with the given id.
 
 ## Example
 
 ```js
 var stream = pc.getStreamById(myTrackId);
 if (stream) {
-  console.log("Found stream: " + stream.id);
+  console.log(`Found stream: ${stream.id}`);
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.domContentLoadedEventStart
 slug: Web/API/PerformanceTiming/domContentLoadedEventStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

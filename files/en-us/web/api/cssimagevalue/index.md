@@ -1,6 +1,7 @@
 ---
 title: CSSImageValue
 slug: Web/API/CSSImageValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API

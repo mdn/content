@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback
 slug: Web/API/RemotePlayback
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -16,7 +17,7 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
 
 ## Properties
 
-- {{domxref("RemotePlayback.state")}}{{ReadOnlyInline}}
+- {{domxref("RemotePlayback.state")}} {{ReadOnlyInline}}
 
   - : Represents the `RemotePlayback` connection's state. One of:
 

@@ -1,6 +1,7 @@
 ---
 title: KeyboardLayoutMap.keys
 slug: Web/API/KeyboardLayoutMap/keys
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

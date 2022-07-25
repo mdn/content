@@ -1,6 +1,7 @@
 ---
 title: WEBGL_depth_texture
 slug: Web/API/WEBGL_depth_texture
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -29,7 +30,7 @@ This extension extends {{domxref("WebGLRenderingContext.texImage2D()")}}:
 
 - The `format` and `internalformat` parameters now accept `gl.DEPTH_COMPONENT` and `gl.DEPTH_STENCIL`.
 - The `type` parameter now accepts `gl.UNSIGNED_SHORT`, `gl.UNSIGNED_INT`, and `ext.UNSIGNED_INT_24_8_WEBGL`.
-- The `pixels` parameter now accepts an `ArrayBufferView` of type `Uint16Array` and `Uint32Array`.
+- The `pixels` parameter now accepts a {{jsxref("Uint16Array")}} or a {{jsxref("Uint32Array")}} object.
 
 This extension extends {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}:
 

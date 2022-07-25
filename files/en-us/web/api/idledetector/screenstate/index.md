@@ -1,6 +1,7 @@
 ---
 title: IdleDetector.screenState
 slug: Web/API/IdleDetector/screenState
+page-type: web-api-instance-property
 tags:
   - API
   - Property

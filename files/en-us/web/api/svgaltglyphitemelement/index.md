@@ -1,6 +1,7 @@
 ---
 title: SVGAltGlyphItemElement
 slug: Web/API/SVGAltGlyphItemElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

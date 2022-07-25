@@ -1,6 +1,7 @@
 ---
 title: 'Animation: finish event'
 slug: Web/API/Animation/finish_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -25,8 +26,8 @@ animation to finish up.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('finish', event => { })
-onfinish = event => { }
+addEventListener('finish', (event) => { })
+onfinish = (event) => { }
 ```
 
 ## Event type
@@ -64,7 +65,7 @@ hide(endingUI);
 
 // When the credits are later faded in,
 // we re-add the pointer events when they're done
-bringUI.onfinish = event => {endingUI.style.pointerEvents = 'auto';};
+bringUI.onfinish = (event) => {endingUI.style.pointerEvents = 'auto';};
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: Response
 slug: Web/API/Response
+page-type: web-api-interface
 tags:
   - API
   - Fetch
@@ -75,8 +76,8 @@ You'll notice that since we are requesting an image, we need to run {{domxref("R
 ```js
 const image = document.querySelector('.my-image');
 fetch('flowers.jpg')
-.then(response => response.blob())
-.then(blob => {
+.then((response) => response.blob())
+.then((blob) => {
   const objectURL = URL.createObjectURL(blob);
   image.src = objectURL;
 });

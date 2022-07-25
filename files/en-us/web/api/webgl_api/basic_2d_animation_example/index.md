@@ -1,6 +1,7 @@
 ---
 title: A basic 2D WebGL animation example
 slug: Web/API/WebGL_API/Basic_2D_animation_example
+page-type: guide
 tags:
   - 2D Animation
   - 2D Graphics

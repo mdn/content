@@ -1,6 +1,7 @@
 ---
 title: Window.navigator
 slug: Web/API/Window/navigator
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -57,7 +58,7 @@ if (sUsrAg.indexOf("Firefox") > -1) {
   sBrowser = "unknown";
 }
 
-alert("You are using: " + sBrowser);
+alert(`You are using: ${sBrowser}`);
 ```
 
 ## Specifications

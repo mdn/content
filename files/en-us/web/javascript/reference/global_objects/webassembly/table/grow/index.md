@@ -25,7 +25,7 @@ grow(number)
 
 ### Parameters
 
-- _number_
+- `number`
   - : The number of elements you want to grow the table by.
 
 ### Return value

@@ -1,6 +1,7 @@
 ---
 title: InputDeviceInfo.getCapabilities()
 slug: Web/API/InputDeviceInfo/getCapabilities
+page-type: web-api-instance-method
 tags:
   - API
   - Method

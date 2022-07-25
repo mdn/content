@@ -1,6 +1,7 @@
 ---
 title: PasswordCredential()
 slug: Web/API/PasswordCredential/PasswordCredential
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -66,8 +67,8 @@ a {{domxref("PasswordCredential")}} object, and storing it in the browser's pass
 system.
 
 ```js
-var form = document.querySelector('#form');
-var creds = new PasswordCredential(form);
+const form = document.querySelector('#form');
+const creds = new PasswordCredential(form);
 // Store the credentials.
 navigator.credentials.store(creds)
   .then(function(creds) {

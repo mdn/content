@@ -7,7 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: https://drafts.csswg.org/css-display/#the-display-properties
+browser-compat: css.properties.display
 ---
 {{CSSRef}}
 
@@ -69,8 +69,6 @@ spec-urls: https://drafts.csswg.org/css-display/#the-display-properties
 
 {{Specifications}}
 
-In addition to the CSS Display Specification Level 3, further specifications define the behavior of various values of display.
-
 ## Browser compatibility
 
-{{Compat("css.properties.display", 10)}}
+{{Compat}}

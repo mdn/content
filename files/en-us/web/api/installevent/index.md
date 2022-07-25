@@ -1,6 +1,7 @@
 ---
 title: InstallEvent
 slug: Web/API/InstallEvent
+page-type: web-api-interface
 tags:
   - API
   - InstallEvent
@@ -47,13 +48,13 @@ The code snippet also shows a best practice for versioning caches used by the se
 > **Note:** Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.
 
 ```js
-var CACHE_VERSION = 1;
-var CURRENT_CACHES = {
-  prefetch: 'prefetch-cache-v' + CACHE_VERSION
+const CACHE_VERSION = 1;
+const CURRENT_CACHES = {
+  prefetch: `prefetch-cache-v${CACHE_VERSION}`
 };
 
 self.addEventListener('install', function(event) {
-  var urlsToPrefetch = [
+  const urlsToPrefetch = [
     './static/pre_fetched.txt',
     './static/pre_fetched.html',
     'https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif'

@@ -9,6 +9,8 @@ tags:
   - Web
   - color
   - rgba
+browser-compat:
+  - css.types.color.rgba
 ---
 {{CSSRef}}
 
@@ -31,10 +33,10 @@ rgba(255 255 255 / 0.5); /* CSS Colors 4 space-separated values */
 - Functional notation: `rgba(R G B[ / A])`
   - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
-{{Compat("css.types.color.alpha")}}
-
-### Space-separated values
-
-{{Compat("css.types.color.space_separated_functional_notation")}}
+{{Compat}}

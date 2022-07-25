@@ -1,6 +1,7 @@
 ---
 title: XRSession.requestHitTestSource()
 slug: Web/API/XRSession/requestHitTestSource
+page-type: web-api-instance-method
 tags:
   - API
   - AR

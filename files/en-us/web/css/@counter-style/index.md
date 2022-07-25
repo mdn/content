@@ -94,7 +94,9 @@ Each `@counter-style` is identified by a name and has a set of descriptors.
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@counter-style <counter-style-name> { <declaration-list> }
+```
 
 ## Examples
 
@@ -123,8 +125,7 @@ Which will produce lists like this:
 Ⓒ Three
 Ⓓ Four
 Ⓔ Five
-...
-...
+…
 Ⓨ Twenty-five
 Ⓩ Twenty-six
 27 Twenty-seven

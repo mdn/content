@@ -12,8 +12,8 @@ browser-compat: javascript.builtins.Promise.all
 
 The **`Promise.all()`** method takes an iterable of promises as
 an input, and returns a single {{jsxref("Promise")}} that resolves to an array of the
-results of the input promises. This returned promise will resolve when all of the
-input's promises have resolved, or if the input iterable contains no promises. It
+results of the input promises. This returned promise will fulfill when all of the
+input's promises have fulfilled, or if the input iterable contains no promises. It
 rejects immediately upon any of the input promises rejecting or non-promises throwing an
 error, and will reject with this first rejection message / error.
 
@@ -33,14 +33,14 @@ Promise.all(iterable);
 
 ### Return value
 
-- An **already resolved** {{jsxref("Promise")}} if the
+- An **already fulfilled** {{jsxref("Promise")}} if the
   _iterable_ passed is empty.
-- An **asynchronously resolved** {{jsxref("Promise")}} if the
+- An **asynchronously fulfilled** {{jsxref("Promise")}} if the
   _iterable_ passed contains no promises. Note, Google Chrome 58 returns
-  an **already resolved** promise in this case.
+  an **already fulfilled** promise in this case.
 - A **pending** {{jsxref("Promise")}} in all other cases. This returned
-  promise is then resolved/rejected **asynchronously** (as soon as the
-  stack is empty) when all the promises in the given _iterable_ have resolved,
+  promise is then fulfilled/rejected **asynchronously** (as soon as the
+  stack is empty) when all the promises in the given _iterable_ have fulfilled,
   or if any of the promises reject. See the example about "Asynchronicity or
   synchronicity of Promise.all" below. Returned values will be in order of the Promises
   passed, regardless of completion order.
@@ -63,11 +63,11 @@ result of every promise and function from the input iterable.
 ### Fulfillment
 
 The returned promise is fulfilled with an array containing **all** the
-resolved values (including non-promise values) in the _iterable_ passed as the
+fulfilled values (including non-promise values) in the _iterable_ passed as the
 argument.
 
 - If an empty _iterable_ is passed, then the promise returned by this method
-  is fulfilled synchronously. The resolved value is an empty array.
+  is fulfilled synchronously. The fulfilled value is an empty array.
 - If a nonempty _iterable_ is passed, and **all** of the promises
   fulfill, or are not promises, then the promise returned by this method is fulfilled
   asynchronously.
@@ -76,7 +76,7 @@ argument.
 
 If any of the passed-in promises reject, `Promise.all` asynchronously
 rejects with the value of the promise that rejected, whether or not the other promises
-have resolved.
+have settled.
 
 ## Examples
 
@@ -93,7 +93,7 @@ const p3 = new Promise((resolve, reject) => {
   }, 100);
 });
 
-Promise.all([p1, p2, p3]).then(values => {
+Promise.all([p1, p2, p3]).then((values) => {
   console.log(values); // [3, 1337, "foo"]
 });
 ```
@@ -210,10 +210,10 @@ const p5 = new Promise((resolve, reject) => {
 
 // Using .catch:
 Promise.all([p1, p2, p3, p4, p5])
-.then(values => {
+.then((values) => {
   console.log(values);
 })
-.catch(error => {
+.catch((error) => {
   console.error(error.message)
 });
 
@@ -233,9 +233,9 @@ const p2 = new Promise((resolve, reject) => {
 });
 
 Promise.all([
-  p1.catch(error => { return error }),
-  p2.catch(error => { return error }),
-]).then(values => {
+  p1.catch((error) => { return error }),
+  p2.catch((error) => { return error }),
+]).then((values) => {
   console.log(values[0]) // "p1_delayed_resolution"
   console.error(values[1]) // "Error: p2_immediate_rejection"
 })

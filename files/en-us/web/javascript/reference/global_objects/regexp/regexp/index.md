@@ -71,8 +71,7 @@ RegExp(pattern[, flags])
     - `s` ("dotAll")
       - : Allows `.` to match newlines.
     - `u` (unicode)
-      - : Treat `pattern` as a sequence of Unicode code points. (See
-        also [Binary strings](/en-US/docs/Web/API/DOMString/Binary)).
+      - : Treat `pattern` as a sequence of Unicode code points..
     - `y` (sticky)
       - : Matches only from the index indicated by the `lastIndex` property of
         this regular expression in the target string. Does not attempt to match from any
@@ -91,10 +90,8 @@ RegExp(pattern[, flags])
 There are two ways to create a `RegExp` object: a _literal notation_
 and a _constructor_.
 
-- **The literal notation's** parameters are enclosed between slashes and
-  do not use quotation marks.
-- **The constructor function's** parameters are not enclosed between
-  slashes but do use quotation marks.
+- The _literal notation_ takes a pattern between two slashes, followed by optional flags, after the second slash.
+- The _constructor function_ takes either a string or a `RegExp` object as its first parameter and a string of optional flags as its second parameter.
 
 The following three expressions create the same regular expression:
 
@@ -104,16 +101,21 @@ new RegExp(/ab+c/, 'i') // literal notation
 new RegExp('ab+c', 'i') // constructor
 ```
 
-The literal notation results in compilation of the regular expression when the
-expression is evaluated. Use literal notation when the regular expression will remain
-constant. For example, if you use literal notation to construct a regular expression
-used in a loop, the regular expression won't be recompiled on each iteration.
+Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. There are two ways to compile and get a `RegExp` object.
 
-The constructor of the regular expression object—for example,
-`new RegExp('ab+c')`—results in runtime compilation of the regular
-expression. Use the constructor function when you know the regular expression pattern
-will be changing, or you don't know the pattern and are getting it from another source,
-such as user input.
+The literal notation results in compilation of the regular expression when the expression is evaluated. On the other hand, the constructor of the `RegExp` object, `new RegExp('ab+c')`, results in runtime compilation of the regular expression.
+
+Use a string as the first argument to the `RegExp()` constructor when you want to [build the regular expression from dynamic input](#Building_a_regular_expression_from_dynamic_inputs).
+
+### Building a regular expression from dynamic inputs
+
+```js
+const breakfasts = ['bacon', 'eggs', 'oatmeal', 'toast', 'cereal'];
+const order = 'Let me get some bacon and eggs, please';
+
+order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g'));
+// Returns ['bacon', 'eggs']
+```
 
 ## Specifications
 

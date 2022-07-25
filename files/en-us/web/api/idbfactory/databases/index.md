@@ -1,6 +1,7 @@
 ---
 title: IDBFactory.databases()
 slug: Web/API/IDBFactory/databases
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -47,7 +48,7 @@ A promise that resolves either to an error or a list of dictionaries, each with 
 
 ```js
 const promise = indexedDB.databases()
-promise.then(databases => {
+promise.then((databases) => {
   console.log(databases)
 })
 ```

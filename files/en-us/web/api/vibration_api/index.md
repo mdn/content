@@ -1,6 +1,7 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
+page-type: web-api-overview
 tags:
   - API
   - Beginner

@@ -1,6 +1,7 @@
 ---
-title: EncodedAudioChunk.EncodedAudioChunk()
+title: EncodedAudioChunk()
 slug: Web/API/EncodedAudioChunk/EncodedAudioChunk
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -33,7 +34,7 @@ new EncodedAudioChunk(options)
     - `duration`
       - : An integer representing the length of the audio in microseconds.
     - `data`
-      - : A {{domxref("BufferSource")}} containing the audio data.
+      - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the audio data.
 
 ## Examples
 

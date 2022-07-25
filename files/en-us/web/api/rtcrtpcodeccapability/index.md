@@ -1,6 +1,7 @@
 ---
 title: RTCRtpCodecCapability
 slug: Web/API/RTCRtpCodecCapability
+page-type: web-api-interface
 tags:
   - API
   - Capability

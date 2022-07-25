@@ -1,6 +1,7 @@
 ---
 title: MediaKeyMessageEvent()
 slug: Web/API/MediaKeyMessageEvent/MediaKeyMessageEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement.y
 slug: Web/API/SVGImageElement/y
+page-type: web-api-instance-property
 tags:
   - API
   - Image

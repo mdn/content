@@ -1,6 +1,7 @@
 ---
 title: BeforeInstallPromptEvent.prompt()
 slug: Web/API/BeforeInstallPromptEvent/prompt
+page-type: web-api-instance-method
 tags:
   - API
   - BeforeInstallPromptEvent
@@ -43,7 +44,7 @@ window.addEventListener("beforeinstallprompt", function(e) {
   }
 
   // The event was re-dispatched in response to our request
-  // ...
+  // …
 });
 ```
 

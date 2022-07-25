@@ -1,6 +1,7 @@
 ---
 title: Crypto.subtle
 slug: Web/API/Crypto/subtle
+page-type: web-api-instance-property
 tags:
   - API
   - Cryptography

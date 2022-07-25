@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.transportId
 slug: Web/API/RTCIceCandidateStats/transportId
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

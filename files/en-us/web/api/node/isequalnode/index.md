@@ -1,6 +1,7 @@
 ---
 title: Node.isEqualNode()
 slug: Web/API/Node/isEqualNode
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -28,7 +29,7 @@ isEqualNode(otherNode);
 
 ### Return value
 
-A boolean value that is `true` if the two nodes are equals, or `false`if not.
+A boolean value that is `true` if the two nodes are equals, or `false` if not.
 If `otherNode` is `null`, `isEqualNode()` always return false.
 
 ## Example
@@ -64,9 +65,9 @@ JavaScript to compare the nodes using `isEqualNode()` and output the results.
 let output = document.getElementById("output");
 let divList  = document.getElementsByTagName("div");
 
-output.innerHTML += "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "<br/>";
-output.innerHTML += "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "<br/>";
-output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "<br/>";
+output.innerHTML += `div 0 equals div 0: ${divList[0].isEqualNode(divList[0])}<br/>`;
+output.innerHTML += `div 0 equals div 1: ${divList[0].isEqualNode(divList[1])}<br/>`;
+output.innerHTML += `div 0 equals div 2: ${divList[0].isEqualNode(divList[2])}<br/>`;
 ```
 
 ### Results

@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet.has()
 slug: Web/API/CustomStateSet/has
+page-type: web-api-instance-method
 tags:
   - API
   - Method

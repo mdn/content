@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.city
 slug: Web/API/AddressErrors/city
+page-type: web-api-instance-property
 tags:
   - API
   - Address

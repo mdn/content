@@ -1,6 +1,7 @@
 ---
 title: Animation.finished
 slug: Web/API/Animation/finished
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

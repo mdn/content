@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msInsertVideoEffect()
 slug: Web/API/HTMLVideoElement/msInsertVideoEffect
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions

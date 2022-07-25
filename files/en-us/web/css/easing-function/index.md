@@ -11,7 +11,7 @@ tags:
   - Layout
   - Reference
   - easing-function
-spec-urls: https://drafts.csswg.org/css-easing/#typedef-easing-function
+browser-compat: css.types.easing-function
 ---
 {{CSSRef}}
 
@@ -95,7 +95,7 @@ The interpolation starts abruptly, and then progressively slows down towards the
 
 #### The steps() class of easing functions
 
-The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps.This subclass of step functions are sometimes also called _staircase functions_.
+The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps. This subclass of step functions are sometimes also called _staircase functions_.
 
 ##### Syntax
 
@@ -109,11 +109,11 @@ where:
   - : Is a strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.
 - _direction_
 
-  - : Is a keyword indicating if it the function is [left- or right-continuous](https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity):
+  - : Is a keyword indicating when the jumps occur:
 
-    - `jump-start` denotes a left-continuous function, so that the first step or jump happens when the interpolation begins;
-    - `jump-end` denotes a right-continuous function, so that the last step or jump happens when the interpolation ends;
-    - `jump-both` denotes a right and left continuous function, includes pauses at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;
+    - `jump-start` denotes that the first step or jump happens when the interpolation begins;
+    - `jump-end` denotes that the last step or jump happens when the interpolation ends;
+    - `jump-both` denotes that jumps occur at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;
     - `jump-none` There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration
     - `start` is the equivalent of `jump-start`
     - `end` is the equivalent of `jump-end`
@@ -321,7 +321,7 @@ steps(0, jump-none)
 
 ## Browser compatibility
 
-{{Compat("css.types.easing-function", 2)}}
+{{Compat}}
 
 ## See also
 

@@ -40,7 +40,16 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@document [ <url>                    |
+            url-prefix(<string>)     |
+            domain(<string>)         |
+            media-document(<string>) |
+            regexp(<string>)
+          ]# {
+  <group-rule-body>
+}
+```
 
 ## Examples
 

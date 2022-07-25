@@ -1,6 +1,7 @@
 ---
 title: Animation()
 slug: Web/API/Animation/Animation
+page-type: web-api-constructor
 tags:
   - API
   - Animation

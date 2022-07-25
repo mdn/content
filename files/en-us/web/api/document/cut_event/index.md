@@ -1,6 +1,7 @@
 ---
 title: 'Document: cut event'
 slug: Web/API/Document/cut_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -9,7 +10,7 @@ tags:
   - Reference
   - Web
   - cut
-browser-compat: api.Document.cut_event
+browser-compat: api.Element.cut_event
 ---
 {{APIRef}}
 
@@ -22,9 +23,9 @@ The original target for this event is the {{domxref("Element")}} that was the in
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cut', event => { });
+addEventListener('cut', (event) => { });
 
-oncut = event => { };
+oncut = (event) => { };
 ```
 
 ## Event type

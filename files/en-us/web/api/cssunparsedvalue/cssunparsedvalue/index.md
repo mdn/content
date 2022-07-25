@@ -1,6 +1,7 @@
 ---
 title: CSSUnparsedValue()
 slug: Web/API/CSSUnparsedValue/CSSUnparsedValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API

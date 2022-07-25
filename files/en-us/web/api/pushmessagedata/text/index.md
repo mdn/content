@@ -1,6 +1,7 @@
 ---
 title: PushMessageData.text()
 slug: Web/API/PushMessageData/text
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -35,7 +36,7 @@ A string.
 
 ```js
 self.addEventListener('push', function(event) {
-  var textObj = event.data.text();
+  const textObj = event.data.text();
 
   // do something with your text
 });

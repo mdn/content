@@ -8,6 +8,7 @@ tags:
   - Extensions
   - Reference
   - WebExtensions
+browser-compat: webextensions.api.clipboard
 ---
 {{AddonSidebar}}
 
@@ -28,7 +29,9 @@ To use this API you need the `"clipboardWrite"` extension [permission](/en-US/do
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.clipboard")}} {{WebExtExamples("h2")}}
+{{WebExtExamples("h2")}}
+
+{{Compat}}
 
 > **Note:**
 >

@@ -1,6 +1,7 @@
 ---
 title: 'Window: languagechange event'
 slug: Web/API/Window/languagechange_event
+page-type: web-api-event
 tags:
   - Event
   - HTML DOM
@@ -17,8 +18,8 @@ The **`languagechange`** event is fired at the global scope object when the user
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('languagechange', event => { });
-onlanguagechange = event => { };
+addEventListener('languagechange', (event) => { });
+onlanguagechange = (event) => { };
 ```
 
 ## Event type

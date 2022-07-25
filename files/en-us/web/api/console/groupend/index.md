@@ -1,6 +1,7 @@
 ---
 title: console.groupEnd()
 slug: Web/API/console/groupEnd
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

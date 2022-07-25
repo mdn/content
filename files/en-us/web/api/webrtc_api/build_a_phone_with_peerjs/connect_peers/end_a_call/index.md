@@ -1,6 +1,7 @@
 ---
 title: Ending a call
 slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call
+page-type: guide
 ---
 {{WebRTCSidebar}}
 
@@ -18,7 +19,7 @@ You've nearly finished! The last thing you want to do is ensure your callers hav
     })
     ```
 
-2. When the connection has been closed, you also want to display the correct HTML content so you can just call your `showCallContent()` function. Within the `call` event, you also want to ensure the remote browser is updated. To achieve this, add another event listener within the `peer.on('call', function(stream){...}` event listener, within the conditional block.
+2. When the connection has been closed, you also want to display the correct HTML content so you can just call your `showCallContent()` function. Within the `call` event, you also want to ensure the remote browser is updated. To achieve this, add another event listener within the `peer.on('call', function(stream){ }` event listener, within the conditional block.
 
     ```js
     conn.on('close', function (){

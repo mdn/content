@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality.droppedVideoFrames
 slug: Web/API/VideoPlaybackQuality/droppedVideoFrames
+page-type: web-api-instance-property
 tags:
   - API
   - Data Loss

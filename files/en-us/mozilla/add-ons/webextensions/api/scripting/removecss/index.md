@@ -36,11 +36,11 @@ await browser.scripting.removeCSS(
 
   - : An object describing the CSS to remove and where to remove it from. It contains the following properties:
 
-    - `css`{{optional_inline}}
+    - `css` {{optional_inline}}
       - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified and must match the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}.
-    - `files`{{optional_inline}}
+    - `files` {{optional_inline}}
       - : `array` of `string`. The path of a CSS files to inject, relative to the extension's root directory. Either `files` or `css` must be specified and must match the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}.
-    - `origin`{{optional_inline}}
+    - `origin` {{optional_inline}}
       - : `string`. The style origin for the injection, either `USER` or `AUTHOR`. Defaults to `AUTHOR`. Must match the origin of the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}.
     - `target`
       - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to remove the CSS from.
@@ -64,7 +64,7 @@ This example adds some CSS using {{WebExtAPIRef("scripting.insertCSS")}}, then r
 // });
 //
 // We can remove it when a user clicked an extension button like this:
-browser.action.onClicked.addListener(async tab => {
+browser.action.onClicked.addListener(async (tab) => {
   try {
     await browser.scripting.removeCSS({
       target: {

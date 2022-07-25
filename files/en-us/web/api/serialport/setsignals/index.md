@@ -1,6 +1,7 @@
 ---
 title: SerialPort.setSignals()
 slug: Web/API/SerialPort/setSignals
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,7 +23,7 @@ setSignals(options)
 
 ### Parameters
 
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object with any of the following values:
 

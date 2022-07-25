@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.currentSrc
 slug: Web/API/HTMLImageElement/currentSrc
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLImageElement
@@ -60,7 +61,7 @@ document.body.appendChild(p);
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 370)}}
+{{EmbedLiveSample("Examples", 640, 370)}}
 
 ## Specifications
 

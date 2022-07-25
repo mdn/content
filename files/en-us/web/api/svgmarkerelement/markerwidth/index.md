@@ -1,6 +1,7 @@
 ---
 title: SVGMarkerElement.markerWidth
 slug: Web/API/SVGMarkerElement/markerWidth
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: NDEFRecord.toRecords()
 slug: Web/API/NDEFRecord/toRecords
+page-type: web-api-instance-method
 tags:
   - NDEF
   - Reference
@@ -32,7 +33,7 @@ A list of {{DOMxRef("NDEFRecord")}}s.
 
 ## Exceptions
 
-- {{domxref("DOMException")}} `"NotSupported"`
+- `NotSupported` {{domxref("DOMException")}}
   - : Indicates that the {{Glossary("User Agent")}} does not know how to parse this combination of
     {{DOMxRef("NDEFRecord.data")}} and {{DOMxRef("NDEFRecord.recordType")}}.
 
@@ -60,7 +61,7 @@ const ndefReader = new NDEFReader();
 await ndefReader.scan();
 ndefReader.onreading = (event) => {
   const externalRecord = event.message.records.find(
-    record => record.type == "example.com:smart-poster"
+    (record) => record.type == "example.com:smart-poster"
   );
 
   let action, text;

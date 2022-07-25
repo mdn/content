@@ -1,6 +1,7 @@
 ---
 title: TextEncoder.encoding
 slug: Web/API/TextEncoder/encoding
+page-type: web-api-instance-property
 tags:
   - API
   - Encoding

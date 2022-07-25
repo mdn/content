@@ -48,7 +48,14 @@ The `symbols` descriptor must be specified when the value of the {{cssxref('@cou
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol>+
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 

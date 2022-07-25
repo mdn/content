@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -132,7 +133,7 @@ consoleLog = document.getElementById('console-log'),
 btnReset = document.getElementById('btn-reset');
 
 function logMessage(message) {
-  consoleLog.innerHTML += message + "<br>";
+  consoleLog.innerHTML += `${message}<br>`;
 }
 
 textarea.addEventListener('keydown', (e) => {

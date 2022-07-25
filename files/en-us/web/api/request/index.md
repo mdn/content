@@ -1,6 +1,7 @@
 ---
 title: Request
 slug: Web/API/Request
+page-type: web-api-interface
 tags:
   - API
   - Fetch
@@ -86,8 +87,8 @@ You could then fetch this request by passing the `Request` object in as a parame
 
 ```js
 fetch(request)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     image.src = URL.createObjectURL(blob);
   });
 ```
@@ -103,23 +104,23 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **Note:** The body can only be a {{domxref("Blob")}}, a {{domxref("BufferSource")}}, a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, a {{domxref("ReadableStream")}}, or a {{jsxref("String")}} object, as well as a string literal, so for adding a JSON object to the payload you need to stringify that object.
+> **Note:** The body can only be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, a {{domxref("ReadableStream")}}, or a {{jsxref("String")}} object, as well as a string literal, so for adding a JSON object to the payload you need to stringify that object.
 
 You could then fetch this API request by passing the `Request` object in as a parameter to a {{domxref("fetch()")}} call, for example and get the response:
 
 ```js
 fetch(request)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
       throw new Error('Something went wrong on API server!');
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
-    // ...
-  }).catch(error => {
+    // …
+  }).catch((error) => {
     console.error(error);
   });
 ```

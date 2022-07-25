@@ -1,6 +1,7 @@
 ---
 title: Screen.mozEnabled
 slug: Web/API/Screen/mozEnabled
+page-type: web-api-instance-property
 tags:
   - API
   - API:Mozilla Extensions

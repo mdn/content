@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLImageElement
@@ -86,7 +87,7 @@ image will be drawn in is 200px wide, and the image will be drawn to fill its wi
 let output = document.querySelector(".output");
 let image = document.querySelector("img");
 
-window.addEventListener("load", event => {
+window.addEventListener("load", (event) => {
   output.innerHTML += `Natural size: ${image.naturalWidth} x ` +
                       `${image.naturalHeight} pixels<br>`;
   output.innerHTML += `Displayed size: ${image.width} x ` +
@@ -101,7 +102,7 @@ that the image is available before attempting to examine its width and height.
 
 ### Result
 
-{{EmbedLiveSample("Example", 600, 280)}}
+{{EmbedLiveSample("Examples", 600, 280)}}
 
 ## Specifications
 

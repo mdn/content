@@ -1,6 +1,7 @@
 ---
 title: Reporting API
 slug: Web/API/Reporting_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental

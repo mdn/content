@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.getVideoPlaybackQuality()
 slug: Web/API/HTMLVideoElement/getVideoPlaybackQuality
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

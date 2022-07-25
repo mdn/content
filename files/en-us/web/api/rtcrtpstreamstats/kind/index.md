@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.kind
 slug: Web/API/RTCRtpStreamStats/kind
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

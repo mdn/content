@@ -1,6 +1,7 @@
 ---
 title: Window.pageYOffset
 slug: Web/API/Window/pageYOffset
+page-type: web-api-instance-property
 tags:
   - API
   - Alias
@@ -122,8 +123,7 @@ var info = document.getElementById("info");
 var target = frameDoc.getElementById("overview");
 frameDoc.scrollingElement.scrollTop = target.offsetTop;
 
-info.innerText = "Y offset after scrolling: " +
-                 frame.contentWindow.pageYOffset + " pixels";
+info.innerText = `Y offset after scrolling: ${frame.contentWindow.pageYOffset} pixels`;
 ```
 
 The JavaScript code begins by getting into `frame` and `info` the
@@ -162,7 +162,7 @@ The result follows. Note that the frame's contents have been scrolled to show th
 section named "Overview", and that the value of the `pageYOffset` property is
 shown with the corresponding value.
 
-{{EmbedLiveSample("Example", 650, 500)}}
+{{EmbedLiveSample("Examples", 650, 500)}}
 
 ## Specifications
 

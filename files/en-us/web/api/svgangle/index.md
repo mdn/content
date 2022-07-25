@@ -1,6 +1,7 @@
 ---
 title: SVGAngle
 slug: Web/API/SVGAngle
+page-type: web-api-interface
 tags:
   - API
   - Reference

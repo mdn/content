@@ -1,10 +1,11 @@
 ---
 title: PictureInPictureEvent()
 slug: Web/API/PictureInPictureEvent/PictureInPictureEvent
+page-type: web-api-constructor
 tags:
   - Reference
   - API
-  - Constructor 
+  - Constructor
 browser-compat: api.PictureInPictureEvent.PictureInPictureEvent
 ---
 {{APIRef("Picture-in-Picture API")}}

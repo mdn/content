@@ -1,6 +1,7 @@
 ---
 title: Locks.mode
 slug: Web/API/Lock/mode
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

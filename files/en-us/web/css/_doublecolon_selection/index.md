@@ -13,11 +13,7 @@ browser-compat: css.selectors.selection
 
 The **`::selection`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
 
-```css
-::selection {
-  background-color: cyan;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-selection.html", "tabbed-shorter")}}
 
 ## Allowable properties
 
@@ -33,11 +29,8 @@ In particular, {{CSSxRef("background-image")}} is ignored.
 
 ## Syntax
 
-```css
-/* Legacy Firefox syntax (version 61 and below) */
-::-moz-selection
-
-{{CSSSyntax}}
+```
+::selection
 ```
 
 ## Examples

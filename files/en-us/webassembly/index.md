@@ -5,7 +5,7 @@ tags:
   - Landing
   - WebAssembly
   - wasm
-spec-urls: https://webassembly.github.io/spec/js-api/
+browser-compat: javascript.builtins.WebAssembly
 ---
 {{WebAssemblySidebar}}
 
@@ -76,7 +76,7 @@ And what's even better is that it is being developed as a web standard via the [
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## See also
 

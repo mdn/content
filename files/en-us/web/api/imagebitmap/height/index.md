@@ -1,6 +1,7 @@
 ---
 title: ImageBitmap.height
 slug: Web/API/ImageBitmap/height
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionErrorEvent
 slug: Web/API/SpeechRecognitionErrorEvent
+page-type: web-api-interface
 browser-compat: api.SpeechRecognitionErrorEvent
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
@@ -24,8 +25,8 @@ _`SpeechRecognitionErrorEvent` also inherits properties from its parent interfac
 var recognition = new SpeechRecognition();
 
 recognition.onerror = function(event) {
-  console.log('Speech recognition error detected: ' + event.error);
-  console.log('Additional information: ' + event.message);
+  console.log(`Speech recognition error detected: ${event.error}`);
+  console.log(`Additional information: ${event.message}`);
 }
 ```
 

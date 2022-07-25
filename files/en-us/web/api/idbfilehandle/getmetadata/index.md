@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.getMetadata()
 slug: Web/API/IDBFileHandle/getMetaData
+page-type: web-api-instance-method
 tags:
   - API
   - Files

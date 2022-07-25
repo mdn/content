@@ -1,6 +1,7 @@
 ---
 title: Accelerometer.z
 slug: Web/API/Accelerometer/z
+page-type: web-api-instance-property
 tags:
   - API
   - Accelerometer
@@ -31,10 +32,10 @@ Acceleration is typically read in the {{domxref('Sensor.reading_event', 'reading
 ```js
 let accelerometer = new Accelerometer({frequency: 60});
 
-accelerometer.addEventListener('reading', e => {
-  console.log("Acceleration along the X-axis " + accelerometer.x);
-  console.log("Acceleration along the Y-axis " + accelerometer.y);
-  console.log("Acceleration along the Z-axis " + accelerometer.z);
+accelerometer.addEventListener('reading', (e) => {
+  console.log(`Acceleration along the X-axis ${accelerometer.x}`);
+  console.log(`Acceleration along the Y-axis ${accelerometer.y}`);
+  console.log(`Acceleration along the Z-axis ${accelerometer.z}`);
 });
 accelerometer.start();
 ```

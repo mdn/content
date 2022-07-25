@@ -1,6 +1,7 @@
 ---
 title: CSSGroupingRule
 slug: Web/API/CSSGroupingRule
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -18,7 +19,7 @@ The **`CSSGroupingRule`** interface of the [CSS Object Model](/en-US/docs/Web/AP
 
 _This interface also inherits properties from {{domxref("CSSRule")}}._
 
-- {{domxref("CSSGroupingRule.cssRules")}}{{readonlyinline}}
+- {{domxref("CSSGroupingRule.cssRules")}} {{readonlyinline}}
   - : Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.
 
 ## Methods

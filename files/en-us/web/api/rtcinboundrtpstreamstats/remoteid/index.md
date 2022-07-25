@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.remoteId
 slug: Web/API/RTCInboundRtpStreamStats/remoteId
+page-type: web-api-instance-property
 tags:
   - API
   - Media

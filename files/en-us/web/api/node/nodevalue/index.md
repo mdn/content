@@ -1,6 +1,7 @@
 ---
 title: Node.nodeValue
 slug: Web/API/Node/nodeValue
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -47,7 +48,7 @@ and the following script:
 let node = document.getElementsByTagName("body")[0].firstChild;
 let result = "<br/>Node names are:<br/>";
 while (node) {
-  result += "Value of " + node.nodeName + ": " + node.nodeValue + "<br/>";
+  result += `Value of ${node.nodeName}: ${node.nodeValue}<br/>`;
   node = node.nextSibling
 }
 

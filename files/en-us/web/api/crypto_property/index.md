@@ -1,6 +1,7 @@
 ---
 title: self.crypto
 slug: Web/API/crypto_property
+page-type: web-api-global-property
 tags:
   - API
   - Crypto
@@ -42,7 +43,7 @@ genRandomNumbers = function getRandomNumbers() {
   const randText = document.getElementById("myRandText");
   randText.textContent = "The random numbers are: "
   for (let i = 0; i < array.length; i++) {
-    randText.textContent += array[i] + " ";
+    randText.textContent += `${array[i]} `;
   }
 }
 ```
@@ -56,7 +57,7 @@ genRandomNumbers = function getRandomNumbers() {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

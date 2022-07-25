@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.location
 slug: Web/API/KeyboardEvent/location
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -89,7 +90,7 @@ Possible values are:
     <tr>
       <td>
         <code>DOM_KEY_LOCATION_MOBILE</code>
-        {{Non-standard_inline()}}{{deprecated_inline}}
+        {{Non-standard_inline()}} {{deprecated_inline}}
       </td>
       <td>4</td>
       <td>
@@ -141,7 +142,7 @@ A number.
 
 ```js
 function keyEvent(event) {
-  console.log("Location of key pressed: " + event.location);
+  console.log(`Location of key pressed: ${event.location}`);
 }
 ```
 

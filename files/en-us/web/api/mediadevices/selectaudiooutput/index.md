@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.selectAudioOutput()
 slug: Web/API/MediaDevices/selectAudioOutput
+page-type: web-api-instance-method
 tags:
   - API
   - MediaDevices
@@ -60,22 +61,25 @@ The object describes the user-selected audio output device.
 
 ## Examples
 
-Here's an example of using `selectAudioOutput()`, which you might call within a function that is triggered by a button click.
+Here's an example of using `selectAudioOutput()`, within a function that is triggered by a button click.
 It outputs the selected [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId) and labels (if available) or an error message.
 
 ```js
-if (!navigator.mediaDevices.selectAudioOutput) {
-  console.log("selectAudioOutput() not supported.");
-  return;
-}
+document.querySelector('#myButton').addEventListener('click', () => {
+  if (!navigator.mediaDevices.selectAudioOutput) {
+    console.log('selectAudioOutput() not supported.');
+    return;
+  }
 
-//Display prompt and log selected device or error
-navigator.mediaDevices.selectAudioOutput()
-.then( (device) => {
-    console.log(device.kind + ": " + device.label + " id = " + device.deviceId);
-  })
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
+  //Display prompt and log selected device or error
+  navigator.mediaDevices
+    .selectAudioOutput()
+    .then((device) => {
+      console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
+    })
+    .catch(function (err) {
+      console.error(`${err.name}: ${err.message}`);
+    });
 });
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultController.error()
 slug: Web/API/WritableStreamDefaultController/error
+page-type: web-api-instance-method
 tags:
   - API
   - Error
@@ -53,13 +54,13 @@ const writableStream = new WritableStream({
     controller.error('My error is broken');
   },
   write(chunk, controller) {
-    ...
+    // ...
   },
   close(controller) {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 });
 ```

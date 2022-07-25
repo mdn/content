@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder
 slug: Web/API/MediaRecorder
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -81,13 +82,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 if (navigator.mediaDevices) {
   console.log('getUserMedia supported.');
 
-  var constraints = { audio: true };
-  var chunks = [];
+  const constraints = { audio: true };
+  let chunks = [];
 
   navigator.mediaDevices.getUserMedia(constraints)
   .then(function(stream) {
 
-    var mediaRecorder = new MediaRecorder(stream);
+    const mediaRecorder = new MediaRecorder(stream);
 
     visualize(stream);
 
@@ -110,12 +111,12 @@ if (navigator.mediaDevices) {
     mediaRecorder.onstop = function(e) {
       console.log("data available after MediaRecorder.stop() called.");
 
-      var clipName = prompt('Enter a name for your sound clip');
+      const clipName = prompt('Enter a name for your sound clip');
 
-      var clipContainer = document.createElement('article');
-      var clipLabel = document.createElement('p');
-      var audio = document.createElement('audio');
-      var deleteButton = document.createElement('button');
+      const clipContainer = document.createElement('article');
+      const clipLabel = document.createElement('p');
+      const audio = document.createElement('audio');
+      const deleteButton = document.createElement('button');
 
       clipContainer.classList.add('clip');
       audio.setAttribute('controls', '');
@@ -128,14 +129,14 @@ if (navigator.mediaDevices) {
       soundClips.appendChild(clipContainer);
 
       audio.controls = true;
-      var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+      const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
       chunks = [];
-      var audioURL = URL.createObjectURL(blob);
+      const audioURL = URL.createObjectURL(blob);
       audio.src = audioURL;
       console.log("recorder stopped");
 
       deleteButton.onclick = function(e) {
-        evtTgt = e.target;
+        const evtTgt = e.target;
         evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
       }
     }
@@ -145,12 +146,12 @@ if (navigator.mediaDevices) {
     }
   })
   .catch(function(err) {
-    console.log('The following error occurred: ' + err);
+    console.error(`The following error occurred: ${err}`);
   })
 }
 ```
 
-> **Note:** This code sample is inspired by the Web Dictaphone demo. Some lines have been omitted for brevity; [refer to the source](https://github.com/mdn/web-dictaphone/) for the complete code.
+> **Note:** This code sample is inspired by the Web Dictaphone demo. Some lines have been omitted for brevity; [refer to the source](https://github.com/mdn/dom-examples/tree/master/media/web-dictaphone) for the complete code.
 
 ## Specifications
 
@@ -163,7 +164,7 @@ if (navigator.mediaDevices) {
 ## See also
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
+- [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/master/media/web-dictaphone).)
 - [Recording a media element](/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia")}}

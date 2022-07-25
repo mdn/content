@@ -1,6 +1,7 @@
 ---
 title: Element
 slug: Web/API/Element
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -25,7 +26,7 @@ Languages outside the realm of the Web platform, like XUL through the `XULElemen
 
 _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, and by extension that interface's parent, {{DOMxRef("EventTarget")}}._
 
-- {{DOMxRef("Element.assignedSlot")}}{{readonlyInline}}
+- {{DOMxRef("Element.assignedSlot")}} {{readonlyInline}}
   - : Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
 - {{DOMxRef("Element.attributes")}} {{readOnlyInline}}
   - : Returns a {{DOMxRef("NamedNodeMap")}} object containing the assigned attributes of the corresponding HTML element.
@@ -65,7 +66,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : An {{DOMxRef("Element")}}, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
   - : A string representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
+- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}} {{readOnlyInline}}
   - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Only available to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).**
 - {{DOMxRef("Element.part")}}
   - : Represents the part identifier(s) of the element (i.e. set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
@@ -85,7 +86,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : Returns a number representing the maximum top scroll offset possible for the element.
 - {{DOMxRef("Element.scrollWidth")}} {{readOnlyInline}}
   - : Returns a number representing the scroll view width of the element.
-- {{DOMxRef("Element.shadowRoot")}}{{readOnlyInline}}
+- {{DOMxRef("Element.shadowRoot")}} {{readOnlyInline}}
   - : Returns the open shadow root that is hosted by the element, or null if no open shadow root is present.
 - {{DOMxRef("Element.slot")}}
   - : Returns the name of the shadow DOM slot the element is inserted in.
@@ -285,7 +286,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Sets the node representation of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setAttributeNS()")}}
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
-- {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}{{Deprecated_Inline}}
+- {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
 - {{DOMxRef("Element.setHTML()")}} {{Experimental_Inline}}
   - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML and inserts into the DOM as a subtree of the element.
@@ -307,20 +308,16 @@ Listen to these events using `addEventListener()` or by assigning an event liste
     Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} property.
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
-    Also available via the global {{DOMxRef("GlobalEventHandlers.onsecuritypolicyviolation", "onsecuritypolicyviolation")}} property, which available on elements and the {{domxref("Document")}} and {{domxref("Window")}} objects.
 
 - {{domxref("Element/select_event", "select")}}
   - : Fired when some text has been selected.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
 - {{domxref("Element/show_event", "show")}} {{deprecated_inline}}
   - : Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) attribute.
     Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
-    Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.
 
 ### Clipboard events
 

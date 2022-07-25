@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.entries()
 slug: Web/API/URLSearchParams/entries
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -41,7 +42,7 @@ var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the key/value pairs
 for(var pair of searchParams.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
+   console.log(`${pair[0]}, ${pair[1]}`);
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: WebSocket.url
 slug: Web/API/WebSocket/url
+page-type: web-api-instance-property
 tags:
   - API
   - Property

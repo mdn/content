@@ -1,6 +1,7 @@
 ---
 title: CSSMathInvert
 slug: Web/API/CSSMathInvert
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -24,7 +25,7 @@ The **`CSSMathInvert`** interface of the {{domxref('CSS_Object_Model#css_typed_o
 
 ## Properties
 
-- {{domxref('CSSMathInvert.value')}}{{ReadOnlyInline}}
+- {{domxref('CSSMathInvert.value')}} {{ReadOnlyInline}}
   - : Returns a {{domxref('CSSNumericValue')}} object.
 
 ## Methods

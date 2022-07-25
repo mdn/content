@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.ctrlKey
 slug: Web/API/KeyboardEvent/ctrlKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -22,7 +23,7 @@ A boolean value
 
 ## Examples
 
-```js
+```html
 <html>
 <head>
 <title>ctrlKey example</title>

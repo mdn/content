@@ -1,6 +1,7 @@
 ---
 title: PannerNode.coneInnerAngle
 slug: Web/API/PannerNode/coneInnerAngle
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode

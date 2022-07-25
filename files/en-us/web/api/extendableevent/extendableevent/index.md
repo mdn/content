@@ -1,6 +1,7 @@
 ---
 title: ExtendableEvent()
 slug: Web/API/ExtendableEvent/ExtendableEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

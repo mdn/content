@@ -66,7 +66,9 @@ A string with a supported syntax as defined by the specification. Supported synt
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<string>
+```
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: VRDisplayCapabilities.canPresent
 slug: Web/API/VRDisplayCapabilities/canPresent
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

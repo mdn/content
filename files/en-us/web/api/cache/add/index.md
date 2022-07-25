@@ -1,10 +1,10 @@
 ---
 title: Cache.add()
 slug: Web/API/Cache/add
+page-type: web-api-instance-method
 tags:
   - API
   - Cache
-  - Experimental
   - Method
   - Reference
   - Service Workers

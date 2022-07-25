@@ -33,7 +33,7 @@ There are five different types of operations that return `NaN`:
 
 ### Testing against NaN
 
-`NaN` compares unequal (via `==`, `!=`, `===`, and `!==`) to any other value -- including to another `NaN` value. Use {{jsxref("Number.isNaN()")}} or {{jsxref("Global_Objects/isNaN", "isNaN()")}} to most clearly determine whether a value is `NaN`. Or perform a self-comparison: `NaN`, and only `NaN`, will compare unequal to itself.
+`NaN` compares unequal (via `==`, `!=`, `===`, and `!==`) to any other value — including to another `NaN` value. Use {{jsxref("Number.isNaN()")}} or {{jsxref("Global_Objects/isNaN", "isNaN()")}} to most clearly determine whether a value is `NaN`. Or perform a self-comparison: `NaN`, and only `NaN`, will compare unequal to itself.
 
 ```js
 NaN === NaN;        // false
@@ -68,7 +68,7 @@ Additionally, some array methods cannot find `NaN`, while others can.
 let arr = [2, 4, NaN, 12];
 arr.indexOf(NaN);                      // -1 (false)
 arr.includes(NaN);                     // true
-arr.findIndex(n => Number.isNaN(n));   // 2
+arr.findIndex((n) => Number.isNaN(n));   // 2
 ```
 
 ## Specifications

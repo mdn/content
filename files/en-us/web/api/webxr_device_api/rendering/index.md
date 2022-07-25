@@ -1,6 +1,7 @@
 ---
 title: Rendering and the WebXR frame animation callback
 slug: Web/API/WebXR_Device_API/Rendering
+page-type: guide
 tags:
   - API
   - AR
@@ -146,7 +147,7 @@ Ideally, you want this code to be fast enough that it can maintain a 60 FPS fram
 
 In this version of the WebXR rendering callback, we use a very straightforward approach that works great for relatively simple projects. This pseudocode outlines that process:
 
-```js
+```
 for each view in the pose's views list:
   get the WebXR GL layer's viewport
   set the WebGL viewport to match
@@ -243,7 +244,7 @@ An advantage of WebXR's approach of using a single WebGL framebuffer to contain 
 
 The resulting pseudocode looks like this:
 
-```js
+```
 for each object in the scene
   bindProgram()
   bindUniforms()
@@ -292,7 +293,7 @@ For that reason, you need to use the timestamp provided to ensure your animation
 let lastFrameTime = 0;
 
 function drawFrame(time, frame) {
-  /* ... schedule next frame, prepare the buffer, etc ... */
+  // schedule next frame, prepare the buffer, etc.
 
   const deltaTime = (time - lastFrameTime) * 0.001;
   lastFrameTime = time;

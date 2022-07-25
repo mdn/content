@@ -1,6 +1,7 @@
 ---
 title: VRLayerInit
 slug: Web/API/VRLayerInit
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
@@ -33,7 +34,7 @@ You can retrieve `VRLayerInit` objects using {{domxref("VRDisplay.getLayers()")}
 
 ```js
 // currently returns an empty array
-var layers = vrDisplay.getLayers();
+let layers = vrDisplay.getLayers();
 
 if(navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
@@ -49,9 +50,9 @@ if(navigator.getVRDisplays) {
           console.log('Presenting to WebVR display');
 
           // Here it returns an array of VRLayerInit objects
-          var layers = vrDisplay.getLayers();
+          layers = vrDisplay.getLayers();
 
-          ...
+          // …
         });
       });
     }
@@ -61,10 +62,10 @@ if(navigator.getVRDisplays) {
 
 {{domxref("VRLayerInit")}} objects look something like this:
 
-```js
+```
 {
-  leftBounds : [ ... ],
-  rightBounds: [ ... ],
+  leftBounds : [ /* … */ ],
+  rightBounds: [ /* … */ ],
   source: canvasReference
 }
 ```

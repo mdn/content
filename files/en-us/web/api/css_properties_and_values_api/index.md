@@ -1,8 +1,10 @@
 ---
 title: CSS Properties and Values API
 slug: Web/API/CSS_Properties_and_Values_API
+page-type: web-api-overview
 tags:
   - Houdini
+browser-compat: api.CSS.registerProperty
 ---
 {{SeeCompatTable}} The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs — allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.
 
@@ -38,11 +40,11 @@ The same registration can take place in [CSS](/en-US/docs/Web/CSS) using the {{c
 
 ## Specifications
 
-{{Specifications("api.CSS.registerProperty")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-See individual interfaces
+{{Compat}}
 
 ## See also
 

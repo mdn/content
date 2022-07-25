@@ -1,6 +1,7 @@
 ---
 title: VRPose.angularVelocity
 slug: Web/API/VRPose/angularVelocity
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -38,14 +39,14 @@ function drawVRScene() {
 
   // Retrieve the angular velocity values for use in rendering
   // curFramePose is a VRPose object
-  var curFramePose = frameData.pose;
-  var angVel = curFramePose.angularVelocity;
-  var avx = angVel[0];
-  var avy = angVel[1];
-  var avz = angVel[2];
+  const curFramePose = frameData.pose;
+  const angVel = curFramePose.angularVelocity;
+  const avx = angVel[0];
+  const avy = angVel[1];
+  const avz = angVel[2];
 
   // render the scene
-  ...
+  // …
 
   // WebVR: submit the rendered frame to the VR display
   vrDisplay.submitFrame();

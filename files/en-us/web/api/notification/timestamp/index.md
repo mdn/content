@@ -1,6 +1,7 @@
 ---
 title: Notification.timestamp
 slug: Web/API/Notification/timestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -35,14 +36,14 @@ created, then the notification is fired using the `Notification()`
 constructor.
 
 ```js
-var dts = Math.floor(Date.now());
+const dts = Math.floor(Date.now());
 
-var options = {
+const options = {
   body: 'Do you like my body?',
   timestamp: dts
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.timestamp) // should log original timestamp
 ```
@@ -57,5 +58,4 @@ console.log(n.timestamp) // should log original timestamp
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

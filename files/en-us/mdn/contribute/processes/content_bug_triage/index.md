@@ -109,7 +109,7 @@ Definitions:
 
 Generally speaking, critical issues should be fixed immediately, and would probably be handled by MDN staff/peers. And Tier 1 issues are more important than Tier 2 issues. Folks that are interested in tackling the highest priority MDN issues should always tackle Tier 0 issues if any are available, before moving on to Tier 1 then Tier 2 issues.
 
-> **Note:** For definitions of Tier 1 and Tier 2, see the [MDN documentation priority list](/en-US/docs/MDN/Contribute/Documentation_priorities).
+> **Note:** For definitions of Tier 1 and Tier 2, see the [MDN documentation priority list](https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/).
 
 ### Provide further information
 

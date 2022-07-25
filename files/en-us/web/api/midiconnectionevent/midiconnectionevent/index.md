@@ -1,6 +1,7 @@
 ---
-title: MIDIConnectionEvent.MIDIConnectionEvent()
+title: MIDIConnectionEvent()
 slug: Web/API/MIDIConnectionEvent/MIDIConnectionEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -23,7 +24,7 @@ new MIDIConnectionEvent(type, midiConnectionEventInit)
 
 - `type`
   - : A string with one of `"connect"` or `"disconnect"`.
-- `midiConnectionEventInit`{{Optional_Inline}}
+- `midiConnectionEventInit` {{optional_inline}}
 
   - : A dictionary including the following fields:
 

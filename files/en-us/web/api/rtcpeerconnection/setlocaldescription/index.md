@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.setLocalDescription()
 slug: Web/API/RTCPeerConnection/setLocalDescription
+page-type: web-api-instance-method
 tags:
   - API
   - Descriptions

@@ -1,6 +1,7 @@
 ---
 title: ReportingObserver
 slug: Web/API/ReportingObserver
+page-type: web-api-interface
 tags:
   - API
   - Experimental

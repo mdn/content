@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaChecked
 slug: Web/API/ElementInternals/ariaChecked
+page-type: web-api-instance-property
 tags:
   - API
   - Property

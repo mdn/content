@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: push event'
 slug: Web/API/ServiceWorkerGlobalScope/push_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -25,9 +26,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('periodicsync', event => { });
+addEventListener('periodicsync', (event) => { });
 
-onperiodicsync = event => { };
+onperiodicsync = (event) => { };
 ```
 
 ## Event type
@@ -48,7 +49,7 @@ _Inherits properties from its parent, {{domxref("PushEvent")}}. Additional prope
 This example sets up a handler for `push` events that takes {{Glossary("JSON")}} data, parses it, and dispatches the message for handling based on information contained within the message.
 
 ```js
-self.addEventListener("push", event => {
+self.addEventListener("push", (event) => {
   let message = event.data.json();
 
   switch(message.type) {

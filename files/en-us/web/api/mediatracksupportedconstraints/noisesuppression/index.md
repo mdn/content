@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.noiseSuppression
 slug: Web/API/MediaTrackSupportedConstraints/noiseSuppression
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -68,7 +69,7 @@ if (navigator.mediaDevices.getSupportedConstraints().noiseSuppression) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

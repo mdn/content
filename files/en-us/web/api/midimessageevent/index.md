@@ -1,6 +1,7 @@
 ---
 title: MIDIMessageEvent
 slug: Web/API/MIDIMessageEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -37,8 +38,8 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 The following example prints all MIDI messages to the console.
 
 ```js
-navigator.requestMIDIAccess().then(midiAccess => {
-  Array.from(midiAccess.inputs).forEach(input => {
+navigator.requestMIDIAccess().then((midiAccess) => {
+  Array.from(midiAccess.inputs).forEach((input) => {
     input[1].onmidimessage = (msg) => { console.log(msg); }
   })
 });

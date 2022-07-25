@@ -32,7 +32,7 @@ The `aria-describedby` property is appropriate when the associated content conta
 
 ```html
 <button aria-describedby="trash-desc">Move to trash</button>
-...
+…
 <p id="trash-desc">Items in the trash will be permanently removed after 30 days.</p>
 ```
 

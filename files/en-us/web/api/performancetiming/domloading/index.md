@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.domLoading
 slug: Web/API/PerformanceTiming/domLoading
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

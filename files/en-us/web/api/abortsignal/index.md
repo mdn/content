@@ -1,6 +1,7 @@
 ---
 title: AbortSignal
 slug: Web/API/AbortSignal
+page-type: web-api-interface
 tags:
   - API
   - AbortSignal
@@ -73,11 +74,11 @@ abortBtn.addEventListener('click', function() {
 });
 
 function fetchVideo() {
-  ...
+  // …
   fetch(url, {signal}).then(function(response) {
-    ...
+    // …
   }).catch(function(e) {
-    reports.textContent = 'Download error: ' + e.message;
+    reports.textContent = `Download error: ${e.message}`;
   })
 }
 ```
@@ -99,7 +100,7 @@ This allows code to differentiate between timeouts (for which user notification 
 try {
   const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
   const result = await res.blob();
-  // ...
+  // …
 } catch (e) {
     if (e.name === "TimeoutError") {
       // Notify the user it took more than 5 seconds to get the result.

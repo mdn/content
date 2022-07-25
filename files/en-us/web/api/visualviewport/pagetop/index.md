@@ -1,6 +1,7 @@
 ---
 title: VisualViewport.pageTop
 slug: Web/API/VisualViewport/pageTop
+page-type: web-api-instance-property
 tags:
   - API
   - Property

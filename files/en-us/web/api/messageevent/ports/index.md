@@ -1,6 +1,7 @@
 ---
 title: MessageEvent.ports
 slug: Web/API/MessageEvent/ports
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -27,10 +28,10 @@ An array of {{domxref("MessagePort")}} objects.
 
 ```js
 onconnect = function(e) {
-  var port = e.ports[0];
+  const port = e.ports[0];
 
   port.addEventListener('message', function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   });
 

@@ -1,6 +1,7 @@
 ---
 title: ChannelMergerNode()
 slug: Web/API/ChannelMergerNode/ChannelMergerNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio

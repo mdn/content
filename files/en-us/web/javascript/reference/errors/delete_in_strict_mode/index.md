@@ -15,10 +15,10 @@ The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-o
 
 ## Message
 
-```js
-SyntaxError: Calling delete on expression not allowed in strict mode (Edge)
+```
+SyntaxError: Delete of an unqualified identifier in strict mode. (V8-based)
 SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
-SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
+SyntaxError: Cannot delete unqualified property 'a' in strict mode. (Safari)
 ```
 
 ## Error type
@@ -46,7 +46,7 @@ Attempting to delete a plain variable, doesn't work in JavaScript and it throws 
 
 var x;
 
-// ...
+// …
 
 delete x;
 
@@ -61,7 +61,7 @@ To free the contents of a variable, you can set it to {{jsxref("null")}}:
 
 var x;
 
-// ...
+// …
 
 x = null;
 

@@ -1,6 +1,7 @@
 ---
 title: WEBGL_debug_shaders
 slug: Web/API/WEBGL_debug_shaders
+page-type: webgl-extension
 tags:
   - API
   - Reference

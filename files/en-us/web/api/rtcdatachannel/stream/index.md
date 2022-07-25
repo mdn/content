@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.stream
 slug: Web/API/RTCDataChannel/stream
+page-type: web-api-instance-property
 tags:
   - Non-standard
   - Deprecated
@@ -25,13 +26,7 @@ created, either by the user agent (if {{domxref("RTCDataChannel.negotiated")}} i
 > If you have code that uses `stream`, you will need to update, since
 > browsers have begun to remove support for `stream`.
 
-## Syntax
-
-```js
-var stream = aDataChannel.stream;
-```
-
-### Value
+## Value
 
 An `unsigned short` value (that is, an integer between 0 and 65,535) which
 uniquely identifies the data channel.
@@ -39,9 +34,9 @@ uniquely identifies the data channel.
 ## Example
 
 ```js
-var dataChannel = pc.createDataChannel("SampleChannel");
+const dataChannel = pc.createDataChannel("SampleChannel");
 
-console.log("Data channel stream ID: " + dataChannel.stream);
+console.log(`Data channel stream ID: ${dataChannel.stream}`);
 ```
 
 ## Specifications
@@ -55,7 +50,6 @@ This feature is not part of any current specification. It is not on track to bec
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- [Using WebRTC data
-  channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.id")}}

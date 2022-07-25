@@ -1,6 +1,7 @@
 ---
 title: DocumentTimeline
 slug: Web/API/DocumentTimeline
+page-type: web-api-interface
 tags:
   - API
   - Animation

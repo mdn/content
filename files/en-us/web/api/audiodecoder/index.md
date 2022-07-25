@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder
 slug: Web/API/AudioDecoder
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -19,9 +20,9 @@ The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 
 ## Properties
 
-- {{domxref("AudioDecoder.decodeQueueSize")}}{{ReadOnlyInline}}
+- {{domxref("AudioDecoder.decodeQueueSize")}} {{ReadOnlyInline}}
   - : An integer representing the number of decode queue requests.
-- {{domxref("AudioDecoder.state")}}{{ReadOnlyInline}}
+- {{domxref("AudioDecoder.state")}} {{ReadOnlyInline}}
   - : Represents the state of the underlying codec and whether it is configured for decoding.
 
 ## Methods

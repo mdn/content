@@ -1,6 +1,7 @@
 ---
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
+page-type: web-api-instance-method
 tags:
   - API
   - Base 64
@@ -14,7 +15,7 @@ browser-compat: api.FileReader.readAsDataURL
 The `readAsDataURL` method is used to read the contents of the specified
 {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
 {{domxref("FileReader.readyState","readyState")}} becomes `DONE`, and the
-{{event("loadend")}} is triggered. At that time, the
+{{domxref("FileReader/loadend_event", "loadend")}} is triggered. At that time, the
 {{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) representing the
 file's data as a base64 encoded string.
 
@@ -44,7 +45,7 @@ None ({{jsxref("undefined")}}).
 
 ```html
 <input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Image preview...">
+<img src="" height="200" alt="Image preview">
 ```
 
 ### JavaScript
@@ -84,17 +85,17 @@ function previewFile() {
 ```js
 function previewFiles() {
 
-  var preview = document.querySelector('#preview');
-  var files   = document.querySelector('input[type=file]').files;
+  const preview = document.querySelector('#preview');
+  const files   = document.querySelector('input[type=file]').files;
 
   function readAndPreview(file) {
 
     // Make sure `file.name` matches our extensions criteria
     if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
-      var reader = new FileReader();
+      const reader = new FileReader();
 
       reader.addEventListener("load", function () {
-        var image = new Image();
+        const image = new Image();
         image.height = 100;
         image.title = file.name;
         image.src = this.result;

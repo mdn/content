@@ -1,6 +1,7 @@
 ---
 title: FileEntrySync
 slug: Web/API/FileEntrySync
+page-type: web-api-interface
 tags:
   - API
   - File

@@ -1,6 +1,7 @@
 ---
 title: EXT_sRGB
 slug: Web/API/EXT_sRGB
+page-type: webgl-extension
 tags:
   - API
   - Reference

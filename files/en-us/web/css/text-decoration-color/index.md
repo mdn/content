@@ -30,7 +30,7 @@ CSS does not provide a direct mechanism for specifying a unique color for each l
 
 ```css
 /* <color> values */
-text-decoration-color: currentColor;
+text-decoration-color: currentcolor;
 text-decoration-color: red;
 text-decoration-color: #00ff00;
 text-decoration-color: rgba(255, 128, 128, 0.5);

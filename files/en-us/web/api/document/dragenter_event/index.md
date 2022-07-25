@@ -1,6 +1,7 @@
 ---
 title: 'Document: dragenter event'
 slug: Web/API/Document/dragenter_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -96,14 +97,14 @@ body {
 #### JavaScript
 
 ```js
-document.addEventListener("dragenter", event => {
+document.addEventListener("dragenter", (event) => {
   // highlight potential drop target when the draggable element enters it
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.add("dragover");
   }
 });
 
-document.addEventListener("dragleave", event => {
+document.addEventListener("dragleave", (event) => {
   // reset background of potential drop target when the draggable element leaves it
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");

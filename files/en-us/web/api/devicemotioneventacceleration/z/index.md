@@ -1,6 +1,7 @@
 ---
 title: 'DeviceMotionEventAcceleration: z'
 slug: Web/API/DeviceMotionEventAcceleration/z
+page-type: web-api-instance-property
 tags:
   - API
   - DeviceAcceleration

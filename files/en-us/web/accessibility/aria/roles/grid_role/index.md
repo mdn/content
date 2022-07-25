@@ -13,7 +13,6 @@ tags:
   - NeedsContent
 spec-urls:
   - https://w3c.github.io/aria/#grid
-  - https://w3c.github.io/aria-practices/#grid
 ---
 The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.
 
@@ -54,7 +53,7 @@ The `grid` role is a composite widget containing a collection of one or more row
 </table>
 ```
 
-A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. Uses fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See [ARIA Authoring practices](https://www.w3.org/TR/wai-aria-practices-1.2/#grid) for more details
+A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. Uses fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) for more details
 
 Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), unless they are a row or column header. Then the elements are [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) and [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), respectively. Cell elements need to be owned by elements with a [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) role. Rows can be grouped using `rowgroups`.
 
@@ -73,11 +72,11 @@ If the grid is used as an interactive widget, [keyboard](#keyboard-use) interact
 
 #### States and properties
 
-- [aria-level](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-level_attribute)
+- [aria-level](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level)
   - : Indicates the hierarchical level of the grid within other structures.
-- [aria-multiselectable](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-multiselectable_attribute)
+- [aria-multiselectable](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
   - : If `aria-multiselectable` is set to `true`, multiple items in the grid can be selected. The default value is `false`.
-- [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute)
+- [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
   - : If the user can navigate the grid but not change the value or values of the grid, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) should be set to `true`. The default value is `false`.
 
 > **Note:** For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
@@ -583,8 +582,8 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 
 ### More examples
 
-- [Data Grid Examples](https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/dataGrids.html)
-- [Layout Grids Examples](https://www.w3.org/TR/wai-aria-practices/examples/grid/LayoutGrids.html)
+- [Data Grid Examples](https://www.w3.org/WAI/ARIA/apg/example-index/grid/dataGrids.html)
+- [Layout Grids Examples](https://www.w3.org/WAI/ARIA/apg/example-index/grid/LayoutGrids.html)
 - [W3C/WAI Tutorial: Tables](https://www.w3.org/WAI/tutorials/tables/)
 
 ## Accessibility concerns

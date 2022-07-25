@@ -1,6 +1,7 @@
 ---
 title: Using server-sent events
 slug: Web/API/Server-sent_events/Using_server-sent_events
+page-type: guide
 tags:
   - Advanced
   - Communication
@@ -10,6 +11,7 @@ tags:
   - Server Sent Events
   - Server-sent events
   - messaging
+browser-compat: api.EventSource
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
@@ -36,7 +38,7 @@ evtSource.onmessage = function(event) {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
-  newElement.textContent = "message: " + event.data;
+  newElement.textContent = `message: ${event.data}`;
   eventList.appendChild(newElement);
 }
 ```
@@ -50,7 +52,7 @@ evtSource.addEventListener("ping", function(event) {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
   const time = JSON.parse(event.data).time;
-  newElement.textContent = "ping at " + time;
+  newElement.textContent = `ping at ${time}`;
   eventList.appendChild(newElement);
 });
 ```
@@ -103,7 +105,7 @@ The code above generates an event every second, with the event type "ping". Each
 The loop will keep running independent of the connection status, so a check is included
 to break the loop if the connection has been closed (e.g. client closes the page).
 
-> **Note:** You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> **Note:** You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
 
 ## Error handling
 
@@ -200,6 +202,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ## Browser compatibility
 
-### `EventSource`
-
-{{Compat("api.EventSource")}}
+{{Compat}}

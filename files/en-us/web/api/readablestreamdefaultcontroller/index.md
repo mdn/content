@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultController
 slug: Web/API/ReadableStreamDefaultController
+page-type: web-api-interface
 tags:
   - API
   - Fetch

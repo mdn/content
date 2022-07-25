@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTService.getCharacteristic()
 slug: Web/API/BluetoothRemoteGATTService/getCharacteristic
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth

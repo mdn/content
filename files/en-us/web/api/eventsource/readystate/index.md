@@ -1,6 +1,7 @@
 ---
 title: EventSource.readyState
 slug: Web/API/EventSource/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - EventSource
@@ -31,7 +32,7 @@ var evtSource = new EventSource('sse.php');
 console.log(evtSource.readyState);
 ```
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
 
 ## Specifications
 

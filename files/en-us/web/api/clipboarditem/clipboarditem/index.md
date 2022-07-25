@@ -1,6 +1,7 @@
 ---
 title: ClipboardItem()
 slug: Web/API/ClipboardItem/ClipboardItem
+page-type: web-api-instance-property
 tags:
   - API
   - Clipboard

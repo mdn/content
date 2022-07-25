@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getActiveAttrib()
 slug: Web/API/WebGLRenderingContext/getActiveAttrib
+page-type: web-api-instance-method
 tags:
   - API
   - Method

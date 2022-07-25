@@ -22,7 +22,9 @@ A resource is paused either due to being in an non-activated state, or due to th
 
 ## Syntax
 
-{{csssyntax}}
+```
+:paused
+```
 
 ## Examples
 

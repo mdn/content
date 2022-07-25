@@ -1,6 +1,7 @@
 ---
 title: Notification.dir
 slug: Web/API/Notification/dir
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -19,9 +20,12 @@ The `dir` read-only property of the {{domxref("Notification")}} interface indica
 
 A string specifying the text direction. Possible values are:
 
-- `auto`: adopts the browser's language setting behavior (the default.)
-- `ltr`: left to right.
-- `rtl` : right to left.
+- `auto`
+  - : adopts the browser's language setting behavior (the default.)
+- `ltr`
+  - : left to right.
+- `rtl`
+  - : right to left.
 
 > **Note:** Most browsers seem to ignore explicit ltr and rtl settings, and just go with the browser-wide setting.
 
@@ -30,12 +34,12 @@ A string specifying the text direction. Possible values are:
 The following snippet fires a notification; a simple `options` object is created, then the notification is fired using the `Notification()` constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my body?',
   dir: 'rtl'
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.dir) // should return 'rtl'
 ```

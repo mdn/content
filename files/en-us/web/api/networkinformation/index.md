@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation
 slug: Web/API/NetworkInformation
+page-type: web-api-interface
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: Element.ariaSelected
 slug: Web/API/Element/ariaSelected
+page-type: web-api-instance-property
 tags:
   - API
   - Property

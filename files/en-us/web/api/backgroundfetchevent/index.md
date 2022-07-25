@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchEvent
 slug: Web/API/BackgroundFetchEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -25,7 +26,7 @@ It is the event type passed to `onbackgroundfetchabort` and `onbackgroundfetchcl
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("BackgroundFetchEvent.registration")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchEvent.registration")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("BackgroundFetchRegistration")}} that the event was initialized to.
 
 ### Event handlers

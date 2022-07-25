@@ -1,6 +1,7 @@
 ---
 title: Client.type
 slug: Web/API/Client/type
+page-type: web-api-instance-property
 tags:
   - API
   - Client
@@ -40,7 +41,7 @@ function sendMessage(message) {
 // controlling service worker
 self.addEventListener("message", function(e) {
   // e.source is a client object
-  e.source.postMessage("Hello! Your message was: " + e.data);
+  e.source.postMessage(`Hello! Your message was: ${e.data}`);
   // Let's also post the type value back to the client
   e.source.postMessage(e.source.type);
 });

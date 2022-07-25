@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Number.MAX_SAFE_INTEGER
 ---
 {{JSRef}}
 
-The **`Number.MAX_SAFE_INTEGER`** constant represents the maximum safe integer in JavaScript (`2^53 - 1`).
+The `Number.MAX_SAFE_INTEGER`** constant represents the maximum safe integer in JavaScript (2<sup>53</sup> – 1).
 
 For larger integers, consider using {{jsxref("BigInt")}}.
 
@@ -19,21 +19,13 @@ For larger integers, consider using {{jsxref("BigInt")}}.
 
 ## Description
 
-The `MAX_SAFE_INTEGER` constant has a value of `9007199254740991` (9,007,199,254,740,991 or \~9 quadrillion). The reasoning behind that number is that JavaScript uses [double-precision floating-point format numbers](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) as specified in [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point) and can only safely represent integers between `-(2^53 - 1)` and `2^53 - 1`.
+The `MAX_SAFE_INTEGER` constant has a value of `9007199254740991` (9,007,199,254,740,991 or \~9 quadrillion). The reasoning behind that number is that JavaScript uses [double-precision floating-point format numbers](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) as specified in [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point) and can only safely represent integers between -(2<sup>53</sup> – 1) and 2<sup>53</sup> – 1.
 
 Safe in this context refers to the ability to represent integers exactly and to correctly compare them. For example, `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2` will evaluate to true, which is mathematically incorrect. See {{jsxref("Number.isSafeInteger()")}} for more information.
 
 This field does not exist in old browsers. Using it without checking its existence, such as `Math.max(Number.MAX_SAFE_INTEGER, 2)`, will yield undesired results such as NaN.
 
 Because `MAX_SAFE_INTEGER` is a static property of {{jsxref("Number")}}, you always use it as `Number.MAX_SAFE_INTEGER`, rather than as a property of a {{jsxref("Number")}} object you created.
-
-## Polyfill
-
-```js
-if (!Number.MAX_SAFE_INTEGER) {
-    Number.MAX_SAFE_INTEGER = 9007199254740991; // Math.pow(2, 53) - 1;
-}
-```
 
 ## Examples
 

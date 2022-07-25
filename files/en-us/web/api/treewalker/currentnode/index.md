@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.currentNode
 slug: Web/API/TreeWalker/currentNode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -23,7 +24,7 @@ A {{domxref("Node")}}.
 var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 root = treeWalker.currentNode; // the root element as it is the first element!

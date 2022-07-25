@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.shippingAddress
 slug: Web/API/PaymentRequest/shippingAddress
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -37,7 +38,7 @@ shipping cost.
 ```js
 // Initialization of PaymentRequest arguments are excerpted for the sake of
 //   brevity.
-var payment = new PaymentRequest(supportedInstruments, details, options);
+const payment = new PaymentRequest(supportedInstruments, details, options);
 
 payment.addEventListener('shippingaddresschange', function(evt) {
   evt.updateWith(new Promise(function(resolve) {
@@ -53,7 +54,7 @@ payment.show().then(function(paymentResponse) {
 
 function updateDetails(details, shippingAddress, resolve) {
   if (shippingAddress.country === 'US') {
-    var shippingOption = {
+    const shippingOption = {
       id: '',
       label: '',
       amount: {currency: 'USD', value: '0.00'},

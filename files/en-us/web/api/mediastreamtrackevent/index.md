@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrackEvent
 slug: Web/API/MediaStreamTrackEvent
+page-type: web-api-interface
 tags:
   - API
   - Event
@@ -19,7 +20,7 @@ The **`MediaStreamTrackEvent`** interface represents events which indicate that 
 
 {{InheritanceDiagram}}
 
-The events based on this interface are {{event("addtrack")}} and {{event("removetrack")}}.
+The events based on this interface are {{domxref("MediaStream/addtrack_event", "addtrack")}} and {{domxref("MediaStream/removetrack_event", "removetrack")}}.
 
 ## Properties
 
@@ -47,6 +48,6 @@ _Also inherits methods from its parent {{domxref("Event")}}._
 
 ## See also
 
-- {{domxref("MediaStream")}}: {{domxref("MediaStream.addtrack_event", "addtrack")}} and {{domxref("MediaStream.removetrack_event", "removetrack")}} events
+- {{domxref("MediaStream")}}: {{domxref("MediaStream/addtrack_event", "addtrack")}} and {{domxref("MediaStream/removetrack_event", "removetrack")}} events
 - {{domxref("MediaStreamTrack")}}
 - [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)

@@ -23,8 +23,7 @@ The **`-ms-high-contrast`** media feature is specified as one of the following v
 ### Values
 
 - `none` {{Deprecated_Inline}}
-  - : ...
-    **No longer supported as of Microsoft Edge 18.**
+  - : _No longer supported as of Microsoft Edge 18._
 - `active`
   - : Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with any color variation.
 - `black-on-white`

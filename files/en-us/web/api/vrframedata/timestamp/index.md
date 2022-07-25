@@ -1,6 +1,7 @@
 ---
 title: VRFrameData.timestamp
 slug: Web/API/VRFrameData/timestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -56,7 +57,7 @@ function drawVRScene() {
   // and do something with it
   framedata.timestamp
 
-    ...
+  // …
 
   // WebVR: Indicates that we are ready to present the rendered frame to the VR display
   vrDisplay.submitFrame();

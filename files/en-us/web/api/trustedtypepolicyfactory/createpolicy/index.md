@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.createPolicy()
 slug: Web/API/TrustedTypePolicyFactory/createPolicy
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -31,16 +32,16 @@ createPolicy(policyName, policyOptions)
 
 - `policyName`
   - : A string with the name of the policy.
-- `policyOptions`{{optional_inline}}
+- `policyOptions` {{optional_inline}}
 
   - : User-defined functions for converting strings into trusted values.
 
     - `CreateHTML(input[,args])`
-      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedHTML")}} object.
+      - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedHTML")}} object.
     - `CreateScript(input[,args])`
-      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedScript")}} object.
+      - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedScript")}} object.
     - `CreateScriptURL(input[,args])`
-      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedScriptURL")}} object.
+      - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedScriptURL")}} object.
 
 ### Return value
 
@@ -73,8 +74,7 @@ The policy logs a message to the console to remind the developer to refactor thi
 trustedTypes.createPolicy('default', {
   createScriptURL: (s, type, sink) => {
     console.log("Please refactor.");
-    return s + '?default-policy-used&type=' + encodeURIComponent(type) +
-          '&sink=' + encodeURIComponent(sink);
+    return `${s}?default-policy-used&type=${encodeURIComponent(type)}&sink=${encodeURIComponent(sink)}`;
   }
 });
 ```

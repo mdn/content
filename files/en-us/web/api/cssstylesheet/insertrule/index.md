@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -55,7 +56,7 @@ The newly inserted rule's index within the stylesheet's rule-list.
   - : Thrown if `index` > `{{domxref("CSSRuleList", "", "", "1")}}.length`.
 - `HierarchyRequestError` {{domxref("DOMException")}}
   - : Thrown if `rule` cannot be inserted at `index` `0` due to some CSS constraint.
-- `SyntaxError`{{domxref("DOMException")}}
+- `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if more than one rule is given in the `rule` parameter.
 - `HierarchyRequestError` {{domxref("DOMException")}}
   - : Thrown if trying to insert an {{cssxref("@import")}} at-rule after a style rule.
@@ -95,16 +96,16 @@ addStylesheetRules([
 ]);
 */
 function addStylesheetRules (rules) {
-  var styleEl = document.createElement('style');
+  const styleEl = document.createElement('style');
 
   // Append <style> element to <head>
   document.head.appendChild(styleEl);
 
   // Grab style element's sheet
-  var styleSheet = styleEl.sheet;
+  const styleSheet = styleEl.sheet;
 
-  for (var i = 0; i < rules.length; i++) {
-    var j = 1,
+  for (let i = 0; i < rules.length; i++) {
+    let j = 1,
         rule = rules[i],
         selector = rule[0],
         propStr = '';
@@ -114,13 +115,13 @@ function addStylesheetRules (rules) {
       j = 0;
     }
 
-    for (var pl = rule.length; j < pl; j++) {
-      var prop = rule[j];
-      propStr += prop[0] + ': ' + prop[1] + (prop[2] ? ' !important' : '') + ';\n';
+    for (let pl = rule.length; j < pl; j++) {
+      const prop = rule[j];
+      propStr += `${prop[0]}: ${prop[1]}${prop[2] ? ' !important' : ''};\n`;
     }
 
     // Insert CSS Rule
-    styleSheet.insertRule(selector + '{' + propStr + '}', styleSheet.cssRules.length);
+    styleSheet.insertRule(`${selector}{${propStr}}`, styleSheet.cssRules.length);
   }
 }
 ```
@@ -198,7 +199,4 @@ instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
 ## See also
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
-- [Cross-Browser
-  CSS-rules ordering (CSS1)](https://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
-- [Quirksmode -
-  CSS](https://www.quirksmode.org/dom/w3c_css.html)
+- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)

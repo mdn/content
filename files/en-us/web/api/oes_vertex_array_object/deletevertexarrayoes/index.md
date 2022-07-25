@@ -1,6 +1,7 @@
 ---
 title: OES_vertex_array_object.deleteVertexArrayOES()
 slug: Web/API/OES_vertex_array_object/deleteVertexArrayOES
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -38,7 +39,7 @@ var ext = gl.getExtension('OES_vertex_array_object');
 var vao = ext.createVertexArrayOES();
 ext.bindVertexArrayOES(vao);
 
-// ...
+// …
 
 ext.deleteVertexArrayOES(vao);
 ```

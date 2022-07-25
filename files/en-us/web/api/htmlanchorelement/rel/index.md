@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.rel
 slug: Web/API/HTMLAnchorElement/rel
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -27,7 +28,7 @@ A string.
 var anchors = document.getElementsByTagName("a");
 var length = anchors.length;
 for (var i = 0; i < length; i++) {
-  alert("Rel: " + anchors[i].rel);
+  alert(`Rel: ${anchors[i].rel}`);
 }
 ```
 

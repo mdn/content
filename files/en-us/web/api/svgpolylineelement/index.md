@@ -1,6 +1,7 @@
 ---
 title: SVGPolylineElement
 slug: Web/API/SVGPolylineElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

@@ -1,6 +1,7 @@
 ---
 title: MessageEvent.source
 slug: Web/API/MessageEvent/source
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

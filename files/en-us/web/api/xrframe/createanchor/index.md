@@ -1,6 +1,7 @@
 ---
 title: XRFrame.createAnchor()
 slug: Web/API/XRFrame/createAnchor
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -44,7 +45,7 @@ frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
   // Do stuff with the anchor (assign objects that will be relative to this anchor)
 
 }, (error) => {
-  console.error("Could not create anchor: "" + error);
+  console.error(`Could not create anchor: ${error}`);
 });
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: EncodedAudioChunk.duration
 slug: Web/API/EncodedAudioChunk/duration
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -16,7 +16,7 @@ Specifying multiple backgrounds is easy:
 
 ```css
 .myclass {
-  background: background1, background2, ..., backgroundN;
+  background: background1, background2, /* … ,*/ backgroundN;
 }
 ```
 

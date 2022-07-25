@@ -1,6 +1,7 @@
 ---
 title: XPathResult.snapshotLength
 slug: Web/API/XPathResult/snapshotLength
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API
@@ -51,7 +52,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

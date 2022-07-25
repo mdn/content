@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
+page-type: web-api-instance-property
 tags:
   - API
   - Performance Timeline API
@@ -112,10 +113,10 @@ function run_PerformanceEntry() {
   performance.mark("begin");
 
   // Check the entryType of all the "begin" entries
-  var entriesNamedBegin = performance.getEntriesByName("begin");
-  for (var i=0; i < entriesNamedBegin.length; i++) {
-      var typeOfEntry = entriesNamedBegin[i].entryType;
-      console.log("Entry is type: " + typeOfEntry);
+  const entriesNamedBegin = performance.getEntriesByName("begin");
+  for (let i=0; i < entriesNamedBegin.length; i++) {
+      const typeOfEntry = entriesNamedBegin[i].entryType;
+      console.log(`Entry is type: ${typeOfEntry}`);
   }
 
 }

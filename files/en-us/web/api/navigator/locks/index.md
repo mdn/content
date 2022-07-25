@@ -1,6 +1,7 @@
 ---
 title: Navigator.locks
 slug: Web/API/Navigator/locks
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

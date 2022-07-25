@@ -1,13 +1,14 @@
 ---
-title: PaintWorkletGlobalScope.registerPaint
+title: PaintWorkletGlobalScope.registerPaint()
 slug: Web/API/PaintWorklet/registerPaint
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
   - CSS Paint API
   - Houdini
   - Painting
-  - Property
+  - Method
   - Reference
   - Worklet
   - paintWorklet
@@ -21,16 +22,22 @@ The
 {{domxref("PaintWorklet")}} interface registers a class programmatically generate an
 image where a CSS property expects a file.
 
-## Value
+## Syntax
 
-- name
+```js
+registerPaint(name, class)
+```
+
+### Parameters
+
+- `name`
   - : The name of the worklet class to register.
-- class
+- `class`
   - : A reference to the class that implements the worklet.
 
-## Value
+## Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

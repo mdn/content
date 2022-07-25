@@ -1,6 +1,7 @@
 ---
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

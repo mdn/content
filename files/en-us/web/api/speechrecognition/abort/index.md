@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognition.abort()
 slug: Web/API/SpeechRecognition/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -31,7 +32,7 @@ var fileInput = document.getElementById("myfileinput");
 var files = fileInput.files;
 
 for (var i = 0; i < files.length; i++) {
-  alert(files[i].name + " has a last modified date of " + files[i].lastModifiedDate);
+  alert(`${files[i].name} has a last modified date of ${files[i].lastModifiedDate}`);
 }
 ```
 
@@ -47,14 +48,14 @@ someFile.lastModifiedDate.getTime();
 // 1519211809934
 // 1519211810362
 // 1519211811670
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 someFile.lastModifiedDate.getTime();
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// …
 ```
 
 In Firefox, you can also enable `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.

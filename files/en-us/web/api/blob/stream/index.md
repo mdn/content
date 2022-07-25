@@ -1,6 +1,7 @@
 ---
 title: Blob.stream()
 slug: Web/API/Blob/stream
+page-type: web-api-instance-method
 tags:
   - API
   - Blob

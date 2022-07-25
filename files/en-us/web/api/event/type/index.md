@@ -1,6 +1,7 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only
@@ -16,7 +17,7 @@ constructed and is the name commonly used to refer to the specific event, such a
 
 ## Value
 
-A {{jsxref("String")}} containing the type of {{domxref("Event")}}.
+A string containing the type of {{domxref("Event")}}.
 
 ## Example
 
@@ -35,7 +36,7 @@ button.
 ```js
 function getEventType(event) {
   const log = document.getElementById('log');
-  log.innerText = event.type + '\n' + log.innerText;
+  log.innerText = `${event.type}\n${log.innerText}`;
 }
 
 // Keyboard events

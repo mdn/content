@@ -1,6 +1,7 @@
 ---
 title: ReportingObserverOptions
 slug: Web/API/ReportingObserverOptions
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

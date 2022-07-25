@@ -1,6 +1,7 @@
 ---
 title: Document.selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -31,7 +32,7 @@ Setting the value of this property is equivalent to calling
 ## Examples
 
 ```js
-console.log('Current style sheet set: ' + document.selectedStyleSheetSet);
+console.log(`Current style sheet set: ${document.selectedStyleSheetSet}`);
 
 document.selectedStyleSheetSet = 'Some other style sheet';
 ```

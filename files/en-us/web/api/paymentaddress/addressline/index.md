@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.addressLine
 slug: Web/API/PaymentAddress/addressLine
+page-type: web-api-instance-property
 tags:
   - API
   - Address

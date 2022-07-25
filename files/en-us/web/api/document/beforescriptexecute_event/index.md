@@ -1,6 +1,7 @@
 ---
 title: 'Document: beforescriptexecute event'
 slug: Web/API/Document/beforescriptexecute_event
+page-type: web-api-event
 tags:
  - Document
  - beforescriptexecute
@@ -19,9 +20,9 @@ The `beforescriptexecute` event fires when a static {{HTMLElement("script")}} is
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforescriptexecute', event => { });
+addEventListener('beforescriptexecute', (event) => { });
 
-onbeforescriptexecute = event => { };
+onbeforescriptexecute = (event) => { };
 ```
 
 ## Event type
@@ -32,7 +33,7 @@ A generic {{domxref("Event")}}.
 
 ```js
 function starting(e) {
-  logMessage("Starting script with ID: " + e.target.id);
+  logMessage(`Starting script with ID: ${e.target.id}`);
 }
 
 document.addEventListener('beforescriptexecute', starting, true);

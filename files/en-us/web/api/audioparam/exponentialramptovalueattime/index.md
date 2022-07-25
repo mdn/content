@@ -1,6 +1,7 @@
 ---
 title: AudioParam.exponentialRampToValueAtTime()
 slug: Web/API/AudioParam/exponentialRampToValueAtTime
+page-type: web-api-instance-method
 tags:
   - API
   - AudioParam

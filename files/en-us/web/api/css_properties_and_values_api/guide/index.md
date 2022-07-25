@@ -1,6 +1,7 @@
 ---
 title: Using the CSS properties and values API
 slug: Web/API/CSS_Properties_and_Values_API/guide
+page-type: guide
 tags:
   - API
   - CSS

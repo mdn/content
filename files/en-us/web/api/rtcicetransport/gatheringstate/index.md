@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.gatheringState
 slug: Web/API/RTCIceTransport/gatheringState
+page-type: web-api-instance-property
 tags:
   - API
   - Gatherer

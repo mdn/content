@@ -1,6 +1,7 @@
 ---
 title: Permissions
 slug: Web/API/Permissions
+page-type: web-api-interface
 tags:
   - API
   - Interface

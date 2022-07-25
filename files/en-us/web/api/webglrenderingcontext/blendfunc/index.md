@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.blendFunc()
 slug: Web/API/WebGLRenderingContext/blendFunc
+page-type: web-api-instance-method
 tags:
   - API
   - Method

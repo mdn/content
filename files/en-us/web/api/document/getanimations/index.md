@@ -1,6 +1,7 @@
 ---
 title: Document.getAnimations()
 slug: Web/API/Document/getAnimations
+page-type: web-api-instance-method
 tags:
   - API
   - Animation

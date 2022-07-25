@@ -1,6 +1,7 @@
 ---
 title: Request.cache
 slug: Web/API/Request/cache
+page-type: web-api-instance-property
 tags:
   - API
   - Cache
@@ -76,10 +77,10 @@ fetch("some.json", {cache: "force-cache"})
 // reference to the controller since it would need to change the value
 let controller = new AbortController();
 fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: controller.signal})
-  .catch(e => e instanceof TypeError && e.message === "Failed to fetch" ?
+  .catch((e) => e instanceof TypeError && e.message === "Failed to fetch" ?
     ({status: 504}) : // Workaround for chrome; which fails with a TypeError
     Promise.reject(e))
-  .then(res => {
+  .then((res) => {
     if (res.status === 504) {
       controller.abort()
       controller = new AbortController();
@@ -98,8 +99,8 @@ fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: contro
       fetch("some.json", {cache: "no-cache", mode: "same-origin"}) // no cancellation or return value.
     return res
   })
-  .then(function(response) { /* consume the (possibly stale) response */ })
-  .catch(error => { /* Can be an AbortError/DOMError or a TypeError */ });
+  .then((response) => { /* consume the (possibly stale) response */ })
+  .catch((error) => { /* Can be an AbortError/DOMError or a TypeError */ });
 ```
 
 ## Specifications

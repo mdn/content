@@ -1,6 +1,7 @@
 ---
 title: CrashReportBody
 slug: Web/API/CrashReportBody
+page-type: web-api-interface
 tags:
   - API
   - CrashReportBody

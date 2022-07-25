@@ -1,6 +1,7 @@
 ---
 title: Range.isPointInRange()
 slug: Web/API/Range/isPointInRange
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: Synchronous and asynchronous requests
 slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
+page-type: guide
 tags:
   - Communication
   - DOM
@@ -24,7 +25,7 @@ If you use an asynchronous {{domxref('XMLHttpRequest')}}, you receive a callback
 This is the simplest usage of asynchronous {{domxref('XMLHttpRequest')}}.
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open("GET", "/bar/foo.txt", true);
 xhr.onload = function (e) {
   if (xhr.readyState === 4) {
@@ -61,7 +62,7 @@ function xhrError() {
 }
 
 function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
-    var xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
     xhr.callback = callback;
     xhr.arguments = Array.prototype.slice.call(arguments, 2);
     xhr.onload = xhrSuccess;
@@ -101,10 +102,10 @@ You can use a timeout to prevent your code from hanging while waiting for a read
 
 ```js
 function loadFile(url, timeout, callback) {
-    var args = Array.prototype.slice.call(arguments, 3);
-    var xhr = new XMLHttpRequest();
+    const args = Array.prototype.slice.call(arguments, 3);
+    const xhr = new XMLHttpRequest();
     xhr.ontimeout = function () {
-        console.error("The request for " + url + " timed out.");
+        console.error(`The request for ${url} timed out.`);
     };
     xhr.onload = function() {
         if (xhr.readyState === 4) {
@@ -150,7 +151,7 @@ All new XHR features such as `timeout` or `abort` are not allowed for synchronou
 This example demonstrates how to make a simple synchronous request.
 
 ```js
-var request = new XMLHttpRequest();
+const request = new XMLHttpRequest();
 request.open('GET', '/bar/foo.txt', false);  // `false` makes the request synchronous
 request.send(null);
 
@@ -161,7 +162,7 @@ if (request.status === 200) {
 
 Line 3 sends the request. The `null` parameter indicates that no body content is needed for the `GET` request.
 
-Line 5 checks the status code after the transaction is completed. If the result is 200 -- HTTP's "OK" result -- the document's text content is output to the console.
+Line 5 checks the status code after the transaction is completed. If the result is 200 — HTTP's "OK" result — the document's text content is output to the console.
 
 ### Example: Synchronous HTTP request from a Worker
 
@@ -176,7 +177,7 @@ One of the few cases in which a synchronous request does not usually block execu
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>MDN Example</title>
 <script type="text/javascript">
-  var worker = new Worker("myTask.js");
+  const worker = new Worker("myTask.js");
   worker.onmessage = function(event) {
     alert("Worker said: " + event.data);
   };
@@ -199,7 +200,7 @@ Hello World!!
 ```js
 self.onmessage = function (event) {
   if (event.data === "Hello") {
-    var xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
     xhr.open("GET", "myFile.txt", false);  // synchronous request
     xhr.send(null);
     self.postMessage(xhr.responseText);
@@ -221,7 +222,7 @@ The following example shows theoretical analytics code that attempts to submit d
 window.addEventListener('unload', logData, false);
 
 function logData() {
-    var client = new XMLHttpRequest();
+    const client = new XMLHttpRequest();
     client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
     client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
     client.send(analyticsData);

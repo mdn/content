@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: loadedmetadata event'
 slug: Web/API/HTMLMediaElement/loadedmetadata_event
+page-type: web-api-event
 tags:
   - Audio
   - Event
@@ -13,36 +14,19 @@ browser-compat: api.HTMLMediaElement.loadedmetadata_event
 
 The `loadedmetadata` event is fired when the metadata has been loaded.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onloadedmetadata")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('loadedmetadata', (event) => {});
+
+onloadedmetadata = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -54,8 +38,7 @@ Using `addEventListener()`:
 const video = document.querySelector('video');
 
 video.addEventListener('loadedmetadata', (event) => {
-  console.log('The duration and dimensions ' + '
-      of the media and tracks are now known. ');
+  console.log('The duration and dimensions of the media and tracks are now known.');
 });
 ```
 
@@ -65,8 +48,7 @@ Using the `onloadedmetadata` event handler property:
 const video = document.querySelector('video');
 
 video.onloadedmetadata = (event) => {
-  console.log('The duration and dimensions ' + '
-      of the media and tracks are now known. ');
+  console.log('The duration and dimensions of the media and tracks are now known.');
 };
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: InterventionReportBody.sourceFile
 slug: Web/API/InterventionReportBody/sourceFile
+page-type: web-api-instance-property
 tags:
   - API
   - Property

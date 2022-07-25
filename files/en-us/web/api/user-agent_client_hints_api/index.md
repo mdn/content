@@ -1,6 +1,7 @@
 ---
 title: User-Agent Client Hints API
 slug: Web/API/User-Agent_Client_Hints_API
+page-type: web-api-overview
 tags:
   - API
   - User-Agent Client Hints API
@@ -65,7 +66,7 @@ navigator.userAgentData.getHighEntropyValues(
   "platform",
   "platformVersion",
   "fullVersionList"])
-  .then(ua => { console.log(ua) });
+  .then((ua) => { console.log(ua) });
 ```
 
 ## Specifications

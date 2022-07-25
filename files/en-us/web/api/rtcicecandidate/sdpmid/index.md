@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.sdpMid
 slug: Web/API/RTCIceCandidate/sdpMid
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -34,11 +35,7 @@ which the candidate draws data, or `null` if no such association exists for the 
 > **Note:** Attempting to add a candidate (using {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}) that has a
 > value of `null` for both `sdpMid` and `sdpMLineIndex` will throw a {{jsxref("TypeError")}} exception.
 
-## Examples
-
-...
-
-## Specifications
+ ## Specifications
 
 {{Specifications}}
 

@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserverEntry.target
 slug: Web/API/IntersectionObserverEntry/target
+page-type: web-api-instance-property
 tags:
   - API
   - Element

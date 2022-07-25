@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.miterLimit
 slug: Web/API/CanvasRenderingContext2D/miterLimit
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -24,9 +25,7 @@ A number specifying the miter limit ratio, in coordinate space units. Zero, nega
 
 ### Using the `miterLimit` property
 
-See the chapter [Applying
-styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#a_demo_of_the_miterlimit_property) in the [Canvas
-tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) for more information.
+See the chapter [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#a_demo_of_the_miterlimit_property) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) for more information.
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>

@@ -1,6 +1,7 @@
 ---
 title: XRSystem
 slug: Web/API/XRSystem
+page-type: web-api-interface
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: EventSource.close()
 slug: Web/API/EventSource/close
+page-type: web-api-instance-method
 tags:
   - API
   - EventSource

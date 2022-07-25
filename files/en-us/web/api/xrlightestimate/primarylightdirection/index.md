@@ -1,6 +1,7 @@
 ---
 title: XRLightEstimate.primaryLightDirection
 slug: Web/API/XRLightEstimate/primaryLightDirection
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -33,7 +34,7 @@ const lightProbe = await xrSession.requestLightProbe();
 function onXRFrame(time, xrFrame) {
   let lightEstimate = xrFrame.getLightEstimate(lightProbe);
 
-  // Render lights ...
+  // Render lights
 
   // Available properties
   lightEstimate.primaryLightDirection;

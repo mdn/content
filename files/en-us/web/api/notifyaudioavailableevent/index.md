@@ -1,6 +1,7 @@
 ---
 title: NotifyAudioAvailableEvent
 slug: Web/API/NotifyAudioAvailableEvent
+page-type: web-api-interface
 tags:
   - API
   - Audio

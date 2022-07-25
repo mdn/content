@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createDelay()
 slug: Web/API/BaseAudioContext/createDelay
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -53,7 +54,7 @@ var audioCtx = new AudioContext();
 
 var synthDelay = audioCtx.createDelay(5.0);
 
-  ...
+// …
 
 var synthSource;
 
@@ -74,7 +75,7 @@ stopSynth.onclick = function() {
   playSynth.removeAttribute('disabled');
 }
 
-...
+// …
 
 var delay1;
 rangeSynth.oninput = function() {

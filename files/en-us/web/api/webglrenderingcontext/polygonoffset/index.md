@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.polygonOffset()
 slug: Web/API/WebGLRenderingContext/polygonOffset
+page-type: web-api-instance-method
 tags:
   - API
   - Method

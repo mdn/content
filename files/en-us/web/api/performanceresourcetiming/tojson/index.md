@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.toJSON()
 slug: Web/API/PerformanceResourceTiming/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -40,7 +41,7 @@ var entry = perfEntries[0];
 // Get the JSON and log it
 var json = entry.toJSON();
 var s = JSON.stringify(json);
-console.log("PerformanceEntry.toJSON = " + s);
+console.log(`PerformanceEntry.toJSON = ${s}`);
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: XPathEvaluator.createNSResolver()
 slug: Web/API/XPathEvaluator/createNSResolver
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

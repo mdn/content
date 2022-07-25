@@ -1,6 +1,7 @@
 ---
 title: RTCDTMFSender.insertDTMF()
 slug: Web/API/RTCDTMFSender/insertDTMF
+page-type: web-api-instance-method
 tags:
   - API
   - DTMF

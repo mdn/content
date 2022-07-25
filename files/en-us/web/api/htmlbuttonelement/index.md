@@ -1,6 +1,7 @@
 ---
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -67,14 +68,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 ## Methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}_
-
-| Name                                    | Return Type     | Description                                 |
-| --------------------------------------- | --------------- | ------------------------------------------- |
-| `checkValidity()`                       | A boolean value | Not supported for reset or button elements. |
-| `reportValidity()`                      | A boolean value | Not supported for reset or button elements. |
-| `setCustomValidity(in DOMString error)` | `void`          | Not supported for reset or button elements. |
-
-With Gecko-based browser, use the {{cssxref(":-moz-submit-invalid")}} pseudo-class to style submit buttons based on the validation of a form.
 
 ## Specifications
 

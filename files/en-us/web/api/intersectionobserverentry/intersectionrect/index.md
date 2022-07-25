@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserverEntry.intersectionRect
 slug: Web/API/IntersectionObserverEntry/intersectionRect
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer

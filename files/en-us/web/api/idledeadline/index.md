@@ -1,6 +1,7 @@
 ---
 title: IdleDeadline
 slug: Web/API/IdleDeadline
+page-type: web-api-interface
 tags:
   - API
   - Background Tasks API

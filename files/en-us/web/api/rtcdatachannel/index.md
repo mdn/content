@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
+page-type: web-api-interface
 tags:
   - API
   - Communication
@@ -76,7 +77,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCDataChannel.readyState", "readyState")}} {{ReadOnlyInline}}
   - : Returns a string
     which indicates the state of the data channel's underlying data connection.
-    It can have on of the following values:
+    It can have one of the following values:
     `connecting`, `open`, `closing`, or `closed`.
 
 ### Obsolete properties
@@ -92,7 +93,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.close", "close()")}}
-  - : Closes the{{domxref("RTCDataChannel")}}.
+  - : Closes the {{domxref("RTCDataChannel")}}.
     Either peer is permitted to call this method
     to initiate closure of the channel.
 - {{DOMxRef("RTCDataChannel.send", "send()")}}
@@ -125,11 +126,11 @@ The underlying data format is defined by the IEEE specification [SDP Offer/Answe
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
 dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+  console.log(`received: ${event.data}`);
 };
 
 dc.onopen = function () {

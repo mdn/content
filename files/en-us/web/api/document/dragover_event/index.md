@@ -1,6 +1,7 @@
 ---
 title: 'Document: dragover event'
 slug: Web/API/Document/dragover_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -97,17 +98,17 @@ body {
 ```js
 let dragged = null;
 
-document.addEventListener("dragstart", event => {
+document.addEventListener("dragstart", (event) => {
   // store a ref. on the dragged elem
   dragged = event.target;
 });
 
-document.addEventListener("dragover", event => {
+document.addEventListener("dragover", (event) => {
   // prevent default to allow drop
   event.preventDefault();
 });
 
-document.addEventListener("drop", event => {
+document.addEventListener("drop", (event) => {
   // prevent default action (open as link for some elements)
   event.preventDefault();
   // move dragged element to the selected drop target

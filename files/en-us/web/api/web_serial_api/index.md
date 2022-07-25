@@ -1,12 +1,13 @@
 ---
 title: Web Serial API
 slug: Web/API/Web_Serial_API
+page-type: web-api-overview
 tags:
   - API
   - Web Serial
   - Overview
   - Reference
-spec-urls: https://wicg.github.io/serial/
+browser-compat: api.Serial
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Web Serial API")}}
 
@@ -51,7 +52,7 @@ navigator.serial.getPorts().then((ports) => {
 });
 
 button.addEventListener('click', () => {
-  const usbVendorId = ...;
+  const usbVendorId = 0xABCD;
   navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
     // Connect to `port` or add it to the list of available ports.
   }).catch((e) => {
@@ -91,7 +92,7 @@ while (port.readable) {
 
 ## Browser compatibility
 
-{{Compat("api.Serial")}}
+{{Compat}}
 
 ## See also
 

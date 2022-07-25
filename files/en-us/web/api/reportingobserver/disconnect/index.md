@@ -1,6 +1,7 @@
 ---
 title: ReportingObserver.disconnect()
 slug: Web/API/ReportingObserver/disconnect
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -50,7 +51,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 observer.observe()
 
-...
+// ...
 
 observer.disconnect()
 ```

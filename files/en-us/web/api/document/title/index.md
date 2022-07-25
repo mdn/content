@@ -1,6 +1,7 @@
 ---
 title: Document.title
 slug: Web/API/Document/title
+page-type: web-api-instance-property
 tags:
   - API
   - Command API
@@ -32,7 +33,7 @@ document).
 
 ## Examples
 
-```js
+```html
 <!DOCTYPE html>
 <html>
 <head>

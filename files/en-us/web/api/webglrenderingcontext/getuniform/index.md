@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getUniform()
 slug: Web/API/WebGLRenderingContext/getUniform
+page-type: web-api-instance-method
 tags:
   - API
   - Method

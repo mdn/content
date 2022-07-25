@@ -1,6 +1,7 @@
 ---
 title: Web Share API
 slug: Web/API/Web_Share_API
+page-type: web-api-overview
 tags:
   - API
   - Apps
@@ -9,6 +10,9 @@ tags:
   - Landing
   - Overview
   - Reference
+browser-compat:
+  - api.Navigator.share
+  - api.Navigator.canShare
 ---
 {{DefaultAPISidebar("Web Share API")}}
 
@@ -63,7 +67,7 @@ btn.addEventListener('click', async () => {
     await navigator.share(shareData)
     resultPara.textContent = 'MDN shared successfully'
   } catch(err) {
-    resultPara.textContent = 'Error: ' + err
+    resultPara.textContent = `Error: ${err}`
   }
 });
 ```
@@ -72,12 +76,11 @@ The above example is taken from our [Web share test](https://mdn.github.io/dom-e
 
 ## Specifications
 
-{{Specifications("api.Navigator.share")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.share")}}
-{{Compat("api.Navigator.canShare")}}
+{{Compat}}
 
 ## See also
 

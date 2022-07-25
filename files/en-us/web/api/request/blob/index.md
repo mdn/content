@@ -1,6 +1,7 @@
 ---
 title: Request.blob()
 slug: Web/API/Request/blob
+page-type: web-api-instance-method
 tags:
   - API
   - Blob

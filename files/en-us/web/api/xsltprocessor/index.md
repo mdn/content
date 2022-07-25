@@ -1,6 +1,7 @@
 ---
 title: XSLTProcessor
 slug: Web/API/XSLTProcessor
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -28,15 +29,14 @@ new XSLTProcessor()
 
 - [Throws] void {{domxref("XSLTProcessor.importStylesheet")}}({{domxref("Node")}} styleSheet)
   - : Imports the XSLT stylesheet. If the given node is a document node, you can pass in a
-    full XSL Transform or a [literal result element
-    transform](https://www.w3.org/TR/xslt/#result-element-stylesheet); otherwise, it must be an `<xsl:stylesheet>` or
+    full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt/#result-element-stylesheet); otherwise, it must be an `<xsl:stylesheet>` or
     `<xsl:transform>` element.
 - [Throws] {{domxref("DocumentFragment")}}
   {{domxref("XSLTProcessor.transformToFragment")}}({{domxref("Node")}} source, {{domxref("Document")}} owner)
   - : Transforms the node source by applying the stylesheet imported using the
     {{domxref("XSLTProcessor.importStylesheet()")}} function. The owner document of the
     resulting document fragment is the owner node.
-- [[Throws]](/en-US/docs/Mozilla/WebIDL_bindings#Throws)
+- [[Throws]](/en-US/docs/Mozilla/WebIDL_bindings#throws)
   {{domxref("Document")}}
   {{domxref("XSLTProcessor.transformToDocument")}}({{domxref("Node")}} source)
 
@@ -74,7 +74,7 @@ new XSLTProcessor()
 
 ### Non-Web-exposed properties
 
-The following properties are [`[ChromeOnly]`](/en-US/docs/Mozilla/WebIDL_bindings#ChromeOnly)
+The following properties are [`[ChromeOnly]`](/en-US/docs/Mozilla/WebIDL_bindings#chromeonly)
 and not exposed to Web content:
 
 - [ChromeOnly] attribute unsigned long {{domxref("XSLTProcessor.flags")}}

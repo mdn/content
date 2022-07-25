@@ -1,6 +1,7 @@
 ---
 title: Element.getAttributeNS()
 slug: Web/API/Element/getAttributeNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -53,8 +54,8 @@ custom namespace.
       stroke-width="2" fill="none" test:foo="Hello namespaced attribute!"/>
 
   <script type="text/javascript">
-    var ns = 'http://www.example.com/2014/test';
-    var circle = document.getElementById( 'target' );
+    const ns = 'http://www.example.com/2014/test';
+    const circle = document.getElementById( 'target' );
 
     console.log( 'attribute test:foo: "' + circle.getAttributeNS( ns, 'foo' ) + '"' );
   </script>
@@ -76,8 +77,8 @@ namespaces are not supported.
 </svg>
 
 <script type="text/javascript">
-  var ns = 'http://www.example.com/2014/test';
-  var circle = document.getElementById( 'target' );
+  const ns = 'http://www.example.com/2014/test';
+  const circle = document.getElementById( 'target' );
   console.log('Attribute value: ' + circle.getAttribute('test:foo'));
 </script>
 
@@ -115,5 +116,4 @@ requested attribute does not exist on the specified element.
 
 ## See also
 
-- [Code
-  snippets:getAttributeNS](/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS)
+- [Code snippets:getAttributeNS](/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS)

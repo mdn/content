@@ -1,6 +1,7 @@
 ---
 title: ClipboardItem
 slug: Web/API/ClipboardItem
+page-type: web-api-interface
 tags:
   - API
   - Clipboard
@@ -28,7 +29,7 @@ Access to the contents of the clipboard is gated behind the [Permissions API](/e
 ## Constructor
 
 - {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}}
-  - : Creates a new **`ClipboardItem`** object, with the {{Glossary("MIME type")}} as the key and {{domxref("Blob")}} as the value
+  - : Creates a new **`ClipboardItem`** object, with the {{Glossary("MIME type")}} as the key and {{domxref("Blob")}} as the value.
 
 ## Properties
 

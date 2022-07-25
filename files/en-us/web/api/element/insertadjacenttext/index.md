@@ -1,6 +1,7 @@
 ---
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

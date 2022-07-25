@@ -1,6 +1,7 @@
 ---
 title: CSSMathMin
 slug: Web/API/CSSMathMin
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -24,7 +25,7 @@ The **`CSSMathMin`** interface of the {{domxref('CSS_Object_Model#css_typed_obje
 
 ## Properties
 
-- {{domxref('CSSMathMin.values')}}{{ReadOnlyInline}}
+- {{domxref('CSSMathMin.values')}} {{ReadOnlyInline}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ## Methods

@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.state
 slug: Web/API/VideoDecoder/state
+page-type: web-api-instance-property
 tags:
   - API
   - Property

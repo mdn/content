@@ -1,6 +1,7 @@
 ---
 title: 'Window: hashchange event'
 slug: Web/API/Window/hashchange_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -18,8 +19,8 @@ The **`hashchange`** event is fired when the fragment identifier of the URL has 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('hashchange', event => { });
-onhashchange = event => { };
+addEventListener('hashchange', (event) => { });
+onhashchange = (event) => { };
 ```
 
 ## Event type

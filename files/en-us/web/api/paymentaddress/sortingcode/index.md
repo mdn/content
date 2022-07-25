@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.sortingCode
 slug: Web/API/PaymentAddress/sortingCode
+page-type: web-api-instance-property
 tags:
   - API
   - Address

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.uniformMatrix[234]x[234]fv()
 slug: Web/API/WebGL2RenderingContext/uniformMatrix
+page-type: web-api-instance-method
 tags:
   - API
   - Method

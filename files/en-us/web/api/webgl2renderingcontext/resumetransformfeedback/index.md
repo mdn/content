@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.resumeTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/resumeTransformFeedback
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -36,7 +37,7 @@ var transformFeedback = gl.createTransformFeedback();
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback);
 gl.beginTransformFeedback(gl.TRIANGLES);
 gl.pauseTransformFeedback();
-//...
+//…
 gl.resumeTransformFeedback();
 gl.drawArrays(gl.TRIANGLES, 0, 3);
 gl.endTransformFeedback();

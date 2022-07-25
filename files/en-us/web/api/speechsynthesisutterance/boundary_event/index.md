@@ -1,6 +1,7 @@
 ---
 title: 'SpeechSynthesisUtterance: boundary event'
 slug: Web/API/SpeechSynthesisUtterance/boundary_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -16,9 +17,9 @@ The **`boundary`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('boundary', event => { })
+addEventListener('boundary', (event) => { })
 
-onboundary = event => { }
+onboundary = (event) => { }
 ```
 
 ## Event type
@@ -46,7 +47,7 @@ You can use the `boundary` event in an [`addEventListener`](/en-US/docs/Web/API/
 
 ```js
 utterThis.addEventListener('boundary', function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
+  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
 });
 ```
 
@@ -54,7 +55,7 @@ Or use the `onboundary` event handler property:
 
 ```js
 utterThis.onboundary = function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
+  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Navigator.plugins
 slug: Web/API/Navigator/plugins
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

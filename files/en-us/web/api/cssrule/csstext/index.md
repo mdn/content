@@ -1,6 +1,7 @@
 ---
 title: CSSRule.cssText
 slug: Web/API/CSSRule/cssText
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

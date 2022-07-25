@@ -1,6 +1,7 @@
 ---
 title: NavigationPreloadManager
 slug: Web/API/NavigationPreloadManager
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -113,9 +114,7 @@ The code below shows how to set the value of the header directive to some variab
 
 ```js
 navigator.serviceWorker.ready
-  .then((registration) => {
-    return registration.navigationPreload.setHeaderValue(newValue);
-  })
+  .then((registration) => registration.navigationPreload.setHeaderValue(newValue))
   .then(() => {
     console.log("Done!");
   });
@@ -132,9 +131,7 @@ The code below shows how to get the promise that resolves to a `state` object an
 
 ```js
 navigator.serviceWorker.ready
-  .then((registration) => {
-    return registration.navigationPreload.getState();
-  })
+  .then((registration) => registration.navigationPreload.getState())
   .then((state) => {
     console.log(state.enabled); // boolean
     console.log(state.headerValue); // string

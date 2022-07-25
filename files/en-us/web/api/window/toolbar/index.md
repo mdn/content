@@ -1,6 +1,7 @@
 ---
 title: Window.toolbar
 slug: Web/API/Window/toolbar
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -30,7 +31,7 @@ of the `toolbar` object is used.
 <head>
   <title>Various DOM Tests</title>
   <script>
-    var visible = window.toolbar.visible;
+    const visible = window.toolbar.visible;
   </script>
 </head>
 <body>

@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.depthNear
 slug: Web/API/VRDisplay/depthNear
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

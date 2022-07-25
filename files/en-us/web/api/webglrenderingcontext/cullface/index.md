@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.cullFace()
 slug: Web/API/WebGLRenderingContext/cullFace
+page-type: web-api-instance-method
 tags:
   - API
   - Method

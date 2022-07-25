@@ -1,6 +1,7 @@
 ---
 title: UIEvent.sourceCapabilities
 slug: Web/API/UIEvent/sourceCapabilities
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

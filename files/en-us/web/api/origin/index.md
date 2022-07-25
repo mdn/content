@@ -1,6 +1,7 @@
 ---
 title: origin
 slug: Web/API/origin
+page-type: web-api-global-property
 tags:
   - API
   - HTML DOM

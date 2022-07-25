@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.drawBuffers()
 slug: Web/API/WebGL2RenderingContext/drawBuffers
+page-type: web-api-instance-method
 tags:
   - API
   - Method

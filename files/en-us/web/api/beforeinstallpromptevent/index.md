@@ -1,6 +1,7 @@
 ---
 title: BeforeInstallPromptEvent
 slug: Web/API/BeforeInstallPromptEvent
+page-type: web-api-interface
 tags:
   - API
   - BeforeInstallPromptEvent

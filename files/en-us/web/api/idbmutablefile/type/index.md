@@ -1,6 +1,7 @@
 ---
 title: IDBMutableFile.type
 slug: Web/API/IDBMutableFile/type
+page-type: web-api-instance-property
 tags:
   - API
   - Files

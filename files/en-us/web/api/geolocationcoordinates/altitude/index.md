@@ -1,6 +1,7 @@
 ---
 title: GeolocationCoordinates.altitude
 slug: Web/API/GeolocationCoordinates/altitude
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API
@@ -34,5 +35,4 @@ ellipsoid.
 
 - [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - The {{domxref("GeolocationCoordinates")}} interface it belongs to.
-- [National
-  Imagery and Mapping Agency Technical Report 8350.2, Third Edition (WGS84)](https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf)
+- [National Imagery and Mapping Agency Technical Report 8350.2, Third Edition (WGS84)](https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf)

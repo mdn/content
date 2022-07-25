@@ -1,6 +1,7 @@
 ---
 title: XRProjectionLayer.fixedFoveation
 slug: Web/API/XRProjectionLayer/fixedFoveation
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -43,7 +44,7 @@ Some devices don't support foveated rendering. In that case `fixedFoveation` is 
 The `fixedFoveation` property allows you to set the level of foveation at runtime and for each frame. To set the maximum foveation for a given {{domxref("XRProjectionLayer")}}, use a value of `1`.
 
 ```js
-let glProjectionLayer = glBinding.createProjectionLayer(/* ... */);
+let glProjectionLayer = glBinding.createProjectionLayer(/* … */);
 glProjectionLayer.fixedFoveation = 1; // maximum foveation
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.validity
 slug: Web/API/ElementInternals/validity
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -33,12 +34,12 @@ class CustomCheckbox extends HTMLElement {
   constructor() {
     super();
     this.internals_ = this.attachInternals();
-
-    /* ... */
-
   }
-  window.customElements.define("custom-checkbox", CustomCheckbox);
-})();
+
+  // …
+}
+
+window.customElements.define("custom-checkbox", CustomCheckbox);
 
 let element = document.getElementById("custom-checkbox");
 console.log(element.internals_.validity.valid);

@@ -1,6 +1,7 @@
 ---
 title: Clients
 slug: Web/API/Clients
+page-type: web-api-interface
 tags:
   - API
   - Clients
@@ -33,7 +34,7 @@ The `Clients` interface provides access to {{domxref("Client")}} objects. Access
 The following example shows an existing chat window or creates a new one when the user clicks a notification.
 
 ```js
-addEventListener('notificationclick', event => {
+addEventListener('notificationclick', (event) => {
   event.waitUntil(async function() {
     const allClients = await clients.matchAll({
       includeUncontrolled: true

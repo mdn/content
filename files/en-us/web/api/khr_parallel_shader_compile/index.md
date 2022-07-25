@@ -1,6 +1,7 @@
 ---
 title: KHR_parallel_shader_compile
 slug: Web/API/KHR_parallel_shader_compile
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -26,7 +27,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 Enable the extension:
 
 ```js
-var ext = gl.getExtension('KHR_parallel_shader_compile');
+const ext = gl.getExtension('KHR_parallel_shader_compile');
 ```
 
 In general, best practice with or without the extension is:
@@ -49,7 +50,7 @@ function* linkingProgress(programs) {
     let todo = programs.slice();
     while (todo.length) {
         if (ext) {
-            todo = todo.filter(x => !gl.getProgramParameter(x, ext.COMPLETION_STATUS_KHR));
+            todo = todo.filter((x) => !gl.getProgramParameter(x, ext.COMPLETION_STATUS_KHR));
         } else {
             const x = todo.pop();
             gl.getProgramParameter(x, gl.LINK_STATUS);

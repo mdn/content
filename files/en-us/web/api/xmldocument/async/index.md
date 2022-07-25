@@ -1,6 +1,7 @@
 ---
 title: XMLDocument.async
 slug: Web/API/XMLDocument/async
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

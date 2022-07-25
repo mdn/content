@@ -1,6 +1,7 @@
 ---
 title: DOMRectReadOnly.right
 slug: Web/API/DOMRectReadOnly/right
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

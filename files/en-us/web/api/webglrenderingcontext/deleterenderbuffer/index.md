@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteRenderbuffer()
 slug: Web/API/WebGLRenderingContext/deleteRenderbuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -40,7 +41,7 @@ var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var renderbuffer = gl.createRenderbuffer();
 
-// ...
+// …
 
 gl.deleteRenderbuffer(renderbuffer);
 ```

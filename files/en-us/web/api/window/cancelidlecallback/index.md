@@ -1,6 +1,7 @@
 ---
 title: window.cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

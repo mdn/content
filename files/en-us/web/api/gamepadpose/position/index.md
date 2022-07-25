@@ -1,6 +1,7 @@
 ---
 title: GamepadPose.position
 slug: Web/API/GamepadPose/position
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

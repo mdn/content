@@ -1,6 +1,7 @@
 ---
 title: ImageTrackList.selectedIndex
 slug: Web/API/ImageTrackList/selectedIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Property

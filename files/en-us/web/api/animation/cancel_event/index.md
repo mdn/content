@@ -1,6 +1,7 @@
 ---
 title: 'Animation: cancel event'
 slug: Web/API/Animation/cancel_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -18,8 +19,8 @@ The **`cancel`** event of the {{domxref("Animation")}} interface is fired when t
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cancel', event => { })
-oncancel = event => { }
+addEventListener('cancel', (event) => { })
+oncancel = (event) => { }
 ```
 
 ## Event type
@@ -42,7 +43,7 @@ _In addition to the properties listed below, properties from the parent interfac
 If this animation is canceled, remove its element.
 
 ```js
-animation.oncancel = event => { animation.effect.target.remove(); };
+animation.oncancel = (event) => { animation.effect.target.remove(); };
 ```
 
 ## Specifications

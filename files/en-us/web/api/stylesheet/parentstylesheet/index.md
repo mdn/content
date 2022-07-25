@@ -1,6 +1,7 @@
 ---
 title: StyleSheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

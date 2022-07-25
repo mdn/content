@@ -1,6 +1,7 @@
 ---
 title: Report.url
 slug: Web/API/Report/url
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

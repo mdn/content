@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -247,7 +248,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - [`search`](/en-US/docs/Web/API/HTMLInputElement/search_event)
   - : Fired when a search is initiated on an {{HTMLElement("input")}} of `type="search"`.
     Also available via the [`onsearch`](/en-US/docs/Web/API/GlobalEventHandlers/onsearch) event handler property.
-- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event{{experimental_inline}}
+- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event {{experimental_inline}}
   - : Fires when the text selection in a {{HTMLElement("input")}} element has been changed.
 
 ## Specifications

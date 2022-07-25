@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.close()
 slug: Web/API/IDBDatabase/close
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -44,11 +45,11 @@ None ({{jsxref("undefined")}}).
 var DBOpenRequest = window.indexedDB.open("toDoList", 4); // opening a database.
 
 // Create event handlers for both success and failure of
-DBOpenRequest.onerror = event => {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += "<li>Error loading database.</li>";
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.

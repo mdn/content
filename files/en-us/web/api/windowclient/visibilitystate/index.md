@@ -1,6 +1,7 @@
 ---
 title: WindowClient.visibilityState
 slug: Web/API/WindowClient/visibilityState
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -32,17 +33,14 @@ event.waitUntil(clients.matchAll({
     for (let i = 0; i < clientList.length; i++) {
       let client = clientList[i];
       if (client.url == '/' && 'focus' in client) {
-        if (client.visibilityState === 'hidden')
-          return client.focus();
-        }
+        if (client.visibilityState === 'hidden') return client.focus();
       }
     }
-
     if (clients.openWindow) {
       return clients.openWindow('/');
     }
-  }));
-});
+  })
+);
 ```
 
 ## Specifications

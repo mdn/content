@@ -1,6 +1,7 @@
 ---
 title: OTPCredential.code
 slug: Web/API/OTPCredential/code
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -25,11 +26,11 @@ The below code uses the value of `code` to complete an input form element. [See 
 navigator.credentials.get({
   otp: { transport:['sms'] },
   signal: ac.signal
-}).then(otp => {
+}).then((otp) => {
   input.value = otp.code;
   if (form) form.submit();
-}).catch(err => {
-  console.log(err);
+}).catch((err) => {
+  console.error(err);
 });
 ```
 

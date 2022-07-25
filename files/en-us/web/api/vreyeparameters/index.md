@@ -1,6 +1,7 @@
 ---
 title: VREyeParameters
 slug: Web/API/VREyeParameters
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -48,8 +49,8 @@ navigator.getVRDisplays().then(function(displays) {
 
       // Set the canvas size to the size of the vrDisplay viewport
 
-      var leftEye = vrDisplay.getEyeParameters('left');
-      var rightEye = vrDisplay.getEyeParameters('right');
+      const leftEye = vrDisplay.getEyeParameters('left');
+      const rightEye = vrDisplay.getEyeParameters('right');
 
       canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
       canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);

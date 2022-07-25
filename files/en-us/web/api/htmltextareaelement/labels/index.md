@@ -1,6 +1,7 @@
 ---
 title: HTMLTextAreaElement.labels
 slug: Web/API/HTMLTextAreaElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -41,7 +42,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 60)}}
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: NavigatorUAData.platform
 slug: Web/API/NavigatorUAData/platform
+page-type: web-api-instance-property
 tags:
   - API
   - Property

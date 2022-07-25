@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionEvent.emma
 slug: Web/API/SpeechRecognitionEvent/emma
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -33,8 +34,8 @@ the user agent will return `null`.
 
 ```js
 recognition.onresult = function(event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  const color = event.results[0][0].transcript;
+  diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.emma);
 }

@@ -1,6 +1,7 @@
 ---
 title: 'FontFaceSet: loadingdone event'
 slug: Web/API/FontFaceSet/loadingdone_event
+page-type: web-api-event
 tags:
   - API
   - Property
@@ -18,9 +19,9 @@ The `loadingdone` event fires when the document has loaded all events.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('loadingdone', event => { });
+addEventListener('loadingdone', (event) => { });
 
-onloadingdone = event => { };
+onloadingdone = (event) => { };
 ```
 
 ## Example

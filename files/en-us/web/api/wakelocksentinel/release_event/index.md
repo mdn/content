@@ -1,6 +1,7 @@
 ---
 title: 'WakeLockSentinel: release event'
 slug: Web/API/WakeLockSentinel/release_event
+page-type: web-api-event
 tags:
   - Event Handler
   - Property
@@ -25,9 +26,9 @@ power save mode.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event-handler property.
 
 ```js
-addEventListener('release', event => { })
+addEventListener('release', (event) => { })
 
-onrelease = event => { }
+onrelease = (event) => { }
 ```
 
 ## Event type

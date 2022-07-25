@@ -1,6 +1,7 @@
 ---
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -35,7 +36,7 @@ if (!lastSheetSet) {
   lastSheetSet = 'Style sheet not yet changed';
 }
 else {
-  console.log('The last style sheet set is: ' + lastSheetSet);
+  console.log(`The last style sheet set is: ${lastSheetSet}`);
 }
 ```
 

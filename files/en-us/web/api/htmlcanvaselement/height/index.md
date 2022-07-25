@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.height
 slug: Web/API/HTMLCanvasElement/height
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

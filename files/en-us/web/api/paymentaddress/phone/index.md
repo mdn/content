@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.phone
 slug: Web/API/PaymentAddress/phone
+page-type: web-api-instance-property
 tags:
   - API
   - Address

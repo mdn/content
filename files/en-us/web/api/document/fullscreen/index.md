@@ -1,6 +1,7 @@
 ---
 title: Document.fullscreen
 slug: Web/API/Document/fullscreen
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

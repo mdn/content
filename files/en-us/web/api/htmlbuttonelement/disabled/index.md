@@ -1,6 +1,7 @@
 ---
 title: HTMLButtonElement.disabled
 slug: Web/API/HTMLButtonElement/disabled
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

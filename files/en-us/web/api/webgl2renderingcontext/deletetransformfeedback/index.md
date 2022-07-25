@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.deleteTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/deleteTransformFeedback
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -38,7 +39,7 @@ None ({{jsxref("undefined")}}).
 ```js
 var transformFeedback = gl.createTransformFeedback();
 
-// ...
+// …
 
 gl.deleteTransformFeedback(transformFeedback);
 ```

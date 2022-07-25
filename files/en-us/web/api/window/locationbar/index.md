@@ -1,6 +1,7 @@
 ---
 title: Window.locationbar
 slug: Web/API/Window/locationbar
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

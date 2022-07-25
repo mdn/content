@@ -1,6 +1,7 @@
 ---
 title: TextTrack.inBandMetadataTrackDispatchType
 slug: Web/API/TextTrack/inBandMetadataTrackDispatchType
+page-type: web-api-instance-property
 tags:
   - API
   - Property

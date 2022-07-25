@@ -1,6 +1,7 @@
 ---
 title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -13,8 +14,7 @@ browser-compat: api.SharedWorker.SharedWorker
 
 The **`SharedWorker()`** constructor creates a
 {{domxref("SharedWorker")}} object that executes the script at the specified URL. This
-script must obey the [same-origin
-policy](/en-US/docs/Web/Security/Same-origin_policy).
+script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 > **Note:** there is disagreement among browser manufacturers about
 > whether a data URL is of the same origin or not. Although Gecko 10.0
@@ -96,8 +96,7 @@ myWorker.port.onmessage = function(e) {
 }
 ```
 
-For a full example, see our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run
-shared worker](https://mdn.github.io/simple-shared-worker/).)
+For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
 ## Specifications
 
@@ -110,4 +109,3 @@ shared worker](https://mdn.github.io/simple-shared-worker/).)
 ## See also
 
 - The {{domxref("SharedWorker")}} interface it belongs to.
-- [another multiply demo](https://anlexn.github.io/shared-worker-mdn/)

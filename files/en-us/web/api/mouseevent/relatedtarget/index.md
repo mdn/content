@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -63,7 +64,7 @@ That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("dragenter")}}</td>
+      <td>{{domxref("HTMLElement/dragenter_event", "dragenter")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device entered to
       </td>
@@ -72,7 +73,7 @@ That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("dragleave")}}</td>
+      <td>{{domxref("HTMLElement/dragleave_event", "dragleave")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device exited from
       </td>
@@ -160,7 +161,7 @@ function overListener(event) {
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 280)}}
+{{EmbedLiveSample("Examples", 700, 280)}}
 
 ## Specifications
 

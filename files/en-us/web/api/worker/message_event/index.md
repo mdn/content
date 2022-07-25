@@ -1,6 +1,7 @@
 ---
 title: 'Worker: message event'
 slug: Web/API/Worker/message_event
+page-type: web-api-event
 tags:
   - API
   - Worker
@@ -20,9 +21,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type

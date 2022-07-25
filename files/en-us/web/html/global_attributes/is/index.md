@@ -27,7 +27,7 @@ class WordCount extends HTMLParagraphElement {
     super();
 
     // Constructor contents omitted for brevity
-    ...
+    // …
 
   }
 }

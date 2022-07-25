@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -82,13 +83,13 @@ called on the source, the source is cleared out.
 ```js
 // define variables
 
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var source;
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+let source;
 
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
-var play = document.querySelector('.play');
-var stop = document.querySelector('.stop');
+const pre = document.querySelector('pre');
+const myScript = document.querySelector('script');
+const play = document.querySelector('.play');
+const stop = document.querySelector('.stop');
 
 // use XHR to load an audio track, and
 // decodeAudioData to decode it and stick it in a buffer.
@@ -96,14 +97,14 @@ var stop = document.querySelector('.stop');
 
 function getData() {
   source = audioCtx.createBufferSource();
-  var request = new XMLHttpRequest();
+  const request = new XMLHttpRequest();
 
   request.open('GET', 'viper.ogg', true);
 
   request.responseType = 'arraybuffer';
 
   request.onload = function() {
-    var audioData = request.response;
+    const audioData = request.response;
 
     audioCtx.decodeAudioData(audioData, function(buffer) {
         source.buffer = buffer;
@@ -112,7 +113,7 @@ function getData() {
         source.loop = true;
       },
 
-      function(e){ console.log("Error with decoding audio data" + e.err); });
+      function(e){ console.log(`Error with decoding audio data: ${e.err}`); });
 
   }
 

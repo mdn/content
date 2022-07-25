@@ -1,6 +1,7 @@
 ---
 title: BlobBuilder
 slug: Web/API/BlobBuilder
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -79,7 +80,7 @@ being built. If the value you specify isn't a {{domxref("Blob")}}, [`ArrayBuffer
 or [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String),
 the value is coerced to a string before being appended to the blob.
 
-```js
+```
 void append(
   in ArrayBuffer data
 );
@@ -109,9 +110,9 @@ void append(
 Returns the {{domxref("Blob")}} object that has been constructed using the data passed
 through calls to [`append()`](#append).
 
-```js
+```
 Blob getBlob(
-  in DOMString contentType {{optional_inline}}
+  in DOMString contentType // optional
 );
 ```
 
@@ -132,7 +133,7 @@ starting a new, empty blob.
 
 Returns a {{domxref("File")}} object.
 
-```js
+```
 File getFile(
   in DOMString name,
   [optional] in DOMString contentType

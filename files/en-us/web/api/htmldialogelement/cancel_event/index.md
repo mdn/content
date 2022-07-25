@@ -1,6 +1,7 @@
 ---
 title: 'HTMLDialogElement: cancel event'
 slug: Web/API/HTMLDialogElement/cancel_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -100,6 +101,5 @@ closeButton.addEventListener('click', () => {
 
 ## See also
 
-- {{domxref("GlobalEventHandlers.oncancel")}}
 - HTML {{HTMLElement("dialog")}} element
 - {{domxref("HTMLDialogElement/close_event", "close")}}

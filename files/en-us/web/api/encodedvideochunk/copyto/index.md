@@ -1,6 +1,7 @@
 ---
 title: EncodedVideoChunk.copyTo()
 slug: Web/API/EncodedVideoChunk/copyTo
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,11 +23,11 @@ copyTo(destination)
 ### Parameters
 
 - `destination`
-  - : A {{domxref("BufferSource")}} that the data can be copied to.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} that the data can be copied to.
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

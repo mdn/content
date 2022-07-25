@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.width
 slug: Web/API/MediaTrackSupportedConstraints/width
+page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.width
 ---
 {{APIRef("Media Capture and Streams")}}

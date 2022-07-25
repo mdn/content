@@ -1,6 +1,7 @@
 ---
 title: XRSession.depthUsage
 slug: Web/API/XRSession/depthUsage
+page-type: web-api-instance-property
 tags:
   - API
   - AR

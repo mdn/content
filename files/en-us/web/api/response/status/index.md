@@ -1,6 +1,7 @@
 ---
 title: Response.status
 slug: Web/API/Response/status
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -30,14 +31,14 @@ We then fetch this request using {{domxref("fetch()")}}, extract a blob from the
 Note that at the top of the `fetch()` block we log the response `status` value to the console.
 
 ```js
-var myImage = document.querySelector('img');
+const myImage = document.querySelector('img');
 
-var myRequest = new Request('flowers.jpg');
+const myRequest = new Request('flowers.jpg');
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then((response) => {
   console.log(response.status); // returns 200
-  response.blob().then(function(myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
+  response.blob().then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
 });

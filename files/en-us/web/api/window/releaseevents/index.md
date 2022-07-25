@@ -1,6 +1,7 @@
 ---
 title: Window.releaseEvents()
 slug: Web/API/Window/releaseEvents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

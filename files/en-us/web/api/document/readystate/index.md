@@ -1,6 +1,7 @@
 ---
 title: Document.readyState
 slug: Web/API/Document/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -47,7 +48,7 @@ switch (document.readyState) {
     break;
   case "complete":
     // The page is fully loaded.
-    console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
+    console.log(`The first CSS rule is: ${document.styleSheets[0].cssRules[0].cssText}`);
     break;
 }
 ```
@@ -77,7 +78,7 @@ document.onreadystatechange = function () {
 ### readystatechange as event listener to insert or modify the DOM before DOMContentLoaded
 
 ```js
-document.addEventListener('readystatechange', event => {
+document.addEventListener('readystatechange', (event) => {
   if (event.target.readyState === 'interactive') {
     initLoader();
   }

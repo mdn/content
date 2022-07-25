@@ -1,6 +1,7 @@
 ---
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -57,7 +58,7 @@ clicking and holding down on an element.
 
   <script type="text/javascript">
     function init() {
-      var btn = document.getElementById("myButton");
+      const btn = document.getElementById("myButton");
       if (btn.setCapture) {
         btn.addEventListener("mousedown", mouseDown, false);
         btn.addEventListener("mouseup", mouseUp, false);
@@ -77,7 +78,7 @@ clicking and holding down on an element.
     }
 
     function mouseMoved(e) {
-      var output = document.getElementById("output");
+      const output = document.getElementById("output");
       output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
     }
   </script>

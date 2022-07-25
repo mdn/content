@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API
@@ -103,7 +104,7 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ### Result
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('Examples') }}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback.watchAvailability()
 slug: Web/API/RemotePlayback/watchAvailability
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -42,8 +43,8 @@ In the following example, after checking that there is no currently connected de
 ```js
  if (video.remote.state == 'disconnected') {
   video.remote.watchAvailability(handleAvailabilityChange)
-  .then(id => {
-    log('> Started watching remote device availability: ' + id);
+  .then((id) => {
+    log(`> Started watching remote device availability: ${id}`);
     callbackId = id
   });
 }

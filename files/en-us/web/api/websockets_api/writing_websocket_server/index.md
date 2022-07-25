@@ -1,6 +1,7 @@
 ---
 title: Writing a WebSocket server in C#
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
+page-type: guide
 tags:
   - HTML5
   - NeedsMarkupWork
@@ -17,7 +18,7 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener&view=net-6.0) class which does as the name suggests. It is in the *System.Net.Sockets* namespace.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the *System.Net.Sockets* namespace.
 
 > **Note:** It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
 
@@ -51,7 +52,7 @@ class Server {
         TcpListener server = new TcpListener(IPAddress.Parse("127.0.0.1"), 80);
 
         server.Start();
-        Console.WriteLine("Server has started on 127.0.0.1:80.{0}Waiting for a connection...", Environment.NewLine);
+        Console.WriteLine("Server has started on 127.0.0.1:80.{0}Waiting for a connection…", Environment.NewLine);
 
         TcpClient client = server.AcceptTcpClient();
 
@@ -243,7 +244,7 @@ class Server {
         var server = new TcpListener(IPAddress.Parse(ip), port);
 
         server.Start();
-        Console.WriteLine("Server has started on {0}:{1}, Waiting for a connection...", ip, port);
+        Console.WriteLine("Server has started on {0}:{1}, Waiting for a connection…", ip, port);
 
         TcpClient client = server.AcceptTcpClient();
         Console.WriteLine("A client connected.");
@@ -292,10 +293,10 @@ class Server {
                     msglen = BitConverter.ToUInt16(new byte[] { bytes[3], bytes[2] }, 0);
                     offset = 4;
                 } else if (msglen == 127) {
-                    // To test the below code, we need to manually buffer larger messages — since the NIC's autobuffering 
+                    // To test the below code, we need to manually buffer larger messages — since the NIC's autobuffering
                     // may be too latency-friendly for this code to run (that is, we may have only some of the bytes in this
-                    // websocket frame available through client.Available).  
-                    msglen = BitConverter.ToUInt64(new byte[] { data[9], data[8], data[7], data[6], data[5], data[4], data[3], data[2] });
+                    // websocket frame available through client.Available).
+                    msglen = BitConverter.ToUInt64(new byte[] { bytes[9], bytes[8], bytes[7], bytes[6], bytes[5], bytes[4], bytes[3], bytes[2] },0);
                     offset = 10;
                 }
 
@@ -339,9 +340,9 @@ class Server {
 <script>
     // http://www.websocket.org/echo.html
 
-    var button = document.querySelector("button"),
-        output = document.querySelector("#output"),
-        textarea = document.querySelector("textarea"),
+    const button = document.querySelector("button");
+    const output = document.querySelector("#output");
+    const textarea = document.querySelector("textarea");
         // wsUri = "ws://echo.websocket.org/",
         wsUri = "ws://127.0.0.1/",
         websocket = new WebSocket(wsUri);
@@ -375,7 +376,7 @@ class Server {
     }
 
     function onClickButton() {
-        var text = textarea.value;
+        const text = textarea.value;
 
         text && doSend(text);
         textarea.value = "";

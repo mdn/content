@@ -1,6 +1,7 @@
 ---
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only

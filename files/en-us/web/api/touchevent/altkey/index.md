@@ -1,6 +1,7 @@
 ---
 title: TouchEvent.altKey
 slug: Web/API/TouchEvent/altKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -31,10 +32,10 @@ In following code snippet, the {{event("touchstart")}} event handler logs the st
 ```js
 someElement.addEventListener('touchstart', function(e) {
    // Log the state of this event's modifier keys
-   console.log("altKey = " + e.altKey);
-   console.log("ctrlKey = " + e.ctrlKey);
-   console.log("metaKey = " + e.metaKey);
-   console.log("shiftKey = " + e.shiftKey);
+   console.log(`altKey = ${e.altKey}`);
+   console.log(`ctrlKey = ${e.ctrlKey}`);
+   console.log(`metaKey = ${e.metaKey}`);
+   console.log(`shiftKey = ${e.shiftKey}`);
 }, false);
 ```
 

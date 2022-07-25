@@ -1,6 +1,7 @@
 ---
 title: 'SpeechRecognition: speechend event'
 slug: Web/API/SpeechRecognition/speechend_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -16,9 +17,9 @@ The **`speechend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('speechend', event => { })
+addEventListener('speechend', (event) => { })
 
-onspeechend = event => { }
+onspeechend = (event) => { }
 ```
 
 ## Event type

@@ -1,6 +1,7 @@
 ---
 title: Client.postMessage()
 slug: Web/API/Client/postMessage
+page-type: web-api-instance-method
 tags:
   - API
   - Client
@@ -46,7 +47,7 @@ None ({{jsxref("undefined")}}).
 Sending a message from a service worker to a client:
 
 ```js
-addEventListener('fetch', event => {
+addEventListener('fetch', (event) => {
   event.waitUntil(async function() {
     // Exit early if we don't have access to the client.
     // Eg, if it's cross-origin.
@@ -71,7 +72,7 @@ addEventListener('fetch', event => {
 Receiving that message:
 
 ```js
-navigator.serviceWorker.addEventListener('message', event => {
+navigator.serviceWorker.addEventListener('message', (event) => {
   console.log(event.data.msg, event.data.url);
 });
 ```

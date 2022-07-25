@@ -1,10 +1,10 @@
 ---
 title: Cache.match()
 slug: Web/API/Cache/match
+page-type: web-api-instance-method
 tags:
   - API
   - Cache
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -15,11 +15,8 @@ browser-compat: api.Cache.match
 ---
 {{APIRef("Service Workers API")}}
 
-The **`match()`** method of the
-{{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the
-{{domxref("Response")}} associated with the first matching request in the
-{{domxref("Cache")}} object. If no match is found, the {{jsxref("Promise")}} resolves
-to {{jsxref("undefined")}}.
+The **`match()`** method of the {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the {{domxref("Response")}} associated with the first matching request in the {{domxref("Cache")}} object.
+If no match is found, the {{jsxref("Promise")}} resolves to {{jsxref("undefined")}}.
 
 ## Syntax
 
@@ -35,8 +32,8 @@ match(request, options)
     {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL.
 - `options` {{optional_inline}}
 
-  - : An object that sets options for the `match` operation. The available
-    options are:
+  - : An object that sets options for the `match` operation.
+     The available options are:
 
     - `ignoreSearch`
       - : A boolean value that specifies whether to

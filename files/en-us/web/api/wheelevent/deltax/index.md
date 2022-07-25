@@ -1,6 +1,7 @@
 ---
 title: WheelEvent.deltaX
 slug: Web/API/WheelEvent/deltaX
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -38,5 +39,5 @@ console.log(syntheticEvent.deltaX);
 
 ## See also
 
-- {{ event("wheel") }}
+- {{domxref("Element/wheel_event","wheel")}}
 - {{domxref("WheelEvent")}}

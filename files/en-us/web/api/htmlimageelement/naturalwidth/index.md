@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.naturalWidth
 slug: Web/API/HTMLImageElement/naturalWidth
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

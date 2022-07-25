@@ -1,6 +1,7 @@
 ---
 title: ByteLengthQueuingStrategy
 slug: Web/API/ByteLengthQueuingStrategy
+page-type: web-api-interface
 tags:
   - API
   - ByteLengthQueuingStrategy
@@ -35,10 +36,10 @@ const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
 const readableStream = new ReadableStream({
   start(controller) {
-    ...
+    // …
   },
   pull(controller) {
-    ...
+    // …
   },
   cancel(err) {
     console.log("stream error:", err);

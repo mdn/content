@@ -1,26 +1,23 @@
 ---
 title: CacheStorage
 slug: Web/API/CacheStorage
+page-type: web-api-interface
 tags:
   - API
   - CacheStorage
-  - Experimental
   - Interface
   - Reference
   - Service Workers
   - ServiceWorker
 browser-compat: api.CacheStorage
 ---
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}
 
 The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.
 
 The interface:
 
 - Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you're not limited to only using it with service workers).
-
-  > **Note:** [Chrome and Safari only expose \`CacheStorage\` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("caches")}} will be undefined unless an SSL certificate is configured.
-
 - Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.
 
 Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance.
@@ -52,7 +49,8 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Examples
 
-This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/).) This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
+This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/).)
+This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
 
 In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:
 
@@ -112,7 +110,7 @@ This snippet shows how the API can be used outside of a service worker context, 
 // Try to get data from the cache, but fall back to fetching it live.
 async function getData() {
    const cacheVersion = 1;
-   const cacheName    = `myapp-${ cacheVersion }`;
+   const cacheName    = `myapp-${cacheVersion}`;
    const url          = 'https://jsonplaceholder.typicode.com/todos/1';
    let cachedData     = await getCachedData( cacheName, url );
 

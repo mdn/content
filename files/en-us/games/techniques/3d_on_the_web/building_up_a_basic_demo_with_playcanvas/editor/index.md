@@ -110,7 +110,7 @@ Follow the same approach again to add a cone to the scene, giving it a grayish c
 
 ## Animating our scene
 
-Animating 3D models might be considered an [advanced](https://developer.playcanvas.com/en/tutorials/intermediate/animation-blending/) thing to do, but all we want to do is to control a few properties of a given object — we can use a script component to do that. Click on the plus button in the Assets panel, select the Script option, and name your new script file `boxAnimation.js`.
+Animating 3D models might be considered an [advanced](https://developer.playcanvas.com/en/tutorials/anim-blending/) thing to do, but all we want to do is to control a few properties of a given object — we can use a script component to do that. Click on the plus button in the Assets panel, select the Script option, and name your new script file `boxAnimation.js`.
 
 ![PlayCanvas Editor - Box animation](playcanvas-editor-boxanimation.png)
 
@@ -125,11 +125,11 @@ pc.script.create('boxAnimation', function (app) {
 
     BoxAnimation.prototype = {
         // Called once after all resources are loaded and before the first update
-        initialize: function () {
+        initialize() {
         },
 
         // Called every frame, dt is time in seconds since last update
-        update: function (dt) {
+        update(dt) {
         }
     };
 

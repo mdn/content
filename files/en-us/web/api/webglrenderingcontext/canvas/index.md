@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only

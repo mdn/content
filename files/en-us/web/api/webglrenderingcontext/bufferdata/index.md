@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
+page-type: web-api-instance-method
 tags:
   - API
   - Buffer
@@ -60,10 +61,9 @@ bufferData(target, srcData, usage, srcOffset, length)
   - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data
     store.
 - `srcData` {{optional_inline}}
-  - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}} or one of the
-    {{domxref("ArrayBufferView")}} typed array types that will be copied into the data
-    store. If `null`, a data store is still created, but the content is
-    uninitialized and undefined.
+  - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}
+    that will be copied into the data store.
+    If `null`, a data store is still created, but the content is uninitialized and undefined.
 - `usage`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the intended usage pattern of the data store

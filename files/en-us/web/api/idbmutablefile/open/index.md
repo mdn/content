@@ -1,6 +1,7 @@
 ---
 title: IDBMutableFile.open()
 slug: Web/API/IDBMutableFile/open
+page-type: web-api-instance-method
 tags:
   - API
   - Files

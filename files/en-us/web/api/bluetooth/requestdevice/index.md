@@ -1,6 +1,7 @@
 ---
 title: Bluetooth.requestDevice()
 slug: Web/API/Bluetooth/requestDevice
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -81,11 +82,11 @@ let options = {
 }
 
 navigator.bluetooth.requestDevice(options).then(function(device) {
-  console.log('Name: ' + device.name);
+  console.log(`Name: ${device.name}`);
   // Do something with the device.
 })
 .catch(function(error) {
-  console.log("Something went wrong. " + error);
+  console.log(`Something went wrong. ${error}`);
 });
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: USB.requestDevice()
 slug: Web/API/USB/requestDevice
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebUSB
   - WebUSB API
   - getDevices()
+  - Experimental
 browser-compat: api.USB.requestDevice
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
@@ -61,11 +63,11 @@ const filters = [
         {vendorId: 0x1209, productId: 0xa850}
       ];
 navigator.usb.requestDevice({filters: filters})
-.then(usbDevice => {
-  console.log("Product name: " + usbDevice.productName);
+.then((usbDevice) => {
+  console.log(`Product name: ${usbDevice.productName}`);
 })
-.catch(e => {
-  console.log("There is no device. " + e);
+.catch((e) => {
+  console.log(`There is no device. ${e}`);
 });
 ```
 

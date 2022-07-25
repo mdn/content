@@ -1,6 +1,7 @@
 ---
 title: Attr.name
 slug: Web/API/Attr/name
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -13,9 +14,9 @@ The read-only **`name`** property of the {{domxref("Attr")}} interface returns t
 
 The qualified name is always in lower case, whatever case at the attribute creation.
 
-### Value
+## Value
 
-A {{jsxref("String")}} representing the attribute's qualified name.
+A string representing the attribute's qualified name.
 
 ## Example
 
@@ -30,7 +31,7 @@ The following example displays the qualified name of the first attribute of the 
 <button>Click me for &lt;svg&gt;…</button>
 <button>Click me for &lt;label&gt;…</button>
 <br><br>
-Qualified name of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+Qualified name of the attribute <code>xml:lang</code>: <output id="result">None.</output>
 ```
 
 ### JavaScript Content

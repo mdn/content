@@ -1,6 +1,7 @@
 ---
 title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
+page-type: web-api-instance-method
 tags:
   - API
   - ExtendableEvent
@@ -57,7 +58,7 @@ None ({{jsxref("undefined")}}).
 Using `waitUntil()` within a service worker's `install` event:
 
 ```js
-addEventListener('install', event => {
+addEventListener('install', (event) => {
   const preCache = async () => {
     const cache = await caches.open('static-v1');
     return cache.addAll([
@@ -80,8 +81,6 @@ addEventListener('install', event => {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}

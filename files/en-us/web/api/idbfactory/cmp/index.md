@@ -1,6 +1,7 @@
 ---
 title: IDBFactory.cmp()
 slug: Web/API/IDBFactory/cmp
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -62,7 +63,7 @@ possible values and their meanings:
 var a = 1;
 var b = 2;
 var result = window.indexedDB.cmp(a, b);
-console.log( "Comparison results: " + result );
+console.log(`Comparison results: ${result}`);
 ```
 
 ## Specifications
@@ -81,5 +82,4 @@ console.log( "Comparison results: " + result );
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).

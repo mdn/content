@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

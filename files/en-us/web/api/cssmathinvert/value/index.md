@@ -1,6 +1,7 @@
 ---
 title: CSSMathInvert.value
 slug: Web/API/CSSMathInvert/value
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

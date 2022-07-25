@@ -1,6 +1,7 @@
 ---
 title: SVGMarkerElement
 slug: Web/API/SVGMarkerElement
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -20,7 +21,7 @@ The following properties and methods all return, or act on the attributes of the
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
-- {{domxref("SVGMarkerElement.markerUnits")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.markerUnits")}} {{ReadOnlyInline}}
 
   - : Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
 
@@ -31,11 +32,11 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
     - 2
       - : `SVG_MARKERUNITS_STROKEWIDTH` which means that the {{SVGattr("markerUnits")}} attribute has the keyword value `strokeWidth`.
 
-- {{domxref("SVGMarkerElement.markerWidth")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.markerWidth")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} object containing the width of the {{SVGElement("marker")}} viewport.
-- {{domxref("SVGMarkerElement.markerHeight")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.markerHeight")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} object containing the height of the {{SVGElement("marker")}} viewport.
-- {{domxref("SVGMarkerElement.orientType")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.orientType")}} {{ReadOnlyInline}}
 
   - : Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
 
@@ -46,15 +47,15 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
     - 2
       - : `SVG_MARKERUNITS_ORIENT_ANGLE` which means that the {{SVGattr("orient")}} attribute has an {{cssxref("angle")}} or {{cssxref("number")}} value indicating the angle.
 
-- {{domxref("SVGMarkerElement.orientAngle")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.orientAngle")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedAngle")}} object containing the angle of the {{SVGattr("orient")}} attribute.
-- {{domxref("SVGMarkerElement.refX")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.refX")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("refX")}} attribute of the {{SVGElement("marker")}}.
-- {{domxref("SVGMarkerElement.refY")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.refY")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("refY")}} attribute of the {{SVGElement("marker")}}.
-- {{domxref("SVGMarkerElement.viewBox")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.viewBox")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedRect")}} object containing an {{domxref("SVGRect")}} which contains the values set by the {{SVGattr("viewBox")}} attribute on the {{SVGElement("marker")}}.
-- {{domxref("SVGMarkerElement.preserveAspectRatio")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.preserveAspectRatio")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGPreserveAspectRatio")}} object which contains the values set by the {{SVGattr("preserveAspectRatio")}} attribute on the {{SVGElement("marker")}} viewport.
 
 ## Methods

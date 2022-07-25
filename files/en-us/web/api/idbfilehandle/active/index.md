@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.active
 slug: Web/API/IDBFileHandle/active
+page-type: web-api-instance-property
 tags:
   - API
   - Files

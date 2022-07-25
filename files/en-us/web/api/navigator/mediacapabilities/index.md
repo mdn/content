@@ -1,6 +1,7 @@
 ---
 title: Navigator.mediaCapabilities
 slug: Web/API/Navigator/mediaCapabilities
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -39,10 +40,9 @@ navigator.mediaCapabilities.decodingInfo({
         samplerate : 5200
     }
 }).then(function(result) {
-  console.log('This configuration is ' +
-        (result.supported ? '' : 'not ') + 'supported, ' +
-        (result.smooth ? '' : 'not ') + 'smooth, and ' +
-        (result.powerEfficient ? '' : 'not ') + 'power efficient.')
+  console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
+  console.log(`${result.smooth ? '' : 'not '}smooth, and`);
+  console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
 });
 ```
 

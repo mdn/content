@@ -1,6 +1,7 @@
 ---
 title: MediaSource.setLiveSeekableRange()
 slug: Web/API/MediaSource/setLiveSeekableRange
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

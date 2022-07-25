@@ -42,7 +42,7 @@ the iterable passed as an argument.
 If the iterable passed is empty, the promise returned will be forever pending.
 
 If the iterable contains one or more non-promise value and/or an already settled
-promise, then `Promise.race` will resolve to the first of these values found
+promise, then `Promise.race` will settle to the first of these values found
 in the iterable.
 
 ## Examples
@@ -89,7 +89,7 @@ setTimeout(function(){
 ```
 
 If the iterable contains one or more non-promise value and/or an already settled
-promise, then `Promise.race` will resolve to the first of these values found
+promise, then `Promise.race` will settle to the first of these values found
 in the array:
 
 ```js

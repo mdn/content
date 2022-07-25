@@ -1,6 +1,7 @@
 ---
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
+page-type: web-api-interface
 tags:
   - API
   - HTMLSlotElement
@@ -42,7 +43,7 @@ The following snippet is taken from our [slotchange example](https://github.com/
 let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
   let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
 });
 ```
 

@@ -24,20 +24,20 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
 ```js
 // Arrow function
-reduceRight((accumulator, currentValue) => { /* ... */ } )
-reduceRight((accumulator, currentValue, index) => { /* ... */ } )
-reduceRight((accumulator, currentValue, index, array) => { /* ... */ } )
-reduceRight((accumulator, currentValue, index, array) => { /* ... */ }, initialValue)
+reduceRight((accumulator, currentValue) => { /* … */ } )
+reduceRight((accumulator, currentValue, index) => { /* … */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* … */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* … */ }, initialValue)
 
 // Callback function
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
 
 // Callback reducer function
-reduceRight(function(accumulator, currentValue) { /* ... */ })
-reduceRight(function(accumulator, currentValue, index) { /* ... */ })
-reduceRight(function(accumulator, currentValue, index, array){ /* ... */ })
-reduceRight(function(accumulator, currentValue, index, array) { /* ... */ }, initialValue)
+reduceRight(function(accumulator, currentValue) { /* … */ })
+reduceRight(function(accumulator, currentValue, index) { /* … */ })
+reduceRight(function(accumulator, currentValue, index, array){ /* … */ })
+reduceRight(function(accumulator, currentValue, index, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
@@ -80,7 +80,7 @@ this:
 
 ```js
 arr.reduceRight(function(accumulator, currentValue, index, array) {
-  // ...
+  // …
 });
 ```
 
@@ -277,7 +277,7 @@ const waterfall = (...functions) => (callback, ...args) =>
     callback
   )(...args);
 
-const randInt = max => Math.floor(Math.random() * max)
+const randInt = (max) => Math.floor(Math.random() * max)
 
 const add5 = (callback, x) => {
   setTimeout(callback, randInt(1000), x + 5);
@@ -304,11 +304,11 @@ computation(console.log, 5) // -> 14
 // same as:
 
 const computation2 = (input, callback) => {
-  const f6 = x=> div4(callback, x);
+  const f6 = (x) => div4(callback, x);
   const f5 = (x, y) => add(f6, x, y);
-  const f4 = x => split(f5, x);
-  const f3 = x => sub2(f4, x);
-  const f2 = x => mult3(f3, x);
+  const f4 = (x) => split(f5, x);
+  const f3 = (x) => sub2(f4, x);
+  const f2 = (x) => mult3(f3, x);
   add5(f2, input);
 }
 ```

@@ -1,6 +1,7 @@
 ---
 title: Gamepad.vibrationActuator
 slug: Web/API/Gamepad/vibrationActuator
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

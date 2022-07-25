@@ -1,6 +1,7 @@
 ---
 title: MediaError.msExtendedCode
 slug: Web/API/MediaError/msExtendedCode
+page-type: web-api-instance-property
 ---
 {{APIRef("DOM")}}
 
@@ -17,11 +18,11 @@ Type: **long**; The platform specific error code.
 ## Example
 
 ```js
-var video1 = object.getElementById("video1");
+const video1 = object.getElementById("video1");
 
 video1.addEventListener('error', function () {
-  var error = video1.error.msExtendedCode;
-  //...
+  const error = video1.error.msExtendedCode;
+  //…
 }, false);
 
 video.addEventListener('canplay', function () {

@@ -1,6 +1,7 @@
 ---
 title: HashChangeEvent.newURL
 slug: Web/API/HashChangeEvent/newURL
+page-type: web-api-instance-property
 tags:
   - API
   - HashChangeEvent
@@ -23,7 +24,7 @@ A string.
 
 ```js
 window.addEventListener('hashchange', function(event) {
-  console.log('Hash changed to ' + event.newURL);
+  console.log(`Hash changed to ${event.newURL}`);
 });
 ```
 

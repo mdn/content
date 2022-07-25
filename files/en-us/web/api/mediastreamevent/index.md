@@ -1,6 +1,7 @@
 ---
 title: MediaStreamEvent
 slug: Web/API/MediaStreamEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -33,7 +34,7 @@ A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event also
 
 ```js
 pc.onaddstream = function( ev ) {
-  alert("A stream (id: '" + ev.stream.id + "') has been added to this connection.");
+  alert(`A stream (id: '${ev.stream.id}') has been added to this connection.`);
 };
 ```
 

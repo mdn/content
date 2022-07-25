@@ -1,6 +1,7 @@
 ---
 title: Gamepad.buttons
 slug: Web/API/Gamepad/buttons
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -35,8 +36,7 @@ An array of {{domxref("gamepadButton")}} objects.
 ## Examples
 
 The following code is taken from my Gamepad API button demo (you can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and
-[find the source
-code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on GitHub.) Note the code fork — in Chrome
+[find the source code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on GitHub.) Note the code fork — in Chrome
 {{domxref("Navigator.getGamepads")}} needs a `webkit` prefix and the button
 values are stores as an array of double values, whereas in Firefox
 {{domxref("Navigator.getGamepads")}} doesn't need a prefix, and the button values are
@@ -47,8 +47,10 @@ example I've just allowed either.
 
 ```js
 function gameLoop() {
+  let a = 0;
+  let b = 0;
   if(navigator.webkitGetGamepads) {
-    var gp = navigator.webkitGetGamepads()[0];
+    const gp = navigator.webkitGetGamepads()[0];
 
     if(gp.buttons[0] == 1) {
       b--;
@@ -60,7 +62,7 @@ function gameLoop() {
       a--;
     }
   } else {
-    var gp = navigator.getGamepads()[0];
+    const gp = navigator.getGamepads()[0];
 
     if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
       b--;
@@ -73,10 +75,10 @@ function gameLoop() {
     }
   }
 
-  ball.style.left = a*2 + "px";
-  ball.style.top = b*2 + "px";
+  ball.style.left = `${a * 2}px`;
+  ball.style.top = `${b * 2}px`;
 
-  var start = rAF(gameLoop);
+  const start = rAF(gameLoop);
 };
 ```
 

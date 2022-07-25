@@ -1,6 +1,7 @@
 ---
 title: USBDevice.deviceProtocol
 slug: Web/API/USBDevice/deviceProtocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - deviceProtocol
+  - Experimental
 browser-compat: api.USBDevice.deviceProtocol
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}

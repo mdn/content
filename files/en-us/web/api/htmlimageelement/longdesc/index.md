@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.longDesc
 slug: Web/API/HTMLImageElement/longDesc
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

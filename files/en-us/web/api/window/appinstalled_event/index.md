@@ -1,6 +1,7 @@
 ---
 title: 'Window: appinstalled event'
 slug: Web/API/Window/appinstalled_event
+page-type: web-api-event
 tags:
   - API
   - Manifest
@@ -21,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('appinstalled', event => { });
+addEventListener('appinstalled', (event) => { });
 
-onappinstalled = event => { };
+onappinstalled = (event) => { };
 ```
 
 ## Event type

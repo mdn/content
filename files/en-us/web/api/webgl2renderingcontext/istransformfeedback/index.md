@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/isTransformFeedback
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -40,7 +41,7 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 ```js
 var transformFeedback = gl.createTransformFeedback();
 
-// ...
+// …
 
 gl.isTransformFeedback(transformFeedback);
 ```

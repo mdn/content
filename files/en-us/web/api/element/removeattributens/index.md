@@ -1,6 +1,7 @@
 ---
 title: Element.removeAttributeNS()
 slug: Web/API/Element/removeAttributeNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

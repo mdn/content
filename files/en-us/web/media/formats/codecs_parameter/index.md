@@ -17,7 +17,7 @@ tags:
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-At a fundamental level, you can specify the type of a media file using a simple {{Glossary("MIME")}} type, such as `video/mp4` or `audio/mpeg`. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) file with the MIME type `video/mp4` doesn't say anything about what format the actual media within takes.
+At a fundamental level, you can specify the type of a media file using a simple {{Glossary("MIME")}} type, such as `video/mp4` or `audio/mpeg`. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file with the MIME type `video/mp4` doesn't say anything about what format the actual media within takes.
 
 For that reason, the `codecs` parameter can be added to the MIME type describing media content. With it, container-specific information can be provided. This information may include things like the profile of the video codec, the type used for the audio tracks, and so forth.
 
@@ -32,7 +32,7 @@ A basic MIME media type is expressed by stating the type of media (`audio`, `vid
 - `video/ogg`
   - : A video file using the [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) file type.
 - `video/mp4`
-  - : A video file using the [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) file type.
+  - : A video file using the [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file type.
 - `video/quicktime`
   - : A video file in Apple's [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) format. As noted elsewhere, this format was once commonly used on the web but no longer is, since it required a plugin to use.
 
@@ -45,7 +45,7 @@ To do so, append a semicolon (`;`) followed by `codecs=` and then the string des
 - `video/webm; codecs="vp8, vorbis"`
   - : A [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) file containing [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) video and/or [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) audio.
 - `video/mp4; codecs="avc1.4d002a"`
-  - : An [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) file containing [AVC](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>) (H.264) video, Main Profile, Level 4.2.
+  - : An [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file containing [AVC](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>) (H.264) video, Main Profile, Level 4.2.
 
 As is the case with any MIME type parameter, `codecs` must be changed to `codecs*` (note the asterisk character, `*`) if any of the properties of the codec use special characters which must be percent-encoded per {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. You can use the JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function to encode the parameter list; similarly, you can use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} to decode a previously encoded parameter list.
 
@@ -278,7 +278,7 @@ All fields from `M` (monochrome flag) onward are optional; you may stop includin
 
 ### ISO Base Media File Format: MP4, QuickTime, and 3GP
 
-All media types based upon the {{interwiki("wikipedia", "ISO Base Media File Format")}} (ISO BMFF) share the same syntax for the `codecs` parameter. These media types include [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) (and, in fact, the [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) file format upon which MPEG-4 is based) as well as [3GP](/en-US/docs/Web/Media/Formats/Containers#3gp). Both video and audio tracks can be described using the `codecs` parameter with the following MIME types:
+All media types based upon the {{interwiki("wikipedia", "ISO Base Media File Format")}} (ISO BMFF) share the same syntax for the `codecs` parameter. These media types include [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) (and, in fact, the [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) file format upon which MPEG-4 is based) as well as [3GP](/en-US/docs/Web/Media/Formats/Containers#3gp). Both video and audio tracks can be described using the `codecs` parameter with the following MIME types:
 
 | MIME type         | Description                                                                                                                                          |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |

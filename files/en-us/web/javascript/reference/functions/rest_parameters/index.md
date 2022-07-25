@@ -12,13 +12,13 @@ browser-compat: javascript.functions.rest_parameters
 
 The **rest parameter** syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent [variadic functions](https://en.wikipedia.org/wiki/Variadic_function) in JavaScript.
 
-{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
+{{EmbedInteractiveExample("pages/js/functions-restparameters.html", "taller")}}
 
 ## Syntax
 
 ```js
 function f(a, b, ...theArgs) {
-  // ...
+  // …
 }
 ```
 
@@ -61,7 +61,7 @@ foo(...wrong, arg2, arg3)
 foo(arg1, arg2, ...correct)
 ```
 
-### The difference between rest parameters and the `arguments` object
+### The difference between rest parameters and the arguments object
 
 There are three main differences between rest parameters and the
 {{jsxref("Functions/arguments", "arguments")}} object:
@@ -70,7 +70,7 @@ There are three main differences between rest parameters and the
   parameters are {{jsxref("Array")}} instances, meaning methods
   like {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}},
   {{jsxref("Array.forEach", "forEach")}} or {{jsxref("Array/pop", "pop")}} can be
-  applied on it directly;
+  applied on it directly.
 - The `arguments` object has additional functionality specific to itself
   (like the `callee` property).
 - The `...restParam` bundles all the extra parameters into a single array,
@@ -89,9 +89,9 @@ for converting a set of arguments to an array.
 
 function f(a, b) {
   let normalArray = Array.prototype.slice.call(arguments)
-  // -- or --
+  // — or —
   let normalArray = [].slice.call(arguments)
-  // -- or --
+  // — or —
   let normalArray = Array.from(arguments)
 
   let first = normalArray.shift()  // OK, gives the first argument
@@ -114,7 +114,7 @@ In this example, the first argument is mapped to `a` and the second to
 `b`, so these named arguments are used as normal.
 
 However, the third argument, `manyMoreArgs`, will be an array that contains
-the third, fourth, fifth, sixth ... nth — as many arguments that the user includes.
+the third, fourth, fifth, sixth, …, nth — as many arguments that the user includes.
 
 ```js
 function myFun(a, b, ...manyMoreArgs) {
@@ -178,7 +178,7 @@ then multiplied by the first parameter, and the array is returned:
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(element => {
+  return theArgs.map((element) => {
     return multiplier * element
   })
 }
@@ -187,7 +187,7 @@ let arr = multiply(2, 15, 25, 42)
 console.log(arr)  // [30, 50, 84]
 ```
 
-### Rest parameters are real arrays; the arguments object is not.
+### Rest parameters are real arrays; the arguments object is not
 
 {{jsxref("Array")}} methods can be used on rest parameters, but not on the
 `arguments` object:

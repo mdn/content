@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.pendingLocalDescription
 slug: Web/API/RTCPeerConnection/pendingLocalDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -40,7 +41,7 @@ not there's a description change being processed.
 
 ```js
 var pc = new RTCPeerConnection();
-…
+// ...
 var sd = pc.pendingLocalDescription;
 if (sd) {
   // There's a description change underway!

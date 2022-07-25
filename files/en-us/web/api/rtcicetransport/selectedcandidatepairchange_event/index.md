@@ -1,6 +1,7 @@
 ---
 title: 'RTCIceTransport: selectedcandidatepairchange event'
 slug: Web/API/RTCIceTransport/selectedcandidatepairchange_event
+page-type: web-api-event
 tags:
   - Connectivity
   - ICE
@@ -31,9 +32,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectedcandidatepairchange', event => { });
+addEventListener('selectedcandidatepairchange', (event) => { });
 
-onselectedcandidatepairchange = event => { };
+onselectedcandidatepairchange = (event) => { };
 ```
 
 ## Event type
@@ -49,7 +50,7 @@ let iceTransport = pc.getSenders[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 
-iceTransport.addEventListener("selectedcandidatepairchange", ev => {
+iceTransport.addEventListener("selectedcandidatepairchange", (ev) => {
   let pair = iceTransport.getSelectedCandidatePair();
   localProtoElem.innerText = pair.local.protocol.toUpperCase();
   remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
@@ -63,7 +64,7 @@ let iceTransport = pc.getSenders[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 
-iceTransport.onselectedcandidatepairchange = ev => {
+iceTransport.onselectedcandidatepairchange = (ev) => {
   let pair = iceTransport.getSelectedCandidatePair();
   localProtoElem.innerText = pair.local.protocol.toUpperCase();
   remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
@@ -85,7 +86,7 @@ iceTransport.onselectedcandidatepairchange = ev => {
 
 ### Related RTCIceTransport events
 
-- {{event("statechange")}}
+- {{domxref("RTCIceTransport/statechange_event", "statechange")}}
 - {{domxref("RTCIceTransport.gatheringstatechange_event", "gatheringstatechange")}}
 
 ### Related RTCPeerConnection events

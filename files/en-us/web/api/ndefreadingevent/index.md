@@ -1,6 +1,7 @@
 ---
 title: NDEFReadingEvent
 slug: Web/API/NDEFReadingEvent
+page-type: web-api-interface
 tags:
   - NDEF
   - Reference
@@ -23,9 +24,9 @@ The **`NDEFReadingEvent`** interface of the [Web NFC API](/en-US/docs/Web/API/We
 
 _Inherits properties from its parent, {{DOMxRef("Event")}}_.
 
-- {{DOMxRef("NDEFReadingEvent.message")}}{{ReadOnlyInline}}
+- {{DOMxRef("NDEFReadingEvent.message")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("NDEFMessage")}} object containing the received message.
-- {{DOMxRef("NDEFReadingEvent.serialNumber")}}{{ReadOnlyInline}}
+- {{DOMxRef("NDEFReadingEvent.serialNumber")}} {{ReadOnlyInline}}
   - : Returns the serial number of the device, which is used for anti-collision and identification, or an empty string if no serial number is available.
 
 ## Methods

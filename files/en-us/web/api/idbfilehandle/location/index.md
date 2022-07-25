@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.location
 slug: Web/API/IDBFileHandle/location
+page-type: web-api-instance-property
 tags:
   - API
   - Files

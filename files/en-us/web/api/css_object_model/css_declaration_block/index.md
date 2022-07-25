@@ -1,6 +1,7 @@
 ---
 title: CSS Declaration Block
 slug: Web/API/CSS_Object_Model/CSS_Declaration_Block
+page-type: guide
 tags:
   - CSS
   - CSS Object Model

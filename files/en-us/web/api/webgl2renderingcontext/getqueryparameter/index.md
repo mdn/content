@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getQueryParameter()
 slug: Web/API/WebGL2RenderingContext/getQueryParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method

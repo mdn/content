@@ -1,6 +1,7 @@
 ---
 title: Navigator.getVRDisplays()
 slug: Web/API/Navigator/getVRDisplays
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

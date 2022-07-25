@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -133,7 +134,7 @@ const p2 = { x: 20,  y: 20  }
 
 const labelPoint = function (p) {
   const offset = 15;
-  ctx.fillText('(' + p.x + ',' + p.y + ')', p.x + offset, p.y + offset);
+  ctx.fillText(`(${p.x},${p.y})`, p.x + offset, p.y + offset);
 }
 
 ctx.beginPath();
@@ -203,18 +204,17 @@ arc changes.
 ```js
 const canvas = document.getElementById('canvas');
 const ctx    = canvas.getContext('2d');
+let radius   = 100;
 
 const controlOut = document.getElementById('radius-output');
 const control    = document.getElementById('radius');
-      control.oninput = () => {
-          controlOut.textContent = r = control.value;
-      };
+control.oninput = () => {
+  controlOut.textContent = radius = control.value;
+};
 
 const mouse = { x: 0, y: 0 };
 
-let r  = 100; // Radius
 const p0 = { x: 0, y: 50 };
-
 const p1 = { x: 100, y: 100 };
 const p2 = { x: 150, y: 50 };
 const p3 = { x: 200, y: 100 };
@@ -229,7 +229,7 @@ const labelPoint = function (p, offset, i = 0){
 
 const drawPoints = function (points){
   for (let i = 0; i < points.length; i++) {
-    var p = points[i];
+    const p = points[i];
     labelPoint(p, { x: 0, y: -20 } , i)
   }
 }
@@ -246,11 +246,11 @@ const drawArc = function ([p0, p1, p2], r) {
 let t0 = 0;
 let rr = 0; // the radius that changes over time
 let a  = 0; // angle
-let PI2 = Math.PI * 2;
+const PI2 = Math.PI * 2;
 const loop = function (t) {
   t0 = t / 1000;
   a  = t0 % PI2;
-  rr = Math.abs(Math.cos(a) * r);
+  rr = Math.abs(Math.cos(a) * radius);
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 

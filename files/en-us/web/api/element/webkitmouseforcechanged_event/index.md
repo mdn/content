@@ -1,6 +1,7 @@
 ---
 title: 'Element: webkitmouseforcechanged event'
 slug: Web/API/Element/webkitmouseforcechanged_event
+page-type: web-api-event
 tags:
   - Event
   - Force Touch
@@ -42,7 +43,7 @@ The non-standard **`webkitmouseforcechanged`** event is fired by Safari each tim
 
 **`webkitmouseforcechanged`** is a proprietary, WebKit-specific event introduced by Apple to support their [Force Touch events](/en-US/docs/Web/API/Force_Touch_events) feature.
 
-This event first fires after the {{event("mousedown")}} event and stops firing before the {{event("mouseup")}} event.
+This event first fires after the {{domxref("Element/mousedown_event", "mousedown")}} event and stops firing before the {{domxref("Element/mouseup_event", "mouseup")}} event.
 
 ## Specifications
 

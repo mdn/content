@@ -1,6 +1,7 @@
 ---
 title: MIDIConnectionEvent.port
 slug: Web/API/MIDIConnectionEvent/port
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -25,7 +26,7 @@ The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that r
 navigator.requestMIDIAccess()
   .then(function(access) {
 
-     access.onstatechange = event => {
+     access.onstatechange = (event) => {
        console.log(event.port.name, event.port.manufacturer, event.port.state);
      };
   });

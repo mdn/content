@@ -1,6 +1,7 @@
 ---
 title: Timing element visibility with the Intersection Observer API
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
+page-type: guide
 tags:
   - API
   - Example
@@ -400,7 +401,7 @@ function drawAdTimer(adBox) {
   let sec = Math.floor(totalSeconds % 60);
   let min = Math.floor(totalSeconds / 60);
 
-  timerBox.innerText = min + ":" + sec.toString().padStart(2, "0");
+  timerBox.innerText = `${min}:${sec.toString().padStart(2, "0")}`;
 }
 ```
 
@@ -447,7 +448,7 @@ function createArticle(contents) {
 
   let titleElem = document.createElement("h2");
   titleElem.id = nextArticleID;
-  titleElem.innerText = "Article " + nextArticleID + " title";
+  titleElem.innerText = `Article ${nextArticleID} title`;
   articleElem.appendChild(titleElem);
 
   articleElem.innerHTML += contents;
@@ -479,7 +480,7 @@ function loadRandomAd(replaceBox) {
     {
       bgcolor: "lightgrey",
       title: "3.14 Shades of Gray: A novel",
-      body: "Love really does make the world go round..."
+      body: "Love really does make the world go round…"
     },
     {
       bgcolor: "#fee",
@@ -567,7 +568,7 @@ function replaceAd(adBox) {
   updateAdTimer(adBox);
 
   visibleTime = adBox.dataset.totalViewTime
-  console.log("  Replacing ad: " + adBox.querySelector("h2").innerText + " - visible for " + visibleTime)
+  console.log(`Replacing ad: ${adBox.querySelector("h2").innerText} - visible for ${visibleTime}`)
 
   loadRandomAd(adBox);
 }

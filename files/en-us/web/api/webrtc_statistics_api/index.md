@@ -1,6 +1,7 @@
 ---
 title: WebRTC Statistics API
 slug: Web/API/WebRTC_Statistics_API
+page-type: web-api-overview
 tags:
   - API
   - Draft
@@ -31,16 +32,16 @@ try {
   statsInterval = window.setInterval(getConnectionStats, 1000);
   /* add event handlers, etc */
 } catch(err) {
-  console.error("Error creating RTCPeerConnection: " + err);
+  console.error(`Error creating RTCPeerConnection: ${err}`);
 }
 
 function getConnectionStats() {
-  myPeerConnection.getStats(null).then(stats => {
-    var statsOutput = "";
+  myPeerConnection.getStats(null).then((stats) => {
+    let statsOutput = "";
 
-    stats.forEach(report => {
+    stats.forEach((report) => {
       if (report.type === "inbound-rtp" && report.kind === "video") {
-        Object.keys(report).forEach(statName => {
+        Object.keys(report).forEach((statName) => {
           statsOutput += `<strong>${statName}:</strong> ${report[statName]}<br>\n`;
         });
       }
@@ -68,7 +69,7 @@ The {{domxref("RTCStatsReport")}} object contains a map of named objects based o
   <thead>
     <tr>
       <th scope="row">
-        Statistic category name ({{domxref("RTCStatsType")}})
+        Statistic category name
       </th>
       <th scope="col">Description</th>
       <th scope="col">Dictionaries implemented</th>

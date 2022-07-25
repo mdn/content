@@ -1,6 +1,7 @@
 ---
 title: USBDevice.claimInterface()
 slug: Web/API/USBDevice/claimInterface
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - claimInterface
+  - Experimental
 browser-compat: api.USBDevice.claimInterface
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

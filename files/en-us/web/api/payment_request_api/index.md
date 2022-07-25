@@ -1,6 +1,7 @@
 ---
 title: Payment Request API
 slug: Web/API/Payment_Request_API
+page-type: web-api-overview
 tags:
   - API
   - Commerce

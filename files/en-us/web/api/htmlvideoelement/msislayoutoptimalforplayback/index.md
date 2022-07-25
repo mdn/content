@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msIsLayoutOptimalForPlayback
 slug: Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions

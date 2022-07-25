@@ -1,6 +1,7 @@
 ---
 title: XRJointSpace.jointName
 slug: Web/API/XRJointSpace/jointName
+page-type: web-api-instance-property
 tags:
   - API
   - Controller
@@ -34,11 +35,11 @@ Given a `XRJointSpace`, the `jointName` property will contain the hand joint nam
 
 ```js
 navigator.xr.requestSession({optionalFeatures: ["hand-tracking"]}).then(
-  // ...
+  // …
 );
 
 function renderFrame(session, frame) {
-   // ...
+   // …
 
    for (inputSource of session.inputSources) {
       if (inputSource.hand) {

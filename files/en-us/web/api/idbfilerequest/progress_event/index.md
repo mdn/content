@@ -1,6 +1,7 @@
 ---
 title: 'IDBFileRequest: progress event'
 slug: Web/API/IDBFileRequest/progress_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -26,8 +27,8 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('complete', event => { });
-onerror = complete => { };
+addEventListener('complete', (event) => { });
+onerror = (complete) => { };
 ```
 
 ## Event type
@@ -45,7 +46,7 @@ A {{domxref("Event")}} with two extra properties:
 // Assuming 'request' which is an IDBFileRequest object
 
 request.onprogress = function (status) {
-  var progress = document.querySelector('progress');
+  const progress = document.querySelector('progress');
 
   progress.value = status.loaded;
   progress.max   = status.total;

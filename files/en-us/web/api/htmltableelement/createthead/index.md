@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.createTHead()
 slug: Web/API/HTMLTableElement/createTHead
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

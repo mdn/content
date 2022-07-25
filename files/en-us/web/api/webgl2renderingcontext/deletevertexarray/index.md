@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.deleteVertexArray()
 slug: Web/API/WebGL2RenderingContext/deleteVertexArray
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -36,7 +37,7 @@ None ({{jsxref("undefined")}}).
 var vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
-// ...
+// …
 
 gl.deleteVertexArray(vao);
 ```

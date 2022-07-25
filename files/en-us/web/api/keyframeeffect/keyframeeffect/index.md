@@ -1,6 +1,7 @@
 ---
 title: KeyframeEffect()
 slug: Web/API/KeyframeEffect/KeyframeEffect
+page-type: web-api-constructor
 tags:
   - API
   - Animation

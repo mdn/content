@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaOrientation
 slug: Web/API/ElementInternals/ariaOrientation
+page-type: web-api-instance-property
 tags:
   - API
   - Property

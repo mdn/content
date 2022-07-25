@@ -1,6 +1,7 @@
 ---
-title: PaymentMethodChangeEvent
+title: PaymentMethodChangeEvent()
 slug: Web/API/PaymentMethodChangeEvent/PaymentMethodChangeEvent
+page-type: web-api-constructor
 tags:
   - API
   - Commerce

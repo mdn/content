@@ -1,6 +1,7 @@
 ---
 title: VRDisplayEvent()
 slug: Web/API/VRDisplayEvent/VRDisplayEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

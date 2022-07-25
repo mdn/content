@@ -1,6 +1,7 @@
 ---
 title: CSSGroupingRule.deleteRule()
 slug: Web/API/CSSGroupingRule/deleteRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM

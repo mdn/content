@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.ssrc
 slug: Web/API/RTCRtpStreamStats/ssrc
+page-type: web-api-instance-property
 tags:
   - API
   - Property

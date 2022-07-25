@@ -1,6 +1,7 @@
 ---
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
+page-type: web-api-instance-method
 tags:
   - API
   - Attribute Changes
@@ -158,9 +159,9 @@ function callback(mutationList) {
   });
 }
 
-var userListElement = document.querySelector("#userlist");
+const userListElement = document.querySelector("#userlist");
 
-var observer = new MutationObserver(callback);
+const observer = new MutationObserver(callback);
 observer.observe(userListElement, {
   attributeFilter: [ "status", "username" ],
   attributeOldValue: true,

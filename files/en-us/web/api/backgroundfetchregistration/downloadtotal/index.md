@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration.downloadTotal
 slug: Web/API/BackgroundFetchRegistration/downloadTotal
+page-type: web-api-instance-property
 tags:
   - API
   - Property

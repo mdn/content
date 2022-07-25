@@ -1,6 +1,7 @@
 ---
 title: AudioParam.setTargetAtTime()
 slug: Web/API/AudioParam/setTargetAtTime
+page-type: web-api-instance-method
 tags:
   - API
   - AudioParam

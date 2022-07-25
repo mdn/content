@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
+page-type: web-api-interface
 tags:
   - API
   - Element

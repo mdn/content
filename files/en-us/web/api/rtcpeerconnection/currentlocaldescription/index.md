@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -50,12 +51,10 @@ containing the {{domxref("RTCSessionDescription")}} object's `type` and
 
 ```js
 var pc = new RTCPeerConnection();
-…
+// ...
 var sd = pc.currentLocalDescription;
 if (sd) {
-  alert("Local session: type='" +
-        sd.type + "'; sdp description='" +
-        sd.sdp + "'");
+  alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
 }
 else {
   alert("No local session yet.");

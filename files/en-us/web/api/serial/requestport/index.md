@@ -1,6 +1,7 @@
 ---
 title: Serial.requestPort()
 slug: Web/API/Serial/requestPort
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -41,9 +42,9 @@ A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort"
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `"SecurityError"`
+- `SecurityError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this error if a [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) restricts use of this API or a permission to use it has not granted via a user gesture.
-- {{domxref("DOMException")}} `"AbortError"`
+- `AbortError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this if the user does not select a port when prompted.
 
 ## Examples
@@ -52,7 +53,7 @@ The following example shows a filter being passed to `requestPort()` with a USB 
 
 ```js
 button.addEventListener('click', () => {
-  const usbVendorId = ...;
+  const usbVendorId = 0xABCD;
   navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
     // Connect to `port` or add it to the list of available ports.
   }).catch((e) => {

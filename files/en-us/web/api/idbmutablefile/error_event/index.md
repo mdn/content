@@ -1,6 +1,7 @@
 ---
 title: 'IDBMutableFile: error event'
 slug: Web/API/IDBMutableFile/error_event
+page-type: web-api-event
 tags:
   - API
   - Files
@@ -25,8 +26,8 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
-onerror = event => { };
+addEventListener('error', (event) => { });
+onerror = (event) => { };
 ```
 
 ## Event type

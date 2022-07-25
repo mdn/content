@@ -1,6 +1,7 @@
 ---
 title: Web-based protocol handlers
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+page-type: guide
 tags:
   - Advanced
   - HTML5
@@ -44,7 +45,7 @@ Registering the same protocol handler more than once will pop up a different not
 
 ### Example
 
-```js
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
 <head>

@@ -1,6 +1,7 @@
 ---
 title: validityState.tooLong
 slug: Web/API/ValidityState/tooLong
+page-type: web-api-instance-property
 tags:
   - API
   - Constraint Validation API

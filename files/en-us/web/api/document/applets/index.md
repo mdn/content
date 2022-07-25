@@ -1,6 +1,7 @@
 ---
 title: Document.applets
 slug: Web/API/Document/applets
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

@@ -48,7 +48,7 @@ function addSquares(a,b) {
 };
 //Using ECMAScript 2015 arrow notation
 const addSquares = (a,b) => {
-   const square = x => x*x;
+   const square = (x) => x*x;
    return square(a) + square(b);
 };
 ```
@@ -62,7 +62,7 @@ function loop(x) {
    loop(x + 1);
 };
 //Using ECMAScript 2015 arrow notation
-const loop = x => {
+const loop = (x) => {
    if (x >= 10)
       return;
    loop(x + 1);

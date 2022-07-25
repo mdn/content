@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.shippingOption
 slug: Web/API/PaymentResponse/shippingOption
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -34,7 +35,7 @@ is called. It calls `updateDetails()` to toggle the shipping method between
 
 ```js
 // Initialization of PaymentRequest arguments are excerpted for brevity.
-var payment = new PaymentRequest(supportedInstruments, details, options);
+const payment = new PaymentRequest(supportedInstruments, details, options);
 
 request.addEventListener('shippingoptionchange', function(evt) {
   evt.updateWith(new Promise(function(resolve, reject) {
@@ -49,8 +50,8 @@ payment.show().then(function(paymentResponse) {
 });
 
 function updateDetails(details, shippingOption, resolve, reject) {
-  var selectedShippingOption;
-  var otherShippingOption;
+  let selectedShippingOption;
+  let otherShippingOption;
   if (shippingOption === 'standard') {
     selectedShippingOption = details.shippingOptions[0];
     otherShippingOption = details.shippingOptions[1];
@@ -60,7 +61,7 @@ function updateDetails(details, shippingOption, resolve, reject) {
     otherShippingOption = details.shippingOptions[0];
     details.total.amount.value = '67.00';
   } else {
-    reject('Unknown shipping option \'' + shippingOption + '\'');
+    reject(`Unknown shipping option '${shippingOption}'`);
     return;
   }
   selectedShippingOption.selected = true;

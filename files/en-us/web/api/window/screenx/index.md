@@ -1,6 +1,7 @@
 ---
 title: Window.screenX
 slug: Web/API/Window/screenX
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -51,7 +52,7 @@ function positionElem() {
   ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
   ctx.fill();
 
-  pElem.textContent = 'Window.screenLeft: ' + window.screenLeft + ', Window.screenTop: ' + window.screenTop;
+  pElem.textContent = `Window.screenLeft: ${window.screenLeft}, Window.screenTop: ${window.screenTop}`;
 
   window.requestAnimationFrame(positionElem);
 }

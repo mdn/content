@@ -1,6 +1,7 @@
 ---
 title: DeprecationReportBody.anticipatedRemoval
 slug: Web/API/DeprecationReportBody/anticipatedRemoval
+page-type: web-api-instance-property
 tags:
   - API
   - Property

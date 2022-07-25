@@ -1,6 +1,7 @@
 ---
 title: ScreenOrientation.lock()
 slug: Web/API/ScreenOrientation/lock
+page-type: web-api-instance-method
 tags:
   - API
   - Orientation
@@ -99,11 +100,11 @@ rotate_btn.addEventListener('click', () => {
 
   const oppositeOrientation = screen.orientation.type.startsWith("portrait") ? "landscape" : "portrait";
   screen.orientation.lock(oppositeOrientation)
-    .then( () => {
+    .then(() => {
       log.textContent = `Locked to ${oppositeOrientation}\n`
       }
     )
-    .catch ( error => {
+    .catch((error) => {
       log.textContent += `${error}\n`;
     });
 });
@@ -119,7 +120,10 @@ unlock_btn.addEventListener('click', () => {
 const fullscreen_btn = document.querySelector('#fullscreen_button');
 fullscreen_btn.addEventListener('click', () => {
   log.textContent+='Fullscreen pressed \n';
-  document.querySelector("#example_container").requestFullscreen();
+  const container = document.querySelector("#example_container");
+  container.requestFullscreen().catch((error) => {
+      log.textContent += `${error}\n`
+  });
 } );
 ```
 

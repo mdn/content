@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: progress event'
 slug: Web/API/HTMLMediaElement/progress_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -48,8 +49,8 @@ The **`progress`** event is fired periodically as the browser loads a resource.
     <video controls width="250"></video>
 
     <div class="event-log">
-        <label>Event log:</label>
-        <textarea readonly class="event-log-contents"></textarea>
+        <label for="eventLog">Event log:</label>
+        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
     </div>
 
 </div>
@@ -99,7 +100,7 @@ const eventLog = document.querySelector('.event-log-contents');
 let source = null;
 
 function handleEvent(event) {
-    eventLog.textContent = eventLog.textContent + `${event.type}\n`;
+    eventLog.textContent += `${event.type}\n`;
 }
 
 video.addEventListener('loadstart', handleEvent);

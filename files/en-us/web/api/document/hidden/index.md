@@ -1,6 +1,7 @@
 ---
 title: Document.hidden
 slug: Web/API/Document/hidden
+page-type: web-api-instance-property
 tags:
   - DOM
   - Document
@@ -30,7 +31,7 @@ var boolean = document.hidden
 ```js
 document.addEventListener("visibilitychange", function() {
   console.log( document.hidden );
-  // Modify behavior...
+  // Modify behavior…
 });
 ```
 

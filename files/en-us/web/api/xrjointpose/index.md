@@ -1,6 +1,7 @@
 ---
 title: XRJointPose
 slug: Web/API/XRJointPose
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -30,11 +31,11 @@ Call {{domxref("XRFrame.getJointPose()")}} with an {{domxref("XRJointSpace")}} a
 
 ```js
 navigator.xr.requestSession({optionalFeatures: ["hand-tracking"]}).then(
-  // ...
+  // …
 );
 
 function renderFrame(session, frame) {
-   // ...
+   // …
 
    for (inputSource of session.inputSources) {
       if (inputSource.hand) {

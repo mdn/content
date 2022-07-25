@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -102,8 +103,10 @@ In WebKit- and Blink-based browsers, the non-standard and deprecated method
 `ctx.setStrokeColor()` is implemented in addition to this property.
 
 ```js
-setStrokeColor(color, optional alpha);
-setStrokeColor(grayLevel, optional alpha);
+setStrokeColor(color);
+setStrokeColor(color,  alpha);
+setStrokeColor(grayLevel);
+setStrokeColor(grayLevel, alpha);
 setStrokeColor(r, g, b, a);
 setStrokeColor(c, m, y, k, a);
 ```

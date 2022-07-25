@@ -1,6 +1,7 @@
 ---
 title: 'EventSource: message event'
 slug: Web/API/EventSource/message_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -20,9 +21,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type
@@ -51,13 +52,13 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 In this basic example, an `EventSource` is created to receive events from the server; a page with the name `sse.php` is responsible for generating the events.
 
 ```js
-var evtSource = new EventSource('sse.php');
-var eventList = document.querySelector('ul');
+const evtSource = new EventSource('sse.php');
+const eventList = document.querySelector('ul');
 
 evtSource.addEventListener('message', (e) => {
-  var newElement = document.createElement("li");
+  const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 });
 ```
@@ -66,9 +67,9 @@ evtSource.addEventListener('message', (e) => {
 
 ```js
 evtSource.onmessage = (e) => {
-  var newElement = document.createElement("li");
+  const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 };
 ```

@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceEvent()
 slug: Web/API/XRInputSourceEvent/XRInputSourceEvent
+page-type: web-api-constructor
 tags:
   - API
   - AR
@@ -62,7 +63,7 @@ sends it to the {{domxref("XRSession")}}.
 let event = new XRInputSourceEvent("select", {
   frame: eventFrame,
   inputSource: source
-};
+});
 if (event) {
   xrSession.dispatchEvent(event);
 }

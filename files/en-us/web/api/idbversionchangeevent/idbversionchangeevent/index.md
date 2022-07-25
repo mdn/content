@@ -1,6 +1,7 @@
 ---
 title: IDBVersionChangeEvent()
 slug: Web/API/IDBVersionChangeEvent/IDBVersionChangeEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -86,7 +87,7 @@ const searchParams = new URLSearchParams(paramsObj);
 
 searchParams.toString();                 // "foo=bar&baz=bar"
 searchParams.has('foo');                 // true
-searchParams.get('foo');     
+searchParams.get('foo');                 // "bar"
 ```
 
 ### Duplicate search parameters

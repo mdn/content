@@ -120,6 +120,5 @@ The new QCMS color management system introduced in Firefox 3.5 currently only su
 ## See also
 
 - [So Many Colors](https://bholley.wordpress.com/2008/09/12/so-many-colors/) (blog post)
-- [Firefox 3: Color profile support](http://dria.org/wordpress/archives/2008/04/29/633/) (blog post)
 - [Color Profiles in Firefox 3](https://johnresig.com/blog/color-profiles/) (blog post)
 - [International Color Consortium](https://www.color.org/index.xalter)

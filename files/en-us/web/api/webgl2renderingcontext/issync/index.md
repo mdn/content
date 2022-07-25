@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isSync()
 slug: Web/API/WebGL2RenderingContext/isSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -38,7 +39,7 @@ objects are not available in WebGL 1.
 ```js
 var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 
-// ...
+// …
 
 gl.isSync(sync);
 ```

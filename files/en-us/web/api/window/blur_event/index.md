@@ -1,6 +1,7 @@
 ---
 title: 'Window: blur event'
 slug: Web/API/Window/blur_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -18,36 +19,30 @@ The **`blur`** event fires when an element has lost focus.
 
 The opposite of `blur` is {{domxref("Window/focus_event", "focus")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("FocusEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onblur", "onblur")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Sync / Async</th>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <th scope="row">Composed</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('blur', (event) => { });
+
+onblur = (event) => { };
+```
+
+## Event type
+
+An {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("FocusEvent")}}
+
+## Event properties
+
+_This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
+
+- {{domxref("FocusEvent.relatedTarget")}}
+  - : An {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to `null` for security reasons.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: SerialPort.readable
 slug: Web/API/SerialPort/readable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -31,10 +32,10 @@ while (port.readable) {
         // |reader| has been canceled.
         break;
       }
-      // Do something with |value|...
+      // Do something with |value|…
     }
   } catch (error) {
-    // Handle |error|...
+    // Handle |error|…
   } finally {
     reader.releaseLock();
   }

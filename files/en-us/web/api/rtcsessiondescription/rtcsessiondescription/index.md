@@ -1,6 +1,7 @@
 ---
 title: RTCSessionDescription()
 slug: Web/API/RTCSessionDescription/RTCSessionDescription
+page-type: web-api-constructor
 tags:
   - Constructor
   - Deprecated
@@ -66,7 +67,7 @@ navigator.getUserMedia({video: true}, function(stream) {
       // send the offer to a server to be forwarded to the friend you're calling.
     }, error);
   }, error);
-}
+});
 ```
 
 ## Specifications

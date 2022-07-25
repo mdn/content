@@ -1,6 +1,7 @@
 ---
 title: BarcodeDetector.getSupportedFormats()
 slug: Web/API/BarcodeDetector/getSupportedFormats
+page-type: web-api-static-method
 tags:
   - Barcode Detection API
   - BarcodeDetector
@@ -43,8 +44,8 @@ the results to the console.
 ```js
 // check supported types
 BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats => {
-    supportedFormats.forEach(format => console.log(format));
+  .then((supportedFormats) => {
+    supportedFormats.forEach((format) => console.log(format));
   });
 ```
 

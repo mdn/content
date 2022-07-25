@@ -1,6 +1,7 @@
 ---
 title: GeolocationCoordinates.longitude
 slug: Web/API/GeolocationCoordinates/longitude
+page-type: web-api-instance-property
 tags:
   - API
   - GPS

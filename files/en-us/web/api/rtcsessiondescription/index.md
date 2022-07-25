@@ -1,6 +1,7 @@
 ---
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -44,7 +45,7 @@ _The `RTCSessionDescription` doesn't inherit any methods._
 signalingChannel.onmessage = function (evt) {
   if (!pc) start(false);
 
-  var message = JSON.parse(evt.data);
+  const message = JSON.parse(evt.data);
   if (message.sdp)
     pc.setRemoteDescription(
       new RTCSessionDescription(message),

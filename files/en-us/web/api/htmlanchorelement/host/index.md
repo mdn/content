@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.host
 slug: Web/API/HTMLAnchorElement/host
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement

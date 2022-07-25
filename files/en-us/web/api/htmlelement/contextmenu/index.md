@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.contextMenu
 slug: Web/API/HTMLElement/contextMenu
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

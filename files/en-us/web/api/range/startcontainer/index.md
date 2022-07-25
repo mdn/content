@@ -1,6 +1,7 @@
 ---
 title: Range.startContainer
 slug: Web/API/Range/startContainer
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

@@ -23,12 +23,16 @@ unregister(unregisterToken);
 ### Parameters
 
 - `unregisterToken`
-  - : The token used with the {{jsxref("FinalizationRegistry.prototype.register",
-        "register")}} method when registering the target object.
+  - : The token used with the {{jsxref("FinalizationRegistry.prototype.register", "register")}} method when registering the target object. Multiple cells registered with the same `unregisterToken` will be unregistered together.
 
 ### Return value
 
-`undefined`.
+A boolean value that is `true` if at least one cell was unregistered and `false` if no cell was unregistered.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown when `unregisterToken` is not an object.
 
 ## Notes
 
@@ -46,8 +50,8 @@ token, then later unregistering it via `unregister`:
 
 ```js
 class Thingy {
-    #cleanup = label => {
-    //         ^^^^^−−−−− held value
+    #cleanup = (label) => {
+    //          ^^^^^−−−−− held value
         console.error(
             `The \`release\` method was never called for the object with the label "${label}"`
         );

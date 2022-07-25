@@ -1,6 +1,7 @@
 ---
 title: Element.ariaRowCount
 slug: Web/API/Element/ariaRowCount
+page-type: web-api-instance-property
 tags:
   - API
   - Property

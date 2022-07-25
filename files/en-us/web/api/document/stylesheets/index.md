@@ -1,6 +1,7 @@
 ---
 title: Document.styleSheets
 slug: Web/API/Document/styleSheets
+page-type: web-api-instance-property
 tags:
   - API
   - Document

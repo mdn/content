@@ -1,6 +1,7 @@
 ---
 title: 'AudioWorkletNode: processorerror event'
 slug: Web/API/AudioWorkletNode/processorerror_event
+page-type: web-api-event
 tags:
   - API
   - Audio
@@ -23,9 +24,9 @@ Once an exception is thrown, the processor (and thus the node) will output silen
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('processorerror', event => { })
+addEventListener('processorerror', (event) => { })
 
-onprocessorerror = event => { }
+onprocessorerror = (event) => { }
 ```
 
 ## Event type

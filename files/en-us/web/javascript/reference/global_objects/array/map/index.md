@@ -23,19 +23,19 @@ every element in the calling array.
 
 ```js
 // Arrow function
-map((element) => { /* ... */ })
-map((element, index) => { /* ... */ })
-map((element, index, array) => { /* ... */ })
+map((element) => { /* … */ })
+map((element, index) => { /* … */ })
+map((element, index, array) => { /* … */ })
 
 // Callback function
 map(callbackFn)
 map(callbackFn, thisArg)
 
 // Inline callback function
-map(function(element) { /* ... */ })
-map(function(element, index) { /* ... */ })
-map(function(element, index, array){ /* ... */ })
-map(function(element, index, array) { /* ... */ }, thisArg)
+map(function(element) { /* … */ })
+map(function(element, index) { /* … */ })
+map(function(element, index, array){ /* … */ })
+map(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -54,7 +54,7 @@ map(function(element, index, array) { /* ... */ }, thisArg)
     - `array`
       - : The array `map` was called upon.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value

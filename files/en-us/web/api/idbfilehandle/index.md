@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle
 slug: Web/API/IDBFileHandle
+page-type: web-api-interface
 tags:
   - API
   - Files

@@ -1,6 +1,7 @@
 ---
 title: CSSPropertyRule.syntax
 slug: Web/API/CSSPropertyRule/syntax
+page-type: web-api-instance-property
 tags:
   - API
   - CSS

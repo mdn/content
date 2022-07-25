@@ -1,6 +1,7 @@
 ---
 title: NavigationPreloadManager.setHeaderValue()
 slug: Web/API/NavigationPreloadManager/setHeaderValue
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -45,14 +46,9 @@ The code below demonstrates how the value might be set.
 
 ```js
 navigator.serviceWorker.ready
-  .then((registration) => {
-    return registration.navigationPreload.setHeaderValue(newValue);
-  })
-  .then(() => {
-    console.log("Done!");
-  })
-  .catch(e => console.error("NavigationPreloadManager not supported: " + e.message));
-
+  .then((registration) => registration.navigationPreload.setHeaderValue(newValue))
+  .then(() => console.log("Done!"))
+  .catch((e) => console.error(`NavigationPreloadManager not supported: ${e.message}`));
 ```
 
 ## Specifications

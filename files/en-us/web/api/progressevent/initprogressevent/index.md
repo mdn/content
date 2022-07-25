@@ -1,6 +1,7 @@
 ---
 title: ProgressEvent.initProgressEvent()
 slug: Web/API/ProgressEvent/initProgressEvent
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

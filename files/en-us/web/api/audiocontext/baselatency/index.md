@@ -1,6 +1,7 @@
 ---
 title: AudioContext.baseLatency
 slug: Web/API/AudioContext/baseLatency
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: Document.createComment()
 slug: Web/API/Document/createComment
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -26,7 +27,7 @@ createComment(data)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A new {{domxref("Comment")}} object.
 
 ## Examples
 

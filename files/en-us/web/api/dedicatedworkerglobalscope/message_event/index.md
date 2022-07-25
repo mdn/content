@@ -1,6 +1,7 @@
 ---
 title: 'DedicatedWorkerGlobalScope: message event'
 slug: Web/API/DedicatedWorkerGlobalScope/message_event
+page-type: web-api-event
 tags:
   - Event
   - message
@@ -19,9 +20,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type
@@ -52,7 +53,7 @@ The following code snippet shows creation of a {{domxref("Worker")}} object usin
 ```js
 // main.js
 
-var myWorker = new Worker("worker.js");
+const myWorker = new Worker("worker.js");
 
 first.onchange = function() {
   myWorker.postMessage([first.value, second.value]);
@@ -63,7 +64,7 @@ first.onchange = function() {
 
 self.onmessage = function(e) {
   console.log('Message received from main script');
-  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  const workerResult = `Result: ${e.data[0] * e.data[1]}`;
   console.log('Posting message back to main script');
   postMessage(workerResult);
 }
@@ -88,7 +89,7 @@ Alternatively, the script can listen for the message using [`addEventListener()`
 self.addEventListener('message', function(e) {
   result.textContent = e.data;
   console.log('Message received from worker');
-}
+});
 ```
 
 Notice how in the main script, `onmessage` has to be called on `myWorker`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).

@@ -22,19 +22,19 @@ for each array element.
 
 ```js
 // Arrow function
-forEach((element) => { /* ... */ })
-forEach((element, index) => { /* ... */ })
-forEach((element, index, array) => { /* ... */ })
+forEach((element) => { /* … */ })
+forEach((element, index) => { /* … */ })
+forEach((element, index, array) => { /* … */ })
 
 // Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function(element) { /* ... */ })
-forEach(function(element, index) { /* ... */ })
-forEach(function(element, index, array){ /* ... */ })
-forEach(function(element, index, array) { /* ... */ }, thisArg)
+forEach(function(element) { /* … */ })
+forEach(function(element, index) { /* … */ })
+forEach(function(element, index, array){ /* … */ })
+forEach(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -196,7 +196,7 @@ const logArrayElements = (element, index, array) => {
 };
 
 // Notice that index 2 is skipped, since there is no item at
-// that position in the array...
+// that position in the array.
 [2, 5,, 9].forEach(logArrayElements);
 // logs:
 // a[0] = 2

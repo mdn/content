@@ -1,6 +1,7 @@
 ---
 title: Range.comparePoint()
 slug: Web/API/Range/comparePoint
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

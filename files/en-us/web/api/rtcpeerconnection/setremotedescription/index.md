@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.setRemoteDescription()
 slug: Web/API/RTCPeerConnection/setRemoteDescription
+page-type: web-api-instance-method
 tags:
   - API
   - ICE
@@ -201,8 +202,7 @@ When using the deprecated callback-based version of
 ## Examples
 
 Here we see a function which handles an offer received from the remote peer. This code
-is derived from the example and tutorial in the article [Signaling and
-video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling); take a look at that for more details and a more in-depth
+is derived from the example and tutorial in the article [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling); take a look at that for more details and a more in-depth
 explanation of what's going on.
 
 ```js

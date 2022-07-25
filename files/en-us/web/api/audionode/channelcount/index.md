@@ -1,6 +1,7 @@
 ---
 title: AudioNode.channelCount
 slug: Web/API/AudioNode/channelCount
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode

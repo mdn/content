@@ -1,6 +1,7 @@
 ---
 title: Response.json()
 slug: Web/API/Response/json
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -31,7 +32,7 @@ None.
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
-anything that can be represented by JSON — an object, an array, a string, a number...
+anything that can be represented by JSON — an object, an array, a string, a number…
 
 ## Examples
 
@@ -46,10 +47,10 @@ const myList = document.querySelector('ul');
 const myRequest = new Request('products.json');
 
 fetch(myRequest)
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     for (const product of data.products) {
-      let listItem = document.createElement('li');
+      const listItem = document.createElement('li');
       listItem.appendChild(
         document.createElement('strong')
       ).textContent = product.Name;

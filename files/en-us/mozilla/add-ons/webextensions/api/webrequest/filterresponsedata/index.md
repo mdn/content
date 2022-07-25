@@ -45,13 +45,15 @@ This example shows a minimal implementation that passes through the stream data 
 
 ```js
 let filter = browser.webRequest.filterResponseData(details.requestId);
-filter.ondata = event => {
+filter.ondata = (event) => {
   console.log(`filter.ondata received ${event.data.byteLength} bytes`);
   filter.write(event.data);
 };
-filter.onstop = event => {
+filter.onstop = (event) => {
   // The extension should always call filter.close() or filter.disconnect()
   // after creating the StreamFilter, otherwise the response is kept alive forever.
+  // If processing of the response data is finished, use close. If any remaining
+  // response data should be processed by Firefox, use disconnect.
   filter.close();
 };
 ```
@@ -64,7 +66,7 @@ function listener(details) {
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     let str = decoder.decode(event.data, {stream: true});
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.

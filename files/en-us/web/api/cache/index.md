@@ -1,11 +1,11 @@
 ---
 title: Cache
 slug: Web/API/Cache
+page-type: web-api-interface
 tags:
   - API
   - Cache
   - Cache API
-  - Experimental
   - Interface
   - Offline
   - Reference
@@ -62,16 +62,16 @@ In the code example, `caches` is a property of the {{domxref("ServiceWorkerGloba
 > **Note:** In Chrome, visit `chrome://inspect/#service-workers` and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [`service-worker.js`](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
 
 ```js
-var CACHE_VERSION = 1;
-var CURRENT_CACHES = {
-  font: 'font-cache-v' + CACHE_VERSION
+const CACHE_VERSION = 1;
+const CURRENT_CACHES = {
+  font: `font-cache-v${CACHE_VERSION}`
 };
 
 self.addEventListener('activate', function(event) {
   // Delete all caches that aren't named in CURRENT_CACHES.
   // While there is only one cache in this example, the same logic will handle the case where
   // there are multiple versioned caches.
-  var expectedCacheNamesSet = new Set(Object.values(CURRENT_CACHES));
+  const expectedCacheNamesSet = new Set(Object.values(CURRENT_CACHES));
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
@@ -104,7 +104,7 @@ self.addEventListener('fetch', function(event) {
         // Otherwise, if there is no entry in the cache for event.request, response will be
         // undefined, and we need to fetch() the resource.
         console.log(' No response for %s found in cache. About to fetch ' +
-          'from network...', event.request.url);
+          'from network…', event.request.url);
 
         // We call .clone() on the request since we might use it in a call to cache.put() later on.
         // Both fetch() and cache.put() "consume" the request, so we need to make a copy.
