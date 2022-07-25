@@ -34,7 +34,6 @@ getHighEntropyValues(hints)
     - `"architecture"`
     - `"bitness"`
     - `"model"`
-    - `"platform"`
     - `"platformVersion"`
     - `"uaFullVersion"` {{deprecated_inline}}
     - `"fullVersionList"`
