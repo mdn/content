@@ -18,6 +18,8 @@ browser-compat: api.HTMLElement.dragleave_event
 
 The `dragleave` event is fired when a dragged element or text selection leaves a valid drop target.
 
+This event is not cancelable.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
