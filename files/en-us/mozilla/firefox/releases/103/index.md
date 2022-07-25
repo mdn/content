@@ -10,7 +10,7 @@ tags:
 {{FirefoxSidebar}}
 
 
-This article provides information about the changes in Firefox 102 that will affect developers. Firefox 102 was released on July 26, 2022.
+This article provides information about the changes in Firefox 103 that will affect developers. Firefox 103 was released on July 26, 2022.
 
 ## Changes for web developers
 
