@@ -154,7 +154,7 @@ You can also use `calc()` with [CSS variables](/en-US/docs/Web/CSS/CSS_Variables
 }
 ```
 
-After all variables are expanded, `widthC`'s value will be `calc( calc( 100px / 2) / 2)`, then when it's assigned to `.foo`'s width property, all inner `calc()`s (no matter how deeply nested) will be flattened to just parentheses, so the `width` property's value will be eventually `calc( ( 100px / 2) / 2)`, i.e. `25px`. In short: a `calc()` inside of a `calc()` is identical to just parentheses.
+After all variables are expanded, `widthC`'s value will be `calc(calc(100px / 2) / 2)`, then when it's assigned to `.foo`'s width property, all inner `calc()`s (no matter how deeply nested) will be flattened to just parentheses, so the `width` property's value will be eventually `calc((100px / 2) / 2)`, i.e. `25px`. In short: a `calc()` inside of a `calc()` is identical to just parentheses.
 
 ## Specifications
 

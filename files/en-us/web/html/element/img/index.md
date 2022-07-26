@@ -184,7 +184,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     If no descriptor is specified, the source is assigned the default descriptor of `1x`.
 
     It is incorrect to mix width descriptors and pixel density descriptors in the same `srcset` attribute. Duplicate descriptors (for instance, two sources in the same `srcset` which are both described with `2x`) are also invalid.
-    
+
     If the `srcset` attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
     The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial for an example.

@@ -16,9 +16,7 @@ browser-compat: api.TextDecoder.TextDecoder
 The **`TextDecoder()`** constructor returns a newly created
 {{DOMxRef("TextDecoder")}} object for the encoding specified in parameter.
 
-If the value for _utfLabel_ is unknown, or is one of the two values leading to a
-`'replacement'` decoding algorithm ( "`iso-2022-cn`" or
-"`iso-2022-cn-ext`"), a {{jsxref("RangeError")}} is thrown.
+If the value for _utfLabel_ is unknown, or is one of the two values leading to a `'replacement'` decoding algorithm (`"iso-2022-cn"` or `"iso-2022-cn-ext"`), a {{jsxref("RangeError")}} is thrown.
 
 ## Syntax
 

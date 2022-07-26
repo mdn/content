@@ -31,7 +31,7 @@ node.
 Chaining does not work, due to `appendChild()` returning the child element:
 
 ```js
-let aBlock = document.createElement('block').appendChild( document.createElement('strong') );
+const aBlock = document.createElement('block').appendChild(document.createElement('strong'));
 ```
 
 Sets `aBlock` to `<strong></strong>` only, meaning you cannot chain further actions on `block`, like
@@ -70,7 +70,7 @@ the empty {{domxref("DocumentFragment")}} is returned.
 
 ```js
 // Create a new paragraph element, and append it to the end of the document body
-let p = document.createElement("p");
+const p = document.createElement("p");
 document.body.appendChild(p);
 ```
 

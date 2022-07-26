@@ -55,9 +55,9 @@ custom namespace.
 
   <script type="text/javascript">
     const ns = 'http://www.example.com/2014/test';
-    const circle = document.getElementById( 'target' );
+    const circle = document.getElementById('target');
 
-    console.log( 'attribute test:foo: "' + circle.getAttributeNS( ns, 'foo' ) + '"' );
+    console.log(`attribute test:foo: "${circle.getAttributeNS(ns, 'foo')}"`);
   </script>
 </svg>
 ```
@@ -78,8 +78,8 @@ namespaces are not supported.
 
 <script type="text/javascript">
   const ns = 'http://www.example.com/2014/test';
-  const circle = document.getElementById( 'target' );
-  console.log('Attribute value: ' + circle.getAttribute('test:foo'));
+  const circle = document.getElementById('target');
+  console.log(`Attribute value: ${circle.getAttribute('test:foo')}`);
 </script>
 
 </body>

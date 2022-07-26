@@ -64,7 +64,7 @@ dtmfSender.addEventListener("tonechange", (ev) => {
 You can also just set the `ontonechange` event handler property directly:
 
 ```js
-dtmfSender.ontonechange = function( ev ) {
+dtmfSender.ontonechange = (ev) => {
   let tone = ev.tone;
   if (tone === "") {
     tone = "&lt;none&gt;"

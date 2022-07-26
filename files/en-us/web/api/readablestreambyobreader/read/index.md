@@ -86,7 +86,7 @@ First we create the reader using {{domxref("ReadableStream.getReader()")}} on th
 We also need create an `ArrayBuffer`, which is the "backing memory" of the views that we will write into.
 
 ```js
-const reader = stream.getReader({mode: "byob"});
+const reader = stream.getReader({ mode: "byob" });
 let buffer = new ArrayBuffer(4000);
 ```
 
@@ -100,28 +100,29 @@ readStream(reader);
 
 function readStream(reader) {
   let bytesReceived = 0;
-  let offset =  0;
+  let offset = 0;
 
   while (offset < buffer.byteLength) {
     // read() returns a promise that fulfills when a value has been received
-    reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(function processBytes({ done, value }) {
-      // Result objects contain two properties:
+    reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+      .then(function processBytes({ done, value }) {
+        // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
         // value - some data. Always undefined when done is true.
 
-      if (done) {
-        // There is no more data in the stream
-        return;
-      }
+        if (done) {
+          // There is no more data in the stream
+          return;
+        }
 
-      buffer = value.buffer;
-      offset += value.byteLength;
-      bytesReceived += value.byteLength;
+        buffer = value.buffer;
+        offset += value.byteLength;
+        bytesReceived += value.byteLength;
 
-      // Read some more, and call this function again
-      // Note that here we create a new view over the original buffer.
-      return reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(processBytes);
-    });
+        // Read some more, and call this function again
+        // Note that here we create a new view over the original buffer.
+        return reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset)).then(processBytes);
+      });
   }
 }
 ```

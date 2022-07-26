@@ -339,34 +339,35 @@ function readStream(reader) {
 
   while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received
-    reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(async function processText({ done, value }) {
-      // Result objects contain two properties:
+    reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+      .then(async function processText({ done, value }) {
+        // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
         // value - some data. Always undefined when done is true.
 
-      if (done) {
-        logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
-        return;
-      }
+        if (done) {
+          logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
+          return;
+        }
 
-      buffer = value.buffer;
-      offset += value.byteLength;
-      bytesReceived += value.byteLength;
+        buffer = value.buffer;
+        offset += value.byteLength;
+        bytesReceived += value.byteLength;
 
-      //logConsumer(`Read ${bytesReceived} bytes: ${value}`);
-      logConsumer(`Read ${bytesReceived} bytes`);
-      result += value;
+        //logConsumer(`Read ${bytesReceived} bytes: ${value}`);
+        logConsumer(`Read ${bytesReceived} bytes`);
+        result += value;
 
-      // Add delay to emulate when data can't be read and data is enqueued
-      if (bytesReceived > 300 && bytesReceived < 600) {
-        logConsumer(`Delaying read to emulate slow stream reading`);
-        const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-        await delay(1000);
-      }
+        // Add delay to emulate when data can't be read and data is enqueued
+        if (bytesReceived > 300 && bytesReceived < 600) {
+          logConsumer(`Delaying read to emulate slow stream reading`);
+          const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+          await delay(1000);
+        }
 
-      // Read some more, and call this function again
-      return reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(processText);
-    });
+        // Read some more, and call this function again
+        return reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset)).then(processText);
+      });
   }
 }
 ```
@@ -606,26 +607,27 @@ function readStream(reader) {
 
   while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received
-    reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(function processText({ done, value }) {
-      // Result objects contain two properties:
+    reader.readnew Uint8Array(buffer, offset, buffer.byteLength - offset))
+      .then(function processText({ done, value }) {
+        // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
         // value - some data. Always undefined when done is true.
 
-      if (done) {
-        logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
-        return;
-      }
+        if (done) {
+          logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
+          return;
+        }
 
-      buffer = value.buffer;
-      offset += value.byteLength;
-      bytesReceived += value.byteLength;
+        buffer = value.buffer;
+        offset += value.byteLength;
+        bytesReceived += value.byteLength;
 
-      logConsumer(`Read ${bytesReceived} bytes: ${value}`);
-      result += value;
+        logConsumer(`Read ${bytesReceived} bytes: ${value}`);
+        result += value;
 
-      // Read some more, and call this function again
-      return reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(processText);
-    });
+        // Read some more, and call this function again
+        return reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset)).then(processText);
+      });
   }
 }
 ```

@@ -373,7 +373,7 @@ condition ? run this code : run this code instead
 So let's look at a simple example:
 
 ```js
-const greeting = isBirthday 
+const greeting = isBirthday
   ? 'Happy birthday Mrs. Smith — we hope you have a great day!'
   : 'Good morning Mrs. Smith.';
 ```
@@ -404,8 +404,8 @@ function update(bgColor, textColor) {
   html.style.color = textColor;
 }
 
-select.addEventListener('change', () => select.value === 'black' 
-  ? update('black', 'white') 
+select.addEventListener('change', () => select.value === 'black'
+  ? update('black', 'white')
   : update('white', 'black')
 );
 ```
