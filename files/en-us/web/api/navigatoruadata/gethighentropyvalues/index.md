@@ -42,19 +42,26 @@ getHighEntropyValues(hints)
 
 A {{jsxref("Promise")}} that resolves to an object containing some or all of the following values (based on the hints requested):
 
+- `brands`
+  - : A low-entropy hint provided automatically, for details see {{domxref("NavigatorUAData.brands")}}.
+- `mobile`
+  - : A low-entropy hint provided automatically, for details see {{domxref("NavigatorUAData.mobile")}}.
+- `platform`
+  - : A low-entropy hint provided automatically, for details see {{domxref("NavigatorUAData.platform")}}.
 - `architecture`
   - : A string containing the platform architecture. For example, `"x86"`.
 - `bitness`
   - : A string containing the architecture bitness. For example, `"64"`.
 - `model`
-  - : A string containing the device model. For example, `"Pixel 2XL"`.
+  - : A string containing the device model. For example, `"Pixel 2XL"` or `""` if device model is not known.
 - `platformVersion`
-  - : A string containing the platform version. For example, `"10.0"`.
+  - : A string containing the platform version. Platform name itself is always available as low-entropy hint `platform`. For example, `"10.0"`.
 - `uaFullVersion` {{deprecated_inline}}
   - : A string containing the full browser version. For example, `"91.0.4472.124"`.
 - `fullVersionList`
-  - : An array of brand information containing the browser name and full version.
+  - : An array of objects with properties `"brand"` and `"version"` representing the browser name and full version respectively.
     For example, `{"brand": "Google Chrome", "version": "103.0.5060.134"}, {"brand": "Chromium", "version": "103.0.5060.134"}`.
+    Please note that one object may intentionally contain invalid information to prevent sites from relying on a fixed list of browsers.
 
 ### Exceptions
 
@@ -82,3 +89,15 @@ navigator.userAgentData.getHighEntropyValues(
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- These values are also available as via HTTP request headers:
+  - {{HTTPHeader("Sec-CH-UA")}}
+  - {{HTTPHeader("Sec-CH-UA-Arch")}}
+  - {{HTTPHeader("Sec-CH-UA-Bitness")}}
+  - {{HTTPHeader("Sec-CH-UA-Full-Version")}}
+  - {{HTTPHeader("Sec-CH-UA-Mobile")}}
+  - {{HTTPHeader("Sec-CH-UA-Model")}}
+  - {{HTTPHeader("Sec-CH-UA-Platform")}}
+  - {{HTTPHeader("Sec-CH-UA-Platform-Version")}}

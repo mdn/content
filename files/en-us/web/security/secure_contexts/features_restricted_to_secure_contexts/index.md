@@ -44,7 +44,6 @@ In addition, the following methods require a secure context (even if the associa
 - [`MediaDevices.getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia)
 - [`Navigator.registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
 
-
 ## See also
 
 - [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)

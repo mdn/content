@@ -9,7 +9,6 @@ tags:
   - Reference
   - polyfill
   - at
-  - Experimental
 browser-compat: javascript.builtins.String.at
 ---
 {{JSRef}}
