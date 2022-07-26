@@ -6658,8 +6658,7 @@
 /en-US/docs/SVG:use	/en-US/docs/Web/SVG/Element/use
 /en-US/docs/SVGFEBlendElement	/en-US/docs/Web/API/SVGFEBlendElement
 /en-US/docs/SVGFEComponentTransferElement	/en-US/docs/Web/API/SVGFEComponentTransferElement
-/en-US/docs/SVG_In_HTML_Introduction	/en-US/docs/Web/SVG/
-/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction /en-US/docs/Web/SVG/
+/en-US/docs/SVG_In_HTML_Introduction	/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /en-US/docs/SVG_Namespace_Tips_(external)	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG_Reference	/en-US/docs/Web/SVG/Element
 /en-US/docs/SVG_Tutorial	/en-US/docs/Web/SVG/Tutorial
@@ -8170,6 +8169,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeyup	/en-US/docs/Web/API/Element/keyup_event
+/en-US/docs/Web/API/GlobalEventHandlers/onloadend	/en-US/docs/Web/API/XMLHttpRequest/loadend_event
 /en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmouseenter	/en-US/docs/Web/API/Element/mouseenter_event
