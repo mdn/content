@@ -37,7 +37,6 @@ The `:not()` pseudo-class requires a comma-separated list of one or more selecto
 
 There are several unusual effects and outcomes when using `:not()` that you should keep in mind when using it:
 
-- The `:not` pseudo-class may not be nested, which means that `:not(:not( ))` is invalid.
 - Useless selectors can be written using this pseudo-class. For example, `:not(*)` matches any element which is not an element, which is obviously nonsense, so the accompanying rule will never be applied.
 - This pseudo-class can increase the [specificity](/en-US/docs/Web/CSS/Specificity) of a rule. For example, `#foo:not(#bar)` will match the same element as the simpler `#foo`, but has the higher specificity of two `id` selectors.
 - The specificity of the `:not()` pseudo-class is replaced by the specificity of the most specific selector in its comma-separated argument of selectors; providing the same specificity as if it had been written [`:not(:is(argument))`](/en-US/docs/Web/CSS/:is).
