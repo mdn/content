@@ -38,6 +38,8 @@ let createBookmark = browser.bookmarks.create(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} that describes the new bookmark node.
 
+> **Note:** If you create multiple bookmarks, because this API is asynchronous, the creates may get processed in any order. Consequently, the value of each bookmark's index returned in {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} may change or be unknown until all the creates are completed. If you want to obtain the index values after a create, you must wait for all the calls to resolve or reject before reading the index values.
+
 ## Examples
 
 This example creates a bookmark for this page, placing it in the default folder ("Other Bookmarks" in Firefox and Chrome).

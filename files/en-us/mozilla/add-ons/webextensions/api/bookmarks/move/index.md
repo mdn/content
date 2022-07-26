@@ -49,6 +49,8 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 If the node corresponding to the `id` parameter can't be found, the promise is rejected with an error message.
 
+> **Note:** If you move multiple bookmarks, because this API is asynchronous, the moves may get processed in any order. Consequently, the value of each bookmark's index returned in {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} may change or be unknown until all the moves are completed. If you want to obtain the index values after a move, you must wait for all the calls to resolve or reject before reading the index values.
+
 ## Examples
 
 This example moves a bookmark so that it's the first bookmark in its current folder.
