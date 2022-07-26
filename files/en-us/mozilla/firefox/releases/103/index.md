@@ -25,6 +25,8 @@ This article provides information about the changes in Firefox 103 that will aff
 
 ### CSS
 
+The [`backdrop-filter`](/en-US/docs/Web/CSS/backdrop-filter) property that can be used to apply graphical effects such as blurring or color shifting to the area behind an element is now available by default ({{bug(1578503)}}).
+
 #### Removals
 
 ### JavaScript
