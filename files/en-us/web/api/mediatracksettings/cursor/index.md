@@ -20,7 +20,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackSettings.cursor
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`cursor`** property indicates whether or not the cursor

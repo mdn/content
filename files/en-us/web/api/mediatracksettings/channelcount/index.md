@@ -16,7 +16,7 @@ tags:
   - channelCount
 browser-compat: api.MediaTrackSettings.channelCount
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`channelCount`** property is an integer indicating how many

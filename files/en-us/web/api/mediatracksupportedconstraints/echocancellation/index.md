@@ -15,7 +15,7 @@ tags:
   - echoCancellation
 browser-compat: api.MediaTrackSupportedConstraints.echoCancellation
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`echoCancellation`** property is a read-only Boolean value
