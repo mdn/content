@@ -81,7 +81,7 @@ If you are reading this on a device or environment where you can't easily create
 
 ## Adding CSS to our document
 
-First, tell the HTML document that we have some CSS rules we want it to use. There are three options to apply CSS to an HTML document, which will be part of the next lesson.
+First, tell the HTML document that we have some CSS rules we want it to use. There are three options to apply CSS to an HTML document, which will be covered in the [CSS structure lesson](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured).
 
 For now, we will use the most common way — linking CSS from the head of your document.
 
