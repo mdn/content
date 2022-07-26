@@ -15,11 +15,9 @@ The read-only **`BroadcastChannel.name`** property returns a string, which uniqu
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Values
 
-```js
-const str = channel.name;
-```
+A string.
 
 ## Examples
 
