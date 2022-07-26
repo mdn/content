@@ -115,7 +115,7 @@ As with HSL, HWB can be more intuitive to use than RGB. A hue is specified in th
 
 HWB colors are expressed through the functional `hwb()` notation.
 
-> **Note:** The HWB function does **not** use commas to separate it's values as with previous color functions.
+> **Note:** The HWB function does **not** use commas to separate its values as with previous color functions.
 
 - [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb): `hwb(H W B[ / A])`
 
