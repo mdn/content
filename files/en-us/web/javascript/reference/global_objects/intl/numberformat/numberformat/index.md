@@ -193,7 +193,7 @@ new Intl.NumberFormat(locales, options)
 
         - `"auto"`: keep trailing zeros according to `minimumFractionDigits` and `minimumSignificantDigits`
         - `"stripIfInteger"`: remove the fraction digits _if_ they are all zero.
-          This is the same as `auto` if any of the fraction digits are non-zero.
+          This is the same as `auto` if any of the fraction digits is non-zero.
 
     The following properties fall into two groups:
     `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group,
