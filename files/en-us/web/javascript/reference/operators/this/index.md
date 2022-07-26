@@ -256,7 +256,7 @@ In global code, it will be set to the global object:
 
 ```js
 const globalObject = this;
-const foo = (() => this);
+let foo = (() => this);
 console.log(foo() === globalObject); // true
 ```
 
