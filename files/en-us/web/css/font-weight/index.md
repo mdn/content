@@ -237,6 +237,6 @@ span {
 
 ## See Also
 
-- {{cssxref("font-style")}}
 - {{cssxref("font-family")}}
+- {{cssxref("font-style")}}
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
