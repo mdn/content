@@ -46,4 +46,4 @@ None ({{jsxref("undefined")}}).
 
 - {{domxref("console.time()")}}
 - {{domxref("console.timeEnd()")}}
-- [Adding timestamps to the waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#timestamp-markers)
+- [Adding markers with the console API](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#adding-markers-with-the-console-api)
