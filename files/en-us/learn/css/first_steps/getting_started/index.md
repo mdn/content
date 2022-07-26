@@ -77,7 +77,7 @@ and also a <a href="https://example.com">link</a>.</p>
 </html>
 ```
 
-> **Note:** If you are reading this on a device or environment where you can't easily create files, then don't worry — you can write example code in our interactive editor right here in the page.
+If you are reading this on a device or environment where you can't easily create files, don't worry — you can write example code in our interactive editor here in the page.
 
 ## Adding CSS to our document
 
