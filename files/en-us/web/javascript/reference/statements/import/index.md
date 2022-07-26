@@ -159,37 +159,32 @@ This is often used for [polyfills](/en-US/docs/Glossary/Polyfill), which mutate 
 
 ### Standard Import
 
-The code below shows how to import from a secondary module to assist in processing an
-AJAX JSON request.
-
-#### The module: file.js
+In this example, we create a re-usable module that exports a function to get all primes within a given range.
 
 ```js
-function getJSON(url, callback) {
-  const xhr = new XMLHttpRequest();
-  xhr.onload = function () {
-    callback(this.responseText);
-  };
-  xhr.open('GET', url, true);
-  xhr.send();
-}
-
-export function getUsefulContents(url, callback) {
-  getJSON(url, (data) => callback(JSON.parse(data)));
+// getPrimes.js
+/**
+ * Returns a list of prime numbers that are smaller than `max`.
+ */
+export function getPrimes(max) {
+  const isPrime = new Map();
+  for (let i = 2; i < Math.sqrt(max); i++) {
+    if (isPrime.get(i) !== false) {
+      for (let j = i ** 2; j < max; j += i) {
+        isPrime.set(j, false);
+      }
+    }
+  }
+  return [...isPrime.entries()]
+    .filter(([, isPrime]) => isPrime)
+    .map(([number]) => number);
 }
 ```
 
-#### The main program: main.js
-
 ```js
-import { getUsefulContents } from '/modules/file.js';
+import { getPrimes } from '/modules/getPrimes.js';
 
-getUsefulContents(
-  'http://www.example.com',
-  (data) => {
-    doSomethingUseful(data);
-  },
-);
+console.log(getPrimes(10)); // [2, 3, 5, 7]
 ```
 
 ### Imported values can only be modified by the exporter
