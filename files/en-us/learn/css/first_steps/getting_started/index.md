@@ -45,7 +45,7 @@ In this article, we will take a HTML document and apply CSS to it, learning some
   </tbody>
 </table>
 
-## Adding an HTML document
+## Creating an HTML document
 
 Our starting point is an HTML document. You can copy the code from below and save it as `index.html` in a folder on your computer.
 
