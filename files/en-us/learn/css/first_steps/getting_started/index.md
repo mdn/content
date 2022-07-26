@@ -133,7 +133,7 @@ Try this out in the interactive editor below (edit the code boxes) or in your lo
 
 ## Changing the default behavior of elements
 
-Browsers are making the HTML readable by applying some internal stylesheets with default styles to all HTML documents. All modern browsers display HTML content by default in pretty much the same way. Headings are large and bold and lists have bullets. 
+When we look at a simple HTML document (like our example), we can see how the browser is making the HTML code readable. Headings are large and bold and our list has bullets. This happens because all modern browsers apply their own internal stylesheets with default styles to any page.
 
 To change the default styles, you can choose the HTML element that you want to change and apply a CSS rule to it. A good example is `<ul>`, an unordered list. It has list bullets but you can remove them like so:
 
