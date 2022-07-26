@@ -413,7 +413,7 @@ eval(z);           // returns 42
 `eval()` returns the completion value of statements. For `if`, it would be the last expression or statement evaluated.
 
 ```js
-const str = 'if ( a ) { 1 + 1; } else { 1 + 2; }';
+const str = 'if (a) { 1 + 1 } else { 1 + 2 }';
 const a = true;
 const b = eval(str);  // returns 2
 

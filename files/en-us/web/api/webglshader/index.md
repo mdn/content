@@ -19,14 +19,14 @@ The **WebGLShader** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) an
 To create a **WebGLShader** use {{domxref("WebGLRenderingContext.createShader")}}, then hook up the GLSL source code using {{domxref("WebGLRenderingContext.shaderSource()")}}, and finally invoke {{domxref("WebGLRenderingContext.compileShader()")}} to finish and compile the shader. At this point the **WebGLShader** is still not in a usable form and must still be attached to a {{domxref("WebGLProgram")}}.
 
 ```js
-function createShader (gl, sourceCode, type) {
+function createShader(gl, sourceCode, type) {
   // Compiles either a shader of type gl.VERTEX_SHADER or gl.FRAGMENT_SHADER
-  const shader = gl.createShader( type );
-  gl.shaderSource( shader, sourceCode );
-  gl.compileShader( shader );
+  const shader = gl.createShader(type);
+  gl.shaderSource(shader, sourceCode);
+  gl.compileShader(shader);
 
-  if ( !gl.getShaderParameter(shader, gl.COMPILE_STATUS) ) {
-    const info = gl.getShaderInfoLog( shader );
+  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+    const info = gl.getShaderInfoLog(shader);
     throw `Could not compile WebGL program. \n\n${info}`;
   }
   return shader;
