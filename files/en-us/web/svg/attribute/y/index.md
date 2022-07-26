@@ -1314,7 +1314,7 @@ html,body,svg { height:100% }
 
     <!-- y with multiple values -->
     <tspan y="40%,60%,80%" x="55%">SVG</tspan>
-  </text
+  </text>
 </svg>
 ```
 
