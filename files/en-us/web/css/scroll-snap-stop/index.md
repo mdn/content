@@ -49,37 +49,41 @@ scroll-snap-stop: unset;
 
 ### Setting different snap stops
 
-The example below demonstrates `scroll-snap-stop: always` in the blocks marked Mandatory and `scroll-snap-stop: normal` in the blocks marked Proximity.
+The example below demonstrates the contrast between the `always` and `normal` values of `scroll-snap-stop`. The difference in the two `scroll-snap-stop` values is more noticeable when the `scroll-snap-type` property is set to `mandatory`, which is what is used in this example.
 
 #### HTML
 
 ```html
-<div class="container x mandatory-scroll-snapping" dir="ltr">
-  <div>X Mandatory LTR</div>
+<p>scroll-snap-stop: always (X Mandatory)</p>
+<div class="x mandatory-scroll-snapping always-stop">
+  <div>1</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container x proximity-scroll-snapping" dir="ltr">
-  <div>X Proximity LTR</div>
+<p>scroll-snap-stop: normal (X Mandatory)</p>
+<div class="x mandatory-scroll-snapping normal-stop">
+  <div>1</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container y mandatory-scroll-snapping" dir="ltr">
-  <div>Y Mandatory LTR</div>
+<p>scroll-snap-stop: always (Y Mandatory)</p>
+<div class="y mandatory-scroll-snapping always-stop">
+  <div>1</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container y proximity-scroll-snapping" dir="ltr">
-  <div>Y Proximity LTR</div>
+<p>scroll-snap-stop: normal (Y Mandatory)</p>
+<div class="y mandatory-scroll-snapping normal-stop">
+  <div>1</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
@@ -89,37 +93,66 @@ The example below demonstrates `scroll-snap-stop: always` in the blocks marked M
 
 #### CSS
 
-```css
+```css hidden
 /* setup */
-:root, body {
+body {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-flow: column nowrap;
   font-family: monospace;
+  text-align: center;
 }
 
-.container {
+div[class] {
+  font-size: 3rem;
   display: flex;
   overflow: auto;
-  outline: 1px dashed lightgray;
   flex: none;
 }
 
-.container.x {
-  width: 100%;
-  height: 128px;
+.x {
+  width: 50%;
+  min-width: 15rem;
+  height: 6rem;
   flex-flow: row nowrap;
 }
 
-.container.y {
-  width: 384px;
-  height: 256px;
+.y {
+  width: 30%;
+  min-width: 12rem;
+  height: 12rem;
   flex-flow: column nowrap;
 }
 
-/* setting up scroll-snap */
+div > div {
+  flex: none;
+  outline: 1px solid #333;
+}
+
+.x > div {
+  width: 90%;
+  height: 100%;
+}
+
+.y > div {
+  width: 100%;
+  height: 80%;
+}
+
+/* coloration */
+div > div:nth-child(even) {
+  background-color: #87EA87;
+}
+
+div > div:nth-child(odd) {
+  background-color: #87CCEA;
+}
+```
+
+```css
+/* setting up mandatory scroll-snap on parent */
 .x.mandatory-scroll-snapping {
   scroll-snap-type: x mandatory;
 }
@@ -128,59 +161,23 @@ The example below demonstrates `scroll-snap-stop: always` in the blocks marked M
   scroll-snap-type: y mandatory;
 }
 
-.x.proximity-scroll-snapping {
-  scroll-snap-type: x proximity;
-}
-
-.y.proximity-scroll-snapping {
-  scroll-snap-type: y proximity;
-}
-
-/* defining scroll-snap alignment */
-.container > div {
-  text-align: center;
+/* defining scroll-snap alignment on children */
+div > div {
   scroll-snap-align: center;
-  flex: none;
 }
 
-/* defining scroll-snap stops */
-.mandatory-scroll-snapping > div {
+/* defining scroll-snap stop on children */
+.always-stop > div {
   scroll-snap-stop: always;
 }
-.proximity-scroll-snapping > div {
+.normal-stop > div {
   scroll-snap-stop: normal;
 }
-
-.x.container > div {
-  line-height: 128px;
-  font-size: 64px;
-  width: 100%;
-  height: 128px;
-}
-
-.y.container > div {
-  line-height: 256px;
-  font-size: 128px;
-  width: 100%;
-  height: 256px;
-}
-
-/* appearance fixes */
-.y.container > div:first-child {
-  line-height: 1.3;
-  font-size: 64px;
-}
-
-/* coloration */
-.container > div:nth-child(even) {
-  background-color: #87EA87;
-}
-
-.container > div:nth-child(odd) {
-  background-color: #87CCEA;
 ```
 
 #### Result
+
+Scroll from left to right and from top to bottom in the X and Y boxes below, respectively. In the X and Y boxes where the `scroll-snap-stop` property is set to `always`, the scrolling is forced to stop at the snap point even when you scroll fast. However, with the `scroll-snap-stop` property set to `normal`, the snap points are skipped when you scroll fast.
 
 {{EmbedLiveSample("Snapping_in_different_axes", "100%", "800")}}
 
