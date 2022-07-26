@@ -75,7 +75,7 @@ If the SVG can be labeled by visible text, reference that text with an [`aria-la
 
    <rect width="36" height="60" x="13" y="18" ry="2" style="transform: skewy(24deg)"/>
    <rect width="39" height="60" x="11" y="20" ry="2" style="transform: skewy(18deg)"/>
-   <rect width="42" height="90" x="8" y="22" ry="2" style="transform: skewy(12deg)"/>
+   <rect width="42" height="90" x="8"  y="22" ry="2" style="transform: skewy(12deg)"/>
    <rect width="36" height="60" x="50" y="18" ry="2" style="transform: skewy(-24deg)"/>
    <rect width="39" height="60" x="50" y="20" ry="2"  style="transform: skewy(-18deg)" />
    <rect width="42" height="90" x="50" y="22" ry="2" style="transform: skewy(-12deg)" />
