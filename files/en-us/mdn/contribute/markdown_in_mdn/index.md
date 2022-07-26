@@ -436,9 +436,7 @@ This leads us to the following guideline: _if the Markdown representation of the
 
 #### Properties tables
 
-Properties tables are a specific type of table used for displaying structured property-value content across a set of pages of a particular type. For example, all event pages have a properties table listing common information about the event: whether it bubbles, whether it is cancellable, and so on.
-
-These tables have two columns: the first column is the header column and lists the properties, and the second column lists their values for this particular item. For example, here's the properties table for the {{domxref("PannerNode")}} interface:
+Properties tables are a specific type of table used for displaying structured property-value content across a set of pages of a particular type. These tables have two columns: the first column is the header column and lists the properties, and the second column lists their values for this particular item. For example, here's the properties table for the {{domxref("PannerNode")}} interface:
 
 <table class="properties">
   <tbody>
