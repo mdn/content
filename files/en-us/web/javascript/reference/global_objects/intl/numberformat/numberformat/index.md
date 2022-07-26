@@ -103,7 +103,7 @@ new Intl.NumberFormat(locales, options)
 
     - `style`
 
-      - : The formatting style to use, the default is "`decimal`".
+      - : The formatting style to use, the default is `"decimal"`.
 
         - `"decimal"` for plain number formatting.
         - `"currency"` for currency formatting.
@@ -114,7 +114,7 @@ new Intl.NumberFormat(locales, options)
       - : The unit to use in `unit` formatting, Possible values are core unit identifiers, defined in [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements).
         A [subset](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier)
         of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml) was selected for use in ECMAScript.
-        Pairs of simple units can be concatenated with "`-per-`" to make a compound unit.
+        Pairs of simple units can be concatenated with "-per-" to make a compound unit.
         There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
 
     - `unitDisplay`
@@ -141,9 +141,9 @@ new Intl.NumberFormat(locales, options)
         - `"ceil"`: round to a "more positive" value (toward +∞).
         - `"floor"`round to a "less positive" value (toward -∞).
         - `"expand"`: round away from 0. Positive numbers round up, negative numbers round down (more negative).
-        - `"trunc"`:  round toward 0. Positive numbers round down, negative numbers round up (less negative).
+        - `"trunc"`: round toward 0. Positive numbers round down, negative numbers round up (less negative).
         - `"halfCeil"`: ties toward +∞.
-        - `"halfFloor"`: ties toward -∞..
+        - `"halfFloor"`: ties toward -∞.
         - `"halfExpand"`: ties away from 0.
         - `"halfTrunc"`: ties toward 0.
         - `"halfEven"`: ties toward the value with even cardinality.
@@ -189,10 +189,10 @@ new Intl.NumberFormat(locales, options)
 
     - `trailingZeroDisplay` {{experimental_inline}}
       - : A string expressing the strategy for displaying trailing zeros on whole numbers.
-        The default is "`auto`".
+        The default is `"auto"`.
 
         - `"auto"`: keep trailing zeros according to `minimumFractionDigits` and `minimumSignificantDigits`
-        - `"stripIfInteger"`: Remove the fraction digits _if_ they are all zero.
+        - `"stripIfInteger"`: remove the fraction digits _if_ they are all zero.
           This is the same as `auto` if any of the fraction digits are non-zero.
 
     The following properties fall into two groups:
@@ -355,8 +355,8 @@ The `NumberFormat() constructor` can be used to specify the minimum or maximum n
 #### Using FractionDigits and IntegerDigits
 
 The integer and fraction digit properties indicate the number of digits to display before and after the decimal point, respectively.
-If the value to display has fewer integer digits than specified it will be zero prefixed to the expected number.
-If it has fewer fractional digits it will be zero suffixed.
+If the value to display has fewer integer digits than specified, it will be left-padded with zeros to the expected number.
+If it has fewer fractional digits, it will be right-padded with zeros.
 Both cases are shown below:
 
 ```js
@@ -367,7 +367,7 @@ console.log(new Intl.NumberFormat("en",
 // > "004.3300"
 ```
 
-If a value has more fractional digits than set for the maximum number of fraction digits it will be rounded.
+If a value has more fractional digits than the specified maximum number, it will be rounded.
 The _way_ that it is rounded depends on the [`roundingMode`](#roundingmode) property (more details are provided in the next section).
 Below the value is rounded from five fractional digits (`4.33145`) to two (`4.33`):
 
@@ -393,7 +393,7 @@ This is because a default value of `maximumFractionDigits` is set when we specif
 
 This is demonstrated below, using [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) to inspect the formatter.
 Note that when either `maximumFractionDigits` or `minimumFractionDigits` is defined, so is its counterpart.
-Also note the default values of `maximumFractionDigits: 3` and `minimumFractionDigits: 0`.
+Also note the default values of `maximumFractionDigits` and `minimumFractionDigits` are `3` and `0`, respectively.
 
 ```js
 console.log(new Intl.NumberFormat("en", {maximumFractionDigits: 2}).resolvedOptions());
@@ -456,7 +456,7 @@ console.log(new Intl.NumberFormat("en", {maximumFractionDigits: 3, maximumSignif
 // > "4.3"
 ```
 
-Using [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) to inspect the formatter we can see that the returned object does not include `maximumFractionDigits` when `maximumSignificantDigits` or `minimumSignificantDigits` are specified.
+Using [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) to inspect the formatter, we can see that the returned object does not include `maximumFractionDigits` when `maximumSignificantDigits` or `minimumSignificantDigits` are specified.
 
 ```js
 console.log(new Intl.NumberFormat("en", {maximumFractionDigits: 3, maximumSignificantDigits: 2}).resolvedOptions());
@@ -465,7 +465,7 @@ console.log(new Intl.NumberFormat("en", {maximumFractionDigits: 3, minimumSignif
 // > Object { locale: "en", numberingSystem: "latn", style: "decimal", minimumIntegerDigits: 1, minimumSignificantDigits: 2, maximumSignificantDigits: 21, useGrouping: "auto", notation: "standard", signDisplay: "auto", roundingMode: "halfExpand", roundingIncrement: 1, trailingZeroDisplay: "auto", roundingPriority: "auto" }
 ```
 
-In addition to `auto` you can resolve conflicts by specifying [`roundingPriority`](#roundingpriority) as `morePrecision` or `lessPrecision`.
+In addition to `auto`, you can resolve conflicts by specifying [`roundingPriority`](#roundingpriority) as `morePrecision` or `lessPrecision`.
 The formatter calculates the precision using the values of `maximumSignificantDigits` and `maximumFractionDigits`.
 
 The code below shows the format being selected for the three different rounding priorities:
@@ -515,7 +515,7 @@ The reason for this is that only the "maximum precision" values are used for the
 
 ### Rounding and truncating
 
-If a value has more fractional digits than are allowed by the constructor options, then the formatted value will be _rounded_ to the specified number of fractional digits.
+If a value has more fractional digits than allowed by the constructor options, the formatted value will be _rounded_ to the specified number of fractional digits.
 The _way_ in which the value is rounded depends on the [`roundingMode`](#roundingmode) property.
 
 #### Default rounding (halfExpand)
@@ -554,9 +554,9 @@ console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(-2
 
 #### expand and trunc rounding
 
-`expand` mode round away from zero for any non-zero value of the fractional digits to be discarded.
+`expand` mode always rounds excess digits away from zero.
 This means that the _magnitude_ of the value is always increased by rounding, making a positive number more positive, and a negative number more negative.
-`trunc` rounding modes is the opposite; it rounds towards zero, reducing the magnitude of the displayed value. round away from zero and towards zero, respectively, 
+`trunc` rounding mode is the opposite; it always rounds the excess digits towards zero, reducing the magnitude of the displayed value.
 
 The code below shows the different rounding behavior for each case:
 
@@ -584,10 +584,10 @@ console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMo
 
 #### ceil and floor rounding
 
-`ceil` rounding always rounds the value "more positive" for any non-zero value of the fractional digits to be discarded.
-`floor` rounding is the opposite; it rounds "more negative"
-For positive numbers `ceil` and `expand` have the same result, as do `floor` and `trunc`.
-For negative numbers rounding is different.
+`ceil` always rounds the excess digits in the "more positive" direction.
+`floor` rounding is the opposite; it rounds in the "more negative" direction.
+For positive numbers, `ceil` and `expand` have the same result, as do `floor` and `trunc`.
+For negative numbers, `ceil` is the same as `trunc`, while `expand` is the same as `floor`.
 
 The code below shows the different rounding behavior for each case:
 
@@ -616,8 +616,8 @@ console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMo
 #### halfExpand halfTrunc rounding
 
 `halfExpand` and `halfTrunc` are similar.
-In both cases values above the half-increment are rounded by expanded away from zero, and values below the half-increment are truncated towards zero.
-The only difference is that for values _on_ the half way increment they follow the rounding implied by their names: `halfTrunc` rounds towards zero, while `halfExpand` rounds away from zero.
+In both cases, values above the half-increment are rounded by expanding away from zero, and values below the half-increment are truncated towards zero.
+The only difference is that for values _on_ the half-way increment, they follow the rounding implied by their names: `halfTrunc` rounds towards zero, while `halfExpand` rounds away from zero.
 
 This is demonstrated by the following code:
 
@@ -670,8 +670,8 @@ console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMo
 #### halfCeil and halfFloor rounding
 
 `halfCeil` and `halfFloor` are similar to `halfExpand` and `halfTrunc`, but follow `ceil` and `floor` rounding.
-In both cases values above the half-increment are rounded to be more positive, and values below the half-increment are rounded more negative.
-Values _on_ the half way increment follow the rounding implied by their names: `halfCeil` rounds more positive, while `halfFloor` rounds more negative.
+In both cases, values above the half-increment are rounded to be more positive, and values below the half-increment are rounded to be more negative.
+Values _on_ the half-way increment follow the rounding implied by their names: `halfCeil` rounds in the more positive direction, while `halfFloor` rounds to be more negative.
 
 ```js
 // Value with fractional digits below the half increment round towards zero
@@ -728,7 +728,7 @@ console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMo
 Sometimes we want to round the remaining fractional digits to some other increment than the next integer.
 For example, currencies for which the smallest coin is 5 cents might want to round the value to increments of "5", reflecting amounts that can actually be paid in cash.
 
-This kind of rounding can be achieved with the [roundingIncrement](#roundingincrement) property.
+This kind of rounding can be achieved with the [`roundingIncrement`](#roundingincrement) property.
 
 For example, if `maximumFractionDigits` is 2 and `roundingIncrement` is 5, then the number is rounded to the nearest 0.05:
 
@@ -781,7 +781,7 @@ console.log(nf.format(11.225));  // > output: "$11.25"
 console.log(nf.format(11.23));  // > output: "$11.25"
 ```
 
-If you need to change the number of digits then remember that `minimumFractionDigits` and `maximumFractionDigits` must both be set to the same value or a `RangeError` is thrown.
+If you need to change the number of digits, remember that `minimumFractionDigits` and `maximumFractionDigits` must both be set to the same value, or a `RangeError` is thrown.
 
 `roundingIncrement` cannot be mixed with significant-digits rounding or any setting of `roundingPriority` other than `auto`.
 
