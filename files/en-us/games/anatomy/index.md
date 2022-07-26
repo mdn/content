@@ -33,7 +33,7 @@ Some code needs to be run frame-by-frame so why attach that function to anything
 
 ```js
 window.main = function () {
-  window.requestAnimationFrame( main );
+  window.requestAnimationFrame(main);
 
   // Whatever your main loop needs to do
 };
@@ -65,7 +65,7 @@ There are two obvious issues with our previous main loop: `main()` pollutes the 
 
 ;(function () {
   function main() {
-    window.requestAnimationFrame( main );
+    window.requestAnimationFrame(main);
 
     // Your main loop contents
   }
@@ -92,7 +92,7 @@ For the second issue, stopping the main loop, you will need to cancel the call t
 
 ;(function () {
   function main() {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
     // Your main loop contents
   }
@@ -104,7 +104,7 @@ For the second issue, stopping the main loop, you will need to cancel the call t
 We now have a variable declared in our `MyGame` namespace, which we call `stopMain`, that contains the ID returned from our main loop's most recent call to `requestAnimationFrame()`. At any point, we can stop the main loop by telling the browser to cancel the request that corresponds to our token.
 
 ```js
-window.cancelAnimationFrame( MyGame.stopMain );
+window.cancelAnimationFrame(MyGame.stopMain);
 ```
 
 The key to programming a main loop, in JavaScript, is to attach it to whatever event should be driving your action and pay attention to how the different systems involved interplay. You may have multiple components driven by multiple different types of events. This feels like unnecessary complexity but it might just be good optimization (not necessarily, of course). The problem is that you are not programming a typical main loop. In Javascript, you are using the browser's main loop and you are trying to do so effectively.
@@ -145,11 +145,11 @@ Back to the topic of the main loop. You will often want to know when your main f
 */
 
 ;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
     // Your main loop contents
-    // tFrame, from "function main ( tFrame )", is now a DOMHighResTimeStamp provided by rAF.
+    // tFrame, from "function main(tFrame)", is now a DOMHighResTimeStamp provided by rAF.
   }
 
   main(); // Start the cycle
@@ -179,10 +179,10 @@ If your game can hit the maximum refresh rate of any hardware you support then y
 */
 
 ;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
-    update( tFrame ); // Call your update method. In our case, we give it rAF's timestamp.
+    update(tFrame); // Call your update method. In our case, we give it rAF's timestamp.
     render();
   }
 
@@ -259,8 +259,8 @@ A separate update and draw method could look like the following example. For the
 */
 
 ;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
     const nextTick = MyGame.lastTick + MyGame.tickLength;
     let numTicks = 0;
 
@@ -270,18 +270,18 @@ A separate update and draw method could look like the following example. For the
     // If it is large, then either your game was asleep, or the machine cannot keep up.
     if (tFrame > nextTick) {
       const timeSinceTick = tFrame - MyGame.lastTick;
-      numTicks = Math.floor( timeSinceTick / MyGame.tickLength );
+      numTicks = Math.floor(timeSinceTick / MyGame.tickLength);
     }
 
-    queueUpdates( numTicks );
-    render( tFrame );
+    queueUpdates(numTicks);
+    render(tFrame);
     MyGame.lastRender = tFrame;
   }
 
-  function queueUpdates( numTicks ) {
+  function queueUpdates(numTicks) {
     for(let i=0; i < numTicks; i++) {
       MyGame.lastTick = MyGame.lastTick + MyGame.tickLength; // Now lastTick is this tick.
-      update( MyGame.lastTick );
+      update(MyGame.lastTick);
     }
   }
 

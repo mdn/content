@@ -23,13 +23,13 @@ A {{domxref("DOMImplementation")}} object.
 ## Examples
 
 ```js
-var modName = "HTML";
-var modVer = "2.0";
-var conformTest = document.implementation.hasFeature( modName, modVer );
+const modName = "HTML";
+const modVer = "2.0";
+const conformTest = document.implementation.hasFeature(modName, modVer);
 
-alert( `DOM ${modName} ${modVer} supported?: ${conformTest}` );
+console.log(`DOM ${modName} ${modVer} supported?: ${conformTest}`);
 
-// alerts with: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
+// Log: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
 ```
 
 A list of module names (e.g., Core, HTML, XML, etc.) is available in the DOM Level 2 [Conformance Section](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2).

@@ -43,7 +43,7 @@ A string representing the given number using fixed-point notation.
     {{jsxref("RangeError")}}. Implementations are allowed to support larger and smaller
     values as chosen.
 - {{jsxref("TypeError")}}
-  - : If this method is invoked on an object that is not a {{jsxref( "Number")}}.
+  - : If this method is invoked on an object that is not a {{jsxref("Number")}}.
 
 ## Description
 
