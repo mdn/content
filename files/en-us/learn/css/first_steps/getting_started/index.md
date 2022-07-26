@@ -151,7 +151,7 @@ The [`list-style-type`](/en-US/docs/Web/CSS/list-style-type) property also suppo
 
 So far, we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. When this isn't what you want, you will need to find a way to select a subset of the elements without changing the others.
 
-The most common way to do this is to add a class to your HTML element and target that class.
+The most common way to do this is to add a [`class` attribute](/en-US/docs/Web/HTML/Global_attributes/class) to your HTML element and target that class.
 
 1. In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Global_attributes/class) to the second list item:
 
