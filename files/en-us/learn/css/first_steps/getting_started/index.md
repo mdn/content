@@ -103,7 +103,7 @@ For now, we will use the most common way — linking CSS from the head of your d
     }
     ```
 
-4. Save your HTML and CSS files and reload the page in a web browser. 
+4. Save your HTML and CSS files and reload the HTML page in a web browser. 
 
 The level one heading at the top of the document is now red. Congratulations — you have successfully applied CSS to an HTML document.
 
