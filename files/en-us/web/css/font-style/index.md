@@ -112,6 +112,6 @@ Large sections of text set with a `font-style` value of `italic` may be difficul
 
 ## See also
 
-- {{cssxref("font-style")}}
+- {{cssxref("font-family")}}
 - {{cssxref("font-weight")}}
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
