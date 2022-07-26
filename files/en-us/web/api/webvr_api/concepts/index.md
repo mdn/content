@@ -82,7 +82,7 @@ The output information falls into four categories:
 
 ## Field of view
 
-The field of view (FOV) is the area that each of the user's eyes can reasonably be expected to see. It roughly takes the form of a pyramid shape, laid down on one side, with the apex inside the user's head, and the rest of the pyramid emanating from the user's eye. Each eye has it's own FOV, one slightly overlapping the other.
+The field of view (FOV) is the area that each of the user's eyes can reasonably be expected to see. It roughly takes the form of a pyramid shape, laid down on one side, with the apex inside the user's head, and the rest of the pyramid emanating from the user's eye. Each eye has its own FOV, one slightly overlapping the other.
 
 ![FOV related properties](fovrelatedproperties.png)
 
