@@ -63,8 +63,8 @@ Every module can have two different types of export, _named export_ and _default
 Named exports:
 
 ```js
-// export features declared earlier
-export { myFunction, myVariable };
+// export features declared elsewhere
+export { myFunction2, myVariable2 };
 
 // export individual features (can export var, let,
 // const, function, class)
@@ -74,10 +74,19 @@ export function myFunction() { /* ... */ };
 
 After the `export` keyword, you can use `let`, `const`, and `var` declarations, as well as function or class declarations. You can also use the `export { name1, name2 }` syntax to export a list of names declared elsewhere. Note that `export {}` does not export an empty object — it's a no-op declaration that exports nothing (an empty name list).
 
+Export declarations are not subject to [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) rules. You can declare that the module exports `X` before the name `X` itself is declared.
+
+```js
+export { x };
+const x = 1;
+// This works, because `export` is only a declaration, but doesn't
+// utilize the value of `x`.
+```
+
 Default exports:
 
 ```js
-// export feature declared earlier as default
+// export feature declared elsewhere as default
 export { myFunction as default };
 // This is equivalent to:
 export default myFunction;
@@ -89,7 +98,13 @@ export default class { /* … */ }
 // each export overwrites the previous one
 ```
 
-The `export default` syntax allows any expression. As a special case, functions and classes are exported as _declarations_ that can be anonymous, which means functions will be hoisted.
+The `export default` syntax allows any expression.
+
+```js
+export default 1 + 1;
+```
+
+As a special case, functions and classes are exported as _declarations_, not expressions, and these declarations can be anonymous. This means functions will be hoisted.
 
 ```js
 // Works because `foo` is a function declaration,
@@ -97,6 +112,12 @@ The `export default` syntax allows any expression. As a special case, functions 
 foo();
 
 export default function foo() {
+  console.log("Hi");
+}
+
+// It's still technically a declaration, but it's allowed
+// to be anonymous
+export default function () {
   console.log("Hi");
 }
 ```
