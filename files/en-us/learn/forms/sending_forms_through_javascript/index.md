@@ -311,7 +311,7 @@ window.addEventListener('load', () => {
     // So, if the user has selected a file
     if (file.dom.files[0]) {
       // Start a new part in our body's request
-      data += "--" + boundary + "\r\n";
+      data += `--${boundary}\r\n`;
 
       // Describe it as form data
       data += 'content-disposition: form-data; '
