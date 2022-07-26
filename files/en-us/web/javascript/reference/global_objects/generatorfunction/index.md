@@ -15,7 +15,8 @@ browser-compat: javascript.builtins.GeneratorFunction
 In JavaScript, every generator function is actually a `GeneratorFunction` object. There is no global object with the name `GeneratorFunction`, but you can create a `GeneratorFunction()` constructor using the following code:
 
 ```js
-const GeneratorFunction = Object.getPrototypeOf(function*() {}).constructor;
+const GeneratorFunction = (function* () {}).constructor;
+
 ```
 
 ## Syntax
@@ -68,7 +69,7 @@ the `new` operator) has the same effect as invoking it as a constructor.
 ### Creating and using a GeneratorFunction() constructor
 
 ```js
-const GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor;
+const GeneratorFunction = (function* () {}).constructor;
 const g = new GeneratorFunction('a', 'yield a * 2');
 const iterator = g(10);
 console.log(iterator.next().value); // 20

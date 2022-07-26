@@ -24,7 +24,7 @@ A number.
 ```js
 // if there is not adequate bit depth
 // choose a simpler color
-if ( window.screen.pixelDepth > 8 ) {
+if (window.screen.pixelDepth > 8) {
   document.style.color = "#FAEBD7";
 } else {
   document.style.color = "#FFFFFF";

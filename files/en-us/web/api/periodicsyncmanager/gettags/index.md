@@ -45,8 +45,8 @@ The following example uses the `getTags()` method to check if a periodic
 sync task with a given tag is registered.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
-  registration.periodicSync.getTags().then(tags => {
+navigator.serviceWorker.ready.then((registration) => {
+  registration.periodicSync.getTags().then((tags) => {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
   });

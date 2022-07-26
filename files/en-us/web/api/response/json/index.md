@@ -47,10 +47,10 @@ const myList = document.querySelector('ul');
 const myRequest = new Request('products.json');
 
 fetch(myRequest)
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     for (const product of data.products) {
-      let listItem = document.createElement('li');
+      const listItem = document.createElement('li');
       listItem.appendChild(
         document.createElement('strong')
       ).textContent = product.Name;

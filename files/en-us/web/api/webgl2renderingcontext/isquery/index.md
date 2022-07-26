@@ -39,7 +39,7 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 ```js
 var query = gl.createQuery();
 
-// ...
+// …
 
 gl.isQuery(query);
 ```

@@ -21,15 +21,15 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 ```html
 <math>
 
-  <mn> 0 </mn>
+  <mn>0</mn>
 
-  <mn> 1.337 </mn>
+  <mn>1.337</mn>
 
-  <mn> twelve </mn>
+  <mn>twelve</mn>
 
-  <mn> XVI </mn>
+  <mn>XVI</mn>
 
-  <mn> 2e10 </mn>
+  <mn>2e10</mn>
 
 </math>
 ```

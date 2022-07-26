@@ -9,6 +9,7 @@ tags:
   - Reference
   - array.concat
   - concat
+  - Polyfill
 browser-compat: javascript.builtins.Array.concat
 ---
 {{JSRef}}
@@ -24,7 +25,7 @@ This method does not change the existing arrays, but instead returns a new array
 concat()
 concat(value0)
 concat(value0, value1)
-concat(value0, value1, ... , valueN)
+concat(value0, value1, /* … ,*/ valueN)
 ```
 
 ### Parameters
@@ -148,6 +149,7 @@ console.log([0].concat(obj1, obj2));
 
 ## See also
 
+- [Polyfill of `Array.prototype.concat` in `core-js` with fixes and implementation of modern behavior like `Symbol.isConcatSpreadable` support](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} — add/remove
   elements from the end of the array
 - {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} —

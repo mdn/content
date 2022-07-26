@@ -345,7 +345,7 @@ Make a textarea autogrow while typing:
 ```js
 function autoGrow (oField) {
   if (oField.scrollHeight > oField.clientHeight) {
-    oField.style.height = oField.scrollHeight + "px";
+    oField.style.height = `${oField.scrollHeight}px`;
   }
 }
 ```
@@ -414,10 +414,10 @@ const em = document.querySelector("#format-em");
 const link = document.querySelector("#format-link");
 const code = document.querySelector("#format-code");
 
-strong.addEventListener("click", e => insert("<strong>","</strong>"));
-em.addEventListener("click", e => insert("<em>","</em>"));
-link.addEventListener("click", e => insertURL());
-code.addEventListener("click", e => insert("\n<code>\n","\n</code>\n"));
+strong.addEventListener("click", (e) => insert("<strong>","</strong>"));
+em.addEventListener("click", (e) => insert("<em>","</em>"));
+link.addEventListener("click", (e) => insertURL());
+code.addEventListener("click", (e) => insert("\n<code>\n","\n</code>\n"));
 ```
 
 #### CSS
@@ -468,7 +468,7 @@ function checkRows(oField, oKeyEvent) {
     sVal = oField.value, nLen = sVal.length,
 
     nBackward = nSelS >= nCols ? nSelS - nCols : 0,
-    nDeltaForw = sVal.substring(nBackward, nSelS).search(new RegExp("\\n(?!.{0," + String(nCols - 2) + "}\\n)")) + 1,
+    nDeltaForw = sVal.substring(nBackward, nSelS).search(new RegExp(`\\n(?!.{0,${String(nCols - 2)}}\\n)`)) + 1,
     nRowStart = nBackward + nDeltaForw,
     aReturns = (sVal.substring(0, nSelS) + sVal.substring(nSelE, sVal.length)).match(/\n/g),
     nRowEnd = nSelE + nRowStart + nCols - nSelS,

@@ -43,8 +43,6 @@ xmlDoc.addEventListener("load", documentLoaded, false);
 xmlDoc.load('querydata.xml');
 ```
 
-{{Source("content/xml/tests/load/", "See also the load sample")}} in the XML tests directory. (To test this functionality, create the files on your local disk or on a webserver rather than loading the load.html file from the LXR-generated page, which will serve the text.xml file as HTML.)
-
 ## Specifications
 
 - [Old W3C Working Draft of the DOM Level 3 Load & Save module](https://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS)

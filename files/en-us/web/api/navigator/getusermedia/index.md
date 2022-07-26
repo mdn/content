@@ -99,7 +99,7 @@ if (navigator.getUserMedia) {
          };
       },
       function(err) {
-         console.log("The following error occurred: " + err.name);
+         console.error(`The following error occurred: ${err.name}`);
       }
    );
 } else {

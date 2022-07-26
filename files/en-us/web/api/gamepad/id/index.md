@@ -38,7 +38,7 @@ A string.
 ```js
 window.addEventListener("gamepadconnected", function() {
   const gp = navigator.getGamepads()[0];
-  gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
+  gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}.`;
 });
 ```
 

@@ -8,6 +8,7 @@ tags:
   - Reference
   - Regular Expressions
   - String
+  - Polyfill
 browser-compat: javascript.builtins.String.match
 ---
 {{JSRef}}
@@ -187,6 +188,7 @@ str3.match(null);       // returns ["null"]
 
 ## See also
 
+- [Polyfill of `String.prototype.match` in `core-js` with fixes and implementation of modern behavior like `Symbol.match` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.matchAll()")}}
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}

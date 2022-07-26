@@ -80,7 +80,7 @@ This example could be simplified somewhat; you may more often see the code look
 something like this, taking advantage of more advanced ECMAScript 2016 features:
 
 ```js
-let handleNewIceCandidate = candidateSDP =>
+let handleNewIceCandidate = (candidateSDP) =>
   myPeerConnection.addIceCandidate(new RTCIceCandidate(candidateSDP));
 ```
 

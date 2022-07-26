@@ -63,7 +63,7 @@ possible values and their meanings:
 var a = 1;
 var b = 2;
 var result = window.indexedDB.cmp(a, b);
-console.log( "Comparison results: " + result );
+console.log(`Comparison results: ${result}`);
 ```
 
 ## Specifications

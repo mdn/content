@@ -61,7 +61,7 @@ It's more useful to offset the angle by -90°, which means the {{domxref("Panner
 ```js
 // this utility converts amount of rotation around the Y axis
 // (i.e. rotation in the 'horizontal plane') to an orientation vector
-const yRotationToVector = degrees => {
+const yRotationToVector = (degrees) => {
   // convert degrees to radians and offset the angle so 0 points towards the listener
   const radians = (degrees - 90) * (Math.PI / 180);
   // using cosine and sine here ensures the output values are always normalized

@@ -17,6 +17,8 @@ The **`Intl.PluralRules.supportedLocalesOf()`** method returns
 an array containing those of the provided locales that are supported in plural
 formatting without having to fall back to the runtime's default locale.
 
+{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-supportedlocalesof.html", "shorter")}}
+
 ## Syntax
 
 ```js

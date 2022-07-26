@@ -126,11 +126,11 @@ The next step is to set up each connection with ICE candidate listeners; these w
 > **Note:** In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.
 
 ```js
-    localConnection.onicecandidate = e => !e.candidate
+    localConnection.onicecandidate = (e) => !e.candidate
         || remoteConnection.addIceCandidate(e.candidate)
         .catch(handleAddCandidateError);
 
-    remoteConnection.onicecandidate = e => !e.candidate
+    remoteConnection.onicecandidate = (e) => !e.candidate
         || localConnection.addIceCandidate(e.candidate)
         .catch(handleAddCandidateError);
 ```
@@ -143,10 +143,10 @@ The last thing we need to do in order to begin connecting our peers is to create
 
 ```js
     localConnection.createOffer()
-    .then(offer => localConnection.setLocalDescription(offer))
+    .then((offer) => localConnection.setLocalDescription(offer))
     .then(() => remoteConnection.setRemoteDescription(localConnection.localDescription))
     .then(() => remoteConnection.createAnswer())
-    .then(answer => remoteConnection.setLocalDescription(answer))
+    .then((answer) => remoteConnection.setLocalDescription(answer))
     .then(() => localConnection.setRemoteDescription(remoteConnection.localDescription))
     .catch(handleCreateDescriptionError);
 ```
@@ -169,7 +169,7 @@ As each side of the peer-to-peer connection is successfully linked up, the corre
 
 ```js
   function handleCreateDescriptionError(error) {
-    console.log("Unable to create an offer: " + error.toString());
+    console.log(`Unable to create an offer: ${error.toString()}`);
   }
 
   function handleLocalAddCandidateSuccess() {
@@ -238,8 +238,7 @@ Our example's remote peer, on the other hand, ignores the status change events, 
 ```js
   function handleReceiveChannelStatusChange(event) {
     if (receiveChannel) {
-      console.log("Receive channel's status has changed to " +
-                  receiveChannel.readyState);
+      console.log(`Receive channel's status has changed to ${receiveChannel.readyState}`);
     }
   }
 ```

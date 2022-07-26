@@ -15,6 +15,8 @@ The **`Promise.resolve()`** method "resolves" a given value to a {{jsxref("Promi
 
 This function flattens nested layers of promise-like objects (e.g. a promise that fulfills to a promise that fulfills to something) into a single layer — a promise that fulfills to a non-thenable value.
 
+{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}
+
 ## Syntax
 
 ```js

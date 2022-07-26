@@ -243,7 +243,7 @@ def renew_book_librarian(request, pk):
             book_instance.save()
 
             # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            return HttpResponseRedirect(reverse('all-borrowed'))
 
     # If this is a GET (or any other method) create the default form.
     else:
@@ -306,7 +306,7 @@ if request.method == 'POST':
         book_instance.save()
 
         # redirect to a new URL:
-        return HttpResponseRedirect(reverse('all-borrowed') )
+        return HttpResponseRedirect(reverse('all-borrowed'))
 
 context = {
     'form': form,
@@ -357,7 +357,7 @@ def renew_book_librarian(request, pk):
             book_instance.save()
 
             # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            return HttpResponseRedirect(reverse('all-borrowed'))
 
     # If this is a GET (or any other method) create the default form.
     else:
@@ -435,7 +435,7 @@ If you were to enter an invalid date, you'd additionally get a list of the error
 
 #### Other ways of using form template variable
 
-Using `\{{ form.as_table }}` as shown above, each field is rendered as a table row. You can also render each field as a list item (using `\{{ form.as_ul }}` ) or as a paragraph (using `\{{ form.as_p }}`).
+Using `\{{ form.as_table }}` as shown above, each field is rendered as a table row. You can also render each field as a list item (using `\{{ form.as_ul }}`) or as a paragraph (using `\{{ form.as_p }}`).
 
 It is also possible to have complete control over the rendering of each part of the form, by indexing its properties using dot notation. So, for example, we can access a number of separate items for our `renewal_date` field:
 

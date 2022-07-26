@@ -21,9 +21,9 @@ A `change` event is fired at a {{domxref("CookieStore")}} object when a change i
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-cookieStore.addEventListener('change', event => { })
+cookieStore.addEventListener('change', (event) => { })
 
-cookieStore.onchange = event => { }
+cookieStore.onchange = (event) => { }
 ```
 
 ## Examples

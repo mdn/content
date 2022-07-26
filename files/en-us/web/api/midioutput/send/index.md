@@ -46,11 +46,11 @@ None ({{jsxref("undefined")}}).
 In the following example a middle C note is sent immediately, followed by a note off message one second later.
 
 ```js
-function sendMiddleC( midiAccess, portID ) {
+function sendMiddleC(midiAccess, portID) {
   const noteOnMessage = [0x90, 60, 0x7f];    // note on middle C, full velocity
   const output = midiAccess.outputs.get(portID);
-  output.send( noteOnMessage );  //omitting the timestamp means send immediately.
-  output.send( [0x80, 60, 0x40], window.performance.now() + 1000.0 ); // timestamp = now + 1000ms.
+  output.send(noteOnMessage);  //omitting the timestamp means send immediately.
+  output.send([0x80, 60, 0x40], window.performance.now() + 1000.0); // timestamp = now + 1000ms.
 }
 ```
 

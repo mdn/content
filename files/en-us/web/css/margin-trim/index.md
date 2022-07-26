@@ -91,7 +91,7 @@ It is a pain having to write another rule to achieve this, and it is also not ve
 ```css
  article {
   margin-trim: in-flow;
-  ...
+  /* … */
 }
 ```
 

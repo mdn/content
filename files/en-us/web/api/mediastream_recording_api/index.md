@@ -79,7 +79,7 @@ function download() {
 }
 
 // demo: to download after 9sec
-setTimeout(event => {
+setTimeout((event) => {
   console.log("stopping");
   mediaRecorder.stop();
 }, 9000);

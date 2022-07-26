@@ -79,7 +79,7 @@ function onMessage(e) {
 }
 ```
 
-We start off by creating a new message channel by using the {{domxref( "MessageChannel.MessageChannel","MessageChannel()")}} constructor.
+We start off by creating a new message channel by using the {{domxref("MessageChannel.MessageChannel","MessageChannel()")}} constructor.
 
 When the IFrame has loaded, we register an `onclick` handler for our button and an `onmessage` handler for {{domxref("MessageChannel.port1")}}. Finally we transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method.
 
@@ -113,7 +113,7 @@ function onMessage(e) {
   const listItem = document.createElement('li');
   listItem.textContent = e.data;
   list.appendChild(listItem);
-  port2.postMessage('Message received by IFrame: "' + e.data + '"');
+  port2.postMessage(`Message received by IFrame: "${e.data}"`);
 }
 ```
 

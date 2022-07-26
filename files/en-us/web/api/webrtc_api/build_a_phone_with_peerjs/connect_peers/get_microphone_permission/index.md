@@ -11,12 +11,12 @@ After you've created the peer, you'll want to get the browser's permission to ac
 
     ```js
     function getLocalStream() {
-        navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( stream => {
+        navigator.mediaDevices.getUserMedia({video: false, audio: true}).then((stream) => {
             window.localStream = stream; // A
             window.localAudio.srcObject = stream; // B
             window.localAudio.autoplay = true; // C
-        }).catch( err => {
-            console.log("u got an error:" + err)
+        }).catch((err) => {
+            console.error(`you got an error: ${err}`)
         });
     }
     ```
@@ -53,12 +53,12 @@ This what it should all look like together:
  */
 
 function getLocalStream() {
-    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( stream => {
+    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then((stream) => {
         window.localStream = stream;
         window.localAudio.srcObject = stream;
         window.localAudio.autoplay = true;
-    }).catch( err => {
-        console.log("u got an error:" + err)
+    }).catch((err) => {
+        console.error(`you got an error: ${err}`)
     });
 }
 

@@ -68,7 +68,7 @@ const netutilCallback = function() {
 
 const mfasCallback = function(iconName) {
     return function(inStream) {
-       const file = FileUtils.getFile('Desk', [iconName + '.ico']);
+       const file = FileUtils.getFile('Desk', [`${iconName}.ico`]);
        const outStream = FileUtils.openFileOutputStream(file);
        Cu.import('resource://gre/modules/NetUtil.jsm');
        NetUtil.asyncCopy(inStream, outStream, netutilCallback());

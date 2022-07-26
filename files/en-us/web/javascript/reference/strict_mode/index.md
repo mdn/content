@@ -81,7 +81,7 @@ First, strict mode makes it impossible to accidentally create global variables. 
 ```js
 'use strict';
 let mistypeVariable;
-                      
+
 mistypeVarible = 17;  // Assuming no global variable mistypeVarible exists
                       // this line throws a ReferenceError due to the
                       // misspelling of "mistypeVariable" (lack of an "a")

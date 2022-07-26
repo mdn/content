@@ -750,7 +750,9 @@
       "overview": ["Intersection Observer API"],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": [],
+      "properties": [
+        "indexedDB"
+      ],
       "events": []
     },
     "Layout Instability API": {
@@ -1005,8 +1007,6 @@
         "Element.releasePointerCapture()"
       ],
       "properties": [
-        "GlobalEventHandlers.ongotpointercapture",
-        "GlobalEventHandlers.onlostpointercapture",
         "Navigator.maxTouchPoints"
       ],
       "events": [

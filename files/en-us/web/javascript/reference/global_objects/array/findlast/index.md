@@ -32,19 +32,19 @@ If you need to find:
 
 ```js
 // Arrow function
-findLast((element) => { /* ... */ } )
-findLast((element, index) => { /* ... */ } )
-findLast((element, index, array) => { /* ... */ } )
+findLast((element) => { /* … */ } )
+findLast((element, index) => { /* … */ } )
+findLast((element, index, array) => { /* … */ } )
 
 // Callback function
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
 
 // Inline callback function
-findLast(function(element) { /* ... */ })
-findLast(function(element, index) { /* ... */ })
-findLast(function(element, index, array){ /* ... */ })
-findLast(function(element, index, array) { /* ... */ }, thisArg)
+findLast(function(element) { /* … */ })
+findLast(function(element, index) { /* … */ })
+findLast(function(element, index, array){ /* … */ })
+findLast(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -128,12 +128,12 @@ const inventory = [
   {name: 'apples', quantity: 2},
   {name: 'bananas', quantity: 0},
   {name: 'fish', quantity: 1},
-  {name: 'cherries', quantity: 5}
+  {name: 'cherries', quantity: 5},
 ];
 
-const result = inventory.findLast( ({ quantity }) => quantity < 2 );
+const result = inventory.findLast(({ quantity }) => quantity < 2);
 
-console.log(result) 
+console.log(result);
 // { name: "fish", quantity: 1 }
 ```
 

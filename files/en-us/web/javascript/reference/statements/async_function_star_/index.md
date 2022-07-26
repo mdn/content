@@ -7,7 +7,7 @@ tags:
    - JavaScript
    - Language feature
    - Statement
-browser-compat: javascript.statements.async_generator_function 
+browser-compat: javascript.statements.async_generator_function
 ---
 {{jsSidebar("Statements")}}
 

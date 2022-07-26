@@ -232,13 +232,11 @@ In [Through the Looking-Glass](https://en.wikipedia.org/wiki/Through_the_Looking
 Because small children tire out easily, unlike automaton chess pieces, Alice is constantly slowing down. We can do this by setting a decay on her animation's `playbackRate`. We use `updatePlaybackRate()` instead of setting the playbackRate directly since that produces a smooth update:
 
 ```js
-setInterval( function() {
-
+setInterval(() => {
   // Make sure the playback rate never falls below .4
   if (redQueen_alice.playbackRate > .4) {
     redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * .9);
   }
-
 }, 3000);
 ```
 
@@ -342,15 +340,15 @@ const endGame = function() {
 
   if (aliceHeight <= .333){
     // Alice got smaller!
-    // ...
+    // …
 
   } else if (aliceHeight >= .666) {
     // Alice got bigger!
-    // ...
+    // …
 
   } else {
     // Alice didn't change significantly
-    // ...
+    // …
 
   }
 }
@@ -368,11 +366,11 @@ CSS Animations and Transitions have their own event listeners, and these are als
 Here we set the callbacks for the cake, bottle, and Alice to fire the `endGame` function:
 
 ```js
-// When the cake or bottle runs out...
+// When the cake or bottle runs out
 nommingCake.onfinish = endGame;
 drinking.onfinish = endGame;
 
-// ...or Alice reaches the end of her animation
+// Alice reaches the end of her animation
 aliceChange.onfinish = endGame;
 ```
 

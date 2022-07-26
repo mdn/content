@@ -36,7 +36,7 @@ button.
 ```js
 function getEventType(event) {
   const log = document.getElementById('log');
-  log.innerText = event.type + '\n' + log.innerText;
+  log.innerText = `${event.type}\n${log.innerText}`;
 }
 
 // Keyboard events

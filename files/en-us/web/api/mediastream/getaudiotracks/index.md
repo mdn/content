@@ -59,7 +59,7 @@ first audio track found on the stream.
 
 ```js
 navigator.mediaDevices.getUserMedia({audio: true, video: true})
-.then(mediaStream => {
+.then((mediaStream) => {
   document.querySelector('video').srcObject = mediaStream;
   // Stop the audio stream after 5 seconds
   setTimeout(() => {

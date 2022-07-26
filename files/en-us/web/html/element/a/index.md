@@ -22,7 +22,7 @@ The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [
 
 Content within each `<a>` **should** indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{EmbedInteractiveExample("pages/tabbed/a.html", "tabbed-shorter")}}
 
 ## Attributes
 
@@ -338,13 +338,13 @@ function draw(x, y) {
   }
 }
 
-canvas.addEventListener('mousemove', event =>
+canvas.addEventListener('mousemove', (event) =>
   draw(event.offsetX, event.offsetY)
 );
 canvas.addEventListener('mousedown', () => isDrawing = true);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 
-document.querySelector('a').addEventListener('click', event =>
+document.querySelector('a').addEventListener('click', (event) =>
   event.target.href = canvas.toDataURL()
 );
 ```

@@ -83,7 +83,7 @@ The number types are:
 A single parameter is written `(param i32)` and the return type is written `(result i32)`, hence a binary function that takes two 32-bit integers and returns a 64-bit float would be written like this:
 
 ```wasm
-(func (param i32) (param i32) (result f64) ... )
+(func (param i32) (param i32) (result f64) ...)
 ```
 
 After the signature, locals are listed with their type, for example `(local i32)`. Parameters are basically just locals that are initialized with the value of the corresponding argument passed by the caller.
@@ -156,7 +156,7 @@ Our function won't do very much on its own — now we need to call it. How do we
 Like locals, functions are identified by an index by default, but for convenience, they can be named. Let's start by doing this — first, we'll add a name preceded by a dollar sign, just after the `func` keyword:
 
 ```wasm
-(func $add … )
+(func $add …)
 ```
 
 Now we need to add an export declaration — this looks like so:
@@ -185,7 +185,7 @@ Next, we'll load our binary into a typed array called `addCode` (as described in
 
 ```js
 WebAssembly.instantiateStreaming(fetch('add.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.add(1, 2));  // "3"
   });
 ```
@@ -224,7 +224,7 @@ The JavaScript code to call our above module looks like so:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('call.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.getAnswerPlus1());  // "43"
   });
 ```
@@ -261,7 +261,7 @@ var importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     obj.instance.exports.logIt();
   });
 ```
@@ -356,7 +356,7 @@ var memory = new WebAssembly.Memory({initial:1});
 var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
 WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     obj.instance.exports.writeHi();
   });
 ```
@@ -472,7 +472,7 @@ We load it into a webpage using the following JavaScript:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.callByIndex(0)); // returns 42
     console.log(obj.instance.exports.callByIndex(1)); // returns 13
     console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table

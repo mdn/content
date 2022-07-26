@@ -52,7 +52,7 @@ Before you get started with working on any particular repo, follow these steps:
 
 At this point you need to set up an SSH key on your GitHub account. This is basically a security mechanism that identifies you to GitHub, and means that you don't have to authenticate each time you use GitHub services.
 
-GitHub have created a useful guide to setting this up — see the starting point at [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh). Follow each of the steps here to get set up with SSH on GitHub.
+GitHub has created a useful guide to setting this up — see the starting point at [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh). Follow each of the steps here to get set up with SSH on GitHub.
 
 If you don't do this, you'll still be able to contribute to MDN, but you'll have to enter your username and password every time you interact with GitHub (e.g. whenever you submit a pull request, as seen below).
 

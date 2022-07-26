@@ -19,7 +19,7 @@ You do not have to create a {{jsxref("Number")}} object to access this static pr
 
 ## Description
 
-The `EPSILON` property has a value of approximately `2.2204460492503130808472633361816E-16`, or `2^-52`.
+The `EPSILON` property has a value of approximately `2.2204460492503130808472633361816E-16`, or 2<sup>-52</sup>.
 
 ## Examples
 

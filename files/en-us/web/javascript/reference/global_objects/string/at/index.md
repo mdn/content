@@ -9,7 +9,6 @@ tags:
   - Reference
   - polyfill
   - at
-  - Experimental
 browser-compat: javascript.builtins.String.at
 ---
 {{JSRef}}
@@ -47,12 +46,12 @@ function returnLast(arr) {
 
 let invoiceRef = 'myinvoice01';
 
-console.log( returnLast(invoiceRef) );
+console.log(returnLast(invoiceRef));
 // Logs: '1'
 
 invoiceRef = 'myinvoice02';
 
-console.log( returnLast(invoiceRef) );
+console.log(returnLast(invoiceRef));
 // Logs: '2'
 ```
 

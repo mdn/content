@@ -185,7 +185,7 @@ foo().catch(() => {}) // Attempt to swallow all errors...
 ```js
 function resolveAfter2Seconds() {
   console.log("starting slow promise")
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(function() {
       resolve("slow")
       console.log("slow promise is done")
@@ -195,7 +195,7 @@ function resolveAfter2Seconds() {
 
 function resolveAfter1Second() {
   console.log("starting fast promise")
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(function() {
       resolve("fast")
       console.log("fast promise is done")
@@ -237,8 +237,8 @@ async function parallel() {
 
   // Start 2 "jobs" in parallel and wait for both of them to complete
   await Promise.all([
-      (async()=>console.log(await resolveAfter2Seconds()))(),
-      (async()=>console.log(await resolveAfter1Second()))()
+      (async () => console.log(await resolveAfter2Seconds()))(),
+      (async () => console.log(await resolveAfter1Second()))()
   ])
 }
 
@@ -293,10 +293,10 @@ splits the function into many parts. Consider the following code:
 ```js
 function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e => {
+    .catch((e) => {
       return downloadFallbackData(url)  // returns a promise
     })
-    .then(v => {
+    .then((v) => {
       return processDataInWorker(v)  // returns a promise
     })
 }
@@ -320,7 +320,7 @@ Alternatively, you can chain the promise with `catch()`:
 
 ```js
 async function getProcessedData(url) {
-  const v = await downloadData(url).catch(e => {
+  const v = await downloadData(url).catch((e) => {
     return downloadFallbackData(url)
   })
   return processDataInWorker(v)

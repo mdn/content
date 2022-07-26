@@ -196,8 +196,8 @@ Below are some examples to give you a basic idea of how they work.
 
 - `a` — Matches one character that is `a` (not `b`, not `aa`, and so on).
 - `abc` — Matches `a`, followed by `b`, followed by `c`.
-- `ab?c`—Matches `a`, optionally followed by a single `b`, followed by `c`. ( `ac` or `abc`)
-- `ab*c`—Matches `a`, optionally followed by any number of `b`s, followed by `c`. ( `ac` , `abc`, `abbbbbc`, and so on).
+- `ab?c`—Matches `a`, optionally followed by a single `b`, followed by `c`. (`ac` or `abc`)
+- `ab*c`—Matches `a`, optionally followed by any number of `b`s, followed by `c`. (`ac` , `abc`, `abbbbbc`, and so on).
 - `a|b` — Matches one character that is `a` or `b`.
 - `abc|xyz` — Matches exactly `abc` or exactly `xyz` (but not `abcxyz` or `a` or `y`, and so on).
 
@@ -315,7 +315,7 @@ First, some HTML:
 <form>
   <p>
     <fieldset>
-      <legend>Do you have a driver's license?<abbr title="This field is mandatory" aria-label="required">*</abbr></legend>
+      <legend>Do you have a driver's license?<span aria-label="required">*</span></legend>
       <!-- While only one radio button in a same-named group can be selected at a time,
            and therefore only one radio button in a same-named group having the "required"
            attribute suffices in making a selection a requirement -->
@@ -334,7 +334,7 @@ First, some HTML:
            pattern="\d+">
   </p>
   <p>
-    <label for="t1">What's your favorite fruit?<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+    <label for="t1">What's your favorite fruit?<span aria-label="required">*</span></label>
     <input type="text" id="t1" name="fruit" list="l1" required
            pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
     <datalist id="l1">

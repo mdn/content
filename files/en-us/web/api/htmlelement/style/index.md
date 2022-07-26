@@ -59,7 +59,7 @@ var computedStyle = window.getComputedStyle(element, null);
 
 for (prop in elementStyle) {
   if (Object.hasOwn(elementStyle, prop)) {
-    out += "  " + prop + " = '" + elementStyle[prop] + "' > '" + computedStyle[prop] + "'\n";
+    out += `  ${prop} = '${elementStyle[prop]}' > '${computedStyle[prop]}'\n`;
   }
 }
 console.log(out)

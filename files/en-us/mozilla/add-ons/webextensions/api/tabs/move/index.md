@@ -91,7 +91,7 @@ function onError(error) {
 }
 
 function moveMoz(tabs) {
-  let mozTabIds = tabs.map(tabInfo => tabInfo.id);
+  let mozTabIds = tabs.map((tabInfo) => tabInfo.id);
   let moving = browser.tabs.move(mozTabIds, {index: -1});
   moving.then(onMoved, onError);
 }
@@ -114,7 +114,7 @@ function onError(error) {
 }
 
 function moveMoz(tabs) {
-  let mozTabIds = tabs.map(tabInfo => tabInfo.id);
+  let mozTabIds = tabs.map((tabInfo) => tabInfo.id);
   let targetWindow = tabs[0].windowId;
   let moving = browser.tabs.move(mozTabIds, {windowId: targetWindow, index: 0});
   moving.then(onMoved, onError);

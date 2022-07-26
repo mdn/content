@@ -56,7 +56,7 @@ The `finally()` method is very similar to calling
 - A `finally` callback will not receive any argument. This use case
   is for precisely when you _do not care_ about the rejection reason, or the
   fulfillment value, and so there's no need to provide it.
-- A `finally` call will usually chain through an equivalent to the original promise.  
+- A `finally` call will usually chain through an equivalent to the original promise.
   So for example:
   - Unlike `Promise.resolve(2).then(() => 77, () => {})` (which
     will return a resolved promise with the result `77`),

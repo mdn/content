@@ -90,7 +90,7 @@ And this code, `runComposite()`, handles the bulk of the work, relying on a numb
 ```js
 function createCanvas() {
     const canvas = document.createElement("canvas");
-    canvas.style.background = "url("+op_8x8.data+")";
+    canvas.style.background = `url(${op_8x8.data})`;
     canvas.style.border = "1px solid #000";
     canvas.style.margin = "5px";
     canvas.width = width/2;
@@ -202,7 +202,7 @@ const colorSphere = function(element) {
         const gradient = ctx.createLinearGradient(oleft + halfWidth, otop, oleft + halfWidth, otop + halfWidth);
         const color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
         gradient.addColorStop(0, "rgba(0,0,0,0)");
-        gradient.addColorStop(0.7, "rgba("+color.R+","+color.G+","+color.B+",1)");
+        gradient.addColorStop(0.7, `rgba(${color.R}, ${color.G}, ${color.B}, 1)`);
         gradient.addColorStop(1, "rgba(255,255,255,1)");
         ctx.beginPath();
         ctx.moveTo(oleft + halfWidth, otop);

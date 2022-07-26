@@ -17,6 +17,8 @@ The **`AsyncGenerator`** object is returned by an {{jsxref("Statements/async_fun
 
 Async generator methods always yield {{jsxref("Promise")}} objects.
 
+{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+
 ## Constructor
 
 The `AsyncGenerator` constructor is not available globally. Instances of `AsyncGenerator` must be returned from [async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
@@ -29,11 +31,11 @@ async function* createAsyncGenerator() {
 }
 const asyncGen = createAsyncGenerator();
 asyncGen.next()
-  .then(res => console.log(res.value)); // 1
+  .then((res) => console.log(res.value)); // 1
 asyncGen.next()
-  .then(res => console.log(res.value)); // 2
+  .then((res) => console.log(res.value)); // 2
 asyncGen.next()
-  .then(res => console.log(res.value)); // 3
+  .then((res) => console.log(res.value)); // 3
 ```
 
 ## Instance methods

@@ -244,15 +244,15 @@ function enableLog(ev) {
 
 function log(name, ev, printTargetIds) {
   const o = document.getElementsByTagName('output')[0];
-  let s = name + ": touches = " + ev.touches.length +
-                " ; targetTouches = " + ev.targetTouches.length +
-                " ; changedTouches = " + ev.changedTouches.length;
-  o.innerHTML += s + "<br>";
+  let s = `${name}: touches = ${ev.touches.length} ; ` +
+    `targetTouches = ${ev.targetTouches.length} ; ` +
+    `changedTouches = ${ev.changedTouches.length}`;
+  o.innerHTML += `${s}<br>`;
 
   if (printTargetIds) {
     s = "";
     for (var i=0; i < ev.targetTouches.length; i++) {
-      s += "... id = " + ev.targetTouches[i].identifier + "<br>";
+      s += `... id = ${ev.targetTouches[i].identifier}<br>`;
     }
     o.innerHTML += s;
   }

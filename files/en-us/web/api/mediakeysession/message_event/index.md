@@ -21,9 +21,9 @@ content decryption module.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type
@@ -38,7 +38,7 @@ An {{domxref("MediaKeyMessageEvent")}}. Inherits from {{domxref("Event")}}.
   - : Returns an {{jsxref("ArrayBuffer")}} with a message from the content decryption module. Messages vary by key system.
 - {{domxref("MediaKeyMessageEvent.messageType")}} {{readonlyinline}}
   - : Indicates the type of message. May be one of `license-request`, `license-renewal`, `license-release`, or `individualization-request`.
-  
+
 ## Specifications
 
 {{Specifications}}

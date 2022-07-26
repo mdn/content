@@ -65,7 +65,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           A negated or complemented character class. That is, it matches
           anything that is not enclosed in the brackets. You can specify a range
           of characters by using a hyphen, but if the hyphen appears as the
-          first or last character enclosed in the square brackets, it is taken as
+          first character after the <code>^</code> or the last character enclosed in the square brackets, it is taken as
           a literal hyphen to be included in the character class as a normal
           character. For example, <code>[^abc]</code> is the same as
           <code>[^a-c]</code>. They initially match "o" in "bacon" and "h" in

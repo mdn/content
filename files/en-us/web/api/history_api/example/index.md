@@ -208,7 +208,7 @@ const ajaxRequest = new (function () {
     /* not customizable constants */
     const searchRegex = /\?.*$/;
     const hostRegex = /^[^\?]*\?*&*/;
-    const viewRegex = new RegExp("&" + viewKey + "\\=[^&]*|&*$", "i");
+    const viewRegex = new RegExp(`&${viewKey}\\=[^&]*|&*$`, "i");
     const endQstMarkRegex = /\?$/;
     const loadingBox = document.createElement("div");
     const cover = document.createElement("div");
@@ -314,7 +314,7 @@ const ajaxRequest = new (function () {
                 }
                 break;
             default:
-                msg = status + ": " + (HTTP_STATUS[status] || "Unknown");
+                msg = `${status}: ${HTTP_STATUS[status] || "Unknown"}`;
                 switch (Math.floor(status / 100)) {
                     /*
                     case 1:
@@ -332,11 +332,11 @@ const ajaxRequest = new (function () {
                     */
                     case 4:
                         /* Client Error 4xx */
-                        alert("Client Error #" + msg);
+                        alert(`Client Error #${msg}`);
                         break;
                     case 5:
                         /* Server Error 5xx */
-                        alert("Server Error #" + msg);
+                        alert(`Server Error #${msg}`);
                         break;
                     default:
                         /* Unknown status */
@@ -350,11 +350,11 @@ const ajaxRequest = new (function () {
         return (
             url.replace(searchRegex, "") +
             (
-                "?" +
+                `?${
                 url
                     .replace(hostRegex, "&")
-                    .replace(viewRegex, viewMode ? "&" + viewKey + "=" + viewMode : "")
-                    .slice(1)
+                    .replace(viewRegex, viewMode ? `&${viewKey}=${viewMode}` : "")
+                    .slice(1)}`
             ).replace(endQstMarkRegex, "")
         );
     }

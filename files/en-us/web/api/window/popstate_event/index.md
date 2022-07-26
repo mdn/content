@@ -25,8 +25,8 @@ The **`popstate`** event of the {{domxref("Window")}} interface is fired when th
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('popstate', event => { });
-onpopstate = event => { };
+addEventListener('popstate', (event) => { });
+onpopstate = (event) => { };
 ```
 
 ## Event type
@@ -93,7 +93,7 @@ A page at `http://example.com/example.html` running the following code will gene
 
 ```js
 window.addEventListener('popstate', (event) => {
-  console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+  console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`);
 });
 history.pushState({page: 1}, "title 1", "?page=1");
 history.pushState({page: 2}, "title 2", "?page=2");
@@ -107,7 +107,7 @@ The same example using the `onpopstate` event handler property:
 
 ```js
 window.onpopstate = function(event) {
-  console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+  console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`);
 };
 history.pushState({page: 1}, "title 1", "?page=1");
 history.pushState({page: 2}, "title 2", "?page=2");

@@ -32,7 +32,7 @@ A number that represents the width of the document in pixels.
 
 ```js
 function init() {
-  alert("The width of the document is " + document.width + " pixels.");
+  alert(`The width of the document is ${document.width} pixels.`);
 }
 ```
 

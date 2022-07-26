@@ -23,12 +23,12 @@ JavaScript does not have an explicit array data type. However, you can use the p
 The following statements create equivalent arrays:
 
 ```js
-const arr1 = new Array(element0, element1, ..., elementN)
-const arr2 = Array(element0, element1, ..., elementN)
-const arr3 = [element0, element1, ..., elementN]
+const arr1 = new Array(element0, element1, /* … ,*/ elementN)
+const arr2 = Array(element0, element1, /* … ,*/ elementN)
+const arr3 = [element0, element1, /* … ,*/ elementN]
 ```
 
-`element0, element1, ..., elementN` is a list of values for the array's elements. When these values are specified, the array is initialized with them as the array's elements. The array's `length` property is set to the number of arguments.
+`element0, element1, …, elementN` is a list of values for the array's elements. When these values are specified, the array is initialized with them as the array's elements. The array's `length` property is set to the number of arguments.
 
 The bracket syntax is called an "array literal" or "array initializer." It's shorter than other forms of array creation, and so is generally preferred. See [Array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) for details.
 
@@ -52,11 +52,11 @@ In addition to a newly defined variable as shown above, arrays can also be assig
 
 ```js
 const obj = {}
-// ...
-obj.prop = [element0, element1, ..., elementN]
+// …
+obj.prop = [element0, element1, /* … ,*/ elementN]
 
 // OR
-const obj = {prop: [element0, element1, ...., elementN]}
+const obj = {prop: [element0, element1, /* … ,*/ elementN]}
 ```
 
 If you wish to initialize an array with a single element, and the element happens to be a `Number`, you must use the bracket syntax. When a single `Number` value is passed to the `Array()` constructor or function, it is interpreted as an `arrayLength`, not as a single element.
@@ -203,7 +203,7 @@ Alternatively, you can shorten the code for the forEach parameter with ES2015 Ar
 
 ```js
 const colors = ['red', 'green', 'blue']
-colors.forEach(color => console.log(color))
+colors.forEach((color) => console.log(color))
 // red
 // green
 // blue
@@ -585,17 +585,17 @@ Typed array views have self descriptive names and provide views for all the usua
 
 | Type                                     | Value Range                   | Size in bytes | Description                                                                  | Web IDL type          | Equivalent C type               |
 | ---------------------------------------- | ----------------------------- | ------------- | ---------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| {{jsxref("Int8Array")}}         | `-128` to `127`               | 1             | 8-bit two's complement signed integer                                        | `byte`                | `int8_t`                        |
-| {{jsxref("Uint8Array")}}         | `0` to `255`                  | 1             | 8-bit unsigned integer                                                       | `octet`               | `uint8_t`                       |
-| {{jsxref("Uint8ClampedArray")}} | `0` to `255`                  | 1             | 8-bit unsigned integer (clamped)                                             | `octet`               | `uint8_t`                       |
-| {{jsxref("Int16Array")}}         | `-32768` to `32767`           | 2             | 16-bit two's complement signed integer                                       | `short`               | `int16_t`                       |
-| {{jsxref("Uint16Array")}}         | `0` to `65535`                | 2             | 16-bit unsigned integer                                                      | `unsigned short`      | `uint16_t`                      |
-| {{jsxref("Int32Array")}}         | `-2147483648` to `2147483647` | 4             | 32-bit two's complement signed integer                                       | `long`                | `int32_t`                       |
-| {{jsxref("Uint32Array")}}         | `0` to `4294967295`           | 4             | 32-bit unsigned integer                                                      | `unsigned long`       | `uint32_t`                      |
+| {{jsxref("Int8Array")}}         | -128 to 127               | 1             | 8-bit two's complement signed integer                                        | `byte`                | `int8_t`                        |
+| {{jsxref("Uint8Array")}}         | 0 to 255                  | 1             | 8-bit unsigned integer                                                       | `octet`               | `uint8_t`                       |
+| {{jsxref("Uint8ClampedArray")}} | 0 to 255                  | 1             | 8-bit unsigned integer (clamped)                                             | `octet`               | `uint8_t`                       |
+| {{jsxref("Int16Array")}}         | -32768 to 32767           | 2             | 16-bit two's complement signed integer                                       | `short`               | `int16_t`                       |
+| {{jsxref("Uint16Array")}}         | 0 to 65535                | 2             | 16-bit unsigned integer                                                      | `unsigned short`      | `uint16_t`                      |
+| {{jsxref("Int32Array")}}         | -2147483648 to 2147483647 | 4             | 32-bit two's complement signed integer                                       | `long`                | `int32_t`                       |
+| {{jsxref("Uint32Array")}}         | 0 to 4294967295           | 4             | 32-bit unsigned integer                                                      | `unsigned long`       | `uint32_t`                      |
 | {{jsxref("Float32Array")}}     | `1.2E-38` to `3.4E38`         | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.1234567`)   | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123...15`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | `-2^63` to `2^63 - 1`         | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}     | `0` to `2^64 - 1`             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
+| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123…15`) | `unrestricted double` | `double`                        |
+| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1         | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
+| {{jsxref("BigUint64Array")}}     | 0 to 2<sup>64</sup> - 1             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
 
 For more information, see [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) and the reference documentation for the different {{jsxref("TypedArray")}} objects.
 

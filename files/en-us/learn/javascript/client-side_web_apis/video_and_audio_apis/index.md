@@ -132,7 +132,7 @@ Now open the CSS file and have a look inside. The CSS for the example is not too
   display: flex;
 }
 
-.player:hover .controls, 
+.player:hover .controls,
 .player:focus-within .controls {
   opacity: 1;
 }

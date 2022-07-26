@@ -53,7 +53,7 @@ The following code snippet gets all cookie stores and then logs the total number
 
 ```js
 browser.cookies.getAllCookieStores().then((stores) => {
-  let incognitoStores = stores.map(store => store.incognito);
+  let incognitoStores = stores.map((store) => store.incognito);
   console.log(`Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`);
 });
 ```

@@ -133,7 +133,7 @@ consoleLog = document.getElementById('console-log'),
 btnReset = document.getElementById('btn-reset');
 
 function logMessage(message) {
-  consoleLog.innerHTML += message + "<br>";
+  consoleLog.innerHTML += `${message}<br>`;
 }
 
 textarea.addEventListener('keydown', (e) => {

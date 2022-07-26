@@ -39,7 +39,7 @@ The `abs()` function can be used to ensure that a value is always positive. In t
 
 ```css
 h1 {
-  font-size: abs( var( --font-size ) );
+  font-size: abs(var(--font-size));
 }
 ```
 
@@ -50,7 +50,7 @@ You can also control the gradient direction using `abs()` function. In the follo
 ```css
 div {
   --deg: -45deg;
-  background-image: linear-gradient( abs( var( --deg ) ), blue, red);
+  background-image: linear-gradient(abs(var(--deg)), blue, red);
 }
 ```
 

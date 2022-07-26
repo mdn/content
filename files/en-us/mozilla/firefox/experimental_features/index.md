@@ -559,47 +559,6 @@ The `groupBy` method should be used when strings can be used to represent elemen
   </tbody>
 </table>
 
-### Array findLast() and findLastIndex() methods
-
-The {{jsxref("Array.prototype.findLast()")}}, {{jsxref("Array.prototype.findLastIndex()")}}, {{jsxref("TypedArray.prototype.findLast()")}}, and {{jsxref("TypedArray.prototype.findLastIndex()")}} are used to find the value and index (respectively) of the last element in an array or TypedArray that matches a supplied test function.
-(See {{bug(1704385)}} for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>103</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>103</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>103</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>103</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.array_find_last</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## APIs
 
 ### Graphics: Canvas, WebGL, and WebGPU

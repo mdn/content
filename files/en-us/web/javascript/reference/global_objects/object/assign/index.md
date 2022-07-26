@@ -217,14 +217,14 @@ console.log(copy);
 
 // This is an assign function that copies full descriptors
 function completeAssign(target, ...sources) {
-  sources.forEach(source => {
+  sources.forEach((source) => {
     let descriptors = Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {});
 
     // By default, Object.assign copies enumerable Symbols, too
-    Object.getOwnPropertySymbols(source).forEach(sym => {
+    Object.getOwnPropertySymbols(source).forEach((sym) => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
         descriptors[sym] = descriptor;

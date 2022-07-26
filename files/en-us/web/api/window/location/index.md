@@ -71,11 +71,11 @@ function reloadPageWithHash() {
 
 ```js
 function showLoc() {
-  const oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
-  for (let sProp in oLocation){
-  aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " + (oLocation[sProp] || "n/a"));
+  const logLines = ["Property (Typeof): Value", `location (${typeof location}): ${location}`];
+  for (let prop in location) {
+    logLines.push(`${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`);
   }
-  alert(aLog.join("\n"));
+  alert(logLines.join("\n"));
 }
 
 // in html: <button onclick="showLoc();">Show location properties</button>

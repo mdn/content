@@ -25,9 +25,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('devicechange', event => { });
+addEventListener('devicechange', (event) => { });
 
-ondevicechange = event => { };
+ondevicechange = (event) => { };
 ```
 
 ## Event type
@@ -114,7 +114,7 @@ let videoElement = document.getElementById("video");
 let logElement = document.getElementById("log");
 
 function log(msg) {
-  logElement.innerHTML += msg + "<br>";
+  logElement.innerHTML += `${msg}<br>`;
 }
 
 document.getElementById("startButton").addEventListener("click", function() {
@@ -129,11 +129,11 @@ document.getElementById("startButton").addEventListener("click", function() {
       sampleSize: 16,
       volume: 0.25
     }
-  }).then(stream => {
+  }).then((stream) => {
       videoElement.srcObject = stream;
       updateDeviceList();
     })
-    .catch(err => log(err.name + ": " + err.message));
+    .catch((err) => log(`${err.name}: ${err.message}`));
 }, false);
 ```
 
@@ -158,11 +158,11 @@ function updateDeviceList() {
     audioList.innerHTML = "";
     videoList.innerHTML = "";
 
-    devices.forEach(device => {
+    devices.forEach((device) => {
       let elem = document.createElement("li");
       let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
 
-      elem.innerHTML = "<strong>" + device.label + "</strong> (" + direction + ")";
+      elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
       if (type === "audio") {
         audioList.appendChild(elem);
       } else if (type === "video") {
@@ -209,7 +209,7 @@ handler, to initially fill out the list when the stream is opened. The second is
 event handler for this `devicechange` event:
 
 ```js
-navigator.mediaDevices.ondevicechange = event => {
+navigator.mediaDevices.ondevicechange = (event) => {
   updateDeviceList();
 }
 ```

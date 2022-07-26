@@ -83,12 +83,12 @@ Using {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)
 
 ```js
 myPromise
-  .then(value => { return value + ' and bar'; })
-  .then(value => { return value + ' and bar again'; })
-  .then(value => { return value + ' and again'; })
-  .then(value => { return value + ' and again'; })
-  .then(value => { console.log(value) })
-  .catch(err => { console.log(err) });
+  .then((value) => { return value + ' and bar'; })
+  .then((value) => { return value + ' and bar again'; })
+  .then((value) => { return value + ' and again'; })
+  .then((value) => { return value + ' and again'; })
+  .then((value) => { console.log(value) })
+  .catch((err) => { console.log(err) });
 ```
 
 The termination condition of a promise determines the "settled" state of the next promise in the chain. A "fulfilled" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each fulfilled promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.
@@ -270,19 +270,19 @@ See the [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to l
 ### Basic Example
 
 ```js
-let myFirstPromise = new Promise((resolve, reject) => {
+const myFirstPromise = new Promise((resolve, reject) => {
   // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
   // In this example, we use setTimeout(...) to simulate async code.
   // In reality, you will probably be using something like XHR or an HTML5 API.
-  setTimeout( function() {
-    resolve("Success!")  // Yay! Everything went well!
-  }, 250)
-})
+  setTimeout(() => {
+    resolve("Success!"); // Yay! Everything went well!
+  }, 250);
+});
 
 myFirstPromise.then((successMessage) => {
   // successMessage is whatever we passed in the resolve(...) function above.
   // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
-  console.log("Yay! " + successMessage)
+  console.log("Yay! " + successMessage);
 });
 ```
 
@@ -309,18 +309,18 @@ function tetheredGetNumber(resolve, reject) {
         const randomInt = Date.now();
         const value = randomInt % 10;
         try {
-          if(value >= THRESHOLD_A) {
+          if (value >= THRESHOLD_A) {
             throw new Error(`Too large: ${value}`);
           }
-        } catch(msg) {
-            reject(`Error in callback ${msg}`);
+        } catch (msg) {
+          reject(`Error in callback ${msg}`);
         }
       resolve(value);
       return;
     }, 500);
     // To experiment with error at set-up, uncomment the following 'throw'.
     // throw new Error("Bad setup");
-  } catch(err) {
+  } catch (err) {
     reject(`Error during setup: ${err}`);
   }
   return;
@@ -342,7 +342,7 @@ function promiseGetWord(parityInfo) {
   const tetheredGetWord = function(resolve,reject) {
     const theNumber = parityInfo.theNumber;
     const threshold_B = THRESHOLD_A - 1;
-    if(theNumber >= threshold_B) {
+    if (theNumber >= threshold_B) {
       reject(`Still too large: ${theNumber}`);
     } else {
       parityInfo.wordEvenOdd = parityInfo.isOdd ? 'odd' : 'even';
@@ -361,10 +361,9 @@ function promiseGetWord(parityInfo) {
     return info;
   })
   .catch((reason) => {
-    if(reason === -999) {
+    if (reason === -999) {
       console.error("Had previously handled error");
-    }
-    else {
+    } else {
       console.error(`Trouble with promiseGetWord(): ${reason}`);
     }
    })

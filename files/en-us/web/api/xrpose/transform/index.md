@@ -47,7 +47,7 @@ a function is called on the targeted object called `primaryAction()`;
 otherwise, it calls the targeted object's `offHandAction()` function.
 
 ```js
-xrSession.addEventListener("select", event => {
+xrSession.addEventListener("select", (event) => {
   let source = event.inputSource;
   let frame = event.frame;
   let targetRayPose = frame.getPose(source.targetRaySpace, myRefSpace);

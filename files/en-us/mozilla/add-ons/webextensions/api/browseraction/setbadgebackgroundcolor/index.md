@@ -67,7 +67,7 @@ A background color that starts off as red, and turns green when the browser acti
 browser.browserAction.setBadgeText({text: "1234"});
 browser.browserAction.setBadgeBackgroundColor({color: "red"});
 
-browser.browserAction.onClicked.addListener(()=> {
+browser.browserAction.onClicked.addListener(() => {
   browser.browserAction.setBadgeBackgroundColor({color: "green"});
 });
 ```

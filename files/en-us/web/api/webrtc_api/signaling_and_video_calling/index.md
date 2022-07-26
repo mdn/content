@@ -242,7 +242,7 @@ When the user clicks on a username they want to call, the `invite()` function is
 ```js
 const mediaConstraints = {
   audio: true, // We want an audio track
-  video: true // ...and we want a video track
+  video: true // And we want a video track
 };
 
 function invite(evt) {
@@ -262,7 +262,7 @@ function invite(evt) {
     navigator.mediaDevices.getUserMedia(mediaConstraints)
     .then(function(localStream) {
       document.getElementById("local_video").srcObject = localStream;
-      localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
+      localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
     })
     .catch(handleGetUserMediaError);
   }
@@ -303,7 +303,7 @@ function handleGetUserMediaError(e) {
       // Do nothing; this is the same as the user canceling the call.
       break;
     default:
-      alert("Error opening your camera and/or microphone: " + e.message);
+      alert(`Error opening your camera and/or microphone: ${e.message}`);
       break;
   }
 
@@ -430,7 +430,7 @@ function handleVideoOfferMsg(msg) {
     localStream = stream;
     document.getElementById("local_video").srcObject = localStream;
 
-    localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
+    localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
   })
   .then(function() {
     return myPeerConnection.createAnswer();
@@ -591,11 +591,11 @@ function closeVideoCall() {
     myPeerConnection.onnegotiationneeded = null;
 
     if (remoteVideo.srcObject) {
-      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
+      remoteVideo.srcObject.getTracks().forEach((track) => track.stop());
     }
 
     if (localVideo.srcObject) {
-      localVideo.srcObject.getTracks().forEach(track => track.stop());
+      localVideo.srcObject.getTracks().forEach((track) => track.stop());
     }
 
     myPeerConnection.close();

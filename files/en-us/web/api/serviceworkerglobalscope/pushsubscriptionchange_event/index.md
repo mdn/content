@@ -27,9 +27,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pushsubscriptionchange', event => { });
+addEventListener('pushsubscriptionchange', (event) => { });
 
-onpushsubscriptionchange = event => { };
+onpushsubscriptionchange = (event) => { };
 ```
 
 ## Event type
@@ -49,20 +49,21 @@ Consider using another method to synchronize subscription information between yo
 This example, run in the context of a service worker, listens for a `pushsubscriptionchange` event and re-subscribes to the lapsed subscription.
 
 ```js
-self.addEventListener("pushsubscriptionchange", event => {
-  event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
-    .then(subscription => {
-      return fetch("register", {
+self.addEventListener("pushsubscriptionchange", (event) => {
+  const subscription = swRegistration.pushManager
+    .subscribe(event.oldSubscription.options)
+    .then((subscription) =>
+      fetch("register", {
         method: "post",
         headers: {
-          "Content-type": "application/json"
+          "Content-type": "application/json",
         },
         body: JSON.stringify({
-          endpoint: subscription.endpoint
-        })
-      });
-    })
-  );
+          endpoint: subscription.endpoint,
+        }),
+      }),
+    );
+  event.waitUntil(subscription);
 }, false);
 ```
 
@@ -71,9 +72,9 @@ When a `pushsubscriptionchange` event arrives, indicating that the subscription 
 You can also use the `onpushsubscriptionchange` event handler property to set up the event handler:
 
 ```js
-self.onpushsubscriptionchange = event => {
+self.onpushsubscriptionchange = (event) => {
   event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
-    .then(subscription => {
+    .then((subscription) => {
       /* ... */
     })
   )

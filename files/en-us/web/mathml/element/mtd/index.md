@@ -16,15 +16,15 @@ The MathML `<mtd>` element represents a cell in a table or a matrix. It may only
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- columnalign
+- `columnalign`
   - : Specifies the horizontal alignment of this cell and overrides values specified by {{ MathMLElement("mtable") }} or {{ MathMLElement("mtr") }}.
     Possible values are: `left`, `center` and `right`.
-- columnspan
+- `columnspan`
   - : A non-negative integer value that indicates on how many columns does the cell extend.
-- rowalign
+- `rowalign`
   - : Specifies the vertical alignment of this cell and overrides values specified by {{ MathMLElement("mtable") }} or {{ MathMLElement("mtr") }}.
     Possible values are: `axis`, `baseline`, `bottom`, `center` and `top`.
-- rowspan
+- `rowspan`
   - : A non-negative integer value that indicates on how many rows does the cell extend.
 
 ## Specifications

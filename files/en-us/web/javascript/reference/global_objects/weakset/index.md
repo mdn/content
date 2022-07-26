@@ -56,7 +56,7 @@ const foo = {
 };
 
 foo.bar.baz = foo; // Circular reference!
-execRecursively(obj => console.log(obj), foo);
+execRecursively((obj) => console.log(obj), foo);
 ```
 
 Here, a `WeakSet` is created on the first run, and passed along with every subsequent function call (using the internal `_refs` parameter).

@@ -43,7 +43,7 @@ The HTML and CSS for the app is really trivial. We have a title, instructions pa
 <h1>Speech color changer</h1>
 <p>Tap/click then say a color to change the background color of the app.</p>
 <div>
-  <p class="output"><em>...diagnostic messages</em></p>
+  <p class="output"><em>…diagnostic messages</em></p>
 </div>
 ```
 
@@ -68,7 +68,7 @@ const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechReco
 The next part of our code defines the grammar we want our app to recognize. The following variable is defined to hold our grammar:
 
 ```js
-const colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', /* ... */ ];
+const colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', /* … */ ];
 const grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
 ```
 

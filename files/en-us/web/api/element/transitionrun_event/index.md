@@ -17,28 +17,34 @@ page-type: web-api-event
 
 The **`transitionrun`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created, i.e. before any {{cssxref("transition-delay")}} has begun.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("TransitionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('transitionrun', (event) => {});
+
+ontransitionrun = (event) => { };
+```
+
+## Event type
+
+A {{domxref("TransitionEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("TransitionEvent")}}
+
+## Event properties
+
+_Also inherits properties from its parent {{domxref("Event")}}_.
+
+- {{domxref("TransitionEvent.propertyName")}} {{readonlyInline}}
+  - : A string containing the name CSS property associated with the transition.
+- {{domxref("TransitionEvent.elapsedTime")}} {{readonlyInline}}
+  - : A `float` giving the amount of time the transition has been running, in seconds, when this event fired. This value is not affected by the {{cssxref("transition-delay")}} property.
+- {{domxref("TransitionEvent.pseudoElement")}} {{readonlyInline}}
+  - : A string, starting with `::`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Examples
 

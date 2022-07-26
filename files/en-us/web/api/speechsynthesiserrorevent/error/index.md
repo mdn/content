@@ -86,7 +86,7 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 
   utterThis.onerror = function(event) {
-    console.error('An error has occurred with the speech synthesis: ' + event.error);
+    console.error(`An error has occurred with the speech synthesis: ${event.error}`);
   }
 
   inputTxt.blur();

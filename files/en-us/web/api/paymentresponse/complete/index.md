@@ -88,13 +88,13 @@ payment.show().then(function(paymentResponse) {
     body: JSON.stringify(paymentResponse)
   };
   const serverPaymentRequest = new Request('secure/payment/endpoint');
-  fetch(serverPaymentRequest, fetchOptions).then( response => {
+  fetch(serverPaymentRequest, fetchOptions).then((response) => {
     if (response.status < 400) {
       paymentResponse.complete("success");
     } else {
       paymentResponse.complete("fail");
     };
-  }).catch( reason => {
+  }).catch((reason) => {
     paymentResponse.complete("fail");
   });
 }).catch(function(err) {

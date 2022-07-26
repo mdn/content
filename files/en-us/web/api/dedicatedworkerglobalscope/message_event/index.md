@@ -20,9 +20,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type
@@ -64,7 +64,7 @@ first.onchange = function() {
 
 self.onmessage = function(e) {
   console.log('Message received from main script');
-  const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  const workerResult = `Result: ${e.data[0] * e.data[1]}`;
   console.log('Posting message back to main script');
   postMessage(workerResult);
 }

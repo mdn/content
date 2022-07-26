@@ -57,7 +57,7 @@ function printPipWindowDimensions(evt) {
 }
 
 button.onclick = function() {
-  video.requestPictureInPicture().then(pictureInPictureWindow => {
+  video.requestPictureInPicture().then((pictureInPictureWindow) => {
     pictureInPictureWindow.onresize = printPipWindowDimensions;
   });
 };

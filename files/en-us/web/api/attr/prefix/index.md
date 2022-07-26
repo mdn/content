@@ -33,7 +33,7 @@ A string containing the prefix of the namespace the attribute belongs too. If no
 <button>Click me for &lt;svg&gt;…</button>
 <button>Click me for &lt;label&gt;…</button>
 <br><br>
-Prefix of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+Prefix of the attribute <code>xml:lang</code>: <output id="result">None.</output>
 ```
 
 ### JavaScript Content

@@ -22,7 +22,7 @@ A **function definition** (also called a **function declaration**, or **function
 
 - The name of the function.
 - A list of parameters to the function, enclosed in parentheses and separated by commas.
-- The JavaScript statements that define the function, enclosed in curly brackets, `{...}`.
+- The JavaScript statements that define the function, enclosed in curly brackets, `{ /* … */ }`.
 
 For example, the following code defines a simple function named `square`:
 
@@ -164,7 +164,7 @@ Functions must be _in scope_ when they are called, but the function declaration 
 
 ```js
 console.log(square(5));
-/* ... */
+// …
 function square(n) {
   return n * n;
 }
@@ -450,7 +450,7 @@ Also, since the inner function has access to the scope of the outer function, th
 const pet = function (name) {   // The outer function defines a variable called "name"
   const getName = function () {
     // The inner function has access to the "name" variable of the outer function
-    return name;             
+    return name;
   }
   return getName; // Return the inner function, thereby exposing it to outer scopes
 }
@@ -504,7 +504,7 @@ In the code above, the `name` variable of the outer function is accessible to th
 
 ```js
 const getCode = (function () {
-  const apiCode = '0]Eal(eh&2';    // A code we do not want outsiders to be able to modify...
+  const apiCode = '0]Eal(eh&2';    // A code we do not want outsiders to be able to modify…
 
   return function () {
     return apiCode;

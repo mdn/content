@@ -30,20 +30,20 @@ function print_nav_timing_data() {
   const perfEntries = performance.getEntriesByType("navigation");
 
   for (let i=0; i < perfEntries.length; i++) {
-    console.log("= Navigation entry[" + i + "]");
+    console.log(`= Navigation entry[${i}]`);
     const p = perfEntries[i];
     // dom Properties
-    console.log("DOM content loaded = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
-    console.log("DOM complete = " + p.domComplete);
-    console.log("DOM interactive = " + p.domInteractive);
+    console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
+    console.log(`DOM complete = ${p.domComplete}`);
+    console.log(`DOM interactive = ${p.domInteractive}`);
 
     // document load and unload time
-    console.log("document load = " + (p.loadEventEnd - p.loadEventStart));
-    console.log("document unload = " + (p.unloadEventEnd - p.unloadEventStart));
+    console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
+    console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
 
     // other properties
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
+    console.log(`type = ${p.type}`);
+    console.log(`redirectCount = ${p.redirectCount}`);
   }
 }
 ```

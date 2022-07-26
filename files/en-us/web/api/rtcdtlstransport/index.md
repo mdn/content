@@ -107,7 +107,7 @@ This example presents a function, `tallySenders()`, which iterates over an `RTCP
 ```js
 let pc = new RTCPeerConnection({ bundlePolicy: "max-bundle" });
 
-/* ... */
+// …
 
 function tallySenders(pc) {
   let results = {
@@ -120,7 +120,7 @@ function tallySenders(pc) {
   };
 
   let senderList = pc.getSenders();
-  senderList.forEach(sender => {
+  senderList.forEach((sender) => {
     let transport = sender.transport;
 
     if (!transport) {

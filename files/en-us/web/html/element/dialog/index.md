@@ -119,7 +119,7 @@ This example opens a modal dialog that contains a form, when the "Update details
   <form method="dialog">
     <p><label>Favorite animal:
       <select>
-        <option value="default">Choose...</option>
+        <option value="default">Choose…</option>
         <option>Brine shrimp</option>
         <option>Red panda</option>
         <option>Spider monkey</option>
@@ -148,7 +148,7 @@ const confirmBtn = favDialog.querySelector('#confirmBtn');
 
 // If a browser doesn't support the dialog, then hide the
 // dialog contents by default.
-if ( typeof favDialog.showModal !== 'function' ) {
+if (typeof favDialog.showModal !== 'function') {
   favDialog.hidden = true;
   /* a fallback script to allow this dialog/form to function
      for legacy browsers that do not support <dialog>
@@ -156,7 +156,7 @@ if ( typeof favDialog.showModal !== 'function' ) {
   */
 }
 // "Update details" button opens the <dialog> modally
-updateButton.addEventListener('click', function onOpen() {
+updateButton.addEventListener('click', () => {
   if (typeof favDialog.showModal === "function") {
     favDialog.showModal();
   } else {
@@ -164,11 +164,11 @@ updateButton.addEventListener('click', function onOpen() {
   }
 });
 // "Favorite animal" input sets the value of the submit button
-selectEl.addEventListener('change', function onSelect(e) {
+selectEl.addEventListener('change', (e) => {
   confirmBtn.value = selectEl.value;
 });
 // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
-favDialog.addEventListener('close', function onClose() {
+favDialog.addEventListener('close', () => {
   outputBox.value = favDialog.returnValue + " button clicked - " + (new Date()).toString();
 });
 ```

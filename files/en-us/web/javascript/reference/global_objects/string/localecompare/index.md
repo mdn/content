@@ -94,7 +94,7 @@ function provided by its {{jsxref("Collator.prototype.compare", "compare")}} pro
 
 ```js
 let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
-items.sort( (a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
+items.sort((a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 

@@ -38,13 +38,9 @@ In this example, an [munder](/en-US/docs/Web/MathML/Element/munder) element is u
 ### Values
 
 - `true`
-   -: Sets the display style to `normal`.
+  - : Sets the display style to `normal`.
 - `false`
-   -: Sets the display style to `compact`.
-
-## Notes on MathML versions
-
-- MathML Core relies on `math-style` to implement the `displaystyle` attribute, but implementations of older MathML versions may follow a different approach to implement similar behavior.
+  - : Sets the display style to `compact`.
 
 ## Specifications
 

@@ -104,7 +104,7 @@ This fetch event tries to return a response from the cache API, falling back to 
 network otherwise.
 
 ```js
-addEventListener('fetch', event => {
+addEventListener('fetch', (event) => {
   // Prevent the default, and handle the request ourselves.
   event.respondWith(async function() {
     // Try to get the response from a cache.

@@ -29,15 +29,15 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 Sample rendering: ![x1](msubsup.png)
 
-Rendering in your browser: <math><msubsup><mo>∫</mo> <mn>0 </mn><mn>1</mn></msubsup></math>
+Rendering in your browser: <math><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup></math>
 
 ```html
 <math displaystyle="true">
 
   <msubsup>
-    <mo> &#x222B;<!--Integral --> </mo>
-    <mn> 0 </mn>
-    <mn> 1 </mn>
+    <mo>&#x222B;<!--Integral --></mo>
+    <mn>0</mn>
+    <mn>1</mn>
   </msubsup>
 
 </math>

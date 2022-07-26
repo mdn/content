@@ -109,4 +109,3 @@ For a full example, see our [Basic shared worker example](https://github.com/mdn
 ## See also
 
 - The {{domxref("SharedWorker")}} interface it belongs to.
-- [another multiply demo](https://anlexn.github.io/shared-worker-mdn/)

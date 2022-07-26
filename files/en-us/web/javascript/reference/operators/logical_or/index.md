@@ -69,7 +69,7 @@ the first operand. See example:
 function A(){ console.log('called A'); return false; }
 function B(){ console.log('called B'); return true; }
 
-console.log( B() || A() );
+console.log(B() || A());
 // logs "called B" due to the function call,
 // then logs true (which is the resulting value of the operator)
 ```

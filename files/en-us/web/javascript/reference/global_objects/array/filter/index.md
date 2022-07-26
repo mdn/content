@@ -21,19 +21,19 @@ The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_
 
 ```js
 // Arrow function
-filter((element) => { /* ... */ } )
-filter((element, index) => { /* ... */ } )
-filter((element, index, array) => { /* ... */ } )
+filter((element) => { /* … */ } )
+filter((element, index) => { /* … */ } )
+filter((element, index, array) => { /* … */ } )
 
 // Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function(element) { /* ... */ })
-filter(function(element, index) { /* ... */ })
-filter(function(element, index, array){ /* ... */ })
-filter(function(element, index, array) { /* ... */ }, thisArg)
+filter(function(element) { /* … */ })
+filter(function(element, index) { /* … */ })
+filter(function(element, index, array){ /* … */ })
+filter(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -176,7 +176,7 @@ const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
  * Filter array items based on search criteria (query)
  */
 const filterItems = (arr, query) => {
-  return arr.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) !== -1)
+  return arr.filter((el) => el.toLowerCase().indexOf(query.toLowerCase()) !== -1)
 }
 
 console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
@@ -191,7 +191,7 @@ The following example tests the behavior of the `filter` method when the array i
 // Modifying each word
 let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
 
-const modifiedWords = words.filter( (word, index, arr) => {
+const modifiedWords = words.filter((word, index, arr) => {
   arr[index+1] +=' extra'
   return word.length < 6
 })
@@ -202,7 +202,7 @@ console.log(modifiedWords)
 
 // Appending new words
 words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
-const appendedWords = words.filter( (word, index, arr) => {
+const appendedWords = words.filter((word, index, arr) => {
   arr.push('new')
   return word.length < 6
 })
@@ -213,7 +213,7 @@ console.log(appendedWords)
 
 // Deleting words
 words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
-const deleteWords = words.filter( (word, index, arr) => {
+const deleteWords = words.filter((word, index, arr) => {
   arr.pop()
   return word.length < 6
 })

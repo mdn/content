@@ -46,10 +46,9 @@ When `Error` is used like a function, that is without {{JSxRef("Operators/new", 
 Therefore, a mere call to `Error` will produce the same output that constructing an `Error` object via the `new` keyword would.
 
 ```js
-// this...
 const x = Error('I was created using a function call!')
 
-// ...has the same functionality as this.
+// above has the same functionality as following
 const y = new Error('I was constructed via the "new" keyword!')
 ```
 

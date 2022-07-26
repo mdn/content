@@ -48,7 +48,7 @@ No notable changes.
   This means that [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo), [`HTMLMediaElement.canPlayType()`](/en-US/docs/Web/API/HTMLMediaElement/canPlayType), and [`MediaSource.isTypeSupported()`](/en-US/docs/Web/API/MediaSource/isTypeSupported) will now accurately report support for playback for AV1 sources based on the provided codec parameters.
   [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo) will also use the information to accurately report on "efficient decoding" of AV1 videos.
   For more information, see {{bug(1757861)}}.
-  
+
 - [`RTCRtpEncodingParameters.maxFramerate`](/en-US/docs/Web/API/RTCRtpEncodingParameters/maxFramerate) is now supported for setting the maximum framerate that can be used to send an encoding (in {{domxref("RTCPeerConnection.addTransceiver()")}} and {{domxref("RTCRtpSender.setParameters()")}}).
   Note that zero if a valid frame rate value, but is interpreted by Firefox as "no frame rate limit".
   For more information, see {{bug(1611957)}}.

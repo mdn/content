@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 ```js
 var sampler = gl.createSampler();
 
-// ...
+// …
 
 gl.deleteSampler(sampler);
 ```
