@@ -12,7 +12,7 @@ This article and its associated example shows how to use inline [SVG](/en-US/doc
 
 ## Basic example
 
-To include an inline SVG in an HTML file, paste the entire SVG file into the HTML file, removing the Here is the source to the example:
+To include an inline SVG in an HTML file, paste the entire SVG file into the HTML file. 
 
 ```html
 <html>
@@ -42,9 +42,9 @@ The page is mainly regular HTML, CSS and JavaScript. The only interesting part i
 
 There are two attributes worth noting:
 
-1.  The `viewBox` attribute establishes a logical coordinate system which the SVG picture's coordinates are relative to. In this case our picture is laid out in a 100 by 100 viewport.
+1.  The [`viewBox`](/en-US/docs/Web/SVG/Attribute/viewBox) attribute establishes a logical coordinate system which the SVG picture's coordinates are relative to. In this case our picture is laid out in a 100 by 100 viewport.
 
-2.  The `preserveAspectRatio` attribute specifies that the aspect ratio must be preserved by centering the picture in the available size, sizing to the maximum of the height or width and then cutting off any overflow.
+2.  The [`preserveAspectRatio`](/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) attribute specifies that the aspect ratio must be preserved by centering the picture in the available size, sizing to the maximum of the height or width and then cutting off any overflow.
 
 ## Best practices
 
@@ -87,4 +87,4 @@ In our example, we've included both the description and title in our `aria-label
 
 ## See also
 
-[Getting started with SVG](/en-US/docs/Web/SVG/Tutorial/Getting_Started)
+- [Getting started with SVG](/en-US/docs/Web/SVG/Tutorial/Getting_Started)
