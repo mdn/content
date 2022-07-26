@@ -162,7 +162,7 @@ The same view is rendered in both the `GET` and `POST` controllers/routes when w
 res.render("genre_form", { title: "Create Genre" });
 res.render("genre_form", {
   title: "Create Genre",
-  genre: genre,
+  genre,
   errors: errors.array(),
 });
 ```
