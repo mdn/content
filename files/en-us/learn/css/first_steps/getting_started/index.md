@@ -105,7 +105,7 @@ For now, we will use the most common way — linking CSS from the head of your d
 
 4. Save your HTML and CSS files and reload the HTML page in a web browser. 
 
-The level one heading at the top of the document is now red. Congratulations — you have successfully applied CSS to an HTML document.
+If the level one heading at the top of the document is now red, congratulations — you have successfully applied CSS to an HTML document.
 
 To continue with this tutorial, you can continue to work in the local `styles.css` file or you can use our interactive editor. 
 
