@@ -103,7 +103,7 @@ In this section, we will be mixing two kinds of constructs: [_statements_](https
 
 Everything else in the [list above](#statements_and_declarations_by_category) is a statement.
 
-Statements and declarations are technical terms used in the formal syntax of JavaScript — colloquially, we would sometimes use them interchangeably. However, there's a noticeable difference in their usage. For example, in most control-flow structures, the body only accepts statements — such as the two arms of an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else):
+The terms "statement" and "declaration" have a precise meaning in the formal syntax of JavaScript that affects where they may be placed in code. For example, in most control-flow structures, the body only accepts statements — such as the two arms of an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else):
 
 ```js
 if (condition)
