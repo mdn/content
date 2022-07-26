@@ -56,10 +56,10 @@ import "module-name";
 
 There are four forms of `import` declarations:
 
-- Named import: `import { export1, export2 } from "module-name";`
-- Default import: `import defaultExport from "module-name";`
-- Namespace import: `import * as name from "module-name";`
-- Side effect import: `import "module-name";`
+- [Named import](#named_import): `import { export1, export2 } from "module-name";`
+- [Default import](#default_import): `import defaultExport from "module-name";`
+- [Namespace import](#namespace_import): `import * as name from "module-name";`
+- [Side effect import](#import_a_module_for_its_side_effects_only): `import "module-name";`
 
 Below are examples to clarify the syntax.
 
@@ -128,7 +128,7 @@ import { default as myDefault } from '/modules/my-module.js';
 
 ### Namespace import
 
-This inserts `myModule` into the current scope, containing all the exports from the module located at `/modules/my-module.js`.
+The following code inserts `myModule` into the current scope, containing all the exports from the module located at `/modules/my-module.js`.
 
 ```js
 import * as myModule from '/modules/my-module.js';
@@ -192,9 +192,9 @@ getUsefulContents(
 );
 ```
 
-### Importing live bindings
+### Imported values can only be modified by the exporter
 
-The identifier being imported is a _live binding_, because the module exporting it may mutate it and the imported value would change. However, the module importing it may not re-assign it.
+The identifier being imported is a _live binding_, because the module exporting it may mutate it and the imported value would change. However, the module importing it cannot re-assign it.
 
 ```js
 // my-module.js

@@ -13,7 +13,7 @@ browser-compat: javascript.statements.export
 ---
 {{jsSidebar("Statements")}}
 
-The **`export`** declaration is used when creating JavaScript modules to export values from the module so they can be used by other programs with the {{jsxref("Statements/import", "import")}} declaration or [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import). The value of an imported binding is subject to change in the module that exports it. When a module updates the value of a binding that it exports, the update will be visible in its imported value.
+The **`export`** declaration is used to export values from a JavaScript module. Exported values can then be imported into other programs with the {{jsxref("Statements/import", "import")}} declaration or [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import). The value of an imported binding is subject to change in the module that exports it — when a module updates the value of a binding that it exports, the update will be visible in its imported value.
 
 In order to use the `export` declaration in a source file, the file must be interpreted by the runtime as a [module](/en-US/docs/Web/JavaScript/Guide/Modules). In HTML, this is done by adding `type="module"` to the 
 {{HTMLElement("script")}} tag, or by being imported by another module. Modules are automatically interpreted in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
@@ -24,7 +24,9 @@ In order to use the `export` declaration in a source file, the file must be inte
 // Exporting declarations
 export let name1, name2/*, … */; // also var
 export const name1 = 1, name2 = 2/*, … */; // also var, let
-export function functionName() { /* … */ } // also class, function*
+export function functionName() { /* … */ }
+export class ClassName { /* … */ }
+export function* generatorFunctionName() { /* … */ }
 export const { name1, name2: bar } = o;
 export const [ name1, name2 ] = array;
 
@@ -36,8 +38,12 @@ export { name1 as default /*, … */ };
 
 // Default exports
 export default expression;
-export default function () { /* … */ } // also class, function*
-export default function name1() { /* … */ } // also class, function*
+export default function functionName() { /* … */ }
+export default class ClassName { /* … */ }
+export default function* generatorFunctionName() { /* … */ }
+export default function () { /* … */ }
+export default class { /* … */ }
+export default function* () { /* … */ }
 
 // Aggregating modules
 export * from "module-name";
@@ -95,11 +101,12 @@ export default function foo() {
 }
 ```
 
-Named exports are useful to export several values. During the import, it is mandatory to import them within curly braces with the same name of the corresponding object. But a default export can be imported with any name. For example:
+Named exports are useful when you need to export several values. When importing this module, named exports must be referred to by the exact same name (optionally renaming it with `as`), but the default export can be imported with any name. For example:
 
 ```js
 // file test.js
-let k; export default k = 12;
+const k = 12;
+export default k;
 ```
 
 ```js
@@ -125,7 +132,7 @@ export { myFunction as "my-function" };
 
 ### Re-exporting / Aggregating
 
-It is also possible to "import/export" from different modules in a parent module so that they are available to import from that module. In other words, one can create a single module concentrating various exports from various modules.
+A module can also "relay" values exported from other modules without the hassle of writing two separate import/export statements. This is often useful when creating a single module concentrating various exports from various modules (usually called a "barrel module").
 
 This can be achieved with the "export from" syntax:
 
