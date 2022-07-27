@@ -151,7 +151,7 @@ to the default native `insertRule()`.
             if (!isEscaped && (newCharCode === 125)) { // 125 = "}".charCodeAt(0)
               closeBracketPos = i;
             }
-            isEscaped ^= newCharCode ===92?1:isEscaped; // 92 = "\\".charCodeAt(0)
+            isEscaped ^= newCharCode===92?1:isEscaped; // 92 = "\\".charCodeAt(0)
           }
 
           if (closeBracketPos === -1) break a; // No closing bracket was found!
