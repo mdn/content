@@ -74,7 +74,7 @@ This article provides information about the changes in Firefox 103 that will aff
 #### Marionette
 
 - Updated the `platformVersion` capability to be returned as `moz:platformVersion`  ({{bug(1771760)}}).
-- Removed support for `ChromeElement`, all elements are now serialized as `WebElement`  ({{bug(1775036)}} and {{bug(1775064)}}).
+- Removed support for `ChromeElement`; all elements are now serialized as `WebElement` ({{bug(1775036)}} and {{bug(1775064)}}).
 
 ## Changes for add-on developers
 
