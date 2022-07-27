@@ -66,6 +66,8 @@ An empty `DocumentFragment` can be created using the {{domxref("document.createD
 
 The performance benefit of `DocumentFragment` is often overstated. In fact, in some engines, using a `DocumentFragment` is slower than appending to the document in a loop.
 
+[Benchmark](https://jsbench.me/02l63eic9j/1). However, the difference between these examples is so marginal, it's better to optimise for readability than performance.
+
 ## Example
 
 ### HTML
