@@ -40,7 +40,7 @@ When the form's submit button is pressed, we run the `addData()` function, which
 function addData(e) {
   e.preventDefault();
 
-  if(title.value === '' || hours.value === null || minutes.value === null || day.value === '' || month.value === '' || year.value === null) {
+  if (title.value === '' || hours.value === null || minutes.value === null || day.value === '' || month.value === '' || year.value === null) {
     note.innerHTML += '<li>Data not submitted — form incomplete.</li>';
     return;
   }
