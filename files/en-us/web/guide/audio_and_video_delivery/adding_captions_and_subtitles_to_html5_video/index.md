@@ -204,7 +204,8 @@ Initially the menu is hidden by default, so an event listener needs to be added 
 ```js
 subtitles.addEventListener('click', function(e) {
    if (subtitlesMenu) {
-      subtitlesMenu.style.display = (subtitlesMenu.style.display === 'block' ? 'none' : 'block');
+      subtitlesMenu.style.display =
+        subtitlesMenu.style.display === 'block' ? 'none' : 'block';
    }
 });
 ```
