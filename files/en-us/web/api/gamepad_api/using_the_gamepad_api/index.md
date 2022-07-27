@@ -165,7 +165,7 @@ After all this is done, we use our `requestAnimationFrame()` to request the next
 
 ```js
 function buttonPressed(b) {
-  if (typeof(b) === "object") {
+  if (typeof b === "object") {
     return b.pressed;
   }
   return b == 1.0;
