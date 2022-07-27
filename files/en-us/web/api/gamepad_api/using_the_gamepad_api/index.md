@@ -279,7 +279,7 @@ function updateStatus() {
       const b = buttons[i];
       let val = controller.buttons[i];
       let pressed = val == 1.0;
-      if (typeof(val) === "object") {
+      if (typeof val === "object") {
         pressed = val.pressed;
         val = val.value;
       }
