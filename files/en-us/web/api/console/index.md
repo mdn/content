@@ -274,7 +274,7 @@ The output in the console looks something like this:
 
 - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
 - [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web console in Firefox handles console API calls
-- [Remote Debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — how to see console output when the debugging target is a mobile device
+- [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) — how to see console output when the debugging target is a mobile device
 
 ### Other implementations
 
