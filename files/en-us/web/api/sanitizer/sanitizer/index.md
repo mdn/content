@@ -9,7 +9,6 @@ tags:
   - sanitize
 browser-compat: api.Sanitizer.Sanitizer
 ---
-
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 The **`Sanitizer()`** constructor creates a new {{domxref("Sanitizer")}} object, which can be used to sanitize untrusted strings of HTML, or untrusted {{domxref("Document")}} or {{domxref("DocumentFragment")}} objects, making them safe for insertion into a document's DOM.
@@ -20,8 +19,8 @@ The constructor `config` option can be used to customize the sanitizer behavior.
 ## Syntax
 
 ```js
-new Sanitizer();
-new Sanitizer(config);
+new Sanitizer()
+new Sanitizer(config)
 ```
 
 ### Parameters
@@ -83,20 +82,20 @@ const sanitized = new Sanitizer().sanitizeFor("div", unsanitized);
 ```js
 const santizerElementSample = to_node("<div style="padding: 10px;" class="container" id="wrapper"><img  style="display: block; box-sizing: border-box;" class="img-hero" src="./picture.jpg" alt=""></div>);
 
-new Sanitizer({allowElements: [ "div" ]}).sanitize(santizerElementSample);
+new Sanitizer({ allowElements: ["div"] }).sanitize(santizerElementSample);
 // Result (the inner element of div'): will be removed, showing only: "<div style="padding: 10px;" class="container" id="wrapper"></div>"
 
 
-new Sanitizer({blockElements: [ "div" ]}).sanitize(santizerElementSample);
+new Sanitizer({ blockElements: ["div"] }).sanitize(santizerElementSample);
 // Result (the inner element of div): will be preserved, blocking only the div element. Showing: "<img  style="display: block; box-sizing: border-box;" class="img-hero" src="./picture.jpg" alt="">"
 
-new Sanitizer({dropElements: [ "div" ]}).sanitize(santizerElementSample);
+new Sanitizer({ dropElements: ["div"] }).sanitize(santizerElementSample);
 // Result (both div and the inner element): will be removed.
 
-new Sanitizer({allowAttributes: {"style": ["img"]}}).sanitize(santizerElementSample);
+new Sanitizer({ allowAttributes: { style: ["img"] } }).sanitize(santizerElementSample);
 // Result (the style attribute): on the div element will be removed. Preserving the style attribute only on the img element.
 
-new Sanitizer({dropAttributes: {"class": ["span"]}}).sanitize(santizerElementSample);
+new Sanitizer({ dropAttributes: { class: ["span"] } }).sanitize(santizerElementSample);
 // Result (the class attribute): on both div and img elements will be removed.
 
 ```
@@ -106,13 +105,13 @@ new Sanitizer({dropAttributes: {"class": ["span"]}}).sanitize(santizerElementSam
 ```js
 const hierarchySample = to_node("<div class="container" id="wrapper"><img  style="display: block; box-sizing: border-box;" class="img-hero" src="./picture.jpg" alt=""></div> <h4>Sample title</h4> <span>Sample text</span>")
 
-new Sanitizer({blockElements: [ "div" ]}).sanitize(hierarchySample);
+new Sanitizer({ blockElements: ["div"] }).sanitize(hierarchySample);
 // Result (the inner element of div): will be preserved, blocking only the div element. Showing: "<img  style="display: block; box-sizing: border-box;" class="img-hero" src="./picture.jpg" alt=""> <h4>Sample title</h4> <span>Sample text</span>"
 
-new Sanitizer({dropElements: [ "div" ]}).sanitize(hierarchySample);
+new Sanitizer({ dropElements: ["div"] }).sanitize(hierarchySample);
 // Result (both div and the inner element): will be removed. Showing only: "<h4>Sample title</h4> <span>Sample text</span>"
 
-new Sanitizer({allowElements: [ "h4" ]}).sanitize(hierarchySample);
+new Sanitizer({ allowElements: ["h4"] }).sanitize(hierarchySample);
 // Result (both div and the inner element) from the blockElements and dropElements parameters on the top level are removed. (The span element is dropped) showing only: <h4>Sample title</h4>
 
 ```
