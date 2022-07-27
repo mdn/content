@@ -80,7 +80,7 @@ const sanitized = new Sanitizer().sanitizeFor("div", unsanitized);
 <!-- Add other examples showing use of parameter -->
 
 ```js
-const santizerElementSample = to_node("<div style="padding: 10px;" class="container" id="wrapper"><img  style="display: block; box-sizing: border-box;" class="img-hero" src="./picture.jpg" alt=""></div>);
+const santizerElementSample = to_node('<div style="padding: 10px;" class="container" id="wrapper"><img  style="display: block; box-sizing: border-box;" class="img-hero" src="./picture.jpg" alt=""></div>');
 
 new Sanitizer({ allowElements: ["div"] }).sanitize(santizerElementSample);
 // Result (the inner element of div'): will be removed, showing only: "<div style="padding: 10px;" class="container" id="wrapper"></div>"
