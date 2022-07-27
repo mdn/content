@@ -135,16 +135,16 @@ to the default native `insertRule()`.
 
 ```js
 (function(Sheet_proto){
-  const originalInsertRule = Sheet_proto.insertRule;
+  var originalInsertRule = Sheet_proto.insertRule;
 
   if (originalInsertRule.length === 2){ // 2 mandatory arguments: (selector, rules)
     Sheet_proto.insertRule = function(selectorAndRule){
       // First, separate the selector from the rule
-      a: for (let i=0, Len=selectorAndRule.length, isEscaped=0, newCharCode=0; i !== Len; ++i) {
+      a: for (var i=0, Len=selectorAndRule.length, isEscaped=0, newCharCode=0; i !== Len; ++i) {
         newCharCode = selectorAndRule.charCodeAt(i);
         if (!isEscaped && (newCharCode === 123)) { // 123 = "{".charCodeAt(0)
           // Secondly, find the last closing bracket
-          let openBracketPos = i, closeBracketPos = -1;
+          var openBracketPos = i, closeBracketPos = -1;
 
           for (; i !== Len; ++i) {
             newCharCode = selectorAndRule.charCodeAt(i);
