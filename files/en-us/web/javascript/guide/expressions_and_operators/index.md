@@ -51,7 +51,7 @@ A binary operator requires two operands, one before the operator and one after t
 operand1 operator operand2
 ```
 
-For example, `3+4` or `x*y`. This form is called an _infix_ binary operator, because the operator is placed between two operands. All binary operators in JavaScript are infix.
+For example, `3 + 4` or `x * y`. This form is called an _infix_ binary operator, because the operator is placed between two operands. All binary operators in JavaScript are infix.
 
 A unary operator requires a single operand, either before or after the operator:
 
