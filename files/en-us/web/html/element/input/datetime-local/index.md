@@ -340,7 +340,7 @@ It's that simple. Just prepare your code for any number of digits. Do not only p
 ```js
 function setValue(element, date) {
   const isoString = date.toISOString()
-  element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
+  element.value = isoString.substring(0, isoString.indexOf("T") + 6);
 }
 ```
 
