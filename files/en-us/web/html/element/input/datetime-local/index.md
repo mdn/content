@@ -492,7 +492,7 @@ function populateDays(month) {
   // 31 or 30 days?
   if (month === 'January' || month === 'March' || month === 'May' || month === 'July' || month === 'August' || month === 'October' || month === 'December') {
     dayNum = 31;
-  } else if (month === 'April' || month === 'June' || month === 'September' || month === 'November') {
+  } else if (['April', 'June', 'September', 'November'].includes(month)) {
     dayNum = 30;
   } else {
   // If month is February, calculate whether it is a leap year or not
