@@ -108,7 +108,7 @@ A BigInt value is not strictly equal to a Number value, but it _is_ loosely so:
 0n === 0
 // ↪ false
 
-0n === 0
+0n == 0
 // ↪ true
 ```
 
