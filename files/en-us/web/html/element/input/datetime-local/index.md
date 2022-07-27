@@ -339,8 +339,8 @@ It's that simple. Just prepare your code for any number of digits. Do not only p
 
 ```js
 function setValue(element, date) {
-    const isoString = date.toISOString()
-    element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
+  const isoString = date.toISOString()
+  element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
 }
 ```
 
@@ -498,11 +498,7 @@ function populateDays(month) {
   // If month is February, calculate whether it is a leap year or not
     const year = yearSelect.value;
     const isLeap = new Date(year, 1, 29).getMonth() === 1;
-    if (isLeap) {
-      dayNum = 29;
-    } else {
-      dayNum = 28;
-    }
+    dayNum = isLeap ? 29 : 28;
   }
 
   // inject the right number of new <option> elements into the day <select>
@@ -569,11 +565,11 @@ function populateMinutes() {
 
 // when the month or year <select> values are changed, rerun populateDays()
 // in case the change affected the number of available days
-yearSelect.onchange = function() {
+yearSelect.onchange = () => {
   populateDays(monthSelect.value);
 }
 
-monthSelect.onchange = function() {
+monthSelect.onchange = () => {
   populateDays(monthSelect.value);
 }
 
