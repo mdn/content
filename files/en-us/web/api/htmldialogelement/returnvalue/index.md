@@ -69,7 +69,7 @@ dialog.
       }
 
       function handleUserInput(returnValue) {
-        if (returnValue === 'Cancel' || returnValue === '') {
+        if (!returnValue || returnValue === 'Cancel') {
           // User canceled the dialog, do nothing
         } else if (returnValue === 'Confirm') {
           // User chose a favorite animal, do something with it
