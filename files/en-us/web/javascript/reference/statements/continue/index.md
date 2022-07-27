@@ -100,7 +100,7 @@ checkiandj: while (i < 4) {
 
 Output:
 
-```js
+```
 i: 0
 
 // start checkj
