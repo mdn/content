@@ -24,7 +24,7 @@ There are four equality algorithms in JavaScript:
 
 JavaScript provides three different value-comparison operations:
 
-- [ ===](/en-US/docs/Web/JavaScript/Reference/Operators#identity) — IsStrictlyEqual ("strict equality", "identity", "triple equals")
+- [===](/en-US/docs/Web/JavaScript/Reference/Operators#identity) — IsStrictlyEqual ("strict equality", "identity", "triple equals")
 - [==](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators) — IsLooselyEqual ("loose equality", "double equals")
 - {{jsxref("Object.is")}} — SameValue.
 
@@ -127,7 +127,7 @@ Similar to same-value equality, but +0 and -0 are considered equal.
 
 ## A model for understanding equality comparisons?
 
-People often compare double equals and triple equals by saying one is an "enhanced" version of the other. For example, double equals could be said as an extended version of triple equals, because the former does everything that the latter does, but with type conversion on its operands — for example, `6 === "6"`. Alternatively, it can be claimed that double equals is the baseline, and triple equals is an enhanced version, because it requires the two operands to be the same type, so it adds an extra constraint.
+People often compare double equals and triple equals by saying one is an "enhanced" version of the other. For example, double equals could be said as an extended version of triple equals, because the former does everything that the latter does, but with type conversion on its operands — for example, `6 == "6"`. Alternatively, it can be claimed that double equals is the baseline, and triple equals is an enhanced version, because it requires the two operands to be the same type, so it adds an extra constraint.
 
 However, this way of thinking implies that the equality comparisons form a one-dimensional "spectrum" where "totally strict" lies on one end and "totally loose" lies on the other. This model falls short with {{jsxref("Object.is")}}, because it isn't "looser" than double equals or "stricter" than triple equals, nor does it fit somewhere in between (i.e., being both stricter than double equals, but looser than triple equals). We can see from the sameness comparisons table below that this is due to the way that {{jsxref("Object.is")}} handles {{jsxref("NaN")}}. Notice that if `Object.is(NaN, NaN)` evaluated to `false`, we _could_ say that it fits on the loose/strict spectrum as an even stricter form of triple equals, one that distinguishes between `-0` and `+0`. The {{jsxref("NaN")}} handling means this is untrue, however. Unfortunately, {{jsxref("Object.is")}} has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.
 
