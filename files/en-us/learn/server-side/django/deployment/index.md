@@ -451,12 +451,12 @@ After installing all the different dependencies above, your **requirements.txt**
 Please delete any other dependencies not listed below, unless you've explicitly added them for this application.
 
 ```plain
-dj-database-url === 0.5.0
-Django === 4.0.2
-gunicorn === 20.1.0
-psycopg2-binary === 2.9.3
-wheel === 0.37.1
-whitenoise === 6.0.0
+dj-database-url == 0.5.0
+Django == 4.0.2
+gunicorn == 20.1.0
+psycopg2-binary == 2.9.3
+wheel == 0.37.1
+whitenoise == 6.0.0
 ```
 
 > **Note:** Make sure that a **psycopg2** line like the one above is present!
