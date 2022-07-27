@@ -25,7 +25,7 @@ This article provides information about the changes in Firefox 103 that will aff
 
 ### CSS
 
-- The {{CSSxRef("backdrop-filter")}} property is now available by default. It was earlier behind a preference setting ({{bug(1578503)}}).
+- The {{CSSxRef("backdrop-filter")}} property (which can be used to apply graphical effects such as blurring or color shifting to the area behind an element) is now available by default. It was earlier behind a preference setting ({{bug(1578503)}}).
 - The {{CSSxRef("scroll-snap-stop")}} property is now available ({{bug(1312165)}}). You can use this property's `always` and `normal` values to specify whether or not to pass the snap points, even when scrolling fast.
 
 #### Removals
