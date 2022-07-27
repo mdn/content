@@ -32,7 +32,6 @@ The output of the `MediaStream` object is linked to a **consumer**. It can be a 
 
 In these reference articles, you'll find the fundamental information you'll need to know about each of the interfaces that make up the Media Capture and Streams API.
 
-- {{domxref("BlobEvent")}}
 - {{domxref("CanvasCaptureMediaStreamTrack")}}
 - {{domxref("InputDeviceInfo")}}
 - {{domxref("MediaDeviceKind")}}

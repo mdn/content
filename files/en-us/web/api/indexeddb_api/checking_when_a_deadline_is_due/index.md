@@ -66,11 +66,11 @@ In this segment, we check to see if the form fields have all been filled in. If 
     const transaction = db.transaction(["toDoList"], "readwrite");
 
     // report on the success of opening the transaction
-    transaction.oncomplete = event => {
+    transaction.oncomplete = (event) => {
       note.innerHTML += '<li>Transaction opened for task addition.</li>';
     };
 
-    transaction.onerror = event => {
+    transaction.onerror = (event) => {
       note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
     };
 
@@ -86,7 +86,7 @@ In this section we create an object called `newItem` that stores the data in the
 > **Note:** The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
 
 ```js
-    request.onsuccess = event => {
+    request.onsuccess = (event) => {
 
       note.innerHTML += '<li>New item added to database.</li>';
 
@@ -134,7 +134,7 @@ The `Date` object has a number of methods to extract various parts of the date a
 ```js
    const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
-  objectStore.openCursor().onsuccess = event => {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
 
     if(cursor) {

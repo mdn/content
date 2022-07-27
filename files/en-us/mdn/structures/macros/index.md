@@ -22,7 +22,7 @@ Macros on MDN are implemented using server-executed [JavaScript](/en-US/docs/Web
 
 To use a macro, you enclose the call to the macro in a pair of double-braces along with its parameters, if any:
 
-```js
+```plain
 \{{macroname(parameter-list)}}
 ```
 

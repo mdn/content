@@ -269,7 +269,7 @@ Doing so returns the local peer to the `stable` {{domxref("RTCPeerConnection.sig
 Using the previous API to implement incoming negotiation messages during perfect negotiation would look something like this:
 
 ```js example-bad
-signaler.onmessage = async({data: { description, candidate }}) => {
+signaler.onmessage = async ({data: { description, candidate }}) => {
   try {
     if (description) {
       if (description.type == "offer" && pc.signalingState != "stable") {
@@ -377,7 +377,7 @@ The techniques previously used to trigger an [ICE restart](/en-US/docs/Web/API/W
 In the past, if you encountered an ICE error and needed to restart negotiation, you might have done something like this:
 
 ```js example-bad
-pc.onnegotiationneeded = async options => {
+pc.onnegotiationneeded = async (options) => {
   await pc.setLocalDescription(await pc.createOffer(options));
   signaler.send({ description: pc.localDescription });
 };

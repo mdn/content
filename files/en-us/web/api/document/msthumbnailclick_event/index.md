@@ -47,7 +47,7 @@ Pointer to an IHTMLEventObj interface for the current event.
 ```js
 function thumbnailClickHandler(evt)
 {
-    alert ("Clicked button: " + evt.buttonID);
+    alert(`Clicked button: ${evt.buttonID}`);
 }
 document.addEventListener('msthumbnailclick', thumbnailClickHandler);
 ```

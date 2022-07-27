@@ -21,7 +21,7 @@ tags:
 
 ## How-to's
 
-1. [Accessiblity for frontend developers](https://accessibility.digital.gov/front-end/getting-started/)
+1. [Accessibility for frontend developers](https://accessibility.digital.gov/front-end/getting-started/)
 
     A brief guide from the U.S. General Services administration’s Technology Transformation Services covering several accessibility topics with links to "how-to" videos and to related WCAG references.
 
@@ -35,7 +35,7 @@ Use a tool to quickly check for common errors in your browser.
 
 - [HTML CodeSniffer](http://squizlabs.github.io/HTML_CodeSniffer/)
 - [aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US)
-- [Lighthouse Accessibility Audit](https://developers.google.com/web/tools/lighthouse/)
+- [Lighthouse Accessibility Audit](https://developer.chrome.com/docs/lighthouse/overview/)
 - [Accessibility Insights](https://accessibilityinsights.io/)
 - [<abbr>WAVE</abbr>](http://wave.webaim.org/extension/)
 

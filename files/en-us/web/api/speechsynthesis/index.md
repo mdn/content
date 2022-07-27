@@ -76,14 +76,14 @@ const pitchValue = document.querySelector('.pitch-value');
 const rate = document.querySelector('#rate');
 const rateValue = document.querySelector('.rate-value');
 
-const voices = [];
+let voices = [];
 
 function populateVoiceList() {
   voices = synth.getVoices();
 
   for(let i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+    option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
     if(voices[i].default) {
       option.textContent += ' — DEFAULT';

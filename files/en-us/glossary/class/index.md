@@ -9,7 +9,7 @@ In {{glossary("OOP","object-oriented programming")}}, a _class_ defines an {{glo
 
 ## See also
 
-- [Class-based vs. prototype-based programming languages](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages) (like JavaScript)
 - [Using functions as classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects#the_class)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [Class-based programming](https://en.wikipedia.org/wiki/Class-based_programming) on Wikipedia
 - [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) on Wikipedia

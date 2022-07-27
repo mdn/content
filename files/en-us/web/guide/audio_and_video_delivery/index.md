@@ -88,7 +88,7 @@ We set the source of the audio depending on the type of audio file the browser s
 It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing to generate audio on the fly:
 
 ```html
-<audio id="player" src="data:audio/x-wav;base64,UklGRvC..."></audio>
+<audio id="player" src="data:audio/x-wav;base64,UklGRvC…"></audio>
 ```
 
 [Speak.js](https://github.com/kripken/speak.js/) employs this technique. [Try the demo](https://speak-demo.herokuapp.com).
@@ -248,13 +248,12 @@ A quick example — first set up your audio and custom controls in HTML:
 add a bit of JavaScript to detect events to play and pause the audio:
 
 ```js
-window.onload = function() {
-
+window.onload = () => {
   const myAudio = document.getElementById('my-audio');
   const myControl = document.getElementById('my-control');
 
   function switchState() {
-    if (myAudio.paused == true) {
+    if (myAudio.paused) {
       myAudio.play();
       myControl.textContent = "pause";
     } else {
@@ -264,16 +263,16 @@ window.onload = function() {
   }
 
   function checkKey(e) {
-    if (e.keycode == 32 ) { //spacebar
+    if (e.keycode == 32) { // space bar
       switchState();
     }
   }
 
-  myControl.addEventListener('click', function() {
+  myControl.addEventListener('click', () => {
     switchState();
   }, false);
 
-  window.addEventListener( "keypress", checkKey, false );
+  window.addEventListener("keypress", checkKey, false);
 }
 ```
 

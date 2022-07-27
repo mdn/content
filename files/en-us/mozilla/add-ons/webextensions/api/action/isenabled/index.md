@@ -53,7 +53,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Check the global state:
 
 ```js
-browser.action.isEnabled({}).then(result => {
+browser.action.isEnabled({}).then((result) => {
   console.log(result);
 });
 ```

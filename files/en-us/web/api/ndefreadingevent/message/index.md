@@ -30,11 +30,11 @@ const ndefReader = new NDEFReader();
     return new Promise((resolve, reject) => {
       const ctlr = new AbortController();
       ctlr.signal.onabort = reject;
-      ndefReader.addEventListener("reading", event => {
+      ndefReader.addEventListener("reading", (event) => {
         ctlr.abort();
         resolve(event);
       }, { once: true });
-      ndefReader.scan({ signal: ctlr.signal }).catch(err => reject(err));
+      ndefReader.scan({ signal: ctlr.signal }).catch((err) => reject(err));
     });
   }
 

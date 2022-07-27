@@ -44,8 +44,8 @@ the results to the console.
 ```js
 // check supported types
 BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats => {
-    supportedFormats.forEach(format => console.log(format));
+  .then((supportedFormats) => {
+    supportedFormats.forEach((format) => console.log(format));
   });
 ```
 

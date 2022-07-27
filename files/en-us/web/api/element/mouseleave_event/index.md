@@ -141,16 +141,16 @@ let leaveEventCount = 0;
 const mouseTarget = document.getElementById('mouseTarget');
 const unorderedList = document.getElementById('unorderedList');
 
-mouseTarget.addEventListener('mouseenter', e => {
+mouseTarget.addEventListener('mouseenter', (e) => {
   mouseTarget.style.border = '5px dotted orange';
   enterEventCount++;
-  addListItem('This is mouseenter event ' + enterEventCount + '.');
+  addListItem(`This is mouseenter event ${enterEventCount}.`);
 });
 
-mouseTarget.addEventListener('mouseleave', e => {
+mouseTarget.addEventListener('mouseleave', (e) => {
   mouseTarget.style.border = '1px solid #333';
   leaveEventCount++;
-  addListItem('This is mouseleave event ' + leaveEventCount + '.');
+  addListItem(`This is mouseleave event ${leaveEventCount}.`);
 });
 
 function addListItem(text) {

@@ -12,7 +12,7 @@ tags:
   - active
 browser-compat: api.MediaStream.active
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The **`active`** read-only property of the
 {{domxref("MediaStream")}} interface returns a Boolean value which is

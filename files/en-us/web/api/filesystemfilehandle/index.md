@@ -41,25 +41,25 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 The following asynchronous function presents a file picker and once a file is chosen, uses the `getFile()` method to retrieve the contents.
 
 ```js
-const pickerOpts = {
-  types: [
-    {
-      description: 'Images',
-      accept: {
-        'image/*': ['.png', '.gif', '.jpeg', '.jpg']
-      }
-    },
-  ],
-  excludeAcceptAllOption: true,
-  multiple: false
-};
-
 async function getTheFile() {
-  // open file picker
-  [fileHandle] = await window.showOpenFilePicker(pickerOpts);
+  const pickerOpts = {
+    types: [
+      {
+        description: 'Images',
+        accept: {
+          'image/*': ['.png', '.gif', '.jpeg', '.jpg'],
+        },
+      },
+    ],
+    excludeAcceptAllOption: true,
+    multiple: false,
+  };
 
+  // open file picker
+  const [fileHandle] = await window.showOpenFilePicker(pickerOpts);
   // get file contents
   const fileData = await fileHandle.getFile();
+  return fileData;
 }
 ```
 

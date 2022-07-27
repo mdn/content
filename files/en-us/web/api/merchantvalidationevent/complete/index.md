@@ -50,7 +50,7 @@ This exception may be passed into the rejection handler for the promise:
 In this example, we see the client-side code needed to support merchant validation for a payment request called `payRequest`:
 
 ```js
-payRequest.onmerchantvalidation = event => {
+payRequest.onmerchantvalidation = (event) => {
   const validationDataPromise = getValidationData(event.validationURL);
   event.complete(validationDataPromise);
 }

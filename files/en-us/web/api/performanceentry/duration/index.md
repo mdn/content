@@ -58,10 +58,10 @@ The following example shows the use of the `duration` property.
 
 ```js
 function run_PerformanceEntry() {
-  log("PerformanceEntry support ...");
+  console.log("PerformanceEntry support…");
 
   if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
+    console.log("The property performance.mark is not supported");
     return;
   }
 
@@ -73,7 +73,7 @@ function run_PerformanceEntry() {
   // Use getEntries() to iterate through the each entry
   const p = performance.getEntries();
   for (let i=0; i < p.length; i++) {
-    log("Entry[" + i + "]");
+    log(`Entry[${i}]`);
     check_PerformanceEntry(p[i]);
   }
 }
@@ -85,18 +85,18 @@ function check_PerformanceEntry(obj) {
     // check each property
     const supported = properties[i] in obj;
     if (supported)
-      log("..." + properties[i] + " = " + obj[properties[i]]);
+      console.log(`…${properties[i]} = ${obj[properties[i]]}`);
     else
-      log("..." + properties[i] + " = Not supported");
+      console.log(`…${properties[i]} = Not supported`);
   }
   for (let i=0; i < methods.length; i++) {
     // check each method
     const supported = typeof obj[methods[i]] == "function";
     if (supported) {
       const js = obj[methods[i]]();
-      log("..." + methods[i] + "() = " + JSON.stringify(js));
+      console.log(`…${methods[i]}() = ${JSON.stringify(js)}`);
     } else {
-      log("..." + methods[i] + " = Not supported");
+      console.log(`…${methods[i]} = Not supported`);
     }
   }
 }

@@ -73,8 +73,8 @@ example every iteration will remove the next element from an array, until it is 
 ```js
 const names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
 
-while( typeof (i = names.shift()) !== 'undefined' ) {
-    console.log(i);
+while (typeof (i = names.shift()) !== 'undefined') {
+  console.log(i);
 }
 // Andrew, Edward, Paul, Chris, John
 ```

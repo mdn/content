@@ -177,7 +177,7 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
   - `{{htmlelement('body')}}`
 
-    User visible page content in small chunks ( `{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
+    User visible page content in small chunks (`{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
 
     - `{{htmlelement('script')}}`
 

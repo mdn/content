@@ -19,7 +19,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackSupportedConstraints.logicalSurface
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`logicalSurface`** property indicates whether or not the

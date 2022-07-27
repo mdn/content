@@ -74,9 +74,7 @@ Then the value of `innerHTML` is changed to this new string.
 As a result, the document contents are replaced with a display of the page's entire source code.
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(/</g,"&lt;")}</pre>`;
 ```
 
 #### Operational details
@@ -123,7 +121,7 @@ It is not uncommon to see `innerHTML` used to insert text into a web page.
 There is potential for this to become an attack vector on a site, creating a potential security risk.
 
 ```js
-const name = "John";
+let name = "John";
 // assuming 'el' is an HTML DOM element
 el.innerHTML = name; // harmless in this case
 
@@ -168,7 +166,7 @@ function log(msg) {
 
   const time = new Date();
   const timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += timeStr + ": " + msg + "<br/>";
+  logElem.innerHTML += `${timeStr}: ${msg}<br/>`;
 }
 
 log("Logging mouse events inside this container…");
@@ -183,8 +181,7 @@ We add a second method that logs information about {{domxref("MouseEvent")}} bas
 
 ```js
 function logEvent(event) {
-  const msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  const msg = `Event <strong>${event.type}</strong> at <em>${event.clientX}, ${event.clientY}</em>`;
   log(msg);
 }
 ```

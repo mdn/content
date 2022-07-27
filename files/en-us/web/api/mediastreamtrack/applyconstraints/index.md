@@ -12,7 +12,7 @@ tags:
   - applyConstraints
 browser-compat: api.MediaStreamTrack.applyConstraints
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The
 **`applyConstraints()`** method
@@ -75,13 +75,13 @@ const constraints = {
 };
 
 navigator.mediaDevices.getUserMedia({ video: true })
-.then(mediaStream => {
+.then((mediaStream) => {
   const track = mediaStream.getVideoTracks()[0];
   track.applyConstraints(constraints)
   .then(() => {
     // Do something with the track such as using the Image Capture API.
   })
-  .catch(e => {
+  .catch((e) => {
     // The constraints could not be satisfied by the available devices.
   });
 });

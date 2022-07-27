@@ -17,7 +17,7 @@ This file may be cached on the disk or stored in memory at the discretion of the
 
 The desired file format and image quality may be specified.
 If the file format is not specified, or if the given format is not supported, then the data will be exported as `image/png`.
-Browsers are required to support `image/png`; many will support additional formats including `image/jpg` and `image/webp`.
+Browsers are required to support `image/png`; many will support additional formats including `image/jpeg` and `image/webp`.
 
 The created image will have a resolution of 96dpi for file formats that support encoding resolution metadata.
 
@@ -105,7 +105,7 @@ function blobCallback(iconName) {
     a.textContent = 'Download';
     document.body.appendChild(a);
     a.style.display = 'block';
-    a.download = iconName + '.ico';
+    a.download = `${iconName}.ico`;
     a.href = window.URL.createObjectURL(b);
   }
 }
@@ -136,9 +136,9 @@ function blobCallback(iconName) {
     // r.result contains the ArrayBuffer.
     Cu.import('resource://gre/modules/osfile.jsm');
     const writePath = OS.Path.join(OS.Constants.Path.desktopDir,
-                                 iconName + '.ico');
+                                 `${iconName}.ico`);
     const promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result),
-                                      {tmpPath:writePath + '.tmp'});
+                                      {tmpPath:`${writePath}.tmp`});
     promise.then(
       function() {
         console.log('successfully wrote file');

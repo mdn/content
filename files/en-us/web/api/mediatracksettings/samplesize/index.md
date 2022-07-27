@@ -16,7 +16,7 @@ tags:
   - sampleSize
 browser-compat: api.MediaTrackSettings.sampleSize
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`sampleSize`** property is an integer indicating the linear

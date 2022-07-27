@@ -83,10 +83,10 @@ const importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.run());
   })
-  .catch(e => {
+  .catch((e) => {
     console.log(`stack: ${e.stack}`);
   });
 

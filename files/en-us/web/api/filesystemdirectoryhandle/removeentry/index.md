@@ -59,7 +59,7 @@ The following example removes an entry within the directory handle.
 const entryName = 'entryToRemove';
 
 // assuming we have a directory handle: 'currentDirHandle'
-currentDirHandle.removeEntry(entryName).then( () => {
+currentDirHandle.removeEntry(entryName).then(() => {
   // code to run if removing was successful
 } );
 ```

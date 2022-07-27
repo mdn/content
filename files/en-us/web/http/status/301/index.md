@@ -46,5 +46,6 @@ Location: http://www.example.org/index.asp
 
 ## See also
 
-- {{HTTPStatus("308", "308 Permanent Redirect")}}
-- {{HTTPStatus("302", "302 Found")}}, the temporary redirect
+- {{HTTPStatus("308", "308 Permanent Redirect")}}, the equivalent of this status code
+  where the method used never changes.
+- {{HTTPStatus("302", "302 Found")}}, a temporary redirect

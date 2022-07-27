@@ -123,8 +123,7 @@ var info = document.getElementById("info");
 var target = frameDoc.getElementById("overview");
 frameDoc.scrollingElement.scrollTop = target.offsetTop;
 
-info.innerText = "Y offset after scrolling: " +
-                 frame.contentWindow.pageYOffset + " pixels";
+info.innerText = `Y offset after scrolling: ${frame.contentWindow.pageYOffset} pixels`;
 ```
 
 The JavaScript code begins by getting into `frame` and `info` the

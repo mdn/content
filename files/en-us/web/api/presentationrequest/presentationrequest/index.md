@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.PresentationRequest.PresentationRequest
 ---
-{{APIRef("Presentation API")}}{{Non-standard_header}}
+{{DefaultAPISidebar("Presentation API")}}{{Non-standard_header}}
 
 The **`PresentationRequest()`**
 constructor creates a new {{domxref("PresentationRequest")}} object which creates a

@@ -304,9 +304,9 @@ function doStep3(init, callback) {
 }
 
 function doOperation() {
-  doStep1(0, result1 => {
-    doStep2(result1, result2 => {
-      doStep3(result2, result3 => {
+  doStep1(0, (result1) => {
+    doStep2(result1, (result2) => {
+      doStep3(result2, (result3) => {
         console.log(`result: ${result3}`);
       });
     });

@@ -109,12 +109,12 @@ function drop_handler(ev) {
     } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
       // Drag data item is HTML
       data[i].getAsString(function (s){
-        console.log("… Drop: HTML = " + s);
+        console.log(`… Drop: HTML = ${s}`);
       });
     } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
       // Drag data item is URI
       data[i].getAsString(function (s){
-        console.log("… Drop: URI = " + s);
+        console.log(`… Drop: URI = ${s}`);
       });
     }
   }

@@ -22,8 +22,8 @@ The **`storage`** event of the {{domxref("Window")}} interface fires when a stor
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('storage', event => { });
-onstorage = event => { };
+addEventListener('storage', (event) => { });
+onstorage = (event) => { };
 ```
 
 ## Event type

@@ -159,11 +159,11 @@ For example, the play/pause button has the following background image definition
 
 ```css
 .controls button[data-state="play"] {
-   background-image: url('data:image/png;base64,iVBORw0KGgoAAA ... ');
+   background-image: url('data:image/png;base64,iVBORw0KGgoAAA…');
 }
 
 .controls button[data-state="pause"] {
-   background-image: url('data:image/png;base64,iVBORw0KGgoAAA ... ');
+   background-image: url('data:image/png;base64,iVBORw0KGgoAAA…');
 }
 ```
 

@@ -111,11 +111,11 @@ function A() { console.log('A was called'); return undefined;}
 function B() { console.log('B was called'); return false;}
 function C() { console.log('C was called'); return "foo";}
 
-console.log( A() ?? C() );
+console.log(A() ?? C());
 // logs "A was called" then "C was called" and then "foo"
 // as A() returned undefined so both expressions are evaluated
 
-console.log( B() ?? C() );
+console.log(B() ?? C());
 // logs "B was called" then "false"
 // as B() returned false (and not null or undefined), the right
 // hand side expression was not evaluated

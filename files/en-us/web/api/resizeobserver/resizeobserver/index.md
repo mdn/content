@@ -57,20 +57,20 @@ The following snippet is taken from the [resize-observer-text.html](https://mdn.
 ([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize[0].inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize[0].inlineSize/600) + 'rem';
+        h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize[0].inlineSize / 200)}rem`;
+        pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize[0].inlineSize / 600)}rem`;
       } else {
         // legacy path
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize.inlineSize/600) + 'rem';
+        h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize.inlineSize / 200)}rem`;
+        pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize.inlineSize / 600)}rem`;
       }
     } else {
-      h1Elem.style.fontSize = Math.max(1.5, entry.contentRect.width/200) + 'rem';
-      pElem.style.fontSize = Math.max(1, entry.contentRect.width/600) + 'rem';
+      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentRect.width / 200)}rem`;
+      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
   }
   console.log('Size changed');

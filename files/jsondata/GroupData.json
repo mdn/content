@@ -750,7 +750,9 @@
       "overview": ["Intersection Observer API"],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": [],
+      "properties": [
+        "indexedDB"
+      ],
       "events": []
     },
     "Layout Instability API": {
@@ -788,13 +790,12 @@
       "dictionaries": []
     },
     "Media Capture and Streams": {
-      "overview": ["Media Streams API"],
+      "overview": ["Media Capture and Streams API"],
       "guides": [
         "/docs/Web/API/Media_Streams_API/Constraints",
         "/docs/Web/API/Media_Streams_API/Taking_still_photos"
       ],
       "interfaces": [
-        "BlobEvent",
         "CanvasCaptureMediaStreamTrack",
         "MediaDevices",
         "MediaStream",
@@ -1005,8 +1006,6 @@
         "Element.releasePointerCapture()"
       ],
       "properties": [
-        "GlobalEventHandlers.ongotpointercapture",
-        "GlobalEventHandlers.onlostpointercapture",
         "Navigator.maxTouchPoints"
       ],
       "events": [

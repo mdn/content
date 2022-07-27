@@ -131,7 +131,7 @@ if (condition_1) {
 
 In the case of multiple conditions, only the first logical condition which evaluates to
 `true` will be executed. To execute multiple statements, group them within a
-block statement (`{ … }`).
+block statement (`{ /* … */ }`).
 
 #### Best practice
 
@@ -534,7 +534,7 @@ function doSomethingErrorProne() {
     doSomethingToGetAJavascriptError();
   }
 }
-⋮
+
 try {
   doSomethingErrorProne();
 } catch (e) {               // NOW, we actually use `console.error()`

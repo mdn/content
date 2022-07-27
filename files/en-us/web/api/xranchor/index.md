@@ -46,7 +46,7 @@ frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
   // Do stuff with the anchor (assign objects that will be relative to this anchor)
 
 }, (error) => {
-  console.error("Could not create anchor: " + error);
+  console.error(`Could not create anchor: ${error}`);
 });
 ```
 

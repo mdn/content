@@ -22,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connect', event => { });
+addEventListener('connect', (event) => { });
 
-onconnect = event => { };
+onconnect = (event) => { };
 ```
 
 ## Event type
@@ -59,7 +59,7 @@ self.onconnect = function(e) {
     const port = e.ports[0];
 
     port.onmessage = function(e) {
-      const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+      const workerResult = `Result: ${e.data[0] * e.data[1]}`;
       port.postMessage(workerResult);
     }
 
@@ -78,7 +78,7 @@ self.addEventListener('connect', function(e) {
   const port = e.ports[0];
 
   port.onmessage = function(e) {
-    const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   }
 

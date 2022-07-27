@@ -12,26 +12,30 @@ The **`webglcontextcreationerror`** event of the [WebGL API](/en-US/docs/Web/API
 
 This event has a {{domxref("WebGLContextEvent.statusMessage")}} property, which can contain a platform dependent string with more information about the failure.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("WebGLContextEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>none</td>
-    </tr>
-  </tbody>
-</table>
+This event does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('webglcontextcreationerror', (event) => {});
+
+onwebglcontextcreationerror = (event) => { };
+```
+
+## Event type
+
+A {{domxref("WebGLContextEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("WebGLContextEvent")}}
+
+## Event properties
+
+_This interface inherits properties from its parent interface, {{domxref("Event")}}._
+
+- {{domxref("WebGLContextEvent.statusMessage")}}
+  - : A read-only property containing additional information about the event.
 
 ## Example
 

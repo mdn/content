@@ -101,7 +101,7 @@ function loadDictionaryForLanguage(appDataDirEntry, lang) {
   dictionary = null;
 
   appDataDirEntry.getDirectory("Dictionaries", {}, function(dirEntry) {
-    dirEntry.getFile(lang + "-dict.json", {}, function(fileEntry) {
+    dirEntry.getFile(`${lang}-dict.json`, {}, function(fileEntry) {
       fileEntry.file(function(dictFile) {
         let reader = new FileReader();
 

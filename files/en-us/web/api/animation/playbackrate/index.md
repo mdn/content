@@ -56,14 +56,12 @@ cake.addEventListener("touchstart", growAlice, false);
 In another example, the [Red Queen's Race Game](https://codepen.io/rachelnabors/pen/PNGGaV?editors=0010), Alice and the Red Queen are constantly slowing down:
 
 ```js
-setInterval( function() {
-
+setInterval(function() {
   // Make sure the playback rate never falls below .4
 
   if (redQueen_alice.playbackRate > .4) {
     redQueen_alice.playbackRate *= .9;
   }
-
 }, 3000);
 ```
 

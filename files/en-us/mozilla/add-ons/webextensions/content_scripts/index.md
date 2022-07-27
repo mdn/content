@@ -387,8 +387,8 @@ function connected(p) {
 
 browser.runtime.onConnect.addListener(connected)
 
-browser.browserAction.onClicked.addListener(function() {
-  ports.forEach( p => {
+browser.browserAction.onClicked.addListener(() => {
+  ports.forEach((p) => {
         p.postMessage({greeting: "they clicked the button!"})
     })
 });

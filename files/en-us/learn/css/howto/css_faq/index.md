@@ -106,7 +106,7 @@ HTML elements can be assigned multiple classes by listing the classes in the `cl
 </style>
 
 <div class="news today">
-  Content of today's news goes here. 
+  Content of today's news goes here.
 </div>
 ```
 

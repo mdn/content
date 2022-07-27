@@ -39,12 +39,12 @@ When a non-empty string is assigned to the `returnValue` Event property, a dialo
 ## Examples
 
 ```js
-window.addEventListener("beforeunload", function( event ) {
+window.addEventListener("beforeunload", function(event) {
   event.returnValue = "\o/";
 });
 
 // is equivalent to
-window.addEventListener("beforeunload", function( event ) {
+window.addEventListener("beforeunload", function(event) {
   event.preventDefault();
 });
 ```

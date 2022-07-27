@@ -41,7 +41,7 @@ The **`DeviceMotionEvent`** interface provides web developers with information a
 
 ```js
 window.addEventListener('devicemotion', function(event) {
-  console.log(event.acceleration.x + ' m/s2');
+  console.log(`${event.acceleration.x} m/s2`);
 });
 ```
 

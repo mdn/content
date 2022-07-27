@@ -74,7 +74,7 @@ gives a few [Usage](#usage) examples.
 - {{domxref("console.timeLog()")}}
   - : Logs the value of the specified [timer](#timers) to the console.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Adds a marker to the browser's [Timeline](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) or [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html) tool.
+  - : Adds a marker to the browser performance tool's timeline ([Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) or [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)).
 - {{domxref("console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
 - {{domxref("console.warn()")}}
@@ -274,7 +274,7 @@ The output in the console looks something like this:
 
 - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
 - [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web console in Firefox handles console API calls
-- [Remote Debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — how to see console output when the debugging target is a mobile device
+- [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) — how to see console output when the debugging target is a mobile device
 
 ### Other implementations
 

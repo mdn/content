@@ -79,7 +79,7 @@ For more details, see the [`defer`](#defer_property) and [`async`](#async_proper
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(`The script ${oError.target.src} didn't load correctly.`);
 }
 
 function prefixScript(url, onloadFunction) {
@@ -95,7 +95,7 @@ This next function, instead of prepending the new scripts immediately before the
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(`The script ${oError.target.src} didn't load correctly.`);
 }
 
 function affixScriptToHead(url, onloadFunction) {

@@ -36,7 +36,7 @@ A JSON object that is the serialization of the {{domxref("Performance")}} object
 ```js
 var js;
 js = window.performance.toJSON();
-console.log("json = " + JSON.stringify(js));
+console.log(`json = ${JSON.stringify(js)}`);
 ```
 
 ## Specifications

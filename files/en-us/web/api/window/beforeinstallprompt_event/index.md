@@ -20,9 +20,9 @@ The **`beforeinstallprompt`** event fires on devices when a user is about to be 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforeinstallprompt', event => { });
+addEventListener('beforeinstallprompt', (event) => { });
 
-onbeforeinstallprompt = event => { };
+onbeforeinstallprompt = (event) => { };
 ```
 
 ## Event type

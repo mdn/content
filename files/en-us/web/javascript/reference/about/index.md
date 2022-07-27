@@ -36,11 +36,14 @@ In the JavaScript reference you can find the following chapters:
   - : Chapter about JavaScript classes introduced in ECMAScript 2015.
 - [Errors](/en-US/docs/Web/JavaScript/Reference/Errors)
   - : Chapter about specific errors, exceptions and warnings thrown by JavaScript.
-- [New in JavaScript](/en-US/docs/Web/JavaScript/New_in_JavaScript)
-  - : Chapter about JavaScript version history.
 
 ### More reference pages
 
-- [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview)
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

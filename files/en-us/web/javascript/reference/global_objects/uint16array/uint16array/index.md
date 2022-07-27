@@ -27,6 +27,16 @@ new Uint16Array(buffer, byteOffset);
 new Uint16Array(buffer, byteOffset, length);
 ```
 
+## Description
+
+The `Uint16Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Uint16Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+
+```js example-bad
+const dv = Uint16Array([1, 2, 3]);
+// TypeError: calling a builtin Uint16Array constructor
+// without new is forbidden
+```
+
 ### Parameters
 
 - `length`
@@ -93,23 +103,6 @@ console.log(uint16FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Uint16Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Uint16Array` constructor as a function without `new`, will throw a
-{{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Uint16Array([1, 2, 3]);
-// TypeError: calling a builtin Uint8ClampedArray constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Uint16Array([1, 2, 3]);
-```
 
 ## See also
 

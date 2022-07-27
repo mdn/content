@@ -59,11 +59,11 @@ The following example demonstrates how to access a connected Arduino device usin
 
 ```js
 navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
-  .then(device => {
+  .then((device) => {
     console.log(device.productName);      // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   })
-  .catch(error => { console.error(error); });
+  .catch((error) => { console.error(error); });
 ```
 
 ### Finding all connected devices
@@ -71,8 +71,8 @@ navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
 You can find all connected devices with {{domxref("USB.getDevices()")}}. In the following example, with the Arduino device connected, product and manufacturer name are printed to the console.
 
 ```js
-navigator.usb.getDevices().then(devices => {
-  devices.forEach(device => {
+navigator.usb.getDevices().then((devices) => {
+  devices.forEach((device) => {
     console.log(device.productName);      // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   });

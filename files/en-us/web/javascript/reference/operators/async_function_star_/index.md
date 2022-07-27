@@ -8,7 +8,7 @@ tags:
    - Language feature
    - Operator
    - Primary Expression
-browser-compat: javascript.operators.async_generator_function 
+browser-compat: javascript.operators.async_generator_function
 ---
 {{jsSidebar("Operators")}}
 

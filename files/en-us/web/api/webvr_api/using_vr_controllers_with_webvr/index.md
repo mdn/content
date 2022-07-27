@@ -65,19 +65,19 @@ Here we first use a tracking variable, `initialRun`, to note that this is the fi
 ```js
 function reportDisplays() {
   navigator.getVRDisplays().then(function(displays) {
-      console.log(displays.length + ' displays');
+    console.log(`${displays.length} displays`);
     for(let i = 0; i < displays.length; i++) {
       const cap = displays[i].capabilities;
       // cap is a VRDisplayCapabilities object
       const listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>Display ' + (i+1) + '</strong>'
-                   + '<br>VR Display ID: ' + displays[i].displayId
-                   + '<br>VR Display Name: ' + displays[i].displayName
-                   + '<br>Display can present content: ' + cap.canPresent
-                   + '<br>Display is separate from the computer\'s main display: ' + cap.hasExternalDisplay
-                   + '<br>Display can return position info: ' + cap.hasPosition
-                   + '<br>Display can return orientation info: ' + cap.hasOrientation
-                   + '<br>Display max layers: ' + cap.maxLayers;
+      listItem.innerHTML = `<strong>Display ${i+1}</strong><br>` +
+        `VR Display ID: ${displays[i].displayId}<br>` +
+        `VR Display Name: ${displays[i].displayName}<br>` +
+        `Display can present content: ${cap.canPresent}<br>` +
+        `Display is separate from the computer's main display: ${cap.hasExternalDisplay}<br>` +
+        `Display can return position info: ${cap.hasPosition}<br>` +
+        `Display can return orientation info: ${cap.hasOrientation}<br>` +
+        `Display max layers: ${cap.maxLayers}`;
       list.appendChild(listItem);
     }
 
@@ -98,17 +98,17 @@ The `reportGamepads()` function looks like this:
 ```js
 function reportGamepads() {
     const gamepads = navigator.getGamepads();
-    console.log(gamepads.length + ' controllers');
+    console.log(`${gamepads.length} controllers`);
     for (let i = 0; i < gamepads.length; ++i) {
         const gp = gamepads[i];
         const listItem = document.createElement('li');
         listItem.classList = 'gamepad';
-        listItem.innerHTML = '<strong>Gamepad ' + gp.index + '</strong> (' + gp.id + ')'
-                 + '<br>Associated with VR Display ID: ' + gp.displayId
-                 + '<br>Gamepad associated with which hand: ' + gp.hand
-                 + '<br>Available haptic actuators: ' + gp.hapticActuators.length
-                 + '<br>Gamepad can return position info: ' + gp.pose.hasPosition
-                 + '<br>Gamepad can return orientation info: ' + gp.pose.hasOrientation;
+        listItem.innerHTML = `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +
+          `Associated with VR Display ID: ${gp.displayId}<br>` +
+          `Gamepad associated with which hand: ${gp.hand}<br>` +
+          `Available haptic actuators: ${gp.hapticActuators.length}<br>` +
+          `Gamepad can return position info: ${gp.pose.hasPosition}<br>` +
+          `Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
         list.appendChild(listItem);
     }
     initialRun = false;
@@ -150,14 +150,14 @@ This function grabs references to all list items with a class name of `gamepad`,
 
 ```js
 window.addEventListener('gamepadconnected', function(e) {
-  info.textContent = 'Gamepad ' + e.gamepad.index + ' connected.';
+  info.textContent = `Gamepad ${e.gamepad.index} connected.`;
   if(!initialRun) {
       setTimeout(removeGamepads, 1000);
   }
 });
 
 window.addEventListener('gamepaddisconnected', function(e) {
-  info.textContent = 'Gamepad ' + e.gamepad.index + ' disconnected.';
+  info.textContent = `Gamepad ${e.gamepad.index} disconnected.`;
   setTimeout(removeGamepads, 1000);
 });
 ```
@@ -238,28 +238,28 @@ function displayPoseStats(pose) {
   const angAcc = pose.angularAcceleration;
 
   if(pose.hasPosition) {
-    posStats.textContent = 'Position: x ' + pos[0].toFixed(3) + ', y ' + pos[1].toFixed(3) + ', z ' + pos[2].toFixed(3);
+    posStats.textContent = `Position: x ${pos[0].toFixed(3)}, y ${pos[1].toFixed(3)}, z ${pos[2].toFixed(3)}`;
   } else {
     posStats.textContent = 'Position not reported';
   }
 
   if(pose.hasOrientation) {
-    orientStats.textContent = 'Orientation: x ' + orient[0].toFixed(3) + ', y ' + orient[1].toFixed(3) + ', z ' + orient[2].toFixed(3);
+    orientStats.textContent = `Orientation: x ${orient[0].toFixed(3)}, y ${orient[1].toFixed(3)}, z ${orient[2].toFixed(3)}`;
   } else {
     orientStats.textContent = 'Orientation not reported';
   }
 
-  linVelStats.textContent = 'Linear velocity: x ' + linVel[0].toFixed(3) + ', y ' + linVel[1].toFixed(3) + ', z ' + linVel[2].toFixed(3);
-  angVelStats.textContent = 'Angular velocity: x ' + angVel[0].toFixed(3) + ', y ' + angVel[1].toFixed(3) + ', z ' + angVel[2].toFixed(3);
+  linVelStats.textContent = `Linear velocity: x ${linVel[0].toFixed(3)}, y ${linVel[1].toFixed(3)}, z ${linVel[2].toFixed(3)}`;
+  angVelStats.textContent = `Angular velocity: x ${angVel[0].toFixed(3)}, y ${angVel[1].toFixed(3)}, z ${angVel[2].toFixed(3)}`;
 
   if(linAcc) {
-    linAccStats.textContent = 'Linear acceleration: x ' + linAcc[0].toFixed(3) + ', y ' + linAcc[1].toFixed(3) + ', z ' + linAcc[2].toFixed(3);
+    linAccStats.textContent = `Linear acceleration: x ${linAcc[0].toFixed(3)}, y ${linAcc[1].toFixed(3)}, z ${linAcc[2].toFixed(3)}`;
   } else {
     linAccStats.textContent = 'Linear acceleration not reported';
   }
 
   if(angAcc) {
-    angAccStats.textContent = 'Angular acceleration: x ' + angAcc[0].toFixed(3) + ', y ' + angAcc[1].toFixed(3) + ', z ' + angAcc[2].toFixed(3);
+    angAccStats.textContent = `Angular acceleration: x ${angAcc[0].toFixed(3)}, y ${angAcc[1].toFixed(3)}, z ${angAcc[2].toFixed(3)}`;
   } else {
     angAccStats.textContent = 'Angular acceleration not reported';
   }

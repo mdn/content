@@ -109,7 +109,7 @@ This example uses the {{cssxref(":scope")}} pseudo-class to retrieve direct chil
 ```js
   const parentElement = document.querySelector('#parent');
   let allChildren = parentElement.querySelectorAll(":scope > span");
-  allChildren.forEach(item => item.classList.add("red"));
+  allChildren.forEach((item) => item.classList.add("red"));
 ```
 
 #### Result

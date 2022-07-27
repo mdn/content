@@ -15,7 +15,7 @@ browser-compat: api.ServiceWorker.state
 
 The **`state`** read-only property of the
 {{domxref("ServiceWorker")}} interface returns a string representing the current state
-of the service worker. It can be one of the following values: `installing`,
+of the service worker. It can be one of the following values: `parsed`, `installing`,
 `installed,` `activating`, `activated`, or
 `redundant`.
 
@@ -23,6 +23,9 @@ of the service worker. It can be one of the following values: `installing`,
 
 A {{jsxref("String")}} that can take one of the following values:
 
+- `"parsed"`
+  - : The initial state of a service worker after it is downloaded and confirmed to be runnable.
+    A service worker is never updated to this state, so this will never be the value of the {{DOMxRef("ServiceWorker.statechange_event")}}
 - `"installing"`
   - : The service worker in this state is considered an installing worker. During this state, {{DOMxRef("ExtendableEvent.waitUntil()")}} can be called inside the `install` event handler to extend the life of the installing worker until the passed promise resolves successfully. This is primarily used to ensure that the service worker is not active until all of the core caches are populated.
 - `"installed"`

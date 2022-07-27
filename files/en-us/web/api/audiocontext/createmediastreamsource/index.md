@@ -105,7 +105,7 @@ if (navigator.mediaDevices) {
         }
     })
     .catch(function(err) {
-        console.log('The following gUM error occurred: ' + err);
+        console.log(`The following gUM error occurred: ${err}`);
     });
 } else {
    console.log('getUserMedia not supported on your browser!');

@@ -60,8 +60,8 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 
 - [JavaScript/Guide](/en-US/docs/Web/JavaScript/Guide) – Main table-of-contents page
 - [JavaScript/Guide/JavaScript Overview](/en-US/docs/Web/JavaScript/Guide/Introduction)
-- [JavaScript/Guide/Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/Guide/Details of the Object Model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+- [JavaScript/Guide/Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- …
 
 Try to avoid putting your article at the top of the hierarchy, which slows the site down and makes search and site navigation less effective.
 
@@ -251,7 +251,7 @@ Some examples follow:
 
 ```js
 if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
-       || class.YET_ANOTHER_CONDITION ) {
+       || class.YET_ANOTHER_CONDITION) {
   /* something */
 }
 

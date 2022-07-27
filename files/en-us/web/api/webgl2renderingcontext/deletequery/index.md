@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ```js
 var query = gl.createQuery();
 
-// ...
+// …
 
 gl.deleteQuery(query);
 ```

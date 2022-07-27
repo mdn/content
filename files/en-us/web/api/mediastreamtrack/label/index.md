@@ -12,7 +12,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaStreamTrack.label
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The **`MediaStreamTrack.label`**
 read-only property returns a string containing a {{glossary("user

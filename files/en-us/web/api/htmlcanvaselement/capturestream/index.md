@@ -16,7 +16,7 @@ tags:
   - captureStream
 browser-compat: api.HTMLCanvasElement.captureStream
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("HTMLCanvasElement")}} **`captureStream()`** method returns a {{domxref("MediaStream")}}
 which includes a {{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-time video capture of the canvas's contents.
@@ -59,7 +59,7 @@ var stream = canvasElt.captureStream(25); // 25 FPS
 // Do things to the stream
 // E.g. Send it to another computer using an RTCPeerConnection
 //      pc is an RTCPeerConnection created elsewhere
-stream.getTracks().forEach(track => pc.addTrack(track, stream));
+stream.getTracks().forEach((track) => pc.addTrack(track, stream));
 ```
 
 ## Specifications

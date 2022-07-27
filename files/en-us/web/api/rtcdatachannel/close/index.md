@@ -66,7 +66,7 @@ const pc = new RTCPeerConnection();
 const dc = pc.createDataChannel("my channel");
 
 dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+  console.log(`received: ${event.data}`);
   dc.close(); // We decided to close after the first received message
 };
 

@@ -28,9 +28,9 @@ The `removetrack` event is fired when a track is removed from an [`AudioTrackLis
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('removetrack', event => { })
+addEventListener('removetrack', (event) => { })
 
-onremovetrack = event => { }
+onremovetrack = (event) => { }
 ```
 
 ## Event type

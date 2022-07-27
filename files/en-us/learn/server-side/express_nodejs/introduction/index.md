@@ -121,7 +121,7 @@ While _Express_ itself is fairly minimalist, developers have created compatible 
 
 Node was initially released, for Linux only, in 2009. The NPM package manager was released in 2010, and native Windows support was added in 2012. Delve into [Wikipedia](https://en.wikipedia.org/wiki/Node.js#History) if you want to know more.
 
-Express was initially released in November 2010 and is currently on version 4.17.3 of the API (with 5.0 in "beta"). You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
+Express was initially released in November 2010 and is currently on major version 4 of the API. You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
 
 ## How popular are Node and Express?
 
@@ -480,9 +480,9 @@ For more information see [Database integration](https://expressjs.com/en/guide/d
 
 ### Rendering data (views)
 
-Template engines (referred to as "view engines" by _Express_) allow you to specify the _structure_ of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for [a number of template engines](https://github.com/expressjs/express/wiki#template-engines), and there is a useful comparison of the more popular engines here: [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/).
+Template engines (also referred to as "view engines" by _Express_'s documentation) allow you to specify the _structure_ of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for [a number of template engines](https://github.com/expressjs/express/wiki#template-engines), and there is a useful comparison of the more popular engines here: [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/).
 
-In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engines' settings, as shown below (you will also have to install the package containing your template library too!)
+In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engine' settings, as shown below (you will also have to install the package containing your template library too!)
 
 ```js
 const express = require('express');

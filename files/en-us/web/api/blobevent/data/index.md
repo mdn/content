@@ -7,15 +7,14 @@ tags:
   - BlobEvent
   - DOM
   - DOM Reference
-  - Media Stream Recording
+  - Media Recorder API
   - Property
   - Reference
 browser-compat: api.BlobEvent.data
 ---
-{{ apiref("Media Capture and Streams") }}
+{{APIRef("Media Recorder API")}}
 
-The **`BlobEvent.data`** read-only property represents a
-{{domxref("Blob")}} associated with the event.
+The **`BlobEvent.data`** read-only property represents a {{domxref("Blob")}} associated with the event.
 
 ## Value
 

@@ -47,14 +47,14 @@ minimized.
 ## Syntax
 
 ```js
-var string = document.visibilityState
+document.visibilityState
 ```
 
 ## Examples
 
 ```js
-document.addEventListener("visibilitychange", function() {
-  console.log( document.visibilityState );
+document.addEventListener("visibilitychange", () => {
+  console.log(document.visibilityState);
   // Modify behavior…
 })
 ```

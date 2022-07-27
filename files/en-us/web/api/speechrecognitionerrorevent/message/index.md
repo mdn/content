@@ -32,8 +32,8 @@ the implementors to decide upon.
 var recognition = new SpeechRecognition();
 
 recognition.onerror = function(event) {
-  console.log('Speech recognition error detected: ' + event.error);
-  console.log('Additional information: ' + event.message);
+  console.log(`Speech recognition error detected: ${event.error}`);
+  console.log(`Additional information: ${event.message}`);
 }
 ```
 

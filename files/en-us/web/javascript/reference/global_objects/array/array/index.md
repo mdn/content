@@ -17,10 +17,10 @@ The **`Array()`** constructor is used to create
 
 ```js
 // literal constructor
-[element0, element1, /* ... ,*/ elementN]
+[element0, element1, /* … ,*/ elementN]
 
 // construct from elements
-new Array(element0, element1, /* ... ,*/ elementN)
+new Array(element0, element1, /* … ,*/ elementN)
 
 // construct from array length
 new Array(arrayLength)

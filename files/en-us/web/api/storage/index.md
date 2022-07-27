@@ -63,7 +63,7 @@ function setStyles() {
   document.getElementById('font').value = currentFont;
   document.getElementById('image').value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = `#${currentColor}`;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
 }

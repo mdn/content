@@ -94,8 +94,8 @@ Some subtle distinctions between {{jsxref("Array.from()")}} and
   `TypedArray.from()` is not a constructor,
   `TypedArray.from()` will throw a {{jsxref("TypeError")}},
   where `Array.from()` defaults to creating a new {{jsxref("Array")}}.
-- `TypedArray.from()` uses `[[Put]]` where
-  `Array.from()` uses `[[DefineProperty]]`. Hence, when
+- `TypedArray.from()` uses `[[Set]]` where
+  `Array.from()` uses `[[DefineOwnProperty]]`. Hence, when
   working with {{jsxref("Proxy")}} objects, it calls
   {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} to create new
   elements rather than {{jsxref("Global_Objects/Proxy/handler/defineProperty",
@@ -132,7 +132,7 @@ Int16Array.from('123');
 Using an arrow function as the map function to manipulate the elements
 
 ```js
-Float32Array.from([1, 2, 3], x => x + x);
+Float32Array.from([1, 2, 3], (x) => x + x);
 // Float32Array [ 2, 4, 6 ]
 ```
 

@@ -147,7 +147,7 @@ JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
 // undefined
 
 // Non-enumerable properties:
-JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: { value: 'y', enumerable: true } }) );
+JSON.stringify(Object.create(null, { x: { value: 'x', enumerable: false }, y: { value: 'y', enumerable: true } }));
 // '{"y":"y"}'
 
 // BigInt values throw

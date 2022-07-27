@@ -182,7 +182,7 @@ function whatsThis() {
   return this.a;  // The value of this is dependent on how the function is called
 }
 
-whatsThis();          // 'Global' as this in the function isn't set, so it defaults to the global/window object
+whatsThis();          // 'Global' as this in the function isn't set, so it defaults to the global/window object in non–strict mode
 whatsThis.call(obj);  // 'Custom' as this in the function is set to obj
 whatsThis.apply(obj); // 'Custom' as this in the function is set to obj
 ```
@@ -274,8 +274,8 @@ console.log(obj.func() === globalObject); // true
 console.log(foo.call(obj) === globalObject); // true
 
 // Attempt to set this using bind
-foo = foo.bind(obj);
-console.log(foo() === globalObject); // true
+const boundFoo = foo.bind(obj);
+console.log(boundFoo() === globalObject); // true
 ```
 
 No matter what, `foo`'s `this` is set to what it was when it was

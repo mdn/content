@@ -140,8 +140,8 @@ function alarm(person, delay) {
 
 button.addEventListener('click', () => {
   alarm(name.value, delay.value)
-    .then(message => output.textContent = message)
-    .catch(error => output.textContent = `Couldn't set alarm: ${error}`);
+    .then((message) => output.textContent = message)
+    .catch((error) => output.textContent = `Couldn't set alarm: ${error}`);
 });
 ```
 

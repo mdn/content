@@ -47,8 +47,8 @@ function gameLoop() {
     a -= gp.axes[3];
   }
 
-  ball.style.left = a*2 + "px";
-  ball.style.top = b*2 + "px";
+  ball.style.left = `${a * 2}px`;
+  ball.style.top = `${b * 2}px`;
 
   const start = rAF(gameLoop);
 };

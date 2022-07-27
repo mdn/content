@@ -122,7 +122,7 @@ Finally we're ready to use the Fetch API:
 fetch(url)
   // fetch() returns a promise. When we have received a response from the server,
   // the promise's `then()` handler is called with the response.
-  .then( response => {
+  .then((response) => {
     // Our handler throws an error if the request did not succeed.
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -134,10 +134,10 @@ fetch(url)
   })
   // When response.text() has succeeded, the `then()` handler is called with
   // the text, and we copy it into the `poemDisplay` box.
-  .then( text => poemDisplay.textContent = text )
+  .then((text) => poemDisplay.textContent = text)
   // Catch any errors that might happen, and display a message
   // in the `poemDisplay` box.
-  .catch( error => poemDisplay.textContent = `Could not fetch verse: ${error}`);
+  .catch((error) => poemDisplay.textContent = `Could not fetch verse: ${error}`);
 ```
 
 There's quite a lot to unpack in here.
@@ -181,14 +181,14 @@ The first block that uses Fetch can be found at the start of the JavaScript:
 
 ```js
 fetch('products.json')
-  .then( response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.json();
   })
-  .then( json => initialize(json) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+  .then((json) => initialize(json))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 The `fetch()` function returns a promise. If this completes successfully, the function inside the first `.then()` block contains the `response` returned from the network.
@@ -215,14 +215,14 @@ The second Fetch block can be found inside the `fetchBlob()` function:
 
 ```js
 fetch(url)
-  .then( response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.blob();
   })
-  .then( blob => showProduct(blob, product) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+  .then((blob) => showProduct(blob, product))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 This works in much the same way as the previous one, except that instead of using {{domxref("Response.json","json()")}}, we use {{domxref("Response.blob","blob()")}}. In this case we want to return our response as an image file, and the data format we use for that is [Blob](/en-US/docs/Web/API/Blob) (the term is an abbreviation of "Binary Large Object" and can basically be used to represent large file-like objects, such as images or video files).

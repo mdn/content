@@ -802,7 +802,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
       <td>
         Form controls that have constraint validation applied and are currently
         not valid. Matches a form control whose value doesn't match the
-        constraints set on it by it's attributes, such as
+        constraints set on it by its attributes, such as
         <a href="#required"><code>required</code></a>,
         <a href="#pattern"><code>pattern</code></a>,
         <a href="#step"><code>step</code></a> and <a href="#max"><code>max</code></a>.
