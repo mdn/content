@@ -40,7 +40,7 @@ When the form's submit button is pressed, we run the `addData()` function, which
 function addData(e) {
   e.preventDefault();
 
-  if(title.value == '' || hours.value == null || minutes.value == null || day.value == '' || month.value == '' || year.value == null) {
+  if(title.value === '' || hours.value === null || minutes.value === null || day.value === '' || month.value === '' || year.value === null) {
     note.innerHTML += '<li>Data not submitted — form incomplete.</li>';
     return;
   }
@@ -169,7 +169,7 @@ The first thing we do is convert the month names we have stored in the database 
          +(cursor.value.day) == dayCheck &&
          monthNumber == monthCheck &&
          cursor.value.year == yearCheck &&
-         notified == "no") {
+         notified === "no") {
 
         // If the numbers all do match, run the createNotification()
         // function to create a system notification
@@ -181,7 +181,7 @@ With the current time and date segments that we want to check against the Indexe
 
 The `+` operator in this case converts numbers with leading zeros into their non leading zero equivalents, e.g. 09 -> 9. This is needed because JavaScript `Date` number values never have leading zeros, but our data might.
 
-The `notified == "no"` check is designed to make sure you will only get one notification per to-do item. When a notification is fired for each item object, its `notification` property is set to `"yes"` so this check will not pass on the next iteration, via the following code inside the `createNotification()` function (read [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) for an explanation):
+The `notified === "no"` check is designed to make sure you will only get one notification per to-do item. When a notification is fired for each item object, its `notification` property is set to `"yes"` so this check will not pass on the next iteration, via the following code inside the `createNotification()` function (read [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) for an explanation):
 
 ```js
     // now we need to update the value of notified to "yes" in this particular data object, so the

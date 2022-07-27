@@ -61,9 +61,9 @@ gl.clear(gl.COLOR_BUFFER_BIT, gl.DEPTH_BUFFER_BIT);
 for (let view of xrPose.views) {
   let skipView = false;
 
-  if (view.eye == "left" && body.leftEye.injured) {
+  if (view.eye === "left" && body.leftEye.injured) {
     skipView = updateInjury(body.leftEye);
-  } else if (view.eye == "right" && body.rightEye.injured) {
+  } else if (view.eye === "right" && body.rightEye.injured) {
     skipView = updateInjury(body.rightEye);
   }
 

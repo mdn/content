@@ -78,7 +78,7 @@ This code treats the squeeze as an instantaneous action that doesn't involve tra
 
 ```js
 xrSession.addEventListener("squeeze", (event) => {
-  if (event.inputSource.targetRayMode == "tracked-pointer") {
+  if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
     if (targetRayPose) {
@@ -92,7 +92,7 @@ You can also set up a handler for `squeeze` events by setting the {{domxref("XRS
 
 ```js
 xrSession.onsqueeze = (event) => {
-  if (event.inputSource.targetRayMode == "tracked-pointer") {
+  if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
     if (targetRayPose) {

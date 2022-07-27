@@ -494,7 +494,7 @@ function playTone(freq) {
 
   let type = wavePicker.options[wavePicker.selectedIndex].value;
 
-  if (type == "custom") {
+  if (type === "custom") {
     osc.setPeriodicWave(customWaveform);
   } else {
     osc.type = type;

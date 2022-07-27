@@ -66,14 +66,14 @@ source.connect(audioCtx.destination);
 
 button.onclick = function() {
   const active = button.getAttribute('data-active');
-  if(active == 'false') {
+  if(active === 'false') {
     button.setAttribute('data-active', 'true');
     button.textContent = 'Remove compression';
 
     source.disconnect(audioCtx.destination);
     source.connect(compressor);
     compressor.connect(audioCtx.destination);
-  } else if(active == 'true') {
+  } else if(active === 'true') {
     button.setAttribute('data-active', 'false');
     button.textContent = 'Add compression';
 

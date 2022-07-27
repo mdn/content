@@ -60,9 +60,9 @@ changed. For example:
 
 ```js
 navigator.serviceWorker.register("/sw.js").then(function(swr) {
-  swr.installing.state == "installing"
+  swr.installing.state === "installing"
   swr.installing.onstatechange = function() {
-    swr.installing == null;
+    swr.installing === null;
     // At this point, swr.waiting OR swr.active might be true. This is because the statechange
     // event gets queued, meanwhile the underlying worker may have gone into the waiting
     // state and will be immediately activated if possible.

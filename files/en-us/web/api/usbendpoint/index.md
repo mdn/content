@@ -80,9 +80,9 @@ for (const { alternates } of device.configuration.interfaces) {
       continue;
     }
 
-    if (endpoint.direction == "in") {
+    if (endpoint.direction === "in") {
       inEndpoint = endpoint.endpointNumber;
-    } else if (endpoint.direction == "out") {
+    } else if (endpoint.direction === "out") {
       outEndpoint = endpoint.endpointNumber;
     }
   }

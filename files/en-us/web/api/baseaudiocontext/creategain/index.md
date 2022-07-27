@@ -93,7 +93,7 @@ gainNode.connect(audioCtx.destination);
 mute.onclick = voiceMute;
 
 function voiceMute() {
-  if(mute.id == "") {
+  if(mute.id === "") {
     // 0 means mute. If you still hear something, make sure you haven't
     // connected your source into the output in addition to using the GainNode.
     gainNode.gain.setValueAtTime(0, audioCtx.currentTime);

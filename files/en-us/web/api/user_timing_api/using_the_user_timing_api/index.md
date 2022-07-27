@@ -60,7 +60,7 @@ function display_marks(ev) {
   let entries = performance.getEntries();
   let j=0;
   for (let i = 0; i < entries.length; i++) {
-    if (entries[i].entryType == "mark") {
+    if (entries[i].entryType === "mark") {
       if (j == 0) { log("= getEntries()", 0); j++ }
       log(`... [${i}] = ${entries[i].name}`, 0);
     }
@@ -99,7 +99,7 @@ function clear_marks(obj) {
   }
   log("Clear marks", 0);
 
-  if (typeof obj == "string") {
+  if (typeof obj === "string") {
     log(`... cleared '${obj}' mark(s)`, 0);
     performance.clearMarks(obj);
   } else {
@@ -166,7 +166,7 @@ function display_measures(ev) {
   let entries = performance.getEntries();
   let j=0;
   for (let i = 0; i < entries.length; i++) {
-    if (entries[i].entryType == "measure") {
+    if (entries[i].entryType === "measure") {
       if (j == 0) { log("= getEntries()", 1); j++ }
       log(`... [${i}] = ${entries[i].name}`, 1);
     }
@@ -205,7 +205,7 @@ function clear_measures(obj) {
   }
   log("Clear measures", 1);
 
-  if (typeof obj == "string") {
+  if (typeof obj === "string") {
     log(`... cleared '${obj}' measure(s)`, 1);
     performance.clearMeasures(obj);
   } else {

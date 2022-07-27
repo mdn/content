@@ -60,7 +60,7 @@ The following example uses {{domxref("EventTarget.addEventListener", "addEventLi
 
 ```js
 xrSession.addEventListener("select", (event) => {
-  if (event.inputSource.targetRayMode == "tracked-pointer") {
+  if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
     if (targetRayPose) {
@@ -74,7 +74,7 @@ You can also set up a handler for `select` events by setting the {{domxref("XRSe
 
 ```js
 xrSession.onselect = (event) => {
-  if (event.inputSource.targetRayMode == "tracked-pointer") {
+  if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
     if (targetRayPose) {

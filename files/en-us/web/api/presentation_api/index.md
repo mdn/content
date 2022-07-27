@@ -219,7 +219,7 @@ Example codes below highlight the usage of main features of the Presentation API
 <script>
   const addConnection = function(connection) {
     this.onmessage = function (message) {
-      if (message.data == "say hello")
+      if (message.data === "say hello")
         this.send("hello");
     };
   };

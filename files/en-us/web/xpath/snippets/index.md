@@ -23,7 +23,7 @@ The following custom utility function can be used to evaluate XPath expressions 
 // initial work.
 function evaluateXPath(aNode, aExpr) {
   var xpe = new XPathEvaluator();
-  var nsResolver = xpe.createNSResolver(aNode.ownerDocument == null ?
+  var nsResolver = xpe.createNSResolver(aNode.ownerDocument === null ?
     aNode.documentElement : aNode.ownerDocument.documentElement);
   var result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   var found = [];
@@ -140,11 +140,11 @@ function getXPathForElement(el, xml) {
       tempitem2 = tempitem2.previousSibling;
     }
 
-    xpath = "*[name()='"+el.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']["+pos+']'+'/'+xpath;
+    xpath = "*[name()='"+el.nodeName+"' and namespace-uri()='"+(el.namespaceURI ===null?'':el.namespaceURI)+"']["+pos+']'+'/'+xpath;
 
     el = el.parentNode;
   }
-  xpath = '/*'+"[name()='"+xml.documentElement.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']"+'/'+xpath;
+  xpath = '/*'+"[name()='"+xml.documentElement.nodeName+"' and namespace-uri()='"+(el.namespaceURI ===null?'':el.namespaceURI)+"']"+'/'+xpath;
   xpath = xpath.replace(/\/$/, '');
   return xpath;
 }

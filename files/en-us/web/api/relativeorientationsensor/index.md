@@ -59,7 +59,7 @@ sensor.addEventListener('reading', () => {
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
 sensor.addEventListener('error', (error) => {
-  if (event.error.name == 'NotReadableError') {
+  if (event.error.name === 'NotReadableError') {
     console.log("Sensor is not available.");
   }
 });

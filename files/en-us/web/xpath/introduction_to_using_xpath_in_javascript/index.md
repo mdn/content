@@ -48,14 +48,14 @@ Returns `xpathResult`, which is an `XPathResult` object of the type [specified](
 We create a namespace resolver using the `createNSResolver` method of the [document](/en-US/docs/Web/API/Document) object.
 
 ```js
-var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = document.createNSResolver( contextNode.ownerDocument === null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
 Or alternatively by using the `createNSResolver` method of a `XPathEvaluator` object.
 
 ```js
 var xpEvaluator = new XPathEvaluator();
-var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument === null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
 And then pass `document.evaluate`, the `nsResolver` variable as the `namespaceResolver` parameter.
@@ -184,7 +184,7 @@ When the result type in the `resultType` parameter is specified as `ANY_TYPE`, t
 
 It could be any of the simple types (`NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE`), **but**, if the returned result type is a node-set then it will **only** be an `UNORDERED_NODE_ITERATOR_TYPE`.
 
-To determine that type after evaluation, we use the `resultType` property of the `XPathResult` object. The [constant](#xpathresult_defined_constants) values of this property are defined in the appendix. None Yet =====Any_Type Example===== \<pre> \</pre>
+To determine that type after evaluation, we use the `resultType` property of the `XPathResult` object. The [constant](#xpathresult_defined_constants) values of this property are defined in the appendix. None Yet =====Any_Type Example ===== \<pre> \</pre>
 
 ## Examples
 
@@ -249,7 +249,7 @@ req.send(null);
 
 var xmlDoc = req.responseXML;
 
-var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument === null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
 
 var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
 ```

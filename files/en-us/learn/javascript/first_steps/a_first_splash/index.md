@@ -231,7 +231,7 @@ When we are running true/false tests (for example inside conditionals — see [b
       <th scope="col">Example</th>
     </tr>
     <tr>
-      <td><code>===</code></td>
+      <td><code> ===</code></td>
       <td>Strict equality (is it exactly the same?)</td>
       <td>
         <pre class="brush: js">

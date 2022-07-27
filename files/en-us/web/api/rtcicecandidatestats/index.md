@@ -49,7 +49,7 @@ The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics relat
 In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is used to present a modified user interface for host candidates (those where the {{domxref("RTCIceCandidate/address", "ip")}} refers directly to the remote peer, rather than an intermediary).
 
 ```js
-if (candidate.type == "host") {
+if (candidate.type === "host") {
   showHostControls();
 } else {
   hideHostControls();
