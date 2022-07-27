@@ -467,7 +467,7 @@ function createKey(note, octave, freq) {
   keyElement.dataset["note"] = note;
   keyElement.dataset["frequency"] = freq;
 
-  labelElement.innerHTML = note + "<sub>" + octave + "</sub>";
+  labelElement.innerHTML = `${note}<sub>${octave}</sub>`;
   keyElement.appendChild(labelElement);
 
   keyElement.addEventListener("mousedown", notePressed, false);
