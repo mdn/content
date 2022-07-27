@@ -138,7 +138,7 @@ var ENCODED = [105, 103, 111, 104, 110]   // encoded string "hello"
 
 var DECODED = []                          // byte array of decoded payload
 for (var i = 0; i < ENCODED.length; i++) {
-  DECODED[i] = (ENCODED[i] ^ MASK[i % 4])
+  DECODED[i] = ENCODED[i] ^ MASK[i % 4]
 }
 ```
 
