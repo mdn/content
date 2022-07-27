@@ -71,13 +71,13 @@ The performance benefit of `DocumentFragment` is often overstated. In fact, in s
 ### HTML
 
 ```html
-<ul id="list"></ul>
+<ul></ul>
 ```
 
 ### JavaScript
 
 ```js
-const list = document.querySelector('#list');
+const ul = document.querySelector('ul');
 const fruits = ['Apple', 'Orange', 'Banana', 'Melon'];
 
 const fragment = new DocumentFragment();
@@ -85,10 +85,10 @@ const fragment = new DocumentFragment();
 for (const fruit of fruits) {
   const li = document.createElement('li');
   li.textContent = fruit;
-  fragment.appendChild(li);
+  fragment.append(li);
 }
 
-list.appendChild(fragment);
+ul.append(fragment);
 ```
 
 ### Result
