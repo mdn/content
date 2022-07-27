@@ -21,7 +21,7 @@ A {{jsxref("Function")}} object's read-only **`name`** property indicates the fu
 
 The function's `name` property can be used to identify the function in debugging tools or error messages. It has no semantic significance to the language itself.
 
-The name property is read-only and cannot be changed by the assignment operator:
+The `name` property is read-only and cannot be changed by the assignment operator:
 
 ```js
 function someFunction() {}
@@ -106,7 +106,7 @@ console.log(f.name); // "f"
 console.log(object.someMethod.name); // "someMethod"
 ```
 
-The same applies to assignment.
+The same applies to assignment:
 
 ```js
 let f;
@@ -116,7 +116,7 @@ f.name; // "f"
 
 ### Initializer and default value
 
-Functions in initializers (default values) of [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#default_value), [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), etc. will inherit the name of the bound identifier as its `name`.
+Functions in initializers (default values) of [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#default_value), [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), etc., will inherit the name of the bound identifier as their `name`.
 
 ```js
 const [f = () => {}] = [];
@@ -199,7 +199,7 @@ o[sym2].name; // "[]"
 
 ### Private property
 
-Private fields and private methods have the hash (#) as part of their names.
+Private fields and private methods have the hash (`#`) as part of their names.
 
 ```js
 class Foo {
@@ -238,7 +238,7 @@ class Foo {
 }
 ```
 
-With a `static name()` method `Foo.name` no longer holds the actual class name but a reference to the `name()` function object. Trying to obtain the class of `fooInstance` via `fooInstance.constructor.name` won't give us the class name at all but a reference to the static class method. Example:
+With a `static name()` method `Foo.name` no longer holds the actual class name but a reference to the `name()` function object. Trying to obtain the class of `fooInstance` via `fooInstance.constructor.name` won't give us the class name at all, but instead a reference to the static class method. Example:
 
 ```js
 const fooInstance = new Foo();
@@ -265,7 +265,7 @@ Therefore you may not rely on the built-in `name` property to always hold a clas
 
 ### JavaScript compressors and minifiers
 
-> **Warning:** Be careful when using the `name` property with source code transformations, such as those carried out by JavaScript compressors (minifiers) or obfuscators. These tools are often used as part of a JavaScript build pipeline to reduce the size of a program prior to deploying it to production. Such transformations often change a function's name at build-time.
+> **Warning:** Be careful when using the `name` property with source-code transformations, such as those carried out by JavaScript compressors (minifiers) or obfuscators. These tools are often used as part of a JavaScript build pipeline to reduce the size of a program prior to deploying it to production. Such transformations often change a function's name at build time.
 
 Source code such as:
 
@@ -292,7 +292,7 @@ if (b.constructor.name === 'Foo') {
 }
 ```
 
-In the uncompressed version, the program runs into the truthy-branch and logs "'foo' is an instance of 'Foo'". Whereas, in the compressed version it behaves differently, and runs into the else-branch. If you rely on the `name` property, like in the example above, make sure your build pipeline doesn't change function names, or don't assume a function to have a particular name.
+In the uncompressed version, the program runs into the truthy branch and logs "'foo' is an instance of 'Foo'" — whereas, in the compressed version it behaves differently, and runs into the else branch. If you rely on the `name` property, like in the example above, make sure your build pipeline doesn't change function names, or don't assume a function has a particular name.
 
 ## Specifications
 
