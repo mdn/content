@@ -63,6 +63,24 @@ The example below demonstrates the contrast between the `always` and `normal` va
   <div>5</div>
 </div>
 
+<p>scroll-snap-stop: always (X Mandatory) on odd child elements</p>
+<div class="x mandatory-scroll-snapping always-stop-odd">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
+<p>scroll-snap-stop: always (X Mandatory) on even child elements</p>
+<div class="x mandatory-scroll-snapping always-stop-even">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
 <p>scroll-snap-stop: normal (X Mandatory)</p>
 <div class="x mandatory-scroll-snapping normal-stop">
   <div>1</div>
@@ -170,6 +188,15 @@ div > div {
 .always-stop > div {
   scroll-snap-stop: always;
 }
+
+.always-stop-odd > div:nth-of-type(odd) {
+  scroll-snap-stop: always;
+}
+
+.always-stop-even > div:nth-of-type(even) {
+  scroll-snap-stop: always;
+}
+
 .normal-stop > div {
   scroll-snap-stop: normal;
 }
@@ -177,9 +204,11 @@ div > div {
 
 #### Result
 
-Scroll from left to right and from top to bottom in the X and Y boxes below, respectively. In the X and Y boxes where the `scroll-snap-stop` property is set to `always`, the scrolling is forced to stop at the snap point even when you scroll fast. However, with the `scroll-snap-stop` property set to `normal`, the snap points are skipped when you scroll fast.
+Scroll from left to right and from top to bottom in the X and Y boxes below, respectively. In the X and Y boxes where the `scroll-snap-stop` property is set to `always`, the scrolling is forced to stop at the snap point even when you scroll fast. However, in the boxes where the `scroll-snap-stop` property is set to `normal`, the snap points are skipped when you scroll fast.
 
-{{EmbedLiveSample("Snapping_in_different_axes", "100%", "800")}}
+If required, you can be selective about the items that are `always` stopped at inside the scroll container. This is demonstrated in the example below by targeting odd and even items; you can choose a different strategy based on your requirement. In the example below, scrolling does not "pass over" odd and even items in the second and third boxes, respectively.
+
+{{EmbedLiveSample("Snapping_in_different_axes", "100%", "1080")}}
 
 ## Specifications
 
