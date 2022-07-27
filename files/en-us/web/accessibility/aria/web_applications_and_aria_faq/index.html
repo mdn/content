@@ -206,7 +206,7 @@ function updateProgress(percentComplete) {
 <pre class="brush: js">var progressBar = document.getElementById("progress-bar");
 
 // Check to see if the browser supports the HTML5 &lt;progress&gt; element.
-var supportsHTML5Progress = (typeof (HTMLProgressElement) !== "undefined");
+var supportsHTML5Progress = typeof HTMLProgressElement !== "undefined";
 
 function setupProgress() {
   if (!supportsHTML5Progress) {
