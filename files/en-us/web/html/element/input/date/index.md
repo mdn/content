@@ -366,7 +366,7 @@ const test = document.createElement('input');
 
 try {
   test.type = 'date';
-} catch(e) {
+} catch (e) {
   console.log(e.message);
 }
 
