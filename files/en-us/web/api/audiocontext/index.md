@@ -61,8 +61,6 @@ Basic audio context declaration:
 
 ```js
 const audioCtx = new AudioContext();
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioCtx = new AudioContext();
 
 const oscillatorNode = audioCtx.createOscillator();
 const gainNode = audioCtx.createGain();
