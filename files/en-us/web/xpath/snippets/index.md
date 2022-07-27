@@ -106,7 +106,6 @@ The following is a simple utility function to get (ordered) XPath results into a
 
 function docEvaluateArray (expr, doc, context, resolver) {
   let i;
-  let result;
   const a = [];
   doc = doc || (context ? context.ownerDocument : document);
   resolver = resolver || null;
