@@ -549,7 +549,7 @@ But these declarations are invalid:
 
 ```css
 margin: 0auto;
-padding-left: 10px;
+padding- left: 10px;
 ```
 
 Do you see the spacing errors? First, `0auto` is not recognized as a valid value for the `margin` property. The entry `0auto` is meant to be two separate values: `0` and `auto`. Second, the browser does not recognize `padding-` as a valid property. The correct property name (`padding-left`) is separated by an errant space.
