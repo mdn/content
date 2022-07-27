@@ -38,7 +38,7 @@ A string.
 ```js
 // Assumes there is <font id="f"> element in the HTML
 
-var f = document.getElementById("f");
+const f = document.getElementById("f");
 f.face = "arial";
 ```
 

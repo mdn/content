@@ -40,13 +40,13 @@ _This interface inherits properties from its parent interface, {{domxref("Event"
 ## Example
 
 ```js
-var canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas');
 
 canvas.addEventListener('webglcontextcreationerror', function(e) {
   console.log(e.statusMessage || 'Unknown error');
 }, false);
 
-var gl = canvas.getContext('webgl');
+const gl = canvas.getContext('webgl');
 // logs statusMessage or "Unknown error" if unable to create WebGL context
 ```
 

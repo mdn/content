@@ -20,7 +20,7 @@ the child entry as the last array item.
 ## Syntax
 
 ```js
-var pathArr = FileSystemDirectoryHandle.resolve(possibleDescendant);
+const pathArr = FileSystemDirectoryHandle.resolve(possibleDescendant);
 ```
 
 ### Parameters

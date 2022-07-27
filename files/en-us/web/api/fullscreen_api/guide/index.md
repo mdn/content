@@ -38,7 +38,7 @@ Let's consider this {{HTMLElement("video")}} element:
 We can put that video into fullscreen mode as follows:
 
 ```js
-var elem = document.getElementById("myvideo");
+const elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }

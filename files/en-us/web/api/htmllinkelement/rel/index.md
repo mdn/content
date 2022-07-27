@@ -29,9 +29,9 @@ A string.
 ## Examples
 
 ```js
-var links = document.getElementsByTagName('link');
-var length = links.length;
-for (var i = 0; i < length; i++) {
+const links = document.getElementsByTagName('link');
+const length = links.length;
+for (let i = 0; i < length; i++) {
   alert(links[i]);
 }
 ```

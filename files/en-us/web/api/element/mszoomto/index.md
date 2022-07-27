@@ -79,7 +79,7 @@ This method does not return a value.
 
 ```js
 /* Zooming in on an element while still keeping it centered in the viewport */
-var args = {
+const args = {
     contentX: target.offsetLeft + target.offsetWidth/2,
     contentY: target.offsetTop + target.offsetHeight/2,
     scaleFactor: 2.0,

@@ -19,7 +19,7 @@ The **`isSameEntry()`** method of the
 ## Syntax
 
 ```js
-var Boolean = FileSystemHandle1.isSameEntry(FileSystemHandle2);
+const Boolean = FileSystemHandle1.isSameEntry(FileSystemHandle2);
 ```
 
 ### Parameters

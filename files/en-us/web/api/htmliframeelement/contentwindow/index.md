@@ -23,7 +23,7 @@ A [Window](/en-US/docs/Web/API/Window) object.
 ## Examples
 
 ```js
-var x = document.getElementsByTagName("iframe")[0].contentWindow;
+const x = document.getElementsByTagName("iframe")[0].contentWindow;
 //x = window.frames[0];
 
 x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";

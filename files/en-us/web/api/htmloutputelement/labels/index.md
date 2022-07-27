@@ -36,7 +36,7 @@ with the `<output>` element.
 ```js
 window.addEventListener("DOMContentLoaded", function() {
   const output = document.getElementById("test");
-  for(var i = 0; i < output.labels.length; i++) {
+  for(let i = 0; i < output.labels.length; i++) {
     console.log(output.labels[i].textContent); // "Label 1" and "Label 2"
   }
 });

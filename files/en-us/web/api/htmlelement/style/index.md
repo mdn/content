@@ -52,10 +52,10 @@ The following code snippet demonstrates the difference between the values obtain
 ```
 
 ```js
-var element = document.getElementById("myElement");
-var out = "";
-var elementStyle = element.style;
-var computedStyle = window.getComputedStyle(element, null);
+const element = document.getElementById("myElement");
+let out = "";
+const elementStyle = element.style;
+const computedStyle = window.getComputedStyle(element, null);
 
 for (prop in elementStyle) {
   if (Object.hasOwn(elementStyle, prop)) {
