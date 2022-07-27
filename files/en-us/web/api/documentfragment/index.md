@@ -56,7 +56,7 @@ _This interface inherits the methods of its parent, {{domxref("Node")}}._
 
 ## Usage notes
 
-A common use for `DocumentFragment` is to create one, assemble a DOM subtree within it, then append or insert the fragment into the DOM using {{domxref("Node")}} interface methods such as {{domxref("Node.appendChild", "appendChild()")}} or {{domxref("Node.insertBefore", "insertBefore()")}}. Doing this moves the fragment's nodes into the DOM, leaving behind an empty `DocumentFragment`. Because all of the nodes are inserted into the document at once, only one reflow and render is triggered instead of potentially one for each node inserted if they were inserted separately.
+A common use for `DocumentFragment` is to create one, assemble a DOM subtree within it, then append or insert the fragment into the DOM using {{domxref("Node")}} interface methods such as {{domxref("Node.appendChild", "appendChild()")}}, {{domxref("Element.append", "append()")}}, or {{domxref("Node.insertBefore", "insertBefore()")}}. Doing this moves the fragment's nodes into the DOM, leaving behind an empty `DocumentFragment`. Because all of the nodes are inserted into the document at once, only one reflow and render is triggered instead of potentially one for each node inserted if they were inserted separately.
 
 This interface is also of great use with Web components: {{HTMLElement("template")}} elements contain a `DocumentFragment` in their {{domxref("HTMLTemplateElement.content")}} property.
 
@@ -67,24 +67,24 @@ An empty `DocumentFragment` can be created using the {{domxref("document.createD
 ### HTML
 
 ```html
-<ul id="list"></ul>
+<ul></ul>
 ```
 
 ### JavaScript
 
 ```js
-const list = document.querySelector('#list')
-const fruits = ['Apple', 'Orange', 'Banana', 'Melon']
+const ul = document.querySelector('ul');
+const fruits = ['Apple', 'Orange', 'Banana', 'Melon'];
 
-const fragment = new DocumentFragment()
+const fragment = new DocumentFragment();
 
 fruits.forEach((fruit) => {
-  const li = document.createElement('li')
-  li.textContent = fruit
-  fragment.appendChild(li)
+  const li = document.createElement('li');
+  li.textContent = fruit;
+  fragment.append(li);
 })
 
-list.appendChild(fragment)
+ul.append(fragment);
 ```
 
 ### Result
