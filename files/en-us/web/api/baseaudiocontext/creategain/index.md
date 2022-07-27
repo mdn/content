@@ -82,7 +82,7 @@ if (navigator.mediaDevices.getUserMedia) {
    }
   );
 } else {
-   console.error('getUserMedia not supported on your browser!');
+  console.error('getUserMedia not supported on your browser!');
 }
 
 source.connect(gainNode);
