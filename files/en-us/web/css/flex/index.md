@@ -225,9 +225,9 @@ By default flex items don't shrink below their minimum content size. To change t
 ```
 
 ```js hidden
-var flex = document.getElementById("flex");
-var raw = document.getElementById("raw");
-flex.addEventListener("click", function() {
+const flex = document.getElementById("flex");
+const raw = document.getElementById("raw");
+flex.addEventListener("click", () => {
   raw.style.display = raw.style.display === "none" ? "block" : "none";
 });
 ```
