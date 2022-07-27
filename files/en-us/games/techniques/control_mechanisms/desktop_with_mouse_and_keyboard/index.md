@@ -260,7 +260,7 @@ To skip the how to play screen, we can listen for any key being pressed and move
 
 ```js
 this.input.keyboard.onDownCallback = function() {
-    if(this.stateStatus === 'intro') {
+    if (this.stateStatus === 'intro') {
         this.hideIntro();
     }
 };
