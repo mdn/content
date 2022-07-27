@@ -26,7 +26,7 @@ const xpathResult = document.evaluate(xpathExpression, contextNode, namespaceRes
 
 ### Parameters
 
-The [evaluate()](/en-US/docs/Web/API/Document/evaluate) method takes a total of five parameters:
+The [`evaluate()`](/en-US/docs/Web/API/Document/evaluate) method takes a total of five parameters:
 
 - `xpathExpression`: A string containing the XPath expression to be evaluated.
 - `contextNode`: A node in the document against which the `xpathExpression` should be evaluated, including any and all of its child nodes. The [document](/en-US/docs/Web/API/Document) node is the most commonly used.
