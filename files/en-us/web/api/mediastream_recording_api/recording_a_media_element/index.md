@@ -173,7 +173,11 @@ function startRecording(stream, lengthInMS) {
   });
 
   let recorded = wait(lengthInMS).then(
-    () => recorder.state == "recording" && recorder.stop()
+    () => {
+      if (recorder.state === "recording") {
+        recorder.stop();
+      }
+    },
   );
 
   return Promise.all([

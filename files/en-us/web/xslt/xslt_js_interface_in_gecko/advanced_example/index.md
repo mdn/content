@@ -66,7 +66,7 @@ function sort() {
   // set the sorting parameter in the XSL file
   var sortVal = xsltProcessor.getParameter(null, "myOrder");
 
-  if (sortVal == "" || sortVal == "descending")
+  if (sortVal === "" || sortVal === "descending")
     xsltProcessor.setParameter(null, "myOrder", "ascending");
   else
     xsltProcessor.setParameter(null, "myOrder", "descending");

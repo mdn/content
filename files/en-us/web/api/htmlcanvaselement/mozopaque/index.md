@@ -38,7 +38,7 @@ Given this {{HTMLElement("canvas")}} element:
 ```
 
 You can get or set the `mozOpaque` property. For example, you could
-conditionally set it to `true` if `mimeType == 'image/jpeg'`, or
+conditionally set it to `true` if `mimeType === 'image/jpeg'`, or
 similar, to gain performance in your application when translucency is not needed.
 
 ```js

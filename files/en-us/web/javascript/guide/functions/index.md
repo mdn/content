@@ -299,7 +299,7 @@ However, some algorithms cannot be simple iterative loops. For example, getting 
 
 ```js
 function walkTree(node) {
-  if (node == null) {
+  if (node === null) {
     return;
   }
   // do something with node

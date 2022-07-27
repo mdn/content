@@ -159,7 +159,7 @@ let ignoreOffer = false;
 signaler.onmessage = async ({ data: { description, candidate } }) => {
   try {
     if (description) {
-      const offerCollision = (description.type == "offer") &&
+      const offerCollision = (description.type === "offer") &&
                              (makingOffer || pc.signalingState != "stable");
 
       ignoreOffer = !polite && offerCollision;
@@ -168,7 +168,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
       }
 
       await pc.setRemoteDescription(description);
-      if (description.type == "offer") {
+      if (description.type === "offer") {
         await pc.setLocalDescription();
         signaler.send({ description: pc.localDescription })
       }
@@ -272,7 +272,7 @@ Using the previous API to implement incoming negotiation messages during perfect
 signaler.onmessage = async ({data: { description, candidate }}) => {
   try {
     if (description) {
-      if (description.type == "offer" && pc.signalingState != "stable") {
+      if (description.type === "offer" && pc.signalingState != "stable") {
         if (!polite) {
           return;
         }
@@ -285,7 +285,7 @@ signaler.onmessage = async ({data: { description, candidate }}) => {
         await pc.setRemoteDescription(description);
       }
 
-      if (description.type == "offer") {
+      if (description.type === "offer") {
         await pc.setLocalDescription(await pc.createAnswer());
         signaler.send({ description: pc.localDescription });
       }
@@ -326,7 +326,7 @@ let ignoreOffer = false;
 signaler.onmessage = async ({ data: { description, candidate } }) => {
   try {
     if (description) {
-      const offerCollision = (description.type == "offer") &&
+      const offerCollision = (description.type === "offer") &&
                              (makingOffer || pc.signalingState != "stable");
 
       ignoreOffer = !polite && offerCollision;
@@ -335,7 +335,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
       }
 
       await pc.setRemoteDescription(description);
-      if (description.type == "offer") {
+      if (description.type === "offer") {
         await pc.setLocalDescription();
         signaler.send({ description: pc.localDescription });
       }

@@ -66,9 +66,9 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} objec
 
 ```js
 navigator.permissions.query({name:'geolocation'}).then(function(result) {
- if (result.state == 'granted') {
+ if (result.state === 'granted') {
    showLocalNewsWithGeolocation();
- } else if (result.state == 'prompt') {
+ } else if (result.state === 'prompt') {
    showButtonToEnableLocalNews();
  }
  // Don't do anything if the permission was denied.

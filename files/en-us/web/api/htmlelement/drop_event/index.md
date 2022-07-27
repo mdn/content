@@ -107,7 +107,7 @@ target.addEventListener("drop", (event) => {
   // prevent default action (open as link for some elements)
   event.preventDefault();
   // move dragged element to the selected drop target
-  if (event.target.className == "dropzone") {
+  if (event.target.className === "dropzone") {
     dragged.parentNode.removeChild(dragged);
     event.target.appendChild(dragged);
   }

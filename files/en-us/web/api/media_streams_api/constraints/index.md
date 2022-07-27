@@ -488,7 +488,7 @@ This code adds simple support for tabs to the {{HTMLElement("textarea")}} elemen
 
 ```js
 function keyDownHandler(event) {
-  if (event.key == "Tab") {
+  if (event.key === "Tab") {
     let elem = event.target;
     let str = elem.value;
 

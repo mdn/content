@@ -102,7 +102,7 @@ navigator.mediaDevices.enumerateDevices()
 .then(function(devices) {
   devices.forEach(function(device) {
     const menu = document.getElementById("inputdevices");
-    if (device.kind == "audioinput") {
+    if (device.kind === "audioinput") {
       const item = document.createElement("option");
       item.innerText = device.label;
       item.value = device.deviceId;

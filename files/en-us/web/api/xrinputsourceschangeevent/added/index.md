@@ -43,12 +43,12 @@ removed devices whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}
 ```js
 xrSession.oninputsourcescchange = (event) => {
   for (let input of event.added) {
-    if (input.targetRayMode == "tracked-pointer") {
+    if (input.targetRayMode === "tracked-pointer") {
       addedPointerDevice(input);
     }
   }
   for (let input of event.removed) {
-    if (input.targetRayMode == "tracked-pointer") {
+    if (input.targetRayMode === "tracked-pointer") {
       removedPointerDevice(input);
     }
   }
