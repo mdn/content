@@ -80,15 +80,10 @@ change the gain value between the values contained in the waveArray array:
 
 ```js
 // create audio context
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 // set basic variables for example
 const myAudio = document.querySelector('audio');
-const pre = document.querySelector('pre');
-const myScript = document.querySelector('script');
-
-pre.innerHTML = myScript.innerHTML;
 
 const valueCurve = document.querySelector('.value-curve');
 

@@ -93,8 +93,6 @@ This example creates a new {{domxref("AudioContext")}} for interactive audio
 (optimizing for latency) and a sample rate of 44.1kHz.
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-
 const audioCtx = new AudioContext({
   latencyHint: 'interactive',
   sampleRate: 44100,

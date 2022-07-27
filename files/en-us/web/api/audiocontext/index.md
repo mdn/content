@@ -61,11 +61,6 @@ Basic audio context declaration:
 
 ```js
 const audioCtx = new AudioContext();
-```
-
-Cross browser variant:
-
-```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 

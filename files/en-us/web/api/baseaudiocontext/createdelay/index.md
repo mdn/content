@@ -49,7 +49,6 @@ sliders up to the right, then press the play buttons, a delay will be introduced
 looping sounds don't start playing for a short amount of time.
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 const synthDelay = audioCtx.createDelay(5.0);

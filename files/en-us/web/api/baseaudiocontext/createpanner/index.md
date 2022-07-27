@@ -76,7 +76,6 @@ const zPos = 295;
 
 // define other variables
 
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 const panner = audioCtx.createPanner();
@@ -99,7 +98,7 @@ if(panner.orientationX) {
 
 const listener = audioCtx.listener;
 
-if(listener.forwardX) {
+if (listener.forwardX) {
   listener.forwardX.setValueAtTime(0, audioCtx.currentTime);
   listener.forwardY.setValueAtTime(0, audioCtx.currentTime);
   listener.forwardZ.setValueAtTime(-1, audioCtx.currentTime);

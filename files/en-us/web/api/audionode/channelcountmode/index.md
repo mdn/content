@@ -78,8 +78,6 @@ A enumerated value representing a [channelCountMode](https://webaudio.github.io/
 ## Examples
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-
 const audioCtx = new AudioContext();
 
 const oscillator = audioCtx.createOscillator();

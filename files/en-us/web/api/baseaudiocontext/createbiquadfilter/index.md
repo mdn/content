@@ -43,7 +43,7 @@ node. For a complete working example, check out our [voice-change-o-matic](https
 at the [source code](https://github.com/mdn/voice-change-o-matic) too).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 //set up the different audio nodes we will use for the app
 const analyser = audioCtx.createAnalyser();

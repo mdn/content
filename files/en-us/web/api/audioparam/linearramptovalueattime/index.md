@@ -51,15 +51,10 @@ natural.
 
 ```js
 // create audio context
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 // set basic variables for example
 const myAudio = document.querySelector('audio');
-const pre = document.querySelector('pre');
-const myScript = document.querySelector('script');
-
-pre.innerHTML = myScript.innerHTML;
 
 const linearRampPlus = document.querySelector('.linear-ramp-plus');
 const linearRampMinus = document.querySelector('.linear-ramp-minus');

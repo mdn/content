@@ -44,7 +44,7 @@ more information.
 
 ```js
 // create web audio api context
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // create Oscillator node
 const oscillator = audioCtx.createOscillator();

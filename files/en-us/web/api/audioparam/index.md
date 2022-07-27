@@ -66,7 +66,6 @@ A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whol
 First, a basic example showing a {{domxref("GainNode")}} having its `gain` value set. `gain` is an example of an _a-rate_ `AudioParam`, as the value can potentially be set differently for each sample frame of the audio.
 
 ```js
-const AudioContext = (window.AudioContext || window.webkitAudioContext);
 const audioCtx = new AudioContext();
 
 const gainNode = audioCtx.createGain();

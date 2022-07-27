@@ -86,8 +86,6 @@ This example creates an oscillator, then links it to a gain node, so that the ga
 controls the volume of the oscillator node.
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-
 const audioCtx = new AudioContext();
 
 const oscillator = audioCtx.createOscillator();
@@ -104,8 +102,6 @@ an {{domxref("OscillatorNode")}} with a slow frequency value. This technique is 
 an _LFO_-controlled parameter.
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-
 const audioCtx = new AudioContext();
 
 // create an normal oscillator to make sound
