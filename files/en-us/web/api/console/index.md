@@ -100,7 +100,7 @@ console.log(someObject);
 The output looks something like this:
 
 ```bash
-[09:27:13.475] ({str:"Some text", id:5})
+{str:"Some text", id:5}
 ```
 
 #### Outputting multiple objects
