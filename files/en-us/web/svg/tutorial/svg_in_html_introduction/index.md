@@ -3,7 +3,6 @@ title: SVG In HTML Introduction
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 tags:
   - Beginner
-  - NeedsUpdate
   - SVG
 ---
 ## Overview
