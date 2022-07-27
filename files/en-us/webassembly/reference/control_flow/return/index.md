@@ -10,7 +10,10 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-**`return`** returns from a function. If there are more values that the function's return type has, then the excess values are popped from the stack and discarded, and the last N are returned. If there are no values on the stack, it returns nothing/void.
+**`return`** returns from a function.
+- If there are no values left on the stack, it returns nothing/void.
+- If there are the same amount of values left on the stack as specified in the function's type signature, it returns those values.
+- If there are more values that the function's return type specifies, then the excess values are popped from the stack and discarded, and the last N values are returned.
 
 {{EmbedInteractiveExample("pages/wat/return.html", "tabbed-taller")}}
 
