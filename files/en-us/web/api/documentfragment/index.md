@@ -67,7 +67,7 @@ An empty `DocumentFragment` can be created using the {{domxref("document.createD
 ### HTML
 
 ```html
-<ul id="list"></ul>
+<ul></ul>
 ```
 
 ### JavaScript
