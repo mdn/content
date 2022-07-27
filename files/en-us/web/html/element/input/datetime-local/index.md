@@ -490,7 +490,7 @@ function populateDays(month) {
   let dayNum;
 
   // 31 or 30 days?
-  if (month === 'January' || month === 'March' || month === 'May' || month === 'July' || month === 'August' || month === 'October' || month === 'December') {
+  if (['January', 'March', 'May', 'July', 'August', 'October', 'December'].includes(month)) {
     dayNum = 31;
   } else if (['April', 'June', 'September', 'November'].includes(month)) {
     dayNum = 30;
