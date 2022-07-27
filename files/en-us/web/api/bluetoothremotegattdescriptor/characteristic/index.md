@@ -23,7 +23,7 @@ descriptor belongs to.
 ## Syntax
 
 ```js
-var characteristic = BluetoothRemoteGATTCharacteristic.characteristic
+const characteristic = BluetoothRemoteGATTCharacteristic.characteristic
 ```
 
 ### Returns

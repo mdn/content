@@ -55,7 +55,7 @@ const readableStream = new ReadableStream({
   }
 }, queuingStrategy);
 
-var size = queuingStrategy.size(chunk);
+const size = queuingStrategy.size(chunk);
 ```
 
 ## Specifications

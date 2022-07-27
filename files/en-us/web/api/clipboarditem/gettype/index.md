@@ -20,7 +20,7 @@ The **`getType()`** method of the {{domxref("ClipboardItem")}} interface returns
 ## Syntax
 
 ```js
-var blob = clipboardItem.getType(type);
+const blob = clipboardItem.getType(type);
 ```
 
 ### Parameters

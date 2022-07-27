@@ -68,7 +68,7 @@ function fullscreenchanged(event) {
   }
 };
 
-var el = document.getElementById('fullscreen-div');
+const el = document.getElementById('fullscreen-div');
 
 el.addEventListener('fullscreenchange', fullscreenchanged);
 // or

@@ -34,7 +34,7 @@ A boolean.
 ## Examples
 
 ```js
-var foo = document.getElementById("foo");
+const foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
     // do something
 }

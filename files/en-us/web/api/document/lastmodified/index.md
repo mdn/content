@@ -65,7 +65,7 @@ if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(
 …the same example, but skipping the first visit:
 
 ```js
-var
+const
   nLastVisit = parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1")),
   nLastModif = Date.parse(document.lastModified);
 
