@@ -93,7 +93,7 @@ soon as any `"colorbox"` class is removed.
 ```js
 const matches = element.getElementsByClassName('colorbox');
 
-for (let i=0; i<matches.length; i++) {
+for (let i = 0; i < matches.length; i++) {
   matches[i].classList.remove('colorbox');
   matches.item(i).classList.add('hueframe');
 }
