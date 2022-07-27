@@ -41,6 +41,7 @@ This is the simplest case we'll look at, whereby you get emscripten to generate 
 
     int main() {
         printf("Hello World\n");
+        return 0;
     }
     ```
 
@@ -80,6 +81,7 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 
     int main() {
         printf("Hello World\n");
+        return 0;
     }
     ```
 
@@ -113,6 +115,7 @@ If you have a function defined in your C code that you want to call as needed fr
 
     int main() {
         printf("Hello World\n");
+        return 0;
     }
 
     #ifdef __cplusplus
