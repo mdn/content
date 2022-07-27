@@ -112,7 +112,7 @@ function docEvaluateArray (expr, doc, context, resolver) {
   resolver = resolver || null;
   context = context || doc;
 
-  result = doc.evaluate(expr, context, resolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+  const result = doc.evaluate(expr, context, resolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
   for (let i = 0; i < result.snapshotLength; i++) {
     a.push(result.snapshotItem(i));
   }
