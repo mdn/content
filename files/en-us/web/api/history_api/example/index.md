@@ -14,7 +14,7 @@ This is an example of an AJAX website composed only of three pages (_first_page.
     $page_title = "First page";
 
     $as_json = false;
-    if (isset($_GET["view_as"]) && $_GET["view_as"] === "json") {
+    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
         $as_json = true;
         ob_start();
     } else {
@@ -62,7 +62,7 @@ This is an example of an AJAX website composed only of three pages (_first_page.
     $page_title = "Second page";
 
     $as_json = false;
-    if (isset($_GET["view_as"]) && $_GET["view_as"] === "json") {
+    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
         $as_json = true;
         ob_start();
     } else {
@@ -110,7 +110,7 @@ This is an example of an AJAX website composed only of three pages (_first_page.
     $page_title = "Third page";
     $page_content = "<p>This is the content of <strong>third_page.php</strong>. This content is stored into a PHP variable.</p>";
 
-    if (isset($_GET["view_as"]) && $_GET["view_as"] === "json") {
+    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
         echo json_encode(array("page" => $page_title, "content" => $page_content));
     } else {
 ?>
