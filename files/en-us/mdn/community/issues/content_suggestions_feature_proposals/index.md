@@ -1,6 +1,6 @@
 ---
 title: Proposing new content or features for MDN Web Docs
-slug: MDN/Community/Issues/Content_Suggestions_Feature_Proposals
+slug: MDN/Community/Issues/Content_suggestions_feature_proposals
 page-type: mdn-community-guide
 tags:
   - meta
