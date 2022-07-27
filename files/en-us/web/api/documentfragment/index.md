@@ -15,7 +15,7 @@ browser-compat: api.DocumentFragment
 
 The **`DocumentFragment`** interface represents a minimal document object that has no parent.
 
-It is used as a lightweight version of {{domxref("Document")}} that stores a segment of a document structure comprised of nodes just like a standard document. The key difference is due to the fact that the document fragment isn't part of the active document tree structure. Changes made to the fragment don't affect the document (even on {{Glossary("reflow")}}) or incur any performance impact when changes are made.
+It is used as a lightweight version of {{domxref("Document")}} that stores a segment of a document structure comprised of nodes just like a standard document. The key difference is due to the fact that the document fragment isn't part of the active document tree structure. Changes made to the fragment don't affect the document.
 
 {{InheritanceDiagram}}
 
@@ -56,35 +56,39 @@ _This interface inherits the methods of its parent, {{domxref("Node")}}._
 
 ## Usage notes
 
-A common use for `DocumentFragment` is to create one, assemble a DOM subtree within it, then append or insert the fragment into the DOM using {{domxref("Node")}} interface methods such as {{domxref("Node.appendChild", "appendChild()")}}, {{domxref("Element.append", "append()")}}, or {{domxref("Node.insertBefore", "insertBefore()")}}. Doing this moves the fragment's nodes into the DOM, leaving behind an empty `DocumentFragment`. Because all of the nodes are inserted into the document at once, only one reflow and render is triggered instead of potentially one for each node inserted if they were inserted separately.
+A common use for `DocumentFragment` is to create one, assemble a DOM subtree within it, then append or insert the fragment into the DOM using {{domxref("Node")}} interface methods such as {{domxref("Node.appendChild", "appendChild()")}} or {{domxref("Node.insertBefore", "insertBefore()")}}. Doing this moves the fragment's nodes into the DOM, leaving behind an empty `DocumentFragment`.
 
 This interface is also of great use with Web components: {{HTMLElement("template")}} elements contain a `DocumentFragment` in their {{domxref("HTMLTemplateElement.content")}} property.
 
 An empty `DocumentFragment` can be created using the {{domxref("document.createDocumentFragment()")}} method or the constructor.
+
+## Performance
+
+The performance benefit of `DocumentFragment` is often overstated. In fact, in some engines, using a `DocumentFragment` is slower than appending to the document in a loop.
 
 ## Example
 
 ### HTML
 
 ```html
-<ul></ul>
+<ul id="list"></ul>
 ```
 
 ### JavaScript
 
 ```js
-const ul = document.querySelector('ul');
+const list = document.querySelector('#list');
 const fruits = ['Apple', 'Orange', 'Banana', 'Melon'];
 
 const fragment = new DocumentFragment();
 
-fruits.forEach((fruit) => {
+for (const fruit of fruits) {
   const li = document.createElement('li');
   li.textContent = fruit;
-  fragment.append(li);
-})
+  fragment.appendChild(li);
+}
 
-ul.append(fragment);
+list.appendChild(fragment);
 ```
 
 ### Result
