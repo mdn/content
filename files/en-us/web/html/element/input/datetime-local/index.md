@@ -497,7 +497,7 @@ function populateDays(month) {
   } else {
   // If month is February, calculate whether it is a leap year or not
     var year = yearSelect.value;
-    var isLeap = new Date(year, 1, 29).getMonth() == 1;
+    var isLeap = new Date(year, 1, 29).getMonth() === 1;
     isLeap ? dayNum = 29 : dayNum = 28;
   }
 

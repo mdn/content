@@ -35,7 +35,7 @@ function ballHitBrick(ball, brick) {
         count_alive++;
       }
     }
-    if (count_alive == 0) {
+    if (count_alive === 0) {
       alert('You won the game, congratulations!');
       location.reload();
     }

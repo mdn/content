@@ -69,7 +69,7 @@ function renderImage(result) {
   // data has been received. This may cause us to receive a RangeError
   // during the decode() call below which needs to be handled.
   if (imageDecoder.complete) {
-    if (track.frameCount == 1)
+    if (track.frameCount === 1)
       return;
 
     if (imageIndex + 1 >= track.frameCount)

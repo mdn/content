@@ -55,14 +55,14 @@ There's a "willful violation" of the above algorithm: if one of the operands is 
 ### Comparison with no type conversion
 
 ```js
-1 == 1;              // true
+1 === 1;              // true
 "hello" == "hello";  // true
 ```
 
 ### Comparison with type conversion
 
 ```js
-"1" ==  1;            // true
+"1" === 1;            // true
 1 == "1";             // true
 0 == false;           // true
 0 == null;            // false
@@ -73,7 +73,7 @@ null == undefined;    // true
 
 const number1 = new Number(3);
 const number2 = new Number(3);
-number1 == 3;         // true
+number1 === 3;         // true
 number1 == number2;   // false
 ```
 

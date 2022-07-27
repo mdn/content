@@ -192,7 +192,7 @@ displays an alert and returns `false`.
 
 ```js
 function checkData() {
-  if (document.form1.threeChar.value.length == 3) {
+  if (document.form1.threeChar.value.length === 3) {
     return true;
   } else {
     alert(

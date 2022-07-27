@@ -47,7 +47,7 @@ function rangeCompareNode(range, node) {
   catch (e) {
     nodeRange.selectNodeContents(node);
   }
-  const nodeIsBefore = range.compareBoundaryPoints(Range.START_TO_START, nodeRange) == 1;
+  const nodeIsBefore = range.compareBoundaryPoints(Range.START_TO_START, nodeRange) === 1;
   const nodeIsAfter = range.compareBoundaryPoints(Range.END_TO_END, nodeRange) == -1;
 
   if (nodeIsBefore && !nodeIsAfter)

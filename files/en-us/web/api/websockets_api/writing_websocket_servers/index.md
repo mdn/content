@@ -99,10 +99,10 @@ Frame format:
      +-+-+-+-+-------+-+-------------+-------------------------------+
      |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
      |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
-     |N|V|V|V|       |S|             |   (if payload len==126/127)   |
+     |N|V|V|V|       |S|             |   (if payload len === 126/127)   |
      | |1|2|3|       |K|             |                               |
      +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
-     |     Extended payload length continued, if payload len == 127  |
+     |     Extended payload length continued, if payload len === 127  |
      + - - - - - - - - - - - - - - - +-------------------------------+
      |                               |Masking-key, if MASK set to 1  |
      +-------------------------------+-------------------------------+

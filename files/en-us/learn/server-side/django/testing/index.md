@@ -557,7 +557,7 @@ Once we have the response we query it for its status code, the template used, wh
 > **Note:** If you set the `paginate_by` variable in your **/catalog/views.py** file to a number other than 10, make sure to update the lines that test that the correct number of items are displayed in paginated templates above and in following sections. For example, if you set the variable for the author list page to 5, update the line above to:
 >
 > ```python
-> self.assertTrue(len(response.context['author_list']) == 5)
+> self.assertTrue(len(response.context['author_list']) === 5)
 > ```
 
 The most interesting variable we demonstrate above is `response.context`, which is the context variable passed to the template by the view.
@@ -707,7 +707,7 @@ The rest of the tests verify that our view only returns books that are on loan t
 
         last_date = 0
         for book in response.context['bookinstance_list']:
-            if last_date == 0:
+            if last_date === 0:
                 last_date = book.due_back
             else:
                 self.assertTrue(last_date <= book.due_back)
