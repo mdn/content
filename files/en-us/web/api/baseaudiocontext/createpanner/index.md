@@ -67,19 +67,19 @@ new properties.
 
 ```js
 // set up listener and panner position information
-var WIDTH = window.innerWidth;
-var HEIGHT = window.innerHeight;
+const WIDTH = window.innerWidth;
+const HEIGHT = window.innerHeight;
 
-var xPos = Math.floor(WIDTH/2);
-var yPos = Math.floor(HEIGHT/2);
-var zPos = 295;
+const xPos = Math.floor(WIDTH/2);
+const yPos = Math.floor(HEIGHT/2);
+const zPos = 295;
 
 // define other variables
 
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
-var panner = audioCtx.createPanner();
+const panner = audioCtx.createPanner();
 panner.panningModel = 'HRTF';
 panner.distanceModel = 'inverse';
 panner.refDistance = 1;
@@ -97,7 +97,7 @@ if(panner.orientationX) {
   panner.setOrientation(1,0,0);
 }
 
-var listener = audioCtx.listener;
+const listener = audioCtx.listener;
 
 if(listener.forwardX) {
   listener.forwardX.setValueAtTime(0, audioCtx.currentTime);
@@ -110,15 +110,15 @@ if(listener.forwardX) {
   listener.setOrientation(0,0,-1,0,1,0);
 }
 
-var source;
+let source;
 
-var play = document.querySelector('.play');
-var stop = document.querySelector('.stop');
+const play = document.querySelector('.play');
+const stop = document.querySelector('.stop');
 
-var boomBox = document.querySelector('.boom-box');
+const boomBox = document.querySelector('.boom-box');
 
-var listenerData = document.querySelector('.listener-data');
-var pannerData = document.querySelector('.panner-data');
+const listenerData = document.querySelector('.listener-data');
+const pannerData = document.querySelector('.panner-data');
 
 leftBound = (-xPos) + 50;
 rightBound = xPos - 50;

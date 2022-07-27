@@ -20,7 +20,7 @@ fulfills with an {{jsxref('Array')}} of supported barcode format types.
 ## Syntax
 
 ```js
-var supportedFormats = BarcodeDetector.getSupportedFormats();
+const supportedFormats = BarcodeDetector.getSupportedFormats();
 ```
 
 ### Parameters

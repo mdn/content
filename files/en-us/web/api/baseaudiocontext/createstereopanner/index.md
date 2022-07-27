@@ -51,20 +51,20 @@ Moving the slider left and right while the music is playing pans the music acros
 the left and right speakers of the output, respectively.
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var myAudio = document.querySelector('audio');
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const myAudio = document.querySelector('audio');
 
-var panControl = document.querySelector('.panning-control');
-var panValue = document.querySelector('.panning-value');
+const panControl = document.querySelector('.panning-control');
+const panValue = document.querySelector('.panning-value');
 
 pre.innerHTML = myScript.innerHTML;
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
-var source = audioCtx.createMediaElementSource(myAudio);
+const source = audioCtx.createMediaElementSource(myAudio);
 
 // Create a stereo panner
-var panNode = audioCtx.createStereoPanner();
+const panNode = audioCtx.createStereoPanner();
 
 // Event handler function to increase panning to the right and left
 // when the slider is moved

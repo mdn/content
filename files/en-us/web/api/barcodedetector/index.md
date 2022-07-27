@@ -42,7 +42,7 @@ This example creates a new barcode detector object, with specified supported for
 
 ```js
 // create new detector
-var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
+const barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
 
 // check compatibility
 if (barcodeDetector) {
