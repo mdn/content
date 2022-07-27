@@ -86,6 +86,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Accessibility considerations
 
 The `dialog` element still has [usability issues with some forms of assistive technology](https://www.scottohara.me/blog/2019/03/05/open-dialog.html). Because of this, it is advised to use an interim solution such as [a11y-dialog](https://a11y-dialog.netlify.app/) as support continues to improve.
+  
+As of March 2022, this is not the case anymore and both Webkit 15.4 and Firefox 98 support the `<dialog>` element.
 
 ## Usage notes
 
