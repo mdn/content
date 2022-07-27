@@ -908,7 +908,6 @@ The [`typeof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) i
 
 ```js
 typeof operand
-typeof operand
 ```
 
 The `typeof` operator returns a string indicating the type of the unevaluated operand.
