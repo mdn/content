@@ -13,7 +13,7 @@ tags:
 
 This chapter describes JavaScript's expressions and operators, including assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
 
-An _expression_, at a high level, is any valid unit of code that resolves to a value. Every syntactically valid expression resolves to some value — but conceptually, there are two types of expressions: those that have side effects (such as assigning values), and those that purely _evaluate_.
+At a high level, an _expression_ is a valid unit of code that resolves to a value. There are two types of expressions: those that have side effects (such as assigning values) and those that purely _evaluate_.
 
 The expression `x = 7` is an example of the first type. This expression uses the `=` _operator_ to assign the value seven to the variable `x`. The expression itself evaluates to `7`.
 
