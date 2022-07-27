@@ -60,7 +60,7 @@ from which it was obtained, so it can be passed directly to
 {{jsxref("Array.prototype.map()")}}.
 
 ```js
-const a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
+const a = [new Date(2012, 8), new Date(2012, 11), new Date(2012, 3)];
 const options = { year: 'numeric', month: 'long' };
 const dateTimeFormat = new Intl.DateTimeFormat('pt-BR', options);
 const formatted = a.map(dateTimeFormat.format);

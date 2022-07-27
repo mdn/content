@@ -55,7 +55,7 @@ In these examples, the entire reporting API payload is shown. The top-level **`"
 
 ### HTTP 400 (Bad Request) response
 
-```js
+```json
 {
   "age": 20,
   "type": "network-error",
@@ -79,7 +79,7 @@ In these examples, the entire reporting API payload is shown. The top-level **`"
 
 Note that the phase is set to `dns` in this report and no `server_ip` is available to include.
 
-```js
+```json
 {
   "age": 20,
   "type": "network-error",

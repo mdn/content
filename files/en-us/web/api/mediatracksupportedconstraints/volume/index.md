@@ -15,7 +15,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaTrackSupportedConstraints.volume
 ---
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`volume`** property is a read-only Boolean value which is

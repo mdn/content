@@ -67,7 +67,7 @@ scripts = await browser.scripting.getRegisteredContentScripts({
   ids: ["script-2"],
 });
 console.log(scripts.map((script) => script.id)); // ["script-2"]
-````
+```
 
 {{WebExtExamples}}
 

@@ -15,7 +15,7 @@ tags:
   - getusermedia
 browser-compat: api.Navigator.getUserMedia
 ---
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
 
 The deprecated **`Navigator.getUserMedia()`** method prompts
 the user for permission to use up to one video input device (such as a camera or shared

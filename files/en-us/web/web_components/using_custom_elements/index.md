@@ -41,8 +41,6 @@ class WordCount extends HTMLParagraphElement {
     super();
 
     // Element functionality written in here
-
-    ...
   }
 }
 ```
@@ -73,8 +71,6 @@ class PopUpInfo extends HTMLElement {
     super();
 
     // write element functionality in here
-
-    ...
   }
 }
 ```
@@ -160,8 +156,6 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // write element functionality in here
-
-    ...
   }
 }
 ```

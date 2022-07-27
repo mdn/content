@@ -15,7 +15,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaTrackSettings.volume
 ---
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`volume`**
 property is a double-precision floating-point number indicating the volume of the

@@ -160,7 +160,7 @@ If you have a function defined in your C code that you want to call as needed fr
           null,  // argument types
           null,  // arguments
         );
-      };
+      });
     ```
 
 This illustrates how `ccall()` is used to call the exported function.

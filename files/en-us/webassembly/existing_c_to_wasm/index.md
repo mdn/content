@@ -129,7 +129,7 @@ The image is now available in wasm. It is time to call the WebP encoder to do it
 
 The result of the encoding operation is an output buffer and its length. Because functions in C can't have arrays as return types (unless you allocate memory dynamically), this example resorts to a static global array. This may not be clean C. In fact, it relies on wasm pointers being 32 bits wide. But this is a fair shortcut for keeping things simple:
 
-```js
+```cpp
 int result[2];
 EMSCRIPTEN_KEEPALIVE
 void encode(uint8_t* img_in, int width, int height, float quality) {

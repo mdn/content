@@ -217,7 +217,7 @@ let df = new Intl.DateTimeFormat("zh-u-ca-chinese", {year: "numeric"});
 df.format(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
-2012壬辰年
+// 2012壬辰年
 ```
 
 This also makes it possible to mix locale and calendar in both `format`:
@@ -228,7 +228,7 @@ let date = Date.UTC(2012, 11, 17, 3, 0, 42);
 df.format(date);
 
 // return value
-2012(ren-chen)
+// 2012(ren-chen)
 ```
 
 And `formatToParts`:

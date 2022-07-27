@@ -30,7 +30,7 @@ f(2);
 
 At the moment `stop()` is called the call stack will be:
 
-```js
+```plain
 f(2) -> g(1) -> f(1) -> g(0) -> stop()
 ```
 
