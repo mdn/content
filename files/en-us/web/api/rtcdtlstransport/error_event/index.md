@@ -23,6 +23,7 @@ browser-compat: api.RTCDtlsTransport.error_event
 An {{domxref("RTCDtlsTransport")}} receives an `error` event when a transport-level error occurs on the {{domxref("RTCPeerConnection")}}.
 
 This event is not cancelable and does not bubble.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
