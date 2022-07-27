@@ -460,7 +460,7 @@ const test = document.createElement('input');
 
 try {
   test.type = 'datetime-local';
-} catch(e) {
+} catch (e) {
   console.log(e.description);
 }
 
