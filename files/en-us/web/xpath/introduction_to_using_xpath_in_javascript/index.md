@@ -21,7 +21,7 @@ The main interface to using XPath is the [evaluate](/en-US/docs/Web/API/Document
 This method evaluates [XPath](/en-US/docs/Web/XPath) expressions against an [XML](/en-US/docs/Glossary/XML) based document (including HTML documents), and returns a [`XPathResult`](/en-US/docs/Web/API/XPathResult) object, which can be a single node or a set of nodes. The existing documentation for this method is located at [document.evaluate](/en-US/docs/Web/API/Document/evaluate), but it is rather sparse for our needs at the moment; a more comprehensive examination will be given below.
 
 ```js
-const xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
+const xpathResult = document.evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result);
 ```
 
 ### Parameters
