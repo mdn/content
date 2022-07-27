@@ -39,7 +39,7 @@ This simple example creates a source from an {{htmlelement("audio") }} element u
 > **Note:** You can also [view this example running live](https://mdn.github.io/webaudio-examples/media-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 const myAudio = document.querySelector('audio');
 
 // Create a MediaElementAudioSourceNode
