@@ -166,7 +166,7 @@ to the default native `insertRule()`.
         // Works by if the char code is a backslash, then isEscaped
         // gets flipped (XOR-ed by 1), and if it is not a backslash
         // then isEscaped gets XORed by itself, zeroing it
-        isEscaped ^= newCharCode ===92?1:isEscaped; // 92 = "\\".charCodeAt(0)
+        isEscaped ^= newCharCode===92?1:isEscaped; // 92 = "\\".charCodeAt(0)
       }
       // Else, there is no unescaped bracket
       return originalInsertRule.call(this, selectorAndRule, "", arguments[2]);
