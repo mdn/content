@@ -59,7 +59,7 @@ someModule.name; // "default"
 
 ### Function constructor
 
-Functions created with the syntax `new Function()` or just `Function()` create {{jsxref("Function")}} objects and their name is "anonymous".
+Functions created with the [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) constructor have name "anonymous".
 
 ```js
 new Function().name; // "anonymous"
