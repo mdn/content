@@ -46,7 +46,7 @@ Number(undefined)  // NaN
 - [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
   - : Creates a new `Number` value.
 
-When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Number")}} object, which is **not** a primitive. For example, `typeof new Number(42) === "object"`, and `new Number(42) !== 42` (although `new Number(42) === 42`).
+When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Number")}} object, which is **not** a primitive. For example, `typeof new Number(42) === "object"`, and `new Number(42) !== 42` (although `new Number(42) == 42`).
 
 > **Warning:** You should rarely find yourself using `Number` as a constructor.
 
