@@ -13,7 +13,7 @@ browser-compat: javascript.operators.nullish_coalescing
 
 The **nullish coalescing operator (`??`)** is a logical
 operator that returns its right-hand side operand when its left-hand side operand is
-{{jsxref("null")}} or {{jsxref("undefined")}}, and otherwise returns its left-hand side
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, and otherwise returns its left-hand side
 operand.
 
 This can be seen as a special case of the [logical OR (`||`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR),

@@ -36,7 +36,7 @@ A {{domxref("StorageEvent")}}. Inherits from {{domxref("Event")}}.
 
 - {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
   - : Returns a string that represents the key changed.
-    The `key` attribute is {{jsxref("null")}}
+    The `key` attribute is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
     when the change is caused by the storage `clear()` method.
 - {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
   - : Returns a string with the new value of the `key`.
