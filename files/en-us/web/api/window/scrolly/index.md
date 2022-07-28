@@ -63,19 +63,6 @@ property:
 window.pageYOffset === window.scrollY; // always true
 ```
 
-For cross-browser compatibility, use `window.pageYOffset` instead of
-`window.scrollY`. **Additionally**, older versions of Internet
-Explorer (< 9) do not support either property and must be worked around by checking
-other non-standard properties. A fully compatible example:
-
-```js
-const supportPageOffset = window.pageXOffset !== undefined;
-const isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
-
-const x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-const y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
-```
-
 ## Specifications
 
 {{Specifications}}
