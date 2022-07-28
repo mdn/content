@@ -39,7 +39,7 @@ elements contained by the `<select>` element.
 ```js
 window.addEventListener("DOMContentLoaded", function() {
   const select = document.getElementById("test");
-  for(const option of select.options) {
+  for (const option of select.options) {
     console.log(option.label); // "Option 1" and "Option 2"
   }
 });

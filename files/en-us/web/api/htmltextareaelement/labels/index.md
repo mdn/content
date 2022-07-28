@@ -36,7 +36,7 @@ with the `<textArea>` element.
 ```js
 window.addEventListener("DOMContentLoaded", function() {
   const textArea = document.getElementById("test");
-  for(const label of textArea.labels) {
+  for (const label of textArea.labels) {
     console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
