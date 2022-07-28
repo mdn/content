@@ -157,7 +157,7 @@ example).
  * In window A's scripts, with A being on http://example.com:8080:
  */
 
-var popup = window.open(/* popup details */);
+const popup = window.open(/* popup details */);
 
 // When the popup has fully loaded, if not blocked by a popup blocker:
 

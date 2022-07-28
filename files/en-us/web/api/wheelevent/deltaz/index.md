@@ -25,7 +25,7 @@ A number.
 ## Examples
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaZ": 4, "deltaMode": 0});
+const syntheticEvent = new WheelEvent("syntheticWheel", { "deltaZ": 4, "deltaMode": 0 });
 
 console.log(syntheticEvent.deltaZ);
 ```
