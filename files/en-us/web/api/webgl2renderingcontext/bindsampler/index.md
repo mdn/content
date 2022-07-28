@@ -36,7 +36,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var sampler = gl.createSampler();
+const sampler = gl.createSampler();
 gl.bindSampler(0, sampler);
 ```
 

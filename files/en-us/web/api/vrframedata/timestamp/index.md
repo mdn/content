@@ -31,8 +31,8 @@ A {{domxref("DOMHighResTimeStamp")}} object.
 ## Examples
 
 ```js
-var frameData = new VRFrameData();
-var vrDisplay;
+const frameData = new VRFrameData();
+let vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
   vrDisplay = displays[0];

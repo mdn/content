@@ -20,8 +20,8 @@ The read-only **`WebGLContextEvent.statusMessage`** property contains additional
 The `statusMessage` property can contain a platform dependent string with details of an event. This can occur, for example, if the {{domxref("HTMLCanvasElement/webglcontextcreationerror_event", "webglcontextcreationerror")}} event is fired.
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
 
 canvas.addEventListener('webglcontextcreationerror', function(e) {
   console.log(`WebGL context creation failed: ${e.statusMessage || 'Unknown error'}`);

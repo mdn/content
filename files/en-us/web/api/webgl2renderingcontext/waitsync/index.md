@@ -42,7 +42,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 gl.waitSync(sync, 0, gl.TIMEOUT_IGNORED);
 ```
 

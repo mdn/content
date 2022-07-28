@@ -57,7 +57,7 @@ Depends on the `pname` parameter, either a {{domxref("WebGL_API/Types", "GLenum"
 ## Examples
 
 ```js
-var sampler = gl.createSampler();
+const sampler = gl.createSampler();
 gl.getSamplerParameter(sampler, gl.TEXTURE_COMPARE_FUNC);
 ```
 

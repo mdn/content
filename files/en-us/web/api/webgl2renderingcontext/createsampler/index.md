@@ -36,7 +36,7 @@ A {{domxref("WebGLSampler")}} object.
 `WebGLSampler` objects are not available in WebGL 1.
 
 ```js
-var sampler = gl.createSampler();
+const sampler = gl.createSampler();
 ```
 
 ## Specifications
