@@ -323,7 +323,7 @@ sendButton.disabled = true;
 
 nameField.addEventListener("input", (event) => {
   const elem = event.target;
-  const valid = elem.value.length != 0;
+  const valid = elem.value.length !== 0;
 
   if (valid && sendButton.disabled) {
     sendButton.disabled = false;

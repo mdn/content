@@ -77,7 +77,7 @@ function dropHandler(ev) {
  const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
  // Print each item's "kind" and "type"
- if (ev.dataTransfer.items != null) {
+ if (ev.dataTransfer.items !== null) {
    for (const item of ev.dataTransfer.items) {
      log(`kind = ${item.kind}, type = ${item.type}`);
    }

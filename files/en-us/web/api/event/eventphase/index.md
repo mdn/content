@@ -107,7 +107,7 @@ window.onload = function () {
 
 function removeListeners() {
   for (const div of divs) {
-    if (div.id != 'divInfo') {
+    if (div.id !== 'divInfo') {
       div.removeEventListener('click', onDivClick, true);
       div.removeEventListener('click', onDivClick, false);
     }
@@ -116,7 +116,7 @@ function removeListeners() {
 
 function addListeners() {
   for (const div of divs) {
-    if (div.id != 'divInfo') {
+    if (div.id !== 'divInfo') {
         if (chCapture.checked) {
             div.addEventListener('click', onDivClick, true);
         }
@@ -144,7 +144,7 @@ function onDivClick(e) {
 
 function clearDivs() {
   for (let i = 0; i < divs.length; i++) {
-    if (divs[i].id != 'divInfo') {
+    if (divs[i].id !== 'divInfo') {
       divs[i].style.backgroundColor = (i & 1) ? '#f6eedb' : '#cceeff';
     }
   }
