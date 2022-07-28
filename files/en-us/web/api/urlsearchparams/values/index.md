@@ -41,7 +41,7 @@ The following example passes a URL search string to the `URLSearchParams` constr
 ```js
 const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
-for(const value of searchParams.values()) {
+for (const value of searchParams.values()) {
   console.log(value);
 }
 ```

@@ -365,7 +365,7 @@ if(test.type === 'text') {
 
 function populateWeeks() {
   // Populate the week select with 52 weeks
-  for(var i = 1; i <= 52; i++) {
+  for (var i = 1; i <= 52; i++) {
     var option = document.createElement('option');
     option.textContent = (i < 10) ? ("0" + i) : i;
     weekSelect.appendChild(option);

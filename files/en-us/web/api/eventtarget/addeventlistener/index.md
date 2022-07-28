@@ -807,7 +807,7 @@ can respond to the change).
 const els = document.getElementsByTagName('*');
 
 // Case 1
-for(let i = 0; i < els.length; i++){
+for (let i = 0; i < els.length; i++){
   els[i].addEventListener("click", function(e){/*do something*/}, false);
 }
 
@@ -816,7 +816,7 @@ function processEvent(e){
   /* do something */
 }
 
-for(let i = 0 ; i < els.length; i++){
+for (let i = 0 ; i < els.length; i++){
   els[i].addEventListener("click", processEvent, false);
 }
 ```
@@ -850,12 +850,12 @@ function processEvent(e){
 // For illustration only: Note the mistake of [j] for [i]. We are registering all event listeners to the first element
 
 // Case 3
-for(let i = 0, j = 0 ; i < els.length ; i++){
+for (let i = 0, j = 0 ; i < els.length ; i++){
   els[j].addEventListener("click", processEvent = function(e){/* do something */}, false);
 }
 
 // Case 4
-for(let i = 0, j = 0 ; i < els.length ; i++){
+for (let i = 0, j = 0 ; i < els.length ; i++){
   function processEvent(e){/* do something */};
   els[j].addEventListener("click", processEvent, false);
 }

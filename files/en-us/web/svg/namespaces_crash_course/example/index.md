@@ -148,7 +148,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
 
       var i;
       var sum_x=0, sum_y=0;
-      for(i=0; i<motes.length; i++)
+      for (i=0; i<motes.length; i++)
       {
         sum_x += motes[i].x;
         sum_y += motes[i].y;

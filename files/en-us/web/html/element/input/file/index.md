@@ -360,7 +360,7 @@ function updateImageDisplay() {
     const list = document.createElement('ol');
     preview.appendChild(list);
 
-    for(const file of curFiles) {
+    for (const file of curFiles) {
       const listItem = document.createElement('li');
       const para = document.createElement('p');
       if(validFileType(file)) {

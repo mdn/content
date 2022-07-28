@@ -254,7 +254,7 @@ We also create `data-` attributes for each option, containing the name and langu
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i < voices.length ; i++) {
+  for (i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
@@ -292,7 +292,7 @@ inputForm.onsubmit = function(event) {
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
+  for (i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }

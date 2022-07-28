@@ -79,7 +79,7 @@ of each English track to the console.
 ```js
 const tracks = document.querySelector('video').textTracks;
 
-for(const track of tracks) {
+for (const track of tracks) {
    if (track.language === 'en') {
       console.dir(track);
    }

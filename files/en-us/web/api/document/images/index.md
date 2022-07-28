@@ -42,7 +42,7 @@ This example looks through the list of images and finds one whose name is
 ```js
 const ilist = document.images;
 
-for(let i = 0; i < ilist.length; i++) {
+for (let i = 0; i < ilist.length; i++) {
     if(ilist[i].src === 'banner.gif') {
         // found the banner
     }

@@ -499,7 +499,7 @@ if(test.type === 'text') {
 
 function populateHours() {
   // populate the hours <select> with the 6 open hours of the day
-  for(var i = 12; i <= 18; i++) {
+  for (var i = 12; i <= 18; i++) {
     var option = document.createElement('option');
     option.textContent = i;
     hourSelect.appendChild(option);
@@ -508,7 +508,7 @@ function populateHours() {
 
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
-  for(var i = 0; i <= 59; i++) {
+  for (var i = 0; i <= 59; i++) {
     var option = document.createElement('option');
     option.textContent = (i < 10) ? ("0" + i) : i;
     minuteSelect.appendChild(option);

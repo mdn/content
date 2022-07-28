@@ -34,7 +34,7 @@ function hide(e){
 
 const ps = document.getElementsByTagName('p');
 
-for(let i = 0; i < ps.length; i++){
+for (let i = 0; i < ps.length; i++){
   // console: print the clicked <p> element
   ps[i].addEventListener('click', hide, false);
 }

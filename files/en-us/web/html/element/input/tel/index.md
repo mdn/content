@@ -417,7 +417,7 @@ var selectElem = document.querySelector("select");
 var inputElems = document.querySelectorAll("input");
 
 selectElem.onchange = function() {
-  for(var i = 0; i < inputElems.length; i++) {
+  for (var i = 0; i < inputElems.length; i++) {
     inputElems[i].value = "";
   }
 
