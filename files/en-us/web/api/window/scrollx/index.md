@@ -55,21 +55,6 @@ The `pageXOffset` property is an alias for the `scrollX` property:
 window.pageXOffset == window.scrollX; // always true
 ```
 
-For cross-browser compatibility, use `window.pageXOffset` instead of
-`window.scrollX`. _Additionally_, older versions of Internet Explorer
-(< 9) do not support either property and must be worked around by checking other
-non-standard properties. A fully compatible example:
-
-```js
-const x = (window.pageXOffset !== undefined)
-  ? window.pageXOffset
-  : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
-
-const y = (window.pageYOffset !== undefined)
-  ? window.pageYOffset
-  : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-```
-
 ## Specifications
 
 {{Specifications}}
