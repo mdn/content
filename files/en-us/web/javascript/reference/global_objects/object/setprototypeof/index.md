@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Object.setPrototypeOf
 ---
 {{JSRef}}
 
-The **`Object.setPrototypeOf()`** method sets the prototype (i.e., the internal `[[Prototype]]` property) of a specified object to another object or {{jsxref("null")}}.
+The **`Object.setPrototypeOf()`** method sets the prototype (i.e., the internal `[[Prototype]]` property) of a specified object to another object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 > **Warning:** Changing the `[[Prototype]]` of an object is, by the nature of [how modern JavaScript engines optimize property accesses](https://mathiasbynens.be/notes/prototypes), currently a very slow operation in every browser and JavaScript engine. In addition, the effects of altering inheritance are subtle and far-flung, and are not limited to the time spent in the `Object.setPrototypeOf(...)` statement, but may extend to **_any_** code that has access to any object whose `[[Prototype]]` has been altered. You can read more in [The performance hazards of [[Prototype]] mutation](/en-US/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation).
 >
@@ -28,7 +28,7 @@ Object.setPrototypeOf(obj, prototype)
 - `obj`
   - : The object which is to have its prototype set.
 - `prototype`
-  - : The object's new prototype (an object or {{jsxref("null")}}).
+  - : The object's new prototype (an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
 
 ### Return value
 
@@ -39,15 +39,15 @@ The specified object.
 - {{jsxref("TypeError")}}
   - : Thrown if one of the following conditions is met:
     - The `obj` parameter is [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible), or it's an [immutable prototype exotic object](https://tc39.es/ecma262/#sec-immutable-prototype-exotic-objects), such as `Object.prototype` or [`window`](/en-US/docs/Web/API/Window).
-    - The `prototype` parameter is not an object or {{jsxref("null")}}.
+    - The `prototype` parameter is not an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Description
 
-`Object.setPrototypeOf()` is generally considered the proper way to set the prototype of an object. You should always use it in favor of the deprecated {{jsxref("Object.prototype.__proto__")}} accessor.
+`Object.setPrototypeOf()` is generally considered the proper way to set the prototype of an object. You should always use it in favor of the deprecated [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessor.
 
 If the `obj` parameter is not an object (e.g. number, string, etc.), this method does nothing.
 
-For security concerns, there are certain built-in objects that are designed to have an _immutable prototype_. This prevents prototype pollution attacks, especially [proxy-related ones](https://github.com/tc39/ecma262/issues/272). The core language only specifies `Object.prototype` as an immutable prototype exotic object, whose prototype is always `null`. In browsers, [`window`](/en-US/docs/Web/API/Window) is another very common example.
+For security concerns, there are certain built-in objects that are designed to have an _immutable prototype_. This prevents prototype pollution attacks, especially [proxy-related ones](https://github.com/tc39/ecma262/issues/272). The core language only specifies `Object.prototype` as an immutable prototype exotic object, whose prototype is always `null`. In browsers, [`window`](/en-US/docs/Web/API/Window) and [`location`](/en-US/docs/Web/API/Window/location) are two other very common examples.
 
 ```js
 Object.isExtensible(Object.prototype); // true; you can add more properties
@@ -99,7 +99,7 @@ console.log(superMan.fly());
 console.log(superMan.speak())
 ```
 
-The similarity between classical inheritance (with classes) and pseudoclassical inheritance (with constructors' `prototype` property) as done above is mentioned in [Inheritance chains](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains).
+The similarity between classical inheritance (with classes) and pseudoclassical inheritance (with constructors' `prototype` property) as done above is mentioned in [Inheritance chains](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains).
 
 In the example below, which also uses classes, `SuperHero` is made to inherit from `Human` without using `extends` by using `setPrototypeOf` instead. 
 
@@ -134,6 +134,6 @@ Subclassing without extends is mentioned in [ES-6 subclassing](https://hacks.moz
 - {{jsxref("Reflect.setPrototypeOf()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
-- [Inheritance chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
+- [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+- [Inheritance chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
 - [ES-6 subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/)

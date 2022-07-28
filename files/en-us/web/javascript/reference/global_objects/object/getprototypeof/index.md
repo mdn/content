@@ -30,7 +30,7 @@ Object.getPrototypeOf(obj)
 
 ### Return value
 
-The prototype of the given object, which may be {{jsxref("null")}}.
+The prototype of the given object, which may be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
 
