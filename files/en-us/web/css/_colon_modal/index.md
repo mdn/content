@@ -103,7 +103,7 @@ favDialog.addEventListener('close', () => {
 
 ### Result
 
-{{EmbedLiveSample("Advanced_example", "100%", 300)}}
+{{EmbedLiveSample("Styling_a_modal_dialog", "100%", 300)}}
 
 ## Specifications
 
