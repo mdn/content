@@ -47,7 +47,7 @@ the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
 Instead you will need to use {{jsxref("String.prototype.indexOf()")}}, for example.
 
 ```js example-good
-"Hello World".indexOf("Hello") !== -1;
+"Hello World".includes("Hello");
 // true
 ```
 

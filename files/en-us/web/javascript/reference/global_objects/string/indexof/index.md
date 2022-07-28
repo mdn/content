@@ -92,8 +92,8 @@ expression returns `-1`:
 When checking if a specific substring occurs within a string, the correct way to check is test whether the return value is `-1`:
 
 ```js
-'Blue Whale'.indexOf('Blue') !== -1  // true; found 'Blue' in 'Blue Whale'
-'Blue Whale'.indexOf('Bloe') !== -1  // false; no 'Bloe' in 'Blue Whale'
+'Blue Whale'.includes('Blue')  // true; found 'Blue' in 'Blue Whale'
+'Blue Whale'.includes('Bloe')  // false; no 'Bloe' in 'Blue Whale'
 ```
 
 ## Examples

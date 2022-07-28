@@ -45,7 +45,7 @@ one in use.
 ```js
 let configuration = myPeerConnection.getConfiguration();
 
-if ((configuration.certificates !== undefined) && (!configuration.certificates.length)) {
+if (configuration&.certificates.length === 0) {
    RTCPeerConnection.generateCertificate({
       name: 'RSASSA-PKCS1-v1_5',
       hash: 'SHA-256',
