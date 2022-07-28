@@ -11,7 +11,7 @@ tags:
 ---
 In 3D graphics, a **Texel** is a single pixel within a texture.  **Textures** are images that are presented on a polygon's surface within a 3D rendered image.  A texture is characterized by a collection of texels, as how an image is characterized by a collection of pixels. 
 
-It is not to be confused with pixel which is the unit of screen space. This is one of the main differences between texels and pixels, pixels are image data. Texel components are made up of subjective data, therefore they can be an image as well as a depth map.
+A pixel in a raster image file is a series of bits containing color and possibly opacity data, which maps to display pixels on an output device such as a computer monitor.  When a pixel belongs to an image used as a texture resource, it is called a 'texture pixel' or shortened to 'texel'.  Instead of mapping directly to screen pixels, a texel's data is mapped to a location in the coordinate space of the 3D object being modelled.  Textures may be used to convey color, but also other surface qualities such as depth or reflectivity.  Multiple textures may be layered to create complex surface overlays.
 
 The process of mapping the appropriate texels to their corresponding points on a polygon is called **texture mapping**, which is a stage of the process of rendering a 3D image for display. Texture mapping is typically done prior to lighting the scene; however, in WebGL, lighting is performed as part of the texture mapping process.
 
