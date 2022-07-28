@@ -440,7 +440,7 @@ input:valid+span:after {
 The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports `<input type="datetime-local">`, we create a new {{htmlelement("input")}} element, try setting its `type` to `datetime-local`, then immediately check what its type is set to. Browsers that don't support `datetime-local` return `text`, since that's what `datetime-local` falls back to. If `<input type="datetime-local">` is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}) instead.
 
 ```js
-// Define UI widget
+// Obtain UI widgets
 const nativePicker = document.querySelector('.nativeDateTimePicker');
 const fallbackPicker = document.querySelector('.fallbackDateTimePicker');
 const fallbackLabel = document.querySelector('.fallbackLabel');
