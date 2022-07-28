@@ -49,7 +49,7 @@ The rendering process involves the following:
 
   - If the HTML is XHTML and is delivered as type `application/xhtml+xml`, the SVG can be directly embedded in the XML source.
   - The SVG can also be directly embedded in HTML.
-  - An `img` element can be used. .
+  - An `img` element can be used.
   - The SVG file can be referenced with an `object` element:
 
     ```html
