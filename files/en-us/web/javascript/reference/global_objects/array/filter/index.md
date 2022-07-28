@@ -159,7 +159,7 @@ let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
  */
 function filterItems(arr, query) {
   return arr.filter(function(el) {
-    return el.toLowerCase().includes(query.toLowerCase())
+    return el.toLowerCase().includes(query.toLowerCase());
   })
 }
 
