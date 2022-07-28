@@ -170,17 +170,15 @@ Here are some popular editors:
       <td>Yes</td>
     </tr>
     <tr>
-      <td><a href="https://www.macrabbit.com/espresso/">Espresso</a></td>
+      <td><a href="https://www.espressoapp.com/">Espresso</a></td>
       <td>Closed source</td>
-      <td>$75</td>
+      <td>$99</td>
       <td>Mac</td>
       <td>
-        <a href="https://www.macrabbit.com/support/" rel="external">FAQ</a>,
-        <a href="mailto:support@macrabbit.com">E-mail</a>
+        <a href="hello@espressoapp.com">E-mail</a>
       </td>
       <td>
-        No end user doc,<br />but
-        <a href="http://wiki.macrabbit.com/">plug-in doc</a>
+        <a href="https://help.espressoapp.com/">Online Manual</a>
       </td>
       <td>Yes</td>
     </tr>
