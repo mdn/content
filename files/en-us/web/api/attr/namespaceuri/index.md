@@ -53,14 +53,15 @@ In the case of the SVG element, it will return the URI of the XML namespace, `ht
 ### JavaScript Content
 
 ```js
-const elements = document.getElementsByClassName("struct");
-const buttons = document.getElementsByTagName("button");
+const elements = document.querySelectorAll(".struct");
+const buttons = document.querySelectorAll("button");
 const outputEl = document.querySelector("#result");
 
 let i = 0;
 for (const button of buttons) {
+  const element = elements[i];
   button.addEventListener("click", () => {
-    const attribute = elements[i].attributes[0];
+    const attribute = element.attributes[0];
     outputEl.value = attribute.namespaceURI;
   });
   i++;

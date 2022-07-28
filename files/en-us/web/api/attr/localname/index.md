@@ -46,8 +46,8 @@ The following example displays the local name of the first attribute of the two 
 ### JavaScript Content
 
 ```js
-const elements = document.getElementsByClassName("struct");
-const buttons = document.getElementsByTagName("button");
+const elements = document.querySelectorAll(".struct");
+const buttons = document.querySelectorAll("button");
 const outputEl = document.querySelector("#result");
 
 let i = 0;
