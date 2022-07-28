@@ -210,8 +210,8 @@ fruits.includes('Banana'); // true
 fruits.includes('Cherry'); // false
 
 // If indexOf() doesn't return -1, the array contains the given item.
-fruits.indexOf('Banana') === -1; // true
-fruits.indexOf('Cherry') === -1; // false
+fruits.indexOf('Banana') !== -1; // true
+fruits.indexOf('Cherry') !== -1; // false
 ```
 
 ### Append an item to an array
