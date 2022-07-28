@@ -77,7 +77,7 @@ An `INVALID_VALUE` error is generated if:
 
 - `offset` + `returnedData.byteLength` would extend beyond the
   end of the buffer
-- `returnedData` is {{jsxref("null")}}
+- `returnedData` is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 - `offset` is less than zero.
 
 An `INVALID_OPERATION` error is generated if:

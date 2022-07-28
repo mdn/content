@@ -70,7 +70,7 @@ rendering work, or loss of focus, etc.
 
 Note: Pay attention to the value returned by the API you're checking against. If an
 empty string is returned (a {{Glossary("falsy")}} value), `||=` must be used,
-otherwise you want to use the `??=` operator (for {{jsxref("null")}} or
+otherwise you want to use the `??=` operator (for [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or
 {{jsxref("undefined")}} return values).
 
 ## Specifications

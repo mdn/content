@@ -90,7 +90,7 @@ This function provides very basic support for 2-touch horizontal move/pinch/zoom
 // error handling, only handles horizontal moves, etc.
 function handle_pinch_zoom(ev) {
 
- if (ev.targetTouches.length == 2 && ev.changedTouches.length == 2) {
+ if (ev.targetTouches.length === 2 && ev.changedTouches.length === 2) {
    // Check if the two target touches are the same ones that started
    // the 2-touch
    let point1 = -1;
@@ -130,7 +130,7 @@ function start_handler(ev) {
  // of two, and so on.
  ev.preventDefault();
  // Cache the touch points for later processing of 2-touch pinch/zoom
- if (ev.targetTouches.length == 2) {
+ if (ev.targetTouches.length === 2) {
    for (let i = 0; i < ev.targetTouches.length; i++) {
      tpCache.push(ev.targetTouches[i]);
    }
@@ -157,7 +157,7 @@ function move_handler(ev) {
  if (logEvents) log("touchMove", ev, false);
  // To avoid too much color flashing many touchmove events are started,
  // don't update the background if two touch points are active
- if (!(ev.touches.length == 2 && ev.targetTouches.length == 2))
+ if (!(ev.touches.length === 2 && ev.targetTouches.length === 2))
    update_background(ev);
 
  // Set the target element's border to dashed to give a clear visual
@@ -177,7 +177,7 @@ The {{event("touchend")}} handler restores the event target's background color b
 function end_handler(ev) {
   ev.preventDefault();
   if (logEvents) log(ev.type, ev, false);
-  if (ev.targetTouches.length == 0) {
+  if (ev.targetTouches.length === 0) {
     // Restore background and border to original values
     ev.target.style.background = "white";
     ev.target.style.border = "1px solid black";

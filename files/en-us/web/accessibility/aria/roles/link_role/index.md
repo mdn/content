@@ -68,7 +68,7 @@ for(let i = 0; i < fakeLinks.length; i++) {
 //handles clicks and keydowns on the link
 function navigateLink(e) {
     if (e.type === 'click' || e.key === 'Enter') {
-        let ref = e.target != null ? e.target : e.srcElement;
+        let ref = e.target !== null ? e.target : e.srcElement;
         if (ref) {
           window.open(ref.getAttribute('data-href'), '_blank');
         }

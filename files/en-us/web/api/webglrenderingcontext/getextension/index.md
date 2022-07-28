@@ -28,7 +28,7 @@ getExtension(name)
 
 ### Return value
 
-A WebGL extension object, or {{jsxref("null")}} if name does not match
+A WebGL extension object, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if name does not match
 (case-insensitive) to one of the strings in
 {{domxref("WebGLRenderingContext.getSupportedExtensions")}}.
 

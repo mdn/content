@@ -139,7 +139,7 @@ Let's have a go at writing our own functions featuring return values.
 
     function factorial(num) {
       if (num < 0) return undefined;
-      if (num == 0) return 1;
+      if (num === 0) return 1;
       let x = num - 1;
       while (x > 1) {
         num *= x;

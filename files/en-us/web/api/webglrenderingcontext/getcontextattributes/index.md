@@ -14,7 +14,7 @@ browser-compat: api.WebGLRenderingContext.getContextAttributes
 
 The **`WebGLRenderingContext.getContextAttributes()`** method
 returns a `WebGLContextAttributes` object that contains the actual context
-parameters. Might return {{jsxref("null")}}, if the context is lost.
+parameters. Might return [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), if the context is lost.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ None.
 ### Return value
 
 A `WebGLContextAttributes` object that contains the actual context
-parameters, or {{jsxref("null")}} if the context is lost.
+parameters, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context is lost.
 
 ## Examples
 

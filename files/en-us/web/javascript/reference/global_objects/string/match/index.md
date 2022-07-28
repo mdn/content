@@ -37,7 +37,7 @@ match(regexp)
 
 ### Return value
 
-An {{jsxref("Array")}} whose contents depend on the presence or absence of the global (`g`) flag, or {{jsxref("null")}} if no matches are found. If the regular expression does not include the `g` flag, `str.match()` will return the same result as {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.
+An {{jsxref("Array")}} whose contents depend on the presence or absence of the global (`g`) flag, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if no matches are found. If the regular expression does not include the `g` flag, `str.match()` will return the same result as {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.
 
 - If the `g` flag is used, all results matching the complete regular
   expression will be returned, but capturing groups will not.

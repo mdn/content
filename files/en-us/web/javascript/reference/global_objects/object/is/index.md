@@ -40,7 +40,7 @@ A {{jsxref("Boolean")}} indicating whether or not the two arguments are the same
 `Object.is()` determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness). Two values are the same if one of the following holds:
 
 - both {{jsxref("undefined")}}
-- both {{jsxref("null")}}
+- both [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 - both `true` or both `false`
 - both strings of the same length with the same characters in the same order
 - both the same object (meaning both values reference the same object in memory)

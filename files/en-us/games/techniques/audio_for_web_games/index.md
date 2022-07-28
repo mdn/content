@@ -324,7 +324,7 @@ function playTrack(audioBuffer) {
   trackSource.buffer = audioBuffer;
   trackSource.connect(audioCtx.destination)
 
-  if (offset == 0) {
+  if (offset === 0) {
     trackSource.start();
     offset = audioCtx.currentTime;
   } else {
@@ -386,7 +386,7 @@ To do this before playing the track you want to sync, you should calculate how l
 Here's a bit of code that given a tempo (the time in seconds of your beat/bar) will calculate how long to wait until you play the next part — you feed the resulting value to the `start()` function with the first parameter, which takes the absolute time of when that playback should commence. Note the second parameter (where to start playing from in the new track) is relative:
 
 ```js
-if (offset == 0) {
+if (offset === 0) {
   source.start();
   offset = context.currentTime;
 } else {

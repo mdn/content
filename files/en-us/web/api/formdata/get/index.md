@@ -32,7 +32,7 @@ get(name)
 
 ### Return value
 
-A value whose key matches the specified `name`. Otherwise, {{jsxref("null")}}.
+A value whose key matches the specified `name`. Otherwise, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
 

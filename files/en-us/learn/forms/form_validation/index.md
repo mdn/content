@@ -762,7 +762,7 @@ const email = document.getElementById('mail');
 // This is dangerous because you can easily build an infinite loop.
 // In modern browsers, you should prefer using element.nextElementSibling
 let error = email;
-while ((error = error.nextSibling).nodeType != 1);
+while ((error = error.nextSibling).nodeType !== 1);
 
 // As per the HTML5 Specification
 const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;

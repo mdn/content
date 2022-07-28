@@ -30,7 +30,7 @@ A string.
 ```js
 const form1name = document.getElementById('form1').name;
 
-if (form1name != document.form.form1) {
+if (form1name !== document.form.form1) {
   // Browser doesn't support this form of reference
 }
 ```

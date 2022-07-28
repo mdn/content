@@ -100,7 +100,7 @@ When the page is loaded, this code is run to set up an event listener to watch f
 
 ```js
 document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
+  if (e.keyCode === 13) {
     toggleFullScreen();
   }
 }, false);
