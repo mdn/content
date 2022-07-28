@@ -26,7 +26,7 @@ A number.
 Given a video element with the ID "myVideo":
 
 ```js
-const v = document.GetElementById("myVideo");
+const v = document.getElementById("myVideo");
 
 const buf = v.buffered;
 

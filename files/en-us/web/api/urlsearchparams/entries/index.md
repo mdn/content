@@ -41,8 +41,8 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the key/value pairs
-for(const pair of searchParams.entries()) {
-   console.log(`${pair[0]}, ${pair[1]}`);
+for(const [key, value] of searchParams.entries()) {
+   console.log(`${key}, ${value}`);
 }
 ```
 

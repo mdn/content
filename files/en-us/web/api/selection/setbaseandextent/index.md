@@ -110,7 +110,7 @@ button.onclick = function() {
     selection.setBaseAndExtent(one, aOffset.value, two, fOffset.value);
     const text = selection.toString();
     output.textContent = text;
-  } catch(e) {
+  } catch (e) {
     output.textContent = e.message;
   }
 }

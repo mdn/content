@@ -45,7 +45,7 @@ new TextDecoder(utfLabel, options)
 ```js
 const textDecoder1 = new TextDecoder("iso-8859-2");
 const textDecoder2 = new TextDecoder();
-const textDecoder3 = new TextDecoder("csiso2022kr", {fatal: true}); // Allows TypeError exception to be thrown.
+const textDecoder3 = new TextDecoder("csiso2022kr", { fatal: true }); // Allows TypeError exception to be thrown.
 const textDecoder4 = new TextDecoder("iso-2022-cn"); // Throw a RangeError exception.
 ```
 
