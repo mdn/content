@@ -85,7 +85,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Accessibility considerations
 
-To ensure accessibility for users of Safari versions below 15.4, consider using a polyfill such as [a11y-dialog](https://a11y-dialog.netlify.app/) as earlier implementations of <dialog> had [usability issues with some forms of assistive technology](https://www.scottohara.me/blog/2019/03/05/open-dialog.html).
+To ensure accessibility for users of Safari versions below 15.4, consider using a polyfill such as [a11y-dialog](https://a11y-dialog.netlify.app/) as earlier implementations of `<dialog>` had [usability issues with some forms of assistive technology](https://www.scottohara.me/blog/2019/03/05/open-dialog.html).
 
 When implementing a dialog, it is important to consider the most appropriate place to set user focus, including using the [autofocus](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute if appropriate.
 
