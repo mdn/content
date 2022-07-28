@@ -431,7 +431,7 @@ The code used to look something like this (although this is a simplified example
 ```js
 let ua = navigator.userAgent;
 
-if(ua.includes('Firefox')) {
+if (ua.includes('Firefox')) {
   // run Firefox-specific code
 } else if (ua.includes('Chrome')) {
   // run Chrome-specific code
