@@ -162,16 +162,28 @@ function Rectangle() {
 }
 
 // subclass extends superclass
-Rectangle.prototype = Object.create(Shape.prototype);
+Object.setPrototypeOf(
+  Rectangle.prototype,
+  Shape.prototype,
+);
+// In class terms, the above is equivalent to using `extends`
+// It is advisable to use `setPrototypeOf` as the correct way to set a prototype
+<!-- Using Object.setPrototype is a more advisable way of extending a subclass -->
+<!-- For reference, see link: [building longer inheritance chains](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains) -->
 
-//If you don't set Rectangle.prototype.constructor to Rectangle,
-//it will take the prototype.constructor of Shape (parent).
-//To avoid that, we set the prototype.constructor to Rectangle (child).
-Rectangle.prototype.constructor = Rectangle;
+
+// Before `setPrototypeOf`, subclass was extended as follows
+// Rectangle.prototype = Object.create(Shape.prototype);
+// This re-assigns `Rectangle.prototype` to a new object
+// with `Shape.prototype` as its `[[Prototype]]`
+// Because of the re-assignment, we need to do:
+// Rectangle.prototype.constructor = Rectangle;
+// By using `setPrototypeOf` instead, no such re-assignment for Rectangle.prototype.constructor is required
 
 const rect = new Rectangle();
 
 console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // true
+console.log("Constructor of Rectangle", Rectangle.prototype.constructor); // function Rectangle()
 console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
@@ -270,3 +282,4 @@ o2 = Object.create({p: 42}) */
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Reflect.construct()")}}
 - John Resig's post on [getPrototypeOf()](https://johnresig.com/blog/objectgetprototypeof/)
+- [Building longer inheritance chains](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
