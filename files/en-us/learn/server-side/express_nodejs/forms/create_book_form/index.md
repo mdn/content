@@ -196,7 +196,7 @@ block content
   if errors
     ul
       for error in errors
-        li!== error.msg
+        li!= error.msg
 ```
 
 The view structure and behavior is almost the same as for the **genre_form.pug** template.
