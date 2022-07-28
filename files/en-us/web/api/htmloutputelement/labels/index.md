@@ -36,8 +36,8 @@ with the `<output>` element.
 ```js
 window.addEventListener("DOMContentLoaded", function() {
   const output = document.getElementById("test");
-  for(let i = 0; i < output.labels.length; i++) {
-    console.log(output.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of output.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```

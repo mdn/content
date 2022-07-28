@@ -36,8 +36,8 @@ with the `<progress>` element.
 ```js
 window.addEventListener("DOMContentLoaded", function() {
   const progress = document.getElementById("test");
-  for(let i = 0; i < progress.labels.length; i++) {
-    console.log(progress.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of progress.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```

@@ -37,8 +37,8 @@ with the `<input>` element.
 ```js
 window.addEventListener("DOMContentLoaded", function() {
   const input = document.getElementById("test");
-  for(let i = 0; i < input.labels.length; i++) {
-    console.log(input.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of input.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```

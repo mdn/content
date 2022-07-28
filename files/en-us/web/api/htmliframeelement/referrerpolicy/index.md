@@ -58,7 +58,7 @@ resource.
 const iframe = document.createElement("iframe");
 iframe.src = "/";
 iframe.referrerPolicy = "unsafe-url";
-const body = document.getElementsByTagName("body")[0];
+const body = document.querySelector("body");
 body.appendChild(iframe); // Fetch the image using the complete URL as the referrer
 ```
 

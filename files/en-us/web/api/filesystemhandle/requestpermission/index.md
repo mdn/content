@@ -19,7 +19,7 @@ file handle.
 ## Syntax
 
 ```js
-const PermissionState = FileSystemHandle.requestPermission(FileSystemHandlePermissionDescriptor);
+requestPermission(FileSystemHandlePermissionDescriptor)
 ```
 
 ### Parameters

@@ -30,9 +30,8 @@ A string.
 
 ```js
 const links = document.getElementsByTagName('link');
-const length = links.length;
-for (let i = 0; i < length; i++) {
-  alert(links[i]);
+for (const link of links) {
+  console.log(link);
 }
 ```
 
