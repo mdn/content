@@ -53,7 +53,7 @@ Depends on the requested information (as specified with `pname`). It is an
 ## Examples
 
 ```js
-var samples = gl.getInternalformatParameter(gl.RENDERBUFFER,
+const samples = gl.getInternalformatParameter(gl.RENDERBUFFER,
                                             gl.RGBA8, gl.SAMPLES);
 ```
 

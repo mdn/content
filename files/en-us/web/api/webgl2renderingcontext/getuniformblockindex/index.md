@@ -43,7 +43,7 @@ A {{domxref("WebGL_API/Types", "GLuint")}} indicating the uniform block index.
 // } instanceName;
 
 // use the block name, not the instance name:
-var blockIndex = gl.getUniformBlockIndex(program, 'UBOData');
+const blockIndex = gl.getUniformBlockIndex(program, 'UBOData');
 ```
 
 ## Specifications

@@ -56,11 +56,11 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var srcBuffer = gl.createBuffer();
-var dstBuffer = gl.createBuffer();
+const srcBuffer = gl.createBuffer();
+const dstBuffer = gl.createBuffer();
 
-var data = new Float32Array(vertices);
-var length = vertices.length * 4;
+const data = new Float32Array(vertices);
+const length = vertices.length * 4;
 
 gl.bindBuffer(gl.ARRAY_BUFFER, srcBuffer);
 gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);

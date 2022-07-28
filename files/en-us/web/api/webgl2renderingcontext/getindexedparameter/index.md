@@ -50,7 +50,7 @@ Depends on the requested information (as specified with `target`).
 ## Examples
 
 ```js
-var binding = gl.getIndexedParameter(gl.TRANSFORM_FEEDBACK_BUFFER_BINDING, 0);
+const binding = gl.getIndexedParameter(gl.TRANSFORM_FEEDBACK_BUFFER_BINDING, 0);
 ```
 
 ## Specifications

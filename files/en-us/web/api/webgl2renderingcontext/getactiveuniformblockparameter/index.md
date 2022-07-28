@@ -64,7 +64,7 @@ error occurs, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is r
 ## Examples
 
 ```js
-var blockSize = gl.getActiveUniformBlockParameter(program,
+const blockSize = gl.getActiveUniformBlockParameter(program,
                       blockIndex, gl.UNIFORM_BLOCK_DATA_SIZE);
 ```
 

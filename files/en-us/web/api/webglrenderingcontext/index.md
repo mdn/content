@@ -25,8 +25,8 @@ The **`WebGLRenderingContext`** interface provides an interface to the OpenGL ES
 To get an access to a WebGL context for 2D and/or 3D graphics rendering, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a `<canvas>` element, supplying "webgl" as the argument:
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('myCanvas');
+const gl = canvas.getContext('webgl');
 ```
 
 Once you have the WebGL rendering context for a canvas, you can render within it. The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) has more information, examples, and resources on how to get started with WebGL.

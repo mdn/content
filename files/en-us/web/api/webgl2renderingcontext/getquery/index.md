@@ -49,7 +49,7 @@ A {{domxref("WebGLQuery")}} object.
 ## Examples
 
 ```js
-var currentQuery = gl.getQuery(gl.ANY_SAMPLES_PASSED, gl.CURRENT_QUERY);
+const currentQuery = gl.getQuery(gl.ANY_SAMPLES_PASSED, gl.CURRENT_QUERY);
 ```
 
 ## Specifications
