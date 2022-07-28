@@ -281,8 +281,8 @@ class Server {
 
                 stream.Write(response, 0, response.Length);
             } else {
-                bool fin = (bytes[0] & 0b10000000) !== 0,
-                    mask = (bytes[1] & 0b10000000) !== 0; // must be true, "All messages from the client to the server have this bit set"
+                bool fin = (bytes[0] & 0b10000000) != 0,
+                    mask = (bytes[1] & 0b10000000) != 0; // must be true, "All messages from the client to the server have this bit set"
                 int opcode = bytes[0] & 0b00001111, // expecting 1 - text message
                     offset = 2;
                 ulong msglen = bytes[1] & 0b01111111;
