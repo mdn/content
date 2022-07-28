@@ -144,7 +144,7 @@ for (let i=0; i<5; i++) {
 
 The output looks like this:
 
-```bash
+```
 [13:14:13.481] Hello, Bob. You've called me 1 times.
 [13:14:13.483] Hello, Bob. You've called me 2 times.
 [13:14:13.485] Hello, Bob. You've called me 3 times.

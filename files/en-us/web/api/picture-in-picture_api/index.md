@@ -98,11 +98,9 @@ This code is called by a click handler when the user clicks the "Toggle Picture-
 ```js
 function togglePictureInPicture() {
   if (document.pictureInPictureElement) {
-      document.exitPictureInPicture();
-  } else {
-    if (document.pictureInPictureEnabled) {
-      video.requestPictureInPicture();
-    }
+    document.exitPictureInPicture();
+  } else if (document.pictureInPictureEnabled) {
+    video.requestPictureInPicture();
   }
 }
 ```

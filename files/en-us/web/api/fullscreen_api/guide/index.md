@@ -114,10 +114,8 @@ This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
   }
 }
 ```
