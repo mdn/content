@@ -303,10 +303,12 @@ function updateStatus() {
 function scangamepads() {
   const gamepads = navigator.getGamepads();
   for (const gamepad of gamepads) {
-    if (gamepad.index in controllers) {
-      controllers[gamepad.index] = gamepad;
-    } else {
-      addgamepad(gamepad);
+    if (gamepad) { // Can be null if disconnected during the session
+      if (gamepad.index in controllers) {
+        controllers[gamepad.index] = gamepad;
+      } else {
+        addgamepad(gamepad);
+      }
     }
   }
 }
