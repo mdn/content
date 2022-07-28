@@ -44,7 +44,7 @@ the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
 // TypeError: cannot use 'in' operator to search for 'Hello' in 'Hello World'
 ```
 
-Instead you will need to use {{jsxref("String.prototype.indexOf()")}}, for example.
+Instead you will need to use {{jsxref("String.prototype.includes()")}}, for example.
 
 ```js example-good
 "Hello World".includes("Hello");
