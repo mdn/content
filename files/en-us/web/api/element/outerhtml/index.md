@@ -110,7 +110,7 @@ Also, while the element will be replaced in the document, the variable whose
 element:
 
 ```js
-const p = document.getElementsByTagName("p")[0];
+const p = document.querySelector("p");
 console.log(p.nodeName); // shows: "P"
 p.outerHTML = "<div>This div replaced a paragraph.</div>";
 console.log(p.nodeName); // still "P";
