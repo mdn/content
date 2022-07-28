@@ -63,7 +63,7 @@ In case of an error, for example if a property is non-writable, a
 changed if any properties are added before the error is raised.
 
 > **Note:** `Object.assign()` does not throw on
-> {{jsxref("null")}} or {{jsxref("undefined")}} sources.
+> [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
 
 ## Examples
 

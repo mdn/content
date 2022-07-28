@@ -32,7 +32,7 @@ regexp[Symbol.match](str)
 ### Return value
 
 An {{jsxref("Array")}} containing the entire match result and any parentheses-captured
-matched results, or {{jsxref("null")}} if there were no matches.
+matched results, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if there were no matches.
 
 ## Description
 

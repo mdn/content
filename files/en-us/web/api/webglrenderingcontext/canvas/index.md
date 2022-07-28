@@ -13,7 +13,7 @@ browser-compat: api.WebGLRenderingContext.canvas
 
 The **`WebGLRenderingContext.canvas`** property is a read-only
 reference to the {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}}
-object that is associated with the context. It might be {{jsxref("null")}} if it is not
+object that is associated with the context. It might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not
 associated with a {{HTMLElement("canvas")}} element or an {{domxref("OffscreenCanvas")}}
 object.
 
@@ -26,7 +26,7 @@ gl.canvas;
 ### Return value
 
 Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or
-{{jsxref("null")}}.
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
 

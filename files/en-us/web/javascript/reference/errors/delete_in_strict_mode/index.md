@@ -54,7 +54,7 @@ delete x;
 // is deprecated
 ```
 
-To free the contents of a variable, you can set it to {{jsxref("null")}}:
+To free the contents of a variable, you can set it to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null):
 
 ```js example-good
 'use strict';

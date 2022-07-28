@@ -46,7 +46,7 @@ Boolean represents a logical entity and can have two values: `true` and `false`.
 
 ### Null type
 
-The Null type has exactly one value: `null`. See {{jsxref("null")}} and [Null](/en-US/docs/Glossary/Null) for more details.
+The Null type has exactly one value: `null`. See [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [Null](/en-US/docs/Glossary/Null) for more details.
 
 ### Undefined type
 
