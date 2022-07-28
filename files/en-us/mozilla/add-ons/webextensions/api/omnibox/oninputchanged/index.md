@@ -97,7 +97,7 @@ one for each CSS property that matches the user's input.
 function getMatchingProperties(input) {
   const result = [];
   for (const prop of props) {
-    if (prop.indexOf(input) === 0) {
+    if (prop[0] === input) {
       console.log(prop);
       const suggestion = {
         content: `${baseURL}${prop}`,
