@@ -35,14 +35,14 @@ The following example displays the current value of the attribute `test`. Clicki
 ### JavaScript Content
 
 ```js
-const elements = document.getElementsByTagName("label");
-const buttons = document.getElementsByTagName("button");
+const element = document.querySelector("label");
+const button = document.querySelector("button");
 const result = document.querySelector("#result");
 
-const attribute = elements[0].attributes[0];
+const attribute = elements.attributes[0];
 result.value = attribute.value;
 
-buttons[0].addEventListener("click", () => {
+button.addEventListener("click", () => {
   attribute.value = "a new value";
   result.value = attribute.value;
 });
