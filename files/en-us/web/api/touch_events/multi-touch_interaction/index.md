@@ -239,7 +239,7 @@ The functions are used to log event activity to the application window, to suppo
 
 ```js
 function enableLog(ev) {
-  logEvents = logEvents ? false : true;
+  logEvents = !logEvents;
 }
 
 function log(name, ev, printTargetIds) {

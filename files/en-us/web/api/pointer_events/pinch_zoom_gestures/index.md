@@ -201,7 +201,7 @@ let logEvents = false;
 
 // Logging/debugging functions
 function enableLog(ev) {
-  logEvents = logEvents ? false : true;
+  logEvents = !logEvents;
 }
 
 function log(prefix, ev) {
