@@ -25,13 +25,13 @@ other secret.
 ## Syntax
 
 ```js
-var iceServer = {
+const iceServer = {
   // ...
-  credential: credential,
+  credential: someCredential,
   // ...
 };
 
-var credential = iceServer.credential;
+const credential = iceServer.credential;
 
 iceServer.credential = newCredential;
 ```

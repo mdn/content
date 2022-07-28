@@ -33,12 +33,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext('webgl');
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext('webgl');
 
 // Perform some drawing using the gl context
 
-var bitmap = offscreen.transferToImageBitmap();
+const bitmap = offscreen.transferToImageBitmap();
 // ImageBitmap { width: 256, height: 256 }
 
 bitmap.close();

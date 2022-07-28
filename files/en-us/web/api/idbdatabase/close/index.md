@@ -42,7 +42,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4); // opening a database.
+const DBOpenRequest = window.indexedDB.open("toDoList", 4); // opening a database.
 
 // Create event handlers for both success and failure of
 DBOpenRequest.onerror = (event) => {

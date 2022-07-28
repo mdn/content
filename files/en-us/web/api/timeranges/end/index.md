@@ -40,11 +40,11 @@ A number.
 Given a video element with the ID `"myVideo"`:
 
 ```js
-var v = document.getElementById("myVideo");
+const v = document.getElementById("myVideo");
 
-var buf = v.buffered;
+const buf = v.buffered;
 
-var numRanges = buf.length;
+const numRanges = buf.length;
 
 if (buf.length === 1) {
   // only one range

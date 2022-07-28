@@ -29,8 +29,8 @@ A number.
 ## Examples
 
 ```js
-var videoElt = document.getElementById('my_vid');
-var quality = videoElt.getVideoPlaybackQuality();
+const videoElt = document.getElementById('my_vid');
+const quality = videoElt.getVideoPlaybackQuality();
 
 alert(quality.totalFrameDelay);
 ```

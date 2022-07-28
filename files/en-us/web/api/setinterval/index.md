@@ -81,7 +81,7 @@ avoid confusion when maintaining your code.
 The following example demonstrates `setInterval()`'s basic syntax.
 
 ```js
-var intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+const intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
 
 function myCallback(a, b)
 {

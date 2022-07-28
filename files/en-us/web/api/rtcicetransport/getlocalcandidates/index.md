@@ -57,7 +57,7 @@ This simple example gets the local candidate list from the
 the list.
 
 ```js
-var localCandidates = pc.getSenders()[0].transport.transport.getLocalCandidates();
+const localCandidates = pc.getSenders()[0].transport.transport.getLocalCandidates();
 
 localCandidates.forEach(function(candidate, index) {
   console.log(`Candidate ${index}: ${candidate.candidate}`);

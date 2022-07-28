@@ -176,7 +176,7 @@ const stopElem = document.getElementById("stop");
 
 // Options for getDisplayMedia()
 
-var displayMediaOptions = {
+const displayMediaOptions = {
   video: {
     cursor: "always"
   },

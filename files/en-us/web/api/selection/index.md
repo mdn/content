@@ -72,7 +72,7 @@ A user may make a selection from left to right (in document order) or right to l
 Calling the {{DOMxRef("Selection.toString()")}} method returns the text contained within the selection, e.g.:
 
 ```js
-var selObj = window.getSelection();
+const selObj = window.getSelection();
 window.alert(selObj);
 ```
 
@@ -83,8 +83,8 @@ Note that using a selection object as the argument to `window.alert` will call t
 A selection object represents the {{DOMxRef("Range")}}s that the user has selected. Typically, it holds only one range, accessed as follows:
 
 ```js
-var selObj = window.getSelection();
-var range  = selObj.getRangeAt(0);
+const selObj = window.getSelection();
+const range  = selObj.getRangeAt(0);
 ```
 
 - `selObj` is a Selection object

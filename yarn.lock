@@ -39,16 +39,16 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.6.tgz#96e7f53f01863951798c9ad2e10c8e62e6855c90"
   integrity sha512-gUe6d9Q2HCK5tLBzPWjsn/GNBBYPIZrCNeN0+3f1rgz6VvFrGUJwkB/Wn8HD0ea7yeYYBbGgWSQSwmcPaT6AQg==
 
-"@mdn/yari@1.13.1":
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.13.1.tgz#4fa113530ca0304c40b446e85ccbdba7efd701c6"
-  integrity sha512-K2c1sOGqmK1+G/AtDTRGrGqbZV+TgvS/oywKidEe/jezLWCF+olxT/atihlClrWrXTpQlYPbk9h9FsF04LKHWA==
+"@mdn/yari@1.13.2":
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.13.2.tgz#3387a155b9698de38154518caa28e37186a544de"
+  integrity sha512-8VVxA1rdG252pTK9oVp5mqFXubhxI/cTgQfs+S9B5JcDYwn3rmQ0f8VYaNLEBLPDrUX25Tp3BKVQn8xjlTobQg==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
     "@mdn/browser-compat-data" "^5.1.6"
     "@use-it/interval" "^1.0.0"
-    "@webref/css" "^4.3.3"
+    "@webref/css" "^4.3.4"
     accept-language-parser "^1.5.0"
     browser-specs "^3.16.0"
     chalk "^4.1.2"
@@ -290,10 +290,10 @@
   resolved "https://registry.yarnpkg.com/@use-it/interval/-/interval-1.0.0.tgz#c42c68f22ca29a0dc929041746373d94496d2b3a"
   integrity sha512-WQFcnSt/xM/mS8ZtJ0ut5lhPrl+V0HDPPcI/J0eUClsfiD+/r8A7IeW/pVcfpSVGWRmN3+WnjNteWuKyWs2WZg==
 
-"@webref/css@^4.3.3":
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/@webref/css/-/css-4.3.3.tgz#5f7f5c26a5532c063f2d39b492aba00fb65246be"
-  integrity sha512-QHiB/zC03gnz6DJhhaMK5N2EmTD4f05xj9aSlCCBZvvxtsS41S6gOWS+UdaauoywhiH9isfrHAQd2ZO5kosXnA==
+"@webref/css@^4.3.4":
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/@webref/css/-/css-4.3.4.tgz#6fff159c97e9bf3888351df8a092d6f85bdd85f0"
+  integrity sha512-utt6xOjOfpOzFqlligVwgFYflos1rfNv7uzgANJtqbqsh/VHVHtN3AFLS1IuSxnm7FMDKgRQnT/wM2qkQ8c8tA==
 
 accept-language-parser@^1.5.0:
   version "1.5.0"

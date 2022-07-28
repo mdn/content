@@ -27,12 +27,12 @@ In following simple code snippet, we assume the user initiates one or more touch
 
 ```js
 // Register a touchmove listener for the 'source' element
-var src = document.getElementById("source");
+const src = document.getElementById("source");
 
 src.addEventListener('touchstart', function(e) {
   // Iterate through the touch points that were activated
   // for this element.
-  for (var i=0; i < e.targetTouches.length; i++) {
+  for (let i = 0; i < e.targetTouches.length; i++) {
     console.log(`touchpoint[${i}].target = ${e.targetTouches[i].target}`);
   }
 }, false);
