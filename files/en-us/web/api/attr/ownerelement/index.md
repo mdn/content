@@ -26,10 +26,15 @@ The following example displays the qualified name of the element of the two firs
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
 <label xml:lang="en-US" class="struct"></label>
 
-<button>Click me for &lt;svg&gt;…</button>
-<button>Click me for &lt;label&gt;…</button>
-<br><br>
-Qualified name of the owner element of the attribute <code>xml:lang</code>: <output id="result">None.</output>
+<p>
+  <button>Show value for &lt;svg&gt;</button>
+  <button>Show value for &lt;label&gt;</button>
+</p>
+
+<p>
+  Qualified name of the owner element of the attribute <code>xml:lang</code>:
+  <output id="result">None.</output>
+</p>
 ```
 
 ### JavaScript Content
@@ -37,18 +42,14 @@ Qualified name of the owner element of the attribute <code>xml:lang</code>: <out
 ```js
 const elements = document.getElementsByClassName("struct");
 const buttons = document.getElementsByTagName("button");
-const result  = document.querySelector("#result");
+const outputEl = document.querySelector("#result");
 
-function handleEvent(element) {
-  return function(e) {
-    attribute = element.attributes[0];
-    result.value = attribute.ownerElement.tagName.toLowerCase();
-  }
-}
-
-let i=0;
-for (let button of buttons) {
-  button.addEventListener('click', handleEvent(elements[i]));
+let i = 0;
+for (const button of buttons) {
+  button.addEventListener("click", () => {
+    const attribute = elements[i].attributes[0];
+    outputEl.value = attribute.ownerElement.tagName.toLowerCase();
+  });
   i++;
 }
 ```

@@ -25,8 +25,11 @@ The following example displays the current value of the attribute `test`. Clicki
 <label test="initial value"></label>
 
 <button>Click me to set test to <code>"a new value"</code>…</button>
-<br><br>
-Current value of the <code>test</code> attribute: <output id="result">None.</output>
+
+<p>
+  Current value of the <code>test</code> attribute:
+  <output id="result">None.</output>
+</p>
 ```
 
 ### JavaScript Content
@@ -34,16 +37,15 @@ Current value of the <code>test</code> attribute: <output id="result">None.</out
 ```js
 const elements = document.getElementsByTagName("label");
 const buttons = document.getElementsByTagName("button");
-const result  = document.querySelector("#result");
+const result = document.querySelector("#result");
 
 const attribute = elements[0].attributes[0];
 result.value = attribute.value;
 
-buttons[0].addEventListener('click',function(e) {
-    attribute.value = "a new value";
-    result.value = attribute.value;
-  }
-);
+buttons[0].addEventListener("click", () => {
+  attribute.value = "a new value";
+  result.value = attribute.value;
+});
 ```
 
 {{ EmbedLiveSample('Example','100%',100) }}
