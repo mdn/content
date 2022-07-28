@@ -212,7 +212,7 @@ function fixedCharAt(str, idx) {
   let end = str.length
 
   let surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g
-  while ((surrogatePairs.exec(str)) !== null) {
+  while (surrogatePairs.exec(str) !== null) {
     let lastIdx = surrogatePairs.lastIndex
     if (lastIdx - 2 < idx) {
       idx++
