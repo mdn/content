@@ -41,7 +41,7 @@ myHeaders.append('Content-Type', 'text/xml');
 myHeaders.append('Vary', 'Accept-Language');
 
 // Display the keys
-for(const key of myHeaders.keys()) {
+for (const key of myHeaders.keys()) {
    console.log(key);
 }
 ```

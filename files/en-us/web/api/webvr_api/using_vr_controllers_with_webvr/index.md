@@ -66,7 +66,7 @@ Here we first use a tracking variable, `initialRun`, to note that this is the fi
 function reportDisplays() {
   navigator.getVRDisplays().then(function(displays) {
     console.log(`${displays.length} displays`);
-    for(let i = 0; i < displays.length; i++) {
+    for (let i = 0; i < displays.length; i++) {
       const cap = displays[i].capabilities;
       // cap is a VRDisplayCapabilities object
       const listItem = document.createElement('li');

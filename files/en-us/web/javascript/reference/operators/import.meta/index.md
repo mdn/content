@@ -30,7 +30,7 @@ on which property access is performed, but here `import` is not really an
 object.
 
 The `import.meta` object is created by the ECMAScript implementation, with a
-{{JSxRef("null")}} prototype. The object is extensible, and its properties are writable,
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) prototype. The object is extensible, and its properties are writable,
 configurable, and enumerable.
 
 ## Examples

@@ -43,7 +43,7 @@ function execRecursively(fn, subject, _refs = null){
   fn(subject);
   if("object" === typeof subject){
     _refs.add(subject);
-    for(let key in subject)
+    for (let key in subject)
       execRecursively(fn, subject[key], _refs);
   }
 }

@@ -107,7 +107,7 @@ function animate(time) {
       transform = `translateX(${ x }px) rotate(${ progress * rotate }deg) scale(${ (0.6 + progress * scale ) })`;
     }
 
-    for(const box of boxes) {
+    for (const box of boxes) {
       box.transform = transform;
     }
   } else {

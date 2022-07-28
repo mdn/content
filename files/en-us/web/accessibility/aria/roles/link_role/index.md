@@ -60,7 +60,7 @@ span[role="link"]:focus {
 ```JavaScript
 const fakeLinks = document.querySelectorAll('[role="link"]');
 
-for(let i = 0; i < fakeLinks.length; i++) {
+for (let i = 0; i < fakeLinks.length; i++) {
   fakeLinks[i].addEventListener('click', navigateLink);
   fakeLinks[i].addEventListener('keydown', navigateLink);
 }

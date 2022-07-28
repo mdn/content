@@ -86,7 +86,7 @@ From here we use standard DOM traversal techniques to find the {{htmlelement("st
 function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   const childNodes = shadow.childNodes;
-  for(let i = 0; i < childNodes.length; i++) {
+  for (let i = 0; i < childNodes.length; i++) {
     if(childNodes[i].nodeName === 'STYLE') {
       childNodes[i].textContent = `
 div {
