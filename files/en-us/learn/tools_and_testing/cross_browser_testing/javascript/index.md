@@ -433,7 +433,7 @@ let ua = navigator.userAgent;
 
 if(ua.includes('Firefox')) {
   // run Firefox-specific code
-} else if(ua.includes('Chrome')) {
+} else if (ua.includes('Chrome')) {
   // run Chrome-specific code
 }
 ```
