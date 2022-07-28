@@ -100,7 +100,7 @@ function getMatchingProperties(input) {
     if (prop.indexOf(input) === 0) {
       console.log(prop);
       const suggestion = {
-        content: baseURL + prop,
+        content: `${baseURL}${prop}`,
         description: prop
       }
       result.push(suggestion);
