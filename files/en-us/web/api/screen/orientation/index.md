@@ -28,7 +28,7 @@ Note that older, prefixed versions returned a string equivalent to
 ## Examples
 
 ```js
-var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+const orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
 
 if (orientation === "landscape-primary") {
   console.log("That looks good.");
