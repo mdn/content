@@ -34,7 +34,15 @@ const signal = controller.signal;
 
 // …
 
-signal.aborted ? console.log(`Request aborted with reason: ${signal.reason}`) : console.log('Request not aborted');
+if (signal.aborted) {
+  if (signal.reason) {
+    console.log(`Request aborted with reason: ${signal.reason}`);
+  } else {
+    console.log('Request aborted but no reason was given.');
+  }
+} else {
+  console.log('Request not aborted');
+}
 ```
 
 ## Specifications

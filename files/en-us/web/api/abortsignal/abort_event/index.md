@@ -36,7 +36,9 @@ You can detect the `abort` event using an [`addEventListener`](/en-US/docs/Web/A
 const controller = new AbortController();
 const signal = controller.signal;
 
-signal.addEventListener('abort', () => { console.log('Request aborted'); });
+signal.addEventListener('abort', () => {
+  console.log('Request aborted');
+});
 ```
 
 Or use the `onabort` event handler property:
@@ -45,7 +47,9 @@ Or use the `onabort` event handler property:
 const controller = new AbortController();
 const signal = controller.signal;
 
-signal.onabort = () => { console.log('Request aborted'); };
+signal.onabort = () => {
+  console.log('Request aborted');
+};
 ```
 
 ## Specifications

@@ -30,7 +30,11 @@ const signal = controller.signal;
 
 // …
 
-signal.aborted ? console.log('Request has been aborted') : console.log('Request not aborted');
+if (signal.aborted) {
+  console.log('Request has been aborted');
+} else {
+  console.log('Request not aborted');
+}
 ```
 
 ## Specifications
