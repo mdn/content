@@ -28,6 +28,8 @@ Later on, using the `aborted` property, we check whether or not the signal has b
 const controller = new AbortController();
 const signal = controller.signal;
 
+// …
+
 if (signal.aborted) {
   console.log('Request has been aborted');
 } else {

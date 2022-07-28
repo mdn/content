@@ -54,8 +54,8 @@ its opacity animation has faded it in:
 
 ```js
 // Add an animation to the game's ending credits
-var endingUI = document.getElementById("ending-ui");
-var bringUI = endingUI.animate(keysFade, timingFade);
+const endingUI = document.getElementById("ending-ui");
+const bringUI = endingUI.animate(keysFade, timingFade);
 
 // Pause said animation's credits
 bringUI.pause();
