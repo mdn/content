@@ -50,11 +50,14 @@ const elements = document.getElementsByClassName("struct");
 const buttons = document.getElementsByTagName("button");
 const outputEl = document.querySelector("#result");
 
-for (const [i, button] of buttons.entries()) {
+let i = 0;
+for (const button of buttons) {
+  const element = elements[i];
   button.addEventListener("click", () => {
-    const attribute = elements[i].attributes[0];
+    const attribute = element.attributes[0];
     outputEl.value = attribute.localName;
   });
+  i++;
 }
 ```
 
