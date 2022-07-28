@@ -47,7 +47,7 @@ One of the followings:
 
 ```js
 // Set the frame of TableA to 'border'
-var t = document.getElementById('TableA');
+const t = document.getElementById('TableA');
 t.frame  = "border";
 t.border = "2px";
 ```

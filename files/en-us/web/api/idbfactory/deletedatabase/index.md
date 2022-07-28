@@ -63,7 +63,7 @@ are fired.
 ## Examples
 
 ```js
-var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
+const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
 DBDeleteRequest.onerror = function(event) {
   console.log("Error deleting database.");

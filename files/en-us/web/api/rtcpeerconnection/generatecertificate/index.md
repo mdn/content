@@ -107,7 +107,7 @@ RTCPeerConnection.generateCertificate({
     modulusLength: 2048,
     publicExponent: new Uint8Array([1, 0, 1])
 }).then(function(cert) {
-  var pc = new RTCPeerConnection({certificates: [cert]});
+  const pc = new RTCPeerConnection({certificates: [cert]});
 });
 ```
 

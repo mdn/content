@@ -67,7 +67,7 @@ setConfiguration(configuration)
 In this example, it has already been determined that ICE restart is needed, and that negotiation needs to be done using a different ICE server.
 
 ```js
-var restartConfig = {
+const restartConfig = {
   iceServers: [{
     urls: "turn:asia.myturnserver.net",
     username: "allie@oopcode.com",
