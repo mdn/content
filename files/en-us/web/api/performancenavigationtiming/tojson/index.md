@@ -34,8 +34,7 @@ A JSON object that is the serialization of the
 
 ```js
 // Get a resource performance entry
-const perfEntries = performance.getEntriesByType("navigation");
-const entry = perfEntries[0];
+const [entry] = performance.getEntriesByType("navigation");
 
 // Get the JSON and log it
 const json = entry.toJSON();

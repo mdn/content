@@ -10,13 +10,7 @@ The **`attribution`** readonly property of the
 {{domxref("PerformanceLongTaskTiming")}} interface returns a sequence of
 {{domxref('TaskAttributionTiming')}} instances.
 
-## Syntax
-
-```js
-PerformanceLongTaskTiming.attribution
-```
-
-### Value
+## Value
 
 A sequence of {{domxref('TaskAttributionTiming')}} instances.
 

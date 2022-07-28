@@ -46,7 +46,8 @@ RTCPeerConnection.removeStream(mediaStream);
 ## Example
 
 ```js
-let pc, videoStream;
+let pc;
+let videoStream;
 navigator.getUserMedia({video: true}, function(stream) {
   pc = new RTCPeerConnection();
   videoStream = stream;
