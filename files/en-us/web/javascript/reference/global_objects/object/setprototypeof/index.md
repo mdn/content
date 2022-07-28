@@ -172,6 +172,72 @@ console.log(george.identity); // 'George'
 george(); // 'Hello guys!!'
 ```
 
+#### Fourth example: Pseudoclassical inheritance using Object.setPrototypeOf
+
+Inheritance in JS using classes.
+
+```js
+class Human {}
+class SuperHero extends Human {}
+
+const superMan = new SuperHero();
+```
+
+However if we want to implement subclasses, without using `class`, we can do the following:
+
+```js
+function Human(name, level) {
+  this.name = name;
+  this.level = level;
+}
+
+function SuperHero(name, level) {
+  Human.call(this, name, level);
+}
+
+Object.setPrototypeOf(SuperHero.prototype, Human.prototype);
+
+// Set the `[[Prototype]]` of `SuperHero.prototype`
+// to `Human.prototype`
+// To set the prototypal inheritance chain
+
+Human.prototype.speak = function () {
+  return `${this.name} says hello.`;
+}
+
+SuperHero.prototype.fly = function () {
+  return `${this.name} is flying.`;
+}
+
+const superMan = new SuperHero('Clark Kent', 1);
+
+console.log(superMan.fly());
+console.log(superMan.speak())
+
+```
+
+The similarity between classical inheritance (with classes) and pseudoclassical inheritance (with function prototypes) as done above is mentioned in [Inheritance chains](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains).
+
+In the `class` example `SuperHero` can inherit from `Human` without using `extends`. It is done by using `setPrototypeOf`. 
+
+**Though it is not advisable to use `setPrototypeOf` instead of `extends`.**
+
+```js
+class Human {}
+class SuperHero {}
+
+// Set the instance properties
+Object.setPrototypeOf(SuperHero.prototype, Human.prototype);
+
+// Hook up the static properties (since we cannot `call` Human inside SuperHero with `this` context as can be done with functions)
+Object.setPrototypeOf(SuperHero, Human);
+
+const superMan = new SuperHero();
+```
+
+Subclassing without extends is mentioned in [ES-6 subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/).
+
+
 ## Examples
 
 ### Using Object.setPrototypeOf
@@ -195,3 +261,5 @@ const dict = Object.setPrototypeOf({}, null);
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.prototype.__proto__")}}
+- [Inheritance chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
+- [ES-6 subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/)
