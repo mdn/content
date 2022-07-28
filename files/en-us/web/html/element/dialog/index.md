@@ -85,9 +85,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Accessibility considerations
 
-The `dialog` element still has [usability issues with some forms of assistive technology](https://www.scottohara.me/blog/2019/03/05/open-dialog.html). Because of this, it is advised to use an interim solution such as [a11y-dialog](https://a11y-dialog.netlify.app/) as support continues to improve.
-  
-As of March 2022, this is not the case anymore and both Webkit 15.4 and Firefox 98 support the `<dialog>` element.
+To ensure accessibility for users of Safari versions below 15.4, consider using a polyfill such as [a11y-dialog](https://a11y-dialog.netlify.app/) as earlier implementations of <dialog> had [usability issues with some forms of assistive technology](https://www.scottohara.me/blog/2019/03/05/open-dialog.html).
+
+When implementing a dialog, it is important to consider the most appropriate place to set user focus, including the to [autofocus](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute if appropriate.
+
+Ensure the “Escape” key closes the dialog. If multiple dialogs are open, Escape should only close the last shown dialog.
+
+The <dialog> element is equivalent to [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) with the modal dialog behaving similar to setting [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal). Ensure your implementation of dialog doesn't break expected default behaviors and follows proper labeling recommendations.
 
 ## Usage notes
 
