@@ -39,8 +39,8 @@ with the `<select>` element.
 ```js
 window.addEventListener("DOMContentLoaded", function() {
   const select = document.getElementById("test");
-  for(var i = 0; i < select.labels.length; i++) {
-    console.log(select.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of select.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```

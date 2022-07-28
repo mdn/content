@@ -39,8 +39,8 @@ transaction(storeNames, mode, options)
     Therefore the following lines are equivalent:
 
     ```js
-    var transaction = db.transaction(['my-store-name']);
-    var transaction = db.transaction('my-store-name');
+    db.transaction(['my-store-name']);
+    db.transaction('my-store-name');
     ```
 
     If you need to access all object stores in the database, you can use the property
@@ -66,7 +66,7 @@ transaction(storeNames, mode, options)
     you would use the following:
 
     ```js
-    var transaction = db.transaction('my-store-name', "readwrite");
+    const transaction = db.transaction('my-store-name', "readwrite");
     ```
 
     As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to

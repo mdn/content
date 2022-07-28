@@ -13,7 +13,7 @@ The **`attribution`** readonly property of the
 ## Syntax
 
 ```js
-var taskAttributeTiming = PerformanceLongTaskTiming.attribution;
+PerformanceLongTaskTiming.attribution
 ```
 
 ### Value

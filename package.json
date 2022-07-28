@@ -17,5 +17,9 @@
     "@mdn/yari": "1.13.1",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "eslint-plugin-markdown": "^3.0.0"
   }
 }
