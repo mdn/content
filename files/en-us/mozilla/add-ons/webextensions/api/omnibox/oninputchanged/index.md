@@ -105,7 +105,7 @@ function getMatchingProperties(input) {
       }
       result.push(suggestion);
     } else {
-      if (result.length != 0) {
+      if (result.length !== 0) {
         return result;
       }
     }

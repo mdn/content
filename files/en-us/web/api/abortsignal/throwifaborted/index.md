@@ -103,7 +103,7 @@ startSpinner();
 myCoolPromiseAPI({ /* … ,*/ signal })
   .then((result) => { })
   .catch((err) => {
-    if (err.name == 'AbortError') return;
+    if (err.name === 'AbortError') return;
     showUserErrorMessage();
   })
   .then(() => stopSpinner());

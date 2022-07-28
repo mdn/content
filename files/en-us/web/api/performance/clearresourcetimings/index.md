@@ -49,7 +49,7 @@ function clear_performance_timings() {
   // Create a resource timing performance entry by loading an image
   load_resource();
 
-  const supported = typeof performance.clearResourceTimings == "function";
+  const supported = typeof performance.clearResourceTimings === "function";
   if (supported) {
     console.log("Run: performance.clearResourceTimings()");
     performance.clearResourceTimings();
@@ -59,7 +59,7 @@ function clear_performance_timings() {
   }
   // getEntries should now return zero
   const p = performance.getEntriesByType("resource");
-  if (p.length == 0)
+  if (p.length === 0)
     console.log("… Performance data buffer cleared");
   else
     console.log("… Performance data buffer NOT cleared!");

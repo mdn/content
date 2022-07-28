@@ -28,10 +28,10 @@ are called depending on the value of the event's `pressure` property.
 
 ```js
 someElement.addEventListener('pointerdown', function(event) {
-  if (event.pressure == 0) {
+  if (event.pressure === 0) {
     // No pressure
     process_no_pressure(event);
-  } else if (event.pressure == 1) {
+  } else if (event.pressure === 1) {
     // Maximum pressure
     process_max_pressure(event);
   } else {

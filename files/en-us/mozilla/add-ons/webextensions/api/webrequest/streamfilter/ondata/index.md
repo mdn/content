@@ -74,7 +74,7 @@ function listener(details) {
 
   filter.onstop = (event) => {
     let str = "";
-    if (data.length == 1) {
+    if (data.length === 1) {
       str = decoder.decode(data[0]);
     }
     else {

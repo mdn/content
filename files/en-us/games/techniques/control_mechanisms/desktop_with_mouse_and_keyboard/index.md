@@ -41,16 +41,16 @@ Then we will listen for the `keydown` and `keyup` events and act accordingly in 
 
 ```js
 function keyDownHandler(event) {
-    if(event.keyCode == 39) {
+    if(event.keyCode === 39) {
         rightPressed = true;
     }
-    else if(event.keyCode == 37) {
+    else if(event.keyCode === 37) {
         leftPressed = true;
     }
-    if(event.keyCode == 40) {
+    if(event.keyCode === 40) {
       downPressed = true;
     }
-    else if(event.keyCode == 38) {
+    else if(event.keyCode === 38) {
       upPressed = true;
     }
 }
@@ -260,7 +260,7 @@ To skip the how to play screen, we can listen for any key being pressed and move
 
 ```js
 this.input.keyboard.onDownCallback = function() {
-    if(this.stateStatus == 'intro') {
+    if (this.stateStatus === 'intro') {
         this.hideIntro();
     }
 };

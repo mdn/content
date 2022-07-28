@@ -1977,7 +1977,7 @@ First, let's look at the best options for videos presented on a typical web site
 
 1. A **[WebM](/en-US/docs/Web/Media/Formats/Containers#webm)** container using the **[VP9](#vp9)** codec for video and the **[Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.
 
-    ```js
+    ```html
     <video controls src="filename.webm"></video>
     ```
 
@@ -2000,7 +2000,7 @@ If your mission is to present video at the highest possible quality, you will pr
 
 1. A WebM container using AV1 for video and Opus for audio. If you're able to use the High or Professional profile when encoding AV1, at a high level like 6.3, you can get very high bit rates at 4K or 8K resolution, while maintaining excellent video quality. Encoding your audio using Opus's Fullband profile at a 48 kHz sample rate maximizes the audio bandwidth captured, capturing nearly the entire frequency range that's within human hearing.
 
-    ```js
+    ```html
     <video controls src="filename.webm"></video>
     ```
 

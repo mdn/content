@@ -85,13 +85,13 @@ var s = document.getElementById('s');
 var options = [ 'zero', 'one', 'two' ];
 
 options.forEach(function(element, key) {
-  if (element == 'zero') {
+  if (element === 'zero') {
     s[key] = new Option(element, s.options.length, false, false);
   }
-  if (element == 'one') {
+  if (element === 'one') {
     s[key] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
   }
-  if (element == 'two') {
+  if (element === 'two') {
     s[key] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
   }
 });

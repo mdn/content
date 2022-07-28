@@ -103,7 +103,7 @@ value would be returned without calling `callbackFn`.
 const total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
   return a + b;
 });
-// total == 6
+// total === 6
 ```
 
 ## Specifications

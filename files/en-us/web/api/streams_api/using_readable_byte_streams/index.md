@@ -607,7 +607,7 @@ function readStream(reader) {
 
   while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received
-    reader.readnew Uint8Array(buffer, offset, buffer.byteLength - offset))
+    reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
       .then(function processText({ done, value }) {
         // Result objects contain two properties:
         // done  - true if the stream has already given all its data.

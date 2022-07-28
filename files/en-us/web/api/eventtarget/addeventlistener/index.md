@@ -124,7 +124,7 @@ For example, an event handler callback that can be used to handle both
 
 ```js
 function eventHandler(event) {
-  if (event.type == 'fullscreenchange') {
+  if (event.type === 'fullscreenchange') {
     /* handle a full screen toggle */
   } else /* fullscreenerror */ {
     /* handle a full screen toggle error */
@@ -229,7 +229,7 @@ clicks on an element.
 // Function to change the content of t2
 function modifyText() {
   const t2 = document.getElementById("t2");
-  if (t2.firstChild.nodeValue == "three") {
+  if (t2.firstChild.nodeValue === "three") {
     t2.firstChild.nodeValue = "two";
   } else {
     t2.firstChild.nodeValue = "three";
@@ -273,7 +273,7 @@ el.addEventListener("click", modifyText, { signal: controller.signal } );
 // Function to change the content of t2
 function modifyText() {
   const t2 = document.getElementById("t2");
-  if (t2.firstChild.nodeValue == "three") {
+  if (t2.firstChild.nodeValue === "three") {
     t2.firstChild.nodeValue = "two";
   } else {
     t2.firstChild.nodeValue = "three";

@@ -43,7 +43,7 @@ This example looks through the list of images and finds one whose name is
 var ilist = document.images;
 
 for(var i = 0; i < ilist.length; i++) {
-    if(ilist[i].src == 'banner.gif') {
+    if(ilist[i].src === 'banner.gif') {
         // found the banner
     }
 }

@@ -56,7 +56,7 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
     function change(evt) {
       const circle = evt.target;
       const currentRadius = circle.getFloatTrait("r");
-      if (currentRadius == 100)
+      if (currentRadius === 100)
         circle.setFloatTrait("r", currentRadius * 2);
       else
         circle.setFloatTrait("r", currentRadius * 0.5);

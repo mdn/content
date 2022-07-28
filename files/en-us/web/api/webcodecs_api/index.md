@@ -76,7 +76,7 @@ while (true) {
       frame.close();
     } else {
       frame_counter++;
-      const insert_keyframe = (frame_counter % 150) == 0;
+      const insert_keyframe = frame_counter % 150 === 0;
       encoder.encode(frame, { keyFrame: insert_keyframe });
       frame.close();
     }

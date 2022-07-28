@@ -165,10 +165,10 @@ After all this is done, we use our `requestAnimationFrame()` to request the next
 
 ```js
 function buttonPressed(b) {
-  if (typeof(b) == "object") {
+  if (typeof b === "object") {
     return b.pressed;
   }
-  return b == 1.0;
+  return b === 1.0;
 }
 
 function gameLoop() {
@@ -278,8 +278,8 @@ function updateStatus() {
     for (let i = 0; i < controller.buttons.length; i++) {
       const b = buttons[i];
       let val = controller.buttons[i];
-      let pressed = val == 1.0;
-      if (typeof(val) == "object") {
+      let pressed = val === 1.0;
+      if (typeof val === "object") {
         pressed = val.pressed;
         val = val.value;
       }

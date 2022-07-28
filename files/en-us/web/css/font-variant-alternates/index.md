@@ -111,7 +111,7 @@ p {
 
 ## Specifications
 
-{{Specification}}
+{{Specifications}}
 
 ## Browser compatibility
 

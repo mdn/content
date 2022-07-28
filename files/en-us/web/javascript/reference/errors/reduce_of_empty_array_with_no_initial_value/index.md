@@ -84,14 +84,14 @@ let name_list1 = "";
 if (names1.length >= 1) {
   name_list1 = Array.prototype.reduce.call(names, (acc, name) => acc + ", " + name);
 }
-// name_list1 == "" when names is empty.
+// name_list1 === "" when names is empty.
 
 const name_list2 = Array.prototype.reduce.call(names, (acc, name) => {
-  if (acc == "") // initial value
+  if (acc === "") // initial value
     return name;
   return acc + ", " + name;
 }, "");
-// name_list2 == "" when names is empty.
+// name_list2 === "" when names is empty.
 ```
 
 ## See also

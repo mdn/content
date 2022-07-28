@@ -450,7 +450,7 @@ if (isset($_FILES['myFile'])) {
 
             xhr.open("POST", uri, true);
             xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
+                if (xhr.readyState === 4 && xhr.status === 200) {
                     alert(xhr.responseText); // handle response.
                 }
             };

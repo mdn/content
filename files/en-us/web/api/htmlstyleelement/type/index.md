@@ -30,7 +30,7 @@ A string.
 ## Examples
 
 ```js
-if (newStyle.type != "text/css"){
+if (newStyle.type !== "text/css"){
    // not supported!
    warnCSS();
 }

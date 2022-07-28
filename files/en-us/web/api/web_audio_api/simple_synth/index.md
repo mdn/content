@@ -421,7 +421,7 @@ function setup() {
     octaveElem.className = "octave";
 
     keyList.forEach(function(key) {
-      if (key[0].length == 1) {
+      if (key[0].length === 1) {
         octaveElem.appendChild(createKey(key[0], idx, key[1]));
       }
     });
@@ -494,7 +494,7 @@ function playTone(freq) {
 
   let type = wavePicker.options[wavePicker.selectedIndex].value;
 
-  if (type == "custom") {
+  if (type === "custom") {
     osc.setPeriodicWave(customWaveform);
   } else {
     osc.type = type;

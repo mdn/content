@@ -212,7 +212,7 @@ window.addEventListener('load', function () {
       const interval = window.setInterval(function () {
         // Thanks to the tag, we should only see the "Hi! 9" notification
         const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
-        if (i++ == 9) {
+        if (i++ === 9) {
           window.clearInterval(interval);
         }
       }, 200);
@@ -230,7 +230,7 @@ window.addEventListener('load', function () {
           const interval = window.setInterval(function () {
             // Thanks to the tag, we should only see the "Hi! 9" notification
             const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
-            if (i++ == 9) {
+            if (i++ === 9) {
               window.clearInterval(interval);
             }
           }, 200);

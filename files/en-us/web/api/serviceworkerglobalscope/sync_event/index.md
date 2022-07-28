@@ -47,7 +47,7 @@ The following example shows how to respond to a sync event in the service worker
 
 ```js
 self.addEventListener('sync', (event) => {
-  if (event.tag == 'sync-messages') {
+  if (event.tag === 'sync-messages') {
     event.waitUntil(sendOutboxMessages());
   }
 });

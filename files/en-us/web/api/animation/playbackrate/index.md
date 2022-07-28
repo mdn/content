@@ -30,7 +30,7 @@ Takes a number that can be 0, negative, or positive. Negative values reverse the
 In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the bottle causes Alice's growing animation (`aliceChange`) to reverse, causing her to shrink:
 
 ```js
-var shrinkAlice = function() {
+const shrinkAlice = function() {
   aliceChange.playbackRate = -1;
   aliceChange.play();
 }
@@ -43,7 +43,7 @@ bottle.addEventListener("touchstart", shrinkAlice, false);
 Contrariwise, clicking on the cake causes her to "grow," playing `aliceChange` forwards again:
 
 ```js
-var growAlice = function() {
+const growAlice = function() {
   aliceChange.playbackRate = 1;
   aliceChange.play();
 }
@@ -68,7 +68,7 @@ setInterval(function() {
 But clicking or tapping on them causes them to speed up by multiplying their `playbackRate`:
 
 ```js
-var goFaster = function() {
+const goFaster = function() {
   redQueen_alice.playbackRate *= 1.1;
 }
 

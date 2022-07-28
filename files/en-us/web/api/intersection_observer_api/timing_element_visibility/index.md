@@ -335,7 +335,7 @@ function handleRefreshInterval() {
     let previousTime = adBox.dataset.totalViewTime;
     updateAdTimer(adBox);
 
-    if (previousTime != adBox.dataset.totalViewTime) {
+    if (previousTime !== adBox.dataset.totalViewTime) {
       redrawList.push(adBox);
     }
   });
