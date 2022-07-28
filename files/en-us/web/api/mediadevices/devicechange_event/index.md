@@ -1,5 +1,5 @@
 ---
-title: 'MediaDevices: devicechange event'
+title: "MediaDevices: devicechange event"
 slug: Web/API/MediaDevices/devicechange_event
 page-type: web-api-event
 tags:
@@ -25,9 +25,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('devicechange', (event) => { });
+addEventListener('devicechange', (event) => {});
 
-ondevicechange = (event) => { };
+ondevicechange = (event) => {};
 ```
 
 ## Event type
@@ -90,15 +90,15 @@ h2 {
 }
 
 .left {
-  float:left;
+  float: left;
   width: 48%;
-  margin-right: 2%
+  margin-right: 2%;
 }
 
 .right {
-  float:right;
+  float: right;
   width: 48%;
-  margin-left: 2%
+  margin-left: 2%;
 }
 
 .deviceList {
@@ -117,24 +117,35 @@ function log(msg) {
   logElement.innerHTML += `${msg}<br>`;
 }
 
-document.getElementById("startButton").addEventListener("click", function() {
-  navigator.mediaDevices.getUserMedia({
-    video: {
-      width: 160,
-      height: 120,
-      frameRate: 30
-    },
-    audio: {
-      sampleRate: 44100,
-      sampleSize: 16,
-      volume: 0.25
-    }
-  }).then((stream) => {
-      videoElement.srcObject = stream;
-      updateDeviceList();
-    })
-    .catch((err) => log(`${err.name}: ${err.message}`));
-}, false);
+const startButton = document.queryElement("#startButton");
+
+startButton.addEventListener(
+  "click",
+  () => {
+    const constraints = {
+      video: {
+        width: 160,
+        height: 120,
+        frameRate: 30
+      },
+      audio: {
+        sampleRate: 44100,
+        sampleSize: 16,
+        volume: 0.25
+      }
+    };
+
+    navigator.mediaDevices.getUserMedia(constraints)
+      .then((stream) => {
+        videoElement.srcObject = stream;
+        updateDeviceList();
+      })
+      .catch((err) => {
+        log(`${err.name}: ${err.message}`);
+      });
+  },
+  false
+);
 ```
 
 We set up global variables that contain references to the {{HTMLElement("ul")}}
@@ -154,22 +165,22 @@ displayed lists of audio and video devices using that information.
 ```js
 function updateDeviceList() {
   navigator.mediaDevices.enumerateDevices()
-  .then(function(devices) {
-    audioList.innerHTML = "";
-    videoList.innerHTML = "";
+    .then((devices) => {
+      audioList.innerHTML = "";
+      videoList.innerHTML = "";
 
-    devices.forEach((device) => {
-      let elem = document.createElement("li");
-      let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
+      devices.forEach((device) => {
+        let elem = document.createElement("li");
+        let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
 
-      elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
-      if (type === "audio") {
-        audioList.appendChild(elem);
-      } else if (type === "video") {
-        videoList.appendChild(elem);
-      }
+        elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
+        if (type === "audio") {
+          audioList.appendChild(elem);
+        } else if (type === "video") {
+          videoList.appendChild(elem);
+        }
+      });
     });
-  });
 }
 ```
 
@@ -211,7 +222,7 @@ event handler for this `devicechange` event:
 ```js
 navigator.mediaDevices.ondevicechange = (event) => {
   updateDeviceList();
-}
+};
 ```
 
 With this code in place, each time the user plugs in a camera, microphone, or other

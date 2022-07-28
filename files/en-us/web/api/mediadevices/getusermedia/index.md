@@ -38,7 +38,7 @@ async function getMedia(constraints) {
   try {
     stream = await navigator.mediaDevices.getUserMedia(constraints);
     /* use the stream */
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -48,12 +48,12 @@ Similarly, using the raw promises directly, the code looks like this:
 
 ```js
 navigator.mediaDevices.getUserMedia(constraints)
-.then(function(stream) {
-  /* use the stream */
-})
-.catch(function(err) {
-  /* handle the error */
-});
+  .then((stream) => {
+    /* use the stream */
+  })
+  .catch((err) => {
+    /* handle the error */
+  });
 ```
 
 > **Note:** If the current document isn't loaded securely,
@@ -83,7 +83,10 @@ getUserMedia(constraints)
     The following requests both audio and video without any specific requirements:
 
     ```js
-    { audio: true, video: true }
+    getUserMedia({
+      audio: true,
+      video: true
+    })
     ```
 
     If `true` is specified for a media type, the resulting stream is
@@ -96,27 +99,27 @@ getUserMedia(constraints)
     preference for 1280x720 camera resolution:
 
     ```js
-    {
+    getUserMedia({
       audio: true,
       video: { width: 1280, height: 720 }
-    }
+    })
     ```
 
     The browser will try to honour this, but may return other
     resolutions if an exact match is not available, or the user overrides it.
 
     To _require_ a capability, use the keywords `min`,
-    `max`, or `exact` (a.k.a. `min == max`). The
+    `max`, or `exact` (a.k.a. `min === max`). The
     following demands a minimum resolution of 1280x720:
 
     ```js
-    {
+    getUserMedia({
       audio: true,
       video: {
         width: { min: 1280 },
         height: { min: 720 }
       }
-    }
+    })
     ```
 
     If no camera exists with this resolution or higher, then the returned promise will
@@ -128,13 +131,13 @@ getUserMedia(constraints)
     values and a keyword called `ideal` are not. Here's a full example:
 
     ```js
-    {
+    getUserMedia({
       audio: true,
       video: {
         width: { min: 1024, ideal: 1280, max: 1920 },
         height: { min: 576, ideal: 720, max: 1080 }
       }
-    }
+    })
     ```
 
     An `ideal` value, when used, has gravity, which means that the browser
@@ -145,26 +148,34 @@ getUserMedia(constraints)
     examples above could have been written like this:
 
     ```js
-    {
+    getUserMedia({
       audio: true,
       video: {
         width: { ideal: 1280 },
         height: { ideal: 720 }
       }
-    }
+    })
     ```
 
     Not all constraints are numbers. For example, on mobile devices, the following will
     prefer the front camera (if one is available) over the rear one:
 
     ```js
-    { audio: true, video: { facingMode: "user" } }
+    getUserMedia({
+      audio: true,
+      video: { facingMode: "user" }
+    })
     ```
 
     To _require_ the rear camera, use:
 
     ```js
-    { audio: true, video: { facingMode: { exact: "environment" } } }
+    getUserMedia({
+      audio: true,
+      video: {
+        facingMode: { exact: "environment" }
+      }
+    })
     ```
 
     Another non-number constraint is the `deviceId` constraint. If you have
@@ -172,7 +183,11 @@ getUserMedia(constraints)
     use it to request a specific device:
 
     ```js
-    { video: { deviceId: myPreferredCameraDeviceId } }
+    getUserMedia({
+      video: {
+        deviceId: myPreferredCameraDeviceId
+      }
+    })
     ```
 
     The above will return the camera you requested, or a different camera if that
@@ -180,7 +195,13 @@ getUserMedia(constraints)
     camera, you would use:
 
     ```js
-    { video: { deviceId: { exact: myExactCameraOrBustDeviceId } } }
+    getUserMedia({
+      video: {
+        deviceId: {
+          exact: myExactCameraOrBustDeviceId
+        }
+      }
+    })
     ```
 
 ### Return value
@@ -194,7 +215,7 @@ object when the requested media has successfully been obtained.
   - : Although the user and operating system both granted access to the hardware device,
     and no hardware issues occurred that would cause a `NotReadableError` {{domxref("DOMException")}}, throw if some
     problem occurred which prevented the device from being used.
-- `NotAllowedError`  {{domxref("DOMException")}}
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if one or more of the requested source devices cannot be used at this time. This will
     happen if the browsing context is insecure (that is, the page was loaded using HTTP
     rather than HTTPS). It also happens if the user has specified that the current
@@ -205,13 +226,13 @@ object when the requested media has successfully been obtained.
 
     > **Note:** Older versions of the specification used `SecurityError`
     > for this instead; `SecurityError` has taken on a new meaning.
-- `NotFoundError`  {{domxref("DOMException")}}
+- `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if no media tracks of the type specified were found that satisfy the given constraints.
-- `NotReadableError`  {{domxref("DOMException")}}
+- `NotReadableError` {{domxref("DOMException")}}
   - : Thrown if, although the user granted permission to use the matching devices, a hardware error
     occurred at the operating system, browser, or Web page level which prevented access to
     the device.
-- `OverconstrainedError`  {{domxref("DOMException")}}
+- `OverconstrainedError` {{domxref("DOMException")}}
   - : Thrown if the specified constraints resulted in no candidate devices which met the criteria
     requested. The error is an object of type `OverconstrainedError`, and has a
     `constraint` property whose string value is the name of a constraint which
@@ -221,7 +242,7 @@ object when the requested media has successfully been obtained.
     > **Note:** Because this error can occur even when the user has not yet granted
     > permission to use the underlying device, it can potentially be used as a
     > fingerprinting surface.
-- `SecurityError`  {{domxref("DOMException")}}
+- `SecurityError` {{domxref("DOMException")}}
   - : Thrown if user media support is disabled on the {{domxref("Document")}} on which
     `getUserMedia()` was called. The mechanism by which user media support is
     enabled and disabled is left up to the individual user agent.
@@ -370,20 +391,23 @@ This example gives a preference for camera resolution, and assigns the resulting
 
 ```js
 // Prefer camera resolution nearest to 1280x720.
-const constraints = { audio: true, video: { width: 1280, height: 720 } };
+const constraints = {
+  audio: true,
+  video: { width: 1280, height: 720 }
+};
 
 navigator.mediaDevices.getUserMedia(constraints)
-.then(function(mediaStream) {
-  const video = document.querySelector('video');
-  video.srcObject = mediaStream;
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch((err) => {
-  // always check for errors at the end.
-  console.error(`${err.name}: ${err.message}`);
-});
+  .then((mediaStream) => {
+    const video = document.querySelector('video');
+    video.srcObject = mediaStream;
+    video.onloadedmetadata = () => {
+      video.play();
+    };
+  })
+  .catch((err) => {
+    // always check for errors at the end.
+    console.error(`${err.name}: ${err.message}`);
+  });
 ```
 
 ### Using the new API in older browsers
@@ -404,7 +428,7 @@ if (navigator.mediaDevices === undefined) {
 // with getUserMedia as it would overwrite existing properties.
 // Here, we will just add the getUserMedia property if it's missing.
 if (navigator.mediaDevices.getUserMedia === undefined) {
-  navigator.mediaDevices.getUserMedia = function(constraints) {
+  navigator.mediaDevices.getUserMedia = (constraints) => {
 
     // First get ahold of the legacy getUserMedia, if present
     const getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
@@ -412,33 +436,35 @@ if (navigator.mediaDevices.getUserMedia === undefined) {
     // Some browsers just don't implement it - return a rejected promise with an error
     // to keep a consistent interface
     if (!getUserMedia) {
-      return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+      return Promise.reject(
+        new Error("getUserMedia is not implemented in this browser")
+      );
     }
 
     // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
-    return new Promise(function(resolve, reject) {
+    return new Promise((resolve, reject) => {
       getUserMedia.call(navigator, constraints, resolve, reject);
     });
-  }
+  };
 }
 
 navigator.mediaDevices.getUserMedia({ audio: true, video: true })
-.then(function(stream) {
-  const video = document.querySelector('video');
-  // Older browsers may not have srcObject
-  if ("srcObject" in video) {
-    video.srcObject = stream;
-  } else {
-    // Avoid using this in new browsers, as it is going away.
-    video.src = window.URL.createObjectURL(stream);
-  }
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch((err) => {
-  console.error(`${err.name}: ${err.message}`);
-});
+  .then((stream) => {
+    const video = document.querySelector('video');
+    // Older browsers may not have srcObject
+    if ("srcObject" in video) {
+      video.srcObject = stream;
+    } else {
+      // Avoid using this in new browsers, as it is going away.
+      video.src = window.URL.createObjectURL(stream);
+    }
+    video.onloadedmetadata = () => {
+      video.play();
+    };
+  })
+  .catch((err) => {
+    console.error(`${err.name}: ${err.message}`);
+  });
 ```
 
 ### Frame rate
@@ -447,7 +473,9 @@ Lower frame-rates may be desirable in some cases, like WebRTC transmissions with
 bandwidth restrictions.
 
 ```js
-const constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
+const constraints = {
+  video: { frameRate: { ideal: 10, max: 15 } }
+};
 ```
 
 ### Front and back camera
@@ -456,9 +484,13 @@ On mobile phones.
 
 ```js
 let front = false;
-document.getElementById('flip-button').onclick = function() { front = !front; };
+document.getElementById("flip-button").onclick = () => {
+  front = !front;
+};
 
-const constraints = { video: { facingMode: (front? "user" : "environment") } };
+const constraints = {
+  video: { facingMode: front ? "user" : "environment" }
+};
 ```
 
 ## Specifications

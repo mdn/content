@@ -46,20 +46,20 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
 } else {
   // List cameras and microphones.
   navigator.mediaDevices.enumerateDevices()
-  .then(function(devices) {
-    devices.forEach(function(device) {
-      console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
+    .then((devices) => {
+      devices.forEach((device) => {
+        console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
+      });
+    })
+    .catch((err) => {
+      console.error(`${err.name}: ${err.message}`);
     });
-  })
-  .catch(function(err) {
-    console.log(`${err.name}: ${err.message}`);
-  });
 }
 ```
 
 This might produce:
 
-```bash
+```
 videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
@@ -68,7 +68,7 @@ audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 or if one or more {{domxref("MediaStream")}}s are active or persistent permissions are
 granted:
 
-```bash
+```
 videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
