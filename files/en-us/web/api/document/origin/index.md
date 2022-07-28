@@ -28,14 +28,14 @@ A string containing the document's origin.
 ## Examples
 
 ```js
-var origin = document.origin;
-// On this page, returns:'https://developer.mozilla.org'
+console.log(document.origin);
+// On this page, logs: 'https://developer.mozilla.org'
 
-var origin = document.origin;
-// On "about:blank", returns:'null'
+console.log(document.origin);
+// On "about:blank", logs: 'null'
 
-var origin = document.origin;
-// On "data:text/html,<p>foo</p>", returns:'null'
+console.log(document.origin);
+// On "data:text/html,<p>foo</p>", logs: 'null'
 ```
 
 ## Browser compatibility

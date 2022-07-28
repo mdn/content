@@ -49,7 +49,7 @@ A string naming the type of error. The possible error types are:
 ## Examples
 
 ```js
-var recognition = new SpeechRecognition();
+const recognition = new SpeechRecognition();
 
 recognition.onerror = function(event) {
   console.log(`Speech recognition error detected: ${event.error}`);

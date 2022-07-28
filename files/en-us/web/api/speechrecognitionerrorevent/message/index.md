@@ -29,7 +29,7 @@ the implementors to decide upon.
 ## Examples
 
 ```js
-var recognition = new SpeechRecognition();
+const recognition = new SpeechRecognition();
 
 recognition.onerror = function(event) {
   console.log(`Speech recognition error detected: ${event.error}`);
