@@ -184,7 +184,7 @@ block content
   if errors
    ul
     for error in errors
-     li!== error.msg
+     li!= error.msg
 ```
 
 Much of this template will be familiar from our previous tutorials. First, we extend the **layout.pug** base template and override the `block` named '**content**'. We then have a heading with the `title` we passed in from the controller (via the `render()` method).
