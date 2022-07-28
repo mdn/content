@@ -47,7 +47,7 @@ const myCar = {
 };
 ```
 
-Unassigned properties of an object are {{jsxref("undefined")}} (and not {{jsxref("null")}}).
+Unassigned properties of an object are {{jsxref("undefined")}} (and not [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
 
 ```js
 myCar.color; // undefined

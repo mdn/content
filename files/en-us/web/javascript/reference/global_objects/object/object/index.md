@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Object.Object
 The **`Object` constructor** creates an object wrapper for the
 given value.
 
-- If the value is {{jsxref("null")}} or {{jsxref("undefined")}}, it will create and
+- If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it will create and
   return an empty object.
 - Otherwise, it will return an object of a Type that corresponds to the given value.
 - If the value is an object already, it will return the value.

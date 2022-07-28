@@ -101,8 +101,8 @@ in Gecko.
 
 ## Gecko Code
 
-- `{{ Source("dom/webidl/XSLTProcessor.webidl", "XSLTProcessor.webidl") }}`
-- `{{ Source("dom/xslt/xslt/txXSLTProcessor.cpp", "txXSLTProcessor.cpp") }}`
+- [XSLTProcessor.webidl](https://dxr.mozilla.org/mozilla-central/source/dom/webidl/XSLTProcessor.webidl)
+- [txXSLTProcessor.cpp](https://dxr.mozilla.org/mozilla-central/source/dom/xslt/xslt/txXSLTProcessor.cpp)
 
 ## Browser compatibility
 

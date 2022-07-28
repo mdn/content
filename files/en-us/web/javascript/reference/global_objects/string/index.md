@@ -413,7 +413,7 @@ You must be careful which level of characters you are iterating on. For example,
 
 It's possible to use `String` as a more reliable
 {{jsxref("String.prototype.toString()", "toString()")}} alternative, as it works when
-used on {{jsxref("null")}} and {{jsxref("undefined")}}. For example:
+used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
 
 ```js
 const nullVar = null;

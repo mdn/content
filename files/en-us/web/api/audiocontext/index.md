@@ -60,18 +60,11 @@ _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}
 Basic audio context declaration:
 
 ```js
-var audioCtx = new AudioContext();
-```
+const audioCtx = new AudioContext();
 
-Cross browser variant:
-
-```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
-
-var oscillatorNode = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
-var finish = audioCtx.destination;
+const oscillatorNode = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
+const finish = audioCtx.destination;
 // etc.
 ```
 

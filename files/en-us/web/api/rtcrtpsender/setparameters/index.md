@@ -170,7 +170,7 @@ async function setVideoParams(sender, height, bitrate) {
   // use applyConstraints() to be sure the height is constrained,
   // since scaleResolutionDownBy may not be implemented
 
-  if (sender.getParameters().encodings[0].scaleResolutionDownBy == 1) {
+  if (sender.getParameters().encodings[0].scaleResolutionDownBy === 1) {
     await sender.track.applyConstraints({ height });
   }
 }

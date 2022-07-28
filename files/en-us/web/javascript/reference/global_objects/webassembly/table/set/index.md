@@ -54,7 +54,7 @@ creates a new WebAssembly Table instance with an initial size of 2
 references. We then print out the table length and contents of the two indexes
 (retrieved via {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}) to show that
 the length is two, and the indexes currently contain no function references (they
-currently return {{jsxref("null")}}).
+currently return [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
 
 ```js
 const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });

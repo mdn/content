@@ -62,7 +62,7 @@ function draw() {
   let x = 0;
 
   canvasCtx.beginPath();
-  for(var i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     const v = dataArray[i]/128.0;
     const y = v * HEIGHT/2;
 

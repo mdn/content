@@ -55,7 +55,7 @@ createPattern(image, repetition)
     - `"no-repeat"` (neither direction)
 
     If `repetition` is specified as an empty string (`""`) or
-    {{jsxref("null")}} (but not {{jsxref("undefined")}}), a value of `"repeat"`
+    [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (but not {{jsxref("undefined")}}), a value of `"repeat"`
     will be used.
 
 ### Return value

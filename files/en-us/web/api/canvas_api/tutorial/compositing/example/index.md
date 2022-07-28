@@ -231,7 +231,7 @@ Color.HSV_RGB = function (o) {
         V = o.V / 100;
     let R, G;
     let A, B, C, D;
-    if (S == 0) {
+    if (S === 0) {
         R = G = B = Math.round(V * 255);
     } else {
         if (H >= 1) H = 0;

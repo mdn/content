@@ -66,7 +66,7 @@ function onError(error) {
 }
 
 function firstToLast(windowInfo) {
-  if (windowInfo.tabs.length == 0) {
+  if (windowInfo.tabs.length === 0) {
     return;
   }
   let moving = browser.tabs.move(windowInfo.tabs[0].id, {index: -1});

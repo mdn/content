@@ -46,6 +46,7 @@ the range.
 
 > **Note:** For a more complete example allowing you to experiment with
 > key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/blob/master/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
+
 ```js
 function displayData() {
   const keyRangeValue = IDBKeyRange.bound("F", "W", true, true);

@@ -28,7 +28,7 @@ Several tools and browser extensions are available to help developers support Fi
 - [DOM Inspector](/en-US/docs/DOM_Inspector), a tool that allows developers to inspect and modify documents without having to edit the document directly. DOM Inspector is available as part of the Custom install option in Firefox 1.5 under Developer Tools.
 - JavaScript console, a tool to write and test JavaScript code as well as view JavaScript and CSS errors on a page.
 - View page source, with syntax highlighting and find features.
-- [Browser extensions](https://addons.mozilla.org/en-US/firefox/search/?q=Developer%20Tools) including the [FireBug](http://www.joehewitt.com/software/firebug/), [Web Developer toolbar](</en-US/docs/Web_Developer_Extension_(external)>), [Live HTTP Headers](</en-US/docs/Live_HTTP_Headers_(external)>), [HTML Validator](</en-US/docs/HTML_Validator_(external)>) and many more.
+- [Browser extensions](https://addons.mozilla.org/en-US/firefox/search/?q=Developer%20Tools) including the [FireBug](https://web.archive.org/web/20061205073236/http://www.joehewitt.com/software/firebug/), [Web Developer toolbar](</en-US/docs/Web_Developer_Extension_(external)>), [Live HTTP Headers](</en-US/docs/Live_HTTP_Headers_(external)>), [HTML Validator](</en-US/docs/HTML_Validator_(external)>) and many more.
 
 > **Note:** Some extensions do not currently support Firefox 1.5, and will be automatically disabled.
 

@@ -48,8 +48,8 @@ The rendering process involves the following:
 - SVG files on the web can be displayed directly in the browser or embedded in HTML files via several methods:
 
   - If the HTML is XHTML and is delivered as type `application/xhtml+xml`, the SVG can be directly embedded in the XML source.
-  - The SVG can also be directly embedded in HTML. 
-  - An `img` element can be used. . 
+  - The SVG can also be directly embedded in HTML.
+  - An `img` element can be used.
   - The SVG file can be referenced with an `object` element:
 
     ```html
@@ -62,8 +62,7 @@ The rendering process involves the following:
     <iframe src="image.svg"></iframe>
     ```
 
- 
-  - Finally, SVG can be created dynamically with JavaScript and injected into the HTML DOM. 
+  - Finally, SVG can be created dynamically with JavaScript and injected into the HTML DOM.
 
 - How SVG handles sizes and units will be explained [on the next page](/en-US/docs/Web/SVG/Tutorial/Positions).
 

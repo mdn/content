@@ -32,7 +32,7 @@ depending on the value of the event's `twist` property.
 
 ```js
 someElement.addEventListener('pointerdown', function(event) {
-  if (event.twist == 0) {
+  if (event.twist === 0) {
     // No twist
     process_no_twist(event);
   } else {
