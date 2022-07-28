@@ -20,6 +20,11 @@ tags:
 ## Syntax
 
 ```wasm
+f32.const 4.3
+return
+```
+
+```wasm
 i32.const 7
 f32.const 4.3
 return
