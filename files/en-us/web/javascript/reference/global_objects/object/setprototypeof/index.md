@@ -183,7 +183,7 @@ class SuperHero extends Human {}
 const superMan = new SuperHero();
 ```
 
-However if we want to implement subclasses, without using `class`, we can do the following:
+However, if we want to implement subclasses without using `class`, we can do the following:
 
 ```js
 function Human(name, level) {
@@ -213,14 +213,13 @@ const superMan = new SuperHero('Clark Kent', 1);
 
 console.log(superMan.fly());
 console.log(superMan.speak())
-
 ```
 
-The similarity between classical inheritance (with classes) and pseudoclassical inheritance (with function prototypes) as done above is mentioned in [Inheritance chains](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains).
+The similarity between classical inheritance (with classes) and pseudoclassical inheritance (with constructors' `prototype` property) as done above is mentioned in [Inheritance chains](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains).
 
-In the `class` example `SuperHero` can inherit from `Human` without using `extends`. It is done by using `setPrototypeOf`. 
+In the example below, which also uses classes, `SuperHero` is made to inherit from `Human` without using `extends` by using `setPrototypeOf` instead. 
 
-**Though it is not advisable to use `setPrototypeOf` instead of `extends`.**
+> **Warning:** It is not advisable to use `setPrototypeOf` instead of `extends` due to performance and readability reasons.
 
 ```js
 class Human {}
@@ -229,14 +228,13 @@ class SuperHero {}
 // Set the instance properties
 Object.setPrototypeOf(SuperHero.prototype, Human.prototype);
 
-// Hook up the static properties (since we cannot `call` Human inside SuperHero with `this` context as can be done with functions)
+// Hook up the static properties
 Object.setPrototypeOf(SuperHero, Human);
 
 const superMan = new SuperHero();
 ```
 
 Subclassing without extends is mentioned in [ES-6 subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/).
-
 
 ## Examples
 
