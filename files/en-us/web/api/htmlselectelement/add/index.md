@@ -47,9 +47,9 @@ None ({{jsxref("undefined")}}).
 ### Creating Elements from Scratch
 
 ```js
-var sel = document.createElement("select");
-var opt1 = document.createElement("option");
-var opt2 = document.createElement("option");
+const sel = document.createElement("select");
+const opt1 = document.createElement("option");
+const opt2 = document.createElement("option");
 
 opt1.value = "1";
 opt1.text = "Option: Value 1";
@@ -80,9 +80,9 @@ sel.add(opt2);
 ### Append to an Existing Collection
 
 ```js
-var sel = document.getElementById("existingList");
+const sel = document.getElementById("existingList");
 
-var opt = document.createElement("option");
+const opt = document.createElement("option");
 opt.value = "3";
 opt.text = "Option: Value 3";
 
@@ -115,9 +115,9 @@ sel.add(opt);
 ### Inserting to an Existing Collection
 
 ```js
-var sel = document.getElementById("existingList");
+const sel = document.getElementById("existingList");
 
-var opt = document.createElement("option");
+const opt = document.createElement("option");
 opt.value = "3";
 opt.text = "Option: Value 3";
 

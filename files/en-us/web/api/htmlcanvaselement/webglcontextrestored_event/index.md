@@ -42,8 +42,8 @@ _This interface inherits properties from its parent interface, {{domxref("Event"
 With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the `webglcontextrestored` event:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
 
 canvas.addEventListener('webglcontextrestored', function(e) {
   console.log(e);

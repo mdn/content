@@ -36,8 +36,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var button = document.querySelector('button');
-var evtSource = new EventSource('sse.php');
+const button = document.querySelector('button');
+const evtSource = new EventSource('sse.php');
 
 button.onclick = function() {
   console.log('Connection closed');

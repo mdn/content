@@ -35,7 +35,7 @@ Given this {{HTMLElement("canvas")}} element:
 You can get the height of the canvas with the following code:
 
 ```js
-var canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas');
 console.log(canvas.height); // 300
 ```
 

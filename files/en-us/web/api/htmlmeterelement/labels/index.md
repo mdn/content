@@ -36,8 +36,8 @@ with the `<meter>` element.
 ```js
 window.addEventListener("DOMContentLoaded", function() {
   const meter = document.getElementById("test");
-  for(var i = 0; i < meter.labels.length; i++) {
-    console.log(meter.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of meter.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```

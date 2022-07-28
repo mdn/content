@@ -33,7 +33,7 @@ A generic {{domxref("Event")}}.
 ## Examples
 
 ```js
-var evtSource = new EventSource('sse.php');
+const evtSource = new EventSource('sse.php');
 
 // addEventListener version
 evtSource.addEventListener('error', (e) => {

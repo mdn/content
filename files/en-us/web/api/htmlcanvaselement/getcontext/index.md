@@ -163,8 +163,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get a `2d` context of the canvas with the following code:
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 console.log(ctx); // CanvasRenderingContext2D { /* … */ }
 ```
 

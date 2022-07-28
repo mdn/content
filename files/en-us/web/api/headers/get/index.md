@@ -46,7 +46,7 @@ A {{jsxref("String")}} sequence representing the values of the retrieved header 
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 myHeaders.get('Not-Set'); // Returns null
 ```
 
