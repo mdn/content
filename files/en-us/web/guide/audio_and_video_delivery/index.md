@@ -263,7 +263,7 @@ window.onload = () => {
   }
 
   function checkKey(e) {
-    if (e.keycode == 32) { // space bar
+    if (e.keycode === 32) { // space bar
       switchState();
     }
   }
