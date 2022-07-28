@@ -22,10 +22,10 @@ We are going to use a ball for our animation studies, so let's first draw that b
 As usual, we need a drawing context first. To draw the ball, we will create a `ball` object which contains properties and a `draw()` method to paint it on the canvas.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   radius: 25,
@@ -49,11 +49,11 @@ Nothing special here, the ball is actually a simple circle and gets drawn with t
 Now that we have a ball, we are ready to add a basic animation like we have learned in the [last chapter](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations) of this tutorial. Again, {{domxref("window.requestAnimationFrame()")}} helps us to control the animation. The ball gets moving by adding a velocity vector to the position. For each frame, we also {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} the canvas to remove old circles from prior frames.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
@@ -114,11 +114,11 @@ Let's see how it looks in action so far.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
@@ -191,11 +191,11 @@ This slows down the vertical velocity each frame, so that the ball will just bou
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
@@ -266,11 +266,11 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
@@ -337,12 +337,12 @@ To get some control over the ball, we can make it follow our mouse using the [`m
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
-var running = false;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let raf;
+let running = false;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,

@@ -27,7 +27,7 @@ The {{domxref("Element")}} that scrolls the document, usually the root element (
 ## Examples
 
 ```js
-var scrollElm = document.scrollingElement;
+const scrollElm = document.scrollingElement;
 scrollElm.scrollTop = 0;
 ```
 

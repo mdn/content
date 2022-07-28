@@ -42,12 +42,12 @@ ctx.stroke();</textarea>
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
+const code = textarea.value;
 
 function drawCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);

@@ -46,8 +46,8 @@ The following JavaScript code gets an object containing the computed RGB values 
 the `color` CSS property:
 
 ```js
-var style = window.getComputedStyle(elem, null);
-var rgbObj = style.getPropertyCSSValue('color').getRGBColorValue();
+const style = window.getComputedStyle(elem, null);
+const rgbObj = style.getPropertyCSSValue('color').getRGBColorValue();
 ```
 
 ## Specifications

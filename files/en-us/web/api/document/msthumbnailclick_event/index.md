@@ -66,7 +66,7 @@ window.external.msSiteModeClearIconOverlay();
 handlerdocument.addEventListener('msthumbnailclick', onButtonClicked, false);
 
 // add the buttons
-var btnPlay = window.external.msSiteModeAddThumbBarButton(iconUri, toolTip);
+const btnPlay = window.external.msSiteModeAddThumbBarButton(iconUri, toolTip);
 
 // refresh the taskbar
 window.external.msSiteModeShowThumbBar();

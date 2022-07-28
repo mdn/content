@@ -32,7 +32,7 @@ An empty {{jsxref("Promise")}}.
 ## Examples
 
 ```js
-var isTooSoon = true;
+let isTooSoon = true;
 window.addEventListener("beforeinstallprompt", function(e) {
   if (isTooSoon) {
     e.preventDefault(); // Prevents prompt display

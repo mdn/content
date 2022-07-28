@@ -18,7 +18,7 @@ This proprietary method is specific to Internet Explorer browser.
 ### Syntax
 
 ```js
-var retVal = style.msGetPropertyEnabled(name);
+msGetPropertyEnabled(name)
 ```
 
 ### Parameters

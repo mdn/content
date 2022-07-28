@@ -31,8 +31,7 @@ second.
 > `audioCtx.sampleRate` into your browser console.
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
 // …

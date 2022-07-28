@@ -44,11 +44,11 @@ A new {{domxref("ContentIndexEvent")}} object configured using the given options
 This examples constructs a new {{domxref('ContentIndexEvent')}} with the relevant id.
 
 ```js
-var removeData = {
+const removeData = {
   id : 'unique-content-id'
 }
 
-var ciEvent = new ContentIndexEvent('contentdelete', removeData);
+const ciEvent = new ContentIndexEvent('contentdelete', removeData);
 
 ciEvent.id; // should return 'unique-content-id'
 ```

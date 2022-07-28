@@ -53,13 +53,13 @@ A new {{domxref("ChannelSplitterNode")}} object instance.
 ## Examples
 
 ```js
-var ac = new AudioContext();
+const ac = new AudioContext();
 
-var options = {
+const options = {
   numberOfOutputs : 2
 }
 
-var mySplitter = new ChannelSplitterNode(ac, options);
+const mySplitter = new ChannelSplitterNode(ac, options);
 ```
 
 ## Specifications
