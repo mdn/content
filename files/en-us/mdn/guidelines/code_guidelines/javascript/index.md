@@ -234,7 +234,7 @@ Not this:
 
 ```js example-bad
 name == 'Chris';
-age != 25;
+age !== 25;
 ```
 
 ### Use shortcuts for boolean tests

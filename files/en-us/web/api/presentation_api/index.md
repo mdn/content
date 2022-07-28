@@ -162,7 +162,7 @@ Example codes below highlight the usage of main features of the Presentation API
 
   function setConnection(newConnection) {
     // Disconnect from existing presentation, if not attempting to reconnect
-    if (connection && connection != newConnection && connection.state != 'closed') {
+    if (connection && connection !== newConnection && connection.state !== 'closed') {
       connection.onclosed = undefined;
       connection.close();
     }

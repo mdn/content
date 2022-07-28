@@ -247,7 +247,7 @@ function fetch_current_data() {
   // value of this function's Promise has had more
   // work done on it.
   return fetch('current-data.json').then((response) => {
-    if (response.headers.get('content-type') != 'application/json') {
+    if (response.headers.get('content-type') !== 'application/json') {
       throw new TypeError();
     }
     const j = response.json();

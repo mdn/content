@@ -24,7 +24,7 @@ A {{domxref("WindowProxy")}} object.
 Uses of `window.self` like the following could just as well be replaced by `window`.
 
 ```js
-if (window.parent.frames[0] != window.self) {
+if (window.parent.frames[0] !== window.self) {
     // this window is not the first frame in the list
 }
 ```

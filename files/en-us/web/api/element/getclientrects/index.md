@@ -218,7 +218,7 @@ function addClientRectsOverlay(elt) {
      is the same as the rectangle's width.
      Note: the overlays will be out of place if the user resizes or zooms. */
   const rects = elt.getClientRects();
-  for (let i = 0; i != rects.length; i++) {
+  for (let i = 0; i !== rects.length; i++) {
     const rect = rects[i];
     const tableRectDiv = document.createElement('div');
     tableRectDiv.style.position = 'absolute';

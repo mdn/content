@@ -67,7 +67,7 @@ const controller = new AbortController();
 const signal = controller.signal;
 
 startButton.addEventListener('click', async () => {
-  if (await IdleDetector.requestPermission() != "granted") {
+  if (await IdleDetector.requestPermission() !== "granted") {
     console.error("Idle detection permission denied.");
     return;
   }

@@ -583,7 +583,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 ### `devicePixelRatio` and high-dpi rendering
 
-Handling `devicePixelRatio != 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
+Handling `devicePixelRatio !== 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
 
 Instead, we can use non-integer values for CSS's `top`/`bottom`/`left`/`right` to fairly reliably 'pre-snap' our canvas to whole integer device coordinates.
 

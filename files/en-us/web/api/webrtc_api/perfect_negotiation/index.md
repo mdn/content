@@ -160,7 +160,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
   try {
     if (description) {
       const offerCollision = (description.type === "offer") &&
-                             (makingOffer || pc.signalingState != "stable");
+                             (makingOffer || pc.signalingState !== "stable");
 
       ignoreOffer = !polite && offerCollision;
       if (ignoreOffer) {
@@ -272,7 +272,7 @@ Using the previous API to implement incoming negotiation messages during perfect
 signaler.onmessage = async ({data: { description, candidate }}) => {
   try {
     if (description) {
-      if (description.type === "offer" && pc.signalingState != "stable") {
+      if (description.type === "offer" && pc.signalingState !== "stable") {
         if (!polite) {
           return;
         }
@@ -327,7 +327,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
   try {
     if (description) {
       const offerCollision = (description.type === "offer") &&
-                             (makingOffer || pc.signalingState != "stable");
+                             (makingOffer || pc.signalingState !== "stable");
 
       ignoreOffer = !polite && offerCollision;
       if (ignoreOffer) {

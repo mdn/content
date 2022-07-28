@@ -301,7 +301,7 @@ We can use these values to measure specific timings of interest:
 let
     dns  = time.domainLookupEnd - time.domainLookupStart,
     tcp  = time.connectEnd - time.connectStart,
-    ssl != time.secureConnectionStart,
+    ssl !== time.secureConnectionStart,
 ```
 
 ### Time to first byte

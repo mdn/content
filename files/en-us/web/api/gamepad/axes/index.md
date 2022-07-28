@@ -37,13 +37,13 @@ function gameLoop() {
   }
   let a = 0;
   let b = 0;
-  if(gp.axes[0] != 0) {
+  if(gp.axes[0] !== 0) {
     b -= gp.axes[0];
-  } else if(gp.axes[1] != 0) {
+  } else if(gp.axes[1] !== 0) {
     a += gp.axes[1];
-  } else if(gp.axes[2] != 0) {
+  } else if(gp.axes[2] !== 0) {
     b += gp.axes[2];
-  } else if(gp.axes[3] != 0) {
+  } else if(gp.axes[3] !== 0) {
     a -= gp.axes[3];
   }
 

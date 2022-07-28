@@ -93,7 +93,7 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install poetry dependencies
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        if: steps.cached-poetry-dependencies.outputs.cache-hit !== 'true'
         run: |
           cd yari/deployer
           poetry install --no-interaction --no-root
