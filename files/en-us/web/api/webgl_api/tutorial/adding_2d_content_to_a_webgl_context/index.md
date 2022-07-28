@@ -40,7 +40,7 @@ Each time a shape is rendered, the vertex shader is run for each vertex in the s
 
 The vertex shader must perform the needed transforms on the vertex's position, make any other adjustments or calculations it needs to make on a per-vertex basis, then return the transformed vertex by saving it in a special variable provided by GLSL, called `gl_Position`.
 
-The vertex shader can, as needed, also do things like determine the coordinates within the face's texture of the {{interwiki("wikipedia", "texel_(graphics)", "texel")}} to apply to the vertex, apply the normals to determine the lighting factor to apply to the vertex, and so on. This information can then be stored in [varyings](/en-US/docs/Web/API/WebGL_API/Data#varyings) or [attributes](/en-US/docs/Web/API/WebGL_API/Data#attributes) as appropriate to be shared with the fragment shader.
+The vertex shader can, as needed, also do things like determine the coordinates within the face's texture of the {{Glossary("texel")}} to apply to the vertex, apply the normals to determine the lighting factor to apply to the vertex, and so on. This information can then be stored in [varyings](/en-US/docs/Web/API/WebGL_API/Data#varyings) or [attributes](/en-US/docs/Web/API/WebGL_API/Data#attributes) as appropriate to be shared with the fragment shader.
 
 Our vertex shader below receives vertex position values from an attribute we define called `aVertexPosition`. That position is then multiplied by two 4x4 matrices we provide called `uProjectionMatrix` and `uModelViewMatrix`; `gl_Position` is set to the result. For more info on projection and other matrixes [you might find this article useful](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).
 
