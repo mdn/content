@@ -134,7 +134,7 @@ block content
   if errors
     ul
       for error in errors
-        li!== error.msg
+        li!= error.msg
 ```
 
 The view structure and behavior is almost the same as for the **book_form.pug** template, so we won't go over it again.
