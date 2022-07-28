@@ -39,7 +39,7 @@ const element = document.querySelector("label");
 const button = document.querySelector("button");
 const result = document.querySelector("#result");
 
-const attribute = elements.attributes[0];
+const attribute = element.attributes[0];
 result.value = attribute.value;
 
 button.addEventListener("click", () => {
