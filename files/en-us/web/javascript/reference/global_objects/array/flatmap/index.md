@@ -149,7 +149,7 @@ const result = a.flatMap((n) => {
   if (n < 0) {
     return [];
   }
-  return (n % 2 === 0) ? [n] : [n - 1, 1];
+  return n % 2 === 0 ? [n] : [n - 1, 1];
 });
 // expected output: [4, 1, 4, 20, 16, 1, 18]
 ```
