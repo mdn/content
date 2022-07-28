@@ -57,7 +57,7 @@ body {
 ```
 
 ```js
-const constraintList = document.queryElement("#constraintList");
+const constraintList = document.querySelector("#constraintList");
 const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 
 for (const [constraint, value] of Object.entries(supportedConstraints)) {

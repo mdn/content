@@ -117,7 +117,7 @@ function log(msg) {
   logElement.innerHTML += `${msg}<br>`;
 }
 
-const startButton = document.queryElement("#startButton");
+const startButton = document.querySelector("#startButton");
 
 startButton.addEventListener(
   "click",
