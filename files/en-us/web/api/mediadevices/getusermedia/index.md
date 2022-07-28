@@ -511,5 +511,5 @@ const constraints = {
   screen contents as a {{domxref("MediaStream")}}
 - {{domxref("mediaDevices.getDisplayMedia()")}}: Getting a stream containing screen
   contents
-- [Taking webcam photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
+- [Taking webcam photos](/en-US/docs/Web/API/Media_Streams_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
   rather than video
