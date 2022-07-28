@@ -21,7 +21,7 @@ The read-only **`XMLHttpRequest.responseURL`** property returns the serialized U
 ```js
 const xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/test', true);
-xhr.onload = function () {
+xhr.onload = () => {
   console.log(xhr.responseURL); // http://example.com/test
 };
 xhr.send(null);

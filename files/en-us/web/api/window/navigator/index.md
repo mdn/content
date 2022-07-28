@@ -27,7 +27,7 @@ The {{domxref("navigator")}} object.
 
 ```js
 let sBrowser;
-let sUsrAg = navigator.userAgent;
+const sUsrAg = navigator.userAgent;
 
 // The order matters here, and this may report false positives for unlisted browsers.
 
