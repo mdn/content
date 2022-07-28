@@ -224,6 +224,7 @@ With this in mind, let's have a look at the `src/App.svelte` file that came with
     }
   }
 </style>
+</main>
 ```
 
 ### The `<script>` section
