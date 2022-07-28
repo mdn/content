@@ -49,7 +49,7 @@ Calling {{DOMxRef("Navigator.vibrate()")}} with a value of `0`, an empty array, 
 Some basic `setInterval` and `clearInterval` action will allow you to create persistent vibration:
 
 ```js
-var vibrateInterval;
+let vibrateInterval;
 
 // Starts vibration at passed in level
 function startVibrate(duration) {

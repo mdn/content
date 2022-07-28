@@ -76,7 +76,7 @@ The following code snippet shows creation of a {{domxref("SharedWorker")}} objec
 the `SharedWorker()` constructor and subsequent usage of the object:
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker('worker.js');
 
 myWorker.port.start();
 

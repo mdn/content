@@ -26,11 +26,11 @@ A number.
 Given a video element with the ID "myVideo":
 
 ```js
-var v = document.GetElementById("myVideo");
+const v = document.GetElementById("myVideo");
 
-var buf = v.buffered;
+const buf = v.buffered;
 
-var numRanges = buf.length;
+const numRanges = buf.length;
 
 if (buf.length === 1) {
   // Only one range

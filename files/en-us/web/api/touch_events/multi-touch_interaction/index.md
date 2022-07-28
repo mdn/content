@@ -251,7 +251,7 @@ function log(name, ev, printTargetIds) {
 
   if (printTargetIds) {
     s = "";
-    for (var i=0; i < ev.targetTouches.length; i++) {
+    for (let i = 0; i < ev.targetTouches.length; i++) {
       s += `... id = ${ev.targetTouches[i].identifier}<br>`;
     }
     o.innerHTML += s;

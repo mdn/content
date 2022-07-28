@@ -35,7 +35,7 @@ This code snippet is from the [service worker registration-events sample](https:
 and returns its value.
 
 ```js
-var serviceWorker;
+let serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
   document.querySelector('#kind').textContent = 'installing';

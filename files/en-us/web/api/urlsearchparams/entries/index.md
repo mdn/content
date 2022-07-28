@@ -38,10 +38,10 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ```js
 // Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the key/value pairs
-for(var pair of searchParams.entries()) {
+for(const pair of searchParams.entries()) {
    console.log(`${pair[0]}, ${pair[1]}`);
 }
 ```
