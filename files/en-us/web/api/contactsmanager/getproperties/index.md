@@ -21,7 +21,7 @@ properties are available.
 ## Syntax
 
 ```js
-const contactProperties = ContactsManager.getProperties();
+getProperties()
 ```
 
 ### Parameters

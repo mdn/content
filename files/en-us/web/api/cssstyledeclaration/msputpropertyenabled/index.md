@@ -18,7 +18,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 ### Syntax
 
 ```js
-const retval = style.msPutPropertyEnabled(propertyName, true);
+msPutPropertyEnabled(name, boolean)
 ```
 
 ### Parameters

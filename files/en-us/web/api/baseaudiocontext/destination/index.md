@@ -29,7 +29,6 @@ An {{ domxref("AudioDestinationNode") }}.
 > Demos on the [MDN GitHub repo](https://github.com/mdn/), like [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic).
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 

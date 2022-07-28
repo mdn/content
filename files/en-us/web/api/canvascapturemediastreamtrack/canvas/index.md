@@ -29,7 +29,7 @@ frames being captured.
 
 ```js
 // Find the canvas element to capture
-const canvasElt = document.getElementsByTagName("canvas")[0];
+const canvasElt = document.querySelector("canvas");
 
 // Get the stream
 const stream = canvasElt.captureStream(25); // 25 FPS

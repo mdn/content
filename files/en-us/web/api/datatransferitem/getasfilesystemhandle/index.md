@@ -20,7 +20,7 @@ dragged item is a directory.
 ## Syntax
 
 ```js
-const handle = DataTransferItem.getAsFileSystemHandle();
+getAsFileSystemHandle()
 ```
 
 ### Parameters

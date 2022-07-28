@@ -25,7 +25,6 @@ A floating point number.
 ## Examples
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
