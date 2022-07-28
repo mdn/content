@@ -28,26 +28,32 @@ The following example displays the qualified name of the first attribute of the 
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
 <label xml:lang="en-US" class="struct"></label>
 
-<p>Qualified name of the attribute <code>xml:lang</code>:</p>
+<p>
+  <button>Show value for &lt;svg&gt;</button>
+  <button>Show value for &lt;label&gt;</button>
+</p>
 
-<ul>
-  <li>svg: <output id="svg-output"></output></li>
-  <li>label: <output id="label-output"></output></li>
-</ul>
+<p>
+  Qualified name of the attribute <code>xml:lang</code>:
+  <output id="result">None.</output>
+</p>
 ```
 
 ### JavaScript Content
 
 ```js
-const svgOutput = document.querySelector("#svg-output");
-const svgEl = document.querySelector("svg");
+const elements = document.getElementsByClassName("struct");
+const buttons = document.getElementsByTagName("button");
+const outputEl = document.querySelector("#result");
 
-svgOutput.value = svgEl.attributes[0].name;
-
-const labelOutput = document.querySelector("#label-output");
-const labelEl = document.querySelector("label");
-
-labelOutput.value = labelEl.attributes[0].name;
+let i = 0;
+for (const button of buttons) {
+  button.addEventListener("click", () => {
+    const attribute = elements[i].attributes[0];
+    outputEl.value = attribute.name;
+  });
+  i++;
+}
 ```
 
 {{ EmbedLiveSample('Example','100%',100) }}
