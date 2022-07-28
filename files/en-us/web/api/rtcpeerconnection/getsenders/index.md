@@ -27,7 +27,7 @@ track's data.
 ## Syntax
 
 ```js
-var senders = rtcPeerConnection.getSenders();
+const senders = rtcPeerConnection.getSenders();
 ```
 
 ### Return value

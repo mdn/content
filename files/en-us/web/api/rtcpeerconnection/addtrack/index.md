@@ -235,12 +235,12 @@ This example is drawn from the code presented in the article [Signaling and vide
 is received from the remote peer.
 
 ```js
-var mediaConstraints = {
+const mediaConstraints = {
   audio: true, // We want an audio track
   video: true, // And we want a video track
 };
 
-var desc = new RTCSessionDescription(sdp);
+const desc = new RTCSessionDescription(sdp);
 
 pc.setRemoteDescription(desc)
   .then(function () {

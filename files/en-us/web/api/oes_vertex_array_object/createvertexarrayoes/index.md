@@ -37,8 +37,8 @@ points to vertex array data.
 ## Examples
 
 ```js
-var ext = gl.getExtension('OES_vertex_array_object');
-var vao = ext.createVertexArrayOES();
+const ext = gl.getExtension('OES_vertex_array_object');
+const vao = ext.createVertexArrayOES();
 ext.bindVertexArrayOES(vao);
 
 // …

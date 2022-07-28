@@ -26,7 +26,7 @@ This extension extends {{domxref("WebGLRenderingContext.drawElements()")}}:
 ## Examples
 
 ```js
-var ext = gl.getExtension('OES_element_index_uint');
+const ext = gl.getExtension('OES_element_index_uint');
 
 gl.drawElements(gl.POINTS, 8, gl.UNSIGNED_INT, 0);
 ```

@@ -44,7 +44,7 @@ _The `MediaQueryListEvent` interface inherits properties from its parent interfa
 ## Example
 
 ```js
-var mql = window.matchMedia('(max-width: 600px)');
+const mql = window.matchMedia('(max-width: 600px)');
 
 mql.onchange = (e) => {
     if (e.matches) {
