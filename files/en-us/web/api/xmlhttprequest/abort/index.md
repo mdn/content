@@ -47,7 +47,7 @@ This example begins loading content from the MDN home page, then due to some con
 aborts the transfer by calling `abort()`.
 
 ```js
-var xhr = new XMLHttpRequest(),
+const xhr = new XMLHttpRequest(),
     method = "GET",
     url = "https://developer.mozilla.org/";
 xhr.open(method, url, true);

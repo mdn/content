@@ -61,11 +61,11 @@ For cross-browser compatibility, use `window.pageXOffset` instead of
 non-standard properties. A fully compatible example:
 
 ```js
-var x = (window.pageXOffset !== undefined)
+const x = (window.pageXOffset !== undefined)
   ? window.pageXOffset
   : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
 
-var y = (window.pageYOffset !== undefined)
+const y = (window.pageYOffset !== undefined)
   ? window.pageYOffset
   : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 ```

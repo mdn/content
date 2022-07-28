@@ -69,11 +69,11 @@ Explorer (< 9) do not support either property and must be worked around by check
 other non-standard properties. A fully compatible example:
 
 ```js
-var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+const supportPageOffset = window.pageXOffset !== undefined;
+const isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+const x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
+const y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 ```
 
 ## Specifications

@@ -42,8 +42,8 @@ Given this {{HTMLElement("canvas")}} element
 and given this WebGL context
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
 gl.getContextAttributes();
 ```
 

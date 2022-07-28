@@ -72,7 +72,7 @@ function reloadPageWithHash() {
 ```js
 function showLoc() {
   const logLines = ["Property (Typeof): Value", `location (${typeof location}): ${location}`];
-  for (let prop in location) {
+  for (const prop in location) {
     logLines.push(`${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`);
   }
   alert(logLines.join("\n"));

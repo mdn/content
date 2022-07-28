@@ -37,7 +37,7 @@ The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest c
 ## Example
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 console.log('UNSENT', xhr.readyState); // readyState will be 0
 
 xhr.open('GET', '/api', true);

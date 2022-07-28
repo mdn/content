@@ -38,7 +38,7 @@ Once a WebGL extension is enabled, you are able to use the methods, properties o
 constants that this extension object provides.
 
 ```js
-var canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas');
 gl = canvas.getContext('webgl');
 
 gl.getExtension('WEBGL_lose_context').loseContext();

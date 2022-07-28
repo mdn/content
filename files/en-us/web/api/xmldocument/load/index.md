@@ -33,7 +33,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var xmlDoc = document.implementation.createDocument("", "test", null);
+const xmlDoc = document.implementation.createDocument("", "test", null);
 
 function documentLoaded (e) {
   alert(new XMLSerializer().serializeToString(e.target)); // Gives querydata.xml contents as string

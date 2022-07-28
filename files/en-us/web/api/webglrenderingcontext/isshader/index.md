@@ -35,9 +35,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the shad
 ### Checking a shader
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var shader = gl.createShader(gl.VERTEX_SHADER);
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const shader = gl.createShader(gl.VERTEX_SHADER);
 
 // …
 

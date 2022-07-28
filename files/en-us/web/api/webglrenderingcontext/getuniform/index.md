@@ -177,7 +177,7 @@ The returned type depends on the uniform type:
 ## Examples
 
 ```js
-var loc = gl.getUniformLocation(program, 'u_foobar');
+const loc = gl.getUniformLocation(program, 'u_foobar');
 gl.getUniform(program, loc);
 ```
 
