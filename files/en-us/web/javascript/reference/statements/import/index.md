@@ -97,6 +97,8 @@ export { a as "a-b" };
 import { "a-b" as a } from "/modules/my-module.js";
 ```
 
+> **Note:** `import { x, y } from "mod"` is not equivalent to `import defaultExport from "mod"` and then destructuring `x` and `y` from `defaultExport`. Named and default imports are distinct syntaxes in JavaScript modules.
+
 ### Default import
 
 Default exports need to be imported with the corresponding default import syntax. The simplest version directly imports the default:
