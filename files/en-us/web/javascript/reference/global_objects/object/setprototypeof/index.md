@@ -101,7 +101,7 @@ console.log(superMan.speak())
 
 The similarity between classical inheritance (with classes) and pseudoclassical inheritance (with constructors' `prototype` property) as done above is mentioned in [Inheritance chains](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains).
 
-In the example below, which also uses classes, `SuperHero` is made to inherit from `Human` without using `extends` by using `setPrototypeOf` instead. 
+In the example below, which also uses classes, `SuperHero` is made to inherit from `Human` without using `extends` by using `setPrototypeOf` instead.
 
 > **Warning:** It is not advisable to use `setPrototypeOf` instead of `extends` due to performance and readability reasons.
 

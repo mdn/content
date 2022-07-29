@@ -126,7 +126,7 @@ There are five targets to consider:
     <tr>
       <td>event.composedTarget</td>
       <td>
-        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a> 
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} The original non-native target of
