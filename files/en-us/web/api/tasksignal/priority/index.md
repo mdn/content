@@ -28,7 +28,7 @@ This will be one of: `"user-blocking"`, `"user-visible"`, `"background"`.
 ## Examples
 
 The `priority` is most commonly used by developers to determine the new priority following [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) events.
-See [TaskSignal: prioritychange event](http://localhost:5042/en-US/docs/Web/API/TaskSignal/prioritychange_event#examples) for a live example.
+See [TaskSignal: prioritychange event](/en-US/docs/Web/API/TaskSignal/prioritychange_event#examples) for a live example.
 
 ## Specifications
 
