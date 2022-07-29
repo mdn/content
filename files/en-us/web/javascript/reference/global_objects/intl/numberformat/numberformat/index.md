@@ -428,7 +428,7 @@ console.log(
 // > "4.33"
 ```
 
-The minimum factional digits have no effect if the value already has more than 2 fractional digits, as shown below.
+The minimum factional digits have no effect if the value already has more than 2 fractional digits:
 
 ```js
 // Minimum fractions have no effect if value is higher precision.
@@ -444,11 +444,9 @@ console.log(
 > The default maximum digit value is `3` for plain values, `2` for currency, and may have different values for other predefined types.
 
 The formatted value above is rounded to 3 digits, even though we didn't specify the maximum digits!
-This is because a default value of `maximumFractionDigits` is set when we specify `minimumFractionDigits`, and visa versa.
+This is because a default value of `maximumFractionDigits` is set when we specify `minimumFractionDigits`, and visa versa. The default values of `maximumFractionDigits` and `minimumFractionDigits` are `3` and `0`, respectively.
 
-This is demonstrated below, using [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) to inspect the formatter.
-Note that when either `maximumFractionDigits` or `minimumFractionDigits` is defined, so is its counterpart.
-Also note the default values of `maximumFractionDigits` and `minimumFractionDigits` are `3` and `0`, respectively.
+You can use [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) to inspect the formatter.
 
 ```js
 console.log(
@@ -672,8 +670,7 @@ console.log(
 // > "2.3"
 ```
 
-A negative number on or below the half-increment point is also rounded away from zero (becomes more negative).
-This is shown be the code below:
+A negative number on or below the half-increment point is also rounded away from zero (becomes more negative):
 
 ```js
 // Value below half-increment: round down.
@@ -713,7 +710,7 @@ The table below show the effect of different rounding modes for positive and neg
 | `halfTrunc`    | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
 | `halfEven`     | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
 
-When using `halfEven`, its behavior also depends on the parity (odd or even) of the last digit of the rounded number. For example, the behavior of `halfEven` above is the same as `halfTrunc`, because the magnitudes of all numbers are between a smaller "even" number (2.2) and a larger "odd" number (2.3). If the numbers are between ±2.3 and ±2.4, `halfEven` will behave like `halfExpand` instead. This behavior avoids consistently under- or over-estimating half-increments in a large data sample.
+When using `halfEven`, its behavior also depends on the parity (odd or even) of the last digit of the rounded number. For example, the behavior of `halfEven` in the table above is the same as `halfTrunc`, because the magnitudes of all numbers are between a smaller "even" number (2.2) and a larger "odd" number (2.3). If the numbers are between ±2.3 and ±2.4, `halfEven` will behave like `halfExpand` instead. This behavior avoids consistently under- or over-estimating half-increments in a large data sample.
 
 ### Using roundingIncrement
 
