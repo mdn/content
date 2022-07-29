@@ -26,24 +26,24 @@ secondary target, depending on the type of event:
   </thead>
   <tbody>
     <tr>
-      <td>{{Event("blur")}}</td>
+      <td>{{domxref("Element/blur_event", "blur")}}</td>
       <td>The {{domxref("EventTarget")}} losing focus</td>
       <td>
         The {{domxref("EventTarget")}} receiving focus (if any).
       </td>
     </tr>
     <tr>
-      <td>{{Event("focus")}}</td>
+      <td>{{domxref("Element/focus_event", "focus")}}</td>
       <td>The {{domxref("EventTarget")}} receiving focus</td>
       <td>The {{domxref("EventTarget")}} losing focus (if any)</td>
     </tr>
     <tr>
-      <td>{{Event("focusin")}}</td>
+      <td>{{domxref("Element/focusin_event", "focusin")}}</td>
       <td>The {{domxref("EventTarget")}} receiving focus</td>
       <td>The {{domxref("EventTarget")}} losing focus (if any)</td>
     </tr>
     <tr>
-      <td>{{Event("focusout")}}</td>
+      <td>{{domxref("Element/focusout_event", "focusout")}}</td>
       <td>The {{domxref("EventTarget")}} losing focus</td>
       <td>The {{domxref("EventTarget")}} receiving focus (if any)</td>
     </tr>
