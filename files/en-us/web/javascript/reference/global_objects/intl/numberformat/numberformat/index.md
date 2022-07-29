@@ -433,8 +433,9 @@ console.log(new Intl.NumberFormat("en", {minimumSignificantDigits: 10}).format(5
 // > "54.33145000"
 ```
 
-> **Warning:** Watch out for default values as they may affect formatting even if not specified in your code.
-> The default default maximum and minimum significant digit values are 20 and 1, respectively.
+> **Warning:** Watch out for default values as they may affect formatting.
+> If only one `SignificantDigits` property is used then its counterpart will automatically be applied with the default value.
+> The default maximum and minimum significant digit values are 20 and 1, respectively.
 
 #### Specifying significant and fractional digits at the same time
 
