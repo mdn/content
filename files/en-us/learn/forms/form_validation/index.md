@@ -687,7 +687,7 @@ The HTML is almost the same; we just removed the HTML validation features.
         <span class="error" aria-live="polite"></span>
     </label>
   </p>
-  <button type="submit">Submit</button>
+  <button>Submit</button>
 </form>
 ```
 
