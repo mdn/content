@@ -43,7 +43,7 @@ Some properties only apply to input element types that support the corresponding
   - : {{domxref("NodeList")}} array: **Returns** a list of {{ HTMLElement("label") }} elements that are labels for this element.
 
 - {{domxref("HTMLInputElement.list", "list")}} {{readonlyInline}}
-  - : {{domxref("HTMLElement")}}: **Returns** the element pointed by the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute. The property may be `null` if no HTML element found in the same tree.
+  - : {{domxref("HTMLElement")}}: **Returns** the element pointed to by the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute. The property may be `null` if no HTML element is found in the same tree.
 
 - {{domxref("HTMLInputElement.multiple", "multiple")}}
   - : `boolean`: **Returns / Sets** the element's [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute, indicating whether more than one value is possible (e.g., multiple files).
