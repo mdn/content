@@ -776,7 +776,7 @@ function addEvent(element, event, callback) {
 
     // A callback that returns `false` stops the callback chain
     // and interrupts the execution of the event callback.
-    if (output === false) return false;
+    if(!output) return false;
 
     if (typeof previousEventCallBack === 'function') {
       output = previousEventCallBack(e);

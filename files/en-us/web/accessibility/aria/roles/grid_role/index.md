@@ -336,9 +336,9 @@ var result;
 do {
 result = moveto(i, j);
 j++;
-} while (result == false);
+} while(!result);
 i++;
-} while (result == false);
+} while(!result);
 } else {
 moveto(parseInt(event.target.dataset.row, 10), 0);
 }
@@ -352,9 +352,9 @@ var j = maxcol;
 do {
 result = moveto(i, j);
 j--;
-} while (result == false);
+} while(!result);
 i--;
-} while (result == false);
+} while(!result);
 } else {
 moveto(parseInt(event.target.dataset.row, 10), document.querySelector('[data-row="' + event.target.dataset.row + '"]:last-of-type').dataset.col);
 }
@@ -365,7 +365,7 @@ var result;
 do {
 result = moveto(i, event.target.dataset.col);
 i++;
-} while (result == false);
+} while(!result);
 break;
 case "PageDown":
 var i = maxrow;
@@ -373,7 +373,7 @@ var result;
 do {
 result = moveto(i, event.target.dataset.col);
 i--;
-} while (result == false);
+} while(!result);
 break;
 case "Enter":
 alert(event.target.textContent);
@@ -533,9 +533,9 @@ document.querySelector('table').addEventListener("keydown", function(event) {
           do {
             result = moveto(i, j);
             j++;
-          } while (result == false);
+          } while(!result);
           i++;
-        } while (result == false);
+        } while(!result);
       } else {
         moveto(parseInt(event.target.dataset.row, 10), 0);
       }
@@ -549,9 +549,9 @@ document.querySelector('table').addEventListener("keydown", function(event) {
           do {
             result = moveto(i, j);
             j--;
-          } while (result == false);
+          } while(!result);
           i--;
-        } while (result == false);
+        } while(!result);
       } else {
         moveto(parseInt(event.target.dataset.row, 10), document.querySelector('[data-row="' + event.target.dataset.row + '"]:last-of-type').dataset.col);
       }
@@ -562,7 +562,7 @@ document.querySelector('table').addEventListener("keydown", function(event) {
       do {
         result = moveto(i, event.target.dataset.col);
         i++;
-      } while (result == false);
+      } while(!result);
       break;
     case "PageDown":
       var i = maxrow;
@@ -570,7 +570,7 @@ document.querySelector('table').addEventListener("keydown", function(event) {
       do {
         result = moveto(i, event.target.dataset.col);
         i--;
-      } while (result == false);
+      } while(!result);
       break;
     case "Enter":
       alert(event.target.textContent);

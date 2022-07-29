@@ -87,7 +87,7 @@ if (!Element.prototype.toggleAttribute) {
       this.removeAttribute(name);
       return false;
     }
-    if (force === false) return false;
+    if(!force) return false;
 
     this.setAttribute(name, "");
     return true;
