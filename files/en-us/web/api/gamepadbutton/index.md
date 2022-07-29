@@ -30,7 +30,6 @@ The button values in the following example are stored as an array of {{domxref("
 
 ```js
 function gameLoop() {
-
   const gp = navigator.getGamepads()[0];
 
   if (gp.buttons[0].value > 0 || gp.buttons[0].pressed) {
