@@ -31,22 +31,22 @@ The button values in the following example are stored as an array of {{domxref("
 ```js
 function gameLoop() {
 
-  let gp = navigator.getGamepads()[0];
+  const gp = navigator.getGamepads()[0];
 
-  if(gp.buttons[0].value > 0 || gp.buttons[0].pressed) {
+  if (gp.buttons[0].value > 0 || gp.buttons[0].pressed) {
     b--;
-  } else if(gp.buttons[1].value > 0 || gp.buttons[1].pressed) {
+  } else if (gp.buttons[1].value > 0 || gp.buttons[1].pressed) {
     a++;
-  } else if(gp.buttons[2].value > 0 || gp.buttons[2].pressed) {
+  } else if (gp.buttons[2].value > 0 || gp.buttons[2].pressed) {
     b++;
-  } else if(gp.buttons[3].value > 0 || gp.buttons[3].pressed) {
+  } else if (gp.buttons[3].value > 0 || gp.buttons[3].pressed) {
     a--;
   }
 
-  ball.style.left = `${a * 2}px`;
+  ball.style.left = `${a * 2}px`; // ball is a UI widget
   ball.style.top = `${b * 2}px`;
 
-  let start = rAF(gameLoop);
+  requestAnimationFrame(gameLoop);
 };
 ```
 
