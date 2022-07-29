@@ -168,8 +168,91 @@ If cells, rows, or columns can be selected, the following key combination are co
         8
       </td>
     </tr>
-    <!-- … Additional Rows … -->
-  </tbody>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 36</th>
+      <td role="gridcell" tabindex="-1">
+        9
+      </td>
+      <td role="gridcell" tabindex="-1">
+        10
+      </td>
+      <td role="gridcell" tabindex="-1">
+        11
+      </td>
+      <td role="gridcell" tabindex="-1">
+        12
+      </td>
+      <td role="gridcell" tabindex="-1">
+        13
+      </td>
+      <td role="gridcell" tabindex="-1">
+        14
+      </td>
+      <td role="gridcell" tabindex="-1">
+        15
+      </td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 36</th>
+      <td role="gridcell" tabindex="-1">
+        16
+      </td>
+      <td role="gridcell" tabindex="-1">
+        17
+      </td>
+      <td role="gridcell" tabindex="-1">
+        18
+      </td>
+      <td role="gridcell" tabindex="-1">
+        19
+      </td>
+      <td role="gridcell" tabindex="-1">
+        20
+      </td>
+      <td role="gridcell" tabindex="-1">
+        21
+      </td>
+      <td role="gridcell" tabindex="-1">
+        22
+      </td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 36</th>
+      <td role="gridcell" tabindex="-1">
+        23
+      </td>
+      <td role="gridcell" tabindex="-1">
+        24
+      </td>
+      <td role="gridcell" tabindex="-1">
+        25
+      </td>
+      <td role="gridcell" tabindex="-1">
+        26
+      </td>
+      <td role="gridcell" tabindex="-1">
+        27
+      </td>
+      <td role="gridcell" tabindex="-1">
+        28
+      </td>
+      <td role="gridcell" tabindex="-1">
+        29
+      </td>
+    </tr> 
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 36</th>
+      <td role="gridcell" tabindex="-1">
+        30
+      </td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    </tbody>
 </table>
 ```
 
