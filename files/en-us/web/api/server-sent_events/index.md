@@ -41,7 +41,6 @@ To learn how to use server-sent events, see our article [Using server-sent event
 - [Mercure: a real-time communication protocol (publish-subscribe) built on top of SSE](https://mercure.rocks)
 - [EventSource polyfill for Node.js](https://github.com/EventSource/eventsource)
 - Remy Sharp's [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
-- Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)
 - Rick Waldron's [jquery plugin](https://github.com/rwaldron/jquery.eventsource)
 - intercooler.js [declarative SSE support](https://intercoolerjs.org/docs.html#sse)
 
