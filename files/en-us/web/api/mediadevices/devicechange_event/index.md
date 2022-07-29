@@ -60,7 +60,7 @@ media device is attached to or removed from the device running the sample.
   <ul class="deviceList" id="videoList"></ul>
 </div>
 
-<div id="log"></div>
+<output></output>
 ```
 
 ```css hidden
@@ -110,14 +110,14 @@ h2 {
 ```
 
 ```js hidden
-let videoElement = document.getElementById("video");
-let logElement = document.getElementById("log");
+// UI elements
+const videoElement = document.queryElement("#video");
+const logElement = document.queryElement("output");
+const startButton = document.queryElement("#startButton");
 
 function log(msg) {
   logElement.innerHTML += `${msg}<br>`;
 }
-
-const startButton = document.querySelector("#startButton");
 
 startButton.addEventListener(
   "click",
@@ -152,8 +152,8 @@ We set up global variables that contain references to the {{HTMLElement("ul")}}
 elements that are used to list the audio and video devices:
 
 ```js
-let audioList = document.getElementById("audioList");
-let videoList = document.getElementById("videoList");
+const audioList = document.getElementById("audioList");
+const videoList = document.getElementById("videoList");
 ```
 
 #### Getting and drawing the device list
@@ -170,8 +170,8 @@ function updateDeviceList() {
       videoList.innerHTML = "";
 
       devices.forEach((device) => {
-        let elem = document.createElement("li");
-        let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
+        const elem = document.createElement("li");
+        const [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
 
         elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
         if (type === "audio") {

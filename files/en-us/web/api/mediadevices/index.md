@@ -53,15 +53,12 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 ## Example
 
 ```js
-'use strict';
-
 // Put variables in global scope to make them available to the browser console.
 const video = document.querySelector('video');
 const constraints = {
   audio: false,
   video: true
 };
-window.constraints = constraints;
 
 navigator.mediaDevices.getUserMedia(constraints)
   .then((stream) => {
@@ -71,7 +68,6 @@ navigator.mediaDevices.getUserMedia(constraints)
     stream.onremovetrack = () => {
       console.log('Stream ended');
     };
-    window.stream = stream; // make variable available to browser console
     video.srcObject = stream;
   })
   .catch((error) => {

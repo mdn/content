@@ -41,7 +41,7 @@ If enumeration fails, the promise is rejected.
 Here's an example of using `enumerateDevices()`. It outputs a list of the [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId), with their labels if available.
 
 ```js
-if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+if (!navigator.mediaDevices?.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
 } else {
   // List cameras and microphones.
