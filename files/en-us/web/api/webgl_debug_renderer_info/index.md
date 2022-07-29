@@ -33,12 +33,12 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 With the help of this extension, privileged contexts are able to retrieve debugging information about the user's graphic driver:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
 
-var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
-var renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
 
 console.log(vendor);
 console.log(renderer);

@@ -25,7 +25,7 @@ A {{domxref("NodeList")}}.
 
 ```js
 // Get the distributed nodes
-var nodes = myShadowObject.getDistributedNodes();
+const nodes = myShadowObject.getDistributedNodes();
 ```
 
 ## Specifications

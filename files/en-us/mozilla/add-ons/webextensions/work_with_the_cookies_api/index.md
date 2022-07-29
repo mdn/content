@@ -135,7 +135,7 @@ let bgBtns = document.querySelectorAll('.bg-container button');
 It then loops through all the buttons assigning them their image and creating an onclick listener for each button:
 
 ```js
-for(let i = 0; i < bgBtns.length; i++) {
+for (let i = 0; i < bgBtns.length; i++) {
   let imgName = bgBtns[i].getAttribute('class');
   let bgImg = 'url(\'images/' + imgName + '.png\')';
   bgBtns[i].style.backgroundImage = bgImg;

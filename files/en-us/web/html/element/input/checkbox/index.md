@@ -177,13 +177,13 @@ overall.addEventListener('click', (e) => {
   e.preventDefault();
 });
 
-for(const ingredient of ingredients) {
+for (const ingredient of ingredients) {
   ingredient.addEventListener('click', updateDisplay);
 }
 
 function updateDisplay() {
   let checkedCount = 0;
-  for(const ingredient of ingredients) {
+  for (const ingredient of ingredients) {
     if(ingredient.checked) {
       checkedCount++;
     }

@@ -157,7 +157,7 @@ Instead, you should try to use {{domxref("window.requestAnimationFrame()")}}. Th
 
 #### Make events immediate
 
-As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use {{event("touchstart")}} and {{event("touchend")}} instead. The reason is that these don't have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don't sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
+As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchend_event", "touchend")}} instead. The reason is that these don't have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don't sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
 
 #### Keep your interface simple
 
@@ -179,7 +179,7 @@ The [Built-in Gecko Profiler](/en-US/docs/Performance/Profiling_with_the_Built-i
 
 ![A built-in Gecko profiler windows showing a lot of network information.](gecko-profiler.png)
 
-> **Note:** You can use these tools with the Android browser by running Firefox and enabling [remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html).
+> **Note:** You can use these tools with the Android browser by running Firefox and enabling [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html).
 
 In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](https://www.slideshare.net/firt/mobile-web-high-performance) talk.
 

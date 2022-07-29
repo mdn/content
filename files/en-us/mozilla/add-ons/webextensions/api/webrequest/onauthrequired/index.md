@@ -256,7 +256,7 @@ function completed(requestDetails) {
 function provideCredentialsSync(requestDetails) {
   // If we have seen this request before, then
   // assume our credentials were bad, and give up.
-  if (pendingRequests.indexOf(requestDetails.requestId) != -1) {
+  if (pendingRequests.includes(requestDetails.requestId)) {
     console.log(`bad credentials for: ${requestDetails.requestId}`);
     return {cancel:true};
   }
@@ -304,7 +304,7 @@ function provideCredentialsAsync(requestDetails) {
   // If we have seen this request before,
   // then assume our credentials were bad,
   // and give up.
-  if (pendingRequests.indexOf(requestDetails.requestId) != -1) {
+  if (pendingRequests.includes(requestDetails.requestId)) {
     console.log(`bad credentials for: ${requestDetails.requestId}`);
     return {cancel: true};
 

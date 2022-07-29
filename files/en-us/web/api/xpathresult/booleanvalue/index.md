@@ -45,8 +45,8 @@ The following example shows the use of the `booleanValue` property.
 ### JavaScript
 
 ```js
-var xpath = "//div/text() = 'XPath example'";
-var result = document.evaluate(xpath, document, null, XPathResult.BOOLEAN_TYPE, null);
+const xpath = "//div/text() = 'XPath example'";
+const result = document.evaluate(xpath, document, null, XPathResult.BOOLEAN_TYPE, null);
 document.querySelector("output").textContent = result.booleanValue;
 ```
 

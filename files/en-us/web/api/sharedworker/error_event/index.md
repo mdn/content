@@ -36,7 +36,7 @@ A generic {{domxref("Event")}}.
 The following code snippet creates a {{domxref("SharedWorker")}} object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor and sets up an `onerror` handler on the resulting object:
 
 ```js
-var mySharedWorker = new SharedWorker('shared-worker.js');
+const mySharedWorker = new SharedWorker('shared-worker.js');
 
 mySharedWorker.onerror = function(event) {
   console.log('There is an error with your worker!');

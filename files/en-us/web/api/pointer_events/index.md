@@ -218,7 +218,7 @@ This example illustrates accessing all of a pointer event's properties.
       }
 
       // Call the tilt handler
-      if (ev.tiltX != 0 && ev.tiltY != 0) process_tilt(ev.tiltX, ev.tiltY);
+      if (ev.tiltX !== 0 && ev.tiltY !== 0) process_tilt(ev.tiltX, ev.tiltY);
 
       // Call the pressure handler
       process_pressure(ev.pressure);

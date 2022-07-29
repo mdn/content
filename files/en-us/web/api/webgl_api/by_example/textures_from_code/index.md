@@ -98,7 +98,7 @@ function setupWebGL (evt) {
   if (!(gl = getRenderingContext()))
     return;
 
-  const source = document.querySelector("#vertex-shader").innerHTML;
+  let source = document.querySelector("#vertex-shader").innerHTML;
   const vertexShader = gl.createShader(gl.VERTEX_SHADER);
   gl.shaderSource(vertexShader,source);
   gl.compileShader(vertexShader);
@@ -118,8 +118,7 @@ function setupWebGL (evt) {
     const linkErrLog = gl.getProgramInfoLog(program);
     cleanup();
     document.querySelector("p").innerHTML =
-      "Shader program did not link successfully. "
-      + "Error log: " + linkErrLog;
+      `Shader program did not link successfully. Error log: ${linkErrLog}`;
     return;
   }
   initializeAttributes();

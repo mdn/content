@@ -27,7 +27,7 @@ When working with `WebGLVertexArrayObject` objects, the following methods are us
 ## Examples
 
 ```js
-var vao = gl.createVertexArray();
+const vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
 // …

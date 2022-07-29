@@ -60,8 +60,8 @@ In the following example, `toggleAttribute()` is used to toggle the
 ### JavaScript
 
 ```js
-var button = document.querySelector("button");
-var input = document.querySelector("input");
+const button = document.querySelector("button");
+const input = document.querySelector("input");
 
 button.addEventListener("click", function(){
   input.toggleAttribute("disabled");
@@ -87,7 +87,7 @@ if (!Element.prototype.toggleAttribute) {
       this.removeAttribute(name);
       return false;
     }
-    if (force === false) return false;
+    if (!force) return false;
 
     this.setAttribute(name, "");
     return true;

@@ -107,7 +107,7 @@ function pointermove_handler(ev) {
  }
 
  // If two pointers are down, check for pinch gestures
- if (evCache.length == 2) {
+ if (evCache.length === 2) {
    // Calculate the distance between the two pointers
    const curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
 
@@ -201,7 +201,7 @@ let logEvents = false;
 
 // Logging/debugging functions
 function enableLog(ev) {
-  logEvents = logEvents ? false : true;
+  logEvents = !logEvents;
 }
 
 function log(prefix, ev) {

@@ -50,7 +50,7 @@ const writableStream = new WritableStream({
   }
 }, queuingStrategy);
 
-var size = queuingStrategy.size();
+const size = queuingStrategy.size();
 ```
 
 ## Specifications

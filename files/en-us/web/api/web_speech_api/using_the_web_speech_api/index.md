@@ -69,7 +69,7 @@ The next part of our code defines the grammar we want our app to recognize. The 
 
 ```js
 const colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', /* … */ ];
-const grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
+const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(' | ')};`
 ```
 
 The grammar format used is [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**) — you can find a lot more about it at the previous link to its spec. However, for now let's just run through it quickly:
@@ -118,17 +118,17 @@ const diagnostic = document.querySelector('.output');
 const bg = document.querySelector('html');
 const hints = document.querySelector('.hints');
 
-let colorHTML= '';
-colors.forEach(function(v, i, a){
-  console.log(v, i);
-  colorHTML += '<span style="background-color:' + v + ';"> ' + v + ' </span>';
+let colorHTML = '';
+colors.forEach((color, i) => {
+  console.log(color, i);
+  colorHTML += `<span style="background-color:${color};"> ${color} </span>`;
 });
-hints.innerHTML = 'Tap/click then say a color to change the background color of the app. Try ' + colorHTML + '.';
+hints.innerHTML = `Tap or click then say a color to change the background color of the app. Try ${colorHTML}.`;
 
-document.body.onclick = function() {
+document.body.onclick = () => {
   recognition.start();
   console.log('Ready to receive a color command.');
-}
+};
 ```
 
 #### Receiving and handling results
@@ -138,9 +138,9 @@ Once the speech recognition is started, there are many event handlers that can b
 ```js
 recognition.onresult = function(event) {
   let color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-  console.log('Confidence: ' + event.results[0][0].confidence);
+  console.log(`Confidence: ${event.results[0][0].confidence}`);
 }
 ```
 
@@ -160,7 +160,7 @@ The last two handlers are there to handle cases where speech was recognized that
 
 ```js
 recognition.onnomatch = function(event) {
-  diagnostic.textContent = 'I didn\'t recognize that color.';
+  diagnostic.textContent = `I didn't recognize that color.`;
 }
 ```
 
@@ -168,7 +168,7 @@ The {{domxref("SpeechRecognition.error_event", "error")}} event handles cases wh
 
 ```js
 recognition.onerror = function(event) {
-  diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
+  diagnostic.textContent = `Error occurred in recognition: ${event.error}`;
 }
 ```
 
@@ -254,9 +254,9 @@ We also create `data-` attributes for each option, containing the name and langu
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i < voices.length ; i++) {
+  for (i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+    option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
     if(voices[i].default) {
       option.textContent += ' — DEFAULT';
@@ -292,7 +292,7 @@ inputForm.onsubmit = function(event) {
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
+  for (i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -307,8 +307,9 @@ In the final part of the handler, we include an {{domxref("SpeechSynthesisUttera
 ```js
    utterThis.onpause = function(event) {
     const char = event.utterance.text.charAt(event.charIndex);
-    console.log('Speech paused at character ' + event.charIndex + ' of "' +
-    event.utterance.text + '", which is "' + char + '".');
+    console.log(
+      `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`
+    );
   }
 ```
 

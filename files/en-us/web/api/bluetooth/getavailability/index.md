@@ -21,7 +21,7 @@ The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface ret
 ## Syntax
 
 ```js
-var readerPromise = Bluetooth.getAvailability();
+getAvailability()
 ```
 
 ### Parameters

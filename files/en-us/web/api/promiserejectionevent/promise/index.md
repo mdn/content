@@ -40,7 +40,7 @@ been handled.
 
 ```js
 window.onunhandledrejection = function(event) {
-  if (event.reason.code && event.reason.code == "Module not ready") {
+  if (event.reason.code && event.reason.code === "Module not ready") {
     window.requestIdleCallback(function(deadline) {
       loadModule(event.reason.moduleName)
         .then(performStartup);

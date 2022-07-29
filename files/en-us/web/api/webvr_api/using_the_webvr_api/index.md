@@ -428,19 +428,37 @@ We then write out the data into the information box, updating it on every frame.
 You should note that we've used a conditional expression to detect whether the linear acceleration and angular acceleration arrays are successfully returned before we display the data. These values are not reported by most VR hardware as yet, so the code would throw an error if we did not do this (the arrays return `null` if they are not successfully reported).
 
 ```js
-  posStats.textContent = 'Position: x ' + pos[0].toFixed(3) + ', y ' + pos[1].toFixed(3) + ', z ' + pos[2].toFixed(3);
-  orientStats.textContent = 'Orientation: x ' + orient[0].toFixed(3) + ', y ' + orient[1].toFixed(3) + ', z ' + orient[2].toFixed(3);
-  linVelStats.textContent = 'Linear velocity: x ' + linVel[0].toFixed(3) + ', y ' + linVel[1].toFixed(3) + ', z ' + linVel[2].toFixed(3);
-  angVelStats.textContent = 'Angular velocity: x ' + angVel[0].toFixed(3) + ', y ' + angVel[1].toFixed(3) + ', z ' + angVel[2].toFixed(3);
+  posStats.textContent = `Position: ` +
+    `x ${pos[0].toFixed(3)}, ` +
+    `y ${pos[1].toFixed(3)}, ` +
+    `z ${pos[2].toFixed(3)}`;
+  orientStats.textContent = `Orientation: ` +
+    `x ${orient[0].toFixed(3)}, ` +
+    `y ${orient[1].toFixed(3)}, ` +
+    `z ${orient[2].toFixed(3)}`;
+  linVelStats.textContent = `Linear velocity: ` +
+    `x ${linVel[0].toFixed(3)}, ` +
+    `y ${linVel[1].toFixed(3)}, ` +
+    `z ${linVel[2].toFixed(3)}`;
+  angVelStats.textContent = `Angular velocity: ` +
+    `x ${angVel[0].toFixed(3)}, ` +
+    `y ${angVel[1].toFixed(3)}, ` +
+    `z ${angVel[2].toFixed(3)}`;
 
-  if(linAcc) {
-    linAccStats.textContent = 'Linear acceleration: x ' + linAcc[0].toFixed(3) + ', y ' + linAcc[1].toFixed(3) + ', z ' + linAcc[2].toFixed(3);
+  if (linAcc) {
+    linAccStats.textContent = `Linear acceleration: ` +
+      `x ${linAcc[0].toFixed(3)}, ` +
+      `y ${linAcc[1].toFixed(3)}, ` +
+      `z ${linAcc[2].toFixed(3)}`;
   } else {
     linAccStats.textContent = 'Linear acceleration not reported';
   }
 
-  if(angAcc) {
-    angAccStats.textContent = 'Angular acceleration: x ' + angAcc[0].toFixed(3) + ', y ' + angAcc[1].toFixed(3) + ', z ' + angAcc[2].toFixed(3);
+  if (angAcc) {
+    angAccStats.textContent = `Angular acceleration: ` +
+    `x ${angAcc[0].toFixed(3)}, ` +
+    `y ${angAcc[1].toFixed(3)}, ` +
+    `z ${angAcc[2].toFixed(3)}`;
   } else {
     angAccStats.textContent = 'Angular acceleration not reported';
   }
@@ -459,7 +477,7 @@ To demonstrate how they work, our simple demo includes the following example:
 
 ```js
 window.addEventListener('vrdisplaypresentchange', function(e) {
-  console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
+  console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
 });
 ```
 

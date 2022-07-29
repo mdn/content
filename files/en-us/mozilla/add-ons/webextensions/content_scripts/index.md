@@ -268,7 +268,7 @@ If the click was on a link, it sends a message to the background page with the t
 window.addEventListener("click", notifyExtension);
 
 function notifyExtension(e) {
-  if (e.target.tagName != "A") {
+  if (e.target.tagName !== "A") {
     return;
   }
   browser.runtime.sendMessage({"url": e.target.href});

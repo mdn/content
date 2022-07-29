@@ -72,7 +72,7 @@ function reloadPageWithHash() {
 ```js
 function showLoc() {
   const logLines = ["Property (Typeof): Value", `location (${typeof location}): ${location}`];
-  for (let prop in location) {
+  for (const prop in location) {
     logLines.push(`${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`);
   }
   alert(logLines.join("\n"));
@@ -167,7 +167,8 @@ const showBookmark = (function () {
    * nDuration: the duration in milliseconds of each frame
    * nFrames: number of frames for each scroll
    */
-   nDuration = 200, nFrames = 10;
+   let nDuration = 200;
+   let nFrames = 10;
 
   function _next() {
   if (_itFrame > nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }

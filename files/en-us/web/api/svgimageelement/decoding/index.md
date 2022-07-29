@@ -33,7 +33,7 @@ A string representing the decoding hint. Possible values are:
 ## Examples
 
 ```js
-var img = new Image();
+const img = new Image();
 img.decoding = 'sync';
 img.src = 'img/logo.svg';
 ```

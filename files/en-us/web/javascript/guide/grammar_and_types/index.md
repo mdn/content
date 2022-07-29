@@ -134,7 +134,7 @@ let a;
 a + 2;  // Evaluates to NaN
 ```
 
-When you evaluate a {{jsxref("null")}} variable, the null value behaves as `0` in numeric contexts and as `false` in boolean contexts. For example:
+When you evaluate a [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) variable, the null value behaves as `0` in numeric contexts and as `false` in boolean contexts. For example:
 
 ```js
 const n = null;

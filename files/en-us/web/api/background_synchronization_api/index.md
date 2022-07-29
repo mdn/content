@@ -46,7 +46,7 @@ The following additions to the {{domxref('Service Worker API')}} are specified i
 - {{domxref("ServiceWorkerRegistration.sync")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run with network connectivity.
 - {{domxref("ServiceWorkerGlobalScope.sync_event", "onsync")}}
-  - : An event handler fired whenever a {{Event("sync")}} event occurs. This happens either immediately if the network is available or as soon as the network becomes available.
+  - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}} event occurs. This happens either immediately if the network is available or as soon as the network becomes available.
 
 ## Examples
 
@@ -86,7 +86,7 @@ The following example shows how to respond to a background sync event in the ser
 
 ```js
 self.addEventListener('sync', (event) => {
-  if (event.tag == 'sync-messages') {
+  if (event.tag === 'sync-messages') {
     event.waitUntil(sendOutboxMessages());
   }
 });

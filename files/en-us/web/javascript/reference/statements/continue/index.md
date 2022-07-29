@@ -89,7 +89,7 @@ checkiandj: while (i < 4) {
     console.log('j: ' + j);
     j -= 1;
 
-    if ((j % 2) == 0)
+    if ((j % 2) === 0)
       continue checkj;
     console.log(j + ' is odd.');
   }
@@ -100,7 +100,7 @@ checkiandj: while (i < 4) {
 
 Output:
 
-```js
+```
 i: 0
 
 // start checkj

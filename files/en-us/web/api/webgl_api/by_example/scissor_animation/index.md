@@ -69,7 +69,7 @@ window.addEventListener("load", setupAnimation, false);
 // Variables to hold the WebGL context, and the color and
 // position of animated squares.
 let gl;
-const color = getRandomColor(),
+let color = getRandomColor();
 let position;
 
 function setupAnimation (evt) {

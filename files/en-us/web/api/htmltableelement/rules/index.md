@@ -37,7 +37,7 @@ One of the followings:
 
 ```js
 // Turn on all the internal borders of a table
-var t = document.getElementById("TableID");
+const t = document.getElementById("TableID");
 t.rules = "all";
 ```
 

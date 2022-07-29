@@ -58,7 +58,7 @@ Valid input:
 ```js
 String.fromCodePoint(42);       // "*"
 String.fromCodePoint(65, 90);   // "AZ"
-String.fromCodePoint(0x404);    // "\u0404" == "Є"
+String.fromCodePoint(0x404);    // "\u0404" === "Є"
 String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
 String.fromCodePoint(194564);   // "\uD87E\uDC04"
 String.fromCodePoint(0x1D306, 0x61, 0x1D307); // "\uD834\uDF06a\uD834\uDF07"
@@ -84,7 +84,7 @@ character:
 
 ```js
 String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
-String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
+String.fromCharCode(55356, 57091);   // Stars" === "\uD83C\uDF03"
 ```
 
 `String.fromCodePoint()`, on the other hand, can return 4-byte supplementary

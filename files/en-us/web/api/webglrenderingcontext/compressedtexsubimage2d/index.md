@@ -156,7 +156,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var ext = (
+const ext = (
   gl.getExtension('WEBGL_compressed_texture_s3tc') ||
   gl.getExtension('MOZ_WEBGL_compressed_texture_s3tc') ||
   gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc')

@@ -349,12 +349,12 @@ function updateDisplay() {
   let scrolledToEnd = logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
 
   if (totalTaskCount) {
-    if (progressBarElem.max != totalTaskCount) {
+    if (progressBarElem.max !== totalTaskCount) {
       totalTaskCountElem.textContent = totalTaskCount;
       progressBarElem.max = totalTaskCount;
     }
 
-    if (progressBarElem.value != currentTaskNumber) {
+    if (progressBarElem.value !== currentTaskNumber) {
       currentTaskNumberElem.textContent = currentTaskNumber;
       progressBarElem.value = currentTaskNumber;
     }

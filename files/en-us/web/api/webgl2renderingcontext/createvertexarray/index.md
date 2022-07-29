@@ -36,7 +36,7 @@ points to vertex array data.
 ## Examples
 
 ```js
-var vao = gl.createVertexArray();
+const vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
 // …

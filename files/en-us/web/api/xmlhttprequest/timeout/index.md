@@ -26,7 +26,7 @@ In Internet Explorer, the timeout property may be set only after calling the [op
 ## Example
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.timeout = 2000; // time in milliseconds

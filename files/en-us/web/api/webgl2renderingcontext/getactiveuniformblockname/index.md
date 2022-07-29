@@ -37,7 +37,7 @@ A string indicating the active uniform block name.
 ## Examples
 
 ```js
-var blockName = gl.getActiveUniformBlockName(program, 0);
+const blockName = gl.getActiveUniformBlockName(program, 0);
 ```
 
 ## Specifications

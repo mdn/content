@@ -64,7 +64,7 @@ if (window.DeviceOrientationEvent) {
     }, true);
 }
 
-var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
+const handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
     // do something amazing
 };
 ```

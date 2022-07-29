@@ -37,9 +37,9 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_disjoint_timer_query');
-var startQuery = ext.createQueryEXT();
-var endQuery = ext.createQueryEXT();
+const ext = gl.getExtension('EXT_disjoint_timer_query');
+const startQuery = ext.createQueryEXT();
+const endQuery = ext.createQueryEXT();
 ext.queryCounterEXT(startQuery, ext.TIMESTAMP_EXT);
 
 // …

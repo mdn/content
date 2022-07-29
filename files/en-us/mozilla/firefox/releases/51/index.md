@@ -88,7 +88,7 @@ tags:
 
 ### Web Workers
 
-- The non-standard and obsolete {{domxref("WorkerGlobalScope.onclose")}} event handler and {{domxref("Worker")}} use of the {{event("close")}} event have been removed from Firefox.
+- The non-standard and obsolete {{domxref("WorkerGlobalScope.onclose")}} event handler and {{domxref("Worker")}} use of the `close` event have been removed from Firefox.
 
 ### Networking
 

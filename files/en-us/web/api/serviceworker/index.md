@@ -29,7 +29,7 @@ _The `ServiceWorker` interface inherits properties from its parent, {{domxref("E
 - {{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}
   - : Returns the `ServiceWorker` serialized script URL defined as part of {{domxref("ServiceWorkerRegistration")}}. The URL must be on the same origin as the document that registers the `ServiceWorker`.
 - {{domxref("ServiceWorker.state")}} {{readonlyinline}}
-  - : Returns the state of the service worker. It returns one of the following values: `installing`, `installed,` `activating`, `activated`, or `redundant`.
+  - : Returns the state of the service worker. It returns one of the following values: `parsed`, `installing`, `installed,` `activating`, `activated`, or `redundant`.
 
 ## Methods
 

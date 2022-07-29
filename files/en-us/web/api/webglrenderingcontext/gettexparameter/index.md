@@ -175,7 +175,7 @@ getTexParameter(target, pname)
 ### Return value
 
 Returns the requested texture information (as specified with `pname`). If an
-error occurs, {{jsxref("null")}} is returned.
+error occurs, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is returned.
 
 ## Examples
 

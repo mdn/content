@@ -35,7 +35,7 @@ then being logged. For a full example, see our
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being
 // opened successfully, or not

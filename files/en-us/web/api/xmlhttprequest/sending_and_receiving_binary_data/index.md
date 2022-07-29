@@ -58,7 +58,7 @@ function load_binary_resource(url) {
   //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
   req.overrideMimeType('text\/plain; charset=x-user-defined');
   req.send(null);
-  if (req.status != 200) return '';
+  if (req.status !== 200) return '';
   return req.responseText;
 }
 ```

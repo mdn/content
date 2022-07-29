@@ -32,9 +32,9 @@ function hide(e){
   // When this function is used as an event handler: this === e.currentTarget
 }
 
-var ps = document.getElementsByTagName('p');
+const ps = document.getElementsByTagName('p');
 
-for(var i = 0; i < ps.length; i++){
+for (let i = 0; i < ps.length; i++){
   // console: print the clicked <p> element
   ps[i].addEventListener('click', hide, false);
 }

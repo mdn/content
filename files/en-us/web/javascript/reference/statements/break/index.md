@@ -147,7 +147,7 @@ testBreak(1); // SyntaxError: Illegal break statement
 ```js
 block_1: {
   console.log('1');
-  ( function() {
+  (function() {
     break block_1; // SyntaxError: Undefined label 'block_1'
   })();
 }

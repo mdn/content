@@ -143,12 +143,12 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       if( !motes )
         return [0,0];
 
-      if( motes.length == 0 )
+      if( motes.length === 0 )
         return [0,0];
 
       var i;
       var sum_x=0, sum_y=0;
-      for(i=0; i<motes.length; i++)
+      for (i = 0; i < motes.length; i++)
       {
         sum_x += motes[i].x;
         sum_y += motes[i].y;
@@ -295,7 +295,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       while( motes.length < num )
         motes.push( new Mote() );
       // Or too many?
-      if( num == 0 )
+      if( num === 0 )
         motes = [];
       else if( motes.length > num )
         motes = motes.slice(0,num-1);

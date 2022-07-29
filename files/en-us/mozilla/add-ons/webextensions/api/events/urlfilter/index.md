@@ -23,13 +23,13 @@ All criteria are case sensitive.
 
 Values of this type are objects. They contain the following properties:
 
-However, note that these last two patterns will not match the last component of the hostname, because no implicit dot is added at the end of the hostname. So for example, `"org."` will match "https\://borg.com" but not "https\://example.org". To match these patterns, use `hostSuffix`.
+However, note that these last two patterns will not match the last component of the hostname, because no implicit dot is added at the end of the hostname. So for example, `"org."` will match `https://borg.com` but not `https://example.org`. To match these patterns, use `hostSuffix`.
 
 - `hostContains` {{optional_inline}}
 
   - : `string`. Matches if the [hostname](/en-US/docs/Web/API/HTMLAnchorElement/hostname) of the URL (without protocol or port – see `schemes` and `ports`) contains the given string.
 
-    - To test whether a hostname component starts with "foo", use `".foo"`. This matches "www\.foobar.com" and "foo.com", because an implicit dot is added at the beginning of the hostname.
+    - To test whether a hostname component starts with "foo", use `".foo"`. This matches `www.foobar.com` and `foo.com`, because an implicit dot is added at the beginning of the hostname.
     - To test whether a hostname component ends with "foo", use `"foo."`.
     - To test whether a hostname component exactly matches "foo", use `".foo."`.
 
@@ -37,7 +37,7 @@ However, note that these last two patterns will not match the last component of 
 
   - : `string`. Matches if the hostname of the URL is equal to a specified string.
 
-    - Example: `"www.example.com"` matches "http\://www\.example.com/" and "https\://www\.example.com/", but not "http\://example.com/".
+    - Example: `"www.example.com"` matches `http://www.example.com` and `https://www.example.com/`, but not `http://example.com/`.
 
 - `hostPrefix` {{optional_inline}}
   - : `string`. Matches if the hostname of the URL starts with a specified string.
@@ -45,8 +45,8 @@ However, note that these last two patterns will not match the last component of 
 
   - : `string`. Matches if the hostname of the URL ends with a specified string.
 
-    - Example: `".example.com"` matches "http\://www\.example.com/", but not "http\://example.com/".
-    - Example: `"example.com"` matches "http\://www\.example.com/", and "http\://fakeexample.com/".
+    - Example: `".example.com"` matches `http://www.example.com/`, but not `http://example.com/`.
+    - Example: `"example.com"` matches `http://www.example.com/`, and `http://fakeexample.com/`.
 
 - `pathContains` {{optional_inline}}
   - : `string`. Matches if the path segment of the URL contains a specified string.
@@ -72,7 +72,7 @@ However, note that these last two patterns will not match the last component of 
 
   - : `string`. Matches if the URL (without fragment identifier) matches a specified [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). Port numbers are stripped from the URL if they match the default port number.
 
-    - For example: `urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"` matches "https\://mozilla.org/", "https\://developer.mozilla.org/", but not "https\://developer.fakemozilla.org/".
+    - For example: `urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"` matches `https://mozilla.org/`, `https://developer.mozilla.org/`, but not `https://developer.fakemozilla.org/`.
 
 - `originAndPathMatches` {{optional_inline}}
   - : `string`. Matches if the URL without query segment and fragment identifier matches a specified [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). Port numbers are stripped from the URL if they match the default port number.
@@ -80,10 +80,10 @@ However, note that these last two patterns will not match the last component of 
 
   - : `string`. Matches if the URL (without fragment identifier) starts with a specified string. Port numbers are stripped from the URL if they match the default port number.
 
-    - Example: `"https://developer"` matches "https\://developer.mozilla.org/" and "https\://developers.facebook.com/".
+    - Example: `"https://developer"` matches `https://developer.mozilla.org/` and `https://developers.facebook.com/`.
 
 - `urlSuffix` {{optional_inline}}
-  - : `string`. Matches if the URL (without fragment identifier) ends with a specified string. Port numbers are stripped from the URL if they match the default port number. Note that an implicit forward slash "/" is added after the host, so `"com/"` matches "https\://example.com", but `"com"` does not.
+  - : `string`. Matches if the URL (without fragment identifier) ends with a specified string. Port numbers are stripped from the URL if they match the default port number. Note that an implicit forward slash "/" is added after the host, so `"com/"` matches `https://example.com`, but `"com"` does not.
 - `schemes` {{optional_inline}}
 
   - : `array` of `string`. Matches if the scheme of the URL is equal to any of the schemes specified in the array. Because schemes are always converted to lowercase, this should always be given in lowercase or it will never match.

@@ -59,9 +59,9 @@ A `gl.INVALID_ENUM` error is thrown if `target` is not
 ### Binding a frame buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var framebuffer = gl.createFramebuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const framebuffer = gl.createFramebuffer();
 
 gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
 ```

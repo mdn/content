@@ -32,7 +32,7 @@ Reflect.getPrototypeOf(target)
 ### Return value
 
 The prototype of the given object. If there are no inherited properties,
-{{jsxref("null")}} is returned.
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is returned.
 
 ### Exceptions
 

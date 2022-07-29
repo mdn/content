@@ -61,7 +61,7 @@ The JavaScript code looks at the `height` to determine the height of the
 image given the width at which it's currently drawn.
 
 ```js
-var clockImage = document.querySelector("img");
+const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
 const updateHeight = (event) => { output.innerText = clockImage.height; };

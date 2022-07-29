@@ -28,7 +28,7 @@ It's not guaranteed that the element will be put into full screen mode. If permi
 to enter full screen mode is granted, the returned {{JSxRef("Promise")}} will resolve
 and the element will receive a {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event to let it know that
 it's now in full screen mode. If permission is denied, the promise is rejected and the
-element receives a {{Event('fullscreenerror')}} event instead. If the element has been
+element receives a {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} event instead. If the element has been
 detached from the original document, then the document receives these events instead.
 
 > **Note:** This method must be called while responding to a user

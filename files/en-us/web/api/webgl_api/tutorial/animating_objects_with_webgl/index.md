@@ -15,7 +15,7 @@ tags:
 In this example, we'll actually rotate our camera. By doing so, it will look as if we are rotating the square. The first thing we'll need is a variable in which to track the current rotation of the camera:
 
 ```js
-var squareRotation = 0.0;
+let squareRotation = 0.0;
 ```
 
 Now we need to update the `drawScene()` function to apply the current rotation to the camera when drawing it. After translating the camera to the initial drawing position for the square, we apply the rotation like this:

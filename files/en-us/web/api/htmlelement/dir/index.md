@@ -47,7 +47,7 @@ One of the following:
 ## Examples
 
 ```js
-var parg = document.getElementById("para1");
+const parg = document.getElementById("para1");
 parg.dir = "rtl";
 // change the text direction on a paragraph identified as "para1"
 ```

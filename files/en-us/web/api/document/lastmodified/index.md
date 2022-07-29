@@ -65,14 +65,13 @@ if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(
 …the same example, but skipping the first visit:
 
 ```js
-var
-  nLastVisit = parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1")),
-  nLastModif = Date.parse(document.lastModified);
+const lastVisit = parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1"));
+const lastModif = Date.parse(document.lastModified);
 
-if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
+if (isNaN(lastVisit) || lastModif > lastVisit) {
   document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${location.pathname}`;
 
-  if (isFinite(nLastVisit)) {
+  if (isFinite(lastVisit)) {
     alert("This page has been changed!");
   }
 }

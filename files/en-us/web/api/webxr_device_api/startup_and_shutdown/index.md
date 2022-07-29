@@ -238,18 +238,16 @@ In basic form, code to do this final setup might look something like this:
 
 ```js
 async function runSession(session) {
-  let worldData;
-
   session.addEventListener("end", onSessionEnd);
 
-  let canvas = document.querySelector("canvas");
-  gl = canvas.getContext("webgl", { xrCompatible: true });
+  const canvas = document.querySelector("canvas");
+  const gl = canvas.getContext("webgl", { xrCompatible: true });
 
   // Set up WebGL data and such
 
-  worldData = loadGLPrograms(session, "worlddata.xml");
+  const worldData = loadGLPrograms(session, "worlddata.xml");
   if (!worldData) {
-    return NULL;
+    return null;
   }
 
   // Finish configuring WebGL

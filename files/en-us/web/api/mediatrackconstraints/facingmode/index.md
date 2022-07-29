@@ -17,7 +17,7 @@ tags:
   - getusermedia
 browser-compat: api.MediaTrackConstraints.facingMode
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`facingMode`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring)
@@ -42,7 +42,7 @@ An `exact` value in this case indicates that the specified facing mode is
 specifically required; for example:
 
 ```js
-var constraints = {
+const constraints = {
   facingMode: { exact: "user" }
 };
 ```

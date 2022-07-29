@@ -30,7 +30,7 @@ f(2);
 
 At the moment `stop()` is called the call stack will be:
 
-```js
+```plain
 f(2) -> g(1) -> f(1) -> g(0) -> stop()
 ```
 
@@ -63,7 +63,7 @@ The following code checks the value a function's `caller` property.
 
 ```js
 function myFunc() {
-  if (myFunc.caller == null) {
+  if (myFunc.caller === null) {
     return 'The function was called from the top!';
   } else {
     return 'This function\'s caller was ' + myFunc.caller;

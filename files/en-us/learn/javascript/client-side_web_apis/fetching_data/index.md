@@ -187,7 +187,7 @@ fetch('products.json')
     }
     return response.json();
   })
-  .then((json) => initialize(json) )
+  .then((json) => initialize(json))
   .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
@@ -221,7 +221,7 @@ fetch(url)
     }
     return response.blob();
   })
-  .then((blob) => showProduct(blob, product) )
+  .then((blob) => showProduct(blob, product))
   .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 

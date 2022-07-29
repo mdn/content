@@ -8,7 +8,7 @@ tags:
   - Capture
   - Constraint validation
   - HTML
-browser-compat: html.elements.input.attributes.capture
+browser-compat: html.elements.input.capture
 ---
 
 {{HTMLSidebar}}

@@ -18,7 +18,7 @@ typeof null === 'object' // true
 ## See also
 
 - [JavaScript data types](/en-US/docs/Web/JavaScript/Data_structures)
-- The JavaScript global object: {{jsxref("null")}}
+- The JavaScript global object: [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 - {{Interwiki("wikipedia", "Null pointer")}} on Wikipedia
 - **[Glossary](/en-US/docs/Glossary)**
 

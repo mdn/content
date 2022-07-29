@@ -35,7 +35,7 @@ with the `<button>` element.
 ```js
 window.addEventListener("DOMContentLoaded", function() {
   const button = document.getElementById("test");
-  for(var i = 0; i < button.labels.length; i++) {
+  for (let i = 0; i < button.labels.length; i++) {
     console.log(button.labels[i].textContent); // "Label 1" and "Label 2"
   }
 });

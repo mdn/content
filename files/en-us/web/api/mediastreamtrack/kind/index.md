@@ -12,7 +12,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaStreamTrack.kind
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The **`MediaStreamTrack.kind`**
 read-only property returns a string set to `"audio"` if

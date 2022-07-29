@@ -317,7 +317,7 @@ Let's begin by extracting our new to-do form out to its own component. With what
 1. Create a new file, `components/NewTodo.svelte`.
 2. Put the following contents inside it:
 
-    ```js
+    ```html
     <script>
       import { createEventDispatcher } from 'svelte'
       const dispatch = createEventDispatcher()
@@ -379,7 +379,7 @@ We'll create a `nameEl` variable and bind it to the input it using `bind:this={n
 
 Update the contents of `NewTodo.svelte` like so:
 
-```js
+```html
 <script>
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
@@ -397,7 +397,6 @@ Update the contents of `NewTodo.svelte` like so:
     name = ''
     nameEl.focus()            // give focus to the name input
   }
-
 </script>
 
 <form on:submit|preventDefault={addTodo} on:keydown={(e) => e.key === 'Escape' && onCancel()}>
@@ -417,7 +416,7 @@ The next feature will add to our `NewTodo` component will be an `autofocus` prop
 
 1. Our first attempt is as follows: let's try adding the `autofocus` prop and just call `nameEl.focus()` from the `<script>` block. Update the first part of the `NewTodo.svelte` `<script>` section (the first four lines) to look like this:
 
-    ```js
+    ```html
     <script>
       import { createEventDispatcher } from 'svelte'
       const dispatch = createEventDispatcher()
@@ -452,7 +451,7 @@ The one you'll use most frequently is `onMount()`, which lets us run a callback 
 1. To start with, add the following line at the beginning of the `NewTodo.svelte` `<script>` section:
 
     ```js
-     import { onMount } from 'svelte'
+    import { onMount } from 'svelte'
     ```
 
 2. And these lines at the end of it:
@@ -572,7 +571,7 @@ In our immediate use case, we will define a function called `selectOnFocus()` th
 
     ```js
     function selectOnFocus(node) {
-      if (node && typeof node.select === 'function' ) {               // make sure node is defined and has a select() method
+      if (node && typeof node.select === 'function') {               // make sure node is defined and has a select() method
         const onFocus = (event) => node.select()                        // event handler
         node.addEventListener('focus', onFocus)                       // when node gets focus call onFocus()
         return {
@@ -609,7 +608,7 @@ Now let's make this function truly reusable across components. `selectOnFocus()`
 
     ```js
     export function selectOnFocus(node) {
-      if (node && typeof node.select === 'function' ) {               // make sure node is defined and has a select() method
+      if (node && typeof node.select === 'function') {               // make sure node is defined and has a select() method
         const onFocus = (event) => node.select()                        // event handler
         node.addEventListener('focus', onFocus)                       // when node gets focus call onFocus()
         return {
@@ -765,7 +764,7 @@ So we need the `TodosStatus` component to expose a method that its parent can ca
 
 We've already seen that Svelte uses `export let var = …` to [declare props](https://svelte.dev/docs#1_export_creates_a_component_prop). But if instead of using `let` you export a `const`, `class`, or `function`, it is read-only outside the component. Function expressions are valid props, however. In the following example, the first three declarations are props, and the rest are exported values:
 
-```js
+```html
 <script>
   export let bar = 'optional default initial value'       // prop
   export let baz = undefined                              // prop
@@ -786,7 +785,7 @@ With this in mind, let's go back to our use case. We'll create a function called
 
 1. Update the contents of `TodosStatus.svelte` like so:
 
-    ```js
+    ```html
     <script>
       export let todos
 

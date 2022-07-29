@@ -83,8 +83,8 @@ The {{domxref("XSLTProcessor")}} object also implements a {{domxref("XSLTProcess
 
 The following reflect the interface of the {{domxref("XSLTProcessor")}} object:
 
-- {{ Source("dom/xslt/nsIXSLTProcessor.idl", "nsIXSLTProcessor.idl") }}
-- {{ Source("dom/webidl/XSLTProcessor.webidl", "XSLTProcessor.webidl") }}
+- [XSLTProcessor.webidl](https://dxr.mozilla.org/mozilla-central/source/dom/webidl/XSLTProcessor.webidl)
+- [txXSLTProcessor.cpp](https://dxr.mozilla.org/mozilla-central/source/dom/xslt/xslt/txXSLTProcessor.cpp)
 
 ### Using XSLTProcessor from XPCOM components
 

@@ -81,8 +81,8 @@ like so:
 3. If this fails (e.g., because the network is down), return a fallback response.
 
 ```js
-var response;
-var cachedResponse = caches.match(event.request).catch(function() {
+let response;
+const cachedResponse = caches.match(event.request).catch(function() {
   return fetch(event.request);
 }).then(function(r) {
   response = r;

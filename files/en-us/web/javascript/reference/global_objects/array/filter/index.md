@@ -100,7 +100,7 @@ const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 function isPrime(num) {
   for (let i = 2; num > i; i++) {
-    if (num % i == 0) {
+    if (num % i === 0) {
       return false;
     }
   }
@@ -159,7 +159,7 @@ let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
  */
 function filterItems(arr, query) {
   return arr.filter(function(el) {
-    return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    return el.toLowerCase().includes(query.toLowerCase());
   })
 }
 
@@ -176,7 +176,7 @@ const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
  * Filter array items based on search criteria (query)
  */
 const filterItems = (arr, query) => {
-  return arr.filter((el) => el.toLowerCase().indexOf(query.toLowerCase()) !== -1)
+  return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
 }
 
 console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']

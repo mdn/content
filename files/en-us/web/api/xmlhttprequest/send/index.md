@@ -72,7 +72,7 @@ None ({{jsxref("undefined")}}).
 ## Example: GET
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.onload = function () {
@@ -89,7 +89,7 @@ xhr.send(null);
 ## Example: POST
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open("POST", '/server', true);
 
 //Send the proper header information along with the request

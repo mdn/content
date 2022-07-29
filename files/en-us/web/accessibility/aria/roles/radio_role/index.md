@@ -184,7 +184,7 @@ for (let i = 0, groups = radioGroups.length; i < groups; i++) {
     );
     radios[j].addEventListener('click', function() {
       handleClick();
-    );
+    });
   }
 }
 

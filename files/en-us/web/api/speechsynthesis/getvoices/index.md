@@ -46,7 +46,7 @@ function populateVoiceList() {
 
   const voices = speechSynthesis.getVoices();
 
-  for(let i = 0; i < voices.length; i++) {
+  for (let i = 0; i < voices.length; i++) {
     const option = document.createElement('option');
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
 

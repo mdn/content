@@ -31,7 +31,7 @@ to the viewport (in CSS pixels), including any scroll offset.
 
 In following simple code snippet, we assume the user initiates one or more touch
 contacts on the `source` element, moves the touch points and then releases
-all contacts with the surface. When the {{event("touchmove")}} event handler is invoked,
+all contacts with the surface. When the {{domxref("Element/touchmove_event", "touchmove")}} event handler is invoked,
 each touch point's {{domxref("Touch.pageX")}} and {{domxref("Touch.pageY")}} coordinates
 are accessed via the event's {{domxref("TouchEvent.changedTouches")}} list.
 

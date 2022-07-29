@@ -28,13 +28,12 @@ An {{ domxref("AudioListener") }} object.
 > **Note:** for a full Web Audio spatialization example, see our [panner-node](https://github.com/mdn/webaudio-examples/tree/master/panner-node) demo.
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
 // …
 
-var myListener = audioCtx.listener;
+const myListener = audioCtx.listener;
 ```
 
 ## Specifications

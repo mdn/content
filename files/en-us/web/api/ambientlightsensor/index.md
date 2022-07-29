@@ -45,7 +45,7 @@ _`AmbientLightSensor` doesn't have own events. However, it inherits events from 
 ## Example
 
 ```js
-if ( 'AmbientLightSensor' in window ) {
+if ('AmbientLightSensor' in window) {
   const sensor = new AmbientLightSensor();
   sensor.addEventListener('reading', (event) => {
     console.log('Current light level:', sensor.illuminance);

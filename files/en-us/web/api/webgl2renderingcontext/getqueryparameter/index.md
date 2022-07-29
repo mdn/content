@@ -45,10 +45,10 @@ Depends on the `pname` parameter, either a {{domxref("WebGL_API/Types", "GLuint"
 ## Examples
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
-var result = gl.getQueryParameter(query, gl.QUERY_RESULT);
+const result = gl.getQueryParameter(query, gl.QUERY_RESULT);
 ```
 
 ## Specifications

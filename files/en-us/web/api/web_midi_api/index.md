@@ -45,16 +45,16 @@ The method must be called in a secure context.
 
 ```js
 let midi = null;  // global MIDIAccess object
-function onMIDISuccess( midiAccess ) {
+function onMIDISuccess(midiAccess) {
   console.log("MIDI ready!");
   midi = midiAccess;  // store in the global (in real usage, would probably keep in an object instance)
 }
 
 function onMIDIFailure(msg) {
-  console.log(`Failed to get MIDI access - ${msg}`);
+  console.error(`Failed to get MIDI access - ${msg}`);
 }
 
-navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );
+navigator.requestMIDIAccess().then(onMIDISuccess, onMIDIFailure);
 ```
 
 ### Listing inputs and outputs
@@ -74,7 +74,7 @@ function listInputsAndOutputs(midiAccess) {
 
   for (const entry of midiAccess.outputs) {
     const output = entry[1];
-    console.log( `Output port [type:'${output.type}'] id:'${output.id}' manufacturer:'${output.manufacturer}' name:'${output.name}' version:'${output.version}'` );
+    console.log(`Output port [type:'${output.type}'] id:'${output.id}' manufacturer:'${output.manufacturer}' name:'${output.name}' version:'${output.version}'`);
   }
 }
 ```

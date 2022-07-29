@@ -216,7 +216,7 @@ function DOMContentLoaded() { "use strict";
 
 ```js
 document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+  console.log('DOM fully loaded and parsed');
 });
 ```
 
@@ -228,8 +228,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
   });
 
-for( let i = 0; i < 1000000000; i++)
-{} // This synchronous script is going to delay parsing of the DOM,
+  for (let i = 0; i < 1000000000; i++);
+   // This synchronous script is going to delay parsing of the DOM,
    // so the DOMContentLoaded event is going to launch later.
 </script>
 ```
@@ -304,20 +304,20 @@ const reload = document.querySelector('#reload');
 reload.addEventListener('click', () => {
   log.textContent ='';
   window.setTimeout(() => {
-      window.location.reload(true);
+    window.location.reload(true);
   }, 200);
 });
 
 window.addEventListener('load', (event) => {
-    log.textContent += 'load\n';
+  log.textContent += 'load\n';
 });
 
 document.addEventListener('readystatechange', (event) => {
-    log.textContent += `readystate: ${document.readyState}\n`;
+  log.textContent += `readystate: ${document.readyState}\n`;
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent += 'DOMContentLoaded\n';
+  log.textContent += 'DOMContentLoaded\n';
 });
 ```
 

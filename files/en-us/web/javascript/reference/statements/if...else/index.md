@@ -62,6 +62,7 @@ else
     statement2
   else
     if (condition3)
+      statement3
 // …
 ```
 
@@ -118,6 +119,7 @@ Do not confuse the primitive Boolean values `true` and `false` with truthiness o
 ```js
 const b = new Boolean(false);
 if (b) // this condition is truthy
+  statement
 ```
 
 ## Examples

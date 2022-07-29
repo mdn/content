@@ -23,7 +23,7 @@ permission prompts.
 ## Syntax
 
 ```js
-var readerPromise = Bluetooth.getDevices();
+getDevices()
 ```
 
 ### Parameters

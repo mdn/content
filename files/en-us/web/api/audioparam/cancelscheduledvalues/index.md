@@ -36,7 +36,7 @@ method returns {{jsxref('undefined')}}.
 ## Examples
 
 ```js
-var gainNode = audioCtx.createGain();
+const gainNode = audioCtx.createGain();
 gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2); //'gain' is the AudioParam
 gainNode.gain.cancelScheduledValues(audioCtx.currentTime);
 ```

@@ -47,7 +47,7 @@ None ({{jsxref("undefined")}}).
 Here is a very simple example:
 
 ```js
-var Mytag = document.registerElement('my-tag');
+const Mytag = document.registerElement('my-tag');
 ```
 
 Now the new tag is registered in the browser. The `Mytag` variable holds a
@@ -64,7 +64,7 @@ capability. And it won't be visible in the browser unless you add some content t
 tag. Here is one way to add content to the new tag:
 
 ```js
-var mytag = document.getElementsByTagName("my-tag")[0];
+const mytag = document.getElementsByTagName("my-tag")[0];
 mytag.textContent = "I am a my-tag element.";
 ```
 

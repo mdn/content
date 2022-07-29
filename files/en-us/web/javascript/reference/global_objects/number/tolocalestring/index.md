@@ -93,7 +93,7 @@ options for `Number.prototype.toLocaleString` directly:
 
 ```js
 function toLocaleStringSupportsOptions() {
-  return !!(typeof Intl == 'object' && Intl && typeof Intl.NumberFormat == 'function');
+  return !!(typeof Intl === 'object' && Intl && typeof Intl.NumberFormat === 'function');
 }
 ```
 
