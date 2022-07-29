@@ -102,8 +102,6 @@ If the device does **not** support continuous scroll (typically, old mouse wheel
 
 This difference makes a serious issue for web application developers. That is, web developers cannot know if `mousewheel` event is caused by which device.
 
-See `WebInputEventFactory::mouseWheelEvent` of the [Chromium's source code](http://mxr.mozilla.org/chromium/source/src/third_party/WebKit/Source/web/WebInputEventFactoryMac.mm) for the detail.
-
 ### Safari
 
 The value is always computed from accelerated scroll amount. This is really different from other browsers except Chrome with continuous scroll supported device.

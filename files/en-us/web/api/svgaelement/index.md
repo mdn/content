@@ -49,7 +49,7 @@ _This interface has no methods but inherits methods from its parent, {{domxref("
 In the example below, the {{SVGAttr("target")}} attribute of the {{SVGElement("a")}} element is set to `_blank` and when the link is clicked, it logs to notify whether the condition is met or not.
 
 ```js
-var linkRef = document.querySelector("a");
+const linkRef = document.querySelector("a");
 linkRef.target = "_self";
 
 linkRef.onclick = function(){

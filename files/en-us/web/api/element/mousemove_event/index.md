@@ -142,7 +142,7 @@ myPics.addEventListener('mousedown', (e) => {
 });
 
 myPics.addEventListener('mousemove', (e) => {
-  if (isDrawing === true) {
+  if (isDrawing) {
     drawLine(context, x, y, e.offsetX, e.offsetY);
     x = e.offsetX;
     y = e.offsetY;
@@ -150,7 +150,7 @@ myPics.addEventListener('mousemove', (e) => {
 });
 
 window.addEventListener('mouseup', (e) => {
-  if (isDrawing === true) {
+  if (isDrawing) {
     drawLine(context, x, y, e.offsetX, e.offsetY);
     x = 0;
     y = 0;

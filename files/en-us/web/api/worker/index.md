@@ -61,9 +61,9 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}._
 The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor, then uses the worker object:
 
 ```js
-var myWorker = new Worker('/worker.js');
-var first = document.querySelector('input#number1');
-var second = document.querySelector('input#number2');
+const myWorker = new Worker('/worker.js');
+const first = document.querySelector('input#number1');
+const second = document.querySelector('input#number2');
 
 first.onchange = function() {
   myWorker.postMessage([first.value, second.value]);

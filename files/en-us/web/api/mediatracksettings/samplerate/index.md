@@ -16,7 +16,7 @@ tags:
   - sampleRate
 browser-compat: api.MediaTrackSettings.sampleRate
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`sampleRate`** property is an integer indicating how many

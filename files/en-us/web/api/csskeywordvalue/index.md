@@ -52,7 +52,7 @@ The following example resets the CSS {{cssxref('display')}} property to its defa
 let myElement = document.getElementById('myElement').attributeStyleMap;
     myElement.set('display', new CSSKeywordValue('initial'));
 
-console.log( myElement.get('display').value);  // 'initial'
+console.log(myElement.get('display').value);  // 'initial'
 ```
 
 {{EmbedLiveSample("Examples", 120, 120)}}

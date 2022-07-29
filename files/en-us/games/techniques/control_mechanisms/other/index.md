@@ -124,7 +124,7 @@ function draw() {
     else if(verticalDegree < -degreeThreshold) {
         playerY -= 5;
     }
-    if(grabStrength == 1) {
+    if(grabStrength === 1) {
         alert('BOOM!');
     }
 

@@ -48,7 +48,7 @@ let myNotification = "my-notification";
 
 function toggleAlarm(all) {
   let ids = Object.keys(all);
-  if (ids.indexOf(myNotification) != -1) {
+  if (ids.includes(myNotification)) {
     browser.notifications.clear(myNotification);
   } else {
     console.log("showing")

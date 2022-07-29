@@ -42,16 +42,16 @@ The following example, taken from the WebVR spec, finds the first available `HMD
 
 ```js
 navigator.getVRDevices().then(function(devices) {
-  for (var i = 0; i < devices.length; ++i) {
-    if (devices[i] instanceof HMDVRDevice) {
-      gHMD = devices[i];
+  for (const device of devices) {
+    if (device instanceof HMDVRDevice) {
+      gHMD = device;
       break;
     }
   }
 
   if (gHMD) {
-    for (var i = 0; i < devices.length; ++i) {
-      if (devices[i] instanceof PositionSensorVRDevice && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
+    for (const device of devices) {
+      if (device instanceof PositionSensorVRDevice && device.hardwareUnitId === gHMD.hardwareUnitId) {
         gPositionSensor = devices[i];
         break;
       }

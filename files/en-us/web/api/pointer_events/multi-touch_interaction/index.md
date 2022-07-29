@@ -236,7 +236,7 @@ These functions are used send to event activity to the application window (to su
 let logEvents = false;
 
 function enableLog(ev) {
-  logEvents = logEvents ? false : true;
+  logEvents = !logEvents;
 }
 
 function log(name, ev) {

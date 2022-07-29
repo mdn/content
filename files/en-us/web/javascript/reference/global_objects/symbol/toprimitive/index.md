@@ -36,10 +36,10 @@ console.log(obj1 + ''); // "[object Object]"
 // An object with Symbol.toPrimitive property.
 const obj2 = {
   [Symbol.toPrimitive](hint) {
-    if (hint == 'number') {
+    if (hint === 'number') {
       return 10;
     }
-    if (hint == 'string') {
+    if (hint === 'string') {
       return 'hello';
     }
     return true;

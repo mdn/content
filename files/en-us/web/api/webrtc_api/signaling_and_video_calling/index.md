@@ -540,7 +540,7 @@ function handleRemoveTrackEvent(event) {
   const stream = document.getElementById("received_video").srcObject;
   const trackList = stream.getTracks();
 
-  if (trackList.length == 0) {
+  if (trackList.length === 0) {
     closeVideoCall();
   }
 }

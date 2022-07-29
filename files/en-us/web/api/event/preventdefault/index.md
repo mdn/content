@@ -113,7 +113,7 @@ whether to allow it:
 ```js
 function checkName(evt) {
   const charCode = evt.charCode;
-  if (charCode != 0) {
+  if (charCode !== 0) {
     if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
       displayWarning(

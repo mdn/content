@@ -62,7 +62,7 @@ function use_PerformanceEntry_methods() {
 
   // Use getEntries() to iterate through the each entry
   let p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     console.log(`Entry[${i}]`);
     check_PerformanceEntry(p[i]);
   }

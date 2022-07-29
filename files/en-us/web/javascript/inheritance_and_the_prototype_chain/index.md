@@ -449,7 +449,7 @@ console.log('doSomething.prototype.foo: ', doSomething.prototype.foo);
 
 This results in the following:
 
-```js
+```plain
 doSomeInstancing.prop:      some value
 doSomeInstancing.foo:       bar
 doSomething.prop:           undefined

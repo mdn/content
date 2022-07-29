@@ -86,7 +86,7 @@ The following example shows how to respond to a background sync event in the ser
 
 ```js
 self.addEventListener('sync', (event) => {
-  if (event.tag == 'sync-messages') {
+  if (event.tag === 'sync-messages') {
     event.waitUntil(sendOutboxMessages());
   }
 });

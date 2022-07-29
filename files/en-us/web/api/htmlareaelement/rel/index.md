@@ -25,9 +25,9 @@ A string.
 ## Examples
 
 ```js
-var areas = document.getElementsByTagName("area");
-var length = areas.length;
-for (var i = 0; i < length; i++) {
+const areas = document.getElementsByTagName("area");
+const length = areas.length;
+for (let i = 0; i < length; i++) {
   alert(`Rel: ${areas[i].rel}`);
 }
 ```

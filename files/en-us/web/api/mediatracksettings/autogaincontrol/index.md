@@ -14,7 +14,7 @@ tags:
   - autoGainControl
 browser-compat: api.MediaTrackSettings.autoGainControl
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`autoGainControl`** property is a Boolean value whose value

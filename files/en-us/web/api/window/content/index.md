@@ -16,7 +16,7 @@ In unprivileged content (webpages), `content` is normally equivalent to [top](/e
 ### Syntax
 
 ```js
-var windowObject = window.content;
+const windowObject = window.content;
 ```
 
 ### Example

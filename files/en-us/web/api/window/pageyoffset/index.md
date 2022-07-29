@@ -45,7 +45,7 @@ additional details on this value and its use.
 ## Examples
 
 ```js hidden
-var contentHTML = `
+const contentHTML = `
     <h2 id="introduction">Introduction</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing
 elit. Aenean volutpat vitae felis non dictum. Ut auctor
@@ -116,11 +116,11 @@ which we'll output the value of `pageYOffset` when we've finished the scroll.
 ### JavaScript
 
 ```js
-var frame = document.getElementById("frame");
-var frameDoc = frame.contentDocument;
-var info = document.getElementById("info");
+const frame = document.getElementById("frame");
+const frameDoc = frame.contentDocument;
+const info = document.getElementById("info");
 
-var target = frameDoc.getElementById("overview");
+const target = frameDoc.getElementById("overview");
 frameDoc.scrollingElement.scrollTop = target.offsetTop;
 
 info.innerText = `Y offset after scrolling: ${frame.contentWindow.pageYOffset} pixels`;

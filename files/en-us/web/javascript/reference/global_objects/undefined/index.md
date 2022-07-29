@@ -153,4 +153,4 @@ if (y === void 0) {
 ## See also
 
 - JavaScript's {{Glossary("Primitive", "primitive types")}}
-- {{jsxref("null")}}
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)

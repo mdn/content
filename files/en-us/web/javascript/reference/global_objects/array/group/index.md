@@ -122,7 +122,7 @@ const inventory = [
 The code below groups the elements by the value of their `type` property.
 
 ```js
-let result = inventory.group(({ type }) => type);
+const result = inventory.group(({ type }) => type);
 
 /* Result is:
 {
@@ -150,11 +150,11 @@ We can also create groups inferred from values in one or more properties of the 
 Below is a very similar example that puts the items into `ok` or `restock` groups based on the value of the `quantity` field.
 
 ```js
-function myCallback( { quantity } ) {
+function myCallback({ quantity }) {
   return quantity > 5 ? 'ok' : 'restock';
 }
 
-result = inventory.group( myCallback );
+result = inventory.group(myCallback);
 
 /* Result is:
 {

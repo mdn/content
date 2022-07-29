@@ -45,7 +45,7 @@ None ({{jsxref("undefined")}}).
 Feature test for the method using:
 
 ```js
-if (typeof self.reportError == 'function') {
+if (typeof self.reportError === 'function') {
   // function is defined
 }
 ```

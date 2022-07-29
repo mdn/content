@@ -36,7 +36,7 @@ A generic {{domxref("Event")}}.
 The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor and sets up an `onerror` handler on the resulting object:
 
 ```js
-var myWorker = new Worker('worker.js');
+const myWorker = new Worker('worker.js');
 
 myWorker.onerror = function(event) {
   console.log('There is an error with your worker!');

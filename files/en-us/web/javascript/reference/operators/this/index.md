@@ -274,8 +274,8 @@ console.log(obj.func() === globalObject); // true
 console.log(foo.call(obj) === globalObject); // true
 
 // Attempt to set this using bind
-foo = foo.bind(obj);
-console.log(foo() === globalObject); // true
+const boundFoo = foo.bind(obj);
+console.log(boundFoo() === globalObject); // true
 ```
 
 No matter what, `foo`'s `this` is set to what it was when it was

@@ -27,7 +27,7 @@ A {{jsxref("Boolean")}}. True if touched.
 ```js
 let gp = navigator.getGamepads()[0]; // Get the first gamepad object
 
-if(gp.buttons[0].touched == true) {
+if (gp.buttons[0].touched) {
   // respond to button being touched
 }
 ```

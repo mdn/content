@@ -50,7 +50,7 @@ Just take a closer look at the above query's password section.
 Password=' anything 'or'1'='1 '
 ```
 
-The password is not 'anything', hence password=anything results in FALSE, but '1'='1' is a TRUE statement and hence returns a TRUE value. Finally, due to the OR operator, the value ( FALSE OR TRUE ) is TRUE, so authentication bypasses successfully. Just due to a simple string (Magical String) the entire database is compromised.
+The password is not 'anything', hence password=anything results in FALSE, but '1'='1' is a TRUE statement and hence returns a TRUE value. Finally, due to the OR operator, the value (FALSE OR TRUE) is TRUE, so authentication bypasses successfully. Just due to a simple string (Magical String) the entire database is compromised.
 
 ## How To Prevent
 

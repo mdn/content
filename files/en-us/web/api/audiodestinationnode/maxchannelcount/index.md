@@ -26,8 +26,8 @@ An `unsigned long`.
 The following would set up a simple audio graph, featuring an `AudioDestinationNode` with `maxChannelCount` of 2:
 
 ```js
-var audioCtx = new AudioContext();
-var source = audioCtx.createMediaElementSource(myMediaElement);
+const audioCtx = new AudioContext();
+const source = audioCtx.createMediaElementSource(myMediaElement);
 source.connect(gainNode);
 audioCtx.destination.maxChannelCount = 2;
 gainNode.connect(audioCtx.destination);

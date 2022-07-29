@@ -215,6 +215,10 @@ Try the following values of `justify-content` in the live example:
 
 In the article [Aligning Items in a Flex Container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) we will explore these properties in more depth, in order to have a better understanding of how they work. These simple examples however will be useful in the majority of use cases.
 
+### justify-items
+
+The [`justify-items`](/en-US/docs/Web/CSS/justify-items) property is ignored in flexbox layouts.
+
 ## Next steps
 
 After reading this article you should have an understanding of the basic features of Flexbox. In the next article we will look at [how this specification relates to other parts of CSS](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods).

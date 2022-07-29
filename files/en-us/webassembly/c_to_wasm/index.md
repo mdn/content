@@ -41,6 +41,7 @@ This is the simplest case we'll look at, whereby you get emscripten to generate 
 
     int main() {
         printf("Hello World\n");
+        return 0;
     }
     ```
 
@@ -80,6 +81,7 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 
     int main() {
         printf("Hello World\n");
+        return 0;
     }
     ```
 
@@ -113,19 +115,18 @@ If you have a function defined in your C code that you want to call as needed fr
 
     int main() {
         printf("Hello World\n");
+        return 0;
     }
 
     #ifdef __cplusplus
-    extern "C" {
+    #define EXTERN extern "C"
+    #else
+    #define EXTERN
     #endif
 
-    EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
+    EXTERN EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
         printf("MyFunction Called\n");
     }
-
-    #ifdef __cplusplus
-    }
-    #endif
     ```
 
     By default, Emscripten-generated code always just calls the `main()` function, and other functions are eliminated as dead code. Putting `EMSCRIPTEN_KEEPALIVE` before a function name stops this from happening. You also need to import the `emscripten.h` library to use `EMSCRIPTEN_KEEPALIVE`.
@@ -160,7 +161,7 @@ If you have a function defined in your C code that you want to call as needed fr
           null,  // argument types
           null,  // arguments
         );
-      };
+      });
     ```
 
 This illustrates how `ccall()` is used to call the exported function.

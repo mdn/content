@@ -31,7 +31,7 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can use the `speechend` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('speechend', function() {
   console.log('Speech has stopped being detected');

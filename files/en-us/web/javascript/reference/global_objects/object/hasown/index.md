@@ -6,7 +6,6 @@ tags:
   - Method
   - Object
   - hasOwn
-  - Experimental
   - Polyfill
 browser-compat: javascript.builtins.Object.hasOwn
 ---

@@ -57,7 +57,7 @@ A string; one of the following:
 ## Examples
 
 ```js
-var links = document.getElementsByTagName("link");
+const links = document.getElementsByTagName("link");
 links[0].referrerPolicy; // "no-referrer"
 ```
 

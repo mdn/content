@@ -8,7 +8,7 @@ tags:
   - HTML
   - Reference
   - step
-browser-compat: html.elements.input.attributes.step
+browser-compat: html.elements.input.step
 ---
 
 {{HTMLSidebar}}

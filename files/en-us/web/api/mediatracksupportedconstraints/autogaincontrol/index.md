@@ -18,7 +18,7 @@ tags:
   - autoGainControl
 browser-compat: api.MediaTrackSupportedConstraints.autoGainControl
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`autoGainControl`** property is a read-only Boolean value

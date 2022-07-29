@@ -41,7 +41,7 @@ The following example shows how to respond to a periodic sync event in the servi
 
 ```js
 self.addEventListener('periodicsync', (event) => {
-  if (event.tag == 'get-latest-news') {
+  if (event.tag === 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });

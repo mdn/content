@@ -93,7 +93,7 @@ function onSqueezeEvent(event) {
   let source = event.inputSource;
   let targetObj = null;
 
-  if (source.targetRayMode != "tracked-pointer") {
+  if (source.targetRayMode !== "tracked-pointer") {
     return;
   }
 

@@ -18,7 +18,7 @@ a {{domxref("WakeLockSentinel")}} has been released yet.
 ## Syntax
 
 ```js
-var released = sentinel.released;
+const released = sentinel.released;
 ```
 
 ### Value

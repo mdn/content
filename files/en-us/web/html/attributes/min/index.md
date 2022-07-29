@@ -9,7 +9,7 @@ tags:
   - min
   - Reference
 browser-compat:
-  - html.elements.input.attributes.min
+  - html.elements.input.min
   - html.elements.meter.min
 ---
 

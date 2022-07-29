@@ -142,7 +142,7 @@ The **media** and **type** of the style may or may not be given.
 Note that you can also change style of an element by getting a reference to it and then use its [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method to specify the CSS property and its value.
 
 ```js
-var el = document.getElementById('some-element');
+const el = document.getElementById('some-element');
 el.setAttribute('style', 'background-color:darkblue;');
 ```
 

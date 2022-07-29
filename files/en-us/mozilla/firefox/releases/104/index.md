@@ -25,6 +25,10 @@ This article provides information about the changes in Firefox 104 that will aff
 
 ### JavaScript
 
+- The methods {{jsxref("Array.prototype.findLast()")}}, {{jsxref("Array.prototype.findLastIndex()")}}, {{jsxref("TypedArray.prototype.findLast()")}}, and {{jsxref("TypedArray.prototype.findLastIndex()")}} are now supported.
+  These are used to find the value and index (respectively) of the last element in an {{jsxref("Array")}} or {{jsxref("TypedArray")}} that matches a supplied test function.
+  (See {{bug(1775026)}} for more details.)
+
 #### Removals
 
 ### HTTP

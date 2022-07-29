@@ -51,7 +51,7 @@ signalingChannel.onmessage = function (evt) {
       new RTCSessionDescription(message),
       function () {
         // if we received an offer, we need to answer
-        if (pc.remoteDescription.type == "offer")
+        if (pc.remoteDescription.type === "offer")
           pc.createAnswer(localDescCreated, logError);
       },
       logError

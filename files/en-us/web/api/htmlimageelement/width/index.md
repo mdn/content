@@ -63,7 +63,7 @@ at the moment. This is performed in the window's {{domxref("Window.load_event",
 current width information is always available.
 
 ```js
-var clockImage = document.querySelector("img");
+const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
 const updateWidth = (event) => { output.innerText = clockImage.width; };

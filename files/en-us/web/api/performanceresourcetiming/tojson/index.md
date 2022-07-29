@@ -35,12 +35,12 @@ None.
 
 ```js
 // Get a resource performance entry
-var perfEntries = performance.getEntriesByType("resource");
-var entry = perfEntries[0];
+const perfEntries = performance.getEntriesByType("resource");
+const entry = perfEntries[0];
 
 // Get the JSON and log it
-var json = entry.toJSON();
-var s = JSON.stringify(json);
+const json = entry.toJSON();
+const s = JSON.stringify(json);
 console.log(`PerformanceEntry.toJSON = ${s}`);
 ```
 

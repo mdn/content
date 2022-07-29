@@ -232,13 +232,11 @@ In [Through the Looking-Glass](https://en.wikipedia.org/wiki/Through_the_Looking
 Because small children tire out easily, unlike automaton chess pieces, Alice is constantly slowing down. We can do this by setting a decay on her animation's `playbackRate`. We use `updatePlaybackRate()` instead of setting the playbackRate directly since that produces a smooth update:
 
 ```js
-setInterval( function() {
-
+setInterval(() => {
   // Make sure the playback rate never falls below .4
   if (redQueen_alice.playbackRate > .4) {
     redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * .9);
   }
-
 }, 3000);
 ```
 

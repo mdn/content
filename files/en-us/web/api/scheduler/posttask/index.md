@@ -52,7 +52,7 @@ postTask(callback, options)
         If set, this priority is used for the lifetime of the task and priority set on the `signal` is ignored.
 
     - `signal` {{optional_inline}}
-      - : A {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}} that can be used to abort the task (from it's associated controller).
+      - : A {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}} that can be used to abort the task (from its associated controller).
 
         If the `options.priority` parameter is set then the task priority cannot be changed, and any priority on the signal is ignored.
         Otherwise, if the signal is a {{domxref("TaskSignal")}} its priority is used to set the initial task priority, and the signal's controller may later use it to change the task priority.

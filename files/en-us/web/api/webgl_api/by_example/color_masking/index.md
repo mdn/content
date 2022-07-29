@@ -102,10 +102,7 @@ window.addEventListener("load", function setupAnimation (evt) {
       || evt.target === bluetoggle && 2
       || 0;
     mask[index] = !mask[index];
-    if (mask[index] === true)
-      evt.target.textContent ="On";
-    else
-      evt.target.textContent ="Off";
+    evt.target.textContent = mask[index] ? "On" : "Off";
     gl.colorMask(mask[0], mask[1], mask[2], true);
     drawAnimation();
   };

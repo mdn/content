@@ -29,7 +29,7 @@ A double, representing the z-depth in meters; its initial value is `0.01`.
 ## Examples
 
 ```js
-var vrDisplay;
+let vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
   vrDisplay = displays[0];

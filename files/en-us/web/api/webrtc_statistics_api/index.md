@@ -21,7 +21,7 @@ The WebRTC API has a vast array of statistics available, covering the entire bre
 
 ## Collecting statistics
 
-You can collect statistics at various levels throughout the WebRTC hierarchy of objects. Most broadly, you can call {{domxref("RTCPeerConnection.getStats", "getStats()")}} on an {{domxref("RTCPeerConnection")}} to get statistics for the connection overall. In this example, a new {{domxref("RTCPeerConnection")}} is created, and then {{domxref( "setInterval()")}} is used to set the function `getConnectionStats()` to be called every second.
+You can collect statistics at various levels throughout the WebRTC hierarchy of objects. Most broadly, you can call {{domxref("RTCPeerConnection.getStats", "getStats()")}} on an {{domxref("RTCPeerConnection")}} to get statistics for the connection overall. In this example, a new {{domxref("RTCPeerConnection")}} is created, and then {{domxref("setInterval()")}} is used to set the function `getConnectionStats()` to be called every second.
 
 That function, in turn, uses {{domxref("RTCPeerConnection.getStats", "getStats()")}} to obtain statistics for the connection and to make use of that data.
 

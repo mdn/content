@@ -438,29 +438,29 @@ This leads us to the following guideline: _if the Markdown representation of the
 
 #### Properties tables
 
-Properties tables are a specific type of table used for displaying structured property-value content across a set of pages of a particular type. For example, all event pages have a properties table listing common information about the event: whether it bubbles, whether it is cancellable, and so on.
-
-These tables have two columns: the first column is the header column and lists the properties, and the second column lists their values for this particular item. For example, here's the properties table for the {{domxref("XMLHttpRequest/progress_event", "progress")}} event of the {{domxref("XMLHttpRequest")}} interface:
+Properties tables are a specific type of table used for displaying structured property-value content across a set of pages of a particular type. These tables have two columns: the first column is the header column and lists the properties, and the second column lists their values for this particular item. For example, here's the properties table for the {{domxref("PannerNode")}} interface:
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
     </tr>
     <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
+      <th scope="row">Number of outputs</th>
+      <td><code>0</code></td>
     </tr>
     <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ProgressEvent")}}</td>
+      <th scope="row">Channel count mode</th>
+      <td><code>"explicit"</code></td>
     </tr>
     <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}}
-      </td>
+      <th scope="row">Channel count</th>
+      <td><code>2</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
     </tr>
   </tbody>
 </table>

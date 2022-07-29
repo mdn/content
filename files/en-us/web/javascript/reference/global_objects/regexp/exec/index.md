@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.RegExp.exec
 
 The **`exec()`** method executes a
 search for a match in a specified string. Returns a result array, or
-{{jsxref("null")}}.
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 JavaScript {{jsxref("RegExp")}} objects are **stateful** when they have
 the {{jsxref("RegExp.global", "global")}} or {{jsxref("RegExp.sticky", "sticky")}} flags
@@ -55,7 +55,7 @@ set, `indices`; see below) and updates the
 The returned array has the matched text as the first item, and then one item for each
 parenthetical capture group of the matched text.
 
-If the match fails, the `exec()` method returns {{jsxref("null")}}, and sets
+If the match fails, the `exec()` method returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), and sets
 {{jsxref("RegExp.lastIndex", "lastIndex")}} to `0`.
 
 ## Description

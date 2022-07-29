@@ -516,7 +516,6 @@ Firefox has also started to implement some useful tools related to service worke
 
 ## See also
 
-- [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/)
 - [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Download the [Service Workers 101 cheatsheet](sw101.png).

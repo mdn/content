@@ -54,8 +54,8 @@ _The following events are delivered to `MediaQueryList` objects:_
 This simple example creates a `MediaQueryList` and then sets up a listener to detect when the media query status changes, running a custom function when it does to change the appearance of the page.
 
 ```js
-var para = document.querySelector('p');
-var mql = window.matchMedia('(max-width: 600px)');
+const para = document.querySelector('p');
+const mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {

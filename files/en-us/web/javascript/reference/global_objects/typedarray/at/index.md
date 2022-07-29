@@ -10,7 +10,6 @@ tags:
   - Reference
   - Polyfill
   - at
-  - Experimental
 browser-compat: javascript.builtins.TypedArray.at
 ---
 {{JSRef}}

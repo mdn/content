@@ -42,8 +42,8 @@ A boolean value.
 ### JavaScript
 
 ```js
-var allowDrinksCheckbox = document.getElementById("allow-drinks");
-var drinkSelect = document.getElementById("drink-select");
+const allowDrinksCheckbox = document.getElementById("allow-drinks");
+const drinkSelect = document.getElementById("drink-select");
 
 allowDrinksCheckbox.addEventListener("change", function(event) {
   if (event.target.checked) {

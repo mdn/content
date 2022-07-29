@@ -47,7 +47,7 @@ const writableStream = new WritableStream({
   }
 }, queueingStrategy);
 
-var size = queueingStrategy.size();
+const size = queueingStrategy.size();
 ```
 
 ## Specifications

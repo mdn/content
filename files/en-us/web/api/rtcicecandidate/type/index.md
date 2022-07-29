@@ -50,7 +50,7 @@ present a modified user interface for host candidates (those where the
 an intermediary).
 
 ```js
-if (candidate.type == "host") {
+if (candidate.type === "host") {
   showHostControls();
 } else {
   hideHostControls();

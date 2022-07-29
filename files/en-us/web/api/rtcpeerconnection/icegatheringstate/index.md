@@ -37,8 +37,8 @@ The possible values are:
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var state = pc.iceGatheringState;
+const pc = new RTCPeerConnection();
+const state = pc.iceGatheringState;
 ```
 
 ## Specifications

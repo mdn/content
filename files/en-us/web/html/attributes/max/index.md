@@ -9,7 +9,7 @@ tags:
   - max
   - Reference
 browser-compat:
-  - html.elements.input.attributes.max
+  - html.elements.input.max
   - html.elements.meter.max
   - html.elements.progress.max
 ---

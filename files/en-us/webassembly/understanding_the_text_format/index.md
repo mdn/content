@@ -83,7 +83,7 @@ The number types are:
 A single parameter is written `(param i32)` and the return type is written `(result i32)`, hence a binary function that takes two 32-bit integers and returns a 64-bit float would be written like this:
 
 ```wasm
-(func (param i32) (param i32) (result f64) ... )
+(func (param i32) (param i32) (result f64) ...)
 ```
 
 After the signature, locals are listed with their type, for example `(local i32)`. Parameters are basically just locals that are initialized with the value of the corresponding argument passed by the caller.
@@ -156,7 +156,7 @@ Our function won't do very much on its own — now we need to call it. How do we
 Like locals, functions are identified by an index by default, but for convenience, they can be named. Let's start by doing this — first, we'll add a name preceded by a dollar sign, just after the `func` keyword:
 
 ```wasm
-(func $add … )
+(func $add …)
 ```
 
 Now we need to add an export declaration — this looks like so:

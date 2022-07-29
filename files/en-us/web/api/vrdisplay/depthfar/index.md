@@ -30,7 +30,7 @@ It initial value is `10000.0`.
 ## Examples
 
 ```js
-var vrDisplay;
+let vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
   vrDisplay = displays[0];

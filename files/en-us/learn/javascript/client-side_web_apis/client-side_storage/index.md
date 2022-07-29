@@ -694,16 +694,16 @@ Here is where we see the Cache API in action. We use the {{domxref("CacheStorage
 
 ```js
 self.addEventListener('install', (e) => {
- e.waitUntil(
-   caches.open('video-store').then((cache) => {
-     return cache.addAll([
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css'
-     ]);
-   })
- );
+  e.waitUntil(
+    caches.open('video-store').then((cache) => {
+      return cache.addAll([
+        '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
+        '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
+        '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
+        '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css'
+      ]);
+    })
+  );
 });
 ```
 

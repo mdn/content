@@ -21,7 +21,7 @@ it has no interesting functionality of its own.
 ### JavaScript and JSON differences
 
 JSON is a syntax for serializing objects, arrays, numbers, strings, booleans, and
-{{jsxref("null")}}. It is based upon JavaScript syntax but is distinct from it: some
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). It is based upon JavaScript syntax but is distinct from it: some
 JavaScript is _not_ JSON.
 
 - **Objects and Arrays**
@@ -124,7 +124,7 @@ whitespace characters.
     <var>replacer</var>[, <var>space</var>]])")}}
   - : Return a JSON string corresponding to the specified value, optionally including only
     certain properties or replacing property values in a user-defined manner. By default,
-    all instances of {{jsxref("undefined")}} are replaced with {{jsxref("null")}}, and
+    all instances of {{jsxref("undefined")}} are replaced with [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), and
     other unsupported native data types are censored. The `replacer`
     option allows for specifying other behavior.
 

@@ -45,8 +45,8 @@ The following example shows the use of the `snapshotLength` property.
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+const xpath = "//div";
+const result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

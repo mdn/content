@@ -34,10 +34,10 @@ None.
 ```
 
 ```js
-let wrapper = document.createElement("div");
+const wrapper = document.createElement("div");
 
-wrapper.appendChild( document.createTextNode("Part 1 ") );
-wrapper.appendChild( document.createTextNode("Part 2 ") );
+wrapper.appendChild(document.createTextNode("Part 1 "));
+wrapper.appendChild(document.createTextNode("Part 2 "));
 
 let node = wrapper.firstChild;
 let result = "Before normalization:<br/>";

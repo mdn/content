@@ -116,8 +116,8 @@ The next task is to get the media stream:
         video.srcObject = stream;
         video.play();
     })
-    .catch(function(err) {
-        console.log("An error occurred: " + err);
+    .catch((err) => {
+        console.error(`An error occurred: ${err}`);
     });
 ```
 
@@ -357,8 +357,8 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
       video.srcObject = stream;
       video.play();
     })
-    .catch(function(err) {
-      console.log("An error occurred: " + err);
+    .catch((err) => {
+      console.error(`An error occurred: ${err}`);
     });
 
     video.addEventListener('canplay', function(ev){

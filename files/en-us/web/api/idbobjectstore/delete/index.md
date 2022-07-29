@@ -93,7 +93,7 @@ function deleteItem(event) {
   transaction.oncomplete = function() {
     // delete the parent of the button, which is the list item, so it no longer is displayed
     event.target.parentNode.parentNode.removeChild(event.target.parentNode);
-    note.innerHTML += '<li>Task \"' + dataTask + '\" deleted.</li>';
+    note.innerHTML += `<li>Task "${dataTask}" deleted.</li>`;
   };
 };
 ```

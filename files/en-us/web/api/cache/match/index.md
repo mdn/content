@@ -83,7 +83,7 @@ NOT be called.
 self.addEventListener('fetch', function(event) {
   // We only want to call event.respondWith() if this is a GET request for an HTML document.
   if (event.request.method === 'GET' &&
-      event.request.headers.get('accept').indexOf('text/html') !== -1) {
+      event.request.headers.get('accept').includes('text/html')) {
     console.log('Handling fetch event for', event.request.url);
     event.respondWith(
       fetch(event.request).catch(function(e) {

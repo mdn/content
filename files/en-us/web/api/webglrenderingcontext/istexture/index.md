@@ -35,9 +35,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the text
 ### Checking a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var texture = gl.createTexture();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const texture = gl.createTexture();
 
 gl.isTexture(texture);
 ```

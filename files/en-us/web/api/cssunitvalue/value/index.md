@@ -29,12 +29,13 @@ The following creates a {{domxref('CSSPositionValue')}} from individual
 `CSSUnitValue.value`.
 
 ```js
-let pos = new CSSPositionValue(
-    new CSSUnitValue( 5, "px" ),
-    new CSSUnitValue( 10, "px" ));
+const pos = new CSSPositionValue(
+  new CSSUnitValue(5, "px"),
+  new CSSUnitValue(10, "px"),
+);
 
-console.log( pos.x.value ); // 5
-console.log( pos.y.value ); // 10
+console.log(pos.x.value); // 5
+console.log(pos.y.value); // 10
 ```
 
 ## Specifications

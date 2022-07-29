@@ -46,7 +46,7 @@ addEventListener('notificationclick', (event) => {
     for (const client of allClients) {
       const url = new URL(client.url);
 
-      if (url.pathname == '/chat/') {
+      if (url.pathname === '/chat/') {
         // Excellent, let's use it!
         client.focus();
         chatClient = client;

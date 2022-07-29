@@ -370,10 +370,10 @@ Using the function shown below:
 function sRGBtoLin(colorChannel) {
   // Send this function a decimal sRGB gamma encoded color channel
   // between 0.0 and 1.0, and it returns a linearized value.
-  if ( colorChannel <= 0.04045 ) {
+  if (colorChannel <= 0.04045) {
     return colorChannel / 12.92;
   } else {
-      return Math.pow((( colorChannel + 0.055)/1.055),2.4);
+    return Math.pow(((colorChannel + 0.055) / 1.055), 2.4);
   }
 }
 ```

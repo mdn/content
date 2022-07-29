@@ -83,9 +83,9 @@ function detectHtmlInXhr(callback) {
   let done = false;
   const xhr = new window.XMLHttpRequest();
   xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && !done) {
+    if (this.readyState === 4 && !done) {
       done = true;
-      callback(!!(this.responseXML && this.responseXML.title && this.responseXML.title == "&&<"));
+      callback(!!(this.responseXML && this.responseXML.title && this.responseXML.title === "&&<"));
     }
   }
   xhr.onabort = xhr.onerror = function() {

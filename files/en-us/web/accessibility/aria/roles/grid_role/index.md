@@ -497,7 +497,7 @@ Array.prototype.forEach.call(trs, function(gridrow, i){
 
 function moveto(newrow, newcol) {
   var tgt = document.querySelector('[data-row="' + newrow + '"][data-col="' + newcol + '"]');
-  if (tgt && (tgt.getAttribute('role')==='gridcell') ) {
+  if (tgt && (tgt.getAttribute('role') === 'gridcell') ) {
     Array.prototype.forEach.call(document.querySelectorAll('[role=gridcell]'), function(el, i){
       el.setAttribute('tabindex', '-1');
     });

@@ -13,7 +13,7 @@ browser-compat: api.WebGL2RenderingContext.getQuery
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns the currently active
-{{domxref("WebGLQuery")}} for the `target`, or {{jsxref("null")}}.
+{{domxref("WebGLQuery")}} for the `target`, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Syntax
 
@@ -49,7 +49,7 @@ A {{domxref("WebGLQuery")}} object.
 ## Examples
 
 ```js
-var currentQuery = gl.getQuery(gl.ANY_SAMPLES_PASSED, gl.CURRENT_QUERY);
+const currentQuery = gl.getQuery(gl.ANY_SAMPLES_PASSED, gl.CURRENT_QUERY);
 ```
 
 ## Specifications

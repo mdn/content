@@ -83,7 +83,7 @@ The code simply gets the previous element of the selected button and calls `show
 
 ```js
 document.querySelectorAll("button").forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (event) => {
     const input = event.srcElement.previousElementSibling;
     try {
       input.showPicker();

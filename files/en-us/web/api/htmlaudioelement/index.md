@@ -53,7 +53,7 @@ _The following methods are non-standard and should not be used._
 You can create a `HTMLAudioElement` entirely with JavaScript using the {{domxref("HTMLAudioElement.Audio", "Audio()")}} constructor:
 
 ```js
-var audioElement = new Audio('car_horn.wav');
+const audioElement = new Audio('car_horn.wav');
 ```
 
 then you can invoke the `play()` method on the element
@@ -67,7 +67,7 @@ audioElement.play();
 Some of the more commonly used properties of the audio element include {{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, and {{domxref("HTMLMediaElement.volume", "volume")}}. This snippet copies the audio file's duration to a variable:
 
 ```js
-var audioElement = new Audio('car_horn.wav');
+const audioElement = new Audio('car_horn.wav');
 audioElement.addEventListener('loadeddata', () => {
   let duration = audioElement.duration;
   // The duration variable now holds the duration (in seconds) of the audio clip

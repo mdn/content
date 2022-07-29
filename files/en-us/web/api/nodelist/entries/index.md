@@ -41,7 +41,7 @@ node.appendChild(kid3);
 const list = node.childNodes;
 
 // Using for..of
-for(const entry of list.entries()) {
+for (const entry of list.entries()) {
   console.log(entry);
 }
 ```

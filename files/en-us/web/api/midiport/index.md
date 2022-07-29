@@ -99,7 +99,7 @@ function listInputsAndOutputs(midiAccess) {
 The following example takes the list of input ports and adds them to a select list, in order that a user can choose the device they want to use.
 
 ```js
-inputs.forEach( function( port, key ) {
+inputs.forEach((port, key) => {
   const opt = document.createElement("option");
   opt.text = port.name;
   document.getElementById("inputportselector").add(opt);
