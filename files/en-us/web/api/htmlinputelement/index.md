@@ -146,7 +146,7 @@ Some properties only apply to input element types that support the corresponding
   - : {{domxref("FileList")}}: **Returns / Sets** a list of {{domxref("File")}} objects representing the files selected for upload.
 
 - {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} {{Non-standard_inline}}
-  - : `boolean`: **Returns** the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute. If `true`, the file system picker interface only accepts directories instead of files.
+  - : `boolean`: **Returns** the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute. If `true`, the file-system-picker interface only accepts directories instead of files.
 
 - {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} {{Non-standard_inline}}
   - : {{domxref("FileSystemEntry")}} array: **Describes** the currently selected files or directories.
