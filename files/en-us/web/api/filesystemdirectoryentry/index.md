@@ -38,7 +38,7 @@ window.directoryEntry = window.directoryEntry || window.webkitDirectoryEntry;
 function onFs(fs){
   fs.root.getDirectory('Documents', {create:true}, function(directoryEntry){
     //directoryEntry.isFile === false
-    //directoryEntry.isDirectory === true
+    //directoryEntry.isDirectory
     //directoryEntry.name === 'Documents'
     //directoryEntry.fullPath === '/Documents'
 

@@ -68,7 +68,7 @@ for (const p of searchParams) {
   console.log(p);
 }
 
-searchParams.has('topic') === true;      // true
+searchParams.has('topic');      // true
 searchParams.get('topic') === "api";     // true
 searchParams.getAll('topic');            // ["api"]
 searchParams.get('foo') === null;        // true

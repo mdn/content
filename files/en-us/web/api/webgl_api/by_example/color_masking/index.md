@@ -102,7 +102,7 @@ window.addEventListener("load", function setupAnimation (evt) {
       || evt.target === bluetoggle && 2
       || 0;
     mask[index] = !mask[index];
-    if (mask[index] === true)
+    if (mask[index])
       evt.target.textContent ="On";
     else
       evt.target.textContent ="Off";

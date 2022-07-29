@@ -79,7 +79,7 @@ Instead you need to use a correct [comparison operator](/en-US/docs/Web/JavaScri
 For example:
 
 ```js example-good
-if (done === true) {
+if (done) {
  console.log("we are done!");
 }
 ```

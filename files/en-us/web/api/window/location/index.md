@@ -192,7 +192,7 @@ const showBookmark = (function () {
   _scrollY = document.documentElement.scrollTop;
   _scrollX = document.documentElement.scrollLeft;
   _bookMark = sBookmark;
-  _useHash = bUseHash === true;
+  _useHash = bUseHash;
   _nodeX = oNode.offsetLeft;
     _nodeY = oNode.offsetTop;
     _itFrame = 1;
