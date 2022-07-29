@@ -158,7 +158,7 @@ new Intl.NumberFormat(locales, options)
         - `"morePrecision"`: the result from the property that results in more precision is used.
         - `"lessPrecision"`: the result from the property that results in less precision is used.
 
-        Note that for values other than `auto` the result with more precision calculated from the [`maximumSignificantDigits`](#minimumsignificantdigits) [`maximumFractionDigits`](#maximumfractiondigits) (minimum values are ignored).
+        Note that for values other than `auto` the result with more precision is calculated from the [`maximumSignificantDigits`](#minimumsignificantdigits) and [`maximumFractionDigits`](#maximumfractiondigits) (minimum fractional and significant digit settings are ignored).
 
     - `roundingIncrement` {{experimental_inline}}
       - : Specifies the rounding-increment precision.
