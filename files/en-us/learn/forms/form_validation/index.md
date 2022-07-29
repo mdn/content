@@ -401,7 +401,7 @@ See [Validation-related attributes](/en-US/docs/Web/Guide/HTML/Constraint_valida
 
 ## Validating forms using JavaScript
 
-You must use JavaScript if you want to take control over the look and feel of native error messages or to deal with legacy browsers that do not support HTML's built-in form validation.
+You must use JavaScript if you want to take control over the look and feel of native error messages.
 In this section we will look at the different ways to do this.
 
 ### The Constraint Validation API
@@ -651,7 +651,7 @@ The constraint validation API gives you a powerful tool to handle form validatio
 
 ### Validating forms without a built-in API
 
-In some cases, such as legacy browser support or [custom controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls), you won't be able to or won't want to use the Constraint Validation API.You're still able to use JavaScript to validate your form, but you'll just have to write your own.
+In some cases, such as [custom controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls), you won't be able to or won't want to use the Constraint Validation API. You're still able to use JavaScript to validate your form, but you'll just have to write your own.
 
 To validate a form, ask yourself a few questions:
 
@@ -674,7 +674,7 @@ To validate a form, ask yourself a few questions:
 
 #### An example that doesn't use the constraint validation API
 
-In order to illustrate this, the following is a simplified version of the previous example that works with legacy browsers.
+In order to illustrate this, the following is a simplified version of the previous example without the Constraint Validation API
 
 The HTML is almost the same; we just removed the HTML validation features.
 
@@ -687,8 +687,6 @@ The HTML is almost the same; we just removed the HTML validation features.
         <span class="error" aria-live="polite"></span>
     </label>
   </p>
-  <!-- Some legacy browsers need to have the `type` attribute
-       explicitly set to `submit` on the `button` element -->
   <button type="submit">Submit</button>
 </form>
 ```
@@ -754,8 +752,7 @@ input:focus.invalid {
 The big changes are in the JavaScript code, which needs to do much more heavy lifting.
 
 ```js
-// There are fewer ways to pick a DOM node with legacy browsers
-const form  = document.getElementsByTagName('form')[0];
+const form  = document.querySelector('form');
 const email = document.getElementById('mail');
 
 // The following is a trick to reach the next sibling Element node in the DOM
@@ -764,31 +761,13 @@ const email = document.getElementById('mail');
 let error = email;
 while ((error = error.nextSibling).nodeType !== 1);
 
-// As per the HTML5 Specification
+// As per the HTML Specification
 const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-// Many legacy browsers do not support the addEventListener method.
-// Here is a simple way to handle this; it's far from the only one.
-function addEvent(element, event, callback) {
-  let previousEventCallBack = element["on"+event];
-  element["on"+event] = function (e) {
-    let output = callback(e);
-
-    // A callback that returns `false` stops the callback chain
-    // and interrupts the execution of the event callback.
-    if(!output) return false;
-
-    if (typeof previousEventCallBack === 'function') {
-      output = previousEventCallBack(e);
-      if(output === false) return false;
-    }
-  };
-}
 
 // Now we can rebuild our validation constraint
 // Because we do not rely on CSS pseudo-class, we have to
 // explicitly set the valid/invalid class on our email field
-addEvent(window, "load", function () {
+window.addEventListener("load", () => {
   // Here, we test if the field is empty (remember, the field is not required)
   // If it is not, we check if its content is a well-formed e-mail address.
   const test = email.value.length === 0 || emailRegExp.test(email.value);
@@ -797,7 +776,7 @@ addEvent(window, "load", function () {
 });
 
 // This defines what happens when the user types in the field
-addEvent(email, "input", function () {
+email.addEventListener("input", () => {
   const test = email.value.length === 0 || emailRegExp.test(email.value);
   if (test) {
     email.className = "valid";
@@ -809,16 +788,14 @@ addEvent(email, "input", function () {
 });
 
 // This defines what happens when the user tries to submit the data
-addEvent(form, "submit", function () {
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  
   const test = email.value.length === 0 || emailRegExp.test(email.value);
-
   if (!test) {
     email.className = "invalid";
     error.textContent = "I expect an e-mail, darling!";
     error.className = "error active";
-
-    // Some legacy browsers do not support the event.preventDefault() method
-    return false;
   } else {
     email.className = "valid";
     error.textContent = "";
