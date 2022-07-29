@@ -103,6 +103,7 @@ window.addEventListener("load", function setupAnimation (evt) {
       || 0;
     mask[index] = !mask[index];
     evt.target.textContent = mask[index] ? "On" : "Off";
+    gl.colorMask(mask[0], mask[1], mask[2], true);
     drawAnimation();
   };
 
