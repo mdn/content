@@ -102,5 +102,30 @@
     "style": "asterisk"
   },
   "MD051": false,
-  "MD052": false
+  "MD052": false,
+  "search-replace": {
+    "rules": [
+      {
+        "name": "curly-double-quotes",
+        "message": "Don't use curly double quotes.",
+        "searchPattern": "/“|”/g",
+        "replace": "\"",
+        "skipCode": true
+      },
+      {
+        "name": "curly-single-quotes",
+        "message": "Don't use curly single quotes.",
+        "searchPattern": "/‘|’/g",
+        "replace": "'",
+        "skipCode": true
+      },
+      {
+        "name": "m-dash",
+        "message": "Don't use '--'. Use m-dash — instead.",
+        "search": " -- ",
+        "replace": " — ",
+        "skipCode": true
+      }
+    ]
+  }
 }
