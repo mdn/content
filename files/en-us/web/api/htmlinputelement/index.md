@@ -55,7 +55,7 @@ Some properties only apply to input element types that support the corresponding
   - : `string`: **Returns / Sets** the element's [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute, which works with [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
 
 - {{domxref("HTMLInputElement.type", "type")}}
-  - : `string`: **Returns / Sets** the element's [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute, indicating the type of control to display. See the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute of {{ HTMLElement("input") }} for possible values.
+  - : `string`: **Returns / Sets** the element's [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute, indicating the type of control to display. For possible values, see the documentation for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute.
 
 - {{domxref("HTMLInputElement.useMap", "useMap")}} {{deprecated_inline}}
   - : `string`: **Represents** a client-side image map.
