@@ -34,7 +34,7 @@ new Intl.NumberFormat(locales, options)
 - `locales` {{optional_inline}}
 
   - : A string with a BCP 47 language tag, or an array of such strings.
-    For the general form and interpretation of the `locales` argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.
+    For the general form and interpretation of the `locales` argument, see the [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
     The following Unicode extension key is allowed:
 
     - `nu`
@@ -48,8 +48,7 @@ new Intl.NumberFormat(locales, options)
         `"mtei"`, `"mymr"`, `"mymrshan"`, `"mymrtlng"`, `"newa"`, `"nkoo"`,
         `"olck"`, `"orya"`, `"osma"`, `"rohg"`, `"saur"`, `"segment"`,
         `"shrd"`, `"sind"`, `"sinh"`, `"sora"`, `"sund"`, `"takr"`, `"talu"`, `"tamldec"`, `"telu"`,
-        `"thai"`, `"tibt"`, `"tirh"`, `"vaii"`, `"wara"`, `"wcho"`.
-        — see the [standard Unicode numeral systems list](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem).
+        `"thai"`, `"tibt"`, `"tirh"`, `"vaii"`, `"wara"`, `"wcho"` — see the [standard Unicode numeral systems list](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem).
 
 - `options` {{optional_inline}}
 
@@ -58,34 +57,30 @@ new Intl.NumberFormat(locales, options)
     - `compactDisplay`
       - : Only used when `notation` is `"compact"`. Takes either `"short"` (default) or `"long"`.
     - `currency`
-      - : The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `"USD"` for the US dollar, `"EUR"` for the euro, or `"CNY"` for the Chinese RMB
-        — see the [Current currency & funds code list](https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes).
+      - : The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `"USD"` for the US dollar, `"EUR"` for the euro, or `"CNY"` for the Chinese RMB — see the [Current currency & funds code list](https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes).
         There is no default value; if the `style` is `"currency"`, the `currency` property must be provided.
     - `currencyDisplay`
 
-      - : How to display the currency in currency formatting.
-        Possible values are:
+      - : How to display the currency in currency formatting. The default is `"symbol"`.
 
-        - `"symbol"` to use a localized currency symbol such as €, this is the default value.
-        - `"narrowSymbol"` to use a narrow format symbol ("$100" rather than "US$100").
-        - `"code"` to use the ISO currency code.
-        - `"name"` to use a localized currency name such as `"dollar"`.
-
+        - `"symbol"`: use a localized currency symbol such as €.
+        - `"narrowSymbol"`: use a narrow format symbol ("$100" rather than "US$100").
+        - `"code"`: use the ISO currency code.
+        - `"name"`: use a localized currency name such as `"dollar"`.
     - `currencySign`
       - : In many locales, accounting format means to wrap the number with parentheses instead of appending a minus sign.
         You can enable this formatting by setting the `currencySign` option to `"accounting"`.
         The default value is `"standard"`.
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`.
-        For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        For information about this option, see the [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
     - `notation`
 
-      - : The formatting that should be displayed for the number, the default is `"standard"`
-
-        - `"standard"` plain number formatting.
-        - `"scientific"` return the order-of-magnitude for formatted number.
-        - `"engineering"` return the exponent of ten when divisible by three.
-        - `"compact"` string representing exponent; defaults to using the "short" form.
+      - : The formatting that should be displayed for the number. The default is `"standard"`.
+        - `"standard"`: plain number formatting.
+        - `"scientific"`: return the order-of-magnitude for formatted number.
+        - `"engineering"`: return the exponent of ten when divisible by three.
+        - `"compact"`: string representing exponent; defaults to using the "short" form.
 
     - `numberingSystem`
 
@@ -94,17 +89,17 @@ new Intl.NumberFormat(locales, options)
 
     - `signDisplay`
 
-      - : When to display the sign for the number; defaults to "`auto`":
+      - : When to display the sign for the number. The default is `"auto"`.
 
-        - `"always"` always display sign
-        - `"auto"` sign display for negative numbers only, including negative zero.
-        - `"exceptZero"` sign display for positive and negative numbers, but not zero
-        - `"negative"` sign display for negative numbers only, excluding negative zero. {{experimental_inline}}
-        - `"never"` never display sign
+        - `"auto"`: sign display for negative numbers only, including negative zero.
+        - `"always"`: always display sign.
+        - `"exceptZero"`: sign display for positive and negative numbers, but not zero.
+        - `"negative"`: sign display for negative numbers only, excluding negative zero. {{experimental_inline}}
+        - `"never"`: never display sign.
 
     - `style`
 
-      - : The formatting style to use, the default is `"decimal"`.
+      - : The formatting style to use. The default is `"decimal"`.
 
         - `"decimal"` for plain number formatting.
         - `"currency"` for currency formatting.
@@ -114,15 +109,13 @@ new Intl.NumberFormat(locales, options)
     - `unit`
 
       - : The unit to use in `unit` formatting, Possible values are core unit identifiers, defined in [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements).
-        A [subset](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier)
-        of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml) was selected for use in ECMAScript.
+        A [subset](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier) of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml) was selected for use in ECMAScript.
         Pairs of simple units can be concatenated with "-per-" to make a compound unit.
         There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
 
     - `unitDisplay`
 
-      - : The unit formatting style to use in `unit` formatting, the
-        defaults is `"short"`.
+      - : The unit formatting style to use in `unit` formatting. The default is `"short"`.
 
         - `"long"` (e.g., `16 litres`).
         - `"short"` (e.g., `16 l`).
@@ -170,9 +163,9 @@ new Intl.NumberFormat(locales, options)
           On the half-increment, values round like `trunc`.
         - `"halfEven"`: ties towards the nearest even integer.
           Values above the half-increment round like `expand` (away from zero), and below like `trunc` (towards 0).
-          On the half-increment values round towards the nearest even integer.
+          On the half-increment values round towards the nearest even digit.
 
-        These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and"DOWN", respectively.
+        These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and "DOWN", respectively.
         The [rounding modes](#rounding_modes) example below demonstrates how each mode works.
 
     - `roundingPriority` {{experimental_inline}}
@@ -399,9 +392,9 @@ new Intl.NumberFormat("bn", {
 
 ### FractionDigits, SignificantDigits and IntegerDigits
 
-The `NumberFormat() constructor` can be used to specify the minimum or maximum number of fractional, integer or significant digits to display when formatting a number.
+You can specify the minimum or maximum number of fractional, integer or significant digits to display when formatting a number.
 
-> **Note:** If both significant and fractional digit limits are specified then formatting depends on the [`roundingPriority`](#roundingpriority).
+> **Note:** If both significant and fractional digit limits are specified, then the actual formatting depends on the [`roundingPriority`](#roundingpriority).
 
 #### Using FractionDigits and IntegerDigits
 
@@ -422,7 +415,7 @@ console.log(
 ```
 
 If a value has more fractional digits than the specified maximum number, it will be rounded.
-The _way_ that it is rounded depends on the [`roundingMode`](#roundingmode) property (more details are provided in the next section).
+The _way_ that it is rounded depends on the [`roundingMode`](#roundingmode) property (more details are provided in the [rounding modes](#rounding_modes) section).
 Below the value is rounded from five fractional digits (`4.33145`) to two (`4.33`):
 
 ```js
@@ -448,7 +441,7 @@ console.log(
 ```
 
 > **Warning:** Watch out for default values as they may affect formatting even if not specified in your code.
-> The default default maximum digit value is three for plain values, two for currency, and may have different values for other predefined types.
+> The default maximum digit value is `3` for plain values, `2` for currency, and may have different values for other predefined types.
 
 The formatted value above is rounded to 3 digits, even though we didn't specify the maximum digits!
 This is because a default value of `maximumFractionDigits` is set when we specify `minimumFractionDigits`, and visa versa.
@@ -507,7 +500,7 @@ console.log(
 // > "50"
 ```
 
-The `minimumSignificantDigits` ensures that at least the minimum number of digits are displayed, adding zeros to the end of the value if needed.
+The `minimumSignificantDigits` ensures that at least the specified number of digits are displayed, adding zeros to the end of the value if needed.
 
 ```js
 // Minimum 10 significant digits
@@ -520,7 +513,7 @@ console.log(
 ```
 
 > **Warning:** Watch out for default values as they may affect formatting.
-> If only one `SignificantDigits` property is used then its counterpart will automatically be applied with the default value.
+> If only one `SignificantDigits` property is used, then its counterpart will automatically be applied with the default value.
 > The default maximum and minimum significant digit values are 20 and 1, respectively.
 
 #### Specifying significant and fractional digits at the same time
@@ -529,7 +522,7 @@ The fraction digits ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximum
 If both are used at the same time, it is possible for them to conflict.
 
 These conflicts are resolved using the [`roundingPriority`](#roundingpriority) property.
-By default this has a value of `auto`, which means that if either [`minimumSignificantDigits`](#minimumsignificantdigits) or [`maximumSignificantDigits`](#minimumsignificantdigits) is specified the fractional and integer digit properties will be ignored.
+By default, this has a value of `"auto"`, which means that if either [`minimumSignificantDigits`](#minimumsignificantdigits) or [`maximumSignificantDigits`](#minimumsignificantdigits) is specified, the fractional and integer digit properties will be ignored.
 
 For example, the code below formats the value of `4.33145` with `maximumFractionDigits: 3`, and then `maximumSignificantDigits: 2`, and then both.
 The value with both is the one set with `maximumSignificantDigits`.
@@ -575,7 +568,7 @@ console.log(
 // > Object { locale: "en", numberingSystem: "latn", style: "decimal", minimumIntegerDigits: 1, minimumSignificantDigits: 2, maximumSignificantDigits: 21, useGrouping: "auto", notation: "standard", signDisplay: "auto", roundingMode: "halfExpand", roundingIncrement: 1, trailingZeroDisplay: "auto", roundingPriority: "auto" }
 ```
 
-In addition to `auto`, you can resolve conflicts by specifying [`roundingPriority`](#roundingpriority) as `morePrecision` or `lessPrecision`.
+In addition to `"auto"`, you can resolve conflicts by specifying [`roundingPriority`](#roundingpriority) as `"morePrecision"` or `"lessPrecision"`.
 The formatter calculates the precision using the values of `maximumSignificantDigits` and `maximumFractionDigits`.
 
 The code below shows the format being selected for the three different rounding priorities:
@@ -619,7 +612,7 @@ console.log(`morePrecision - ${both_more.format(1.23456)}`);
 
 Note that the algorithm can behave in an unintuitive way if a minimum value is specified without a maximum value.
 The example below formats the value `1` specifying `minimumFractionDigits: 2` (formatting to `1.00`) and `minimumSignificantDigits: 2` (formatting to `1.0`).
-Since `1.00` has more digits than `1.0` this would be the result of the `morePrecision` test, but in fact the opposite is true:
+Since `1.00` has more digits than `1.0`, this should be the result when prioritizing `morePrecision`, but in fact the opposite is true:
 
 ```js
 const both_less = new Intl.NumberFormat("en", {
@@ -708,7 +701,7 @@ console.log(
 
 The table below show the effect of different rounding modes for positive and negative values that are on and around the half-increment.
 
-| rounding/value | 2.23 | 2.25 | 2.28 | -2.23 | -2.25 | -2.28 |
+| rounding mode  | 2.23 | 2.25 | 2.28 | -2.23 | -2.25 | -2.28 |
 | -------------- | ---- | ---- | ---- | ----- | ----- | ----- |
 | `ceil`         | 2.3  | 2.3  | 2.3  | -2.2  | -2.2  | -2.2  |
 | `floor`        | 2.2  | 2.2  | 2.2  | -2.3  | -2.3  | -2.3  |
@@ -720,10 +713,12 @@ The table below show the effect of different rounding modes for positive and neg
 | `halfTrunc`    | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
 | `halfEven`     | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
 
+When using `halfEven`, its behavior also depends on the parity (odd or even) of the last digit of the rounded number. For example, the behavior of `halfEven` above is the same as `halfTrunc`, because the magnitudes of all numbers are between a smaller "even" number (2.2) and a larger "odd" number (2.3). If the numbers are between ±2.3 and ±2.4, `halfEven` will behave like `halfExpand` instead. This behavior avoids consistently under- or over-estimating half-increments in a large data sample.
+
 ### Using roundingIncrement
 
 Sometimes we want to round the remaining fractional digits to some other increment than the next integer.
-For example, currencies for which the smallest coin is 5 cents might want to round the value to increments of "5", reflecting amounts that can actually be paid in cash.
+For example, currencies for which the smallest coin is 5 cents might want to round the value to increments of 5, reflecting amounts that can actually be paid in cash.
 
 This kind of rounding can be achieved with the [`roundingIncrement`](#roundingincrement) property.
 
@@ -743,7 +738,7 @@ console.log(nf.format(11.22)); // > output: "$11.20"
 ```
 
 This particular pattern is referred to as "nickel rounding", where nickel is the colloquial name for a USA 5 cent coin.
-To round to the nearest 10 cents ("dime rounding") you could just change `roundingIncrement` to `10`.
+To round to the nearest 10 cents ("dime rounding"), you could change `roundingIncrement` to `10`.
 
 ```js
 const nf = new Intl.NumberFormat("en-US", {
@@ -759,7 +754,7 @@ console.log(nf.format(11.22)); // > output: "$11.20"
 ```
 
 You can also use [`roundingMode`](#roundingmode) to change the rounding algorithm.
-The example below shows how [`halfCeil`](#halfceil_and_halffloor_rounding) rounding can be used to round the value "less positive" below the half-rounding increment and "more positive" if above or on the half-increment.
+The example below shows how `halfCeil` rounding can be used to round the value "less positive" below the half-rounding increment and "more positive" if above or on the half-increment.
 The incremented digit is "0.05" so the half-increment is at .025 (below, this is shown at 11.225).
 
 ```js
