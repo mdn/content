@@ -52,7 +52,7 @@ Highlights:
 
 - ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/enumerate", "enumerate")}} trap is implemented ({{bug(783829)}}).
 - The `configurable` attribute of the {{jsxref("Function.length")}} property is now `true` per the ES2015 specification ({{bug(911142)}}).
-- The development of [ParallelJS (PJS)](http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism) has been discontinued due to the limited future prospects, little attention and code complexity. The experimental implementation that had been enabled only on the Nightly channel, including the `Array.prototype.mapPar`, `filterPar` and `reducePar` methods, has been completely removed.
+- The development of [ParallelJS (PJS)](https://web.archive.org/web/20161113115816/http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism) has been discontinued due to the limited future prospects, little attention and code complexity. The experimental implementation that had been enabled only on the Nightly channel, including the `Array.prototype.mapPar`, `filterPar` and `reducePar` methods, has been completely removed.
 
 ### Interfaces/APIs/DOM
 

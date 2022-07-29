@@ -51,7 +51,7 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 ### JavaScript
 
 - [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) objects now offer `isFinite()`, `toInteger()`, and `isInteger()` methods. ([bug 761480](https://bugzilla.mozilla.org/show_bug.cgi?id=761480), [bug 761495](https://bugzilla.mozilla.org/show_bug.cgi?id=761495))
-- The Harmony [spread operator](http://wiki.ecmascript.org/doku.php?id=harmony:spread) is now supported in [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) initializers ([bug 574130](https://bugzilla.mozilla.org/show_bug.cgi?id=574130)). Note it is not yet supported in calls ([bug 762363](https://bugzilla.mozilla.org/show_bug.cgi?id=762363)).
+- The Harmony [spread operator](https://web.archive.org/web/20161222114355/http://wiki.ecmascript.org/doku.php?id=harmony:spread) is now supported in [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) initializers ([bug 574130](https://bugzilla.mozilla.org/show_bug.cgi?id=574130)). Note it is not yet supported in calls ([bug 762363](https://bugzilla.mozilla.org/show_bug.cgi?id=762363)).
 - The experimental {{jsxref("TypedArray.prototype.move()")}} method has been added (available in Aurora and Nightly channels only) ({{bug(730873)}}).
 
 ### WebGL
