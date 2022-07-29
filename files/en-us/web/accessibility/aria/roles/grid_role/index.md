@@ -297,8 +297,8 @@ let col = 0;
 let maxrow = trs.length - 1;
 let maxcol = 0;
 
-trs.forEach((gridrow, i) => {
-  gridrow.querySelectorAll('td').forEach(((el, i) => {
+trs.forEach((gridrow) => {
+  gridrow.querySelectorAll('td').forEach((el) => {
     el.dataset.row = row;
     el.dataset.col = col;
     col = col + 1;
@@ -311,7 +311,7 @@ trs.forEach((gridrow, i) => {
 function moveto(newrow, newcol) {
   const tgt = document.querySelector(`[data-row="${newrow}"][data-col="${newcol}"]`);
   if (tgt?.getAttribute('role') === 'gridcell') {
-    document.querySelectorAll('[role=gridcell]').forEach((el, i) => {
+    document.querySelectorAll('[role=gridcell]').forEach((el) => {
       el.setAttribute('tabindex', '-1');
     });
     tgt.setAttribute('tabindex', '0');
