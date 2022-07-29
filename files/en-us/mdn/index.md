@@ -5,7 +5,7 @@ tags:
   - Landing
   - MDN Meta
 ---
-{{MDNSidebar}}
+
 
 **MDN Web Docs** is free-to-use resource on which we document the open web platform. Our mission is to provide _developers_ with the _information_ they need to _easily_ build projects on the _web platform_.
 
