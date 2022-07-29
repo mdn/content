@@ -146,9 +146,10 @@ new Intl.NumberFormat(locales, options)
         - `"halfFloor"`: ties toward -∞.
         - `"halfExpand"`: ties away from 0.
         - `"halfTrunc"`: ties toward 0.
-        - `"halfEven"`: ties toward the value with even cardinality.
+        - `"halfEven"`: rounds like `halfExpand`. On half-increment value rounded to the have even cardinality.
 
         These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and"DOWN", respectively.
+        See [rounding and truncating](##rounding_and_truncating) below for examples.
 
     - `roundingPriority` {{experimental_inline}}
       - :  Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are specified:
@@ -162,7 +163,7 @@ new Intl.NumberFormat(locales, options)
     - `roundingIncrement` {{experimental_inline}}
       - : Specifies the rounding-increment precision.
         Must be one of the following integers:
-        "`1`", " `2`", "`5`", "`10`", "`20`", " `25`", "`50`", "`100`", "`200`", "`250`", "`500`", "`1000`", "`2000`", "`2500`", " `5000`".
+        `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, `5000`.
 
         > **Note:** The `roundingIncrement` option controls the rounding increment to be used when formatting numbers:
         >
@@ -202,7 +203,7 @@ new Intl.NumberFormat(locales, options)
 
     - `minimumIntegerDigits`
       - : The minimum number of integer digits to use.
-        A number with a smaller integer part than this value will be zero-prefixed to this number of digits when formatted.
+        A value with a smaller number of integer digits than this number will be left-padded with zeros (to the specified length) when formatted.
         Possible values are from 1 to 21; the default is 1.
     - `minimumFractionDigits`
       - : The minimum number of fraction digits to use.
@@ -513,7 +514,6 @@ The reason for this is that only the "maximum precision" values are used for the
 > It will then select the option that displays more fractional digits if  `morePrecision` is set, and fewer if `lessPrecision` is set.
 > This will result in more intuitive behavior for this case.
 
-
 ### Rounding and truncating
 
 If a value has more fractional digits than allowed by the constructor options, the formatted value will be _rounded_ to the specified number of fractional digits.
@@ -527,202 +527,67 @@ For a positive number, if the fractional digits to be removed are closer to the 
 This is shown below: 2.31 rounded to two significant digits is truncated to 2.3 because 2.31 is less than the half increment 2.35, while values of 2.35 and greater are rounded up to 2.4:
 
 ```js
-// Value below half way point: round down.
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(2.31));
-// > "2.3"
+// Value below half-increment: round down.
+console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(2.23));
+// > "2.2"
 
-// Value on or above half way point: round up.
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(2.35));
-// > "2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(2.39));
-// > "2.4"
+// Value on or above half-increment: round up.
+console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(2.25));
+console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(2.28));
+// > "2.3"
+// > "2.3"
 ```
 
 A negative number on or below the half-increment point is also rounded away from zero (becomes more negative).
 This is shown be the code below:
 
 ```js
-// Value below half way point: round down.
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(-2.31));
+// Value below half-increment: round down.
+console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(-2.23));
+// > "-2.2"
+
+// Value on or above half-increment: round up.
+console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(-2.25));
+console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(-2.28));
 // > "-2.3"
-
-// Value on or above half way point: round up.
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(-2.35));
-// > "-2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(-2.39));
-// > "-2.4"
-```
-
-#### expand and trunc rounding
-
-`expand` mode always rounds excess digits away from zero.
-This means that the _magnitude_ of the value is always increased by rounding, making a positive number more positive, and a negative number more negative.
-`trunc` rounding mode is the opposite; it always rounds the excess digits towards zero, reducing the magnitude of the displayed value.
-
-The code below shows the different rounding behavior for each case:
-
-```js
-// 'expand' mode rounds away from zero
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "expand"}).format(2.33));
-// > "2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "expand"}).format(2.39));
-// > "2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "expand"}).format(-2.33));
-// > "-2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "expand"}).format(-2.39));
-// > "-2.4"
-
-// 'trunc' mode rounds towards zero  - truncates
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "trunc"}).format(2.33));
-// > "2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "trunc"}).format(2.39));
-// > "2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "trunc"}).format(-2.33));
-// > "-2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "trunc"}).format(-2.39));
 // > "-2.3"
 ```
 
-#### ceil and floor rounding
+#### Other rounding methods
 
-`ceil` always rounds the excess digits in the "more positive" direction.
-`floor` rounding is the opposite; it rounds in the "more negative" direction.
-For positive numbers, `ceil` and `expand` have the same result, as do `floor` and `trunc`.
-For negative numbers, `ceil` is the same as `trunc`, while `expand` is the same as `floor`.
+The other rounding methods are:
 
-The code below shows the different rounding behavior for each case:
+- `expand` mode always rounds away from zero.
+  This means that the _magnitude_ of the value is always increased by rounding, making a positive number more positive, and a negative number more negative.
+- `trunc` rounding mode is the "opposite" of `expand`, rounding the value towards zero.
+  This means the _magnitude_ of the value is always reduced by rounding, making a smaller positive or negative number.
+- `ceil` always rounds values in the "more positive" direction.
+  A positive value will be rounded up, but a negative value will be rounded towards zero.
+- `floor` is the "opposite" of `ceil`; it rounds in the "more negative" direction.
+  A positive value will be rounded down, while a negative value will be rounded away from zero ("more negative").
+- `halfExpand` and `halfTrunc` behave similarly.
+  In both cases, values above the half-increment are rounded by expanding away from zero like `expand`, and values below the half-increment are truncated towards zero like `trunc`.
+  The difference is that for values _on_ the half-way increment, they follow the rounding implied by their names: `halfTrunc` rounds towards zero, while `halfExpand` rounds away from zero.
+- `halfCeil` and `halfFloor` follow the same pattern.
+  In both cases, values above the half-increment are rounded to be more positive like `ceil`, and values below the half-increment are rounded to be more negative like `floor`.
+  The difference is that for values _on_ the half-way increment, they follow the rounding implied by their names.
+- `halfEven` is the same as `halfExpand`, except that for values on the half-increment it rounds the value to make the formatted value even.
 
-```js
-// 'ceil' mode rounds towards positive infinity
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "ceil"}).format(2.33));
-// > "2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "ceil"}).format(2.39));
-// > "2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "ceil"}).format(-2.33));
-// > "-2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "ceil"}).format(-2.39));
-// > "-2.3"
 
-// 'floor' mode rounds towards negative infinity
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "floor"}).format(2.33));
-// > "2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "floor"}).format(2.39));
-// > "2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "floor"}).format(-2.33));
-// > "-2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "floor"}).format(-2.39));
-// > "-2.4"
-```
+The effect of each type of rounding is shown below for three positive and negative values below, on, and above the half-increment.
 
-#### halfExpand halfTrunc rounding
+| rounding/value | 2.23 | 2.25  | 2.28 | -2.23 | -2.25 | -2.28 |
+|----------------|------|-------|------|-------|-------|-------|
+| `ceil`         | 2.3  | 2.3   | 2.3  | -2.2  | -2.2  | -2.2  |
+| `floor`        | 2.2  | 2.2   | 2.2  | -2.3  | -2.3  | -2.3  |
+| `expand`       | 2.3  | 2.3   | 2.3  | -2.3  | -2.3  | -2.3  |
+| `trunc`        | 2.2  | 2.2   | 2.2  | -2.2  | -2.2  | -2.2  |
+| `halfCeil`     | 2.2  | 2.3   | 2.3  | -2.2  | -2.2  | -2.3  |
+| `halfFloor`    | 2.2  | 2.2   | 2.3  | -2.2  | -2.3  | -2.3  |
+| `halfExpand`   | 2.2  | 2.3   | 2.3  | -2.2  | -2.3  | -2.3  |
+| `halfTrunc`    | 2.2  | 2.2   | 2.3  | -2.2  | -2.2  | -2.3  |
+| `halfEven`     | 2.2  | 2.2   | 2.3  | -2.2  | -2.2  | -2.3  |
 
-`halfExpand` and `halfTrunc` are similar.
-In both cases, values above the half-increment are rounded by expanding away from zero, and values below the half-increment are truncated towards zero.
-The only difference is that for values _on_ the half-way increment, they follow the rounding implied by their names: `halfTrunc` rounds towards zero, while `halfExpand` rounds away from zero.
-
-This is demonstrated by the following code:
-
-```js
-// Value with fractional digits below the half increment round towards zero
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfTrunc"}).format(2.31));
-// > "2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfExpand"}).format(2.31));
-// > "2.3"
-
-// Values with fractional digits ON the half increment
-// - round away from zero for halfExpand
-// - round towards zero for halfTrunc 
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfTrunc"}).format(2.35));
-// > "2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfExpand"}).format(2.35));
-// > "2.4"
-
-//Value with fractional digits above the half increment round away from zero
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfTrunc"}).format(2.37));
-// > "2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfExpand"}).format(2.37));
-// > "2.4"
-```
-
-The same pattern applies for negative numbers.
-
-```js
-// Value with fractional digits below the half increment round towards zero
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfTrunc"}).format(-2.31));
-// > "-2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfExpand"}).format(-2.31));
-// > "-2.3"
-
-// Values with fractional digits ON the half increment
-// - round away from zero for halfExpand
-// - round towards zero for halfTrunc 
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfTrunc"}).format(-2.35));
-// > "-2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfExpand"}).format(-2.35));
-// > "-2.4"
-
-// Value with fractional digits below the half increment round away from zero
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfTrunc"}).format(-2.37));
-// > "-2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfTrunc"}).format(-2.37));
-// > "-2.4"
-```
-
-#### halfCeil and halfFloor rounding
-
-`halfCeil` and `halfFloor` are similar to `halfExpand` and `halfTrunc`, but follow `ceil` and `floor` rounding.
-In both cases, values above the half-increment are rounded to be more positive, and values below the half-increment are rounded to be more negative.
-Values _on_ the half-way increment follow the rounding implied by their names: `halfCeil` rounds in the more positive direction, while `halfFloor` rounds to be more negative.
-
-```js
-// Value with fractional digits below the half increment round towards zero
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfFloor"}).format(2.31));
-// > "2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfCeil"}).format(2.31));
-// > "2.3"
-
-// Values with fractional digits ON the half increment
-// - round away from zero for halfExpand
-// - round towards zero for halfTrunc 
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfFloor"}).format(2.35));
-// > "2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfCeil"}).format(2.35));
-// > "2.4"
-
-// Value with fractional digits above the half increment round more positive
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfFloor"}).format(2.37));
-// > "2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfCeil"}).format(2.37));
-// > "2.4"
-```
-
-Negative values follow the same patterns:
-
-```js
-// Value with fractional digits below the half increment round more negative
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfFloor"}).format(-2.31));
-// > "-2.3"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfCeil"}).format(-2.31));
-// > "-2.3"
-
-// Values with fractional digits ON the half increment
-// - round more positive for halfCeil
-// - round more negative for halfFloor
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfFloor"}).format(-2.35));
-// > "-2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfCeil"}).format(-2.35));
-// > "-2.3"
-
-// Value with fractional digits above the half increment round more positive
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfFloor"}).format(-2.37));
-// > "-2.4"
-console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2, roundingMode: "halfCeil"}).format(-2.37));
-// > "-2.4"
-```
-
-<!-- 
-#### halfEven - ties toward the value with even cardinality.
--->
 
 ### Using roundingIncrement
 
