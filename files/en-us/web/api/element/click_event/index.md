@@ -30,9 +30,9 @@ If the button is pressed on one element and the pointer is moved outside the ele
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('auxclick', (event) => {});
+addEventListener('click', (event) => {});
 
-onauxclick = (event) => { };
+onclick = (event) => { };
 ```
 
 ## Event type
