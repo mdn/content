@@ -8,7 +8,7 @@ tags:
   - Forms
   - required
 browser-compat:
-  - html.elements.input.attributes.readonly
+  - html.elements.input.readonly
   - html.elements.textarea.readonly
 ---
 
