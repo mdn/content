@@ -239,7 +239,7 @@ This is the first subtitle.
 00:00:30.739 --> 00:00:34.074
 This is the second.
 
-  ...
+…
 ```
 
 To get this displayed along with the HTML media playback, you need to:

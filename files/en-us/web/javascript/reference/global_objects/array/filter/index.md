@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Array.filter
 ---
 {{JSRef}}
 
-The **`filter()`** method **creates a new array** with all elements that pass the test implemented by the provided function.
+The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
 {{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
 
@@ -21,19 +21,19 @@ The **`filter()`** method **creates a new array** with all elements that pass th
 
 ```js
 // Arrow function
-filter((element) => { /* ... */ } )
-filter((element, index) => { /* ... */ } )
-filter((element, index, array) => { /* ... */ } )
+filter((element) => { /* … */ } )
+filter((element, index) => { /* … */ } )
+filter((element, index, array) => { /* … */ } )
 
 // Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function(element) { /* ... */ })
-filter(function(element, index) { /* ... */ })
-filter(function(element, index, array){ /* ... */ })
-filter(function(element, index, array) { /* ... */ }, thisArg)
+filter(function(element) { /* … */ })
+filter(function(element, index) { /* … */ })
+filter(function(element, index, array){ /* … */ })
+filter(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -51,12 +51,12 @@ filter(function(element, index, array) { /* ... */ }, thisArg)
     - `array`
       - : The array on which `filter()` was called.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value
 
-A new array with the elements that pass the test. If no elements pass the test, an empty array will be returned.
+A [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of the given array, filtered down to just the elements from the given array that pass the test implemented by the provided function. If no elements pass the test, an empty array will be returned.
 
 ## Description
 
@@ -100,7 +100,7 @@ const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 function isPrime(num) {
   for (let i = 2; num > i; i++) {
-    if (num % i == 0) {
+    if (num % i === 0) {
       return false;
     }
   }
@@ -159,7 +159,7 @@ let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
  */
 function filterItems(arr, query) {
   return arr.filter(function(el) {
-    return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    return el.toLowerCase().includes(query.toLowerCase());
   })
 }
 
@@ -176,7 +176,7 @@ const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
  * Filter array items based on search criteria (query)
  */
 const filterItems = (arr, query) => {
-  return arr.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) !== -1)
+  return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
 }
 
 console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
@@ -185,13 +185,13 @@ console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
 
 ### Affecting Initial Array (modifying, appending and deleting)
 
-The following examples tests the behavior of the `filter` method when the array is modified.
+The following example tests the behavior of the `filter` method when the array is modified.
 
 ```js
-// Modifying each words
+// Modifying each word
 let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
 
-const modifiedWords = words.filter( (word, index, arr) => {
+const modifiedWords = words.filter((word, index, arr) => {
   arr[index+1] +=' extra'
   return word.length < 6
 })
@@ -202,7 +202,7 @@ console.log(modifiedWords)
 
 // Appending new words
 words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
-const appendedWords = words.filter( (word, index, arr) => {
+const appendedWords = words.filter((word, index, arr) => {
   arr.push('new')
   return word.length < 6
 })
@@ -213,13 +213,13 @@ console.log(appendedWords)
 
 // Deleting words
 words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
-const deleteWords = words.filter( (word, index, arr) => {
+const deleteWords = words.filter((word, index, arr) => {
   arr.pop()
   return word.length < 6
 })
 
 console.log(deleteWords)
-// Notice 'elite' is not even obtained as its been popped off `words` before filter can even get there
+// Notice 'elite' is not even obtained as it’s been popped off 'words' before filter can even get there
 // ["spray" ,"limit"]
 ```
 

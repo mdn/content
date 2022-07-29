@@ -62,11 +62,11 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
 dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+  console.log(`received: ${event.data}`);
   dc.close(); // We decided to close after the first received message
 };
 
@@ -74,11 +74,11 @@ dc.onopen = function () {
   console.log("datachannel open");
 };
 
-dc.onclose = function (
+dc.onclose = function () {
   console.log("datachannel close");
 };
 
-// Now negotiate the connection and so forth...
+// Now negotiate the connection and so forth…
 ```
 
 ## Specifications

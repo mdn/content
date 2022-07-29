@@ -30,27 +30,28 @@ An array.
 ```js
 function gameLoop() {
   let gp;
-  if(navigator.webkitGetGamepads) {
-      gp = navigator.webkitGetGamepads()[0];
+  if (navigator.webkitGetGamepads) {
+    gp = navigator.webkitGetGamepads()[0];
   } else {
-      gp = navigator.getGamepads()[0];
+    gp = navigator.getGamepads()[0];
   }
+  
   let a = 0;
   let b = 0;
-  if(gp.axes[0] != 0) {
+  if (gp.axes[0] !== 0) {
     b -= gp.axes[0];
-  } else if(gp.axes[1] != 0) {
+  } else if (gp.axes[1] !== 0) {
     a += gp.axes[1];
-  } else if(gp.axes[2] != 0) {
+  } else if (gp.axes[2] !== 0) {
     b += gp.axes[2];
-  } else if(gp.axes[3] != 0) {
+  } else if (gp.axes[3] !== 0) {
     a -= gp.axes[3];
   }
 
-  ball.style.left = a*2 + "px";
-  ball.style.top = b*2 + "px";
+  ball.style.left = `${a * 2}px`;
+  ball.style.top = `${b * 2}px`;
 
-  const start = rAF(gameLoop);
+  const start = requestAnimationFrame(gameLoop);
 };
 ```
 

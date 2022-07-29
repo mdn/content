@@ -147,7 +147,7 @@ There are other issues too beyond accessibility — it is harder to style the co
 
 #### Using clear language
 
-The language you use can also affect accessibility. In general, you should use clear language that is not overly complex and doesn't use unnecessary jargon or slang terms. This not only benefits people with cognitive or other disabilities; it benefits readers for whom the text is not written in their first language, younger people ... everyone, in fact! Apart from this, you should try to avoid using language and characters that don't get read out clearly by the screen reader. For example:
+The language you use can also affect accessibility. In general, you should use clear language that is not overly complex and doesn't use unnecessary jargon or slang terms. This not only benefits people with cognitive or other disabilities; it benefits readers for whom the text is not written in their first language, younger people…, everyone, in fact! Apart from this, you should try to avoid using language and characters that don't get read out clearly by the screen reader. For example:
 
 - Don't use dashes if you can avoid it. Instead of writing 5–7, write 5 to 7.
 - Expand abbreviations — instead of writing Jan, write January.
@@ -496,7 +496,7 @@ Let's have another quick look at the fourth method:
 ```html
 <img src="dinosaur.png" aria-labelledby="dino-label">
 
-<p id="dino-label">The Mozilla red Tyrannosaurus ... </p>
+<p id="dino-label">The Mozilla red Tyrannosaurus… </p>
 ```
 
 In this case, we are not using the `alt` attribute at all — instead, we have presented our description of the image as a regular text paragraph, given it an `id`, and then used the `aria-labelledby` attribute to refer to that `id`, which causes screen readers to use that paragraph as the alt text/label for that image. This is especially useful if you want to use the same text as a label for multiple images — something that isn't possible with `alt`.
@@ -541,7 +541,7 @@ The reason to use an empty `alt` instead of not including it is because many scr
 
 ## More on links
 
-Links ( the [`<a>`](/en-US/docs/Web/HTML/Element/a) element with an `href` attribute ), depending on how they are used, can help or harm accessibility. By default, links are accessible in appearance. They can improve accessibility by helping a user quickly navigate to different sections of a document. They can also harm accessibility if their accessible styling is removed or if JavaScript causes them to behave in unexpected ways.
+Links (the [`<a>`](/en-US/docs/Web/HTML/Element/a) element with an `href` attribute), depending on how they are used, can help or harm accessibility. By default, links are accessible in appearance. They can improve accessibility by helping a user quickly navigate to different sections of a document. They can also harm accessibility if their accessible styling is removed or if JavaScript causes them to behave in unexpected ways.
 
 ### Link styling
 

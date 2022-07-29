@@ -289,7 +289,7 @@ The main parts of the syntax you will need to know for declaring the pattern mat
     </tr>
     <tr>
       <td>\d</td>
-      <td>Match a digit (0, 1, 2, ... 9)</td>
+      <td>Match a digit (0, 1, 2, … 9)</td>
     </tr>
     <tr>
       <td>\w</td>

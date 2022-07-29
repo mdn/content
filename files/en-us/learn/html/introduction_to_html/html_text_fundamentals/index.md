@@ -71,11 +71,11 @@ For example, in this story, the `<h1>` element represents the title of the story
 
 <h2>Chapter 1: The dark night</h2>
 
-<p>It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...</p>
+<p>It was a dark night. Somewhere, an owl hooted. The rain lashed down on the…</p>
 
 <h2>Chapter 2: The eternal silence</h2>
 
-<p>Our protagonist could not so much as a whisper out of the shadowy figure ...</p>
+<p>Our protagonist could not so much as a whisper out of the shadowy figure…</p>
 
 <h3>The specter speaks</h3>
 
@@ -938,19 +938,21 @@ textarea.onkeyup = function(){
 
 {{ EmbedLiveSample('Active_learning_Lets_be_important', 700, 520, "", "") }}
 
-### Italic, bold, underline...
+### Italic, bold, underline…
 
 The elements we've discussed so far have clearcut associated semantics. The situation with {{htmlelement("b")}}, {{htmlelement("i")}}, and {{htmlelement("u")}} is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as **presentational elements** and should no longer be used because, as we've seen before, semantics is so important to accessibility, SEO, etc.
 
 HTML5 redefined `<b>`, `<i>`, and `<u>` with new, somewhat confusing, semantic roles.
 
-Here's the best rule you can remember: It's likely appropriate to use `<b>`, `<i>`, or `<u>` to convey a meaning traditionally conveyed with bold, italics, or underline, provided there is no more suitable element. However, it always remains critical to keep an accessibility mindset. The concept of italics isn't very helpful to people using screen readers, or to people using a writing system other than the Latin alphabet.
+Here's the best rule you can remember: It's only appropriate to use `<b>`, `<i>`, or `<u>` to convey a meaning traditionally conveyed with bold, italics, or underline when there isn't a more suitable element; and there usually is. Consider whether `<strong>`, `<em>`, `<mark>`, or `<span>` might be more appropriate.
 
-- {{HTMLElement('i')}} is used to convey a meaning traditionally conveyed by italic: foreign words, taxonomic designation, technical terms, a thought...
-- {{HTMLElement('b')}} is used to convey a meaning traditionally conveyed by bold: keywords, product names, lead sentence...
-- {{HTMLElement('u')}} is used to convey a meaning traditionally conveyed by underline: proper name, misspelling...
+Always keep an accessibility mindset. The concept of italics isn't very helpful to people using screen readers, or to people using a writing system other than the Latin alphabet.
 
-> **Note:** People strongly associate underlining with hyperlinks. Therefore, on the web, it's best to underline only links. Use the `<u>` element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the web. The example below illustrates how it can be done.
+- {{HTMLElement('i')}} is used to convey a meaning traditionally conveyed by italic: foreign words, taxonomic designation, technical terms, a thought…
+- {{HTMLElement('b')}} is used to convey a meaning traditionally conveyed by bold: keywords, product names, lead sentence…
+- {{HTMLElement('u')}} is used to convey a meaning traditionally conveyed by underline: proper name, misspelling…
+
+> **Note:** People strongly associate underlining with hyperlinks. Therefore, on the web, it's best to only underline links. Use the `<u>` element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the web. The example below illustrates how it can be done.
 
 ```html
 <!-- scientific names -->
@@ -967,19 +969,14 @@ Here's the best rule you can remember: It's likely appropriate to use `<b>`, `<i
 
 <!-- a known misspelling -->
 <p>
-  Someday I'll learn how to <u style="text-decoration-line: underline; text-decoration-style: wavy;">spel</u> better.
+  Someday I'll learn how to <u class="spelling-error">spel</u> better.
 </p>
 
-<!-- Highlight keywords in a set of instructions -->
-<ol>
-  <li>
-    <b>Slice</b> two pieces of bread off the loaf.
-  </li>
-  <li>
-    <b>Insert</b> a tomato slice and a leaf of
-    lettuce between the slices of bread.
-  </li>
-</ol>
+<!-- term being defined when used in a definition -->
+<dl>
+  <dt>Semantic HTML</dt>
+  <dd>Use the elements based on their <b>semantic</b> meaning, not their appearance.</dd>
+</dl>
 ```
 
 ## Test your skills!

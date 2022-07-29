@@ -138,7 +138,7 @@ Prior to Firefox 40, it was possible to use an initializer expression
 (`i=0`) in a `for...in` loop:
 
 ```js example-bad
-var obj = {a: 1, b: 2, c: 3};
+const obj = { a: 1, b: 2, c: 3 };
 for (var i = 0 in obj) {
   console.log(obj[i]);
 }
@@ -160,5 +160,5 @@ investigating whether to remove the nonstandard behavior as well.
 - [Iterators and Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usable with `for...of` syntax)
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Array.prototype.forEach()")}}

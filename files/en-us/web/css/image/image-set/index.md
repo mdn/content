@@ -32,9 +32,9 @@ where <image-set-option> = [ <image> | <string> ] <resolution> and
   - : The [`<image>`](/en-US/docs/Web/CSS/image) can be any image type except for an image set. The `image-set()` function may not be nested inside another `image-set()` function.
 - `<string>`
   - : A URL to an image.
-- `<resolution>`{{optional_inline}}
+- `<resolution>` {{optional_inline}}
   - : [`<resolution>`](/en-US/docs/Web/CSS/resolution) units include `x` or `dppx`, for dots per pixel unit, `dpi`, for dots per inch, and `dpcm` for dots per centimeter. Every image within an `image-set()` must have a unique resolution.
-- `type(<string>)`{{optional_inline}}
+- `type(<string>)` {{optional_inline}}
   - : A valid MIME type string, for example "image/jpeg".
 
 ## Examples

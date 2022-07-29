@@ -49,9 +49,9 @@ The WebXR _opaque texture_ is identical to the standard `WebGLTexture` with the 
 ### Creating a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var texture = gl.createTexture();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const texture = gl.createTexture();
 ```
 
 ## Specifications

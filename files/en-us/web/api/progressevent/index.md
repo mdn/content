@@ -36,7 +36,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 _Also inherits methods from its parent {{domxref("Event")}}._
 
-- {{domxref("ProgressEvent.initProgressEvent()")}} {{deprecated_inline}}{{non-Standard_inline}}
+- {{domxref("ProgressEvent.initProgressEvent()")}} {{deprecated_inline}} {{non-Standard_inline}}
   - : Initializes a `ProgressEvent` created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent('ProgressEvent')")}} method.
 
 ## Examples
@@ -44,7 +44,7 @@ _Also inherits methods from its parent {{domxref("Event")}}._
 The following example adds a `ProgressEvent` to a new {{domxref("XMLHTTPRequest")}} and uses it to display the status of the request.
 
 ```js
-var progressBar = document.getElementById("p"),
+const progressBar = document.getElementById("p"),
     client = new XMLHttpRequest()
 client.open("GET", "magical-unicorns")
 client.onprogress = function(pe) {

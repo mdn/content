@@ -69,7 +69,7 @@ baselines.forEach(function (baseline, index) {
   ctx.moveTo(0, y + 0.5);
   ctx.lineTo(550, y + 0.5);
   ctx.stroke();
-  ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
+  ctx.fillText(`Abcdefghijklmnop (${baseline})`, 0, y);
 });
 ```
 

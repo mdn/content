@@ -18,7 +18,7 @@ The desired file format and image quality may be specified.
 If the file format is not specified, or if the given format is not supported, then the data will be exported as `image/png`.
 In other words, if the returned value starts with `data:image/png` for any other requested `type`, then that format is not supported.
 
-Browsers are required to support `image/png`; many will support additional formats including `image/jpg` and `image/webp`.
+Browsers are required to support `image/png`; many will support additional formats including `image/jpeg` and `image/webp`.
 
 The created image data will have a resolution of 96dpi for file formats that support encoding resolution metadata.
 
@@ -73,7 +73,7 @@ console.log(dataURL);
 
 ```js
 const fullQuality = canvas.toDataURL('image/jpeg', 1.0);
-// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
+// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ…9oADAMBAAIRAxEAPwD/AD/6AP/Z"
 const mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
 const lowQuality = canvas.toDataURL('image/jpeg', 0.1);
 ```

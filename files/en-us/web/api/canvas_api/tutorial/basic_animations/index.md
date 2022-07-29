@@ -157,7 +157,7 @@ function clock() {
   ctx.save();
   ctx.lineWidth = 5;
   for (i = 0; i < 60; i++) {
-    if (i % 5!= 0) {
+    if (i % 5 !== 0) {
       ctx.beginPath();
       ctx.moveTo(117, 0);
       ctx.lineTo(120, 0);
@@ -175,7 +175,7 @@ function clock() {
 
   // write Hours
   ctx.save();
-  ctx.rotate(hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) *sec);
+  ctx.rotate((Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec);
   ctx.lineWidth = 14;
   ctx.beginPath();
   ctx.moveTo(-20, 0);

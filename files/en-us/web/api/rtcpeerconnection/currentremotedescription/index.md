@@ -50,13 +50,11 @@ containing the {{domxref("RTCSessionDescription")}} object's `type` and
 `sdp` fields.
 
 ```js
-var pc = new RTCPeerConnection();
-…
-var sd = pc.currentRemoteDescription;
+const pc = new RTCPeerConnection();
+// ...
+const sd = pc.currentRemoteDescription;
 if (sd) {
-  alert("Local session: type='" +
-        sd.type + "'; sdp description='" +
-        sd.sdp + "'");
+  alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
 }
 else {
   alert("No local session yet.");

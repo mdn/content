@@ -33,10 +33,10 @@ _There is neither parameter nor return value for this method._
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
+const pc = new RTCPeerConnection();
 
 pc.setIdentityProvider("developer.mozilla.org");
-var assertion = await pc.getIdentityAssertion();
+const assertion = await pc.getIdentityAssertion();
 ```
 
 ## Specifications

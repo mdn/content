@@ -75,14 +75,14 @@ let inputSources = xrSession.inputSources;
 inputSources.forEach((input) => {
   if (input.gamepad) {
     checkGamepad(input.gamepad);
+  } else if (
+    input.targetRayMode === "tracked-pointer" &&
+    input.handedness === player.handedness
+  ) {
+    /* Handle main hand controller */
+    handleMainHandInput(input);
   } else {
-    if (input.targetRayMode === "tracked-pointer" &&
-        input.handedness === player.handedness) {
-      /* Handle main hand controller */
-      handleMainHandInput(input);
-    } else {
-      /* Handle other inputs */
-    }
+    /* Handle other inputs */
   }
 });
 ```

@@ -15,7 +15,7 @@ tags:
   - sampleRate
 browser-compat: api.MediaTrackSupportedConstraints.sampleRate
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`sampleRate`** property is a read-only Boolean value which is

@@ -20,11 +20,9 @@ returns the DTMF character which has just begun to play, or an empty string
 (`""`). if all queued tones have finished playing (that is,
 {{domxref("RTCDTMFSender.toneBuffer")}} is empty).
 
-## Syntax
+## Value
 
-```js
- var tone = dtmfToneChangeEvent.tone;
-```
+A string with the DTML character playing, or the empty string.
 
 ## Example
 
@@ -33,7 +31,7 @@ an element to display the currently playing tone in its content, or, if all tone
 played, the string "\<none>".
 
 ```js
-dtmfSender.ontonechange = function( ev ) {
+dtmfSender.ontonechange = (ev) => {
   let tone = ev.tone;
   if (tone === "") {
     tone = "&lt;none&gt;"
@@ -55,5 +53,5 @@ dtmfSender.ontonechange = function( ev ) {
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF)
-- {{event("toneevent")}}
+- {{domxref("RTCDTMFSender/tonechange_event", "tonechange")}}
 - {{domxref("RTCDTMFToneChangeEvent")}}

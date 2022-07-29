@@ -109,7 +109,7 @@ None ({{jsxref("undefined")}}).
 ### JavaScript
 
 ```js
-document.body.onclick = event => {
+document.body.onclick = (event) => {
   const elementTag = event.target.tagName.toLowerCase();
   document.getElementById("out").innerHTML = elementTag;
 };

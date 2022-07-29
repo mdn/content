@@ -18,8 +18,8 @@ The [WebGL API](/en-US/docs/Web/API/WebGL_API) provides several constants that a
 Standard WebGL constants are installed on the {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} objects, so that you use them as `gl.CONSTANT_NAME`:
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('myCanvas');
+const gl = canvas.getContext('webgl');
 
 gl.getParameter(gl.LINE_WIDTH);
 ```
@@ -27,8 +27,8 @@ gl.getParameter(gl.LINE_WIDTH);
 Some constants are also provided by [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions). A [list](#constants_defined_in_webgl_extensions) is provided below.
 
 ```js
-var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
 The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) has more information, examples, and resources on how to get started with WebGL.

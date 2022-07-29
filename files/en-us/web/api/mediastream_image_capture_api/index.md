@@ -24,7 +24,7 @@ First, get a reference to a device by calling {{domxref("MediaDevices.getUserMed
 
 ```js
 navigator.mediaDevices.getUserMedia({ video: true })
-  .then(mediaStream => {
+  .then((mediaStream) => {
     // Do something with the stream.
   })
 ```

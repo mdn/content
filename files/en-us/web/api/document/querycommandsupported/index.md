@@ -42,10 +42,10 @@ the action.
 ## Examples
 
 ```js
-var flg = document.queryCommandSupported("SelectAll");
+const flg = document.queryCommandSupported("SelectAll");
 
 if(flg) {
-  // ...Do something
+  // Do something…
 }
 ```
 

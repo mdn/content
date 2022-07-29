@@ -26,16 +26,15 @@ If the given child is a {{domxref("DocumentFragment")}}, the entire contents of 
 {{domxref("DocumentFragment")}} are moved into the child list of the specified parent
 node.
 
-> **Note:** Unlike this method, the {{domxref("Element.append()")}} method supports multiple arguments and
-> appending strings. You can prefer using it if your node is an element.
+> **Note:** Unlike this method, the {{domxref("Element.append()")}} method supports multiple arguments and appending strings. You can prefer using it if your node is an element.
 
 Chaining does not work, due to `appendChild()` returning the child element:
 
 ```js
-let aBlock = document.createElement('block').appendChild( document.createElement('b') );
+const aBlock = document.createElement('block').appendChild(document.createElement('strong'));
 ```
 
-Sets `aBlock` to `<b></b>` only, meaning you cannot chain further actions on `block`, like
+Sets `aBlock` to `<strong></strong>` only, meaning you cannot chain further actions on `block`, like
 performing several chained `appendChild`.
 
 ## Syntax
@@ -71,7 +70,7 @@ the empty {{domxref("DocumentFragment")}} is returned.
 
 ```js
 // Create a new paragraph element, and append it to the end of the document body
-let p = document.createElement("p");
+const p = document.createElement("p");
 document.body.appendChild(p);
 ```
 

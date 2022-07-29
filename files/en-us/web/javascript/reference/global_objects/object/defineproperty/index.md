@@ -101,7 +101,7 @@ descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exce
 Bear in mind that these attributes are not necessarily the descriptor's own properties.
 Inherited properties will be considered as well. In order to ensure these defaults are
 preserved, you might freeze the {{jsxref("Object")}} upfront, specify all
-options explicitly, or point to {{jsxref("null")}} with {{jsxref("Object.create",
+options explicitly, or point to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) with {{jsxref("Object.create",
   "Object.create(null)")}}.
 
 ```js
@@ -137,7 +137,7 @@ function withValue(value) {
 
   return d;
 }
-// ... and ...
+// and
 Object.defineProperty(obj, 'key', withValue('static'));
 
 // if freeze is available, prevents adding or
@@ -446,11 +446,11 @@ these methods use a variable to store the value, this value will be shared by al
 objects.
 
 ```js
-function myclass() {
+function MyClass() {
 }
 
-const value;
-Object.defineProperty(myclass.prototype, "x", {
+let value;
+Object.defineProperty(MyClass.prototype, "x", {
   get() {
     return value;
   },
@@ -459,8 +459,8 @@ Object.defineProperty(myclass.prototype, "x", {
   }
 });
 
-const a = new myclass();
-const b = new myclass();
+const a = new MyClass();
+const b = new MyClass();
 a.x = 1;
 console.log(b.x); // 1
 ```
@@ -470,10 +470,10 @@ This can be fixed by storing the value in another property. In `get` and
 or modify the property.
 
 ```js
-function myclass() {
+function MyClass() {
 }
 
-Object.defineProperty(myclass.prototype, "x", {
+Object.defineProperty(MyClass.prototype, "x", {
   get() {
     return this.stored_x;
   },
@@ -482,8 +482,8 @@ Object.defineProperty(myclass.prototype, "x", {
   }
 });
 
-const a = new myclass();
-const b = new myclass();
+const a = new MyClass();
+const b = new MyClass();
 a.x = 1;
 console.log(b.x); // undefined
 ```
@@ -493,22 +493,22 @@ on a prototype. However, if a non-writable value property is inherited, it still
 prevents from modifying the property on the object.
 
 ```js
-function myclass() {
+function MyClass() {
 }
 
-myclass.prototype.x = 1;
-Object.defineProperty(myclass.prototype, "y", {
+MyClass.prototype.x = 1;
+Object.defineProperty(MyClass.prototype, "y", {
   writable: false,
   value: 1
 });
 
-const a = new myclass();
+const a = new MyClass();
 a.x = 2;
 console.log(a.x); // 2
-console.log(myclass.prototype.x); // 1
+console.log(MyClass.prototype.x); // 1
 a.y = 2; // Ignored, throws in strict mode
 console.log(a.y); // 1
-console.log(myclass.prototype.y); // 1
+console.log(MyClass.prototype.y); // 1
 ```
 
 ## Specifications

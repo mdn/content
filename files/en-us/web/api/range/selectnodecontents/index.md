@@ -55,7 +55,7 @@ used to deselect it.
 #### HTML
 
 ```html
-<p id="p"><b>Use the buttons below</b> to select or deselect the contents of this paragraph.</p>
+<p id="p"><strong>Use the buttons below</strong> to select or deselect the contents of this paragraph.</p>
 <button id="select-button">Select paragraph</button>
 <button id="deselect-button">Deselect paragraph</button>
 ```
@@ -67,7 +67,7 @@ const p = document.getElementById('p');
 const selectButton = document.getElementById('select-button');
 const deselectButton = document.getElementById('deselect-button');
 
-selectButton.addEventListener('click', e => {
+selectButton.addEventListener('click', (e) => {
   // Clear any current selection
   const selection = window.getSelection();
   selection.removeAllRanges();
@@ -78,7 +78,7 @@ selectButton.addEventListener('click', e => {
   selection.addRange(range);
 });
 
-deselectButton.addEventListener('click', e => {
+deselectButton.addEventListener('click', (e) => {
   const selection = window.getSelection();
   selection.removeAllRanges();
 });

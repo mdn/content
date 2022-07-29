@@ -19,7 +19,7 @@ You do not have to create a {{jsxref("Number")}} object to access this static pr
 
 ## Description
 
-The `EPSILON` property has a value of approximately `2.2204460492503130808472633361816E-16`, or `2^-52`.
+The `EPSILON` property has a value of approximately `2.2204460492503130808472633361816E-16`, or 2<sup>-52</sup>.
 
 ## Examples
 
@@ -30,14 +30,6 @@ x = 0.2;
 y = 0.3;
 z = 0.1;
 equal = (Math.abs(x - y + z) < Number.EPSILON);
-```
-
-## Polyfill
-
-```js
-if (Number.EPSILON === undefined) {
-    Number.EPSILON = Math.pow(2, -52);
-}
 ```
 
 ## Specifications

@@ -56,7 +56,7 @@ function play() {
     audioCtx.resume().then(() => play());
     return;
   }
-  // ... rest of the play() function
+  // rest of the play() function
 }
 ```
 

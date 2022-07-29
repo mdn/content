@@ -30,14 +30,14 @@ A boolean value.
 ## Examples
 
 ```js
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
+self.addEventListener('fetch', function (event) {
+  event.respondWith(async function () {
     if (event.isReload) {
       //Return something
     } else {
       //Return something else
-    };
-  );
+    }
+  })();
 });
 ```
 

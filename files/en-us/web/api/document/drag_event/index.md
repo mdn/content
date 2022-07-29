@@ -18,32 +18,28 @@ browser-compat: api.Document.drag_event
 
 The `drag` event is fired every few hundred milliseconds as an element or text selection is being dragged by the user.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Default action</th>
-      <td>Continue the drag &#x26; drop operation.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondrag", "ondrag")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('drag', (event) => {});
+
+ondrag = (event) => { };
+```
+
+## Event type
+
+A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("DragEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+  - : The data that is transferred during a drag and drop interaction.
 
 ## Examples
 
@@ -96,43 +92,43 @@ body {
 let dragged;
 
 /* events fired on the draggable target */
-document.addEventListener("drag", event => {
+document.addEventListener("drag", (event) => {
   console.log("dragging");
 });
 
-document.addEventListener("dragstart", event => {
+document.addEventListener("dragstart", (event) => {
   // store a ref. on the dragged elem
   dragged = event.target;
   // make it half transparent
   event.target.classList.add("dragging");
 });
 
-document.addEventListener("dragend", event => {
+document.addEventListener("dragend", (event) => {
   // reset the transparency
   event.target.classList.remove("dragging");
 });
 
 /* events fired on the drop targets */
-document.addEventListener("dragover", event => {
+document.addEventListener("dragover", (event) => {
   // prevent default to allow drop
   event.preventDefault();
 }, false);
 
-document.addEventListener("dragenter", event => {
+document.addEventListener("dragenter", (event) => {
   // highlight potential drop target when the draggable element enters it
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.add("dragover");
   }
 });
 
-document.addEventListener("dragleave", event => {
+document.addEventListener("dragleave", (event) => {
   // reset background of potential drop target when the draggable element leaves it
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");
   }
 });
 
-document.addEventListener("drop", event => {
+document.addEventListener("drop", (event) => {
   // prevent default action (open as link for some elements)
   event.preventDefault();
   // move dragged element to the selected drop target

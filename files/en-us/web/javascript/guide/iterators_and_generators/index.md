@@ -85,7 +85,7 @@ The function can be called as many times as desired, and returns a new Generator
 We can now adapt the example from above. The behavior of this code is identical, but the implementation is much easier to write and read.
 
 ```js
-function* makeRangeIterator(start = 0, end = 100, step = 1) {
+function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
     let iterationCount = 0;
     for (let i = start; i < end; i += step) {
         iterationCount++;
@@ -139,15 +139,15 @@ You can make your own iterables like this:
 
 ```js
 const myIterable = {
-    *[Symbol.iterator]() {
-        yield 1;
-        yield 2;
-        yield 3;
-    }
+  *[Symbol.iterator]() {
+    yield 1;
+    yield 2;
+    yield 3;
+  }
 }
 
-for (let value of myIterable) {
-    console.log(value);
+for (const value of myIterable) {
+  console.log(value);
 }
 // 1
 // 2
@@ -167,8 +167,8 @@ or
 Some statements and expressions expect iterables. For example: the {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/yield*","yield*")}}.
 
 ```js
-for (let value of ['a', 'b', 'c']) {
-    console.log(value);
+for (const value of ['a', 'b', 'c']) {
+  console.log(value);
 }
 // "a"
 // "b"

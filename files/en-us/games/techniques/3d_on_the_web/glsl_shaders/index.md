@@ -131,23 +131,18 @@ To actually apply the newly created shaders to the cube, comment out the `basicM
 Then, create the [`shaderMaterial`](https://threejs.org/docs/#Reference/Materials/ShaderMaterial):
 
 ```js
-var shaderMaterial = new THREE.ShaderMaterial( {
-  vertexShader: document.getElementById( 'vertexShader' ).textContent,
-  fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+var shaderMaterial = new THREE.ShaderMaterial({
+  vertexShader: document.getElementById('vertexShader').textContent,
+  fragmentShader: document.getElementById('fragmentShader').textContent
 });
 ```
 
 This shader material takes the code from the scripts and applies it to the object the material is assigned to.
 
-Then, in the line that defines the cube we need to replace the `basicMaterial`:
+Then, in the line that defines the cube we need to replace the `basicMaterial` with the newly created `shaderMaterial`:
 
 ```js
-var cube = new THREE.Mesh(boxGeometry, basicMaterial);
-```
-
-...with the newly created `shaderMaterial`:
-
-```js
+// var cube = new THREE.Mesh(boxGeometry, basicMaterial);
 var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
 ```
 
@@ -194,9 +189,9 @@ It looks exactly the same as the Three.js cube demo but the slightly different p
 
     var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 
-    var shaderMaterial = new THREE.ShaderMaterial( {
-        vertexShader: document.getElementById( 'vertexShader' ).textContent,
-        fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+    var shaderMaterial = new THREE.ShaderMaterial({
+        vertexShader: document.getElementById('vertexShader').textContent,
+        fragmentShader: document.getElementById('fragmentShader').textContent
     });
 
     var cube = new THREE.Mesh(boxGeometry, shaderMaterial);

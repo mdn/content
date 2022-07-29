@@ -15,7 +15,7 @@ tags:
   - getusermedia
 browser-compat: api.Navigator.getUserMedia
 ---
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
 
 The deprecated **`Navigator.getUserMedia()`** method prompts
 the user for permission to use up to one video input device (such as a camera or shared
@@ -56,7 +56,7 @@ getUserMedia(constraints, successCallback, errorCallback)
     shown in the following example:
 
     ```js
-    function(stream) {
+    function successCallback(stream) {
        const video = document.querySelector('video');
        video.srcObject = stream;
        video.onloadedmetadata = function(e) {
@@ -99,7 +99,7 @@ if (navigator.getUserMedia) {
          };
       },
       function(err) {
-         console.log("The following error occurred: " + err.name);
+         console.error(`The following error occurred: ${err.name}`);
       }
    );
 } else {
@@ -112,13 +112,15 @@ if (navigator.getUserMedia) {
 To use `getUserMedia()` in an installable app, you need to specify one or both of the following fields inside your
 manifest file:
 
-```js
-"permissions": {
-  "audio-capture": {
-    "description": "Required to capture audio using getUserMedia()"
-  },
-  "video-capture": {
-    "description": "Required to capture video using getUserMedia()"
+```json
+{
+  "permissions": {
+    "audio-capture": {
+      "description": "Required to capture audio using getUserMedia()"
+    },
+    "video-capture": {
+      "description": "Required to capture video using getUserMedia()"
+    }
   }
 }
 ```

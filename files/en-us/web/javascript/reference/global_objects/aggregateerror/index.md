@@ -21,9 +21,9 @@ The **`AggregateError`** object represents an error when several errors need to 
 ## Instance properties
 
 - {{JSxRef("Error.prototype.message", "AggregateError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}
-  - : Error name.
+  - : Error name. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.cause", "AggregateError.prototype.cause")}}
   - : Error cause. Inherited from {{jsxref("Error")}}.
 - `AggregateError.prototype.errors`
@@ -36,7 +36,7 @@ The **`AggregateError`** object represents an error when several errors need to 
 ```js
 Promise.any([
   Promise.reject(new Error("some error")),
-]).catch(e => {
+]).catch((e) => {
   console.log(e instanceof AggregateError); // true
   console.log(e.message);                   // "All Promises rejected"
   console.log(e.name);                      // "AggregateError"

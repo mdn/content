@@ -37,9 +37,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 `WebGLQuery` objects are not available in WebGL 1.
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 
-// ...
+// …
 
 gl.isQuery(query);
 ```

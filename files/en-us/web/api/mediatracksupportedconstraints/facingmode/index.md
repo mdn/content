@@ -15,7 +15,7 @@ tags:
   - facingMode
 browser-compat: api.MediaTrackSupportedConstraints.facingMode
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`facingMode`** property is a read-only Boolean value which is

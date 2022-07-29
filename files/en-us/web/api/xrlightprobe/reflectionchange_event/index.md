@@ -23,9 +23,9 @@ The WebXR **`reflectionchange`** event fires each time the estimated reflection 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('reflectionchange', event => { })
+addEventListener('reflectionchange', (event) => { })
 
-onreflectionchange = event => { }
+onreflectionchange = (event) => { }
 ```
 
 ## Event type
@@ -53,9 +53,9 @@ lightProbe.addEventListener('reflectionchange', () => {
 The `reflectionchange` event is also available using the `onreflectionchange` event handler property.
 
 ```js
-lightProbe.onreflectionchange = event => {
+lightProbe.onreflectionchange = (event) => {
   glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
-});
+};
 ```
 
 ## Specifications

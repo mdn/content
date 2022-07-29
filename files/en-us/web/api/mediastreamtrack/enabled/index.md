@@ -14,7 +14,7 @@ tags:
   - enabled
 browser-compat: api.MediaStreamTrack.enabled
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The **`enabled`** property on the
 {{domxref("MediaStreamTrack")}} interface is a Boolean value which is
@@ -59,7 +59,7 @@ computers turns off while the track is muted in this way.
 
 ## Example
 
-This example demonstrates a {{event("click")}} event handler for a pause button.
+This example demonstrates a {{domxref("Element/click_event", "click")}} event handler for a pause button.
 
 ```js
 pauseButton.onclick = function(evt) {

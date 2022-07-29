@@ -18,9 +18,9 @@ The `message` event is fired when data is received through a `WebSocket`.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { })
+addEventListener('message', (event) => { })
 
-onmessage = event => { }
+onmessage = (event) => { }
 ```
 
 ## Event type

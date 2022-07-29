@@ -8,7 +8,7 @@ tags:
   - HTTP
   - Reference
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.worker-src
+browser-compat: http.headers.Content-Security-Policy.worker-src
 ---
 {{HTTPSidebar}}
 
@@ -37,7 +37,6 @@ scripts.
           {{CSP("default-src")}} directive, when governing worker
           execution.
         </p>
-        <p></p>
       </td>
     </tr>
   </tbody>
@@ -73,7 +72,7 @@ blocked and won't load:
 
 ```html
 <script>
-  var blockedWorker = new Worker("data:application/javascript,...");
+  const blockedWorker = new Worker("data:application/javascript,…");
   blockedWorker = new SharedWorker("https://not-example.com/");
   navigator.serviceWorker.register('https://not-example.com/sw.js');
 </script>

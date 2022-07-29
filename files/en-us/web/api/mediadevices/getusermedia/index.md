@@ -18,29 +18,18 @@ tags:
   - getusermedia
 browser-compat: api.MediaDevices.getUserMedia
 ---
-{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
+{{securecontext_header}}{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The
-{{domxref("MediaDevices")}}**`.getUserMedia()`** method
-prompts the user for permission to use a media input which produces a
-{{domxref("MediaStream")}} with tracks containing the requested types of media.
+The {{domxref("MediaDevices")}}**`.getUserMedia()`** method prompts the user for permission to use a media input which produces a {{domxref("MediaStream")}} with tracks containing the requested types of media.
 
-That stream can include, for example, a video track (produced by either a hardware or
-virtual video source such as a camera, video recording device, screen sharing service,
-and so forth), an audio track (similarly, produced by a physical or virtual audio source
-like a microphone, A/D converter, or the like), and possibly other track types.
+That stream can include, for example, a video track (produced by either a hardware or virtual video source such as a camera, video recording device, screen sharing service, and so forth), an audio track (similarly, produced by a physical or virtual audio source like a microphone, A/D converter, or the like), and possibly other track types.
 
-It returns a {{jsxref("Promise")}} that resolves to a {{domxref("MediaStream")}}
-object. If the user denies permission, or matching media is not available, then the
-promise is rejected with `NotAllowedError` or `NotFoundError` {{domxref("DOMException")}}
-respectively.
+It returns a {{jsxref("Promise")}} that resolves to a {{domxref("MediaStream")}} object.
+If the user denies permission, or matching media is not available, then the promise is rejected with `NotAllowedError` or `NotFoundError` {{domxref("DOMException")}} respectively.
 
-> **Note:** It's possible for the returned promise to _neither_
-> resolve nor reject, as the user is not required to make a choice at all and may ignore
-> the request.
+> **Note:** It's possible for the returned promise to _neither_ resolve nor reject, as the user is not required to make a choice at all and may ignore the request.
 
-Generally, you will access the {{domxref("MediaDevices")}} singleton object using
-{{domxref("navigator.mediaDevices")}}, like this:
+Generally, you will access the {{domxref("MediaDevices")}} singleton object using {{domxref("navigator.mediaDevices")}}, like this:
 
 ```js
 async function getMedia(constraints) {
@@ -391,7 +380,10 @@ navigator.mediaDevices.getUserMedia(constraints)
     video.play();
   };
 })
-.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+.catch((err) => {
+  // always check for errors at the end.
+  console.error(`${err.name}: ${err.message}`);
+});
 ```
 
 ### Using the new API in older browsers
@@ -444,8 +436,8 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: true })
     video.play();
   };
 })
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
+.catch((err) => {
+  console.error(`${err.name}: ${err.message}`);
 });
 ```
 

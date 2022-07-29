@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -67,6 +66,7 @@ self.addEventListener('install', function(event) {
       ]);
     })
   );
+});
 ```
 
 ## Specifications

@@ -27,9 +27,9 @@ can point to local or remote services, e.g. it could be a proprietary system URN
 ## Examples
 
 ```js
-for(i = 0; i < voices.length ; i++) {
-  var option = document.createElement('option');
-  option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+for (let i = 0; i < voices.length ; i++) {
+  const option = document.createElement('option');
+  option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
   if(voices[i].default) {
     option.textContent += ' — DEFAULT';

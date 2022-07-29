@@ -47,10 +47,10 @@ input devices. The device type is identified by looking at the
 {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} property.
 
 ```js
-xrSession.onselect = event => {
+xrSession.onselect = (event) => {
   let source = event.inputSource;
 
-  if (source.targetRayMode == "gaze") {
+  if (source.targetRayMode === "gaze") {
     /* handle selection using a gaze input */
   }
 };

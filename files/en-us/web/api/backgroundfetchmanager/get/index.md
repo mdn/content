@@ -40,7 +40,7 @@ The following examples shows how to use `get()` to retrieve a {{domxref("Backgro
 navigator.serviceWorker.ready.then(async (swReg) => {
   const bgFetch = await swReg.backgroundFetch.get('my-fetch');
 });
-my code block
+// my code block
 ```
 
 ## Specifications

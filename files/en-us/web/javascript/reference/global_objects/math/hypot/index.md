@@ -61,12 +61,12 @@ sum of squares of its arguments, that is:
 Math.hypot()
 Math.hypot(value0)
 Math.hypot(value0, value1)
-Math.hypot(value0, value1, ... , valueN)
+Math.hypot(value0, value1, /* … ,*/ valueN)
 ```
 
 ### Parameters
 
-- `value1, value2, ...`
+- `value1`, …, `valueN`
   - : Numbers.
 
 ### Return value
@@ -83,7 +83,7 @@ corresponding distance in 2 or more dimensions can be calculated by adding more 
 under the square root: `Math.sqrt(v1*v1 + v2*v2 + v3*v3 + v4*v4)`.
 
 This function makes this calculation easier and faster; you call
-`Math.hypot(v1, v2)` , or `Math.hypot(v1, v2, v3, v4, ...)`.
+`Math.hypot(v1, v2)` , or `Math.hypot(v1, /* … ,*/, vN)`.
 
 `Math.hypot` also avoids overflow/underflow problems if the magnitude of
 your numbers is very large. The largest number you can represent in JS is
@@ -119,44 +119,6 @@ Math.hypot(NaN, Infinity); // Infinity
 Math.hypot(3, 4, 'foo');   // NaN, since +'foo' => NaN
 Math.hypot(3, 4, '5');     // 7.0710678118654755, +'5' => 5
 Math.hypot(-3);            // 3, the same as Math.abs(-3)
-```
-
-## Polyfill
-
-A naive approach that does not handle overflow/underflow issues:
-
-```js
-if (!Math.hypot) Math.hypot = function() {
-  var y = 0, i = arguments.length, containsInfinity = false;
-  while (i--) {
-    var arg = arguments[i];
-    if (arg === Infinity || arg === -Infinity)
-      containsInfinity = true
-    y += arg * arg
-  }
-  return containsInfinity ? Infinity : Math.sqrt(y)
-}
-```
-
-A polyfill that avoids underflows and overflows:
-
-```js
-if (!Math.hypot) Math.hypot = function () {
-  var max = 0;
-  var s = 0;
-  var containsInfinity = false;
-  for (var i = 0; i < arguments.length; ++i) {
-    var arg = Math.abs(Number(arguments[i]));
-    if (arg === Infinity)
-      containsInfinity = true
-    if (arg > max) {
-      s *= (max / arg) * (max / arg);
-      max = arg;
-    }
-    s += arg === 0 && max === 0 ? 0 : (arg / max) * (arg / max);
-  }
-  return containsInfinity ? Infinity : (max === 1 / 0 ? 1 / 0 : max * Math.sqrt(s));
-};
 ```
 
 ## Specifications

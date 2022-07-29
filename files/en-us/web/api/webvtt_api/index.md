@@ -277,7 +277,7 @@ Some time ago in a place rather distant....
 
 ### Cue identifier
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->"`. It must end with a single newline. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3, ...).
+The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->"`. It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
 
 ##### Example 8 - Cue identifier from Example 7
 
@@ -313,7 +313,7 @@ Each cue timing contains five components:
 
 - Timestamp for start time.
 - At least one space.
-- The string "`-->".`
+- The string "`-->`".
 - At least one space.
 - Timestamp for end time.
 
@@ -803,3 +803,7 @@ Prior to Firefox 50, the `AlignSetting` enum (representing possible values for {
 WebVTT was implemented in Firefox 24 behind the preference `media.webvtt.enabled`, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
 
 Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).
+
+## See Also
+
+- The CSS [`::cue` and `::cue()`](/en-US/docs/Web/CSS/::cue) pseudo-element

@@ -437,7 +437,7 @@ There are two versions of the format, defined in parts 1 and 14 of the specifica
 MP4 is a popular container today, as it supports several of the most-used codecs and is broadly supported.
 
 The original MPEG-4 Part 1 file format was introduced in 1999; the version 2 format, defined in Part 14, was added in 2003.
-The MP4 file format is derived from the {{interwiki("wikipedia", "ISO base media file format")}}, which is directly derived from the {{interwiki("wikipedia", "QuickTime file format")}} developed by [Apple](https://www.apple.com/).
+The MP4 file format is derived from the [ISO base media file format](https://en.wikipedia.org/wiki/ISO_base_media_file_format), which is directly derived from the [QuickTime file format](https://en.wikipedia.org/wiki/QuickTime_File_Format) developed by [Apple](https://www.apple.com/).
 
 When specifying the MPEG-4 media type (`audio/mp4` or `video/mp4`), you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#iso-bmff) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
 
@@ -569,7 +569,7 @@ In addition, you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/
 
 ### Ogg
 
-The **{{interwiki("wikipedia", "Ogg")}}** container format is a free and open format maintained by the [Xiph.org Foundation](https://www.xiph.org/).
+The [Ogg](https://en.wikipedia.org/wiki/Ogg) container format is a free and open format maintained by the [Xiph.org Foundation](https://www.xiph.org/).
 The Ogg framework also defines patent unencumbered media data formats, such as the Theora video codec and the Vorbis and Opus audio codecs.
 [Xiph.org documents about the Ogg format](https://xiph.org/ogg/) are available on their web site.
 
@@ -1078,7 +1078,7 @@ Be sure to consider the needs of your application and your organization before s
 
 #### Audio-only files
 
-| If you need...                                | Consider using this container format |
+| If you need…                                | Consider using this container format |
 | --------------------------------------------- | ------------------------------------ |
 | Compressed files for general-purpose playback | MP3 (MPEG-1 Audio Layer III)         |
 | Losslessly compressed files                   | FLAC with ALAC fallback              |
@@ -1089,7 +1089,7 @@ It's no longer necessary to choose between MP3's broad compatibility and the nee
 
 #### Video files
 
-| If you need...                                      | Consider using this container format                |
+| If you need…                                      | Consider using this container format                |
 | --------------------------------------------------- | --------------------------------------------------- |
 | General purpose video, preferably in an open format | WebM (ideally with MP4 fallback)                    |
 | General purpose video                               | MP4 (ideally with WebM or Ogg fallback)             |

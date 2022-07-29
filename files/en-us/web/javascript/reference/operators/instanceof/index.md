@@ -217,8 +217,10 @@ if (!(mycar instanceof Car)) {
 
 This is really different from:
 
-```js
-if (!mycar instanceof Car)
+```js example-bad
+if (!mycar instanceof Car) {
+  // unreachable code
+}
 ```
 
 This will always be `false`. (`!mycar` will be evaluated before

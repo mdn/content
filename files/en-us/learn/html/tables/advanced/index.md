@@ -52,7 +52,7 @@ You can give your table a caption by putting it inside a {{htmlelement("caption"
 <table>
   <caption>Dinosaurs in the Jurassic period</caption>
 
-  ...
+  …
 </table>
 ```
 
@@ -350,7 +350,7 @@ This section of the article provides further techniques for making tables as acc
 
 Screenreaders will identify all headers and use them to make programmatic associations between those headers and the cells they relate to. The combination of column and row headers will identify and interpret the data in each cell so that screenreader users can interpret the table similarly to how a sighted user does.
 
-We already covered headers in our previous article — see [Adding headers with \<th> elements](/en-US/docs/Learn/HTML/Tables/Basics#adding_headers_with_%3cth%3e_elements).
+We already covered headers in our previous article — see [Adding headers with \<th> elements](/en-US/docs/Learn/HTML/Tables/Basics#adding_headers_with_th_elements).
 
 ### The scope attribute
 
@@ -414,7 +414,7 @@ Returning to our spending costs example, the previous two snippets could be rewr
   <td headers="cost haircut">30</td>
 </tr>
 
-  ...
+  …
 
 </tbody>
 ```

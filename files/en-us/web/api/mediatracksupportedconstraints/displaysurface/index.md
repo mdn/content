@@ -21,7 +21,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackSupportedConstraints.displaySurface
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`displaySurface`** property indicates whether or not the
@@ -51,9 +51,8 @@ element referenced by the variable `videoElem`.
 async function capture() {
   let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
   let displayMediaOptions = {
-    video: {
-    },
-    audio: false;
+    video: {},
+    audio: false
   };
 
   if (supportedConstraints.displaySurface) {

@@ -6,7 +6,7 @@ tags:
   - Errors
   - JavaScript
   - Strict Mode
-  - Warning
+  - TypeError
 ---
 {{jsSidebar("Errors")}}
 
@@ -17,17 +17,14 @@ are used.
 
 ## Message
 
-```js
-TypeError: 'arguments', 'callee' and 'caller' are restricted function properties and cannot be accessed in this context (Edge)
-Warning: ReferenceError: deprecated caller usage (Firefox)
-Warning: ReferenceError: deprecated arguments usage (Firefox)
-TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
+```
+TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them (V8-based & Firefox)
+TypeError: 'arguments', 'callee', and 'caller' cannot be accessed in this context. (Safari)
 ```
 
 ## Error type
 
-A strict-mode-only warning that a {{jsxref("ReferenceError")}} occurred. JavaScript
-execution won't be halted.
+{{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) only.
 
 ## What went wrong?
 
@@ -38,7 +35,7 @@ non-standard, hard to optimize and potentially a performance-harmful feature.
 
 ## Examples
 
-### Deprecated `function.caller` or `arguments.callee.caller`
+### Deprecated function.caller or arguments.callee.caller
 
 {{jsxref("Function.caller")}} and
 [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
@@ -48,7 +45,7 @@ are deprecated (see the reference articles for more information).
 'use strict';
 
 function myFunc() {
-  if (myFunc.caller == null) {
+  if (myFunc.caller === null) {
     return 'The function was called from the top!';
   } else {
     return 'This function\'s caller was ' + myFunc.caller;
@@ -56,11 +53,10 @@ function myFunc() {
 }
 
 myFunc();
-// Warning: ReferenceError: deprecated caller usage
-// "The function was called from the top!"
+// TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
 ```
 
-### `Function.arguments`
+### Function.arguments
 
 {{jsxref("Function.arguments")}} is deprecated (see the reference article for more
 information).
@@ -79,7 +75,7 @@ function g(n) {
 f(2);
 
 console.log('returned: ' + g.arguments);
-// Warning: ReferenceError: deprecated arguments usage
+// TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
 ```
 
 ## See also

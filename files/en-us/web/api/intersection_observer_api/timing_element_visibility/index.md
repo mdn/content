@@ -335,7 +335,7 @@ function handleRefreshInterval() {
     let previousTime = adBox.dataset.totalViewTime;
     updateAdTimer(adBox);
 
-    if (previousTime != adBox.dataset.totalViewTime) {
+    if (previousTime !== adBox.dataset.totalViewTime) {
       redrawList.push(adBox);
     }
   });
@@ -401,7 +401,7 @@ function drawAdTimer(adBox) {
   let sec = Math.floor(totalSeconds % 60);
   let min = Math.floor(totalSeconds / 60);
 
-  timerBox.innerText = min + ":" + sec.toString().padStart(2, "0");
+  timerBox.innerText = `${min}:${sec.toString().padStart(2, "0")}`;
 }
 ```
 
@@ -448,7 +448,7 @@ function createArticle(contents) {
 
   let titleElem = document.createElement("h2");
   titleElem.id = nextArticleID;
-  titleElem.innerText = "Article " + nextArticleID + " title";
+  titleElem.innerText = `Article ${nextArticleID} title`;
   articleElem.appendChild(titleElem);
 
   articleElem.innerHTML += contents;
@@ -480,7 +480,7 @@ function loadRandomAd(replaceBox) {
     {
       bgcolor: "lightgrey",
       title: "3.14 Shades of Gray: A novel",
-      body: "Love really does make the world go round..."
+      body: "Love really does make the world go round…"
     },
     {
       bgcolor: "#fee",
@@ -568,7 +568,7 @@ function replaceAd(adBox) {
   updateAdTimer(adBox);
 
   visibleTime = adBox.dataset.totalViewTime
-  console.log("  Replacing ad: " + adBox.querySelector("h2").innerText + " - visible for " + visibleTime)
+  console.log(`Replacing ad: ${adBox.querySelector("h2").innerText} - visible for ${visibleTime}`)
 
   loadRandomAd(adBox);
 }
@@ -582,7 +582,7 @@ The new ad's element object is returned to the caller in case it's needed.
 
 ### Result
 
-The resulting page looks like this. Try experimenting with scrolling around and watch how visibility changes affect the timers in each ad. Also note that each ad is replaced after one minute of visibility, and how the timers pause while the document is tabbed into the background.
+The resulting page looks like this. Try experimenting by scrolling up and down and notice how changes in the visibility affect the timers in each ad. Also note that each ad is replaced after one minute of visibility (but the ad must first be scrolled out of view and back again), and how the timers pause while the document is tabbed into the background. However, covering the browser with another window does not pause the timers.
 
 {{EmbedLiveSample("Building_the_site", 750, 800)}}
 

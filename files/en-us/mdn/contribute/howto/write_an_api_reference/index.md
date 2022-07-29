@@ -41,7 +41,7 @@ Before starting to document an API, you should have available:
    Good places to find them are:
 
     - Your internal company address book, if you work for a relevant company.
-    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) or [dev-webapi](https://lists.mozilla.org/listinfo/dev-webapi) lists, or a W3C list like [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/).
+    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) or a W3C list like [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/).
     - The spec itself. For example, the [Web Audio API spec](https://webaudio.github.io/web-audio-api/) lists the authors and their contact details at the top.
 
 ### Take some time to play with the API
@@ -107,7 +107,7 @@ Usually only instance methods exist, in which case you can put these under the t
 - We do not document inherited properties and methods of the interface: they are listed on the respective parent interface. We do hint at their existence though.
 - We do document properties and methods defined in mixins. Please see the [contribution guide for mixins](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixins) for more details.
 - Special methods like the stringifier (`toString()`) and the jsonizer (`toJSON()`) are also listed if they do exist.
-- Named constructors (like `Image()` for {{domxref("HTMLImageElement")}} ) are also listed, if relevant.
+- Named constructors (like `Image()` for {{domxref("HTMLImageElement")}}) are also listed, if relevant.
 
 #### Constructor pages
 
@@ -187,19 +187,19 @@ Creating a list of all these subpages is a good way to track them. For example:
   - AudioContext.currentTime
   - AudioContext.destination
   - AudioContext.listener
-  - ...
+  - …
   - AudioContext.createBuffer()
   - AudioContext.createBufferSource()
-  - ...
+  - …
 
 - AudioNode
 
   - AudioNode.context
   - AudioNode.numberOfInputs
   - AudioNode.numberOfOutputs
-  - ...
+  - …
   - AudioNode.connect(Param)
-  - ...
+  - …
 
 - AudioParam
 - Events (update list)
@@ -294,7 +294,7 @@ Property pages must have the following sections:
 4. **Description**: the first paragraph of the property page should provide a short, concise description of the property's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default/initial value, and whether it's read only or not. The structure of the first sentence must be:
 
    - For read-only properties
-     - : The **`InterfaceName.property`** read-only property returns a \\{{domxref("type")}} that...
+     - : The **`InterfaceName.property`** read-only property returns a \\{{domxref("type")}} that…
    - For other properties
      - : The **`InterfaceName.property`** property is a \\{{domxref("type")}} that…
 
@@ -333,14 +333,14 @@ Method pages need the following sections:
 4. **Description**: The first paragraph of the method page should provide a short concise description of the method's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default parameter values, any theory that the method relies on, and what the parameter values do.
 
     - The beginning of the first sentence must follow the following structure:
-      - : The **`InterfaceName.method()`** method interface ...
+      - : The **`InterfaceName.method()`** method interface …
 
     > **Note:** `InterfaceName.method()` should be in `<code>`, and should also be in bold (`<strong>`) the first time it's used.
 
 5. **Syntax**: The syntax section should include a 2–3 line example — usually just construction of the interface, then calling of the interface method.
 
     - The syntax should be of the form:
-      - : method(param1, param2, ...)
+      - : method(param1, param2, …)
 
     The syntax section should include three subsections (see {{domxref("SubtleCrypto.sign()")}} for an example):
 

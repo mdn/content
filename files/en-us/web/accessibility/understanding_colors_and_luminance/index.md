@@ -240,7 +240,7 @@ A complete color theory and color design guide is beyond the scope of this docum
 
 ### Color terms
 
-The world standard in terms of colorimetry (measuring color) is the **CIE**, and their [interactive glossary](http://eilv.cie.co.at) is filled with color information.
+The world standard in terms of colorimetry (measuring color) is the **CIE**, and their [interactive glossary](http://cie.co.at/e-ilv) is filled with color information.
 
 > **Note:** Tip: when searching the CIE glossary use the UK spelling of "colour."
 
@@ -370,10 +370,10 @@ Using the function shown below:
 function sRGBtoLin(colorChannel) {
   // Send this function a decimal sRGB gamma encoded color channel
   // between 0.0 and 1.0, and it returns a linearized value.
-  if ( colorChannel <= 0.04045 ) {
+  if (colorChannel <= 0.04045) {
     return colorChannel / 12.92;
   } else {
-      return Math.pow((( colorChannel + 0.055)/1.055),2.4);
+    return Math.pow(((colorChannel + 0.055) / 1.055), 2.4);
   }
 }
 ```
@@ -415,7 +415,7 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 - [W3 CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/#color-conversion-code)
 
   Code examples for color conversions that are part of the CSS Color Module Level 4
-  
+
 ## Additional Resources
 
 #### MDN

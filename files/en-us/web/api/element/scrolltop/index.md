@@ -76,7 +76,7 @@ In this example, try scrolling the inner container with the dashed border, and s
 const scroller = document.querySelector("#scroller");
 const output = document.querySelector("#output");
 
-scroller.addEventListener("scroll", event => {
+scroller.addEventListener("scroll", (event) => {
   output.textContent = `scrollTop: ${scroller.scrollTop}`;
 });
 ```

@@ -51,16 +51,16 @@ const pre = document.getElementsByTagName("pre")[0];
 const warning = doc.getElementsByTagName("warning")[0];
 const attrMap = warning.attributes;
 
-let result = "The `ob:one` attribute initially contains `" + attrMap["ob:one"].value + "`.\n";
+let result = `The 'ob:one' attribute initially contains '${attrMap["ob:one"].value}'.\n`;
 
 result += "We remove it.\n\n";
 attrMap.removeNamedItemNS("http://www.example.com/ob", "one");
 
 if (attrMap["ob:one"]) {
-  result += "And `ob:one` still exists.";
+  result += "And 'ob:one' still exists.";
 }
 else {
-  result += "And `ob:one` is no more to be found.";
+  result += "And 'ob:one' is no more to be found.";
 }
 
 pre.textContent = result;

@@ -132,7 +132,7 @@ Now open the CSS file and have a look inside. The CSS for the example is not too
   display: flex;
 }
 
-.player:hover .controls, 
+.player:hover .controls,
 .player:focus-within .controls {
   opacity: 1;
 }
@@ -205,7 +205,7 @@ Last but not least, let's look at the CSS for the timer:
 }
 ```
 
-- We set the outer `.timer` `<div>` to have flex: 5, so it takes up most of the width of the controls bar. We also give it {{cssxref("position")}}`: relative`, so that we can position elements inside it conveniently according to it's boundaries, and not the boundaries of the {{htmlelement("body")}} element.
+- We set the outer `.timer` `<div>` to have flex: 5, so it takes up most of the width of the controls bar. We also give it {{cssxref("position")}}`: relative`, so that we can position elements inside it conveniently according to its boundaries, and not the boundaries of the {{htmlelement("body")}} element.
 - The inner `<div>` is absolutely positioned to sit directly on top of the outer `<div>`. It is also given an initial width of 0, so you can't see it at all. As the video plays, the width will be increased via JavaScript as the video elapses.
 - The `<span>` is also absolutely positioned to sit near the left-hand side of the timer bar.
 - We also give our inner `<div>` and `<span>` the right amount of {{cssxref("z-index")}} so that the timer will be displayed on top, and the inner `<div>` below that. This way, we make sure we can see all the information — one box is not obscuring another.
@@ -283,7 +283,7 @@ Let's implement probably the most important control — the play/pause button.
     media.addEventListener('ended', stopMedia);
     ```
 
-    The {{event("click")}} event is obvious — we want to stop the video by running our `stopMedia()` function when the stop button is clicked. We do however also want to stop the video when it finishes playing — this is marked by the {{event("ended")}} event firing, so we also set up a listener to run the function on that event firing too.
+    The {{domxref("Element/click_event", "click")}} event is obvious — we want to stop the video by running our `stopMedia()` function when the stop button is clicked. We do however also want to stop the video when it finishes playing — this is marked by the {{domxref("HTMLMediaElement/ended_event", "ended")}} event firing, so we also set up a listener to run the function on that event firing too.
 
 2. Next, let's define `stopMedia()` — add the following function below `playPauseMedia()`:
 
@@ -387,7 +387,7 @@ There are many ways that you can implement rewind and fast forward functionality
 
 #### Updating the elapsed time
 
-The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{event("timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc ([see this StackOverflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
+The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc ([see this StackOverflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
 
 Add the following `addEventListener()` line just below the others:
 

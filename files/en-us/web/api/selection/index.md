@@ -19,19 +19,19 @@ A user may make a selection from left to right (in document order) or right to l
 
 ## Properties
 
-- {{DOMxRef("Selection.anchorNode")}}{{ReadOnlyInline}}
+- {{DOMxRef("Selection.anchorNode")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("Node")}} in which the selection begins. Can return `null` if selection never existed in the document (e.g., an iframe that was never clicked on).
-- {{DOMxRef("Selection.anchorOffset")}}{{ReadOnlyInline}}
+- {{DOMxRef("Selection.anchorOffset")}} {{ReadOnlyInline}}
   - : Returns a number representing the offset of the selection's anchor within the `anchorNode`. If `anchorNode` is a text node, this is the number of characters within anchorNode preceding the anchor. If `anchorNode` is an element, this is the number of child nodes of the `anchorNode` preceding the anchor.
-- {{DOMxRef("Selection.focusNode")}}{{ReadOnlyInline}}
+- {{DOMxRef("Selection.focusNode")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("Node")}} in which the selection ends. Can return `null` if selection never existed in the document (for example, in an `iframe` that was never clicked on).
-- {{DOMxRef("Selection.focusOffset")}}{{ReadOnlyInline}}
+- {{DOMxRef("Selection.focusOffset")}} {{ReadOnlyInline}}
   - : Returns a number representing the offset of the selection's anchor within the `focusNode`. If `focusNode` is a text node, this is the number of characters within `focusNode` preceding the focus. If `focusNode` is an element, this is the number of child nodes of the `focusNode` preceding the focus.
-- {{DOMxRef("Selection.isCollapsed")}}{{ReadOnlyInline}}
+- {{DOMxRef("Selection.isCollapsed")}} {{ReadOnlyInline}}
   - : Returns a Boolean indicating whether the selection's start and end points are at the same position.
-- {{DOMxRef("Selection.rangeCount")}}{{ReadOnlyInline}}
+- {{DOMxRef("Selection.rangeCount")}} {{ReadOnlyInline}}
   - : Returns the number of ranges in the selection.
-- {{DOMxRef("Selection.type")}}{{ReadOnlyInline}}
+- {{DOMxRef("Selection.type")}} {{ReadOnlyInline}}
   - : Returns a string describing the type of the current selection.
 
 ## Methods
@@ -52,7 +52,7 @@ A user may make a selection from left to right (in document order) or right to l
   - : Moves the focus of the selection to a specified point.
 - {{DOMxRef("Selection.getRangeAt()")}}
   - : Returns a {{DOMxRef("Range")}} object representing one of the ranges currently selected.
-- {{DOMxRef("Selection.modify()")}}{{Non-standard_Inline}}
+- {{DOMxRef("Selection.modify()")}} {{Non-standard_Inline}}
   - : Changes the current selection.
 - {{DOMxRef("Selection.removeRange()")}}
   - : Removes a range from the selection.
@@ -72,7 +72,7 @@ A user may make a selection from left to right (in document order) or right to l
 Calling the {{DOMxRef("Selection.toString()")}} method returns the text contained within the selection, e.g.:
 
 ```js
-var selObj = window.getSelection();
+const selObj = window.getSelection();
 window.alert(selObj);
 ```
 
@@ -83,8 +83,8 @@ Note that using a selection object as the argument to `window.alert` will call t
 A selection object represents the {{DOMxRef("Range")}}s that the user has selected. Typically, it holds only one range, accessed as follows:
 
 ```js
-var selObj = window.getSelection();
-var range  = selObj.getRangeAt(0);
+const selObj = window.getSelection();
+const range  = selObj.getRangeAt(0);
 ```
 
 - `selObj` is a Selection object

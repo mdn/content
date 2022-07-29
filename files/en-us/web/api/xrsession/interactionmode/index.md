@@ -38,7 +38,7 @@ Possible values are:
 ## Examples
 
 ```js
-if (xrSession.interactionMode == "world-space") {
+if (xrSession.interactionMode === "world-space") {
   // draw UI in the world
 } else {
   // draw UI directly to the screen

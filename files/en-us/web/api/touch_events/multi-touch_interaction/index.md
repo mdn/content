@@ -52,10 +52,10 @@ The application uses {{HTMLElement("div")}} elements to represent four touch are
 
 ```js
 // Log events flag
-var logEvents = false;
+const logEvents = false;
 
 // Touch Point cache
-var tpCache = new Array();
+const tpCache = [];
 ```
 
 ### Register event handlers
@@ -65,7 +65,7 @@ Event handlers are registered for all four touch event types. The {{event("touch
 ```js
 function set_handlers(name) {
  // Install event handlers for the given element
- var el=document.getElementById(name);
+ const el = document.getElementById(name);
  el.ontouchstart = start_handler;
  el.ontouchmove = move_handler;
  // Use same handler for touchcancel and touchend
@@ -90,27 +90,28 @@ This function provides very basic support for 2-touch horizontal move/pinch/zoom
 // error handling, only handles horizontal moves, etc.
 function handle_pinch_zoom(ev) {
 
- if (ev.targetTouches.length == 2 && ev.changedTouches.length == 2) {
+ if (ev.targetTouches.length === 2 && ev.changedTouches.length === 2) {
    // Check if the two target touches are the same ones that started
    // the 2-touch
-   var point1=-1, point2=-1;
-   for (var i=0; i < tpCache.length; i++) {
+   let point1 = -1;
+   let point2 = -1;
+   for (let i = 0; i < tpCache.length; i++) {
      if (tpCache[i].identifier == ev.targetTouches[0].identifier) point1 = i;
      if (tpCache[i].identifier == ev.targetTouches[1].identifier) point2 = i;
    }
-   if (point1 >=0 && point2 >= 0) {
+   if (point1 >= 0 && point2 >= 0) {
      // Calculate the difference between the start and move coordinates
-     var diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);
-     var diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
+     const diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);
+     const diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
 
      // This threshold is device dependent as well as application specific
-     var PINCH_THRESHOLD = ev.target.clientWidth / 10;
+     const PINCH_THRESHOLD = ev.target.clientWidth / 10;
      if (diff1 >= PINCH_THRESHOLD && diff2 >= PINCH_THRESHOLD)
          ev.target.style.background = "green";
    }
    else {
      // empty tpCache
-     tpCache = new Array();
+     tpCache = [];
    }
  }
 }
@@ -129,8 +130,8 @@ function start_handler(ev) {
  // of two, and so on.
  ev.preventDefault();
  // Cache the touch points for later processing of 2-touch pinch/zoom
- if (ev.targetTouches.length == 2) {
-   for (var i=0; i < ev.targetTouches.length; i++) {
+ if (ev.targetTouches.length === 2) {
+   for (let i = 0; i < ev.targetTouches.length; i++) {
      tpCache.push(ev.targetTouches[i]);
    }
  }
@@ -156,7 +157,7 @@ function move_handler(ev) {
  if (logEvents) log("touchMove", ev, false);
  // To avoid too much color flashing many touchmove events are started,
  // don't update the background if two touch points are active
- if (!(ev.touches.length == 2 && ev.targetTouches.length == 2))
+ if (!(ev.touches.length === 2 && ev.targetTouches.length === 2))
    update_background(ev);
 
  // Set the target element's border to dashed to give a clear visual
@@ -176,7 +177,7 @@ The {{event("touchend")}} handler restores the event target's background color b
 function end_handler(ev) {
   ev.preventDefault();
   if (logEvents) log(ev.type, ev, false);
-  if (ev.targetTouches.length == 0) {
+  if (ev.targetTouches.length === 0) {
     // Restore background and border to original values
     ev.target.style.background = "white";
     ev.target.style.border = "1px solid black";
@@ -238,29 +239,27 @@ The functions are used to log event activity to the application window, to suppo
 
 ```js
 function enableLog(ev) {
-  logEvents = logEvents ? false : true;
+  logEvents = !logEvents;
 }
 
 function log(name, ev, printTargetIds) {
-  var o = document.getElementsByTagName('output')[0];
-  var s = name + ": touches = " + ev.touches.length +
-                " ; targetTouches = " + ev.targetTouches.length +
-                " ; changedTouches = " + ev.changedTouches.length;
-  o.innerHTML += s + "
-";
+  const o = document.getElementsByTagName('output')[0];
+  let s = `${name}: touches = ${ev.touches.length} ; ` +
+    `targetTouches = ${ev.targetTouches.length} ; ` +
+    `changedTouches = ${ev.changedTouches.length}`;
+  o.innerHTML += `${s}<br>`;
 
   if (printTargetIds) {
     s = "";
-    for (var i=0; i < ev.targetTouches.length; i++) {
-      s += "... id = " + ev.targetTouches[i].identifier + "
-";
+    for (let i = 0; i < ev.targetTouches.length; i++) {
+      s += `... id = ${ev.targetTouches[i].identifier}<br>`;
     }
     o.innerHTML += s;
   }
 }
 
 function clearLog(event) {
- var o = document.getElementsByTagName('output')[0];
+ const o = document.getElementsByTagName('output')[0];
  o.innerHTML = "";
 }
 ```

@@ -131,7 +131,7 @@ if (condition_1) {
 
 In the case of multiple conditions, only the first logical condition which evaluates to
 `true` will be executed. To execute multiple statements, group them within a
-block statement (`{ … }`).
+block statement (`{ /* … */ }`).
 
 #### Best practice
 
@@ -192,7 +192,7 @@ displays an alert and returns `false`.
 
 ```js
 function checkData() {
-  if (document.form1.threeChar.value.length == 3) {
+  if (document.form1.threeChar.value.length === 3) {
     return true;
   } else {
     alert(
@@ -318,7 +318,7 @@ code throws several exceptions of varying types:
 throw 'Error2';   // String type
 throw 42;         // Number type
 throw true;       // Boolean type
-throw {toString: function() { return "I'm an object!"; } };
+throw {toString() { return "I'm an object!"; } };
 ```
 
 ### `try...catch` statement
@@ -534,7 +534,7 @@ function doSomethingErrorProne() {
     doSomethingToGetAJavascriptError();
   }
 }
-⋮
+
 try {
   doSomethingErrorProne();
 } catch (e) {               // NOW, we actually use `console.error()`

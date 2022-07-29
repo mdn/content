@@ -99,14 +99,8 @@ value would be returned without calling `callbackFn`.
 const total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
   return a + b;
 });
-// total == 6
+// total === 6
 ```
-
-## Polyfill
-
-This method uses the same algorithm as {{jsxref("Array.prototype.reduce()")}}, so the
-same polyfill can be used here: replace `Array.prototype.reduce` with
-`TypedArray.prototype.reduce`.
 
 ## Specifications
 

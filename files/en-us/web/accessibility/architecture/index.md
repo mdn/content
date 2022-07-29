@@ -129,4 +129,4 @@ The following magic offsets are useful to define in your code:
 
 ## More information
 
-Many more details on the Mozilla document hierarchy are in the [original design document for newatk](https://website-archive.mozilla.org/www.mozilla.org/access/access/unix/new-atk.html). There are also details on the [general implementation of Mozilla accessibility architecture](https://website-archive.mozilla.org/www.mozilla.org/access/access/architecture) (needs updating).
+Many more details on the Mozilla document hierarchy are in the [original design document for newatk](https://website-archive.mozilla.org/www.mozilla.org/access/access/unix/new-atk.html). There are also details on the [general implementation of Mozilla accessibility architecture](https://www-archive.mozilla.org/access/architecture).

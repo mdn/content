@@ -21,7 +21,8 @@ insertion order.
 ## Syntax
 
 ```js
-someNodeList.forEach(callback[, thisArg]);
+someNodeList.forEach(callback);
+someNodeList.forEach(callback, thisArg);
 ```
 
 ### Parameters
@@ -65,7 +66,7 @@ const list = node.childNodes;
 
 list.forEach(
   function(currentValue, currentIndex, listObj) {
-    console.log(currentValue + ', ' + currentIndex + ', ' + this);
+    console.log(`${currentValue}, ${currentIndex}, ${this}`);
   },
   'myThisArg'
 );

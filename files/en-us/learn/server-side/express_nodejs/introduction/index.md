@@ -121,7 +121,7 @@ While _Express_ itself is fairly minimalist, developers have created compatible 
 
 Node was initially released, for Linux only, in 2009. The NPM package manager was released in 2010, and native Windows support was added in 2012. Delve into [Wikipedia](https://en.wikipedia.org/wiki/Node.js#History) if you want to know more.
 
-Express was initially released in November 2010 and is currently on version 4.17.3 of the API (with 5.0 in "beta"). You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
+Express was initially released in November 2010 and is currently on major version 4 of the API. You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
 
 ## How popular are Node and Express?
 
@@ -212,11 +212,11 @@ If you want to export a complete object in one assignment instead of building it
 
 ```js
 module.exports = {
-  area: function(width) {
+  area(width) {
     return width * width;
   },
 
-  perimeter: function(width) {
+  perimeter(width) {
     return 4 * width;
   }
 };
@@ -274,7 +274,7 @@ There is a special routing method, `app.all()`, which will be called in response
 
 ```js
 app.all('/secret', function(req, res, next) {
-  console.log('Accessing the secret section ...');
+  console.log('Accessing the secret section…');
   next(); // pass control to the next handler
 });
 ```
@@ -308,7 +308,7 @@ To use the router in our main app file we would then `require()` the route modul
 
 ```js
 const wiki = require('./wiki.js');
-// ...
+// …
 app.use('/wiki', wiki);
 ```
 
@@ -336,7 +336,7 @@ const express = require('express');
 const logger = require('morgan');
 const app = express();
 app.use(logger('dev'));
-...
+// …
 ```
 
 > **Note:** Middleware and routing functions are called in the order that they are declared. For some middleware the order is important (for example if session middleware depends on cookie middleware, then the cookie handler must be added first). It is almost always the case that middleware is called before setting routes, or your route handlers will not have access to functionality added by your middleware.
@@ -353,7 +353,7 @@ const app = express();
 
 // An example middleware function
 let a_middleware_function = function(req, res, next) {
-  // ... perform some operations
+  // Perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
 }
 
@@ -480,9 +480,9 @@ For more information see [Database integration](https://expressjs.com/en/guide/d
 
 ### Rendering data (views)
 
-Template engines (referred to as "view engines" by _Express_) allow you to specify the _structure_ of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for [a number of template engines](https://github.com/expressjs/express/wiki#template-engines), and there is a useful comparison of the more popular engines here: [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/).
+Template engines (also referred to as "view engines" by _Express_'s documentation) allow you to specify the _structure_ of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for [a number of template engines](https://github.com/expressjs/express/wiki#template-engines), and there is a useful comparison of the more popular engines here: [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/).
 
-In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engines' settings, as shown below (you will also have to install the package containing your template library too!)
+In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engine' settings, as shown below (you will also have to install the package containing your template library too!)
 
 ```js
 const express = require('express');

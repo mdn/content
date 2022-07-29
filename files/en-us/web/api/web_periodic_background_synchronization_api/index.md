@@ -75,8 +75,8 @@ async function registerPeriodicNewsCheck() {
 This code checks to see if a Periodic Background Sync task with a given tag is registered.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
-  registration.periodicSync.getTags().then(tags => {
+navigator.serviceWorker.ready.then((registration) => {
+  registration.periodicSync.getTags().then((tags) => {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
   });
@@ -88,7 +88,7 @@ navigator.serviceWorker.ready.then(registration => {
 The following code removes a Periodic Background Sync task to stop articles syncing in the background.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
+navigator.serviceWorker.ready.then((registration) => {
   registration.periodicSync.unregister('get-latest-news');
 });
 ```
@@ -98,8 +98,8 @@ navigator.serviceWorker.ready.then(registration => {
 The following example shows how to respond to a periodic sync event in the service worker.
 
 ```js
-self.addEventListener('periodicsync', event => {
-  if (event.tag == 'get-latest-news') {
+self.addEventListener('periodicsync', (event) => {
+  if (event.tag === 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });

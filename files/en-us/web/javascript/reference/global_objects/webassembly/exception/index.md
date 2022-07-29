@@ -24,7 +24,7 @@ Without the matching tag, exceptions can be caught and re-thrown, but they can't
 
 In order to make exception-throwing faster, exceptions thrown from WebAssembly generally do not include a stack trace.
 WebAssembly code that needs to provide a stack trace must call a JavaScript function to create the exception, passing `options.traceStack=true` parameter in the constructor.
-Once the exception is available to the WebAssembly module, it can attach a stack trace to the [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) property and throw the exception.
+The constructor may then return an exception with a stack trace attached to the [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) property.
 
 {{AvailableInWorkers}}
 
@@ -92,10 +92,10 @@ const importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.run());
   })
-  .catch(e => {
+  .catch((e) => {
     console.error(e);
     // Check we have the right tag for the exception
     // If so, use getArg() to inspect it

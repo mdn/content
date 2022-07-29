@@ -15,9 +15,10 @@ of an array, but one of the array's elements is [non-configurable](/en-US/docs/W
 
 ## Message
 
-```js
+```
+TypeError: Cannot delete property '1' of [object Array] (V8-based)
 TypeError: can't delete non-configurable array element (Firefox)
-TypeError: Cannot delete property '2' of [object Array] (Chrome)
+TypeError: Unable to delete property. (Safari)
 ```
 
 ## Error type
@@ -41,16 +42,16 @@ are configurable. However, for example, when using
 
 ## Examples
 
-### Non-configurable properties created by `Object.defineProperty`
+### Non-configurable properties created by Object.defineProperty
 
 The {{jsxref("Object.defineProperty()")}} creates non-configurable properties by
 default if you haven't specified them as configurable.
 
 ```js example-bad
 "use strict";
-var arr = [];
-Object.defineProperty(arr, 0, {value: 0});
-Object.defineProperty(arr, 1, {value: "1"});
+const arr = [];
+Object.defineProperty(arr, 0, { value: 0 });
+Object.defineProperty(arr, 1, { value: "1" });
 
 arr.length = 1;
 // TypeError: can't delete non-configurable array element
@@ -60,21 +61,21 @@ You will need to set the elements as configurable, if you intend to shorten the 
 
 ```js example-good
 "use strict";
-var arr = [];
-Object.defineProperty(arr, 0, {value: 0, configurable: true});
-Object.defineProperty(arr, 1, {value: "1", configurable: true});
+const arr = [];
+Object.defineProperty(arr, 0, { value: 0, configurable: true });
+Object.defineProperty(arr, 1, { value: "1", configurable: true });
 
 arr.length = 1;
 ```
 
-### `Seal`-ed Arrays
+### Sealed Arrays
 
 The {{jsxref("Object.seal()")}} function marks all existing elements as
 non-configurable.
 
 ```js example-bad
 "use strict";
-var arr = [1,2,3];
+const arr = [1, 2, 3];
 Object.seal(arr);
 
 arr.length = 1;
@@ -87,13 +88,13 @@ length.
 
 ```js example-good
 "use strict";
-var arr = [1,2,3];
+const arr = [1, 2, 3];
 Object.seal(arr);
 
 // Copy the initial array to shorten the copy
-var copy = Array.from(arr);
+const copy = Array.from(arr);
 copy.length = 1;
-// arr.length == 3
+// arr.length === 3
 ```
 
 ## See also

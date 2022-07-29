@@ -25,14 +25,14 @@ This interface requires a secure context.
 
 ## Properties
 
-- {{domxref("IdleDetector.userState")}}{{ReadOnlyInline}}
+- {{domxref("IdleDetector.userState")}} {{ReadOnlyInline}}
   - : Returns a string indicating whether the users has interacted with either the screen or the device since the call to `start()`.
 
   _ : Returns either `"active"` to indicate that the user has interacted with the
 device within the threshold provided to `start()` or `"idle"` if they have not.
 This attribute returns `null` before `start()` is called.
 
-- {{domxref("IdleDetector.screenState")}}{{ReadOnlyInline}}
+- {{domxref("IdleDetector.screenState")}} {{ReadOnlyInline}}
   - : Returns a string indicating whether the screen is locked, one of
     `"locked"` or `"unlocked"`. This attribute returns `null` before `start()`
     is called.
@@ -67,7 +67,7 @@ const controller = new AbortController();
 const signal = controller.signal;
 
 startButton.addEventListener('click', async () => {
-  if (await IdleDetector.requestPermission() != "granted") {
+  if (await IdleDetector.requestPermission() !== "granted") {
     console.error("Idle detection permission denied.");
     return;
   }

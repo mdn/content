@@ -37,17 +37,17 @@ const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
-    ...
+    // …
   },
   close() {
-    ...
+    // …
   },
   abort(err) {
     console.log("Sink error:", err);
   }
 }, queueingStrategy);
 
-var size = queueingStrategy.size();
+const size = queueingStrategy.size();
 ```
 
 ## Specifications

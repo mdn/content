@@ -50,7 +50,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
   - : Allows low-level control over OpenType or TrueType font variations, by specifying the four letter axis names of the features to vary, along with their variation values.
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
   - : Defines the line gap metric for the font.
-- {{cssxref("@font-face/size-adjust", "size-adjust")}}{{experimental_inline}}
+- {{cssxref("@font-face/size-adjust", "size-adjust")}} {{experimental_inline}}
   - : Defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 - {{cssxref("@font-face/src", "src")}}
 
@@ -125,7 +125,7 @@ This example specifies a downloadable font to use, applying it to the entire bod
   <style type="text/css" media="screen, print">
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
     }
 
     body { font-family: "Bitstream Vera Serif Bold", serif }

@@ -26,12 +26,12 @@ Find the exported `genre_detail()` controller method and replace it with the fol
 exports.genre_detail = function(req, res, next) {
 
     async.parallel({
-        genre: function(callback) {
+        genre(callback) {
             Genre.findById(req.params.id)
               .exec(callback);
         },
 
-        genre_books: function(callback) {
+        genre_books(callback) {
             Book.find({ 'genre': req.params.id })
               .exec(callback);
         },
@@ -44,7 +44,11 @@ exports.genre_detail = function(req, res, next) {
             return next(err);
         }
         // Successful, so render
-        res.render('genre_detail', { title: 'Genre Detail', genre: results.genre, genre_books: results.genre_books } );
+        res.render('genre_detail', {
+          title: 'Genre Detail',
+          genre: results.genre,
+          genre_books: results.genre_books,
+        });
     });
 
 };
@@ -121,7 +125,7 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 > ```js
 > exports.genre_detail = function(req, res, next) {
 >     var id = mongoose.Types.ObjectId(req.params.id);
->     ...
+>     // …
 > ```
 
 ## Next steps

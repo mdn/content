@@ -27,7 +27,7 @@ In the following HTML snippet, our table has 8 columns, but we are only displayi
       <th aria-colindex="7" scope="col">Zip</th>
     </tr>
   </thead>
-  ...
+  …
 </table>
 ```
 
@@ -43,7 +43,7 @@ This table is not very complex. Had this been a 100+ column spreadsheet or a gri
       <th aria-colindex="124" scope="col">Recommendation</th>
     </tr>
   </thead>
-  ...
+  …
 </table>
 ```
 

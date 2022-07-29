@@ -19,9 +19,9 @@ The **`disconnect`** event of the {{domxref("RemotePlayback")}} interface fires 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('disconnect', event => { });
+addEventListener('disconnect', (event) => { });
 
-ondisconnect = event => { };
+ondisconnect = (event) => { };
 ```
 
 ## Event type

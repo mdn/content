@@ -36,7 +36,7 @@ When working with `WebGLTransformFeedback` objects, the following methods of the
 in this example, `gl` must be a {{domxref("WebGL2RenderingContext")}}. `WebGLTransformFeedback` objects are not available in WebGL 1.
 
 ```js
-var transformFeedback = gl.createTransformFeedback();
+const transformFeedback = gl.createTransformFeedback();
 ```
 
 ## Specifications

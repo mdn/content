@@ -128,7 +128,7 @@ This content script listens for click events on the web page. If the click was o
 window.addEventListener("click", notifyExtension);
 
 function notifyExtension(e) {
-  if (e.target.tagName != "A") {
+  if (e.target.tagName !== "A") {
     return;
   }
   browser.runtime.sendMessage({"url": e.target.href});
@@ -261,8 +261,8 @@ If the asynchronous handler doesn't return a Promise, you can explicitly constru
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  return new Promise(resolve => {
-    setTimeout( () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
       resolve({response: "async response from background script"});
     }, 1000);
   });

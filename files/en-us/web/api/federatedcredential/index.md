@@ -44,7 +44,7 @@ None.
 ## Examples
 
 ```js
-var cred = new FederatedCredential({
+const cred = new FederatedCredential({
   id: id,
   name: name,
   provider: 'https://account.google.com',

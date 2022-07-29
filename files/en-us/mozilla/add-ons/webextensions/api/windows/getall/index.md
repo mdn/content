@@ -29,13 +29,13 @@ let gettingAll = browser.windows.getAll(
 
 ### Parameters
 
-- `getInfo`{{optional_inline}}
+- `getInfo` {{optional_inline}}
 
   - : `object`. This controls what {{WebExtAPIRef('windows.Window')}} objects are retrieved.
 
-    - `populate`{{optional_inline}}
+    - `populate` {{optional_inline}}
       - : `boolean`. Defaults to `false`. If set to `true`, each {{WebExtAPIRef('windows.Window')}} object will have a `tabs` property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in that window. The `Tab` objects will contain the `url`, `title` and `favIconUrl` properties only if the extension's manifest file includes the `"tabs"` permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) that match the tab's URL.
-    - `windowTypes`{{optional_inline}}
+    - `windowTypes` {{optional_inline}}
       - : An `array` of {{WebExtAPIRef('windows.WindowType')}} objects. If set, the {{WebExtAPIRef('windows.Window')}} objects returned will be filtered based on their type. If unset the default filter is set to `['normal', 'panel', 'popup']`, with `'panel'` window types limited to the extension's own windows.
 
 ### Return value
@@ -54,7 +54,7 @@ Log the URLs for the tabs across all "normal" browser windows. Note that you'll 
 function logTabsForWindows(windowInfoArray) {
   for (windowInfo of windowInfoArray) {
     console.log(`Window: ${windowInfo.id}`);
-    console.log(windowInfo.tabs.map(tab => tab.url));
+    console.log(windowInfo.tabs.map((tab) => tab.url));
   }
 }
 

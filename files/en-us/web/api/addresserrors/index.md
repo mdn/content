@@ -48,13 +48,6 @@ See the [examples below](#examples) to see how this works.
 - {{domxref("AddressErrors.sortingCode", "sortingCode")}}
   - : A string which, if present, indicates that the {{domxref("PaymentAddress.sortingCode", "sortingCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 
-### Obsolete properties
-
-These properties have been removed from the specification and should no longer be used.
-
-- {{domxref("AddressErrors.languageCode", "languageCode")}} {{deprecated_inline}}
-  - : A string which, if present, indicates that the {{domxref("PaymentAddress.languageCode", "languageCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
-
 ## Usage notes
 
 Keep in mind that some violation errors may be outside the ability of the user to fix. Try to avoid asking the user to make corrections to things they can't change, and there may be situations in which you need to allow validation errors to be accepted anyway (for example, if you validate addresses against a postal service database and a new home has been built and its address is not yet in the database).
@@ -206,7 +199,7 @@ The final step is to call the event's {{domxref("PaymentRequestUpdateEvent.updat
 
 ##### Setting up the Donate Now button
 
-This code creates a handler for the {{domxref("Window/load_event", "load")}} event on the {{domxref("Window", "window")}} which in turn adds the needed {{event("click")}} event handler to the "Donate Now" button so that clicking it starts the payment process.
+This code creates a handler for the {{domxref("Window/load_event", "load")}} event on the {{domxref("Window", "window")}} which in turn adds the needed {{domxref("Element/click_event", "click")}} event handler to the "Donate Now" button so that clicking it starts the payment process.
 
 ```js
 window.addEventListener("load", function(ev) {

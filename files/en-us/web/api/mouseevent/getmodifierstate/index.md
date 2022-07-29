@@ -28,7 +28,7 @@ getModifierState(key)
 
 - `key`
   - : A modifier key value.
-    The value must be one of the {{domxref("KeyboardEvent.key")}} values which represent modifier keys or `"Accel"`{{deprecated_inline}}.
+    The value must be one of the {{domxref("KeyboardEvent.key")}} values which represent modifier keys or `"Accel"` {{deprecated_inline}}.
     This is case-sensitive.
 
 ### Return value

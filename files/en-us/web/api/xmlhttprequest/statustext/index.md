@@ -27,7 +27,7 @@ A string.
 ## Examples
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 console.log('0 UNSENT', xhr.statusText);
 
 xhr.open('GET', '/server', true);

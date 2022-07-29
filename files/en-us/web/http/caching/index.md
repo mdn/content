@@ -71,7 +71,7 @@ It is also possible to ignore the standard HTTP Caching spec protocols in favor 
 Cache-Control: no-store
 ```
 
-For example, Varnish uses VCL-based logic to handle cache storage, while service workers in combination with the Cache API allow you to create that logic in JavaScript.
+For example, Varnish Cache uses VCL (Varnish Configuration Language, a type of {{Glossary("DSL/Domain_specific_language", "DSL")}}) logic to handle cache storage, while service workers in combination with the Cache API allow you to create that logic in JavaScript.
 
 That means if a managed cache intentionally ignores a `no-store` directive, there is no need to perceive it as being "non-compliant" with the standard. What you should do is, avoid using kitchen-sink headers, but carefully read the documentation of whatever managed-cache mechanism you're using, and ensure you're controlling the cache properly in the ways provided by the mechanism you've chosen to use.
 
@@ -93,7 +93,7 @@ Date: Tue, 22 Feb 2022 22:22:22 GMT
 Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
 
 <!doctype html>
-...
+…
 ```
 
 It is heuristically known that content which has not been updated for a full year will not be updated for some time after that. Therefore, the client stores this response (despite the lack of `max-age`) and reuses it for a while. How long to reuse is up to the implementation, but the specification recommends about 10% (in this case 0.1 year) of the time after storing.
@@ -116,7 +116,7 @@ Date: Tue, 22 Feb 2022 22:22:22 GMT
 Cache-Control: max-age=604800
 
 <!doctype html>
-...
+…
 ```
 
 The cache which stored that response counts the time elapsed since the response was generated as an age. The meaning of `max-age` is that if the age is less than one week, then the response is fresh — and if the age is greater than one week, the cached response is stale.
@@ -132,7 +132,7 @@ Cache-Control: max-age=604800
 Age: 86400
 
 <!doctype html>
-...
+…
 ```
 
 The client which receives that response will find it to be fresh for the remaining 604800-86400 seconds; that is, for 518400 seconds more.
@@ -192,7 +192,7 @@ Last-Modified: Tue, 22 Feb 2022 22:00:00 GMT
 Cache-Control: max-age=3600
 
 <!doctype html>
-...
+…
 ```
 
 At 23:22, the response becomes stale and the cache cannot be reused. So the request below shows a client sending a request with an `If-Modified-Since` request header, to ask the server if there have been any changes made since the specified time.
@@ -237,7 +237,7 @@ ETag: "deadbeef"
 Cache-Control: max-age=3600
 
 <!doctype html>
-...
+…
 ```
 
 If that response is stale, the client takes the value of the `ETag` response header for the cached response, and puts it into the `If-None-Match` request header, to ask the server if the resource has been modified:
@@ -275,7 +275,7 @@ ETag: deadbeef
 Cache-Control: no-cache
 
 <!doctype html>
-...
+…
 ```
 
 It is often stated that the combination of `max-age=0` and `must-revalidate` has the same meaning as `no-cache`.
@@ -382,7 +382,7 @@ If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
 
 (The requests from Chrome, Edge, and Firefox look very much like the above; the requests from Safari will look a bit different.)
 
-The `max-age=0` directive in the request specifies “reuse of responses with an age of 0 or less” — so in effect, intermediate stored responses are not reused.
+The `max-age=0` directive in the request specifies "reuse of responses with an age of 0 or less" — so in effect, intermediate stored responses are not reused.
 
 As a result, a request is validated by `If-None-Match` and `If-Modified-Since`.
 
@@ -446,7 +446,7 @@ Content-Length: 1024
 Cache-Control: max-age=31536000
 
 <!doctype html>
-...
+…
 ```
 
 You may want to overwrite that response once it expired on the server, but there is nothing the server can do once the response is stored — since no more requests reach the server due to caching.

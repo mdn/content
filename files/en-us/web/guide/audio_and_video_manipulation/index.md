@@ -50,38 +50,36 @@ We can set up our video player and `<canvas>` element like this:
 This code handles altering the frames.
 
 ```js
-var processor = {
-  timerCallback: function() {
+const processor = {
+  timerCallback() {
     if (this.video.paused || this.video.ended) {
       return;
     }
     this.computeFrame();
-    var self = this;
-    setTimeout(function () {
-      self.timerCallback();
+    setTimeout(() => {
+      this.timerCallback();
     }, 16); // roughly 60 frames per second
   },
 
-  doLoad: function() {
+  doLoad() {
     this.video = document.getElementById("my-video");
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
-    var self = this;
 
-    this.video.addEventListener("play", function() {
-      self.width = self.video.width;
-      self.height = self.video.height;
-      self.timerCallback();
+    this.video.addEventListener("play", () => {
+      this.width = this.video.width;
+      this.height = this.video.height;
+      this.timerCallback();
     }, false);
   },
 
-  computeFrame: function() {
+  computeFrame() {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
-    var frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    var l = frame.data.length / 4;
+    const frame = this.ctx1.getImageData(0, 0, this.width, this.height);
+    const l = frame.data.length / 4;
 
-    for (var i = 0; i < l; i++) {
-      var grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
+    for (let i = 0; i < l; i++) {
+      const grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
 
       frame.data[i * 4 + 0] = grey;
       frame.data[i * 4 + 1] = grey;
@@ -116,7 +114,7 @@ You can achieve the same result by applying the {{cssxref("filter-function/grays
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Note:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
+> **Note:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
 
 ### Playback rate
 
@@ -190,7 +188,7 @@ window.addEventListener('load', setPlaybackRate);
 
 The Web Audio API can receive audio from a variety of sources, then process it and send it back out to an {{domxref("AudioDestinationNode")}} representing the output device to which the sound is sent after processing.
 
-| If the audio source is...                                                                                                                                                                  | Use this Web Audio node type                             |
+| If the audio source is…                                                                                                                                                                  | Use this Web Audio node type                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
 | An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                                   | {{domxref("MediaElementAudioSourceNode")}} |
 | A plain raw audio data buffer in memory                                                                                                                                                    | {{domxref("AudioBufferSourceNode")}}         |
@@ -344,9 +342,9 @@ Libraries currently exist for the following formats :
 
 ## Examples
 
-- [Various Web Audio API (and other) examples](https://github.com/mdn/)
+- [Various Web Audio API (and other) examples](https://github.com/mdn/webaudio-examples)
 - [THREE.js Video Cube example](https://github.com/chrisdavidmills/threejs-video-cube)
-- [Convolution Effects in Real-Time](https://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
+- [Convolution Effects in Real-Time](https://github.com/cwilso/web-audio-samples/blob/master/samples/audio/convolution-effects.html)
 
 ## See also
 

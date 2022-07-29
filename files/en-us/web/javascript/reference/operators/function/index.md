@@ -22,7 +22,23 @@ You can also define functions using the {{jsxref("Function/Function", "Function"
 The expression is not allowed at the start of a statement.
 
 ```js
-function [name]([param1[, param2[, ..., paramN]]]) {
+function (param0) {
+  statements
+}
+function (param0, param1) {
+  statements
+}
+function (param0, param1, /* … ,*/ paramN) {
+  statements
+}
+
+function name(param0) {
+  statements
+}
+function name(param0, param1) {
+  statements
+}
+function name(param0, param1, /* … ,*/ paramN) {
   statements
 }
 ```
@@ -58,7 +74,7 @@ console.log(notHoisted) // undefined
 //  even though the variable name is hoisted, the definition isn't. so it's undefined.
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
+var notHoisted = function () {
    console.log('bar');
 };
 ```
@@ -70,7 +86,7 @@ If you want to refer to the current function inside the function body, you need 
 This also avoids using the non-standard {{jsxref("Functions/arguments/callee", "arguments.callee")}} property.
 
 ```js
-let math = {
+const math = {
   'factit': function factorial(n) {
     console.log(n)
     if (n <= 1) {
@@ -90,13 +106,13 @@ If function name is present, it will be the function name (explicit name).
 This also applies to {{jsxref("Functions/Arrow_functions", "arrow functions")}} (arrows don't have a name so you can only give the variable an implicit name).
 
 ```js
-var foo = function() {}
+const foo = function () {};
 foo.name // "foo"
 
-var foo2 = foo
+const foo2 = foo;
 foo2.name // "foo"
 
-var bar = function baz() {}
+const bar = function baz() {};
 bar.name // "baz"
 
 console.log(foo === foo2); // true
@@ -112,8 +128,8 @@ The following example defines an unnamed function and assigns it to `x`.
 The function returns the square of its argument:
 
 ```js
-var x = function(y) {
-   return y * y;
+const x = function (y) {
+  return y * y;
 };
 ```
 

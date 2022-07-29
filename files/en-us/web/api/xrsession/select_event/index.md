@@ -20,9 +20,9 @@ The WebXR **`select`** event is sent to an {{domxref("XRSession")}} when one of 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('select', event => { })
+addEventListener('select', (event) => { })
 
-onselect = event => { }
+onselect = (event) => { }
 ```
 
 ## Event type
@@ -59,8 +59,8 @@ If your primary action is a simple trigger action and you don't need to animate 
 The following example uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set up a handler for the `select` event. The handler fetches the pose representing the target ray for `tracked-pointer` inputs and sends the pose's transform to a function called `myHandleSelectWithRay()`.
 
 ```js
-xrSession.addEventListener("select", event => {
-  if (event.inputSource.targetRayMode == "tracked-pointer") {
+xrSession.addEventListener("select", (event) => {
+  if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
     if (targetRayPose) {
@@ -73,8 +73,8 @@ xrSession.addEventListener("select", event => {
 You can also set up a handler for `select` events by setting the {{domxref("XRSession")}} object's `onselect` event handler property to a function that handles the event:
 
 ```js
-xrSession.onselect = event => {
-  if (event.inputSource.targetRayMode == "tracked-pointer") {
+xrSession.onselect = (event) => {
+  if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
     if (targetRayPose) {

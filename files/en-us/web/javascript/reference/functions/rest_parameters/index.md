@@ -12,13 +12,13 @@ browser-compat: javascript.functions.rest_parameters
 
 The **rest parameter** syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent [variadic functions](https://en.wikipedia.org/wiki/Variadic_function) in JavaScript.
 
-{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
+{{EmbedInteractiveExample("pages/js/functions-restparameters.html", "taller")}}
 
 ## Syntax
 
 ```js
 function f(a, b, ...theArgs) {
-  // ...
+  // …
 }
 ```
 
@@ -114,7 +114,7 @@ In this example, the first argument is mapped to `a` and the second to
 `b`, so these named arguments are used as normal.
 
 However, the third argument, `manyMoreArgs`, will be an array that contains
-the third, fourth, fifth, sixth ... nth — as many arguments that the user includes.
+the third, fourth, fifth, sixth, …, nth — as many arguments that the user includes.
 
 ```js
 function myFun(a, b, ...manyMoreArgs) {
@@ -178,7 +178,7 @@ then multiplied by the first parameter, and the array is returned:
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(element => {
+  return theArgs.map((element) => {
     return multiplier * element
   })
 }

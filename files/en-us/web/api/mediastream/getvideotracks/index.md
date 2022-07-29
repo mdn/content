@@ -16,7 +16,7 @@ tags:
   - track
 browser-compat: api.MediaStream.getVideoTracks
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The **`getVideoTracks()`** method of the
 {{domxref("MediaStream")}} interface returns a sequence of
@@ -57,7 +57,7 @@ retrieve a track for passing to the {{domxref("ImageCapture.ImageCapture",
 let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream => {
+.then((mediaStream) => {
   document.querySelector('video').srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];

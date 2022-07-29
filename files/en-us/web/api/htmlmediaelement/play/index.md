@@ -123,7 +123,7 @@ state of playback by watching for the resolution or rejection of the
 
 When this example is executed, it begins by collecting references to the
 {{HTMLElement("video")}} element as well as the {{HTMLElement("button")}} used to toggle
-playback on and off. It then sets up an event handler for the {{event("click")}} event
+playback on and off. It then sets up an event handler for the {{domxref("Element/click_event", "click")}} event
 on the play toggle button and attempts to automatically begin playback by calling
 `playVideo()`.
 

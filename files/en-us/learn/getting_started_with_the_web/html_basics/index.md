@@ -53,7 +53,7 @@ An attribute should always have the following:
 2. The attribute name followed by an equal sign.
 3. The attribute value wrapped by opening and closing quotation marks.
 
-> **Note:** Simple attribute values that don't contain ASCII whitespace (or any of the characters `"` `'` `` ` `` `=` `<` `>` ) can remain unquoted, but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
+> **Note:** Simple attribute values that don't contain ASCII whitespace (or any of the characters `"` `'` `` ` `` `=` `<` `>`) can remain unquoted, but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
 
 ### Nesting elements
 
@@ -174,7 +174,7 @@ Each item inside the lists is put inside an {{htmlelement("li")}} (list item) el
 For example, if we wanted to turn the part of the following paragraph fragment into a list
 
 ```html
-<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together ... </p>
+<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
 ```
 
 We could modify the markup to this
@@ -188,7 +188,7 @@ We could modify the markup to this
   <li>builders</li>
 </ul>
 
-<p>working together ... </p>
+<p>working together… </p>
 ```
 
 Try adding an ordered or unordered list to your example page.

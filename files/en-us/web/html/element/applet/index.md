@@ -108,7 +108,7 @@ Use of Java applets on the Web is deprecated; most browsers no longer support us
 ```html
 <applet code="game.class" align="left" archive="game.zip" height="250" width="350">
   <param name="difficulty" value="easy">
-  <b>Sorry, you need Java to play this game.</b>
+  <p>Sorry, you need Java to play this game.</p>
 </applet>
 ```
 

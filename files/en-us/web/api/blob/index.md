@@ -80,7 +80,7 @@ function typedArrayToURL(typedArray, mimeType) {
 
 const bytes = new Uint8Array(59);
 
-for(let i = 0; i < 59; i++) {
+for (let i = 0; i < 59; i++) {
   bytes[i] = 32 + i;
 }
 

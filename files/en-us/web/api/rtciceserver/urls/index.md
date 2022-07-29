@@ -20,11 +20,11 @@ are typically STUN and/or TURN servers.
 ## Syntax
 
 ```js
-var iceServer = {
-                  urls = iceServerUrl | [ url1, ..., urlN ],
-                  username: "webrtc", // optional
-                  credential: "turnpassword" // optional
-                };
+const iceServer = {
+  urls: iceServerUrl, /* or an array or URLs: [ url1, ..., urlN ] */
+  username: "webrtc", // optional
+  credential: "turnpassword" // optional
+};
 
 iceServers.push(iceServer);
 ```

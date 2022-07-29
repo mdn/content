@@ -44,9 +44,7 @@ For slightly more controlled error handling and backwards compatibility, it is a
 
 ```js
 if (window.Worker) {
-
-  ...
-
+  // …
 }
 ```
 
@@ -81,7 +79,7 @@ In the worker, we can respond when the message is received by writing an event h
 ```js
 onmessage = function(e) {
   console.log('Message received from main script');
-  const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  const workerResult = `Result: ${e.data[0] * e.data[1]}`;
   console.log('Posting message back to main script');
   postMessage(workerResult);
 }
@@ -190,7 +188,7 @@ onconnect = function(e) {
   const port = e.ports[0];
 
   port.onmessage = function(e) {
-    const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   }
 }
@@ -241,7 +239,7 @@ To illustrate this, let's create a function named `emulateMessage()`, which will
 
 ```js
 function emulateMessage(vVal) {
-    return eval('(' + JSON.stringify(vVal) + ')');
+    return eval(`(${JSON.stringify(vVal)})`);
 }
 
 // Tests
@@ -287,7 +285,7 @@ A value that is cloned and not shared is called _message_. As you will probably 
 const myWorker = new Worker('my_task.js');
 
 myWorker.onmessage = function(oEvent) {
-  console.log('Worker said : ' + oEvent.data);
+  console.log(`Worker said : ${oEvent.data}`);
 };
 
 myWorker.postMessage('ali');
@@ -299,7 +297,7 @@ myWorker.postMessage('ali');
 postMessage("I\'m working before postMessage(\'ali\').");
 
 onmessage = function(oEvent) {
-  postMessage('Hi ' + oEvent.data);
+  postMessage(`Hi ${oEvent.data}`);
 };
 ```
 
@@ -369,8 +367,8 @@ We finish QueryableWorker with the `onmessage` method. If the worker has the cor
 ```js
 worker.onmessage = function(event) {
     if (event.data instanceof Object &&
-        event.data.hasOwnProperty('queryMethodListener') &&
-        event.data.hasOwnProperty('queryMethodArguments')) {
+        Object.hasOwn(event.data, 'queryMethodListener') &&
+        Object.hasOwn(event.data, 'queryMethodArguments')) {
         listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
     } else {
         this.defaultListener.call(instance, event.data);
@@ -382,10 +380,10 @@ Now onto the worker. First we need to have the methods to handle the two simple 
 
 ```js
 const queryableFunctions = {
-    getDifference: function(a, b) {
+    getDifference(a, b) {
         reply('printStuff', a - b);
     },
-    waitSomeTime: function() {
+    waitSomeTime() {
         setTimeout(function() {
             reply('doAlert', 3, 'seconds');
         }, 3000);
@@ -414,8 +412,8 @@ And the `onmessage` method is now trivial:
 ```js
 onmessage = function(event) {
     if (event.data instanceof Object &&
-        event.data.hasOwnProperty('queryMethod') &&
-        event.data.hasOwnProperty('queryMethodArguments')) {
+        Object.hasOwn(event.data, 'queryMethod') &&
+        Object.hasOwn(event.data, 'queryMethodArguments')) {
         queryableFunctions[event.data.queryMethod]
             .apply(self, event.data.queryMethodArguments);
     } else {
@@ -487,8 +485,8 @@ Here are the full implementation:
 
       worker.onmessage = function(event) {
         if (event.data instanceof Object &&
-          event.data.hasOwnProperty('queryMethodListener') &&
-          event.data.hasOwnProperty('queryMethodArguments')) {
+          Object.hasOwn(event.data, 'queryMethodListener') &&
+          Object.hasOwn(event.data, 'queryMethodArguments')) {
           listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
         } else {
           this.defaultListener.call(instance, event.data);
@@ -524,11 +522,11 @@ Here are the full implementation:
 ```js
 const queryableFunctions = {
   // example #1: get the difference between two numbers:
-  getDifference: function(nMinuend, nSubtrahend) {
+  getDifference(nMinuend, nSubtrahend) {
       reply('printStuff', nMinuend - nSubtrahend);
   },
   // example #2: wait three seconds
-  waitSomeTime: function() {
+  waitSomeTime() {
       setTimeout(function() { reply('doAlert', 3, 'seconds'); }, 3000);
   }
 };
@@ -546,7 +544,7 @@ function reply() {
 }
 
 onmessage = function(oEvent) {
-  if (oEvent.data instanceof Object && oEvent.data.hasOwnProperty('queryMethod') && oEvent.data.hasOwnProperty('queryMethodArguments')) {
+  if (oEvent.data instanceof Object && Object.hasOwn(oEvent.data, 'queryMethod') && Object.hasOwn(oEvent.data, 'queryMethodArguments')) {
     queryableFunctions[oEvent.data.queryMethod].apply(self, oEvent.data.queryMethodArguments);
   } else {
     defaultReply(oEvent.data);
@@ -606,9 +604,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
 <script type="text/javascript">
   // This script WILL be parsed by JS engines because its MIME type is text/javascript.
 
-  // In the past...:
-  // blob builder existed
-  // ...but now we use Blob...:
+  // In the past blob builder existed, but now we use Blob
   const blob = new Blob(Array.prototype.map.call(document.querySelectorAll('script[type=\'text\/js-worker\']'), function (oScript) { return oScript.textContent; }),{type: 'text/javascript'});
 
   // Creating a new document.worker property containing all our "text/js-worker" scripts.
@@ -632,7 +628,7 @@ It is also worth noting that you can also convert a function into a Blob, then g
 
 ```js
 function fn2workerURL(fn) {
-  const blob = new Blob(['('+fn.toString()+')()'], {type: 'text/javascript'})
+  const blob = new Blob([`(${fn.toString()})()`], {type: 'text/javascript'})
   return URL.createObjectURL(blob)
 }
 ```

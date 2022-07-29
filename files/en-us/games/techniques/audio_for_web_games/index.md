@@ -234,35 +234,35 @@ To see this in action, let's lay out some separate tracks:
   <ul>
     <li data-loading="true">
       <a href="leadguitar.mp3" class="track">Lead Guitar</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="guitar-play-label">
         <span id="guitar-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="bassguitar.mp3" class="track">Bass Guitar</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="bass-play-label">
         <span id="bass-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="drums.mp3" class="track">Drums</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="drums-play-label">
         <span id="drums-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="horns.mp3" class="track">Horns</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="horns-play-label">
         <span id="horns-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="clav.mp3" class="track">Clavi</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="clavi-play-label">
         <span id="clavi-play-label">Play</span>
       </button>
@@ -324,7 +324,7 @@ function playTrack(audioBuffer) {
   trackSource.buffer = audioBuffer;
   trackSource.connect(audioCtx.destination)
 
-  if (offset == 0) {
+  if (offset === 0) {
     trackSource.start();
     offset = audioCtx.currentTime;
   } else {
@@ -386,7 +386,7 @@ To do this before playing the track you want to sync, you should calculate how l
 Here's a bit of code that given a tempo (the time in seconds of your beat/bar) will calculate how long to wait until you play the next part — you feed the resulting value to the `start()` function with the first parameter, which takes the absolute time of when that playback should commence. Note the second parameter (where to start playing from in the new track) is relative:
 
 ```js
-if (offset == 0) {
+if (offset === 0) {
   source.start();
   offset = context.currentTime;
 } else {

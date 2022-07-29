@@ -87,8 +87,8 @@ You could then fetch this request by passing the `Request` object in as a parame
 
 ```js
 fetch(request)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     image.src = URL.createObjectURL(blob);
   });
 ```
@@ -110,17 +110,17 @@ You could then fetch this API request by passing the `Request` object in as a pa
 
 ```js
 fetch(request)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
       throw new Error('Something went wrong on API server!');
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
-    // ...
-  }).catch(error => {
+    // …
+  }).catch((error) => {
     console.error(error);
   });
 ```

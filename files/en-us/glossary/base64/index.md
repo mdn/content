@@ -45,12 +45,12 @@ Here are the two possible methods.
 ### Solution #1 – escaping the string before encoding it
 
 ```js
-function utf8_to_b64( str ) {
-  return window.btoa(unescape(encodeURIComponent( str )));
+function utf8_to_b64(str) {
+  return window.btoa(unescape(encodeURIComponent(str)));
 }
 
-function b64_to_utf8( str ) {
-  return decodeURIComponent(escape(window.atob( str )));
+function b64_to_utf8(str) {
+  return decodeURIComponent(escape(window.atob(str)));
 }
 
 // Usage:
@@ -180,7 +180,7 @@ function UTF8ArrToStr (aBytes) {
     nPart = aBytes[nIdx];
     sView += String.fromCodePoint(
       nPart > 251 && nPart < 254 && nIdx + 5 < nLen ? /* six bytes */
-        /* (nPart - 252 << 30) may be not so safe in ECMAScript! So...: */
+        /* (nPart - 252 << 30) may be not so safe in ECMAScript! So…: */
         (nPart - 252) * 1073741824 + (aBytes[++nIdx] - 128 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
       : nPart > 247 && nPart < 252 && nIdx + 4 < nLen ? /* five bytes */
         (nPart - 248 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
@@ -203,7 +203,7 @@ function strToUTF8Arr (sDOMStr) {
 
   var aBytes, nChr, nStrLen = sDOMStr.length, nArrLen = 0;
 
-  /* mapping... */
+  /* mapping… */
 
   for (var nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
     nChr = sDOMStr.codePointAt(nMapIdx);
@@ -217,7 +217,7 @@ function strToUTF8Arr (sDOMStr) {
 
   aBytes = new Uint8Array(nArrLen);
 
-  /* transcription... */
+  /* transcription… */
 
   for (var nIdx = 0, nChrIdx = 0; nIdx < nArrLen; nChrIdx++) {
     nChr = sDOMStr.codePointAt(nChrIdx);

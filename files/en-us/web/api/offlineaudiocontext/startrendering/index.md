@@ -17,7 +17,7 @@ The `startRendering()` method of the {{ domxref("OfflineAudioContext") }}
 Interface starts rendering the audio graph, taking into account the current connections
 and the current scheduled changes.
 
-The {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is
+The {{domxref("OfflineAudioContext/complete_event", "complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is
 raised when the rendering is finished, containing the resulting
 {{domxref("AudioBuffer")}} in its `renderedBuffer` property.
 
@@ -99,7 +99,7 @@ function getData() {
           song.start();
         }
       }).catch(function(err) {
-          console.log('Rendering failed: ' + err);
+          console.error(`Rendering failed: ${err}`);
           // Note: The promise should reject when startRendering is called a second time on an OfflineAudioContext
       });
     });

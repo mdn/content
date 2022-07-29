@@ -19,9 +19,9 @@ The **`connecting`** event of the {{domxref("RemotePlayback")}} interface fires 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connecting', event => { });
+addEventListener('connecting', (event) => { });
 
-onconnecting = event => { };
+onconnecting = (event) => { };
 ```
 
 ## Event type

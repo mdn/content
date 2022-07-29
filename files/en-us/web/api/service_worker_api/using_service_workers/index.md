@@ -80,7 +80,7 @@ const registerServiceWorker = async () => {
   }
 };
 
-// ...
+// …
 
 registerServiceWorker();
 ```
@@ -467,9 +467,9 @@ self.addEventListener('install', (event) => {
       './sw-test/app.js',
       './sw-test/image-list.js',
 
-      …
+      // ...
 
-      // include other new resources for the new version...
+      // include other new resources for the new version…
     ]
   ));
 });
@@ -486,14 +486,14 @@ You also get an `activate` event. This is generally used to do stuff that would 
 Promises passed into `waitUntil()` will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first `fetch` event on the new service worker.
 
 ```js
-const deleteCache = async key => {
+const deleteCache = async (key) => {
   await caches.delete(key)
 }
 
 const deleteOldCaches = async () => {
    const cacheKeepList = ['v2'];
    const keyList = await caches.keys()
-   const cachesToDelete = keyList.filter(key => !cacheKeepList.includes(key))
+   const cachesToDelete = keyList.filter((key) => !cacheKeepList.includes(key))
    await Promise.all(cachesToDelete.map(deleteCache));
 }
 
@@ -516,7 +516,6 @@ Firefox has also started to implement some useful tools related to service worke
 
 ## See also
 
-- [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/)
 - [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Download the [Service Workers 101 cheatsheet](sw101.png).

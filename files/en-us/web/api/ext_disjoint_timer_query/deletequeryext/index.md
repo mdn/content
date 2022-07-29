@@ -34,10 +34,10 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_disjoint_timer_query');
-var query = ext.createQueryEXT();
+const ext = gl.getExtension('EXT_disjoint_timer_query');
+const query = ext.createQueryEXT();
 
-// ...
+// …
 
 ext.deleteQueryEXT(query);
 ```

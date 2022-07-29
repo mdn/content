@@ -42,7 +42,7 @@ This example creates a new barcode detector object, with specified supported for
 
 ```js
 // create new detector
-var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
+const barcodeDetector = new BarcodeDetector({ formats: ['code_39', 'codabar', 'ean_13'] });
 
 // check compatibility
 if (barcodeDetector) {
@@ -59,8 +59,8 @@ The following example calls the `getSupportFormat()` static method and logs the 
 ```js
 // check supported types
 BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats => {
-    supportedFormats.forEach(format => console.log(format));
+  .then((supportedFormats) => {
+    supportedFormats.forEach((format) => console.log(format));
   });
 ```
 
@@ -70,10 +70,10 @@ This example uses the `detect()` method to detect the barcodes within the given 
 
 ```js
   barcodeDetector.detect(imageEl)
-    .then(barcodes => {
-      barcodes.forEach(barcode => console.log(barcode.rawData));
+    .then((barcodes) => {
+      barcodes.forEach((barcode) => console.log(barcode.rawData));
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
     })
 

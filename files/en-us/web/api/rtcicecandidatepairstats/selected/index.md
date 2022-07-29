@@ -28,14 +28,14 @@ If that fails, then the second section iterates over the reports, looking for a 
 
 ```js
 function getCurrentCandidatePair(statsResults) {
-  statsResults.forEach(report => {
+  statsResults.forEach((report) => {
     if (report.type === "transport") {
       currentPair = statsResults.get(report.selectedCandidatePairId);
     }
   });
 
   if (!currentPair) {
-    statsResults.forEach(report => {
+    statsResults.forEach((report) => {
       if (report.type === "candidate-pair" && report.selected) {
         currentPair = report;
       }

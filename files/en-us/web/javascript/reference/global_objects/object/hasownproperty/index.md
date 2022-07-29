@@ -134,7 +134,7 @@ has a property with this name may return incorrect results:
 
 ```js
 let foo = {
-  hasOwnProperty: function() {
+  hasOwnProperty() {
     return false;
   },
   bar: 'Here be dragons'

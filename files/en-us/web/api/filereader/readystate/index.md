@@ -30,7 +30,7 @@ The {{domxref("FileReader")}} **`readyState`** property provides the current sta
 ## Examples
 
 ```js
-var reader = new FileReader();
+const reader = new FileReader();
 console.log('EMPTY', reader.readyState); // readyState will be 0
 
 reader.readAsText(blob);

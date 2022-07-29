@@ -20,9 +20,9 @@ The **`offline`** event of the {{domxref("WorkerGlobalScope")}} fires when the d
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('offline', event => { });
+addEventListener('offline', (event) => { });
 
-onoffline = event => { };
+onoffline = (event) => { };
 ```
 
 ## Event type
@@ -44,7 +44,7 @@ The same snippet, but using `addEventListener()`:
 ```js
 self.addEventListener('offline', function() {
   console.log('Your worker is now offline');
-}
+});
 ```
 
 ## Specifications

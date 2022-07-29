@@ -25,19 +25,19 @@ If the object is invariant, you might instead represent it using a string, and g
 
 ```js
 // Arrow function
-groupToMap((element) => { /* ... */ } )
-groupToMap((element, index) => { /* ... */ } )
-groupToMap((element, index, array) => { /* ... */ } )
+groupToMap((element) => { /* … */ } )
+groupToMap((element, index) => { /* … */ } )
+groupToMap((element, index, array) => { /* … */ } )
 
 // Callback function
 groupToMap(callbackFn)
 groupToMap(callbackFn, thisArg)
 
 // Inline callback function
-groupToMap(function(element) { /* ... */ })
-groupToMap(function(element, index) { /* ... */ })
-groupToMap(function(element, index, array){ /* ... */ })
-groupToMap(function(element, index, array) { /* ... */ }, thisArg)
+groupToMap(function(element) { /* … */ })
+groupToMap(function(element, index) { /* … */ })
+groupToMap(function(element, index, array){ /* … */ })
+groupToMap(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -132,7 +132,7 @@ The returned `result` object is a `Map` so we need to call `get()` with the key 
 ```js
 const restock  = { restock: true };
 const sufficient = { restock: false };
-const result = inventory.groupToMap( ({ quantity }) => quantity < 6 ? restock : sufficient );
+const result = inventory.groupToMap(({ quantity }) => quantity < 6 ? restock : sufficient);
 console.log(result.get(restock));
 // expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
 ```

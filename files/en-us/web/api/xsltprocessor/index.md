@@ -99,10 +99,10 @@ and not exposed to Web content:
 _Not part of any specification._ This is a proprietary interface that originated
 in Gecko.
 
-## Gecko IDL
+## Gecko Code
 
-- `{{ Source("dom/webidl/XSLTProcessor.webidl", "XSLTProcessor.webidl") }}`
-- `{{ Source("dom/xslt/nsIXSLTProcessor.idl", "nsIXSLTProcessor.idl") }}`
+- [XSLTProcessor.webidl](https://dxr.mozilla.org/mozilla-central/source/dom/webidl/XSLTProcessor.webidl)
+- [txXSLTProcessor.cpp](https://dxr.mozilla.org/mozilla-central/source/dom/xslt/xslt/txXSLTProcessor.cpp)
 
 ## Browser compatibility
 

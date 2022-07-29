@@ -45,7 +45,7 @@ request.onupgradeneeded = function(e) {
     db.createObjectStore("store2");
   }
 
-  // etc. for version < 3, 4...
+  // etc. for version < 3, 4…
 };
 ```
 

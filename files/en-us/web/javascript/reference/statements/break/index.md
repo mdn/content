@@ -49,10 +49,10 @@ the value 3 \* `x`.
 
 ```js
 function testBreak(x) {
-  var i = 0;
+  let i = 0;
 
   while (i < 6) {
-    if (i == 3) {
+    if (i === 3) {
       break;
     }
     i += 1;
@@ -127,11 +127,11 @@ block that the `break` statements are intended to break out of.
 
 ```js
 function testBreak(x) {
-  var i = 0;
+  let i = 0;
 
   while (i < 6) {
-    if (i == 3) {
-      (function() {
+    if (i === 3) {
+      (function () {
         break;
       })();
     }
@@ -147,7 +147,7 @@ testBreak(1); // SyntaxError: Illegal break statement
 ```js
 block_1: {
   console.log('1');
-  ( function() {
+  (function() {
     break block_1; // SyntaxError: Undefined label 'block_1'
   })();
 }

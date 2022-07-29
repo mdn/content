@@ -22,10 +22,10 @@ Open **/controllers/authorController.js**. Find the exported `author_delete_get(
 exports.author_delete_get = function(req, res, next) {
 
     async.parallel({
-        author: function(callback) {
+        author(callback) {
             Author.findById(req.params.id).exec(callback)
         },
-        authors_books: function(callback) {
+        authors_books(callback) {
             Book.find({ 'author': req.params.id }).exec(callback)
         },
     }, function(err, results) {
@@ -34,7 +34,7 @@ exports.author_delete_get = function(req, res, next) {
             res.redirect('/catalog/authors');
         }
         // Successful, so render.
-        res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
+        res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books });
     });
 
 };
@@ -64,10 +64,10 @@ Find the exported `author_delete_post()` controller method, and replace it with 
 exports.author_delete_post = function(req, res, next) {
 
     async.parallel({
-        author: function(callback) {
+        author(callback) {
           Author.findById(req.body.authorid).exec(callback)
         },
-        authors_books: function(callback) {
+        authors_books(callback) {
           Book.find({ 'author': req.body.authorid }).exec(callback)
         },
     }, function(err, results) {
@@ -75,7 +75,7 @@ exports.author_delete_post = function(req, res, next) {
         // Success
         if (results.authors_books.length > 0) {
             // Author has books. Render in same way as for GET route.
-            res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
+            res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books });
             return;
         }
         else {

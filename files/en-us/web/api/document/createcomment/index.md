@@ -27,13 +27,13 @@ createComment(data)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A new {{domxref("Comment")}} object.
 
 ## Examples
 
 ```js
-var docu = new DOMParser().parseFromString('<xml></xml>',  'application/xml');
-var comment = docu.createComment('This is a not-so-secret comment in your document');
+const docu = new DOMParser().parseFromString('<xml></xml>',  'application/xml');
+const comment = docu.createComment('This is a not-so-secret comment in your document');
 
 docu.getElementsByTagName('xml')[0].appendChild(comment);
 

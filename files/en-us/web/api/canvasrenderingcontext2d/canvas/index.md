@@ -15,7 +15,7 @@ browser-compat: api.CanvasRenderingContext2D.canvas
 The **`CanvasRenderingContext2D.canvas`** property, part of the
 [Canvas API](/en-US/docs/Web/API/Canvas_API), is a read-only reference to the
 {{domxref("HTMLCanvasElement")}} object that is associated with a given context. It
-might be {{jsxref("null")}} if there is no associated {{HTMLElement("canvas")}} element.
+might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if there is no associated {{HTMLElement("canvas")}} element.
 
 ## Value
 
@@ -29,12 +29,12 @@ Given this {{HTMLElement("canvas")}} element:
 <canvas id="canvas"></canvas>
 ```
 
-... you can get a reference to the canvas element within the
+… you can get a reference to the canvas element within the
 `CanvasRenderingContext2D` by using the `canvas` property:
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 ctx.canvas // HTMLCanvasElement
 ```
 

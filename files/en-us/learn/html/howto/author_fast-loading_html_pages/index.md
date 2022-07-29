@@ -95,7 +95,7 @@ Rather than deeply nesting tables as in:
 <table>
   <table>
     <table>
-          ...
+          …
     </table>
   </table>
 </table>
@@ -104,9 +104,9 @@ Rather than deeply nesting tables as in:
 use non-nested tables or divs as in
 
 ```html
-<table>...</table>
-<table>...</table>
-<table>...</table>
+<table>…</table>
+<table>…</table>
+<table>…</table>
 ```
 
 See also: [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) specifications.
@@ -165,11 +165,11 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
   - `{{htmlelement('head')}}`
 
-    - `{{htmlelement('link')}}` ...
+    - `{{htmlelement('link')}}`
 
       CSS files required for page appearance. Minimize the number of files for performance while keeping unrelated CSS in separate files for maintenance.
 
-    - `{{htmlelement('script')}}` ...
+    - `{{htmlelement('script')}}`
 
       JavaScript files for functions **required** during the loading of the page, but not any interaction related JavaScript that can only run after page loads.
 
@@ -177,7 +177,7 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
   - `{{htmlelement('body')}}`
 
-    User visible page content in small chunks ( `{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
+    User visible page content in small chunks (`{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
 
     - `{{htmlelement('script')}}`
 

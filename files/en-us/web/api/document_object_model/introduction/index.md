@@ -226,7 +226,7 @@ const table = document.getElementById("table");
 const tableAttrs = table.attributes; // Node/Element interface
 for (let i = 0; i < tableAttrs.length; i++) {
   // HTMLTableElement interface: border attribute
-  if(tableAttrs[i].nodeName.toLowerCase() == "border")
+  if (tableAttrs[i].nodeName.toLowerCase() === "border")
     table.border = "1";
 }
 // HTMLTableElement interface: summary attribute
@@ -276,21 +276,21 @@ The following simple example illustrates using the DOM {{domxref("Document")}} A
 <body>
   <div>
     <form>
-      <p><b><code>text</code></b></p>
+      <p><label for="text">Text color</label></p>
       <select onChange="setBodyAttr('text',
-        this.options[this.selectedIndex].value);">
+        this.options[this.selectedIndex].value);" id="text">
         <option value="black">black</option>
         <option value="red">red</option>
       </select>
-      <p><b><code>bgColor</code></b></p>
+      <p><label for="bgcolor">Background color</label></p>
       <select onChange="setBodyAttr('bgColor',
-        this.options[this.selectedIndex].value);">
+        this.options[this.selectedIndex].value);" id="bgcolor">
         <option value="white">white</option>
         <option value="lightgrey">gray</option>
       </select>
-      <p><b><code>link</code></b></p>
+      <p><label for="linkcolor">Link Color</label></b></p>
       <select onChange="setBodyAttr('link',
-        this.options[this.selectedIndex].value);">
+        this.options[this.selectedIndex].value);" id="linkcolor">
         <option value="blue">blue</option>
         <option value="green">green</option>
       </select>

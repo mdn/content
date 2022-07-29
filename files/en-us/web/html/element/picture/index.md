@@ -119,7 +119,7 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 
 The [{{htmlattrdef("srcset")}}](/en-US/docs/Web/HTML/Element/source#attr-srcset) attribute is used to offer list of possible images _based on size_.
 
-It is composed of a comma-separated list of image descriptors. Each image descriptor is composed of a URL of the image, and _either..._
+It is composed of a comma-separated list of image descriptors. Each image descriptor is composed of a URL of the image, and _either_:
 
 - a _width descriptor_, followed by a `w` (such as `300w`);
   _OR_
@@ -127,7 +127,7 @@ It is composed of a comma-separated list of image descriptors. Each image descri
 
 ```html
 <picture>
-  <source srcset="logo-768.png 768w, logo-768-1.5x.png 1.5x">
+  <source srcset="logo-768.png, logo-768-1.5x.png 1.5x">
   <source srcset="logo-480.png, logo-480-2x.png 2x">
   <img src="logo-320.png" alt="logo">
 </picture>

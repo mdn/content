@@ -22,9 +22,9 @@ A `statechange` event is fired at a {{DOMxRef("BaseAudioContext")}} object when 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('statechange', event => { })
+addEventListener('statechange', (event) => { })
 
-onstatechange = event => { }
+onstatechange = (event) => { }
 ```
 
 ## Event type

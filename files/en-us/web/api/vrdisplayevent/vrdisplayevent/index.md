@@ -45,7 +45,7 @@ A new {{domxref("VRDisplayEvent")}} object.
 ## Examples
 
 ```js
-var myEventObject = new VRDisplayEvent('custom', {
+const myEventObject = new VRDisplayEvent('custom', {
   display: vrDisplay,
   reason: 'Custom reason'
 });

@@ -53,8 +53,8 @@ if(navigator.getVRDisplays) {
 
             // Set the canvas size to the size of the vrDisplay viewport
 
-            var leftEye = vrDisplay.getEyeParameters('left');
-            var rightEye = vrDisplay.getEyeParameters('right');
+            const leftEye = vrDisplay.getEyeParameters('left');
+            const rightEye = vrDisplay.getEyeParameters('right');
 
             canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
             canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);

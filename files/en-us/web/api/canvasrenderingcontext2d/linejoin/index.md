@@ -88,8 +88,8 @@ The example below draws three different paths, demonstrating each of the three
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
-var lineJoin = ['round', 'bevel', 'miter'];
+const ctx = document.getElementById('canvas').getContext('2d');
+const lineJoin = ['round', 'bevel', 'miter'];
 ctx.lineWidth = 10;
 
 for (let i = 0; i < lineJoin.length; i++) {

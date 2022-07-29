@@ -52,7 +52,7 @@ This candidate examines the `priority` of the candidate and, if it's greater
 than the priority of a previously-seen candidate, remembers the candidate for later use.
 
 ```js
-var bestCandidate = {
+let bestCandidate = {
   candidate: "",
   sdpMid: null,
   sdpMLineIndex: null,
@@ -60,7 +60,7 @@ var bestCandidate = {
 };
 
 function handleCandidate(candidateString) {
-  var candidate = new RTCIceCandidate(candidateString);
+  const candidate = new RTCIceCandidate(candidateString);
 
   if (candidate.priority > bestCandidate.priority) {
     bestCandidate = candidate;

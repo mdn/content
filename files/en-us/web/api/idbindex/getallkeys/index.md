@@ -55,8 +55,8 @@ not between `0` and `2^32 - 1` included.
 ## Examples
 
 ```js
-var myIndex = objectStore.index('index');
-var getAllKeysRequest = myIndex.getAllKeys();
+const myIndex = objectStore.index('index');
+const getAllKeysRequest = myIndex.getAllKeys();
 getAllKeysRequest.onsuccess = function() {
   console.log(getAllKeysRequest.result);
 }

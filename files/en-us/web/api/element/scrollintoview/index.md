@@ -17,8 +17,8 @@ browser-compat: api.Element.scrollIntoView
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} interface's
-**`scrollIntoView()`** method scrolls the element's parent
-container such that the element on which `scrollIntoView()` is called is
+**`scrollIntoView()`** method scrolls the element's ancestor
+containers such that the element on which `scrollIntoView()` is called is
 visible to the user.
 
 ## Syntax
@@ -67,7 +67,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var element = document.getElementById("box");
+const element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);

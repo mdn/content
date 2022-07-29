@@ -35,7 +35,7 @@ window.addEventListener("gamepadconnected", function(e) {
   if(!e.gamepad.displayId) {
     console.log('Gamepad connected');
   } else {
-    console.log('Gamepad connected, associated with VR display ' + e.gamepad.displayId);
+    console.log(`Gamepad connected, associated with VR display ${e.gamepad.displayId}`);
   }
 });
 ```

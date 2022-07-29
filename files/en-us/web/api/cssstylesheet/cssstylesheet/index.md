@@ -18,7 +18,6 @@ After constructing a stylesheet the {{domxref("CSSStyleSheet.replace()")}}, {{do
 A stylesheet created using this method is referred to as a "constructed stylesheet".
 A constructed stylesheet can be shared between a document and its shadow DOM subtrees using {{domxref("ShadowRoot.adoptedStyleSheets")}} and {{domxref("Document.adoptedStyleSheets")}}.
 
-
 ## Syntax
 
 ```js
@@ -28,15 +27,15 @@ new CSSStyleSheet(options)
 
 ### Parameters
 
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object containing the following:
 
-    - `baseURL`{{optional_inline}}
+    - `baseURL` {{optional_inline}}
       - : A string containing the `baseURL` used to resolve relative URLs in the stylesheet.
-    - `media`{{optional_inline}}
+    - `media` {{optional_inline}}
       - : A {{domxref("MediaList")}} containing a list of media rules, or a string containing a single rule.
-    - `disabled`{{optional_inline}}
+    - `disabled` {{optional_inline}}
       - : A {{jsxref("Boolean")}} indicating whether the stylesheet is disabled. False by default.
 
 ## Examples
@@ -80,7 +79,7 @@ Below we append a new rule to the same sheet using {{domxref("CSSStyleSheet.inse
 ```
 
 The same sheet can be shared with multiple shadow subtrees in the same document.
-For more exmaples see {{domxref("ShadowRoot.adoptedStyleSheets")}}.
+For more examples see {{domxref("ShadowRoot.adoptedStyleSheets")}}.
 
 ## Specifications
 

@@ -14,7 +14,7 @@ tags:
 
 Exported WebAssembly functions are how WebAssembly functions are represented in JavaScript. This article describes what they are in a little more detail.
 
-## Exported... what?
+## Exported… What?
 
 Exported WebAssembly functions are basically just JavaScript wrappers that represent WebAssembly functions in JavaScript. When you call them, you get some activity in the background to convert the arguments into types that wasm can work with (for example converting JavaScript numbers to Int32), the arguments are passed to the function inside your wasm module, the function is invoked, and the result is converted and passed back to JavaScript.
 
@@ -33,7 +33,7 @@ Let's look at an example to clear things up (you can find this on GitHub as [tab
 var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
 WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then(obj => {
+.then((obj) => {
   var tbl = obj.instance.exports.tbl;
   console.log(tbl.get(0)());  // 13
   console.log(tbl.get(1)());  // 42
@@ -63,7 +63,7 @@ typeof testFunc;
 
 you'll get the result `function` returned. You can then go on to do pretty much anything to this function that you can do to other [functions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) in JavaScript — [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), etc. `testFunc.toString()` returns an interesting result:
 
-```js
+```plain
 function 0() {
     [native code]
 }

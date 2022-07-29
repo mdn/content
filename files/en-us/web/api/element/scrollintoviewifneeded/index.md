@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var element = document.getElementById("my-el");
+const element = document.getElementById("my-el");
 
 element.scrollIntoViewIfNeeded(); // Centers the element in the visible area
 element.scrollIntoViewIfNeeded(false); // Aligns the element to the nearest edge in the visible area

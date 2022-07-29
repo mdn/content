@@ -52,7 +52,7 @@ Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as
 ```js
 for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
   const file = fileList[i];
-  // ...
+  // …
 }
 ```
 
@@ -316,7 +316,7 @@ function handleFiles() {
       }
       li.appendChild(img);
       const info = document.createElement("span");
-      info.innerHTML = this.files[i].name + ": " + this.files[i].size + " bytes";
+      info.innerHTML = `${this.files[i].name}: ${this.files[i].size} bytes`;
       li.appendChild(info);
     }
   }
@@ -430,7 +430,7 @@ Before actually transferring the data, several preparatory steps are taken:
 
 This example, which uses PHP on the server side and JavaScript on the client side, demonstrates asynchronous uploading of a file.
 
-```js
+```php
 <?php
 if (isset($_FILES['myFile'])) {
     // Example:
@@ -450,7 +450,7 @@ if (isset($_FILES['myFile'])) {
 
             xhr.open("POST", uri, true);
             xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
+                if (xhr.readyState === 4 && xhr.status === 200) {
                     alert(xhr.responseText); // handle response.
                 }
             };
@@ -480,7 +480,7 @@ if (isset($_FILES['myFile'])) {
 </head>
 <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here...</div>
+        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here</div>
     </div>
 </body>
 </html>

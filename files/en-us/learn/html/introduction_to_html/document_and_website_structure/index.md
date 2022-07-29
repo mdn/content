@@ -156,7 +156,7 @@ Our example seen above is represented by the following code (you can also [find 
           <li><a href="#">Oh I do like to be beside the sea</a></li>
           <li><a href="#">Although in the North of England</a></li>
           <li><a href="#">It never stops raining</a></li>
-          <li><a href="#">Oh well...</a></li>
+          <li><a href="#">Oh well…</a></li>
         </ul>
       </aside>
 
@@ -213,7 +213,7 @@ In this case, the editor's note is supposed to merely provide extra direction fo
       <img src="../products/3333-0985/thumb.png" alt="Silver earrings">
     </li>
     <li>
-      ...
+      …
     </li>
   </ul>
   <p>Total cost: $237.89</p>

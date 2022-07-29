@@ -93,14 +93,14 @@ someFile.lastModified;
 // 1519211809934
 // 1519211810362
 // 1519211811670
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 someFile.lastModified;
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// …
 ```
 
 In Firefox, you can also enabled `privacy.resistFingerprinting`, the

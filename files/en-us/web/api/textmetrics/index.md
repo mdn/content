@@ -67,7 +67,7 @@ ctx.font = '25px serif';
 ctx.strokeStyle = 'red';
 
 baselines.forEach(function (baseline, index) {
-  let text = 'Abcdefghijklmnop (' + baseline + ')';
+  let text = `Abcdefghijklmnop (${baseline})`;
   let textMetrics = ctx.measureText(text);
   let y = 50 + index * 50;
   ctx.beginPath();
@@ -103,8 +103,7 @@ const textMetrics = ctx.measureText(text);
 console.log(textMetrics.width);
 // 459.8833312988281
 
-console.log(Math.abs(textMetrics.actualBoundingBoxLeft) +
-            Math.abs(textMetrics.actualBoundingBoxRight));
+console.log(textMetrics.actualBoundingBoxRight + textMetrics.actualBoundingBoxLeft);
 // 462.8833333333333
 ```
 

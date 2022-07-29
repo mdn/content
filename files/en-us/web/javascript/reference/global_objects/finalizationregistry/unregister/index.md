@@ -50,8 +50,8 @@ token, then later unregistering it via `unregister`:
 
 ```js
 class Thingy {
-    #cleanup = label => {
-    //         ^^^^^−−−−− held value
+    #cleanup = (label) => {
+    //          ^^^^^−−−−− held value
         console.error(
             `The \`release\` method was never called for the object with the label "${label}"`
         );
@@ -86,7 +86,7 @@ unregister token:
  {
     //         ^^^^−−−−− held value
         console.error(
-            `The \`release\` method was never called for the \`Thingy\` for the file "${file.name}"`
+            `The "release" method was never called for the "Thingy" for the file "${file.name}"`
         );
     };
     #registry = new FinalizationRegistry(this.#cleanup);

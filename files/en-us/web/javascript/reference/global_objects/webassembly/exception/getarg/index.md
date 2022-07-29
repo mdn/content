@@ -17,7 +17,7 @@ The **`getArg()`** prototype method of the {{jsxref("WebAssembly.Exception", "Ex
 
 The method passes a {{jsxref("WebAssembly.Tag")}} and will only succeed if the thrown `Exception` was created using the same tag, otherwise it will throw a `TypeError`.
 This ensures that the exception can only be read if the calling code has access to the tag.
-Tags that are neither imported into or exported from callee code are internal, and their associated runtime exceptions cannot be queried using this method!
+Tags that are neither imported into or exported from the WebAssembly code are internal, and their associated [`WebAssembly.Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) cannot be queried using this method!
 
 > **Note:** It is not enough that the tag has an identical sequence of data types — it must have the same _identity_ (be the same tag) as was used to create the exception.
 
@@ -90,10 +90,10 @@ const importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.run());
   })
-  .catch(e => {
+  .catch((e) => {
     console.error(e);
     console.log(`getArg 0 : ${e.getArg(tagToImport, 0)}`);
   });
@@ -136,12 +136,12 @@ To make it a little more "safe", here we also test that we have the right tag us
 let tagExportedFromWasm;
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"))
-  .then(obj => {
+  .then((obj) => {
     // Import the tag using its name from the WebAssembly module
     tagExportedFromWasm = obj.instance.exports.exptag;
     console.log(obj.instance.exports.run());
   })
-  .catch(e => {
+  .catch((e) => {
     console.error(e);
     // If the tag is correct, get the value
     if (e.is(tagExportedFromWasm)) {

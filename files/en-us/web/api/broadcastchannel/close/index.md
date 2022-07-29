@@ -28,7 +28,7 @@ channel.close();
 
 ```js
 // Connect to a channel
-var bc = new BroadcastChannel('test_channel');
+const bc = new BroadcastChannel('test_channel');
 
 // More operations (like postMessage, …)
 

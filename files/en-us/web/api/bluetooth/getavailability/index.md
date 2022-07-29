@@ -21,7 +21,7 @@ The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface ret
 ## Syntax
 
 ```js
-var readerPromise = Bluetooth.getAvailability();
+getAvailability()
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ The following snippet prints out a message in the console specifying whether or 
 Bluetooth is supported:
 
 ```js
-navigator.bluetooth.getAvailability().then(available => {
+navigator.bluetooth.getAvailability().then((available) => {
   if (available)
       console.log("This device supports Bluetooth!");
   else

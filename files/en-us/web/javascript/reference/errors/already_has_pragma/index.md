@@ -14,7 +14,7 @@ The JavaScript warning "-file- is being assigned a //# sourceMappingURL, but alr
 
 ## Message
 
-```html
+```
 Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
 ```
 
@@ -40,7 +40,7 @@ Setting a source map by using a comment in the file:
 
 Or, alternatively, you can set a header to your JavaScript file:
 
-```js example-good
+```plain example-good
 X-SourceMap: /path/to/file.js.map
 ```
 

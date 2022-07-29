@@ -35,11 +35,11 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the prog
 ### Checking a program
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var program = gl.createProgram();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const program = gl.createProgram();
 
-// ...
+// …
 
 gl.isProgram(program);
 ```

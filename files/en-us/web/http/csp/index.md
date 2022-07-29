@@ -8,7 +8,7 @@ tags:
   - Guide
   - Security
   - access
-browser-compat: http.headers.csp
+browser-compat: http.headers.Content-Security-Policy
 ---
 {{HTTPSidebar}}
 
@@ -203,7 +203,7 @@ The HTML of `signup.html` looks like this:
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    ... Content ...
+    Here be content.
   </body>
 </html>
 ```
@@ -211,7 +211,7 @@ The HTML of `signup.html` looks like this:
 Can you spot the mistake? Stylesheets are allowed to be loaded only from `cdn.example.com`, yet the website tries to load one from its own origin (`http://example.com`).
 A browser capable of enforcing CSP would send the following violation report as a POST request to `http://example.com/_/csp-reports`, when the document is visited:
 
-```js
+```json
 {
   "csp-report": {
     "document-uri": "http://example.com/signup.html",

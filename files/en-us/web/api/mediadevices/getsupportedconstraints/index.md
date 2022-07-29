@@ -14,7 +14,7 @@ tags:
   - getSupportedConstraints
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The
 **`getSupportedConstraints()`**
@@ -61,10 +61,10 @@ let constraintList = document.getElementById("constraintList");
 let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 
 for (let constraint in supportedConstraints) {
-  if (supportedConstraints.hasOwnProperty(constraint)) {
+  if (Object.hasOwn(supportedConstraints, constraint)) {
     let elem = document.createElement("li");
 
-    elem.innerHTML = "<code>" + constraint + "</code>";
+    elem.innerHTML = `<code>${constraint}</code>`;
     constraintList.appendChild(elem);
   }
 }

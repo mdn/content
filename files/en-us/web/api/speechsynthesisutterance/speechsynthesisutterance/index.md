@@ -40,14 +40,14 @@ const voiceSelect = document.querySelector('select');
 
 const voices = synth.getVoices();
 
-  ...
+// ...
 
 inputForm.onsubmit = function(event) {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
+  for (i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }

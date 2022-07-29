@@ -76,7 +76,7 @@ The following code snippet shows creation of a {{domxref("SharedWorker")}} objec
 the `SharedWorker()` constructor and subsequent usage of the object:
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker('worker.js');
 
 myWorker.port.start();
 
@@ -109,4 +109,3 @@ For a full example, see our [Basic shared worker example](https://github.com/mdn
 ## See also
 
 - The {{domxref("SharedWorker")}} interface it belongs to.
-- [another multiply demo](https://anlexn.github.io/shared-worker-mdn/)

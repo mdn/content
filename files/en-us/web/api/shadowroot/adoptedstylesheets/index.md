@@ -25,7 +25,6 @@ For the purpose of determining the final computed CSS of any element, they are c
 
 Only stylesheets created using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet), and from within the same parent {{domxref("Document")}} as the shadow root, may be adopted.
 
-
 ## Value
 
 The value is an array of {{domxref("CSSStyleSheet()")}} instances that must have been created using the {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} constructor within the context of the shadow root's parent {{domxref("Document")}}.
@@ -65,7 +64,7 @@ Below we append a new rule to the same sheet using {{domxref("CSSStyleSheet.inse
  // The document will now have blue background.
 ```
 
-### Append a new stylesheet 
+### Append a new stylesheet
 
 To _append_ a stylesheet to the `adoptedStyleSheets` property we have to create and assign a new array that contains both the original stylesheets in the property and the new style sheet.
 This is demonstrated for our shadow root object below using spread-syntax:

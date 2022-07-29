@@ -63,7 +63,7 @@ So instead of the traditional model, many websites use JavaScript APIs to reques
 
 ![Using fetch to update pages](fetch-update.svg)
 
-The main API here is the [Fetch API](/en-US/docs/Web/API/Fetch_API). This enables JavaScript running in a page to make an [HTTP](/en-US/docs/Web/HTTP) request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using [DOM manipulation APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents). The data requested is often [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON). which is a good format for transferring structured data, but can also be HTML or just text.
+The main API here is the [Fetch API](/en-US/docs/Web/API/Fetch_API). This enables JavaScript running in a page to make an [HTTP](/en-US/docs/Web/HTTP) request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using [DOM manipulation APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents). The data requested is often [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON), which is a good format for transferring structured data, but can also be HTML or just text.
 
 This is a common pattern for data-driven sites such as Amazon, YouTube, eBay, and so on. With this model:
 
@@ -122,7 +122,7 @@ Finally we're ready to use the Fetch API:
 fetch(url)
   // fetch() returns a promise. When we have received a response from the server,
   // the promise's `then()` handler is called with the response.
-  .then( response => {
+  .then((response) => {
     // Our handler throws an error if the request did not succeed.
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -134,10 +134,10 @@ fetch(url)
   })
   // When response.text() has succeeded, the `then()` handler is called with
   // the text, and we copy it into the `poemDisplay` box.
-  .then( text => poemDisplay.textContent = text )
+  .then((text) => poemDisplay.textContent = text)
   // Catch any errors that might happen, and display a message
   // in the `poemDisplay` box.
-  .catch( error => poemDisplay.textContent = `Could not fetch verse: ${error}`);
+  .catch((error) => poemDisplay.textContent = `Could not fetch verse: ${error}`);
 ```
 
 There's quite a lot to unpack in here.
@@ -181,14 +181,14 @@ The first block that uses Fetch can be found at the start of the JavaScript:
 
 ```js
 fetch('products.json')
-  .then( response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.json();
   })
-  .then( json => initialize(json) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+  .then((json) => initialize(json))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 The `fetch()` function returns a promise. If this completes successfully, the function inside the first `.then()` block contains the `response` returned from the network.
@@ -215,14 +215,14 @@ The second Fetch block can be found inside the `fetchBlob()` function:
 
 ```js
 fetch(url)
-  .then( response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.blob();
   })
-  .then( blob => showProduct(blob, product) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+  .then((blob) => showProduct(blob, product))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 This works in much the same way as the previous one, except that instead of using {{domxref("Response.json","json()")}}, we use {{domxref("Response.blob","blob()")}}. In this case we want to return our response as an image file, and the data format we use for that is [Blob](/en-US/docs/Web/API/Blob) (the term is an abbreviation of "Binary Large Object" and can basically be used to represent large file-like objects, such as images or video files).

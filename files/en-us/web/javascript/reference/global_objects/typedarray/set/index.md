@@ -44,8 +44,10 @@ set(typedarray, targetOffset)
 
 ### Exceptions
 
-A {{jsxref("RangeError")}}, if the `targetOffset` is set such as it would store
-beyond the end of the typed array.
+- {{jsxref("RangeError")}}
+  - : Thrown if one of the two conditions is met:
+    - An element will be stored beyond the end of the typed array, either because `targetOffset` is too large or because `array` or `typedarray` is too large.
+    - `targetOffset` is negative.
 
 ## Examples
 

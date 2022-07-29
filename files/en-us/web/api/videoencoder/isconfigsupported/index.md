@@ -29,17 +29,15 @@ isConfigSupported(config)
 
 A {{jsxref("Promise")}} that resolves with an object containing the following members:
 
-- `supported`{{Optional_Inline}}
+- `supported` {{optional_inline}}
   - : A boolean value which is `true` if the given config is supported by the encoder.
-- `config`{{Optional_Inline}}
+- `config` {{optional_inline}}
   - : A copy of the given config with all the fields recognized by the encoder.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the provided `config` is invalid; that is, if doesn't have required
-  values (such as an empty `codec` field) or has invalid values (such as a
-  negative `width`)
+  - : Thrown if the provided `config` is invalid; that is, if doesn't have required values (such as an empty `codec` field) or has invalid values (such as a negative `width`)
 
 ## Examples
 

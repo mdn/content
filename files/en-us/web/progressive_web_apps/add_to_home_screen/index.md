@@ -83,7 +83,7 @@ The fields needed for A2HS are as follows:
 
 The manifest for our sample app looks like this:
 
-```js
+```json
 {
   "background_color": "purple",
   "description": "Shows random fox pictures. Hey, at least it isn't cats.",

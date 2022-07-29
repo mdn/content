@@ -72,7 +72,7 @@ There are two situations in which you need to obtain an `XRReferenceSpace`. The 
 ```js
 xrSession.requestReferenceSpace("local").then((refSpace) => {
   xrReferenceSpace = refSpace;
-  /* ... */
+  // …
 });
 ```
 

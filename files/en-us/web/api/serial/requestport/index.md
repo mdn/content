@@ -29,7 +29,7 @@ requestPort(options)
 
     - `filters`
 
-      - : A list of objects containing vendor and product IDs used to search for attached devices. The [USB Implementors Forum](https://www.usb.org/) assigns IDs to specific companies. Each company assigns IDS to it's products. Filters contain the following values:
+      - : A list of objects containing vendor and product IDs used to search for attached devices. The [USB Implementors Forum](https://www.usb.org/) assigns IDs to specific companies. Each company assigns IDS to its products. Filters contain the following values:
 
         - `usbVendorId`
           - : An unsigned short integer that identifies a USB device vendor.
@@ -53,7 +53,7 @@ The following example shows a filter being passed to `requestPort()` with a USB 
 
 ```js
 button.addEventListener('click', () => {
-  const usbVendorId = ...;
+  const usbVendorId = 0xABCD;
   navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
     // Connect to `port` or add it to the list of available ports.
   }).catch((e) => {

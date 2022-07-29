@@ -17,7 +17,7 @@ tags:
   - track
 browser-compat: api.MediaStream.getAudioTracks
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The **`getAudioTracks()`** method of the
 {{domxref("MediaStream")}} interface returns a sequence that represents all the
@@ -59,7 +59,7 @@ first audio track found on the stream.
 
 ```js
 navigator.mediaDevices.getUserMedia({audio: true, video: true})
-.then(mediaStream => {
+.then((mediaStream) => {
   document.querySelector('video').srcObject = mediaStream;
   // Stop the audio stream after 5 seconds
   setTimeout(() => {

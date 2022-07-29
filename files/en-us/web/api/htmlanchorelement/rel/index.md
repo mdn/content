@@ -25,10 +25,10 @@ A string.
 ## Examples
 
 ```js
-var anchors = document.getElementsByTagName("a");
-var length = anchors.length;
-for (var i = 0; i < length; i++) {
-  alert("Rel: " + anchors[i].rel);
+const anchors = document.getElementsByTagName("a");
+const length = anchors.length;
+for (let i = 0; i < length; i++) {
+  alert(`Rel: ${anchors[i].rel}`);
 }
 ```
 

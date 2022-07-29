@@ -80,9 +80,9 @@ function displayReports(reports) {
   const list = document.createElement('ul');
   outputElem.appendChild(list);
 
-  for(let i = 0; i < reports.length; i++) {
+  for (let i = 0; i < reports.length; i++) {
     let listItem = document.createElement('li');
-    let textNode = document.createTextNode('Report ' + (i + 1) + ', type: ' + reports[i].type);
+    let textNode = document.createTextNode(`Report ${i + 1}, type: ${reports[i].type}`);
     listItem.appendChild(textNode);
     let innerList = document.createElement('ul');
     listItem.appendChild(innerList);
@@ -91,7 +91,7 @@ function displayReports(reports) {
     for (let key in reports[i].body) {
       let innerListItem = document.createElement('li');
       let keyValue = reports[i].body[key];
-      innerListItem.textContent = key + ': ' + keyValue;
+      innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);
     }
   }

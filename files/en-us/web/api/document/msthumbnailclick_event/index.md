@@ -47,7 +47,7 @@ Pointer to an IHTMLEventObj interface for the current event.
 ```js
 function thumbnailClickHandler(evt)
 {
-    alert ("Clicked button: " + evt.buttonID);
+    alert(`Clicked button: ${evt.buttonID}`);
 }
 document.addEventListener('msthumbnailclick', thumbnailClickHandler);
 ```
@@ -66,7 +66,7 @@ window.external.msSiteModeClearIconOverlay();
 handlerdocument.addEventListener('msthumbnailclick', onButtonClicked, false);
 
 // add the buttons
-var btnPlay = window.external.msSiteModeAddThumbBarButton(iconUri, toolTip);
+const btnPlay = window.external.msSiteModeAddThumbBarButton(iconUri, toolTip);
 
 // refresh the taskbar
 window.external.msSiteModeShowThumbBar();

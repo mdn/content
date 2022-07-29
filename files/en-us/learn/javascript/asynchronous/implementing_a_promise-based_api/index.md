@@ -20,7 +20,7 @@ In the last article we discussed how to use APIs that return promises. In this a
     </tr>
     <tr>
       <th scope="row">Objective:</th>
-      <td>To understand how implement promise-based APIs.</td>
+      <td>To understand how to implement promise-based APIs.</td>
     </tr>
   </tbody>
 </table>
@@ -140,8 +140,8 @@ function alarm(person, delay) {
 
 button.addEventListener('click', () => {
   alarm(name.value, delay.value)
-    .then(message => output.textContent = message)
-    .catch(error => output.textContent = `Couldn't set alarm: ${error}`);
+    .then((message) => output.textContent = message)
+    .catch((error) => output.textContent = `Couldn't set alarm: ${error}`);
 });
 ```
 

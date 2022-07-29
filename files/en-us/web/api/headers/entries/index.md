@@ -37,13 +37,13 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ```js
 // Create a test Headers object
-var myHeaders = new Headers();
+const myHeaders = new Headers();
 myHeaders.append('Content-Type', 'text/xml');
 myHeaders.append('Vary', 'Accept-Language');
 
 // Display the key/value pairs
-for (var pair of myHeaders.entries()) {
-   console.log(pair[0]+ ': '+ pair[1]);
+for (const pair of myHeaders.entries()) {
+   console.log(`${pair[0]}: ${pair[1]}`);
 }
 ```
 

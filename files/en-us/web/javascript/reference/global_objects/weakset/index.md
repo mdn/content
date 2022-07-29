@@ -43,7 +43,7 @@ function execRecursively(fn, subject, _refs = null){
   fn(subject);
   if("object" === typeof subject){
     _refs.add(subject);
-    for(let key in subject)
+    for (let key in subject)
       execRecursively(fn, subject[key], _refs);
   }
 }
@@ -56,7 +56,7 @@ const foo = {
 };
 
 foo.bar.baz = foo; // Circular reference!
-execRecursively(obj => console.log(obj), foo);
+execRecursively((obj) => console.log(obj), foo);
 ```
 
 Here, a `WeakSet` is created on the first run, and passed along with every subsequent function call (using the internal `_refs` parameter).

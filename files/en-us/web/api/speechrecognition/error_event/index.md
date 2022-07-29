@@ -17,9 +17,9 @@ The **`error`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { })
+addEventListener('error', (event) => { })
 
-onerror = event => { }
+onerror = (event) => { }
 ```
 
 ## Event type
@@ -42,10 +42,10 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `error` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('error', function(event) {
-  console.log('Speech recognition error detected: ' + event.error);
+  console.log(`Speech recognition error detected: ${event.error}`);
 });
 ```
 
@@ -53,7 +53,7 @@ Or use the `onerror` event handler property:
 
 ```js
 recognition.onerror = function(event) {
-  console.log('Speech recognition error detected: ' + event.error);
+  console.log(`Speech recognition error detected: ${event.error}`);
 }
 ```
 

@@ -22,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('notificationclick', event => { });
+addEventListener('notificationclick', (event) => { });
 
-onnotificationclick = event => { };
+onnotificationclick = (event) => { };
 ```
 
 ## Event type
@@ -56,9 +56,8 @@ self.addEventListener('notificationclick', function(event) {
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client)
+    for (const client of clientList) {
+      if (client.url === '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
@@ -79,9 +78,8 @@ self.onnotificationclick = function(event) {
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client)
+    for (const client of clientList) {
+      if (client.url === '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)

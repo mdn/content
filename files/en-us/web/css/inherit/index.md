@@ -30,17 +30,17 @@ For [inherited properties](/en-US/docs/Web/CSS/inheritance#inherited_properties)
 /* Make second-level headers green */
 h2 { color: green; }
 
-/* ...but leave those in the sidebar alone so they use their parent's color */
+/* Leave those in the sidebar alone so they use their parent's color */
 #sidebar h2 { color: inherit; }
 ```
 
-In this example, the `h2` elements inside the sidebar might be different colors. For example, if one of them were the child of a `div` matched by the rule ...
+In this example, the `h2` elements inside the sidebar might be different colors. For example, consider one of them that would by the child of a `div` matched by the rule:
 
 ```css
 div#current { color: blue; }
 ```
 
-... it would be blue.
+Then, it would be blue.
 
 ## Specifications
 

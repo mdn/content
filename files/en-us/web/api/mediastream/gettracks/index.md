@@ -13,7 +13,7 @@ tags:
   - getTracks
 browser-compat: api.MediaStream.getTracks
 ---
-{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The **_`getTracks()`_** method of the
 {{domxref("MediaStream")}} interface returns a sequence that represents all the
@@ -39,7 +39,7 @@ An array of {{domxref("MediaStreamTrack")}} objects.
 
 ```js
 navigator.mediaDevices.getUserMedia({audio: false, video: true})
-.then(mediaStream => {
+.then((mediaStream) => {
   document.querySelector('video').srcObject = mediaStream;
   // Stop the stream after 5 seconds
   setTimeout(() => {

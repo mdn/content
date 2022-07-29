@@ -29,7 +29,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 2. Next, let's create a simple HTML file called `index.html` in the same directory as your wasm file (can use our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) if you haven't got one easily available).
 3. Now, to help us understand what is going on here, let's look at the text representation of our wasm module (which we also meet in [Converting WebAssembly format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm#a_first_look_at_the_text_format)):
 
-    ```js
+    ```wasm
     (module
       (func $i (import "imports" "imported_func") (param i32))
       (func (export "exported_func")
@@ -41,7 +41,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 
     ```js
     const importObject = {
-      imports: { imported_func: arg => console.log(arg) }
+      imports: { imported_func: (arg) => console.log(arg) }
     };
     ```
 
@@ -55,7 +55,7 @@ Add the following to your script, below the first block:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+.then((obj) => obj.instance.exports.exported_func());
 ```
 
 The net result of this is that we call our exported WebAssembly function `exported_func`, which in turn calls our imported JavaScript function `imported_func`, which logs the value provided inside the WebAssembly instance (42) to the console. If you save your example code now and load it a browser that supports WebAssembly, you'll see this in action!
@@ -71,11 +71,11 @@ These methods don't directly access the byte code, so require an extra step to t
 The equivalent code would look like this:
 
 ```js
-fetch('simple.wasm').then(response =>
+fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
-).then(bytes =>
+).then((bytes) =>
   WebAssembly.instantiate(bytes, importObject)
-).then(results => {
+).then((results) => {
   results.instance.exports.exported_func();
 });
 ```
@@ -90,7 +90,7 @@ In addition to viewing WebAssembly as text, developers are able to debug (place 
 
 ## Memory
 
-In the low-level memory model of WebAssembly, memory is represented as a contiguous range of untyped bytes called [Linear Memory](https://webassembly.github.io/spec/core/exec/index.html) that are read and written by [load and store instructions](https://webassembly.github.io/spec/core/exec/index.html-accesses#linear-memory-accesses) inside the module. In this memory model, any load or store can access any byte in the entire linear memory, which is necessary to faithfully represent C/C++ concepts like pointers.
+In the low-level memory model of WebAssembly, memory is represented as a contiguous range of untyped bytes called [Linear Memory](https://webassembly.github.io/spec/core/exec/index.html) that are read and written by [load and store instructions](https://webassembly.github.io/spec/core/exec/instructions.html#memory-instructions) inside the module. In this memory model, any load or store can access any byte in the entire linear memory, which is necessary to faithfully represent C/C++ concepts like pointers.
 
 Unlike a native C/C++ program, however, where the available memory range spans the entire process, the memory accessible by a particular WebAssembly Instance is confined to one specific — potentially very small — range contained by a WebAssembly Memory object. This allows a single web app to use multiple independent libraries — each of which are using WebAssembly internally — to have separate memories that are fully isolated from each other. In addition, newer implementations can also create [shared memories](/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories), which can be transferred between Window and Worker contexts using [`postMessage()`](/en-US/docs/Web/API/Window/postMessage), and used in multiple places.
 
@@ -147,7 +147,7 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 
     ```js
     WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-    .then(results => {
+    .then((results) => {
       // add code here
     });
     ```

@@ -34,13 +34,13 @@ A {{domxref("Node")}} object or `null`.
 ## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-var node = treeWalker.nextNode(); // returns the first child of root, as it is the next node in document order
+const node = treeWalker.nextNode(); // returns the first child of root, as it is the next node in document order
 ```
 
 ## Specifications

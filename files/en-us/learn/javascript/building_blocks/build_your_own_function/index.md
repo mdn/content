@@ -176,7 +176,7 @@ You've now got your function definition written into your `<script>` element jus
     btn.addEventListener('click', displayMessage);
     ```
 
-    In a similar way to our `closeBtn.addEventListener...` line inside the function, here we are calling some code in response to a button being clicked. But in this case, instead of calling an anonymous function containing some code, we are calling our `displayMessage()` function by name.
+    In a similar way to our closeBtn's click event handler, here we are calling some code in response to a button being clicked. But in this case, instead of calling an anonymous function containing some code, we are calling our `displayMessage()` function by name.
 
 6. Try saving and refreshing the page — now you should see the message box appear when you click the button.
 
@@ -256,7 +256,7 @@ On to the next parameter. This one is going to involve slightly more work — we
     width: 242px;
     ```
 
-3. Next, add the following lines inside the `.msgBox p { ... }` rule:
+3. Next, add the following lines inside the `.msgBox p { }` rule:
 
     ```css
     padding-left: 82px;
@@ -278,7 +278,7 @@ On to the next parameter. This one is going to involve slightly more work — we
     }
     ```
 
-    Here, if the `msgType` parameter is set as `'warning'`, the warning icon is displayed and the panel's background color is set to red. If it is set to `'chat'`, the chat icon is displayed and the panel's background color is set to aqua blue. If the `msgType` parameter is not set at all (or to something different), then the `else { ... }` part of the code comes into play, and the paragraph is given default padding and no icon, with no background panel color set either. This provides a default state if no `msgType` parameter is provided, meaning that it is an optional parameter!
+    Here, if the `msgType` parameter is set as `'warning'`, the warning icon is displayed and the panel's background color is set to red. If it is set to `'chat'`, the chat icon is displayed and the panel's background color is set to aqua blue. If the `msgType` parameter is not set at all (or to something different), then the `else { }` part of the code comes into play, and the paragraph is given default padding and no icon, with no background panel color set either. This provides a default state if no `msgType` parameter is provided, meaning that it is an optional parameter!
 
 5. Let's test out our updated function, try updating the `displayMessage()` call from this:
 

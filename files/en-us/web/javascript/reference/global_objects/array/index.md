@@ -69,9 +69,13 @@ In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but ar
 - {{jsxref("Array.prototype.filter()")}}
   - : Returns a new array containing all elements of the calling array for which the provided filtering function returns `true`.
 - {{jsxref("Array.prototype.find()")}}
-  - : Returns the found `element` in the calling array, if some element in the array satisfies the testing function, or `undefined` if not found.
+  - : Returns the value of the first element in the array that satisfies the provided testing function, or `undefined` if no appropriate element is found.
 - {{jsxref("Array.prototype.findIndex()")}}
-  - : Returns the found index in the calling array, if an element in the array satisfies the testing function, or `-1` if not found.
+  - : Returns the index of the first element in the array that satisfies the provided testing function, or `-1` if no appropriate element was found.
+- {{jsxref("Array.prototype.findLast()")}}
+  - : Returns the value of the last element in the array that satisfies the provided testing function, or `undefined` if no appropriate element is found.
+- {{jsxref("Array.prototype.findLastIndex()")}}
+  - : Returns the index of the last element in the array that satisfies the provided testing function, or `-1` if no appropriate element was found.
 - {{jsxref("Array.prototype.flat()")}}
   - : Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 - {{jsxref("Array.prototype.flatMap()")}}
@@ -470,7 +474,7 @@ The result is an object that has properties named after the unique strings retur
 Each property is assigned an array containing the elements in the group.
 
 ```js
-let result = inventory.group( ({ type }) => type );
+let result = inventory.group(({ type }) => type);
 console.log(result.vegetables)
 // expected output: Array [Object { name: "asparagus", type: "vegetables" }]
 ```
@@ -664,7 +668,7 @@ The properties and elements returned from this match are as follows:
       <td><code>"dbBd"</code></td>
     </tr>
     <tr>
-      <td><code>[1], ...[n]</code><br />{{ReadOnlyInline}}</td>
+      <td><code>[1], …[n]</code><br />{{ReadOnlyInline}}</td>
       <td>
         Elements that specify the parenthesized substring matches (if included)
         in the regular expression. The number of possible parenthesized

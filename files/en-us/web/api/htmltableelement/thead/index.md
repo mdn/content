@@ -24,7 +24,7 @@ A {{domxref("HTMLTableSectionElement")}}.
 
 ```js
 if (table.tHead == my_head_el) {
-  // ...
+  // …
 }
 ```
 

@@ -41,8 +41,6 @@ class WordCount extends HTMLParagraphElement {
     super();
 
     // Element functionality written in here
-
-    ...
   }
 }
 ```
@@ -54,7 +52,7 @@ You'll learn more about these in the [Using the lifecycle callbacks](#using_the_
 There are two types of custom elements:
 
 - **Autonomous custom elements** are standalone — they don't inherit from standard HTML elements. You use these on a page by literally writing them out as an HTML element. For example `<popup-info>`, or `document.createElement("popup-info")`.
-- **Customized built-in elements** inherit from basic HTML elements. To create one of these, you have to specify which element they extend (as implied in the examples above), and they are used by writing out the basic element but specifying the name of the custom element in the {{htmlattrxref("is")}} attribute (or property). For example `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
+- **Customized built-in elements** inherit from basic HTML elements. To create one of these, you have to specify which element they extend (as implied in the examples above), and they are used by writing out the basic element but specifying the name of the custom element in the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute (or property). For example `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
 
 ## Working through some simple examples
 
@@ -73,8 +71,6 @@ class PopUpInfo extends HTMLElement {
     super();
 
     // write element functionality in here
-
-    ...
   }
 }
 ```
@@ -160,8 +156,6 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // write element functionality in here
-
-    ...
   }
 }
 ```

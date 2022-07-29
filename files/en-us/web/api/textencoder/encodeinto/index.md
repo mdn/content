@@ -54,13 +54,14 @@ solution is [`TypedArray.prototype.subarray()`](/en-US/docs/Web/JavaScript/Refer
 
 ```js
 const encoder = new TextEncoder();
+
 function encodeIntoAtPosition(string, u8array, position) {
     return encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
 }
 
 const u8array = new Uint8Array(8);
 encodeIntoAtPosition("hello", u8array, 2);
-console.log( "" + u8array.join() ); // 0,0,104,101,108,108,111,0
+console.log(u8array.join()); // 0,0,104,101,108,108,111,0
 ```
 
 ## Buffer sizing
@@ -121,6 +122,7 @@ string if the JavaScript string contained U+0000. Observe:
 
 ```js
 const encoder = new TextEncoder();
+
 function encodeIntoWithSentinel(string, u8array, position) {
     const stats = encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
     if (stats.written < u8array.length) u8array[stats.written] = 0; // append null if room
@@ -144,9 +146,9 @@ const textEncoder = new TextEncoder();
 const utf8 = new Uint8Array(string.length);
 
 let encodedResults = textEncoder.encodeInto(string, utf8);
-resultPara.textContent += 'Bytes read: ' + encodedResults.read +
-                          ' | Bytes written: ' + encodedResults.written +
-                          ' | Encoded result: ' + utf8;
+resultPara.textContent += `Bytes read: ${encodedResults.read}` +
+    ` | Bytes written: ${encodedResults.written}` +
+    ` | Encoded result: ${utf8}`;
 ```
 
 {{EmbedLiveSample('Examples')}}

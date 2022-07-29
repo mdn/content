@@ -31,8 +31,8 @@ A {{domxref("DOMHighResTimeStamp")}} object.
 ## Examples
 
 ```js
-var frameData = new VRFrameData();
-var vrDisplay;
+const frameData = new VRFrameData();
+let vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
   vrDisplay = displays[0];
@@ -57,7 +57,7 @@ function drawVRScene() {
   // and do something with it
   framedata.timestamp
 
-    ...
+  // …
 
   // WebVR: Indicates that we are ready to present the rendered frame to the VR display
   vrDisplay.submitFrame();

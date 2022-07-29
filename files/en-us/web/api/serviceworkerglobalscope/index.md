@@ -49,7 +49,7 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 - {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}}
   - : Occurs when a user clicks on a displayed notification.
 - `notificationclose`
-  - : Occurs — when a user closes a displayed notification.
+  - : Occurs when a user closes a displayed notification.
 - {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}}
   - : Triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.
 - {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}}
@@ -86,7 +86,7 @@ self.addEventListener('fetch', function(event) {
 
         return response;
       }
-      console.log('No response found in cache. About to fetch from network...');
+      console.log('No response found in cache. About to fetch from network…');
 
       return fetch(event.request).then(function(response) {
         console.log('Response from network is:', response);

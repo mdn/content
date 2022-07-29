@@ -19,7 +19,7 @@ create a class that is a child of another class.
 ## Syntax
 
 ```js
-class ChildClass extends ParentClass { /* ... */ }
+class ChildClass extends ParentClass { /* … */ }
 ```
 
 ## Description
@@ -45,7 +45,7 @@ class ModernClass {
 class AnotherChildClass extends ModernClass {}
 ```
 
-The `.prototype` of the `ParentClass` must be an {{jsxref("Object")}} or {{jsxref("null")}}.
+The `.prototype` of the `ParentClass` must be an {{jsxref("Object")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ```js
 function ParentClass() {}
@@ -75,6 +75,27 @@ Object.getPrototypeOf(ChildClass) === ParentClass;
 // Allows inheritance of instance properties
 Object.getPrototypeOf(ChildClass.prototype) === ParentClass.prototype;
 ```
+
+The right-hand side of `extends` does not have to be an identifier. You can use any expression that evaluates to a constructor.
+
+```js
+class SomeClass extends class {
+  constructor() {
+    console.log("Base class");
+  }
+} {
+  constructor() {
+    super();
+    console.log("Derived class");
+  }
+}
+
+new SomeClass();
+// Base class
+// Derived class
+```
+
+This is often useful to create [mixins](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
 
 ## Examples
 
@@ -108,10 +129,9 @@ This example is extracted from this [live demo](https://googlechrome.github.io/s
 
 ```js
 class myDate extends Date {
-
   getFormattedDate() {
-    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    return this.getDate() + '-' + months[this.getMonth()] + '-' + this.getFullYear();
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
   }
 }
 ```

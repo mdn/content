@@ -101,7 +101,7 @@ function loadDictionaryForLanguage(appDataDirEntry, lang) {
   dictionary = null;
 
   appDataDirEntry.getDirectory("Dictionaries", {}, function(dirEntry) {
-    dirEntry.getFile(lang + "-dict.json", {}, function(fileEntry) {
+    dirEntry.getFile(`${lang}-dict.json`, {}, function(fileEntry) {
       fileEntry.file(function(dictFile) {
         let reader = new FileReader();
 
@@ -124,7 +124,7 @@ calls {{domxref("FileSystemDirectoryEntry.getFile", "getFile()")}} to get a
 {{domxref("FileSystemFileEntry")}} object representing the dictionary file; the success
 callback for this, in turn, creates a new {{domxref("FileReader")}} and uses it to load
 the contents of the file. When that is loaded successfully (as indicated by the
-{{event("loadend")}} event being fired), the loaded text is passed into
+{{domxref("FileReader/loadend_event", "loadend")}} event being fired), the loaded text is passed into
 {{jsxref("JSON.parse()")}} to be reconstituted into a JavaScript object.
 
 ## Specifications

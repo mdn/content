@@ -22,9 +22,9 @@ The **`cuechange`** event fires when a {{domxref("TextTrack")}} has changed the 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cuechange', event => { })
+addEventListener('cuechange', (event) => { })
 
-oncuechange = event => { }
+oncuechange = (event) => { }
 ```
 
 ## Event type
@@ -44,7 +44,7 @@ track.addEventListener('cuechange', function () {
 Or you can set the `oncuechange` event handler property:
 
 ```js
-track.oncuechange = event => {
+track.oncuechange = (event) => {
   let cues = track.activeCues; // array of current cues
 }
 ```

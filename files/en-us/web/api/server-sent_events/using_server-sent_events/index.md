@@ -38,7 +38,7 @@ evtSource.onmessage = function(event) {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
-  newElement.textContent = "message: " + event.data;
+  newElement.textContent = `message: ${event.data}`;
   eventList.appendChild(newElement);
 }
 ```
@@ -52,7 +52,7 @@ evtSource.addEventListener("ping", function(event) {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
   const time = JSON.parse(event.data).time;
-  newElement.textContent = "ping at " + time;
+  newElement.textContent = `ping at ${time}`;
   eventList.appendChild(newElement);
 });
 ```
@@ -95,7 +95,7 @@ while (true) {
 
   // Break the loop if the client aborted the connection (closed the page)
 
-  if ( connection_aborted() ) break;
+  if (connection_aborted()) break;
 
   sleep(1);
 }

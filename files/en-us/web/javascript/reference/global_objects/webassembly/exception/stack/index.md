@@ -14,11 +14,12 @@ browser-compat: javascript.builtins.WebAssembly.Exception.stack
 ---
 {{JSRef}} {{non-standard_header}}
 
-The read-only **`stack`** property of an object instance of type [`Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) _may_ contain a stack trace for an exception thrown from WebAssembly code.
+The read-only **`stack`** property of an object instance of type [`WebAssembly.Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) _may_ contain a stack trace.
 
-Exceptions thrown from WebAssembly code _may_ not include a stack trace by default.
+Exceptions from WebAssembly code do not include a stack trace by default.
+
 If WebAssembly code needs to provide a stack trace, it must call a JavaScript function to create the exception, passing `options.traceStack=true` parameter in the [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception).
-The virtual machine can then attach a stack trace to the exception when it is thrown.
+The virtual machine can then attach a stack trace to the exception object returned by the constructor.
 
 > **Note:** Stack traces are not normally sent from WebAssembly code to improve performance.
 > The ability to add stack traces to these exceptions is provided for developer tooling, and is not generally recommended for broader use.
@@ -82,27 +83,26 @@ const importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.run());
   })
-  .catch(e => {
+  .catch((e) => {
     console.log(`stack: ${e.stack}`);
   });
 
-/* Log output (something like):
-stack: throwExceptionWithStack@http://<url>/main.js:76:9
-@http://<url>/example.wasm:wasm-function[3]:0x73
-@http://<url>/main.js:82:38
-*/
+//Log output (something like):
+// stack: throwExceptionWithStack@http://<url>/main.js:76:9
+// @http://<url>/example.wasm:wasm-function[3]:0x73
+// @http://<url>/main.js:82:38
 ```
 
-The most "relevant" part of this code is the line where the Exception is created:
+The most "relevant" part of this code is the line where the exception is created:
 
 ```js
 new WebAssembly.Exception(tag, [param], {traceStack: true});
 ```
 
-Passing in `{traceStack: true}` tells the WebAssembly virtual machine that it should attach the stack to the exception that it is throwing.
+Passing in `{traceStack: true}` tells the WebAssembly virtual machine that it should attach a stack trace to the returned `WebAssembly.Exception`.
 Without this, the stack would be `undefined`.
 
 ## Browser compatibility

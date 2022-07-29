@@ -29,9 +29,9 @@ takes up to two arguments: callback functions for the success and failure cases 
 ```js
 p.then(onFulfilled[, onRejected]);
 
-p.then(value => {
+p.then((value) => {
   // fulfillment
-}, reason => {
+}, (reason) => {
   // rejection
 });
 ```
@@ -39,9 +39,9 @@ p.then(value => {
 ### Parameters
 
 - `onFulfilled` {{optional_inline}}
-  - : A {{jsxref("Function")}} called if the `Promise` is fulfilled. This function has one argument, the `fulfillment value`. If it is not a function, it is internally replaced with an _identity_ function (`x => x`) which simply passes the fulfillment value forward.
+  - : A {{jsxref("Function")}} called if the `Promise` is fulfilled. This function has one argument, the `fulfillment value`. If it is not a function, it is internally replaced with an _identity_ function (`(x) => x`) which simply passes the fulfillment value forward.
 - `onRejected` {{optional_inline}}
-  - : A {{jsxref("Function")}} called if the `Promise` is rejected. This function has one argument, the `rejection reason`. If it is not a function, it is internally replaced with a _thrower_ function (`x => { throw x; }`) which throws the rejection reason it received.
+  - : A {{jsxref("Function")}} called if the `Promise` is rejected. This function has one argument, the `rejection reason`. If it is not a function, it is internally replaced with a _thrower_ function (`(x) => { throw x; }`) which throws the rejection reason it received.
 
 ### Return value
 
@@ -74,22 +74,22 @@ method.
 // but its handlers will be triggered asynchronously as demonstrated by the console.logs
 const resolvedProm = Promise.resolve(33);
 
-let thenProm = resolvedProm.then(value => {
-    console.log("this gets called after the end of the main stack. the value received and returned is: " + value);
-    return value;
+const thenProm = resolvedProm.then((value) => {
+  console.log("this gets called after the end of the main stack. the value received and returned is: ", value);
+  return value;
 });
 // instantly logging the value of thenProm
 console.log(thenProm);
 
 // using setTimeout we can postpone the execution of a function to the moment the stack is empty
 setTimeout(() => {
-    console.log(thenProm);
+  console.log(thenProm);
 });
 
 // logs, in order:
-// Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+// Promise {[[PromiseStatus]]: "pending", [[PromiseResult]]: undefined}
 // "this gets called after the end of the main stack. the value received and returned is: 33"
-// Promise {[[PromiseStatus]]: "resolved", [[PromiseValue]]: 33}
+// Promise {[[PromiseStatus]]: "resolved", [[PromiseResult]]: 33}
 ```
 
 ## Description
@@ -109,9 +109,9 @@ const p1 = new Promise((resolve, reject) => {
   // reject(new Error("Error!"));
 });
 
-p1.then(value => {
+p1.then((value) => {
   console.log(value); // Success!
-}, reason => {
+}, (reason) => {
   console.error(reason); // Error!
 });
 ```
@@ -205,7 +205,7 @@ Promise.resolve()
   })
   .then(() => {
     console.log('Not called.');
-  }, error => {
+  }, (error) => {
     console.error('onRejected function called: ' + error.message);
   });
 ```
@@ -217,7 +217,7 @@ even though the previous Promise in the chain was rejected.
 ```js
 Promise.reject()
   .then(() => 99, () => 42) // onRejected returns 42 which is wrapped in a resolving Promise
-  .then(solution => console.log('Resolved with ' + solution)); // Resolved with 42
+  .then((solution) => console.log('Resolved with ' + solution)); // Resolved with 42
 ```
 
 In practice, it is often desirable to catch rejected promises rather than use
@@ -229,7 +229,7 @@ Promise.resolve()
     // Makes .then() return a rejected promise
     throw new Error('Oh no!');
   })
-  .catch(error => {
+  .catch((error) => {
     console.error('onRejected function called: ' + error.message);
   })
   .then(() => {
@@ -246,8 +246,8 @@ function fetch_current_data() {
   // exposes a similar API, except the fulfillment
   // value of this function's Promise has had more
   // work done on it.
-  return fetch('current-data.json').then(response => {
-    if (response.headers.get('content-type') != 'application/json') {
+  return fetch('current-data.json').then((response) => {
+    if (response.headers.get('content-type') !== 'application/json') {
       throw new TypeError();
     }
     const j = response.json();

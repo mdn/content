@@ -49,8 +49,8 @@ The following example shows a {{jsxref("Statements/while", "while")}} loop that 
 Thus, `n` takes on the values 1, 3, 7, and 12.
 
 ```js
-var i = 0;
-var n = 0;
+let i = 0;
+let n = 0;
 
 while (i < 5) {
   i++;
@@ -78,8 +78,8 @@ continue at the top of the `checkiandj` statement.
 See also {{jsxref("Statements/label", "label", "", 1)}}.
 
 ```js
-var i = 0;
-var j = 8;
+let i = 0;
+let j = 8;
 
 checkiandj: while (i < 4) {
   console.log('i: ' + i);
@@ -89,7 +89,7 @@ checkiandj: while (i < 4) {
     console.log('j: ' + j);
     j -= 1;
 
-    if ((j % 2) == 0)
+    if ((j % 2) === 0)
       continue checkj;
     console.log(j + ' is odd.');
   }
@@ -100,7 +100,7 @@ checkiandj: while (i < 4) {
 
 Output:
 
-```js
+```
 i: 0
 
 // start checkj

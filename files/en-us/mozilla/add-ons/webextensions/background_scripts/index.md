@@ -188,9 +188,9 @@ Message ports cannot prevent an event page from shutting down. If an extension u
 
 ```js
 browser.runtime.onMessage.addListener(function(message, callback) {
-  if (message == 'hello') {
+  if (message === 'hello') {
     sendResponse({greeting: 'welcome!'})
-  } else if (message == 'goodbye') {
+  } else if (message === 'goodbye') {
     browser.runtime.Port.disconnect();
   }
 });

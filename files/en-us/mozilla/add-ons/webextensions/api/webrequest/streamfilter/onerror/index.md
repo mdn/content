@@ -33,7 +33,7 @@ function listener(details) {
   // a extension would use "details.requestId"
   let filter = browser.webRequest.filterResponseData("12345");
 
-  filter.onerror = event => {
+  filter.onerror = (event) => {
     console.log(`Error: ${filter.error}`);
   }
 }
@@ -51,7 +51,7 @@ This example uses no `"blocking"`.
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onerror = event => {
+  filter.onerror = (event) => {
     console.log(`Error: ${filter.error}`); // Error: Invalid request ID
   }
 }

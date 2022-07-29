@@ -42,9 +42,9 @@ None ({{jsxref("undefined")}}).
 ### Basic example
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
-var documentFragment = range.extractContents();
+const documentFragment = range.extractContents();
 document.body.appendChild(documentFragment);
 ```
 
@@ -88,7 +88,7 @@ const list1 = document.getElementById('list1');
 const list2 = document.getElementById('list2');
 const button = document.getElementById('swap');
 
-button.addEventListener('click', e => {
+button.addEventListener('click', (e) => {
   selection = window.getSelection();
 
   for (let i = 0; i < selection.rangeCount; i++) {

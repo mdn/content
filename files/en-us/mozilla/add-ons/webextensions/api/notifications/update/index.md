@@ -87,7 +87,7 @@ browser.browserAction.onClicked.addListener(function () {
     browser.notifications.create(cakeNotification, {
       "type": "progress",
       "iconUrl": browser.extension.getURL("icons/cake-48.png"),
-      "title": "Your cake is being prepared...",
+      "title": "Your cake is being prepared…",
       "message": "Something something cake",
       "progress": progress
     });

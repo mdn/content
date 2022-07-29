@@ -42,7 +42,7 @@ A string representing the specified {{jsxref("Number")}} object.
 
 The {{jsxref("Number")}} object overrides the `toString()` method of the
 {{jsxref("Object")}} object. (It does _not_ inherit
-{{jsxref("Object.prototype.toString()")}}). For {{jsxref( "Number")}} objects, the
+{{jsxref("Object.prototype.toString()")}}). For {{jsxref("Number")}} objects, the
 `toString()` method returns a string representation of the object in the
 specified radix.
 
@@ -68,20 +68,31 @@ separate the decimal places.
 ### Using toString
 
 ```js
-let count = 10
+const count = 10;
 
-console.log(count.toString())    // displays '10'
-console.log((17).toString())     // displays '17'
-console.log((17.2).toString())   // displays '17.2'
+console.log(count.toString());    // displays '10'
+console.log((17).toString());     // displays '17'
+console.log((17.2).toString());   // displays '17.2'
 
-let x = 6
+const x = 6;
 
-console.log(x.toString(2))       // displays '110'
-console.log((254).toString(16))  // displays 'fe'
+console.log(x.toString(2));       // displays '110'
+console.log((254).toString(16));  // displays 'fe'
 
-console.log((-10).toString(2))   // displays '-1010'
-console.log((-0xff).toString(2)) // displays '-11111111'
+console.log((-10).toString(2));   // displays '-1010'
+console.log((-0xff).toString(2)); // displays '-11111111'
 ```
+
+### Converting radix of number strings
+
+If you have a string representing a number in a non-decimal radix, you can use [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) and `toString()` to convert it to a different radix.
+
+```js
+const hex = "CAFEBABE";
+const bin = parseInt(hex, 16).toString(2); // "11001010111111101011101010111110"
+```
+
+Beware of loss of precision: if the original number string is too large (larger than [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER), for example), you should use a [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) instead. However, the `BigInt` constructor only has support for strings representing number literals (i.e. strings starting with `0b`, `0o`, `0x`). In case your original radix is not one of binary, octal, decimal, or hexadecimal, you may need to hand-write your radix converter, or use a library.
 
 ## Specifications
 

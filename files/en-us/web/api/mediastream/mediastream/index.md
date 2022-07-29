@@ -18,7 +18,7 @@ tags:
   - streaming
 browser-compat: api.MediaStream.MediaStream
 ---
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The **`MediaStream()`** constructor
 returns a newly-created {{domxref("MediaStream")}}, which serves as a collection of

@@ -261,7 +261,7 @@ function calculate() {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += '\n...finished!';
+  results.textContent += '\nFinished!';
 }
 
 const calculateBtn = document.querySelector('#calculate');
@@ -288,8 +288,8 @@ Inside the loop, we calculate the square of the current value of `i`, that is: `
 
 1. During the first run, `i = 1`, so we will add `1 x 1 = 1`.
 2. During the second run, `i = 2`, so we will add `2 x 2 = 4`.
-3. ...and so on.
-4. When `i` becomes equal to `10` we will stop running the loop and move straight to the next bit of code below the loop, printing out the `...finished!` message.
+3. And so on…
+4. When `i` becomes equal to `10` we will stop running the loop and move straight to the next bit of code below the loop, printing out the `Finished!` message on a new line.
 
 ### Looping through collections with a for loop
 
@@ -479,7 +479,7 @@ Here's the output:
 
 > **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
-## while and do ... while
+## while and do...while
 
 `for` is not the only type of loop available in JavaScript. There are actually many others and, while you don't need to understand all of these now, it is worth having a look at the structure of a couple of others so that you can recognize the same features at work in a slightly different way.
 

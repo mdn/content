@@ -15,7 +15,7 @@ The JavaScript warning "Using `//@` to indicate sourceURL pragmas is deprecated.
 
 ## Message
 
-```js
+```
 Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
 
 Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
@@ -53,7 +53,7 @@ Use the "#" sign instead.
 
 Or, alternatively, you can set a {{HTTPHeader("SourceMap")}} header to your JavaScript file to avoid having a comment at all:
 
-```js example-good
+```plain example-good
 SourceMap: /path/to/file.js.map
 ```
 

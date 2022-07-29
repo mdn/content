@@ -28,7 +28,7 @@ Using a TV remote to control the game ended up being surprisingly easy, because 
 
 ```js
 this.cursors = this.input.keyboard.createCursorKeys();
-//...
+// …
 if(this.cursors.right.isDown) {
     // move player right
 }
@@ -59,7 +59,7 @@ window.addEventListener("keydown", function(event) {
             // detonate bomb
             break;
         }
-        // ...
+        // …
     }
 }, this);
 ```
@@ -92,7 +92,7 @@ Right after that we use the Leap's `loop` method to get the information held in 
 
 ```js
 Leap.loop({
-    hand: function(hand) {
+    hand(hand) {
         horizontalDegree = Math.round(hand.roll() * toDegrees);
         verticalDegree = Math.round(hand.pitch() * toDegrees);
         grabStrength = hand.grabStrength;
@@ -110,7 +110,7 @@ The code above is calculating and assigning the `horizontalDegree`, `verticalDeg
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // ...
+    // …
 
     if(horizontalDegree > degreeThreshold) {
         playerX -= 5;
@@ -124,7 +124,7 @@ function draw() {
     else if(verticalDegree < -degreeThreshold) {
         playerY -= 5;
     }
-    if(grabStrength == 1) {
+    if(grabStrength === 1) {
         alert('BOOM!');
     }
 
@@ -178,7 +178,7 @@ Cylon.robot({
   devices: {
     makey: { driver: 'makey-button', pin: 2 }
   },
-  work: function(my) {
+  work(my) {
     my.makey.on('push', function() {
       console.log("Button pushed!");
     });

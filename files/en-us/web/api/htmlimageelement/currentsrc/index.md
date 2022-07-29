@@ -48,7 +48,7 @@ document.
 ### JavaScript
 
 ```js
-var clockImage = document.querySelector("img");
+const clockImage = document.querySelector("img");
 let p = document.createElement("p");
 
 if (!clockImage.currentSrc.endsWith("200px.png")) {

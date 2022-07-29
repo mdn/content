@@ -60,10 +60,10 @@ possible values and their meanings:
 ## Examples
 
 ```js
-var a = 1;
-var b = 2;
-var result = window.indexedDB.cmp(a, b);
-console.log( "Comparison results: " + result );
+const a = 1;
+const b = 2;
+const result = window.indexedDB.cmp(a, b);
+console.log(`Comparison results: ${result}`);
 ```
 
 ## Specifications

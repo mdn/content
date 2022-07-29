@@ -134,9 +134,9 @@ None ({{jsxref("undefined")}}).
 ### Using bufferData
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var buffer = gl.createBuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
 ```
@@ -156,8 +156,8 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
 To calculate size parameter for a typed array.
 
 ```js
-var dataArray = new Float32Array([1, 2, 3, 4]);
-var sizeInBytes = dataArray.length * dataArray.BYTES_PER_ELEMENT;
+const dataArray = new Float32Array([1, 2, 3, 4]);
+const sizeInBytes = dataArray.length * dataArray.BYTES_PER_ELEMENT;
 ```
 
 ## Specifications

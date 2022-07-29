@@ -26,7 +26,7 @@ A number.
 ## Examples
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 console.log('UNSENT: ', xhr.status);
 
 xhr.open('GET', '/server');

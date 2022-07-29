@@ -45,13 +45,13 @@ _The `RTCSessionDescription` doesn't inherit any methods._
 signalingChannel.onmessage = function (evt) {
   if (!pc) start(false);
 
-  var message = JSON.parse(evt.data);
+  const message = JSON.parse(evt.data);
   if (message.sdp)
     pc.setRemoteDescription(
       new RTCSessionDescription(message),
       function () {
         // if we received an offer, we need to answer
-        if (pc.remoteDescription.type == "offer")
+        if (pc.remoteDescription.type === "offer")
           pc.createAnswer(localDescCreated, logError);
       },
       logError

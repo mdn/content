@@ -36,9 +36,9 @@ None ({{jsxref("undefined")}}).
 objects are not available in WebGL 1.
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 
-// ...
+// …
 
 gl.deleteSync(sync);
 ```

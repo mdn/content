@@ -63,11 +63,11 @@ const filters = [
         {vendorId: 0x1209, productId: 0xa850}
       ];
 navigator.usb.requestDevice({filters: filters})
-.then(usbDevice => {
-  console.log("Product name: " + usbDevice.productName);
+.then((usbDevice) => {
+  console.log(`Product name: ${usbDevice.productName}`);
 })
-.catch(e => {
-  console.log("There is no device. " + e);
+.catch((e) => {
+  console.log(`There is no device. ${e}`);
 });
 ```
 

@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Object.assign
 
 The **`Object.assign()`** method
 copies all {{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}
-{{jsxref("Object/hasOwnProperty", "own properties", "", 1)}} from one or more
+{{jsxref("Object/hasOwn", "own properties", "", 1)}} from one or more
 _source objects_ to a _target object_. It returns the modified target
 object.
 
@@ -63,7 +63,7 @@ In case of an error, for example if a property is non-writable, a
 changed if any properties are added before the error is raised.
 
 > **Note:** `Object.assign()` does not throw on
-> {{jsxref("null")}} or {{jsxref("undefined")}} sources.
+> [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
 
 ## Examples
 
@@ -217,14 +217,14 @@ console.log(copy);
 
 // This is an assign function that copies full descriptors
 function completeAssign(target, ...sources) {
-  sources.forEach(source => {
+  sources.forEach((source) => {
     let descriptors = Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {});
 
     // By default, Object.assign copies enumerable Symbols, too
-    Object.getOwnPropertySymbols(source).forEach(sym => {
+    Object.getOwnPropertySymbols(source).forEach((sym) => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
         descriptors[sym] = descriptor;

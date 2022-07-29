@@ -24,9 +24,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('enterpictureinpicture', event => { });
+addEventListener('enterpictureinpicture', (event) => { });
 
-onenterpictureinpicture = event => { };
+onenterpictureinpicture = (event) => { };
 ```
 
 ## Event type
@@ -55,7 +55,7 @@ function onEnterPip() {
 
 video.addEventListener('enterpictureinpicture', onEnterPip, false);
 
-button.onclick = function() => {
+button.onclick = () => {
   video.requestPictureInPicture();
 }
 ```
@@ -72,7 +72,7 @@ function onEnterPip() {
 
 video.onenterpictureinpicture = onEnterPip;
 
-button.onclick = function() => {
+button.onclick = () => {
   video.requestPictureInPicture();
 }
 ```
