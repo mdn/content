@@ -138,18 +138,38 @@ new Intl.NumberFormat(locales, options)
     - `roundingMode` {{experimental_inline}}
       - : Options for rounding modes. The default is `halfExpand`.
 
-        - `"ceil"`: round to a "more positive" value (toward +∞).
-        - `"floor"`round to a "less positive" value (toward -∞).
-        - `"expand"`: round away from 0. Positive numbers round up, negative numbers round down (more negative).
-        - `"trunc"`: round toward 0. Positive numbers round down, negative numbers round up (less negative).
+        - `"ceil"`: round toward +∞.
+          Positive values round up.
+          Negative values round "more positive".
+        - `"floor"` round toward -∞.
+          Positive values round down.
+          Negative values round "more negative".
+        - `"expand"`: round away from 0.
+          The _magnitude_ of the value is always increased by rounding.
+          Positive values round up.
+          Negative values round "more negative".
+        - `"trunc"`: round toward 0.
+          This _magnitude_ of the value is always reduced by rounding.
+          Positive values round down.
+          Negative values round "less negative".
         - `"halfCeil"`: ties toward +∞.
+          Values above the half-increment round like `ceil` (towards +∞), and below like `floor` (towards -∞).
+          On the half-increment, values round like `ceil`.
         - `"halfFloor"`: ties toward -∞.
+          Values above the half-increment round like `ceil` (towards +∞), and below like `floor` (towards -∞).
+          On the half-increment, values round like `floor`.
         - `"halfExpand"`: ties away from 0.
+          Values above the half-increment round like `expand` (away from zero), and below like `trunc` (towards 0).
+          On the half-increment, values round like `expand`.
         - `"halfTrunc"`: ties toward 0.
-        - `"halfEven"`: rounds like `halfExpand`. On half-increment, values round towards the nearest even integer.
+          Values above the half-increment round like `expand` (away from zero), and below like `trunc` (towards 0).
+          On the half-increment, values round like `trunc`.
+        - `"halfEven"`: ties towards the nearest even integer.
+            Values above the half-increment round like `expand` (away from zero), and below like `trunc` (towards 0).
+            On the half-increment values round towards the nearest even integer.
 
-        These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and "DOWN", respectively.
-        See [rounding and truncating](#rounding_and_truncating) below for examples.
+        These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and"DOWN", respectively.
+        The [rounding modes](#rounding_modes) example below demonstrates how each mode works.
 
     - `roundingPriority` {{experimental_inline}}
       - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are specified:
@@ -514,17 +534,15 @@ The reason for this is that only the "maximum precision" values are used for the
 > It will then select the option that displays more fractional digits if  `morePrecision` is set, and fewer if `lessPrecision` is set.
 > This will result in more intuitive behavior for this case.
 
-### Rounding and truncating
+### Rounding modes
 
 If a value has more fractional digits than allowed by the constructor options, the formatted value will be _rounded_ to the specified number of fractional digits.
 The _way_ in which the value is rounded depends on the [`roundingMode`](#roundingmode) property.
 
-#### Default rounding (halfExpand)
-
 Number formatters use `halfExpand` rounding by default, which rounds values "away from zero" at the half-increment (in other words, the _magnitude_ of the value is rounded up).
 
 For a positive number, if the fractional digits to be removed are closer to the next increment (or on the half way point) then the remaining fractional digits will be rounded up, otherwise they are rounded down.
-This is shown below: 2.31 rounded to two significant digits is truncated to 2.3 because 2.31 is less than the half increment 2.35, while values of 2.35 and greater are rounded up to 2.4:
+This is shown below: 2.23 rounded to two significant digits is truncated to 2.2 because 2.23 is less than the half increment 2.25, while values of 2.25 and greater are rounded up to 2.3:
 
 ```js
 // Value below half-increment: round down.
@@ -553,28 +571,7 @@ console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(-2
 // > "-2.3"
 ```
 
-#### Other rounding methods
-
-The other rounding methods are:
-
-- `expand` mode always rounds away from zero.
-  This means that the _magnitude_ of the value is always increased by rounding, making a positive number more positive, and a negative number more negative.
-- `trunc` rounding mode is the "opposite" of `expand`, rounding the value towards zero.
-  This means the _magnitude_ of the value is always reduced by rounding, making a smaller positive or negative number.
-- `ceil` always rounds values in the "more positive" direction.
-  A positive value will be rounded up, but a negative value will be rounded towards zero.
-- `floor` is the "opposite" of `ceil`; it rounds in the "more negative" direction.
-  A positive value will be rounded down, while a negative value will be rounded away from zero ("more negative").
-- `halfExpand` and `halfTrunc` behave similarly.
-  In both cases, values above the half-increment are rounded by expanding away from zero like `expand`, and values below the half-increment are truncated towards zero like `trunc`.
-  The difference is that for values _on_ the half-way increment, they follow the rounding implied by their names: `halfTrunc` rounds towards zero, while `halfExpand` rounds away from zero.
-- `halfCeil` and `halfFloor` follow the same pattern.
-  In both cases, values above the half-increment are rounded to be more positive like `ceil`, and values below the half-increment are rounded to be more negative like `floor`.
-  The difference is that for values _on_ the half-way increment, they follow the rounding implied by their names.
-- `halfEven` is the same as `halfExpand`, except that for values on the half-increment it rounds the value to make the formatted value even.
-
-
-The effect of each type of rounding is shown below for three positive and negative values below, on, and above the half-increment.
+The table below show the effect of different rounding modes for positive and negative values that are on and around the half-increment.
 
 | rounding/value | 2.23 | 2.25  | 2.28 | -2.23 | -2.25 | -2.28 |
 |----------------|------|-------|------|-------|-------|-------|
@@ -587,7 +584,6 @@ The effect of each type of rounding is shown below for three positive and negati
 | `halfExpand`   | 2.2  | 2.3   | 2.3  | -2.2  | -2.3  | -2.3  |
 | `halfTrunc`    | 2.2  | 2.2   | 2.3  | -2.2  | -2.2  | -2.3  |
 | `halfEven`     | 2.2  | 2.2   | 2.3  | -2.2  | -2.2  | -2.3  |
-
 
 ### Using roundingIncrement
 
