@@ -75,7 +75,7 @@ Some properties only apply to input element types that support the corresponding
   - : {{domxref("HTMLFormElement")}}: **Returns** a reference to the parent {{HtmlElement("form")}} element.
 
 - {{domxref("HTMLInputElement.formAction", "formAction")}}
-  - : `string`: **Returns / Sets** the element's [`formaction`](/en-US/docs/Web/HTML/Element/input#formaction) attribute, containing the URI of a program that processes information submitted by the element. This overrides the {{ htmlattrxref("action", "form") }} attribute of the parent form.
+  - : `string`: **Returns / Sets** the element's [`formaction`](/en-US/docs/Web/HTML/Element/input#formaction) attribute, containing the URL of a program that processes information submitted by the element. This overrides the {{ htmlattrxref("action", "form") }} attribute of the parent form.
 
 - {{domxref("HTMLInputElement.formEnctype", "formEnctype")}}
   - : `string`: **Returns / Sets** the element's [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute, containing the type of content that is used to submit the form to the server. This overrides the {{ htmlattrxref("enctype", "form") }} attribute of the parent form.
