@@ -192,7 +192,7 @@ new Intl.NumberFormat(locales, options)
       - : A string expressing the strategy for displaying trailing zeros on whole numbers.
         The default is `"auto"`.
 
-        - `"auto"`: keep trailing zeros according to `minimumFractionDigits` and `minimumSignificantDigits`
+        - `"auto"`: keep trailing zeros according to `minimumFractionDigits` and `minimumSignificantDigits`.
         - `"stripIfInteger"`: remove the fraction digits _if_ they are all zero.
           This is the same as `auto` if any of the fraction digits is non-zero.
 
