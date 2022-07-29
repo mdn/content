@@ -269,4 +269,4 @@ preFilledObject({ z: 2 });  // 2
 
 ## See also
 
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [Original proposal at ecmascript.org](https://web.archive.org/web/20161222115423/http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
