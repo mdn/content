@@ -236,8 +236,8 @@ In this example, the label `markLoop` identifies a `while` loop.
 
 ```js
 markLoop:
-while (theMark === true) {
-   doSomething();
+while (theMark) {
+  doSomething();
 }
 ```
 
