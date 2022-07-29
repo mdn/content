@@ -185,7 +185,7 @@ An accessor property has the following attributes:
 - `enumerable`
   - : A boolean value indicating if the property can be enumerated by a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
 - `configurable`
-  - : A boolean value indicating if the property can be deleted, can be changed to an data property, and can have its attributes changed.
+  - : A boolean value indicating if the property can be deleted, can be changed to a data property, and can have its attributes changed.
 
 ### "Normal" objects, and functions
 
