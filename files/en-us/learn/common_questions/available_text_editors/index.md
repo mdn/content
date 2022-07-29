@@ -70,7 +70,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="https://discuss.atom.io/categories" rel="external">Forum</a>
+        <a href="https://github.com/atom/atom/issues" rel="external">GitHub Issues</a>
       </td>
       <td><a href="https://atom.io/docs/latest/">Online Manual</a></td>
       <td><a href="https://atom.io/packages">Yes</a></td>
@@ -94,11 +94,6 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a
-          href="https://groups.google.com/forum/#!forum/brackets-dev"
-          rel="external"
-          >Forum</a
-        >,
         <a href="https://webchat.freenode.net/?channels=brackets" rel="external"
           >IRC</a
         >
@@ -175,7 +170,7 @@ Here are some popular editors:
       <td>$99</td>
       <td>Mac</td>
       <td>
-        <a href="hello@espressoapp.com">E-mail</a>
+        <a href="mailto:hello@espressoapp.com">E-mail</a>
       </td>
       <td>
         <a href="https://help.espressoapp.com/">Online Manual</a>
@@ -283,8 +278,8 @@ Here are some popular editors:
         >
       </td>
       <td>
-        <a href="https://www.sublimetext.com/docs/3/">Official</a>,<a
-          href="http://docs.sublimetext.info/en/latest/index.html"
+        <a href="https://www.sublimetext.com/docs/">Official</a>,<a
+          href="https://docs.sublimetext.io/"
         >
           Unofficial</a
         >
