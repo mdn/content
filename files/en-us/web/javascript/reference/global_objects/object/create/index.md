@@ -177,12 +177,17 @@ console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
 
-This example of prototypal inheritance uses `Object.create()`. 
+This example of inheritance uses `Object.create()`. 
 However it is not considered a good idea to use the above pattern for inheritance. 
-It is because `Rectangle.prototype = Object.create(Shape.prototype);` causes prototypal re-assignment because of which `[[prototype]]` of `Rectangle` loses link to its `constructor`. 
+It is because `Rectangle.prototype = Object.create(Shape.prototype);` changes the `prototype` of `Rectangle`.
+The `Rectangle.prototype` is used when creating new instances. 
 
 Instead it is advised to use `setPrototypeOf()` to [mutate prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains). Like so:
 `Object.setPrototypeOf(Rectangle.prototype, Shape.prototype);` 
+
+A point to note here is that the `Rectangle.[[Prototype]]` which is also `Rectangle.__proto__` remains unchanged in both cases. 
+
+The [two reasons](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#constructors) why re-assigning a `Constructor.prototype` is a bad idea. 
 
 
 ### Using propertiesObject argument with Object.create()
