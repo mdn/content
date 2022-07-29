@@ -148,7 +148,7 @@ new Intl.NumberFormat(locales, options)
         - `"halfTrunc"`: ties toward 0.
         - `"halfEven"`: rounds like `halfExpand`. On half-increment, values round towards the nearest even integer.
 
-        These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and"DOWN", respectively.
+        These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and "DOWN", respectively.
         See [rounding and truncating](##rounding_and_truncating) below for examples.
 
     - `roundingPriority` {{experimental_inline}}
