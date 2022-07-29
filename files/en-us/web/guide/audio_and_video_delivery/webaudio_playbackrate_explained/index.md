@@ -14,8 +14,8 @@ The `playbackRate` property of the {{ htmlelement("audio") }} and {{ htmlelement
 
 Let's starting by looking at a brief example of `playbackRate` usage:
 
-```java
-var myAudio = document.createElement('audio');
+```js
+const myAudio = document.createElement('audio');
 myAudio.setAttribute('src','audiofile.mp3');
 myAudio.playbackRate = 0.5;
 ```
