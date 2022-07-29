@@ -15,7 +15,7 @@ A _live_ version of this application is available on [GitHub](https://mdn.github
 
 ## Example
 
-This example demonstrates using the {{event("touchstart")}}, {{event("touchmove")}}, {{event("touchcancel")}}, and {{event("touchend")}}) touch events for the following gestures: single touch, two (simultaneous) touches, more than two simultaneous touches, 1-finger swipe, and 2-finger move/pinch/swipe.
+This example demonstrates using the {{domxref("Element/touchstart_event", "touchstart")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/touchcancel_event", "touchcancel")}}, and {{domxref("Element/touchend_event", "touchend")}}) touch events for the following gestures: single touch, two (simultaneous) touches, more than two simultaneous touches, 1-finger swipe, and 2-finger move/pinch/swipe.
 
 ### Define touch targets
 
@@ -60,7 +60,7 @@ const tpCache = [];
 
 ### Register event handlers
 
-Event handlers are registered for all four touch event types. The {{event("touchend")}} and {{event("touchcancel")}} event types use the same handler.
+Event handlers are registered for all four touch event types. The {{domxref("Element/touchend_event", "touchend")}} and {{domxref("Element/touchcancel_event", "touchcancel")}} event types use the same handler.
 
 ```js
 function set_handlers(name) {
@@ -119,7 +119,7 @@ function handle_pinch_zoom(ev) {
 
 ### Touch start handler
 
-The {{event("touchstart")}} event handler caches touch points to support 2-touch gestures. It also calls {{domxref("Event.preventDefault","preventDefault()")}} to keep the browser from applying further event handling (for example, mouse event emulation).
+The {{domxref("Element/touchstart_event", "touchstart")}} event handler caches touch points to support 2-touch gestures. It also calls {{domxref("Event.preventDefault","preventDefault()")}} to keep the browser from applying further event handling (for example, mouse event emulation).
 
 ```js
 function start_handler(ev) {
@@ -142,7 +142,7 @@ function start_handler(ev) {
 
 ### Touch move handler
 
-The {{event("touchmove")}} handler calls {{domxref("Event.preventDefault","preventDefault()")}} for the same reason mentioned above, and invokes the pinch/zoom handler.
+The {{domxref("Element/touchmove_event", "touchmove")}} handler calls {{domxref("Event.preventDefault","preventDefault()")}} for the same reason mentioned above, and invokes the pinch/zoom handler.
 
 ```js
 function move_handler(ev) {
@@ -171,7 +171,7 @@ function move_handler(ev) {
 
 ### Touch end handler
 
-The {{event("touchend")}} handler restores the event target's background color back to its original color.
+The {{domxref("Element/touchend_event", "touchend")}} handler restores the event target's background color back to its original color.
 
 ```js
 function end_handler(ev) {

@@ -20,18 +20,18 @@ tags:
 
 ## Events
 
-- {{event("webkitmouseforcewillbegin")}} {{non-standard_inline}}
+- {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}} {{non-standard_inline}}
   - : This event is fired before the {{domxref("Element/mousedown_event", "mousedown")}} event. Its main use is that it can be {{domxref("Event.preventDefault()")}}ed.
-- {{event("webkitmouseforcedown")}} {{non-standard_inline}}
+- {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{non-standard_inline}}
   - : This event is fired after the {{domxref("Element/mousedown_event", "mousedown")}} event as soon as sufficient pressure has been applied for it to qualify as a "force click".
-- {{event("webkitmouseforceup")}} {{non-standard_inline}}
-  - : This event is fired after the {{event("webkitmouseforcedown")}} event as soon as the pressure has been reduced sufficiently to end the "force click".
-- {{event("webkitmouseforcechanged")}} {{non-standard_inline}}
+- {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}} {{non-standard_inline}}
+  - : This event is fired after the {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} event as soon as the pressure has been reduced sufficiently to end the "force click".
+- {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}} {{non-standard_inline}}
   - : This event is fired each time the amount of pressure changes. This event first fires after the {{domxref("Element/mousedown_event", "mousedown")}} event and stops firing before the {{domxref("Element/mouseup_event", "mouseup")}} event.
 
 ## Event properties
 
-The following property is known to be available on the {{event("webkitmouseforcewillbegin")}}, {{domxref("Element/mousedown_event", "mousedown")}}, {{event("webkitmouseforcechanged")}}, {{event("webkitmouseforcedown")}}, {{event("webkitmouseforceup")}}, {{domxref("Element/mousemove_event", "mousemove")}}, and {{domxref("Element/mouseup_event", "mouseup")}} event objects:
+The following property is known to be available on the {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}, {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}, {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}, {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}}, {{domxref("Element/mousemove_event", "mousemove")}}, and {{domxref("Element/mouseup_event", "mouseup")}} event objects:
 
 - {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
   - : The amount of pressure currently being applied to the trackpad/touchscreen

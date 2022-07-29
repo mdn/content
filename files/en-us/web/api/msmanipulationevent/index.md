@@ -20,7 +20,7 @@ This proprietary method is specific to Internet Explorer.
 
 ### Events
 
-{{Event("MSManipulationStateChanged")}}: Event fires when the state of an element being manipulated has changed.
+{{domxref("Element/MSManipulationStateChanged_event", "MSManipulationStateChanged")}}: Event fires when the state of an element being manipulated has changed.
 
 ### Methods
 
@@ -58,5 +58,5 @@ interface MSManipulationEvent extends UIEvent {
 ## See also
 
 - {{DOMxRef("TouchEvent")}}
-- {{Event("MSManipulationStateChanged")}}
+- {{domxref("Element/MSManipulationStateChanged_event", "MSManipulationStateChanged")}}
 - [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)
