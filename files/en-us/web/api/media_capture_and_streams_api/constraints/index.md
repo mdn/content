@@ -1,7 +1,6 @@
 ---
 title: Capabilities, constraints, and settings
-slug: Web/API/Media_Streams_API/Constraints
-page-type: guide
+slug: Web/API/Media_Capture_and_Streams_API/Constraints
 tags:
   - Advanced
   - Audio
