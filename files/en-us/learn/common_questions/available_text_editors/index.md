@@ -223,7 +223,7 @@ Here are some popular editors:
       <td>Windows, Mac, Linux</td>
       <td><a href="http://forum.komodoide.com/" rel="external">Forum</a></td>
       <td>
-        <a href="http://docs.activestate.com/komodo/8.5/" rel="external"
+        <a href="https://docs.activestate.com/komodo" rel="external"
           >Online Manual</a
         >
       </td>
