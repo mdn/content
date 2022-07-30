@@ -53,7 +53,7 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
       Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Platform")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
 - `architecture`
   - : A string containing the platform architecture. For example, `"x86"`.
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Arch")}} header after server explicitly requests it in {{HTTPHeader("Accept-CH")}}.
+      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Arch")}} header after the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `bitness`
   - : A string containing the architecture bitness. For example, `"32"` or `"64"`.
       Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Bitness")}} header if server explicitly requests it in {{HTTPHeader("Accept-CH")}}.
