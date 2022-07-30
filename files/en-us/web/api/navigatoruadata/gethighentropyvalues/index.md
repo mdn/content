@@ -62,7 +62,7 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
       Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Model")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `platformVersion`
   - : A string containing the platform version. Platform name itself is always available as low-entropy hint `platform`. For example, `"10.0"`.
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Platform-Version")}} header if server explicitly requests it in {{HTTPHeader("Accept-CH")}}.
+      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Platform-Version")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `uaFullVersion` {{deprecated_inline}}
   - : A string containing the full browser version. For example, `"103.0.5060.134"`. Deprecated in favor of `fullVersionList`.
       Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Full-Version")}} header if server explicitly requests it in {{HTTPHeader("Accept-CH")}}.
