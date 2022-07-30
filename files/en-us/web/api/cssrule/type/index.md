@@ -54,14 +54,7 @@ An integer which will be one of the type constants listed in the table below.
       <td><code>CSSRule.IMPORT_RULE</code></td>
       <td><code>3</code></td>
       <td>{{domxref("CSSImportRule")}}</td>
-      <td>
-        An {{cssxref("@import")}} rule. (Until the documentation is
-        completed, see the interface definition in the Mozilla source code:
-        <a
-          href="https://searchfox.org/mozilla-central/source/dom/webidl/CSSImportRule.webidl"
-          >CSSImportRule</a
-        >.)
-      </td>
+      <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.MEDIA_RULE</code></td>
