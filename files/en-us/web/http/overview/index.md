@@ -197,7 +197,7 @@ An example HTTP request:
 
 ![A basic HTTP request](http_request.png)
 
-Requests consists of the following elements:
+Requests consist of the following elements:
 
 - An HTTP [method](/en-US/docs/Web/HTTP/Methods), usually a verb like {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, or a noun like {{HTTPMethod("OPTIONS")}} or {{HTTPMethod("HEAD")}} that defines the operation the client wants to perform.
   Typically, a client wants to fetch a resource (using `GET`) or post the value of an [HTML form](/en-US/docs/Learn/Forms) (using `POST`), though more operations may be needed in other cases.
