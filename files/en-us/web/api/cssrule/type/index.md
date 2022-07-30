@@ -58,8 +58,8 @@ An integer which will be one of the type constants listed in the table below.
         An {{cssxref("@import")}} rule. (Until the documentation is
         completed, see the interface definition in the Mozilla source code:
         <a
-          href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9"
-          >nsIDOMCSSImportRule</a
+          href="https://searchfox.org/mozilla-central/source/dom/webidl/CSSImportRule.webidl"
+          >CSSImportRule</a
         >.)
       </td>
     </tr>
