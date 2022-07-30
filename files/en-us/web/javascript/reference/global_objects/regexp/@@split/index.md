@@ -46,7 +46,7 @@ This method is called internally in {{jsxref("String.prototype.split()")}} when 
 
 This method exists for customizing the behavior of `split()` in `RegExp` subclasses.
 
-The `RegExp.prototype.@@split` base method exhibits the following behaviors:
+The `RegExp.prototype[@@split]()` base method exhibits the following behaviors:
 
 - The regexp's `g` ("global") flag is ignored, and the `y` ("sticky") flag is always applied even when it was not originally present.
 - If the target string is empty, and the regexp can match empty strings (for example, `/a?/`), an empty array is returned. Otherwise, if the regexp can't match an empty string, `[""]` is returned.
