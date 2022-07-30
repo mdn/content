@@ -32,7 +32,7 @@ In _Figure 1_, the state begins in State 1; the state changes to State 2 given i
 
 _Figure 2: Non-Deterministic Finite State Machine_
 
-[![](statemachine2.png)](http://postimg.org/image/mpq3nz82h/)
+![](statemachine2.png)
 
 In _Figure 2_, given input 'X', the state can persist or change to State 2.
 
