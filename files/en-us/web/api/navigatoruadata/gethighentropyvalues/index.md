@@ -46,7 +46,7 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
   - : Returns an array of objects containing `brand` and `version` specifying the browser brand and its version (the same information as provided by {{domxref("NavigatorUAData.brands")}}).
       Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
 - `mobile`
-  - : Returns `true` if the user-agent is running on a mobile device (the same information as provided by {{domxref("NavigatorUAData.mobile")}}).
+  - : Returns `true` if the user agent is running on a mobile device (the same information as provided by {{domxref("NavigatorUAData.mobile")}}).
       Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Mobile")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
 - `platform`
   - : Returns a string describing the platform the user-agent is running on, like `"Windows"` (the same information as provided by {{domxref("NavigatorUAData.platform")}}).
