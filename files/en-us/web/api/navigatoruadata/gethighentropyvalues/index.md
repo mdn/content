@@ -106,7 +106,7 @@ navigator.userAgentData.getHighEntropyValues(
     - {{HTTPHeader("Sec-CH-UA")}}
     - {{HTTPHeader("Sec-CH-UA-Mobile")}}
     - {{HTTPHeader("Sec-CH-UA-Platform")}}
-  - Server can request to receive high-entropy client hints on subsequent requests via {{HTTPHeader("Accept-CH")}}:
+  - Servers can request to receive high-entropy client hints on subsequent requests, using the {{HTTPHeader("Accept-CH")}} header:
     - {{HTTPHeader("Sec-CH-UA-Arch")}}
     - {{HTTPHeader("Sec-CH-UA-Bitness")}}
     - {{HTTPHeader("Sec-CH-UA-Full-Version")}}
