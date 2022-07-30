@@ -54,7 +54,7 @@ An integer which will be one of the type constants listed in the table below.
       <td><code>CSSRule.IMPORT_RULE</code></td>
       <td><code>3</code></td>
       <td>{{domxref("CSSImportRule")}}</td>
-      <td></td>
+      <td>An {{cssxref("@import")}} rule.</td>
     </tr>
     <tr>
       <td><code>CSSRule.MEDIA_RULE</code></td>
