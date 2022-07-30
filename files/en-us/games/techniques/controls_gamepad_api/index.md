@@ -245,4 +245,4 @@ There were more events available in the spec than just `gamepadconnected` and `g
 
 ## Summary
 
-The Gamepad API is very easy to develop with. Now it's easier than ever to deliver a console-like experience to the browser without the need for any plugins. You can play the full version of the [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) game directly in your browser, install it from the [Firefox Marketplace](https://marketplace.firefox.com/app/hungry-fridge). Check the other resources on the [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/).
+The Gamepad API is very easy to develop with. Now it's easier than ever to deliver a console-like experience to the browser without the need for any plugins. You can play the full version of the [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) game directly in your browser. Check the other resources on the [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/).
