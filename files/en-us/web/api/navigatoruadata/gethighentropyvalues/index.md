@@ -56,7 +56,7 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
       Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Arch")}} header after the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `bitness`
   - : A string containing the architecture bitness. For example, `"32"` or `"64"`.
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Bitness")}} header if server explicitly requests it in {{HTTPHeader("Accept-CH")}}.
+      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Bitness")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `model`
   - : A string containing the model of mobile device. For example, `"Pixel 2XL"`. If device is not a mobile device or if device model is not known, `model` will be `""`.
       Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Model")}} header if server explicitly requests it in {{HTTPHeader("Accept-CH")}}.
