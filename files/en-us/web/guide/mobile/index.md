@@ -65,4 +65,4 @@ If you do this, make sure your algorithm is correct, and you aren't serving the 
 Test your web site on multiple browsers. This means testing on multiple platforms — at least iOS and Android.
 
 - test mobile Safari on the iPhone using the [iOS simulator](https://developer.apple.com/devcenter/ios/index.action)
-- test Opera and Firefox using the [Android SDK](https://developer.android.com/sdk/index.html). See these additional instructions for [running Firefox for Android using the Android emulator](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator).
+- test Opera and Firefox using the [Android SDK](https://developer.android.com/studio#command-tools). See these additional instructions for [running Firefox for Android using the Android emulator](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator).
