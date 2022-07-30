@@ -65,7 +65,7 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
       Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Platform-Version")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `uaFullVersion` {{deprecated_inline}}
   - : A string containing the full browser version. For example, `"103.0.5060.134"`. Deprecated in favor of `fullVersionList`.
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Full-Version")}} header if server explicitly requests it in {{HTTPHeader("Accept-CH")}}.
+      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Full-Version")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `fullVersionList`
   - : An array of objects with properties `"brand"` and `"version"` representing the browser name and full version respectively.
       For example, `{"brand": "Google Chrome", "version": "103.0.5060.134"}, {"brand": "Chromium", "version": "103.0.5060.134"}`.
