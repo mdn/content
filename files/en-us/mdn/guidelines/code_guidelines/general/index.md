@@ -154,7 +154,7 @@ To make it into a good example, you insert `example-good` after the code block's
  …
 ```
 
-To make it into a bad example, you insert `example-bad` in the end of the first line of a code block:
+To make it into a bad example, you insert `example-bad` after the code block's language directive:
 
 ```html
 ``` js example-bad
