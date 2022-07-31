@@ -256,7 +256,7 @@ console.log(identity`Hi\n${2 + 3}!`);
 // 5!
 ```
 
-This is useful for many toolings which give special treatments to literals tagged by a particular name.
+This is useful for many tools which give special treatment to literals tagged by a particular name.
 
 ```js
 const html = (strings, ...values) => String.raw({ raw: strings }, ...values);

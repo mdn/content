@@ -80,7 +80,7 @@ String.raw`Hi \${name}!`;
 
 ### Building an identity tag
 
-Many toolings give special treatments to literals tagged by a particular name.
+Many tools give special treatment to literals tagged by a particular name.
 
 ```js
 // Some formatters will format this literal's content as HTML
