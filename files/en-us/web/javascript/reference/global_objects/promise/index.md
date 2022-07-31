@@ -392,12 +392,12 @@ By clicking the button several times in a short amount of time, you'll even see 
 let promiseCount = 0;
 
 function testPromise() {
-  let thisPromiseCount = ++promiseCount;
-  let log = document.getElementById('log');
+  const thisPromiseCount = ++promiseCount;
+  const log = document.getElementById('log');
   // begin
   log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Started<br>');
   // We make a new promise: we promise a numeric count of this promise, starting from 1 (after waiting 3s)
-  let p1 = new Promise((resolve, reject) => {
+  const p1 = new Promise((resolve, reject) => {
     // The executor function is called with the ability to resolve or reject the promise
     log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise constructor<br>');
     // This is only an example to create asynchronism
@@ -421,7 +421,7 @@ function testPromise() {
 }
 
 if ("Promise" in window) {
-  let btn = document.getElementById("make-promise");
+  const btn = document.getElementById("make-promise");
   btn.addEventListener("click",testPromise);
 } else {
   const log = document.getElementById('log');
