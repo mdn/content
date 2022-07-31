@@ -9,4 +9,4 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "Bi-directional text")}} on Wikipedia
+- [Bi-directional text](https://en.wikipedia.org/wiki/Bi-directional_text) on Wikipedia

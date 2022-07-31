@@ -22,4 +22,4 @@ It is critical to choose the proper hash function for your use case to avoid col
 ## See also
 
 - See {{glossary("Cryptographic hash function")}}
-- {{interwiki("wikipedia", "Cryptographic_hash_function", "Hash function")}} on Wikipedia
+- [Hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function) on Wikipedia

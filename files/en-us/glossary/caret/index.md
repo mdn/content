@@ -20,7 +20,7 @@ On the web, a caret is used to represent the insertion point in {{HTMLElement("i
 
 ## See also
 
-- {{interwiki("wikipedia", "Caret navigation")}} on Wikipedia
+- [Caret navigation](https://en.wikipedia.org/wiki/Caret_navigation) on Wikipedia
 
 ### CSS related to the caret
 

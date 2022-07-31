@@ -10,4 +10,4 @@ tags:
 
 ## See also
 
-- {{interwiki("wikipedia", "Data_structure", "Data structure")}} on Wikipedia
+- [Data structure](https://en.wikipedia.org/wiki/Data_structure) on Wikipedia

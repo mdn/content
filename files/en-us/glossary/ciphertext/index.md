@@ -11,4 +11,4 @@ In {{glossary("cryptography")}}, a ciphertext is a scrambled message that convey
 
 ## See also
 
-- {{Interwiki("wikipedia", "Ciphertext")}} on Wikipedia
+- [Ciphertext](https://en.wikipedia.org/wiki/Ciphertext) on Wikipedia
