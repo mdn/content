@@ -309,7 +309,7 @@ latex`\unicode`
 // { cooked: undefined, raw: "\\unicode" }
 ```
 
-Note that the escape sequence restriction is only dropped from _tagged_ templates—not from _untagged_ template literals:
+Note that the escape-sequence restriction is only dropped from _tagged_ templates—not from _untagged_ template literals:
 
 ```js example-bad
 const bad = `bad escape sequence: \unicode`;
