@@ -11,4 +11,4 @@ In simple words: this type of style allows the creation of an {{Glossary('Object
 
 ## See also
 
-- {{Interwiki("wikipedia", "Prototype-based programming", "Prototype-based programming")}} on Wikipedia
+- [Prototype-based programming](https://en.wikipedia.org/wiki/Prototype-based_programming) on Wikipedia

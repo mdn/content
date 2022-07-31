@@ -14,4 +14,4 @@ Netscape helped make the {{glossary("World Wide Web","Web")}} graphical rather t
 
 ## See also
 
-- {{Interwiki("wikipedia", "Netscape Navigator")}} on Wikipedia
+- [Netscape Navigator](https://en.wikipedia.org/wiki/Netscape_Navigator) on Wikipedia
