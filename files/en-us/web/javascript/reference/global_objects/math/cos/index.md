@@ -15,8 +15,8 @@ browser-compat: javascript.builtins.Math.cos
 {{JSRef}}
 
 The **`Math.cos()`** static function
-returns the {{interwiki("wikipedia", "cosine")}} of the specified angle, which must be
-specified in {{interwiki("wikipedia", "radians")}}.
+returns the [cosine](https://en.wikipedia.org/wiki/Cosine) of the specified angle, which must be
+specified in [radians](https://en.wikipedia.org/wiki/Radians).
 
 {{EmbedInteractiveExample("pages/js/math-cos.html")}}
 
