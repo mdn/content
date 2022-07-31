@@ -10,4 +10,4 @@ WAI or Web Accessibility Initiative is an effort by the World Wide Web Consortiu
 ## See also
 
 - [WAI website](https://www.w3.org/WAI/)
-- {{Interwiki("wikipedia", "Web Accessibility Initiative")}} on Wikipedia
+- [Web Accessibility Initiative](https://en.wikipedia.org/wiki/Web_Accessibility_Initiative) on Wikipedia

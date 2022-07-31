@@ -20,7 +20,7 @@ The [ECMAScript Language Specification](https://tc39.es/ecma262/#sec-white-space
 
 ## See also
 
-- {{interwiki("wikipedia", "Whitespace character")}} (Wikipedia)
+- [Whitespace character](https://en.wikipedia.org/wiki/Whitespace_character) (Wikipedia)
 - [How whitespace is handled by HTML, CSS, and in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace)
 - {{cssxref("white-space")}}
 - Specifications

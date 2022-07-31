@@ -376,7 +376,7 @@ The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>
 Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code's syntax requires lower-casing).
 Some examples:
 
-- Boolean (named for English mathematician and logician {{interwiki("wikipedia", "George Boole")}})
+- Boolean (named for English mathematician and logician [George Boole](https://en.wikipedia.org/wiki/George_Boole))
 - JavaScript (a trademark of Oracle Corporation, it should always be written as trademarked)
 - Python, TypeScript, Django, and other programming languages and framework names
 

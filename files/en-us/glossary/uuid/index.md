@@ -18,5 +18,5 @@ The formal definition can be found in: [RFC4122: A Universally Unique IDentifier
 
 ## See also
 
-- {{Interwiki("wikipedia", "UUID")}} on Wikipedia
+- [UUID](https://en.wikipedia.org/wiki/UUID) on Wikipedia
 - [`Crypto.randomUUID()`](/en-US/docs/Web/API/Crypto/randomUUID)

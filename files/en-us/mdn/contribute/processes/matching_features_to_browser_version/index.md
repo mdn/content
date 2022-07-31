@@ -337,6 +337,6 @@ You can then compare the WebKit version number to the Safari version history fou
   - [By Apple product release number](https://trac.webkit.org/browser/webkit/releases/Apple) (Safari, iOS, Safari Technology Preview, watchOS, some older macOS releases). This is how we number Safari in our [Browser Compatibility Database](https://github.com/mdn/browser-compat-data).
   - [By Safari build number](https://trac.webkit.org/browser/webkit/tags) (SVN tags)
   - [By WebKit build number](https://trac.webkit.org/browser/webkit/branches) (SVN branches)
-  - {{interwiki("wikipedia", "Safari version history")}} (list of Safari versions with feature summaries and the corresponding WebKit build number for each)
+  - [Safari version history](https://en.wikipedia.org/wiki/Safari_version_history) (list of Safari versions with feature summaries and the corresponding WebKit build number for each)
 
 > **Warning:** Version numbers listed in the documentation at <https://developer.apple.com/documentation/webkitjs> are inaccurate. Please use other resources to determine the version numbers.

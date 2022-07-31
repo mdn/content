@@ -12,7 +12,7 @@ tags:
 
 ## See also
 
-- {{interwiki("wikipedia", "XMLHttpRequest")}} on Wikipedia
+- [XMLHttpRequest](https://en.wikipedia.org/wiki/XMLHttpRequest) on Wikipedia
 - [Synchronous vs. Asynchronous Communications](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
 - The {{domxref("XMLHttpRequest")}} object
 - The [documentation on MDN about how to use XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

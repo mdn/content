@@ -19,7 +19,7 @@ WebDAV allows clients to
 
 ## See also
 
-- {{Interwiki("wikipedia", "WebDAV")}} on Wikipedia
+- [WebDAV](https://en.wikipedia.org/wiki/WebDAV) on Wikipedia
 - Specifications:
 
   - {{rfc(2518)}}
