@@ -11,4 +11,4 @@ A CMS (Content Management System) is software that allows users to publish, orga
 
 ## See also
 
-- {{Interwiki("wikipedia", "Content management system")}} on Wikipedia
+- [Content management system](https://en.wikipedia.org/wiki/Content_management_system) on Wikipedia

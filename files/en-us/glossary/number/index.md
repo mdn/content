@@ -10,7 +10,7 @@ In {{Glossary("JavaScript")}}, **Number** is a numeric data type in the [double-
 
 ## See also
 
-- {{Interwiki("wikipedia", "Data type#Numeric_types", "Numeric types")}} on Wikipedia
+- [Numeric types](https://en.wikipedia.org/wiki/Data_type#Numeric_types) on Wikipedia
 - The JavaScript type: [`Number`](/en-US/docs/Web/JavaScript/Data_structures#number_type)
 - The JavaScript global object {{jsxref("Number")}}
 - [Glossary:](/en-US/docs/Glossary)

@@ -12,4 +12,4 @@ Like variables, some constants are bound to identifiers. For example, the identi
 
 ## See also
 
-- {{Interwiki("wikipedia", "Constant_(computer_programming)", "Constant")}} on Wikipedia
+- [Constant](https://en.wikipedia.org/wiki/Constant_(computer_programming)) on Wikipedia

@@ -30,7 +30,6 @@ for (const rule of rules) {
 
 ## Value
 
-
 - `CSSRule.STYLE_RULE` (`1`)
   - : The rule is a {{domxref("CSSStyleRule")}}, the most common kind of rule: `selector { prop1: val1; prop2: val2; }`.
 - `CSSRule.IMPORT_RULE` (`3`)

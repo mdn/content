@@ -11,4 +11,4 @@ tags:
 ## See also
 
 - [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
-- {{interwiki("wikipedia", "Type_system#DYNAMIC", "Type system")}} on Wikipedia
+- [Type system](https://en.wikipedia.org/wiki/Type_system#DYNAMIC) on Wikipedia

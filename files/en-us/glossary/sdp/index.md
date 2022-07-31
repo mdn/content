@@ -32,4 +32,4 @@ SDP is never used alone, but by protocols like {{Glossary("RTP")}} and {{Glossar
 ## See also
 
 - [WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
-- {{Interwiki("wikipedia", "Session Description Protocol")}} on Wikipedia
+- [Session Description Protocol](https://en.wikipedia.org/wiki/Session_Description_Protocol) on Wikipedia

@@ -12,5 +12,5 @@ three.js is a {{Glossary("JavaScript")}}-based {{Glossary("WebGL")}} engine that
 
 ## See also
 
-- {{Interwiki("wikipedia", "Three.js")}} on Wikipedia
+- [Three.js](https://en.wikipedia.org/wiki/Three.js) on Wikipedia
 - [three.js official website](https://threejs.org/)

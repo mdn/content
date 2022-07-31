@@ -10,4 +10,4 @@ A **statically-typed** language is a language (such as Java, C, or C++) where va
 
 ## See also
 
-- {{Interwiki("wikipedia", "Type system")}} on Wikipedia
+- [Type system](https://en.wikipedia.org/wiki/Type_system) on Wikipedia

@@ -37,6 +37,6 @@ window.addEventListener("load", () => {
 
 ## See also
 
-- {{Interwiki("wikipedia", "jQuery")}} on Wikipedia
+- [jQuery](https://en.wikipedia.org/wiki/JQuery) on Wikipedia
 - [jQuery Official Website](https://jquery.com/)
 - [Official API reference documentation](https://api.jquery.com/)[](https://api.jquery.com/)

@@ -15,5 +15,5 @@ Practically speaking, if I divide two variables in a {{glossary("JavaScript")}} 
 
 ## See also
 
-- {{Interwiki("wikipedia", "NaN")}} on Wikipedia
+- [NaN](https://en.wikipedia.org/wiki/NaN) on Wikipedia
 - [NaN in JavaScript](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)

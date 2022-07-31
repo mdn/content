@@ -10,4 +10,4 @@ tags:
 ## See also
 
 - [Official website](https://www.icann.org/)
-- {{interwiki("wikipedia", "ICANN", "ICANN")}} on Wikipedia
+- [ICANN](https://en.wikipedia.org/wiki/ICANN) on Wikipedia

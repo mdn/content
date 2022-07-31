@@ -13,4 +13,4 @@ An IP address is a number assigned to every device connected to a network that u
 
 ## See also
 
-- {{interwiki("wikipedia", "IP address", "IP address")}} on Wikipedia
+- [IP address](https://en.wikipedia.org/wiki/IP_address) on Wikipedia

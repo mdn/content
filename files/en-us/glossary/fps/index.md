@@ -13,5 +13,5 @@ Movies generally have a frame rate of 24 fps. They are able to have fewer frames
 
 ## See also
 
-- {{Interwiki("wikipedia", "Frame rate")}} (Wikipedia)
+- [Frame rate](https://en.wikipedia.org/wiki/Frame_rate) (Wikipedia)
 - {{glossary("FPS")}} (Glossary)

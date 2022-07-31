@@ -9,4 +9,4 @@ An Integrated Development Environment (**IDE**) or Interactive Development envir
 
 ## See also
 
-- {{interwiki("wikipedia", "Integrated_development_environment", "IDE")}} on Wikipedia
+- [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) on Wikipedia

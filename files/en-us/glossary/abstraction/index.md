@@ -42,4 +42,4 @@ obj.display();
 
 ## See also
 
-- {{interwiki("wikipedia", "Abstraction (computer science)", "Abstraction")}} on Wikipedia
+- [Abstraction](https://en.wikipedia.org/wiki/Abstraction_(computer_science)) on Wikipedia

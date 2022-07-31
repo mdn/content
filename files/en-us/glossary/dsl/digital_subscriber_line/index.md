@@ -12,4 +12,4 @@ Contrast with cable, fiber optic, or dial-up connections.
 
 ## See also
 
-- {{Interwiki("wikipedia", "Digital_subscriber_line", "Digital subscriber line")}} on Wikipedia
+- [Digital subscriber line](https://en.wikipedia.org/wiki/Digital_subscriber_line) on Wikipedia

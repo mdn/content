@@ -12,4 +12,4 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "Resource Description Framework")}} on Wikipedia
+- [Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework) on Wikipedia

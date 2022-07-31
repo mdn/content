@@ -40,7 +40,7 @@ Note that any {{Glossary("regular expression")}} can be represented by a state m
 
 ## See also
 
-- {{Interwiki("wikipedia", "Finite-state machine")}} on Wikipedia
-- {{Interwiki("wikipedia", "UML state machine")}} on Wikipedia
-- {{Interwiki("wikipedia", "Moore machine")}} on Wikipedia
-- {{Interwiki("wikipedia", "Mealy machine")}} on Wikipedia
+- [Finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine) on Wikipedia
+- [UML state machine](https://en.wikipedia.org/wiki/UML_state_machine) on Wikipedia
+- [Moore machine](https://en.wikipedia.org/wiki/Moore_machine) on Wikipedia
+- [Mealy machine](https://en.wikipedia.org/wiki/Mealy_machine) on Wikipedia

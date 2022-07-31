@@ -13,6 +13,6 @@ The name of an HTML element is the name used in angle brackets such as `<p>` for
 
 ## See also
 
-- {{Interwiki("wikipedia", "HTML element")}} on Wikipedia
+- [HTML element](https://en.wikipedia.org/wiki/HTML_element) on Wikipedia
 - [HTML elements syntax](https://html.spec.whatwg.org/multipage/syntax.html#elements-2) on {{glossary("WHATWG")}}
 - [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)

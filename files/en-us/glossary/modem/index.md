@@ -13,4 +13,4 @@ Modems are different from {{Glossary("Router","routers")}}, but many companies s
 
 ## See also
 
-- {{Interwiki("wikipedia", "Modem")}} on Wikipedia
+- [Modem](https://en.wikipedia.org/wiki/Modem) on Wikipedia
