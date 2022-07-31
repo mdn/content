@@ -260,7 +260,7 @@ This is useful for many toolings which give special treatments to literals tagge
 
 ```js
 const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
-// Some formatters will format this literal as HTML
+// Some formatters will format this literal's content as HTML
 const doc = html`<!DOCTYPE html>
 <html>
   <head>
