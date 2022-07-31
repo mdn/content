@@ -20,9 +20,9 @@ IE has gone through many releases and currently stands at version 11.0.12, with 
 
 ## See also
 
-- {{interwiki("wikipedia", "Internet Explorer", "Internet Explorer")}} on Wikipedia
-- {{interwiki("wikipedia", "History of Internet Explorer", "History of Internet Explorer")}} on Wikipedia
-- {{interwiki("wikipedia", "Internet Explorer versions", "Internet Explorer versions")}} on Wikipedia
+- [Internet Explorer](https://en.wikipedia.org/wiki/Internet_Explorer) on Wikipedia
+- [History of Internet Explorer](https://en.wikipedia.org/wiki/History_of_Internet_Explorer) on Wikipedia
+- [Internet Explorer versions](https://en.wikipedia.org/wiki/Internet_Explorer_versions) on Wikipedia
 - [http://windows.microsoft.com/en-us/internet-explorer/download-ie](https://support.microsoft.com/en-us/windows/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70)
 - [http://windows.microsoft.com/en-us/windows7/getting-started-with-internet-explorer-9](https://support.microsoft.com/en-us/windows/internet-explorer-help-23360e49-9cd3-4dda-ba52-705336cc0de2)
 - [http://windows.microsoft.com/en-us/internet-explorer/internet-explorer-help](https://support.microsoft.com/en-us/windows/internet-explorer-help-23360e49-9cd3-4dda-ba52-705336cc0de2)
