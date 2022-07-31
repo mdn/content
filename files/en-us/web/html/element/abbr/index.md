@@ -104,7 +104,7 @@ It's certainly not required that all abbreviations be marked up using `<abbr>`. 
 
 ### Grammar considerations
 
-In languages with {{interwiki("wikipedia", "grammatical number")}} (that is, languages where the number of items affects the grammar of a sentence), use the same grammatical number in your `title` attribute as inside your `<abbr>` element. This is especially important in languages with more than two numbers, such as Arabic, but is also relevant in English.
+In languages with [grammatical number](https://en.wikipedia.org/wiki/Grammatical_number) (that is, languages where the number of items affects the grammar of a sentence), use the same grammatical number in your `title` attribute as inside your `<abbr>` element. This is especially important in languages with more than two numbers, such as Arabic, but is also relevant in English.
 
 ## Default styling
 

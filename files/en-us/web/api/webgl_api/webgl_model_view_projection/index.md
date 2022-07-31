@@ -216,7 +216,7 @@ The `position` variable was defined in the `draw()` method and passed in as an a
 
 The obvious question is "why the extra dimension?" It turns out that this addition allows for lots of nice techniques for manipulating 3D data. This added dimension introduces the notion of perspective into the coordinate system; with it in place, we can map 3D coordinates into 2D space—thereby allowing two parallel lines to intersect as they recede into the distance. The value of `w` is used as a divisor for the other components of the coordinate, so that the true values of `x`, `y`, and `z` are computed as `x/w`, `y/w`, and `z/w` (and `w` is then also `w/w`, becoming 1).
 
-A three dimensional point is defined in a typical Cartesian coordinate system. The added fourth dimension changes this point into a {{interwiki("wikipedia", "homogeneous coordinates", "homogeneous coordinate")}}. It still represents a point in 3D space and it can easily be demonstrated how to construct this type of coordinate through a pair of simple functions.
+A three dimensional point is defined in a typical Cartesian coordinate system. The added fourth dimension changes this point into a [homogeneous coordinate](https://en.wikipedia.org/wiki/Homogeneous_coordinates). It still represents a point in 3D space and it can easily be demonstrated how to construct this type of coordinate through a pair of simple functions.
 
 ```js
 function cartesianToHomogeneous(point) {
@@ -535,11 +535,11 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 ## The viewing frustum
 
-Before we move on to covering how to compute a perspective projection matrix, we need to introduce the concept of the **{{interwiki("wikipedia", "viewing frustum")}}** (also known as the **view frustum**). This is the region of space whose contents are visible to the user at the current time. It's the 3D region of space defined by the field of view and the distances specified as the nearest and farthest content that should be rendered.
+Before we move on to covering how to compute a perspective projection matrix, we need to introduce the concept of the **[viewing frustum](https://en.wikipedia.org/wiki/Viewing_frustum)** (also known as the **view frustum**). This is the region of space whose contents are visible to the user at the current time. It's the 3D region of space defined by the field of view and the distances specified as the nearest and farthest content that should be rendered.
 
 While rendering, we need to determine which polygons need to be rendered in order to represent the scene. This is what the viewing frustum defines. But what's a frustum in the first place?
 
-A {{interwiki("wikipedia", "frustum")}} is the 3D solid that results from taking any solid and slicing off two sections of it using two parallel planes. Consider our camera, which is viewing an area that starts immediately in front of its lens and extends off into the distance. The viewable area is a four-sided pyramid with its peak at the lens, its four sides corresponding to the extents of its peripheral vision range, and its base at the farthest distance it can see, like this:
+A [frustum](https://en.wikipedia.org/wiki/Frustum) is the 3D solid that results from taking any solid and slicing off two sections of it using two parallel planes. Consider our camera, which is viewing an area that starts immediately in front of its lens and extends off into the distance. The viewable area is a four-sided pyramid with its peak at the lens, its four sides corresponding to the extents of its peripheral vision range, and its base at the farthest distance it can see, like this:
 
 ![A depiction of the entire viewing area of a camera. This area is a four-sided pyramid with its peak at the lens and its base at the world's maximum viewable distance.](fullcamerafov.svg)
 
@@ -553,7 +553,7 @@ In WebGL, the near and far clipping planes are defined by specifying the distanc
 
 The set of objects to be rendered for each frame is essentially created by starting with the set of all objects in the scene. Then any objects which are *entirely* outside the viewing frustum are removed from the set. Next, objects which partially extrude outside the viewing frustum are clipped by dropping any polygons which are entirely outside the frustum, and by clipping the polygons which cross outside the frustum so that they no longer exit it.
 
-Once that's been done, we have the largest set of polygons which are entirely within the viewing frustum. This list is usually further reduced using processes like {{interwiki("wikipedia", "back-face culling")}} (removing polygons whose back side is facing the camera) and occlusion culling using {{interwiki("wikipedia", "hidden-surface determination")}} (removing polygons which can't be seen because they're entirely blocked by polygons that are closer to the lens).
+Once that's been done, we have the largest set of polygons which are entirely within the viewing frustum. This list is usually further reduced using processes like [back-face culling](https://en.wikipedia.org/wiki/Back-face_culling) (removing polygons whose back side is facing the camera) and occlusion culling using [hidden-surface determination](https://en.wikipedia.org/wiki/Hidden-surface_determination) (removing polygons which can't be seen because they're entirely blocked by polygons that are closer to the lens).
 
 ## Perspective projection matrix
 
@@ -631,7 +631,7 @@ Additionally (not shown), the position and scale matrices of the model have been
 ### Exercises
 
 - Experiment with the parameters of the perspective projection matrix and the model matrix.
-- Swap out the perspective projection matrix to use {{interwiki("wikipedia", "orthographic projection")}}. In the MDN WebGL shared code you'll find the `MDN.orthographicMatrix()`. This can replace the `MDN.perspectiveMatrix()` function in `CubeDemo.prototype.computePerspectiveMatrix()`.
+- Swap out the perspective projection matrix to use [orthographic projection](https://en.wikipedia.org/wiki/Orthographic_projection). In the MDN WebGL shared code you'll find the `MDN.orthographicMatrix()`. This can replace the `MDN.perspectiveMatrix()` function in `CubeDemo.prototype.computePerspectiveMatrix()`.
 
 ## View matrix
 
@@ -714,4 +714,4 @@ view space → projection matrix → clip space
 ## See also
 
 - [WebGL](/en-US/docs/Web/API/WebGL_API)
-- {{interwiki("wikipedia", "3D projection")}}
+- [3D projection](https://en.wikipedia.org/wiki/3D_projection)

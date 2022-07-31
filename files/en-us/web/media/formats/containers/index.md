@@ -338,10 +338,10 @@ FLAC files can only contain FLAC audio data.
 
 ### MPEG/MPEG-2
 
-The **{{interwiki("wikipedia", "MPEG-1")}}** and **{{interwiki("wikipedia", "MPEG-2")}}** file formats are essentially identical.
+The **[MPEG-1](https://en.wikipedia.org/wiki/MPEG-1)** and **[MPEG-2](https://en.wikipedia.org/wiki/MPEG-2)** file formats are essentially identical.
 Created by the Moving Picture Experts Group (MPEG), these formats are widely used in physical media, including as the format of the video on DVD media.
 
-On the internet, perhaps the most common use of the MPEG file format is to contain {{interwiki("wikipedia", "MPEG-1", "Layer_III/MP3", "MPEG-1 Audio Layer 3")}} sound data; the resulting files are the wildly popular MP3 file used by digital music devices around the world.
+On the internet, perhaps the most common use of the MPEG file format is to contain [Layer_III/MP3](https://en.wikipedia.org/wiki/MPEG-1) sound data; the resulting files are the wildly popular MP3 file used by digital music devices around the world.
 Otherwise, MPEG-1 and MPEG-2 are not widely used in Web content.
 
 The main differences between MPEG-1 and MPEG-2 take place in the media data formats rather than the container format.
@@ -432,7 +432,7 @@ MPEG-1 was introduced in 1992; MPEG-2 was introduced in 1996.
 
 ### MPEG-4 (MP4)
 
-**{{interwiki("wikipedia", "MPEG-4")}}** (**MP4**) is the latest version of the MPEG file format.
+**[MPEG-4](https://en.wikipedia.org/wiki/MPEG-4)** (**MP4**) is the latest version of the MPEG file format.
 There are two versions of the format, defined in parts 1 and 14 of the specification.
 MP4 is a popular container today, as it supports several of the most-used codecs and is broadly supported.
 
@@ -950,7 +950,7 @@ The `audio/wave` MIME type is the standard type, and is preferred; however, the 
 
 ### WebM
 
-**{{interwiki("wikipedia", "WebM")}}** (**Web Media**) is a format based on {{interwiki("wikipedia", "Matroska")}} which is designed specifically for use in modern web environments.
+**[WebM](https://en.wikipedia.org/wiki/WebM)** (**Web Media**) is a format based on [Matroska](https://en.wikipedia.org/wiki/Matroska) which is designed specifically for use in modern web environments.
 It's based entirely on free and open technologies and primarily uses codecs that are in turn free and open, although some products support other codecs in WebM containers as well.
 
 WebM was first introduced in 2010 and is now widely supported.

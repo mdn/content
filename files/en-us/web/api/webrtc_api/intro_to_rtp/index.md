@@ -44,7 +44,7 @@ RTP's primary benefits in terms of WebRTC include:
 
 RTP itself doesn't provide every possible feature, which is why other protocols are also used by WebRTC. Some of the more noteworthy things RTP doesn't include:
 
-- RTP does _not_ guarantee **{{interwiki("wikipedia", "quality-of-service")}}** (**QoS**).
+- RTP does _not_ guarantee **[quality-of-service](https://en.wikipedia.org/wiki/Quality-of-service)** (**QoS**).
 - While RTP is intended for use in latency-critical scenarios, it doesn't inherently offer any features that ensure QoS. Instead, it only offers the information necessary to allow QoS to be implemented elsewhere in the stack.
 - RTP doesn't handle allocation or reservation of resources that may be needed.
 

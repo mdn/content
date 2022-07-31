@@ -95,7 +95,7 @@ Along with other pure styling elements, the original HTML Underline (`<u>`) elem
 
 ### Use cases
 
-Valid use cases for the `<u>` element include annotating spelling errors, applying a {{interwiki("wikipedia", "proper name mark")}} to denote proper names in Chinese text, and other forms of annotation.
+Valid use cases for the `<u>` element include annotating spelling errors, applying a [proper name mark](https://en.wikipedia.org/wiki/Proper_name_mark) to denote proper names in Chinese text, and other forms of annotation.
 
 You should _not_ use `<u>` to underline text for presentation purposes, or to denote titles of books.
 
