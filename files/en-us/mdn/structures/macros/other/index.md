@@ -11,9 +11,8 @@ In contrast to the macros listed in [Commonly-used macros](/en-US/docs/MDN/Struc
 
 ## Special contexts
 
-These macros are used only with particular contexts, such as a specific API reference.
+This macro is used only with particular contexts, such as a specific API reference.
 
-- [`Interwiki`](https://github.com/mdn/yari/blob/main/kumascript/macros/Interwiki.ejs) makes it easy to create interwiki links. Currently it supports linking to Wikipedia and Wikimo. The first parameter is the name of the wiki ("wikipedia" or "wikimo"), and the second is the path of the article. For example, `\{\{interwiki("wikipedia", "Firefox")\}\}` shows up as {{ interwiki("wikipedia", "Firefox") }}. This template auto-detects the page language and directs to the same language on Wikipedia, for example.
 - [`RFC`](https://github.com/mdn/yari/blob/main/kumascript/macros/RFC.ejs) creates a link to the specified RFC, given its number. The syntax is: `\{\{RFC(number)\}\}`. For example, `\{\{RFC(2616)\}\}` becomes {{ RFC(2616) }}.
 
 ### Landing page components

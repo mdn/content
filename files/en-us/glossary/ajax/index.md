@@ -16,7 +16,7 @@ With interactive websites and modern web standards, Ajax is gradually being repl
 
 ## See also
 
-- {{interwiki("wikipedia", "AJAX")}} on Wikipedia
+- [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
 - [Ajax](/en-US/docs/Web/Guide/AJAX)
 - [Ajax - Getting started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
 - [Glossary](/en-US/docs/Glossary):
