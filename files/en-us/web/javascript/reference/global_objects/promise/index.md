@@ -424,7 +424,7 @@ if ("Promise" in window) {
   let btn = document.getElementById("make-promise");
   btn.addEventListener("click",testPromise);
 } else {
-  log = document.getElementById('log');
+  const log = document.getElementById('log');
   log.textContent = "Live example not available as your browser doesn't support the <code>Promise<code> interface.";
 }
 ```
