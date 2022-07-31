@@ -141,25 +141,26 @@ As you will notice from looking around these guidelines, the code blocks that ar
 
 To do this, you first use the MDN editor controls to put your code block in a `<pre>` block and give it appropriate syntax highlighting. The source of the code will look something like this:
 
-```js
+````js
 function myFunc() {
   console.log('Hello!');
-};</pre>
+};
 ```
+````
 
 To make it into a good example, you insert `example-good` after the code block's language directive:
 
-```html
-``` js example-good
+````html
+```js example-good
  …
-```
+````
 
 To make it into a bad example, you insert `example-bad` after the code block's language directive:
 
-```html
-``` js example-bad
+````html
+```js example-bad
   …
-```
+````
 
 We would like to encourage you to use these. You don't need to use these everywhere — only when you are specifically calling out good and bad practices in your code.
 
