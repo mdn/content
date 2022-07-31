@@ -31,12 +31,21 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-In this example the `error()` method is used when a chunk contains a symbol.
+In this example the `error()` method is used when a chunk could not be transformed.
 
 ```js
-case 'symbol':
-  controller.error("Cannot send a symbol as a chunk part")
-  break
+const transformContent = {
+  start() { /* … */ },
+  async transform(chunk, controller) {
+    try {
+      chunk = await applyMyTransformation(chunk);
+    } catch (err) {
+      controller.error(`Unable to transform chunk: ${err}`);
+    }
+    // …
+  },
+  // …
+};
 ```
 
 ## Specifications
