@@ -10,16 +10,6 @@ tags:
 
 These terms are commonly associated with technologies and specifications and are used on MDN Web Docs to label a technology. These are also defined in our [Browser compatibility project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information).
 
-## Deprecated
-
-The term **deprecated** on MDN Web Docs is used to mark an API or technology that is no longer recommended. A deprecated API or technology might be removed in the future or might only be kept for compatibility purposes and may still work. We recommend to avoid using the functionality marked as deprecated.
-
-## Obsolete
-
-On MDN Web Docs, the term **obsolete** was used to mark an API or technology that is not only no longer recommended but is also no longer implemented in browsers. The term was, however, confusing. It was similar to **deprecated** but it's distinction from **deprecated** ws not very helpful.
-
-> **Note:** We do not use the term **obsolete** on MDN Web Docs anymore. If you come across any instances, they should be removed or replaced with the term **deprecated**.
-
 ## Experimental
 
 The term **experimental** can mean different things depending on the context you hear or read it in.
@@ -42,7 +32,17 @@ And some technologies might have a stable specification and be well-used but mig
 
 A feature or technology that is not marked **experimental** or **deprecated** is said to be on a **standards track**, meaning the feature is part of an active specification or specification process.
 
-## Removal guidelines
+## Deprecated
+
+The term **deprecated** on MDN Web Docs is used to mark an API or technology that is no longer recommended. A deprecated API or technology might be removed in the future or might only be kept for compatibility purposes and may still work. We recommend to avoid using the functionality marked as deprecated.
+
+## Obsolete
+
+On MDN Web Docs, the term **obsolete** was used to mark an API or technology that is not only no longer recommended but is also no longer implemented in browsers. The term was, however, confusing. It was similar to **deprecated** but it's distinction from **deprecated** ws not very helpful.
+
+> **Note:** We do not use the term **obsolete** on MDN Web Docs anymore. If you come across any instances, they should be removed or replaced with the term **deprecated**.
+
+## Guidelines for removing content
 
 Sometimes during the development of a new specification or over the course of the evolution of living standards such as HTML, new elements, methods, properties, and so forth are added to the specification, kept there for a while, and then removed. Sometimes this happens very quickly, and sometimes these new items remain in the specification for months or even years before being removed. This can make it tricky to decide how to handle the removal of the item from the specification.
 
@@ -57,41 +57,41 @@ If the item was _never_ implemented in a release version of _any_ browser, not e
 
 - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), delete that page.
     If the removed item is an interface, this means removing any subpages describing the properties and methods on that interface as well.
-- Remove the item from any lists of properties, attributes, methods, and so forth. For methods of an interface, for example, this means to remove it from the "Methods" section on the interface's overview page.
+- Remove the item from any lists of properties, attributes, methods, and so forth. For methods of an interface, for example, this means removing it from the "Methods" section on the interface's overview page.
 - Search the text of the overview page for that interface, element, etc., for any references to the removed item. Remove those references, being sure not to leave weird grammar issues or other problems with the text. This may mean not just deleting words but rewriting a sentence or paragraph to make more sense. It may also mean removing entire sections of content if the description of the item's use is lengthy.
 - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Remove those references, being sure not to leave weird grammar issues or other problems with the text. This may mean not just deleting words but rewriting a sentence or paragraph to make more sense. It may also mean removing entire sections of content if the description of the item's use is lengthy.
 - Search MDN Web Docs for references to the removed item, in case there are discussions elsewhere. It's unlikely that there are, since if it was never implemented, it's unlikely to be widely discussed. Remove those mentions as well.
-- If the [Browser compatibility data repository's](https://github.com/mdn/browser-compat-data) JSON files contain data for the removed items, delete those objects from the JSON code and submit a PR with that change, explaining the reason in the commit message and the PR description. Be careful to check that you don't break the JSON syntax while doing this.
+- If the JSON files in the [Browser Compatibility Data repository](https://github.com/mdn/browser-compat-data) contain data for the removed items, delete those objects from the JSON code and submit a pull request with that change, explaining the reason in the commit message and the pull request description. Be careful to check that you don't break the JSON syntax while doing this.
 
 ### If the item was implemented in a browser behind a flag
 
 If the item was implemented in any release version of any one or more browsers but _only_ behind a preference or a flag, do not delete the item from the documentation immediately. Instead, mark the item as **deprecated** as follows:
 
-- If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the {{tag("Deprecated")}} tag to the page's list of tags.
+- If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the [`Deprecated`](/en-US/docs/MDN/Writing_guidelines/Howto/Tag#technology_status_tags) tag to the page's list of tags.
 - On the overview page for the element, interface, or API, find the list of items that includes the item that's been removed from the specification and add the [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) macro after the item's name in that list.
 - Search the informative text of the overview page for that interface, element, etc., for any references to the removed item. Add warning boxes in appropriate places with text along the lines of "\[item] has been removed from the specification and will be removed from browsers soon. See \[link to page] for a new way to do this."
 - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
 - Search MDN Web Docs for references to the removed item, in case there are discussions elsewhere. Add similar warning boxes there as well.
 - At some point in the future, a decision may be made to actually remove the item from the documentation; we don't normally do this but if the item was especially unutilized or uninteresting, we may decide to do so.
-- Update any relevant entries in the [Browser Compatibility Data repo](https://github.com/mdn/browser-compat-data) to reflect the obsolescence of the item(s) affected.
+- Update any relevant entries in the [Browser Compatibility Data repository](https://github.com/mdn/browser-compat-data) to reflect the obsolescence of the item(s) affected.
 
 ### If the item was implemented in a browser without a flag
 
 If the item was implemented in one or more release builds of browsers without requiring a preference or a flag, mark the item as **deprecated**, as follows:
 
-- If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the {{tag("Deprecated")}} tag to the page's list of tags.
+- If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the [`Deprecated`](/en-US/docs/MDN/Writing_guidelines/Howto/Tag#technology_status_tags) tag to the page's list of tags.
 - On the overview page for the element, interface, or API, find the list of items that includes the item that's been removed from the specification and add the [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) macro after the item's name in that list.
 - Search the informative text of the overview page for that interface, element, etc., for any references to the removed item. Add warning boxes in appropriate places with text along the lines of "\[item] has been removed from the specification and is deprecated. It may be removed from browsers in the future, so you should not use it. See \[link to page] for a new way to do this."
 - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
 - Search MDN Web Docs for references to the removed item, in case there are discussions elsewhere. Add similar warning boxes there as well.
 - It's unlikely that these items will be removed from the documentation anytime soon, if ever.
-- Update any relevant entries in the [Browser compatibility data repository](https://github.com/mdn/browser-compat-data) to reflect the deprecation of the item(s) affected.
+- Update any relevant entries in the [Browser Compatibility Data repository](https://github.com/mdn/browser-compat-data) to reflect the deprecation of the item(s) affected.
 
 Please use common sense with wording of warning messages and other changes to the text suggested in the guidelines above.
 Different items will require different wording and handling of the situation.
 When in doubt, feel free to ask for advice on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix), or on the [MDN Web Docs discussion forum](https://discourse.mozilla.org/c/mdn).
 
-## How to communicate a specification conflict
+## Guidelines for documenting a specification conflict
 
 Sometimes, but rarely, there might be a conflict between different specification versions (usually W3C versus WHATWG). For example, one version might have a feature listed as deprecated, while the other doesn't.
 In such cases, consider what the reality is, that is, consider what browsers are actually doing, and write an "important" note to summarize that latest status.
