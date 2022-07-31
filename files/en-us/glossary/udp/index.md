@@ -16,5 +16,5 @@ UDP is suitable for purposes where error checking and correction are either not 
 
 ## See also
 
-- {{Interwiki("wikipedia", "User Datagram Protocol")}} on Wikipedia
+- [User Datagram Protocol](https://en.wikipedia.org/wiki/User_Datagram_Protocol) on Wikipedia
 - [Specification](https://datatracker.ietf.org/doc/html/rfc768)

@@ -47,4 +47,4 @@ public static void main(String[] args)
 
 ## See also
 
-- {{Interwiki("wikipedia", "Type signature#Java", "Java internal type signatures")}} on Wikipedia
+- [Java internal type signatures](https://en.wikipedia.org/wiki/Type_signature#Java) on Wikipedia

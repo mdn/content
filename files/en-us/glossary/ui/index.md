@@ -10,5 +10,5 @@ tags:
 
 ## See also
 
-- {{interwiki("wikipedia", "User_interface", "User interface")}} on Wikipedia
-- {{interwiki("wikipedia", "Front_end_development", "Front end development")}} on Wikipedia
+- [User interface](https://en.wikipedia.org/wiki/User_interface) on Wikipedia
+- [Front end development](https://en.wikipedia.org/wiki/Front_end_development) on Wikipedia
