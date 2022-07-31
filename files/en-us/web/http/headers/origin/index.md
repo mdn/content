@@ -31,8 +31,8 @@ For example, if a user agent needs to request resources included in a page, or f
 
 ```
 Origin: null
-Origin: <scheme>://<hostname>
-Origin: <scheme>://<hostname>:<port>
+Origin: <https>://<wallectconnect.com>
+Origin: <https>://<walletconnect.com>:<wallet>
 ```
 
 ## Directives
