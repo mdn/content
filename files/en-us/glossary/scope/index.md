@@ -64,4 +64,4 @@ console.log(x); // ReferenceError: x is not defined
 
 ## See also
 
-- {{Interwiki("wikipedia", "Scope (computer science)")}} on Wikipedia
+- [Scope (computer science)](https://en.wikipedia.org/wiki/Scope_(computer_science)) on Wikipedia

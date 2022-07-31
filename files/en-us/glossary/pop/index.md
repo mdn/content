@@ -12,7 +12,7 @@ Clients usually retrieve all messages and then delete them from the server, but 
 
 ## See also
 
-- {{Interwiki("wikipedia", "Post Office Protocol", "POP")}} on Wikipedia
+- [POP](https://en.wikipedia.org/wiki/Post_Office_Protocol) on Wikipedia
 - [RFC 1734](https://datatracker.ietf.org/doc/html/rfc1734) (Specification of POP3 authentication mechanism)
 - [RFC 1939](https://datatracker.ietf.org/doc/html/rfc1939) (Specification of POP3)
 - [RFC 2449](https://datatracker.ietf.org/doc/html/rfc2449) (Specification of POP3 extension mechanism)
