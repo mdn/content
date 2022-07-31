@@ -137,7 +137,7 @@ The [sass/vars/\_mdn-web-docs-palette.scss](https://github.com/mdn/mdn-minimalis
 
 ### Highlight good and bad practice examples
 
-As you will notice from looking around these guidelines, the code blocks that are supposed to be good practice examples are highlighted with a check mark in green, and the code blocks that are supposed to be bad practice examples are highlighted with a white cross with a red circle.
+As you will notice from looking around these guidelines, the code blocks that are supposed to be good practice examples are highlighted with a check mark in green, and the code blocks that are supposed to be bad practice examples are highlighted with a cross in a red circle.
 
 To do this, you first use the MDN editor controls to put your code block in a `<pre>` block and give it appropriate syntax highlighting. The source of the code will look something like this:
 
