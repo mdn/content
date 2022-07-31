@@ -11,4 +11,4 @@ In JavaScript it is a {{glossary("property")}} of the {{glossary("global object"
 
 ## See also
 
-- {{Interwiki("wikipedia", "Global variable")}} on Wikipedia
+- [Global variable](https://en.wikipedia.org/wiki/Global_variable) on Wikipedia

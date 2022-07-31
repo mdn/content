@@ -13,4 +13,4 @@ In other words, it tells the browser that changing the protocol from HTTP to HTT
 
 - {{HTTPHeader("Strict-Transport-Security")}}
 - OWASP Article: [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
-- Wikipedia: {{interwiki("wikipedia", "HTTP Strict Transport Security")}}
+- Wikipedia: [HTTP Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
