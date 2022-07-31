@@ -13,4 +13,4 @@ When you use a search engine, you use keywords to specify what you are looking f
 
 ## See also
 
-- {{interwiki("wikipedia", "Keyword_research", "Keyword")}} on Wikipedia
+- [Keyword](https://en.wikipedia.org/wiki/Keyword_research) on Wikipedia

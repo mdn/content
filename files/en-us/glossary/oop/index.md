@@ -12,6 +12,6 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "Object-oriented programming")}} on Wikipedia
+- [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) on Wikipedia
 - [Introduction to object-oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)
 - [Inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

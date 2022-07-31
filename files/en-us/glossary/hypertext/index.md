@@ -12,4 +12,4 @@ The term was coined by Ted Nelson around 1965.
 
 ## See also
 
-- {{interwiki("wikipedia", "Hypertext", "Hypertext")}} on Wikipedia
+- [Hypertext](https://en.wikipedia.org/wiki/Hypertext) on Wikipedia

@@ -12,5 +12,5 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "Opera Browser")}} on Wikipedia
+- [Opera Browser](https://en.wikipedia.org/wiki/Opera_Browser) on Wikipedia
 - [Opera browser web site](https://www.opera.com/)

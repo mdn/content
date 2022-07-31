@@ -14,4 +14,4 @@ JPEG compression is composed of three compression techniques applied in successi
 
 ## See also
 
-- {{Interwiki("wikipedia", "JPEG")}} on Wikipedia
+- [JPEG](https://en.wikipedia.org/wiki/JPEG) on Wikipedia

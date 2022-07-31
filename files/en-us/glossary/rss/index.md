@@ -12,5 +12,5 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "RSS")}} on Wikipedia
+- [RSS](https://en.wikipedia.org/wiki/RSS) on Wikipedia
 - [Latest specification](https://www.rssboard.org/rss-specification)

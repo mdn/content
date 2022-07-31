@@ -12,7 +12,7 @@ Current browsers provide integrated developer tools, which allow to inspect a we
 
 ## See also
 
-- {{interwiki("wikipedia", "Web development tools", "Web development tools")}} on Wikipedia
+- [Web development tools](https://en.wikipedia.org/wiki/Web_development_tools) on Wikipedia
 - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) on MDN
 - [Firebug](https://getfirebug.com/) (former developer tool for Firefox)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/) on chrome.com

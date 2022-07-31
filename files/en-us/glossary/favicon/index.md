@@ -17,7 +17,7 @@ They are used to improve user experience and enforce brand consistency. When a f
 
 ## See also
 
-- {{interwiki("wikipedia", "Favicon", "Favicon")}} on Wikipedia
+- [Favicon](https://en.wikipedia.org/wiki/Favicon) on Wikipedia
 - Tools
 
   - [Free favicon generator](https://favicon.io/)

@@ -52,4 +52,4 @@ Web frameworks such as [AngularJS](https://en.wikipedia.org/wiki/AngularJS) and 
 
 ## See also
 
-- {{interwiki("wikipedia", "Model–view–controller")}} on Wikipedia
+- [Model–view–controller](https://en.wikipedia.org/wiki/Model–view–controller) on Wikipedia

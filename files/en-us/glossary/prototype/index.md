@@ -12,4 +12,4 @@ See [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance
 
 ## See also
 
-- {{Interwiki("wikipedia", "Software Prototyping")}} on Wikipedia
+- [Software Prototyping](https://en.wikipedia.org/wiki/Software_Prototyping) on Wikipedia

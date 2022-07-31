@@ -10,4 +10,4 @@ tags:
 ## See also
 
 - [Official website](https://www.iana.org/domains/arpa)
-- {{Interwiki("wikipedia", ".arpa")}} on Wikipedia
+- [.arpa](https://en.wikipedia.org/wiki/.arpa) on Wikipedia

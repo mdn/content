@@ -37,10 +37,10 @@ for (var i=0; i < 4; i++) {
 }
 ```
 
-The Boolean value is named after English mathematician {{interwiki("wikipedia", "George Boole")}}, who pioneered the field of mathematical logic.
+The Boolean value is named after English mathematician [George Boole](https://en.wikipedia.org/wiki/George_Boole), who pioneered the field of mathematical logic.
 
 ## See also
 
-- {{Interwiki("wikipedia", "Boolean data type", "Boolean")}} on Wikipedia
+- [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) on Wikipedia
 - The JavaScript global object: {{jsxref("Boolean")}}
 - [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
