@@ -147,7 +147,7 @@ function myFunc() {
 };</pre>
 ```
 
-To make it into a good example, you insert `example-good` in the end of the first line of a code block:
+To make it into a good example, you insert `example-good` after the code block's language directive:
 
 ```html
 ``` js example-good
