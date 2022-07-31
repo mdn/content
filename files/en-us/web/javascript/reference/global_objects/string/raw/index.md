@@ -118,7 +118,7 @@ const doc = html`<canvas>\n</canvas>`;
 // "<canvas>\n</canvas>"; the "\n" becomes a line break
 ```
 
-Notice the first argument is an object with a `raw` property, whose value is an array-like (with a `length` property and integer indexes) representing the separated strings in the template literal. The rest of the arguments are the substitutions. Since the `raw` value can be any array-like, it can even be a string! For example, `'test'` is treated as `['t', 'e', 's', 't']`. The following is equivalent to `` `t${0}e${1}s${2}t` ``:
+Notice the first argument is an object with a `raw` property, whose value is an array-like object (with a `length` property and integer indexes) representing the separated strings in the template literal. The rest of the arguments are the substitutions. Since the `raw` value can be any array-like object, it can even be a string! For example, `'test'` is treated as `['t', 'e', 's', 't']`. The following is equivalent to `` `t${0}e${1}s${2}t` ``:
 
 ```js
 String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
