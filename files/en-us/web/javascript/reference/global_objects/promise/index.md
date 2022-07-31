@@ -425,7 +425,7 @@ if ("Promise" in window) {
   btn.addEventListener("click",testPromise);
 } else {
   const log = document.getElementById('log');
-  log.textContent = "Live example not available as your browser doesn't support the <code>Promise<code> interface.";
+  log.textContent = "Live example not available as your browser doesn't support the <code>Promise</code> interface.";
 }
 ```
 
