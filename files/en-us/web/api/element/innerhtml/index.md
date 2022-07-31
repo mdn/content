@@ -131,7 +131,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // harmless in this case
 ```
 
-Although this may look like a {{interwiki("wikipedia", "cross-site scripting")}}
+Although this may look like a [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting)
 attack, the result is harmless. HTML5 specifies that a {{HTMLElement("script")}} tag
 inserted with `innerHTML` [should not execute](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 

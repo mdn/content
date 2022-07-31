@@ -35,8 +35,8 @@ defined by the World Geodetic System 1984 specification (WGS 84).
 > **Note:** The zero meridian (also known as the prime meridian or the
 > reference meridian) is not precisely the same as the Greenwich meridian that most
 > people think of. It is, instead, the {{interwiki("wikipedia", "IERS Reference
-    Meridian")}}, which is located 5.3 {{interwiki("wikipedia", "arcseconds")}} (102
-> meters / 335 feet) east of the {{interwiki("wikipedia", "Greenwich meridian")}}. This
+    Meridian")}}, which is located 5.3 [arcseconds](https://en.wikipedia.org/wiki/Arcseconds) (102
+> meters / 335 feet) east of the [Greenwich meridian](https://en.wikipedia.org/wiki/Greenwich_meridian). This
 > is the same standard used by the {{interwiki("wikipedia", "Global Positioning
     System")}} (GPS).
 

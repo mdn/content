@@ -12,4 +12,4 @@ tags:
 ## See also
 
 - [Official website](https://www.w3.org/XML/Query/)
-- {{Interwiki("wikipedia", "XQuery")}} on Wikipedia
+- [XQuery](https://en.wikipedia.org/wiki/XQuery) on Wikipedia
