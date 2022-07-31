@@ -15,5 +15,5 @@ HMAC is used to ensure both integrity and authentication.
 
 ## See also
 
-- {{Interwiki("wikipedia", "Hash-based message authentication code", "HMAC")}} on Wikipedia
+- [HMAC](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) on Wikipedia
 - [RFC 2104](https://www.ietf.org/rfc/rfc2104.txt) on IETF

@@ -23,6 +23,6 @@ Among other things, i18n requires support for multiple
 
 ## See also
 
-- {{interwiki("wikipedia", "Internationalization and localization", "i18n")}} on Wikipedia
+- [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization) on Wikipedia
 - [i18n on W3C](https://www.w3.org/International/questions/qa-i18n.en#Internationalization)
 - [i18n material on i18nguy.com](http://www.i18nguy.com/)

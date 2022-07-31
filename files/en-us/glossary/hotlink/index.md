@@ -11,5 +11,5 @@ The practice is often frowned upon as it can cause unwanted bandwidth usage on t
 
 ## See also
 
-- {{Interwiki("wikipedia", "Inline linking", "Hotlink")}} on Wikipedia
+- [Hotlink](https://en.wikipedia.org/wiki/Inline_linking) on Wikipedia
 - {{glossary("Hyperlink")}} (Glossary)

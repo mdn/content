@@ -11,4 +11,4 @@ The term **DSL** can have several meanings depending on the context. It may refe
 
 ## See also
 
-- {{Interwiki("wikipedia", "DSL_(disambiguation)", "DSL")}} on Wikipedia
+- [DSL](https://en.wikipedia.org/wiki/DSL_(disambiguation)) on Wikipedia

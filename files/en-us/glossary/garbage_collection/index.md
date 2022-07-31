@@ -11,7 +11,7 @@ In other words, garbage collection is the process of removing any objects which 
 
 ## See also
 
-- {{interwiki("wikipedia", "Memory management")}} on Wikipedia
-- {{interwiki("wikipedia", "Garbage collection (computer science)")}} on Wikipedia
+- [Memory management](https://en.wikipedia.org/wiki/Memory_management) on Wikipedia
+- [Garbage collection (computer science)](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) on Wikipedia
 - [Garbage collection](/en-US/docs/Web/JavaScript/Memory_Management#garbage_collection) in the MDN JavaScript guide.
 - [Memory management in JavaScript](/en-US/docs/Web/JavaScript/Memory_Management)

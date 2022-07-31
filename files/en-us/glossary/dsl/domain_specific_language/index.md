@@ -12,5 +12,5 @@ Contrast DSLs with *general-purpose languages (GPLs)*, which are designed to add
 
 ## See also
 
-- {{Interwiki("wikipedia", "Domain-specific_language", "Domain-specific language")}} on Wikipedia
+- [Domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language) on Wikipedia
 - [DSL Guide](https://martinfowler.com/dsl.html) on martinfowler.com

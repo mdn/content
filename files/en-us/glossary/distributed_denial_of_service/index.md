@@ -30,4 +30,4 @@ The United States Computer Emergency Readiness Team (US-CERT) defines symptoms o
 
 ## See also
 
-- {{interwiki("wikipedia", "Denial-of-service_attack", "Denial-of-service attack")}} on Wikipedia
+- [Denial-of-service attack](https://en.wikipedia.org/wiki/Denial-of-service_attack) on Wikipedia

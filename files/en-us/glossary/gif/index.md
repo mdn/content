@@ -9,4 +9,4 @@ GIF (Graphics Interchange Format) is an image format that uses lossless compress
 
 ## See also
 
-- {{Interwiki("wikipedia", "GIF")}} on Wikipedia
+- [GIF](https://en.wikipedia.org/wiki/GIF) on Wikipedia
