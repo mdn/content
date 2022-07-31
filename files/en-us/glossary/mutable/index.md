@@ -36,4 +36,4 @@ On appending the "immutableString" with a string value, following events occur:
 
 ## See also
 
-- {{Interwiki("wikipedia", "Immutable object")}} on Wikipedia
+- [Immutable object](https://en.wikipedia.org/wiki/Immutable_object) on Wikipedia

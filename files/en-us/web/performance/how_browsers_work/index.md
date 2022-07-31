@@ -153,7 +153,7 @@ Building the CSSOM is very, very fast and is not displayed in a unique color in 
 
 #### JavaScript Compilation
 
-While the CSS is being parsed and the CSSOM created, other assets, including JavaScript files, are downloading (thanks to the preload scanner). JavaScript is interpreted, compiled, parsed and executed. The scripts are parsed into abstract syntax trees. Some browser engines take the {{interwiki('wikipedia', 'Abstract Syntax Tree')}} and pass it into an interpreter, outputting bytecode which is executed on the main thread. This is known as JavaScript compilation.
+While the CSS is being parsed and the CSSOM created, other assets, including JavaScript files, are downloading (thanks to the preload scanner). JavaScript is interpreted, compiled, parsed and executed. The scripts are parsed into abstract syntax trees. Some browser engines take the [Abstract Syntax Tree](https://en.wikipedia.org/wiki/Abstract_Syntax_Tree) and pass it into an interpreter, outputting bytecode which is executed on the main thread. This is known as JavaScript compilation.
 
 #### Building the Accessibility Tree
 

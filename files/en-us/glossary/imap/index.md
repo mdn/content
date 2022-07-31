@@ -17,4 +17,4 @@ Mark Crispin initially developed IMAP in 1986 as _Interim Mail Access Protocol_.
 
 - {{RFC(3501)}}
 - {{Glossary("POP")}}
-- {{interwiki("wikipedia", "Internet Message Access Protocol", "IMAP")}} on Wikipedia
+- [IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol) on Wikipedia
