@@ -12,7 +12,7 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "TURN")}} on Wikipedia
+- [TURN](https://en.wikipedia.org/wiki/TURN) on Wikipedia
 - [WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
 - [Specification](https://www.ietf.org/rfc/rfc5766.txt)
 - [Specification update for IPv6](https://www.ietf.org/rfc/rfc6156.txt)

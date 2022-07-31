@@ -40,4 +40,4 @@ Most authentication occurs only at the start of a {{glossary("TCP")}} session. I
 
 ## See also
 
-- {{Interwiki("wikipedia", "Session hijacking")}} on Wikipedia
+- [Session hijacking](https://en.wikipedia.org/wiki/Session_hijacking) on Wikipedia

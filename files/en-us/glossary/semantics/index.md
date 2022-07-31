@@ -69,7 +69,7 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 
 - [HTML element reference](/en-US/docs/Web/HTML/Element#inline_text_semantics) on MDN
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements#problems_solved_by_html5) on MDN
-- {{interwiki("wikipedia", "Semantics#Computer_science", "The meaning of semantics in computer science")}} on Wikipedia
+- [The meaning of semantics in computer science](https://en.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
 - [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("SEO")}}

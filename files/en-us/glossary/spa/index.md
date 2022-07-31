@@ -12,7 +12,7 @@ This therefore allows users to use websites without loading whole new pages from
 
 ## See also
 
-- {{Interwiki("wikipedia", "Single-page application")}} (Wikipedia)
+- [Single-page application](https://en.wikipedia.org/wiki/Single-page_application) (Wikipedia)
 - [Understanding client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
 - [Glossary](/en-US/docs/Glossary)
 

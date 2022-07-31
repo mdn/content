@@ -12,7 +12,7 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "STUN")}} on Wikipedia
+- [STUN](https://en.wikipedia.org/wiki/STUN) on Wikipedia
 - [WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
 
 ### Technical reference

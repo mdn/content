@@ -10,4 +10,4 @@ A **specification** is a document that lays out in detail what functionality or 
 
 ## See also
 
-- {{Interwiki("wikipedia", "Specification")}} on Wikipedia
+- [Specification](https://en.wikipedia.org/wiki/Specification) on Wikipedia

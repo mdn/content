@@ -11,7 +11,7 @@ Type conversion (or typecasting) means transfer of data from one data type to an
 
 ## See also
 
-- {{Interwiki("wikipedia", "Type conversion")}} (Wikipedia)
+- [Type conversion](https://en.wikipedia.org/wiki/Type_conversion) (Wikipedia)
 - [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Type")}}

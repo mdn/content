@@ -17,7 +17,7 @@ Textures are characterized by collections of Texel's, as how images are characte
 
 ## See also
 
-- {{interwiki("wikipedia", "Texel (graphics)")}} on Wikipedia
+- [Texel (graphics)](https://en.wikipedia.org/wiki/Texel_(graphics)) on Wikipedia
 - [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
 - [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)
 - [Animating textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
