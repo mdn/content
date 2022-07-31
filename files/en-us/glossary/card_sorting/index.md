@@ -10,4 +10,4 @@ Card sorting is a simple technique used in {{glossary("Information architecture"
 
 ## See also
 
-- {{interwiki("wikipedia", "Card_sorting", "Card sorting")}} on Wikipedia
+- [Card sorting](https://en.wikipedia.org/wiki/Card_sorting) on Wikipedia

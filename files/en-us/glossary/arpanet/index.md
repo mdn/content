@@ -9,4 +9,4 @@ The **ARPANET** (Advanced Research Projects Agency NETwork) was an early compute
 
 ## See also
 
-- {{Interwiki("wikipedia", "ARPANET")}} on Wikipedia
+- [ARPANET](https://en.wikipedia.org/wiki/ARPANET) on Wikipedia

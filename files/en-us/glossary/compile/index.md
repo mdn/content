@@ -21,4 +21,4 @@ Compilers may also translate among higher-level languages — for example, from 
 
 - [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_wasm)
 - [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Rust_to_wasm)
-- Wikipedia: {{Interwiki("wikipedia", "Compiler")}}
+- Wikipedia: [Compiler](https://en.wikipedia.org/wiki/Compiler)
