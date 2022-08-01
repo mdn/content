@@ -163,7 +163,7 @@ The most common way to do this is to add a [`class` attribute](/en-US/docs/Web/H
     </ul>
     ```
 
-2. In your CSS, target the class of `special` by creating a selector that starts with a full stop character:
+2. In your CSS, target the class of `special` by creating a [`selector`](/en-US/docs/Learn/CSS/Building_blocks/Selectors) that starts with a period, the full stop character:
 
     ```css
     .special {
