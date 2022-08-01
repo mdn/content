@@ -1,10 +1,10 @@
 ---
 title: Creating, moving, and deleting pages
-slug: MDN/Writing_guidelines/Creating_moving_deleting
-page-type: mdn-writing-guide
+slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 tags:
   - meta
   - writing-guide
+page-type: mdn-writing-guide
 ---
 {{MDNSidebar}}
 
