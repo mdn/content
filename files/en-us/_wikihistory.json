@@ -64113,14 +64113,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/RTCDataChannel/stream": {
-    "modified": "2020-10-15T21:47:09.655Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCDataChannelEvent": {
     "modified": "2020-10-15T21:28:54.827Z",
     "contributors": [

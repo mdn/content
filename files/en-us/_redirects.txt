@@ -9209,6 +9209,7 @@
 /en-US/docs/Web/API/RTCDataChannel/onerror	/en-US/docs/Web/API/RTCDataChannel/error_event
 /en-US/docs/Web/API/RTCDataChannel/onmessage	/en-US/docs/Web/API/RTCDataChannel/message_event
 /en-US/docs/Web/API/RTCDataChannel/onopen	/en-US/docs/Web/API/RTCDataChannel/open_event
+/en-US/docs/Web/API/RTCDataChannel/stream	/en-US/docs/Web/API/RTCDataChannel/id
 /en-US/docs/Web/API/RTCDataChannelEvent.RTCDataChannelEvent	/en-US/docs/Web/API/RTCDataChannelEvent/RTCDataChannelEvent
 /en-US/docs/Web/API/RTCDataChannelEvent.channel	/en-US/docs/Web/API/RTCDataChannelEvent/channel
 /en-US/docs/Web/API/RTCIceCandidate/RTCIceCandidate.address	/en-US/docs/Web/API/RTCIceCandidate/address
