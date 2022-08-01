@@ -133,4 +133,3 @@ Here are some examples of types of documents that should _not_ be placed on MDN 
 - Project proposals
 - Specifications or standards
 - Promotional material, advertising, or personal information
-
