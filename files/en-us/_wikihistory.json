@@ -63358,17 +63358,6 @@
       "teoli"
     ]
   },
-  "Web/API/ProgressEvent/initProgressEvent": {
-    "modified": "2020-10-15T21:24:39.953Z",
-    "contributors": [
-      "ddbeck",
-      "DomenicDenicola",
-      "abbycar",
-      "Sebastianz",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/ProgressEvent/lengthComputable": {
     "modified": "2020-10-15T21:24:39.609Z",
     "contributors": [

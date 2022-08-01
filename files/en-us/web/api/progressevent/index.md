@@ -34,10 +34,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 ## Methods
 
-_Also inherits methods from its parent {{domxref("Event")}}._
-
-- {{domxref("ProgressEvent.initProgressEvent()")}} {{deprecated_inline}} {{non-Standard_inline}}
-  - : Initializes a `ProgressEvent` created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent('ProgressEvent')")}} method.
+_Inherits methods from its parent, {{domxref("Event")}}._
 
 ## Examples
 
