@@ -645,7 +645,7 @@ When you use `extends`, the static methods inherit from each other as well, so y
 ```js
 class ColorWithAlpha extends Color {
   // ...
-  isValid(r, g, b, a) {
+  static isValid(r, g, b, a) {
     // Call the parent class's isValid() and build on the return value
     return super.isValid(r, g, b) && a >= 0 && a <= 1;
   }
