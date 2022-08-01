@@ -9148,10 +9148,11 @@
 /en-US/docs/Web/API/PresentationConnectionClosedEvent	/en-US/docs/Web/API/PresentationConnectionCloseEvent
 /en-US/docs/Web/API/PresentationRequest/onconnectionavailable	/en-US/docs/Web/API/PresentationRequest
 /en-US/docs/Web/API/ProgressEvent.ProgressEvent	/en-US/docs/Web/API/ProgressEvent/ProgressEvent
-/en-US/docs/Web/API/ProgressEvent.initProgressEvent	/en-US/docs/Web/API/ProgressEvent/initProgressEvent
+/en-US/docs/Web/API/ProgressEvent.initProgressEvent	/en-US/docs/Web/API/ProgressEvent
 /en-US/docs/Web/API/ProgressEvent.lengthComputable	/en-US/docs/Web/API/ProgressEvent/lengthComputable
 /en-US/docs/Web/API/ProgressEvent.loaded	/en-US/docs/Web/API/ProgressEvent/loaded
 /en-US/docs/Web/API/ProgressEvent.total	/en-US/docs/Web/API/ProgressEvent/total
+/en-US/docs/Web/API/ProgressEvent/initProgressEvent	/en-US/docs/Web/API/ProgressEvent
 /en-US/docs/Web/API/Promise	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 /en-US/docs/Web/API/PromiseRejection	/en-US/docs/Web/API/PromiseRejectionEvent
 /en-US/docs/Web/API/PromiseRejection/PromiseRejection	/en-US/docs/Web/API/PromiseRejectionEvent/PromiseRejectionEvent
