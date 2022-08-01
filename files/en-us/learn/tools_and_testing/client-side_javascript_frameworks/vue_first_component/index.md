@@ -179,15 +179,13 @@ For this component, we'll use the object registration method.
 
 Your component object should now look like this:
 
-```html
-<script>
-  export default {
-    props: {
-      label: { required: true, type: String },
-      done: { default: false, type: Boolean }
-    }
-  };
-</script>
+```js
+export default {
+  props: {
+    label: { required: true, type: String },
+    done: { default: false, type: Boolean }
+  }
+};
 ```
 
 ### Using registered props

@@ -95,7 +95,6 @@ The state of our component will be represented by these three top-level variable
         { id: 2, name: 'Create your first component', completed: true },
         { id: 3, name: 'Complete the rest of the tutorial', completed: false }
       ]
-
       let totalTodos = todos.length
       let completedTodos = todos.filter((todo) => todo.completed).length
     </script>
