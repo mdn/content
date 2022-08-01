@@ -22,7 +22,7 @@ When needing to disable native HTML form controls, developers will need to speci
 
 - The header button element associated with non-collapsible accordion panel,
 - A button which is important to keep in the page's focus order, but its action is presently unavailable - such as submitting a form,
-- Temporarily inactive items in a menu widget that are would otherwise be skipped over via standard keyboard navigation.
+- Temporarily inactive items in a menu widget that would otherwise be skipped over via standard keyboard navigation.
 
 In each of these cases, one may want users to find these elements through standard keyboard navigation, though the functionality of that control is removed or "disabled". Developers will still need to use JavaScript to fully disable the functionality of the element while also changing the appearance of the element so sighted users know it is disabled.
 
@@ -36,7 +36,7 @@ Another reason to need use the `aria-disabled` attribute over the HTML `disabled
 </div>
 ```
 
-Similarly to needing to use JavaScript to ensure an element with `aria-disabled="true"` is not functional, the element will also need styling adjustments. In contrast to the HTML `disabled` attribute, where specifying it provides `:disabled` user-agent styles to be applied, adding `aria-disabled="true"` doesn't. The element can be styled with the [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"].
+Similarly to needing to use JavaScript to ensure an element with `aria-disabled="true"` is not functional, the element will also need styling adjustments. In contrast to the HTML `disabled` attribute, where specifying it provides `:disabled` user-agent styles to be applied, adding `aria-disabled="true"` doesn't. The element can be styled with the [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]`.
 
 ```css
 [aria-disabled="true"] {
@@ -44,10 +44,10 @@ Similarly to needing to use JavaScript to ensure an element with `aria-disabled=
 }
 ```
 
-However, if you are purposefully using the `aria-disabled` attribute to allow for a form control to remain in the page's keyboard focus order, particularly if the element represents important content that all users should be able to perceive, then you may need to use styling that still passes color contrast requirements.  For instance, a disabled button/heading that introduces a non-collapsable accordion panel is content that still needs to be legible. 
+If you are purposefully using the `aria-disabled` attribute to allow for a form control to remain in the page's keyboard focus order, particularly if the element represents important content that all users should be able to perceive, then you may need to use styling that still passes color contrast requirements.  For instance, a disabled button/heading that introduces a non-collapsable accordion panel is content that still needs to be legible. 
 
 ```css
-@media (-ms-high-contrast: active), (forced-colors: active) {
+@media (forced-colors: active) {
 	[aria-disabled="true"] {
 		border-color: Graytext;
     color: GrayText;
