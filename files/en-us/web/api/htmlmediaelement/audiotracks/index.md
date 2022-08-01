@@ -38,7 +38,7 @@ An {{domxref("AudioTrackList")}} object representing the list of audio tracks in
 in the media element. The list of tracks can be accessed using array notation, or using
 the object's {{domxref("AudioTrackList.getTrackById", "getTrackById()")}} method.
 
-Each track is represented by a {{domxref("AudioTrack")}} object which provides
+Each track is represented by an {{domxref("AudioTrack")}} object which provides
 information about the track.
 
 ## Examples
