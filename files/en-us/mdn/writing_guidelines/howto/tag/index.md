@@ -1,5 +1,5 @@
 ---
-title: How to tag pages on MDN Web Docs
+title: How to tag pages
 slug: MDN/Writing_guidelines/Howto/Tag
 page-type: mdn-writing-guide
 tags:
@@ -8,7 +8,7 @@ tags:
 ---
 {{MDNSidebar}}
 
-**Article tags** are an important way to put visitors in touch with helpful content. Each page should normally have several tags to help keep content organized. This page explains the best way to tag pages so that our readers can find information and we can keep ourselves organized.
+**Article tags** are an important way to put readers in touch with helpful content. Each page should normally have several tags to help keep content organized. This article explains the best way to tag pages so that our readers can find information and we can keep the content organized.
 
 Please use tags properly as explained below. If you don't, our automated tools will not correctly generate lists of content, landing pages, and cross-linking of articles.
 
