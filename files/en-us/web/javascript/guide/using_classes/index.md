@@ -585,13 +585,13 @@ class ColorWithAlpha extends Color {
     this.#alpha = a;
   }
   get alpha() {
-    return this.#values[3];
+    return this.#alpha;
   }
   set alpha(value) {
     if (value < 0 || value > 1) {
       throw new RangeError("Alpha value must be between 0 and 1");
     }
-    this.#values[3] = value;
+    this.#alpha = value;
   }
 }
 ```
