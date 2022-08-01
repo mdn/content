@@ -60,10 +60,9 @@ This example styles a modal dialog that opens when the "Update details" button i
 
 ```css
 :modal {
-  position: absolute;
-  top: 10%;
-  left: 10%;
+  border: 5px solid red;
   background-color: yellow;
+  box-shadow: 3px 3px 10px rgba(0 0 0 / 0.5);
 }
 ```
 

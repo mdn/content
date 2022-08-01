@@ -54,23 +54,23 @@ These pseudo-classes relate to form elements, and enable selecting elements base
 - {{CSSxRef(":read-write")}}
   - : Represents any element that is user-editable.
 - {{CSSxRef(":placeholder-shown")}}
-  - : Matches an input element that is displaying placeholder text, for example from the HTML5 `placeholder` attribute.
+  - : Matches an input element that is displaying placeholder text. For example, it will match the `placeholder` attribute in the {{htmlelement("input")}} and {{htmlelement("textarea")}} elements.
 - {{CSSxRef(":default")}}
   - : Matches one or more UI elements that are the default among a set of elements.
 - {{CSSxRef(":checked")}}
-  - : Matches when elements such as checkboxes and radiobuttons are toggled on.
+  - : Matches when elements such as checkboxes and radio buttons are toggled on.
 - {{CSSxRef(":indeterminate")}}
-  - : Matches when UI elements are in an indeterminate state.
+  - : Matches UI elements when they are in an indeterminate state.
 - {{CSSxRef(":blank")}}
   - : Matches a user-input element which is empty, containing an empty string or other null input.
 - {{CSSxRef(":valid")}}
-  - : Matches an element with valid contents. For example an input element with type 'email' which contains a validly formed email address.
+  - : Matches an element with valid contents. For example, an input element with the type 'email' that contains a validly formed email address or an empty value if the control is not required.
 - {{CSSxRef(":invalid")}}
-  - : Matches an element with invalid contents. For example an input element with type 'email' with a name entered.
+  - : Matches an element with invalid contents. For example, an input element with type 'email' with a name entered.
 - {{CSSxRef(":in-range")}}
-  - : Applies to elements with range limitations, for example a slider control, when the selected value is in the allowed range.
+  - : Applies to elements with range limitations. For example, a slider control when the selected value is in the allowed range.
 - {{CSSxRef(":out-of-range")}}
-  - : Applies to elements with range limitations, for example a slider control, when the selected value is outside the allowed range.
+  - : Applies to elements with range limitations. For example, a slider control when the selected value is outside the allowed range.
 - {{CSSxRef(":required")}}
   - : Matches when a form element is required.
 - {{CSSxRef(":optional")}}
@@ -82,9 +82,9 @@ These pseudo-classes relate to form elements, and enable selecting elements base
 
 These pseudo-classes reflect the document language, and enable the selection of elements based on language or script direction.
 
-- {{CSSxRef(":dir")}}
+- {{CSSxRef(":dir()")}}
   - : The directionality pseudo-class selects an element based on its directionality as determined by the document language.
-- {{CSSxRef(":lang")}}
+- {{CSSxRef(":lang()")}}
   - : Select an element based on its content language.
 
 ## Location pseudo-classes
@@ -98,7 +98,7 @@ These pseudo-classes relate to links, and to targeted elements within the curren
 - {{CSSxRef(":visited")}}
   - : Matches links that have been visited.
 - {{CSSxRef(":local-link")}}
-  - : Matches links whose absolute URL is the same as the target URL, for example anchor links to the same page.
+  - : Matches links whose absolute URL is the same as the target URL. For example, anchor links to the same page.
 - {{CSSxRef(":target")}}
   - : Matches the element which is the target of the document URL.
 - {{CSSxRef(":target-within")}}
@@ -143,7 +143,7 @@ These pseudo-classes relate to the location of an element within the document tr
 - {{CSSxRef(":last-child")}}
   - : Matches an element that is the last of its siblings.
 - {{CSSxRef(":only-child")}}
-  - : Matches an element that has no siblings. For example a list item with no other list items in that list.
+  - : Matches an element that has no siblings. For example, a list item with no other list items in that list.
 - {{CSSxRef(":nth-of-type")}}
   - : Uses A*n*+B notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements.
 - {{CSSxRef(":nth-last-of-type")}}
@@ -160,9 +160,9 @@ These pseudo-classes relate to the location of an element within the document tr
 These pseudo-classes require some interaction by the user in order for them to apply, such as holding a mouse pointer over an element.
 
 - {{CSSxRef(":hover")}}
-  - : Matches when a user designates an item with a pointing device, for example holding the mouse pointer over it.
+  - : Matches when a user designates an item with a pointing device, such as holding the mouse pointer over the item.
 - {{CSSxRef(":active")}}
-  - : Matches when an item is being activated by the user, for example clicked on.
+  - : Matches when an item is being activated by the user. For example, when the item is clicked on.
 - {{CSSxRef(":focus")}}
   - : Matches when an element has focus.
 - {{CSSxRef(":focus-visible")}}
