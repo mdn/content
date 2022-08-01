@@ -274,14 +274,14 @@ get all() {
 
 Now we can access the data using `this.todos.all`, which is much more intuitive. To put this in action, go to your `todo-list.hbs` component, and replace the static component calls:
 
-```js
+```html
 <Todo />
 <Todo />
 ```
 
 With a dynamic `#each` block (which is basically syntactic sugar over the top of JavaScript's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) that creates a `<Todo />` component for each todo available in the list of todos returned by the service's `all()` getter:
 
-```js
+```html
 \{{#each this.todos.all as |todo|}}
   <Todo @todo=\{{todo}} />
 \{{/each}}
@@ -303,7 +303,7 @@ This is because the text label inside each list item is hardcoded to that text, 
 
 Update this line to use the Argument `@todo` — which will represent the Todo that we passed in to this component when it was invoked in `todo-list.hbs`, in the line `<Todo @todo=\{{todo}} />`:
 
-```js
+```html
 <label>\{{@todo.text}}</label>
 ```
 

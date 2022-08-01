@@ -211,7 +211,7 @@ Let's now use our component.
 
 This works, but you'll have to copy and paste all this code every time you want to subscribe to a store:
 
-```js
+```html
 <script>
   import myStore from './stores.js'
   import { onDestroy } from 'svelte'
@@ -340,28 +340,25 @@ Lets see how to do that. We'll specify a prop with the milliseconds to wait befo
 1. Update the `<script>` section of your `Alert.svelte` component like so:
 
     ```js
-    <script>
-      import { onDestroy } from 'svelte'
-      import { alert } from '../stores.js'
+    import { onDestroy } from 'svelte'
+    import { alert } from '../stores.js'
 
-      export let ms = 3000
-      let visible
-      let timeout
+    export let ms = 3000
+    let visible
+    let timeout
 
-      const onMessageChange = (message, ms) => {
-        clearTimeout(timeout)
-        if (!message) {               // hide Alert if message is empty
-          visible = false
-        } else {
-          visible = true                                              // show alert
-          if (ms > 0) timeout = setTimeout(() => visible = false, ms) // and hide it after ms milliseconds
-        }
+    const onMessageChange = (message, ms) => {
+      clearTimeout(timeout)
+      if (!message) {               // hide Alert if message is empty
+        visible = false
+      } else {
+        visible = true                                              // show alert
+        if (ms > 0) timeout = setTimeout(() => visible = false, ms) // and hide it after ms milliseconds
       }
-      $: onMessageChange($alert, ms)      // whenever the alert store or the ms props changes run onMessageChange
+    }
+    $: onMessageChange($alert, ms)      // whenever the alert store or the ms props changes run onMessageChange
 
-      onDestroy(() => clearTimeout(timeout))           // make sure we clean-up the timeout
-
-    </script>
+    onDestroy(() => clearTimeout(timeout))           // make sure we clean-up the timeout
     ```
 
 2. And update the `Alert.svelte` markup section like so:

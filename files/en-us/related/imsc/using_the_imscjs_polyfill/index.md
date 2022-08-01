@@ -131,7 +131,7 @@ But the mapping of IMSC subtitles to start and end times of cues is not as strai
 
 But take the following IMSC code:
 
-```js
+```html
 <p>
   <span begin="1s" end="3s">Hello</span> <span begin="2s" end="3s">world!</span>
 </p>
