@@ -203,7 +203,7 @@ As you can imagine, some classes might be applied to many elements and you don't
 
 ## Styling things based on their location in a document
 
-Sometimes, you will want something to look different based on where it is in the document. There are [some selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) that can help you but we will look at just two of them.
+Sometimes, you will want something to look different based on where it is in the document. There are a number of selectors that can help you here, but for now, we will look at just a couple.
 
 In our document, there are two `<em>` elements — one inside a paragraph and the other inside a list item. To select only an `<em>` that is nested inside an `<li>` element, you can use a selector called the **descendant combinator**, which takes the form of a space between two other selectors.
 
