@@ -200,7 +200,7 @@ Some larger companies have device labs that stock a very large selection of diff
 
 We will cover each of the other options below.
 
-> **Note:** Some efforts have been made to create publicly accessible device labs — see [Open Device Labs](https://opendevicelab.com/).
+> **Note:** Some efforts have been made to create publicly accessible device labs — see [Open Device Labs](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/).
 
 > **Note:** We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.
 
