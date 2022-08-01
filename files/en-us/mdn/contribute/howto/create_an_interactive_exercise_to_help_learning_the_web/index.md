@@ -13,7 +13,7 @@ tags:
 
 When learning the web, it's important to rely on active learning content. Such content is made to help with learning something pro-actively. It can be exercises, live hackable examples, tasks to perform, assessments, etc. In short, anything that can help someone to actively understand something.
 
-There is no straightforward way to create such content. For example many third party tools exist that can help you create live hackable examples (see: [JSFiddle](https://jsfiddle.net/), [CodePen](https://codepen.io/), [Dabblet](https://dabblet.com/), etc.) that you can link from MDN articles. If you want to create more advanced comprehensible exercises, you can easily use [Thimble](https://thimble.mozilla.org) from the WebMaker project.
+There is no straightforward way to create such content. For example many third party tools exist that can help you create live hackable examples (see: [JSFiddle](https://jsfiddle.net/), [CodePen](https://codepen.io/), [Dabblet](https://dabblet.com/), etc.) that you can link from MDN articles. If you want to create more advanced comprehensible exercises, you can easily use [Glitch](https://glitch.com/) from the WebMaker project.
 
 Currently, MDN does not have an easy tool to author such active content. However, if you are a coder you can use the current MDN features to create custom active learning content.
 
