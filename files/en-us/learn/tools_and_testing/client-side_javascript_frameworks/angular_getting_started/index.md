@@ -220,7 +220,7 @@ When a selector is in a template, the browser renders the template of that compo
 This tutorial guides you through creating two components and using one within the other.
 
 **NOTE:** The name of the component above is `ItemComponent` which is also the name of the class. Why? 
-The names are the same simply because a component is nothing but a class supplemented by a typescript decorator.
+The names are the same simply because a component is nothing but a class supplemented by a TypeScript decorator.
 
 Angular's component model offers strong encapsulation and an intuitive application structure.
 Components also make your application easier to unit test and can improve the overall readability of your code.
