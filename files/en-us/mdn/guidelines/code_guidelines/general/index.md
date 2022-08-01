@@ -139,15 +139,6 @@ The [sass/vars/\_mdn-web-docs-palette.scss](https://github.com/mdn/mdn-minimalis
 
 As you will notice from looking around these guidelines, the code blocks that are supposed to be good practice examples are highlighted with a check mark in green, and the code blocks that are supposed to be bad practice examples are highlighted with a cross in a red circle.
 
-To do this, you first use the MDN editor controls to put your code block in a `<pre>` block and give it appropriate syntax highlighting. The source of the code will look something like this:
-
-````js
-function myFunc() {
-  console.log('Hello!');
-};
-```
-````
-
 To make it into a good example, you insert `example-good` after the code block's language directive:
 
 ````md
