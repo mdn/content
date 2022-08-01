@@ -27,8 +27,7 @@ available values are:
 - `sine`
   - : A [sine wave](https://en.wikipedia.org/wiki/Sine_wave). This is the default value.
 - `square`
-  - : A [square wave](https://en.wikipedia.org/wiki/Square_wave) with a {{interwiki("wikipedia", "duty
-    cycle")}} of 0.5; that is, the signal is "high" for half of each period.
+  - : A [square wave](https://en.wikipedia.org/wiki/Square_wave) with a [duty cycle](https://en.wikipedia.org/wiki/Duty_cycle) of 0.5; that is, the signal is "high" for half of each period.
 - `sawtooth`
   - : A [sawtooth wave](https://en.wikipedia.org/wiki/Sawtooth_wave).
 - `triangle`
