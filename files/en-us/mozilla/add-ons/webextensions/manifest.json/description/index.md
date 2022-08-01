@@ -30,9 +30,7 @@ browser-compat: webextensions.manifest.description
   </tbody>
 </table>
 
-A short description (no more than 132 characters) of the extension, intended for display in the browser's user interface.
-
-> Note that browsers might impose different limits for this field.
+A short description of the extension, intended for display in the browser's user interface. In Firefox and Chrome this value can be up to 132 characters. The limit in other browsers may differ.
 
 This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
