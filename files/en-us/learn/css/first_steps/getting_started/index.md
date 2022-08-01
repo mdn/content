@@ -197,33 +197,33 @@ span.special {
 }
 ```
 
-Some classes can be applied to many elements. You don't want to have to edit your CSS every time something new needs to adopt that style. Therefore, you can bypass the element and refer to the class — unless some special rules only apply to one element and you want to make sure they don't apply to other elements.
+As you can imagine, some classes might be applied to many elements and you don't want to have to keep editing your CSS every time something new needs to take on that style. Therefore, it is sometimes best to bypass the element and refer to the class, unless some special rules only apply to one element and you want to make sure they don't apply to other elements.
 
 ## Styling things based on their location in a document
 
 Sometimes, you will want something to look different based on where it is in the document. There are [some selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) that can help you but we will look at just two of them.
 
-- **descendant combinator**: In our document, there are two `<em>` elements — one inside a paragraph and the other inside a list item. To select only an `<em>` that is nested inside an `<li>` element, you can put a space between the two selectors. This selector will select any `<em>` element that is inside (a descendant of) an `<li>`.
+In our document, there are two `<em>` elements — one inside a paragraph and the other inside a list item. To select only an `<em>` that is nested inside an `<li>` element, you can use a selector called the **descendant combinator**, which takes the form of a space between two other selectors.
 
-    Add the following rule to your stylesheet:
+Add the following rule to your stylesheet:
 
-    ```css
-    li em {
-      color: rebeccapurple;
-    }
-    ```
+```css
+li em {
+  color: rebeccapurple;
+}
+```
+
+This selector will select any `<em>` element that is inside (a descendant of) an `<li>`. In your example document, only the `<em>` in the third list item should now be purple.
+
+Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so, place a `+` (an **adjacent sibling combinator**) between the selectors.
     
-    In your example document, only the `<em>` in the third list item should now be purple.
+Try adding this rule to your stylesheet as well:
 
-- **adjacent sibling combinator**: In your document, you can style a paragraph that comes after the heading by putting a `+` between the selectors. This selector will style a paragraph when it comes directly after another element at the same hierarchy level in the HTML.
-
-    Try adding this rule to your stylesheet as well:
-
-    ```css
-    h1 + p {
-      font-size: 200%;
-    }
-    ```
+```css
+h1 + p {
+  font-size: 200%;
+}
+```
 
 The live example below includes the two rules above. Try adding a rule to make a span red if it is inside a paragraph. You will know if you have it right because the span in the first paragraph will be red, but the one in the first list item will not change color.
 
