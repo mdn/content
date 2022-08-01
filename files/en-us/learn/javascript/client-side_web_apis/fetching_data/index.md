@@ -146,9 +146,9 @@ First, the entry point to the Fetch API is a global function called {{domxref("f
 
 Next, `fetch()` is an asynchronous API which returns a {{jsxref("Promise")}}. If you don't know what that is, read the module on [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous), and in particular the article on [promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises), then come back here. You'll find that article also talks about the `fetch()` API!
 
-So because `fetch()` returns a promise, we pass a function into the {{jsxref("Promise/then", "then()")}} function of the returned promise. This function will be called when the HTTP request has received a response from the server. In the handler, we check that the request succeeded, and throw an error if it didn't. Otherwise, we call {{domxref("Response/text", "response.text()")}}, to get the response body as text.
+So because `fetch()` returns a promise, we pass a function into the {{jsxref("Promise/then", "then()")}} method of the returned promise. This method will be called when the HTTP request has received a response from the server. In the handler, we check that the request succeeded, and throw an error if it didn't. Otherwise, we call {{domxref("Response/text", "response.text()")}}, to get the response body as text.
 
-It turns out that `response.text()` is _also_ asynchronous, so we return the promise it returns, and pass a function into the `then()` function of this new promise. This function will be called when the response text is ready, and inside it we will update our `<pre>` block with the text.
+It turns out that `response.text()` is _also_ asynchronous, so we return the promise it returns, and pass a function into the `then()` method of this new promise. This function will be called when the response text is ready, and inside it we will update our `<pre>` block with the text.
 
 Finally, we chain a {{jsxref("Promise/catch", "catch()")}} handler at the end, to catch any errors thrown in either of the asynchronous functions we called or their handlers.
 
