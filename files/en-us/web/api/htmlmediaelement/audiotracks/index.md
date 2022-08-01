@@ -34,7 +34,7 @@ existing ones removed. See {{SectionOnPage("/en-US/docs/Web/API/AudioTrackList",
 
 ## Value
 
-A {{domxref("AudioTrackList")}} object representing the list of audio tracks included
+An {{domxref("AudioTrackList")}} object representing the list of audio tracks included
 in the media element. The list of tracks can be accessed using array notation, or using
 the object's {{domxref("AudioTrackList.getTrackById", "getTrackById()")}} method.
 
