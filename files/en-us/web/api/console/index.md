@@ -116,7 +116,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 The output will look like this:
 
 ```bash
-[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
 ```
 
 #### Using string substitutions
@@ -145,11 +145,11 @@ for (let i=0; i<5; i++) {
 The output looks like this:
 
 ```
-[13:14:13.481] Hello, Bob. You've called me 1 times.
-[13:14:13.483] Hello, Bob. You've called me 2 times.
-[13:14:13.485] Hello, Bob. You've called me 3 times.
-[13:14:13.487] Hello, Bob. You've called me 4 times.
-[13:14:13.488] Hello, Bob. You've called me 5 times.
+Hello, Bob. You've called me 1 times.
+Hello, Bob. You've called me 2 times.
+Hello, Bob. You've called me 3 times.
+Hello, Bob. You've called me 4 times.
+Hello, Bob. You've called me 5 times.
 ```
 
 #### Styling console output
