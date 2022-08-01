@@ -44,8 +44,7 @@ includes(searchElement, fromIndex)
     The first element to be searched is found at `fromIndex` for
     positive values of `fromIndex`, or at
     `arr.length + fromIndex` for negative values of
-    `fromIndex` (using the {{interwiki("wikipedia", "absolute
-    value")}} of `fromIndex` as the number of elements from the end
+    `fromIndex` (using the [absolute value](https://en.wikipedia.org/wiki/Absolute_value) of `fromIndex` as the number of elements from the end
     of the array at which to start the search).
 
     Defaults to `0`.

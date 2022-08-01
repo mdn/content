@@ -18,8 +18,7 @@ browser-compat: api.BaseAudioContext.createIIRFilter
 
 The **`createIIRFilter()`** method of the {{
   domxref("BaseAudioContext") }} interface creates an {{ domxref("IIRFilterNode") }},
-which represents a general **{{interwiki("wikipedia", "infinite impulse
-    response")}}** (IIR) filter which can be configured to serve as various types
+which represents a general **[infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response)** (IIR) filter which can be configured to serve as various types
 of filter.
 
 > **Note:** The {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}}
