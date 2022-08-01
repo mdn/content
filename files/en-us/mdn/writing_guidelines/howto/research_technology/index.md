@@ -1,10 +1,10 @@
 ---
 title: Researching a technology
-slug: MDN/Writing_guidelines/Research_technology
-page-type: mdn-writing-guide
+slug: MDN/Writing_guidelines/Howto/Research_technology
 tags:
   - meta
   - writing-guide
+page-type: mdn-writing-guide
 ---
 {{MDNSidebar}}
 
@@ -119,5 +119,3 @@ It's a good idea at this point to open a tracking issue on mdn/content with the 
 ## Create the pages
 
 Now create the pages you need, according to the structures below. Our [MDN content README](https://github.com/mdn/content#adding-a-new-document) contains instructions on creating a new document, and our [Page types](/en-US/docs/MDN/Structures/Page_types) guide contains further examples and page templates that might be useful.
-
-
