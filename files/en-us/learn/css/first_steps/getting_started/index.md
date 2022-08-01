@@ -145,7 +145,9 @@ li {
 
 Try adding this to your CSS now.
 
-The [`list-style-type`](/en-US/docs/Web/CSS/list-style-type) property also supports other values, for example `square` to change the list bullets. The linked page contains an interactive example to try some different values and explains all allowable values. 
+The [`list-style-type`](/en-US/docs/Web/CSS/list-style-type) property is a good property to look at on MDN to see which values are supported. You will find an interactive example at the top of the page to try some different values in, then all allowable values are detailed further down the page.
+
+Looking at that page you will discover that in addition to removing the list bullets, you can change them — try changing them to square bullets by using a value of `square`.
 
 ## Adding a class
 
