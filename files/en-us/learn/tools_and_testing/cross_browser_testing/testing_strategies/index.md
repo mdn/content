@@ -217,7 +217,6 @@ More often than not though, you'll have to install some kind of emulator. The mo
 
 You can often find simulators for other mobile device environments too, for example:
 
-- [Blackberry](https://swdownloads.blackberry.com/Downloads/entry.do) (emulator available for Windows, Mac OSX and Linux).
 - You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
 - There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
 
