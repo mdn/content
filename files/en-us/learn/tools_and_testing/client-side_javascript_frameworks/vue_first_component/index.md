@@ -180,14 +180,12 @@ For this component, we'll use the object registration method.
 Your component object should now look like this:
 
 ```js
-<script>
-  export default {
-    props: {
-      label: { required: true, type: String },
-      done: { default: false, type: Boolean }
-    }
-  };
-</script>
+export default {
+  props: {
+    label: { required: true, type: String },
+    done: { default: false, type: Boolean }
+  }
+};
 ```
 
 ### Using registered props
@@ -297,7 +295,7 @@ So let's do this. Update your `<input>` element now to include `:checked="isDone
 
 Test out your component by passing `:done="true"` to the `ToDoItem` call in `App.vue`. Note that you need to use the `v-bind` syntax, because otherwise `true` is passed as a string. The displayed checkbox should be checked.
 
-```js
+```html
 <template>
   <div id="app">
     <h1>My To-Do List</h1>
@@ -353,7 +351,7 @@ export default {
 
 Next, bind the `id` to both our checkbox's `id` attribute and the label's `for` attribute, updating the existing `id` and `for` attributes as shown:
 
-```js
+```html
 <template>
   <div>
     <input type="checkbox" :id="id" :checked="isDone" />

@@ -15,7 +15,7 @@ Every medium or large game should compile [asm.js](/en-US/docs/Games/Tools/asm.j
 
 Getting async compilation is easy: when writing your JavaScript, just use the `async` attribute like so:
 
-```js
+```html
 <script async src="file.js"></script>
 ```
 
@@ -33,7 +33,7 @@ document.body.appendChild(script);
 
 Two common situations in which a script is \*not\* async (as [defined by the HTML spec](https://html.spec.whatwg.org/multipage/scripting.html)) are:
 
-```js
+```html
 <script async>code</script>
 ```
 

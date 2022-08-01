@@ -168,7 +168,7 @@ First of all, you need to include `type="module"` in the [`<script>`](/en-US/doc
 
 You can also embed the module's script directly into the HTML file by placing the JavaScript code within the body of the `<script>` element:
 
-```js
+```html
 <script type="module">
   /* JavaScript module code here */
 </script>

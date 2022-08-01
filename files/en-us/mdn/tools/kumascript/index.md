@@ -379,7 +379,7 @@ So the main way to output content tailored to the current document locale is to 
 
 The KumaScript equivalent of this can be achieved with simple if/else blocks, like so:
 
-```js
+```html
 <% if ("fr" == env.locale) { %>
 <%- template("CSSRef") %> « <a href="/fr/docs/Référence_CSS/Extensions_Mozilla">Référence CSS: Extensions Mozilla</a>
 <% } else if ("ja" == env.locale) { %>
@@ -410,7 +410,7 @@ Your mileage may vary, and patterns change slightly from template to template. T
 
 Different strings are defined and chosen depending on locale using `mdn.localString()`, like this:
 
-```js
+```html
 <%
 var s_title = mdn.localString({
   "en-US": "Firefox for Developers",

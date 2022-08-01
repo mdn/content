@@ -120,7 +120,7 @@ See also: [ReactiveConf 2017: Secrets of the Glimmer VM](https://www.youtube.com
 
 More concretely, using `mut` allows for template-only settings functions to be declared:
 
-```js
+```html
 <Checkbox
   @value=\{{this.someData}}
   @onToggle=\{{fn (mut this.someData) (not this.someData)}}
@@ -146,7 +146,7 @@ export default class Example extends Component {
 
 Which would then be called in the template like so:
 
-```js
+```html
 <Checkbox @data=\{{this.someData}} @onChange=\{{this.setData}} />
 ```
 
@@ -158,7 +158,7 @@ implicit Glimmer VM behavior.
 
 With `ember-set-helper`:
 
-```js
+```html
 <Checkbox
   @value=\{{this.someData}}
   @onToggle=\{{set this "someData" (not this.someData)}}
@@ -167,7 +167,7 @@ With `ember-set-helper`:
 
 With `ember-box`:
 
-```js
+```html
 \{{#let (box this.someData) as |someData|}}
   <Checkbox
     @value=\{{unwrap someData}}

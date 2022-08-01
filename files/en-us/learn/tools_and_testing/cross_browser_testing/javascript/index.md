@@ -324,7 +324,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
 2. Next, save a copy of the [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) in the same directory as the HTML.
 3. Apply the polyfill scripts to the page using the following code — place these above the existing {{htmlelement("script")}} element so they will be available on the page already when we start trying to use Fetch (we are also loading a Promise polyfill from a CDN, as IE11 does support promises, which fetch requires):
 
-    ```js
+    ```html
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
     <script src="fetch.js"></script>

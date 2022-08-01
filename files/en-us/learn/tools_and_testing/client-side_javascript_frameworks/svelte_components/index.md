@@ -174,11 +174,9 @@ And we'll declare the reactive statement `$: onclick(filter)` to call the `oncli
 1. The `<script>` section of our `FilterButton` component should end up looking like this. Update it now:
 
     ```js
-    <script>
-      export let filter = 'all'
-      export let onclick = (clicked) => {}
-      $: onclick(filter)
-    </script>
+    export let filter = 'all'
+    export let onclick = (clicked) => {}
+    $: onclick(filter)
     ```
 
 2. Now when we call `FilterButton` inside `Todos.svelte`, we'll need to specify the handler. Update it like this:
@@ -518,7 +516,7 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
 3. Next we have to listen for the `update` event on our `<Todo>` component call, and run our `updateTodo()` function when this occurs to change the `name` and `completed` status. Update your \<Todo> call like this:
 
-    ```js
+    ```html
     {#each filterTodos(filter, todos) as todo (todo.id)}
       <li class="todo">
         <Todo {todo}
