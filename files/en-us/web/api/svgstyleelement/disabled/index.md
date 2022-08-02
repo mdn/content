@@ -8,10 +8,9 @@ tags:
   - Reference
   - SVG
   - SVG DOM
-  - Experimental
 browser-compat: api.SVGStyleElement.disabled
 ---
-{{APIRef("SVG")}} {{SeeCompatTable}}
+{{APIRef("SVG")}}
 
 The **`SVGStyleElement.disabled`** property can be used to get and set whether the stylesheet is disabled (`true`) or not (`false`).
 
@@ -20,7 +19,7 @@ Note that similar to the {{domxref("HTMLStyleElement.disabled")}} property (whic
 ## Value
 
 Returns `true` if the stylesheet is disabled, or there is no associated stylesheet; otherwise `false`.
-The value is `false` by default.
+The value is `false` by default (if there is an associated stylesheet).
 
 The property can be used to enable or disable an associated stylesheet.
 Setting the property `true` when there is no associated stylesheet has no effect.
