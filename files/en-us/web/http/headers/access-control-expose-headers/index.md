@@ -49,10 +49,10 @@ The {{Glossary("CORS-safelisted response header", "CORS-safelisted response head
 Access-Control-Expose-Headers: Content-Encoding
 ```
 
-To additionally expose a custom header, like `X-Kuma-Revision`, you can specify multiple headers separated by a comma:
+To additionally expose a custom header, like `Kuma-Revision`, you can specify multiple headers separated by a comma:
 
 ```
-Access-Control-Expose-Headers: Content-Encoding, X-Kuma-Revision
+Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision
 ```
 
 For requests without credentials, a server can also respond with a wildcard value:
