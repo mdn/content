@@ -48,10 +48,10 @@ If you are purposefully using the `aria-disabled` attribute to allow for a form 
 
 ```css
 @media (forced-colors: active) {
- [aria-disabled="true"] {
-  border-color: Graytext;
+  [aria-disabled="true"] {
+    border-color: Graytext;
     color: GrayText;
- }
+  }
 }
 ```
 
