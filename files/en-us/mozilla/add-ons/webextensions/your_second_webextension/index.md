@@ -452,7 +452,7 @@ web-ext run
 
 ## What's next?
 
-Now you've created a more advanced WebExtension for Firefox:
+Now that you've created a more advanced WebExtension for Firefox:
 
 - [read about the anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [explore the extension examples](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
