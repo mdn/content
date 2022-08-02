@@ -15,6 +15,14 @@ But in certain cases, `null` is not as "primitive" as it first seems! Every Obje
 typeof null === 'object' // true
 ```
 
+As stated above, `null` is primitive, because its behavior is seemingly primitive.
+So, 
+
+```js
+console.log(typeof null); // object
+```
+returning "object" is a bug it the language which cannot be fixed because it will break too many scripts.
+
 ## See also
 
 - [JavaScript data types](/en-US/docs/Web/JavaScript/Data_structures)
