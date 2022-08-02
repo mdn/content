@@ -14,7 +14,7 @@ tags:
   - Video
 browser-compat: api.OverconstrainedError.OverconstrainedError
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Media Capture and Streams")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The **`OverconstrainedError`** constructor
 creates a new {{domxref("OverconstrainedError")}} object which indicates that the set of

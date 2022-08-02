@@ -15,7 +15,7 @@ tags:
   - stop
 browser-compat: api.MediaStreamTrack.stop
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`MediaStreamTrack.stop()`** method stops the track.
 

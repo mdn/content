@@ -12,7 +12,7 @@ tags:
 browser-compat: api.MediaStream
 page-type: web-api-overview
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **Media Capture and Streams** API, often called the **Media Streams API** or **MediaStream API**, is an API related to [WebRTC](/en-US/docs/Web/API/WebRTC_API) which provides support for streaming audio and video data.
 
