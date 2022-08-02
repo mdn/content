@@ -42,7 +42,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
   - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none.
   
 - {{domxref("SVGStyleElement.disabled")}}
-  - : A boolean value reflecting the HTML attribute representing whether or not the stylesheet is disabled (true) or not (false).
+  - : A boolean value indicating whether or not the associated stylesheet is disabled.
 
 ## Methods
 
