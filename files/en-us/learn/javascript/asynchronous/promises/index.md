@@ -174,9 +174,7 @@ First, a promise can be in one of three states:
 
  Note that what "succeeded" or "failed" means here is up to the API in question: for example, `fetch()` considers a request successful if the server returned an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404), but not if a network error prevented the request being sent.
 
-Sometimes, we use the term **settled** to cover both **fulfilled** and **rejected**.
-
-A promise is **resolved** if it is settled, or if it has been "locked in" to follow the state of another promise.
+A promise is **fulfilled** if the asynchronous function does not throw an error, or if it has been "locked in" to follow the state of another promise.
 
 The article [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/) gives a great explanation of the details of this terminology.
 
