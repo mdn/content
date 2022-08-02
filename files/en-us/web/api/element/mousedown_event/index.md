@@ -97,7 +97,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 ## Examples
 
-See [`mousemove`](/en-US/docs/Web/API/Element/mousemove_event#examples) event for example code.
+See [`mousemove` event](/en-US/docs/Web/API/Element/mousemove_event#examples) for example code.
 
 ## Specifications
 
