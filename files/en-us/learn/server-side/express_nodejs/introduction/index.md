@@ -352,7 +352,7 @@ const express = require('express');
 const app = express();
 
 // An example middleware function
-let a_middleware_function = function(req, res, next) {
+const a_middleware_function = function(req, res, next) {
   // Perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
 }
@@ -465,7 +465,7 @@ const MongoClient = require('mongodb').MongoClient;
 MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){
    if(err) throw err;
 
-   let db = client.db('animals');
+   const db = client.db('animals');
    db.collection('mammals').find().toArray(function(err, result){
      if(err) throw err;
      console.log(result);
