@@ -117,7 +117,7 @@ In the following code, the function receives a function defined by a function ex
 function map(f, a) {
   const result = [];
   for (const v of a) {
-    result[i] = f(v);
+    result.push(f(v));
   }
   return result;
 }
