@@ -314,3 +314,4 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 - [Custom property syntax](/en-US/docs/Web/CSS/--*)
 - [`var()`](/en-US/docs/Web/CSS/var)
+- [The big gotcha with Custom Properties](https://css-tricks.com/the-big-gotcha-with-custom-properties/) (CSS Tricks)
