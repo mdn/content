@@ -44,10 +44,10 @@ We also have an {{HTMLElement("img")}} element into which we will draw the image
 
 ```html
 <canvas id="canvas">
-  <div class="output">
-    <img id="photo" alt="The screen capture will appear in this box.">
-  </div>
 </canvas>
+<div class="output">
+  <img id="photo" alt="The screen capture will appear in this box.">
+</div>
 ```
 
 That's all of the relevant HTML. The rest is just some page layout fluff and a bit of text offering a link back to this page.
