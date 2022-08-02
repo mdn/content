@@ -84,9 +84,6 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Indicates whether or not the data channel is _reliable_.
-- {{DOMxRef("RTCDataChannel.stream", "stream")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : Returns an ID number (between 0 and 65,535)
-    which uniquely identifies the data channel.
 
 ## Methods
 

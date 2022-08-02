@@ -9,4 +9,4 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "CRUD")}} on Wikipedia
+- [CRUD](https://en.wikipedia.org/wiki/CRUD) on Wikipedia

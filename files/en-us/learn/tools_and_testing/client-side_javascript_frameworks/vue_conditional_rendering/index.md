@@ -263,7 +263,7 @@ Last for this section, we'll add event handlers for the events emitted by the `T
 
 Update your `<to-do-item-edit-form></to-do-item-edit-form>` call to look like so:
 
-```js
+```html
 <to-do-item-edit-form v-else :id="id" :label="label"
                       @item-edited="itemEdited"
                       @edit-cancelled="editCancelled">
@@ -294,7 +294,7 @@ Next, we'll add the event listeners for the `item-deleted` and `item-edited` eve
 
 Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to look like this:
 
-```js
+```html
 <to-do-item :label="item.label" :done="item.done" :id="item.id"
             @checkbox-changed="updateDoneStatus(item.id)"
             @item-deleted="deleteToDo(item.id)"

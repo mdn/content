@@ -423,7 +423,7 @@ weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note,
 
 #### Syntax
 
-```js
+```
 dateRange(<day> | <month> | <year>, [gmt])  // ambiguity is resolved by assuming year is greater than 31
 dateRange(<day1>, <day2>, [gmt])
 dateRange(<month1>, <month2>, [gmt])

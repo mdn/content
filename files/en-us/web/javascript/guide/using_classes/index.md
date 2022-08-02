@@ -585,13 +585,13 @@ class ColorWithAlpha extends Color {
     this.#alpha = a;
   }
   get alpha() {
-    return this.#values[3];
+    return this.#alpha;
   }
   set alpha(value) {
     if (value < 0 || value > 1) {
       throw new RangeError("Alpha value must be between 0 and 1");
     }
-    this.#values[3] = value;
+    this.#alpha = value;
   }
 }
 ```
@@ -645,7 +645,7 @@ When you use `extends`, the static methods inherit from each other as well, so y
 ```js
 class ColorWithAlpha extends Color {
   // ...
-  isValid(r, g, b, a) {
+  static isValid(r, g, b, a) {
     // Call the parent class's isValid() and build on the return value
     return super.isValid(r, g, b) && a >= 0 && a <= 1;
   }

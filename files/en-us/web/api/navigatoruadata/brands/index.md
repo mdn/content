@@ -10,7 +10,7 @@ tags:
   - NavigatorUAData
 browser-compat: api.NavigatorUAData.brands
 ---
-{{DefaultAPISidebar("")}}
+{{DefaultAPISidebar("User-Agent Client Hints API")}}
 
 The **`brands`** read-only property of the {{domxref("NavigatorUAData")}} interface returns an array of brand information.
 
@@ -38,3 +38,7 @@ console.log(navigator.userAgentData.brands);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{HTTPHeader("Sec-CH-UA")}} (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)) contains the same information.

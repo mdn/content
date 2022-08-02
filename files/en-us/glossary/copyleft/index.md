@@ -11,4 +11,4 @@ Copyleft is a term, usually referring to a license, used to indicate that such l
 
 ## See also
 
-- {{Interwiki("wikipedia", "Copyleft")}} on Wikipedia
+- [Copyleft](https://en.wikipedia.org/wiki/Copyleft) on Wikipedia

@@ -11,5 +11,5 @@ The organization maintains standards such as {{Glossary("OpenGL")}} and the {{do
 
 ## See also
 
-- {{interwiki("wikipedia", "Khronos_Group", "The Khronos Group")}} on Wikipedia
+- [The Khronos Group](https://en.wikipedia.org/wiki/Khronos_Group) on Wikipedia
 - [The Khronos Group web site](https://www.khronos.org/)

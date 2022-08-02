@@ -31,7 +31,7 @@ applied, in the range `0.0` to `1.0`, where `0.0` is no
 pressure, and `1.0` is the highest level of pressure the touch device is
 capable of sensing.
 
-In following code snippet, the {{event("touchstart")}} event handler iterates through
+In following code snippet, the {{domxref("Element/touchstart_event", "touchstart")}} event handler iterates through
 the `targetTouches` list and logs the `force` value of each touch
 point but the code could invoke different processing depending on the value.
 

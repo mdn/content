@@ -16,7 +16,7 @@ Any client or server application can use WebSocket, but principally web {{Glossa
 
 ## See also
 
-- {{Interwiki("wikipedia", "Websocket")}} on Wikipedia
+- [Websocket](https://en.wikipedia.org/wiki/Websocket) on Wikipedia
 - [WebSocket reference on MDN](/en-US/docs/Web/API/WebSocket)
 - [Writing WebSocket client applications](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
 - [Writing WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

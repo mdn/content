@@ -22,5 +22,5 @@ let catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ## See also
 
-- {{Interwiki("wikipedia", "Array data structure", "Array")}} on Wikipedia
+- [Array](https://en.wikipedia.org/wiki/Array_data_structure) on Wikipedia
 - JavaScript {{jsxref("Array")}} on MDN

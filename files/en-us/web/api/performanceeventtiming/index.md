@@ -47,9 +47,9 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{domxref("HTMLElement/pointerleave_event", "pointerleave")}}
 - {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}}
 - {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
-- {{event("touchstart")}}
-- {{event("touchend")}}
-- {{event("touchcancel")}}
+- {{domxref("Element/touchstart_event", "touchstart")}}
+- {{domxref("Element/touchend_event", "touchend")}}
+- {{domxref("Element/touchcancel_event", "touchcancel")}}
 
 {{InheritanceDiagram}}
 

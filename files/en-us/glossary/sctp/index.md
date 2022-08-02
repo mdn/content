@@ -12,4 +12,4 @@ tags:
 ## See also
 
 - {{RFC(4960, "Stream Control Transmission Protocol")}}
-- {{Interwiki("wikipedia", "Stream Control Transmission Protocol")}} on Wikipedia
+- [Stream Control Transmission Protocol](https://en.wikipedia.org/wiki/Stream_Control_Transmission_Protocol) on Wikipedia

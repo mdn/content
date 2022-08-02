@@ -18,7 +18,7 @@ All major {{Glossary("Browser","browsers")}} now support WebGL, but its availabi
 
 ## See also
 
-- {{Interwiki("wikipedia", "WebGL")}} on Wikipedia
+- [WebGL](https://en.wikipedia.org/wiki/WebGL) on Wikipedia
 - [Check for WebGL support](https://get.webgl.org/)
 - [WebGL on MDN](/en-US/docs/Web/API/WebGL_API)
 - [Support table for WebGL](https://caniuse.com/#feat=webgl)

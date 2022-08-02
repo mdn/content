@@ -9,6 +9,6 @@ tags:
 
 ## See also
 
-- {{interwiki('wikipedia','WebAssembly')}} on Wikipedia
+- [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly) on Wikipedia
 - [Official website](https://webassembly.org/)
 - [WebAssembly](/en-US/docs/WebAssembly) on MDN

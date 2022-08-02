@@ -22,6 +22,7 @@ The **`PerformanceEntry`** object encapsulates a single performance metric that 
 - {{domxref("PerformanceNavigationTiming")}}
 - {{domxref("PerformanceResourceTiming")}}
 - {{domxref("PerformancePaintTiming")}}
+- {{domxref("PerformanceLongTaskTiming")}}
 
 {{AvailableInWorkers}}
 

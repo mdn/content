@@ -19,8 +19,8 @@ amount of acceleration recorded by the device, in [meters per second squared (m/
 which compensates for the influence of gravity, its value is the sum of the acceleration
 of the device as induced by the user and an acceleration equal and opposite to that
 caused by gravity. In other words, it measures the
-{{interwiki("wikipedia", "G-Force", "g-force")}}. In practice, this value represents
-the raw data measured by an {{interwiki("wikipedia", "accelerometer")}}.
+[g-force](https://en.wikipedia.org/wiki/G-Force). In practice, this value represents
+the raw data measured by an [accelerometer](https://en.wikipedia.org/wiki/Accelerometer).
 
 This value is not typically as useful as {{DOMxRef("DeviceMotionEvent.acceleration")}},
 but may be the only value available on devices that aren't able to remove gravity from

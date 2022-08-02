@@ -161,13 +161,13 @@ We can now update the `todomvc/app/templates/index.hbs` file so that when it inc
 
 In this file, change
 
-```js
+```html
 <TodoList />
 ```
 
 To
 
-```js
+```html
 <TodoList @todos=\{{ @model.allTodos }}/>
 ```
 
@@ -198,13 +198,13 @@ We can now update the `todomvc/app/templates/completed.hbs` file so that when it
 
 In this file, change
 
-```js
+```html
 <TodoList />
 ```
 
 To
 
-```js
+```html
 <TodoList @todos=\{{ @model.completedTodos }}/>
 ```
 
@@ -235,13 +235,13 @@ We can now update the `todomvc/app/templates/active.hbs` file so that when it in
 
 In this file, change
 
-```js
+```html
 <TodoList />
 ```
 
 To
 
-```js
+```html
 <TodoList @todos=\{{ @model.activeTodos }}/>
 ```
 
@@ -261,7 +261,7 @@ Go back to `todomvc/app/components/footer.hbs`, and find the following bit of ma
 
 Update it to
 
-```js
+```html
 <LinkTo @route='index'>All</LinkTo>
 <LinkTo @route='active'>Active</LinkTo>
 <LinkTo @route='completed'>Completed</LinkTo>

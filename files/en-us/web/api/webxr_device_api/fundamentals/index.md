@@ -154,7 +154,7 @@ Because the entire act of creating a virtual 3D world is, in essence, a trick wh
 
 ### Virtual reality sickness
 
-**{{interwiki("wikipedia", "Virtual reality sickness")}}** is a condition in which a person experiencing virtual reality feels discomfort, disorientation, or even serious nausea during and sometimes for a short time after the experience.
+**[Virtual reality sickness](https://en.wikipedia.org/wiki/Virtual_reality_sickness)** is a condition in which a person experiencing virtual reality feels discomfort, disorientation, or even serious nausea during and sometimes for a short time after the experience.
 
 There are a number of theories surrounding exactly what about virtual reality causes some people to feel uncomfortable or sick, most of which focusing on the idea that even subtle differences between what the brain thinks should be happening and what is being seen can cause these symptoms.
 

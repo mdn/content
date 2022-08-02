@@ -11,5 +11,5 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "SOAP")}} on Wikipedia
+- [SOAP](https://en.wikipedia.org/wiki/SOAP) on Wikipedia
 - [Specification](https://www.w3.org/TR/soap12-part1/)

@@ -100,13 +100,13 @@ To get the footer working, we need to implement the following three areas of fun
 5. Finally, we need to make use of this new functionality in our `footer.hbs` template. Go to this file now.
 6. First of all, replace this line:
 
-    ```js
+    ```html
     <strong>0</strong> todos left
     ```
 
     With this, which populates the incomplete number with the length of the `incomplete` array:
 
-    ```js
+    ```html
     <strong>\{{this.todos.incomplete.length}}</strong> todos left
     ```
 
@@ -118,7 +118,7 @@ To get the footer working, we need to implement the following three areas of fun
 
     With this:
 
-    ```js
+    ```html
     <button type="button" class="clear-completed" \{{on 'click' this.todos.clearCompleted}}>
     ```
 
@@ -139,13 +139,13 @@ To fix this, we need to update this part of the template to include some conditi
 
 So let's try replacing this part of `footer.hbs`:
 
-```js
+```html
 <strong>\{{this.todos.incomplete.length}}</strong> todos left
 ```
 
 with the following:
 
-```js
+```html
 <strong>\{{this.todos.incomplete.length}}</strong>
   \{{#if this.todos.incomplete.length === 1}}
     todo
@@ -167,7 +167,7 @@ get todoCountIsOne() {
 
 Then go back over to `footer.hbs` and update the previous template section we edited to the following:
 
-```js
+```html
 <strong>\{{this.todos.incomplete.length}}</strong>
   \{{#if this.todos.todoCountIsOne}}
     todo
@@ -229,7 +229,7 @@ Finally, we will edit the `todo.hbs` template such that the checkbox's value is 
 
     And replace it with this — you'll notice that here we're using some more conditional content to add the class value if appropriate:
 
-    ```js
+    ```html
     <li class="\{{ if @todo.isCompleted 'completed' }}">
     ```
 
@@ -245,7 +245,7 @@ Finally, we will edit the `todo.hbs` template such that the checkbox's value is 
 
     And replace it with this:
 
-    ```js
+    ```html
     <input
       class="toggle"
       type="checkbox"

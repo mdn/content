@@ -112,17 +112,17 @@ Here are some popular editors:
       </td>
     </tr>
     <tr>
-      <td><a href="https://panic.com/coda/" rel="external">Coda</a></td>
+      <td><a href="https://nova.app/" rel="external">Nova</a></td>
       <td>Closed source</td>
       <td>$99</td>
       <td>Mac</td>
       <td>
         <a href="https://twitter.com/panic">Twitter</a>,
         <a href="https://panic.com/qa" rel="external">Forum</a>,
-        <a href="mailto:coda@panic.com">E-mail</a>
+        <a href="https://nova.app/help/">Online</a>
       </td>
-      <td><a href="https://panic.com/coda/#book">eBook</a></td>
-      <td><a href="https://panic.com/coda/plugins.php">Yes</a></td>
+      <td><a href="https://help.panic.com/nova/">eBook</a></td>
+      <td><a href="https://extensions.panic.com/">Yes</a></td>
     </tr>
     <tr>
       <td><a href="http://www.codelobster.com">CodeLobster</a></td>

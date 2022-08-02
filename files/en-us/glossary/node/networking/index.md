@@ -9,4 +9,4 @@ In networking, a **node** is a connection point in the network. In physical netw
 
 ## See also
 
-- {{Interwiki("wikipedia", "Node (networking)", "Node")}} on Wikipedia
+- [Node](https://en.wikipedia.org/wiki/Node_(networking)) on Wikipedia

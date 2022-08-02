@@ -9,5 +9,5 @@ OpenSSL is an open-source implementation of {{glossary("SSL")}} and {{glossary("
 
 ## See also
 
-- {{Interwiki("wikipedia", "OpenSSL")}} on Wikipedia
+- [OpenSSL](https://en.wikipedia.org/wiki/OpenSSL) on Wikipedia
 - [Official website](https://www.openssl.org/)

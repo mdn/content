@@ -45,4 +45,4 @@ For an example of a custom 404 page, see this [404 page](https://konmari.com/404
 ## See also
 
 - {{HTTPStatus("410")}}
-- {{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}
+- [Wikipedia: HTTP 404](https://en.wikipedia.org/wiki/HTTP_404)

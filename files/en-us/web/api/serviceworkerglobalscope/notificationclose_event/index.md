@@ -14,7 +14,7 @@ The **`notificationclose`** event fires when a user closes a displayed notificat
 
 Notifications created on the main thread or in workers which aren't service workers
 using the {{domxref("Notification.Notification","Notification()")}} constructor will
-instead receive a {{Event("close")}} event on the `Notification` object
+instead receive a {{domxref("Notification/close_event", "close")}} event on the `Notification` object
 itself.
 
 > **Note:** Trying to create a notification inside the

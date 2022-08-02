@@ -18,4 +18,4 @@ Each standard passes through four stages of maturity: Working Draft (WD), Candid
 ## See also
 
 - [W3C website](https://www.w3.org/)
-- {{Interwiki("wikipedia", "World Wide Web Consortium", "W3C")}} on Wikipedia
+- [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) on Wikipedia

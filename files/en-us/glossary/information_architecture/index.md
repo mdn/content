@@ -10,4 +10,4 @@ Information architecture, as applied to web design and development, is the pract
 
 ## See also
 
-- {{interwiki("wikipedia", "Information_architecture", "Information architecture")}} on Wikipedia
+- [Information architecture](https://en.wikipedia.org/wiki/Information_architecture) on Wikipedia

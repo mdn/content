@@ -64,4 +64,4 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 
 ## See also
 
-- {{Interwiki("wikipedia", "CSS_hack#Browser_prefixes", "Vendor prefix")}} on Wikipedia
+- [Vendor prefix](https://en.wikipedia.org/wiki/CSS_hack#Browser_prefixes) on Wikipedia

@@ -28,7 +28,7 @@ sum = Number(value1) + value2;
 
 ## See also
 
-- {{Interwiki("wikipedia", "Type conversion")}} (Wikipedia)
+- [Type conversion](https://en.wikipedia.org/wiki/Type_conversion) (Wikipedia)
 - [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Type")}}

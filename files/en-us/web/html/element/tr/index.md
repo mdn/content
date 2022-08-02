@@ -74,7 +74,7 @@ The following attributes may still be implemented in browsers but are no longer 
   - : A string specifying the vertical alignment of the text within each cell in the row. Possible values for this attribute are:
 
     - `baseline`
-      - : Aligns each cell's content text as closely as possible to the bottom of the cell, handling alignment of different fonts and font sizes by aligning the characters along the {{interwiki("wikipedia", "baseline")}} of the font(s) used in the row. If all of the characters in the row are the same size, the effect is the same as `bottom`.
+      - : Aligns each cell's content text as closely as possible to the bottom of the cell, handling alignment of different fonts and font sizes by aligning the characters along the [baseline](https://en.wikipedia.org/wiki/Baseline) of the font(s) used in the row. If all of the characters in the row are the same size, the effect is the same as `bottom`.
     - `bottom`,
       - : Draws the text in each of the row's cells as closely as possible to the bottom edge of those cells.
     - `middle`

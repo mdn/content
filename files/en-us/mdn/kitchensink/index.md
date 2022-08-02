@@ -306,7 +306,7 @@ this.color("blue");
 {{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}
 
 - [Accessibility resources at MDN](/en-US/docs/Web/Accessibility)
-- {{Interwiki("wikipedia", "Web accessibility")}} on Wikipedia
+- [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
 
 The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 
@@ -337,7 +337,7 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
   - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
 
-- {{interwiki("wikipedia", "AJAX")}} on Wikipedia
+- [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
 - [Ajax](/en-US/docs/Web/Guide/AJAX)
 - [Ajax - Getting started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
 - {{DOMxRef("XMLHttpRequest")}}

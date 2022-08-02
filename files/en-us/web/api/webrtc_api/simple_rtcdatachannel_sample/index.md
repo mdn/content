@@ -314,7 +314,7 @@ This starts by closing each peer's {{domxref("RTCDataChannel")}}, then, similarl
 
 ## Next steps
 
-You should [try out this example](https://mdn-samples.mozilla.org/s/webrtc-simple-datachannel) and take a look at the [webrtc-simple-datachannel](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel) source code, available on GitHub.
+Take a look at the [webrtc-simple-datachannel](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel) source code, available on GitHub.
 
 ## See also
 

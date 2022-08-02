@@ -14,5 +14,5 @@ Three programmers in the Microsoft Word team created RTF in the 1980s, and Micro
 
 ## See also
 
-- {{Interwiki("wikipedia", "Rich Text Format")}} on Wikipedia
+- [Rich Text Format](https://en.wikipedia.org/wiki/Rich_Text_Format) on Wikipedia
 - [specification v1.9.1 from Microsoft](https://interoperability.blob.core.windows.net/files/Archive_References/%5bMSFT-RTF%5d.pdf)

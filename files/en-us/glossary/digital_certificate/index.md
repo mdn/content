@@ -12,4 +12,4 @@ A digital certificate contains information about an organization, such as the co
 
 ## See also
 
-- {{interwiki("wikipedia", "Public_key_certificate", "Digital certificate ")}} on Wikipedia
+- [Digital certificate](https://en.wikipedia.org/wiki/Public_key_certificate) on Wikipedia

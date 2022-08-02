@@ -113,7 +113,7 @@ console.log(myObj.myString); //[Log] This key is in variable str
 This allows accessing any property as determined at runtime:
 
 ```js
-const propertyName = 'make';
+let propertyName = 'make';
 myCar[propertyName] = 'Ford';
 
 // access different properties by changing the contents of the variable

@@ -10,4 +10,4 @@ tags:
 ## See also
 
 - [Official website](https://www.iana.org/)
-- {{interwiki("wikipedia", "Internet Assigned Numbers Authority", "IANA")}} on Wikipedia
+- [IANA](https://en.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority) on Wikipedia

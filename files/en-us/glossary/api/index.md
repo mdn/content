@@ -19,5 +19,5 @@ For example:
 
 ## See also
 
-- {{Interwiki("wikipedia", "API", "API")}} on Wikipedia
+- [API](https://en.wikipedia.org/wiki/API) on Wikipedia
 - [Web API reference](/en-US/docs/Web/API)

@@ -110,7 +110,7 @@ _Not part of any specification._ Apple has [a description at the Mac Developer L
 
 - [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 - [Force Touch events](/en-US/docs/Web/API/Force_Touch_events)
-- {{event("webkitmouseforcewillbegin")}}
-- {{event("webkitmouseforceup")}}
-- {{event("webkitmouseforcechanged")}}
+- {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}
+- {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}}
+- {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}
 - {{domxref("Force_Touch_events")}}

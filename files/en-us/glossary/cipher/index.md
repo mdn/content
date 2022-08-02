@@ -22,7 +22,7 @@ They also are classified according to how their {{glossary("key", "keys")}} are 
 
 ## See also
 
-- {{Interwiki("wikipedia", "Cipher")}} on Wikipedia
+- [Cipher](https://en.wikipedia.org/wiki/Cipher) on Wikipedia
 - [Encryption and Decryption](/en-US/docs/Archive/Security/Encryption_and_Decryption)
 - [MDN Web Docs Glossary](/en-US/docs/Glossary)
 

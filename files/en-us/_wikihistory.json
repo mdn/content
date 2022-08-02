@@ -62838,17 +62838,6 @@
       "teoli"
     ]
   },
-  "Web/API/ProgressEvent/initProgressEvent": {
-    "modified": "2020-10-15T21:24:39.953Z",
-    "contributors": [
-      "ddbeck",
-      "DomenicDenicola",
-      "abbycar",
-      "Sebastianz",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/ProgressEvent/lengthComputable": {
     "modified": "2020-10-15T21:24:39.609Z",
     "contributors": [
@@ -63602,14 +63591,6 @@
       "fscholz",
       "Sheppy",
       "jpmedley"
-    ]
-  },
-  "Web/API/RTCDataChannel/stream": {
-    "modified": "2020-10-15T21:47:09.655Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy"
     ]
   },
   "Web/API/RTCDataChannelEvent": {
@@ -86270,13 +86251,6 @@
       "SteveLee"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom": {
-    "modified": "2019-06-04T16:44:54.434Z",
-    "contributors": [
-      "dkocho4",
-      "mattwojo"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Test_Cases": {
     "modified": "2019-03-24T00:16:31.629Z",
     "contributors": [
@@ -86769,26 +86743,6 @@
       "hhillen"
     ]
   },
-  "Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ": {
-    "modified": "2019-03-24T00:16:32.066Z",
-    "contributors": [
-      "chris-martin",
-      "stephaniehobson",
-      "6112",
-      "morenoh149",
-      "kscarfone",
-      "akhabibullina",
-      "xfq",
-      "Fredchat",
-      "mpiotrowicz",
-      "Sheppy",
-      "BrendanMcKeon",
-      "anastasia",
-      "jswisher",
-      "Aaronlev",
-      "colinbdclark"
-    ]
-  },
   "Web/Accessibility/ARIA/forms": {
     "modified": "2019-03-24T00:16:34.608Z",
     "contributors": [
@@ -86796,25 +86750,6 @@
       "Sheppy",
       "anastasia",
       "Aaronlev"
-    ]
-  },
-  "Web/Accessibility/ARIA/forms/Basic_form_hints": {
-    "modified": "2019-03-24T00:12:07.574Z",
-    "contributors": [
-      "chrisdavidmills",
-      "leosantacruz",
-      "Jason0",
-      "david_ross",
-      "tiffany-taylor",
-      "Marsf",
-      "caio.rrs",
-      "jonscottclark",
-      "Sheppy",
-      "alispivak",
-      "ethertank",
-      "Jeremie",
-      "Aaronlev",
-      "anastasia"
     ]
   },
   "Web/Accessibility/ARIA/forms/Multipart_labels": {
@@ -86828,23 +86763,6 @@
       "Kritz",
       "Fredchat",
       "Sheppy",
-      "Aaronlev"
-    ]
-  },
-  "Web/Accessibility/ARIA/forms/alerts": {
-    "modified": "2019-03-24T00:16:34.500Z",
-    "contributors": [
-      "SameeraST",
-      "eltom13",
-      "thenoelman",
-      "jeremybbauer",
-      "sergionsz",
-      "Jason0",
-      "jonscottclark",
-      "Fredchat",
-      "Sheppy",
-      "lukecanvin",
-      "anastasia",
       "Aaronlev"
     ]
   },
@@ -86950,22 +86868,6 @@
       "Mgjbot",
       "Kohei",
       "Sjfern"
-    ]
-  },
-  "Web/Accessibility/HTML_To_MSAA": {
-    "modified": "2019-01-16T14:50:30.174Z",
-    "contributors": [
-      "Sheppy",
-      "Surkov.alexander"
-    ]
-  },
-  "Web/Accessibility/Implementing_MSAA_server": {
-    "modified": "2019-03-23T23:25:24.940Z",
-    "contributors": [
-      "adamp",
-      "Fredchat",
-      "Sheppy",
-      "StevenGarrity"
     ]
   },
   "Web/Accessibility/Information_for_Web_authors": {

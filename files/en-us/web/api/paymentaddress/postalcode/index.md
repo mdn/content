@@ -26,8 +26,8 @@ browser-compat: api.PaymentAddress.postalCode
 
 The **`postalCode`** read-only property of the
 {{domxref('PaymentAddress')}} interface returns a string containing a code used by a
-jurisdiction for mail routing, for example, the {{interwiki("wikipedia", "ZIP Code")}}
-in the United States or the {{interwiki("wikipedia", "Postal Index Number")}} (PIN code)
+jurisdiction for mail routing, for example, the [ZIP Code](https://en.wikipedia.org/wiki/ZIP_Code)
+in the United States or the [Postal Index Number](https://en.wikipedia.org/wiki/Postal_Index_Number) (PIN code)
 in India.
 
 ## Value

@@ -95,7 +95,6 @@ The state of our component will be represented by these three top-level variable
         { id: 2, name: 'Create your first component', completed: true },
         { id: 3, name: 'Complete the rest of the tutorial', completed: false }
       ]
-
       let totalTodos = todos.length
       let completedTodos = todos.filter((todo) => todo.completed).length
     </script>
@@ -191,7 +190,7 @@ With a hardcoded list of to-dos, our `Todos` component is not very useful. To tu
 2. Have a look at the app, and you'll see the "Nothing to do here!" message. This is because we are currently not passing any value into it from `App.svelte`, so it's using the default value.
 3. Now let's move our to-dos to `App.svelte` and pass them to the `Todos.svelte` component as a prop. Update `src/App.svelte` as follows:
 
-    ```js
+    ```html
     <script>
       import Todos from './components/Todos.svelte'
 
@@ -207,7 +206,7 @@ With a hardcoded list of to-dos, our `Todos` component is not very useful. To tu
 
 4. When the attribute and the variable have the same name, Svelte allows you to just specify the variable as a handy shortcut, so we can rewrite our last line like this. Try this now.
 
-    ```js
+    ```html
     <Todos {todos} />
     ```
 
@@ -292,7 +291,7 @@ Now on to the next major task for this article — let's add some functionality 
 
 2. Now we will use this value in the `<input>` for adding new tasks. To do that we need to bind our `newTodoName` variable to the `todo-0` input, so that the `newTodoName` variable value stays in sync with the input's `value` property. We could do something like this:
 
-    ```js
+    ```html
     <input value={newTodoName} on:keydown={(e) => newTodoName = e.target.value} />
     ```
 

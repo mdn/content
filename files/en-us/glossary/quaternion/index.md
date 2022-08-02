@@ -15,6 +15,6 @@ While mathematical quaternions are more involved than this, the **unit quaternio
 
 ## See also
 
-- {{interwiki("wikipedia", "Quaternions and spatial rotation")}} on Wikipedia
-- {{interwiki("wikipedia", "Quaternion")}} on Wikipedia
+- [Quaternions and spatial rotation](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) on Wikipedia
+- [Quaternion](https://en.wikipedia.org/wiki/Quaternion) on Wikipedia
 - {{domxref("XRRigidTransform.orientation")}} in the WebXR Device API reference

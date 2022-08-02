@@ -15,6 +15,8 @@ browser-compat: css.properties.scroll-snap-stop
 
 The **`scroll-snap-stop`** [CSS](/en-US/docs/Web/CSS) property defines whether or not the scroll container is allowed to "pass over" possible snap positions.
 
+{{EmbedInteractiveExample("pages/css/scroll-snap-stop.html")}}
+
 ## Syntax
 
 ```css

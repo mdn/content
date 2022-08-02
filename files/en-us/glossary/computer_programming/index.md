@@ -13,5 +13,5 @@ Using an appropriate language, you can program/create all sorts of software. For
 
 ## See also
 
-- {{Interwiki("wikipedia", "Computer programming")}} on Wikipedia
+- [Computer programming](https://en.wikipedia.org/wiki/Computer_programming) on Wikipedia
 - [List of Programming Languages: Wikipedia](https://en.wikipedia.org/wiki/List_of_programming_languages)

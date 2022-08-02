@@ -54,7 +54,7 @@ The object describes the user-selected audio output device.
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Returned if the current page has not been granted the {{HTTPHeader("Feature-Policy/speaker-selection","speaker-selection")}} permission or the user closed the selection prompt without choosing a device.
-- `NotFoundError`  {{domxref("DOMException")}}
+- `NotFoundError` {{domxref("DOMException")}}
   - : Returned if there are no available audio output devices.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if there hasn't been a {{Glossary("transient activation")}} (you must trigger it from some kind of UI event).
@@ -71,13 +71,13 @@ document.querySelector('#myButton').addEventListener('click', () => {
     return;
   }
 
-  //Display prompt and log selected device or error
+  // Display prompt and log selected device or error
   navigator.mediaDevices
     .selectAudioOutput()
     .then((device) => {
       console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
     })
-    .catch(function (err) {
+    .catch((err) => {
       console.error(`${err.name}: ${err.message}`);
     });
 });
