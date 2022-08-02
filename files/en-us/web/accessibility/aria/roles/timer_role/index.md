@@ -47,7 +47,7 @@ Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), [`log
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
-- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)t
+- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [`timer` example on Codepen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering
 
