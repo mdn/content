@@ -83,7 +83,6 @@ Let's see what the available options are regarding the marketplaces/stores avail
 The best platforms for HTML5 games are the Web-based stores. It's easy to [prepare a game for them](https://code.tutsplus.com/tutorials/preparing-for-firefox-os--mobile-18515) as such an action involves little to no modification of the game itself — usually adding a manifest file containing necessary information in a zipped package containing all the resources is enough.
 
 - [The Chrome Web Store](https://chrome.google.com/webstore/) is also an attractive option — again, having a manifest file ready, zipping your game and filling in the online submission form is about all that's required.
-- [Tizen](https://www.tizenstore.com/) is also putting a high value on supporting apps written in JavaScript. Their store is another available option.
 
 ### Native mobile stores
 
