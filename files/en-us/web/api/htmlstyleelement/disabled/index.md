@@ -22,7 +22,7 @@ Returns `true` if the stylesheet is disabled, or there is no associated styleshe
 The value is `false` by default (if there is an associated stylesheet).
 
 The property can be used to enable or disable an associated stylesheet.
-Setting the property `true` when there is no associated stylesheet has no effect.
+Setting the property to `true` when there is no associated stylesheet has no effect.
 
 ## Examples
 
