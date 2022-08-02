@@ -34,7 +34,7 @@ new Intl.DateTimeFormat(locales, options)
 - `locales` {{optional_inline}}
 
   - : A string with a BCP 47 language tag, or an array of such strings. To use the
-    browser's default locale, omit or pass `undefined`. Unicode extension are supported
+    browser's default locale, omit this field, pass `undefined`, or pass an empty array. Unicode extension are supported
     (for example "`en-US-u-ca-buddhist`"). For the general form and
     interpretation of the `locales` argument, see the
     {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
