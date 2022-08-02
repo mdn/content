@@ -1,5 +1,5 @@
 ---
-title: Creating, moving, and deleting pages
+title: How to create, move, delete, and edit pages
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 tags:
   - meta
@@ -8,7 +8,7 @@ page-type: mdn-writing-guide
 ---
 {{MDNSidebar}}
 
-This article describes how to create, move, or delete a page. In all these instances, it's a good idea to check our guidelines for [What we write](/en_US/docs/MDN/Writing_guidelines/What_we_write) to confirm if any of these actions should be taken and discuss it with the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions) before proceeding.
+This article describes how to create, move, delete, or edit a page. In all these instances, it's a good idea to check our guidelines for [What we write](/en_US/docs/MDN/Writing_guidelines/What_we_write) to confirm if any of these actions should be taken and discuss it with the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions) before proceeding.
 
 ## Creating pages
 
@@ -159,3 +159,19 @@ entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
 > ```
 
 Removing content from MDN Web Docs will inevitably result in updating the existing content as well. As a lot of articles link to others, the removed content will likely be referenced elsewhere. Adding the redirect will mitigate the impact of removing content; however, it's best practice to edit content to reflect the change and include the content edits along with the removal pull request.
+
+## Editing existing pages
+
+To edit a page, you need to find the page source in our [content](https://github.com/mdn/content) repository. The easiest way to find it is to navigate to the page you want to edit, go to the bottom of the page, and click on the "Source on GitHub" link.
+
+### Preview changes
+
+If you are editing the page locally, to see what your changes look like you can go to the content repo folder, execute the CLI command `yarn start`, go to `localhost:5042` in your browser, and navigate to the page and view it. Enter the title in the search box to find it easily. The previewed page will update in the browser as you edit the source.
+
+### Edit tags
+
+You can add or remove tags, which describe the page's content and purpose, in the "tags" list at the top of the page source. See [How to tag pages](/en-US/docs/MDN/Writing_guidelines/Howto/Tag) for information about which tags to apply.
+
+### Attach files
+
+To attach a file to your article, you just need to include it in the same directory as the article's `index.md` file. Include the file in your page, typically via an {{htmlelement("a")}} element.

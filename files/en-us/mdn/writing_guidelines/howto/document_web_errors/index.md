@@ -9,43 +9,38 @@ tags:
 
 {{MDNSidebar}}
 
-The MDN [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors) is a project aiming to help web developers with errors occurring in the [Developer Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). You can see this feature in action in Firefox — JavaScript errors contain a "Learn more" link that takes you to the JavaScript error reference containing additional advice for fixing issues.
+The [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors) on MDN Web Docs is a project to help web developers with errors occurring in the [Developer Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). For this project, we need to write more error documentation on MDN Web Docs so that we can add more links to the tools where the messages are thrown. This article explains how to document the web errors.
 
-In order to help this project, we need to write more error documentation on MDN so that we can add more links to the tools where the messages are thrown.
+JavaScript errors contain a "Learn more" link that takes you to the JavaScript error reference containing additional advice for fixing issues. To be able to document the web errors, you will need to know or be able to dive into some [JavaScript](/en-US/docs/Web/JavaScript).
 
-## Prerequisites
-
-- You will need an [MDN account](/en-US/docs/MDN/Contribute/Getting_started#step_1_create_an_account_on_mdn).
-- You will need to know or able to dive into some [JavaScript](/en-US/docs/Web/JavaScript).
-
-## Step 1 – find an error to document
+## Step 1 – Determine the error to document
 
 - Firefox/Gecko's error messages: <https://github.com/mozilla/gecko-dev/blob/master/js/src/jsshell.msg>
 - Edge/Chakra's error messages: <https://github.com/Microsoft/ChakraCore/blob/master/lib/Parser/rterrors.h>
 - Chrome/v8's error messages: <https://chromium.googlesource.com/v8/v8.git/+/refs/heads/main/src/execution/messages.h>
 
-## Step 2 – look at existing error docs
+## Step 2 – Check the existing error documentation
 
 - Look at the existing [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors) and see how errors are documented.
 - Depending on which type of error you want to write about, you can take a closer look at these pages.
 - You might want to copy the content of an existing page to kick off your new page.
 
-## Step 3 – create a new page
+## Step 3 – Create the new error page
 
 - All error pages live under this tree: [/docs/Web/JavaScript/Reference/Errors](/en-US/docs/Web/JavaScript/Reference/Errors)
-- To create a new page, see the instructions in our [GitHub README](https://github.com/mdn/content#adding-a-new-document).
+- To create a new page, see the instructions in our [how to create a page](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) guide.
 
-## Step 4 – write some content
+## Step 4 – Document the error
 
 - Either use a copied structure from one of the existing error documents or start from scratch. Your choice!
 - You should have at least:
 
   - A syntax box containing the message as thrown in different browsers.
   - The error type.
-  - A text that explains why this error happened, what its consequences are. Go beyond the thrown message.
+  - A text that explains why this error happened and what its consequences are. Go beyond the thrown message.
   - Examples showcasing the error (there might be more than one!) and an example showing how to fix the code.
-  - Pointers to other reference material on MDN.
+  - Pointers to other reference material on MDN Web Docs.
 
-## Step 5 – get a review
+## Step 5 – Get the content reviewed
 
-Once your page is created, submit it as a PR, and a member of our review team will be assigned automatically to review your page.
+After you've created the error page, submit it as a pull request. A member of our review team will be assigned automatically to review your page.

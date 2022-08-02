@@ -1,5 +1,5 @@
 ---
-title: Structured data on MDN
+title: How to use structured data
 slug: MDN/Writing_guidelines/Howto/JSON_Structured_data
 tags:
   - meta

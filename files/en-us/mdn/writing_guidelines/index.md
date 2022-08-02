@@ -9,7 +9,7 @@ tags:
 
 {{MDNSidebar}}
 
-MDN Web Docs is an open-source project. The sections outlined below describe our guidelines for *what* we document and *how* we do it on MDN Web Docs. To find out how to contribute, see our [contribution guidelines](/en_US/docs/MDN/Community/Contributing).
+MDN Web Docs is an open-source project. The sections outlined below describe our guidelines for *what* we document and *how* we do it on MDN Web Docs. To learn about _how to contribute_, see our [contribution guidelines](/en_US/docs/MDN/Community/Contributing).
 
 - [What we write](/en_US/docs/MDN/Writing_guidelines/What_we_write)
 
@@ -33,6 +33,14 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : This section explains how to add and link to entries in the MDN Web Docs glossary. It also provides guidelines about glossary entry layout and content.
 
+    - [How to research a technology](/en_US/docs/MDN/Writing_guidelines/Howto/Research_technology)
+
+      - : This section provides some handy tips for researching a technology you are documenting.
+
+    - [How to move and delete pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
+
+      - : This section explains how to move or delete a page.
+
 - [Our writing style guide](/en_US/docs/MDN/Writing_guidelines/Writing_style_guide)
 
   - : The writing style guide covers the language and style we use to write on MDN Web Docs. It also covers how to format code examples.
@@ -53,17 +61,9 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : Macros are shortcuts that are used in pages to generate content, such as sidebars. This section lists the macros we use and what they do.
 
-- [How to research a technology](/en_US/docs/MDN/Writing_guidelines/Research_technology)
-
-  - : This section provides some handy tips for researching a technology you are documenting.
-
 - [How to label a technology](/en_US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
 
   - : This section covers our definitions for the terms obsolete, deprecated, and experimental and provides guidelines on when we remove content from MDN Web Docs.
-
-- [How to move and delete pages](/en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting)
-
-  - : This section explains how to move or delete a page.
 
 - [Attributions and copyright licensing information](/en_US/docs/MDN/Writing_guidelines/Attrib_copyright_license)
   - : This section describes what copyright license content is and how to attribute correctly.
