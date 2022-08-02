@@ -14,7 +14,7 @@ browser-compat: api.SVGStyleElement.disabled
 
 The **`SVGStyleElement.disabled`** property can be used to get and set whether the stylesheet is disabled (`true`) or not (`false`).
 
-Note that similar to the {{domxref("HTMLStyleElement.disabled")}} property (which it mirrors) there is no equivalent `disabled` property on the [SVG `<style>` element](/en-US/docs/Web/SVG/Element/style).
+Note that there is no corresponding `disabled` property on the [SVG `<style>` element](/en-US/docs/Web/SVG/Element/style).
 
 ## Value
 
@@ -74,7 +74,7 @@ button.addEventListener('click', () => {
 #### Result
 
 The result is shown below.
-Press the button to toggle the enabled state on the style used for the circle.
+Press the button to toggle the `disabled` property on the style used for the circle.
 
 {{EmbedLiveSample("Disabling a style defined in the SVG")}}
 
@@ -119,7 +119,7 @@ Before this point the SVG did not have a style associated, and so the value defa
 
 ```js
 //Disable the style
-style.disabled=true;  // Works
+style.disabled=true;
 ```
 
 Last of all we add an event handler for the button that toggles the disabled state and button text (this is the same as in the previous example).
@@ -148,3 +148,7 @@ Press the button to toggle the `disabled` state on the style used for the circle
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLStyleElement.disabled")}}
