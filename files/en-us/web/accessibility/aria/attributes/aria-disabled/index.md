@@ -14,7 +14,7 @@ The `aria-disabled` state indicates that the element is perceivable but disabled
 
 ## Description
 
-The `aria-disabled` attribute, when set to `true`, indicates that the element upon which it is set and all of its focusable descendants are meant to be in the disabled state. This declaration will inform people using assistive technologies, such as screen readers, that such elements are not meant to be editable or otherwise operable. 
+The `aria-disabled` attribute, when set to `true`, indicates that the element upon which it is set and all of its focusable descendants are meant to be in the disabled state. This declaration will inform people using assistive technologies, such as screen readers, that such elements are not meant to be editable or otherwise operable.
 
 Unlike HTML's {{htmlattrxref('disabled')}} Boolean attribute which will communicate a form control as semantically being disabled, change its styling to reflect its state, and suppress all functionality along with disallowing the element's value from participating in form submission, the `aria-disabled="true"` <strong>only</strong> semantically exposes these elements as being disabled. Web developers must manually ensure such elements have their functionality suppressed when they are exposed in the disabled state.
 
@@ -44,14 +44,14 @@ Similarly to needing to use JavaScript to ensure an element with `aria-disabled=
 }
 ```
 
-If you are purposefully using the `aria-disabled` attribute to allow for a form control to remain in the page's keyboard focus order, particularly if the element represents important content that all users should be able to perceive, then you may need to use styling that still passes color contrast requirements.  For instance, a disabled button/heading that introduces a non-collapsable accordion panel is content that still needs to be legible. 
+If you are purposefully using the `aria-disabled` attribute to allow for a form control to remain in the page's keyboard focus order, particularly if the element represents important content that all users should be able to perceive, then you may need to use styling that still passes color contrast requirements.  For instance, a disabled button/heading that introduces a non-collapsable accordion panel is content that still needs to be legible.
 
 ```css
 @media (forced-colors: active) {
-	[aria-disabled="true"] {
-		border-color: Graytext;
+ [aria-disabled="true"] {
+  border-color: Graytext;
     color: GrayText;
-	}
+ }
 }
 ```
 
