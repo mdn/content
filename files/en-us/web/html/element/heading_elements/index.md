@@ -48,8 +48,7 @@ The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six
         Any element that accepts
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
           >flow content</a
-        >; don't use a heading element as a child of the
-        {{HTMLElement("hgroup")}} element — it is now deprecated.
+        >.
       </td>
     </tr>
     <tr>
