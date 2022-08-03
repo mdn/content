@@ -195,7 +195,7 @@ update() {
   }
   const axes = [];
   if (c.axes) {
-    const x=c.axes.length;
+    const x = c.axes.length;
     for (let a = 0; a < x; a++) {
       axes.push(c.axes[a].toFixed(2));
     }
