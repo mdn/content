@@ -5480,7 +5480,7 @@
 /en-US/docs/MDN/Contribute/Structures/Macros/Other	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /en-US/docs/MDN/Contribute/Structures/Page_layouts	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Structures/Page_types	/en-US/docs/MDN/Writing_guidelines/Page_structures
-/en-US/docs/MDN/Contribute/Structures/Page_types/API_constructor_subpage_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/API_constructor_subpage_template
+/en-US/docs/MDN/Contribute/Structures/Page_types/API_constructor_subpage_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/API_event_subpage_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/API_landing_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/API_method_subpage_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
