@@ -102,7 +102,7 @@ Frame format:
      |N|V|V|V|       |S|             |   (if payload len==126/127)   |
      | |1|2|3|       |K|             |                               |
      +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
-     |     Extended payload length continued, if payload len === 127  |
+     |     Extended payload length continued, if payload len == 127  |
      + - - - - - - - - - - - - - - - +-------------------------------+
      |                               |Masking-key, if MASK set to 1  |
      +-------------------------------+-------------------------------+
