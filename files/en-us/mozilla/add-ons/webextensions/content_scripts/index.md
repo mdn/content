@@ -435,8 +435,10 @@ function messageContentScript() {
 // content-script.js
 
 window.addEventListener("message", (event) => {
-  if (event.source === window &&
-      event?.data?.direction === "from-page-script") {
+  if (
+    event.source === window &&
+    event?.data?.direction === "from-page-script"
+  ) {
     alert("Content script received message: \"" + event.data.message + "\"");
   }
 });
