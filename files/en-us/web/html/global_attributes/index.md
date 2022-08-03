@@ -73,7 +73,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`id`](/en-US/docs/Web/HTML/Global_attributes/id)
   - : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
 - [`inert`](/en-US/docs/Web/HTML/Global_attributes/id)
-  - : A boolean value which makes the browser disregard user input events for the element. Useful where clicking events are present.
+  - : A boolean value that makes the browser disregard user input events for the element. Useful when click events are present.
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode)
   - : Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in {{HTMLAttrxRef("contenteditable")}} mode.
 - [`is`](/en-US/docs/Web/HTML/Global_attributes/is)
