@@ -338,7 +338,7 @@ for (let i=0; i<this.maxLevels; i++) {
   const newLevel = this.add.group();
   newLevel.enableBody = true;
   newLevel.physicsBodyType = Phaser.Physics.ARCADE;
-  for (let e=0; e<this.levelData[i].length; e++) {
+  for (let e = 0; e < this.levelData[i].length; e++) {
     const item = this.levelData[i][e];
     newLevel.create(item.x, item.y, `element-${item.t}`);
   }
