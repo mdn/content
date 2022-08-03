@@ -139,8 +139,7 @@ update() {
   // Loop through buttons and push the pressed ones to the array
   const pressed = [];
   if (c.buttons) {
-    const t = c.buttons.length;
-    for (let b = 0; b < t; b++) {
+    for (let b = 0; b < c.buttons.length; b++) {
       if (c.buttons[b].pressed) {
         pressed.push(gamepadAPI.buttons[b]);
       }
@@ -150,8 +149,7 @@ update() {
   // Loop through axes and push their values to the array
   const axes = [];
   if (c.axes) {
-    const x = c.axes.length;
-    for (let a = 0; a < x; a++) {
+    for (let a = 0; a < c.axes.length; a++) {
       axes.push(c.axes[a].toFixed(2));
     }
   }
@@ -176,8 +174,7 @@ buttonPressed(button, hold) {
   let newPress = false;
   
   // Loop through pressed buttons
-  const s = gamepadAPI.buttonsStatus.length;
-  for (let i = 0; i < s; i++) {
+  for (let i = 0; i < gamepadAPI.buttonsStatus.length; i++) {
     // If we found the button we're looking for
     if (gamepadAPI.buttonsStatus[i] === button) {
       // Set the boolean variable to true
@@ -186,8 +183,7 @@ buttonPressed(button, hold) {
       // If we want to check the single press
       if (!hold) {
         // Loop through the cached states from the previous frame
-        const p = gamepadAPI.buttonsCache.length;
-        for (let j = 0; j < p; j++) {
+        for (let j = 0; j < gamepadAPI.buttonsCache.length; j++) {
           // If the button was already pressed, ignore new press
           newPress = (gamepadAPI.buttonsCache[j] !== button);
         }
