@@ -30,7 +30,7 @@ getAsString((data) => { /* … */ } )
 getAsString(callbackFn)
 
 // Inline callback function
-getAsString((data) => { /* … */ })
+getAsString(function(data) { /* … */ })
 ```
 
 ### Parameters
