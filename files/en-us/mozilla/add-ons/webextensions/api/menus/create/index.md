@@ -130,7 +130,7 @@ browser.menus.create({
 });
 
 browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "log-selection") {
+  if (info.menuItemId === "log-selection") {
     console.log(info.selectionText);
   }
 });
@@ -167,11 +167,11 @@ let makeItBlue = 'document.body.style.border = "5px solid blue"';
 let makeItGreen = 'document.body.style.border = "5px solid green"';
 
 browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "radio-blue") {
+  if (info.menuItemId === "radio-blue") {
     browser.tabs.executeScript(tab.id, {
       code: makeItBlue
     });
-  } else if (info.menuItemId == "radio-green") {
+  } else if (info.menuItemId === "radio-green") {
     browser.tabs.executeScript(tab.id, {
       code: makeItGreen
     });

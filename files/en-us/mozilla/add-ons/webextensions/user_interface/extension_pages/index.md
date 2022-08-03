@@ -60,7 +60,7 @@ By default, pages you open in this way will be stored in the user's history, jus
 
 ```js
 function onVisited(historyItem) {
-  if (historyItem.url == browser.extension.getURL(myPage)) {
+  if (historyItem.url === browser.extension.getURL(myPage)) {
     browser.history.deleteUrl({url: historyItem.url});
   }
 }

@@ -79,7 +79,7 @@ function listener(details) {
     }
     else {
       for (let i = 0; i < data.length; i++) {
-        let stream = (i == data.length - 1) ? false : true;
+        let stream = i !== data.length - 1;
         str += decoder.decode(data[i], {stream});
       }
     }
@@ -311,7 +311,7 @@ function listener(details) {
   filter.ondata = (event) => {
     let stream = true;
     let data = new Uint8Array(event.data.slice(-8, -1));
-    if (String.fromCharCode(...data) == "</html>") {
+    if (String.fromCharCode(...data) === "</html>") {
       stream = false; // end-of-stream
     }
     str += decoder.decode(event.data, {stream});

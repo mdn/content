@@ -181,7 +181,7 @@ let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.
 
 function rewriteUserAgentHeader(e) {
   e.requestHeaders.forEach(function(header){
-    if (header.name.toLowerCase() == "user-agent") {
+    if (header.name.toLowerCase() === "user-agent") {
       header.value = ua;
     }
   });

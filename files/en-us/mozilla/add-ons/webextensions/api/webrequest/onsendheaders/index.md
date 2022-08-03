@@ -153,8 +153,8 @@ let targetPage = "*://*.google.ca/*";
 
 // Log cookies sent with this request
 function logCookies(e) {
-  for (let header of e.requestHeaders) {
-    if (header.name == "Cookie") {
+  for (const header of e.requestHeaders) {
+    if (header.name === "Cookie") {
       console.log(header.value);
     }
   }

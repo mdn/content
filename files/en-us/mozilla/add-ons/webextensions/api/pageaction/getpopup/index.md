@@ -59,7 +59,7 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "get-popup") {
+  if (info.menuItemId === "get-popup") {
     let gettingPopup = browser.pageAction.getPopup({tabId: tab.id});
     gettingPopup.then(gotPopup);
   }

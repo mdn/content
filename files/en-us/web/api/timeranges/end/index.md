@@ -48,7 +48,7 @@ const numRanges = buf.length;
 
 if (buf.length === 1) {
   // only one range
-  if (buf.start(0) === 0 && buf.end(0) == v.duration) {
+  if (buf.start(0) === 0 && buf.end(0) === v.duration) {
     // The one range starts at the beginning and ends at
     // the end of the video, so the whole thing is loaded
   }

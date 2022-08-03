@@ -62,7 +62,7 @@ browser.menus.create({
 });
 
 browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "remove-all") {
+  if (info.menuItemId === "remove-all") {
     let removing = browser.menus.removeAll();
     removing.then(onRemoved);
   }
