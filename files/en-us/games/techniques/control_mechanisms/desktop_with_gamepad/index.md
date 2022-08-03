@@ -312,7 +312,7 @@ if (GamepadAPI.buttons.pressed('DPad-Right','hold')) {
     // move player right
 }
 
-if (GamepadAPI.axes.status && GamepadAPI.axes.status[0]) {
+if (GamepadAPI.axes.status) {
   if (GamepadAPI.axes.status[0] > 0.5) {
     // move player up
   } else if (GamepadAPI.axes.status[0] < -0.5) {
