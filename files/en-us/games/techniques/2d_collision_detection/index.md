@@ -104,7 +104,7 @@ const circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
 
 const circle2 = Crafty.e("2D, Canvas, Circle, Fourway").fourway(2).attr(dim2).circle(20, "blue");
 
-circle2.bind("EnterFrame", function() {
+circle2.bind("EnterFrame", () => {
     const dx = (circle1.x + circle1.radius) - (circle2.x + circle2.radius);
     const dy = (circle1.y + circle1.radius) - (circle2.y + circle2.radius);
     const distance = Math.sqrt(dx * dx + dy * dy);
