@@ -87,10 +87,10 @@ div {
 ### JavaScript
 
 ```js
-let clear = false,
-    divInfo = null,
-    divs = null,
-    chCapture = null;
+let clear = false;
+let divInfo = null;
+let divs = null;
+let chCapture = null;
 
 window.onload = () => {
   divInfo = document.getElementById('divInfo');
@@ -117,13 +117,12 @@ function removeListeners() {
 function addListeners() {
   for (const div of divs) {
     if (div.id !== 'divInfo') {
-        if (chCapture.checked) {
-            div.addEventListener('click', onDivClick, true);
-        }
-        else {
-            div.addEventListener('click', onDivClick, false);
-            div.onmousemove = () => { clear = true };
-        }
+      if (chCapture.checked) {
+        div.addEventListener('click', onDivClick, true);
+      } else {
+        div.addEventListener('click', onDivClick, false);
+        div.onmousemove = () => { clear = true };
+      }
     }
   }
 }
