@@ -39,16 +39,6 @@ if (foo.hasAttributes()) {
 }
 ```
 
-## Polyfill
-
-```js
-;((prototype) => {
-  prototype.hasAttributes = prototype.hasAttributes || () => {
-    return (this.attributes.length > 0);
-  }
-})(Element.prototype);
-```
-
 ## Specifications
 
 {{Specifications}}
