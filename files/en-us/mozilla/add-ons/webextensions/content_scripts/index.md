@@ -434,7 +434,7 @@ function messageContentScript() {
 ```js
 // content-script.js
 
-window.addEventListener("message", function(event) {
+window.addEventListener("message", (event) => {
   if (event.source === window &&
       event.data &&
       event.data.direction === "from-page-script") {
@@ -452,7 +452,7 @@ For a complete working example of this, [visit the demo page on GitHub](https://
 > ```js example-bad
 > // content-script.js
 >
-> window.addEventListener("message", function(event) {
+> window.addEventListener("message", (event) => {
 >   if (event.source === window &&
 >       event.data.direction   &&
 >       event.data.direction === "from-page-script") {
@@ -496,7 +496,7 @@ This code just creates some variables `x` and `y` using `window.eval()` and `eva
 On receiving the message, the page script logs the same variables:
 
 ```js
-window.addEventListener("message", function(event) {
+window.addEventListener("message", (event) => {
   if (event.source === window && event.data && event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
