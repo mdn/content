@@ -39,8 +39,8 @@ demonstrates how to prevent that from happening:
 
 ```js
 document.querySelector("#id-checkbox").addEventListener("click", (event) => {
-         document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
-         event.preventDefault();
+  document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
+  event.preventDefault();
 }, false);
 ```
 
@@ -143,10 +143,13 @@ function displayWarning(msg) {
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(() => {
+  warningTimeout = window.setTimeout(
+    () => {
       warningBox.parentNode.removeChild(warningBox);
       warningTimeout = -1;
-    }, 2000);
+    }, 
+    2000
+  );
 }
 ```
 
