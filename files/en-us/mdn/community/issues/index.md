@@ -8,7 +8,9 @@ tags:
   - governance
 ---
 
-[Issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) are used to track all bugs and work that has a clear actionable outcome. If you have found a bug with either our content or the platform, please search current open issues against the [relavant repository](../contributing/our-repositories/) to ensure someone has not already reported the issue. If the issue is new, please file an issue using the relavant template available in the repository.
+{{MDNSidebar}}
+
+[Issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) are used to track all bugs and work that has a clear actionable outcome. If you have found a bug with either our content or the platform, please search current open issues against the [relavant repository](/en_US/docs/MDN/Community/Contributing/Our_repositories/) to ensure someone has not already reported the issue. If the issue is new, please file an issue using the relavant template available in the repository.
 
 > NOTE: If an issue has a triage label, we haven't reviewed it yet, and you shouldn't begin work on it.
 
@@ -79,7 +81,7 @@ Most issues need some investigation before work can start, if you need to ask qu
 
 If you take on an issue we expect work to happen in a timely manner. If you can no longer take on the task, leave a comment and unassign yourself.
 
-Fork and branch the repository, do your work and open a [pull request](../pull_requests/index.md).
+Fork and branch the repository, do your work and open a [pull request](/en_US/docs/MDN/Community/Pull_requests).
 
 _(more stuff)_
 

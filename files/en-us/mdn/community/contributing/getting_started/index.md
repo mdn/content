@@ -8,6 +8,8 @@ tags:
   - governance
 ---
 
+{{MDNSidebar}}
+
 We are an open community of developers, technical writers, and learners building resources for a better Web, regardless of brand, browser, or platform. Anyone can contribute, and each person who does contribute makes us stronger. Together we can continue to drive innovation on the Web to serve the greater good. It starts here, with you.
 
 [Join us!](https://github.com/mdn/mdn-community/)
@@ -36,7 +38,7 @@ To contribute, you will need a GitHub account. If you do not already have one, g
 
 ### Additional reading and learning material
 
-- [Basic etiquette for open source projects](../../open-source-etiquette/index.md): If you've never contributed to an open source project before, we encourage you to read this document.
+- [Basic etiquette for open source projects](/en_US/docs/MDN/Community/Open_source_etiquette): If you've never contributed to an open source project before, we encourage you to read this document.
 - [Learn web development](https://developer.mozilla.org/docs/Learn): If you are new to HTML, CSS, JavaScript, we have some great content to help you get started.
 - [Deep dive into collaborating with pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
 

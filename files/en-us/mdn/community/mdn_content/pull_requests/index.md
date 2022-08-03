@@ -9,6 +9,8 @@ tags:
   - mdn-content
 ---
 
+{{MDNSidebar}}
+
 ## Overall process
 
 This section describes how contributors make changes on MDN Web Docs and how the changes are reviewed and land on the site.

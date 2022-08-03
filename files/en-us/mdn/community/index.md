@@ -7,6 +7,7 @@ tags:
   - community-guidelines
   - governance
 ---
+{{MDNSidebar}}
 
 👋 Welcome to MDN Web Docs on GitHub! MDN Web Docs is an open-source, collaborative project that documents web platform technologies, including [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), and [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API). We also provide extensive [learning resources](https://developer.mozilla.org/en-US/docs/Learn) for early-stage developers and students.
 
@@ -15,10 +16,10 @@ tags:
 [//]: # "TODO: Remember to update these links as we move the documentation around."
 
 - [Fixing known high impact issues](https://github.com/orgs/mdn/projects/25/views/1)
-- [Reviewing pull requests](pull-requests/)
-- [Help beginners to learn on MDN Web Docs](learn-forum/)
+- [Reviewing pull requests](/en-US/docs/MDN/Community/Pull_requests/)
+- [Help beginners to learn on MDN Web Docs](/en-US/docs/MDN/Community/Learn_forum/)
 - [Contribute to MDN Web Docs interactive examples](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md)
-- [Help translate MDN Web Docs](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize)
+- [Help translate MDN Web Docs](/en-US/docs/MDN/Community/Contributing/Translated_content)
 - [Help fix known platform issues](https://github.com/mdn/yari/issues)
 - [Help us keep browser compatibility data up to date.](https://github.com/mdn/browser-compat-data)
 

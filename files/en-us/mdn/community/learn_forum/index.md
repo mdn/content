@@ -8,6 +8,8 @@ tags:
   - governance
 ---
 
+{{MDNSidebar}}
+
 Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month, and have [active forums](https://discourse.mozilla.org/c/mdn/learn/250) where people go to ask for general help, or request that their assessments be marked. We'd love some help with answering posts, and growing our learning community.
 
 ## What do we need help with?
@@ -30,9 +32,8 @@ In the [MDN learning forum](https://discourse.mozilla.org/c/mdn/learn/250), ther
 
 ## How to help
 
-1. First of all, [sign up for an MDN account](/en-US/docs/MDN/Contribute/Getting_started#step_1_create_an_account_on_mdn), if you don't already have one. You don't absolutely need to do this to help in the learning area, but it will be useful in the long run.
-2. Also sign up for [Mozilla Discourse](https://discourse.mozilla.org/), if you haven't already.
-3. Have a look at [Learn web development](/en-US/docs/Learn) section and gain a basic level of familiarity with what's there, if you haven't already (see the [Structure of the MDN Learning Area](#structure_of_the_mdn_learning_area) section below for help).
+1. Sign up for [Mozilla Discourse](https://discourse.mozilla.org/), if you haven't already.
+2. Have a look at [Learn web development](/en-US/docs/Learn) section and gain a basic level of familiarity with what's there, if you haven't already (see the [Structure of the MDN Learning Area](#structure_of_the_mdn_learning_area) section below for help).
 
 ### Once you are set up
 

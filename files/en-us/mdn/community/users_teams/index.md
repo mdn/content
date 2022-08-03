@@ -8,6 +8,8 @@ tags:
   - governance
 ---
 
+{{MDNSidebar}}
+
 The success and growth of MDN Web Docs is thanks, in large part, to our community of contributors. There are also employees, contractors and a network of partners who are dedicated to the health, growth and maintenance of the project as a whole. There are also some individuals who have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. These people are part of our invited experts program. To manage all these different groups, we rely heavily on roles and teams within our GitHub organisation.
 
 A list of the members of the organisation can be [found here](https://github.com/orgs/mdn/people).
@@ -53,7 +55,7 @@ If you wish to become a member of a team you should start by [filing an issue in
 
 To become a member of a team, you are required to:
 
-- Agree to abide by our [Code of conduct](../../CODE_OF_CONDUCT.md).
+- Agree to abide by our [Code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 - Agree to Mozilla's [Commit Access Requirements](https://www.mozilla.org/en-US/about/governance/policies/commit/requirements/).
 - Set up [Two factor authentication](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) on your GitHub account.
 
@@ -67,7 +69,7 @@ Invited experts are individuals that have demonstrated in depth knowledge in a p
 
 Invited experts should:
 
-- Agree to abide by our [Code of conduct](../../CODE_OF_CONDUCT.md).
+- Agree to abide by our [Code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 - Agree to Mozilla's [Commit Access Requirements](https://www.mozilla.org/en-US/about/governance/policies/commit/requirements/).
 - Set up [Two factor authentication](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) on your GitHub account.
 
@@ -86,7 +88,7 @@ MDN Web Docs also have volunteers and partners who are assigned maintainer right
 
 Mantainers should:
 
-- Agree to abide by our [Code of conduct](../../CODE_OF_CONDUCT.md).
+- Agree to abide by our [Code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 - Agree to Mozilla's [Commit Access Requirements](https://www.mozilla.org/en-US/about/governance/policies/commit/requirements/).
 - Set up [Two factor authentication](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) on your GitHub account.
 - Have a vouched [Mozillians](https://people.mozilla.org) profile in the [NDA group](https://people.mozilla.org/a/nda/).
@@ -95,7 +97,7 @@ Mantainers should:
 
 Owners have wide permissions to manage users, teams, maintainer access across repositories in the MDN organisation, maintain repository settings and deploy to production. Owners are currently limited to Mozilla staff and are also bound by all the requirements of the other user levels. In addition to all the responsibilities of the other user levels, owners have the following additional responsibilities:
 
-- Follow and enforce MDN team norms, including the [code of conduct](CODE_OF_CONDUCT.md) and [Mozilla Policies](https://www.mozilla.org/en-US/about/governance/policies/).
+- Follow and enforce MDN team norms, including the [code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/) and [Mozilla Policies](https://www.mozilla.org/en-US/about/governance/policies/).
 - Follow and contribute to issues and discussions across the MDN organisation.
 - Ensure that an issue or pull request gets feedback from one or more members within one week.
 - Follow MDN organization policies described in this repo, and lead by example.

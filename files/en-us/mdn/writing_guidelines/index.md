@@ -9,7 +9,7 @@ tags:
 
 {{MDNSidebar}}
 
-MDN Web Docs is an open-source project. The sections outlined below describe our guidelines for *what* we document and *how* we do it on MDN Web Docs. To learn about _how to contribute_, see our [contribution guidelines](/en_US/docs/MDN/Community/Contributing).
+MDN Web Docs is an open-source project. The sections outlined below describe our guidelines for *what* we document and *how* we do it on MDN Web Docs. To learn about _how to contribute_, see our [contribution guidelines](/en_US/docs/MDN/Community).
 
 - [What we write](/en_US/docs/MDN/Writing_guidelines/What_we_write)
 

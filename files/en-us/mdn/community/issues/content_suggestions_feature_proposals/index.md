@@ -8,6 +8,8 @@ tags:
   - governance
 ---
 
+{{MDNSidebar}}
+
 We are always interested in hearing from our community about new content or feature suggestions you may have for MDN Web Docs. However, even though we are open to suggestions, we have to keep the following in mind:
 
 - MDN Web Docs is run and managed by a small internal team. We also rely heavily on our partners and community to help us keep MDN Web Docs the best resource for web developers on the web. As such, we will sometimes have to say no to new content or features because we will simply not be unable to maintain them long-term.
