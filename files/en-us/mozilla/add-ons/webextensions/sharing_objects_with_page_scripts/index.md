@@ -247,7 +247,7 @@ ev.propB = "wrapper";                             // define property on xray wra
 ev.wrappedJSObject.propB = "unwrapped";           // define same property on page object
 Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can operate on less privileged objects
   'propC', {
-     get: exportFunction(function() {             // getters must be exported like regular functions
+     get: exportfunction() =>             // getters must be exported like regular functions
        return 'propC';
      })
   }

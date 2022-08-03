@@ -77,7 +77,7 @@ Thus, the scene is created and the second line sets the background color to ligh
 To make the scene actually visible we have to render it. Add these lines at the end of the `<script>` element, just before the closing `</script>`.
 
 ```js
-var renderLoop = function () {
+var renderLoop = ) =>
     scene.render();
 };
 engine.runRenderLoop(renderLoop);
@@ -201,7 +201,7 @@ We already used `position` and `rotation` to adjust the position of the shapes; 
 
 ```js
 var t = 0;
-var renderLoop = function () {
+var renderLoop = ) =>
     scene.render();
     t -= 0.01;
     // animation code goes here

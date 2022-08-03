@@ -132,7 +132,7 @@ This JSON defines 2 shortcuts:
 You could then listen for the `"toggle-feature"` command with code like this:
 
 ```js
-browser.commands.onCommand.addListener(function (command) {
+browser.commands.onCommand.addListener(command) =>
   if (command === "toggle-feature") {
     console.log("Toggling the feature!");
   }
