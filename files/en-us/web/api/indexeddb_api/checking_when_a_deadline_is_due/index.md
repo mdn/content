@@ -164,11 +164,11 @@ Next we create another IndexedDB `objectStore`, and use the `openCursor()` metho
 The first thing we do is convert the month names we have stored in the database into a month number that JavaScript will understand. As we saw before, the JavaScript `Date` object creates month values as a number between 0 and 11.
 
 ```js
-      if(+(cursor.value.hours) === hourCheck &&
-         +(cursor.value.minutes) === minuteCheck &&
-         +(cursor.value.day) === dayCheck &&
-         monthNumber === monthCheck &&
-         cursor.value.year === yearCheck &&
+      if(+(cursor.value.hours) == hourCheck &&
+         +(cursor.value.minutes) == minuteCheck &&
+         +(cursor.value.day) == dayCheck &&
+         monthNumber == monthCheck &&
+         cursor.value.year == yearCheck &&
          notified === "no") {
 
         // If the numbers all do match, run the createNotification()
