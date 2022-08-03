@@ -67,7 +67,7 @@ We first reset the `buttonsPressed` array to get it ready to store the latest in
 ```js
 function gamepadButtonPressedHandler(button) {
     let press = false;
-    for (let i=0; i<buttonsPressed.length; i++) {
+    for (let i = 0; i < buttonsPressed.length; i++) {
         if (buttonsPressed[i] === button) {
             press = true;
         }
