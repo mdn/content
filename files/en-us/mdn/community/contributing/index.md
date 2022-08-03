@@ -7,8 +7,9 @@ tags:
   - community-guidelines
   - governance
 ---
+{{MDNSidebar}}
 
-- [Getting started](getting-started/index.md)
-- [Our repositories](our-repositories/index.md)
-- [Translated content](translated-content/index.md)
-- [Security vulnerability response](security-vulnerability-response/index.md)
+- [Getting started](/en-US/docs/MDN/Community/Contributing/Getting-Started)
+- [Our repositories](/en-US/docs/MDN/Community/Contributing/Our_repositories)
+- [Translated content](/en-US/docs/MDN/Community/Contributing/Translated_content)
+- [Security vulnerability response](/en-US/docs/MDN/Community/Contributing/Security_vulnerability_response)

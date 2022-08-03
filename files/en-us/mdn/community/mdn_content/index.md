@@ -8,6 +8,7 @@ tags:
   - governance
   - mdn-content
 ---
+{{MDNSidebar}}
 
 Problems with MDN docs are reported as [content repo issues](https://github.com/mdn/content/issues). This article helps you find the _best_ issues to work on, based on your expertise and how much time you have available, and outlines the main steps to fixing them.
 
@@ -50,4 +51,3 @@ If you'd prefer to browse your tasks and choose by technology category instead, 
 3. Once you've fixed an issue, ask the submitter for a review and, hopefully, they will tell you whether they think more work is required. We will get involved if needed.
 4. Once the issue is verified fixed, it can be closed. The person closing the issue can be either the original issue submitter, or an MDN staff member.
 
-> **Note:** When choosing and working on an issue, you might also find our [GitHub best practices](/en-US/docs/MDN/Contribute/GitHub_best_practices) and [Getting started on MDN](/en-US/docs/MDN/Contribute/Getting_started) guides useful.
