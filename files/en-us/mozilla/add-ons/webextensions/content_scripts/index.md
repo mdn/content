@@ -454,8 +454,10 @@ For a complete working example of this, [visit the demo page on GitHub](https://
 > // content-script.js
 >
 > window.addEventListener("message", (event) => {
->   if (event.source === window &&
->       event?.data?.direction === "from-page-script") {
+>   if (
+>     event.source === window &&
+>     event?.data?.direction === "from-page-script"
+>   ) {
 >     eval(event.data.message);
 >   }
 > });
