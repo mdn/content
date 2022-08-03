@@ -31,7 +31,7 @@ const rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
 
 const rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
 
-rect2.bind("EnterFrame", () => {
+rect2.bind("EnterFrame", function() {
     if (rect1.x < rect2.x + rect2.w &&
         rect1.x + rect1.w > rect2.x &&
         rect1.y < rect2.y + rect2.h &&
@@ -82,7 +82,7 @@ Crafty.c("Circle", {
         return this;
    },
 
-   draw: () => {
+   draw() {
        const ctx = Crafty.canvas.context;
        ctx.save();
        ctx.fillStyle = this.color;
@@ -104,7 +104,7 @@ const circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
 
 const circle2 = Crafty.e("2D, Canvas, Circle, Fourway").fourway(2).attr(dim2).circle(20, "blue");
 
-circle2.bind("EnterFrame", () => {
+circle2.bind("EnterFrame", function() {
     const dx = (circle1.x + circle1.radius) - (circle2.x + circle2.radius);
     const dy = (circle1.y + circle1.radius) - (circle2.y + circle2.radius);
     const distance = Math.sqrt(dx * dx + dy * dy);
