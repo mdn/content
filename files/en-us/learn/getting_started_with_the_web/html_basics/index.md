@@ -76,7 +76,7 @@ The elements have to open and close correctly so that they are clearly inside or
 Some elements have no content and are called **empty elements**. Take the {{htmlelement("img")}} element that we already have in our HTML page:
 
 ```html
-<img src="images/firefox-icon.png" alt="Firefox logo: flaming fox wrapping the world">
+<img src="images/firefox-icon.png" alt="My test image">
 ```
 
 This contains two attributes, but there is no closing `</img>` tag and no inner content. This is because an image element doesn't wrap content to affect it. Its purpose is to embed an image in the HTML page in the place it appears.
