@@ -186,8 +186,7 @@ update() {
   const c = GamepadAPI.controller || {};
   const pressed = [];
   if (c.buttons) {
-    const t = c.buttons.length;
-    for (let b = 0; b < t; b++) {
+    for (let b = 0; b < c.buttons.length; b++) {
       if (c.buttons[b].pressed) {
         pressed.push(GamepadAPI.buttons.layout[b]);
       }
