@@ -55,11 +55,7 @@ The next example scans through all of the media's audio tracks, enabling any tha
 
 ```js
 tracks.forEach((track) => {
-  if (track.language === userLanguage) {
-    track.enabled = true;
-  } else {
-    track.enabled = false;
-  }
+  track.enabled = track.language === userLanguage;
 });
 ```
 
