@@ -194,8 +194,7 @@ update() {
   }
   const axes = [];
   if (c.axes) {
-    const x = c.axes.length;
-    for (let a = 0; a < x; a++) {
+    for (let a = 0; a < c.axes.length; a++) {
       axes.push(c.axes[a].toFixed(2));
     }
   }
@@ -212,13 +211,11 @@ The `button.pressed()` function detects the actual button presses:
 ```js
 pressed(button, hold) {
   let newPress = false;
-  const s = GamepadAPI.buttons.status.length;
-  for (let i = 0; i < s; i++) {
+  for (let i = 0; i < GamepadAPI.buttons.status.length; i++) {
     if (GamepadAPI.buttons.status[i] === button) {
       newPress = true;
       if (!hold) {
-        const p = GamepadAPI.buttons.cache.length;
-        for (let j = 0; j < p; j++) {
+        for (let j = 0; j < GamepadAPI.buttons.cache.length; j++) {
           if (GamepadAPI.buttons.cache[j] === button) {
             newPress = false;
           }
