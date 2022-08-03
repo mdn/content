@@ -333,6 +333,15 @@ The value of the `title` attribute is usually presented to the user as a tooltip
 
 - [Using the HTML title attribute – updated | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
 
+### Svg as image source
+
+Due to [a bug](https://bugs.webkit.org/show_bug.cgi?id=216364), VoiceOver does not announce correctly an <img> element that uses a `.svg` file as the source. This bug can be prevented by adding the aria [`role="img"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to `<img>` elements using `.svg` source values.
+
+```html
+ <img src="mdn.svg" alt="MDN logo" role="img">
+```
+
+
 ## Technical summary
 
 <table class="properties">
