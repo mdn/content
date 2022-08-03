@@ -97,7 +97,7 @@ The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSO
 To ensure compatibility with both Firefox 3 and Firefox 3.5, you can do the following:
 
 ```js
-if (typeof(JSON) == "undefined") {
+if (typeof JSON === "undefined") {
   Components.utils.import("resource://gre/modules/JSON.jsm");
   JSON.parse = JSON.fromString;
   JSON.stringify = JSON.toString;

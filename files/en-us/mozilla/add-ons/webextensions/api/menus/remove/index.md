@@ -58,7 +58,7 @@ browser.menus.create({
 });
 
 browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "remove-me") {
+  if (info.menuItemId === "remove-me") {
     let removing = browser.menus.remove(info.menuItemId);
     removing.then(onRemoved, onError);
   }

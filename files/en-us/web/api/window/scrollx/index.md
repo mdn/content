@@ -52,7 +52,7 @@ if (window.scrollX > 400) {
 The `pageXOffset` property is an alias for the `scrollX` property:
 
 ```js
-window.pageXOffset == window.scrollX; // always true
+window.pageXOffset === window.scrollX; // always true
 ```
 
 ## Specifications

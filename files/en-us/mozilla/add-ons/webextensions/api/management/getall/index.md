@@ -45,8 +45,8 @@ Log the name of all installed add-ons:
 
 ```js
 function gotAll(infoArray) {
-  for (info of infoArray) {
-    if (info.type == "extension") {
+  for (const info of infoArray) {
+    if (info.type === "extension") {
       console.log(info.name);
     }
   }

@@ -140825,27 +140825,8 @@
       "bershanskiy"
     ]
   },
-  "Web/Manifest/dir": {
-    "modified": "2020-10-15T22:19:33.860Z",
-    "contributors": [
-      "mfuji09",
-      "almaceleste",
-      "wbamberg",
-      "chrisdavidmills",
-      "bershanskiy"
-    ]
-  },
   "Web/Manifest/display": {
     "modified": "2020-10-15T22:19:35.572Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "chrisdavidmills",
-      "bershanskiy"
-    ]
-  },
-  "Web/Manifest/iarc_rating_id": {
-    "modified": "2020-10-15T22:19:47.443Z",
     "contributors": [
       "mfuji09",
       "wbamberg",
@@ -140859,16 +140840,6 @@
       "NotWoods",
       "mfuji09",
       "stenrap",
-      "wbamberg",
-      "chrisdavidmills",
-      "bershanskiy"
-    ]
-  },
-  "Web/Manifest/lang": {
-    "modified": "2020-10-15T22:19:33.031Z",
-    "contributors": [
-      "mfuji09",
-      "almaceleste",
       "wbamberg",
       "chrisdavidmills",
       "bershanskiy"

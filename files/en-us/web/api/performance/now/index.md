@@ -48,7 +48,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+Returns a {{domxref("DOMHighResTimeStamp")}} measured in milliseconds.
 
 ## Examples
 

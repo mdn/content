@@ -200,7 +200,7 @@ This example illustrates accessing all of a pointer event's properties.
       const area = ev.width * ev.height;
 
       // Compare cached id with this event's id and process accordingly
-      if (id == ev.identifier) process_id(ev);
+      if (id === ev.identifier) process_id(ev);
 
       // Call the appropriate pointer type handler
       switch (ev.pointerType) {

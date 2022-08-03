@@ -115,4 +115,3 @@ If an extension defines specific symbols or functions that are not available in 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
 - {{domxref("WebGLRenderingContext.getExtension()")}}
 - [webglreport.com](https://webglreport.com/)
-- [webglstats.com](http://webglstats.com)

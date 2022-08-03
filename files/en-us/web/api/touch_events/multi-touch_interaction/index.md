@@ -96,8 +96,8 @@ function handle_pinch_zoom(ev) {
    let point1 = -1;
    let point2 = -1;
    for (let i = 0; i < tpCache.length; i++) {
-     if (tpCache[i].identifier == ev.targetTouches[0].identifier) point1 = i;
-     if (tpCache[i].identifier == ev.targetTouches[1].identifier) point2 = i;
+     if (tpCache[i].identifier === ev.targetTouches[0].identifier) point1 = i;
+     if (tpCache[i].identifier === ev.targetTouches[1].identifier) point2 = i;
    }
    if (point1 >= 0 && point2 >= 0) {
      // Calculate the difference between the start and move coordinates

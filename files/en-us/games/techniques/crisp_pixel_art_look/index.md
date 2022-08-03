@@ -23,9 +23,9 @@ Retro [pixel art](https://wikipedia.org/wiki/Pixel_art) aesthetics are getting p
 <table class="standard-table">
   <tbody>
     <tr>
-      <td><img alt="" src="technique_original.png" /></td>
-      <td><img alt="" src="technique_original.png" /></td>
-      <td><img alt="" src="technique_4x.png" /></td>
+      <td><img alt="small pixelated man" src="technique_original.png" /></td>
+      <td><img alt="small pixelated man" src="technique_original.png" /></td>
+      <td><img alt="larger pixelated man" src="technique_4x.png" /></td>
     </tr>
     <tr>
       <td>original size</td>

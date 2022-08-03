@@ -165,11 +165,11 @@ Listeners exist to trigger functionality once an event has fired. To react to an
 
 ```js
 browser.runtime.onMessage.addListener(function(message, callback) {
-  if (message.data == "setAlarm") {
+  if (message.data === "setAlarm") {
     browser.alarms.create({delayInMinutes: 5})
-  } else if (message.data == "runLogic") {
+  } else if (message.data === "runLogic") {
     browser.tabs.executeScript({file: 'logic.js'});
-  } else if (message.data == "changeColor") {
+  } else if (message.data === "changeColor") {
     browser.tabs.executeScript(
       {code: 'document.body.style.backgroundColor="orange"'});
   };

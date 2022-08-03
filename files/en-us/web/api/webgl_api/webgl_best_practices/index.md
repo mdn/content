@@ -537,11 +537,11 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) => {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
-      if (res == gl.WAIT_FAILED) {
+      if (res === gl.WAIT_FAILED) {
         reject();
         return;
       }
-      if (res == gl.TIMEOUT_EXPIRED) {
+      if (res === gl.TIMEOUT_EXPIRED) {
         setTimeout(test, interval_ms);
         return;
       }

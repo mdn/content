@@ -97,7 +97,7 @@ if (pc.addTrack) {
 
 stream.removeTrack(track);
 if (pc.removeTrack) {
-  pc.removeTrack(pc.getSenders().find((sender) => sender.track == track));
+  pc.removeTrack(pc.getSenders().find((sender) => sender.track === track));
 } else {
   // If you have code listening for negotiationneeded events:
   setTimeout(() => pc.dispatchEvent(new Event("negotiationneeded")));

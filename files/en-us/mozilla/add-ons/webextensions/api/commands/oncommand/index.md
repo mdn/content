@@ -68,7 +68,7 @@ You could listen for this particular command like this:
 
 ```js
 browser.commands.onCommand.addListener(function(command) {
-  if (command == "toggle-feature") {
+  if (command === "toggle-feature") {
     console.log("toggling the feature!");
   }
 });

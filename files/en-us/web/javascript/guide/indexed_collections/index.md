@@ -43,7 +43,7 @@ const arr2 = Array(arrayLength)
 
 // This has exactly the same effect
 const arr3 = []
-arr.length = arrayLength
+arr3.length = arrayLength
 ```
 
 > **Note:** In the above code, `arrayLength` must be a `Number`. Otherwise, an array with a single element (the provided value) will be created. Calling `arr.length` will return `arrayLength`, but the array doesn't contain any elements. A {{jsxref("Statements/for...in","for...in")}} loop will not find any property on the array.
