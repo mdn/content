@@ -77,7 +77,6 @@ Always remember, if you are updating the code on any given page, you'll need to 
 - [**html-examples**](https://github.com/mdn/html-examples)
 - [**web-components-examples**](https://github.com/mdn/web-components-examples)
 - [**webextension-examples**](https://github.com/mdn/webextensions-examples)
-- [**webgl-examples**](https://github.com/mdn/webgl-examples)
 - [**pwa-examples**](https://github.com/mdn/pwa-examples)
 - [**houdini-examples**](https://github.com/mdn/houdini-examples)
 - [**headless-examples**](https://github.com/mdn/headless-examples)
