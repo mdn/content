@@ -43,14 +43,14 @@ To get information about devices connected to your computer, you can use the {{d
 
 ```js
 navigator.getVRDevices().then((devices) => {
-  for (var i = 0; i < devices.length; ++i) {
+  for (let i = 0; i < devices.length; ++i) {
     if (devices[i] instanceof HMDVRDevice) {
       gHMD = devices[i];
       break;
     }
   }
   if (gHMD) {
-    for (var i = 0; i < devices.length; ++i) {
+    for (let i = 0; i < devices.length; ++i) {
       if (devices[i] instanceof PositionSensorVRDevice
          && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
         gPositionSensor = devices[i];
@@ -65,7 +65,7 @@ This code will loop through the available devices and assign proper sensors to t
 
 ```js
 function setCustomFOV(up,right,down,left) {
-  var testFOV = new VRFieldOfView(up,right,down,left);
+  const testFOV = new VRFieldOfView(up,right,down,left);
 
   gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
 }
@@ -75,7 +75,7 @@ The `gPositionSensor` variable holds the {{domxref("PositionSensorVRDevice")}} â
 
 ```js
 function setView() {
-  var posState = gPositionSensor.getState();
+  const posState = gPositionSensor.getState();
 
   if(posState.hasPosition) {
     posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
