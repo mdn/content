@@ -56,7 +56,7 @@ Highlights:
 - The spec-internal abstract operation `ToNumber(string)` now supports binary (`0b`) and octal (`0o`) literals, this is a potentially breaking change from ES5 ({{bug(1079120)}}).
 
   - `Number("0b11")` now returns `3`, not `NaN`.
-  - `"0o11" == 9` now returns `true`, not `false`.
+  - `"0o11" === 9` now returns `true`, not `false`.
 
 - The [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declaration is now block-scoped and requires an initializer ({{bug(611388)}}). It also can not be redeclared anymore ({{bug(1095439)}}).
 

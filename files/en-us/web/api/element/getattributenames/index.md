@@ -77,7 +77,7 @@ for (let name of element.getAttributeNames()) {
 ## Polyfill
 
 ```js
-if (Element.prototype.getAttributeNames == undefined) {
+if (Element.prototype.getAttributeNames === undefined) {
   Element.prototype.getAttributeNames = function () {
     var attributes = this.attributes;
     var length = attributes.length;

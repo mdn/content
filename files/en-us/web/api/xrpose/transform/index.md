@@ -54,7 +54,7 @@ xrSession.addEventListener("select", (event) => {
   let targetObject = findTargetUsingRay(targetRay.transform.matrix);
 
   if (source.targetRayMode === "tracked-pointer") {
-    if (source.handedness == user.handedness) {
+    if (source.handedness === user.handedness) {
       targetObject.primaryAction();
     } else {
       targetObject.offHandAction();

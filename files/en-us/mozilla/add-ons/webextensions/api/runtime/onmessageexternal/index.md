@@ -81,7 +81,7 @@ Events have three functions:
 In this example the extension "blue\@mozilla.org" sends a message to the extension "red\@mozilla.org":
 
 ```js
-// sender: browser.runtime.id == "blue@mozilla.org"
+// sender: browser.runtime.id === "blue@mozilla.org"
 
 // Send a message to the extension whose ID is "red@mozilla.org"
 browser.runtime.sendMessage(
@@ -91,7 +91,7 @@ browser.runtime.sendMessage(
 ```
 
 ```js
-// recipient: browser.runtime.id == "red@mozilla.org"
+// recipient: browser.runtime.id === "red@mozilla.org"
 
 function handleMessage(message, sender) {
   // check that the message is from "blue@mozilla.org"

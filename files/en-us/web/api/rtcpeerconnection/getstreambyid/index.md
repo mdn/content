@@ -62,11 +62,11 @@ RTCPeerConnection.prototype.getStreamById = function(id) {
     var remoteStreams = this.getRemoteStreams();
     var i;
     for (i = 0; i < localStreams.length; i++) {
-     if (localStreams[i].id == id)
+     if (localStreams[i].id === id)
        return localStreams[i];
     }
     for (i = 0; i < remoteStreams.length; i++) {
-     if (remoteStreams[i].id == id)
+     if (remoteStreams[i].id === id)
        return remoteStreams[i];
     }
   } catch(e) {}

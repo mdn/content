@@ -89,7 +89,7 @@ var KeyboardHelper = { left: 37, up: 38, right: 39, down: 40 };
 That way instead of using the codes to compare the input in the handler functions, we could do something like this, which is arguably easier to remember:
 
 ```js
-if(event.keyCode == KeyboardHelper.left) {
+if(event.keyCode === KeyboardHelper.left) {
     leftPressed = true;
 }
 ```

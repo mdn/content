@@ -169,7 +169,7 @@ buttonPressed(button, hold) {
   // loop through pressed buttons
   for(var i=0,s=gamepadAPI.buttonsStatus.length; i<s; i++) {
     // if we found the button we're looking for…
-    if(gamepadAPI.buttonsStatus[i] == button) {
+    if(gamepadAPI.buttonsStatus[i] === button) {
       // set the boolean variable to true
       newPress = true;
       // if we want to check the single press
@@ -177,7 +177,7 @@ buttonPressed(button, hold) {
         // loop through the cached states from the previous frame
         for(var j=0,p=gamepadAPI.buttonsCache.length; j<p; j++) {
           // if the button was already pressed, ignore new press
-          if(gamepadAPI.buttonsCache[j] == button) {
+          if(gamepadAPI.buttonsCache[j] === button) {
             newPress = false;
           }
         }

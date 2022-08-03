@@ -111,7 +111,7 @@ navigator.mediaDevices
     let videoTrack = stream.getVideoTracks()[0];
     PCs.forEach(function(pc) {
       const sender = pc.getSenders().find(function(s) {
-        return s.track.kind == videoTrack.kind;
+        return s.track.kind === videoTrack.kind;
       });
       console.log('found sender:', sender);
       sender.replaceTrack(videoTrack);

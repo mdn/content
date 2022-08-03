@@ -152,7 +152,7 @@ osc.type = osc.SQUARE;   // square waveform
 osc.type = osc.SAWTOOTH; // sawtooth waveform
 osc.type = osc.TRIANGLE; // triangle waveform
 osc.setWaveTable(table);
-const isCustom = (osc.type == osc.CUSTOM); // isCustom will be true
+const isCustom = (osc.type === osc.CUSTOM); // isCustom will be true
 ```
 
 ```js
@@ -317,7 +317,7 @@ The `playbackState` attribute of {{domxref("AudioBufferSourceNode")}} and {{domx
 // Old webkitAudioContext code:
 const src = context.createBufferSource();
 // Some time later...
-const isFinished = (src.playbackState == src.FINISHED_STATE);
+const isFinished = (src.playbackState === src.FINISHED_STATE);
 ```
 
 ```js

@@ -80,8 +80,8 @@ Here are some notes on the classes we use:
 
 1. If current `char` is `0` (end of string), then we are on a hard line break: get next node (typical depth first search), and set the current offset = 0
 2. `IAText::ch = getCharacterAtOffset(++offset);`
-3. If `ch` == embedded object char (`0xfffc`) then get object for that offset (see A above), then set the current offset to -1, and go to step 2
-4. if `ch == 0` then we must determine whether we're on a hard line break:
+3. If `ch` === embedded object char (`0xfffc`) then get object for that offset (see A above), then set the current offset to -1, and go to step 2
+4. if `ch === 0` then we must determine whether we're on a hard line break:
 
     1. If the current accessible's `IA2` role is `SECTION`, `HEADING` or `PARAGRAPH then we are on a hard line break, so stop
     2. get the offset in the parent text for this object (see B above), and then repeat step (C)2 above

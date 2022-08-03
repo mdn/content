@@ -182,7 +182,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 
 ```css
 .select {
-  /* The computations are made assuming 1em == 16px which is the default value in most browsers.
+  /* The computations are made assuming 1em === 16px which is the default value in most browsers.
      If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
   font-size   : 0.625em; /* this (10px) is the new font size context for em value in this context */
   font-family : Verdana, Arial, sans-serif;

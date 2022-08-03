@@ -68,7 +68,7 @@ We first reset the `buttonsPressed` array to get it ready to store the latest in
 function gamepadButtonPressedHandler(button) {
     var press = false;
     for(var i=0; i<buttonsPressed.length; i++) {
-        if(buttonsPressed[i] == button) {
+        if(buttonsPressed[i] === button) {
             press = true;
         }
     }
@@ -212,11 +212,11 @@ The `button.pressed()` function detects the actual button presses:
 pressed(button, hold) {
   var newPress = false;
   for(var i=0,s=GamepadAPI.buttons.status.length; i<s; i++) {
-    if(GamepadAPI.buttons.status[i] == button) {
+    if(GamepadAPI.buttons.status[i] === button) {
       newPress = true;
       if(!hold) {
         for(var j=0,p=GamepadAPI.buttons.cache.length; j<p; j++) {
-          if(GamepadAPI.buttons.cache[j] == button) {
+          if(GamepadAPI.buttons.cache[j] === button) {
             newPress = false;
           }
         }

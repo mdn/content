@@ -247,7 +247,7 @@ checkoutButton.addEventListener('click', function() {
           successPanel.style.display = 'block';
         });
   }).catch(function(error) {
-    if (error.code == DOMException.NOT_SUPPORTED_ERR) {
+    if (error.code === DOMException.NOT_SUPPORTED_ERR) {
       window.location.href =
         'https://bobpay.xyz/#download';
     } else {
