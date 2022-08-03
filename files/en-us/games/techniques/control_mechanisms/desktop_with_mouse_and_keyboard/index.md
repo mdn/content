@@ -192,7 +192,7 @@ if (this.cursors.left.isDown || this.keyLeft.isDown) {
 
 if (this.cursors.up.isDown || this.keyUp.isDown) {
   // move up
-} else if(this.cursors.down.isDown || this.keyDown.isDown) {
+} else if (this.cursors.down.isDown || this.keyDown.isDown) {
   // move down
 }
 ```

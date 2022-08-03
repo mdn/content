@@ -104,15 +104,9 @@ If the left cursor is pressed, the paddle will move seven pixels to the left, an
 
 ```js
 if (rightPressed) {
-  paddleX += 7;
-  if (paddleX + paddleWidth > canvas.width) {
-    paddleX = canvas.width - paddleWidth;
-  }
+  paddleX = Math.min(paddleX + 7, canvas.width - paddleWidth);
 } else if (leftPressed) {
-  paddleX -= 7;
-  if (paddleX < 0){
-    paddleX = 0;
-  }
+  paddleX = Math.max(paddleX - 7, 0);
 }
 ```
 
