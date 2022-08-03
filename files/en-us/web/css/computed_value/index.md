@@ -39,7 +39,6 @@ However, for some properties (those where percentages are relative to something 
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
     - [Used values](/en-US/docs/Web/CSS/used_value)
     - [Actual values](/en-US/docs/Web/CSS/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)

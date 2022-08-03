@@ -40,7 +40,6 @@ The {{glossary("user agent")}} performs four steps to calculate a property's act
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
     - [Computed values](/en-US/docs/Web/CSS/computed_value)
     - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
   - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

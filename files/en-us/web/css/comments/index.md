@@ -53,7 +53,6 @@ The `/* */` comment syntax is used for both single and multiline comments. There
 - CSS key concepts:
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
