@@ -60,11 +60,7 @@ interfaceElement.addEventListener("mousedown", () => {
 The following example finishes all the animations on a single element, regardless of their direction of playback.
 
 ```js
-elem.getAnimations().forEach(
-  (animation) => {
-    return animation.finish();
-  }
-);
+elem.getAnimations().forEach((animation) => animation.finish());
 ```
 
 ## Specifications
