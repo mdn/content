@@ -334,7 +334,7 @@ this.levelData = [
 Every array element holds a collection of blocks with an `x` and `y` position and `t` value for each. After `levelData`, but still in the `initLevels` function, we're adding the blocks into an array in the `for` loop using some of the framework-specific methods:
 
 ```js
-for (let i=0; i<this.maxLevels; i++) {
+for (let i = 0; i < this.maxLevels; i++) {
   const newLevel = this.add.group();
   newLevel.enableBody = true;
   newLevel.physicsBodyType = Phaser.Physics.ARCADE;
