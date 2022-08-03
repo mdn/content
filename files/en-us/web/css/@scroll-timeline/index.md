@@ -173,6 +173,7 @@ This feature was in a draft specification and has been removed from it. It is no
 ## Browser compatibility
 
 No released browser ever implemented this feature.
+
 ## See also
 
 - [CSS animations](/en-US/docs/Web/CSS/CSS_Animations)
