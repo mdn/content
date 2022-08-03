@@ -67,7 +67,7 @@ client.open("GET", "unicorns-are-teh-awesome.txt", true);
 client.send();
 
 client.onreadystatechange = function() {
-  if(this.readyState === this.HEADERS_RECEIVED) {
+  if (this.readyState === this.HEADERS_RECEIVED) {
     const contentType = client.getResponseHeader("Content-Type");
     if (contentType !== my_expected_type) {
       client.abort();
