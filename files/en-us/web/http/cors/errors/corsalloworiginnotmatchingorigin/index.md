@@ -37,6 +37,8 @@ configuration is typically found in a `.conf` file (`httpd.conf`
 and `apache.conf` are common names for these), or in an
 `.htaccess` file.
 
+> **Warning:** You must include the HTTPS or HTTP protocol as part of the origin.
+
 ```
 Header set Access-Control-Allow-Origin 'origin'
 ```
