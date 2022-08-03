@@ -346,7 +346,7 @@ if (GamepadAPI.buttons.pressed('A', 'hold')) {
 Showing the screen with all the controls looks exactly the same as in the main menu:
 
 ```js
-this.screenGamepadHelp.visible = GamepadAPI.buttons.pressed('Y','hold');
+this.screenGamepadHelp.visible = GamepadAPI.buttons.pressed('Y', 'hold');
 ```
 
 If the `B` button is pressed, the game is paused:
