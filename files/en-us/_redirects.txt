@@ -5577,7 +5577,7 @@
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /en-US/docs/MDN/Writing_guidelines/Research_technology	/en-US/docs/MDN/Writing_guidelines/Howto/Research_technology
-/en-US/docs/MDN/Writing_guidelines/What_we_write/Inclusion_criteria	/en-US/docs/mdn/writing_guidelines/what_we_write/criteria_for_inclusion
+/en-US/docs/MDN/Writing_guidelines/What_we_write/Inclusion_criteria	/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 /en-US/docs/MDN_at_ten	/en-US/docs/MDN/At_ten
 /en-US/docs/MDN_at_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN_at_ten/History	/en-US/docs/MDN/At_ten/History_of_MDN
