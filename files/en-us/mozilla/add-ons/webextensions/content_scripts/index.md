@@ -98,7 +98,7 @@ document.body.appendChild(p);
 window.foo = "This global variable was added by a page script";
 
 // redefine the built-in window.confirm() function
-window.confirm = function() {
+window.confirm = () => {
   alert("The page script has also redefined 'confirm'");
 }
 ```
@@ -436,8 +436,7 @@ function messageContentScript() {
 
 window.addEventListener("message", (event) => {
   if (event.source === window &&
-      event.data &&
-      event.data.direction === "from-page-script") {
+      event?.data?.direction === "from-page-script") {
     alert("Content script received message: \"" + event.data.message + "\"");
   }
 });
@@ -454,8 +453,7 @@ For a complete working example of this, [visit the demo page on GitHub](https://
 >
 > window.addEventListener("message", (event) => {
 >   if (event.source === window &&
->       event.data.direction   &&
->       event.data.direction === "from-page-script") {
+>       event?.data?.direction === "from-page-script") {
 >     eval(event.data.message);
 >   }
 > });
