@@ -323,6 +323,14 @@ When an `alt` attribute is not present on an image, some screen readers may anno
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
+### Identifying SVG as an image
+
+Due to a [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364), VoiceOver does not correctly announce SVG images images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
+
+```html
+ <img src="mdn.svg" alt="MDN logo" role="img">
+``
+
 ### The title attribute
 
 The {{htmlattrxref("title")}} attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the description twice, creating a confusing experience.
@@ -332,14 +340,6 @@ The `title` attribute should also not be used as supplemental captioning informa
 The value of the `title` attribute is usually presented to the user as a tooltip, which appears shortly after the cursor stops moving over the image. While this _can_ provide additional information to the user, you should not assume that the user will ever see it: the user may only have keyboard or touchscreen. If you have information that's particularly important or valuable for the user, present it inline using one of the methods mentioned above instead of using `title`.
 
 - [Using the HTML title attribute – updated | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
-
-### SVG as image source
-
-Due to [a bug](https://bugs.webkit.org/show_bug.cgi?id=216364), VoiceOver does not announce correctly an <img> element that uses a `.svg` file as the source. This bug can be prevented by adding the aria [`role="img"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to `<img>` elements using `.svg` source values.
-
-```html
- <img src="mdn.svg" alt="MDN logo" role="img">
-```
 
 ## Technical summary
 
