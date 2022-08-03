@@ -82,12 +82,12 @@ These functions are used when the {{cssxref("&lt;transform-function&gt;")}} CSS 
 
 The math functions allow CSS numeric values to be written as mathematical expressions.
 
-### Basic Arithmetic
+### Basic arithmetic
 
 - {{cssxref("calc", "calc()")}}
   - : A math function that allows basic arithmetic to be performed on numerical CSS values.
 
-### Comparison Functions
+### Comparison functions
 
 - {{cssxref("min", "min()")}}
   - : A comparison function that represents the smallest of a list of values.
@@ -96,7 +96,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
 - {{cssxref("clamp", "clamp()")}}
   - : A comparison function that takes a minimum, central, and maximum value and represents its central calculation.
 
-### Stepped Value Functions
+### Stepped value functions
 
 - {{cssxref("round", "round()")}} {{Experimental_Inline}}
   - : Contains an optional rounding strategy, and two calculations A and B, and returns the value of A, rounded according to the rounding strategy, to the nearest integer multiple of B either above or below A.
@@ -105,7 +105,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
 - {{cssxref("rem", "rem()")}} {{Experimental_Inline}}
   - : A modulus function that contains two calculations A and B, and returns the difference between A and the nearest integer multiple of B either above or below A.
 
-### Trigonometric Functions
+### Trigonometric functions
 
 - {{cssxref("sin", "sin()")}} {{Experimental_Inline}}
   - : Contains a single calculation which must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}.
@@ -122,7 +122,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
 - {{cssxref("atan2", "atan2()")}} {{Experimental_Inline}}
   - : Contains two comma-separated calculations, A and B. A and B can resolve to any {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, or {{cssxref("&lt;percentage&gt;")}}, but must have the same type, or else the function is invalid.
 
-### Exponential Functions
+### Exponential functions
 
 - {{cssxref("pow", "pow()")}} {{Experimental_Inline}}
   - : Contains two comma-separated calculations A and B, both of which must resolve as a {{cssxref("&lt;number&gt;")}}, and returns the result of raising A to the power of B, returning the value as a {{cssxref("&lt;number&gt;")}}.
@@ -135,7 +135,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
 - {{cssxref("exp", "exp()")}} {{Experimental_Inline}}
   - : Contains one calculation which must resolve to a {{cssxref("&lt;number&gt;")}}, and returns the same value as pow(e, A) as a {{cssxref("&lt;number&gt;")}}.
 
-### Sign-Related Functions
+### Sign-related functions
 
 - {{cssxref("abs", "abs()")}} {{Experimental_Inline}}
   - : Takes a calculation and returns the absolute value.
