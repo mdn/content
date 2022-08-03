@@ -41,9 +41,9 @@ exports.author_create_post = [
 
     // Validate and sanitize fields.
     body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
-        .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),
+        .isAlpha().withMessage('First name has non-alphanumeric characters.'),
     body('family_name').trim().isLength({ min: 1 }).escape().withMessage('Family name must be specified.')
-        .isAlphanumeric().withMessage('Family name has non-alphanumeric characters.'),
+        .isAlpha().withMessage('Family name has non-alphanumeric characters.'),
     body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),
     body('date_of_death', 'Invalid date of death').optional({ checkFalsy: true }).isISO8601().toDate(),
 
@@ -82,7 +82,7 @@ exports.author_create_post = [
 The structure and behavior of this code is almost exactly the same as for creating a `Genre` object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid then we save the new author record and redirect the user to the author detail page.
 
 > **Note:** Unlike with the `Genre` post handler, we don't check whether the `Author` object already exists before saving it. Arguably we should, though as it is now we can have multiple authors with the same name.
-
+> **Note:"" The first name and last name should only be alphabet letters, hence, we use .isAlpha() to check.
 The validation code demonstrates several new features:
 
 - We can daisy chain validators, using `withMessage()` to specify the error message to display if the previous validation method fails. This makes it very easy to provide specific error messages without lots of code duplication.
@@ -90,7 +90,7 @@ The validation code demonstrates several new features:
   ```js
   // Validate fields.
   body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
-      .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),
+      .isAlpha().withMessage('First name has non-alphanumeric characters.'),
   ```
 
 - We can use the `optional()` function to run a subsequent validation only if a field has been entered (this allows us to validate optional fields). For example, below we check that the optional date of birth is an ISO8601-compliant date (the `checkFalsy` flag means that we'll accept either an empty string or `null` as an empty value).
