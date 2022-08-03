@@ -36,7 +36,7 @@ In Firefox, part of the isolation between content scripts and page scripts is im
 
 The purpose of this feature is to make it harder for the less-privileged script to confuse the more-privileged script by redefining the native properties of objects.
 
-So for example, when a content script accesses the page's [window](/en-US/docs/Web/API/Window), it won't see any properties the page script added to the window, and if the page script has redefined any existing properties of the window, the content script will see the original version.
+So, for example, when a content script accesses the page's [window](/en-US/docs/Web/API/Window), it won't see any properties the page script added to the window, and if the page script has redefined any existing properties of the window, the content script will see the original version.
 
 ## Accessing page script objects from content scripts
 
@@ -188,10 +188,24 @@ window.wrappedJSObject.messenger = cloneInto(
   {cloneFunctions: true});
 ```
 
-Now page scripts will see a new property on the window, `messenger`, which has a function `notify()`:
+Now page scripts sees a new property on the window, `messenger`, which has a function `notify()`:
 
 ```js
 window.messenger.notify("Message from the page script!");
+```
+
+In the special case of a Promise, which is not supported by [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), the desired result can be achieved by using `window.Promise` instead of `Promise`, and then cloning the resolution value with `cloneInto` like this:
+
+```js
+let promise = new window.Promise(resolve => {
+  // if just a primitive, then cloneInto is not needed:
+  // resolve("string is a primitive");
+
+  // if not a primitive, such as an object, then the value must be cloned
+  let result = { exampleKey: "exampleValue" };
+  resolve(cloneInto(result, window));
+});
+// now promise can be passed to the web page.
 ```
 
 ### Constructors from the page context
