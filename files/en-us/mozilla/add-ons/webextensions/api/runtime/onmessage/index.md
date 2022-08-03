@@ -247,7 +247,7 @@ Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` 
 function isBookmarked(message, sender, response) {
   return browser.bookmarks.search({
     url: message.url
-  }).then(function(results) {
+  }).then((results) =>
     return results.length > 0;
   });
 }

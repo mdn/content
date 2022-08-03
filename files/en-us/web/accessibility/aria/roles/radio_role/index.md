@@ -179,24 +179,24 @@ let radioGroups = document.querySelectorAll('[role="radiogroup"]');
 for (let i = 0, groups = radioGroups.length; i < groups; i++) {
   let radios = radioGroups[i].querySelectorAll('[role=radio]');
   for (let j = 0, radiobuttons = radios.length; j < radios; j++) {
-    radios[j].addEventListener('keydown', function() {
+    radios[j].addEventListener('keydown', () =>
       handleKeydown(); }
     );
-    radios[j].addEventListener('click', function() {
+    radios[j].addEventListener('click', () =>
       handleClick();
     });
   }
 }
 
 // handle mouse and touch events
-let handleClick = function (event) {
+let handleClick = (event) =>
   setChecked(this);
   event.stopPropagation();
   event.preventDefault();
 };
 
 // handle key presses
-let handleKeydown = function (event) {
+let handleKeydown = (event) =>
   switch (event.keyCode) {
     case 32: // space
     case 12: // return
@@ -224,7 +224,7 @@ let handleKeydown = function (event) {
 // when a radio is selected, give it focus, set checked to true;
 // ensure all other radios in radio group are not checked
 
-setChecked  = function () {
+setChecked  = () =>
   // uncheck all the radios in group
   // iterated thru all the radios in radio group
     // eachRadio.tabIndex = -1;

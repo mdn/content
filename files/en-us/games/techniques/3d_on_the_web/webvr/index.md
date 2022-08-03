@@ -42,7 +42,7 @@ The WebVR API is based on two concepts — sending [stereoscopic images](/en-US/
 To get information about devices connected to your computer, you can use the {{domxref("Navigator/getVRDisplays")}} method:
 
 ```js
-navigator.getVRDevices().then(function(devices) {
+navigator.getVRDevices().then((devices) =>
   for (var i = 0; i < devices.length; ++i) {
     if (devices[i] instanceof HMDVRDevice) {
       gHMD = devices[i];

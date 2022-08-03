@@ -42,7 +42,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### JavaScript
 
-- ECMAScript 2015 semantics for the {{jsxref("Function.name")}} properties have been implemented. This includes inferred names on anonymous functions (`var foo = function() {}`) ({{bug(883377)}}).
+- ECMAScript 2015 semantics for the {{jsxref("Function.name")}} properties have been implemented. This includes inferred names on anonymous functions (`var foo = () =>}`) ({{bug(883377)}}).
 - ECMAScript 2015 semantics for closing iterators have been implemented. This affects the [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop, for example ({{bug(1147371)}}).
 - The [Template Literal Revision proposal](https://tc39.es/proposal-template-literal-revision/) that [lifts escape sequence restrictions on tagged template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals_and_escape_sequences) has been implemented ({{bug(1317375)}}).
 - The static `length` property of {{jsxref("TypedArray")}} objects was changed from 3 to 0 as per ES2016 ({{bug(1317306)}}).

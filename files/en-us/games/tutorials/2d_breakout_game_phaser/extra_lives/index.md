@@ -73,7 +73,7 @@ This way changing the font in one variable will apply the changes to every place
 To implement lives in our game, let's first change the ball's function bound to the `onOutOfBounds` event. Instead of executing an anonymous function and showing the alert right away :
 
 ```js
-ball.events.onOutOfBounds.add(function(){
+ball.events.onOutOfBounds.add(() =>
     alert('Game over!');
     location.reload();
 }, this);
@@ -95,7 +95,7 @@ function ballLeaveScreen() {
         lifeLostText.visible = true;
         ball.reset(game.world.width*0.5, game.world.height-25);
         paddle.reset(game.world.width*0.5, game.world.height-5);
-        game.input.onDown.addOnce(function(){
+        game.input.onDown.addOnce(() =>
             lifeLostText.visible = false;
             ball.body.velocity.set(150, -150);
         }, this);

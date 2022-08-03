@@ -53,7 +53,7 @@ What if your code is in a JS string? Instead of using `eval` or `innerHTML`, bot
 var blob = new Blob([codeString]);
 var script = document.createElement('script');
 var url = URL.createObjectURL(blob);
-script.onload = script.onerror = function() { URL.revokeObjectURL(url); };
+script.onload = script.onerror = () => URL.revokeObjectURL(url); };
 script.src = url;
 document.body.appendChild(script);
 ```

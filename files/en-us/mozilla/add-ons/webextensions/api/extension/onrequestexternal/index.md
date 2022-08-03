@@ -25,7 +25,7 @@ Fired when a request is sent from another extension.
 chrome.extension.onRequestExternal.addListener(function(
   request,         // optional any
   sender,          // runtime.MessageSender
-  function() { } // function
+  () => } // function
 ) { })
 chrome.extension.onRequestExternal.removeListener(listener)
 chrome.extension.onRequestExternal.hasListener(listener)

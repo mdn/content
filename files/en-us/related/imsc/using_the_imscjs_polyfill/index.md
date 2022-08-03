@@ -96,7 +96,7 @@ The browser will not retrieve the document automatically for us. In most browser
 var client = new XMLHttpRequest();
 
 client.open('GET', ttmlUrl);
-client.onreadystatechange = function () {
+client.onreadystatechange = () =>
   initTrack(client.responseText);
 }
 
@@ -187,12 +187,12 @@ for (var i = 0; i < timeEvents.length; i++) {
     } else {
       var myCue = new Cue(timeEvents[i], myVideo.duration, "");
     }
-    myCue.onenter = function () {
+    myCue.onenter = () =>
       clearSubFromScreen();
       var myIsd = imsc.generateISD(imscDoc, this.startTime);
       imsc.renderHTML(myIsd, renderDiv);
     };
-    myCue.onexit = function () {
+    myCue.onexit = () =>
       clearSubFromScreen();
     };
     var r = myTrack.addCue(myCue);
@@ -221,7 +221,7 @@ var myCue = new Cue(timeEvents[i], myVideo.duration, "");
 Once we construct the cue object we can register the function that is called "on entering" the cue:
 
 ```js
- myCue.onenter = function () {
+ myCue.onenter = () =>
         clearSubFromScreen();
         var myIsd = imsc.generateISD(imscDoc, this.startTime);
         imsc.renderHTML(myIsd, renderDiv);
@@ -244,7 +244,7 @@ function clearSubFromScreen() {
 We call this function again once the `onexit` event of the cue is thrown:
 
 ```js
-myCue.onexit = function () {
+myCue.onexit = () =>
  clearSubFromScreen();
 };
 ```

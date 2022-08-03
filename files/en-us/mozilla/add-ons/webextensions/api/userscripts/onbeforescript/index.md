@@ -60,7 +60,7 @@ Events have three functions:
 An example of how the listener might be used:
 
 ```js
-browser.userScripts.onBeforeScript.addListener(function (script) {
+browser.userScripts.onBeforeScript.addListener((script) =>
 
   script // This is an API object that represents the user script
          // that is going to be executed.
