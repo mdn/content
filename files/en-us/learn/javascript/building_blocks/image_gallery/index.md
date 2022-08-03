@@ -96,7 +96,7 @@ We've already provided you with lines that store a reference to the `thumb-bar <
 You need to:
 
 1. Put the section of code below the "Looping through images" comment inside a loop that loops through all the filenames in the array.
-2. In each loop iteration, replace the `xxx` placeholder values with a string that will equal the path to the image and alt attributes in each case. We are setting the value of the `src` and `alt` attributes to these values in each case. Bear in mind that in each case, the image is inside the images directory and its name is `pic1.jpg`, `pic2.jpg`, etc.
+2. In each loop iteration, replace the `xxx` placeholder values with a string that will equal the path to the image and alt attributes in each case. Set the value of the `src` and `alt` attributes to these values in each case. Remember that the image is inside the images directory, and its name is `pic1.jpg`, `pic2.jpg`, etc.
 
 ### Adding a click event listener to each thumbnail image
 
