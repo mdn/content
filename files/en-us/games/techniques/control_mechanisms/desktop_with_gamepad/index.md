@@ -213,7 +213,7 @@ The `button.pressed()` function detects the actual button presses:
 ```js
 pressed(button, hold) {
   let newPress = false;
-  const s =G amepadAPI.buttons.status.length;
+  const s = GamepadAPI.buttons.status.length;
   for (let i = 0; i < s; i++) {
     if (GamepadAPI.buttons.status[i] === button) {
       newPress = true;
