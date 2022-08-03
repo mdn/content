@@ -253,7 +253,7 @@ If the game is running on desktop, the cursor and <kbd>W</kbd> <kbd>A</kbd> <kbd
 To skip the how to play screen, we can listen for any key being pressed and move on:
 
 ```js
-this.input.keyboard.onDownCallback = function () {
+this.input.keyboard.onDownCallback = function() {
   if (this.stateStatus === 'intro') {
     this.hideIntro();
   }
