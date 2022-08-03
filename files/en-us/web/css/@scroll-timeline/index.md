@@ -166,6 +166,13 @@ We create an `@scroll-timeline` called `squareTimeline`, setting the `source` as
 
 {{EmbedLiveSample("Simple_example")}}
 
+## Specifications
+
+This feature was in a draft specification and has been removed from it. It is no longer on track to become a standard.
+
+## Browser compatibility
+
+No released browser ever implemented this feature.
 ## See also
 
 - [CSS animations](/en-US/docs/Web/CSS/CSS_Animations)
