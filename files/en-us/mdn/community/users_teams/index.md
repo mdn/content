@@ -7,7 +7,6 @@ tags:
   - community-guidelines
   - governance
 ---
-
 {{MDNSidebar}}
 
 The success and growth of MDN Web Docs is thanks, in large part, to our community of contributors. There are also employees, contractors and a network of partners who are dedicated to the health, growth and maintenance of the project as a whole. There are also some individuals who have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. These people are part of our invited experts program. To manage all these different groups, we rely heavily on roles and teams within our GitHub organisation.
