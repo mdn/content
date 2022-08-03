@@ -96,19 +96,19 @@ To this, we'll add some JavaScript to indicate that the [`transitionstart`](/en-
 const message = document.querySelector('.message');
 const el = document.querySelector('.transition');
 
-el.addEventListener('transitionrun', function() {
+el.addEventListener('transitionrun', () => {
   message.textContent = 'transitionrun fired';
 });
 
-el.addEventListener('transitionstart', function() {
+el.addEventListener('transitionstart', () => {
   message.textContent = 'transitionstart fired';
 });
 
-el.addEventListener('transitioncancel', function() {
+el.addEventListener('transitioncancel', () => {
   message.textContent = 'transitioncancel fired';
 });
 
-el.addEventListener('transitionend', function() {
+el.addEventListener('transitionend', () => {
   message.textContent = 'transitionend fired';
 });
 ```

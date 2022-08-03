@@ -47,7 +47,7 @@ The following code snippet will slow down all animations on a page by halving th
 
 ```js
 document.getAnimations().forEach(
-  function (animation) {
+  (animation) => {
     animation.playbackRate *= .5;
   }
 );

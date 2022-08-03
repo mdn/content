@@ -39,7 +39,7 @@ A generic {{domxref("Event")}}.
 The following code ports the functionality of the `DOMContentLoaded` event all the way back to IE6+, with a fallback to `window.onload` that works everywhere.
 
 ```js
-// Usage: DOMContentLoaded(function(e) { console.log(e); /* your code here */});
+// Usage: DOMContentLoaded((e) => { console.log(e); /* your code here */});
 
 function DOMContentLoaded() { "use strict";
 
@@ -119,7 +119,7 @@ function DOMContentLoaded() { "use strict";
 
         if (typeof fn === 'function') { addOnload.queue.push(fn) } // add the new function
 
-        window.onload = function() { // iterate through the queued functions
+        window.onload = () => { // iterate through the queued functions
             for (var i = 0; i < addOnload.queue.length; i++) { addOnload.queue[i]() }
         };
     }
@@ -198,7 +198,7 @@ function DOMContentLoaded() { "use strict";
             // when this statement no longer throws, the DOM is accessible in old IE
             document.documentElement.doScroll('left');
         } catch(error) {
-            setTimeout(function() {
+            setTimeout(() => {
                 (document.readyState === 'complete') ? ready() : doIEScrollCheck();
             }, 50);
             return;

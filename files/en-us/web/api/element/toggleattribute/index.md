@@ -63,7 +63,7 @@ In the following example, `toggleAttribute()` is used to toggle the
 const button = document.querySelector("button");
 const input = document.querySelector("input");
 
-button.addEventListener("click", function(){
+button.addEventListener("click", () => {
   input.toggleAttribute("disabled");
 });
 ```
@@ -78,7 +78,7 @@ button.addEventListener("click", function(){
 
 ```js
 if (!Element.prototype.toggleAttribute) {
-  Element.prototype.toggleAttribute = function(name, force) {
+  Element.prototype.toggleAttribute = (name, force) => {
     if(force !== void 0) force = !!force
 
     if (this.hasAttribute(name)) {

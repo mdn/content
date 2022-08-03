@@ -48,11 +48,11 @@ function doSomething(scroll_pos) {
   // Do something with the scroll position
 }
 
-window.addEventListener('scroll', function(e) {
+window.addEventListener('scroll', (e) => {
   last_known_scroll_position = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(() => {
       doSomething(last_known_scroll_position);
       ticking = false;
     });

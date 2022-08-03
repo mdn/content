@@ -95,15 +95,15 @@ To this, we'll add some JavaScript to indicate where the {{domxref("Element/tran
 const el = document.querySelector('.transition');
 const message = document.querySelector('.message');
 
-el.addEventListener('transitionrun', function() {
+el.addEventListener('transitionrun', () => {
   message.textContent = 'transitionrun fired';
 });
 
-el.addEventListener('transitionstart', function() {
+el.addEventListener('transitionstart', () => {
   message.textContent = 'transitionstart fired';
 });
 
-el.addEventListener('transitionend', function() {
+el.addEventListener('transitionend', () => {
   message.textContent = 'transitionend fired';
 });
 ```

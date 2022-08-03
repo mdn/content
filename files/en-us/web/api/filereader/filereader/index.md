@@ -33,7 +33,7 @@ The following code snippet shows creation of a [`FileReader`](/en-US/docs/Web/AP
 ```js
 function printFile(file) {
   const reader = new FileReader();
-  reader.onload = function(evt) {
+  reader.onload = (evt) => {
     console.log(evt.target.result);
   };
   reader.readAsText(file);

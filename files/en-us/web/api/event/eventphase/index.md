@@ -92,11 +92,11 @@ let clear = false,
     divs = null,
     chCapture = null;
 
-window.onload = function () {
+window.onload = () => {
   divInfo = document.getElementById('divInfo');
   divs = document.getElementsByTagName('div');
   chCapture = document.getElementById('chCapture');
-  chCapture.onclick = function () {
+  chCapture.onclick = () => {
     removeListeners();
     addListeners();
     clearDivs();
@@ -122,7 +122,7 @@ function addListeners() {
         }
         else {
             div.addEventListener('click', onDivClick, false);
-            div.onmousemove = function () { clear = true };
+            div.onmousemove = () => { clear = true };
         }
     }
   }

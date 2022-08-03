@@ -114,8 +114,8 @@ function scanFiles(item, container) {
     let directoryReader = item.createReader();
     let directoryContainer = document.createElement("ul");
     container.appendChild(directoryContainer);
-    directoryReader.readEntries(function(entries) {
-        entries.forEach(function(entry) {
+    directoryReader.readEntries((entries) => {
+        entries.forEach((entry) => {
           scanFiles(entry, directoryContainer);
       });
     });
@@ -139,7 +139,7 @@ Any of them which are files are inserted into the list; any which are directorie
 Then come the event handlers. First, we prevent the {{domxref("HTMLElement/dragover_event", "dragover")}} event from being handled by the default handler, so that our drop zone can receive the drop:
 
 ```js
-dropzone.addEventListener("dragover", function(event) {
+dropzone.addEventListener("dragover", (event) => {
     event.preventDefault();
 }, false);
 ```
@@ -147,7 +147,7 @@ dropzone.addEventListener("dragover", function(event) {
 The event handler that kicks everything off, of course, is the handler for the {{domxref("HTMLElement/drop_event", "drop")}} event:
 
 ```js
-dropzone.addEventListener("drop", function(event) {
+dropzone.addEventListener("drop", (event) => {
   let items = event.dataTransfer.items;
 
   event.preventDefault();

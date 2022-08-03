@@ -43,8 +43,8 @@ if (foo.hasAttribute("bar")) {
 ## Polyfill
 
 ```js
-;(function(prototype) {
-    prototype.hasAttribute = prototype.hasAttribute || function(name) {
+;((prototype) => {
+    prototype.hasAttribute = prototype.hasAttribute || (name) => {
         return !!(this.attributes[name] &&
                   this.attributes[name].specified);
     }

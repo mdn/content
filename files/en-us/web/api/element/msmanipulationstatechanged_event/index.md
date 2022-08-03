@@ -49,7 +49,7 @@ Get manipulation states using the `lastState` and `currentState` properties.
 
 ```js
 // Listen for panning state change events
-outerScroller.addEventListener("MSManipulationStateChanged", function(e) {
+outerScroller.addEventListener("MSManipulationStateChanged", (e) => {
     // Check to see if they lifted while pulled to the top
     if (e.currentState === MS_MANIPULATION_STATE_INERTIA &&
         outerScroller.scrollTop === 0) {

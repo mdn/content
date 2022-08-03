@@ -195,7 +195,7 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 ```js
 "use strict";
 
-const ajaxRequest = new (function () {
+const ajaxRequest = new (() => {
     let req;
     let isLoading = false;
     let updateURL = false;
@@ -407,7 +407,7 @@ const ajaxRequest = new (function () {
     cover.appendChild(loadingImg);
     loadingBox.appendChild(cover);
 
-    onpopstate = function (event) {
+    onpopstate = (event) => {
         updateURL = false;
         pageInfo.title = event.state.title;
         pageInfo.url = event.state.url;

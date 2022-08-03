@@ -35,7 +35,7 @@ A string.
 ## Examples
 
 ```js
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', (event) => {
   console.log(event.replacesClientId);
 });
 ```

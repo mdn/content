@@ -42,8 +42,8 @@ if (foo.hasAttributes()) {
 ## Polyfill
 
 ```js
-;(function(prototype) {
-  prototype.hasAttributes = prototype.hasAttributes || function() {
+;((prototype) => {
+  prototype.hasAttributes = prototype.hasAttributes || () => {
     return (this.attributes.length > 0);
   }
 })(Element.prototype);

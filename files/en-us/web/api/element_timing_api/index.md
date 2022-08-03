@@ -40,7 +40,7 @@ Two entries will be output to the console, the first containing details of the i
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  let entries = list.getEntries().forEach((entry) => {
       console.log(entry);
   });
 });

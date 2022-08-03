@@ -313,7 +313,7 @@ function modifyText(new_text) {
 
 // Function to add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener("click", function(){modifyText("four")}, false);
+el.addEventListener("click", () => {modifyText("four")}, false);
 ```
 
 Notice that the listener is an anonymous function that encapsulates code that is then,
@@ -553,7 +553,7 @@ the element. It will be the same as the value of the `currentTarget` property of
 the event argument that is passed to the handler.
 
 ```js
-my_element.addEventListener('click', function (e) {
+my_element.addEventListener('click', (e) => {
   console.log(this.className)           // logs the className of my_element
   console.log(e.currentTarget === this) // logs `true`
 })
@@ -606,14 +606,14 @@ a reference to the listener around so you can remove it later.
 This is an example with and without `bind()`:
 
 ```js
-const Something = function(element) {
+const Something = (element) => {
   // |this| is a newly created object
   this.name = 'Something Good';
-  this.onclick1 = function(event) {
+  this.onclick1 = (event) => {
     console.log(this.name); // undefined, as |this| is the element
   };
 
-  this.onclick2 = function(event) {
+  this.onclick2 = (event) => {
     console.log(this.name); // 'Something Good', as |this| is bound to newly created object
   };
 
@@ -630,10 +630,10 @@ Another solution is using a special function called `handleEvent()` to catch
 any events:
 
 ```js
-const Something = function(element) {
+const Something = (element) => {
   // |this| is a newly created object
   this.name = 'Something Good';
-  this.handleEvent = function(event) {
+  this.handleEvent = (event) => {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
     switch(event.type) {
       case 'click':
@@ -669,7 +669,7 @@ class SomeClass {
 
   register() {
     const that = this;
-    window.addEventListener('keydown', function(e) { that.someMethod(e); });
+    window.addEventListener('keydown', (e) => { that.someMethod(e); });
   }
 
   someMethod(e) {
@@ -710,7 +710,7 @@ As mentioned [above](#specifying_this_using_bind), you can use
 const myButton = document.getElementById('my-button-id');
 const someString = 'Data';
 
-myButton.addEventListener('click', function () {
+myButton.addEventListener('click', () => {
   console.log(this); // Expected Value: 'Data'
 }.bind(someString));
 ```
@@ -734,7 +734,7 @@ event listener is declared.
 const myButton = document.getElementById('my-button-id');
 let someString = 'Data';
 
-myButton.addEventListener('click', function() {
+myButton.addEventListener('click', () => {
   console.log(someString);  // Expected Value: 'Data'
 
   someString = 'Data Again';
@@ -769,13 +769,13 @@ Consider this example.
 const myButton = document.getElementById('my-button-id');
 const someObject = {aProperty: 'Data'};
 
-myButton.addEventListener('click', function() {
+myButton.addEventListener('click', () => {
   console.log(someObject.aProperty);  // Expected Value: 'Data'
 
   someObject.aProperty = 'Data Again';  // Change the value
 });
 
-window.setInterval(function() {
+window.setInterval(() => {
   if (someObject.aProperty === 'Data Again') {
     console.log('Data Again: True');
     someObject.aProperty = 'Data';  // Reset value to wait for next event execution
@@ -808,7 +808,7 @@ const els = document.getElementsByTagName('*');
 
 // Case 1
 for (let i = 0; i < els.length; i++){
-  els[i].addEventListener("click", function(e){/*do something*/}, false);
+  els[i].addEventListener("click", (e) => {/*do something*/}, false);
 }
 
 // Case 2
@@ -851,7 +851,7 @@ function processEvent(e){
 
 // Case 3
 for (let i = 0, j = 0 ; i < els.length ; i++){
-  els[j].addEventListener("click", processEvent = function(e){/* do something */}, false);
+  els[j].addEventListener("click", processEvent = (e) => {/* do something */}, false);
 }
 
 // Case 4
@@ -885,7 +885,7 @@ try {
   );
 } catch(err) {}
 
-window.addEventListener('scroll', function(event) {
+window.addEventListener('scroll', (event) => {
   /* do something */
   // can't use event.preventDefault();
 }, passiveIfSupported );

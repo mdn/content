@@ -41,7 +41,7 @@ class MyEventTarget extends EventTarget {
 
 let myEventTarget = new MyEventTarget(5);
 let value = myEventTarget.secret;  // === 5
-myEventTarget.addEventListener("foo", function(e) {
+myEventTarget.addEventListener("foo", (e) => {
   this._secret = e.detail;
 });
 

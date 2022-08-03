@@ -78,7 +78,7 @@ we'll find all div elements that have a class of 'test':
 
 ```js
 const testElements = document.getElementsByClassName('test');
-const testDivs = Array.prototype.filter.call(testElements, function(testElement){
+const testDivs = Array.prototype.filter.call(testElements, (testElement) => {
   return testElement.nodeName === 'DIV';
 });
 ```

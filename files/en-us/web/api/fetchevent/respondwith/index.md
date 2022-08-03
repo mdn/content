@@ -106,7 +106,7 @@ network otherwise.
 ```js
 addEventListener('fetch', (event) => {
   // Prevent the default, and handle the request ourselves.
-  event.respondWith(async function() {
+  event.respondWith(async () => {
     // Try to get the response from a cache.
     const cachedResponse = await caches.match(event.request);
     // Return it if we found one.

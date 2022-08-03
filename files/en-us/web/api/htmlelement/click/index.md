@@ -50,7 +50,7 @@ Simulate a mouse-click when moving the mouse pointer over a checkbox:
 
 ```js
 // On mouse-over, execute myFunction
-function myFunction() {
+function my() => {
   document.getElementById("myCheck").click();
 }
 ```
