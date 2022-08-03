@@ -107,7 +107,7 @@ Unfortunately this test is not implemented in Three.js, but we can patch Sphere 
 // avoid spawning a new instance of Vector3 on every check
 
 THREE.Sphere.__closest = new THREE.Vector3();
-THREE.Sphere.prototype.intersectsBox = function (box) {
+THREE.Sphere.prototype.intersectsBox = (box) => {
     // get box closest point to sphere center by clamping
     THREE.Sphere.__closest.set(this.center.x, this.center.y, this.center.z);
     THREE.Sphere.__closest.clamp(box.min, box.max);

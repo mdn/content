@@ -227,7 +227,7 @@ We already used `translate` or `rotate` to adjust the position of the shapes; we
 
 ```js
 var timer = 0;
-app.on("update", function (deltaTime) {
+app.on("update", (deltaTime) => {
     timer += deltaTime;
     // code executed on every frame
 });

@@ -175,14 +175,14 @@ var buttons = document.getElementsByTagName('button');
 var stopTime = 0;
 
 for (var i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', function() {
+  buttons[i].addEventListener('click', () => {
     myAudio.currentTime = this.getAttribute("data-start");
     stopTime = this.getAttribute("data-stop");
     myAudio.play();
   }, false);
 }
 
-myAudio.addEventListener('timeupdate', function() {
+myAudio.addEventListener('timeupdate', () => {
   if (this.currentTime > stopTime) {
     this.pause();
   }
@@ -358,7 +358,7 @@ trackEls.forEach((el, i) => {
     playButton.style.display = 'inline-block';
 
     // allow play on click
-    playButton.addEventListener('click', function() {
+    playButton.addEventListener('click', () => {
 
       // check if context is in suspended state (autoplay policy)
       if (audioCtx.state === 'suspended') {

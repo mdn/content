@@ -67,7 +67,7 @@ Given a manifest.json entry like this:
 You could listen for this particular command like this:
 
 ```js
-browser.commands.onCommand.addListener(function(command) {
+browser.commands.onCommand.addListener((command) => {
   if (command === "toggle-feature") {
     console.log("toggling the feature!");
   }

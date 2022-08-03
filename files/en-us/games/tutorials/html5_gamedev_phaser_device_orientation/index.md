@@ -55,7 +55,7 @@ We will be rendering our game on Canvas, but we won't do it manually — this wi
 </head>
 <body>
 <script>
-(function() {
+(() => {
     var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');
     game.state.add('Boot', Ball.Boot);
     game.state.add('Preloader', Ball.Preloader);
@@ -106,7 +106,7 @@ var Ball = {
     _WIDTH: 320,
     _HEIGHT: 480
 };
-Ball.Boot = function(game) {};
+Ball.Boot = (game) => {};
 Ball.Boot.prototype = {
     preload() {
         this.load.image('preloaderBg', 'img/loading-bg.png');
@@ -128,7 +128,7 @@ The main `Ball` object is defined and we're adding two variables called `_WIDTH`
 The `Preloader` state takes care of loading all the assets:
 
 ```js
-Ball.Preloader = function(game) {};
+Ball.Preloader = (game) => {};
 Ball.Preloader.prototype = {
     preload() {
         this.preloadBg = this.add.sprite((Ball._WIDTH-297)*0.5, (Ball._HEIGHT-145)*0.5, 'preloaderBg');
@@ -154,7 +154,7 @@ There are single images, spritesheets and audio files loaded by the framework. I
 The `MainMenu` state shows the main menu of the game, where you can start playing by clicking the button.
 
 ```js
-Ball.MainMenu = function(game) {};
+Ball.MainMenu = (game) => {};
 Ball.MainMenu.prototype = {
     create() {
         this.add.sprite(0, 0, 'screen-mainmenu');
@@ -188,7 +188,7 @@ When the start button is pressed, instead of jumping directly into the action th
 ### Howto.js
 
 ```js
-Ball.Howto = function(game) {
+Ball.Howto = (game) => {
 };
 Ball.Howto.prototype = {
     create() {
@@ -207,7 +207,7 @@ The `Howto` state shows the gameplay instructions on the screen before starting 
 The `Game` state from the `Game.js` file is where all the magic happens. All the initialization is in the `create()` function (launched once at the beginning of the game). After that some functionality will require further code to control — we will write our own functions to handle more complicated tasks. In particular, take note of the `update()` function (executed at every frame), which updates things such as the ball position.
 
 ```js
-Ball.Game = function(game) {};
+Ball.Game = (game) => {};
 Ball.Game.prototype = {
     create() {},
     initLevels() {},
