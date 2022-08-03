@@ -125,7 +125,7 @@ the Stop button is pressed.
 let nIntervId;
 
 function changeColor() {
-  // check if already an interval has been set up
+  // check if an interval has already been set up
   if (!nIntervId) {
     nIntervId = setInterval(flashText, 1000);
   }

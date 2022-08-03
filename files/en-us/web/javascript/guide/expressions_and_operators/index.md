@@ -35,7 +35,7 @@ As the examples above also illustrate, all complex expressions are joined by _op
 
 These operators join operands either formed by higher-precedence operators or one of the [basic expressions](#basic_expressions). A complete and detailed list of operators and expressions is also available in the [reference](/en-US/docs/Web/JavaScript/Reference/Operators).
 
-The _precedence_ of operators determines the order they are applied when evaluating an expression. Fo example:
+The _precedence_ of operators determines the order they are applied when evaluating an expression. For example:
 
 ```js
 const x = 1 + 2 * 3;
