@@ -40,17 +40,6 @@ if (foo.hasAttribute("bar")) {
 }
 ```
 
-## Polyfill
-
-```js
-;((prototype) => {
-    prototype.hasAttribute = prototype.hasAttribute || (name) => {
-        return !!(this.attributes[name] &&
-                  this.attributes[name].specified);
-    }
-})(Element.prototype);
-```
-
 ## Notes
 
 {{DOMAttributeMethods}}
