@@ -5487,7 +5487,7 @@
 /en-US/docs/MDN/Contribute/Structures/Page_types/API_property_subpage_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/API_reference_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/ARIA_Page_Template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template
-/en-US/docs/MDN/Contribute/Structures/Page_types/CSS_property_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/CSS_property_page_template
+/en-US/docs/MDN/Contribute/Structures/Page_types/CSS_property_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/CSS_selector_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/CSS_selector_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/Glossary_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Glossary_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/HTML_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/HTML_element_page_template
@@ -5563,7 +5563,7 @@
 /en-US/docs/MDN/Structures/Page_types/API_property_subpage_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
 /en-US/docs/MDN/Structures/Page_types/API_reference_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 /en-US/docs/MDN/Structures/Page_types/ARIA_Page_Template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template
-/en-US/docs/MDN/Structures/Page_types/CSS_property_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/CSS_property_page_template
+/en-US/docs/MDN/Structures/Page_types/CSS_property_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 /en-US/docs/MDN/Structures/Page_types/CSS_selector_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/CSS_selector_page_template
 /en-US/docs/MDN/Structures/Page_types/Glossary_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Glossary_page_template
 /en-US/docs/MDN/Structures/Page_types/HTML_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/HTML_element_page_template
