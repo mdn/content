@@ -5491,7 +5491,7 @@
 /en-US/docs/MDN/Contribute/Structures/Page_types/CSS_selector_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/Glossary_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Glossary_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/HTML_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
-/en-US/docs/MDN/Contribute/Structures/Page_types/HTTP_header_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/HTTP_header_page_template
+/en-US/docs/MDN/Contribute/Structures/Page_types/HTTP_header_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/SVG_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
 /en-US/docs/MDN/Contribute/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures
