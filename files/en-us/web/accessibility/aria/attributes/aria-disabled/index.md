@@ -44,12 +44,12 @@ Similarly to needing to use JavaScript to ensure an element with `aria-disabled=
 }
 ```
 
-If you are purposefully using the `aria-disabled` attribute to allow for a form control to remain in the page's keyboard focus order, particularly if the element represents important content that all users should be able to perceive, then you may need to use styling that still passes color contrast requirements.  For instance, a disabled button/heading that introduces a non-collapsable accordion panel is content that still needs to be legible.
+If you are purposefully using the `aria-disabled` attribute to allow for a form control to remain in the page's keyboard focus order, particularly if the element represents important content that all users should be able to perceive, then you may need to use styling that still passes color contrast requirements.  For instance, a disabled button/heading that introduces a non-collapsible accordion panel is content that still needs to be legible.
 
 ```css
 @media (forced-colors: active) {
   [aria-disabled="true"] {
-    border-color: Graytext;
+    border-color: GrayText;
     color: GrayText;
   }
 }

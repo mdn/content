@@ -43,7 +43,7 @@ div {
 }
 ```
 
-### Controling Animation Duration
+### Controlling Animation Duration
 
 Another use-case is to control the {{cssxref("animation-duration")}}. Reducing duration based on the sine value. In this case, the animation duration will be `1s`.
 
