@@ -154,16 +154,16 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
 /* make the button call the function */
 let button = document.getElementById('theButton');
 button.addEventListener('click', () => {
-  stepondown();}
-);
+  stepondown();
+});
 
 function stepondown() {
   let input = document.getElementById('theNumber');
   let val = document.getElementById('decrementer').value;
 
-  if (val) {  /* decrement with a parameter */
+  if (val) {  // decrement with a parameter
     input.stepDown(val);
-  } else {    /* or without a parameter. Try it with 0, 5, -2, etc. */
+  } else {    // or without a parameter. Try it with 0, 5, -2, etc.
     input.stepDown();
   }
 }
