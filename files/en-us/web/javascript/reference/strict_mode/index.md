@@ -111,7 +111,7 @@ Object.preventExtensions(fixed);
 fixed.newProp = 'ohai'; // throws a TypeError
 ```
 
-Third, strict mode makes attempts to delete undeletable properties throw (where before the attempt would have no effect):
+Third, strict mode makes attempts to throw Error when you delete undeletable properties (where before the attempt would have no effect):
 
 ```js
 'use strict';
