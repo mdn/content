@@ -56,13 +56,13 @@ We will be rendering our game on Canvas, but we won't do it manually — this wi
 <body>
 <script>
 (() => {
-    var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');
-    game.state.add('Boot', Ball.Boot);
-    game.state.add('Preloader', Ball.Preloader);
-    game.state.add('MainMenu', Ball.MainMenu);
-    game.state.add('Howto', Ball.Howto);
-    game.state.add('Game', Ball.Game);
-    game.state.start('Boot');
+  const game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');
+  game.state.add('Boot', Ball.Boot);
+  game.state.add('Preloader', Ball.Preloader);
+  game.state.add('MainMenu', Ball.MainMenu);
+  game.state.add('Howto', Ball.Howto);
+  game.state.add('Game', Ball.Game);
+  game.state.start('Boot');
 })();
 </script>
 </body>
@@ -72,7 +72,7 @@ We will be rendering our game on Canvas, but we won't do it manually — this wi
 So far we have a simple HTML website with some basic content in the `<head>` section: charset, title, CSS styling and the inclusion of the JavaScript files. The `<body>` contains initialization of the Phaser framework and the definitions of the game states.
 
 ```js
-var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');
+const game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');
 ```
 
 The line above will initialize the Phaser instance — the arguments are the width of the Canvas, height of the Canvas, rendering method (we're using `CANVAS`, but there are also `WEBGL` and `AUTO` options available) and the optional ID of the DOM container we want to put the Canvas in. If there's nothing specified in that last argument or the element is not found, the Canvas will be added to the \<body> tag. Without the framework, to add the Canvas element to the page, you would have to write something like this inside the \<body> tag:
@@ -102,22 +102,22 @@ The states in Phaser are separate parts of the game logic; in our case we're loa
 The `Boot` state is the first one in the game.
 
 ```js
-var Ball = {
-    _WIDTH: 320,
-    _HEIGHT: 480
+const Ball = {
+  _WIDTH: 320,
+  _HEIGHT: 480
 };
-Ball.Boot = (game) => {};
 Ball.Boot.prototype = {
-    preload() {
-        this.load.image('preloaderBg', 'img/loading-bg.png');
-        this.load.image('preloaderBar', 'img/loading-bar.png');
-    },
-    create() {
-        this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        this.game.scale.pageAlignHorizontally = true;
-        this.game.scale.pageAlignVertically = true;
-        this.game.state.start('Preloader');
-    }
+  constructor() {},
+  preload() {
+    this.load.image('preloaderBg', 'img/loading-bg.png');
+    this.load.image('preloaderBar', 'img/loading-bar.png');
+  },
+  create() {
+    this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    this.game.scale.pageAlignHorizontally = true;
+    this.game.scale.pageAlignVertically = true;
+    this.game.state.start('Preloader');
+  }
 };
 ```
 
@@ -128,22 +128,22 @@ The main `Ball` object is defined and we're adding two variables called `_WIDTH`
 The `Preloader` state takes care of loading all the assets:
 
 ```js
-Ball.Preloader = (game) => {};
 Ball.Preloader.prototype = {
-    preload() {
-        this.preloadBg = this.add.sprite((Ball._WIDTH-297)*0.5, (Ball._HEIGHT-145)*0.5, 'preloaderBg');
-        this.preloadBar = this.add.sprite((Ball._WIDTH-158)*0.5, (Ball._HEIGHT-50)*0.5, 'preloaderBar');
-        this.load.setPreloadSprite(this.preloadBar);
+  constructor() {},
+  preload() {
+    this.preloadBg = this.add.sprite((Ball._WIDTH - 297) * 0.5, (Ball._HEIGHT - 145) * 0.5, 'preloaderBg');
+    this.preloadBar = this.add.sprite((Ball._WIDTH - 158) * 0.5, (Ball._HEIGHT - 50) * 0.5, 'preloaderBar');
+    this.load.setPreloadSprite(this.preloadBar);
 
-        this.load.image('ball', 'img/ball.png');
-        // …
-        this.load.spritesheet('button-start', 'img/button-start.png', 146, 51);
-        // …
-        this.load.audio('audio-bounce', ['audio/bounce.ogg', 'audio/bounce.mp3', 'audio/bounce.m4a']);
-    },
-    create() {
-        this.game.state.start('MainMenu');
-    }
+    this.load.image('ball', 'img/ball.png');
+    // …
+    this.load.spritesheet('button-start', 'img/button-start.png', 146, 51);
+    // …
+    this.load.audio('audio-bounce', ['audio/bounce.ogg', 'audio/bounce.mp3', 'audio/bounce.m4a']);
+  },
+  create() {
+    this.game.state.start('MainMenu');
+  }
 };
 ```
 
@@ -154,19 +154,19 @@ There are single images, spritesheets and audio files loaded by the framework. I
 The `MainMenu` state shows the main menu of the game, where you can start playing by clicking the button.
 
 ```js
-Ball.MainMenu = (game) => {};
 Ball.MainMenu.prototype = {
-    create() {
-        this.add.sprite(0, 0, 'screen-mainmenu');
-        this.gameTitle = this.add.sprite(Ball._WIDTH*0.5, 40, 'title');
-        this.gameTitle.anchor.set(0.5,0);
-        this.startButton = this.add.button(Ball._WIDTH*0.5, 200, 'button-start', this.startGame, this, 2, 0, 1);
-        this.startButton.anchor.set(0.5,0);
-        this.startButton.input.useHandCursor = true;
-    },
-    startGame() {
-        this.game.state.start('Howto');
-    }
+  constructor() {},
+  create() {
+    this.add.sprite(0, 0, 'screen-mainmenu');
+    this.gameTitle = this.add.sprite(Ball._WIDTH * 0.5, 40, 'title');
+    this.gameTitle.anchor.set(0.5,0);
+    this.startButton = this.add.button(Ball._WIDTH * 0.5, 200, 'button-start', this.startGame, this, 2, 0, 1);
+    this.startButton.anchor.set(0.5,0);
+    this.startButton.input.useHandCursor = true;
+  },
+  startGame() {
+    this.game.state.start('Howto');
+  }
 };
 ```
 
@@ -188,15 +188,14 @@ When the start button is pressed, instead of jumping directly into the action th
 ### Howto.js
 
 ```js
-Ball.Howto = (game) => {
-};
 Ball.Howto.prototype = {
-    create() {
-        this.buttonContinue = this.add.button(0, 0, 'screen-howtoplay', this.startGame, this);
-    },
-    startGame() {
-        this.game.state.start('Game');
-    }
+  constructor() {},
+  create() {
+    this.buttonContinue = this.add.button(0, 0, 'screen-howtoplay', this.startGame, this);
+  },
+  startGame() {
+    this.game.state.start('Game');
+  }
 };
 ```
 
@@ -207,18 +206,18 @@ The `Howto` state shows the gameplay instructions on the screen before starting 
 The `Game` state from the `Game.js` file is where all the magic happens. All the initialization is in the `create()` function (launched once at the beginning of the game). After that some functionality will require further code to control — we will write our own functions to handle more complicated tasks. In particular, take note of the `update()` function (executed at every frame), which updates things such as the ball position.
 
 ```js
-Ball.Game = (game) => {};
 Ball.Game.prototype = {
-    create() {},
-    initLevels() {},
-    showLevel(level) {},
-    updateCounter() {},
-    managePause() {},
-    manageAudio() {},
-    update() {},
-    wallCollision() {},
-    handleOrientation(e) {},
-    finishLevel() {}
+  constructor() {},
+  create() {},
+  initLevels() {},
+  showLevel(level) {},
+  updateCounter() {},
+  managePause() {},
+  manageAudio() {},
+  update() {},
+  wallCollision() {},
+  handleOrientation(e) {},
+  finishLevel() {}
 };
 ```
 
@@ -260,17 +259,15 @@ As you can see there's a special Phaser function called `createCursorKeys()`, wh
 Next we will add the following code to the `update()` function, so it will be fired on every frame. The `this.keys` object will be checked against player input, so the ball can react accordingly with the predefined force:
 
 ```js
-if(this.keys.left.isDown) {
-    this.ball.body.velocity.x -= this.movementForce;
+if (this.keys.left.isDown) {
+  this.ball.body.velocity.x -= this.movementForce;
+} else if (this.keys.right.isDown) {
+  this.ball.body.velocity.x += this.movementForce;
 }
-else if(this.keys.right.isDown) {
-    this.ball.body.velocity.x += this.movementForce;
-}
-if(this.keys.up.isDown) {
-    this.ball.body.velocity.y -= this.movementForce;
-}
-else if(this.keys.down.isDown) {
-    this.ball.body.velocity.y += this.movementForce;
+if (this.keys.up.isDown) {
+  this.ball.body.velocity.y -= this.movementForce;
+} else if (this.keys.down.isDown) {
+  this.ball.body.velocity.y += this.movementForce;
 }
 ```
 
@@ -288,10 +285,10 @@ We're adding an event listener to the `"deviceorientation"` event and binding th
 
 ```js
 handleOrientation(e) {
-    const x = e.gamma;
-    const y = e.beta;
-    Ball._player.body.velocity.x += x;
-    Ball._player.body.velocity.y += y;
+  const x = e.gamma;
+  const y = e.beta;
+  Ball._player.body.velocity.x += x;
+  Ball._player.body.velocity.y += y;
 },
 ```
 
@@ -306,7 +303,7 @@ The more you tilt the device, the more force is applied to the ball, therefore t
 The main objective in the game is to move the ball from the starting position to the ending position: a hole in the ground. Implementation looks very similar to the part where we created the ball, and it's also added in the `create()` function of our `Game` state:
 
 ```js
-this.hole = this.add.sprite(Ball._WIDTH*0.5, 90, 'hole');
+this.hole = this.add.sprite(Ball._WIDTH * 0.5, 90, 'hole');
 this.physics.enable(this.hole, Phaser.Physics.ARCADE);
 this.hole.anchor.set(0.5);
 this.hole.body.setSize(2, 2);
@@ -322,32 +319,32 @@ To hold the block information we'll use a level data array: for each block we'll
 
 ```js
 this.levelData = [
-    [
-        { x: 96, y: 224, t: 'w' }
-    ],
-    [
-        { x: 72, y: 320, t: 'w' },
-        { x: 200, y: 320, t: 'h' },
-        { x: 72, y: 150, t: 'w' }
-    ],
-    // …
+  [
+    { x: 96, y: 224, t: 'w' }
+  ],
+  [
+    { x: 72, y: 320, t: 'w' },
+    { x: 200, y: 320, t: 'h' },
+    { x: 72, y: 150, t: 'w' }
+  ],
+  // …
 ];
 ```
 
 Every array element holds a collection of blocks with an `x` and `y` position and `t` value for each. After `levelData`, but still in the `initLevels` function, we're adding the blocks into an array in the `for` loop using some of the framework-specific methods:
 
 ```js
-for(var i=0; i<this.maxLevels; i++) {
-    var newLevel = this.add.group();
-    newLevel.enableBody = true;
-    newLevel.physicsBodyType = Phaser.Physics.ARCADE;
-    for(var e=0; e<this.levelData[i].length; e++) {
-        var item = this.levelData[i][e];
-        newLevel.create(item.x, item.y, 'element-'+item.t);
-    }
-    newLevel.setAll('body.immovable', true);
-    newLevel.visible = false;
-    this.levels.push(newLevel);
+for (let i=0; i<this.maxLevels; i++) {
+  const newLevel = this.add.group();
+  newLevel.enableBody = true;
+  newLevel.physicsBodyType = Phaser.Physics.ARCADE;
+  for (let e=0; e<this.levelData[i].length; e++) {
+    const item = this.levelData[i][e];
+    newLevel.create(item.x, item.y, `element-${item.t}`);
+  }
+  newLevel.setAll('body.immovable', true);
+  newLevel.visible = false;
+  this.levels.push(newLevel);
 }
 ```
 
@@ -357,11 +354,11 @@ The objects are stored in the `this.levels` array, which is by default invisible
 
 ```js
 showLevel(level) {
-    const lvl = level | this.level;
-    if(this.levels[lvl-2]) {
-        this.levels[lvl-2].visible = false;
-    }
-    this.levels[lvl-1].visible = true;
+  const lvl = level | this.level;
+  if (this.levels[lvl -2 ]) {
+    this.levels[lvl - 2].visible = false;
+  }
+  this.levels[lvl - 1].visible = true;
 }
 ```
 
@@ -373,7 +370,7 @@ At this point we've got the ball that is controlled by the player, the hole to r
 
 ```js
 this.physics.arcade.collide(this.ball, this.borderGroup, this.wallCollision, null, this);
-this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallCollision, null, this);
+this.physics.arcade.collide(this.ball, this.levels[this.level - 1], this.wallCollision, null, this);
 ```
 
 This will tell the framework to execute the `wallCollision` function when the ball hits any of the walls. We can use the `wallCollision` function to add any functionality we want like playing the bounce sound and implementing the **Vibration API**.
@@ -389,8 +386,8 @@ this.bounceSound = this.game.add.audio('audio-bounce');
 If the status of the audio is `true` (so the sounds in the game are enabled), we can play it in the `wallCollision` function:
 
 ```js
-if(this.audioStatus) {
-    this.bounceSound.play();
+if (this.audioStatus) {
+  this.bounceSound.play();
 }
 ```
 
@@ -405,8 +402,8 @@ When collision detection works as expected let's add some special effects with t
 The best way to use it in our case is to vibrate the phone every time the ball hits the walls — inside the `wallCollision` function:
 
 ```js
-if("vibrate" in window.navigator) {
-    window.navigator.vibrate(100);
+if ("vibrate" in window.navigator) {
+  window.navigator.vibrate(100);
 }
 ```
 
@@ -424,8 +421,8 @@ this.totalTimer = 0; // time elapsed in the whole game
 Then, right after that, we can initialize the necessary text objects to display this information to the user:
 
 ```js
-this.timerText = this.game.add.text(15, 15, "Time: "+this.timer, this.fontBig);
-this.totalTimeText = this.game.add.text(120, 30, "Total time: "+this.totalTimer, this.fontSmall);
+this.timerText = this.game.add.text(15, 15, `Time: ${this.timer}`, this.fontBig);
+this.totalTimeText = this.game.add.text(120, 30, `Total time: ${this.totalTimer}`, this.fontSmall);
 ```
 
 We're defining the top and left positions of the text, the content that will be shown and the styling applied to the text. We have this printed out on the screen, but it would be good to update the values every second:
@@ -438,9 +435,9 @@ This loop, also in the `create` function, will execute the `updateCounter` funct
 
 ```js
 updateCounter() {
-    this.timer++;
-    this.timerText.setText("Time: "+this.timer);
-    this.totalTimeText.setText("Total time: "+(this.totalTimer+this.timer));
+  this.timer++;
+  this.timerText.setText(`Time: ${this.timer}`);
+  this.totalTimeText.setText(`Total time: ${this.totalTimer+this.timer}`);
 },
 ```
 
@@ -458,25 +455,24 @@ This works similarly to the `collide` method explained earlier. When the ball ov
 
 ```js
 finishLevel() {
-    if(this.level >= this.maxLevels) {
-        this.totalTimer += this.timer;
-        alert('Congratulations, game completed!\nTotal time of play: '+this.totalTimer+' seconds!');
-        this.game.state.start('MainMenu');
-    }
-    else {
-        alert('Congratulations, level '+this.level+' completed!');
-        this.totalTimer += this.timer;
-        this.timer = 0;
-        this.level++;
-        this.timerText.setText("Time: "+this.timer);
-        this.totalTimeText.setText("Total time: "+this.totalTimer);
-        this.levelText.setText("Level: "+this.level+" / "+this.maxLevels);
-        this.ball.body.x = this.ballStartPos.x;
-        this.ball.body.y = this.ballStartPos.y;
-        this.ball.body.velocity.x = 0;
-        this.ball.body.velocity.y = 0;
-        this.showLevel();
-    }
+  if (this.level >= this.maxLevels) {
+    this.totalTimer += this.timer;
+    alert(`Congratulations, game completed!\nTotal time of play: ${this.totalTimer} seconds!`);
+    this.game.state.start('MainMenu');
+  } else {
+    alert(`Congratulations, level ${this.level} completed!`);
+    this.totalTimer += this.timer;
+    this.timer = 0;
+    this.level++;
+    this.timerText.setText(`Time: ${this.timer}`);
+    this.totalTimeText.setText(`Total time: ${this.totalTimer}`);
+    this.levelText.setText(`Level: ${this.level} / ${this.maxLevels}`);
+    this.ball.body.x = this.ballStartPos.x;
+    this.ball.body.y = this.ballStartPos.y;
+    this.ball.body.velocity.x = 0;
+    this.ball.body.velocity.y = 0;
+    this.showLevel();
+  }
 },
 ```
 
