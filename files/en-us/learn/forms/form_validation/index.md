@@ -754,7 +754,7 @@ The big changes are in the JavaScript code, which needs to do much more heavy li
 ```js
 const form  = document.querySelector('form');
 const email = document.getElementById('mail');
-const error = email.nextElementSibling();
+const error = email.nextElementSibling;
 
 // As per the HTML Specification
 const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
