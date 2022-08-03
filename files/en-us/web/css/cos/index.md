@@ -4,9 +4,8 @@ slug: Web/CSS/cos
 tags:
   - CSS
   - CSS Function
-  - Cos-Related
   - Function
-  - Layout
+  - Math
   - Reference
   - Web
   - cos
@@ -31,6 +30,8 @@ The `cos()` function takes only one expression as its argument.
 
 ## Examples
 
+### Element Size
+
 For example, when creating a 100x100 box based on external parameters, in this case `cos(0deg)`. Thus `cos(0deg)` will return `1` making the box `100px` width and `100px` height.
 
 ```css
@@ -38,6 +39,16 @@ div {
   background-color: red;
   width: calc( cos(0deg) * 100px );
   height: calc( cos(0deg) * 100px );
+}
+```
+
+### Element Rotation
+
+Another use-case is to control the {{cssxref("rotate()")}} property of the element.
+
+```css
+div {
+  transform: rotate( cos(45deg) );
 }
 ```
 
