@@ -46,14 +46,14 @@ const options = {
 };
 
 navigator.credentials.get({  publicKey: options })
-  .then(function (assertionPKCred) {
+  .then((assertionPKCred) => {
     const authenticatorData = assertionPKCred.response.authenticatorData;
     // Maybe try to convert the authenticatorData to see what's inside
 
     // Send response and client extensions to the server so that it can
     // go on with the authentication
 
-}).catch(function (err) {
+}).catch((err) => {
    console.error(err);
 });
 ```

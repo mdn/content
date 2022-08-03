@@ -59,7 +59,7 @@ const alarm = {
       this.cancel();
     }
 
-    this.timeoutID = setTimeout(function(msg) {
+    this.timeoutID = setTimeout((msg) => {
       this.remind(msg);
     }.bind(this), 1000, 'Wake up!');
   },

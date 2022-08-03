@@ -57,11 +57,11 @@ const publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
+  .then((newCredentialInfo) => {
     const response = newCredentialInfo.response;
     // Do something with the response
     // (sending it back to the relying party server maybe?)
-  }).catch(function (err) {
+  }).catch((err) => {
      console.error(err);
   });
 ```

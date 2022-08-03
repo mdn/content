@@ -22,7 +22,7 @@ A boolean value. True if the connection closed cleanly, false otherwise.
 The following example prints the value of `wasClean` to the console.
 
 ```js
-WebSocket.onclose = function(event) {
+WebSocket.onclose = (event) => {
   console.log(event.wasClean);
 };
 ```

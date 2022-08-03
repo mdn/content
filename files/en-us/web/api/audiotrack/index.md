@@ -54,7 +54,7 @@ const firstTrack = tracks[0];
 The next example scans through all of the media's audio tracks, enabling any that are in the user's preferred language (taken from a variable `userLanguage`) and disabling any others.
 
 ```js
-tracks.forEach(function(track) {
+tracks.forEach((track) => {
   if (track.language === userLanguage) {
     track.enabled = true;
   } else {

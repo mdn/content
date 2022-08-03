@@ -269,7 +269,7 @@ let clearX;
 let clearY;
 let ctx;
 
-img.onload = function() {
+img.onload = () => {
     imgW = img.width * scale;
     imgH = img.height * scale;
 

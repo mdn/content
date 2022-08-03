@@ -63,7 +63,7 @@ From here, you can play and save the opus file.
      const mediaRecorder = new MediaRecorder(dest.stream);
      osc.connect(dest);
 
-     b.addEventListener("click", function(e) {
+     b.addEventListener("click", (e) => {
        if (!clicked) {
            mediaRecorder.start();
            osc.start(0);
@@ -76,12 +76,12 @@ From here, you can play and save the opus file.
          }
      });
 
-     mediaRecorder.ondataavailable = function(evt) {
+     mediaRecorder.ondataavailable = (evt) => {
        // push each chunk (blobs) in an array
        chunks.push(evt.data);
      };
 
-     mediaRecorder.onstop = function(evt) {
+     mediaRecorder.onstop = (evt) => {
        // Make blob out of our blobs, and open it.
        const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
        document.querySelector("audio").src = URL.createObjectURL(blob);

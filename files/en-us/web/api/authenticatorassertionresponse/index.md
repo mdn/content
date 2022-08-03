@@ -45,13 +45,13 @@ const options = {
 };
 
 navigator.credentials.get({ "publicKey": options })
-    .then(function (credentialInfoAssertion) {
+    .then((credentialInfoAssertion) => {
     const assertionResponse = credentialInfoAssertion.response;
     // Do something specific with the response
 
     // send assertion response back to the server
     // to proceed with the control of the credential
-}).catch(function (err) {
+}).catch((err) => {
      console.error(err);
 });
 ```

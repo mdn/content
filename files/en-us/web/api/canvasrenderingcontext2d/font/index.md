@@ -57,7 +57,7 @@ using them in a canvas.
 ```js
 let f = new FontFace('test', 'url(x)');
 
-f.load().then(function() {
+f.load().then(() => {
   // Ready to use the font in a canvas context
 });
 ```

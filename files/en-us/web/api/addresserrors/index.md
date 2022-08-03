@@ -141,11 +141,11 @@ function process() {
     // Add event listeners here.
     request.onshippingaddresschange = handleAddressChange;
     // Call show() to trigger the browser's payment flow.
-    request.show().then(function(instrumentResponse) {
+    request.show().then((instrumentResponse) => {
       // Do something with the response from the UI.
       console.log("Got response!");
     })
-    .catch(function(err) {
+    .catch((err) => {
       // Do something with the error from request.show().
       console.error(`Error from show(): ${err}`);
     });
@@ -202,7 +202,7 @@ The final step is to call the event's {{domxref("PaymentRequestUpdateEvent.updat
 This code creates a handler for the {{domxref("Window/load_event", "load")}} event on the {{domxref("Window", "window")}} which in turn adds the needed {{domxref("Element/click_event", "click")}} event handler to the "Donate Now" button so that clicking it starts the payment process.
 
 ```js
-window.addEventListener("load", function(ev) {
+window.addEventListener("load", (ev) => {
   document.getElementById("pay").addEventListener("click", process, false);
 }, false);
 ```

@@ -45,13 +45,13 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 the button is updated as appropriate once the promise resolves.
 
 ```js
-susresBtn.onclick = function() {
+susresBtn.onclick = () => {
   if(audioCtx.state === 'running') {
-    audioCtx.suspend().then(function() {
+    audioCtx.suspend().then(() => {
       susresBtn.textContent = 'Resume context';
     });
   } else if(audioCtx.state === 'suspended') {
-    audioCtx.resume().then(function() {
+    audioCtx.resume().then(() => {
       susresBtn.textContent = 'Suspend context';
     });
   }

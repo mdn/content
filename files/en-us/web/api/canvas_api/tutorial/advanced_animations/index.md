@@ -77,11 +77,11 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener('mouseover', (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener('mouseout', (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -152,11 +152,11 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener('mouseover', (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener('mouseout', (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -231,11 +231,11 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener('mouseover', (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener('mouseout', (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -307,11 +307,11 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener('mouseover', (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener('mouseout', (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -379,7 +379,7 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mousemove', function(e) {
+canvas.addEventListener('mousemove', (e) => {
   if (!running) {
     clear();
     ball.x = e.clientX;
@@ -388,14 +388,14 @@ canvas.addEventListener('mousemove', function(e) {
   }
 });
 
-canvas.addEventListener('click', function(e) {
+canvas.addEventListener('click', (e) => {
   if (!running) {
     raf = window.requestAnimationFrame(draw);
     running = true;
   }
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener('mouseout', (e) => {
   window.cancelAnimationFrame(raf);
   running = false;
 });

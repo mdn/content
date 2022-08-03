@@ -121,7 +121,7 @@ img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-img.onload = function() {
+img.onload = () => {
   ctx.drawImage(img, 0, 0);
   img.style.display = 'none';
 };
@@ -141,10 +141,10 @@ function pick(event, destination) {
     return rgba;
 }
 
-canvas.addEventListener('mousemove', function(event) {
+canvas.addEventListener('mousemove', (event) => {
     pick(event, hoveredColor);
 });
-canvas.addEventListener('click', function(event) {
+canvas.addEventListener('click', (event) => {
     pick(event, selectedColor);
 });
 ```
@@ -183,15 +183,15 @@ img.src = './assets/rhino.jpg';
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-img.onload = function() {
+img.onload = () => {
     ctx.drawImage(img, 0, 0);
 };
 
-const original = function() {
+const original = () => {
     ctx.drawImage(img, 0, 0);
 };
 
-const invert = function() {
+const invert = () => {
     ctx.drawImage(img, 0, 0);
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = imageData.data;
@@ -203,7 +203,7 @@ const invert = function() {
     ctx.putImageData(imageData, 0, 0);
 };
 
-const grayscale = function() {
+const grayscale = () => {
     ctx.drawImage(img, 0, 0);
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = imageData.data;
@@ -218,7 +218,7 @@ const grayscale = function() {
 
 const inputs = document.querySelectorAll('[name=color]');
 for (const input of inputs) {
-    input.addEventListener("change", function(evt) {
+    input.addEventListener("change", (evt) => {
         switch (evt.target.value) {
             case "inverted":
                 return invert();
@@ -256,7 +256,7 @@ Zoom example:
 const img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
-img.onload = function() {
+img.onload = () => {
   draw(this);
 };
 
@@ -277,7 +277,7 @@ function draw(img) {
   pixelatedZoomCtx.webkitImageSmoothingEnabled = false;
   pixelatedZoomCtx.msImageSmoothingEnabled = false;
 
-  const zoom = function(ctx, x, y) {
+  const zoom = (ctx, x, y) => {
     ctx.drawImage(canvas,
         Math.min(Math.max(0, x - 5), img.width - 10),
         Math.min(Math.max(0, y - 5), img.height - 10),
@@ -286,7 +286,7 @@ function draw(img) {
         200, 200);
   };
 
-  canvas.addEventListener('mousemove', function(event) {
+  canvas.addEventListener('mousemove', (event) => {
     const x = event.layerX;
     const y = event.layerY;
     zoom(smoothedZoomCtx, x, y);

@@ -44,7 +44,7 @@ None ({{jsxref("undefined")}}).
 The following example shows how to use the `finish()` method and catch an `InvalidState` error.
 
 ```js
-interfaceElement.addEventListener("mousedown", function() {
+interfaceElement.addEventListener("mousedown", () => {
   try {
     player.finish();
   } catch(e) {
@@ -61,7 +61,7 @@ The following example finishes all the animations on a single element, regardles
 
 ```js
 elem.getAnimations().forEach(
-  function(animation){
+  (animation) => {
     return animation.finish();
   }
 );

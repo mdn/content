@@ -65,9 +65,9 @@ filter's output is in turn routed to the audio context's
 
 ```js
 navigator.mediaDevices.getUserMedia ({audio: true, video: false})
-.then(function(stream) {
+.then((stream) => {
   audio.srcObject = stream;
-  audio.onloadedmetadata = function(e) {
+  audio.onloadedmetadata = (e) => {
     audio.play();
     audio.muted = true;
   };
@@ -84,7 +84,7 @@ navigator.mediaDevices.getUserMedia ({audio: true, video: false})
   source.connect(biquadFilter);
   biquadFilter.connect(audioCtx.destination);
 })
-.catch(function(err) {
+.catch((err) => {
   // Handle getUserMedia() error
 });
 ```

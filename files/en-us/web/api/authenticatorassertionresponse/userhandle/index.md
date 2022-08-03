@@ -45,13 +45,13 @@ const options = {
 };
 
 navigator.credentials.get({  publicKey: options })
-  .then(function (assertionPKCred) {
+  .then((assertionPKCred) => {
     const userHandle = assertionPKCred.response.userHandle;
 
     // Send response and client extensions to the server so that it can
     // go on with the authentication
 
-}).catch(function (err) {
+}).catch((err) => {
    console.error(err);
 });
 ```

@@ -134,11 +134,11 @@ with a function that separates the selector from the rules before sending the ar
 to the default native `insertRule()`.
 
 ```js
-(function(Sheet_proto){
+((Sheet_proto) => {
   var originalInsertRule = Sheet_proto.insertRule;
 
   if (originalInsertRule.length === 2){ // 2 mandatory arguments: (selector, rules)
-    Sheet_proto.insertRule = function(selectorAndRule){
+    Sheet_proto.insertRule = (selectorAndRule) => {
       // First, separate the selector from the rule
       a: for (var i=0, Len=selectorAndRule.length, isEscaped=0, newCharCode=0; i !== Len; ++i) {
         newCharCode = selectorAndRule.charCodeAt(i);

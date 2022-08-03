@@ -73,10 +73,10 @@ const publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
+  .then((newCredentialInfo) => {
     const transports = newCredentialInfo.response.getTransports();
     console.table(transports); // may be something like ["internal", "nfc", "usb"]
-  }).catch(function (err) {
+  }).catch((err) => {
      console.error(err);
   });
 ```
