@@ -53,7 +53,7 @@ To update the state of the gamepad's currently pressed buttons we will need a fu
 function gamepadUpdateHandler() {
     buttonsPressed = [];
     if (controller.buttons) {
-        for (let b=0; b<controller.buttons.length; b++) {
+        for (let b = 0; b < controller.buttons.length; b++) {
             if (controller.buttons[b].pressed) {
                 buttonsPressed.push(b);
             }
