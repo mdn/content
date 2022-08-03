@@ -101,8 +101,8 @@ function pointermove_handler(ev) {
  // Find this event in the cache and update its record with this event
  for (let i = 0; i < evCache.length; i++) {
    if (ev.pointerId === evCache[i].pointerId) {
-      evCache[i] = ev;
-   break;
+     evCache[i] = ev;
+     break;
    }
  }
 
