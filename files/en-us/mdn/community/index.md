@@ -9,7 +9,7 @@ tags:
 ---
 {{MDNSidebar}}
 
-👋 Welcome to MDN Web Docs on GitHub! MDN Web Docs is an open-source, collaborative project that documents web platform technologies, including [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), and [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API). We also provide extensive [learning resources](https://developer.mozilla.org/en-US/docs/Learn) for early-stage developers and students.
+👋 Welcome to MDN Web Docs on GitHub! MDN Web Docs is an open-source, collaborative project that documents web platform technologies, including [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), and [Web APIs](/en-US/docs/Web/API). We also provide extensive [learning resources](/en-US/docs/Learn) for early-stage developers and students.
 
 ## Ways to contribute
 
