@@ -5556,7 +5556,7 @@
 /en-US/docs/MDN/Structures/Macros/Commonly-used_macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Commonly-used_macros
 /en-US/docs/MDN/Structures/Macros/Other	/en-US/docs/MDN/Writing_guidelines/Page_structures/Other
 /en-US/docs/MDN/Structures/Page_types	/en-US/docs/MDN/Writing_guidelines/Page_structures
-/en-US/docs/MDN/Structures/Page_types/API_constructor_subpage_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/API_constructor_subpage_template
+/en-US/docs/MDN/Structures/Page_types/API_constructor_subpage_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
 /en-US/docs/MDN/Structures/Page_types/API_event_subpage_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/API_event_subpage_template
 /en-US/docs/MDN/Structures/Page_types/API_landing_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/API_landing_page_template
 /en-US/docs/MDN/Structures/Page_types/API_method_subpage_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/API_method_subpage_template
