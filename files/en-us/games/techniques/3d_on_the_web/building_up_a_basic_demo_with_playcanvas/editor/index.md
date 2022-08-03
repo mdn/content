@@ -117,9 +117,9 @@ Animating 3D models might be considered an [advanced](https://developer.playcanv
 If you double click on it, you'll be moved to a code editor. As you can see, the file contains some boilerplate code already:
 
 ```js
-pc.script.create('boxAnimation', (app) => {
+pc.script.create('boxAnimation', function (app) {
     // Creates a new BoxAnimation instance
-    var BoxAnimation = (entity) => {
+    var BoxAnimation = function (entity) {
         this.entity = entity;
     };
 
