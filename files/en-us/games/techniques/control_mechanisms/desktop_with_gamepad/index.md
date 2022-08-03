@@ -338,7 +338,7 @@ Have you noticed that the current value of the axes is evaluated against `0.5`? 
 For the shooting controls, we used the `A` button — when it is held down, a new bullet is spawned, and everything else is handled by the game:
 
 ```js
-if (GamepadAPI.buttons.pressed('A','hold')) {
+if (GamepadAPI.buttons.pressed('A', 'hold')) {
   this.spawnBullet();
 }
 ```
