@@ -69,7 +69,7 @@ const objectStore = transaction.objectStore("name");
 const request = objectStore.openKeyCursor();
 request.onsuccess = (event) => {
   const cursor = event.target.result;
-  if(cursor) {
+  if (cursor) {
     // cursor.key contains the key of the current record being iterated through
     // note that there is no cursor.value, unlike for openCursor
     // this is where you'd do something with the result
