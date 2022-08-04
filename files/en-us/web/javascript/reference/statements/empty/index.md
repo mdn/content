@@ -54,8 +54,8 @@ not really obvious to distinguish from a normal semicolon.
 In the following example, the usage is probably not intentional:
 
 ```js example-bad
-if (condition);       // Caution, this "if" does nothing!
-   killTheUniverse()  // So this always gets executed!!!
+if (condition);      // Caution, this "if" does nothing!
+  killTheUniverse()  // So this always gets executed!!!
 ```
 
 ## Specifications

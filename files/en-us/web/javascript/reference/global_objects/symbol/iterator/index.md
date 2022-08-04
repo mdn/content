@@ -38,11 +38,11 @@ See also [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_pr
 We can make our own iterables like this:
 
 ```js
-const myIterable = {}
+const myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
 [...myIterable] // [1, 2, 3]
 ```

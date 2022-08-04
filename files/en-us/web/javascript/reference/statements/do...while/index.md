@@ -20,7 +20,7 @@ at least once.
 
 ```js
 do
-   statement
+  statement
 while (condition);
 ```
 

@@ -217,7 +217,7 @@ function doSomething(onContent, onError) {
 // Using optional chaining with function calls
 function doSomething(onContent, onError) {
   try {
-   // ... do something with the data
+    // ... do something with the data
   } catch (err) {
     onError?.(err.message); // no exception if onError is undefined
   }

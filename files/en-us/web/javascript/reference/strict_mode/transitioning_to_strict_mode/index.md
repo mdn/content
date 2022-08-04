@@ -53,7 +53,7 @@ This used to change a value on the global object which is rarely the expected ef
 
 ```js
 const global = this; // in the top-level context, "this" always
-                   // refers to the global object
+                     // refers to the global object
 function f(x) {
   'use strict';
   const a = 12;

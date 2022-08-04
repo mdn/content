@@ -93,7 +93,7 @@ Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:
 ```js
 let x;
 if (typeof x === 'undefined') {
-   // these statements execute
+  // these statements execute
 }
 ```
 
@@ -103,7 +103,7 @@ error if the variable has not been declared.
 ```js
 //  x has not been declared before
 if (typeof x === 'undefined') { //  evaluates to true without errors
-   //  these statements execute
+  //  these statements execute
 }
 
 if (x === undefined) { //  throws a ReferenceError

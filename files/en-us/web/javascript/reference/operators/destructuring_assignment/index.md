@@ -501,11 +501,11 @@ const metadata = {
   url: '/en-US/docs/Tools/Scratchpad',
 };
 
-let {
+const {
   title: englishTitle, // rename
   translations: [
     {
-       title: localeTitle, // rename
+      title: localeTitle, // rename
     },
   ],
 } = metadata;

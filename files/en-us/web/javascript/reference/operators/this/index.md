@@ -426,7 +426,10 @@ const o = {
 };
 
 Object.defineProperty(o, 'sum', {
-    get: sum, enumerable: true, configurable: true});
+  get: sum,
+  enumerable: true,
+  configurable: true,
+});
 
 console.log(o.average, o.sum); // 2, 6
 ```
