@@ -34,13 +34,13 @@ A list of the members of the organization can be [found here](https://github.com
   - **Yari content Web Assembly**: Responsible for reviewing docs related to WebAssembly
 
   The following teams are specific to respective localization teams:
-  - **Yari content ES**: Responsible for reviewing MDN docs in spanish
-  - **Yari content FR**: Responsible for reviewing MDN docs in french
-  - **Yari content JA**: Responsible for reviewing MDN docs in japanese
-  - **Yari content KO**: Responsible for reviewing MDN docs in korean
-  - **Yari content PT-BR**: Responsible for reviewing MDN docs in brazilian portuguese
-  - **Yari content RU**: Responsible for reviewing MDN docs in russian
-  - **Yari content ZH**: Responsible for reviewing MDN docs in chinese
+  - **Yari content ES**: Responsible for reviewing MDN docs in Spanish
+  - **Yari content FR**: Responsible for reviewing MDN docs in French
+  - **Yari content JA**: Responsible for reviewing MDN docs in Japanese
+  - **Yari content KO**: Responsible for reviewing MDN docs in Korean
+  - **Yari content PT-BR**: Responsible for reviewing MDN docs in Brazilian Portuguese
+  - **Yari content RU**: Responsible for reviewing MDN docs in Russian
+  - **Yari content ZH**: Responsible for reviewing MDN docs in Chinese
 
 ### What it means to be in a team
 
