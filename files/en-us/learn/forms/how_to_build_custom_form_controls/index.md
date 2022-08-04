@@ -577,8 +577,8 @@ window.addEventListener('load', function () {
     select.addEventListener('keyup', function (event) {
 
       // deactivate on keyup of `esc`
-      if (event.keyCode === 27) {
-         deactivateSelect(select);
+      if (event.key === "Escape") {
+        deactivateSelect(select);
       }
     });
 });
@@ -672,10 +672,10 @@ window.addEventListener('load', function () {
           index  = getIndex(select);
 
       // When the user hits the down arrow, we jump to the next option
-      if (event.keyCode === 40 && index < length - 1) { index++; }
+      if (event.key === "ArrowDown" && index < length - 1) { index++; }
 
       // When the user hits the up arrow, we jump to the previous option
-      if (event.keyCode === 38 && index > 0) { index--; }
+      if (event.key === "ArrowUp" && index > 0) { index--; }
 
       updateValue(select, index);
     });
