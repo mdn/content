@@ -73,7 +73,7 @@ A JSON string representing the given value, or undefined.
   valid JSON values. If any such values are encountered during conversion they are
   either omitted (when found in an object) or changed to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (when found
   in an array). `JSON.stringify()` can return `undefined` when
-  passing in "pure" values like `JSON.stringify(function() {})` or
+  passing in "pure" values like `JSON.stringify(() => {})` or
   `JSON.stringify(undefined)`.
 - All {{JSxRef("Symbol")}}-keyed properties will be completely ignored, even when
   using the `replacer` function.

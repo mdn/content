@@ -131,7 +131,7 @@ const result3 = addThirtySeven(5, 10);
 //  (the second argument is ignored)
 ```
 
-### With `setTimeout()`
+### With setTimeout()
 
 By default within {{domxref("setTimeout()")}}, the `this` keyword will be set to the
 {{domxref("window")}} (or `global`) object. When working with class methods
@@ -139,18 +139,18 @@ that require `this` to refer to class instances, you may explicitly bind
 `this` to the callback function, in order to maintain the instance.
 
 ```js
-function LateBloomer() {
-  this.petalCount = Math.floor(Math.random() * 12) + 1;
+class LateBloomer {
+  constructor() {
+    this.petalCount = Math.floor(Math.random() * 12) + 1;
+  }
+  bloom() {
+    // Declare bloom after a delay of 1 second
+    setTimeout(this.declare.bind(this), 1000);
+  }
+  declare() {
+    console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
+  }
 }
-
-// Declare bloom after a delay of 1 second
-LateBloomer.prototype.bloom = function () {
-  setTimeout(this.declare.bind(this), 1000);
-};
-
-LateBloomer.prototype.declare = function () {
-  console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
-};
 
 const flower = new LateBloomer();
 flower.bloom();

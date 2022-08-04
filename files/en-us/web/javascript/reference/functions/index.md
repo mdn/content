@@ -87,7 +87,7 @@ does not refer to the currently executing function, so you must refer to
 
 There are several ways to define functions:
 
-### The function declaration (`function` statement)
+### The function declaration
 
 There is a special syntax for declaring functions
 (see [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) for details):
@@ -105,7 +105,7 @@ function name([param[, param[, ... param]]]) {
 - `statements`
   - : The statements comprising the body of the function.
 
-### The function expression (`function` expression)
+### The function expression
 
 A function expression is similar to and has the same syntax as a function declaration
 (see [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) for details).
@@ -158,14 +158,14 @@ function expressions.
 When functions are used only once, a common pattern is an [IIFE (Immediately Invoked Function Expression)](/en-US/docs/Glossary/IIFE).
 
 ```js
-(function() {
+(function () {
   statements
 })();
 ```
 
 IIFE are function expressions that are invoked as soon as the function is declared.
 
-### The generator function declaration (`function*` statement)
+### The generator function (function*) declaration
 
 There is a special syntax for generator function declarations (see
 {{jsxref('Statements/function*', 'function* statement')}} for details):
@@ -183,7 +183,7 @@ function* name([param[, param[, ... param]]]) {
 - `statements`
   - : The statements comprising the body of the function.
 
-### The generator function expression (`function*` expression)
+### The generator function (function*) expression
 
 A generator function expression is similar to and has the same syntax as a generator
 function declaration (see {{jsxref('Operators/function*', 'function* expression')}} for
@@ -226,7 +226,7 @@ param => expression
   - : Multiple statements need to be enclosed in brackets. A single expression requires
     no brackets. The expression is also the implicit return value of the function.
 
-### The `Function` constructor
+### The Function constructor
 
 > **Note:** Using the `Function` constructor to create
 > functions is not recommended since it needs the function body as a string which may
@@ -248,7 +248,7 @@ new Function (arg1, arg2, ... argN, functionBody)
 Invoking the `Function` constructor as a function (without using the
 `new` operator) has the same effect as invoking it as a constructor.
 
-### The `GeneratorFunction` constructor
+### The GeneratorFunction constructor
 
 > **Note:** `GeneratorFunction` is not a global object, but
 > could be obtained from generator function instance (see
@@ -289,7 +289,7 @@ see [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_
 The rest parameter syntax allows representing an indefinite number of arguments as an array.
 For more details, see [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
 
-## The `arguments` object
+## The arguments object
 
 You can refer to a function's arguments within the function by using the
 `arguments` object. See [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments).

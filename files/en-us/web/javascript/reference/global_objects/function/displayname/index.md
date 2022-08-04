@@ -21,7 +21,7 @@ If present, it may be preferred by consoles and profilers over the {{jsxref("Fun
 By entering the following in a console, it should display as something like "`function My Function()`":
 
 ```js
-const a = function() {};
+const a = function () {};
 a.displayName = 'My Function';
 
 a; // "function My Function()"
@@ -34,7 +34,9 @@ function doSomething() {}
 
 console.log(doSomething.displayName); // "undefined"
 
-const popup = function(content) { console.log(content); };
+const popup = function (content) {
+  console.log(content);
+};
 
 popup.displayName = 'Show Popup';
 

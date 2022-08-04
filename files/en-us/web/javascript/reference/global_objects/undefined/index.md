@@ -48,13 +48,13 @@ a value was not {{jsxref("Statements/return", "returned")}}.
 > //  DON'T DO THIS
 >
 > //  logs "foo string"
-> (function() {
+> (() => {
 >   const undefined = 'foo';
 >   console.log(undefined, typeof undefined);
 > })();
 >
 > //  logs "foo string"
-> (function(undefined) {
+> ((undefined) => {
 >   console.log(undefined, typeof undefined);
 > })('foo');
 > ```

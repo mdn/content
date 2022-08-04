@@ -51,8 +51,8 @@ Methods that only visit string properties or only symbol properties will have an
 
 Note that this is not the most efficient algorithm for all cases, but useful for a quick demonstration.
 
-- Detection can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) > -1`
-- Iteration can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use `filter()`, `map()`, etc.)
+- Detection can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).includes(prop)`
+- Iteration can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach((value, prop) => {});` (or use `filter()`, `map()`, etc.)
 
 ```js
 const SimplePropertyRetriever = {
