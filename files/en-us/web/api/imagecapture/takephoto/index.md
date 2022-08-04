@@ -72,7 +72,7 @@ function takePhoto() {
     img.classList.remove('hidden');
     img.src = URL.createObjectURL(blob);
   }).catch((error) => {
-    console.log('takePhoto() error: ', error);
+    console.error('takePhoto() error: ', error);
   });
 }
 ```
