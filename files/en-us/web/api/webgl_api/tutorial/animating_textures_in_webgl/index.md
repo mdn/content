@@ -31,6 +31,7 @@ function setupVideo(url) {
   video.autoplay = true;
   video.muted = true;
   video.loop = true;
+  video.playsInline = true;
 
   // Waiting for these 2 events ensures
   // there is data in the video
