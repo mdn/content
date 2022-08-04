@@ -38,12 +38,12 @@ For example, if you rotate a `100px`/`100px` square `45deg`, the diamond it crea
 
 ```css
 div {
-  /* Original */
+  /* Original square */
   width: 100px;
   height: 100px;
   background-color: red;
 
-  /* Rotated */
+  /* Rotated diamond */
   transform-origin: center;
   transform:
     translate( calc( 100px / 4 * cos(45deg) ) )
