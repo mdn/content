@@ -371,7 +371,7 @@ First, we need to add a regular {{HTMLElement("select")}} element before each in
 </body>
 ```
 
-Second, we need two new classes to let us hide the unneeded element: we visually hide the "real" {{HTMLElement("select")}} element if our script isn't running, or the custom control if it is running. Note that, by default, our HTML code hides our custom control.
+Second, we need two new classes to let us hide the unneeded element: we visually hide the custom control if our script isn't running, or the "real" {{HTMLElement("select")}} element if it is running. Note that, by default, our HTML code hides our custom control.
 
 ```css
 .widget select,
