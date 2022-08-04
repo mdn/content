@@ -450,7 +450,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
   console.log('Happy birthday!');
   ```
 
-- The example below uses `let` where it should prefer `const`. The code will work but this usage should be avoided in MDN Web Docs code examples.-
+- The example below uses `let` where it should prefer `const`. The code will work but this usage should be avoided in MDN Web Docs code examples.
 
   ```js example-bad
   let myName = 'Chris';
