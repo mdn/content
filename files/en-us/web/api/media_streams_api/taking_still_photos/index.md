@@ -112,13 +112,13 @@ The next task is to get the media stream:
 
 ```js
     navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-    .then((stream) => {
+      .then((stream) => {
         video.srcObject = stream;
         video.play();
-    })
-    .catch((err) => {
+      })
+      .catch((err) => {
         console.error(`An error occurred: ${err}`);
-    });
+      });
 ```
 
 Here, we're calling {{domxref("MediaDevices.getUserMedia()")}} and requesting a video stream (without audio). It returns a promise which we attach success and failure callbacks to.
@@ -314,8 +314,8 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
 
-  let width = 320;    // We will scale the photo width to this
-  let height = 0;     // This will be computed based on the input stream
+  const width = 320;    // We will scale the photo width to this
+  const height = 0;     // This will be computed based on the input stream
 
   // |streaming| indicates whether or not we're currently streaming
   // video from the camera. Obviously, we start at false.
@@ -353,13 +353,13 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
     startbutton = document.getElementById('startbutton');
 
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
-    .then((stream) => {
-      video.srcObject = stream;
-      video.play();
-    })
-    .catch((err) => {
-      console.error(`An error occurred: ${err}`);
-    });
+      .then((stream) => {
+        video.srcObject = stream;
+        video.play();
+      })
+      .catch((err) => {
+        console.error(`An error occurred: ${err}`);
+      });
 
     video.addEventListener('canplay', (ev) => {
       if (!streaming) {
