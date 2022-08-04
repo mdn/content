@@ -276,7 +276,7 @@ return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7|
 There are also additional safer (and faster!) alternatives to `eval()` or
 `Function()` for common use-cases.
 
-The difference between `eval()` and `Function()` is that the source string passed to `Function()` is parsed as function body, not as a script. There are a few nuances — for example, you can use `return` statements in a function body but not in a script. In case you intend to parse the content as a script, using indirect eval and forcing strict mode can be another secure alternative.
+The difference between `eval()` and `Function()` is that the source string passed to `Function()` is parsed as function body, not as a script. There are a few nuances — for example, you can use `return` statements in a function body but not in a script. In case you intend to parse the content as a script, using indirect eval and forcing strict mode can be another secure alternative.
 
 ```js
 function looseJsonParse(obj) {
