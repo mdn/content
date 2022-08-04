@@ -13085,15 +13085,6 @@
       "Brian102413"
     ]
   },
-  "MDN/Contribute/Howto/Add_or_update_browser_compatibility_data": {
-    "modified": "2020-02-27T09:10:11.323Z",
-    "contributors": [
-      "valgrimm",
-      "ExE-Boss",
-      "wbamberg",
-      "jswisher"
-    ]
-  },
   "MDN/Contribute/Howto/Update_the_CSS_JSON_DB": {
     "modified": "2019-03-23T22:47:20.816Z",
     "contributors": [
@@ -13113,15 +13104,6 @@
       "david_ross",
       "jswisher",
       "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Processes/Matching_features_to_browser_version": {
-    "modified": "2020-08-31T15:05:54.154Z",
-    "contributors": [
-      "vinyldarkscratch",
-      "foolip",
-      "Sheppy",
-      "KWierso2"
     ]
   },
   "MDN/Editor/Basics/Attachments": {
