@@ -323,7 +323,7 @@ So here's the result with our three states:
 
 Now that our design and structure are ready, we can write the JavaScript code to make the control actually work.
 
-> **Warning:** The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will not work on legacy browsers. It also has redundant parts that should be optimized in production code.
+> **Warning:** The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will work on legacy browsers. It also has redundant parts that should be optimized in production code.
 
 ### Why isn't it working?
 
