@@ -62,7 +62,7 @@ function displayDataByIndex() {
   const myIndex = objectStore.index('lName');
   console.log(myIndex.name);
 
-  myIndex.openCursor().onsuccess = function(event) {
+  myIndex.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if(cursor) {
       const tableRow = document.createElement('tr');

@@ -51,14 +51,14 @@ grabFrameButton.onclick = grabFrame;
 
 function grabFrame() {
   imageCapture.grabFrame()
-  .then(function(imageBitmap) {
+  .then((imageBitmap) => {
     console.log('Grabbed frame:', imageBitmap);
     canvas.width = imageBitmap.width;
     canvas.height = imageBitmap.height;
     canvas.getContext('2d').drawImage(imageBitmap, 0, 0);
     canvas.classList.remove('hidden');
   })
-  .catch(function(error) {
+  .catch((error) => {
     console.log('grabFrame() error: ', error);
   });
 }

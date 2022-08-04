@@ -66,11 +66,11 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
-DBOpenRequest.onerror = function(event) {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += '<li>Error loading database.</li>';
 };
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
@@ -84,10 +84,10 @@ DBOpenRequest.onsuccess = function(event) {
 // Either one has not been created before, or a new version number has been submitted via the
 // window.indexedDB.open line above
 //it is only implemented in recent browsers
-DBOpenRequest.onupgradeneeded = function(event) {
+DBOpenRequest.onupgradeneeded = (event) => {
   let db = this.result;
 
-  db.onerror = function(event) {
+  db.onerror = (event) => {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 

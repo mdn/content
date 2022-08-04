@@ -59,7 +59,7 @@ The `includes()` method was added in the second edition of the Indexed DB
 specification. For browsers that do not support it, the following polyfill can be used.
 
 ```js
-IDBKeyRange.prototype.includes = IDBKeyRange.prototype.includes || function(key) {
+IDBKeyRange.prototype.includes = IDBKeyRange.prototype.includes || (key) => {
   var r = this, c;
   if (r.lower !== undefined) {
     c = indexedDB.cmp(key, r.lower);

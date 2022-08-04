@@ -39,7 +39,7 @@ function displayData() {
   const objectStore = transaction.objectStore('fThings');
 
   const myIndex = objectStore.index('lName');
-  myIndex.openCursor(keyRangeValue).onsuccess = function(event) {
+  myIndex.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
     if(cursor) {
       const tableRow = document.createElement('tr');

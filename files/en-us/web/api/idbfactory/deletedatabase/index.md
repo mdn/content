@@ -65,11 +65,11 @@ are fired.
 ```js
 const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
-DBDeleteRequest.onerror = function(event) {
+DBDeleteRequest.onerror = (event) => {
   console.log("Error deleting database.");
 };
 
-DBDeleteRequest.onsuccess = function(event) {
+DBDeleteRequest.onsuccess = (event) => {
   console.log("Database deleted successfully");
 
   console.log(event.result); // should be undefined

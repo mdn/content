@@ -274,13 +274,13 @@ function handleVisibilityChange() {
     if (!previouslyVisibleAds) {
       previouslyVisibleAds = visibleAds;
       visibleAds = [];
-      previouslyVisibleAds.forEach(function(adBox) {
+      previouslyVisibleAds.forEach((adBox) => {
         updateAdTimer(adBox);
         adBox.dataset.lastViewStarted = 0;
       });
     }
   } else {
-    previouslyVisibleAds.forEach(function(adBox) {
+    previouslyVisibleAds.forEach((adBox) => {
       adBox.dataset.lastViewStarted = performance.now();
     });
     visibleAds = previouslyVisibleAds;
@@ -301,7 +301,7 @@ Once per pass through the browser's event loop, each {{domxref("IntersectionObse
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     let adBox = entry.target;
 
     if (entry.isIntersecting) {
@@ -331,7 +331,7 @@ Our interval handler, `handleRefreshInterval()`, is called about once per second
 function handleRefreshInterval() {
   let redrawList = [];
 
-  visibleAds.forEach(function(adBox) {
+  visibleAds.forEach((adBox) => {
     let previousTime = adBox.dataset.totalViewTime;
     updateAdTimer(adBox);
 
@@ -341,8 +341,8 @@ function handleRefreshInterval() {
   });
 
   if (redrawList.length) {
-    window.requestAnimationFrame(function(time) {
-      redrawList.forEach(function(adBox) {
+    window.requestAnimationFrame((time) => {
+      redrawList.forEach((adBox) => {
         drawAdTimer(adBox);
       });
     });

@@ -245,7 +245,7 @@ request.onupgradeneeded = (event) => {
   objectStore.transaction.oncomplete = (event) => {
     // Store values in the newly created objectStore.
     const customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
-    customerData.forEach(function(customer) {
+    customerData.forEach((customer) => {
       customerObjectStore.add(customer);
     });
   };
@@ -283,7 +283,7 @@ request.onupgradeneeded = (event) => {
   // The added records would be like:
   // key : 1 => value : "Bill"
   // key : 2 => value : "Donna"
-  customerData.forEach(function(customer) {
+  customerData.forEach((customer) => {
         objStore.add(customer.name);
   });
 };

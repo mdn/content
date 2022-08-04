@@ -41,7 +41,7 @@ A number that represents the Unicode value of the character key that was pressed
 let input = document.querySelector('input');
 let log = document.querySelector('#log');
 
-input.addEventListener('keypress', function(e) {
+input.addEventListener('keypress', (e) => {
   log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${e.charCode}`;
 });
 ```

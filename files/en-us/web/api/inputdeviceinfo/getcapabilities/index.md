@@ -75,8 +75,8 @@ If `device` is an `InputDeviceInfo` object, then `getCapabilities()` will return
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
 navigator.mediaDevices.enumerateDevices()
-  .then(function(devices) {
-    devices.forEach(function(device) {
+  .then((devices) => {
+    devices.forEach((device) => {
       console.log(device.getCapabilities()); // a MediaTrackCapabilities object.
     });
   })

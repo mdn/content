@@ -35,7 +35,7 @@ function displayData() {
 
   const request = objectStore.openCursor();
 
-  request.onsuccess = function(event) {
+  request.onsuccess = (event) => {
     const cursor = event.target.result;
       if(cursor) {
         const listItem = document.createElement('li');

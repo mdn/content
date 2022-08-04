@@ -65,7 +65,7 @@ function advanceResult() {
   const transaction = db.transaction(['rushAlbumList'], "readonly");
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if(cursor) {
       const listItem = document.createElement('li');
