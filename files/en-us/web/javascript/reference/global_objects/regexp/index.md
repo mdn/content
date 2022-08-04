@@ -241,7 +241,7 @@ Starting with Firefox 34, in the case of a capturing group with quantifiers prev
 ```js
 // Firefox 33 or older
 'x'.replace(/x(.)?/g, (m, group) => {
-  console.log('group:', group);
+  console.log(`group: ${JSON.stringify(group)}`);
 });
 // group: ""
 
