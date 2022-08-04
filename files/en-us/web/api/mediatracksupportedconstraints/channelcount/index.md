@@ -16,7 +16,7 @@ tags:
   - channelCount
 browser-compat: api.MediaTrackSupportedConstraints.channelCount
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`channelCount`** property is a read-only Boolean value which
