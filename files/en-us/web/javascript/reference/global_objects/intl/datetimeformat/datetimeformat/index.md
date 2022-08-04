@@ -301,18 +301,30 @@ console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"
 Use the `dayPeriod` option to output a string for the times of day ("in the morning", "at night", "noon", etc.). Note, that this only works when formatting for a 12 hour clock (`hourCycle: 'h12'`) and that for many locales the strings are the same irrespective of the value passed for the `dayPeriod`.
 
 ```js
-let date = Date.UTC(2012, 11, 17, 4, 0, 42);
+const date = Date.UTC(2012, 11, 17, 4, 0, 42);
 
-console.log(new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hourCycle: 'h12',
-dayPeriod: 'short', timeZone: 'UTC' }).format(date));
+console.log(new Intl.DateTimeFormat('en-GB', {
+  hour: 'numeric',
+  hourCycle: 'h12',
+  dayPeriod: 'short', 
+  timeZone: 'UTC',
+}).format(date));
 // > 4 at night"  (same formatting in en-GB for all dayPeriod values)
 
-console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
-    dayPeriod: 'narrow', timeZone: 'UTC' }).format(date));
+console.log(new Intl.DateTimeFormat('fr', {
+  hour: 'numeric',
+  hourCycle: 'h12',
+  dayPeriod: 'narrow',
+  timeZone: 'UTC',
+}).format(date));
 // > "4 mat."  (same output in French for both narrow/short dayPeriod)
 
-console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
-    dayPeriod: 'long', timeZone: 'UTC' }).format(date));
+console.log(new Intl.DateTimeFormat('fr', {
+  hour: 'numeric',
+  hourCycle: 'h12',
+  dayPeriod: 'long',
+  timeZone: 'UTC',
+}).format(date));
 // > "4 du matin"
 ```
 

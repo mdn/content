@@ -88,7 +88,7 @@ The following code logs a line for each element in an `Map` object:
 
 ```js
 function logMapElements(value, key, map) {
-    console.log(`map.get('${key}') = ${value}`)
+  console.log(`map.get('${key}') = ${value}`)
 }
 new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)
 // logs:

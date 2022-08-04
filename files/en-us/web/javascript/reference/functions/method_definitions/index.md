@@ -138,20 +138,20 @@ const obj3 = {
 ```js
 const obj4 = {
   f: async function* () {
-    yield 1
-    yield 2
-    yield 3
-  }
+    yield 1;
+    yield 2;
+    yield 3;
+  },
 };
 
 // The same object using shorthand syntax
 const obj4 = {
-  async* f() {
-   yield 1
-   yield 2
-   yield 3
-  }
-}
+  async *f() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
+};
 ```
 
 ### Method definitions are not constructable

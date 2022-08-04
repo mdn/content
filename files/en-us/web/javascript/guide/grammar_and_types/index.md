@@ -591,7 +591,7 @@ const obj = {
   handler,
   // Methods
   toString() {
-   // Super calls
+    // Super calls
     return 'd ' + super.toString();
   },
   // Computed (dynamic) property names

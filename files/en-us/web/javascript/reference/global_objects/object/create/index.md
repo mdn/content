@@ -205,11 +205,6 @@ o = Object.create(Object.prototype, {
     set(value) {
       console.log('Setting `o.bar` to', value);
     }
-/* with ES2015 Accessors our code can look like this
-    get() { return 10; },
-    set(value) {
-      console.log('Setting `o.bar` to', value);
-    } */
   }
 });
 

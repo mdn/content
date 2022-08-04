@@ -46,7 +46,7 @@ The statements for loops provided in JavaScript are:
 - [for...in statement](#for...in_statement)
 - [for...of statement](#for...of_statement)
 
-## `for` statement
+## for statement
 
 A {{jsxref("statements/for","for")}} loop repeats until a specified condition evaluates to false. The JavaScript `for` loop is similar to the Java and C `for` loop.
 
@@ -111,7 +111,7 @@ btn.addEventListener('click', () => {
 });
 ```
 
-## `do...while` statement
+## do...while statement
 
 The {{jsxref("statements/do...while", "do...while")}} statement repeats until a
 specified condition evaluates to false.
@@ -146,7 +146,7 @@ do {
 } while (i < 5);
 ```
 
-## `while` statement
+## while statement
 
 A {{jsxref("statements/while","while")}} statement executes its statements as long as a
 specified condition evaluates to `true`. A `while` statement looks
@@ -212,7 +212,7 @@ while (true) {
 }
 ```
 
-## `labeled` statement
+## labeled statement
 
 A {{jsxref("statements/label","label")}} provides a statement with an identifier that
 lets you refer to it elsewhere in your program. For example, you can use a label to
@@ -222,8 +222,8 @@ to indicate whether a program should interrupt the loop or continue its executio
 The syntax of the labeled statement looks like the following:
 
 ```js
-label :
-   statement
+label:
+  statement
 ```
 
 The value of `label` may be any JavaScript identifier that is not a
@@ -241,7 +241,7 @@ while (theMark) {
 }
 ```
 
-## `break` statement
+## break statement
 
 Use the {{jsxref("statements/break","break")}} statement to terminate a loop,
 `switch`, or in conjunction with a labeled statement.
@@ -256,11 +256,10 @@ The syntax of the `break` statement looks like this:
 
 ```js
 break;
-break [label];
+break label;
 ```
 
-1. The first form of the syntax terminates the innermost enclosing loop or
-    `switch.`
+1. The first form of the syntax terminates the innermost enclosing loop or `switch`.
 2. The second form of the syntax terminates the specified enclosing labeled statement.
 
 ### Example 1
@@ -276,7 +275,7 @@ for (let i = 0; i < a.length; i++) {
 }
 ```
 
-### **Example 2:** Breaking to a label
+### Example 2: Breaking to a label
 
 ```js
 let x = 0;
@@ -297,7 +296,7 @@ labelCancelLoops: while (true) {
 }
 ```
 
-## `continue` statement
+## continue statement
 
 The {{jsxref("statements/continue","continue")}} statement can be used to restart a
 `while`, `do-while`, `for`, or `label`
@@ -344,7 +343,7 @@ let n = 0;
 while (i < 5) {
   i++;
   if (i === 3) {
-     // continue;
+    // continue;
   }
   n += i;
   console.log(n);
@@ -370,25 +369,23 @@ would continue at the top of the _`checkiandj`_ statement.
 ```js
 let i = 0;
 let j = 10;
-checkiandj:
-  while (i < 4) {
-    console.log(i);
-    i += 1;
-    checkj:
-      while (j > 4) {
-        console.log(j);
-        j -= 1;
-        if ((j % 2) === 0) {
-          continue checkj;
-        }
-        console.log(j + ' is odd.');
-      }
-      console.log('i = ' + i);
-      console.log('j = ' + j);
+checkiandj: while (i < 4) {
+  console.log(i);
+  i += 1;
+  checkj: while (j > 4) {
+    console.log(j);
+    j -= 1;
+    if ((j % 2) === 0) {
+      continue checkj;
+    }
+    console.log(j + ' is odd.');
   }
+  console.log('i = ' + i);
+  console.log('j = ' + j);
+}
 ```
 
-## `for...in` statement
+## for...in statement
 
 The {{jsxref("statements/for...in","for...in")}} statement iterates a specified
 variable over all the enumerable properties of an object. For each distinct property,
@@ -436,7 +433,7 @@ with a numeric index when iterating over arrays, because the `for...in`
 statement iterates over user-defined properties in addition to the array elements, if
 you modify the Array object (such as adding custom properties or methods).
 
-## `for...of` statement
+## for...of statement
 
 The {{jsxref("statements/for...of","for...of")}} statement creates a loop Iterating
 over [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (including
