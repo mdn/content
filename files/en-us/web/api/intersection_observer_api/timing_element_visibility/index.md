@@ -302,7 +302,7 @@ Once per pass through the browser's event loop, each {{domxref("IntersectionObse
 ```js
 function intersectionCallback(entries) {
   entries.forEach((entry) => {
-    let adBox = entry.target;
+    const adBox = entry.target;
 
     if (entry.isIntersecting) {
       if (entry.intersectionRatio >= 0.75) {
