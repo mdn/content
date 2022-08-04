@@ -31,8 +31,8 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver((reports, observer) => {
-  let firstReport = reports[0];
+const observer = new ReportingObserver((reports, observer) => {
+  const firstReport = reports[0];
   console.log(firstReport.type); // intervention
   console.log(firstReport.body.sourceFile); // the source file
   console.log(firstReport.body.lineNumber); // the line in that file
