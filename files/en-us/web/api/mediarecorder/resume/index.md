@@ -55,10 +55,10 @@ effect.
 
 ```js
 pause.onclick = () => {
-  if(MediaRecorder.state === "recording") {
+  if (MediaRecorder.state === "recording") {
     mediaRecorder.pause();
     // recording paused
-  } else if(MediaRecorder.state === "paused") {
+  } else if (MediaRecorder.state === "paused") {
     mediaRecorder.resume();
     // resume recording
   }
