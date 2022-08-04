@@ -76,7 +76,7 @@ function addData() {
   };
 
   transaction.onerror = (event) => {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+    note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
   // create an object store on the transaction
