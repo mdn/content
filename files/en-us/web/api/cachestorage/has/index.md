@@ -46,9 +46,7 @@ caches.has('v1').then((hasCache) => {
   if (!hasCache) {
     someCacheSetupFunction();
   } else {
-    caches.open('v1').then((cache) => {
-      return cache.addAll(myAssets);
-    });
+    caches.open('v1').then((cache) => cache.addAll(myAssets));
   }
 }).catch(() => {
   // Handle exception here.
