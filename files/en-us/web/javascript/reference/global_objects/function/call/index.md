@@ -95,7 +95,7 @@ const animals = [
 ];
 
 function assignPrintMethod(i) {
-  this.print = function() {
+  this.print = function () {
     console.log(`#${i} ${this.species}: ${this.name}`);
   }
   this.print();

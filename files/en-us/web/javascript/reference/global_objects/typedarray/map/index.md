@@ -114,9 +114,7 @@ the typed array as `map()` loops through the original typed array.
 
 ```js
 const numbers = new Uint8Array([1, 4, 9]);
-const doubles = numbers.map(function(num) {
-  return num * 2;
-});
+const doubles = numbers.map((num) => num * 2);
 // doubles is now Uint8Array [2, 8, 18]
 // numbers is still Uint8Array [1, 4, 9]
 ```

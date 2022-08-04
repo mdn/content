@@ -67,9 +67,7 @@ element in a numeric array, by comparing each value:
 
 ```js
 const arr = [1,2,3];
-const max = arr.reduce(function(a, b) {
-    return Math.max(a, b);
-}, -Infinity);
+const max = arr.reduce((a, b) => Math.max(a, b), -Infinity);
 ```
 
 The following function uses {{jsxref("Function.prototype.apply()")}} to get the maximum

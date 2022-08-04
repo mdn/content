@@ -456,7 +456,7 @@ Keep in mind that returning object literals using the concise body syntax
 const func = () => { foo: 1 };
 // Calling func() returns undefined!
 
-const func2 = () => { foo: function() {} };
+const func2 = () => { foo: function () {} };
 // SyntaxError: function statement requires a name
 
 const func3 = () => { foo() {} };
@@ -517,7 +517,7 @@ compared to regular functions.
 ```js
 let callback;
 
-callback = callback || function() {}; // ok
+callback = callback || function () {}; // ok
 
 callback = callback || () => {};
 // SyntaxError: invalid arrow-function arguments

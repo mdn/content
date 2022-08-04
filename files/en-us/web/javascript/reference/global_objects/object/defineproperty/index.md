@@ -177,10 +177,6 @@ Object.defineProperty(o, 'a', {
 // with defineProperty with an accessor property descriptor
 const bValue = 38;
 Object.defineProperty(o, 'b', {
-  // Using shorthand method names (ES2015 feature).
-  // This is equivalent to:
-  // get: function() { return bValue; },
-  // set: function(newValue) { bValue = newValue; },
   get() { return bValue; },
   set(newValue) { bValue = newValue; },
   enumerable: true,
@@ -403,7 +399,7 @@ function Archiver() {
     }
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = () => archive;
 }
 
 const arc = new Archiver();
