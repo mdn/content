@@ -469,7 +469,8 @@ function deactivateSelect(select) {
   select.classList.remove('active');
 }
 
-// This function will be used each time the user wants to (de)activate the control
+// This function will be used each time the user wants to activate the control
+// (which, in turn, will deactivate other select controls)
 // It takes two parameters:
 // select : the DOM node with the `select` class to activate
 // selectList : the list of all the DOM nodes with the `select` class
