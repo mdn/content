@@ -104,7 +104,7 @@ navigator.mediaDevices.enumerateDevices()
     const menu = document.getElementById("inputdevices");
     if (device.kind === "audioinput") {
       const item = document.createElement("option");
-      item.innerText = device.label;
+      item.textContent = device.label;
       item.value = device.deviceId;
       menu.appendChild(item);
     }
