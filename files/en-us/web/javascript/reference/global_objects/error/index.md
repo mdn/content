@@ -152,7 +152,7 @@ try {
 }
 ```
 
-> **Note:** If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
+> **Note:** If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
 
 [Custom error types](#custom_error_types) can also use the [`cause`](#error.prototype.cause) property, provided the subclasses' constructor passes the `options` parameter when calling `super()`:
 
