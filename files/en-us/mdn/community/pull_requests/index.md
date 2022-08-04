@@ -1,5 +1,5 @@
 ---
-title: MDN Web Docs Pull Request Guidelines
+title: Pull request guidelines
 slug: MDN/Community/Pull_requests
 page-type: mdn-community-guide
 tags:
@@ -130,4 +130,4 @@ Don’t:
 
 ## Pull requests we accept
 
-## `idle` pull requests
+## Idle pull requests

@@ -1,5 +1,5 @@
 ---
-title: Attributions and copyright licensing
+title: Attribution and copyright licensing
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 page-type: mdn-writing-guide
 tags:

@@ -1,5 +1,5 @@
 ---
-title: MDN Web Docs Community Discussions
+title: Community Discussions
 slug: MDN/Community/Discussions
 page-type: mdn-community-guide
 tags:
@@ -11,7 +11,7 @@ tags:
 
 On MDN Web Docs, we encourage our community to start and/or engage in discussions around topics related to the overall project. Discussions are categorized by different topic areas. We ask that you keep each discussion focused on the topic at hand instead of covering multiple topics in one discussion.
 
-_NOTE:_ mdn-community/discussions is not the place to report problems. For any problems you encounter on MDN Web Docs, it is best to raise issues against the [relevant project](https://github.com/mdn/). If you're ever in doubt about whether to open an issue or a discussion, consider the following guidelines:
+_NOTE:_ `mdn-community/discussions` is not the place to report problems. For any problems you encounter on MDN Web Docs, it is best to raise issues against the [relevant project](https://github.com/mdn/). If you're ever in doubt about whether to open an issue or a discussion, consider the following guidelines:
 
 - Issues are for reporting a bug or a work item with clearly defined and actionable tasks and outcomes.
 - Discussions are the right place if the issue needs a discussion to agree upon a course of action or define an actionable piece of work.

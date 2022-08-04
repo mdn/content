@@ -1,5 +1,5 @@
 ---
-title: Open Source Etiquette
+title: Open source etiquette
 slug: MDN/Community/Open_source_etiquette
 page-type: mdn-community-guide
 tags:

@@ -1,5 +1,5 @@
 ---
-title: MDN Web Docs Community Guidelines
+title: Community Guidelines
 slug: MDN/Community
 page-type: mdn-community-guide
 tags:
@@ -23,7 +23,7 @@ tags:
 - [Help fix known platform issues](https://github.com/mdn/yari/issues)
 - [Help us keep browser compatibility data up to date.](https://github.com/mdn/browser-compat-data)
 
-## Quick Links
+## Quick links
 
 - [Our repositories overview](contributing/our-repositories/)
 - [Users and teams](users-teams/)

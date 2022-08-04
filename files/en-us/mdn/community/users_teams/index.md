@@ -1,5 +1,5 @@
 ---
-title: MDN Web Docs Users and Teams
+title: Users and teams
 slug: MDN/Community/Users_teams
 page-type: mdn-community-guide
 tags:
