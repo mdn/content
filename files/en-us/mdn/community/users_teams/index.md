@@ -15,7 +15,7 @@ A list of the members of the organization can be [found here](https://github.com
 
 ## Teams
 
-- **Core**: Core MDN Web Docs Team
+- **Core**: Core MDN Web Docs team
 - **Localization team leads**: People who lead our individual localization teams
 - **MDN community engagement**: People responsible for community engagement across our repositories
 - **MDN product**: People responsible for the MDN Plus product
