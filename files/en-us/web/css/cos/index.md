@@ -30,25 +30,27 @@ The `cos()` function takes only one expression as its argument.
 
 ## Examples
 
-### Element Size
+### Keep rotated element size
 
-For example, when creating a 100x100 box based on external parameters, in this case `cos(0deg)`. Thus `cos(0deg)` will return `1` making the box `100px` width and `100px` height.
+When the element is rotated using {{cssxref("transform-function/rotate", "rotate()")}}, it goes beyond its initial size. To fix this, we will use `cos()` to update the element size.
+
+In the following example, we have a `100px`/`100px` element. When we rotate it by `45deg`, we adjust the `width` and `height` size:
 
 ```css
 div {
+  /* Original */
+  width: 100px;
+  height: 100px;
   background-color: red;
-  width: calc( cos(0deg) * 100px );
-  height: calc( cos(0deg) * 100px );
-}
-```
 
-### Element Rotation
-
-Another use-case is to control the {{cssxref("rotate()")}} property of the element.
-
-```css
-div {
-  transform: rotate( cos(45deg) );
+  /* Rotated */
+  transform-origin: center;
+  transform:
+    translate( calc( 100px / 4 * cos(45deg) ) )
+    rotate(45deg);
+  width: calc( 100px * cos(45deg) );
+  height: calc( 100px * cos(45deg) );
+  margin-inline-end: calc( 100px / 2 * cos(45deg) );
 }
 ```
 
