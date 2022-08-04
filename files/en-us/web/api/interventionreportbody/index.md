@@ -52,13 +52,13 @@ This interface also inherits methods from {{domxref("ReportBody")}}.
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print details of each property of the first report to the console.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver((reports, observer) => {
+  const firstReport = reports[0];
   console.log(firstReport.type); // intervention
   console.log(firstReport.body.id);
   console.log(firstReport.body.message);

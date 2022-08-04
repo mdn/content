@@ -57,7 +57,7 @@ not between `0` and `2^32 - 1` included.
 ```js
 const myIndex = objectStore.index('index');
 const getAllKeysRequest = myIndex.getAllKeys();
-getAllKeysRequest.onsuccess = function() {
+getAllKeysRequest.onsuccess = () => {
   console.log(getAllKeysRequest.result);
 }
 ```

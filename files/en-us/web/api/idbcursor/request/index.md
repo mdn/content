@@ -35,9 +35,9 @@ function displayData() {
 
   const request = objectStore.openCursor();
 
-  request.onsuccess = function(event) {
+  request.onsuccess = (event) => {
     const cursor = event.target.result;
-      if(cursor) {
+      if (cursor) {
         const listItem = document.createElement('li');
         listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
         list.appendChild(listItem);

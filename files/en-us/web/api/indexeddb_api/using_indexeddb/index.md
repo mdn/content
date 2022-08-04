@@ -101,7 +101,7 @@ Now, assuming that the user allowed your request to create a database, and you'v
 let db;
 const request = indexedDB.open("MyTestDatabase");
 request.onerror = (event) => {
-  console.log("Why didn't you allow my web app to use IndexedDB?!");
+  console.error("Why didn't you allow my web app to use IndexedDB?!");
 };
 request.onsuccess = (event) => {
   db = event.target.result;
@@ -245,7 +245,7 @@ request.onupgradeneeded = (event) => {
   objectStore.transaction.oncomplete = (event) => {
     // Store values in the newly created objectStore.
     const customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
-    customerData.forEach(function(customer) {
+    customerData.forEach((customer) => {
       customerObjectStore.add(customer);
     });
   };
@@ -283,8 +283,8 @@ request.onupgradeneeded = (event) => {
   // The added records would be like:
   // key : 1 => value : "Bill"
   // key : 2 => value : "Donna"
-  customerData.forEach(function(customer) {
-        objStore.add(customer.name);
+  customerData.forEach((customer) => {
+    objStore.add(customer.name);
   });
 };
 ```
@@ -351,9 +351,10 @@ The `result` of a request generated from a call to `add()` is the key of the val
 Removing data is very similar:
 
 ```js
-const request = db.transaction(["customers"], "readwrite")
-                .objectStore("customers")
-                .delete("444-44-4444");
+const request = db
+  .transaction(["customers"], "readwrite")
+  .objectStore("customers")
+  .delete("444-44-4444");
 request.onsuccess = (event) => {
   // It's gone!
 };
@@ -411,10 +412,10 @@ request.onsuccess = (event) => {
   // Put this updated object back into the database.
   const requestUpdate = objectStore.put(data);
   requestUpdate.onerror = (event) => {
-     // Do something with the error
+    // Do something with the error
   };
   requestUpdate.onsuccess = (event) => {
-     // Success - the data is updated!
+    // Success - the data is updated!
   };
 };
 ```

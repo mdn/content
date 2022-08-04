@@ -62,9 +62,9 @@ function displayDataByIndex() {
   const objectStore = transaction.objectStore('contactsList');
 
   const myIndex = objectStore.index('lName');
-  myIndex.openCursor().onsuccess = function(event) {
+  myIndex.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const tableRow = document.createElement('tr');
       tableRow.innerHTML = `<td>${cursor.value.id}</td>`
                          + `<td>${cursor.value.lName}</td>`

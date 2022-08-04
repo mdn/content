@@ -39,7 +39,7 @@ In this simple example, an intersection callback sets each target element's
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     entry.target.style.opacity = entry.intersectionRatio;
   });
 }

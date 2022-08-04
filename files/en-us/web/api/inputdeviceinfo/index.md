@@ -29,8 +29,8 @@ The following example gets all media devices with {{domxref("MediaDevices.enumer
 
 ```js
 navigator.mediaDevices.enumerateDevices()
-  .then(function(devices) {
-    devices.forEach(function(device) {
+  .then((devices) => {
+    devices.forEach((device) => {
       console.log(device); // an InputDeviceInfo object if the device is an input device, otherwise a MediaDeviceInfo object.
     });
   })

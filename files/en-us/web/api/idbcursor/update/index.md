@@ -84,7 +84,7 @@ function updateResult() {
   const transaction = db.transaction(['rushAlbumList'], 'readwrite');
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
       if (cursor.value.albumTitle === 'A farewell to kings') {
@@ -92,7 +92,7 @@ function updateResult() {
 
         updateData.year = 2050;
         const request = cursor.update(updateData);
-        request.onsuccess = function() {
+        request.onsuccess = () => {
           console.log('A better album year?');
         };
       };
