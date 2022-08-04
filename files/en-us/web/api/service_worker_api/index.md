@@ -18,6 +18,7 @@ Service workers essentially act as proxy servers that sit between web applicatio
 
 ## Service worker concepts and usage
 
+
 A service worker is an event-driven [worker](/en-US/docs/Web/API/Worker) registered against an origin and a path. It takes the form of a JavaScript file that can control the web-page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how your app behaves in certain situations (the most obvious one being when the network is not available).
 
 A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is non-blocking. It is designed to be fully async; as a consequence, APIs such as synchronous [XHR](/en-US/docs/Web/API/XMLHttpRequest) and [Web Storage](/en-US/docs/Web/API/Web_Storage_API) can't be used inside a service worker.
