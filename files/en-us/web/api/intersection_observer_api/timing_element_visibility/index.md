@@ -206,7 +206,7 @@ That brings us to the JavaScript code which makes everything work. Let's start w
 let contentBox;
 
 let nextArticleID = 1;
-let visibleAds = new Set();
+const visibleAds = new Set();
 let previouslyVisibleAds = null;
 
 let adObserver;
@@ -240,7 +240,7 @@ function startup() {
 
   document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
-  let observerOptions = {
+  const observerOptions = {
     root: null,
     rootMargin: "0px",
     threshold: [0.0, 0.75]
@@ -329,10 +329,10 @@ Our interval handler, `handleRefreshInterval()`, is called about once per second
 
 ```js
 function handleRefreshInterval() {
-  let redrawList = [];
+  const redrawList = [];
 
   visibleAds.forEach((adBox) => {
-    let previousTime = adBox.dataset.totalViewTime;
+    const previousTime = adBox.dataset.totalViewTime;
     updateAdTimer(adBox);
 
     if (previousTime !== adBox.dataset.totalViewTime) {
@@ -362,11 +362,11 @@ Previously (see [Handling document visibility changes](#handling_document_visibi
 
 ```js
 function updateAdTimer(adBox) {
-  let lastStarted = adBox.dataset.lastViewStarted;
-  let currentTime = performance.now();
+  const lastStarted = adBox.dataset.lastViewStarted;
+  const currentTime = performance.now();
 
   if (lastStarted) {
-    let diff = currentTime - lastStarted;
+    const diff = currentTime - lastStarted;
 
     adBox.dataset.totalViewTime = parseFloat(adBox.dataset.totalViewTime) + diff;
   }
@@ -396,10 +396,10 @@ Inside each ad, for demonstration purposes, we draw the current value of its `to
 
 ```js
 function drawAdTimer(adBox) {
-  let timerBox = adBox.querySelector(".timer");
-  let totalSeconds = adBox.dataset.totalViewTime / 1000;
-  let sec = Math.floor(totalSeconds % 60);
-  let min = Math.floor(totalSeconds / 60);
+  const timerBox = adBox.querySelector(".timer");
+  const totalSeconds = adBox.dataset.totalViewTime / 1000;
+  const sec = Math.floor(totalSeconds % 60);
+  const min = Math.floor(totalSeconds / 60);
 
   timerBox.innerText = `${min}:${sec.toString().padStart(2, "0")}`;
 }
@@ -412,7 +412,7 @@ This code finds the ad's timer using its ID, `"timer"`, and computes the number 
 The `buildContents()` function is called by the [startup code](#setting_up) to select and insert into the document the articles and ads to be presented:
 
 ```js
-let loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
+const loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
   " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
   " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
   " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
@@ -443,10 +443,10 @@ To create the {{HTMLElement("article")}} element for an article (as well as all 
 
 ```js
 function createArticle(contents) {
-  let articleElem = document.createElement("article");
+  const articleElem = document.createElement("article");
   articleElem.id = nextArticleID;
 
-  let titleElem = document.createElement("h2");
+  const titleElem = document.createElement("h2");
   titleElem.id = nextArticleID;
   titleElem.innerText = `Article ${nextArticleID} title`;
   articleElem.appendChild(titleElem);
@@ -466,7 +466,7 @@ The `loadRandomAd()` function simulates loading an ad and adding it to the page.
 
 ```js
 function loadRandomAd(replaceBox) {
-  let ads = [
+  const ads = [
     {
       bgcolor: "#cec",
       title: "Eat Green Beans",
@@ -490,7 +490,7 @@ function loadRandomAd(replaceBox) {
   ];
   let adBox, title, body, timerElem;
 
-  let ad = ads[Math.floor(Math.random()*ads.length)];
+  const ad = ads[Math.floor(Math.random() * ads.length)];
 
   if (replaceBox) {
     adObserver.unobserve(replaceBox);
@@ -563,12 +563,10 @@ Our [observer's callback](#handling_intersection_changes) keeps an eye out for a
 
 ```js
 function replaceAd(adBox) {
-  let visibleTime;
-
   updateAdTimer(adBox);
 
-  visibleTime = adBox.dataset.totalViewTime
-  console.log(`Replacing ad: ${adBox.querySelector("h2").innerText} - visible for ${visibleTime}`)
+  const visibleTime = adBox.dataset.totalViewTime;
+  console.log(`Replacing ad: ${adBox.querySelector("h2").innerText} - visible for ${visibleTime}`);
 
   loadRandomAd(adBox);
 }
