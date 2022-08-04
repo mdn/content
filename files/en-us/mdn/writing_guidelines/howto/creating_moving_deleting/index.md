@@ -106,6 +106,7 @@ details for you:
 ```sh
 yarn content delete <document-slug> [locale]
 ```
+
 > **Note:** You need to use the `yarn content delete` command to delete pages from MDN Web Docs. Don't just delete their directories from the repo. The `yarn content delete` command also handles other necessary changes such as updating the `_wikihistory.json` file.
 
 You just have to specify the slug of the existing document that you'd like

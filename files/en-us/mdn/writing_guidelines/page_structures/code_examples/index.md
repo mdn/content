@@ -76,7 +76,6 @@ The [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/main/kumascript
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}Try adjusting the code to see what happens, and playing with the controls.
 
-
 ## Traditional live samples
 
 Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Structures/Live_samples) for more information.
@@ -191,4 +190,3 @@ This looks like so when rendered:
 
 - You obviously need to get a suitable code sample onto the [MDN GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Using_Github_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data) for more advanced uses.
 - Your code sample needs to be suitable to show what you are trying to demonstrate — it should contain one simple example that does one thing well, should have no offensive content in it, and should follow the MDN [Code sample guidelines](/en-US/docs/MDN/Guidelines/Code_guidelines).
-

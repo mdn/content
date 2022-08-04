@@ -50,7 +50,6 @@ Here are some guidelines to help you decide what to do when something is removed
 
 > **Note:** For the purposes of this discussion, the word "item" is used to mean anything that can be part of a specification: an element or an attribute of an element, an interface or any individual method, a property, or other member of an interface, and so forth.
 
-
 ### If the item was never implemented
 
 If the item was _never_ implemented in a release version of _any_ browser, not even behind a preference or a flag, delete any references to the item from the documentation.
@@ -100,9 +99,3 @@ For example, as of Jan 2019, the [`inputmode`](/en-US/docs/Web/HTML/Global_attri
 > **Warning:** Specification conflict: The WHATWG specification lists `inputmode`(https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) and modern browsers are working towards supporting it.
 > The [W3C HTML 5.2 spec](https://html.spec.whatwg.org/multipage/index.html#contents), however, no longer lists it (i.e. marks it as obsolete).
 > You should consider the WHATWG definition as correct, until a consensus is reached.
-
-
-
-
-
-

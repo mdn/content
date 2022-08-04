@@ -98,7 +98,6 @@ Use lowercase for all element names and attribute names/values because it looks 
 
 Use semantic class/ID names, and separate multiple words with hyphens. Don't use camelCase. For example:
 
-
 ```html example-good
 <p class="editorial-summary">Blah blah blah</p>
 ```

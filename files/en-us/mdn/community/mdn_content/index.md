@@ -50,4 +50,3 @@ If you'd prefer to browse your tasks and choose by technology category instead, 
 2. If you need any help when you are working on it, feel free to contact us in the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
 3. Once you've fixed an issue, ask the submitter for a review and, hopefully, they will tell you whether they think more work is required. We will get involved if needed.
 4. Once the issue is verified fixed, it can be closed. The person closing the issue can be either the original issue submitter, or an MDN staff member.
-
