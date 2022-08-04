@@ -188,13 +188,13 @@ window.wrappedJSObject.messenger = cloneInto(
   {cloneFunctions: true});
 ```
 
-Now page scripts sees a new property on the window, `messenger`, which has a function `notify()`:
+Now page scripts see a new property on the window, `messenger`, which has a function `notify()`:
 
 ```js
 window.messenger.notify("Message from the page script!");
 ```
 
-In the special case of a Promise, which is not supported by [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), the desired result can be achieved by using `window.Promise` instead of `Promise`, and then cloning the resolution value with `cloneInto` like this:
+In the special case of a Promise, which is not supported by [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), the desired result can be achieved using `window.Promise` instead of `Promise`, and then cloning the resolution value with `cloneInto` like this:
 
 ```js
 let promise = new window.Promise(resolve => {
