@@ -91,7 +91,7 @@ function displayData() {
 
   objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const listItem = document.createElement('li');
       listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
       list.appendChild(listItem);
