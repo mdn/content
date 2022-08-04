@@ -98,7 +98,7 @@ The image file formats that are most commonly used on the web are listed below.
         <p>
           Good choice for lossy compression of still images (currently the most
           popular). Prefer PNG when more precise reproduction of the image is
-          required, or WebP/AVIF if both better reproduction and highercompression are required.<br />
+          required, or WebP/AVIF if both better reproduction and higher compression are required.<br />
           <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
         </p>
       </td>
