@@ -60,7 +60,7 @@ if (navigator.mediaDevices) {
         videoBitsPerSecond: 2500000,
         mimeType: 'video/mp4'
       }
-      const mediaRecorder = new MediaRecorder(stream,options);
+      const mediaRecorder = new MediaRecorder(stream, options);
       m = mediaRecorder;
 
       m.mimeType; // would return 'video/mp4'
