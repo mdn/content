@@ -79,7 +79,7 @@ function recordStream(stream) {
   };
 
   recorder.onerror = (event) => {
-    let error = event.error;
+    console.error(`Error: ${event.error}`);
   };
 
   recorder.start(100);  /* 100ms time slices per buffer */
