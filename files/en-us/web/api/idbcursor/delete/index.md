@@ -73,8 +73,8 @@ function deleteResult() {
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
-      if(cursor.value.albumTitle === 'Grace under pressure') {
+    if (cursor) {
+      if (cursor.value.albumTitle === 'Grace under pressure') {
         const request = cursor.delete();
         request.onsuccess = () => {
           console.log('Deleted that mediocre album from 1984. Even Power windows is better.');
