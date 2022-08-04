@@ -56,7 +56,9 @@ Suppose you have an object type `MyNumberType` and you want to create a
 to the object's `valueOf` method:
 
 ```js
-MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
+MyNumberType.prototype.valueOf = function () {
+  return customPrimitiveValue;
+};
 ```
 
 With the preceding code in place, any time an object of type `MyNumberType`
@@ -83,11 +85,11 @@ myNumberType.valueOf()
 
 ```js
 function MyNumberType(n) {
-    this.number = n;
+  this.number = n;
 }
 
-MyNumberType.prototype.valueOf = function() {
-    return this.number;
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
 };
 
 const myObj = new MyNumberType(4);

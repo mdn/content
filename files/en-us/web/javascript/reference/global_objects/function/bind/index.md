@@ -144,11 +144,11 @@ function LateBloomer() {
 }
 
 // Declare bloom after a delay of 1 second
-LateBloomer.prototype.bloom = function() {
-  window.setTimeout(this.declare.bind(this), 1000);
+LateBloomer.prototype.bloom = function () {
+  setTimeout(this.declare.bind(this), 1000);
 };
 
-LateBloomer.prototype.declare = function() {
+LateBloomer.prototype.declare = function () {
   console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
 };
 
@@ -177,7 +177,7 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
+Point.prototype.toString = function () {
   return `${this.x},${this.y}`;
 };
 

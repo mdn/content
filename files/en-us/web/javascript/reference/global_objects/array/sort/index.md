@@ -114,27 +114,21 @@ function compareNumbers(a, b) {
 }
 ```
 
-The `sort` method can be conveniently used with
-{{jsxref("Operators/function", "function expressions", "", 1)}}:
+The `sort` method can be conveniently used with [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function) or [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ```js
 const numbers = [4, 2, 5, 1, 3];
-numbers.sort(function(a, b) {
+numbers.sort(function (a, b) {
   return a - b;
 });
 console.log(numbers);
-
 // [1, 2, 3, 4, 5]
-```
 
-ES2015 provides {{jsxref("Functions/Arrow_functions", "arrow function expressions", "",
-  1)}} with even shorter syntax.
+// OR
 
-```js
-const numbers = [4, 2, 5, 1, 3];
-numbers.sort((a, b) => a - b);
-console.log(numbers);
-
+const numbers2 = [4, 2, 5, 1, 3];
+numbers2.sort((a, b) => a - b);
+console.log(numbers2);
 // [1, 2, 3, 4, 5]
 ```
 
@@ -151,12 +145,10 @@ const items = [
 ];
 
 // sort by value
-items.sort(function (a, b) {
-  return a.value - b.value;
-});
+items.sort((a, b) => a.value - b.value);
 
 // sort by name
-items.sort(function(a, b) {
+items.sort((a, b) => {
   const nameA = a.name.toUpperCase(); // ignore upper and lowercase
   const nameB = b.name.toUpperCase(); // ignore upper and lowercase
   if (nameA < nameB) {
@@ -214,9 +206,7 @@ appear in the right order.
 
 ```js
 const items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
-items.sort(function (a, b) {
-  return a.localeCompare(b);
-});
+items.sort((a, b) => a.localeCompare(b));
 
 // items is ['adieu', 'café', 'communiqué', 'éclair', 'premier', 'réservé']
 ```

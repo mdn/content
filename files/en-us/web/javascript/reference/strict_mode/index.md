@@ -148,14 +148,11 @@ console.log(sumWithOctal); // 16
 Sixth, strict mode in ECMAScript 2015 forbids setting properties on [primitive](/en-US/docs/Glossary/Primitive) values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.
 
 ```js
-(function() {
 'use strict';
 
 false.true = '';         // TypeError
 (14).sailing = 'home';   // TypeError
 'with'.you = 'far away'; // TypeError
-
-})();
 ```
 
 In ECMAScript 5 strict-mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}. With the introduction of [computed property names](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), making duplication possible at runtime, ECMAScript 2015 removed that restriction.
@@ -269,7 +266,9 @@ Third, `arguments.callee` is no longer supported. In normal code `arguments.call
 
 ```js
 'use strict';
-const f = function() { return arguments.callee; };
+const f = function () {
+  return arguments.callee;
+};
 f(); // throws a TypeError
 ```
 

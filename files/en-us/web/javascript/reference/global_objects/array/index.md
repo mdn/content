@@ -380,7 +380,7 @@ This example uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_
 
 ```js
 const fruits = ['Apple', 'Mango', 'Cherry'];
-fruits.forEach(function(item, index, array) {
+fruits.forEach((item, index, array) => {
   console.log(item, index);
 });
 // Apple 0

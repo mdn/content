@@ -66,7 +66,7 @@ function object.
 The following code traps a function call.
 
 ```js
-const p = new Proxy(function() {}, {
+const p = new Proxy(function () {}, {
   apply(target, thisArg, argumentsList) {
     console.log('called: ' + argumentsList.join(', '));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
