@@ -66,7 +66,7 @@ are fired.
 const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
 DBDeleteRequest.onerror = (event) => {
-  console.log("Error deleting database.");
+  console.error("Error deleting database.");
 };
 
 DBDeleteRequest.onsuccess = (event) => {
