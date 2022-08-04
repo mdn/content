@@ -26,7 +26,7 @@ An integer, or `null` if the column is not known.
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print the value of `columnNumber` to the console.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
