@@ -32,7 +32,7 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-dc.onoverconstrained = () => {t("overconstrained event detected!"); };
+dc.onoverconstrained = () => console.log("overconstrained event detected!");
 ```
 
 ## Browser compatibility
