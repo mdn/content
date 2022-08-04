@@ -28,7 +28,7 @@ A Tier 1 project should have at least 3 members, including at least two with adm
 
 ### Tier 2
 
-These repositories are mainly concentrated on supporting content such as code examples, the MDN Web Docs learn area, localisation, and examples projects. Examples include:
+These repositories are mainly concentrated on supporting content such as code examples, the MDN Web Docs learn area, localization, and examples projects. Examples include:
 
 - [dom-examples](https://github.com/mdn/dom-examples)
 - [translated-content](https://github.com/mdn/translated-content)

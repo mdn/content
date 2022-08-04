@@ -128,7 +128,7 @@ For the example response, the meaning of `max-age` is the following:
 
 As long as the stored response remains fresh, it will be used to fulfill client requests.
 
-When a response is stored in a shared cache, it is necessary to inform the client of the reponse's age. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
+When a response is stored in a shared cache, it is necessary to inform the client of the response's age. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
 
 ```http
 HTTP/1.1 200 OK
@@ -321,7 +321,7 @@ The following sections look at the circumstances in more detail.
 
 It would be problematic if a response with personalized content is unexpectedly visible to other users of a cache.
 
-In such a case, using the `private` directive will cause the personalized reponse to only be stored with the specific client and not be leaked to any other user of the cache.
+In such a case, using the `private` directive will cause the personalized response to only be stored with the specific client and not be leaked to any other user of the cache.
 
 ```http
 Cache-Control: private
