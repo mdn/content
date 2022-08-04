@@ -10,9 +10,9 @@ The **scope** is the current context of execution in which {{glossary("value","v
 
 JavaScript has the following kinds of scopes:
 
-- Global scope: The default scope for all code running in script mode.
-- Module scope: The scope for code running in module mode.
-- Function scope: The scope created with a {{glossary("function")}}.
+- Global scope: The default scope. Its code is accessible by all scopes.
+- Module scope: The scope for code running inside a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules).
+- Function scope: The scope for code running inside a [function](/en-US/docs/Web/JavaScript/Reference/Functions).
 
 In addition, variables declared with [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) can belong to an additional scope:
 
