@@ -1,5 +1,5 @@
 ---
-title: MDN Web Docs writing style guide
+title: Writing style guide
 slug: MDN/Writing_guidelines/Writing_style_guide
 page-type: mdn-writing-guide
 tags:

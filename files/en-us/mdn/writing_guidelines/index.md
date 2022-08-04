@@ -1,5 +1,5 @@
 ---
-title: MDN Web Docs writing guidelines
+title: Writing guidelines
 slug: MDN/Writing_guidelines
 page-type: mdn-writing-guide
 tags:
