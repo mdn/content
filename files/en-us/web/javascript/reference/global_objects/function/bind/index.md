@@ -145,7 +145,7 @@ function LateBloomer() {
 
 // Declare bloom after a delay of 1 second
 LateBloomer.prototype.bloom = function () {
-  window.setTimeout(this.declare.bind(this), 1000);
+  setTimeout(this.declare.bind(this), 1000);
 };
 
 LateBloomer.prototype.declare = function () {
