@@ -79,7 +79,7 @@ The call to the reduceRight `callbackFn` would look something like
 this:
 
 ```js
-arr.reduceRight(function (accumulator, currentValue, index, array) {
+arr.reduceRight((accumulator, currentValue, index, array) => {
   // …
 });
 ```
