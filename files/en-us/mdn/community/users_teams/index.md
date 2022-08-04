@@ -9,17 +9,17 @@ tags:
 ---
 {{MDNSidebar}}
 
-The success and growth of MDN Web Docs is thanks, in large part, to our community of contributors. There are also employees, contractors and a network of partners who are dedicated to the health, growth and maintenance of the project as a whole. There are also some individuals who have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. These people are part of our invited experts program. To manage all these different groups, we rely heavily on roles and teams within our GitHub organisation.
+The success and growth of MDN Web Docs is thanks, in large part, to our community of contributors. There are also employees, contractors and a network of partners who are dedicated to the health, growth and maintenance of the project as a whole. There are also some individuals who have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. These people are part of our invited experts program. To manage all these different groups, we rely heavily on roles and teams within our GitHub organization.
 
-A list of the members of the organisation can be [found here](https://github.com/orgs/mdn/people).
+A list of the members of the organization can be [found here](https://github.com/orgs/mdn/people).
 
 ## Teams
 
 - **Core**: Core MDN Web Docs Team.
-- **Localisation team leads**: The people who lead our individual localisation teams.
+- **Localization team leads**: The people who lead our individual localization teams.
 - **MDN Community Engagement**: People responsible for community engagement across our repositories.
 - **MDN Product**: People responsible for the MDN Plus product.
-- **OWD**: Contributors from the Open Web Docs non-profit organisation.
+- **OWD**: Contributors from the Open Web Docs non-profit organization.
 - **SRE**: The site reliability engineers that support MDN Web Docs.
 - **Yari content**: The umbrella team for all MDN Web Docs content reviewers.
   - **Yari content MDN**: Responsible for reviewing docs under /en-US/docs
@@ -83,9 +83,9 @@ If you wish to nominate someone to be considered as an invited expert, start by 
 
 ## Volunteer and partner maintainers
 
-MDN Web Docs also have volunteers and partners who are assigned maintainer rights to certain repositories. This is the highest level of access afforded to volunteers and partner contributors. Volunteer maintainers are [nominated](https://github.com/mdn/mdn/issues/new/choose) by our partners or the MDN Web Docs team because they demonstrated a deep understanding of the area of responsibility. These individuals have also demonstrated their comittment to being responisve, reliable, trustworthy and able to interact in a manner that forsters a welcoming and friendly environment.
+MDN Web Docs also have volunteers and partners who are assigned maintainer rights to certain repositories. This is the highest level of access afforded to volunteers and partner contributors. Volunteer maintainers are [nominated](https://github.com/mdn/mdn/issues/new/choose) by our partners or the MDN Web Docs team because they demonstrated a deep understanding of the area of responsibility. These individuals have also demonstrated their commitment to being responsive, reliable, trustworthy and able to interact in a manner that fosters a welcoming and friendly environment.
 
-Mantainers should:
+Maintainers should:
 
 - Agree to abide by our [Code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 - Agree to Mozilla's [Commit Access Requirements](https://www.mozilla.org/en-US/about/governance/policies/commit/requirements/).
@@ -94,10 +94,10 @@ Mantainers should:
 
 ## Owners
 
-Owners have wide permissions to manage users, teams, maintainer access across repositories in the MDN organisation, maintain repository settings and deploy to production. Owners are currently limited to Mozilla staff and are also bound by all the requirements of the other user levels. In addition to all the responsibilities of the other user levels, owners have the following additional responsibilities:
+Owners have wide permissions to manage users, teams, maintainer access across repositories in the MDN organization, maintain repository settings and deploy to production. Owners are currently limited to Mozilla staff and are also bound by all the requirements of the other user levels. In addition to all the responsibilities of the other user levels, owners have the following additional responsibilities:
 
 - Follow and enforce MDN team norms, including the [code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/) and [Mozilla Policies](https://www.mozilla.org/en-US/about/governance/policies/).
-- Follow and contribute to issues and discussions across the MDN organisation.
+- Follow and contribute to issues and discussions across the MDN organization.
 - Ensure that an issue or pull request gets feedback from one or more members within one week.
 - Follow MDN organization policies described in this repo, and lead by example.
 - Suggest, document, and implement new policies through the pull request process.

@@ -1,5 +1,5 @@
 ---
-title: MDN Web Docs Localisation
+title: MDN Web Docs Localization
 slug: MDN/Community/Contributing/Translated_content
 page-type: mdn-community-guide
 tags:

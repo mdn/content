@@ -63,7 +63,7 @@ If you receive anything that makes you feel uncomfortable, you should always rep
 
 ## Choose effective contributions
 
-Think about what you want to do on the project. For example, we have a large list of issues filed at on the [contributtors task board](https://github.com/orgs/mdn/projects/25/views/1), broken up by various task types.
+Think about what you want to do on the project. For example, we have a large list of issues filed at on the [contributors task board](https://github.com/orgs/mdn/projects/25/views/1), broken up by various task types.
 
 You could also contribute by opening [pull requests](/en_US/docs/MDN/Community/Pull_requests) to fix problems that you come across while reading MDN articles.
 
