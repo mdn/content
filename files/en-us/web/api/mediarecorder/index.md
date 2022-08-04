@@ -120,8 +120,8 @@ if (navigator.mediaDevices) {
 
       clipContainer.classList.add('clip');
       audio.setAttribute('controls', '');
-      deleteButton.innerHTML = "Delete";
-      clipLabel.innerHTML = clipName;
+      deleteButton.textContent = "Delete";
+      clipLabel.textContent = clipName;
 
       clipContainer.appendChild(audio);
       clipContainer.appendChild(clipLabel);
