@@ -102,9 +102,7 @@ self.addEventListener('fetch', (event) => {
           cache.put(event.request, responseClone);
         });
         return response;
-      }).catch(() => {
-        return caches.match('/sw-test/gallery/myLittleVader.jpg');
-      });
+      }).catch(() => caches.match('/sw-test/gallery/myLittleVader.jpg'));
     }
   }));
 });
