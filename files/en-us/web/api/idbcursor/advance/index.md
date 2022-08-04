@@ -67,7 +67,7 @@ function advanceResult() {
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const listItem = document.createElement('li');
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
