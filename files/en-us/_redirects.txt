@@ -5442,6 +5442,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Help_beginners	/en-US/docs/MDN/Community/Learn_forum
 /en-US/docs/MDN/Contribute/How_to_document_a_CSS_property	/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property
+/en-US/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /en-US/docs/MDN/Contribute/Howto/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /en-US/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
@@ -5463,8 +5464,9 @@
 /en-US/docs/MDN/Contribute/Markdown_in_MDN	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Open_source_etiquette	/en-US/docs/MDN/Community/Open_source_etiquette
 /en-US/docs/MDN/Contribute/Processes/Content_bug_triage	/en-US/docs/MDN/Community/Issues/Issue_triage
-/en-US/docs/MDN/Contribute/Processes/Locating_browser-specific_information	/en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version
-/en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_versiosn	/en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version
+/en-US/docs/MDN/Contribute/Processes/Locating_browser-specific_information	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
+/en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
+/en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_versiosn	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Sample_app_coding_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Sample_server	/en-US/docs/MDN/Tools/Sample_server
 /en-US/docs/MDN/Contribute/Structures	/en-US/docs/MDN/Writing_guidelines/Page_structures
