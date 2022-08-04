@@ -247,7 +247,7 @@ Starting with Firefox 34, in the case of a capturing group with quantifiers prev
 
 // Firefox 34 or newer
 'x'.replace(/x(.)?/g, (m, group) => {
-  console.log('group:', group);
+  console.log(`group: ${group}`);
 });
 // group: undefined
 ```
