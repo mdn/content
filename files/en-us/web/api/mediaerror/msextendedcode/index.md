@@ -20,12 +20,12 @@ Type: **long**; The platform specific error code.
 ```js
 const video1 = object.getElementById("video1");
 
-video1.addEventListener('error', function () {
+video1.addEventListener('error', () => {
   const error = video1.error.msExtendedCode;
   //…
 }, false);
 
-video.addEventListener('canplay', function () {
+video.addEventListener('canplay', () => {
   video1.play();
 }, false);
 ```

@@ -35,7 +35,7 @@ if (navigator.getUserMedia) {
     },
 
     // Success callback
-    function (stream) {
+    (stream) => {
       const mediaRecorder = new MediaRecorder(stream);
 
       const myStream = mediaRecorder.stream;

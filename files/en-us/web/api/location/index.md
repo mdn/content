@@ -42,7 +42,7 @@ body { display: table-cell; text-align: center; vertical-align: middle; font-fam
 ```
 
 ```js hidden
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', (evt) => {
     evt.preventDefault();
 
     window.location.hash = evt.target.hasAttribute('id')

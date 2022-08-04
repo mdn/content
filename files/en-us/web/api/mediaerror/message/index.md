@@ -48,7 +48,7 @@ we add to the `<audio>` element itself.
 The error handler looks like this:
 
 ```js
-  audioElement.onerror = function() {
+  audioElement.onerror = () => {
     let s = "";
     let err = audioElement.error;
 

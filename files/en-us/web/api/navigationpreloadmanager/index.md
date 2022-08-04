@@ -59,7 +59,7 @@ Below we enable navigation preloading in the service worker's `activate` event h
 ```js
 addEventListener("activate", (event) => {
   event.waitUntil(
-    (async function () {
+    (async () => {
       if (self.registration.navigationPreload) {
         // Enable navigation preloads!
         await self.registration.navigationPreload.enable();
@@ -83,7 +83,7 @@ If there is no matching cache entry or preloaded response, the code starts a new
 ```js
 addEventListener("fetch", (event) => {
   event.respondWith(
-    (async function () {
+    (async () => {
       // Respond from the cache if we can
       const cachedResponse = await caches.match(event.request);
       if (cachedResponse) return cachedResponse;

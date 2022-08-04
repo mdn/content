@@ -54,7 +54,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-pause.onclick = function() {
+pause.onclick = () => {
     mediaRecorder.pause();
     console.log("recording paused");
 }

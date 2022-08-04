@@ -47,8 +47,8 @@ function sourceOpen (_) {
   //console.log(this.readyState); // open
   const mediaSource = this;
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+  fetchAB(assetURL, (buf) => {
+    sourceBuffer.addEventListener('updateend', (_) => {
       mediaSource.endOfStream();
       mediaSource.duration = 120;
       video.play();

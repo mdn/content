@@ -62,7 +62,7 @@ The following is a list of all mutation events, as defined in [DOM Level 3 Event
 You can register a listener for mutation events using {{DOMxRef("EventTarget.addEventListener()")}} as follows:
 
 ```js
-element.addEventListener("DOMNodeInserted", function (event) {
+element.addEventListener("DOMNodeInserted", (event) => {
   // …
 }, false);
 ```

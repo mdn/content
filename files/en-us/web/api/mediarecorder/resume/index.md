@@ -54,7 +54,7 @@ effect.
 ## Examples
 
 ```js
-pause.onclick = function() {
+pause.onclick = () => {
   if(MediaRecorder.state === "recording") {
     mediaRecorder.pause();
     // recording paused

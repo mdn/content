@@ -141,7 +141,7 @@ Use {{domxref("Notification.close","close()")}} to remove a notification that is
 
 ```js
 const n = new Notification('My Great Song');
-document.addEventListener('visibilitychange', function() {
+document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible') {
     // The tab has become visible so clear the now-stale Notification.
     n.close();
@@ -185,7 +185,7 @@ Assume the following basic HTML:
 It's possible to handle multiple notifications this way:
 
 ```js
-window.addEventListener('load', function () {
+window.addEventListener('load', () => {
   const button = document.getElementsByTagName('button')[0];
 
   if (window.self !== window.top) {
@@ -197,13 +197,13 @@ window.addEventListener('load', function () {
     return;
   }
 
-  button.addEventListener('click', function () {
+  button.addEventListener('click', () => {
     // If the user agreed to get notified
     // Let's try to send ten notifications
     if (window.Notification && Notification.permission === "granted") {
       let i = 0;
       // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-      const interval = window.setInterval(function () {
+      const interval = window.setInterval(() => {
         // Thanks to the tag, we should only see the "Hi! 9" notification
         const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
         if (i++ === 9) {
@@ -216,12 +216,12 @@ window.addEventListener('load', function () {
     // Note: because of Chrome, we are not sure the permission property
     // is set, therefore it's unsafe to check for the "default" value.
     else if (window.Notification && Notification.permission !== "denied") {
-      Notification.requestPermission(function (status) {
+      Notification.requestPermission((status) => {
         // If the user said okay
         if (status === "granted") {
           let i = 0;
           // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-          const interval = window.setInterval(function () {
+          const interval = window.setInterval(() => {
             // Thanks to the tag, we should only see the "Hi! 9" notification
             const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
             if (i++ === 9) {

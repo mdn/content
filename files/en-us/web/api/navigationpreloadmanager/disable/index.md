@@ -43,7 +43,7 @@ The code below shows how to disable preloading, after first using {{domxref("Ser
 
 ```js
 addEventListener('activate', (event) => {
-  event.waitUntil(async function() {
+  event.waitUntil(async () => {
     if (self.registration.navigationPreload) {
       // Disable navigation preloads!
       await self.registration.navigationPreload.disable();

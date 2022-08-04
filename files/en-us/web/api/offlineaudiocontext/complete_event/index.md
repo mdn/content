@@ -59,7 +59,7 @@ You can also set up the event handler using the `oncomplete` property:
 ```js
 let offlineAudioCtx = new OfflineAudioContext();
 
-offlineAudioCtx.oncomplete = function() {
+offlineAudioCtx.oncomplete = () => {
   console.log('Offline audio processing now complete');
   showModalDialog('Song processed and ready to play');
   playBtn.disabled = false;

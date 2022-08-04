@@ -222,7 +222,7 @@ This works by calling {{domxref("MediaStream.getTracks()")}}, using {{jsxref("Ar
 Now let's look at the most intricate piece of code in this example: our event handler for clicks on the start button:
 
 ```js
-startButton.addEventListener("click", function() {
+startButton.addEventListener("click", () => {
   navigator.mediaDevices.getUserMedia({
     video: true,
     audio: true
@@ -274,7 +274,7 @@ When a {{domxref("Element/click_event", "click")}} event occurs, here's what hap
 The last bit of code adds a handler for the {{domxref("Element/click_event", "click")}} event on the stop button using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-stopButton.addEventListener("click", function() {
+stopButton.addEventListener("click", () => {
   stop(preview.srcObject);
 }, false);
 ```

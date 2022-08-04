@@ -90,7 +90,7 @@ There is also an Internet Explorer-compatible way to use {{jsxref("Array.forEach
 
 ```js
 const list = document.querySelectorAll('input[type=checkbox]');
-Array.prototype.forEach.call(list, function (checkbox) {
+Array.prototype.forEach.call(list, (checkbox) => {
   checkbox.checked = true;
 });
 ```

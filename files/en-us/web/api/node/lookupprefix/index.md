@@ -50,7 +50,7 @@ Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;svg&gt;: <ou
 
 ```js
 const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
+button.addEventListener("click", () => {
   const aHtmlElt = document.getElementsByTagName('output')[0];
   const aSvgElt = document.getElementsByTagName('svg')[0];
 

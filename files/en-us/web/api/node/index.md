@@ -190,7 +190,7 @@ a root node (including the root itself):
 function eachNode(rootNode, callback) {
   if (!callback) {
     const nodes = []
-    eachNode(rootNode, function(node) {
+    eachNode(rootNode, (node) => {
       nodes.push(node)
     })
     return nodes
@@ -243,7 +243,7 @@ function grep(parentNode, pattern) {
   let matches = []
   let endScan = false
 
-  eachNode(parentNode, function(node){
+  eachNode(parentNode, (node) => {
     if (endScan) {
       return false
     }

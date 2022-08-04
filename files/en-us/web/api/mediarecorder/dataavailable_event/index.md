@@ -65,7 +65,7 @@ A generic {{domxref("Event")}}.
 ```js
 const chunks = [];
 
-mediaRecorder.onstop = function(e) {
+mediaRecorder.onstop = (e) => {
   console.log("data available after MediaRecorder.stop() called.");
 
   const audio = document.createElement('audio');
@@ -76,7 +76,7 @@ mediaRecorder.onstop = function(e) {
   console.log("recorder stopped");
 }
 
-mediaRecorder.ondataavailable = function(e) {
+mediaRecorder.ondataavailable = (e) => {
   chunks.push(e.data);
 }
 ```

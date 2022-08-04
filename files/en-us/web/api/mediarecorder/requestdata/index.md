@@ -59,7 +59,7 @@ recording is not occurring.
 ## Examples
 
 ```js
-captureMedia.onclick = function() {
+captureMedia.onclick = () => {
   mediaRecorder.requestData();
   // makes snapshot available of data so far
   // ondataavailable fires, then capturing continues

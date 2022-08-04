@@ -65,14 +65,14 @@ if (navigator.mediaDevices.getUserMedia) {
     {
       audio: true,
       video: false
-    }).then(function(stream) {
+    }).then((stream) => {
       let options = {
         mediaStreamTrack: stream.getAudioTracks()[0]
       }
 
       let source = new MediaStreamTrackAudioSourceNode(audioCtx, options);
       source.connect(audioCtx.destination);
-    }).catch(function(err) {
+    }).catch((err) => {
       console.error(`The following gUM error occurred: ${err}`);
     });
 } else {

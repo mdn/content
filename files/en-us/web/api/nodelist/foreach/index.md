@@ -65,7 +65,7 @@ node.appendChild(kid3);
 const list = node.childNodes;
 
 list.forEach(
-  function(currentValue, currentIndex, listObj) {
+  (currentValue, currentIndex, listObj) => {
     console.log(`${currentValue}, ${currentIndex}, ${this}`);
   },
   'myThisArg'
@@ -87,7 +87,7 @@ This {{Glossary("Polyfill","polyfill")}} adds compatibility to all Browsers supp
 
 ```js
 if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = function (callback, thisArg) {
+    NodeList.prototype.forEach = (callback, thisArg) => {
         thisArg = thisArg || window;
         for (let i = 0; i < this.length; i++) {
             callback.call(thisArg, this[i], i, this);

@@ -91,7 +91,7 @@ You can polyfill the `MouseEvent()` constructor functionality in Internet
 Explorer 9 and higher with the following code:
 
 ```js
-(function (window) {
+((window) => {
   try {
     new MouseEvent('test');
     return false; // No need to polyfill
@@ -100,7 +100,7 @@ Explorer 9 and higher with the following code:
   }
 
     // Polyfills DOM4 MouseEvent
-  const MouseEventPolyfill = function (eventType, params) {
+  const MouseEventPolyfill = (eventType, params) => {
     params = params || { bubbles: false, cancelable: false };
     const mouseEvent = document.createEvent('MouseEvent');
     mouseEvent.initMouseEvent(eventType,

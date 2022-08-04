@@ -37,7 +37,7 @@ When a port changes state, information about that port is printed to the console
 
 ```js
 navigator.requestMIDIAccess()
-  .then(function(access) {
+  .then((access) => {
 
      // Get lists of available MIDI controllers
      const inputs = access.inputs.values();

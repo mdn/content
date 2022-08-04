@@ -74,11 +74,11 @@ function recordStream(stream) {
     /* exception while trying to create the recorder; handle that */
   }
 
-  recorder.ondataavailable = function(event) {
+  recorder.ondataavailable = (event) => {
     bufferList.push(event.data);
   };
 
-  recorder.onerror = function(event) {
+  recorder.onerror = (event) => {
     let error = event.error;
   };
 

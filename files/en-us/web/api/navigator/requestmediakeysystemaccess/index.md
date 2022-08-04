@@ -104,7 +104,7 @@ let clearKeyOptions = [
 ];
 
 navigator.requestMediaKeySystemAccess('org.w3.clearkey', clearKeyOptions)
-.then(function(keySystemAccess) {
+.then((keySystemAccess) => {
   /* use the access to get create keys */
 });
 ```
@@ -129,7 +129,7 @@ let clearKeyOptions = [
 ];
 
 navigator.requestMediaKeySystemAccess('org.w3.clearkey', clearKeyOptions)
-.then(function(keySystemAccess) {
+.then((keySystemAccess) => {
   /* use the access to get create keys */
 });
 ```

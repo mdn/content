@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", (e) => {
   const gp = navigator.getGamepads()[e.gamepad.index];
   console.log(
     "Gamepad connected at index %d: %s. %d buttons, %d axes.",

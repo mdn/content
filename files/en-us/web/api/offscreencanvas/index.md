@@ -95,7 +95,7 @@ worker.postMessage({canvas: offscreen}, [offscreen]);
 offscreencanvas.js (worker code):
 
 ```js
-onmessage = function(evt) {
+onmessage = (evt) => {
   const canvas = evt.data.canvas;
   const gl = canvas.getContext("webgl");
 
@@ -106,7 +106,7 @@ onmessage = function(evt) {
 You can also use requestAnimationFrame in workers
 
 ```js
-onmessage = function(evt) {
+onmessage = (evt) => {
   const canvas = evt.data.canvas;
   const gl = canvas.getContext("webgl");
 

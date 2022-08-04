@@ -49,12 +49,12 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
 } else {
   // List cameras and microphones.
   navigator.mediaDevices.enumerateDevices()
-  .then(function(devices) {
-    devices.forEach(function(device) {
+  .then((devices) => {
+    devices.forEach((device) => {
       console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
     });
   })
-  .catch(function(err) {
+  .catch((err) => {
     console.log(`${err.name}: ${err.message}`);
   });
 }

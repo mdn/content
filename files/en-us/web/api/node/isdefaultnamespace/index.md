@@ -47,7 +47,7 @@ Is "http://www.w3.org/2000/svg" the default namespace for &lt;svg&gt;: <output>N
 
 ```js
 const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
+button.addEventListener("click", () => {
   const aHtmlElt = document.getElementsByTagName('output')[0];
   const aSvgElt = document.getElementsByTagName('svg')[0];
 

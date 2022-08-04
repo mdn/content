@@ -45,7 +45,7 @@ _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 ## Example
 
 ```js
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 

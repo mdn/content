@@ -42,7 +42,7 @@ In the following example, we use an onclick handler to open a webpage in a new t
 is clicked:
 
 ```js
-notification.onclick = function(event) {
+notification.onclick = (event) => {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
   window.open('http://www.mozilla.org', '_blank');
 }

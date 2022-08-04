@@ -47,7 +47,7 @@ Namespace URL for <code>xml</code> on &lt;svg&gt;: <output>Not tested</output>.<
 
 ```js
 const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
+button.addEventListener("click", () => {
   const aHtmlElt = document.getElementsByTagName('output')[0];
   const aSvgElt = document.getElementsByTagName('svg')[0];
 

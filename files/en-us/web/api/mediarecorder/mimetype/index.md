@@ -54,7 +54,7 @@ if (navigator.mediaDevices) {
   const chunks = [];
 
   navigator.mediaDevices.getUserMedia(constraints)
-    .then(function(stream) {
+    .then((stream) => {
       const options = {
         audioBitsPerSecond: 128000,
         videoBitsPerSecond: 2500000,
@@ -66,7 +66,7 @@ if (navigator.mediaDevices) {
       m.mimeType; // would return 'video/mp4'
       // …
     })
-    .catch(function(error) {
+    .catch((error) => {
       console.log(error.message);
     });
 }

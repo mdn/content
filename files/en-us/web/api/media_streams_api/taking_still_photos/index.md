@@ -61,7 +61,7 @@ Now let's take a look at the [JavaScript code](#javascript). We'll break it up i
 We start by wrapping the whole script in an anonymous function to avoid global variables, then setting up various variables we'll be using.
 
 ```js
-(function() {
+(() => {
   const width = 320;    // We will scale the photo width to this
   const height = 0;     // This will be computed based on the input stream
 
@@ -112,7 +112,7 @@ The next task is to get the media stream:
 
 ```js
     navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-    .then(function(stream) {
+    .then((stream) => {
         video.srcObject = stream;
         video.play();
     })
@@ -134,7 +134,7 @@ The error callback is called if opening the stream doesn't work. This will happe
 After calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play) on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to `video` for the {{domxref("HTMLMediaElement/canplay_event", "canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the `video` object have been configured based on the stream's format.
 
 ```js
-    video.addEventListener('canplay', function(ev){
+    video.addEventListener('canplay', (ev) => {
       if (!streaming) {
         height = video.videoHeight / (video.videoWidth/width);
 
@@ -158,7 +158,7 @@ Finally, the `width` and `height` of both the video and the canvas are set to ma
 To capture a still photo each time the user clicks the `startbutton`, we need to add an event listener to the button, to be called when the {{domxref("Element/click_event", "click")}} event is issued:
 
 ```js
-    startbutton.addEventListener('click', function(ev){
+    startbutton.addEventListener('click', (ev) => {
       takepicture();
       ev.preventDefault();
     }, false);
@@ -309,7 +309,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 ### JavaScript
 
 ```js
-(function() {
+(() => {
   // The width and height of the captured photo. We will set the
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
@@ -353,7 +353,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
     startbutton = document.getElementById('startbutton');
 
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
-    .then(function(stream) {
+    .then((stream) => {
       video.srcObject = stream;
       video.play();
     })
@@ -361,7 +361,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
       console.error(`An error occurred: ${err}`);
     });
 
-    video.addEventListener('canplay', function(ev){
+    video.addEventListener('canplay', (ev) => {
       if (!streaming) {
         height = video.videoHeight / (video.videoWidth/width);
 
@@ -380,7 +380,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
       }
     }, false);
 
-    startbutton.addEventListener('click', function(ev){
+    startbutton.addEventListener('click', (ev) => {
       takepicture();
       ev.preventDefault();
     }, false);

@@ -25,7 +25,7 @@ A string.
 ```js
 const promise = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
-promise.then(function(stream) {
+promise.then((stream) => {
    console.log(stream.id);
 })
 ```

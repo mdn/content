@@ -93,7 +93,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 
   myTrack.applyConstraints(constraints).then(() => {
     /* do stuff if constraints applied successfully */
-  }).catch(function(reason) {
+  }).catch((reason) => {
     /* failed to apply constraints; reason is why */
   });
 }
@@ -394,7 +394,7 @@ function startVideo() {
   navigator.mediaDevices.getUserMedia({
     video: videoConstraints,
     audio: audioConstraints
-  }).then(function(stream) {
+  }).then((stream) => {
     let audioTracks = stream.getAudioTracks();
     let videoTracks = stream.getVideoTracks();
 
@@ -405,11 +405,11 @@ function startVideo() {
     if (videoTracks.length) {
         videoTrack = videoTracks[0];
     }
-  }).then(function() {
-    return new Promise(function(resolve) {
+  }).then(() => {
+    return new Promise((resolve) => {
       videoElement.onloadedmetadata = resolve;
     });
-  }).then(function() {
+  }).then(() => {
     getCurrentSettings();
   }).catch(handleError);
 }
@@ -427,7 +427,7 @@ There are several steps here:
 We also need to set up an event listener to watch for the "Start Video" button to be clicked:
 
 ```js
-document.getElementById("startButton").addEventListener("click", function() {
+document.getElementById("startButton").addEventListener("click", () => {
   startVideo();
 }, false);
 ```
@@ -442,19 +442,19 @@ Next, we set up an event listener for the "Apply Constraints" button. If it's cl
 4. If an error occurs applying either set of constraints, `handleError()` is used to output a message into the log.
 
 ```js
-document.getElementById("applyButton").addEventListener("click", function() {
+document.getElementById("applyButton").addEventListener("click", () => {
   if (!videoTrack && !audioTrack) {
     startVideo();
   } else {
     buildConstraints();
     if (videoTrack) {
-      videoTrack.applyConstraints(videoConstraints).then(function() {
+      videoTrack.applyConstraints(videoConstraints).then(() => {
         videoSettingsText.value = JSON.stringify(videoTrack.getSettings(), null, 2);
       }).catch(handleError);
     }
 
     if (audioTrack) {
-      audioTrack.applyConstraints(audioConstraints).then(function() {
+      audioTrack.applyConstraints(audioConstraints).then(() => {
         audioSettingsText.value = JSON.stringify(audioTrack.getSettings(), null, 2);
       }).catch(handleError);
     }
@@ -467,7 +467,7 @@ document.getElementById("applyButton").addEventListener("click", function() {
 Then we set up the handler for the stop button.
 
 ```js
-document.getElementById("stopButton").addEventListener("click", function() {
+document.getElementById("stopButton").addEventListener("click", () => {
   if (videoTrack) {
     videoTrack.stop();
   }

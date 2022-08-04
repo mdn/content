@@ -28,7 +28,7 @@ A function reference.
 ## Examples
 
 ```js
-mediaRecorder.onwarning = function(e) {
+mediaRecorder.onwarning = (e) => {
   console.warn(`A warning has been raised: ${e.message}`);
 }
 ```

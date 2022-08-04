@@ -88,7 +88,7 @@ if (navigator.mediaDevices.getUserMedia) {
   const constraints = { audio: true, video: true };
   const chunks = [];
 
-  const onSuccess = function(stream) {
+  const onSuccess = (stream) => {
     const options = {
       audioBitsPerSecond : 128000,
       videoBitsPerSecond : 2500000,
