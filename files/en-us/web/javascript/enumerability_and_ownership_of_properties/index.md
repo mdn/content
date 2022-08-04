@@ -101,7 +101,7 @@ const SimplePropertyRetriever = {
     const props = [];
     do {
       if (iterateSelf) {
-        Object.getOwnPropertyNames(obj).forEach(function(prop) {
+        Object.getOwnPropertyNames(obj).forEach((prop) => {
           if (props.indexOf(prop) === -1 && shouldInclude(obj, prop)) {
             props.push(prop);
           }

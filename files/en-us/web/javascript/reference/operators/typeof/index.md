@@ -108,7 +108,7 @@ typeof new Number(1) === 'object';
 typeof new String('abc') === 'object';
 
 // Functions
-typeof function() {} === 'function';
+typeof function () {} === 'function';
 typeof class C {} === 'function';
 typeof Math.sin === 'function';
 ```

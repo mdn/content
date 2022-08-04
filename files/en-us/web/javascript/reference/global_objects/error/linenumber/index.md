@@ -26,7 +26,7 @@ console.log(e.lineNumber) // 2
 ### Alternative example using error event
 
 ```js
-window.addEventListener('error', function(e) {
+window.addEventListener('error', (e) => {
   console.log(e.lineNumber); // 5
 });
 const e = new Error('Could not parse input');

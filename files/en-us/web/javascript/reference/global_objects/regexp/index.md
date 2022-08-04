@@ -240,16 +240,16 @@ Starting with Firefox 34, in the case of a capturing group with quantifiers prev
 
 ```js
 // Firefox 33 or older
-'x'.replace(/x(.)?/g, function(m, group) {
-  console.log("'group:" + group + "'");
+'x'.replace(/x(.)?/g, (m, group) => {
+  console.log('group:', group);
 });
-// 'group:'
+// group: ""
 
 // Firefox 34 or newer
-'x'.replace(/x(.)?/g, function(m, group) {
-  console.log("'group:" + group + "'");
+'x'.replace(/x(.)?/g, (m, group) => {
+  console.log('group:', group);
 });
-// 'group:undefined'
+// group: undefined
 ```
 
 Note that due to web compatibility, `RegExp.$N` will still return an empty string instead of `undefined` ([bug 1053944](https://bugzilla.mozilla.org/show_bug.cgi?id=1053944)).

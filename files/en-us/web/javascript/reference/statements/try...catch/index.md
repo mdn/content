@@ -264,7 +264,7 @@ of the entire `try-catch-finally` statement, regardless of any
 This includes exceptions thrown inside of the `catch`-block:
 
 ```js
-(function() {
+(() => {
   try {
     try {
       throw new Error('oops');

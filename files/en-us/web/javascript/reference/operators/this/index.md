@@ -523,7 +523,7 @@ The above alert shows `button`. Note however that only the outer code has
 its `this` set this way:
 
 ```html
-<button onclick="alert((function() { return this; })());">
+<button onclick="alert((function () { return this; })());">
   Show inner this
 </button>
 ```

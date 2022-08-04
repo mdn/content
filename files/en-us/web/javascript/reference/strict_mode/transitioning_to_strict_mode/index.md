@@ -79,7 +79,7 @@ Accessing `arguments.callee`, `arguments.caller`, `anyFunction.caller`, or `anyF
 // example taken from vanillajs: http://vanilla-js.com/
 const s = document.getElementById('thing').style;
 s.opacity = 1;
-(function() {
+(function () {
   if ((s.opacity -= .1) < 0) {
     s.display = 'none';
   } else {

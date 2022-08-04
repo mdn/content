@@ -172,7 +172,7 @@ Tag functions don't even need to return a string!
 
 ```js
 function template(strings, ...keys) {
-  return (function(...values) {
+  return (...values) => {
     const dict = values[values.length - 1] || {};
     const result = [strings[0]];
     keys.forEach((key, i) => {
@@ -180,7 +180,7 @@ function template(strings, ...keys) {
       result.push(value, strings[i + 1]);
     });
     return result.join('');
-  });
+  };
 }
 
 const t1Closure = template`${0}${1}${0}!`;

@@ -207,21 +207,6 @@ parseInt('123_456')
 // 123
 ```
 
-The radix is coerced to a `Number`:
-
-```js
-const obj = {
-  valueOf() {return 8}
-};
-parseInt('11', obj); // 9
-
-obj.valueOf = function() {return 1};
-parseInt('11', obj); // NaN
-
-obj.valueOf = function() {return Infinity};
-parseInt('11', obj); // 11
-```
-
 ### Using parseInt() on non-strings
 
 `parseInt()` can have interesting results when working on non-strings combined with a high radix, for example, `36` (which makes all alphanumeric characters valid numerics).
