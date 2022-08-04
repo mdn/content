@@ -75,7 +75,7 @@ DBOpenRequest.onsuccess = (event) => {
 // submitted via the window.indexedDB.open line above
 // it is only implemented in recent browsers
 DBOpenRequest.onupgradeneeded = (event) => {
-  const db = this.result;
+  const db = event.target.result;
 
   db.onerror = (event) => {
     note.innerHTML += '<li>Error loading database.</li>';
