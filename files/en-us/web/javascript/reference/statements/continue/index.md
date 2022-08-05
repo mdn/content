@@ -18,7 +18,8 @@ execution of the loop with the next iteration.
 ## Syntax
 
 ```js
-continue [label];
+continue;
+continue label;
 ```
 
 - `label` {{optional_inline}}

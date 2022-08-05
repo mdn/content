@@ -23,7 +23,7 @@ is called.
 
 ```js
 bind(thisArg)
-bind(thisArg, arg1, …, argN)
+bind(thisArg, arg1, /* …, */ argN)
 ```
 
 ### Parameters
@@ -184,10 +184,6 @@ Point.prototype.toString = function () {
 const p = new Point(1, 2);
 p.toString();
 // '1,2'
-
-//  not supported in the polyfill below,
-
-//  works fine with native bind:
 
 const YAxisPoint = Point.bind(null, 0/*x*/);
 

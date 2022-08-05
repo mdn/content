@@ -22,7 +22,7 @@ created from the specified sequence of UTF-16 code units.
 ```js
 String.fromCharCode(num1)
 String.fromCharCode(num1, num2)
-String.fromCharCode(num1, num2, ..., numN)
+String.fromCharCode(num1, num2, /* …, */ numN)
 ```
 
 ### Parameters

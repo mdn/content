@@ -27,13 +27,13 @@ takes up to two arguments: callback functions for the success and failure cases 
 ## Syntax
 
 ```js
-p.then(onFulfilled[, onRejected]);
+then(onFulfilled)
+then(onFulfilled, onRejected)
 
-p.then((value) => {
-  // fulfillment
-}, (reason) => {
-  // rejection
-});
+then(
+  (value) => { /* fulfillment handler */ },
+  (reason) => { /* rejection handler */ },
+);
 ```
 
 ### Parameters

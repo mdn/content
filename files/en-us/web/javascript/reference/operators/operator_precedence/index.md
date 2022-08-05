@@ -19,7 +19,7 @@ lower precedence.
 Consider an expression describable by the representation below. Note that both
 `OP1` and `OP2` are fill-in-the-blanks for OPerators.
 
-```js
+```
 a OP1 b OP2 c
 ```
 

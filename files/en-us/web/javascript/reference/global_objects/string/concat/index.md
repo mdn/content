@@ -21,7 +21,7 @@ the string arguments to the calling string and returns a new string.
 ```js
 concat(str1)
 concat(str1, str2)
-concat(str1, str2, ... , strN)
+concat(str1, str2, /* …, */ strN)
 ```
 
 ### Parameters

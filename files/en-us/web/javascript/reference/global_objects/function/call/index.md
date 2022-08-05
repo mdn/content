@@ -18,7 +18,7 @@ The **`call()`** method calls the function with a given `this` value and argumen
 ```js
 call()
 call(thisArg)
-call(thisArg, arg1, …, argN)
+call(thisArg, arg1, /* …, */ argN)
 ```
 
 ### Parameters

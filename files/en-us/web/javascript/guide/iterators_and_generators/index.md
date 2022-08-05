@@ -145,15 +145,17 @@ const myIterable = {
     yield 3;
   }
 }
+```
 
+User-defined iterables can be used in `for...of` loops or the spread syntax as usual.
+
+```js
 for (const value of myIterable) {
   console.log(value);
 }
 // 1
 // 2
 // 3
-
-or
 
 [...myIterable]; // [1, 2, 3]
 ```

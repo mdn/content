@@ -92,6 +92,7 @@ class Thingy {
     );
   };
   #registry = new FinalizationRegistry(Thingy.#cleanup);
+  #file;
 
   /**
    * Constructs a `Thingy` instance for the given file.

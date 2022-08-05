@@ -315,7 +315,8 @@ statement.
 The syntax of the `continue` statement looks like the following:
 
 ```js
-continue [label];
+continue;
+continue label;
 ```
 
 ### Example 1
@@ -337,19 +338,9 @@ while (i < 5) {
   console.log(n);
 }
 //1,3,7,12
-
-let i = 0;
-let n = 0;
-while (i < 5) {
-  i++;
-  if (i === 3) {
-    // continue;
-  }
-  n += i;
-  console.log(n);
-}
-// 1,3,6,10,15
 ```
+
+If you comment out the `continue;`, the loop would run till the end and you would see `1,3,6,10,15`.
 
 ### Example 2
 

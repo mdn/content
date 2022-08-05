@@ -1120,7 +1120,7 @@ a * c + b * c // 9
 You can use the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) to create an instance of a user-defined object type or of one of the built-in object types. Use `new` as follows:
 
 ```js
-const objectName = new objectType([param1, param2, ..., paramN]);
+const objectName = new objectType(param1, param2, /* …, */ paramN);
 ```
 
 ### super

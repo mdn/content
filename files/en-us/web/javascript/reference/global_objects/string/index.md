@@ -420,7 +420,7 @@ const nullVar = null;
 nullVar.toString();       // TypeError: nullVar is null
 String(nullVar);          // "null"
 
-const undefinedVar;
+const undefinedVar = undefined;
 undefinedVar.toString();  // TypeError: undefinedVar is undefined
 String(undefinedVar);     // "undefined"
 ```
