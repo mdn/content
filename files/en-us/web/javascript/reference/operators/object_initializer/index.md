@@ -27,7 +27,9 @@ Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Ref
 o = {};
 o = {a: 'foo', b: 42, c: {}};
 
-const a = 'foo', b = 42, c = {};
+const a = 'foo';
+const b = 42;
+const c = {};
 o = { a: a, b: b, c: c };
 
 o = {
