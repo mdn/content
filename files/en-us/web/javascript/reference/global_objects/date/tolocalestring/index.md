@@ -134,7 +134,7 @@ const options = {
   weekday: 'long',
   year: 'numeric',
   month: 'long',
- day: 'numeric',
+  day: 'numeric',
 };
 
 console.log(date.toLocaleString('de-DE', options));
