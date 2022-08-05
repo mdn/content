@@ -95,7 +95,7 @@ fetch("some.json", { cache: "only-if-cached", mode: "same-origin", signal: contr
     }
 
     // Other possible conditions
-    if (dt < (Date.now() - 300_000)) // If it's older than 5 minutes
+    if (dt < Date.now() - 300_000) // If it's older than 5 minutes
       fetch("some.json", { cache: "no-cache", mode: "same-origin" }) // no cancellation or return value.
     return res
   })
