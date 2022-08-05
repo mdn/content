@@ -49,8 +49,8 @@ In the context of the rendering waterfall, some properties are more expensive th
         <em>position</em> trigger a style recalculation, a layout and a repaint.
       </td>
       <td>
-        <img alt="" src="recalculate-style.png" />
-        <img alt="" src="layout.png" /> <img alt="" src="paint.png" />
+        <img alt="box representing the recalculate style step" src="recalculate-style.png" />
+        <img alt="box representing the layout step" src="layout.png" /> <img alt="box representing the paint step" src="paint.png" />
       </td>
       <td>
         <p>
@@ -75,8 +75,8 @@ In the context of the rendering waterfall, some properties are more expensive th
         </p>
       </td>
       <td>
-        <img alt="" src="recalculate-style.png" />
-        <img alt="" src="layout-faint.png" /> <img alt="" src="paint.png" />
+        <img alt="box representing the recalculate style step" src="recalculate-style.png" />
+        <img alt="box representing the layout step" src="layout-faint.png" /> <img alt="box representing the paint step" src="paint.png" />
       </td>
       <td>
         <p>
@@ -90,9 +90,9 @@ In the context of the rendering waterfall, some properties are more expensive th
         repaint, because the update is handled in composition.
       </td>
       <td>
-        <img alt="" src="recalculate-style.png" />
-        <img alt="" src="layout-faint.png" />
-        <img alt="" src="paint-faint.png" />
+        <img alt="box representing the recalculate style step" src="recalculate-style.png" />
+        <img alt="box representing the layout step" src="layout-faint.png" />
+        <img alt="box representing the paint step" src="paint-faint.png" />
       </td>
       <td>
         <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code
