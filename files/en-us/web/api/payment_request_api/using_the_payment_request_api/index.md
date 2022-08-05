@@ -39,7 +39,7 @@ The functions invoked inside the constructor return the required object paramete
 ```js
 function buildSupportedPaymentMethodData() {
   // Example supported payment methods:
-  return [ { supportedMethods: 'https://example.com/pay' } ];
+  return [{ supportedMethods: 'https://example.com/pay' }];
 }
 
 function buildShoppingCartDetails() {
