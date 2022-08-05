@@ -45,30 +45,30 @@ function print_PerformanceEntries() {
 
   // Use getEntries() to iterate all entries
   let p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
+  p.forEach((entry, i) => {
     log(`All Entry[${i}]`);
-    print_perf_entry(p[i]);
+    print_perf_entry(entry);
   }
 
   // Use getEntries(name, entryType) to get specific entries
   p = performance.getEntries({name : "Measure1", entryType: "measure"});
-  for (let i=0; i < p.length; i++) {
+  p.forEach((entry, i) => {
     log(`Begin and Measure [${i}]`);
-    print_perf_entry(p[i]);
+    print_perf_entry(entry);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (let i=0; i < p.length; i++) {
+  p.forEach((entry, i) => {
     log(`Mark only [${i}]`);
-    print_perf_entry(p[i]);
+    print_perf_entry(entry);
   }
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i < p.length; i++) {
+  p.forEach((entry, i) => {
     log(`Begin and Mark [${i}]`);
-    print_perf_entry(p[i]);
+    print_perf_entry(entry);
   }
 }
 ```
