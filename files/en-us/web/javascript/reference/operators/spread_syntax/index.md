@@ -99,8 +99,7 @@ const d = new Date(...dateFields);
 Without spread syntax, to create a new array using an existing array as one part of it,
 the array literal syntax is no longer sufficient and imperative code must be used
 instead using a combination of {{jsxref("Array.prototype.push", "push()")}},
-{{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat",
-   "concat()")}}, etc. With spread syntax this becomes much more succinct:
+{{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat", "concat()")}}, etc. With spread syntax this becomes much more succinct:
 
 ```js
 const parts = ['shoulders', 'knees'];

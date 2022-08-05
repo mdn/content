@@ -161,13 +161,13 @@ For example, the code below works because, even though the function that uses th
 
 ```js
 {
-    // TDZ starts at beginning of scope
-    const func = () => console.log(letVar); // OK
+  // TDZ starts at beginning of scope
+  const func = () => console.log(letVar); // OK
 
-    // Within the TDZ letVar access throws `ReferenceError`
+  // Within the TDZ letVar access throws `ReferenceError`
 
-    let letVar = 3; // End of TDZ (for letVar)
-    func(); // Called outside TDZ!
+  let letVar = 3; // End of TDZ (for letVar)
+  func(); // Called outside TDZ!
 }
 ```
 
@@ -193,11 +193,11 @@ console.log(typeof undeclaredVariable);
 The following code results in a `ReferenceError` at the line shown:
 
 ```js example-bad
-function test(){
-   var foo = 33;
-   if(foo) {
-      let foo = (foo + 55); // ReferenceError
-   }
+function test() {
+  var foo = 33;
+  if (foo) {
+    let foo = foo + 55; // ReferenceError
+  }
 }
 test();
 ```

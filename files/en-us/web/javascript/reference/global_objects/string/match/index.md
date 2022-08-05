@@ -165,9 +165,9 @@ If it is a positive number with a positive sign, `RegExp()` will ignore the
 positive sign.
 
 ```js
-const str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
-    str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
-    str3 = "The contract was declared null and void.";
+const str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.";
+const str2 = "My grandfather is 65 years old and My grandmother is 63 years old.";
+const str3 = "The contract was declared null and void.";
 str1.match("number");   // "number" is a string. returns ["number"]
 str1.match(NaN);        // the type of NaN is the number. returns ["NaN"]
 str1.match(Infinity);   // the type of Infinity is the number. returns ["Infinity"]

@@ -98,7 +98,7 @@ The following code logs a line for each element in a `Set` object:
 
 ```js
 function logSetElements(value1, value2, set) {
-    console.log('s[' + value1 + '] = ' + value2);
+  console.log(`s[${value}] = ${value2}`);
 }
 
 new Set(['foo', 'bar', undefined]).forEach(logSetElements);

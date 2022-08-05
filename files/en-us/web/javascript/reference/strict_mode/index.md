@@ -59,7 +59,7 @@ ECMAScript 2015 introduced [JavaScript modules](/en-US/docs/Web/JavaScript/Refer
 
 ```js
 function myStrictFunction() {
-    // because this is a module, I'm strict by default
+  // because this is a module, I'm strict by default
 }
 export default myStrictFunction;
 ```

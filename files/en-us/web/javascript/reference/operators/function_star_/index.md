@@ -16,8 +16,7 @@ browser-compat: javascript.operators.generator_function
 The **`function*`** keyword can be used to define a generator
 function inside an expression.
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html",
-   "taller")}}
+{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
 
 ## Syntax
 
@@ -71,8 +70,8 @@ The following example defines an unnamed generator function and assigns it to
 `x`. The function yields the square of its argument:
 
 ```js
-let x = function*(y) {
-   yield y * y;
+const x = function* (y) {
+  yield y * y;
 };
 ```
 
