@@ -89,7 +89,6 @@ function getData() {
       //source.loop = true;
       offlineCtx.startRendering().then((renderedBuffer) => {
         console.log('Rendering completed successfully');
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         const song = audioCtx.createBufferSource();
         song.buffer = renderedBuffer;
 
