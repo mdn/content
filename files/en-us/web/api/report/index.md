@@ -43,12 +43,12 @@ _This interface has no events that fire on it._
 In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver((reports, observer) => {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```
@@ -71,21 +71,20 @@ function displayReports(reports) {
   const list = document.createElement('ul');
   outputElem.appendChild(list);
 
-  for (let i = 0; i < reports.length; i++) {
+  reports.forEach((report, i) => {
     let listItem = document.createElement('li');
-    let textNode = document.createTextNode(`Report ${i + 1}, type: ${reports[i].type}`);
+    let textNode = document.createTextNode(`Report ${i + 1}, type: ${report.type}`);
     listItem.appendChild(textNode);
     let innerList = document.createElement('ul');
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
-    for (let key in reports[i].body) {
-      let innerListItem = document.createElement('li');
-      let keyValue = reports[i].body[key];
+    report.body.forEach((keyValue, key) => {
+      const innerListItem = document.createElement('li');
       innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);
-    }
-  }
+    });
+  });
 }
 ```
 
