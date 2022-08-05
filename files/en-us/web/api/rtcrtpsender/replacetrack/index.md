@@ -108,15 +108,15 @@ navigator.mediaDevices
     }
   })
   .then((stream) => {
-    let videoTrack = stream.getVideoTracks()[0];
+    const [videoTrack] = stream.getVideoTracks();
     PCs.forEach((pc) => {
       const sender = pc.getSenders().find((s) => s.track.kind === videoTrack.kind);
-      console.log('found sender:', sender);
+      console.log(`Found sender: ${sender}`);
       sender.replaceTrack(videoTrack);
     });
   })
   .catch((err) => {
-    console.error('Error happens:', err);
+    console.error(`Error happens: ${err}`);
   });
 ```
 
