@@ -80,7 +80,9 @@ const observe_all = new PerformanceObserver((list, obs) => {
 });
 
 // Subscribe to all performance event types
-observe_all.observe({ entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server'] });
+observe_all.observe({
+  entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server'],
+});
 
 const observe_frame = new PerformanceObserver((list, obs) => {
   const perfEntries = list.getEntries();
