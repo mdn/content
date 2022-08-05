@@ -34,15 +34,11 @@ Note, however, that this isn't as safe as outright rejecting redirects if they'r
 
 ```js
 fetch("awesome-picture.jpg").then((response) => {
-  let elem = document.getElementById("warning-message-box");
-  if (response.redirected) {
-    elem.innerHTML = "Unexpected redirect";
-  } else {
-    elem.innerHTML = "";
-  }
+  const elem = document.getElementById("warning-message-box");
+  elem.textContent = response.redirected ? "Unexpected redirect" : "";
   return response.blob();
 }).then((imageBlob) => {
-  let imgObjectURL = URL.createObjectURL(imageBlob);
+  const imgObjectURL = URL.createObjectURL(imageBlob);
   document.getElementById("img-element-id").src = imgObjectURL;
 });
 ```
@@ -55,7 +51,7 @@ Because using redirected to manually filter out redirects can allow forgery of r
 fetch("awesome-picture.jpg", { redirect: "error" }).then((response) => {
   return response.blob();
 }).then((imageBlob) => {
-  let imgObjectURL = URL.createObjectURL(imageBlob);
+  const imgObjectURL = URL.createObjectURL(imageBlob);
   document.getElementById("img-element-id").src = imgObjectURL;
 });
 ```
