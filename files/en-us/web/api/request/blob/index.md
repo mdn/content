@@ -34,7 +34,10 @@ A promise that resolves with a {{domxref("Blob")}}.
 
 ```js
 const obj = { hello: 'world' };
-const myBlob = new Blob([JSON.stringify(obj, null, 2)], { type : 'application/json' });
+const myBlob = new Blob(
+  [JSON.stringify(obj, null, 2)],
+  { type : 'application/json' },
+);
 
 const request = new Request('/myEndpoint', {
   method: 'POST',
