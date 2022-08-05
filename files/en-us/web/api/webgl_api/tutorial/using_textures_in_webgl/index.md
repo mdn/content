@@ -99,9 +99,15 @@ Again, with these parameters, compatible WebGL devices will automatically accept
 
 To load the image, add a call to our `loadTexture()` function within our `main()` function. This can be added after the `initBuffers(gl)` call.
 
+But also note: Browsers copy pixels from the loaded image in top-to-bottom order — from the top-left corner; but WebGL wants the pixels in bottom-to-top order — starting from the bottom-left corner. (For more details, see [Why is my WebGL texture upside-down?](https://jameshfisher.com/2020/10/22/why-is-my-webgl-texture-upside-down/).)
+
+So in order to prevent the resulting image texture from having the wrong orientation when rendered, we also need call [`pixelStorei()`](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei) with the `gl.UNPACK_FLIP_Y_WEBGL` parameter set to `true` — to cause the pixels to be flipped into the bottom-to-top order that WebGL expects.
+
 ```js
 // Load texture
 const texture = loadTexture(gl, 'cubetexture.png');
+// Flip image pixels into the bottom-to-top order that WebGL expects.
+gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 ```
 
 ## Mapping the texture onto the faces
