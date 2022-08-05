@@ -61,7 +61,7 @@ navigator.requestMIDIAccess().then((access) => {
   // Get lists of available MIDI controllers
   const inputs = access.inputs.values();
   const outputs = access.outputs.values();
-
+  // …
 });
 ```
 
