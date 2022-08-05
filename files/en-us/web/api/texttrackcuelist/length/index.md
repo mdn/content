@@ -49,9 +49,9 @@ Somebody must've stolen the crown jewels
 ```
 
 ```js
-let video = document.getElementById("video");
+const video = document.getElementById("video");
 video.onplay = () => {
-  console.log(video.textTracks[0].cues.length) //5;
+  console.log(video.textTracks[0].cues.length); // 5
 }
 ```
 
