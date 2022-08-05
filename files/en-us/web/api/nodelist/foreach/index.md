@@ -80,33 +80,6 @@ The above code results in the following:
 [object HTMLSpanElement], 2, myThisArg
 ```
 
-## Polyfill
-
-This {{Glossary("Polyfill","polyfill")}} adds compatibility to all Browsers supporting
-[ES5](https://caniuse.com/#search=es5):
-
-```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = (callback, thisArg) => {
-        thisArg = thisArg || window;
-        for (let i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
-    };
-}
-```
-
-OR
-
-```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-   NodeList.prototype.forEach = Array.prototype.forEach;
-}
-```
-
-The above behavior is how many browsers actually implement
-`NodeList.prototype.forEach()` (Chrome, for example).
-
 ## Specifications
 
 {{Specifications}}
