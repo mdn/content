@@ -78,7 +78,8 @@ const observe_all = new PerformanceObserver((list, obs) => {
   perfEntries = list.getEntriesByType("mark");
   perfEntries.forEach((entry) => print_perf_entry(perfEntries[i]));
 });
-// subscribe to all performance event types
+
+// Subscribe to all performance event types
 observe_all.observe({ entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server'] });
 
 const observe_frame = new PerformanceObserver((list, obs) => {
