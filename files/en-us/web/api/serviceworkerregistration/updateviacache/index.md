@@ -39,11 +39,11 @@ if ('serviceWorker' in navigator) {
     registration.addEventListener('updatefound', () => {
       // If updatefound is fired, it means that there's
       // a new service worker being installed.
-      console.log('Value of updateViaCache:', registration.updateViaCache);
+      console.log(`Value of updateViaCache: ${registration.updateViaCache}`);
     });
   })
   .catch((error) => {
-    console.log('Service worker registration failed:', error);
+    console.error(`Service worker registration failed: ${error}`);
   });
 }
 ```
