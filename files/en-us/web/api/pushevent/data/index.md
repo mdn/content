@@ -42,9 +42,7 @@ self.addEventListener('push', (event) => {
   });
 
   notification.addEventListener('click', () => {
-    if (clients.openWindow) {
-      clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
-    }
+    clients?.openWindow('https://example.blog.com/2015/03/04/something-new.html');
   });
 });
 ```
