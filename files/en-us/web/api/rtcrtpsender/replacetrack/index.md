@@ -116,7 +116,7 @@ navigator.mediaDevices
     });
   })
   .catch((err) => {
-    console.error(`Error happens: ${err}`);
+    console.error(`Error happened: ${err}`);
   });
 ```
 
