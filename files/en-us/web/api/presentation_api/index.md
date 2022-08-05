@@ -88,11 +88,9 @@ Example codes below highlight the usage of main features of the Presentation API
   presentBtn.onclick = () => {
     // Start new presentation.
     request.start()
-      // The connection to the presentation will be passed to setConnection on
-      // success.
-      .then(setConnection);
-      // Otherwise, the user canceled the selection dialog or no screens were
-      // found.
+      // The connection to the presentation will be passed to setConnection on success.
+      .then(setConnection);      
+      // Otherwise, the user canceled the selection dialog or no screens were found.
   };
 </script>
 ```
@@ -153,16 +151,16 @@ Example codes below highlight the usage of main features of the Presentation API
   const disconnectBtn = document.querySelector("#disconnectBtn");
 
   stopBtn.onclick = () => {
-    connection && connection.terminate();
+    connection?.terminate();
   };
 
   disconnectBtn.onclick = () => {
-    connection && connection.close();
+    connection?.close();
   };
 
   function setConnection(newConnection) {
     // Disconnect from existing presentation, if not attempting to reconnect
-    if (connection && connection !== newConnection && connection.state !== 'closed') {
+    if (connection !== newConnection && connection?.state !== 'closed') {
       connection.onclosed = undefined;
       connection.close();
     }
@@ -217,7 +215,7 @@ Example codes below highlight the usage of main features of the Presentation API
 ```html
 <!-- presentation.html -->
 <script>
-  const addConnection = (connection) => {
+  const addConnection = function (connection) {
     this.onmessage = (message) => {
       if (message.data === "say hello")
         this.send("hello");
