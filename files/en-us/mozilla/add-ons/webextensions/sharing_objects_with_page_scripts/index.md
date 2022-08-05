@@ -194,20 +194,6 @@ Now page scripts see a new property on the window, `messenger`, which has a func
 window.messenger.notify("Message from the page script!");
 ```
 
-In the special case of a Promise, which is not supported by [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), the desired result can be achieved using `window.Promise` instead of `Promise`, and then cloning the resolution value with `cloneInto` like this:
-
-```js
-let promise = new window.Promise(resolve => {
-  // if just a primitive, then cloneInto is not needed:
-  // resolve("string is a primitive");
-
-  // if not a primitive, such as an object, then the value must be cloned
-  let result = { exampleKey: "exampleValue" };
-  resolve(cloneInto(result, window));
-});
-// now promise can be passed to the web page.
-```
-
 ### Constructors from the page context
 
 On the xrayed window object pristine constructors for some built-in JavaScript objects such as `Object`, `Function` or `Proxy` and various DOM classes are available. `XMLHttpRequest` does not behave in this way, see the [XHR and fetch](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch) section for details. They will create instances belonging to the page global's object hierarchy and then return an xray wrapper.
@@ -274,4 +260,20 @@ window.eval(`
 `);
 
 document.dispatchEvent(ev); // true, undefined, "unwrapped", "propC"
+```
+
+### Promise cloning
+
+A Promise cannot be cloned directly using `cloneInto`, as Promise is not supported by the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). However, the desired result can be achieved using `window.Promise` instead of `Promise`, and then cloning the resolution value like this:
+
+```js
+let promise = new window.Promise(resolve => {
+  // if just a primitive, then cloneInto is not needed:
+  // resolve("string is a primitive");
+
+  // if not a primitive, such as an object, then the value must be cloned
+  let result = { exampleKey: "exampleValue" };
+  resolve(cloneInto(result, window));
+});
+// now the promise can be passed to the web page
 ```
