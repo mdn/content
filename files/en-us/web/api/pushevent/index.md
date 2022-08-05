@@ -46,10 +46,7 @@ self.addEventListener('push', (event) => {
     return;
   }
 
-  let data = {};
-  if (event.data) {
-    data = event.data.json();
-  }
+  const data = event.data?.json() || {};
   const title = data.title || "Something Has Happened";
   const message = data.message || "Here's something you might want to check out.";
   const icon = "images/new-notification.png";
@@ -61,9 +58,7 @@ self.addEventListener('push', (event) => {
   });
 
   notification.addEventListener('click', () => {
-    if (clients.openWindow) {
-      clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
-    }
+    clients?.openWindow('https://example.blog.com/2015/03/04/something-new.html');
   });
 });
 ```
