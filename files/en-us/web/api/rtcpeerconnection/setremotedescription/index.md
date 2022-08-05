@@ -211,19 +211,13 @@ function handleOffer(msg) {
 
   myPeerConnection
     .setRemoteDescription(msg.description)
-    .then(() => {
-      return navigator.mediaDevices.getUserMedia(mediaConstraints);
-    })
+    .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
     .then((stream) => {
       document.getElementById("local_video").srcObject = stream;
       return myPeerConnection.addStream(stream);
     })
-    .then(() => {
-      return myPeerConnection.createAnswer();
-    })
-    .then((answer) => {
-      return myPeerConnection.setLocalDescription(answer);
-    })
+    .then(() => myPeerConnection.createAnswer())
+    .then((answer) => myPeerConnection.setLocalDescription(answer))
     .then(() => {
       // Send the answer to the remote peer using the signaling server
     })
