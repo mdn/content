@@ -25,7 +25,7 @@ In the example below the value of `applicationServerKey` is printed to the conso
 ```css
 navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
-    let options = subscription.options;
+    const options = subscription.options;
     console.log(options.applicationServerKey); // the public key
   })
 });
