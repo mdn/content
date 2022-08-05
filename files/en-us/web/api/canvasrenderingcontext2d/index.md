@@ -295,28 +295,28 @@ Most of these APIs are [deprecated and were removed shortly after Chrome 36](htt
 
 ### WebKit only
 
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.webkitBackingStorePixelRatio`
+- `CanvasRenderingContext2D.webkitBackingStorePixelRatio` {{non-standard_inline}} {{deprecated_inline}} 
   - : The backing store size in relation to the canvas element. See [High DPI Canvas](https://www.html5rocks.com/en/tutorials/canvas/hidpi/).
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.webkitGetImageDataHD`
+- `CanvasRenderingContext2D.webkitGetImageDataHD` {{non-standard_inline}} {{deprecated_inline}}
   - : Intended for HD backing stores, but removed from canvas specifications.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`
+- `CanvasRenderingContext2D.webkitPutImageDataHD` {{non-standard_inline}} {{deprecated_inline}}
   - : Intended for HD backing stores, but removed from canvas specifications.
 
 ### Gecko only
 
 #### Prefixed APIs
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
+- `CanvasRenderingContext2D.mozImageSmoothingEnabled` {{non-standard_inline}}
   - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`
+- `CanvasRenderingContext2D.mozTextStyle` {{non-standard_inline}} {{deprecated_inline}}
   - : Introduced in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDrawText()`
+- `CanvasRenderingContext2D.mozDrawText()` {{non-standard_inline}} {{deprecated_inline}}
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.strokeText()")}} or {{domxref("CanvasRenderingContext2D.fillText()")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozMeasureText()`
+- `CanvasRenderingContext2D.mozMeasureText()` {{non-standard_inline}} {{deprecated_inline}}
   - : This method was introduced in Gecko 1.9 and is unimplemented starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.measureText()")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozPathText()`
+- `CanvasRenderingContext2D.mozPathText()` {{non-standard_inline}} {{deprecated_inline}}
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextAlongPath()`
+- `CanvasRenderingContext2D.mozTextAlongPath()` {{non-standard_inline}} {{deprecated_inline}}
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
 
 #### Internal APIs (chrome-context only)
@@ -328,7 +328,7 @@ Most of these APIs are [deprecated and were removed shortly after Chrome 36](htt
 
 ### Internet Explorer
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.msFillRule`
+- `CanvasRenderingContext2D.msFillRule` {{non-standard_inline}}
   - : The [fill rule](https://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 
 ## Specifications
