@@ -21,8 +21,8 @@ Using the API is as simple as obtaining the {{domxref("Performance")}} object us
 
 ```js
 window.addEventListener("load", () => {
-  let now = new Date().getTime();
-  let loadingTime = now - performance.timing.navigationStart;
+  const now = new Date().getTime();
+  const loadingTime = now - performance.timing.navigationStart;
 
   document.querySelector(".output").innerText = `${loadingTime} ms`;
 }, false);
@@ -64,10 +64,10 @@ Let's add this information to the example above. The new code looks like this:
 
 ```js
 window.addEventListener("load", () => {
-  let now = new Date().getTime();
-  let loadingTime = now - performance.timing.navigationStart;
+  const now = new Date().getTime();
+  const loadingTime = now - performance.timing.navigationStart;
 
-  output = `Load time: ${loadingTime} ms<br/>`;
+  let output = `Load time: ${loadingTime} ms<br/>`;
   output += "Navigation type: ";
 
   switch(performance.navigation.type) {
