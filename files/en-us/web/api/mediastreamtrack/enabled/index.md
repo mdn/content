@@ -14,7 +14,7 @@ tags:
   - enabled
 browser-compat: api.MediaStreamTrack.enabled
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`enabled`** property on the
 {{domxref("MediaStreamTrack")}} interface is a Boolean value which is

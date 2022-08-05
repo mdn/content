@@ -154,15 +154,15 @@ Some things to note when working with type conversion of Symbols.
 Symbols are not enumerable in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) iterations. In addition, {{jsxref("Object.getOwnPropertyNames()")}} will not return Symbol object properties, however, you can use {{jsxref("Object.getOwnPropertySymbols()")}} to get these.
 
 ```js
-let obj = {}
+const obj = {};
 
-obj[Symbol('a')] = 'a'
-obj[Symbol.for('b')] = 'b'
-obj['c'] = 'c'
-obj.d = 'd'
+obj[Symbol('a')] = 'a';
+obj[Symbol.for('b')] = 'b';
+obj['c'] = 'c';
+obj.d = 'd';
 
-for (let i in obj) {
-   console.log(i)  // logs "c" and "d"
+for (const i in obj) {
+  console.log(i); // logs "c" and "d"
 }
 ```
 
@@ -171,7 +171,7 @@ for (let i in obj) {
 Symbol-keyed properties will be completely ignored when using `JSON.stringify()`:
 
 ```js
-JSON.stringify({[Symbol('foo')]: 'foo'})
+JSON.stringify({ [Symbol('foo')]: 'foo' })
 // '{}'
 ```
 
@@ -182,8 +182,8 @@ For more details, see {{jsxref("JSON.stringify()")}}.
 When a Symbol wrapper object is used as a property key, this object will be coerced to its wrapped Symbol:
 
 ```js
-let sym = Symbol('foo')
-let obj = {[sym]: 1}
+const sym = Symbol('foo');
+const obj = {[sym]: 1};
 obj[sym]             // 1
 obj[Object(sym)]     // still 1
 ```

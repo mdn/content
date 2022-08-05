@@ -65,8 +65,8 @@ precedence.
       <td>
         <pre class="brush: js">
 function echo(name, num) {
-    console.log("Evaluating the " + name + " side");
-    return num;
+  console.log("Evaluating the " + name + " side");
+  return num;
 }
 // Notice the division operator (/)
 console.log(echo("left", 6) / echo("right", 2));
@@ -86,8 +86,8 @@ Evaluating the right side
       <td>
         <pre class="brush: js">
 function echo(name, num) {
-    console.log("Evaluating the " + name + " side");
-    return num;
+  console.log("Evaluating the " + name + " side");
+  return num;
 }
 // Notice the exponentiation operator (**)
 console.log(echo("left", 2) ** echo("right", 3));</pre
@@ -120,8 +120,8 @@ are used.
       <td>
         <pre class="brush: js">
 function echo(name, num) {
-    console.log("Evaluating the " + name + " side");
-    return num;
+  console.log("Evaluating the " + name + " side");
+  return num;
 }
 // Notice the division operator (/)
 console.log(echo("left", 6) / echo("middle", 2) / echo("right", 3));
@@ -142,8 +142,8 @@ Evaluating the right side
       <td>
         <pre class="brush: js">
 function echo(name, num) {
-    console.log("Evaluating the " + name + " side");
-    return num;
+  console.log("Evaluating the " + name + " side");
+  return num;
 }
 // Notice the exponentiation operator (**)
 console.log(echo("left", 2) ** echo("middle", 3) ** echo("right", 2));
@@ -164,8 +164,8 @@ Evaluating the right side
       <td>
         <pre class="brush: js">
 function echo(name, num) {
-    console.log("Evaluating the " + name + " side");
-    return num;
+  console.log("Evaluating the " + name + " side");
+  return num;
 }
 // Notice the parentheses around the left and middle exponentiation
 console.log((echo("left", 2) ** echo("middle", 3)) ** echo("right", 2));</pre

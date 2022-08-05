@@ -28,7 +28,7 @@ function setupVideo(url) {
   let playing = false;
   let timeupdate = false;
 
-  video.autoplay = true;
+  video.playsInline = true;
   video.muted = true;
   video.loop = true;
 

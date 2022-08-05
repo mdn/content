@@ -56,8 +56,8 @@ method call like below:
 ```js
 // Add new elements to the map with chaining.
 myMap.set('bar', 'foo')
-     .set(1, 'foobar')
-     .set(2, 'baz');
+  .set(1, 'foobar')
+  .set(2, 'baz');
 ```
 
 ## Specifications

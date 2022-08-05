@@ -160,22 +160,6 @@ Most macros will also take a second argument allowing you to change the display 
         <code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}
       </td>
     </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/event.ejs">Event</a>.
-      </td>
-      <td>
-        <a href="/en-US/docs/Web/Events">Events reference</a> (/Web/Events)
-      </td>
-      <td>
-        <div class="note">
-          <p>
-            <strong>Note:</strong> This macro is not particularly useful because events are now under their associated DOM element.
-            So to link to the wheel event you would use<code>\{{DOMxRef("Document.wheel_event")}}</code>:
-            {{DOMxRef("Document.wheel_event")}}
-          </p>
-        </div>
-      </td>
     </tr>
   </tbody>
 </table>

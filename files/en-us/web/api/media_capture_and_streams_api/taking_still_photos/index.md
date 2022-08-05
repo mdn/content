@@ -1,6 +1,6 @@
 ---
 title: Taking still photos with getUserMedia()
-slug: Web/API/Media_Streams_API/Taking_still_photos
+slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 tags:
   - API
   - Advanced
@@ -13,7 +13,6 @@ tags:
   - MediaDevices
   - getusermedia
   - webcam
-page-type: guide
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 

@@ -120,12 +120,12 @@ const uint8 = new Uint8Array([0,1,,,,5,6]);
 
 // Iterate through the elements in reverse order.
 // Note that all elements are visited.
-uint8.findLast(function(value, index) {
+uint8.findLast((value, index) => {
   console.log(`Visited index ${index} with value ${value}`);
 });
 
 // Shows all indexes, including deleted
-uint8.findLast(function(value, index) {
+uint8.findLast((value, index) => {
   // Modify element 3 on first iteration
   if (index === 6) {
     console.log("Set uint8[3] to 44");

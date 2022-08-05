@@ -47,21 +47,23 @@ mySet.delete('foo'); // Returns true. Successfully removed.
 mySet.has('foo');    // Returns false. The "foo" element is no longer present.
 ```
 
-Let's check out below how to delete an Object from a Set.
+### Deleting an object from a set
+
+Because objects are compared by reference, you have to delete them by checking individual properties if you don't have a reference to the original object.
 
 ```js
-const setObj = new Set();   // Create a new set.
+const setObj = new Set(); // Create a new set.
 
-setObj.add({x: 10, y: 20}); // Add object in the set.
+setObj.add({ x: 10, y: 20 }); // Add object in the set.
 
-setObj.add({x: 20, y: 30}); // Add object in the set.
+setObj.add({ x: 20, y: 30 }); // Add object in the set.
 
 // Delete any point with `x > 10`.
-setObj.forEach(function(point){
-  if (point.x > 10){
-    setObj.delete(point)
+setObj.forEach((point) => {
+  if (point.x > 10) {
+    setObj.delete(point);
   }
-})
+});
 ```
 
 ## Specifications

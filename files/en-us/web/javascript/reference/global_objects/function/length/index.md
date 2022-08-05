@@ -28,14 +28,14 @@ Due to historical reasons, `Function.prototype` is a callable itself. The `lengt
 ```js
 console.log(Function.length); /* 1 */
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 etc. */
+console.log((() => {}).length); /* 0 */
+console.log(((a) => {}).length); /* 1 */
+console.log(((a, b) => {}).length); /* 2 etc. */
 
-console.log((function(...args) {}).length);
+console.log(((...args) => {}).length);
 // 0, rest parameter is not counted
 
-console.log((function(a, b = 1, c) {}).length);
+console.log(((a, b = 1, c) => {}).length);
 // 1, only parameters before the first one with
 // a default value are counted
 ```

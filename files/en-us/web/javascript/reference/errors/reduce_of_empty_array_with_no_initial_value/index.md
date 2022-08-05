@@ -49,7 +49,7 @@ value.
 ```js example-bad
 const ints = [0, -1, -2, -3, -4, -5];
 ints.filter((x) => x > 0)       // removes all elements
-    .reduce((x, y) => x + y)    // no more elements to use for the initial value.
+  .reduce((x, y) => x + y)    // no more elements to use for the initial value.
 ```
 
 Similarly, the same issue can happen if there is a typo in a selector, or an unexpected
@@ -71,7 +71,7 @@ a concatenation.
 ```js example-good
 const ints = [0, -1, -2, -3, -4, -5];
 ints.filter((x) => x > 0)       // removes all elements
-    .reduce((x, y) => x + y, 0) // the initial value is the neutral element of the addition
+  .reduce((x, y) => x + y, 0) // the initial value is the neutral element of the addition
 ```
 
 Another way would be to handle the empty case, either before calling

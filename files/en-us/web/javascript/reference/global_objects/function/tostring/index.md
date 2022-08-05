@@ -109,21 +109,21 @@ Since ES2018, the spec requires the return value of `toString()` to be the exact
       <td>
         <pre class="brush: js">
 Object.getOwnPropertyDescriptor({
-    get a(){}
+  get a() {}
 }, "a").get</pre
         >
       </td>
-      <td><pre class="brush: js">"get a(){}"</pre></td>
+      <td><pre class="brush: js">"get a() {}"</pre></td>
     </tr>
     <tr>
       <td>
         <pre class="brush: js">
 Object.getOwnPropertyDescriptor({
-    set a(x){}
+  set a(x) {}
 }, "a").set</pre
         >
       </td>
-      <td><pre class="brush: js">"set a(x){}"</pre></td>
+      <td><pre class="brush: js">"set a(x) {}"</pre></td>
     </tr>
     <tr>
       <td><pre class="brush: js">Function.prototype.toString</pre></td>

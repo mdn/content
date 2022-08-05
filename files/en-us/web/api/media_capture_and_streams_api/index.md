@@ -1,7 +1,6 @@
 ---
 title: Media Capture and Streams API (Media Stream)
-slug: Web/API/Media_Streams_API
-page-type: web-api-overview
+slug: Web/API/Media_Capture_and_Streams_API
 tags:
   - API
   - Audio
@@ -11,8 +10,9 @@ tags:
   - Overview
   - Video
 browser-compat: api.MediaStream
+page-type: web-api-overview
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **Media Capture and Streams** API, often called the **Media Streams API** or **MediaStream API**, is an API related to [WebRTC](/en-US/docs/Web/API/WebRTC_API) which provides support for streaming audio and video data.
 
@@ -20,7 +20,7 @@ It provides the interfaces and methods for working with the streams and their co
 
 ## Concepts and usage
 
-The API is based on the manipulation of a {{domxref("MediaStream")}} object representing a flux of audio- or video-related data. See an example in [Get the media stream](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos#the_startup_function).
+The API is based on the manipulation of a {{domxref("MediaStream")}} object representing a flux of audio- or video-related data. See an example in [Get the media stream](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos#the_startup_function).
 
 A `MediaStream` consists of zero or more {{domxref("MediaStreamTrack")}} objects, representing various audio or video **tracks**. Each `MediaStreamTrack` may have one or more **channels**. The channel represents the smallest unit of a media stream, such as an audio signal associated with a given speaker, like _left_ or _right_ in a stereo audio track.
 
@@ -63,9 +63,9 @@ Early versions of the Media Capture and Streams API specification included separ
 
 ## Guides and tutorials
 
-The [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) article discusses the concepts of **constraints** and **capabilities**, as well as media settings, and includes a [Constraint Exerciser](/en-US/docs/Web/API/Media_Streams_API/Constraints#example_constraint_exerciser) that lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
+The [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) article discusses the concepts of **constraints** and **capabilities**, as well as media settings, and includes a [Constraint Exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) that lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
 
-The [Taking still photos with getUserMedia()](/en-US/docs/Web/API/Media_Streams_API/Taking_still_photos) article shows how to use [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) to access the camera on a computer or mobile phone with `getUserMedia()` support and take a photo with it.
+The [Taking still photos with getUserMedia()](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) article shows how to use [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) to access the camera on a computer or mobile phone with `getUserMedia()` support and take a photo with it.
 
 ## Browser compatibility
 
@@ -75,4 +75,4 @@ The [Taking still photos with getUserMedia()](/en-US/docs/Web/API/Media_Streams_
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
 - {{domxref("mediaDevices.getUserMedia()")}}
-- [Taking still photos with WebRTC](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos): a demonstration and tutorial about using `getUserMedia()`.
+- [Taking still photos with WebRTC](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos): a demonstration and tutorial about using `getUserMedia()`.

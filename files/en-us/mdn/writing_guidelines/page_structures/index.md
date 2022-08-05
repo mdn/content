@@ -1,5 +1,5 @@
 ---
-title: Document structures
+title: Page structures
 slug: MDN/Writing_guidelines/Page_structures
 tags:
   - Landing

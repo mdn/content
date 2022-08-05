@@ -33,7 +33,7 @@ where `x` is a number.
 
 ```js
 function square(x) {
-   return x * x;
+  return x * x;
 }
 const demo = square(3);
 // demo will equal 9

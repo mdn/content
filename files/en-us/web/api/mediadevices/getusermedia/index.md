@@ -18,7 +18,7 @@ tags:
   - getusermedia
 browser-compat: api.MediaDevices.getUserMedia
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Media Capture and Streams")}}
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaDevices")}}**`.getUserMedia()`** method prompts the user for permission to use a media input which produces a {{domxref("MediaStream")}} with tracks containing the requested types of media.
 

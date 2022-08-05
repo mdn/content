@@ -73,7 +73,7 @@ A JSON string representing the given value, or undefined.
   valid JSON values. If any such values are encountered during conversion they are
   either omitted (when found in an object) or changed to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (when found
   in an array). `JSON.stringify()` can return `undefined` when
-  passing in "pure" values like `JSON.stringify(function() {})` or
+  passing in "pure" values like `JSON.stringify(() => {})` or
   `JSON.stringify(undefined)`.
 - All {{JSxRef("Symbol")}}-keyed properties will be completely ignored, even when
   using the `replacer` function.
@@ -256,14 +256,11 @@ For example:
 
 ```js
 const obj = {
-    data: 'data',
+  data: 'data',
 
-    toJSON (key) {
-        if (key)
-            return `Now I am a nested object under key '${key}'`;
-        else
-            return this;
-    }
+  toJSON(key) {
+    return key ? `Now I am a nested object under key '${key}'` : this;
+  },
 };
 
 JSON.stringify(obj);
@@ -312,19 +309,20 @@ utility can be used:
 
 ```js
 function jsFriendlyJSONStringify (s) {
-    return JSON.stringify(s).
-        replace(/\u2028/g, '\\u2028').
-        replace(/\u2029/g, '\\u2029');
+  return JSON.stringify(s)
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
 }
 
 const s = {
-    a: String.fromCharCode(0x2028),
-    b: String.fromCharCode(0x2029)
+  a: String.fromCharCode(0x2028),
+  b: String.fromCharCode(0x2029),
 };
+
 try {
-    eval('(' + JSON.stringify(s) + ')');
+  eval('(' + JSON.stringify(s) + ')');
 } catch (e) {
-    console.log(e); // "SyntaxError: unterminated string literal"
+  console.log(e); // "SyntaxError: unterminated string literal"
 }
 
 // No need for a catch

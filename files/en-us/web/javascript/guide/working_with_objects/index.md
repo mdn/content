@@ -483,8 +483,8 @@ Getters and setters can also be added to an object at any time after creation us
 const myObj = { a: 0 };
 
 Object.defineProperties(myObj, {
-     'b': { get() { return this.a + 1; } },
-     'c': { set(x) { this.a = x / 2; } }
+  b: { get() { return this.a + 1; } },
+  c: { set(x) { this.a = x / 2; } },
 });
 
 myObj.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property

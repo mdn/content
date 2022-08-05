@@ -52,7 +52,7 @@ You can check that the method is supported by comparing to `undefined`:
 
 ```js
 if (typeof Intl.supportedValuesOf !== 'undefined') {
-  //method is supported
+  // method is supported
 }
 ```
 
@@ -62,8 +62,8 @@ To get the supported values for calendar you call the method with the key `"cale
 You can then iterate through the returned array as shown below:
 
 ```js
-Intl.supportedValuesOf("calendar").forEach(function(calendar) {
-   // "buddhist", "chinese", "coptic", "dangi", etc.
+Intl.supportedValuesOf("calendar").forEach((calendar) => {
+  // "buddhist", "chinese", "coptic", "dangi", etc.
 });
 ```
 
@@ -72,24 +72,24 @@ Intl.supportedValuesOf("calendar").forEach(function(calendar) {
 The other values are all obtained in the same way:
 
 ```js
-Intl.supportedValuesOf("collation").forEach(function(collation) {
-   // "big5han", "compat", "dict", "emoji", etc.
+Intl.supportedValuesOf("collation").forEach((collation) => {
+  // "big5han", "compat", "dict", "emoji", etc.
 });
 
-Intl.supportedValuesOf("currency").forEach(function(currency) {
-   // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", etc.
+Intl.supportedValuesOf("currency").forEach((currency) => {
+  // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", etc.
 });
 
-Intl.supportedValuesOf("numberingSystem").forEach(function(numberingSystem) {
-   // "adlm", "ahom", "arab", "arabext", "bali", etc.
+Intl.supportedValuesOf("numberingSystem").forEach((numberingSystem) => {
+  // "adlm", "ahom", "arab", "arabext", "bali", etc.
 });
 
-Intl.supportedValuesOf("timeZone").forEach(function(timeZone) {
-   // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", etc.
+Intl.supportedValuesOf("timeZone").forEach((timeZone) => {
+  // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", etc.
 });
 
-Intl.supportedValuesOf("unit").forEach(function(unit) {
-   // "acre", "bit", "byte", "celsius", "centimeter", etc.
+Intl.supportedValuesOf("unit").forEach((unit) => {
+  // "acre", "bit", "byte", "celsius", "centimeter", etc.
 });
 ```
 

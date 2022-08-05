@@ -111,7 +111,7 @@ which could be part of a URL (such as a host), the following code snippet may he
 
 ```js
 function fixedEncodeURI(str) {
-    return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
+  return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
 }
 ```
 
