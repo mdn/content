@@ -31,7 +31,7 @@ const rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
 
 const rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
 
-rect2.bind("EnterFrame", function() {
+rect2.bind("EnterFrame", function () {
     if (rect1.x < rect2.x + rect2.w &&
         rect1.x + rect1.w > rect2.x &&
         rect1.y < rect2.y + rect2.h &&
