@@ -71,7 +71,7 @@ Here's a look at working examples and best practices in building accessible Java
 
   [conformant](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/table)
 
-  [ lightbox application](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox)
+  [lightbox application](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox)
 
 - http://majx-js.digissime.net/js/popin/
 
