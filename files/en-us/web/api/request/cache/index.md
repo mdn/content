@@ -87,7 +87,7 @@ fetch("some.json", { cache: "only-if-cached", mode: "same-origin", signal: contr
       return fetch("some.json", { cache: "force-cache", mode: "same-origin", signal: controller.signal })
     }
     const date = res.headers.get("date"), dt = date ? new Date(date).getTime() : 0
-    if (dt < (Date.now() - 86_400_000)) {
+    if (dt < Date.now() - 86_400_000) {
       // if older than 24 hours
       controller.abort()
       controller = new AbortController();
