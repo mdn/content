@@ -31,7 +31,7 @@ Calling {{domxref("PushSubscription.options")}} on a {{domxref("PushSubscription
 ```js
 navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
-    let options = subscription.options;
+    const options = subscription.options;
     console.log(options); // a PushSubscriptionOptions object
   })
 });
