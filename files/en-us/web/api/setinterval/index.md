@@ -239,7 +239,7 @@ requests that won't necessarily return in order.
 In these cases, a recursive `setTimeout()` pattern is preferred:
 
 ```js
-(function loop(){
+(function loop() {
    setTimeout(() => {
       // Your logic here
 
