@@ -47,7 +47,7 @@ navigator.serviceWorker.register('serviceworker.js').then(
         // console. In a production environment it might make sense to
         // also report information about errors back to the
         // application server.
-        console.log(error);
+        console.error(error);
       }
     );
   });
