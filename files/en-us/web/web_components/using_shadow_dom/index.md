@@ -34,7 +34,7 @@ This article assumes you are already familiar with the concept of the [DOM (Docu
 
 This fragment produces the following DOM structure:
 
-![DOM Tree with elements and text nodes, content of non empty text nodes, inluding element's attribute names and contents ](dom-screenshot.png)
+![DOM Tree with elements and text nodes, content of non empty text nodes, including element's attribute names and contents ](dom-screenshot.png)
 
 _Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which you can attach any element, in the same way as the normal DOM.
 
