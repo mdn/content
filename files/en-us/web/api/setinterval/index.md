@@ -176,7 +176,7 @@ is the same for both timers):
 myArray = ['zero', 'one', 'two'];
 
 myArray.myMethod = (sProperty) => {
-    alert(arguments.length > 0 ? this[sProperty] : this);
+    alert(arguments.length > 0 ? myArray[sProperty] : myArray);
 };
 
 myArray.myMethod(); // prints "zero,one,two"
