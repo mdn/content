@@ -66,7 +66,7 @@ if ('serviceWorker' in navigator) {
                 // logState(e.target.state);
             });
         }
-    }).catch ((error) => {
+    }).catch((error) => {
         // Something went wrong during registration. The service-worker.js file
         // might be unavailable or contain a syntax error.
     });
