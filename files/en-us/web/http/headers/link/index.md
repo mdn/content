@@ -23,7 +23,7 @@ Link: <uri-reference>; param1=value1; param2="value2"
 ```
 
 - `<uri-reference>`
-  - : The URI reference, must be enclosed between `<` and `>` and encoded.
+  - : The URI reference, must be enclosed between `<` and `>` and [percent encoded](/en-US/docs/Glossary/percent-encoding).
 
 ### Parameters
 
