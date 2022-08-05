@@ -37,7 +37,8 @@ You can set up a listener for the `cuechange` event on a `TextTrack` using the {
 
 ```js
 track.addEventListener('cuechange', () => {
-  let cues = track.activeCues;  // array of current cues
+  const cues = track.activeCues;  // array of current cues
+  // …
 });
 ```
 
