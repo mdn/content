@@ -17,8 +17,8 @@ browser-compat: javascript.builtins.Promise.any
 
 ## Syntax
 
-```
-Promise.any(iterable);
+```js
+Promise.any(iterable)
 ```
 
 ### Parameters
@@ -72,7 +72,7 @@ const pFast = new Promise((resolve, reject) => {
 Promise.any([pErr, pSlow, pFast]).then((value) => {
   console.log(value);
   // pFast fulfills first
-})
+});
 // expected output: "Done quick"
 ```
 
@@ -82,12 +82,12 @@ Promise.any([pErr, pSlow, pFast]).then((value) => {
 
 ```js
 const pErr = new Promise((resolve, reject) => {
-  reject('Always fails');
+  reject("Always fails");
 });
 
 Promise.any([pErr]).catch((err) => {
   console.log(err);
-})
+});
 // expected output: "AggregateError: No Promise in Promise.any was resolved"
 ```
 
@@ -98,26 +98,27 @@ In this example, we have a function that fetches an image and returns a blob. We
 ```js
 function fetchAndDecode(url) {
   return fetch(url).then((response) => {
-    if(!response.ok) {
+    if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     } else {
       return response.blob();
     }
-  })
+  });
 }
 
-let coffee = fetchAndDecode('coffee.jpg');
-let tea = fetchAndDecode('tea.jpg');
+const coffee = fetchAndDecode("coffee.jpg");
+const tea = fetchAndDecode("tea.jpg");
 
-Promise.any([coffee, tea]).then((value) => {
-  let objectURL = URL.createObjectURL(value);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-})
-.catch((e) => {
-  console.log(e.message);
-});
+Promise.any([coffee, tea])
+  .then((value) => {
+    const objectURL = URL.createObjectURL(value);
+    const image = document.createElement("img");
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch((e) => {
+    console.error(e);
+  });
 ```
 
 ## Specifications

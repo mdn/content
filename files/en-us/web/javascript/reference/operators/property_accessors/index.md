@@ -116,18 +116,20 @@ other value, including a number, is coerced to a string. This outputs
 `'value'`, since `1` is coerced into `'1'`.
 
 ```js
-let object = {}
-object['1'] = 'value'
-console.log(object[1])
+const object = {};
+object['1'] = 'value';
+console.log(object[1]);
 ```
 
 This also outputs `'value'`, since both `foo` and
 `bar` are converted to the same string.
 
 ```js
-let foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
-object[foo] = 'value'
-console.log(object[bar])
+const foo = { unique_prop: 1 };
+const bar = { unique_prop: 2 };
+const object = {};
+object[foo] = 'value';
+console.log(object[bar]);
 ```
 
 ### Method binding
@@ -140,7 +142,7 @@ See [method binding](/en-US/docs/Web/JavaScript/Reference/Operators/this#method_
 
 ## Examples
 
-### Bracket notation vs. `eval`
+### Bracket notation vs. eval()
 
 JavaScript novices often make the mistake of using {{jsxref("Global_Objects/eval", "eval()")}} where
 the bracket notation can be used instead.
@@ -148,7 +150,7 @@ the bracket notation can be used instead.
 For example, the following syntax is often seen in many scripts.
 
 ```js
-x = eval('document.forms.form_name.elements.' + strFormControl + '.value')
+x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
 ```
 
 `eval()` is slow and should be avoided whenever possible. Also,
@@ -157,7 +159,7 @@ names and `id`s of form controls. It is better to use bracket notation
 instead:
 
 ```js
-x = document.forms['form_name'].elements[strFormControl].value
+x = document.forms['form_name'].elements[strFormControl].value;
 ```
 
 ## Specifications

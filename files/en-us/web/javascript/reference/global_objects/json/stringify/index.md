@@ -108,7 +108,7 @@ JSON.stringify([new Number(3), new String('false'), new Boolean(false)]);
 // '[3,"false",false]'
 
 // String-keyed array elements are not enumerable and make no sense in JSON
-let a = ['foo', 'bar'];
+const a = ['foo', 'bar'];
 a['baz'] = 'quux';      // a: [ 0: 'foo', 1: 'bar', baz: 'quux' ]
 JSON.stringify(a);
 // '["foo","bar"]'

@@ -206,7 +206,7 @@ function* fibonacci() {
   let current = 0;
   let next = 1;
   while (true) {
-    let reset = yield current;
+    const reset = yield current;
     [current, next] = [next, next + current];
     if (reset) {
       current = 0;

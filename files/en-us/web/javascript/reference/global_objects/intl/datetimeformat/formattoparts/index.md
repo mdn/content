@@ -213,7 +213,7 @@ In cases where the `year` would be output, `.format()` may
 commonly present these side-by-side:
 
 ```js
-let df = new Intl.DateTimeFormat("zh-u-ca-chinese", {year: "numeric"});
+const df = new Intl.DateTimeFormat("zh-u-ca-chinese", {year: "numeric"});
 df.format(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
@@ -223,8 +223,8 @@ df.format(Date.UTC(2012, 11, 17, 3, 0, 42));
 This also makes it possible to mix locale and calendar in both `format`:
 
 ```js
-let df = new Intl.DateTimeFormat("en-u-ca-chinese", {year: "numeric"});
-let date = Date.UTC(2012, 11, 17, 3, 0, 42);
+const df = new Intl.DateTimeFormat("en-u-ca-chinese", { year: "numeric" });
+const date = Date.UTC(2012, 11, 17, 3, 0, 42);
 df.format(date);
 
 // return value
@@ -234,9 +234,9 @@ df.format(date);
 And `formatToParts`:
 
 ```js
-let opts = {month: 'numeric', day: 'numeric', year: "numeric"};
-let df = new Intl.DateTimeFormat("en-u-ca-chinese", opts);
-let date = Date.UTC(2012, 11, 17, 3);
+const opts = { month: "numeric", day: "numeric", year: "numeric" };
+const df = new Intl.DateTimeFormat("en-u-ca-chinese", opts);
+const date = Date.UTC(2012, 11, 17, 3);
 df.formatToParts(date)
 
 // return value

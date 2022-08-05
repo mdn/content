@@ -395,20 +395,19 @@ iterates over all the object's properties and returns a string that lists the pr
 names and their values.
 
 ```js
-function dump_props(obj, obj_name) {
+function dump_props(obj, objName) {
   let result = '';
-  for (let i in obj) {
-    result += obj_name + '.' + i + ' = ' + obj[i] + '<br>';
+  for (const i in obj) {
+    result += `${objName}.${i} = ${obj[i]}<br>`;
   }
   result += '<hr>';
   return result;
 }
 ```
 
-For an object `car` with properties `make` and
-`model`, `result` would be:
+For an object `car` with properties `make` and `model`, `result` would be:
 
-```js
+```
 car.make = Ford
 car.model = Mustang
 ```

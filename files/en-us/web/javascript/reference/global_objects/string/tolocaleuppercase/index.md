@@ -70,7 +70,7 @@ implies that the conversion is not stable, so i.E. the following can return
 
 'i\u0307'.toLocaleUpperCase('lt-LT'); // 'I'
 
-let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
+const locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
 'i\u0307'.toLocaleUpperCase(locales); // 'I'
 ```
 

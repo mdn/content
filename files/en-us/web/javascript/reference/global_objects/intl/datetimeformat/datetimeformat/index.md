@@ -268,7 +268,7 @@ In basic use without specifying a locale, `DateTimeFormat` uses the default
 locale and default options.
 
 ```js
-let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone

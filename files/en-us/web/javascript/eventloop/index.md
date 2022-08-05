@@ -29,16 +29,16 @@ Function calls form a stack of _frames_.
 
 ```js
 function foo(b) {
-  let a = 10
-  return a + b + 11
+  const a = 10;
+  return a + b + 11;
 }
 
 function bar(x) {
-  let y = 3
-  return foo(x * y)
+  const y = 3;
+  return foo(x * y);
 }
 
-const baz = bar(7) // assigns 42 to baz
+const baz = bar(7); // assigns 42 to baz
 ```
 
 Order of operations:
@@ -68,7 +68,7 @@ The **event loop** got its name because of how it's usually implemented, which u
 
 ```js
 while (queue.waitForMessage()) {
-  queue.processNextMessage()
+  queue.processNextMessage();
 }
 ```
 
@@ -100,7 +100,7 @@ setTimeout(() => {
 
 while (true) {
   if (new Date().getSeconds() - seconds >= 2) {
-    console.log("Good, looped for 2 seconds")
+    console.log("Good, looped for 2 seconds");
     break;
   }
 }

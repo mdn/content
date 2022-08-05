@@ -111,7 +111,7 @@ const a = 'foo';
 const b = 42;
 const c = {};
 
-let o = {
+const o = {
   a: a,
   b: b,
   c: c,
