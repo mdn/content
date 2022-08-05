@@ -81,7 +81,7 @@ MyElement.prototype.loadData = function (url) {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(function (res) => res.arrayBuffer()).then(function (data) => {
+    fetch(url).then(res) => res.arrayBuffer()).then((data) => {
       this._cache[url] = data;
       this._setData(data);
       this.dispatchEvent(new Event("load"));
