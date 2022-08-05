@@ -41,11 +41,6 @@ We also define a `button` that will be used to display the current style and cha
 ```html
 <button></button>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <style id="circle_style_id" media="all and (min-width: 600px)">
-    circle {
-      fill: gold;
-    }
-  </style>
   <circle cx="60" cy="60" r="50" />
 </svg>
 ```
@@ -56,7 +51,11 @@ The code below gets the `style` element (an `SVGStyleElement`) using its id.
 
 ```js
 const svg = document.getElementsByTagName("svg")[0];
-const style = svg.getElementById("circle_style_id")
+// Create the `style` element in the SVG namespace
+const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
+const node = document.createTextNode('circle { fill: red; }');
+svg.appendChild(style);
+style.appendChild(node);
 ```
 
 We then add a function to set the button text to show the current value of the style's `media` property along with the current window width.
