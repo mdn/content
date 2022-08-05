@@ -90,7 +90,7 @@ The button text shows the value of the media attribute originally applied to the
 Shrink the width of the frame to the media query width shown in the button to watch the style being applied.
 Press the button to toggle the value of the `media` property on the style (which will be reflected on the button).
 
-{{EmbedLiveSample("Disabling a style defined in the SVG")}}
+{{EmbedLiveSample("Examples")}}
 
 > **Note:** The `media` property may be set to any string, but will be ignored if the string is not a valid media query.
 
