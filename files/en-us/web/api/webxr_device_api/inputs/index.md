@@ -224,7 +224,7 @@ Another option is to use the first input the user triggers the select action on.
 ```js
 let primaryInputSource = xrSession.inputSources[0];
 
-xrSession.onselect = function(event) {
+xrSession.onselect = (event) => {
   primaryInputSource = event.inputSource;
   xrSession.onselect = realSelectHandler;
   return realSelectHandler(event);

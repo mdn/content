@@ -12,7 +12,7 @@ Alright, so you've got the microphone permissions set up. The next step is to ma
 1. Let's use the `open` event to create a listener that displays the peer's ID when it is open. Add the following code to the bottom of `script.js`:
 
     ```js
-    peer.on('open', function () {
+    peer.on('open', () => {
         window.caststatus.textContent = `Your device ID is: ${peer.id}`;
     });
     ```

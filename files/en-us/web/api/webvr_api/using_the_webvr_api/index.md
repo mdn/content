@@ -147,7 +147,7 @@ Inside our `if () { }` block, we run the {{domxref("Navigator.getVRDisplays()")}
 
 ```js
       // Then get the displays attached to the computer
-      navigator.getVRDisplays().then(function(displays) {
+      navigator.getVRDisplays().then((displays) => {
 ```
 
 Inside the promise `then()` block, we check whether the array length is more than 0; if so, we set the value of our `vrDisplay` variable to the 0 index item inside the array. `vrDisplay` now contains a {{domxref("VRDisplay")}} object representing our connected display!
@@ -175,9 +175,9 @@ Since the maximum number of layers you can display is currently 1, and the only 
 
 ```js
           // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-          btn.addEventListener('click', function() {
+          btn.addEventListener('click', () => {
             if(btn.textContent === 'Start VR display') {
-              vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+              vrDisplay.requestPresent([{ source: canvas }]).then(() => {
                 console.log('Presenting to WebVR display');
 ```
 
@@ -476,7 +476,7 @@ The WebVR spec features a number of events that are fired, allowing our app code
 To demonstrate how they work, our simple demo includes the following example:
 
 ```js
-window.addEventListener('vrdisplaypresentchange', function(e) {
+window.addEventListener('vrdisplaypresentchange', (e) => {
   console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
 });
 ```

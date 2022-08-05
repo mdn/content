@@ -56,7 +56,7 @@ exampleSocket.addEventListener('close', (event) => {
 You can perform the same actions using the event handler property, like this:
 
 ```js
-exampleSocket.onclose = function (event) {
+exampleSocket.onclose = (event) => {
   console.log('The connection has been closed successfully.');
 };
 ```

@@ -85,7 +85,7 @@ void main() {
 ```
 
 ```js hidden
-;(function(){
+;(() => {
 ```
 
 ```js

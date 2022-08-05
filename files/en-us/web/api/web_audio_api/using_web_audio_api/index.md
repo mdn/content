@@ -115,7 +115,7 @@ Now we can add the play and pause functionality.
 // select our play button
 const playButton = document.querySelector('button');
 
-playButton.addEventListener('click', function() {
+playButton.addEventListener('click', () => {
 
     // check if context is in suspended state (autoplay policy)
     if (audioContext.state === 'suspended') {
@@ -177,7 +177,7 @@ So let's grab this input's value and update the gain value when the input node h
 ```js
 const volumeControl = document.querySelector('#volume');
 
-volumeControl.addEventListener('input', function() {
+volumeControl.addEventListener('input', () => {
     gainNode.gain.value = this.value;
 }, false);
 ```
@@ -220,7 +220,7 @@ We use the values from that input to adjust our panner values in the same way as
 ```js
 const pannerControl = document.querySelector('#panner');
 
-pannerControl.addEventListener('input', function() {
+pannerControl.addEventListener('input', () => {
     panner.pan.value = this.value;
 }, false);
 ```

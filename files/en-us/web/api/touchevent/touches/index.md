@@ -42,7 +42,7 @@ that were activated and then invokes different handlers depending on the number 
 points.
 
 ```js
-someElement.addEventListener('touchstart', function(e) {
+someElement.addEventListener('touchstart', (e) => {
    // Invoke the appropriate handler depending on the
    // number of touch points.
    switch (e.touches.length) {

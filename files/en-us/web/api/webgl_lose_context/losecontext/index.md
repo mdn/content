@@ -43,7 +43,7 @@ event:
 const canvas = document.getElementById('canvas');
 const gl = canvas.getContext('webgl');
 
-canvas.addEventListener('webglcontextlost', function(e) {
+canvas.addEventListener('webglcontextlost', (e) => {
   console.log(e);
 }, false);
 

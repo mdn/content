@@ -75,7 +75,7 @@ void main() {
 ```
 
 ```js hidden
-;(function(){
+;(() => {
 ```
 
 ```js
@@ -117,7 +117,7 @@ function setupWebGL (evt) {
   gl.drawArrays(gl.POINTS, 0, 1);
 
   document.querySelector("canvas").addEventListener("click",
-    function (evt) {
+    (evt) => {
       const clickXRelativeToCanvas =
           evt.pageX - evt.target.offsetLeft;
       const clickXinWebGLCoords =

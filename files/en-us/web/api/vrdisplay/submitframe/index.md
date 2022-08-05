@@ -42,12 +42,12 @@ None ({{jsxref("undefined")}}).
 const frameData = new VRFrameData();
 let vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
   console.log('Display found');
   // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-  btn.addEventListener('click', function() {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+  btn.addEventListener('click', () => {
+    vrDisplay.requestPresent([{ source: canvas }]).then(() => {
       drawVRScene();
     });
   });

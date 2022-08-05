@@ -187,7 +187,7 @@ nommingCake.play();
 Specifically, we want to link it to Alice's animation, so she gets bigger as the cupcake gets eaten. We can achieve this via the following function:
 
 ```js
-const growAlice = function() {
+const growAlice = () => {
 
   // Play Alice's animation.
   aliceChange.play();
@@ -216,7 +216,7 @@ In addition to pausing and playing, we can use the following Animation methods:
 Let's take a look at `playbackRate` first — a negative playbackRate will cause an animation to run in reverse. When Alice drinks from the bottle, she grows smaller. This is because the bottle changes her animation's playbackRate from 1 to -1:
 
 ```js
-const shrinkAlice = function() {
+const shrinkAlice = () => {
   aliceChange.playbackRate = -1;
   aliceChange.play();
 }
@@ -243,7 +243,7 @@ setInterval(() => {
 But urging them on by clicking or tapping causes them to speed up by multiplying their playbackRate:
 
 ```js
-const goFaster = function() {
+const goFaster = () => {
   redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 1.1);
 }
 
@@ -259,7 +259,7 @@ Imagine other ways we could use playbackRate, such as improving accessibility fo
 
 ```js
 document.getAnimations().forEach(
-  function (animation) {
+  (animation) => {
     animation.updatePlaybackRate(animation.playbackRate * .5);
   }
 );
@@ -326,7 +326,7 @@ Now all three animations are linked to just one duration, which we can change ea
 We can also use the Web Animations API to figure out the animation's current time. The game ends when you run out of cake to eat or empty the bottle. Which vignette players are presented with depends on how far along Alice was in her animation, whether she grew too big and can't get in the tiny door anymore or too small and cannot reach the key to open the door. We can figure out whether she's on the large end or small end of her animation by getting her animation's [`currentTime`](/en-US/docs/Web/API/Animation/currentTime) and dividing it by her `activeDuration`:
 
 ```js
-const endGame = function() {
+const endGame = () => {
 
   // get Alice's timeline's playhead location
   const alicePlayhead = aliceChange.currentTime;

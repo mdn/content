@@ -415,12 +415,12 @@ function setup() {
   // our purposes we don't need them. Each octave is inserted
   // into a <div> of class "octave".
 
-  noteFreq.forEach(function(keys, idx) {
+  noteFreq.forEach((keys, idx) => {
     let keyList = Object.entries(keys);
     let octaveElem = document.createElement("div");
     octaveElem.className = "octave";
 
-    keyList.forEach(function(key) {
+    keyList.forEach((key) => {
       if (key[0].length === 1) {
         octaveElem.appendChild(createKey(key[0], idx, key[1]));
       }

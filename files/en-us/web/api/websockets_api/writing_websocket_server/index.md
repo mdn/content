@@ -349,20 +349,20 @@ class Server {
 
     button.addEventListener("click", onClickButton);
 
-    websocket.onopen = function (e) {
+    websocket.onopen = (e) => {
         writeToScreen("CONNECTED");
         doSend("WebSocket rocks");
     };
 
-    websocket.onclose = function (e) {
+    websocket.onclose = (e) => {
         writeToScreen("DISCONNECTED");
     };
 
-    websocket.onmessage = function (e) {
+    websocket.onmessage = (e) => {
         writeToScreen("<span>RESPONSE: " + e.data + "</span>");
     };
 
-    websocket.onerror = function (e) {
+    websocket.onerror = (e) => {
         writeToScreen("<span class=error>ERROR:</span> " + e.data);
     };
 

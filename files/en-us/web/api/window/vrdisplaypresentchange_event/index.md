@@ -48,7 +48,7 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplaypresentchange` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplaypresentchange', function() {
+window.addEventListener('vrdisplaypresentchange', () => {
   if(vrDisplay.isPresenting) {
     info.textContent = 'Display has started presenting.';
   } else {
@@ -61,7 +61,7 @@ window.addEventListener('vrdisplaypresentchange', function() {
 Or use the `onvrdisplaypresentchange` event handler property:
 
 ```js
-window.onvrdisplaypresentchange = function() {
+window.onvrdisplaypresentchange = () => {
   if(vrDisplay.isPresenting) {
     info.textContent = 'Display has started presenting.';
   } else {

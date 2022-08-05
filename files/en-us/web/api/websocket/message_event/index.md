@@ -51,7 +51,7 @@ _In addition to the properties listed below, properties from the parent interfac
 const socket = new WebSocket('ws://localhost:8080');
 
 // Listen for messages
-socket.addEventListener('message', function (event) {
+socket.addEventListener('message', (event) => {
     console.log('Message from server ', event.data);
 });
 ```

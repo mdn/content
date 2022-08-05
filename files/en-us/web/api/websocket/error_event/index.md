@@ -36,7 +36,7 @@ A generic {{domxref("Event")}}.
 const socket = new WebSocket('ws://localhost:8080');
 
 // Listen for possible errors
-socket.addEventListener('error', function (event) {
+socket.addEventListener('error', (event) => {
   console.log('WebSocket error: ', event);
 });
 ```

@@ -33,7 +33,7 @@ const socket = new WebSocket("ws://localhost:8080");
 socket.binaryType = "arraybuffer";
 
 // Listen for messages
-socket.addEventListener("message", function (event) {
+socket.addEventListener("message", (event) => {
     if(event.data instanceof ArrayBuffer) {
         // binary frame
         const view = new DataView(event.data);

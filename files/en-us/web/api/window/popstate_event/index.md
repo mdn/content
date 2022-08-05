@@ -106,7 +106,7 @@ history.go(2);  // Logs "location: http://example.com/example.html?page=3, state
 The same example using the `onpopstate` event handler property:
 
 ```js
-window.onpopstate = function(event) {
+window.onpopstate = (event) => {
   console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`);
 };
 history.pushState({page: 1}, "title 1", "?page=1");

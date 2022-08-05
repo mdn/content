@@ -47,7 +47,7 @@ function getTrackList(el) {
     "main", "alternative", "commentary"
   ];
 
-  el.videoTracks.forEach(function(track) {
+  el.videoTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,

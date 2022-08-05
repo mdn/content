@@ -79,7 +79,7 @@ Access the attributes of a touch point.
 
 ```js
 // Create touchstart handler
-someElement.addEventListener('touchstart', function(ev) {
+someElement.addEventListener('touchstart', (ev) => {
   // Iterate through the touch points that were activated
   // for this element and process each event 'target'
   for (let i = 0; i < ev.targetTouches.length; i++) {

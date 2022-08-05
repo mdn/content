@@ -33,7 +33,7 @@ A generic {{domxref("Event")}}.
 You can use the `scroll` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-visualViewport.addEventListener('scroll', function() {
+visualViewport.addEventListener('scroll', () => {
   // …
 });
 ```
@@ -41,7 +41,7 @@ visualViewport.addEventListener('scroll', function() {
 Or use the `onscroll` event handler property:
 
 ```js
-visualViewport.onscroll = function() {
+visualViewport.onscroll = () => {
   // …
 };
 ```

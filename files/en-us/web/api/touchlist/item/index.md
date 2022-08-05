@@ -45,7 +45,7 @@ This code example illustrates the use of the {{domxref("TouchList")}} interface'
 ```js
 const target = document.getElementById("target");
 
-target.addEventListener('touchstart', function(ev) {
+target.addEventListener('touchstart', (ev) => {
 
   // If this touchstart event started on element target,
   // set touch to the first item in the targetTouches list;

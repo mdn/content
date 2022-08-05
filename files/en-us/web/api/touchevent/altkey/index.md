@@ -30,7 +30,7 @@ This example illustrates how to access the {{domxref("TouchEvent")}} key modifie
 In following code snippet, the {{domxref("Element/touchstart_event", "touchstart")}} event handler logs the state of the event's modifier keys.
 
 ```js
-someElement.addEventListener('touchstart', function(e) {
+someElement.addEventListener('touchstart', (e) => {
    // Log the state of this event's modifier keys
    console.log(`altKey = ${e.altKey}`);
    console.log(`ctrlKey = ${e.ctrlKey}`);

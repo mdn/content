@@ -436,10 +436,10 @@ Wiring up out control buttons is comparatively simple — now we can listen for 
 
 ```js
 // for each of our controls, move the boombox and change the position values
-moveControls.forEach(function(el) {
+moveControls.forEach((el) => {
 
     let moving;
-    el.addEventListener('mousedown', function() {
+    el.addEventListener('mousedown', () => {
 
         let direction = this.dataset.control;
         if (moving && moving.frameId) {
@@ -449,7 +449,7 @@ moveControls.forEach(function(el) {
 
     }, false);
 
-    window.addEventListener('mouseup', function() {
+    window.addEventListener('mouseup', () => {
         if (moving && moving.frameId) {
             window.cancelAnimationFrame(moving.frameId);
         }
@@ -492,7 +492,7 @@ Let's create a play button, that when clicked will play or pause the audio depen
 // select our play button
 const playButton = document.querySelector('button');
 
-playButton.addEventListener('click', function() {
+playButton.addEventListener('click', () => {
 
 // check if context is in suspended state (autoplay policy)
 if (audioContext.state === 'suspended') {

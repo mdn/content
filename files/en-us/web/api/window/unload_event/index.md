@@ -76,10 +76,10 @@ See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-ap
   <head>
     <title>Parent Frame</title>
     <script>
-      window.addEventListener('beforeunload', function(event) {
+      window.addEventListener('beforeunload', (event) => {
         console.log('I am the 1st one.');
       });
-      window.addEventListener('unload', function(event) {
+      window.addEventListener('unload', (event) => {
         console.log('I am the 3rd one.');
       });
     </script>
@@ -98,10 +98,10 @@ Below, the content of `child-frame.html`:
   <head>
     <title>Child Frame</title>
     <script>
-      window.addEventListener('beforeunload', function(event) {
+      window.addEventListener('beforeunload', (event) => {
         console.log('I am the 2nd one.');
       });
-      window.addEventListener('unload', function(event) {
+      window.addEventListener('unload', (event) => {
         console.log('I am the 4th and last one…');
       });
     </script>

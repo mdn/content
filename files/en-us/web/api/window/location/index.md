@@ -154,7 +154,7 @@ span.intLink {
 …the same thing but with an animated page scroll:
 
 ```js
-const showBookmark = (function () {
+const showBookmark = (() => {
   let _useHash;
   let _scrollX;
   let _scrollY;
@@ -187,7 +187,7 @@ const showBookmark = (function () {
   if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
   else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
 
-  return function (sBookmark, bUseHash) {
+  return (sBookmark, bUseHash) => {
     const oNode = document.querySelector(sBookmark);
   _scrollY = document.documentElement.scrollTop;
   _scrollX = document.documentElement.scrollLeft;

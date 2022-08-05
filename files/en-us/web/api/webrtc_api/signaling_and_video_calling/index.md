@@ -217,7 +217,7 @@ function handleUserlistMsg(msg) {
     listElem.removeChild(listElem.firstChild);
   }
 
-  msg.users.forEach(function(username) {
+  msg.users.forEach((username) => {
     const item = document.createElement("li");
     item.appendChild(document.createTextNode(username));
     item.addEventListener("click", invite, false);
@@ -260,7 +260,7 @@ function invite(evt) {
     createPeerConnection();
 
     navigator.mediaDevices.getUserMedia(mediaConstraints)
-    .then(function(localStream) {
+    .then((localStream) => {
       document.getElementById("local_video").srcObject = localStream;
       localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
     })
@@ -370,10 +370,10 @@ Once the caller has created its {{domxref("RTCPeerConnection")}}, created a medi
 
 ```js
 function handleNegotiationNeededEvent() {
-  myPeerConnection.createOffer().then(function(offer) {
+  myPeerConnection.createOffer().then((offer) => {
     return myPeerConnection.setLocalDescription(offer);
   })
-  .then(function() {
+  .then(() => {
     sendToServer({
       name: myUsername,
       target: targetUsername,
@@ -423,22 +423,22 @@ function handleVideoOfferMsg(msg) {
 
   const desc = new RTCSessionDescription(msg.sdp);
 
-  myPeerConnection.setRemoteDescription(desc).then(function () {
+  myPeerConnection.setRemoteDescription(desc).then(() => {
     return navigator.mediaDevices.getUserMedia(mediaConstraints);
   })
-  .then(function(stream) {
+  .then((stream) => {
     localStream = stream;
     document.getElementById("local_video").srcObject = localStream;
 
     localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
   })
-  .then(function() {
+  .then(() => {
     return myPeerConnection.createAnswer();
   })
-  .then(function(answer) {
+  .then((answer) => {
     return myPeerConnection.setLocalDescription(answer);
   })
-  .then(function() {
+  .then(() => {
     const msg = {
       name: myUsername,
       target: targetUsername,

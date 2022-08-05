@@ -49,12 +49,12 @@ canvas {
 ```
 
 ```js
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
   "use strict"
   const [ firstCanvas , secondCanvas ] = document.getElementsByTagName("canvas");
   firstCanvas.width = firstCanvas.clientWidth;
   firstCanvas.height = firstCanvas.clientHeight;
-  [firstCanvas, secondCanvas].forEach(function(canvas) {
+  [firstCanvas, secondCanvas].forEach((canvas) => {
     const gl = canvas.getContext("webgl")
       || canvas.getContext("experimental-webgl");
     if (!gl) {

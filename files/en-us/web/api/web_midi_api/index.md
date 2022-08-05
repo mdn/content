@@ -93,7 +93,7 @@ function onMIDIMessage(event) {
 }
 
 function startLoggingMIDIInput(midiAccess, indexOfPort) {
-  midiAccess.inputs.forEach(function(entry) {entry.onmidimessage = onMIDIMessage;});
+  midiAccess.inputs.forEach((entry) => {entry.onmidimessage = onMIDIMessage;});
 }
 ```
 

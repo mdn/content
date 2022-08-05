@@ -94,7 +94,7 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // Listen for changes in the text field
-field.addEventListener("change", function() {
+field.addEventListener("change", () => {
   // And save the results into the session storage object
   sessionStorage.setItem("autosave", field.value);
 });

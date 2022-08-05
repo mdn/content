@@ -94,7 +94,7 @@ This function is called when the play button is pressed. The play button HTML lo
 And the `click` event listener starts like so:
 
 ```js
-playButton.addEventListener('click', function() {
+playButton.addEventListener('click', () => {
     if (this.dataset.playing === 'false') {
         srcNode = playSourceNode(audioCtx, sample);
         // …
@@ -111,7 +111,7 @@ The toggle that turns the IIR filter on and off is set up in the similar way. Fi
 The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the destination:
 
 ```js
-filterButton.addEventListener('click', function() {
+filterButton.addEventListener('click', () => {
     if (this.dataset.filteron === 'false') {
         srcNode.disconnect(audioCtx.destination);
         srcNode.connect(iirfilter).connect(audioCtx.destination);
@@ -139,7 +139,7 @@ let phaseResponseOutput = new Float32Array(totalArrayItems);
 Let's fill our first array with frequency values we want data to be returned on:
 
 ```js
-myFrequencyArray = myFrequencyArray.map(function(item, index) {
+myFrequencyArray = myFrequencyArray.map((item, index) => {
     return Math.pow(1.4, index);
 });
 ```

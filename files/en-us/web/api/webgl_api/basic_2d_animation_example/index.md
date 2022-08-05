@@ -188,7 +188,7 @@ The `buildShaderProgram()` function accepts as input an array of objects describ
 function buildShaderProgram(shaderInfo) {
   let program = gl.createProgram();
 
-  shaderInfo.forEach(function(desc) {
+  shaderInfo.forEach((desc) => {
     let shader = compileShader(desc.id, desc.type);
 
     if (shader) {
@@ -285,7 +285,7 @@ function animateScene() {
 
   gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 
-  window.requestAnimationFrame(function(currentTime) {
+  window.requestAnimationFrame((currentTime) => {
     let deltaAngle = ((currentTime - previousTime) / 1000.0)
           * degreesPerSecond;
 

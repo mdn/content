@@ -60,7 +60,7 @@ button {
 ```
 
 ```js hidden
-;(function(){
+;(() => {
 ```
 
 ```js

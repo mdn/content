@@ -33,7 +33,7 @@ A generic {{domxref("Event")}}.
 You can use the `resize` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-visualViewport.addEventListener('resize', function() {
+visualViewport.addEventListener('resize', () => {
   // …
 });
 ```
@@ -41,7 +41,7 @@ visualViewport.addEventListener('resize', function() {
 Or use the `onresize` event handler property:
 
 ```js
-visualViewport.onresize = function() {
+visualViewport.onresize = () => {
   // …
 };
 ```

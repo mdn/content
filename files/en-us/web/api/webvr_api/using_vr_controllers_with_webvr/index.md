@@ -64,7 +64,7 @@ Here we first use a tracking variable, `initialRun`, to note that this is the fi
 
 ```js
 function reportDisplays() {
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then((displays) => {
     console.log(`${displays.length} displays`);
     for (let i = 0; i < displays.length; i++) {
       const cap = displays[i].capabilities;
@@ -149,14 +149,14 @@ This function grabs references to all list items with a class name of `gamepad`,
 `removeGamepads()` will be run each time a gamepad is connected or disconnected, via the following event handlers:
 
 ```js
-window.addEventListener('gamepadconnected', function(e) {
+window.addEventListener('gamepadconnected', (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} connected.`;
   if(!initialRun) {
       setTimeout(removeGamepads, 1000);
   }
 });
 
-window.addEventListener('gamepaddisconnected', function(e) {
+window.addEventListener('gamepaddisconnected', (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} disconnected.`;
   setTimeout(removeGamepads, 1000);
 });

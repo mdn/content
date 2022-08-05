@@ -36,7 +36,7 @@ A generic {{domxref("Event")}}.
 You can use the `appinstalled` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
 ```js
-window.addEventListener('appinstalled', function() {
+window.addEventListener('appinstalled', () => {
   console.log('Thank you for installing our app!');
 });
 ```
@@ -44,7 +44,7 @@ window.addEventListener('appinstalled', function() {
 Or use the `onappinstalled` event handler property:
 
 ```js
-window.onappinstalled = function() {
+window.onappinstalled = () => {
   console.log('Thank you for installing our app!');
 };
 ```

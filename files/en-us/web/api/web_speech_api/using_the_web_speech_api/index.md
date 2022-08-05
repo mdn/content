@@ -136,7 +136,7 @@ document.body.onclick = () => {
 Once the speech recognition is started, there are many event handlers that can be used to retrieve results, and other pieces of surrounding information (see the [`SpeechRecognition` events](/en-US/docs/Web/API/SpeechRecognition#events).) The most common one you'll probably use is the {{domxref("SpeechRecognition.result_event", "result")}} event, which is fired once a successful result is received:
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   let color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
@@ -149,7 +149,7 @@ The second line here is a bit complex-looking, so let's explain it step by step.
 We also use the {{domxref("SpeechRecognition.speechend_event", "speechend")}} event to stop the speech recognition service from running (using {{domxref("SpeechRecognition.stop()")}}) once a single word has been recognized and it has finished being spoken:
 
 ```js
-recognition.onspeechend = function() {
+recognition.onspeechend = () => {
   recognition.stop();
 }
 ```
@@ -159,7 +159,7 @@ recognition.onspeechend = function() {
 The last two handlers are there to handle cases where speech was recognized that wasn't in the defined grammar, or an error occurred. The {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} event seems to be supposed to handle the first case mentioned, although note that at the moment it doesn't seem to fire correctly; it just returns whatever was recognized anyway:
 
 ```js
-recognition.onnomatch = function(event) {
+recognition.onnomatch = (event) => {
   diagnostic.textContent = `I didn't recognize that color.`;
 }
 ```
@@ -167,7 +167,7 @@ recognition.onnomatch = function(event) {
 The {{domxref("SpeechRecognition.error_event", "error")}} event handles cases where there is an actual error with the recognition successfully — the {{domxref("SpeechRecognitionErrorEvent.error")}} property contains the actual error returned:
 
 ```js
-recognition.onerror = function(event) {
+recognition.onerror = (event) => {
   diagnostic.textContent = `Error occurred in recognition: ${event.error}`;
 }
 ```
@@ -287,7 +287,7 @@ Next, we need to figure out which voice to use. We use the {{domxref("HTMLSelect
 Finally, we set the {{domxref("SpeechSynthesisUtterance.pitch")}} and {{domxref("SpeechSynthesisUtterance.rate")}} to the values of the relevant range form elements. Then, with all necessary preparations made, we start the utterance being spoken by invoking {{domxref("SpeechSynthesis.speak()")}}, passing it the {{domxref("SpeechSynthesisUtterance")}} instance as a parameter.
 
 ```js
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
@@ -305,7 +305,7 @@ inputForm.onsubmit = function(event) {
 In the final part of the handler, we include an {{domxref("SpeechSynthesisUtterance.pause_event", "pause")}} event to demonstrate how {{domxref("SpeechSynthesisEvent")}} can be put to good use. When {{domxref("SpeechSynthesis.pause()")}} is invoked, this returns a message reporting the character number and name that the speech was paused at.
 
 ```js
-   utterThis.onpause = function(event) {
+   utterThis.onpause = (event) => {
     const char = event.utterance.text.charAt(event.charIndex);
     console.log(
       `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`
@@ -325,11 +325,11 @@ Finally, we call [blur()](/en-US/docs/Web/API/HTMLElement/blur) on the text inpu
 The last part of the code updates the `pitch`/`rate` values displayed in the UI, each time the slider positions are moved.
 
 ```js
-pitch.onchange = function() {
+pitch.onchange = () => {
   pitchValue.textContent = pitch.value;
 }
 
-rate.onchange = function() {
+rate.onchange = () => {
   rateValue.textContent = rate.value;
 }
 ```
