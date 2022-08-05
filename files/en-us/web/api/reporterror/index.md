@@ -63,7 +63,7 @@ window.onerror = (message, source, lineno, colno, error) => {
 };
 
 self.addEventListener('error', (error) => {
-    console.error(error.filename);
+  console.error(error.filename);
 });
 
 // Output
