@@ -32,7 +32,7 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then((permissionStatus) => {
+navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus) => {
   console.log(`geolocation permission state is ${permissionStatus.state}`);
   permissionStatus.onchange = () => {
     console.log(`geolocation permission state has changed to ${this.state}`);
