@@ -77,7 +77,7 @@ The `gPositionSensor` variable holds the {{domxref("PositionSensorVRDevice")}} â
 function setView() {
   const posState = gPositionSensor.getState();
 
-  if(posState.hasPosition) {
+  if (posState.hasPosition) {
     posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
                                 + roundToTwo(posState.position.y) + " z"
                                 + roundToTwo(posState.position.z);
