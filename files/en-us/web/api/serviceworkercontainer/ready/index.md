@@ -33,13 +33,13 @@ A {{jsxref("Promise")}} that will never reject, and which may eventually resolve
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.ready
   .then((registration) => {
-    console.log('A service worker is active:', registration.active);
+    console.log(`A service worker is active: ${registration.active}`);
 
     // At this point, you can call methods that require an active
     // service worker, like registration.pushManager.subscribe()
   });
 } else {
-  console.log('Service workers are not supported.');
+  console.error('Service workers are not supported.');
 }
 ```
 
