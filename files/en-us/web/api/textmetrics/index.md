@@ -67,9 +67,9 @@ ctx.font = '25px serif';
 ctx.strokeStyle = 'red';
 
 baselines.forEach((baseline, index) => {
-  let text = `Abcdefghijklmnop (${baseline})`;
-  let textMetrics = ctx.measureText(text);
-  let y = 50 + index * 50;
+  const text = `Abcdefghijklmnop (${baseline})`;
+  const textMetrics = ctx.measureText(text);
+  const y = 50 + index * 50;
   ctx.beginPath();
   ctx.fillText(text, 0, y);
   let lineY = y - Math.abs(textMetrics[baseline]);
