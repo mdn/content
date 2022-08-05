@@ -36,7 +36,7 @@ the `targetTouches` list and logs the `force` value of each touch
 point but the code could invoke different processing depending on the value.
 
 ```js
-someElement.addEventListener('touchstart', function(e) {
+someElement.addEventListener('touchstart', (e) => {
    // Iterate through the list of touch points and log each touch
    // point's force.
    for (let i = 0; i < e.targetTouches.length; i++) {

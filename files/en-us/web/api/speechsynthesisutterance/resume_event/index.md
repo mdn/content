@@ -46,7 +46,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `resume` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('resume', function(event) {
+utterThis.addEventListener('resume', (event) => {
   console.log(`Speech resumed after ${event.elapsedTime} seconds.`);
 });
 ```
@@ -54,7 +54,7 @@ utterThis.addEventListener('resume', function(event) {
 Or use the `onresume` event handler property:
 
 ```js
-utterThis.onresume = function(event) {
+utterThis.onresume = (event) => {
   console.log(`Speech resumed after ${event.elapsedTime} seconds.`);
 }
 ```

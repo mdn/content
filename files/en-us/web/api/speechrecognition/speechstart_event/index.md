@@ -33,7 +33,7 @@ You can use the `speechstart` event in an [`addEventListener`](/en-US/docs/Web/A
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('speechstart', function() {
+recognition.addEventListener('speechstart', () => {
   console.log('Speech has been detected');
 });
 ```
@@ -41,7 +41,7 @@ recognition.addEventListener('speechstart', function() {
 Or use the `onspeechstart` event handler property:
 
 ```js
-recognition.onspeechstart = function() {
+recognition.onspeechstart = () => {
   console.log('Speech has been detected');
 }
 ```

@@ -36,7 +36,7 @@ You can use the `audiostart` event in an [`addEventListener`](/en-US/docs/Web/AP
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('audiostart', function() {
+recognition.addEventListener('audiostart', () => {
   console.log('Audio capturing started');
 });
 ```
@@ -44,7 +44,7 @@ recognition.addEventListener('audiostart', function() {
 Or use the `onaudiostart` event handler property:
 
 ```js
-recognition.onaudiostart = function() {
+recognition.onaudiostart = () => {
   console.log('Audio capturing started');
 }
 ```

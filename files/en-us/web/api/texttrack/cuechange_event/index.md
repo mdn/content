@@ -36,7 +36,7 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can set up a listener for the `cuechange` event on a `TextTrack` using the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method:
 
 ```js
-track.addEventListener('cuechange', function () {
+track.addEventListener('cuechange', () => {
   let cues = track.activeCues;  // array of current cues
 });
 ```

@@ -66,7 +66,7 @@ const baselines = [...baselinesAboveAlphabetic, ...baselinesBelowAlphabetic];
 ctx.font = '25px serif';
 ctx.strokeStyle = 'red';
 
-baselines.forEach(function (baseline, index) {
+baselines.forEach((baseline, index) => {
   let text = `Abcdefghijklmnop (${baseline})`;
   let textMetrics = ctx.measureText(text);
   let y = 50 + index * 50;

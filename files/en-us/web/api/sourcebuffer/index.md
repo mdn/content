@@ -98,8 +98,8 @@ function sourceOpen (_) {
   //console.log(this.readyState); // open
   const mediaSource = this;
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+  fetchAB(assetURL, (buf) => {
+    sourceBuffer.addEventListener('updateend', (_) => {
       mediaSource.endOfStream();
       video.play();
       //console.log(mediaSource.readyState); // ended
@@ -113,7 +113,7 @@ function fetchAB (url, cb) {
   const xhr = new XMLHttpRequest;
   xhr.open('get', url);
   xhr.responseType = 'arraybuffer';
-  xhr.onload = function () {
+  xhr.onload = () => {
     cb(xhr.response);
   };
   xhr.send();

@@ -142,7 +142,7 @@ See the following example:
 
 ```js
 const myArray = ['zero', 'one', 'two'];
-myArray.myMethod = function (sProperty) {
+myArray.myMethod = (sProperty) => {
   console.log(arguments.length > 0 ? this[sProperty] : this);
 };
 
@@ -181,8 +181,8 @@ A common way to solve the problem is to use a wrapper function that sets
 `this` to the required value:
 
 ```js
-setTimeout(function(){myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
-setTimeout(function(){myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds
+setTimeout(() => {myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
+setTimeout(() => {myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds
 ```
 
 The wrapper function can be an arrow function:
@@ -198,7 +198,7 @@ Alternatively, you can use {{jsxref("Function.bind()", "bind()")}} to set the va
 
 ```js
 const myArray = ['zero', 'one', 'two'];
-const myBoundMethod = (function (sProperty) {
+const myBoundMethod = ((sProperty) => {
     console.log(arguments.length > 0 ? this[sProperty] : this);
 }).bind(myArray);
 
@@ -220,7 +220,7 @@ setTimeout("console.log('Hello World!');", 500);
 
 ```js example-good
 // Do this instead
-setTimeout(function() {
+setTimeout(() => {
   console.log('Hello World!');
 }, 500);
 ```

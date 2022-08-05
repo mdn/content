@@ -50,7 +50,7 @@ You can use the `nomatch` event in an [`addEventListener`](/en-US/docs/Web/API/E
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('nomatch', function() {
+recognition.addEventListener('nomatch', () => {
   console.log('Speech not recognized');
 });
 ```
@@ -58,7 +58,7 @@ recognition.addEventListener('nomatch', function() {
 Or use the `onnomatch` event handler property:
 
 ```js
-recognition.onnomatch = function() {
+recognition.onnomatch = () => {
   console.log('Speech not recognized');
 }
 ```

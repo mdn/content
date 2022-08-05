@@ -33,7 +33,7 @@ The {{domxref("HTMLMediaElement.textTracks")}} property returns a {{domxref("Tex
 
 ```js
 let video = document.getElementById("video");
-video.onplay = function () {
+video.onplay = () => {
   console.log(video.textTracks[0].cues);
 }
 ```

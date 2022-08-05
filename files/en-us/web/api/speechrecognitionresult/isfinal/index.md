@@ -29,7 +29,7 @@ A boolean value.
 ## Examples
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array

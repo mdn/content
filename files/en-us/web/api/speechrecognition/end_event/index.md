@@ -33,7 +33,7 @@ You can use the `end` event in an [`addEventListener`](/en-US/docs/Web/API/Event
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('end', function() {
+recognition.addEventListener('end', () => {
   console.log('Speech recognition service disconnected');
 });
 ```
@@ -41,7 +41,7 @@ recognition.addEventListener('end', function() {
 Or use the `onend` event handler property:
 
 ```js
-recognition.onend = function() {
+recognition.onend = () => {
   console.log('Speech recognition service disconnected');
 }
 ```

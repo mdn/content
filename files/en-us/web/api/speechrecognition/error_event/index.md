@@ -44,7 +44,7 @@ You can use the `error` event in an [`addEventListener`](/en-US/docs/Web/API/Eve
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('error', function(event) {
+recognition.addEventListener('error', (event) => {
   console.log(`Speech recognition error detected: ${event.error}`);
 });
 ```
@@ -52,7 +52,7 @@ recognition.addEventListener('error', function(event) {
 Or use the `onerror` event handler property:
 
 ```js
-recognition.onerror = function(event) {
+recognition.onerror = (event) => {
   console.log(`Speech recognition error detected: ${event.error}`);
 }
 ```

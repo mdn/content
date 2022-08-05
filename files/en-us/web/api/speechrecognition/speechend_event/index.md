@@ -33,7 +33,7 @@ You can use the `speechend` event in an [`addEventListener`](/en-US/docs/Web/API
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('speechend', function() {
+recognition.addEventListener('speechend', () => {
   console.log('Speech has stopped being detected');
 });
 ```
@@ -41,7 +41,7 @@ recognition.addEventListener('speechend', function() {
 Or use the `onspeechend` event handler property:
 
 ```js
-recognition.onspeechend = function() {
+recognition.onspeechend = () => {
   console.log('Speech has stopped being detected');
 }
 ```

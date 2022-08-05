@@ -175,7 +175,7 @@ is the same for both timers):
 ```js
 myArray = ['zero', 'one', 'two'];
 
-myArray.myMethod = function (sProperty) {
+myArray.myMethod = (sProperty) => {
     alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
@@ -240,7 +240,7 @@ In these cases, a recursive `setTimeout()` pattern is preferred:
 
 ```js
 (function loop(){
-   setTimeout(function() {
+   setTimeout(() => {
       // Your logic here
 
       loop();

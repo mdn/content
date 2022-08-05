@@ -19,7 +19,7 @@ to `true` if box mode is persistent for your site's storage.
 ## Syntax
 
 ```js
-navigator.storage.persisted().then(function(persistent) { /* … */ })
+navigator.storage.persisted().then((persistent) => { /* … */ })
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ A {{jsxref('Promise')}} that resolves to a {{jsxref('Boolean')}}.
 
 ```js
 if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persisted().then(function(persistent) {
+  navigator.storage.persisted().then((persistent) => {
     if (persistent)
       console.log("Storage will not be cleared except by explicit user action");
     else

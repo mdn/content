@@ -51,7 +51,7 @@ A string naming the type of error. The possible error types are:
 ```js
 const recognition = new SpeechRecognition();
 
-recognition.onerror = function(event) {
+recognition.onerror = (event) => {
   console.log(`Speech recognition error detected: ${event.error}`);
   console.log(`Additional information: ${event.message}`);
 }

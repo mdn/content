@@ -50,7 +50,7 @@ Somebody must've stolen the crown jewels
 
 ```js
 let video = document.getElementById("video");
-video.onplay = function () {
+video.onplay = () => {
   console.log(video.textTracks[0].cues.length) //5;
 }
 ```

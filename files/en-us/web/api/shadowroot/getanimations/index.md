@@ -49,7 +49,7 @@ The following code snippet will slow down all animations in a shadow tree by hal
 let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 shadow.getAnimations().forEach(
-  function (animation) {
+  (animation) => {
     animation.playbackRate *= .5;
   }
 );

@@ -71,8 +71,8 @@ In this example, the code first checks whether the browser supports service work
 ```js
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js')
-  .then(function(registration) {
-    registration.addEventListener('updatefound', function() {
+  .then((registration) => {
+    registration.addEventListener('updatefound', () => {
       // If updatefound is fired, it means that there's
       // a new service worker being installed.
       const installingWorker = registration.installing;
@@ -83,7 +83,7 @@ if ('serviceWorker' in navigator) {
       // state via installingWorker.onstatechange
     });
   })
-  .catch(function(error) {
+  .catch((error) => {
     console.log('Service worker registration failed:', error);
   });
 } else {
