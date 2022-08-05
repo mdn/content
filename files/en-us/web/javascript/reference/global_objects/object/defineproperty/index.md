@@ -413,17 +413,16 @@ In this example, a getter always returns the same value.
 
 ```js
 const pattern = {
-    get() {
-        return 'I always return this string, ' +
-               'whatever you have assigned';
-    },
-    set() {
-        this.myname = 'this is my name string';
-    }
+  get() {
+    return 'I always return this string, whatever you have assigned';
+  },
+  set() {
+    this.myname = 'this is my name string';
+  },
 };
 
 function TestDefineSetAndGet() {
-    Object.defineProperty(this, 'myproperty', pattern);
+  Object.defineProperty(this, 'myproperty', pattern);
 }
 
 const instance = new TestDefineSetAndGet();

@@ -152,7 +152,7 @@ and {{jsxref("Array.prototype.join()")}}.
 const dateString = formatter.formatToParts(date).map(({type, value}) => {
   switch (type) {
     case 'dayPeriod': return `<em>${value}</em>`;
-    default : return value;
+    default: return value;
   }
 }).join('');
 ```
@@ -180,8 +180,8 @@ value) will yield both the and the `yearName` Gregorian
 `relatedYear`:
 
 ```js
-let opts = { year: "numeric", month: "numeric", day: "numeric" };
-let df = new Intl.DateTimeFormat("zh-u-ca-chinese", opts);
+const opts = { year: "numeric", month: "numeric", day: "numeric" };
+const df = new Intl.DateTimeFormat("zh-u-ca-chinese", opts);
 df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
@@ -197,15 +197,15 @@ If the `year` option is not set in the bag (to any value), the result will
 include only the `relatedYear`:
 
 ```js
-let df = new Intl.DateTimeFormat("zh-u-ca-chinese");
+const df = new Intl.DateTimeFormat("zh-u-ca-chinese");
 df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
 [
-   { type: 'relatedYear', value: '2012' },
-   { type: 'literal', value: '年' },
-   { type: 'month', value: '十一月' },
-   { type: 'day', value: '4' }
+  { type: 'relatedYear', value: '2012' },
+  { type: 'literal', value: '年' },
+  { type: 'month', value: '十一月' },
+  { type: 'day', value: '4' }
 ]
 ```
 

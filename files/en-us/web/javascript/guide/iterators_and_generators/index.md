@@ -39,22 +39,22 @@ Here is an example which can do just that. It allows creation of a simple range 
 
 ```js
 function makeRangeIterator(start = 0, end = Infinity, step = 1) {
-    let nextIndex = start;
-    let iterationCount = 0;
+  let nextIndex = start;
+  let iterationCount = 0;
 
-    const rangeIterator = {
-       next() {
-           let result;
-           if (nextIndex < end) {
-               result = { value: nextIndex, done: false }
-               nextIndex += step;
-               iterationCount++;
-               return result;
-           }
-           return { value: iterationCount, done: true }
-       }
-    };
-    return rangeIterator;
+  const rangeIterator = {
+    next() {
+      let result;
+      if (nextIndex < end) {
+        result = { value: nextIndex, done: false };
+        nextIndex += step;
+        iterationCount++;
+        return result;
+      }
+      return { value: iterationCount, done: true };
+    }
+  };
+  return rangeIterator;
 }
 ```
 
@@ -86,12 +86,12 @@ We can now adapt the example from above. The behavior of this code is identical,
 
 ```js
 function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
-    let iterationCount = 0;
-    for (let i = start; i < end; i += step) {
-        iterationCount++;
-        yield i;
-    }
-    return iterationCount;
+  let iterationCount = 0;
+  for (let i = start; i < end; i += step) {
+    iterationCount++;
+    yield i;
+  }
+  return iterationCount;
 }
 ```
 
@@ -107,17 +107,17 @@ Iterables which can iterate only once (such as Generators) customarily return `t
 
 ```js
 function* makeIterator() {
-    yield 1;
-    yield 2;
+  yield 1;
+  yield 2;
 }
 
 const it = makeIterator();
 
 for (const itItem of it) {
-    console.log(itItem);
+  console.log(itItem);
 }
 
-console.log(it[Symbol.iterator]() === it) // true;
+console.log(it[Symbol.iterator]() === it); // true
 
 // This example show us generator(iterator) is iterable object,
 // which has the @@iterator method return the it (itself),
@@ -207,8 +207,8 @@ function* fibonacci() {
     let reset = yield current;
     [current, next] = [next, next + current];
     if (reset) {
-        current = 0;
-        next = 1;
+      current = 0;
+      next = 1;
     }
   }
 }

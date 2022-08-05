@@ -84,12 +84,12 @@ console.log(indices);
 
 ```js
 function updateVegetablesCollection (veggies, veggie) {
-    if (veggies.indexOf(veggie) === -1) {
-        veggies.push(veggie);
-        console.log('New veggies collection is : ' + veggies);
-    } else {
-        console.log(veggie + ' already exists in the veggies collection.');
-    }
+  if (veggies.indexOf(veggie) === -1) {
+    veggies.push(veggie);
+    console.log('New veggies collection is : ' + veggies);
+  } else {
+    console.log(veggie + ' already exists in the veggies collection.');
+  }
 }
 
 const veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
