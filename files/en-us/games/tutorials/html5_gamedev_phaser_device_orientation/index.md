@@ -355,7 +355,7 @@ The objects are stored in the `this.levels` array, which is by default invisible
 ```js
 showLevel(level) {
   const lvl = level | this.level;
-  if (this.levels[lvl -2 ]) {
+  if (this.levels[lvl - 2]) {
     this.levels[lvl - 2].visible = false;
   }
   this.levels[lvl - 1].visible = true;
