@@ -42,12 +42,12 @@ which is the endpoint URL.
 ```js
 const req = navigator.push.register();
 
-req.onsuccess = function(e) {
+req.onsuccess = (e) => {
   const endpoint = req.result;
   debug(`New endpoint: ${endpoint}` );
 }
 
-req.onerror = function(e) {
+req.onerror = (e) => {
   debug(`Error getting a new endpoint: ${JSON.stringify(e)}`);
 }
 ```

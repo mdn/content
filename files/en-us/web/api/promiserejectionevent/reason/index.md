@@ -30,7 +30,7 @@ and whatever else you might wish to include.
 ## Examples
 
 ```js
-window.onunhandledrejection = function(e) {
+window.onunhandledrejection = (e) => {
   console.log(e.reason);
 }
 ```

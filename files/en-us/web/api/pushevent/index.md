@@ -41,7 +41,7 @@ _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 The following example takes data from a `PushEvent` and displays it on all of the service worker's clients.
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener('push', (event) => {
   if (!(self.Notification && self.Notification.permission === 'granted')) {
     return;
   }
@@ -60,7 +60,7 @@ self.addEventListener('push', function(event) {
     icon: icon
   });
 
-  notification.addEventListener('click', function() {
+  notification.addEventListener('click', () => {
     if (clients.openWindow) {
       clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
     }

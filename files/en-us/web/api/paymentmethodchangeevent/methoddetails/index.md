@@ -40,7 +40,7 @@ the payment method selected for Apple Pay, in order to compute a discount if the
 chooses to use a Visa card as their payment method.
 
 ```js
-request.onpaymentmethodchange = function(ev) {
+request.onpaymentmethodchange = (ev) => {
   const { type: cardType } = ev.methodDetails;
   const newStuff = {};
   if (ev.methodName === "https://apple.com/apple-pay") {

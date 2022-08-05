@@ -54,7 +54,7 @@ a not a user-verifying platform authenticator is available.
 
 ```js
 PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
-  .then(function(available){
+  .then((available) => {
     if(available){
       // We can proceed with the creation of a PublicKeyCredential
       // with this authenticator
@@ -62,7 +62,7 @@ PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
       // Use another kind of authenticator or a classical login/password
       // workflow
     }
-  }).catch(function(err){
+  }).catch((err) => {
     // Something went wrong
     console.error(err);
   });

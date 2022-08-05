@@ -39,9 +39,9 @@ callback that will retry the task that failed to execute correctly.
 been handled.
 
 ```js
-window.onunhandledrejection = function(event) {
+window.onunhandledrejection = (event) => {
   if (event.reason.code && event.reason.code === "Module not ready") {
-    window.requestIdleCallback(function(deadline) {
+    window.requestIdleCallback((deadline) => {
       loadModule(event.reason.moduleName)
         .then(performStartup);
     });

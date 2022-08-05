@@ -42,7 +42,7 @@ function print_perf_entry(pe) {
 }
 
 // Create observer for all performance event types
-const observe_all = new PerformanceObserver(function(list, obs) {
+const observe_all = new PerformanceObserver((list, obs) => {
   let perfEntries;
 
   // Print all entries
@@ -66,7 +66,7 @@ const observe_all = new PerformanceObserver(function(list, obs) {
 // subscribe to all performance event types
 observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
 
-const observe_frame = new PerformanceObserver(function(list, obs) {
+const observe_frame = new PerformanceObserver((list, obs) => {
   const perfEntries = list.getEntries();
   // Should only have 'frame' entries
   for (let i=0; i < perfEntries.length; i++) {

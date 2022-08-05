@@ -51,7 +51,7 @@ This example illustrates using the value of `isPrimary` to call the
 appropriate processing function.
 
 ```js
-target.addEventListener('pointerdown', function(event) {
+target.addEventListener('pointerdown', (event) => {
   if (event.isPrimary)
     process_primary_pointer(event);
   else

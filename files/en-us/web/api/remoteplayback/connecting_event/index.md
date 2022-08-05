@@ -33,7 +33,7 @@ A generic {{domxref("Event")}}.
 In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent initiates a connection.
 
 ```js
-RemotePlayback.onconnecting = function() {
+RemotePlayback.onconnecting = () => {
   console.log(RemotePlayback.state);
 }
 ```

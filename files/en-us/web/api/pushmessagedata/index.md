@@ -39,7 +39,7 @@ None.
 ## Examples
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener('push', (event) => {
   const obj = event.data.json();
 
   if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {

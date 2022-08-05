@@ -71,7 +71,7 @@ const form = document.querySelector('#form');
 const creds = new PasswordCredential(form);
 // Store the credentials.
 navigator.credentials.store(creds)
-  .then(function(creds) {
+  .then((creds) => {
   // Do something with the credentials if you need to.
 });
 ```

@@ -31,7 +31,7 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   // Log the first report's report type, i.e. "deprecation"
   console.log(firstReport.type);

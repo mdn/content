@@ -57,7 +57,7 @@ Note that the handler assigned to `onerror` must return `true` to stop the event
 const newError = new Error('Some error message', "someFile.js", 11);
 self.reportError(newError);
 
-window.onerror = function(message, source, lineno, colno, error) {
+window.onerror = (message, source, lineno, colno, error) => {
   console.log(`message: ${error.message}, lineno: ${lineno}` );
   return true;
 };

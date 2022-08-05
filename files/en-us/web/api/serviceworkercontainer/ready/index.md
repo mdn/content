@@ -32,7 +32,7 @@ A {{jsxref("Promise")}} that will never reject, and which may eventually resolve
 ```js
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.ready
-  .then(function(registration) {
+  .then((registration) => {
     console.log('A service worker is active:', registration.active);
 
     // At this point, you can call methods that require an active

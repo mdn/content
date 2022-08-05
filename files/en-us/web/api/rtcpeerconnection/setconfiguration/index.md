@@ -77,10 +77,10 @@ const restartConfig = {
 
 myPeerConnection.setConfiguration(restartConfig);
 
-myPeerConnection.createOffer({"iceRestart": true}).then(function(offer) {
+myPeerConnection.createOffer({"iceRestart": true}).then((offer) => {
   return myPeerConnection.setLocalDescription(offer);
 })
-.then(function() {
+.then(() => {
   // send the offer to the other peer using the signaling server
 })
 .catch(reportError);

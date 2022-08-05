@@ -41,7 +41,7 @@ const request = new Request('/myEndpoint', {
   body: text
 });
 
-request.text().then(function(text) {
+request.text().then((text) => {
   // do something with the text sent in the request
 });
 ```

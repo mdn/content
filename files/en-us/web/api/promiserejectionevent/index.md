@@ -51,7 +51,7 @@ _This interface has no unique methods; inherits methods from its parent {{domxre
 This simple example catches unhandled promise rejections and logs them for debugging purposes.
 
 ```js
-window.onunhandledrejection = function(e) {
+window.onunhandledrejection = (e) => {
   console.log(e.reason);
 }
 ```

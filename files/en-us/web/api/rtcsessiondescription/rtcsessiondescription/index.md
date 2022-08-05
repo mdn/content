@@ -57,13 +57,13 @@ This example uses the constructor to convert an SDP offer into an
 > `RTCSessionDescription` yourself.
 
 ```js
-navigator.getUserMedia({video: true}, function(stream) {
+navigator.getUserMedia({video: true}, (stream) => {
   pc.onaddstream({stream: stream});
   // Adding a local stream won't trigger the onaddstream callback
   pc.addStream(stream);
 
-  pc.createOffer(function(offer) {
-    pc.setLocalDescription(new RTCSessionDescription(offer), function() {
+  pc.createOffer((offer) => {
+    pc.setLocalDescription(new RTCSessionDescription(offer), () => {
       // send the offer to a server to be forwarded to the friend you're calling.
     }, error);
   }, error);

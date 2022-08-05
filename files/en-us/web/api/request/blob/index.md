@@ -41,7 +41,7 @@ const request = new Request('/myEndpoint', {
   body: myBlob
  });
 
-request.blob().then(function(myBlob) {
+request.blob().then((myBlob) => {
   // do something with the blob sent in the request
 });
 ```

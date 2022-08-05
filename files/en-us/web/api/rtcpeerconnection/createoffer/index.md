@@ -112,10 +112,10 @@ offer and sends it to the remote system over a signaling channel.
 > fulfillment handler, depend entirely on your design.
 
 ```js
-  myPeerConnection.createOffer().then(function(offer) {
+  myPeerConnection.createOffer().then((offer) => {
     return myPeerConnection.setLocalDescription(offer);
   })
-  .then(function() {
+  .then(() => {
     sendToServer({
       name: myUsername,
       target: targetUsername,
@@ -123,7 +123,7 @@ offer and sends it to the remote system over a signaling channel.
       sdp: myPeerConnection.localDescription
     });
   })
-  .catch(function(reason) {
+  .catch((reason) => {
     // An error occurred, so handle the failure to connect
   });
 ```

@@ -86,10 +86,10 @@ to another peer across the signaling channel.
 > fulfillment handler, depend entirely on your design
 
 ```js
-pc.createAnswer().then(function(answer) {
+pc.createAnswer().then((answer) => {
   return pc.setLocalDescription(answer);
 })
-.then(function() {
+.then(() => {
   // Send the answer to the remote peer through the signaling server.
 })
 .catch(handleGetUserMediaError);

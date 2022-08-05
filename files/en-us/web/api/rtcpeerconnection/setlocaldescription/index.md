@@ -69,7 +69,7 @@ serialized version of a {{domxref("RTCSessionDescription")}} browser object. The
 interchangeable:
 
 ```js
-myPeerConnection.createOffer().then(function(offer) {
+myPeerConnection.createOffer().then((offer) => {
   return myPeerConnection.setLocalDescription(offer);
 });
 ```
@@ -77,7 +77,7 @@ myPeerConnection.createOffer().then(function(offer) {
 This is equivalent to:
 
 ```js
-myPeerConnection.createOffer().then(function(offer) {
+myPeerConnection.createOffer().then((offer) => {
   return myPeerConnection.setLocalDescription(new RTCSessionDescription(offer));
 });
 ```

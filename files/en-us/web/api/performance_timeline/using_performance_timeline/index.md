@@ -140,7 +140,7 @@ The following example shows how to register two observers: the first one registe
 ```js
 function PerformanceObservers() {
   // Create observer for all performance event types
-  const observe_all = new PerformanceObserver(function(list, obs) {
+  const observe_all = new PerformanceObserver((list, obs) => {
     let perfEntries;
 
     // Print all entries
@@ -165,7 +165,7 @@ function PerformanceObservers() {
   observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
 
   // Create observer for just the "mark" event type
-  const observe_mark = new PerformanceObserver(function(list, obs) {
+  const observe_mark = new PerformanceObserver((list, obs) => {
     const perfEntries = list.getEntries();
     // Should only have 'mark' entries
     for (let i=0; i < perfEntries.length; i++) {

@@ -45,7 +45,7 @@ send more data into the buffer by calling {{domxref("RTCDataChannel.send", "send
 const dc = peerConnection.createDataChannel("File Transfer");
 dc.bufferedAmountLowThreshold = 65535;
 
-dc.onbufferedamountlow = function() {
+dc.onbufferedamountlow = () => {
   /* use send() to queue more data to be sent */
 };
 ```

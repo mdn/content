@@ -58,19 +58,19 @@ Example codes below highlight the usage of main features of the Presentation API
   const presUrls = ["http://example.com/presentation.html",
                   "http://example.net/alternate.html"];
   // show or hide present button depending on display availability
-  const handleAvailabilityChange = function(available) {
+  const handleAvailabilityChange = (available) => {
     presentBtn.style.display = available ? "inline" : "none";
   };
   // Promise is resolved as soon as the presentation display availability is
   // known.
   const request = new PresentationRequest(presUrls);
-  request.getAvailability().then(function(availability) {
+  request.getAvailability().then((availability) => {
     // availability.value may be kept up-to-date by the controlling UA as long
     // as the availability object is alive. It is advised for the web developers
     // to discard the object as soon as it's not needed.
     handleAvailabilityChange(availability.value);
-    availability.onchange = function() { handleAvailabilityChange(this.value); };
-  }).catch(function() {
+    availability.onchange = () => { handleAvailabilityChange(this.value); };
+  }).catch(() => {
     // Availability monitoring is not supported by the platform, so discovery of
     // presentation displays will happen only after request.start() is called.
     // Pretend the devices are available for simplicity; or, one could implement
@@ -85,7 +85,7 @@ Example codes below highlight the usage of main features of the Presentation API
 ```html
 <!-- controller.html -->
 <script>
-  presentBtn.onclick = function () {
+  presentBtn.onclick = () => {
     // Start new presentation.
     request.start()
       // The connection to the presentation will be passed to setConnection on
@@ -103,7 +103,7 @@ Example codes below highlight the usage of main features of the Presentation API
 <!-- controller.html -->
 <button id="reconnectBtn" style="display: none;">Reconnect</button>
 <script>
-  const reconnect = function () {
+  const reconnect = () => {
     // read presId from localStorage if exists
     const presId = localStorage["presId"];
     // presId is mandatory when reconnecting to a presentation.
@@ -131,7 +131,7 @@ Example codes below highlight the usage of main features of the Presentation API
      presentation. -->
 <script>
   navigator.presentation.defaultRequest = new PresentationRequest(presUrls);
-  navigator.presentation.defaultRequest.onconnectionavailable = function(evt) {
+  navigator.presentation.defaultRequest.onconnectionavailable = (evt) => {
     setConnection(evt.connection);
   };
 </script>
@@ -217,18 +217,18 @@ Example codes below highlight the usage of main features of the Presentation API
 ```html
 <!-- presentation.html -->
 <script>
-  const addConnection = function(connection) {
-    this.onmessage = function (message) {
+  const addConnection = (connection) => {
+    this.onmessage = (message) => {
       if (message.data === "say hello")
         this.send("hello");
     };
   };
 
-  navigator.presentation.receiver.connectionList.then(function (list) {
-    list.connections.map(function (connection) {
+  navigator.presentation.receiver.connectionList.then((list) => {
+    list.connections.map((connection) => {
       addConnection(connection);
     });
-    list.onconnectionavailable = function (evt) {
+    list.onconnectionavailable = (evt) => {
       addConnection(evt.connection);
     };
   });
@@ -248,7 +248,7 @@ Example codes below highlight the usage of main features of the Presentation API
 
 <!-- presentation.html -->
 <script>
-  connection.onmessage = function (message) {
+  connection.onmessage = (message) => {
     const messageObj = JSON.parse(message.data);
     const spanElt = document.createElement("SPAN");
     spanElt.lang = messageObj.lang;

@@ -29,7 +29,7 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   // Log the URL of the document that generated the first report
   // e.g. "https://www.example.com/cats.html"

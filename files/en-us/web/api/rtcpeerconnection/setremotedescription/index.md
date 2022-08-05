@@ -62,7 +62,7 @@ The `sessionDescription` parameter is technically of type
 ```js
 myPeerConnection
   .setRemoteDescription(new RTCSessionDescription(description))
-  .then(function () {
+  .then(() => {
     return createMyStream();
   });
 ```
@@ -70,7 +70,7 @@ myPeerConnection
 to be:
 
 ```js
-myPeerConnection.setRemoteDescription(description).then(function () {
+myPeerConnection.setRemoteDescription(description).then(() => {
   return createMyStream();
 });
 ```
@@ -211,20 +211,20 @@ function handleOffer(msg) {
 
   myPeerConnection
     .setRemoteDescription(msg.description)
-    .then(function () {
+    .then(() => {
       return navigator.mediaDevices.getUserMedia(mediaConstraints);
     })
-    .then(function (stream) {
+    .then((stream) => {
       document.getElementById("local_video").srcObject = stream;
       return myPeerConnection.addStream(stream);
     })
-    .then(function () {
+    .then(() => {
       return myPeerConnection.createAnswer();
     })
-    .then(function (answer) {
+    .then((answer) => {
       return myPeerConnection.setLocalDescription(answer);
     })
-    .then(function () {
+    .then(() => {
       // Send the answer to the remote peer using the signaling server
     })
     .catch(handleGetUserMediaError);

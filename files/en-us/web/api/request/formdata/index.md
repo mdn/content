@@ -44,7 +44,7 @@ const request = new Request('/myEndpoint', {
   body: formData
 });
 
-request.formData().then(function(data) {
+request.formData().then((data) => {
   // do something with the formdata sent in the request
 });
 ```

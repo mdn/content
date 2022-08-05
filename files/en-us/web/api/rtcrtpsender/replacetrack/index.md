@@ -107,15 +107,15 @@ navigator.mediaDevices
       }
     }
   })
-  .then(function(stream) {
+  .then((stream) => {
     let videoTrack = stream.getVideoTracks()[0];
-    PCs.forEach(function(pc) {
+    PCs.forEach((pc) => {
       const sender = pc.getSenders().find((s) => s.track.kind === videoTrack.kind);
       console.log('found sender:', sender);
       sender.replaceTrack(videoTrack);
     });
   })
-  .catch(function(err) {
+  .catch((err) => {
     console.error('Error happens:', err);
   });
 ```

@@ -81,7 +81,7 @@ calls `complete()` with an answer appropriate to the status in the response.
 //   sake of brevity.
 const payment = new PaymentRequest(supportedInstruments, details, options);
 
-payment.show().then(function(paymentResponse) {
+payment.show().then((paymentResponse) => {
   const fetchOptions = {
     method: 'POST',
     credentials: include,
@@ -97,7 +97,7 @@ payment.show().then(function(paymentResponse) {
   }).catch((reason) => {
     paymentResponse.complete("fail");
   });
-}).catch(function(err) {
+}).catch((err) => {
   console.error("Uh oh, something bad happened", err.message);
 });
 ```

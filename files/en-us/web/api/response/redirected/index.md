@@ -33,7 +33,7 @@ In the code below, a textual message is inserted into an element when a redirect
 Note, however, that this isn't as safe as outright rejecting redirects if they're unexpected, as described under [Disallowing redirects](#disallowing_redirects) below.
 
 ```js
-fetch("awesome-picture.jpg").then(function(response) {
+fetch("awesome-picture.jpg").then((response) => {
   let elem = document.getElementById("warning-message-box");
   if (response.redirected) {
     elem.innerHTML = "Unexpected redirect";
@@ -41,7 +41,7 @@ fetch("awesome-picture.jpg").then(function(response) {
     elem.innerHTML = "";
   }
   return response.blob();
-}).then(function(imageBlob) {
+}).then((imageBlob) => {
   let imgObjectURL = URL.createObjectURL(imageBlob);
   document.getElementById("img-element-id").src = imgObjectURL;
 });
@@ -52,9 +52,9 @@ fetch("awesome-picture.jpg").then(function(response) {
 Because using redirected to manually filter out redirects can allow forgery of redirects, you should instead set the redirect mode to `"error"` in the `init` parameter when calling {{domxref("fetch()")}}, like this:
 
 ```js
-fetch("awesome-picture.jpg", { redirect: "error" }).then(function(response) {
+fetch("awesome-picture.jpg", { redirect: "error" }).then((response) => {
   return response.blob();
-}).then(function(imageBlob) {
+}).then((imageBlob) => {
   let imgObjectURL = URL.createObjectURL(imageBlob);
   document.getElementById("img-element-id").src = imgObjectURL;
 });

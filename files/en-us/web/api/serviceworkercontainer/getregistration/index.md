@@ -39,7 +39,7 @@ object or `undefined`.
 ## Examples
 
 ```js
-navigator.serviceWorker.getRegistration('/app').then(function(registration) {
+navigator.serviceWorker.getRegistration('/app').then((registration) => {
   if(registration){
     document.querySelector('#status').textContent = 'ServiceWorkerRegistration found.';
   }

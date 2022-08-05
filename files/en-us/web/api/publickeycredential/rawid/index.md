@@ -52,10 +52,10 @@ const options = {
 };
 
 navigator.credentials.create({  publicKey: options })
-  .then(function (pubKeyCredential) {
+  .then((pubKeyCredential) => {
     const rawId = pubKeyCredential.rawId;
     // Do something with rawId
-}).catch(function (err) {
+}).catch((err) => {
   // Deal with any error
 });
 ```

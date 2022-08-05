@@ -49,7 +49,7 @@ final cleanup or other just-before-rendering tasks.
 ## Syntax
 
 ```js
-queueMicrotask(function() {/* ... */})
+queueMicrotask(() => {/* ... */})
 ```
 
 ### Parameters
@@ -74,7 +74,7 @@ queueMicrotask(() => {
 Taken from the [queueMicrotask spec](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing):
 
 ```js
-MyElement.prototype.loadData = function (url) {
+MyElement.prototype.loadData = (url) => {
   if (this._cache[url]) {
     queueMicrotask(() => {
       this._setData(this._cache[url]);
@@ -97,7 +97,7 @@ engines. It creates a microtask by using a promise that resolves immediately.
 
 ```js
 if (typeof self.queueMicrotask !== "function") {
-  self.queueMicrotask = function (callback) {
+  self.queueMicrotask = (callback) => {
     Promise.resolve()
       .then(callback)
       .catch((e) => setTimeout(() => { throw e; })); // report exceptions

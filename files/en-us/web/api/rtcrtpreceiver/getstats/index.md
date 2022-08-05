@@ -49,7 +49,7 @@ updates an element's {{domxref("HTMLElement/innerText", "innerText")}} to displa
 packets lost.
 
 ```js
-receiver.getStats().then(function(stats) {
+receiver.getStats().then((stats) => {
   document.getElementById("lostpackets").innerText =
           stats.packetsLost;
 });

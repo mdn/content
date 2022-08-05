@@ -74,7 +74,7 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 The following example shows how to use the API for all events:
 
 ```js
-const observer = new PerformanceObserver(function(list) {
+const observer = new PerformanceObserver((list) => {
     const perfEntries = list.getEntries().forEach((entry) => {
         // Full duration
         const inputDuration = entry.duration;

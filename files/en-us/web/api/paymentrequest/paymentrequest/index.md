@@ -147,10 +147,10 @@ try {
   const request = new PaymentRequest(supportedInstruments, details, options);
   // Add event listeners here.
   // Call show() to trigger the browser's payment flow.
-  request.show().then(function(instrumentResponse) {
+  request.show().then((instrumentResponse) => {
     // Do something with the response from the UI.
   })
-  .catch(function(err) {
+  .catch((err) => {
     // Do something with the error from request.show().
   });
 } catch (e) {

@@ -19,8 +19,8 @@ The **`start()`** property of the {{domxref("PresentationRequest")}} interface r
 
 ```js
 const promise = presentationRequest.start()
-promise.then(function(PresentationConnection) { /* ... */ })
-       .catch(function(error) { /* ... */ })
+promise.then((PresentationConnection) => { /* ... */ })
+       .catch((error) => { /* ... */ })
 ```
 
 ### Parameters

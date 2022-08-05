@@ -23,8 +23,8 @@ A public key your push server uses to send messages to client apps via a push se
 In the example below the value of `applicationServerKey` is printed to the console.
 
 ```css
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.getSubscription().then(function(subscription) {
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.getSubscription().then((subscription) => {
     let options = subscription.options;
     console.log(options.applicationServerKey); // the public key
   })

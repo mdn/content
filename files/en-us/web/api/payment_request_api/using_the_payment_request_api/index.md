@@ -67,10 +67,10 @@ function buildShoppingCartDetails() {
 Once the `PaymentRequest` object has been created, you call the {{domxref("PaymentRequest.show()")}} method on it to initiate the payment request. This returns a promise that fulfills with a {{domxref("PaymentResponse")}} object if the payment is successful:
 
 ```js
-request.show().then(function(paymentResponse) {
+request.show().then((paymentResponse) => {
   // Here we would process the payment. For this demo, simulate immediate success:
   paymentResponse.complete('success')
-  .then(function() {
+  .then(() => {
     // For demo purposes:
     introPanel.style.display = 'none';
     successPanel.style.display = 'block';
@@ -91,16 +91,16 @@ There are some other useful payment request methods worth knowing about.
 new PaymentRequest(buildSupportedPaymentMethodData(),
       {total: {label: 'Stub', amount: {currency: 'USD', value: '0.01'}}})
       .canMakePayment()
-      .then(function(result) {
+      .then((result) => {
         if(result) {
           // Real payment request
           const request = new PaymentRequest(buildSupportedPaymentMethodData(),
                                              checkoutObject);
 
-          request.show().then(function(paymentResponse) {
+          request.show().then((paymentResponse) => {
             // Here we would process the payment.
             paymentResponse.complete('success')
-              .then(function() {
+              .then(() => {
                 // Finish handling payment
             });
           })
@@ -121,10 +121,10 @@ const checkoutButton = document.getElementById('checkout-button');
 if (window.PaymentRequest) {
   let request = new PaymentRequest(buildSupportedPaymentMethodNames(),
       buildShoppingCartDetails());
-  checkoutButton.addEventListener('click', function() {
-    request.show().then(function(paymentResponse) {
+  checkoutButton.addEventListener('click', () => {
+    request.show().then((paymentResponse) => {
       // Handle successful payment
-    }).catch(function(error) {
+    }).catch((error) => {
       // Handle cancelled or failed payment. For example, redirect to
       // the legacy web form checkout:
       window.location.href = '/legacy-web-form-checkout';
@@ -156,13 +156,13 @@ checkoutButton.innerText = "Loading…";
 if (window.PaymentRequest) {
   let request = new PaymentRequest(buildSupportedPaymentMethodNames(),
       buildShoppingCartDetails());
-  request.canMakePayment().then(function(canMakeAFastPayment) {
+  request.canMakePayment().then((canMakeAFastPayment) => {
     if (canMakeAFastPayment) {
       checkoutButton.innerText = "Fast Checkout with W3C";
     } else {
       checkoutButton.innerText = "Setup W3C Checkout";
     }
-  }).catch(function(error) {
+  }).catch((error) => {
     // The user may have turned off the querying functionality in their
     // privacy settings. The website does not know whether they can make
     // a fast payment, so pick a generic title.
@@ -188,9 +188,9 @@ let fallbackToLegacyOnPaymentRequestFailure = false;
 (new PaymentRequest(supportedPaymentMethods,
     {total: {label: 'Stub', amount: {currency: 'USD', value: '0.01'}}}))
 .canMakePayment()
-.then(function(result) {
+.then((result) => {
   shouldCallPaymentRequest = result;
-}).catch(function(error) {
+}).catch((error) => {
   console.log(error);
   // The user may have turned off query ability in their privacy settings.
   // Let's use PaymentRequest by default and fallback to legacy
@@ -210,9 +210,9 @@ function onCheckoutButtonClicked(lineItems) {
 function onServerCheckoutDetailsRetrieved(checkoutObject) {
   if (shouldCallPaymentRequest) {
     const request = new PaymentRequest(supportedPaymentMethods, checkoutObject);
-    request.show().then(function(paymentResponse) {
+    request.show().then((paymentResponse) => {
       // Post the results to the server and call `paymeResponse.complete()`.
-    }).catch(function(error) {
+    }).catch((error) => {
       console.log(error);
       if (fallbackToLegacyOnPaymentRequestFailure) {
         window.location.href = '/legacy-web-form-checkout';
@@ -235,18 +235,18 @@ If you select to pay with the BobPay demo payment provider on this merchant page
 The code looks something like this:
 
 ```js
-checkoutButton.addEventListener('click', function() {
+checkoutButton.addEventListener('click', () => {
   const request = new PaymentRequest(buildSupportedPaymentMethodData(),
     buildShoppingCartDetails());
-    request.show().then(function(paymentResponse) {
+    request.show().then((paymentResponse) => {
     // Here we would process the payment. For this demo, simulate immediate success:
     paymentResponse.complete('success')
-      .then(function() {
+      .then(() => {
           // For demo purposes:
           introPanel.style.display = 'none';
           successPanel.style.display = 'block';
         });
-  }).catch(function(error) {
+  }).catch((error) => {
     if (error.code === DOMException.NOT_SUPPORTED_ERR) {
       window.location.href =
         'https://bobpay.xyz/#download';
@@ -267,19 +267,19 @@ If the merchant desires to collect additional information not part of the API (e
 
 ```js
 request.show()
-.then(function(paymentResponse) {
+.then((paymentResponse) => {
     // Process payment here.
     // Close the UI:
-    paymentResponse.complete('success').then(function() {
+    paymentResponse.complete('success').then(() => {
         // Request additional shipping address details.
         const additionalDetailsContainer = document.getElementById('additional-details-container');
         additionalDetailsContainer.style.display = 'block';
         window.scrollto(additionalDetailsContainer.getBoundingClientRect().x, 0);
-    }).catch(function(error) {
+    }).catch((error) => {
         // Handle error.
     });
 })
-.catch(function(error) {
+.catch((error) => {
     // Handle error.
 });
 ```
@@ -296,7 +296,7 @@ The merchant code would look like this:
 let paymentRequest = new PaymentRequest([{supportedMethods: 'https://example.com/preauth'}], details);
 // Send `CanMakePayment` event to the payment handler.
 paymentRequest.canMakePayment()
-    .then(function(res) {
+    .then((res) => {
       if (res) {
        // The payment handler has pre-authorized a transaction
        // with some static amount, e.g., USD $1.00.
@@ -304,7 +304,7 @@ paymentRequest.canMakePayment()
         // Pre-authorization failed or payment handler not installed.
       }
     })
-    .catch(function(ex1) {
+    .catch((ex1) => {
       // Unexpected error occurred.
     });
 ```
@@ -312,7 +312,7 @@ paymentRequest.canMakePayment()
 The payment handler would include the following code:
 
 ```js
-self.addEventListener('canmakepayment', function(evt) {
+self.addEventListener('canmakepayment', (evt) => {
   // Pre-authorize here.
   let preAuthSuccess = true;
   evt.respondWith(preAuthSuccess);

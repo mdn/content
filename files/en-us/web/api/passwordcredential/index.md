@@ -54,7 +54,7 @@ const cred = new PasswordCredential({
 });
 
 navigator.credentials.store(cred)
- .then(function() {
+ .then(() => {
  // Do something else.
 });
 ```

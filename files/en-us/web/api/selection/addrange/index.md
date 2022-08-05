@@ -48,7 +48,7 @@ None ({{jsxref("undefined")}}).
 ```js
 let button = document.querySelector('button');
 
-button.addEventListener('click', function () {
+button.addEventListener('click', () => {
   let selection = window.getSelection();
   let strongs = document.getElementsByTagName('strong');
 
