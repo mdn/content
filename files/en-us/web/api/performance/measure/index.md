@@ -123,7 +123,6 @@ performance.mark(markerNameA);
 setTimeout(() => {
   performance.mark(markerNameB);
   setTimeout(() => {
-
     // Create a variety of measurements.
     performance.measure("measure a to b", markerNameA, markerNameB);
     performance.measure("measure a to now", markerNameA);
