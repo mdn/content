@@ -51,7 +51,7 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 #### JavaScript
 
 The code below gets the `style` element (an `SVGStyleElement`) using its id, and then sets it as disabled.
-As the style already exists, as it is defined in the SVG, this should succeed.
+The style already exists because it is defined in the SVG, so this should succeed.
 
 ```js
 const svg = document.getElementsByTagName("svg")[0];
