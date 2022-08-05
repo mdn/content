@@ -38,10 +38,10 @@ new Object(value)
 ### Creating a new Object
 
 ```js
-let o = new Object()
-o.foo = 42
+const o = new Object();
+o.foo = 42;
 
-console.log(o)
+console.log(o);
 // Object { foo: 42 }
 ```
 
@@ -50,15 +50,15 @@ console.log(o)
 The following examples store an empty `Object` object in `o`:
 
 ```js
-let o = new Object()
+const o = new Object();
 ```
 
 ```js
-let o = new Object(undefined)
+const o = new Object(undefined);
 ```
 
 ```js
-let o = new Object(null)
+const o = new Object(null);
 ```
 
 ## Specifications

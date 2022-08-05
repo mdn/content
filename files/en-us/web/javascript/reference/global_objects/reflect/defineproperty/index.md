@@ -58,9 +58,9 @@ modification of a property on an object. For more details, see the
 ### Using Reflect.defineProperty()
 
 ```js
-let obj = {}
-Reflect.defineProperty(obj, 'x', {value: 7})  // true
-obj.x                                         // 7
+const obj = {};
+Reflect.defineProperty(obj, 'x', { value: 7 }); // true
+console.log(obj.x); // 7
 ```
 
 ### Checking if property definition has been successful

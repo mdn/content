@@ -70,12 +70,12 @@ The `calendar` property returns an array of all supported calendars for the `Loc
 List supported calendars for a given `Locale`.
 
 ```js
-let arEG = new Intl.Locale("ar-EG");
+const arEG = new Intl.Locale("ar-EG");
 console.log(arEG.calendars); // logs ["gregory", "coptic", "islamic", "islamic-civil", "islamic-tbla"]
 ```
 
 ```js
-let jaJP = new Intl.Locale("ja-JP");
+const jaJP = new Intl.Locale("ja-JP");
 console.log(jaJP.calendars); // logs ["gregory", "japanese"]
 ```
 

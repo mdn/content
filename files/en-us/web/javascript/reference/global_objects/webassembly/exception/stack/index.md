@@ -67,19 +67,19 @@ Once the file is instantiated, the code calls the exported WebAssembly `run()` m
 The stack is then logged from the `catch` statement.
 
 ```js
-let tag = new WebAssembly.Tag({ parameters: ['i32'] });
+const tag = new WebAssembly.Tag({ parameters: ['i32'] });
 
 function throwExceptionWithStack(param) {
   // Note: We declare the exception with "{traceStack: true}"
   throw new WebAssembly.Exception(tag, [param], {traceStack: true});
-};
+}
 
 // Note: importObject properties match the WebAssembly import statements.
 const importObject = {
   "extmod": {
     "exttag": tag,
-    "throwExnWithStack": throwExceptionWithStack
-  }
+    "throwExnWithStack": throwExceptionWithStack,
+  },
 };
 
 WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject)

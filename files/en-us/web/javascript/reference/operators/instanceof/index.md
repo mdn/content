@@ -129,8 +129,8 @@ use `myNode instanceof myNode.ownerDocument.defaultView.SVGElement`.
 The following example shows the behavior of `instanceof` with `String` objects.
 
 ```js
-let literalString = 'This is a literal string';
-let stringObject  = new String('String created with constructor');
+const literalString = 'This is a literal string';
+const stringObject = new String('String created with constructor');
 
 literalString instanceof String;  // false, string primitive is not a String
 stringObject  instanceof String;  // true
@@ -146,7 +146,7 @@ stringObject  instanceof Date;    // false
 The following example shows the behavior of `instanceof` with `Date` objects.
 
 ```js
-let myDate = new Date();
+const myDate = new Date();
 
 myDate instanceof Date;      // true
 myDate instanceof Object;    // true
@@ -169,20 +169,20 @@ Rectangle.prototype = Object.create(Shape.prototype);
 
 Rectangle.prototype.constructor = Rectangle;
 
-let rect = new Rectangle();
+const rect = new Rectangle();
 
-rect instanceof Object;    // true
-rect instanceof Shape;     // true
+rect instanceof Object; // true
+rect instanceof Shape;  // true
 rect instanceof Rectangle; // true
-rect instanceof String;    // false
+rect instanceof String; // false
 
-let literalObject     = {};
-let nullObject  = Object.create(null);
+const literalObject = {};
+const nullObject = Object.create(null);
 nullObject.name = "My object";
 
-literalObject    instanceof Object;   // true, every object literal has Object.prototype as prototype
-({})             instanceof Object;   // true, same case as above
-nullObject       instanceof Object;   // false, prototype is end of prototype chain (null)
+literalObject instanceof Object; // true, every object literal has Object.prototype as prototype
+({}) instanceof Object; // true, same case as above
+nullObject instanceof Object; // false, prototype is end of prototype chain (null)
 ```
 
 ### Demonstrating that `mycar` is of type `Car` and type `Object`
@@ -198,9 +198,9 @@ function Car(make, model, year) {
   this.model = model;
   this.year = year;
 }
-let mycar = new Car('Honda', 'Accord', 1998)
-let a = mycar instanceof Car     // returns true
-let b = mycar instanceof Object  // returns true
+const mycar = new Car('Honda', 'Accord', 1998);
+const a = mycar instanceof Car; // returns true
+const b = mycar instanceof Object; // returns true
 ```
 
 ### Not an instanceof
