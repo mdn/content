@@ -38,8 +38,8 @@ const myBlob = new Blob([JSON.stringify(obj, null, 2)], { type : 'application/js
 
 const request = new Request('/myEndpoint', {
   method: 'POST',
-  body: myBlob
- });
+  body: myBlob,
+});
 
 request.blob().then((myBlob) => {
   // do something with the blob sent in the request
