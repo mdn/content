@@ -74,14 +74,14 @@ queueMicrotask(() => {
 Taken from the [queueMicrotask spec](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing):
 
 ```js
-MyElement.prototype.loadData = (url) => {
+MyElement.prototype.loadData = function (url) => {
   if (this._cache[url]) {
     queueMicrotask(() => {
       this._setData(this._cache[url]);
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then((res) => res.arrayBuffer()).then((data) => {
+    fetch(url).then(function (res) => res.arrayBuffer()).then(function (data) => {
       this._cache[url] = data;
       this._setData(data);
       this.dispatchEvent(new Event("load"));
