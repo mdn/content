@@ -58,12 +58,12 @@ const newError = new Error('Some error message', "someFile.js", 11);
 self.reportError(newError);
 
 window.onerror = (message, source, lineno, colno, error) => {
-  console.log(`message: ${error.message}, lineno: ${lineno}` );
+  console.error(`message: ${error.message}, lineno: ${lineno}` );
   return true;
 };
 
 self.addEventListener('error', (error) => {
-    console.log(error.filename);
+    console.error(error.filename);
 });
 
 // Output
