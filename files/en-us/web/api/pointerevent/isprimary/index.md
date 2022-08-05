@@ -42,8 +42,7 @@ interaction).
 
 ## Value
 
-A boolean, `true` if the pointer for this event is the primary pointer and
-    returns `false` otherwise.
+A boolean, `true` if the pointer for this event is the primary pointer and returns `false` otherwise.
 
 ## Examples
 
@@ -52,10 +51,11 @@ appropriate processing function.
 
 ```js
 target.addEventListener('pointerdown', (event) => {
-  if (event.isPrimary)
+  if (event.isPrimary) {
     process_primary_pointer(event);
-  else
+  } else {
     process_secondary_pointer(event);
+  }
 }, false);
 ```
 
