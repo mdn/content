@@ -186,7 +186,7 @@ It's possible to handle multiple notifications this way:
 
 ```js
 window.addEventListener('load', () => {
-  const button = document.getElementsByTagName('button')[0];
+  const button = document.querySelector('button');
 
   if (window.self !== window.top) {
     // Ensure that if our document is in a frame, we get the user
@@ -200,14 +200,15 @@ window.addEventListener('load', () => {
   button.addEventListener('click', () => {
     // If the user agreed to get notified
     // Let's try to send ten notifications
-    if (window.Notification && Notification.permission === "granted") {
+    if (Notification?.permission === "granted") {
       let i = 0;
       // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-      const interval = window.setInterval(() => {
+      const interval = setInterval(() => {
         // Thanks to the tag, we should only see the "Hi! 9" notification
         const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
-        if (i++ === 9) {
-          window.clearInterval(interval);
+        if (i === 9) {
+          i++;
+          clearInterval(interval);
         }
       }, 200);
     }
@@ -215,17 +216,18 @@ window.addEventListener('load', () => {
     // If the user hasn't told if they want to be notified or not
     // Note: because of Chrome, we are not sure the permission property
     // is set, therefore it's unsafe to check for the "default" value.
-    else if (window.Notification && Notification.permission !== "denied") {
+    else if (Notification?.permission !== "denied") {
       Notification.requestPermission((status) => {
         // If the user said okay
         if (status === "granted") {
           let i = 0;
           // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-          const interval = window.setInterval(() => {
+          const interval = setInterval(() => {
             // Thanks to the tag, we should only see the "Hi! 9" notification
             const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
-            if (i++ === 9) {
-              window.clearInterval(interval);
+            if (i === 9) {
+              i++;
+              clearInterval(interval);
             }
           }, 200);
         }
