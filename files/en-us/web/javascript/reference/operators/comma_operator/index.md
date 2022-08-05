@@ -25,7 +25,7 @@ expressions. This is commonly used to provide multiple parameters to a
 ## Syntax
 
 ```js
-expr1, expr2, expr3...
+expr1, expr2, expr3/* , … */
 ```
 
 ### Parameters

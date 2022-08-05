@@ -16,7 +16,7 @@ You need to provide a semicolon, so that JavaScript can parse the source code co
 
 ## Message
 
-```js
+```
 SyntaxError: Expected ';' (Edge)
 SyntaxError: missing ; before statement (Firefox)
 ```

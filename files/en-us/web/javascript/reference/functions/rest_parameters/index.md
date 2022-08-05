@@ -88,21 +88,21 @@ for converting a set of arguments to an array.
 // Before rest parameters, "arguments" could be converted to a normal array using:
 
 function f(a, b) {
-  let normalArray = Array.prototype.slice.call(arguments)
+  const normalArray = Array.prototype.slice.call(arguments);
   // — or —
-  let normalArray = [].slice.call(arguments)
+  const normalArray = [].slice.call(arguments);
   // — or —
-  let normalArray = Array.from(arguments)
+  const normalArray = Array.from(arguments);
 
-  let first = normalArray.shift()  // OK, gives the first argument
-  let first = arguments.shift()    // ERROR (arguments is not a normal array)
+  const first = normalArray.shift(); // OK, gives the first argument
+  const first = arguments.shift(); // ERROR (arguments is not a normal array)
 }
 
 // Now, you can easily gain access to a normal array using a rest parameter
 
 function f(...args) {
-  let normalArray = args
-  let first = normalArray.shift() // OK, gives the first argument
+  const normalArray = args;
+  const first = normalArray.shift(); // OK, gives the first argument
 }
 ```
 

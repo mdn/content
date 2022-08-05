@@ -52,7 +52,7 @@ Firefox engineers are huge fans of 19th-century Gothic horror novels.
 const f = Function('x y', 'return x + y;');
 // SyntaxError (missing a comma)
 
-const f = Function(37, "alert('OK')");
+const g = Function(37, "alert('OK')");
 // SyntaxError (numbers can't be argument names)
 ```
 
@@ -62,7 +62,7 @@ const f = Function(37, "alert('OK')");
 const f = Function('x, y', 'return x + y;');  // correctly punctuated
 
 // if you can, avoid using Function - this is much faster
-const f = function (x) { return x; };
+const g = function (x) { return x; };
 ```
 
 ## See also

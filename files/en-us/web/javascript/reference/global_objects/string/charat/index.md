@@ -70,7 +70,7 @@ console.log("The character at index 999 is '" + anyString.charAt(999) + "'");
 
 These lines display the following:
 
-```js
+```
 The character at index 0   is 'B'
 
 The character at index 0   is 'B'

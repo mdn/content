@@ -74,10 +74,8 @@ Values outside the range ±(2^-1074 to 2^1024) are automatically converted:
 The Number type has only one integer with multiple representations: `0` is represented as both `-0` and `+0` (where `0` is an alias for `+0`). In practice, there is almost no difference between the different representations; for example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
 
 ```js
-> 42 / +0
-Infinity
-> 42 / -0
--Infinity
+console.log(42 / +0); // Infinity
+console.log(42 / -0); // -Infinity
 ```
 
 Although a number often represents only its value, JavaScript provides {{jsxref("Operators", "binary (bitwise) operators")}}.
@@ -98,14 +96,11 @@ This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTE
 
 ```js
 // BigInt
-> const x = BigInt(Number.MAX_SAFE_INTEGER);
-9007199254740991n
-> x + 1n === x + 2n; // 9007199254740992n === 9007199254740993n
-false
+const x = BigInt(Number.MAX_SAFE_INTEGER); // 9007199254740991n
+x + 1n === x + 2n; // false because 9007199254740992n and 9007199254740993n are unequal
 
 // Number
-> Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // 9007199254740992 === 9007199254740992
-true
+Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true because both are 9007199254740992
 ```
 
 You can use the operators `+`, `*`, `-`, `**`, and `%` with BigInts—just like with Numbers. A BigInt is not strictly equal to a Number, but it is loosely so.

@@ -42,8 +42,18 @@ The syntax of **comments** is the same as in C++ and in many other languages:
 /* this is a longer,
  * multi-line comment
  */
+```
 
+You can't nest block comments. This often happens when you accidentally include a `*/` sequence in your comment, which will terminate the comment.
+
+```js example-bad
 /* You can't, however, /* nest comments */ SyntaxError */
+```
+
+In this case, you need to break up the `*/` pattern. For example, by inserting a backslash:
+
+```js
+/* You can /* nest comments *\/ by escaping slashes */
 ```
 
 Comments behave like whitespace, and are discarded during script execution.
@@ -277,7 +287,7 @@ The scope rules for constants are the same as those for `let` block-scope variab
 
 You cannot declare a constant with the same name as a function or variable in the same scope. For example:
 
-```js
+```js example-bad
 // THIS WILL CAUSE AN ERROR
 function f() {};
 const f = 5;
@@ -564,16 +574,21 @@ console.log(car[7]); // Mazda
 
 Object property names can be any string, including the empty string. If the property name would not be a valid JavaScript {{Glossary("Identifier","identifier")}} or number, it must be enclosed in quotes.
 
-Property names that are not valid identifiers cannot be accessed as a dot (`.`) property, but _can_ be accessed and set with the array-like notation("`[]`").
+Property names that are not valid identifiers cannot be accessed as a dot (`.`) property.
 
-```js
+```js example-bad
 const unusualPropertyNames = {
   '': 'An empty string',
   '!': 'Bang!'
 }
 console.log(unusualPropertyNames.'');   // SyntaxError: Unexpected string
-console.log(unusualPropertyNames['']);  // An empty string
 console.log(unusualPropertyNames.!);    // SyntaxError: Unexpected token !
+```
+
+Instead, they must be accessed with the bracket notation (`[]`).
+
+```js example-good
+console.log(unusualPropertyNames['']);  // An empty string
 console.log(unusualPropertyNames['!']); // Bang!
 ```
 

@@ -20,7 +20,8 @@ statement.
 ## Syntax
 
 ```js
-break [label];
+break;
+break label;
 ```
 
 - `label` {{optional_inline}}

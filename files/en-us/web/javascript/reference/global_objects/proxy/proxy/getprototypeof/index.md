@@ -20,7 +20,7 @@ The **`handler.getPrototypeOf()`** method is a trap for the
 ```js
 new Proxy(obj, {
   getPrototypeOf(target) {
-  ...
+    // …
   }
 });
 ```

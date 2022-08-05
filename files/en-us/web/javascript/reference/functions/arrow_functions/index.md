@@ -42,14 +42,14 @@ Let's decompose a "traditional anonymous function" down to the simplest "arrow f
 // Traditional Anonymous Function
 (function (a) {
   return a + 100;
-})
+});
 
 // Arrow Function Break Down
 
 // 1. Remove the word "function" and place arrow between the argument and opening body bracket
 (a) => {
   return a + 100;
-}
+};
 
 // 2. Remove the body braces and word "return" — the return is implied.
 (a) => a + 100;
@@ -67,7 +67,7 @@ arguments**, you'll need to re-introduce parentheses around the arguments:
 // Traditional Anonymous Function
 (function (a, b) {
   return a + b + 100;
-})
+});
 
 // Arrow Function
 (a, b) => a + b + 100;
@@ -77,7 +77,7 @@ const a = 4;
 const b = 2;
 (function () {
   return a + b + 100;
-})
+});
 
 // Arrow Function (no arguments)
 const a = 4;
@@ -94,13 +94,13 @@ magically guess what or when you want to "return"):
 (function (a, b) {
   const chuck = 42;
   return a + b + chuck;
-})
+});
 
 // Arrow Function
 (a, b) => {
   const chuck = 42;
   return a + b + chuck;
-}
+};
 ```
 
 And finally, for **named functions** we treat arrow expressions like
@@ -394,6 +394,8 @@ function foo(n) {
 foo(3); // 3 + 3 = 6
 ```
 
+> **Note:** You cannot declare a variable called `arguments` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), so the code above would be a syntax error. This makes the scoping effect of `arguments` much easier to reason about.
+
 In most cases, using [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 is a good alternative to using an `arguments` object.
 
@@ -452,7 +454,7 @@ const func2 = (x, y) => { return x + y; };
 Keep in mind that returning object literals using the concise body syntax
 `(params) => {object:literal}` will not work as expected.
 
-```js
+```js example-bad
 const func = () => { foo: 1 };
 // Calling func() returns undefined!
 
@@ -476,7 +478,7 @@ const func = () => ({ foo: 1 });
 
 An arrow function cannot contain a line break between its parameters and its arrow.
 
-```js
+```js example-bad
 const func = (a, b, c)
   => 1;
 // SyntaxError: Unexpected token '=>'
@@ -514,14 +516,16 @@ special parsing rules that interact differently with
 [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 compared to regular functions.
 
-```js
+```js example-bad
 let callback;
-
-callback = callback || function () {}; // ok
 
 callback = callback || () => {};
 // SyntaxError: invalid arrow-function arguments
+```
 
+Because `=>` has a lower precedence than most operators, parentheses are necessary to avoid `callback || ()` being parsed as the arguments list of the arrow function.
+
+```js example-good
 callback = callback || (() => {});    // ok
 ```
 
