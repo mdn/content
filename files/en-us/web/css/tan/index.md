@@ -30,7 +30,27 @@ The `tan()` function takes only one expression as its argument.
 
 ## Examples
 
-TBD
+### Drawing Parallelogram
+
+```css
+.parallelogram {
+  --w: 400;
+  --h: 200;
+  position: relative;
+  width: calc(1px * var(--w));
+  height: calc(1px * var(--h));;
+}
+.parallelogram::before {
+  --angle: calc( sin( var(--h) / var(--w) ) );
+  content: '';
+  position: absolute;
+  width: calc( 100% - 100% * var(--h) / var(--w) * tan( var(--angle) ) );
+  height: 100%;
+  transform-origin: 0 100%;
+  transform: skew( calc( 0 - var(--angle) ) );
+  background-color: red;
+}
+```
 
 ## Specifications
 
