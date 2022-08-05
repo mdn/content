@@ -48,7 +48,7 @@ Okay, so it's not quite _that_ simple — there are some other differentiators a
 
 ## An erroneous example
 
-To get started, let's return to our number guessing game — except this time we'll be exploring a version that has some deliberate errors introduced. Go to GitHub and make yourself a local copy of [number-game-errors.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) (see it [running live here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)).
+To get started, let's return to our number guessing game — except this time we'll be exploring a version that has some deliberate errors introduced. Go to GitHub and make yourself a local copy of <a href="https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html" target="_blank">number-game-errors.html</a> (see it <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html" target="_blank">running live here</a>.
 
 1. To get started, open the local copy inside your favorite text editor, and your browser.
 2. Try playing the game — you'll notice that when you press the "Submit guess" button, it doesn't work!
