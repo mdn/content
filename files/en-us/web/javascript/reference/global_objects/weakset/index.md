@@ -34,7 +34,7 @@ Functions that call themselves recursively need a way of guarding against circul
 // Execute a callback on everything stored inside an object
 function execRecursively(fn, subject, _refs = new WeakSet()) {
   // Avoid infinite recursion
-  if(_refs.has(subject)) {
+  if (_refs.has(subject)) {
     return;
   }
 
