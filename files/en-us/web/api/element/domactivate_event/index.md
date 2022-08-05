@@ -16,7 +16,7 @@ tags:
   - onactivate
 browser-compat: api.Element.DOMActivate_event
 ---
-{{APIRef}}
+{{APIRef}}{{Deprecated_Header}}
 
 {{Deprecated_Header}}
 

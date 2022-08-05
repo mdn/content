@@ -177,7 +177,7 @@ The following methods can be used to manipulate paths of objects.
   - : Strokes the current sub-paths with the current stroke style.
 - {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
   - : If a given element is focused, this method draws a focus ring around the current path.
-- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}
+- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{Experimental_Inline}}
   - : Scrolls the current path or a given path into the view.
 - {{domxref("CanvasRenderingContext2D.clip()")}}
   - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
@@ -202,7 +202,7 @@ Objects in the `CanvasRenderingContext2D` rendering context have a current trans
   - : Multiplies the current transformation matrix with the matrix described by its arguments.
 - {{domxref("CanvasRenderingContext2D.setTransform()")}}
   - : Resets the current transform to the identity matrix, and then invokes the `transform()` method with the same arguments.
-- {{domxref("CanvasRenderingContext2D.resetTransform()")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.resetTransform()")}}
   - : Resets the current transform by the identity matrix.
 
 ### Compositing
@@ -230,9 +230,9 @@ See also the {{domxref("ImageData")}} object.
 
 ### Image smoothing
 
-- {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}
   - : Image smoothing mode; if disabled, images will not be smoothed if scaled.
-- {{domxref("CanvasRenderingContext2D.imageSmoothingQuality")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.imageSmoothingQuality")}}
   - : Allows you to set the quality of image smoothing.
 
 ### The canvas state
@@ -250,7 +250,7 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 ### Filters
 
-- {{domxref("CanvasRenderingContext2D.filter")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.filter")}}
   - : Applies a CSS or SVG filter to the canvas, e.g., to change its brightness or blurriness.
 
 ## Non-standard APIs
@@ -259,38 +259,38 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 Most of these APIs are [deprecated and were removed shortly after Chrome 36](https://bugs.chromium.org/p/chromium/issues/detail?id=363198).
 
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.clearShadow()`
+- `CanvasRenderingContext2D.clearShadow()` {{non-standard_inline}} {{deprecated_inline}}
   - : Removes all shadow settings like {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}}.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.drawImageFromRect()`
+- `CanvasRenderingContext2D.drawImageFromRect()` {{non-standard_inline}} {{deprecated_inline}}
   - : This is redundant with an equivalent overload of `drawImage`.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.setAlpha()`
+- `CanvasRenderingContext2D.setAlpha()` {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.globalAlpha")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.setCompositeOperation()`
+- `CanvasRenderingContext2D.setCompositeOperation()` {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.setLineWidth()`
+- `CanvasRenderingContext2D.setLineWidth()` {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.lineWidth")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.setLineJoin()`
+- `CanvasRenderingContext2D.setLineJoin()` {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.lineJoin")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.setLineCap()`
+- `CanvasRenderingContext2D.setLineCap()` {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.lineCap")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.setMiterLimit()`
+- `CanvasRenderingContext2D.setMiterLimit()`  {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.miterLimit")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.setStrokeColor()`
+- `CanvasRenderingContext2D.setStrokeColor()`  {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.strokeStyle")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.setFillColor()`
+- `CanvasRenderingContext2D.setFillColor()` {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.fillStyle")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.setShadow()`
+- `CanvasRenderingContext2D.setShadow()`  {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.webkitLineDash`
+- `CanvasRenderingContext2D.webkitLineDash` {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.webkitLineDashOffset`
+- `CanvasRenderingContext2D.webkitLineDashOffset` {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.webkitImageSmoothingEnabled`
+- `CanvasRenderingContext2D.webkitImageSmoothingEnabled` {{non-standard_inline}} {{deprecated_inline}}
   - : Use {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} instead.
 
 ### Blink only
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.isContextLost()`
+- `CanvasRenderingContext2D.isContextLost()` {{non-standard_inline}}
   - : Inspired by the same `WebGLRenderingContext` method it returns `true` if the Canvas context has been lost, or `false` if not.
 
 ### WebKit only
@@ -321,7 +321,7 @@ Most of these APIs are [deprecated and were removed shortly after Chrome 36](htt
 
 #### Internal APIs (chrome-context only)
 
-- {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.drawWindow()")}}
+- {{domxref("CanvasRenderingContext2D.drawWindow()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Renders a region of a window into the `canvas`. The contents of the window's viewport are rendered, ignoring viewport clipping and scrolling.
 - {{non-standard_inline}} `CanvasRenderingContext2D.demote()`
   - : This causes a context that is currently using a hardware-accelerated backend to fallback to a software one. All state should be preserved.
