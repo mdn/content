@@ -76,9 +76,8 @@ const publicKey = {
 navigator.credentials.create({ publicKey })
   .then((newCredentialInfo) => {
     const attestationResponse = newCredentialInfo.response;
-  }).catch((err) => {
-     console.error(err);
-  });
+  })
+  .catch((err) => console.error(err));
 ```
 
 ## Specifications

@@ -51,9 +51,8 @@ navigator.credentials.get({ "publicKey": options })
 
     // send assertion response back to the server
     // to proceed with the control of the credential
-}).catch((err) => {
-     console.error(err);
-});
+  })
+  .catch((err) => console.error(err));
 ```
 
 ## Specifications

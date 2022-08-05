@@ -90,9 +90,7 @@ const cachedResponse = caches.match(event.request).catch(() => {
     cache.put(event.request, response);
   });
   return response.clone();
-}).catch(() => {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
+}).catch(() => caches.match('/sw-test/gallery/myLittleVader.jpg'));
 ```
 
 ## Specifications

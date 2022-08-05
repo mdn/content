@@ -88,9 +88,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(event.request).catch((e) => {
         console.error('Fetch failed; returning offline page instead.', e);
-        return caches.open(OFFLINE_CACHE).then((cache) => {
-          return cache.match(OFFLINE_URL);
-        });
+        return caches.open(OFFLINE_CACHE).then((cache) => cache.match(OFFLINE_URL));
       })
     );
   }

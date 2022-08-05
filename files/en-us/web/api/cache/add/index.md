@@ -61,9 +61,7 @@ This code block waits for an {{domxref("InstallEvent")}} to fire, then calls {{d
 ```js
 this.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v1').then((cache) => {
-      return cache.add('/sw-test/index.html');
-    })
+    caches.open('v1').then((cache) => cache.add('/sw-test/index.html'))
   );
 });
 ```

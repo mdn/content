@@ -54,9 +54,8 @@ navigator.credentials.get({  publicKey: options })
     // Send response and client extensions to the server so that it can
     // go on with the authentication
 
-}).catch((err) => {
-   console.error(err);
-});
+  })
+  .catch((err) => console.error(err));
 ```
 
 ## Specifications

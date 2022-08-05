@@ -85,9 +85,7 @@ navigator.bluetooth.requestDevice(options).then((device) => {
   console.log(`Name: ${device.name}`);
   // Do something with the device.
 })
-.catch((error) => {
-  console.log(`Something went wrong. ${error}`);
-});
+.catch((error) => console.error(`Something went wrong. ${error}`));
 ```
 
 [Detailed examples](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services) are in the specification.
