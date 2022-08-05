@@ -256,6 +256,12 @@ If done correctly, when you save your HTML and refresh your browser you should b
 
 - The JavaScript has added an empty list to the page. Now when you click anywhere outside the list, a dialog box will pop up asking you to enter some text for a new list item. When you press the OK button, a new list item will be added to the list containing the text. When you click on an existing list item, a dialog box will pop up allowing you to change the item's text.
 - The CSS has caused the background to go green, and the text to become bigger. It has also styled some of the content that the JavaScript has added to the page (the red bar with the black border is the styling the CSS has added to the JS-generated list.)
+> **Also:** JavaScript can be added in its own element without linking an external file, it is not highly recommended but still very possible. It would look something like this:
+```JavaScript 
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script> 
+```
 
 > **Note:** If you get stuck in this exercise and can't get the CSS/JS to apply, try checking out our [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) example page.
 
