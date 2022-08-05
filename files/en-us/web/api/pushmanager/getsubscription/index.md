@@ -63,7 +63,7 @@ This code snippet is taken from a [push messaging and notification sample](https
         isPushEnabled = true;
       })
       .catch((err) => {
-        window.Demo.debug.log('Error during getSubscription()', err);
+        console.err(`Error during getSubscription(): ${err}`);
       });
   });
 ```
