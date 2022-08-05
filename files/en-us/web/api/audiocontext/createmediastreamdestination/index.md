@@ -83,7 +83,7 @@ From here, you can play and save the opus file.
 
       mediaRecorder.onstop = (evt) => {
         // Make blob out of our blobs, and open it.
-        const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+        const blob = new Blob(chunks, { type: 'audio/ogg; codecs=opus' });
         document.querySelector("audio").src = URL.createObjectURL(blob);
       };
     </script>
