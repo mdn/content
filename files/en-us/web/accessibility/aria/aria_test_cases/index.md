@@ -15,9 +15,9 @@ For each example we test the "Expected" results with assistive technologies, for
 
 There are several purposes for providing this information:
 
-1.  Help browser vendors provide correct implementations
-2.  Help AT vendors provide correct implementations
-3.  Inform authors as to what actually works reliably
+1. Help browser vendors provide correct implementations
+2. Help AT vendors provide correct implementations
+3. Inform authors as to what actually works reliably
 
 In general we're testing with the latest public releases. However, where things don't work we may test with nightly builds if they are available, in order to show what is already fixed in upcoming releases.
 
@@ -69,7 +69,6 @@ Test cases are organized as follows:
 | fail  | expected behavior not met                  |
 | 1. 2. | reference to link example                  |
 
-
 #### Note Regarding Dojo/Dijit Test Files
 
 The main purpose of Dojo's Dijit test files are for Dojo developers to exercise and debug the code. As such, they are used to test a variety of features, such as styling, behavior, mouse, and keyboard interactions, to name few. These test files are not specifically for testing ARIA. Still, Dojo's widgets implement ARIA, and the noted test files could be used as an "ARIA test file".
@@ -86,9 +85,9 @@ Review the information on [how to file a bug on an ARIA implementation](/en-US/d
 
 ### Alert
 
-1.  [Simple alert](https://codetalks.org/source/widgets/alert/alert.html)
-2.  [Complex Alert](https://codetalks.org/source/widgets/alert/alert1.html)
-3.  [Real alert example with aria-required and aria-invalid](https://codetalks.org/source/enhanced-html-forms/client-form-validation-invalid-and-alert.html)
+1. [Simple alert](https://codetalks.org/source/widgets/alert/alert.html)
+2. [Complex Alert](https://codetalks.org/source/widgets/alert/alert1.html)
+3. [Real alert example with aria-required and aria-invalid](https://codetalks.org/source/enhanced-html-forms/client-form-validation-invalid-and-alert.html)
 
     \-- type in a email address without an at sign to test the alert
 
@@ -121,8 +120,8 @@ Review the information on [how to file a bug on an ARIA implementation](/en-US/d
 
 ### Alertdialog
 
-1.  [Alert Dialog](http://test.cita.uiuc.edu/aria/alertdialog/alertdialog1.php)
-2.  [YUI alert dialog (3rd button in this page)](https://developer.yahoo.com/yui/examples/container/container-ariaplugin_clean.html)
+1. [Alert Dialog](http://test.cita.uiuc.edu/aria/alertdialog/alertdialog1.php)
+2. [YUI alert dialog (3rd button in this page)](https://developer.yahoo.com/yui/examples/container/container-ariaplugin_clean.html)
 
 **Expected AT Behavior:**
 
@@ -153,13 +152,12 @@ In the UIUC test example, the 'close' button cannot receive focus.
 | ZoomText            | Fail- announced as 'alert'                                   | Pass | -     | -      |
 | Orca                | -                                                            | -    | -     | -      |
 
-
 ### Button
 
 #### Basic Button
 
-1.  [Button with description](https://codetalks.org/source/widgets/button/button.html)
-2.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_Button.html)
+1. [Button with description](https://codetalks.org/source/widgets/button/button.html)
+2. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_Button.html)
 
     \-- lots of other types of buttons there as well.
 
@@ -186,7 +184,7 @@ In the UIUC test example, the 'close' button cannot receive focus.
 
 #### Toggle Button
 
-1.  [Buttons with Icons and without Text](https://codetalks.org/source/widgets/button/togglebuttonhtml)
+1. [Buttons with Icons and without Text](https://codetalks.org/source/widgets/button/togglebuttonhtml)
 
     \-- under construction. Only the bold/italic buttons should be toggle buttons, and they aren't currently toggleable.
 
@@ -216,7 +214,7 @@ In the UIUC test example, the 'close' button cannot receive focus.
 
 #### Menu Button
 
-1.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_Button.html)
+1. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_Button.html)
 
 **Expected AT Behavior:**
 
@@ -248,16 +246,16 @@ In the UIUC test example, the 'close' button cannot receive focus.
 
 **Test cases:**
 
-1.  [Set aria-checked="false" for unchecked](https://codetalks.org/source/widgets/checkbox/checkbox2.html)
-2.  [Both remove or set attribute for unchecked case](https://codetalks.org/source/widgets/checkbox/checkbox.html)
+1. [Set aria-checked="false" for unchecked](https://codetalks.org/source/widgets/checkbox/checkbox2.html)
+2. [Both remove or set attribute for unchecked case](https://codetalks.org/source/widgets/checkbox/checkbox.html)
 
     \-- also includes an invalid and required checkbox
 
-3.  [Hierarchical](http://test.cita.uiuc.edu/aria/checkbox/checkbox5.php)
+3. [Hierarchical](http://test.cita.uiuc.edu/aria/checkbox/checkbox5.php)
 
     (newly added test not in test results yet)
 
-4.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_CheckBox.html)
+4. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_CheckBox.html)
 
 **Expected AT Behavior:**
 
@@ -285,12 +283,11 @@ Need testcase where aria-checked attribute is removed instead of set to false
 | ZoomText            | Pass                                                         | -                                                            | Fail  | Fail   |
 | Orca                | Pass                                                         | n/a                                                          | -     | -      |
 
-
 #### Tristate Checkbox
 
 **Test cases:**
 
-1.  [Both remove or unset for unchecked case](https://codetalks.org/source/widgets/checkbox/checkbox-tristate.html)
+1. [Both remove or unset for unchecked case](https://codetalks.org/source/widgets/checkbox/checkbox-tristate.html)
 
 **Expected AT Behavior:**
 
@@ -320,9 +317,9 @@ Need testcase where aria-checked attribute is removed instead of set to false
 
 **Test cases:**
 
-1.  [editable combo 2](https://codetalks.org/source/widgets/combobox/combo-editable.html)
-2.  [dojo nightly build (combobox)](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_ComboBox.html)
-3.  [dojo nightly build (combobox with auto complete)](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_FilteringSelect.html)
+1. [editable combo 2](https://codetalks.org/source/widgets/combobox/combo-editable.html)
+2. [dojo nightly build (combobox)](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_ComboBox.html)
+3. [dojo nightly build (combobox with auto complete)](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_FilteringSelect.html)
 
 **Expected AT Behavior:**
 
@@ -351,7 +348,7 @@ Need testcase where aria-checked attribute is removed instead of set to false
 
 **Test cases:**
 
-1.  [Datepicker Example](https://codetalks.org/source/widgets/datepicker/datepicker.sample.html)
+1. [Datepicker Example](https://codetalks.org/source/widgets/datepicker/datepicker.sample.html)
 
 **Expected AT Behavior:**
 
@@ -374,7 +371,7 @@ Need testcase where aria-checked attribute is removed instead of set to false
 
 ### Description
 
-1.  [Description for groupbox and for button](https://codetalks.org/source/widgets/button/button.html)
+1. [Description for groupbox and for button](https://codetalks.org/source/widgets/button/button.html)
 
 (AL) Note: the description role is no longer necessary as long as aria-describedby is used; however, this test case is still useful for testing aria-describedby.
 
@@ -406,12 +403,12 @@ Need testcase where aria-checked attribute is removed instead of set to false
 
 ### Dialog
 
-1.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Dialog.html)
+1. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Dialog.html)
 
     \- Note that this may not always work
 
-2.  [Dojo 1.2.3 Release](https://download.dojotoolkit.org/release-1.2.3/dojo-release-1.2.3/dijit/tests/test_Dialog.html)
-3.  [YUI dialogs -- use first two dialog buttons](https://developer.yahoo.com/yui/examples/container/container-ariaplugin_clean.html)
+2. [Dojo 1.2.3 Release](https://download.dojotoolkit.org/release-1.2.3/dojo-release-1.2.3/dijit/tests/test_Dialog.html)
+3. [YUI dialogs -- use first two dialog buttons](https://developer.yahoo.com/yui/examples/container/container-ariaplugin_clean.html)
 
 **Expected AT Behavior:**
 
@@ -436,8 +433,8 @@ Need testcase where aria-checked attribute is removed instead of set to false
 
 ### Drag and Drop
 
-1.  [Tic tac toe](https://codetalks.org/source/widgets/draganddrop/draganddrop1.html)
-2.  [Slide show](https://codetalks.org/source/widgets/draganddrop/draganddrop2.html)
+1. [Tic tac toe](https://codetalks.org/source/widgets/draganddrop/draganddrop1.html)
+2. [Slide show](https://codetalks.org/source/widgets/draganddrop/draganddrop2.html)
 
 **Expected AT Behavior:**
 
@@ -473,15 +470,15 @@ Need testcase where aria-checked attribute is removed instead of set to false
 
 See various grid and table examples on the **[example page for grid variants](http://wiki.codetalks.org/wiki/index.php/Complex_Grid_Examples)**.
 
-1.  [Basic Grid](https://codetalks.org/source/widgets/grid/grid.sample.html)
+1. [Basic Grid](https://codetalks.org/source/widgets/grid/grid.sample.html)
 
     \-- single select
 
-2.  [Grid in an application](https://codetalks.org/source/widgets/grid/grid.html)
+2. [Grid in an application](https://codetalks.org/source/widgets/grid/grid.html)
 
     \-- single select
 
-3.  [Illinois Grid Example](http://test.cita.uiuc.edu/aria/grid/grid1.php)
+3. [Illinois Grid Example](http://test.cita.uiuc.edu/aria/grid/grid1.php)
 
     \-- multi select
 
@@ -526,7 +523,7 @@ See various grid and table examples on the **[example page for grid variants](ht
 
 Examples:
 
-1.  [Grid with expandable rows](https://codetalks.org/source/widgets/treegrid/treegrid.sample2.html)
+1. [Grid with expandable rows](https://codetalks.org/source/widgets/treegrid/treegrid.sample2.html)
 
 **Expected AT Behavior:**
 
@@ -580,7 +577,7 @@ Examples:
 
 ### Img
 
-1.  [Tiled image](https://codetalks.org/source/widgets/img/tiled.html)
+1. [Tiled image](https://codetalks.org/source/widgets/img/tiled.html)
 
 **Expected AT Behavior:**
 
@@ -660,16 +657,16 @@ If the screen reader does not provide the required behavior, then most likely it
 
 ### Listbox and Option
 
-1.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_MultiSelect.html)
-2.  [Single select listbox](https://codetalks.org/source/widgets/listbox/listbox.html)
+1. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_MultiSelect.html)
+2. [Single select listbox](https://codetalks.org/source/widgets/listbox/listbox.html)
 
     using aria-activedescendant
 
-3.  [Listbox in an iframe](https://codetalks.org/source/widgets/listbox/listbox-owner.html)
+3. [Listbox in an iframe](https://codetalks.org/source/widgets/listbox/listbox-owner.html)
 
     \-- this is an important case as it's an example of how a mashup widget can be built (the widget source comes from another url, and is tied in using an iframe)
 
-4.  [YUI "Carousel" listbox](https://developer.yahoo.com/yui/examples/carousel/carousel-ariaplugin_source.html)
+4. [YUI "Carousel" listbox](https://developer.yahoo.com/yui/examples/carousel/carousel-ariaplugin_source.html)
 
     \-- a more advanced test case
 
@@ -700,9 +697,9 @@ If the screen reader does not provide the required behavior, then most likely it
 
 ### Menubar and Menu
 
-1.  [YUI menubar](https://developer.yahoo.com/yui/examples/menu/menuwaiaria_source.html)
-2.  [Menubar 1](https://codetalks.org/source/widgets/grid/grid.html)
-3.  [dojo nightly build - popup menu](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Menu.html)
+1. [YUI menubar](https://developer.yahoo.com/yui/examples/menu/menuwaiaria_source.html)
+2. [Menubar 1](https://codetalks.org/source/widgets/grid/grid.html)
+3. [dojo nightly build - popup menu](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Menu.html)
 
 **Expected AT Behavior:**
 
@@ -737,9 +734,9 @@ If the screen reader does not provide the required behavior, then most likely it
 
 ### Progressbar
 
-1.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_ProgressBar.html)
-2.  [Progress bar in "off" live region](https://codetalks.org/source/widgets/progressbar/progressbar.html)
-3.  [Progressbar in "assertive" live region](https://codetalks.org/source/widgets/progressbar/progressbar-with-assertive.html)
+1. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_ProgressBar.html)
+2. [Progress bar in "off" live region](https://codetalks.org/source/widgets/progressbar/progressbar.html)
+3. [Progressbar in "assertive" live region](https://codetalks.org/source/widgets/progressbar/progressbar-with-assertive.html)
 
 **Expected AT Behavior:**
 
@@ -768,10 +765,10 @@ If the screen reader does not provide the required behavior, then most likely it
 
 ### Radiogroup and Radiobutton
 
-1.  [Radio Example using CSS Background Images](https://codetalks.org/source/widgets/radio/radio1.html)
-2.  [Radio Example using IMG Element](https://codetalks.org/source/widgets/radio/radio2.html)
-3.  [Radio Example using aria-activedescendant Property](https://codetalks.org/source/widgets/radio/radio3.html)
-4.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_CheckBox.html)
+1. [Radio Example using CSS Background Images](https://codetalks.org/source/widgets/radio/radio1.html)
+2. [Radio Example using IMG Element](https://codetalks.org/source/widgets/radio/radio2.html)
+3. [Radio Example using aria-activedescendant Property](https://codetalks.org/source/widgets/radio/radio3.html)
+4. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_CheckBox.html)
 
 **Expected AT Behavior:**
 
@@ -824,12 +821,12 @@ If the screen reader does not provide the required behavior, then most likely it
 
 #### Single Slider
 
-1.  [Slider using in-line images for thumb](https://codetalks.org/source/widgets/slider/pretty-slider-inline-img.html)
-2.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_Slider.html)
-3.  [Simple slider](https://codetalks.org/source/widgets/slider/simple-slider.html)
-4.  [Pretty slider](https://codetalks.org/source/widgets/slider/pretty-slider-background-images.html)
-5.  [MINDTROVE Rating Widget](https://mindtrove.info/html/rating-tutorial.html)
-6.  [Paciello Group slider](https://www.paciellogroup.com/blog/misc/ARIA/slider/)
+1. [Slider using in-line images for thumb](https://codetalks.org/source/widgets/slider/pretty-slider-inline-img.html)
+2. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_Slider.html)
+3. [Simple slider](https://codetalks.org/source/widgets/slider/simple-slider.html)
+4. [Pretty slider](https://codetalks.org/source/widgets/slider/pretty-slider-background-images.html)
+5. [MINDTROVE Rating Widget](https://mindtrove.info/html/rating-tutorial.html)
+6. [Paciello Group slider](https://www.paciellogroup.com/blog/misc/ARIA/slider/)
 
 **Expected AT Behavior:**
 
@@ -860,8 +857,8 @@ If the screen reader does not provide the required behavior, then most likely it
 
 #### Multi-Thumb Slider
 
-1.  [Multi-Thumb Slider Example using inline images for thumbs](https://codetalks.org/source/widgets/slider/pretty-slider-dual-inline-img.html)
-2.  [TPG double slider](https://www.paciellogroup.com/blog/misc/samples/aria/slider/doubleslider.html)
+1. [Multi-Thumb Slider Example using inline images for thumbs](https://codetalks.org/source/widgets/slider/pretty-slider-dual-inline-img.html)
+2. [TPG double slider](https://www.paciellogroup.com/blog/misc/samples/aria/slider/doubleslider.html)
 
 **Expected AT Behavior:**
 
@@ -888,7 +885,7 @@ If the screen reader does not provide the required behavior, then most likely it
 
 #### Spin Button
 
-1.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_Spinner.html)
+1. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_Spinner.html)
 
 **Expected AT Behavior:**
 
@@ -913,15 +910,15 @@ If the screen reader does not provide the required behavior, then most likely it
 
 ### Tabpanel
 
-1.  [Simple Tabpanel Example](https://codetalks.org/source/widgets/tabpanel/tabpanel1.html)
-2.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Dialog.html)
-3.  [Another tab panel example](https://codetalks.org/source/widgets/tabpanel/tabpanel.html)
-4.  [Just another tab panel example](https://codetalks.org/source/widgets/tabpanel/tablist.sample.html)
-5.  [YUI Tab Panel example with live regions (using YUI ARIA plug-in)](https://developer.yahoo.com/yui/examples/tabview/tabview-ariaplugin_clean.html)
+1. [Simple Tabpanel Example](https://codetalks.org/source/widgets/tabpanel/tabpanel1.html)
+2. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Dialog.html)
+3. [Another tab panel example](https://codetalks.org/source/widgets/tabpanel/tabpanel.html)
+4. [Just another tab panel example](https://codetalks.org/source/widgets/tabpanel/tablist.sample.html)
+5. [YUI Tab Panel example with live regions (using YUI ARIA plug-in)](https://developer.yahoo.com/yui/examples/tabview/tabview-ariaplugin_clean.html)
 
     .
 
-6.  [MS IE8 Tab Control example](http://samples.msdn.microsoft.com/ietestcenter/Aria/samples/TabControl.html)
+6. [MS IE8 Tab Control example](http://samples.msdn.microsoft.com/ietestcenter/Aria/samples/TabControl.html)
 
 **Expected AT Behavior:**
 
@@ -950,7 +947,7 @@ If the screen reader does not provide the required behavior, then most likely it
 
 ### Textbox
 
-1.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Editor.html)
+1. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Editor.html)
 
 **Expected AT Behavior:**
 
@@ -977,11 +974,11 @@ If the screen reader does not provide the required behavior, then most likely it
 
 ### Toolbar
 
-1.  [Example](https://www.thosedamntwins.com/aria/toolbar/)
+1. [Example](https://www.thosedamntwins.com/aria/toolbar/)
 
     to test ARIA live region and toolbar
 
-2.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Toolbar.html)
+2. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Toolbar.html)
 
 **Expected AT Behavior:**
 
@@ -1007,8 +1004,8 @@ If the screen reader does not provide the required behavior, then most likely it
 
 ### Tooltip
 
-1.  [dojo nightly build (tooltip)](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Tooltip.html)
-2.  [Simple tooltip](https://codetalks.org/source/widgets/tooltip/tooltip.html)
+1. [dojo nightly build (tooltip)](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Tooltip.html)
+2. [Simple tooltip](https://codetalks.org/source/widgets/tooltip/tooltip.html)
 
     \-- the tooltip for the link contains the text "Some tooltip"
 
@@ -1041,19 +1038,19 @@ If the screen reader does not provide the required behavior, then most likely it
 
 ### Tree
 
-1.  [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Tree.html)
-2.  [Simple tree](https://codetalks.org/source/widgets/tree/tree.html)
+1. [dojo nightly build](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/test_Tree.html)
+2. [Simple tree](https://codetalks.org/source/widgets/tree/tree.html)
 
     \-- uses document structure to create hierarchy
 
-3.  [Tree](https://codetalks.org/source/widgets/tree/tree3.html)
+3. [Tree](https://codetalks.org/source/widgets/tree/tree3.html)
 
     \- Subtrees are encapsulated in treeitems
 
-4.  [MS IE8 Tree example](http://samples.msdn.microsoft.com/ietestcenter/Aria/samples/tree/ariatree.htm)
-5.  We need an example that uses aria-level, aria-setsize and aria-posinset to create the hierarchy
-6.  We also need one that uses aria-owns to create the hierarchy / structure
-7.  We need one that uses the document to create structure, but uses nested ULs with links inside, and role="presentation"
+4. [MS IE8 Tree example](http://samples.msdn.microsoft.com/ietestcenter/Aria/samples/tree/ariatree.htm)
+5. We need an example that uses aria-level, aria-setsize and aria-posinset to create the hierarchy
+6. We also need one that uses aria-owns to create the hierarchy / structure
+7. We need one that uses the document to create structure, but uses nested ULs with links inside, and role="presentation"
 
 **Expected AT Behavior:**
 
@@ -1088,8 +1085,8 @@ If the screen reader does not provide the required behavior, then most likely it
 
 ### Application
 
-1.  [Simple application with inner document](https://codetalks.org/source/landmarks/application-with-inner-document.html)
-2.  [With grid and menubar](https://codetalks.org/source/widgets/grid/grid.html)
+1. [Simple application with inner document](https://codetalks.org/source/landmarks/application-with-inner-document.html)
+2. [With grid and menubar](https://codetalks.org/source/widgets/grid/grid.html)
 
 **Expected AT Behavior:**
 
@@ -1145,21 +1142,21 @@ If the screen reader does not provide the required behavior, then most likely it
 
 ### Landmarks
 
-1.  [Real world Yahoo! news page with landmarks](https://news.yahoo.com/)
-2.  [Illinois Navigation Example](http://test.cita.uiuc.edu/aria/nav/nav1.php)
-3.  [Test all landmarks](https://codetalks.org/source/landmarks/test-all-minimal.html)
+1. [Real world Yahoo! news page with landmarks](https://news.yahoo.com/)
+2. [Illinois Navigation Example](http://test.cita.uiuc.edu/aria/nav/nav1.php)
+3. [Test all landmarks](https://codetalks.org/source/landmarks/test-all-minimal.html)
 
     \-- very minimal test, not a real world case. The page includes some nested landmarks as well.
 
-4.  [Juicy Studio](https://juicystudio.com/article/examining-wai-aria-document-andmark-roles.php)
+4. [Juicy Studio](https://juicystudio.com/article/examining-wai-aria-document-andmark-roles.php)
 
     \-- real world example
 
-5.  [This site](https://codetalks.org/)
+5. [This site](https://codetalks.org/)
 
     \-- another real world example
 
-6.  [Application with inner document](https://codetalks.org/source/landmarks/application-with-inner-document.html)
+6. [Application with inner document](https://codetalks.org/source/landmarks/application-with-inner-document.html)
 
     \-- the only landmark here is the document, since role="application" as at the root
 
@@ -1201,20 +1198,19 @@ If the screen reader does not provide the required behavior, then most likely it
 | ZoomText            | -                                                            | -                                   | -     | -      |
 | Orca                | -                                                            | -                                   | -     | -      |
 
-
 ### Live Regions
 
 Thank you to Charles Chen for developing the [live region examples](http://accessibleajax.clcworld.net/).
 
 #### aria-live
 
-1.  [aria-live="off"](https://codetalks.org/source/live/live_off.html)
-2.  [aria-live="polite"](https://codetalks.org/source/live/live_polite.html)
-3.  [aria-live="assertive"](https://codetalks.org/source/live/live_assertive.html)
-4.  [aria-live="rude"](https://codetalks.org/source/live/live_rude.html)
-5.  [aria-live attribute is missing](https://codetalks.org/source/live/live_missing.html)
-6.  [nested live regions: "assertive" inside "off"](https://codetalks.org/source/live/live_nested-regions.html)
-7.  [MS IE8 Chat Example](http://samples.msdn.microsoft.com/ietestcenter/Aria/samples/liveRegion.htm)
+1. [aria-live="off"](https://codetalks.org/source/live/live_off.html)
+2. [aria-live="polite"](https://codetalks.org/source/live/live_polite.html)
+3. [aria-live="assertive"](https://codetalks.org/source/live/live_assertive.html)
+4. [aria-live="rude"](https://codetalks.org/source/live/live_rude.html)
+5. [aria-live attribute is missing](https://codetalks.org/source/live/live_missing.html)
+6. [nested live regions: "assertive" inside "off"](https://codetalks.org/source/live/live_nested-regions.html)
+7. [MS IE8 Chat Example](http://samples.msdn.microsoft.com/ietestcenter/Aria/samples/liveRegion.htm)
 
 **Expected AT Behavior:**
 
@@ -1241,8 +1237,8 @@ Thank you to Charles Chen for developing the [live region examples](http://acces
 
 #### Labelled or Described Live Region
 
-1.  [aria-labelledby="(id)" aria-live="polite"](https://codetalks.org/source/live/labelledby.html)
-2.  [aria-describedby="(id)" aria-live="polite"](https://codetalks.org/source/live/describedby.html)
+1. [aria-labelledby="(id)" aria-live="polite"](https://codetalks.org/source/live/labelledby.html)
+2. [aria-describedby="(id)" aria-live="polite"](https://codetalks.org/source/live/describedby.html)
 
 **Expected AT Behavior:**
 
@@ -1269,7 +1265,7 @@ Thank you to Charles Chen for developing the [live region examples](http://acces
 
 #### aria-atomic="true"
 
-1.  [aria-atomic="true" aria-live="polite"](https://codetalks.org/source/live/atomic_true.html)
+1. [aria-atomic="true" aria-live="polite"](https://codetalks.org/source/live/atomic_true.html)
 
 **Expected AT Behavior:**
 
@@ -1298,11 +1294,11 @@ Thank you to Charles Chen for developing the [live region examples](http://acces
 
 #### aria-controls
 
-1.  [aria-controls](https://codetalks.org/source/live/controls.html)
+1. [aria-controls](https://codetalks.org/source/live/controls.html)
 
     \-- activating button makes live region change
 
-2.  [aria-controls and live="polite" changes](https://codetalks.org/source/live/live_controls-and-politeness.html)
+2. [aria-controls and live="polite" changes](https://codetalks.org/source/live/live_controls-and-politeness.html)
 
     \-- live region with a combination of polite real world changes and button-controlled changes
 
@@ -1332,16 +1328,16 @@ Thank you to Charles Chen for developing the [live region examples](http://acces
 
 #### aria-relevant tests
 
-1.  [aria-relevant="additions" aria-live="polite"](https://codetalks.org/source/live/relevant_additons.html)
-2.  [aria-relevant="removals" aria-live="polite"](https://codetalks.org/source/live/relevant_removals.html)
-3.  [aria-relevant="text" aria-live="polite"](https://codetalks.org/source/live/relevant_text.html)
-4.  [aria-relevant="all" aria-live="polite"](https://codetalks.org/source/live/relevant_all.html)
-5.  [aria-relevant="additions removals text" aria-live="polite](https://codetalks.org/source/live/relevant_additons_removals_text.html)
+1. [aria-relevant="additions" aria-live="polite"](https://codetalks.org/source/live/relevant_additons.html)
+2. [aria-relevant="removals" aria-live="polite"](https://codetalks.org/source/live/relevant_removals.html)
+3. [aria-relevant="text" aria-live="polite"](https://codetalks.org/source/live/relevant_text.html)
+4. [aria-relevant="all" aria-live="polite"](https://codetalks.org/source/live/relevant_all.html)
+5. [aria-relevant="additions removals text" aria-live="polite](https://codetalks.org/source/live/relevant_additons_removals_text.html)
 
     \-- should have same behavior as "all"
 
-6.  [aria-relevant="additions text" aria-live="polite"](https://codetalks.org/source/live/relevant_additions_text.html)
-7.  [aria-live="polite"](https://codetalks.org/source/live/relevant_default.html)
+6. [aria-relevant="additions text" aria-live="polite"](https://codetalks.org/source/live/relevant_additions_text.html)
+7. [aria-live="polite"](https://codetalks.org/source/live/relevant_default.html)
 
     \-- aria-relevant is not set, so should act the same as "additions text"
 
@@ -1371,14 +1367,14 @@ Thank you to Charles Chen for developing the [live region examples](http://acces
 
 #### Live roles: Log + Timer
 
-1.  [Illinois Log and Timer example](http://test.cita.uiuc.edu/aria/live/live1.php)
-2.  [CLC Chat](https://codetalks.org/source/live/chat.html)
+1. [Illinois Log and Timer example](http://test.cita.uiuc.edu/aria/live/live1.php)
+2. [CLC Chat](https://codetalks.org/source/live/chat.html)
 
     \-- see the
 
     [accompanying notes](https://codetalks.org/source/live/chat_notes.html)
 
-3.  [Chatzilla](https://addons.mozilla.org/en-US/firefox/addon/16)
+3. [Chatzilla](https://addons.mozilla.org/en-US/firefox/addon/16)
 
     (this is a real app but uses ARIA in an HTML area for chat)
 
@@ -1469,7 +1465,7 @@ Thank you to Charles Chen for developing the [live region examples](http://acces
 
 #### Live HTML table
 
-1.  [Live game scores](http://accessibleajax.clcworld.net/scoreboard/scoreboard.htm)
+1. [Live game scores](http://accessibleajax.clcworld.net/scoreboard/scoreboard.htm)
 
 **Expected AT Behavior:**
 
@@ -1503,7 +1499,7 @@ These test cases involve ARIA properties used to enhance HTML controls (as oppos
 
 ### autocomplete
 
-1.  [Dojo autocomplete](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/_autoComplete.html)
+1. [Dojo autocomplete](https://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/_autoComplete.html)
 
 **Expected AT Behavior:**
 
@@ -1532,10 +1528,10 @@ These test cases involve ARIA properties used to enhance HTML controls (as oppos
 
 ### describedby
 
-1.  [aria-describedby](https://codetalks.org/source/enhanced-html-forms/describedby.html)
-2.  [aria-describedby with display: none](https://codetalks.org/source/enhanced-html-forms/describedby-display-none.html)
-3.  [aria-describedby with visibility: hidden](https://codetalks.org/source/enhanced-html-forms/describedby-hidden.html)
-4.  [aria-describedby on img's with role="button"](https://codetalks.org/source/enhanced-html-forms/img-description.html)
+1. [aria-describedby](https://codetalks.org/source/enhanced-html-forms/describedby.html)
+2. [aria-describedby with display: none](https://codetalks.org/source/enhanced-html-forms/describedby-display-none.html)
+3. [aria-describedby with visibility: hidden](https://codetalks.org/source/enhanced-html-forms/describedby-hidden.html)
+4. [aria-describedby on img's with role="button"](https://codetalks.org/source/enhanced-html-forms/img-description.html)
 
 **Expected AT Behavior:**
 
@@ -1567,7 +1563,7 @@ These test cases involve ARIA properties used to enhance HTML controls (as oppos
 
 ### label
 
-1.  [aria-label](https://codetalks.org/source/enhanced-html-forms/label.html)
+1. [aria-label](https://codetalks.org/source/enhanced-html-forms/label.html)
 
 **Expected AT Behavior:**
 
@@ -1596,7 +1592,7 @@ These test cases involve ARIA properties used to enhance HTML controls (as oppos
 
 ### labelledby
 
-1.  [aria-labelledby](https://codetalks.org/source/enhanced-html-forms/labelledby.html)
+1. [aria-labelledby](https://codetalks.org/source/enhanced-html-forms/labelledby.html)
 
 **Expected AT Behavior:**
 
@@ -1625,7 +1621,7 @@ These test cases involve ARIA properties used to enhance HTML controls (as oppos
 
 ### required
 
-1.  [aria-required="true"](https://codetalks.org/source/enhanced-html-forms/required.html)
+1. [aria-required="true"](https://codetalks.org/source/enhanced-html-forms/required.html)
 
 **Expected AT Behavior:**
 
