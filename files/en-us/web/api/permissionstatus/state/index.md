@@ -32,10 +32,10 @@ One of the followings:
 ## Examples
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then((permissionStatus) => {
-  console.log('geolocation permission state is ', permissionStatus.state);
+navigator.permissions.query({ name:'geolocation' }).then((permissionStatus) => {
+  console.log(`geolocation permission state is ${permissionStatus.state}`);
   permissionStatus.onchange = () => {
-    console.log('geolocation permission status has changed to ', this.state);
+    console.log(`geolocation permission status has changed to ${this.state}`);
   };
 });
 ```
