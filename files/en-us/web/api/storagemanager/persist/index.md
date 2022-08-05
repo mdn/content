@@ -20,7 +20,7 @@ is granted and box mode is persistent, and `false` otherwise.
 ## Syntax
 
 ```js
-navigator.storage.persist().then((persistent) => { /* … */ })
+navigator.storage.persist()
 ```
 
 ### Parameters
