@@ -329,7 +329,7 @@ Due to a [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364), VoiceO
 
 ```html
  <img src="mdn.svg" alt="MDN logo" role="img">
-``
+```
 
 ### The title attribute
 
