@@ -33,9 +33,9 @@ A generic {{domxref("Event")}}.
 
 ```js
 navigator.permissions.query({name:'geolocation'}).then((permissionStatus) => {
-  console.log('geolocation permission state is ', permissionStatus.state);
+  console.log(`geolocation permission state is ${permissionStatus.state}`);
   permissionStatus.onchange = () => {
-    console.log('geolocation permission state has changed to ', this.state);
+    console.log(`geolocation permission state has changed to ${this.state}`);
   };
 });
 ```
