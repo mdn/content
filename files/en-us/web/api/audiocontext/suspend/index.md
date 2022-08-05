@@ -37,13 +37,13 @@ A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}. The promise 
 The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples/blob/master/audiocontext-states/index.html) ([see it running live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) When the suspend/resume button is clicked, the {{domxref("BaseAudioContext/state", "AudioContext.state")}} is queried — if it is `running`, `suspend()` is called; if it is `suspended`, {{domxref("AudioContext/resume", "resume()")}} is called. In each case, the text label of the button is updated as appropriate once the promise resolves.
 
 ```js
-susresBtn.onclick = function() {
-  if(audioCtx.state === 'running') {
-    audioCtx.suspend().then(function() {
+susresBtn.onclick = () => {
+  if (audioCtx.state === 'running') {
+    audioCtx.suspend().then(() => {
       susresBtn.textContent = 'Resume context';
     });
-  } else if(audioCtx.state === 'suspended') {
-    audioCtx.resume().then(function() {
+  } else if (audioCtx.state === 'suspended') {
+    audioCtx.resume().then(() => {
       susresBtn.textContent = 'Suspend context';
     });
   }

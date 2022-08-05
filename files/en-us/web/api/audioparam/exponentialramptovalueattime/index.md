@@ -74,11 +74,11 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
-expRampPlus.onclick = function() {
+expRampPlus.onclick = () => {
   gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
 }
 
-expRampMinus.onclick = function() {
+expRampMinus.onclick = () => {
   gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
 }
 ```

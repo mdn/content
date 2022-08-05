@@ -53,7 +53,7 @@ const ctx = canvas.getContext('2d');
 
 let img = new Image();
 img.src = 'canvas_createpattern.png';
-img.onload = function() {
+img.onload = () => {
   ctx.imageSmoothingQuality = 'low';
   ctx.drawImage(img, 0, 0, 300, 150);
 };

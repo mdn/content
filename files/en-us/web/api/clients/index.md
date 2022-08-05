@@ -35,7 +35,7 @@ The following example shows an existing chat window or creates a new one when th
 
 ```js
 addEventListener('notificationclick', (event) => {
-  event.waitUntil(async function() {
+  event.waitUntil(async () => {
     const allClients = await clients.matchAll({
       includeUncontrolled: true
     });

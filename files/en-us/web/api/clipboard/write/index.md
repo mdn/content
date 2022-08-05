@@ -61,10 +61,10 @@ function setClipboard(text) {
     const data = [new ClipboardItem({ [type]: blob })];
 
     navigator.clipboard.write(data).then(
-        function () {
+        () => {
         /* success */
         },
-        function () {
+        () => {
         /* failure */
         }
     );
@@ -84,12 +84,12 @@ and an error function.
 
 ```js
 function copyCanvasContentsToClipboard(canvas, onDone, onError) {
-  canvas.toBlob(function (blob) {
+  canvas.toBlob((blob) => {
     let data = [new ClipboardItem({ [blob.type]: blob })];
 
-    navigator.clipboard.write(data).then(function () {
+    navigator.clipboard.write(data).then(() => {
       onDone();
-    }, function (err) {
+    }, (err) => {
       onError(err);
     })
   });

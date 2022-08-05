@@ -32,7 +32,7 @@ forEach(callbackFn, thisArg)
 // Inline callback function
 forEach(function(currentValue) { /* … */ })
 forEach(function(currentValue, index) { /* … */ })
-forEach(function(currentValue, index, array){ /* … */ })
+forEach(function(currentValue, index, array) { /* … */ })
 forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 

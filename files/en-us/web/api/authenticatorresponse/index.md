@@ -41,14 +41,13 @@ const options = {
   challenge: new Uint8Array([/* bytes sent from the server */])
 };
 
-navigator.credentials.get({ "publicKey": options })
-    .then(function (credentialInfoAssertion) {
+navigator.credentials.get({ publicKey: options })
+  .then((credentialInfoAssertion) => {
     const assertionResponse = credentialInfoAssertion.response;
     // send assertion response back to the server
     // to proceed with the control of the credential
-}).catch(function (err) {
-     console.error(err);
-});
+  })
+  .catch((err) => console.error(err));
 ```
 
 ### Getting an AuthenticatorAttestationResponse
@@ -74,11 +73,10 @@ const publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
+  .then((newCredentialInfo) => {
     const attestationResponse = newCredentialInfo.response;
-  }).catch(function (err) {
-     console.error(err);
-  });
+  })
+  .catch((err) => console.error(err));
 ```
 
 ## Specifications

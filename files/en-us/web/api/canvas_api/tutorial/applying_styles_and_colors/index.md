@@ -682,7 +682,7 @@ function draw() {
   // create new image object to use as pattern
   const img = new Image();
   img.src = 'canvas_createpattern.png';
-  img.onload = function() {
+  img.onload = () => {
 
     // create pattern
     const ptrn = ctx.createPattern(img, 'repeat');

@@ -48,7 +48,7 @@ index of the channel to connect to.
 
 ```js
 const ac = new AudioContext();
-ac.decodeAudioData(someStereoBuffer, function(data) {
+ac.decodeAudioData(someStereoBuffer, (data) => {
  const source = ac.createBufferSource();
  source.buffer = data;
  const splitter = ac.createChannelSplitter(2);

@@ -59,7 +59,7 @@ Additionally, when resetting :
 
 ```js
 // An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."
-const stopPlayingAlice = function() {
+const stopPlayingAlice = () => {
   aliceChange.pause();
   nommingCake.pause();
   drinking.pause();

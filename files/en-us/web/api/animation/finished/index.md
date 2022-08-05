@@ -28,16 +28,8 @@ The following code waits until all animations running on the element `elem` have
 
 ```js
 Promise.all(
-  elem.getAnimations().map(
-    function(animation) {
-      return animation.finished
-    }
-  )
-).then(
-  function() {
-    return elem.remove();
-  }
-);
+  elem.getAnimations().map((animation) => animation.finished),
+).then(() => elem.remove());
 ```
 
 ## Specifications

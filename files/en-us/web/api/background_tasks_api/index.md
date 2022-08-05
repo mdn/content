@@ -39,10 +39,10 @@ Because idle callbacks are intended to give your code a way to cooperate with th
 Because the Background Tasks API is fairly new, your code may need to be able to work on browsers that don't yet support it. You can do so with a simple shim that uses {{domxref("setTimeout()")}} as a fallback option. This isn't a {{Glossary("polyfill")}}, since it's not functionally identical; `setTimeout()` doesn't let you make use of idle periods, but instead runs your code when possible, leaving us to do the best we can to avoid causing the user to experience performance lag.
 
 ```js
-window.requestIdleCallback = window.requestIdleCallback || function(handler) {
+window.requestIdleCallback = window.requestIdleCallback || (handler) => {
   let startTime = Date.now();
 
-  return setTimeout(function() {
+  return setTimeout(() => {
     handler({
       didTimeout: false,
       timeRemaining() {
@@ -62,7 +62,7 @@ As a result, while our shim doesn't constrain itself to the amount of idle time 
 The implementation of our shim for {{domxref("Window.cancelIdleCallback", "cancelIdleCallback()")}} is much simpler:
 
 ```js
-window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
+window.cancelIdleCallback = window.cancelIdleCallback || (id) => {
   clearTimeout(id);
 }
 ```
@@ -236,10 +236,10 @@ Finally, we set up a couple of variables for other items:
 - `statusRefreshScheduled` is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame
 
 ```js hidden
-window.requestIdleCallback = window.requestIdleCallback || function(handler) {
+window.requestIdleCallback = window.requestIdleCallback || (handler) => {
   let startTime = Date.now();
 
-  return setTimeout(function() {
+  return setTimeout(() => {
     handler({
       didTimeout: false,
       timeRemaining() {
@@ -249,7 +249,7 @@ window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   }, 1);
 };
 
-window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
+window.cancelIdleCallback = window.cancelIdleCallback || (id) => {
   clearTimeout(id);
 };
 ```

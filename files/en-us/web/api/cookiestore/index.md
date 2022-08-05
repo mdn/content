@@ -47,10 +47,10 @@ cookieStore.set({
   domain: "example.com"
 })
 .then(
-  function() {
+  () => {
     console.log("It worked!");
   },
-  function(reason) {
+  (reason) => {
     console.error("It failed: ", reason);
   }
 );

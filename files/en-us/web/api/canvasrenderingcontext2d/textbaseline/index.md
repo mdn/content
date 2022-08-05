@@ -62,7 +62,7 @@ const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bot
 ctx.font = '36px serif';
 ctx.strokeStyle = 'red';
 
-baselines.forEach(function (baseline, index) {
+baselines.forEach((baseline, index) => {
   ctx.textBaseline = baseline;
   const y = 75 + index * 75;
   ctx.beginPath();

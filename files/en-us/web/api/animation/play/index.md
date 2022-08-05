@@ -52,7 +52,7 @@ const nommingCake = document.getElementById('eat-me_sprite').animate(
 nommingCake.pause();
 
 // This function will play when ever a user clicks or taps
-const growAlice = function() {
+const growAlice = () => {
 
   // Play Alice's animation.
   aliceChange.play();

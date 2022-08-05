@@ -33,11 +33,11 @@ An empty {{jsxref("Promise")}}.
 
 ```js
 let isTooSoon = true;
-window.addEventListener("beforeinstallprompt", function(e) {
+window.addEventListener("beforeinstallprompt", (e) => {
   if (isTooSoon) {
     e.preventDefault(); // Prevents prompt display
     // Prompt later instead:
-    setTimeout(function() {
+    setTimeout(() => {
       isTooSoon = false;
       e.prompt(); // Throws if called more than once or default not prevented
     }, 10000);

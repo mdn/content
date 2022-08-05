@@ -65,7 +65,7 @@ const frameCount = audioCtx.sampleRate * 2.0;
 
 const myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = () => {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {

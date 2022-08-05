@@ -22,7 +22,7 @@ A string.
 The following example prints the value of `reason` to the console.
 
 ```js
-WebSocket.onclose = function(event) {
+WebSocket.onclose = (event) => {
   console.log(event.reason);
 };
 ```

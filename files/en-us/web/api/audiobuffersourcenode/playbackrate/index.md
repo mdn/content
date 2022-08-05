@@ -59,10 +59,10 @@ function getData() {
 
   request.responseType = 'arraybuffer';
 
-  request.onload = function() {
+  request.onload = () => {
     const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, (buffer) => {
         myBuffer = buffer;
         source.buffer = myBuffer;
         source.playbackRate.value = playbackControl.value;
@@ -70,7 +70,7 @@ function getData() {
         source.loop = true;
       },
 
-      function(e){`Error with decoding audio data: ${e.err}`});
+      (e) => console.error(`Error with decoding audio data: ${e.err}`));
 
   }
 
@@ -79,20 +79,20 @@ function getData() {
 
 // wire up buttons to stop and play audio, and range slider control
 
-play.onclick = function() {
+play.onclick = () => {
   getData();
   source.start(0);
   play.setAttribute('disabled', 'disabled');
   playbackControl.removeAttribute('disabled');
 }
 
-stop.onclick = function() {
+stop.onclick = () => {
   source.stop(0);
   play.removeAttribute('disabled');
   playbackControl.setAttribute('disabled', 'disabled');
 }
 
-playbackControl.oninput = function() {
+playbackControl.oninput = () => {
   source.playbackRate.value = playbackControl.value;
   playbackValue.innerHTML = playbackControl.value;
 }

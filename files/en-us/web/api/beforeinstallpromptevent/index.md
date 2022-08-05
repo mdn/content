@@ -39,10 +39,10 @@ _Inherits properties from its parent, {{domxref("Event")}}._
 ## Example
 
 ```js
-window.addEventListener("beforeinstallprompt", function(e) {
+window.addEventListener("beforeinstallprompt", (e) => {
   // log the platforms provided as options in an install prompt
   console.log(e.platforms); // e.g., ["web", "android", "windows"]
-  e.userChoice.then(function(choiceResult) {
+  e.userChoice.then((choiceResult) => {
     console.log(choiceResult.outcome); // either "accepted" or "dismissed"
   }, handleError);
 });

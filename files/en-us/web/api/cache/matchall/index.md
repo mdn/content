@@ -68,9 +68,9 @@ A {{jsxref("Promise")}} that resolves to an array of all matching responses in t
 ## Examples
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.matchAll('/images/').then(function(response) {
-    response.forEach(function(element, index, array) {
+caches.open('v1').then((cache) => {
+  cache.matchAll('/images/').then((response) => {
+    response.forEach((element, index, array) => {
       cache.delete(element);
     });
   });

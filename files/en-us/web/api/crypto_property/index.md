@@ -36,7 +36,7 @@ This example uses the `crypto` property to access the {{domxref("Crypto.getRando
 ### JavaScript
 
 ```js
-globalThis.genRandomNumbers = function () {
+globalThis.genRandomNumbers = () => {
   const array = new Uint32Array(10);
   crypto.getRandomValues(array);
 

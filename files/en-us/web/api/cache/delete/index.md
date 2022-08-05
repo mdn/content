@@ -62,8 +62,8 @@ deleted, or `false` otherwise.
 ## Examples
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.delete('/images/image.png').then(function(response) {
+caches.open('v1').then((cache) => {
+  cache.delete('/images/image.png').then((response) => {
     someUIUpdateFunction();
   });
 })
