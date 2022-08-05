@@ -58,7 +58,7 @@ if (registration.installing) {
 if (serviceWorker) {
   logState(serviceWorker.state);
   serviceWorker.addEventListener('statechange', (e) => {
-  logState(e.target.state);
+    logState(e.target.state);
   });
 }
 ```
