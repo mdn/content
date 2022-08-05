@@ -95,12 +95,12 @@ if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
   navigator.serviceWorker.register('/sw.js').then((registration) => {
-    console.log('Service worker registration succeeded:', registration);
+    console.log(`Service worker registration succeeded: ${registration}`);
   }, /*catch*/ (error) => {
-    console.log('Service worker registration failed:', error);
+    console.error(`Service worker registration failed: ${error});
   });
 } else {
-  console.log('Service workers are not supported.');
+  console.error('Service workers are not supported.');
 }
 ```
 
@@ -117,12 +117,12 @@ resources under `example.com/product`.
 if ('serviceWorker' in navigator) {
   // declaring scope manually
   navigator.serviceWorker.register('/sw.js', {scope: './'}).then((registration) => {
-    console.log('Service worker registration succeeded:', registration);
+    console.log(`Service worker registration succeeded: ${registration}`);
   }, /*catch*/ (error) => {
-    console.log('Service worker registration failed:', error);
+    console.error(`Service worker registration failed: ${error}`);
   });
 } else {
-  console.log('Service workers are not supported.');
+  console.error('Service workers are not supported.');
 }
 ```
 
@@ -137,12 +137,12 @@ a site, would only apply to resources under `example.com/product`.
 if ('serviceWorker' in navigator) {
   // declaring scope manually
   navigator.serviceWorker.register('/sw.js', {scope: '/product/'}).then((registration) => {
-    console.log('Service worker registration succeeded:', registration);
+    console.log(`Service worker registration succeeded: ${registration}`);
   }, /*catch*/ (error) => {
-    console.log('Service worker registration failed:', error);
+    console.error(`Service worker registration failed: ${error}`);
   });
 } else {
-  console.log('Service workers are not supported.');
+  console.error('Service workers are not supported.');
 }
 ```
 
