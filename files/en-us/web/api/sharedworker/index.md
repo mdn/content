@@ -60,12 +60,12 @@ When the port is started, both scripts post messages to the worker and handle me
 
 ```js
 first.onchange = () => {
-  myWorker.port.postMessage([first.value,second.value]);
+  myWorker.port.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
 second.onchange = () => {
-  myWorker.port.postMessage([first.value,second.value]);
+  myWorker.port.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
