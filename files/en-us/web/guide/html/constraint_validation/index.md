@@ -362,8 +362,6 @@ window.onload = function () {
 }
 ```
 
-You can see a [live example](/@api/deki/files/4744/=constraint.html) of the postal code validation.
-
 ### Limiting the size of a file before its upload
 
 Another common constraint is to limit the size of a file to be uploaded. Checking this on the client side before the file is transmitted to the server requires combining the Constraint Validation API, and especially the `field.setCustomValidity()` method, with another JavaScript API, here the File API.
@@ -405,8 +403,6 @@ window.onload = function () {
   document.getElementById("FS").onchange = checkFileSize;
 }
 ```
-
-You can see a [live example](/@api/deki/files/4745/=fileconstraint.html) of the File size constraint validation.
 
 ## Visual styling of constraint validation
 
