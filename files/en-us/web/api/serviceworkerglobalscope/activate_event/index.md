@@ -46,7 +46,7 @@ globalScope.addEventListener('activate', (event) => {
 
   event.waitUntil(
     caches.forEach((cache, cacheName) => {
-      if (cacheAllowlist.indexOf(cacheName) === -1) {
+      if (cacheAllowlist.includes(cacheName)) {
         return caches.delete(cacheName);
       }
     })
