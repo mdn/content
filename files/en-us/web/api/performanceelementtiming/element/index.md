@@ -29,7 +29,7 @@ In this example calling `entry.element` will log to the console
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach((entry) => {
+  const entries = list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.element);
     }
