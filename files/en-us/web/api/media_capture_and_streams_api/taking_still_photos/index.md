@@ -135,7 +135,7 @@ After calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#p
 ```js
     video.addEventListener('canplay', (ev) => {
       if (!streaming) {
-        height = video.videoHeight / (video.videoWidth/width);
+        height = video.videoHeight / video.videoWidth * width;
 
         video.setAttribute('width', width);
         video.setAttribute('height', height);
