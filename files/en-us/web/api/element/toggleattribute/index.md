@@ -74,26 +74,6 @@ button.addEventListener("click", () => {
 
 {{DOMAttributeMethods}}
 
-## Polyfill
-
-```js
-if (!Element.prototype.toggleAttribute) {
-  Element.prototype.toggleAttribute = (name, force) => {
-    if(force !== void 0) force = !!force
-
-    if (this.hasAttribute(name)) {
-      if (force) return true;
-
-      this.removeAttribute(name);
-      return false;
-    }
-    if (!force) return false;
-
-    this.setAttribute(name, "");
-    return true;
-  };
-}
-```
 
 ## Specifications
 
