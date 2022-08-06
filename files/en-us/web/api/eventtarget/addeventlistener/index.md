@@ -553,7 +553,7 @@ the element. It will be the same as the value of the `currentTarget` property of
 the event argument that is passed to the handler.
 
 ```js
-my_element.addEventListener('click', (e) => {
+my_element.addEventListener('click', function (e) {
   console.log(this.className)           // logs the className of my_element
   console.log(e.currentTarget === this) // logs `true`
 })
