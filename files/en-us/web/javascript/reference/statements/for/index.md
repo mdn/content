@@ -168,7 +168,8 @@ use of a `statement` section, a semicolon is used instead.
 
 ```js
 function showOffsetPos(id) {
-  let left = 0, top = 0;
+  let left = 0;
+  let top = 0;
   for (
     let itNode = document.getElementById(id); /* initialization */
     itNode; /* condition */
