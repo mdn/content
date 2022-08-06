@@ -62,7 +62,7 @@ const classes = pre.classList;
 const iterator = classes.values();
 
 classes.forEach(
-  (value, key, listObj) => {
+  function (value, key, listObj) {
     pre.textContent += `(${value} ${key})/${listObj}\n`;
   },
   "arg"
