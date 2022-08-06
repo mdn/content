@@ -390,8 +390,8 @@ if (offset === 0) {
   const relativeTime = context.currentTime - offset;
   const beats = relativeTime / tempo;
   const remainder = beats - Math.floor(beats);
-  const delay = tempo - (remainder * tempo);
-  source.start(context.currentTime+delay, relativeTime+delay);
+  const delay = tempo - remainder * tempo;
+  source.start(context.currentTime + delay, relativeTime + delay);
 }
 ```
 
