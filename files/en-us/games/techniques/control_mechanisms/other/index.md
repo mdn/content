@@ -39,7 +39,7 @@ It works out of the box. The cursors are the four directional arrow keys on the 
 ```js
 window.addEventListener("keydown", (event) => {
     console.log(event.keyCode);
-}, this);
+}, true);
 ```
 
 Every key pressed on the remote will show its key code in the console. You can also check this handy cheat sheet seen below if you're working with Panasonic TVs running Firefox OS:
