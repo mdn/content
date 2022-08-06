@@ -613,7 +613,7 @@ const Something = function (element) {
     console.log(this.name); // undefined, as |this| is the element
   };
 
-  this.onclick2 = (event) => {
+  this.onclick2 = function (event) {
     console.log(this.name); // 'Something Good', as |this| is bound to newly created object
   };
 
