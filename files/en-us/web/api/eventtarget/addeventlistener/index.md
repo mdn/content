@@ -630,7 +630,7 @@ Another solution is using a special function called `handleEvent()` to catch
 any events:
 
 ```js
-const Something = (element) => {
+const Something = function (element) {
   // |this| is a newly created object
   this.name = 'Something Good';
   this.handleEvent = (event) => {
