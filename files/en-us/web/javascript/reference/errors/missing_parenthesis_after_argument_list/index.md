@@ -17,7 +17,7 @@ string.
 
 ```
 SyntaxError: missing ) after argument list (V8-based & Firefox)
-Unexpected identifier 'x'. Expected ')' to end an argument list. (Safari)
+SyntaxError: Unexpected identifier 'x'. Expected ')' to end an argument list. (Safari)
 ```
 
 ## Error type
@@ -45,6 +45,13 @@ You can correct the `log` call by adding the `+` operator:
 ```js example-good
 console.log('PI: ' + Math.PI);
 // "PI: 3.141592653589793"
+```
+
+Alternatively, you can consider using a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals), or take advantage of the fact that [`console.log`](/en-US/docs/Web/API/console/log) accepts multiple parameters:
+
+```js example-good
+console.log(`PI: ${Math.PI}`);
+console.log('PI: ', Math.PI);
 ```
 
 ### Unterminated strings
