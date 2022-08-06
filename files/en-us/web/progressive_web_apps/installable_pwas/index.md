@@ -107,7 +107,7 @@ Now the user can launch and use the web app just like any other application on t
 
 In some browsers, a splash screen is also generated from the information in the manifest, which is shown when the PWA is launched and while it's being loaded started up.
 
-![App splash screen](js13kpwa-splash.png)
+![App splash screen: all red page with app logo in the middle](js13kpwa-splash.png)
 
 The icon and the theme and background colors are used to create this screen.
 
