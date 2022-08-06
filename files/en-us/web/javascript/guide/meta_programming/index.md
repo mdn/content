@@ -336,21 +336,6 @@ The following table summarizes the available traps available to `Proxy` objects.
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/enumerate", "handler.enumerate()")}}
-      </td>
-      <td>
-        <dl>
-          <dt>Property enumeration / <code>for...in</code>:</dt>
-          <dd>
-            <code>for (let name in <var>proxy</var>) {...}</code
-            ><br />{{jsxref("Reflect.enumerate()")}}
-          </dd>
-        </dl>
-      </td>
-      <td>The <code>enumerate</code> method must return an object.</td>
-    </tr>
-    <tr>
-      <td>
         {{jsxref("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
       </td>
       <td>

@@ -93,4 +93,3 @@ const x = function* (y) {
 - {{jsxref("Function")}} object
 - {{jsxref("Statements/function", "function")}} statement
 - {{jsxref("Operators/function", "function")}} expression
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}

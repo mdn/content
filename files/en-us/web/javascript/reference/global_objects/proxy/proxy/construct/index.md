@@ -108,6 +108,6 @@ new p(); // TypeError is thrown, "p" is not a constructor
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy/Proxy", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Operators/new", "new")}} operator.
 - {{jsxref("Reflect.construct()")}}

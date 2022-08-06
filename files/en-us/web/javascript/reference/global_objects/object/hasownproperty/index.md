@@ -29,8 +29,7 @@ hasOwnProperty(prop)
 ### Parameters
 
 - `prop`
-  - : The {{jsxref("String")}} name or {{Glossary("Symbol")}} of
-    the property to test.
+  - : The {{jsxref("String")}} name or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) of the property to test.
 
 ### Return value
 

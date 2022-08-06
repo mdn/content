@@ -69,9 +69,7 @@ before, after or is equivalent to the `compareString`.
 
 ## Performance
 
-When comparing large numbers of strings, such as in sorting large arrays, it is better
-to create an {{jsxref("Global_Objects/Collator", "Intl.Collator")}} object and use the
-function provided by its {{jsxref("Collator.prototype.compare", "compare")}} property.
+When comparing large numbers of strings, such as in sorting large arrays, it is better to create an [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) object and use the function provided by its [`compare()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) method.
 
 ## Examples
 
@@ -166,4 +164,4 @@ console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 
 ## See also
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)

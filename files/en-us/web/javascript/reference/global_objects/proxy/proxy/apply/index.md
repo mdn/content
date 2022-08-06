@@ -88,7 +88,7 @@ console.log(p(1, 2, 3)); // "called: 1,2,3"
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy/Proxy", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Function.prototype.call()")}}
 - {{jsxref("Reflect.apply()")}}

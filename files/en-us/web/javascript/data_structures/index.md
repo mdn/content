@@ -140,7 +140,7 @@ Use strings for textual data. When representing complex data, _parse_ strings, a
 
 A Symbol is a **unique** and **immutable** primitive value and may be used as the key of an Object property (see below). In some programming languages, Symbols are called "atoms".
 
-For more details see [Symbol](/en-US/docs/Glossary/Symbol) and the {{jsxref("Symbol")}} object wrapper in JavaScript.
+For more details see the {{jsxref("Symbol")}} reference page.
 
 ## Objects
 
@@ -148,7 +148,7 @@ In computer science, an object is a value in memory which is possibly referenced
 
 ### Properties
 
-In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using _key_ values. A _key_ value is either a {{Glossary("String", "String value")}} or a {{Glossary("Symbol", "Symbol value")}}.
+In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using _key_ values. A _key_ value is either a {{Glossary("String", "String value")}} or a [Symbol value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
 
 There are two types of object properties: The [_data_ property](#data_property) and the [_accessor_ property](#accessor_property). Each property has corresponding _attributes_. Each attribute is accessed internally by the JavaScript engine, but you can set them through {{jsxref("Object.defineProperty()")}}, or read them through {{jsxref("Object.getOwnPropertyDescriptor()")}}. You can read more about the various nuances on the {{jsxref("Object.defineProperty()")}} page.
 

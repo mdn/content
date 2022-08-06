@@ -17,7 +17,7 @@ At a high level, an _expression_ is a valid unit of code that resolves to a valu
 
 The expression `x = 7` is an example of the first type. This expression uses the `=` _operator_ to assign the value seven to the variable `x`. The expression itself evaluates to `7`.
 
-The expression `3 + 4` is an example of the second type. This expression uses the `+` operator to add `3` and `4` together and produces a value, `7`. However, if it's not eventually part of a bigger construct (for example, a [variable declaration](/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#declarations) like `const z = 3 + 4`), its result will be immediately discarded — this is usually a programmer mistake because the evaluation doesn't produce any effects.
+The expression `3 + 4` is an example of the second type. This expression uses the `+` operator to add `3` and `4` together and produces a value, `7`. However, if it's not eventually part of a bigger construct (for example, a [variable declaration](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations) like `const z = 3 + 4`), its result will be immediately discarded — this is usually a programmer mistake because the evaluation doesn't produce any effects.
 
 As the examples above also illustrate, all complex expressions are joined by _operators_, such as `=` and `+`. In this section, we will introduce the following operators:
 
@@ -1061,7 +1061,7 @@ if (theDay instanceof Date) {
 
 ## Basic expressions
 
-All operators eventually operate on one or more basic expressions. These basic expressions include [identifiers](/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#declarations) and [literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#literals), but there are a few other kinds as well. They are briefly introduced below, and their semantics are described in detail in their respective reference sections.
+All operators eventually operate on one or more basic expressions. These basic expressions include [identifiers](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations) and [literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#literals), but there are a few other kinds as well. They are briefly introduced below, and their semantics are described in detail in their respective reference sections.
 
 ### this
 

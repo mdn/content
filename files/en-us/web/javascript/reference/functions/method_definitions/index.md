@@ -76,13 +76,8 @@ const obj = {
 
 When doing so:
 
-- The asterisk (`*`) in the shorthand syntax must be _before_ the
-  generator property name. (That is, `* g(){}` will work,
-  but `g *(){}` will not.)
-- Non-generator method definitions cannot contain the `yield` keyword.
-  This means that [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)
-  won't work either, and will throw a {{jsxref("SyntaxError")}}.
-  Always use `yield` in conjunction with the asterisk (`*`).
+- The asterisk (`*`) in the shorthand syntax must be _before_ the generator property name. (That is, `* g(){}` will work, but `g *(){}` will not.)
+- Non-generator method definitions cannot contain the `yield` keyword. Always use `yield` in conjunction with the asterisk (`*`).
 
 ```js
 // Using a named property

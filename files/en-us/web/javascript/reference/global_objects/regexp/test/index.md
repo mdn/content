@@ -135,4 +135,3 @@ regex.test('foobar')  //false
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the
   [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}
-- {{jsxref("RegExp.prototype")}}
