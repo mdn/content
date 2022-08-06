@@ -288,7 +288,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a browser's header area with a red background" src="theme-accentcolor.png" /></p>
+        <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-accentcolor.png" /></p>
       </td>
     </tr>
     <tr>
@@ -329,7 +329,7 @@ All these properties can be specified as either a string containing any valid [C
         </details>
         <p>
           <img
-            alt="Example showing a browser with all icons and find in page bar in red"
+            alt="Browser fixefox is black. Browser's tab is black with white text. URL bar and the find in page bar are white with black text but all the browser and the find in page bar icons are red."
             src="theme-bookmark_text.png"
           />
         </p>
@@ -351,7 +351,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the background of the toolbar button pressed in red" src="theme-button_background_active.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The customize toolbar icon in the url bar in white with a red background is pressed and a popup is open displaying a short list of thing to add to the toolbar such as the browser's library and the sidebars." src="theme-button_background_active.png" /></p>
       </td>
     </tr>
     <tr>
@@ -370,7 +370,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the background of the go back one page button in red" src="theme-button_background_hover.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The go back one page icon is white with a red circle background." src="theme-button_background_hover.png" /></p>
       </td>
     </tr>
     <tr>
@@ -397,7 +397,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a browser with all icons in red" src="theme-icons.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The URL bar and open a new tab icons are red." src="theme-icons.png" /></p>
       </td>
     </tr>
     <tr>
@@ -427,7 +427,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the starred bookmark this page icon in red" src="theme-icons_attention.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The bookmark this page icon is red and pressed, an open popup name edit this bookmark is displayed." src="theme-icons_attention.png" /></p>
       </td>
     </tr>
     <tr>
@@ -449,7 +449,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a browser's header area with a red background" src="theme-accentcolor.png" /></p>
+        <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-accentcolor.png" /></p>
       </td>
     </tr>
     <tr>
@@ -475,7 +475,7 @@ All these properties can be specified as either a string containing any valid [C
         </details>
         <p>
           <img
-            alt="Example showing a browser's header area with a grey background"
+            alt="Browser firefox is grey. Browser's tabs and URL bar are lighter grey. The tab text is white and the URL bar icon are darker grey."
             src="theme-frame_inactive.png"
           />
         </p>
@@ -496,7 +496,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing inside a browser the new tab page with a red background" src="ntp_colors.png" /></p>
+        <p><img alt="Browser firefox is white. The new tab page background is red, with google search at the top, follow by top sites shortcut and recommended articles." src="ntp_colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -520,7 +520,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing inside a browser the new tab page with a red background" src="ntp_colors.png" /></p>
+        <p><img alt="Browser firefox is white. The new tab page background is red, with google search at the top, follow by top sites shortcut and recommended articles." src="ntp_colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -542,7 +542,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the edit this bookmark popup opened with a red background" src="theme-popup.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red background." src="theme-popup.png" /></p>
       </td>
     </tr>
     <tr>
@@ -563,7 +563,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the edit this bookmark popup opened with a black background and a red outline" src="theme-popup_border.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red outline and black background." src="theme-popup_border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -593,7 +593,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a search results popup with a highlighted item's background in red" src="theme-popup_highlight.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's background in red." src="theme-popup_highlight.png" /></p>
       </td>
     </tr>
     <tr>
@@ -619,7 +619,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a search results popup with a highlighted item's text in red and a black background" src="theme-popup_highlight_text.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background." src="theme-popup_highlight_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -645,7 +645,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a search results popup with items texts in red" src="popup_text.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with items texts in red." src="popup_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -665,7 +665,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a bookmarks sidebar's background in red" src="sidebar_colors.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a red background." src="sidebar_colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -682,7 +682,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a bookmarks sidebar with a red horizontal separator between the sidebar title and the sidebar menu" src="screen_shot_2018-09-16_at_6.13.31_pm.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a red horizontal separator between the sidebar title and the sidebar menu." src="screen_shot_2018-09-16_at_6.13.31_pm.png" /></p>
       </td>
     </tr>
     <tr>
@@ -700,7 +700,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a bookmarks sidebar with a highlighted item's background in red" src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item's background in red with white text." src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
       </td>
     </tr>
     <tr>
@@ -724,7 +724,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a bookmarks sidebar with a highlighted item's text in red" src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item's text in red with red background." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
       </td>
     </tr>
     <tr>
@@ -750,7 +750,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a bookmarks sidebar with multiples text rows in white" src="sidebar_colors.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a red background." src="sidebar_colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -812,7 +812,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the tab text in red" src="theme-textcolor.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are white with red icons and red text." src="theme-textcolor.png" /></p>
       </td>
     </tr>
     <tr>
@@ -831,7 +831,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the outline of a selected tab in red" src="theme-tab_line.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are darker grey with lighter grey icons and white text. The selected tab has a red outline." src="theme-tab_line.png" /></p>
       </td>
     </tr>
     <tr>
@@ -850,7 +850,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a loading indicator in red inside the tab selected" src="theme-tab_loading.gif" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are darker grey with icons and text in white. Inside the selected tab a animated loading indicator is red." src="theme-tab_loading.gif" /></p>
       </td>
     </tr>
     <tr>
@@ -876,7 +876,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the background of the selected tab in red" src="theme-tab_selected.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are darker grey with icons and text in white. The selected tab has red background and white text." src="theme-tab_selected.png" /></p>
       </td>
     </tr>
     <tr>
@@ -914,7 +914,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the text of an opened tab in red" src="theme-tab_text.png" /></p>
+        <p><img alt="Browser firefox has a picture of an insect theme. URL bar is lighter grey with white icons. The selected tab text is red with white background." src="theme-tab_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -941,7 +941,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing all the browser icons and tab text in red" src="theme-textcolor.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are white with red text and red icons." src="theme-textcolor.png" /></p>
       </td>
     </tr>
     <tr>
@@ -964,7 +964,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the background of the tab, the navigation bar, the toolbar and the find in page bar in red" src="toolbar.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are red with white text and icons, except for the find in page bar where the text and icon are black." src="toolbar.png" /></p>
       </td>
     </tr>
     <tr>
@@ -986,7 +986,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a browser with a horizontal red line separating the bottom of the toolbar and the beginning of the display of the web page" src="theme-toolbar_bottom_separator.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are lighter grey with white text and icons. A horizontal red line separating the bottom of the toolbar and the beginning of the display of the web page." src="theme-toolbar_bottom_separator.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1011,7 +1011,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the background of the url bar and the find in page field in red" src="toolbar-field.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are lighter grey with white text and icons. The find in page bar is white with black text. The url bar and find in page field are red with black text." src="toolbar-field.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1037,7 +1037,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the outline of the url bar and the find in page field in red" src="toolbar-field-border.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The URL bar and find in page fields are outlined in red." src="toolbar-field-border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1059,7 +1059,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the red focused outline of the url bar" src="theme-toolbar_field_border_focus.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are black with white text and icons. The url bar field is focused and outlined in red." src="theme-toolbar_field_border_focus.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1084,7 +1084,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the url bar's background in red" src="theme-toolbar_field_focus.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The URL bar field background is red and the text is white." src="theme-toolbar_field_focus.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1107,7 +1107,7 @@ All these properties can be specified as either a string containing any valid [C
         </details>
         <p>
           <img
-            alt="Example showing customized text and highlight colors in the URL bar"
+            alt="Browser firefox is white. Browser's tab and URL bar are white with text and icons in black. The URL bar field is focused and outlined in blue and URL bar text is selected."
             src="toolbar_field_highlight.png"
           />
         </p>
@@ -1146,7 +1146,7 @@ All these properties can be specified as either a string containing any valid [C
         </details>
         <p>
           <img
-            alt="Example showing customized text and highlight colors in the URL bar"
+            alt="Browser firefox is white. Browser's tab and URL bar are white with text and icons in black. The URL bar field is focused and outlined in blue and URL bar text is selected."
             src="toolbar_field_highlight.png"
           />
         </p>
@@ -1183,10 +1183,10 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a red vertical separator after the toogle view icon in the url bar" src="theme-toolbar_field_separator.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are black with text and icons in white. Inside the white URL bar field, after the reader mode icon a red vertical line separating the rest of URL bar icons." src="theme-toolbar_field_separator.png" /></p>
         <p>
           In this screenshot, <code>"toolbar_vertical_separator"</code> is the
-          white vertical line in the URL bar dividing the Reader Mode icon from
+          red vertical line in the URL bar dividing the Reader Mode icon from
           the other icons.
         </p>
       </td>
@@ -1219,7 +1219,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the url bar and the find in page field texts in red" src="toolbar-field-text.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are black with text and icons in white. The URL bar text and icons plus the find in page field text are red with black background." src="toolbar-field-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1250,7 +1250,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the url bar's text focused in red" src="theme-toolbar_field_text_focus.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are black with text and icons in white. The URL bar text and icons are red with black background." src="theme-toolbar_field_text_focus.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1279,7 +1279,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the icons of the toolbar, find in page field and tab texts in red" src="toolbar-text.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page bar, and URL bar are black with text and icons in red." src="toolbar-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1302,7 +1302,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing the browser's header area with a red line separating the top of the toolbar" src="theme-toolbar_top_separator.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are black with text and icons in white. A red line separating the top of the URL bar from the browser." src="theme-toolbar_top_separator.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1325,7 +1325,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example showing a red vertical separator between bookmarks in the toolbar" src="theme-toolbar_vertical_separator.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are black with text and icons in white. After the URL bar, inside the bookmarks bar a red vertical line separating the differents bookmarks." src="theme-toolbar_vertical_separator.png" /></p>
       </td>
     </tr>
   </tbody>
