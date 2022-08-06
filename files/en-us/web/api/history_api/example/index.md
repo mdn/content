@@ -407,7 +407,7 @@ const ajaxRequest = new (function () {
     cover.appendChild(loadingImg);
     loadingBox.appendChild(cover);
 
-    onpopstate = function (event) {
+    onpopstate = (event) => {
         updateURL = false;
         pageInfo.title = event.state.title;
         pageInfo.url = event.state.url;

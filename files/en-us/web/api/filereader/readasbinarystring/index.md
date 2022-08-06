@@ -55,10 +55,10 @@ ctx.beginPath();
 ctx.arc(width/2, height/2, width/2 - width/10, 0, Math.PI*2);
 ctx.stroke();
 
-canvas.toBlob(function (blob) {
+canvas.toBlob((blob) => {
   const reader = new FileReader();
 
-  reader.onload = function () {
+  reader.onload = () => {
     console.log(reader.result);
   }
 

@@ -53,7 +53,7 @@ const cred = new FederatedCredential({
 
 // Store it
 navigator.credentials.store(cred)
-  .then(function() {
+  .then(() => {
   // Do something else.
 });
 ```

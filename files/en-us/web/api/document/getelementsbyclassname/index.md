@@ -78,9 +78,10 @@ we'll find all div elements that have a class of 'test':
 
 ```js
 const testElements = document.getElementsByClassName('test');
-const testDivs = Array.prototype.filter.call(testElements, function(testElement){
-  return testElement.nodeName === 'DIV';
-});
+const testDivs = Array.prototype.filter.call(
+  testElements,
+  (testElement) => testElement.nodeName === 'DIV',
+);
 ```
 
 ### Get the first element whose class is 'test'

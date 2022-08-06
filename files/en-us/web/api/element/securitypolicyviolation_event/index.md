@@ -42,7 +42,7 @@ An {{domxref("SecurityPolicyViolationEvent")}}. Inherits from {{domxref("Event")
 The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` global event handler property or `addEventListener()` on the top level `Window` (you could use exactly the same approach on `Document`).
 
 ```js
-window.onsecuritypolicyviolation = function(e) {
+window.onsecuritypolicyviolation = (e) => {
    // Handle SecurityPolicyViolationEvent e here
  };
 

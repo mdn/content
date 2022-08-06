@@ -57,7 +57,7 @@ switch (document.readyState) {
 
 ```js
 // Alternative to DOMContentLoaded event
-document.onreadystatechange = function () {
+document.onreadystatechange = () => {
   if (document.readyState === 'interactive') {
     initApplication();
   }
@@ -68,7 +68,7 @@ document.onreadystatechange = function () {
 
 ```js
 // Alternative to load event
-document.onreadystatechange = function () {
+document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
     initApplication();
   }

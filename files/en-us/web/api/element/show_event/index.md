@@ -39,7 +39,7 @@ A generic {{domxref("Event")}}.
 </menu>
 
 <script>
-  document.getElementById("test").addEventListener("show", function(e){
+  document.getElementById("test").addEventListener("show", (e) => {
     alert("the context menu will be displayed");
   }, false);
 </script>
