@@ -106,8 +106,9 @@ const Ball = {
   _WIDTH: 320,
   _HEIGHT: 480
 };
+
+Ball.Boot = function (game) {};
 Ball.Boot.prototype = {
-  constructor() {},
   preload() {
     this.load.image('preloaderBg', 'img/loading-bg.png');
     this.load.image('preloaderBar', 'img/loading-bar.png');
@@ -128,8 +129,8 @@ The main `Ball` object is defined and we're adding two variables called `_WIDTH`
 The `Preloader` state takes care of loading all the assets:
 
 ```js
+Ball.Preloader = function(game) {};
 Ball.Preloader.prototype = {
-  constructor() {},
   preload() {
     this.preloadBg = this.add.sprite((Ball._WIDTH - 297) * 0.5, (Ball._HEIGHT - 145) * 0.5, 'preloaderBg');
     this.preloadBar = this.add.sprite((Ball._WIDTH - 158) * 0.5, (Ball._HEIGHT - 50) * 0.5, 'preloaderBar');
@@ -154,8 +155,8 @@ There are single images, spritesheets and audio files loaded by the framework. I
 The `MainMenu` state shows the main menu of the game, where you can start playing by clicking the button.
 
 ```js
+Ball.MainMenu = function(game) {};
 Ball.MainMenu.prototype = {
-  constructor() {},
   create() {
     this.add.sprite(0, 0, 'screen-mainmenu');
     this.gameTitle = this.add.sprite(Ball._WIDTH * 0.5, 40, 'title');
@@ -188,8 +189,8 @@ When the start button is pressed, instead of jumping directly into the action th
 ### Howto.js
 
 ```js
+Ball.Howto = function(game) {};
 Ball.Howto.prototype = {
-  constructor() {},
   create() {
     this.buttonContinue = this.add.button(0, 0, 'screen-howtoplay', this.startGame, this);
   },
@@ -206,8 +207,8 @@ The `Howto` state shows the gameplay instructions on the screen before starting 
 The `Game` state from the `Game.js` file is where all the magic happens. All the initialization is in the `create()` function (launched once at the beginning of the game). After that some functionality will require further code to control — we will write our own functions to handle more complicated tasks. In particular, take note of the `update()` function (executed at every frame), which updates things such as the ball position.
 
 ```js
+Ball.Game = function(game) {};
 Ball.Game.prototype = {
-  constructor() {},
   create() {},
   initLevels() {},
   showLevel(level) {},
