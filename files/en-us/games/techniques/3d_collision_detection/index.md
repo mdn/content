@@ -16,7 +16,7 @@ This article provides an introduction to the different bounding volume technique
 
 As with 2D collision detection, **axis-aligned bounding boxes** (AABB) are the quickest algorithm to determine whether the two game entities are overlapping or not. This consists of wrapping game entities in a non-rotated (thus axis-aligned) box and checking the positions of these boxes in the 3D coordinate space to see if they are overlapping.
 
-![Two 3-D non-square objects floating in space encompassed by virtual rectangular boxes. ](screen_shot_2015-10-16_at_15.11.21.png)
+![Two 3-D non-square objects floating in space encompassed by virtual rectangular boxes.](screen_shot_2015-10-16_at_15.11.21.png)
 
 The **axis-aligned constraint** is there because of performance reasons. The overlapping area between two non-rotated boxes can be checked with logical comparisons alone, whereas rotated boxes require additional trigonometric operations, which are slower to calculate. If you have entities that will be rotating, you can either modify the dimensions of the bounding box so it still wraps the object, or opt to use another bounding geometry type, such as spheres (which are invariant to rotation.) The animated GIF below shows a graphic example of an AABB that adapts its size to fit the rotating entity. The box constantly changes dimensions to snugly fit the entity contained inside.
 
@@ -45,7 +45,7 @@ function isPointInsideAABB(point, box) {
 
 Checking whether an AABB intersects another AABB is similar to the point test. We just need to do one test per axis, using the boxes' boundaries. The diagram below shows the test we'd perform over the X-axis — basically, do the ranges _A<sub>minX</sub>_–_A<sub>maxX</sub>_ and _B<sub>minX</sub>_–_B<sub>maxX</sub>_ overlap?
 
-![Hand drawing of two rectangles showing the upper right cordern of A overlapping the bottom left corner of B, as the A-Xmax is greater than B-Xmin. ](aabb_test.png)
+![Hand drawing of two rectangles showing the upper right corner of A overlapping the bottom left corner of B, as A's largest x coordinate is greater than B's smallest x coordinate.](aabb_test.png)
 
 Mathematically this would look like so:
 
@@ -70,7 +70,7 @@ Using bounding spheres to detect collisions is a bit more complex than AABB, but
 
 To check whether a sphere contains a point we need to calculate the distance between the point and the sphere's center. If this distance is smaller than or equal to the radius of the sphere, the point is inside the sphere.
 
-![Hand drawing of a sphere with a point. The point is outside of the sphere, to the lower right of it. The distances is denoted by a dashed line from the center of the circle to the dot labeled D. A lighter line shows the radius, going from the center of the circle to the border of the circle, labeled R.](point_vs_sphere.png)
+![Hand drawing of a 2D projection of a sphere and a point in a Cartesian coordinate system. The point is outside of the circle, to the lower right of it. The distance is denoted by a dashed line, labeled D, from the circle's center to the point. A lighter line shows the radius, labeled R, going from the center of the circle to the border of the circle.](point_vs_sphere.png)
 
 Taking into account that the Euclidean distance between two points _A_ and _B_ is <math><semantics><msqrt><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>-</mo><msub><mi>B</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>y</mi></msub><mo>-</mo><msub><mi>B</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>z</mi></msub><mo>-</mo><msub><mi>B</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></msqrt><annotation encoding="TeX">\sqrt{(A_x - B_x) ^ 2) + (A_y - B_y)^2 + (A_z - B_z)}</annotation></semantics></math> , our formula for point vs. sphere collision detection would work out like so:
 
@@ -95,7 +95,7 @@ function isPointInsideSphere(point, sphere) {
 
 The sphere vs sphere test is similar to the point vs sphere test. What we need to test here is that the distance between the sphere's centers is less than or equal to the sum of their radii.
 
-![Hand drawing of two partially overlapping circles. Each circle as a light radius line going from the center of the circle to the border labeled R. The distance is denoted by a dotted line connecting the center points of both circles labeled D.](sphere_vs_sphere.png)
+![Hand drawing of two partially overlapping circles. Each circle (of different sizes) has a light radius line going from its center to its border, labeled R. The distance is denoted by a dotted line, labeled D, connecting the center points of both circles.](sphere_vs_sphere.png)
 
 Mathematically, this looks like:
 
@@ -118,7 +118,7 @@ function intersect(sphere, other) {
 
 Testing whether a sphere and an AABB are colliding is slightly more complicated, but still simple and fast. A logical approach would be to check every vertex of the AABB, doing a point vs sphere test for each one. This is overkill, however — testing all the vertices is unnecessary, as we can get away with just calculating the distance between the AABB's _closest point_ (not necessarily a vertex) and the sphere's center, seeing if it is less than or equal to the sphere's radius. We can get this value by clamping the sphere's center to the AABB's limits.
 
-![Hand drawing of a square partially overlapping the top of a circle. The radius is denoted by a lite line labeled R. The  distance line goes from the center of the circle to the closest point of the square.](sphere_vs_aabb.png)
+![Hand drawing of a square partially overlapping the top of a circle. The radius is denoted by a light line labeled R. The distance line goes from the circle's center to the closest point of the square.](sphere_vs_aabb.png)
 
 In JavaScript, we'd do this test like so:
 
