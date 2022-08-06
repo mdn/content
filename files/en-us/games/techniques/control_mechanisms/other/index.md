@@ -37,9 +37,9 @@ if(this.cursors.right.isDown) {
 It works out of the box. The cursors are the four directional arrow keys on the keyboard, and these have exactly the same key codes as the arrow keys on the remote. How do you know the codes for the other remote keys? You can check them by printing the responses out in the console:
 
 ```js
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", (event) => {
     console.log(event.keyCode);
-}, this);
+}, true);
 ```
 
 Every key pressed on the remote will show its key code in the console. You can also check this handy cheat sheet seen below if you're working with Panasonic TVs running Firefox OS:
@@ -49,7 +49,7 @@ Every key pressed on the remote will show its key code in the console. You can a
 You can add moving between states, starting a new game, controlling the ship and blowing stuff up, pausing and restarting the game. All that is needed is checking for key presses:
 
 ```js
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", (event) => {
     switch(event.keyCode) {
         case 8: {
             // pause the game
@@ -61,7 +61,7 @@ window.addEventListener("keydown", function(event) {
         }
         // …
     }
-}, this);
+}, true);
 ```
 
 You can see it in action by watching [this video](https://www.youtube.com/watch?v=Bh11sP0bcTY).
@@ -150,7 +150,7 @@ If the frequency of the bounced sound is shifted from the original one, then we 
 This can be accomplished using [a small library](https://github.com/DanielRapp/doppler) created by Daniel Rapp — it can be as simple as calculating the difference between two frequencies:
 
 ```js
-doppler.init(function(bandwidth) {
+doppler.init((bandwidth) => {
     var diff = bandwidth.left - bandwidth.right;
 });
 ```
@@ -179,7 +179,7 @@ Cylon.robot({
     makey: { driver: 'makey-button', pin: 2 }
   },
   work(my) {
-    my.makey.on('push', function() {
+    my.makey.on('push', () => {
       console.log("Button pushed!");
     });
   }

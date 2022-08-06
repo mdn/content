@@ -24,9 +24,9 @@ We can make the game enjoyable for longer by adding lives. In this article we'll
 Add the following new variables below the existing ones in your code:
 
 ```js
-var lives = 3;
-var livesText;
-var lifeLostText;
+let lives = 3;
+let livesText;
+let lifeLostText;
 ```
 
 These respectively will store the number of lives, the text label that displays the number of lives that remain, and a text label that will be shown on screen when the player loses one of their lives.
@@ -36,9 +36,9 @@ These respectively will store the number of lives, the text label that displays 
 Defining the texts look like something we already did in [the score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score) lesson. Add the following lines below the existing `scoreText` definition inside your `create()` function:
 
 ```js
-livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
-livesText.anchor.set(1,0);
-lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', { font: '18px Arial', fill: '#0095DD' });
+livesText = game.add.text(game.world.width - 5, 5, `Lives: ${lives}`, { font: '18px Arial', fill: '#0095DD' });
+livesText.anchor.set(1, 0);
+lifeLostText = game.add.text(game.world.width * 0.5, game.world.height * 0.5, 'Life lost, click to continue', { font: '18px Arial', fill: '#0095DD' });
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
 ```
@@ -59,9 +59,9 @@ We can now use this variable when styling our text labels — update your code s
 
 ```js
 scoreText = game.add.text(5, 5, 'Points: 0', textStyle);
-livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, textStyle);
+livesText = game.add.text(game.world.width - 5, 5, `Lives: ${lives}`, textStyle);
 livesText.anchor.set(1,0);
-lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', textStyle);
+lifeLostText = game.add.text(game.world.width * 0.5, game.world.height * 0.5, 'Life lost, click to continue', textStyle);
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
 ```
@@ -73,9 +73,9 @@ This way changing the font in one variable will apply the changes to every place
 To implement lives in our game, let's first change the ball's function bound to the `onOutOfBounds` event. Instead of executing an anonymous function and showing the alert right away :
 
 ```js
-ball.events.onOutOfBounds.add(function(){
-    alert('Game over!');
-    location.reload();
+ball.events.onOutOfBounds.add(() => {
+  alert('Game over!');
+  location.reload();
 }, this);
 ```
 
@@ -89,21 +89,20 @@ We want to decrease the number of lives every time the ball leaves the canvas. A
 
 ```js
 function ballLeaveScreen() {
-    lives--;
-    if(lives) {
-        livesText.setText('Lives: '+lives);
-        lifeLostText.visible = true;
-        ball.reset(game.world.width*0.5, game.world.height-25);
-        paddle.reset(game.world.width*0.5, game.world.height-5);
-        game.input.onDown.addOnce(function(){
-            lifeLostText.visible = false;
-            ball.body.velocity.set(150, -150);
-        }, this);
-    }
-    else {
-        alert('You lost, game over!');
-        location.reload();
-    }
+  lives--;
+  if (lives) {
+    livesText.setText(`Lives: ${lives}`);
+    lifeLostText.visible = true;
+    ball.reset(game.world.width * 0.5, game.world.height - 25);
+    paddle.reset(game.world.width * 0.5, game.world.height - 5);
+    game.input.onDown.addOnce(() => {
+      lifeLostText.visible = false;
+      ball.body.velocity.set(150, -150);
+    }, this);
+  } else {
+    alert('You lost, game over!');
+    location.reload();
+  }
 }
 ```
 

@@ -52,7 +52,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let detecting = browser.tabs.detectLanguage();
   detecting.then(onLanguageDetected, onError);
 });
@@ -77,7 +77,7 @@ function detectLanguages(tabs) {
   }
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let querying = browser.tabs.query({});
   querying.then(detectLanguages, onError);
 });

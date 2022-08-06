@@ -80,7 +80,7 @@ Let's add a tween to our game to make the bricks smoothly disappear when they ar
 ```js
 var killTween = game.add.tween(brick.scale);
 killTween.to({x:0,y:0}, 200, Phaser.Easing.Linear.None);
-killTween.onComplete.addOnce(function(){
+killTween.onComplete.addOnce(() => {
     brick.kill();
 }, this);
 killTween.start();

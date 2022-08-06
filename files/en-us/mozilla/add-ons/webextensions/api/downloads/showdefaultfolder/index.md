@@ -38,7 +38,7 @@ The following snippet contains a show button, which when clicked invokes `showDe
 ```js
 let showBtn = document.querySelector('.show');
 
-showBtn.onclick = function() {
+showBtn.onclick = () => {
   browser.downloads.showDefaultFolder();
 }
 ```

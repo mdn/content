@@ -61,7 +61,7 @@ browser.menus.create({
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "remove-all") {
     let removing = browser.menus.removeAll();
     removing.then(onRemoved);
