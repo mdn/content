@@ -60,7 +60,7 @@ class Rectangle {
     this.width = width;
   }
   sayName() {
-    console.log('Hi, I am a ', this.name + '.');
+    console.log(`Hi, I am a ${this.name}.`);
   }
   get area() {
     return this.height * this.width;
@@ -98,7 +98,7 @@ class Rectangle {
 
 class Square extends Rectangle {
   static logDescription() {
-    return super.logNbSides() + ' which are all equal';
+    return `${super.logNbSides()} which are all equal`;
   }
 }
 Square.logDescription(); // 'I have 4 sides which are all equal'

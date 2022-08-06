@@ -75,7 +75,7 @@ function provided by its {{jsxref("Collator.prototype.compare", "compare")}} pro
 
 ## Examples
 
-### Using `localeCompare()`
+### Using localeCompare()
 
 ```js
 // The letter "a" is before "c" yielding a negative value
@@ -93,7 +93,7 @@ function provided by its {{jsxref("Collator.prototype.compare", "compare")}} pro
 `localeCompare()` enables case-insensitive sorting for an array.
 
 ```js
-let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
+const items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
 items.sort((a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
@@ -118,7 +118,7 @@ function localeCompareSupportsLocales() {
 }
 ```
 
-### Using `locales`
+### Using locales
 
 The results provided by `localeCompare()` vary between languages. In order
 to get the sort order of the language used in the user interface of your application,
@@ -130,7 +130,7 @@ console.log('ä'.localeCompare('z', 'de')); // a negative value: in German, ä s
 console.log('ä'.localeCompare('z', 'sv')); // a positive value: in Swedish, ä sorts after z
 ```
 
-### Using `options`
+### Using options
 
 The results provided by `localeCompare()` can be customized using the
 `options` argument:

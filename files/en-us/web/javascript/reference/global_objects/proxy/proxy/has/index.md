@@ -71,9 +71,9 @@ The following code traps the {{jsxref("Operators/in", "in")}} operator.
 ```js
 const p = new Proxy({}, {
   has(target, prop) {
-    console.log('called: ' + prop);
+    console.log(`called: ${prop}`);
     return true;
-  }
+  },
 });
 
 console.log('a' in p); // "called: a"
@@ -89,7 +89,7 @@ Object.preventExtensions(obj);
 const p = new Proxy(obj, {
   has(target, prop) {
     return false;
-  }
+  },
 });
 
 'a' in p; // TypeError is thrown

@@ -52,19 +52,19 @@ See also {{jsxref("Object.isExtensible()")}}.
 
 ```js
 // New objects are extensible.
-let empty = {}
+const empty = {};
 Reflect.isExtensible(empty)  // === true
 
 // ...but that can be changed.
-Reflect.preventExtensions(empty)
+Reflect.preventExtensions(empty);
 Reflect.isExtensible(empty)  // === false
 
 // Sealed objects are by definition non-extensible.
-let sealed = Object.seal({})
+const sealed = Object.seal({});
 Reflect.isExtensible(sealed)  // === false
 
 // Frozen objects are also by definition non-extensible.
-let frozen = Object.freeze({})
+const frozen = Object.freeze({});
 Reflect.isExtensible(frozen)  // === false
 ```
 

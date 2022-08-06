@@ -342,7 +342,7 @@ for (const zoneName of timezoneNames) {
     timeZone: 'America/Los_Angeles',
     timeZoneName: zoneName,
   });
-  console.log(zoneName + ": " + formatter.format(date) );
+  console.log(`${zoneName}: ${formatter.format(date)}`);
 }
 
 // expected output:

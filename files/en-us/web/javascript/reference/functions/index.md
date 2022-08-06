@@ -610,7 +610,7 @@ function padZeros(num, totalLen) {
   let numStr = num.toString();             // Initialize return value as string
   const numZeros = totalLen - numStr.length; // Calculate no. of zeros
   for (let i = 1; i <= numZeros; i++) {
-    numStr = "0" + numStr;
+    numStr = `0${numStr}`;
   }
   return numStr;
 }
