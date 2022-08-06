@@ -313,8 +313,8 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
 
-  const width = 320;    // We will scale the photo width to this
-  const height = 0;     // This will be computed based on the input stream
+  const width = 320; // We will scale the photo width to this
+  let height = 0; // This will be computed based on the input stream
 
   // |streaming| indicates whether or not we're currently streaming
   // video from the camera. Obviously, we start at false.
