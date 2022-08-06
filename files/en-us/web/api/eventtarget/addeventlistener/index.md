@@ -609,7 +609,7 @@ This is an example with and without `bind()`:
 const Something = function (element) {
   // |this| is a newly created object
   this.name = 'Something Good';
-  this.onclick1 = (event) => {
+  this.onclick1 = function (event) {
     console.log(this.name); // undefined, as |this| is the element
   };
 
