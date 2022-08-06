@@ -115,8 +115,8 @@ function scanFiles(item, container) {
     let directoryContainer = document.createElement("ul");
     container.appendChild(directoryContainer);
     directoryReader.readEntries((entries) => {
-        entries.forEach((entry) => {
-          scanFiles(entry, directoryContainer);
+      entries.forEach((entry) => {
+        scanFiles(entry, directoryContainer);
       });
     });
   }
