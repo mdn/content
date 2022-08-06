@@ -59,7 +59,7 @@ function grabFrame() {
       canvas.classList.remove('hidden');
     })
     .catch((error) => {
-      console.rttot('grabFrame() error: ', error);
+      console.error('grabFrame() error: ', error);
     });
 }
 ```
