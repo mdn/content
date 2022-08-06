@@ -10,8 +10,8 @@ browser-compat: javascript.builtins.Object.Object
 ---
 {{JSRef}}
 
-The **`Object` constructor** creates an object wrapper for the
-given value.
+The `Object` constructor performs the following steps when called.
+
 
 - If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it will create and
   return an empty object.
