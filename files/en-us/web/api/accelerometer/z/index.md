@@ -13,6 +13,7 @@ tags:
   - Sensor APIs
   - Sensors
   - z
+  - Experimental
 browser-compat: api.Accelerometer.z
 ---
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
