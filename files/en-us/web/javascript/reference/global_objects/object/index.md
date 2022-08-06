@@ -20,7 +20,7 @@ Changes to the `Object` prototype object are seen by **all** objects through pro
 The `Object` constructor creates an object wrapper for the given value.
 
 - If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it will create and return an empty object.
-- If the value is an object already, it will return the value.
+- If the value is an object already, it will return `new Object(value, Object.prototype)`.
 - Otherwise, it will return an object of a Type that corresponds to the given value.
 
 When called in a non-constructor context, `Object` behaves identically to `new Object()`.
