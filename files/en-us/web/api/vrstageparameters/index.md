@@ -41,7 +41,7 @@ navigator.getVRDisplays().then((displays) => {
   const stageParams = vrDisplay.stageParameters;
   // stageParams is a VRStageParameters object
 
-  if(stageParams === null) {
+  if (stageParams === null) {
     info.textContent = 'Your VR Hardware does not support room-scale experiences.'
   } else {
     info.innerHTML = `<strong>Display stage parameters</strong><br>` +
