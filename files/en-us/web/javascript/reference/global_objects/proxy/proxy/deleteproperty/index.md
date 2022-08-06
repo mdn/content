@@ -69,14 +69,15 @@ The following code traps the {{jsxref("Operators/delete", "delete")}} operator.
 ```js
 const p = new Proxy({}, {
   deleteProperty(target, prop) {
-    if (prop in target) {
-      delete target[prop];
-      console.log(`property removed: ${prop}`);
-      return true;
-    console.log(`property not found: ${prop}`);
-    return false;
+    if (!(prop in target)) {
+      console.log(`property not found: ${prop}`);
+      return false;
+    }
+    delete target[prop];
+    console.log(`property removed: ${prop}`);
+    return true;
   },
-})
+});
 
 p.a = 10;
 console.log('a' in p); // true
