@@ -173,9 +173,11 @@ Here is an example where a secondary window can be opened and reused for other l
 #### JavaScript
 
 ```js
-let windowObjectReference = null; // global variable
-let previousURL; /* global variable that will store the
-                    url currently in the secondary window */
+let windowObjectReference = null;
+/* variable to store the url that is
+   currently in the secondary window */
+let previousURL;
+
 function openRequestedSingleTab(url) {
   if (windowObjectReference === null || windowObjectReference.closed) {
     windowObjectReference = window.open(url, "SingleSecondaryWindowName");
@@ -187,7 +189,7 @@ function openRequestedSingleTab(url) {
     windowObjectReference.focus();
   } else {
     windowObjectReference.focus();
-  };
+  }
   previousURL = url;
   /* explanation: we store the current url in order to compare url
      in the event of another call of this function. */
