@@ -12,6 +12,7 @@ tags:
   - Sensor
   - Sensor APIs
   - Sensors
+  - Experimental
   - 'y'
 browser-compat: api.Accelerometer.y
 ---
