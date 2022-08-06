@@ -72,7 +72,7 @@ Another good option to choose is a so-called Linter application, which not only 
 
 There are many online linter applications, the best of which are probably [Dirty Markup](https://www.10bestdesign.com/dirtymarkup/) (HTML, CSS, JavaScript), and [CSS Lint](http://csslint.net/) (CSS only). These allows you to paste your code into a window, and it will flag up any errors with crosses, which can then be hovered to get an error message informing you what the problem is. Dirty Markup also allows you to make fixes to your markup using the _Clean_ button.
 
-![Dirty markup showing an linting of quoting attribute values](dirty-markup.png)
+![Dirty Markup application displaying the message "Unexpected character in unquoted attribute" over the following incorrect HTML markup: <div id=combinators">](dirty-markup.png)
 
 However, it is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle.
 
@@ -100,7 +100,7 @@ The developer tools built into most browsers also feature useful tools for hunti
 
 As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:
 
-![The developer tools crosses out invalid CSS, adding a hoverable warning icon](css-message-devtools.png)
+![The developer tools cross out invalid CSS and add a hoverable warning icon](css-message-devtools.png)
 
 Other browser devtools have similar features.
 
@@ -110,7 +110,7 @@ Now let's move on to look at some of the most common cross browser HTML and CSS 
 
 ### Browsers not supporting modern features
 
-This is a common problem, especially when you need to support old browsers (such as Internet Explorer) or you are using features that are implemented in some browsers but not yet in all. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across all the browsers you'll want to support; more problems are uncovered when you start wanting to use newer HTML, CSS, and APIs. MDN displays browser compatibility data for each feature documented; for example, see the [browser support table for the `:has()` pseudo-class](/en-US/docs/Web/CSS/:has#browser_compatibility)
+This is a common problem, especially when you need to support old browsers (such as Internet Explorer) or you are using features that are implemented in some browsers but not yet in all. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across all the browsers you'll want to support; more problems are uncovered when you start wanting to use newer HTML, CSS, and APIs. MDN displays browser compatibility data for each feature documented; for example, see the [browser support table for the `:has()` pseudo-class](/en-US/docs/Web/CSS/:has#browser_compatibility).
 
 Once you've identified a list of technologies you will be using that are not universally supported, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See [Finding help](#finding_help) below.
 
