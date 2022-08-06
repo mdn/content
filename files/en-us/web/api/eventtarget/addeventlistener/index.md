@@ -710,7 +710,7 @@ As mentioned [above](#specifying_this_using_bind), you can use
 const myButton = document.getElementById('my-button-id');
 const someString = 'Data';
 
-myButton.addEventListener('click', () => {
+myButton.addEventListener('click', function () {
   console.log(this); // Expected Value: 'Data'
 }.bind(someString));
 ```
