@@ -633,7 +633,7 @@ any events:
 const Something = function (element) {
   // |this| is a newly created object
   this.name = 'Something Good';
-  this.handleEvent = (event) => {
+  this.handleEvent = function (event) {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
     switch(event.type) {
       case 'click':
