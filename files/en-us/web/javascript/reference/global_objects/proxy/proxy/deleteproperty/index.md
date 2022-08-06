@@ -84,7 +84,7 @@ p.a = 10;
 console.log('a' in p); // true
 
 const result1 = delete p.a; // "property removed: a"
-console.log(result2); // true
+console.log(result1); // true
 console.log('a' in p); // false
 
 const result2 = delete p.a; // "property not found: a"
