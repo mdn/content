@@ -114,11 +114,11 @@ will automatically wrap the string primitive and call the method or perform the 
 lookup on the wrapper object instead.
 
 ```js
-const s_prim = 'foo'
-const s_obj = new String(s_prim)
+const strPrim = 'foo';
+const strObj = new String(strPrim);
 
-console.log(typeof s_prim) // Logs "string"
-console.log(typeof s_obj)  // Logs "object"
+console.log(typeof strPrim); // Logs "string"
+console.log(typeof strObj);  // Logs "object"
 ```
 
 > **Warning:** You should rarely find yourself using `String` as a constructor.

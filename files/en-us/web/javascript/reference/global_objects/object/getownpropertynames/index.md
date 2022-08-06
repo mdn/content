@@ -70,13 +70,13 @@ Object.getOwnPropertyNames(obj).forEach((val, idx, array) => {
 // 2 -> c
 
 // non-enumerable property
-const my_obj = Object.create({}, {
+const myObj = Object.create({}, {
   getFoo: {
     value() { return this.foo; },
-    enumerable: false
+    enumerable: false,
   }
 });
-my_obj.foo = 1;
+myObj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort());
 // logs ["foo", "getFoo"]
@@ -107,11 +107,11 @@ This uses the {{jsxref("Array.prototype.filter()")}} function to remove the enum
 
 ```js
 const target = myObject;
-const enum_and_nonenum = Object.getOwnPropertyNames(target);
-const enum_only = new Set(Object.keys(target));
-const nonenum_only = enum_and_nonenum.filter((key) => !enum_only.has(key));
+const enumAndNonenum = Object.getOwnPropertyNames(target);
+const enumOnly = new Set(Object.keys(target));
+const nonenumOnly = enumAndNonenum.filter((key) => !enumOnly.has(key));
 
-console.log(nonenum_only);
+console.log(nonenumOnly);
 ```
 
 ## Specifications

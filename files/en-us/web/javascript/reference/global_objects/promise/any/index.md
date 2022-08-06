@@ -81,11 +81,11 @@ Promise.any([pErr, pSlow, pFast]).then((value) => {
 `Promise.any()` rejects with an {{jsxref("AggregateError")}} if no promise fulfills.
 
 ```js
-const pErr = new Promise((resolve, reject) => {
+const failure = new Promise((resolve, reject) => {
   reject("Always fails");
 });
 
-Promise.any([pErr]).catch((err) => {
+Promise.any([failure]).catch((err) => {
   console.log(err);
 });
 // expected output: "AggregateError: No Promise in Promise.any was resolved"

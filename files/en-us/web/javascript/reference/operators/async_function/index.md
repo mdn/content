@@ -81,9 +81,9 @@ add(10).then((v) => {
 });
 
 (async function (x) { // async function expression used as an IIFE
-  const p_a = resolveAfter2Seconds(20);
-  const p_b = resolveAfter2Seconds(30);
-  return x + await p_a + await p_b;
+  const p1 = resolveAfter2Seconds(20);
+  const p2 = resolveAfter2Seconds(30);
+  return x + await p1 + await p2;
 })(10).then((v) => {
   console.log(v);  // prints 60 after 2 seconds.
 });

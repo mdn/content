@@ -240,9 +240,9 @@ const elapsed = end.getTime() - start.getTime(); // elapsed time in milliseconds
 
 ```js
 // To test a function and get back its return
-function printElapsedTime(fTest) {
+function printElapsedTime(testFn) {
   const startTime = Date.now();
-  const result = fTest();
+  const result = testFn();
   const endTime = Date.now();
 
   console.log(`Elapsed time: ${String(endTime - startTime)} milliseconds`);

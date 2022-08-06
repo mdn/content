@@ -289,8 +289,8 @@ console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not wa
 ```js
 const oranges = ['ripe orange A ', 'green orange B', 'ripe orange C'];
 
-const ripe_oranges = oranges.filter((fruit) => fruit.match(/(?<=ripe )orange/));
-console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
+const ripeOranges = oranges.filter((fruit) => fruit.match(/(?<=ripe )orange/));
+console.log(ripeOranges); // [ 'ripe orange A ', 'ripe orange C' ]
 ```
 
 ## See also

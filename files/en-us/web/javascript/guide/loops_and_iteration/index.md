@@ -395,7 +395,7 @@ iterates over all the object's properties and returns a string that lists the pr
 names and their values.
 
 ```js
-function dump_props(obj, objName) {
+function dumpProps(obj, objName) {
   let result = '';
   for (const i in obj) {
     result += `${objName}.${i} = ${obj[i]}<br>`;
