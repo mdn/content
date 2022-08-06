@@ -80,7 +80,7 @@ The reason for `[] == false` even though `[]` is truthy is: the comparison `[] =
 
 ## Examples
 
-### Creating `Boolean` objects with an initial value of `false`
+### Creating Boolean objects with an initial value of false
 
 ```js
 const bNoParam = new Boolean();
@@ -90,7 +90,7 @@ const bEmptyString = new Boolean('');
 const bfalse = new Boolean(false);
 ```
 
-### Creating `Boolean` objects with an initial value of `true`
+### Creating Boolean objects with an initial value of true
 
 ```js
 const btrue = new Boolean(true);

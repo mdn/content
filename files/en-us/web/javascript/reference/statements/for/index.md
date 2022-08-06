@@ -167,15 +167,16 @@ The following `for` cycle calculates the offset position of a node in the
 use of a `statement` section, a semicolon is used instead.
 
 ```js
-function showOffsetPos(sId) {
-  let nLeft = 0, nTop = 0;
+function showOffsetPos(id) {
+  let left = 0;
+  let top = 0;
   for (
-    let oItNode = document.getElementById(sId); /* initialization */
-    oItNode; /* condition */
-    nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent /* final-expression */
+    let itNode = document.getElementById(id); /* initialization */
+    itNode; /* condition */
+    left += itNode.offsetLeft, top += itNode.offsetTop, itNode = itNode.offsetParent /* final-expression */
   ); /* semicolon */
 
-  console.log(`Offset position of '${sId}' element:\n left: ${nLeft}px;\n top: ${nTop}px;`);
+  console.log(`Offset position of '${id}' element:\n left: ${left}px;\n top: ${top}px;`);
 
 }
 

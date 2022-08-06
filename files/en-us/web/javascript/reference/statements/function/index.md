@@ -131,12 +131,11 @@ var notHoisted = function() {
 ### Using function
 
 The following code declares a function that returns the total amount of sales, when
-given the number of units sold of products `a`, `b`, and
-`c`.
+given the number of units sold of three products.
 
 ```js
-function calc_sales(units_a, units_b, units_c) {
-  return units_a * 79 + units_b * 129 + units_c * 699;
+function calcSales(unitsA, unitsB, unitsC) {
+  return unitsA * 79 + unitsB * 129 + unitsC * 699;
 }
 ```
 

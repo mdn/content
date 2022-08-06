@@ -46,9 +46,9 @@ ECMAScript standard, the names of properties are technically "IdentifierNames", 
 not.
 
 ```js
-const variable = object.property_name;
+const variable = object.propertyName;
 
-object.property_name = value;
+object.propertyName = value;
 ```
 
 ```js
@@ -88,13 +88,11 @@ method call, so that the dot is not interpreted as a decimal point.
 
 ### Bracket notation
 
-In the `object[property_name]` syntax,
-the `property_name` is just a string or [Symbol](/en-US/docs/Glossary/Symbol). So, it can be any string, including
-`'1foo'`, `'!bar!'`, or even `' '` (a space).
+In the `object[propertyName]` syntax, the `propertyName` is just a string or [Symbol](/en-US/docs/Glossary/Symbol). So, it can be any string, including `'1foo'`, `'!bar!'`, or even `' '` (a space).
 
 ```js
-const variable = object[property_name]
-object[property_name] = value;
+const variable = object[propertyName];
+object[propertyName] = value;
 ```
 
 This does the exact same thing as the previous example.
@@ -125,8 +123,8 @@ This also outputs `'value'`, since both `foo` and
 `bar` are converted to the same string.
 
 ```js
-const foo = { unique_prop: 1 };
-const bar = { unique_prop: 2 };
+const foo = { uniqueProp: 1 };
+const bar = { uniqueProp: 2 };
 const object = {};
 object[foo] = 'value';
 console.log(object[bar]);

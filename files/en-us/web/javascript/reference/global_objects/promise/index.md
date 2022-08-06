@@ -334,8 +334,7 @@ function troubleWithGetNumber(reason) {
 function promiseGetWord(parityInfo) {
   return new Promise((resolve, reject) => {
     const { value } = parityInfo;
-    const threshold_B = THRESHOLD_A - 1;
-    if (value >= threshold_B) {
+    if (value >= THRESHOLD_A - 1) {
       reject(`Still too large: ${value}`);
     } else {
       parityInfo.wordEvenOdd = parityInfo.isOdd ? "odd" : "even";
