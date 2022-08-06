@@ -67,7 +67,7 @@ This code will loop through the available devices and assign proper sensors to t
 function setCustomFOV(up,right,down,left) {
   const testFOV = new VRFieldOfView(up,right,down,left);
 
-  gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
+  gHMD.setFieldOfView(testFOV, testFOV, 0.01, 10000.0);
 }
 ```
 
