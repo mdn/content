@@ -840,31 +840,6 @@ definition is unchanging, but it is still being repeatedly defined as if new. So
 be multiple identical event listeners, in both cases each iteration will instead
 create a new listener with its own unique reference to the handler function.
 
-```js
-const els = document.getElementsByTagName('*');
-
-function processEvent(e){
-  /* do something */
-}
-
-// For illustration only: Note the mistake of [j] for [i]. We are registering all event listeners to the first element
-
-// Case 3
-for (let i = 0, j = 0 ; i < els.length ; i++){
-  els[j].addEventListener("click", processEvent = (e) => {/* do something */}, false);
-}
-
-// Case 4
-for (let i = 0, j = 0 ; i < els.length ; i++){
-  function processEvent(e){/* do something */};
-  els[j].addEventListener("click", processEvent, false);
-}
-```
-
-Also in both case 3 and case 4, because the function reference was kept but repeatedly redefined
-with each `addEventListener()`, `removeEventListener("click", processEvent, false)` can still remove a listener, but now only
-the last one added.
-
 ### Improving scrolling performance with passive listeners
 
 Setting the `passive` option to `true` — as shown in the following example — enables performance optimizations that can dramatically improve the performance of an application.
