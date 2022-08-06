@@ -73,10 +73,8 @@ const p = new Proxy({}, {
       delete target[prop];
       console.log(`property removed: ${prop}`);
       return true;
-    } else {
-      console.log(`property not found: ${prop}`);
-      return false;
-    }
+    console.log(`property not found: ${prop}`);
+    return false;
   },
 })
 
