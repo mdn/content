@@ -78,11 +78,11 @@ The following example uses {{jsxref("String.prototype.indexOf()", "indexOf()")}}
 "`Brave, Brave New World`".
 
 ```js
-let anyString = 'Brave, Brave New World';
+const anyString = 'Brave, Brave New World';
 
-console.log('The index of the first "Brave" is ' + anyString.indexOf('Brave'));
+console.log(`The index of the first "Brave" is ${anyString.indexOf('Brave')}`);
 // logs 0
-console.log('The index of the last "Brave" is ' + anyString.lastIndexOf('Brave'));
+console.log(`The index of the last "Brave" is ${anyString.lastIndexOf('Brave')}`);
 // logs 7
 ```
 

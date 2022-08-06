@@ -56,9 +56,9 @@ This method can be used in almost the same way as
 `this` and the different order of arguments.
 
 ```js
-let re = /[0-9]+/g;
-let str = '2016-01-02';
-let result = re[Symbol.matchAll](str);
+const re = /[0-9]+/g;
+const str = '2016-01-02';
+const result = re[Symbol.matchAll](str);
 
 console.log(Array.from(result, (x) => x[0]));
 // ["2016", "01", "02"]

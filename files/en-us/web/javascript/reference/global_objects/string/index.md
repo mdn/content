@@ -75,18 +75,18 @@ you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScri
 const a = 'a';
 const b = 'b';
 if (a < b) { // true
-  console.log(a + ' is less than ' + b)
+  console.log(`${a} is less than ${b}`)
 } else if (a > b) {
-  console.log(a + ' is greater than ' + b)
+  console.log(`${a} is greater than ${b}`)
 } else {
-  console.log(a + ' and ' + b + ' are equal.')
+  console.log(`${a} and ${b} are equal.`)
 }
 ```
 
 A similar result can be achieved using the {{jsxref("String.prototype.localeCompare()",
   "localeCompare()")}} method inherited by `String` instances.
 
-Note that `a == b` compares the strings in `a` and
+Note that `a === b` compares the strings in `a` and
 `b` for being equal in the usual case-sensitive way. If you wish
 to compare without regard to upper or lower case characters, use a function similar to
 this:

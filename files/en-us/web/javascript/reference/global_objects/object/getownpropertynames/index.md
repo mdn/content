@@ -62,7 +62,7 @@ console.log(Object.getOwnPropertyNames(obj).sort()); // .sort() is an array meth
 
 // Logging property names and values using Array.forEach
 Object.getOwnPropertyNames(obj).forEach((val, idx, array) => {
-  console.log(val + ' -> ' + obj[val]);
+  console.log(`${val} -> ${obj[val]}`);
 });
 // logs
 // 0 -> a

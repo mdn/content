@@ -320,13 +320,13 @@ const s = {
 };
 
 try {
-  eval('(' + JSON.stringify(s) + ')');
+  eval(`(${JSON.stringify(s)})`);
 } catch (e) {
   console.log(e); // "SyntaxError: unterminated string literal"
 }
 
 // No need for a catch
-eval('(' + jsFriendlyJSONStringify(s) + ')');
+eval(`(${jsFriendlyJSONStringify(s)})`);
 
 // console.log in Firefox unescapes the Unicode if
 //   logged to console, so we use alert

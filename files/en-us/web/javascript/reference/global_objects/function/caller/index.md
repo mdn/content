@@ -46,7 +46,7 @@ so if you tried to get the stack trace in the `stop()` function like this:
 let f = stop;
 let stack = 'Stack trace:';
 while (f) {
-  stack += '\n' + f.name;
+  stack += `\n${f.name}`;
   f = f.caller;
 }
 ```
@@ -66,7 +66,7 @@ function myFunc() {
   if (myFunc.caller === null) {
     return 'The function was called from the top!';
   } else {
-    return 'This function\'s caller was ' + myFunc.caller;
+    return `This function's caller was ${myFunc.caller}`;
   }
 }
 ```

@@ -539,7 +539,7 @@ const people = [
 ];
 
 for (const { name: n, family: { father: f } } of people) {
-  console.log('Name: ' + n + ', Father: ' + f);
+  console.log(`Name: ${n}, Father: ${f}`);
 }
 
 // "Name: Mike Smith, Father: Harry Smith"

@@ -150,7 +150,7 @@ the bracket notation can be used instead.
 For example, the following syntax is often seen in many scripts.
 
 ```js
-x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
+x = eval(`document.forms.form_name.elements.${strFormControl}.value`);
 ```
 
 `eval()` is slow and should be avoided whenever possible. Also,

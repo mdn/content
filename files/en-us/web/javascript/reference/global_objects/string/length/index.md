@@ -46,10 +46,10 @@ console.log(getCharacterLength('A\uD87E\uDC04Z')); // 3
 const x = 'Mozilla';
 const empty = '';
 
-console.log(x + ' is ' + x.length + ' code units long');
+console.log(`${x} is ${x.length} code units long`);
 /* "Mozilla is 7 code units long" */
 
-console.log('The empty string has a length of ' + empty.length);
+console.log(`The empty string has a length of ${empty.length}`);
 // expected output: "The empty string has a length of 0"
 ```
 

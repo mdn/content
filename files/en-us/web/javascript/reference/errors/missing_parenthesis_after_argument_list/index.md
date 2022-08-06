@@ -40,7 +40,7 @@ console.log('PI: ' Math.PI);
 // SyntaxError: missing ) after argument list
 ```
 
-You can correct the `log` call by adding the "`+`" operator:
+You can correct the `log` call by adding the `+` operator:
 
 ```js example-good
 console.log('PI: ' + Math.PI);

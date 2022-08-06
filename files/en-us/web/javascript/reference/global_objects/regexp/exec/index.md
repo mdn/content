@@ -66,8 +66,8 @@ Consider the following example:
 // Match "quick brown" followed by "jumps", ignoring characters in between
 // Remember "brown" and "jumps"
 // Ignore case
-let re = /quick\s(brown).+?(jumps)/igd;
-let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
+const re = /quick\s(brown).+?(jumps)/igd;
+const result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 ```
 
 The following table shows the state of `result` after running this script:
@@ -227,12 +227,12 @@ different string, it will start its search at its existing {{jsxref("RegExp.last
 For example, assume you have this script:
 
 ```js
-let myRe = /ab*/g;
-let str = 'abbcdefabh';
+const myRe = /ab*/g;
+const str = 'abbcdefabh';
 let myArray;
 while ((myArray = myRe.exec(str)) !== null) {
-  let msg = 'Found ' + myArray[0] + '. ';
-  msg += 'Next match starts at ' + myRe.lastIndex;
+  let msg = `Found ${myArray[0]}. `;
+  msg += `Next match starts at ${myRe.lastIndex}`;
   console.log(msg);
 }
 ```
@@ -264,7 +264,7 @@ You can also use `exec()` without creating a {{jsxref("RegExp")}} object
 explicitly:
 
 ```js
-let matches = /(hello \S+)/.exec('This is a hello world!');
+const matches = /(hello \S+)/.exec('This is a hello world!');
 console.log(matches[1]);
 ```
 

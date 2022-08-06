@@ -397,7 +397,7 @@ function JSClock() {
   const hour = time.getHours();
   const minute = time.getMinutes();
   const second = time.getSeconds();
-  let temp = '' + ((hour > 12) ? hour - 12 : hour);
+  let temp = String(hour % 12);
   if (hour === 0)
     temp = '12';
   temp += ((minute < 10) ? ':0' : ':') + minute;
