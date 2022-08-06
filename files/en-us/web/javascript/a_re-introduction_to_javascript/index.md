@@ -447,7 +447,7 @@ Object literal syntax can be used to initialize an object in its entirety:
 ```js
 const obj = {
   name: 'Carrot',
-  for: 'Max', // Some words like 'for', 'let' and 'return' are not a reserved word, feel free to use them!
+  for: 'Max', // Some words like 'for', 'let' and 'return' are not reserved words, feel free to use them!
   details: {
     color: 'orange',
     size: 12
