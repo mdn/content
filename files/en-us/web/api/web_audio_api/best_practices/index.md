@@ -53,8 +53,8 @@ When working with an {{domxref("AudioContext")}}, if you create the audio contex
 ```js
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
-    const audioCtx = new AudioContext();
-    // Do something with the audio context
+  const audioCtx = new AudioContext();
+  // Do something with the audio context
 }, false);
 ```
 
@@ -65,10 +65,10 @@ const audioCtx = new AudioContext();
 const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
-      // check if context is in suspended state (autoplay policy)
-    if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-    }
+  // check if context is in suspended state (autoplay policy)
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
 }, false);
 ```
 
