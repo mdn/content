@@ -143,13 +143,10 @@ function displayWarning(msg) {
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(
-    () => {
-      warningBox.parentNode.removeChild(warningBox);
-      warningTimeout = -1;
-    }, 
-    2000
-  );
+  warningTimeout = setTimeout(() => {
+    warningBox.parentNode.removeChild(warningBox);
+    warningTimeout = -1;
+  }, 2000);
 }
 ```
 
