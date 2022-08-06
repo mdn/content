@@ -140,7 +140,7 @@ Then come the event handlers. First, we prevent the {{domxref("HTMLElement/drago
 
 ```js
 dropzone.addEventListener("dragover", (event) => {
-    event.preventDefault();
+  event.preventDefault();
 }, false);
 ```
 
