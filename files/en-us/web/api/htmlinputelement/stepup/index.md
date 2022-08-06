@@ -158,7 +158,7 @@ Click the button in this example to increment the {{HTMLElement("input/number",
 
 ```js
 /* make the button call the function */
-let button = document.getElementById('theButton')
+const button = document.getElementById('theButton');
 button.addEventListener('click', () => {
   steponup()
 })
