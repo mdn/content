@@ -34,7 +34,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 ## Constructor
 
 - {{jsxref("Object/Object", "Object()")}}
-  - : Creates a new `Object` object. It is a wrapper for the given value.
+  - : Turns the input into an object.
 
 ## Static methods
 
