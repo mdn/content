@@ -195,7 +195,7 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 ```js
 "use strict";
 
-const ajaxRequest = new (() => {
+const ajaxRequest = new (function () {
     let req;
     let isLoading = false;
     let updateURL = false;
