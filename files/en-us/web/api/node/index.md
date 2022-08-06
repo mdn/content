@@ -254,7 +254,7 @@ function grep(parentNode, pattern) {
     }
 
     if (typeof pattern === "string") {
-      if (node.textContent.indexOf(pattern) !== -1) {
+      if (node.textContent.includes(pattern)) {
         matches.push(node);
       }
     }
