@@ -46,12 +46,12 @@ Let's take a simple example. Suppose a web page loads a script:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
   </head>
   <body>
-    <script type="text/javascript" src="main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
 ```

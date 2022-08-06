@@ -428,11 +428,12 @@ Here are the full implementation:
 
 ```html
 <!doctype html>
-  <html>
+  <html lang="en-US">
     <head>
-      <meta charset="UTF-8"  />
+      <meta charset="utf-8"> 
+      <meta name="viewport" content="width=device-width">
       <title>MDN Example - Queryable worker</title>
-    <script type="text/javascript">
+    <script>
     /*
       QueryableWorker instances methods:
         * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc): calls a Worker's queryable function
@@ -584,7 +585,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
   const myVar = 'Hello World!';
   // Rest of your worker code goes here.
 </script>
-<script type="text/javascript">
+<script>
   // This script WILL be parsed by JS engines because its MIME type is text/javascript.
   function pageLog(sMsg) {
     // Use a fragment: browser will only render/reflow once.
@@ -601,7 +602,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
   };
   // Rest of your worker code goes here.
 </script>
-<script type="text/javascript">
+<script>
   // This script WILL be parsed by JS engines because its MIME type is text/javascript.
 
   // In the past blob builder existed, but now we use Blob
