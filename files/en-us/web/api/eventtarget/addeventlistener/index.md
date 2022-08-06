@@ -832,13 +832,7 @@ anonymous functions the loop might create.) In the second case, it's possible to
 because `processEvent` is the function reference.
 
 Actually, regarding memory consumption, the lack of keeping a function reference is not
-the real issue; rather it is the lack of keeping a *static* function reference. In both
-problem-cases below, a function reference is kept, but it is redefined on each
-iteration. In the third case, the reference to the anonymous function
-is being reassigned with each iteration. In the fourth case, the entire function
-definition is unchanging, but it is still being repeatedly defined as if new. So neither is static. Therefore, though appearing to
-be multiple identical event listeners, in both cases each iteration will instead
-create a new listener with its own unique reference to the handler function.
+the real issue; rather it is the lack of keeping a *static* function reference.
 
 ### Improving scrolling performance with passive listeners
 
