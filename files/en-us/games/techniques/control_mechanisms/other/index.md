@@ -61,7 +61,7 @@ window.addEventListener("keydown", (event) => {
         }
         // …
     }
-}, this);
+}, true);
 ```
 
 You can see it in action by watching [this video](https://www.youtube.com/watch?v=Bh11sP0bcTY).
