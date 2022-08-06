@@ -240,7 +240,7 @@ background-image: linear-gradient(to right, green, yellow);
 
 While none of these properties requires a prefix, you may encounter this old CSS in a codebase. The first line shows a {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in older versions of Safari and Chrome until the prefix-free feature was supported.
 
-The last three lines show three different versions of the [`linear-gradient()`](/en-US/docs/Web/CSS/linear-gradient) function, which is originally how linear gradient were written:
+The last three lines show three different versions of the [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient) function, which is originally how linear gradient were written:
 
 The first one has a `-moz-` prefix, the second a `-webkit-` prefix, and 
 the third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
