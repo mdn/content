@@ -54,6 +54,7 @@ When working with an {{domxref("AudioContext")}}, if you create the audio contex
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
     const audioCtx = new AudioContext();
+    // Do something with the audio context
 }, false);
 ```
 
