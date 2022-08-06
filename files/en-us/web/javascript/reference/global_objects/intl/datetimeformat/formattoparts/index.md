@@ -240,13 +240,13 @@ const date = Date.UTC(2012, 11, 17, 3);
 df.formatToParts(date)
 
 // return value
-[
-  { type: 'month', value: '11' },
-  { type: 'literal', value: '/' },
-  { type: 'day', value: '4' },
-  { type: 'literal', value: '/' },
-  { type: 'relatedYear', value: '2012' }
-]
+// [
+//   { type: 'month', value: '11' },
+//   { type: 'literal', value: '/' },
+//   { type: 'day', value: '4' },
+//   { type: 'literal', value: '/' },
+//   { type: 'relatedYear', value: '2012' }
+// ]
 ```
 
 ## Specifications

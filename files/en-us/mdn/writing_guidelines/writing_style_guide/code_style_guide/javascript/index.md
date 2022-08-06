@@ -323,7 +323,7 @@ Use `extends` for inheritance:
 
 ```js example-good
 class Teacher extends Person {
-  ...
+  // ...
 }
 ```
 

@@ -37,7 +37,7 @@ In this example, the `backgroundfetchsuccess` event is listened for, indicating 
 addEventListener('backgroundfetchsuccess', (event) => {
   const bgFetch = event.registration;
 
-  event.waitUntil(async () => {
+  event.waitUntil((async () => {
     // Create/open a cache.
     const cache = await caches.open('downloads');
     // Get all the records.
@@ -53,7 +53,7 @@ addEventListener('backgroundfetchsuccess', (event) => {
 
     // Update the progress notification.
     event.updateUI({ title: 'Episode 5 ready to listen!' });
-  }());
+  })());
 });
 ```
 
