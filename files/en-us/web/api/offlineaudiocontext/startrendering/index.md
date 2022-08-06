@@ -89,10 +89,11 @@ function getData() {
       //source.loop = true;
       offlineCtx.startRendering().then((renderedBuffer) => {
         console.log('Rendering completed successfully');
-        const song = audioCtx.createBufferSource();
+        const offlineAudioCtx = new AudioContext()
+        const song = offlineAudioCtx.createBufferSource();
         song.buffer = renderedBuffer;
 
-        song.connect(audioCtx.destination);
+        song.connect(offlineAudioCtx.destination);
 
         play.onclick = () => {
           song.start();
