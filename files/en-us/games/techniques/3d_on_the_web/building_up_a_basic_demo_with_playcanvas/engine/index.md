@@ -226,7 +226,7 @@ This works, but it is a bit boring. In a game something is usually happening —
 We already used `translate` or `rotate` to adjust the position of the shapes; we could also change their positions directly with `setPosition`, or scale them. To show actual animation, we need to make changes to these values inside the rendering loop, so they are updated on every frame. There's a special `update` event that we can use for that — add the following code just below the previous additions:
 
 ```js
-const timer = 0;
+let timer = 0;
 app.on("update", (deltaTime) => {
     timer += deltaTime;
     // code executed on every frame
