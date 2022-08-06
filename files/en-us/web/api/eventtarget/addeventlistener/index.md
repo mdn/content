@@ -606,7 +606,7 @@ a reference to the listener around so you can remove it later.
 This is an example with and without `bind()`:
 
 ```js
-const Something = (element) => {
+const Something = function (element) {
   // |this| is a newly created object
   this.name = 'Something Good';
   this.onclick1 = (event) => {
