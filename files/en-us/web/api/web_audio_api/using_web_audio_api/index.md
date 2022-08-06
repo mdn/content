@@ -112,25 +112,23 @@ A good way to visualize these nodes is by drawing an audio graph so you can visu
 Now we can add the play and pause functionality.
 
 ```js
-// select our play button
+// Select our play button
 const playButton = document.querySelector('button');
 
 playButton.addEventListener('click', () => {
+  // Check if context is in suspended state (autoplay policy)
+  if (audioContext.state === 'suspended') {
+    audioContext.resume();
+  }
 
-    // check if context is in suspended state (autoplay policy)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
-    }
-
-    // play or pause track depending on state
-    if (this.dataset.playing === 'false') {
-        audioElement.play();
-        this.dataset.playing = 'true';
-    } else if (this.dataset.playing === 'true') {
-        audioElement.pause();
-        this.dataset.playing = 'false';
-    }
-
+  // Play or pause track depending on state
+  if (playButton.dataset.playing === 'false') {
+    audioElement.play();
+    playButton.dataset.playing = 'true';
+  } else if (playButton.dataset.playing === 'true') {
+    audioElement.pause();
+    playButton.dataset.playing = 'false';
+  }
 }, false);
 ```
 
@@ -138,7 +136,7 @@ We also need to take into account what to do when the track finishes playing. Ou
 
 ```js
 audioElement.addEventListener('ended', () => {
-    playButton.dataset.playing = 'false';
+  playButton.dataset.playing = 'false';
 }, false);
 ```
 
@@ -178,7 +176,7 @@ So let's grab this input's value and update the gain value when the input node h
 const volumeControl = document.querySelector('#volume');
 
 volumeControl.addEventListener('input', () => {
-    gainNode.gain.value = this.value;
+  gainNode.gain.value = volumeControl.value;
 }, false);
 ```
 
@@ -221,7 +219,7 @@ We use the values from that input to adjust our panner values in the same way as
 const pannerControl = document.querySelector('#panner');
 
 pannerControl.addEventListener('input', () => {
-    panner.pan.value = this.value;
+  panner.pan.value = pannerControl.value;
 }, false);
 ```
 
