@@ -295,7 +295,7 @@ Most of these APIs are [deprecated and were removed shortly after Chrome 36](htt
 
 ### WebKit only
 
-- `CanvasRenderingContext2D.webkitBackingStorePixelRatio` {{non-standard_inline}} {{deprecated_inline}} 
+- `CanvasRenderingContext2D.webkitBackingStorePixelRatio` {{non-standard_inline}} {{deprecated_inline}}
   - : The backing store size in relation to the canvas element. See [High DPI Canvas](https://www.html5rocks.com/en/tutorials/canvas/hidpi/).
 - `CanvasRenderingContext2D.webkitGetImageDataHD` {{non-standard_inline}} {{deprecated_inline}}
   - : Intended for HD backing stores, but removed from canvas specifications.

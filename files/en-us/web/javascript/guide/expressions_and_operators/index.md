@@ -119,7 +119,7 @@ console.log(val.x); // Prints undefined.
 console.log(val); // Prints 0.
 ```
 
-In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#converting_mistakes_into_errors), the code above throws, because one cannot assign properties to primitives. 
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#converting_mistakes_into_errors), the code above throws, because one cannot assign properties to primitives.
 
 It is an error to assign values to unmodifiable properties or to properties of an expression without properties (`null` or `undefined`).
 
