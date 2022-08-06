@@ -66,7 +66,7 @@ new SharedWorker(aURL, options)
 - `NetworkError`  {{domxref("DOMException")}}
   - : Thrown if the MIME type of the worker script is incorrect.
     It should _always_ be `text/javascript`
-    (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types) may be accepted).
+    (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) may be accepted).
 - `SyntaxError`  {{domxref("DOMException")}}
   - : Thrown if _aURL_ cannot be parsed.
 
