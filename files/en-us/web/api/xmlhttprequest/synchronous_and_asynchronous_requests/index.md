@@ -176,7 +176,7 @@ One of the few cases in which a synchronous request does not usually block execu
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>MDN Example</title>
-<script type="text/javascript">
+<script>
   const worker = new Worker("myTask.js");
   worker.onmessage = function(event) {
     alert("Worker said: " + event.data);

@@ -185,8 +185,8 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 **include/header.php**:
 
 ```php
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript" src="js/ajax_nav.js"></script>
+<meta charset="UTF-8" />
+<script src="js/ajax_nav.js"></script>
 <link rel="stylesheet" href="css/style.css" />
 ```
 

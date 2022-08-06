@@ -32,7 +32,7 @@ An integer value in pixels for the y-coordinate of the mouse
 <head>
 <title>pageX\pageY & layerX\layerY example</title>
 
-<script type="text/javascript">
+<script>
 
 function showCoords(evt){
   const form = document.forms.form_coords;
