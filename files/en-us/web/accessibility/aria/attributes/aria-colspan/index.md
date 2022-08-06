@@ -167,4 +167,4 @@ Inherits into roles:
 - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) property
 - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) role
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)role
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
