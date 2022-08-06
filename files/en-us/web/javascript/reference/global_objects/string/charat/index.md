@@ -146,7 +146,8 @@ surrogate pair).
 
 ```js
 const str = 'A\uD87E\uDC04Z';  // We could also use a non-BMP character directly
-for (let i = 0, chr; i < str.length; i++) {
+for (let i = 0; i < str.length; i++) {
+  let chr;
   [chr, i] = getWholeCharAndI(str, i);
 
   // Adapt this line at the top of each loop, passing in the whole string and
