@@ -803,7 +803,7 @@ function AJAXSubmit (oFormElement) {
 ```
 
 > **Note:** As we said, **{{domxref("FormData")}}
-> objects are not [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)objects**. If you want to stringify a submitted data, use [the previous _pure_-AJAX example](#a_little_vanilla_framework). Note
+> objects are not [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) objects**. If you want to stringify a submitted data, use [the previous _pure_-AJAX example](#a_little_vanilla_framework). Note
 > also that, although in this example there are some `file` {{ HTMLElement("input") }} fields, **when you submit a form through the
 > `FormData` API you do not need to use the {{domxref("FileReader")}} API
 > also**: files are automatically loaded and uploaded.
