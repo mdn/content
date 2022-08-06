@@ -128,8 +128,8 @@ Consider this HTML:
 The code that handles the `click` event can look like this:
 
 ```js
-const fileSelect = document.getElementById("fileSelect"),
-  fileElem = document.getElementById("fileElem");
+const fileSelect = document.getElementById("fileSelect");
+const fileElem = document.getElementById("fileElem");
 
 fileSelect.addEventListener("click", (e) => {
   if (fileElem) {
