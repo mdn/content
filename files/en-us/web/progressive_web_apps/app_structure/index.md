@@ -148,9 +148,9 @@ document.getElementById('content').innerHTML = content;
 Next, it registers a service worker:
 
 ```js
-if('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
-};
+}
 ```
 
 The next code block requests permission for notifications when a button is clicked:
