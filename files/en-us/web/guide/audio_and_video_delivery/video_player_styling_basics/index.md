@@ -344,7 +344,7 @@ A small change also needs to be made to the click handler for the {{ htmlelement
 
 ```js
 progress.addEventListener('click', (e) => {
-  const pos = (e.pageX  - this.offsetLeft - this.offsetParent.offsetLeft) / this.offsetWidth;
+  const pos = (e.pageX  - progress.offsetLeft - progress.offsetParent.offsetLeft) / progress.offsetWidth;
   video.currentTime = pos * video.duration;
 });
 ```
