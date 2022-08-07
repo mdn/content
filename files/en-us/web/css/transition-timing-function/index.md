@@ -158,7 +158,7 @@ function updateTransition() {
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+var intervalID = setInterval(updateTransition, 10000);
 ```
 
 ```css
@@ -228,7 +228,7 @@ function updateTransition() {
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+var intervalID = setInterval(updateTransition, 10000);
 ```
 
 ```css

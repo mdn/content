@@ -208,7 +208,7 @@ let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition"
 // modified set of response headers.
 function setCookieAsync(e) {
   let asyncSetCookie = new Promise((resolve, reject) => {
-    window.setTimeout(() => {
+    setTimeout(() => {
       let setMyCookie = {
         name: "Set-Cookie",
         value: "my-cookie1=my-cookie-value1"

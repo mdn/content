@@ -46,7 +46,7 @@ session.get(inline("""
 
     <script>
     // Inserts <p> below <h1> after 2.5 seconds:
-    window.setTimeout(() => {
+    setTimeout(() => {
       let delayedElement = document.createElement("p");
       let h1 = document.querySelector("h1");
       document.body.insertAfter(delayedElement, h1);

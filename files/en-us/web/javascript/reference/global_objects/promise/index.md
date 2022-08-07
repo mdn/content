@@ -173,7 +173,7 @@ To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-U
   const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
   // bound is a built-in function — there is no user
   // code on the stack, so which realm do we use?
-  window.setTimeout(bound);
+  setTimeout(bound);
   // this still works, because we use the youngest
   // realm (the incumbent) on the stack
 </script>

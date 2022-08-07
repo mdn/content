@@ -95,7 +95,7 @@ statistics for an {{domxref("RTCPeerConnection")}} every second, generating an
 HTML-formatted report and inserting it into a specific element in the DOM.
 
 ```js
-window.setInterval(function() {
+setInterval(function() {
   myPeerConnection.getStats(null).then((stats) => {
     let statsOutput = "";
 

@@ -40,8 +40,8 @@ been abandoned or neglected.
 ```js
 const request = new PaymentRequest(supportedInstruments, details, options);
 
-const paymentTimeout = window.setTimeout(() => {
-  window.clearTimeout(paymentTimeout);
+const paymentTimeout = setTimeout(() => {
+  clearTimeout(paymentTimeout);
   request.abort().then(() => {
     print('Payment timed out after 20 minutes.');
   }).catch(() => {

@@ -83,7 +83,7 @@ eval("console.log('some output');");
 ```
 
 ```js
-window.setTimeout("alert('Hello World!');", 500);
+setTimeout("alert('Hello World!');", 500);
 ```
 
 ```js

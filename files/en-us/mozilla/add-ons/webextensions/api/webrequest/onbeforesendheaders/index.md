@@ -230,7 +230,7 @@ Rewrite the User-Agent header to "ua".
 */
 function rewriteUserAgentHeaderAsync(e) {
   let asyncRewrite = new Promise((resolve, reject) => {
-    window.setTimeout(() => {
+    setTimeout(() => {
       for (let header of e.requestHeaders) {
         if (header.name.toLowerCase() === "user-agent") {
           header.value = ua;

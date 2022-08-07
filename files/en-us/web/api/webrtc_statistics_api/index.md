@@ -29,7 +29,7 @@ That function, in turn, uses {{domxref("RTCPeerConnection.getStats", "getStats()
 try {
   myPeerConnection = new RTCPeerConnection(pcOptions);
 
-  statsInterval = window.setInterval(getConnectionStats, 1000);
+  statsInterval = setInterval(getConnectionStats, 1000);
   /* add event handlers, etc */
 } catch(err) {
   console.error(`Error creating RTCPeerConnection: ${err}`);

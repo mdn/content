@@ -203,11 +203,11 @@ window.addEventListener('load', function () {
     if (window.Notification && Notification.permission === "granted") {
       let i = 0;
       // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-      const interval = window.setInterval(function () {
+      const interval = setInterval(function () {
         // Thanks to the tag, we should only see the "Hi! 9" notification
         const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
         if (i++ === 9) {
-          window.clearInterval(interval);
+          clearInterval(interval);
         }
       }, 200);
     }
@@ -221,11 +221,11 @@ window.addEventListener('load', function () {
         if (status === "granted") {
           let i = 0;
           // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-          const interval = window.setInterval(function () {
+          const interval = setInterval(function () {
             // Thanks to the tag, we should only see the "Hi! 9" notification
             const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
             if (i++ === 9) {
-              window.clearInterval(interval);
+              clearInterval(interval);
             }
           }, 200);
         }

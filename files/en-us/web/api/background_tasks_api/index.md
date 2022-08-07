@@ -199,7 +199,7 @@ Finally, we set up a couple of variables for other items:
 - `statusRefreshScheduled` is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame
 
 ```js hidden
-window.requestIdleCallback = window.requestIdleCallback || ((handler) => {
+requestIdleCallback = requestIdleCallback || ((handler) => {
   let startTime = Date.now();
 
   return setTimeout(() => {
@@ -212,7 +212,7 @@ window.requestIdleCallback = window.requestIdleCallback || ((handler) => {
   }, 1);
 });
 
-window.cancelIdleCallback = window.cancelIdleCallback || ((id) => {
+cancelIdleCallback = cancelIdleCallback || ((id) => {
   clearTimeout(id);
 });
 ```

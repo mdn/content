@@ -131,7 +131,7 @@ The `'unsafe-eval'` source expression controls several script execution methods 
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Function", "Function()")}}
-- When passing a string literal like to methods like: `window.setTimeout("alert(\"Hello World!\");", 500);`
+- When passing a string literal like to methods like: `setTimeout("alert(\"Hello World!\");", 500);`
 
   - {{domxref("setTimeout()")}}
   - {{domxref("setInterval()")}}

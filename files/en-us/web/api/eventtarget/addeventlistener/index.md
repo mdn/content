@@ -775,7 +775,7 @@ myButton.addEventListener('click', () => {
   someObject.aProperty = 'Data Again';  // Change the value
 });
 
-window.setInterval(() => {
+setInterval(() => {
   if (someObject.aProperty === 'Data Again') {
     console.log('Data Again: True');
     someObject.aProperty = 'Data';  // Reset value to wait for next event execution
