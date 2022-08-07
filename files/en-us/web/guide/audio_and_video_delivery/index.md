@@ -428,9 +428,9 @@ Another way to show the fallback content of a video, when none of the sources co
 ```
 
 ```js
-let v = document.querySelector('video'),
-    sources = v.querySelectorAll('source'),
-    lastsource = sources[sources.length-1];
+const v = document.querySelector('video');
+const sources = v.querySelectorAll('source');
+const lastsource = sources[sources.length-1];
 lastsource.addEventListener('error', (ev) => {
   const d = document.createElement('div');
   d.innerHTML = v.innerHTML;
