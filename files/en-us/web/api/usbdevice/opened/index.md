@@ -38,7 +38,7 @@ async function setDeviceColor(usbDevice, r, g, b) {
   if (device.opened) {
     // This hypothetical USB device requires that the data passed to
     // it be in a Uint8Array.
-    let payload = new Uint8Array([r, g, b]);
+    const payload = new Uint8Array([r, g, b]);
 
     await usbDevice.controlTransferOut({
       requestType: 'vendor',
