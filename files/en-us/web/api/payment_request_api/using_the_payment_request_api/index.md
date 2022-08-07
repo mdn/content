@@ -86,28 +86,25 @@ There are some other useful payment request methods worth knowing about.
 
 ```js
 // Dummy payment request to check whether payment can be made
-new PaymentRequest(buildSupportedPaymentMethodData(),
-      { total:
-        { label: 'Stub',
-          amount: { currency: 'USD', value: '0.01' }
-         }
-      })
-      .canMakePayment()
-      .then((result) => {
-        if (result) {
-          // Real payment request
-          const request = new PaymentRequest(buildSupportedPaymentMethodData(),
-                                             checkoutObject);
-
-          request.show().then((paymentResponse) => {
-            // Here we would process the payment.
-            paymentResponse.complete('success')
-              .then(() => {
-                // Finish handling payment
-            });
-          })
-        }
-      })
+new PaymentRequest(buildSupportedPaymentMethodData(), {
+  total: { label: "Stub", amount: { currency: "USD", value: "0.01" } },
+})
+  .canMakePayment()
+  .then((result) => {
+    if (result) {
+      // Real payment request
+      const request = new PaymentRequest(
+        buildSupportedPaymentMethodData(),
+        checkoutObject,
+      );
+      request.show().then((paymentResponse) => {
+        // Here we would process the payment.
+        paymentResponse.complete("success").then(() => {
+          // Finish handling payment
+        });
+      });
+    }
+  });
 ```
 
 {{domxref("PaymentRequest.abort()")}} can be used to abort the payment request if required.
