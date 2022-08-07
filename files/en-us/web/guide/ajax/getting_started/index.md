@@ -237,8 +237,8 @@ We'll also add a line to our event handler to get the user's data from the text 
 
 ```js
 document.getElementById("ajaxButton").onclick = () => {
-    var userName = document.getElementById("ajaxTextbox").value;
-    makeRequest('test.php',userName);
+  const userName = document.getElementById("ajaxTextbox").value;
+  makeRequest('test.php',userName);
 };
 ```
 
@@ -252,13 +252,13 @@ function makeRequest(url, userName) {
   httpRequest.onreadystatechange = alertContents;
   httpRequest.open('POST', url);
   httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  httpRequest.send('userName=' + encodeURIComponent(userName));
+  httpRequest.send(`userName=${encodeURIComponent(userName)}`);
 }
 ```
 
 The function `alertContents()` can be written the same way it was in Step 3 to alert our computed string, if that's all the server returns. However, let's say the server is going to return both the computed string and the original user data. So if our user typed "Jane" in the text box, the server's response would look like this:
 
-`{"userData":"Jane","computedString":"Hi, Jane!"}`
+`{ "userData": "Jane", "computedString": "Hi, Jane!" }`
 
 To use this data within `alertContents()`, we can't just alert the `responseText`, we have to parse it and alert `computedString`, the property we want:
 
@@ -266,7 +266,7 @@ To use this data within `alertContents()`, we can't just alert the `responseText
 function alertContents() {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
-      var response = JSON.parse(httpRequest.responseText);
+      const response = JSON.parse(httpRequest.responseText);
       alert(response.computedString);
     } else {
       alert('There was a problem with the request.');
@@ -319,33 +319,33 @@ This is repeated every 5 seconds, using a `setInterval()` call. The idea would b
 
     <script>
 
-    const fullData = document.getElementById('writeData');
-    const lastData = document.getElementById('lastStamp');
+      const fullData = document.getElementById('writeData');
+      const lastData = document.getElementById('lastStamp');
 
-    function fetchData() {
-      console.log('Fetching updated data.');
-      let xhr = new XMLHttpRequest();
-      xhr.open("GET", "time-log.txt", true);
-      xhr.onload = () => {
-        updateDisplay(xhr.response);
-      }
-      xhr.send();
-    }
-
-    function updateDisplay(text) {
-      fullData.textContent = text;
-
-      let timeArray = text.split('\n');
-
-      // included because some file systems always include a blank line at the end of text files.
-      if(timeArray[timeArray.length-1] === '') {
-        timeArray.pop();
+      function fetchData() {
+        console.log('Fetching updated data.');
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "time-log.txt", true);
+        xhr.onload = () => {
+          updateDisplay(xhr.response);
+        }
+        xhr.send();
       }
 
-      lastData.textContent = timeArray[timeArray.length-1];
-    }
+      function updateDisplay(text) {
+        fullData.textContent = text;
 
-    setInterval(fetchData, 5000);
+        const timeArray = text.split('\n');
+
+        // included because some file systems always include a blank line at the end of text files.
+        if (timeArray[timeArray.length-1] === '') {
+          timeArray.pop();
+        }
+
+        lastData.textContent = timeArray[timeArray.length-1];
+      }
+
+      setInterval(fetchData, 5000);
     </script>
   </body>
 </html>
