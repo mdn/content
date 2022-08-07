@@ -28,7 +28,7 @@ In this example the value of [`elementtiming`](/en-US/docs/Web/HTML/Attributes/e
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  const entries = list.getEntries().forEach((entry) => {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.naturalWidth);
     }
