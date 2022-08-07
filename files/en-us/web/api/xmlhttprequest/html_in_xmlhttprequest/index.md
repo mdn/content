@@ -86,7 +86,7 @@ function detectHtmlInXhr(callback) {
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4 && !done) {
       done = true;
-      callback(!!(this.responseXML && this.responseXML.title && this.responseXML.title === "&&<"));
+      callback(!!(xhr.responseXML && xhr.responseXML.title && xhr.responseXML.title === "&&<"));
     }
   }
   xhr.onabort = xhr.onerror = () => {
