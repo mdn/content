@@ -118,8 +118,10 @@ In the following snippet, a merchant page performs this check, and if it returns
 ```js
 const checkoutButton = document.getElementById('checkout-button');
 if (window.PaymentRequest) {
-  let request = new PaymentRequest(buildSupportedPaymentMethodNames(),
-                                   buildShoppingCartDetails());
+  const request = new PaymentRequest(
+    buildSupportedPaymentMethodNames(),
+    buildShoppingCartDetails()
+  );
   checkoutButton.addEventListener('click', () => {
     request.show().then((paymentResponse) => {
       // Handle successful payment
