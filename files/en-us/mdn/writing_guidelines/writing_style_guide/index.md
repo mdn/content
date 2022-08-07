@@ -51,8 +51,8 @@ In a guide or tutorial, the introductory paragraph(s) should inform the reader a
 
 - **Example of long introduction**: This example has an updated introduction, but now it's far too long.
   Too much detail is included, and the text delves too deeply into describing other methods and properties.
-  > Instead, the introduction should focus on the `strokeText()` method and should refer to the appropriate guides where the other details are described.
-  >
+  Instead, the introduction should focus on the `strokeText()` method and should refer to the appropriate guides where the other details are described.
+
   > When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`** strokes the characters in the specified string beginning at the coordinates specified, using the current pen color.
   > In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
   >
@@ -237,7 +237,7 @@ The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>
 Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code's syntax requires lower-casing).
 Some examples include:
 
-- Boolean (named for English mathematician and logician [George Boole](https://en.m.wikipedia.org/wiki/George_Boole))
+- Boolean (named for English mathematician and logician [George Boole](https://en.wikipedia.org/wiki/George_Boole))
 - JavaScript (a trademark of Oracle Corporation, it should always be written as trademarked)
 - Python, TypeScript, Django, and other programming languages and framework names
 
@@ -557,7 +557,7 @@ Deciding what you want to document and how you will structure that content is on
 
 Keep these guidelines in mind when writing titles for a page and sections or subsections:
 
-- **Go higher to lower**: As stated in the [Heading levels](<!-- link TBD-->) section, go from higher `##` to lower `####`, without skipping levels. Use higher level headings for broader introductory titles, and use more specific titles as you progress to lower-level headings.
+- **Go higher to lower**: As stated in the [Heading levels](#heading_levels) section, go from higher `##` to lower `####`, without skipping levels. Use higher level headings for broader introductory titles, and use more specific titles as you progress to lower-level headings.
 - **Group logically**: Make sure all related subsections are grouped together logically under a higher level heading. Naming titles of various sections can help you in this exercise.
 - **Keep titles short**: Shorter titles are easier to scan in text and in table of contents.
 - **Keep titles specific**: Use the title to convey the specific information that will be covered in the section. For example, for a section introducing HTML elements, use the title "HTML elements" instead of "Introduction" or "Overview".
