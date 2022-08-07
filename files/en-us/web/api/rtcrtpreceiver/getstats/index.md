@@ -50,8 +50,7 @@ packets lost.
 
 ```js
 receiver.getStats().then((stats) => {
-  document.getElementById("lostpackets").innerText =
-          stats.packetsLost;
+  document.getElementById("lostpackets").innerText = stats.packetsLost;
 });
 ```
 
