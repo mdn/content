@@ -39,16 +39,19 @@ switch (document.readyState) {
   case "loading":
     // The document is still loading.
     break;
-  case "interactive":
+  case "interactive": {
     // The document has finished loading. We can now access the DOM elements.
     // But sub-resources such as scripts, images, stylesheets and frames are still loading.
     const span = document.createElement("span");
     span.textContent = "A <span> element.";
     document.body.appendChild(span);
     break;
+  }
   case "complete":
     // The page is fully loaded.
-    console.log(`The first CSS rule is: ${document.styleSheets[0].cssRules[0].cssText}`);
+    console.log(
+      `The first CSS rule is: ${document.styleSheets[0].cssRules[0].cssText}`
+    );
     break;
 }
 ```
