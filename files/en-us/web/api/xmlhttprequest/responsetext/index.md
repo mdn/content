@@ -52,12 +52,12 @@ xhr.open('GET', '/server', true);
 xhr.responseType = 'text';
 
 xhr.onload = () => {
-    if (xhr.readyState === xhr.DONE) {
-        if (xhr.status === 200) {
-            console.log(xhr.response);
-            console.log(xhr.responseText);
-        }
+  if (xhr.readyState === xhr.DONE) {
+    if (xhr.status === 200) {
+      console.log(xhr.response);
+      console.log(xhr.responseText);
     }
+  }
 };
 
 xhr.send(null);
