@@ -83,7 +83,7 @@ There are three main differences between rest parameters and the
 
 Rest parameters were introduced to reduce the boilerplate code that was commonly used for converting a set of arguments to an array.
 
-Before rest parameters, "arguments" could be converted to a normal array using:
+Before rest parameters, `arguments` need to be converted to a normal array before calling array methods on them:
 
 ```js
 function fn(a, b) {
