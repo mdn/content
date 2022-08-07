@@ -165,10 +165,8 @@ document.querySelector('button').addEventListener('click', (event) => {
   document.querySelectorAll('p').forEach((paragraph) => {
     paragraph.classList.toggle('pilcrow');
   });
-  var newButtonText = event.target.dataset.toggleText;
-  var oldText = event.target.innerText;
-  event.target.innerText = newButtonText;
-  event.target.dataset.toggleText = oldText;
+
+  [event.target.innerText, event.target.dataset.toggleText = [event.target.dataset.toggleText, event.target.innerText];
 });
 ```
 
