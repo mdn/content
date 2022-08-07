@@ -96,7 +96,7 @@ xhr.open("POST", '/server', true);
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 xhr.onreadystatechange = () => { // Call a function when the state changes.
-  if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
     // Request finished. Do processing here.
   }
 }
