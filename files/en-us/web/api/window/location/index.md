@@ -99,28 +99,33 @@ taken by the server, the current document is reloaded with the modified search s
 ```html
 <!doctype html>
 <html>
-<head>
-<meta charset="UTF-8"/>
-<title>MDN Example</title>
-<script>
-function showNode (oNode) {
-  document.documentElement.scrollTop = oNode.offsetTop;
-  document.documentElement.scrollLeft = oNode.offsetLeft;
-}
+  <head>
+  <meta charset="UTF-8"/>
+  <title>MDN Example</title>
+  <script>
+    function showNode (node) {
+      document.documentElement.scrollTop = node.offsetTop;
+      document.documentElement.scrollLeft = node.offsetLeft;
+    }
 
-function showBookmark (sBookmark, bUseHash) {
-  if (arguments.length === 1 || bUseHash) { location.hash = sBookmark; return; }
-  var oBookmark = document.querySelector(sBookmark);
-  if (oBookmark) { showNode(oBookmark); }
-}
-</script>
-<style>
-span.intLink {
-    cursor: pointer;
-    color: #0000ff;
-    text-decoration: underline;
-}
-</style>
+    function showBookmark (bookmark, useHash) {
+      if (arguments.length === 1 || useHash) {
+        location.hash = bookmark;
+        return; 
+      }
+      constr bookmarkElement = document.querySelector(bookmark);
+      if (bookmarkElement) { 
+        showNode(bookmarkElement);
+      }
+    }
+  </script>
+  <style>
+    span.intLink {
+        cursor: pointer;
+        color: #0000ff;
+        text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
@@ -163,40 +168,56 @@ const showBookmark = (() => {
   let _itFrame;
   let _scrollId = -1;
   let _bookMark;
-   /*
-   * nDuration: the duration in milliseconds of each frame
-   * nFrames: number of frames for each scroll
-   */
-   let nDuration = 200;
-   let nFrames = 10;
+  
+  // duration: the duration in milliseconds of each frame
+  // frames: number of frames for each scroll
+  let duration = 200;
+  let frames = 10;
 
   function _next() {
-  if (_itFrame > nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
-  _isBot = true;
-  document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
-  document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
-  if (_useHash && _itFrame === nFrames) { location.hash = _bookMark; }
-  _itFrame++;
+    if (_itFrame > nFrames) { 
+      clearInterval(_scrollId); 
+      _scrollId = -1; 
+      return;
+    }
+    _isBot = true;
+    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
+    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
+    if (_useHash && _itFrame === nFrames) {
+      location.hash = _bookMark;
+    }
+    _itFrame++;
   }
 
-  function _chkOwner () {
-  if (_isBot) { _isBot = false; return; }
-  if (_scrollId > -1) { clearInterval(_scrollId); _scrollId = -1; }
+  function _chkOwner() {
+    if (_isBot) {
+      _isBot = false;
+      return;
+    }
+    if (_scrollId > -1) {
+      clearInterval(_scrollId);
+      _scrollId = -1;
+    }
   }
 
-  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
-  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
+  if (window.addEventListener) {
+    window.addEventListener("scroll", _chkOwner, false);
+  } else if (window.attachEvent) {
+    window.attachEvent("onscroll", _chkOwner);
+  }
 
-  return (sBookmark, bUseHash) => {
-    const oNode = document.querySelector(sBookmark);
-  _scrollY = document.documentElement.scrollTop;
-  _scrollX = document.documentElement.scrollLeft;
-  _bookMark = sBookmark;
-  _useHash = bUseHash === true;
-  _nodeX = oNode.offsetLeft;
-    _nodeY = oNode.offsetTop;
+  return (bookmark, useHash) => {
+    const node = document.querySelector(bookmark);
+    _scrollY = document.documentElement.scrollTop;
+    _scrollX = document.documentElement.scrollLeft;
+    _bookMark = bookmark;
+    _useHash = useHash === true;
+    _nodeX = node.offsetLeft;
+    _nodeY = node.offsetTop;
     _itFrame = 1;
-  if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
+    if (_scrollId === -1) {
+      _scrollId = setInterval(_next, Math.round(duration / frames));
+    }
   };
 })();
 ```
