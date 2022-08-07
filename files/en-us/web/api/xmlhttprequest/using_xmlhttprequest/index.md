@@ -825,7 +825,7 @@ function ifHasChanged(URL, callback) {
 And to test:
 
 ```js
-// Let's test the file "yourpage.html"…
+// Let's test the file "yourpage.html"
 (modified, visit) => {
   ifHasChanged("yourpage.html", function (modified, visit) {
     console.log(`The page '${this.filepath}' has been changed on ${(new Date(nModified)).toLocaleString()}!`);
