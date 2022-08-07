@@ -529,7 +529,7 @@ const progress = document.getElementById('progress');
 
 progress.addEventListener('click', (e) => {
   // Calculate the normalized position clicked
-  const clickPosition = (e.pageX  - this.offsetLeft) / this.offsetWidth;
+  const clickPosition = (e.pageX  - progress.offsetLeft) / progress.offsetWidth;
   const clickTime = clickPosition * audio.duration;
 
   // Move the playhead to the correct position
