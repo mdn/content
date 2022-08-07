@@ -38,25 +38,21 @@ notation_.
 
 ### Dot notation
 
-In the `object.property` syntax, the `property` must
-be a valid JavaScript [identifier](/en-US/docs/Glossary/Identifier). (In the
-ECMAScript standard, the names of properties are technically "IdentifierNames", not
-"Identifiers", so reserved words can be used but are not recommended). For example,
-`object.$1` is valid, while `object.1` is
-not.
+In the `object.property` syntax, the `property` must be a valid JavaScript [identifier](/en-US/docs/Glossary/Identifier). (In the ECMAScript standard, the names of properties are technically "IdentifierNames", not "Identifiers", so reserved words can be used but are not recommended). For example, `object.$1` is valid, while `object.1` is not.
 
 ```js
 const variable = object.propertyName;
-
 object.propertyName = value;
 ```
 
 ```js
 const object = {};
-
 object.$1 = 'foo';
 console.log(object.$1);  // 'foo'
+```
 
+```js example-bad
+const object = {};
 object.1 = 'bar';        // SyntaxError
 console.log(object.1);   // SyntaxError
 ```

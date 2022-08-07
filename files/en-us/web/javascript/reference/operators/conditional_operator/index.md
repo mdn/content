@@ -77,9 +77,11 @@ function example() {
         : condition3 ? value3
         : value4;
 }
+```
 
-// Equivalent to:
+Above is equivalent to below code.
 
+```js
 function example() {
   if (condition1) { return value1; }
   else if (condition2) { return value2; }

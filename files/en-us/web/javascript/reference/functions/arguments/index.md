@@ -43,9 +43,12 @@ However, it can be converted to a real `Array`:
 
 ```js
 const args = Array.prototype.slice.call(arguments);
-// OR:
+```
+
+It can also be converted with using an array literal. This method is shorter than above but allocates an empty array.
+
+```js
 const args2 = [].slice.call(arguments);
-// Using an array literal is shorter than above but allocates an empty array
 ```
 
 As you can do with any Array-like object, you can use ES2015's {{jsxref("Array.from()")}} method or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to convert `arguments` to a real Array:
@@ -53,7 +56,7 @@ As you can do with any Array-like object, you can use ES2015's {{jsxref("Array.f
 ```js
 const args = Array.from(arguments);
 // or
-const args = [...arguments];
+const args2 = [...arguments];
 ```
 
 The `arguments` object is useful for functions called with more arguments than they are formally declared to accept. This technique is useful for functions that can be passed a variable number of arguments, such as {{jsxref("Math.min()")}}. This example function accepts any number of string arguments and returns the longest one:

@@ -38,11 +38,13 @@ In JavaScript, it is impossible to write an ambiguous exponentiation expression.
 is, you cannot put a unary operator (`+/-/~/!/delete/void/typeof`)
 immediately before the base number; doing so will cause a SyntaxError.
 
-```js
+```js example-bad
 -2 ** 2;
 // 4 in Bash, -4 in other languages.
 // This is invalid in JavaScript, as the operation is ambiguous.
+```
 
+```js
 -(2 ** 2);
 // -4 in JavaScript and the author's intention is unambiguous.
 ```
