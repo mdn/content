@@ -162,8 +162,8 @@ select {
 ```
 
 ```js hidden
-let values = document.getElementById('values');
-let container = document.getElementById('container');
+const values = document.getElementById('values');
+const container = document.getElementById('container');
 
 values.addEventListener('change', (evt) => {
   container.style.placeItems = evt.target.value;
@@ -275,8 +275,8 @@ select {
 ```
 
 ```js hidden
-let values = document.getElementById('gridvalues');
-let container = document.getElementById('gridcontainer');
+const values = document.getElementById('gridvalues');
+const container = document.getElementById('gridcontainer');
 
 values.addEventListener('change', (evt) => {
   container.style.placeItems = evt.target.value;
