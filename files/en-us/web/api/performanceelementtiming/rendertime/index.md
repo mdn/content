@@ -32,7 +32,7 @@ In this example calling `entry.renderTime` returns the render time of the image 
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  const entries = list.getEntries().forEach((entry) => {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.renderTime);
     }
