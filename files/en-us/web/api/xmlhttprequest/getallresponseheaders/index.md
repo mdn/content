@@ -80,7 +80,7 @@ request.open("GET", "foo.txt", true);
 request.send();
 
 request.onreadystatechange = () => {
-  if (this.readyState === this.HEADERS_RECEIVED) {
+  if (request.readyState === this.HEADERS_RECEIVED) {
 
     // Get the raw header string
     const headers = request.getAllResponseHeaders();
