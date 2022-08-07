@@ -79,7 +79,7 @@ elements are sorted according to the return value of the compare function (all
 
 So, the compare function has the following form:
 
-```js
+```
 function compare(a, b) {
   if (a is less than b by some ordering criterion) {
     return -1;
