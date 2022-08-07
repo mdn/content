@@ -24,7 +24,7 @@ which includes a {{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-
 ## Syntax
 
 ```js
-MediaStream = canvas.captureStream(frameRate);
+captureStream(frameRate)
 ```
 
 ### Parameters
