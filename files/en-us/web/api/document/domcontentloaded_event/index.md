@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
   });
 
-  for (let i = 0; i < 1000000000; i++);
+  for (let i = 0; i < 1_000_000_000; i++);
    // This synchronous script is going to delay parsing of the DOM,
    // so the DOMContentLoaded event is going to launch later.
 </script>
