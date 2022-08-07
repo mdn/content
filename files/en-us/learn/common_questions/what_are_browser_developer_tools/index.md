@@ -200,7 +200,7 @@ To see what happens, try entering the following snippets of code into the consol
 Now try entering the following incorrect versions of the code and see what you get.
 
 1. ```js
-    alert('hello!);
+    alert('hello!');
     ```
 
 2. ```js

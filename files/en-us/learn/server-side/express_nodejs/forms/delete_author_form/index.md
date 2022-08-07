@@ -102,7 +102,7 @@ If there are still books then we just re-render the form, passing in the author 
 
 Create **/views/author_delete.pug** and copy in the text below.
 
-```plain
+```pug
 extends layout
 
 block content
@@ -149,7 +149,7 @@ Next we will add a **Delete** control to the _Author detail_ view (the detail pa
 
 Open the **author_detail.pug** view and add the following lines at the bottom.
 
-```plain
+```pug
 hr
 p
   a(href=author.url+'/delete') Delete author

@@ -131,7 +131,7 @@ The above is fine, but we have another small issue to contend with. The "todos l
 
 To fix this, we need to update this part of the template to include some conditional rendering. In Ember, you can conditionally render parts of the template using [conditional content](https://guides.emberjs.com/v3.18.0/components/conditional-content/); a simple block example looks something like this:
 
-```js
+```hbs
 \{{#if this.thingIsTrue}}
   Content for the block form of "if"
 \{{/if}}
@@ -181,7 +181,7 @@ Now save and test, and you'll see the correct pluralization used when you only h
 
 Note that this is the block form of `if` in Ember; you could also use the inline form:
 
-```js
+```hbs
 \{{if this.todos.todoCountIsOne "todo" "todos"}}
 ```
 

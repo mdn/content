@@ -508,7 +508,7 @@ router.get('/', function(req, res, next) {
 
 The corresponding template for the above route is given below (**index.pug**). We'll talk more about the syntax later. All you need to know for now is that the `title` variable (with value `'Express'`) is inserted where specified in the template.
 
-```plain
+```pug
 extends layout
 
 block content

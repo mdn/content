@@ -40,7 +40,7 @@ On success, the callback passed to the query renders the **bookinstance_list**(.
 
 Create **/views/bookinstance_list.pug** and copy in the text below.
 
-```js
+```pug
 extends layout
 
 block content

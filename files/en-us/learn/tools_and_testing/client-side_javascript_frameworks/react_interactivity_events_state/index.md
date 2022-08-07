@@ -308,14 +308,13 @@ Now, we can change our `taskList` mapping so that it is the result of mapping `t
 
 ```js
 const taskList = tasks.map((task) => (
-    <Todo
-        id={task.id}
-        name={task.name}
-        completed={task.completed}
-        key={task.id}
-      />
-    )
-  );
+  <Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+  />
+));
 ```
 
 ### Adding a task
@@ -431,7 +430,7 @@ Next, go over to your `Todo.js` component and add an `onChange` handler to your 
 
 Save everything and return to your browser and notice that our first task, Eat, is checked. Open your JavaScript console, then click on the checkbox next to Eat. It unchecks, as we expect. Your JavaScript console, however, will log something like this:
 
-```js
+```
 Object { id: "task-0", name: "Eat", completed: true }
 ```
 
