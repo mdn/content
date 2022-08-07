@@ -37,7 +37,7 @@ As this API relies on service workers, functionality provided by this API is onl
 
 - {{domxref('SyncManager')}} {{Experimental_Inline}}
   - : Registers tasks to be run in a service worker at a later time with network connectivity. These tasks are referred to as _background sync requests_.
-- {{domxref('SyncEvent')}} 
+- {{domxref('SyncEvent')}}
   - : Represents a synchronization event, sent to the {{domxref('ServiceWorkerGlobalScope', 'global scope')}} of a {{domxref('ServiceWorker')}}. It provides a way to run tasks in the service worker with network connectivity.
 
 ## Service Worker Additions
