@@ -36,7 +36,7 @@ have a lower precedence than unary operators.
 
 In JavaScript, it is impossible to write an ambiguous exponentiation expression. That
 is, you cannot put a unary operator (`+/-/~/!/delete/void/typeof`)
-immediately before the base number; doing so will cause a SyntaxError.
+immediately before the base number; [doing so will cause a SyntaxError](/en-US/docs/Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation).
 
 `-2 ** 2` is 4 in Bash, but is -4 in other languages (such as Python). This is invalid in JavaScript, as the operation is ambiguous. You have to parenthesize either side — for example, as `-(2 ** 2)` — to make the intention unambiguous.
 
