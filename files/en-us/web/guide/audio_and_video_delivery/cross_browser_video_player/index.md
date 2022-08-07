@@ -252,8 +252,8 @@ Another feature of most browser default video control sets is the ability to cli
 
 ```js
 progress.addEventListener('click', (e) => {
-  const rect = this.getBoundingClientRect();
-  const pos = (e.pageX  - rect.left) / this.offsetWidth;
+  const rect = progress.getBoundingClientRect();
+  const pos = (e.pageX  - rect.left) / progress.offsetWidth;
   video.currentTime = pos * video.duration;
 });
 ```
