@@ -93,7 +93,7 @@ In this section we create an object called `newItem` that stores the data in the
       title.value = '';
       hours.value = null;
       minutes.value = null;
-      day.value = 1;
+      day.value = '01';
       month.value = 'January';
       year.value = 2020;
     };
