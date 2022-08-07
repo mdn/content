@@ -106,7 +106,7 @@ Before dealing with the individual buttons, a number of initialization calls are
 To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML5 {{ htmlelement("video") }} element should.
 
 ```js
-var supportsVideo = !!document.createElement('video').canPlayType;
+const supportsVideo = !!document.createElement('video').canPlayType;
 if (supportsVideo) {
    // set up custom controls
    // …
@@ -116,9 +116,9 @@ if (supportsVideo) {
 Once it has been confirmed that the browser does indeed support HTML5 video, it's time to set up the custom controls. A number of variables pointing to HTML elements are required:
 
 ```js
-var videoContainer = document.getElementById('videoContainer');
-var video = document.getElementById('video');
-var videoControls = document.getElementById('video-controls');
+const videoContainer = document.getElementById('videoContainer');
+const video = document.getElementById('video');
+const videoControls = document.getElementById('video-controls');
 ```
 
 As mentioned earlier, the browser's default controls now need to be disabled, and the custom controls need to be displayed:
@@ -134,14 +134,14 @@ videoControls.style.display = 'block';
 With that done, a variable pointing to each of the buttons is now required:
 
 ```js
-var playpause = document.getElementById('playpause');
-var stop = document.getElementById('stop');
-var mute = document.getElementById('mute');
-var volinc = document.getElementById('volinc');
-var voldec = document.getElementById('voldec');
-var progress = document.getElementById('progress');
-var progressBar = document.getElementById('progress-bar');
-var fullscreen = document.getElementById('fs');
+const playpause = document.getElementById('playpause');
+const stop = document.getElementById('stop');
+const mute = document.getElementById('mute');
+const volinc = document.getElementById('volinc');
+const voldec = document.getElementById('voldec');
+const progress = document.getElementById('progress');
+const progressBar = document.getElementById('progress-bar');
+const fullscreen = document.getElementById('fs');
 ```
 
 Using these handles, events can now be attached to each of the custom control buttons making them interactive. Most of these buttons require a simple `click` event listener to be added, and a Media API defined method and/or attributes to be called/checked on the video.
@@ -150,8 +150,11 @@ Using these handles, events can now be attached to each of the custom control bu
 
 ```js
 playpause.addEventListener('click', (e) => {
-   if (video.paused || video.ended) video.play();
-   else video.pause();
+  if (video.paused || video.ended) {
+    video.play();
+  } else {
+    video.pause();
+  }
 });
 ```
 
@@ -161,9 +164,9 @@ When a `click` event is detected on the play/pause button, the handler first of 
 
 ```js
 stop.addEventListener('click', (e) => {
-   video.pause();
-   video.currentTime = 0;
-   progress.value = 0;
+  video.pause();
+  video.currentTime = 0;
+  progress.value = 0;
 });
 ```
 
@@ -173,7 +176,7 @@ The Media API doesn't have a `stop` method, so to mimic this the video is paused
 
 ```js
 mute.addEventListener('click', (e) => {
-   video.muted = !video.muted;
+  video.muted = !video.muted;
 });
 ```
 
@@ -183,24 +186,24 @@ The mute button is a simple toggle button that uses the Media API's `muted` attr
 
 ```js
 volinc.addEventListener('click', (e) => {
-   alterVolume('+');
+  alterVolume('+');
 });
 voldec.addEventListener('click', (e) => {
-   alterVolume('-');
+  alterVolume('-');
 });
 ```
 
 Two volume control buttons have been defined, one for increasing the volume and another for decreasing it. A user defined function, `alterVolume(direction)` has been created that deals with this:
 
 ```js
-var alterVolume = (dir) => {
-   var currentVolume = Math.floor(video.volume * 10) / 10;
-   if (dir === '+') {
-      if (currentVolume < 1) video.volume += 0.1;
-   }
-   else if (dir === '-') {
-      if (currentVolume > 0) video.volume -= 0.1;
-   }
+function alterVolume(dir) {
+  const currentVolume = Math.floor(video.volume * 10) / 10;
+  if (dir === '+') {
+    if (currentVolume < 1) video.volume += 0.1;
+  }
+  else if (dir === '-') {
+    if (currentVolume > 0) video.volume -= 0.1;
+  }
 }
 ```
 
@@ -214,7 +217,7 @@ Ideally, the correct value of the video's `duration` attribute is available when
 
 ```js
 video.addEventListener('loadedmetadata', () => {
-   progress.setAttribute('max', video.duration);
+  progress.setAttribute('max', video.duration);
 });
 ```
 
@@ -224,8 +227,8 @@ Another event, `timeupdate`, is raised periodically as the video is being played
 
 ```js
 video.addEventListener('timeupdate', () => {
-   progress.value = video.currentTime;
-   progressBar.style.width = Math.floor((video.currentTime / video.duration) * 100) + '%';
+  progress.value = video.currentTime;
+  progressBar.style.width = `${Math.floor(video.currentTime * 100 / video.duration)}%`;
 });
 ```
 
@@ -235,9 +238,9 @@ Coming back to the `video.duration` problem mentioned above, when the `timeupdat
 
 ```js
 video.addEventListener('timeupdate', () => {
-   if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
-   progress.value = video.currentTime;
-   progressBar.style.width = Math.floor((video.currentTime / video.duration) * 100) + '%';
+  if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
+  progress.value = video.currentTime;
+  progressBar.style.width = `${Math.floor(video.currentTime * 100 / video.duration)}%`;
 });
 ```
 
@@ -249,9 +252,9 @@ Another feature of most browser default video control sets is the ability to cli
 
 ```js
 progress.addEventListener('click', (e) => {
-   var rect = this.getBoundingClientRect();
-   var pos = (e.pageX  - rect.left) / this.offsetWidth;
-   video.currentTime = pos * video.duration;
+  const rect = this.getBoundingClientRect();
+  const pos = (e.pageX  - rect.left) / this.offsetWidth;
+  video.currentTime = pos * video.duration;
 });
 ```
 
@@ -266,7 +269,7 @@ Alas it has been implemented in browsers in a number of weird and wonderful ways
 To detect if a browser actually supports the Fullscreen API and that it is enabled, the following may be called:
 
 ```js
-var fullScreenEnabled = !!(document.fullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled || document.webkitSupportsFullscreen || document.webkitFullscreenEnabled || document.createElement('video').webkitRequestFullScreen);
+const fullScreenEnabled = !!(document.fullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled || document.webkitSupportsFullscreen || document.webkitFullscreenEnabled || document.createElement('video').webkitRequestFullScreen);
 ```
 
 This tests all the different prefixed (and of course the non-prefixed!) booleans to see if fullscreen is possible. The final tested value, `document.createElement('video').webkitRequestFullScreen` is required for the last Presto version of Opera (12.14). Note the different letter casing in the various values.
@@ -275,7 +278,7 @@ The visibility of the fullscreen button depends on whether the browser supports 
 
 ```js
 if (!fullScreenEnabled) {
-   fullscreen.style.display = 'none';
+  fullscreen.style.display = 'none';
 }
 ```
 
@@ -283,35 +286,35 @@ Naturally the fullscreen button needs to actually do something, so, like the oth
 
 ```js
 fullscreen.addEventListener('click', (e) => {
-   handleFullscreen();
+  handleFullscreen();
 });
 ```
 
 The `handleFullscreen` function is defined as follows:
 
 ```js
-var handleFullscreen = () => {
-   if (isFullScreen()) {
-      if (document.exitFullscreen) document.exitFullscreen();
-      else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
-      else if (document.webkitCancelFullScreen) document.webkitCancelFullScreen();
-      else if (document.msExitFullscreen) document.msExitFullscreen();
-      setFullscreenData(false);
-   }
-   else {
-      if (videoContainer.requestFullscreen) videoContainer.requestFullscreen();
-      else if (videoContainer.mozRequestFullScreen) videoContainer.mozRequestFullScreen();
-      else if (videoContainer.webkitRequestFullScreen) videoContainer.webkitRequestFullScreen();
-      else if (videoContainer.msRequestFullscreen) videoContainer.msRequestFullscreen();
-      setFullscreenData(true);
-   }
+function handleFullscreen() {
+  if (isFullScreen()) {
+    if (document.exitFullscreen) document.exitFullscreen();
+    else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+    else if (document.webkitCancelFullScreen) document.webkitCancelFullScreen();
+    else if (document.msExitFullscreen) document.msExitFullscreen();
+    setFullscreenData(false);
+  }
+  else {
+    if (videoContainer.requestFullscreen) videoContainer.requestFullscreen();
+    else if (videoContainer.mozRequestFullScreen) videoContainer.mozRequestFullScreen();
+    else if (videoContainer.webkitRequestFullScreen) videoContainer.webkitRequestFullScreen();
+    else if (videoContainer.msRequestFullscreen) videoContainer.msRequestFullscreen();
+    setFullscreenData(true);
+  }
 }
 ```
 
 First of all the function checks if the browser is already in fullscreen mode by calling another function `isFullScreen`:
 
 ```js
-var isFullScreen = () => {
+function isFullScreen() {
    return !!(document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || document.fullscreenElement);
 }
 ```
@@ -330,8 +333,8 @@ Dealing with WebKit-specific code in this way will affect all WebKit browsers, b
 Another user defined function — `setFullscreenData()` — is also called, which sets the value of a `data-fullscreen` attribute on the `videoContainer` (this makes use of [`data-states`](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states#data-state-attributes)).
 
 ```js
-var setFullscreenData = (state) => {
-   videoContainer.setAttribute('data-fullscreen', !!state);
+function setFullscreenData(state) {
+  videoContainer.setAttribute('data-fullscreen', !!state);
 }
 ```
 
@@ -339,16 +342,16 @@ This is used to set some basic CSS to improve the styling of the custom controls
 
 ```js
 document.addEventListener('fullscreenchange', (e) => {
-   setFullscreenData(!!(document.fullscreen || document.fullscreenElement));
+  setFullscreenData(!!(document.fullscreen || document.fullscreenElement));
 });
 document.addEventListener('webkitfullscreenchange', () => {
-   setFullscreenData(!!document.webkitIsFullScreen);
+  setFullscreenData(!!document.webkitIsFullScreen);
 });
 document.addEventListener('mozfullscreenchange', () => {
-   setFullscreenData(!!document.mozFullScreen);
+  setFullscreenData(!!document.mozFullScreen);
 });
 document.addEventListener('msfullscreenchange', () => {
-   setFullscreenData(!!document.msFullscreenElement);
+  setFullscreenData(!!document.msFullscreenElement);
 });
 ```
 
