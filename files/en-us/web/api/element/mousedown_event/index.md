@@ -36,7 +36,7 @@ onmousedown = (event) => { };
 
 ## Event type
 
-An {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MouseEvent")}}
 

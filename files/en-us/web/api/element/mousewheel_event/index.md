@@ -33,7 +33,7 @@ onmousewheel = (event) => { };
 
 ## Event type
 
-An {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("WheelEvent")}}
 
