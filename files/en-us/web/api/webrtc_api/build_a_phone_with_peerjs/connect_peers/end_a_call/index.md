@@ -14,8 +14,8 @@ You've nearly finished! The last thing you want to do is ensure your callers hav
     ```js
     const hangUpBtn = document.querySelector('.hangup-btn');
     hangUpBtn.addEventListener('click', () => {
-        conn.close();
-        showCallContent();
+      conn.close();
+      showCallContent();
     })
     ```
 
@@ -23,7 +23,7 @@ You've nearly finished! The last thing you want to do is ensure your callers hav
 
     ```js
     conn.on('close', () => {
-        showCallContent();
+      showCallContent();
     })
     ```
 
