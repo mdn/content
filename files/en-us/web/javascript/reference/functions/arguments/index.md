@@ -56,7 +56,7 @@ As you can do with any Array-like object, you can use ES2015's {{jsxref("Array.f
 ```js
 const args = Array.from(arguments);
 // or
-const args2 = [...arguments];
+const args = [...arguments];
 ```
 
 The `arguments` object is useful for functions called with more arguments than they are formally declared to accept. This technique is useful for functions that can be passed a variable number of arguments, such as {{jsxref("Math.min()")}}. This example function accepts any number of string arguments and returns the longest one:

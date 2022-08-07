@@ -153,7 +153,7 @@ bla = 2;
 var bla;
 ```
 
-...is implicitly understood as:
+This is implicitly understood as:
 
 ```js
 var bla;
@@ -176,7 +176,7 @@ function do_something() {
 }
 ```
 
-...is implicitly understood as:
+This is implicitly understood as:
 
 ```js
 function do_something() {
@@ -202,7 +202,7 @@ var a = 'A';
 var b = a;
 ```
 
-...is equivalent to:
+This is equivalent to:
 
 ```js
 var a, b = a = 'A';
