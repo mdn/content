@@ -123,7 +123,7 @@ colors.forEach((color, i) => {
   console.log(color, i);
   colorHTML += `<span style="background-color:${color};"> ${color} </span>`;
 });
-hints.innerHTML = `Tap or click then say a color to change the background color of the app. Try ${colorHTML}.`;
+hints.textContent = `Tap or click then say a color to change the background color of the app. Try ${colorHTML}.`;
 
 document.body.onclick = () => {
   recognition.start();
@@ -137,7 +137,7 @@ Once the speech recognition is started, there are many event handlers that can b
 
 ```js
 recognition.onresult = (event) => {
-  let color = event.results[0][0].transcript;
+  const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(`Confidence: ${event.results[0][0].confidence}`);
@@ -160,7 +160,7 @@ The last two handlers are there to handle cases where speech was recognized that
 
 ```js
 recognition.onnomatch = (event) => {
-  diagnostic.textContent = `I didn't recognize that color.`;
+  diagnostic.textContent = "I didn't recognize that color.";
 }
 ```
 
@@ -230,7 +230,7 @@ Let's investigate the JavaScript that powers this app.
 First of all, we capture references to all the DOM elements involved in the UI, but more interestingly, we capture a reference to {{domxref("Window.speechSynthesis")}}. This is API's entry point — it returns an instance of {{domxref("SpeechSynthesis")}}, the controller interface for web speech synthesis.
 
 ```js
-let synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
 const inputForm = document.querySelector('form');
 const inputTxt = document.querySelector('.txt');
@@ -254,16 +254,16 @@ We also create `data-` attributes for each option, containing the name and langu
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for (i = 0; i < voices.length ; i++) {
+  for (const voice of voices.length) {
     const option = document.createElement('option');
-    option.textContent = `${voices[i].name} (${voices[i].lang})`;
+    option.textContent = `${voice.name} (${voice.lang})`;
 
     if(voices[i].default) {
       option.textContent += ' — DEFAULT';
     }
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
+    option.setAttribute('data-lang', voice.lang);
+    option.setAttribute('data-name', voice.name);
     voiceSelect.appendChild(option);
   }
 }
@@ -292,9 +292,9 @@ inputForm.onsubmit = (event) => {
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for (i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  for (const voice of voices) {
+    if(voice.name === selectedOption) {
+      utterThis.voice = voice;
     }
   }
   utterThis.pitch = pitch.value;
