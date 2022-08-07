@@ -80,13 +80,9 @@ const mycar = new Car('Eagle', 'Talon TSi', 1993);
 
 ### In Promises
 
-When returning an immediately-resolved or immediately-rejected Promise, you do not need
-to create a _new Promise(...)_ and act on it.
+When returning an immediately-resolved or immediately-rejected Promise, you do not need to create a `new Promise(...)` and act on it. Instead, use the [`Promise.resolve()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) or [`Promise.reject()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) [static methods](<https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods>).
 
-#### Incorrect constructor call
-
-This is not legal (the [`Promise` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) is not being called correctly) and will throw a
-`TypeError: this is not a constructor` exception:
+This is not legal (the [`Promise` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) is not being called correctly) and will throw a `TypeError: this is not a constructor` exception:
 
 ```js example-bad
 const fn = () => {
@@ -94,18 +90,13 @@ const fn = () => {
 }
 ```
 
-#### Prefer using static methods
-
-Instead, use the [`Promise.resolve()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) or
-[`Promise.reject()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject)
-[static methods](<https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods>):
-
-
 This is legal, but unnecessarily long:
 
 ```js
 const fn = () => {
-  return new Promise((resolve, reject) => { resolve(true); });
+  return new Promise((resolve, reject) => {
+    resolve(true);
+  });
 }
 ```
 
