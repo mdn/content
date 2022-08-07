@@ -13,7 +13,7 @@ Now our users can make a call, but they can't answer one. Let's add the next pie
 
     ```js
     peer.on('call', (call) => {
-        const answerCall = confirm("Do you want to answer?")
+      const answerCall = confirm("Do you want to answer?")
     });
     ```
 
@@ -27,19 +27,19 @@ Now our users can make a call, but they can't answer one. Let's add the next pie
 
     ```js
     peer.on('call', (call) => {
-       const answerCall = confirm("Do you want to answer?")
+      const answerCall = confirm("Do you want to answer?")
 
-       if(answerCall){
-          call.answer(window.localStream) // A
-          showConnectedContent(); // B
-          call.on('stream', (stream) => { // C
-             window.remoteAudio.srcObject = stream;
-             window.remoteAudio.autoplay = true;
-             window.peerStream = stream;
-          });
-       } else {
-          console.log("call denied"); // D
-       }
+      if (answerCall){
+        call.answer(window.localStream) // A
+        showConnectedContent(); // B
+        call.on('stream', (stream) => { // C
+          window.remoteAudio.srcObject = stream;
+          window.remoteAudio.autoplay = true;
+          window.peerStream = stream;
+        });
+      } else {
+        console.log("call denied"); // D
+      }
     });
     ```
 
