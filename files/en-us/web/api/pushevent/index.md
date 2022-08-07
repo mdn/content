@@ -58,7 +58,7 @@ self.addEventListener('push', (event) => {
   });
 
   notification.addEventListener('click', () => {
-    clients?.openWindow('https://example.blog.com/2015/03/04/something-new.html');
+    clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
   });
 });
 ```
