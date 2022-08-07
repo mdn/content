@@ -239,7 +239,7 @@ To illustrate this, let's create a function named `emulateMessage()`, which will
 
 ```js
 function emulateMessage(vVal) {
-    return eval(`(${JSON.stringify(vVal)})`);
+  return eval(`(${JSON.stringify(vVal)})`);
 }
 
 // Tests
@@ -322,7 +322,7 @@ function QueryableWorker(url, defaultListener, onError) {
   if (onError) { worker.onerror = onError; }
 
   this.postMessage = (message) => {
-      worker.postMessage(message);
+    worker.postMessage(message);
   }
 
   this.terminate = () => {
@@ -535,11 +535,11 @@ function reply() {
   postMessage({ 'queryMethodListener': arguments[0], 'queryMethodArguments': Array.prototype.slice.call(arguments, 1) });
 }
 
-onmessage = (oEvent) => {
-  if (oEvent.data instanceof Object && Object.hasOwn(oEvent.data, 'queryMethod') && Object.hasOwn(oEvent.data, 'queryMethodArguments')) {
-    queryableFunctions[oEvent.data.queryMethod].apply(self, oEvent.data.queryMethodArguments);
+onmessage = (event) => {
+  if (event.data instanceof Object && Object.hasOwn(event.data, 'queryMethod') && Object.hasOwn(event.data, 'queryMethodArguments')) {
+    queryableFunctions[event.data.queryMethod].apply(self, event.data.queryMethodArguments);
   } else {
-    defaultReply(oEvent.data);
+    defaultReply(event.data);
   }
 };
 ```
