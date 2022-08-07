@@ -24,7 +24,7 @@ function f(a, b, ...theArgs) {
 
 ## Description
 
-A function definition's last parameter can be prefixed with "`...`" (three U+002E FULL STOP characters), which will cause all remaining (user supplied) parameters to be placed within a [standard JavaScript array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
+A function definition's last parameter can be prefixed with `...` (three U+002E FULL STOP characters), which will cause all remaining (user supplied) parameters to be placed within a [standard JavaScript array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 Only the last parameter in a function definition can be a rest parameter.
 
 ```js

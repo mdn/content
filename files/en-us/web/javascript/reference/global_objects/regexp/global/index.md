@@ -12,13 +12,13 @@ browser-compat: javascript.builtins.RegExp.global
 ---
 {{JSRef}}
 
-The **`global`** property indicates whether or not the "`g`" flag is used with the regular expression. `global` is a read-only property of an individual regular expression instance.
+The **`global`** property indicates whether or not the `g` flag is used with the regular expression. `global` is a read-only property of an individual regular expression instance.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}{{js_property_attributes(0, 0, 1)}}
 
 ## Description
 
-The value of `global` is a {{jsxref("Boolean")}} and `true` if the "`g`" flag was used; otherwise, `false`. The "`g`" flag indicates that the regular expression should be tested against all possible matches in a string. A regular expression defined as both `global` ("`g`") and `sticky` ("`y`") will ignore the `global` flag and perform sticky matches.
+The value of `global` is a {{jsxref("Boolean")}} and `true` if the `g` flag was used; otherwise, `false`. The `g` flag indicates that the regular expression should be tested against all possible matches in a string. A regular expression defined as both `global` (`g`) and `sticky` (`y`) will ignore the `global` flag and perform sticky matches.
 
 You cannot change this property directly.
 

@@ -39,7 +39,7 @@ BigInt values are similar to Number values in some ways, but also differ in a fe
 
 ### Type information
 
-When tested against `typeof`, a BigInt value (`bigint` primitive) will give "`bigint`":
+When tested against `typeof`, a BigInt value (`bigint` primitive) will give `"bigint"`:
 
 ```js
 typeof 1n === 'bigint'           // true

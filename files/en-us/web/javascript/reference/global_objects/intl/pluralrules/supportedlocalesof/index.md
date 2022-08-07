@@ -37,8 +37,8 @@ Intl.PluralRules.supportedLocalesOf(locales, options)
 
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are
-        "`lookup`" and "`best fit`"; the default is
-        "`best fit`". For information about this option, see the
+        `"lookup"` and `"best fit"`; the default is
+        `"best fit"`. For information about this option, see the
         {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.
 
 ### Return value
@@ -61,8 +61,8 @@ Assuming a runtime that supports Indonesian and German but not Balinese in plura
 formatting, `supportedLocalesOf` returns the Indonesian and German language
 tags unchanged, even though `pinyin` collation is neither relevant to
 plural formatting nor used with Indonesian, and a specialized German for Indonesia is
-unlikely to be supported. Note the specification of the "`lookup`"
-algorithm here — a "`best fit`" matcher might decide that Indonesian is an
+unlikely to be supported. Note the specification of the `"lookup"`
+algorithm here — a `"best fit"` matcher might decide that Indonesian is an
 adequate match for Balinese since most Balinese speakers also understand Indonesian,
 and therefore return the Balinese language tag as well.
 

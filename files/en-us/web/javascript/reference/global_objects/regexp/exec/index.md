@@ -214,7 +214,7 @@ The following table shows the state of `re` after running this script:
 
 ### Finding successive matches
 
-If your regular expression uses the ["`g`"](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) flag, you can use the
+If your regular expression uses the [`g`](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) flag, you can use the
 `exec()` method multiple times to find successive matches in the same string.
 When you do so, the search starts at the substring of `str`
 specified by the regular expression's {{jsxref("RegExp.lastIndex", "lastIndex")}}
@@ -251,7 +251,7 @@ Found ab. Next match starts at 9
 > It will create an infinite loop if there is a match, due to the
 > {{jsxref("RegExp.lastIndex", "lastIndex")}} property being reset upon each iteration.
 >
-> Also, be sure that the global flag (["`g`"](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)) is set, or it will also cause
+> Also, be sure that the [global (`g`) flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) is set, or it will also cause
 > an infinite loop.
 >
 > In addition, when matching zero-length characters (e.g. `/^/gm`),

@@ -279,10 +279,10 @@ const doc = html`<!DOCTYPE html>
 
 As of ECMAScript 2016, tagged templates conform to the rules of the following escape sequences:
 
-- Unicode escapes started by "`\u`", for example `\u00A9`
-- Unicode code point escapes indicated by "`\u{}`", for example `\u{2F804}`
-- Hexadecimal escapes started by "`\x`", for example `\xA9`
-- Octal literal escapes started by "`\0o`" and followed by one or more digits, for example `\0o251`
+- Unicode escapes started by `\u`, for example `\u00A9`
+- Unicode code point escapes indicated by `\u{}`, for example `\u{2F804}`
+- Hexadecimal escapes started by `\x`, for example `\xA9`
+- Octal literal escapes started by `\0o` and followed by one or more digits, for example `\0o251`
 
 This means that a tagged template like the following is problematic, because, per ECMAScript grammar, a parser looks for valid Unicode escape sequences, but finds malformed syntax:
 

@@ -44,12 +44,12 @@ The object returned by `resolvedOptions()` has the following properties:
     included in `locale`.
 - `style`
   - : The value provided for this property in the `options` argument of the
-    constructor or the default value ("`long`"). Its value is either
-    "`long`", "`short`", or "`narrow`".
+    constructor or the default value (`"long"`). Its value is either
+    `"long"`, `"short"`, or `"narrow"`.
 - `type`
   - : The value provided for this property in the `options` argument of the
-    constructor or the default value ("`conjunction`"). Its value is either
-    "`conjunction`", "`disjunction`", or "`unit`".
+    constructor or the default value (`"conjunction"`). Its value is either
+    `"conjunction"`, `"disjunction"`, or `"unit"`.
 
 ## Examples
 

@@ -151,7 +151,7 @@ if (x > 50) {
 
 ### Using an assignment as a condition
 
-You should almost never have an `if...else` with an assignment like "`x = y`" as a condition:
+You should almost never have an `if...else` with an assignment like `x = y` as a condition:
 
 ```js example-bad
 if (x = y) {

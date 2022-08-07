@@ -16,7 +16,7 @@ The **`Symbol.toPrimitive`** is a symbol that specifies a function valued proper
 
 ## Description
 
-With the help of the `Symbol.toPrimitive` property (used as a function value), an object can be converted to a primitive value. The function is called with a string argument `hint`, which specifies the preferred type of the result primitive value. The `hint` argument can be one of "`number`", "`string`", and "`default`".
+With the help of the `Symbol.toPrimitive` property (used as a function value), an object can be converted to a primitive value. The function is called with a string argument `hint`, which specifies the preferred type of the result primitive value. The `hint` argument can be one of `"number"`, `"string"`, and `"default"`.
 
 {{js_property_attributes(0,0,0)}}
 
