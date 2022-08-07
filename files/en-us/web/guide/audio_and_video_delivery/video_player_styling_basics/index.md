@@ -251,20 +251,19 @@ This section looks at the JavaScript required for implementing the button functi
 Now that the buttons actually look like buttons and have images that indicate what they do, some changes need to be made so that the "dual functionality" buttons (such as the play/pause button) are in the correct "state" and display the correct image. In order to facilitate this, a new function is defined called `changeButtonState()`, which accepts a type variable indicating the button's functionality:
 
 ```js
-var changeButtonState = (type) => {
-   // Play/Pause button
-   if (type === 'playpause') {
-      if (video.paused || video.ended) {
-         playpause.setAttribute('data-state', 'play');
-      }
-      else {
-         playpause.setAttribute('data-state', 'pause');
-      }
-   }
-   // Mute button
-   else if (type === 'mute') {
-      mute.setAttribute('data-state', video.muted ? 'unmute' : 'mute');
-   }
+function changeButtonState(type) {
+  if (type === 'playpause') {
+    // Play/Pause button
+    if (video.paused || video.ended) {
+       playpause.setAttribute('data-state', 'play');
+    }
+    else {
+       playpause.setAttribute('data-state', 'pause');
+    }
+  } else if (type === 'mute') {
+    // Mute button
+    mute.setAttribute('data-state', video.muted ? 'unmute' : 'mute');
+  }
 }
 ```
 
@@ -274,19 +273,23 @@ This function is then called by the relevant event handlers:
 video.addEventListener('play', () => {
    changeButtonState('playpause');
 }, false);
+
 video.addEventListener('pause', () => {
    changeButtonState('playpause');
 }, false);
+
 stop.addEventListener('click', (e) => {
-   video.pause();
-   video.currentTime = 0;
-   progress.value = 0;
-   // Update the play/pause button's 'data-state' which allows the correct button image to be set via CSS
-   changeButtonState('playpause');
+  video.pause();
+  video.currentTime = 0;
+  progress.value = 0;
+  
+  // Update the play/pause button's 'data-state' which allows the correct button image to be set via CSS
+  changeButtonState('playpause');
 });
+
 mute.addEventListener('click', (e) => {
-   video.muted = !video.muted;
-   changeButtonState('mute');
+  video.muted = !video.muted;
+  changeButtonState('mute');
 });
 ```
 
@@ -294,8 +297,8 @@ You might have noticed that there are new handlers where the `play` and `pause` 
 
 ```js
 playpause.addEventListener('click', (e) => {
-   if (video.paused || video.ended) video.play();
-   else video.pause();
+  if (video.paused || video.ended) video.play();
+  else video.pause();
 });
 ```
 
@@ -304,24 +307,26 @@ playpause.addEventListener('click', (e) => {
 The `alterVolume()` function, called when the player's volume buttons are clicked, also changes — it now calls a new function called `checkVolume()`:
 
 ```js
-var checkVolume = (dir) => {
-   if (dir) {
-      var currentVolume = Math.floor(video.volume * 10) / 10;
-      if (dir === '+') {
-         if (currentVolume < 1) video.volume += 0.1;
-      }
-      else if (dir === '-') {
-         if (currentVolume > 0) video.volume -= 0.1;
-      }
-      // If the volume has been turned off, also set it as muted
-      // Note: can only do this with the custom control set as when the 'volumechange' event is raised, there is no way to know if it was via a volume or a mute change
-      if (currentVolume <= 0) video.muted = true;
-      else video.muted = false;
-   }
-   changeButtonState('mute');
+function checkVolume(dir) {
+  if (dir) {
+    const currentVolume = Math.floor(video.volume * 10) / 10;
+    if (dir === '+') {
+       if (currentVolume < 1) video.volume += 0.1;
+    } else if (dir === '-') {
+       if (currentVolume > 0) video.volume -= 0.1;
+    }
+    
+    // If the volume has been turned off, also set it as muted
+    // Note: can only do this with the custom control set as when the 'volumechange' event is raised,
+    // there is no way to know if it was via a volume or a mute change
+    if (currentVolume <= 0) video.muted = true;
+    else video.muted = false;
+  }
+  changeButtonState('mute');
 }
-var alterVolume = (dir) => {
-   checkVolume(dir);
+
+const alterVolume = (dir) => {
+  checkVolume(dir);
 }
 ```
 
@@ -329,7 +334,7 @@ This new `checkVolume()` function does the same thing as the `alterVolume()` but
 
 ```js
 video.addEventListener('volumechange', () => {
-   checkVolume();
+  checkVolume();
 }, false);
 ```
 
@@ -339,8 +344,8 @@ A small change also needs to be made to the click handler for the {{ htmlelement
 
 ```js
 progress.addEventListener('click', (e) => {
-   var pos = (e.pageX  - (this.offsetLeft + this.offsetParent.offsetLeft)) / this.offsetWidth;
-   video.currentTime = pos * video.duration;
+  const pos = (e.pageX  - this.offsetLeft - this.offsetParent.offsetLeft) / this.offsetWidth;
+  video.currentTime = pos * video.duration;
 });
 ```
 
