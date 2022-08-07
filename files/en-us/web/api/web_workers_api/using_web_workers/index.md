@@ -176,7 +176,7 @@ Now messages can be sent to the worker as before, but the `postMessage()` method
 
 ```js
 squareNumber.onchange = () => {
-  myWorker.port.postMessage([squareNumber.value,squareNumber.value]);
+  myWorker.port.postMessage([squareNumber.value, squareNumber.value]);
   console.log('Message posted to worker');
 }
 ```
@@ -261,16 +261,16 @@ console.log(typeof emulateMessage(example3)); // string
 
 // test #4
 const example4 = {
-    'name': 'John Smith',
-    "age": 43
+  'name': 'John Smith',
+  "age": 43
 };
 console.log(typeof example4); // object
 console.log(typeof emulateMessage(example4)); // object
 
 // test #5
 function Animal(sType, nAge) {
-    this.type = sType;
-    this.age = nAge;
+  this.type = sType;
+  this.age = nAge;
 }
 const example5 = new Animal('Cat', 3);
 alert(example5.constructor); // Animal
@@ -284,8 +284,8 @@ A value that is cloned and not shared is called _message_. As you will probably 
 ```js
 const myWorker = new Worker('my_task.js');
 
-myWorker.onmessage = (oEvent) => {
-  console.log(`Worker said : ${oEvent.data}`);
+myWorker.onmessage = (event) => {
+  console.log(`Worker said : ${event.data}`);
 };
 
 myWorker.postMessage('ali');
@@ -296,8 +296,8 @@ myWorker.postMessage('ali');
 ```js
 postMessage("I\'m working before postMessage(\'ali\').");
 
-onmessage = (oEvent) => {
-  postMessage(`Hi ${oEvent.data}`);
+onmessage = (event) => {
+  postMessage(`Hi, ${event.data}`);
 };
 ```
 
@@ -313,21 +313,21 @@ First, we create a `QueryableWorker` class that takes the URL of the worker, a d
 
 ```js
 function QueryableWorker(url, defaultListener, onError) {
-    const instance = this,
-        worker = new Worker(url),
-        listeners = {};
+  const instance = this;
+  const worker = new Worker(url);
+  const listeners = {};
 
-    this.defaultListener = defaultListener || () => {};
+  this.defaultListener = defaultListener || () => {};
 
-    if (onError) {worker.onerror = onError;}
+  if (onError) { worker.onerror = onError; }
 
-    this.postMessage = (message) => {
-        worker.postMessage(message);
-    }
+  this.postMessage = (message) => {
+      worker.postMessage(message);
+  }
 
-    this.terminate = () => {
-        worker.terminate();
-    }
+  this.terminate = () => {
+    worker.terminate();
+  }
 }
 ```
 
@@ -335,30 +335,27 @@ Then we add the methods of adding/removing listeners:
 
 ```js
 this.addListeners = (name, listener) => {
-    listeners[name] = listener;
+  listeners[name] = listener;
 }
 
 this.removeListeners = (name) => {
-    delete listeners[name];
+  delete listeners[name];
 }
 ```
 
 Here we let the worker handle two simple operations for illustration: getting the difference of two numbers and making an alert after three seconds. In order to achieve that we first implement a `sendQuery` method which queries if the worker actually has the corresponding methods to do what we want.
 
 ```js
-/*
-  This functions takes at least one argument, the method name we want to query.
-  Then we can pass in the arguments that the method needs.
- */
+// This functions takes at least one argument, the method name we want to query.
+// Then we can pass in the arguments that the method needs.
 this.sendQuery = () => {
-    if (arguments.length < 1) {
-         throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
-         return;
-    }
-    worker.postMessage({
-        'queryMethod': arguments[0],
-        'queryMethodArguments': Array.prototype.slice.call(arguments, 1)
-    });
+  if (arguments.length < 1) {
+    throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
+  }
+  worker.postMessage({
+    'queryMethod': arguments[0],
+    'queryMethodArguments': Array.prototype.slice.call(arguments, 1)
+  });
 }
 ```
 
@@ -366,13 +363,13 @@ We finish QueryableWorker with the `onmessage` method. If the worker has the cor
 
 ```js
 worker.onmessage = (event) => {
-    if (event.data instanceof Object &&
-        Object.hasOwn(event.data, 'queryMethodListener') &&
-        Object.hasOwn(event.data, 'queryMethodArguments')) {
-        listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
-    } else {
-        this.defaultListener.call(instance, event.data);
-    }
+  if (event.data instanceof Object &&
+      Object.hasOwn(event.data, 'queryMethodListener') &&
+      Object.hasOwn(event.data, 'queryMethodArguments')) {
+    listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
+  } else {
+    this.defaultListener.call(instance, event.data);
+  }
 }
 ```
 
@@ -380,30 +377,29 @@ Now onto the worker. First we need to have the methods to handle the two simple 
 
 ```js
 const queryableFunctions = {
-    getDifference(a, b) {
-        reply('printStuff', a - b);
-    },
-    waitSomeTime() {
-        setTimeout(() => {
-            reply('doAlert', 3, 'seconds');
-        }, 3000);
-    }
+  getDifference(a, b) {
+    reply('printStuff', a - b);
+  },
+  waitSomeTime() {
+    setTimeout(() => {
+      reply('doAlert', 3, 'seconds');
+    }, 3000);
+  }
 }
 
 function reply() {
-    if (arguments.length < 1) {
-        throw new TypeError('reply - takes at least one argument');
-        return;
-    }
-    postMessage({
-        queryMethodListener: arguments[0],
-        queryMethodArguments: Array.prototype.slice.call(arguments, 1)
-    });
+  if (arguments.length < 1) {
+    throw new TypeError('reply - takes at least one argument');
+  }
+  postMessage({
+    queryMethodListener: arguments[0],
+    queryMethodArguments: Array.prototype.slice.call(arguments, 1)
+  });
 }
 
 /* This method is called when main page calls QueryWorker's postMessage method directly*/
 function defaultReply(message) {
-    // do something
+  // do something
 }
 ```
 
@@ -411,14 +407,14 @@ And the `onmessage` method is now trivial:
 
 ```js
 onmessage = (event) => {
-    if (event.data instanceof Object &&
-        Object.hasOwn(event.data, 'queryMethod') &&
-        Object.hasOwn(event.data, 'queryMethodArguments')) {
-        queryableFunctions[event.data.queryMethod]
-            .apply(self, event.data.queryMethodArguments);
-    } else {
-        defaultReply(event.data);
-    }
+  if (event.data instanceof Object &&
+      Object.hasOwn(event.data, 'queryMethod') &&
+      Object.hasOwn(event.data, 'queryMethodArguments')) {
+    queryableFunctions[event.data.queryMethod]
+      .apply(self, event.data.queryMethodArguments);
+  } else {
+    defaultReply(event.data);
+  }
 }
 ```
 
@@ -428,92 +424,87 @@ Here are the full implementation:
 
 ```html
 <!doctype html>
-  <html>
-    <head>
-      <meta charset="UTF-8"  />
-      <title>MDN Example - Queryable worker</title>
+<html>
+  <head>
+    <meta charset="UTF-8"  />
+    <title>MDN Example - Queryable worker</title>
     <script type="text/javascript">
-    /*
-      QueryableWorker instances methods:
-        * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc): calls a Worker's queryable function
-        * postMessage(string or JSON Data): see Worker.prototype.postMessage()
-        * terminate(): terminates the Worker
-        * addListener(name, function): adds a listener
-        * removeListener(name): removes a listener
-      QueryableWorker instances properties:
-        * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
-     */
-    function QueryableWorker(url, defaultListener, onError) {
-      const instance = this,
-      const worker = new Worker(url),
-      let listeners = {};
+      // QueryableWorker instances methods:
+      //   * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc): calls a Worker's queryable function
+      //   * postMessage(string or JSON Data): see Worker.prototype.postMessage()
+      //   * terminate(): terminates the Worker
+      //   * addListener(name, function): adds a listener
+      //   * removeListener(name): removes a listener
+      // QueryableWorker instances properties:
+      //   * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
+      function QueryableWorker(url, defaultListener, onError) {
+        const instance = this,
+        const worker = new Worker(url),
+        const listeners = {};
 
-      this.defaultListener = defaultListener || () => {};
+        this.defaultListener = defaultListener || () => {};
 
-      if (onError) {worker.onerror = onError;}
+        if (onError) { worker.onerror = onError; }
 
-      this.postMessage = (message) => {
-        worker.postMessage(message);
-      }
-
-      this.terminate = () => {
-        worker.terminate();
-      }
-
-      this.addListener = (name, listener) => {
-        listeners[name] = listener;
-      }
-
-      this.removeListener = (name) => {
-        delete listeners[name];
-      }
-
-      /*
-        This functions takes at least one argument, the method name we want to query.
-        Then we can pass in the arguments that the method needs.
-      */
-      this.sendQuery = () => {
-        if (arguments.length < 1) {
-          throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
-          return;
+        this.postMessage = (message) => {
+          worker.postMessage(message);
         }
-        worker.postMessage({
-          'queryMethod': arguments[0],
-          'queryMethodArguments': Array.prototype.slice.call(arguments, 1)
-        });
-      }
 
-      worker.onmessage = (event) => {
-        if (event.data instanceof Object &&
-          Object.hasOwn(event.data, 'queryMethodListener') &&
-          Object.hasOwn(event.data, 'queryMethodArguments')) {
-          listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
-        } else {
-          this.defaultListener.call(instance, event.data);
+        this.terminate = () => {
+          worker.terminate();
+        }
+
+        this.addListener = (name, listener) => {
+          listeners[name] = listener;
+        }
+
+        this.removeListener = (name) => {
+          delete listeners[name];
+        }
+
+        // This functions takes at least one argument, the method name we want to query.
+        // Then we can pass in the arguments that the method needs.
+        this.sendQuery = () => {
+          if (arguments.length < 1) {
+            throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
+          }
+          worker.postMessage({
+            'queryMethod': arguments[0],
+            'queryMethodArguments': Array.prototype.slice.call(arguments, 1)
+          });
+        }
+
+        worker.onmessage = (event) => {
+          if (event.data instanceof Object &&
+              Object.hasOwn(event.data, 'queryMethodListener') &&
+              Object.hasOwn(event.data, 'queryMethodArguments')) {
+            listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
+          } else {
+            this.defaultListener.call(instance, event.data);
+          }
         }
       }
-    }
 
-    // your custom "queryable" worker
-    const myTask = new QueryableWorker('my_task.js');
+      // your custom "queryable" worker
+      const myTask = new QueryableWorker('my_task.js');
 
-    // your custom "listeners"
-    myTask.addListener('printStuff', (result) => {
-      document.getElementById('firstLink').parentNode.appendChild(document.createTextNode('The difference is ' + result + '!'));
-    });
+      // your custom "listeners"
+      myTask.addListener('printStuff', (result) => {
+        document.getElementById('firstLink').parentNode.appendChild(document.createTextNode(`The difference is ${result}!`));
+      });
 
-    myTask.addListener('doAlert', (time, unit) => {
-      alert('Worker waited for ' + time + ' ' + unit + ' :-)');
-    });
-</script>
-</head>
-<body>
-  <ul>
-    <li><a id="firstLink" href="javascript:myTask.sendQuery('getDifference', 5, 3);">What is the difference between 5 and 3?</a></li>
-    <li><a href="javascript:myTask.sendQuery('waitSomeTime');">Wait 3 seconds</a></li>
-    <li><a href="javascript:myTask.terminate();">terminate() the Worker</a></li>
-  </ul>
-</body>
+      myTask.addListener('doAlert', (time, unit) => {
+        alert(`Worker waited for ${time} ${unit} :-)`);
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li><a id="firstLink" href="javascript:myTask.sendQuery('getDifference', 5, 3);">What is the difference between 5 and 3?</a></li>
+      <li><a href="javascript:myTask.sendQuery('waitSomeTime');">Wait 3 seconds</a></li>
+      <li><a href="javascript:myTask.terminate();">terminate() the Worker</a></li>
+    </ul>
+  </body>
 </html>
 ```
 
@@ -523,11 +514,12 @@ Here are the full implementation:
 const queryableFunctions = {
   // example #1: get the difference between two numbers:
   getDifference(nMinuend, nSubtrahend) {
-      reply('printStuff', nMinuend - nSubtrahend);
+    reply('printStuff', nMinuend - nSubtrahend);
   },
+  
   // example #2: wait three seconds
   waitSomeTime() {
-      setTimeout(() => { reply('doAlert', 3, 'seconds'); }, 3000);
+    setTimeout(() => { reply('doAlert', 3, 'seconds'); }, 3000);
   }
 };
 
@@ -539,7 +531,7 @@ function defaultReply(message) {
 }
 
 function reply() {
-  if (arguments.length < 1) { throw new TypeError('reply - not enough arguments'); return; }
+  if (arguments.length < 1) { throw new TypeError('reply - not enough arguments'); }
   postMessage({ 'queryMethodListener': arguments[0], 'queryMethodArguments': Array.prototype.slice.call(arguments, 1) });
 }
 
@@ -576,49 +568,55 @@ There is not an "official" way to embed the code of a worker within a web page, 
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8" />
-<title>MDN Example - Embedded worker</title>
-<script type="text/js-worker">
-  // This script WON'T be parsed by JS engines because its MIME type is text/js-worker.
-  const myVar = 'Hello World!';
-  // Rest of your worker code goes here.
-</script>
-<script type="text/javascript">
-  // This script WILL be parsed by JS engines because its MIME type is text/javascript.
-  function pageLog(sMsg) {
-    // Use a fragment: browser will only render/reflow once.
-    let oFragm = document.createDocumentFragment();
-    oFragm.appendChild(document.createTextNode(sMsg));
-    oFragm.appendChild(document.createElement('br'));
-    document.querySelector('#logDisplay').appendChild(oFragm);
-  }
-</script>
-<script type="text/js-worker">
-  // This script WON'T be parsed by JS engines because its MIME type is text/js-worker.
-  onmessage = (oEvent) => {
-    postMessage(myVar);
-  };
-  // Rest of your worker code goes here.
-</script>
-<script type="text/javascript">
-  // This script WILL be parsed by JS engines because its MIME type is text/javascript.
+  <head>
+    <meta charset="UTF-8" />
+    <title>MDN Example - Embedded worker</title>
+    <script type="text/js-worker">
+      // This script WON'T be parsed by JS engines because its MIME type is text/js-worker.
+      const myVar = 'Hello World!';
+      // Rest of your worker code goes here.
+    </script>
+    <script type="text/javascript">
+      // This script WILL be parsed by JS engines because its MIME type is text/javascript.
+      function pageLog(sMsg) {
+        // Use a fragment: browser will only render/reflow once.
+        const frag = document.createDocumentFragment();
+        frag.appendChild(document.createTextNode(sMsg));
+        frag.appendChild(document.createElement('br'));
+        document.querySelector('#logDisplay').appendChild(frag);
+      }
+    </script>
+    <script type="text/js-worker">
+      // This script WON'T be parsed by JS engines because its MIME type is text/js-worker.
+      onmessage = (event) => {
+        postMessage(myVar);
+      };
+      // Rest of your worker code goes here.
+    </script>
+    <script type="text/javascript">
+      // This script WILL be parsed by JS engines because its MIME type is text/javascript.
 
-  // In the past blob builder existed, but now we use Blob
-  const blob = new Blob(Array.prototype.map.call(document.querySelectorAll('script[type=\'text\/js-worker\']'), (oScript) => { return oScript.textContent; }),{type: 'text/javascript'});
+      // In the past blob builder existed, but now we use Blob
+      const blob = new Blob(Array.prototype.map.call(
+        document.querySelectorAll("script[type='text\/js-worker']"),
+        (script) => { return oScript.textContent; }), 
+        { type: 'text/javascript' }
+      );
 
-  // Creating a new document.worker property containing all our "text/js-worker" scripts.
-  document.worker = new Worker(window.URL.createObjectURL(blob));
+      // Creating a new document.worker property containing all our "text/js-worker" scripts.
+      document.worker = new Worker(window.URL.createObjectURL(blob));
 
-  document.worker.onmessage = (oEvent) => {
-    pageLog('Received: ' + oEvent.data);
-  };
+      document.worker.onmessage = (event) => {
+        pageLog(`Received: ${event.data}`);
+      };
 
-  // Start the worker.
-  window.onload = () => { document.worker.postMessage(''); };
-</script>
-</head>
-<body><div id="logDisplay"></div></body>
+      // Start the worker.
+      window.onload = () => { document.worker.postMessage(''); };
+    </script>
+  </head>
+  <body>
+    <div id="logDisplay"></div>
+  </body>
 </html>
 ```
 
@@ -628,7 +626,7 @@ It is also worth noting that you can also convert a function into a Blob, then g
 
 ```js
 function fn2workerURL(fn) {
-  const blob = new Blob([`(${fn.toString()})()`], {type: 'text/javascript'})
+  const blob = new Blob([`(${fn.toString()})()`], { type: 'text/javascript' })
   return URL.createObjectURL(blob)
 }
 ```
@@ -647,17 +645,15 @@ The following JavaScript code is stored in the "fibonacci.js" file referenced by
 
 ```js
 self.onmessage = (e) => {
-  let userNum = Number(e.data);
+  const userNum = Number(e.data);
   fibonacci(userNum);
 }
 
-
 function fibonacci(num){
-  let a = 1, b = 0, temp;
+  let a = 1;
+  let b = 0;
   while (num >= 0){
-    temp = a;
-    a = a + b;
-    b = temp;
+    [a, b] = [a+b, a];
     num--;
   }
 
@@ -686,48 +682,45 @@ The worker sets the property `onmessage` to a function which will receive messag
     </style>
   </head>
   <body>
+    <form>
+      <div>
+        <label for="number">Enter a number that is an index position in the fibonacci sequence to see what number is in that position (e.g. enter 5 and you'll get a result of 8 — fibonacci index position 5 is 8).</label>
+        <input type="number" id="number">
+      </div>
+      <div>
+        <input type="submit">
+      </div>
+    </form>
 
-  <form>
-    <div>
-      <label for="number">Enter a number that is an index position in the fibonacci sequence to see what number is in that position (e.g. enter 5 and you'll get a result of 8 — fibonacci index position 5 is 8).</label>
-      <input type="number" id="number">
-    </div>
-    <div>
-      <input type="submit">
-    </div>
-  </form>
+    <p id="result"></p>
 
-  <p id="result"></p>
+    <script>
+      const form = document.querySelector('form');
+      const input = document.querySelector('input[type="number"]');
+      const result = document.querySelector('p#result');
+      const worker = new Worker('fibonacci.js');
 
-  <script language="javascript">
-    let form = document.querySelector('form');
-    let input = document.querySelector('input[type="number"]');
-    let result = document.querySelector('p#result');
-    let worker = new Worker('fibonacci.js');
+      worker.onmessage = (event) => {
+        result.textContent = event.data;
+        console.log(`Got: ${event.data}`);
+      };
 
-    worker.onmessage = (event) => {
-      result.textContent = event.data;
-      console.log('Got: ' + event.data + '\n');
-    };
+      worker.onerror = (error) => {
+        console.log(`Worker error: ${error.message`);
+        throw error;
+      };
 
-    worker.onerror = (error) => {
-      console.log('Worker error: ' + error.message + '\n');
-      throw error;
-    };
-
-    form.onsubmit = (e) => {
-      e.preventDefault();
-      worker.postMessage(input.value);
-      input.value = '';
-    }
-
-  </script>
+      form.onsubmit = (e) => {
+        e.preventDefault();
+        worker.postMessage(input.value);
+        input.value = '';
+      }
+    </script>
   </body>
 </html>
-
 ```
 
-The web page creates a `div` element with the ID `result` , which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `div` element, and the `onerror` handler is set to log the error message to the devtools console.
+The web page creates a `<div>` element with the ID `result` , which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<div>` element, and the `onerror` handler is set to log the error message to the devtools console.
 
 Finally, a message is sent to the worker to start it.
 
