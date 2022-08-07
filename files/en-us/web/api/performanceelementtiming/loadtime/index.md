@@ -28,7 +28,7 @@ In this example calling `entry.loadTime` returns the loadTime of the image eleme
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  const entries = list.getEntries().forEach((entry) => {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.loadTime);
     }
