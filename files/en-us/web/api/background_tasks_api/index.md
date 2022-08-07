@@ -34,43 +34,6 @@ Because idle callbacks are intended to give your code a way to cooperate with th
 - **Avoid tasks whose run time can't be predicted.** Your idle callback should avoid doing anything that could take an unpredictable amount of time. For example, anything which might affect layout should be avoided. You should also avoid resolving or rejecting {{jsxref("Promise")}}s, since that would invoke the handler for that promise's resolution or rejection as soon as your callback returns.
 - **Use timeouts when you need to, but only when you need to.** Using timeouts can ensure that your code runs in a timely manner, but it can also allow you to cause lag or animation stutters by mandating that the browser call you when there's not enough time left for you to run without disrupting performance.
 
-### Falling back to setTimeout
-
-Because the Background Tasks API is fairly new, your code may need to be able to work on browsers that don't yet support it. You can do so with a simple shim that uses {{domxref("setTimeout()")}} as a fallback option. This isn't a {{Glossary("polyfill")}}, since it's not functionally identical; `setTimeout()` doesn't let you make use of idle periods, but instead runs your code when possible, leaving us to do the best we can to avoid causing the user to experience performance lag.
-
-```js
-window.requestIdleCallback = window.requestIdleCallback || ((handler) => {
-  let startTime = Date.now();
-
-  return setTimeout(() => {
-    handler({
-      didTimeout: false,
-      timeRemaining() {
-        return Math.max(0, 50.0 - (Date.now() - startTime));
-      }
-    });
-  }, 1);
-});
-```
-
-If {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}} is undefined, we create it here. The function begins by recording the time at which our implementation was called. We'll be using that to compute the value returned by our shim for {{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}}.
-
-Then we call {{domxref("setTimeout()")}}, passing into it a function which runs the callback passed into our implementation of `requestIdleCallback()`. The callback is passed an object which conforms to {{domxref("IdleDeadline")}}, with {{domxref("IdleDeadline.didTimeout", "didTimeout")}} set to `false` and a {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} method which is implemented to give the callback 50 milliseconds of time to begin with. Each time `timeRemaining()` is called, it subtracts the elapsed time from the original 50 milliseconds to determine the amount of time left.
-
-As a result, while our shim doesn't constrain itself to the amount of idle time left in the current event loop pass like the true `requestIdleCallback()`, it does at least limit the callback to no more than 50 milliseconds of run time per pass.
-
-The implementation of our shim for {{domxref("Window.cancelIdleCallback", "cancelIdleCallback()")}} is much simpler:
-
-```js
-window.cancelIdleCallback = window.cancelIdleCallback || ((id) => {
-  clearTimeout(id);
-});
-```
-
-If `cancelIdleCallback()` isn't defined, this creates one which passes the specified callback ID through to {{domxref("clearTimeout()")}}.
-
-Now your code will work even on browsers that don't support the Background Tasks API, albeit not as efficiently.
-
 ## Interfaces
 
 The Background Tasks API adds only one new interface:
