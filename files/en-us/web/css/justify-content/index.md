@@ -155,10 +155,9 @@ justify-content: unset;
 ```
 
 ```js hidden
-var justifyContent = document.getElementById("justifyContent");
+const justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", (evt) => {
-  document.getElementById("container").style.justifyContent =
-      evt.target.value;
+  document.getElementById("container").style.justifyContent = evt.target.value;
 });
 ```
 
