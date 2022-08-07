@@ -53,7 +53,7 @@ Here's the HTML structure we will use.
 <script src="playcanvas-latest.js"></script>
 <canvas id="application-canvas"></canvas>
 <script>
-    var canvas = document.getElementById("application-canvas");
+    const canvas = document.getElementById("application-canvas");
     /* all our JavaScript code goes here */
 </script>
 </body>
@@ -69,7 +69,7 @@ Before reading on, copy this code to a new text file and save it in your working
 To begin developing our game we have to create the PlayCanvas application first (using the given {{htmlelement("canvas")}} element), and then start the update loop. Add the following code to the bottom of your second {{htmlelement("script")}} element:
 
 ```js
-var app = new pc.Application(canvas);
+const app = new pc.Application(canvas);
 app.start();
 ```
 
@@ -87,7 +87,7 @@ app.setCanvasResolution(pc.RESOLUTION_AUTO);
 Now when the setup code is in place we need to think about implementing the standard scene components: camera, lights and objects. Let's start with the camera — add these lines to your code, below the previous ones.
 
 ```js
-var camera = new pc.Entity();
+const camera = new pc.Entity();
 camera.addComponent("camera", {
     clearColor: new pc.Color(0.8, 0.8, 0.8)
 });
@@ -111,7 +111,7 @@ Try saving the file and loading it in your browser. You should now see a gray wi
 Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development PlayCanvas provides a bunch of predefined primitives that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Drawing everything for given shape is taken care of by the engine, so we can focus on the high level coding. Let's start by defining the geometry for a cube shape — add the following new code below your previous additions:
 
 ```js
-var box = new pc.Entity();
+const box = new pc.Entity();
 box.addComponent("model", { type: "box" });
 app.root.addChild(box);
 box.rotate(10, 15, 0);
@@ -126,7 +126,7 @@ The cube is visible, but it is completely. To make it look better we need to shi
 The basic light types in PlayCanvas are directional and ambient. The first type is a directional light placed somewhere on the scene while the second one reflects the light from the first type, so it looks more natural; this can be set globally. Again, add the new code below your previous additions.
 
 ```js
-var light = new pc.Entity();
+const light = new pc.Entity();
 light.addComponent('light');
 app.root.addChild(light);
 light.rotate(45, 0, 0);
@@ -145,7 +145,7 @@ The code above assign a dark grey ambient light for the whole scene. The box loo
 The basic PlayCanvas material is called [PhongMaterial](https://developer.playcanvas.com/en/user-manual/assets/materials/phong-material/) — add the following lines below the previous code.
 
 ```js
-var boxMaterial = new pc.PhongMaterial();
+const boxMaterial = new pc.PhongMaterial();
 boxMaterial.diffuse.set(0, 0.58, 0.86);
 boxMaterial.update();
 box.model.model.meshInstances[0].material = boxMaterial;
@@ -182,7 +182,7 @@ Now let's add a new shape — how about a cylinder?
 Add the following lines at the bottom of your JavaScript code:
 
 ```js
-var cylinder = new pc.Entity();
+const cylinder = new pc.Entity();
 cylinder.addComponent("model", { type: "cylinder" });
 app.root.addChild(cylinder);
 cylinder.rotate(15, 0, 0);
@@ -191,7 +191,7 @@ cylinder.rotate(15, 0, 0);
 This looks very similar to the code we used for creating a cube, but instead of the `box` component we are adding a `cylinder`. It is also rotated around the `x` axis to show it's actually a 3D shape. To make the cylinder have a color, let's say yellow, we need to create the material for it, as before. Add the following lines:
 
 ```js
-var cylinderMaterial = new pc.PhongMaterial();
+const cylinderMaterial = new pc.PhongMaterial();
 cylinderMaterial.diffuse.set(1, 0.58, 0);
 cylinderMaterial.update();
 cylinder.model.model.meshInstances[0].material = cylinderMaterial;
@@ -202,12 +202,12 @@ cylinder.model.model.meshInstances[0].material = cylinderMaterial;
 Creating a cone and its material is done in almost exactly the same way as we did for the cylinder. Add the following code, again, at the bottom of your script:
 
 ```js
-var cone = new pc.Entity();
+const cone = new pc.Entity();
 cone.addComponent("model", { type: "cone" });
 app.root.addChild(cone);
 cone.translate(2, 0, 0);
 
-var coneMaterial = new pc.PhongMaterial();
+const coneMaterial = new pc.PhongMaterial();
 coneMaterial.diffuse.set(0.9, 0.9, 0.9);
 coneMaterial.update();
 cone.model.model.meshInstances[0].material = coneMaterial;
@@ -226,8 +226,8 @@ This works, but it is a bit boring. In a game something is usually happening —
 We already used `translate` or `rotate` to adjust the position of the shapes; we could also change their positions directly with `setPosition`, or scale them. To show actual animation, we need to make changes to these values inside the rendering loop, so they are updated on every frame. There's a special `update` event that we can use for that — add the following code just below the previous additions:
 
 ```js
-var timer = 0;
-app.on("update", function (deltaTime) {
+let timer = 0;
+app.on("update", (deltaTime) => {
     timer += deltaTime;
     // code executed on every frame
 });

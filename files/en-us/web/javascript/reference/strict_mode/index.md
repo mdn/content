@@ -45,10 +45,14 @@ Likewise, to invoke strict mode for a function, put the _exact_ statement `"use 
 function myStrictFunction() {
   // Function-level strict mode syntax
   'use strict';
-  function nested() { return 'And so am I!'; }
-  return "Hi! I'm a strict mode function! " + nested();
+  function nested() {
+    return 'And so am I!';
+  }
+  return `Hi! I'm a strict mode function! ${nested()}`;
 }
-function myNotStrictFunction() { return "I'm not strict."; }
+function myNotStrictFunction() {
+  return "I'm not strict.";
+}
 ```
 
 In strict mode, starting with ES2015, functions inside blocks are scoped to that block. Prior to ES2015, block-level functions were forbidden in strict mode.
@@ -127,7 +131,7 @@ function sum(a, a, c) { // !!! syntax error
 }
 ```
 
-Fifth, a strict mode in ECMAScript 5 [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). Outside strict mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. In ECMAScript 2015, octal literals are supported by prefixing a number with "`0o`"; for example:
+Fifth, a strict mode in ECMAScript 5 [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). Outside strict mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. In ECMAScript 2015, octal literals are supported by prefixing a number with `0o`; for example:
 
 ```js
 const a = 0o10; // ES2015: Octal

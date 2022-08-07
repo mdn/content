@@ -83,7 +83,7 @@ You can read details of the TLS handshake, but can't modify them or override the
 
 To modify the HTTP response bodies for a request, call {{WebExtAPIRef("webRequest.filterResponseData")}}, passing it the ID of the request. This returns a {{WebExtAPIRef("webRequest.StreamFilter")}} object that you can use to examine and modify the data as it is received by the browser.
 
-To do this, you must have the `"webRequestBlocking"` API permission as well as the `"webRequest"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)for the relevant host.
+To do this, you must have the `"webRequestBlocking"` API permission as well as the `"webRequest"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the relevant host.
 
 ## Types
 

@@ -100,7 +100,7 @@ browser.contextMenus.create({
   title: "Eat this page"
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "eat-page") {
     browser.tabs.executeScript({
       file: "page-eater.js"
@@ -202,7 +202,7 @@ function onExecuted(result) {
     querying.then(messageTab);
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "eat-page") {
     let executing = browser.tabs.executeScript({
       file: "page-eater.js"

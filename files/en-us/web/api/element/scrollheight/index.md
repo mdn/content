@@ -142,7 +142,7 @@ function checkReading () {
   checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
 }
 
-onload = function () {
+onload = () => {
   const oToBeRead = document.getElementById("rules");
   checkReading.noticeBox = document.createElement("span");
   document.registration.accept.checked = false;

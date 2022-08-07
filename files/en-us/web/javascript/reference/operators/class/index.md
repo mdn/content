@@ -48,7 +48,7 @@ There are several differences between class expressions and
 
 The `constructor` method is optional. Classes generated with class
 expressions will always respond to {{jsxref("Operators/typeof", "typeof")}} with the
-value "`function`".
+value `"function"`.
 
 ```js
 'use strict';

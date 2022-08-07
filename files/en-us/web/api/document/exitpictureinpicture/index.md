@@ -44,7 +44,7 @@ This example causes the current document to exit picture-in-picture mode wheneve
 mouse button is clicked within it.
 
 ```js
-document.onclick = function (event) {
+document.onclick = (event) => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture()
       .then(() => console.log("Document Exited from Picture-in-Picture mode"))

@@ -238,11 +238,11 @@ provided.
   `50` are parsed as 21st century years. For example,
   `04/16/17`, previously parsed as April 16, 1917, will be April 16, 2017
   now. To avoid any interoperability issues or ambiguous years, it is recommended to use
-  the ISO 8601 format like "`2017-04-16`" ([bug 1265136](https://bugzilla.mozilla.org/show_bug.cgi?id=1265136)).
+  the ISO 8601 format like `"2017-04-16"` ([bug 1265136](https://bugzilla.mozilla.org/show_bug.cgi?id=1265136)).
 - Google Chrome will accept a numerical string as a valid
   `dateString` parameter. This means that, for instance, while
   `!!Date.parse("42")` evaluates to `false` in Firefox, it
-  evaluates to `true` in Google Chrome because "`42`" is
+  evaluates to `true` in Google Chrome because `"42"` is
   interpreted as the first of January 2042.
 
 ## See also

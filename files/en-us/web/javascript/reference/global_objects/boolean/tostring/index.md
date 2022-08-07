@@ -38,14 +38,14 @@ JavaScript calls the `toString()` method automatically when a
 {{jsxref("Boolean")}} is referred to in a string concatenation.
 
 For {{jsxref("Boolean")}} objects and values, the built-in `toString()`
-method returns the string "`true`" or "`false`" depending on the
+method returns the string `"true"` or `"false"` depending on the
 value of the boolean object.
 
 ## Examples
 
-### Using `toString()`
+### Using toString()
 
-In the following code, `flag.toString()` returns "`true`":
+In the following code, `flag.toString()` returns `"true"`:
 
 ```js
 const flag = new Boolean(true);

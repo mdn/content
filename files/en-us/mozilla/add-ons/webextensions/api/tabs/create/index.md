@@ -96,7 +96,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let creating = browser.tabs.create({
     url:"https://example.org"
   });

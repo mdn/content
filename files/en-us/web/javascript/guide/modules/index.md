@@ -357,9 +357,8 @@ import * as Module from './modules/module.js';
 This grabs all the exports available inside `module.js`, and makes them available as members of an object `Module`, effectively giving it its own namespace. So for example:
 
 ```js
-Module.function1()
-Module.function2()
-etc.
+Module.function1();
+Module.function2();
 ```
 
 Again, let's look at a real example. If you go to our [module-objects](https://github.com/mdn/js-examples/tree/master/module-examples/module-objects) directory, you'll see the same example again, but rewritten to take advantage of this new syntax. In the modules, the exports are all in the following simple form:
@@ -542,7 +541,7 @@ Let's take a look at an example. You can find all the files and code described i
 
 Firstly we'll declare our color palette in a separate [`colors.json`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/data/colors.json) file:
 
-```js
+```json
 {
   "yellow": "#F4D03F",
   "green": "#52BE80",

@@ -81,7 +81,7 @@ The following code traps {{jsxref("Object.defineProperty()")}}.
 ```js
 const p = new Proxy({}, {
   defineProperty(target, prop, descriptor) {
-    console.log('called: ' + prop);
+    console.log(`called: ${prop}`);
     return true;
   }
 });

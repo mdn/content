@@ -424,9 +424,10 @@ Here are the full implementation:
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8"  />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>MDN Example - Queryable worker</title>
     <script type="text/javascript">
       // QueryableWorker instances methods:
@@ -567,16 +568,17 @@ There is not an "official" way to embed the code of a worker within a web page, 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>MDN Example - Embedded worker</title>
     <script type="text/js-worker">
       // This script WON'T be parsed by JS engines because its MIME type is text/js-worker.
       const myVar = 'Hello World!';
       // Rest of your worker code goes here.
     </script>
-    <script type="text/javascript">
+    <script>
       // This script WILL be parsed by JS engines because its MIME type is text/javascript.
       function pageLog(sMsg) {
         // Use a fragment: browser will only render/reflow once.
@@ -593,7 +595,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
       };
       // Rest of your worker code goes here.
     </script>
-    <script type="text/javascript">
+    <script>
       // This script WILL be parsed by JS engines because its MIME type is text/javascript.
 
       // In the past blob builder existed, but now we use Blob

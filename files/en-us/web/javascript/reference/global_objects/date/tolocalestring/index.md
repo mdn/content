@@ -55,7 +55,7 @@ In basic use without specifying a locale, a formatted string in the default loca
 with default options is returned.
 
 ```js
-let date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleString() without arguments depends on the
 // implementation, the default locale, and the default time zone
@@ -89,7 +89,7 @@ sure to specify that language (and possibly some fallback languages) using the
 `locales` argument:
 
 ```js
-let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Formats below assume the local time zone of the locale;
 // America/Los_Angeles for the US
@@ -127,10 +127,15 @@ The results provided by `toLocaleString()` can be customized using the
 `options` argument:
 
 ```js
-let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Request a weekday along with a long date
-let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+};
 
 console.log(date.toLocaleString('de-DE', options));
 // → "Donnerstag, 20. Dezember 2012"

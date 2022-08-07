@@ -111,7 +111,7 @@ Sample usage:
 
 ```js
 affixScriptToHead("myScript1.js");
-affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js\" has been correctly loaded."); });
+affixScriptToHead("myScript2.js", () => { alert("The script \"myScript2.js\" has been correctly loaded."); });
 ```
 
 ### Checking if a script type is supported

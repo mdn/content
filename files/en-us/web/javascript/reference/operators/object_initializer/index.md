@@ -111,7 +111,7 @@ const a = 'foo';
 const b = 42;
 const c = {};
 
-let o = {
+const o = {
   a: a,
   b: b,
   c: c,
@@ -203,17 +203,17 @@ For more information and examples about methods, see [method definitions](/en-US
 
 ### Computed property names
 
-Starting with ECMAScript 2015, the object initializer syntax also supports computed property names. That allows you to put an expression in brackets `[]`, that will be computed and used as the property name. This is reminiscent of the bracket notation of the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax, which you may have used to read and set properties already.
+The object initializer syntax also supports computed property names. That allows you to put an expression in brackets `[]`, that will be computed and used as the property name. This is reminiscent of the bracket notation of the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax, which you may have used to read and set properties already.
 
 Now you can use a similar syntax in object literals, too:
 
 ```js
-// Computed property names (ES2015)
+// Computed property names
 let i = 0;
 const a = {
-  ['foo' + ++i]: i,
-  ['foo' + ++i]: i,
-  ['foo' + ++i]: i,
+  [`foo${++i}`]: i,
+  [`foo${++i}`]: i,
+  [`foo${++i}`]: i,
 };
 
 console.log(a.foo1); // 1
@@ -230,7 +230,7 @@ console.log(obj["A,B,C"]); // "Hello"
 const param = 'size';
 const config = {
   [param]: 12,
-  ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4,
+  [`mobile${param.charAt(0).toUpperCase()}${param.slice(1)}`]: 4,
 };
 
 console.log(config); // {size: 12, mobileSize: 4}
@@ -238,7 +238,7 @@ console.log(config); // {size: 12, mobileSize: 4}
 
 ### Spread properties
 
-The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (stage 4) adds [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) properties to object literals. It copies own enumerable properties from a provided object onto a new object.
+Object literals support the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). It copies own enumerable properties from a provided object onto a new object.
 
 Shallow-cloning (excluding `prototype`) or merging objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.
 

@@ -123,14 +123,14 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 
 ### Defining a function that creates HTML lists
 
-This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is "`u`" if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Element/ul), or "`o`" if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Element/ol). The function is defined as follows:
+This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is `"u"` if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Element/ul), or `"o"` if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Element/ol). The function is defined as follows:
 
 ```js
 function list(type) {
-  let html = '<' + type + 'l><li>';
+  let html = `<${type}l><li>`;
   const args = Array.prototype.slice.call(arguments, 1);
   html += args.join('</li><li>');
-  html += '</li></' + type + 'l>'; // end list
+  html += `</li></${type}l>`; // end list
   return html;
 }
 ```

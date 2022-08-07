@@ -192,7 +192,7 @@ The following code logs a line for each element in an array:
 
 ```js
 const logArrayElements = (element, index, array) => {
-  console.log('a[' + index + '] = ' + element);
+  console.log(`a[${index}] = ${element}`);
 };
 
 // Notice that index 2 is skipped, since there is no item at

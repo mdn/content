@@ -28,8 +28,7 @@ A string containing a {{HTMLElement("strike")}} HTML element.
 
 ## Description
 
-The `strike()` method embeds a string in a `<strike>`
-element: "`<strike>str</strike>`".
+The `strike()` method embeds a string in a `<strike>` element: `"<strike>str</strike>"`.
 
 ## Examples
 

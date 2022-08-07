@@ -46,7 +46,7 @@ This example causes the current document to toggle in and out of a fullscreen
 presentation whenever the mouse button is clicked within it.
 
 ```js
-document.onclick = function (event) {
+document.onclick = (event) => {
   if (document.fullscreenElement) {
     document.exitFullscreen()
       .then(() => console.log("Document Exited from Full screen mode"))

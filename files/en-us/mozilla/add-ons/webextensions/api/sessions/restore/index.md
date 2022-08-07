@@ -61,7 +61,7 @@ function onError(error) {
   console.log(error);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let gettingSessions = browser.sessions.getRecentlyClosed({
     maxResults: 1
   });

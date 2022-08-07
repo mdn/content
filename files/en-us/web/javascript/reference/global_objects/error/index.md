@@ -87,9 +87,9 @@ You can handle the error using the {{JSxRef("Statements/try...catch", "try...cat
 
 ```js
 try {
-  throw new Error('Whoops!')
+  throw new Error('Whoops!');
 } catch (e) {
-  console.error(e.name + ': ' + e.message)
+  console.error(`${e.name}: ${e.message}`);
 }
 ```
 
@@ -99,12 +99,12 @@ You can choose to handle only specific error types by testing the error type wit
 
 ```js
 try {
-  foo.bar()
+  foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(`${e.name}: ${e.message}`);
   } else if (e instanceof RangeError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(`${e.name}: ${e.message}`);
   }
   // etc.
 

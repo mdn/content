@@ -23,7 +23,7 @@ Link: <uri-reference>; param1=value1; param2="value2"
 ```
 
 - `<uri-reference>`
-  - : The URI reference, must be enclosed between `<` and `>`.
+  - : The URI reference, must be enclosed between `<` and `>` and [percent encoded](/en-US/docs/Glossary/percent-encoding).
 
 ### Parameters
 
@@ -39,6 +39,18 @@ Link: <https://example.com>; rel="preconnect"
 
 ```http example-bad
 Link: https://bad.example; rel="preconnect"
+```
+
+### Encoding URLs
+
+The URI (absolute or relative) must encode char codes greater than 255:
+
+```http example-good
+Link: <https://example.com/%E8%8B%97%E6%9D%A1>; rel="preconnect"
+```
+
+```http example-bad
+Link: <https://example.com/苗条>; rel="preconnect"
 ```
 
 ### Specifying multiple links

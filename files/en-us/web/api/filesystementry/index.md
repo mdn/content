@@ -35,10 +35,10 @@ window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFile
 // …
 
 // Opening a file system with temporary storage
-window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, function(fs) {
-  fs.root.getFile('log.txt', {}, function(fileEntry) {
+window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, (fs) => {
+  fs.root.getFile('log.txt', {}, (fileEntry) => {
 
-    fileEntry.remove(function() {
+    fileEntry.remove(() => {
       console.log('File removed.');
     }, onError);
 

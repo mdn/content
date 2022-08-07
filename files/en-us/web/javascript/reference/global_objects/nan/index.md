@@ -65,7 +65,7 @@ Number.isNaN(1n); // false
 Additionally, some array methods cannot find `NaN`, while others can.
 
 ```js
-let arr = [2, 4, NaN, 12];
+const arr = [2, 4, NaN, 12];
 arr.indexOf(NaN);                      // -1 (false)
 arr.includes(NaN);                     // true
 arr.findIndex((n) => Number.isNaN(n));   // 2

@@ -59,8 +59,8 @@ For example, the lack of [`Object.prototype.toString()`](/en-US/docs/Web/JavaScr
 const normalObj = {};   // create a normal object
 const nullProtoObj = Object.create(null); // create an object with "null" prototype
 
-console.log("normalObj is: " + normalObj); // shows "normalObj is: [object Object]"
-console.log("nullProtoObj is: " + nullProtoObj); // throws error: Cannot convert object to primitive value
+console.log(`normalObj is: ${normalObj}`); // shows "normalObj is: [object Object]"
+console.log(`nullProtoObj is: ${nullProtoObj}`); // throws error: Cannot convert object to primitive value
 
 alert(normalObj); // shows [object Object]
 alert(nullProtoObj); // throws error: Cannot convert object to primitive value
@@ -85,7 +85,7 @@ We can add the `toString` method back to the null-prototype object by simply ass
 nullProtoObj.toString = Object.prototype.toString; // since new object lacks toString, add the original generic one back
 
 console.log(nullProtoObj.toString()); // shows "[object Object]"
-console.log("nullProtoObj is: " + nullProtoObj); // shows "nullProtoObj is: [object Object]"
+console.log(`nullProtoObj is: ${nullProtoObj}`); // shows "nullProtoObj is: [object Object]"
 ```
 
 Unlike normal objects, in which `toString()` is on the object's prototype, the `toString()` method here is an own property of `nullProtoObj`. This is because `nullProtoObj` has no (`null`) prototype.

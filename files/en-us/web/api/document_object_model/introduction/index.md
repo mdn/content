@@ -96,7 +96,7 @@ and then adds it to the tree for the document:
   <head>
     <script>
        // run this function when the document is loaded
-       window.onload = function() {
+       window.onload = () => {
 
          // create a couple of elements in an otherwise empty HTML page
          const heading = document.createElement("h1");

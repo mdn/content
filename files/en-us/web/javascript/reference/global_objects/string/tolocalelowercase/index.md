@@ -62,7 +62,7 @@ follow the default case mappings in Unicode, there may be a different result.
 '\u0130'.toLocaleLowerCase('tr') === 'i';    // true
 '\u0130'.toLocaleLowerCase('en-US') === 'i'; // false
 
-let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
+const locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
 '\u0130'.toLocaleLowerCase(locales) === 'i'; // true
 ```
 

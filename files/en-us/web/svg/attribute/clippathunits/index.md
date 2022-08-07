@@ -36,7 +36,7 @@ html,body,svg { height:100% }
   <rect id="r3" x="55" y="55" width="45" height="45" />
   <rect id="r4" x="55" y="0"  width="45" height="45" />
 
-  <!-- The first 3 rect are clipped with useSpaceOnUse units -->
+  <!-- The first 3 rect are clipped with userSpaceOnUse units -->
   <use clip-path="url(#myClip1)" xlink:href="#r1" fill="red" />
   <use clip-path="url(#myClip1)" xlink:href="#r2" fill="red" />
   <use clip-path="url(#myClip1)" xlink:href="#r3" fill="red" />

@@ -24,7 +24,7 @@ The **`Int8Array`** typed array represents an array of twos-complement 8-bit sig
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int8Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of an `Int8Array`.
 - {{jsxref("TypedArray.name", "Int8Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Int8Array` type: "`Int8Array`".
+  - : Returns the string value of the constructor name. In the case of the `Int8Array` type: `"Int8Array"`.
 
 ## Static methods
 

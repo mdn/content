@@ -50,7 +50,7 @@ const iframe = document.querySelector('iframe');
 const iframeImages = iframe.contentDocument.querySelectorAll('img');
 const newParent = document.getElementById('images');
 
-iframeImages.forEach(function(imgEl) {
+iframeImages.forEach((imgEl) => {
   newParent.appendChild(document.adoptNode(imgEl));
 });
 ```

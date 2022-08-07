@@ -31,7 +31,7 @@ function processData(d) {
    // Process the data …
 }
 
-dragTarget.addEventListener("dragend", function(ev) {
+dragTarget.addEventListener("dragend", (ev) => {
    // Call the drag and drop data processor
    if (ev.dataTransfer !== null) processData(ev.dataTransfer);
  }, false);

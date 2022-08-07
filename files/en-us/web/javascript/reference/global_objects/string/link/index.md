@@ -56,7 +56,7 @@ to the Mozilla Developer Network.
 const hotText = 'MDN';
 const url = 'https://developer.mozilla.org/';
 
-console.log('Click to return to ' + hotText.link(url));
+console.log(`Click to return to ${hotText.link(url)}`);
 // Click to return to <a href="https://developer.mozilla.org/">MDN</a>
 ```
 

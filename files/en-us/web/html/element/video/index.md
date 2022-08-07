@@ -415,7 +415,7 @@ This example builds on the last one, offering three different sources for the me
 
 {{EmbedLiveSample('Multiple sources', '', '400')}}
 
-First [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) is tried. If that can't be played, then [MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) is tried. Finally, [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
+First [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) is tried. If that can't be played, then AVI is tried. Finally, [MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
 
 Some media file types let you provide more specific information using the [`codecs`](/en-US/docs/Web/Media/Formats/codecs_parameter) parameter as part of the file's type string. A relatively simple example is `video/webm; codecs="vp8, vorbis"`, which says that the file is a [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) video using [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) for its video and [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) for audio.
 

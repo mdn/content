@@ -62,18 +62,17 @@ new Intl.Collator(locales, options)
         - `trad`
         - `unihan` (Chinese, Japanese, and Korean; not available in Chrome or Edge)
         - `zhuyin` (Chinese)
-        > **Note:**  This option can be also be set through the `options` property "`collation`".
+        This option can be also be set through the `options` property `collation`.
     - `kn`
       - : Whether numeric collation should be used, such that "1" < "2" <
-        "10". Possible values are "`true`" and "`false`".
+        "10". Possible values are `"true"` and `"false"`.
         This option can be also be set through the `options`
-        property "`numeric`".
+        property `numeric`.
     - `kf`
       - : Whether upper case or lower case should sort first. Possible values are
-        "`upper`", "`lower`", or "`false`" (use
+        `"upper"`, `"lower"`, or `"false"` (use
         the locale's default). This option can be also be set through the
-        `options` property
-        "`caseFirst`".
+        `options` property `caseFirst`.
 
 - `options` {{optional_inline}}
 
@@ -81,32 +80,32 @@ new Intl.Collator(locales, options)
 
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are
-        "`lookup`" and "`best fit`"; the default is
-        "`best fit`". For information about this option, see the
+        `"lookup"` and `"best fit"`; the default is
+        `"best fit"`. For information about this option, see the
         {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
     - `usage`
       - : Whether the comparison is for sorting or for searching for matching
-        strings. Possible values are "`sort`" and
-        "`search`"; the default is "`sort`".
+        strings. Possible values are `"sort"` and
+        `"search"`; the default is `"sort"`.
     - `sensitivity`
 
       - : Which differences in the strings should lead to non-zero result values.
         Possible values are:
 
-        - "`base`": Only strings that differ in base letters
+        - `"base"`: Only strings that differ in base letters
           compare as unequal. Examples: a ≠ b, a = á, a = A.
-        - "`accent`": Only strings that differ in base letters or
+        - `"accent"`: Only strings that differ in base letters or
           accents and other diacritic marks compare as unequal. Examples: a
           ≠ b, a ≠ á, a = A.
-        - "`case`": Only strings that differ in base letters or
+        - `"case"`: Only strings that differ in base letters or
           case compare as unequal. Examples: a ≠ b, a = á, a ≠ A.
-        - "`variant`": Strings that differ in base letters,
+        - `"variant"`: Strings that differ in base letters,
           accents and other diacritic marks, or case compare as unequal.
           Other differences may also be taken into consideration. Examples:
           a ≠ b, a ≠ á, a ≠ A.
 
-        The default is "`variant`" for usage "`sort`";
-        it's locale dependent for usage "`search`".
+        The default is `"variant"` for usage `"sort"`;
+        it's locale dependent for usage `"search"`.
 
     - `ignorePunctuation`
       - : Whether punctuation should be ignored. Possible values are
@@ -125,7 +124,7 @@ new Intl.Collator(locales, options)
     - `caseFirst`
 
       - : Whether upper case or lower case should sort first. Possible values are
-        "`upper`", "`lower`", or "`false`" (use
+        `"upper"`, `"lower"`, or `"false"` (use
         the locale's default). This option can be set through an
         `options` property or through a Unicode extension
         key; if both are provided, the `options` property

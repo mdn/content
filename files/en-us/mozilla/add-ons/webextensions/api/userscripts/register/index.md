@@ -25,7 +25,7 @@ This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 const registeredUserScript = await browser.userScripts.register(
   userScriptOptions       // object
 );
-….
+// …
 await registeredUserScript.unregister();
 ```
 

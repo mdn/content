@@ -42,7 +42,7 @@ cats = Array.prototype.slice.call(cats);
 
 const sharedTimeline = new DocumentTimeline({ originTime: 500 });
 
-cats.forEach(function(cat) {
+cats.forEach((cat) => {
   const catKeyframes = new KeyframeEffect(cat, keyframes, timing);
   const catAnimation = new Animation(catKeyframes, sharedTimeline);
   catAnimation.play();

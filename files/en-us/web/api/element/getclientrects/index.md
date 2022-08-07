@@ -234,7 +234,7 @@ function addClientRectsOverlay(elt) {
   }
 }
 
-(function() {
+(() => {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
   const elt = document.getElementsByClassName('withClientRectsOverlay');

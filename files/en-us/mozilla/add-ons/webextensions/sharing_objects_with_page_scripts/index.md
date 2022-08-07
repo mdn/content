@@ -46,12 +46,12 @@ Let's take a simple example. Suppose a web page loads a script:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
   </head>
   <body>
-    <script type="text/javascript" src="main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
 ```
@@ -247,7 +247,7 @@ ev.propB = "wrapper";                             // define property on xray wra
 ev.wrappedJSObject.propB = "unwrapped";           // define same property on page object
 Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can operate on less privileged objects
   'propC', {
-     get: exportFunction(function() {             // getters must be exported like regular functions
+     get: exportFunction(() => {                  // getters must be exported like regular functions
        return 'propC';
      })
   }

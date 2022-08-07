@@ -8,6 +8,7 @@ tags:
   - Web Bluetooth API
   - Event
   - Reference
+  - Experimental
 browser-compat: api.Bluetooth.availabilitychanged_event
 ---
 {{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}

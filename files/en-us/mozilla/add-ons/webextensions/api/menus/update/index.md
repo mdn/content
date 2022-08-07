@@ -134,7 +134,7 @@ browser.menus.create({
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "do-not-click-me") {
     let updating = browser.menus.update(info.menuItemId, {
       title: "Do not click this button again"

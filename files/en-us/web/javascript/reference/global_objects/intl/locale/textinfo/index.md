@@ -29,13 +29,13 @@ Returns the `Locale` information associated with the Locale data specified in [U
 Return the supported text directions for a given `Locale`.
 
 ```js
-let ar = new Intl.Locale("ar");
+const ar = new Intl.Locale("ar");
 console.log(ar.textInfo); // logs { direction: "rtl" }
 console.log(ar.textInfo.direction); // logs "rtl"
 ```
 
 ```js
-let es = new Intl.Locale("es");
+const es = new Intl.Locale("es");
 console.log(es.textInfo); // logs { direction: "ltr" }
 console.log(es.textInfo.direction); // logs "ltr"
 ```

@@ -90,7 +90,7 @@ function read(callback) {
   const file = fileInput.files.item(0);
   const reader = new FileReader();
 
-  reader.onload = function() {
+  reader.onload = () => {
     callback(reader.result);
   }
 

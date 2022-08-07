@@ -53,8 +53,8 @@ slightly updated version of RFC-822 date stamps.
 ### Using toUTCString()
 
 ```js
-let today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
-let UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
+const today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+const UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 ```
 
 ## Specifications

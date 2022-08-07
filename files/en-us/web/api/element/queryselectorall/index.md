@@ -132,7 +132,7 @@ can use any common looping statement, such as:
 ```js
 const highlightedItems = userList.querySelectorAll(".highlighted");
 
-highlightedItems.forEach(function(userItem) {
+highlightedItems.forEach((userItem) => {
   deleteUser(userItem);
 });
 ```

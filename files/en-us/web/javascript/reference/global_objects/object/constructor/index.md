@@ -47,7 +47,7 @@ function Tree(name) {
 }
 
 const theTree = new Tree('Redwood');
-console.log('theTree.constructor is ' + theTree.constructor);
+console.log(`theTree.constructor is ${theTree.constructor}`);
 ```
 
 This example displays the following output:
@@ -226,8 +226,8 @@ Object.setPrototypeOf(Child.prototype, ParentWithStatic.prototype);
 Object.setPrototypeOf(Child, ParentWithStatic);
 
 Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
-  let position = this.position;
-  let startPosition = this.constructor.getStartPosition();
+  const position = this.position;
+  const startPosition = this.constructor.getStartPosition();
 
   return {
     offsetX: startPosition.x - position.x,

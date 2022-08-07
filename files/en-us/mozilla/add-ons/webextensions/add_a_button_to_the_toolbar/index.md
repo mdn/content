@@ -167,7 +167,7 @@ This is just a bit of styling for our popup.
 Next, create a "choose_page.js" file inside the "popup" directory, and give it these contents:
 
 ```js
-document.addEventListener("click", function(e) {
+document.addEventListener("click", (e) => {
   if (!e.target.classList.contains("page-choice")) {
     return;
   }

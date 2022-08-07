@@ -119,7 +119,7 @@ If your value array might grow into the tens of thousands, use a hybrid strategy
 ```js
 function minOfArray(arr) {
   let min = Infinity;
-  let QUANTUM = 32768;
+  const QUANTUM = 32768;
 
   for (let i = 0; i < arr.length; i += QUANTUM) {
     const submin = Math.min.apply(

@@ -93,7 +93,7 @@ The following statement creates a {{jsxref("Date")}} object with the arguments t
 as UTC instead of local:
 
 ```js
-let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
+const utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
 ```
 
 ## Specifications

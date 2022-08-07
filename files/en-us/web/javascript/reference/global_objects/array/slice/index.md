@@ -84,8 +84,8 @@ If a new element is added to either array, the other array is not affected.
 ### Return a portion of an existing array
 
 ```js
-let fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
-let citrus = fruits.slice(1, 3)
+const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+const citrus = fruits.slice(1, 3);
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
 // citrus contains ['Orange','Lemon']
