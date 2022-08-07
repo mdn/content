@@ -62,6 +62,8 @@ property:
 ```js
 window.pageYOffset === window.scrollY; // always true
 ```
+Setting `pageYOffset` property creates a property with the same name on the platform object. 
+This new property will influences the intial property.
 
 ## Specifications
 
