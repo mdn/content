@@ -39,17 +39,21 @@ An object literal is a list of zero or more pairs of property names and associat
 The following is an example of an object literal. The first element of the `car` object defines a property, `myCar`, and assigns to it a new string, "`Toyota`"; the second element, the `getCar` property, is immediately assigned the result of invoking the function `carTypes('Honda')`; the third element, the `special` property, uses an existing variable (`sales`).
 
 ```js
-var sales = 'BMW';
+const sales = 'BMW';
 
 function carTypes(name) {
   if (name === 'Honda') {
     return name;
   } else {
-    return `Sorry, we don't sell ${name}.";
+    return `Sorry, we don't sell ${name}.`;
   }
 }
 
-var car = { myCar: 'Toyota', getCar: carTypes('Honda'), special: sales };
+const car = {
+  myCar: 'Toyota',
+  getCar: carTypes('Honda'),
+  special: sales,
+};
 
 console.log(car.myCar);   // Toyota
 console.log(car.getCar);  // Honda

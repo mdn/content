@@ -184,7 +184,7 @@ If no parameter is included to specify a joining/delimiting character, a comma i
 If you're writing a function and want to support optional parameters, you can specify default values by adding `=` after the name of the parameter, followed by the default value:
 
 ```js
-function hello(name='Chris') {
+function hello(name = 'Chris') {
   console.log(`Hello ${name}!`);
 }
 
@@ -205,9 +205,9 @@ function myFunction() {
 But you can also create a function that doesn't have a name:
 
 ```js
-function() {
+(function () {
   alert('hello');
-}
+})
 ```
 
 This is called an **anonymous function**, because it has no name. You'll often see anonymous functions when a function expects to receive another function as a parameter. In this case the function parameter is often passed as an anonymous function.

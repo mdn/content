@@ -199,15 +199,15 @@ To see what happens, try entering the following snippets of code into the consol
 
 Now try entering the following incorrect versions of the code and see what you get.
 
-1. ```js
+1. ```js example-bad
     alert('hello!);
     ```
 
-2. ```js
+2. ```js example-bad
     document.cheeseSelector('html').style.backgroundColor = 'purple';
     ```
 
-3. ```js
+3. ```js example-bad
     const myWordmark = document.createElement('img');
     myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
     document.querySelector('h1').appendChild(myWordmark);

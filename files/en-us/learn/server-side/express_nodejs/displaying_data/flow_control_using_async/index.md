@@ -74,7 +74,7 @@ The method [`async.series()`](https://caolan.github.io/async/v3/docs.html#series
 async.series({
   one(callback) { /* … */ },
   two(callback) { /* … */ },
-  …
+  // …
   something_else(callback) { /* … */ }
   },
   // optional callback after the last asynchronous function completes.

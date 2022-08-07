@@ -35,7 +35,7 @@ set a specified LED color.
 
 ```js
 async function setDeviceColor(usbDevice, r, g, b) {
-   if (device.opened) {
+  if (device.opened) {
     // This hypothetical USB device requires that the data passed to
     // it be in a Uint8Array.
     const payload = new Uint8Array([r, g, b]);

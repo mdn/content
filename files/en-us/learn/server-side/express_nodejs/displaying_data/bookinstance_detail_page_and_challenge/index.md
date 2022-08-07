@@ -45,7 +45,7 @@ It then calls `populate()` to get the details of the associated `Book`.
 
 Create **/views/bookinstance_detail.pug** and copy in the content below.
 
-```js
+```pug
 extends layout
 
 block content

@@ -307,7 +307,7 @@ But first, here is a demonstration of the feature in action:
           }
         });
       }
-    }
+    });
     ```
 
     A series of `if` statements then look to match the `id` of the item clicked.
