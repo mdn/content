@@ -93,9 +93,9 @@ Lastly, the above code snippets bring about a critical issue with cross-browser 
 ```js
 let hasTouchScreen = false;
 if ("maxTouchPoints" in navigator) {
-    hasTouchScreen = navigator.maxTouchPoints > 0;
+  hasTouchScreen = navigator.maxTouchPoints > 0;
 } else if ("msMaxTouchPoints" in navigator) {
-    hasTouchScreen = navigator.msMaxTouchPoints > 0;
+  hasTouchScreen = navigator.msMaxTouchPoints > 0;
 } else {
   const mQ = window.matchMedia && matchMedia("(pointer:coarse)");
   if (mQ && mQ.media === "(pointer:coarse)") {
