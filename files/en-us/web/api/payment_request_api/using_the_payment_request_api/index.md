@@ -312,7 +312,7 @@ paymentRequest.canMakePayment()
       // Pre-authorization failed or payment handler not installed.
     }
   })
-  .catch((ex1) => {
+  .catch((err) => {
     // Unexpected error occurred.
   });
 ```
