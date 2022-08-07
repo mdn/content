@@ -79,7 +79,7 @@ function example() {
 }
 ```
 
-This can be re-written with an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) chain.
+This is equivalent to the following [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) chain.
 
 ```js
 function example() {
