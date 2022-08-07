@@ -31,15 +31,13 @@ You can use four types of number literals: decimal, binary, octal, and hexadecim
 
 ### Decimal numbers
 
-```js
-1234567890
-42
+* `1234567890`
+* `42`
 
-// Caution when using leading zeros:
+Caution when using leading zeros:
 
-0888 // 888 parsed as decimal
-0777 // parsed as octal in non-strict mode (511 in decimal)
-```
+* `0888` will be parsed as decimal
+* `0777` will be parsed as octal in non-strict mode (511 in decimal)
 
 Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but if every digit after the leading `0` is smaller than 8, the number gets parsed as an octal number.
 
