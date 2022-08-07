@@ -87,7 +87,7 @@ setTimeout("alert('Hello World!');", 500);
 ```
 
 ```js
-let f = new Function("console.log('foo');");
+const f = new Function("console.log('foo');");
 ```
 
 ### Inline JavaScript
