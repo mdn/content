@@ -130,7 +130,7 @@ matchedItems.forEach(applyHandler);
 
 function applyHandler(elem) {
   elem.addEventListener('click', (e) => {
-    alert('This paragraph is inside a ' + e.target.parentNode.nodeName);
+    alert(`This paragraph is inside a ${e.target.parentNode.nodeName}`);
   });
 }
 ```
