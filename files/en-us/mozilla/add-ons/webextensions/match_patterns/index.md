@@ -242,7 +242,7 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
         <p><code>https://mozilla.org/a</code><br />(unmatched path)</p>
         <p><code>https://mozilla.org/</code><br />(unmatched path)</p>
         <p>
-          <code>https://mozilla.org/path/</code><code>?foo=1</code
+          <code>https://mozilla.org/path/?foo=1</code
           ><br />(unmatched path due to URL query string)
         </p>
       </td>
