@@ -7,6 +7,7 @@ tags:
   - Bluetooth
   - Reference
   - Web Bluetooth API
+  - Experimental
 browser-compat: api.Bluetooth.getDevices
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}

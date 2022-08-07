@@ -7,9 +7,10 @@ tags:
   - Overview
   - Reference
   - Badging API
+  - Experimental
 browser-compat: api.Navigator.setAppBadge
 ---
-{{DefaultAPISidebar("Badging API")}}
+{{DefaultAPISidebar("Badging API")}}{{SeeCompatTable}}
 
 The **Badging API** gives web developers a method of setting a badge on a document or application, to act as a notification that state has changed without displaying a more distracting notification. A common use case for this would be an application with a messaging feature displaying a badge on the app icon to show that new messages have arrived.
 

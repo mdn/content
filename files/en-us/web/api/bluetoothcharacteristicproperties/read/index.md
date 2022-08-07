@@ -14,7 +14,7 @@ tags:
   - read
 browser-compat: api.BluetoothCharacteristicProperties.read
 ---
-{{securecontext_header}}{{APIRef("Bluetooth API")}}
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`read`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a
