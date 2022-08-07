@@ -165,7 +165,7 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
 ```
 
 ```js hidden
-function update() => {
+function update() {
   document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " "
     + document.getElementById("justifyContentAlignment").value;
 }
