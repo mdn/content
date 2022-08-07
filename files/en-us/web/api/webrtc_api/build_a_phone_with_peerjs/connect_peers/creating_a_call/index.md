@@ -19,16 +19,16 @@ Exciting times — now you're going to give your users the ability to create cal
 
     ```js
     callBtn.addEventListener('click', () => {
-        getStreamCode();
-        connectPeers();
-        const call = peer.call(code, window.localStream); // A
+      getStreamCode();
+      connectPeers();
+      const call = peer.call(code, window.localStream); // A
 
-        call.on('stream', (stream) => { // B
-            window.remoteAudio.srcObject = stream; // C
-            window.remoteAudio.autoplay = true; // D
-            window.peerStream = stream; //E
-            showConnectedContent(); //F    });
-        })
+      call.on('stream', (stream) => { // B
+        window.remoteAudio.srcObject = stream; // C
+        window.remoteAudio.autoplay = true; // D
+        window.peerStream = stream; //E
+        showConnectedContent(); //F    });
+      })
     })
     ```
 
