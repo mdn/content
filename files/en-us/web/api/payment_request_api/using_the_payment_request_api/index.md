@@ -154,8 +154,10 @@ In the following snippet we do just this — depending on whether the user can m
 const checkoutButton = document.getElementById('checkout-button');
 checkoutButton.innerText = "Loading…";
 if (window.PaymentRequest) {
-  let request = new PaymentRequest(buildSupportedPaymentMethodNames(),
-                                   buildShoppingCartDetails());
+  const request = new PaymentRequest(
+    buildSupportedPaymentMethodNames(),
+    buildShoppingCartDetails()
+  );
   request.canMakePayment().then((canMakeAFastPayment) => {
     if (canMakeAFastPayment) {
       checkoutButton.textContent = "Fast Checkout with W3C";
