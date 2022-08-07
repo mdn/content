@@ -30,7 +30,7 @@ In this example calling `entry.intersectionRect` returns a {{domxref("DOMRectRea
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  const entries = list.getEntries().forEach((entry) => {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.intersectionRect);
     }
