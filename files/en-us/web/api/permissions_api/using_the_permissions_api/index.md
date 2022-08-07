@@ -54,7 +54,7 @@ In our example, the Permissions functionality is handled by one function — `ha
 
 ```js
 function handlePermission() {
-  navigator.permissions.query({name:'geolocation'}).then((result) => {
+  navigator.permissions.query({ name: 'geolocation' }).then((result) => {
     if (result.state === 'granted') {
       report(result.state);
       geoBtn.style.display = 'none';
@@ -99,7 +99,7 @@ revokeBtn.onclick = () => {
 // ...
 
 function revokePermission() {
-  navigator.permissions.revoke({name:'geolocation'}).then((result) => {
+  navigator.permissions.revoke({ name: 'geolocation' }).then((result) => {
     report(result.state);
   });
 }
