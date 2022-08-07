@@ -31,7 +31,7 @@ try {
 
   statsInterval = setInterval(getConnectionStats, 1000);
   /* add event handlers, etc */
-} catch(err) {
+} catch (err) {
   console.error(`Error creating RTCPeerConnection: ${err}`);
 }
 
