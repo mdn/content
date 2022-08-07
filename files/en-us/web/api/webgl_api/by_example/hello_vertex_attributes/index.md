@@ -75,7 +75,7 @@ void main() {
 
 ```js hidden
 ;(() => {
-"use strict";
+  "use strict";
 ```
 
 ```js
