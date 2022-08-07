@@ -96,7 +96,7 @@ browser.userScripts.onBeforeScript.addListener((script) => {
       })
     },
 
-    async myAsyncMethod(param1, param2, param2) {
+    async myAsyncMethod(param1, param2, param3) {
     // exported methods can also be declared as async
     },
   });

@@ -182,21 +182,20 @@ With two methods we can now generate all necessary states of the IMSC rendering 
 
 ```js
 for (var i = 0; i < timeEvents.length; i++) {
-    var Cue = window.VTTCue || window.TextTrackCue;
-    if (i < timeEvents.length - 1) {
-    } else {
-      var myCue = new Cue(timeEvents[i], myVideo.duration, "");
-    }
-    myCue.onenter = function () {
-      clearSubFromScreen();
-      var myIsd = imsc.generateISD(imscDoc, this.startTime);
-      imsc.renderHTML(myIsd, renderDiv);
-    };
-    myCue.onexit = function () {
-      clearSubFromScreen();
-    };
-    var r = myTrack.addCue(myCue);
+  var Cue = window.VTTCue || window.TextTrackCue;
+  if (i < timeEvents.length - 1) {
+  } else {
+    var myCue = new Cue(timeEvents[i], myVideo.duration, "");
   }
+  myCue.onenter = function () {
+    clearSubFromScreen();
+    var myIsd = imsc.generateISD(imscDoc, this.startTime);
+    imsc.renderHTML(myIsd, renderDiv);
+  };
+  myCue.onexit = function () {
+    clearSubFromScreen();
+  };
+  var r = myTrack.addCue(myCue);
 }
 ```
 

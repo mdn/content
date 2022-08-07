@@ -20,7 +20,7 @@ Beware that anything below this line is outdated information and has been remove
 
 Babel provides transformations for the vast majority of ES2015 features, and enables them by default. Since Firefox already fully supports most of these, it's best to configure Babel to ignore them. We suggest creating a `.babelrc` file, or a `babel` section in your project's `package.json` file containing the following:
 
-```js
+```json
 {
   "env": {
     "firefox": {

@@ -25,14 +25,14 @@ image where a CSS property expects a file.
 ## Syntax
 
 ```js
-registerPaint(name, class)
+registerPaint(name, classRef)
 ```
 
 ### Parameters
 
 - `name`
   - : The name of the worklet class to register.
-- `class`
+- `classRef`
   - : A reference to the class that implements the worklet.
 
 ## Return value

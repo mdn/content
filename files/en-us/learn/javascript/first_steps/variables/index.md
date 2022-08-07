@@ -192,7 +192,7 @@ var myName = 'Bob';
 
 But the following would throw an error on the second line:
 
-```js
+```js example-bad
 let myName = 'Chris';
 let myName = 'Bob';
 ```

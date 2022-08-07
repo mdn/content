@@ -60,7 +60,7 @@ The method uses `async.parallel()` to query the `Author` and their associated `B
 
 Create **/views/author_detail.pug** and copy in the following text.
 
-```js
+```pug
 extends layout
 
 block content

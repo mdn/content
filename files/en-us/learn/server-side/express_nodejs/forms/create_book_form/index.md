@@ -125,33 +125,41 @@ The structure and behavior of this code is almost exactly the same as for creati
 The main difference with respect to the other form handling code is how we sanitize the genre information. The form returns an array of `Genre` items (while for other fields it returns a string). In order to validate the information we first convert the request to an array (required for the next step).
 
 ```js
-// Convert the genre to an array.
-(req, res, next) => {
-    if(!(Array.isArray(req.body.genre))){
-        if(typeof req.body.genre === 'undefined')
+[
+  // Convert the genre to an array.
+  (req, res, next) => {
+    if (!(Array.isArray(req.body.genre))) {
+      if (typeof req.body.genre === 'undefined') {
         req.body.genre = [];
-        else
+      } else {
         req.body.genre = [req.body.genre];
+      }
     }
     next();
-},
+  },
+  // …
+]
 ```
 
 We then use a wildcard (`*`) in the sanitizer to individually validate each of the genre array entries. The code below shows how - this translates to "sanitize every item below key `genre`".
 
 ```js
-body('genre.*').escape(),
+[
+  // …
+  body('genre.*').escape(),
+  // …
+];
 ```
 
 The final difference with respect to the other form handling code is that we need to pass in all existing genres and authors to the form. In order to mark the genres that were checked by the user we iterate through all the genres and add the `checked='true'` parameter to those that were in our post data (as reproduced in the code fragment below).
 
 ```js
 // Mark our selected genres as checked.
-for (let i = 0; i < results.genres.length; i++) {
-    if (book.genre.indexOf(results.genres[i]._id) > -1) {
-        // Current genre is selected. Set "checked" flag.
-        results.genres[i].checked = 'true';
-    }
+for (const genre of results.genres) {
+  if (book.genre.includes(genre._id)) {
+    // Current genre is selected. Set "checked" flag.
+    genre.checked = 'true';
+  }
 }
 ```
 
@@ -159,7 +167,7 @@ for (let i = 0; i < results.genres.length; i++) {
 
 Create **/views/book_form.pug** and copy in the text below.
 
-```plain
+```pug
 extends layout
 
 block content

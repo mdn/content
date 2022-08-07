@@ -142,8 +142,8 @@ var contentType = mimeTypes[extname] || 'application/octet-stream';
 Lastly, we respond to the client with the file information. This function reads the file using our previously prepared `filePath` variable.
 
 ```js
-fs.readFile(filePath, function(error, content) {
-    // …
+fs.readFile(filePath, (error, content) => {
+  // …
 });
 ```
 
@@ -151,24 +151,23 @@ The first thing we do is to compensate for any possible errors.
 
 ```js
 if (error) {
-  ..
+  // …
 } else {
-  ..
+  // …
 }
 ```
 
 Most often, the error will be `ENOENT`, in which case we reply with a 404 error.
 
 ```js
-if(error.code == 'ENOENT') {
-    fs.readFile('./404.html', function(error, content) {
-        response.writeHead(404, { 'Content-Type': 'text/html' });
-        response.end(content, 'utf-8');
-    });
-}
-else {
-    response.writeHead(500);
-    response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
+if (error.code == 'ENOENT') {
+  fs.readFile('./404.html', (error, content) => {
+    response.writeHead(404, { 'Content-Type': 'text/html' });
+    response.end(content, 'utf-8');
+  });
+} else {
+  response.writeHead(500);
+  response.end(`Sorry, check with the site admin for error: ${error.code}..\n`);
 }
 ```
 

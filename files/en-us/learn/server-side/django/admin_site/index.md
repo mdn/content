@@ -151,7 +151,7 @@ To change how a model is displayed in the admin interface you define a [ModelAdm
 
 Let's start with the `Author` model. Open **admin.py** in the catalog application (**/locallibrary/catalog/admin.py**). Comment out your original registration (prefix it with a #) for the `Author` model:
 
-```js
+```python
 # admin.site.register(Author)
 ```
 
@@ -168,7 +168,7 @@ admin.site.register(Author, AuthorAdmin)
 
 Now we'll add `ModelAdmin` classes for `Book`, and `BookInstance`. We again need to comment out the original registrations:
 
-```js
+```python
 # admin.site.register(Book)
 # admin.site.register(BookInstance)
 ```

@@ -298,9 +298,9 @@ The order is:
 We can use these values to measure specific timings of interest:
 
 ```js
-const dns  = time.domainLookupEnd - time.domainLookupStart;
-const tcp  = time.connectEnd - time.connectStart;
-const ssl !== time.secureConnectionStart;
+const dns = time.domainLookupEnd - time.domainLookupStart;
+const tcp = time.connectEnd - time.connectStart;
+const ssl = time.requestStart - time.secureConnectionStart;
 ```
 
 ### Time to first byte

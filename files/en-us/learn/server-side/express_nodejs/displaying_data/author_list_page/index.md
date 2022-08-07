@@ -36,7 +36,7 @@ The method uses the model's `find()`, `sort()` and `exec()` functions to return 
 
 Create **/views/author_list.pug** and replace its content with the text below.
 
-```js
+```pug
 extends layout
 
 block content
