@@ -43,7 +43,7 @@ if (navigator.userAgent.includes("Chrome")){
   //  sections of the code that are never executed.
   const camelCaseExpression = new RegExp("(?<=[A-Z])");
   const splitUpString = (str) => {
-      return ("" + str).split(camelCaseExpression);
+    return ("" + str).split(camelCaseExpression);
   };
 } else {
   //This fallback code is much less performant, but works
