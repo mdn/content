@@ -34,23 +34,22 @@ If you want to avoid using user agent detection, you have options!
   - : Feature detection is where you don't try to figure out which browser is rendering your page, but instead, you check to see if the specific feature you need is available. If it's not, you use a fallback. In those rare cases where behavior differs between browsers, instead of checking the user agent string, you should instead implement a test to detect how the browser implements the API and determine how to use it from that. An example of feature detection is as follows. In 2017, Chrome [unflagged experimental lookbehind support in regular expressions](https://chromestatus.com/feature/5668726032564224), but no other browser supported it. So, you might have thought to do this:
 
 ```js
-// this code snippet splits a string in a special notation
+// This code snippet splits a string in a special notation
 if (navigator.userAgent.includes("Chrome")){
-    // YES! The user is suspected to support look-behind regexps
-    // DO NOT USE /(?<=[A-Z])/. It will cause a syntax error in
-    //  browsers that do not support look-behind expressions
-    //  because all browsers parse the entire script, including
-    //  sections of the code that are never executed.
-    var camelCaseExpression = new RegExp("(?<=[A-Z])");
-    var splitUpString = (str) => {
-        return (""+str).split(camelCaseExpression);
-    };
+  // YES! The user is suspected to support look-behind regexps
+  // DO NOT USE /(?<=[A-Z])/. It will cause a syntax error in
+  //  browsers that do not support look-behind expressions
+  //  because all browsers parse the entire script, including
+  //  sections of the code that are never executed.
+  const camelCaseExpression = new RegExp("(?<=[A-Z])");
+  const splitUpString = (str) => {
+      return ("" + str).split(camelCaseExpression);
+  };
 } else {
-    /*This fallback code is much less performant, but works*/
-    var splitUpString = (str) => {
-        return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-    };
+  //This fallback code is much less performant, but works
+  const splitUpString = (str) => return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
 }
+
 console.log(splitUpString("fooBare")); // ["fooB", "are"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 ```
@@ -64,22 +63,20 @@ Problems like these can be avoided by testing for support of the feature itself 
 
 <!-- prettier-ignore -->
 ```js
-var isLookBehindSupported = false;
+let isLookBehindSupported = false;
 
 try {
-    new RegExp("(?<=)");
-    isLookBehindSupported = true;
+  new RegExp("(?<=)");
+  isLookBehindSupported = true;
 } catch (err) {
-    // If the agent doesn't support look behinds, the attempted
-    // creation of a RegExp object using that syntax throws and
-    // isLookBehindSupported remains false.
+  // If the agent doesn't support look behinds, the attempted
+  // creation of a RegExp object using that syntax throws and
+  // isLookBehindSupported remains false.
 }
 
-var splitUpString = isLookBehindSupported ? (str) => {
-    return (""+str).split(new RegExp("(?<=[A-Z])"));
-} : (str) => {
-    return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-};
+const splitUpString = isLookBehindSupported 
+  ? (str) => ("" + str).split(new RegExp("(?<=[A-Z])"=)
+  : (str) => str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
 ```
 
 As the above code demonstrates, there is **always** a way to test browser support without user agent sniffing. There is **never** any reason to check the user agent string for this.
@@ -95,26 +92,27 @@ Lastly, the above code snippets bring about a critical issue with cross-browser 
   - : Arguably the most common use and misuse of user agent sniffing is to detect if the device is a mobile device. However, people too often overlook what they are really after. People use user agent sniffing to detect if the users' device is touch-friendly and has a small screen so they can optimize their website accordingly. While user agent sniffing can sometimes detect these, not all devices are the same: some mobile devices have big screen sizes, some desktops have a small touchscreen, some people use smart TV's which are an entirely different ballgame altogether, and some people can dynamically change the width and height of their screen by flipping their tablet on its side! So, user agent sniffing is definitely not the way to go. Thankfully, there are much better alternatives. Use [Navigator.maxTouchPoints](/en-US/docs/Web/API/Navigator/maxTouchPoints) to detect if the user's device has a touchscreen. Then, default back to checking the user agent screen only _if (!("maxTouchPoints" in navigator)) { /\*Code here\*/}_. Using this information of whether the device has a touchscreen, do not change the entire layout of the website just for touch devices: you will only create more work and maintenance for yourself. Rather, add in touch conveniences such as bigger, more easily clickable buttons (you can do this using CSS by increasing the font size). Here is an example of code that increases the padding of #exampleButton to 1em on mobile devices.
 
 ```js
-var hasTouchScreen = false;
+let hasTouchScreen = false;
 if ("maxTouchPoints" in navigator) {
     hasTouchScreen = navigator.maxTouchPoints > 0;
 } else if ("msMaxTouchPoints" in navigator) {
     hasTouchScreen = navigator.msMaxTouchPoints > 0;
 } else {
-    var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
-    if (mQ && mQ.media === "(pointer:coarse)") {
-        hasTouchScreen = !!mQ.matches;
-    } else if ('orientation' in window) {
-        hasTouchScreen = true; // deprecated, but good fallback
-    } else {
-        // Only as a last resort, fall back to user agent sniffing
-        var UA = navigator.userAgent;
-        hasTouchScreen = (
-            /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
-            /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
-        );
-    }
+  const mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+  if (mQ && mQ.media === "(pointer:coarse)") {
+    hasTouchScreen = !!mQ.matches;
+  } else if ('orientation' in window) {
+    hasTouchScreen = true; // deprecated, but good fallback
+  } else {
+    // Only as a last resort, fall back to user agent sniffing
+    const UA = navigator.userAgent;
+    hasTouchScreen = (
+      /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+      /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+    );
+  }
 }
+
 if (hasTouchScreen)
     document.getElementById("exampleButton").style.padding="1em";
 ```
@@ -143,32 +141,40 @@ One such case is using user agent sniffing as a fallback when detecting if the d
 Another such case is for fixing bugs in browsers that do not automatically update. Internet Explorer (on Windows) and Webkit (on iOS) are two perfect examples. Prior to version 9, Internet Explorer had issues with rendering bugs, CSS bugs, API bugs, and so forth. However, prior to version 9, Internet Explorer was very easy to detect based upon the browser-specific features available. Webkit is a bit worse because Apple forces all of the browsers on IOS to use Webkit internally, thus the user has no way to get a better more updated browser on older devices. Most bugs can be detected, but some bugs take more effort to detect than others. In such cases, it might be beneficial to use user agent sniffing to save on performance. For example, Webkit 6 has a bug whereby when the device orientation changes, the browser might not fire [MediaQueryList](/en-US/docs/Web/API/MediaQueryList) listeners when it should. To overcome this bug, observe the code below.
 
 ```js
-var UA=navigator.userAgent, isWebkit=/\b(iPad|iPhone|iPod)\b/.test(UA) &&
-               /WebKit/.test(UA) && !/Edge/.test(UA) && !window.MSStream;
+const UA=navigator.userAgent;
+const isWebkit=/\b(iPad|iPhone|iPod)\b/.test(UA) && /WebKit/.test(UA) && !/Edge/.test(UA) && !window.MSStream;
 
-var mediaQueryUpdated = true, mqL = [];
-function whenMediaChanges(){mediaQueryUpdated = true}
+let mediaQueryUpdated = true;
+const mqL = [];
 
-var listenToMediaQuery = isWebkit ? (mQ, f) => {
-    if(/height|width/.test(mQ.media)) mqL.push([mQ, f]);
+function whenMediaChanges() { mediaQueryUpdated = true; }
+
+const listenToMediaQuery = isWebkit 
+  ? (mQ, f) => {
+    if (/height|width/.test(mQ.media)) mqL.push([mQ, f]);
     mQ.addListener(f), mQ.addListener(whenMediaChanges);
-} : () => {};
-var destroyMediaQuery = isWebkit ? (mQ) => {
-    for (var i=0,len=mqL.length|0; i<len; i=i+1|0)
-        if (mqL[i][0] === mQ) mqL.splice(i, 1);
+  } : () => {};
+  
+const destroyMediaQuery = isWebkit 
+  ? (mQ) => {
+    for (let i = 0; i < mqL.length | 0; i = i + 1 | 0) {
+      if (mqL[i][0] === mQ) mqL.splice(i, 1);
+    }
     mQ.removeListener(whenMediaChanges);
-} : listenToMediaQuery;
+  } : listenToMediaQuery;
 
-var orientationChanged = false;
+let orientationChanged = false;
 addEventListener("orientationchange", () => {
-    orientationChanged = true;
+  orientationChanged = true;
 }, PASSIVE_LISTENER_OPTION);
 
 addEventListener("resize", setTimeout.bind(0,() => {
-    if (orientationChanged && !mediaQueryUpdated)
-        for (var i=0,len=mqL.length|0; i<len; i=i+1|0)
-            mqL[i][1]( mqL[i][0] );
-    mediaQueryUpdated = orientationChanged = false;
+  if (orientationChanged && !mediaQueryUpdated) {
+    for (let i = 0; i < mqL.length | 0; i = i + 1 | 0) { 
+      mqL[i][1](mqL[i][0]);
+    }
+  }
+  mediaQueryUpdated = orientationChanged = false;
 },0));
 ```
 
