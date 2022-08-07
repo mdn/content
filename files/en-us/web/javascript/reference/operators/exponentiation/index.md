@@ -38,18 +38,7 @@ In JavaScript, it is impossible to write an ambiguous exponentiation expression.
 is, you cannot put a unary operator (`+/-/~/!/delete/void/typeof`)
 immediately before the base number; doing so will cause a SyntaxError.
 
-```js example-bad
--2 ** 2;
-// 4 in Bash, -4 in other languages.
-// This is invalid in JavaScript, as the operation is ambiguous.
-```
-
-Correct way to write this in JavaScript, is to add parentheses around expression, to make intention unambiguous.
-
-```js
--(2 ** 2);
-// -4 in JavaScript and the author's intention is unambiguous.
-```
+`-2 ** 2` is 4 in Bash, but is -4 in other languages (such as Python). This is invalid in JavaScript, as the operation is ambiguous. You have to parenthesize either side — for example, as `-(2 ** 2)` — to make the intention unambiguous.
 
 Note that some programming languages use the caret symbol <kbd>^</kbd> for
 exponentiation, but JavaScript uses that symbol for the

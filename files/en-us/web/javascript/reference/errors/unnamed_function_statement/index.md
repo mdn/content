@@ -95,11 +95,9 @@ const greeter = {
     return "Moin";
   }
 };
-```
 
-or
+// or
 
-```js example-good
 const greeter = {
   german() {
     return "Moin";
