@@ -155,10 +155,10 @@ The final difference with respect to the other form handling code is that we nee
 
 ```js
 // Mark our selected genres as checked.
-for (let i = 0; i < results.genres.length; i++) {
-  if (book.genre.indexOf(results.genres[i]._id) > -1) {
+for (const genre of results.genres) {
+  if (book.genre.includes(genre._id)) {
     // Current genre is selected. Set "checked" flag.
-    results.genres[i].checked = 'true';
+    genre.checked = 'true';
   }
 }
 ```
