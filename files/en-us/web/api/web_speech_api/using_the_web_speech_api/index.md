@@ -123,7 +123,7 @@ colors.forEach((color, i) => {
   console.log(color, i);
   colorHTML += `<span style="background-color:${color};"> ${color} </span>`;
 });
-hints.textContent = `Tap or click then say a color to change the background color of the app. Try ${colorHTML}.`;
+hints.innerHTML = `Tap or click then say a color to change the background color of the app. Try ${colorHTML}.`;
 
 document.body.onclick = () => {
   recognition.start();
