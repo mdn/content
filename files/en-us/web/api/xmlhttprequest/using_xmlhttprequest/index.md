@@ -832,7 +832,7 @@ And to test:
   });
 ```
 
-If you want to know ifthe current page has changed, refer to the article about {{domxref("document.lastModified")}}.
+If you want to know if the current page has changed, refer to the article about {{domxref("document.lastModified")}}.
 
 ## Cross-site XMLHttpRequest
 
