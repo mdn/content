@@ -73,11 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function toggleBilling() {
   // Select the billing text fields
-  var billingItems = document.querySelectorAll('#billing input[type="text"]');
+  const billingItems = document.querySelectorAll('#billing input[type="text"]');
 
   // Toggle the billing text fields
-  for (var i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
+  billingItems.forEach((item) => {
+    item.disabled = !item.disabled;
   }
 }
 ```
