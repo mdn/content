@@ -298,15 +298,12 @@ In the below example, you can see such an example. We are attaching it to the \<
 ##### JavaScript
 
 ```js
-HTMLTableSectionElement.prototype.sort = (cb) => {
-  Array
-    .prototype
-    .slice
-    .call(this.rows)
+HTMLTableSectionElement.prototype.sort = function (cb) {
+  Array.prototype.slice.call(this.rows)
     .sort(cb)
-    .forEach((e,i,a)=>{
+    .forEach((e, i, a) => {
       this.appendChild(this.removeChild(e));
-    },this);
+    }, this);
 }
 
 document.querySelector('table').tBodies[0].sort((a, b) => {
@@ -356,12 +353,12 @@ The following example adds an event handler to every `<th>` element of every `<t
 ```js
 const allTables = document.querySelectorAll('table');
 
-for (let table of allTables) {
+for (const table of allTables) {
   const tBody = table.tBodies[0];
   const rows = Array.from(tBody.rows);
   const headerCells = table.tHead.rows[0].cells;
 
-  for (let th of headerCells) {
+  for (const th of headerCells) {
     const cellIndex = th.cellIndex;
 
     th.addEventListener('click', () => {
