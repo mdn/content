@@ -150,7 +150,7 @@ navigator.xr.requestSession("immersive-vr")
   xrSession.requestAnimationFrame(onXRAnimationFrame);
 }).catch((error) => {
   // "immersive-vr" sessions are not supported
-  console.warn("'immersive-vr' isn't supported, or an error occurred activating VR!");
+  console.error("'immersive-vr' isn't supported, or an error occurred activating VR!");
 });
 ```
 
@@ -174,11 +174,11 @@ if (navigator.xr) {
       immersiveButton.textContent = 'Enter XR';
       immersiveButton.disabled = false;
     } else {
-      console.log("WebXR doesn't support immersive-vr mode!");
+      console.error("WebXR doesn't support immersive-vr mode!");
     }
   });
 } else {
-  console.log("WebXR is not available!");
+  console.error("WebXR is not available!");
 }
 
 function onButtonClicked() {
