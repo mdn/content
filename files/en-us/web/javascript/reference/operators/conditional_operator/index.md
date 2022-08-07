@@ -79,7 +79,7 @@ function example() {
 }
 ```
 
-Above is equivalent to below code.
+This can be re-written with an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) chain.
 
 ```js
 function example() {
