@@ -30,7 +30,7 @@ Retrieving an HTML resource as a DOM using {{domxref("XMLHttpRequest")}} works j
 ```js
 const xhr = new XMLHttpRequest();
 xhr.onload = () => {
-  console.log(this.responseXML.title);
+  console.log(xhr.responseXML.title);
 }
 xhr.open("GET", "file.html");
 xhr.responseType = "document";
