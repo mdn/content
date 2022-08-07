@@ -287,7 +287,7 @@ You can detect when tracks are added to and removed from an `<audio>` element us
 For example, to detect when audio tracks are added to or removed from an `<audio>` element, you can use code like this:
 
 ```js
-var elem = document.querySelector("audio");
+const elem = document.querySelector("audio");
 
 elem.audioTrackList.onaddtrack = (event) => {
   trackEditor.addTrack(event.track);
