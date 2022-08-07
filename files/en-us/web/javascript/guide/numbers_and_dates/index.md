@@ -34,11 +34,9 @@ You can use four types of number literals: decimal, binary, octal, and hexadecim
 ```js
 1234567890
 42
-```
 
-Caution when using leading zeros:
+// Caution when using leading zeros:
 
-```js
 0888 // 888 parsed as decimal
 0777 // parsed as octal in non-strict mode (511 in decimal)
 ```

@@ -53,11 +53,7 @@ You can use double quotes, or escape the apostrophe:
 
 ```js example-good
 const foo = "Tom's bar";
-```
-
-or
-
-```js example-good
+// OR
 const foo = 'Tom\'s bar';
 ```
 

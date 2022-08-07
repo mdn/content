@@ -53,11 +53,9 @@ after the object has been created already.
 
 ```js example-good
 const obj = { propertyKey: 'value' };
-```
 
-or alternatively
+// or alternatively
 
-```js example-good
 const obj = {};
 obj['propertyKey'] = 'value';
 ```
