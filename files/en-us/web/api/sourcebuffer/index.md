@@ -102,7 +102,7 @@ function sourceOpen() {
     sourceBuffer.addEventListener('updateend', () => {
       mediaSource.endOfStream();
       video.play();
-     console.log(mediaSource.readyState); // ended
+      console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
