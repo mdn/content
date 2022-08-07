@@ -18,7 +18,6 @@ The Contact Picker API allows users to select entries from their contact list an
 
 > **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
-> **Note:** The Contact Picker API should not be confused with the deprecated [Contact API](https://web.archive.org/web/20210531014218/https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/Contacts_API).
 
 ## Contact Picker API Concepts and Usage
 
