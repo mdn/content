@@ -191,7 +191,7 @@ typeof newClass; // ReferenceError
 
 let newLetVariable;
 const newConstVariable = 'hello';
-class newClass{};
+class newClass{}
 ```
 
 ### Exceptions

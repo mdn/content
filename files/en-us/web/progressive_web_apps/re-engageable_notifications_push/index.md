@@ -126,8 +126,10 @@ It is a little bit more complicated than the service worker we saw in the [js13k
 In the registration part, the code looks like this:
 
 ```js
-if(subscription) {
-  return subscription;
+async (subscription) => {
+  if (subscription) {
+    return subscription;
+  }
 }
 ```
 
@@ -144,7 +146,7 @@ The app fetches the server's public key and converts the response to text; then 
 The app can now use the {{domxref("PushManager")}} to subscribe the new user. There are two options passed to the {{domxref("PushManager.subscribe()")}} method — the first is `userVisibleOnly: true`, which means all the notifications sent to the user will be visible to them, and the second one is the `applicationServerKey`, which contains our successfully acquired and converted VAPID key.
 
 ```js
-return registration.pushManager.subscribe({
+registration.pushManager.subscribe({
   userVisibleOnly: true,
   applicationServerKey: convertedVapidKey
 });
