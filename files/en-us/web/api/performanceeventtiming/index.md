@@ -75,7 +75,7 @@ The following example shows how to use the API for all events:
 
 ```js
 const observer = new PerformanceObserver((list) => {
-    const perfEntries = list.getEntries().forEach((entry) => {
+    list.getEntries().forEach((entry) => {
         // Full duration
         const inputDuration = entry.duration;
         // Input delay (before processing event)
