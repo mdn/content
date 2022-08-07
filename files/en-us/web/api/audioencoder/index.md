@@ -29,7 +29,7 @@ The **`AudioEncoder`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebC
 
 - {{domxref("AudioEncoder.configure()")}} {{Experimental_Inline}}
   - : Enqueues a control message to configure the audio encoder for encoding chunks.
-- {{domxref("AudioEncoder.encode()")}}
+- {{domxref("AudioEncoder.encode()")}} {{Experimental_Inline}}
   - : Enqueues a control message to encode a given {{domxref("AudioData")}} objects.
 - {{domxref("AudioEncoder.flush()")}} {{Experimental_Inline}}
   - : Returns a promise that resolves once all pending messages in the queue have been completed.

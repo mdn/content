@@ -26,7 +26,7 @@ None.
   - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects.
 - {{domxref('BackgroundFetchManager.get','get()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with the {{domxref("BackgroundFetchRegistration")}} associated with the provided `id` or {{jsxref("undefined")}} if the `id` is not found.
-- {{domxref('BackgroundFetchManager.getIDs','getIDs()')}}
+- {{domxref('BackgroundFetchManager.getIDs','getIDs()')}} {{Experimental_Inline}}
   - : Returns the IDs of all registered background fetches.
 
 ## Examples
