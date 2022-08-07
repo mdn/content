@@ -47,8 +47,8 @@ Assuming a runtime that supports Indonesian and German but not Balinese in list
 formatting, `supportedLocalesOf` returns the Indonesian and German language
 tags unchanged, even though `pinyin` collation is neither relevant to segmentation
 nor used with Indonesian, and a specialized German for Indonesia is
-unlikely to be supported. Note the specification of the `lookup`
-algorithm here — a `best fit` matcher might decide that Indonesian is an
+unlikely to be supported. Note the specification of the `"lookup"`
+algorithm here — a `"best fit"` matcher might decide that Indonesian is an
 adequate match for Balinese since most Balinese speakers also understand Indonesian,
 and therefore return the Balinese language tag as well.
 
