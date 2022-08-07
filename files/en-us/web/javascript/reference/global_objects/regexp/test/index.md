@@ -60,7 +60,7 @@ previous match.
 
 ### Using test()
 
-Simple example that tests if "`hello`" is contained at the very beginning of
+Simple example that tests if `"hello"` is contained at the very beginning of
 a string, returning a boolean result.
 
 ```js

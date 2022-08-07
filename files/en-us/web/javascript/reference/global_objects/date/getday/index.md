@@ -43,7 +43,7 @@ const weekday = Xmas95.getDay();
 console.log(weekday); // 1
 ```
 
-> **Note:** If needed, the full name of a day ("`Monday`" for
+> **Note:** If needed, the full name of a day (`"Monday"` for
 > example) can be obtained by using {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
 > with an `options` parameter. Using this method, the internationalization is
 > made easier:

@@ -28,8 +28,8 @@ This operator allows evaluating expressions that produce a value into places whe
 expression that evaluates to {{jsxref("undefined")}} is desired.
 
 The `void` operator is often used merely to obtain the
-`undefined` primitive value, usually using "`void(0)`" (which is
-equivalent to "`void 0`"). In these cases, the global variable
+`undefined` primitive value, usually using `void(0)` (which is
+equivalent to `void 0`). In these cases, the global variable
 {{jsxref("undefined")}} can be used.
 
 It should be noted that [the precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)

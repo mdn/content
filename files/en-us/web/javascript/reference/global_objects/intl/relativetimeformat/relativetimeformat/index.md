@@ -33,21 +33,21 @@ new Intl.RelativeTimeFormat(locales, options)
   - : An object with some or all of the following properties:
 
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are "`lookup`" and "`best fit`"; the default is "`best fit`". For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
     - `numeric`
 
       - : The format of output message. Possible values are:
 
-        - "`always`" (default, e.g., `1 day ago`),
-        - or "`auto`" (e.g., `yesterday`). The "`auto`" value allows to not always have to use numeric values in the output.
+        - `"always"` (default, e.g., `1 day ago`),
+        - or `"auto"` (e.g., `yesterday`). The `"auto"` value allows to not always have to use numeric values in the output.
 
     - `style`
 
       - : The length of the internationalized message. Possible values are:
 
-        - "`long`" (default, e.g., `in 1 month`)
-        - "`short`" (e.g., `in 1 mo.`),
-        - or "`narrow`" (e.g., `in 1 mo.`). The narrow style could be similar to the short style for some locales.
+        - `"long"` (default, e.g., `in 1 month`)
+        - `"short"` (e.g., `in 1 mo.`),
+        - or `"narrow"` (e.g., `in 1 mo.`). The narrow style could be similar to the short style for some locales.
 
 ## Examples
 

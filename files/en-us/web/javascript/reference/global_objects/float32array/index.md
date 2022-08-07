@@ -24,7 +24,7 @@ The **`Float32Array`** typed array represents an array of 32-bit floating point 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float32Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `4` in the case of an `Float32Array`.
 - {{jsxref("TypedArray.name", "Float32Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Float32Array` type: "`Float32Array`".
+  - : Returns the string value of the constructor name. In the case of the `Float32Array` type: `"Float32Array"`.
 
 ## Static methods
 

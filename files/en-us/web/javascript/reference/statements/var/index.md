@@ -210,7 +210,7 @@ console.log(x + y); // undefinedA
 ```
 
 Here, `x` and `y` are declared before any code is executed, but
-the assignments occur later. At the time "`x = y`" is evaluated,
+the assignments occur later. At the time `x = y` is evaluated,
 `y` exists so no `ReferenceError` is thrown and its value is
 `undefined`. So, `x` is assigned the undefined value. Then,
 `y` is assigned the value `'A'`. Consequently, after the first

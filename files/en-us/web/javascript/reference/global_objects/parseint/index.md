@@ -74,7 +74,7 @@ To convert a number to its string literal in a particular radix, use [`thatNumbe
 
 > **Warning:** `parseInt` converts a
 > {{jsxref("BigInt")}} to a {{jsxref("Number")}} and loses precision in the process.
-> This is because trailing non-numeric values, including "`n`", are
+> This is because trailing non-numeric characters, including the `n` suffix, are
 > discarded.
 
 ### Octal interpretations with no radix

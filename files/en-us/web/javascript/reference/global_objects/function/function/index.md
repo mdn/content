@@ -67,8 +67,8 @@ adder(2, 6);
 // 8
 ```
 
-The arguments "`a`" and "`b`" are formal argument names that are
-used in the function body, "`return a + b`".
+The arguments `a` and `b` are formal argument names that are
+used in the function body, `return a + b`.
 
 ### Creating a function object from a function declaration or function expression
 

@@ -19,7 +19,7 @@ another object's prototype chain.
 
 > **Note:** `isPrototypeOf()` differs from the {{jsxref("Operators/instanceof",
     "instanceof")}} operator. In the expression
-> "`object instanceof AFunction`", the `object` prototype chain is
+> `object instanceof AFunction`, the `object` prototype chain is
 > checked against `AFunction.prototype`, not against `AFunction`
 > itself.
 
