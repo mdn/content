@@ -12,9 +12,10 @@ tags:
   - Service Workers
   - Sync
   - Web Background Synchronization API
+  - Experimental
 browser-compat: api.SyncManager
 ---
-{{securecontext_header}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 {{DefaultAPISidebar("Background Sync")}}
 

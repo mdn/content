@@ -9,9 +9,10 @@ tags:
   - File API
   - Deprecated
   - Reference
+  - Non-standard
 browser-compat: api.BlobBuilder
 ---
-{{APIRef("File API")}}{{ deprecated_header}}
+{{APIRef("File API")}}{{ deprecated_header}}{{Non-standard_header}}
 
 > **Note:** The `BlobBuilder` interface has been
 > deprecated in favor of the newly introduced {{domxref('Blob')}} constructor.
