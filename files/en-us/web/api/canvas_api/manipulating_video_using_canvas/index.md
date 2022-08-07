@@ -53,7 +53,7 @@ The HTML document used to render this content is shown below.
       <canvas id="c1" width="160" height="96"></canvas>
       <canvas id="c2" width="160" height="96"></canvas>
     </div>
-  <script type="text/javascript" src="processor.js"></script>
+  <script src="processor.js"></script>
   </body>
 </html>
 ```

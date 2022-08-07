@@ -58,13 +58,13 @@ This method can be used in _almost_ the same way as
 different arguments order.
 
 ```js
-let re = /[0-9]+/g;
-let str = '2016-01-02';
-let result = re[Symbol.match](str);
+const re = /[0-9]+/g;
+const str = '2016-01-02';
+const result = re[Symbol.match](str);
 console.log(result);  // ["2016", "01", "02"]
 ```
 
-### Using `@@match` in subclasses
+### Using @@match in subclasses
 
 Subclasses of {{jsxref("RegExp")}} can override the `[@@match]()` method to
 modify the default behavior.
@@ -72,7 +72,7 @@ modify the default behavior.
 ```js
 class MyRegExp extends RegExp {
   [Symbol.match](str) {
-    let result = RegExp.prototype[Symbol.match].call(this, str);
+    const result = RegExp.prototype[Symbol.match].call(this, str);
     if (!result) return null;
     return {
       group(n) {
@@ -82,9 +82,9 @@ class MyRegExp extends RegExp {
   }
 }
 
-let re = new MyRegExp('([0-9]+)-([0-9]+)-([0-9]+)');
-let str = '2016-01-02';
-let result = str.match(re); // String.prototype.match calls re[@@match].
+const re = new MyRegExp('([0-9]+)-([0-9]+)-([0-9]+)');
+const str = '2016-01-02';
+const result = str.match(re); // String.prototype.match calls re[@@match].
 console.log(result.group(1)); // 2016
 console.log(result.group(2)); // 01
 console.log(result.group(3)); // 02

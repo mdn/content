@@ -151,10 +151,10 @@ The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Referen
 
 ```js
 // Parentheses can be used for determining the data type of expressions.
-const iData = 99;
+const someData = 99;
 
-typeof iData + ' Wisen'; // 'number Wisen'
-typeof (iData + ' Wisen'); // 'string'
+typeof someData + ' Wisen'; // 'number Wisen'
+typeof (someData + ' Wisen'); // 'string'
 ```
 
 ### Regular expressions

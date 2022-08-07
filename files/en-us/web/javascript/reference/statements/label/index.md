@@ -55,7 +55,7 @@ for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
     if (i === 1 && j === 1) {
       continue loop1;
     }
-    console.log('i = ' + i + ', j = ' + j);
+    console.log(`i = ${i}, j = ${j}`);
   }
 }
 
@@ -103,7 +103,7 @@ for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
     if (i === 1 && j === 1) {
       break loop1;
     }
-    console.log('i = ' + i + ', j = ' + j);
+    console.log(`i = ${i}, j = ${j}`);
   }
 }
 

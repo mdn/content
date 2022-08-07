@@ -135,8 +135,8 @@ Larger numbers can be represented using the {{jsxref("BigInt")}} type.
 The following example converts the {{jsxref("Date")}} object to a numerical value using `Number` as a function:
 
 ```js
-let d = new Date('December 17, 1995 03:24:00')
-console.log(Number(d))
+const d = new Date('December 17, 1995 03:24:00');
+console.log(Number(d));
 ```
 
 This logs `819199440000`.

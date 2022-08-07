@@ -224,7 +224,7 @@ Fahrenheit degree passed in a string to the `f2c()` function.
 ```js
 function f2c(x) {
   function convert(str, p1, offset, s) {
-    return ((p1 - 32) * 5/9) + 'C';
+    return `${(p1 - 32) * 5 / 9}C`;
   }
   const s = String(x);
   const test = /(-?\d+(?:\.\d*)?)F\b/g;

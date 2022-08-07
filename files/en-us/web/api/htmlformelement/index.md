@@ -164,7 +164,7 @@ Extract information from a `<form>` element and set some of its attributes:
     // The form properties we're interested in
     const properties = [ 'elements', 'length', 'name', 'charset', 'action', 'acceptCharset', 'action', 'enctype', 'method', 'target' ];
     // Iterate over the properties, turning them into a string that we can display to the user
-    const info = properties.map(function(property) { return property + ": " + f[property] }).join("\n");
+    const info = properties.map((property) => `${property}: ${f[property]}`).join("\n");
 
     // Set the form's <textarea> to display the form's properties
     document.forms["formA"].elements['form-info'].value = info; // document.forms["formA"]['form-info'].value would also work

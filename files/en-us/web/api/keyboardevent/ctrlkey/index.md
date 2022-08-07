@@ -28,7 +28,7 @@ A boolean value
 <head>
 <title>ctrlKey example</title>
 
-<script type="text/javascript">
+<script>
 
 function showChar(e){
   alert(

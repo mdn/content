@@ -384,7 +384,7 @@ They can also be created programmatically via JavaScript, but this is only reall
 ```js
 const myBody = new Blob();
 
-addEventListener('fetch', function(event) {
+addEventListener('fetch', (event) => {
   // ServiceWorker intercepting a fetch
   event.respondWith(
     new Response(myBody, {

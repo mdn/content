@@ -100,7 +100,7 @@ body, p {
   font-size: 12px;
      }
 </style>
-<script type="text/javascript">
+<script>
 function onLoad() {
   loadOnlyFirst();
   onPageShow();

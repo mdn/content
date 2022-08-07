@@ -94,7 +94,7 @@ The following code traps setting a property value.
 const p = new Proxy({}, {
   set(target, prop, value, receiver) {
     target[prop] = value;
-    console.log('property set: ' + prop + ' = ' + value);
+    console.log(`property set: ${prop} = ${value}`);
     return true;
   }
 })

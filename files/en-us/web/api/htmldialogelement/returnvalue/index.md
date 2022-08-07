@@ -55,7 +55,7 @@ dialog.
   </menu>
 
   <script>
-    (function() {
+    (() => {
       const updateButton = document.getElementById('updateDetails');
       const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
@@ -77,7 +77,7 @@ dialog.
       }
 
       // "Update details" button opens the <dialog> modally
-      updateButton.addEventListener('click', function() {
+      updateButton.addEventListener('click', () => {
         dialog.showModal();
         openCheck(dialog);
         handleUserInput(dialog.returnValue);

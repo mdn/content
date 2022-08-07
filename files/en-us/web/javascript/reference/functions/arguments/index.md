@@ -127,10 +127,10 @@ This example defines a function that creates a string containing HTML for a list
 
 ```js
 function list(type) {
-  let html = '<' + type + 'l><li>';
+  let html = `<${type}l><li>`;
   const args = Array.prototype.slice.call(arguments, 1);
   html += args.join('</li><li>');
-  html += '</li></' + type + 'l>'; // end list
+  html += `</li></${type}l>`; // end list
   return html;
 }
 ```

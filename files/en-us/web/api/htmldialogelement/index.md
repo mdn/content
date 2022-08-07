@@ -74,7 +74,7 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
   </menu>
 
   <script>
-    (function() {
+    (() => {
       const updateButton = document.getElementById('updateDetails');
       const cancelButton = document.getElementById('cancel');
       const dialog = document.getElementById('favDialog');
@@ -89,13 +89,13 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
       }
 
       // Update button opens a modal dialog
-      updateButton.addEventListener('click', function() {
+      updateButton.addEventListener('click', () => {
         dialog.showModal();
         openCheck(dialog);
       });
 
       // Form cancel button closes the dialog box
-      cancelButton.addEventListener('click', function() {
+      cancelButton.addEventListener('click', () => {
         dialog.close('animalNotChosen');
         openCheck(dialog);
       });

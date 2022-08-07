@@ -127,11 +127,11 @@ if (b) // this condition is truthy
 ### Using if...else
 
 ```js
-if (cipher_char === from_char) {
-  result = result + to_char;
+if (cipherChar === fromChar) {
+  result = result + toChar;
   x++;
 } else {
-  result = result + clear_char;
+  result = result + clearChar;
 }
 ```
 

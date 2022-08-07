@@ -45,10 +45,14 @@ Likewise, to invoke strict mode for a function, put the _exact_ statement `"use 
 function myStrictFunction() {
   // Function-level strict mode syntax
   'use strict';
-  function nested() { return 'And so am I!'; }
-  return "Hi! I'm a strict mode function! " + nested();
+  function nested() {
+    return 'And so am I!';
+  }
+  return `Hi! I'm a strict mode function! ${nested()}`;
 }
-function myNotStrictFunction() { return "I'm not strict."; }
+function myNotStrictFunction() {
+  return "I'm not strict.";
+}
 ```
 
 In strict mode, starting with ES2015, functions inside blocks are scoped to that block. Prior to ES2015, block-level functions were forbidden in strict mode.

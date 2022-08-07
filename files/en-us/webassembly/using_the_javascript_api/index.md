@@ -84,7 +84,7 @@ fetch('simple.wasm').then((response) =>
 
 In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose the text representation of any wasm code included in a web page. To view it, you can go to the Debugger Panel and click on the "wasm://" entry.
 
-![](wasm-debug.png)
+![Developer tools debugger panel highlighting a module.](wasm-debug.png)
 
 In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format. See [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) for a video preview.
 

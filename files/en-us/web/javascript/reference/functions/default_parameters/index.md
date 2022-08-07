@@ -131,7 +131,7 @@ callSomething()  // 2
 Parameters defined earlier (to the left) are available to later default parameters:
 
 ```js
-function greet(name, greeting, message = greeting + ' ' + name) {
+function greet(name, greeting, message = `${greeting} ${name}`) {
   return [name, greeting, message]
 }
 

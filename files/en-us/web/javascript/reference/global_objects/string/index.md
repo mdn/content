@@ -75,18 +75,18 @@ you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScri
 const a = 'a';
 const b = 'b';
 if (a < b) { // true
-  console.log(a + ' is less than ' + b)
+  console.log(`${a} is less than ${b}`)
 } else if (a > b) {
-  console.log(a + ' is greater than ' + b)
+  console.log(`${a} is greater than ${b}`)
 } else {
-  console.log(a + ' and ' + b + ' are equal.')
+  console.log(`${a} and ${b} are equal.`)
 }
 ```
 
 A similar result can be achieved using the {{jsxref("String.prototype.localeCompare()",
   "localeCompare()")}} method inherited by `String` instances.
 
-Note that `a == b` compares the strings in `a` and
+Note that `a === b` compares the strings in `a` and
 `b` for being equal in the usual case-sensitive way. If you wish
 to compare without regard to upper or lower case characters, use a function similar to
 this:
@@ -114,11 +114,11 @@ will automatically wrap the string primitive and call the method or perform the 
 lookup on the wrapper object instead.
 
 ```js
-const s_prim = 'foo'
-const s_obj = new String(s_prim)
+const strPrim = 'foo';
+const strObj = new String(strPrim);
 
-console.log(typeof s_prim) // Logs "string"
-console.log(typeof s_obj)  // Logs "object"
+console.log(typeof strPrim); // Logs "string"
+console.log(typeof strObj);  // Logs "object"
 ```
 
 > **Warning:** You should rarely find yourself using `String` as a constructor.

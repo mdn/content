@@ -70,7 +70,7 @@ const fragment = document.createDocumentFragment();
 const browsers = ['Firefox', 'Chrome', 'Opera',
     'Safari', 'Internet Explorer'];
 
-browsers.forEach(function(browser) {
+browsers.forEach((browser) => {
     const li = document.createElement('li');
     li.textContent = browser;
     fragment.appendChild(li);

@@ -74,7 +74,7 @@ The element that was inserted, or `null`, if the insertion failed.
 ## Examples
 
 ```js
-beforeBtn.addEventListener('click', function() {
+beforeBtn.addEventListener('click', () => {
   const tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
@@ -83,7 +83,7 @@ beforeBtn.addEventListener('click', function() {
   setListener(tempDiv);
 });
 
-afterBtn.addEventListener('click', function() {
+afterBtn.addEventListener('click', () => {
   const tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {

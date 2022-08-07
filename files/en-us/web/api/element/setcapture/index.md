@@ -56,7 +56,7 @@ clicking and holding down on an element.
     }
   </style>
 
-  <script type="text/javascript">
+  <script>
     function init() {
       const btn = document.getElementById("myButton");
       if (btn.setCapture) {

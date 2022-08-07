@@ -144,11 +144,11 @@ Object.getOwnPropertyDescriptor({
 
 ### Getting source text of a function
 
-It is possible to get the source text of a function using the `+` operator to concatenate it with a string:
+It is possible to get the source text of a function by coercing it to a string — for example, by wrapping it in a template literal:
 
 ```js
 function foo() { return 'bar' }
-console.log(foo + ''); // "function foo() { return 'bar' }"
+console.log(`${foo}`); // "function foo() { return 'bar' }"
 ```
 
 This source text is _exact_, including any interspersed comments (which won't be stored by the engine's internal representation otherwise).

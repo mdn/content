@@ -99,7 +99,7 @@ In this example, a video is presented in a web page. Pressing the <kbd>Return</k
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", (e) => {
   if (e.keyCode === 13) {
     toggleFullScreen();
   }

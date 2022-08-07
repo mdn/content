@@ -47,7 +47,7 @@ function Tree(name) {
 }
 
 const theTree = new Tree('Redwood');
-console.log('theTree.constructor is ' + theTree.constructor);
+console.log(`theTree.constructor is ${theTree.constructor}`);
 ```
 
 This example displays the following output:

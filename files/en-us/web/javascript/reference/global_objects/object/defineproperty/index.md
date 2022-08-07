@@ -470,10 +470,10 @@ function MyClass() {
 
 Object.defineProperty(MyClass.prototype, "x", {
   get() {
-    return this.stored_x;
+    return this.storedX;
   },
   set(x) {
-    this.stored_x = x;
+    this.storedX = x;
   }
 });
 
