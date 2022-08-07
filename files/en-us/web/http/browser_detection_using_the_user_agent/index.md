@@ -61,7 +61,6 @@ Most importantly, it assumed no other browsers would support the feature. Suppor
 
 Problems like these can be avoided by testing for support of the feature itself instead:
 
-<!-- prettier-ignore -->
 ```js
 let isLookBehindSupported = false;
 
@@ -113,8 +112,9 @@ if ("maxTouchPoints" in navigator) {
   }
 }
 
-if (hasTouchScreen)
-    document.getElementById("exampleButton").style.padding="1em";
+if (hasTouchScreen) {
+  document.getElementById("exampleButton").style.padding = "1em";
+}
 ```
 
 As for the screen size, use _window\.innerWidth_ and window\.addEventListener("resize", () => { /\*refresh screen size dependent things\*/ }). What you want to do for screen size is not slash off information on smaller screens. That will only annoy people because it will force them to use the desktop version. Rather, try to have fewer columns of information in a longer page on smaller screens while having more columns with a shorter page on larger screen sizes. This effect can be easily achieved using CSS [flexboxes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), sometimes with [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats) as a partial fallback.
