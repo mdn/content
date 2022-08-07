@@ -44,6 +44,8 @@ immediately before the base number; doing so will cause a SyntaxError.
 // This is invalid in JavaScript, as the operation is ambiguous.
 ```
 
+Correct way to write this in JavaScript, is to add parentheses around expression, to make intention unambiguous.
+
 ```js
 -(2 ** 2);
 // -4 in JavaScript and the author's intention is unambiguous.
