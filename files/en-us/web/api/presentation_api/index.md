@@ -215,10 +215,10 @@ Example codes below highlight the usage of main features of the Presentation API
 ```html
 <!-- presentation.html -->
 <script>
-  const addConnection = function (connection) {
-    this.onmessage = (message) => {
+  const addConnection = (connection) => {
+    window.onmessage = (message) => {
       if (message.data === "say hello")
-        this.send("hello");
+        window.send("hello");
     };
   };
 
