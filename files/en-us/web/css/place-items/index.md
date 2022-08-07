@@ -165,7 +165,7 @@ select {
 let values = document.getElementById('values');
 let container = document.getElementById('container');
 
-values.addEventListener('change', function (evt) {
+values.addEventListener('change', (evt) => {
   container.style.placeItems = evt.target.value;
 });
 ```
@@ -278,7 +278,7 @@ select {
 let values = document.getElementById('gridvalues');
 let container = document.getElementById('gridcontainer');
 
-values.addEventListener('change', function (evt) {
+values.addEventListener('change', (evt) => {
   container.style.placeItems = evt.target.value;
 });
 ```

@@ -47,7 +47,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can pass `redraw` to {{domxref("EventTarget.addEventListener()", "addEventListener()")}}:
 
 ```js
-equirectLayer.addEventListener("redraw", function(event) {
+equirectLayer.addEventListener("redraw", (event) => {
   // redraw the layer
 });
 ```
@@ -55,7 +55,7 @@ equirectLayer.addEventListener("redraw", function(event) {
 Alternatively, you can use the `onredraw` event handler property to establish a handler for the `redraw` event:
 
 ```js
-equirectLayer.onredraw = function(event) {
+equirectLayer.onredraw = (event) => {
  // redraw the layer
 }
 ```

@@ -77,7 +77,7 @@ To try out and visualize buffered time ranges we can write a little bit of HTML:
 and a little bit of JavaScript:
 
 ```js
-  window.onload = function(){
+  window.onload = () => {
 
     var myAudio = document.getElementById('my-audio');
     var myCanvas = document.getElementById('my-canvas');
@@ -92,7 +92,7 @@ and a little bit of JavaScript:
 
     // display TimeRanges
 
-    myAudio.addEventListener('seeked', function() {
+    myAudio.addEventListener('seeked', () => {
       for (i = 0; i < myAudio.buffered.length; i++) {
 
         var startX = myAudio.buffered.start(i) * inc;
@@ -182,11 +182,11 @@ We'll use the following CSS to style the buffering display:
 And the following JavaScript provides our functionality:
 
 ```js
-window.onload = function(){
+window.onload = () => {
 
   var myAudio = document.getElementById('my-audio');
 
-  myAudio.addEventListener('progress', function() {
+  myAudio.addEventListener('progress', () => {
     var duration =  myAudio.duration;
     if (duration > 0) {
       for (var i = 0; i < myAudio.buffered.length; i++) {
@@ -198,7 +198,7 @@ window.onload = function(){
     }
   });
 
-  myAudio.addEventListener('timeupdate', function() {
+  myAudio.addEventListener('timeupdate', () => {
     var duration =  myAudio.duration;
     if (duration > 0) {
       document.getElementById('progress-amount').style.width = ((myAudio.currentTime / duration)*100) + "%";

@@ -37,7 +37,7 @@ A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}
 ## Examples
 
 ```js
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -45,7 +45,7 @@ self.addEventListener('notificationclick', function(event) {
   // focuses if it is
   event.waitUntil(clients.matchAll({
     type: "window"
-  }).then(function(clientList) {
+  }).then((clientList) => {
     for (const client of clientList) {
       if (client.url === '/' && 'focus' in client)
         return client.focus();

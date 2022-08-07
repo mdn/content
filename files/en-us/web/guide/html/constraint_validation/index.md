@@ -356,7 +356,7 @@ function checkZIP() {
 Then we link it to the **onchange** event for the {{ HTMLElement("select") }} and the **oninput** event for the {{ HTMLElement("input") }}:
 
 ```js
-window.onload = function () {
+window.onload = () => {
     document.getElementById("Country").onchange = checkZIP;
     document.getElementById("ZIP").oninput = checkZIP;
 }
@@ -399,7 +399,7 @@ function checkFileSize() {
 Finally we hook the method with the correct event:
 
 ```js
-window.onload = function () {
+window.onload = () => {
   document.getElementById("FS").onchange = checkFileSize;
 }
 ```

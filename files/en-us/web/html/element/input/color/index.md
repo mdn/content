@@ -98,7 +98,7 @@ colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach((p) => {
     p.style.color = event.target.value;
   });
 }
@@ -188,7 +188,7 @@ When the color picker is dismissed, indicating that the value will not be changi
 
 ```js
 function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach((p) => {
     p.style.color = event.target.value;
   });
 }

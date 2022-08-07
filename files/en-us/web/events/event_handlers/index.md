@@ -73,7 +73,7 @@ This is done by passing the same {{domxref("AbortSignal")}} to the {{domxref("Ev
 ```js
 const controller = new AbortController();
 
-btn.addEventListener('click', function(event) {
+btn.addEventListener('click', (event) => {
   // print the event object to console
   console.log('greet:', arguments)
   }, { signal: controller.signal }); // pass an AbortSignal to this handler

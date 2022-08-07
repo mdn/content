@@ -157,7 +157,7 @@ Then we add some [JavaScript](/en-US/docs/Web/JavaScript) to set up an event lis
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", (event) => {
   var data = new FormData(form);
   var output = "";
   for (const entry of data) {

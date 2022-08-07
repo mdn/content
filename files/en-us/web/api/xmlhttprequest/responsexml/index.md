@@ -65,7 +65,7 @@ xhr.responseType = 'document';
 // Force the response to be parsed as XML
 xhr.overrideMimeType('text/xml');
 
-xhr.onload = function () {
+xhr.onload = () => {
   if (xhr.readyState === xhr.DONE && xhr.status === 200) {
     console.log(xhr.response, xhr.responseXML);
   }

@@ -289,11 +289,11 @@ For example, to detect when audio tracks are added to or removed from an `<audio
 ```js
 var elem = document.querySelector("audio");
 
-elem.audioTrackList.onaddtrack = function(event) {
+elem.audioTrackList.onaddtrack = (event) => {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTrackList.onremovetrack = function(event) {
+elem.audioTrackList.onremovetrack = (event) => {
   trackEditor.removeTrack(event.track);
 };
 ```

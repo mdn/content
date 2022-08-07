@@ -571,7 +571,7 @@ svg text.em {
 
 ```js hidden
 const clipPathSelect = document.getElementById("clipPath");
-clipPathSelect.addEventListener("change", function (evt) {
+clipPathSelect.addEventListener("change", (evt) => {
   document.getElementById("clipped").style.clipPath = evt.target.value;
 });
 ```

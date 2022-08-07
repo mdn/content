@@ -19,7 +19,7 @@ Events can be created with the [`Event`](/en-US/docs/Web/API/Event) constructor 
 const event = new Event('build');
 
 // Listen for the event.
-elem.addEventListener('build', function (e) { /* … */ }, false);
+elem.addEventListener('build', (e) => { /* … */ }, false);
 
 // Dispatch the event.
 elem.dispatchEvent(event);
@@ -58,7 +58,7 @@ const event = document.createEvent('Event');
 event.initEvent('build', true, true);
 
 // Listen for the event.
-elem.addEventListener('build', function (e) {
+elem.addEventListener('build', (e) => {
   // e.target matches elem
 }, false);
 
@@ -109,7 +109,7 @@ const textarea = document.querySelector('textarea');
 
 form.addEventListener('awesome', (e) => console.log(e.detail.text()));
 
-textarea.addEventListener('input', function() {
+textarea.addEventListener('input', () => {
   // Create and dispatch/trigger an event on the fly
   // Note: Optionally, we've also leveraged the "function expression" (instead of the "arrow function expression") so "this" will represent the element
   this.dispatchEvent(new CustomEvent('awesome', { bubbles: true, detail: { text: () => textarea.value } }))

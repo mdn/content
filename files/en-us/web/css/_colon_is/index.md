@@ -129,7 +129,7 @@ try {
 matchedItems.forEach(applyHandler);
 
 function applyHandler(elem) {
-  elem.addEventListener('click', function(e) {
+  elem.addEventListener('click', (e) => {
     alert('This paragraph is inside a ' + e.target.parentNode.nodeName);
   });
 }

@@ -29,7 +29,7 @@ Retrieving an HTML resource as a DOM using {{domxref("XMLHttpRequest")}} works j
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.onload = function() {
+xhr.onload = () => {
   console.log(this.responseXML.title);
 }
 xhr.open("GET", "file.html");
@@ -77,18 +77,18 @@ If the file is named `detect.html`, the following function can be used for detec
 ```js
 function detectHtmlInXhr(callback) {
   if (!window.XMLHttpRequest) {
-    window.setTimeout(function() { callback(false); }, 0);
+    window.setTimeout(() => { callback(false); }, 0);
     return;
   }
   let done = false;
   const xhr = new window.XMLHttpRequest();
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = () => {
     if (this.readyState === 4 && !done) {
       done = true;
       callback(!!(this.responseXML && this.responseXML.title && this.responseXML.title === "&&<"));
     }
   }
-  xhr.onabort = xhr.onerror = function() {
+  xhr.onabort = xhr.onerror = () => {
     if (!done) {
       done = true;
       callback(false);
@@ -99,7 +99,7 @@ function detectHtmlInXhr(callback) {
     xhr.responseType = "document";
     xhr.send();
   } catch (e) {
-    window.setTimeout(function() {
+    window.setTimeout(() => {
       if (!done) {
         done = true;
         callback(false);
@@ -131,7 +131,7 @@ function getHTML (oXHR, sTargetId) {
 
 const oReq = new XMLHttpRequest();
 oReq.open("GET", "yourPage.html", true);
-oReq.onload = function () { console.log(getHTML(this, "intro")); };
+oReq.onload = () => { console.log(getHTML(this, "intro")); };
 oReq.send(null);
 ```
 

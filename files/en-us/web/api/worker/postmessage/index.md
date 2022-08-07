@@ -52,12 +52,12 @@ The following code snippet shows the creation of a {{domxref("Worker")}} object 
 ```js
 const myWorker = new Worker('worker.js');
 
-first.onchange = function() {
+first.onchange = () => {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }
 
-second.onchange = function() {
+second.onchange = () => {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }

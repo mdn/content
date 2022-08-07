@@ -19,7 +19,7 @@ const oReq = new XMLHttpRequest();
 oReq.open("GET", "/myfile.png", true);
 oReq.responseType = "arraybuffer";
 
-oReq.onload = function (oEvent) {
+oReq.onload = (oEvent) => {
   const arrayBuffer = oReq.response; // Note: not oReq.responseText
   if (arrayBuffer) {
     const byteArray = new Uint8Array(arrayBuffer);
@@ -39,7 +39,7 @@ const oReq = new XMLHttpRequest();
 oReq.open("GET", "/myfile.png", true);
 oReq.responseType = "blob";
 
-oReq.onload = function(oEvent) {
+oReq.onload = (oEvent) => {
   const blob = oReq.response;
   // ...
 };
@@ -83,7 +83,7 @@ The following example creates a text file on-the-fly and uses the `POST` method 
 ```js
 const oReq = new XMLHttpRequest();
 oReq.open("POST", url, true);
-oReq.onload = function (oEvent) {
+oReq.onload = (oEvent) => {
   // Uploaded.
 };
 

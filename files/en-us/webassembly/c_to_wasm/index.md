@@ -124,7 +124,7 @@ If you have a function defined in your C code that you want to call as needed fr
     #define EXTERN
     #endif
 
-    EXTERN EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
+    EXTERN EMSCRIPTEN_KEEPALIVE void my(int argc, char ** argv) => {
         printf("MyFunction Called\n");
     }
     ```

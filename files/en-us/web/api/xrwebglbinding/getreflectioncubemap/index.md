@@ -42,7 +42,7 @@ If the `rgba16f` format is used, enable the {{domxref("OES_texture_half_float")}
 const glBinding = new XRWebGLBinding(xrSession, gl);
 gl.getExtension('OES_texture_half_float'); // if rgba16f is the preferredReflectionFormat
 
-xrSession.requestLightProbe().then(function (lightProbe) {
+xrSession.requestLightProbe().then((lightProbe) => {
   lightProbe.addEventListener('reflectionchange', () => {
     glBinding.getReflectionCubeMap(lightProbe);
   });

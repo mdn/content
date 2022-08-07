@@ -66,7 +66,7 @@ input[type="text"]:disabled {
 
 ```js
 // Wait for the page to finish loading
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   // Attach `change` event listener to checkbox
   document.getElementById('billing-checkbox').onchange = toggleBilling;
 }, false);

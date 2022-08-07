@@ -42,12 +42,12 @@ if (navigator.userAgent.includes("Chrome")){
     //  because all browsers parse the entire script, including
     //  sections of the code that are never executed.
     var camelCaseExpression = new RegExp("(?<=[A-Z])");
-    var splitUpString = function(str) {
+    var splitUpString = (str) => {
         return (""+str).split(camelCaseExpression);
     };
 } else {
     /*This fallback code is much less performant, but works*/
-    var splitUpString = function(str){
+    var splitUpString = (str) => {
         return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
     };
 }
@@ -75,9 +75,9 @@ try {
     // isLookBehindSupported remains false.
 }
 
-var splitUpString = isLookBehindSupported ? function(str) {
+var splitUpString = isLookBehindSupported ? (str) => {
     return (""+str).split(new RegExp("(?<=[A-Z])"));
-} : function(str) {
+} : (str) => {
     return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
 };
 ```
@@ -119,7 +119,7 @@ if (hasTouchScreen)
     document.getElementById("exampleButton").style.padding="1em";
 ```
 
-As for the screen size, use _window\.innerWidth_ and window\.addEventListener("resize", function(){ /\*refresh screen size dependent things\*/ }). What you want to do for screen size is not slash off information on smaller screens. That will only annoy people because it will force them to use the desktop version. Rather, try to have fewer columns of information in a longer page on smaller screens while having more columns with a shorter page on larger screen sizes. This effect can be easily achieved using CSS [flexboxes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), sometimes with [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats) as a partial fallback.
+As for the screen size, use _window\.innerWidth_ and window\.addEventListener("resize", () => { /\*refresh screen size dependent things\*/ }). What you want to do for screen size is not slash off information on smaller screens. That will only annoy people because it will force them to use the desktop version. Rather, try to have fewer columns of information in a longer page on smaller screens while having more columns with a shorter page on larger screen sizes. This effect can be easily achieved using CSS [flexboxes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), sometimes with [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats) as a partial fallback.
 
 Also try to move less relevant/important information down to the bottom and group the page's content together meaningfully. Although it is off-topic, perhaps the following detailed example might give you insights and ideas that persuade you to forgo user agent sniffing. Let us imagine a page composed of boxes of information; each box is about a different feline breed or canine breed. Each box has an image, an overview, and a historical fun fact. The pictures are kept to a maximum reasonable size even on large screens. For the purposes of grouping the content meaningfully, all the cat boxes are separated from all the dog boxes such that the cat and dog boxes are not intermixed together. On a large screen, it saves space to have multiple columns to reduce the space wasted to the left and to the right of the pictures. The boxes can be separated into multiple columns via two equally fair method. From this point on, we shall assume that all the dog boxes are at the top of the source code, that all the cat boxes are at the bottom of the source code, and that all these boxes have the same parent element. There a single instance of a dog box immediately above a cat box, of course. The first method uses horizontal [Flexboxes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to group the content such that when the page is displayed to the end user, all the dogs boxes are at the top of the page and all the cat boxes are lower on the page. The second method uses a [Column](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts) layout and resents all the dogs to the left and all the cats to the right. Only in this particular scenario, it is appropriate to provide no fallback for the flexboxes/multicolumns, resulting in a single column of very wide boxes on old browsers. Also consider the following. If more people visit the webpage to see the cats, then it might be a good idea to put all the cats higher in the source code than the dogs so that more people can find what they are looking for faster on smaller screens where the content collapses down to one column.
 
@@ -149,22 +149,22 @@ var UA=navigator.userAgent, isWebkit=/\b(iPad|iPhone|iPod)\b/.test(UA) &&
 var mediaQueryUpdated = true, mqL = [];
 function whenMediaChanges(){mediaQueryUpdated = true}
 
-var listenToMediaQuery = isWebkit ? function(mQ, f) {
+var listenToMediaQuery = isWebkit ? (mQ, f) => {
     if(/height|width/.test(mQ.media)) mqL.push([mQ, f]);
     mQ.addListener(f), mQ.addListener(whenMediaChanges);
-} : function(){};
-var destroyMediaQuery = isWebkit ? function(mQ) {
+} : () => {};
+var destroyMediaQuery = isWebkit ? (mQ) => {
     for (var i=0,len=mqL.length|0; i<len; i=i+1|0)
         if (mqL[i][0] === mQ) mqL.splice(i, 1);
     mQ.removeListener(whenMediaChanges);
 } : listenToMediaQuery;
 
 var orientationChanged = false;
-addEventListener("orientationchange", function(){
+addEventListener("orientationchange", () => {
     orientationChanged = true;
 }, PASSIVE_LISTENER_OPTION);
 
-addEventListener("resize", setTimeout.bind(0,function(){
+addEventListener("resize", setTimeout.bind(0,() => {
     if (orientationChanged && !mediaQueryUpdated)
         for (var i=0,len=mqL.length|0; i<len; i=i+1|0)
             mqL[i][1]( mqL[i][0] );

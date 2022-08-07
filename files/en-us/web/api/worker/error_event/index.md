@@ -38,7 +38,7 @@ The following code snippet creates a {{domxref("Worker")}} object using the {{do
 ```js
 const myWorker = new Worker('worker.js');
 
-myWorker.onerror = function(event) {
+myWorker.onerror = (event) => {
   console.log('There is an error with your worker!');
 }
 ```

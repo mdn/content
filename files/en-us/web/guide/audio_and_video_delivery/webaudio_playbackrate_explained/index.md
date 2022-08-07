@@ -41,13 +41,13 @@ Let's create a {{ htmlelement("video") }} element first, and set up video and pl
 And apply some JavaScript to it:
 
 ```js
-window.onload = function () {
+window.onload = () => {
 
   var v = document.getElementById("myVideo");
   var p = document.getElementById("pbr");
   var c = document.getElementById("currentPbr");
 
-  p.addEventListener('input',function(){
+  p.addEventListener('input',() => {
     c.innerHTML = p.value;
     v.playbackRate = p.value;
   },false);

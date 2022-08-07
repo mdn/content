@@ -33,7 +33,7 @@ function myRect(x, y, w, h, message) {
 
   this.rect.addEventListener("click",this,false)
 
-  this.handleEvent= function(evt){
+  this.handleEvent= (evt) => {
     switch (evt.type){
     case "click":
       alert(this.message)

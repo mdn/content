@@ -75,7 +75,7 @@ None ({{jsxref("undefined")}}).
 const xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
-xhr.onload = function () {
+xhr.onload = () => {
   // Request finished. Do processing here.
 };
 
@@ -95,7 +95,7 @@ xhr.open("POST", '/server', true);
 //Send the proper header information along with the request
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-xhr.onreadystatechange = function() { // Call a function when the state changes.
+xhr.onreadystatechange = () => { // Call a function when the state changes.
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
         // Request finished. Do processing here.
     }

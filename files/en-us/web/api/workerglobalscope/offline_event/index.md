@@ -34,7 +34,7 @@ A generic {{domxref("Event")}}.
 The following code snippet shows an `onoffline` handler set inside a worker:
 
 ```js
-self.onoffline = function() {
+self.onoffline = () => {
   console.log('Your worker is now offline');
 }
 ```
@@ -42,7 +42,7 @@ self.onoffline = function() {
 The same snippet, but using `addEventListener()`:
 
 ```js
-self.addEventListener('offline', function() {
+self.addEventListener('offline', () => {
   console.log('Your worker is now offline');
 });
 ```

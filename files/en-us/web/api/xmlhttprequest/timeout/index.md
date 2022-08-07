@@ -31,11 +31,11 @@ xhr.open('GET', '/server', true);
 
 xhr.timeout = 2000; // time in milliseconds
 
-xhr.onload = function () {
+xhr.onload = () => {
   // Request finished. Do processing here.
 };
 
-xhr.ontimeout = function (e) {
+xhr.ontimeout = (e) => {
   // XMLHttpRequest timed out. Do something here.
 };
 

@@ -416,7 +416,7 @@ The JavaScript is relatively simple — it contains an {{domxref("HTMLElement.ch
 var selectElem = document.querySelector("select");
 var inputElems = document.querySelectorAll("input");
 
-selectElem.onchange = function() {
+selectElem.onchange = () => {
   for (var i = 0; i < inputElems.length; i++) {
     inputElems[i].value = "";
   }

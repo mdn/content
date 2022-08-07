@@ -199,7 +199,7 @@ Let's look at a simple table example — a WebAssembly module that creates and e
 
     ```js
     WebAssembly.instantiateStreaming(fetch('table.wasm'))
-    .then(function(results) {
+    .then((results) => {
       // add code here
     });
     ```

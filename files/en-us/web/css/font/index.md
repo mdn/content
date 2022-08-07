@@ -280,7 +280,7 @@ var textAreas = document.getElementsByClassName("curCss"),
     getProperties,
     injectCss;
 
-getProperties = function () {
+getProperties = () => {
   shortText =
       getCheckedValue("font_style") + " " +
       getCheckedValue("font_variant") + " " +
@@ -292,7 +292,7 @@ getProperties = function () {
   return shortText;
 }
 
-getCheckedValue = function(radio_name) {
+getCheckedValue = (radio_name) => {
   oRadio = document.forms[0].elements[radio_name];
   for (var i = 0; i < oRadio.length; i++) {
     if(oRadio[i].checked) {
@@ -306,12 +306,12 @@ getCheckedValue = function(radio_name) {
   }
 }
 
-setCss = function () {
+setCss = () => {
   getProperties();
   injectCss(shortText);
 }
 
-injectCss = function(cssFragment) {
+injectCss = (cssFragment) => {
   old = document.body.getElementsByTagName("style");
   if (old.length > 1) {
     old[1].parentElement.removeChild(old[1]);

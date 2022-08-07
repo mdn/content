@@ -161,8 +161,8 @@ p.pilcrow + p.pilcrow::before {
 ### JavaScript
 
 ```js
-document.querySelector('button').addEventListener('click', function (event) {
-  document.querySelectorAll('p').forEach(function (paragraph) {
+document.querySelector('button').addEventListener('click', (event) => {
+  document.querySelectorAll('p').forEach((paragraph) => {
     paragraph.classList.toggle('pilcrow');
   });
   var newButtonText = event.target.dataset.toggleText;

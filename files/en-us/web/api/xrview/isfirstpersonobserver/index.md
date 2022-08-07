@@ -38,7 +38,7 @@ navigator.xr.requestSession("immersive-ar", {
 
 // …
 
-session.requestAnimationFrame(function(frame) {
+session.requestAnimationFrame((frame) => {
   let views = frame.getViewerPose(space);
   // Make sure to iterate over all views
   for (view of views) {

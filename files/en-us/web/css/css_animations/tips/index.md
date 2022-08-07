@@ -77,8 +77,8 @@ Next we'll look at the JavaScript that does the work. The meat of this technique
 ```js
 function play() {
   document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function(time) {
-    window.requestAnimationFrame(function(time) {
+  window.requestAnimationFrame((time) => {
+    window.requestAnimationFrame((time) => {
       document.querySelector(".box").className = "box changing";
     });
   });

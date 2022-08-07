@@ -38,28 +38,28 @@ function sendMessage(message, writableStream) {
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
   const encoded = encoder.encode(message, {stream: true});
-  encoded.forEach(function(chunk) {
+  encoded.forEach((chunk) => {
     // Make sure the stream and its writer are able to
     //   receive data.
     defaultWriter.ready
-    .then(function() {
+    .then(() => {
       defaultWriter.write(chunk)
-      .then(function() {
+      .then(() => {
         console.log("Chunk written to sink.");
       })
-      .catch(function(err) {
+      .catch((err) => {
         console.log(`Chunk error: ${err}`);
       });
     });
     // Call ready again to ensure that all chunks are written
     //   before closing the writer.
     defaultWriter.ready
-    .then(function() {
+    .then(() => {
       defaultWriter.close()
-      .then(function() {
+      .then(() => {
         console.log("All chunks written");
       })
-      .catch(function(err) {
+      .catch((err) => {
         console.log(`Stream error: ${err}`);
       });
     });

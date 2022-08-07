@@ -128,7 +128,7 @@ selectElem.addEventListener('change', () => {
     return;
   } else {
     example.style.transform = `rotate3d(1, 1, 1, 30deg) ${selectElem.value}`;
-    setTimeout(function() {
+    setTimeout(() => {
       example.style.transform = 'rotate3d(1, 1, 1, 30deg)';
     }, 2000)
   }

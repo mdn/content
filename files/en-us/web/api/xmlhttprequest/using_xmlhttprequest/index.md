@@ -135,7 +135,7 @@ object, which stores the raw binary data.
 ```js
 const oReq = new XMLHttpRequest();
 
-oReq.onload = function(e) {
+oReq.onload = (e) => {
   const arraybuffer = oReq.response; // not responseText
   /* ... */
 }
@@ -362,7 +362,7 @@ ways to _submit_, and to **upload files**:
 |*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
 \*/
 
-if (!XMLHttpRequest.prototype.sendAsBinary) {
+if (!XMLHttpRequest.prototype.sendAsBinary(sData) => {
   XMLHttpRequest.prototype.sendAsBinary = function(sData) {
     const nBytes = sData.length;
     const ui8Data = new Uint8Array(nBytes);
@@ -387,7 +387,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 |*|
 |*|   AJAXSubmit(HTMLFormElement);
 \*/
-
+() => {
 const AJAXSubmit = (function () {
 
   function ajaxSuccess () {
@@ -501,7 +501,7 @@ const AJAXSubmit = (function () {
     }
     processStatus(this);
   }
-
+(oFormElement) => {
   return function (oFormElement) {
     if (!oFormElement.action) { return; }
     new SubmitRequest(oFormElement);
@@ -851,7 +851,7 @@ And to test:
 
 ```js
 /* Let's test the file "yourpage.html"... */
-
+(nModified, nVisit) => {
 ifHasChanged("yourpage.html", function (nModified, nVisit) {
   console.log(`The page '${this.filepath}' has been changed on ${(new Date(nModified)).toLocaleString()}!`);
 });

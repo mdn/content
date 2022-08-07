@@ -379,7 +379,7 @@ let feetInput = document.querySelector('#feet');
 let inchesInput = document.querySelector('#inches');
 let switchBtn = document.querySelector('input[type="button"]');
 
-switchBtn.addEventListener('click', function() {
+switchBtn.addEventListener('click', () => {
   if(switchBtn.getAttribute('class') === 'meters') {
     switchBtn.setAttribute('class', 'feet');
     switchBtn.value = 'Enter height in meters';

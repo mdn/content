@@ -405,7 +405,7 @@ So how do we place wasm functions in our table? Just like `data` sections can be
 In JavaScript, the equivalent calls to create such a table instance would look something like this:
 
 ```js
-function() {
+() => {
   // table section
   var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
 
@@ -550,7 +550,7 @@ var importObj = {
 Promise.all([
   WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
   WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
-]).then(function(results) {
+]).then((results) => {
   console.log(results[1].instance.exports.doIt());  // prints 42
 });
 ```

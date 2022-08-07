@@ -47,7 +47,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can pass `redraw` to {{domxref("EventTarget.addEventListener()", "addEventListener()")}}:
 
 ```js
-cubeLayer.addEventListener("redraw", function(event) {
+cubeLayer.addEventListener("redraw", (event) => {
   // redraw the layer
 });
 ```
@@ -55,7 +55,7 @@ cubeLayer.addEventListener("redraw", function(event) {
 Alternatively, you can use the `onredraw` event handler property to establish a handler for the `redraw` event:
 
 ```js
-cubeLayer.onredraw = function(event) {
+cubeLayer.onredraw = (event) => {
  // redraw the layer
 }
 ```

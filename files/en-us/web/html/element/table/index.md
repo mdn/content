@@ -298,7 +298,7 @@ In the below example, you can see such an example. We are attaching it to the \<
 ##### JavaScript
 
 ```js
-HTMLTableSectionElement.prototype.sort = function(cb){
+HTMLTableSectionElement.prototype.sort = (cb) => {
   Array
     .prototype
     .slice
@@ -309,7 +309,7 @@ HTMLTableSectionElement.prototype.sort = function(cb){
     },this);
 }
 
-document.querySelector('table').tBodies[0].sort(function(a, b){
+document.querySelector('table').tBodies[0].sort((a, b) => {
     return a.textContent.localeCompare(b.textContent);
 });
 ```

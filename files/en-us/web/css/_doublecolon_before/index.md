@@ -137,7 +137,7 @@ li.done::before {
 
 ```js
 var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
+list.addEventListener('click', (ev) => {
   if (ev.target.tagName === 'LI') {
      ev.target.classList.toggle('done');
   }

@@ -148,7 +148,7 @@ navigator.xr.requestSession("immersive-vr")
   // Do necessary session setup here.
   // Begin the session's animation loop.
   xrSession.requestAnimationFrame(onXRAnimationFrame);
-}).catch(function(error) {
+}).catch((error) => {
   // "immersive-vr" sessions are not supported
   console.warn("'immersive-vr' isn't supported, or an error occurred activating VR!");
 });

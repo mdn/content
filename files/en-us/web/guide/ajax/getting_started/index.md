@@ -46,7 +46,7 @@ httpRequest.onreadystatechange = nameOfTheFunction;
 Note that there are no parentheses or parameters after the function name, because you're assigning a reference to the function, rather than actually calling it. Alternatively, instead of giving a function name, you can use the JavaScript technique of defining functions on the fly (called "anonymous functions") to define the actions that will process the response, like this:
 
 ```js
-httpRequest.onreadystatechange = function(){
+httpRequest.onreadystatechange = () => {
     // Process the server response here.
 };
 ```
@@ -129,7 +129,7 @@ Let's put it all together with a simple HTTP request. Our JavaScript will reques
 <button id="ajaxButton" type="button">Make a request</button>
 
 <script>
-(function() {
+(() => {
   let httpRequest;
   document.getElementById("ajaxButton").addEventListener('click', makeRequest);
 
@@ -236,7 +236,7 @@ First we'll add a text box to our HTML so the user can enter their name:
 We'll also add a line to our event handler to get the user's data from the text box and send it to the `makeRequest()` function along with the URL of our server-side script:
 
 ```js
-document.getElementById("ajaxButton").onclick = function() {
+document.getElementById("ajaxButton").onclick = () => {
     var userName = document.getElementById("ajaxTextbox").value;
     makeRequest('test.php',userName);
 };
@@ -326,7 +326,7 @@ This is repeated every 5 seconds, using a `setInterval()` call. The idea would b
       console.log('Fetching updated data.');
       let xhr = new XMLHttpRequest();
       xhr.open("GET", "time-log.txt", true);
-      xhr.onload = function() {
+      xhr.onload = () => {
         updateDisplay(xhr.response);
       }
       xhr.send();

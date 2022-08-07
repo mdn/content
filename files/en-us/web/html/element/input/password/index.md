@@ -224,7 +224,7 @@ As with other textual entry controls, you can use the {{domxref("HTMLInputElemen
 #### JavaScript
 
 ```js
-document.getElementById("selectAll").onclick = function() {
+document.getElementById("selectAll").onclick = () => {
   document.getElementById("userPassword").select();
 }
 ```
@@ -280,7 +280,7 @@ This is just some simple code to display the entered SSN onscreen so you can see
 var ssn = document.getElementById("ssn");
 var current = document.getElementById("current");
 
-ssn.oninput = function(event) {
+ssn.oninput = (event) => {
   current.textContent = ssn.value;
 }
 ```

@@ -251,7 +251,7 @@ This section looks at the JavaScript required for implementing the button functi
 Now that the buttons actually look like buttons and have images that indicate what they do, some changes need to be made so that the "dual functionality" buttons (such as the play/pause button) are in the correct "state" and display the correct image. In order to facilitate this, a new function is defined called `changeButtonState()`, which accepts a type variable indicating the button's functionality:
 
 ```js
-var changeButtonState = function(type) {
+var changeButtonState = (type) => {
    // Play/Pause button
    if (type === 'playpause') {
       if (video.paused || video.ended) {
@@ -271,20 +271,20 @@ var changeButtonState = function(type) {
 This function is then called by the relevant event handlers:
 
 ```js
-video.addEventListener('play', function() {
+video.addEventListener('play', () => {
    changeButtonState('playpause');
 }, false);
-video.addEventListener('pause', function() {
+video.addEventListener('pause', () => {
    changeButtonState('playpause');
 }, false);
-stop.addEventListener('click', function(e) {
+stop.addEventListener('click', (e) => {
    video.pause();
    video.currentTime = 0;
    progress.value = 0;
    // Update the play/pause button's 'data-state' which allows the correct button image to be set via CSS
    changeButtonState('playpause');
 });
-mute.addEventListener('click', function(e) {
+mute.addEventListener('click', (e) => {
    video.muted = !video.muted;
    changeButtonState('mute');
 });
@@ -293,7 +293,7 @@ mute.addEventListener('click', function(e) {
 You might have noticed that there are new handlers where the `play` and `pause` events are reacted to on the video. There is a reason for this! Even though the browser's default video control set has been turned off, many browsers make them accessible by right clicking on the HTML5 video. This means that a user could play/pause the video from these controls, which would then leave the custom control set's buttons out of sync. If a user uses the default controls, the defined Media API events — such as `play` and `pause` — are raised so this can be taken advantage of to ensure that the custom control buttons are kept in sync. To ensure this, a new click handler needs to be defined for the play/pause button so that it too raises the `play` and `pause` events:
 
 ```js
-playpause.addEventListener('click', function(e) {
+playpause.addEventListener('click', (e) => {
    if (video.paused || video.ended) video.play();
    else video.pause();
 });
@@ -304,7 +304,7 @@ playpause.addEventListener('click', function(e) {
 The `alterVolume()` function, called when the player's volume buttons are clicked, also changes — it now calls a new function called `checkVolume()`:
 
 ```js
-var checkVolume = function(dir) {
+var checkVolume = (dir) => {
    if (dir) {
       var currentVolume = Math.floor(video.volume * 10) / 10;
       if (dir === '+') {
@@ -320,7 +320,7 @@ var checkVolume = function(dir) {
    }
    changeButtonState('mute');
 }
-var alterVolume = function(dir) {
+var alterVolume = (dir) => {
    checkVolume(dir);
 }
 ```
@@ -328,7 +328,7 @@ var alterVolume = function(dir) {
 This new `checkVolume()` function does the same thing as the `alterVolume()` but it also sets the state of the mute button depending on the video's current volume setting. `checkVolume()` is also called when the `volumechange` event is raised:
 
 ```js
-video.addEventListener('volumechange', function() {
+video.addEventListener('volumechange', () => {
    checkVolume();
 }, false);
 ```
@@ -338,7 +338,7 @@ video.addEventListener('volumechange', function() {
 A small change also needs to be made to the click handler for the {{ htmlelement("progress") }} element. Since the enclosing {{htmlelement("figure") }} element now has `position:relative` set on it, the calculations made by this click handler are incorrect. It now also needs to take into account the offset position of the parent element:
 
 ```js
-progress.addEventListener('click', function(e) {
+progress.addEventListener('click', (e) => {
    var pos = (e.pageX  - (this.offsetLeft + this.offsetParent.offsetLeft)) / this.offsetWidth;
    video.currentTime = pos * video.duration;
 });

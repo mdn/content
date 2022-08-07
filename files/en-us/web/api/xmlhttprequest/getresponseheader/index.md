@@ -66,7 +66,7 @@ const client = new XMLHttpRequest();
 client.open("GET", "unicorns-are-teh-awesome.txt", true);
 client.send();
 
-client.onreadystatechange = function() {
+client.onreadystatechange = () => {
   if (this.readyState === this.HEADERS_RECEIVED) {
     const contentType = client.getResponseHeader("Content-Type");
     if (contentType !== my_expected_type) {

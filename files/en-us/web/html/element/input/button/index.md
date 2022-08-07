@@ -170,7 +170,7 @@ button.addEventListener('click', disableButton);
 function disableButton() {
   button.disabled = true;
   button.value = 'Disabled';
-  window.setTimeout(function() {
+  window.setTimeout(() => {
     button.disabled = false;
     button.value = 'Enabled';
   }, 2000);
@@ -202,7 +202,7 @@ button.addEventListener('click', disableButton);
 
 function disableButton() {
   fieldset.disabled = true;
-  window.setTimeout(function() {
+  window.setTimeout(() => {
     fieldset.disabled = false;
   }, 2000);
 }
@@ -283,7 +283,7 @@ function degToRad(degrees) {
 
 // update sizepicker output value
 
-sizePicker.oninput = function() {
+sizePicker.oninput = () => {
   output.textContent = sizePicker.value;
 }
 
@@ -293,20 +293,20 @@ var curY;
 var pressed = false;
 
 // update mouse pointer coordinates
-document.onmousemove = function(e) {
+document.onmousemove = (e) => {
   curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
   curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
 }
 
-canvas.onmousedown = function() {
+canvas.onmousedown = () => {
   pressed = true;
 };
 
-canvas.onmouseup = function() {
+canvas.onmouseup = () => {
   pressed = false;
 }
 
-clearBtn.onclick = function() {
+clearBtn.onclick = () => {
   ctx.fillStyle = 'rgb(0,0,0)';
   ctx.fillRect(0,0,width,height);
 }

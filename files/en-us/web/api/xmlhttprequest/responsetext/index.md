@@ -51,7 +51,7 @@ xhr.open('GET', '/server', true);
 // If specified, responseType must be empty string or "text"
 xhr.responseType = 'text';
 
-xhr.onload = function () {
+xhr.onload = () => {
     if (xhr.readyState === xhr.DONE) {
         if (xhr.status === 200) {
             console.log(xhr.response);

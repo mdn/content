@@ -413,7 +413,7 @@ for (const select of selects) {
     const options = select.options;
     const parent = select.parentElement;
     const multiple = select.hasAttribute('multiple');
-    const onclick = function(e) {
+    const onclick = (e) => {
         const disabled = this.hasAttribute('data-disabled');
         select.value = this.dataset.value;
         span.innerText = this.dataset.label;
@@ -436,7 +436,7 @@ for (const select of selects) {
             };
         };
     };
-    const onkeyup = function(e) {
+    const onkeyup = (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (e.keyCode === 13) {
@@ -494,14 +494,14 @@ for (const select of selects) {
             optgroup.appendChild(option);
         };
     };
-    div.onclick = function(e) {
+    div.onclick = (e) => {
         e.preventDefault();
     }
     parent.insertBefore(div, select);
     header.appendChild(select);
     div.appendChild(datalist);
     datalist.style.top = header.offsetTop + header.offsetHeight + 'px';
-    div.onclick = function(e) {
+    div.onclick = (e) => {
         if (multiple) {
 
         } else {
@@ -514,23 +514,23 @@ for (const select of selects) {
             }
         }
     };
-    div.onkeyup = function(event) {
+    div.onkeyup = (event) => {
         event.preventDefault();
         if (event.keyCode === 13) {
             this.click();
         }
     };
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', (e) => {
         if (div.hasAttribute("data-open")) div.removeAttribute("data-open");
     });
-    const width = Math.max(...Array.from(options).map(function(e) {
+    const width = Math.max(...Array.from(options).map((e) => {
         span.innerText = e.label;
         return div.offsetWidth;
     }));
     console.log(width)
     div.style.width = width + 'px';
 }
-document.forms[0].onsubmit = function(e) {
+document.forms[0].onsubmit = (e) => {
     const data = new FormData(this);
     e.preventDefault();
     submit.innerText = JSON.stringify([...data.entries()]);

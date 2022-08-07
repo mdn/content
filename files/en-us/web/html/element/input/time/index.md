@@ -144,7 +144,7 @@ The JavaScript code adds code to the time input to watch for the {{domxref("HTML
 var startTime = document.getElementById("startTime");
 var valueSpan = document.getElementById("value");
 
-startTime.addEventListener("input", function() {
+startTime.addEventListener("input", () => {
   valueSpan.innerText = startTime.value;
 }, false);
 ```

@@ -100,7 +100,7 @@ button {
 #### JavaScript
 
 ```js
-document.querySelector("button").addEventListener("click", function (evt) {
+document.querySelector("button").addEventListener("click", (evt) => {
   this.querySelector("svg > path:nth-of-type(1)").classList.toggle("invisible");
   this.querySelector("svg > path:nth-of-type(2)").classList.toggle("invisible");
 });

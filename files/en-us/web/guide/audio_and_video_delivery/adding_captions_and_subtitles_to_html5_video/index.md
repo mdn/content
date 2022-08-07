@@ -162,7 +162,7 @@ The creation of each list item and button is done by the `createMenuItem()` func
 
 ```js
 var subtitleMenuButtons = [];
-var createMenuItem = function(id, lang, label) {
+var createMenuItem = (id, lang, label) => {
    var listItem = document.createElement('li');
    var button = listItem.appendChild(document.createElement('button'));
    button.setAttribute('id', id);
@@ -171,9 +171,9 @@ var createMenuItem = function(id, lang, label) {
    button.value = label;
    button.setAttribute('data-state', 'inactive');
    button.appendChild(document.createTextNode(label));
-   button.addEventListener('click', function(e) {
+   button.addEventListener('click', (e) => {
       // Set all buttons to inactive
-      subtitleMenuButtons.map(function(v, i, a) {
+      subtitleMenuButtons.map((v, i, a) => {
          subtitleMenuButtons[i].setAttribute('data-state', 'inactive');
       });
       // Find the language to activate
@@ -202,7 +202,7 @@ Once the menu is built, it is then inserted into the DOM at the bottom of the vi
 Initially the menu is hidden by default, so an event listener needs to be added to our subtitles button to toggle it:
 
 ```js
-subtitles.addEventListener('click', function(e) {
+subtitles.addEventListener('click', (e) => {
    if (subtitlesMenu) {
       subtitlesMenu.style.display =
         subtitlesMenu.style.display === 'block' ? 'none' : 'block';

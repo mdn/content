@@ -149,7 +149,7 @@ Using these handles, events can now be attached to each of the custom control bu
 ### Play/Pause
 
 ```js
-playpause.addEventListener('click', function(e) {
+playpause.addEventListener('click', (e) => {
    if (video.paused || video.ended) video.play();
    else video.pause();
 });
@@ -160,7 +160,7 @@ When a `click` event is detected on the play/pause button, the handler first of 
 ### Stop
 
 ```js
-stop.addEventListener('click', function(e) {
+stop.addEventListener('click', (e) => {
    video.pause();
    video.currentTime = 0;
    progress.value = 0;
@@ -172,7 +172,7 @@ The Media API doesn't have a `stop` method, so to mimic this the video is paused
 ### Mute
 
 ```js
-mute.addEventListener('click', function(e) {
+mute.addEventListener('click', (e) => {
    video.muted = !video.muted;
 });
 ```
@@ -182,10 +182,10 @@ The mute button is a simple toggle button that uses the Media API's `muted` attr
 ### Volume
 
 ```js
-volinc.addEventListener('click', function(e) {
+volinc.addEventListener('click', (e) => {
    alterVolume('+');
 });
-voldec.addEventListener('click', function(e) {
+voldec.addEventListener('click', (e) => {
    alterVolume('-');
 });
 ```
@@ -193,7 +193,7 @@ voldec.addEventListener('click', function(e) {
 Two volume control buttons have been defined, one for increasing the volume and another for decreasing it. A user defined function, `alterVolume(direction)` has been created that deals with this:
 
 ```js
-var alterVolume = function(dir) {
+var alterVolume = (dir) => {
    var currentVolume = Math.floor(video.volume * 10) / 10;
    if (dir === '+') {
       if (currentVolume < 1) video.volume += 0.1;
@@ -213,7 +213,7 @@ When the {{ htmlelement("progress") }} element was defined above in the HTML, on
 Ideally, the correct value of the video's `duration` attribute is available when the `loadedmetadata` event is raised, which occurs when the video's metadata has been loaded:
 
 ```js
-video.addEventListener('loadedmetadata', function() {
+video.addEventListener('loadedmetadata', () => {
    progress.setAttribute('max', video.duration);
 });
 ```
@@ -223,7 +223,7 @@ Unfortunately in some mobile browsers, when `loadedmetadata` is raised — if it
 Another event, `timeupdate`, is raised periodically as the video is being played through. This event is ideal for updating the progress bar's value, setting it to the value of the video's `currentTime` attribute, which indicates how far through the video the current playback is.
 
 ```js
-video.addEventListener('timeupdate', function() {
+video.addEventListener('timeupdate', () => {
    progress.value = video.currentTime;
    progressBar.style.width = Math.floor((video.currentTime / video.duration) * 100) + '%';
 });
@@ -234,7 +234,7 @@ As the `timeupdate` event is raised, the `progress` element's `value` attribute 
 Coming back to the `video.duration` problem mentioned above, when the `timeupdate` event is raised, in most mobile browsers the video's `duration` attribute should now have the correct value. This can be taken advantage of to set the `progress` element's `max` attribute if it is currently not set:
 
 ```js
-video.addEventListener('timeupdate', function() {
+video.addEventListener('timeupdate', () => {
    if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
    progress.value = video.currentTime;
    progressBar.style.width = Math.floor((video.currentTime / video.duration) * 100) + '%';
@@ -248,7 +248,7 @@ video.addEventListener('timeupdate', function() {
 Another feature of most browser default video control sets is the ability to click on the video's progress bar to "skip ahead" to a different point in the video. This can also be achieved by adding a simple `click` event listener to the `progress` element:
 
 ```js
-progress.addEventListener('click', function(e) {
+progress.addEventListener('click', (e) => {
    var rect = this.getBoundingClientRect();
    var pos = (e.pageX  - rect.left) / this.offsetWidth;
    video.currentTime = pos * video.duration;
@@ -282,7 +282,7 @@ if (!fullScreenEnabled) {
 Naturally the fullscreen button needs to actually do something, so, like the other buttons, a `click` event handler is attached in which we call a user defined function `handleFullscreen`:
 
 ```js
-fullscreen.addEventListener('click', function(e) {
+fullscreen.addEventListener('click', (e) => {
    handleFullscreen();
 });
 ```
@@ -290,7 +290,7 @@ fullscreen.addEventListener('click', function(e) {
 The `handleFullscreen` function is defined as follows:
 
 ```js
-var handleFullscreen = function() {
+var handleFullscreen = () => {
    if (isFullScreen()) {
       if (document.exitFullscreen) document.exitFullscreen();
       else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
@@ -311,7 +311,7 @@ var handleFullscreen = function() {
 First of all the function checks if the browser is already in fullscreen mode by calling another function `isFullScreen`:
 
 ```js
-var isFullScreen = function() {
+var isFullScreen = () => {
    return !!(document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || document.fullscreenElement);
 }
 ```
@@ -330,7 +330,7 @@ Dealing with WebKit-specific code in this way will affect all WebKit browsers, b
 Another user defined function — `setFullscreenData()` — is also called, which sets the value of a `data-fullscreen` attribute on the `videoContainer` (this makes use of [`data-states`](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states#data-state-attributes)).
 
 ```js
-var setFullscreenData = function(state) {
+var setFullscreenData = (state) => {
    videoContainer.setAttribute('data-fullscreen', !!state);
 }
 ```
@@ -338,16 +338,16 @@ var setFullscreenData = function(state) {
 This is used to set some basic CSS to improve the styling of the custom controls when they are in fullscreen (see the sample code for further details). When a video goes into fullscreen mode, it usually displays a message indicating that the user can press the _Esc_ key to exit fullscreen mode, so the code also needs to listen for relevant events in order to call the `setFullscreenData()` function to ensure the control styling is correct:
 
 ```js
-document.addEventListener('fullscreenchange', function(e) {
+document.addEventListener('fullscreenchange', (e) => {
    setFullscreenData(!!(document.fullscreen || document.fullscreenElement));
 });
-document.addEventListener('webkitfullscreenchange', function() {
+document.addEventListener('webkitfullscreenchange', () => {
    setFullscreenData(!!document.webkitIsFullScreen);
 });
-document.addEventListener('mozfullscreenchange', function() {
+document.addEventListener('mozfullscreenchange', () => {
    setFullscreenData(!!document.mozFullScreen);
 });
-document.addEventListener('msfullscreenchange', function() {
+document.addEventListener('msfullscreenchange', () => {
    setFullscreenData(!!document.msFullscreenElement);
 });
 ```

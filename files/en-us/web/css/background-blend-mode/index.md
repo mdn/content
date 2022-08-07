@@ -93,7 +93,7 @@ background-blend-mode: unset;
 ```
 
 ```js hidden
-document.getElementById("select").onchange = function(event) {
+document.getElementById("select").onchange = (event) => {
     document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
 }
 console.log(document.getElementById('div'));

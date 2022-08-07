@@ -100,7 +100,7 @@ request.open('GET', 'simple.wasm');
 request.responseType = 'arraybuffer';
 request.send();
 
-request.onload = function() {
+request.onload = () => {
   var bytes = request.response;
   WebAssembly.instantiate(bytes, importObject).then((results) => {
     results.instance.exports.exported_func();

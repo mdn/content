@@ -349,11 +349,11 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 <script>
 var myStylesheet = document.querySelector('#my-stylesheet');
 
-myStylesheet.onload = function() {
+myStylesheet.onload = () => {
   // Do something interesting; the sheet has been loaded
 }
 
-myStylesheet.onerror = function() {
+myStylesheet.onerror = () => {
   console.log("An error occurred loading the stylesheet!");
 }
 </script>

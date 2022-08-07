@@ -206,7 +206,7 @@ Using JavaScript you can make the effect of moving the ball to a certain positio
 
 ```js
 var f = document.getElementById('foo');
-document.addEventListener('click', function(ev){
+document.addEventListener('click', (ev) => {
     f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
     f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
 },false);

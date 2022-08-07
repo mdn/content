@@ -89,7 +89,7 @@ let input  = document.getElementById('input');
 let kern   = document.getElementById('kern');
 let nokern = document.getElementById('nokern');
 
-input.addEventListener('keyup', function() {
+input.addEventListener('keyup', () => {
   kern.textContent = input.value; /* Update content */
   nokern.textContent = input.value;
 });

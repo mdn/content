@@ -39,7 +39,7 @@ const xhr = new XMLHttpRequest(),
     url = "https://developer.mozilla.org/";
 
 xhr.open(method, url, true);
-xhr.onreadystatechange = function () {
+xhr.onreadystatechange = () => {
   // In local files, status is 0 upon success in Mozilla Firefox
   if(xhr.readyState === XMLHttpRequest.DONE) {
     const status = xhr.status;

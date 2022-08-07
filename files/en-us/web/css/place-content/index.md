@@ -165,7 +165,7 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
 ```
 
 ```js hidden
-var update = function () {
+var update = () => {
    document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " " + document.getElementById("justifyContentAlignment").value;
 }
 
@@ -176,11 +176,11 @@ var justifyContentAlignment = document.getElementById("justifyContentAlignment")
 justifyContentAlignment.addEventListener("change", update);
 
 var writingM = document.getElementById("writingMode");
-writingM.addEventListener("change", function (evt) {
+writingM.addEventListener("change", (evt) => {
    document.getElementById("container").style.writingMode = evt.target.value;
 });
 var direction = document.getElementById("direction");
-direction.addEventListener("change", function (evt) {
+direction.addEventListener("change", (evt) => {
    document.getElementById("container").style.direction = evt.target.value;
 });
 ```

@@ -65,7 +65,7 @@ p {
 
 ```js hidden
 var colorPicker = document.querySelector("input");
-colorPicker.addEventListener("change", function(evt) {
+colorPicker.addEventListener("change", (evt) => {
   document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
 });
 ```

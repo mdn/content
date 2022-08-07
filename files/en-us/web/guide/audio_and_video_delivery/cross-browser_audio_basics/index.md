@@ -256,7 +256,7 @@ The JavaScript media API allows you to create your own custom player. Let's take
 Next, we attach some functionality to the player using JavaScript:
 
 ```js
-window.onload = function(){
+window.onload = () => {
 
   var myAudio = document.getElementById('my-audio');
   var play = document.getElementById('play');
@@ -288,7 +288,7 @@ First, let's take a look at the media loading process in order:
 The `loadstart` event tells us that load process has started and the browser is connecting to the media.
 
 ```js
-myAudio.addEventListener("loadstart", function() {
+myAudio.addEventListener("loadstart", () => {
   //grabbing the file
 });
 ```
@@ -298,7 +298,7 @@ myAudio.addEventListener("loadstart", function() {
 If you just want to know as soon as the duration of your media is established, this is the event for you. This can be useful because the initial value for duration is `NaN` (Not a Number), which you probably don't want to display to your users.
 
 ```js
-myAudio.addEventListener("durationchange", function() {
+myAudio.addEventListener("durationchange", () => {
   //you can display the duration now
 });
 ```
@@ -308,7 +308,7 @@ myAudio.addEventListener("durationchange", function() {
 Metadata can consist of more than just duration — if you want to wait for all the metadata to download before doing something, you can detect the `loadedmetadata` event.
 
 ```js
-myAudio.addEventListener("loadedmetadata", function() {
+myAudio.addEventListener("loadedmetadata", () => {
   //you can display the duration now
 });
 ```
@@ -318,7 +318,7 @@ myAudio.addEventListener("loadedmetadata", function() {
 The `loadeddata` event is fired when the first bit of media arrives. The playhead is in position but not quite ready to play.
 
 ```js
-myAudio.addEventListener("loadeddata", function() {
+myAudio.addEventListener("loadeddata", () => {
   //you could display the playhead now
 });
 ```
@@ -328,7 +328,7 @@ myAudio.addEventListener("loadeddata", function() {
 The `progress` event indicates that the download of media is still in progress. It is good practice to display some kind of 'loader' at this point.
 
 ```js
-myAudio.addEventListener("progress", function() {
+myAudio.addEventListener("progress", () => {
   // you could let the user know the media is downloading
 });
 ```
@@ -338,7 +338,7 @@ myAudio.addEventListener("progress", function() {
 `canplay` is a useful event to detect should you want to determine whether the media is ready to play. You could, for example, disable custom controls until this event occurs.
 
 ```js
-myAudio.addEventListener("canplay", function() {
+myAudio.addEventListener("canplay", () => {
   //audio is ready to play
 });
 ```
@@ -348,7 +348,7 @@ myAudio.addEventListener("canplay", function() {
 `canplaythrough` is similar to `canplay` but it lets you know that the media is ready to be played all the way through (that is to say that the file has completely downloaded, or it is estimated that it will download in time so that buffering stops do not occur).
 
 ```js
-myAudio.addEventListener("canplaythrough", function() {
+myAudio.addEventListener("canplaythrough", () => {
   //audio is ready to play all the way through
 });
 ```
@@ -383,7 +383,7 @@ We also have another set of events that are useful for reacting to the state of 
 The `timeupdate` event is triggered every time the `currentTime` property changes. In practice, this occurs every 250 milliseconds. This event can be used to trigger the displaying of playback progress.
 
 ```js
-myAudio.addEventListener("timeupdate", function() {
+myAudio.addEventListener("timeupdate", () => {
   //update something related to playback progress
 });
 ```
@@ -409,7 +409,7 @@ The `pause` event is triggered after the `pause()` method is returned. This is w
 The `ended` event is initiated when the end of the media is reached.
 
 ```js
-myAudio.addEventListener("ended", function() {
+myAudio.addEventListener("ended", () => {
   //do something once audio track has finished playing
 });
 ```
@@ -463,7 +463,7 @@ Styled like so:
 Now let's wire this thing up with JavaScript:
 
 ```js
-window.onload = function(){
+window.onload = () => {
 
    var myAudio = document.getElementById('my-audio');
    var play = document.getElementById('play');
@@ -481,18 +481,18 @@ window.onload = function(){
       displayControls();
    } else {
       // not ready yet - wait for canplay event
-      myAudio.addEventListener('canplay', function() {
+      myAudio.addEventListener('canplay', () => {
          displayControls();
       });
    }
 
-   play.addEventListener('click', function() {
+   play.addEventListener('click', () => {
       myAudio.play();
       play.style.display = "none";
       pause.style.display = "block";
    });
 
-   pause.addEventListener('click', function() {
+   pause.addEventListener('click', () => {
       myAudio.pause();
       pause.style.display = "none";
       play.style.display = "block";
@@ -500,7 +500,7 @@ window.onload = function(){
 
    // display progress
 
-   myAudio.addEventListener('timeupdate', function() {
+   myAudio.addEventListener('timeupdate', () => {
       //sets the percentage
       bar.style.width = parseInt(((myAudio.currentTime / myAudio.duration) * 100), 10) + "%";
    });
@@ -531,7 +531,7 @@ Then we add the code that detects the click and moves the 'playhead' to the corr
 ```js
 var progress = document.getElementById('progress');
 
-progress.addEventListener('click', function(e) {
+progress.addEventListener('click', (e) => {
 
   // calculate the normalized position clicked
   var clickPosition = (e.pageX  - this.offsetLeft) / this.offsetWidth;

@@ -27,7 +27,7 @@ This is the simplest usage of asynchronous {{domxref('XMLHttpRequest')}}.
 ```js
 const xhr = new XMLHttpRequest();
 xhr.open("GET", "/bar/foo.txt", true);
-xhr.onload = function (e) {
+xhr.onload = (e) => {
   if (xhr.readyState === 4) {
     if (xhr.status === 200) {
       console.log(xhr.responseText);
@@ -36,7 +36,7 @@ xhr.onload = function (e) {
     }
   }
 };
-xhr.onerror = function (e) {
+xhr.onerror = (e) => {
   console.error(xhr.statusText);
 };
 xhr.send(null);
@@ -104,10 +104,10 @@ You can use a timeout to prevent your code from hanging while waiting for a read
 function loadFile(url, timeout, callback) {
     const args = Array.prototype.slice.call(arguments, 3);
     const xhr = new XMLHttpRequest();
-    xhr.ontimeout = function () {
+    xhr.ontimeout = () => {
         console.error(`The request for ${url} timed out.`);
     };
-    xhr.onload = function() {
+    xhr.onload = () => {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 callback.apply(xhr, args);
@@ -178,7 +178,7 @@ One of the few cases in which a synchronous request does not usually block execu
 <title>MDN Example</title>
 <script>
   const worker = new Worker("myTask.js");
-  worker.onmessage = function(event) {
+  worker.onmessage = (event) => {
     alert("Worker said: " + event.data);
   };
 
@@ -198,7 +198,7 @@ Hello World!!
 **`myTask.js`** (the [`Worker`](/en-US/docs/Web/API/Worker)):
 
 ```js
-self.onmessage = function (event) {
+self.onmessage = (event) => {
   if (event.data === "Hello") {
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "myFile.txt", false);  // synchronous request
