@@ -54,7 +54,7 @@ Two entries will be output to the console. The first containing details of the i
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  const entries = list.getEntries().forEach((entry) => {
+  list.getEntries().forEach((entry) => {
       console.log(entry);
   });
 });
