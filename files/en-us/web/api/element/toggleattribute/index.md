@@ -74,7 +74,6 @@ button.addEventListener("click", () => {
 
 {{DOMAttributeMethods}}
 
-
 ## Specifications
 
 {{Specifications}}
