@@ -93,7 +93,7 @@ In this section we create an object called `newItem` that stores the data in the
       title.value = '';
       hours.value = null;
       minutes.value = null;
-      day.value = 01;
+      day.value = 1;
       month.value = 'January';
       year.value = 2020;
     };
@@ -136,6 +136,7 @@ The `Date` object has a number of methods to extract various parts of the date a
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
+    let monthNumber;
 
     if(cursor) {
 ```
@@ -145,16 +146,16 @@ Next we create another IndexedDB `objectStore`, and use the `openCursor()` metho
 ```js
       switch(cursor.value.month) {
         case "January":
-          let monthNumber = 0;
+          monthNumber = 0;
           break;
         case "February":
-          let monthNumber = 1;
+          monthNumber = 1;
           break;
 
         // other lines removed from listing for brevity
 
         case "December":
-          let monthNumber = 11;
+          monthNumber = 11;
           break;
         default:
           alert('Incorrect month entered in database.');

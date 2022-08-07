@@ -11,16 +11,12 @@ tags:
 
 A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
 
+## Syntax
+
 ```js
 function FindProxyForURL(url, host) {
   // …
 }
-```
-
-## Syntax
-
-```js
-function FindProxyForURL(url, host)
 ```
 
 ### Parameters

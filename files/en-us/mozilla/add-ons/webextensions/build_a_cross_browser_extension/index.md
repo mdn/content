@@ -106,8 +106,8 @@ The use of runtime checks on the availability of a function's features is the re
 The following code enables you to perform a runtime check:
 
 ```js
-if (typeof <function> === "function") {
-   // safe to use the function
+if (typeof fn === "function") {
+  // safe to use the function
 }
 ```
 

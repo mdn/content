@@ -92,7 +92,7 @@ let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign m
 This is better, but somewhat awkward:
 
 ```js
-let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
+const tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
 + 'matter may have nestled its way into his mighty throat. Many a fat alley rat '
 + 'had met its demise while staring point blank down the cavernous barrel of '
 + 'this awesome prowling machine.';
@@ -101,20 +101,21 @@ let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
 Even better is to use a template literal:
 
 ```js example-good
-let tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
+const tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
   matter may have nestled its way into his mighty throat. Many a fat alley rat
   had met its demise while staring point blank down the cavernous barrel of
   this awesome prowling machine.`;
 ```
 
 ```js example-good
-if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
-       || class.YET_ANOTHER_CONDITION ) {
+if (obj.CONDITION || obj.OTHER_CONDITION || obj.SOME_OTHER_CONDITION
+       || obj.YET_ANOTHER_CONDITION ) {
   /* something */
 }
 
-var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-service;1"]
-                           .createInstance(Components.interfaces.nsIToolkitProfileService);
+const toolkitProfileService =
+  Components.classes["@mozilla.org/toolkit/profile-service;1"]
+    .createInstance(Components.interfaces.nsIToolkitProfileService);
 ```
 
 ### Code block height

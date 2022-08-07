@@ -48,14 +48,14 @@ If there are any errors thrown when reading the data they will be caught by the 
 In `catch()` we then call `error()` on the controller, passing the reason from the underlying source.
 
 ```js
-start(controller) {
+function start(controller) {
   readRepeatedly().catch((e) => controller.error(e));
 }
 
 function readRepeatedly() {
   return socket.select2().then(() => {
-          // ...
-  }
+    // …
+  });
 }
 ```
 

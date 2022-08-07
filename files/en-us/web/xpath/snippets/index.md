@@ -140,7 +140,7 @@ function getXPathForElement(el, xml) {
       tempitem2 = tempitem2.previousSibling;
     }
 
-    xpath = `*[name()='${el.nodeName}' and namespace-uri()='${el.namespaceURI === null ? '' : el.namespaceURI)}'][${pos}]/${xpath}`;
+    xpath = `*[name()='${el.nodeName}' and namespace-uri()='${el.namespaceURI === null ? '' : el.namespaceURI}'][${pos}]/${xpath}`;
 
     el = el.parentNode;
   }
