@@ -84,8 +84,8 @@ function showLoc() {
 ### Example #5: Send a string of data to the server by modifying the `search` property:
 
 ```js
-function sendData (sData) {
-  location.search = sData;
+function sendData(data) {
+  location.search = data;
 }
 
 // in html: <button onclick="sendData('Some data');">Send data</button>
@@ -103,12 +103,12 @@ taken by the server, the current document is reloaded with the modified search s
   <meta charset="UTF-8"/>
   <title>MDN Example</title>
   <script>
-    function showNode (node) {
+    function showNode(node) {
       document.documentElement.scrollTop = node.offsetTop;
       document.documentElement.scrollLeft = node.offsetLeft;
     }
 
-    function showBookmark (bookmark, useHash) {
+    function showBookmark(bookmark, useHash) {
       if (arguments.length === 1 || useHash) {
         location.hash = bookmark;
         return; 
@@ -200,12 +200,8 @@ const showBookmark = (() => {
     }
   }
 
-  if (window.addEventListener) {
-    window.addEventListener("scroll", _chkOwner, false);
-  } else if (window.attachEvent) {
-    window.attachEvent("onscroll", _chkOwner);
-  }
-
+  window.addEventListener("scroll", _chkOwner, false);
+  
   return (bookmark, useHash) => {
     const node = document.querySelector(bookmark);
     _scrollY = document.documentElement.scrollTop;
