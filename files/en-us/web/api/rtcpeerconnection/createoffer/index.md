@@ -112,8 +112,8 @@ offer and sends it to the remote system over a signaling channel.
 > fulfillment handler, depend entirely on your design.
 
 ```js
-  myPeerConnection.createOffer()
-    .then((offer) => myPeerConnection.setLocalDescription(offer))
+myPeerConnection.createOffer()
+  .then((offer) => myPeerConnection.setLocalDescription(offer))
   .then(() => {
     sendToServer({
       name: myUsername,
