@@ -95,14 +95,14 @@ No image is used for the captions button, so it is styled as:
 
 ```css
 .controls button[data-state="subtitles"] {
-    height:85%;
-    text-indent:0;
-    font-size:16px;
-    font-size:1rem;
-    font-weight:bold;
-    color:#666;
-    background:#000;
-    border-radius:2px;
+  height: 85%;
+  text-indent: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+  background: #000;
+  border-radius: 2px;
 }
 ```
 
@@ -126,7 +126,7 @@ We also initially turn off all subtitles, in case the browser turns any of them 
 
 ```js
 for (let i = 0; i < video.textTracks.length; i++) {
-   video.textTracks[i].mode = 'hidden';
+  video.textTracks[i].mode = 'hidden';
 }
 ```
 
@@ -145,14 +145,14 @@ All we need to do is to go through the video's `textTracks`, reading their prope
 ```js
 let subtitlesMenu;
 if (video.textTracks) {
-   const df = document.createDocumentFragment();
-   const subtitlesMenu = df.appendChild(document.createElement('ul'));
-   subtitlesMenu.className = 'subtitles-menu';
-   subtitlesMenu.appendChild(createMenuItem('subtitles-off', '', 'Off'));
-   for (let i = 0; i < video.textTracks.length; i++) {
-      subtitlesMenu.appendChild(createMenuItem(`subtitles-${video.textTracks[i].language}`, video.textTracks[i].language, video.textTracks[i].label));
-   }
-   videoContainer.appendChild(subtitlesMenu);
+  const df = document.createDocumentFragment();
+  const subtitlesMenu = df.appendChild(document.createElement('ul'));
+  subtitlesMenu.className = 'subtitles-menu';
+  subtitlesMenu.appendChild(createMenuItem('subtitles-off', '', 'Off'));
+  for (let i = 0; i < video.textTracks.length; i++) {
+    subtitlesMenu.appendChild(createMenuItem(`subtitles-${video.textTracks[i].language}`, video.textTracks[i].language, video.textTracks[i].label));
+  }
+  videoContainer.appendChild(subtitlesMenu);
 }
 ```
 
@@ -184,15 +184,14 @@ function createMenuItem(id, lang, label) {
       if (video.textTracks[i].language === lang) {
         video.textTracks[i].mode = 'showing';
         button.setAttribute('data-state', 'active');
-       }
-       else {
-         video.textTracks[i].mode = 'hidden';
-       }
+      } else {
+        video.textTracks[i].mode = 'hidden';
       }
-      subtitlesMenu.style.display = 'none';
-   });
-   subtitleMenuButtons.push(button);
-   return listItem;
+    }
+    subtitlesMenu.style.display = 'none';
+  });
+  subtitleMenuButtons.push(button);
+  return listItem;
 }
 ```
 
@@ -217,31 +216,31 @@ We also added some rudimentary styling for the newly created subtitles menu:
 
 ```css
 .subtitles-menu {
-    display:none;
-    position:absolute;
-    bottom:14.8%;
-    right:20px;
-    background:#666;
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    width:100px;
-    padding:10px;
+  display: none;
+  position: absolute;
+  bottom: 14.8%;
+  right: 20px;
+  background: #666;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  padding: 10px;
 }
 
 .subtitles-menu li {
-    padding:0;
-    text-align:center;
+  padding: 0;
+  text-align: center;
 }
 
 .subtitles-menu li button {
-    border:none;
-    background:#000;
-    color:#fff;
-    cursor:pointer;
-    width:90%;
-    padding:2px 5px;
-    border-radius:2px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  width: 90%;
+  padding: 2px 5px;
+  border-radius: 2px;
 }
 ```
 
@@ -265,7 +264,7 @@ For example, to change the text color of the text track cues you can write:
 
 ```css
 ::cue {
-   color:#ccc;
+  color:#ccc;
 }
 ```
 
@@ -281,8 +280,8 @@ Then this specific 'voice' will be stylable like so:
 
 ```css
 ::cue(v[voice='Test']) {
-   color:#fff;
-   background:#0095dd;
+  color:#fff;
+  background:#0095dd;
 }
 ```
 
