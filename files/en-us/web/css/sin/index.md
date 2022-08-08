@@ -29,8 +29,8 @@ width: calc( sin(3.141592653589793) * 100px ); /* pi */
 width: calc( sin(1.57079632679) * 100px ); /* pi / 2 */
 
 /* Other values */
-width: calc( sin(pi/2) * 100px );
-width: calc( sin(e/4) * 100px );
+width: calc( sin(pi / 2) * 100px );
+width: calc( sin(e / 4) * 100px );
 ```
 
 The `sin()` function takes only one expression as its argument.
