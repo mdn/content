@@ -458,7 +458,7 @@ If you try the live example, you'll see that the top set of form elements are no
 ```css
 :is(input:read-only, input:-moz-read-only, textarea:-moz-read-only, textarea:read-only) {
   border: 0;
-          box-shadow: none;
+  box-shadow: none;
   background-color: white;
 }
 
