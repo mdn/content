@@ -449,7 +449,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-accentcolor.png" /></p>
+        <p><img alt="Example use of the frame property. The background color of the header area is red." src="theme-accentcolor.png" /></p>
       </td>
     </tr>
     <tr>
@@ -542,7 +542,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example use of the popup property.  The background color of the popup is red." src="theme-popup.png" /></p>
+        <p><img alt="Example use of the popup property. The background color of the popup is red." src="theme-popup.png" /></p>
       </td>
     </tr>
     <tr>
@@ -563,7 +563,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example use of the popup_border property.  The border color of the popup is red." src="theme-popup_border.png" /></p>
+        <p><img alt="Example use of the popup_border property. The color of the popup's border is red." src="theme-popup_border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -593,7 +593,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example use of the popup_highlight property.  The background color of the item highlighted inside the popup is red." src="theme-popup_highlight.png" /></p>
+        <p><img alt="Example use of the popup_highlight property. The background color of the highlighted item inside the popup is red." src="theme-popup_highlight.png" /></p>
       </td>
     </tr>
     <tr>
@@ -619,7 +619,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example use of the popup_highlight_text property. The text color the highlighted item inside the popup is red. The text color contrasts well with the black background of the highlighted item." src="theme-popup_highlight_text.png" /></p>
+        <p><img alt="Example use of the popup_highlight_text property. The text color of the highlighted item inside the popup is red. The text color of the highlighted item contrasts well with the black background of this item." src="theme-popup_highlight_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -645,7 +645,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example use of the popup_text property.  The text color inside the popup is red.  The text color contrasts well with the black background of the popup" src="popup_text.png" /></p>
+        <p><img alt="Example use of the popup_text property. The color of the text inside the popup is red. The text color contrasts well with the black background of the popup." src="popup_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -665,7 +665,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example use of the sidebar property.  The background color of the sidebar is red." src="sidebar_colors.png" /></p>
+        <p><img alt="Example use of the sidebar property. The background color of the sidebar is red." src="sidebar_colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -682,7 +682,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example use of the sidebar_border property.  The border and splitter color of the browser sidebar is red." src="screen_shot_2018-09-16_at_6.13.31_pm.png" /></p>
+        <p><img alt="Example use of the sidebar_border property. The border and splitter color of the browser sidebar is red." src="screen_shot_2018-09-16_at_6.13.31_pm.png" /></p>
       </td>
     </tr>
     <tr>
@@ -724,7 +724,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Example use of the sidebar_highlight_text property.  The text color of a highlighted row in the sidebar is red.  The text color contrasts well with the pink background of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
+        <p><img alt="Example use of the sidebar_highlight_text property. The color of the text of a highlighted row in the sidebar is red.  The text color contrasts well with the pink background of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
       </td>
     </tr>
     <tr>
@@ -831,7 +831,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-tab_line.png" /></p>
+        <p><img alt="Example use of the tab_line property. The color of the line around the selected tab is red." src="theme-tab_line.png" /></p>
       </td>
     </tr>
     <tr>
@@ -850,7 +850,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-tab_loading.gif" /></p>
+        <p><img alt="Example use of the tab_loading property. The color of the tab loading indicator is read." src="theme-tab_loading.gif" /></p>
       </td>
     </tr>
     <tr>
@@ -876,7 +876,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-tab_selected.png" /></p>
+        <p><img alt="Example use of the tab_selected property. The background color of the selected tab is red." src="theme-tab_selected.png" /></p>
       </td>
     </tr>
     <tr>
@@ -914,7 +914,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-tab_text.png" /></p>
+        <p><img alt="Example use of the tab_text property. The color of the text in the selected tab is red." src="theme-tab_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -941,7 +941,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-textcolor.png" /></p>
+        <p><img alt="Example use of the textcolor property. The color of the text displayed in the header area is red" src="theme-textcolor.png" /></p>
       </td>
     </tr>
     <tr>
@@ -964,7 +964,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="toolbar.png" /></p>
+        <p><img alt="Example use of the toolbar property. The background color for the navigation bar, the bookmarks bar and the selected tab is red." src="toolbar.png" /></p>
       </td>
     </tr>
     <tr>
@@ -986,7 +986,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_bottom_separator.png" /></p>
+        <p><img alt="Example use of the toolbar_bottom_separator property. The color of the line separating the bottom of the toolbar from the region below is red" src="theme-toolbar_bottom_separator.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1011,7 +1011,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="toolbar-field.png" /></p>
+        <p><img alt="Example use of the toolbar_field property. The background color of the URL bar is red." src="toolbar-field.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1037,7 +1037,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="toolbar-field-border.png" /></p>
+        <p><img alt="Example use of the toolbar_field_border property. The color of the border around the URL bar is red." src="toolbar-field-border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1059,7 +1059,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_field_border_focus.png" /></p>
+        <p><img alt="Example use of the toolbar_field_border_focus property. The color of the border around the focused URL bar is red." src="theme-toolbar_field_border_focus.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1084,7 +1084,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_field_focus.png" /></p>
+        <p><img alt="Example use of the toolbar_field_focus property.  The background color of the focused URL bar is red." src="theme-toolbar_field_focus.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1183,10 +1183,10 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_field_separator.png" /></p>
+        <p><img alt="Example use of the toolbar_field_separator property. The color of the vertical separator line in the URL bar is red." src="theme-toolbar_field_separator.png" /></p>
         <p>
           In this screenshot, <code>"toolbar_vertical_separator"</code> is the
-          white vertical line in the URL bar dividing the Reader Mode icon from
+          red vertical line in the URL bar dividing the Reader Mode icon from
           the other icons.
         </p>
       </td>
@@ -1219,7 +1219,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="toolbar-field-text.png" /></p>
+        <p><img alt="Example use of the toolbar_field_text property. The color of the text in the URL bar is red." src="toolbar-field-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1250,7 +1250,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_field_text_focus.png" /></p>
+        <p><img alt="Example use of the toolbar_field_text_focus property. The color of the text in the focused URL bar is red." src="theme-toolbar_field_text_focus.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1279,7 +1279,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="toolbar-text.png" /></p>
+        <p><img alt="Example use of the toolbar_text property. The color of the text in the toolbar is red." src="toolbar-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1302,7 +1302,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_top_separator.png" /></p>
+        <p><img alt="Example use of the toolbar_top_separator property. The color of the line separating the top of the toolbar from the region bellow is red." src="theme-toolbar_top_separator.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1325,7 +1325,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_vertical_separator.png" /></p>
+        <p><img alt="Example use of the toolbar_vertical_separator property. The color of the vertical line separating the bookmarks toolbar from the content on the right is red." src="theme-toolbar_vertical_separator.png" /></p>
       </td>
     </tr>
   </tbody>
@@ -1548,7 +1548,7 @@ The following example uses most of the different values for `theme.colors`:
 
 It will give you a browser that looks like this:
 
-![](theme.png)
+![A browser window with a dark green background frame, white text color inside the window tab and a blue background color inside the toolbar.  The URL bar has an orange background with white borders, green text color and a red-colored vertical line separator. A red-colored line is used to separate the tabs on the top and a white line to separate the tabs from the content bellow them.](theme.png)
 
 In this screenshot, `"toolbar_vertical_separator"` is the white vertical line in the URL bar dividing the Reader Mode icon from the other icons.
 
