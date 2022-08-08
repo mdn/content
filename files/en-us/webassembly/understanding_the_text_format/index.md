@@ -407,7 +407,7 @@ In JavaScript, the equivalent calls to create such a table instance would look s
 ```js
 function () {
   // table section
-  const tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+  const tbl = new WebAssembly.Table({initial: 2, element: "anyfunc"});
 
   // function sections:
   const f1 = ... /* some imported WebAssembly function */
