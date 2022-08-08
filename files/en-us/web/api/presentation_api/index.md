@@ -48,51 +48,61 @@ Example codes below highlight the usage of main features of the Presentation API
 
 ### Monitor availability of presentation displays
 
+In `controller.html`:
+
 ```html
 <button id="presentBtn" style="display: none;">Present</button>
 <script>
   // The Present button is visible if at least one presentation display is available
   const presentBtn = document.getElementById("presentBtn");
-  
+
   // It is also possible to use relative presentation URL e.g. "presentation.html"
   const presUrls = [
     "http://example.com/presentation.html",
-    "http://example.net/alternate.html"
+    "http://example.net/alternate.html",
   ];
-  
+
   // Show or hide present button depending on display availability
   const handleAvailabilityChange = (available) => {
     presentBtn.style.display = available ? "inline" : "none";
   };
-  
+
   // Promise is resolved as soon as the presentation display availability is known.
   const request = new PresentationRequest(presUrls);
-  request.getAvailability().then((availability) => {
-    // availability.value may be kept up-to-date by the controlling UA as long
-    // as the availability object is alive. It is advised for the web developers
-    // to discard the object as soon as it's not needed.
-    handleAvailabilityChange(availability.value);
-    availability.onchange = () => { handleAvailabilityChange(availability.value); };
-  }).catch(() => {
-    // Availability monitoring is not supported by the platform, so discovery of
-    // presentation displays will happen only after request.start() is called.
-    // Pretend the devices are available for simplicity; or, one could implement
-    // a third state for the button.
-    handleAvailabilityChange(true);
-  });
+  request
+    .getAvailability()
+    .then((availability) => {
+      // availability.value may be kept up-to-date by the controlling UA as long
+      // as the availability object is alive. It is advised for the web developers
+      // to discard the object as soon as it's not needed.
+      handleAvailabilityChange(availability.value);
+      availability.onchange = () => {
+        handleAvailabilityChange(availability.value);
+      };
+    })
+    .catch(() => {
+      // Availability monitoring is not supported by the platform, so discovery of
+      // presentation displays will happen only after request.start() is called.
+      // Pretend the devices are available for simplicity; or, one could implement
+      // a third state for the button.
+      handleAvailabilityChange(true);
+    });
 </script>
 ```
 
 ### Starting a new presentation
 
+In `controller.html`:
+
 ```html
 <script>
   presentBtn.onclick = () => {
     // Start new presentation.
-    request.start()
+    request
+      .start()
       // The connection to the presentation will be passed to setConnection on success.
-      .then(setConnection);      
-      // Otherwise, the user canceled the selection dialog or no screens were found.
+      .then(setConnection);
+    // Otherwise, the user canceled the selection dialog or no screens were found.
   };
 </script>
 ```
@@ -100,6 +110,7 @@ Example codes below highlight the usage of main features of the Presentation API
 ### Reconnect to a presentation
 
 In the `controller.html` file:
+
 ```html
 <button id="reconnectBtn" style="display: none;">Reconnect</button>
 <script>
@@ -108,11 +119,12 @@ In the `controller.html` file:
     const presId = localStorage["presId"];
     // presId is mandatory when reconnecting to a presentation.
     if (!!presId) {
-      request.reconnect(presId)
+      request
+        .reconnect(presId)
         // The new connection to the presentation will be passed to
         // setConnection on success.
         .then(setConnection);
-        // No connection found for presUrl and presId, or an error occurred.
+      // No connection found for presUrl and presId, or an error occurred.
     }
   };
   // On navigation of the controller, reconnect automatically.
@@ -124,10 +136,9 @@ In the `controller.html` file:
 
 ### Presentation initiation by the controlling UA
 
-Setting `presentation.defaultRequest` allows the page to specify the `PresentationRequest` to use when the controlling UA initiates a presentation.
+In the `controller.html` file:
 
 ```html
-<!--  -->
 <script>
   navigator.presentation.defaultRequest = new PresentationRequest(presUrls);
   navigator.presentation.defaultRequest.onconnectionavailable = (evt) => {
@@ -136,7 +147,11 @@ Setting `presentation.defaultRequest` allows the page to specify the `Presentati
 </script>
 ```
 
+Setting `presentation.defaultRequest` allows the page to specify the `PresentationRequest` to use when the controlling UA initiates a presentation.
+
 ### Monitor connection's state and exchange data
+
+In `presentation.html`:
 
 ```html
 <button id="disconnectBtn" style="display: none;">Disconnect</button>
@@ -160,7 +175,11 @@ Setting `presentation.defaultRequest` allows the page to specify the `Presentati
 
   function setConnection(newConnection) {
     // Disconnect from existing presentation, if not attempting to reconnect
-    if (connection && connection !== newConnection && connection.state !== 'closed') {
+    if (
+      connection &&
+      connection !== newConnection &&
+      connection.state !== "closed"
+    ) {
       connection.onclosed = undefined;
       connection.close();
     }
@@ -206,17 +225,18 @@ Setting `presentation.defaultRequest` allows the page to specify the `Presentati
       connection = null;
       showDisconnectedUI();
     };
-  };
+  }
 </script>
 ```
 
 ### Monitor available connection(s) and say hello
 
+In `presentation.html`:
+
 ```js
 const addConnection = (connection) => {
   window.onmessage = (message) => {
-    if (message.data === "say hello")
-      window.send("hello");
+    if (message.data === "say hello") window.send("hello");
   };
 };
 
