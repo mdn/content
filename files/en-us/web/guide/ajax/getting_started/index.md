@@ -338,7 +338,7 @@ This is repeated every 5 seconds, using a `setInterval()` call. The idea would b
         const timeArray = text.split('\n');
 
         // included because some file systems always include a blank line at the end of text files.
-        if (timeArray[timeArray.length-1] === '') {
+        if (timeArray[timeArray.length - 1] === '') {
           timeArray.pop();
         }
 
