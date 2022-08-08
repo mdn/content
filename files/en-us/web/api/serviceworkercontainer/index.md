@@ -74,13 +74,13 @@ if ('serviceWorker' in navigator) {
   // First, do a one-off check if there's currently a
   // service worker in control.
   if (navigator.serviceWorker.controller) {
-    console.log(`This page is currently controlled by: ${navigator.serviceWorker.controller}`);
+    console.log('This page is currently controlled by:', navigator.serviceWorker.controller);
   }
 
   // Then, register a handler to detect when a new or
   // updated service worker takes control.
   navigator.serviceWorker.oncontrollerchange = () => {
-    console.log(`This page is now controlled by: ${navigator.serviceWorker.controller}`);
+    console.log('This page is now controlled by', navigator.serviceWorker.controller);
   };
 } else {
   console.log('Service workers are not supported.');
