@@ -375,7 +375,7 @@ class Server {
   }
 
   function onClickButton() {
-      const text = textarea.value;
+    const text = textarea.value;
 
     text && doSend(text);
     textarea.value = "";
