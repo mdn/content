@@ -258,11 +258,9 @@ The background elements also have `playbackRate`s that are impacted when you cli
 Imagine other ways we could use playbackRate, such as improving accessibility for users with vestibular disorders by letting them slow down animations across an entire site. That's impossible to do with CSS without recalculating durations in every CSS rule, but with the Web Animations API, we could use the {{domxref("Document.getAnimations")}} method to loop over each animation on the page and halve their `playbackRate`s, like so:
 
 ```js
-document.getAnimations().forEach(
-  (animation) => {
-    animation.updatePlaybackRate(animation.playbackRate * .5);
-  }
-);
+document.getAnimations().forEach((animation) => {
+  animation.updatePlaybackRate(animation.playbackRate * 0.5);
+});
 ```
 
 With the Web Animations API, all you need to change is just one little property!
