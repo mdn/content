@@ -433,7 +433,7 @@ selectElem.onchange = () => {
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label","Second part of number");
+    inputElems[2].setAttribute("aria-label", "Second part of number");
   } else if (selectElem.value === "UK") {
     inputElems[2].parentNode.style.display = "none";
 
