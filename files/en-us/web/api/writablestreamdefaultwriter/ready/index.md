@@ -42,27 +42,23 @@ function sendMessage(message, writableStream) {
     // Make sure the stream and its writer are able to
     //   receive data.
     defaultWriter.ready
-    .then(() => {
-      defaultWriter.write(chunk)
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
         console.log("Chunk written to sink.");
       })
       .catch((err) => {
         console.error(`Chunk error: ${err}`);
       });
-    });
     // Call ready again to ensure that all chunks are written
     //   before closing the writer.
     defaultWriter.ready
-    .then(() => {
-      defaultWriter.close()
+      .then(() => defaultWriter.close())
       .then(() => {
         console.log("All chunks written");
       })
       .catch((err) => {
         console.error(`Stream error: ${err}`);
       });
-    });
   });
 }
 ```
