@@ -178,7 +178,7 @@ myArray = ['zero', 'one', 'two'];
 myArray.myMethod = function (sProperty) {
   alert(arguments.length > 0 ? this[sProperty] : this);
 };
-    
+
 myArray.myMethod(); // prints "zero,one,two"
 myArray.myMethod(1); // prints "one"
 setTimeout(myArray.myMethod, 1000); // prints "[object Window]" after 1 second
