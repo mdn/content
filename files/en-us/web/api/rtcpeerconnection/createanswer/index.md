@@ -86,9 +86,7 @@ to another peer across the signaling channel.
 > fulfillment handler, depend entirely on your design
 
 ```js
-pc.createAnswer().then((answer) => {
-  return pc.setLocalDescription(answer);
-})
+pc.createAnswer().then((answer) => pc.setLocalDescription(answer))
 .then(() => {
   // Send the answer to the remote peer through the signaling server.
 })
