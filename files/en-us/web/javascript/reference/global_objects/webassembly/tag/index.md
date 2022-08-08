@@ -52,9 +52,10 @@ const importObject = {
   }
 };
 
-WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject )
+WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject)
   .then((obj) => {
-    ...
+    // …
+  });
 ```
 
 The WebAssembly module might then import the tag as shown below:

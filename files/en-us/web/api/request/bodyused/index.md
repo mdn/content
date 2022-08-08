@@ -31,7 +31,7 @@ const request = new Request('/myEndpoint', {
 
 request.bodyUsed; // false
 
-request.text().then(function(bodyAsText) {
+request.text().then((bodyAsText) => {
   console.log(request.bodyUsed); // true
 });
 ```

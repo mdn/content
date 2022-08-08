@@ -17,7 +17,7 @@ The read-only **`description`** property is a string returning the optional desc
 
 ## Description
 
-{{JSxRef("Symbol")}} objects can be created with an optional description which can be used for debugging but not to access the symbol itself. The `Symbol.prototype.description` property can be used to read that description. It is different to `Symbol.prototype.toString()` as it does not contain the enclosing "`Symbol()`" string. See the examples.
+{{JSxRef("Symbol")}} objects can be created with an optional description which can be used for debugging but not to access the symbol itself. The `Symbol.prototype.description` property can be used to read that description. It is different to `Symbol.prototype.toString()` as it does not contain the enclosing `"Symbol()"` string. See the examples.
 
 ## Examples
 

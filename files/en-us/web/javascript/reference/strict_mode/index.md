@@ -45,10 +45,14 @@ Likewise, to invoke strict mode for a function, put the _exact_ statement `"use 
 function myStrictFunction() {
   // Function-level strict mode syntax
   'use strict';
-  function nested() { return 'And so am I!'; }
-  return "Hi! I'm a strict mode function! " + nested();
+  function nested() {
+    return 'And so am I!';
+  }
+  return `Hi! I'm a strict mode function! ${nested()}`;
 }
-function myNotStrictFunction() { return "I'm not strict."; }
+function myNotStrictFunction() {
+  return "I'm not strict.";
+}
 ```
 
 In strict mode, starting with ES2015, functions inside blocks are scoped to that block. Prior to ES2015, block-level functions were forbidden in strict mode.
@@ -59,7 +63,7 @@ ECMAScript 2015 introduced [JavaScript modules](/en-US/docs/Web/JavaScript/Refer
 
 ```js
 function myStrictFunction() {
-    // because this is a module, I'm strict by default
+  // because this is a module, I'm strict by default
 }
 export default myStrictFunction;
 ```
@@ -120,14 +124,14 @@ delete Object.prototype; // throws a TypeError
 
 Fourth, strict mode requires that function parameter names be unique. In normal code the last duplicated argument hides previous identically-named arguments. Those previous arguments remain available through `arguments[i]`, so they're not completely inaccessible. Still, this hiding makes little sense and is probably undesirable (it might hide a typo, for example), so in strict mode duplicate argument names are a syntax error:
 
-```js
+```js example-bad
 function sum(a, a, c) { // !!! syntax error
   'use strict';
   return a + a + c; // wrong if this code ran
 }
 ```
 
-Fifth, a strict mode in ECMAScript 5 [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). Outside strict mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. In ECMAScript 2015, octal literals are supported by prefixing a number with "`0o`"; for example:
+Fifth, a strict mode in ECMAScript 5 [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). Outside strict mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. In ECMAScript 2015, octal literals are supported by prefixing a number with `0o`; for example:
 
 ```js
 const a = 0o10; // ES2015: Octal
@@ -135,7 +139,7 @@ const a = 0o10; // ES2015: Octal
 
 Novice developers sometimes believe a leading zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading zero syntax for the octal is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
 
-```js
+```js example-bad
 'use strict';
 const sum = 015 + // !!! syntax error
             197 +
@@ -168,7 +172,7 @@ Strict mode simplifies how variable names map to particular variable definitions
 
 First, strict mode prohibits [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with). The problem with `with` is that any name inside the block might map either to a property of the object passed to it, or to a variable in surrounding (or even global) scope, at runtime; it's impossible to know which beforehand. Strict mode makes `with` a syntax error, so there's no chance for a name in a `with` to refer to an unknown location at runtime:
 
-```js
+```js example-bad
 'use strict';
 const x = 17;
 with (obj) { // !!! syntax error
@@ -220,7 +224,7 @@ Thus names in strict mode `eval` code behave identically to names in strict mode
 
 Third, strict mode forbids deleting plain names. `delete name` in strict mode is a syntax error:
 
-```js
+```js example-bad
 'use strict';
 
 var x;
@@ -235,7 +239,7 @@ Strict mode makes `arguments` and `eval` less bizarrely magical. Both involve a 
 
 First, the names `eval` and `arguments` can't be bound or assigned in language syntax. All these attempts to do so are syntax errors:
 
-```js
+```js example-bad
 'use strict';
 eval = 17;
 arguments++;

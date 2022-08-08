@@ -16,7 +16,7 @@ tags:
   - captureStream
 browser-compat: api.HTMLCanvasElement.captureStream
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("HTMLCanvasElement")}} **`captureStream()`** method returns a {{domxref("MediaStream")}}
 which includes a {{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-time video capture of the canvas's contents.
@@ -24,7 +24,7 @@ which includes a {{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-
 ## Syntax
 
 ```js
-MediaStream = canvas.captureStream(frameRate);
+captureStream(frameRate)
 ```
 
 ### Parameters
@@ -46,6 +46,10 @@ A reference to a {{domxref("MediaStream")}} object, which has a single
 
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the value of `frameRate` is negative.
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : The canvas's bitmap is not origin clean;
+    at least some of its contents have or may have been loaded from a site other than the one from which the document itself was loaded.
 
 ## Example
 

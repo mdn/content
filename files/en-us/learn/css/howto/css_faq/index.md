@@ -100,7 +100,7 @@ CSS does not exactly allow one style to be defined in terms of another. However,
 HTML elements can be assigned multiple classes by listing the classes in the `class` attribute, with a blank space to separate them.
 
 ```html
-<style type="text/css">
+<style>
 .news { background: black; color: white; }
 .today { font-weight: bold; }
 </style>

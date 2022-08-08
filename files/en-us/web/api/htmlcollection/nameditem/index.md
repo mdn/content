@@ -6,7 +6,7 @@ tags:
   - API
   - Element Lists
   - HTMLCollection
-  - Interface
+  - Method
   - Reference
 browser-compat: api.HTMLCollection.namedItem
 ---

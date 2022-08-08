@@ -15,7 +15,7 @@ tags:
   - height
 browser-compat: api.MediaTrackSupportedConstraints.height
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`height`** property is a read-only Boolean value which is

@@ -57,7 +57,7 @@ const synthDelay = audioCtx.createDelay(5.0);
 
 let synthSource;
 
-playSynth.onclick = function() {
+playSynth.onclick = () => {
   synthSource = audioCtx.createBufferSource();
   synthSource.buffer = buffers[2];
   synthSource.loop = true;
@@ -67,7 +67,7 @@ playSynth.onclick = function() {
   this.setAttribute('disabled', 'disabled');
 }
 
-stopSynth.onclick = function() {
+stopSynth.onclick = () => {
   synthSource.disconnect(synthDelay);
   synthDelay.disconnect(destination);
   synthSource.stop();
@@ -77,7 +77,7 @@ stopSynth.onclick = function() {
 // …
 
 let delay1;
-rangeSynth.oninput = function() {
+rangeSynth.oninput = () => {
   delay1 = rangeSynth.value;
   synthDelay.delayTime.setValueAtTime(delay1, audioCtx.currentTime);
 }

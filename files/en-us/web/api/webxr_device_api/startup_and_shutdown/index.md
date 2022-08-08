@@ -172,12 +172,8 @@ If the session couldn't be created for some reason—such as feature policy disa
 
 ```js
 async function createImmersiveSession(xr) {
-  try {
-    session = await xr.requestSession("immersive-vr");
-    return session;
-  } catch(error) {
-    throw error;
-  }
+  session = await xr.requestSession("immersive-vr");
+  return session;
 }
 ```
 
@@ -191,14 +187,10 @@ For example, if you need an `unbounded` reference space, you can specify that as
 
 ```js
 async function createImmersiveSession(xr) {
-  try {
-    session = await xr.requestSession("immersive-vr", {
-      requiredFeatures: [ "unbounded" ]
-    });
-    return session;
-  } catch(error) {
-    throw error;
-  }
+  session = await xr.requestSession("immersive-vr", {
+    requiredFeatures: [ "unbounded" ]
+  });
+  return session;
 }
 ```
 
@@ -206,14 +198,10 @@ On the other hand, if you need an *inline* session and would prefer a `local` re
 
 ```js
 async function createInlineSession(xr) {
-  try {
-    session = await xr.requestSession("inline", {
-      optionalFeatures: [ "local" ]
-    });
-    return session;
-  } catch(error) {
-    throw error;
-  }
+  session = await xr.requestSession("inline", {
+    optionalFeatures: [ "local" ]
+  });
+  return session;
 }
 ```
 

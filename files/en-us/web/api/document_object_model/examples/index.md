@@ -330,7 +330,7 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-window.onload = function(event){
+window.onload = (event) => {
   showEventProperties(event);
 }
 </script>

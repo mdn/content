@@ -15,7 +15,7 @@ tags:
   - sampleSize
 browser-compat: api.MediaTrackSupportedConstraints.sampleSize
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`sampleSize`** property is a read-only Boolean value which is

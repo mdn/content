@@ -46,7 +46,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `start` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('start', function(event) {
+utterThis.addEventListener('start', (event) => {
   console.log(`We have started uttering this speech: ${event.utterance.text}`);
 });
 ```
@@ -54,7 +54,7 @@ utterThis.addEventListener('start', function(event) {
 Or use the `onstart` event handler property:
 
 ```js
-utterThis.onstart = function(event) {
+utterThis.onstart = (event) => {
   console.log(`We have started uttering this speech: ${event.utterance.text}`);
 }
 ```

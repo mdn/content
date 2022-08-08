@@ -16,7 +16,7 @@ tags:
   - deviceId
 browser-compat: api.MediaTrackSupportedConstraints.deviceId
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`deviceId`** property is a read-only Boolean value which is

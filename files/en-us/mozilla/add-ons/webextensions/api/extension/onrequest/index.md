@@ -25,7 +25,7 @@ Fired when a request is sent from either an extension process or a content scrip
 chrome.extension.onRequest.addListener(function(
   request,         // optional any
   sender,          // runtime.MessageSender
-  function() {/* … */} // function
+  () => {/* … */}  // function
 ) {/* … */})
 chrome.extension.onRequest.removeListener(listener)
 chrome.extension.onRequest.hasListener(listener)

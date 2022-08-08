@@ -35,7 +35,7 @@ onmouseup = (event) => { };
 
 ## Event type
 
-An {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MouseEvent")}}
 
@@ -96,7 +96,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 ## Examples
 
-See [`mousemove` event](/en-US/docs/Web/API/Element/mousemove_event#examples) event for example code.
+See [`mousemove` event](/en-US/docs/Web/API/Element/mousemove_event#examples) for example code.
 
 ## Specifications
 

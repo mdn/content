@@ -38,7 +38,7 @@ A generic {{domxref("Event")}}.
 To be informed when the processor throws an exception, you can add a handler to your {{domxref("AudioWorkletNode")}} instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-whiteNoiseNode.addEventListener("processorerror", function(event) {
+whiteNoiseNode.addEventListener("processorerror", (event) => {
   console.error('There was an error!');
 });
 ```
@@ -46,7 +46,7 @@ whiteNoiseNode.addEventListener("processorerror", function(event) {
 Alternatively, you can use the `onprocessorerror` event handler property to establish a handler for the `processorerror` event:
 
 ```js
-whiteNoiseNode.onprocessorerror = function(event) {
+whiteNoiseNode.onprocessorerror = (event) => {
  console.error('There was an error!');
 }
 ```

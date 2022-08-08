@@ -13085,15 +13085,6 @@
       "Brian102413"
     ]
   },
-  "MDN/Contribute/Howto/Add_or_update_browser_compatibility_data": {
-    "modified": "2020-02-27T09:10:11.323Z",
-    "contributors": [
-      "valgrimm",
-      "ExE-Boss",
-      "wbamberg",
-      "jswisher"
-    ]
-  },
   "MDN/Contribute/Howto/Update_the_CSS_JSON_DB": {
     "modified": "2019-03-23T22:47:20.816Z",
     "contributors": [
@@ -13113,15 +13104,6 @@
       "david_ross",
       "jswisher",
       "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Processes/Matching_features_to_browser_version": {
-    "modified": "2020-08-31T15:05:54.154Z",
-    "contributors": [
-      "vinyldarkscratch",
-      "foolip",
-      "Sheppy",
-      "KWierso2"
     ]
   },
   "MDN/Editor/Basics/Attachments": {
@@ -43433,34 +43415,6 @@
       "rolfedh"
     ]
   },
-  "Web/API/GlobalEventHandlers": {
-    "modified": "2020-10-24T22:00:58.608Z",
-    "contributors": [
-      "sideshowbarker",
-      "jashorekhabor",
-      "mfuji09",
-      "chrisdavidmills",
-      "colinmorris",
-      "Wind1808",
-      "estelle",
-      "fscholz",
-      "jorgebucaran",
-      "lucian95",
-      "SphinxKnight",
-      "Bodo1445",
-      "jpmedley",
-      "erikadoyle",
-      "Sheppy",
-      "jackblackevo",
-      "teoli",
-      "AFBarstow",
-      "jwhitlock",
-      "Nickolay",
-      "Sebastianz",
-      "yvanoers",
-      "kscarfone"
-    ]
-  },
   "Web/API/Gyroscope": {
     "modified": "2020-10-15T22:08:47.425Z",
     "contributors": [
@@ -54993,6 +54947,79 @@
       "estelle"
     ]
   },
+  "Web/API/Media_Capture_and_Streams_API": {
+    "modified": "2020-10-15T21:20:42.033Z",
+    "contributors": [
+      "alattalatta",
+      "Norst",
+      "Sheppy",
+      "jpmedley",
+      "chrisdavidmills",
+      "fscholz",
+      "sideshowbarker",
+      "tocretpa",
+      "SphinxKnight",
+      "Bodo1445",
+      "erikadoyle",
+      "Jib",
+      "datitisev",
+      "jihyerish",
+      "myakura",
+      "teoli",
+      "kscarfone",
+      "lukasklein",
+      "A0F3C1A575D1",
+      "Jeremie",
+      "ScottMichaud",
+      "scottrowe"
+    ]
+  },
+  "Web/API/Media_Capture_and_Streams_API/Constraints": {
+    "modified": "2020-10-20T04:27:23.264Z",
+    "contributors": [
+      "Sroucheray",
+      "mmckenziedev",
+      "Dathan",
+      "Wind1808",
+      "sideshowbarker",
+      "wangzhenlalala",
+      "fscholz",
+      "jwhitlock",
+      "jpmedley",
+      "Sheppy",
+      "mappum",
+      "ramarquez1992",
+      "vinnymac",
+      "adammcfadden"
+    ]
+  },
+  "Web/API/Media_Capture_and_Streams_API/Taking_still_photos": {
+    "modified": "2020-02-12T09:11:02.185Z",
+    "contributors": [
+      "Sheppy",
+      "fippo",
+      "PhilLab",
+      "fscholz",
+      "wbamberg",
+      "DeveloperDavo",
+      "weisjohn",
+      "Hubenet",
+      "rogeru",
+      "Jib",
+      "zalun",
+      "teoli",
+      "kshitijpurwar",
+      "chrisdavidmills",
+      "Kiley85",
+      "Null",
+      "KarlPurk",
+      "Jeremie",
+      "ianpgall",
+      "codepo8",
+      "jswisher",
+      "espressive"
+    ]
+  },
   "Web/API/Media_Session_API": {
     "modified": "2020-10-29T12:15:01.664Z",
     "contributors": [
@@ -55034,79 +55061,6 @@
       "germain",
       "rolfedh",
       "NickDesaulniers"
-    ]
-  },
-  "Web/API/Media_Streams_API": {
-    "modified": "2020-10-15T21:20:42.033Z",
-    "contributors": [
-      "alattalatta",
-      "Norst",
-      "Sheppy",
-      "jpmedley",
-      "chrisdavidmills",
-      "fscholz",
-      "sideshowbarker",
-      "tocretpa",
-      "SphinxKnight",
-      "Bodo1445",
-      "erikadoyle",
-      "Jib",
-      "datitisev",
-      "jihyerish",
-      "myakura",
-      "teoli",
-      "kscarfone",
-      "lukasklein",
-      "A0F3C1A575D1",
-      "Jeremie",
-      "ScottMichaud",
-      "scottrowe"
-    ]
-  },
-  "Web/API/Media_Streams_API/Constraints": {
-    "modified": "2020-10-20T04:27:23.264Z",
-    "contributors": [
-      "Sroucheray",
-      "mmckenziedev",
-      "Dathan",
-      "Wind1808",
-      "sideshowbarker",
-      "wangzhenlalala",
-      "fscholz",
-      "jwhitlock",
-      "jpmedley",
-      "Sheppy",
-      "mappum",
-      "ramarquez1992",
-      "vinnymac",
-      "adammcfadden"
-    ]
-  },
-  "Web/API/Media_Streams_API/Taking_still_photos": {
-    "modified": "2020-02-12T09:11:02.185Z",
-    "contributors": [
-      "Sheppy",
-      "fippo",
-      "PhilLab",
-      "fscholz",
-      "wbamberg",
-      "DeveloperDavo",
-      "weisjohn",
-      "Hubenet",
-      "rogeru",
-      "Jib",
-      "zalun",
-      "teoli",
-      "kshitijpurwar",
-      "chrisdavidmills",
-      "Kiley85",
-      "Null",
-      "KarlPurk",
-      "Jeremie",
-      "ianpgall",
-      "codepo8",
-      "jswisher",
-      "espressive"
     ]
   },
   "Web/API/MerchantValidationEvent": {
@@ -85976,17 +85930,6 @@
       "SteveLee"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Test_Cases": {
-    "modified": "2019-03-24T00:16:31.629Z",
-    "contributors": [
-      "stephaniehobson",
-      "Rossolson",
-      "ClompenSander",
-      "Sheppy",
-      "anastasia",
-      "Aaronlev"
-    ]
-  },
   "Web/Accessibility/ARIA/Annotations": {
     "modified": "2020-04-03T08:53:49.929Z",
     "contributors": [
@@ -86488,18 +86431,6 @@
       "Kritz",
       "Fredchat",
       "Sheppy",
-      "Aaronlev"
-    ]
-  },
-  "Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-03-24T00:12:08.938Z",
-    "contributors": [
-      "pierrefar",
-      "Tigt",
-      "Alhadis",
-      "Sheppy",
-      "kscarfone",
-      "ethertank",
       "Aaronlev"
     ]
   },

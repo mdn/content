@@ -79,27 +79,41 @@ exports.author_create_post = [
 ];
 ```
 
+> **Warning:** Never validate _names_ using `isAlphanumeric()` (as we have done above) as there are many names that use other character sets.
+> We do it here in order to demonstrate how the validator is used, and how it can be daisy-chained with other validators and error reporting.
+
 The structure and behavior of this code is almost exactly the same as for creating a `Genre` object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid then we save the new author record and redirect the user to the author detail page.
 
-> **Note:** Unlike with the `Genre` post handler, we don't check whether the `Author` object already exists before saving it. Arguably we should, though as it is now we can have multiple authors with the same name.
+Unlike with the `Genre` post handler, we don't check whether the `Author` object already exists before saving it. Arguably we should, though as it is now we can have multiple authors with the same name.
 
 The validation code demonstrates several new features:
 
 - We can daisy chain validators, using `withMessage()` to specify the error message to display if the previous validation method fails. This makes it very easy to provide specific error messages without lots of code duplication.
 
   ```js
-  // Validate fields.
-  body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
-      .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),
+  [
+    // Validate fields.
+    body('first_name')
+      .trim()
+      .isLength({ min: 1 })
+      .escape()
+      .withMessage('First name must be specified.')
+      .isAlphanumeric()
+      .withMessage('First name has non-alphanumeric characters.'),
+    // …
+  ];
   ```
 
 - We can use the `optional()` function to run a subsequent validation only if a field has been entered (this allows us to validate optional fields). For example, below we check that the optional date of birth is an ISO8601-compliant date (the `checkFalsy` flag means that we'll accept either an empty string or `null` as an empty value).
 
   ```js
-  body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),
+  [
+    body('date_of_birth', 'Invalid date of birth')
+      .optional({ checkFalsy: true })
+      .isISO8601()
+      .toDate(),
+  ];
   ```
-
-<!---->
 
 - Parameters are received from the request as strings. We can use `toDate()` (or `toBoolean()`) to cast these to the proper JavaScript types (as shown at the end of the validator chain above).
 
@@ -107,7 +121,7 @@ The validation code demonstrates several new features:
 
 Create **/views/author_form.pug** and copy in the text below.
 
-```plain
+```pug
 extends layout
 
 block content

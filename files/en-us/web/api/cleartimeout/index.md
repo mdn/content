@@ -59,16 +59,16 @@ const alarm = {
       this.cancel();
     }
 
-    this.timeoutID = setTimeout(function(msg) {
+    this.timeoutID = setTimeout((msg) => {
       this.remind(msg);
-    }.bind(this), 1000, 'Wake up!');
+    }, 1000, 'Wake up!');
   },
 
   cancel() {
     clearTimeout(this.timeoutID);
   }
 };
-window.addEventListener('click', () => alarm.setup() );
+window.addEventListener('click', () => alarm.setup());
 ```
 
 ## Notes

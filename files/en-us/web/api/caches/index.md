@@ -28,9 +28,9 @@ A {{domxref("CacheStorage")}} object.
 The following example shows how you'd use a cache in a [service worker](/en-US/docs/Web/API/Service_Worker_API) context to store assets offline.
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open('v1').then((cache) => {
       return cache.addAll([
         '/sw-test/',
         '/sw-test/index.html',

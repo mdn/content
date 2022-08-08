@@ -58,7 +58,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
@@ -72,7 +72,7 @@ inputForm.onsubmit = function(event) {
   utterThis.rate = rate.value;
   synth.speak(utterThis);
 
-  utterThis.onpause = function(event) {
+  utterThis.onpause = (event) => {
     const char = event.utterance.text.charAt(event.charIndex);
     console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
   }

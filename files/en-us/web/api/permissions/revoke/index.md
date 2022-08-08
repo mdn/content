@@ -75,7 +75,7 @@ be revoked.
 
 ```js
 function revokePermission() {
-  navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
+  navigator.permissions.revoke({ name: 'geolocation' }).then((result) => {
     report(result.state);
   });
 }

@@ -27,7 +27,7 @@ better off using
 they are shorthand functions for one or more of these operations.
 
 ```js
-fetch(url).then(function(response) {
+fetch(url).then((response) => {
   if (!response.ok) {
     throw new TypeError('Bad response status');
   }
@@ -82,17 +82,15 @@ like so:
 
 ```js
 let response;
-const cachedResponse = caches.match(event.request).catch(function() {
+const cachedResponse = caches.match(event.request).catch(() => {
   return fetch(event.request);
-}).then(function(r) {
+}).then((r) => {
   response = r;
-  caches.open('v1').then(function(cache) {
+  caches.open('v1').then((cache) => {
     cache.put(event.request, response);
   });
   return response.clone();
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
+}).catch(() => caches.match('/sw-test/gallery/myLittleVader.jpg'));
 ```
 
 ## Specifications

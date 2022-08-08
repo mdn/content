@@ -1,5 +1,5 @@
 ---
-title: Using GitHub Issues on MDN Web Docs
+title: Issue guidelines
 slug: MDN/Community/Issues
 page-type: mdn-community-guide
 tags:
@@ -9,9 +9,9 @@ tags:
 ---
 {{MDNSidebar}}
 
-[Issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) are used to track all bugs and work that has a clear actionable outcome. If you have found a bug with either our content or the platform, please search current open issues against the [relevant repository](/en_US/docs/MDN/Community/Contributing/Our_repositories/) to ensure someone has not already reported the issue. If the issue is new, please file an issue using the relevant template available in the repository.
+[Issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) are used to track all bugs and work that has a clear actionable outcome. If you have found a bug with either our content or the platform, please search current open issues against the [relevant repository](/en-US/docs/MDN/Community/Contributing/Our_repositories/) to ensure someone has not already reported the issue. If the issue is new, please file an issue using the relevant template available in the repository.
 
-> NOTE: If an issue has a triage label, we haven't reviewed it yet, and you shouldn't begin work on it.
+> **Note:** If an issue has a triage label, we haven't reviewed it yet, and you shouldn't begin work on it.
 
 If the issue you are filing is not to report a bug, please ensure that it lists actionable tasks or a clear outcome. For example:
 
@@ -54,7 +54,7 @@ Priority:
 
 ## Make progress, not noise
 
-Think carefully about the way you handle communication in the project — make sure it is useful, and that it doesn’t make other contributors jobs harder. Submitting pull requests to fix issues is great, but are they truly useful, and easy to review? Filing issues and joining in other conversations is fine, but are your issues and comments on topic, or are they just adding noise?
+Think carefully about the way you handle communication in the project — make sure it is useful, and that it doesn't make other contributors jobs harder. Submitting pull requests to fix issues is great, but are they truly useful, and easy to review? Filing issues and joining in other conversations is fine, but are your issues and comments on topic, or are they just adding noise?
 
 As a rule, do:
 
@@ -62,7 +62,7 @@ As a rule, do:
 - Ask questions using other mechanisms like [chat rooms](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [forums](<(https://discourse.mozilla.org/c/mdn/236)>) if you are not sure whether something is useful or have a simple question.
 - Read the [contributor documentation]() and [how to write documentation]() first to try to solve the issue yourself.
 
-Don’t:
+Don't:
 
 - Complicate issues by trying to discuss multiple topics at once, or making off-topic comments.
 - Open lots of issues asking vague questions.
@@ -80,7 +80,7 @@ Most issues need some investigation before work can start, if you need to ask qu
 
 If you take on an issue we expect work to happen in a timely manner. If you can no longer take on the task, leave a comment and unassign yourself.
 
-Fork and branch the repository, do your work and open a [pull request](/en_US/docs/MDN/Community/Pull_requests).
+Fork and branch the repository, do your work and open a [pull request](/en-US/docs/MDN/Community/Pull_requests).
 
 _(more stuff)_
 

@@ -40,7 +40,7 @@ Fiddle: <https://jsfiddle.net/jonathansampson/mqcHA/1/>
 <html>
 <head>
     <title>msCapsLockWarningOff example</title>
-    <script type="text/javascript">
+    <script>
 
         function capsOff() {
                   if(!document.msCapsLockWarningOff) {

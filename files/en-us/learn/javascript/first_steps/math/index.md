@@ -262,7 +262,7 @@ guessCount++;
 
 Let's try playing with these in your console. For a start, note that you can't apply these directly to a number, which might seem strange, but we are assigning a variable a new updated value, not operating on the value itself. The following will return an error:
 
-```js
+```js example-bad
 3++;
 ```
 

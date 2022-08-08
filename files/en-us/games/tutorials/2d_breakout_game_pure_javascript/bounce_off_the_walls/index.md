@@ -27,7 +27,7 @@ To detect the collision we will check whether the ball is touching (colliding wi
 To make the calculations easier let's define a variable called `ballRadius` that will hold the radius of the drawn circle and be used for calculations. Add this to your code, somewhere below the existing variable declarations:
 
 ```js
-var ballRadius = 10;
+const ballRadius = 10;
 ```
 
 Now update the line that draws the ball inside the `drawBall()` function to this:

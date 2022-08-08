@@ -85,7 +85,7 @@ browser.contextMenus.create({
   checked: false
 }, onCreated);
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "popup-1") {
     browser.action.setPopup({popup: "/popup/popup1.html"})
   } else if (info.menuItemId === "popup-2") {

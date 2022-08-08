@@ -77,7 +77,7 @@ function logAllFrames(tabs) {
   gettingAllFrames.then(logFrameInfo, onError);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
 
   let querying = browser.tabs.query({
     currentWindow: true,

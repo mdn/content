@@ -27,7 +27,7 @@ In this snippet, when a {{domxref("HTMLElement/pointerdown_event", "pointerdown"
 are called depending on the value of the event's `pressure` property.
 
 ```js
-someElement.addEventListener('pointerdown', function(event) {
+someElement.addEventListener('pointerdown', (event) => {
   if (event.pressure === 0) {
     // No pressure
     process_no_pressure(event);

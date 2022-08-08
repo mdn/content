@@ -32,7 +32,7 @@ If the `onShown` handler calls any asynchronous APIs, then it's possible that th
 let lastMenuInstanceId = 0;
 let nextMenuInstanceId = 1;
 
-browser.menus.onShown.addListener(async function(info, tab) {
+browser.menus.onShown.addListener(async (info, tab) => {
   let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
@@ -46,7 +46,7 @@ browser.menus.onShown.addListener(async function(info, tab) {
   // Now use menus.create/update + menus.refresh.
 });
 
-browser.menus.onHidden.addListener(function() {
+browser.menus.onHidden.addListener(() => {
   lastMenuInstanceId = 0;
 });
 ```
@@ -54,7 +54,7 @@ browser.menus.onHidden.addListener(function() {
 Note that it is possible to call menus API functions synchronously, and in this case you don't have to perform this check:
 
 ```js
-browser.menus.onShown.addListener(async function(info, tab) {
+browser.menus.onShown.addListener(async (info, tab) => {
   browser.menus.update(menuId /*, …*/);
    // Note: Not waiting for returned promise.
   browser.menus.refresh();
@@ -64,7 +64,7 @@ browser.menus.onShown.addListener(async function(info, tab) {
 However, if you call these APIs asynchronously, then you do have to perform the check:
 
 ```js
-browser.menus.onShown.addListener(async function(info, tab) {
+browser.menus.onShown.addListener(async (info, tab) => {
   let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 

@@ -78,10 +78,12 @@ user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
 <head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width">
 <title>Rich Text Editor</title>
-<script type="text/javascript">
+<script>
 var oDoc, sDefTxt;
 
 function initDoc() {
@@ -134,7 +136,7 @@ function printDoc() {
   oPrintWin.document.close();
 }
 </script>
-<style type="text/css">
+<style>
 .intLink { cursor: pointer; }
 img.intLink { border: 0; }
 #toolBar1 select { font-size:10px; }

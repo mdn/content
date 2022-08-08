@@ -55,7 +55,7 @@ function getAvailableLanguages(el) {
     "main", "translation"
   ];
 
-  el.audioTracks.forEach(function(track) {
+  el.audioTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,

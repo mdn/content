@@ -95,7 +95,7 @@ If an expression evaluates to an [object](/en-US/docs/Web/JavaScript/Guide/Worki
 For example:
 
 ```js
-let obj = {};
+const obj = {};
 
 obj.x = 3;
 console.log(obj.x); // Prints 3.
@@ -112,12 +112,14 @@ For more information about objects, read [Working with Objects](/en-US/docs/Web/
 If an expression does not evaluate to an object, then assignments to properties of that expression do not assign:
 
 ```js
-let val = 0;
+const val = 0;
+val.x = 3;
 
-console.log(val.x = 3); // Prints 3.
 console.log(val.x); // Prints undefined.
 console.log(val); // Prints 0.
 ```
+
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#converting_mistakes_into_errors), the code above throws, because one cannot assign properties to primitives.
 
 It is an error to assign values to unmodifiable properties or to properties of an expression without properties (`null` or `undefined`).
 
@@ -308,13 +310,11 @@ Chaining assignments or nesting assignments in other expressions can
 result in surprising behavior. For this reason,
 [chaining assignments in the same statement is discouraged][discourage assign chain]).
 
-In particular, putting a variable chain in a [`const`][], [`let`][], or [`var`][] statement often does *not* work.
-Only the outermost/leftmost variable would get declared;
-any other variables within the assignment chain are *not* declared by the `const`/`let`/`var` statement.
+In particular, putting a variable chain in a [`const`][], [`let`][], or [`var`][] statement often does _not_ work. Only the outermost/leftmost variable would get declared; other variables within the assignment chain are _not_ declared by the `const`/`let`/`var` statement.
 For example:
 
 ```js
-let z = y = x = f();
+const z = y = x = f();
 ```
 
 This statement seemingly declares the variables `x`, `y`, and `z`.
@@ -870,7 +870,7 @@ const a = [x, x, x, x, x];
 
 for (let i = 0, j = 9; i <= j; i++, j--) {
 //                                ^
-  console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
+  console.log(`a[${i}][${j}]= ${a[i][j]}`);
 }
 ```
 
@@ -1120,7 +1120,7 @@ a * c + b * c // 9
 You can use the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) to create an instance of a user-defined object type or of one of the built-in object types. Use `new` as follows:
 
 ```js
-const objectName = new objectType([param1, param2, ..., paramN]);
+const objectName = new objectType(param1, param2, /* …, */ paramN);
 ```
 
 ### super

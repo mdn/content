@@ -1,7 +1,6 @@
 ---
 title: Capabilities, constraints, and settings
-slug: Web/API/Media_Streams_API/Constraints
-page-type: guide
+slug: Web/API/Media_Capture_and_Streams_API/Constraints
 tags:
   - Advanced
   - Audio
@@ -16,7 +15,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 This article discusses the twin concepts of **constraints** and **capabilities**, as well as media settings, and includes an example we call the [Constraint Exerciser](#example_constraint_exerciser). The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
 
@@ -376,7 +375,7 @@ function buildConstraints() {
   try {
     videoConstraints = JSON.parse(videoConstraintEditor.value);
     audioConstraints = JSON.parse(audioConstraintEditor.value);
-  } catch(error) {
+  } catch (error) {
     handleError(error);
   }
 }

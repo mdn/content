@@ -30,12 +30,12 @@ the other bitwise operators, zero-fill right shift returns an unsigned 32-bit in
 
 Consider the 32-bit binary representations of the decimal (base 10) numbers `9` and `-9`:
 
-```js
+```
      9 (base 10): 00000000000000000000000000001001 (base 2)
     -9 (base 10): 11111111111111111111111111110111 (base 2)
 ```
 
-Notice that the binary representation of the negative decimal (base 10) number `-9` is the [two's complement](https://en.wikipedia.org/wiki/Two's_complement) of the binary representation of the positive decimal (base 10) number `9`. That is, it’s calculated by inverting all the bits of `00000000000000000000000000001001` and adding `1`.
+Notice that the binary representation of the negative decimal (base 10) number `-9` is the [two's complement](https://en.wikipedia.org/wiki/Two's_complement) of the binary representation of the positive decimal (base 10) number `9`. That is, it's calculated by inverting all the bits of `00000000000000000000000000001001` and adding `1`.
 
 In both cases, the sign of the binary number is given by its leftmost bit: for the positive decimal number `9`, the leftmost bit of the binary representation is `0`, and for the negative decimal number `-9`, the leftmost bit of the binary representation is `1`.
 
@@ -43,7 +43,7 @@ Given those binary representations of the decimal (base 10) numbers `9`, and `-9
 
 For the positive number `9`, zero-fill right shift and [sign-propagating right shift](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift) yield the same result: `9 >>> 2` yields `2`, the same as `9 >> 2`:
 
-```js
+```
       9 (base 10): 00000000000000000000000000001001 (base 2)
                    --------------------------------
 9 >>  2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
@@ -54,7 +54,7 @@ Notice how two rightmost bits, `01`, have been shifted off, and two zeroes have 
 
 However, notice what happens for `-9`: `-9 >> 2` ([sign-propagating right shift](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)) yields `-3`, but `-9 >>> 2` (zero-fill right shift) yields 1073741821:
 
-```js
+```
       -9 (base 10): 11111111111111111111111111110111 (base 2)
                     --------------------------------
 -9 >>  2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)

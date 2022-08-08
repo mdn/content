@@ -20,8 +20,8 @@ that will be called when that property is looked up.
 ## Syntax
 
 ```js
-{get prop() { /* … */ } }
-{get [expression]() { /* … */ } }
+{ get prop() { /* … */ } }
+{ get [expression]() { /* … */ } }
 ```
 
 ### Parameters
@@ -165,13 +165,15 @@ property, the property is removed from the object and re-added, but implicitly a
 property this time. Finally, the value gets returned.
 
 ```js
-get notifier() {
-  delete this.notifier;
-  return this.notifier = document.getElementById('bookmarked-notification-anchor');
-},
+const obj = {
+  get notifier() {
+    delete this.notifier;
+    return this.notifier = document.getElementById('bookmarked-notification-anchor');
+  },
+}
 ```
 
-### `get` vs. `defineProperty`
+### get vs. defineProperty
 
 While using the `get` keyword and {{jsxref("Object.defineProperty()")}} have
 similar results, there is a subtle difference between the two when used on

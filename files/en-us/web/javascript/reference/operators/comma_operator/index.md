@@ -25,7 +25,7 @@ expressions. This is commonly used to provide multiple parameters to a
 ## Syntax
 
 ```js
-expr1, expr2, expr3...
+expr1, expr2, expr3/* , … */
 ```
 
 ### Parameters
@@ -53,7 +53,7 @@ The following code prints the values of the diagonal elements in the array:
 
 ```js
 for (let i = 0, j = 9; i <= 9; i++, j--) {
-  console.log('a[' + i + '][' + j + '] = ' + a[i][j]);
+  console.log(`a[${i}][${j}] = ${a[i][j]}`);
 }
 ```
 

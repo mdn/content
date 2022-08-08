@@ -18,15 +18,12 @@ tags:
   - streaming
 browser-compat: api.MediaStream.MediaStream
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
-The **`MediaStream()`** constructor
-returns a newly-created {{domxref("MediaStream")}}, which serves as a collection of
-media tracks, each represented by a {{domxref("MediaStreamTrack")}} object.
+The **`MediaStream()`** constructor returns a newly-created {{domxref("MediaStream")}}, which serves as a collection of media tracks, each represented by a {{domxref("MediaStreamTrack")}} object.
 
-If
-any parameters are given, the specified tracks are added to the new stream. Otherwise,
-the stream has no tracks.
+If any parameters are given, the specified tracks are added to the new stream.
+Otherwise, the stream has no tracks.
 
 ## Syntax
 

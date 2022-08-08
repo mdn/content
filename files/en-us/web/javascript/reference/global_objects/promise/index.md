@@ -173,7 +173,7 @@ To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-U
   const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
   // bound is a built-in function — there is no user
   // code on the stack, so which realm do we use?
-  window.setTimeout(bound);
+  setTimeout(bound);
   // this still works, because we use the youngest
   // realm (the incumbent) on the stack
 </script>
@@ -290,7 +290,7 @@ const myFirstPromise = new Promise((resolve, reject) => {
 myFirstPromise.then((successMessage) => {
   // successMessage is whatever we passed in the resolve(...) function above.
   // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
-  console.log("Yay! " + successMessage);
+  console.log(`Yay! ${successMessage}`);
 });
 ```
 
@@ -334,8 +334,7 @@ function troubleWithGetNumber(reason) {
 function promiseGetWord(parityInfo) {
   return new Promise((resolve, reject) => {
     const { value } = parityInfo;
-    const threshold_B = THRESHOLD_A - 1;
-    if (value >= threshold_B) {
+    if (value >= THRESHOLD_A - 1) {
       reject(`Still too large: ${value}`);
     } else {
       parityInfo.wordEvenOdd = parityInfo.isOdd ? "odd" : "even";
@@ -386,13 +385,13 @@ function testPromise() {
   const thisPromiseCount = ++promiseCount;
   const log = document.getElementById("log");
   // begin
-  log.insertAdjacentHTML("beforeend", thisPromiseCount + ") Started<br>");
+  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Started<br>`);
   // We make a new promise: we promise a numeric count of this promise, starting from 1 (after waiting 3s)
   const p1 = new Promise((resolve, reject) => {
     // The executor function is called with the ability to resolve or reject the promise
     log.insertAdjacentHTML(
       "beforeend",
-      thisPromiseCount + ") Promise constructor<br>"
+      `${thisPromiseCount}) Promise constructor<br>`
     );
     // This is only an example to create asynchronism
     setTimeout(() => {
@@ -405,13 +404,13 @@ function testPromise() {
   // and what to do when the promise is rejected with the catch() call
   p1.then((val) => {
     // Log the fulfillment value
-    log.insertAdjacentHTML("beforeend", val + ") Promise fulfilled<br>");
+    log.insertAdjacentHTML("beforeend", `${val}) Promise fulfilled<br>`);
   }).catch((reason) => {
     // Log the rejection reason
     console.log(`Handle rejected promise (${reason}) here.`);
   });
   // end
-  log.insertAdjacentHTML("beforeend", thisPromiseCount + ") Promise made<br>");
+  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Promise made<br>`);
 }
 
 const btn = document.getElementById("make-promise");

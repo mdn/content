@@ -69,7 +69,7 @@ In this basic example, an `EventSource` is created to receive unnamed events fro
 const evtSource = new EventSource('sse.php');
 const eventList = document.querySelector('ul');
 
-evtSource.onmessage = function(e) {
+evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
   newElement.textContent = `message: ${e.data}`;
@@ -94,14 +94,14 @@ To listen to named events, you'll require a listener for each type of event sent
    * id: someid
    *
    */
-  sse.addEventListener("notice", function(e) {
+  sse.addEventListener("notice", (e) => {
     console.log(e.data)
   })
 
   /* Similarly, this will listen for events
    * with the field `event: update`
    */
-  sse.addEventListener("update", function(e) {
+  sse.addEventListener("update", (e) => {
     console.log(e.data)
   })
 
@@ -111,7 +111,7 @@ To listen to named events, you'll require a listener for each type of event sent
    * `event: message` It will not trigger on any
    * other event type.
    */
-  sse.addEventListener("message", function(e) {
+  sse.addEventListener("message", (e) => {
     console.log(e.data)
   })
 

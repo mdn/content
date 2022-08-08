@@ -59,17 +59,17 @@ myWorker.port.start();
 When the port is started, both scripts post messages to the worker and handle messages sent from it using `port.postMessage()` and `port.onmessage`, respectively:
 
 ```js
-first.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
+first.onchange = () => {
+  myWorker.port.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
-second.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
+second.onchange = () => {
+  myWorker.port.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
-myWorker.port.onmessage = function(e) {
+myWorker.port.onmessage = (e) => {
   result1.textContent = e.data;
   console.log('Message received from worker');
 }
@@ -78,10 +78,10 @@ myWorker.port.onmessage = function(e) {
 Inside the worker we use the {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
 
 ```js
-onconnect = function(e) {
+onconnect = (e) => {
   const port = e.ports[0];
 
-  port.addEventListener('message', function(e) {
+  port.addEventListener('message', (e) => {
     const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   });

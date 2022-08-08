@@ -25,7 +25,7 @@ When a new gamepad is connected to the computer, the focused page first receives
 You can use {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} like this:
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", (e) => {
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
     e.gamepad.index, e.gamepad.id,
     e.gamepad.buttons.length, e.gamepad.axes.length);
@@ -39,7 +39,7 @@ Each gamepad has a unique ID associated with it, which is available on the event
 When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}:
 
 ```js
-window.addEventListener("gamepaddisconnected", function(e) {
+window.addEventListener("gamepaddisconnected", (e) => {
   console.log("Gamepad disconnected from index %d: %s",
     e.gamepad.index, e.gamepad.id);
 });
@@ -62,8 +62,8 @@ function gamepadHandler(event, connecting) {
   }
 }
 
-window.addEventListener("gamepadconnected", function(e) { gamepadHandler(e, true); }, false);
-window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, false); }, false);
+window.addEventListener("gamepadconnected", (e) => { gamepadHandler(e, true); }, false);
+window.addEventListener("gamepaddisconnected", (e) => { gamepadHandler(e, false); }, false);
 ```
 
 This previous example also demonstrates how the `gamepad` property can be held after the event has completed — a technique we will use for device state querying later.
@@ -77,7 +77,7 @@ Performing such checks tends to involve using the {{ domxref("Gamepad") }} objec
 The {{domxref("Navigator.getGamepads()")}} method returns an array of all devices currently visible to the webpage, as {{ domxref("Gamepad") }} objects (the first value is always `null`, so `null` will be returned if there are no gamepads connected.) This can then be used to get the same information. For example, the first code example above you be rewritten as shown below:
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", (e) => {
   const gp = navigator.getGamepads()[e.gamepad.index];
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
     gp.index, gp.id,
@@ -118,7 +118,7 @@ let b = 0;
 Next we use the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} event to check for a gamepad being connected. When one is connected, we grab the gamepad using {{ domxref("Navigator.getGamepads()") }}`[0]`, print information about the gamepad into our gamepad info `div`, and fire the `gameLoop()` function that starts the whole ball movement process up.
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", (e) => {
   const gp = navigator.getGamepads()[e.gamepad.index];
   gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}. It has ${gp.buttons.length} buttons and ${gp.axes.length} axes.`;
 
@@ -129,7 +129,7 @@ window.addEventListener("gamepadconnected", function(e) {
 Now we use the {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} event to check if the gamepad is disconnected again. If so, we stop the {{DOMxRef("Window.requestAnimationFrame", "requestAnimationFrame()")}} loop (see below) and revert the gamepad information back to what it was originally.
 
 ```js
-window.addEventListener("gamepaddisconnected", function(e) {
+window.addEventListener("gamepaddisconnected", (e) => {
   gamepadInfo.textContent = "Waiting for gamepad.";
 
   cancelRequestAnimationFrame(start);

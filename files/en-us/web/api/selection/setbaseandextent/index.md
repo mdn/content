@@ -104,7 +104,7 @@ const output = document.querySelector('.output');
 
 let selection;
 
-button.onclick = function() {
+button.onclick = () => {
   try {
     selection = document.getSelection();
     selection.setBaseAndExtent(one, aOffset.value, two, fOffset.value);

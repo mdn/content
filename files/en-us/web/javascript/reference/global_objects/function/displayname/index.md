@@ -18,7 +18,7 @@ A {{jsxref("Function")}} object's optional **`displayName`** property returns th
 
 If present, it may be preferred by consoles and profilers over the {{jsxref("Function.prototype.name", "name")}} property to be displayed as the name of a function.
 
-By entering the following in a console, it should display as something like "`function My Function()`":
+By entering the following in a console, it should display as something like `function My Function()`:
 
 ```js
 const a = function () {};
@@ -56,7 +56,7 @@ object.someMethod.displayName = 'someMethod';
 
 console.log(object.someMethod.displayName); // logs "someMethod"
 
-try { someMethod } catch(e) { console.log(e); }
+try { someMethod } catch (e) { console.log(e); }
 // ReferenceError: someMethod is not defined
 ```
 

@@ -147,8 +147,10 @@ class SubClass extends BaseClassWithPrivateStaticField { };
 let error = null;
 
 try {
-  SubClass.basePublicStaticMethod()
-} catch(e) { error = e};
+  SubClass.basePublicStaticMethod();
+} catch (e) {
+  error = e;
+}
 
 console.log(error instanceof TypeError);
 // true

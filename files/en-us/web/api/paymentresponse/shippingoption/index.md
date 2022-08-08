@@ -37,15 +37,15 @@ is called. It calls `updateDetails()` to toggle the shipping method between
 // Initialization of PaymentRequest arguments are excerpted for brevity.
 const payment = new PaymentRequest(supportedInstruments, details, options);
 
-request.addEventListener('shippingoptionchange', function(evt) {
-  evt.updateWith(new Promise(function(resolve, reject) {
+request.addEventListener('shippingoptionchange', (evt) => {
+  evt.updateWith(new Promise((resolve, reject) => {
     updateDetails(details, request.shippingOption, resolve, reject);
   }));
 });
 
-payment.show().then(function(paymentResponse) {
+payment.show().then((paymentResponse) => {
   // Processing of paymentResponse excerpted for the same of brevity.
-}).catch(function(err) {
+}).catch((err) => {
   console.error("Uh oh, something bad happened", err.message);
 });
 
