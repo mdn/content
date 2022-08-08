@@ -58,9 +58,9 @@ setActionHandler(type, callback)
     - `stop`
       - : Halts playback entirely.
     - `togglecamera`
-      - : Turn the user’s active camera on or off.
+      - : Turn the user's active camera on or off.
     - `togglemicrophone`
-      - : Mute or unmute the user’s microphone.
+      - : Mute or unmute the user's microphone.
 - `callback`
   - : A function to call when the specified action type is invoked. The callback should not return a value. The callback receives a dictionary containing the following properties:
     - `action`

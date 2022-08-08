@@ -84,7 +84,7 @@ To use `@Output()`, you raise an event in one component so that the other compon
 
 In the `app` directory, create a new file named `item.ts` with the following contents:
 
-```js
+```ts
 export interface Item {
   description: string;
   done: boolean;
@@ -188,7 +188,7 @@ A to-do list needs a way to add items.
 
 In `app.component.ts`, add the following method to the class:
 
-```js
+```ts
 addItem(description: string) {
   this.allItems.unshift({
     description,

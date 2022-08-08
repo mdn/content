@@ -101,7 +101,7 @@ const reload = document.querySelector('#reload');
 
 reload.addEventListener('click', () => {
   log.textContent ='';
-  window.setTimeout(() => {
+  setTimeout(() => {
       window.location.reload(true);
   }, 200);
 });

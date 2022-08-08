@@ -46,12 +46,13 @@ request.onpaymentmethodchange = (ev) => {
   const newStuff = {};
   if (ev.methodName === "https://apple.com/apple-pay") {
     switch (cardType) {
-      case "visa":
+      case "visa": {
         // do Apple Pay specific handling for Visa card…
         // methodDetails contains the card information
-        const result = calculateDiscount(ev.methodDetails);
-        Object.assign(newStuff, result);
+        const discount = calculateDiscount(ev.methodDetails);
+        Object.assign(newStuff, discount);
         break;
+      }
     }
   }
   // finally…
@@ -59,6 +60,8 @@ request.onpaymentmethodchange = (ev) => {
 };
 const response = await request.show();
 ```
+
+Note that the `methodDetails` property is being used by the `calculateDiscount()` function to compute any payment discount, then {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} is called to update the event with the computed update.
 
 ## Specifications
 

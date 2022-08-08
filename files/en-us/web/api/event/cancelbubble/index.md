@@ -23,7 +23,7 @@ A boolean value. The value `true` means that the event must not be propagated fu
 ## Example
 
 ```js
-elem.onclick = function(event) {
+elem.onclick = (event) => {
   // Do cool things here
   event.cancelBubble = true;
 }

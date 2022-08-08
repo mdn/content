@@ -48,6 +48,7 @@ candidates. Only candidates which have not been deleted are included in the outp
 
 ```js
 setInterval(() => {
+
   myPeerConnection.getStats(null).then((stats) => {
     let statsOutput = "";
 

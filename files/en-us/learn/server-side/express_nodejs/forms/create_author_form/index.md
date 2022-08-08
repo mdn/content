@@ -88,18 +88,29 @@ The validation code demonstrates several new features:
 - We can daisy chain validators, using `withMessage()` to specify the error message to display if the previous validation method fails. This makes it very easy to provide specific error messages without lots of code duplication.
 
   ```js
-  // Validate fields.
-  body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
-      .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),
+  [
+    // Validate fields.
+    body('first_name')
+      .trim()
+      .isLength({ min: 1 })
+      .escape()
+      .withMessage('First name must be specified.')
+      .isAlphanumeric()
+      .withMessage('First name has non-alphanumeric characters.'),
+    // …
+  ];
   ```
 
 - We can use the `optional()` function to run a subsequent validation only if a field has been entered (this allows us to validate optional fields). For example, below we check that the optional date of birth is an ISO8601-compliant date (the `checkFalsy` flag means that we'll accept either an empty string or `null` as an empty value).
 
   ```js
-  body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),
+  [
+    body('date_of_birth', 'Invalid date of birth')
+      .optional({ checkFalsy: true })
+      .isISO8601()
+      .toDate(),
+  ];
   ```
-
-<!---->
 
 - Parameters are received from the request as strings. We can use `toDate()` (or `toBoolean()`) to cast these to the proper JavaScript types (as shown at the end of the validator chain above).
 
@@ -107,7 +118,7 @@ The validation code demonstrates several new features:
 
 Create **/views/author_form.pug** and copy in the text below.
 
-```plain
+```pug
 extends layout
 
 block content

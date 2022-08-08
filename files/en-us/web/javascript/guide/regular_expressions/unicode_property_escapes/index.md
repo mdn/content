@@ -63,7 +63,7 @@ They can be used to match letters, numbers, symbols, punctuations, spaces, etc. 
 
 ```js
 // finding all the letters of a text
-let story = "It's the Cheshire Cat: now I shall have somebody to talk to.";
+const story = "It's the Cheshire Cat: now I shall have somebody to talk to.";
 
 // Most explicit form
 story.match(/\p{General_Category=Letter}/gu);
@@ -85,7 +85,7 @@ Some languages use different scripts for their writing system. For instance, Eng
 For example, `A` belongs to the `Latin` script and `ε` to the `Greek` script.
 
 ```js
-let mixedCharacters = "aεЛ";
+const mixedCharacters = "aεЛ";
 
 // Using the canonical "long" name of the script
 mixedCharacters.match(/\p{Script=Latin}/u); // a

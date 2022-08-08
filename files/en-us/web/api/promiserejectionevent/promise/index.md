@@ -41,7 +41,7 @@ been handled.
 ```js
 window.onunhandledrejection = (event) => {
   if (event.reason?.code === "Module not ready") {
-    window.requestIdleCallback((deadline) => {
+    requestIdleCallback((deadline) => {
       loadModule(event.reason.moduleName)
         .then(performStartup);
     });

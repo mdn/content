@@ -31,9 +31,9 @@ This will make the three walls (top, left and right) bounce the ball back, but t
 
 ```js
 ball.checkWorldBounds = true;
-ball.events.onOutOfBounds.add(function(){
-    alert('Game over!');
-    location.reload();
+ball.events.onOutOfBounds.add(() => {
+  alert('Game over!');
+  location.reload();
 }, this);
 ```
 

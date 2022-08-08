@@ -281,11 +281,11 @@ for (let i = 0; i < a.length; i++) {
 let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
-  console.log('Outer loops: ' + x);
+  console.log('Outer loops: ', x);
   x += 1;
   z = 1;
   while (true) {
-    console.log('Inner loops: ' + z);
+    console.log('Inner loops: ', z);
     z += 1;
     if (z === 10 && x === 10) {
       break labelCancelLoops;
@@ -369,10 +369,10 @@ checkiandj: while (i < 4) {
     if ((j % 2) === 0) {
       continue checkj;
     }
-    console.log(j + ' is odd.');
+    console.log(j, ' is odd.');
   }
-  console.log('i = ' + i);
-  console.log('j = ' + j);
+  console.log('i = ', i);
+  console.log('j = ', j);
 }
 ```
 
@@ -395,20 +395,19 @@ iterates over all the object's properties and returns a string that lists the pr
 names and their values.
 
 ```js
-function dump_props(obj, obj_name) {
+function dumpProps(obj, objName) {
   let result = '';
-  for (let i in obj) {
-    result += obj_name + '.' + i + ' = ' + obj[i] + '<br>';
+  for (const i in obj) {
+    result += `${objName}.${i} = ${obj[i]}<br>`;
   }
   result += '<hr>';
   return result;
 }
 ```
 
-For an object `car` with properties `make` and
-`model`, `result` would be:
+For an object `car` with properties `make` and `model`, `result` would be:
 
-```js
+```
 car.make = Ford
 car.model = Mustang
 ```

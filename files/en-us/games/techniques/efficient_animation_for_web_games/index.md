@@ -83,8 +83,8 @@ To help combat poor animation performance, Chris Lord wrote [Animator.js](https:
 
 ```js
 animator.requestAnimationFrame =
-  function(callback) {
-    requestAnimationFrame(function(t) {
+  (callback) => {
+    requestAnimationFrame((t) => {
       callback(t);
       redraw();
     });

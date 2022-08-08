@@ -11,6 +11,8 @@ tags:
   - prompt
 browser-compat: api.BeforeInstallPromptEvent.prompt
 ---
+{{SeeCompatTable}}
+
 The **`prompt()`** method of the
 {{domxref("BeforeInstallPromptEvent")}} interface allows a developer to show the
 install prompt at a time of their own choosing.

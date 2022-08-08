@@ -42,7 +42,7 @@ Zoomed elements can expose their zoom level through `msContentZoom` (ie. scrollT
 ## Example
 
 ```js
-  contentZoom.addEventListener("MSContentZoom", function(e) {
+  contentZoom.addEventListener("MSContentZoom", (e) => {
      zoomFactor.value = contentZoom.msContentZoomFactor.toFixed(2);
   });
 ```

@@ -40,10 +40,10 @@ In this section we'll walk you through a performance test, using Firefox, to see
 Before going through the example, please enable FPS tools first to see the current frame rate:
 
 1. In the URL bar, enter _about:config_; click the _I'll be careful, I promise!_ button to enter the config screen.
-    ![](pic1.png)
+    ![Warning screen that changing settings can be risky, with a button to accept risks.](pic1.png)
 2. In the search bar, search for the `layers.acceleration.draw-fps` preference.
 3. Double-click the entry to set the value to `true`. Now you will be able to see three little purple boxes at the upper left corner of the Firefox window. The first box represents FPS.
-    ![](pic2.png)
+    ![Entering the search term filters the options. Only the layers.acceleration.draw-fps preference is showing and is set to true. Three numbers (001, 001, and 108) are appearing in the upper left corner of the browser, overlaying its UI.](pic2.png)
 
 ### Running the performance test
 
@@ -169,7 +169,7 @@ Even given the test results above, we'd argue that CSS animations are the better
 
 To enable the OMTA (Off Main Thread Animation) in Firefox, you can go to _about:config_ and search for the `layers.offmainthreadcomposition.async-animations`. Toggle its value to `true`.
 
-![](pic3.png)
+![Entering the search term filters the options. Only the layers.offmainthreadcomposition.async-animations preference is showing, set to true. The three numbers in the upper left corner of the browser, above its UI, have increased to 005, 003, and 108.](pic3.png)
 
 After enabling OMTA, try running the above test again. You should see that the FPS of the CSS animations will now be significantly higher.
 

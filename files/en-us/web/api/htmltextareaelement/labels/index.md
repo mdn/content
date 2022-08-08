@@ -34,7 +34,7 @@ with the `<textArea>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const textArea = document.getElementById("test");
   for (const label of textArea.labels) {
     console.log(label.textContent); // "Label 1" and "Label 2"

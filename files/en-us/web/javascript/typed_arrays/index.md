@@ -100,7 +100,7 @@ Things start to get really interesting when you consider that you can create mul
 const int16View = new Int16Array(buffer);
 
 for (let i = 0; i < int16View.length; i++) {
-  console.log('Entry ' + i + ': ' + int16View[i]);
+  console.log(`Entry ${i}: ${int16View[i]}`);
 }
 ```
 
@@ -110,7 +110,7 @@ You can go a step farther, though. Consider this:
 
 ```js
 int16View[0] = 32;
-console.log('Entry 0 in the 32-bit array is now ' + int32View[0]);
+console.log(`Entry 0 in the 32-bit array is now ${int32View[0]}`);
 ```
 
 The output from this is `"Entry 0 in the 32-bit array is now 32"`.

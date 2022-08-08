@@ -27,12 +27,12 @@ In this example the background of the page is set to red using CSS. The JavaScri
 <html>
 <head>
 <title>Modifying a stylesheet rule with CSSOM</title>
-<style type="text/css">
+<style>
 body {
  background-color: red;
 }
 </style>
-<script type="text/javascript">
+<script>
 var stylesheet = document.styleSheets[0];
 stylesheet.cssRules[0].style.backgroundColor="aqua";
 </script>
@@ -64,7 +64,7 @@ To change a particular element's style, you can adapt the following example for 
 <head>
 <title>simple style example</title>
 
-<script type="text/javascript">
+<script>
 
 function alterStyle(elem) {
   elem.style.background = 'green';
@@ -115,7 +115,7 @@ More important than the two properties noted here is the use of the `style` obje
  <head>
   <title>style Property Example</title>
   <link rel="StyleSheet" href="example.css" type="text/css">
-  <script type="text/javascript">
+  <script>
     function setStyle() {
       document.getElementById('d').style.color = 'orange';
     }

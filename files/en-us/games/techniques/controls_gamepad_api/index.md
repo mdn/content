@@ -236,11 +236,11 @@ The {{domxref("Navigator.getGamepads()")}} method has been updated with [a longe
 
 The mapping type is now an enumerable object instead of a string:
 
-```js
+```ts
 enum GamepadMappingType {
-    "",
-    "standard"
-};
+  "",
+  "standard"
+}
 ```
 
 This enum defines the set of known mappings for a Gamepad. For now, there's only the `standard` layout available, but new ones may appear in the future. If the layout is unknown, it is set to an empty string.

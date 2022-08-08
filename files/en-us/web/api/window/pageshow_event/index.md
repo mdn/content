@@ -64,27 +64,23 @@ This example sets up event handlers for events listed in the array `events`. The
 ### JavaScript
 
 ```js
-const events = [
-  "pagehide", "pageshow",
-  "unload", "load"
-];
+const events = ["pagehide", "pageshow", "unload", "load"];
 
 const eventLogger = (event) => {
   switch (event.type) {
     case "pagehide":
-    case "pageshow":
+    case "pageshow": {
       let isPersisted = event.persisted ? "persisted" : "not persisted";
-      console.log('Event:', event.type, '-', isPersisted);
+      console.log(`Event: ${event.type} - ${isPersisted}`);
       break;
+    }
     default:
-      console.log('Event:', event.type);
+      console.log(`Event: ${event.type}`);
       break;
   }
 };
 
-events.forEach((eventName) =>
-  window.addEventListener(eventName, eventLogger)
-);
+events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 ```
 
 ### HTML

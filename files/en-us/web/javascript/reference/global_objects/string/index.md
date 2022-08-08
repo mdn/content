@@ -75,18 +75,18 @@ you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScri
 const a = 'a';
 const b = 'b';
 if (a < b) { // true
-  console.log(a + ' is less than ' + b)
+  console.log(`${a} is less than ${b}`)
 } else if (a > b) {
-  console.log(a + ' is greater than ' + b)
+  console.log(`${a} is greater than ${b}`)
 } else {
-  console.log(a + ' and ' + b + ' are equal.')
+  console.log(`${a} and ${b} are equal.`)
 }
 ```
 
 A similar result can be achieved using the {{jsxref("String.prototype.localeCompare()",
   "localeCompare()")}} method inherited by `String` instances.
 
-Note that `a == b` compares the strings in `a` and
+Note that `a === b` compares the strings in `a` and
 `b` for being equal in the usual case-sensitive way. If you wish
 to compare without regard to upper or lower case characters, use a function similar to
 this:
@@ -114,11 +114,11 @@ will automatically wrap the string primitive and call the method or perform the 
 lookup on the wrapper object instead.
 
 ```js
-const s_prim = 'foo'
-const s_obj = new String(s_prim)
+const strPrim = 'foo';
+const strObj = new String(strPrim);
 
-console.log(typeof s_prim) // Logs "string"
-console.log(typeof s_obj)  // Logs "object"
+console.log(typeof strPrim); // Logs "string"
+console.log(typeof strObj);  // Logs "object"
 ```
 
 > **Warning:** You should rarely find yourself using `String` as a constructor.
@@ -162,9 +162,9 @@ Special characters can be encoded using escape sequences:
 | `\t`                                                                                                                                                   | tab (U+0009 CHARACTER TABULATION)                                                                                          |
 | `\b`                                                                                                                                                   | backspace (U+0008 BACKSPACE)                                                                                               |
 | `\f`                                                                                                                                                   | form feed (U+000C FORM FEED)                                                                                               |
-| `\uXXXX` …where `XXXX` is exactly 4 hex digits in the range `0000`–`FFFF`; e.g., `\u000A` is the same as `\n` (LINE FEED); `\u0021` is "`!`"           | Unicode code point between `U+0000` and `U+FFFF` (the Unicode Basic Multilingual Plane)                                    |
-| `\u{X}`…`\u{XXXXXX}` …where `X`…`XXXXXX` is 1–6 hex digits in the range `0`–`10FFFF`; e.g., `\u{A}` is the same as `\n` (LINE FEED); `\u{21}` is "`!`" | Unicode code point between `U+0000` and `U+10FFFF` (the entirety of Unicode)                                               |
-| `\xXX` …where `XX` is exactly 2 hex digits in the range `00`–`FF`; e.g., `\x0A` is the same as `\n` (LINE FEED); `\x21` is "`!`"                       | Unicode code point between `U+0000` and `U+00FF` (the Basic Latin and Latin-1 Supplement blocks; equivalent to ISO-8859-1) |
+| `\uXXXX` …where `XXXX` is exactly 4 hex digits in the range `0000`–`FFFF`; e.g., `\u000A` is the same as `\n` (LINE FEED); `\u0021` is `!`           | Unicode code point between `U+0000` and `U+FFFF` (the Unicode Basic Multilingual Plane)                                    |
+| `\u{X}`…`\u{XXXXXX}` …where `X`…`XXXXXX` is 1–6 hex digits in the range `0`–`10FFFF`; e.g., `\u{A}` is the same as `\n` (LINE FEED); `\u{21}` is `!` | Unicode code point between `U+0000` and `U+10FFFF` (the entirety of Unicode)                                               |
+| `\xXX` …where `XX` is exactly 2 hex digits in the range `00`–`FF`; e.g., `\x0A` is the same as `\n` (LINE FEED); `\x21` is `!`                       | Unicode code point between `U+0000` and `U+00FF` (the Basic Latin and Latin-1 Supplement blocks; equivalent to ISO-8859-1) |
 
 ### Long literal strings
 

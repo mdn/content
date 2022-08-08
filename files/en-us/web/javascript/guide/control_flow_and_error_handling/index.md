@@ -36,10 +36,10 @@ statements. The block is delimited by a pair of curly brackets:
 
 ```js
 {
-  statement_1;
-  statement_2;
+  statement1;
+  statement2;
   // …
-  statement_n;
+  statementN;
 }
 ```
 
@@ -98,9 +98,9 @@ An `if` statement looks like this:
 
 ```js
 if (condition) {
-  statement_1;
+  statement1;
 } else {
-  statement_2;
+  statement2;
 }
 ```
 
@@ -118,14 +118,14 @@ You can also compound the statements using `else if` to have multiple
 conditions tested in sequence, as follows:
 
 ```js
-if (condition_1) {
-  statement_1;
-} else if (condition_2) {
-  statement_2;
-} else if (condition_n) {
-  statement_n;
+if (condition1) {
+  statement1;
+} else if (condition2) {
+  statement2;
+} else if (conditionN) {
+  statementN;
 } else {
-  statement_last;
+  statementLast;
 }
 ```
 
@@ -140,15 +140,15 @@ nesting `if` statements:
 
 ```js
 if (condition) {
-  statement_1_runs_if_condition_is_true;
-  statement_2_runs_if_condition_is_true;
+  // Statements for when condition is true
+  // …
 } else {
-  statement_3_runs_if_condition_is_false;
-  statement_4_runs_if_condition_is_false;
+  // Statements for when condition is false
+  // …
 }
 ```
 
-In general it's good practice to not have an `if...else` with an assignment like "`x = y`" as a condition:
+In general it's good practice to not have an `if...else` with an assignment like `x = y` as a condition:
 
 ```js example-bad
 if (x = y) {
@@ -180,8 +180,12 @@ conditional statement.
 >
 > ```js
 > const b = new Boolean(false);
-> if (b)         // this condition evaluates to true
-> if (b == true) // this condition evaluates to false
+> if (b) {
+>   // this condition evaluates to true
+> }
+> if (b == true) {
+>   // this condition evaluates to false
+> }
 > ```
 
 #### Example
@@ -211,15 +215,15 @@ A `switch` statement looks like this:
 
 ```js
 switch (expression) {
-  case label_1:
-    statements_1;
+  case label1:
+    statements1;
     break;
-  case label_2:
-    statements_2;
+  case label2:
+    statements2;
     break;
   // …
   default:
-    statements_default;
+    statementsDefault;
 }
 ```
 
@@ -348,12 +352,14 @@ function. If the value does not correspond to a month number
 ```js
 function getMonthName(mo) {
   mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
-                'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const months = [
+    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
-    throw 'InvalidMonthNo'; // throw keyword is used here
+    throw new Error('InvalidMonthNo'); // throw keyword is used here
   }
 }
 

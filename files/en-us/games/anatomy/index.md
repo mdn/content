@@ -32,7 +32,7 @@ JavaScript works best with events and callback functions. Modern browsers strive
 Some code needs to be run frame-by-frame so why attach that function to anything other than the browser's redraw schedule? On the Web, `{{ domxref("window.requestAnimationFrame()") }}` will be the foundation of most well-programmed per-frame main loops. A callback function must be passed in to it when it is called. That callback function will be executed at a suitable time before the next repaint. Here is an example of a simple main loop:
 
 ```js
-window.main = function () {
+window.main = () => {
   window.requestAnimationFrame(main);
 
   // Whatever your main loop needs to do
@@ -63,7 +63,7 @@ There are two obvious issues with our previous main loop: `main()` pollutes the 
 * marks the beginning of our new line if the previous one was not empty or terminated.
 */
 
-;(function () {
+;(() => {
   function main() {
     window.requestAnimationFrame(main);
 
@@ -90,7 +90,7 @@ For the second issue, stopping the main loop, you will need to cancel the call t
 * Let us also assume that MyGame is previously defined.
 */
 
-;(function () {
+;(() => {
   function main() {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -144,7 +144,7 @@ Back to the topic of the main loop. You will often want to know when your main f
 * Let us also assume that MyGame is previously defined.
 */
 
-;(function () {
+;(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -178,7 +178,7 @@ If your game can hit the maximum refresh rate of any hardware you support then y
 * Let us also assume that MyGame is previously defined.
 */
 
-;(function () {
+;(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
 
@@ -258,7 +258,7 @@ A separate update and draw method could look like the following example. For the
 *                   It is just a generic example function that you might have added.
 */
 
-;(function () {
+;(() => {
   function main(tFrame) {
     MyGame.stopMain = window.requestAnimationFrame(main);
     const nextTick = MyGame.lastTick + MyGame.tickLength;

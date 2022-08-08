@@ -25,7 +25,7 @@ The **`BigInt64Array`** typed array represents an array of 64-bit signed integer
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigInt64Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of a `BigInt64Array`.
 - {{jsxref("TypedArray.name", "BigInt64Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `BigInt64Array` type, this is "`BigInt64Array`".
+  - : Returns the string value of the constructor name. In the case of the `BigInt64Array` type, this is `"BigInt64Array"`.
 
 ## Static methods
 

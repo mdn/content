@@ -99,7 +99,7 @@ Although JavaScript allows us to convert the number to a string for display, the
 ```js
 const paragraphCount = document.evaluate('count(//p)', document, null, XPathResult.ANY_TYPE, null);
 
-console.log(`This document contains ${paragraphCount.stringValue} paragraph elements.');
+console.log(`This document contains ${paragraphCount.stringValue} paragraph elements.`);
 ```
 
 Instead, it will return an exception with the code `NS_DOM_TYPE_ERROR`.

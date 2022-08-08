@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 const button = document.querySelector('button');
 const evtSource = new EventSource('sse.php');
 
-button.onclick = function() {
+button.onclick = () => {
   console.log('Connection closed');
   evtSource.close();
 }

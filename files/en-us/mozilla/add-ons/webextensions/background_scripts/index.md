@@ -90,7 +90,7 @@ You cannot specify background scripts and a background page.
 Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on installation. Use this event to set a state or for one-time initialization. For extensions with event pages, this is where stateful APIs, such as a context menu created using `browser.menus.create`, should be used.
 
 ```js
-browser.runtime.onInstalled.addListener(function() {
+browser.runtime.onInstalled.addListener(() => {
   browser.contextMenus.create({
     "id": "sampleContextMenu",
     "title": "Sample Context Menu",
@@ -106,7 +106,7 @@ Structure background scripts around events the extension depends on. Defining re
 Listeners must be registered synchronously from the start of the page.
 
 ```js
-browser.runtime.onInstalled.addListener(function() {
+browser.runtime.onInstalled.addListener(() => {
   browser.contextMenus.create({
     "id": "sampleContextMenu",
     "title": "Sample Context Menu",
@@ -115,7 +115,7 @@ browser.runtime.onInstalled.addListener(function() {
 });
 
 // This will run when a bookmark is created.
-browser.bookmarks.onCreated.addListener(function() {
+browser.bookmarks.onCreated.addListener(() => {
   // do something
 });
 
@@ -126,7 +126,7 @@ Do not register listeners asynchronously, as they will not be properly triggered
 ```js
 window.onload = () => {
   // WARNING! This event is not persisted, and will not restart the event page.
-  browser.bookmarks.onCreated.addListener(function() {
+  browser.bookmarks.onCreated.addListener(() => {
     // do something
   });
 }
@@ -154,7 +154,7 @@ browser.runtime.onMessage.addListener(function messageListener(message, sender, 
 Use APIs that support event filters to restrict listeners to the cases the extension cares about. If an extension is listening for {{WebExtAPIRef("tabs.onUpdated")}}, use the {{WebExtAPIRef("webNavigation.onCompleted")}} event with filters instead, as the tabs API does not support filters.
 
 ```js
-browser.webNavigation.onCompleted.addListener(function() {
+browser.webNavigation.onCompleted.addListener(() => {
   alert("This is my favorite website!");
 }, {url: [{urlMatches : 'https://www.google.com/'}]});
 ```
@@ -164,7 +164,7 @@ browser.webNavigation.onCompleted.addListener(function() {
 Listeners exist to trigger functionality once an event has fired. To react to an event, structure the desired reaction inside of the listener event.
 
 ```js
-browser.runtime.onMessage.addListener(function(message, callback) {
+browser.runtime.onMessage.addListener((message, callback) => {
   if (message.data === "setAlarm") {
     browser.alarms.create({delayInMinutes: 5})
   } else if (message.data === "runLogic") {
@@ -187,7 +187,7 @@ browser.storage.local.set({variable: variableInformation});
 Message ports cannot prevent an event page from shutting down. If an extension uses message passing, the ports are closed when the event page idles. Listening to the {{WebExtAPIRef("runtime.Port")}} `onDisconnect` lets you discover when open ports are closing, however the listener will be under the same time constraints as {{WebExtAPIRef("runtime.onSuspend")}}.
 
 ```js
-browser.runtime.onMessage.addListener(function(message, callback) {
+browser.runtime.onMessage.addListener((message, callback) => {
   if (message === 'hello') {
     sendResponse({greeting: 'welcome!'})
   } else if (message === 'goodbye') {
@@ -199,7 +199,7 @@ browser.runtime.onMessage.addListener(function(message, callback) {
 Background scripts unload after a few seconds of inactivity. However, if during the suspension of a background script another event wakes the background script, {{WebExtAPIRef("runtime.onSuspendCanceled")}} is called and the background script continues running. If any cleanup is required, listen to {{WebExtAPIRef("runtime.onSuspend")}}.
 
 ```js
-browser.runtime.onSuspend.addListener(function() {
+browser.runtime.onSuspend.addListener(() => {
   console.log("Unloading.");
   chrome.browserAction.setBadgeText({text: ""});
 });
@@ -227,7 +227,7 @@ In your extension's `manifest.json` file, change the persistent property of [`"b
 Listeners must be at the top-level to activate the background script if an event is triggered. Registered listeners may need to be restructured to the synchronous pattern, moved to the top-level, and unnested.
 
 ```
-browser.runtime.onStartup.addListener(function() {
+browser.runtime.onStartup.addListener(() => {
   // run startup function
 })
 ```
@@ -243,7 +243,7 @@ browser.storage.local.set({ variable: variableInformation });
 Use {{WebExtAPIRef("storage.local")}} `get` to retrieve the value of that variable.
 
 ```js
-browser.storage.local.get(['variable'], function(result) {
+browser.storage.local.get(['variable'], (result) => {
   let someVariable = result.variable;
   // Do something with someVariable
 });
@@ -260,7 +260,7 @@ browser.alarms.create({delayInMinutes: 3.0})
 Then add a listener.
 
 ```js
-browser.alarms.onAlarm.addListener(function() {
+browser.alarms.onAlarm.addListener(() => {
   alert("Hello, world!")
 });
 ```

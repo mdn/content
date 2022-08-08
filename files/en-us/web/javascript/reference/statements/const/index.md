@@ -115,7 +115,7 @@ console.log('my favorite number is ' + MY_FAV);
 
 ### const needs to be initialized
 
-```js
+```js example-bad
 // throws an error
 // Uncaught SyntaxError: Missing initializer in const declaration
 

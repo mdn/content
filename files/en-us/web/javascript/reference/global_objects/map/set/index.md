@@ -38,14 +38,14 @@ The `Map` object.
 ### Using set()
 
 ```js
-let myMap = new Map()
+const myMap = new Map();
 
 // Add new elements to the map
-myMap.set('bar', 'foo')
-myMap.set(1, 'foobar')
+myMap.set('bar', 'foo');
+myMap.set(1, 'foobar');
 
 // Update an element in the map
-myMap.set('bar', 'baz')
+myMap.set('bar', 'baz');
 ```
 
 ### Using the set() with chaining

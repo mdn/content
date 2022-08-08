@@ -53,7 +53,7 @@ class PrivateCounter {
   }
 }
 
-let total = new PrivateCounter(7);
+const total = new PrivateCounter(7);
 console.log(total.current);  // expected output: 7
 total.increase();            // #count now = 8
 total.increase(5);           // #count now = 13
@@ -210,7 +210,7 @@ class Scalar {
   }
 }
 
-let scalar1 = new Scalar(1);
+const scalar1 = new Scalar(1);
 scalar1.add(scalar1)
 scalar1.add({}) // throws informative exception
 ```

@@ -86,7 +86,7 @@ And some JavaScript to set up the canvas and load the image:
 var ctx = document.getElementById('game').getContext('2d');
 // load image
 var image = new Image();
-image.onload = function () {
+image.onload = () => {
     // draw the image into the canvas
     ctx.drawImage(image, 0, 0);
 }

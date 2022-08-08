@@ -90,7 +90,7 @@ within the selected directory hierarchies is generated and displayed.
 ### JavaScript content
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
+document.getElementById("filepicker").addEventListener("change", (event) => {
   let output = document.getElementById("listing");
   let files = event.target.files;
 

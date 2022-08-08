@@ -55,7 +55,7 @@ element.addEventListener('transitionstart', () => {
 });
 ```
 
-The same, but using the [`ontransitionstart`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart) property instead of `addEventListener()`:
+The same, but using the `ontransitionstart` property instead of `addEventListener()`:
 
 ```js
 element.ontransitionstart = () => {
@@ -94,15 +94,15 @@ To this, we'll add some JavaScript to indicate where the {{domxref("Element/tran
 const transition = document.querySelector('.transition');
 const message = document.querySelector('.message');
 
-transition.addEventListener('transitionrun', function() {
+transition.addEventListener('transitionrun', () => {
   message.textContent = 'transitionrun fired';
 });
 
-transition.addEventListener('transitionstart', function() {
+transition.addEventListener('transitionstart', () => {
   message.textContent = 'transitionstart fired';
 });
 
-transition.addEventListener('transitionend', function() {
+transition.addEventListener('transitionend', () => {
   message.textContent = 'transitionend fired';
 });
 ```

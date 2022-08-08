@@ -268,8 +268,7 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 - `arg1, arg2, ... argN`
   - : Zero or more names to be used by the function as formal argument names. Each must
     be a string that conforms to the rules for a valid JavaScript identifier or a list
-    of such strings separated with a comma; for example "`x`",
-    "`theValue`", or "`a,b`".
+    of such strings separated with a comma; for example `"x"`, `"theValue"`, or `"a,b"`.
 - `functionBody`
   - : A string containing the JavaScript statements comprising the function definition.
 
@@ -472,7 +471,7 @@ once, while those defined by the `Function` constructor are not. That is,
 the function body string passed to the `Function` constructor must be parsed
 each and every time the constructor is called. Although a function expression creates a
 closure every time, the function body is not reparsed, so function expressions are
-still faster than "`new Function(...)`". Therefore the `Function`
+still faster than `new Function(...)`. Therefore the `Function`
 constructor should generally be avoided whenever possible.
 
 It should be noted, however, that function expressions and function declarations nested
@@ -610,7 +609,7 @@ function padZeros(num, totalLen) {
   let numStr = num.toString();             // Initialize return value as string
   const numZeros = totalLen - numStr.length; // Calculate no. of zeros
   for (let i = 1; i <= numZeros; i++) {
-    numStr = "0" + numStr;
+    numStr = `0${numStr}`;
   }
   return numStr;
 }
