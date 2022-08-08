@@ -68,7 +68,7 @@ A number.
 ```js
 const button = document.getElementById('slide');
 
-button.onclick = function () {
+button.onclick = () => {
   document.getElementById('container').scrollLeft += 20;
 };
 ```

@@ -34,8 +34,8 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-navigator.serviceWorker.onerror = function(errorevent) {
-  console.log(`received error message: ${errorevent.message}`);
+navigator.serviceWorker.onerror = (errorevent) => {
+  console.error(`received error message: ${errorevent.message}`);
 }
 ```
 

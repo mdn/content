@@ -101,11 +101,13 @@ The "index.html" file and the "style.css" files are already complete:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <script type="text/javascript" src="main.js" defer></script>
-    <link href="style.css"rel="stylesheet">
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width">
+    <title>Prime numbers</title>
+    <script src="main.js" defer></script>
+    <link href="style.css" rel="stylesheet">
   </head>
 
   <body>

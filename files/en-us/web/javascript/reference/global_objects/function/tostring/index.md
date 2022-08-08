@@ -109,21 +109,21 @@ Since ES2018, the spec requires the return value of `toString()` to be the exact
       <td>
         <pre class="brush: js">
 Object.getOwnPropertyDescriptor({
-    get a(){}
+  get a() {}
 }, "a").get</pre
         >
       </td>
-      <td><pre class="brush: js">"get a(){}"</pre></td>
+      <td><pre class="brush: js">"get a() {}"</pre></td>
     </tr>
     <tr>
       <td>
         <pre class="brush: js">
 Object.getOwnPropertyDescriptor({
-    set a(x){}
+  set a(x) {}
 }, "a").set</pre
         >
       </td>
-      <td><pre class="brush: js">"set a(x){}"</pre></td>
+      <td><pre class="brush: js">"set a(x) {}"</pre></td>
     </tr>
     <tr>
       <td><pre class="brush: js">Function.prototype.toString</pre></td>
@@ -144,11 +144,11 @@ Object.getOwnPropertyDescriptor({
 
 ### Getting source text of a function
 
-It is possible to get the source text of a function using the `+` operator to concatenate it with a string:
+It is possible to get the source text of a function by coercing it to a string — for example, by wrapping it in a template literal:
 
 ```js
 function foo() { return 'bar' }
-console.log(foo + ''); // "function foo() { return 'bar' }"
+console.log(`${foo}`); // "function foo() { return 'bar' }"
 ```
 
 This source text is _exact_, including any interspersed comments (which won't be stored by the engine's internal representation otherwise).

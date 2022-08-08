@@ -260,7 +260,7 @@ const stream = new ReadableStream({
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
-    button.addEventListener('click', function() {
+    button.addEventListener('click', () => {
       clearInterval(interval);
       readStream();
       controller.close();

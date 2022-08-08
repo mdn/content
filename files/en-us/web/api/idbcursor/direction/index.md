@@ -64,9 +64,9 @@ function backwards() {
   const transaction = db.transaction(['rushAlbumList'], 'readonly');
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor(null,'prev').onsuccess = function(event) {
+  objectStore.openCursor(null,'prev').onsuccess = (event) => {
     const cursor = event.target.result;
-      if(cursor) {
+      if (cursor) {
         const listItem = document.createElement('li');
         listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
         list.appendChild(listItem);

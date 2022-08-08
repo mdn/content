@@ -104,10 +104,10 @@ This example shows how you might create a test based on the properties of array 
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'fish', quantity: 1},
-  {name: 'cherries', quantity: 5}
+  { name: 'apples', quantity: 2 },
+  { name: 'bananas', quantity: 0 },
+  { name: 'fish', quantity: 1 },
+  { name: 'cherries', quantity: 5 }
 ];
 
 // return true inventory stock is low
@@ -125,10 +125,10 @@ The previous example might be written using an arrow function and [object destru
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'fish', quantity: 1},
-  {name: 'cherries', quantity: 5},
+  { name: 'apples', quantity: 2 },
+  { name: 'bananas', quantity: 0 },
+  { name: 'fish', quantity: 1 },
+  { name: 'cherries', quantity: 5 },
 ];
 
 const result = inventory.findLast(({ quantity }) => quantity < 2);
@@ -164,15 +164,15 @@ The following examples show that nonexistent and deleted elements _are_ visited,
 
 ```js
 // Declare array with no elements at indexes 2, 3, and 4
-const array = [0,1,,,,5,6];
+const array = [0, 1, , , , 5, 6];
 
 // Shows all indexes, not just those with assigned values
-array.findLast(function(value, index) {
+array.findLast((value, index) => {
   console.log(`Visited index ${index} with value ${value}`);
 });
 
 // Shows all indexes, including deleted
-array.findLast(function(value, index) {
+array.findLast((value, index) => {
   // Delete element 5 on first iteration
   if (index === 6) {
     console.log(`Deleting array[5] with value ${array[5]}`);

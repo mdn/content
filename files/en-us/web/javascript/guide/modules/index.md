@@ -278,8 +278,10 @@ import { newFunctionName, anotherNewFunctionName } from './modules/module.js';
 export { function1, function2 };
 
 // inside main.js
-import { function1 as newFunctionName,
-         function2 as anotherNewFunctionName } from './modules/module.js';
+import {
+  function1 as newFunctionName,
+  function2 as anotherNewFunctionName,
+} from './modules/module.js';
 ```
 
 Let's look at a real example. In our [renaming](https://github.com/mdn/js-examples/tree/master/module-examples/renaming) directory you'll see the same module system as in the previous example, except that we've added `circle.js` and `triangle.js` modules to draw and report on circles and triangles.
@@ -303,30 +305,38 @@ The browser would throw an error such as "SyntaxError: redeclaration of import n
 Instead we need to rename the imports so that they are unique:
 
 ```js
-import { name as squareName,
-         draw as drawSquare,
-         reportArea as reportSquareArea,
-         reportPerimeter as reportSquarePerimeter } from './modules/square.js';
+import {
+  name as squareName,
+  draw as drawSquare,
+  reportArea as reportSquareArea,
+  reportPerimeter as reportSquarePerimeter,
+} from './modules/square.js';
 
-import { name as circleName,
-         draw as drawCircle,
-         reportArea as reportCircleArea,
-         reportPerimeter as reportCirclePerimeter } from './modules/circle.js';
+import {
+  name as circleName,
+  draw as drawCircle,
+  reportArea as reportCircleArea,
+  reportPerimeter as reportCirclePerimeter,
+} from './modules/circle.js';
 
-import { name as triangleName,
-        draw as drawTriangle,
-        reportArea as reportTriangleArea,
-        reportPerimeter as reportTrianglePerimeter } from './modules/triangle.js';
+import {
+  name as triangleName,
+  draw as drawTriangle,
+  reportArea as reportTriangleArea,
+  reportPerimeter as reportTrianglePerimeter,
+} from './modules/triangle.js';
 ```
 
 Note that you could solve the problem in the module files instead, e.g.
 
 ```js
 // in square.js
-export { name as squareName,
-         draw as drawSquare,
-         reportArea as reportSquareArea,
-         reportPerimeter as reportSquarePerimeter };
+export {
+  name as squareName,
+  draw as drawSquare,
+  reportArea as reportSquareArea,
+  reportPerimeter as reportSquarePerimeter,
+};
 ```
 
 ```js
@@ -347,9 +357,8 @@ import * as Module from './modules/module.js';
 This grabs all the exports available inside `module.js`, and makes them available as members of an object `Module`, effectively giving it its own namespace. So for example:
 
 ```js
-Module.function1()
-Module.function2()
-etc.
+Module.function1();
+Module.function2();
 ```
 
 Again, let's look at a real example. If you go to our [module-objects](https://github.com/mdn/js-examples/tree/master/module-examples/module-objects) directory, you'll see the same example again, but rewritten to take advantage of this new syntax. In the modules, the exports are all in the following simple form:
@@ -532,7 +541,7 @@ Let's take a look at an example. You can find all the files and code described i
 
 Firstly we'll declare our color palette in a separate [`colors.json`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/data/colors.json) file:
 
-```js
+```json
 {
   "yellow": "#F4D03F",
   "green": "#52BE80",

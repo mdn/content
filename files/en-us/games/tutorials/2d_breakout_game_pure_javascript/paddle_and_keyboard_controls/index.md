@@ -26,7 +26,7 @@ So, we need a paddle to hit the ball. Let's define a few variables for that. Add
 ```js
 const paddleHeight = 10;
 const paddleWidth = 75;
-const paddleX = (canvas.width - paddleWidth) / 2;
+let paddleX = (canvas.width - paddleWidth) / 2;
 ```
 
 Here we're defining the height and width of the paddle and its starting point on the `x` axis for use in calculations further on down the code. Let's create a function that will draw the paddle on the screen. Add the following just below your `drawBall()` function:

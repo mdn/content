@@ -60,7 +60,7 @@ self.addEventListener("fetch", (event) => {
 
   // Prevent the default, and handle the request ourselves.
   event.respondWith(
-    (async function () {
+    (async () => {
       // Try to get the response from a cache.
       const cache = await caches.open("dynamic-v1");
       const cachedResponse = await cache.match(event.request);

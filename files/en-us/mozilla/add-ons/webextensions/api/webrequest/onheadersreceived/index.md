@@ -181,19 +181,19 @@ let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition"
 // Add the new header to the original array,
 // and return it.
 function setCookie(e) {
-  let setMyCookie = {
+  const setMyCookie = {
     name: "Set-Cookie",
     value: "my-cookie1=my-cookie-value1"
   };
   e.responseHeaders.push(setMyCookie);
-  return {responseHeaders: e.responseHeaders};
+  return { responseHeaders: e.responseHeaders };
 }
 
 // Listen for onHeaderReceived for the target page.
 // Set "blocking" and "responseHeaders".
 browser.webRequest.onHeadersReceived.addListener(
   setCookie,
-  {urls: [targetPage]},
+  { urls: [targetPage] },
   ["blocking", "responseHeaders"]
 );
 ```
@@ -201,20 +201,20 @@ browser.webRequest.onHeadersReceived.addListener(
 This code does the same thing the previous example, except that the listener is asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with the new headers:
 
 ```js
-let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+const targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with
 // modified set of response headers.
 function setCookieAsync(e) {
-  let asyncSetCookie = new Promise((resolve, reject) => {
-    window.setTimeout(() => {
-      let setMyCookie = {
+  const asyncSetCookie = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const setMyCookie = {
         name: "Set-Cookie",
         value: "my-cookie1=my-cookie-value1"
       };
       e.responseHeaders.push(setMyCookie);
-      resolve({responseHeaders: e.responseHeaders});
+      resolve({ responseHeaders: e.responseHeaders });
     }, 2000);
   });
 
@@ -225,7 +225,7 @@ function setCookieAsync(e) {
 // Set "blocking" and "responseHeaders".
 browser.webRequest.onHeadersReceived.addListener(
   setCookieAsync,
-  {urls: [targetPage]},
+  { urls: [targetPage] },
   ["blocking", "responseHeaders"]
 );
 ```

@@ -66,7 +66,7 @@ function stopVibrate() {
 // Start persistent vibration at given duration and interval
 // Assumes a number value is given
 function startPersistentVibrate(duration, interval) {
-    vibrateInterval = setInterval(function() {
+    vibrateInterval = setInterval(() => {
         startVibrate(duration);
     }, interval);
 }

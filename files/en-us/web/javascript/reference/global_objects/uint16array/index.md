@@ -24,7 +24,7 @@ The **`Uint16Array`** typed array represents an array of 16-bit unsigned integer
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint16Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `2` in the case of an `Uint16Array`.
 - {{jsxref("TypedArray.name", "Uint16Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Uint16Array` type: "`Uint16Array`".
+  - : Returns the string value of the constructor name. In the case of the `Uint16Array` type: `"Uint16Array"`.
 
 ## Static methods
 

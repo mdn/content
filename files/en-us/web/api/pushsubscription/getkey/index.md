@@ -47,7 +47,7 @@ An {{jsxref("ArrayBuffer")}}.
 ## Examples
 
 ```js
-reg.pushManager.getSubscription().then(function(subscription) {
+reg.pushManager.getSubscription().then((subscription) => {
   // Enable any UI which subscribes / unsubscribes from
   // push messages.
 

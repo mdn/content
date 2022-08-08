@@ -128,7 +128,7 @@ const arrayItem = arr?.[42];
 
 It is invalid to try to assign to the result of an optional chaining expression:
 
-```js
+```js example-bad
 const object = {};
 object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
 ```
@@ -217,7 +217,7 @@ function doSomething(onContent, onError) {
 // Using optional chaining with function calls
 function doSomething(onContent, onError) {
   try {
-   // ... do something with the data
+    // ... do something with the data
   } catch (err) {
     onError?.(err.message); // no exception if onError is undefined
   }

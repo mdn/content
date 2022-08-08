@@ -35,10 +35,10 @@ The **`PermissionStatus`** interface of the [Permissions API](Permissions_API) p
 ## Example
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
-  console.log('geolocation permission status is ', permissionStatus.state);
-  permissionStatus.onchange = function() {
-    console.log('geolocation permission status has changed to ', this.state);
+navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus) => {
+  console.log(`geolocation permission status is ${permissionStatus.state}`);
+  permissionStatus.onchange = () => {
+    console.log(`geolocation permission status has changed to ${permissionStatus.state}`);
   };
 });
 ```

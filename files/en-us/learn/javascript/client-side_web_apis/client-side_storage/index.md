@@ -343,11 +343,11 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
 So with this database schema set up, when we start adding records to the database, each one will be represented as an object along these lines:
 
-```js
+```json
 {
-  title: "Buy milk",
-  body: "Need both cows milk and soy.",
-  id: 8
+  "title": "Buy milk",
+  "body": "Need both cows milk and soy.",
+  "id": 8
 }
 ```
 

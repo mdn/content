@@ -77,9 +77,9 @@ function displayData() {
   const transaction = db.transaction(['fThings'], 'readonly');
   const objectStore = transaction.objectStore('fThings');
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
-      if(cursor) {
+      if (cursor) {
         const listItem = document.createElement('li');
         listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
         list.appendChild(listItem);

@@ -154,7 +154,7 @@ You can end a destructuring pattern with a rest property `...rest`. This pattern
 const { a, ...others } = { a: 1, b: 2, c: 3 };
 console.log(others); // { b: 2, c: 3 }
 
-const [a, ...others2] = [1, 2, 3];
+const [first, ...others2] = [1, 2, 3];
 console.log(others2); // [2, 3]
 ```
 
@@ -492,8 +492,8 @@ const metadata = {
   translations: [
     {
       locale: 'de',
-      localization_tags: [],
-      last_edit: '2014-04-14T08:43:37',
+      localizationTags: [],
+      lastEdit: '2014-04-14T08:43:37',
       url: '/de/docs/Tools/Scratchpad',
       title: 'JavaScript-Umgebung',
     },
@@ -501,11 +501,11 @@ const metadata = {
   url: '/en-US/docs/Tools/Scratchpad',
 };
 
-let {
+const {
   title: englishTitle, // rename
   translations: [
     {
-       title: localeTitle, // rename
+      title: localeTitle, // rename
     },
   ],
 } = metadata;
@@ -539,7 +539,7 @@ const people = [
 ];
 
 for (const { name: n, family: { father: f } } of people) {
-  console.log('Name: ' + n + ', Father: ' + f);
+  console.log(`Name: ${n}, Father: ${f}`);
 }
 
 // "Name: Mike Smith, Father: Harry Smith"

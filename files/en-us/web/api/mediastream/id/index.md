@@ -10,7 +10,7 @@ tags:
   - Web
 browser-compat: api.MediaStream.id
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`MediaStream.id`** read-only property is a
 string containing 36 characters denoting a unique identifier (GUID)

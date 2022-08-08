@@ -26,13 +26,13 @@ An integer, or `null` if the line is not known.
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print the value of `lineNumber` to the console.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver((reports, observer) => {
+  const firstReport = reports[0];
   console.log(firstReport.type); // intervention
   console.log(firstReport.body.sourceFile); // the source file
   console.log(firstReport.body.lineNumber); // the line in that file

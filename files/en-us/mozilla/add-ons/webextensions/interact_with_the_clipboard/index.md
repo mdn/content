@@ -58,9 +58,9 @@ This function takes a string and writes it to the clipboard:
 
 ```js
 function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(function() {
+  navigator.clipboard.writeText(newClip).then(() => {
     /* clipboard successfully set */
-  }, function() {
+  }, () => {
     /* clipboard write failed */
   });
 }

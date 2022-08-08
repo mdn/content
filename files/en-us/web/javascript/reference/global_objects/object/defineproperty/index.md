@@ -177,10 +177,6 @@ Object.defineProperty(o, 'a', {
 // with defineProperty with an accessor property descriptor
 const bValue = 38;
 Object.defineProperty(o, 'b', {
-  // Using shorthand method names (ES2015 feature).
-  // This is equivalent to:
-  // get: function() { return bValue; },
-  // set: function(newValue) { bValue = newValue; },
   get() { return bValue; },
   set(newValue) { bValue = newValue; },
   enumerable: true,
@@ -403,7 +399,7 @@ function Archiver() {
     }
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = () => archive;
 }
 
 const arc = new Archiver();
@@ -417,17 +413,16 @@ In this example, a getter always returns the same value.
 
 ```js
 const pattern = {
-    get() {
-        return 'I always return this string, ' +
-               'whatever you have assigned';
-    },
-    set() {
-        this.myname = 'this is my name string';
-    }
+  get() {
+    return 'I always return this string, whatever you have assigned';
+  },
+  set() {
+    this.myname = 'this is my name string';
+  },
 };
 
 function TestDefineSetAndGet() {
-    Object.defineProperty(this, 'myproperty', pattern);
+  Object.defineProperty(this, 'myproperty', pattern);
 }
 
 const instance = new TestDefineSetAndGet();
@@ -475,10 +470,10 @@ function MyClass() {
 
 Object.defineProperty(MyClass.prototype, "x", {
   get() {
-    return this.stored_x;
+    return this.storedX;
   },
   set(x) {
-    this.stored_x = x;
+    this.storedX = x;
   }
 });
 

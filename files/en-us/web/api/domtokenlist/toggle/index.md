@@ -55,7 +55,7 @@ Now the JavaScript:
 const span = document.querySelector("span");
 const classes = span.classList;
 
-span.addEventListener('click', function() {
+span.addEventListener('click', () => {
   const result = classes.toggle("c");
 
   if (result) {

@@ -125,11 +125,11 @@ Since humans tend to think in degrees, and some functions (such as CSS transform
 ```js
 function degToRad(degrees) {
   return degrees * (Math.PI / 180);
-};
+}
 
 function radToDeg(rad) {
   return rad / (Math.PI / 180);
-};
+}
 ```
 
 ### Calculating the height of an equilateral triangle
@@ -141,7 +141,7 @@ If we want to calculate the height of an equilateral triangle, and we know its s
 In JavaScript, we can do this with the following:
 
 ```js
-50 * Math.tan(degToRad(60)).
+50 * Math.tan(degToRad(60))
 ```
 
 We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.

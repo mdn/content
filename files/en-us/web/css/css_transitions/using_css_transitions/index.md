@@ -191,7 +191,7 @@ This CSS establishes the look of the menu, with the background and text colors b
 > - adding the element to the DOM using `.appendChild()`
 > - removing an element's `display: none;` property.
 >
-> This is treated as if the initial state had never occurred and the element was always in its final state. The easy way to overcome this limitation is to apply a `window.setTimeout()` of a handful of milliseconds before changing the CSS property you intend to transition to.
+> This is treated as if the initial state had never occurred and the element was always in its final state. The easy way to overcome this limitation is to apply a `setTimeout()` of a handful of milliseconds before changing the CSS property you intend to transition to.
 
 ### Using transitions to make JavaScript functionality smooth
 

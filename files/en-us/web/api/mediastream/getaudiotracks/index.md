@@ -17,7 +17,7 @@ tags:
   - track
 browser-compat: api.MediaStream.getAudioTracks
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`getAudioTracks()`** method of the
 {{domxref("MediaStream")}} interface returns a sequence that represents all the

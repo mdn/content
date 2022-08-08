@@ -19,7 +19,7 @@ First, get a copy of [AudioContext-MonkeyPatch](https://github.com/cwilso/AudioC
 Once you include it in your page, you can write in "modern Web Audio API" style, and do things such as:
 
 ```js
-var audioContext = new AudioContext();
+const audioContext = new AudioContext();
 ```
 
 everywhere, including Chrome/ium, Opera, Safari, and ---of course!--- Firefox.
@@ -29,13 +29,13 @@ Also, if new methods such as `start` are not detected in some nodes, the library
 If you're porting moderately "old" code (say, a year old) it's possible that it uses some methods that `AudioContext-MonkeyPatch` doesn't alias, because it helps you to write code in the _new_ style. For example, the way to create instances of `GainNode` used to be
 
 ```js
-var gain = audioContext.createGainNode();
+const gain = audioContext.createGainNode();
 ```
 
 but nowadays it is just
 
 ```js
-var gain = audioContext.createGain();
+const gain = audioContext.createGain();
 ```
 
 Since the old method names are not present in Firefox, existing code may crash with something like `createGainNode is not a function`, and you now know why.
@@ -55,7 +55,7 @@ For example, up until a couple of days ago [PannerNode](https://dvcs.w3.org/hg/a
 Today the support is already present in [Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/), but not quite yet in [Aurora](https://www.mozilla.org/en-US/firefox/channel/desktop/). In the meantime, you can explicitly specify `'equalpower'` instead:
 
 ```js
-var panner = new audioContext.PannerNode();
+const panner = new audioContext.PannerNode();
 panner.panningModel = 'equalpower';
 ```
 

@@ -122,12 +122,13 @@ Cache-Control: max-age=604800
 The cache that stored the example response calculates the time elapsed since the response was generated and uses the result as the response's _age_.
 
 For the example response, the meaning of `max-age` is the following:
- - If the age of the response is _less_ than one week, the response is _fresh_.
- - If the age of the response is _more_ than one week, the response is _stale_.
+
+- If the age of the response is _less_ than one week, the response is _fresh_.
+- If the age of the response is _more_ than one week, the response is _stale_.
 
 As long as the stored response remains fresh, it will be used to fulfill client requests.
 
-When a response is stored in a shared cache, it is necessary to inform the client of the reponse's age. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
+When a response is stored in a shared cache, it is necessary to inform the client of the response's age. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
 
 ```http
 HTTP/1.1 200 OK
@@ -187,7 +188,7 @@ Validation is done by using a **conditional request** that includes an `If-Modif
 
 ### If-Modified-Since
 
-The following response was generated at 22:22 and has a `max-age` of 1 hour, so you know that it is fresh until 23:22.
+The following response was generated at 22:22:22 and has a `max-age` of 1 hour, so you know that it is fresh until 23:22:22.
 
 ```http
 HTTP/1.1 200 OK
@@ -201,7 +202,7 @@ Cache-Control: max-age=3600
 …
 ```
 
-At 23:22, the response becomes stale and the cache cannot be reused. So the request below shows a client sending a request with an `If-Modified-Since` request header, to ask the server if there have been any changes made since the specified time.
+At 23:22:22, the response becomes stale and the cache cannot be reused. So the request below shows a client sending a request with an `If-Modified-Since` request header, to ask the server if there have been any changes made since the specified time.
 
 ```http
 GET /index.html HTTP/1.1
@@ -217,7 +218,7 @@ Since this response only indicates "no change", there is no response body — th
 ```http
 HTTP/1.1 304 Not Modified
 Content-Type: text/html
-Date: Tue, 22 Feb 2022 22:23:22 GMT
+Date: Tue, 22 Feb 2022 23:22:22 GMT
 Last-Modified: Tue, 22 Feb 2022 22:00:00 GMT
 Cache-Control: max-age=3600
 ```
@@ -320,7 +321,7 @@ The following sections look at the circumstances in more detail.
 
 It would be problematic if a response with personalized content is unexpectedly visible to other users of a cache.
 
-In such a case, using the `private` directive will cause the personalized reponse to only be stored with the specific client and not be leaked to any other user of the cache.
+In such a case, using the `private` directive will cause the personalized response to only be stored with the specific client and not be leaked to any other user of the cache.
 
 ```http
 Cache-Control: private

@@ -81,7 +81,7 @@ let orderButton = document.getElementById("order");
 let itemList = document.getElementById("foods");
 let outputBox = document.getElementById("output");
 
-orderButton.addEventListener("click", function() {
+orderButton.addEventListener("click", () => {
   let collection = itemList.selectedOptions;
   let output = "";
 

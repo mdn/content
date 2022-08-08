@@ -54,7 +54,7 @@ browser.contextMenus.create({
   title: "Show page action"
 })
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "show") {
     browser.pageAction.show(tab.id)
   }

@@ -26,7 +26,7 @@ Sends a single request to other listeners within the extension. Similar to {{Web
 chrome.extension.sendRequest(
   extensionId,             // optional string
   request,                 // any
-  function(response) { } // optional function
+  (response) => {/* … */}  // optional function
 )
 ```
 

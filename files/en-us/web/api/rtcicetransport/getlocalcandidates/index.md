@@ -59,7 +59,7 @@ the list.
 ```js
 const localCandidates = pc.getSenders()[0].transport.transport.getLocalCandidates();
 
-localCandidates.forEach(function(candidate, index) {
+localCandidates.forEach((candidate, index) => {
   console.log(`Candidate ${index}: ${candidate.candidate}`);
 });
 ```

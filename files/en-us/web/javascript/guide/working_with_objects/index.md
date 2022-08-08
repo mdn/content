@@ -184,13 +184,13 @@ The syntax for an object using an object initializer is:
 
 ```js
 const obj = {
-  property_1:   value_1,   // property name may be an identifier
-  2:            value_2,   // or a number
-  'property n': value_n    // or a string
+  property1: value1,   // property name may be an identifier
+  2: value2,   // or a number
+  'property n': value3    // or a string
 };
 ```
 
-where `obj` is the name of the new object, each property name before colons is an identifier (either a name, a number, or a string literal), and each `value_i` is an expression whose value is assigned to the property name. The `obj` and assignment are optional; if you do not need to refer to this object elsewhere, you do not need to assign it to a variable. (Note that you may need to wrap the object literal in parentheses if the object appears where a statement is expected, so as not to have the literal be confused with a block statement.)
+where `obj` is the name of the new object, each property name before colons is an identifier (either a name, a number, or a string literal), and each `valueN` is an expression whose value is assigned to the property name. The `obj` and assignment are optional; if you do not need to refer to this object elsewhere, you do not need to assign it to a variable. (Note that you may need to wrap the object literal in parentheses if the object appears where a statement is expected, so as not to have the literal be confused with a block statement.)
 
 Object initializers are expressions, and each object initializer results in a new object being created whenever the statement in which it appears is executed. Identical object initializers create distinct objects that will not compare to each other as equal. Objects are created as if a call to `new Object()` were made; that is, objects made from object literal expressions are instances of `Object`.
 
@@ -483,8 +483,8 @@ Getters and setters can also be added to an object at any time after creation us
 const myObj = { a: 0 };
 
 Object.defineProperties(myObj, {
-     'b': { get() { return this.a + 1; } },
-     'c': { set(x) { this.a = x / 2; } }
+  b: { get() { return this.a + 1; } },
+  c: { set(x) { this.a = x / 2; } },
 });
 
 myObj.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property

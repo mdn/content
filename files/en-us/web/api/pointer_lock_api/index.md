@@ -152,7 +152,7 @@ document.exitPointerLock = document.exitPointerLock ||
 Now we set up an event listener to run the `requestPointerLock()` method on the canvas when it is clicked, which initiates pointer lock.
 
 ```js
-canvas.onclick = function() {
+canvas.onclick = () => {
   canvas.requestPointerLock();
 }
 ```
@@ -206,7 +206,7 @@ function updatePosition(e) {
   tracker.textContent = `X position: ${x}, Y position: ${y}`;
 
   if (!animation) {
-    animation = requestAnimationFrame(function() {
+    animation = requestAnimationFrame(() => {
       animation = null;
       canvasDraw();
     });

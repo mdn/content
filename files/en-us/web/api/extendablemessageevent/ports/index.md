@@ -33,7 +33,7 @@ object of `onmessage` will be a `ExtendableMessageEvent`.
 ```js
 let port;
 
-self.addEventListener('push', function(e) {
+self.addEventListener('push', (e) => {
   const obj = e.data.json();
 
   if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
@@ -43,7 +43,7 @@ self.addEventListener('push', function(e) {
   }
 });
 
-self.onmessage = function(e) {
+self.onmessage = (e) => {
   port = e.ports[0];
 }
 ```

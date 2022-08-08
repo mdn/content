@@ -74,7 +74,7 @@ To convert a number to its string literal in a particular radix, use [`thatNumbe
 
 > **Warning:** `parseInt` converts a
 > {{jsxref("BigInt")}} to a {{jsxref("Number")}} and loses precision in the process.
-> This is because trailing non-numeric values, including "`n`", are
+> This is because trailing non-numeric characters, including the `n` suffix, are
 > discarded.
 
 ### Octal interpretations with no radix
@@ -205,21 +205,6 @@ parseInt('900719925474099267n')
 ```js
 parseInt('123_456')
 // 123
-```
-
-The radix is coerced to a `Number`:
-
-```js
-const obj = {
-  valueOf() {return 8}
-};
-parseInt('11', obj); // 9
-
-obj.valueOf = function() {return 1};
-parseInt('11', obj); // NaN
-
-obj.valueOf = function() {return Infinity};
-parseInt('11', obj); // 11
 ```
 
 ### Using parseInt() on non-strings

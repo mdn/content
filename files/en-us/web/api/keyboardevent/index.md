@@ -203,7 +203,7 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 ## Events
 
-The following events are based on the `KeyboardEvent` type. They can be delivered to any object which implements {{domxref("GlobalEventHandlers")}}, including {{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("Window")}}. In the list below, each event links to the documentation for the `Element` handler for the event, which applies generally to all of the recipients.
+The following events are based on the `KeyboardEvent` type. In the list below, each event links to the documentation for the `Element` handler for the event, which applies generally to all of the recipients, including {{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("Window")}}.
 
 - {{domxref("Element.keydown_event", "keydown")}}
   - : A key has been pressed.

@@ -17,7 +17,7 @@ Nearly all objects in JavaScript are instances of {{jsxref("Object")}}; a typica
 
 Changes to the `Object` prototype object are seen by **all** objects through prototype chaining, unless the properties and methods subject to those changes are overridden further along the prototype chain. This provides a very powerful although potentially dangerous mechanism to override or extend object behavior.
 
-The `Object` constructor creates an object wrapper for the given value.
+The `Object` constructor's behavior depends on the input's type.
 
 - If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it will create and return an empty object.
 - If the value is an object already, it will return the value.
@@ -34,7 +34,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 ## Constructor
 
 - {{jsxref("Object/Object", "Object()")}}
-  - : Creates a new `Object` object. It is a wrapper for the given value.
+  - : Turns the input into an object.
 
 ## Static methods
 
@@ -113,41 +113,33 @@ There isn't any method in an Object itself to delete its own properties (such as
 
 ## Examples
 
-### Using `Object` given `undefined` and `null` types
+### Constructing empty objects
 
 The following examples store an empty `Object` object in `o`:
 
 ```js
-let o = new Object()
+const o1 = new Object();
+const o2 = new Object(undefined);
+const o3 = new Object(null);
 ```
 
-```js
-let o = new Object(undefined)
-```
-
-```js
-let o = new Object(null)
-```
-
-### Using `Object` to create `Boolean` objects
+### Using Object to create Boolean objects
 
 The following examples store {{jsxref("Boolean")}} objects in `o`:
 
 ```js
-// equivalent to o = new Boolean(true)
-let o = new Object(true)
+// equivalent to const o = new Boolean(true)
+const o = new Object(true);
 ```
 
 ```js
-// equivalent to o = new Boolean(false)
-let o = new Object(Boolean())
+// equivalent to const o = new Boolean(false)
+const o = new Object(Boolean());
 ```
 
 ### Object prototypes
 
 When altering the behavior of existing `Object.prototype` methods, consider injecting code by wrapping your extension before or after the existing logic. For example, this (untested) code will pre-conditionally execute custom logic before the built-in logic or someone else's extension is executed.
-
-When a function is called, the arguments to the call are held in the array-like "variable" [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments). For example, in the call `myFn(a, b, c)`, the arguments within `myFn`'s body will contain 3 array-like elements corresponding to `(a, b, c)`.
 
 When modifying prototypes with hooks, pass `this` and the arguments (the call state) to the current behavior by calling `apply()` on the function. This pattern can be used for any prototype, such as `Node.prototype`, `Function.prototype`, etc.
 
@@ -156,7 +148,7 @@ const current = Object.prototype.valueOf;
 
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
-Object.prototype.valueOf = function() {
+Object.prototype.valueOf = function () {
   if (Object.hasOwn(this, '-prop-value')) {
     return this['-prop-value'];
   } else {
@@ -169,75 +161,9 @@ Object.prototype.valueOf = function() {
 }
 ```
 
-Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a "base class" object of certain functions that act as objects. For example:
+> **Warning:** Modifying the `prototype` property of any built-in constructor is considered a bad practice and risks forward compatibility.
 
-```js
-const Person = function(name) {
-  this.name = name;
-  this.canTalk = true;
-};
-
-Person.prototype.greet = function() {
-  if (this.canTalk) {
-    console.log('Hi, I am ' + this.name);
-  }
-};
-
-const Employee = function(name, title) {
-  Person.call(this, name);
-  this.title = title;
-};
-
-Employee.prototype = Object.create(Person.prototype);
-Employee.prototype.constructor = Employee; //If you don't set Object.prototype.constructor to Employee,
-                                           //it will take prototype.constructor of Person (parent).
-                                           //To avoid that, we set the prototype.constructor to Employee (child).
-
-Employee.prototype.greet = function() {
-  if (this.canTalk) {
-    console.log('Hi, I am ' + this.name + ', the ' + this.title);
-  }
-};
-
-const Customer = function(name) {
-  Person.call(this, name);
-};
-
-Customer.prototype = Object.create(Person.prototype);
-Customer.prototype.constructor = Customer; //If you don't set Object.prototype.constructor to Customer,
-                                           //it will take prototype.constructor of Person (parent).
-                                           //To avoid that, we set the prototype.constructor to Customer (child).
-
-const Mime = function(name) {
-  Person.call(this, name);
-  this.canTalk = false;
-};
-
-Mime.prototype = Object.create(Person.prototype);
-Mime.prototype.constructor = Mime; //If you don't set Object.prototype.constructor to Mime,
-                                   //it will take prototype.constructor of Person (parent).
-                                   //To avoid that, we set the prototype.constructor to Mime (child).
-
-const bob = new Employee('Bob', 'Builder');
-const joe = new Customer('Joe');
-const rg = new Employee('Red Green', 'Handyman');
-const mike = new Customer('Mike');
-const mime = new Mime('Mime');
-
-bob.greet();
-// Hi, I am Bob, the Builder
-
-joe.greet();
-// Hi, I am Joe
-
-rg.greet();
-// Hi, I am Red Green, the Handyman
-
-mike.greet();
-// Hi, I am Mike
-
-mime.greet();
-```
+You can read more about prototypes in [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 ## Specifications
 

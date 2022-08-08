@@ -51,7 +51,9 @@ to be defined on a pre-existing object.
 
 ```js
 const o = {};
-o.__defineGetter__('gimmeFive', function() { return 5; });
+o.__defineGetter__('gimmeFive', function () {
+  return 5;
+});
 console.log(o.gimmeFive); // 5
 ```
 
@@ -67,9 +69,9 @@ console.log(o.gimmeFive); // 5
 // Using Object.defineProperty
 const o = {};
 Object.defineProperty(o, 'gimmeFive', {
-  get: function() {
+  get() {
     return 5;
-  }
+  },
 });
 console.log(o.gimmeFive); // 5
 ```

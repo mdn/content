@@ -235,11 +235,11 @@ considerable confusion.
 Therefore, this appears to work in a way:
 
 ```js example-bad
-const wrongMap = new Map()
-wrongMap['bla'] = 'blaa'
-wrongMap['bla2'] = 'blaaa2'
+const wrongMap = new Map();
+wrongMap['bla'] = 'blaa';
+wrongMap['bla2'] = 'blaaa2';
 
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
 But that way of setting a property does not interact with the Map data
@@ -325,28 +325,27 @@ console.log(contacts.size) // 1
 ### Using the Map object
 
 ```js
-const myMap = new Map()
+const myMap = new Map();
 
-const keyString = 'a string'
-const keyObj    = {}
-const keyFunc   = function() {}
+const keyString = 'a string';
+const keyObj = {};
+const keyFunc = function() {};
 
 // setting the values
-myMap.set(keyString, "value associated with 'a string'")
-myMap.set(keyObj, 'value associated with keyObj')
-myMap.set(keyFunc, 'value associated with keyFunc')
+myMap.set(keyString, "value associated with 'a string'");
+myMap.set(keyObj, 'value associated with keyObj');
+myMap.set(keyFunc, 'value associated with keyFunc');
 
-myMap.size              // 3
+console.log(myMap.size); // 3
 
 // getting the values
-myMap.get(keyString)    // "value associated with 'a string'"
-myMap.get(keyObj)       // "value associated with keyObj"
-myMap.get(keyFunc)      // "value associated with keyFunc"
+console.log(myMap.get(keyString)); // "value associated with 'a string'"
+console.log(myMap.get(keyObj)); // "value associated with keyObj"
+console.log(myMap.get(keyFunc)); // "value associated with keyFunc"
 
-myMap.get('a string')    // "value associated with 'a string'"
-                         // because keyString === 'a string'
-myMap.get({})            // undefined, because keyObj !== {}
-myMap.get(function() {}) // undefined, because keyFunc !== function () {}
+console.log(myMap.get('a string')); // "value associated with 'a string'", because keyString === 'a string'
+console.log(myMap.get({})); // undefined, because keyObj !== {}
+console.log(myMap.get(function() {})); // undefined, because keyFunc !== function () {}
 ```
 
 ### Using NaN as Map keys
@@ -356,14 +355,14 @@ not equal to itself (`NaN !== NaN` is true), the following example works because
 `NaN`s are indistinguishable from each other:
 
 ```js
-const myMap = new Map()
-myMap.set(NaN, 'not a number')
+const myMap = new Map();
+myMap.set(NaN, 'not a number');
 
-myMap.get(NaN)
+myMap.get(NaN);
 // "not a number"
 
-const otherNaN = Number('foo')
-myMap.get(otherNaN)
+const otherNaN = Number('foo');
+myMap.get(otherNaN);
 // "not a number"
 ```
 
@@ -372,30 +371,30 @@ myMap.get(otherNaN)
 Maps can be iterated using a `for..of` loop:
 
 ```js
-const myMap = new Map()
-myMap.set(0, 'zero')
-myMap.set(1, 'one')
+const myMap = new Map();
+myMap.set(0, 'zero');
+myMap.set(1, 'one');
 
 for (const [key, value] of myMap) {
-  console.log(key + ' = ' + value)
+  console.log(`${key } = ${value}`);
 }
 // 0 = zero
 // 1 = one
 
 for (const key of myMap.keys()) {
-  console.log(key)
+  console.log(key);
 }
 // 0
 // 1
 
 for (const value of myMap.values()) {
-  console.log(value)
+  console.log(value);
 }
 // zero
 // one
 
 for (const [key, value] of myMap.entries()) {
-  console.log(key + ' = ' + value)
+  console.log(`${key} = ${value}`);
 }
 // 0 = zero
 // 1 = one
@@ -407,9 +406,9 @@ Maps can be iterated using the
 {{jsxref("Map.prototype.forEach", "forEach()")}} method:
 
 ```js
-myMap.forEach(function(value, key) {
-  console.log(key + ' = ' + value)
-})
+myMap.forEach((value, key) => {
+  console.log(`${key} = ${value}`);
+});
 // 0 = zero
 // 1 = one
 ```
@@ -417,21 +416,21 @@ myMap.forEach(function(value, key) {
 ### Relation with Array objects
 
 ```js
-const kvArray = [['key1', 'value1'], ['key2', 'value2']]
+const kvArray = [['key1', 'value1'], ['key2', 'value2']];
 
 // Use the regular Map constructor to transform a 2D key-value Array into a map
-const myMap = new Map(kvArray)
+const myMap = new Map(kvArray);
 
-myMap.get('key1') // returns "value1"
+console.log(myMap.get('key1')); // "value1"
 
 // Use Array.from() to transform a map into a 2D key-value Array
-console.log(Array.from(myMap)) // Will show you exactly the same Array as kvArray
+console.log(Array.from(myMap)); // Will show you exactly the same Array as kvArray
 
 // A succinct way to do the same, using the spread syntax
-console.log([...myMap])
+console.log([...myMap]);
 
 // Or use the keys() or values() iterators, and convert them to an array
-console.log(Array.from(myMap.keys())) // ["key1", "key2"]
+console.log(Array.from(myMap.keys())); // ["key1", "key2"]
 ```
 
 ### Cloning and merging Maps
@@ -440,13 +439,13 @@ Just like `Array`s, `Map`s can be cloned:
 
 ```js
 const original = new Map([
-  [1, 'one']
-])
+  [1, 'one'],
+]);
 
-const clone = new Map(original)
+const clone = new Map(original);
 
-console.log(clone.get(1))       // one
-console.log(original === clone) // false (useful for shallow comparison)
+console.log(clone.get(1)); // one
+console.log(original === clone); // false (useful for shallow comparison)
 ```
 
 > **Note:** Keep in mind that _the data itself_ is not cloned.
@@ -458,20 +457,20 @@ const first = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
-])
+]);
 
 const second = new Map([
   [1, 'uno'],
-  [2, 'dos']
-])
+  [2, 'dos'],
+]);
 
 // Merge two maps. The last repeated key wins.
 // Spread operator essentially converts a Map to an Array
-const merged = new Map([...first, ...second])
+const merged = new Map([...first, ...second]);
 
-console.log(merged.get(1)) // uno
-console.log(merged.get(2)) // dos
-console.log(merged.get(3)) // three
+console.log(merged.get(1)); // uno
+console.log(merged.get(2)); // dos
+console.log(merged.get(3)); // three
 ```
 
 Maps can be merged with Arrays, too:
@@ -481,19 +480,19 @@ const first = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
-])
+]);
 
 const second = new Map([
   [1, 'uno'],
-  [2, 'dos']
-])
+  [2, 'dos'],
+]);
 
 // Merge maps with an array. The last repeated key wins.
-const merged = new Map([...first, ...second, [1, 'eins']])
+const merged = new Map([...first, ...second, [1, 'eins']]);
 
-console.log(merged.get(1)) // eins
-console.log(merged.get(2)) // dos
-console.log(merged.get(3)) // three
+console.log(merged.get(1)); // eins
+console.log(merged.get(2)); // dos
+console.log(merged.get(3)); // three
 ```
 
 ## Specifications

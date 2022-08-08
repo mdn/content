@@ -73,13 +73,13 @@ const options = {
 };
 
 navigator.credentials.create({  publicKey: options })
-  .then(function (pubKeyCredential) {
+  .then((pubKeyCredential) => {
     const response = pubKeyCredential.response;
     const clientExtResults = pubKeyCredential.getClientExtensionResults();
     // Send response and client extensions to the server so that it can validate
     // and create credentials
 
-}).catch(function (err) {
+}).catch((err) => {
   // Deal with any error
 });
 ```

@@ -216,7 +216,7 @@ Let's look at a quick example — see [aria-no-live.html](https://github.com/mdn
 Our JavaScript loads a JSON file via [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) containing a series of random quotes and their authors. Once that is done, we start up a [`setInterval()`](/en-US/docs/Web/API/setInterval) loop that loads a new random quote into the quote box every 10 seconds:
 
 ```js
-let intervalID = window.setInterval(showQuote, 10000);
+const intervalID = setInterval(showQuote, 10000);
 ```
 
 This works OK, but it is not good for accessibility — the content update is not detected by screenreaders, so their users would not know what is going on. This is a fairly trivial example, but just imagine if you were creating a complex UI with lots of constantly updating content, like a chat room, or a strategy game UI, or a live updating shopping cart display — it would be impossible to use the app in any effective way without some kind of way of alerting the user to the updates.
@@ -321,8 +321,8 @@ which is hidden from view using absolute positioning. When this is checked/unche
 
 ```js
 function toggleMusician(bool) {
-  let instruItem = formItems[formItems.length-1];
-  if(bool) {
+  const instruItem = formItems[formItems.length-1];
+  if (bool) {
     instruItem.input.disabled = false;
     instruItem.label.style.color = '#000';
     instruItem.input.setAttribute('aria-disabled', 'false');

@@ -153,7 +153,7 @@ console.log(\u4f60\u597d); // Hello
 
 Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifiers names that are not [reserved words](#reserved_words).
 
-```js
+```js example-bad
 function import() {} // Illegal: import is a reserved word.
 ```
 
@@ -492,12 +492,12 @@ See also {{jsxref("String.fromCodePoint()")}} and {{jsxref("String.prototype.cod
 See also {{jsxref("RegExp")}} for more information.
 
 ```js
-/ab+c/g
+/ab+c/g;
 
 // An "empty" regular expression literal
 // The empty non-capturing group is necessary
 // to avoid ambiguity with single-line comments.
-/(?:)/
+/(?:)/;
 ```
 
 ### Template literals

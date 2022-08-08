@@ -12,8 +12,8 @@ Alright, so you've got the microphone permissions set up. The next step is to ma
 1. Let's use the `open` event to create a listener that displays the peer's ID when it is open. Add the following code to the bottom of `script.js`:
 
     ```js
-    peer.on('open', function () {
-        window.caststatus.textContent = `Your device ID is: ${peer.id}`;
+    peer.on('open', () => {
+      window.caststatus.textContent = `Your device ID is: ${peer.id}`;
     });
     ```
 
@@ -26,26 +26,20 @@ Alright, so you've got the microphone permissions set up. The next step is to ma
 3. While you're here, you may as well create some functions to display and hide various content, which you'll use later. There are two functions you should create, `showCallContent()` and `showConnectedContent()`. These functions will be responsible for showing the call button and showing the hang up button and audio elements when appropriate.
 
     ```js
-    const audioContainer = document.querySelector('.call-container');/**
-     * Displays the call button and peer ID
-     * @returns{void}
-     */
-
+    const audioContainer = document.querySelector('.call-container');
+    
+    // Displays the call button and peer ID
     function showCallContent() {
-        window.caststatus.textContent = `Your device ID is: ${peer.id}`;
-        callBtn.hidden = false;
-        audioContainer.hidden = true;
+      window.caststatus.textContent = `Your device ID is: ${peer.id}`;
+      callBtn.hidden = false;
+      audioContainer.hidden = true;
     }
 
-    /**
-     * Displays the audio controls and correct copy
-     * @returns{void}
-     */
-
+    // Displays the audio controls and correct copy
     function showConnectedContent() {
-        window.caststatus.textContent = `You're connected`;
-        callBtn.hidden = true;
-        audioContainer.hidden = false;
+      window.caststatus.textContent = "You're connected";
+      callBtn.hidden = true;
+      audioContainer.hidden = false;
     }
     ```
 

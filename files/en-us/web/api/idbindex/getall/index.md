@@ -65,7 +65,7 @@ not between `0` and `2^32> - 1` included.
 ```js
 const myIndex = objectStore.index('index');
 const getAllRequest = myIndex.getAll();
-getAllRequest.onsuccess = function() {
+getAllRequest.onsuccess = () => {
   console.log(getAllRequest.result);
 }
 ```

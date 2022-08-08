@@ -52,8 +52,9 @@ When working with an {{domxref("AudioContext")}}, if you create the audio contex
 
 ```js
 const button = document.querySelector('button');
-button.addEventListener('click', function() {
-    const audioCtx = new AudioContext();
+button.addEventListener('click', () => {
+  const audioCtx = new AudioContext();
+  // Do something with the audio context
 }, false);
 ```
 
@@ -63,11 +64,11 @@ If however, you create the context outside of a user gesture, its state will be 
 const audioCtx = new AudioContext();
 const button = document.querySelector('button');
 
-button.addEventListener('click', function() {
-      // check if context is in suspended state (autoplay policy)
-    if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-    }
+button.addEventListener('click', () => {
+  // check if context is in suspended state (autoplay policy)
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
 }, false);
 ```
 

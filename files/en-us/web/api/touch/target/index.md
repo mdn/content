@@ -29,7 +29,7 @@ In following simple code snippet, we assume the user initiates one or more touch
 // Register a touchmove listener for the 'source' element
 const src = document.getElementById("source");
 
-src.addEventListener('touchstart', function(e) {
+src.addEventListener('touchstart', (e) => {
   // Iterate through the touch points that were activated
   // for this element.
   for (let i = 0; i < e.targetTouches.length; i++) {

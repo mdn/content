@@ -101,7 +101,7 @@ theDog.toString(); // returns [object Object]
 The following code creates and assigns `dogToString()` to override the
 default `toString()` method. This function generates a string containing the
 `name`, `breed`, `color`, and `sex` of the
-object, in the form "`property = value;`".
+object.
 
 ```js
 Dog.prototype.toString = function dogToString() {

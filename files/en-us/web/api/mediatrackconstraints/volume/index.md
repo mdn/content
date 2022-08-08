@@ -17,7 +17,7 @@ tags:
   - getusermedia
 browser-compat: api.MediaTrackConstraints.volume
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
+{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`volume`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble)
@@ -47,8 +47,7 @@ satisfied and will result in failure.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
 
 ## Browser compatibility
 

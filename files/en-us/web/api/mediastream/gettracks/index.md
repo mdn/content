@@ -13,7 +13,7 @@ tags:
   - getTracks
 browser-compat: api.MediaStream.getTracks
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}{{SeeCompatTable}}
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The **_`getTracks()`_** method of the
 {{domxref("MediaStream")}} interface returns a sequence that represents all the

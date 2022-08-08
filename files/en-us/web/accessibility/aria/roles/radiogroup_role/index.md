@@ -118,7 +118,7 @@ This could have been written using semantic HTML, which requires no CSS or JavaS
     <input name="colorOption" type="radio" id="magenta">
     <label for="magenta">Magenta</label>
   </p>
-  <li>
+  <p>
     <input name="colorOption" type="radio" id="all">
     <label for="all">All of the above</label>
   </p>

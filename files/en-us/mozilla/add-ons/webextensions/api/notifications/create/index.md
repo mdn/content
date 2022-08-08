@@ -65,7 +65,7 @@ let CAKE_INTERVAL = 0.1;
 
 browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener((alarm) => {
   browser.notifications.create(cakeNotification, {
     "type": "basic",
     "iconUrl": browser.runtime.getURL("icons/cake-96.png"),

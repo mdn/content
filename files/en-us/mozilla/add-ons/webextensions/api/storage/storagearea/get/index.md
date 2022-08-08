@@ -137,7 +137,7 @@ let gettingItem = browser.storage.local.get({
 ### Chrome examples
 
 ```js
-chrome.storage.local.get("kitten", function(items){
+chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
 });
 ```

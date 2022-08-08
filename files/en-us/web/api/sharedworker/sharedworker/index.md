@@ -61,14 +61,11 @@ new SharedWorker(aURL, options)
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the document is not allowed to start workers,
-    for example if the URL has an invalid syntax or if the same-origin policy is violated.
+  - : Thrown if the document is not allowed to start workers, for example if the URL has an invalid syntax or if the same-origin policy is violated.
 - `NetworkError`  {{domxref("DOMException")}}
-  - : Thrown if the MIME type of the worker script is incorrect.
-    It should _always_ be `text/javascript`
-    (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types) may be accepted).
+  - : Thrown if the MIME type of the worker script is incorrect. It should _always_ be `text/javascript` (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) may be accepted).
 - `SyntaxError`  {{domxref("DOMException")}}
-  - : Thrown if _aURL_ cannot be parsed.
+  - : Thrown if `aURL` cannot be parsed.
 
 ## Examples
 
@@ -80,17 +77,17 @@ const myWorker = new SharedWorker('worker.js');
 
 myWorker.port.start();
 
-first.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
+first.onchange = () => {
+  myWorker.port.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
-second.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
+second.onchange = () => {
+  myWorker.port.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
-myWorker.port.onmessage = function(e) {
+myWorker.port.onmessage = (e) => {
   result1.textContent = e.data;
   console.log('Message received from worker');
 }

@@ -24,7 +24,7 @@ The **`Int16Array`** typed array represents an array of twos-complement 16-bit s
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int16Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `2` in the case of an `Int16Array`.
 - {{jsxref("TypedArray.name", "Int16Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Int16Array` type: "`Int16Array`".
+  - : Returns the string value of the constructor name. In the case of the `Int16Array` type: `"Int16Array"`.
 
 ## Static methods
 

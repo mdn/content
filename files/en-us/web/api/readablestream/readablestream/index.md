@@ -11,8 +11,9 @@ browser-compat: api.ReadableStream.ReadableStream
 ---
 {{APIRef("Streams")}}
 
-The **`ReadableStream()`** constructor creates
-and returns a readable stream object from the given handlers.
+The **`ReadableStream()`** constructor creates and returns a readable stream object from the given handlers.
+
+Note that while all parameters are technically optional, omitting the `underlyingSource` will result in a stream that has no source, and that can't be read from (readers return a promise that will never be resolved).
 
 ## Syntax
 
@@ -26,8 +27,8 @@ new ReadableStream(underlyingSource, queuingStrategy)
 
 - `underlyingSource` {{optional_inline}}
 
-  - : An object containing methods and properties that define how the constructed stream
-    instance will behave. `underlyingSource` can contain the following:
+  - : An object containing methods and properties that define how the constructed stream instance will behave. 
+    `underlyingSource` can contain the following:
 
     - `start`(controller) {{optional_inline}}
       - : This is a method, called immediately when the object is constructed. The
@@ -123,7 +124,7 @@ const stream = new ReadableStream({
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', () => {
       clearInterval(interval);
       fetchStream();
       controller.close();

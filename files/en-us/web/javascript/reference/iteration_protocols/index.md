@@ -111,7 +111,7 @@ console.log(typeof someString[Symbol.iterator]); // "function"
 
 ```js
 const iterator = someString[Symbol.iterator]();
-console.log(iterator + ""); // "[object String Iterator]"
+console.log(`${iterator}`); // "[object String Iterator]"
 
 console.log(iterator.next()); // { value: "h", done: false }
 console.log(iterator.next()); // { value: "i", done: false }
@@ -152,7 +152,7 @@ Notice how redefining `@@iterator` affects the behavior of built-in constructs t
 
 ```js
 console.log([...someString]); // ["bye"]
-console.log(someString + ""); // "hi"
+console.log(`${someString}`); // "hi"
 ```
 
 ## Iterable examples

@@ -98,7 +98,7 @@ DBOpenRequest.onsuccess = (event) => {
 DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = (event) => {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 

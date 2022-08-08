@@ -93,7 +93,7 @@ function drawCanvas(canvas, img) {
       x, y, img.width * ratio, img.height * ratio);
 }
 
-document.querySelector('video').addEventListener('play', function() {
+document.querySelector('video').addEventListener('play', () => {
   document.querySelector('#grabFrameButton').disabled = false;
   document.querySelector('#takePhotoButton').disabled = false;
 });

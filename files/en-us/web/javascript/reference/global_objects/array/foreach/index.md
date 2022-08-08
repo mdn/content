@@ -145,7 +145,7 @@ effects at the end of a chain.
 ### No operation for uninitialized values (sparse arrays)
 
 ```js
-const arraySparse = [1, 3,, 7];
+const arraySparse = [1, 3, /* empty */, 7];
 let numCallbackRuns = 0;
 
 arraySparse.forEach((element) => {
@@ -192,12 +192,12 @@ The following code logs a line for each element in an array:
 
 ```js
 const logArrayElements = (element, index, array) => {
-  console.log('a[' + index + '] = ' + element);
+  console.log(`a[${index}] = ${element}`);
 };
 
 // Notice that index 2 is skipped, since there is no item at
 // that position in the array.
-[2, 5,, 9].forEach(logArrayElements);
+[2, 5, , 9].forEach(logArrayElements);
 // logs:
 // a[0] = 2
 // a[1] = 5
@@ -210,17 +210,19 @@ The following (contrived) example updates an object's properties from each entry
 array:
 
 ```js
-function Counter() {
-  this.sum = 0
-  this.count = 0
+class Counter {
+  constructor() {
+    this.sum = 0;
+    this.count = 0;
+  }
+  add(array) {
+    // Only function expressions will have its own this binding
+    array.forEach(function countEntry(entry) {
+      this.sum += entry;
+      ++this.count;
+    }, this);
+  }
 }
-
-Counter.prototype.add = function(array) {
-  array.forEach(function countEntry(entry) {
-    this.sum += entry;
-    ++this.count;
-  }, this);
-};
 
 const obj = new Counter();
 obj.add([2, 5, 9]);

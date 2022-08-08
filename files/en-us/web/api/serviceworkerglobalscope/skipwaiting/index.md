@@ -39,7 +39,7 @@ While `self.skipWaiting()` can be called at any point during the service worker'
 The following example causes a newly installed service worker to progress into the `activating` state, regardless of whether there is already an active service worker.
 
 ```js
-self.addEventListener('install', function(event) {
+self.addEventListener('install', (event) => {
   // The promise that skipWaiting() returns can be safely ignored.
   self.skipWaiting();
 

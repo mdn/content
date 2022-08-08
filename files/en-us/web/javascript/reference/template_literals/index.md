@@ -172,7 +172,7 @@ Tag functions don't even need to return a string!
 
 ```js
 function template(strings, ...keys) {
-  return (function(...values) {
+  return (...values) => {
     const dict = values[values.length - 1] || {};
     const result = [strings[0]];
     keys.forEach((key, i) => {
@@ -180,7 +180,7 @@ function template(strings, ...keys) {
       result.push(value, strings[i + 1]);
     });
     return result.join('');
-  });
+  };
 }
 
 const t1Closure = template`${0}${1}${0}!`;
@@ -279,10 +279,10 @@ const doc = html`<!DOCTYPE html>
 
 As of ECMAScript 2016, tagged templates conform to the rules of the following escape sequences:
 
-- Unicode escapes started by "`\u`", for example `\u00A9`
-- Unicode code point escapes indicated by "`\u{}`", for example `\u{2F804}`
-- Hexadecimal escapes started by "`\x`", for example `\xA9`
-- Octal literal escapes started by "`\0o`" and followed by one or more digits, for example `\0o251`
+- Unicode escapes started by `\u`, for example `\u00A9`
+- Unicode code point escapes indicated by `\u{}`, for example `\u{2F804}`
+- Hexadecimal escapes started by `\x`, for example `\xA9`
+- Octal literal escapes started by `\0o` and followed by one or more digits, for example `\0o251`
 
 This means that a tagged template like the following is problematic, because, per ECMAScript grammar, a parser looks for valid Unicode escape sequences, but finds malformed syntax:
 
