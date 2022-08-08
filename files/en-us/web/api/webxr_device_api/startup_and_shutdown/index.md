@@ -175,7 +175,7 @@ async function createImmersiveSession(xr) {
   try {
     session = await xr.requestSession("immersive-vr");
     return session;
-  } catch(error) {
+  } catch (error) {
     throw error;
   }
 }
@@ -196,7 +196,7 @@ async function createImmersiveSession(xr) {
       requiredFeatures: [ "unbounded" ]
     });
     return session;
-  } catch(error) {
+  } catch (error) {
     throw error;
   }
 }
@@ -211,7 +211,7 @@ async function createInlineSession(xr) {
       optionalFeatures: [ "local" ]
     });
     return session;
-  } catch(error) {
+  } catch (error) {
     throw error;
   }
 }

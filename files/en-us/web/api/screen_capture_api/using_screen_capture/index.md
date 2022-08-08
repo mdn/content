@@ -36,7 +36,7 @@ async function startCapture(displayMediaOptions) {
 
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
+  } catch (err) {
     console.error(`Error: ${err}`);
   }
   return captureStream;
@@ -217,7 +217,7 @@ async function startCapture() {
   try {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
-  } catch(err) {
+  } catch (err) {
     console.error(`Error: ${err}`);
   }
 }

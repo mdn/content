@@ -51,7 +51,7 @@ function HTMLinXHR() {
   req.open('GET', window.location.href, false);
   try {
     req.responseType = 'document';
-  } catch(e) {
+  } catch (e) {
     return true;
   }
   return false;

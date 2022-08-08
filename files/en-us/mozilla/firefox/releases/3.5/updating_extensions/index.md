@@ -154,14 +154,14 @@ function getWindowForRequest(request){
                       .getInterface(Components.interfaces.nsILoadContext)
                       .associatedWindow;
       }
-    } catch(e) {}
+    } catch (e) {}
     try{
       if (request.loadGroup && request.loadGroup.notificationCallbacks){
         return request.loadGroup.notificationCallbacks
                       .getInterface(Components.interfaces.nsILoadContext)
                       .associatedWindow;
       }
-    } catch(e) {}
+    } catch (e) {}
   }
   return null;
 }

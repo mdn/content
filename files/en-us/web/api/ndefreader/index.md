@@ -69,7 +69,7 @@ await ndef.scan();
 try {
   await write("Hello World");
   console.log("We wrote to a tag!")
-} catch(err) {
+} catch (err) {
   console.error("Something went wrong", err);
 }
 ```
