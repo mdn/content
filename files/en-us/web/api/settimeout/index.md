@@ -142,7 +142,7 @@ See the following example:
 
 ```js
 const myArray = ['zero', 'one', 'two'];
-myArray.myMethod = (sProperty) => {
+myArray.myMethod = function (sProperty) {
   console.log(arguments.length > 0 ? this[sProperty] : this);
 };
 
