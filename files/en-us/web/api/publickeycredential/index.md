@@ -65,10 +65,10 @@ const publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
+  .then((newCredentialInfo) => {
     const response = newCredentialInfo.response;
     const clientExtensionsResults = newCredentialInfo.getClientExtensionResults();
-  }).catch(function (err) {
+  }).catch((err) => {
      console.error(err);
   });
 ```
@@ -83,10 +83,10 @@ const options = {
 };
 
 navigator.credentials.get({ "publicKey": options })
-    .then(function (credentialInfoAssertion) {
+    .then((credentialInfoAssertion) => {
     // send assertion response back to the server
     // to proceed with the control of the credential
-}).catch(function (err) {
+}).catch((err) => {
      console.error(err);
 });
 ```

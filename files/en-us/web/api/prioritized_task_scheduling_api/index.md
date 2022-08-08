@@ -50,7 +50,7 @@ scheduler
 The same task might be waited on using `await`/`async` as shown below (note, this is run in an [Immediately Invoked Function Expression (IIFE)](/en-US/docs/Glossary/IIFE)):
 
 ```js
-(async function () {
+(async () => {
   try {
     const result = await scheduler.postTask(() => 'Task executing');
     console.log(result);

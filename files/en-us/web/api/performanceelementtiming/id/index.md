@@ -28,7 +28,7 @@ In this example calling `entry.id` will log to the console `myImage`, this being
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.id);
     }
