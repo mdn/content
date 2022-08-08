@@ -60,8 +60,11 @@ Also, when you set this property on an element, you override any styles that hav
 To change a particular element's style, you can adapt the following example for the element(s) you want to style.
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
 <title>simple style example</title>
 
 <script>
@@ -76,7 +79,7 @@ function resetStyle(elemId) {
 }
 </script>
 
-<style type="text/css">
+<style>
 #p1 {
   border: solid blue 2px;
 }
@@ -111,10 +114,12 @@ More important than the two properties noted here is the use of the `style` obje
 
 ```html
 <!DOCTYPE html>
-<html>
- <head>
-  <title>style Property Example</title>
-  <link rel="StyleSheet" href="example.css" type="text/css">
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Style Property Example</title>
+  <link rel="StyleSheet" href="example.css">
   <script>
     function setStyle() {
       document.getElementById('d').style.color = 'orange';

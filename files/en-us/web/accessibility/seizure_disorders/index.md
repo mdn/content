@@ -426,16 +426,16 @@ Use the {{HTMLElement('link')}} element, alongside with and together with the at
 ```html
 <head>
   <title>Home Page</title>
-  <link href="main.css" rel="stylesheet" type="text/css" title="Default Style">
-  <link href="alternate1.css" rel="alternate stylesheet" type="text/css" title="Alternate One">
-  <link href="alternate2.css" rel="alternate stylesheet" type="text/css" title="Alternate Two">
+  <link href="main.css" rel="stylesheet" title="Default Style">
+  <link href="alternate1.css" rel="alternate stylesheet" title="Alternate One">
+  <link href="alternate2.css" rel="alternate stylesheet" title="Alternate Two">
 </head>
 ```
 
 **{{CSSxref('@import')}}** is also a way to incorporate style sheets, but it is not quite as well supported as the {{HTMLElement('link')}} element.
 
 ```html
-<style type="text/css">
+<style>
   @import url(alternate1.css);
   @import url(alternate2.css);
 </style>

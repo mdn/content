@@ -88,18 +88,14 @@ Our example seen above is represented by the following code (you can also [find 
 
 ```html
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en-us">
+<head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
     <title>My page title</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
   </head>
 
   <body>
