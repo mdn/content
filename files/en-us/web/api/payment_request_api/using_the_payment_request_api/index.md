@@ -287,7 +287,7 @@ request.show()
   })
   .catch((error) => {
     // Handle error.
-  }); 
+  });
 ```
 
 > **Note:** See our [Show additional user interface after successful payment demo](https://mdn.github.io/dom-examples/payment-request/show-additional-ui-after-payment.html) for the full code.
