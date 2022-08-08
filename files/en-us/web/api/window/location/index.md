@@ -181,9 +181,9 @@ const showBookmark = (() => {
       return;
     }
     _isBot = true;
-    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
-    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
-    if (_useHash && _itFrame === nFrames) {
+    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / frames);
+    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / frames);
+    if (_useHash && _itFrame === frames) {
       location.hash = _bookMark;
     }
     _itFrame++;
