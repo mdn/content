@@ -130,7 +130,7 @@ We need to create three arrays. One of frequency values for which we want to rec
 ```js
 // arrays for our frequency response
 const totalArrayItems = 30;
-const myFrequencyArray = new Float32Array(totalArrayItems);
+let myFrequencyArray = new Float32Array(totalArrayItems);
 const magResponseOutput = new Float32Array(totalArrayItems);
 const phaseResponseOutput = new Float32Array(totalArrayItems);
 ```
@@ -138,9 +138,7 @@ const phaseResponseOutput = new Float32Array(totalArrayItems);
 Let's fill our first array with frequency values we want data to be returned on:
 
 ```js
-myFrequencyArray = myFrequencyArray.map((item, index) => {
-  return Math.pow(1.4, index);
-});
+myFrequencyArray = myFrequencyArray.map((item, index) => 1.4 ** index);
 ```
 
 We could go for a linear approach, but it's far better when working with frequencies to take a log approach, so let's fill our array with frequency values that get larger further on in the array items.
