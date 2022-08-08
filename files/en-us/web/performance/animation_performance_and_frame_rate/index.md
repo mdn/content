@@ -75,7 +75,7 @@ In the context of the rendering waterfall, some properties are more expensive th
         </p>
       </td>
       <td>
-        <img alt="box representing the recalculate style step" src="recalculate-style.png" />
+        <img alt="does recalculate styles " src="recalculate-style.png" />
         <img alt="box representing the layout step" src="layout-faint.png" /> <img alt="box representing the paint step" src="paint.png" />
       </td>
       <td>
