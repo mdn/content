@@ -243,9 +243,7 @@ const mediaConstraints = {
 const desc = new RTCSessionDescription(sdp);
 
 pc.setRemoteDescription(desc)
-  .then(() => {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
+  .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
   .then((stream) => {
     previewElement.srcObject = stream;
 
