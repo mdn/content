@@ -12,9 +12,10 @@ tags:
   - Service Workers
   - Sync
   - Web Background Synchronization API
+  - Experimental
 browser-compat: api.SyncManager
 ---
-{{securecontext_header}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 {{DefaultAPISidebar("Background Sync")}}
 
@@ -34,7 +35,7 @@ As this API relies on service workers, functionality provided by this API is onl
 
 ## Background Synchronization Interfaces
 
-- {{domxref('SyncManager')}}
+- {{domxref('SyncManager')}} {{Experimental_Inline}}
   - : Registers tasks to be run in a service worker at a later time with network connectivity. These tasks are referred to as _background sync requests_.
 - {{domxref('SyncEvent')}}
   - : Represents a synchronization event, sent to the {{domxref('ServiceWorkerGlobalScope', 'global scope')}} of a {{domxref('ServiceWorker')}}. It provides a way to run tasks in the service worker with network connectivity.

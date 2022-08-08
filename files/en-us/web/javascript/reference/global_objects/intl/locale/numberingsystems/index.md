@@ -119,12 +119,12 @@ In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), the 
 List supported number system for a given `Locale`.
 
 ```js
-let arEG = new Intl.Locale("ar-EG");
+const arEG = new Intl.Locale("ar-EG");
 console.log(arEG.numberingSystems); // logs ["arab"]
 ```
 
 ```js
-let ja = new Intl.Locale("ja");
+const ja = new Intl.Locale("ja");
 console.log(ja.numberingSystems); // logs ["latn"]
 ```
 

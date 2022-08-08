@@ -21,7 +21,7 @@ the string arguments to the calling string and returns a new string.
 ```js
 concat(str1)
 concat(str1, str2)
-concat(str1, str2, ... , strN)
+concat(str1, str2, /* …, */ strN)
 ```
 
 ### Parameters
@@ -55,11 +55,11 @@ the `concat()` method.
 The following example combines strings into a new string.
 
 ```js
-let hello = 'Hello, '
-console.log(hello.concat('Kevin', '. Have a nice day.'))
+const hello = 'Hello, ';
+console.log(hello.concat('Kevin', '. Have a nice day.'));
 // Hello, Kevin. Have a nice day.
 
-let greetList = ['Hello', ' ', 'Venkat', '!']
+const greetList = ['Hello', ' ', 'Venkat', '!'];
 "".concat(...greetList)  // "Hello Venkat!"
 
 "".concat({})    // [object Object]

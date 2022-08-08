@@ -36,7 +36,7 @@ console.log('EMPTY', reader.readyState); // readyState will be 0
 reader.readAsText(blob);
 console.log('LOADING', reader.readyState); // readyState will be 1
 
-reader.onloadend = function () {
+reader.onloadend = () => {
   console.log('DONE', reader.readyState); // readyState will be 2
 };
 ```

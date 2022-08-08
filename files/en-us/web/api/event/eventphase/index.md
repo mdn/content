@@ -87,16 +87,16 @@ div {
 ### JavaScript
 
 ```js
-let clear = false,
-    divInfo = null,
-    divs = null,
-    chCapture = null;
+let clear = false;
+let divInfo = null;
+let divs = null;
+let chCapture = null;
 
-window.onload = function () {
+window.onload = () => {
   divInfo = document.getElementById('divInfo');
   divs = document.getElementsByTagName('div');
   chCapture = document.getElementById('chCapture');
-  chCapture.onclick = function () {
+  chCapture.onclick = () => {
     removeListeners();
     addListeners();
     clearDivs();
@@ -117,13 +117,12 @@ function removeListeners() {
 function addListeners() {
   for (const div of divs) {
     if (div.id !== 'divInfo') {
-        if (chCapture.checked) {
-            div.addEventListener('click', onDivClick, true);
-        }
-        else {
-            div.addEventListener('click', onDivClick, false);
-            div.onmousemove = function () { clear = true };
-        }
+      if (chCapture.checked) {
+        div.addEventListener('click', onDivClick, true);
+      } else {
+        div.addEventListener('click', onDivClick, false);
+        div.onmousemove = () => { clear = true };
+      }
     }
   }
 }

@@ -41,7 +41,7 @@ _This interface doesn't define any properties of its own, but it does inherit th
 The following example, taken from the WebVR spec, finds the first available `HMDVRDevice` and its associated {{domxref("PositionSensorVRDevice")}}, if it has one.
 
 ```js
-navigator.getVRDevices().then(function(devices) {
+navigator.getVRDevices().then((devices) => {
   for (const device of devices) {
     if (device instanceof HMDVRDevice) {
       gHMD = device;

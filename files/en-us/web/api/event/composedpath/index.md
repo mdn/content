@@ -79,7 +79,7 @@ We then insert one of each element into our page:
 Then include a click event listener on the `<html>` element:
 
 ```js
-document.querySelector('html').addEventListener('click',function(e) {
+document.querySelector('html').addEventListener('click', (e) => {
   console.log(e.composed);
   console.log(e.composedPath());
 });

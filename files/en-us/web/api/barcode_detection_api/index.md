@@ -234,7 +234,7 @@ You can check for formats supported by the user agent via the {{domxref('Barcode
 
 ## Interfaces
 
-- {{domxref("BarcodeDetector")}}
+- {{domxref("BarcodeDetector")}} {{Experimental_Inline}}
   - : The **`BarcodeDetector`** interface of the Barcode Detection API allows detection of linear and two dimensional barcodes in images.
 
 ## Examples

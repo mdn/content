@@ -24,7 +24,7 @@ The **`Float64Array`** typed array represents an array of 64-bit floating point 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float64Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of an `Float64Array`.
 - {{jsxref("TypedArray.name", "Float64Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Float64Array` type: "`Float64Array`".
+  - : Returns the string value of the constructor name. In the case of the `Float64Array` type: `"Float64Array"`.
 
 ## Static methods
 

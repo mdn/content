@@ -134,14 +134,14 @@ obj.__proto__ = { x: 20 }
 ### Freezing arrays
 
 ```js
-let a = [0];
+const a = [0];
 Object.freeze(a); // The array cannot be modified now.
 
 a[0] = 1; // fails silently
 
 // In strict mode such attempt will throw a TypeError
 function fail() {
-  "use strict"
+  "use strict";
   a[0] = 1;
 }
 

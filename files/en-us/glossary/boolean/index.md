@@ -18,7 +18,7 @@ Below is some JavaScript pseudocode (it's not truly executable code) demonstrati
 ```js
 /* JavaScript if statement */
 if (boolean conditional) {
-   // code to execute if the conditional is true
+  // code to execute if the conditional is true
 }
 
 if (boolean conditional) {
@@ -30,10 +30,6 @@ if (boolean conditional) {
 /* JavaScript for loop */
 for (control variable; boolean conditional; counter) {
   // code to execute repeatedly if the conditional is true
-}
-
-for (var i=0; i < 4; i++) {
-  console.log("I print only when the boolean conditional is true");
 }
 ```
 

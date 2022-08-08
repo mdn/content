@@ -71,9 +71,9 @@ objects.
 ## Examples
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.keys().then(function(keys) {
-    keys.forEach(function(request, index, array) {
+caches.open('v1').then((cache) => {
+  cache.keys().then((keys) => {
+    keys.forEach((request, index, array) => {
       cache.delete(request);
     });
   });

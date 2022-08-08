@@ -37,7 +37,7 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 {{domxref("BaseAudioContext.state", "state")}} to the console every time it changes.
 
 ```js
-audioCtx.onstatechange = function() {
+audioCtx.onstatechange = () => {
   console.log(audioCtx.state);
 }
 ```

@@ -145,15 +145,17 @@ const myIterable = {
     yield 3;
   }
 }
+```
 
+User-defined iterables can be used in `for...of` loops or the spread syntax as usual.
+
+```js
 for (const value of myIterable) {
   console.log(value);
 }
 // 1
 // 2
 // 3
-
-or
 
 [...myIterable]; // [1, 2, 3]
 ```
@@ -204,7 +206,7 @@ function* fibonacci() {
   let current = 0;
   let next = 1;
   while (true) {
-    let reset = yield current;
+    const reset = yield current;
     [current, next] = [next, next + current];
     if (reset) {
       current = 0;

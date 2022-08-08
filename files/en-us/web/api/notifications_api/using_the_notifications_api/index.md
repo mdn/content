@@ -208,7 +208,6 @@ window.addEventListener('load', () => {
         const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
         if (i === 9) {
           i++;
-          clearInterval(interval);
         }
       }, 200);
     }

@@ -22,7 +22,7 @@ Getting async compilation is easy: when writing your JavaScript, just use the `a
 or, to do the same thing via script:
 
 ```js
-var script = document.createElement('script');
+const script = document.createElement('script');
 script.src = "file.js";
 document.body.appendChild(script);
 ```
@@ -40,7 +40,7 @@ Two common situations in which a script is \*not\* async (as [defined by the HTM
 and
 
 ```js
-var script = document.createElement('script');
+const script = document.createElement('script');
 script.textContent = "code";
 document.body.appendChild(script);
 ```
@@ -50,10 +50,10 @@ Both are counted as 'inline' scripts and get compiled and then run immediately.
 What if your code is in a JS string? Instead of using `eval` or `innerHTML`, both of which trigger synchronous compilation, you should use a Blob with an object URL:
 
 ```js
-var blob = new Blob([codeString]);
-var script = document.createElement('script');
-var url = URL.createObjectURL(blob);
-script.onload = script.onerror = function() { URL.revokeObjectURL(url); };
+const blob = new Blob([codeString]);
+const script = document.createElement('script');
+const url = URL.createObjectURL(blob);
+script.onload = script.onerror = () => URL.revokeObjectURL(url);
 script.src = url;
 document.body.appendChild(script);
 ```

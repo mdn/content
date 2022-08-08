@@ -42,7 +42,7 @@ _This interface inherits properties from its parent interface, {{domxref("Event"
 ```js
 const canvas = document.getElementById('canvas');
 
-canvas.addEventListener('webglcontextcreationerror', function(e) {
+canvas.addEventListener('webglcontextcreationerror', (e) => {
   console.log(e.statusMessage || 'Unknown error');
 }, false);
 

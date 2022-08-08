@@ -246,7 +246,7 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 
 4. Add the following property to `package.json`:
 
-    ```js
+    ```json
     "browserslist": [
       "last 5 versions"
     ]
@@ -442,21 +442,21 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
       password: "your-sauce-api-key"
     });
 
-    myAccount.getAccountDetails(function (err, res) {
+    myAccount.getAccountDetails((err, res) => {
       console.log(res);
-      myAccount.getServiceStatus(function (err, res) {
+      myAccount.getServiceStatus((err, res) => {
         // Status of the Sauce Labs services
         console.log(res);
-        myAccount.getJobs(function (err, jobs) {
+        myAccount.getJobs((err, jobs) => {
           // Get a list of all your jobs
           for (const job of jobs) {
-            myAccount.showJob(job.id, function (err, res) {
-              let str = res.id + ": Status: " + res.status;
+            myAccount.showJob(job.id, (err, res) => {
+              let str = `${res.id}: Status: ${res.status}`;
               if (res.error) {
-                str += "\033[31m Error: " + res.error + " \033[0m";
+                str += `\x1b[31m Error: ${res.error}\x1b[0m`;
               }
               console.log(str);
-            }
+            });
           }
         });
       });

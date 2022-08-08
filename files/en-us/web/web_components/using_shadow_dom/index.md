@@ -34,7 +34,7 @@ This article assumes you are already familiar with the concept of the [DOM (Docu
 
 This fragment produces the following DOM structure:
 
-![DOM Tree with elements and text nodes, content of non empty text nodes, inluding element's attribute names and contents ](dom-screenshot.png)
+![DOM Tree with elements and text nodes, content of non empty text nodes, including element's attribute names and contents ](dom-screenshot.png)
 
 _Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which you can attach any element, in the same way as the normal DOM.
 
@@ -56,14 +56,14 @@ Note that the shadow DOM is not a new thing by any means — browsers have used 
 You can attach a shadow root to any element using the {{domxref("Element.attachShadow()")}} method. This takes as its parameter an options object that contains one option — `mode` — with a value of `open` or `closed`:
 
 ```js
-let shadow = elementRef.attachShadow({mode: 'open'});
-let shadow = elementRef.attachShadow({mode: 'closed'});
+const shadowOpen = elementRef.attachShadow({mode: 'open'});
+const shadowClosed = elementRef.attachShadow({mode: 'closed'});
 ```
 
 `open` means that you can access the shadow DOM using JavaScript written in the main page context, for example using the {{domxref("Element.shadowRoot")}} property:
 
 ```js
-let myShadowDom = myCustomElem.shadowRoot;
+const myShadowDom = myCustomElem.shadowRoot;
 ```
 
 If you attach a shadow root to a custom element with `mode: closed` set, you won't be able to access the shadow DOM from the outside — `myCustomElem.shadowRoot` returns `null`. This is the case with built in elements that contain shadow DOMs, such as `<video>`.
@@ -73,13 +73,13 @@ If you attach a shadow root to a custom element with `mode: closed` set, you won
 If you are attaching a shadow DOM to a custom element as part of its constructor (by far the most useful application of the shadow DOM), you would use something like this:
 
 ```js
-let shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({mode: 'open'});
 ```
 
 When you've attached a shadow DOM to an element, manipulating it is a matter of just using the same DOM APIs as you use for the regular DOM manipulation:
 
 ```js
-let para = document.createElement('p');
+const para = document.createElement('p');
 shadow.appendChild(para);
 // etc.
 ```
@@ -107,7 +107,7 @@ We first attach a shadow root to the custom element:
 
 ```js
 // Create a shadow root
-let shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({mode: 'open'});
 ```
 
 ### Creating the shadow DOM structure

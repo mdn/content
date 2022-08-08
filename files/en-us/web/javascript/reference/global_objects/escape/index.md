@@ -27,7 +27,7 @@ sequence.
 
 > **Note:** This function was used mostly for URL queries (the part of a
 > URL following `?`)—_not_ for escaping ordinary String literals,
-> which use the format "`\xHH`". (`HH` are
+> which use the format `\xHH`. (`HH` are
 > two hexadecimal digits, and the form `\xHH\xHH` is
 > used for higher-plane Unicode characters.)
 >

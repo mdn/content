@@ -115,16 +115,16 @@ function randomColor() {
     return `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
 }
 
-button.onclick = function() {
+button.onclick = () => {
   button.style.backgroundColor = randomColor();
 };
 
-button.onauxclick = function(e) {
+button.onauxclick = (e) => {
   e.preventDefault();
   button.style.color = randomColor();
 }
 
-button.oncontextmenu = function(e) {
+button.oncontextmenu = (e) => {
   e.preventDefault();
 }
 ```

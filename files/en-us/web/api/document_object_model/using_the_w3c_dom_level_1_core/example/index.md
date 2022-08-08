@@ -9,7 +9,7 @@ tags:
  <html>
  <head>
    <title>My Document</title>
-   <script type="text/javascript">
+   <script>
    function change() {
      // document.getElementsByTagName("H1") returns a NodeList of the h1
      // elements in the document, and the first is number 0:

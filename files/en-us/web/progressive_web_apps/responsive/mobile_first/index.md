@@ -238,7 +238,7 @@ You can write your own feature detects (Mark Pilgrim's [All-In-One Almost-Alphab
 I put Modernizr inside my `js/lib` directory, then included it by putting the following construct inside my HTML file:
 
 ```html
-<script type="text/javascript" src="js/lib/modernizr.js"></script>
+<script src="js/lib/modernizr.js"></script>
 ```
 
 With Modernizr in place, we can now use the following JS block to test whether media queries are supported, and if not, to load in [respond.js](https://github.com/scottjehl/Respond), Scott Jehl's `matchMedia` and media query polyfill.

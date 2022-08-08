@@ -24,18 +24,18 @@ name.
 const obj = {
   get property() {},
   set property(value) {},
-  property( parameters… ) {},
-  *generator( parameters… ) {},
-  async property( parameters… ) {},
-  async* generator( parameters… ) {},
+  property(parameters) {},
+  *generator(parameters) {},
+  async property(parameters) {},
+  async *generator(parameters) {},
 
   //  with computed keys
-  get [property]() {},
-  set [property](value) {},
-  [property]( parameters… ) {},
-  *[generator]( parameters… ) {},
-  async [property]( parameters… ) {},
-  async* [generator]( parameters… ) {},
+  get [expression]() {},
+  set [expression](value) {},
+  [expression](parameters) {},
+  *[expression](parameters) {},
+  async [expression](parameters) {},
+  async *[expression](parameters) {},
 };
 ```
 
@@ -88,26 +88,26 @@ When doing so:
 // Using a named property
 const obj2 = {
   g: function* () {
-    let index = 0
+    let index = 0;
     while (true) {
-      yield index++
+      yield index++;
     }
-  }
+  },
 };
 
 // The same object using shorthand syntax
 const obj2 = {
-  * g() {
-    let index = 0
+  *g() {
+    let index = 0;
     while (true) {
-      yield index++
+      yield index++;
     }
-  }
+  },
 };
 
-const it = obj2.g()
-console.log(it.next().value)  // 0
-console.log(it.next().value)  // 1
+const it = obj2.g();
+console.log(it.next().value); // 0
+console.log(it.next().value); // 1
 ```
 
 ### Async methods
@@ -119,16 +119,16 @@ using the shorthand syntax.
 // Using a named property
 const obj3 = {
   f: async function () {
-    await some_promise
-  }
-}
+    await some_promise;
+  },
+};
 
 // The same object using shorthand syntax
 const obj3 = {
   async f() {
-    await some_promise
-  }
-}
+    await some_promise;
+  },
+};
 ```
 
 ### Async generator methods
@@ -166,7 +166,7 @@ const objA = {
 new objA.method  // TypeError: obj.method is not a constructor
 
 const objB = {
-  * g() {}
+  *g() {}
 }
 new objB.g       // TypeError: obj.g is not a constructor (changed in ES2016)
 ```

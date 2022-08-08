@@ -65,7 +65,7 @@ let CAKE_PREP_INTERVAL = 0.005;
 
 let progress = 0;
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener((alarm) => {
   progress = progress + 10;
   if (progress > 100) {
     browser.notifications.clear(cakeNotification);
@@ -77,7 +77,7 @@ browser.alarms.onAlarm.addListener(function(alarm) {
   }
 });
 
-browser.browserAction.onClicked.addListener(function () {
+browser.browserAction.onClicked.addListener(() => {
   browser.notifications.getAll((all) => {
     if (all.length > 0) {
       browser.notifications.clear(cakeNotification);

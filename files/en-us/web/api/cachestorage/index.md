@@ -61,9 +61,9 @@ In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We co
 Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.
 
 ```js
-self.addEventListener('install', function(event) {
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open('v1').then((cache) => {
       return cache.addAll([
         '/sw-test/',
         '/sw-test/index.html',
@@ -79,26 +79,24 @@ self.addEventListener('install', function(event) {
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request).then(function(response) {
+self.addEventListener('fetch', (event) => {
+  event.respondWith(caches.match(event.request).then((response) => {
     // caches.match() always resolves
     // but in case of success response will have value
     if (response !== undefined) {
       return response;
     } else {
-      return fetch(event.request).then(function (response) {
+      return fetch(event.request).then((response) => {
         // response may be used only once
         // we need to save clone to put one copy in cache
         // and serve second one
         let responseClone = response.clone();
 
-        caches.open('v1').then(function (cache) {
+        caches.open('v1').then((cache) => {
           cache.put(event.request, responseClone);
         });
         return response;
-      }).catch(function () {
-        return caches.match('/sw-test/gallery/myLittleVader.jpg');
-      });
+      }).catch(() => caches.match('/sw-test/gallery/myLittleVader.jpg'));
     }
   }));
 });

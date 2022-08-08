@@ -64,7 +64,7 @@ The following code traps the {{jsxref("Operators/new", "new")}} operator.
 ```js
 const p = new Proxy(function () {}, {
   construct(target, argumentsList, newTarget) {
-    console.log('called: ' + argumentsList.join(', '));
+    console.log(`called: ${argumentsList}`);
     return { value: argumentsList[0] * 10 };
   }
 });

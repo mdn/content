@@ -50,9 +50,9 @@ the app. This consists of calling `CacheStorage.open()` to create a new
 cache, then using {{domxref("Cache.addAll()")}} to add a series of assets to it.
 
 ```js
-self.addEventListener('install', function(event) {
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open('v1').then((cache) => {
       return cache.addAll([
         '/sw-test/',
         '/sw-test/index.html',

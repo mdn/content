@@ -64,9 +64,9 @@ This method can be used in almost the same way as
 different order of arguments.
 
 ```js
-let re = /-/g;
-let str = '2016-01-02';
-let result = re[Symbol.split](str);
+const re = /-/g;
+const str = '2016-01-02';
+const result = re[Symbol.split](str);
 console.log(result);  // ["2016", "01", "02"]
 ```
 
@@ -78,14 +78,14 @@ modify the default behavior.
 ```js
 class MyRegExp extends RegExp {
   [Symbol.split](str, limit) {
-    let result = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return result.map((x) => "(" + x + ")");
+    const result = RegExp.prototype[Symbol.split].call(this, str, limit);
+    return result.map((x) => `(${x})`);
   }
 }
 
-let re = new MyRegExp('-');
-let str = '2016-01-02';
-let result = str.split(re); // String.prototype.split calls re[@@split].
+const re = new MyRegExp('-');
+const str = '2016-01-02';
+const result = str.split(re); // String.prototype.split calls re[@@split].
 console.log(result); // ["(2016)", "(01)", "(02)"]
 ```
 

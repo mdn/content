@@ -50,8 +50,8 @@ and process the selected files.
 ### JavaScript
 
 ```js
-document.getElementById("files").addEventListener("change", function(event) {
-  event.target.webkitEntries.forEach(function(entry) {
+document.getElementById("files").addEventListener("change", (event) => {
+  event.target.webkitEntries.forEach((entry) => {
     /* do stuff with the entry */
   });
 });

@@ -52,13 +52,13 @@ A language-specific formatted string.
 ### Using the of method
 
 ```js
-let regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
+const regionNames = new Intl.DisplayNames('en', { type: 'region'} );
 regionNames.of('419'); // "Latin America"
 
-let languageNames = new Intl.DisplayNames(['en'], {type: 'language'});
+const languageNames = new Intl.DisplayNames('en', { type: 'language' });
 languageNames.of('fr'); // "French"
 
-let currencyNames = new Intl.DisplayNames(['en'], {type: 'currency'});
+const currencyNames = new Intl.DisplayNames('en', { type: 'currency' });
 currencyNames.of('EUR'); // "Euro"
 ```
 

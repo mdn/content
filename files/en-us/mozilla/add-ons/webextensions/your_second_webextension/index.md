@@ -337,7 +337,7 @@ The `reset()` function essentially undoes a beastify:
 Create a new directory, under the extension root, called "content_scripts" and create a new file in it called "beastify.js", with the following contents:
 
 ```js
-(function() {
+(() => {
   /**
    * Check and set a global guard variable.
    * If this content script is injected into the same page again,

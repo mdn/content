@@ -28,7 +28,7 @@ JavaScript objects are dynamic "bags" of properties (referred to as **own proper
 >
 > It should not be confused with the `func.prototype` property of functions, which instead specifies the `[[Prototype]]` to be assigned to all _instances_ of objects created by the given function when used as a constructor. We will discuss the `prototype` property of constructor functions in [a later section](#constructors).
 
-There are several ways to specify the `[[Prototype]]` of an object, which are listed in [a later section](#different_ways_of_creating_and_mutating_prototype_chains). For now, we will use the [`__proto__` syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) for illustration. It’s worth noting that the `{ __proto__: ... }` syntax is different from the `obj.__proto__` accessor: the former is standard and not deprecated.
+There are several ways to specify the `[[Prototype]]` of an object, which are listed in [a later section](#different_ways_of_creating_and_mutating_prototype_chains). For now, we will use the [`__proto__` syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) for illustration. It's worth noting that the `{ __proto__: ... }` syntax is different from the `obj.__proto__` accessor: the former is standard and not deprecated.
 
 In an object literal like `{ a: 1, b: 2, __proto__: c }`, the value `c` (which has to be either `null` or another object) will become the `[[Prototype]]` of the object represented by the literal, while the other keys like `a` and `b` will become the _own properties_ of the object. This syntax reads very naturally, since `[[Prototype]]` is just an "internal property" of the object.
 

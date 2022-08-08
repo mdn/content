@@ -172,8 +172,8 @@ class Square extends Polygon {
   }
 
   set area(value) {
-    this.height = value**0.5;
-    this.width = value**0.5;
+    this.height = value ** 0.5;
+    this.width = value ** 0.5;
   }
 }
 ```
@@ -202,7 +202,7 @@ Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
 console.log(Object.getPrototypeOf(Square.prototype) === Polygon.prototype); //false
 console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //true
 
-let newInstance = new Square();
+const newInstance = new Square();
 console.log(newInstance.name); //Polygon
 ```
 

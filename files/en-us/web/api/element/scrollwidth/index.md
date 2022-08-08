@@ -91,11 +91,11 @@ A number.
       }
     }
 
-    buttonOne.addEventListener('click', function() {
+    buttonOne.addEventListener('click', () => {
       alertOverflow(divOne);
     });
 
-    buttonTwo.addEventListener('click', function() {
+    buttonTwo.addEventListener('click', () => {
       alertOverflow(divTwo);
     });
   </script>

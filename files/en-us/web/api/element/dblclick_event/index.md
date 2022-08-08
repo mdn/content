@@ -104,7 +104,7 @@ This example toggles the size of a card when you double click on it.
 ```js
 const card = document.querySelector('aside');
 
-card.addEventListener('dblclick', function (e) {
+card.addEventListener('dblclick', (e) => {
   card.classList.toggle('large');
 });
 ```

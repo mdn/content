@@ -43,7 +43,7 @@ const event = document.createEvent('Event');
 event.initEvent('build', true, true);
 
 // Listen for the event.
-elem.addEventListener('build', function (e) {
+elem.addEventListener('build', (e) => {
   // e.target matches elem
 }, false);
 

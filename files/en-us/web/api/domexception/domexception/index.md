@@ -52,7 +52,7 @@ In this example, pressing the button causes a custom `DOMException` to be thrown
 ```js
 const button = document.querySelector('button');
 
-button.onclick = function() {
+button.onclick = () => {
     try {
         throw new DOMException("Custom DOM Exception Triggered.");
     } catch(error) {

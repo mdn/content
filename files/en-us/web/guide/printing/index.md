@@ -41,10 +41,12 @@ If you want to be able to automatically close a [popup window](/en-US/docs/Web/A
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>JavaScript Window Close Example </title>
-  <script type="text/javascript">
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width">
+<title>JavaScript Window Close Example </title>
+  <script>
     function popuponclick() {
       my_window = window.open('', 'mywindow', 'status=1,width=350,height=150');
       my_window.document.write('<html><head><title>Print Me</title></head>');
@@ -71,11 +73,12 @@ If you want to be able to print an external page without opening it, you can uti
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width">
 <title>MDN Example</title>
-<script type="text/javascript">
+<script>
 function closePrint () {
   document.body.removeChild(this.__container__);
 }

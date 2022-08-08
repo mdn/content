@@ -412,7 +412,7 @@ To learn about how to style or format code examples for MDN Web Docs, see [Guide
 
 External links are allowed on MDN Web Docs in specific situations. Use the guidelines described in this section to decide whether or not it is okay to include an external link on MDN Web Docs. Your pull request to add an external link will be rejected if it does not meet the guidelines described here.
 
-In general, if you’re considering adding an external link, you need to ensure that there is minimal risk of the following:
+In general, if you're considering adding an external link, you need to ensure that there is minimal risk of the following:
 
 - Broken or outdated links
 - Appearance of endorsement, especially for commercial products or services
@@ -426,16 +426,16 @@ Good external links take readers to resources that are relevant, durable, and wi
 
 - Unique or indispensable (e.g., an IETF RFC)
 - Necessary for attribution, citation, or acknowledgement (e.g., as part of a Creative Commons attribution)
-- More likely to be maintained for the topic than incorporating such content on MDN Web Docs itself (e.g., a vendor’s release notes)
+- More likely to be maintained for the topic than incorporating such content on MDN Web Docs itself (e.g., a vendor's release notes)
 - Open source or community-driven, like MDN Web Docs itself
 
 #### Poor external links
 
 Poor external links lack relevance, maintainability, accessibility, or otherwise put up barriers to readers. Avoid adding links to external content that is:
 
-- Generic or non-specific (e.g., a vendor’s home page, instead of the related documentation)
+- Generic or non-specific (e.g., a vendor's home page, instead of the related documentation)
 - Ephemeral or unmaintained (e.g., a one-time announcement)
-- Self-linking or self-promotional (e.g., the author’s own work off of MDN Web Docs)
+- Self-linking or self-promotional (e.g., the author's own work off of MDN Web Docs)
 - Paywalled (e.g., an expensive course beyond the reach of hobbyists, students, or readers living in lower-income countries)
 - Inaccessible (e.g., a video without captions)
 
@@ -445,7 +445,7 @@ While a personal blog post, conference talk, or GitHub repository has value, lin
 
 **If you have a business or personal relationship with the target of a link, you must disclose that relationship in your pull request. Failure to do so may imperil your continued participation with MDN Web Docs.**
 
-Sometimes such links are relevant and appropriate. For example, if you’re the editor of a specification and you’re contributing to documentation related to that specification, then linking to that specification is expected and acceptable. But you must disclose the relationship between you and the link.
+Sometimes such links are relevant and appropriate. For example, if you're the editor of a specification and you're contributing to documentation related to that specification, then linking to that specification is expected and acceptable. But you must disclose the relationship between you and the link.
 
 ### Heading levels
 

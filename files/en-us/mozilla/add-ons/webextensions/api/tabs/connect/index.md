@@ -66,7 +66,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let gettingActive = browser.tabs.query({
     currentWindow: true, active: true
   });

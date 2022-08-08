@@ -22,7 +22,7 @@ Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opp
 ```js
 myFunction(a, ...iterableObj, b)
 [1, ...iterableObj, '4', 'five', 6]
-({ ...obj, key: 'value' })
+{ ...obj, key: 'value' }
 ```
 
 ## Description

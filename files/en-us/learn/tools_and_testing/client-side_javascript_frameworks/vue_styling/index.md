@@ -466,6 +466,15 @@ Now we need to add some CSS classes to our template to connect the styles.
 
 To the root `<div>`, add a `custom-checkbox` class. To the `<input>`, add a `checkbox` class. Last of all, to the `<label>` add a `checkbox-label` class. The updated template is below:
 
+```html
+<template>
+  <div class="custom-checkbox">
+    <input type="checkbox" :id="id" :checked="isDone" class="checkbox" />
+    <label :for="id" class="checkbox-label">\{{label}}</label>
+  </div>
+</template>
+```
+
 The app should now have custom checkboxes. Your app should look something like the screenshot below.
 
 ![the todo app with complete styling. The input form is now styled properly, and the todo items now have spacing and custom checkboxes](todo-app-complete-styles.png)

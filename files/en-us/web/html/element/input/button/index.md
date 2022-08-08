@@ -170,7 +170,7 @@ button.addEventListener('click', disableButton);
 function disableButton() {
   button.disabled = true;
   button.value = 'Disabled';
-  window.setTimeout(function() {
+  setTimeout(function() {
     button.disabled = false;
     button.value = 'Enabled';
   }, 2000);
@@ -202,7 +202,7 @@ button.addEventListener('click', disableButton);
 
 function disableButton() {
   fieldset.disabled = true;
-  window.setTimeout(function() {
+  setTimeout(function() {
     fieldset.disabled = false;
   }, 2000);
 }

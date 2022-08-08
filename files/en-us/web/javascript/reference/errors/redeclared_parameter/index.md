@@ -56,7 +56,7 @@ function f(arg) {
   arg = 'foo';
 }
 
-function f(arg) {
+function g(arg) {
   let bar = 'foo';
 }
 ```

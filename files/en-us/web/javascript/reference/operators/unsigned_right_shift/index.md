@@ -35,7 +35,7 @@ Consider the 32-bit binary representations of the decimal (base 10) numbers `9` 
     -9 (base 10): 11111111111111111111111111110111 (base 2)
 ```
 
-Notice that the binary representation of the negative decimal (base 10) number `-9` is the [two's complement](https://en.wikipedia.org/wiki/Two's_complement) of the binary representation of the positive decimal (base 10) number `9`. That is, it’s calculated by inverting all the bits of `00000000000000000000000000001001` and adding `1`.
+Notice that the binary representation of the negative decimal (base 10) number `-9` is the [two's complement](https://en.wikipedia.org/wiki/Two's_complement) of the binary representation of the positive decimal (base 10) number `9`. That is, it's calculated by inverting all the bits of `00000000000000000000000000001001` and adding `1`.
 
 In both cases, the sign of the binary number is given by its leftmost bit: for the positive decimal number `9`, the leftmost bit of the binary representation is `0`, and for the negative decimal number `-9`, the leftmost bit of the binary representation is `1`.
 
