@@ -65,7 +65,7 @@ function print_perf_entry(pe) {
 const observe_all = new PerformanceObserver((list, obs) => {
   // Print all entries
   let perfEntries = list.getEntries();
-    perfEntries.forEach((entry) => print_perf_entry(entry));
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 
   // Print entries named "Begin" with type "mark"
   perfEntries = list.getEntriesByName("Begin", "mark");
