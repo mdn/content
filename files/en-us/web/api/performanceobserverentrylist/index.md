@@ -31,7 +31,7 @@ Note: this interface is exposed to {{domxref("Window")}} and {{domxref("Worker")
 // list is of type PerformanceObserveEntryList
 const observe_all = new PerformanceObserver((list, obs) => {
   const perfEntries = list.getEntries();
-  perfEntries.forEach((entry) => print_perf_entry(perfEntries[i]));
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 })
 ```
 
