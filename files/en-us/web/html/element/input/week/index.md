@@ -28,11 +28,11 @@ The control's user interface varies from browser to browser; cross-browser suppo
 
 In Chrome/Opera the `week` control provides slots to fill in week and year values, a pop-up calendar interface to select them more visually, and an "X" button to clear the control's value.
 
-![](week-control-chrome.png)
+![An input reading 'week 01, 2017'. The background of the 2017 is the same blue as the focus ring. There are 3 icons in the input: x or clear, a spinner with small up and down arrows, and a larger down arrow. A calendar is the popup below the input set to January 2017. The first column of the calendar is the week: 52, 1, 2, 3, 4, 5. the full month calendar is to the right of that. The row with Week 1 and january 2 to 8 is highlited. On the same line as the month there are buttons to move right and left for the next and previous months.](week-control-chrome.png)
 
 The Edge `week` control is somewhat more elaborate, opening up week and year pickers with sliding reels.
 
-![](week-control-edge.png)
+![An input reading 'week 01, 2017'. A popup is open below with two columns. The left column has a list of weeks, from week 48 to Week 52, continuing with week 01 to week 05. The right side has years, from 2012 to 2022. Week 01 and 2017 are in the middle, highlited with a blue background. At the bottom there is a row with a checkbox and an X; likely buttons.](week-control-edge.png)
 
 <table class="properties">
   <tbody>
@@ -240,7 +240,7 @@ If you try to submit the form with no value, the browser displays an error. Try 
 
 Here's'a screenshot for those of you who aren't using a supporting browser:
 
-![](week-validation-chrome.png)
+![The week form control has two dashes where the week number should be. A popup with a yellow warning symbol and a 'Please fill out this field' is eminating from the two dashes, which are hilighted in blue; the same blue as the input's focus ring.](week-validation-chrome.png)
 
 > **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 
@@ -250,7 +250,7 @@ As mentioned above, the major problem with using week inputs right now is browse
 
 Mobile platforms such as Android and iOS make really good use of such input types, providing specialist UI controls that make it really easy to select values in a touchscreen environment. For example, the `week` picker on Chrome for Android looks like this:
 
-![](week-chrome-android.png)
+![A modal popup. The header reads 'set week'. There are two columns: the left has 36 in the middle at full opacity with 35 above it and  37 below being semi-opaque. On the right side, 2017 is fully opaque. There are no other options. Three text links or buttons on the bottom include 'clear' on the 'left' and 'cancel' and 'set' on the right.](week-chrome-android.png)
 
 Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 

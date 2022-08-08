@@ -29,7 +29,7 @@ This element is unsupported and thus implements the {{domxref("HTMLUnknownElemen
 
 ### Result (toned down!)
 
-![](htmlblinkelement.gif)
+![Text "why would somebody use this" flashing on and off](htmlblinkelement.gif)
 
 ## CSS polyfill
 
