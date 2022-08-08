@@ -148,7 +148,9 @@ let error = null;
 
 try {
   SubClass.basePublicStaticMethod();
-} catch(e) { error = e};
+} catch (e) {
+  error = e;
+}
 
 console.log(error instanceof TypeError);
 // true
