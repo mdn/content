@@ -232,7 +232,8 @@ navigator.presentation.receiver.connectionList.then((list) => {
 
 ### Passing locale information with a message
 
-In the `controller.html` file: 
+In the `controller.html` file:
+
 ```html
 <script>
   connection.send("{string: '你好，世界!', lang: 'zh-CN'}");
