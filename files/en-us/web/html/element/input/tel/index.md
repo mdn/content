@@ -442,7 +442,7 @@ selectElem.onchange = () => {
 
     inputElems[1].placeholder = "Local number";
     inputElems[1].pattern = "[0-9]{4,8}";
-    inputElems[1].setAttribute("aria-label","Local number");
+    inputElems[1].setAttribute("aria-label", "Local number");
   } else if (selectElem.value === "Germany") {
     inputElems[2].parentNode.style.display = "inline";
 
