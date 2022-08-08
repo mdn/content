@@ -18,7 +18,6 @@ The Contact Picker API allows users to select entries from their contact list an
 
 > **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
-
 ## Contact Picker API Concepts and Usage
 
 Access to contacts has long been a feature available within native applications. The Contacts Picker API brings that functionality to web applications.

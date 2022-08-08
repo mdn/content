@@ -202,7 +202,7 @@ To sort this out, we have added a second `background-color` declaration, which j
 
 #### Selector support
 
-Of course, no CSS features will apply at all if you don't use the right [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to select the element you want to style! 
+Of course, no CSS features will apply at all if you don't use the right [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to select the element you want to style!
 
 In a comma separated list of selectors, if you just write a selector incorrectly, it may not match any element. If, however, a selector is invalid, the entire list of selectors and the selector block are ignored. For this reason, you never want to include a :-moz- prefixed pseudo class or pseudo-element in a group of selectors as all browsers other than Firefox will ignore the entire block.
 
@@ -242,10 +242,9 @@ While none of these properties requires a prefix, you may encounter this old CSS
 
 The last three lines show three different versions of the [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient) function, which is originally how linear gradient were written:
 
-The first one has a `-moz-` prefix, the second a `-webkit-` prefix, and 
-the third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
+The first one has a `-moz-` prefix, the second a `-webkit-` prefix, and the third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
 
-Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. This is particularly a problem when developers decide to only use say, the `-webkit-` version of a property — meaning that the site won't work in other browsers. This actually happened so much that other browsers implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so developers can test them during development. 
+Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. This is particularly a problem when developers decide to only use say, the `-webkit-` version of a property — meaning that the site won't work in other browsers. This actually happened so much that other browsers implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so developers can test them during development.
 
 If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes on MDN reference pages, and sites like [caniuse.com](https://caniuse.com/). If you are unsure, you can also find out by doing some testing directly in browsers.
 
