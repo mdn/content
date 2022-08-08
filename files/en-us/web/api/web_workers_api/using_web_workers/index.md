@@ -221,7 +221,7 @@ However, since web workers have carefully controlled communication points with o
 
 Workers are considered to have their own execution context, distinct from the document that created them. For this reason they are, in general, not governed by the [content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) of the document (or parent worker) that created them. So for example, suppose a document is served with the following header:
 
-```plain
+```http
 Content-Security-Policy: script-src 'self'
 ```
 
@@ -261,16 +261,16 @@ console.log(typeof emulateMessage(example3)); // string
 
 // test #4
 const example4 = {
-  'name': 'John Smith',
-  "age": 43
+  name: 'John Smith',
+  age: 43,
 };
 console.log(typeof example4); // object
 console.log(typeof emulateMessage(example4)); // object
 
 // test #5
-function Animal(sType, nAge) {
-  this.type = sType;
-  this.age = nAge;
+function Animal(type, age) {
+  this.type = type;
+  this.age = age;
 }
 const example5 = new Animal('Cat', 3);
 alert(example5.constructor); // Animal
@@ -348,13 +348,13 @@ Here we let the worker handle two simple operations for illustration: getting th
 ```js
 // This functions takes at least one argument, the method name we want to query.
 // Then we can pass in the arguments that the method needs.
-this.sendQuery = () => {
-  if (arguments.length < 1) {
+this.sendQuery = (queryMethod, ...queryMethodArguments) => {
+  if (!queryMethod) {
     throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
   }
   worker.postMessage({
-    'queryMethod': arguments[0],
-    'queryMethodArguments': Array.prototype.slice.call(arguments, 1)
+    queryMethod,
+    queryMethodArguments,
   });
 }
 ```
@@ -363,9 +363,11 @@ We finish QueryableWorker with the `onmessage` method. If the worker has the cor
 
 ```js
 worker.onmessage = (event) => {
-  if (event.data instanceof Object &&
-      Object.hasOwn(event.data, 'queryMethodListener') &&
-      Object.hasOwn(event.data, 'queryMethodArguments')) {
+  if (
+    event.data instanceof Object &&
+    Object.hasOwn(event.data, 'queryMethodListener') &&
+    Object.hasOwn(event.data, 'queryMethodArguments')
+  ) {
     listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
   } else {
     this.defaultListener.call(instance, event.data);
@@ -387,13 +389,13 @@ const queryableFunctions = {
   }
 }
 
-function reply() {
-  if (arguments.length < 1) {
+function reply(queryMethodListener, ...queryMethodArguments) {
+  if (!queryMethodListener) {
     throw new TypeError('reply - takes at least one argument');
   }
   postMessage({
-    queryMethodListener: arguments[0],
-    queryMethodArguments: Array.prototype.slice.call(arguments, 1)
+    queryMethodListener,
+    queryMethodArguments,
   });
 }
 
@@ -407,9 +409,11 @@ And the `onmessage` method is now trivial:
 
 ```js
 onmessage = (event) => {
-  if (event.data instanceof Object &&
-      Object.hasOwn(event.data, 'queryMethod') &&
-      Object.hasOwn(event.data, 'queryMethodArguments')) {
+  if (
+    event.data instanceof Object &&
+    Object.hasOwn(event.data, 'queryMethod') &&
+    Object.hasOwn(event.data, 'queryMethodArguments')
+  ) {
     queryableFunctions[event.data.queryMethod]
       .apply(self, event.data.queryMethodArguments);
   } else {
@@ -439,8 +443,8 @@ Here are the full implementation:
       // QueryableWorker instances properties:
       //   * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
       function QueryableWorker(url, defaultListener, onError) {
-        const instance = this,
-        const worker = new Worker(url),
+        const instance = this;
+        const worker = new Worker(url);
         const listeners = {};
 
         this.defaultListener = defaultListener ?? (() => {});
@@ -465,20 +469,22 @@ Here are the full implementation:
 
         // This functions takes at least one argument, the method name we want to query.
         // Then we can pass in the arguments that the method needs.
-        this.sendQuery = () => {
-          if (arguments.length < 1) {
+        this.sendQuery = (queryMethod, ...queryMethodArguments) => {
+          if (!queryMethod) {
             throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
           }
           worker.postMessage({
-            'queryMethod': arguments[0],
-            'queryMethodArguments': Array.prototype.slice.call(arguments, 1)
+            queryMethod,
+            queryMethodArguments,
           });
         }
 
         worker.onmessage = (event) => {
-          if (event.data instanceof Object &&
-              Object.hasOwn(event.data, 'queryMethodListener') &&
-              Object.hasOwn(event.data, 'queryMethodArguments')) {
+          if (
+            event.data instanceof Object &&
+            Object.hasOwn(event.data, 'queryMethodListener') &&
+            Object.hasOwn(event.data, 'queryMethodArguments')
+          ) {
             listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
           } else {
             this.defaultListener.call(instance, event.data);
@@ -491,7 +497,9 @@ Here are the full implementation:
 
       // your custom "listeners"
       myTask.addListener('printStuff', (result) => {
-        document.getElementById('firstLink').parentNode.appendChild(document.createTextNode(`The difference is ${result}!`));
+        document.getElementById('firstLink')
+          .parentNode
+          .appendChild(document.createTextNode(`The difference is ${result}!`));
       });
 
       myTask.addListener('doAlert', (time, unit) => {
@@ -514,8 +522,8 @@ Here are the full implementation:
 ```js
 const queryableFunctions = {
   // example #1: get the difference between two numbers:
-  getDifference(nMinuend, nSubtrahend) {
-    reply('printStuff', nMinuend - nSubtrahend);
+  getDifference(minuend, subtrahend) {
+    reply('printStuff', minuend - subtrahend);
   },
   
   // example #2: wait three seconds
@@ -531,13 +539,22 @@ function defaultReply(message) {
   // do something
 }
 
-function reply() {
-  if (arguments.length < 1) { throw new TypeError('reply - not enough arguments'); }
-  postMessage({ 'queryMethodListener': arguments[0], 'queryMethodArguments': Array.prototype.slice.call(arguments, 1) });
+function reply(queryMethodListener, ...queryMethodArguments) {
+  if (!queryMethodListener) {
+    throw new TypeError('reply - not enough arguments');
+  }
+  postMessage({
+    queryMethodListener,
+    queryMethodArguments,
+  });
 }
 
 onmessage = (event) => {
-  if (event.data instanceof Object && Object.hasOwn(event.data, 'queryMethod') && Object.hasOwn(event.data, 'queryMethodArguments')) {
+  if (
+    event.data instanceof Object &&
+    Object.hasOwn(event.data, 'queryMethod') &&
+    Object.hasOwn(event.data, 'queryMethodArguments')
+  ) {
     queryableFunctions[event.data.queryMethod].apply(self, event.data.queryMethodArguments);
   } else {
     defaultReply(event.data);
@@ -655,7 +672,7 @@ function fibonacci(num){
   let a = 1;
   let b = 0;
   while (num >= 0){
-    [a, b] = [a+b, a];
+    [a, b] = [a + b, a];
     num--;
   }
 
