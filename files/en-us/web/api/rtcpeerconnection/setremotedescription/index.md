@@ -62,9 +62,7 @@ The `sessionDescription` parameter is technically of type
 ```js
 myPeerConnection
   .setRemoteDescription(new RTCSessionDescription(description))
-  .then(() => {
-    return createMyStream();
-  });
+  .then(() => createMyStream());
 ```
 
 to be:
