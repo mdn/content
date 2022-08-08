@@ -134,8 +134,10 @@ if (window.PaymentRequest) {
     // Every click on the checkout button should use a new instance of
     // PaymentRequest object, because PaymentRequest.show() can be
     // called only once per instance.
-    request = new PaymentRequest(buildSupportedPaymentMethodNames(),
-                                 buildShoppingCartDetails());
+    request = new PaymentRequest(
+      buildSupportedPaymentMethodNames(),
+      buildShoppingCartDetails()
+    );
   });
 }
 ```
