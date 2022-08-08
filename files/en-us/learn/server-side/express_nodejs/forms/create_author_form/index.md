@@ -79,9 +79,12 @@ exports.author_create_post = [
 ];
 ```
 
+> **Warning:** Never validate _names_ using `isAlphanumeric()` (as we have done above) as there are many names that use other character sets.
+> We do it here in order to demonstrate how the validator is used, and how it can be daisy-chained with other validators and error reporting.
+
 The structure and behavior of this code is almost exactly the same as for creating a `Genre` object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid then we save the new author record and redirect the user to the author detail page.
 
-> **Note:** Unlike with the `Genre` post handler, we don't check whether the `Author` object already exists before saving it. Arguably we should, though as it is now we can have multiple authors with the same name.
+Unlike with the `Genre` post handler, we don't check whether the `Author` object already exists before saving it. Arguably we should, though as it is now we can have multiple authors with the same name.
 
 The validation code demonstrates several new features:
 
