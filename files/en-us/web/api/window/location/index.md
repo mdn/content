@@ -175,7 +175,7 @@ const showBookmark = (() => {
   let frames = 10;
 
   function _next() {
-    if (_itFrame > nFrames) { 
+    if (_itFrame > frames) {
       clearInterval(_scrollId); 
       _scrollId = -1; 
       return;
