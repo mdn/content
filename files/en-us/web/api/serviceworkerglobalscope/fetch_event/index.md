@@ -58,7 +58,7 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
       if (response) {
-        console.log('Found response in cache: ', response);
+        console.log('Found response in cache:', response);
         return response;
       }
       console.log('No response found in cache. About to fetch from network…');
