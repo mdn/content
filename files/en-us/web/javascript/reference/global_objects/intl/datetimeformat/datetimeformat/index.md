@@ -215,7 +215,7 @@ new Intl.DateTimeFormat(locales, options)
       - : The representation of the day. Possible values are:
 
         - `"numeric"` (e.g., `1`)
-        - (e.g., `01`)
+        - `"2-digit"` (e.g., `01`)
 
     - `hour`
       - : The representation of the hour. Possible values are
