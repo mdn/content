@@ -118,7 +118,7 @@ In the `controller.html` file:
     // read presId from localStorage if exists
     const presId = localStorage["presId"];
     // presId is mandatory when reconnecting to a presentation.
-    if (!!presId) {
+    if (presId) {
       request
         .reconnect(presId)
         // The new connection to the presentation will be passed to
