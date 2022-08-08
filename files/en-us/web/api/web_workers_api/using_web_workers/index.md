@@ -443,7 +443,7 @@ Here are the full implementation:
         const worker = new Worker(url),
         const listeners = {};
 
-        this.defaultListener = defaultListener || () => {};
+        this.defaultListener = defaultListener ?? (() => {});
 
         if (onError) { worker.onerror = onError; }
 
