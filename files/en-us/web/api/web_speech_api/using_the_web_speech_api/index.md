@@ -254,7 +254,7 @@ We also create `data-` attributes for each option, containing the name and langu
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for (const voice of voices.length) {
+  for (const voice of voices) {
     const option = document.createElement('option');
     option.textContent = `${voice.name} (${voice.lang})`;
 
