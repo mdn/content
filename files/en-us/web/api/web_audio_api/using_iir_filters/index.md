@@ -203,7 +203,10 @@ for (let i = 0; i < magResponseOutput.length; i++) {
       height - magResponseOutput[i] * 100 - spacing,
     );
   } else {
-    canvasCtx.lineTo((width/totalArrayItems)*i, height-(magResponseOutput[i]*100)-spacing );
+    canvasCtx.lineTo(
+      width / totalArrayItems * i,
+      height - magResponseOutput[i] * 100 - spacing,
+    );
   }
 }
 
