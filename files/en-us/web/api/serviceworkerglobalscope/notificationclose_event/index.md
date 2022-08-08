@@ -53,7 +53,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 ```js
 //Inside a service worker.
-self.onnotificationclose = function(event) {
+self.onnotificationclose = (event) => {
   console.log('On notification close: ', event.notification.tag);
 };
 ```

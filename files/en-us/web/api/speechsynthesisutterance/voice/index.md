@@ -37,7 +37,7 @@ const voices = synth.getVoices();
 
 // ...
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);

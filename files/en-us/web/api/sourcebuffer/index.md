@@ -87,22 +87,22 @@ const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   const mediaSource = new MediaSource();
-  //console.log(mediaSource.readyState); // closed
+  console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
 } else {
-  console.error('Unsupported MIME type or codec: ', mimeCodec);
+  console.error(`Unsupported MIME type or codec: ${mimeCodec}`);
 }
 
-function sourceOpen (_) {
-  //console.log(this.readyState); // open
+function sourceOpen() {
+  console.log(this.readyState); // open
   const mediaSource = this;
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+  fetchAB(assetURL, (buf) => {
+    sourceBuffer.addEventListener('updateend', () => {
       mediaSource.endOfStream();
       video.play();
-      //console.log(mediaSource.readyState); // ended
+      console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
@@ -113,7 +113,7 @@ function fetchAB (url, cb) {
   const xhr = new XMLHttpRequest;
   xhr.open('get', url);
   xhr.responseType = 'arraybuffer';
-  xhr.onload = function () {
+  xhr.onload = () => {
     cb(xhr.response);
   };
   xhr.send();
