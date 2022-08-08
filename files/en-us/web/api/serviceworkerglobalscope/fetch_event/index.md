@@ -64,7 +64,7 @@ self.addEventListener('fetch', (event) => {
       console.log('No response found in cache. About to fetch from network…');
 
       return fetch(event.request).then((response) => {
-        console.log(`Response from network is: ${response}`);
+        console.log('Response from network is: ', response);
 
         return response;
       }).catch((error) => {
