@@ -23,11 +23,6 @@ For example `"screen, print"`, or `all` (the default).
 
 The value is initialized with the string specified in the corresponding style's [`media` attribute](/en-US/docs/Web/SVG/Element/style#media).
 
-## Exceptions
-
-SVG 1.1 defined that a {{domxref("DOMException")}} is raised with code `NO_MODIFICATION_ALLOWED_ERR` on an attempt to change the value of a read-only attribute.
-This restriction was removed in SVG 2.
-
 ## Examples
 
 This example demonstrates programmatically getting and setting the media property on a style that was defined in an SVG definition.

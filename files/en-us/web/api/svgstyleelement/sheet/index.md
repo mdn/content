@@ -46,18 +46,19 @@ svg.appendChild(style);
 style.appendChild(node);
 ```
 
-We then get the sheet associated with this new element using `style.sheet` and log it to the text area.
+The code below then logs the sheet and CSS rule associated with this new element, using `style.sheet`. 
+To make 
 
 ```js
 // Log the sheet associated with this new element.
 const log = document.getElementById("log")
-log.value = `Style sheet object: ${style.sheet} with rules[0].cssText:\n ${style.sheet.rules[0].cssText}`;
+log.value = `${style.sheet} with rules[0].cssText:\n ${style.sheet.rules[0].cssText}`;
 ```
 
 #### Result
 
 The result is shown below.
-The CSS rule displayed below is the one that is applied to this SVG circle.
+On success, the log shows the `CSSStyleSheet` object applied to the SVG circle.
 
 {{EmbedLiveSample("Examples")}}
 
