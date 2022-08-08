@@ -24,7 +24,7 @@ Most servers don't by default serve Ogg media with the correct MIME types, so yo
 
 For Apache, you can add the following to your configuration:
 
-```apache
+```plain
 AddType audio/ogg .oga
 AddType video/ogg .ogv
 AddType application/ogg .ogg
