@@ -25,8 +25,8 @@ width: calc( sin(0.25turn) * 100px );
 width: calc( sin(1.0471967rad) * 100px );
 
 /* Single <number> values */
-width: calc( sin(3.141592653589793) * 100px ); /* pi */
-width: calc( sin(1.57079632679) * 100px ); /* pi / 2 */
+width: calc( sin(63.673) * 100px );
+width: calc( sin(2 * 0.125) * 100px );
 
 /* Other values */
 width: calc( sin(pi / 2) * 100px );
