@@ -48,7 +48,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `error` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('error', function(event) {
+utterThis.addEventListener('error', (event) => {
   console.log(`An error has occurred with the speech synthesis: ${event.error}`);
 });
 ```
@@ -56,7 +56,7 @@ utterThis.addEventListener('error', function(event) {
 Or use the `onerror` event handler property:
 
 ```js
-utterThis.onerror = function(event) {
+utterThis.onerror = (event) => {
   console.log(`An error has occurred with the speech synthesis: ${event.error}`);
 }
 ```

@@ -688,7 +688,7 @@ setupSample().then((sample) => {
       requestAnimationFrame(draw); // start the drawing loop.
       ev.target.dataset.playing = "true";
     } else {
-      window.clearTimeout(timerID);
+      clearTimeout(timerID);
       ev.target.dataset.playing = "false";
     }
   });

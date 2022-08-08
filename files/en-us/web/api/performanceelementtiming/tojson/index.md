@@ -39,7 +39,7 @@ In this example calling `entry.toJSON()` returns a JSON representation of the `P
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.toJSON());
     }

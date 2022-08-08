@@ -183,7 +183,7 @@ function alertContents() {
         alert('There was a problem with the request.');
       }
     }
-  } catch(e) {
+  } catch (e) {
     alert('Caught Exception: ' + e.description);
   }
 }

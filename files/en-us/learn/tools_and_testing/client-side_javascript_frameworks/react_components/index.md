@@ -71,7 +71,7 @@ Since we're going to make a component called `Todo`, you can start adding the co
 ```js
 export default function Todo() {
   return (
-
+    // …
   );
 }
 ```

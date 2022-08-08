@@ -33,9 +33,9 @@ function onVRExitPresent () {
   // we weren't presenting.)
   if (!vrDisplay.isPresenting)
     return;
-  vrDisplay.exitPresent().then(function () {
+  vrDisplay.exitPresent().then(() => {
     // Nothing to do because we're handling things in onVRPresentChange.
-  }, function (err) {
+  }, (err) => {
     let errMsg = "exitPresent failed.";
     if (err && err.message) {
       errMsg += `<br/>${err.message}`;

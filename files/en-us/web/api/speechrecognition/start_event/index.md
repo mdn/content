@@ -33,7 +33,7 @@ You can use the `start` event in an [`addEventListener`](/en-US/docs/Web/API/Eve
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('start', function() {
+recognition.addEventListener('start', () => {
   console.log('Speech recognition service has started');
 });
 ```
@@ -41,7 +41,7 @@ recognition.addEventListener('start', function() {
 Or use the `onstart` event handler property:
 
 ```js
-recognition.onstart = function() {
+recognition.onstart = () => {
   console.log('Speech recognition service has started');
 }
 ```

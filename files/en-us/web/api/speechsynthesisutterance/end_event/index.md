@@ -46,7 +46,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `end` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('end', function(event) {
+utterThis.addEventListener('end', (event) => {
   console.log(`Utterance has finished being spoken after ${event.elapsedTime} seconds.`);
 });
 ```
@@ -54,7 +54,7 @@ utterThis.addEventListener('end', function(event) {
 Or use the `onend` event handler property:
 
 ```js
-utterThis.onend = function(event) {
+utterThis.onend = (event) => {
   console.log(`Utterance has finished being spoken after ${event.elapsedTime} seconds.`);
 }
 ```

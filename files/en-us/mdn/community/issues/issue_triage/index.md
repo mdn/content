@@ -14,7 +14,7 @@ This document looks at the process for triaging content bugs and getting them re
 
 Anyone can report a content bug by writing an issue at <https://github.com/mdn/content/issues/new> using the "Content bug" issue template, or by using the "Report a problem with this content on GitHub" link at the bottom of each MDN page.
 
-Once reported, content bugs are listed at <https://github.com/mdn/content/issues>, and are designed to be done by individuals with minimal process requirements. Anyone is welcome to work on a content bug, using the process outlined at [Fixing MDN content bugs](/en_US/docs/MDN/Community/Issues).
+Once reported, content bugs are listed at <https://github.com/mdn/content/issues>, and are designed to be done by individuals with minimal process requirements. Anyone is welcome to work on a content bug, using the process outlined at [Fixing MDN content bugs](/en-US/docs/MDN/Community/Issues).
 
 ## Overall triage process
 

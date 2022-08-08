@@ -149,7 +149,7 @@ There are 3 **special shortcuts with default actions**, for which the {{WebExtAP
 
 For example, this JSON defines a key combination that clicks the extension's browser action:
 
-```js
+```json
 "commands": {
   "_execute_browser_action": {
     "suggested_key": {

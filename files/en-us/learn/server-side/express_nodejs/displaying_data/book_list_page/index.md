@@ -40,7 +40,7 @@ On success, the callback passed to the query renders the **book_list**(.pug) tem
 
 Create **/views/book_list.pug** and copy in the text below.
 
-```plain
+```pug
 extends layout
 
 block content

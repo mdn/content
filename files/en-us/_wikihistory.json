@@ -43415,34 +43415,6 @@
       "rolfedh"
     ]
   },
-  "Web/API/GlobalEventHandlers": {
-    "modified": "2020-10-24T22:00:58.608Z",
-    "contributors": [
-      "sideshowbarker",
-      "jashorekhabor",
-      "mfuji09",
-      "chrisdavidmills",
-      "colinmorris",
-      "Wind1808",
-      "estelle",
-      "fscholz",
-      "jorgebucaran",
-      "lucian95",
-      "SphinxKnight",
-      "Bodo1445",
-      "jpmedley",
-      "erikadoyle",
-      "Sheppy",
-      "jackblackevo",
-      "teoli",
-      "AFBarstow",
-      "jwhitlock",
-      "Nickolay",
-      "Sebastianz",
-      "yvanoers",
-      "kscarfone"
-    ]
-  },
   "Web/API/Gyroscope": {
     "modified": "2020-10-15T22:08:47.425Z",
     "contributors": [

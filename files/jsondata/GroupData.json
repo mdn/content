@@ -534,7 +534,6 @@
         "BeforeUnloadEvent",
         "DOMStringMap",
         "ErrorEvent",
-        "GlobalEventHandlers",
         "HashChangeEvent",
         "ImageData",
         "HTMLAnchorElement",

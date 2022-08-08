@@ -28,7 +28,7 @@ the channel from the event object and saves it locally for use by the code handl
 traffic.
 
 ```js
-pc.ondatachannel = function(event) {
+pc.ondatachannel = (event) => {
   inboundDataChannel = event.channel;
   inboundDataChannel.onmessage = handleIncomingMessage;
   inboundDataChannel.onopen = handleChannelOpen;

@@ -20,11 +20,15 @@ A read-only array-like `MediaList` object.
 ## Examples
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
-<link rel="stylesheet" href="document.css" type="text/css" media="screen" />
-<style rel="stylesheet" type="text/css" media="screen, print">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Test page</title>
+
+<link rel="stylesheet" href="document.css" media="screen" />
+<style rel="stylesheet" media="screen, print">
 body { background-color: snow; }
 </style>
 </head>

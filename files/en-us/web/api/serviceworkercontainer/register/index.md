@@ -94,13 +94,13 @@ control `example.com/index.html`, as well as pages underneath it, like
 if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
-  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+  navigator.serviceWorker.register('/sw.js').then((registration) => {
     console.log('Service worker registration succeeded:', registration);
-  }, /*catch*/ function(error) {
-    console.log('Service worker registration failed:', error);
+  }, /*catch*/ (error) => {
+    console.error(`Service worker registration failed: ${error}`);
   });
 } else {
-  console.log('Service workers are not supported.');
+  console.error('Service workers are not supported.');
 }
 ```
 
@@ -116,13 +116,13 @@ resources under `example.com/product`.
 ```js
 if ('serviceWorker' in navigator) {
   // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
+  navigator.serviceWorker.register('/sw.js', {scope: './'}).then((registration) => {
     console.log('Service worker registration succeeded:', registration);
-  }, /*catch*/ function(error) {
-    console.log('Service worker registration failed:', error);
+  }, /*catch*/ (error) => {
+    console.error(`Service worker registration failed: ${error}`);
   });
 } else {
-  console.log('Service workers are not supported.');
+  console.error('Service workers are not supported.');
 }
 ```
 
@@ -136,13 +136,13 @@ a site, would only apply to resources under `example.com/product`.
 ```js
 if ('serviceWorker' in navigator) {
   // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', {scope: '/product/'}).then(function(registration) {
+  navigator.serviceWorker.register('/sw.js', {scope: '/product/'}).then((registration) => {
     console.log('Service worker registration succeeded:', registration);
-  }, /*catch*/ function(error) {
-    console.log('Service worker registration failed:', error);
+  }, /*catch*/ (error) => {
+    console.error(`Service worker registration failed: ${error}`);
   });
 } else {
-  console.log('Service workers are not supported.');
+  console.error('Service workers are not supported.');
 }
 ```
 

@@ -51,7 +51,7 @@ fetch('module.wasm').then((response) =>
 
 The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — the one shown above takes the byte code to compile as an argument and returns a Promise that resolves to an object containing both the compiled module object and an instantiated instance of it. The object looks like this:
 
-```js
+```
 {
   module : Module // The newly compiled WebAssembly.Module object,
   instance : Instance // A new WebAssembly.Instance of the module object

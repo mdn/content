@@ -67,7 +67,7 @@ function `console.log`. To fix this, we could put a`'` after the
 "Script" string:
 
 ```js example-good
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\"');
+console.log('"Java" + "Script" = "' + 'Java' + 'Script"');
 // '"Java" + "Script" = "JavaScript"'
 ```
 

@@ -10,14 +10,14 @@ tags:
   - Overview
   - PWA
   - contact picker
+  - Experimental
 browser-compat: api.ContactsManager
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}{{SeeCompatTable}}
 
 The Contact Picker API allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 
 > **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
-
 
 ## Contact Picker API Concepts and Usage
 

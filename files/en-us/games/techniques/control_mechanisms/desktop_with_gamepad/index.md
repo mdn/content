@@ -126,20 +126,20 @@ First off, we'll create a small library that will take care of handling the inpu
 
 ```js
 const GamepadAPI = {
-    active: false,
-    controller: {},
-    connect(event) {},
-    disconnect(event) {},
-    update() {},
-    buttons: {
-        layout: [],
-        cache: [],
-        status: [],
-        pressed(button, state) {}
-    }
-    axes: {
-        status: []
-    }
+  active: false,
+  controller: {},
+  connect(event) {},
+  disconnect(event) {},
+  update() {},
+  buttons: {
+    layout: [],
+    cache: [],
+    status: [],
+    pressed(button, state) {},
+  },
+  axes: {
+    status: [],
+  },
 };
 ```
 

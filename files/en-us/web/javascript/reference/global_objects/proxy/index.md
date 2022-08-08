@@ -471,7 +471,7 @@ const docCookies = new Proxy(docCookies, {
     return target.setItem(key, value);
   },
   deleteProperty(target, key) {
-    if (!key in target) { return false; }
+    if (!(key in target)) { return false; }
     return target.removeItem(key);
   },
   ownKeys(target) {

@@ -65,7 +65,7 @@ If you receive anything that makes you feel uncomfortable, you should always rep
 
 Think about what you want to do on the project. For example, we have a large list of issues filed at on the [contributors task board](https://github.com/orgs/mdn/projects/25/views/1), broken up by various task types.
 
-You could also contribute by opening [pull requests](/en_US/docs/MDN/Community/Pull_requests) to fix problems that you come across while reading MDN articles.
+You could also contribute by opening [pull requests](/en-US/docs/MDN/Community/Pull_requests) to fix problems that you come across while reading MDN articles.
 
 A lot of the work on MDN revolves around writing documentation and code examples, but there are other ways to contribute too:
 

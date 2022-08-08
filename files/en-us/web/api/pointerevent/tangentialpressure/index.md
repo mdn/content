@@ -35,7 +35,7 @@ are called depending on the value of the event's `tangentialPressure`
 property.
 
 ```js
-someElement.addEventListener('pointerdown', function(event) {
+someElement.addEventListener('pointerdown', (event) => {
   if (event.tangentialPressure === 0) {
     // No pressure
     process_no_tanPressure(event);

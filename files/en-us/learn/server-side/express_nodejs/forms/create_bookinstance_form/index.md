@@ -100,7 +100,7 @@ The structure and behavior of this code is the same as for creating our other ob
 
 Create **/views/bookinstance_form.pug** and copy in the text below.
 
-```plain
+```pug
 extends layout
 
 block content

@@ -60,7 +60,7 @@ self.addEventListener('install', (event) => {
     'https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif'
   ];
 
-console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
+  console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
 
   event.waitUntil(
     caches.open(CURRENT_CACHES['prefetch']).then((cache) => {

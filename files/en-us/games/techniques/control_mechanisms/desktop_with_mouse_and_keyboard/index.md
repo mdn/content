@@ -148,7 +148,7 @@ In the main menu of the game, we can add an extra way to begin playing. The Star
 
 ```js
 const keyEnter = this.game.input.keyboard.addKey(Phaser.KeyCode.ENTER);
-const keyEnter.onDown.add(this.clickStart, this);
+keyEnter.onDown.add(this.clickStart, this);
 ```
 
 You can use `addKey()` to add any key the `Phaser.KeyCode` object has to offer. The `onDown()` function is executed whenever the <kbd>Enter</kbd> key is pressed. It will launch the `clickStart()` method, which starts a new game.

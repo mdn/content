@@ -8,6 +8,7 @@ tags:
   - Reference
   - deleted
   - CookieChangeEvent
+  - Experimental
 browser-compat: api.CookieChangeEvent.deleted
 ---
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}

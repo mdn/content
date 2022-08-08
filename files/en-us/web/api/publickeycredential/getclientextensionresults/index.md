@@ -81,10 +81,10 @@ const publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
+  .then((newCredentialInfo) => {
     const myBuffer = newCredentialInfo.getClientExtensionResults();
     // myBuffer will contain the result of any of the processing of the "loc" and "uvi" extensions
-  }).catch(function (err) {
+  }).catch((err) => {
      console.error(err);
   });
 ```

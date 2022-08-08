@@ -124,7 +124,7 @@ delete Object.prototype; // throws a TypeError
 
 Fourth, strict mode requires that function parameter names be unique. In normal code the last duplicated argument hides previous identically-named arguments. Those previous arguments remain available through `arguments[i]`, so they're not completely inaccessible. Still, this hiding makes little sense and is probably undesirable (it might hide a typo, for example), so in strict mode duplicate argument names are a syntax error:
 
-```js
+```js example-bad
 function sum(a, a, c) { // !!! syntax error
   'use strict';
   return a + a + c; // wrong if this code ran
@@ -139,7 +139,7 @@ const a = 0o10; // ES2015: Octal
 
 Novice developers sometimes believe a leading zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading zero syntax for the octal is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
 
-```js
+```js example-bad
 'use strict';
 const sum = 015 + // !!! syntax error
             197 +
@@ -172,7 +172,7 @@ Strict mode simplifies how variable names map to particular variable definitions
 
 First, strict mode prohibits [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with). The problem with `with` is that any name inside the block might map either to a property of the object passed to it, or to a variable in surrounding (or even global) scope, at runtime; it's impossible to know which beforehand. Strict mode makes `with` a syntax error, so there's no chance for a name in a `with` to refer to an unknown location at runtime:
 
-```js
+```js example-bad
 'use strict';
 const x = 17;
 with (obj) { // !!! syntax error
@@ -224,7 +224,7 @@ Thus names in strict mode `eval` code behave identically to names in strict mode
 
 Third, strict mode forbids deleting plain names. `delete name` in strict mode is a syntax error:
 
-```js
+```js example-bad
 'use strict';
 
 var x;
@@ -239,7 +239,7 @@ Strict mode makes `arguments` and `eval` less bizarrely magical. Both involve a 
 
 First, the names `eval` and `arguments` can't be bound or assigned in language syntax. All these attempts to do so are syntax errors:
 
-```js
+```js example-bad
 'use strict';
 eval = 17;
 arguments++;

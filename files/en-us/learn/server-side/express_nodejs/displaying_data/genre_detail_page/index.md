@@ -79,7 +79,7 @@ The rendered view is **genre_detail** and it is passed variables for the `title`
 
 Create **/views/genre_detail.pug** and fill it with the text below:
 
-```js
+```pug
 extends layout
 
 block content
@@ -110,22 +110,23 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 
 > **Note:** You might get an error similar to this:
 >
-> ```bash
+> ```
 > Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"
 > ```
 >
 > This is a mongoose error coming from the **req.params.id**. To solve this problem, first you need to require mongoose on the **genreController.js** page like this:
 >
 > ```js
->  var mongoose = require('mongoose');
+> var mongoose = require('mongoose');
 > ```
 >
 > Then use **mongoose.Types.ObjectId()** to convert the id to a type that can be used. For example:
 >
 > ```js
 > exports.genre_detail = function(req, res, next) {
->     var id = mongoose.Types.ObjectId(req.params.id);
->     // …
+>   var id = mongoose.Types.ObjectId(req.params.id);
+>   // …
+> };
 > ```
 
 ## Next steps
