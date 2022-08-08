@@ -44,7 +44,7 @@ block is clicked by the user.
 [View this example live](https://media.prod.mdn.mozit.cloud/samples/domref/mozSetImageElement.html).
 
 ```html
-<style type="text/css">
+<style>
   #mybox {
     background-image: -moz-element(#canvasbg);
     text-align: center;

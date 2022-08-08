@@ -136,7 +136,7 @@ function printDoc() {
   oPrintWin.document.close();
 }
 </script>
-<style type="text/css">
+<style>
 .intLink { cursor: pointer; }
 img.intLink { border: 0; }
 #toolBar1 select { font-size:10px; }

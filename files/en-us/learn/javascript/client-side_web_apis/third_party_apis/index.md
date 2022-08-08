@@ -68,7 +68,7 @@ Third party APIs, on the other hand, are located on third party servers. To acce
 
 ```html
 <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js" defer></script>
-<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+<link rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
 ```
 
 You can then start using the objects available in that library. For example:
