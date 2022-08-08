@@ -22,7 +22,7 @@ This is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
 
 Storage access is granted based on a series of checks described here:
 
-1. If the browser is not processing a user gesture, reject(see {{Glossary("Transient activation")}}).
+1. If the browser is not processing a user gesture, reject (see {{Glossary("Transient activation")}}).
 2. If the document already has been granted access, resolve.
 3. If the document has a null origin, reject.
 4. If the document's frame is the main frame, resolve.
