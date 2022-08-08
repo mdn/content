@@ -351,7 +351,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. It is an example use of the button_background_active property.  The background color of the pressed toolbar button is red." src="theme-button_background_active.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. It is an example use of the button_background_active property. The background color of the pressed toolbar button is red." src="theme-button_background_active.png" /></p>
       </td>
     </tr>
     <tr>
@@ -812,7 +812,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. It is an example use of the tab_background_text property.  The color of the text in the open tab is red. The text color contrasts well with the black background color of the tab." src="theme-textcolor.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. It is an example use of the tab_background_text property. The color of the text in the open tab is red. The text color contrasts well with the black background color of the tab." src="theme-textcolor.png" /></p>
       </td>
     </tr>
     <tr>
