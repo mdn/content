@@ -244,7 +244,8 @@ In the `controller.html` file:
 ```
 
 In the `presentation.html` file:
-```
+
+```html
 <script>
   connection.onmessage = (message) => {
     const messageObj = JSON.parse(message.data);
