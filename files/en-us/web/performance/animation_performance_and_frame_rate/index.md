@@ -93,7 +93,7 @@ In the context of the rendering waterfall, some properties are more expensive th
       <td>
         <img alt="Does recalculate styles" src="recalculate-style.png" />
         <img alt="No layout" src="layout-faint.png" />
-        <img alt="box representing the paint step" src="paint-faint.png" />
+        <img alt="No repaint" src="paint-faint.png" />
       </td>
       <td>
         <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code
