@@ -431,9 +431,7 @@ function handleVideoOfferMsg(msg) {
 
     localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
   })
-  .then(() => {
-    return myPeerConnection.createAnswer();
-  })
+  .then(() => myPeerConnection.createAnswer())
   .then((answer) => {
     return myPeerConnection.setLocalDescription(answer);
   })
