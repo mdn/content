@@ -230,7 +230,6 @@ To stop the VR presentation when the button is subsequently pressed, we call {{d
     console.log('WebVR API not supported by this browser.');
   }
 }
-}
 ```
 
 Once the presentation starts, you'll be able to see the stereoscopic view displayed in the browser:
