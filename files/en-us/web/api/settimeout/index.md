@@ -53,7 +53,7 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 - `param1`, …, `paramN` {{optional_inline}}
 
   - : Additional arguments which are passed through to the function specified by
-    `function`.
+    `functionRef`.
 
 ### Return value
 
