@@ -416,7 +416,7 @@ function moveBoombox(direction, prevMove) {
       panner.orientationY.value = y;
       panner.orientationZ.value = z;
       break;
-    }
+  }
 
   boombox.style.transform = `translateX(${transform.xAxis}px) ` +
     `translateY(${transform.yAxis}px) ` +
