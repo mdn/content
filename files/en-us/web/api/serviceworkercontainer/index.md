@@ -58,7 +58,7 @@ if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
   navigator.serviceWorker.register('/sw.js').then((registration) => {
-    console.log(`Service worker registration succeeded: ${registration}`);
+    console.log('Service worker registration succeeded:', registration);
 
     // At this point, you can optionally do something
     // with registration. See https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration
