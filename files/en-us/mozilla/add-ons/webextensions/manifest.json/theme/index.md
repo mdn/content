@@ -288,7 +288,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-accentcolor.png" /></p>
+        <p><img alt="Example use of the accentcolor property.  The color of header area background is red" src="theme-accentcolor.png" /></p>
       </td>
     </tr>
     <tr>
@@ -351,7 +351,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-button_background_active.png" /></p>
+        <p><img alt="Example use of the button_background_active property.  The color of the background of the pressed toolbar button is red." src="theme-button_background_active.png" /></p>
       </td>
     </tr>
     <tr>
@@ -370,7 +370,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-button_background_hover.png" /></p>
+        <p><img alt="Example use of the button_background_hover property.  The color of the toolbar button on hover is red." src="theme-button_background_hover.png" /></p>
       </td>
     </tr>
     <tr>
@@ -397,7 +397,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-icons.png" /></p>
+        <p><img alt="Example use of the icons property.  The color of toolbar icons is red. The red icons contrast well with the black color of the frame." src="theme-icons.png" /></p>
       </td>
     </tr>
     <tr>
@@ -427,7 +427,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-icons_attention.png" /></p>
+        <p><img alt="Example use of the icons_attention property. The color of toolbar icons in attention state is red.  While in attention state, the toolbar icons contrast well with the black frame." src="theme-icons_attention.png" /></p>
       </td>
     </tr>
     <tr>
@@ -496,7 +496,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="ntp_colors.png" /></p>
+        <p><img alt="Example use of the ntp_background property. The new tab page background color is red." src="ntp_colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -520,7 +520,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="ntp_colors.png" /></p>
+        <p><img alt="Example use of the ntp_text property. The text color in the new tab is red." src="ntp_colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -542,7 +542,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-popup.png" /></p>
+        <p><img alt="Example use of the popup property.  The background color of the popup is red." src="theme-popup.png" /></p>
       </td>
     </tr>
     <tr>
@@ -563,7 +563,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-popup_border.png" /></p>
+        <p><img alt="Example use of the popup_border property.  The border color of the popup is red." src="theme-popup_border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -593,7 +593,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-popup_highlight.png" /></p>
+        <p><img alt="Example use of the popup_highlight property.  The background color of the item highlighted inside the popup is red." src="theme-popup_highlight.png" /></p>
       </td>
     </tr>
     <tr>
@@ -619,7 +619,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-popup_highlight_text.png" /></p>
+        <p><img alt="Example use of the popup_highlight_text property. The text color the highlighted item inside the popup is red. The text color contrasts well with the black background of the highlighted item." src="theme-popup_highlight_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -645,7 +645,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="popup_text.png" /></p>
+        <p><img alt="Example use of the popup_text property.  The text color inside the popup is red.  The text color contrasts well with the black background of the popup" src="popup_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -665,7 +665,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="sidebar_colors.png" /></p>
+        <p><img alt="Example use of the sidebar property.  The background color of the sidebar is red." src="sidebar_colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -682,7 +682,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="screen_shot_2018-09-16_at_6.13.31_pm.png" /></p>
+        <p><img alt="Example use of the sidebar_border property.  The border and splitter color of the browser sidebar is red." src="screen_shot_2018-09-16_at_6.13.31_pm.png" /></p>
       </td>
     </tr>
     <tr>
@@ -700,7 +700,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
+        <p><img alt="Example use of the sidebar_highlight property. The background color of a highlighted row in the browser sidebar is red." src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
       </td>
     </tr>
     <tr>
@@ -724,7 +724,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
+        <p><img alt="Example use of the sidebar_highlight_text property.  The text color of a highlighted row in the sidebar is red.  The text color contrasts well with the pink background of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
       </td>
     </tr>
     <tr>
@@ -750,7 +750,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="sidebar_colors.png" /></p>
+        <p><img alt="Example use of the sidebar_text property. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar_colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -812,7 +812,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-textcolor.png" /></p>
+        <p><img alt="Example use of the tab_background_text property.  The color of the text in the page tab is red. The text color contrasts well with the black background of the tab." src="theme-textcolor.png" /></p>
       </td>
     </tr>
     <tr>
