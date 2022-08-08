@@ -52,8 +52,8 @@ perfectly in accordance with all of these points immediately. It is more
 important to make sure the content is readable, useful, correct, and not
 inappropriate, than it is to follow every guideline to the letter.
 
-1. Familiarize yourself with the [MDN Code example guidelines](/en_US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_example_guidelines) and make sure that code examples follow the guidelines. You'll get used to them eventually, and we are intending to automatically lint against our guidelines at some point in the future.
-1. Familiarize yourself with the [MDN Writing style guide](/en_US/docs/MDN/Writing_guidelines/Writing_style_guide), and use it to inform your reviews of new text content.
+1. Familiarize yourself with the [MDN Code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_example_guidelines) and make sure that code examples follow the guidelines. You'll get used to them eventually, and we are intending to automatically lint against our guidelines at some point in the future.
+1. Familiarize yourself with the [MDN Writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide), and use it to inform your reviews of new text content.
 1. Familiarize yourself with the MDN [pull request guidelines](https://github.com/mdn/content/blob/main/README.md#pull-request-etiquette).
    The key points here are
    - You have the right to request more information to help your review if the submitter has not explained why they are making this change.

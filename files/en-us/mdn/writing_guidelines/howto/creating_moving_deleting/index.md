@@ -8,7 +8,7 @@ page-type: mdn-writing-guide
 ---
 {{MDNSidebar}}
 
-This article describes how to create, move, delete, or edit a page. In all these instances, it's a good idea to check our guidelines for [What we write](/en_US/docs/MDN/Writing_guidelines/What_we_write) to confirm if any of these actions should be taken and discuss it with the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions) before proceeding.
+This article describes how to create, move, delete, or edit a page. In all these instances, it's a good idea to check our guidelines for [What we write](/en-US/docs/MDN/Writing_guidelines/What_we_write) to confirm if any of these actions should be taken and discuss it with the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions) before proceeding.
 
 ## Creating pages
 
@@ -16,7 +16,7 @@ All pages on MDN Web Docs are authored in markdown format. The content is writte
 
 > **Note:** The name of the directory differs slightly from the slug of the page. Most notably, the slug follows sentence casing.
 
-There are a lot of different [page types](/en_US/docs/MDN/Writing_guidelines/Page_structures/Page_types) with certain structures and supporting page templates for them, which you can copy to get you started.
+There are a lot of different [page types](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) with certain structures and supporting page templates for them, which you can copy to get you started.
 
 A document's `index.md` file must start with front matter that defines the `title`, `slug`, `page-type`, and `tags`. All of this front matter information can be found in the aforementioned page templates. Alternatively, you might find it helpful to refer to the front matter within a similar document's `index.md`.
 
