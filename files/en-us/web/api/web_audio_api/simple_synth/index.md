@@ -544,7 +544,7 @@ function noteReleased(event) {
   const dataset = event.target.dataset;
 
   if (dataset && dataset["pressed"]) {
-    const octave = +dataset["octave"]; // + will coerce the string to a number
+    const octave = Number(dataset["octave"]);
     oscList[octave][dataset["note"]].stop();
     delete oscList[octave][dataset["note"]];
     delete dataset["pressed"];
