@@ -91,7 +91,7 @@ In the context of the rendering waterfall, some properties are more expensive th
         repaint, because the update is handled in composition.
       </td>
       <td>
-        <img alt="box representing the recalculate style step" src="recalculate-style.png" />
+        <img alt="Does recalculate styles" src="recalculate-style.png" />
         <img alt="box representing the layout step" src="layout-faint.png" />
         <img alt="box representing the paint step" src="paint-faint.png" />
       </td>
