@@ -39,10 +39,6 @@ The `sin()` function takes only one expression as its argument.
 
 {{CSSSyntax}}
 
-```css
-sin( [ {{cssxref("&lt;angle&gt;")}} || {{cssxref("&lt;number&gt;")}} ] )
-```
-
 ## Examples
 
 ### Boxes Size
