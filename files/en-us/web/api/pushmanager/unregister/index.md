@@ -56,7 +56,7 @@ req.onsuccess = (e) => {
 }
 
 req.onerror = (e) => {
-  console.error(`Error unregistering the endpoint: ${JSON.stringify(e)}`);
+  console.error(`Error unregistering the endpoint: ${e.error}`);
 }
 ```
 
