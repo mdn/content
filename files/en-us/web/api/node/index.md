@@ -201,9 +201,8 @@ function eachNode(rootNode, callback) {
   }
 
   if (rootNode.hasChildNodes()) {
-    const nodes = rootNode.childNodes;
-    for (let i = 0, l = nodes.length; i < l; ++i) {
-      if (false === eachNode(nodes[i], callback)) {
+    for (const node of rootNode.childNodes) {
+      if (eachNode(node, callback) === false) {
         return;
       }
     }
