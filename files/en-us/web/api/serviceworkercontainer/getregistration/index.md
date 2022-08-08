@@ -40,7 +40,7 @@ object or `undefined`.
 
 ```js
 navigator.serviceWorker.getRegistration('/app').then((registration) => {
-  if (registration){
+  if (registration) {
     document.querySelector('#status').textContent = 'ServiceWorkerRegistration found.';
   }
 });
