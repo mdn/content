@@ -1,5 +1,5 @@
 ---
-title: Users and teams
+title: Owners and teams
 slug: MDN/Community/Users_teams
 page-type: mdn-community-guide
 tags:
