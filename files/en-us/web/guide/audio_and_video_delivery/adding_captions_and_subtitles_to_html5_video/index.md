@@ -264,7 +264,7 @@ For example, to change the text color of the text track cues you can write:
 
 ```css
 ::cue {
-  color:#ccc;
+  color: #ccc;
 }
 ```
 
@@ -280,8 +280,8 @@ Then this specific 'voice' will be stylable like so:
 
 ```css
 ::cue(v[voice='Test']) {
-  color:#fff;
-  background:#0095dd;
+  color: #fff;
+  background: #0095dd;
 }
 ```
 
