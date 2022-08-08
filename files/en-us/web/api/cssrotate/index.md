@@ -26,7 +26,7 @@ The **`CSSRotate`** interface of the {{domxref('CSS_Object_Model#css_typed_objec
 
 ## Properties
 
-- {{domxref('CSSRotate.x','x')}}
+- {{domxref('CSSRotate.x','x')}} {{Experimental_Inline}}
   - : Returns or sets the x-axis value.
 - {{domxref('CSSRotate.y','y')}} {{Experimental_Inline}}
   - : Returns or sets the y-axis value.

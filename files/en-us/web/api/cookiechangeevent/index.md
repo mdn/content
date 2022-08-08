@@ -33,9 +33,9 @@ Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
-- {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}}
+- {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array containing one or more changed cookies.
-- {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}}
+- {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array containing one or more deleted cookies.
 
 ## Examples

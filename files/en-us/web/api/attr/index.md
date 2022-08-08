@@ -39,7 +39,7 @@ _This interface also inherits the properties of its parent interfaces, {{domxref
   - : The {{domxref("Element")}} the attribute belongs to.
 - {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
   - : A string representing the namespace prefix of the attribute, or `null` if a namespace without prefix or no namespace are specified.
-- {{domxref("Attr.specified", "specified")}} {{readOnlyInline}}
+- {{domxref("Attr.specified", "specified")}} {{readOnlyInline}} {{deprecated_inline}}
   - : This property always returns `true`.
 - {{domxref("Attr.value", "value")}}
   - : The attribute's value, a string that can be set and get using this property.

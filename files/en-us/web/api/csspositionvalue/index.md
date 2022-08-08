@@ -25,7 +25,7 @@ The **`CSSPositionValue`** interface of the [CSS Typed Object Model API](/en-US/
 
 ## Properties
 
-- {{domxref('CSSPositionValue.x')}}
+- {{domxref('CSSPositionValue.x')}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns the item's position along the web page's horizontal axis.
 - {{domxref('CSSPositionValue.y')}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns the item's position along the vertical axis.

@@ -28,7 +28,7 @@ Server on a remote device.
 
 ## Methods
 
-- {{DOMxRef("BluetoothRemoteGATTServer.connect()")}}
+- {{DOMxRef("BluetoothRemoteGATTServer.connect()")}} {{Experimental_Inline}}
   - : Causes the script execution environment to connect to `this.device`.
 - {{DOMxRef("BluetoothRemoteGATTServer.disconnect()")}} {{Experimental_Inline}}
   - : Causes the script execution environment to disconnect from `this.device`.

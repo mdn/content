@@ -20,7 +20,7 @@ _This interface doesn't inherit any properties._
 
 - {{domxref("CaretPosition.offsetNode")}} {{readonlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Node")}} containing the found node at the caret's position.
-- {{domxref("CaretPosition.offset")}} {{readonlyInline}}
+- {{domxref("CaretPosition.offset")}} {{readonlyInline}} {{Experimental_Inline}}
   - : Returns a `long` representing the character offset in the caret position node.
 
 ## Methods
