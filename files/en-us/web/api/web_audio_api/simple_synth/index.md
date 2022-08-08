@@ -523,7 +523,7 @@ function notePressed(event) {
     const dataset = event.target.dataset;
 
     if (!dataset["pressed"]) {
-      const octave = +dataset["octave"]; // + will coerce the string to a number
+      const octave = Number(dataset["octave"]);
       oscList[octave][dataset["note"]] = playTone(dataset["frequency"]);
       dataset["pressed"] = "yes";
     }
