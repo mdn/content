@@ -446,31 +446,36 @@ $ npm install mongodb
 
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.
 
+This works with older versions of mongodb version ~ 2.2.33:
+
 ```js
-//this works with older versions of mongodb version ~ 2.2.33
 const MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
+MongoClient.connect('mongodb://localhost:27017/animals', (err, db) => {
   if (err) throw err;
 
-  db.collection('mammals').find().toArray(function (err, result) {
+  db.collection('mammals').find().toArray((err, result) => {
     if (err) throw err;
 
     console.log(result);
   });
 });
+```
 
-//for mongodb version 3.0 and up
+For mongodb version 3.0 and up:
+
+```js
 const MongoClient = require('mongodb').MongoClient;
-MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){
-   if(err) throw err;
 
-   const db = client.db('animals');
-   db.collection('mammals').find().toArray(function(err, result){
-     if(err) throw err;
-     console.log(result);
-     client.close();
-   });
+MongoClient.connect('mongodb://localhost:27017/animals', (err, client) => {
+  if (err) throw err;
+
+  const db = client.db('animals');
+  db.collection('mammals').find().toArray((err, result) => {
+    if (err) throw err;
+    console.log(result);
+    client.close();
+  });
 });
 ```
 

@@ -58,7 +58,7 @@ async function writeClipImg() {
       })
     ]);
     console.log('Fetched image copied.');
-  } catch(err) {
+  } catch (err) {
     console.error(err.name, err.message);
   }
 }

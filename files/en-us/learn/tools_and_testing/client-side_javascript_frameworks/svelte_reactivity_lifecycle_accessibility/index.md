@@ -554,7 +554,7 @@ Next up, we want the name `<input>` to automatically select all text on focus. M
 To select the text of a DOM input node, we have to call [`select()`](/en-US/docs/Web/API/HTMLInputElement/select). To get this function called whenever the node gets focused, we need an event listener along these lines:
 
 ```js
-node.addEventListener('focus', (event) => node.select()).
+node.addEventListener('focus', (event) => node.select());
 ```
 
 And, in order to avoid memory leaks, we should also call the [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) function when the node is destroyed.

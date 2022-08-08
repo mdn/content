@@ -59,7 +59,7 @@ transition.addEventListener('transitionend', () => {
 });
 ```
 
-The same, but using the {{domxref("GlobalEventHandlers/ontransitionend", "ontransitionend")}}:
+The same, but using `ontransitionend`:
 
 ```js
 const transition = document.querySelector('.transition');

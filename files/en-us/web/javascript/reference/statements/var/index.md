@@ -92,7 +92,7 @@ straightforward property of the global object. JavaScript has automatic memory
 management, and it would make no sense to be able to use the `delete`
 operator on a global variable.
 
-```js
+```js example-bad
 'use strict';
 var x = 1;
 Object.hasOwn(globalThis, 'x'); // true
@@ -151,9 +151,11 @@ declaration is moved to the top of the function or global code.
 ```js
 bla = 2;
 var bla;
+```
 
-// ...is implicitly understood as:
+This is implicitly understood as:
 
+```js
 var bla;
 bla = 2;
 ```
@@ -172,9 +174,11 @@ function do_something() {
   var bar = 111;
   console.log(bar); // 111
 }
+```
 
-// ...is implicitly understood as:
+This is implicitly understood as:
 
+```js
 function do_something() {
   var bar;
   console.log(bar); // undefined
@@ -196,9 +200,11 @@ var a = 0, b = 0;
 ```js
 var a = 'A';
 var b = a;
+```
 
-// ...is equivalent to:
+This is equivalent to:
 
+```js
 var a, b = a = 'A';
 ```
 

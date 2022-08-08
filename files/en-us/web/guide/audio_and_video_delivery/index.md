@@ -135,7 +135,7 @@ try {
 
   request.send();
 
-} catch(e) {
+} catch (e) {
   alert('web audio api not supported');
 }
 ```

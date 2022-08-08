@@ -146,12 +146,12 @@ console.log(fruits.length);
 // 2
 
 // 'fruits' array created using the Array() constructor.
-const fruits = new Array('Apple', 'Banana');
+const fruits2 = new Array('Apple', 'Banana');
 console.log(fruits.length);
 // 2
 
 // 'fruits' array created using String.prototype.split().
-const fruits = 'Apple, Banana'.split(', ');
+const fruits3 = 'Apple, Banana'.split(', ');
 console.log(fruits.length);
 // 2
 ```
@@ -420,11 +420,11 @@ const fruitsCopy = [...fruits];
 // ["Strawberry", "Mango"]
 
 // Create a copy using the from() method.
-const fruitsCopy = Array.from(fruits);
+const fruitsCopy2 = Array.from(fruits);
 // ["Strawberry", "Mango"]
 
 // Create a copy using the slice() method.
-const fruitsCopy = fruits.slice();
+const fruitsCopy3 = fruits.slice();
 // ["Strawberry", "Mango"]
 ```
 

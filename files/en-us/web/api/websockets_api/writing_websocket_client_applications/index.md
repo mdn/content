@@ -147,7 +147,7 @@ exampleSocket.onmessage = (event) => {
   const time = new Date(msg.date);
   const timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
@@ -159,14 +159,10 @@ exampleSocket.onmessage = (event) => {
       text = `(${timeStr}) ${msg.name} : ${msg.text} <br>`;
       break;
     case "rejectusername":
-      text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`
+      text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`;
       break;
     case "userlist":
-      let ul = "";
-      for (let i=0; i < msg.users.length; i++) {
-        ul += `${msg.users[i]}<br>`;
-      }
-      document.getElementById("userlistbox").innerHTML = ul;
+      document.getElementById("userlistbox").innerHTML = msg.users.join("<br>");
       break;
   }
 

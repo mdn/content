@@ -57,7 +57,7 @@ The method uses `async.parallel()` to find the `Book` and its associated copies 
 
 Create **/views/book_detail.pug** and add the text below.
 
-```plain
+```pug
 extends layout
 
 block content

@@ -45,7 +45,7 @@ function showCoords(evt){
 }
 </script>
 
-<style type="text/css">
+<style>
 
  #d1 {
   border: solid blue 1px;

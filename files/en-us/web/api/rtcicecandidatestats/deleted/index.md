@@ -47,7 +47,7 @@ is used to set up a function that runs periodically to display the latest statis
 candidates. Only candidates which have not been deleted are included in the output.
 
 ```js
-window.setInterval(function() {
+setInterval(function() {
   myPeerConnection.getStats(null).then((stats) => {
     let statsOutput = "";
 

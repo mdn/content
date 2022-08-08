@@ -134,7 +134,7 @@ outputCanvas.addEventListener("webglcontextrestored", (event) => {
 async function onStartedXRSession(xrSession) {
   try {
     await gl.makeXRCompatible();
-  } catch(err) {
+  } catch (err) {
     switch(err) {
       case AbortError:
         showSimpleMessageBox("Unable to transfer the game to your XR headset.", "Cancel");
@@ -155,7 +155,7 @@ async function handleStartButtonClick(event) {
     try {
       xrSession = await navigator.xr.requestSession("immersive-vr");
       usingXR = true;
-    } catch(err) {
+    } catch (err) {
       xrSession = NULL;
       usingXR = false;
     }

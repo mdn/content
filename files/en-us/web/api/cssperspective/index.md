@@ -21,12 +21,12 @@ The **`CSSPerspective`** interface of the {{domxref('CSS_Object_Model#css_typed_
 
 ## Constructor
 
-- {{domxref("CSSPerspective.CSSPerspective", "CSSPerspective()")}}
+- {{domxref("CSSPerspective.CSSPerspective", "CSSPerspective()")}} {{Experimental_Inline}}
   - : Creates a new `CSSPerspective` object.
 
 ## Properties
 
-- {{domxref('CSSPerspective.length','length')}}
+- {{domxref('CSSPerspective.length','length')}} {{Experimental_Inline}}
   - : Returns or sets the distance from z=0.
 
 ## Examples

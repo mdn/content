@@ -323,16 +323,12 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Document/animationcancel_event", "animationcancel")}}
   - : Fired when an animation unexpectedly aborts.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onanimationcancel", "onanimationcancel")}} property.
 - {{DOMxRef("Document/animationend_event", "animationend")}}
   - : Fired when an animation has completed normally.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onanimationend", "onanimationend")}} property.
 - {{DOMxRef("Document/animationiteration_event", "animationiteration")}}
   - : Fired when an animation iteration has completed.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onanimationiteration", "onanimationiteration")}} property.
 - {{DOMxRef("Document/animationstart_event", "animationstart")}}
   - : Fired when an animation starts.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onanimationstart", "onanimationstart")}} property.
 
 ### Clipboard events
 
@@ -347,25 +343,18 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Document/drag_event", "drag")}}
   - : Fired every few hundred milliseconds as an element or text selection is being dragged by the user.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ondrag", "ondrag")}} property.
 - {{DOMxRef("Document/dragend_event", "dragend")}}
   - : Fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
-    Also available via the {{DOMxRef("GlobalEventHandlers/ondragend", "ondragend")}} property.
 - {{DOMxRef("Document/dragenter_event", "dragenter")}}
   - : Fired when a dragged element or text selection enters a valid drop target.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ondragenter", "ondragenter")}} property.
 - {{DOMxRef("Document/dragleave_event", "dragleave")}}
   - : Fired when a dragged element or text selection leaves a valid drop target.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ondragleave", "ondragleave")}} property.
 - {{DOMxRef("Document/dragover_event", "dragover")}}
   - : Fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).
-    Also available via the {{DOMxRef("GlobalEventHandlers/ondragover", "ondragover")}} property.
 - {{DOMxRef("Document/dragstart_event", "dragstart")}}
   - : Fired when the user starts dragging an element or text selection.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ondragstart", "ondragstart")}} property.
 - {{DOMxRef("Document/drop_event", "drop")}}
   - : Fired when an element or text selection is dropped on a valid drop target.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ondrop", "ondrop")}} property.
 
 ### Fullscreen events
 
@@ -378,13 +367,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Document/keydown_event", "keydown")}}
   - : Fired when a key is pressed.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onkeydown", "onkeydown")}} property.
 - {{DOMxRef("Document/keypress_event", "keypress")}}
   - : Fired when a key that produces a character value is pressed down. {{Deprecated_Inline}}
-    Also available via the {{DOMxRef("GlobalEventHandlers/onkeypress", "onkeypress")}} property.
 - {{DOMxRef("Document/keyup_event", "keyup")}}
   - : Fired when a key is released.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onkeyup", "onkeyup")}} property.
 
 ### Load & unload events
 
@@ -397,10 +383,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Document/gotpointercapture_event", "gotpointercapture")}}
   - : Fired when an element captures a pointer using [`setPointerCapture()`](/en-US/docs/Web/API/Element/setPointerCapture).
-    Also available via the {{DOMxRef("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} property.
 - {{DOMxRef("Document/lostpointercapture_event", "lostpointercapture")}}
   - : Fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}} property.
 - {{DOMxRef("Document/pointercancel_event", "pointercancel")}}
   - : Fired when a pointer event is canceled.
 - {{DOMxRef("Document/pointerdown_event", "pointerdown")}}
@@ -426,37 +410,28 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Document/selectionchange_event", "selectionchange")}}
   - : Fired when the current text selection on a document is changed.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onselectionchange", "onselectionchange")}} property.
 
 ### Touch events
 
 - {{DOMxRef("Document/touchcancel_event", "touchcancel")}}
   - : Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchcancel", "ontouchcancel")}} property.
 - {{DOMxRef("Document/touchend_event", "touchend")}}
   - : Fired when one or more touch points are removed from the touch surface.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchend", "ontouchend")}} property
 - {{DOMxRef("Document/touchmove_event", "touchmove")}}
   - : Fired when one or more touch points are moved along the touch surface.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchmove", "ontouchmove")}} property
 - {{DOMxRef("Document/touchstart_event", "touchstart")}}
   - : Fired when one or more touch points are placed on the touch surface.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchstart", "ontouchstart")}} property
 
 ### Transition events
 
 - {{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}} property.
 - {{DOMxRef("Document/transitionend_event", "transitionend")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionend", "ontransitionend")}} property.
 - {{DOMxRef("Document/transitionrun_event", "transitionrun")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}} property.
 - {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} property.
 
 ## Specifications
 

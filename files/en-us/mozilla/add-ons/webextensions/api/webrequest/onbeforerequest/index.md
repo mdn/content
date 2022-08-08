@@ -259,7 +259,7 @@ let redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gi
 function redirectAsync(requestDetails) {
   console.log("Redirecting async: " + requestDetails.url);
   return new Promise((resolve, reject) => {
-    window.setTimeout(() => {
+    setTimeout(() => {
       resolve({redirectUrl});
     }, 2000);
   });

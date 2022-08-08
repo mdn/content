@@ -268,7 +268,12 @@ With the Web Animations API, all you need to change is just one little property!
 Another thing that's tough to do with CSS Animations alone is creating dependencies on values provided by other animations. For instance, in the Growing and Shrinking Alice game example, you might have noticed something odd about the cake's duration:
 
 ```js
-duration: aliceChange.effect.getComputedTiming().duration / 2
+document.getElementById('eat-me_sprite').animate(
+  [],
+  {
+    duration: aliceChange.effect.timing.duration / 2
+  }
+);
 ```
 
 To understand what's happening here, let's take a look at Alice's animation:

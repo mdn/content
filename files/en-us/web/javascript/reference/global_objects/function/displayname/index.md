@@ -56,7 +56,7 @@ object.someMethod.displayName = 'someMethod';
 
 console.log(object.someMethod.displayName); // logs "someMethod"
 
-try { someMethod } catch(e) { console.log(e); }
+try { someMethod } catch (e) { console.log(e); }
 // ReferenceError: someMethod is not defined
 ```
 

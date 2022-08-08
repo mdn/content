@@ -116,7 +116,7 @@ function add(a, b) {
 
 This code might be trivial for someone accustomed to JavaScript, but it could still be clearer. JavaScript lets us use the `+` operator to concatenate strings together, so this function would technically still work if `a` and `b` were strings — it just might not give you the result you'd expect. What if we wanted to only allow numbers to be passed into this function? TypeScript makes that possible:
 
-```js
+```ts
 function add(a: number, b: number) {
   return a + b;
 }

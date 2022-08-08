@@ -72,13 +72,10 @@ Listen to these events using `addEventListener()`, or by assigning an event list
 
 - {{domxref("HTMLFormElement/formdata_event", "formdata")}}
   - : The `formdata` event fires after the entry list representing the form's data is constructed.
-    Also available via the {{domxref("GlobalEventHandlers/onformdata", "onformdata")}} property.
 - {{domxref("HTMLFormElement/reset_event", "reset")}}
   - : The `reset` event fires when a form is reset.
-    Also available via the {{domxref("GlobalEventHandlers/onreset", "onreset")}} property.
 - {{domxref("HTMLFormElement/submit_event", "submit")}}
   - : The `submit` event fires when a form is submitted.
-    Also available via the {{domxref("GlobalEventHandlers/onsubmit", "onsubmit")}} property.
 
 ## Usage notes
 

@@ -93,8 +93,12 @@ The following syntax without a name after the `function` keyword is valid then.
 const greeter = {
   german: function () {
     return "Moin";
-  },
-  // or
+  }
+};
+
+// or
+
+const greeter = {
   german() {
     return "Moin";
   }
