@@ -22,7 +22,12 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 width: calc( cos(-45deg) * 1px );
 ```
 
-The `cos()` function takes only one expression as its argument.
+### Argument
+
+The `cos(A)` function accepts only one expression as its argument.
+
+- `A`
+  - : The argument specified as a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. If `A` is `infinite`, the result is `NaN`.
 
 ### Formal syntax
 
@@ -36,23 +41,32 @@ When the element is rotated using {{cssxref("transform-function/rotate", "rotate
 
 For example, if you rotate a `100px`/`100px` square `45deg`, the diamond it creates will be wider and taller than the original square. To shrink the diamond into the box allotted for the original square, you would have to scale down the diamond using this formula: `width = height = 100px * cos(45deg) = 100px * 0.707 = 70.7px`. You need to also adjust the {{cssxref("transform-origin")}} and add {{cssxref("transform-function/translate", "translate()")}} to correct the position:
 
+```html hidden
+<div class="original-square"></div>
+<div class="rotated-diamond"></div>
+```
+
 ```css
-div {
-  /* Original square */
+div.original-square {
   width: 100px;
   height: 100px;
   background-color: red;
+}
 
-  /* Rotated diamond */
-  transform-origin: center;
+div.rotated-diamond {
+  width: calc( 100px * cos(45deg) );
+  height: calc( 100px * cos(45deg) );
+  margin-block-start: calc( 100px / 4 * cos(45deg) );
+  margin-block-end: calc( 100px / 4 * cos(45deg) );
   transform:
     translate( calc( 100px / 4 * cos(45deg) ) )
     rotate(45deg);
-  width: calc( 100px * cos(45deg) );
-  height: calc( 100px * cos(45deg) );
-  margin-inline-end: calc( 100px / 2 * cos(45deg) );
+  transform-origin: center;
+  background-color: red;
 }
 ```
+
+{{EmbedLiveSample('keep_rotated_element_size', '100%', '300px')}}
 
 ## Specifications
 
