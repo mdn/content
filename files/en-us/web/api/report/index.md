@@ -84,7 +84,7 @@ function displayReports(reports) {
       const keyValue = reports[i].body[key];
       innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);
-    });
+    }
   });
 }
 ```
