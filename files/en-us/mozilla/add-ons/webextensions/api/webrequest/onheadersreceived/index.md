@@ -186,7 +186,7 @@ function setCookie(e) {
     value: "my-cookie1=my-cookie-value1"
   };
   e.responseHeaders.push(setMyCookie);
-  return {r esponseHeaders: e.responseHeaders };
+  return { responseHeaders: e.responseHeaders };
 }
 
 // Listen for onHeaderReceived for the target page.
