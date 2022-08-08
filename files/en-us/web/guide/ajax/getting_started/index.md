@@ -342,7 +342,7 @@ This is repeated every 5 seconds, using a `setInterval()` call. The idea would b
           timeArray.pop();
         }
 
-        lastData.textContent = timeArray[timeArray.length-1];
+        lastData.textContent = timeArray[timeArray.length - 1];
       }
 
       setInterval(fetchData, 5000);
