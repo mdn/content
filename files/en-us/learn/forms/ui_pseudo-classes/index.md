@@ -463,7 +463,6 @@ If you try the live example, you'll see that the top set of form elements are no
 }
 
 :is(textarea:-moz-read-write, textarea:read-write) {
-  -webkit-box-shadow: inset 1px 1px 3px #ccc;
           box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
