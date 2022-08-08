@@ -68,15 +68,15 @@ function print_perf_entry(pe) {
 const observe_all = new PerformanceObserver((list, obs) => {
   // Print all entries
   let perfEntries = list.getEntries();
-  perfEntries.forEach((entry) => print_perf_entry(perfEntries[i]));
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 
   // Print entries named "Begin" with type "mark"
   perfEntries = list.getEntriesByName("Begin", "mark");
-  perfEntries.forEach((entry) => print_perf_entry(perfEntries[i]));
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 
   // Print entries with type "mark"
   perfEntries = list.getEntriesByType("mark");
-  perfEntries.forEach((entry) => print_perf_entry(perfEntries[i]));
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 });
 
 // Subscribe to all performance event types
@@ -88,7 +88,7 @@ const observe_frame = new PerformanceObserver((list, obs) => {
   const perfEntries = list.getEntries();
   
   // Should only have 'frame' entries
-  perfEntries.forEach((entry) => print_perf_entry(perfEntries[i]));
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 });
 
 // Subscribe to frame event only
