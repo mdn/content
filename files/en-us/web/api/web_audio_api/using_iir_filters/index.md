@@ -198,7 +198,10 @@ canvasCtx.beginPath();
 
 for (let i = 0; i < magResponseOutput.length; i++) {
   if (i === 0) {
-    canvasCtx.moveTo(spacing, height-(magResponseOutput[i]*100)-spacing );
+    canvasCtx.moveTo(
+      spacing,
+      height - magResponseOutput[i] * 100 - spacing,
+    );
   } else {
     canvasCtx.lineTo((width/totalArrayItems)*i, height-(magResponseOutput[i]*100)-spacing );
   }
