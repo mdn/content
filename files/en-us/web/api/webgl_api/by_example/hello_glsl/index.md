@@ -79,8 +79,8 @@ void main() {
 
 ```js
 window.addEventListener("load", setupWebGL, false);
-const gl;
-const program;
+let gl;
+let program;
 
 function setupWebGL (evt) {
   window.removeEventListener(evt.type, setupWebGL, false);
