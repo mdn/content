@@ -435,7 +435,7 @@ function setup() {
   cosineTerms = new Float32Array(sineTerms.length);
   customWaveform = audioContext.createPeriodicWave(cosineTerms, sineTerms);
 
-  for (i=0; i<9; i++) {
+  for (let i = 0; i < 9; i++) {
     oscList[i] = {};
   }
 }
