@@ -68,7 +68,7 @@ function write(data) {
 await ndef.scan();
 try {
   await write("Hello World");
-  console.log("We wrote to a tag!")
+  console.log("We wrote to a tag!");
 } catch (err) {
   console.error("Something went wrong", err);
 }
