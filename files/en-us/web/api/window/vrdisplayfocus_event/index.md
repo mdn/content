@@ -48,7 +48,7 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplayfocus` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplayfocus', function() {
+window.addEventListener('vrdisplayfocus', () => {
   info.textContent = 'Display focused.';
   reportDisplays();
 });
@@ -57,7 +57,7 @@ window.addEventListener('vrdisplayfocus', function() {
 Or use the `onvrdisplayfocus` event handler property:
 
 ```js
-window.onvrdisplayfocus = function() {
+window.onvrdisplayfocus = () => {
   info.textContent = 'Display focused.';
   reportDisplays();
 };

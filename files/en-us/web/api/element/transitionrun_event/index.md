@@ -56,7 +56,7 @@ el.addEventListener('transitionrun', () => {
 });
 ```
 
-The same, but using the [`ontransitionrun`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun) property instead of `addEventListener()`:
+The same, but using the `ontransitionrun` property instead of `addEventListener()`:
 
 ```js
 el.ontransitionrun = () => {

@@ -291,7 +291,7 @@ async function fetchProducts() {
     const data = await response.json();
     console.log(data[0].name);
   }
-  catch(error) {
+  catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }
@@ -315,7 +315,7 @@ async function fetchProducts() {
     const data = await response.json();
     return data;
   }
-  catch(error) {
+  catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }
@@ -336,7 +336,7 @@ async function fetchProducts() {
     const data = await response.json();
     return data;
   }
-  catch(error) {
+  catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }

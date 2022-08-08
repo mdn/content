@@ -147,7 +147,7 @@ await ndef.scan();
 try {
   // Let's wait for 5 seconds only.
   await write("Hello World", { timeout: 5_000 });
-} catch(err) {
+} catch (err) {
   console.error("Something went wrong", err);
 } finally {
   console.log("We wrote to a tag!");

@@ -243,10 +243,8 @@ const mediaConstraints = {
 const desc = new RTCSessionDescription(sdp);
 
 pc.setRemoteDescription(desc)
-  .then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function (stream) {
+  .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
+  .then((stream) => {
     previewElement.srcObject = stream;
 
     stream.getTracks().forEach((track) => pc.addTrack(track, stream));

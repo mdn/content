@@ -27,7 +27,7 @@ indexOf(searchString, position)
 
 - `searchString`
 
-  - : Substring to search for. If the method is called with no arguments, `searchString` [is coerced](https://tc39.es/ecma262/#sec-tostring) to "`undefined`". Therefore,`'undefined'.indexOf()` returns `0` — because the substring `undefined` is found at position `0` in the string `undefined`. But `'undefine'.indexOf()`, returns `-1` — because the substring `undefined` is not found in the string `undefine`.
+  - : Substring to search for. If the method is called with no arguments, `searchString` [is coerced](https://tc39.es/ecma262/#sec-tostring) to `"undefined"`. Therefore,`'undefined'.indexOf()` returns `0` — because the substring `"undefined"` is found at position `0` in the string `undefined`. But `'undefine'.indexOf()`, returns `-1` — because the substring `"undefined"` is not found in the string `"undefine"`.
 
 - `position` {{optional_inline}}
 
@@ -117,7 +117,7 @@ The following example defines two string variables.
 The variables contain the same string, except that the second string contains uppercase
 letters. The first {{domxref("console.log()")}} method displays `19`. But
 because the `indexOf()` method is case sensitive, the string
-"`cheddar`" is not found in `myCapString`, so the second
+`"cheddar"` is not found in `myCapString`, so the second
 `console.log()` method displays `-1`.
 
 ```js

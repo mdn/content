@@ -146,12 +146,12 @@ console.log(fruits.length);
 // 2
 
 // 'fruits' array created using the Array() constructor.
-const fruits = new Array('Apple', 'Banana');
+const fruits2 = new Array('Apple', 'Banana');
 console.log(fruits.length);
 // 2
 
 // 'fruits' array created using String.prototype.split().
-const fruits = 'Apple, Banana'.split(', ');
+const fruits3 = 'Apple, Banana'.split(', ');
 console.log(fruits.length);
 // 2
 ```
@@ -191,7 +191,7 @@ fruits[99]; // undefined
 
 ### Find the index of an item in an array
 
-This example uses the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to find the position (index) of the string "`Banana`" in the `fruits` array.
+This example uses the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to find the position (index) of the string `"Banana"` in the `fruits` array.
 
 ```js
 const fruits = ['Apple', 'Banana'];
@@ -201,7 +201,7 @@ console.log(fruits.indexOf('Banana'));
 
 ### Check if an array contains a certain item
 
-This example shows two ways to check if the `fruits` array contains "`Banana`" and "`Cherry`": first with the [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method, and then with the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to test for an index value that's not `-1`.
+This example shows two ways to check if the `fruits` array contains `"Banana"` and `"Cherry"`: first with the [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method, and then with the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to test for an index value that's not `-1`.
 
 ```js
 const fruits = ['Apple', 'Banana'];
@@ -315,7 +315,7 @@ console.log(newLength);
 
 ### Remove a single item by index
 
-This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the string "`Banana`" from the `fruits` array — by specifying the index position of "`Banana`".
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the string `"Banana"` from the `fruits` array — by specifying the index position of `"Banana"`.
 
 ```js
 const fruits = ['Strawberry', 'Banana', 'Mango'];
@@ -330,7 +330,7 @@ console.log(removedItems);
 
 ### Remove multiple items by index
 
-This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the strings "`Banana`" and "`Strawberry`" from the `fruits` array — by specifying the index position of "`Banana`", along with a count of the number of total items to remove.
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the strings `"Banana"` and `"Strawberry"` from the `fruits` array — by specifying the index position of `"Banana"`, along with a count of the number of total items to remove.
 
 ```js
 const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango'];
@@ -420,11 +420,11 @@ const fruitsCopy = [...fruits];
 // ["Strawberry", "Mango"]
 
 // Create a copy using the from() method.
-const fruitsCopy = Array.from(fruits);
+const fruitsCopy2 = Array.from(fruits);
 // ["Strawberry", "Mango"]
 
 // Create a copy using the slice() method.
-const fruitsCopy = fruits.slice();
+const fruitsCopy3 = fruits.slice();
 // ["Strawberry", "Mango"]
 ```
 

@@ -118,7 +118,7 @@ class MockHypotheticalSocket {
       }
 
       // Emulate slow read of data
-      window.setTimeout(() => {
+      setTimeout(() => {
         const numberBytesReceived = this.getNumberRandomBytesSocket();
         this.data_read += numberBytesReceived;
         this.socketdata = this.randomByteArray(numberBytesReceived);
@@ -452,7 +452,7 @@ class MockUnderlyingFileHandle {
         }
       }
       // Emulate slow read of data
-      window.setTimeout(() => { resolve(resultobj); }, 1000);
+      setTimeout(() => { resolve(resultobj); }, 1000);
     });
   }
 
@@ -685,7 +685,7 @@ class MockUnderlyingFileHandle {
         }
       }
       // Emulate slow read of data
-      window.setTimeout(() => resolve(resultobj), 1000);
+      setTimeout(() => resolve(resultobj), 1000);
     });
   }
 
@@ -900,7 +900,7 @@ class MockUnderlyingFileHandle {
         }
       }
       // Emulate slow read of data
-      window.setTimeout(() => { resolve(resultobj); }, 1000);
+      setTimeout(() => { resolve(resultobj); }, 1000);
     });
   }
 

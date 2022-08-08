@@ -69,17 +69,15 @@ serialized version of a {{domxref("RTCSessionDescription")}} browser object. The
 interchangeable:
 
 ```js
-myPeerConnection.createOffer().then(function(offer) {
-  return myPeerConnection.setLocalDescription(offer);
-});
+myPeerConnection.createOffer()
+  .then((offer) => myPeerConnection.setLocalDescription(offer));
 ```
 
 This is equivalent to:
 
 ```js
-myPeerConnection.createOffer().then(function(offer) {
-  return myPeerConnection.setLocalDescription(new RTCSessionDescription(offer));
-});
+myPeerConnection.createOffer()
+  .then((offer) => myPeerConnection.setLocalDescription(new RTCSessionDescription(offer)));
 ```
 
 For this reason, the {{domxref("RTCSessionDescription.RTCSessionDescription",
@@ -166,7 +164,7 @@ async function handleNegotiationNeededEvent() {
     const offer = await pc.createOffer();
     pc.setLocalDescription(offer);
     signalRemotePeer({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     reportError(err);
   }
 }

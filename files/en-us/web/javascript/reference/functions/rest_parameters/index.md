@@ -24,7 +24,7 @@ function f(a, b, ...theArgs) {
 
 ## Description
 
-A function definition's last parameter can be prefixed with "`...`" (three U+002E FULL STOP characters), which will cause all remaining (user supplied) parameters to be placed within a [standard JavaScript array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
+A function definition's last parameter can be prefixed with `...` (three U+002E FULL STOP characters), which will cause all remaining (user supplied) parameters to be placed within a [standard JavaScript array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 Only the last parameter in a function definition can be a rest parameter.
 
 ```js
@@ -81,26 +81,27 @@ There are three main differences between rest parameters and the
 
 ### From arguments to an array
 
-Rest parameters were introduced to reduce the boilerplate code that was commonly used
-for converting a set of arguments to an array.
+Rest parameters were introduced to reduce the boilerplate code that was commonly used for converting a set of arguments to an array.
+
+Before rest parameters, `arguments` need to be converted to a normal array before calling array methods on them:
 
 ```js
-// Before rest parameters, "arguments" could be converted to a normal array using:
-
-function f(a, b) {
+function fn(a, b) {
   const normalArray = Array.prototype.slice.call(arguments);
   // — or —
-  const normalArray = [].slice.call(arguments);
+  const normalArray2 = [].slice.call(arguments);
   // — or —
-  const normalArray = Array.from(arguments);
+  const normalArrayFrom = Array.from(arguments);
 
   const first = normalArray.shift(); // OK, gives the first argument
-  const first = arguments.shift(); // ERROR (arguments is not a normal array)
+  const firstBad = arguments.shift(); // ERROR (arguments is not a normal array)
 }
+```
 
-// Now, you can easily gain access to a normal array using a rest parameter
+Now, you can easily gain access to a normal array using a rest parameter:
 
-function f(...args) {
+```js
+function fn(...args) {
   const normalArray = args;
   const first = normalArray.shift(); // OK, gives the first argument
 }

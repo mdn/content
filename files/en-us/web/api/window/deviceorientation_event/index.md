@@ -52,20 +52,17 @@ An {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 
 ```js
 if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
-        // alpha: rotation around z-axis
-        const rotateDegrees = event.alpha;
-        // gamma: left to right
-        const leftToRight = event.gamma;
-        // beta: front back motion
-        const frontToBack = event.beta;
+   window.addEventListener("deviceorientation", (event) => {
+     const rotateDegrees = event.alpha; // alpha: rotation around z-axis
+     const leftToRight = event.gamma; // gamma: left to right
+     const frontToBack = event.beta; // beta: front back motion
 
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    }, true);
+     handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+   }, true);
 }
 
-const handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    // do something amazing
+const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
+  // do something amazing
 };
 ```
 

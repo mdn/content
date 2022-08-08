@@ -29,7 +29,7 @@ lastIndexOf(searchString, position)
 
   - : Substring to search for.
 
-    If the method is called with no arguments, `searchString` [is coerced](https://tc39.es/ecma262/#sec-tostring) to "`undefined`". Therefore,`'undefined'.lastIndexOf()` returns `0` — because the substring `undefined` is found at position `0` in the string `undefined`. But `'undefine'.lastIndexOf()`, returns `-1` — because the substring `undefined` is not found in the string `undefine`.
+    If the method is called with no arguments, `searchString` [is coerced](https://tc39.es/ecma262/#sec-tostring) to `"undefined"`. Therefore,`'undefined'.lastIndexOf()` returns `0` — because the substring `"undefined"` is found at position `0` in the string `"undefined"`. But `'undefine'.lastIndexOf()`, returns `-1` — because the substring `"undefined"` is not found in the string `"undefine"`.
 
 - `position` {{optional_inline}}
 

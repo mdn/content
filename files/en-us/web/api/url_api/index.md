@@ -59,7 +59,7 @@ let addr = new URL("https://example.com/login?user=someguy&page=news");
 try {
   loginUser(addr.searchParams.get("user"));
   gotoPage(addr.searchParams.get("page"));
-} catch(err) {
+} catch (err) {
   showErrorMessage(err);
 }
 ```

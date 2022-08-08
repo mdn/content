@@ -39,7 +39,7 @@ To load CSS asynchronously one can set the media type to print and then change t
 The downside with this approach is the flash of unstyled text (FOUT.) The simplest way to address this is by inlining CSS that is required for any content that is rendered above the fold, or what you see in the browser viewport before scrolling. These styles will improve perceived performance as the CSS does not require a file request.
 
 ```html
-<style type="text/css">
+<style>
 // Insert your CSS here
 </style>
 ```

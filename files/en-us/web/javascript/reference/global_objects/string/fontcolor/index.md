@@ -40,7 +40,7 @@ A string containing a {{HTMLElement("font")}} HTML element.
 
 If you express color as a hexadecimal RGB triplet, you must use the format
 `rrggbb`. For example, the hexadecimal RGB values for salmon are red=FA,
-green=80, and blue=72, so the RGB triplet for salmon is "`FA8072`".
+green=80, and blue=72, so the RGB triplet for salmon is `"FA8072"`.
 
 ## Examples
 

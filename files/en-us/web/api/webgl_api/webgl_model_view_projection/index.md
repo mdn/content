@@ -80,7 +80,7 @@ function WebGLBox() {
 Now we'll create a method to draw a box on the screen.
 
 ```js
-WebGLBox.prototype.draw = function(settings) {
+WebGLBox.prototype.draw = function (settings) {
   // Create some attribute data; these are the triangles that will end being
   // drawn to the screen. There are two that form a square.
 
@@ -345,7 +345,7 @@ In this case, for every frame of the animation a series of scale, rotation, and 
 The following code sample defines a method on the `CubeDemo` object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the [MDN WebGL](https://github.com/gregtatum/mdn-webgl) shared code. The new function looks like this:
 
 ```js
-CubeDemo.prototype.computeModelMatrix = function(now) {
+CubeDemo.prototype.computeModelMatrix = function (now) {
   //Scale down by 50%
   const scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
 
@@ -510,7 +510,7 @@ Which is exactly the same as the `(z + 1) * scaleFactor` that we used in the pre
 In the box demo, an additional `computeSimpleProjectionMatrix()` method is added. This is called in the `draw()` method and has the scale factor passed to it. The result should be identical to the last example:
 
 ```js
-CubeDemo.prototype.computeSimpleProjectionMatrix = function(scaleFactor) {
+CubeDemo.prototype.computeSimpleProjectionMatrix = function (scaleFactor) {
   this.transforms.projection = [
     1, 0, 0, 0,
     0, 1, 0, 0,
@@ -572,7 +572,7 @@ The reason to flip the z axis is that the clip space coordinate system is a left
 Let's take a look at a `perspectiveMatrix()` function, which computes the perspective projection matrix.
 
 ```js
-MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
+MDN.perspectiveMatrix = function (fieldOfViewInRadians, aspectRatio, near, far) {
   const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
   const rangeInv = 1 / (near - far);
 
@@ -599,7 +599,7 @@ The four parameters into this function are:
 In the latest version of the box demo, the `computeSimpleProjectionMatrix()` method has been replaced with the `computePerspectiveMatrix()` method.
 
 ```js
-CubeDemo.prototype.computePerspectiveMatrix = function() {
+CubeDemo.prototype.computePerspectiveMatrix = function () {
   const fieldOfViewInRadians = Math.PI * 0.5;
   const aspectRatio = window.innerWidth / window.innerHeight;
   const nearClippingPlaneDistance = 1;
@@ -658,7 +658,7 @@ Unlike the model matrix, which directly transforms the model vertices, the view 
 The following `computeViewMatrix()` method animates the view matrix by moving it in and out, and left and right.
 
 ```js
-CubeDemo.prototype.computeViewMatrix = function(now) {
+CubeDemo.prototype.computeViewMatrix = function (now) {
   const moveInAndOut = 20 * Math.sin(now * 0.002);
   const moveLeftAndRight = 15 * Math.sin(now * 0.0017);
 

@@ -83,7 +83,7 @@ window.onunhandledrejection = (event) => {
 Many environments (such as {{Glossary("Node.js")}}) report unhandled promise rejections to the console by default. You can prevent that from happening by adding a handler for `unhandledrejection` events that—in addition to any other tasks you wish to perform—calls {{domxref("Event.preventDefault()", "preventDefault()")}} to cancel the event, preventing it from bubbling up to be handled by the runtime's logging code. This works because `unhandledrejection` is cancelable.
 
 ```js
-window.addEventListener('unhandledrejection', function (event) {
+window.addEventListener('unhandledrejection', (event) => {
   // code for handling the unhandled rejection
   // …
 

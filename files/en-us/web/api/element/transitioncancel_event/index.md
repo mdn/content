@@ -28,7 +28,7 @@ ontransitioncancel = (event) => { };
 
 ## Event type
 
-An {{domxref("TransitionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TransitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TransitionEvent")}}
 

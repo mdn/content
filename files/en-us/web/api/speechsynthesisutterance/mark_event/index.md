@@ -46,7 +46,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `mark` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('mark', function(event) {
+utterThis.addEventListener('mark', (event) => {
   console.log(`A mark was reached: ${event.name}`);
 });
 ```
@@ -54,7 +54,7 @@ utterThis.addEventListener('mark', function(event) {
 Or use the `onmark` event handler property:
 
 ```js
-utterThis.onmark = function(event) {
+utterThis.onmark = (event) => {
   console.log(`A mark was reached: ${event.name}`);
 }
 ```

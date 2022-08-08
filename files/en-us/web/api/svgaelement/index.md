@@ -52,7 +52,7 @@ In the example below, the {{SVGAttr("target")}} attribute of the {{SVGElement("a
 const linkRef = document.querySelector("a");
 linkRef.target = "_self";
 
-linkRef.onclick = function(){
+linkRef.onclick = () => {
   if (linkRef.target === "_blank") {
     console.log("BLANK!");
     linkRef.target = "_self";

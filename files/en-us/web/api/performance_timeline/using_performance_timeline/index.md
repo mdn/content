@@ -45,30 +45,30 @@ function print_PerformanceEntries() {
 
   // Use getEntries() to iterate all entries
   let p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
+  p.forEach((entry, i) => {
     log(`All Entry[${i}]`);
-    print_perf_entry(p[i]);
+    print_perf_entry(entry);
   }
 
   // Use getEntries(name, entryType) to get specific entries
   p = performance.getEntries({name : "Measure1", entryType: "measure"});
-  for (let i=0; i < p.length; i++) {
+  p.forEach((entry, i) => {
     log(`Begin and Measure [${i}]`);
-    print_perf_entry(p[i]);
+    print_perf_entry(entry);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (let i=0; i < p.length; i++) {
+  p.forEach((entry, i) => {
     log(`Mark only [${i}]`);
-    print_perf_entry(p[i]);
+    print_perf_entry(entry);
   }
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i < p.length; i++) {
+  p.forEach((entry, i) => {
     log(`Begin and Mark [${i}]`);
-    print_perf_entry(p[i]);
+    print_perf_entry(entry);
   }
 }
 ```
@@ -140,11 +140,9 @@ The following example shows how to register two observers: the first one registe
 ```js
 function PerformanceObservers() {
   // Create observer for all performance event types
-  const observe_all = new PerformanceObserver(function(list, obs) {
-    let perfEntries;
-
+  const observe_all = new PerformanceObserver((list, obs) => {
     // Print all entries
-    perfEntries = list.getEntries();
+    let perfEntries = list.getEntries();
     for (let i=0; i < perfEntries.length; i++) {
       print_perf_entry(perfEntries[i]);
     }
@@ -165,7 +163,7 @@ function PerformanceObservers() {
   observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
 
   // Create observer for just the "mark" event type
-  const observe_mark = new PerformanceObserver(function(list, obs) {
+  const observe_mark = new PerformanceObserver((list, obs) => {
     const perfEntries = list.getEntries();
     // Should only have 'mark' entries
     for (let i=0; i < perfEntries.length; i++) {

@@ -38,7 +38,7 @@ Note that JavaScript has _no_ `goto` statement, you can only use
 labels with `break` or `continue`.
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, you
-can't use "`let`" as a label name. It will throw a {{jsxref("SyntaxError")}}
+can't use `let` as a label name. It will throw a {{jsxref("SyntaxError")}}
 (let is a reserved identifier).
 
 ## Examples
@@ -165,7 +165,7 @@ L: function F() {}
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code,
 however, this will throw a {{jsxref("SyntaxError")}}:
 
-```js
+```js example-bad
 'use strict';
 L: function F() {}
 // SyntaxError: functions cannot be labelled
@@ -174,7 +174,7 @@ L: function F() {}
 [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 can neither be labeled in strict code, nor in non-strict code:
 
-```js
+```js example-bad
 L: function* F() {}
 // SyntaxError: generator functions cannot be labelled
 ```

@@ -66,7 +66,7 @@ btn.addEventListener('click', async () => {
   try {
     await navigator.share(shareData)
     resultPara.textContent = 'MDN shared successfully'
-  } catch(err) {
+  } catch (err) {
     resultPara.textContent = `Error: ${err}`
   }
 });

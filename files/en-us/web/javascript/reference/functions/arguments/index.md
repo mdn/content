@@ -43,9 +43,12 @@ However, it can be converted to a real `Array`:
 
 ```js
 const args = Array.prototype.slice.call(arguments);
-// OR:
+```
+
+It can also be converted with using an array literal. This method is shorter than above but allocates an empty array.
+
+```js
 const args2 = [].slice.call(arguments);
-// Using an array literal is shorter than above but allocates an empty array
 ```
 
 As you can do with any Array-like object, you can use ES2015's {{jsxref("Array.from()")}} method or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to convert `arguments` to a real Array:
@@ -123,7 +126,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 
 ### Defining a function that creates HTML lists
 
-This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is "`u`" if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Element/ul), or "`o`" if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Element/ol). The function is defined as follows:
+This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is `"u"` if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Element/ul), or `"o"` if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Element/ol). The function is defined as follows:
 
 ```js
 function list(type) {

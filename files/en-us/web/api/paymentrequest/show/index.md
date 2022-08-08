@@ -149,7 +149,7 @@ async function processPayment() {
 
     const response = await payRequest.show();
     await validateResponse(response);
-  } catch(err) {
+  } catch (err) {
     /* handle the error; AbortError usually means a user cancellation */
   }
 }
@@ -173,7 +173,7 @@ async function validateResponse(response) {
     } else {
       await response.complete("fail");
     }
-  } catch(err) {
+  } catch (err) {
     await response.complete("fail");
   }
 }

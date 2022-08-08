@@ -43,12 +43,12 @@ _This interface has no events that fire on it._
 In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```
@@ -71,25 +71,25 @@ function displayReports(reports) {
   const list = document.createElement('ul');
   outputElem.appendChild(list);
 
-  for (let i = 0; i < reports.length; i++) {
+  reports.forEach((report, i) => {
     let listItem = document.createElement('li');
-    let textNode = document.createTextNode(`Report ${i + 1}, type: ${reports[i].type}`);
+    let textNode = document.createTextNode(`Report ${i + 1}, type: ${report.type}`);
     listItem.appendChild(textNode);
     let innerList = document.createElement('ul');
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
-    for (let key in reports[i].body) {
-      let innerListItem = document.createElement('li');
-      let keyValue = reports[i].body[key];
+    for (const key in reports[i].body) {
+      const innerListItem = document.createElement('li');
+      const keyValue = reports[i].body[key];
       innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);
     }
-  }
+  });
 }
 ```
 
-The `reports` parameter contains an array of all the reports in the observer's report queue. We loop over each report using a basic [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop, then iterate over each entry of in the report's body using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) structure, displaying each key/value pair inside a list item.
+The `reports` parameter contains an array of all the reports in the observer's report queue. We loop over each report using a [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) loop, then iterate over each entry of in the report's body using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) structure, displaying each key/value pair inside a list item.
 
 ## Specifications
 

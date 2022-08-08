@@ -11,7 +11,7 @@ tags:
 
 This article describes, in detail, criteria for content to be included on MDN Web Docs, the application process for including new documentation, and expectations and guidelines for a party applying.
 
-This is aimed at larger projects. To suggest a new page or article, please refer to the [Suggesting content](/en_US/docs/MDN/Writing_guidelines/What_we_write#suggesting_content) section on the "What we write" page.
+This is aimed at larger projects. To suggest a new page or article, please refer to the [Suggesting content](/en-US/docs/MDN/Writing_guidelines/What_we_write#suggesting_content) section on the "What we write" page.
 
 ## Web standards technologies
 

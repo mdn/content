@@ -35,12 +35,12 @@ function setupVideo(url) {
   // Waiting for these 2 events ensures
   // there is data in the video
 
-  video.addEventListener('playing', function() {
+  video.addEventListener('playing', () => {
      playing = true;
      checkReady();
   }, true);
 
-  video.addEventListener('timeupdate', function() {
+  video.addEventListener('timeupdate', () => {
      timeupdate = true;
      checkReady();
   }, true);

@@ -100,7 +100,7 @@ function imageReceived() {
   try {
     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
   }
-  catch(err) {
+  catch (err) {
     console.log("Error: " + err);
   }
 }

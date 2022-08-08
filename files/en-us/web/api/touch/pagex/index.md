@@ -39,7 +39,7 @@ are accessed via the event's {{domxref("TouchEvent.changedTouches")}} list.
 // Register a touchmove listeners for the 'source' element
 const src = document.getElementById("source");
 
-src.addEventListener('touchmove', function(e) {
+src.addEventListener('touchmove', (e) => {
   // Iterate through the touch points that have moved and log each
   // of the pageX/Y coordinates. The unit of each coordinate is CSS pixels.
   for (let i = 0; i < e.changedTouches.length; i++) {

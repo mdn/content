@@ -33,7 +33,7 @@ the user agent will return `null`.
 ## Examples
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;

@@ -48,16 +48,16 @@ None ({{jsxref("undefined")}}).
 ```js
 let button = document.querySelector('button');
 
-button.addEventListener('click', function () {
-  let selection = window.getSelection();
-  let strongs = document.getElementsByTagName('strong');
+button.addEventListener('click', () => {
+  const selection = window.getSelection();
+  const strongs = document.getElementsByTagName('strong');
 
   if (selection.rangeCount > 0) {
     selection.removeAllRanges();
   }
 
   for (let i = 0; i < strongs.length; i++) {
-    let range = document.createRange();
+    const range = document.createRange();
     range.selectNode(strongs[i]);
     selection.addRange(range);
   }

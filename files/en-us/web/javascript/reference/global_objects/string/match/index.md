@@ -123,7 +123,7 @@ console.log(matches);
 ### Using named capturing groups
 
 In browsers which support named capturing groups, the following code captures
-"`fox`" or "`cat`" into a group named "`animal`":
+`"fox"` or `"cat"` into a group named `animal`:
 
 ```js
 const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';

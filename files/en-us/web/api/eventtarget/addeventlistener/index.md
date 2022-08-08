@@ -163,7 +163,7 @@ try {
 
   window.addEventListener("test", null, options);
   window.removeEventListener("test", null, options);
-} catch(err) {
+} catch (err) {
   passiveSupported = false;
 }
 ```
@@ -775,7 +775,7 @@ myButton.addEventListener('click', () => {
   someObject.aProperty = 'Data Again';  // Change the value
 });
 
-window.setInterval(() => {
+setInterval(() => {
   if (someObject.aProperty === 'Data Again') {
     console.log('Data Again: True');
     someObject.aProperty = 'Data';  // Reset value to wait for next event execution
@@ -852,7 +852,7 @@ try {
       }
     )
   );
-} catch(err) {}
+} catch (err) {}
 
 window.addEventListener('scroll', (event) => {
   /* do something */

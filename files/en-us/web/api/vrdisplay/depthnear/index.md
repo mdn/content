@@ -31,7 +31,7 @@ A double, representing the z-depth in meters; its initial value is `0.01`.
 ```js
 let vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
   vrDisplay.depthNear = 1.0;
   vrDisplay.depthFar = 7500.0;

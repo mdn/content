@@ -18,7 +18,7 @@ The **`CSSNumericArray`** interface of the {{domxref('CSS_Object_Model#css_typed
 
 ## Properties
 
-- {{domxref("CSSNumericArray.length")}} {{ReadOnlyInline}}
+- {{domxref("CSSNumericArray.length")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns how many {{domxref("CSSNumericValue")}} objects are contained within the `CSSNumericArray`.
 
 ## Examples

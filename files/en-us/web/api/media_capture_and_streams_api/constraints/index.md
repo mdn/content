@@ -375,7 +375,7 @@ function buildConstraints() {
   try {
     videoConstraints = JSON.parse(videoConstraintEditor.value);
     audioConstraints = JSON.parse(audioConstraintEditor.value);
-  } catch(error) {
+  } catch (error) {
     handleError(error);
   }
 }

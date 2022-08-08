@@ -426,16 +426,16 @@ Use the {{HTMLElement('link')}} element, alongside with and together with the at
 ```html
 <head>
   <title>Home Page</title>
-  <link href="main.css" rel="stylesheet" type="text/css" title="Default Style">
-  <link href="alternate1.css" rel="alternate stylesheet" type="text/css" title="Alternate One">
-  <link href="alternate2.css" rel="alternate stylesheet" type="text/css" title="Alternate Two">
+  <link href="main.css" rel="stylesheet" title="Default Style">
+  <link href="alternate1.css" rel="alternate stylesheet" title="Alternate One">
+  <link href="alternate2.css" rel="alternate stylesheet" title="Alternate Two">
 </head>
 ```
 
 **{{CSSxref('@import')}}** is also a way to incorporate style sheets, but it is not quite as well supported as the {{HTMLElement('link')}} element.
 
 ```html
-<style type="text/css">
+<style>
   @import url(alternate1.css);
   @import url(alternate2.css);
 </style>
@@ -631,7 +631,7 @@ Along with the Harding tool, is generally recognized to be one of the two "gold 
 - [Three Flashes or Below Threshold Understanding Success Criterion 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html) Understanding WCAG 2.1
 - [Understanding Success Criteria 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
 - [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
-- [Web Animations Mode](https://www.w3.org/TR/web-animations-1/)l W3C Working Draft
+- [Web Animations Model](https://www.w3.org/TR/web-animations-1/) W3C Working Draft
 - [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/#relativeluminancedef) definition of relative luminance
 - [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
 

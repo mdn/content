@@ -314,7 +314,7 @@ registerPaint('headerHighlight', class {
     const y = size.height * 0.3;
     const blockWidth = size.width * 0.33;
     const highlightHeight = size.height * 0.85;
-        const color = props.get('--highColor');
+    const color = props.get('--highColor');
 
     ctx.fillStyle = color;
 

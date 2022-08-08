@@ -109,12 +109,12 @@ recognition.maxAlternatives = 1;
 const diagnostic = document.querySelector('.output');
 const bg = document.querySelector('html');
 
-document.body.onclick = function() {
+document.body.onclick = () => {
   recognition.start();
   console.log('Ready to receive a color command.');
 }
 
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}`;
   bg.style.backgroundColor = color;

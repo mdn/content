@@ -33,7 +33,7 @@ onsecuritypolicyviolation = (event) => { };
 
 ## Event type
 
-An {{domxref("SecurityPolicyViolationEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SecurityPolicyViolationEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SecurityPolicyViolationEvent")}}
 

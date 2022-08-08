@@ -10,6 +10,7 @@ tags:
   - Reference
   - Web Audio API
   - createScriptProcessor
+  - Deprecated
 browser-compat: api.BaseAudioContext.createScriptProcessor
 ---
 {{APIRef("Web Audio API")}}{{deprecated_header}}

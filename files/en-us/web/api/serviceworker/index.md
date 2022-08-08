@@ -48,7 +48,7 @@ This code snippet is from the [service worker registration-events sample](https:
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
-    }).then(function (registration) {
+    }).then((registration) => {
         let serviceWorker;
         if (registration.installing) {
             serviceWorker = registration.installing;
@@ -62,11 +62,11 @@ if ('serviceWorker' in navigator) {
         }
         if (serviceWorker) {
             // logState(serviceWorker.state);
-            serviceWorker.addEventListener('statechange', function (e) {
+            serviceWorker.addEventListener('statechange', (e) => {
                 // logState(e.target.state);
             });
         }
-    }).catch (function (error) {
+    }).catch((error) => {
         // Something went wrong during registration. The service-worker.js file
         // might be unavailable or contain a syntax error.
     });

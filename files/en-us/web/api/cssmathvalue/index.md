@@ -31,7 +31,7 @@ Below is a list of interfaces based on the CSSMathValue interface.
 
 ## Properties
 
-- {{domxref('CSSMathValue.operator')}}
+- {{domxref('CSSMathValue.operator')}} {{Experimental_Inline}}
   - : Indicates the operator that the current subtype represents.
 
 ### Event handlers

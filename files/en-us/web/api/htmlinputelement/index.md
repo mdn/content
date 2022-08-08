@@ -241,13 +241,10 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed. Note that this is actually fired on the {{domxref("HTMLElement")}} interface and also applies to [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements, but we've listed it here because it is most commonly used with form input elements.
-    Also available via the [`oninput`](/en-US/docs/Web/API/GlobalEventHandlers/oninput) event handler property.
 - [`invalid`](/en-US/docs/Web/API/HTMLInputElement/invalid_event)
   - : Fired when an element does not satisfy its constraints during constraint validation.
-    Also available via the [`oninvalid`](/en-US/docs/Web/API/GlobalEventHandlers/oninvalid) event handler property.
 - [`search`](/en-US/docs/Web/API/HTMLInputElement/search_event)
   - : Fired when a search is initiated on an {{HTMLElement("input")}} of `type="search"`.
-    Also available via the [`onsearch`](/en-US/docs/Web/API/GlobalEventHandlers/onsearch) event handler property.
 - {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event {{experimental_inline}}
   - : Fires when the text selection in a {{HTMLElement("input")}} element has been changed.
 
