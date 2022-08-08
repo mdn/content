@@ -408,7 +408,7 @@ function decodeTechnoStuff() {
   for (let i=0; i<n; i++) {
     const taskData = {
       count: getRandomIntInclusive(75, 150),
-      text: `This text is from task number ${(i + 1).toString()} of ${n}`
+      text: `This text is from task number ${i + 1} of ${n}`
     };
 
     enqueueTask(logTaskHandler, taskData);
