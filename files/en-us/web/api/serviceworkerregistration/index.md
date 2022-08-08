@@ -76,7 +76,7 @@ if ('serviceWorker' in navigator) {
       // If updatefound is fired, it means that there's
       // a new service worker being installed.
       const installingWorker = registration.installing;
-      console.log(`A new service worker is being installed: ${installingWorker}`);
+      console.log(A new service worker is being installed:', installingWorker);
 
       // You can listen for changes to the installing service worker's
       // state via installingWorker.onstatechange
