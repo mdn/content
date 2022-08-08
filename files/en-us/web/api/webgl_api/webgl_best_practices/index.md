@@ -594,7 +594,7 @@ Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-pr
 On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
 
 ```js
-window.getDevicePixelSize = window.getDevicePixelSize || async (elem) => {
+window.getDevicePixelSize = window.getDevicePixelSize || (async (elem) => {
    await new Promise((fn_resolve) => {
       const observer = new ResizeObserver((entries) => {
          for (const cur of entries) {
@@ -611,7 +611,7 @@ window.getDevicePixelSize = window.getDevicePixelSize || async (elem) => {
       });
       observer.observe(elem, {box: 'device-pixel-content-box'});
    });
-};
+});
 ```
 
 Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.
