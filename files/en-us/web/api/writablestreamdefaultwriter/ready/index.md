@@ -60,7 +60,7 @@ function sendMessage(message, writableStream) {
         console.log("All chunks written");
       })
       .catch((err) => {
-        console.log(`Stream error: ${err}`);
+        console.error(`Stream error: ${err}`);
       });
     });
   });
