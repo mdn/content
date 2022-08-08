@@ -93,7 +93,7 @@ The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} 
 
 Pointer events have ten event types, seven of which have similar semantics to their mouse event counterparts (`down`, `up`, `move`, `over`, `out`, `enter`, and `leave`).
 
-Below is a short description of each event type and its associated {{domxref("GlobalEventHandlers","Global Event Handler")}}.
+Below is a short description of each event type.
 
 | Event | Description |
 | ----- | ----------- |
