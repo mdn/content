@@ -79,8 +79,9 @@ function displayReports(reports) {
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
-    report.body.forEach((keyValue, key) => {
+    for (const key in reports[i].body) {
       const innerListItem = document.createElement('li');
+      const keyValue = reports[i].body[key];
       innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);
     });
@@ -88,7 +89,7 @@ function displayReports(reports) {
 }
 ```
 
-The `reports` parameter contains an array of all the reports in the observer's report queue. We loop over each report using a basic [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop, then iterate over each entry of in the report's body using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) structure, displaying each key/value pair inside a list item.
+The `reports` parameter contains an array of all the reports in the observer's report queue. We loop over each report using a basic [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop, then iterate over each entry of in the report's body using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) structure, displaying each key/value pair inside a list item.
 
 ## Specifications
 
