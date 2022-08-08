@@ -113,7 +113,7 @@ taken by the server, the current document is reloaded with the modified search s
         location.hash = bookmark;
         return; 
       }
-      constr bookmarkElement = document.querySelector(bookmark);
+      const bookmarkElement = document.querySelector(bookmark);
       if (bookmarkElement) { 
         showNode(bookmarkElement);
       }
