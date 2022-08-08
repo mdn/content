@@ -84,7 +84,7 @@ Many code editors have linter plugins. GitHub's [Atom](https://atom.io/) code ed
 4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-csslint** plugin for linting CSS, and the **linter-tidy** plugin for linting HTML.
 5. After the packages have finished installing, try loading up an HTML file and a CSS file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
 
-![Screen shot showing how html tidy points out a missing quote.](atom-htmltidy.png)![CSSLint lists errors including missing brackets, and warning such as too high specifity.](atom-csslint.png)
+![Screen shot showing how html tidy points out a missing quote.](atom-htmltidy.png)![CSSLint lists errors including missing brackets, and warning such as too high specificity.](atom-csslint.png)
 
 Other popular editors have similar linting packages available. For example, see:
 
