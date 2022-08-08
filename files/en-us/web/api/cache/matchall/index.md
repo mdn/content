@@ -73,7 +73,7 @@ The following example deletes all cached entries in the `v1` cache matching the 
 caches.open('v1').then((cache) => {
   cache.matchAll('/', { ignoreSearch: true }).then((responses) => {
     for (const response of responses) {
-      cache.delete(responses);
+      cache.delete(response);
     }
   });
 });
