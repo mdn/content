@@ -260,11 +260,11 @@ function invite(evt) {
     createPeerConnection();
 
     navigator.mediaDevices.getUserMedia(mediaConstraints)
-    .then((localStream) => {
-      document.getElementById("local_video").srcObject = localStream;
-      localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
-    })
-    .catch(handleGetUserMediaError);
+      .then((localStream) => {
+        document.getElementById("local_video").srcObject = localStream;
+        localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
+      })
+      .catch(handleGetUserMediaError);
   }
 }
 ```
@@ -370,18 +370,17 @@ Once the caller has created its {{domxref("RTCPeerConnection")}}, created a medi
 
 ```js
 function handleNegotiationNeededEvent() {
-  myPeerConnection.createOffer().then((offer) => {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(() => {
-    sendToServer({
-      name: myUsername,
-      target: targetUsername,
-      type: "video-offer",
-      sdp: myPeerConnection.localDescription
-    });
-  })
-  .catch(reportError);
+  myPeerConnection.createOffer()
+    .then((offer) => myPeerConnection.setLocalDescription(offer))
+    .then(() => {
+      sendToServer({
+        name: myUsername,
+        target: targetUsername,
+        type: "video-offer",
+        sdp: myPeerConnection.localDescription
+      });
+    })
+    .catch(reportError);
 }
 ```
 
@@ -425,25 +424,25 @@ function handleVideoOfferMsg(msg) {
 
   myPeerConnection.setRemoteDescription(desc)
     .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
-  .then((stream) => {
-    localStream = stream;
-    document.getElementById("local_video").srcObject = localStream;
+    .then((stream) => {
+      localStream = stream;
+      document.getElementById("local_video").srcObject = localStream;
 
-    localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
-  })
-  .then(() => myPeerConnection.createAnswer())
-  .then((answer) => myPeerConnection.setLocalDescription(answer))
-  .then(() => {
-    const msg = {
-      name: myUsername,
-      target: targetUsername,
-      type: "video-answer",
-      sdp: myPeerConnection.localDescription
-    };
+      localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
+    })
+    .then(() => myPeerConnection.createAnswer())
+    .then((answer) => myPeerConnection.setLocalDescription(answer))
+    .then(() => {
+      const msg = {
+        name: myUsername,
+        target: targetUsername,
+        type: "video-answer",
+        sdp: myPeerConnection.localDescription
+      };
 
-    sendToServer(msg);
-  })
-  .catch(handleGetUserMediaError);
+      sendToServer(msg);
+    })
+    .catch(handleGetUserMediaError);
 }
 ```
 
