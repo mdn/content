@@ -85,7 +85,7 @@ As establishing a connection is asynchronous and prone to failure there is no gu
 We can at least be sure that attempting to send data only takes place once a connection is established by defining an {{domxref("WebSocket.onopen", "onopen")}} event handler to do the work:
 
 ```js
-exampleSocket.onopen = function (event) {
+exampleSocket.onopen = (event) => {
   exampleSocket.send("Here's some text that the server is urgently awaiting!");
 };
 ```
@@ -124,7 +124,7 @@ for the `message` event, or use the {{domxref("WebSocket.onmessage",
 like this:
 
 ```js
-exampleSocket.onmessage = function (event) {
+exampleSocket.onmessage = (event) => {
   console.log(event.data);
 }
 ```
@@ -140,7 +140,7 @@ Let's consider the chat client application first alluded to in [Using JSON to tr
 The code that interprets these incoming messages might look like this:
 
 ```js
-exampleSocket.onmessage = function (event) {
+exampleSocket.onmessage = (event) => {
   const f = document.getElementById("chatbox").contentDocument;
   let text = "";
   const msg = JSON.parse(event.data);

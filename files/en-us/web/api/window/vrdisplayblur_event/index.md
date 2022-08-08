@@ -48,7 +48,7 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplayblur` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplayblur', function() {
+window.addEventListener('vrdisplayblur', () => {
   info.textContent = 'Display unfocused.';
   reportDisplays();
 });
@@ -57,7 +57,7 @@ window.addEventListener('vrdisplayblur', function() {
 Or use the `onvrdisplayblur` event handler property:
 
 ```js
-window.onvrdisplayblur = function() {
+window.onvrdisplayblur = () => {
   info.textContent = 'Display unfocused.';
   reportDisplays();
 };

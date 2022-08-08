@@ -116,7 +116,7 @@ These are, in order:
 When the page loads, we do some basic setup: we fetch references to the dial button and the log output box elements, and we use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add an event listener to the dial button so that clicking it calls the `connectAndDial()` function to begin the connection process.
 
 ```js
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
   logElement = document.querySelector(".log");
   dialButton = document.querySelector("#dial");
 
@@ -218,13 +218,13 @@ function handleToneChangeEvent(event) {
     log(`Tone played: ${event.tone}`);
   } else {
     log("All tones have played. Disconnecting.");
-    callerPC.getLocalStreams().forEach(function(stream) {
-      stream.getTracks().forEach(function(track) {
+    callerPC.getLocalStreams().forEach((stream) => {
+      stream.getTracks().forEach((track) => {
         track.stop();
       });
     });
-    receiverPC.getLocalStreams().forEach(function(stream) {
-      stream.getTracks().forEach(function(track) {
+    receiverPC.getLocalStreams().forEach((stream) => {
+      stream.getTracks().forEach((track) => {
         track.stop();
       });
     });
@@ -294,23 +294,23 @@ When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after
 function handleCallerNegotiationNeeded() {
   log("Negotiating…");
   callerPC.createOffer(offerOptions)
-  .then(function(offer) {
+  .then((offer) => {
     log(`Setting caller's local description: ${offer.sdp}`);
     return callerPC.setLocalDescription(offer);
   })
-  .then(function() {
+  .then(() => {
     log("Setting receiver's remote description to the same as caller's local");
     return receiverPC.setRemoteDescription(callerPC.localDescription)
   })
-  .then(function() {
+  .then(() => {
     log("Creating answer");
     return receiverPC.createAnswer();
   })
-  .then(function(answer) {
+  .then((answer) => {
     log(`Setting receiver's local description to ${answer.sdp}`);
     return receiverPC.setLocalDescription(answer);
   })
-  .then(function() {
+  .then(() => {
     log("Setting caller's remote description to match");
     return callerPC.setRemoteDescription(receiverPC.localDescription);
   })
