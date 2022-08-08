@@ -21,18 +21,18 @@ The **`CSSRotate`** interface of the {{domxref('CSS_Object_Model#css_typed_objec
 
 ## Constructor
 
-- {{domxref("CSSRotate.CSSRotate", "CSSRotate()")}}
+- {{domxref("CSSRotate.CSSRotate", "CSSRotate()")}} {{Experimental_Inline}}
   - : Creates a new `CSSRotate` object.
 
 ## Properties
 
 - {{domxref('CSSRotate.x','x')}}
   - : Returns or sets the x-axis value.
-- {{domxref('CSSRotate.y','y')}}
+- {{domxref('CSSRotate.y','y')}} {{Experimental_Inline}}
   - : Returns or sets the y-axis value.
-- {{domxref('CSSRotate.z','z')}}
+- {{domxref('CSSRotate.z','z')}} {{Experimental_Inline}}
   - : Returns or sets the z-axis value.
-- {{domxref('CSSRotate.angle','angle')}}
+- {{domxref('CSSRotate.angle','angle')}} {{Experimental_Inline}}
   - : Returns or sets the angle value.
 
 ## Examples

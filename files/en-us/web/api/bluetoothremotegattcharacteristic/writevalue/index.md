@@ -11,6 +11,7 @@ tags:
   - Reference
   - Web Bluetooth API
   - writeValue
+  - Deprecated
 browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValue
 ---
 {{APIRef("Bluetooth API")}}{{Deprecated_header}}

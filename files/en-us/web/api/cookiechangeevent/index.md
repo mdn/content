@@ -26,7 +26,7 @@ Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 
 ## Constructor
 
-- {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}}
+- {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}} {{Experimental_Inline}}
   - : Creates a new `CookieChangeEvent`.
 
 ## Properties

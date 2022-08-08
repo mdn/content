@@ -6,6 +6,7 @@ tags:
   - CSS
   - Houdini
   - Reference
+  - Experimental
 browser-compat: api.CSS.registerProperty
 ---
 {{SeeCompatTable}}

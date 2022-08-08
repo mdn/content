@@ -6,6 +6,7 @@ tags:
   - API
   - Method
   - Reference
+  - Experimental
   - delete()
   - CookieStore
   - Experimental
