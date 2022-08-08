@@ -202,7 +202,7 @@ Alternatively, you can use {{jsxref("Function.bind()", "bind()")}} to set the va
 
 ```js
 const myArray = ['zero', 'one', 'two'];
-const myBoundMethod = ((sProperty) => {
+const myBoundMethod = (function (sProperty) {
     console.log(arguments.length > 0 ? this[sProperty] : this);
 }).bind(myArray);
 
