@@ -48,7 +48,7 @@ req.onsuccess = (e) => {
 }
 
 req.onerror = (e) => {
-  console.error(`Error getting a new endpoint: ${JSON.stringify(e)}`);
+  console.error(`Error getting a new endpoint: ${e.error}`);
 }
 ```
 
