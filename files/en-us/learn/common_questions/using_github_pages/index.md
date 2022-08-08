@@ -87,7 +87,7 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
     ```
 
 4. Now you need to turn GitHub pages on for your repository. To do this, from the homepage of your repository choose _Settings_, then select _Pages_ from the sidebar on the left. Underneath *Source*, choose the "main" branch. The page should refresh.
-5. Go to the GitHub Pages section again, and you should see a line of the form "Your site is ready to be published at https\://xxxxxx."
+5. Go to the GitHub Pages section again, and you should see a line of the form "Your site is ready to be published at `https://xxxxxx`."
 6. If you click on this URL, you should go to a live version of your example, provided the home page is called `index.html` — it goes to this entry point by default. If your site's entry point is called something else, for example `myPage.html`, you'll need to go to `https://xxxxxx/myPage.html`.
 
 ### Further GitHub knowledge

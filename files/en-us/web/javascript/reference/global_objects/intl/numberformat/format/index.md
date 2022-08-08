@@ -88,7 +88,7 @@ This is considered a historical artefact, as part of a convention which is no lo
 ```js
 const a = [123456.789, 987654.321, 456789.123];
 const numberFormat = new Intl.NumberFormat('es-ES');
-const formatted = a.map(n => numberFormat.format(n));
+const formatted = a.map((n) => numberFormat.format(n));
 console.log(formatted.join('; '));
 // → "123.456,789; 987.654,321; 456.789,123"
 ```
@@ -119,7 +119,7 @@ console.log(numberFormat.format(bigNum));
 // → "1,000,000,000,000,000,110,000"
 
 // Format as a string using the `E` syntax:
-console.log(numberFormat.format(bigNum + "E-6"));
+console.log(numberFormat.format(`${bigNum}E-6`));
 // → "1,000,000,000,000,000.11"
 ```
 

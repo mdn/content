@@ -70,12 +70,12 @@ Function expressions in JavaScript are not hoisted, unlike {{jsxref("Statements/
 You can't use function expressions before you create them:
 
 ```js
-console.log(notHoisted) // undefined
+console.log(notHoisted); // undefined
 //  even though the variable name is hoisted, the definition isn't. so it's undefined.
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-   console.log('bar');
+var notHoisted = function () {
+  console.log('bar');
 };
 ```
 
@@ -86,8 +86,8 @@ If you want to refer to the current function inside the function body, you need 
 This also avoids using the non-standard {{jsxref("Functions/arguments/callee", "arguments.callee")}} property.
 
 ```js
-let math = {
-  'factit': function factorial(n) {
+const math = {
+  factit: function factorial(n) {
     console.log(n)
     if (n <= 1) {
       return 1;
@@ -138,8 +138,8 @@ const x = function (y) {
 More commonly it is used as a {{Glossary("Callback_function", "callback")}}:
 
 ```js
-button.addEventListener('click', function(event) {
-    console.log('button is clicked!')
+button.addEventListener('click', function (event) {
+  console.log('button is clicked!');
 })
 ```
 
@@ -148,14 +148,14 @@ button.addEventListener('click', function(event) {
 An anonymous function is created and called:
 
 ```js
-(function() {
-    console.log('Code runs!')
+(function () {
+  console.log('Code runs!');
 })();
 
 // or
 
-!function() {
-  console.log('Code runs!')
+!function () {
+  console.log('Code runs!');
 }();
 ```
 

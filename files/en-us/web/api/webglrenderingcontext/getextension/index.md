@@ -28,7 +28,7 @@ getExtension(name)
 
 ### Return value
 
-A WebGL extension object, or {{jsxref("null")}} if name does not match
+A WebGL extension object, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if name does not match
 (case-insensitive) to one of the strings in
 {{domxref("WebGLRenderingContext.getSupportedExtensions")}}.
 
@@ -38,7 +38,7 @@ Once a WebGL extension is enabled, you are able to use the methods, properties o
 constants that this extension object provides.
 
 ```js
-var canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas');
 gl = canvas.getContext('webgl');
 
 gl.getExtension('WEBGL_lose_context').loseContext();

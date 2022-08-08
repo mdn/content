@@ -97,7 +97,7 @@ Consider this HTML for a media element:
 <video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)">
 ```
 
-Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("GlobalEventHandlers.onplay", "onplay")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
+Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("HTMLMediaElement.play_event", "onplay")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
 
 `handleFirstPlay()` looks like this:
 
@@ -149,7 +149,7 @@ if (startPlayPromise !== undefined) {
   startPlayPromise.then(() => {
     // Start whatever you need to do only after playback
     // has begun.
-  }).catch(error => {
+  }).catch((error) => {
     if (error.name === "NotAllowedError") {
       showPlayButton(videoElem);
     } else {
@@ -175,7 +175,7 @@ let playAttempt = setInterval(() => {
     .then(() => {
       clearInterval(playAttempt);
     })
-    .catch(error => {
+    .catch((error) => {
       console.log('Unable to play the video, User has not interacted yet.');
     });
 }, 3000);

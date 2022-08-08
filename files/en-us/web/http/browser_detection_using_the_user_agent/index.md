@@ -35,7 +35,7 @@ If you want to avoid using user agent detection, you have options!
 
 ```js
 // this code snippet splits a string in a special notation
-if (navigator.userAgent.indexOf("Chrome") !== -1){
+if (navigator.userAgent.includes("Chrome")){
     // YES! The user is suspected to support look-behind regexps
     // DO NOT USE /(?<=[A-Z])/. It will cause a syntax error in
     //  browsers that do not support look-behind expressions

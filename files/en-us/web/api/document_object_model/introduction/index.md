@@ -96,7 +96,7 @@ and then adds it to the tree for the document:
   <head>
     <script>
        // run this function when the document is loaded
-       window.onload = function() {
+       window.onload = () => {
 
          // create a couple of elements in an otherwise empty HTML page
          const heading = document.createElement("h1");
@@ -226,7 +226,7 @@ const table = document.getElementById("table");
 const tableAttrs = table.attributes; // Node/Element interface
 for (let i = 0; i < tableAttrs.length; i++) {
   // HTMLTableElement interface: border attribute
-  if(tableAttrs[i].nodeName.toLowerCase() == "border")
+  if (tableAttrs[i].nodeName.toLowerCase() === "border")
     table.border = "1";
 }
 // HTMLTableElement interface: summary attribute
@@ -251,7 +251,7 @@ The following is a brief list of common APIs in web and XML page scripting using
 - `element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()`
 - `element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()`
 - `{{domxref("window.content", "", "", "1")}}`
-- `{{domxref("GlobalEventHandlers/onload", "", "", "1")}}`
+- `{{domxref("Window.load_event", "Window.onload", "", "1")}}`
 - `{{domxref("window.scrollTo", "", "", "1")}}()`
 
 ## Example

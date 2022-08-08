@@ -114,276 +114,6 @@ If cells, rows, or columns can be selected, the following key combination are co
 
 ### Calendar example
 
-<div class="hidden"><h4 id="HTML">HTML</h4><pre class="brush: html">&#x3C;table role="grid" aria-labelledby="calendarheader" aria-readonly=true>
-  &#x3C;caption id="calendarheader">September 2018&#x3C;/caption>
-  &#x3C;thead role="rowgroup">
-    &#x3C;tr role="row">
-      &#x3C;td>&#x3C;/td>
-      &#x3C;th role="columnheader" aria-label="Sunday">S&#x3C;/th>
-      &#x3C;th role="columnheader" aria-label="Monday">M&#x3C;/th>
-      &#x3C;th role="columnheader" aria-label="Tuesday">T&#x3C;/th>
-      &#x3C;th role="columnheader" aria-label="Wednesday">W&#x3C;/th>
-      &#x3C;th role="columnheader" aria-label="Thursday">T&#x3C;/th>
-      &#x3C;th role="columnheader" aria-label="Friday">F&#x3C;/th>
-      &#x3C;th role="columnheader" aria-label="Saturday">S&#x3C;/th>
-    &#x3C;/tr>
-  &#x3C;/thead>
-  &#x3C;tbody role="rowgroup">
-    &#x3C;tr role="row">
-      &#x3C;th scope="row" role="rowheader">Week 35&#x3C;/th>
-      &#x3C;td>26&#x3C;/td>
-      &#x3C;td>27&#x3C;/td>
-      &#x3C;td>28&#x3C;/td>
-      &#x3C;td>29&#x3C;/td>
-      &#x3C;td>30&#x3C;/td>
-      &#x3C;td>31&#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">1&#x3C;/td>
-    &#x3C;/tr>
-    &#x3C;tr role="row">
-      &#x3C;th scope="row" role="rowheader">Week 36&#x3C;/th>
-      &#x3C;td role="gridcell" tabindex="-1">
-        2
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        3
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        4
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        5
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        6
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        7
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        8
-      &#x3C;/td>
-    &#x3C;/tr>
-    &#x3C;tr role="row">
-      &#x3C;th scope="row" role="rowheader">Week 37&#x3C;/th>
-      &#x3C;td role="gridcell" tabindex="-1">
-        9
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        10
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        11
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        12
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        13
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        14
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        15
-      &#x3C;/td>
-    &#x3C;/tr>
-    &#x3C;tr role="row">
-      &#x3C;th scope="row" role="rowheader">Week 38&#x3C;/th>
-      &#x3C;td role="gridcell" tabindex="-1">
-        16
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        17
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        18
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        19
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        20
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        21
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        22
-      &#x3C;/td>
-    &#x3C;/tr>
-    &#x3C;tr role="row">
-      &#x3C;th scope="row" role="rowheader">Week 39&#x3C;/th>
-      &#x3C;td role="gridcell" tabindex="-1">
-        23
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        24
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        25
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        26
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        27
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        28
-      &#x3C;/td>
-      &#x3C;td role="gridcell" tabindex="-1">
-        29
-      &#x3C;/td>
-    &#x3C;/tr>
-    &#x3C;tr role="row">
-      &#x3C;th scope="row" role="rowheader">Week 40&#x3C;/th>
-      &#x3C;td role="gridcell" tabindex="-1">
-        30
-      &#x3C;/td>
-      &#x3C;td>1&#x3C;/td>
-      &#x3C;td>2&#x3C;/td>
-      &#x3C;td>3&#x3C;/td>
-      &#x3C;td>4&#x3C;/td>
-      &#x3C;td>5&#x3C;/td>
-      &#x3C;td>6&#x3C;/td>
-    &#x3C;/tr>
-  &#x3C;/tbody>
-&#x3C;/table></pre><h4 id="CSS">CSS</h4><pre class="brush: css">body {
-  margin: 2rem;
-  font-family: "Helvetica Neue", sans-serif;
-}
-
-table {
-margin: 0;
-border-collapse: collapse;
-font-variant-numeric: tabular-nums;
-}
-
-tbody th, tbody td {
-padding: 5px;
-}
-
-tbody td {
-border: 1px solid #000;
-text-align: right;
-  color: #767676;
-}
-
-tbody td[role="gridcell"] {
-  color: #000;
-}
-
-tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
-background-color: #f6f6f6;
-outline: 3px solid blue;
-}
-}</pre><h4 id="JavaScript">JavaScript</h4><pre class="brush: js">var selectables = document.querySelectorAll('table td[role="gridcell"]');
-
-selectables[0].setAttribute('tabindex', 0);
-
-var trs = document.querySelectorAll('table tbody tr'),
-row = 0,
-col = 0,
-maxrow = trs.length - 1,
-maxcol = 0;
-
-Array.prototype.forEach.call(trs, function(gridrow, i){
-Array.prototype.forEach.call(gridrow.querySelectorAll('td'), function(el, i){
-el.dataset.row = row;
-el.dataset.col = col;
-col = col + 1;
-});
-if (col>maxcol) { maxcol = col - 1; }
-col = 0;
-row = row + 1;
-});
-
-function moveto(newrow, newcol) {
-var tgt = document.querySelector('[data-row="' + newrow + '"][data-col="' + newcol + '"]');
-if (tgt &#x26;&#x26; (tgt.getAttribute('role')==='gridcell') ) {
-Array.prototype.forEach.call(document.querySelectorAll('[role=gridcell]'), function(el, i){
-el.setAttribute('tabindex', '-1');
-});
-tgt.setAttribute('tabindex', '0');
-tgt.focus();
-return true;
-} else {
-return false;
-}
-}
-
-document.querySelector('table').addEventListener("keydown", function(event) {
-switch (event.key) {
-case "ArrowRight":
-moveto(parseInt(event.target.dataset.row, 10), parseInt(event.target.dataset.col, 10) + 1);
-break;
-case "ArrowLeft":
-moveto(parseInt(event.target.dataset.row, 10), parseInt(event.target.dataset.col, 10) - 1);
-break;
-case "ArrowDown":
-moveto(parseInt(event.target.dataset.row, 10) + 1, parseInt(event.target.dataset.col, 10));
-break;
-case "ArrowUp":
-moveto(parseInt(event.target.dataset.row, 10) - 1, parseInt(event.target.dataset.col, 10));
-break;
-case "Home":
-if (event.ctrlKey) {
-var i = 0;
-var result;
-do {
-var j = 0;
-var result;
-do {
-result = moveto(i, j);
-j++;
-} while (result == false);
-i++;
-} while (result == false);
-} else {
-moveto(parseInt(event.target.dataset.row, 10), 0);
-}
-break;
-case "End":
-if (event.ctrlKey) {
-var i = maxrow;
-var result;
-do {
-var j = maxcol;
-do {
-result = moveto(i, j);
-j--;
-} while (result == false);
-i--;
-} while (result == false);
-} else {
-moveto(parseInt(event.target.dataset.row, 10), document.querySelector('[data-row="' + event.target.dataset.row + '"]:last-of-type').dataset.col);
-}
-break;
-case "PageUp":
-var i = 0;
-var result;
-do {
-result = moveto(i, event.target.dataset.col);
-i++;
-} while (result == false);
-break;
-case "PageDown":
-var i = maxrow;
-var result;
-do {
-result = moveto(i, event.target.dataset.col);
-i--;
-} while (result == false);
-break;
-case "Enter":
-alert(event.target.textContent);
-break;
-}
-event.preventDefault();
-});
-
-</pre></div>
-
 {{EmbedLiveSample("Calendar_example", "100%", "300")}}
 
 #### HTML
@@ -438,8 +168,91 @@ event.preventDefault();
         8
       </td>
     </tr>
-    <!-- … Additional Rows … -->
-  </tbody>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 36</th>
+      <td role="gridcell" tabindex="-1">
+        9
+      </td>
+      <td role="gridcell" tabindex="-1">
+        10
+      </td>
+      <td role="gridcell" tabindex="-1">
+        11
+      </td>
+      <td role="gridcell" tabindex="-1">
+        12
+      </td>
+      <td role="gridcell" tabindex="-1">
+        13
+      </td>
+      <td role="gridcell" tabindex="-1">
+        14
+      </td>
+      <td role="gridcell" tabindex="-1">
+        15
+      </td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 36</th>
+      <td role="gridcell" tabindex="-1">
+        16
+      </td>
+      <td role="gridcell" tabindex="-1">
+        17
+      </td>
+      <td role="gridcell" tabindex="-1">
+        18
+      </td>
+      <td role="gridcell" tabindex="-1">
+        19
+      </td>
+      <td role="gridcell" tabindex="-1">
+        20
+      </td>
+      <td role="gridcell" tabindex="-1">
+        21
+      </td>
+      <td role="gridcell" tabindex="-1">
+        22
+      </td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 36</th>
+      <td role="gridcell" tabindex="-1">
+        23
+      </td>
+      <td role="gridcell" tabindex="-1">
+        24
+      </td>
+      <td role="gridcell" tabindex="-1">
+        25
+      </td>
+      <td role="gridcell" tabindex="-1">
+        26
+      </td>
+      <td role="gridcell" tabindex="-1">
+        27
+      </td>
+      <td role="gridcell" tabindex="-1">
+        28
+      </td>
+      <td role="gridcell" tabindex="-1">
+        29
+      </td>
+    </tr> 
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 36</th>
+      <td role="gridcell" tabindex="-1">
+        30
+      </td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    </tbody>
 </table>
 ```
 
@@ -474,31 +287,31 @@ tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
 #### JavaScript
 
 ```js
-var selectables = document.querySelectorAll('table td[role="gridcell"]');
+const selectables = document.querySelectorAll('table td[role="gridcell"]');
 
 selectables[0].setAttribute('tabindex', 0);
 
-var trs = document.querySelectorAll('table tbody tr'),
-    row = 0,
-    col = 0,
-    maxrow = trs.length - 1,
-    maxcol = 0;
+const trs = document.querySelectorAll('table tbody tr');
+let row = 0;
+let col = 0;
+let maxrow = trs.length - 1;
+let maxcol = 0;
 
-Array.prototype.forEach.call(trs, function(gridrow, i){
-  Array.prototype.forEach.call(gridrow.querySelectorAll('td'), function(el, i){
+trs.forEach((gridrow) => {
+  gridrow.querySelectorAll('td').forEach((el) => {
     el.dataset.row = row;
     el.dataset.col = col;
     col = col + 1;
   });
-  if (col>maxcol) { maxcol = col - 1; }
+  if (col > maxcol) { maxcol = col - 1; }
   col = 0;
   row = row + 1;
 });
 
 function moveto(newrow, newcol) {
-  var tgt = document.querySelector('[data-row="' + newrow + '"][data-col="' + newcol + '"]');
-  if (tgt && (tgt.getAttribute('role')==='gridcell') ) {
-    Array.prototype.forEach.call(document.querySelectorAll('[role=gridcell]'), function(el, i){
+  const tgt = document.querySelector(`[data-row="${newrow}"][data-col="${newcol}"]`);
+  if (tgt?.getAttribute('role') === 'gridcell') {
+    document.querySelectorAll('[role=gridcell]').forEach((el) => {
       el.setAttribute('tabindex', '-1');
     });
     tgt.setAttribute('tabindex', '0');
@@ -509,7 +322,7 @@ function moveto(newrow, newcol) {
   }
 }
 
-document.querySelector('table').addEventListener("keydown", function(event) {
+document.querySelector('table').addEventListener("keydown", (event) => {
   switch (event.key) {
     case "ArrowRight":
       moveto(parseInt(event.target.dataset.row, 10), parseInt(event.target.dataset.col, 10) + 1);
@@ -523,58 +336,62 @@ document.querySelector('table').addEventListener("keydown", function(event) {
     case "ArrowUp":
       moveto(parseInt(event.target.dataset.row, 10) - 1, parseInt(event.target.dataset.col, 10));
       break;
-    case "Home":
+    case "Home": {
       if (event.ctrlKey) {
-        var i = 0;
-        var result;
+        let i = 0;
+        let result;
         do {
-          var j = 0;
-          var result;
+          let j = 0;
           do {
             result = moveto(i, j);
             j++;
-          } while (result == false);
+          } while (!result);
           i++;
-        } while (result == false);
+        } while (!result);
       } else {
         moveto(parseInt(event.target.dataset.row, 10), 0);
       }
       break;
-    case "End":
+    }  
+    case "End": {
       if (event.ctrlKey) {
-        var i = maxrow;
-        var result;
+        let i = maxrow;
+        let result;
         do {
-          var j = maxcol;
+          let j = maxcol;
           do {
             result = moveto(i, j);
             j--;
-          } while (result == false);
+          } while (!result);
           i--;
-        } while (result == false);
+        } while (!result);
       } else {
-        moveto(parseInt(event.target.dataset.row, 10), document.querySelector('[data-row="' + event.target.dataset.row + '"]:last-of-type').dataset.col);
+        moveto(parseInt(event.target.dataset.row, 10), document.querySelector(`[data-row="${event.target.dataset.row}"]:last-of-type`).dataset.col);
       }
       break;
-    case "PageUp":
-      var i = 0;
-      var result;
+    }
+    case "PageUp": {
+      let i = 0;
+      let result;
       do {
         result = moveto(i, event.target.dataset.col);
         i++;
-      } while (result == false);
+      } while (!result);
       break;
-    case "PageDown":
-      var i = maxrow;
-      var result;
+    }
+    case "PageDown": {
+      let i = maxrow;
+      let result;
       do {
         result = moveto(i, event.target.dataset.col);
         i--;
-      } while (result == false);
+      } while (!result);
       break;
-    case "Enter":
-      alert(event.target.textContent);
+    }
+    case "Enter": {
+      console.log(event.target.textContent);
       break;
+    }
   }
   event.preventDefault();
 });

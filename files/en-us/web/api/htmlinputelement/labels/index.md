@@ -35,10 +35,10 @@ with the `<input>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("test");
-  for(var i = 0; i < input.labels.length; i++) {
-    console.log(input.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of input.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```

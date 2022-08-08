@@ -243,7 +243,7 @@ def renew_book_librarian(request, pk):
             book_instance.save()
 
             # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            return HttpResponseRedirect(reverse('all-borrowed'))
 
     # If this is a GET (or any other method) create the default form.
     else:
@@ -306,7 +306,7 @@ if request.method == 'POST':
         book_instance.save()
 
         # redirect to a new URL:
-        return HttpResponseRedirect(reverse('all-borrowed') )
+        return HttpResponseRedirect(reverse('all-borrowed'))
 
 context = {
     'form': form,
@@ -357,7 +357,7 @@ def renew_book_librarian(request, pk):
             book_instance.save()
 
             # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            return HttpResponseRedirect(reverse('all-borrowed'))
 
     # If this is a GET (or any other method) create the default form.
     else:
@@ -435,7 +435,7 @@ If you were to enter an invalid date, you'd additionally get a list of the error
 
 #### Other ways of using form template variable
 
-Using `\{{ form.as_table }}` as shown above, each field is rendered as a table row. You can also render each field as a list item (using `\{{ form.as_ul }}` ) or as a paragraph (using `\{{ form.as_p }}`).
+Using `\{{ form.as_table }}` as shown above, each field is rendered as a table row. You can also render each field as a list item (using `\{{ form.as_ul }}`) or as a paragraph (using `\{{ form.as_p }}`).
 
 It is also possible to have complete control over the rendering of each part of the form, by indexing its properties using dot notation. So, for example, we can access a number of separate items for our `renewal_date` field:
 
@@ -648,9 +648,9 @@ Then navigate to the author create page, `http://127.0.0.1:8000/catalog/author/c
 
 Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
 
-You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/update/_) — we don't show a screenshot because it looks just like the "create" page!
+You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/update/`) — we don't show a screenshot because it looks just like the "create" page!
 
-Finally, we can delete the page by appending delete to the end of the author detail-view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django should display the delete page shown below. Press "**Yes, delete.**" to remove the record and be taken to the list of all authors.
+Finally, we can delete the page by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press "**Yes, delete.**" to remove the record and be taken to the list of all authors.
 
 ![](forms_example_delete_author.png)
 

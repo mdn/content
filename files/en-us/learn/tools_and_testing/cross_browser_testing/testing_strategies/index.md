@@ -200,7 +200,7 @@ Some larger companies have device labs that stock a very large selection of diff
 
 We will cover each of the other options below.
 
-> **Note:** Some efforts have been made to create publicly accessible device labs — see [Open Device Labs](https://opendevicelab.com/).
+> **Note:** Some efforts have been made to create publicly accessible device labs — see [Open Device Labs](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/).
 
 > **Note:** We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.
 
@@ -217,7 +217,6 @@ More often than not though, you'll have to install some kind of emulator. The mo
 
 You can often find simulators for other mobile device environments too, for example:
 
-- [Blackberry](https://swdownloads.blackberry.com/Downloads/entry.do) (emulator available for Windows, Mac OSX and Linux).
 - You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
 - There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
 

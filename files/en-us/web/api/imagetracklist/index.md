@@ -21,7 +21,7 @@ The **`ImageTrackList`** interface of the {{domxref('WebCodecs API','','','true'
   - : Returns an integer indicating the length of the `ImageTrackList`.
 - {{domxref("ImageTrackList.selectedIndex")}} {{ReadOnlyInline}}
   - : Returns an integer indicating the index of the `selectedTrack`.
-- {{domxref("ImageTrackList.length")}} {{ReadOnlyInline}}
+- {{domxref("ImageTrackList.selectedTrack")}} {{ReadOnlyInline}}
   - : Returns the selected {{domxref("ImageTrack")}}.
 
 ## Specifications

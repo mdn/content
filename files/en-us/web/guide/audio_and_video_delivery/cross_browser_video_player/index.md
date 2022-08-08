@@ -327,7 +327,7 @@ The exception to this is Safari 5.1, which will only allow `webkitRequestFullScr
 
 Dealing with WebKit-specific code in this way will affect all WebKit browsers, but everything works as expected in more advanced WebKit browsers such as Chrome and the latest Opera.
 
-Another user defined function — `setFullscreenData()` — is also called, which sets the value of a `data-fullscreen` attribute on the `videoContainer` (this makes use of [`data-states`](http://toddmotto.com/stop-toggling-classes-with-js-use-behavior-driven-dom-manipulation-with-data-states/)).
+Another user defined function — `setFullscreenData()` — is also called, which sets the value of a `data-fullscreen` attribute on the `videoContainer` (this makes use of [`data-states`](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states#data-state-attributes)).
 
 ```js
 var setFullscreenData = function(state) {

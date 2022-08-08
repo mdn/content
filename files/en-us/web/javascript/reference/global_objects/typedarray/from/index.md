@@ -132,7 +132,7 @@ Int16Array.from('123');
 Using an arrow function as the map function to manipulate the elements
 
 ```js
-Float32Array.from([1, 2, 3], x => x + x);
+Float32Array.from([1, 2, 3], (x) => x + x);
 // Float32Array [ 2, 4, 6 ]
 ```
 

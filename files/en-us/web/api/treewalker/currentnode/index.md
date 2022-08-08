@@ -21,7 +21,7 @@ A {{domxref("Node")}}.
 ## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },

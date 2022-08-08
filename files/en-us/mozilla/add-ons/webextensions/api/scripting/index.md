@@ -49,7 +49,7 @@ Alternatively, you can get permission temporarily in the active tab and only in 
   - : Updates one or more content scripts already registered.
 - {{WebExtAPIRef("scripting.unregisterContentScripts()")}}
   - : Unregisters one or more content scripts.
-  
+
 ## Browser compatibility
 
 {{Compat}}

@@ -253,7 +253,7 @@ Now that the buttons actually look like buttons and have images that indicate wh
 ```js
 var changeButtonState = function(type) {
    // Play/Pause button
-   if (type == 'playpause') {
+   if (type === 'playpause') {
       if (video.paused || video.ended) {
          playpause.setAttribute('data-state', 'play');
       }
@@ -262,7 +262,7 @@ var changeButtonState = function(type) {
       }
    }
    // Mute button
-   else if (type == 'mute') {
+   else if (type === 'mute') {
       mute.setAttribute('data-state', video.muted ? 'unmute' : 'mute');
    }
 }

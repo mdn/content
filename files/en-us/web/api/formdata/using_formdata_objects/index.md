@@ -107,7 +107,7 @@ Then you can send it using code like the following:
 
 ```js
 const form = document.forms.namedItem("fileinfo");
-form.addEventListener('submit', function(ev) {
+form.addEventListener('submit', (ev) => {
 
   const oOutput = document.querySelector("div"),
       oData = new FormData(form);
@@ -116,8 +116,8 @@ form.addEventListener('submit', function(ev) {
 
   const oReq = new XMLHttpRequest();
   oReq.open("POST", "stash.php", true);
-  oReq.onload = function(oEvent) {
-    if (oReq.status == 200) {
+  oReq.onload = (oEvent) => {
+    if (oReq.status === 200) {
       oOutput.innerHTML = "Uploaded!";
     } else {
       oOutput.innerHTML = `Error ${oReq.status} occurred when trying to upload your file.<br \/>`;

@@ -18,18 +18,18 @@ One of the simpler forms of collision detection is between two rectangles that a
 ```html hidden
 <div id="cr-stage"></div>
 <p>Move the rectangle with arrow keys. Green means collision, blue means no collision.</p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 ```
 
 ```js
 Crafty.init(200, 200);
 
-var dim1 = {x: 5, y: 5, w: 50, h: 50}
-var dim2 = {x: 20, y: 10, w: 60, h: 40}
+const dim1 = {x: 5, y: 5, w: 50, h: 50}
+const dim2 = {x: 20, y: 10, w: 60, h: 40}
 
-var rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
+const rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
 
-var rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
+const rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
 
 rect2.bind("EnterFrame", function () {
     if (rect1.x < rect2.x + rect2.w &&
@@ -56,7 +56,7 @@ Another simple shape for collision detection is between two circles. This algori
 ```html hidden
 <div id="cr-stage"></div>
 <p>Move the circle with arrow keys. Green means collision, blue means no collision.</p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 ```
 
 ```css hidden
@@ -69,8 +69,8 @@ Another simple shape for collision detection is between two circles. This algori
 ```js
 Crafty.init(200, 200);
 
-var dim1 = {x: 5, y: 5}
-var dim2 = {x: 20, y: 20}
+const dim1 = {x: 5, y: 5}
+const dim2 = {x: 20, y: 20}
 
 Crafty.c("Circle", {
    circle(radius, color) {
@@ -83,7 +83,7 @@ Crafty.c("Circle", {
    },
 
    draw() {
-       var ctx = Crafty.canvas.context;
+       const ctx = Crafty.canvas.context;
        ctx.save();
        ctx.fillStyle = this.color;
        ctx.beginPath();
@@ -100,14 +100,14 @@ Crafty.c("Circle", {
     }
 });
 
-var circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
+const circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
 
-var circle2 = Crafty.e("2D, Canvas, Circle, Fourway").fourway(2).attr(dim2).circle(20, "blue");
+const circle2 = Crafty.e("2D, Canvas, Circle, Fourway").fourway(2).attr(dim2).circle(20, "blue");
 
-circle2.bind("EnterFrame", function () {
-    var dx = (circle1.x + circle1.radius) - (circle2.x + circle2.radius);
-    var dy = (circle1.y + circle1.radius) - (circle2.y + circle2.radius);
-    var distance = Math.sqrt(dx * dx + dy * dy);
+circle2.bind("EnterFrame", () => {
+    const dx = (circle1.x + circle1.radius) - (circle2.x + circle2.radius);
+    const dy = (circle1.y + circle1.radius) - (circle2.y + circle2.radius);
+    const distance = Math.sqrt(dx * dx + dy * dy);
 
     if (distance < circle1.radius + circle2.radius) {
         // collision detected!

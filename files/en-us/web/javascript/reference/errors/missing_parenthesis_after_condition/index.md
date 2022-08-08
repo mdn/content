@@ -78,8 +78,16 @@ if (done is true) {
 Instead you need to use a correct [comparison operator](/en-US/docs/Web/JavaScript/Reference/Operators).
 For example:
 
-```js example-good
+```js
 if (done === true) {
+  console.log("we are done!");
+}
+```
+
+Or even better:
+
+```js example-good
+if (done) {
  console.log("we are done!");
 }
 ```

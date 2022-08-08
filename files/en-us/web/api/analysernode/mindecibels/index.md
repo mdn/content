@@ -54,7 +54,7 @@ function draw() {
   let barHeight;
   let x = 0;
 
-  for(let i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
     canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;

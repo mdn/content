@@ -21,8 +21,8 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) set texture parameters.
 ## Syntax
 
 ```js
-texParameterf(target, GLenum pname, GLfloat param)
-texParameteri(target, GLenum pname, GLint param)
+texParameterf(target, pname, param)
+texParameteri(target, pname, param)
 ```
 
 ### Parameters

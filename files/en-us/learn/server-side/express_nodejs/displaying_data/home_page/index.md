@@ -104,7 +104,7 @@ On success the callback function calls [`res.render()`](https://expressjs.com/en
 
 Open **/views/index.pug** and replace its content with the text below.
 
-```js
+```pug
 extends layout
 
 block content

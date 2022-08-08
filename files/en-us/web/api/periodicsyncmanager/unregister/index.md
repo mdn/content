@@ -44,7 +44,7 @@ The following example removes a periodic sync to stop syncing articles in the
 background.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
+navigator.serviceWorker.ready.then((registration) => {
   registration.periodicSync.unregister('get-latest-news');
 });
 ```

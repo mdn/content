@@ -44,7 +44,11 @@ exports.author_detail = function(req, res, next) {
             return next(err);
         }
         // Successful, so render.
-        res.render('author_detail', { title: 'Author Detail', author: results.author, author_books: results.authors_books } );
+        res.render('author_detail', {
+          title: 'Author Detail',
+          author: results.author,
+          author_books: results.authors_books,
+        });
     });
 
 };
@@ -56,7 +60,7 @@ The method uses `async.parallel()` to query the `Author` and their associated `B
 
 Create **/views/author_detail.pug** and copy in the following text.
 
-```js
+```pug
 extends layout
 
 block content

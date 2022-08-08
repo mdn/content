@@ -78,5 +78,5 @@ console.log(reduce((a, b) => a + b, 0, [1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
 ## See also
 
-- {{Interwiki("wikipedia", "Recursion (computer science)")}} on Wikipedia
+- [Recursion (computer science)](https://en.wikipedia.org/wiki/Recursion_(computer_science)) on Wikipedia
 - [More details about recursion in JavaScript](/en-US/docs/Web/JavaScript/Guide/Functions#recursion)

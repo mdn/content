@@ -64,7 +64,7 @@ attrMap.setNamedItemNS(one);
 result += `The '<span>' element now contains ${span.attributes.length} attributes:\n\n`;
 result += "Prefix\tLocal name\tQualified name\n";
 result += "=========================================\n";
-for(let attr of attrMap) {
+for (let attr of attrMap) {
   result += `${attr.prefix}\t${attr.localName}\t\t${attr.name}\n`;
 }
 

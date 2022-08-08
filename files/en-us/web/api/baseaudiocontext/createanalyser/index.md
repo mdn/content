@@ -77,7 +77,7 @@ function draw() {
       const sliceWidth = WIDTH * 1.0 / bufferLength;
       let x = 0;
 
-      for(let i = 0; i < bufferLength; i++) {
+      for (let i = 0; i < bufferLength; i++) {
 
         const v = dataArray[i] / 128.0;
         const y = v * HEIGHT/2;

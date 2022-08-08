@@ -52,14 +52,14 @@ There are two ways to access an individual character in a string. The first is t
 {{jsxref("String.prototype.charAt()", "charAt()")}} method:
 
 ```js
-return 'cat'.charAt(1) // returns "a"
+'cat'.charAt(1) // gives value "a"
 ```
 
 The other way (introduced in ECMAScript 5) is to treat the string as an array-like
 object, where individual characters correspond to a numerical index:
 
 ```js
-return 'cat'[1] // returns "a"
+'cat'[1] // gives value "a"
 ```
 
 When using bracket notation for character access, attempting to delete or assign a
@@ -75,18 +75,18 @@ you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScri
 const a = 'a';
 const b = 'b';
 if (a < b) { // true
-  console.log(a + ' is less than ' + b)
+  console.log(`${a} is less than ${b}`)
 } else if (a > b) {
-  console.log(a + ' is greater than ' + b)
+  console.log(`${a} is greater than ${b}`)
 } else {
-  console.log(a + ' and ' + b + ' are equal.')
+  console.log(`${a} and ${b} are equal.`)
 }
 ```
 
 A similar result can be achieved using the {{jsxref("String.prototype.localeCompare()",
   "localeCompare()")}} method inherited by `String` instances.
 
-Note that `a == b` compares the strings in `a` and
+Note that `a === b` compares the strings in `a` and
 `b` for being equal in the usual case-sensitive way. If you wish
 to compare without regard to upper or lower case characters, use a function similar to
 this:
@@ -114,11 +114,11 @@ will automatically wrap the string primitive and call the method or perform the 
 lookup on the wrapper object instead.
 
 ```js
-const s_prim = 'foo'
-const s_obj = new String(s_prim)
+const strPrim = 'foo';
+const strObj = new String(strPrim);
 
-console.log(typeof s_prim) // Logs "string"
-console.log(typeof s_obj)  // Logs "object"
+console.log(typeof strPrim); // Logs "string"
+console.log(typeof strObj);  // Logs "object"
 ```
 
 > **Warning:** You should rarely find yourself using `String` as a constructor.
@@ -162,9 +162,9 @@ Special characters can be encoded using escape sequences:
 | `\t`                                                                                                                                                   | tab (U+0009 CHARACTER TABULATION)                                                                                          |
 | `\b`                                                                                                                                                   | backspace (U+0008 BACKSPACE)                                                                                               |
 | `\f`                                                                                                                                                   | form feed (U+000C FORM FEED)                                                                                               |
-| `\uXXXX` …where `XXXX` is exactly 4 hex digits in the range `0000`–`FFFF`; e.g., `\u000A` is the same as `\n` (LINE FEED); `\u0021` is "`!`"           | Unicode code point between `U+0000` and `U+FFFF` (the Unicode Basic Multilingual Plane)                                    |
-| `\u{X}`…`\u{XXXXXX}` …where `X`…`XXXXXX` is 1–6 hex digits in the range `0`–`10FFFF`; e.g., `\u{A}` is the same as `\n` (LINE FEED); `\u{21}` is "`!`" | Unicode code point between `U+0000` and `U+10FFFF` (the entirety of Unicode)                                               |
-| `\xXX` …where `XX` is exactly 2 hex digits in the range `00`–`FF`; e.g., `\x0A` is the same as `\n` (LINE FEED); `\x21` is "`!`"                       | Unicode code point between `U+0000` and `U+00FF` (the Basic Latin and Latin-1 Supplement blocks; equivalent to ISO-8859-1) |
+| `\uXXXX` …where `XXXX` is exactly 4 hex digits in the range `0000`–`FFFF`; e.g., `\u000A` is the same as `\n` (LINE FEED); `\u0021` is `!`           | Unicode code point between `U+0000` and `U+FFFF` (the Unicode Basic Multilingual Plane)                                    |
+| `\u{X}`…`\u{XXXXXX}` …where `X`…`XXXXXX` is 1–6 hex digits in the range `0`–`10FFFF`; e.g., `\u{A}` is the same as `\n` (LINE FEED); `\u{21}` is `!` | Unicode code point between `U+0000` and `U+10FFFF` (the entirety of Unicode)                                               |
+| `\xXX` …where `XX` is exactly 2 hex digits in the range `00`–`FF`; e.g., `\x0A` is the same as `\n` (LINE FEED); `\x21` is `!`                       | Unicode code point between `U+0000` and `U+00FF` (the Basic Latin and Latin-1 Supplement blocks; equivalent to ISO-8859-1) |
 
 ### Long literal strings
 
@@ -210,7 +210,7 @@ You must be careful which level of characters you are iterating on. For example,
 
 // "Backhand Index Pointing Right: Dark Skin Tone"
 [..."👉🏿"]; // ['👉', '🏿']
-// splits into the basic "Backhand Index Pointing Right" emoji and 
+// splits into the basic "Backhand Index Pointing Right" emoji and
 // the "Dark skin tone" emoji
 
 // "Family: Man, Boy"
@@ -369,7 +369,7 @@ You must be careful which level of characters you are iterating on. For example,
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("String.prototype.@@iterator()")}}
+- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
@@ -413,14 +413,14 @@ You must be careful which level of characters you are iterating on. For example,
 
 It's possible to use `String` as a more reliable
 {{jsxref("String.prototype.toString()", "toString()")}} alternative, as it works when
-used on {{jsxref("null")}} and {{jsxref("undefined")}}. For example:
+used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
 
 ```js
 const nullVar = null;
 nullVar.toString();       // TypeError: nullVar is null
 String(nullVar);          // "null"
 
-const undefinedVar;
+const undefinedVar = undefined;
 undefinedVar.toString();  // TypeError: undefinedVar is undefined
 String(undefinedVar);     // "undefined"
 ```

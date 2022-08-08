@@ -31,11 +31,11 @@ async function* createAsyncGenerator() {
 }
 const asyncGen = createAsyncGenerator();
 asyncGen.next()
-  .then(res => console.log(res.value)); // 1
+  .then((res) => console.log(res.value)); // 1
 asyncGen.next()
-  .then(res => console.log(res.value)); // 2
+  .then((res) => console.log(res.value)); // 2
 asyncGen.next()
-  .then(res => console.log(res.value)); // 3
+  .then((res) => console.log(res.value)); // 3
 ```
 
 ## Instance methods

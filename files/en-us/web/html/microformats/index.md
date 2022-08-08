@@ -400,7 +400,7 @@ Supported in all browsers's support for the class attribute and its DOM API.
 ## See also
 
 - [class attribute](/en-US/docs/Web/HTML/Global_attributes/class)
-- {{Interwiki("wikipedia", "Microformat")}} on Wikipedia
+- [Microformat](https://en.wikipedia.org/wiki/Microformat) on Wikipedia
 - [Microformats official website](https://microformats.org/)
 - [Search engines support](https://microformats.org/wiki/search_engines) on Microformats official website
 - [Microformats on IndieWebCamp](https://indieweb.org/microformats)

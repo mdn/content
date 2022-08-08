@@ -76,10 +76,10 @@ In following code snippet, two {{DOMxRef("Touch")}} objects are created for the
 `target` element.
 
 ```js
-var target = document.getElementById("target");
+const target = document.getElementById("target");
 
-var touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
-var touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
+const touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
+const touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
 ```
 
 ## Specifications

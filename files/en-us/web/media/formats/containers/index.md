@@ -338,10 +338,10 @@ FLAC files can only contain FLAC audio data.
 
 ### MPEG/MPEG-2
 
-The **{{interwiki("wikipedia", "MPEG-1")}}** and **{{interwiki("wikipedia", "MPEG-2")}}** file formats are essentially identical.
+The **[MPEG-1](https://en.wikipedia.org/wiki/MPEG-1)** and **[MPEG-2](https://en.wikipedia.org/wiki/MPEG-2)** file formats are essentially identical.
 Created by the Moving Picture Experts Group (MPEG), these formats are widely used in physical media, including as the format of the video on DVD media.
 
-On the internet, perhaps the most common use of the MPEG file format is to contain {{interwiki("wikipedia", "MPEG-1", "Layer_III/MP3", "MPEG-1 Audio Layer 3")}} sound data; the resulting files are the wildly popular MP3 file used by digital music devices around the world.
+On the internet, perhaps the most common use of the MPEG file format is to contain [Layer_III/MP3](https://en.wikipedia.org/wiki/MPEG-1) sound data; the resulting files are the wildly popular MP3 file used by digital music devices around the world.
 Otherwise, MPEG-1 and MPEG-2 are not widely used in Web content.
 
 The main differences between MPEG-1 and MPEG-2 take place in the media data formats rather than the container format.
@@ -432,12 +432,12 @@ MPEG-1 was introduced in 1992; MPEG-2 was introduced in 1996.
 
 ### MPEG-4 (MP4)
 
-**{{interwiki("wikipedia", "MPEG-4")}}** (**MP4**) is the latest version of the MPEG file format.
+**[MPEG-4](https://en.wikipedia.org/wiki/MPEG-4)** (**MP4**) is the latest version of the MPEG file format.
 There are two versions of the format, defined in parts 1 and 14 of the specification.
 MP4 is a popular container today, as it supports several of the most-used codecs and is broadly supported.
 
 The original MPEG-4 Part 1 file format was introduced in 1999; the version 2 format, defined in Part 14, was added in 2003.
-The MP4 file format is derived from the {{interwiki("wikipedia", "ISO base media file format")}}, which is directly derived from the {{interwiki("wikipedia", "QuickTime file format")}} developed by [Apple](https://www.apple.com/).
+The MP4 file format is derived from the [ISO base media file format](https://en.wikipedia.org/wiki/ISO_base_media_file_format), which is directly derived from the [QuickTime file format](https://en.wikipedia.org/wiki/QuickTime_File_Format) developed by [Apple](https://www.apple.com/).
 
 When specifying the MPEG-4 media type (`audio/mp4` or `video/mp4`), you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#iso-bmff) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
 
@@ -569,7 +569,7 @@ In addition, you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/
 
 ### Ogg
 
-The **{{interwiki("wikipedia", "Ogg")}}** container format is a free and open format maintained by the [Xiph.org Foundation](https://www.xiph.org/).
+The [Ogg](https://en.wikipedia.org/wiki/Ogg) container format is a free and open format maintained by the [Xiph.org Foundation](https://www.xiph.org/).
 The Ogg framework also defines patent unencumbered media data formats, such as the Theora video codec and the Vorbis and Opus audio codecs.
 [Xiph.org documents about the Ogg format](https://xiph.org/ogg/) are available on their web site.
 
@@ -950,7 +950,7 @@ The `audio/wave` MIME type is the standard type, and is preferred; however, the 
 
 ### WebM
 
-**{{interwiki("wikipedia", "WebM")}}** (**Web Media**) is a format based on {{interwiki("wikipedia", "Matroska")}} which is designed specifically for use in modern web environments.
+**[WebM](https://en.wikipedia.org/wiki/WebM)** (**Web Media**) is a format based on [Matroska](https://en.wikipedia.org/wiki/Matroska) which is designed specifically for use in modern web environments.
 It's based entirely on free and open technologies and primarily uses codecs that are in turn free and open, although some products support other codecs in WebM containers as well.
 
 WebM was first introduced in 2010 and is now widely supported.

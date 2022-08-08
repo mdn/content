@@ -116,8 +116,8 @@ In the following code, the function receives a function defined by a function ex
 ```js
 function map(f, a) {
   const result = [];
-  for (const v of a) {
-    result[i] = f(v);
+  for (let i = 0; i < a.length; i++) {
+    result[i] = f(a[i]);
   }
   return result;
 }
@@ -299,7 +299,7 @@ However, some algorithms cannot be simple iterative loops. For example, getting 
 
 ```js
 function walkTree(node) {
-  if (node == null) {
+  if (node === null) {
     return;
   }
   // do something with node
@@ -450,7 +450,7 @@ Also, since the inner function has access to the scope of the outer function, th
 const pet = function (name) {   // The outer function defines a variable called "name"
   const getName = function () {
     // The inner function has access to the "name" variable of the outer function
-    return name;             
+    return name;
   }
   return getName; // Return the inner function, thereby exposing it to outer scopes
 }

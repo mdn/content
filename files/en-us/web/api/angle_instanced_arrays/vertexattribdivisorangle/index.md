@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension('ANGLE_instanced_arrays');
 ext.vertexAttribDivisorANGLE(0, 2);
 ```
 

@@ -51,7 +51,7 @@ function HTMLinXHR() {
   req.open('GET', window.location.href, false);
   try {
     req.responseType = 'document';
-  } catch(e) {
+  } catch (e) {
     return true;
   }
   return false;
@@ -77,15 +77,15 @@ If the file is named `detect.html`, the following function can be used for detec
 ```js
 function detectHtmlInXhr(callback) {
   if (!window.XMLHttpRequest) {
-    window.setTimeout(function() { callback(false); }, 0);
+    setTimeout(function() { callback(false); }, 0);
     return;
   }
   let done = false;
   const xhr = new window.XMLHttpRequest();
   xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && !done) {
+    if (this.readyState === 4 && !done) {
       done = true;
-      callback(!!(this.responseXML && this.responseXML.title && this.responseXML.title == "&&<"));
+      callback(!!(this.responseXML && this.responseXML.title && this.responseXML.title === "&&<"));
     }
   }
   xhr.onabort = xhr.onerror = function() {
@@ -99,7 +99,7 @@ function detectHtmlInXhr(callback) {
     xhr.responseType = "document";
     xhr.send();
   } catch (e) {
-    window.setTimeout(function() {
+    setTimeout(function() {
       if (!done) {
         done = true;
         callback(false);

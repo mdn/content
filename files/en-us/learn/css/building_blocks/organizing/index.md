@@ -282,7 +282,7 @@ In your HTML, the comment would need both the `media` and `comment` classes appl
 
 ```html
 <div class="media comment">
-  <img />
+  <img src="" alt="" />
   <div class="content"></div>
 </div>
 ```
@@ -292,7 +292,7 @@ The list-item would have `media` and `list-item` applied:
 ```html
 <ul>
   <li class="media list-item">
-    <img />
+    <img src="" alt="" />
     <div class="content"></div>
   </li>
 </ul>
@@ -306,10 +306,12 @@ BEM stands for Block Element Modifier. In BEM a block is a stand-alone entity su
 
 ```html
 <form class="form form--theme-xmas form--simple">
-  <input class="form__input" type="text" />
+  <label class="label form__label" for="inputId"></label>
+    <input class="form__input" type="text" id="inputId" />
+  
   <input
     class="form__submit form__submit--disabled"
-    type="submit" />
+    type="submit" value="Submit" />
 </form>
 ```
 

@@ -39,7 +39,7 @@ const stream = new WritableStream({
   start(controller) {
 
   },
-  write(chunk,controller) {
+  write(chunk, controller) {
 
   },
   close(controller) {
@@ -90,8 +90,8 @@ const writableStream = new WritableStream({
     list.appendChild(listItem);
   },
   abort(err) {
-    console.log("Sink error:", err);
-  }
+    console.error("Sink error:", err);
+  },
 }, queuingStrategy);
 ```
 
@@ -117,28 +117,16 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
-      .then(() => {
-        console.log("Chunk written to sink.");
-      })
-      .catch((err) => {
-        console.log("Chunk error:", err);
-      });
+      .then(() => defaultWriter.write(chunk))
+      .then(() => console.log("Chunk written to sink."))
+      .catch((err) => console.error("Chunk error:", err));
   });
   // Call ready again to ensure that all chunks are written
   //   before closing the writer.
   defaultWriter.ready
-    .then(() => {
-      defaultWriter.close();
-    })
-    .then(() => {
-      console.log("All chunks written");
-    })
-    .catch((err) => {
-      console.log("Stream error:", err);
-    });
+    .then(() => defaultWriter.close())
+    .then(() => console.log("All chunks written"))
+    .catch((err) => console.error("Stream error:", err));
 }
 ```
 

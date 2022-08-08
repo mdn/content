@@ -23,7 +23,7 @@ It may be useful to refer to the Universal Postal Union web site's [Addressing S
 - {{domxref('PaymentAddress.addressLine')}} {{readonlyinline}} {{deprecated_inline}}
   - : An array of strings providing each line of the address not included among the other properties. The exact size and content varies by country or location and can include, for example, a street name, house number, apartment number, rural delivery route, descriptive instructions, or post office box number.
 - {{domxref('PaymentAddress.country')}} {{readonlyinline}} {{deprecated_inline}}
-  - : A string specifying the country in which the address is located, using the {{interwiki("wikipedia", "ISO-3166-1 alpha-2")}} standard. The string is always given in its canonical upper-case form. Some examples of valid `country` values: `"US"`, `"GB"`, `"CN"`, or `"JP"`.
+  - : A string specifying the country in which the address is located, using the [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard. The string is always given in its canonical upper-case form. Some examples of valid `country` values: `"US"`, `"GB"`, `"CN"`, or `"JP"`.
 - {{domxref('PaymentAddress.city')}} {{readonlyinline}} {{deprecated_inline}}
   - : A string which contains the city or town portion of the address.
 - {{domxref('PaymentAddress.dependentLocality')}} {{readonlyinline}} {{deprecated_inline}}

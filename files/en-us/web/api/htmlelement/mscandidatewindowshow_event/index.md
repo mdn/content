@@ -25,9 +25,9 @@ Web applications need only register for this event once per element (the handler
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mscandidatewindowshow', event => { })
+addEventListener('mscandidatewindowshow', (event) => { })
 
-onmscandidatewindowshow = event => { }
+onmscandidatewindowshow = (event) => { }
 ```
 
 ## Event type

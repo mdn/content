@@ -93,7 +93,7 @@ The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} 
 
 Pointer events have ten event types, seven of which have similar semantics to their mouse event counterparts (`down`, `up`, `move`, `over`, `out`, `enter`, and `leave`).
 
-Below is a short description of each event type and its associated {{domxref("GlobalEventHandlers","Global Event Handler")}}.
+Below is a short description of each event type.
 
 | Event | Description |
 | ----- | ----------- |
@@ -200,7 +200,7 @@ This example illustrates accessing all of a pointer event's properties.
       const area = ev.width * ev.height;
 
       // Compare cached id with this event's id and process accordingly
-      if (id == ev.identifier) process_id(ev);
+      if (id === ev.identifier) process_id(ev);
 
       // Call the appropriate pointer type handler
       switch (ev.pointerType) {
@@ -218,7 +218,7 @@ This example illustrates accessing all of a pointer event's properties.
       }
 
       // Call the tilt handler
-      if (ev.tiltX != 0 && ev.tiltY != 0) process_tilt(ev.tiltX, ev.tiltY);
+      if (ev.tiltX !== 0 && ev.tiltY !== 0) process_tilt(ev.tiltX, ev.tiltY);
 
       // Call the pressure handler
       process_pressure(ev.pressure);

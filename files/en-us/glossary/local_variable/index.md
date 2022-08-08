@@ -20,4 +20,4 @@ function fun(){
 
 ## See also
 
-- {{interwiki("wikipedia", "Local variable", "Local variable")}} on Wikipedia
+- [Local variable](https://en.wikipedia.org/wiki/Local_variable) on Wikipedia

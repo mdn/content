@@ -17,7 +17,7 @@ JavaScript borrows most of its syntax from Java, C, and C++, but it has also bee
 JavaScript is **case-sensitive** and uses the **Unicode** character set. For example, the word Früh (which means "early" in German) could be used as a variable name.
 
 ```js
-let Früh = "foobar"
+const Früh = "foobar";
 ```
 
 But, the variable `früh` is not the same as `Früh` because JavaScript is case sensitive.
@@ -42,8 +42,18 @@ The syntax of **comments** is the same as in C++ and in many other languages:
 /* this is a longer,
  * multi-line comment
  */
+```
 
+You can't nest block comments. This often happens when you accidentally include a `*/` sequence in your comment, which will terminate the comment.
+
+```js example-bad
 /* You can't, however, /* nest comments */ SyntaxError */
+```
+
+In this case, you need to break up the `*/` pattern. For example, by inserting a backslash:
+
+```js
+/* You can /* nest comments *\/ by escaping slashes */
 ```
 
 Comments behave like whitespace, and are discarded during script execution.
@@ -67,11 +77,9 @@ JavaScript has three kinds of variable declarations.
 
 You use variables as symbolic names for values in your application. The names of variables, called {{Glossary("Identifier", "identifiers")}}, conform to certain rules.
 
-A JavaScript identifier must start with a letter, underscore (`_`), or dollar sign (`$`). Subsequent characters can also be digits (`0`–`9`).
+A JavaScript identifier usually starts with a letter, underscore (`_`), or dollar sign (`$`). Subsequent characters can also be digits (`0`–`9`). Because JavaScript is case sensitive, letters include the characters `A` through `Z` (uppercase) as well as `a` through `z` (lowercase).
 
-Because JavaScript is case sensitive, letters include the characters "`A`" through "`Z`" (uppercase) as well as "`a`" through "`z`" (lowercase).
-
-You can use most of ISO 8859-1 or Unicode letters such as `å` and `ü` in identifiers. (For more details, see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6).) You can also use the [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) as characters in identifiers.
+You can use most of ISO 8859-1 or Unicode letters such as `å` and `ü` in identifiers. (For more details, see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6) or the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) reference.) You can also use the [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) as characters in identifiers.
 
 Some examples of legal names are `Number_hits`, `temp99`, `$credit`, and `_name`.
 
@@ -134,7 +142,7 @@ let a;
 a + 2;  // Evaluates to NaN
 ```
 
-When you evaluate a {{jsxref("null")}} variable, the null value behaves as `0` in numeric contexts and as `false` in boolean contexts. For example:
+When you evaluate a [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) variable, the null value behaves as `0` in numeric contexts and as `false` in boolean contexts. For example:
 
 ```js
 const n = null;
@@ -145,7 +153,16 @@ console.log(n * 32); // Will log 0 to the console
 
 When you declare a variable outside of any function, it is called a _global_ variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a _local_ variable, because it is available only within that function.
 
-JavaScript before ECMAScript 2015 does not have [block statement](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement) scope. Rather, a variable declared within a block is local to the _function (or global scope)_ that the block resides within.
+`let` and `const` declarations are scoped to the [block statement](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement) that they are declared in.
+
+```js
+if (Math.random() > 0.5) {
+  const y = 5;
+}
+console.log(y);  // ReferenceError: y is not defined
+```
+
+However, variables created with `var` are not block-scoped, but only local to the _function (or global scope)_ that the block resides within.
 
 For example, the following code will log `5`, because the scope of `x` is the global context (or the function context if the code is part of a function). The scope of `x` is not limited to the immediate `if` statement block.
 
@@ -156,20 +173,11 @@ if (true) {
 console.log(x);  // x is 5
 ```
 
-This behavior changes when using the `let` declaration (introduced in ECMAScript 2015).
-
-```js
-if (true) {
-  let y = 5;
-}
-console.log(y);  // ReferenceError: y is not defined
-```
-
 ### Variable hoisting
 
 Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception.
 
-This concept is known as **hoisting.** Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
+This concept is known as _hoisting_. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
 
 ```js
 /**
@@ -218,7 +226,7 @@ In ECMAScript 2015, `let` and `const` **are hoisted but not initialized**. Refer
 
 ```js
 console.log(x); // ReferenceError
-let x = 3;
+const x = 3;
 ```
 
 ### Function hoisting
@@ -277,7 +285,7 @@ The scope rules for constants are the same as those for `let` block-scope variab
 
 You cannot declare a constant with the same name as a function or variable in the same scope. For example:
 
-```js
+```js example-bad
 // THIS WILL CAUSE AN ERROR
 function f() {};
 const f = 5;
@@ -402,21 +410,19 @@ An array literal is a list of zero or more expressions, each of which represents
 The following example creates the `coffees` array with three elements and a `length` of three:
 
 ```js
-let coffees = ['French Roast', 'Colombian', 'Kona'];
+const coffees = ['French Roast', 'Colombian', 'Kona'];
 ```
-
-> **Note:** An array literal is a type of _object initializer_. See [Using Object Initializers](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers).
 
 If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.
 
-> **Note:** Array literals are also `Array` objects. See {{jsxref("Array")}} and [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) for details on `Array` objects.
+> **Note:** Array literals create `Array` objects. See {{jsxref("Array")}} and [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) for details on `Array` objects.
 
 #### Extra commas in array literals
 
 If you put two commas in a row in an array literal, the array leaves an empty slot for the unspecified element. The following example creates the `fish` array:
 
 ```js
-let fish = ['Lion', , 'Angel'];
+const fish = ['Lion', , 'Angel'];
 ```
 
 When you log this array, you will see:
@@ -433,19 +439,19 @@ If you include a trailing comma at the end of the list of elements, the comma is
 In the following example, the `length` of the array is three. There is no `myList[3]`. All other commas in the list indicate a new element.
 
 ```js
-let myList = ['home', , 'school', ];
+const myList = ['home', , 'school', ];
 ```
 
 In the following example, the `length` of the array is four, and `myList[0]` and `myList[2]` are missing.
 
 ```js
-let myList = [, 'home', , 'school'];
+const myList = [, 'home', , 'school'];
 ```
 
 In the following example, the `length` of the array is four, and `myList[1]` and `myList[3]` are missing. **Only the last comma is ignored.**
 
 ```js
-let myList = ['home', , 'school', , ];
+const myList = ['home', , 'school', , ];
 ```
 
 > **Note:** Trailing commas help keep git diffs clean when you have a multi-line array, because appending an item to the end only adds one line, but does not modify the previous line.
@@ -463,7 +469,7 @@ Understanding the behavior of extra commas is important to understanding JavaScr
 However, when writing your own code, you should explicitly declare the missing elements as `undefined`, or at least insert a comment to highlight its absence. Doing this increases your code's clarity and maintainability.
 
 ```js
-let myList = ['home', /* empty */, 'school', /* empty */, ];
+const myList = ['home', /* empty */, 'school', /* empty */, ];
 ```
 
 ### Boolean literals
@@ -506,11 +512,11 @@ For more information, see [Numeric literals in the Lexical grammar reference](/e
 A floating-point literal can have the following parts:
 
 - An unsigned decimal integer,
-- A decimal point ("`.`"),
+- A decimal point (`.`),
 - A fraction (another decimal number),
 - An exponent.
 
-The exponent part is an "`e`" or "`E`" followed by an integer, which can be signed (preceded by "`+`" or "`-`"). A floating-point literal must have at least one digit, and either a decimal point or "`e`" (or "`E`").
+The exponent part is an `e` or `E` followed by an integer, which can be signed (preceded by `+` or `-`). A floating-point literal must have at least one digit, and either a decimal point or `e` (or `E`).
 
 More succinctly, the syntax is:
 
@@ -564,16 +570,21 @@ console.log(car[7]); // Mazda
 
 Object property names can be any string, including the empty string. If the property name would not be a valid JavaScript {{Glossary("Identifier","identifier")}} or number, it must be enclosed in quotes.
 
-Property names that are not valid identifiers cannot be accessed as a dot (`.`) property, but _can_ be accessed and set with the array-like notation("`[]`").
+Property names that are not valid identifiers cannot be accessed as a dot (`.`) property.
 
-```js
+```js example-bad
 const unusualPropertyNames = {
   '': 'An empty string',
   '!': 'Bang!'
 }
 console.log(unusualPropertyNames.'');   // SyntaxError: Unexpected string
-console.log(unusualPropertyNames['']);  // An empty string
 console.log(unusualPropertyNames.!);    // SyntaxError: Unexpected token !
+```
+
+Instead, they must be accessed with the bracket notation (`[]`).
+
+```js example-good
+console.log(unusualPropertyNames['']);  // An empty string
 console.log(unusualPropertyNames['!']); // Bang!
 ```
 
@@ -591,7 +602,7 @@ const obj = {
   handler,
   // Methods
   toString() {
-   // Super calls
+    // Super calls
     return 'd ' + super.toString();
   },
   // Computed (dynamic) property names

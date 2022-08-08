@@ -48,7 +48,7 @@ When a classic live-action movie is filmed, the actors are on a set and move abo
 
 ### Virtual cameras
 
-In WebGL (and by extension, in WebXR), there is no camera object we can move and rotate, so we have to find a way to fake these movements. Since there is no camera, we have to find a way to fake it. Fortunately, physicists like Galileo, Newton, Lorentz, and Einstein have given us the **{{interwiki("wikipedia", "principle of relativity")}}**, which states that the laws of physics have the same form in every frame of reference. That is, no matter where you're standing, the laws of physics work in the same way.
+In WebGL (and by extension, in WebXR), there is no camera object we can move and rotate, so we have to find a way to fake these movements. Since there is no camera, we have to find a way to fake it. Fortunately, physicists like Galileo, Newton, Lorentz, and Einstein have given us the **[principle of relativity](https://en.wikipedia.org/wiki/Principle_of_relativity)**, which states that the laws of physics have the same form in every frame of reference. That is, no matter where you're standing, the laws of physics work in the same way.
 
 By extension, if you and another person are standing in an empty field of solid stone with nothing else visible as far as the eye can see, if you move three meters toward the other person, the result _looks the same_ as if the other person had moved three meters toward you. There is no way for either of you to see the difference. A third party can tell the difference, but the two of you cannot. If you are a camera, you can achieve the same visual result both by moving the camera _or by moving everything around the camera_.
 
@@ -66,7 +66,7 @@ In general, virtual cameras may or may not be incorporated into physical objects
 - In business applications, the 3D camera is used to set the apparent size and perspective when rendering things such as graphs and charts.
 - In mapping applications, the camera may either be placed directly over the scene, or might use various angles to show perspective. For 3D GPS solutions, the camera is positioned to show the area around the user, with the majority of the display showing the area ahead of the user's path of motion.
 - When using WebGL to accelerate 2D graphics drawing, the camera is typically placed directly above the center of the scene with the distance and field of view set to allow the entire scene to be presented.
-- When accelerating bitmapped graphics, the renderer would draw the 2D image into a WebGL texture's buffer, then redraw the texture to refresh the screen. This essentially uses the texture as a backbuffer for performing {{interwiki("wikipedia", "multiple buffering")}} in your 2D graphics application.
+- When accelerating bitmapped graphics, the renderer would draw the 2D image into a WebGL texture's buffer, then redraw the texture to refresh the screen. This essentially uses the texture as a backbuffer for performing [multiple buffering](https://en.wikipedia.org/wiki/Multiple_buffering) in your 2D graphics application.
 
 #### Cameras in gaming
 

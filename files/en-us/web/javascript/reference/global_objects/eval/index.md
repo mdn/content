@@ -140,7 +140,7 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
 
 In strict mode, declaring a variable named `eval` or re-assigning `eval` is a {{jsxref("SyntaxError")}}.
 
-```js
+```js example-bad
 "use strict";
 
 const eval = 1; // SyntaxError: Unexpected eval or arguments in strict mode
@@ -190,7 +190,7 @@ the [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) c
 
 ```js
 function looseJsonParse(obj) {
-  return eval("(" + obj + ")");
+  return eval(`(${obj})`);
 }
 console.log(looseJsonParse(
   "{a:(4-1), b:function(){}, c:new Date()}"
@@ -201,7 +201,7 @@ Better code without `eval()`:
 
 ```js
 function looseJsonParse(obj) {
-  return Function('"use strict";return (' + obj + ')')();
+  return Function(`"use strict";return (${obj})`)();
 }
 console.log(looseJsonParse(
   "{a:(4-1), b:function(){}, c:new Date()}"
@@ -222,7 +222,7 @@ function Date(n) {
   return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
 }
 function looseJsonParse(obj) {
-  return eval("(" + obj + ")");
+  return eval(`(${obj})`);
 }
 console.log(looseJsonParse(
   "{a:(4-1), b:function(){}, c:new Date()}"
@@ -243,7 +243,7 @@ function Date(n) {
   return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
 }
 function runCodeWithDateFunction(obj) {
-  return Function('"use strict";return (' + obj + ')')()(
+  return Function(`"use strict";return (${obj})`)()(
     Date
   );
 }
@@ -276,11 +276,11 @@ return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7|
 There are also additional safer (and faster!) alternatives to `eval()` or
 `Function()` for common use-cases.
 
-The difference between `eval()` and `Function()` is that the source string passed to `Function()` is parsed as function body, not as a script. There are a few nuances — for example, you can use `return` statements in a function body but not in a script. In case you intend to parse the content as a script, using indirect eval and forcing strict mode can be another secure alternative.
+The difference between `eval()` and `Function()` is that the source string passed to `Function()` is parsed as function body, not as a script. There are a few nuances — for example, you can use `return` statements in a function body but not in a script. In case you intend to parse the content as a script, using indirect eval and forcing strict mode can be another secure alternative.
 
 ```js
 function looseJsonParse(obj) {
-  return eval?.("'use strict';(" + obj + ")");
+  return eval?.(`'use strict';(${obj})`);
 }
 console.log(looseJsonParse(
   "{a:(4-1), b:function(){}, c:new Date()}"
@@ -413,16 +413,16 @@ eval(z);           // returns 42
 `eval()` returns the completion value of statements. For `if`, it would be the last expression or statement evaluated.
 
 ```js
-const str = 'if ( a ) { 1 + 1; } else { 1 + 2; }';
+const str = 'if (a) { 1 + 1 } else { 1 + 2 }';
 const a = true;
 const b = eval(str);  // returns 2
 
-console.log('b is : ' + b);
+console.log(`b is: ${b}`);
 
 a = false;
 b = eval(str);  // returns 3
 
-console.log('b is : ' + b);
+console.log(`b is: ${b}`);
 ```
 
 The following example uses `eval()` to evaluate the string `str`.

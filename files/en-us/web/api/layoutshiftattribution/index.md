@@ -39,13 +39,11 @@ The following example finds the element that is causing the largest layout shift
 
 ```js
 function getCLSDebugTarget(entries) {
-  const largestEntry = entries.reduce((a, b) => {
-    return a && a.value > b.value ? a : b;
-  });
-  if (largestEntry && largestEntry.sources && largestEntry.sources.length) {
+  const largestEntry = entries.reduce((a, b) => a && a.value > b.value ? a : b);
+  if (largestEntry?.sources?.length) {
     const largestSource = largestEntry.sources.reduce((a, b) => {
-      return a.node && a.previousRect.width * a.previousRect.height >
-          b.previousRect.width * b.previousRect.height ? a : b;
+      const area = (el) => el.previousRect.width * el.previousRect.height;
+      return a.node && area(a) > area(b) ? a : b;
     });
     if (largestSource) {
       return largestSource.node;

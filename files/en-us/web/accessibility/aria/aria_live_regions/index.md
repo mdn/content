@@ -87,7 +87,7 @@ function renderPlanetInfo(planet) {
 
 const renderPlanetInfoButton = document.querySelector('#renderPlanetInfoButton');
 
-renderPlanetInfoButton.addEventListener('click', event => {
+renderPlanetInfoButton.addEventListener('click', (event) => {
   const planetsSelect = document.querySelector('#planetsSelect');
   const selectedPlanet = planetsSelect.options[planetsSelect.selectedIndex].value;
 

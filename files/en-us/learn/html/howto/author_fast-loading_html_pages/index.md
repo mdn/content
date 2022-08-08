@@ -138,7 +138,7 @@ By default, images are loaded **eagerly**; that is, the image is fetched and ren
 To mark an image for lazy loading, specify its {{htmlattrxref("loading", "img")}} attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
 
 ```html
-<img src="./images/footerlogo.jpg" loading="lazy">
+<img src="./images/footerlogo.jpg" loading="lazy" alt="MDN logo">
 ```
 
 Note that lazily-loaded images may not be available when the `load` event is fired. You can determine if a given image is loaded by checking to see if the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property is `true`.
@@ -177,7 +177,7 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
   - `{{htmlelement('body')}}`
 
-    User visible page content in small chunks ( `{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
+    User visible page content in small chunks (`{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
 
     - `{{htmlelement('script')}}`
 

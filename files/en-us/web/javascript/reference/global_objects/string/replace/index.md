@@ -116,7 +116,7 @@ function replacer(match, p1, p2, p3, offset, string) {
   // p1 is non-digits, p2 digits, and p3 non-alphanumerics
   return [p1, p2, p3].join(' - ');
 }
-let newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+const newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 console.log(newString);  // abc - 12345 - #$*%
 ```
 
@@ -128,8 +128,8 @@ In the following example, the regular expression is defined in `replace()`
 and includes the ignore case flag.
 
 ```js
-let str = 'Twas the night before Xmas...';
-let newstr = str.replace(/xmas/i, 'Christmas');
+const str = 'Twas the night before Xmas...';
+const newstr = str.replace(/xmas/i, 'Christmas');
 console.log(newstr);  // Twas the night before Christmas...
 ```
 
@@ -147,9 +147,9 @@ which permits `replace()` to replace each
 occurrence of `'apples'` in the string with `'oranges'`.
 
 ```js
-let re = /apples/gi;
-let str = 'Apples are round, and apples are juicy.';
-let newstr = str.replace(re, 'oranges');
+const re = /apples/gi;
+const str = 'Apples are round, and apples are juicy.';
+const newstr = str.replace(re, 'oranges');
 console.log(newstr);  // oranges are round, and oranges are juicy.
 ```
 
@@ -162,9 +162,9 @@ script uses [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressi
 and the `$1` and `$2` replacement patterns.
 
 ```js
-let re = /(\w+)\s(\w+)/;
-let str = 'John Smith';
-let newstr = str.replace(re, '$2, $1');
+const re = /(\w+)\s(\w+)/;
+const str = 'John Smith';
+const newstr = str.replace(re, '$2, $1');
 console.log(newstr);  // Smith, John
 ```
 
@@ -224,10 +224,10 @@ Fahrenheit degree passed in a string to the `f2c()` function.
 ```js
 function f2c(x) {
   function convert(str, p1, offset, s) {
-    return ((p1 - 32) * 5/9) + 'C';
+    return `${(p1 - 32) * 5 / 9}C`;
   }
-  let s = String(x);
-  let test = /(-?\d+(?:\.\d*)?)F\b/g;
+  const s = String(x);
+  const test = /(-?\d+(?:\.\d*)?)F\b/g;
   return s.replace(test, convert);
 }
 ```

@@ -34,12 +34,12 @@ An array of {{domxref("Report")}} objects.
 ## Examples
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 
@@ -47,7 +47,7 @@ observer.observe()
 
 // …
 
-let records = observer.takeRecords();
+const records = observer.takeRecords();
 console.log(records);
 ```
 

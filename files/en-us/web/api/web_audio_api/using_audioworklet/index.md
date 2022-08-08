@@ -209,7 +209,7 @@ async function createMyAudioProcessor() {
       audioContext = new AudioContext();
       await audioContext.resume();
       await audioContext.audioWorklet.addModule("module-url/module.js");
-    } catch(e) {
+    } catch (e) {
       return null;
     }
   }

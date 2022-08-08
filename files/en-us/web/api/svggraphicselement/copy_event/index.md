@@ -14,29 +14,6 @@ browser-compat: api.Element.copy_event
 
 The **`copy`** event fires on {{domxref("SVGGraphicsElement", "SVGGraphicsElements")}} when the user initiates a copy action through the browser's user interface.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ClipboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("SVGGraphicsElement/oncopy", "oncopy")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 The event's default action is to copy the selection (if any) to the clipboard.
 
 A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the event's default action using [`event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
@@ -44,6 +21,22 @@ A handler for this event can _modify_ the clipboard contents by calling {{domxre
 However, the handler cannot _read_ the clipboard data.
 
 It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `copy` event, but this will not affect the system clipboard.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('copy', (event) => { });
+
+oncopy = (event) => { };
+```
+
+## Event type
+
+A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ClipboardEvent")}}
 
 ## Example
 
@@ -74,7 +67,7 @@ input {
 ### JavaScript
 
 ```js
-document.getElementsByTagName("text")[0].addEventListener("copy", evt => {
+document.getElementsByTagName("text")[0].addEventListener("copy", (evt) => {
   evt.clipboardData.setData('text/plain', document.getSelection().toString().toUpperCase());
   evt.preventDefault();
 });

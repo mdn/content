@@ -9,36 +9,38 @@ browser-compat: mathml.elements.semantics
 ---
 {{MathMLRef}}
 
-In MathML there are two ways to mark up mathematics: _Presentation_ MathML is used to control the layout of equations, whereas _Content_ MathML is designed to encode the semantic mathematical meaning and to make expressions understandable to computer algebra systems. The MathML elements `<semantics>`, `<annotation>` and `<annotation-xml>` are used to combine presentation and content markup and to provide both, layout information and semantic meaning of mathematical expressions.
+The `<semantics>` element associates annotations with a MathML expression, for example its text source as a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or mathematical meaning expressed in a special {{glossary("XML")}} dialect. Typically, its structure is:
 
-The `<semantics>` element acts as a container element associating annotations and must have child elements (it will raise an _invalid markup_ error otherwise). The `<annotation>` element is the container element containing semantic information in a non-XML format, whereas the `<annotation-xml>` element contains content in an XML format, e.g. Content MathML or OpenMath.
+- a first child which is a MathML expression to be annotated.
+- subsequent `<annotation>` or `<annotation-xml>` elements, the latter being reserved for XML formats such as [OpenMath](https://en.wikipedia.org/wiki/OpenMath).
 
-The rules of determining the visible child in a `<semantics>` element are the following:
+By default, only the first child of the `<semantics>` element is rendered while the others have their [display](/en-US/docs/Web/CSS/display) set to `none`.
 
-- If no rule other rule applies: By default only the first child is rendered, which is supposed to be presentation markup.
-- If the first child is a presentation MathML element other than `<annotation>` or `<annotation-xml>`, render the first child.
-- If no Presentation MathML is found, render the first `<annotation>` or `<annotation-xml>` child element of `<semantics>`.
-  Beware that `<annotation-xml>` elements are only recognized, if the encoding attribute is set to one of the following:
-
-  - `"application/mathml-presentation+xml"`
-  - `"MathML-Presentation"`
-  - `"SVG1.1"`
-  - `"text/html"`
-  - `"image/svg+xml"`
-  - `"application/xml`".
-
-  Note that `"application/mathml+xml"` is _not_ mentioned here as it does not distinguish between Content or Presentation MathML.
+> **Note:** Legacy MathML specifications allowed renderers to decide the default rendering according to available annotations. The following rules for determining the visible child have been implemented in some browsers. See [MathML Full](https://w3c.github.io/mathml/) for the distinction between Presentation and Content MathML.
+>
+>
+> - If no other rules apply: By default only the first child is rendered, which is supposed to be Presentation MathML.
+> - If the first child is a Presentation MathML element other than `<annotation>` or `<annotation-xml>`, render the first child.
+> - If no Presentation MathML is found, render the first `<annotation>` or `<annotation-xml>` child element of `<semantics>`.
+>  Beware that `<annotation-xml>` elements are only recognized, if the encoding attribute is set to one of the following:
+>
+> - `"application/mathml-presentation+xml"`
+> - `"MathML-Presentation"`
+> - `"SVG1.1"`
+> - `"text/html"`
+> - `"image/svg+xml"`
+> - `"application/xml`".
+>
+> Note that `"application/mathml+xml"` is _not_ mentioned here as it does not distinguish between Content or Presentation MathML.
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
-
-The following attributes can be set on `<annotation>` and `<annotation-xml>`:
+`<semantics>`, `<annotation>` and `<annotation-xml>` elements accept the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes). Additionally, the following attributes can be set on the `<annotation>` and `<annotation-xml>` elements:
 
 - `definitionURL`
   - : The location of the annotation key symbol.
 - `encoding`
-  - : The encoding of the semantic information in the annotation (e.g. "MathML-Content", "MathML-Presentation", "application/openmath+xml", "image/png")
+  - : The encoding of the semantic information in the annotation (e.g. `"MathML-Content"`, `"MathML-Presentation"`, `"application/openmath+xml"`, `"image/png"`)
 - `cd`
   - : The content dictionary that contains the annotation key symbol.
 - `name`
@@ -52,7 +54,7 @@ The following attributes can be set on `<annotation>` and `<annotation-xml>`:
 <math>
   <semantics>
 
-    <!-- Presentation MathML -->
+    <!-- The first child is the MathML expression rendered by default. -->
     <mrow>
       <msup>
         <mi>x</mi>
@@ -62,7 +64,8 @@ The following attributes can be set on `<annotation>` and `<annotation-xml>`:
       <mi>y</mi>
     </mrow>
 
-    <!-- Content MathML -->
+    <!-- Annotate with "Content MathML", a dedicated XML dialect to
+         express the meaning of mathematical formulas. -->
     <annotation-xml encoding="MathML-Content">
       <apply>
         <plus/>
@@ -75,10 +78,11 @@ The following attributes can be set on `<annotation>` and `<annotation-xml>`:
       </apply>
     </annotation-xml>
 
-    <!-- annotate an image -->
+    <!-- Annotate with a PNG image of the formula. -->
     <annotation encoding="image/png" src="some/path/formula.png"/>
 
-    <!-- annotate TeX -->
+    <!-- Annotate with LaTeX, a lightweight markup language to write
+         mathematical formulas. -->
     <annotation encoding="application/x-tex">
       x^{2} + y
     </annotation>

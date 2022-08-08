@@ -44,7 +44,7 @@ None.
 ## Examples
 
 ```js
-var cred = new FederatedCredential({
+const cred = new FederatedCredential({
   id: id,
   name: name,
   provider: 'https://account.google.com',
@@ -53,7 +53,7 @@ var cred = new FederatedCredential({
 
 // Store it
 navigator.credentials.store(cred)
-  .then(function() {
+  .then(() => {
   // Do something else.
 });
 ```

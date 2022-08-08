@@ -62,13 +62,13 @@ function createWasmModule(bytes) {
   return new WebAssembly.Module(bytes);
 }
 
-fetch('simple.wasm').then(response =>
+fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
-).then(bytes => {
-  let mod = createWasmModule(bytes);
+).then((bytes) => {
+  const mod = createWasmModule(bytes);
   WebAssembly.instantiate(mod, importObject)
-  .then(result =>
-     result.exports.exported_func()
+  .then((result) =>
+    result.exports.exported_func()
   );
 })
 ```

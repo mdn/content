@@ -136,11 +136,13 @@ For authors not familiar with LaTeX, alternative input methods are available suc
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width">
 ...
 <!-- ASCIIMathML.js -->
-<script type="text/javascript" src="/path/to/ASCIIMathML.js"></script>
+<script src="/path/to/ASCIIMathML.js"></script>
 ...
 <!-- jqMath -->
 <script src="https://mathscribe.com/mathscribe/jquery-1.4.3.min.js"></script>

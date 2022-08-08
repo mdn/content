@@ -52,7 +52,7 @@ This candidate examines the `priority` of the candidate and, if it's greater
 than the priority of a previously-seen candidate, remembers the candidate for later use.
 
 ```js
-const bestCandidate = {
+let bestCandidate = {
   candidate: "",
   sdpMid: null,
   sdpMLineIndex: null,

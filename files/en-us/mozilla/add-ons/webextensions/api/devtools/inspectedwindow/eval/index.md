@@ -109,7 +109,7 @@ function handleResult(result) {
   }
 }
 
-const checkjQuery = "typeof jQuery != 'undefined'";
+const checkjQuery = "typeof jQuery !== 'undefined'";
 
 evalButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.eval(checkjQuery)

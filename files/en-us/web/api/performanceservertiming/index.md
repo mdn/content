@@ -46,7 +46,7 @@ function requestHandler(request, response) {
   };
   response.writeHead(200, headers);
   response.write('');
-  return setTimeout(_ => {
+  return setTimeout(() => {
    response.end();
  }, 1000)
 };

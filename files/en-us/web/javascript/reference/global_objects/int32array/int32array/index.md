@@ -30,6 +30,16 @@ new Int32Array(buffer, byteOffset);
 new Int32Array(buffer, byteOffset, length);
 ```
 
+## Description
+
+The `Int32Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Int32Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+
+```js example-bad
+const dv = Int32Array([1, 2, 3]);
+// TypeError: calling a builtin Int32Array constructor
+// without new is forbidden
+```
+
 ### Parameters
 
 - `length`
@@ -96,23 +106,6 @@ console.log(int32FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Int32Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Int32Array` constructor as a function without `new`, will throw a
-{{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Int32Array([1, 2, 3]);
-// TypeError: calling a builtin Int32Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Int32Array([1, 2, 3]);
-```
 
 ## See also
 

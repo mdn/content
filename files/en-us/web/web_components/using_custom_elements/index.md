@@ -41,8 +41,6 @@ class WordCount extends HTMLParagraphElement {
     super();
 
     // Element functionality written in here
-
-    ...
   }
 }
 ```
@@ -73,15 +71,13 @@ class PopUpInfo extends HTMLElement {
     super();
 
     // write element functionality in here
-
-    ...
   }
 }
 ```
 
 The preceding code snippet contains the [`constructor()`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) definition for the class, which always starts by calling [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) so that the correct prototype chain is established.
 
-Inside the constructor, we define all the functionality the element will have when an instance of it is instantiated. In this case we attach a shadow root to the custom element, use some DOM manipulation to create the element's internal shadow DOM structure — which is then attached to the shadow root — and finally attach some CSS to the shadow root to style it.
+Inside the method connectedCallback, we define all the functionality the element will have when the element is connected to the DOM. In this case we attach a shadow root to the custom element, use some DOM manipulation to create the element's internal shadow DOM structure — which is then attached to the shadow root — and finally attach some CSS to the shadow root to style it. We don't use `constructor()` because an element's attributes are unavailable until connected to the DOM.
 
 ```js
 // Create a shadow root
@@ -160,8 +156,6 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // write element functionality in here
-
-    ...
   }
 }
 ```

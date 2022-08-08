@@ -13,5 +13,5 @@ In {{Glossary("JavaScript")}}, a String is one of the {{Glossary("Primitive", "p
 
 ## See also
 
-- {{Interwiki("wikipedia", "String (computer science)")}} on Wikipedia
+- [String (computer science)](https://en.wikipedia.org/wiki/String_(computer_science)) on Wikipedia
 - [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures#string_type)

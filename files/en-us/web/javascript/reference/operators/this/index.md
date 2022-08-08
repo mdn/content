@@ -274,8 +274,8 @@ console.log(obj.func() === globalObject); // true
 console.log(foo.call(obj) === globalObject); // true
 
 // Attempt to set this using bind
-foo = foo.bind(obj);
-console.log(foo() === globalObject); // true
+const boundFoo = foo.bind(obj);
+console.log(boundFoo() === globalObject); // true
 ```
 
 No matter what, `foo`'s `this` is set to what it was when it was
@@ -426,7 +426,10 @@ const o = {
 };
 
 Object.defineProperty(o, 'sum', {
-    get: sum, enumerable: true, configurable: true});
+  get: sum,
+  enumerable: true,
+  configurable: true,
+});
 
 console.log(o.average, o.sum); // 2, 6
 ```
@@ -478,7 +481,7 @@ console.log(o.a); // 38
 
 In the last example (`C2`), because an object was returned during
 construction, the new object that `this` was bound to gets discarded. (This
-essentially makes the statement "`this.a = 37;`" dead code. It's not exactly
+essentially makes the statement `this.a = 37;` dead code. It's not exactly
 dead because it gets executed, but it can be eliminated with no outside effects.)
 
 ### As a DOM event handler
@@ -523,7 +526,7 @@ The above alert shows `button`. Note however that only the outer code has
 its `this` set this way:
 
 ```html
-<button onclick="alert((function() { return this; })());">
+<button onclick="alert((function () { return this; })());">
   Show inner this
 </button>
 ```

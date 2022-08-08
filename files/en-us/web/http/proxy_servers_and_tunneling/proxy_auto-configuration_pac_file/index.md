@@ -11,16 +11,12 @@ tags:
 
 A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
 
+## Syntax
+
 ```js
 function FindProxyForURL(url, host) {
   // …
 }
-```
-
-## Syntax
-
-```js
-function FindProxyForURL(url, host)
 ```
 
 ### Parameters
@@ -423,7 +419,7 @@ weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note,
 
 #### Syntax
 
-```js
+```
 dateRange(<day> | <month> | <year>, [gmt])  // ambiguity is resolved by assuming year is greater than 31
 dateRange(<day1>, <day2>, [gmt])
 dateRange(<month1>, <month2>, [gmt])
@@ -520,7 +516,7 @@ timerange(12);                // returns true from noon to 1pm
 timerange(12, 13);            // returns true from noon to 1pm
 timerange(12, "GMT");         // returns true from noon to 1pm, in GMT timezone
 timerange(9, 17);             // returns true from 9am to 5pm
-timerange(8, 30, 17, 00);     // returns true from 8:30am to 5:00pm
+timerange(8, 30, 17, 0);      // returns true from 8:30am to 5:00pm
 timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight
 ```
 

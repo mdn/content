@@ -48,20 +48,20 @@ In following code snippet, some {{DOMxRef("Touch")}} objects are created for the
 {{DOMxRef("TouchList")}} objects.
 
 ```js
-var target = document.getElementById("target");
+const target = document.getElementById("target");
 
 // Create some touch points
-var touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
-var touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
+const touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
+const touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
 
 // Create an empty TouchList objects
-var list0 = document.createTouchList();
+const list0 = document.createTouchList();
 
 // Create a TouchList with only one Touch object
-var list1 = document.createTouchList(touch1);
+const list1 = document.createTouchList(touch1);
 
 // Create a list with two Touch objects
-var list2 = document.createTouchList(touch1, touch2);
+const list2 = document.createTouchList(touch1, touch2);
 ```
 
 ## Specifications

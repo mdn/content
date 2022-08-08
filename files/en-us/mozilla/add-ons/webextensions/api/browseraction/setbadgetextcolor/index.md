@@ -60,7 +60,7 @@ A badge text color that starts off as red, and turns green when the browser acti
 browser.browserAction.setBadgeText({text: "1234"});
 browser.browserAction.setBadgeTextColor({color: "red"});
 
-browser.browserAction.onClicked.addListener(()=> {
+browser.browserAction.onClicked.addListener(() => {
   browser.browserAction.setBadgeTextColor({color: "green"});
 });
 ```

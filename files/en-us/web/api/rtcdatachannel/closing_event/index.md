@@ -30,9 +30,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('bufferedamountlow', event => { });
+addEventListener('bufferedamountlow', (event) => { });
 
-onbufferedamountlow = event => { };
+onbufferedamountlow = (event) => { };
 ```
 
 ## Event type
@@ -50,7 +50,7 @@ This example updates a connection status interface when the `closing` event arri
 First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-dataChannel.addEventListener("closing", ev => {
+dataChannel.addEventListener("closing", (ev) => {
   myConnectionStatus.icon = closingIcon;
   myConnectionStatus.text = "Connection closing";
 });
@@ -59,7 +59,7 @@ dataChannel.addEventListener("closing", ev => {
 You can also set the {{domxref("RTCDataChannel.closing_event", "onclosing")}} event handler property directly:
 
 ```js
-pc.onclosing = ev => {
+pc.onclosing = (ev) => {
  myConnectionStatus.icon = closingIcon;
  myConnectionStatus.text = "Connection closing";
 };

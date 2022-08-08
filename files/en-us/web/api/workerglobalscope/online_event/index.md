@@ -20,9 +20,9 @@ The **`online`** event of the {{domxref("WorkerGlobalScope")}} fires when the de
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('online', event => { });
+addEventListener('online', (event) => { });
 
-ononline = event => { };
+ononline = (event) => { };
 ```
 
 ## Event type

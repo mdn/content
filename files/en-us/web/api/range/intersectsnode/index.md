@@ -19,7 +19,7 @@ indicating whether the given {{domxref("Node")}} intersects the {{domxref("Range
 ## Syntax
 
 ```js
-intersectsNode( referenceNode )
+intersectsNode(referenceNode)
 ```
 
 ### Parameters

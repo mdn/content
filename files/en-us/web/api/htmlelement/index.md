@@ -19,7 +19,7 @@ The **`HTMLElement`** interface represents any [HTML](/en-US/docs/Web/HTML) elem
 
 ## Properties
 
-_Inherits properties from its parent, {{DOMxRef("Element")}}, and implements those from {{DOMxRef("GlobalEventHandlers")}}._
+_Inherits properties from its parent, {{DOMxRef("Element")}}._
 
 - {{DOMxRef("HTMLElement.accessKey")}}
   - : A string representing the access key assigned to the element.
@@ -82,22 +82,9 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
 - {{DOMxRef("HTMLElement.translate")}} {{Experimental_Inline}}
   - : A boolean value representing the translation.
 
-### Event handlers
-
-Most event handler properties, of the form `onXYZ`, are defined on the {{DOMxRef("GlobalEventHandlers")}} interface and implemented by `HTMLElement`. In addition, the following handlers are specific to `HTMLElement`.
-
-- {{DOMxRef("TouchEventHandlers.ontouchstart")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the {{domxref("Element/touchstart_event", "touchstart")}} event.
-- {{DOMxRef("TouchEventHandlers.ontouchend")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the {{domxref("Element/touchend_event", "touchend")}} event.
-- {{DOMxRef("TouchEventHandlers.ontouchmove")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the {{domxref("Element/touchmove_event", "touchmove")}} event.
-- {{DOMxRef("TouchEventHandlers.ontouchcancel")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the {{domxref("Element/touchcancel_event", "touchcancel")}} event.
-
 ## Methods
 
-_Inherits methods from its parent, {{DOMxRef("Element")}}, and implements those from {{DOMxRef("GlobalEventHandlers")}}._
+_Inherits methods from its parent, {{DOMxRef("Element")}}._
 
 - {{DOMxRef("HTMLElement.attachInternals()")}} {{Experimental_Inline}}
   - : Returns an {{DOMxRef("ElementInternals")}} object, and enables a custom element to participate in HTML forms.
@@ -120,22 +107,17 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the user initiates a paste action through the browser's user interface.
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}}
   - : Fired when an element does not satisfy its constraints during constraint validation.
-    Also available via the {{domxref("GlobalEventHandlers/oninvalid", "oninvalid")}} property.
 
 ### Animation events
 
 - {{domxref("HTMLElement/animationcancel_event", "animationcancel")}}
   - : Fired when an animation unexpectedly aborts.
-    Also available via the {{domxref("GlobalEventHandlers/onanimationcancel", "onanimationcancel")}} property.
 - {{domxref("HTMLElement/animationend_event", "animationend")}}
   - : Fired when an animation has completed normally.
-    Also available via the {{domxref("GlobalEventHandlers/onanimationend", "onanimationend")}} property.
 - {{domxref("HTMLElement/animationiteration_event", "animationiteration")}}
   - : Fired when an animation iteration has completed.
-    Also available via the {{domxref("GlobalEventHandlers/onanimationiteration", "onanimationiteration")}} property.
 - {{domxref("HTMLElement/animationstart_event", "animationstart")}}
   - : Fired when an animation starts.
-    Also available via the {{domxref("GlobalEventHandlers/onanimationstart", "onanimationstart")}} property.
 
 ### Input events
 
@@ -143,7 +125,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the value of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element is about to be modified.
 - {{domxref("HTMLElement/input_event", "input")}}
   - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
-    Also available via the {{domxref("GlobalEventHandlers/oninput", "oninput")}} property.
 - {{domxref("HTMLElement/change_event", "change")}}
   - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed and committed by the user. Unlike the {{domxref("HTMLElement/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
 
@@ -151,10 +132,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}}
   - : Fired when an element captures a pointer using {{domxref("Element/setPointerCapture", "setPointerCapture()")}}.
-    Also available via the {{domxref("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} property.
 - {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
   - : Fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
-    Also available via the {{domxref("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}} property.
 - {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}
   - : Fired when a pointer event is canceled.
 - {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
@@ -176,16 +155,12 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
-    Also available via the {{domxref("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}} property.
 - {{domxref("HTMLElement/transitionend_event", "transitionend")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
-    Also available via the {{domxref("GlobalEventHandlers/ontransitionend", "ontransitionend")}} property.
 - {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
-    Also available via the {{domxref("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}} property.
 - {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
-    Also available via the {{domxref("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} property.
 
 ## Specifications
 

@@ -45,7 +45,7 @@ document.body.innerHTML = `${pluginsLength} Plugin(s)<br>`
 
 const table = document.getElementById('pluginTable');
 
-for(let i = 0; i < pluginsLength; i++) {
+for (let i = 0; i < pluginsLength; i++) {
   let newRow = table.insertRow();
   newRow.insertCell().textContent = navigator.plugins[i].name;
   newRow.insertCell().textContent = navigator.plugins[i].filename;
@@ -64,7 +64,7 @@ document.write(
   `Name | Filename | description<br>`
 );
 
-for(let i = 0; i < pluginsLength; i++) {
+for (let i = 0; i < pluginsLength; i++) {
   document.write(
     `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`
   );

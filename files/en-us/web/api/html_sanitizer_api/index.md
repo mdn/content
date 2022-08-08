@@ -97,10 +97,10 @@ const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanit
 const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Sanitize the string
-let sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
+const sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
 
 //We can verify the returned element type, and view sanitized HTML in string form:
-console.log( (sanitizedDiv instanceof HTMLDivElement) );
+console.log(sanitizedDiv instanceof HTMLDivElement);
 // true
 console.log(sanitizedDiv.innerHTML)
 // "abc  def"
@@ -117,7 +117,7 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 >
 > ```js
 > const unsanitized_string = "abc <script>alert(1)<" + "/script> def";
-> let sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
+> const sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
 > ```
 
 ### Sanitize a frame

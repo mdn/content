@@ -30,14 +30,14 @@ If the button is pressed on one element and the pointer is moved outside the ele
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('auxclick', (event) => {});
+addEventListener('click', (event) => {});
 
-onauxclick = (event) => { };
+onclick = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MouseEvent")}}
 
@@ -150,7 +150,7 @@ This example displays the number of consecutive clicks on a {{HtmlElement("butto
 ```js
 const button = document.querySelector('button');
 
-button.addEventListener('click', event => {
+button.addEventListener('click', (event) => {
   button.textContent = `Click count: ${event.detail}`;
 });
 ```

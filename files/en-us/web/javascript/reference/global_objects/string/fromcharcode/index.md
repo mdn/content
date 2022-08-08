@@ -22,7 +22,7 @@ created from the specified sequence of UTF-16 code units.
 ```js
 String.fromCharCode(num1)
 String.fromCharCode(num1, num2)
-String.fromCharCode(num1, num2, ..., numN)
+String.fromCharCode(num1, num2, /* …, */ numN)
 ```
 
 ### Parameters
@@ -90,7 +90,7 @@ Supplementary characters, in UTF-16, require two code units (i.e. a surrogate pa
 
 ```js
 String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
-String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
+String.fromCharCode(55356, 57091);   // Stars" === "\uD83C\uDF03"
 
 String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07); // "\uD834\uDF06a\uD834\uDF07"
 ```

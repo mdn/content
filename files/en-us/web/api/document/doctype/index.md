@@ -26,7 +26,7 @@ A {{domxref("DocumentType")}} object.
 ## Examples
 
 ```js
-var doctypeObj = document.doctype;
+const doctypeObj = document.doctype;
 
 console.log(`doctypeObj.name: ${doctypeObj.name}`);
 console.log(`doctypeObj.internalSubset: ${doctypeObj.internalSubset}`);

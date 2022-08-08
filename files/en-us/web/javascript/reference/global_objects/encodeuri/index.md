@@ -82,8 +82,8 @@ console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (the space gets encode
 
 Note that `encodeURI()` by itself _cannot_ form proper HTTP
 {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} requests, such as for
-{{domxref("XMLHttpRequest")}}, because "`&`", "`+`", and
-"`=`" are not encoded, which are treated as special characters in
+{{domxref("XMLHttpRequest")}}, because `&`, `+`, and
+`=` are not encoded, which are treated as special characters in
 `GET` and `POST` requests. `encodeURIComponent()`,
 however, does encode these characters.
 
@@ -111,7 +111,7 @@ which could be part of a URL (such as a host), the following code snippet may he
 
 ```js
 function fixedEncodeURI(str) {
-    return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
+  return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
 }
 ```
 

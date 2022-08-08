@@ -49,9 +49,9 @@ An explanation of why the name "**let**" was chosen can be found [here](https://
 
 Many issues with `let` variables can be avoided by declaring them at the top of the scope in which they are used (doing so may impact readability).
 
-Unlike `var`, `let` begins _Declarations_, not _Statements_. That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+Unlike `var`, `let` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
-```js
+```js example-bad
 if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
@@ -161,13 +161,13 @@ For example, the code below works because, even though the function that uses th
 
 ```js
 {
-    // TDZ starts at beginning of scope
-    const func = () => console.log(letVar); // OK
+  // TDZ starts at beginning of scope
+  const func = () => console.log(letVar); // OK
 
-    // Within the TDZ letVar access throws `ReferenceError`
+  // Within the TDZ letVar access throws `ReferenceError`
 
-    let letVar = 3; // End of TDZ (for letVar)
-    func(); // Called outside TDZ!
+  let letVar = 3; // End of TDZ (for letVar)
+  func(); // Called outside TDZ!
 }
 ```
 
@@ -193,11 +193,11 @@ console.log(typeof undeclaredVariable);
 The following code results in a `ReferenceError` at the line shown:
 
 ```js example-bad
-function test(){
-   var foo = 33;
-   if(foo) {
-      let foo = (foo + 55); // ReferenceError
-   }
+function test() {
+  var foo = 33;
+  if (foo) {
+    let foo = foo + 55; // ReferenceError
+  }
 }
 test();
 ```

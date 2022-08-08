@@ -48,13 +48,13 @@ a value was not {{jsxref("Statements/return", "returned")}}.
 > //  DON'T DO THIS
 >
 > //  logs "foo string"
-> (function() {
+> (() => {
 >   const undefined = 'foo';
 >   console.log(undefined, typeof undefined);
 > })();
 >
 > //  logs "foo string"
-> (function(undefined) {
+> ((undefined) => {
 >   console.log(undefined, typeof undefined);
 > })('foo');
 > ```
@@ -93,7 +93,7 @@ Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:
 ```js
 let x;
 if (typeof x === 'undefined') {
-   // these statements execute
+  // these statements execute
 }
 ```
 
@@ -103,7 +103,7 @@ error if the variable has not been declared.
 ```js
 //  x has not been declared before
 if (typeof x === 'undefined') { //  evaluates to true without errors
-   //  these statements execute
+  //  these statements execute
 }
 
 if (x === undefined) { //  throws a ReferenceError
@@ -153,4 +153,4 @@ if (y === void 0) {
 ## See also
 
 - JavaScript's {{Glossary("Primitive", "primitive types")}}
-- {{jsxref("null")}}
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)

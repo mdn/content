@@ -20,7 +20,7 @@ are typically STUN and/or TURN servers.
 ## Syntax
 
 ```js
-var iceServer = {
+const iceServer = {
   urls: iceServerUrl, /* or an array or URLs: [ url1, ..., urlN ] */
   username: "webrtc", // optional
   credential: "turnpassword" // optional

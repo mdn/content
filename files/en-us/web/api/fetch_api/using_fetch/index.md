@@ -33,8 +33,8 @@ A basic fetch request is really simple to set up. Have a look at the following c
 
 ```js
 fetch('http://example.com/movies.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 ```
 
 Here we are fetching a JSON file across the network and printing it to the console. The simplest use of `fetch()` takes one argument — the path to the resource you want to fetch — and does not directly return the JSON response body but instead returns a promise that resolves with a {{domxref("Response")}} object.
@@ -72,7 +72,7 @@ async function postData(url = '', data = {}) {
 }
 
 postData('https://example.com/answer', { answer: 42 })
-  .then(data => {
+  .then((data) => {
     console.log(data); // JSON data parsed by `data.json()` call
   });
 ```
@@ -130,8 +130,8 @@ fetch('https://example.com/profile', {
   },
   body: JSON.stringify(data),
 })
-.then(response => response.json())
-.then(data => {
+.then((response) => response.json())
+.then((data) => {
   console.log('Success:', data);
 })
 .catch((error) => {
@@ -154,11 +154,11 @@ fetch('https://example.com/profile/avatar', {
   method: 'PUT',
   body: formData
 })
-.then(response => response.json())
-.then(result => {
+.then((response) => response.json())
+.then((result) => {
   console.log('Success:', result);
 })
-.catch(error => {
+.catch((error) => {
   console.error('Error:', error);
 });
 ```
@@ -180,11 +180,11 @@ fetch('https://example.com/posts', {
   method: 'POST',
   body: formData,
 })
-.then(response => response.json())
-.then(result => {
+.then((response) => response.json())
+.then((result) => {
   console.log('Success:', result);
 })
-.catch(error => {
+.catch((error) => {
   console.error('Error:', error);
 });
 ```
@@ -241,16 +241,16 @@ A {{domxref("fetch()")}} promise will reject with a {{jsxref("TypeError")}} when
 
 ```js
 fetch('flowers.jpg')
-  .then(response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error('Network response was not OK');
     }
     return response.blob();
   })
-  .then(myBlob => {
+  .then((myBlob) => {
     myImage.src = URL.createObjectURL(myBlob);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error('There has been a problem with your fetch operation:', error);
   });
 ```
@@ -270,8 +270,8 @@ const myRequest = new Request('flowers.jpg', {
 });
 
 fetch(myRequest)
-  .then(response => response.blob())
-  .then(myBlob => {
+  .then((response) => response.blob())
+  .then((myBlob) => {
     myImage.src = URL.createObjectURL(myBlob);
   });
 ```
@@ -342,17 +342,17 @@ A good use case for headers is checking whether the content type is correct befo
 
 ```js
 fetch(myRequest)
-  .then(response => {
+  .then((response) => {
      const contentType = response.headers.get('content-type');
      if (!contentType || !contentType.includes('application/json')) {
        throw new TypeError("Oops, we haven't got JSON!");
      }
      return response.json();
   })
-  .then(data => {
+  .then((data) => {
       /* process your data further */
   })
-  .catch(error => console.error(error));
+  .catch((error) => console.error(error));
 ```
 
 ### Guard
@@ -384,7 +384,7 @@ They can also be created programmatically via JavaScript, but this is only reall
 ```js
 const myBody = new Blob();
 
-addEventListener('fetch', function(event) {
+addEventListener('fetch', (event) => {
   // ServiceWorker intercepting a fetch
   event.respondWith(
     new Response(myBody, {

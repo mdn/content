@@ -62,7 +62,7 @@ There's a "willful violation" of the above algorithm: if one of the operands is 
 ### Comparison with type conversion
 
 ```js
-"1" ==  1;            // true
+"1" == 1;             // true
 1 == "1";             // true
 0 == false;           // true
 0 == null;            // false

@@ -28,6 +28,6 @@ Control flow means that when you read a script, you must not only read from star
 
 ## See also
 
-- {{Interwiki("wikipedia", "Control flow")}} on Wikipedia
+- [Control flow](https://en.wikipedia.org/wiki/Control_flow) on Wikipedia
 - [JavaScript Reference - Control flow](/en-US/docs/Web/JavaScript/Reference#control_flow) on MDN
 - [Statements (Control flow)](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) on MDN

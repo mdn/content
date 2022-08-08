@@ -226,7 +226,7 @@ Now that we have a `ref` and have let browsers know that we can programmatically
 
 ```js
 deleteToDo(toDoId) {
-    const itemIndex = this.ToDoItems.findIndex(item => item.id === toDoId);
+    const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
     this.ToDoItems.splice(itemIndex, 1);
     this.$refs.listSummary.focus();
 }

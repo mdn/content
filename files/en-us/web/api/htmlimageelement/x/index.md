@@ -94,7 +94,7 @@ The JavaScript code that fetches the image from the table and looks up its
 let logBox = document.querySelector("pre");
 let tbl = document.getElementById("userinfo")
 
-let log = msg => {
+let log = (msg) => {
   logBox.innerHTML += `${msg}<br>`;
 }
 

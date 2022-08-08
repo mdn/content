@@ -34,11 +34,11 @@ new Map(iterable)
 ### Creating a new Map
 
 ```js
-let myMap = new Map([
+const myMap = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
-])
+]);
 ```
 
 ## Specifications

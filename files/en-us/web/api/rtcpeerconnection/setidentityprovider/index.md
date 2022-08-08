@@ -45,7 +45,7 @@ None ({{jsxref("undefined")}}).
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
+const pc = new RTCPeerConnection();
 
 pc.setIdentityAssertion("developer.mozilla.org");
 ```

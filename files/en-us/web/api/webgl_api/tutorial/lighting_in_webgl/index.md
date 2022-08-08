@@ -34,7 +34,7 @@ There are three basic types of lighting:
 
 **Point light** is light that is being emitted from a point, radiating in all directions. This is how many real-world light sources usually work. A light bulb emits light in all directions, for example.
 
-For our purposes, we're going to simplify the lighting model by only considering simple directional and ambient lighting; we won't have any {{interwiki("wikipedia", "specular highlights")}} or point light sources in this scene. Instead, we'll have our ambient lighting plus a single directional light source, aimed at the rotating cube from the [previous demo](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+For our purposes, we're going to simplify the lighting model by only considering simple directional and ambient lighting; we won't have any [specular highlights](https://en.wikipedia.org/wiki/Specular_highlights) or point light sources in this scene. Instead, we'll have our ambient lighting plus a single directional light source, aimed at the rotating cube from the [previous demo](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
 Once you drop out the concept of point sources and specular lighting, there are two pieces of information we'll need in order to implement our directional lighting:
 

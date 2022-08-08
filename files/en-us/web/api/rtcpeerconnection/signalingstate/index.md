@@ -87,8 +87,8 @@ The allowed string values are:
 ## Examples
 
 ```js
-var pc = new RTCPeerConnection(configuration);
-var state = pc.signalingState;
+const pc = new RTCPeerConnection(configuration);
+const state = pc.signalingState;
 ```
 
 ## Specifications

@@ -88,8 +88,7 @@ There are five targets to consider:
           ></code
         >
       </td>
-      <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+      <td><a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} If the event was retargeted for
@@ -112,7 +111,7 @@ There are five targets to consider:
         >
       </td>
       <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} The original target of the event,
@@ -127,7 +126,7 @@ There are five targets to consider:
     <tr>
       <td>event.composedTarget</td>
       <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} The original non-native target of

@@ -71,17 +71,17 @@ function deleteResult() {
   const transaction = db.transaction(['rushAlbumList'], 'readwrite');
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
-      if(cursor.value.albumTitle === 'Grace under pressure') {
+    if (cursor) {
+      if (cursor.value.albumTitle === 'Grace under pressure') {
         const request = cursor.delete();
-        request.onsuccess = function() {
+        request.onsuccess = () => {
           console.log('Deleted that mediocre album from 1984. Even Power windows is better.');
         };
       } else {
         const listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+        listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
         list.appendChild(listItem);
       }
       cursor.continue();

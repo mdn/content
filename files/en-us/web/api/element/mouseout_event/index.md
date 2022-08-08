@@ -32,7 +32,7 @@ onmouseout = (event) => { };
 
 ## Event type
 
-An {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MouseEvent")}}
 
@@ -114,27 +114,27 @@ When you try this out, you'll find that `mouseout` is delivered to the individua
 #### JavaScript
 
 ```js
-let test = document.getElementById("test");
+const test = document.getElementById("test");
 
 // Briefly make the list purple when the mouse moves off the
 // <ul> element
-test.addEventListener("mouseleave", function( event ) {
+test.addEventListener("mouseleave", (event) => {
   // highlight the mouseleave target
   event.target.style.color = "purple";
 
   // reset the color after a short delay
-  setTimeout(function() {
+  setTimeout(() => {
     event.target.style.color = "";
   }, 1000);
 }, false);
 
 // Briefly make an <li> orange when the mouse moves off of it
-test.addEventListener("mouseout", function( event ) {
+test.addEventListener("mouseout", (event) => {
   // highlight the mouseout target
   event.target.style.color = "orange";
 
   // reset the color after a short delay
-  setTimeout(function() {
+  setTimeout(() => {
     event.target.style.color = "";
   }, 500);
 }, false);

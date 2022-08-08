@@ -30,4 +30,4 @@ Note, however, that callbacks are often used to continue code execution after an
 
 ## See also
 
-- {{interwiki("wikipedia", "Callback_(computer_programming)", "Callback")}} on Wikipedia
+- [Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming)) on Wikipedia

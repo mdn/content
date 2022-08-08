@@ -36,7 +36,7 @@ A list of {{domxref("PerformanceEntry")}} objects.
 ## Examples
 
 ```js
-const observer = new PerformanceObserver(function(list, obj) {
+const observer = new PerformanceObserver((list, obj) => {
   const entries = list.getEntries();
   for (let i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events

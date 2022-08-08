@@ -67,11 +67,11 @@ const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
 
 WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 .then(({instance}) => {
-    assertEq("getting initial value from wasm", instance.exports.getGlobal(), 0);
-    global.value = 42;
-    assertEq("getting JS-updated value from wasm", instance.exports.getGlobal(), 42);
-    instance.exports.incGlobal();
-    assertEq("getting wasm-updated value from JS", global.value, 43);
+  assertEq("getting initial value from wasm", instance.exports.getGlobal(), 0);
+  global.value = 42;
+  assertEq("getting JS-updated value from wasm", instance.exports.getGlobal(), 42);
+  instance.exports.incGlobal();
+  assertEq("getting wasm-updated value from JS", global.value, 43);
 });
 ```
 

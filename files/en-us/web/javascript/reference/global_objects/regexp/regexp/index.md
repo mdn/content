@@ -113,7 +113,7 @@ Use a string as the first argument to the `RegExp()` constructor when you want t
 const breakfasts = ['bacon', 'eggs', 'oatmeal', 'toast', 'cereal'];
 const order = 'Let me get some bacon and eggs, please';
 
-order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g')); 
+order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g'));
 // Returns ['bacon', 'eggs']
 ```
 

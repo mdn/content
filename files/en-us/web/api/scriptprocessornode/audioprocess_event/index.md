@@ -44,7 +44,7 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}.
 ## Examples
 
 ```js
-scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
+scriptNode.addEventListener('audioprocess', (audioProcessingEvent) => {
   // The input buffer is a song we loaded earlier
   const inputBuffer = audioProcessingEvent.inputBuffer;
 
@@ -71,7 +71,7 @@ scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
 You could also set up the event handler using the `onaudioprocess` property:
 
 ```js
-scriptNode.onaudioprocess = audioProcessingEvent => {
+scriptNode.onaudioprocess = (audioProcessingEvent) => {
   // ...
 }
 ```

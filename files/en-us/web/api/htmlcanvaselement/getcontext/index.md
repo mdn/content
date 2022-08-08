@@ -14,7 +14,7 @@ browser-compat: api.HTMLCanvasElement.getContext
 
 The
 **`HTMLCanvasElement.getContext()`** method returns a drawing
-context on the canvas, or {{jsxref("null")}} if the context identifier is not
+context on the canvas, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context identifier is not
 supported, or the canvas has already been set to a different context mode.
 
 Later calls to this method on the same canvas element, with the same
@@ -163,8 +163,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get a `2d` context of the canvas with the following code:
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 console.log(ctx); // CanvasRenderingContext2D { /* … */ }
 ```
 

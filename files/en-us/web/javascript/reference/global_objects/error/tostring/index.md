@@ -30,19 +30,16 @@ method inherited by all objects. Its semantics are as follows (assuming
 {{jsxref("Object")}} and {{jsxref("String")}} have their original values):
 
 ```js
-Error.prototype.toString = function() {
-  'use strict';
-
-  const obj = Object(this);
-  if (obj !== this) {
+Error.prototype.toString = function () {
+  if (typeof this !== 'object' || typeof this !== 'function') {
     throw new TypeError();
   }
 
   let name = this.name;
-  name = (name === undefined) ? 'Error' : String(name);
+  name = name === undefined ? 'Error' : String(name);
 
   let msg = this.message;
-  msg = (msg === undefined) ? '' : String(msg);
+  msg = msg === undefined ? '' : String(msg);
 
   if (name === '') {
     return msg;
@@ -51,7 +48,7 @@ Error.prototype.toString = function() {
     return name;
   }
 
-  return name + ': ' + msg;
+  return `${name}: ${msg}`;
 };
 ```
 

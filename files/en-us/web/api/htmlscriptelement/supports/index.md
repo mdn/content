@@ -55,7 +55,7 @@ The code below shows how to check if `HTMLScriptElement.supports()` is defined, 
 ```
 
 ```js
-if (typeof HTMLScriptElement.supports == 'undefined') {
+if (typeof HTMLScriptElement.supports === 'undefined') {
   //Check if method is defined
   console.log("HTMLScriptElement.supports() method is not supported");
 }

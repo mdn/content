@@ -47,7 +47,7 @@ The following additions to the {{domxref('Service Worker API')}} are specified i
 - {{domxref("ServiceWorkerRegistration.periodicSync")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface for registering tasks to run at specific intervals.
 - {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "onperiodicsync")}}
-  - : An event handler fired whenever a {{Event("periodicsync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('PeriodicSyncManager')}}.
+  - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "periodicsync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('PeriodicSyncManager')}}.
 
 ## Examples
 
@@ -75,8 +75,8 @@ async function registerPeriodicNewsCheck() {
 This code checks to see if a Periodic Background Sync task with a given tag is registered.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
-  registration.periodicSync.getTags().then(tags => {
+navigator.serviceWorker.ready.then((registration) => {
+  registration.periodicSync.getTags().then((tags) => {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
   });
@@ -88,7 +88,7 @@ navigator.serviceWorker.ready.then(registration => {
 The following code removes a Periodic Background Sync task to stop articles syncing in the background.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
+navigator.serviceWorker.ready.then((registration) => {
   registration.periodicSync.unregister('get-latest-news');
 });
 ```
@@ -98,8 +98,8 @@ navigator.serviceWorker.ready.then(registration => {
 The following example shows how to respond to a periodic sync event in the service worker.
 
 ```js
-self.addEventListener('periodicsync', event => {
-  if (event.tag == 'get-latest-news') {
+self.addEventListener('periodicsync', (event) => {
+  if (event.tag === 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });

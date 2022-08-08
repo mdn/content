@@ -138,9 +138,9 @@ The {{domxref("document.styleSheets", "styleSheets")}} property on the {{domxref
 ```js
 const ss = document.styleSheets;
 
-for(let i = 0; i < ss.length; i++) {
-  for(let j = 0; j < ss[i].cssRules.length; j++) {
-    dump( `${ss[i].cssRules[j].selectorText}\n` );
+for (let i = 0; i < ss.length; i++) {
+  for (let j = 0; j < ss[i].cssRules.length; j++) {
+    dump(`${ss[i].cssRules[j].selectorText}\n`);
   }
 }
 ```
@@ -273,7 +273,7 @@ function cStyles() {
 
 ## Example 7: Displaying Event Object Properties
 
-This example uses DOM methods to display all the properties of the {{domxref("GlobalEventHandlers.onload")}} {{domxref("event")}} object and their values in a table. It also shows a useful technique of using a for..in loop to iterate over the properties of an object to get their values.
+This example uses DOM methods to display all the properties of the {{domxref("Window.load_event", "onload")}} {{domxref("event")}} object and their values in a table. It also shows a useful technique of using a for..in loop to iterate over the properties of an object to get their values.
 
 The properties of event objects differs greatly between browsers, the [WHATWG DOM Standard](https://dom.spec.whatwg.org) lists the standard properties, however many browsers have extended these greatly.
 
@@ -330,7 +330,7 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-window.onload = function(event){
+window.onload = (event) => {
   showEventProperties(event);
 }
 </script>

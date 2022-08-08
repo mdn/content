@@ -79,8 +79,8 @@ Here are a couple of simple examples:
 ```js
 const context = new AudioContext();
 const buffer = new AudioBuffer(context, {
-  numberOfChannels: 2, 
-  length: 22050, 
+  numberOfChannels: 2,
+  length: 22050,
   sampleRate: 44100
 });
 ```
@@ -96,9 +96,9 @@ If you use this call above, you will get a stereo buffer with two channels that,
 ```js
 const context = new AudioContext();
 const buffer = new AudioBuffer(context, {
-  numberOfChannels: 1, 
-  length: 22050, 
-  sampleRate: 22050
+  numberOfChannels: 1,
+  length: 22050,
+  sampleRate: 22050,
 });
 ```
 

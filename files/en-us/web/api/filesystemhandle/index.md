@@ -100,7 +100,7 @@ The following function compares a single entry with an array of entries, and ret
 ```js
 function removeMatches(fileEntry, entriesArr) {
 
-  let newArr = entriesArr.filter( entry => !fileEntry.isSameEntry(entry) )
+  const newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
 
   return newArr;
 }

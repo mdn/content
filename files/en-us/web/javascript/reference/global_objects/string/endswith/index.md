@@ -48,11 +48,11 @@ method is case-sensitive.
 ### Using endsWith()
 
 ```js
-let str = 'To be, or not to be, that is the question.'
+const str = 'To be, or not to be, that is the question.';
 
-console.log(str.endsWith('question.'))  // true
-console.log(str.endsWith('to be'))      // false
-console.log(str.endsWith('to be', 19))  // true
+console.log(str.endsWith('question.')); // true
+console.log(str.endsWith('to be')); // false
+console.log(str.endsWith('to be', 19)); // true
 ```
 
 ## Specifications

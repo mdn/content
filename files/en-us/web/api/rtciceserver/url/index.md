@@ -29,13 +29,13 @@ property instead.
 ## Syntax
 
 ```js
-var iceServer = {
+const iceServer = {
   // ...
   url: iceServerUrl,
   // ...
 };
 
-var serverUrl = iceServer.url;
+const serverUrl = iceServer.url;
 
 iceServer.url = iceServerUrl;
 ```

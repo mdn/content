@@ -47,7 +47,7 @@ with id "paragraph", and prints each attribute's value.
 
  <head>
   <title>Attributes example</title>
-  <script type="text/javascript">
+  <script>
    function listAttributes() {
      const paragraph = document.getElementById("paragraph");
      const result = document.getElementById("result");
@@ -56,7 +56,7 @@ with id "paragraph", and prints each attribute's value.
      if (paragraph.hasAttributes()) {
        const attrs = paragraph.attributes;
        let output = "";
-       for(let i = attrs.length - 1; i >= 0; i--) {
+       for (let i = attrs.length - 1; i >= 0; i--) {
          output += attrs[i].name + "->" + attrs[i].value;
        }
        result.value = output;

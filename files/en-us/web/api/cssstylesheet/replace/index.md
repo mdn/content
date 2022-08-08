@@ -51,7 +51,7 @@ stylesheet.replace('body { font-size: 1.4em; } p { color: red; }')
   .then(() => {
     console.log(stylesheet.cssRules[0].cssText);
   })
-  .catch(err => {
+  .catch((err) => {
     console.error('Failed to replace styles:', err);
   });
 ```

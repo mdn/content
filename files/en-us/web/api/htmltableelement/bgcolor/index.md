@@ -33,7 +33,7 @@ A string representing a color value.
 
 ```js
 // Set table background color to lightblue
-var t = document.getElementById('TableA');
+const t = document.getElementById('TableA');
 t.bgColor = 'lightblue';
 ```
 

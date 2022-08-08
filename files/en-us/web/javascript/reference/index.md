@@ -210,7 +210,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
-- {{JSxRef("null")}}
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 
 ### Left-hand-side expressions
 

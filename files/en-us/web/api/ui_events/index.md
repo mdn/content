@@ -159,27 +159,27 @@ const contents = document.querySelector('#contents');
 const clear = document.querySelector('#clear');
 let lines = 0;
 
-outer.addEventListener('click', event => {
+outer.addEventListener('click', (event) => {
   log(event);
 });
 
-outer.addEventListener('dblclick', event => {
+outer.addEventListener('dblclick', (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseover', event => {
+outer.addEventListener('mouseover', (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseout', event => {
+outer.addEventListener('mouseout', (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseenter', event => {
+outer.addEventListener('mouseenter', (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseleave', event => {
+outer.addEventListener('mouseleave', (event) => {
   log(event);
 });
 
@@ -245,15 +245,15 @@ const contents = document.querySelector('#contents');
 const clear = document.querySelector('#clear');
 let lines = 0;
 
-story.addEventListener('keydown', event => {
+story.addEventListener('keydown', (event) => {
   log(`${event.type}(${event.key})`);
 });
 
-story.addEventListener('beforeinput', event => {
+story.addEventListener('beforeinput', (event) => {
   log(`${event.type}(${event.data})`);
 });
 
-story.addEventListener('input', event => {
+story.addEventListener('input', (event) => {
   log(`${event.type}(${event.data})`);
 });
 

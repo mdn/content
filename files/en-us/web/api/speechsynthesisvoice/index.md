@@ -39,7 +39,7 @@ const synth = window.speechSynthesis;
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(let i = 0; i < voices.length ; i++) {
+  for (let i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
@@ -58,12 +58,12 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(let i = 0; i < voices.length ; i++) {
+  for (let i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -72,7 +72,7 @@ inputForm.onsubmit = function(event) {
   utterThis.rate = rate.value;
   synth.speak(utterThis);
 
-  utterThis.onpause = function(event) {
+  utterThis.onpause = (event) => {
     const char = event.utterance.text.charAt(event.charIndex);
     console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
   }

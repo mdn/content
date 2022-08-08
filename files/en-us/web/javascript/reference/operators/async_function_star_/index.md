@@ -2,13 +2,13 @@
 title: async function* expression
 slug: Web/JavaScript/Reference/Operators/async_function*
 tags:
-   - Function
-   - Iterator
-   - JavaScript
-   - Language feature
-   - Operator
-   - Primary Expression
-browser-compat: javascript.operators.async_generator_function 
+  - Function
+  - Iterator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Primary Expression
+browser-compat: javascript.operators.async_generator_function
 ---
 {{jsSidebar("Operators")}}
 
@@ -51,7 +51,7 @@ async function* name(param0, param1, /* … ,*/ paramN) {
 
 ## Description
 
-An `async function*` expression is very similar to and has almost the same syntax as a {{jsxref('Statements/async_function*', 'async function* statement', "", 1)}}. The main difference between an `async function*` expression and an `async function*` statement is the _function name_, which can be omitted in `async function*` expressions to create _anonymous_ asynchronous generator functions. See also the chapter about {{jsxref("Functions", "functions")}} for more information.
+An `async function*` expression is very similar to and has almost the same syntax as a {{jsxref('Statements/async_function*', 'async function* statement', "", 1)}}. The main difference between an `async function*` expression and an `async function*` statement is the _function name_, which can be omitted in `async function*` expressions to create _anonymous_ asynchronous generator functions. See also the chapter about {{jsxref("Functions", "functions")}} for more information.
 
 ## Examples
 

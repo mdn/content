@@ -50,13 +50,13 @@ Those objects are anonymous JavaScript objects with the following properties:
 ```js
 const req = navigator.push.unregister(pushEndpoint);
 
-req.onsuccess = function(e) {
+req.onsuccess = (e) => {
   const endpoint = req.result;
-  debug(`Unregistered endpoint: ${endpoint}`);
+  console.log(`Unregistered endpoint: ${endpoint}`);
 }
 
-req.onerror = function(e) {
-  debug(`Error unregistering the endpoint: ${JSON.stringify(e)}`);
+req.onerror = (e) => {
+  console.error(`Error unregistering the endpoint: ${e.error}`);
 }
 ```
 

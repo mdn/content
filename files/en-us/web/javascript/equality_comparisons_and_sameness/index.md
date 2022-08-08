@@ -170,7 +170,7 @@ Here's a non-exhaustive list of built-in methods and operators that might cause 
   - : Consider the following example:
 
       ```js
-      let stoppingForce = obj.mass * -obj.velocity;
+      const stoppingForce = obj.mass * -obj.velocity;
       ```
 
       If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.

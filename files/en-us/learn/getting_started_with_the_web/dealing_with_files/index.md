@@ -64,7 +64,8 @@ To make files talk to one another, you have to provide a file path between them 
 
 3. The line `<img src="" alt="My test image">` is the HTML code that inserts an image into the page. We need to tell the HTML where the image is. The image is inside the _images_ directory, which is in the same directory as `index.html`. To walk down the file structure from `index.html` to our image, the file path we'd need is `images/your-image-filename`. For example, our image is called `firefox-icon.png`, so the file path is `images/firefox-icon.png`.
 4. Insert the file path into your HTML code between the double quote marks of the `src=""` code.
-5. Save your HTML file, then load it in your web browser (double-click the file). You should see your new webpage displaying your image!
+5. Change the contents of the `alt` attribute to a [description of the image](/en-US/docs/Web/HTML/Element/img#authoring_meaningful_alternate_descriptions) you are including. In this case, `alt="Firefox logo: flaming fox wrapping the world"`.
+6. Save your HTML file, then load it in your web browser (double-click the file). You should see your new webpage displaying your image!
 
 ![A screenshot of our basic website showing just the Firefox logo - a flaming fox wrapping the world](website-screenshot.png)
 

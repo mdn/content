@@ -19,7 +19,7 @@ lower precedence.
 Consider an expression describable by the representation below. Note that both
 `OP1` and `OP2` are fill-in-the-blanks for OPerators.
 
-```js
+```
 a OP1 b OP2 c
 ```
 
@@ -65,8 +65,8 @@ precedence.
       <td>
         <pre class="brush: js">
 function echo(name, num) {
-    console.log("Evaluating the " + name + " side");
-    return num;
+  console.log("Evaluating the " + name + " side");
+  return num;
 }
 // Notice the division operator (/)
 console.log(echo("left", 6) / echo("right", 2));
@@ -86,8 +86,8 @@ Evaluating the right side
       <td>
         <pre class="brush: js">
 function echo(name, num) {
-    console.log("Evaluating the " + name + " side");
-    return num;
+  console.log("Evaluating the " + name + " side");
+  return num;
 }
 // Notice the exponentiation operator (**)
 console.log(echo("left", 2) ** echo("right", 3));</pre
@@ -120,8 +120,8 @@ are used.
       <td>
         <pre class="brush: js">
 function echo(name, num) {
-    console.log("Evaluating the " + name + " side");
-    return num;
+  console.log("Evaluating the " + name + " side");
+  return num;
 }
 // Notice the division operator (/)
 console.log(echo("left", 6) / echo("middle", 2) / echo("right", 3));
@@ -142,8 +142,8 @@ Evaluating the right side
       <td>
         <pre class="brush: js">
 function echo(name, num) {
-    console.log("Evaluating the " + name + " side");
-    return num;
+  console.log("Evaluating the " + name + " side");
+  return num;
 }
 // Notice the exponentiation operator (**)
 console.log(echo("left", 2) ** echo("middle", 3) ** echo("right", 2));
@@ -164,8 +164,8 @@ Evaluating the right side
       <td>
         <pre class="brush: js">
 function echo(name, num) {
-    console.log("Evaluating the " + name + " side");
-    return num;
+  console.log("Evaluating the " + name + " side");
+  return num;
 }
 // Notice the parentheses around the left and middle exponentiation
 console.log((echo("left", 2) ** echo("middle", 3)) ** echo("right", 2));</pre
@@ -235,9 +235,10 @@ The following table lists operators in order from highest precedence (18) to low
 Several notes about the table:
 
 1. Not all syntax included here are "operators" in the strict sense. For example, spread `...` and arrow `=>` are typically not regarded as operators. However, we still included them to show how tightly they bind compared to other operators/expressions.
-2. The operand of unary operators (precedence 14) cannot be an exponentiation `**` (precedence 13) without grouping, or there will be a {{jsxref("SyntaxError")}}. That means, although `-1 ** 2` is syntactically unambiguous, the language requires you to use `(-1) ** 2` instead.
-3. Some operators have certain operands that require expressions narrower than those produced by higher-precedence operators. For example, the right-hand side of member access `.` (precedence 17) must be an identifier instead of a grouped expression. The left-hand side of arrow `=>` (precedence 15) must be an arguments list or a single identifier instead of some random expression.
-4. Some operators have certain operands that accept expressions wider than those produced by higher-precedence operators. For example, the bracket-enclosed expression of bracket notation `[ … ]` (precedence 17) can be any expression, even comma (precedence 1) joined ones. These operators act as if that operand is "automatically grouped". In this case we will omit the associativity.
+2. The operand of unary operators (precedence 14; excluding prefix increment/decrement) cannot be an exponentiation `**` (precedence 13) without grouping, or there will be a {{jsxref("SyntaxError")}}. That means, although `-1 ** 2` is technically unambiguous, the language requires you to use `(-1) ** 2` instead.
+3. The operands of nullish coalescing `??` (precedence 3) cannot be a logical OR `||` (precedence 3) or logical AND `&&` (precedence 4). That means you have to write `(a ?? b) || c` or `a ?? (b || c)`, instead of `a ?? b || c`.
+4. Some operators have certain operands that require expressions narrower than those produced by higher-precedence operators. For example, the right-hand side of member access `.` (precedence 17) must be an identifier instead of a grouped expression. The left-hand side of arrow `=>` (precedence 15) must be an arguments list or a single identifier instead of some random expression.
+5. Some operators have certain operands that accept expressions wider than those produced by higher-precedence operators. For example, the bracket-enclosed expression of bracket notation `[ … ]` (precedence 17) can be any expression, even comma (precedence 1) joined ones. These operators act as if that operand is "automatically grouped". In this case we will omit the associativity.
 
 <table class="fullwidth-table">
   <tbody>

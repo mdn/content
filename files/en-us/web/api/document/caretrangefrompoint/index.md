@@ -73,7 +73,7 @@ function insertBreakAtPoint(e) {
     return;
   }
   // Only split TEXT_NODEs
-  if (textNode && textNode.nodeType == 3) {
+  if (textNode?.nodeType === 3) {
     let replacement = textNode.splitText(offset);
     let br = document.createElement('br');
     textNode.parentNode.insertBefore(br, replacement);

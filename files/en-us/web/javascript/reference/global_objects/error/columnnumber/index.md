@@ -17,9 +17,11 @@ The **`columnNumber`** property contains the column number in the line of the fi
 ### Using columnNumber
 
 ```js
-const e = new Error('Could not parse input');
-throw e;
-console.log(e.columnNumber) // 0
+ try {
+  throw new Error('Could not parse input');
+} catch (err) {
+  console.log(err.columnNumber) // 9
+}
 ```
 
 ## Specifications

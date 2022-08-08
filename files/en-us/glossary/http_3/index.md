@@ -13,7 +13,7 @@ The major point of HTTP/3 is that it uses a new {{glossary("UDP")}} protocol nam
 ## See also
 
 - [HTTP on MDN](/en-US/docs/Web/HTTP)
-- {{interwiki("wikipedia", "HTTP/3", "HTTP/3")}} on Wikipedia
+- [HTTP/3](https://en.wikipedia.org/wiki/HTTP/3) on Wikipedia
 - [Glossary](/en-US/docs/Glossary)
 
   - {{glossary("HTTP")}}

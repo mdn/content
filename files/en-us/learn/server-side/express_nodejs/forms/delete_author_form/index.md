@@ -34,7 +34,7 @@ exports.author_delete_get = function(req, res, next) {
             res.redirect('/catalog/authors');
         }
         // Successful, so render.
-        res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
+        res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books });
     });
 
 };
@@ -75,7 +75,7 @@ exports.author_delete_post = function(req, res, next) {
         // Success
         if (results.authors_books.length > 0) {
             // Author has books. Render in same way as for GET route.
-            res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
+            res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books });
             return;
         }
         else {
@@ -102,7 +102,7 @@ If there are still books then we just re-render the form, passing in the author 
 
 Create **/views/author_delete.pug** and copy in the text below.
 
-```plain
+```pug
 extends layout
 
 block content
@@ -149,7 +149,7 @@ Next we will add a **Delete** control to the _Author detail_ view (the detail pa
 
 Open the **author_detail.pug** view and add the following lines at the bottom.
 
-```plain
+```pug
 hr
 p
   a(href=author.url+'/delete') Delete author

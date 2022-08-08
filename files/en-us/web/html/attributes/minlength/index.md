@@ -11,7 +11,7 @@ tags:
   - minlength
   - textarea
 browser-compat:
-  - html.elements.input.attributes.minlength
+  - html.elements.input.minlength
   - html.elements.textarea.minlength
 ---
 

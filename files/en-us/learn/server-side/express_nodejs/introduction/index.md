@@ -352,7 +352,7 @@ const express = require('express');
 const app = express();
 
 // An example middleware function
-let a_middleware_function = function(req, res, next) {
+const a_middleware_function = function(req, res, next) {
   // Perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
 }
@@ -446,31 +446,36 @@ $ npm install mongodb
 
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.
 
+This works with older versions of mongodb version ~ 2.2.33:
+
 ```js
-//this works with older versions of mongodb version ~ 2.2.33
 const MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
+MongoClient.connect('mongodb://localhost:27017/animals', (err, db) => {
   if (err) throw err;
 
-  db.collection('mammals').find().toArray(function (err, result) {
+  db.collection('mammals').find().toArray((err, result) => {
     if (err) throw err;
 
     console.log(result);
   });
 });
+```
 
-//for mongodb version 3.0 and up
+For mongodb version 3.0 and up:
+
+```js
 const MongoClient = require('mongodb').MongoClient;
-MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){
-   if(err) throw err;
 
-   let db = client.db('animals');
-   db.collection('mammals').find().toArray(function(err, result){
-     if(err) throw err;
-     console.log(result);
-     client.close();
-   });
+MongoClient.connect('mongodb://localhost:27017/animals', (err, client) => {
+  if (err) throw err;
+
+  const db = client.db('animals');
+  db.collection('mammals').find().toArray((err, result) => {
+    if (err) throw err;
+    console.log(result);
+    client.close();
+  });
 });
 ```
 
@@ -480,9 +485,9 @@ For more information see [Database integration](https://expressjs.com/en/guide/d
 
 ### Rendering data (views)
 
-Template engines (referred to as "view engines" by _Express_) allow you to specify the _structure_ of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for [a number of template engines](https://github.com/expressjs/express/wiki#template-engines), and there is a useful comparison of the more popular engines here: [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/).
+Template engines (also referred to as "view engines" by _Express_'s documentation) allow you to specify the _structure_ of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for [a number of template engines](https://github.com/expressjs/express/wiki#template-engines), and there is a useful comparison of the more popular engines here: [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/).
 
-In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engines' settings, as shown below (you will also have to install the package containing your template library too!)
+In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engine' settings, as shown below (you will also have to install the package containing your template library too!)
 
 ```js
 const express = require('express');

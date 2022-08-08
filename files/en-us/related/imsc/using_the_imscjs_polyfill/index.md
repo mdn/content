@@ -131,7 +131,7 @@ But the mapping of IMSC subtitles to start and end times of cues is not as strai
 
 But take the following IMSC code:
 
-```js
+```html
 <p>
   <span begin="1s" end="3s">Hello</span> <span begin="2s" end="3s">world!</span>
 </p>
@@ -182,21 +182,20 @@ With two methods we can now generate all necessary states of the IMSC rendering 
 
 ```js
 for (var i = 0; i < timeEvents.length; i++) {
-    var Cue = window.VTTCue || window.TextTrackCue;
-    if (i < timeEvents.length - 1) {
-    } else {
-      var myCue = new Cue(timeEvents[i], myVideo.duration, "");
-    }
-    myCue.onenter = function () {
-      clearSubFromScreen();
-      var myIsd = imsc.generateISD(imscDoc, this.startTime);
-      imsc.renderHTML(myIsd, renderDiv);
-    };
-    myCue.onexit = function () {
-      clearSubFromScreen();
-    };
-    var r = myTrack.addCue(myCue);
+  var Cue = window.VTTCue || window.TextTrackCue;
+  if (i < timeEvents.length - 1) {
+  } else {
+    var myCue = new Cue(timeEvents[i], myVideo.duration, "");
   }
+  myCue.onenter = function () {
+    clearSubFromScreen();
+    var myIsd = imsc.generateISD(imscDoc, this.startTime);
+    imsc.renderHTML(myIsd, renderDiv);
+  };
+  myCue.onexit = function () {
+    clearSubFromScreen();
+  };
+  var r = myTrack.addCue(myCue);
 }
 ```
 

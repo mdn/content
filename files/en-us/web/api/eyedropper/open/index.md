@@ -18,7 +18,7 @@ The **`EyeDropper.open()`** method starts the eyedropper mode, returning a promi
 
 ```js
 open()
-open( options )
+open(options)
 ```
 
 ### Parameters

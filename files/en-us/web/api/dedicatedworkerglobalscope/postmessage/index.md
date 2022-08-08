@@ -52,7 +52,7 @@ The following code snippet shows `worker.js`, in which an `onmessage` handler is
 Inside the handler a calculation is done from which a result message is created; this is then sent back to the main thread using `postMessage(workerResult);`
 
 ```js
-onmessage = function(e) {
+onmessage = (e) => {
   console.log('Message received from main script');
   const workerResult = `Result: ${e.data[0] * e.data[1]}`;
   console.log('Posting message back to main script');

@@ -13,7 +13,7 @@ tags:
 ---
 {{CSSRef}}
 
-When specifying the location of a pixel in a graphics context (just like when specifying coordinate systems in {{interwiki("wikipedia", "algebra")}}), its position is defined relative to a fixed point in the context. This fixed point is called the {{interwiki("wikipedia", "Origin_(mathematics)", "origin")}}. The position is specified as the number of pixels offset from the origin along each dimension of the context.
+When specifying the location of a pixel in a graphics context (just like when specifying coordinate systems in [algebra](https://en.wikipedia.org/wiki/Algebra)), its position is defined relative to a fixed point in the context. This fixed point is called the [origin](https://en.wikipedia.org/wiki/Origin_(mathematics)). The position is specified as the number of pixels offset from the origin along each dimension of the context.
 
 This guide describes the standard coordinate systems used by the CSS object model. These are generally only different in terms of where their origin is located.
 

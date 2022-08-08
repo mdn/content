@@ -217,7 +217,8 @@ For backward compatibility, Manifest V2 extensions can use WebAssembly without t
 ```json
 "content_security_policy": {
   "extension_page": "script-src 'self' 'wasm-unsafe-eval'"
-} 
+}
+```
 
 ### Invalid examples
 

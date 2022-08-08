@@ -48,7 +48,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
 // …

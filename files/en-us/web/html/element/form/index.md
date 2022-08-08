@@ -144,7 +144,8 @@ The following attributes control behavior during form submission.
 
 - {{htmlattrdef("method")}}
 
-  - : The [HTTP](/en-US/docs/Web/HTTP) method to submit the form with. Possible (case insensitive) values:
+  - : The [HTTP](/en-US/docs/Web/HTTP) method to submit the form with.
+    The only allowed methods/values are (case insensitive):
 
     - `post`: The [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data sent as the [request body](/en-US/docs/Web/API/Request/body).
     - `get`: The [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side-effects](/en-US/docs/Glossary/Idempotent).

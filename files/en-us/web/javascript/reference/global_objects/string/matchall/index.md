@@ -90,7 +90,7 @@ for (const match of matches) {
 
 // matches iterator is exhausted after the for..of iteration
 // Call matchAll again to create a new iterator
-Array.from(str.matchAll(regexp), m => m[0]);
+Array.from(str.matchAll(regexp), (m) => m[0]);
 // Array [ "football", "foosball" ]
 ```
 
@@ -111,7 +111,7 @@ str.matchAll(regexp);
 const regexp = new RegExp('[a-c]','g');
 regexp.lastIndex = 1;
 const str = 'abc';
-Array.from(str.matchAll(regexp), m => `${regexp.lastIndex} ${m[0]}`);
+Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 // Array [ "1 b", "1 c" ]
 ```
 
@@ -124,8 +124,8 @@ Capture groups are ignored when using {{jsxref("Global_Objects/String/match",
   "match()")}} with the global `g` flag:
 
 ```js
-let regexp = /t(e)(st(\d?))/g;
-let str = 'test1test2';
+const regexp = /t(e)(st(\d?))/g;
+const str = 'test1test2';
 
 str.match(regexp);
 // Array ['test1', 'test2']
@@ -134,7 +134,7 @@ str.match(regexp);
 Using `matchAll`, you can access capture groups easily:
 
 ```js
-let array = [...str.matchAll(regexp)];
+const array = [...str.matchAll(regexp)];
 
 array[0];
 // ['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', length: 4]

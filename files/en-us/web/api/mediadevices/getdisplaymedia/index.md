@@ -61,7 +61,7 @@ audio track.
 
 - `AbortError` {{domxref("DOMException")}}
   - : Returned if an error or failure does not match any of the other exceptions listed here.
-- `InvalidStateError`  {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if the call to `getDisplayMedia()` was not made from code running due to a
     user action, such as an event handler. Another potential cause for this event: the
     {{domxref("document")}} in whose context `getDisplayMedia()` was called is
@@ -71,7 +71,7 @@ audio track.
     instance is not permitted access to screen sharing.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Returned if no sources of screen video are available for capture.
-- `NotReadableError`  {{domxref("DOMException")}}
+- `NotReadableError` {{domxref("DOMException")}}
   - : Returned if the user selected a screen, window, tab, or other source of screen data, but a
     hardware or operating system level error or lockout occurred, preventing the sharing
     of the selected source.
@@ -113,11 +113,11 @@ configuration and the [display surface](/en-US/docs/Web/API/Screen_Capture_API/U
 
 ```js
 async function startCapture(displayMediaOptions) {
-  let captureStream = null;
+  let captureStream;
 
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
+  } catch (err) {
     console.error(`Error: ${err}`);
   }
   return captureStream;

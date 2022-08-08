@@ -17,7 +17,7 @@ tags:
   - requestMediaKeySystemAccess
 browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
-{{APIRef("Encrypted Media Extensions")}}
+{{DefaultAPISidebar("Encrypted Media Extensions")}}
 
 The **`Navigator.requestMediaKeySystemAccess()`** method
 returns a {{jsxref('Promise')}} which delivers a {{domxref('MediaKeySystemAccess')}}

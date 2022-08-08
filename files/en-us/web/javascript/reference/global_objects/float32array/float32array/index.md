@@ -32,6 +32,16 @@ new Float32Array(buffer, byteOffset);
 new Float32Array(buffer, byteOffset, length);
 ```
 
+## Description
+
+The `Float32Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Float32Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+
+```js example-bad
+const dv = Float32Array([1, 2, 3]);
+// TypeError: calling a builtin Float32Array constructor
+// without new is forbidden
+```
+
 ### Parameters
 
 - `length`
@@ -98,23 +108,6 @@ console.log(float32FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Float32Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Float32Array` constructor as a function without `new`, will throw
-a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Float32Array([1, 2, 3]);
-// TypeError: calling a builtin Float32Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Float32Array([1, 2, 3]);
-```
 
 ## See also
 

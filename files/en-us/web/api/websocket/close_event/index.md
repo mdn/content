@@ -21,9 +21,9 @@ The `close` event is fired when a connection with a `WebSocket` is closed.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('close', event => { })
+addEventListener('close', (event) => { })
 
-onclose = event => { }
+onclose = (event) => { }
 ```
 
 ## Event type
@@ -56,7 +56,7 @@ exampleSocket.addEventListener('close', (event) => {
 You can perform the same actions using the event handler property, like this:
 
 ```js
-exampleSocket.onclose = function (event) {
+exampleSocket.onclose = (event) => {
   console.log('The connection has been closed successfully.');
 };
 ```

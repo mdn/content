@@ -637,7 +637,7 @@ let curY;
 let pressed = false;
 
 // update mouse pointer coordinates
-document.addEventListener('mousemove', e => {
+document.addEventListener('mousemove', (e) => {
   curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
   curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
 });
@@ -735,13 +735,13 @@ Let's look at a simple example of how to create something with a WebGL library. 
 
     const loader = new THREE.TextureLoader();
 
-    loader.load('metal003.png', texture => {
+    loader.load('metal003.png', (texture) => {
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.RepeatWrapping;
       texture.repeat.set(2, 2);
 
       const geometry = new THREE.BoxGeometry(2.4,2.4,2.4);
-      const material = new THREE.MeshLambertMaterial( { map: texture } );
+      const material = new THREE.MeshLambertMaterial({ map: texture });
       cube = new THREE.Mesh(geometry, material);
       scene.add(cube);
 
@@ -763,7 +763,7 @@ Let's look at a simple example of how to create something with a WebGL library. 
     scene.add(light);
 
     const spotLight = new THREE.SpotLight('rgb(255,255,255)');
-    spotLight.position.set( 100, 1000, 1000 );
+    spotLight.position.set(100, 1000, 1000);
     spotLight.castShadow = true;
     scene.add(spotLight);
     ```

@@ -92,10 +92,10 @@ const importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.run());
   })
-  .catch(e => {
+  .catch((e) => {
     console.error(e);
     // Check we have the right tag for the exception
     // If so, use getArg() to inspect it

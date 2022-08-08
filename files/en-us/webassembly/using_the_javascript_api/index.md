@@ -29,7 +29,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 2. Next, let's create a simple HTML file called `index.html` in the same directory as your wasm file (can use our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) if you haven't got one easily available).
 3. Now, to help us understand what is going on here, let's look at the text representation of our wasm module (which we also meet in [Converting WebAssembly format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm#a_first_look_at_the_text_format)):
 
-    ```js
+    ```wasm
     (module
       (func $i (import "imports" "imported_func") (param i32))
       (func (export "exported_func")
@@ -41,7 +41,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 
     ```js
     const importObject = {
-      imports: { imported_func: arg => console.log(arg) }
+      imports: { imported_func: (arg) => console.log(arg) }
     };
     ```
 
@@ -55,7 +55,7 @@ Add the following to your script, below the first block:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+.then((obj) => obj.instance.exports.exported_func());
 ```
 
 The net result of this is that we call our exported WebAssembly function `exported_func`, which in turn calls our imported JavaScript function `imported_func`, which logs the value provided inside the WebAssembly instance (42) to the console. If you save your example code now and load it a browser that supports WebAssembly, you'll see this in action!
@@ -71,11 +71,11 @@ These methods don't directly access the byte code, so require an extra step to t
 The equivalent code would look like this:
 
 ```js
-fetch('simple.wasm').then(response =>
+fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
-).then(bytes =>
+).then((bytes) =>
   WebAssembly.instantiate(bytes, importObject)
-).then(results => {
+).then((results) => {
   results.instance.exports.exported_func();
 });
 ```
@@ -84,7 +84,7 @@ fetch('simple.wasm').then(response =>
 
 In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose the text representation of any wasm code included in a web page. To view it, you can go to the Debugger Panel and click on the "wasm://" entry.
 
-![](wasm-debug.png)
+![Developer tools debugger panel highlighting a module.](wasm-debug.png)
 
 In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format. See [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) for a video preview.
 
@@ -147,7 +147,7 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 
     ```js
     WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-    .then(results => {
+    .then((results) => {
       // add code here
     });
     ```

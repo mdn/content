@@ -22,12 +22,11 @@ The following custom utility function can be used to evaluate XPath expressions 
 // thanks wanderingstan at morethanwarm dot mail dot com for the
 // initial work.
 function evaluateXPath(aNode, aExpr) {
-  var xpe = new XPathEvaluator();
-  var nsResolver = xpe.createNSResolver(aNode.ownerDocument == null ?
-    aNode.documentElement : aNode.ownerDocument.documentElement);
-  var result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
-  var found = [];
-  var res;
+  const xpe = new XPathEvaluator();
+  const nsResolver = xpe.createNSResolver(aNode.ownerDocument === null ? aNode.documentElement : aNode.ownerDocument.documentElement);
+  const result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
+  const found = [];
+  let res;
   while (res = result.iterateNext())
     found.push(res);
   return found;
@@ -38,13 +37,13 @@ This function uses the **`new XPathEvaluator()`** constructor, which is supporte
 
 ```js
   // XPathEvaluator is implemented on objects that implement Document
-  var xpe = aNode.ownerDocument || aNode;
+  const xpe = aNode.ownerDocument || aNode;
 ```
 
 In that case the creation of the [XPathNSResolver](/en-US/docs/Web/API/Document/createNSResolver) can be simplified as:
 
 ```js
-  var nsResolver = xpe.createNSResolver(xpe.documentElement);
+  const nsResolver = xpe.createNSResolver(xpe.documentElement);
 ```
 
 Note however that `createNSResolver` should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see [document.createNSResolver](/en-US/docs/Web/API/Document/createNSResolver) for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.
@@ -79,9 +78,9 @@ You can now "query" the document with XPath expressions. Although walking the DO
 
 ```js
 // display the last names of all people in the doc
-var results = evaluateXPath(people, "//person/@last-name");
-for (var i in results)
-  alert("Person #" + i + " has the last name " + results[i].value);
+let results = evaluateXPath(people, "//person/@last-name");
+for (const i in results)
+  console.log("Person #" + i + " has the last name " + results[i].value);
 
 // get the 2nd person node
 results = evaluateXPath(people, "/people/person[2]");
@@ -91,7 +90,7 @@ results = evaluateXPath(people, "//person[address/@city='denver']");
 
 // get all the addresses that have "south" in the street name
 results = evaluateXPath(people,  "//address[contains(@street, 'south')]");
-alert(results.length);
+console.log(results.length);
 ```
 
 ### docEvaluateArray
@@ -102,20 +101,21 @@ The following is a simple utility function to get (ordered) XPath results into a
 
 ```js
 // Example usage:
-// var els = docEvaluateArray('//a');
-// alert(els[0].nodeName); // gives 'A' in HTML document with at least one link
+// const els = docEvaluateArray('//a');
+// console.log(els[0].nodeName); // gives 'A' in HTML document with at least one link
 
 function docEvaluateArray (expr, doc, context, resolver) {
-    var i, result, a = [];
-    doc = doc || (context ? context.ownerDocument : document);
-    resolver = resolver || null;
-    context = context || doc;
+  let i;
+  const a = [];
+  doc = doc || (context ? context.ownerDocument : document);
+  resolver = resolver || null;
+  context = context || doc;
 
-    result = doc.evaluate(expr, context, resolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
-    for(i = 0; i < result.snapshotLength; i++) {
-        a[i] = result.snapshotItem(i);
-    }
-    return a;
+  const result = doc.evaluate(expr, context, resolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+  for (let i = 0; i < result.snapshotLength; i++) {
+    a.push(result.snapshotItem(i));
+  }
+  return a;
 }
 ```
 
@@ -127,24 +127,24 @@ The following function allows one to pass an element and an XML document to find
 
 ```js
 function getXPathForElement(el, xml) {
-  var xpath = '';
-  var pos, tempitem2;
+  let xpath = '';
+  let pos, tempitem2;
 
-  while(el !== xml.documentElement) {
+  while (el !== xml.documentElement) {
     pos = 0;
     tempitem2 = el;
-    while(tempitem2) {
+    while (tempitem2) {
       if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) { // If it is ELEMENT_NODE of the same name
         pos += 1;
       }
       tempitem2 = tempitem2.previousSibling;
     }
 
-    xpath = "*[name()='"+el.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']["+pos+']'+'/'+xpath;
+    xpath = `*[name()='${el.nodeName}' and namespace-uri()='${el.namespaceURI ?? ''}'][${pos}]/${xpath}`;
 
     el = el.parentNode;
   }
-  xpath = '/*'+"[name()='"+xml.documentElement.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']"+'/'+xpath;
+  xpath = `/*[name()='${xml.documentElement.nodeName}' and namespace-uri()='${el.namespaceURI ?? ''}']/${xpath}`;
   xpath = xpath.replace(/\/$/, '');
   return xpath;
 }

@@ -55,7 +55,7 @@ isNaN('hello world');        // true
 Number.isNaN('hello world'); // false
 ```
 
-For the same reason, using a `bigint` value will throw an error with `isNaN()` and not with `Number.isNaN():
+For the same reason, using a `bigint` value will throw an error with `isNaN()` and not with `Number.isNaN()`:
 
 ```js
 isNaN(1n);        // TypeError: Conversion from 'BigInt' to 'number' is not allowed.
@@ -65,10 +65,10 @@ Number.isNaN(1n); // false
 Additionally, some array methods cannot find `NaN`, while others can.
 
 ```js
-let arr = [2, 4, NaN, 12];
+const arr = [2, 4, NaN, 12];
 arr.indexOf(NaN);                      // -1 (false)
 arr.includes(NaN);                     // true
-arr.findIndex(n => Number.isNaN(n));   // 2
+arr.findIndex((n) => Number.isNaN(n));   // 2
 ```
 
 ## Specifications

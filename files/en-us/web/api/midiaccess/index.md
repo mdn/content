@@ -43,7 +43,7 @@ navigator.requestMIDIAccess()
      const inputs = access.inputs.values();
      const outputs = access.outputs.values();
 
-     access.onstatechange = event => {
+     access.onstatechange = (event) => {
 
        // Print information about the (dis)connected MIDI controller
        console.log(event.port.name, event.port.manufacturer, event.port.state);

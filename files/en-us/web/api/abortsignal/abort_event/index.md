@@ -17,9 +17,9 @@ The **`abort`** event of the {{domxref("AbortSignal")}} is fired when the associ
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('abort', event => { })
+addEventListener('abort', (event) => { })
 
-onabort = event => { }
+onabort = (event) => { }
 ```
 
 ## Event type
@@ -33,19 +33,23 @@ In the following snippets, we create a new `AbortController` object, and get its
 You can detect the `abort` event using an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+const controller = new AbortController();
+const signal = controller.signal;
 
-signal.addEventListener('abort', () => { console.log('Request aborted'); });
+signal.addEventListener('abort', () => {
+  console.log('Request aborted');
+});
 ```
 
 Or use the `onabort` event handler property:
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+const controller = new AbortController();
+const signal = controller.signal;
 
-signal.onabort = () => { console.log('Request aborted'); };
+signal.onabort = () => {
+  console.log('Request aborted');
+};
 ```
 
 ## Specifications

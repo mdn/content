@@ -20,9 +20,9 @@ An `end` event is fired at an {{DOMxRef("XRSession")}} object when the WebXR ses
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('end', event => { })
+addEventListener('end', (event) => { })
 
-onend = event => { }
+onend = (event) => { }
 ```
 
 ## Event type

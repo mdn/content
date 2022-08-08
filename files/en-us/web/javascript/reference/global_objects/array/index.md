@@ -146,12 +146,12 @@ console.log(fruits.length);
 // 2
 
 // 'fruits' array created using the Array() constructor.
-const fruits = new Array('Apple', 'Banana');
+const fruits2 = new Array('Apple', 'Banana');
 console.log(fruits.length);
 // 2
 
 // 'fruits' array created using String.prototype.split().
-const fruits = 'Apple, Banana'.split(', ');
+const fruits3 = 'Apple, Banana'.split(', ');
 console.log(fruits.length);
 // 2
 ```
@@ -191,7 +191,7 @@ fruits[99]; // undefined
 
 ### Find the index of an item in an array
 
-This example uses the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to find the position (index) of the string "`Banana`" in the `fruits` array.
+This example uses the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to find the position (index) of the string `"Banana"` in the `fruits` array.
 
 ```js
 const fruits = ['Apple', 'Banana'];
@@ -201,7 +201,7 @@ console.log(fruits.indexOf('Banana'));
 
 ### Check if an array contains a certain item
 
-This example shows two ways to check if the `fruits` array contains "`Banana`" and "`Cherry`": first with the [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method, and then with the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to test for an index value that's not `-1`.
+This example shows two ways to check if the `fruits` array contains `"Banana"` and `"Cherry"`: first with the [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method, and then with the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to test for an index value that's not `-1`.
 
 ```js
 const fruits = ['Apple', 'Banana'];
@@ -315,7 +315,7 @@ console.log(newLength);
 
 ### Remove a single item by index
 
-This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the string "`Banana`" from the `fruits` array — by specifying the index position of "`Banana`".
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the string `"Banana"` from the `fruits` array — by specifying the index position of `"Banana"`.
 
 ```js
 const fruits = ['Strawberry', 'Banana', 'Mango'];
@@ -330,7 +330,7 @@ console.log(removedItems);
 
 ### Remove multiple items by index
 
-This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the strings "`Banana`" and "`Strawberry`" from the `fruits` array — by specifying the index position of "`Banana`", along with a count of the number of total items to remove.
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the strings `"Banana"` and `"Strawberry"` from the `fruits` array — by specifying the index position of `"Banana"`, along with a count of the number of total items to remove.
 
 ```js
 const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango'];
@@ -380,7 +380,7 @@ This example uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_
 
 ```js
 const fruits = ['Apple', 'Mango', 'Cherry'];
-fruits.forEach(function(item, index, array) {
+fruits.forEach((item, index, array) => {
   console.log(item, index);
 });
 // Apple 0
@@ -420,11 +420,11 @@ const fruitsCopy = [...fruits];
 // ["Strawberry", "Mango"]
 
 // Create a copy using the from() method.
-const fruitsCopy = Array.from(fruits);
+const fruitsCopy2 = Array.from(fruits);
 // ["Strawberry", "Mango"]
 
 // Create a copy using the slice() method.
-const fruitsCopy = fruits.slice();
+const fruitsCopy3 = fruits.slice();
 // ["Strawberry", "Mango"]
 ```
 
@@ -463,7 +463,7 @@ const inventory = [
   { name: 'bananas',  type: 'fruit' },
   { name: 'goat', type: 'meat' },
   { name: 'cherries', type: 'fruit' },
-  { name: 'fish', type: 'meat' }
+  { name: 'fish', type: 'meat' },
 ];
 ```
 
@@ -474,8 +474,8 @@ The result is an object that has properties named after the unique strings retur
 Each property is assigned an array containing the elements in the group.
 
 ```js
-let result = inventory.group( ({ type }) => type );
-console.log(result.vegetables)
+const result = inventory.group(({ type }) => type);
+console.log(result.vegetables);
 // expected output: Array [Object { name: "asparagus", type: "vegetables" }]
 ```
 
@@ -502,7 +502,7 @@ const board = [
   ['p','p','p','p','p','p','p','p'],
   ['r','n','b','q','k','b','n','r'] ];
 
-console.log(board.join('\n') + '\n\n');
+console.log(`${board.join('\n')}\n\n`);
 
 // Move King's Pawn forward 2
 board[4][4] = board[6][4];
@@ -567,7 +567,7 @@ Results in
 
 Array elements are object properties in the same way that `toString` is a property (to be specific, however, `toString()` is a method). Nevertheless, trying to access an element of an array as follows throws a syntax error because the property name is not valid:
 
-```js
+```js example-bad
 console.log(arr.0); // a syntax error
 ```
 

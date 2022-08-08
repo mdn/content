@@ -100,14 +100,14 @@ function pointermove_handler(ev) {
 
  // Find this event in the cache and update its record with this event
  for (let i = 0; i < evCache.length; i++) {
-   if (ev.pointerId == evCache[i].pointerId) {
-      evCache[i] = ev;
-   break;
+   if (ev.pointerId === evCache[i].pointerId) {
+     evCache[i] = ev;
+     break;
    }
  }
 
  // If two pointers are down, check for pinch gestures
- if (evCache.length == 2) {
+ if (evCache.length === 2) {
    // Calculate the distance between the two pointers
    const curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
 
@@ -183,7 +183,7 @@ This function helps manage the global event caches `evCache`.
 function remove_event(ev) {
  // Remove this event from the target's cache
  for (let i = 0; i < evCache.length; i++) {
-   if (evCache[i].pointerId == ev.pointerId) {
+   if (evCache[i].pointerId === ev.pointerId) {
      evCache.splice(i, 1);
      break;
    }
@@ -201,7 +201,7 @@ let logEvents = false;
 
 // Logging/debugging functions
 function enableLog(ev) {
-  logEvents = logEvents ? false : true;
+  logEvents = !logEvents;
 }
 
 function log(prefix, ev) {

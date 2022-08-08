@@ -251,4 +251,4 @@ The SVG is then imported from a file named `resources.svg`, using the clip path 
 ## See also
 
 - [SVG](/en-US/docs/Web/SVG)
-- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content/_04.html) (blog post)
+- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)

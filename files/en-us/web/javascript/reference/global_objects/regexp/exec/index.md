@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.RegExp.exec
 
 The **`exec()`** method executes a
 search for a match in a specified string. Returns a result array, or
-{{jsxref("null")}}.
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 JavaScript {{jsxref("RegExp")}} objects are **stateful** when they have
 the {{jsxref("RegExp.global", "global")}} or {{jsxref("RegExp.sticky", "sticky")}} flags
@@ -55,7 +55,7 @@ set, `indices`; see below) and updates the
 The returned array has the matched text as the first item, and then one item for each
 parenthetical capture group of the matched text.
 
-If the match fails, the `exec()` method returns {{jsxref("null")}}, and sets
+If the match fails, the `exec()` method returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), and sets
 {{jsxref("RegExp.lastIndex", "lastIndex")}} to `0`.
 
 ## Description
@@ -66,8 +66,8 @@ Consider the following example:
 // Match "quick brown" followed by "jumps", ignoring characters in between
 // Remember "brown" and "jumps"
 // Ignore case
-let re = /quick\s(brown).+?(jumps)/igd;
-let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
+const re = /quick\s(brown).+?(jumps)/igd;
+const result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 ```
 
 The following table shows the state of `result` after running this script:
@@ -214,7 +214,7 @@ The following table shows the state of `re` after running this script:
 
 ### Finding successive matches
 
-If your regular expression uses the ["`g`"](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) flag, you can use the
+If your regular expression uses the [`g`](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) flag, you can use the
 `exec()` method multiple times to find successive matches in the same string.
 When you do so, the search starts at the substring of `str`
 specified by the regular expression's {{jsxref("RegExp.lastIndex", "lastIndex")}}
@@ -227,12 +227,12 @@ different string, it will start its search at its existing {{jsxref("RegExp.last
 For example, assume you have this script:
 
 ```js
-let myRe = /ab*/g;
-let str = 'abbcdefabh';
+const myRe = /ab*/g;
+const str = 'abbcdefabh';
 let myArray;
 while ((myArray = myRe.exec(str)) !== null) {
-  let msg = 'Found ' + myArray[0] + '. ';
-  msg += 'Next match starts at ' + myRe.lastIndex;
+  let msg = `Found ${myArray[0]}. `;
+  msg += `Next match starts at ${myRe.lastIndex}`;
   console.log(msg);
 }
 ```
@@ -251,7 +251,7 @@ Found ab. Next match starts at 9
 > It will create an infinite loop if there is a match, due to the
 > {{jsxref("RegExp.lastIndex", "lastIndex")}} property being reset upon each iteration.
 >
-> Also, be sure that the global flag (["`g`"](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)) is set, or it will also cause
+> Also, be sure that the [global (`g`) flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) is set, or it will also cause
 > an infinite loop.
 >
 > In addition, when matching zero-length characters (e.g. `/^/gm`),
@@ -264,7 +264,7 @@ You can also use `exec()` without creating a {{jsxref("RegExp")}} object
 explicitly:
 
 ```js
-let matches = /(hello \S+)/.exec('This is a hello world!');
+const matches = /(hello \S+)/.exec('This is a hello world!');
 console.log(matches[1]);
 ```
 

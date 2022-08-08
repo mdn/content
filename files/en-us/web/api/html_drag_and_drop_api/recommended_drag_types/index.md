@@ -190,7 +190,7 @@ dataProvider.prototype = {
     throw Components.results.NS_NOINTERFACE;
   },
   getFlavorData(aTransferable, aFlavor, aData, aDataLen) {
-    if (aFlavor == 'application/x-moz-file-promise') {
+    if (aFlavor === 'application/x-moz-file-promise') {
 
        const urlPrimitive = {};
        const dataSize = {};

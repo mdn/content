@@ -41,7 +41,7 @@ stencilFunc(func, ref, mask)
     - `gl.GREATER`: Pass if
       `(ref & mask) > (stencil & mask)`.
     - `gl.NOTEQUAL`: Pass if
-      `(ref & mask) != (stencil & mask)`.
+      `(ref & mask) !== (stencil & mask)`.
     - `gl.GEQUAL`: Pass if
       `(ref & mask) >= (stencil & mask)`.
     - `gl.ALWAYS`: Always pass.

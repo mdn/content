@@ -15,7 +15,7 @@ Why a re-introduction? Because [JavaScript](/en-US/docs/Glossary/JavaScript) is 
 
 It's useful to start with an overview of the language's history. JavaScript was created in 1995 by Brendan Eich while he was an engineer at Netscape. JavaScript was first released with Netscape 2 early in 1996. It was originally going to be called LiveScript, but it was renamed in an ill-fated marketing decision that attempted to capitalize on the popularity of Sun Microsystem's Java language — despite the two having very little in common. This has been a source of confusion ever since.
 
-Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to [Ecma International](https://www.ecma-international.org/), a European standards organization, which resulted in the first edition of the [ECMAScript](/en-US/docs/Glossary/ECMAScript) standard that year. The standard received a significant update as ECMAScript edition 3 in 1999. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December 2009, and for the 6th major edition of the standard, published in June 2015. Since then a yearly edition has been published. For example, the [12th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) was published in June 2021.
+Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to [Ecma International](https://www.ecma-international.org/), a European standards organization, which resulted in the first edition of the [ECMAScript](/en-US/docs/Glossary/ECMAScript) standard that year. The standard received a significant update as ECMAScript edition 3 in 1999. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December 2009, and for the 6th major edition of the standard, published in June 2015. Since then a yearly edition has been published. For example, the [13th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) was published in June 2022.
 
 > **Note:** Because it is more familiar, we will refer to ECMAScript as "JavaScript" from this point on.
 
@@ -188,7 +188,7 @@ There's our first brush with JavaScript objects! Did we mention that you can use
 
 ## Other types
 
-JavaScript distinguishes between {{jsxref("null")}}, which is a value that indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which is a value of type `undefined` that indicates an uninitialized variable — that is, a value hasn't even been assigned yet. We'll talk about variables later, but in JavaScript it is possible to declare a variable without assigning a value to it. If you do this, the variable's type is `undefined`. `undefined` is actually a constant.
+JavaScript distinguishes between [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), which is a value that indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which is a value of type `undefined` that indicates an uninitialized variable — that is, a value hasn't even been assigned yet. We'll talk about variables later, but in JavaScript it is possible to declare a variable without assigning a value to it. If you do this, the variable's type is `undefined`. `undefined` is actually a constant.
 
 JavaScript has a boolean type, with possible values `true` and `false` (both of which are keywords.) Any value can be converted to a boolean according to the following rules:
 
@@ -756,7 +756,7 @@ Note that JavaScript functions are themselves objects — like everything else i
 ## Custom objects
 
 > **Note:** The content in this section does not cover modern JavaScript features, including support for [Classes](/en-US/docs/Web/JavaScript/Reference/Classes).
-> For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+> For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 In classic object-oriented programming, objects are collections of data and methods that operate on that data.
 JavaScript uses functions as classes.

@@ -43,34 +43,9 @@ The {{DOMxRef("MediaStream")}} with the given id.
 ## Example
 
 ```js
-var stream = pc.getStreamById(myTrackId);
+const stream = pc.getStreamById(myTrackId);
 if (stream) {
   console.log(`Found stream: ${stream.id}`);
-}
-```
-
-## Polyfill
-
-Running the following code before any other code will create
-`RTCPeerConnection.prototype.getStreamById()` if it's not natively available.
-
-```js
-// from: https://bugs.chromium.org/p/chromium/issues/detail?id=698163&desc=5#c10
-RTCPeerConnection.prototype.getStreamById = function(id) {
-  try {
-    var localStreams = this.getLocalStreams();
-    var remoteStreams = this.getRemoteStreams();
-    var i;
-    for (i = 0; i < localStreams.length; i++) {
-     if (localStreams[i].id == id)
-       return localStreams[i];
-    }
-    for (i = 0; i < remoteStreams.length; i++) {
-     if (remoteStreams[i].id == id)
-       return remoteStreams[i];
-    }
-  } catch(e) {}
-  return null;
 }
 ```
 

@@ -58,9 +58,9 @@ apply to both {{jsxref("Statements/let", "let")}} and `const`.
 
 A constant cannot share its name with a function or a variable in the same scope.
 
-Unlike `var`, `const` begins _Declarations_, not _Statements_. That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+Unlike `var`, `const` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
-```js
+```js example-bad
 if (true) const a = 1; // SyntaxError: Unexpected token 'const'
 ```
 
@@ -115,7 +115,7 @@ console.log('my favorite number is ' + MY_FAV);
 
 ### const needs to be initialized
 
-```js
+```js example-bad
 // throws an error
 // Uncaught SyntaxError: Missing initializer in const declaration
 

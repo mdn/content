@@ -62,10 +62,10 @@ new Option(text, value, defaultSelected, selected)
 </select>
 */
 
-var s = document.getElementById('s');
-var options = [Four, Five, Six];
+const s = document.getElementById('s');
+const options = [Four, Five, Six];
 
-options.forEach(function(element,key) {
+options.forEach((element,key) => {
     s[key] = new Option(element,key);
 });
 ```
@@ -81,17 +81,17 @@ options.forEach(function(element,key) {
 </select>
 */
 
-var s = document.getElementById('s');
-var options = [ 'zero', 'one', 'two' ];
+const s = document.getElementById('s');
+const options = [ 'zero', 'one', 'two' ];
 
-options.forEach(function(element, key) {
-  if (element == 'zero') {
+options.forEach((element, key) => {
+  if (element === 'zero') {
     s[key] = new Option(element, s.options.length, false, false);
   }
-  if (element == 'one') {
+  if (element === 'one') {
     s[key] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
   }
-  if (element == 'two') {
+  if (element === 'two') {
     s[key] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
   }
 });

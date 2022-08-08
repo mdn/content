@@ -57,7 +57,7 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```
@@ -80,7 +80,7 @@ function displayReports(reports) {
   const list = document.createElement('ul');
   outputElem.appendChild(list);
 
-  for(let i = 0; i < reports.length; i++) {
+  for (let i = 0; i < reports.length; i++) {
     let listItem = document.createElement('li');
     let textNode = document.createTextNode(`Report ${i + 1}, type: ${reports[i].type}`);
     listItem.appendChild(textNode);

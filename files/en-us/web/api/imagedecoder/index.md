@@ -69,7 +69,7 @@ function renderImage(result) {
   // data has been received. This may cause us to receive a RangeError
   // during the decode() call below which needs to be handled.
   if (imageDecoder.complete) {
-    if (track.frameCount == 1)
+    if (track.frameCount === 1)
       return;
 
     if (imageIndex + 1 >= track.frameCount)
@@ -79,12 +79,12 @@ function renderImage(result) {
   // Decode the next frame ahead of display so it's ready in time.
   imageDecoder.decode({frameIndex: ++imageIndex})
       .then(
-          nextResult => setTimeout(
-              _ => {
+          (nextResult) => setTimeout(
+              () => {
                 renderImage(nextResult);
               },
               result.image.duration / 1000.0))
-      .catch(e => {
+      .catch((e) => {
         // We can end up requesting an imageIndex past the end since
         // we're using a ReadableStream from fetch(), when this happens
         // just wrap around.
@@ -104,7 +104,7 @@ function decodeImage(imageByteStream) {
   imageDecoder.decode({frameIndex: imageIndex}).then(renderImage);
 }
 
-fetch('fancy.gif').then(response => decodeImage(response.body));
+fetch('fancy.gif').then((response) => decodeImage(response.body));
 ```
 
 ## Specifications

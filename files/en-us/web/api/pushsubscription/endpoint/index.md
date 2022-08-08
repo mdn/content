@@ -32,8 +32,8 @@ A string.
 ## Examples
 
 ```js
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.subscribe({userVisibleOnly: true}).then(function(subscription) {
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.subscribe({userVisibleOnly: true}).then((subscription) => {
     console.log(subscription.endpoint);
 
       // At this point you would most likely send the subscription

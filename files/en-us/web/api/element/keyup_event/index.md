@@ -19,7 +19,7 @@ The [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and `keyup` events pr
 Since Firefox 65, the `keyup` and [`keydown`](/en-US/docs/Web/API/Element/keydown_event) events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}. To ignore all `keyup` events that are part of composition, do something like this (229 is a special value set for a `keyCode` relating to an event that has been processed by an IME):
 
 ```js
-eventTarget.addEventListener("keyup", event => {
+eventTarget.addEventListener("keyup", (event) => {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }

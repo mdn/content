@@ -51,7 +51,7 @@ Another usecase is to control the {{cssxref("position")}} of the element. Either
 ```css
 div {
   position: absolute;
-  top: calc( 100px * sign( var( --value ) ) );
+  top: calc(100px * sign(var(--value)));
 }
 ```
 

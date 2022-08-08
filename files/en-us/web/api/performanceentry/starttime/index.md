@@ -86,7 +86,7 @@ function check_PerformanceEntry(obj) {
   }
   for (let i=0; i < methods.length; i++) {
     // check each method
-    const supported = typeof obj[methods[i]] == "function";
+    const supported = typeof obj[methods[i]] === "function";
     if (supported) {
       const js = obj[methods[i]]();
       console.log(`…${methods[i]}() = ${JSON.stringify(js)}`);

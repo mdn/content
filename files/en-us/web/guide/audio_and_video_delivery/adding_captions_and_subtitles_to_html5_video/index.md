@@ -180,7 +180,7 @@ var createMenuItem = function(id, lang, label) {
       var lang = this.getAttribute('lang');
       for (var i = 0; i < video.textTracks.length; i++) {
          // For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
-         if (video.textTracks[i].language == lang) {
+         if (video.textTracks[i].language === lang) {
             video.textTracks[i].mode = 'showing';
             this.setAttribute('data-state', 'active');
          }
@@ -204,7 +204,8 @@ Initially the menu is hidden by default, so an event listener needs to be added 
 ```js
 subtitles.addEventListener('click', function(e) {
    if (subtitlesMenu) {
-      subtitlesMenu.style.display = (subtitlesMenu.style.display == 'block' ? 'none' : 'block');
+      subtitlesMenu.style.display =
+        subtitlesMenu.style.display === 'block' ? 'none' : 'block';
    }
 });
 ```

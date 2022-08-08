@@ -30,8 +30,7 @@ If the foreign content comes from an image obtained from either as {{domxref("HT
 Calling any of the following on a tainted canvas will result in an error:
 
 - Calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} on the canvas's context
-- Calling {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}} on the {{HTMLElement("canvas")}} element itself
-- Calling {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} on the canvas
+- Calling {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}}, {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} or {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}} on the {{HTMLElement("canvas")}} element itself
 
 Attempting any of these when the canvas is tainted will cause a `SecurityError` to be thrown. This protects users from having private data exposed by using images to pull information from remote web sites without permission.
 
@@ -101,7 +100,7 @@ function imageReceived() {
   try {
     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
   }
-  catch(err) {
+  catch (err) {
     console.log("Error: " + err);
   }
 }

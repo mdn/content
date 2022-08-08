@@ -192,7 +192,7 @@ var SomeModelSchema = new Schema({
 });
 
 // Compile model from schema
-var SomeModel = mongoose.model('SomeModel', SomeModelSchema );
+var SomeModel = mongoose.model('SomeModel', SomeModelSchema);
 ```
 
 The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the above model _SomeModel_ above), and the second argument is the schema you want to use in creating the model.
@@ -493,7 +493,7 @@ var SomeModelSchema = new Schema({
 });
 
 //Export function to create "SomeModel" model class
-module.exports = mongoose.model('SomeModel', SomeModelSchema );
+module.exports = mongoose.model('SomeModel', SomeModelSchema);
 ```
 
 You can then require and use the model immediately in other files. Below we show how you might use it to get all instances of the model.
@@ -781,7 +781,7 @@ In order to test the models (and to create some example books and other items th
 
     > **Note:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
 
-2. Enter the following commands in the project root to install the *async* module that is required by the script (we'll discuss this in later tutorials, )
+2. Enter the following commands in the project root to install the *async* module that is required by the script (we'll discuss this in later tutorials).
 
     ```bash
     npm install async

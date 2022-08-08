@@ -32,7 +32,7 @@ event.waitUntil(clients.matchAll({
   }).then(function(clientList) {
     for (let i = 0; i < clientList.length; i++) {
       let client = clientList[i];
-      if (client.url == '/' && 'focus' in client) {
+      if (client.url === '/' && 'focus' in client) {
         if (client.visibilityState === 'hidden') return client.focus();
       }
     }

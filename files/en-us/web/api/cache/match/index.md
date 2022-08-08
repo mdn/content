@@ -80,17 +80,15 @@ response with an response code in the 4xx or 5xx range, the `catch()` will
 NOT be called.
 
 ```js
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', (event) => {
   // We only want to call event.respondWith() if this is a GET request for an HTML document.
   if (event.request.method === 'GET' &&
-      event.request.headers.get('accept').indexOf('text/html') !== -1) {
+      event.request.headers.get('accept').includes('text/html')) {
     console.log('Handling fetch event for', event.request.url);
     event.respondWith(
-      fetch(event.request).catch(function(e) {
+      fetch(event.request).catch((e) => {
         console.error('Fetch failed; returning offline page instead.', e);
-        return caches.open(OFFLINE_CACHE).then(function(cache) {
-          return cache.match(OFFLINE_URL);
-        });
+        return caches.open(OFFLINE_CACHE).then((cache) => cache.match(OFFLINE_URL));
       })
     );
   }

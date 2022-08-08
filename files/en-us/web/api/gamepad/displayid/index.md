@@ -31,7 +31,7 @@ A number representing the associated {{domxref("VRDisplay.displayId")}}. If the 
 ## Examples
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", (e) => {
   if(!e.gamepad.displayId) {
     console.log('Gamepad connected');
   } else {

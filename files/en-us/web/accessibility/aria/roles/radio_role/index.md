@@ -64,7 +64,7 @@ Each radio element is labelled by its content, has a visible label referenced by
 
 As `radio` is an interactive control; it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a radio is the <kbd>Space</kbd> key. Use JavaScript to toggle the `aria-checked` attribute to `true` when a radio becomes checked while ensuing that all the other radio roles in the group are set to `aria-checked="false"`.
 
-To programmatically indicate that a radio button must be chosen from a radio group the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, with a value of `true`, must be specified on the `radiogroup` element. It is not expected to use the `aria-required` attribute on individual ARIA radio buttons.  
+To programmatically indicate that a radio button must be chosen from a radio group the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, with a value of `true`, must be specified on the `radiogroup` element. It is not expected to use the `aria-required` attribute on individual ARIA radio buttons.
 
 ### All descendants are presentational
 
@@ -184,7 +184,7 @@ for (let i = 0, groups = radioGroups.length; i < groups; i++) {
     );
     radios[j].addEventListener('click', function() {
       handleClick();
-    );
+    });
   }
 }
 

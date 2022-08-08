@@ -12,7 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.CanvasRenderingContext2D.drawWindow
 ---
-{{APIRef}} {{deprecated_header}}
+{{APIRef}} {{deprecated_header}}{{Non-standard_header}}
 
 The deprecated, non-standard and internal only
 **`CanvasRenderingContext2D.drawWindow()`**

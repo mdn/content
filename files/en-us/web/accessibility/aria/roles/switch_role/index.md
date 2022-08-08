@@ -118,7 +118,7 @@ document.querySelectorAll(".switch").forEach(function(theSwitch) {
 function handleClickEvent(evt) {
   let el = evt.target;
 
-  if (el.getAttribute("aria-checked") == "true") {
+  if (el.getAttribute("aria-checked") === "true") {
       el.setAttribute("aria-checked", "false");
   } else {
       el.setAttribute("aria-checked", "true");

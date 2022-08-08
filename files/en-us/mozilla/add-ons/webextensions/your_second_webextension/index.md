@@ -101,7 +101,7 @@ Note that all paths given are relative to manifest.json itself.
 
 The extension should have an icon. This will be shown next to the extension's listing in the Add-ons Manager (you can open this by visiting the URL "about:addons"). Our manifest.json promised that we would have an icon for the toolbar at "icons/beasts-48.png".
 
-Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-48.png), which is taken from the [Aha-Soft's Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set), and used under the terms of its [license](https://www.aha-soft.com/free-icons/free-retina-icon-set/).
+Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-48.png), which is taken from the [Aha-Soft's Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/), and used under the terms of its license.
 
 If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the `96` property of the `icons` object in manifest.json:
 
@@ -337,7 +337,7 @@ The `reset()` function essentially undoes a beastify:
 Create a new directory, under the extension root, called "content_scripts" and create a new file in it called "beastify.js", with the following contents:
 
 ```js
-(function() {
+(() => {
   /**
    * Check and set a global guard variable.
    * If this content script is injected into the same page again,
@@ -452,7 +452,7 @@ web-ext run
 
 ## What's next?
 
-Now you've created a more advanced WebExtension for Firefox:
+Now that you've created a more advanced WebExtension for Firefox:
 
 - [read about the anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [explore the extension examples](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)

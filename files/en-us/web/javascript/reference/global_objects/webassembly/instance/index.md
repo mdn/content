@@ -37,11 +37,11 @@ const importObject = {
   }
 };
 
-fetch('simple.wasm').then(response =>
+fetch('simple.wasm').then((response) =>
   response.arrayBuffer()
-).then(bytes => {
-  let mod = new WebAssembly.Module(bytes);
-  let instance = new WebAssembly.Instance(mod, importObject);
+).then((bytes) => {
+  const mod = new WebAssembly.Module(bytes);
+  const instance = new WebAssembly.Instance(mod, importObject);
   instance.exports.exported_func();
 })
 ```
@@ -58,7 +58,7 @@ const importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+.then((obj) => obj.instance.exports.exported_func());
 ```
 
 This also demonstrates how the `exports` property is used to access exported functions.

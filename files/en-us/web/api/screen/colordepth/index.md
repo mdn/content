@@ -23,7 +23,7 @@ A number.
 
 ```js
 // Check the color depth of the screen
-if ( window.screen.colorDepth < 8) {
+if (window.screen.colorDepth < 8) {
   // Use low-color version of page
 } else {
   // Use regular, colorful page

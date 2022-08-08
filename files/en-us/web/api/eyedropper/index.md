@@ -52,10 +52,10 @@ document.getElementById('start-button').addEventListener('click', () => {
 
   const eyeDropper = new EyeDropper();
 
-  eyeDropper.open().then(result => {
+  eyeDropper.open().then((result) => {
     resultElement.textContent = result.sRGBHex;
     resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch(e => {
+  }).catch((e) => {
     resultElement.textContent = e;
   });
 });
@@ -90,10 +90,10 @@ document.getElementById('start-button').addEventListener('click', () => {
   const eyeDropper = new EyeDropper();
   const abortController = new AbortController();
 
-  eyeDropper.open({ signal: abortController.signal }).then(result => {
+  eyeDropper.open({ signal: abortController.signal }).then((result) => {
     resultElement.textContent = result.sRGBHex;
     resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch(e => {
+  }).catch((e) => {
     resultElement.textContent = e;
   });
 

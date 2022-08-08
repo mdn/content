@@ -44,10 +44,10 @@ more information.
 
 ```js
 // create web audio api context
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // create Oscillator node
-var oscillator = audioCtx.createOscillator();
+const oscillator = audioCtx.createOscillator();
 
 oscillator.type = 'square';
 oscillator.frequency.setValueAtTime(3000, audioCtx.currentTime); // value in hertz

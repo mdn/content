@@ -25,13 +25,13 @@ property is a string which specifies the username to use when authenticating wit
 ## Syntax
 
 ```js
-var iceServer = {
+const iceServer = {
   // ...
-  username: username,
+  username: someUsername,
   // ...
 };
 
-var username = iceServer.username;
+const username = iceServer.username;
 
 iceServer.username = newUsername;
 ```

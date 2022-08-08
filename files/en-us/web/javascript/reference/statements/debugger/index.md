@@ -28,8 +28,8 @@ inserted, to invoke a debugger (if one exists) when the function is called.
 
 ```js
 function potentiallyBuggyCode() {
-    debugger;
-    // do potentially buggy stuff to examine, step through, etc.
+  debugger;
+  // do potentially buggy stuff to examine, step through, etc.
 }
 ```
 

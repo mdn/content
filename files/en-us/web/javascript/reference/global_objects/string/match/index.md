@@ -37,7 +37,7 @@ match(regexp)
 
 ### Return value
 
-An {{jsxref("Array")}} whose contents depend on the presence or absence of the global (`g`) flag, or {{jsxref("null")}} if no matches are found. If the regular expression does not include the `g` flag, `str.match()` will return the same result as {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.
+An {{jsxref("Array")}} whose contents depend on the presence or absence of the global (`g`) flag, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if no matches are found. If the regular expression does not include the `g` flag, `str.match()` will return the same result as {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.
 
 - If the `g` flag is used, all results matching the complete regular
   expression will be returned, but capturing groups will not.
@@ -112,9 +112,9 @@ The following example demonstrates the use of the global and ignore case flags w
 ```js
 const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 const regexp = /[A-E]/gi;
-const matches_array = str.match(regexp);
+const matches = str.match(regexp);
 
-console.log(matches_array);
+console.log(matches);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
@@ -123,7 +123,7 @@ console.log(matches_array);
 ### Using named capturing groups
 
 In browsers which support named capturing groups, the following code captures
-"`fox`" or "`cat`" into a group named "`animal`":
+`"fox"` or `"cat"` into a group named `animal`:
 
 ```js
 const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
@@ -165,9 +165,9 @@ If it is a positive number with a positive sign, `RegExp()` will ignore the
 positive sign.
 
 ```js
-const str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
-    str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
-    str3 = "The contract was declared null and void.";
+const str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.";
+const str2 = "My grandfather is 65 years old and My grandmother is 63 years old.";
+const str3 = "The contract was declared null and void.";
 str1.match("number");   // "number" is a string. returns ["number"]
 str1.match(NaN);        // the type of NaN is the number. returns ["NaN"]
 str1.match(Infinity);   // the type of Infinity is the number. returns ["Infinity"]

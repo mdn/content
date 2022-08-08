@@ -43,14 +43,14 @@ window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.ms
 // (Mozilla has never prefixed these objects, so we don't need window.mozIDB*)
 
 // Let us open version 4 of our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
-DBOpenRequest.onerror = function(event) {
+DBOpenRequest.onerror = (event) => {
   console.error("Error loading database.");
 };
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   console.info("Database initialized.");
 
   // store the result of opening the database in the db variable. This is used a lot later on, for opening transactions and suchlike.

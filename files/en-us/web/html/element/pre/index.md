@@ -142,8 +142,8 @@ body {
 <pre>
 let i = 5;
 
-if( i &lt; 10 &amp;&amp; i &gt; 0 )
-  return &quot; Single Digit Number &quot;
+if (i &lt; 10 &amp;&amp; i &gt; 0)
+  return &quot;Single Digit Number&quot;
 </pre>
 ```
 

@@ -38,7 +38,7 @@ async function getCompressedTextureIfAvailable(gl) {
   if (ext) {
     // the file is already in the correct compressed format
     const dataArrayBuffer = await fetch('/textures/foobar512x512.RGBA_S3TC_DXT1')
-      .then(response => response.arrayBuffer());
+      .then((response) => response.arrayBuffer());
     gl.compressedTexImage2D(gl.TEXTURE_2D,
       0, // set the base image level
       ext.COMPRESSED_RGBA_S3TC_DXT1_EXT, // the compressed format we are using

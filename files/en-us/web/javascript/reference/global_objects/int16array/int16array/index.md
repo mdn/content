@@ -31,6 +31,16 @@ new Int16Array(buffer, byteOffset);
 new Int16Array(buffer, byteOffset, length);
 ```
 
+## Description
+
+The `Int16Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Int16Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+
+```js example-bad
+const dv = Int16Array([1, 2, 3]);
+// TypeError: calling a builtin Int16Array constructor
+// without new is forbidden
+```
+
 ### Parameters
 
 - `length`
@@ -97,23 +107,6 @@ console.log(int16FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Int16Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Int16Array` constructor as a function without `new`, will throw a
-{{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Int16Array([1, 2, 3]);
-// TypeError: calling a builtin Int16Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Int16Array([1, 2, 3]);
-```
 
 ## See also
 

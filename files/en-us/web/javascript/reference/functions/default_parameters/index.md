@@ -19,7 +19,7 @@ is passed.
 ## Syntax
 
 ```js
-function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { /* ... */ }
+function fnName(param1 = defaultValue1, /* … ,*/ paramN = defaultValueN) { /* … */ }
 ```
 
 ## Description
@@ -131,7 +131,7 @@ callSomething()  // 2
 Parameters defined earlier (to the left) are available to later default parameters:
 
 ```js
-function greet(name, greeting, message = greeting + ' ' + name) {
+function greet(name, greeting, message = `${greeting} ${name}`) {
   return [name, greeting, message]
 }
 
@@ -269,4 +269,4 @@ preFilledObject({ z: 2 });  // 2
 
 ## See also
 
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [Original proposal at ecmascript.org](https://web.archive.org/web/20161222115423/http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)

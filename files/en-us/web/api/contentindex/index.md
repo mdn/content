@@ -22,11 +22,11 @@ There are no properties of this interface.
 
 ## Methods
 
-- {{domxref('ContentIndex.add()')}}
+- {{domxref('ContentIndex.add()')}} {{Experimental_Inline}}
   - : Registers an item with the [content index](/en-US/docs/Web/API/Content_Index_API).
-- {{domxref('ContentIndex.delete()')}}
+- {{domxref('ContentIndex.delete()')}} {{Experimental_Inline}}
   - : Unregisters an item from the currently indexed content.
-- {{domxref('ContentIndex.getAll()')}}
+- {{domxref('ContentIndex.getAll()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves with an iterable list of content index entries.
 
 ## Examples

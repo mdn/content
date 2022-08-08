@@ -32,7 +32,7 @@ In _Figure 1_, the state begins in State 1; the state changes to State 2 given i
 
 _Figure 2: Non-Deterministic Finite State Machine_
 
-[![](statemachine2.png)](http://postimg.org/image/mpq3nz82h/)
+![](statemachine2.png)
 
 In _Figure 2_, given input 'X', the state can persist or change to State 2.
 
@@ -40,7 +40,7 @@ Note that any {{Glossary("regular expression")}} can be represented by a state m
 
 ## See also
 
-- {{Interwiki("wikipedia", "Finite-state machine")}} on Wikipedia
-- {{Interwiki("wikipedia", "UML state machine")}} on Wikipedia
-- {{Interwiki("wikipedia", "Moore machine")}} on Wikipedia
-- {{Interwiki("wikipedia", "Mealy machine")}} on Wikipedia
+- [Finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine) on Wikipedia
+- [UML state machine](https://en.wikipedia.org/wiki/UML_state_machine) on Wikipedia
+- [Moore machine](https://en.wikipedia.org/wiki/Moore_machine) on Wikipedia
+- [Mealy machine](https://en.wikipedia.org/wiki/Mealy_machine) on Wikipedia

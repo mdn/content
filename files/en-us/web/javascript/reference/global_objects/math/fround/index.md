@@ -14,8 +14,7 @@ browser-compat: javascript.builtins.Math.fround
 {{JSRef}}
 
 The **`Math.fround()`** function returns the
-nearest {{interwiki("wikipedia", "Single-precision floating-point format", "32-bit
-  single precision")}} float representation of a {{jsxref("Number")}}.
+nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision floating-point format) float representation of a {{jsxref("Number")}}.
 
 {{EmbedInteractiveExample("pages/js/math-fround.html")}}
 
@@ -33,8 +32,7 @@ Math.fround(doubleFloat)
 
 ### Return value
 
-The nearest {{interwiki("wikipedia", "Single-precision floating-point format", "32-bit
-  single precision")}} float representation of the given number.
+The nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of the given number.
 
 ## Description
 
@@ -84,8 +82,7 @@ Math.fround(1.337) === 1.337; // false
 Math.fround(2 ** 150); // Infinity
 ```
 
-If the parameter cannot be converted to a number, or it is {{interwiki("wikipedia",
-  "NaN", "not-a-number")}} (`NaN`), `Math.fround()` will return
+If the parameter cannot be converted to a number, or it is [not-a-number](https://en.wikipedia.org/wiki/NaN) (`NaN`), `Math.fround()` will return
 `NaN`:
 
 ```js

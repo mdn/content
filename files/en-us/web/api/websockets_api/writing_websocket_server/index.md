@@ -147,7 +147,7 @@ You must:
 4. Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response
 
 ```cs
- if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
+if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 {
     const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
 
@@ -293,9 +293,9 @@ class Server {
                     msglen = BitConverter.ToUInt16(new byte[] { bytes[3], bytes[2] }, 0);
                     offset = 4;
                 } else if (msglen == 127) {
-                    // To test the below code, we need to manually buffer larger messages — since the NIC's autobuffering 
+                    // To test the below code, we need to manually buffer larger messages — since the NIC's autobuffering
                     // may be too latency-friendly for this code to run (that is, we may have only some of the bytes in this
-                    // websocket frame available through client.Available).  
+                    // websocket frame available through client.Available).
                     msglen = BitConverter.ToUInt64(new byte[] { bytes[9], bytes[8], bytes[7], bytes[6], bytes[5], bytes[4], bytes[3], bytes[2] },0);
                     offset = 10;
                 }
@@ -338,50 +338,49 @@ class Server {
 <button>send</button>
 <div id=output></div>
 <script>
-    // http://www.websocket.org/echo.html
+  // http://www.websocket.org/echo.html
 
-    const button = document.querySelector("button");
-    const output = document.querySelector("#output");
-    const textarea = document.querySelector("textarea");
-        // wsUri = "ws://echo.websocket.org/",
-        wsUri = "ws://127.0.0.1/",
-        websocket = new WebSocket(wsUri);
+  const button = document.querySelector("button");
+  const output = document.querySelector("#output");
+  const textarea = document.querySelector("textarea");
+  const wsUri = "ws://127.0.0.1/";
+  const websocket = new WebSocket(wsUri);
 
-    button.addEventListener("click", onClickButton);
+  button.addEventListener("click", onClickButton);
 
-    websocket.onopen = function (e) {
-        writeToScreen("CONNECTED");
-        doSend("WebSocket rocks");
-    };
+  websocket.onopen = (e) => {
+    writeToScreen("CONNECTED");
+    doSend("WebSocket rocks");
+  };
 
-    websocket.onclose = function (e) {
-        writeToScreen("DISCONNECTED");
-    };
+  websocket.onclose = (e) => {
+    writeToScreen("DISCONNECTED");
+  };
 
-    websocket.onmessage = function (e) {
-        writeToScreen("<span>RESPONSE: " + e.data + "</span>");
-    };
+  websocket.onmessage = (e) => {
+    writeToScreen(`<span>RESPONSE: ${e.data}</span>`);
+  };
 
-    websocket.onerror = function (e) {
-        writeToScreen("<span class=error>ERROR:</span> " + e.data);
-    };
+  websocket.onerror = (e) => {
+    writeToScreen(`<span class=error>ERROR:</span> ${e.data}`);
+  };
 
-    function doSend(message) {
-        writeToScreen("SENT: " + message);
-        websocket.send(message);
-    }
+  function doSend(message) {
+    writeToScreen(`SENT: ${message}`);
+    websocket.send(message);
+  }
 
-    function writeToScreen(message) {
-        output.insertAdjacentHTML("afterbegin", "<p>" + message + "</p>");
-    }
+  function writeToScreen(message) {
+    output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
+  }
 
-    function onClickButton() {
-        const text = textarea.value;
+  function onClickButton() {
+    const text = textarea.value;
 
-        text && doSend(text);
-        textarea.value = "";
-        textarea.focus();
-    }
+    text && doSend(text);
+    textarea.value = "";
+    textarea.focus();
+  }
 </script>
 ```
 

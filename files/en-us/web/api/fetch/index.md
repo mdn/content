@@ -86,7 +86,7 @@ fetch(resource, options)
         - `omit`
           - : Tells browsers to exclude credentials from the request, and ignore any credentials sent back in the response (e.g., any {{HTTPHeader("Set-Cookie")}} header).
         - `same-origin`
-          - : Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs.
+          - : Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs. **This is the default value.**
         - `include`
 
           - : Tells browsers to include credentials in both same- and cross-origin requests, and always use any credentials sent back in responses.

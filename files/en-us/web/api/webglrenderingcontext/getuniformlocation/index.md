@@ -79,7 +79,7 @@ getUniformLocation(program, name)
 ### Return value
 
 A {{domxref("WebGLUniformLocation")}} value indicating the location of the named
-variable, if it exists. If the specified variable doesn't exist, {{jsxref("null")}} is
+variable, if it exists. If the specified variable doesn't exist, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is
 returned instead.
 
 The `WebGLUniformLocation` is an opaque value used to uniquely identify the

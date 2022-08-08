@@ -24,19 +24,19 @@ Like {{jsxref("Intl/Locale/caseFirst", "Intl.Locale.caseFirst")}}, `numeric` rep
 
 ### Setting the numeric value via the locale string
 
-In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), the values that `numeric` represents correspond to the key `kn`. `kn` is considered a locale string "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers by using the `-u` extension key. Thus, the `numeric` value can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. To set the `numeric` value, first add the `-u` extension key to the string. Next, add the `-kn` extension key to indicate that you are adding a value for `numeric`. Finally, add the `numeric` value to the string. If you want to set `numeric` to `true`, adding the `kn` key will suffice. To set the value to `false`, you must specify in by adding "`false`" after the `kn` key.
+In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), the values that `numeric` represents correspond to the key `kn`. `kn` is considered a locale string "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers by using the `-u` extension key. Thus, the `numeric` value can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. To set the `numeric` value, first add the `-u` extension key to the string. Next, add the `-kn` extension key to indicate that you are adding a value for `numeric`. Finally, add the `numeric` value to the string. If you want to set `numeric` to `true`, adding the `kn` key will suffice. To set the value to `false`, you must specify in by adding `"false"` after the `kn` key.
 
 ```js
-let locale = new Intl.Locale("fr-Latn-FR-u-kn-false");
+const locale = new Intl.Locale("fr-Latn-FR-u-kn-false");
 console.log(locale.numeric); // Prints "false"
 ```
 
-### Setting the `numeric` value via the configuration object argument
+### Setting the numeric value via the configuration object argument
 
 The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optional configuration object argument, which can be used to pass extension types. Set the `numeric` property of the configuration object to your desired `numeric` value and pass it into the constructor.
 
 ```js
-let locale = new Intl.Locale("en-Latn-US", { numeric: true });
+const locale = new Intl.Locale("en-Latn-US", { numeric: true });
 console.log(locale.numeric); // Prints "true"
 ```
 

@@ -63,7 +63,7 @@ In case of an error, for example if a property is non-writable, a
 changed if any properties are added before the error is raised.
 
 > **Note:** `Object.assign()` does not throw on
-> {{jsxref("null")}} or {{jsxref("undefined")}} sources.
+> [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
 
 ## Examples
 
@@ -86,8 +86,8 @@ If the source value is a reference to an object, it only copies the reference va
 function test() {
   'use strict';
 
-  let obj1 = { a: 0 , b: { c: 0}};
-  let obj2 = Object.assign({}, obj1);
+  const obj1 = { a: 0 , b: { c: 0 } };
+  const obj2 = Object.assign({}, obj1);
   console.log(JSON.stringify(obj2)); // { "a": 0, "b": { "c": 0}}
 
   obj1.a = 1;
@@ -104,7 +104,7 @@ function test() {
 
   // Deep Clone
   obj1 = { a: 0 , b: { c: 0}};
-  let obj3 = JSON.parse(JSON.stringify(obj1));
+  const obj3 = JSON.parse(JSON.stringify(obj1));
   obj1.a = 4;
   obj1.b.c = 4;
   console.log(JSON.stringify(obj3)); // { "a": 0, "b": { "c": 0}}
@@ -217,15 +217,15 @@ console.log(copy);
 
 // This is an assign function that copies full descriptors
 function completeAssign(target, ...sources) {
-  sources.forEach(source => {
-    let descriptors = Object.keys(source).reduce((descriptors, key) => {
+  sources.forEach((source) => {
+    const descriptors = Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {});
 
     // By default, Object.assign copies enumerable Symbols, too
-    Object.getOwnPropertySymbols(source).forEach(sym => {
-      let descriptor = Object.getOwnPropertyDescriptor(source, sym);
+    Object.getOwnPropertySymbols(source).forEach((sym) => {
+      const descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
         descriptors[sym] = descriptor;
       }

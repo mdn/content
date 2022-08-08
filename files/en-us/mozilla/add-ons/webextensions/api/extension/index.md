@@ -32,7 +32,7 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 ## Functions
 
 - {{WebExtAPIRef("extension.getBackgroundPage()")}}
-  - : Returns the [`Window`](/en-US/docs/Web/API/Window) object for the background page running inside the current extension. Returns {{jsxref("null")}} if the extension has no background page.
+  - : Returns the [`Window`](/en-US/docs/Web/API/Window) object for the background page running inside the current extension. Returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the extension has no background page.
 - {{WebExtAPIRef("extension.getExtensionTabs()")}} {{deprecated_inline}}
   - : Returns an array of the JavaScript [Window](/en-US/docs/Web/API/Window) objects for each of the tabs running inside the current extension.
 - {{WebExtAPIRef("extension.getURL()")}} {{deprecated_inline}}

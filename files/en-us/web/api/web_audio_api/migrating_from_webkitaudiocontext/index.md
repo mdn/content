@@ -92,7 +92,7 @@ const xhr = new XMLHttpRequest();
 xhr.open("GET", "/path/to/audio.ogg", true);
 xhr.responseType = "arraybuffer";
 xhr.send();
-xhr.onload = function() {
+xhr.onload = () => {
   const decodedBuffer = context.createBuffer(xhr.response, false);
   if (decodedBuffer) {
     // Decoding was successful, do something useful with the audio buffer
@@ -109,12 +109,16 @@ const xhr = new XMLHttpRequest();
 xhr.open("GET", "/path/to/audio.ogg", true);
 xhr.responseType = "arraybuffer";
 xhr.send();
-xhr.onload = function() {
-  context.decodeAudioData(xhr.response, function onSuccess(decodedBuffer) {
-    // Decoding was successful, do something useful with the audio buffer
-  }, function onFailure() {
-    alert("Decoding the audio buffer failed");
-  });
+xhr.onload = () => {
+  context.decodeAudioData(
+    xhr.response,
+    (decodedBuffer) => {
+      // Decoding was successful, do something useful with the audio buffer
+    }, 
+    () => {
+      alert("Decoding the audio buffer failed");
+    }
+  );
 };
 ```
 
@@ -152,7 +156,7 @@ osc.type = osc.SQUARE;   // square waveform
 osc.type = osc.SAWTOOTH; // sawtooth waveform
 osc.type = osc.TRIANGLE; // triangle waveform
 osc.setWaveTable(table);
-const isCustom = (osc.type == osc.CUSTOM); // isCustom will be true
+const isCustom = osc.type === osc.CUSTOM; // isCustom will be true
 ```
 
 ```js
@@ -163,7 +167,7 @@ osc.type = "square";     // square waveform
 osc.type = "sawtooth";   // sawtooth waveform
 osc.type = "triangle";   // triangle waveform
 osc.setPeriodicWave(table);  // Note: setWaveTable has been renamed to setPeriodicWave!
-const isCustom = (osc.type == "custom"); // isCustom will be true
+const isCustom = osc.type === "custom"; // isCustom will be true
 ```
 
 ### BiquadFilterNode.type
@@ -317,17 +321,16 @@ The `playbackState` attribute of {{domxref("AudioBufferSourceNode")}} and {{domx
 // Old webkitAudioContext code:
 const src = context.createBufferSource();
 // Some time later...
-const isFinished = (src.playbackState == src.FINISHED_STATE);
+const isFinished = src.playbackState === src.FINISHED_STATE;
 ```
 
 ```js
 // New AudioContext code:
+let isFinished = false;
 const src = context.createBufferSource();
-function endedHandler(event) {
+src.onended = (event) => { 
   isFinished = true;
-}
-const isFinished = false;
-src.onended = endedHandler;
+};
 ```
 
 The exact same changes have been applied to both {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}, so you can apply the same techniques to both kinds of nodes.
@@ -361,20 +364,24 @@ could be rewritten like that:
   function startSource() {
     const src = arguments[0];
     const startArgs = Array.prototype.slice.call(arguments, 1);
-    src.onended = function() {
+    src.onended = () => {
       sources.splice(sources.indexOf(src), 1);
     }
     sources.push(src);
     src.start.apply(src, startArgs);
   }
+  
   function activeSources() {
     return sources.length;
   }
+  
   const src0 = context.createBufferSource();
   const src1 = context.createBufferSource();
+  
   // Set buffers and other parameters...
   startSource(src0, 0);
   startSource(src1, 0);
+  
   // Some time later, query the number of sources...
   console.log(activeSources());
 ```

@@ -240,7 +240,7 @@ We use a wrapper function named `grep` to do the searching:
 
 ```js
 function grep(parentNode, pattern) {
-  const matches = []
+  let matches = []
   let endScan = false
 
   eachNode(parentNode, function(node){

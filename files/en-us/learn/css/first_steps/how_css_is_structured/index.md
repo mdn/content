@@ -547,7 +547,7 @@ padding-left: 10px;
 
 But these declarations are invalid:
 
-```css
+```css example-bad
 margin: 0auto;
 padding- left: 10px;
 ```

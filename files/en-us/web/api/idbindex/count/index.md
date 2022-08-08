@@ -73,13 +73,13 @@ function displayDataByIndex() {
 
   const myIndex = objectStore.index('lName');
   const countRequest = myIndex.count();
-  countRequest.onsuccess = function() {
+  countRequest.onsuccess = () => {
     console.log(countRequest.result);
   }
 
-  myIndex.openCursor().onsuccess = function(event) {
+  myIndex.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const tableRow = document.createElement('tr');
       tableRow.innerHTML = `<td>${cursor.value.id}</td>`
                          + `<td>${cursor.value.lName}</td>`

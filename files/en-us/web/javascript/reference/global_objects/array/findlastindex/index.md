@@ -23,19 +23,19 @@ See also the {{jsxref("Array.findLast()", "findLast()")}} method, which returns 
 
 ```js
 // Arrow function
-findLastIndex((element) => { /* ... */ } )
-findLastIndex((element, index) => { /* ... */ } )
-findLastIndex((element, index, array) => { /* ... */ } )
+findLastIndex((element) => { /* … */ } )
+findLastIndex((element, index) => { /* … */ } )
+findLastIndex((element, index, array) => { /* … */ } )
 
 // Callback function
 findLastIndex(callbackFn)
 findLastIndex(callbackFn, thisArg)
 
 // Inline callback function
-findLastIndex(function(element) { /* ... */ })
-findLastIndex(function(element, index) { /* ... */ })
-findLastIndex(function(element, index, array){ /* ... */ })
-findLastIndex(function(element, index, array) { /* ... */ }, thisArg)
+findLastIndex(function(element) { /* … */ })
+findLastIndex(function(element, index) { /* … */ })
+findLastIndex(function(element, index, array){ /* … */ })
+findLastIndex(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -119,7 +119,7 @@ Note that the result would be the same as if using {{jsxref("Array.findIndex()")
 ```js
 const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
 
-const index = fruits.findLastIndex(fruit => fruit === "blueberries");
+const index = fruits.findLastIndex((fruit) => fruit === "blueberries");
 
 console.log(index); // 3
 console.log(fruits[index]); // blueberries

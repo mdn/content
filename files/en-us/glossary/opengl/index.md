@@ -10,5 +10,5 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "OpenGL")}} on Wikipedia
+- [OpenGL](https://en.wikipedia.org/wiki/OpenGL) on Wikipedia
 - [OpenGL](https://www.opengl.org/)

@@ -88,7 +88,7 @@ function updateInputSources(session, frame, refSpace) {
     let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
 
     if (targetRayPose) {
-      if (source.targetRayMode == "tracked-pointer") {
+      if (source.targetRayMode === "tracked-pointer") {
         myRenderTargetRayAsBeam(targetRayPose);
       }
     }

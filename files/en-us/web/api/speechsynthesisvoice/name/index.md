@@ -26,7 +26,7 @@ A string representing the name of the voice.
 ## Examples
 
 ```js
-for(let i = 0; i < voices.length ; i++) {
+for (let i = 0; i < voices.length ; i++) {
   const option = document.createElement('option');
   option.textContent = `${voices[i].name} (${voices[i].lang})`;
 

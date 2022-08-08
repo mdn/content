@@ -53,11 +53,11 @@ custom namespace.
   <circle id="target" cx="12" cy="12" r="10" stroke="#444"
       stroke-width="2" fill="none" test:foo="Hello namespaced attribute!"/>
 
-  <script type="text/javascript">
+  <script>
     const ns = 'http://www.example.com/2014/test';
-    const circle = document.getElementById( 'target' );
+    const circle = document.getElementById('target');
 
-    console.log( 'attribute test:foo: "' + circle.getAttributeNS( ns, 'foo' ) + '"' );
+    console.log(`attribute test:foo: "${circle.getAttributeNS(ns, 'foo')}"`);
   </script>
 </svg>
 ```
@@ -76,10 +76,10 @@ namespaces are not supported.
       fill="none" test:foo="Foo value"/>
 </svg>
 
-<script type="text/javascript">
+<script>
   const ns = 'http://www.example.com/2014/test';
-  const circle = document.getElementById( 'target' );
-  console.log('Attribute value: ' + circle.getAttribute('test:foo'));
+  const circle = document.getElementById('target');
+  console.log(`Attribute value: ${circle.getAttribute('test:foo')}`);
 </script>
 
 </body>

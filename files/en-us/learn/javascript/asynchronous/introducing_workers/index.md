@@ -101,11 +101,13 @@ The "index.html" file and the "style.css" files are already complete:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <script type="text/javascript" src="main.js" defer></script>
-    <link href="style.css"rel="stylesheet">
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width">
+    <title>Prime numbers</title>
+    <script src="main.js" defer></script>
+    <link href="style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -157,7 +159,7 @@ document.querySelector('#generate').addEventListener('click', () => {
 // When the worker sends a message back to the main thread,
 // update the output box with a message for the user, including the number of
 // primes that were generated, taken from the message data.
-worker.addEventListener('message', message => {
+worker.addEventListener('message', (message) => {
   document.querySelector('#output').textContent = `Finished generating ${message.data} primes!`;
 });
 
@@ -183,7 +185,7 @@ Now for the worker code. Copy the following code into "generate.js":
 ```js
 // Listen for messages from the main thread.
 // If the message command is "generate", call `generatePrimes()`
-addEventListener("message", message => {
+addEventListener("message", (message) => {
   if (message.data.command === 'generate') {
     generatePrimes(message.data.quota);
   }

@@ -22,9 +22,9 @@ _`SpeechRecognitionErrorEvent` also inherits properties from its parent interfac
 ## Examples
 
 ```js
-var recognition = new SpeechRecognition();
+const recognition = new SpeechRecognition();
 
-recognition.onerror = function(event) {
+recognition.onerror = (event) => {
   console.log(`Speech recognition error detected: ${event.error}`);
   console.log(`Additional information: ${event.message}`);
 }

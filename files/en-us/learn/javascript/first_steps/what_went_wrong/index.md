@@ -197,7 +197,7 @@ const userGuess = Number(guessField.value);
 
 to
 
-```js
+```js example-bad
 const userGuess === Number(guessField.value);
 ```
 

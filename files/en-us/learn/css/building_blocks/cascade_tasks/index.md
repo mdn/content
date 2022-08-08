@@ -42,11 +42,11 @@ Your final result should look like the image below:
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/cascade/cascadelayers.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/cascade/cascadelayer.html", '100%', 700)}}
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/cascade/cascadelayers-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://raw.githubusercontent.com/mdn/css-examples/main/learn/tasks/cascade/cascadelayer-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

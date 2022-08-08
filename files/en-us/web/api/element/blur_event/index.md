@@ -26,9 +26,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('blur', event => { });
+addEventListener('blur', (event) => { });
 
-onblur = event => { };
+onblur = (event) => { };
 ```
 
 ## Event type
@@ -77,7 +77,7 @@ password.addEventListener('blur', (event) => {
 
 ### Event delegation
 
-There are two ways of implementing event delegation for this event: by using the {{Event("focusout")}} event, or by setting the `useCapture` parameter of {{domxref("EventTarget.addEventListener()", "addEventListener()")}} to `true`.
+There are two ways of implementing event delegation for this event: by using the {{domxref("Element/focusout_event", "focusout")}} event, or by setting the `useCapture` parameter of {{domxref("EventTarget.addEventListener()", "addEventListener()")}} to `true`.
 
 #### HTML
 

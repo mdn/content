@@ -56,7 +56,7 @@ function previewFile() {
   const file = document.querySelector('input[type=file]').files[0];
   const reader = new FileReader();
 
-  reader.addEventListener("load", function () {
+  reader.addEventListener("load", () => {
     // convert image file to base64 string
     preview.src = reader.result;
   }, false);
@@ -84,33 +84,29 @@ function previewFile() {
 
 ```js
 function previewFiles() {
-
   const preview = document.querySelector('#preview');
-  const files   = document.querySelector('input[type=file]').files;
+  const files = document.querySelector('input[type=file]').files;
 
   function readAndPreview(file) {
-
     // Make sure `file.name` matches our extensions criteria
-    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
       const reader = new FileReader();
 
-      reader.addEventListener("load", function () {
+      reader.addEventListener("load", () => {
         const image = new Image();
         image.height = 100;
         image.title = file.name;
         image.src = this.result;
-        preview.appendChild( image );
+        preview.appendChild(image);
       }, false);
 
       reader.readAsDataURL(file);
     }
-
   }
 
   if (files) {
-    [].forEach.call(files, readAndPreview);
+    Array.prototype.forEach.call(files, readAndPreview);
   }
-
 }
 ```
 

@@ -52,32 +52,32 @@ let imageCapture;
 
 function onGetUserMediaButtonClick() {
   navigator.mediaDevices.getUserMedia({video: true})
-  .then(mediaStream => {
+  .then((mediaStream) => {
     document.querySelector('video').srcObject = mediaStream;
 
     const track = mediaStream.getVideoTracks()[0];
     imageCapture = new ImageCapture(track);
   })
-  .catch(error => console.log(error));
+  .catch((error) => console.error(error));
 }
 
 function onGrabFrameButtonClick() {
   imageCapture.grabFrame()
-  .then(imageBitmap => {
+  .then((imageBitmap) => {
     const canvas = document.querySelector('#grabFrameCanvas');
     drawCanvas(canvas, imageBitmap);
   })
-  .catch(error => console.log(error));
+  .catch((error) => console.error(error));
 }
 
 function onTakePhotoButtonClick() {
   imageCapture.takePhoto()
-  .then(blob => createImageBitmap(blob))
-  .then(imageBitmap => {
+  .then((blob) => createImageBitmap(blob))
+  .then((imageBitmap) => {
     const canvas = document.querySelector('#takePhotoCanvas');
     drawCanvas(canvas, imageBitmap);
   })
-  .catch(error => console.log(error));
+  .catch((error) => console.error(error));
 }
 
 /* Utils */
@@ -93,7 +93,7 @@ function drawCanvas(canvas, img) {
       x, y, img.width * ratio, img.height * ratio);
 }
 
-document.querySelector('video').addEventListener('play', function() {
+document.querySelector('video').addEventListener('play', () => {
   document.querySelector('#grabFrameButton').disabled = false;
   document.querySelector('#takePhotoButton').disabled = false;
 });

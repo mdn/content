@@ -249,7 +249,7 @@ function ongoingTouchIndexById(idToFind) {
   for (let i = 0; i < ongoingTouches.length; i++) {
     const id = ongoingTouches[i].identifier;
 
-    if (id == idToFind) {
+    if (id === idToFind) {
       return i;
     }
   }
@@ -291,7 +291,7 @@ Since calling `preventDefault()` on a {{domxref("Element/touchstart_event", "tou
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
+  if (evt.touches.length > 1 || (evt.type === "touchend" && evt.touches.length > 0))
     return;
 
   const newEvt = document.createEvent("MouseEvents");

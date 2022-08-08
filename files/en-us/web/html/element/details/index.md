@@ -99,7 +99,7 @@ In addition to the usual events supported by HTML elements, the `<details>` elem
 You can use an event listener for the `toggle` event to detect when the widget changes state:
 
 ```js
-details.addEventListener("toggle", event => {
+details.addEventListener("toggle", (event) => {
   if (details.open) {
     /* the element was toggled open */
   } else {

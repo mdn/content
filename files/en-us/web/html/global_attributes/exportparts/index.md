@@ -19,7 +19,7 @@ Rules present outside of the shadow tree, must use the {{CSSxRef("::part")}} pse
 
 The global attribute {{HTMLAttrxRef("part")}} makes the element visible on just a single level of depth. When the shadow tree is nested, parts will be visible only to the parent of the shadow tree but not to its ancestor. Exporting parts further down is exactly what `exportparts` attribute is for.
 
-Attribute `exportparts` must be placed on a _shadow Host_, which is the element to which the _shadow tree_ is attached. The value of the attribute should be a space-separated list of part names present in the shadow tree and which should be made available via a DOM outside of the current structure.
+Attribute `exportparts` must be placed on a _shadow Host_, which is the element to which the _shadow tree_ is attached. The value of the attribute should be a comma-separated list of part names present in the shadow tree and which should be made available via a DOM outside of the current structure.
 
 ## Specifications
 

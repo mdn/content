@@ -45,23 +45,23 @@ A simple example showing a fetch operation that will timeout if unsuccessful aft
 Note that this may also fail if the method is not supported, if a browser "stop" button is pressed, or for some other reason.
 
 ```js
-url = "https://path_to_large_file.mp4";
+const url = "https://path_to_large_file.mp4";
 
 try {
   const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
   const result = await res.blob();
   // …
-} catch (e) {
-    if (e.name === "TimeoutError") {
-      // It took more than 5 seconds to get the result!
-    } else if (e.name === "AbortError") {
-      // fetch aborted by user action (browser stop button, closing tab, etc.)
-    } else if (e.name === "TypeError") {
-      // AbortSignal.timeout() method is not supported
-    } else {
-      // A network error, or some other problem.
-      console.log(`Type: ${e.name}, Message: ${e.message}`)
-    }
+} catch (err) {
+  if (err.name === "TimeoutError") {
+    console.error("Timeout: It took more than 5 seconds to get the result!");
+  } else if (err.name === "AbortError") {
+    console.error("Fetch aborted by user action (browser stop button, closing tab, etc.");
+  } else if (err.name === "TypeError") {
+    console.error("AbortSignal.timeout() method is not supported");
+  } else {
+    // A network error, or some other problem.
+    console.error(`Error: type: ${err.name}, message: ${err.message}`);
+  }
 }
 ```
 

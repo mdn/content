@@ -113,7 +113,7 @@ Where _TypedArray_ is a constructor for one of the concrete types.
   - : Returns a number value of the element size for the different
     `TypedArray` objects.
 - {{jsxref("TypedArray.name")}}
-  - : Returns the string value of the constructor name (e.g, "`Int8Array`").
+  - : Returns the string value of the constructor name (e.g, `"Int8Array"`).
 - {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
   - : The constructor function used to create derived objects.
 - {{jsxref("TypedArray")}}
@@ -235,8 +235,7 @@ Where _TypedArray_ is a constructor for one of the concrete types.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also
     {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.prototype.@@iterator()",
-    "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
   - : Returns a new _array iterator_ object that contains the values for each index in the
     array.
 

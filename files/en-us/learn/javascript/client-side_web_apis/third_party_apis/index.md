@@ -68,7 +68,7 @@ Third party APIs, on the other hand, are located on third party servers. To acce
 
 ```html
 <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js" defer></script>
-<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+<link rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
 ```
 
 You can then start using the objects available in that library. For example:
@@ -267,9 +267,9 @@ Add the following code block inside the `fetchResults()` function, just above th
 ```js
 // Use fetch() to make the request to the API
 fetch(url)
-  .then( response => response.json() )
-  .then( json => displayResults(json) )
-  .catch( error => console.error(`Error fetching data: ${error.message}`) );
+  .then((response) => response.json())
+  .then((json) => displayResults(json))
+  .catch((error) => console.error(`Error fetching data: ${error.message}`));
 ```
 
 Here we run the request by passing our `url` variable to [`fetch()`](/en-US/docs/Web/API/fetch), convert the response body to JSON using the [`json()`](/en-US/docs/Web/API/Response/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI. We also catch and log any errors that might be thrown.

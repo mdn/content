@@ -10,7 +10,7 @@ tags:
 browser-compat:
   - html.elements.button.disabled
   - html.elements.fieldset.disabled
-  - html.elements.input.attributes.disabled
+  - html.elements.input.disabled
   - html.elements.optgroup.disabled
   - html.elements.option.disabled
   - html.elements.select.disabled

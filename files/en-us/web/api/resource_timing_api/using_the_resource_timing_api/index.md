@@ -56,7 +56,7 @@ function calculate_load_times() {
   for (let i=0; i < resources.length; i++) {
     console.log(`== Resource[${i}] - ${resources[i].name}`);
     // Redirect time
-    const t = resources[i].redirectEnd - resources[i].redirectStart;
+    let t = resources[i].redirectEnd - resources[i].redirectStart;
     console.log(`… Redirect time = ${t}`);
 
     // DNS time
@@ -147,7 +147,7 @@ function clear_resource_timings() {
   }
   // Check if Performance.clearResourceTiming() is supported
   console.log ("= Print performance.clearResourceTimings()");
-  const supported = typeof performance.clearResourceTimings == "function";
+  const supported = typeof performance.clearResourceTimings === "function";
   if (supported) {
     console.log("… Performance.clearResourceTimings() = supported");
     performance.clearResourceTimings();
@@ -157,7 +157,7 @@ function clear_resource_timings() {
   }
   // getEntries should now return zero
   const p = performance.getEntriesByType("resource");
-  if (p.length == 0)
+  if (p.length === 0)
     console.log("… Performance data buffer cleared");
   else
     console.log(`… Performance data buffer NOT cleared (still have '${p.length}' items`);
@@ -170,7 +170,7 @@ function set_resource_timing_buffer_size(n) {
   }
   // Check if Performance.setResourceTimingBufferSize() is supported
   console.log ("= performance.setResourceTimingBufferSize()");
-  const supported = typeof performance.setResourceTimingBufferSize == "function";
+  const supported = typeof performance.setResourceTimingBufferSize === "function";
   if (supported) {
     console.log("… Performance.setResourceTimingBufferSize() = supported");
     performance.setResourceTimingBufferSize(n);

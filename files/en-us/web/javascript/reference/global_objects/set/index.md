@@ -150,10 +150,10 @@ mySet2.size                    // 4
 [...mySet2]                    // [1, 2, 3, 4]
 
 // intersect can be simulated via
-const intersection = new Set([...mySet1].filter(x => mySet2.has(x)))
+const intersection = new Set([...mySet1].filter((x) => mySet2.has(x)))
 
 // difference can be simulated via
-const difference = new Set([...mySet1].filter(x => !mySet2.has(x)))
+const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)))
 
 // Iterate set entries with forEach()
 mySet2.forEach((value) => {

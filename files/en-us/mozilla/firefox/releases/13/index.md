@@ -61,7 +61,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 ### MathML
 
 - Support for the `width` attribute on {{MathMLElement("mtable")}} elements has been added ({{bug("722880")}}).
-- [MathJax fonts](https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/) are now used as the default fonts for mathematical text. See [Fonts for Mozilla's MathML engine](/en-US/docs/Mozilla_MathML_Project/Fonts) for more information.
+- [MathJax fonts](https://docs.mathjax.org/en/latest/output/fonts.html) are now used as the default fonts for mathematical text. See [Fonts for Mozilla's MathML engine](/en-US/docs/Mozilla_MathML_Project/Fonts) for more information.
 
 ### Network
 

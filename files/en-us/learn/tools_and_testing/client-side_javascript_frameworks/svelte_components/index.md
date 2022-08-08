@@ -123,17 +123,17 @@ We'll begin by creating our `FilterButton.svelte`.
     </script>
 
     <div class="filters btn-group stack-exception">
-      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={()=> filter = 'all'} >
+      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={() => filter = 'all'} >
         <span class="visually-hidden">Show</span>
         <span>All</span>
         <span class="visually-hidden">tasks</span>
       </button>
-      <button class="btn toggle-btn" class:btn__primary={filter === 'active'} aria-pressed={filter === 'active'} on:click={()=> filter = 'active'} >
+      <button class="btn toggle-btn" class:btn__primary={filter === 'active'} aria-pressed={filter === 'active'} on:click={() => filter = 'active'} >
         <span class="visually-hidden">Show</span>
         <span>Active</span>
         <span class="visually-hidden">tasks</span>
       </button>
-      <button class="btn toggle-btn" class:btn__primary={filter === 'completed'} aria-pressed={filter === 'completed'} on:click={()=> filter = 'completed'} >
+      <button class="btn toggle-btn" class:btn__primary={filter === 'completed'} aria-pressed={filter === 'completed'} on:click={() => filter = 'completed'} >
         <span class="visually-hidden">Show</span>
         <span>Completed</span>
         <span class="visually-hidden">tasks</span>
@@ -174,11 +174,9 @@ And we'll declare the reactive statement `$: onclick(filter)` to call the `oncli
 1. The `<script>` section of our `FilterButton` component should end up looking like this. Update it now:
 
     ```js
-    <script>
-      export let filter = 'all'
-      export let onclick = (clicked) => {}
-      $: onclick(filter)
-    </script>
+    export let filter = 'all'
+    export let onclick = (clicked) => {}
+    $: onclick(filter)
     ```
 
 2. Now when we call `FilterButton` inside `Todos.svelte`, we'll need to specify the handler. Update it like this:
@@ -306,7 +304,7 @@ We'll edit our `Todo` component to emit a `remove` event, passing the to-do bein
 3. Now we have to listen to that event from inside `Todos.svelte` and act accordingly. Go back to this file and update your `<Todo>` component call like so:
 
     ```html
-    <Todo {todo} on:remove={e => removeTodo(e.detail)} />
+    <Todo {todo} on:remove={(e) => removeTodo(e.detail)} />
     ```
 
     Our handler receives the `e` parameter (the event object), which as described before holds the to-do being deleted in the `detail` property.
@@ -430,7 +428,7 @@ The editing UI (the upper half) will contain an `<input>` field and two buttons 
 ```html
 <div class="stack-small">
 {#if editing}
-  <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={e => e.key === 'Escape' && onCancel()}>
+  <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={(e) => e.key === 'Escape' && onCancel()}>
     <div class="form-group">
       <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
       <input bind:value={name} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" />
@@ -457,8 +455,8 @@ The `<input>`'s `value` property will be bound to the `name` variable, and the b
 
 We also disable the _Save_ button when the `<input>` is empty, using the `disabled={!name}` attribute, and allow the user to cancel the edit using the <kbd>Escape</kbd> key, like this:
 
-```js
-on:keydown={e => e.key === 'Escape' && onCancel()}.
+```
+on:keydown={(e) => e.key === 'Escape' && onCancel()}
 ```
 
 We also use `todo.id` to create unique ids for the new input controls and labels.
@@ -469,7 +467,7 @@ We also use `todo.id` to create unique ids for the new input controls and labels
     <div class="stack-small">
     {#if editing}
       <!-- markup for editing todo: label, input text, Cancel and Save Button -->
-      <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={e => e.key === 'Escape' && onCancel()}>
+      <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={(e) => e.key === 'Escape' && onCancel()}>
         <div class="form-group">
           <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
           <input bind:value={name} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" />
@@ -509,7 +507,7 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
     ```js
     function updateTodo(todo) {
-      const i = todos.findIndex(t => t.id === todo.id)
+      const i = todos.findIndex((t) => t.id === todo.id)
       todos[i] = { ...todos[i], ...todo }
     }
     ```
@@ -518,12 +516,12 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
 3. Next we have to listen for the `update` event on our `<Todo>` component call, and run our `updateTodo()` function when this occurs to change the `name` and `completed` status. Update your \<Todo> call like this:
 
-    ```js
+    ```html
     {#each filterTodos(filter, todos) as todo (todo.id)}
       <li class="todo">
         <Todo {todo}
-          on:update={e => updateTodo(e.detail)}
-          on:remove={e => removeTodo(e.detail)}
+          on:update={(e) => updateTodo(e.detail)}
+          on:remove={(e) => removeTodo(e.detail)}
         />
       </li>
     ```

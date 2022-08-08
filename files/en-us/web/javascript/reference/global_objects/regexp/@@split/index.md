@@ -46,7 +46,7 @@ This method is called internally in {{jsxref("String.prototype.split()")}} when 
 
 This method exists for customizing the behavior of `split()` in `RegExp` subclasses.
 
-The `RegExp.prototype.@@split` base method exhibits the following behaviors:
+The `RegExp.prototype[@@split]()` base method exhibits the following behaviors:
 
 - The regexp's `g` ("global") flag is ignored, and the `y` ("sticky") flag is always applied even when it was not originally present.
 - If the target string is empty, and the regexp can match empty strings (for example, `/a?/`), an empty array is returned. Otherwise, if the regexp can't match an empty string, `[""]` is returned.
@@ -64,9 +64,9 @@ This method can be used in almost the same way as
 different order of arguments.
 
 ```js
-let re = /-/g;
-let str = '2016-01-02';
-let result = re[Symbol.split](str);
+const re = /-/g;
+const str = '2016-01-02';
+const result = re[Symbol.split](str);
 console.log(result);  // ["2016", "01", "02"]
 ```
 
@@ -78,14 +78,14 @@ modify the default behavior.
 ```js
 class MyRegExp extends RegExp {
   [Symbol.split](str, limit) {
-    let result = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return result.map(x => "(" + x + ")");
+    const result = RegExp.prototype[Symbol.split].call(this, str, limit);
+    return result.map((x) => `(${x})`);
   }
 }
 
-let re = new MyRegExp('-');
-let str = '2016-01-02';
-let result = str.split(re); // String.prototype.split calls re[@@split].
+const re = new MyRegExp('-');
+const str = '2016-01-02';
+const result = str.split(re); // String.prototype.split calls re[@@split].
 console.log(result); // ["(2016)", "(01)", "(02)"]
 ```
 

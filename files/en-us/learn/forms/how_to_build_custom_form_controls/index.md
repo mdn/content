@@ -182,7 +182,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 
 ```css
 .select {
-  /* The computations are made assuming 1em == 16px which is the default value in most browsers.
+  /* The computations are made assuming 1em equals 16px which is the default value in most browsers.
      If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
   font-size   : 0.625em; /* this (10px) is the new font size context for em value in this context */
   font-family : Verdana, Arial, sans-serif;
@@ -323,7 +323,7 @@ So here's the result with our three states:
 
 Now that our design and structure are ready, we can write the JavaScript code to make the control actually work.
 
-> **Warning:** The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will not work on legacy browsers. It also has redundant parts that should be optimized in production code.
+> **Warning:** The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will work on legacy browsers. It also has redundant parts that should be optimized in production code.
 
 ### Why isn't it working?
 
@@ -337,7 +337,7 @@ Before starting, it's important to remember **JavaScript in the browser is an un
 - The user is using a legacy browser, and one of the features you require is not supported: This will happen frequently when you make use of cutting-edge APIs.
 - The user is interacting with the content before the JavaScript has been fully downloaded, parsed, and executed.
 
-Because of these risks, it's really important to seriously consider what will happen if your JavaScript doesn't work. We'll discuss options to consider and cover the basics in our example (a full discussion of solving this issue for all scenarios would require a book). Just remember, it is vital make your script generic and reusable.
+Because of these risks, it's really important to seriously consider what will happen if your JavaScript doesn't work. We'll discuss options to consider and cover the basics in our example (a full discussion of solving this issue for all scenarios would require a book). Just remember, it is vital to make your script generic and reusable.
 
 In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. We include our control and the {{HTMLElement("select")}}; which one is displayed depends on the class of the body element, with the class of the body element being updated by the script that makes the control function, when it loads successfully
 
@@ -371,7 +371,7 @@ First, we need to add a regular {{HTMLElement("select")}} element before each in
 </body>
 ```
 
-Second, we need two new classes to let us hide the unneeded element: we visually hide the "real" {{HTMLElement("select")}} element if our script isn't running, or the custom control if it is running. Note that, by default, our HTML code hides our custom control.
+Second, we need two new classes to let us hide the unneeded element: we visually hide the custom control if our script isn't running, or the "real" {{HTMLElement("select")}} element if it is running. Note that, by default, our HTML code hides our custom control.
 
 ```css
 .widget select,
@@ -469,7 +469,8 @@ function deactivateSelect(select) {
   select.classList.remove('active');
 }
 
-// This function will be used each time the user wants to (de)activate the control
+// This function will be used each time the user wants to activate the control
+// (which, in turn, will deactivate other select controls)
 // It takes two parameters:
 // select : the DOM node with the `select` class to activate
 // selectList : the list of all the DOM nodes with the `select` class
@@ -576,8 +577,8 @@ window.addEventListener('load', function () {
     select.addEventListener('keyup', function (event) {
 
       // deactivate on keyup of `esc`
-      if (event.keyCode === 27) {
-         deactivateSelect(select);
+      if (event.key === "Escape") {
+        deactivateSelect(select);
       }
     });
 });
@@ -671,10 +672,10 @@ window.addEventListener('load', function () {
           index  = getIndex(select);
 
       // When the user hits the down arrow, we jump to the next option
-      if (event.keyCode === 40 && index < length - 1) { index++; }
+      if (event.key === "ArrowDown" && index < length - 1) { index++; }
 
       // When the user hits the up arrow, we jump to the previous option
-      if (event.keyCode === 38 && index > 0) { index--; }
+      if (event.key === "ArrowUp" && index > 0) { index--; }
 
       updateValue(select, index);
     });

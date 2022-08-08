@@ -19,8 +19,8 @@ another window/tab on the same computer).
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('versionchange', event => { });
-onversionchange = event => { };
+addEventListener('versionchange', (event) => { });
+onversionchange = (event) => { };
 ```
 
 ## Event type
@@ -35,7 +35,7 @@ This example opens a database and, on success, adds a listener to `versionchange
 // Open the database
 const dBOpenRequest = window.indexedDB.open('Nonexistent', 4);
 
-dBOpenRequest.onupgradeneeded = event => {
+dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
   // Create an objectStore for this database
   const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
@@ -48,9 +48,9 @@ dBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-dBOpenRequest.addEventListener('success', event => {
+dBOpenRequest.addEventListener('success', (event) => {
   const db = event.target.result;
-  db.addEventListener('versionchange', event => {
+  db.addEventListener('versionchange', (event) => {
     console.log('The version of this database has changed');
   });
 
@@ -63,7 +63,7 @@ The same example, using the `onversionchange` event handler property:
 // Open the database
 const dBOpenRequest = window.indexedDB.open('Nonexistent', 4);
 
-dBOpenRequest.onupgradeneeded = event => {
+dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
   // Create an objectStore for this database
   const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
@@ -76,9 +76,9 @@ dBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-dBOpenRequest.onsuccess = event => {
+dBOpenRequest.onsuccess = (event) => {
   const db = event.target.result;
-  db.onversionchange = event => {
+  db.onversionchange = (event) => {
     console.log('The version of this database has changed');
   };
 };

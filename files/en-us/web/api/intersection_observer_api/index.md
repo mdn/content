@@ -89,7 +89,7 @@ Whenever the target meets a threshold specified for the `IntersectionObserver`, 
 
 ```js
 let callback = (entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     // Each entry describes an intersection change for one observed
     // target element:
     //   entry.boundingClientRect
@@ -324,7 +324,7 @@ The code snippet below shows a callback which keeps a counter of how many times 
 
 ```js
 const intersectionCallback = (entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       let elem = entry.target;
 

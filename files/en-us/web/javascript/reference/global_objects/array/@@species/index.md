@@ -54,8 +54,8 @@ class NotAnArray {
 
 const arr = [0, 1, 2];
 arr.constructor = { [Symbol.species]: NotAnArray };
-arr.map(i => i); // NotAnArray { '0': 0, '1': 1, '2': 2, length: 3 }
-arr.filter(i => i); // NotAnArray { '0': 1, '1': 2, length: 0 }
+arr.map((i) => i); // NotAnArray { '0': 0, '1': 1, '2': 2, length: 3 }
+arr.filter((i) => i); // NotAnArray { '0': 1, '1': 2, length: 0 }
 arr.concat([1, 2]); // NotAnArray { '0': 0, '1': 1, '2': 2, '3': 1, '4': 2, length: 5 }
 ```
 

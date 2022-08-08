@@ -67,7 +67,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var element = document.getElementById("box");
+const element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);

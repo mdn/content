@@ -130,7 +130,7 @@ Let's put it all together with a simple HTTP request. Our JavaScript will reques
 
 <script>
 (function() {
-  var httpRequest;
+  let httpRequest;
   document.getElementById("ajaxButton").addEventListener('click', makeRequest);
 
   function makeRequest() {
@@ -183,8 +183,7 @@ function alertContents() {
         alert('There was a problem with the request.');
       }
     }
-  }
-  catch( e ) {
+  } catch (e) {
     alert('Caught Exception: ' + e.description);
   }
 }

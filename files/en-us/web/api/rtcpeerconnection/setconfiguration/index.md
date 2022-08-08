@@ -67,7 +67,7 @@ setConfiguration(configuration)
 In this example, it has already been determined that ICE restart is needed, and that negotiation needs to be done using a different ICE server.
 
 ```js
-var restartConfig = {
+const restartConfig = {
   iceServers: [{
     urls: "turn:asia.myturnserver.net",
     username: "allie@oopcode.com",
@@ -77,13 +77,12 @@ var restartConfig = {
 
 myPeerConnection.setConfiguration(restartConfig);
 
-myPeerConnection.createOffer({"iceRestart": true}).then(function(offer) {
-  return myPeerConnection.setLocalDescription(offer);
-})
-.then(function() {
-  // send the offer to the other peer using the signaling server
-})
-.catch(reportError);
+myPeerConnection.createOffer({ "iceRestart": true })
+  .then((offer) => myPeerConnection.setLocalDescription(offer))
+  .then(() => {
+    // send the offer to the other peer using the signaling server
+  })
+  .catch(reportError);
 ```
 
 First, a new object is created, `restartConfig`,

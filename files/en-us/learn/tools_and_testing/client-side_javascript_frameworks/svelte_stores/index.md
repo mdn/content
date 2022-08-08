@@ -131,7 +131,7 @@ Let's now create our `Alert` component and see how we can read values from the s
 
       let alertContent = ''
 
-      const unsubscribe = alert.subscribe(value => alertContent = value)
+      const unsubscribe = alert.subscribe((value) => alertContent = value)
 
       onDestroy(unsubscribe)
     </script>
@@ -211,14 +211,14 @@ Let's now use our component.
 
 This works, but you'll have to copy and paste all this code every time you want to subscribe to a store:
 
-```js
+```html
 <script>
   import myStore from './stores.js'
   import { onDestroy } from 'svelte'
 
   let myStoreContent = ''
 
-  const unsubscribe = myStore.subscribe(value => myStoreContent = value)
+  const unsubscribe = myStore.subscribe((value) => myStoreContent = value)
 
   onDestroy(unsubscribe)
 </script>
@@ -283,7 +283,7 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     function removeTodo(todo) {
-      todos = todos.filter(t => t.id !== todo.id)
+      todos = todos.filter((t) => t.id !== todo.id)
       todosStatus.focus()             // give focus to status heading
       $alert = `Todo '${todo.name}' has been deleted`
     }
@@ -293,7 +293,7 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     function updateTodo(todo) {
-      const i = todos.findIndex(t => t.id === todo.id)
+      const i = todos.findIndex((t) => t.id === todo.id)
       if (todos[i].name !== todo.name)            $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`
       if (todos[i].completed !== todo.completed)  $alert = `todo '${todos[i].name}' marked as ${todo.completed ? 'completed' : 'active'}`
       todos[i] = { ...todos[i], ...todo }
@@ -314,12 +314,12 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     const checkAllTodos = (completed) => {
-      todos = todos.map(t => ({...t, completed}))
+      todos = todos.map((t) => ({...t, completed}))
       $alert = `${completed ? 'Checked' : 'Unchecked'} ${todos.length} to-dos`
     }
     const removeCompletedTodos = () => {
-      $alert = `Removed ${todos.filter(t => t.completed).length} to-dos`
-      todos = todos.filter(t => !t.completed)
+      $alert = `Removed ${todos.filter((t) => t.completed).length} to-dos`
+      todos = todos.filter((t) => !t.completed)
     }
     ```
 
@@ -340,28 +340,25 @@ Lets see how to do that. We'll specify a prop with the milliseconds to wait befo
 1. Update the `<script>` section of your `Alert.svelte` component like so:
 
     ```js
-    <script>
-      import { onDestroy } from 'svelte'
-      import { alert } from '../stores.js'
+    import { onDestroy } from 'svelte'
+    import { alert } from '../stores.js'
 
-      export let ms = 3000
-      let visible
-      let timeout
+    export let ms = 3000
+    let visible
+    let timeout
 
-      const onMessageChange = (message, ms) => {
-        clearTimeout(timeout)
-        if (!message) {               // hide Alert if message is empty
-          visible = false
-        } else {
-          visible = true                                              // show alert
-          if (ms > 0) timeout = setTimeout(() => visible = false, ms) // and hide it after ms milliseconds
-        }
+    const onMessageChange = (message, ms) => {
+      clearTimeout(timeout)
+      if (!message) {               // hide Alert if message is empty
+        visible = false
+      } else {
+        visible = true                                              // show alert
+        if (ms > 0) timeout = setTimeout(() => visible = false, ms) // and hide it after ms milliseconds
       }
-      $: onMessageChange($alert, ms)      // whenever the alert store or the ms props changes run onMessageChange
+    }
+    $: onMessageChange($alert, ms)      // whenever the alert store or the ms props changes run onMessageChange
 
-      onDestroy(()=> clearTimeout(timeout))           // make sure we clean-up the timeout
-
-    </script>
+    onDestroy(() => clearTimeout(timeout))           // make sure we clean-up the timeout
     ```
 
 2. And update the `Alert.svelte` markup section like so:
@@ -493,13 +490,13 @@ export const writable = (initial_value = 0) => {
   const subscribe = (handler) => {
     subs = [...subs, handler]                                 // add handler to the array of subscribers
     handler(value)                                            // call handler with current value
-    return () => subs = subs.filter(sub => sub !== handler)   // return unsubscribe function
+    return () => subs = subs.filter((sub) => sub !== handler)   // return unsubscribe function
   }
 
   const set = (new_value) => {
     if (value === new_value) return         // same value, exit
     value = new_value                       // update value
-    subs.forEach(sub => sub(value))         // update subscribers
+    subs.forEach((sub) => sub(value))         // update subscribers
   }
 
   const update = (update_fn) => set(update_fn(value))   // update function
@@ -521,7 +518,7 @@ function myStore() {
 
   return {
     subscribe,
-    addOne: () => update(n => n + 1),
+    addOne: () => update((n) => n + 1),
     reset: () => set(0)
   };
 }

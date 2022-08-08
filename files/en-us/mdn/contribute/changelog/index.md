@@ -20,7 +20,7 @@ Conversion to Markdown is done, so remove the old CSS style guide and redirect t
 
 Multiple updates to the CSS style guide to reflect the move towards Markdown, and encourage authors to write HTML in a Markdown-compatible way.
 
-- Note and warning boxes no longer have a separate `<h4>` heading for the title (e.g. `<h4>Warning</h4>` ).
+- Note and warning boxes no longer have a separate `<h4>` heading for the title (e.g. `<h4>Warning</h4>`).
 
   See our [Markdown in MDN](/en-US/docs/MDN/Contribute/Markdown_in_MDN#notes_warnings_and_callouts) guide for the correct syntax.
 

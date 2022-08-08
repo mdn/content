@@ -37,7 +37,6 @@ scripts.
           {{CSP("default-src")}} directive, when governing worker
           execution.
         </p>
-        <p></p>
       </td>
     </tr>
   </tbody>

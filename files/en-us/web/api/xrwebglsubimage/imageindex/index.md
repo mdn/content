@@ -15,11 +15,11 @@ browser-compat: api.XRWebGLSubImage.imageIndex
 ---
 {{APIRef("WebXR Device API")}}
 
-The read-only **`imageIndex`** property of the {{domxref("XRWebGLSubImage")}} interface is a number representing the offset into the texture array if the layer was requested with `texture-array`; {{jsxref("null")}} otherwise.
+The read-only **`imageIndex`** property of the {{domxref("XRWebGLSubImage")}} interface is a number representing the offset into the texture array if the layer was requested with `texture-array`; [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
 
 ## Value
 
-A number or {{jsxref("null")}} if the layer wasn't requested with `texture-array`.
+A number or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the layer wasn't requested with `texture-array`.
 
 ### Using `imageIndex`
 

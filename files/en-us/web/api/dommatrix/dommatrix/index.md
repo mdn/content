@@ -40,13 +40,13 @@ This example creates a DOMMatrix to use as an argument for calling
 {{domxref("Point.matrixTransform()")}}.
 
 ```js
-var point = new DOMPoint(5, 4);
-var scaleX = 2;
-var scaleY = 3;
-var translateX = 12;
-var translateY = 8;
-var angle = Math.PI / 2;
-var matrix = new DOMMatrix([
+const point = new DOMPoint(5, 4);
+const scaleX = 2;
+const scaleY = 3;
+const translateX = 12;
+const translateY = 8;
+const angle = Math.PI / 2;
+const matrix = new DOMMatrix([
   Math.sin(angle) * scaleX,
   Math.cos(angle) * scaleX,
   -Math.sin(angle) * scaleY,
@@ -54,7 +54,7 @@ var matrix = new DOMMatrix([
   translateX,
   translateY
 ]);
-var transformedPoint = point.matrixTransform(matrix);
+const transformedPoint = point.matrixTransform(matrix);
 ```
 
 ## Specifications

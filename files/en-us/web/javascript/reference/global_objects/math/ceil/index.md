@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Math.ceil
 
 The **`Math.ceil()`** function always rounds a number up to the next largest integer.
 
-> **Note:** `Math.ceil({{jsxref("null")}})` returns integer 0 and does not give a {{jsxref("NaN")}} error.
+> **Note:** `Math.ceil([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))` returns integer 0 and does not give a {{jsxref("NaN")}} error.
 
 {{EmbedInteractiveExample("pages/js/math-ceil.html")}}
 

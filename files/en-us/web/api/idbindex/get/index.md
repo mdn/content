@@ -79,13 +79,13 @@ function displayDataByIndex() {
 
   const myIndex = objectStore.index('lName');
   const getRequest = myIndex.get('Bungle');
-  getRequest.onsuccess = function() {
+  getRequest.onsuccess = () => {
     console.log(getRequest.result);
   }
 
-  myIndex.openCursor().onsuccess = function(event) {
+  myIndex.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const tableRow = document.createElement('tr');
       tableRow.innerHTML = `<td>${cursor.value.id}</td>`
                          + `<td>${cursor.value.lName}</td>`

@@ -14,11 +14,11 @@ The **`Boolean`** object is an object wrapper for a boolean value.
 
 ## Description
 
-The value passed as the first parameter is converted to a boolean value, if necessary. If the value is omitted or is `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, or the empty string (`""`), the object has an initial value of `false`. All other values, including any object, an empty array (`[]`), or the string "`false`", create an object with an initial value of `true`.
+The value passed as the first parameter is converted to a boolean value, if necessary. If the value is omitted or is `0`, `-0`, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, or the empty string (`""`), the object has an initial value of `false`. All other values, including any object, an empty array (`[]`), or the string `"false"`, create an object with an initial value of `true`.
 
 Do not confuse the {{Glossary("Primitive", "primitive")}} `Boolean` values `true` and `false` with the `true` and `false` values of the `Boolean` object.
 
-**Any** object of which the value is not {{jsxref("undefined")}} or {{jsxref("null")}}, including a `Boolean` object whose value is `false`, evaluates to `true` when passed to a conditional statement. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to `true`:
+**Any** object of which the value is not {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), including a `Boolean` object whose value is `false`, evaluates to `true` when passed to a conditional statement. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to `true`:
 
 ```js
 const x = new Boolean(false);
@@ -39,18 +39,18 @@ if (x) {
 Do not use a `Boolean` object to convert a non-boolean value to a boolean value. To perform this task, instead, use `Boolean` as a function, or a [double NOT operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!):
 
 ```js
-const x = Boolean(expression);     // use this
-const x = !!(expression);          // or this
-const x = new Boolean(expression); // don't use this!
+const good = Boolean(expression);    // use this
+const good2 = !!(expression);        // or this
+const bad = new Boolean(expression); // don't use this!
 ```
 
 If you specify any object, including a `Boolean` object whose value is `false`, as the initial value of a `Boolean` object, the new `Boolean` object has a value of `true`.
 
 ```js
 const myFalse = new Boolean(false);   // initial value of false
-const g = Boolean(myFalse);       // initial value of true
+const g = Boolean(myFalse);           // initial value of true
 const myString = new String('Hello'); // string object
-const s = Boolean(myString);      // initial value of true
+const s = Boolean(myString);          // initial value of true
 ```
 
 Do not use a `Boolean` object in place of a `Boolean` primitive.
@@ -80,7 +80,7 @@ The reason for `[] == false` even though `[]` is truthy is: the comparison `[] =
 
 ## Examples
 
-### Creating `Boolean` objects with an initial value of `false`
+### Creating Boolean objects with an initial value of false
 
 ```js
 const bNoParam = new Boolean();
@@ -90,7 +90,7 @@ const bEmptyString = new Boolean('');
 const bfalse = new Boolean(false);
 ```
 
-### Creating `Boolean` objects with an initial value of `true`
+### Creating Boolean objects with an initial value of true
 
 ```js
 const btrue = new Boolean(true);

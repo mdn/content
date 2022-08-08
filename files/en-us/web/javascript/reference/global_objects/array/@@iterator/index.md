@@ -52,9 +52,9 @@ return the {{jsxref("Array.prototype.values()", "values()")}} function.
 
 ```js
 const arr = ['a', 'b', 'c'];
-const eArr = arr[Symbol.iterator]();
+const arrIter = arr[Symbol.iterator]();
 const letterResult = document.getElementById('letterResult');
-for (const letter of eArr) {
+for (const letter of arrIter) {
   const li = document.createElement('li');
   li.textContent = letter;
   letterResult.appendChild(li);
@@ -70,12 +70,12 @@ for (const letter of eArr) {
 
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];
-const eArr = arr[Symbol.iterator]();
-console.log(eArr.next().value); // a
-console.log(eArr.next().value); // b
-console.log(eArr.next().value); // c
-console.log(eArr.next().value); // d
-console.log(eArr.next().value); // e
+const arrIter = arr[Symbol.iterator]();
+console.log(arrIter.next().value); // a
+console.log(arrIter.next().value); // b
+console.log(arrIter.next().value); // c
+console.log(arrIter.next().value); // d
+console.log(arrIter.next().value); // e
 ```
 
 ### Use case for brace notation
@@ -90,7 +90,7 @@ object or a custom object.
 ```js
 function logIterable(it) {
   if (!(Symbol.iterator in it)) {
-    console.log(it, ' is not an iterable object...');
+    console.log(it, ' is not an iterable object.');
     return;
   }
 
@@ -113,7 +113,7 @@ logIterable('abc');
 // c
 
 logIterable(123);
-// 123 is not an iterable object...
+// 123 is not an iterable object.
 ```
 
 ## Specifications

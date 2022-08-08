@@ -76,12 +76,12 @@ const pitchValue = document.querySelector('.pitch-value');
 const rate = document.querySelector('#rate');
 const rateValue = document.querySelector('.rate-value');
 
-const voices = [];
+let voices = [];
 
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(let i = 0; i < voices.length ; i++) {
+  for (let i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
@@ -100,12 +100,12 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(let i = 0; i < voices.length ; i++) {
+  for (let i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }

@@ -186,7 +186,7 @@ function remove_event(ev) {
  // Remove this event from the target's cache
  const cache = get_cache(ev);
  for (let i = 0; i < cache.length; i++) {
-   if (cache[i].pointerId == ev.pointerId) {
+   if (cache[i].pointerId === ev.pointerId) {
      cache.splice(i, 1);
      break;
    }
@@ -236,7 +236,7 @@ These functions are used send to event activity to the application window (to su
 let logEvents = false;
 
 function enableLog(ev) {
-  logEvents = logEvents ? false : true;
+  logEvents = !logEvents;
 }
 
 function log(name, ev) {

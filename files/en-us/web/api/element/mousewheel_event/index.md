@@ -33,7 +33,7 @@ onmousewheel = (event) => { };
 
 ## Event type
 
-An {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("WheelEvent")}}
 
@@ -101,8 +101,6 @@ If the device supports continuous scroll (e.g., trackpad of MacBook or mouse whe
 If the device does **not** support continuous scroll (typically, old mouse wheel which cannot be turned smoothly), the value is computed from non-accelerated scroll amount (120 per notch). In this case, the value is different from Safari.
 
 This difference makes a serious issue for web application developers. That is, web developers cannot know if `mousewheel` event is caused by which device.
-
-See `WebInputEventFactory::mouseWheelEvent` of the [Chromium's source code](http://mxr.mozilla.org/chromium/source/src/third_party/WebKit/Source/web/WebInputEventFactoryMac.mm) for the detail.
 
 ### Safari
 

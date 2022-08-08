@@ -14,11 +14,11 @@ browser-compat: api.XRView.recommendedViewportScale
 ---
 {{APIRef("WebXR Device API")}}
 
-The read-only **`recommendedViewportScale`** property of the {{domxref("XRView")}} interface is the recommended viewport scale value that you can use for {{domxref("XRView.requestViewportScale()")}} if the user agent has such a recommendation; {{jsxref("null")}} otherwise.
+The read-only **`recommendedViewportScale`** property of the {{domxref("XRView")}} interface is the recommended viewport scale value that you can use for {{domxref("XRView.requestViewportScale()")}} if the user agent has such a recommendation; [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
 
 ## Value
 
-A number greater than 0.0 and less than or equal to 1.0; or {{jsxref("null")}} if the user agent does not provide a recommended scale.
+A number greater than 0.0 and less than or equal to 1.0; or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the user agent does not provide a recommended scale.
 
 ## Examples
 

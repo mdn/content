@@ -46,7 +46,7 @@ const cells = table.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "td")
 
 for (let i = 0; i < cells.length; i++) {
     const axis = cells[i].getAttribute("axis");
-    if (axis == "year") {
+    if (axis === "year") {
         // grab the data
     }
 }

@@ -24,10 +24,6 @@ Each {{domxref("RTCPeerConnection")}} can therefore have up to a theoretical max
 65,534 data channels on it, although the actual maximum may vary from browser to
 browser.
 
-> **Note:** In early versions of the WebRTC specification, this property's name was
-> {{domxref("RTCDataChannel.stream", "stream")}}. Code that uses that property needs to
-> be updated.
-
 ## Value
 
 An `unsigned short` value (that is, an integer between 0 and 65,535) which

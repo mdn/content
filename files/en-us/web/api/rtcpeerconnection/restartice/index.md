@@ -80,7 +80,7 @@ This example creates a handler for the
 state by restarting ICE in order to try again.
 
 ```js
-pc.addEventListener("iceconnectionstatechange", event => {
+pc.addEventListener("iceconnectionstatechange", (event) => {
   if (pc.iceConnectionState === "failed") {
     /* possibly reconfigure the connection in some way here */
     /* then request ICE restart */

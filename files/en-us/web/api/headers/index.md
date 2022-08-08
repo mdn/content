@@ -65,7 +65,7 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
 In the following snippet, we create a new header using the `Headers()` constructor, add a new header to it using `append()`, then return that header value using `get()`:
 
 ```js
-var myHeaders = new Headers();
+const myHeaders = new Headers();
 
 myHeaders.append('Content-Type', 'text/xml');
 myHeaders.get('Content-Type') // should return 'text/xml'
@@ -74,7 +74,7 @@ myHeaders.get('Content-Type') // should return 'text/xml'
 The same can be achieved by passing an array of arrays or an object literal to the constructor:
 
 ```js
-var myHeaders = new Headers({
+let myHeaders = new Headers({
     'Content-Type': 'text/xml'
 });
 

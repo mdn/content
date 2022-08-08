@@ -37,10 +37,10 @@ Expression closures omit curly braces or return statements from function declara
 or from method definitions in objects.
 
 ```js example-bad
-var x = function() 1;
+var x = function () 1;
 
 var obj = {
-  count: function() 1
+  count: function () 1
 };
 ```
 
@@ -50,7 +50,7 @@ To convert the non-standard expression closures syntax to standard ECMAScript sy
 you can add curly braces and return statements.
 
 ```js example-good
-const x = function() { return 1; }
+const x = function () { return 1; }
 
 const obj = {
   count() { return 1; }

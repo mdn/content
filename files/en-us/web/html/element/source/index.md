@@ -93,7 +93,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     2. A width descriptor, which consists of a string containing a positive integer directly followed by `"w"`, such as `300w`. The default value, if missing, is the infinity.
     3. A pixel density descriptor, that is a positive floating number directly followed by `"x"`. The default value, if missing, is `1x`.
 
-    Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor. The browser chooses the most adequate image to display at a given point of time.
+    Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor. The browser chooses the most adequate image to display at a given point of time. If width descriptors are used, the `sizes` attribute must also be present, or the `srcset` value will be ignored.
 
 - {{htmlattrdef("sizes")}}
   - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.

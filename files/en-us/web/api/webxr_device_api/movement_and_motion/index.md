@@ -262,7 +262,7 @@ function sessionStarted(session) {
     baseLayer: new XRWebGLLayer(xrSession, gl)
   });
 
-  if (SESSION_TYPE == "immersive-vr") {
+  if (SESSION_TYPE === "immersive-vr") {
     refSpaceType = "local";
   } else {
     refSpaceType = "viewer";

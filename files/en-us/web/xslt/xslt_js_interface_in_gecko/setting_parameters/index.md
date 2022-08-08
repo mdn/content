@@ -23,7 +23,7 @@ XSLT provides the `xsl:param` element, which is a child of the `xsl:stylesheet` 
 
 var sortVal = xsltProcessor.getParameter(null, "myOrder");
 
-if (sortVal == "" || sortVal == "descending")
+if (sortVal === "" || sortVal === "descending")
   xsltProcessor.setParameter(null, "myOrder", "ascending");
 else
   xsltProcessor.setParameter(null, "myOrder", "descending");

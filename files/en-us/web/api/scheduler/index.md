@@ -37,9 +37,10 @@ The code also shows a `catch` block, which would be required in more complex cod
 if ('scheduler' in this) {
   // Post task with default priority: 'user-visible' (no other options)
   // When the task resolves, Promise.then() logs the result.
-  scheduler.postTask( ()=>{ return 'Task executing'; } )
-    .then( (taskResult) => { console.log(`${taskResult}`); }) // Log result
-    .catch( (error) => { console.log(`Error: ${error}`); });  // Log errors
+  scheduler
+    .postTask(() => 'Task executing')
+    .then((taskResult) => console.log(`${taskResult}`)) // Log result
+    .catch((error) => console.error(`Error: ${error}`)); // Log errors
 }
 ```
 

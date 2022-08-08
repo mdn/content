@@ -35,9 +35,9 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var htmlCanvas = document.createElement('canvas');
-var offscreen = htmlCanvas.transferControlToOffscreen();
-var gl = offscreen.getContext('webgl');
+const htmlCanvas = document.createElement('canvas');
+const offscreen = htmlCanvas.transferControlToOffscreen();
+const gl = offscreen.getContext('webgl');
 
 // Perform some drawing using the gl context
 

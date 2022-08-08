@@ -33,7 +33,7 @@ Let's look at an example to clear things up (you can find this on GitHub as [tab
 var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
 WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then(obj => {
+.then((obj) => {
   var tbl = obj.instance.exports.tbl;
   console.log(tbl.get(0)());  // 13
   console.log(tbl.get(1)());  // 42
@@ -63,7 +63,7 @@ typeof testFunc;
 
 you'll get the result `function` returned. You can then go on to do pretty much anything to this function that you can do to other [functions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) in JavaScript — [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), etc. `testFunc.toString()` returns an interesting result:
 
-```js
+```plain
 function 0() {
     [native code]
 }

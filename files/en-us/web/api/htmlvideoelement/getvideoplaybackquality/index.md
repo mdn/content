@@ -51,9 +51,9 @@ elapsed so far in the playback process. This value includes any dropped or corru
 frames, so it's not the same as "total number of frames played."
 
 ```js
-var videoElem = document.getElementById("my_vid");
-var counterElem = document.getElementById("counter");
-var quality = videoElem.getVideoPlaybackQuality();
+const videoElem = document.getElementById("my_vid");
+const counterElem = document.getElementById("counter");
+const quality = videoElem.getVideoPlaybackQuality();
 
 counterElem.innerText = quality.totalVideoFrames;
 ```

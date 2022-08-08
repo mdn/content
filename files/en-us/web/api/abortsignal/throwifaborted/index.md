@@ -101,9 +101,9 @@ const signal = controller.signal;
 startSpinner();
 
 myCoolPromiseAPI({ /* … ,*/ signal })
-  .then(result => { })
-  .catch(err => {
-    if (err.name == 'AbortError') return;
+  .then((result) => { })
+  .catch((err) => {
+    if (err.name === 'AbortError') return;
     showUserErrorMessage();
   })
   .then(() => stopSpinner());

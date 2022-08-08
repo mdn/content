@@ -97,22 +97,22 @@ function drop_handler(ev) {
   const data = event.dataTransfer.items;
   // Loop through the dropped items and log their data
   for (const item of data) {
-    if ((item.kind == 'string') &&
+    if ((item.kind === 'string') &&
         (item.type.match('^text/plain'))) {
       // This item is the target node
-      item.getAsString(function (s){
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((item.kind == 'string') &&
+    } else if ((item.kind === 'string') &&
                (item.type.match('^text/html'))) {
       // Drag data item is HTML
-      item.getAsString(function (s){
+      item.getAsString((s) => {
         console.log(`… Drop: HTML = ${s}`);
       });
-    } else if ((item.kind == 'string') &&
+    } else if ((item.kind === 'string') &&
                (item.type.match('^text/uri-list'))) {
       // Drag data item is URI
-      item.getAsString(function (s){
+      item.getAsString((s) => {
         console.log(`… Drop: URI = ${s}`);
       });
     }

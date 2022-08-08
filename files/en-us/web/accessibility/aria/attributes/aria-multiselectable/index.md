@@ -177,7 +177,6 @@ Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/
 
 - `true`
   - : More than one item in the widget may be selected at a time
-  -
 - `false`
   - : Only one item can be selected
 

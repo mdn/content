@@ -23,9 +23,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplaydeactivate', event => { });
+addEventListener('vrdisplaydeactivate', (event) => { });
 
-onvrdisplaydeactivate = event => { };
+onvrdisplaydeactivate = (event) => { };
 ```
 
 ## Event type
@@ -48,7 +48,7 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplaydeactivate` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplaydeactivate', function() {
+window.addEventListener('vrdisplaydeactivate', () => {
   info.textContent = 'Display deactivated.';
   reportDisplays();
 });
@@ -57,7 +57,7 @@ window.addEventListener('vrdisplaydeactivate', function() {
 Or use the `onvrdisplaydeactivate` event handler property:
 
 ```js
-window.onvrdisplaydeactivate = function() {
+window.onvrdisplaydeactivate = () => {
   info.textContent = 'Display deactivated.';
   reportDisplays();
 };

@@ -14,5 +14,5 @@ The first 128 UTF-8 characters precisely match the first 128 ASCII characters (n
 
 ## See also
 
-- {{Interwiki("wikipedia", "UTF-8")}} on Wikipedia
+- [UTF-8](https://en.wikipedia.org/wiki/UTF-8) on Wikipedia
 - [FAQ about UTF-8 on Unicode website](https://www.unicode.org/faq/utf_bom.html#UTF8)

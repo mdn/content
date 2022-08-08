@@ -22,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('install', event => { });
+addEventListener('install', (event) => { });
 
-oninstall = event => { };
+oninstall = (event) => { };
 ```
 
 ## Event type
@@ -42,9 +42,9 @@ _Doesn't implement any specific properties, but inherits properties from its par
 The following snippet shows how an `install` event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener('install', (event) => {
   event.waitUntil(
-   caches.open('v1').then(function(cache) {
+   caches.open('v1').then((cache) => {
       return cache.addAll([
         '/sw-test/',
         '/sw-test/index.html',
@@ -65,7 +65,7 @@ this.addEventListener('install', function(event) {
 You can also set up the event handler using the `oninstall` property:
 
 ```js
-globalScope.oninstall = function(event) {
+globalScope.oninstall = (event) => {
   // ...
 };
 ```

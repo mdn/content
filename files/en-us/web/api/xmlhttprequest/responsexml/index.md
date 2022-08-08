@@ -56,7 +56,7 @@ data is not XML/HTML.
 ## Examples
 
 ```js
-var xhr = new XMLHttpRequest;
+const xhr = new XMLHttpRequest;
 xhr.open('GET', '/server');
 
 // If specified, responseType must be empty string or "document"

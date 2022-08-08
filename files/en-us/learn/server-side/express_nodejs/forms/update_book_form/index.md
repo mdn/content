@@ -143,7 +143,7 @@ This is very similar to the post route used when creating a Book. First we valid
 
 Open **/views/book_form.pug** and update the section where the author form control is set to have the conditional code shown below.
 
-```plain
+```pug
     div.form-group
       label(for='author') Author:
       select#author.form-control(type='select' placeholder='Select author' name='author' required='true' )
@@ -168,7 +168,7 @@ Open **/views/book_form.pug** and update the section where the author form contr
 
 Open the **book_detail.pug** view and make sure there are links for both deleting and updating books at the bottom of the page, as shown below.
 
-```plain
+```pug
   hr
   p
     a(href=book.url+'/delete') Delete Book

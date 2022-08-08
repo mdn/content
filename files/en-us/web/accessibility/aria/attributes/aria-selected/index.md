@@ -85,8 +85,7 @@ In this `tablist` example, the first `tab` is selected:
 - `true`
   - : The selectable element is selected.
 - `false`
-  - : The selectable element is not selected.
-  - : Implicit default for [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role).
+  - : The selectable element is not selected. Implicit default for [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role).
 - `undefined` (default)
   - : The element is not selectable.
 

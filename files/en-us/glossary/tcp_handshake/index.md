@@ -23,4 +23,4 @@ This handshake step happens after a {{glossary('DNS', 'DNS lookup')}} and before
 
 - [Transport Layer Security (TLS) protocol](/en-US/docs/Web/Security/Transport_Layer_Security)
 - {{Glossary("HTTPS")}}
-- {{Interwiki("wikipedia", "Transport Layer Security")}} on Wikipedia
+- [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security) on Wikipedia

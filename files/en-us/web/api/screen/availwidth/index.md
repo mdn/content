@@ -21,7 +21,7 @@ A number.
 ## Examples
 
 ```js
-var screenAvailWidth = window.screen.availWidth;
+const screenAvailWidth = window.screen.availWidth;
 
 console.log(screenAvailWidth);
 ```

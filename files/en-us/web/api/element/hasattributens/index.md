@@ -33,7 +33,7 @@ A boolean.
 
 ```js
 // Check that the attribute exists before you set a value
-var d = document.getElementById("div1");
+const d = document.getElementById("div1");
 if (d.hasAttributeNS(
         "http://www.mozilla.org/ns/specialspace/",
         "special-align")) {

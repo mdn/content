@@ -10,7 +10,7 @@ tags:
   - Storage
   - Storage Access API
 ---
-{{SeeCompatTable}}{{DefaultAPISidebar("Storage Access API")}}
+{{DefaultAPISidebar("Storage Access API")}}
 
 The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) should be used by embedded cross-origin documents to verify whether they have access to their first-party storage and, if not, to request access. We'll briefly look at a common storage access scenario.
 
@@ -35,17 +35,17 @@ First of all, if the `<iframe>` is sandboxed, the embedding website needs to add
 Now on to the code executed inside the embedded document. Since it does not know whether it currently has access to storage, it should first call {{domxref("Document.hasStorageAccess()")}}. If that call returns `false`, we can then call {{domxref("Document.requestStorageAccess()")}}, returning the result so that then we can chain it onto the previous promise call. In the final `then`, we'll have first-party storage access.
 
 ```js
-document.hasStorageAccess().then(hasAccess => {
+document.hasStorageAccess().then((hasAccess) => {
   if (!hasAccess) {
     return document.requestStorageAccess();
   }
-}).then(_ => {
+}).then(() => {
   // Now we have first-party storage access!
 
   // Let's access some items from the first-party cookie jar
   document.cookie = "foo=bar";              // set a cookie
   localStorage.setItem("username", "John"); // access a localStorage entry
-}).catch(_ => {
+}).catch(() => {
   // error obtaining storage access.
 });
 ```

@@ -68,13 +68,9 @@ browser-compat: html.elements.input.type_file
 
 ## Value
 
-A file input's {{htmlattrxref("value", "input")}} attribute contains a string that represents the path to the selected file(s). If the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the input's `HTMLInputElement.files` property.
+A file input's {{htmlattrxref("value", "input")}} attribute contains a string that represents the path to the selected file(s). If no file is selected yet, the value is an empty string (`""`). When the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the [input's `HTMLInputElement.files` property](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
 
-> **Note:**
->
-> 1. If multiple files are selected, the string represents the first selected file. JavaScript can access the other files [through the input's `files` property](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
-> 2. If no file is yet selected, the string is `""` (empty).
-> 3. The string [is prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), to prevent malicious software from guessing the user's file structure.
+> **Note:** The value is [always the file's name prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), which isn't the real path of the file. This is to prevent malicious software from guessing the user's file structure.
 
 ## Additional attributes
 
@@ -364,7 +360,7 @@ function updateImageDisplay() {
     const list = document.createElement('ol');
     preview.appendChild(list);
 
-    for(const file of curFiles) {
+    for (const file of curFiles) {
       const listItem = document.createElement('li');
       const para = document.createElement('p');
       if(validFileType(file)) {

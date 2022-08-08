@@ -414,10 +414,10 @@ const em = document.querySelector("#format-em");
 const link = document.querySelector("#format-link");
 const code = document.querySelector("#format-code");
 
-strong.addEventListener("click", e => insert("<strong>","</strong>"));
-em.addEventListener("click", e => insert("<em>","</em>"));
-link.addEventListener("click", e => insertURL());
-code.addEventListener("click", e => insert("\n<code>\n","\n</code>\n"));
+strong.addEventListener("click", (e) => insert("<strong>","</strong>"));
+em.addEventListener("click", (e) => insert("<em>","</em>"));
+link.addEventListener("click", (e) => insertURL());
+code.addEventListener("click", (e) => insert("\n<code>\n","\n</code>\n"));
 ```
 
 #### CSS

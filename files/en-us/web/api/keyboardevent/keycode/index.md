@@ -27,7 +27,7 @@ You should avoid using this if possible; it's been deprecated for some time. Ins
 ## Examples
 
 ```js
-window.addEventListener("keydown", function (event) {
+window.addEventListener("keydown", (event) => {
   if (event.defaultPrevented) {
     return; // Should do nothing if the default action has been cancelled
   }

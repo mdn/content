@@ -6,7 +6,6 @@ tags:
   - Method
   - Object
   - hasOwn
-  - Experimental
   - Polyfill
 browser-compat: javascript.builtins.Object.hasOwn
 ---
@@ -60,7 +59,7 @@ The following code shows how to determine whether the `example` object contains 
 
 ```js
 const example = {};
-Object.hasOwn(example, 'prop');   // false = 'prop' has not been defined
+Object.hasOwn(example, 'prop');   // false - 'prop' has not been defined
 
 example.prop = 'exists';
 Object.hasOwn(example, 'prop');   // true - 'prop' has been defined
