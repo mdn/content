@@ -78,7 +78,7 @@ async function start() {
       pc.addTrack(track, stream);
     }
     selfVideo.srcObject = stream;
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 }
@@ -125,7 +125,7 @@ pc.onnegotiationneeded = async () => {
     makingOffer = true;
     await pc.setLocalDescription();
     signaler.send({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   } finally {
     makingOffer = false;
@@ -175,13 +175,13 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
     } else if (candidate) {
       try {
         await pc.addIceCandidate(candidate);
-      } catch(err) {
+      } catch (err) {
         if (!ignoreOffer) {
           throw err;
         }
       }
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 }
@@ -224,7 +224,7 @@ pc.onnegotiationneeded = async () => {
   try {
     await pc.setLocalDescription(await pc.createOffer());
     signaler.send({description: pc.localDescription});
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 };
@@ -244,7 +244,7 @@ pc.onnegotiationneeded = async () => {
     makingOffer = true;
     await pc.setLocalDescription();
     signaler.send({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   } finally {
     makingOffer = false;
@@ -292,13 +292,13 @@ signaler.onmessage = async ({data: { description, candidate }}) => {
     } else if (candidate) {
       try {
         await pc.addIceCandidate(candidate);
-      } catch(err) {
+      } catch (err) {
         if (!ignoreOffer) {
           throw err;
         }
       }
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 };
@@ -342,13 +342,13 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
     } else if (candidate) {
       try {
         await pc.addIceCandidate(candidate);
-      } catch(err) {
+      } catch (err) {
         if (!ignoreOffer) {
           throw err;
         }
       }
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 }
@@ -402,7 +402,7 @@ pc.onnegotiationneeded = async () => {
     makingOffer = true;
     await pc.setLocalDescription();
     signaler.send({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   } finally {
     makingOffer = false;

@@ -852,7 +852,7 @@ try {
       }
     )
   );
-} catch(err) {}
+} catch (err) {}
 
 window.addEventListener('scroll', (event) => {
   /* do something */

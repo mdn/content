@@ -110,16 +110,16 @@ let matchedItems;
 
 try {
   matchedItems = document.querySelectorAll(':is(header, main, footer) p');
-} catch(e) {
+} catch (e) {
   try {
     matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
-  } catch(e) {
+  } catch (e) {
     try {
       matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
-    } catch(e) {
+    } catch (e) {
       try {
         matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
-      } catch(e) {
+      } catch (e) {
         console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
       }
     }

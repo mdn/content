@@ -166,7 +166,7 @@ async function handleNegotiationNeededEvent() {
     const offer = await pc.createOffer();
     pc.setLocalDescription(offer);
     signalRemotePeer({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     reportError(err);
   }
 }

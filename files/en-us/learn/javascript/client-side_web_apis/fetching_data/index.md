@@ -246,7 +246,7 @@ try {
 
   request.send();
 
-} catch(error) {
+} catch (error) {
   console.error(`XHR error ${request.status}`);
 }
 ```
