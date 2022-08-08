@@ -216,7 +216,7 @@ window.addEventListener('load', () => {
     // If the user hasn't told if they want to be notified or not
     // Note: because of Chrome, we are not sure the permission property
     // is set, therefore it's unsafe to check for the "default" value.
-    else if (Notification?.permission !== "denied") {
+    else if (Notification && Notification.permission !== "denied") {
       Notification.requestPermission((status) => {
         // If the user said okay
         if (status === "granted") {
