@@ -4,9 +4,8 @@ slug: Web/CSS/sin
 tags:
   - CSS
   - CSS Function
-  - Sin-Related
   - Function
-  - Layout
+  - Math
   - Reference
   - Web
   - sin
@@ -15,12 +14,23 @@ spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 {{CSSRef}}
 
-The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the sine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a `<number>` or an `<angle>` by interpreting the result of the argument as radians. That is, `sin(45deg)`, `sin(0.125turn)`, and `sin(3.14159 / 4)` all represent the same value, approximately `.707`.
+The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the sine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. That is, `sin(45deg)`, `sin(0.125turn)`, and `sin(3.14159 / 4)` all represent the same value, approximately `0.707`.
 
 ## Syntax
 
 ```css
-width: calc( sin(-45deg) * 1px );
+/* Single <angle> values */
+width: calc( sin(45deg) * 100px );
+width: calc( sin(0.25turn) * 100px );
+width: calc( sin(1.0471967rad) * 100px );
+
+/* Single <number> values */
+width: calc( sin(3.141592653589793) * 100px ); /* pi */
+width: calc( sin(1.57079632679) * 100px ); /* pi / 2 */
+
+/* Other values */
+width: calc( sin(pi/2) * 100px );
+width: calc( sin(e/4) * 100px );
 ```
 
 The `sin()` function takes only one expression as its argument.
@@ -28,6 +38,10 @@ The `sin()` function takes only one expression as its argument.
 ### Formal syntax
 
 {{CSSSyntax}}
+
+```css
+sin( [ {{cssxref("&lt;angle&gt;")}} || {{cssxref("&lt;number&gt;")}} ] )
+```
 
 ## Examples
 
