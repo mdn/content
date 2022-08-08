@@ -6,7 +6,6 @@ tags:
   - API
   - Method
   - Reference
-  - Experimental
   - get()
   - CookieStore
   - Experimental
