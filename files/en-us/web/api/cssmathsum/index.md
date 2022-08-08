@@ -22,12 +22,12 @@ A CSSMathSum is the object type returned when the [`StylePropertyMapReadOnly.get
 
 ## Constructor
 
-- {{domxref("CSSMathSum.CSSMathSum", "CSSMathSum()")}}
+- {{domxref("CSSMathSum.CSSMathSum", "CSSMathSum()")}} {{Experimental_Inline}}
   - : Creates a new `CSSMathSum` object.
 
 ## Properties
 
-- {{domxref('CSSMathSum.values')}}
+- {{domxref('CSSMathSum.values')}} {{Experimental_Inline}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ### Event handlers
