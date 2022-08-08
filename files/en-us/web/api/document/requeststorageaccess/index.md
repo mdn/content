@@ -16,6 +16,8 @@ browser-compat: api.Document.requestStorageAccess
 
 The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
 
+This is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+
 ## Conditions for granting storage access
 
 Storage access is granted based on a series of checks described here:
@@ -110,8 +112,7 @@ document.requestStorageAccess().then(
 
 ## Specifications
 
-The API is currently only at the proposal stage — the standardization process has yet
-to begin. You can currently find specification details of the API at Apple's [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the Privacy CG](https://github.com/privacycg/storage-access).
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -119,4 +120,5 @@ to begin. You can currently find specification details of the API at Apple's [In
 
 ## See also
 
+- [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using)
 - [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) (WebKit blog)
