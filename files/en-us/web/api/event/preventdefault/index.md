@@ -137,7 +137,7 @@ function displayWarning(msg) {
   warningBox.innerHTML = msg;
 
   if (document.body.contains(warningBox)) {
-    window.clearTimeout(warningTimeout);
+    clearTimeout(warningTimeout);
   } else {
     // insert warningBox after myTextbox
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);

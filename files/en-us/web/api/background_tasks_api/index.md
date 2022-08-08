@@ -159,7 +159,7 @@ Now that the document structure is defined, construct the JavaScript code that w
 #### Variable declarations
 
 ```js
-let taskList = [];
+const taskList = [];
 let totalTaskCount = 0;
 let currentTaskNumber = 0;
 let taskHandle = null;
@@ -173,11 +173,11 @@ These variables are used to manage the list of tasks that are waiting to be perf
 - `taskHandle` is a reference to the task currently being processed.
 
 ```js
-let totalTaskCountElem = document.getElementById("totalTaskCount");
-let currentTaskNumberElem = document.getElementById("currentTaskNumber");
-let progressBarElem = document.getElementById("progress");
-let startButtonElem = document.getElementById("startButton");
-let logElem = document.getElementById("log");
+const totalTaskCountElem = document.getElementById("totalTaskCount");
+const currentTaskNumberElem = document.getElementById("currentTaskNumber");
+const progressBarElem = document.getElementById("progress");
+const startButtonElem = document.getElementById("startButton");
+const logElem = document.getElementById("log");
 ```
 
 Next we have variables which reference the DOM elements we need to interact with. These elements are:
@@ -199,8 +199,8 @@ Finally, we set up a couple of variables for other items:
 - `statusRefreshScheduled` is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame
 
 ```js hidden
-window.requestIdleCallback = window.requestIdleCallback || ((handler) => {
-  let startTime = Date.now();
+requestIdleCallback = requestIdleCallback || ((handler) => {
+  const startTime = Date.now();
 
   return setTimeout(() => {
     handler({
@@ -212,7 +212,7 @@ window.requestIdleCallback = window.requestIdleCallback || ((handler) => {
   }, 1);
 });
 
-window.cancelIdleCallback = window.cancelIdleCallback || ((id) => {
+cancelIdleCallback = cancelIdleCallback || ((id) => {
   clearTimeout(id);
 });
 ```
@@ -258,7 +258,7 @@ Our idle callback handler, `runTaskQueue()`, gets called when the browser determ
 ```js
 function runTaskQueue(deadline) {
   while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && taskList.length) {
-    let task = taskList.shift();
+    const task = taskList.shift();
     currentTaskNumber++;
 
     task.handler(task.data);
@@ -309,7 +309,7 @@ The `updateDisplay()` function is responsible for drawing the contents of the pr
 
 ```js
 function updateDisplay() {
-  let scrolledToEnd = logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
+  const scrolledToEnd = logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
 
   if (totalTaskCount) {
     if (progressBarElem.max !== totalTaskCount) {
@@ -329,7 +329,7 @@ function updateDisplay() {
   }
 
   if (scrolledToEnd) {
-      logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
+    logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
   }
 
   statusRefreshScheduled = false;
@@ -354,7 +354,7 @@ The `log()` function adds the specified text to the log. Since we don't know at 
 ```js
 function log(text) {
   if (!logFragment) {
-      logFragment = document.createDocumentFragment();
+    logFragment = document.createDocumentFragment();
   }
 
   const el = document.createElement("div");
@@ -403,12 +403,12 @@ function decodeTechnoStuff() {
   currentTaskNumber = 0;
   updateDisplay();
 
-  let n = getRandomIntInclusive(100, 200);
+  const n = getRandomIntInclusive(100, 200);
 
-  for (i=0; i<n; i++) {
-    let taskData = {
+  for (let i=0; i<n; i++) {
+    const taskData = {
       count: getRandomIntInclusive(75, 150),
-      text: `This text is from task number ${(i+1).toString()} of ${n}`
+      text: `This text is from task number ${i + 1} of ${n}`
     };
 
     enqueueTask(logTaskHandler, taskData);

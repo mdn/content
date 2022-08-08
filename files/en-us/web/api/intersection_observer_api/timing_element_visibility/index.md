@@ -250,7 +250,7 @@ function startup() {
                     observerOptions);
 
   buildContents();
-  refreshIntervalID = window.setInterval(handleRefreshInterval, 1000);
+  refreshIntervalID = setInterval(handleRefreshInterval, 1000);
 }
 ```
 
