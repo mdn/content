@@ -708,7 +708,7 @@ The worker sets the property `onmessage` to a function which will receive messag
       };
 
       worker.onerror = (error) => {
-        console.log(`Worker error: ${error.message`);
+        console.log(`Worker error: ${error.message}`);
         throw error;
       };
 
