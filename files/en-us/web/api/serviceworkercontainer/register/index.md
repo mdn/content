@@ -117,7 +117,7 @@ resources under `example.com/product`.
 if ('serviceWorker' in navigator) {
   // declaring scope manually
   navigator.serviceWorker.register('/sw.js', {scope: './'}).then((registration) => {
-    console.log(`Service worker registration succeeded: ${registration}`);
+    console.log('Service worker registration succeeded:', registration);
   }, /*catch*/ (error) => {
     console.error(`Service worker registration failed: ${error}`);
   });
@@ -137,7 +137,7 @@ a site, would only apply to resources under `example.com/product`.
 if ('serviceWorker' in navigator) {
   // declaring scope manually
   navigator.serviceWorker.register('/sw.js', {scope: '/product/'}).then((registration) => {
-    console.log(`Service worker registration succeeded: ${registration}`);
+    console.log('Service worker registration succeeded:', registration);
   }, /*catch*/ (error) => {
     console.error(`Service worker registration failed: ${error}`);
   });
