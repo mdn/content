@@ -423,9 +423,8 @@ function handleVideoOfferMsg(msg) {
 
   const desc = new RTCSessionDescription(msg.sdp);
 
-  myPeerConnection.setRemoteDescription(desc).then(() => {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
+  myPeerConnection.setRemoteDescription(desc)
+    .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
   .then((stream) => {
     localStream = stream;
     document.getElementById("local_video").srcObject = localStream;
