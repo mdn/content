@@ -61,10 +61,10 @@ function xhrError() {
   console.error(this.statusText);
 }
 
-function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
+function loadFile(url, callback, ...args) {
   const xhr = new XMLHttpRequest();
   xhr.callback = callback;
-  xhr.arguments = Array.prototype.slice.call(arguments, 2);
+  xhr.arguments = args;
   xhr.onload = xhrSuccess;
   xhr.onerror = xhrError;
   xhr.open("GET", url, true);
