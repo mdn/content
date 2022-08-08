@@ -148,14 +148,14 @@ Another Javascript example if the above does not work:
 
 function getWindowForRequest(request){
   if (request instanceof Components.interfaces.nsIRequest){
-    try{
+    try {
       if (request.notificationCallbacks){
         return request.notificationCallbacks
                       .getInterface(Components.interfaces.nsILoadContext)
                       .associatedWindow;
       }
     } catch (e) {}
-    try{
+    try {
       if (request.loadGroup && request.loadGroup.notificationCallbacks){
         return request.loadGroup.notificationCallbacks
                       .getInterface(Components.interfaces.nsILoadContext)
