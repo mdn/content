@@ -241,7 +241,7 @@ const addConnection = (connection) => {
 };
 
 navigator.presentation.receiver.connectionList.then((list) => {
-  list.connections.map((connection) => {
+  list.connections.forEach((connection) => {
     addConnection(connection);
   });
   list.onconnectionavailable = (evt) => {
