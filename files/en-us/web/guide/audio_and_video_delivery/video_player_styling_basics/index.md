@@ -238,7 +238,7 @@ videoControls.setAttribute('data-state', 'visible');
 A check also needs to be made to set up the "fake" progress bar if the browser doesn't support the {{htmlelement("progress") }} element:
 
 ```js
-var supportsProgress = (document.createElement('progress').max !== undefined);
+const supportsProgress = (document.createElement('progress').max !== undefined);
 if (!supportsProgress) progress.setAttribute('data-state', 'fake');
 ```
 
@@ -372,7 +372,7 @@ The player currently works fairly well until displayed on a "medium" screen (e.g
 }
 ```
 
-This works well enough until it is viewed on a smaller screen (680px/42.5em), so another breakpoint is made here. Since the height of the `.controls` class element will now vary, a fixed height is no longer required — it is therefore set to `auto`. The definitions for the elements within the .controls element now also need to changed:
+This works well enough until it is viewed on a smaller screen (680px/42.5em), so another breakpoint is made here. Since the height of the `.controls` class element will now vary, a fixed height is no longer required — it is therefore set to `auto`. The definitions for the elements within the `.controls` element now also need to changed:
 
 ```css
 @media screen and (max-width:42.5em) {
