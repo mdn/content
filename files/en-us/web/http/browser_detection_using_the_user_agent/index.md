@@ -43,9 +43,7 @@ if (navigator.userAgent.includes("Chrome")){
   //  because all browsers parse the entire script, including
   //  sections of the code that are never executed.
   const camelCaseExpression = new RegExp("(?<=[A-Z])");
-  splitUpString = (str) => {
-    return ("" + str).split(camelCaseExpression);
-  };
+  splitUpString = (str) => String(str).split(camelCaseExpression);
 } else {
   //This fallback code is much less performant, but works
   splitUpString = (str) => str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
