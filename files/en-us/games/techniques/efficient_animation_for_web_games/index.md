@@ -33,14 +33,14 @@ function doAnimation(timestamp) {
   let progress = 0;
 
   if (startTime < 0) {
-      startTime = timestamp;
+    startTime = timestamp;
   } else {
-      progress = timestamp - startTime;
+    progress = timestamp - startTime;
   }
 
   // Perform the animation
   if (progress < animationLength) {
-      requestAnimationFrame(doAnimation);
+    requestAnimationFrame(doAnimation);
   }
 }
 
