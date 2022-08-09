@@ -21,7 +21,7 @@ This guide presents demonstrations of how box alignment in grid layout works. Yo
 
 When working with grid layout you have two axes available to align things against – the _block axis_ and the _inline axis_. The block axis is the axis upon which blocks are laid out in block layout. If you have two paragraphs on your page they display one below the other, so it is this direction we describe as the block axis.
 
-![Block axes are vertical](block_axis.png)
+![Block axes are vertical.](block_axis.png)
 
 The _inline axis_ runs across the block axis, it is the direction in which text in regular inline flow runs.
 
