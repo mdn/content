@@ -150,7 +150,13 @@ if (video.textTracks) {
   subtitlesMenu.className = 'subtitles-menu';
   subtitlesMenu.appendChild(createMenuItem('subtitles-off', '', 'Off'));
   for (let i = 0; i < video.textTracks.length; i++) {
-    subtitlesMenu.appendChild(createMenuItem(`subtitles-${video.textTracks[i].language}`, video.textTracks[i].language, video.textTracks[i].label));
+    subtitlesMenu.appendChild(
+      createMenuItem(
+        `subtitles-${video.textTracks[i].language}`,
+        video.textTracks[i].language,
+        video.textTracks[i].label,
+      ),
+    );
   }
   videoContainer.appendChild(subtitlesMenu);
 }
