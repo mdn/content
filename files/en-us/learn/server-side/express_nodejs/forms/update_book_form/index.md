@@ -136,9 +136,9 @@ exports.book_update_post = [
           }
 
           // Mark our selected genres as checked.
-          for (let i = 0; i < results.genres.length; i++) {
-            if (book.genre.includes(results.genres[i]._id)) {
-              results.genres[i].checked = "true";
+          for (const genre of results.genres) {
+            if (book.genre.includes(genre._id)) {
+              genre.checked = "true";
             }
           }
           res.render("book_form", {
