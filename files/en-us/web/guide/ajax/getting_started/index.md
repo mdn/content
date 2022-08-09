@@ -258,7 +258,9 @@ function makeRequest(url, userName) {
 
 The function `alertContents()` can be written the same way it was in Step 3 to alert our computed string, if that's all the server returns. However, let's say the server is going to return both the computed string and the original user data. So if our user typed "Jane" in the text box, the server's response would look like this:
 
-`{ "userData": "Jane", "computedString": "Hi, Jane!" }`
+```json
+{ "userData": "Jane", "computedString": "Hi, Jane!" }
+```
 
 To use this data within `alertContents()`, we can't just alert the `responseText`, we have to parse it and alert `computedString`, the property we want:
 

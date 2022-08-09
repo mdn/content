@@ -787,7 +787,7 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
 ## Get last modified date
 
 ```js
-function getHeaderTime () {
+function getHeaderTime() {
   console.log(this.getResponseHeader("Last-Modified"));  // A valid GMTString date or null
 }
 
@@ -802,7 +802,7 @@ req.send();
 Let's create two functions:
 
 ```js
-function getHeaderTime () {
+function getHeaderTime() {
   const lastVisit = parseFloat(window.localStorage.getItem(`lm_${this.filepath}`));
   const lastModified = Date.parse(this.getResponseHeader("Last-Modified"));
 
@@ -858,7 +858,7 @@ You can automatically adjust URLs using the following code:
 ```js
 const req = new XMLHttpRequest();
 
-req.open("GET", url + ((/\?/).test(url) ? "&" : "?") + (new Date()).getTime());
+req.open("GET", url + (/\?/.test(url) ? "&" : "?") + new Date().getTime());
 req.send(null);
 ```
 

@@ -41,7 +41,7 @@ navigator.xr.requestSession("immersive-ar", {
 requestAnimationFrame((frame) => {
   const views = frame.getViewerPose(space);
   // Make sure to iterate over all views
-  for (view of views) {
+  for (const view of views) {
     if (view.isFirstPersonObserver) {
       renderFPO();
     } else {

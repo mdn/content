@@ -48,7 +48,7 @@ function myRect(x, y, w, h, message) {
 When using SVG within HTML, Adobe's SVG Viewer 3.0 automatically includes a window property called `svgDocument` that points to the SVG document. This is not the case for Mozilla's native SVG implementation; therefore, using `window.svgDocument` does not work in Mozilla. Instead, you can use
 
 ```js
-const svgDoc=document.embeds["name_of_svg"].getSVGDocument();
+const svgDoc = document.embeds["name_of_svg"].getSVGDocument();
 ```
 
 to get a reference to an embedded SVG document instead.

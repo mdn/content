@@ -138,7 +138,7 @@ Here, we're specifying a timeout of 2000 ms.
 
 ## Synchronous request
 
-{{deprecated_header()}}
+{{deprecated_header}}
 
 Synchronous XHR requests often cause hangs on the web. But developers typically don't notice the problem because the hang only manifests with poor network conditions or when the remote server is slow to respond. Synchronous XHR is now in deprecation state. The recommendation is that developers move away from the synchronous API and instead use asynchronous requests.
 
@@ -172,13 +172,13 @@ One of the few cases in which a synchronous request does not usually block execu
 <!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset=UTF-8>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>MDN Example</title>
     <script>
       const worker = new Worker("myTask.js");
       worker.onmessage = (event) => {
-        alert(`Worker said: ${event.data});
+        alert(`Worker said: ${event.data}`);
       };
 
       worker.postMessage("Hello");

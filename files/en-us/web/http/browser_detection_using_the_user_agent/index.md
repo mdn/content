@@ -74,7 +74,7 @@ try {
 }
 
 const splitUpString = isLookBehindSupported 
-  ? (str) => ("" + str).split(new RegExp("(?<=[A-Z])"=)
+  ? (str) => String(str).split(new RegExp("(?<=[A-Z])"=)
   : (str) => str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
 ```
 

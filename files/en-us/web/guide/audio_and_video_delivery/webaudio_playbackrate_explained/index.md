@@ -49,7 +49,7 @@ window.onload = () => {
   p.addEventListener('input', () => {
     c.innerHTML = p.value;
     v.playbackRate = p.value;
-  },false);
+  }, false);
 
 };
 ```

@@ -197,7 +197,7 @@ window.onload = () => {
   audio.addEventListener('timeupdate', () => {
     const duration =  audio.duration;
     if (duration > 0) {
-      document.getElementById('progress-amount').style.width = `{audio.currentTime * 100 / duration * 100}%`;
+      document.getElementById('progress-amount').style.width = `{audio.currentTime / duration * 100}%`;
     }
   });
 }

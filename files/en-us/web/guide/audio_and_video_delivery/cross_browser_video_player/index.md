@@ -198,11 +198,10 @@ Two volume control buttons have been defined, one for increasing the volume and 
 ```js
 function alterVolume(dir) {
   const currentVolume = Math.floor(video.volume * 10) / 10;
-  if (dir === '+') {
-    if (currentVolume < 1) video.volume += 0.1;
-  }
-  else if (dir === '-') {
-    if (currentVolume > 0) video.volume -= 0.1;
+  if (dir === '+' && currentVolume < 1) {
+    video.volume += 0.1;
+  } else if (dir === '-' && currentVolume > 0) {
+    video.volume -= 0.1;
   }
 }
 ```

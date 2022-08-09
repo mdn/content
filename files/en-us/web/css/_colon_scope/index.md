@@ -71,9 +71,10 @@ A situation where the `:scope` pseudo-class prove to be useful is when you need 
 const context = document.getElementById('context');
 const selected = context.querySelectorAll(':scope > div');
 
-document.getElementById('results').innerHTML = Array.prototype.map.call(selected, (element) => {
-  return '#' + element.getAttribute('id');
-}).join(', ');
+document.getElementById('results').innerHTML = Array.prototype.map.call(
+  selected,
+  (element) => '#' + element.getAttribute('id'),
+).join(', ');
 ```
 
 #### HTML

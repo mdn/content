@@ -299,16 +299,16 @@ In the below example, you can see such an example. We are attaching it to the \<
 
 ```js
 HTMLTableSectionElement.prototype.sort = function (cb) {
-  Array.prototype.slice.call(this.rows)
+  Array.from(this.rows)
     .sort(cb)
     .forEach((e, i, a) => {
       this.appendChild(this.removeChild(e));
     }, this);
 }
 
-document.querySelector('table').tBodies[0].sort((a, b) => {
-    return a.textContent.localeCompare(b.textContent);
-});
+document.querySelector('table').tBodies[0].sort(
+  (a, b) => a.textContent.localeCompare(b.textContent),
+);
 ```
 
 ##### Result

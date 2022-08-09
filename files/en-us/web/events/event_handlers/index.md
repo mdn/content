@@ -74,9 +74,8 @@ This is done by passing the same {{domxref("AbortSignal")}} to the {{domxref("Ev
 const controller = new AbortController();
 
 btn.addEventListener('click', (event) => {
-  // print the event object to console
-  console.log('greet:', arguments)
-  }, { signal: controller.signal }); // pass an AbortSignal to this handler
+  console.log('greet:', event);
+}, { signal: controller.signal }); // pass an AbortSignal to this handler
 ```
 
 Then the event handler created by the code above can be removed like this:

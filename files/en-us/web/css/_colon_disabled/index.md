@@ -78,7 +78,7 @@ function toggleBilling() {
   // Toggle the billing text fields
   billingItems.forEach((item) => {
     item.disabled = !item.disabled;
-  }
+  });
 }
 ```
 

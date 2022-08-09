@@ -58,7 +58,7 @@ first.onchange = () => {
 }
 
 second.onchange = () => {
-  myWorker.postMessage([first.value,second.value]);
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 ```

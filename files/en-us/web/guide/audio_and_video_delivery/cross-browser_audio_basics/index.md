@@ -480,7 +480,7 @@ window.onload = () => {
   } else {
     // not ready yet - wait for canplay event
     audio.addEventListener('canplay', () => {
-       displayControls();
+      displayControls();
     });
   }
 
@@ -499,7 +499,7 @@ window.onload = () => {
   // Display progress
   audio.addEventListener('timeupdate', () => {
     // Sets the percentage
-    bar.style.width = `parseInt(audio.currentTime * 100 / audio.duration, 10)}%`;
+    bar.style.width = `${Math.floor(audio.currentTime / audio.duration * 100)}%`;
   });
 }
 ```

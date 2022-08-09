@@ -285,7 +285,7 @@ function getProperties() {
 }
 
 function getCheckedValue(radioName) {
-  radios = document.forms[0].elements[radioName];
+  const radios = document.forms[0].elements[radioName];
   for (let i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
       const curElemName = `input_${radioName}`;

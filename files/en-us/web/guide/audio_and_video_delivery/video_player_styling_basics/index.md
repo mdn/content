@@ -310,17 +310,16 @@ The `alterVolume()` function, called when the player's volume buttons are clicke
 function checkVolume(dir) {
   if (dir) {
     const currentVolume = Math.floor(video.volume * 10) / 10;
-    if (dir === '+') {
-       if (currentVolume < 1) video.volume += 0.1;
-    } else if (dir === '-') {
-       if (currentVolume > 0) video.volume -= 0.1;
+    if (dir === '+' && currentVolume < 1) {
+       video.volume += 0.1;
+    } else if (dir === '-' && currentVolume > 0) {
+       video.volume -= 0.1;
     }
     
     // If the volume has been turned off, also set it as muted
     // Note: can only do this with the custom control set as when the 'volumechange' event is raised,
     // there is no way to know if it was via a volume or a mute change
-    if (currentVolume <= 0) video.muted = true;
-    else video.muted = false;
+    video.muted = currentVolume <= 0;
   }
   changeButtonState('mute');
 }

@@ -173,8 +173,8 @@ function createMenuItem(id, lang, label) {
   button.appendChild(document.createTextNode(label));
   button.addEventListener('click', (e) => {
     // Set all buttons to inactive
-    subtitleMenuButtons.map((v, i, a) => {
-      subtitleMenuButtons[i].setAttribute('data-state', 'inactive');
+    subtitleMenuButtons.forEach((button) => {
+      button.setAttribute('data-state', 'inactive');
     });
     
     // Find the language to activate
