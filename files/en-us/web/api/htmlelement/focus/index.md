@@ -64,7 +64,7 @@ This example uses a button to set the focus on a text field.
 #### JavaScript
 
 The code below adds an event handler to set the focus on the text field when the button is pressed.
-Note that most browsers will automatically add visible indication (a "focus ring") for the focused element, so the code does not set the option parameter with `focusVisible` set true.
+Note that most browsers will automatically add visible indication (a "focus ring") for a focused text field, so the code does not set `focusVisible` to `true`.
 
 ```js
 document.getElementById("focusButton").addEventListener("click", () => {
