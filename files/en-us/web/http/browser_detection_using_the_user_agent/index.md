@@ -47,7 +47,7 @@ if (navigator.userAgent.includes("Chrome")){
   };
 } else {
   //This fallback code is much less performant, but works
-  const splitUpString = (str) => return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
+  const splitUpString = (str) => str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
 }
 
 console.log(splitUpString("fooBare")); // ["fooB", "are"]
