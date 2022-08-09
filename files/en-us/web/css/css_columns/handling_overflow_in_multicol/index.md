@@ -19,7 +19,7 @@ In this situation, the content should visibly overflow into the next column, rat
 
 {{EmbedGHLiveSample("css-examples/multicol/overflow/image.html", '100%', 800)}}
 
-![](image-overflow-multicol.png)
+![There are two columns of text. In the left column there is a photo that is wider than the column. The image expands into that second column, appearing behind the text of the right column. The flow of text in the right column isn't effected by the protruding photo, but the appearance is.](image-overflow-multicol.png)
 
 If you want an image to size down to fit the column box, the standard responsive images solution of setting `max-width: 100%` will achieve that for you.
 
