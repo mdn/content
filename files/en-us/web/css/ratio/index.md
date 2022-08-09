@@ -32,10 +32,10 @@ In Media Queries Level 4, the `<ratio>` date type is updated to consist of a str
 
 |                                     | Ratio               | Usage                                           |
 | ----------------------------------- | ------------------- | ----------------------------------------------- |
-| ![A rectangle that is three units tall and four units wide](ratio4_3.png)                   | `4/3`               | Traditional TV format in the twentieth century. |
-| ![A rectangle that is nine units tall and sixteen units wide](ratio16_9.png)                  | `16/9`              | Modern "widescreen" TV format.                  |
-| ![A rectangle that is 1 unit tall and 1.85 units wide](ratio1_1.85.png) | `185/100` = `91/50` | The most common movie format since the 1960s.   |
-| ![A rectangle that is 1 unit tall and 2.39 units wide](ratio1_2.39.png) | `239/100`           | "Widescreen," anamorphic movie format.          |
+| ![A rectangle that is three units tall and four units wide](ratio4_3.png)    | `4/3`               | Traditional TV format in the twentieth century. |
+| ![A rectangle that is nine units tall and sixteen units wide](ratio16_9.png) | `16/9`              | Modern "widescreen" TV format.                  |
+| ![A rectangle that is 1 unit tall and 1.85 units wide](ratio1_1.85.png)      | `185/100` = `91/50` | The most common movie format since the 1960s.   |
+| ![A rectangle that is 1 unit tall and 2.39 units wide](ratio1_2.39.png)      | `239/100`           | "Widescreen," anamorphic movie format.          |
 
 ## Specifications
 
