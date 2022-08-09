@@ -40,7 +40,7 @@ greeting(sayHello, "JavaScript!");
 
 We are passing our `sayHello()` function as an argument to the `greeting()` function, this explains how we are treating the function as a value.
 
-> **Note:** The function that we pass as an argument to another function, is called a _{{glossary("Callback function")}}_. _`sayHello` is a Callback function._
+> **Note:** The function that we pass as an argument to another function is called a _{{glossary("callback function")}}_. _`sayHello()` is a callback function._
 
 ### Returning a function
 
