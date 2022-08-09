@@ -226,7 +226,7 @@ Note the lack of curly braces.
 We could instead prepend `export default` onto the function and define it as an anonymous function, like this:
 
 ```js
-export default function(ctx) {
+export default function (ctx) {
   // …
 }
 ```

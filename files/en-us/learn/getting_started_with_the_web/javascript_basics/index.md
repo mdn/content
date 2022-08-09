@@ -331,7 +331,7 @@ multiply(0.5, 3);
 Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the [click event](/en-US/docs/Web/API/Element/click_event), which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:
 
 ```js
-document.querySelector('html').addEventListener('click', function() {
+document.querySelector('html').addEventListener('click', function () {
   alert('Ouch! Stop poking me!');
 });
 ```
@@ -341,7 +341,7 @@ There are many ways to attach an event handler to an element. Here we select the
 Note that
 
 ```js
-document.querySelector('html').addEventListener('click', function() {
+document.querySelector('html').addEventListener('click', function () {
   alert('Ouch! Stop poking me!');
 });
 ```
@@ -350,7 +350,7 @@ is equivalent to
 
 ```js
 let myHTML = document.querySelector('html');
-myHTML.addEventListener('click', function() {
+myHTML.addEventListener('click', function () {
   alert('Ouch! Stop poking me!');
 });
 ```
@@ -381,15 +381,15 @@ In this section, you will learn how to use JavaScript and DOM API features to al
 4. Add the following JavaScript code to your `main.js` file.
 
     ```js
-    let myImage = document.querySelector('img');
+    const myImage = document.querySelector('img');
 
-    myImage.onclick = function() {
-        let mySrc = myImage.getAttribute('src');
-        if(mySrc === 'images/firefox-icon.png') {
-          myImage.setAttribute('src','images/firefox2.png');
-        } else {
-          myImage.setAttribute('src','images/firefox-icon.png');
-        }
+    myImage.onclick = () => {
+      const mySrc = myImage.getAttribute('src');
+      if (mySrc === 'images/firefox-icon.png') {
+        myImage.setAttribute('src','images/firefox2.png');
+      } else {
+        myImage.setAttribute('src','images/firefox-icon.png');
+      }
     }
     ```
 
@@ -424,7 +424,7 @@ Next, let's change the page title to a personalized welcome message when the use
 
     ```js
     function setUserName() {
-      let myName = prompt('Please enter your name.');
+      const myName = prompt('Please enter your name.');
       localStorage.setItem('name', myName);
       myHeading.textContent = 'Mozilla is cool, ' + myName;
     }
@@ -435,11 +435,11 @@ Next, let's change the page title to a personalized welcome message when the use
 4. Add the following condition block. We could call this initialization code, as it structures the app when it first loads.
 
     ```js
-    if(!localStorage.getItem('name')) {
+    if (!localStorage.getItem('name')) {
       setUserName();
     } else {
-      let storedName = localStorage.getItem('name');
-      myHeading.textContent = 'Mozilla is cool, ' + storedName;
+      const storedName = localStorage.getItem('name');
+      myHeading.textContent = `Mozilla is cool, ${storedName}`;
     }
     ```
 
@@ -448,7 +448,7 @@ Next, let's change the page title to a personalized welcome message when the use
 5. Put this `onclick` event handler (below) on the button. When clicked, `setUserName()` runs. This allows the user to enter a different name by pressing the button.
 
     ```js
-    myButton.onclick = function() {
+    myButton.onclick = () => {
       setUserName();
     }
     ```
@@ -463,12 +463,12 @@ To avoid these problems, you could check that the user hasn't entered a blank na
 
 ```js
 function setUserName() {
-  let myName = prompt('Please enter your name.');
-  if(!myName) {
+  const myName = prompt('Please enter your name.');
+  if (!myName) {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
+    myHeading.textContent = `Mozilla is cool, ${myName}`;
   }
 }
 ```

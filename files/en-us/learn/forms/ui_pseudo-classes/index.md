@@ -404,23 +404,22 @@ Now finally, we've used some JavaScript to toggle the disabling of the billing a
 
 ```js
 // Wait for the page to finish loading
-document.addEventListener('DOMContentLoaded', function () {
-
+document.addEventListener('DOMContentLoaded', () => {
   // Attach `change` event listener to checkbox
   document.getElementById('billing-checkbox').addEventListener('change', toggleBilling);
 }, false);
 
 function toggleBilling() {
   // Select the billing text fields
-  let billingItems = document.querySelectorAll('#billing input[type="text"]');
+  const billingItems = document.querySelectorAll('#billing input[type="text"]');
   // Select the billing text labels
-  let billingLabels = document.querySelectorAll('.billing-label');
+  const billingLabels = document.querySelectorAll('.billing-label');
 
   // Toggle the billing text fields and labels
   for (let i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
 
-    if(billingLabels[i].getAttribute('class') === 'billing-label disabled-label') {
+    if (billingLabels[i].getAttribute('class') === 'billing-label disabled-label') {
       billingLabels[i].setAttribute('class', 'billing-label');
     } else {
       billingLabels[i].setAttribute('class', 'billing-label disabled-label');

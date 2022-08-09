@@ -354,8 +354,8 @@ Basically, the {{htmlattrxref("tabindex")}} attribute is primarily intended to a
 While the above addition allows us to tab to the buttons, it does not allow us to activate them via the <kbd>Enter</kbd>/<kbd>Return</kbd> key. To do that, we had to add the following bit of JavaScript trickery:
 
 ```js
-document.onkeydown = function(e) {
-  if(e.key === "Enter") { // The Enter/Return key
+document.onkeydown = (e) => {
+  if (e.key === "Enter") { // The Enter/Return key
     document.activeElement.click();
   }
 };

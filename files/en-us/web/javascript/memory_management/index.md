@@ -46,7 +46,7 @@ function f(a) {
 } // allocates a function (which is a callable object)
 
 // function expressions also allocate an object
-someElement.addEventListener('click', function () {
+someElement.addEventListener('click', () => {
   someElement.style.backgroundColor = 'blue';
 }, false);
 ```

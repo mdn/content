@@ -19,24 +19,32 @@ Open **/controllers/authorController.js**. Find the exported `author_delete_get(
 
 ```js
 // Display Author delete form on GET.
-exports.author_delete_get = function(req, res, next) {
-
-    async.parallel({
-        author(callback) {
-            Author.findById(req.params.id).exec(callback)
-        },
-        authors_books(callback) {
-            Book.find({ 'author': req.params.id }).exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.author==null) { // No results.
-            res.redirect('/catalog/authors');
-        }
-        // Successful, so render.
-        res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books });
-    });
-
+exports.author_delete_get = (req, res, next) => {
+  async.parallel(
+    {
+      author(callback) {
+        Author.findById(req.params.id).exec(callback);
+      },
+      authors_books(callback) {
+        Book.find({ author: req.params.id }).exec(callback);
+      },
+    },
+    (err, results) => {
+      if (err) {
+        return next(err);
+      }
+      if (results.author == null) {
+        // No results.
+        res.redirect("/catalog/authors");
+      }
+      // Successful, so render.
+      res.render("author_delete", {
+        title: "Delete Author",
+        author: results.author,
+        author_books: results.authors_books,
+      });
+    }
+  );
 };
 ```
 
@@ -48,10 +56,12 @@ When both operations have completed it renders the **author_delete.pug** view, p
 > In this case there is nothing to delete, so we immediately render the list of all authors.
 >
 > ```js
->   function(err, results) {
->     if (err) { return next(err); }
->     if (results.author==null) { // No results.
->         res.redirect('/catalog/authors');
+>   (err, results) => {
+>     if (err) {
+>       return next(err);
+>     }
+>     if (results.author == null) { // No results.
+>        res.redirect('/catalog/authors');
 >     }
 > ```
 
@@ -61,32 +71,40 @@ Find the exported `author_delete_post()` controller method, and replace it with 
 
 ```js
 // Handle Author delete on POST.
-exports.author_delete_post = function(req, res, next) {
-
-    async.parallel({
-        author(callback) {
-          Author.findById(req.body.authorid).exec(callback)
-        },
-        authors_books(callback) {
-          Book.find({ 'author': req.body.authorid }).exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        // Success
-        if (results.authors_books.length > 0) {
-            // Author has books. Render in same way as for GET route.
-            res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books });
-            return;
+exports.author_delete_post = (req, res, next) => {
+  async.parallel(
+    {
+      author(callback) {
+        Author.findById(req.body.authorid).exec(callback);
+      },
+      authors_books(callback) {
+        Book.find({ author: req.body.authorid }).exec(callback);
+      },
+    },
+    (err, results) => {
+      if (err) {
+        return next(err);
+      }
+      // Success
+      if (results.authors_books.length > 0) {
+        // Author has books. Render in same way as for GET route.
+        res.render("author_delete", {
+          title: "Delete Author",
+          author: results.author,
+          author_books: results.authors_books,
+        });
+        return;
+      }
+      // Author has no books. Delete object and redirect to the list of authors.
+      Author.findByIdAndRemove(req.body.authorid, (err) => {
+        if (err) {
+          return next(err);
         }
-        else {
-            // Author has no books. Delete object and redirect to the list of authors.
-            Author.findByIdAndRemove(req.body.authorid, function deleteAuthor(err) {
-                if (err) { return next(err); }
-                // Success - go to author list
-                res.redirect('/catalog/authors')
-            })
-        }
-    });
+        // Success - go to author list
+        res.redirect("/catalog/authors");
+      });
+    }
+  );
 };
 ```
 

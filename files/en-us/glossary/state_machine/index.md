@@ -20,7 +20,7 @@ Looking at the final state, you can discern something about the series of inputs
 There are two types of basic state machines:
 
 - deterministic finite state machine
-  - : This kind allows only one possible transition for any allowed input. This is like the "if" {{Glossary("statement")}} in that `if x == true then doThis else doThat` is not possible. The computer must perform _one_ of the two options.
+  - : This kind allows only one possible transition for any allowed input. This is like the "if" {{Glossary("statement")}} in that `if x then doThis else doThat` is not possible. The computer must perform _one_ of the two options.
 - non-deterministic finite state machine
   - : Given some state, an input can lead to more than one different state.
 

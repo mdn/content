@@ -197,7 +197,7 @@ Alternatively, mouse-specific events such as [mousedown](/en-US/docs/Web/API/Ele
 If you try to control our [simple-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-box-drag.html) ([see example live](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) example with a keyboard or touch, you'll see the problem. This occurs because we are using code such as the following:
 
 ```js
-div.onmousedown = function() {
+div.onmousedown = () => {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
@@ -209,7 +209,7 @@ document.onmouseup = stopMove;
 To enable other forms of control, you need to use different, yet equivalent events — for example, touch events work on touchscreen devices:
 
 ```js
-div.ontouchstart = function(e) {
+div.ontouchstart = (e) => {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);

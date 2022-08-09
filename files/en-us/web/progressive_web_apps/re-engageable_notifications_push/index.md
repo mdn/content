@@ -167,7 +167,7 @@ fetch('./register', {
 Then the {{domxref("Element.click_event", "onclick")}} function on the _Subscribe_ button is defined:
 
 ```js
-document.getElementById('doIt').onclick = function() {
+document.getElementById('doIt').onclick = () => {
   const payload = document.getElementById('notification-payload').value;
   const delay = document.getElementById('notification-delay').value;
   const ttl = document.getElementById('notification-ttl').value;
@@ -218,29 +218,28 @@ Next, a module defines and exports all the routes an app needs to handle: gettin
 You can see the variables from the `index.js` file being used: `payload`, `delay` and `ttl`.
 
 ```js
-module.exports = function(app, route) {
-  app.get(route + 'vapidPublicKey', function(req, res) {
+module.exports = (app, route) => {
+  app.get(`${route}vapidPublicKey`, (req, res) => {
     res.send(process.env.VAPID_PUBLIC_KEY);
   });
 
-  app.post(route + 'register', function(req, res) {
-
+  app.post(`${route}register`, (req, res) => {
     res.sendStatus(201);
   });
 
-  app.post(route + 'sendNotification', function(req, res) {
+  app.post(`${route}sendNotification`, (req, res) => {
     const subscription = req.body.subscription;
     const payload = req.body.payload;
     const options = {
       TTL: req.body.ttl
     };
 
-    setTimeout(function() {
+    setTimeout(() => {
       webPush.sendNotification(subscription, payload, options)
-      .then(function() {
+      .then(() => {
         res.sendStatus(201);
       })
-      .catch(function(error) {
+      .catch((error) => {
         console.log(error);
         res.sendStatus(500);
       });
@@ -254,11 +253,11 @@ module.exports = function(app, route) {
 The last file we will look at is the service worker:
 
 ```js
-self.addEventListener('push', function(event) {
-  const payload = event.data ? event.data.text() : 'no payload';
+self.addEventListener('push', (event) => {
+  const payload = event.data?.text() ?? 'no payload';
   event.waitUntil(
     self.registration.showNotification('ServiceWorker Cookbook', {
-        body: payload,
+      body: payload,
     })
   );
 });

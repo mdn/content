@@ -221,16 +221,16 @@ o.a = 25; // No error thrown
 console.log(o.a); // logs 37. The assignment didn't work.
 
 // strict mode
-(function() {
+(() => {
   'use strict';
   const o = {};
   Object.defineProperty(o, 'b', {
     value: 2,
-    writable: false
+    writable: false,
   });
   o.b = 3; // throws TypeError: "b" is read-only
   return o.b; // returns 2 without the line above
-}());
+})();
 ```
 
 As seen in the example, trying to write into the non-writable property doesn't change

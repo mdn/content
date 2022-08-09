@@ -74,7 +74,7 @@ index, and the typed array over which iteration is occurring.
 The call to the `reduceRight` callback would look something like this:
 
 ```js
-typedarray.reduceRight(function(accumulator, currentValue, index, typedarray) {
+typedarray.reduceRight((accumulator, currentValue, index, typedarray) => {
   // ...
 });
 ```
