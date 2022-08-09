@@ -178,7 +178,7 @@ function createMenuItem(id, lang, label) {
     });
     
     // Find the language to activate
-    const lang = this.getAttribute('lang');
+    const lang = button.getAttribute('lang');
     for (let i = 0; i < video.textTracks.length; i++) {
       // For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
       if (video.textTracks[i].language === lang) {
