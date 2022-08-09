@@ -8,9 +8,10 @@ tags:
   - Event
   - Reference
   - show
+  - Non-standard
 browser-compat: api.Element.show_event
 ---
-{{APIRef}}{{deprecated_header}}
+{{APIRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`show`** event is fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu` attribute](/en-US/docs/Web/HTML/Global_attributes/contextmenu).
 

@@ -16,7 +16,7 @@ tags:
   - scrolling
 browser-compat: api.Element.DOMMouseScroll_event
 ---
-{{APIRef}}
+{{APIRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
 {{Deprecated_Header}}
 
