@@ -294,7 +294,7 @@ myWorker.postMessage('ali');
 **my_task.js** (the worker):
 
 ```js
-postMessage("I\'m working before postMessage(\'ali\').");
+postMessage("I'm working before postMessage('ali').");
 
 onmessage = (event) => {
   postMessage(`Hi, ${event.data}`);

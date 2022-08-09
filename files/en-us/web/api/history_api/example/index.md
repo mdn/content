@@ -207,7 +207,7 @@ const ajaxRequest = new (function () {
 
     /* not customizable constants */
     const searchRegex = /\?.*$/;
-    const hostRegex = /^[^\?]*\?*&*/;
+    const hostRegex = /^[^?]*\?*&*/;
     const viewRegex = new RegExp(`&${viewKey}\\=[^&]*|&*$`, "i");
     const endQstMarkRegex = /\?$/;
     const loadingBox = document.createElement("div");

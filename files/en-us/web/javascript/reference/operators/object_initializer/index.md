@@ -49,7 +49,7 @@ o = {
 
 // Computed property names
 const prop = 'foo';
-const o = {
+o = {
   [prop]: 'hey',
   ['b' + 'ar']: 'there',
 };
