@@ -55,8 +55,8 @@ The following code snippet shows creation of a {{domxref("Worker")}} object usin
 ```js
 const myWorker = new Worker('worker.js');
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+first.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 ```

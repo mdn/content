@@ -320,13 +320,13 @@ You can detect when tracks are added to and removed from a `<video>` element usi
 For example, to detect when audio tracks are added to or removed from a `<video>` element, you can use code like this:
 
 ```js
-var elem = document.querySelector("video");
+const elem = document.querySelector("video");
 
-elem.audioTracks.onaddtrack = function(event) {
+elem.audioTracks.onaddtrack = (event) => {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTracks.onremovetrack = function(event) {
+elem.audioTracks.onremovetrack = (event) => {
   trackEditor.removeTrack(event.track);
 };
 ```

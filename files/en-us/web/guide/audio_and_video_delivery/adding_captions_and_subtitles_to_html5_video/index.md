@@ -95,14 +95,14 @@ No image is used for the captions button, so it is styled as:
 
 ```css
 .controls button[data-state="subtitles"] {
-    height:85%;
-    text-indent:0;
-    font-size:16px;
-    font-size:1rem;
-    font-weight:bold;
-    color:#666;
-    background:#000;
-    border-radius:2px;
+  height: 85%;
+  text-indent: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+  background: #000;
+  border-radius: 2px;
 }
 ```
 
@@ -119,14 +119,14 @@ Browsers do vary as to what they support, so we will be attempting to bring a mo
 As with all the other buttons, one of the first things we need to do is store a handle to the subtitles' button:
 
 ```js
-var subtitles = document.getElementById('subtitles');
+const subtitles = document.getElementById('subtitles');
 ```
 
 We also initially turn off all subtitles, in case the browser turns any of them on by default:
 
 ```js
-for (var i = 0; i < video.textTracks.length; i++) {
-   video.textTracks[i].mode = 'hidden';
+for (let i = 0; i < video.textTracks.length; i++) {
+  video.textTracks[i].mode = 'hidden';
 }
 ```
 
@@ -143,16 +143,22 @@ We have added the button, but before we make it do anything, we need to build th
 All we need to do is to go through the video's `textTracks`, reading their properties and building the menu up from there:
 
 ```js
-var subtitlesMenu;
+let subtitlesMenu;
 if (video.textTracks) {
-   var df = document.createDocumentFragment();
-   var subtitlesMenu = df.appendChild(document.createElement('ul'));
-   subtitlesMenu.className = 'subtitles-menu';
-   subtitlesMenu.appendChild(createMenuItem('subtitles-off', '', 'Off'));
-   for (var i = 0; i < video.textTracks.length; i++) {
-      subtitlesMenu.appendChild(createMenuItem('subtitles-' + video.textTracks[i].language, video.textTracks[i].language, video.textTracks[i].label));
-   }
-   videoContainer.appendChild(subtitlesMenu);
+  const df = document.createDocumentFragment();
+  const subtitlesMenu = df.appendChild(document.createElement('ul'));
+  subtitlesMenu.className = 'subtitles-menu';
+  subtitlesMenu.appendChild(createMenuItem('subtitles-off', '', 'Off'));
+  for (let i = 0; i < video.textTracks.length; i++) {
+    subtitlesMenu.appendChild(
+      createMenuItem(
+        `subtitles-${video.textTracks[i].language}`,
+        video.textTracks[i].language,
+        video.textTracks[i].label,
+      ),
+    );
+  }
+  videoContainer.appendChild(subtitlesMenu);
 }
 ```
 
@@ -161,37 +167,37 @@ This code creates a {{ domxref("documentFragment") }}, which is used to hold an 
 The creation of each list item and button is done by the `createMenuItem()` function, which is defined as follows:
 
 ```js
-var subtitleMenuButtons = [];
-var createMenuItem = function(id, lang, label) {
-   var listItem = document.createElement('li');
-   var button = listItem.appendChild(document.createElement('button'));
-   button.setAttribute('id', id);
-   button.className = 'subtitles-button';
-   if (lang.length > 0) button.setAttribute('lang', lang);
-   button.value = label;
-   button.setAttribute('data-state', 'inactive');
-   button.appendChild(document.createTextNode(label));
-   button.addEventListener('click', function(e) {
-      // Set all buttons to inactive
-      subtitleMenuButtons.map(function(v, i, a) {
-         subtitleMenuButtons[i].setAttribute('data-state', 'inactive');
-      });
-      // Find the language to activate
-      var lang = this.getAttribute('lang');
-      for (var i = 0; i < video.textTracks.length; i++) {
-         // For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
-         if (video.textTracks[i].language === lang) {
-            video.textTracks[i].mode = 'showing';
-            this.setAttribute('data-state', 'active');
-         }
-         else {
-            video.textTracks[i].mode = 'hidden';
-         }
+const subtitleMenuButtons = [];
+function createMenuItem(id, lang, label) {
+  const listItem = document.createElement('li');
+  const button = listItem.appendChild(document.createElement('button'));
+  button.setAttribute('id', id);
+  button.className = 'subtitles-button';
+  if (lang.length > 0) button.setAttribute('lang', lang);
+  button.value = label;
+  button.setAttribute('data-state', 'inactive');
+  button.appendChild(document.createTextNode(label));
+  button.addEventListener('click', (e) => {
+    // Set all buttons to inactive
+    subtitleMenuButtons.forEach((button) => {
+      button.setAttribute('data-state', 'inactive');
+    });
+    
+    // Find the language to activate
+    const lang = button.getAttribute('lang');
+    for (let i = 0; i < video.textTracks.length; i++) {
+      // For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
+      if (video.textTracks[i].language === lang) {
+        video.textTracks[i].mode = 'showing';
+        button.setAttribute('data-state', 'active');
+      } else {
+        video.textTracks[i].mode = 'hidden';
       }
-      subtitlesMenu.style.display = 'none';
-   });
-   subtitleMenuButtons.push(button);
-   return listItem;
+    }
+    subtitlesMenu.style.display = 'none';
+  });
+  subtitleMenuButtons.push(button);
+  return listItem;
 }
 ```
 
@@ -202,11 +208,11 @@ Once the menu is built, it is then inserted into the DOM at the bottom of the vi
 Initially the menu is hidden by default, so an event listener needs to be added to our subtitles button to toggle it:
 
 ```js
-subtitles.addEventListener('click', function(e) {
-   if (subtitlesMenu) {
-      subtitlesMenu.style.display =
-        subtitlesMenu.style.display === 'block' ? 'none' : 'block';
-   }
+subtitles.addEventListener('click', (e) => {
+  if (subtitlesMenu) {
+    subtitlesMenu.style.display =
+      subtitlesMenu.style.display === 'block' ? 'none' : 'block';
+  }
 });
 ```
 
@@ -216,31 +222,31 @@ We also added some rudimentary styling for the newly created subtitles menu:
 
 ```css
 .subtitles-menu {
-    display:none;
-    position:absolute;
-    bottom:14.8%;
-    right:20px;
-    background:#666;
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    width:100px;
-    padding:10px;
+  display: none;
+  position: absolute;
+  bottom: 14.8%;
+  right: 20px;
+  background: #666;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  padding: 10px;
 }
 
 .subtitles-menu li {
-    padding:0;
-    text-align:center;
+  padding: 0;
+  text-align: center;
 }
 
 .subtitles-menu li button {
-    border:none;
-    background:#000;
-    color:#fff;
-    cursor:pointer;
-    width:90%;
-    padding:2px 5px;
-    border-radius:2px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  width: 90%;
+  padding: 2px 5px;
+  border-radius: 2px;
 }
 ```
 
@@ -264,7 +270,7 @@ For example, to change the text color of the text track cues you can write:
 
 ```css
 ::cue {
-   color:#ccc;
+  color: #ccc;
 }
 ```
 
@@ -280,8 +286,8 @@ Then this specific 'voice' will be stylable like so:
 
 ```css
 ::cue(v[voice='Test']) {
-   color:#fff;
-   background:#0095dd;
+  color: #fff;
+  background: #0095dd;
 }
 ```
 

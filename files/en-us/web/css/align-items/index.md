@@ -212,15 +212,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+const values = document.getElementById('values');
+const display = document.getElementById('display');
+const container = document.getElementById('container');
 
-values.addEventListener('change', function (evt) {
+values.addEventListener('change', (evt) => {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener('change', (evt) => {
   container.className = evt.target.value;
 });
 ```
