@@ -33,7 +33,7 @@ The block axis crosses the inline axis in the direction that blocks are displaye
 
 To align things on the block axis you use the properties that start with `align-`, {{cssxref("align-content")}}, {{cssxref("align-items")}} and {{cssxref("align-self")}}.
 
-![The block axes are vertical](block_axis.png)
+![The block axes are vertical.](block_axis.png)
 
 ## Self alignment
 
