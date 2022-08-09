@@ -151,16 +151,17 @@ exports.book_update_post = [
         }
       );
       return;
-    } else {
-      // Data from form is valid. Update the record.
-      Book.findByIdAndUpdate(req.params.id, book, {}, (err, thebook) => {
-        if (err) {
-          return next(err);
-        }
-        // Successful - redirect to book detail page.
-        res.redirect(thebook.url);
-      });
     }
+
+    // Data from form is valid. Update the record.
+    Book.findByIdAndUpdate(req.params.id, book, {}, (err, thebook) => {
+      if (err) {
+        return next(err);
+      }
+      
+      // Successful: redirect to book detail page.
+      res.redirect(thebook.url);
+    });
   },
 ];
 ```
