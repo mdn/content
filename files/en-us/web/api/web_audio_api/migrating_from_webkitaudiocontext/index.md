@@ -356,6 +356,7 @@ could be rewritten like that:
 ```js
 // Array to track the playing source nodes:
 const sources = [];
+
 // When starting the source, put it at the end of the array,
 // and set a handler to make sure it gets removed when the
 // AudioBufferSourceNode reaches its end.
