@@ -394,7 +394,7 @@ ways to _submit_, and to **upload files**:
           if (data.status > 0) { return; }
           // the form is now totally serialized! do something before sending it to the server…
           // doSomething(data);
-          // console.log("AJAXSubmit - The form is now serialized. Submitting...");
+          // console.log("XHRSubmit - The form is now serialized. Submitting...");
           submitData(data);
         }
 
