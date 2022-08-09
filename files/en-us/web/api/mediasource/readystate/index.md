@@ -33,13 +33,13 @@ A string.
 
 ## Examples
 
-The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
 let mediaSource;
 
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  mediaSource = new MediaSource;
+  mediaSource = getMediaSource();
   console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
