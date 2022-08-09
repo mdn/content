@@ -51,7 +51,7 @@ progress {
 
 A progress bar using the style above would look like this:
 
-![](progress-value.png)
+![A long orange and grey box. The left 20% is organge. The right 80% is grey.](progress-value.png)
 
 ## Specifications
 

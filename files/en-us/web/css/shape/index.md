@@ -30,7 +30,7 @@ rect(top, right, bottom, left)
 
 #### Values
 
-![](rect.png)
+![A graph showing top, right, bottom, and left, as described below. These define the rectangle's shape. The upper left corner is defined by the top left value. The bottom right corner is defined by the bottom and right values.](rect.png)
 
 - _top_
   - : Is a {{cssxref("length")}} representing the offset for the top of the rectangle relative to the top border of the element's box.
