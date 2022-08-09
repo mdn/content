@@ -58,15 +58,15 @@ For example, you should not use Google Analytics in the following way:
 </a>
 
 <script>
-function trackLink(url,event) {
+  function trackLink(url, event) {
     event.preventDefault();
     ga('send', 'event', 'outbound', 'click', url, {
-     'transport': 'beacon',
-     'hitCallback': function() {
-       document.location = url;
-     }
-   });
-}
+      transport: 'beacon',
+      hitCallback() {
+        document.location = url;
+      },
+    });
+  }
 </script>
 ```
 
@@ -78,17 +78,19 @@ Instead, you should account for the case when Google Analytics is missing by che
 </a>
 
 <script>
-function trackLink(url,event) {
+  function trackLink(url, event) {
     event.preventDefault();
     if (window.ga && ga.loaded) {
-         ga('send', 'event', 'outbound', 'click', url, {
-         'transport': 'beacon',
-         'hitCallback'() { document.location = url; }
-       });
+      ga('send', 'event', 'outbound', 'click', url, {
+        transport: 'beacon',
+        hitCallback() {
+          document.location = url;
+        },
+      });
     } else {
-        document.location = url;
+      document.location = url;
     }
-}
+  }
 </script>
 ```
 

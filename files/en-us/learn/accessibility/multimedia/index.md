@@ -166,8 +166,8 @@ Doing it this way round rather than just not including the controls attribute in
 First, let's set up the play/pause button. We can get this to toggle between play and pause with a simple conditional function, like the following. Add it to your code, at the bottom:
 
 ```js
-playPauseBtn.onclick = function() {
-  if(player.paused) {
+playPauseBtn.onclick = () => {
+  if (player.paused) {
     player.play();
     playPauseBtn.textContent = 'Pause';
   } else {
@@ -180,7 +180,7 @@ playPauseBtn.onclick = function() {
 Next, add this code to the bottom, which controls the stop button:
 
 ```js
-stopBtn.onclick = function() {
+stopBtn.onclick = () => {
   player.pause();
   player.currentTime = 0;
   playPauseBtn.textContent = 'Play';
@@ -192,13 +192,13 @@ There is no `stop()` function available on {{domxref("HTMLMediaElement")}}s, so 
 Next, our rewind and fast-forward buttons — add the following blocks to the bottom of your code:
 
 ```js
-rwdBtn.onclick = function() {
+rwdBtn.onclick = () => {
   player.currentTime -= 3;
 };
 
-fwdBtn.onclick = function() {
+fwdBtn.onclick = () => {
   player.currentTime += 3;
-  if(player.currentTime >= player.duration || player.paused) {
+  if (player.currentTime >= player.duration || player.paused) {
     player.pause();
     player.currentTime = 0;
     playPauseBtn.textContent = 'Play';
@@ -213,7 +213,7 @@ Note that we also check to see if the `currentTime` is more than the total media
 Last of all, add the following to the end of the code, to control the time elapsed display:
 
 ```js
-player.ontimeupdate = function () {
+player.ontimeupdate = () => {
   const minutes = Math.floor(player.currentTime / 60);
   const seconds = Math.floor(player.currentTime - minutes * 60);
   let minuteValue;

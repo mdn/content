@@ -184,7 +184,7 @@ const output = document.querySelector('.price-output');
 
 output.textContent = price.value;
 
-price.addEventListener('input', function() {
+price.addEventListener('input', () => {
   output.textContent = price.value;
 });
 ```

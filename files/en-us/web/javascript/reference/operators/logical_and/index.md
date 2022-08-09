@@ -82,7 +82,7 @@ The AND operator has a higher precedence than the OR operator, meaning the `&&` 
 ```js
 true || false && false           // returns true
 true && (false || false)         // returns false
-(2 == 3) || (4 < 0) && (1 == 1)  // returns false
+(2 === 3) || (4 < 0) && (1 === 1) // returns false
 ```
 
 ## Examples
@@ -96,7 +96,7 @@ operator.
 a1 = true  && true       // t && t returns true
 a2 = true  && false      // t && f returns false
 a3 = false && true       // f && t returns false
-a4 = false && (3 == 4)   // f && f returns false
+a4 = false && (3 === 4)  // f && f returns false
 a5 = 'Cat' && 'Dog'      // t && t returns "Dog"
 a6 = false && 'Cat'      // f && t returns false
 a7 = 'Cat' && false      // t && f returns false

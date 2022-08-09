@@ -104,10 +104,10 @@ Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay",
 ```js
 let hasPlayed = false;
 function handleFirstPlay(event) {
-  if(hasPlayed === false) {
+  if (!hasPlayed) {
     hasPlayed = true;
 
-    let vid = event.target;
+    const vid = event.target;
 
     vid.onplay = null;
 

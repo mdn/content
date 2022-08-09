@@ -154,7 +154,7 @@ changes the string `Brave New World` to `Brave New Web`.
 // Replaces oldS with newS in the string fullS
 function replaceString(oldS, newS, fullS) {
   for (let i = 0; i < fullS.length; ++i) {
-    if (fullS.substring(i, i + oldS.length) == oldS) {
+    if (fullS.substring(i, i + oldS.length) === oldS) {
       fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length);
     }
   }

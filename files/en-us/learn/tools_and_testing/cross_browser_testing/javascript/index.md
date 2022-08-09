@@ -166,7 +166,7 @@ Refresh the page in the browser, and you will get an output in the console of "R
 The `console.log()` output shows that the `superHeroes` object doesn't appear to contain anything. A very common problem with async requests like this is when you try to do something with the `response` object before it has actually been returned from the network. Let's fix this problem by running the code once the `load` event has been fired — remove the `console.log()` line, and update this code block:
 
 ```js
-let superHeroes = request.response;
+const superHeroes = request.response;
 populateHeader(superHeroes);
 showHeroes(superHeroes);
 ```

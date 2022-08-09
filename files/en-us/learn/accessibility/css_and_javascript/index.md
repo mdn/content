@@ -301,7 +301,7 @@ function createLink(testItem) {
 
   anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
   anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
+  anchor.onclick = () => {
     testItem.input.focus();
   };
   listItem.appendChild(anchor);

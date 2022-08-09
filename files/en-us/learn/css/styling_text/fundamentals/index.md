@@ -775,7 +775,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", () => {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
