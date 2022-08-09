@@ -368,7 +368,7 @@ ways to _submit_, and to **upload files**:
               "get",
               data.receiver.replace(
                 /(?:\?.*)?$/,
-                data.segments.length > 0 ? `?${dat.segments.join("&")}` : "",
+                data.segments.length > 0 ? `?${data.segments.join("&")}` : "",
               ),
               true,
             );
