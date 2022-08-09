@@ -171,7 +171,7 @@ addEventListener("orientationchange", () => {
 
 addEventListener("resize", setTimeout.bind(0,() => {
   if (orientationChanged && !mediaQueryUpdated) {
-    for (let i = 0; i < mqL.length | 0; i = i + 1 | 0) { 
+    for (let i = 0; i < mqL.length; i++) { 
       mqL[i][1](mqL[i][0]);
     }
   }
