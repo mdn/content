@@ -158,7 +158,7 @@ const listenToMediaQuery = isWebkit
   
 const destroyMediaQuery = isWebkit 
   ? (mQ) => {
-    for (let i = 0; i < mqL.length | 0; i = i + 1 | 0) {
+    for (let i = 0; i < mqL.length; i++) {
       if (mqL[i][0] === mQ) mqL.splice(i, 1);
     }
     mQ.removeListener(whenMediaChanges);
