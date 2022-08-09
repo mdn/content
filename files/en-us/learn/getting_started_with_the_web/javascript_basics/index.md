@@ -439,7 +439,7 @@ Next, let's change the page title to a personalized welcome message when the use
       setUserName();
     } else {
       const storedName = localStorage.getItem('name');
-      myHeading.textContent = 'Mozilla is cool, ' + storedName;
+      myHeading.textContent = `Mozilla is cool, ${storedName}`;
     }
     ```
 
