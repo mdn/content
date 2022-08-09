@@ -23,11 +23,11 @@ The easing functions in the cubic-bezier subset of easing functions are often ca
 
 Depending on the specific function used, the calculated output can sometimes grow to be greater than `1.0` or smaller than `0.0` during the course of an animation. This causes the value to go farther than the final state, and then return. In animations, for some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.
 
-![](tf_with_output_gt_than_1.png)
+![Graph of the easing function showing the output ratio going above 1, to 1.5, at the transition durations midpoint.](tf_with_output_gt_than_1.png)
 
 However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than `255` or smaller than `0` will be clipped to the closest allowed value (`255` and `0`, respectively). Some `cubic-bezier()` curves exhibit this property.
 
-![](tf_with_output_gt_than_1_clipped.png)
+![Graph of the easing function showing the output ratio reaching 1, and then staying at 1 for the rest of the time.](tf_with_output_gt_than_1_clipped.png)
 
 ### Easing functions
 

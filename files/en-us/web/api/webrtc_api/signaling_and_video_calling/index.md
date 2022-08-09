@@ -217,7 +217,7 @@ function handleUserlistMsg(msg) {
     listElem.removeChild(listElem.firstChild);
   }
 
-  msg.users.forEach(function(username) {
+  msg.users.forEach((username) => {
     const item = document.createElement("li");
     item.appendChild(document.createTextNode(username));
     item.addEventListener("click", invite, false);
@@ -260,11 +260,11 @@ function invite(evt) {
     createPeerConnection();
 
     navigator.mediaDevices.getUserMedia(mediaConstraints)
-    .then(function(localStream) {
-      document.getElementById("local_video").srcObject = localStream;
-      localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
-    })
-    .catch(handleGetUserMediaError);
+      .then((localStream) => {
+        document.getElementById("local_video").srcObject = localStream;
+        localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
+      })
+      .catch(handleGetUserMediaError);
   }
 }
 ```
@@ -370,18 +370,17 @@ Once the caller has created its {{domxref("RTCPeerConnection")}}, created a medi
 
 ```js
 function handleNegotiationNeededEvent() {
-  myPeerConnection.createOffer().then(function(offer) {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(function() {
-    sendToServer({
-      name: myUsername,
-      target: targetUsername,
-      type: "video-offer",
-      sdp: myPeerConnection.localDescription
-    });
-  })
-  .catch(reportError);
+  myPeerConnection.createOffer()
+    .then((offer) => myPeerConnection.setLocalDescription(offer))
+    .then(() => {
+      sendToServer({
+        name: myUsername,
+        target: targetUsername,
+        type: "video-offer",
+        sdp: myPeerConnection.localDescription
+      });
+    })
+    .catch(reportError);
 }
 ```
 
@@ -423,32 +422,27 @@ function handleVideoOfferMsg(msg) {
 
   const desc = new RTCSessionDescription(msg.sdp);
 
-  myPeerConnection.setRemoteDescription(desc).then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function(stream) {
-    localStream = stream;
-    document.getElementById("local_video").srcObject = localStream;
+  myPeerConnection.setRemoteDescription(desc)
+    .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
+    .then((stream) => {
+      localStream = stream;
+      document.getElementById("local_video").srcObject = localStream;
 
-    localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
-  })
-  .then(function() {
-    return myPeerConnection.createAnswer();
-  })
-  .then(function(answer) {
-    return myPeerConnection.setLocalDescription(answer);
-  })
-  .then(function() {
-    const msg = {
-      name: myUsername,
-      target: targetUsername,
-      type: "video-answer",
-      sdp: myPeerConnection.localDescription
-    };
+      localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
+    })
+    .then(() => myPeerConnection.createAnswer())
+    .then((answer) => myPeerConnection.setLocalDescription(answer))
+    .then(() => {
+      const msg = {
+        name: myUsername,
+        target: targetUsername,
+        type: "video-answer",
+        sdp: myPeerConnection.localDescription
+      };
 
-    sendToServer(msg);
-  })
-  .catch(handleGetUserMediaError);
+      sendToServer(msg);
+    })
+    .catch(handleGetUserMediaError);
 }
 ```
 

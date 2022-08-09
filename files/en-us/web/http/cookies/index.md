@@ -103,7 +103,7 @@ A cookie with the `HttpOnly` attribute is inaccessible to the JavaScript {{domxr
 
 Here's an example:
 
-```
+```http
 Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 ```
 
@@ -148,7 +148,7 @@ If no `SameSite` attribute is set, the cookie is treated as `Lax`.
 
 Here's an example:
 
-```
+```http
 Set-Cookie: mykey=myvalue; SameSite=Strict
 ```
 

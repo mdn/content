@@ -173,10 +173,10 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -387,10 +387,10 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -627,7 +627,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who\ plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>.\ My favorite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p>\ <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg" alt="Rush Moving Pictures album cover">';
+var htmlSolution = '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>. My favorite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p> <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg" alt="Rush Moving Pictures album cover">';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -651,10 +651,10 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();

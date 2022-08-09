@@ -87,7 +87,7 @@ document.querySelectorAll("button").forEach((button) => {
     const input = event.srcElement.previousElementSibling;
     try {
       input.showPicker();
-    } catch(error) {
+    } catch (error) {
       window.alert(error);
     }
   });

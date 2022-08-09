@@ -40,7 +40,7 @@ Pages can use feature detection to check whether they are in a secure context or
 ```js
 if (window.isSecureContext) {
   // Page is a secure context so service workers are now available
-  navigator.serviceWorker.register("/offline-worker.js").then(function () {
+  navigator.serviceWorker.register("/offline-worker.js").then(() => {
     // …
   });
 }

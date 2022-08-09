@@ -70,7 +70,7 @@ function recordStream(stream) {
 
   try {
     recorder = new MediaRecorder(stream);
-  } catch(err) {
+  } catch (err) {
     /* exception while trying to create the recorder; handle that */
   }
 

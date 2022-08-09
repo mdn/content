@@ -33,7 +33,7 @@ You can use the `soundstart` event in an [`addEventListener`](/en-US/docs/Web/AP
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('soundstart', function() {
+recognition.addEventListener('soundstart', () => {
   console.log('Some sound is being received');
 });
 ```
@@ -41,7 +41,7 @@ recognition.addEventListener('soundstart', function() {
 Or use the `onsoundstart` event handler property:
 
 ```js
-recognition.onsoundstart = function() {
+recognition.onsoundstart = () => {
   console.log('Some sound is being received');
 }
 ```

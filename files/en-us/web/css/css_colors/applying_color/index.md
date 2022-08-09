@@ -382,18 +382,18 @@ The CSS establishes a size for the box and some basic styling for appearances. T
 The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) element.
 
 ```js
-let colorPicker = document.getElementById("colorPicker");
-let box = document.getElementById("box");
-let output = document.getElementById("output");
+const colorPicker = document.getElementById("colorPicker");
+const box = document.getElementById("box");
+const output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", function(event) {
+colorPicker.addEventListener("input", (event) => {
   box.style.borderColor = event.target.value;
 }, false);
 
-colorPicker.addEventListener("change", function(event) {
-  output.innerText = "Color set to " + colorPicker.value + ".";
+colorPicker.addEventListener("change", (event) => {
+  output.innerText = `Color set to ${colorPicker.value}.`;
 }, false);
 ```
 

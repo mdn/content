@@ -48,7 +48,7 @@ You can use the `vrdisplaydisconnect` event in an [`addEventListener`](/en-US/do
 > **Note:** This event was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ```js
-window.addEventListener('vrdisplaydisconnect', function() {
+window.addEventListener('vrdisplaydisconnect', () => {
   info.textContent = 'Display disconnected.';
   reportDisplays();
 });
@@ -57,7 +57,7 @@ window.addEventListener('vrdisplaydisconnect', function() {
 Or use the `onvrdisplaydisconnect` event handler property:
 
 ```js
-window.onvrdisplaydisconnect = function() {
+window.onvrdisplaydisconnect = () => {
   info.textContent = 'Display disconnected.';
   reportDisplays();
 };

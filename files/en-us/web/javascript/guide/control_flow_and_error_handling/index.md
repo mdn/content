@@ -351,7 +351,7 @@ function. If the value does not correspond to a month number
 
 ```js
 function getMonthName(mo) {
-  mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
+  mo--; // Adjust month number for array index (1 = Jan, 12 = Dec)
   const months = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
@@ -434,7 +434,7 @@ if an error occurs.
 openMyFile();
 try {
   writeMyFile(theData); // This may throw an error
-} catch(e) {
+} catch (e) {
   handleError(e); // If an error occurred, handle it
 } finally {
   closeMyFile(); // Always close the resource
@@ -450,7 +450,7 @@ function f() {
   try {
     console.log(0);
     throw 'bogus';
-  } catch(e) {
+  } catch (e) {
     console.log(1);
     return true;    // this return statement is suspended
                     // until finally block has completed
@@ -473,7 +473,7 @@ exceptions thrown or re-thrown inside of the `catch` block:
 function f() {
   try {
     throw 'bogus';
-  } catch(e) {
+  } catch (e) {
     console.log('caught inner "bogus"');
     throw e; // this throw statement is suspended until
              // finally block has completed
@@ -485,7 +485,7 @@ function f() {
 
 try {
   console.log(f());
-} catch(e) {
+} catch (e) {
   // this is never reached!
   // while f() executes, the `finally` block returns false,
   // which overwrites the `throw` inside the above `catch`

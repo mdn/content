@@ -27,7 +27,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
 
 - `underlyingSource` {{optional_inline}}
 
-  - : An object containing methods and properties that define how the constructed stream instance will behave. 
+  - : An object containing methods and properties that define how the constructed stream instance will behave.
     `underlyingSource` can contain the following:
 
     - `start`(controller) {{optional_inline}}
@@ -124,7 +124,7 @@ const stream = new ReadableStream({
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', () => {
       clearInterval(interval);
       fetchStream();
       controller.close();

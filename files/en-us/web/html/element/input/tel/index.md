@@ -256,7 +256,7 @@ With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s 
 
 Here's a screenshot of what that might look like:
 
-![](phone-number-with-options.png)
+![An input box has focus with a blue focus ring. The input has a drop-down menu showing four phone numbers the user can select.](phone-number-with-options.png)
 
 ## Validation
 
@@ -413,15 +413,15 @@ Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hin
 The JavaScript is relatively simple — it contains an {{domxref("HTMLElement.change_event", "onchange")}} event handler that, when the `<select>` value is changed, updates the `<input>` element's `pattern`, `placeholder`, and `aria-label` to suit the format of telephone numbers in that country/territory.
 
 ```js
-var selectElem = document.querySelector("select");
-var inputElems = document.querySelectorAll("input");
+const selectElem = document.querySelector("select");
+const inputElems = document.querySelectorAll("input");
 
-selectElem.onchange = function() {
-  for (var i = 0; i < inputElems.length; i++) {
+selectElem.onchange = () => {
+  for (let i = 0; i < inputElems.length; i++) {
     inputElems[i].value = "";
   }
 
-  if(selectElem.value === "US") {
+  if (selectElem.value === "US") {
     inputElems[2].parentNode.style.display = "inline";
 
     inputElems[0].placeholder = "Area code";
@@ -433,8 +433,8 @@ selectElem.onchange = function() {
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label","Second part of number");
-  } else if(selectElem.value === "UK") {
+    inputElems[2].setAttribute("aria-label", "Second part of number");
+  } else if (selectElem.value === "UK") {
     inputElems[2].parentNode.style.display = "none";
 
     inputElems[0].placeholder = "Area code";
@@ -442,8 +442,8 @@ selectElem.onchange = function() {
 
     inputElems[1].placeholder = "Local number";
     inputElems[1].pattern = "[0-9]{4,8}";
-    inputElems[1].setAttribute("aria-label","Local number");
-  } else if(selectElem.value === "Germany") {
+    inputElems[1].setAttribute("aria-label", "Local number");
+  } else if (selectElem.value === "Germany") {
     inputElems[2].parentNode.style.display = "inline";
 
     inputElems[0].placeholder = "Area code";

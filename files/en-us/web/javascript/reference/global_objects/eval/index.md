@@ -414,8 +414,8 @@ eval(z);           // returns 42
 
 ```js
 const str = 'if (a) { 1 + 1 } else { 1 + 2 }';
-const a = true;
-const b = eval(str);  // returns 2
+let a = true;
+let b = eval(str);  // returns 2
 
 console.log(`b is: ${b}`);
 

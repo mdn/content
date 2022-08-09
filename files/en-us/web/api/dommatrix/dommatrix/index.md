@@ -47,8 +47,8 @@ const translateX = 12;
 const translateY = 8;
 const angle = Math.PI / 2;
 const matrix = new DOMMatrix([
-  Math.sin(angle) * scaleX,
   Math.cos(angle) * scaleX,
+  Math.sin(angle) * scaleX,
   -Math.sin(angle) * scaleY,
   Math.cos(angle) * scaleY,
   translateX,

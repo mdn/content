@@ -48,7 +48,7 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplayactivate` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplayactivate', function() {
+window.addEventListener('vrdisplayactivate', () => {
   info.textContent = 'Display activated.';
   reportDisplays();
 });
@@ -57,7 +57,7 @@ window.addEventListener('vrdisplayactivate', function() {
 Or use the `onvrdisplayactivate` event handler property:
 
 ```js
-window.onvrdisplayactivate = function() {
+window.onvrdisplayactivate = () => {
   info.textContent = 'Display activated.';
   reportDisplays();
 };

@@ -82,12 +82,12 @@ The spec defines the following report types:
 In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```
@@ -101,7 +101,7 @@ observer.observe();
 Later on in the example we deliberately use the deprecated version of {{domxref("MediaDevices.getUserMedia()")}}:
 
 ```js
-if(navigator.mozGetUserMedia) {
+if (navigator.mozGetUserMedia) {
   navigator.mozGetUserMedia(
     constraints,
     success,

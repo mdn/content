@@ -200,12 +200,12 @@ This works, but it is a bit boring. In a game something is usually happening —
 We already used `position` and `rotation` to adjust the position of the shapes; we could also scale them. To show actual animation, we need to make changes to these values inside the rendering loop at the end of our code, so they are updated on every frame. Define a helper variable — `t` — that we will use for animations, just before the `renderLoop`, and decrement it on every frame inside the loop, like this:
 
 ```js
-const t = 0;
+let t = 0;
 function renderLoop() {
-    scene.render();
-    t -= 0.01;
-    // animation code goes here
-};
+  scene.render();
+  t -= 0.01;
+  // animation code goes here
+}
 engine.runRenderLoop(renderLoop);
 ```
 

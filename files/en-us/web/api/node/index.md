@@ -252,17 +252,13 @@ function grep(parentNode, pattern) {
       return;
     }
 
-    if (typeof pattern === "string") {
-      if (node.textContent.includes(pattern)) {
-        matches.push(node);
-      }
-    }
-    else if (pattern.test(node.textContent)) {
+    if (typeof pattern === "string" && node.textContent.includes(pattern)) {
+      matches.push(node)
+    } else if (pattern.test(node.textContent)) {
       if (!pattern.global) {
         endScan = true;
         matches = node;
-      }
-      else {
+      } else {
         matches.push(node);
       }
     }

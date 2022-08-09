@@ -11,9 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozSetDataAt
 ---
-{{APIRef("HTML Drag and Drop API")}}
-
-{{deprecated_header}}{{Non-standard_header()}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozSetDataAt()`** method is used to add
 data to a specific index in the drag event's {{domxref("DataTransfer","data transfer")}}

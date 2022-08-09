@@ -44,7 +44,7 @@ if(navigator.getVRDisplays) {
 }
 
 function reportFieldOfView() {
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then((displays) => {
     vrDisplay = displays[0];
     const lEye = vrDisplay.getEyeParameters('left');
     const rEye = vrDisplay.getEyeParameters('right');

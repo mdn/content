@@ -24,13 +24,12 @@ A string representing the URL of the document that generated the report.
 ## Examples
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver(([firstReport], observer) => {
   // Log the URL of the document that generated the first report
   // e.g. "https://www.example.com/cats.html"
   console.log(firstReport.url);

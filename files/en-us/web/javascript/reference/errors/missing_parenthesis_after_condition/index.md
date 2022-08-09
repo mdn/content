@@ -47,7 +47,7 @@ if (condition) {
 It might just be an oversight, carefully check all you parenthesis in your code.
 
 ```js example-bad
-if (3 > Math.PI {
+if (Math.PI < 3 {
   console.log("wait what?");
 }
 
@@ -57,12 +57,12 @@ if (3 > Math.PI {
 To fix this code, you would need to add a parenthesis that closes the condition.
 
 ```js example-good
-if (3 > Math.PI) {
+if (Math.PI < 3) {
   console.log("wait what?");
 }
 ```
 
-### Misused `is` keyword
+### Misused is keyword
 
 If you are coming from another programming language, it is also easy to add keywords
 that don't mean the same or have no meaning at all in JavaScript.

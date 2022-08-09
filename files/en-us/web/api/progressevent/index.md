@@ -44,13 +44,13 @@ The following example adds a `ProgressEvent` to a new {{domxref("XMLHTTPRequest"
 const progressBar = document.getElementById("p"),
     client = new XMLHttpRequest()
 client.open("GET", "magical-unicorns")
-client.onprogress = function(pe) {
+client.onprogress = (pe) => {
   if(pe.lengthComputable) {
     progressBar.max = pe.total
     progressBar.value = pe.loaded
   }
 }
-client.onloadend = function(pe) {
+client.onloadend = (pe) => {
   progressBar.value = pe.loaded
 }
 client.send()

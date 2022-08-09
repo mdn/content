@@ -38,8 +38,8 @@ The following code snippet creates a {{domxref("SharedWorker")}} object using th
 ```js
 const mySharedWorker = new SharedWorker('shared-worker.js');
 
-mySharedWorker.onerror = function(event) {
-  console.log('There is an error with your worker!');
+mySharedWorker.onerror = (event) => {
+  console.error('There is an error with your worker!');
 }
 ```
 

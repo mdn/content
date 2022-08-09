@@ -110,16 +110,16 @@ let matchedItems;
 
 try {
   matchedItems = document.querySelectorAll(':is(header, main, footer) p');
-} catch(e) {
+} catch (e) {
   try {
     matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
-  } catch(e) {
+  } catch (e) {
     try {
       matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
-    } catch(e) {
+    } catch (e) {
       try {
         matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
-      } catch(e) {
+      } catch (e) {
         console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
       }
     }
@@ -129,8 +129,8 @@ try {
 matchedItems.forEach(applyHandler);
 
 function applyHandler(elem) {
-  elem.addEventListener('click', function(e) {
-    alert('This paragraph is inside a ' + e.target.parentNode.nodeName);
+  elem.addEventListener('click', (e) => {
+    alert(`This paragraph is inside a ${e.target.parentNode.nodeName}`);
   });
 }
 ```

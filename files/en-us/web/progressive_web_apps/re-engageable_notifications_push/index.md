@@ -158,11 +158,9 @@ Now let's move to the subscription part — the app first sends the subscription
 fetch('./register', {
   method: 'post',
   headers: {
-    'Content-type': 'application/json'
+    'Content-type': 'application/json',
   },
-  body: JSON.stringify({
-    subscription: subscription
-  }),
+  body: JSON.stringify({ subscription }),
 });
 ```
 
@@ -177,13 +175,13 @@ document.getElementById('doIt').onclick = function() {
   fetch('./sendNotification', {
     method: 'post',
     headers: {
-      'Content-type': 'application/json'
+      'Content-type': 'application/json',
     },
     body: JSON.stringify({
-      subscription: subscription,
-      payload: payload,
-      delay: delay,
-      ttl: ttl,
+      subscription,
+      payload,
+      delay,
+      ttl,
     }),
   });
 };

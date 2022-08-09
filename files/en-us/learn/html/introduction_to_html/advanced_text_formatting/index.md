@@ -197,10 +197,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
 
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -402,10 +402,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
 
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -551,10 +551,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
 
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();

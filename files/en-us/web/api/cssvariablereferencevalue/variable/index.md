@@ -11,6 +11,7 @@ tags:
   - Property
   - Reference
   - variable
+  - Experimental
 browser-compat: api.CSSVariableReferenceValue.variable
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}

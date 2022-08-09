@@ -40,7 +40,7 @@ When a non-empty string is assigned to the `returnValue` Event property, a dialo
 
 ```js
 window.addEventListener("beforeunload", (event) => {
-  event.returnValue = "\o/";
+  event.returnValue = "\\o/";
 });
 
 // is equivalent to
@@ -53,7 +53,7 @@ WebKit-derived browsers don't follow the spec for the dialog box. An almost-cros
 
 ```js
 window.addEventListener("beforeunload", (e) => {
-  const confirmationMessage = "\o/";
+  const confirmationMessage = "\\o/";
 
   (e || window.event).returnValue = confirmationMessage;     // Gecko + IE
   return confirmationMessage;                                /* Safari, Chrome, and other

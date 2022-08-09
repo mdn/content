@@ -34,7 +34,7 @@ The **`SpeechRecognitionResult`** interface of the [Web Speech API](/en-US/docs/
 This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array

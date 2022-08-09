@@ -279,8 +279,8 @@ A separate update and draw method could look like the following example. For the
   }
 
   function queueUpdates(numTicks) {
-    for(let i=0; i < numTicks; i++) {
-      MyGame.lastTick = MyGame.lastTick + MyGame.tickLength; // Now lastTick is this tick.
+    for (let i = 0; i < numTicks; i++) {
+      MyGame.lastTick += MyGame.tickLength; // Now lastTick is this tick.
       update(MyGame.lastTick);
     }
   }

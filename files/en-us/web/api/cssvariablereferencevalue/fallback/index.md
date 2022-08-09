@@ -11,6 +11,7 @@ tags:
   - Property
   - Reference
   - fallback
+  - Experimental
 browser-compat: api.CSSVariableReferenceValue.fallback
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}

@@ -202,22 +202,22 @@ The function passed to `forEach` is executed once for every item in the array, w
 Note that the elements of an array that are omitted when the array is defined are not listed when iterating by `forEach`, but _are_ listed when `undefined` has been manually assigned to the element:
 
 ```js
-const array = ['first', 'second', , 'fourth'];
+const sparseArray = ['first', 'second', , 'fourth'];
 
-array.forEach((element) => {
+sparseArray.forEach((element) => {
   console.log(element);
 });
 // first
 // second
 // fourth
 
-if (array[2] === undefined) {
-  console.log('array[2] is undefined');  // true
+if (sparseArray[2] === undefined) {
+  console.log('sparseArray[2] is undefined');  // true
 }
 
-array = ['first', 'second', undefined, 'fourth'];
+const nonsparseArray = ['first', 'second', undefined, 'fourth'];
 
-array.forEach((element) => {
+nonsparseArray.forEach((element) => {
   console.log(element);
 });
 // first
