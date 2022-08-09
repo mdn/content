@@ -169,7 +169,7 @@ addEventListener("orientationchange", () => {
   orientationChanged = true;
 }, PASSIVE_LISTENER_OPTION);
 
-addEventListener("resize", setTimeout.bind(0,() => {
+addEventListener("resize", () => setTimeout(() => {
   if (orientationChanged && !mediaQueryUpdated) {
     for (let i = 0; i < mqL.length; i++) { 
       mqL[i][1](mqL[i][0]);
