@@ -303,7 +303,7 @@ When the regular expression [`exec()`](/en-US/docs/Web/JavaScript/Reference/Glob
 
 ```js
 function parseProtocol(url) {
-  const parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
+  const parsedURL = /^(\w+):\/\/([^/]+)\/(.*)$/.exec(url);
   if (!parsedURL) {
     return false;
   }
