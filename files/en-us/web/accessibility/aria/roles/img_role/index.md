@@ -52,7 +52,7 @@ If an image is purely presentational, consider using the [`presentation`](/en-US
 
 ### SVG and role="img"
 
-If you are using embedded SVG images in your page, it is a good idea to set `role="img"` on the outer {{HTMLElement('svg')}} element and give it a label. This will cause screen readers to just consider it as a single entity and describe it using the label, rather than trying to read out all the child nodes:
+If you are using embedded SVG images in your page, it is a good idea to set `role="img"` on the outer {{SVGElement('svg')}} element and give it a label. This will cause screen readers to just consider it as a single entity and describe it using the label, rather than trying to read out all the child nodes:
 
 ```html
 <svg role="img" aria-label="Description of your SVG image">
