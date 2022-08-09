@@ -329,7 +329,7 @@ Let's also add the `stack-large` class to the `<ul>` tag in our `App.vue` file. 
 Update it as follows:
 
 ```html
-<ul aria-labelledby="list-summary" class="stack-large">
+<ul class="stack-large">
 ```
 
 ## Adding scoped styles
