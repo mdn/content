@@ -24,7 +24,7 @@ The methods `addEventListener()` and `removeEventListener()` are very useful whe
 function myRect(x, y, w, h, message) {
   this.message = message;
 
-  this.rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
+  this.rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
   this.rect.setAttributeNS(null, "x", x);
   this.rect.setAttributeNS(null, "y", y);
   this.rect.setAttributeNS(null, "width", w);
@@ -34,12 +34,12 @@ function myRect(x, y, w, h, message) {
   this.rect.addEventListener("click", this, false);
 
   this.handleEvent = (evt) => {
-    switch (evt.type){
-    case "click":
-      alert(this.message)
-      break;
+    switch (evt.type) {
+      case "click":
+        alert(this.message)
+        break;
     }
-  }
+  };
 }
 ```
 
