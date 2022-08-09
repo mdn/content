@@ -493,7 +493,6 @@ function activeSelect(select, selectList) {
 // It takes one parameter:
 // select : the DOM node with the list to toggle
 function toggleOptList(select) {
-
   // The list is kept from the control
   const optList = select.querySelector('.optList');
 
