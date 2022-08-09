@@ -71,7 +71,7 @@ Workers can also spawn other workers, so these APIs are also available: {{domxre
 - {{DOMxRef("SharedWorkerGlobalScope")}}
   - : Represents the scope of a shared worker, inheriting from {{DOMxRef("WorkerGlobalScope")}} and adding some dedicated features.
 - {{DOMxRef("WorkerNavigator")}}
-  - : Represents the identity and state of the user agent (the client):
+  - : Represents the identity and state of the user agent (the client).
 
 ## Examples
 

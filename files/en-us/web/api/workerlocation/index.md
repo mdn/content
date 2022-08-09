@@ -50,5 +50,5 @@ This interface is only visible from inside a JavaScript script executed in the c
 
 ## See also
 
-- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerNavigator")}}, and {{domxref("WorkerGlobalScope")}}.
+- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerNavigator")}}, and {{domxref("WorkerGlobalScope")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
