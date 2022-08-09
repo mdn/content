@@ -342,48 +342,47 @@ The `activeSourceCount` attribute has been removed from {{domxref("AudioContext"
 Code using the `activeSourceCount` attribute of the {{domxref("AudioContext")}}, like this snippet:
 
 ```js
-  const src0 = context.createBufferSource();
-  const src1 = context.createBufferSource();
-  // Set buffers and other parameters...
-  src0.start(0);
-  src1.start(0);
-  // Some time later...
-  console.log(context.activeSourceCount);
+const src0 = context.createBufferSource();
+const src1 = context.createBufferSource();
+// Set buffers and other parameters...
+src0.start(0);
+src1.start(0);
+// Some time later...
+console.log(context.activeSourceCount);
 ```
 
 could be rewritten like that:
 
 ```js
-  // Array to track the playing source nodes:
-  const sources = [];
-  // When starting the source, put it at the end of the array,
-  // and set a handler to make sure it gets removed when the
-  // AudioBufferSourceNode reaches its end.
-  // First argument is the AudioBufferSourceNode to start, other arguments are
-  // the argument to the |start()| method of the AudioBufferSourceNode.
-  function startSource() {
-    const src = arguments[0];
-    const startArgs = Array.prototype.slice.call(arguments, 1);
-    src.onended = () => {
-      sources.splice(sources.indexOf(src), 1);
-    }
-    sources.push(src);
-    src.start.apply(src, startArgs);
+// Array to track the playing source nodes:
+const sources = [];
+
+// When starting the source, put it at the end of the array,
+// and set a handler to make sure it gets removed when the
+// AudioBufferSourceNode reaches its end.
+// First argument is the AudioBufferSourceNode to start, other arguments are
+// the argument to the |start()| method of the AudioBufferSourceNode.
+function startSource(src, ...startArgs) {
+  src.onended = () => {
+    sources.splice(sources.indexOf(src), 1);
   }
-  
-  function activeSources() {
-    return sources.length;
-  }
-  
-  const src0 = context.createBufferSource();
-  const src1 = context.createBufferSource();
-  
-  // Set buffers and other parameters...
-  startSource(src0, 0);
-  startSource(src1, 0);
-  
-  // Some time later, query the number of sources...
-  console.log(activeSources());
+  sources.push(src);
+  src.start.apply(src, startArgs);
+}
+
+function activeSources() {
+  return sources.length;
+}
+
+const src0 = context.createBufferSource();
+const src1 = context.createBufferSource();
+
+// Set buffers and other parameters...
+startSource(src0, 0);
+startSource(src1, 0);
+
+// Some time later, query the number of sources...
+console.log(activeSources());
 ```
 
 ## Renaming of WaveTable

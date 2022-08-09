@@ -51,9 +51,7 @@ We then create an import object that contains the table:
 
 ```js
 const importObj = {
-  js: {
-    tbl: tbl
-  }
+  js: { tbl },
 };
 ```
 

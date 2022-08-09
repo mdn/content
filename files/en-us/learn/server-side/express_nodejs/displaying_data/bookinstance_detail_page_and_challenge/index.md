@@ -20,21 +20,24 @@ Find the exported `bookinstance_detail()` controller method and replace it with 
 
 ```js
 // Display detail page for a specific BookInstance.
-exports.bookinstance_detail = function(req, res, next) {
-
-    BookInstance.findById(req.params.id)
+exports.bookinstance_detail = (req, res, next) => {
+  BookInstance.findById(req.params.id)
     .populate('book')
-    .exec(function (err, bookinstance) {
-      if (err) { return next(err); }
-      if (bookinstance==null) { // No results.
-          var err = new Error('Book copy not found');
-          err.status = 404;
-          return next(err);
-        }
+    .exec((err, bookinstance) => {
+      if (err) {
+        return next(err);
+      }
+      if (bookinstance == null) { // No results.
+        const err = new Error('Book copy not found');
+        err.status = 404;
+        return next(err);
+      }
       // Successful, so render.
-      res.render('bookinstance_detail', { title: 'Copy: ' + bookinstance.book.title, bookinstance:  bookinstance});
-    })
-
+      res.render('bookinstance_detail', {
+        title: `Copy: ${bookinstance.book.title}`,
+        bookinstance,
+      });
+    });
 };
 ```
 

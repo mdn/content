@@ -90,7 +90,7 @@ This is the spacialization algorithm that's used to position the audio in 3D spa
 Pretty clever stuff. Let's use the `HRTF` model!
 
 ```js
-const pannerModel = 'HRTF';
+const panningModel = 'HRTF';
 ```
 
 The [`coneInnerAngle`](/en-US/docs/Web/API/PannerNode/coneInnerAngle) and [`coneOuterAngle`](/en-US/docs/Web/API/PannerNode/coneOuterAngle) properties specify where the volume emanates from.
@@ -155,20 +155,20 @@ Let's use the relevant constructor for creating our panner node and pass in all 
 
 ```js
 const panner = new PannerNode(audioCtx, {
-  panningModel: pannerModel,
-  distanceModel: distanceModel,
-  positionX: positionX,
-  positionY: positionY,
-  positionZ: positionZ,
-  orientationX: orientationX,
-  orientationY: orientationY,
-  orientationZ: orientationZ,
-  refDistance: refDistance,
-  maxDistance: maxDistance,
+  panningModel,
+  distanceModel,
+  positionX,
+  positionY,
+  positionZ,
+  orientationX,
+  orientationY,
+  orientationZ,
+  refDistance,
+  maxDistance,
   rolloffFactor: rollOff,
   coneInnerAngle: innerCone,
   coneOuterAngle: outerCone,
-  coneOuterGain: outerGain
+  coneOuterGain: outerGain,
 })
 ```
 

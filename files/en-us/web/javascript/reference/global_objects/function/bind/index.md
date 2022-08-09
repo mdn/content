@@ -97,8 +97,8 @@ inserted at the start of the arguments passed to the target function, followed b
 whatever arguments are passed to the bound function at the time it is called.
 
 ```js
-function list() {
-  return Array.prototype.slice.call(arguments);
+function list(...args) {
+  return args;
 }
 
 function addArguments(arg1, arg2) {

@@ -228,9 +228,7 @@ Another solution is to assign a new array to `todos` containing a copy of all th
 
 ```js
 const checkAllTodos = (completed) => {
-  todos = todos.map((t) => {                  // shorter version: todos = todos.map((t) => ({...t, completed}))
-    return {...t, completed: completed}
-  })
+  todos = todos.map((t) => ({ ...t, completed }));
 }
 ```
 
