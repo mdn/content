@@ -35,6 +35,7 @@ If you want to avoid using user agent detection, you have options!
 
 ```js
 // This code snippet splits a string in a special notation
+let splitUpString;
 if (navigator.userAgent.includes("Chrome")){
   // YES! The user is suspected to support look-behind regexps
   // DO NOT USE /(?<=[A-Z])/. It will cause a syntax error in
@@ -42,12 +43,12 @@ if (navigator.userAgent.includes("Chrome")){
   //  because all browsers parse the entire script, including
   //  sections of the code that are never executed.
   const camelCaseExpression = new RegExp("(?<=[A-Z])");
-  const splitUpString = (str) => {
+  splitUpString = (str) => {
     return ("" + str).split(camelCaseExpression);
   };
 } else {
   //This fallback code is much less performant, but works
-  const splitUpString = (str) => str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
+  splitUpString = (str) => str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
 }
 
 console.log(splitUpString("fooBare")); // ["fooB", "are"]
