@@ -8,9 +8,10 @@ tags:
   - Reference
   - entries
   - CustomStateSet
+  - Experimental
 browser-compat: api.CustomStateSet.entries
 ---
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`entries`** method of the {{domxref("CustomStateSet")}} interface returns a new {{jsxref("Iterator")}} object, containing an array of `[value,value]` for each element in the `CustomStateSet`.
 

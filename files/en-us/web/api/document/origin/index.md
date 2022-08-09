@@ -11,9 +11,10 @@ tags:
   - Property
   - Read-only
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.origin
 ---
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 > **Note:** Use `self.origin` instead.
 
