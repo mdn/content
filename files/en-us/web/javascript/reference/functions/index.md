@@ -293,15 +293,12 @@ For more details, see [rest parameters](/en-US/docs/Web/JavaScript/Reference/Fun
 You can refer to a function's arguments within the function by using the
 `arguments` object. See [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments).
 
-- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments):
-  An array-like object containing the arguments passed to the currently executing
-  function.
+- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+  - : An array-like object containing the arguments passed to the currently executing function.
 - [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-  : The currently executing function.
-- [`arguments.caller`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller)
-  : The function that invoked the currently executing function.
-- [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length):
-  The number of arguments passed to the function.
+  - : The currently executing function.
+- [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length)
+  - : The number of arguments passed to the function.
 
 ## Defining method functions
 

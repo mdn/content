@@ -328,7 +328,7 @@ The latest ECMAScript standard defines eight data types:
   4. {{Glossary("Number")}}. An integer or floating point number. For example: `42` or `3.14159`.
   5. {{Glossary("BigInt")}}. An integer with arbitrary precision. For example: `9007199254740992n`.
   6. {{Glossary("String")}}. A sequence of characters that represent a text value. For example: "Howdy"
-  7. {{Glossary("Symbol")}} (new in ECMAScript 2015). A data type whose instances are unique and immutable.
+  7. [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). A data type whose instances are unique and immutable.
 
 - and {{Glossary("Object")}}
 
