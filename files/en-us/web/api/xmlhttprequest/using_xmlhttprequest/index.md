@@ -3,7 +3,6 @@ title: Using XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 page-type: guide
 tags:
-
   - Advanced
   - DOM
   - Guide
@@ -340,9 +339,7 @@ ways to _submit_, and to **upload files**:
     <meta name="viewport" content="width=device-width">
     <title>Sending forms with pure AJAX &ndash; MDN</title>
     <script>
-
       "use strict";
-
 
       // :: XHR Form Submit Framework ::
       // 
@@ -354,9 +351,7 @@ ways to _submit_, and to **upload files**:
       // Syntax:
       // 
       // XHRSubmit(HTMLFormElement);
-      () => {
-        const XHRSubmit = (function () {
-
+      const XHRSubmit = (function () {
         function xhrSuccess() {
           console.log(this.responseText);
           // you can get the serialized data through the "submittedData" custom property:
@@ -369,8 +364,14 @@ ways to _submit_, and to **upload files**:
           req.onload = xhrSuccess;
           if (data.technique === 0) {
             // method is GET
-            req.open("get", data.receiver.replace(/(?:\?.*)?$/,
-                data.segments.length > 0 ? `?${dat.segments.join("&")}` : ""), true);
+            req.open(
+              "get",
+              data.receiver.replace(
+                /(?:\?.*)?$/,
+                data.segments.length > 0 ? `?${dat.segments.join("&")}` : "",
+              ),
+              true,
+            );
             req.send(null);
           } else {
             // method is POST
@@ -389,89 +390,87 @@ ways to _submit_, and to **upload files**:
           }
         }
 
-    function processStatus(data) {
-      if (data.status > 0) { return; }
-      // the form is now totally serialized! do something before sending it to the server…
-      // doSomething(data);
-      // console.log("AJAXSubmit - The form is now serialized. Submitting...");
-      submitData(data);
-    }
-
-    function pushSegment(segment) {
-      this.owner.segments[this.segmentIdx] += segment.target.result + "\r\n";
-      this.owner.status--;
-      processStatus(this.owner);
-    }
-
-    function plainEscape(text) {
-      // How should I treat a text/plain form encoding?
-      // What characters are not allowed? this is what I suppose…:
-      // "4\3\7 - Einstein said E=mc2" ----> "4\\3\\7\ -\ Einstein\ said\ E\=mc2"
-      return text.replace(/[\s\=\\]/g, "\\$&");
-    }
-
-    function SubmitRequest(target) {
-      const isPost = target.method.toLowerCase() === "post";
-      this.contentType = isPost && target.enctype ? target.enctype : "application\/x-www-form-urlencoded";
-      this.technique = isPost ?
-          this.contentType === "multipart\/form-data" ? 3 : this.contentType === "text\/plain" ? 2 : 1 : 0;
-      this.receiver = target.action;
-      this.status = 0;
-      this.segments = [];
-      const filter = this.technique === 2 ? plainEscape : escape;
-      for (const field of target.elements) {
-        if (!field.hasAttribute("name")) { continue; }
-        const fieldType = field.nodeName.toUpperCase() === "INPUT" && field.hasAttribute("type")
-          ? field.getAttribute("type").toUpperCase()
-          : "TEXT";
-        if (fieldType === "FILE" && field.files.length > 0) {
-          if (this.technique === 3) {
-            // enctype is multipart/form-data
-            for (const file of field.files) {
-              const segmReq = new FileReader();
-
-              // Custom properties:
-              segmReq.segmentIdx = this.segments.length;
-              segmReq.owner = this;
-
-              segmReq.onload = pushSegment;
-              this.segments.push("Content-Disposition: form-data; name=\"" +
-                  field.name + "\"; filename=\"" + file.name +
-                  "\"\r\nContent-Type: " + file.type + "\r\n\r\n");
-              this.status++;
-              segmReq.readAsBinaryString(file);
-            }
-          } else {
-            // enctype is application/x-www-form-urlencoded or text/plain or
-            // method is GET: files will not be sent!
-            for (const file of field.files) {
-              this.segments.push(`${filter(field.name)}=${filter(file.name)}`);
-            }
-          }
-        } else if ((fieldType !== "RADIO" && fieldType !== "CHECKBOX") || field.checked) {
-          // NOTE: this will submit _all_ submit buttons. Detecting the correct one is non-trivial.
-          // field type is not FILE or is FILE but is empty.
-          if (this.technique === 3) {
-            // enctype is multipart/form-data
-            this.segments.push(`Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`;
-          } else {  
-            // enctype is application/x-www-form-urlencoded or text/plain or method is GET
-            this.segments.push(`${filter(field.name)}=${filter(field.value)}`;
-          }
+        function processStatus(data) {
+          if (data.status > 0) { return; }
+          // the form is now totally serialized! do something before sending it to the server…
+          // doSomething(data);
+          // console.log("AJAXSubmit - The form is now serialized. Submitting...");
+          submitData(data);
         }
-      }
-      processStatus(this);
-    }
 
-    (formElement) => {
-      return function (formElement) {
-        if (!formeElement.action) { return; }
-        new SubmitRequest(formElement);
-      };
+        function pushSegment(segment) {
+          this.owner.segments[this.segmentIdx] += segment.target.result + "\r\n";
+          this.owner.status--;
+          processStatus(this.owner);
+        }
 
-    })();
-  </script>
-</head>
+        function plainEscape(text) {
+          // How should I treat a text/plain form encoding?
+          // What characters are not allowed? this is what I suppose…:
+          // "4\3\7 - Einstein said E=mc2" ----> "4\\3\\7\ -\ Einstein\ said\ E\=mc2"
+          return text.replace(/[\s\=\\]/g, "\\$&");
+        }
+
+        function SubmitRequest(target) {
+          const isPost = target.method.toLowerCase() === "post";
+          this.contentType = isPost && target.enctype ? target.enctype : "application\/x-www-form-urlencoded";
+          this.technique = isPost ?
+              this.contentType === "multipart\/form-data" ? 3 : this.contentType === "text\/plain" ? 2 : 1 : 0;
+          this.receiver = target.action;
+          this.status = 0;
+          this.segments = [];
+          const filter = this.technique === 2 ? plainEscape : escape;
+          for (const field of target.elements) {
+            if (!field.hasAttribute("name")) { continue; }
+            const fieldType = field.nodeName.toUpperCase() === "INPUT" && field.hasAttribute("type")
+              ? field.getAttribute("type").toUpperCase()
+              : "TEXT";
+            if (fieldType === "FILE" && field.files.length > 0) {
+              if (this.technique === 3) {
+                // enctype is multipart/form-data
+                for (const file of field.files) {
+                  const segmReq = new FileReader();
+
+                  // Custom properties:
+                  segmReq.segmentIdx = this.segments.length;
+                  segmReq.owner = this;
+
+                  segmReq.onload = pushSegment;
+                  this.segments.push("Content-Disposition: form-data; name=\"" +
+                      field.name + "\"; filename=\"" + file.name +
+                      "\"\r\nContent-Type: " + file.type + "\r\n\r\n");
+                  this.status++;
+                  segmReq.readAsBinaryString(file);
+                }
+              } else {
+                // enctype is application/x-www-form-urlencoded or text/plain or
+                // method is GET: files will not be sent!
+                for (const file of field.files) {
+                  this.segments.push(`${filter(field.name)}=${filter(file.name)}`);
+                }
+              }
+            } else if ((fieldType !== "RADIO" && fieldType !== "CHECKBOX") || field.checked) {
+              // NOTE: this will submit _all_ submit buttons. Detecting the correct one is non-trivial.
+              // field type is not FILE or is FILE but is empty.
+              if (this.technique === 3) {
+                // enctype is multipart/form-data
+                this.segments.push(`Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`);
+              } else {  
+                // enctype is application/x-www-form-urlencoded or text/plain or method is GET
+                this.segments.push(`${filter(field.name)}=${filter(field.value)}`);
+              }
+            }
+          }
+          processStatus(this);
+        }
+
+        return (formElement) => {
+          if (!formeElement.action) { return; }
+          new SubmitRequest(formElement);
+        };
+      })();
+    </script>
+  </head>
 <body>
 
 <h1>Sending forms with XHR</h1>
