@@ -227,7 +227,7 @@ module.exports = (app, route) => {
     res.sendStatus(201);
   });
 
-  app.post(route + 'sendNotification', (req, res) => {
+  app.post(`${route}sendNotification`, (req, res) => {
     const subscription = req.body.subscription;
     const payload = req.body.payload;
     const options = {
