@@ -58,7 +58,7 @@ The CSS property to achieve this scaling is {{cssxref("image-rendering")}}. It i
 
 Let's have a look at an example. The original image we want to upscale looks like this:
 
-![](cat.png)
+![Pixelated night scenery of a cat on the edge off a cliff with little hearts above his head, behind him a big full moon. With a black blackground, white text is displayed at the bottom of the image saying: in love with the moon.](cat.png)
 
 Here's some HTML to create a simple canvas:
 

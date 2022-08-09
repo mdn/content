@@ -88,7 +88,7 @@ A sky box is a background for the 3D world, represented by an [`<a-sky>`](https:
 
 At this point, if you save the code and refresh your browser you can already see the cube on the screen with our custom background:
 
-![](cube.png)
+![A 3D representation's illustration of a blue cube displayed on a lighter grey background.](cube.png)
 
 Here's the code we have created so far:
 
@@ -210,7 +210,7 @@ scene.appendChild(cylinder);
 
 We're getting a reference to the scene handler first, then we create the cylinder element as an A-Frame entity. After that it's all about setting the proper attributes: `color`, `height`, `radius` and `position`. The last line adds the newly created cylinder to the scene. That's it — you've created three different shapes with A-Frame! Here's how it looks right now:
 
-![](shapes.png)
+![A illustration of 3D representation of three differents geometry shapes displayed on a grey background: the first one is a darker grey torus, the second is a blue cube and the last one is a yellow cylinder.](shapes.png)
 
 It is impressive to be able to create such a scene with just a few lines of HTML and JavaScript.
 
