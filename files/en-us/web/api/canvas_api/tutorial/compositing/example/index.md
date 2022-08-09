@@ -274,11 +274,7 @@ Color.HSV_RGB = (o) => {
                 break;
         }
     }
-    return {
-        R: R,
-        G: G,
-        B: B
-    };
+    return { R, G, B };
 };
 
 const createInterlace = (size, color1, color2) => {

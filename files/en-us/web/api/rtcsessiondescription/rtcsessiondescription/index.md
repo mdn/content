@@ -57,8 +57,8 @@ This example uses the constructor to convert an SDP offer into an
 > `RTCSessionDescription` yourself.
 
 ```js
-navigator.getUserMedia({video: true}, (stream) => {
-  pc.onaddstream({stream: stream});
+navigator.getUserMedia({ video: true }, (stream) => {
+  pc.onaddstream({ stream });
   // Adding a local stream won't trigger the onaddstream callback
   pc.addStream(stream);
 

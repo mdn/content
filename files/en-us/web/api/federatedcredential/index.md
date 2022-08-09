@@ -45,17 +45,17 @@ None.
 
 ```js
 const cred = new FederatedCredential({
-  id: id,
-  name: name,
+  id,
+  name,
   provider: 'https://account.google.com',
-  iconURL: iconUrl
+  iconURL,
 });
 
 // Store it
 navigator.credentials.store(cred)
   .then(() => {
-  // Do something else.
-});
+    // Do something else.
+  });
 ```
 
 ## Specifications

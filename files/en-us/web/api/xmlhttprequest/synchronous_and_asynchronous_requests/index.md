@@ -54,21 +54,21 @@ In some cases, you must read many external files. This is a standard function wh
 
 ```js
 function xhrSuccess() {
-    this.callback.apply(this, this.arguments);
+  this.callback.apply(this, this.arguments);
 }
 
 function xhrError() {
-    console.error(this.statusText);
+  console.error(this.statusText);
 }
 
-function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
-    const xhr = new XMLHttpRequest();
-    xhr.callback = callback;
-    xhr.arguments = Array.prototype.slice.call(arguments, 2);
-    xhr.onload = xhrSuccess;
-    xhr.onerror = xhrError;
-    xhr.open("GET", url, true);
-    xhr.send(null);
+function loadFile(url, callback, ...args) {
+  const xhr = new XMLHttpRequest();
+  xhr.callback = callback;
+  xhr.arguments = args;
+  xhr.onload = xhrSuccess;
+  xhr.onerror = xhrError;
+  xhr.open("GET", url, true);
+  xhr.send(null);
 }
 ```
 

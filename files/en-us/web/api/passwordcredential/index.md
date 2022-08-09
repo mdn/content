@@ -47,16 +47,16 @@ None.
 
 ```js
 const cred = new PasswordCredential({
-  id: id,
-  password: password,
-  name: name,
-  iconURL: iconUrl
+  id,
+  password,
+  name,
+  iconURL,
 });
 
 navigator.credentials.store(cred)
- .then(() => {
- // Do something else.
-});
+  .then(() => {
+  // Do something else.
+  });
 ```
 
 ## Specifications

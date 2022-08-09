@@ -355,7 +355,7 @@ We still have to implement functionality to allow us to edit existing to-dos. We
     }
 
     function onSave() {
-      update({ name: name })                // updates todo name
+      update({ name })                // updates todo name
       editing = false                       // and exit editing mode
     }
 

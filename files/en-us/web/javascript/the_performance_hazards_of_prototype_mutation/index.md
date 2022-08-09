@@ -19,8 +19,8 @@ Objects are hashes, so theoretically (and in reality) property accesses take con
 Engines optimize by depending on the _order_ properties are added to objects. Most properties are added to objects with quite similar ordering. (Objects routinely accessed using `obj[val]`-style random access are a notable exception.)
 
 ```js
-function Landmark(lat, lon, desc) {
-  this.location = { lat: lat, long: lon };
+function Landmark(lat, long, desc) {
+  this.location = { lat, long };
   this.description = desc;
 }
 const lm1 = new Landmark(-90, 0, "South Pole");

@@ -54,7 +54,7 @@ self.addEventListener('push', (event) => {
   const notification = new self.Notification(title, {
     body: message,
     tag: 'simple-push-demo-notification',
-    icon: icon
+    icon,
   });
 
   notification.addEventListener('click', () => {

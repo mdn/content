@@ -296,7 +296,7 @@ function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
       name: 'PBKDF2',
-      salt: salt,
+      salt,
       iterations: 100000,
       hash: 'SHA-256',
     },

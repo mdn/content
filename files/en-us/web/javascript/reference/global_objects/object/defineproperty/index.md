@@ -128,7 +128,7 @@ function withValue(value) {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: value
+      value,
     }
   );
 
