@@ -51,7 +51,7 @@ Alignment is linked to writing modes in that when we align an item we do not con
 
 When using the box alignment properties you will align content on one of two axes — the inline (or main) axis, and the block (or cross) axis. The inline axis is the axis along which words in a sentence flow in the writing mode being used — for English, for example, the inline axis is horizontal. The block axis is the axis along which blocks, such as paragraph elements, are laid out and it runs across the Inline axis.
 
-![Inline axis is the left / right direction. Block axis is top / bottom.](two-axes.png)
+![Inline axis is the left / right, or horizontal, direction. Block axis is vertical, or top / bottom.](two-axes.png)
 
 When aligning items on the inline axis you will use the properties which begin with `justify-`:
 
@@ -77,7 +77,7 @@ The **alignment container** is the box the subject is being aligned inside. This
 
 The below image shows an alignment container with two alignment subjects inside.
 
-![A box containing two rectangles that are the same width but have different heights. The two rectangles are top aligned, meaning they both have their top lines about 10px inside the top of the box in which they are contained.](align-container-subjects.png)
+![A box containing two rectangles of the same width but different heights. The two rectangles are top aligned, meaning they both have their top lines about 10px inside the top of the box in which they are contained.](align-container-subjects.png)
 
 ### Fallback alignment
 
@@ -140,7 +140,7 @@ For example, in Flex Layout items are aligned with `flex-start` initially. Worki
 
 If you set `justify-content: space-between` on the flex container, the available space is now shared out and placed between the items.
 
-![Three rectangles of different widths are inside a box. The first rectangle is aligned to the left side of the containing box. The third rectangle is aligned right, and the middle rectangle is equally spaced between the first and last.](justify-content-space-between.png)
+![Three rectangles of different widths are inside a box. The first rectangle is aligned to the left side of the containing box, the third rectangle is aligned right, and the middle rectangle is equally spaced between the first and last.](justify-content-space-between.png)
 
 There needs to be space available in the dimension you wish to align the items in, in order for these keywords to take effect. With no space, there is nothing to distribute.
 
