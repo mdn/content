@@ -516,9 +516,7 @@ for (const select of selects) {
   datalist.style.top = `${header.offsetTop + header.offsetHeight}px`;
   
   div.onclick = (e) => {
-    if (multiple) {
-  
-    } else {
+    if (!multiple) {
       const open = this.hasAttribute("data-open");
       e.stopPropagation();
       if (open) {
@@ -530,14 +528,16 @@ for (const select of selects) {
   };
   
   div.onkeyup = (event) => {
-      event.preventDefault();
-      if (event.keyCode === 13) {
-          div.click();
-      }
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      div.click();
+    }
   };
   
   document.addEventListener('click', (e) => {
-    if (div.hasAttribute("data-open")) div.removeAttribute("data-open");
+    if (div.hasAttribute("data-open")) {
+      div.removeAttribute("data-open");
+    }
   });
   
   const width = Math.max(...Array.from(options).map((e) => {
