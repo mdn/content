@@ -124,7 +124,7 @@ const FOO;
 
 ### const in objects and arrays
 
-`const` also works on objects and arrays. Atempting to overwrite the object throws an error "Assignment to constant variable".
+`const` also works on objects and arrays. Attempting to overwrite the object throws an error "Assignment to constant variable".
 
 ```js example-bad
 const MY_OBJECT = { key: 'value' };
