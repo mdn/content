@@ -131,16 +131,17 @@ exports.book_create_post = [
         }
       );
       return;
-    } else {
-      // Data from form is valid. Save book.
-      book.save((err) => {
-        if (err) {
-          return next(err);
-        }
-        //successful - redirect to new book record.
-        res.redirect(book.url);
-      });
     }
+
+    // Data from form is valid. Save book.
+    book.save((err) => {
+      if (err) {
+        return next(err);
+      }
+      
+      // Successful: redirect to new book record.
+      res.redirect(book.url);
+    });
   },
 ];
 ```
