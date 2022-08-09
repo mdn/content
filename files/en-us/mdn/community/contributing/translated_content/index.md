@@ -20,12 +20,12 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 ### Brazilian Portuguese (pt-BR)
 
 - Discussions: [Telegram (MDN localization in Brazilian Portuguese)](https://t.me/mdn_l10n_pt_br)
-- Current contributors: [Luisa Migueres](https://github.com/lumigueres), [Julio Sampaio](https://github.com/juliosampaio), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
+- Current contributors: [Nathália Pissuti](https://github.com/nathipg), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
 
 ### Chinese (zh-CN, zh-TW)
 
 - Discussions: [Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/)
-- Current contributors: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [dibery](https://github.com/dibery)
+- Current contributors: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999)
 
 ### French (fr)
 
@@ -40,17 +40,17 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 ### Korea (ko)
 
 - Discussions: [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- Current contributors: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [nKiNk](https://github.com/nKiNk), [yujo11](https://github.com/yujo11)
+- Current contributors: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [yujo11](https://github.com/yujo11)
 
 ### Russian (ru)
 
 - Discussions: [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Current contributors: [armanpwnz](https://github.com/armanpwnz), [captainspring](https://github.com/captainspring), [mpstv](https://github.com/mpstv), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- Current contributors: [armanpwnz](https://github.com/armanpwnz), [captainspring](https://github.com/captainspring), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
 
 ### Spanish (es)
 
 - Discussions: [Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
-- Current maintainers: [@JuanVqz](https://github.com/JuanVqz), [@dacalderonp](https://github.com/dacalderonp), [@lasr21](https://github.com/lasr21), [@tuxxy](https://github.com/tuxxy)
+- Current maintainers: [JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
 
 > **Note:** If you want to discuss unfreezing a currently frozen locale, the [guidelines on what is required can be found here](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale).
 
