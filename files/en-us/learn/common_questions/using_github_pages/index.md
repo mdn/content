@@ -44,7 +44,7 @@ The other thing you need to do before moving on is to initialise your code direc
 
 The best way to upload your code to GitHub is via the command line — this is a window where you type in commands to do things like create files and run programs, rather than clicking inside a user interface. It will look something like this:
 
-![Terminal/command prompt opened, dark background with white text.](command-line.png)
+![Terminal/command prompt opened. No command has been entered.](command-line.png)
 
 > **Note:** You could also consider using a [Git graphical user interface](https://git-scm.com/downloads/guis) to do the same work, if you feel uncomfortable with the command line.
 

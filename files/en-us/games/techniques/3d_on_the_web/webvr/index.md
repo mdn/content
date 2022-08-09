@@ -17,7 +17,7 @@ The concept of virtual reality in itself isn't new, but now we have the technolo
 
 With the popularity of Oculus Rift and a lot of other devices in production coming soon to the market, the future looks bright — we already have sufficient technology to make the VR experience "good enough" for playing games. There are many devices to chose from: desktop ones like Oculus Rift or HTC Vive, through consoles with Playstation VR (which admittedly doesn't support WebVR at this time), to mobile experiences like Gear VR or Google Cardboard.
 
-![Succession of five differents VR devices.](hmds.jpg)
+![Five different VR devices, ranging from cardboard to high-end.](hmds.jpg)
 
 > **Note:** For more information, read our [WebVR Concepts](/en-US/docs/Web/API/WebVR_API/Concepts) article.
 
