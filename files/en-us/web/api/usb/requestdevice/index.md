@@ -67,7 +67,7 @@ navigator.usb.requestDevice({ filters })
     console.log(`Product name: ${usbDevice.productName}`);
   })
   .catch((e) => {
-    console.log(`There is no device. ${e}`);
+    console.error(`There is no device. ${e}`);
   });
 ```
 
