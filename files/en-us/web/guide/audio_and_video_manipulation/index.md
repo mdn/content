@@ -163,12 +163,12 @@ function setPlaybackRate() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener('click', () => {
   textarea.value = code;
   setPlaybackRate();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener('click', () => {
   textarea.focus();
 })
 
@@ -255,12 +255,12 @@ function setFilter() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener('click', () => {
   textarea.value = code;
   setFilter();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener('click', () => {
   textarea.focus();
 })
 

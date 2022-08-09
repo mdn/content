@@ -280,7 +280,6 @@ Constraint validation is done through the Constraint Validation API either on a 
 Calling `checkValidity()` is called _statically_ validating the constraints, while calling `reportValidity()` or submitting the form is called _interactively_ validating the constraints.
 
 > **Note:**
->
 > - If the {{ htmlattrxref("novalidate", "form") }} attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.
 > - Calling the `submit()` method on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if doesn't satisfy the constraints. Call the `click()` method on a submit button instead.
 
@@ -338,7 +337,7 @@ function checkZIP() {
 
   // Build the constraint checker
   const constraint = new RegExp(constraints[country][0], "");
-    console.log(constraint);
+  console.log(constraint);
 
   // Check it!
   if (constraint.test(ZIPField.value)) {
@@ -356,9 +355,9 @@ function checkZIP() {
 Then we link it to the **onchange** event for the {{ HTMLElement("select") }} and the **oninput** event for the {{ HTMLElement("input") }}:
 
 ```js
-window.onload = function () {
-    document.getElementById("Country").onchange = checkZIP;
-    document.getElementById("ZIP").oninput = checkZIP;
+window.onload = () => {
+  document.getElementById("Country").onchange = checkZIP;
+  document.getElementById("ZIP").oninput = checkZIP;
 }
 ```
 
@@ -399,7 +398,7 @@ function checkFileSize() {
 Finally we hook the method with the correct event:
 
 ```js
-window.onload = function () {
+window.onload = () => {
   document.getElementById("FS").onchange = checkFileSize;
 }
 ```

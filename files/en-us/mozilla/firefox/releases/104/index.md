@@ -49,6 +49,12 @@ This article provides information about the changes in Firefox 104 that will aff
 
 #### Media, WebRTC, and Web Audio
 
+#### SVG
+
+- The [`SVGStyleElement.disabled`](/en-US/docs/Web/API/SVGStyleElement/disabled) property can now be used to disable or enable an SVG style element, or to check its disabled state.
+  This mirrors the behavior of [`HTMLStyleElement.disabled`](/en-US/docs/Web/API/HTMLStyleElement/disabled).
+  (See {{bug(1712623)}} for more details.)
+
 #### Removals
 
 ### WebAssembly

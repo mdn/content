@@ -77,8 +77,8 @@ Next we'll look at the JavaScript that does the work. The meat of this technique
 ```js
 function play() {
   document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function(time) {
-    window.requestAnimationFrame(function(time) {
+  requestAnimationFrame((time) => {
+    requestAnimationFrame((time) => {
       document.querySelector(".box").className = "box changing";
     });
   });
@@ -141,7 +141,7 @@ The following demo shows how you'd achieve the aforementioned JavaScript techniq
 ```
 
 ```js
-let watchme = document.getElementById('watchme')
+const watchme = document.getElementById('watchme');
 
 watchme.className = 'slidein'
 const listener = (e) => {

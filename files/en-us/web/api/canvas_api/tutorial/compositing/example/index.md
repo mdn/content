@@ -235,7 +235,7 @@ Color.HSV_RGB = (o) => {
         R = G = B = Math.round(V * 255);
     } else {
         if (H >= 1) H = 0;
-        H = 6 * H;
+        H *= 6;
         D = H - Math.floor(H);
         A = Math.round(255 * V * (1 - S));
         B = Math.round(255 * V * (1 - (S * D)));

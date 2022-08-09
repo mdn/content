@@ -118,7 +118,7 @@ In the following snippet, a merchant page performs this check, and if it returns
 ```js
 const checkoutButton = document.getElementById('checkout-button');
 if (window.PaymentRequest) {
-  const request = new PaymentRequest(
+  let request = new PaymentRequest(
     buildSupportedPaymentMethodNames(),
     buildShoppingCartDetails()
   );

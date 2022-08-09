@@ -372,15 +372,15 @@ input:valid+span:after {
 And finally, the JavaScript:
 
 ```js
-let metersInputGroup = document.querySelector('.metersInputGroup');
-let feetInputGroup = document.querySelector('.feetInputGroup');
-let metersInput = document.querySelector('#meters');
-let feetInput = document.querySelector('#feet');
-let inchesInput = document.querySelector('#inches');
-let switchBtn = document.querySelector('input[type="button"]');
+const metersInputGroup = document.querySelector('.metersInputGroup');
+const feetInputGroup = document.querySelector('.feetInputGroup');
+const metersInput = document.querySelector('#meters');
+const feetInput = document.querySelector('#feet');
+const inchesInput = document.querySelector('#inches');
+const switchBtn = document.querySelector('input[type="button"]');
 
-switchBtn.addEventListener('click', function() {
-  if(switchBtn.getAttribute('class') === 'meters') {
+switchBtn.addEventListener('click', () => {
+  if (switchBtn.getAttribute('class') === 'meters') {
     switchBtn.setAttribute('class', 'feet');
     switchBtn.value = 'Enter height in meters';
 

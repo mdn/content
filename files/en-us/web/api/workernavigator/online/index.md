@@ -67,9 +67,9 @@ listen for the events on `online` and `offline`, as
 in the following example:
 
 ```js
-addEventListener('offline', function(e) { console.log('offline'); });
+addEventListener('offline', (e) => { console.log('offline'); });
 
-addEventListener('online', function(e) { console.log('online'); });
+addEventListener('online', (e) => { console.log('online'); });
 ```
 
 ## Specifications

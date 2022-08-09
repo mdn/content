@@ -405,13 +405,13 @@ So how do we place wasm functions in our table? Just like `data` sections can be
 In JavaScript, the equivalent calls to create such a table instance would look something like this:
 
 ```js
-function() {
+function () {
   // table section
-  var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+  const tbl = new WebAssembly.Table({initial: 2, element: "anyfunc"});
 
   // function sections:
-  var f1 = ... /* some imported WebAssembly function */
-  var f2 = ... /* some imported WebAssembly function */
+  const f1 = ... /* some imported WebAssembly function */
+  const f2 = ... /* some imported WebAssembly function */
 
   // elem section
   tbl.set(0, f1);
@@ -540,7 +540,7 @@ These work as follows:
 After converting to assembly, we then use `shared0.wasm` and `shared1.wasm` in JavaScript via the following code:
 
 ```js
-var importObj = {
+const importObj = {
   js: {
     memory : new WebAssembly.Memory({ initial: 1 }),
     table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
@@ -550,7 +550,7 @@ var importObj = {
 Promise.all([
   WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
   WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
-]).then(function(results) {
+]).then((results) => {
   console.log(results[1].instance.exports.doIt());  // prints 42
 });
 ```
@@ -633,7 +633,7 @@ As described above, you can create shared WebAssembly [`Memory`](/en-US/docs/Web
 Over on the JavaScript API side, the [`WebAssembly.Memory()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory) constructor's initialization object now has a `shared` property, which when set to `true` will create a shared memory:
 
 ```js
-let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+const memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
 ```
 
 the memory's [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) property will now return a `SharedArrayBuffer`, instead of the usual `ArrayBuffer`:
