@@ -505,7 +505,6 @@ function toggleOptList(select) {
 // select : the DOM node with the `select` class containing the option to highlight
 // option : the DOM node with the `option` class to highlight
 function highlightOption(select, option) {
-
   // We get the list of all option available for our custom select element
   const optionList = select.querySelectorAll('.option');
 
