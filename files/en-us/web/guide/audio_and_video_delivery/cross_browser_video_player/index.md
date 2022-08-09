@@ -7,7 +7,7 @@ tags:
   - Video
   - full screen
 ---
-This article describes a simple HTML5 video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
+This article describes a simple HTML video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
 
 ## Working example
 
@@ -265,18 +265,10 @@ The Fullscreen API should be straight forward to use: the user clicks a button, 
 
 Alas it has been implemented in browsers in a number of weird and wonderful ways which requires a lot of extra code to check for various prefixed versions of attributes and methods so as to call the right one.
 
-To detect if a browser actually supports the Fullscreen API and that it is enabled, the following may be called:
-
-```js
-const fullScreenEnabled = !!(document.fullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled || document.webkitSupportsFullscreen || document.webkitFullscreenEnabled || document.createElement('video').webkitRequestFullScreen);
-```
-
-This tests all the different prefixed (and of course the non-prefixed!) booleans to see if fullscreen is possible. The final tested value, `document.createElement('video').webkitRequestFullScreen` is required for the last Presto version of Opera (12.14). Note the different letter casing in the various values.
-
 The visibility of the fullscreen button depends on whether the browser supports the Fullscreen API and that it is enabled:
 
 ```js
-if (!fullScreenEnabled) {
+if (!document?.fullscreenEnabled) {
   fullscreen.style.display = 'none';
 }
 ```
@@ -293,41 +285,20 @@ The `handleFullscreen` function is defined as follows:
 
 ```js
 function handleFullscreen() {
-  if (isFullScreen()) {
-    if (document.exitFullscreen) document.exitFullscreen();
-    else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
-    else if (document.webkitCancelFullScreen) document.webkitCancelFullScreen();
-    else if (document.msExitFullscreen) document.msExitFullscreen();
+  if (document.document.fullscreenElement !== null) {
+    // The document is in fullscreen mode
+    document.exitFullscreen();
     setFullscreenData(false);
   }
   else {
-    if (videoContainer.requestFullscreen) videoContainer.requestFullscreen();
-    else if (videoContainer.mozRequestFullScreen) videoContainer.mozRequestFullScreen();
-    else if (videoContainer.webkitRequestFullScreen) videoContainer.webkitRequestFullScreen();
-    else if (videoContainer.msRequestFullscreen) videoContainer.msRequestFullscreen();
+    // The document is not in fullscreen mode
+    videoContainer.requestFullscreen();
     setFullscreenData(true);
   }
 }
 ```
 
-First of all the function checks if the browser is already in fullscreen mode by calling another function `isFullScreen`:
-
-```js
-function isFullScreen() {
-   return !!(document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || document.fullscreenElement);
-}
-```
-
-This function checks all the various browser prefixed versions to try and determine the correct result.
-
-If the browser is currently in fullscreen mode, then it must be exited and vice versa. Support for the different prefixed versions of the relevant action are checked in order to call the correct one. Interestingly `document` must be used for exiting/cancelling fullscreen mode, whereas any HTML element can request fullscreen mode, here the `videoContainer` is used as it also contains the custom controls which should also appear with the video in fullscreen mode.
-
-The exception to this is Safari 5.1, which will only allow `webkitRequestFullScreen` to be called on the {{ htmlelement("video") }} element. The custom controls will only appear on this browser in fullscreen mode with some WebKit specific CSS:
-
-1. The default browser controls have to be hidden with `video::-webkit-media-controls { display:none !important; }`
-2. The custom controls container needs to have a special `z-index` value: `.controls { z-index:2147483647; }`
-
-Dealing with WebKit-specific code in this way will affect all WebKit browsers, but everything works as expected in more advanced WebKit browsers such as Chrome and the latest Opera.
+If the browser is currently in fullscreen mode, then it must be exited and vice versa. Interestingly `document` must be used for exiting/cancelling fullscreen mode, whereas any HTML element can request fullscreen mode, here the `videoContainer` is used as it also contains the custom controls which should also appear with the video in fullscreen mode.
 
 Another user defined function — `setFullscreenData()` — is also called, which sets the value of a `data-fullscreen` attribute on the `videoContainer` (this makes use of [`data-states`](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states#data-state-attributes)).
 
@@ -341,22 +312,13 @@ This is used to set some basic CSS to improve the styling of the custom controls
 
 ```js
 document.addEventListener('fullscreenchange', (e) => {
-  setFullscreenData(!!(document.fullscreen || document.fullscreenElement));
-});
-document.addEventListener('webkitfullscreenchange', () => {
-  setFullscreenData(!!document.webkitIsFullScreen);
-});
-document.addEventListener('mozfullscreenchange', () => {
-  setFullscreenData(!!document.mozFullScreen);
-});
-document.addEventListener('msfullscreenchange', () => {
-  setFullscreenData(!!document.msFullscreenElement);
+  setFullscreenData(!!document.fullscreenElement);
 });
 ```
 
 ## See also
 
 - {{ htmlelement("video") }} for reference material
-- [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) for more techniques
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) for more techniques
 - [Media formats supported by the HTML audio and video elements](/en-US/docs/Web/Media/Formats)
-- [Video for Everybody](http://camendesign.com/code/video_for_everybody): written by Kroc Camen, this is quite old, but still has some good relevant content and is a great starter article for cross-browser HTML5 video.
+- [Video for Everybody](http://camendesign.com/code/video_for_everybody): written by Kroc Camen, this is quite old, but still has some good relevant content and is a great starter article for cross-browser HTML video.
