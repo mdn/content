@@ -69,7 +69,7 @@ const assetURL = 'frag_bunny.mp4';
 // ./mp4info frag_bunny.mp4 | grep Codec
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-let mediaSource = getMediaSource();
+let mediaSource;
 
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   mediaSource = getMediaSource();
