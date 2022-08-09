@@ -101,7 +101,7 @@ window.onload = () => {
       context.stroke();
     }
   });
-}
+};
 ```
 
 This works better with longer pieces of audio or video, but press play and click about the player progress bar and you should get something like this. Each red filled white rectangle represents a time range.
@@ -183,11 +183,16 @@ window.onload = () => {
   const audio = document.getElementById('my-audio');
 
   audio.addEventListener('progress', () => {
-    const duration =  audio.duration;
+    const duration = audio.duration;
     if (duration > 0) {
       for (let i = 0; i < audio.buffered.length; i++) {
-        if (audio.buffered.start(audio.buffered.length - 1 - i) < audio.currentTime) {
-          document.getElementById("buffered-amount").style.width = `${audio.buffered.end(audio.buffered.length - 1 - i) * 100 / duration}%`;
+        if (
+          audio.buffered.start(audio.buffered.length - 1 - i) <
+          audio.currentTime
+        ) {
+          document.getElementById('buffered-amount').style.width = `${
+            (audio.buffered.end(audio.buffered.length - 1 - i) * 100) / duration
+          }%`;
           break;
         }
       }
@@ -195,12 +200,14 @@ window.onload = () => {
   });
 
   audio.addEventListener('timeupdate', () => {
-    const duration =  audio.duration;
+    const duration = audio.duration;
     if (duration > 0) {
-      document.getElementById('progress-amount').style.width = `{audio.currentTime / duration * 100}%`;
+      document.getElementById('progress-amount').style.width = `${
+        audio.currentTime / duration * 100
+      }%`;
     }
   });
-}
+};
 ```
 
 The progress event is fired as data is downloaded, this is a good event to react to if we want to display download or buffering progress.
