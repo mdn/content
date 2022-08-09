@@ -94,16 +94,17 @@ exports.bookinstance_create_post = [
         });
       });
       return;
-    } else {
-      // Data from form is valid.
-      bookinstance.save((err) => {
-        if (err) {
-          return next(err);
-        }
-        // Successful - redirect to new record.
-        res.redirect(bookinstance.url);
-      });
     }
+
+    // Data from form is valid.
+    bookinstance.save((err) => {
+      if (err) {
+        return next(err);
+      }
+      
+      // Successful: redirect to new record.
+      res.redirect(bookinstance.url);
+    });
   },
 ];
 ```
