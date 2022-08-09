@@ -219,7 +219,7 @@ You can see the variables from the `index.js` file being used: `payload`, `delay
 
 ```js
 module.exports = (app, route) => {
-  app.get(route + 'vapidPublicKey', (req, res) => {
+  app.get(`${route}vapidPublicKey`, (req, res) => {
     res.send(process.env.VAPID_PUBLIC_KEY);
   });
 
