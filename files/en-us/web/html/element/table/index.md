@@ -301,9 +301,7 @@ In the below example, you can see such an example. We are attaching it to the \<
 HTMLTableSectionElement.prototype.sort = function (cb) {
   Array.from(this.rows)
     .sort(cb)
-    .forEach((e, i, a) => {
-      this.appendChild(this.removeChild(e));
-    }, this);
+    .forEach((e) => this.appendChild(this.removeChild(e)));
 }
 
 document.querySelector('table').tBodies[0].sort(
