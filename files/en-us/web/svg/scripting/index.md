@@ -36,7 +36,7 @@ function myRect(x, y, w, h, message) {
   this.handleEvent = (evt) => {
     switch (evt.type) {
       case "click":
-        alert(this.message)
+        alert(this.message);
         break;
     }
   };
