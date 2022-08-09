@@ -40,10 +40,10 @@ The following exceptions may be thrown when setting a new value for this propert
 
 ## Examples
 
-The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)  The function `getMediaSource()` is not defined here and returns a `MediaSource`.
 
 ```js
-const mediaSource = /* … */;
+const mediaSource = getMediaSource();
 
 function sourceOpen() {
   console.log(this.readyState); // open
