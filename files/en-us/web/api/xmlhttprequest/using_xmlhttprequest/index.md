@@ -360,7 +360,7 @@ ways to _submit_, and to **upload files**:
 
         function submitData(data) {
           const req = new XMLHttpRequest();
-          req.submittedData = oData;
+          req.submittedData = data;
           req.onload = xhrSuccess;
           if (data.technique === 0) {
             // method is GET
