@@ -52,7 +52,7 @@ function sayHello() {
 }
 ```
 
-In this example, we are returning a function from another function - _We can return a function because functions in JavaScript are treated as as values._
+In this example, we are returning a function from another function - _We can return a function because functions in JavaScript are treated as values._
 
 > **Note:** A function that returns a function is called a _Higher-Order Function_.
 
