@@ -238,7 +238,7 @@ We'll also add a line to our event handler to get the user's data from the text 
 ```js
 document.getElementById("ajaxButton").onclick = () => {
   const userName = document.getElementById("ajaxTextbox").value;
-  makeRequest('test.php',userName);
+  makeRequest('test.php', userName);
 };
 ```
 
