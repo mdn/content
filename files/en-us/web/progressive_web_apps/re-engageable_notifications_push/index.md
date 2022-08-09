@@ -223,7 +223,7 @@ module.exports = (app, route) => {
     res.send(process.env.VAPID_PUBLIC_KEY);
   });
 
-  app.post(route + 'register', (req, res) => {
+  app.post(`${route}register`, (req, res) => {
     res.sendStatus(201);
   });
 
