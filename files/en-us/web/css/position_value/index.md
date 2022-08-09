@@ -18,7 +18,9 @@ The **`<position>`** (or **`<bg-position>`**) [CSS](/en-US/docs/Web/CSS) [data t
 
 ## Syntax
 
-![Grid showing placement of various values. 0 0 is the top left corner. The four values right, right center, center left 100%, and top 50% left 100%, are all equivalent, being on the right edge in the middle vertically. The two values top 75px left 100px and left 100px top 75px are the same. bottom left 25% is the same as top 100% left 25%.](position_type.png)The `<position>` data type is specified with one or two keywords, with optional offsets.
+![Grid showing placement of various values. 0 0 is the top left corner. The four values, right, right center, center left 100%, and top 50% left 100%, are all equivalent, being on the right edge in the middle vertically. The two values, top 75px left 100px and left 100px top 75px, are the same. Bottom left 25% is the same as top 100% left 25%.](position_type.png)
+
+The `<position>` data type is specified with one or two keywords, with optional offsets.
 
 The keyword values are `center`, `top`, `right`, `bottom`, and `left`. Each keyword represents either an edge of the element's box or the center line between two edges. Depending on the context, `center` represents either the center between the left and right edges, or the center between the top and bottom edges.
 
