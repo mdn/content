@@ -69,7 +69,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 ## Examples
 
-The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)  The function `getMediaSource()` is not defined here and returns a `MediaSource`.
+The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
 const video = document.querySelector('video');
@@ -78,9 +78,10 @@ const assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
-const mediaSource = getMediaSource();
+let mediaSource;
 
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
+  mediaSource = getMediaSource();
   console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
