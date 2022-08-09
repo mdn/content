@@ -31,7 +31,7 @@ This article provides information about the changes in Firefox 104 that will aff
 
 - Serialization of [native Error types](h/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) additionally includes the [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) property when used with [`window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) and [`structuredClone()`](/en-US/docs/Web/API/structuredClone) (on error types that include `stack`).
   The `stack` is not yet serialized when errors are sent using other APIs, such as [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
-  (See {{bug(1774866)}} for more details.)
+  (See {{bug(1765083)}} for more details.)
 
 #### Removals
 
@@ -46,6 +46,10 @@ This article provides information about the changes in Firefox 104 that will aff
 ### APIs
 
 #### DOM
+
+- [`HTMLElement.focus()`](/en-US/docs/Web/API/HTMLElement/focus) now supports the parameter [`option.focusVisible`](/en-US/docs/Web/API/HTMLElement/focus#focusvisible), which can be used force a browser to display visual indication after the element is focused.
+  Note that browsers may automatically provide visual indication on focused elements if the implementation determines that it will improve accessibility.
+  (See {{bug(1774866)}} for more details.)
 
 #### Media, WebRTC, and Web Audio
 
