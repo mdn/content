@@ -211,7 +211,7 @@ const tabs = document.querySelectorAll('.info-box li a');
 const panels = document.querySelectorAll('.info-box article');
 
 for (let i = 0; i < tabs.length; i++) {
-  setTabHandler(tab, i);
+  setTabHandler(tabs[i], i);
 }
 
 function setTabHandler(tab, tabPos) {
