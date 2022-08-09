@@ -88,14 +88,15 @@ Now and then, you may run into problems while using MDN. Whether it's a problem 
 
 The best thing you can possibly do is fix problems you spot yourself — this is done by updating the site source:
 
-- The MDN content itself is found in the [content](https://github.com/mdn/content) repo.
+- The MDN content itself (in English) is found in the [content](https://github.com/mdn/content) repo.
+- The MDN content, translated in other locales, is found in the [translated-content](https://github.com/mdn/translated-content) repo.
 - The MDN platform code, which renders the content as MDN, is found in the [yari](https://github.com/mdn/yari) repo.
 
-Both repos include useful information to guide you on how to contribute.
+Each repo includes useful information to guide you on how to contribute.
 
 However, maybe you don't know the answer or are in the middle of a deadline on your own project, and need to jot down the problem so someone can look at it later.
 
-The way to report a documentation problem by filing an [documentation issue](https://github.com/mdn/content/issues) or [platform issue](https://github.com/mdn/yari/issues), depending on what the problem you've discovered relates to.
+The way to report a documentation problem by filing an [documentation issue](https://github.com/mdn/content/issues), [localization issue](https://github.com/mdn/translated-content/issues) or [platform issue](https://github.com/mdn/yari/issues), depending on what the problem you've discovered relates to.
 
 ## When choosing a GitHub issue to work on
 
