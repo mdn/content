@@ -285,7 +285,7 @@ The `handleFullscreen` function is defined as follows:
 
 ```js
 function handleFullscreen() {
-  if (document.document.fullscreenElement !== null) {
+  if (document.fullscreenElement !== null) {
     // The document is in fullscreen mode
     document.exitFullscreen();
     setFullscreenData(false);
