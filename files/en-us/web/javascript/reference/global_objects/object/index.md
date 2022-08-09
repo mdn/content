@@ -148,7 +148,7 @@ const current = Object.prototype.valueOf;
 
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
-Object.prototype.valueOf = function () {
+Object.prototype.valueOf = function (...args) {
   if (Object.hasOwn(this, '-prop-value')) {
     return this['-prop-value'];
   } else {
@@ -156,7 +156,7 @@ Object.prototype.valueOf = function () {
     // the default behavior by reproducing the current behavior as best we can.
     // The apply behaves like "super" in some other languages.
     // Even though valueOf() doesn't take arguments, some other hook may.
-    return current.apply(this, arguments);
+    return current.apply(this, args);
   }
 }
 ```

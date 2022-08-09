@@ -33,9 +33,8 @@ Below we show how to set a simple `greet()` function for the `click` event using
 ```js
 const btn = document.querySelector('button');
 
-function greet(event){
-  // print the event object to console
-  console.log('greet:', arguments)
+function greet(event) {
+  console.log('greet:', event)
 }
 
 btn.onclick = greet;
@@ -54,9 +53,8 @@ Below we show how a simple `greet()` function can be set as a listener/event han
 ```js
 const btn = document.querySelector('button');
 
-function greet(event){
-  // print the event object to console
-  console.log('greet:', arguments)
+function greet(event) {
+  console.log('greet:', event)
 }
 
 btn.addEventListener('click', greet);

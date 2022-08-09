@@ -168,7 +168,7 @@ function getKeyMaterial() {
   return window.crypto.subtle.importKey(
     "raw",
     enc.encode(password),
-    {name: "PBKDF2"},
+    { name: "PBKDF2" },
     false,
     ["deriveBits", "deriveKey"]
   );
@@ -182,10 +182,10 @@ async function getDerivedBits() {
   salt = window.crypto.getRandomValues(new Uint8Array(16));
   const derivedBits = await window.crypto.subtle.deriveBits(
     {
-      "name": "PBKDF2",
-      salt: salt,
-      "iterations": 100000,
-      "hash": "SHA-256"
+      name: "PBKDF2",
+      salt,
+      iterations: 100000,
+      hash: "SHA-256",
     },
     keyMaterial,
     256

@@ -116,7 +116,7 @@ div {
 
 When using an angle, `0deg` creates a vertical gradient running bottom to top, `90deg` creates a horizontal gradient running left to right, and so on in a clockwise direction. Negative angles run in the counterclockwise direction.
 
-![](linear_red_angles.png)
+![Four boxes listing angle and showing associated gradient. 0deg starts and top and goes to bottom. 90deg starts at right and goes left. 180deg starts and bottom and goes to the top. -90deg starts at left and goes right.](linear_red_angles.png)
 
 ## Declaring colors & creating effects
 

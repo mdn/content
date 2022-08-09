@@ -84,7 +84,7 @@ method call, so that the dot is not interpreted as a decimal point.
 
 ### Bracket notation
 
-In the `object[propertyName]` syntax, the `propertyName` is just a string or [Symbol](/en-US/docs/Glossary/Symbol). So, it can be any string, including `'1foo'`, `'!bar!'`, or even `' '` (a space).
+In the `object[propertyName]` syntax, the `propertyName` is just a string or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). So, it can be any string, including `'1foo'`, `'!bar!'`, or even `' '` (a space).
 
 ```js
 const variable = object[propertyName];
@@ -105,7 +105,7 @@ document ['createElement']('pre')
 
 ### Property names
 
-Property names are string or [Symbol](/en-US/docs/Glossary/Symbol). Any
+Property names are string or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Any
 other value, including a number, is coerced to a string. This outputs
 `'value'`, since `1` is coerced into `'1'`.
 

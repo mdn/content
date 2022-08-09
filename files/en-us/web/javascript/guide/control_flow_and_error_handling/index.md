@@ -351,7 +351,7 @@ function. If the value does not correspond to a month number
 
 ```js
 function getMonthName(mo) {
-  mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
+  mo--; // Adjust month number for array index (1 = Jan, 12 = Dec)
   const months = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',

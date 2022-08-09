@@ -38,11 +38,7 @@ method or statement also returns `undefined` if the variable that is being
 evaluated does not have an assigned value. A function returns `undefined` if
 a value was not {{jsxref("Statements/return", "returned")}}.
 
-> **Note:** While you can use `undefined` as an
-> {{Glossary("identifier")}} (variable name) in any scope other than the global scope
-> (because `undefined` is not a {{jsxref("Reserved_Words", "reserved word",
-    "", 1)}}), doing so is a very bad idea that will make your code difficult to maintain
-> and debug.
+> **Note:** While you can use `undefined` as an {{Glossary("identifier")}} (variable name) in any scope other than the global scope (because `undefined` is not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)), doing so is a very bad idea that will make your code difficult to maintain and debug.
 >
 > ```js example-bad
 > //  DON'T DO THIS
@@ -71,8 +67,7 @@ determine whether a variable has a value. In the following code, the variable
 let x;
 if (x === undefined) {
   // these statements execute
-}
-else {
+} else {
   // these statements do not execute
 }
 ```
@@ -83,8 +78,7 @@ else {
 > while strict equality doesn't. This is because `null` is not equivalent to
 > `undefined`.
 >
-> See {{jsxref("Operators/Comparison_Operators", "comparison operators", "", 1)}} for
-> details.
+> See [Equality comparison and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) for details.
 
 ### typeof operator and undefined
 

@@ -115,21 +115,19 @@ For example, the code fragment below shows how you might set up "author" logging
 The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.
 
 ```js
-var debug = require('debug')('author');
+const debug = require('debug')('author');
 
 // Display Author update form on GET
-exports.author_update_get = function(req, res, next) {
-
-    req.sanitize('id').escape().trim();
-    Author.findById(req.params.id, function(err, author) {
-        if (err) {
-            debug('update error:' + err);
-            return next(err);
-        }
-        //On success
-        res.render('author_form', { title: 'Update Author', author: author });
-    });
-
+exports.author_update_get = (req, res, next) => {
+  req.sanitize('id').escape().trim();
+  Author.findById(req.params.id, (err, author) => {
+    if (err) {
+      debug('update error:' + err);
+      return next(err);
+    }
+    // On success
+    res.render('author_form', { title: 'Update Author', author });
+  });
 };
 ```
 

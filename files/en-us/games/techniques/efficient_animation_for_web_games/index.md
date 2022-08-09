@@ -25,22 +25,22 @@ Speaking of the assumptions that the browser can make, you should avoid causing 
 When you are animating {{ htmlelement("canvas") }} content, or when your DOM animations absolutely must synchronize with canvas content animations, do make sure to use {{ domxref("window.requestAnimationFrame") }}, and not older methods such as {{ domxref("setTimeout()") }}. Assuming you are running in an arbitrary browsing session, you can never really know how long the browser will take to draw a particular frame. `requestAnimationFrame` causes the browser to redraw and call your function before that frame gets to the screen. The downside of using this vs. `setTimeout` is that your animations must be time-based instead of frame-based, i.e. you must keep track of time and set your animation properties based on elapsed time. `requestAnimationFrame` includes a {{ domxref("DOMHighResTimeStamp") }} in its callback function prototype, which you definitely should use (as opposed to using the {{ domxref("Date") }} object), as this will be the time the frame began rendering, and ought to make your animations look more fluid. You may have a callback that ends up looking something like this:
 
 ```js
-var startTime = -1;
-var animationLength = 2000; // Animation length in milliseconds
+let startTime = -1;
+const animationLength = 2000; // Animation length in milliseconds
 
 function doAnimation(timestamp) {
   // Calculate animation progress
-  var progress = 0;
+  let progress = 0;
 
   if (startTime < 0) {
-      startTime = timestamp;
+    startTime = timestamp;
   } else {
-      progress = timestamp - startTime;
+    progress = timestamp - startTime;
   }
 
   // Perform the animation
   if (progress < animationLength) {
-      requestAnimationFrame(doAnimation);
+    requestAnimationFrame(doAnimation);
   }
 }
 
@@ -58,7 +58,7 @@ function redraw() {
   // Perform the drawing
 }
 
-var drawPending = false;
+let drawPending = false;
 function requestRedraw() {
   if (!drawPending) {
     drawPending = true;

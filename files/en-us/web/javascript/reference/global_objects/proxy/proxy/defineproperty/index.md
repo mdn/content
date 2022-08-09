@@ -127,6 +127,6 @@ Object.defineProperty(p, 'name', {
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Reflect.defineProperty()")}}

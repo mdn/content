@@ -70,7 +70,7 @@ navigator.serviceWorker.ready.then(
   (serviceWorkerRegistration) => {
     const options = {
       userVisibleOnly: true,
-      applicationServerKey: applicationServerKey
+      applicationServerKey,
     };
     serviceWorkerRegistration.pushManager.subscribe(options).then(
       (pushSubscription) => {

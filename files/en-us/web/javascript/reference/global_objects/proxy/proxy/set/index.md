@@ -117,5 +117,5 @@ console.log(p.a);       // 10
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Reflect.set()")}}

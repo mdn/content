@@ -46,7 +46,7 @@ const transformContent = {
           controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength))
         else if (Array.isArray(chunk) && chunk.every((value) => typeof value === 'number'))
           controller.enqueue(new Uint8Array(chunk))
-        else if ('function' === typeof chunk.valueOf && chunk.valueOf() !== chunk)
+        else if (typeof chunk.valueOf === 'function' && chunk.valueOf() !== chunk)
           this.transform(chunk.valueOf(), controller) // hack
         else if ('toJSON' in chunk) this.transform(JSON.stringify(chunk), controller)
         break

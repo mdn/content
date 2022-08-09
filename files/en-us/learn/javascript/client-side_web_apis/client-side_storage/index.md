@@ -598,18 +598,12 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
     ```js
     // Define the storeVideo() function
-    function storeVideo(mp4Blob, webmBlob, name) {
+    function storeVideo(mp4, webm, name) {
       // Open transaction, get object store; make it a readwrite so we can write to the IDB
       const objectStore = db.transaction(['videos_os'], 'readwrite').objectStore('videos_os');
-      // Create a record to add to the IDB
-      const record = {
-        mp4 : mp4Blob,
-        webm : webmBlob,
-        name : name
-      }
 
       // Add the record to the IDB using add()
-      const request = objectStore.add(record);
+      const request = objectStore.add({ mp4, webm, name });
 
       request.addEventListener('success', () => console.log('Record addition attempt finished'));
       request.addEventListener('error', () => console.error(request.error));

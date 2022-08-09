@@ -227,22 +227,19 @@ it using AES in GCM mode. [See the complete code on GitHub.](https://github.com/
 ```js
 function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-gcm #message");
-  let message = messageBox.value;
-  let enc = new TextEncoder();
+  const message = messageBox.value;
+  const enc = new TextEncoder();
   return enc.encode(message);
 }
 
 function encryptMessage(key) {
-  let encoded = getMessageEncoding();
+  const encoded = getMessageEncoding();
   // iv will be needed for decryption
-  iv = window.crypto.getRandomValues(new Uint8Array(12));
+  const iv = window.crypto.getRandomValues(new Uint8Array(12));
   return window.crypto.subtle.encrypt(
-    {
-      name: "AES-GCM",
-      iv: iv
-    },
+    { name: "AES-GCM", iv },
     key,
-    encoded
+    encoded,
   );
 }
 ```

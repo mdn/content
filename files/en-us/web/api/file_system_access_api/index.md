@@ -161,16 +161,16 @@ The following show different examples of options that can be passed into the `wr
 
 ```js
 // just pass in the data (no options)
-writableStream.write(data)
+writableStream.write(data);
 
 // writes the data to the stream from the determined position
-writableStream.write({ type: "write", position: position, data: data })
+writableStream.write({ type: "write", position, data });
 
 // updates the current file cursor offset to the position specified
-writableStream.write({ type: "seek", position: position })
+writableStream.write({ type: "seek", position });
 
 // resizes the file to be size bytes long
-writableStream.write({ type: "truncate", size: size })
+writableStream.write({ type: "truncate", size });
 ```
 
 ## Specifications

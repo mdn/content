@@ -47,10 +47,10 @@ specified format.
 const types = [
   "video/webm",
   "audio/webm",
-  "video/webm\;codecs=vp8",
-  "video/webm\;codecs=daala",
-  "video/webm\;codecs=h264",
-  "audio/webm\;codecs=opus",
+  "video/webm;codecs=vp8",
+  "video/webm;codecs=daala",
+  "video/webm;codecs=h264",
+  "audio/webm;codecs=opus",
   "video/mpeg",
 ];
 

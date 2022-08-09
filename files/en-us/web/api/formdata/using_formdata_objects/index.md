@@ -120,7 +120,7 @@ form.addEventListener('submit', (ev) => {
     if (oReq.status === 200) {
       oOutput.innerHTML = "Uploaded!";
     } else {
-      oOutput.innerHTML = `Error ${oReq.status} occurred when trying to upload your file.<br \/>`;
+      oOutput.innerHTML = `Error ${oReq.status} occurred when trying to upload your file.<br />`;
     }
   };
 

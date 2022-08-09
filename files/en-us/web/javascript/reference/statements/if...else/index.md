@@ -128,10 +128,10 @@ if (b) // this condition is truthy
 
 ```js
 if (cipherChar === fromChar) {
-  result = result + toChar;
+  result += toChar;
   x++;
 } else {
-  result = result + clearChar;
+  result += clearChar;
 }
 ```
 
