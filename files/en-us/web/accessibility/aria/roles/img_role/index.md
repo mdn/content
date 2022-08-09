@@ -136,7 +136,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 ## See also
 
 - The {{HTMLElement('img')}} element
-- The {{HTMLElement('svg')}} element
+- The {{SVGElement('svg')}} element
 - The {{HTMLElement('picture')}} element
 - The {{HTMLElement('audio')}} element
 - The {{HTMLElement('video')}} element
