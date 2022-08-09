@@ -24,13 +24,13 @@ A {{domxref("Notification")}} object.
 ## Examples
 
 ```js
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   console.log('On notification click');
 
   // Data can be attached to the notification so that you
   // can process it in the notificationclick handler.
-  console.log('Notification Tag:', event.notification.tag);
-  console.log('Notification Data:', event.notification.data);
+  console.log(`Notification Tag: ${event.notification.tag}`);
+  console.log(`Notification Data: ${event.notification.data}`);
   event.notification.close();
 
   // This looks to see if the current is already open and

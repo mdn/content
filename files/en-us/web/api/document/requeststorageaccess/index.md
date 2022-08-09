@@ -12,7 +12,7 @@ tags:
   - requestStorageAccess
 browser-compat: api.Document.requestStorageAccess
 ---
-{{APIRef("Storage Access API"}}
+{{APIRef("Storage Access API")}}
 
 The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
 

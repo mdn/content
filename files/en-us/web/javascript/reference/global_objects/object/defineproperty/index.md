@@ -175,7 +175,7 @@ Object.defineProperty(o, 'a', {
 
 // Example of an object property added
 // with defineProperty with an accessor property descriptor
-const bValue = 38;
+let bValue = 38;
 Object.defineProperty(o, 'b', {
   get() { return bValue; },
   set(newValue) { bValue = newValue; },

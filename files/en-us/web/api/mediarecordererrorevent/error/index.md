@@ -74,12 +74,12 @@ function recordStream(stream) {
     /* exception while trying to create the recorder; handle that */
   }
 
-  recorder.ondataavailable = function(event) {
+  recorder.ondataavailable = (event) => {
     bufferList.push(event.data);
   };
 
-  recorder.onerror = function(event) {
-    let error = event.error;
+  recorder.onerror = (event) => {
+    console.error(`Error: ${event.error}`);
   };
 
   recorder.start(100);  /* 100ms time slices per buffer */

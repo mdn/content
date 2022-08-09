@@ -79,8 +79,8 @@ const request = new XMLHttpRequest();
 request.open("GET", "foo.txt", true);
 request.send();
 
-request.onreadystatechange = function() {
-  if (this.readyState === this.HEADERS_RECEIVED) {
+request.onreadystatechange = () => {
+  if (request.readyState === this.HEADERS_RECEIVED) {
 
     // Get the raw header string
     const headers = request.getAllResponseHeaders();
@@ -91,7 +91,7 @@ request.onreadystatechange = function() {
 
     // Create a map of header names to values
     const headerMap = {};
-    arr.forEach(function (line) {
+    arr.forEach((line) => {
       const parts = line.split(': ');
       const header = parts.shift();
       const value = parts.join(': ');

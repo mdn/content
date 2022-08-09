@@ -48,9 +48,9 @@ we add to the `<audio>` element itself.
 The error handler looks like this:
 
 ```js
-  audioElement.onerror = function() {
+  audioElement.onerror = () => {
     let s = "";
-    let err = audioElement.error;
+    const err = audioElement.error;
 
     switch(err.code) {
       case MediaError.MEDIA_ERR_ABORTED:
@@ -70,9 +70,9 @@ The error handler looks like this:
         break;
     }
 
-    let message = err.message;
+    const message = err.message;
 
-    if (message && message.length) {
+    if (message?.length > 0) {
       s += ` ${message}`;
     }
 

@@ -78,27 +78,27 @@ function getData() {
 
   request.responseType = 'arraybuffer';
 
-  request.onload = function() {
+  request.onload = () => {
     const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, (buffer) => {
       myBuffer = buffer;
       source.buffer = myBuffer;
       source.connect(offlineCtx.destination);
       source.start();
       //source.loop = true;
-      offlineCtx.startRendering().then(function(renderedBuffer) {
+      offlineCtx.startRendering().then((renderedBuffer) => {
         console.log('Rendering completed successfully');
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        const song = audioCtx.createBufferSource();
+        const offlineAudioCtx = new AudioContext()
+        const song = offlineAudioCtx.createBufferSource();
         song.buffer = renderedBuffer;
 
-        song.connect(audioCtx.destination);
+        song.connect(offlineAudioCtx.destination);
 
-        play.onclick = function() {
+        play.onclick = () => {
           song.start();
         }
-      }).catch(function(err) {
+      }).catch((err) => {
           console.error(`Rendering failed: ${err}`);
           // Note: The promise should reject when startRendering is called a second time on an OfflineAudioContext
       });

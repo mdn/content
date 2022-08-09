@@ -86,13 +86,13 @@ if (navigator.mediaDevices) {
   let chunks = [];
 
   navigator.mediaDevices.getUserMedia(constraints)
-  .then(function(stream) {
+  .then((stream) => {
 
     const mediaRecorder = new MediaRecorder(stream);
 
     visualize(stream);
 
-    record.onclick = function() {
+    record.onclick = () => {
       mediaRecorder.start();
       console.log(mediaRecorder.state);
       console.log("recorder started");
@@ -100,7 +100,7 @@ if (navigator.mediaDevices) {
       record.style.color = "black";
     }
 
-    stop.onclick = function() {
+    stop.onclick = () => {
       mediaRecorder.stop();
       console.log(mediaRecorder.state);
       console.log("recorder stopped");
@@ -108,7 +108,7 @@ if (navigator.mediaDevices) {
       record.style.color = "";
     }
 
-    mediaRecorder.onstop = function(e) {
+    mediaRecorder.onstop = (e) => {
       console.log("data available after MediaRecorder.stop() called.");
 
       const clipName = prompt('Enter a name for your sound clip');
@@ -120,8 +120,8 @@ if (navigator.mediaDevices) {
 
       clipContainer.classList.add('clip');
       audio.setAttribute('controls', '');
-      deleteButton.innerHTML = "Delete";
-      clipLabel.innerHTML = clipName;
+      deleteButton.textContent = "Delete";
+      clipLabel.textContent = clipName;
 
       clipContainer.appendChild(audio);
       clipContainer.appendChild(clipLabel);
@@ -135,17 +135,17 @@ if (navigator.mediaDevices) {
       audio.src = audioURL;
       console.log("recorder stopped");
 
-      deleteButton.onclick = function(e) {
+      deleteButton.onclick = (e) => {
         const evtTgt = e.target;
         evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
       }
     }
 
-    mediaRecorder.ondataavailable = function(e) {
+    mediaRecorder.ondataavailable = (e) => {
       chunks.push(e.data);
     }
   })
-  .catch(function(err) {
+  .catch((err) => {
     console.error(`The following error occurred: ${err}`);
   })
 }

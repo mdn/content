@@ -73,10 +73,10 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
   obj.instance.exports.exported_func();
 
   // or access the buffer contents of an exported memory:
-  var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+  const i32 = new Uint32Array(obj.instance.exports.memory.buffer);
 
   // or access the elements of an exported table:
-  var table = obj.instance.exports.table;
+  const table = obj.instance.exports.table;
   console.log(table.get(0)());
 })
 ```
@@ -95,13 +95,13 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 The final code looks like this:
 
 ```js
-request = new XMLHttpRequest();
+const request = new XMLHttpRequest();
 request.open('GET', 'simple.wasm');
 request.responseType = 'arraybuffer';
 request.send();
 
-request.onload = function() {
-  var bytes = request.response;
+request.onload = () => {
+  const bytes = request.response;
   WebAssembly.instantiate(bytes, importObject).then((results) => {
     results.instance.exports.exported_func();
   });

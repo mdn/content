@@ -123,8 +123,8 @@ try {
   request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
   request.responseType = "arraybuffer";
 
-  request.onload = function() {
-    context.decodeAudioData(request.response, function(buffer) {
+  request.onload = () => {
+    context.decodeAudioData(request.response, (buffer) => {
       source = context.createBufferSource();
       source.buffer = buffer;
       source.connect(context.destination);
@@ -184,18 +184,18 @@ navigator.mediaDevices.getUserMedia({audio:true})
     const recorder = new MediaRecorder(stream);
 
     const data = [];
-    recorder.ondataavailable = function(e) {
+    recorder.ondataavailable = (e) => {
       data.push(e.data);
     };
     recorder.start();
-    recorder.onerror = function(e) {
+    recorder.onerror = (e) => {
       throw e.error || new Error(e.name); // e.name is FF non-spec
     }
-    recorder.onstop = function(e) {
+    recorder.onstop = (e) => {
       const audio = document.createElement('audio');
       audio.src = window.URL.createObjectURL(new Blob(data));
     }
-    setTimeout(function() {
+    setTimeout(() => {
       rec.stop();
     }, 5000);
   })
@@ -428,10 +428,10 @@ Another way to show the fallback content of a video, when none of the sources co
 ```
 
 ```js
-let v = document.querySelector('video'),
-    sources = v.querySelectorAll('source'),
-    lastsource = sources[sources.length-1];
-lastsource.addEventListener('error', function(ev) {
+const v = document.querySelector('video');
+const sources = v.querySelectorAll('source');
+const lastsource = sources[sources.length - 1];
+lastsource.addEventListener('error', (ev) => {
   const d = document.createElement('div');
   d.innerHTML = v.innerHTML;
   v.parentNode.replaceChild(d, v);

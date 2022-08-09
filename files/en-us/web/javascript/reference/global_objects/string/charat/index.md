@@ -117,7 +117,7 @@ function getWholeChar(str, i) {
       throw 'High surrogate without following low surrogate';
     }
     const next = str.charCodeAt(i + 1);
-    if (0xDC00 > next || next > 0xDFFF) {
+    if (next < 0xDC00 || next > 0xDFFF) {
       throw 'High surrogate without following low surrogate';
     }
     return str.charAt(i) + str.charAt(i + 1);
@@ -130,7 +130,7 @@ function getWholeChar(str, i) {
 
   // (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 > prev || prev > 0xDBFF) {
+  if (prev < 0xD800 || prev > 0xDBFF) {
     throw 'Low surrogate without preceding high surrogate';
   }
   // We can pass over low surrogates now as the second component
@@ -174,7 +174,7 @@ function getWholeCharAndI(str, i) {
       throw new Error('High surrogate without following low surrogate');
     }
     const next = str.charCodeAt(i + 1)
-    if (0xDC00 > next || next > 0xDFFF) {
+    if (next < 0xDC00 || next > 0xDFFF) {
       throw new Error('High surrogate without following low surrogate');
     }
     return [str.charAt(i) + str.charAt(i + 1), i + 1];
@@ -189,7 +189,7 @@ function getWholeCharAndI(str, i) {
 
   // (could change last hex to 0xDB7F to treat high private surrogates
   // as single characters)
-  if (0xD800 > prev || prev > 0xDBFF) {
+  if (prev < 0xD800 || prev > 0xDBFF) {
     throw new Error('Low surrogate without preceding high surrogate');
   }
 

@@ -39,7 +39,7 @@ In the Media Stream API, both {{domxref("MediaStream")}} and {{domxref("MediaStr
 If you need to know whether or not a given constraint is supported by the user agent, you can find out by calling {{domxref("MediaDevices.getSupportedConstraints", "navigator.mediaDevices.getSupportedConstraints()")}} to get a list of the constrainable properties which the browser knows, like this:
 
 ```js
-let supported = navigator.mediaDevices.getSupportedConstraints();
+const supported = navigator.mediaDevices.getSupportedConstraints();
 
 document.getElementById("frameRateSlider").disabled = !supported["frameRate"];
 ```
@@ -57,7 +57,7 @@ The most important thing to understand is that most constraints aren't requireme
 Most, each constraint may be a specific value indicating a desired value for the setting. For example:
 
 ```js
-let constraints = {
+const constraints = {
   width: 1920,
   height: 1080,
   aspectRatio: 1.777777778
@@ -77,12 +77,12 @@ Simple constraints like these, specifying a single value, are always treated as 
 Sometimes, any value within a range is acceptable for a property's value. You can specify ranges with either or both minimum and maximum values, and you can even specify an ideal value within the range, if you choose. If you provide an ideal value, the browser will try to get as close as possible to matching that value, given the other constraints specified.
 
 ```js
-let supports = navigator.mediaDevices.getSupportedConstraints();
+const supports = navigator.mediaDevices.getSupportedConstraints();
 
 if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supports["facingMode"]) {
   // We're missing needed properties, so handle that error.
 } else {
-  let constraints = {
+  const constraints = {
     width: { min: 640, ideal: 1920, max: 1920 },
     height: { min: 400, ideal: 1080 },
     aspectRatio: 1.777777778,
@@ -92,7 +92,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 
   myTrack.applyConstraints(constraints).then(() => {
     /* do stuff if constraints applied successfully */
-  }).catch(function(reason) {
+  }).catch((reason) => {
     /* failed to apply constraints; reason is why */
   });
 }
@@ -157,7 +157,7 @@ If at any time you need to fetch the set of constraints that are currently appli
 
 ```js
 function switchCameras(track, camera) {
-  let constraints = track.getConstraints();
+  const constraints = track.getConstraints();
   constraints.facingMode = camera;
   track.applyConstraints(constraints);
 }
@@ -297,8 +297,8 @@ h3 {
 First we have the default constraint sets, as strings. These strings are presented in editable {{HTMLElement("textarea")}}s, but this is the initial configuration of the stream.
 
 ```js
-let videoDefaultConstraintString = '{\n  "width": 320,\n  "height": 240,\n  "frameRate": 30\n}';
-let audioDefaultConstraintString = '{\n  "sampleSize": 16,\n  "channelCount": 2,\n  "echoCancellation": false\n}';
+const videoDefaultConstraintString = '{\n  "width": 320,\n  "height": 240,\n  "frameRate": 30\n}';
+const audioDefaultConstraintString = '{\n  "sampleSize": 16,\n  "channelCount": 2,\n  "echoCancellation": false\n}';
 ```
 
 These defaults ask for a pretty common camera configuration, but don't insist on any property being of special importance. The browser should do its best to match these settings but will settle for anything it considers a close match.
@@ -316,13 +316,13 @@ let videoTrack = null;
 And we get references to all of the elements we'll need to access.
 
 ```js
-let videoElement = document.getElementById("video");
-let logElement = document.getElementById("log");
-let supportedConstraintList = document.getElementById("supportedConstraints");
-let videoConstraintEditor = document.getElementById("videoConstraintEditor");
-let audioConstraintEditor = document.getElementById("audioConstraintEditor");
-let videoSettingsText = document.getElementById("videoSettingsText");
-let audioSettingsText = document.getElementById("audioSettingsText");
+const videoElement = document.getElementById("video");
+const logElement = document.getElementById("log");
+const supportedConstraintList = document.getElementById("supportedConstraints");
+const videoConstraintEditor = document.getElementById("videoConstraintEditor");
+const audioConstraintEditor = document.getElementById("audioConstraintEditor");
+const videoSettingsText = document.getElementById("videoSettingsText");
+const audioSettingsText = document.getElementById("audioSettingsText");
 ```
 
 These elements are:
@@ -393,22 +393,22 @@ function startVideo() {
   navigator.mediaDevices.getUserMedia({
     video: videoConstraints,
     audio: audioConstraints
-  }).then(function(stream) {
-    let audioTracks = stream.getAudioTracks();
-    let videoTracks = stream.getVideoTracks();
+  }).then((stream) => {
+    const audioTracks = stream.getAudioTracks();
+    const videoTracks = stream.getVideoTracks();
 
     videoElement.srcObject = stream;
-    if (audioTracks.length) {
+    if (audioTracks.length > 0) {
         audioTrack = audioTracks[0];
     }
-    if (videoTracks.length) {
+    if (videoTracks.length > 0) {
         videoTrack = videoTracks[0];
     }
-  }).then(function() {
-    return new Promise(function(resolve) {
+  }).then(() => {
+    return new Promise((resolve) => {
       videoElement.onloadedmetadata = resolve;
     });
-  }).then(function() {
+  }).then(() => {
     getCurrentSettings();
   }).catch(handleError);
 }
@@ -426,7 +426,7 @@ There are several steps here:
 We also need to set up an event listener to watch for the "Start Video" button to be clicked:
 
 ```js
-document.getElementById("startButton").addEventListener("click", function() {
+document.getElementById("startButton").addEventListener("click", () => {
   startVideo();
 }, false);
 ```
@@ -441,19 +441,19 @@ Next, we set up an event listener for the "Apply Constraints" button. If it's cl
 4. If an error occurs applying either set of constraints, `handleError()` is used to output a message into the log.
 
 ```js
-document.getElementById("applyButton").addEventListener("click", function() {
+document.getElementById("applyButton").addEventListener("click", () => {
   if (!videoTrack && !audioTrack) {
     startVideo();
   } else {
     buildConstraints();
     if (videoTrack) {
-      videoTrack.applyConstraints(videoConstraints).then(function() {
+      videoTrack.applyConstraints(videoConstraints).then(() => {
         videoSettingsText.value = JSON.stringify(videoTrack.getSettings(), null, 2);
       }).catch(handleError);
     }
 
     if (audioTrack) {
-      audioTrack.applyConstraints(audioConstraints).then(function() {
+      audioTrack.applyConstraints(audioConstraints).then(() => {
         audioSettingsText.value = JSON.stringify(audioTrack.getSettings(), null, 2);
       }).catch(handleError);
     }
@@ -466,7 +466,7 @@ document.getElementById("applyButton").addEventListener("click", function() {
 Then we set up the handler for the stop button.
 
 ```js
-document.getElementById("stopButton").addEventListener("click", function() {
+document.getElementById("stopButton").addEventListener("click", () => {
   if (videoTrack) {
     videoTrack.stop();
   }
@@ -488,11 +488,11 @@ This code adds simple support for tabs to the {{HTMLElement("textarea")}} elemen
 ```js
 function keyDownHandler(event) {
   if (event.key === "Tab") {
-    let elem = event.target;
-    let str = elem.value;
+    const elem = event.target;
+    const str = elem.value;
 
-    let position = elem.selectionStart;
-    let newStr = `${str.substring(0, position)}  ${str.substring(position, str.length)}`;
+    const position = elem.selectionStart;
+    const newStr = `${str.substring(0, position)}  ${str.substring(position, str.length)}`;
     elem.value = newStr;
     elem.selectionStart = elem.selectionEnd = position + 2;
     event.preventDefault();
@@ -510,10 +510,10 @@ The last significant piece of the puzzle: code that displays, for the user's ref
 > **Note:** Of course, there may be non-standard properties in this list, in which case you probably will find that the documentation link doesn't help much.
 
 ```js
-let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
-for (let constraint in supportedConstraints) {
+const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+for (const constraint in supportedConstraints) {
   if (Object.hasOwn(supportedConstraints, constraint)) {
-    let elem = document.createElement("li");
+    const elem = document.createElement("li");
 
     elem.innerHTML = `<code><a href='https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/${constraint}' target='_blank'>${constraint}</a></code>`;
     supportedConstraintList.appendChild(elem);

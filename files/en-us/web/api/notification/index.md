@@ -127,10 +127,11 @@ function notifyMe() {
 
   // Otherwise, we need to ask the user for permission
   else if (Notification.permission !== "denied") {
-    Notification.requestPermission().then(function (permission) {
+    Notification.requestPermission().then((permission) => {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        let notification = new Notification("Hi there!");
+        const notification = new Notification("Hi there!");
+        // …
       }
     });
   }

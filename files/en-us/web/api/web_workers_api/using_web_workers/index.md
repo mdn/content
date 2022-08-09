@@ -28,7 +28,7 @@ The worker context is represented by a {{domxref("DedicatedWorkerGlobalScope")}}
 
 You can run whatever code you like inside the worker thread, with some exceptions. For example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the {{domxref("window")}} object. But you can use a large number of items available under `window`, including [WebSockets](/en-US/docs/Web/API/WebSockets_API), and data storage mechanisms like [IndexedDB](/en-US/docs/Web/API/IndexedDB_API). See [Functions and classes available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) for more details.
 
-Data is sent between workers and the main thread via a system of messages — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the {{domxref("Worker/message_event", "message")}} event's data attribute.) The data is copied rather than shared.
+Data is sent between workers and the main thread via a system of messages — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the {{domxref("Worker/message_event", "message")}} event's data attribute). The data is copied rather than shared.
 
 Workers may, in turn, spawn new workers, as long as those workers are hosted within the same origin as the parent page. In addition, workers may use [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) for network I/O, with the exception that the `responseXML` and `channel` attributes on `XMLHttpRequest` always return `null`.
 
@@ -294,7 +294,7 @@ myWorker.postMessage('ali');
 **my_task.js** (the worker):
 
 ```js
-postMessage("I\'m working before postMessage(\'ali\').");
+postMessage("I'm working before postMessage('ali').");
 
 onmessage = (event) => {
   postMessage(`Hi, ${event.data}`);

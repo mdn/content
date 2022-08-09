@@ -53,18 +53,18 @@ if ('mediaSession' in navigator) {
     ]
   });
 
-  navigator.mediaSession.setActionHandler('play', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('pause', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('stop', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekbackward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekforward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekto', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('togglecamera', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('togglemicrophone', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('hangup', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('play', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('pause', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('stop', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekbackward', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekforward', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekto', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('previoustrack', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('nexttrack', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('skipad', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('togglecamera', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('togglemicrophone', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('hangup', () => { /* Code excerpted. */ });
 
 }
 ```
@@ -76,7 +76,7 @@ const actionHandlers = [
   // play
   [
     'play',
-    async function() {
+    async () => {
       // play our audio
       await audioEl.play();
       // set playback state
