@@ -251,7 +251,7 @@ This section looks at the JavaScript required for implementing the button functi
 Now that the buttons actually look like buttons and have images that indicate what they do, some changes need to be made so that the "dual functionality" buttons (such as the play/pause button) are in the correct "state" and display the correct image. In order to facilitate this, a new function is defined called `changeButtonState()`, which accepts a type variable indicating the button's functionality:
 
 ```js
-const changeButtonState = function(type) {
+function changeButtonState(type) {
    // Play/Pause button
    if (type === 'playpause') {
       if (video.paused || video.ended) {
@@ -304,7 +304,7 @@ playpause.addEventListener('click', function(e) {
 The `alterVolume()` function, called when the player's volume buttons are clicked, also changes — it now calls a new function called `checkVolume()`:
 
 ```js
-const checkVolume = function(dir) {
+function checkVolume(dir) {
    if (dir) {
       const currentVolume = Math.floor(video.volume * 10) / 10;
       if (dir === '+') {
@@ -320,7 +320,7 @@ const checkVolume = function(dir) {
    }
    changeButtonState('mute');
 }
-const alterVolume = function(dir) {
+function alterVolume(dir) {
    checkVolume(dir);
 }
 ```
@@ -338,8 +338,8 @@ video.addEventListener('volumechange', function() {
 A small change also needs to be made to the click handler for the {{ htmlelement("progress") }} element. Since the enclosing {{htmlelement("figure") }} element now has `position:relative` set on it, the calculations made by this click handler are incorrect. It now also needs to take into account the offset position of the parent element:
 
 ```js
-progress.addEventListener('click', function(e) {
-   const pos = (e.pageX  - (this.offsetLeft + this.offsetParent.offsetLeft)) / this.offsetWidth;
+progress.addEventListener('click', (e) => {
+   const pos = (e.pageX  - (progress.offsetLeft + progress.offsetParent.offsetLeft)) / progress.offsetWidth;
    video.currentTime = pos * video.duration;
 });
 ```
