@@ -238,7 +238,7 @@ videoControls.setAttribute('data-state', 'visible');
 A check also needs to be made to set up the "fake" progress bar if the browser doesn't support the {{htmlelement("progress") }} element:
 
 ```js
-var supportsProgress = (document.createElement('progress').max !== undefined);
+const supportsProgress = (document.createElement('progress').max !== undefined);
 if (!supportsProgress) progress.setAttribute('data-state', 'fake');
 ```
 
@@ -251,7 +251,7 @@ This section looks at the JavaScript required for implementing the button functi
 Now that the buttons actually look like buttons and have images that indicate what they do, some changes need to be made so that the "dual functionality" buttons (such as the play/pause button) are in the correct "state" and display the correct image. In order to facilitate this, a new function is defined called `changeButtonState()`, which accepts a type variable indicating the button's functionality:
 
 ```js
-var changeButtonState = function(type) {
+const changeButtonState = function(type) {
    // Play/Pause button
    if (type === 'playpause') {
       if (video.paused || video.ended) {
@@ -304,9 +304,9 @@ playpause.addEventListener('click', function(e) {
 The `alterVolume()` function, called when the player's volume buttons are clicked, also changes — it now calls a new function called `checkVolume()`:
 
 ```js
-var checkVolume = function(dir) {
+const checkVolume = function(dir) {
    if (dir) {
-      var currentVolume = Math.floor(video.volume * 10) / 10;
+      const currentVolume = Math.floor(video.volume * 10) / 10;
       if (dir === '+') {
          if (currentVolume < 1) video.volume += 0.1;
       }
@@ -320,7 +320,7 @@ var checkVolume = function(dir) {
    }
    changeButtonState('mute');
 }
-var alterVolume = function(dir) {
+const alterVolume = function(dir) {
    checkVolume(dir);
 }
 ```
@@ -339,7 +339,7 @@ A small change also needs to be made to the click handler for the {{ htmlelement
 
 ```js
 progress.addEventListener('click', function(e) {
-   var pos = (e.pageX  - (this.offsetLeft + this.offsetParent.offsetLeft)) / this.offsetWidth;
+   const pos = (e.pageX  - (this.offsetLeft + this.offsetParent.offsetLeft)) / this.offsetWidth;
    video.currentTime = pos * video.duration;
 });
 ```
@@ -368,7 +368,7 @@ The player currently works fairly well until displayed on a "medium" screen (e.g
 }
 ```
 
-This works well enough until it is viewed on a smaller screen (680px/42.5em), so another breakpoint is made here. Since the height of the `.controls` class element will now vary, a fixed height is no longer required — it is therefore set to `auto`. The definitions for the elements within the .controls element now also need to changed:
+This works well enough until it is viewed on a smaller screen (680px/42.5em), so another breakpoint is made here. Since the height of the `.controls` class element will now vary, a fixed height is no longer required — it is therefore set to `auto`. The definitions for the elements within the `.controls` element now also need to changed:
 
 ```css
 @media screen and (max-width:42.5em) {

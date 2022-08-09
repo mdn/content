@@ -322,7 +322,7 @@ First, we write a function checking the constraint itself:
 ```js
 function checkZIP() {
   // For each country, defines the pattern that the ZIP has to follow
-  var constraints = {
+  const constraints = {
     ch : [ '^(CH-)?\\d{4}$', "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950" ],
     fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
     de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
@@ -331,13 +331,13 @@ function checkZIP() {
   };
 
   // Read the country id
-  var country = document.getElementById("Country").value;
+  const country = document.getElementById("Country").value;
 
   // Get the NPA field
-  var ZIPField = document.getElementById("ZIP");
+  const ZIPField = document.getElementById("ZIP");
 
   // Build the constraint checker
-  var constraint = new RegExp(constraints[country][0], "");
+  const constraint = new RegExp(constraints[country][0], "");
     console.log(constraint);
 
   // Check it!
@@ -381,8 +381,8 @@ The JavaScript reads the file selected, uses the `File.size()` method to get its
 
 ```js
 function checkFileSize() {
-  var FS = document.getElementById("FS");
-  var files = FS.files;
+  const FS = document.getElementById("FS");
+  const files = FS.files;
 
   // If there is (at least) one file selected
   if (files.length > 0) {
