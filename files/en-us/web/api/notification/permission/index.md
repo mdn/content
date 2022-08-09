@@ -47,15 +47,17 @@ function notifyMe() {
   // Let's check whether notification permissions have already been granted
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
-    let notification = new Notification("Hi there!");
+    const notification = new Notification("Hi there!");
+    // …
   }
 
   // Otherwise, we need to ask the user for permission
   else if (Notification.permission !== 'denied' || Notification.permission === "default") {
-    Notification.requestPermission(function (permission) {
+    Notification.requestPermission((permission) => {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        let notification = new Notification("Hi there!");
+        const notification = new Notification("Hi there!");
+        // …
       }
     });
   }

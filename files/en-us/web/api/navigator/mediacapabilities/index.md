@@ -39,7 +39,7 @@ navigator.mediaCapabilities.decodingInfo({
         bitrate : 132700,
         samplerate : 5200
     }
-}).then(function(result) {
+}).then((result) => {
   console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
   console.log(`${result.smooth ? '' : 'not '}smooth, and`);
   console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);

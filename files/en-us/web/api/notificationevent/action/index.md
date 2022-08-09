@@ -29,7 +29,7 @@ self.registration.showNotification("New articles available", {
   actions: [{action: "get", title: "Get now."}]
 });
 
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   if (event.action === 'get') {
     synchronizeReader();

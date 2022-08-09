@@ -88,13 +88,13 @@ if (navigator.mediaDevices.getUserMedia) {
   const constraints = { audio: true, video: true };
   const chunks = [];
 
-  const onSuccess = function(stream) {
+  const onSuccess = (stream) => {
     const options = {
       audioBitsPerSecond : 128000,
       videoBitsPerSecond : 2500000,
       mimeType : 'video/mp4'
     }
-    const mediaRecorder = new MediaRecorder(stream,options);
+    const mediaRecorder = new MediaRecorder(stream, options);
     m = mediaRecorder;
 
     // …

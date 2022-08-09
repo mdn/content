@@ -55,7 +55,7 @@ A list of containers that the task occurred within. For tasks that don't occur w
 ## Usage
 
 ```js
-const observer = new PerformanceObserver(function(list) {
+const observer = new PerformanceObserver((list) => {
     const perfEntries = list.getEntries();
     for (let i = 0; i < perfEntries.length; i++) {
         // Process long task notifications:

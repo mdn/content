@@ -168,7 +168,7 @@ This function remove each first child of an element, until there are none left.
 ```js
 function removeAllChildren(element) {
   while (element.firstChild) {
-    element.removeChild(element.firstChild)
+    element.removeChild(element.firstChild);
   }
 }
 ```
@@ -176,7 +176,7 @@ function removeAllChildren(element) {
 Using this function is a single call. Here we empty the body of the document:
 
 ```js
-removeAllChildren(document.body)
+removeAllChildren(document.body);
 ```
 
 An alternative could be to set the textContent to the empty string: `document.body.textContent = ""`.
@@ -201,9 +201,8 @@ function eachNode(rootNode, callback) {
   }
 
   if (rootNode.hasChildNodes()) {
-    const nodes = rootNode.childNodes;
-    for (let i = 0, l = nodes.length; i < l; ++i) {
-      if (eachNode(nodes[i], callback) === false) {
+    for (const node of rootNode.childNodes) {
+      if (eachNode(node, callback) === false) {
         return;
       }
     }
