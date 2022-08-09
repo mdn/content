@@ -61,7 +61,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)  The function `getMediaSource()` is not defined here and returns a `MediaSource`.
 
 ```js
 const assetURL = 'frag_bunny.mp4';
@@ -69,10 +69,9 @@ const assetURL = 'frag_bunny.mp4';
 // ./mp4info frag_bunny.mp4 | grep Codec
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-let mediaSource;
+const mediaSource = getMediaSource();
 
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  mediaSource = new MediaSource;
   console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
