@@ -696,7 +696,7 @@ Let's write an example:
 
     driver.sleep(2000).then(() => {
       driver.getTitle().then((title) => {
-        if(title === 'webdriver - Google Search') {
+        if (title === 'webdriver - Google Search') {
           console.log('Test passed');
         } else {
           console.log('Test failed');
