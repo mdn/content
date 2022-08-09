@@ -3,8 +3,7 @@ title: Using XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 page-type: guide
 tags:
-  - AJAX
-  - AJAXfile
+
   - Advanced
   - DOM
   - Guide
@@ -23,8 +22,7 @@ In this guide, we'll take a look at how to use
 {{domxref("XMLHttpRequest")}} to issue [HTTP](/en-US/docs/Web/HTTP)
 requests in order to exchange data between the web site and a server.
 
-Examples
-of both common and more obscure use cases for `XMLHttpRequest` are included.
+Examples of both common and more obscure use cases for `XMLHttpRequest` are included.
 
 To send an HTTP request, create an `XMLHttpRequest` object, open a URL, and
 send the request. After the transaction completes, the object will contain useful
@@ -35,10 +33,10 @@ function reqListener () {
   console.log(this.responseText);
 }
 
-const oReq = new XMLHttpRequest();
-oReq.addEventListener("load", reqListener);
-oReq.open("GET", "http://www.example.org/example.txt");
-oReq.send();
+const req = new XMLHttpRequest();
+req.addEventListener("load", reqListener);
+req.open("GET", "http://www.example.org/example.txt");
+req.send();
 ```
 
 ## Types of requests
@@ -49,21 +47,16 @@ asynchronously or synchronously. The type of request is dictated by the optional
 {{domxref("XMLHttpRequest.open()")}} method. If this argument is `true` or
 not specified, the `XMLHttpRequest` is processed asynchronously, otherwise
 the process is handled synchronously. A detailed discussion and demonstrations of these
-two types of requests can be found on the [synchronous and asynchronous requests](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) page. Do not use synchronous requests outside Web
-Workers.
+two types of requests can be found on the [synchronous and asynchronous requests](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) page. You can't use synchronous requests outside web
+workers as it freezes the main interface.
 
-> **Note:** Starting with Gecko 30.0 {{ geckoRelease("30.0")
-  }}, synchronous requests on the main thread have been deprecated due to the negative
-> effects to the user experience.
-
-> **Note:** The constructor function
-> `XMLHttpRequest` isn't limited to only XML documents. It starts with
-> **"XML"** because when it was created the main format that was originally
-> used for Asynchronous Data Exchange was XML.
+> **Note:** The constructor `XMLHttpRequest` isn't limited to only XML documents.
+> It starts with **"XML"** because when it was created the main format 
+> that was originally used for asynchronous data exchange was XML.
 
 ## Handling responses
 
-There are several types of [response attributes](https://xhr.spec.whatwg.org/) defined by the living standard specification for the
+There are several types of [response attributes](https://xhr.spec.whatwg.org/) defined for the
 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} constructor. These tell
 the client making the `XMLHttpRequest` important information about the status
 of the response. Some cases where dealing with non-text response types may involve some
@@ -144,7 +137,7 @@ req.responseType = "arraybuffer";
 req.send();
 ```
 
-For more examples check out the [Sending and Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data) page
+For more examples check out the [Sending and Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data) page.
 
 ## Monitoring progress
 
@@ -228,16 +221,11 @@ oReq.open();
 > **Note:** Progress events are not available for the
 > `file:` protocol.
 
-> **Note:** Starting in {{Gecko("9.0")}}, progress events can now be
-> relied upon to come in for every chunk of data received, including the last chunk in
-> cases in which the last packet is received and the connection closed before the
-> progress event is fired. In this case, the progress event is automatically fired when
-> the load event occurs for that packet. This lets you now reliably monitor progress by
-> only watching the "progress" event.
-
-> **Note:** As of {{Gecko("12.0")}}, if your progress event is called with
-> a `responseType` of "moz-blob", the value of response is a
-> {{domxref("Blob")}} containing the data received so far.
+Progress events come in for every chunk of data received, including the last chunk in
+cases in which the last packet is received and the connection closed before the
+progress event is fired. In this case, the progress event is automatically fired when
+the load event occurs for that packet. This lets you now reliably monitor progress by
+only watching the "progress" event.
 
 One can also detect all three load-ending conditions (`abort`,
 `load`, or `error`) using the `loadend` event:
@@ -259,8 +247,8 @@ end-of-transfer scenarios.
 
 Instances of `XMLHttpRequest` can be used to submit forms in two ways:
 
-- using only XHR
-- using the {{domxref("FormData")}} API
+- standalone, without any API,
+- using the {{domxref("FormData")}} API.
 
 Using the FormData API is the simplest and fastest, but has the
 disadvantage that data collected can not be [stringified](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
