@@ -204,15 +204,15 @@ Note that the elements of an array that are omitted when the array is defined ar
 ```js
 const sparseArray = ['first', 'second', , 'fourth'];
 
-array.forEach((element) => {
+sparseArray.forEach((element) => {
   console.log(element);
 });
 // first
 // second
 // fourth
 
-if (array[2] === undefined) {
-  console.log('array[2] is undefined');  // true
+if (sparseArray[2] === undefined) {
+  console.log('sparseArray[2] is undefined');  // true
 }
 
 const nonsparseArray = ['first', 'second', undefined, 'fourth'];
