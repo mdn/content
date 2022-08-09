@@ -256,7 +256,7 @@ With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s 
 
 Here's a screenshot of what that might look like:
 
-![An input box has focus with a blue focus ring. The input has a drop down menu showing four phone numbers the user can select](phone-number-with-options.png)
+![An input box has focus with a blue focus ring. The input has a drop-down menu showing four phone numbers the user can select.](phone-number-with-options.png)
 
 ## Validation
 
