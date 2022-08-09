@@ -101,8 +101,7 @@ Line 16 actually initiates the request.
 You can use a timeout to prevent your code from hanging while waiting for a read to finish. This is done by setting the value of the `timeout` property on the {{domxref('XMLHttpRequest')}} object, as shown in the code below:
 
 ```js
-function loadFile(url, timeout, callback) {
-  const args = Array.prototype.slice.call(arguments, 3);
+function loadFile(url, timeout, callback, ...args) {
   const xhr = new XMLHttpRequest();
   xhr.ontimeout = () => {
     console.error(`The request for ${url} timed out.`);
