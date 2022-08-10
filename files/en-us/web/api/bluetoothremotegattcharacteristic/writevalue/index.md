@@ -6,7 +6,6 @@ tags:
   - API
   - Bluetooth
   - BluetoothRemoteGATTCharacteristic
-  - Experimental
   - Method
   - Reference
   - Web Bluetooth API
@@ -14,7 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValue
 ---
-{{APIRef("Bluetooth API")}}{{Deprecated_header}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{Deprecated_header}}
 
 Use {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()")}} and {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()")}} instead.
 
