@@ -10,15 +10,13 @@ tags:
 
 This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as {{jsxref("Array")}} objects and {{jsxref("TypedArray")}} objects.
 
-## `Array` object
-
-An **array** is an ordered list of values that you refer to with a name and an index.
+An _array_ is an ordered list of values that you refer to with a name and an index.
 
 For example, consider an array called `emp`, which contains employees' names indexed by their numerical employee number. So `emp[0]` would be employee number zero, `emp[1]` employee number one, and so on.
 
 JavaScript does not have an explicit array data type. However, you can use the predefined `Array` object and its methods to work with arrays in your applications. The `Array` object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them. It has a property for determining the array length and other properties for use with regular expressions.
 
-### Creating an array
+## Creating an array
 
 The following statements create equivalent arrays:
 
@@ -81,13 +79,13 @@ const arr = Array(9.3); // RangeError: Invalid array length
 
 If your code needs to create arrays with single elements of an arbitrary data type, it is safer to use array literals. Alternatively, create an empty array first before adding the single element to it.
 
-In ES2015, you can use the {{jsxref("Array.of")}} static method to create arrays with single element.
+You can also use the {{jsxref("Array.of")}} static method to create arrays with single element.
 
 ```js
 const wisenArray = Array.of(9.3); // wisenArray contains only one element 9.3
 ```
 
-### Referring to array elements
+## Referring to array elements
 
 Because elements are also properties, you can access the using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). Suppose you define the following array:
 
@@ -105,7 +103,7 @@ You can refer to the first element of the array as `myArray[0]`, the second elem
 > arr['length']   // 3
 > ```
 
-### Populating an array
+## Populating an array
 
 You can populate an array by assigning values to its elements. For example:
 
@@ -429,7 +427,7 @@ console.log(total); // Prints 60
 
 `reduce` and `reduceRight` are the least obvious of the iterative array methods. They should be used for algorithms that combine two values recursively in order to reduce a sequence down to a single value.
 
-### Sparse arrays
+## Sparse arrays
 
 Arrays can contain "empty slots", which are not the same as slots filled with the value `undefined`. Empty slots can be created in one of the following ways:
 
@@ -484,7 +482,7 @@ for (const key in arr) console.log(key); // Logs "0 1 4"
 const objectSpread = { ...arr }; // { '0': 1, '1': 2, '4': 5 }
 ```
 
-### Multi-dimensional arrays
+## Multi-dimensional arrays
 
 Arrays can be nested, meaning that an array can contain another array as an element. Using this characteristic of JavaScript arrays, multi-dimensional arrays can be created.
 
@@ -509,7 +507,7 @@ Row 2: [2, 0] [2, 1] [2, 2] [2, 3]
 Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
 ```
 
-### Using arrays to store other properties
+## Using arrays to store other properties
 
 Arrays can also be used like objects, to store related information.
 
@@ -519,11 +517,9 @@ arr.property = "value";
 console.log(arr.property);  // Logs "value"
 ```
 
-### Arrays and regular expressions
+For example, when an array is the result of a match between a regular expression and a string, the array returns properties and elements that provide information about the match. An array is the return value of {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}}, and {{jsxref("Global_Objects/String/split","String.split()")}}. For information on using arrays with regular expressions, see [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
 
-When an array is the result of a match between a regular expression and a string, the array returns properties and elements that provide information about the match. An array is the return value of {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}}, and {{jsxref("Global_Objects/String/split","String.split()")}}. For information on using arrays with regular expressions, see [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
-
-### Working with array-like objects
+## Working with array-like objects
 
 Some JavaScript objects, such as the [`NodeList`](/en-US/docs/Web/API/NodeList) returned by [`document.getElementsByTagName()`](/en-US/docs/Web/API/Document/getElementsByTagName) or the {{jsxref("Functions/arguments","arguments")}} object made available within the body of a function, look and behave like arrays on the surface but do not share all of their methods. The `arguments` object provides a {{jsxref("Global_Objects/Function/length","length")}} attribute but does not implement the {{jsxref("Array.forEach", "forEach()")}} method, for example.
 
@@ -559,9 +555,11 @@ Array.prototype.forEach.call('a string', (chr) => {
 
 [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are array-like objects and provide a mechanism for accessing raw binary data. As you already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using [WebSockets](/en-US/docs/Web/API/WebSockets_API), and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data in typed arrays.
 
+Typed array objects share many of the same methods as arrays with similar semantics. However, they are conceptually not arrays and don't have all array methods.
+
 ### Buffers and views: typed array architecture
 
-To achieve maximum flexibility and efficiency, JavaScript typed arrays split the implementation into **buffers** and **views**. A buffer (implemented by the {{jsxref("ArrayBuffer")}} object) is an object representing a chunk of data; it has no format to speak of, and offers no mechanism for accessing its contents. In order to access the memory contained in a buffer, you need to use a view. A view provides a **context** — that is, a data type, starting offset, and number of elements — that turns the data into an actual typed array.
+To achieve maximum flexibility and efficiency, JavaScript typed arrays split the implementation into _buffers_ and _views_. A buffer (implemented by the {{jsxref("ArrayBuffer")}} object) is an object representing a chunk of data; it has no format to speak of, and offers no mechanism for accessing its contents. In order to access the memory contained in a buffer, you need to use a view. A view provides a _context_ — that is, a data type, starting offset, and number of elements — that turns the data into an actual typed array.
 
 ![Typed arrays in an ArrayBuffer](typed_arrays.png)
 
@@ -572,20 +570,6 @@ The {{jsxref("ArrayBuffer")}} is a data type that is used to represent a generic
 ### Typed array views
 
 Typed array views have self descriptive names and provide views for all the usual numeric types like `Int8`, `Uint32`, `Float64` and so forth. There is one special typed array view, {{jsxref("Uint8ClampedArray")}}, which clamps the values between `0` and `255`. This is useful for [Canvas data processing](/en-US/docs/Web/API/ImageData), for example.
-
-| Type                                     | Value Range                   | Size in bytes | Description                                                                  | Web IDL type          | Equivalent C type               |
-| ---------------------------------------- | ----------------------------- | ------------- | ---------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| {{jsxref("Int8Array")}}         | -128 to 127               | 1             | 8-bit two's complement signed integer                                        | `byte`                | `int8_t`                        |
-| {{jsxref("Uint8Array")}}         | 0 to 255                  | 1             | 8-bit unsigned integer                                                       | `octet`               | `uint8_t`                       |
-| {{jsxref("Uint8ClampedArray")}} | 0 to 255                  | 1             | 8-bit unsigned integer (clamped)                                             | `octet`               | `uint8_t`                       |
-| {{jsxref("Int16Array")}}         | -32768 to 32767           | 2             | 16-bit two's complement signed integer                                       | `short`               | `int16_t`                       |
-| {{jsxref("Uint16Array")}}         | 0 to 65535                | 2             | 16-bit unsigned integer                                                      | `unsigned short`      | `uint16_t`                      |
-| {{jsxref("Int32Array")}}         | -2147483648 to 2147483647 | 4             | 32-bit two's complement signed integer                                       | `long`                | `int32_t`                       |
-| {{jsxref("Uint32Array")}}         | 0 to 4294967295           | 4             | 32-bit unsigned integer                                                      | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}     | `1.2E-38` to `3.4E38`         | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.1234567`)   | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123…15`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1         | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}     | 0 to 2<sup>64</sup> - 1             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
 
 For more information, see [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) and the reference documentation for the different {{jsxref("TypedArray")}} objects.
 
