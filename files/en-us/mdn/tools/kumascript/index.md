@@ -105,7 +105,7 @@ KumaScript templates are processed by an [embedded JavaScript template engine](h
 - Nothing inside a `<% %>` block can ever contribute to the output stream. But, you can transition from JS mode to output mode using `<% %>`—for example:
 
   ```js
-  <% for (var i = 0; i < $0; i++) { %>
+  <% for (let i = 0; i < $0; i++) { %>
     Hello #<%= i %>
   <% } %>
   ```
@@ -262,7 +262,7 @@ Assuming this template were saved in the macros directory as `MathLib.ejs`, you 
 
 ```js
 <%
-var math_lib = require("MathLib");
+const math_lib = require("MathLib");
 %>
 The result of 2 + 2 = <%= math_lib.add(2, 2) %>
 ```
@@ -377,7 +377,7 @@ Templates can be localized using the `mdn.localString()` method, which takes an 
 
 ```js
 <%
-var text = mdn.localString({
+const text = mdn.localString({
   "en-US": "Hello world!",
   "es": "¡Hola mundo!",
   // ...
@@ -389,7 +389,7 @@ Each locale may also take an object containing a mapping of keys to strings, for
 
 ```js
 <%
-var text = mdn.localStringMap({
+const text = mdn.localStringMap({
   'en-US': {
     'Complete_beginners_start_here': 'Complete beginners start here!',
     'Getting_started_with_the_web': 'Getting started with the web',
@@ -411,13 +411,13 @@ The `mdn.localString()` function will automatically load strings for the appropr
 
 ```js
 <%
-var s_title = mdn.localString({
+const s_title = mdn.localString({
   "en-US": "Firefox for Developers",
   "de": "Firefox für Entwickler",
   "es": "Firefox para desarrolladores"
 });
 
-var body = mdn.localString({
+const body = mdn.localString({
   "en-US": {
     "hello": "Hello!",
     "goodbye": "Goodbye!",
