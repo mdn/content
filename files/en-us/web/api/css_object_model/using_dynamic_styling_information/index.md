@@ -33,7 +33,7 @@ In this example the background of the page is set to red using CSS. The JavaScri
       }
     </style>
     <script>
-      var stylesheet = document.styleSheets[0];
+      const stylesheet = document.styleSheets[0];
       stylesheet.cssRules[0].style.backgroundColor="aqua";
     </script>
   </head>
