@@ -177,7 +177,9 @@ We provide two functions that deal with color changes. The `updateFirst()` funct
 ```js
 function updateFirst(event) {
   const p = document.querySelector("p");
-  p?.style.color = event.target.value;
+  if (p) {
+    p.style.color = event.target.value;
+  }
 }
 ```
 

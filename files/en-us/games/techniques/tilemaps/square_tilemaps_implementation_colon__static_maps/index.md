@@ -85,7 +85,7 @@ We can render the map by iterating over its columns and rows. This snippet assum
 
 ```js
 for (let c = 0; c < map.cols; c++) {
-  for (let = 0; r < map.rows; r++) {
+  for (let r = 0; r < map.rows; r++) {
     const tile = map.getTile(c, r);
     if (tile !== 0) { // 0 => empty tile
       context.drawImage(
