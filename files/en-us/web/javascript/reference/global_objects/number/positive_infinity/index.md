@@ -42,7 +42,7 @@ Because `POSITIVE_INFINITY` is a static property of {{jsxref("Number")}}, you al
 In the following example, the variable `bigNumber` is assigned a value that is larger than the maximum value. When the {{jsxref("Statements/if...else", "if")}} statement executes, `bigNumber` has the value `Infinity`, so `bigNumber` is set to a more manageable value before continuing.
 
 ```js
-const bigNumber = Number.MAX_VALUE * 2;
+let bigNumber = Number.MAX_VALUE * 2;
 
 if (bigNumber === Number.POSITIVE_INFINITY) {
   bigNumber = returnFinite();

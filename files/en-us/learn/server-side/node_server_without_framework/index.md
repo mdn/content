@@ -109,7 +109,7 @@ The following lines deal with logging the request URL and fixing it if it does n
 
 ```js
 console.log(`request ${request.url}`);
-const filePath = `.${request.url}`;
+let filePath = `.${request.url}`;
 if (filePath === './') {
   filePath = './index.html';
 }

@@ -39,7 +39,7 @@ let xslloaded = false;
 const xsltProcessor = new XSLTProcessor();
 let myDOM;
 
-const xmlRef = document.implementation.createDocument("", "", null);
+let xmlRef = document.implementation.createDocument("", "", null);
 
 function sort() {
   if (!xslloaded) {
@@ -79,7 +79,7 @@ function sort() {
   document.getElementById("example").textContent = "";
 
   myDOM = fragment;
-  
+
   // Add the new content from the transformation
   document.getElementById("example").appendChild(fragment)
 }
