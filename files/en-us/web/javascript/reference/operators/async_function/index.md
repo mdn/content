@@ -62,30 +62,30 @@ An `async function` expression is very similar to, and has almost the same synta
 ### Simple example
 
 ```js
-function resolveAfter2Seconds(x) {
+function resolveAfter2Seconds(number) {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(x);
+      resolve(number);
     }, 2000);
   });
 };
 
-const add = async function (x) { // async function expression assigned to a variable
-  const a = await resolveAfter2Seconds(20);
-  const b = await resolveAfter2Seconds(30);
-  return x + a + b;
+const add = async function (paramNumber) { // async function expression assigned to a variable
+  const firstNumber = await resolveAfter2Seconds(20);
+  const secondNumber = await resolveAfter2Seconds(30);
+  return paramNumber + firstNumber + secondNumber;
 };
 
-add(10).then((v) => {
-  console.log(v);  // prints 60 after 4 seconds.
+add(10).then((sum) => {
+  console.log(sum);  // prints 60 after 4 seconds.
 });
 
-(async function (x) { // async function expression used as an IIFE
-  const p1 = resolveAfter2Seconds(20);
-  const p2 = resolveAfter2Seconds(30);
-  return x + await p1 + await p2;
-})(10).then((v) => {
-  console.log(v);  // prints 60 after 2 seconds.
+(async function (paramNumber) { // async function expression used as an IIFE
+  const firstNumber = resolveAfter2Seconds(20);
+  const secondNumber = resolveAfter2Seconds(30);
+  return paramNumber + await firstNumber + await secondNumber;
+})(10).then((sum) => {
+  console.log(sum);  // prints 60 after 2 seconds.
 });
 ```
 
