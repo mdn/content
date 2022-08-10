@@ -41,7 +41,7 @@ A few rules to follow in terms of markup within the syntax block:
   //responseStr = element.querySelector(selector);
 
   new IntersectionObserver(callback, options)
-  // var observer = new IntersectionObserver(callback, options);
+  // const observer = new IntersectionObserver(callback, options);
   ```
 
 ### Constructors and methods
