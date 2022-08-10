@@ -107,7 +107,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         <tr style="cursor: context-menu">
           <th rowspan="5" scope="row" style="cursor: auto">Links &#x26; status</th>
           <td><code>context-menu</code></td>
-          <td><img alt="wide arrow pointiing up and to the left slightly obscuring a menu icon" src="context-menu.png" /></td>
+          <td><img alt="wide arrow pointing up and to the left slightly obscuring a menu icon" src="context-menu.png" /></td>
           <td>A context menu is available.</td>
         </tr>
         <tr style="cursor: help">
@@ -117,7 +117,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: pointer">
           <td><code>pointer</code></td>
-          <td><img src="pointer.gif" alt="Right hand with an index finger pointing up" /></td>
+          <td><img src="pointer.gif" alt="right hand with an index finger pointing up" /></td>
           <td>
             The cursor is a pointer that indicates a link. Typically an image of a pointing hand.
           </td>
@@ -194,7 +194,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: not-allowed">
           <td><code>not-allowed</code></td>
-          <td><img alt="Not allowed icon, which is a circle with a line thru it" src="not-allowed.gif" /></td>
+          <td><img alt="Not allowed icon, which is a circle with a line through it" src="not-allowed.gif" /></td>
           <td>The requested action will not be carried out.</td>
         </tr>
         <tr style="cursor: grab">
@@ -220,7 +220,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: col-resize">
           <td><code>col-resize</code></td>
-          <td><img alt="col-resize.gif" src="col-resize.gif" alt="Two narrow parrallel vertical lines with a small arrow pointing left and another pointing right" /></td>
+          <td><img alt="col-resize.gif" src="col-resize.gif" alt="two narrow parallel vertical lines with a small arrow pointing left and another pointing right" /></td>
           <td>
             The item/column can be resized horizontally.
             Often rendered as arrows pointing left and right with a vertical bar separating them.
@@ -228,7 +228,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: row-resize">
           <td><code>row-resize</code></td>
-          <td><img src="row-resize.gif" "alt="Two narrow parrallel horizontal lines with a small arrow pointing up and another pointing down" /></td>
+          <td><img src="row-resize.gif" "alt="Two narrow parallel horizontal lines with a small arrow pointing up and another pointing down" /></td>
           <td>
             The item/row can be resized vertically.
             Often rendered as arrows pointing up and down with a horizontal bar separating them.
@@ -238,7 +238,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>n-resize</code></td>
           <td>
             <img
-              alt="Thin long arrow pointing towards the top"
+              alt="thin long arrow pointing towards the top"
               src="n-resize.gif"
               style="border-style: solid; border-width: 0px"
             />
@@ -253,7 +253,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>e-resize</code></td>
           <td>
             <img
-              alt="Thin long arrow pointing towards the right"
+              alt="thin long arrow pointing towards the right"
               src="e-resize.gif"
             />
           </td>
@@ -262,7 +262,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>s-resize</code></td>
           <td>
             <img
-              alt="Thin long arrow pointing down"
+              alt="thin long arrow pointing down"
               src="s-resize.gif"
             />
           </td>
@@ -271,7 +271,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>w-resize</code></td>
           <td>
             <img
-              alt="Thin long arrow pointing towards the left"
+              alt="thin long arrow pointing towards the left"
               src="w-resize.gif"
             />
           </td>
@@ -280,7 +280,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>ne-resize</code></td>
           <td>
             <img
-              alt="Thin long arrow pointing top-right"
+              alt="thin long arrow pointing top-right"
               src="ne-resize.gif"
             />
           </td>
@@ -289,7 +289,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>nw-resize</code></td>
           <td>
             <img
-               alt="Thin long arrow pointing top-left"
+              alt="thin long arrow pointing top-left"
               src="nw-resize.gif"
             />
           </td>
@@ -298,7 +298,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>se-resize</code></td>
           <td>
             <img
-              alt="Thin long arrow pointing bottom-right"
+              alt="thin long arrow pointing bottom-right"
               src="se-resize.gif"
             />
           </td>
@@ -307,27 +307,27 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>sw-resize</code></td>
           <td>
             <img
-              alt="Thin long arrow pointing  bottom-left"
+              alt="thin long arrow pointing  bottom-left"
               src="sw-resize.gif"
             />
           </td>
         </tr>
         <tr style="cursor: ew-resize">
           <td><code>ew-resize</code></td>
-          <td><img  alt="Thin long arrow pointing left and right" class="default" src="3-resize.gif" /></td>
+          <td><img  alt="thin long arrow pointing left and right" class="default" src="3-resize.gif" /></td>
           <td rowspan="4" style="cursor: auto">Bidirectional resize cursor.</td>
         </tr>
         <tr style="cursor: ns-resize">
           <td><code>ns-resize</code></td>
-          <td><img  alt="Thin long arrow pointing up and down" class="default" src="6-resize.gif" /></td>
+          <td><img  alt="thin long arrow pointing up and down" class="default" src="6-resize.gif" /></td>
         </tr>
         <tr style="cursor: nesw-resize">
           <td><code>nesw-resize</code></td>
-          <td><img  alt="Thin long arrow pointing both to the top-right and bottom-left" class="default" src="1-resize.gif" /></td>
+          <td><img  alt="thin long arrow pointing both to the top-right and bottom-left" class="default" src="1-resize.gif" /></td>
         </tr>
         <tr style="cursor: nwse-resize">
           <td><code>nwse-resize</code></td>
-          <td><img alt="Thin long arrow pointing both to the top-left and bottom-right" class="default" src="4-resize.gif" /></td>
+          <td><img alt="thin long arrow pointing both to the top-left and bottom-right" class="default" src="4-resize.gif" /></td>
         </tr>
         <tr style="cursor: zoom-in">
           <th rowspan="2" scope="row" style="cursor: auto">Zooming</th>
