@@ -66,7 +66,7 @@ The `alt` attribute for the same content may be different depending on the conte
 
 ## ARIA role attribute
 
-By default, all semantic elements in HTML have a `role`; for example, `<input type="radio">` has the `radio` role. Non-semantic elements in HTML do not have a role. ARIA roles can be used to describe elements that don't natively exist in HTML, such as a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) widget. Roles are also helpful for newer elements that exist but don't yet have full browser support. For example, when include `role="img"` on SVG, as there is an [SVG VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364) in which it does not correctly announce SVG images.
+By default, all semantic elements in HTML have a `role`; for example, `<input type="radio">` has the `radio` role. Non-semantic elements in HTML do not have a role. ARIA roles can be used to describe elements that don't natively exist in HTML, such as a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) widget. Roles are also helpful for newer elements that exist but don't yet have full browser support. For example, when using SVG images, add  `role="img"` to the opening tag, as there is an [SVG VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364) whereby VoiceOver does not correctly announce SVG images.
 
 ```html
  <img src="mdn.svg" alt="MDN logo" role="img">
