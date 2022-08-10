@@ -6,13 +6,12 @@ tags:
   - API
   - AbortSignal
   - throwIfAborted
-  - Experimental
   - method
   - Reference
   - reason
 browser-compat: api.AbortSignal.throwIfAborted
 ---
-{{APIRef("DOM")}} {{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`throwIfAborted()`** method throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
 

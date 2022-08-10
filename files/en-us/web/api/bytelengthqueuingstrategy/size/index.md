@@ -5,14 +5,13 @@ page-type: web-api-instance-method
 tags:
   - API
   - ByteLengthQueuingStrategy
-  - Experimental
   - Method
   - Reference
   - Streams
   - size
 browser-compat: api.ByteLengthQueuingStrategy.size
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 The **`size()`** method of the
 {{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk's

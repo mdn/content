@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - AbortController
-  - Experimental
   - Interface
   - Reference
 browser-compat: api.AbortController

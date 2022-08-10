@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Client
-  - Experimental
   - Property
   - Reference
   - Service Workers

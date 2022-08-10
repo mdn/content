@@ -6,7 +6,6 @@ tags:
   - API
   - AbortSignal
   - DOM
-  - Experimental
   - Interface
   - Reference
 browser-compat: api.AbortSignal
