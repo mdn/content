@@ -82,7 +82,7 @@ know the starting and ending indices as you would in the above examples.
 ```js
 const text = 'Mozilla';
 
-// Takes 5 last characters of string
+// Takes 4 last characters of string
 console.log(text.substring(text.length - 4)); // prints "illa"
 
 // Takes 5 last characters of string
