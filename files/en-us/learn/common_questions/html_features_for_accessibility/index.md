@@ -56,7 +56,7 @@ Every image should have an `alt` attribute. If the image is purely decoration an
 <img alt="The Open Web Docs logo: Carle the inch worm smiling" src="carle.svg" role="img"/>
 ```
 
-The `alt` attribute for the same content may be different depending on the context.  In the following example, an animated gif is used instead of a progress bar to show the page load progress for a document teaching developers how to use the HTML [`<progress>`](/en-US/docs/Web/HTML/Element/progress) element:
+The `alt` attribute for the same content may vary depending on the context. In the following example, an animated gif is used instead of a progress bar to show the page load progress for a document teaching developers how to use the HTML [`<progress>`](/en-US/docs/Web/HTML/Element/progress) element:
 
 ```html
 <img alt="20% complete" src="load-progress.gif">
