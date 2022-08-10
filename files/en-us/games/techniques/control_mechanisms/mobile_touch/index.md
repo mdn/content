@@ -22,7 +22,7 @@ The future of mobile gaming is definitely web, and many developers choose the [m
 We could implement touch events on our own — setting up event listeners and assigning relevant functions to them would be quite straightforward:
 
 ```js
-const el = document.queryselector("canvas");
+const el = document.querySelector("canvas");
 el.addEventListener("touchstart", handleStart);
 el.addEventListener("touchmove", handleMove);
 el.addEventListener("touchend", handleEnd);

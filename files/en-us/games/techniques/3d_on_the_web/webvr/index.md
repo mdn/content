@@ -101,7 +101,7 @@ For a full explanation and more details of the demo this is taken from, see [Usi
 
 The first WebVR experiments and demos used Three.js as it's probably the most popular 3D engine for the web. See the [VREffect](https://github.com/mrdoob/three.js/blob/ca521eb4af7554e760f14d8fe8b451c8ff34deb8/examples/js/effects/VREffect.js) and [VRControls](https://github.com/mrdoob/three.js/blob/abdd1713c606135bc35028c6021698b52f27872b/examples/js/controls/VRControls.js) functions available on the Three.js GitHub to help you implement and handle WebVR with Three.js.
 
-![A 3D representation of a landscape: it's a pinkish sunset, with a blue mountainous land in the background surronded by a mirror sea and a darker blue island in the second plan.](sechelt.jpg)
+![A 3D representation of a landscape: it's a pinkish sunset, with a blue mountainous land in the background surrounded by a mirror sea and a darker blue island in the second plan.](sechelt.jpg)
 
 Boris Smus has written about the concept of [Responsive WebVR](https://smus.com/responsive-vr/), where a single web game can be played on various devices like laptops without VR hardware, PCs with Oculus Rift, or smartphones inside Google Cardboard and still deliver a unique and valuable experience across all of them. It's like responsive design but applied to the VR world — write once and run in any VR headset, or without it. You can check the [WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate) sources — it's a good example to start learning WebVR from, and a starting point for any web-based VR experience.
 

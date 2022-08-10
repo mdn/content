@@ -45,7 +45,7 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed these arguments:
 
     - `changes`
-      - : `object`. Object describing the change. This object contains properties for all the keys in the storage area included in the {{WebExtAPIRef('storage.StorageArea.set','storageAred.set')}} call, even if key values are unchanged. The name of each property is the name of each key. The value of each key is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
+      - : `object`. Object describing the change. This object contains properties for all the keys in the storage area included in the {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} call, even if key values are unchanged. The name of each property is the name of each key. The value of each key is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
     - `areaName`
       - : `string`. The name of the storage area (`"sync"`, `"local"`, or `"managed"`) to which the changes were made.
 
