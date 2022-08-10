@@ -289,7 +289,6 @@ All these properties can be specified as either a string containing any valid [C
           >
         </details>
         <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-accentcolor.png" /></p>
-
       </td>
     </tr>
     <tr>
