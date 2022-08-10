@@ -41,9 +41,9 @@ To handle these issues, we need to slightly modify the rendering algorithm. Let'
 
 ```js
 const startCol = Math.floor(this.camera.x / map.tsize);
-const endCol = startCol + (this.camera.width / map.tsize);
+const endCol = startCol + this.camera.width / map.tsize;
 const startRow = Math.floor(this.camera.y / map.tsize);
-const endRow = startRow + (this.camera.height / map.tsize);
+const endRow = startRow + this.camera.height / map.tsize;
 ```
 
 Once we have the first tile, we need to calculate how much its rendering (and therefore the rendering of the other tiles) is offset by. Since the camera is pointing at `(5, 10)`, we know that the first tile should be shifted by `(-5,-10)` pixels. In our demo the shifting amount is stored in the `offsetX` and `offsetY` variables.
