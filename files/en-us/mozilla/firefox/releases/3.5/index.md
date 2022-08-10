@@ -106,7 +106,7 @@ tags:
 
 #### New JavaScript features
 
-- [New in JavaScript 1.8.1](https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.8.1)
+- [New in JavaScript 1.8.1](https://web.archive.org/web/20200805002842/https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.8.1)
   - : An overview of all the changes in JavaScript 1.8.1.
 - [`Object.getPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
   - : This new method returns the prototype of a specified object.
