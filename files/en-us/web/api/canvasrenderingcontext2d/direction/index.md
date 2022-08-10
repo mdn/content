@@ -6,12 +6,11 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Experimental
   - Property
   - Reference
 browser-compat: api.CanvasRenderingContext2D.direction
 ---
-{{APIRef}} {{SeeCompatTable}}
+{{APIRef}}
 
 The
 **`CanvasRenderingContext2D.direction`**

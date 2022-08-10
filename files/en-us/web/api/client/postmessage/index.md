@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Client
-  - Experimental
   - Method
   - Reference
   - Service Workers

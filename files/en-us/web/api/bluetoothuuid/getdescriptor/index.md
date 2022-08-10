@@ -7,11 +7,10 @@ tags:
   - Method
   - Reference
   - getDescriptor
-  - Experimental
   - BluetoothUUID
 browser-compat: api.BluetoothUUID.getDescriptor
 ---
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}
 
 The **`getDescriptor()`**  method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered descriptor when passed a name or the 16- or 32-bit UUID alias.
 

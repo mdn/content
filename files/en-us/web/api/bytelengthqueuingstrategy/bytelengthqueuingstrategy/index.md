@@ -6,12 +6,11 @@ tags:
   - API
   - ByteLengthQueuingStrategy
   - Constructor
-  - Experimental
   - Reference
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy()`**
 constructor creates and returns a `ByteLengthQueuingStrategy` object

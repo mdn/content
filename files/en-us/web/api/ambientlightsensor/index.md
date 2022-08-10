@@ -14,7 +14,7 @@ tags:
   - Sensors
 browser-compat: api.AmbientLightSensor
 ---
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{APIRef("Sensor API")}}
 
 The **`AmbientLightSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) returns the current light level or illuminance of the ambient light around the hosting device.
 

@@ -6,7 +6,6 @@ tags:
   - API
   - Audio
   - AudioWorkletNode
-  - Experimental
   - Interface
   - Reference
   - Web Audio API

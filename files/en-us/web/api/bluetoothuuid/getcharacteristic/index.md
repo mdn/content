@@ -6,12 +6,11 @@ tags:
   - API
   - Method
   - Reference
-  - Experimental
   - getCharacteristic
   - BluetoothUUID
 browser-compat: api.BluetoothUUID.getCharacteristic
 ---
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}
 
 The **`getCharacteristic()`**  method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered characteristic when passed a name or the 16- or 32-bit UUID alias.
 

@@ -6,7 +6,6 @@ tags:
   - API
   - AbortController
   - Constructor
-  - Experimental
   - Fetch
   - Reference
 browser-compat: api.AbortController.AbortController

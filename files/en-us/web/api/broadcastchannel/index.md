@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Broadcast Channel API
-  - Experimental
   - HTML API
   - Interface
   - Reference
