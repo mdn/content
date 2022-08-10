@@ -114,14 +114,12 @@ function draw() {
 
   if (horizontalDegree > degreeThreshold) {
     playerX -= 5;
-  }
-  else if (horizontalDegree < -degreeThreshold) {
+  } else if (horizontalDegree < -degreeThreshold) {
     playerX += 5;
   }
   if (verticalDegree > degreeThreshold) {
     playerY += 5;
-  }
-  else if (verticalDegree < -degreeThreshold) {
+  } else if (verticalDegree < -degreeThreshold) {
     playerY -= 5;
   }
   if (grabStrength === 1) {
