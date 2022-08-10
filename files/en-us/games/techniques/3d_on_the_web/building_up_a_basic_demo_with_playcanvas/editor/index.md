@@ -118,20 +118,19 @@ If you double click on it, you'll be moved to a code editor. As you can see, the
 
 ```js
 pc.script.create('boxAnimation', function (app) {
-  // Creates a new BoxAnimation instance
-  function BoxAnimation(entity) {
-    this.entity = entity;
-  };
+  class BoxAnimation {
+    constructor(entity) {
+      this.entity = entity;
+    }
 
-  BoxAnimation.prototype = {
     // Called once after all resources are loaded and before the first update
     initialize() {
-    },
+    }
 
     // Called every frame, dt is time in seconds since last update
     update(dt) {
     }
-  };
+  }
 
   return BoxAnimation;
 });
