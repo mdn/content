@@ -351,7 +351,7 @@ Our final wasm module looks like this:
 Now from JavaScript we can create a Memory with 1 page and pass it in. This results in "Hi" being printed to the console:
 
 ```js
-const memory = new WebAssembly.Memory({initial:1});
+const memory = new WebAssembly.Memory({ initial: 1 });
 
 const importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
