@@ -18,7 +18,7 @@ This article assumes you are already familiar with the concept of the [DOM (Docu
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>Simple DOM example</title>

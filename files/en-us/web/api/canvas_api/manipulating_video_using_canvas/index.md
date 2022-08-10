@@ -24,8 +24,10 @@ The HTML document used to render this content is shown below.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
+    <meta charset="UTF-8">
+    <title>Video test page</title>
     <style>
       body {
         background: black;

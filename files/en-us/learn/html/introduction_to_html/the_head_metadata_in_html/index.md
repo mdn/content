@@ -43,7 +43,7 @@ Let's revisit the simple [HTML document we covered in the previous article](/en-
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>My test page</title>

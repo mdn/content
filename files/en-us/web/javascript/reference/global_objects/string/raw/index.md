@@ -85,7 +85,7 @@ Many tools give special treatment to literals tagged by a particular name.
 ```js
 // Some formatters will format this literal's content as HTML
 const doc = html`<!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <title>Hello</title>
   </head>

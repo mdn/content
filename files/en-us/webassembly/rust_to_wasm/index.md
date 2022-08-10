@@ -210,7 +210,7 @@ Let's start by creating a file named `index.html` in the root of the project, an
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>hello-wasm example</title>
@@ -319,7 +319,7 @@ Finally, we need to modify the HTML file; open the `index.html` file and replace
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>hello-wasm example</title>

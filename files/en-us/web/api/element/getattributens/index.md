@@ -62,12 +62,16 @@ custom namespace.
 </svg>
 ```
 
-In an HTML5 document the attribute has to be accessed with `test:foo` since
+In an HTML document the attribute has to be accessed with `test:foo` since
 namespaces are not supported.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>getAttributeNS() test page</title>
+</head>
 <body>
 
 <svg xmlns="http://www.w3.org/2000/svg"

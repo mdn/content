@@ -185,10 +185,10 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
+  <meta charset="UTF-8">
   <title></title>
-  <meta charset="utf-8">
   <link rel="stylesheet" href="">
 </head>
 <body>

@@ -73,7 +73,7 @@ The following example shows a possible use of the `size` property:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <title>File(s) size</title>
@@ -438,10 +438,10 @@ if (isset($_FILES['myFile'])) {
     exit;
 }
 ?><!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
-    <title>dnd binary upload</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>dnd binary upload</title>
     <script type="application/javascript">
         function sendFile(file) {
             const uri = "/index.php";

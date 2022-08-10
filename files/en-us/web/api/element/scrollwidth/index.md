@@ -37,8 +37,9 @@ A number.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
+    <meta charset="UTF-8">
     <title>Example</title>
     <style>
       div {

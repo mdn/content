@@ -496,7 +496,7 @@ Individual HTML elements aren't very useful on their own. Next, let's examine ho
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>My test page</title>
