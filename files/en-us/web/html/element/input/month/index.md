@@ -111,7 +111,7 @@ You can also get and set the date value in JavaScript using the {{domxref("HTMLI
 ```
 
 ```js
-var monthControl = document.querySelector('input[type="month"]');
+const monthControl = document.querySelector('input[type="month"]');
 monthControl.value = '2001-06';
 ```
 
@@ -445,20 +445,20 @@ Browsers that don't support type `month` will return `text`, since that's What m
 If `<input type="month">` is not supported, we hide the native picker and show the fallback picker UI instead.
 
 ```js
-// define variables
-var nativePicker = document.querySelector('.nativeDatePicker');
-var fallbackPicker = document.querySelector('.fallbackDatePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+// Get UI elements
+const nativePicker = document.querySelector('.nativeDatePicker');
+const fallbackPicker = document.querySelector('.fallbackDatePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var yearSelect = document.querySelector('#year');
-var monthSelect = document.querySelector('#month');
+const yearSelect = document.querySelector('#year');
+const monthSelect = document.querySelector('#month');
 
-// hide fallback initially
+// Hide fallback initially
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
-// test whether a new date input falls back to a text input or not
-var test = document.createElement('input');
+// Test whether a new date input falls back to a text input or not
+const test = document.createElement('input');
 
 try {
   test.type = 'month';
@@ -466,27 +466,27 @@ try {
   console.log(e.description);
 }
 
-// if it does, run the code inside the if() {} block
-if(test.type === 'text') {
-  // hide the native picker and show the fallback
+// If it does, run the code inside the if() {} block
+if (test.type === 'text') {
+  // Hide the native picker and show the fallback
   nativePicker.style.display = 'none';
   fallbackPicker.style.display = 'block';
   fallbackLabel.style.display = 'block';
 
-  // populate the years dynamically
+  // Populate the years dynamically
   // (the months are always the same, therefore hardcoded)
   populateYears();
 }
 
 function populateYears() {
-  // get the current year as a number
-  var date = new Date();
-  var year = date.getFullYear();
+  // Get the current year as a number
+  const date = new Date();
+  const year = date.getFullYear();
 
   // Make this year, and the 100 years before it available in the year <select>
-  for (var i = 0; i <= 100; i++) {
-    var option = document.createElement('option');
-    option.textContent = year-i;
+  for (let i = 0; i <= 100; i++) {
+    const option = document.createElement('option');
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }

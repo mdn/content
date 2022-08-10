@@ -257,7 +257,7 @@ self.addEventListener('fetch', (e) => {
 The games data is present in the data folder in a form of a JavaScript object ([games.js](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js)):
 
 ```js
-var games = [
+const games = [
   {
     slug: 'lost-in-cyberspace',
     name: 'Lost in Cyberspace',

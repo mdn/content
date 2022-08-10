@@ -391,7 +391,7 @@ function populateDays(month) {
   }
 
   // Create variable to hold new number of days to inject
-  var dayNum;
+  let dayNum;
 
   // 31 or 30 days?
   if (['January', 'March', 'May', 'July', 'August', 'October', 'December'].includes(month)) {

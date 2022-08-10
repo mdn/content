@@ -45,10 +45,10 @@ The event handler function can look something like this:
 
 ```js
 function handleOrientation(event) {
-  var absolute = event.absolute;
-  var alpha    = event.alpha;
-  var beta     = event.beta;
-  var gamma    = event.gamma;
+  const absolute = event.absolute;
+  const alpha    = event.alpha;
+  const beta     = event.beta;
+  const gamma    = event.gamma;
 
   // Do stuff with the new orientation data
 }
@@ -101,16 +101,16 @@ This garden is 200 pixel wide (yes, it's a tiny one), and the ball is in the cen
 Now, if we move our device, the ball will move accordingly:
 
 ```js
-var ball   = document.querySelector('.ball');
-var garden = document.querySelector('.garden');
-var output = document.querySelector('.output');
+const ball   = document.querySelector('.ball');
+const garden = document.querySelector('.garden');
+const output = document.querySelector('.output');
 
-var maxX = garden.clientWidth  - ball.clientWidth;
-var maxY = garden.clientHeight - ball.clientHeight;
+const maxX = garden.clientWidth  - ball.clientWidth;
+const maxY = garden.clientHeight - ball.clientHeight;
 
 function handleOrientation(event) {
-  var x = event.beta;  // In degree in the range [-180,180)
-  var y = event.gamma; // In degree in the range [-90,90)
+  let x = event.beta;  // In degree in the range [-180,180)
+  let y = event.gamma; // In degree in the range [-90,90)
 
   output.textContent  = `beta : ${x}\n`;
   output.textContent += `gamma: ${y}\n`;

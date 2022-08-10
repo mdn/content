@@ -211,8 +211,8 @@ httpRequest.open('GET', 'test.xml');
 Then in `alertContents()`, we need to replace the line `alert(httpRequest.responseText);` with:
 
 ```js
-var xmldoc = httpRequest.responseXML;
-var root_node = xmldoc.getElementsByTagName('root').item(0);
+const xmldoc = httpRequest.responseXML;
+const root_node = xmldoc.getElementsByTagName('root').item(0);
 alert(root_node.firstChild.data);
 ```
 

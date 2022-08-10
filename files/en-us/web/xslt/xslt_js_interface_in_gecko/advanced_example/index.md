@@ -34,16 +34,16 @@ XHTML Fragment:
 JS Fragment:
 
 ```js
-var xslRef;
-var xslloaded = false;
-var xsltProcessor = new XSLTProcessor();
-var myDOM;
+let xslRef;
+let xslloaded = false;
+const xsltProcessor = new XSLTProcessor();
+let myDOM;
 
-var xmlRef = document.implementation.createDocument("", "", null);
+const xmlRef = document.implementation.createDocument("", "", null);
 
 function sort() {
-  if (!xslloaded){
-    p = new XMLHttpRequest();
+  if (!xslloaded) {
+    const p = new XMLHttpRequest();
     p.open("GET", "example2.xsl", false);
     p.send(null);
 
@@ -52,33 +52,35 @@ function sort() {
     xslloaded = true;
   }
 
-  // create a new XML document in memory
+  // Create a new XML document in memory
   xmlRef = document.implementation.createDocument("", "", null);
 
-  // we want to move a part of the DOM from an HTML document to an XML document.
+  // We want to move a part of the DOM from an HTML document to an XML document.
   // importNode is used to clone the nodes we want to process via XSLT - true makes it do a deep clone
-  var myNode = document.getElementById("example");
-  var clonedNode = xmlRef.importNode(myNode, true);
+  const myNode = document.getElementById("example");
+  const clonedNode = xmlRef.importNode(myNode, true);
 
-  // after cloning, we append
+  // After cloning, we append
   xmlRef.appendChild(clonedNode);
 
-  // set the sorting parameter in the XSL file
-  var sortVal = xsltProcessor.getParameter(null, "myOrder");
+  // Set the sorting parameter in the XSL file
+  const sortVal = xsltProcessor.getParameter(null, "myOrder");
 
-  if (sortVal === "" || sortVal === "descending")
+  if (sortVal === "" || sortVal === "descending") {
     xsltProcessor.setParameter(null, "myOrder", "ascending");
-  else
+  } else {
     xsltProcessor.setParameter(null, "myOrder", "descending");
+  }
 
-  // initiate the transformation
-  var fragment = xsltProcessor.transformToFragment(xmlRef, document);
+  // Initiate the transformation
+  const fragment = xsltProcessor.transformToFragment(xmlRef, document);
 
-  // clear the contents
+  // Clear the contents
   document.getElementById("example").textContent = "";
 
   myDOM = fragment;
-  // add the new content from the transformation
+  
+  // Add the new content from the transformation
   document.getElementById("example").appendChild(fragment)
 }
 

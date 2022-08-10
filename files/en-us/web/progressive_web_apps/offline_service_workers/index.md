@@ -170,7 +170,7 @@ That's it! Our app is caching its resources on install and serving them with fet
 There is still one point to cover: how do you upgrade a Service Worker when a new version of the app containing new assets is available? The version number in the cache name is key to this:
 
 ```js
-var cacheName = 'js13kPWA-v1';
+const cacheName = 'js13kPWA-v1';
 ```
 
 When this updates to v2, we can then add all of our files (including our new files) to a new cache:
