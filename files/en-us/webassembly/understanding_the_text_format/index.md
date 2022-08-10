@@ -252,7 +252,7 @@ For the above, we need an object (let's call it `importObject`) such that `impor
 This would look like the following:
 
 ```js
-var importObject = {
+const importObject = {
   console: {
     log(arg) {
       console.log(arg);
@@ -315,8 +315,8 @@ On the JavaScript side, we can use the [TextDecoder API](/en-US/docs/Web/API/Tex
 
 ```js
 function consoleLogString(offset, length) {
-  var bytes = new Uint8Array(memory.buffer, offset, length);
-  var string = new TextDecoder('utf8').decode(bytes);
+  const bytes = new Uint8Array(memory.buffer, offset, length);
+  const string = new TextDecoder('utf8').decode(bytes);
   console.log(string);
 }
 ```
@@ -351,9 +351,9 @@ Our final wasm module looks like this:
 Now from JavaScript we can create a Memory with 1 page and pass it in. This results in "Hi" being printed to the console:
 
 ```js
-var memory = new WebAssembly.Memory({initial:1});
+const memory = new WebAssembly.Memory({initial:1});
 
-var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
+const importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
 WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
   .then((obj) => {
