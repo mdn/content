@@ -82,6 +82,6 @@ for (let c = startCol; c <= endCol; c++) {
 
 Our scrolling tilemap implementation demo pulls the above code together to show what an implementation of this map looks like. You can take a look at a [live demo](https://mozdevs.github.io/gamedev-js-tiles/square/scroll.html), and see [its source code](https://github.com/mozdevs/gamedev-js-tiles).
 
-![A gif showing the movement of a field as you scroll on it.](untitled.gif)
+![Animated gif of a section grass, dirt areas, and trees made from repeated sections of a tilemap showing how you see different sections of the area when you scroll.](untitled.gif)
 
 There's [another demo available](https://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html), that shows how to make the camera follow a character.
