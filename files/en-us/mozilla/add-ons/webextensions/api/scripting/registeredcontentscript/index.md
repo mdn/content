@@ -33,7 +33,7 @@ Values of this type are objects. They contain these properties:
 - `matches` {{optional_inline}}
   - : `array` of `string`. Array of the pages this content script is injected into. Must be specified for {{WebExtAPIRef("scripting.registerContentScripts()")}}.
 - `persistAcrossSessions` {{optional_inline}}
-  - : `boolean`. Specifies if this content script persists into future sessions; that is, it is a persistent content script. Defaults to `true`.
+  - : `boolean`. Specifies if this content script persists across browser restarts and updates and extension restarts. Defaults to `true`.
 - `runAt` {{optional_inline}}
   - : {{WebExtAPIRef("extensionTypes.RunAt")}}. Specifies when JavaScript files are injected into the web page. The default value is `document_idle`. In Firefox, `runAt` also affects the point where the CSS is inserted. In Chrome, `runAt` does not affect the CSS insertion point.
 
