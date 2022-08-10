@@ -17,7 +17,7 @@ A **mutable object** is an object whose state can be modified after it is create
 **Strings and Numbers** are **Immutable**. Lets understand this with an example:
 
 ```js
-var immutableString = "Hello";
+let immutableString = "Hello";
 
 // In the above code, a new object with string value is created.
 
