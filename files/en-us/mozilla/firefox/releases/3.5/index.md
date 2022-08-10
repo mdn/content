@@ -99,9 +99,9 @@ tags:
   - : Firefox 3.5 supports mouse gesture events such as trackpad swipes.
 - [The `NodeIterator` object](/en-US/docs/Web/API/NodeIterator)
   - : The `NodeIterator` object provides support for iterating over the list of the nodes in a DOM subtree.
-- The MozAfterPaint event
+- The `MozAfterPaint` event
   - : This new DOM event is sent after painting updates in windows.
-- The MozMousePixelScroll event
+- The `MozMousePixelScroll` event
   - : This new DOM event allows detection of pixel-based mouse scroll wheel events instead of line-based scroll events.
 
 #### New JavaScript features
@@ -139,7 +139,7 @@ tags:
 
 #### New SVG features
 
-- [Applying SVG effects to HTML content](/en-US/docs/web/svg/applying_svg_effects_to_html_content)
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
   - : You can now apply SVG effects to HTML and XHTML content; this article describes how.
 
 #### Miscellaneous new features
