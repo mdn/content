@@ -11,40 +11,19 @@ tags:
 An **IIFE** (Immediately Invoked Function Expression) is a {{glossary("JavaScript")}} {{glossary("function")}} that runs as soon as it is defined.
 The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife).
 
-<table>
-  <thead>
-    <tr>
-    <th>IIFE</td>
-    <th><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow function</a> IIFE</th>
-    <th><a href="/en-US/docs/Web/JavaScript/Reference/Operators/async_function">async</a> IIFE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <pre class="brush: js notranslate">
-          (function () {
-            // …
-          })();
-        </pre>
-      </td>
-      <td>
-        <pre class="brush: js notranslate">
-          (() => {
-            // …
-          })();
-        </pre>
-      </td>
-      <td>
-        <pre class="brush: js notranslate">
-          (async () => {
-            // …
-          })();
-        </pre>
-      </td>
-    </tr>
-  </tbody>
-</table>
+```
+(function () {
+  // …
+})();
+
+(() => {
+  // …
+})();
+          
+(async () => {
+  // …
+})();
+```
 
 It is a design pattern which is also known as a {{glossary("Self-Executing Anonymous Function")}} and contains two major parts:
 
