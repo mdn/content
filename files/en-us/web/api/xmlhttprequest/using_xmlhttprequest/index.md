@@ -50,7 +50,7 @@ two types of requests can be found on the [synchronous and asynchronous requests
 workers as it freezes the main interface.
 
 > **Note:** The constructor `XMLHttpRequest` isn't limited to only XML documents.
-> It starts with **"XML"** because when it was created the main format 
+> It starts with **"XML"** because when it was created the main format
 > that was originally used for asynchronous data exchange was XML.
 
 ## Handling responses
