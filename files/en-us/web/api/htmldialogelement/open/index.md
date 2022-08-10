@@ -13,8 +13,6 @@ browser-compat: api.HTMLDialogElement.open
 ---
 {{ APIRef("HTML DOM") }}
 
-{{ SeeCompatTable() }}
-
 The **`open`** property of the
 {{domxref("HTMLDialogElement")}} interface is a boolean value reflecting the
 {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is

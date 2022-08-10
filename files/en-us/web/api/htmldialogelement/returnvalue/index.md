@@ -13,8 +13,6 @@ browser-compat: api.HTMLDialogElement.returnValue
 ---
 {{ APIRef("HTML DOM") }}
 
-{{ SeeCompatTable() }}
-
 The **`returnValue`** property of the
 {{domxref("HTMLDialogElement")}} interface gets or sets the return value for the
 `<dialog>`, usually to indicate which button the user pressed to

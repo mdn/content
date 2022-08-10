@@ -13,8 +13,6 @@ browser-compat: api.HTMLDialogElement.close
 ---
 {{ APIRef("HTML DOM") }}
 
-{{ SeeCompatTable() }}
-
 The **`close()`** method of the {{domxref("HTMLDialogElement")}}
 interface closes the dialog. An optional string may be passed as an
 argument, updating the `returnValue` of the dialog.

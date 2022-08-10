@@ -11,7 +11,7 @@ tags:
   - showModal
 browser-compat: api.HTMLDialogElement.showModal
 ---
-{{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}
+{{ APIRef("HTML DOM") }}
 
 The **`showModal()`** method of the
 {{domxref("HTMLDialogElement")}} interface displays the dialog as a modal, over the top

@@ -18,7 +18,7 @@ tags:
   - web animations api
 browser-compat: api.Element.getAnimations
 ---
-{{ SeeCompatTable() }}{{APIRef("Web Animations")}}
+{{APIRef("Web Animations")}}
 
 The `getAnimations()` method of the {{domxref("Element")}} interface
 (specified on the `Animatable` mixin) returns an array of all

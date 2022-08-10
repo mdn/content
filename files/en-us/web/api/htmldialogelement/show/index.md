@@ -11,7 +11,7 @@ tags:
   - show
 browser-compat: api.HTMLDialogElement.show
 ---
-{{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}
+{{ APIRef("HTML DOM") }}
 
 The **`show()`** method of the {{domxref("HTMLDialogElement")}}
 interface displays the dialog modelessly, i.e. still allowing interaction with content
