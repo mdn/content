@@ -99,7 +99,7 @@ This code finds the first {{HTMLElement("input")}} element whose `type` is `date
 
 ## Additional attributes
 
-Along with the attributes common to all {{HTMLElement("input")}} elements, `date` inputs have the following attributes.
+The attributes common to all {{HTMLElement("input")}} elements apply to the `date` inputs as well, but might not influence its presentation. For example `size` and `placeholder` might not work. `date` inputs have the following additional attributes.
 
 ### max
 
