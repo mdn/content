@@ -88,8 +88,8 @@ const ctx = document.getElementById('game').getContext('2d');
 // Load image
 const image = new Image();
 image.onload = () => {
-    // Draw the image into the canvas
-    ctx.drawImage(image, 0, 0);
+  // Draw the image into the canvas
+  ctx.drawImage(image, 0, 0);
 }
 image.src = 'cat.png';
 ```
