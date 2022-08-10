@@ -29,8 +29,8 @@ Using a TV remote to control the game ended up being surprisingly easy, because 
 ```js
 this.cursors = this.input.keyboard.createCursorKeys();
 // …
-if(this.cursors.right.isDown) {
-    // move player right
+if (this.cursors.right.isDown) {
+  // move player right
 }
 ```
 
@@ -38,7 +38,7 @@ It works out of the box. The cursors are the four directional arrow keys on the 
 
 ```js
 window.addEventListener("keydown", (event) => {
-    console.log(event.keyCode);
+  console.log(event.keyCode);
 }, true);
 ```
 
@@ -50,17 +50,17 @@ You can add moving between states, starting a new game, controlling the ship and
 
 ```js
 window.addEventListener("keydown", (event) => {
-    switch(event.keyCode) {
-        case 8: {
-            // pause the game
-            break;
-        }
-        case 588: {
-            // detonate bomb
-            break;
-        }
-        // …
+  switch(event.keyCode) {
+    case 8: {
+      // Pause the game
+      break;
     }
+    case 588: {
+      // Detonate bomb
+      break;
+    }
+    // …
+  }
 }, true);
 ```
 
@@ -81,26 +81,26 @@ To get the Leap Motion working on your computer you have to first install it by 
 We will need a few helper variables for our code to work — one for the purpose of calculating the degrees from radians, two for holding the horizontal and vertical amount of degrees our hand is leaning above the controller, one for the threshold of that lean, and one for the state of our hand's grab status. We next add these lines after all the event listeners for keyboard and mouse, but before the `draw` method:
 
 ```js
-var toDegrees = 1 / (Math.PI / 180);
-var horizontalDegree = 0;
-var verticalDegree = 0;
-var degreeThreshold = 30;
-var grabStrength = 0;
+const toDegrees = 1 / (Math.PI / 180);
+let horizontalDegree = 0;
+let verticalDegree = 0;
+const degreeThreshold = 30;
+let grabStrength = 0;
 ```
 
 Right after that we use the Leap's `loop` method to get the information held in the `hand` variable on every frame:
 
 ```js
 Leap.loop({
-    hand(hand) {
-        horizontalDegree = Math.round(hand.roll() * toDegrees);
-        verticalDegree = Math.round(hand.pitch() * toDegrees);
-        grabStrength = hand.grabStrength;
-        output.innerHTML = 'Leap Motion: <br />'
-            + ' roll: ' + horizontalDegree + '° <br />'
-            + ' pitch: ' + verticalDegree + '° <br />'
-            + ' strength: ' + grabStrength + '';
-    }
+  hand(hand) {
+    horizontalDegree = Math.round(hand.roll() * toDegrees);
+    verticalDegree = Math.round(hand.pitch() * toDegrees);
+    grabStrength = hand.grabStrength;
+    output.innerHTML = 'Leap Motion: <br />'
+      + ' roll: ' + horizontalDegree + '° <br />'
+      + ' pitch: ' + verticalDegree + '° <br />'
+      + ' strength: ' + grabStrength + '';
+  }
 });
 ```
 
@@ -108,28 +108,28 @@ The code above is calculating and assigning the `horizontalDegree`, `verticalDeg
 
 ```js
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // …
+  // …
 
-    if(horizontalDegree > degreeThreshold) {
-        playerX -= 5;
-    }
-    else if(horizontalDegree < -degreeThreshold) {
-        playerX += 5;
-    }
-    if(verticalDegree > degreeThreshold) {
-        playerY += 5;
-    }
-    else if(verticalDegree < -degreeThreshold) {
-        playerY -= 5;
-    }
-    if(grabStrength === 1) {
-        alert('BOOM!');
-    }
+  if (horizontalDegree > degreeThreshold) {
+    playerX -= 5;
+  }
+  else if (horizontalDegree < -degreeThreshold) {
+    playerX += 5;
+  }
+  if (verticalDegree > degreeThreshold) {
+    playerY += 5;
+  }
+  else if (verticalDegree < -degreeThreshold) {
+    playerY -= 5;
+  }
+  if (grabStrength === 1) {
+    alert('BOOM!');
+  }
 
-    ctx.drawImage(img, playerX, playerY);
-    requestAnimationFrame(draw);
+  ctx.drawImage(img, playerX, playerY);
+  requestAnimationFrame(draw);
 }
 ```
 
@@ -151,7 +151,7 @@ This can be accomplished using [a small library](https://github.com/DanielRapp/d
 
 ```js
 doppler.init((bandwidth) => {
-    var diff = bandwidth.left - bandwidth.right;
+  const diff = bandwidth.left - bandwidth.right;
 });
 ```
 
@@ -170,7 +170,7 @@ Check out the [banana piano video](https://www.youtube.com/watch?v=_DWQ6ce2Ags),
 There's even a [Cylon.js-supported Makey Button functionality](https://cylonjs.com/documentation/drivers/makey-button/) inspired by the MaKey MaKey board, so you can use the popular Cylon robotics framework for your experiments with Arduino or Raspberry Pi. Connecting the boards and using them may look like this:
 
 ```js
-var Cylon = require('cylon');
+const Cylon = require('cylon');
 Cylon.robot({
   connections: {
     arduino: { adaptor: 'firmata', port: '/dev/ttyACM0' }

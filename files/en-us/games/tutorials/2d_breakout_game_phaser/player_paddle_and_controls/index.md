@@ -27,16 +27,16 @@ From the framework point of view the paddle is very similar to the ball — we n
 First, add the `paddle` variable we will be using in our game, right after the `ball` variable:
 
 ```js
-var paddle;
+let paddle;
 ```
 
 Then, in the `preload` function, load the `paddle` image by adding the following new `load.image()` call:
 
 ```js
 function preload() {
-    // …
-    game.load.image('ball', 'img/ball.png');
-    game.load.image('paddle', 'img/paddle.png');
+  // …
+  game.load.image('ball', 'img/ball.png');
+  game.load.image('paddle', 'img/paddle.png');
 }
 ```
 
@@ -70,7 +70,7 @@ Now the magic can start to happen — the framework can take care of checking th
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle);
+  game.physics.arcade.collide(ball, paddle);
 }
 ```
 
@@ -88,15 +88,15 @@ The next problem is that we can't move the paddle. To do that we can use the sys
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle);
-    paddle.x = game.input.x;
+  game.physics.arcade.collide(ball, paddle);
+  paddle.x = game.input.x;
 }
 ```
 
 Now on every new frame the paddle's `x` position will adjust accordingly to the input's `x` position, however when we start the game, the position of the paddle is not in the middle. It's because the input position is not yet defined. To fix that we can set the default position (if an input position is not yet defined) to be the middle of the screen. Update the previous line as follows:
 
 ```js
-paddle.x = game.input.x || game.world.width*0.5;
+paddle.x = game.input.x || game.world.width * 0.5;
 ```
 
 If you haven't already done so, reload your `index.html` and try it out!
@@ -106,7 +106,7 @@ If you haven't already done so, reload your `index.html` and try it out!
 We have the paddle working as expected, so let's position the ball on it. It's very similar to positioning the paddle — we need to have it placed in the middle of the screen horizontally and at the bottom vertically with a little offset from the bottom. To place it exactly as we want it we will set the anchor to the exact middle of the ball. Find the existing `ball = game.add.sprite()` line, and replace it with the following two lines:
 
 ```js
-ball = game.add.sprite(game.world.width*0.5, game.world.height-25, 'ball');
+ball = game.add.sprite(game.world.width * 0.5, game.world.height - 25, 'ball');
 ball.anchor.set(0.5);
 ```
 

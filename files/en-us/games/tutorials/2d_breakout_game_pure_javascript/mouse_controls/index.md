@@ -32,10 +32,10 @@ We can update the paddle position based on the pointer coordinates — the follo
 
 ```js
 function mouseMoveHandler(e) {
-    var relativeX = e.clientX - canvas.offsetLeft;
-    if(relativeX > 0 && relativeX < canvas.width) {
-        paddleX = relativeX - paddleWidth/2;
-    }
+  const relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth/2;
+  }
 }
 ```
 

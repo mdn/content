@@ -23,12 +23,12 @@ It's fun to watch the ball bouncing off the walls and be able to move the paddle
 Let's try to implement game over in our game. Here's the piece of code from the third lesson where we made the ball bounce off the walls:
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 
@@ -43,18 +43,18 @@ setInterval(draw, 10);
 with:
 
 ```js
-var interval = setInterval(draw, 10);
+const interval = setInterval(draw, 10);
 ```
 
 Then replace the second if statement with the following:
 
 ```js
-if(y + dy < ballRadius) {
-    dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    alert("GAME OVER");
-    document.location.reload();
-    clearInterval(interval); // Needed for Chrome to end game
+if (y + dy < ballRadius) {
+  dy = -dy;
+} else if (y + dy > canvas.height-ballRadius) {
+  alert("GAME OVER");
+  document.location.reload();
+  clearInterval(interval); // Needed for Chrome to end game
 }
 ```
 
@@ -63,17 +63,17 @@ if(y + dy < ballRadius) {
 The last thing to do in this lesson is to create some kind of collision detection between the ball and the paddle, so it can bounce off it and get back into the play area. The easiest thing to do is to check whether the center of the ball is between the left and right edges of the paddle. Update the last bit of code you modified again, to the following:
 
 ```js
-if(y + dy < ballRadius) {
+if (y + dy < ballRadius) {
+  dy = -dy;
+} else if (y + dy > canvas.height-ballRadius) {
+  if (x > paddleX && x < paddleX + paddleWidth) {
     dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    if(x > paddleX && x < paddleX + paddleWidth) {
-        dy = -dy;
-    }
-    else {
-        alert("GAME OVER");
-        document.location.reload();
-        clearInterval(interval);
-    }
+  }
+  else {
+    alert("GAME OVER");
+    document.location.reload();
+    clearInterval(interval);
+  }
 }
 ```
 
