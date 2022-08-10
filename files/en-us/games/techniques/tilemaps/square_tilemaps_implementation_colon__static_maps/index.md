@@ -108,4 +108,4 @@ for (let c = 0; c < map.cols; c++) {
 
 Our static tilemap implementation demo pulls the above code together to show what an implementation of this map looks like. You can see a [live demo](https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html) and grab the [full source code](https://github.com/mozdevs/gamedev-js-tiles).
 
-[![](no-scroll.png)](https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html)
+[![a static aerial view of a tile of field with tress,grass and ground](no-scroll.png)](https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html)
