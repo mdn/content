@@ -55,7 +55,7 @@ if (document.hasStorageAccess == null) {
       btn.addEventListener('click', () => {
         document.requestStorageAccess().then(() => {
           doThingsWithFirstPartyStorageAccess();
-        }).catch(err => {
+        }).catch((err) => {
           // If there is an error obtaining storage access.
           console.error('Error obtaining storage access', err);
         })

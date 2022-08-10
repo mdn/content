@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: install event'
+title: "ServiceWorkerGlobalScope: install event"
 slug: Web/API/ServiceWorkerGlobalScope/install_event
 page-type: web-api-event
 tags:
@@ -44,21 +44,23 @@ The following snippet shows how an `install` event handler can be used to popula
 ```js
 this.addEventListener('install', (event) => {
   event.waitUntil(
-   caches.open('v1').then((cache) => {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ])
-   })
-   );
+    caches
+      .open('v1')
+      .then((cache) =>
+        cache.addAll([
+          '/sw-test/',
+          '/sw-test/index.html',
+          '/sw-test/style.css',
+          '/sw-test/app.js',
+          '/sw-test/image-list.js',
+          '/sw-test/star-wars-logo.jpg',
+          '/sw-test/gallery/',
+          '/sw-test/gallery/bountyHunters.jpg',
+          '/sw-test/gallery/myLittleVader.jpg',
+          '/sw-test/gallery/snowTroopers.jpg',
+        ])
+      )
+  );
 });
 ```
 

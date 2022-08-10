@@ -46,13 +46,15 @@ this.addEventListener('activate', (event) => {
   const cacheAllowlist = ['v2'];
 
   event.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(keyList.map((key) => {
-        if (cacheAllowlist.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+    caches.keys().then((keyList) =>
+      Promise.all(
+        keyList.map((key) => {
+          if (!cacheAllowlist.includes(key)) {
+            return caches.delete(key);
+          }
+        })
+      )
+    )
   );
 });
 ```
