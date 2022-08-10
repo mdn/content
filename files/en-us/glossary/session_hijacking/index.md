@@ -10,7 +10,7 @@ tags:
 
 Most authentication occurs only at the start of a {{glossary("TCP")}} session. In TCP session hijacking, an attacker gains access by taking over a TCP session between two machines in mid session.
 
-![](session_hijacking_3.jpg)
+![This image shows how an attacker is trying to bypass the session between a regular user and the server to exploit the user's session](session_hijacking_3.jpg)
 
 ### Session hijacking occurs because
 
