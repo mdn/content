@@ -22,7 +22,7 @@ The future of mobile gaming is definitely web, and many developers choose the [m
 We could implement touch events on our own — setting up event listeners and assigning relevant functions to them would be quite straightforward:
 
 ```js
-var el = document.getElementsByTagName("canvas")[0];
+const el = document.queryselector("canvas");
 el.addEventListener("touchstart", handleStart);
 el.addEventListener("touchmove", handleMove);
 el.addEventListener("touchend", handleEnd);
@@ -53,12 +53,12 @@ The `touchHandler` function looks like this:
 
 ```js
 function touchHandler(e) {
-    if(e.touches) {
-        playerX = e.touches[0].pageX - canvas.offsetLeft - playerWidth / 2;
-        playerY = e.touches[0].pageY - canvas.offsetTop - playerHeight / 2;
-        output.textContent = `Touch:  x: ${playerX}, y: ${playerY}`;
-        e.preventDefault();
-    }
+  if (e.touches) {
+    playerX = e.touches[0].pageX - canvas.offsetLeft - playerWidth / 2;
+    playerY = e.touches[0].pageY - canvas.offsetTop - playerHeight / 2;
+    output.textContent = `Touch:  x: ${playerX}, y: ${playerY}`;
+    e.preventDefault();
+  }
 }
 ```
 
@@ -90,7 +90,7 @@ Instead of using the pointers directly it is also possible to listen for `this.g
 this.game.input.onDown.add(itemTouched, this);
 
 function itemTouched(pointer) {
-    // do something
+  // Do something
 }
 ```
 
@@ -102,7 +102,7 @@ This approach uses the generally available `this.game.input` object, but you can
 this.button.events.onInputOver.add(itemTouched, this);
 
 function itemTouched(button, pointer) {
-    // do something
+  // Do something
 }
 ```
 
@@ -115,7 +115,7 @@ An additional advantage of using Phaser is that the buttons you create will take
 The easiest way to add an interactive object that will listen for user input is to create a button:
 
 ```js
-var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
+const buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
 ```
 
 This one is formed in the `MainMenu` state — it will be placed ten pixels from the top left corner of the screen, use the `logo-enclave` image, and execute the `clickEnclave()` function when it is touched. This will work on mobile and desktop out of the box. There are a few buttons in the main menu, including the one that will start the game.
@@ -123,7 +123,7 @@ This one is formed in the `MainMenu` state — it will be placed ten pixels from
 For the actual gameplay, instead of creating more buttons and covering the small mobile screen with them, we can use something a little different: we'll create invisible areas which respond to the given action. From a design point of view, it is better to make the field of activity bigger without covering half of the screen with button images. For example, tapping on the right side of the screen will fire the weapon:
 
 ```js
-this.buttonShoot = this.add.button(this.world.width*0.5, 0, 'button-alpha', null, this);
+this.buttonShoot = this.add.button(this.world.width * 0.5, 0, 'button-alpha', null, this);
 this.buttonShoot.onInputDown.add(this.goShootPressed, this);
 this.buttonShoot.onInputUp.add(this.goShootReleased, this);
 ```
@@ -133,14 +133,14 @@ The code above will create a new button using a transparent image that covers th
 Moving the player could be managed by creating the four directional buttons, but we can take the advantage of touch screens and drag the player's ship around:
 
 ```js
-var player = this.game.add.sprite(30, 30, 'ship');
+const player = this.game.add.sprite(30, 30, 'ship');
 player.inputEnabled = true;
 player.input.enableDrag();
 player.events.onDragStart.add(onDragStart, this);
 player.events.onDragStop.add(onDragStop, this);
 
 function onDragStart(sprite, pointer) {
-    // do something when dragging
+  // Do something when dragging
 }
 ```
 
@@ -160,8 +160,8 @@ In the `create()` function of the `Game` state we're creating a virtual pad and 
 The stick being pressed can be handled during the gameplay in the `update` function like so:
 
 ```js
-if(this.stick.isDown) {
-    // move the player
+if (this.stick.isDown) {
+  // Move the player
 }
 ```
 
