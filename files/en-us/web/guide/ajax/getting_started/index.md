@@ -212,7 +212,7 @@ Then in `alertContents()`, we need to replace the line `alert(httpRequest.respon
 
 ```js
 const xmldoc = httpRequest.responseXML;
-const root_node = xmldoc.getElementsByTagName('root').item(0);
+const root_node = xmldoc.querySelector('root');
 alert(root_node.firstChild.data);
 ```
 
