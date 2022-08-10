@@ -4,7 +4,6 @@ slug: Web/API/HTMLDialogElement/show
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Method

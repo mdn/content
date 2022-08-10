@@ -6,7 +6,6 @@ tags:
   - API
   - DOM
   - Document
-  - Experimental
   - Interface
   - Property
   - Read-only

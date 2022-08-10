@@ -8,7 +8,6 @@ tags:
   - AnimationTimeline
   - Document
   - DocumentTimeline
-  - Experimental
   - Property
   - Reference
   - Web Animations

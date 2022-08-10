@@ -4,7 +4,6 @@ slug: Web/API/ExtendableMessageEvent
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - ExtendableMessageEvent
   - Interface
   - Reference

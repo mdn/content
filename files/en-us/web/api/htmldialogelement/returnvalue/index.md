@@ -4,7 +4,6 @@ slug: Web/API/HTMLDialogElement/returnValue
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Property

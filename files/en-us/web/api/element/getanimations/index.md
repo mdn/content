@@ -9,7 +9,6 @@ tags:
   - CSS Animations
   - CSS Transitions
   - Element
-  - Experimental
   - Method
   - Reference
   - Transitions

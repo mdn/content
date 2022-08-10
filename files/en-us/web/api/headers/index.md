@@ -4,7 +4,6 @@ slug: Web/API/Headers
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Fetch
   - Fetch API
   - Headers
