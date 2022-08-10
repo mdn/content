@@ -6,7 +6,6 @@ tags:
   - Beginner
   - HTML
   - Learn
-  - NeedsUpdate
 ---
 
 
