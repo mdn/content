@@ -5,7 +5,6 @@ page-type: guide
 tags:
   - API
   - BODY
-  - Experimental
   - Fetch
   - Guide
   - HTTP

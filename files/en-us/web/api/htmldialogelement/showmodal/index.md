@@ -4,7 +4,6 @@ slug: Web/API/HTMLDialogElement/showModal
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Method
@@ -12,7 +11,7 @@ tags:
   - showModal
 browser-compat: api.HTMLDialogElement.showModal
 ---
-{{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}
+{{ APIRef("HTML DOM") }}
 
 The **`showModal()`** method of the
 {{domxref("HTMLDialogElement")}} interface displays the dialog as a modal, over the top

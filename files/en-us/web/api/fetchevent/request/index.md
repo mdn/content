@@ -4,7 +4,6 @@ slug: Web/API/FetchEvent/request
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - FetchEvent
   - Offline
   - Property

@@ -4,7 +4,6 @@ slug: Web/API/ExtendableMessageEvent/origin
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - ExtendableMessageEvent
   - Property
   - Reference

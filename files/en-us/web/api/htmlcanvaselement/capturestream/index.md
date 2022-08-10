@@ -4,7 +4,6 @@ slug: Web/API/HTMLCanvasElement/captureStream
 page-type: web-api-instance-method
 tags:
   - Canvas
-  - Experimental
   - Frame Capture
   - HTMLCanvasElement
   - Interface

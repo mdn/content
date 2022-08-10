@@ -4,7 +4,6 @@ slug: Web/API/fetch
 page-type: web-api-global-function
 tags:
   - API
-  - Experimental
   - Fetch
   - Fetch API
   - GlobalFetch

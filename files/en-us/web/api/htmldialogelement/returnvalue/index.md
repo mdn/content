@@ -4,7 +4,6 @@ slug: Web/API/HTMLDialogElement/returnValue
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Property
@@ -13,8 +12,6 @@ tags:
 browser-compat: api.HTMLDialogElement.returnValue
 ---
 {{ APIRef("HTML DOM") }}
-
-{{ SeeCompatTable() }}
 
 The **`returnValue`** property of the
 {{domxref("HTMLDialogElement")}} interface gets or sets the return value for the

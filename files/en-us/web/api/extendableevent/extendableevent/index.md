@@ -5,7 +5,6 @@ page-type: web-api-constructor
 tags:
   - API
   - Constructor
-  - Experimental
   - ExtendableEvent
   - Reference
   - Service Workers

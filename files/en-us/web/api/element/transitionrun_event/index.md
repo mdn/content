@@ -13,7 +13,7 @@ tags:
 browser-compat: api.Element.transitionrun_event
 page-type: web-api-event
 ---
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`transitionrun`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created, i.e. before any {{cssxref("transition-delay")}} has begun.
 
