@@ -126,14 +126,14 @@ Note that the `playbackRate` property works with both `<audio>` and `<video>`, b
 
 ```html
 <video id="my-video" controls
-       src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
+  src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
 </video>
 ```
 
 #### JavaScript
 
 ```js
-var myVideo = document.getElementById('my-video');
+const myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;
 ```
 
@@ -149,15 +149,15 @@ myVideo.playbackRate = 2;
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-var myVideo = document.getElementById('my-video');
+const myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;</textarea>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
-var code = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const edit = document.getElementById('edit');
+const code = textarea.value;
 
 function setPlaybackRate() {
   eval(textarea.value);
@@ -203,16 +203,16 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 
 ```html
 <video id="my-video" controls
-       src="myvideo.mp4" type="video/mp4">
+  src="myvideo.mp4" type="video/mp4">
 </video>
 ```
 
 #### JavaScript
 
 ```js
-var context = new AudioContext(),
-    audioSource = context.createMediaElementSource(document.getElementById("my-video")),
-    filter = context.createBiquadFilter();
+const context = new AudioContext();
+const audioSource = context.createMediaElementSource(document.getElementById("my-video"));
+const filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
@@ -234,22 +234,23 @@ filter.gain.value = 25;
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-filter.type = "lowshelf";
-filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea>
+  filter.type = "lowshelf";
+  filter.frequency.value = 1000;
+  filter.gain.value = 25;
+</textarea>
 ```
 
 ```js hidden
-var context     = new AudioContext(),
-    audioSource = context.createMediaElementSource(document.getElementById("my-video")),
-    filter      = context.createBiquadFilter();
+const context = new AudioContext();
+const audioSource = context.createMediaElementSource(document.getElementById("my-video"));
+const filter  = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
-var code = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const edit = document.getElementById('edit');
+const code = textarea.value;
 
 function setFilter() {
   eval(textarea.value);
@@ -294,7 +295,7 @@ It's also possible to apply impulse responses to audio using the {{domxref("Conv
 #### Example
 
 ```js
-var convolver = context.createConvolver();
+const convolver = context.createConvolver();
 convolver.buffer = this.impulseResponseBuffer;
 // Connect the graph.
 source.connect(convolver);
@@ -310,7 +311,7 @@ We can also position audio using a **panner node**. A panner node—{{domxref("P
 #### Example
 
 ```js
-var panner = context.createPanner();
+const panner = context.createPanner();
 panner.coneOuterGain = 0.2;
 panner.coneOuterAngle = 120;
 panner.coneInnerAngle = 0;

@@ -95,7 +95,8 @@ The above Content Security Policy will allow inline {{HTMLElement("script")}} el
 
 ```html
 <script>
-  var inline = 1;
+  const inline = 1;
+  // …
 </script>
 ```
 
@@ -109,7 +110,8 @@ You will have to set the same nonce on the {{HTMLElement("script")}} element:
 
 ```html
 <script nonce="2726c7f26c">
-  var inline = 1;
+  const inline = 1;
+  // …
 </script>
 ```
 
@@ -122,7 +124,7 @@ Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWt
 When generating the hash, don't include the {{HTMLElement("script")}} tags and note that capitalization and whitespace matter, including leading or trailing whitespace.
 
 ```html
-<script>var inline = 1;</script>
+<script>const inline = 1;</script>
 ```
 
 ### Unsafe eval expressions

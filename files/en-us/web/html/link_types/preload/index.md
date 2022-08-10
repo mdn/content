@@ -161,8 +161,8 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
   </header>
 
   <script>
-    var mediaQueryList = window.matchMedia("(max-width: 600px)");
-    var header = document.querySelector('header');
+    const mediaQueryList = window.matchMedia("(max-width: 600px)");
+    const header = document.querySelector('header');
 
     if (mediaQueryList.matches) {
       header.style.backgroundImage = 'url(bg-image-narrow.png)';
@@ -184,7 +184,7 @@ This doesn't have to be limited to images, or even files of the same type — th
 Another nice thing about these preloads is that you can execute them with script. For example, here we create a {{domxref("HTMLLinkElement")}} instance, then attach it to the DOM:
 
 ```js
-var preloadLink = document.createElement("link");
+const preloadLink = document.createElement("link");
 preloadLink.href = "myscript.js";
 preloadLink.rel = "preload";
 preloadLink.as = "script";
@@ -194,7 +194,7 @@ document.head.appendChild(preloadLink);
 This means that the browser will preload the `myscript.js` file, but not actually use it yet. To use it, you could do this:
 
 ```js
-var preloadedScript = document.createElement("script");
+const preloadedScript = document.createElement("script");
 preloadedScript.src = "myscript.js";
 document.body.appendChild(preloadedScript);
 ```
