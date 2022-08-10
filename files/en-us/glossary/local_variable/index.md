@@ -11,10 +11,10 @@ A {{glossary("variable")}} whose name is bound to its {{glossary("value")}} only
 ## Example
 
 ```js
-var global = 5; //is a global variable
+let global = 5; //is a global variable
 
 function fun(){
-    var local = 10; //is a local variable
+  let local = 10; //is a local variable
 }
 ```
 

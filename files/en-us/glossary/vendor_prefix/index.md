@@ -55,11 +55,11 @@ The prefixes for properties and methods are lower-case:
 Sample usage:
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame ||
-                            window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame ||
-                            window.oRequestAnimationFrame ||
-                            window.msRequestAnimationFrame;
+let requestAnimationFrame = window.requestAnimationFrame ||
+                              window.mozRequestAnimationFrame ||
+                              window.webkitRequestAnimationFrame ||
+                              window.oRequestAnimationFrame ||
+                              window.msRequestAnimationFrame;
 ```
 
 ## See also

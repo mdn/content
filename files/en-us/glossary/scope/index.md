@@ -20,9 +20,9 @@ In addition, variables declared with [`let`](/en-US/docs/Web/JavaScript/Referenc
 
 A {{glossary("function")}} creates a scope, so that (for example) a variable defined exclusively within the function cannot be accessed from outside the function or within other functions. For instance, the following is invalid:
 
-```js
+```js example-bad
 function exampleFunction() {
-  var x = "declared inside function";  // x can only be used in exampleFunction
+  const x = "declared inside function";  // x can only be used in exampleFunction
   console.log("Inside function");
   console.log(x);
 }
@@ -32,8 +32,8 @@ console.log(x);  // Causes error
 
 However, the following code is valid due to the variable being declared outside the function, making it global:
 
-```js
-var x = "declared outside function";
+```js example-good
+const x = "declared outside function";
 
 exampleFunction();
 
@@ -48,14 +48,14 @@ console.log(x);
 
 Blocks only scope `let` and `const` declarations, but not `var` declarations.
 
-```js
+```js example-good
 {
   var x = 1;
 }
 console.log(x); // 1
 ```
 
-```js
+```js example-bad
 {
   const x = 1;
 }

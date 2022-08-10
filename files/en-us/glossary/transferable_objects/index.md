@@ -34,8 +34,8 @@ After transfer any attempt to read or write `uInt8Array` from the main thread wi
 
 ```js
 // Create an 8MB "file" and fill it.
-var uInt8Array = new Uint8Array(1024 * 1024 * 8); // 8MB
-for (var i = 0; i < uInt8Array.length; ++i) {
+const uInt8Array = new Uint8Array(1024 * 1024 * 8); // 8MB
+for (let i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 console.log(uInt8Array.byteLength);  // 8388608
