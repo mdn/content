@@ -43,8 +43,9 @@ From here, you can play and save the opus file.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
+    <meta charset="UTF-8">
     <title>createMediaStreamDestination() demo</title>
   </head>
   <body>

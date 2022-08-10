@@ -72,7 +72,7 @@ Consider a web page like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   </head>

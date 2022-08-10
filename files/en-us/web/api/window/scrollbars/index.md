@@ -26,9 +26,10 @@ The following complete HTML example shows how the `visible` property of the
 scrollbars object is used.
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
+  <meta charset="UTF-8">
   <title>Various DOM Tests</title>
   <script>
     let visibleScrollbars = window.scrollbars.visible;

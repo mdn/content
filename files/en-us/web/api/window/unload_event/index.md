@@ -72,9 +72,10 @@ See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-ap
 
 ```html
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Parent Frame</title>
+<html lang="en-us">
+   <head>
+     <meta charset="UTF-8">
+     <title>Parent Frame</title>
     <script>
       window.addEventListener('beforeunload', (event) => {
         console.log('I am the 1st one.');
@@ -94,9 +95,10 @@ Below, the content of `child-frame.html`:
 
 ```html
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Child Frame</title>
+<html lang="en-us">
+   <head>
+     <meta charset="UTF-8">
+     <title>Child Frame</title>
     <script>
       window.addEventListener('beforeunload', (event) => {
         console.log('I am the 2nd one.');

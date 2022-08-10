@@ -41,9 +41,10 @@ Note that the devtools page does not get access to any other WebExtension APIs, 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
+    <title>DevTools Extension</title>
   </head>
   <body>
     <script src="devtools.js"></script>

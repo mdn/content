@@ -43,8 +43,8 @@ The `style` property is not useful for completely learning about the styles appl
 The following code snippet demonstrates the difference between the values obtained using the element's `style` property and that obtained using the `getComputedStyle()` method:
 
 ```html
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
   <body style="font-weight:bold;">
     <div style="color:red" id="myElement">..</div>
   </body>

@@ -307,7 +307,7 @@ This is repeated every 5 seconds, using a `setInterval()` call. The idea would b
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>XHR log time</title>

@@ -89,7 +89,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>Canvas tutorial</title>
@@ -123,9 +123,10 @@ To begin, let's take a look at a simple example that draws two intersecting rect
 
 ```html
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8"/>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Canvas experiment</title>
   <script type="application/javascript">
     function draw() {
       const canvas = document.getElementById('canvas');

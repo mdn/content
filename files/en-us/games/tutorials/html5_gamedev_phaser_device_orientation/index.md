@@ -41,7 +41,7 @@ We will be rendering our game on Canvas, but we won't do it manually — this wi
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
     <meta charset="utf-8" />
     <title>Cyber Orb demo</title>

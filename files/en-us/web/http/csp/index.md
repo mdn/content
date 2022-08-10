@@ -197,8 +197,9 @@ The HTML of `signup.html` looks like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
+    <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="css/style.css">
   </head>

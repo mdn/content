@@ -686,7 +686,7 @@ The worker sets the property `onmessage` to a function which will receive messag
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8"  />
     <title>Fibonacci number generator</title>

@@ -19,8 +19,8 @@ This is an example of an AJAX website composed only of three pages (_first_page.
         ob_start();
     } else {
 ?>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 <?php
         include "include/header.php";
@@ -67,8 +67,8 @@ This is an example of an AJAX website composed only of three pages (_first_page.
         ob_start();
     } else {
 ?>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 <?php
         include "include/header.php";
@@ -114,8 +114,8 @@ This is an example of an AJAX website composed only of three pages (_first_page.
         echo json_encode(array("page" => $page_title, "content" => $page_content));
     } else {
 ?>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 <?php
         include "include/header.php";

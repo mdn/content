@@ -59,7 +59,7 @@ You reference an external CSS stylesheet from an HTML `<link>` element:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="utf-8">
     <title>My CSS experiment</title>
@@ -107,7 +107,7 @@ The HTML for an internal stylesheet might look like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="utf-8">
     <title>My CSS experiment</title>
@@ -140,7 +140,7 @@ Inline styles are CSS declarations that affect a single HTML element, contained 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="utf-8">
     <title>My CSS experiment</title>

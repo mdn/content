@@ -18,9 +18,10 @@ Each MathML equation is represented by a root [`math`](/en-US/docs/Web/MathML/El
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
- <title>MathML in HTML5</title>
+  <meta charset="UTF-8">
+  <title>MathML in HTML5</title>
 </head>
 <body>
 
@@ -110,8 +111,9 @@ A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) can be 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
+    <meta charset="UTF-8">
     <title>MathML in HTML5</title>
     <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
     <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
@@ -140,6 +142,7 @@ For authors not familiar with LaTeX, alternative input methods are available suc
 <head>
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width">
+<title>ASCII MathML</title>
 ...
 <!-- ASCIIMathML.js -->
 <script src="/path/to/ASCIIMathML.js"></script>
@@ -171,8 +174,9 @@ Instead of generating MathML expression at page load, you can instead rely on co
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
+    <meta charset="UTF-8">
     <title>MathML in HTML5</title>
   </head>
   <body>
@@ -201,8 +205,9 @@ After running that command, a file `output.html` containing the following HTML o
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
+    <meta charset="UTF-8">
     <title>MathML in HTML5</title>
   </head>
   <body>

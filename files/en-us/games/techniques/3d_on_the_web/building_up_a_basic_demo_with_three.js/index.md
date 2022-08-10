@@ -35,7 +35,7 @@ Here's the HTML structure we will use:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <title>MDN Games: Three.js demo</title>

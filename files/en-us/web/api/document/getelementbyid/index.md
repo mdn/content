@@ -74,8 +74,8 @@ Unlike some other element-lookup methods such as {{domxref("Document.querySelect
 ### Example
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
