@@ -21,7 +21,7 @@ If you have a link that isn't self-descriptive, or the link destination could be
 <p>I'm really <span id="incompetence">bad at writing link text</span>. <a href="inept.html" aria-labelledby="incompetence">Click here</a> to find out more.</p>
 ```
 
-It is better to instead write useful link text:
+Note that, most of the time, it is better to instead write useful link text:
 
 ```html
 <p>I wrote a <a href="capable.html">blog post about how good I am at writing link text</a>.</p>
