@@ -106,7 +106,7 @@ let xmlDoc;
 function Init() {
 
   // Load the xslt file, example1.xsl
-  const myXMLHTTPRequest = new XMLHttpRequest();
+  let myXMLHTTPRequest = new XMLHttpRequest();
   myXMLHTTPRequest.open("GET", "example1.xsl", false);
   myXMLHTTPRequest.send(null);
 

@@ -137,7 +137,7 @@ if ('content' in document.createElement('template')) {
 
     // Clone the new row and insert it into the table
     const clone = template.content.cloneNode(true);
-    const td = clone.querySelectorAll("td");
+    let td = clone.querySelectorAll("td");
     td[0].textContent = "1235646565";
     td[1].textContent = "Stuff";
 
