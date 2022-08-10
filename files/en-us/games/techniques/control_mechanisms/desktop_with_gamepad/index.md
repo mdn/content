@@ -90,7 +90,7 @@ function draw() {
   if (gamepadButtonPressedHandler(0)) {
     playerY -= 5;
   } else if (gamepadButtonPressedHandler(1)) {
-      playerY += 5;
+    playerY += 5;
   }
   if (gamepadButtonPressedHandler(2)) {
     playerX -= 5;
