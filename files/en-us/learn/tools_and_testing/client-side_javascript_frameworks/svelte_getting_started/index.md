@@ -283,7 +283,7 @@ We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Ele
 
 In Svelte, CSS inside a component's `<style>` block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.
 
-You can see this in action by opening `localhost:5042` in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the _HELLO WORLD!_ label, and choosing _Inspect_:
+You can see this in action by opening `localhost:8080` in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the _HELLO WORLD!_ label, and choosing _Inspect_:
 
 ![Svelte starter app with devtools open, showing classes for scoped styles](02-svelte-component-scoped-styles.png)
 
@@ -300,7 +300,7 @@ At this point you can try updating your `App.svelte` component — for example c
 <h1>Hello {name} from MDN!</h1>
 ```
 
-Just save your changes and the app running at `localhost:5042` will be automatically updated.
+Just save your changes and the app running at `localhost:8080` will be automatically updated.
 
 ### A first look at Svelte reactivity
 
