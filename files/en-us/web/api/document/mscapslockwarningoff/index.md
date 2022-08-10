@@ -39,19 +39,17 @@ Fiddle: <https://jsfiddle.net/jonathansampson/mqcHA/1/>
 ```html
 <html>
 <head>
-    <title>msCapsLockWarningOff example</title>
-    <script>
-
-        function capsOff() {
-                  if (!document.msCapsLockWarningOff) {
-                document.msCapsLockWarningOff = true;
-                document.getElementById("caps").innerHTML = "Warning off";
-            } else {
-                document.msCapsLockWarningOff = false;
-                document.getElementById("caps").innerHTML = "Warning on";
-            }
-        }
-
+  <title>msCapsLockWarningOff example</title>
+  <script>
+    function capsOff() {
+      if (!document.msCapsLockWarningOff) {
+        document.msCapsLockWarningOff = true;
+        document.getElementById("caps").innerHTML = "Warning off";
+      } else {
+        document.msCapsLockWarningOff = false;
+        document.getElementById("caps").innerHTML = "Warning on";
+      }
+    }
     </script>
 </head>
 <body>
