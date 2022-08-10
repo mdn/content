@@ -370,7 +370,7 @@ try {
   console.log(e.message);
 }
 
-// if it does, run the code inside the if() {} block
+// if it does, run the code inside the if () {} block
 if (test.type === 'text') {
   // hide the native picker and show the fallback
   nativePicker.style.display = 'none';

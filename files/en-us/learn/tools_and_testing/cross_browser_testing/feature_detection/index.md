@@ -168,7 +168,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
         parent Object.
       </td>
       <td>
-        <p><code>if("geolocation" in navigator) { }</code></p>
+        <p><code>if ("geolocation" in navigator) { }</code></p>
       </td>
     </tr>
     <tr>
@@ -182,7 +182,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
       <td>
         <code
           >function supports_canvas() {<br />return
-          !!document.createElement('canvas').getContext;<br />}<br /><br />if(supports_canvas())
+          !!document.createElement('canvas').getContext;<br />}<br /><br />if (supports_canvas())
           { }</code
         >
       </td>

@@ -43,7 +43,7 @@ Fiddle: <https://jsfiddle.net/jonathansampson/mqcHA/1/>
     <script>
 
         function capsOff() {
-                  if(!document.msCapsLockWarningOff) {
+                  if (!document.msCapsLockWarningOff) {
                 document.msCapsLockWarningOff = true;
                 document.getElementById("caps").innerHTML = "Warning off";
             } else {

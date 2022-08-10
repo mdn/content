@@ -43,7 +43,7 @@ incoming presentation.
 ```js
 if (navigator.receiver) {
   footer.innerHTML = "Receiving presentation";
-}  else {
+} else {
   footer.innerHTML = "(idle)";
 }
 ```

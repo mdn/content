@@ -60,7 +60,7 @@ try {
 
 ```js
 function check(value) {
-  if(!["apple", "banana", "carrot"].includes(value)) {
+  if (!["apple", "banana", "carrot"].includes(value)) {
     throw new RangeError('The argument must be an "apple", "banana", or "carrot".');
   }
 }

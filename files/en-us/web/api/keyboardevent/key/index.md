@@ -137,10 +137,11 @@ function logMessage(message) {
 }
 
 textarea.addEventListener('keydown', (e) => {
-  if (!e.repeat)
+  if (!e.repeat) {
     logMessage(`Key "${e.key}" pressed [event: keydown]`);
-  else
+  } else {
     logMessage(`Key "${e.key}" repeating [event: keydown]`);
+  }
 });
 
 textarea.addEventListener('beforeinput', (e) => {

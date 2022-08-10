@@ -596,7 +596,7 @@ Now let's create our own simple animation — we'll get a character from a certa
 9. Next we need to work out how to change the `posX` value on each frame — add the following code block just below your last one.
 
     ```js
-      if(posX > width/2) {
+      if (posX > width/2) {
         let newStartPos = -((width/2) + 102);
         posX = Math.ceil(newStartPos);
         console.log(posX);
@@ -660,7 +660,7 @@ The drawing loop is pretty simple this time around — if pressed is `true`, we 
 
 ```js
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
     ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);

@@ -212,7 +212,7 @@ Let's build up the example, so you can understand how it works.
     // define the nameDisplayCheck() function
     function nameDisplayCheck() {
       // check whether the 'name' data item is stored in web Storage
-      if(localStorage.getItem('name')) {
+      if (localStorage.getItem('name')) {
         // If it is, display personalized greeting
         const name = localStorage.getItem('name');
         h1.textContent = `Welcome, ${name}`;
@@ -430,7 +430,7 @@ function displayData() {
     const cursor = e.target.result;
 
     // If there is still another data item to iterate through, keep running this code
-    if(cursor) {
+    if (cursor) {
       // Create a list item, h3, and p to put each data item inside when displaying it
       // structure the HTML fragment, and append it inside the list
       const listItem = document.createElement('li');
@@ -462,7 +462,7 @@ function displayData() {
       cursor.continue();
     } else {
       // Again, if list item is empty, display a 'No notes stored' message
-      if(!list.firstChild) {
+      if (!list.firstChild) {
         const listItem = document.createElement('li');
         listItem.textContent = 'No notes stored.'
         list.appendChild(listItem);
@@ -509,7 +509,7 @@ function deleteItem(e) {
     console.log(`Note ${noteId} deleted.`);
 
     // Again, if list item is empty, display a 'No notes stored' message
-    if(!list.firstChild) {
+    if (!list.firstChild) {
       const listItem = document.createElement('li');
       listItem.textContent = 'No notes stored.';
       list.appendChild(listItem);
@@ -560,7 +560,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
         const request = objectStore.get(video.name);
         request.addEventListener('success', () => {
           // If the result exists in the database (is not undefined)
-          if(request.result) {
+          if (request.result) {
             // Grab the videos from IDB and display them using displayVideo()
             console.log('taking videos from IDB');
             displayVideo(request.result.mp4, request.result.webm, request.result.name);
@@ -667,7 +667,7 @@ The first thing to note is that there's an extra bit of code placed in the main 
 
 ```js
 // Register service worker to control making site work offline
-if('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js')
     .then(() => console.log('Service Worker Registered'));

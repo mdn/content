@@ -209,7 +209,7 @@ function validTextColor(stringToTest) {
 }
 
 inputElem.addEventListener('change', () => {
-  if(validTextColor(inputElem.value)) {
+  if (validTextColor(inputElem.value)) {
     divElem.style.backgroundColor = inputElem.value;
     divElem.textContent = '';
   } else {

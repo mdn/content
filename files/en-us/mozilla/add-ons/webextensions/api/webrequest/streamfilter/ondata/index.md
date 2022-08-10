@@ -76,8 +76,7 @@ function listener(details) {
     let str = "";
     if (data.length === 1) {
       str = decoder.decode(data[0]);
-    }
-    else {
+    } else {
       for (let i = 0; i < data.length; i++) {
         let stream = i !== data.length - 1;
         str += decoder.decode(data[i], {stream});

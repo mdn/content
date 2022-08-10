@@ -79,7 +79,7 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
-        if(dialog.open) {
+        if (dialog.open) {
           console.log('Dialog open');
         } else {
           console.log('Dialog closed');

@@ -117,10 +117,10 @@ This is a progressive enhancement to the previously working example — [Interse
 Here's what the relevant code looks like:
 
 ```js
-if('IntersectionObserver' in window) {
+if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((items, observer) => {
     items.forEach((item) => {
-      if(item.isIntersecting) {
+      if (item.isIntersecting) {
         loadImages(item.target);
         observer.unobserve(item.target);
       }

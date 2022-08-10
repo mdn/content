@@ -334,7 +334,7 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
 
     ```js
     onSubmit() {
-      if(this.label === "") {
+      if (this.label === "") {
         return;
       }
       this.$emit('todo-added', this.label);
@@ -353,7 +353,7 @@ Update your `ToDoForm` component's `onSubmit()` method to this:
 
 ```js
 onSubmit() {
-  if(this.label === "") {
+  if (this.label === "") {
     return;
   }
   this.$emit('todo-added', this.label);

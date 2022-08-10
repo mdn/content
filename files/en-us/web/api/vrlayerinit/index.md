@@ -36,7 +36,7 @@ You can retrieve `VRLayerInit` objects using {{domxref("VRDisplay.getLayers()")}
 // currently returns an empty array
 let layers = vrDisplay.getLayers();
 
-if(navigator.getVRDisplays) {
+if (navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then((displays) => {

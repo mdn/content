@@ -38,10 +38,11 @@ function dragend_handler(event)
 {
   const dragData = event.dataTransfer;
   const node = dragData.mozSourceNode;
-  if (node)
+  if (node) {
     console.log(`mozSourceNode = ${dragData.mozSourceNode}`);
-  else
+  } else {
     console.log("mozSourceNode is null");
+  }
 }
 ```
 

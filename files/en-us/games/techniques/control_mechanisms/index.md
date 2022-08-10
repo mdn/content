@@ -52,7 +52,7 @@ It will be created once at the start of the game, and will execute `this.clickEn
 ```js
 update() {
   // …
-  if(this.game.input.mousePointer.isDown) {
+  if (this.game.input.mousePointer.isDown) {
       // do something
   }
   // …

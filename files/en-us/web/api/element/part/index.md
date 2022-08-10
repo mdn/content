@@ -33,7 +33,7 @@ let tabs = [];
 let children = this.shadowRoot.children;
 
 for (let elem of children) {
-  if(elem.getAttribute('part')) {
+  if (elem.getAttribute('part')) {
     tabs.push(elem);
   }
 }

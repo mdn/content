@@ -300,9 +300,9 @@ class Server {
                     offset = 10;
                 }
 
-                if (msglen == 0)
+                if (msglen == 0) {
                     Console.WriteLine("msglen == 0");
-                else if (mask) {
+                } else if (mask) {
                     byte[] decoded = new byte[msglen];
                     byte[] masks = new byte[4] { bytes[offset], bytes[offset + 1], bytes[offset + 2], bytes[offset + 3] };
                     offset += 4;
