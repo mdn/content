@@ -497,7 +497,7 @@ module.exports = mongoose.model('SomeModel', SomeModelSchema);
 You can then require and use the model immediately in other files. Below we show how you might use it to get all instances of the model.
 
 ```js
-//C reate a SomeModel model just by requiring the module
+// Create a SomeModel model just by requiring the module
 const SomeModel = require('../models/somemodel')
 
 // Use the SomeModel object (model) to find all SomeModel records
