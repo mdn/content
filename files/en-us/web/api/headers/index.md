@@ -23,7 +23,7 @@ A Headers object also has an associated guard, which takes a value of `immutable
 
 You can retrieve a `Headers` object via the {{domxref("Request.headers")}} and {{domxref("Response.headers")}} properties, and create a new `Headers` object using the {{domxref("Headers.Headers", "Headers()")}} constructor.
 
-An object implementing `Headers` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('Headers.entries()', 'entries()')}}: `for (var p of myHeaders)` is equivalent to `for (var p of myHeaders.entries())`.
+An object implementing `Headers` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('Headers.entries()', 'entries()')}}: `for (const p of myHeaders)` is equivalent to `for (const p of myHeaders.entries())`.
 
 > **Note:** you can find more out about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Headers) reference.
 
