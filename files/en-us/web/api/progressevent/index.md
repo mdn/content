@@ -45,7 +45,7 @@ const progressBar = document.getElementById("p"),
     client = new XMLHttpRequest()
 client.open("GET", "magical-unicorns")
 client.onprogress = (pe) => {
-  if(pe.lengthComputable) {
+  if (pe.lengthComputable) {
     progressBar.max = pe.total
     progressBar.value = pe.loaded
   }

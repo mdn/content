@@ -40,7 +40,7 @@ multi-column scenarios. Each object in the array contains two properties:
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.borderBoxSize && entry.borderBoxSize.length > 0) {
+    if (entry.borderBoxSize && entry.borderBoxSize.length > 0) {
       entry.target.style.borderRadius = `${Math.min(100, (entry.borderBoxSize[0].inlineSize / 10) + (entry.borderBoxSize[0].blockSize / 10))}px`;
     } else {
       entry.target.style.borderRadius = `${Math.min(100, (entry.contentRect.width / 10) + (entry.contentRect.height / 10))}px`;

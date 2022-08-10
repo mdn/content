@@ -78,10 +78,10 @@ The file consists of a function called `FindProxyForURL`. The example below will
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host))
+  if (isResolvable(host)) {
     return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 

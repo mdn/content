@@ -86,7 +86,7 @@ animateElem.addEventListener('beginEvent', () => {
 animateElem.addEventListener('repeatEvent', (e) => {
   let listItem = document.createElement('li');
   let msg = 'repeatEvent fired';
-  if(e.detail) {
+  if (e.detail) {
     msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;

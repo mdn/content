@@ -344,8 +344,7 @@ function checkZIP() {
   if (constraint.test(ZIPField.value)) {
     // The ZIP follows the constraint, we use the ConstraintAPI to tell it
     ZIPField.setCustomValidity("");
-  }
-  else {
+  } else {
     // The ZIP doesn't follow the constraint, we use the ConstraintAPI to
     // give a message about the format required for this country
     ZIPField.setCustomValidity(constraints[country][1]);

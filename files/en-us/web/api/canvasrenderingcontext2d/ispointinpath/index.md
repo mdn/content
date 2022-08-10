@@ -111,8 +111,7 @@ canvas.addEventListener('mousemove', (event) => {
   // Check whether point is inside circle
   if (ctx.isPointInPath(circle, event.offsetX, event.offsetY)) {
     ctx.fillStyle = 'green';
-  }
-  else {
+  } else {
     ctx.fillStyle = 'red';
   }
 

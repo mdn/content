@@ -132,7 +132,7 @@ OK, let's try a quick test to make sure everything is working.
 
     driver.sleep(2000).then(function() {
       driver.getTitle().then(function(title) {
-        if(title === 'webdriver - Google Search') {
+        if (title === 'webdriver - Google Search') {
           console.log('Test passed');
         } else {
           console.log('Test failed');
@@ -185,7 +185,7 @@ There is also nothing to stop you running the test on multiple browsers simultan
 
       driver.sleep(2000).then(function() {
         driver.getTitle().then(function(title) {
-          if(title === 'webdriver - Google Search') {
+          if (title === 'webdriver - Google Search') {
             console.log('Test passed');
           } else {
             console.log('Test failed');
@@ -369,7 +369,7 @@ In our `google_test.js` test for example, we included this block:
 ```js
 driver.sleep(2000).then(function() {
   driver.getTitle().then(function(title) {
-    if(title === 'webdriver - Google Search') {
+    if (title === 'webdriver - Google Search') {
       console.log('Test passed');
     } else {
       console.log('Test failed');
@@ -386,7 +386,7 @@ We could add a `sleep()` method to our `quick_test.js` test too — try wrapping
 driver.sleep(2000).then(function() {
   input.sendKeys('Filling in my form');
   input.getAttribute("value").then(function(value) {
-    if(value !== '') {
+    if (value !== '') {
       console.log('Form input editable');
     }
   });
@@ -578,7 +578,7 @@ Let's write an example:
 
     driver.sleep(2000).then(function() {
       driver.getTitle().then(function(title) {
-        if(title === 'webdriver - Google Search') {
+        if (title === 'webdriver - Google Search') {
           console.log('Test passed');
         } else {
           console.log('Test failed');
@@ -640,7 +640,7 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
     ```js
     driver.sleep(2000).then(function() {
       driver.getTitle().then(function(title) {
-        if(title === 'webdriver - Google Search') {
+        if (title === 'webdriver - Google Search') {
           console.log('Test passed');
           request({uri: "https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/" + sessionId + ".json", method:"PUT", form:{"status":"passed","reason":"Google results showed correct title"}});
         } else {
@@ -765,7 +765,7 @@ To do this, you need to:
     ```js
     driver.sleep(2000).then(function() {
       driver.getTitle().then(function(title) {
-        if(title === 'webdriver - Google Search') {
+        if (title === 'webdriver - Google Search') {
           console.log('Test passed');
           let testPassed = true;
         } else {

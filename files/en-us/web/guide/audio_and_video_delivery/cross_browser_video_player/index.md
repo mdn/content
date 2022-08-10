@@ -289,8 +289,7 @@ function handleFullscreen() {
     // The document is in fullscreen mode
     document.exitFullscreen();
     setFullscreenData(false);
-  }
-  else {
+  } else {
     // The document is not in fullscreen mode
     videoContainer.requestFullscreen();
     setFullscreenData(true);

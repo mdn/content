@@ -38,10 +38,10 @@ A generic {{domxref("Event")}}.
 
 ```js
 pause.onclick = () => {
-  if(mediaRecorder.state === "recording") {
+  if (mediaRecorder.state === "recording") {
     mediaRecorder.pause();
     // recording paused
-  } else if(mediaRecorder.state === "paused") {
+  } else if (mediaRecorder.state === "paused") {
     mediaRecorder.resume();
     // resume recording
   }

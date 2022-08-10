@@ -274,13 +274,13 @@ function validate(e) {
   errorList.innerHTML = '';
   for(let i = 0; i < formItems.length; i++) {
     const testItem = formItems[i];
-    if(testItem.input.value === '') {
+    if (testItem.input.value === '') {
       errorField.style.left = '360px';
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== '') {
     e.preventDefault();
   }
 }
@@ -288,9 +288,9 @@ function validate(e) {
 
 > **Note:** In this example, we are hiding and showing the error message box using absolute positioning rather than another method such as visibility or display, because it doesn't interfere with the screen reader being able to read content from it.
 
-Real form validation would be much more complex than this — you'd want to check that the entered name actually looks like a name, the entered age is actually a number and is realistic (e.g. nonnegative and less than 4 digits). Here we've just implemented a simple check that a value has been filled in to each input field (`if(testItem.input.value === '')`).
+Real form validation would be much more complex than this — you'd want to check that the entered name actually looks like a name, the entered age is actually a number and is realistic (e.g. nonnegative and less than 4 digits). Here we've just implemented a simple check that a value has been filled in to each input field (`if (testItem.input.value === '')`).
 
-When the validation has been performed, if the tests pass then the form is submitted. If there are errors (`if(errorList.innerHTML !== '')`) then we stop the form submitting (using [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)), and display any error messages that have been created (see below). This mechanism means that the errors will only be shown if there are errors, which is better for usability.
+When the validation has been performed, if the tests pass then the form is submitted. If there are errors (`if (errorList.innerHTML !== '')`) then we stop the form submitting (using [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)), and display any error messages that have been created (see below). This mechanism means that the errors will only be shown if there are errors, which is better for usability.
 
 For each input that doesn't have a value filled in when the form is submitted, we create a list item with a link and insert it in the `errorList`.
 

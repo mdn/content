@@ -414,8 +414,7 @@ objectStore.openCursor().onsuccess = (event) => {
   if (cursor) {
     console.log(`Name for SSN ${cursor.key} is ${cursor.value.name}`);
     cursor.continue();
-  }
-  else {
+  } else {
     console.log("No more entries!");
   }
 };
@@ -433,8 +432,7 @@ objectStore.openCursor().onsuccess = (event) => {
   if (cursor) {
     customers.push(cursor.value);
     cursor.continue();
-  }
-  else {
+  } else {
     console.log(`Got all customers: ${customers}`);
   }
 };

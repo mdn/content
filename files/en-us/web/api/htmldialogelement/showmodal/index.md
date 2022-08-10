@@ -78,7 +78,7 @@ button.
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
-        if(dialog.open) {
+        if (dialog.open) {
           console.log('Dialog open');
         } else {
           console.log('Dialog closed');

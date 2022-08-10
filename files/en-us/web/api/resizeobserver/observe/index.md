@@ -62,7 +62,7 @@ The following snippet is taken from the [resize-observer-text.html](https://mdn.
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.contentBoxSize) {
+    if (entry.contentBoxSize) {
       // Checking for chrome as using a non-standard array
       if (entry.contentBoxSize[0]) {
         h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize[0].inlineSize / 200)}rem`;

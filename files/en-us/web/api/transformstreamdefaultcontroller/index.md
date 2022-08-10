@@ -37,19 +37,28 @@ In the following example, a transform stream passes through all chunks it receiv
 const transformContent = {
   start() {}, // required.
   async transform(chunk, controller) {
-    chunk = await chunk
+    chunk = await chunk;
     switch (typeof chunk) {
       case 'object':
         // just say the stream is done I guess
-        if (chunk === null) controller.terminate()
-        else if (ArrayBuffer.isView(chunk))
-          controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength))
-        else if (Array.isArray(chunk) && chunk.every((value) => typeof value === 'number'))
-          controller.enqueue(new Uint8Array(chunk))
-        else if (typeof chunk.valueOf === 'function' && chunk.valueOf() !== chunk)
-          this.transform(chunk.valueOf(), controller) // hack
-        else if ('toJSON' in chunk) this.transform(JSON.stringify(chunk), controller)
-        break
+        if (chunk === null) {
+          controller.terminate();
+        } else if (ArrayBuffer.isView(chunk)) {
+          controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength));
+        } else if (
+          Array.isArray(chunk) &&
+          chunk.every((value) => typeof value === 'number')
+        ) {
+          controller.enqueue(new Uint8Array(chunk));
+        } else if (
+          typeof chunk.valueOf === 'function' &&
+          chunk.valueOf() !== chunk
+        ) {
+          this.transform(chunk.valueOf(), controller); // hack
+        } else if ('toJSON' in chunk) {
+          this.transform(JSON.stringify(chunk), controller);
+        }
+        break;
       case 'symbol':
         controller.error("Cannot send a symbol as a chunk part")
         break

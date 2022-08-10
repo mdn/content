@@ -260,7 +260,7 @@ Let's implement probably the most important control — the play/pause button.
 
     ```js
     function playPauseMedia() {
-      if(media.paused) {
+      if (media.paused) {
         play.setAttribute('data-icon','u');
         media.play();
       } else {
@@ -320,7 +320,7 @@ There are many ways that you can implement rewind and fast forward functionality
       clearInterval(intervalFwd);
       fwd.classList.remove('active');
 
-      if(rwd.classList.contains('active')) {
+      if (rwd.classList.contains('active')) {
         rwd.classList.remove('active');
         clearInterval(intervalRwd);
         media.play();
@@ -335,7 +335,7 @@ There are many ways that you can implement rewind and fast forward functionality
       clearInterval(intervalRwd);
       rwd.classList.remove('active');
 
-      if(fwd.classList.contains('active')) {
+      if (fwd.classList.contains('active')) {
         fwd.classList.remove('active');
         clearInterval(intervalFwd);
         media.play();
@@ -360,7 +360,7 @@ There are many ways that you can implement rewind and fast forward functionality
 
     ```js
     function windBackward() {
-      if(media.currentTime <= 3) {
+      if (media.currentTime <= 3) {
         rwd.classList.remove('active');
         clearInterval(intervalRwd);
         stopMedia();
@@ -370,7 +370,7 @@ There are many ways that you can implement rewind and fast forward functionality
     }
 
     function windForward() {
-      if(media.currentTime >= media.duration - 3) {
+      if (media.currentTime >= media.duration - 3) {
         fwd.classList.remove('active');
         clearInterval(intervalFwd);
         stopMedia();

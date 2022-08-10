@@ -68,8 +68,7 @@ if (y + dy < ballRadius) {
 } else if (y + dy > canvas.height-ballRadius) {
   if (x > paddleX && x < paddleX + paddleWidth) {
     dy = -dy;
-  }
-  else {
+  } else {
     alert("GAME OVER");
     document.location.reload();
     clearInterval(interval);

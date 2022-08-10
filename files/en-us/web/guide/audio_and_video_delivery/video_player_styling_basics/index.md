@@ -255,10 +255,9 @@ function changeButtonState(type) {
   if (type === 'playpause') {
     // Play/Pause button
     if (video.paused || video.ended) {
-       playpause.setAttribute('data-state', 'play');
-    }
-    else {
-       playpause.setAttribute('data-state', 'pause');
+      playpause.setAttribute('data-state', 'play');
+    } else {
+      playpause.setAttribute('data-state', 'pause');
     }
   } else if (type === 'mute') {
     // Mute button
@@ -297,8 +296,11 @@ You might have noticed that there are new handlers where the `play` and `pause` 
 
 ```js
 playpause.addEventListener('click', (e) => {
-  if (video.paused || video.ended) video.play();
-  else video.pause();
+  if (video.paused || video.ended) {
+    video.play();
+  } else {
+    video.pause();
+  }
 });
 ```
 

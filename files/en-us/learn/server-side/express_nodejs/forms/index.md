@@ -176,11 +176,10 @@ The functions are defined as below:
       const errors = validationResult(req);
 
       if (!errors.isEmpty()) {
-          // There are errors. Render form again with sanitized values/errors messages.
-          // Error messages can be returned in an array using `errors.array()`.
-          }
-      else {
-          // Data from form is valid.
+        // There are errors. Render form again with sanitized values/errors messages.
+        // Error messages can be returned in an array using `errors.array()`.
+      } else {
+        // Data from form is valid.
       }
   }
   ```

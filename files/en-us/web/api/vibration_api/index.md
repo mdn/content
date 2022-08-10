@@ -59,7 +59,7 @@ function startVibrate(duration) {
 // Stops vibration
 function stopVibrate() {
     // Clear interval and stop persistent vibrating
-    if(vibrateInterval) clearInterval(vibrateInterval);
+    if (vibrateInterval) clearInterval(vibrateInterval);
     navigator.vibrate(0);
 }
 

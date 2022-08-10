@@ -184,15 +184,15 @@ for (const ingredient of ingredients) {
 function updateDisplay() {
   let checkedCount = 0;
   for (const ingredient of ingredients) {
-    if(ingredient.checked) {
+    if (ingredient.checked) {
       checkedCount++;
     }
   }
 
-  if(checkedCount === 0) {
+  if (checkedCount === 0) {
     overall.checked = false;
     overall.indeterminate = false;
-  } else if(checkedCount === ingredients.length) {
+  } else if (checkedCount === ingredients.length) {
     overall.checked = true;
     overall.indeterminate = false;
   } else {
@@ -288,7 +288,7 @@ const otherText = document.querySelector('#otherValue');
 otherText.style.visibility = 'hidden';
 
 otherCheckbox.addEventListener('change', () => {
-  if(otherCheckbox.checked) {
+  if (otherCheckbox.checked) {
     otherText.style.visibility = 'visible';
     otherText.value = '';
   } else {

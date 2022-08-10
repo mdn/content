@@ -45,7 +45,7 @@ and `false` if the command isn't`.`
 ```js
 const flg = document.queryCommandEnabled("SelectAll");
 
-if(flg) {
+if (flg) {
   document.execCommand("SelectAll", false, null); // command is enabled, run it
 }
 ```

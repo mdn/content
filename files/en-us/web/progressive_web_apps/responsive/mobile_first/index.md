@@ -244,7 +244,7 @@ I put Modernizr inside my `js/lib` directory, then included it by putting the fo
 With Modernizr in place, we can now use the following JS block to test whether media queries are supported, and if not, to load in [respond.js](https://github.com/scottjehl/Respond), Scott Jehl's `matchMedia` and media query polyfill.
 
 ```java
-if(!Modernizr.mq('only all')) {
+if (!Modernizr.mq('only all')) {
   require('respond');
 }
 ```
@@ -252,7 +252,7 @@ if(!Modernizr.mq('only all')) {
 `matchMedia` is also very useful in many other ways. Imagine you wanted to include some kind of WebGL chart in the desktop version of the site requiring a WebGL library like Three but didn't want it included in the mobile version? You could create a block to only load the library in the case of narrow screen devices:
 
 ```java
-if(window.matchMedia("(min-width: 481px)").matches) {
+if (window.matchMedia("(min-width: 481px)").matches) {
   require('three');
 }
 ```
@@ -284,7 +284,7 @@ This is not hugely pretty, but it does make the main content area more readable 
 Modernizr also puts its feature detect results in a JavaScript `Modenizr` object too, so that you can run JavaScript code selectively depending on feature support. For example, you could do this:
 
 ```js
-if(Modernizr.rgba) {
+if (Modernizr.rgba) {
 
   // run code that depends on RGBA colors being supported.
 

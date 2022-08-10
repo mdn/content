@@ -304,9 +304,13 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     $: {
-      if (filter === 'all')               $alert = 'Browsing all to-dos'
-      else if (filter === 'active')       $alert = 'Browsing active to-dos'
-      else if (filter === 'completed')    $alert = 'Browsing completed to-dos'
+      if (filter === 'all') {
+        $alert = 'Browsing all to-dos';
+      } else if (filter === 'active') {
+        $alert = 'Browsing active to-dos';
+      } else if (filter === 'completed') {
+        $alert = 'Browsing completed to-dos';
+      }
     }
     ```
 

@@ -594,10 +594,10 @@ This example will work in an environment where the internal DNS server is set up
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host))
+  if (isResolvable(host)) {
     return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -611,9 +611,8 @@ function FindProxyForURL(url, host) {
     isResolvable(host)
   ) {
     return "DIRECT";
-  } else {
-    return "PROXY proxy.mydomain.com:8080";
   }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -625,10 +624,10 @@ In this example all of the hosts in a given subnet are connected-to directly, ot
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0"))
+  if (isInNet(host, "198.95.0.0", "255.255.0.0")) {
     return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -665,21 +664,15 @@ All local accesses are desired to be direct. All proxy servers run on the port 8
 
 ```js
 function FindProxyForURL(url, host) {
-
-  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
+  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com")) {
     return "DIRECT";
-
-  else if (shExpMatch(host, "*.com"))
-    return "PROXY proxy1.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
-  else if (shExpMatch(host, "*.edu"))
-    return "PROXY proxy2.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
-  else
-    return "PROXY proxy3.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
+  } else if (shExpMatch(host, "*.com")) {
+    return "PROXY proxy1.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  } else if (shExpMatch(host, "*.edu")) {
+    return "PROXY proxy2.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  } else {
+    return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  }
 }
 ```
 
@@ -691,22 +684,16 @@ Most of the standard JavaScript functionality is available for use in the `FindP
 
 ```js
 function FindProxyForURL(url, host) {
-
-  if (url.startsWith("http:"))
+  if (url.startsWith("http:")) {
     return "PROXY http-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("ftp:"))
+  } else if (url.startsWith("ftp:")) {
     return "PROXY ftp-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("gopher:"))
+  } else if (url.startsWith("gopher:")) {
     return "PROXY gopher-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("https:") || url.startsWith("snews:"))
+  } else if (url.startsWith("https:") || url.startsWith("snews:")) {
     return "PROXY security-proxy.mydomain.com:8080";
-
-  else
-    return "DIRECT";
-
+  }
+  return "DIRECT";
 }
 ```
 
