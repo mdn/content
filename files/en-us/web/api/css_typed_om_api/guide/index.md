@@ -376,7 +376,7 @@ When we `get()` the `transform` property, we get a {{domxref('CSSTransformValue'
 
 Seen as we have a length of `1`, which represents a single transform function, we log the first object and get a `CSSScale` object. We get `CSSUnitValues` when we query the `x`, `y`, and `z` scaling. The readonly `CSSScale.is2D` property is `true` in this scenario.
 
-Had we added `translate()`, `skew()`, and `rotate()` transform functions, the length would have been `4`, each with their own `x`, `y`, `z` values, and each with an `.is2D` property. For example, had we included `transform: translate3d(1px, 1px, 3px)`, the `.get('transform')` would have returned a `CSSTranslate` with `CSSUnitValues` for `x`, `y`, and `z`, and the readonly .i`s2D` property would have been `false`.
+Had we added `translate()`, `skew()`, and `rotate()` transform functions, the length would have been `4`, each with their own `x`, `y`, `z` values, and each with an `.is2D` property. For example, had we included `transform: translate3d(1px, 1px, 3px)`, the `.get('transform')` would have returned a `CSSTranslate` with `CSSUnitValues` for `x`, `y`, and `z`, and the readonly `.is2D` property would have been `false`.
 
 ### CSSImageValue
 
@@ -389,7 +389,7 @@ console.log(bgImage);             // CSSImageValue
 console.log(bgImage.toString());  // url("magicwand.png")
 ```
 
-When we `get()` the `'background-image'`, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, '`url("magicwand.png")'`.
+When we `get()` the `'background-image'`, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, `'url("magicwand.png")'`.
 
 Notice that the value returned is the absolute path to the image — this is returned even if the original `url()` value was relative. Had the background image been a gradient or multiple background images, `.get('background-image')` would have returned a `CSSStyleValue`. The `CSSImageValue` is returned only if there is a single image, and only if that single image declaration is a URL.
 
