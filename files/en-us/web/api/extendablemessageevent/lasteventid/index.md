@@ -33,9 +33,9 @@ let port;
 self.addEventListener('push', (e) => {
   const obj = e.data.json();
 
-  if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === 'subscribe' || obj.action === 'unsubscribe') {
     port.postMessage(obj);
-  } else if(obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === 'init' || obj.action === 'chatMsg') {
     port.postMessage(obj);
   }
 });

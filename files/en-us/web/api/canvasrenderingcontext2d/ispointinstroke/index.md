@@ -101,8 +101,7 @@ canvas.addEventListener('mousemove', (event) => {
   // Check whether point is inside ellipse's stroke
   if (ctx.isPointInStroke(ellipse, event.offsetX, event.offsetY)) {
     ctx.strokeStyle = 'green';
-  }
-  else {
+  } else {
     ctx.strokeStyle = 'red';
   }
 

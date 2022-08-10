@@ -72,10 +72,11 @@ Our next function — `lookupInDatabase()` — provides a simple promise-based o
       const request = store.get(url);
       request.onerror = reject.bind(null, `Error getting wasm module ${url}`);
       request.onsuccess = (event) => {
-        if (request.result)
+        if (request.result) {
           resolve(request.result);
-        else
+        } else {
           reject(`Module ${url} was not found in wasm cache`);
+        }
       }
     });
   }

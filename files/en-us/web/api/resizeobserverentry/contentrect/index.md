@@ -44,7 +44,7 @@ it uses that to get the sizing data it needs. If not, it uses `contentRect`.
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.contentBoxSize) {
+    if (entry.contentBoxSize) {
       h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize.inlineSize / 200)}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize.inlineSize / 600)}rem`;
     } else {

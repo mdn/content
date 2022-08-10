@@ -153,7 +153,7 @@ This method has the same purpose as the `draw()` method for `Ball`: it draws the
 This method will do the same thing as the first part of the `update()` method for `Ball` — look to see whether the evil circle is going to go off the edge of the screen, and stop it from doing so. Again, you can mostly just copy the `update()` method for `Ball`, but there are a few changes you should make:
 
 - Get rid of the last two lines — we don't want to automatically update the evil circle's position on every frame, because we will be moving it in some other way, as you'll see below.
-- Inside the `if()` statements, if the tests return true we don't want to update `velX`/`velY`; we want to instead change the value of `x`/`y` so the evil circle is bounced back onto the screen slightly. Adding or subtracting (as appropriate) the evil circle's `size` property would make sense.
+- Inside the `if ()` statements, if the tests return true we don't want to update `velX`/`velY`; we want to instead change the value of `x`/`y` so the evil circle is bounced back onto the screen slightly. Adding or subtracting (as appropriate) the evil circle's `size` property would make sense.
 
 #### collisionDetect()
 

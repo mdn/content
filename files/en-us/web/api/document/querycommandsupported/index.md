@@ -45,7 +45,7 @@ the action.
 ```js
 const flg = document.queryCommandSupported("SelectAll");
 
-if(flg) {
+if (flg) {
   // Do something…
 }
 ```

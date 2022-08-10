@@ -371,6 +371,7 @@ reset.addEventListener('click', () => {
 });
 
 solution.addEventListener('click', () => {
+
   if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';

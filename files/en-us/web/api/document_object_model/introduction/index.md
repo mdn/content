@@ -268,8 +268,11 @@ The following simple example illustrates using the DOM {{domxref("Document")}} A
   <title>Simple Document API example</title>
   <script>
     function setBodyAttr(attr, value) {
-      if (document.body) document.body[attr] = value;
-      else throw new Error("no support");
+      if (document.body) {
+        document.body[attr] = value;
+      } else {
+        throw new Error("no support");
+      }
     }
   </script>
 </head>

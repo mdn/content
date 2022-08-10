@@ -453,9 +453,13 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
         : todos;
 
     $: {
-      if (filter === Filter.ALL) $alert = "Browsing all todos";
-      else if (filter === Filter.ACTIVE) $alert = "Browsing active todos";
-      else if (filter === Filter.COMPLETED) $alert = "Browsing completed todos";
+      if (filter === Filter.ALL) {
+        $alert = "Browsing all todos";
+      } else if (filter === Filter.ACTIVE) {
+        $alert = "Browsing active todos";
+      } else if (filter === Filter.COMPLETED) {
+        $alert = "Browsing completed todos";
+      }
     }
     ```
 
@@ -516,9 +520,13 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
       todos
 
     $: {
-      if (filter === Filter.ALL)               $alert = 'Browsing all todos'
-      else if (filter === Filter.ACTIVE)       $alert = 'Browsing active todos'
-      else if (filter === Filter.COMPLETED)    $alert = 'Browsing completed todos'
+      if (filter === Filter.ALL) {
+        $alert = 'Browsing all todos';
+      } else if (filter === Filter.ACTIVE) {
+        $alert = 'Browsing active todos';
+      } else if (filter === Filter.COMPLETED) {
+        $alert = 'Browsing completed todos';
+      }
     }
 
     const checkAllTodos = (completed: boolean) => {

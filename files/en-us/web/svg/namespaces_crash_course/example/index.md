@@ -281,7 +281,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
 
       // How many motes should there be?
       let num = parseInt( document.getElementById('num_motes').value );
-      if( num < 0 ) {
+      if ( num < 0 ) {
         num = 0;
       }
 

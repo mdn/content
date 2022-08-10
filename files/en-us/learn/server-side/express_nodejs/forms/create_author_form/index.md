@@ -12,12 +12,12 @@ This subarticle shows how to define a page for creating `Author` objects.
 
 ## Import validation and sanitization methods
 
-As with the genre form, to use _express-validator_ we have to *require* the functions we want to use.
+As with the genre form, to use _express-validator_ we have to _require_ the functions we want to use.
 
 Open **/controllers/authorController.js**, and add the following lines at the top of the file:
 
 ```js
-const { body,validationResult } = require('express-validator');
+const { body, validationResult } = require("express-validator");
 ```
 
 ## Controller—get route
@@ -27,7 +27,8 @@ Find the exported `author_create_get()` controller method and replace it with th
 ```js
 // Display Author create form on GET.
 exports.author_create_get = (req, res, next) => {
-  res.render('author_form', { title: 'Create Author'});
+  res.render("author_form", { title: "Create Author" });
+
 };
 ```
 
@@ -39,13 +40,28 @@ Find the exported `author_create_post()` controller method, and replace it with 
 // Handle Author create on POST.
 exports.author_create_post = [
   // Validate and sanitize fields.
-  body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
-    .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),
-  body('family_name').trim().isLength({ min: 1 }).escape().withMessage('Family name must be specified.')
-    .isAlphanumeric().withMessage('Family name has non-alphanumeric characters.'),
-  body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),
-  body('date_of_death', 'Invalid date of death').optional({ checkFalsy: true }).isISO8601().toDate(),
-
+  body("first_name")
+    .trim()
+    .isLength({ min: 1 })
+    .escape()
+    .withMessage("First name must be specified.")
+    .isAlphanumeric()
+    .withMessage("First name has non-alphanumeric characters."),
+  body("family_name")
+    .trim()
+    .isLength({ min: 1 })
+    .escape()
+    .withMessage("Family name must be specified.")
+    .isAlphanumeric()
+    .withMessage("Family name has non-alphanumeric characters."),
+  body("date_of_birth", "Invalid date of birth")
+    .optional({ checkFalsy: true })
+    .isISO8601()
+    .toDate(),
+  body("date_of_death", "Invalid date of death")
+    .optional({ checkFalsy: true })
+    .isISO8601()
+    .toDate(),
   // Process request after validation and sanitization.
   (req, res, next) => {
     // Extract the validation errors from a request.
@@ -53,27 +69,30 @@ exports.author_create_post = [
 
     if (!errors.isEmpty()) {
       // There are errors. Render form again with sanitized values/errors messages.
-      res.render('author_form', { title: 'Create Author', author: req.body, errors: errors.array() });
+      res.render("author_form", {
+        title: "Create Author",
+        author: req.body,
+        errors: errors.array(),
+      });
       return;
     }
-    else {
-      // Data from form is valid.
+    // Data from form is valid.
 
-      // Create an Author object with escaped and trimmed data.
-      const author = new Author(
-        {
-          first_name: req.body.first_name,
-          family_name: req.body.family_name,
-          date_of_birth: req.body.date_of_birth,
-          date_of_death: req.body.date_of_death
-        });
-      author.save(function (err) {
-        if (err) { return next(err); }
-        // Successful - redirect to new author record.
-        res.redirect(author.url);
-      });
-    }
-  }
+    // Create an Author object with escaped and trimmed data.
+    const author = new Author({
+      first_name: req.body.first_name,
+      family_name: req.body.family_name,
+      date_of_birth: req.body.date_of_birth,
+      date_of_death: req.body.date_of_death,
+    });
+    author.save((err) => {
+      if (err) {
+        return next(err);
+      }
+      // Successful - redirect to new author record.
+      res.redirect(author.url);
+    });
+  },
 ];
 ```
 
@@ -91,13 +110,13 @@ The validation code demonstrates several new features:
   ```js
   [
     // Validate fields.
-    body('first_name')
+    body("first_name")
       .trim()
       .isLength({ min: 1 })
       .escape()
-      .withMessage('First name must be specified.')
+      .withMessage("First name must be specified.")
       .isAlphanumeric()
-      .withMessage('First name has non-alphanumeric characters.'),
+      .withMessage("First name has non-alphanumeric characters."),
     // …
   ];
   ```
@@ -106,7 +125,7 @@ The validation code demonstrates several new features:
 
   ```js
   [
-    body('date_of_birth', 'Invalid date of birth')
+    body("date_of_birth", "Invalid date of birth")
       .optional({ checkFalsy: true })
       .isISO8601()
       .toDate(),
@@ -143,7 +162,7 @@ block content
 
 The structure and behavior for this view is exactly the same as for the **genre_form.pug** template, so we won't describe it again.
 
-> **Note:** Some browsers don't support the input `type="date"`, so you won't get the datepicker widget or the default *`dd/mm/yyyy`* placeholder, but will instead get an empty plain text field. One workaround is to explicitly add the attribute `placeholder='dd/mm/yyyy'` so that on less capable browsers you will still get information about the desired text format.
+> **Note:** Some browsers don't support the input `type="date"`, so you won't get the datepicker widget or the default `dd/mm/yyyy` placeholder, but will instead get an empty plain text field. One workaround is to explicitly add the attribute `placeholder='dd/mm/yyyy'` so that on less capable browsers you will still get information about the desired text format.
 
 ### Challenge: Adding the date of death
 

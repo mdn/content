@@ -258,7 +258,7 @@ function populateVoiceList() {
     const option = document.createElement('option');
     option.textContent = `${voice.name} (${voice.lang})`;
 
-    if(voices[i].default) {
+    if (voices[i].default) {
       option.textContent += ' — DEFAULT';
     }
 
@@ -293,7 +293,7 @@ inputForm.onsubmit = (event) => {
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
   for (const voice of voices) {
-    if(voice.name === selectedOption) {
+    if (voice.name === selectedOption) {
       utterThis.voice = voice;
     }
   }

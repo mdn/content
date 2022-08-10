@@ -185,6 +185,7 @@ There is also nothing to stop you running the test on multiple browsers simultan
 
       driver.sleep(2000).then(() => {
         driver.getTitle().then((title) => {
+
           if (title === 'webdriver - Google Search') {
             console.log('Test passed');
           } else {

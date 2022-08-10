@@ -82,31 +82,29 @@ Next, in the `draw()` function we do two things — execute the `gamepadUpdateHa
 
 ```js
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // …
+  // …
 
-    gamepadUpdateHandler();
-    if (gamepadButtonPressedHandler(0)) {
-        playerY -= 5;
-    }
-    else if (gamepadButtonPressedHandler(1)) {
-        playerY += 5;
-    }
-    if (gamepadButtonPressedHandler(2)) {
-        playerX -= 5;
-    }
-    else if (gamepadButtonPressedHandler(3)) {
-        playerX += 5;
-    }
-    if (gamepadButtonPressedHandler(11)) {
-        alert('BOOM!');
-    }
+  gamepadUpdateHandler();
+  if (gamepadButtonPressedHandler(0)) {
+    playerY -= 5;
+  } else if (gamepadButtonPressedHandler(1)) {
+    playerY += 5;
+  }
+  if (gamepadButtonPressedHandler(2)) {
+    playerX -= 5;
+  } else if (gamepadButtonPressedHandler(3)) {
+    playerX += 5;
+  }
+  if (gamepadButtonPressedHandler(11)) {
+    alert('BOOM!');
+  }
 
-    // …
+  // …
 
-    ctx.drawImage(img, playerX, playerY);
-    requestAnimationFrame(draw);
+  ctx.drawImage(img, playerX, playerY);
+  requestAnimationFrame(draw);
 }
 ```
 

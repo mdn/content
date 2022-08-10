@@ -51,7 +51,7 @@ Note that the devtools page does not get access to any other WebExtension APIs, 
 </html>
 ```
 
-The devtools.js file will hold the actual code creating your dev tools extensions.
+The `devtools.js` file will hold the actual code creating your dev tools extensions.
 
 ## Creating panels
 
@@ -62,8 +62,8 @@ Using the `devtools.panels.create()` API, you can create your own panel in the d
 ```js
 browser.devtools.panels.create(
   "My Panel",                      // title
-  "icons/star.png",                // icon
-  "devtools/panel/panel.html"      // content
+  "/icons/star.png",               // icon
+  "/devtools/panel/panel.html"     // content
 ).then((newPanel) => {
   newPanel.onShown.addListener(initialisePanel);
   newPanel.onHidden.addListener(unInitialisePanel);

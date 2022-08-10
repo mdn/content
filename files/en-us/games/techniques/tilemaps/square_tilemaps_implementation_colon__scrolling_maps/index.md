@@ -40,42 +40,42 @@ TODO: show a diagram here explaining this.
 To handle these issues, we need to slightly modify the rendering algorithm. Let's imagine that we have the camera pointing at `(5,10)`. That means that the first tile would be `0x0`. In the demo code, the starting point is stored at `startCol` and `startRow`. It's convenient to also pre-calculate the last tile to be rendered.
 
 ```js
-    var startCol = Math.floor(this.camera.x / map.tsize);
-    var endCol = startCol + (this.camera.width / map.tsize);
-    var startRow = Math.floor(this.camera.y / map.tsize);
-    var endRow = startRow + (this.camera.height / map.tsize);
+const startCol = Math.floor(this.camera.x / map.tsize);
+const endCol = startCol + this.camera.width / map.tsize;
+const startRow = Math.floor(this.camera.y / map.tsize);
+const endRow = startRow + this.camera.height / map.tsize;
 ```
 
 Once we have the first tile, we need to calculate how much its rendering (and therefore the rendering of the other tiles) is offset by. Since the camera is pointing at `(5, 10)`, we know that the first tile should be shifted by `(-5,-10)` pixels. In our demo the shifting amount is stored in the `offsetX` and `offsetY` variables.
 
 ```js
-    var offsetX = -this.camera.x + startCol * map.tsize;
-    var offsetY = -this.camera.y + startRow * map.tsize;
+const offsetX = -this.camera.x + startCol * map.tsize;
+const offsetY = -this.camera.y + startRow * map.tsize;
 ```
 
 With these values in place, the loop that renders the map is quite similar to the one used for rendering static tilemaps. The main difference is that we are adding the `offsetX` and `offsetY` values to the target `x` and `y` coordinates, and these values are rounded, to avoid artifacts that would result from the camera pointing at positions with floating point numbers.
 
 ```js
-for (var c = startCol; c <= endCol; c++) {
-        for (var r = startRow; r <= endRow; r++) {
-            var tile = map.getTile(c, r);
-            var x = (c - startCol) * map.tsize + offsetX;
-            var y = (r - startRow) * map.tsize + offsetY;
-            if (tile !== 0) { // 0 => empty tile
-                this.ctx.drawImage(
-                    this.tileAtlas, // image
-                    (tile - 1) * map.tsize, // source x
-                    0, // source y
-                    map.tsize, // source width
-                    map.tsize, // source height
-                    Math.round(x),  // target x
-                    Math.round(y), // target y
-                    map.tsize, // target width
-                    map.tsize // target height
-                );
-            }
-        }
+for (let c = startCol; c <= endCol; c++) {
+  for (let r = startRow; r <= endRow; r++) {
+    const tile = map.getTile(c, r);
+    const x = (c - startCol) * map.tsize + offsetX;
+    const y = (r - startRow) * map.tsize + offsetY;
+    if (tile !== 0) { // 0 => empty tile
+      this.ctx.drawImage(
+        this.tileAtlas, // image
+        (tile - 1) * map.tsize, // source x
+        0, // source y
+        map.tsize, // source width
+        map.tsize, // source height
+        Math.round(x),  // target x
+        Math.round(y), // target y
+        map.tsize, // target width
+        map.tsize // target height
+      );
     }
+  }
+}
 ```
 
 ## Demo

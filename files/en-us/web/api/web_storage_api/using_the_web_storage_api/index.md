@@ -113,7 +113,7 @@ We have also provided an [event output page](https://mdn.github.io/dom-examples/
 To start with, in [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), we test whether the storage object has already been populated (i.e., the page was previously accessed):
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();

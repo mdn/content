@@ -466,7 +466,7 @@ try {
   console.log(e.description);
 }
 
-// If it does, run the code inside the if() {} block
+// If it does, run the code inside the if () {} block
 if (test.type === 'text') {
   // Hide the native picker and show the fallback
   nativePicker.style.display = 'none';

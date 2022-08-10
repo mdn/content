@@ -26,7 +26,7 @@ A boolean value
 ## Examples
 
 ```js
-if(crossOriginIsolated) {
+if (crossOriginIsolated) {
   // Post SharedArrayBuffer
 } else {
   // Do something else

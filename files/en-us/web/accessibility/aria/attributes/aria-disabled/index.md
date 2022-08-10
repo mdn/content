@@ -67,7 +67,7 @@ function onClick(event) {
 }
 
 function toggleDisabled(element, status, update) {
-  if(status) {
+  if (status) {
     //element.input.disabled = false;
     element.setAttribute('aria-disabled', 'false');
     update.textContent = 'The element is now enabled.';

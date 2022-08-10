@@ -87,7 +87,7 @@ function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   const childNodes = shadow.childNodes;
   for (let i = 0; i < childNodes.length; i++) {
-    if(childNodes[i].nodeName === 'STYLE') {
+    if (childNodes[i].nodeName === 'STYLE') {
       childNodes[i].textContent = `
 div {
   width: ${elem.getAttribute('l')}px;

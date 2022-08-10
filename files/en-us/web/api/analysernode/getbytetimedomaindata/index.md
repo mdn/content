@@ -66,10 +66,11 @@ function draw() {
     const v = dataArray[i]/128.0;
     const y = v * HEIGHT/2;
 
-    if(i === 0)
+    if (i === 0) {
       canvasCtx.moveTo(x, y);
-    else
+    } else {
       canvasCtx.lineTo(x, y);
+    }
 
     x += sliceWidth;
   }

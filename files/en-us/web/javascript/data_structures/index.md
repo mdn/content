@@ -198,21 +198,7 @@ When representing dates, the best choice is to use the built-in [`Date` utility]
 
 Additionally, arrays inherit from `Array.prototype`, which provides to them a handful of convenient methods to manipulate arrays. For example, [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (searching a value in the array) or [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) (adding an element to the array), and so on. This makes Arrays a perfect candidate to represent lists or sets.
 
-[Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are new to JavaScript with ECMAScript 2015, and present an array-like view of an underlying binary data buffer. The following table helps determine the equivalent C data types:
-
-| Type                                     | Value Range                   | Size in bytes | Description                                                                  | Web IDL type          | Equivalent C type               |
-| ---------------------------------------- | ----------------------------- | ------------- | ---------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| {{jsxref("Int8Array")}}         | -128 to 127               | 1             | 8-bit two's complement signed integer                                        | `byte`                | `int8_t`                        |
-| {{jsxref("Uint8Array")}}         | 0 to 255                  | 1             | 8-bit unsigned integer                                                       | `octet`               | `uint8_t`                       |
-| {{jsxref("Uint8ClampedArray")}} | 0 to 255                  | 1             | 8-bit unsigned integer (clamped)                                             | `octet`               | `uint8_t`                       |
-| {{jsxref("Int16Array")}}         | -32768 to 32767           | 2             | 16-bit two's complement signed integer                                       | `short`               | `int16_t`                       |
-| {{jsxref("Uint16Array")}}         | 0 to 65535                | 2             | 16-bit unsigned integer                                                      | `unsigned short`      | `uint16_t`                      |
-| {{jsxref("Int32Array")}}         | -2147483648 to 2147483647 | 4             | 32-bit two's complement signed integer                                       | `long`                | `int32_t`                       |
-| {{jsxref("Uint32Array")}}         | 0 to 4294967295           | 4             | 32-bit unsigned integer                                                      | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}     | `1.2E-38` to `3.4E38`         | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.1234567`)   | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123…15`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1         | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}     | 0 to 2<sup>64</sup> - 1             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
+[Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) present an array-like view of an underlying binary data buffer, and offer many methods that have similar semantics to the array counterparts. "Typed array" is an umbrella term for a range of data structures, including `Int8Array`, `Float32Array`, etc. Check the [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) page for more information.
 
 ### Keyed collections: Maps, Sets, WeakMaps, WeakSets
 

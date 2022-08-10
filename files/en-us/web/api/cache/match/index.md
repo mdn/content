@@ -71,7 +71,7 @@ exception. Inside the `catch()` clause, `match()` is used to
 return the correct response.
 
 In this example, only HTML documents retrieved with the GET HTTP verb will be
-cached. If our `if()` condition is false, then this fetch handler won't
+cached. If our `if ()` condition is false, then this fetch handler won't
 intercept the request. If there are any other fetch handlers registered, they will get a
 chance to call `event.respondWith()`. If no fetch handlers call
 `event.respondWith()`, the request will be handled by the browser as if there

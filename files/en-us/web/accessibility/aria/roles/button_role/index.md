@@ -162,7 +162,7 @@ function handleCommand(event) {
     newNameInput.focus();  // give the text field focus to enable entering and additional name.
 
     // Don't add blank entries to the list.
-    if(name.length > 0) {
+    if (name.length > 0) {
         listItem = document.createElement('li');
         listItem.appendChild(document.createTextNode(name));
 

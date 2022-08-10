@@ -82,13 +82,14 @@ canvas {
 And some JavaScript to set up the canvas and load the image:
 
 ```js
-// get canvas context
-var ctx = document.getElementById('game').getContext('2d');
-// load image
-var image = new Image();
+// Get canvas context
+const ctx = document.getElementById('game').getContext('2d');
+
+// Load image
+const image = new Image();
 image.onload = () => {
-    // draw the image into the canvas
-    ctx.drawImage(image, 0, 0);
+  // Draw the image into the canvas
+  ctx.drawImage(image, 0, 0);
 }
 image.src = 'cat.png';
 ```

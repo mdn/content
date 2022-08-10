@@ -162,7 +162,7 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 
     ```js
     document.onkeydown = function(e) {
-      if(e.keyCode === 13) { // The Enter/Return key
+      if (e.keyCode === 13) { // The Enter/Return key
         document.activeElement.onclick(e);
       }
     };

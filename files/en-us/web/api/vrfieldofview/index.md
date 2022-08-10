@@ -37,7 +37,7 @@ const info = document.querySelector('p');
 const list = document.querySelector('ul');
 let vrDisplay;
 
-if(navigator.getVRDisplays) {
+if (navigator.getVRDisplays) {
     reportFieldOfView();
 } else {
   info.textContent = 'WebVR API not supported by this browser.'

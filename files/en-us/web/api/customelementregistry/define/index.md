@@ -101,7 +101,7 @@ class PopUpInfo extends HTMLElement {
 
     // Insert icon
     let imgUrl;
-    if(this.hasAttribute('img')) {
+    if (this.hasAttribute('img')) {
       imgUrl = this.getAttribute('img');
     } else {
       imgUrl = 'img/default.png';
