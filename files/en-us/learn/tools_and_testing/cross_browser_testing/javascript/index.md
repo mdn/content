@@ -128,7 +128,7 @@ If you look at the console, you'll see the error message "Uncaught TypeError: ca
 function showHeroes(jsonObj) {
   let heroes = jsonObj['members'];
 
-  for(i = 0; i < heroes.length; i++) {
+  for (let i = 0; i < heroes.length; i++) {
     // …
    }
 
@@ -158,7 +158,7 @@ You may already know what is wrong with this code, but let's explore it some mor
 Try inserting the following line just below line 31 (bolded above):
 
 ```js
-console.log('Response value: ' + superHeroes);
+console.log(`Response value: ${superHeroes}`);
 ```
 
 Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before
@@ -277,7 +277,7 @@ The idea behind feature detection is that you can run a test to determine whethe
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.getCurrentPosition((position) => {
     // show the location on a map, perhaps using the Google Maps API
   });
 } else {
@@ -333,11 +333,11 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
 4. Inside the original {{htmlelement("script")}}, add the following code:
 
 5. ```js
-    var myImage = document.querySelector('.my-image');
+    const myImage = document.querySelector('.my-image');
 
-    fetch('flowers.jpg').then(function(response) {
-      response.blob().then(function(myBlob) {
-        var objectURL = URL.createObjectURL(myBlob);
+    fetch('flowers.jpg').then((response) => {
+      response.blob().then((myBlob) => {
+        const objectURL = URL.createObjectURL(myBlob);
         myImage.src = objectURL;
       });
     });
@@ -380,11 +380,11 @@ Here we are testing whether the [`Promise`](/en-US/docs/Web/JavaScript/Reference
 function loadScript(src, done) {
   const js = document.createElement('script');
   js.src = src;
-  js.onload = function() {
+  js.onload = () => {
     done();
   };
-  js.onerror = function() {
-    done(new Error('Failed to load script ' + src));
+  js.onerror = () => {
+    done(new Error(`Failed to load script ${src}`));
   };
   document.head.appendChild(js);
 }
