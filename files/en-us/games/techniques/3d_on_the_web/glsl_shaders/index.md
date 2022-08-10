@@ -189,7 +189,7 @@ scene.add(camera);
 
 const boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 
-cibst shaderMaterial = new THREE.ShaderMaterial({
+const shaderMaterial = new THREE.ShaderMaterial({
   vertexShader: document.getElementById('vertexShader').textContent,
   fragmentShader: document.getElementById('fragmentShader').textContent
 });

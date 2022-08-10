@@ -79,7 +79,7 @@ function decFont() {
 
 function changeImage() {
   const index = Math.ceil(Math.random() * 39 + 1);
-  document.images[0].src = `index${.png}`;
+  document.images[0].src = `${index}.png`;
 }
 ```
 

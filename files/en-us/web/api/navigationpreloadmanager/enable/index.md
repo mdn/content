@@ -43,12 +43,12 @@ The code below shows how to enable preloading, after first using {{domxref("Serv
 
 ```js
 addEventListener('activate', (event) => {
-  event.waitUntil(async () => {
+  event.waitUntil((async () => {
     if (self.registration.navigationPreload) {
       // Enable navigation preloads!
       await self.registration.navigationPreload.enable();
     }
-  }());
+  })());
 });
 ```
 
