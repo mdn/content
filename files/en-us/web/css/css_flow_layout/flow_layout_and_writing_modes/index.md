@@ -12,7 +12,7 @@ The CSS 2.1 specification, which details how normal flow behaves, assumes a hori
 
 This is not a comprehensive guide to the use of writing modes in CSS, the aim here is to document the areas where flow layout interacts with writing modes in possibly unanticipated ways. The [external resources](#external_resources) and [see also](#see_also) sections of this document link to more writing modes resources.
 
-## Writing Modes specification
+## Writing modes specification
 
 The CSS Writing Modes Level 3 Specification defines the impact a change the document writing mode has on flow layout. In the writing modes introduction, [the specification says](https://drafts.csswg.org/css-writing-modes-3/#text-flow),
 
@@ -42,7 +42,7 @@ The final example demonstrates the third possible value for `writing-mode` — `
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/vertical-lr.html", '100%', 720)}}
 
-## Different writing mode from parent
+## Nested writing modes
 
 When a nested box is assigned a different writing mode to its parent, then an inline level box will display as if it has `display: inline-block`.
 

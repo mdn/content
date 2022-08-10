@@ -31,7 +31,7 @@ When a spanner is introduced, it breaks the flow of columns and columns restart 
 
 ### Limitations of column-span
 
-In the current level 1 specification, there are only two allowable values for `column-span`. The value `none` is the initial value and means the item does not span, remaining within a column. The value `all` means the item spans all of the columns. You cannot cause an item to span two out of three columns for example.
+In the current level 1 specification, there are only two allowable values for `column-span`. The value `none` is the initial value and means that the item does not span and remains within a column. The value `all` means that the item spans all of the columns. This means that, for example, you cannot cause an item to span two out of three columns.
 
 ### Things to watch out for
 
@@ -41,7 +41,7 @@ If the spanning element is inside another element which has margins, padding and
 
 Additionally, if a spanning element appears later in the content it can cause unexpected or unwanted behavior when there is not enough content to create columns after the spanner. Use spanning carefully and test at various breakpoints to make sure you get the intended effect.
 
-## Filling and balancing the columns
+## Filling and balancing columns
 
 A balanced set of columns is where all columns have approximately the same amount of content. Filling and balancing comes into play when the amount of content does not match the amount of space provided, such as when a height is declared on the container.
 

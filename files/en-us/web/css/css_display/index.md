@@ -40,7 +40,7 @@ browser-compat: css.properties.display
 - [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
 - [In flow and out of flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
 
-### Flex
+### Flexbox
 
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)

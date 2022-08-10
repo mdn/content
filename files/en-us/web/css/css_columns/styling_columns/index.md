@@ -33,7 +33,7 @@ The specification defines `column-rule-width`, `column-rule-style` and `column-r
 
 These properties are applied to the element which is the multicol container and therefore all columns will have the same rule. Rules are only drawn between columns and not on the outer edges. Rules should also only be drawn between columns which have content.
 
-In this next example, a 5px-dotted rule with a color of rebeccapurple has been created using the longhand values.
+In this next example, a 5px-dotted rule with a color of `rebeccapurple` has been created using the longhand values.
 
 {{EmbedGHLiveSample("css-examples/multicol/styling/column-rule.html", '100%', 550)}}
 

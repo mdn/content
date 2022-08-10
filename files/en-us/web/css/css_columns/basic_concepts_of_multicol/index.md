@@ -28,7 +28,7 @@ The properties defined by the specification are:
 - {{cssxref("column-fill")}}
 - {{cssxref("column-gap")}}
 
-By adding `column-count` or `column-width` to an element, that element becomes a _multi-column container_, or a _multicol container_, for short. The columns are anonymous boxes and described as column boxes in the specification.
+By adding `column-count` or `column-width` to an element, that element becomes a _multi-column container_, or _multicol container_ for short. The columns are anonymous boxes and described as column boxes in the specification.
 
 ## Defining columns
 
@@ -64,7 +64,7 @@ In this next example, we use `column-width` of 200px and `column-count` of 2. Ev
 
 {{EmbedGHLiveSample("css-examples/multicol/basics/column-count-width.html", '100%', 550)}}
 
-### Property shorthand
+### Shorthand for columns property
 
 You can use the `columns` shorthand to set `column-count` and `column-width`. If you set a length unit, this will be used for `column-width`, set an integer and it will be used for `column-count`. You can set both, separating the two values with a space.
 
@@ -94,4 +94,4 @@ This CSS would give the same result as example 3, with both `column-count` and `
 
 ## Next steps
 
-In this guide, we've learned the basic use of Multiple-Column Layout. In the next guide, we will look at how much we can [style the columns themselves](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns).
+In this guide, we've learned the basic use of multiple-column layout. In the next guide, we will look at how much we can [style the columns themselves](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns).

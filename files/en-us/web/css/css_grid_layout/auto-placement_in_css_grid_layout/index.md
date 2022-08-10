@@ -1,5 +1,5 @@
 ---
-title: Auto-placement in CSS Grid Layout
+title: Auto-placement in grid layout
 slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 tags:
   - CSS

@@ -38,7 +38,7 @@ The Box Model specification defines a set of keywords that refer to the edges of
 
 > **Note:** This specification defines the physical padding and margin properties. Flow-relative properties, which relate to text direction, are defined in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties).
 
-### Properties for controlling the margins of a box
+### Properties for controlling the margin of a box
 
 Margins surround the border edge of a box, and provide spacing between boxes.
 
@@ -49,7 +49,7 @@ Margins surround the border edge of a box, and provide spacing between boxes.
 - {{CSSxRef("margin-top")}}
 - {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
 
-### Properties for controlling the paddings of a box
+### Properties for controlling the padding for a box
 
 Padding is inserted between the content edge and border edge of a box.
 

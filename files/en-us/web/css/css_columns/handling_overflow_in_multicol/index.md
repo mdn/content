@@ -27,7 +27,7 @@ If you want an image to size down to fit the column box, the standard responsive
 
 ## More columns than will fit
 
-How overflowing columns are handled depends on if the media context is fragmented, such as print, or continuous, such as a web page.
+How overflowing columns are handled depends on whether the media context is fragmented, such as print, or is continuous, such as a web page.
 
 In fragmented media, after a fragment (for example, a page) is filled with columns, the columns will move to a new page and fill that up with columns. In continuous media, columns will overflow in the inline direction. On the web this means that you will get a horizontal scrollbar.
 
