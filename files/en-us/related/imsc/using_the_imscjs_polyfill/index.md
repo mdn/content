@@ -185,7 +185,7 @@ for (let i = 0; i < timeEvents.length; i++) {
   const Cue = window.VTTCue || window.TextTrackCue;
 
   let myCue;
-  if (i < (timeEvents.length - 1) {
+  if (i < timeEvents.length - 1) {
     myCue = Cue(timeEvents[i], myVideo.duration, "");
   } else {
     myCue = new Cue(timeEvents[i], timeEvents[i + 1], ""); 
