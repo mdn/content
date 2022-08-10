@@ -186,7 +186,7 @@ _No changes._
 
 ### Other
 
-- The `headerURL`/`theme_frame` properties for [Webextension themes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) are now supported on Firefox for Android ({{bug(1429488)}}).
+- The `headerURL`/`theme_frame` properties for [WebExtension themes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) are now supported on Firefox for Android ({{bug(1429488)}}).
 
 ## See also
 
