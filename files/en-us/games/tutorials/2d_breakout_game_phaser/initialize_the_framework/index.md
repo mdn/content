@@ -35,9 +35,9 @@ The HTML document structure is quite simple, as the game will be rendered entire
 <body>
 <script>
     const game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
-      preload: preload,
-      create: create,
-      update: update
+      preload,
+      create,
+      update,
     });
     function preload() {}
     function create() {}
