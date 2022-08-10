@@ -153,13 +153,13 @@ Therefore, as a rule of thumb, whenever your operation encounters a promise, ret
 const listOfIngredients = [];
 
 doSomething()
-  .then((url) => {
-    return fetch(url)
+  .then((url) =>
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         listOfIngredients.push(data);
-      });
-  })
+      })
+  )
   .then(() => {
     console.log(listOfIngredients);
   });

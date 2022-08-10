@@ -50,13 +50,15 @@ this.addEventListener('activate', (event) => {
   const cachesToKeep = ['v2'];
 
   event.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(keyList.map((key) => {
-        if (cachesToKeep.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+    caches.keys().then((keyList) =>
+      Promise.all(
+        keyList.map((key) => {
+          if (!cachesToKeep.includes(key)) {
+            return caches.delete(key);
+          }
+        })
+      )
+    )
   );
 });
 ```
