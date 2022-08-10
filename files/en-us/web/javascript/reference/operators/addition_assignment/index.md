@@ -29,10 +29,10 @@ x += y // x = x + y
 ### Using addition assignment
 
 ```js
-// Assuming the following variables
-//  foo = 'foo'
-//  bar = 5
-//  baz = true
+// Let's say we have some variables
+let foo = 'foo'
+let bar = 5
+let baz = true
 
 // Number + Number -> addition
 bar += 2 // 7
@@ -41,7 +41,7 @@ bar += 2 // 7
 baz += 1 // 2
 
 // Boolean + Boolean -> addition
-baz += false // 1
+baz += false // 2
 
 // Number + String -> concatenation
 bar += 'foo' // "5foo"
