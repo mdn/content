@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform.inverse
 slug: Web/API/XRRigidTransform/inverse
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -51,13 +52,13 @@ for (let view of pose.view) {
   let viewport = glLayer.getViewport(view);
   gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
-  /* ... */
+  // …
 
   mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, objectMatrix);
   gl.uniformMatrix4fv(programInfo.uniformLocations.modelViewMatrix,
                       false, modelViewMatrix);
 
-  /* ... */
+  // …
 }
 ```
 

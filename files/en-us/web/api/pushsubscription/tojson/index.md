@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.toJSON()
 slug: Web/API/PushSubscription/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -38,9 +39,9 @@ A JSON object. It currently only contains the subscription endpoint, as an
 ## Examples
 
 ```js
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.getSubscription().then(function(subscription) {
-    var mySubscription = subscription.toJSON();
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.getSubscription().then((subscription) => {
+    const mySubscription = subscription.toJSON();
     // do something with subscription details
   })
 });

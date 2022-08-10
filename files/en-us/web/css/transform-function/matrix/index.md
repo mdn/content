@@ -124,7 +124,7 @@ matrix(a, b, c, d, tx, ty)
 </table>
 
 The values represent the following functions:
-`matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )`
+`matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())`
 
 ## Examples
 

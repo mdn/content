@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicy.createScript()
 slug: Web/API/TrustedTypePolicy/createScript
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,7 +25,7 @@ createScript(input, args)
 
 - `input`
   - : A string containing the string to be sanitized by the policy.
-- `args`{{optional_inline}}
+- `args` {{optional_inline}}
   - : Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.
 
 ### Return value

@@ -1,6 +1,7 @@
 ---
 title: MediaDeviceInfo.groupId
 slug: Web/API/MediaDeviceInfo/groupId
+page-type: web-api-instance-property
 tags:
   - API
   - Device
@@ -39,12 +40,12 @@ devices together for presentation purposes, or to make it easy for the user to c
 use the built-in camera and microphone on the same display at the same time.
 
 ```js
-const getDeviceGroup = mainDevInfo => {
+const getDeviceGroup = (mainDevInfo) => {
   let devList = [];
 
   navigator.mediaDevices.enumerateDevices()
-  .then(devices => {
-    devices.forEach(device => {
+  .then((devices) => {
+    devices.forEach((device) => {
       if (device.groupId === mainDevInfo.groupId) {
         devList.push(device);
       }
@@ -79,12 +80,12 @@ This version of the example puts the passed-in device at the top of the result l
 then adds any other members of the group that are found:
 
 ```js
-const getDeviceGroup = mainDevInfo => {
+const getDeviceGroup = (mainDevInfo) => {
   let devList = [mainDevInfo];
 
   navigator.mediaDevices.enumerateDevices()
-  .then(devices => {
-    devices.forEach(device => {
+  .then((devices) => {
+    devices.forEach((device) => {
       if ((device.groupId === mainDevInfo.groupId) &&
           (device.deviceId !== mainDevInfo.deviceId)) {
         devList.push(device);

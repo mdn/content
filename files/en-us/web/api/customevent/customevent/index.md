@@ -1,6 +1,7 @@
 ---
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
+page-type: web-api-constructor
 tags:
   - Constructor
   - Reference

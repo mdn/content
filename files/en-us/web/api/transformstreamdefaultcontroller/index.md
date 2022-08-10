@@ -1,6 +1,7 @@
 ---
 title: TransformStreamDefaultController
 slug: Web/API/TransformStreamDefaultController
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -16,7 +17,7 @@ When constructing a {{domxref("TransformStream")}}, the `TransformStreamDefaultC
 
 ## Properties
 
-- {{domxref("TransformStreamDefaultController.desiredSize")}}{{readonlyinline}}
+- {{domxref("TransformStreamDefaultController.desiredSize")}} {{readonlyinline}}
   - : Returns the desired size to fill the readable side of the stream's internal queue.
 
 ## Methods
@@ -43,9 +44,9 @@ const transformContent = {
         if (chunk === null) controller.terminate()
         else if (ArrayBuffer.isView(chunk))
           controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength))
-        else if (Array.isArray(chunk) && chunk.every(value => typeof value === 'number'))
+        else if (Array.isArray(chunk) && chunk.every((value) => typeof value === 'number'))
           controller.enqueue(new Uint8Array(chunk))
-        else if ('function' === typeof chunk.valueOf && chunk.valueOf() !== chunk)
+        else if (typeof chunk.valueOf === 'function' && chunk.valueOf() !== chunk)
           this.transform(chunk.valueOf(), controller) // hack
         else if ('toJSON' in chunk) this.transform(JSON.stringify(chunk), controller)
         break
@@ -58,6 +59,7 @@ const transformContent = {
       default:
         controller.enqueue(this.textencoder.encode(String(chunk)))
         break
+    }
   },
   flush() { /* do any destructor work here */ }
 }

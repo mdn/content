@@ -12,5 +12,5 @@ For example, if you leave off a closing brace (`}`) when defining a {{Glossary("
 
 ## See also
 
-- {{Interwiki("wikipedia", "Syntax error")}} on Wikipedia
+- [Syntax error](https://en.wikipedia.org/wiki/Syntax_error) on Wikipedia
 - {{jsxref("SyntaxError")}} JavaScript object

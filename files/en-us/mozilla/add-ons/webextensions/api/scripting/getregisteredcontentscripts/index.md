@@ -60,14 +60,14 @@ await browser.scripting.registerContentScripts([
 
 // Retrieve all content scripts.
 let scripts = await browser.scripting.getRegisteredContentScripts();
-console.log(scripts.map(script => script.id)); // ["script-1", "script-2"]
+console.log(scripts.map((script) => script.id)); // ["script-1", "script-2"]
 
 // Only retrieve the second script.
 scripts = await browser.scripting.getRegisteredContentScripts({
   ids: ["script-2"],
 });
-console.log(scripts.map(script => script.id)); // ["script-2"]
-````
+console.log(scripts.map((script) => script.id)); // ["script-2"]
+```
 
 {{WebExtExamples}}
 
@@ -75,6 +75,6 @@ console.log(scripts.map(script => script.id)); // ["script-2"]
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting/#method-getRegisteredContentScripts) API.
+> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-getRegisteredContentScripts) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

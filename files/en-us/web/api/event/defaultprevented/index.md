@@ -1,6 +1,7 @@
 ---
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only
@@ -38,10 +39,10 @@ function logClick(event) {
 
   if (event.target.tagName === 'A') {
     if (event.defaultPrevented) {
-      log.innerText = 'Sorry, but you cannot visit this link!\n' + log.innerText;
+      log.innerText = `Sorry, but you cannot visit this link!\n${log.innerText}`;
     }
     else {
-      log.innerText = 'Visiting link...\n' + log.innerText;
+      log.innerText = `Visiting link…\n${log.innerText}`;
     }
   }
 }

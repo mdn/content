@@ -104,7 +104,7 @@ Note that:
   - : Han "Earthly Branch" ordinals.
 - `cjk-heavenly-stem`, `-moz-cjk-heavenly-stem`
   - : Han "Heavenly Stem" ordinals.
-- `cjk-ideographic`{{experimental_inline}}
+- `cjk-ideographic` {{experimental_inline}}
   - : Identical to `trad-chinese-informal`.
 - `devanagari`, `-moz-devanagari`
   - : Devanagari numbering.
@@ -121,7 +121,7 @@ Note that:
 - `hiragana` {{experimental_inline}}
   - : Dictionary-order hiragana lettering.
 - `hiragana-iroha` {{experimental_inline}}
-  - : {{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} hiragana lettering
+  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) hiragana lettering
 - `japanese-formal` {{experimental_inline}}
   - : Japanese formal numbering to be used in legal or financial documents. The kanjis are designed so that they can't be modified to look like another correct one.
 - `japanese-informal` {{experimental_inline}}
@@ -131,7 +131,7 @@ Note that:
 - `katakana` {{experimental_inline}}
   - : Dictionary-order katakana lettering
 - `katakana-iroha` {{experimental_inline}}
-  - : {{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} katakana lettering
+  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) katakana lettering
 - `korean-hangul-formal` {{experimental_inline}}
   - : Korean hangul numbering.
 - `korean-hanja-formal` {{experimental_inline}}
@@ -558,7 +558,7 @@ input {
 
 ```js
 const container = document.querySelector(".container");
-container.addEventListener("change", event => {
+container.addEventListener("change", (event) => {
   const list = document.querySelector("ol");
   list.setAttribute("style", `list-style-type: ${event.target.value}`);
 });

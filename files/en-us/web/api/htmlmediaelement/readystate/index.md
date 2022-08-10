@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -82,9 +83,9 @@ audio will play.
 ```
 
 ```js
-var obj = document.getElementById('example');
+const obj = document.getElementById('example');
 
-obj.addEventListener('loadeddata', function() {
+obj.addEventListener('loadeddata', () => {
 
   if(obj.readyState >= 2) {
     obj.play();

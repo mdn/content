@@ -1,33 +1,34 @@
 ---
 title: 'IDBFileRequest: progress event'
 slug: Web/API/IDBFileRequest/progress_event
+page-type: web-api-event
 tags:
   - API
   - DOM
   - Files
-  - Non-standard
   - Event
   - Reference
   - WebAPI
+  - Non-standard
+  - Deprecated
 browser-compat: api.IDBFileRequest.progress_event
 ---
-{{APIRef("IndexedDB")}} {{non-standard_header}}
+{{APIRef("IndexedDB")}}{{deprecated_header}}
+
+> **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
+> Consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 The **`progress`** is fired periodically when the request in progress.
 
 This event is not cancelable and does not bubble.
-
-> **Note:** The three interfaces `IDBMutableFile`, `IDBFileHandle`, and `IDBFileRequest` are deprecated and only implemented
-> for backward compatibility in Firefox. _Do not use them anymore_:
-> consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('complete', event => { });
-onerror = complete => { };
+addEventListener('complete', (event) => { });
+onerror = (complete) => { };
 ```
 
 ## Event type
@@ -44,8 +45,8 @@ A {{domxref("Event")}} with two extra properties:
 ```js
 // Assuming 'request' which is an IDBFileRequest object
 
-request.onprogress = function (status) {
-  var progress = document.querySelector('progress');
+request.onprogress = (status) => {
+  const progress = document.querySelector('progress');
 
   progress.value = status.loaded;
   progress.max   = status.total;
@@ -58,7 +59,8 @@ Not part of any current specification.
 
 ## Browser compatibility
 
-{{Compat}}
+This event is not supported by any current browser.
+From Firefox 102 it is behind the preference `dom.fileHandle.enabled`.
 
 ## See also
 

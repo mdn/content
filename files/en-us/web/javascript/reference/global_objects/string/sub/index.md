@@ -39,13 +39,13 @@ The following example uses the `sub()` and
 {{jsxref("String.prototype.sup()", "sup()")}} methods to format a string:
 
 ```js
-var superText = 'superscript';
-var subText = 'subscript';
+const superText = 'superscript';
+const subText = 'subscript';
 
-console.log('This is what a ' + superText.sup() + ' looks like.');
+console.log(`This is what a ${superText.sup()} looks like.`);
 // "This is what a <sup>superscript</sup> looks like."
 
-console.log('This is what a ' + subText.sub() + ' looks like.');
+console.log(`This is what a ${subText.sub()} looks like.`);
 // "This is what a <sub>subscript</sub> looks like."
 ```
 

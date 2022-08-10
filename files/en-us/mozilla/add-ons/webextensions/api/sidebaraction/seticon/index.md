@@ -48,7 +48,7 @@ let settingIcon = browser.sidebarAction.setIcon(
 
   - : `object`. An object with the following properties:
 
-    - `imageData`{{optional_inline}}
+    - `imageData` {{optional_inline}}
 
       - : `{{WebExtAPIRef('sidebarAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
 
@@ -63,7 +63,7 @@ let settingIcon = browser.sidebarAction.setIcon(
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-    - `path`{{optional_inline}}
+    - `path` {{optional_inline}}
 
       - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
 
@@ -86,7 +86,7 @@ let settingIcon = browser.sidebarAction.setIcon(
 
         if `path` is `null`, and `tabId` was omitted, and there was a global icon set, it will be reset to the manifest icon.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the icon only for the given tab.
     - `windowId` {{optional_inline}}
       - : `integer`. Sets the icon only for the given window.

@@ -1,6 +1,7 @@
 ---
 title: WakeLockSentinel.release()
 slug: Web/API/WakeLockSentinel/release
+page-type: web-api-instance-method
 tags:
   - API
   - Method

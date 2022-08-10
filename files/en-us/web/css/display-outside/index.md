@@ -8,7 +8,7 @@ tags:
   - Data Type
   - Reference
   - display-outside
-spec-urls: https://drafts.csswg.org/css-display/#typedef-display-outside
+browser-compat: css.properties.display.display-outside
 ---
 {{CSSRef}}
 
@@ -55,7 +55,7 @@ span {
 
 ## Browser compatibility
 
-{{Compat("css.properties.display.display-outside", 10)}}
+{{Compat}}
 
 ## See also
 

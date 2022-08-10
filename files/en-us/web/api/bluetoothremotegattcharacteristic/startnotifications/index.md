@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.startNotifications()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/startNotifications
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth

@@ -28,7 +28,7 @@ Using a TV remote to control the game ended up being surprisingly easy, because 
 
 ```js
 this.cursors = this.input.keyboard.createCursorKeys();
-//...
+// …
 if(this.cursors.right.isDown) {
     // move player right
 }
@@ -37,9 +37,9 @@ if(this.cursors.right.isDown) {
 It works out of the box. The cursors are the four directional arrow keys on the keyboard, and these have exactly the same key codes as the arrow keys on the remote. How do you know the codes for the other remote keys? You can check them by printing the responses out in the console:
 
 ```js
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", (event) => {
     console.log(event.keyCode);
-}, this);
+}, true);
 ```
 
 Every key pressed on the remote will show its key code in the console. You can also check this handy cheat sheet seen below if you're working with Panasonic TVs running Firefox OS:
@@ -49,7 +49,7 @@ Every key pressed on the remote will show its key code in the console. You can a
 You can add moving between states, starting a new game, controlling the ship and blowing stuff up, pausing and restarting the game. All that is needed is checking for key presses:
 
 ```js
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", (event) => {
     switch(event.keyCode) {
         case 8: {
             // pause the game
@@ -59,9 +59,9 @@ window.addEventListener("keydown", function(event) {
             // detonate bomb
             break;
         }
-        // ...
+        // …
     }
-}, this);
+}, true);
 ```
 
 You can see it in action by watching [this video](https://www.youtube.com/watch?v=Bh11sP0bcTY).
@@ -74,7 +74,7 @@ Leapmotion is becoming more and more popular due to very good integration with V
 
 As well as being great for virtual interfaces, it can also be used for a casual 2D gaming experiences. It would be very difficult to do everything with only your hands, but it's totally doable for the simple Captain Roger's gameplay — steering the ship and shooting the bullets.
 
-There's good [Hello World](https://developer-archive.leapmotion.com/documentation/javascript/devguide/Sample_Tutorial.html) and [Getting Started](https://developer.leapmotion.com/getting-started/javascript) JavaScript tutorials available on the Leap Motion documentation pages, which will get you through the basics. You can also check out the tutorial about [using Leap Motion plugin for Kiwi.js](https://gamedevelopment.tutsplus.com/tutorials/add-motion-control-to-a-kiwijs-game-with-the-leap-motion-controller--cms-20455), or the case study of [building a web game with Leap Motion and Pixi.js](https://arstechnica.com/information-technology/2014/04/building-a-gesture-controlled-web-game-with-leap-motion/). Be sure to visit the [LeapJS repository on GitHub](https://github.com/leapmotion/leapjs) to learn about the JavaScript client for the Leap Motion controller and read the documentation there. If all else fails, there's also a [gallery of working examples](https://gallery.leapmotion.com/) you can look at.
+There's a good [Hello World](https://developer-archive.leapmotion.com/documentation/javascript/devguide/Sample_Tutorial.html) tutorial available on the Leap Motion documentation pages, which will get you through the basics. You can also check out the tutorial about [using the Leap Motion plugin for Kiwi.js](https://gamedevelopment.tutsplus.com/tutorials/add-motion-control-to-a-kiwijs-game-with-the-leap-motion-controller--cms-20455), or the case study of [building a web game with Leap Motion and Pixi.js](https://arstechnica.com/information-technology/2014/04/building-a-gesture-controlled-web-game-with-leap-motion/). Be sure to visit the [LeapJS repository on GitHub](https://github.com/leapmotion/leapjs) to learn about the JavaScript client for the Leap Motion controller and read the documentation there. If all else fails, there's also a [gallery of working examples](https://gallery.leapmotion.com/) you can look at.
 
 To get the Leap Motion working on your computer you have to first install it by following the steps at [docs.ultraleap.com](https://docs.ultraleap.com/hand-tracking/getting-started.html#installation-guides). When everything is installed and the controller is connected to your computer we can proceed with implementing support in our [little demo](https://github.com/end3r/JavaScript-Game-Controls/). First, we add a `<script>` tag with the `url` pointing at [this file](https://js.leapmotion.com/leap-0.6.4.min.js), and add `<div id="output"></div>` just before the closing `</body>` tag for outputting diagnostic information.
 
@@ -92,7 +92,7 @@ Right after that we use the Leap's `loop` method to get the information held in 
 
 ```js
 Leap.loop({
-    hand: function(hand) {
+    hand(hand) {
         horizontalDegree = Math.round(hand.roll() * toDegrees);
         verticalDegree = Math.round(hand.pitch() * toDegrees);
         grabStrength = hand.grabStrength;
@@ -110,7 +110,7 @@ The code above is calculating and assigning the `horizontalDegree`, `verticalDeg
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // ...
+    // …
 
     if(horizontalDegree > degreeThreshold) {
         playerX -= 5;
@@ -124,7 +124,7 @@ function draw() {
     else if(verticalDegree < -degreeThreshold) {
         playerY -= 5;
     }
-    if(grabStrength == 1) {
+    if(grabStrength === 1) {
         alert('BOOM!');
     }
 
@@ -150,7 +150,7 @@ If the frequency of the bounced sound is shifted from the original one, then we 
 This can be accomplished using [a small library](https://github.com/DanielRapp/doppler) created by Daniel Rapp — it can be as simple as calculating the difference between two frequencies:
 
 ```js
-doppler.init(function(bandwidth) {
+doppler.init((bandwidth) => {
     var diff = bandwidth.left - bandwidth.right;
 });
 ```
@@ -178,8 +178,8 @@ Cylon.robot({
   devices: {
     makey: { driver: 'makey-button', pin: 2 }
   },
-  work: function(my) {
-    my.makey.on('push', function() {
+  work(my) {
+    my.makey.on('push', () => {
       console.log("Button pushed!");
     });
   }

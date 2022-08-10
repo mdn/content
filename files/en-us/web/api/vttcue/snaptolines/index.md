@@ -1,6 +1,7 @@
 ---
 title: VTTCue.snapToLines
 slug: Web/API/VTTCue/snapToLines
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -11,7 +11,7 @@ tags:
   - default
   - default-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.default-src
+browser-compat: http.headers.Content-Security-Policy.default-src
 ---
 {{HTTPSidebar}}
 

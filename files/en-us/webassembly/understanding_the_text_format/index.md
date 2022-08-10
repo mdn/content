@@ -83,7 +83,7 @@ The number types are:
 A single parameter is written `(param i32)` and the return type is written `(result i32)`, hence a binary function that takes two 32-bit integers and returns a 64-bit float would be written like this:
 
 ```wasm
-(func (param i32) (param i32) (result f64) ... )
+(func (param i32) (param i32) (result f64) ...)
 ```
 
 After the signature, locals are listed with their type, for example `(local i32)`. Parameters are basically just locals that are initialized with the value of the corresponding argument passed by the caller.
@@ -156,7 +156,7 @@ Our function won't do very much on its own — now we need to call it. How do we
 Like locals, functions are identified by an index by default, but for convenience, they can be named. Let's start by doing this — first, we'll add a name preceded by a dollar sign, just after the `func` keyword:
 
 ```wasm
-(func $add … )
+(func $add …)
 ```
 
 Now we need to add an export declaration — this looks like so:
@@ -185,7 +185,7 @@ Next, we'll load our binary into a typed array called `addCode` (as described in
 
 ```js
 WebAssembly.instantiateStreaming(fetch('add.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.add(1, 2));  // "3"
   });
 ```
@@ -224,7 +224,7 @@ The JavaScript code to call our above module looks like so:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('call.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.getAnswerPlus1());  // "43"
   });
 ```
@@ -254,14 +254,14 @@ This would look like the following:
 ```js
 var importObject = {
   console: {
-    log: function(arg) {
+    log(arg) {
       console.log(arg);
     }
   }
 };
 
 WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     obj.instance.exports.logIt();
   });
 ```
@@ -356,7 +356,7 @@ var memory = new WebAssembly.Memory({initial:1});
 var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
 WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     obj.instance.exports.writeHi();
   });
 ```
@@ -405,13 +405,13 @@ So how do we place wasm functions in our table? Just like `data` sections can be
 In JavaScript, the equivalent calls to create such a table instance would look something like this:
 
 ```js
-function() {
+function () {
   // table section
-  var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+  const tbl = new WebAssembly.Table({initial: 2, element: "anyfunc"});
 
   // function sections:
-  var f1 = ... /* some imported WebAssembly function */
-  var f2 = ... /* some imported WebAssembly function */
+  const f1 = ... /* some imported WebAssembly function */
+  const f2 = ... /* some imported WebAssembly function */
 
   // elem section
   tbl.set(0, f1);
@@ -472,7 +472,7 @@ We load it into a webpage using the following JavaScript:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.callByIndex(0)); // returns 42
     console.log(obj.instance.exports.callByIndex(1)); // returns 13
     console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
@@ -487,7 +487,7 @@ WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
 
 Because JavaScript has full access to function references, the Table object can be mutated from JavaScript using the [`grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) and [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) methods. And WebAssembly code is itself able to manipulate tables using instructions added as part of [Reference types](#reference_types), such as `table.get` and `table.set`.
 
-Because tables are mutable, they can be used to implement sophisticated load-time and run-time [dynamic linking schemes](https://webassembly.org/docs/dynamic-linking). When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled `.dll`s share a single process's address space.
+Because tables are mutable, they can be used to implement sophisticated load-time and run-time [dynamic linking schemes](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled `.dll`s share a single process's address space.
 
 To see this in action, we'll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple [`instantiate()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) calls.
 
@@ -540,7 +540,7 @@ These work as follows:
 After converting to assembly, we then use `shared0.wasm` and `shared1.wasm` in JavaScript via the following code:
 
 ```js
-var importObj = {
+const importObj = {
   js: {
     memory : new WebAssembly.Memory({ initial: 1 }),
     table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
@@ -550,7 +550,7 @@ var importObj = {
 Promise.all([
   WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
   WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
-]).then(function(results) {
+]).then((results) => {
   console.log(results[1].instance.exports.doIt());  // prints 42
 });
 ```
@@ -633,7 +633,7 @@ As described above, you can create shared WebAssembly [`Memory`](/en-US/docs/Web
 Over on the JavaScript API side, the [`WebAssembly.Memory()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory) constructor's initialization object now has a `shared` property, which when set to `true` will create a shared memory:
 
 ```js
-let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+const memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
 ```
 
 the memory's [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) property will now return a `SharedArrayBuffer`, instead of the usual `ArrayBuffer`:

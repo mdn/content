@@ -1,6 +1,7 @@
 ---
 title: 'MessagePort: messageerror event'
 slug: Web/API/MessagePort/messageerror_event
+page-type: web-api-event
 tags:
   - Event
 browser-compat: api.MessagePort.messageerror_event
@@ -16,9 +17,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('messageerror', event => { });
+addEventListener('messageerror', (event) => { });
 
-onmessageerror = event => { };
+onmessageerror = (event) => { };
 ```
 
 ## Event type

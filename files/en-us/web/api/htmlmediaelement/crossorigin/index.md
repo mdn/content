@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.crossOrigin
 slug: Web/API/HTMLMediaElement/crossOrigin
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

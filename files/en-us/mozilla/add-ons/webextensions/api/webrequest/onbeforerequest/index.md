@@ -66,7 +66,7 @@ Events have three functions:
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
-- `extraInfoSpec`{{optional_inline}}
+- `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:
 
@@ -130,19 +130,19 @@ Events have three functions:
     - `failoverTimeout`
       - : `integer`. Failover timeout in seconds. If the proxy connection fails, the proxy will not be used again for this period.
 
-- `requestBody`{{optional_inline}}
+- `requestBody` {{optional_inline}}
 
   - : `object`. Contains the HTTP request body data. Only provided if `extraInfoSpec` contains `"requestBody"`.
 
-    - `error`{{optional_inline}}
+    - `error` {{optional_inline}}
       - : `string`. This is set if any errors were encountered when obtaining request body data.
-    - `formData`{{optional_inline}}
+    - `formData` {{optional_inline}}
 
       - : `object`. This object is present if the request method is POST and the body is a sequence of key-value pairs encoded in UTF-8 as either "multipart/form-data" or "application/x-www-form-urlencoded".
 
         It is a dictionary in which each key contains the list of all values for that key. For example: `{'key': ['value1', 'value2']}`. If the data is of another media type, or if it is malformed, the object is not present.
 
-    - `raw`{{optional_inline}}
+    - `raw` {{optional_inline}}
       - : `array` of `{{WebExtAPIRef('webRequest.UploadData')}}`. If the request method is PUT or POST, and the body is not already parsed in `formData`, then this array contains the unparsed request body elements.
 
 - `requestId`
@@ -259,7 +259,7 @@ let redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gi
 function redirectAsync(requestDetails) {
   console.log("Redirecting async: " + requestDetails.url);
   return new Promise((resolve, reject) => {
-    window.setTimeout(() => {
+    setTimeout(() => {
       resolve({redirectUrl});
     }, 2000);
   });

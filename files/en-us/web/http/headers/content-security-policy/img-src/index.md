@@ -11,7 +11,7 @@ tags:
   - Security
   - img-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.img-src
+browser-compat: http.headers.Content-Security-Policy.img-src
 ---
 {{HTTPSidebar}}
 

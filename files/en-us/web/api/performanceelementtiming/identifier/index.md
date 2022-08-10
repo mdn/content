@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.identifier
 slug: Web/API/PerformanceElementTiming/identifier
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -27,7 +28,7 @@ In this example the value of [`elementtiming`](/en-US/docs/Web/HTML/Attributes/e
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.naturalWidth);
     }

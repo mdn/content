@@ -1,6 +1,7 @@
 ---
 title: 'DedicatedWorkerGlobalScope: messageerror event'
 slug: Web/API/DedicatedWorkerGlobalScope/messageerror_event
+page-type: web-api-event
 tags:
   - API
   - DedicatedWorkerGlobalScope
@@ -20,9 +21,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('messageerror', event => { });
+addEventListener('messageerror', (event) => { });
 
-onmessageerror = event => { };
+onmessageerror = (event) => { };
 ```
 
 ## Event type
@@ -84,5 +85,4 @@ self.onmessageerror = (event) => {
 - {{domxref("WorkerGlobalScope")}}
 - Related events: [`message`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event)
 - [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

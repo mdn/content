@@ -13,10 +13,10 @@ Code is run in order from the first line in the file to the last line, unless th
 For example, imagine a script used to validate user data from a webpage form. The script submits validated data, but if the user, say, leaves a required field empty, the script prompts them to fill it in. To do this, the script uses a {{Glossary("Conditional", "conditional")}} structure or `if...else`, so that different code executes depending on whether the form is complete or not:
 
 ```js
-if (field==empty) {
-    promptUser();
+if (isEmpty(field)) {
+  promptUser();
 } else {
-    submitForm();
+  submitForm();
 }
 ```
 
@@ -28,6 +28,6 @@ Control flow means that when you read a script, you must not only read from star
 
 ## See also
 
-- {{Interwiki("wikipedia", "Control flow")}} on Wikipedia
+- [Control flow](https://en.wikipedia.org/wiki/Control_flow) on Wikipedia
 - [JavaScript Reference - Control flow](/en-US/docs/Web/JavaScript/Reference#control_flow) on MDN
 - [Statements (Control flow)](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) on MDN

@@ -30,7 +30,7 @@ The quickest, most efficient way to fetch a wasm module is using the newer {{jsx
 
 ```js
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(results => {
+.then((results) => {
   // Do something with the results!
 });
 ```
@@ -38,11 +38,11 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 If we used the older {{jsxref("WebAssembly.instantiate()")}} method, which doesn't work on the direct stream, we'd need an extra step of converting the fetched byte code to an {{jsxref("ArrayBuffer")}}, like so:
 
 ```js
-fetch('module.wasm').then(response =>
+fetch('module.wasm').then((response) =>
   response.arrayBuffer()
-).then(bytes =>
+).then((bytes) =>
   WebAssembly.instantiate(bytes, importObject)
-).then(results => {
+).then((results) => {
   // Do something with the results!
 });
 ```
@@ -51,7 +51,7 @@ fetch('module.wasm').then(response =>
 
 The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — the one shown above takes the byte code to compile as an argument and returns a Promise that resolves to an object containing both the compiled module object and an instantiated instance of it. The object looks like this:
 
-```js
+```
 {
   module : Module // The newly compiled WebAssembly.Module object,
   instance : Instance // A new WebAssembly.Instance of the module object
@@ -68,15 +68,15 @@ Once you've got your WebAssembly instance available in your JavaScript, you can 
 
 ```js
 WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
-.then(obj => {
+.then((obj) => {
   // Call an exported function:
   obj.instance.exports.exported_func();
 
   // or access the buffer contents of an exported memory:
-  var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+  const i32 = new Uint32Array(obj.instance.exports.memory.buffer);
 
   // or access the elements of an exported table:
-  var table = obj.instance.exports.table;
+  const table = obj.instance.exports.table;
   console.log(table.get(0)());
 })
 ```
@@ -95,14 +95,14 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 The final code looks like this:
 
 ```js
-request = new XMLHttpRequest();
+const request = new XMLHttpRequest();
 request.open('GET', 'simple.wasm');
 request.responseType = 'arraybuffer';
 request.send();
 
-request.onload = function() {
-  var bytes = request.response;
-  WebAssembly.instantiate(bytes, importObject).then(results => {
+request.onload = () => {
+  const bytes = request.response;
+  WebAssembly.instantiate(bytes, importObject).then((results) => {
     results.instance.exports.exported_func();
   });
 };

@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -49,7 +50,6 @@ The string will be one of the following values:
   - : The media is probably playable on this device.
 - `maybe`
   - : There is not enough information to determine whether the media can play (until playback is actually attempted).
-
 
 ## Examples
 

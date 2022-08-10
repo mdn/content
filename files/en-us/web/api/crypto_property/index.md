@@ -1,6 +1,7 @@
 ---
 title: self.crypto
 slug: Web/API/crypto_property
+page-type: web-api-global-property
 tags:
   - API
   - Crypto
@@ -35,15 +36,12 @@ This example uses the `crypto` property to access the {{domxref("Crypto.getRando
 ### JavaScript
 
 ```js
-genRandomNumbers = function getRandomNumbers() {
+globalThis.genRandomNumbers = () => {
   const array = new Uint32Array(10);
   crypto.getRandomValues(array);
 
   const randText = document.getElementById("myRandText");
-  randText.textContent = "The random numbers are: "
-  for (let i = 0; i < array.length; i++) {
-    randText.textContent += array[i] + " ";
-  }
+  randText.textContent = `The random numbers are: ${array.join(" ")}`;
 }
 ```
 
@@ -56,7 +54,7 @@ genRandomNumbers = function getRandomNumbers() {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

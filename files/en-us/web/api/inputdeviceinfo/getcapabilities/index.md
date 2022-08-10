@@ -1,6 +1,7 @@
 ---
 title: InputDeviceInfo.getCapabilities()
 slug: Web/API/InputDeviceInfo/getCapabilities
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,7 +10,7 @@ tags:
   - InputDeviceInfo
 browser-compat: api.InputDeviceInfo.getCapabilities
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`getCapabilities()`** method of the {{domxref("InputDeviceInfo")}} interface returns a `MediaTrackCapabilities` object describing the primary audio or video track of the device's {{domxref("MediaStream")}}.
 
@@ -74,8 +75,8 @@ If `device` is an `InputDeviceInfo` object, then `getCapabilities()` will return
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
 navigator.mediaDevices.enumerateDevices()
-  .then(function(devices) {
-    devices.forEach(function(device) {
+  .then((devices) => {
+    devices.forEach((device) => {
       console.log(device.getCapabilities()); // a MediaTrackCapabilities object.
     });
   })

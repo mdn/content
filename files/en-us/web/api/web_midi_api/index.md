@@ -1,12 +1,15 @@
 ---
 title: Web MIDI API
 slug: Web/API/Web_MIDI_API
+page-type: web-api-overview
 tags:
   - API
   - MIDI
   - Overview
   - Reference
   - Web MIDI API
+spec-urls: https://webaudio.github.io/web-midi-api/
+browser-compat: api.Navigator.requestMIDIAccess
 ---
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
@@ -44,16 +47,16 @@ The method must be called in a secure context.
 
 ```js
 let midi = null;  // global MIDIAccess object
-function onMIDISuccess( midiAccess ) {
-  console.log( "MIDI ready!" );
+function onMIDISuccess(midiAccess) {
+  console.log("MIDI ready!");
   midi = midiAccess;  // store in the global (in real usage, would probably keep in an object instance)
 }
 
 function onMIDIFailure(msg) {
-  console.log( "Failed to get MIDI access - " + msg );
+  console.error(`Failed to get MIDI access - ${msg}`);
 }
 
-navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );
+navigator.requestMIDIAccess().then(onMIDISuccess, onMIDIFailure);
 ```
 
 ### Listing inputs and outputs
@@ -61,19 +64,19 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );
 In this example the list of input and output ports are retrieved and printed to the console.
 
 ```js
-function listInputsAndOutputs( midiAccess ) {
-  for (let entry of midiAccess.inputs) {
-    let input = entry[1];
-    console.log( "Input port [type:'" + input.type + "'] id:'" + input.id +
-      "' manufacturer:'" + input.manufacturer + "' name:'" + input.name +
-      "' version:'" + input.version + "'" );
+function listInputsAndOutputs(midiAccess) {
+  for (const entry of midiAccess.inputs) {
+    const input = entry[1];
+    console.log(`Input port [type:'${input.type}']` +
+      ` id:'${input.id}'` +
+      ` manufacturer:'${input.manufacturer}'` +
+      ` name:'${input.name}'` +
+      ` version:'${input.version}'`);
   }
 
-  for (let entry of midiAccess.outputs) {
-    let output = entry[1];
-    console.log( "Output port [type:'" + output.type + "'] id:'" + output.id +
-      "' manufacturer:'" + output.manufacturer + "' name:'" + output.name +
-      "' version:'" + output.version + "'" );
+  for (const entry of midiAccess.outputs) {
+    const output = entry[1];
+    console.log(`Output port [type:'${output.type}'] id:'${output.id}' manufacturer:'${output.manufacturer}' name:'${output.name}' version:'${output.version}'`);
   }
 }
 ```
@@ -83,24 +86,26 @@ function listInputsAndOutputs( midiAccess ) {
 This example prints incoming MIDI messages on a single port to the console.
 
 ```js
-function onMIDIMessage( event ) {
-  let str = "MIDI message received at timestamp " + event.timeStamp + "[" + event.data.length + " bytes]: ";
+function onMIDIMessage(event) {
+  let str = `MIDI message received at timestamp ${event.timeStamp}[${event.data.length} bytes]: `;
   for (let i=0; i<event.data.length; i++) {
-    str += "0x" + event.data[i].toString(16) + " ";
+    str += `0x${event.data[i].toString(16)} `;
   }
-  console.log( str );
+  console.log(str);
 }
 
-function startLoggingMIDIInput( midiAccess, indexOfPort ) {
-  midiAccess.inputs.forEach( function(entry) {entry.onmidimessage = onMIDIMessage;});
+function startLoggingMIDIInput(midiAccess, indexOfPort) {
+  midiAccess.inputs.forEach((entry) => {entry.onmidimessage = onMIDIMessage;});
 }
 ```
 
 ## Specifications
 
-| Specification                                            |
-| -------------------------------------------------------- |
-| [Web MIDI API](https://webaudio.github.io/web-midi-api/) |
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

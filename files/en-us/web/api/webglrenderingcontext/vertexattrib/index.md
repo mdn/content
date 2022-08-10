@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.vertexAttrib[1234]f[v]()
 slug: Web/API/WebGLRenderingContext/vertexAttrib
+page-type: web-api-instance-method
 tags:
   - API
   - Method

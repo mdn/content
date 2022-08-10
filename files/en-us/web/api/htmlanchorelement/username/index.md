@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.username
 slug: Web/API/HTMLAnchorElement/username
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement

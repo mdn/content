@@ -12,4 +12,4 @@ A program draws its locale settings from the language of the host system. Among 
 
 ## See also
 
-- {{interwiki("wikipedia", "Locale", "Locale")}} on Wikipedia
+- [Locale](https://en.wikipedia.org/wiki/Locale) on Wikipedia

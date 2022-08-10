@@ -1,6 +1,7 @@
 ---
 title: PictureInPictureEvent
 slug: Web/API/PictureInPictureEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM

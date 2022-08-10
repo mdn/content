@@ -1,6 +1,7 @@
 ---
 title: DOMException()
 slug: Web/API/DOMException/DOMException
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -51,10 +52,10 @@ In this example, pressing the button causes a custom `DOMException` to be thrown
 ```js
 const button = document.querySelector('button');
 
-button.onclick = function() {
+button.onclick = () => {
     try {
         throw new DOMException("Custom DOM Exception Triggered.");
-    } catch(error) {
+    } catch (error) {
         document.querySelector("#output").textContent = `Error: ${error.message}`;
     }
 }

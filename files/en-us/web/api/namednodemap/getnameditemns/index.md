@@ -1,6 +1,7 @@
 ---
 title: NamedNodeMap.getNamedItemNS()
 slug: Web/API/NamedNodeMap/getNamedItemNS
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -44,8 +45,7 @@ const warning = doc.getElementsByTagName("warning")[0];
 
 const attrMap = warning.attributes;
 
-pre.textContent = "The `ob:one` attribute contains: " +
-                  attrMap.getNamedItemNS("http://www.example.com/ob", "one").value + ".";
+pre.textContent = `The 'ob:one' attribute contains: ${attrMap.getNamedItemNS("http://www.example.com/ob", "one").value}.`;
 
 ```
 

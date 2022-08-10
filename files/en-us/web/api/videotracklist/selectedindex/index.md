@@ -1,6 +1,7 @@
 ---
 title: VideoTrackList.selectedIndex
 slug: Web/API/VideoTrackList/selectedIndex
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

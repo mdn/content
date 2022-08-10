@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.element
 slug: Web/API/PerformanceElementTiming/element
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -28,7 +29,7 @@ In this example calling `entry.element` will log to the console
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.element);
     }

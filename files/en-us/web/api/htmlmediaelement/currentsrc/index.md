@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -28,7 +29,7 @@ if no {{HTMLElement("source")}} element is provided.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.currentSrc); // ""
 ```
 

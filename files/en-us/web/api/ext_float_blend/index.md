@@ -1,6 +1,7 @@
 ---
 title: EXT_float_blend
 slug: Web/API/EXT_float_blend
+page-type: webgl-extension
 tags:
   - 32-bit
   - API

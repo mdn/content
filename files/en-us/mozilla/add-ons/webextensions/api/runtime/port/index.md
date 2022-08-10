@@ -94,7 +94,7 @@ Values of this type are objects. They contain the following properties:
   - : `object`. This contains the `addListener()` and `removeListener()` functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has sent this port a message. The listener will be passed the value that the other end sent.
 - `postMessage`
   - : `function`. Send a message to the other end. This takes one argument, which is a serializable value (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)) representing the message to send. It will be delivered to any script listening to the port's `onMessage` event, or to the native application if this port is connected to a native application.
-- `sender`{{optional_inline}}
+- `sender` {{optional_inline}}
   - : {{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to `onConnect`/`onConnectExternal` listeners.
 
 ## Browser compatibility
@@ -117,12 +117,12 @@ This content script:
 let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
+document.body.addEventListener("click", () => {
   myPort.postMessage({greeting: "they clicked the page!"});
 });
 ```
@@ -146,7 +146,7 @@ let portFromCS;
 function connected(p) {
   portFromCS = p;
   portFromCS.postMessage({greeting: "hi there content script!"});
-  portFromCS.onMessage.addListener(function(m) {
+  portFromCS.onMessage.addListener((m) => {
     console.log("In background script, received message from content script")
     console.log(m.greeting);
   });
@@ -154,7 +154,7 @@ function connected(p) {
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   portFromCS.postMessage({greeting: "they clicked the button!"});
 });
 ```
@@ -170,13 +170,13 @@ let ports = []
 
 function connected(p) {
   ports[p.sender.tab.id]    = p
-  //...
+  // …
 }
 
 browser.runtime.onConnect.addListener(connected)
 
-browser.browserAction.onClicked.addListener(function() {
-  ports.forEach(p => {
+browser.browserAction.onClicked.addListener(() => {
+  ports.forEach((p) => {
         p.postMessage({greeting: "they clicked the button!"})
     })
 });

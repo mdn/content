@@ -91,8 +91,8 @@ function fixedCharCodeAt(str, idx) {
   // ex. fixedCharCodeAt('\uD800\uDC00', 0); // 65536
   // ex. fixedCharCodeAt('\uD800\uDC00', 1); // false
   idx = idx || 0;
-  var code = str.charCodeAt(idx);
-  var hi, low;
+  const code = str.charCodeAt(idx);
+  let hi, low;
 
   // High surrogate (could change last hex to 0xDB7F
   // to treat high private surrogates
@@ -127,12 +127,11 @@ function fixedCharCodeAt(str, idx) {
 ```js
 function knownCharCodeAt(str, idx) {
   str += '';
-  var code,
-      end = str.length;
+  const end = str.length;
 
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) != null) {
-    var li = surrogatePairs.lastIndex;
+  const surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+  while ((surrogatePairs.exec(str)) !== null) {
+    const li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
     }
@@ -145,12 +144,11 @@ function knownCharCodeAt(str, idx) {
     return NaN;
   }
 
-  code = str.charCodeAt(idx);
+  const code = str.charCodeAt(idx);
 
-  var hi, low;
   if (0xD800 <= code && code <= 0xDBFF) {
-    hi = code;
-    low = str.charCodeAt(idx + 1);
+    const hi = code;
+    const low = str.charCodeAt(idx + 1);
     // Go one further, since one of the "characters"
     // is part of a surrogate pair
     return ((hi - 0xD800) * 0x400) +

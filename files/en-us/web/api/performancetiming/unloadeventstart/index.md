@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.unloadEventStart
 slug: Web/API/PerformanceTiming/unloadEventStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

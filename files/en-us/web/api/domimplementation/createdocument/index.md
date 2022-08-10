@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -40,8 +41,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var doc = document.implementation.createDocument ('http://www.w3.org/1999/xhtml', 'html', null);
-var body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
+const doc = document.implementation.createDocument('http://www.w3.org/1999/xhtml', 'html', null);
+const body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
 body.setAttribute('id', 'abc');
 doc.documentElement.appendChild(body);
 alert(doc.getElementById('abc')); // [object HTMLBodyElement]

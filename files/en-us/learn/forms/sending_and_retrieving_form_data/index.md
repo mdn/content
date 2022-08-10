@@ -215,7 +215,7 @@ This example displays a page with the data we sent. You can see this in action i
 
 ### Example: Python
 
-This example shows how you would use Python to do the same thing — display the submitted data on a web page. This uses the [Flask framework](https://flask.pocoo.org/) for rendering the templates, handling the form data submission, etc. (see [python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py)).
+This example shows how you would use Python to do the same thing — display the submitted data on a web page. This uses the [Flask framework](https://flask.palletsprojects.com/) for rendering the templates, handling the form data submission, etc. (see [python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py)).
 
 ```python
 from flask import Flask, render_template, request
@@ -236,7 +236,7 @@ if __name__ == "__main__":
 
 The two templates referenced in the above code are as follows (these need to be in a subdirectory called `templates` in the same directory as the `python-example.py` file, if you try to run the example yourself):
 
-- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): The same form as we saw above in the [The POST method](#the_post_method) section but with the `action` set to `\{{ url_for('hello') }}`. This is a [Jinja2](https://jinja.pocoo.org/docs/2.9/) template, which is basically HTML but can contain calls to the Python code that is running the web server contained in curly braces. `url_for('hello')` is basically saying "redirect to `/hello` when the form is submitted".
+- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): The same form as we saw above in the [The POST method](#the_post_method) section but with the `action` set to `\{{ url_for('hello') }}`. This is a [Jinja](https://jinja.palletsprojects.com) template, which is basically HTML but can contain calls to the Python code that is running the web server contained in curly braces. `url_for('hello')` is basically saying "redirect to `/hello` when the form is submitted".
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): This template just contains a line that renders the two bits of data passed to it when it is rendered. This is done via the `hello()` function seen above, which runs when the `/hello` URL is navigated to.
 
 > **Note:** Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to [install Python/PIP](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3), then install Flask using `pip3 install flask`. At this point you should be able to run the example using `python3 python-example.py`, then navigating to `localhost:5042` in your browser.
@@ -245,7 +245,7 @@ The two templates referenced in the above code are as follows (these need to be 
 
 There are many other server-side technologies you can use for form handling, including Perl, Java, .Net, Ruby, etc. Just pick the one you like best. That said, it's worth noting that it's very uncommon to use these technologies directly because this can be tricky. It's more common to use one of the many high quality frameworks that make handling forms easier, such as:
 
-- [Django](/en-US/docs/Learn/Server-side/Django) for Python (a bit more heavyweight than [Flask](https://flask.pocoo.org/), but with more tools and options).
+- [Django](/en-US/docs/Learn/Server-side/Django) for Python (a bit more heavyweight than [Flask](https://flask.palletsprojects.com/), but with more tools and options).
 - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs) for Node.js.
 - [Laravel](https://laravel.com/) for PHP.
 - [Ruby On Rails](https://rubyonrails.org/) for Ruby.

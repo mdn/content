@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.protocol
 slug: Web/API/WorkerLocation/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -21,7 +22,7 @@ A string.
 
 ```js
 // In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web
-var result = location.protocol; // Returns 'https:'
+const result = location.protocol; // Returns 'https:'
 ```
 
 ## Specifications

@@ -33,11 +33,11 @@ to local time.
 
 The second statement below assigns the value 23 to the variable `hours`,
 based on the value of the {{jsxref("Global_Objects/Date", "Date")}} object
-`Xmas95`.
+`xmas95`.
 
 ```js
-let Xmas95 = new Date('December 25, 1995 23:15:30');
-let hours = Xmas95.getHours();
+const xmas95 = new Date('December 25, 1995 23:15:30');
+const hours = xmas95.getHours();
 
 console.log(hours); // 23
 ```

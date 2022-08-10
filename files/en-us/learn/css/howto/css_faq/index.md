@@ -100,13 +100,13 @@ CSS does not exactly allow one style to be defined in terms of another. However,
 HTML elements can be assigned multiple classes by listing the classes in the `class` attribute, with a blank space to separate them.
 
 ```html
-<style type="text/css">
+<style>
 .news { background: black; color: white; }
 .today { font-weight: bold; }
 </style>
 
 <div class="news today">
-... content of today's news ...
+  Content of today's news goes here.
 </div>
 ```
 
@@ -128,7 +128,7 @@ The way CSS styles are applied to HTML elements depends also on the elements hie
 ```html
 <!-- news item text is black, but corporate name is red and in bold -->
 <div class="news">
-    (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday...
+    (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday…
 </div>
 ```
 
@@ -150,7 +150,7 @@ In CSS stylesheets, order **is** important. If you define a rule and then you re
 ```html
 <!-- most text is in bold, except "GE", which is red and not bold -->
 <div id="stockTicker">
-    NYS: <span class="stockSymbol">GE</span> +1.0 ...
+    NYS: <span class="stockSymbol">GE</span> +1.0…
 </div>
 ```
 
@@ -167,7 +167,7 @@ Using shorthand properties for defining style rules is good because it uses a ve
 
 ```html
 <div id="stockTicker">
-    NYS: <span class="stockSymbol">GE</span> +1.0 ...
+    NYS: <span class="stockSymbol">GE</span> +1.0…
 </div>
 ```
 
@@ -193,7 +193,7 @@ body * { font-weight: normal; }
 
 ```html
 <div id="section">
-    NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
+    NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0…
 </div>
 ```
 

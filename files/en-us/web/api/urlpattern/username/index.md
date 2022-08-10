@@ -1,6 +1,7 @@
 ---
 title: URLPattern.username
 slug: Web/API/URLPattern/username
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -42,8 +42,8 @@ The index controller function needs to fetch information about how many `Book`, 
 >
 > ```js
 > SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
->  // ... do something if there is an err
->  // ... do something with the count if there was no error
+>  // Do something if there is an err
+>  // Do something with the count if there was no error
 >  });
 > ```
 
@@ -73,19 +73,19 @@ var async = require('async');
 exports.index = function(req, res) {
 
     async.parallel({
-        book_count: function(callback) {
+        book_count(callback) {
             Book.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
         },
-        book_instance_count: function(callback) {
+        book_instance_count(callback) {
             BookInstance.countDocuments({}, callback);
         },
-        book_instance_available_count: function(callback) {
+        book_instance_available_count(callback) {
             BookInstance.countDocuments({status:'Available'}, callback);
         },
-        author_count: function(callback) {
+        author_count(callback) {
             Author.countDocuments({}, callback);
         },
-        genre_count: function(callback) {
+        genre_count(callback) {
             Genre.countDocuments({}, callback);
         }
     }, function(err, results) {
@@ -104,7 +104,7 @@ On success the callback function calls [`res.render()`](https://expressjs.com/en
 
 Open **/views/index.pug** and replace its content with the text below.
 
-```js
+```pug
 extends layout
 
 block content

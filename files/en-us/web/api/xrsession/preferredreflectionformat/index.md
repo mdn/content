@@ -1,6 +1,7 @@
 ---
 title: XRSession.preferredReflectionFormat
 slug: Web/API/XRSession/preferredReflectionFormat
+page-type: web-api-instance-property
 tags:
   - API
   - AR

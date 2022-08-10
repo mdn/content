@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.protocol
 slug: Web/API/RTCIceCandidate/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -54,9 +55,10 @@ look at the value of {{domxref("RTCIceCandidate.tcpType", "tcpType")}} to see if
 **simultaneous-open** (**S-O**) candidate.
 
 ```js
-if (candidate.protocol == "tcp") {
-  if (candidate.tcpType == "so") {
+if (candidate.protocol === "tcp") {
+  if (candidate.tcpType === "so") {
     adjustForSimultaneousOpen(candidate);
+  }
 }
 ```
 

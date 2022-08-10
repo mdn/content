@@ -11,7 +11,7 @@ tags:
   - onTitleChanged
 browser-compat: webextensions.api.history.onTitleChanged
 ---
-{{AddonSidebar()}}Fired when the title of a page visited by the user is recorded.To listen for visits to a page you can use {{WebExtAPIRef("history.onVisited")}}. However, the {{WebExtAPIRef("history.HistoryItem")}} that this event passes to its listener does not include the page title, because the page title is typically not known at the time `history.onVisited` is sent.Instead, the stored {{WebExtAPIRef("history.HistoryItem")}} is updated with the page title after the page has loaded, once the title is known. The history.onTitleChanged event is fired at that time. So if you need to know the titles of pages as they are visited, listen for `history.onTitleChanged`.
+{{AddonSidebar()}}Fired when the title of a page visited by the user is recorded. To listen for visits to a page you use {{WebExtAPIRef("history.onVisited")}}. However, the {{WebExtAPIRef("history.HistoryItem")}} that this event passes to its listener does not include the page title, because the page title is typically not known at the time `history.onVisited` is sent. Instead, the stored {{WebExtAPIRef("history.HistoryItem")}} is updated with the page title after the page has loaded, once the title is known. The `history.onTitleChanged` event is fired at that time. So if you need to know the titles of pages as they are visited, listen for `history.onTitleChanged`.
 
 ## Syntax
 
@@ -36,8 +36,10 @@ Events have three functions:
 
 - `callback`
 
-  - : Function that will be called when this event occurs. The function will be passed an object with the following properties:
+  - : Function that is called when this event occurs. The function is passed an object with these properties:
 
+    - `id`
+      - : `String`. The unique identifier for the {{WebExtAPIRef("history.HistoryItem")}} associated with this visit.
     - `url`
       - : `String`. URL of the page visited.
     - `title`
@@ -49,10 +51,11 @@ Events have three functions:
 
 ## Examples
 
-Listen for title change events, and log the URL and title of the visited pages.
+Listen for title change events, and log the ID, URL, and title of the visited pages.
 
 ```js
 function handleTitleChanged(item) {
+  console.log(item.id);
   console.log(item.title);
   console.log(item.url);
 }

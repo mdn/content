@@ -13,16 +13,13 @@ browser-compat: css.selectors.placeholder-shown
 
 The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying [placeholder text](/en-US/docs/Web/HTML/Element/input#placeholder).
 
-```css
-/* Selects any element with an active placeholder */
-:placeholder-shown {
-  border: 2px solid silver;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-placeholder-shown.html", "tabbed-shorter")}}
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:placeholder-shown
+```
 
 ## Examples
 

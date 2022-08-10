@@ -17,7 +17,7 @@ This article helps you get started with JavaScript and furthers your understandi
 ## What is JavaScript?
 
 {{Glossary("JavaScript")}} is a powerful programming language that can add interactivity to a website.
-It was invented by Brendan Eich (co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation).
+It was invented by Brendan Eich.
 
 JavaScript is versatile and beginner-friendly.
 With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more!
@@ -229,7 +229,7 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
       <td><code>let myVariable = 'Bob';</code></td>
     </tr>
     <tr>
-      <th scope="row">Equality</th>
+      <th scope="row">Strict equality</th>
       <td>
         This performs a test to see if two values are equal. It returns a
         <code>true</code>/<code>false</code> (Boolean) result.
@@ -276,18 +276,18 @@ There are a lot more operators to explore, but this is enough for now. See [Expr
 
 ### Conditionals
 
-Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the `if ... else` statement. For example:
+Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the `if...else` statement. For example:
 
 ```js
 let iceCream = 'chocolate';
 if(iceCream === 'chocolate') {
   alert('Yay, I love chocolate ice cream!');
 } else {
-  alert('Awwww, but chocolate is my favorite...');
+  alert('Awwww, but chocolate is my favorite…');
 }
 ```
 
-The expression inside the `if( ... )` is the test. This uses the identity operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
+The expression inside the `if()` is the test. This uses the strict equality operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
 
 ### Functions
 
@@ -331,7 +331,7 @@ multiply(0.5, 3);
 Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the [click event](/en-US/docs/Web/API/Element/click_event), which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:
 
 ```js
-document.querySelector('html').addEventListener('click', function() {
+document.querySelector('html').addEventListener('click', function () {
   alert('Ouch! Stop poking me!');
 });
 ```
@@ -341,7 +341,7 @@ There are many ways to attach an event handler to an element. Here we select the
 Note that
 
 ```js
-document.querySelector('html').addEventListener('click', function() {
+document.querySelector('html').addEventListener('click', function () {
   alert('Ouch! Stop poking me!');
 });
 ```
@@ -350,7 +350,7 @@ is equivalent to
 
 ```js
 let myHTML = document.querySelector('html');
-myHTML.addEventListener('click', function() {
+myHTML.addEventListener('click', function () {
   alert('Ouch! Stop poking me!');
 });
 ```
@@ -378,18 +378,18 @@ In this section, you will learn how to use JavaScript and DOM API features to al
 1. Choose an image you want to feature on your example site. Ideally, the image will be the same size as the image you added previously, or as close as possible.
 2. Save this image in your `images` folder.
 3. Rename the image _firefox2.png_.
-4. Add the JavaScript below to your `main.js` file.
+4. Add the following JavaScript code to your `main.js` file.
 
     ```js
-    let myImage = document.querySelector('img');
+    const myImage = document.querySelector('img');
 
-    myImage.onclick = function() {
-        let mySrc = myImage.getAttribute('src');
-        if(mySrc === 'images/firefox-icon.png') {
-          myImage.setAttribute('src','images/firefox2.png');
-        } else {
-          myImage.setAttribute('src','images/firefox-icon.png');
-        }
+    myImage.onclick = () => {
+      const mySrc = myImage.getAttribute('src');
+      if (mySrc === 'images/firefox-icon.png') {
+        myImage.setAttribute('src','images/firefox2.png');
+      } else {
+        myImage.setAttribute('src','images/firefox-icon.png');
+      }
     }
     ```
 
@@ -420,11 +420,11 @@ Next, let's change the page title to a personalized welcome message when the use
     let myHeading = document.querySelector('h1');
     ```
 
-3. Add the function below to set the personalized greeting. This won't do anything yet, but this will change soon.
+3. Add the following function to set the personalized greeting. This won't do anything yet, but this will change soon.
 
     ```js
     function setUserName() {
-      let myName = prompt('Please enter your name.');
+      const myName = prompt('Please enter your name.');
       localStorage.setItem('name', myName);
       myHeading.textContent = 'Mozilla is cool, ' + myName;
     }
@@ -432,14 +432,14 @@ Next, let's change the page title to a personalized welcome message when the use
 
     The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK._ In this case, we are asking the user to enter a name. Next, the code calls on an API `localStorage`, which allows us to store data in the browser and retrieve it later. We use localStorage's `setItem()` function to create and store a data item called `'name'`, setting its value to the `myName` variable which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string, plus the user's newly stored name.
 
-4. Add the `if ... else` block (below). We could call this initialization code, as it structures the app when it first loads.
+4. Add the following condition block. We could call this initialization code, as it structures the app when it first loads.
 
     ```js
-    if(!localStorage.getItem('name')) {
+    if (!localStorage.getItem('name')) {
       setUserName();
     } else {
-      let storedName = localStorage.getItem('name');
-      myHeading.textContent = 'Mozilla is cool, ' + storedName;
+      const storedName = localStorage.getItem('name');
+      myHeading.textContent = `Mozilla is cool, ${storedName}`;
     }
     ```
 
@@ -448,14 +448,14 @@ Next, let's change the page title to a personalized welcome message when the use
 5. Put this `onclick` event handler (below) on the button. When clicked, `setUserName()` runs. This allows the user to enter a different name by pressing the button.
 
     ```js
-    myButton.onclick = function() {
+    myButton.onclick = () => {
       setUserName();
     }
     ```
 
 ### A user name of null?
 
-When you run the example and get the dialog box that prompts you to enter your user name, try pressing the _Cancel_ button. You should end up with a title that reads _Mozilla is cool, null_. This happens because—when you cancel the prompt—the value is set as [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null). _Null_ is a special value in JavaScript that refers to the absence of a value.
+When you run the example and get the dialog box that prompts you to enter your user name, try pressing the _Cancel_ button. You should end up with a title that reads _Mozilla is cool, null_. This happens because—when you cancel the prompt—the value is set as [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). _Null_ is a special value in JavaScript that refers to the absence of a value.
 
 Also, try clicking _OK_ without entering a name. You should end up with a title that reads _Mozilla is cool,_ for fairly obvious reasons.
 
@@ -463,12 +463,12 @@ To avoid these problems, you could check that the user hasn't entered a blank na
 
 ```js
 function setUserName() {
-  let myName = prompt('Please enter your name.');
-  if(!myName) {
+  const myName = prompt('Please enter your name.');
+  if (!myName) {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
+    myHeading.textContent = `Mozilla is cool, ${myName}`;
   }
 }
 ```

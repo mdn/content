@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.keyCode
 slug: Web/API/KeyboardEvent/keyCode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -21,21 +22,23 @@ This is usually the decimal ASCII ({{RFC(20)}}) or Windows 1252 code correspondi
 
 You should avoid using this if possible; it's been deprecated for some time. Instead, you should use {{domxref("KeyboardEvent.code")}}, if it's implemented. Unfortunately, some browsers still don't have it, so you'll have to be careful to make sure you use one which is supported on all target browsers.
 
-> **Note:** Web developers shouldn't use the `keyCode` attribute for printable characters when handling `keydown` and `keyup` events. As described above, the `keyCode` attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed. When implementing a shortcut key handler, the {{event("keypress")}} event is usually better (at least when Gecko is the runtime in use).
+> **Note:** Web developers shouldn't use the `keyCode` attribute for printable characters when handling `keydown` and `keyup` events. As described above, the `keyCode` attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed. When implementing a shortcut key handler, the {{domxref("Element/keypress_event", "keypress")}} event is usually better (at least when Gecko is the runtime in use).
 
 ## Examples
 
 ```js
-window.addEventListener("keydown", function (event) {
+window.addEventListener("keydown", (event) => {
   if (event.defaultPrevented) {
     return; // Should do nothing if the default action has been cancelled
   }
 
-  var handled = false;
+  let handled = false;
   if (event.key !== undefined) {
-    // Handle the event with KeyboardEvent.key and set handled true.
+    // Handle the event with KeyboardEvent.key
+    handled = true;
   } else if (event.keyCode !== undefined) {
-    // Handle the event with KeyboardEvent.keyCode and set handled true.
+    // Handle the event with KeyboardEvent.keyCode
+    handled = true;
   }
 
   if (handled) {

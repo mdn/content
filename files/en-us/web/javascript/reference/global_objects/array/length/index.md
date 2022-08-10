@@ -46,7 +46,7 @@ arr.length = 5; // set array length to 5 while currently 2.
 console.log(arr);
 // [ 1, 2, <3 empty items> ]
 
-arr.forEach(element => console.log(element));
+arr.forEach((element) => console.log(element));
 // 1
 // 2
 ```
@@ -68,7 +68,7 @@ In the following example, the array `numbers` is iterated through by looking at 
 ```js
 const numbers = [1, 2, 3, 4, 5];
 const length = numbers.length;
-for (var i = 0; i < length; i++) {
+for (let i = 0; i < length; i++) {
   numbers[i] *= 2;
 }
 // numbers is now [2, 4, 6, 8, 10]
@@ -94,7 +94,7 @@ console.log(numbers.length); // 3
 ```js
 const numbers = [];
 numbers.length = 3;
-console.log(numbers); // [undefined, undefined, undefined]
+console.log(numbers); // [empty x 3]
 ```
 
 ## Specifications

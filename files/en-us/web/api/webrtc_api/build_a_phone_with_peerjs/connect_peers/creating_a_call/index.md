@@ -1,6 +1,7 @@
 ---
 title: Creating a Call
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call
+page-type: guide
 ---
 {{WebRTCSidebar}}
 
@@ -17,24 +18,24 @@ Exciting times — now you're going to give your users the ability to create cal
 2. When a caller clicks "Call" you'll want to ask them for the peer ID of the peer they want to call (which we will store in the `code` variable in `getStreamCode()`) and then you'll want to create a connection with that code. Add the following below your previous code:
 
     ```js
-    callBtn.addEventListener('click', function(){
-        getStreamCode();
-        connectPeers();
-        const call = peer.call(code, window.localStream); // A
+    callBtn.addEventListener('click', () => {
+      getStreamCode();
+      connectPeers();
+      const call = peer.call(code, window.localStream); // A
 
-        call.on('stream', function(stream) { // B
-            window.remoteAudio.srcObject = stream; // C
-            window.remoteAudio.autoplay = true; // D
-            window.peerStream = stream; //E
-            showConnectedContent(); //F    });
-        })
+      call.on('stream', (stream) => { // B
+        window.remoteAudio.srcObject = stream; // C
+        window.remoteAudio.autoplay = true; // D
+        window.peerStream = stream; //E
+        showConnectedContent(); //F    });
+      })
     })
     ```
 
     Let's walk through this code:
 
     - `const call = peer.call(code, window.localStream)`: This will create a call with the `code` and `window.localStream` we've previously assigned. Note that the `localStream` will be the user's `localStream`. So for caller A it'll be their stream & for B, their own stream.
-    - `call.on('stream', function(stream) {` : peerJS gives us a `stream` event which you can use on the `call` that you've created. When a call starts streaming, you need to ensure that the remote stream coming from the call is assigned to the correct HTML elements and window, this is where you'll do that.
+    - `call.on('stream', (stream) => {` : peerJS gives us a `stream` event which you can use on the `call` that you've created. When a call starts streaming, you need to ensure that the remote stream coming from the call is assigned to the correct HTML elements and window, this is where you'll do that.
     - The anonymous function takes a `MediaStream` object as an argument, which you then have to set to your window's HTML like you've done before. Here we get your remote `<audio>` element and assign the stream passed to the function to the `srcObject` property.
     - Ensure the element's `autoplay` attribute is also set to `true`.
     - Ensure that the window's `peerStream` is set to the stream passed to the function.

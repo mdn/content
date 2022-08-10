@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode
 slug: Web/API/DynamicsCompressorNode
+page-type: web-api-interface
 tags:
   - API
   - Audio

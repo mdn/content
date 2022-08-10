@@ -1,6 +1,7 @@
 ---
 title: HMDVRDevice.getEyeParameters()
 slug: Web/API/HMDVRDevice/getEyeParameters
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -39,16 +40,16 @@ A {{domxref("VREyeParameters")}} object.
 The following example is taken from the Mozilla VR Team's [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate) code — to be precise, the [VREffect.js file](https://github.com/MozillaReality/vr-web-examples/blob/master/threejs-vr-boilerplate/js/VREffect.js). Early on in the code the `getEyeParameters()` method is used to access information about each eye, which is then used for rendering calculations later on.
 
 ```js
-if ( vrHMD.getEyeParameters !== undefined ) {
-    var eyeParamsL = vrHMD.getEyeParameters( 'left' );
-    var eyeParamsR = vrHMD.getEyeParameters( 'right' );
+if (vrHMD.getEyeParameters !== undefined) {
+  const eyeParamsL = vrHMD.getEyeParameters('left');
+  const eyeParamsR = vrHMD.getEyeParameters('right');
 
-    eyeTranslationL = eyeParamsL.eyeTranslation;
-    eyeTranslationR = eyeParamsR.eyeTranslation;
-    eyeFOVL = eyeParamsL.recommendedFieldOfView;
-    eyeFOVR = eyeParamsR.recommendedFieldOfView;
+  eyeTranslationL = eyeParamsL.eyeTranslation;
+  eyeTranslationR = eyeParamsR.eyeTranslation;
+  eyeFOVL = eyeParamsL.recommendedFieldOfView;
+  eyeFOVR = eyeParamsR.recommendedFieldOfView;
 } else {
-  ...
+  // …
 }
 ```
 

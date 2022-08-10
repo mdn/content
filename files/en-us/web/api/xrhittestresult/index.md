@@ -1,6 +1,7 @@
 ---
 title: XRHitTestResult
 slug: Web/API/XRHitTestResult
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -74,7 +75,7 @@ Once you find intersections on real-world surfaces using hit testing, you can cr
 hitTestResult.createAnchor().then((anchor) => {
   // add anchored objects to the scene
 }, (error) => {
-  console.error("Could not create anchor: " + error);
+  console.error(`Could not create anchor: ${error}`);
 });
 ```
 

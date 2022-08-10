@@ -1,15 +1,13 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
+page-type: web-api-overview
 tags:
   - API
-  - Experimental
   - Gamepad API
   - Games
   - Overview
-spec-urls:
-  - https://w3c.github.io/gamepad/extensions.html
-  - https://w3c.github.io/gamepad/
+browser-compat: api.Gamepad
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Gamepad API")}}
 
@@ -58,7 +56,7 @@ See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#e
 
 ## Browser compatibility
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,7 +25,7 @@ get(name)
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to return.
 
 ### Return value

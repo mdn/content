@@ -1,6 +1,7 @@
 ---
 title: EncodedVideoChunk.type
 slug: Web/API/EncodedVideoChunk/type
+page-type: web-api-instance-property
 tags:
   - API
   - Property

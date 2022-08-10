@@ -1,6 +1,7 @@
 ---
 title: Window.captureEvents()
 slug: Web/API/Window/captureEvents
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko

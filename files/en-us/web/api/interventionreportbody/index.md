@@ -1,6 +1,7 @@
 ---
 title: InterventionReportBody
 slug: Web/API/InterventionReportBody
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -29,15 +30,15 @@ An instance of `InterventionReportBody` is returned as the value of {{domxref("R
 This interface also inherits properties from {{domxref("ReportBody")}}.
 
 - {{domxref("InterventionReportBody.id")}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString","string")}} representing the intervention that generated the report. This can be used to group reports.
+  - : A string representing the intervention that generated the report. This can be used to group reports.
 - {{domxref("InterventionReportBody.message")}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString","string")}} containing a human-readable description of the intervention, including information such how the intervention could be avoided. This typically matches the message a browser will display in its DevTools console when an intervention is imposed, if one is available.
+  - : A string containing a human-readable description of the intervention, including information such how the intervention could be avoided. This typically matches the message a browser will display in its DevTools console when an intervention is imposed, if one is available.
 - {{domxref("InterventionReportBody.sourceFile")}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString","string")}} containing the path to the source file where the intervention occurred, if known, or `null` otherwise.
+  - : A string containing the path to the source file where the intervention occurred, if known, or `null` otherwise.
 - {{domxref("InterventionReportBody.lineNumber")}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString","string")}} representing the line in the source file in which the intervention occurred, if known, or `null` otherwise.
+  - : A string representing the line in the source file in which the intervention occurred, if known, or `null` otherwise.
 - {{domxref("InterventionReportBody.columnNumber")}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString","string")}} representing the column in the source file in which the intervention occurred, if known, or `null` otherwise.
+  - : A string representing the column in the source file in which the intervention occurred, if known, or `null` otherwise.
 
 ## Methods
 
@@ -51,13 +52,13 @@ This interface also inherits methods from {{domxref("ReportBody")}}.
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print details of each property of the first report to the console.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver((reports, observer) => {
+  const firstReport = reports[0];
   console.log(firstReport.type); // intervention
   console.log(firstReport.body.id);
   console.log(firstReport.body.message);

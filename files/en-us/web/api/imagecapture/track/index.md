@@ -1,6 +1,7 @@
 ---
 title: ImageCapture.track
 slug: Web/API/ImageCapture/track
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

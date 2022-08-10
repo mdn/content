@@ -1,6 +1,7 @@
 ---
 title: LargestContentfulPaint.size
 slug: Web/API/LargestContentfulPaint/size
+page-type: web-api-instance-property
 tags:
   - API
   - Property

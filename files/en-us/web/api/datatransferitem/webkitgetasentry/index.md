@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItem
@@ -39,7 +40,7 @@ The method aborts and returns `null` if the dropped item isn't a file, or if the
 
 ## Examples
 
-In this example, a drop zone is created, which responds to the {{event("drop")}} event
+In this example, a drop zone is created, which responds to the {{domxref("HTMLElement/drop_event", "drop")}} event
 by scanning through the dropped files and directories, outputting a hierarchical
 directory listing.
 
@@ -113,9 +114,9 @@ function scanFiles(item, container) {
     let directoryReader = item.createReader();
     let directoryContainer = document.createElement("ul");
     container.appendChild(directoryContainer);
-    directoryReader.readEntries(function(entries) {
-        entries.forEach(function(entry) {
-          scanFiles(entry, directoryContainer);
+    directoryReader.readEntries((entries) => {
+      entries.forEach((entry) => {
+        scanFiles(entry, directoryContainer);
       });
     });
   }
@@ -135,18 +136,18 @@ After that, {{domxref("FileSystemDirectoryReader.readEntries", "directoryReader.
 These are each, in turn, passed into a recursive call to `scanFiles()` to process them.
 Any of them which are files are inserted into the list; any which are directories are inserted into the list and a new level of the list's hierarchy is added below, and so forth.
 
-Then come the event handlers. First, we prevent the {{event("dragover")}} event from being handled by the default handler, so that our drop zone can receive the drop:
+Then come the event handlers. First, we prevent the {{domxref("HTMLElement/dragover_event", "dragover")}} event from being handled by the default handler, so that our drop zone can receive the drop:
 
 ```js
-dropzone.addEventListener("dragover", function(event) {
-    event.preventDefault();
+dropzone.addEventListener("dragover", (event) => {
+  event.preventDefault();
 }, false);
 ```
 
-The event handler that kicks everything off, of course, is the handler for the {{event("drop")}} event:
+The event handler that kicks everything off, of course, is the handler for the {{domxref("HTMLElement/drop_event", "drop")}} event:
 
 ```js
-dropzone.addEventListener("drop", function(event) {
+dropzone.addEventListener("drop", (event) => {
   let items = event.dataTransfer.items;
 
   event.preventDefault();
@@ -192,4 +193,4 @@ This API has no official W3C or WHATWG specification.
 - [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("DataTransferItem")}}
 - {{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}
-- Events: {{event("dragover")}} and {{event("drop")}}
+- Events: {{domxref("HTMLElement/dragover_event", "dragover")}} and {{domxref("HTMLElement/drop_event", "drop")}}

@@ -26,7 +26,7 @@ As always, we're open to questions and suggestions for changes in [community for
 | Text inserted                                                                                             | text_changed::insert                                                                                                               | IA2_EVENT_TEXT_INSERTED (use IAccessibleText::get_newText to retrieve the offsets and inserted text) |
 | Text replaced                                                                                             | text_changed::delete followed immediately by text_changed::insert                                                                  | IA2_EVENT_TEXT_REMOVED followed immediately by IA2_EVENT_TEXT_INSERTED                               |
 
-\* We do not use MSAA's CREATE/DESTROY at the request of screen reader vendors, who avoid those events because they cause crashes on some important system -- SHOW/HIDE are the equivalent of those events.
+\* We do not use MSAA's CREATE/DESTROY at the request of screen reader vendors, who avoid those events because they cause crashes on some important system — SHOW/HIDE are the equivalent of those events.
 
 ## Retrieving author-supplied ARIA live region semantics from an event
 

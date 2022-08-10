@@ -15,8 +15,9 @@ for [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Ac
 
 ## Message
 
-```js
-SyntaxError: missing name after . operator
+```
+SyntaxError: missing name after . operator (Firefox)
+SyntaxError: Unexpected token '['. Expected a property name after '.'. (Safari)
 ```
 
 ## Error type
@@ -41,8 +42,8 @@ in JavaScript use either the dot (.) or square brackets (`[]`), but not both.
 Square brackets allow computed property access.
 
 ```js example-bad
-var obj = { foo: { bar: "baz", bar2: "baz2" } };
-var i = 2;
+const obj = { foo: { bar: "baz", bar2: "baz2" } };
+const i = 2;
 
 obj.[foo].[bar]
 // SyntaxError: missing name after . operator

@@ -41,17 +41,17 @@ The object returned by `resolvedOptions()` has the following properties:
     included in `locale`.
 - `style`
   - : The value provided for this property in the `options` argument of the
-    constructor or the default value ("`long`"). Its value is either
-    "`long`", "`short`", or "`narrow`".
+    constructor or the default value (`"long"`). Its value is either
+    `"long"`, `"short"`, or `"narrow"`.
 - `type`
   - : The value provided for this property in the `options` argument of the
-    constructor or the default value ("`language`"). Its value is either
-    "`language`", "`region`", "`script`", or
-    "`currency`".
+    constructor or the default value (`"language"`). Its value is either
+    `"language"`, `"region"`, `"script"`, or
+    `"currency"`.
 - `fallback`
   - : The value provided for this property in the options argument of the constructor or
-    the default value ("`code`"). Its value is either "`code`"
-    or "`none`".
+    the default value (`"code"`). Its value is either `"code"`
+    or `"none"`.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: XRFrame.fillPoses()
 slug: Web/API/XRFrame/fillPoses
+page-type: web-api-instance-method
 tags:
   - API
   - Method

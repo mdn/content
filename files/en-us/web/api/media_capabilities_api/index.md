@@ -1,13 +1,14 @@
 ---
 title: Media Capabilities API
 slug: Web/API/Media_Capabilities_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
   - Media Capabilities
   - Overview
   - Reference
-spec-urls: https://w3c.github.io/media-capabilities/
+browser-compat: api.MediaCapabilities
 ---
 {{DefaultAPISidebar("Media Capabilities API")}}
 
@@ -31,14 +32,13 @@ if ('mediaCapabilities' in navigator) {
     }
   };
 
-  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then(result => {
-    console.log('This configuration is ' +
-        (result.supported ? '' : 'not ') + 'supported, ' +
-        (result.smooth ? '' : 'not ') + 'smooth, and ' +
-        (result.powerEfficient ? '' : 'not ') + 'power efficient.')
+  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then((result) => {
+    console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
+    console.log(`${result.smooth ? '' : 'not '}smooth, and`);
+    console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
     })
     .catch(() => {
-      console.log("decodingInfo error: " + contentType)
+      console.log(`decodingInfo error: ${contentType}`)
     });
 }
 ```
@@ -64,14 +64,13 @@ Media capabilities information enables websites to enable adaptive streaming to 
 - ScreenLuminance
   - : Will describe the known luminance characteristics of the screen (not currently supported anywhere).
 
-
 ## Specifications
 
-{{Specifications("api.MediaCapabilities")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.MediaCapabilities")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -27,8 +28,8 @@ and the `localName` returns "browser", then the node is understood to be a
 XUL `<browser/>`.
 
 ```js
-if (element.localName == "browser" &&
-    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (element.localName === "browser" &&
+    element.namespaceURI === "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
   // this is a XUL browser
 }
 ```

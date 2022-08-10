@@ -34,12 +34,12 @@ A new {{jsxref("Map")}} iterator object.
 ### Using values()
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set('0', 'foo');
 myMap.set(1, 'bar');
 myMap.set({}, 'baz');
 
-var mapIter = myMap.values();
+const mapIter = myMap.values();
 
 console.log(mapIter.next().value); // "foo"
 console.log(mapIter.next().value); // "bar"

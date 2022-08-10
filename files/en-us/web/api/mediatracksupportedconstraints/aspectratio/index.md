@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.aspectRatio
 slug: Web/API/MediaTrackSupportedConstraints/aspectRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -17,16 +18,11 @@ browser-compat: api.MediaTrackSupportedConstraints.aspectRatio
 ---
 {{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
-**`aspectRatio`** property is a read-only Boolean value which is
-present (and set to `true`) in the object returned by
-{{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the
-{{Glossary("user agent")}} supports the `aspectRatio` constraint. If the
-constraint isn't supported, it's not included in the list, so this value will never be
-`false`.
+The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`aspectRatio`** property is a read-only Boolean value which is present (and set to `true`) in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the
+{{Glossary("user agent")}} supports the `aspectRatio` constraint.
+If the constraint isn't supported, it's not included in the list, so this value will never be `false`.
 
-You can access the supported constraints dictionary by calling
-`navigator.mediaDevices.getSupportedConstraints()`.
+You can access the supported constraints dictionary by calling `navigator.mediaDevices.getSupportedConstraints()`.
 
 ## Value
 
@@ -60,7 +56,7 @@ if (navigator.mediaDevices.getSupportedConstraints().aspectRatio) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

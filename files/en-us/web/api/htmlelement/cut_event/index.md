@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: cut event'
 slug: Web/API/HTMLElement/cut_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -9,7 +10,7 @@ tags:
   - Reference
   - Web
   - cut
-browser-compat: api.HTMLElement.cut_event
+browser-compat: api.Element.cut_event
 ---
 {{ APIRef("HTML DOM") }}
 
@@ -20,9 +21,9 @@ The **`cut`** event fires when the user initiates a cut action through the brows
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cut', event => { });
+addEventListener('cut', (event) => { });
 
-oncut = event => { };
+oncut = (event) => { };
 ```
 
 ## Event type
@@ -40,8 +41,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("ClipboardEvent")}} object as its
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("ClipboardEvent")}} object as its
 sole argument.
 
 ## Example
@@ -63,12 +63,12 @@ allow text to be cut. It also logs each copy and cut attempt.
 
 ```js
 function logCopy(event) {
-  log.innerText = 'Copied!\n' + log.innerText;
+  log.innerText = `Copied!\n${log.innerText}`;
 }
 
 function preventCut(event) {
   event.preventDefault();
-  log.innerText = 'Cut blocked!\n' + log.innerText;
+  log.innerText = `Cut blocked!\n${log.innerText}`;
 }
 
 const editor = document.getElementById('editor');

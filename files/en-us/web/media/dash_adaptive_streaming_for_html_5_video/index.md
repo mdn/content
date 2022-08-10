@@ -18,7 +18,7 @@ Firefox 23 removed support for DASH for HTML5 WebM video. It will be replaced by
 
 First you'll need to convert your WebM video to a DASH manifest with the accompanying video files in various bit rates. To start with you'll only need the ffpmeg program from [ffmpeg.org](https://www.ffmpeg.org/), with libvpx and libvorbis support for WebM video and audio, at least version 2.5 (probably; this was tested ith 3.2.5).
 
-### 1. Use your existing WebM file to create one audio file and multiple video files.
+### 1. Use your existing WebM file to create one audio file and multiple video files
 
 For example:
 

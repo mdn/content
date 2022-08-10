@@ -1,6 +1,7 @@
 ---
 title: Pinch zoom gestures
 slug: Web/API/Pointer_events/Pinch_zoom_gestures
+page-type: guide
 tags:
   - Guide
   - PointerEvent
@@ -41,8 +42,8 @@ Supporting a two-pointer gesture requires preserving a pointer's event state dur
 
 ```js
 // Global vars to cache event state
-var evCache = new Array();
-var prevDiff = -1;
+const evCache = [];
+const prevDiff = -1;
 ```
 
 ### Register event handlers
@@ -52,7 +53,7 @@ Event handlers are registered for the following pointer events: {{domxref("HTMLE
 ```js
 function init() {
  // Install event handlers for the pointer target
- var el=document.getElementById("target");
+ const el = document.getElementById("target");
  el.onpointerdown = pointerdown_handler;
  el.onpointermove = pointermove_handler;
 
@@ -98,17 +99,17 @@ function pointermove_handler(ev) {
  ev.target.style.border = "dashed";
 
  // Find this event in the cache and update its record with this event
- for (var i = 0; i < evCache.length; i++) {
-   if (ev.pointerId == evCache[i].pointerId) {
-      evCache[i] = ev;
-   break;
+ for (let i = 0; i < evCache.length; i++) {
+   if (ev.pointerId === evCache[i].pointerId) {
+     evCache[i] = ev;
+     break;
    }
  }
 
  // If two pointers are down, check for pinch gestures
- if (evCache.length == 2) {
+ if (evCache.length === 2) {
    // Calculate the distance between the two pointers
-   var curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
+   const curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
 
    if (prevDiff > 0) {
      if (curDiff > prevDiff) {
@@ -181,8 +182,8 @@ This function helps manage the global event caches `evCache`.
 ```js
 function remove_event(ev) {
  // Remove this event from the target's cache
- for (var i = 0; i < evCache.length; i++) {
-   if (evCache[i].pointerId == ev.pointerId) {
+ for (let i = 0; i < evCache.length; i++) {
+   if (evCache[i].pointerId === ev.pointerId) {
      evCache.splice(i, 1);
      break;
    }
@@ -196,25 +197,25 @@ These functions are used to send event activity to the application's window (to 
 
 ```js
 // Log events flag
-var logEvents = false;
+let logEvents = false;
 
 // Logging/debugging functions
 function enableLog(ev) {
-  logEvents = logEvents ? false : true;
+  logEvents = !logEvents;
 }
 
 function log(prefix, ev) {
   if (!logEvents) return;
-  var o = document.getElementsByTagName('output')[0];
-  var s = prefix + ": pointerID = " + ev.pointerId +
-                " ; pointerType = " + ev.pointerType +
-                " ; isPrimary = " + ev.isPrimary;
-  o.innerHTML += s + "
-";
+  const o = document.getElementsByTagName('output')[0];
+  const s = `${name}:<br>`
+    + `  pointerID   = ${ev.pointerId}<br>`
+    + `  pointerType = ${ev.pointerType}<br>`
+    + `  isPrimary   = ${ev.isPrimary}`;
+  o.innerHTML += `${s}<br>`;
 }
 
 function clearLog(event) {
- var o = document.getElementsByTagName('output')[0];
+ const o = document.getElementsByTagName('output')[0];
  o.innerHTML = "";
 }
 ```

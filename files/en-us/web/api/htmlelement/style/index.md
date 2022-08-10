@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.style
 slug: Web/API/HTMLElement/style
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -51,14 +52,14 @@ The following code snippet demonstrates the difference between the values obtain
 ```
 
 ```js
-var element = document.getElementById("myElement");
-var out = "";
-var elementStyle = element.style;
-var computedStyle = window.getComputedStyle(element, null);
+const element = document.getElementById("myElement");
+let out = "";
+const elementStyle = element.style;
+const computedStyle = window.getComputedStyle(element, null);
 
 for (prop in elementStyle) {
-  if (elementStyle.hasOwnProperty(prop)) {
-    out += "  " + prop + " = '" + elementStyle[prop] + "' > '" + computedStyle[prop] + "'\n";
+  if (Object.hasOwn(elementStyle, prop)) {
+    out += `  ${prop} = '${elementStyle[prop]}' > '${computedStyle[prop]}'\n`;
   }
 }
 console.log(out)
@@ -67,10 +68,10 @@ console.log(out)
 The output would be something like:
 
 ```
-...
+…
 fontWeight = '' > 'bold'
 color = 'red' > 'rgb(255, 0, 0)'
-...
+…
 ```
 
 Note the presence of the value `bold` for `font-weight` in the computed style and the absence of it in the element's `style` property.

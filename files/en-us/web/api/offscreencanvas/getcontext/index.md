@@ -1,6 +1,7 @@
 ---
 title: OffscreenCanvas.getContext()
 slug: Web/API/OffscreenCanvas/getContext
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -13,7 +14,7 @@ browser-compat: api.OffscreenCanvas.getContext
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The **`OffscreenCanvas.getContext()`** method returns a drawing
-context for an offscreen canvas, or {{jsxref("null")}} if the context identifier is not
+context for an offscreen canvas, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context identifier is not
 supported.
 
 > **Note:** This API is currently implemented for [WebGL1](/en-US/docs/Web/API/WebGLRenderingContext) and [WebGL2](/en-US/docs/Web/API/WebGL2RenderingContext) contexts only. See
@@ -51,8 +52,7 @@ getContext(contextType, contextAttributes)
     **`"experimental-webgl2"`** are also used in implementations
     of WebGL. These implementations have not reached test suite conformance, or the
     graphic drivers situation on the platform is not yet stable. The [Khronos Group](https://www.khronos.org/) certifies WebGL implementations
-    under certain [conformance
-    rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    under certain [conformance rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
 - `contextAttributes`
 
@@ -118,8 +118,8 @@ If the `contextType` doesn't match a possible drawing context,
 ## Examples
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext("webgl");
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext("webgl");
 
 gl; // WebGLRenderingContext
 gl.canvas; // OffscreenCanvas

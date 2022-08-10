@@ -112,7 +112,7 @@ Next, because we've promised to provide `options.html`, let's create it. Create 
   <body>
 
     <form>
-        <label>Border color<input type="text" id="color" ></label>
+        <label>Border color <input type="text" id="color" name="color"></label>
         <button type="submit">Save</button>
     </form>
 
@@ -167,7 +167,7 @@ You could store the settings values in local storage instead if you feel that lo
 Finally, update `borderify.js` to read the border color from storage:
 
 ```js
- function onError(error) {
+function onError(error) {
   console.log(`Error: ${error}`);
 }
 

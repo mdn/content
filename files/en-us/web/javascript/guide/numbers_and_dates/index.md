@@ -25,8 +25,6 @@ In JavaScript, numbers are implemented in [double-precision 64-bit binary format
 
 In addition to being able to represent floating-point numbers, the number type has three symbolic values: `+`{{jsxref("Infinity")}}, `-`{{jsxref("Infinity")}}, and {{jsxref("NaN")}} (not-a-number).
 
-A more recent addition to JavaScript is {{jsxref("BigInt")}} which lets you represent integers that may be very large. There are caveats to using `BigInt`, however; for example, you can't mix and match `BigInt` and {{jsxref("Number")}} values in the same operation, and you can't use the {{jsxref("Math")}} object with `BigInt` values.
-
 See also [JavaScript data types and structures](/en-US/docs/Web/JavaScript/Data_structures) for context with other primitive types in JavaScript.
 
 You can use four types of number literals: decimal, binary, octal, and hexadecimal.
@@ -106,8 +104,8 @@ The following table summarizes the `Number` object's properties.
 
 | Property                                             | Description                                                                                                                                        |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.MAX_VALUE")}}             | The largest representable number (`±1.7976931348623157e+308`)                                                                                      |
-| {{jsxref("Number.MIN_VALUE")}}             | The smallest representable number (`±5e-324`)                                                                                                      |
+| {{jsxref("Number.MAX_VALUE")}}             | The largest positive representable number (`1.7976931348623157e+308`)                                                                                      |
+| {{jsxref("Number.MIN_VALUE")}}             | The smallest positive representable number (`5e-324`)                                                                                                      |
 | {{jsxref("Number.NaN")}}                     | Special "not a number" value                                                                                                                       |
 | {{jsxref("Number.NEGATIVE_INFINITY")}} | Special negative infinite value; returned on overflow                                                                                              |
 | {{jsxref("Number.POSITIVE_INFINITY")}} | Special positive infinite value; returned on overflow                                                                                              |
@@ -134,7 +132,7 @@ The `Number` prototype provides methods for retrieving information from `Number`
 
 ## Math object
 
-The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the `Math` object's `PI` property has the value of pi (3.141...), which you would use in an application as
+The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the `Math` object's `PI` property has the value of pi (3.141…), which you would use in an application as
 
 ```js
 Math.PI
@@ -276,6 +274,46 @@ The following table summarizes the `Math` object's methods.
 
 Unlike many other objects, you never create a `Math` object of your own. You always use the built-in `Math` object.
 
+## BigInts
+
+One shortcoming of number values is they only have 64 bits. In practice, due to using IEEE 754 encoding, they cannot represent any integer larger than [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) (which is 2<sup>53</sup> - 1) accurately. To solve the need of encoding binary data and to interoperate with other languages that offer wide integers like `i64` (64-bit integers) and `i128` (128-bit integers), JavaScript also offers another data type to represent _arbitrarily large integers_: [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
+
+A BigInt can be defined as an integer literal suffixed by `n`:
+
+```js
+const b1 = 123n;
+// Can be arbitrarily large.
+const b2 = -1234567890987654321n;
+```
+
+BigInts can also be constructed from number values or string values using the [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) constructor.
+
+```js
+const b1 = BigInt(123);
+// Using a string prevents loss of precision, since long number
+// literals don't represent what they seem like.
+const b2 = BigInt("-1234567890987654321");
+```
+
+Conceptually, a BigInt is just an arbitrarily long sequence of bits which encodes an integer. You can safely do any arithmetic operations without losing precision or over-/underflowing.
+
+```js
+const integer = 12 ** 34; // 4.9222352429520264e+36; only has limited precision
+const bigint = 12n ** 34n; // 4922235242952026704037113243122008064n
+```
+
+Compared to numbers, BigInt values yield higher precision when representing large _integers_; however, they cannot represent _floating-point numbers_. For example, division would round to zero:
+
+```js
+const bigintDiv = 5n / 2n; // 2n, because there's no 2.5 in BigInt
+```
+
+`Math` functions cannot be used on BigInt values. There is [an open proposal](https://github.com/tc39/proposal-bigint-math) to overload certain `Math` functions like `Math.max()` to allow BigInt values.
+
+Choosing between BigInt and number depends on your use-case and your input's range. The precision of numbers should be able to accommodate most day-to-day tasks already, and BigInts are most suitable for handling binary data.
+
+Read more about what you can do with BigInt values in the [Expressions and Operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bigint_operators) section, or the [BigInt reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
+
 ## Date object
 
 JavaScript does not have a date data type. However, you can use the {{jsxref("Date")}} object and its methods to work with dates and times in your applications. The `Date` object has a large number of methods for setting, getting, and manipulating dates. It does not have any properties.
@@ -359,8 +397,8 @@ function JSClock() {
   const hour = time.getHours();
   const minute = time.getMinutes();
   const second = time.getSeconds();
-  let temp = '' + ((hour > 12) ? hour - 12 : hour);
-  if (hour == 0)
+  let temp = String(hour % 12);
+  if (hour === 0)
     temp = '12';
   temp += ((minute < 10) ? ':0' : ':') + minute;
   temp += ((second < 10) ? ':0' : ':') + second;

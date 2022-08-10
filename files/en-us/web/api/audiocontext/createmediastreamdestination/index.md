@@ -1,6 +1,7 @@
 ---
 title: AudioContext.createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -53,38 +54,38 @@ From here, you can play and save the opus file.
     <button>Make sine wave</button>
     <audio controls></audio>
     <script>
-     var b = document.querySelector("button");
-     var clicked = false;
-     var chunks = [];
-     var ac = new AudioContext();
-     var osc = ac.createOscillator();
-     var dest = ac.createMediaStreamDestination();
-     var mediaRecorder = new MediaRecorder(dest.stream);
-     osc.connect(dest);
+      const b = document.querySelector("button");
+      let clicked = false;
+      const chunks = [];
+      const ac = new AudioContext();
+      const osc = ac.createOscillator();
+      const dest = ac.createMediaStreamDestination();
+      const mediaRecorder = new MediaRecorder(dest.stream);
+      osc.connect(dest);
 
-     b.addEventListener("click", function(e) {
-       if (!clicked) {
+      b.addEventListener("click", (e) => {
+        if (!clicked) {
            mediaRecorder.start();
            osc.start(0);
            e.target.textContent = "Stop recording";
            clicked = true;
-         } else {
+        } else {
            mediaRecorder.stop();
            osc.stop(0);
            e.target.disabled = true;
-         }
-     });
+        }
+      });
 
-     mediaRecorder.ondataavailable = function(evt) {
-       // push each chunk (blobs) in an array
-       chunks.push(evt.data);
-     };
+      mediaRecorder.ondataavailable = (evt) => {
+        // Push each chunk (blobs) in an array
+        chunks.push(evt.data);
+      };
 
-     mediaRecorder.onstop = function(evt) {
-       // Make blob out of our blobs, and open it.
-       var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-       document.querySelector("audio").src = URL.createObjectURL(blob);
-     };
+      mediaRecorder.onstop = (evt) => {
+        // Make blob out of our blobs, and open it.
+        const blob = new Blob(chunks, { type: 'audio/ogg; codecs=opus' });
+        document.querySelector("audio").src = URL.createObjectURL(blob);
+      };
     </script>
   </body>
 </html>

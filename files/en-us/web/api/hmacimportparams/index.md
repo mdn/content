@@ -1,6 +1,7 @@
 ---
 title: HmacImportParams
 slug: Web/API/HmacImportParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

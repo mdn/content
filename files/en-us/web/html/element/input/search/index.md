@@ -201,11 +201,11 @@ This renders like so:
 
 The main basic differences come in the way browsers handle them. The first thing to note is that some browsers show a cross icon that can be clicked on to remove the search term instantly if desired, in Chrome this action is also triggered when pressing escape. The following screenshot comes from Chrome:
 
-![](chrome-cross-icon.png)
+![Focused search input, with focus ring, with the text 'cats'. There is an x icon in the input abutting the right side.](chrome-cross-icon.png)
 
 In addition, modern browsers also tend to automatically store search terms previously entered across domains, which then come up as autocomplete options when subsequent searches are performed in search inputs on that domain. This helps users who tend to do searches on the same or similar search queries over time. This screenshot is from Firefox:
 
-![](firefox-auto-complete.png)At this point, let's look at some useful techniques you can apply to your search forms.
+![An input in error state with a red focus ring. The user has entered the letter 'h'. A pop-up selection list is open directly under the input box with two options: hello and hermansje.](firefox-auto-complete.png)At this point, let's look at some useful techniques you can apply to your search forms.
 
 ### Setting placeholders
 
@@ -215,7 +215,7 @@ You can provide a useful placeholder inside your search input that could give a 
 <form>
   <div>
     <input type="search" id="mySearch" name="q"
-     placeholder="Search the site...">
+     placeholder="Search the site…">
     <button>Search</button>
   </div>
 </form>
@@ -240,7 +240,7 @@ Let's have a look at an example:
 <form role="search">
   <div>
     <input type="search" id="mySearch" name="q"
-     placeholder="Search the site..."
+     placeholder="Search the site…"
      aria-label="Search through site content">
     <button>Search</button>
   </div>
@@ -263,7 +263,7 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 <form>
   <div>
     <input type="search" id="mySearch" name="q"
-    placeholder="Search the site..." size="30">
+    placeholder="Search the site…" size="30">
     <button>Search</button>
   </div>
 </form>
@@ -307,7 +307,7 @@ You can use the {{htmlattrxref("required", "input")}} attribute as an easy way o
 <form>
   <div>
     <input type="search" id="mySearch" name="q"
-    placeholder="Search the site..." required>
+    placeholder="Search the site…" required>
     <button>Search</button>
     <span class="validity"></span>
   </div>

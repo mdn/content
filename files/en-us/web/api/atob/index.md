@@ -1,6 +1,7 @@
 ---
 title: atob()
 slug: Web/API/atob
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
@@ -31,8 +32,7 @@ atob(encodedData)
 ### Parameters
 
 - `encodedData`
-  - : A [binary string](/en-US/docs/Web/API/DOMString/Binary) containing
-    base64-encoded data.
+  - : A binary string (i.e., a string in which each character in the string is treated as a byte of binary data) containing base64-encoded data.
 
 ### Return value
 

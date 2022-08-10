@@ -1,6 +1,7 @@
 ---
 title: PannerNode
 slug: Web/API/PannerNode
+page-type: web-api-interface
 tags:
   - API
   - Interface

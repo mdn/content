@@ -40,7 +40,16 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@document [ <url>                    |
+            url-prefix(<string>)     |
+            domain(<string>)         |
+            media-document(<string>) |
+            regexp(<string>)
+          ]# {
+  <group-rule-body>
+}
+```
 
 ## Examples
 
@@ -70,7 +79,7 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 ## Specifications
 
-[Initially](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in {{SpecName('CSS3 Conditional')}}, `@document` has been [postponed](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4 then removed.
+[Initially](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in Level 3, `@document` was [postponed](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4, but then subsequently removed.
 
 ## Browser compatibility
 

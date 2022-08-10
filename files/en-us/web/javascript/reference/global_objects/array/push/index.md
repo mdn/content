@@ -7,6 +7,7 @@ tags:
   - Method
   - Prototype
   - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Array.push
 ---
 {{JSRef}}
@@ -21,7 +22,7 @@ an array and returns the new length of the array.
 ```js
 push(element0)
 push(element0, element1)
-push(element0, element1, /* ... ,*/ elementN)
+push(element0, element1, /* … ,*/ elementN)
 ```
 
 ### Parameters
@@ -36,9 +37,13 @@ method was called.
 
 ## Description
 
-The `push` method appends values to an array.
+The `push()` method appends values to an array.
 
-`push` is intentionally generic. This method can be used with
+{{jsxref("Array.prototype.unshift()")}} has similar behavior to `push()`, but applied to the start of an array.
+
+The `push()` method is a mutating method. It changes the length and the content of `this`. In case you want the value of `this` to be the same, but return a new array with elements appended to the end, you can use [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) instead. Notice that the elements are wrapped in an extra array — otherwise, if the element is an array itself, it would be spread instead of pushed as a single element due to the behavior of `concat()`.
+
+`Array.prototype.push()` is intentionally generic. This method can be used with
 {{jsxref("Function.call", "call()")}} or {{jsxref("Function.apply", "apply()")}} on
 objects resembling arrays. The `push` method relies on a `length`
 property to determine where to start inserting the given values. If the
@@ -46,10 +51,7 @@ property to determine where to start inserting the given values. If the
 This includes the possibility of `length` being nonexistent, in which case
 `length` will also be created.
 
-Although {{jsxref("Global_Objects/String", "strings", "", 1)}} are native, Array-like
-objects, they are not suitable in applications of this method, as strings are immutable.
- Similarly for the native, Array-like object {{jsxref("Functions/arguments",
-  "arguments", "", 1)}}.
+Although {{jsxref("Global_Objects/String", "strings", "", 1)}} are native Array-like objects, they are not suitable in applications of this method, as strings are immutable.
 
 ## Examples
 
@@ -60,11 +62,11 @@ appends two elements to it. The `total` variable contains the new length of
 the array.
 
 ```js
-let sports = ['soccer', 'baseball']
-let total = sports.push('football', 'swimming')
+const sports = ['soccer', 'baseball'];
+const total = sports.push('football', 'swimming');
 
-console.log(sports)  // ['soccer', 'baseball', 'football', 'swimming']
-console.log(total)   // 4
+console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
+console.log(total); // 4
 ```
 
 ### Merging two arrays
@@ -73,13 +75,13 @@ This example uses {{jsxref("Operators/Spread_syntax", "spread syntax", "", "1")}
 second array into the first one.
 
 ```js
-let vegetables = ['parsnip', 'potato']
-let moreVegs = ['celery', 'beetroot']
+const vegetables = ['parsnip', 'potato'];
+const moreVegs = ['celery', 'beetroot'];
 
 // Merge the second array into the first one
 vegetables.push(...moreVegs);
 
-console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
+console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ```
 
 Merging two arrays can also be done with the {{jsxref("Array.prototype.concat()", "concat()")}} method.
@@ -97,20 +99,20 @@ an array—and it just works, thanks to the way JavaScript allows us to establis
 execution context in any way we want.
 
 ```js
-let obj = {
-    length: 0,
+const obj = {
+  length: 0,
 
-    addElem: function addElem(elem) {
-        // obj.length is automatically incremented
-        // every time an element is added.
-        [].push.call(this, elem)
-    }
-}
+  addElem(elem) {
+    // obj.length is automatically incremented
+    // every time an element is added.
+    [].push.call(this, elem);
+  },
+};
 
 // Let's add some empty objects just to illustrate.
-obj.addElem({})
-obj.addElem({})
-console.log(obj.length)
+obj.addElem({});
+obj.addElem({});
+console.log(obj.length);
 // → 2
 ```
 
@@ -128,6 +130,7 @@ were dealing with an actual array.
 
 ## See also
 
+- [Polyfill of `Array.prototype.push` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.unshift()")}}

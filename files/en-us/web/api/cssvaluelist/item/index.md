@@ -1,6 +1,7 @@
 ---
 title: CSSValueList.item()
 slug: Web/API/CSSValueList/item
+page-type: web-api-instance-method
 tags:
   - API
   - CSSValueList

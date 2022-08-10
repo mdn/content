@@ -1,6 +1,7 @@
 ---
 title: URLPattern.port
 slug: Web/API/URLPattern/port
+page-type: web-api-instance-property
 tags:
   - API
   - Property

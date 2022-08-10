@@ -12,5 +12,5 @@ On the web it is famous for being the organization which maintain [the ECMA-262 
 
 ## See also
 
-- {{interwiki("wikipedia", "Ecma_International", "Ecma International")}} on Wikipedia
+- [Ecma International](https://en.wikipedia.org/wiki/Ecma_International) on Wikipedia
 - [The Ecma International web site](https://www.ecma-international.org/)

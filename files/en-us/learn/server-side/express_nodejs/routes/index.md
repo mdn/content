@@ -98,7 +98,7 @@ To use the router module in our main app file we first `require()` the route mod
 
 ```js
 var wiki = require('./wiki.js');
-// ...
+// …
 app.use('/wiki', wiki);
 ```
 
@@ -151,7 +151,7 @@ The route paths can also be JavaScript [regular expressions](/en-US/docs/Web/Jav
 
 ```js
 app.get(/.*fish$/, function (req, res) {
-  ...
+  // …
 })
 ```
 

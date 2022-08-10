@@ -1,6 +1,7 @@
 ---
 title: Document.createElement()
 slug: Web/API/Document/createElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -94,7 +95,7 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // constructor definition left out for brevity
-    ...
+    // …
   }
 }
 

@@ -1,6 +1,7 @@
 ---
 title: CSSImportRule.media
 slug: Web/API/CSSImportRule/media
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

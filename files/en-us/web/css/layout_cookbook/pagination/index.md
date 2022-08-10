@@ -8,6 +8,9 @@ tags:
   - css layout
   - flexbox
   - pagination
+browser-compat:
+  - css.properties.justify-content
+  - css.properties.column-gap.flex_context
 ---
 {{CSSRef}}
 
@@ -57,19 +60,13 @@ We have also added some additional content that would be read by a screenreader 
 
 The "See Also" section at the end of this document has links to related accessibility topics.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-_Include the compat data for key properties you used, as in the example below which includes align-items._
-
-### justify-content
-
-{{Compat("css.properties.justify-content")}}
-
-### column-gap in Flex layout
-
-{{Compat("css.properties.column-gap.flex_context")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.sign()
 slug: Web/API/SubtleCrypto/sign
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -42,7 +43,7 @@ sign(algorithm, key, data)
   - : A {{domxref("CryptoKey")}} object containing the key to be used for signing.
     If `algorithm` identifies a public-key cryptosystem, this is the private key.
 - `data`
-  - : An {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} object containing the data to be signed.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object containing the data to be signed.
 
 ### Return value
 
@@ -67,7 +68,7 @@ Three of these algorithms — RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA — are
 key for signing and the public key for verification.
 These systems all use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms)
 to hash the message to a short fixed size before signing.
-The choice of digest algorithm is passed into the
+Except for ECDSA (for which it is passed in the `algorithm` object), the choice of digest algorithm is passed into the
 {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.
 
 The fourth algorithm — HMAC — uses the same algorithm and key for signing and for

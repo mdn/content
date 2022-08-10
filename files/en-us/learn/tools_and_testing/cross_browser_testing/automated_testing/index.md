@@ -162,7 +162,7 @@ To add some real tasks to Gulp, we need to think about what we want to do. A rea
 
 - html-tidy, css-lint, and js-hint to lint and report/fix common HTML/CSS/JS errors (see [gulp-htmltidy](https://www.npmjs.com/package/gulp-htmltidy), [gulp-csslint](https://www.npmjs.com/package/gulp-csslint), [gulp-jshint](https://www.npmjs.com/package/gulp-jshint)).
 - Autoprefixer to scan our CSS and add vendor prefixes only where needed (see [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer)).
-- babel to transpile any new JavaScript syntax features to traditional syntax that works in older browsers (see [gulp-babel](https://www.npmjs.com/package/gulp-babel/)).
+- babel to transpile any new JavaScript syntax features to traditional syntax that works in older browsers (see [gulp-babel](https://www.npmjs.com/package/gulp-babel)).
 
 See the links above for full instructions on the different gulp packages we are using.
 
@@ -246,7 +246,7 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 
 4. Add the following property to `package.json`:
 
-    ```js
+    ```json
     "browserslist": [
       "last 5 versions"
     ]
@@ -381,7 +381,7 @@ Once you sign in to LambdaTest, you will be routed to the LambdaTest Dashboard. 
 2. As you click on the **Real Time Testing** you will be directed to a screen where you can choose the browser configuration, browser version, OS, and screen resolution with which you want to test your website.
     ![Real Time Testing](mark-as-bug-1.png)
 3. As you click on the Start button, a loading screen will appear, providing you with a VM (Virtual Machine) based on your configurations. Once loaded, you can perform live, interactive cross-browser testing with a website.
-    [![Mark as bug](mark-as-bug-2.png)](https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png)
+    [![Mark as bug](mark-as-bug-2.png)](https://web.archive.org/web/20210608014707if_/https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png)
     If you notice an issue with the UI, then you can share it with your colleagues by capturing a screenshot of your VM with the screenshot button. You can also record a video of your test session by hitting the recorder button in your test session.
 4. With the in-built image editor, highlight your screenshot before you push it to your colleagues.![Highlight a bug](mark-as-bug-3.png)
 5. Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the [third-party LambdaTest integrations](https://www.lambdatest.com/integrations).
@@ -394,7 +394,7 @@ Once you sign in to LambdaTest, you will be routed to the LambdaTest Dashboard. 
 
 Let's get started with a Sauce Labs Trial.
 
-1. Create a [Sauce Labs trial account](https://saucelabs.com/sign-up/trial).
+1. Create a Sauce Labs trial account.
 2. Sign in. This should happen automatically after you verify your e-mail address.
 
 #### The basics: Manual tests
@@ -442,23 +442,21 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
       password: "your-sauce-api-key"
     });
 
-    myAccount.getAccountDetails(function (err, res) {
+    myAccount.getAccountDetails((err, res) => {
       console.log(res);
-      myAccount.getServiceStatus(function (err, res) {
+      myAccount.getServiceStatus((err, res) => {
         // Status of the Sauce Labs services
         console.log(res);
-        myAccount.getJobs(function (err, jobs) {
+        myAccount.getJobs((err, jobs) => {
           // Get a list of all your jobs
-          for (let k in jobs) {
-            if ( jobs.hasOwnProperty( k )) {
-              myAccount.showJob(jobs[k].id, function (err, res) {
-                let str = res.id + ": Status: " + res.status;
-                if (res.error) {
-                  str += "\033[31m Error: " + res.error + " \033[0m";
-                }
-                console.log(str);
-              });
-            }
+          for (const job of jobs) {
+            myAccount.showJob(job.id, (err, res) => {
+              let str = `${res.id}: Status: ${res.status}`;
+              if (res.error) {
+                str += `\x1b[31m Error: ${res.error}\x1b[0m`;
+              }
+              console.log(str);
+            });
           }
         });
       });
@@ -597,7 +595,7 @@ function getBuilds(){
         hashed_id: <string>
       }
     },
-    ...
+    // …
   ]
   */
 };
@@ -653,7 +651,7 @@ function getSessionsInBuild(build){
         har_logs_url: <string>
       }
     },
-    ...
+    // …
   ]
   */
 }

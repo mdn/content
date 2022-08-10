@@ -22,7 +22,7 @@ ECMAScript 2015 introduces a new data structure to map values to values. A {{jsx
 The following code shows some basic operations with a `Map`. See also the {{jsxref("Map")}} reference page for more examples and the complete API. You can use a {{jsxref("Statements/for...of","for...of")}} loop to return an array of `[key, value]` for each iteration.
 
 ```js
-let sayings = new Map();
+const sayings = new Map();
 sayings.set('dog', 'woof');
 sayings.set('cat', 'meow');
 sayings.set('elephant', 'toot');
@@ -33,8 +33,8 @@ sayings.has('bird'); // false
 sayings.delete('dog');
 sayings.has('dog'); // false
 
-for (let [key, value] of sayings) {
-  console.log(key + ' goes ' + value);
+for (const [key, value] of sayings) {
+  console.log(`${key} goes ${value}`);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -80,7 +80,8 @@ function Public() {
 
 Public.prototype.method = function () {
   const me = privates.get(this);
-  // Do stuff with private data in `me`...
+  // Do stuff with private data in `me`
+  // …
 };
 
 module.exports = Public;
@@ -95,7 +96,7 @@ module.exports = Public;
 The following code shows some basic operations with a `Set`. See also the {{jsxref("Set")}} reference page for more examples and the complete API.
 
 ```js
-let mySet = new Set();
+const mySet = new Set();
 mySet.add(1);
 mySet.add('some text');
 mySet.add('foo');
@@ -104,7 +105,9 @@ mySet.has(1); // true
 mySet.delete('foo');
 mySet.size; // 2
 
-for (let item of mySet) console.log(item);
+for (const item of mySet) {
+  console.log(item);
+}
 // 1
 // "some text"
 ```

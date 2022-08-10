@@ -1,6 +1,7 @@
 ---
 title: AudioContext()
 slug: Web/API/AudioContext/AudioContext
+page-type: web-api-constructor
 tags:
   - Audio
   - Audio Context
@@ -92,9 +93,7 @@ This example creates a new {{domxref("AudioContext")}} for interactive audio
 (optimizing for latency) and a sample rate of 44.1kHz.
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-
-var audioCtx = new AudioContext({
+const audioCtx = new AudioContext({
   latencyHint: 'interactive',
   sampleRate: 44100,
 });

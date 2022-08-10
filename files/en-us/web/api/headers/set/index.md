@@ -1,6 +1,7 @@
 ---
 title: Headers.set()
 slug: Web/API/Headers/set
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -48,7 +49,7 @@ None ({{jsxref("undefined")}}).
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 ```
 
 You could add a header to this using {{domxref("Headers.append")}}, then set a new

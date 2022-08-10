@@ -1,6 +1,7 @@
 ---
 title: Node.lastChild
 slug: Web/API/Node/lastChild
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

@@ -38,8 +38,8 @@ The following example assigns the minutes portion of the current time to the var
 `minutes`.
 
 ```js
-var today = new Date();
-var minutes = today.getUTCMinutes();
+const today = new Date();
+const minutes = today.getUTCMinutes();
 ```
 
 ## Specifications

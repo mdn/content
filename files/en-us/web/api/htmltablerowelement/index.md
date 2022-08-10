@@ -1,6 +1,7 @@
 ---
 title: HTMLTableRowElement
 slug: Web/API/HTMLTableRowElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

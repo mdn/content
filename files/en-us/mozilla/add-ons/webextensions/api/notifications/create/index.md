@@ -36,7 +36,7 @@ let creating = browser.notifications.create(
 
 ### Parameters
 
-- `id`{{optional_inline}}
+- `id` {{optional_inline}}
   - : `string`. This is used to refer to this notification in {{WebExtAPIRef("notifications.update()")}}, {{WebExtAPIRef("notifications.clear()")}}, and event listeners. If you omit this argument or pass an empty string, then a new ID will be generated for this notification. If the ID you provide matches the ID of an existing notification from this extension, then the other notification will be cleared.
 - `options`
   - : {{WebExtAPIRef('notifications.NotificationOptions')}}. Defines the notification's content and behavior.
@@ -65,7 +65,7 @@ let CAKE_INTERVAL = 0.1;
 
 browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener((alarm) => {
   browser.notifications.create(cakeNotification, {
     "type": "basic",
     "iconUrl": browser.runtime.getURL("icons/cake-96.png"),
@@ -74,8 +74,8 @@ browser.alarms.onAlarm.addListener(function(alarm) {
   });
 });
 
-browser.browserAction.onClicked.addListener(()=> {
-  let clearing = browser.notifications.clear(cakeNotification);
+browser.browserAction.onClicked.addListener(() => {
+  const clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");
   });

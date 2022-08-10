@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.enctype
 slug: Web/API/HTMLFormElement/enctype
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

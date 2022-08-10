@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

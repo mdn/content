@@ -1,6 +1,7 @@
 ---
 title: AbortSignal.throwIfAborted()
 slug: Web/API/AbortSignal/throwIfAborted
+page-type: web-api-instance-method
 tags:
   - API
   - AbortSignal
@@ -70,7 +71,7 @@ The promise is rejected immediately if the signal is already aborted, or if the 
 Otherwise it completes normally and then resolves the promise.
 
 ```js
-function myCoolPromiseAPI(..., {signal}) {
+function myCoolPromiseAPI(/* … ,*/ {signal}) {
   return new Promise((resolve, reject) => {
     // If the signal is already aborted, immediately throw in order to reject the promise.
     if (signal.aborted) {
@@ -99,10 +100,10 @@ const signal = controller.signal;
 
 startSpinner();
 
-myCoolPromiseAPI({ ..., signal })
-  .then(result => ...)
-  .catch(err => {
-    if (err.name == 'AbortError') return;
+myCoolPromiseAPI({ /* … ,*/ signal })
+  .then((result) => { })
+  .catch((err) => {
+    if (err.name === 'AbortError') return;
     showUserErrorMessage();
   })
   .then(() => stopSpinner());

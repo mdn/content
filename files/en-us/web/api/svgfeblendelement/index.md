@@ -1,6 +1,7 @@
 ---
 title: SVGFEBlendElement
 slug: Web/API/SVGFEBlendElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

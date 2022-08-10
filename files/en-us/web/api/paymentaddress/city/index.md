@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.city
 slug: Web/API/PaymentAddress/city
+page-type: web-api-instance-property
 tags:
   - API
   - Address

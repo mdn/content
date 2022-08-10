@@ -1,6 +1,7 @@
 ---
 title: Window.menubar
 slug: Web/API/Window/menubar
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -28,7 +29,7 @@ of the `menubar` object is used.
 <head>
   <title>Various DOM Tests</title>
   <script>
-    var visible = window.menubar.visible;
+    const visible = window.menubar.visible;
   </script>
 </head>
 <body>

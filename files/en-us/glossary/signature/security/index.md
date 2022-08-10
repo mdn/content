@@ -18,7 +18,9 @@ On receiving the message, the **verification process**
 
 The system fails if the private key is compromised or the recipient is deceitfully given the wrong public key.
 
+Digital signatures rely on asymmetric cryptography, also known as [public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography).
+
 ## See also
 
-- {{Interwiki("wikipedia", "Digital signature")}} on Wikipedia
+- [Digital signature](https://en.wikipedia.org/wiki/Digital_signature) on Wikipedia
 - See {{glossary("digest")}}, {{glossary("encryption")}}

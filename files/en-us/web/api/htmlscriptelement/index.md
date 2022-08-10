@@ -1,6 +1,7 @@
 ---
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -13,7 +14,7 @@ browser-compat: api.HTMLScriptElement
 
 HTML {{HTMLElement("script")}} elements expose the **`HTMLScriptElement`** interface, which provides special properties and methods for manipulating the behavior and execution of `<script>` elements (beyond the inherited {{domxref("HTMLElement")}} interface).
 
-JavaScript files should be served with the `application/javascript` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), but browsers are lenient and block them only if the script is served with an image type (`image/*`), video type (`video/*`), audio type (`audio/*`), or `text/csv`. If the script is blocked, its element receives an {{event("error")}} event; otherwise, it receives a {{domxref("Window/load_event", "load")}} event.
+JavaScript files should be served with the `application/javascript` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), but browsers are lenient and block them only if the script is served with an image type (`image/*`), video type (`video/*`), audio type (`audio/*`), or `text/csv`. If the script is blocked, its element receives an {{domxref("Element/error_event", "error")}} event; otherwise, it receives a {{domxref("Window/load_event", "load")}} event.
 
 {{InheritanceDiagram}}
 
@@ -78,11 +79,11 @@ For more details, see the [`defer`](#defer_property) and [`async`](#async_proper
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(`The script ${oError.target.src} didn't load correctly.`);
 }
 
 function prefixScript(url, onloadFunction) {
-  var newScript = document.createElement("script");
+  const newScript = document.createElement("script");
   newScript.onerror = loadError;
   if (onloadFunction) { newScript.onload = onloadFunction; }
   document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
@@ -94,11 +95,11 @@ This next function, instead of prepending the new scripts immediately before the
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(`The script ${oError.target.src} didn't load correctly.`);
 }
 
 function affixScriptToHead(url, onloadFunction) {
-  var newScript = document.createElement("script");
+  const newScript = document.createElement("script");
   newScript.onerror = loadError;
   if (onloadFunction) { newScript.onload = onloadFunction; }
   document.head.appendChild(newScript);
@@ -110,7 +111,7 @@ Sample usage:
 
 ```js
 affixScriptToHead("myScript1.js");
-affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js\" has been correctly loaded."); });
+affixScriptToHead("myScript2.js", () => { alert("The script \"myScript2.js\" has been correctly loaded."); });
 ```
 
 ### Checking if a script type is supported

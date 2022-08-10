@@ -32,7 +32,7 @@ browser-compat: html.elements.input.type_checkbox
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{event("change")}} and {{event("input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
@@ -177,13 +177,13 @@ overall.addEventListener('click', (e) => {
   e.preventDefault();
 });
 
-for(const ingredient of ingredients) {
+for (const ingredient of ingredients) {
   ingredient.addEventListener('click', updateDisplay);
 }
 
 function updateDisplay() {
   let checkedCount = 0;
-  for(const ingredient of ingredients) {
+  for (const ingredient of ingredients) {
     if(ingredient.checked) {
       checkedCount++;
     }

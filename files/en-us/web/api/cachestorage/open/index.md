@@ -1,10 +1,10 @@
 ---
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -43,17 +43,16 @@ A {{jsxref("Promise")}} that resolves to the requested {{domxref("Cache")}} obje
 
 ## Examples
 
-This example is from the MDN [sw-test
-example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
+This example is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
 Here we wait for an {{domxref("InstallEvent")}} to fire, then runs
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for
 the app. This consists of calling `CacheStorage.open()` to create a new
 cache, then using {{domxref("Cache.addAll()")}} to add a series of assets to it.
 
 ```js
-self.addEventListener('install', function(event) {
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open('v1').then((cache) => {
       return cache.addAll([
         '/sw-test/',
         '/sw-test/index.html',
@@ -67,6 +66,7 @@ self.addEventListener('install', function(event) {
       ]);
     })
   );
+});
 ```
 
 ## Specifications
@@ -79,7 +79,6 @@ self.addEventListener('install', function(event) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

@@ -19,5 +19,5 @@ There are many ways to prevent CSRF, such as implementing {{glossary("REST", "RE
 
 ## See also
 
-- {{Interwiki("wikipedia", "Cross-site request forgery")}} on Wikipedia
+- [Cross-site request forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) on Wikipedia
 - [Prevention measures](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)

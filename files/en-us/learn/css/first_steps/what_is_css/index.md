@@ -121,11 +121,9 @@ As a newcomer to CSS, it is likely that you will find the CSS specs overwhelming
 
 After a CSS feature has been specified, then it is only useful for us in developing web pages if one or more browsers have implemented the feature. This means that the code has been written to turn the instruction in our CSS file into something that can be output to the screen. We'll look at this process more in the lesson [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works). It is unusual for all browsers to implement a feature at the same time, and so there is usually a gap where you can use some part of CSS in some browsers and not in others. For this reason, being able to check implementation status is useful.
 
-The browser support status is shown on every MDN CSS property page in a section named "Browser compatibility" — use information in this section to check if the property can be used on your website. For example, the compatibility section for the CSS [`font-family`](/en-US/docs/Web/CSS/font-family) property is reproduced below. Based on your requirements, you can use the Browser compatibility table to check how this property is supported across various browsers, or check if your specific browser and the version you have support the property, or if there are any caveats you should be aware of for the browser and version you are using.
+The browser support status is shown on every MDN CSS property page in a table named "Browser compatibility". Consult the information in that table to check if the property can be used on your website. For an example, see the [browser compatibility table for the CSS `font-family` property](/en-US/docs/Web/CSS/font-family#browser_compatibility).
 
-### Browser compatibility
-
-{{Compat("css.properties.font-family")}}
+Based on your requirements, you can use the browser compatibility table to check how this property is supported across various browsers, or check if your specific browser and the version you have support the property, or if there are any caveats you should be aware of for the browser and version you are using.
 
 ## Summary
 

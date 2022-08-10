@@ -19,7 +19,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-Another category of content that can create accessibility problems is multimedia — video, audio, and image content need to be given proper textual alternatives so they can be understood by assistive technologies and their users. This article shows how.
+Another category of content that can create accessibility problems is multimedia. Video, audio, and image content need to be given proper textual alternatives so that they can be understood by assistive technologies and their users. This article shows how.
 
 <table>
   <tbody>
@@ -166,8 +166,8 @@ Doing it this way round rather than just not including the controls attribute in
 First, let's set up the play/pause button. We can get this to toggle between play and pause with a simple conditional function, like the following. Add it to your code, at the bottom:
 
 ```js
-playPauseBtn.onclick = function() {
-  if(player.paused) {
+playPauseBtn.onclick = () => {
+  if (player.paused) {
     player.play();
     playPauseBtn.textContent = 'Pause';
   } else {
@@ -180,7 +180,7 @@ playPauseBtn.onclick = function() {
 Next, add this code to the bottom, which controls the stop button:
 
 ```js
-stopBtn.onclick = function() {
+stopBtn.onclick = () => {
   player.pause();
   player.currentTime = 0;
   playPauseBtn.textContent = 'Play';
@@ -189,16 +189,16 @@ stopBtn.onclick = function() {
 
 There is no `stop()` function available on {{domxref("HTMLMediaElement")}}s, so instead we `pause()` it, and at the same time set the `currentTime` to 0.
 
-Next, our rewind and fast forward buttons — add the following blocks to the bottom of your code:
+Next, our rewind and fast-forward buttons — add the following blocks to the bottom of your code:
 
 ```js
-rwdBtn.onclick = function() {
+rwdBtn.onclick = () => {
   player.currentTime -= 3;
 };
 
-fwdBtn.onclick = function() {
+fwdBtn.onclick = () => {
   player.currentTime += 3;
-  if(player.currentTime >= player.duration || player.paused) {
+  if (player.currentTime >= player.duration || player.paused) {
     player.pause();
     player.currentTime = 0;
     playPauseBtn.textContent = 'Play';
@@ -208,12 +208,12 @@ fwdBtn.onclick = function() {
 
 These are very simple, just adding or subtracting 3 seconds to the `currentTime` each time they are clicked. In a real video player, you'd probably want a more elaborate seeking bar, or similar.
 
-Note that we also check to see if the `currentTime` is more than the total media `duration`, or if the media is not playing, when the Fwd button is pressed. If either condition is true, we stop the video, to avoid the user interface going wrong if they attempt to fast forward when the video is not playing or fast forward past the end of the video.
+Note that we also check to see if the `currentTime` is more than the total media `duration` or if the media is not playing when the `fwdBtn` is pressed. If either condition is true, we stop the video to avoid the user interface going wrong if they attempt to fast forward when the video is not playing or fast forward past the end of the video.
 
 Last of all, add the following to the end of the code, to control the time elapsed display:
 
 ```js
-player.ontimeupdate = function () {
+player.ontimeupdate = () => {
   const minutes = Math.floor(player.currentTime / 60);
   const seconds = Math.floor(player.currentTime - minutes * 60);
   let minuteValue;
@@ -282,13 +282,13 @@ However, there are some edge cases. You might for example have an audio recordin
 
 To make video accessible for deaf, visually impaired, or other groups of users (such as those on low bandwidth, or who don't understand the language the video is recorded in), you need to include text tracks along with your video content.
 
-> **Note:** text tracks are also useful for potentially any user, not just those with disabilities. for example, some users may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library.)
+> **Note:** Text tracks are also useful for potentially any user, not just those with disabilities. For example, some users may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library).
 
 This is not a new concept — television services have had closed captioning available for quite a long time:
 
 ![Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"](closed-captions.png)
 
-Whereas many countries offer English films with subtitles written in their own native languages, and different language subtitles are often available on DVDs, for example
+Many countries offer English films with subtitles written in their own native languages, and different language subtitles are often available on DVDs, as shown below:
 
 ![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](subtitles_german.png)
 
@@ -316,7 +316,7 @@ This is the first subtitle.
 00:00:30.739 --> 00:00:34.074
 This is the second.
 
-...
+…
 ```
 
 To get this displayed along with the HTML media playback, you need to:
@@ -338,7 +338,7 @@ This will result in a video that has subtitles displayed, kind of like this:
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-For more details, please read [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
+For more details, see [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 
 > **Note:** Text tracks and transcriptions also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 

@@ -78,8 +78,8 @@ function decFont() {
 }
 
 function changeImage() {
-  var index = Math.ceil(Math.random() * 39 + 1);
-  document.images[0].src = index + ".png";
+  const index = Math.ceil(Math.random() * 39 + 1);
+  document.images[0].src = `index${.png}`;
 }
 ```
 

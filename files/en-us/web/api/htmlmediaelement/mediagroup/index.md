@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.mediaGroup
 slug: Web/API/HTMLMediaElement/mediaGroup
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -17,12 +18,6 @@ The **`HTMLMediaElement.mediaGroup`** property reflects the {{htmlattrxref("medi
 ## Value
 
 A string.
-
-## Examples
-
-```js
-...
-```
 
 ## Specifications
 

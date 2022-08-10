@@ -1,6 +1,7 @@
 ---
 title: BarcodeDetector()
 slug: Web/API/BarcodeDetector/BarcodeDetector
+page-type: web-api-constructor
 tags:
   - Barcode Detection API
   - BarcodeDetector
@@ -20,19 +21,21 @@ barcodes in images.
 ## Syntax
 
 ```js
-new BarcodeDetector();
+new BarcodeDetector()
+new BarcodeDetector(options)
 ```
 
 ### Parameters
 
-- _barcodeDetectorOptions_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An options object containing a series of `BarcodeFormats` to search for
     in the subsequent {{domxref('BarcodeDetector.detect()','detect()')}} calls. The
     options are:
 
-    - `formats`: An {{jsxref('Array')}} of barcode formats as strings. To
-      see a full list of supported formats see the {{domxref('Barcode Detection API','Barcode Detection API overview page')}}.
+    - `formats`
+      - : An {{jsxref('Array')}} of barcode formats as strings.
+        To see a full list of supported formats see the [Barcode Detection API](/en-US/docs/Web/API/Barcode_Detection_API).
 
 ## Examples
 
@@ -41,7 +44,7 @@ and tests for browser compatibility.
 
 ```js
 // create new detector
-var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
+const barcodeDetector = new BarcodeDetector({ formats: ['code_39', 'codabar', 'ean_13'] });
 
 // check compatibility
 if (barcodeDetector) {

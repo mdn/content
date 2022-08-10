@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.component
 slug: Web/API/RTCIceCandidate/component
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -57,9 +58,9 @@ This code snippet examines a candidate's component type and dispatches the candi
 different handlers depending on the value.
 
 ```js
-if (candidate.component == "rtp") {
+if (candidate.component === "rtp") {
   handleRTPCandidate(candidate);
-} else if (candidate.component == "rtcp") {
+} else if (candidate.component === "rtcp") {
   handleRTCPCandidate(candidate);
 } else {
   handleUnknownCandidate(candidate);

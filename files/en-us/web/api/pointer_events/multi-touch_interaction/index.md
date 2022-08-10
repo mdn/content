@@ -1,6 +1,7 @@
 ---
 title: Multi-touch interaction
 slug: Web/API/Pointer_events/Multi-touch_interaction
+page-type: guide
 tags:
   - Guide
   - Pointer Events
@@ -49,12 +50,12 @@ To support multi-touch interaction, preserving a pointer's event state during va
 
 ```js
 // Log events flag
-var logEvents = false;
+const logEvents = false;
 
 // Event caches, one per touch target
-var evCache1 = new Array();
-var evCache2 = new Array();
-var evCache3 = new Array();
+const evCache1 = [];
+const evCache2 = [];
+const evCache3 = [];
 ```
 
 ### Register event handlers
@@ -64,7 +65,7 @@ Event handlers are registered for the following pointer events: {{domxref("HTMLE
 ```js
 function set_handlers(name) {
  // Install event handlers for the given element
- var el=document.getElementById(name);
+ const el = document.getElementById(name);
  el.onpointerdown = pointerdown_handler;
  el.onpointermove = pointermove_handler;
 
@@ -95,7 +96,7 @@ function pointerdown_handler(ev) {
  // Save this event for later processing (this could be part of a
  // multi-touch interaction) and update the background color
  push_event(ev);
- if (logEvents) log("pointerDown: name = " + ev.target.id, ev);
+ if (logEvents) log(`pointerDown: name = ${ev.target.id}`, ev);
  update_background(ev);
 }
 ```
@@ -177,15 +178,15 @@ function get_cache(ev) {
 
 function push_event(ev) {
  // Save this event in the target's cache
- var cache = get_cache(ev);
+ const cache = get_cache(ev);
  cache.push(ev);
 }
 
 function remove_event(ev) {
  // Remove this event from the target's cache
- var cache = get_cache(ev);
- for (var i = 0; i < cache.length; i++) {
-   if (cache[i].pointerId == ev.pointerId) {
+ const cache = get_cache(ev);
+ for (let i = 0; i < cache.length; i++) {
+   if (cache[i].pointerId === ev.pointerId) {
      cache.splice(i, 1);
      break;
    }
@@ -205,7 +206,7 @@ function update_background(ev) {
  //   yellow - one pointer down
  //   pink - two pointers down
  //   lightblue - three or more pointers down
- var evCache = get_cache(ev);
+ const evCache = get_cache(ev);
  switch (evCache.length) {
    case 0:
      // Target element has no touch points
@@ -232,23 +233,23 @@ These functions are used send to event activity to the application window (to su
 
 ```js
 // Log events flag
-var logEvents = false;
+let logEvents = false;
 
 function enableLog(ev) {
-  logEvents = logEvents ? false : true;
+  logEvents = !logEvents;
 }
 
 function log(name, ev) {
-  var o = document.getElementsByTagName('output')[0];
-  var s = name + ": pointerID = " + ev.pointerId +
-                " ; pointerType = " + ev.pointerType +
-                " ; isPrimary = " + ev.isPrimary;
-  o.innerHTML += s + "
-";
+  const o = document.getElementsByTagName('output')[0];
+  const s = `${name}:<br>`
+    + `  pointerID   = ${ev.pointerId}<br>`
+    + `  pointerType = ${ev.pointerType}<br>`
+    + `  isPrimary   = ${ev.isPrimary}`;
+  o.innerHTML += `${s}<br>`;
 }
 
 function clearLog(event) {
- var o = document.getElementsByTagName('output')[0];
+ const o = document.getElementsByTagName('output')[0];
  o.innerHTML = "";
 }
 ```

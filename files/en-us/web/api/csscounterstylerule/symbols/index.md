@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule.symbols
 slug: Web/API/CSSCounterStyleRule/symbols
+page-type: web-api-instance-property
 tags:
   - API
   - Property

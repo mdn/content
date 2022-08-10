@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -44,18 +45,17 @@ The following example shows basic usage of an AudioContext to create an Analyser
 then use requestAnimationFrame() to collect time domain data repeatedly and draw an
 "oscilloscope style" output of the current audio input. For more complete applied
 examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see
-[app.js
-lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
+[app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
 
-  ...
+// …
 
 analyser.fftSize = 2048;
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
+const bufferLength = analyser.frequencyBinCount;
+const dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
 
 // draw an oscilloscope of the current audio source
@@ -74,13 +74,13 @@ function draw() {
 
       canvasCtx.beginPath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+      const sliceWidth = WIDTH * 1.0 / bufferLength;
+      let x = 0;
 
-      for(var i = 0; i < bufferLength; i++) {
+      for (let i = 0; i < bufferLength; i++) {
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+        const v = dataArray[i] / 128.0;
+        const y = v * HEIGHT/2;
 
         if(i === 0) {
           canvasCtx.moveTo(x, y);

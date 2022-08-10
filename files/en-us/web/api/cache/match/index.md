@@ -1,10 +1,10 @@
 ---
 title: Cache.match()
 slug: Web/API/Cache/match
+page-type: web-api-instance-method
 tags:
   - API
   - Cache
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -15,11 +15,8 @@ browser-compat: api.Cache.match
 ---
 {{APIRef("Service Workers API")}}
 
-The **`match()`** method of the
-{{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the
-{{domxref("Response")}} associated with the first matching request in the
-{{domxref("Cache")}} object. If no match is found, the {{jsxref("Promise")}} resolves
-to {{jsxref("undefined")}}.
+The **`match()`** method of the {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the {{domxref("Response")}} associated with the first matching request in the {{domxref("Cache")}} object.
+If no match is found, the {{jsxref("Promise")}} resolves to {{jsxref("undefined")}}.
 
 ## Syntax
 
@@ -35,8 +32,8 @@ match(request, options)
     {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL.
 - `options` {{optional_inline}}
 
-  - : An object that sets options for the `match` operation. The available
-    options are:
+  - : An object that sets options for the `match` operation.
+     The available options are:
 
     - `ignoreSearch`
       - : A boolean value that specifies whether to
@@ -68,9 +65,7 @@ the request or to {{jsxref("undefined")}} if no match is found.
 
 ## Examples
 
-This example is taken from the [custom
-offline page](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js) example ([live
-demo](https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html)). It uses a cache to supply selected data when a request fails. A
+This example is taken from the [custom offline page](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js) example ([live demo](https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html)). It uses a cache to supply selected data when a request fails. A
 `catch()` clause is triggered when the call to `fetch()` throws an
 exception. Inside the `catch()` clause, `match()` is used to
 return the correct response.
@@ -85,17 +80,15 @@ response with an response code in the 4xx or 5xx range, the `catch()` will
 NOT be called.
 
 ```js
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', (event) => {
   // We only want to call event.respondWith() if this is a GET request for an HTML document.
   if (event.request.method === 'GET' &&
-      event.request.headers.get('accept').indexOf('text/html') !== -1) {
+      event.request.headers.get('accept').includes('text/html')) {
     console.log('Handling fetch event for', event.request.url);
     event.respondWith(
-      fetch(event.request).catch(function(e) {
+      fetch(event.request).catch((e) => {
         console.error('Fetch failed; returning offline page instead.', e);
-        return caches.open(OFFLINE_CACHE).then(function(cache) {
-          return cache.match(OFFLINE_URL);
-        });
+        return caches.open(OFFLINE_CACHE).then((cache) => cache.match(OFFLINE_URL));
       })
     );
   }
@@ -112,7 +105,6 @@ self.addEventListener('fetch', function(event) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

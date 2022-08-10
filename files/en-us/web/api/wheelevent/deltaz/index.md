@@ -1,6 +1,7 @@
 ---
 title: WheelEvent.deltaZ
 slug: Web/API/WheelEvent/deltaZ
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -24,7 +25,7 @@ A number.
 ## Examples
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaZ": 4, "deltaMode": 0});
+const syntheticEvent = new WheelEvent("syntheticWheel", { "deltaZ": 4, "deltaMode": 0 });
 
 console.log(syntheticEvent.deltaZ);
 ```
@@ -39,5 +40,5 @@ console.log(syntheticEvent.deltaZ);
 
 ## See also
 
-- {{ event("wheel") }}
+- {{domxref("Element/wheel_event","wheel")}}
 - {{domxref("WheelEvent")}}

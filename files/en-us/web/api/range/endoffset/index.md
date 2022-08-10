@@ -1,6 +1,7 @@
 ---
 title: Range.endOffset
 slug: Web/API/Range/endOffset
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -30,7 +31,7 @@ A number.
 ## Examples
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
 range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);

@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaAtomic
 slug: Web/API/ElementInternals/ariaAtomic
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -31,10 +32,12 @@ A string with one of the following values:
 In this example the value of `ariaAtomic` is set to "true" in the constructor for a custom element .
 
 ```js
-constructor() {
-  super();
-  this.internals_ = this.attachInternals();
-  this.internals_.ariaAtomic = "true";
+class MyCustomElement extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaAtomic = "true";
+  }
 }
 ```
 

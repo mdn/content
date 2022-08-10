@@ -12,8 +12,6 @@ tags:
 
 An important aspect of web components is encapsulation — being able to keep the markup structure, style, and behavior hidden and separate from other code on the page so that different parts do not clash, and the code can be kept nice and clean. The Shadow DOM API is a key part of this, providing a way to attach a hidden separated DOM to an element. This article covers the basics of using the Shadow DOM.
 
-> **Note:** Shadow DOM is supported by default in Firefox (63 and onwards), Chrome, Opera, and Safari. The new Chromium-based Edge (79 and onwards) supports it too; the old Edge didn't.
-
 ## High-level view
 
 This article assumes you are already familiar with the concept of the [DOM (Document Object Model)](/en-US/docs/Web/API/Document_Object_Model/Introduction) — a tree-like structure of connected nodes that represents the different elements and strings of text appearing in a markup document (usually an HTML document in the case of web documents). As an example, consider the following HTML fragment:
@@ -36,9 +34,9 @@ This article assumes you are already familiar with the concept of the [DOM (Docu
 
 This fragment produces the following DOM structure:
 
-![](dom-screenshot.png)
+![DOM Tree with elements and text nodes, content of non empty text nodes, including element's attribute names and contents ](dom-screenshot.png)
 
-_Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which can be attached to any elements you want, in the same way as the normal DOM.
+_Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which you can attach any element, in the same way as the normal DOM.
 
 ![SVG version of the diagram showing the interaction of document, shadow root and shadow host.](shadowdom.svg)
 
@@ -58,14 +56,14 @@ Note that the shadow DOM is not a new thing by any means — browsers have used 
 You can attach a shadow root to any element using the {{domxref("Element.attachShadow()")}} method. This takes as its parameter an options object that contains one option — `mode` — with a value of `open` or `closed`:
 
 ```js
-let shadow = elementRef.attachShadow({mode: 'open'});
-let shadow = elementRef.attachShadow({mode: 'closed'});
+const shadowOpen = elementRef.attachShadow({mode: 'open'});
+const shadowClosed = elementRef.attachShadow({mode: 'closed'});
 ```
 
 `open` means that you can access the shadow DOM using JavaScript written in the main page context, for example using the {{domxref("Element.shadowRoot")}} property:
 
 ```js
-let myShadowDom = myCustomElem.shadowRoot;
+const myShadowDom = myCustomElem.shadowRoot;
 ```
 
 If you attach a shadow root to a custom element with `mode: closed` set, you won't be able to access the shadow DOM from the outside — `myCustomElem.shadowRoot` returns `null`. This is the case with built in elements that contain shadow DOMs, such as `<video>`.
@@ -75,20 +73,20 @@ If you attach a shadow root to a custom element with `mode: closed` set, you won
 If you are attaching a shadow DOM to a custom element as part of its constructor (by far the most useful application of the shadow DOM), you would use something like this:
 
 ```js
-let shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({mode: 'open'});
 ```
 
 When you've attached a shadow DOM to an element, manipulating it is a matter of just using the same DOM APIs as you use for the regular DOM manipulation:
 
 ```js
-let para = document.createElement('p');
+const para = document.createElement('p');
 shadow.appendChild(para);
 // etc.
 ```
 
 ## Working through a simple example
 
-Now let's walk through a simple example to demonstrate the shadow DOM in action inside a custom element — [`<popup-info>`](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) (see a [live example](https://mdn.github.io/web-components-examples/popup-info-box-web-component/) also). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information. To begin with, in our JavaScript file we define a class called `PopUpInfo`, which extends `HTMLElement`:
+Now let's walk through a simple example to demonstrate the shadow DOM in action inside a custom element — [`<popup-info>`](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component) (see a [live example](https://mdn.github.io/web-components-examples/popup-info-box-web-component/) also). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information. To begin with, in our JavaScript file we define a class called `PopUpInfo`, which extends `HTMLElement`:
 
 ```js
 class PopUpInfo extends HTMLElement {
@@ -97,8 +95,6 @@ class PopUpInfo extends HTMLElement {
     super();
 
     // write element functionality in here
-
-    ...
   }
 }
 ```
@@ -111,7 +107,7 @@ We first attach a shadow root to the custom element:
 
 ```js
 // Create a shadow root
-let shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({mode: 'open'});
 ```
 
 ### Creating the shadow DOM structure
@@ -213,7 +209,7 @@ customElements.define('popup-info', PopUpInfo);
 
 In the above example we apply style to the Shadow DOM using a {{htmlelement("style")}} element, but it is perfectly possible to do it by referencing an external stylesheet from a {{htmlelement("link")}} element instead.
 
-For example, take a look at this code from our [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) example (see the [source code](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)):
+For example, take a look at this code from our [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) example (see the [source code](https://github.com/mdn/web-components-examples/blob/main/popup-info-box-external-stylesheet/main.js)):
 
 ```js
 // Apply external styles to the shadow DOM

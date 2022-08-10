@@ -1,5 +1,5 @@
 ---
-title: row-gap (grid-row-gap)
+title: row-gap
 slug: Web/CSS/row-gap
 tags:
   - CSS
@@ -36,6 +36,8 @@ row-gap: revert;
 row-gap: revert-layer;
 row-gap: unset;
 ```
+
+Note that `grid-row-gap` is an alias for this property.
 
 ### Values
 
@@ -125,7 +127,7 @@ row-gap: unset;
 
 ## Specifications
 
-{{Specifications("css.properties.row-gap.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

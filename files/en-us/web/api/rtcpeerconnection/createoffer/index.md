@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.createOffer()
 slug: Web/API/RTCPeerConnection/createOffer
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -111,10 +112,9 @@ offer and sends it to the remote system over a signaling channel.
 > fulfillment handler, depend entirely on your design.
 
 ```js
-  myPeerConnection.createOffer().then(function(offer) {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(function() {
+myPeerConnection.createOffer()
+  .then((offer) => myPeerConnection.setLocalDescription(offer))
+  .then(() => {
     sendToServer({
       name: myUsername,
       target: targetUsername,
@@ -122,7 +122,7 @@ offer and sends it to the remote system over a signaling channel.
       sdp: myPeerConnection.localDescription
     });
   })
-  .catch(function(reason) {
+  .catch((reason) => {
     // An error occurred, so handle the failure to connect
   });
 ```
@@ -139,8 +139,7 @@ the same one.
 
 Use {{jsxref("Promise.catch()")}} to trap and handle errors.
 
-See [Signaling and
-video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for the complete example from which this snippet is derived; this
+See [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for the complete example from which this snippet is derived; this
 will help you to understand how the signaling code here works.
 
 ## Specifications

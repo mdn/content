@@ -1,6 +1,7 @@
 ---
 title: 'Document: dragenter event'
 slug: Web/API/Document/dragenter_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -19,32 +20,28 @@ The `dragenter` event is fired when a dragged element or text selection enters a
 
 The target object is the _immediate user selection_ (the element directly indicated by the user as the drop target), or the {{HTMLElement("body")}} element.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Default action</th>
-      <td>Reject immediate user selection as potential target element.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondragenter", "ondragenter")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('dragenter', (event) => {});
+
+ondragenter = (event) => { };
+```
+
+## Event type
+
+A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("DragEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+  - : The data that is transferred during a drag and drop interaction.
 
 ## Examples
 
@@ -96,14 +93,14 @@ body {
 #### JavaScript
 
 ```js
-document.addEventListener("dragenter", event => {
+document.addEventListener("dragenter", (event) => {
   // highlight potential drop target when the draggable element enters it
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.add("dragover");
   }
 });
 
-document.addEventListener("dragleave", event => {
+document.addEventListener("dragleave", (event) => {
   // reset background of potential drop target when the draggable element leaves it
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");

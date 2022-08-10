@@ -15,7 +15,7 @@ Why a re-introduction? Because [JavaScript](/en-US/docs/Glossary/JavaScript) is 
 
 It's useful to start with an overview of the language's history. JavaScript was created in 1995 by Brendan Eich while he was an engineer at Netscape. JavaScript was first released with Netscape 2 early in 1996. It was originally going to be called LiveScript, but it was renamed in an ill-fated marketing decision that attempted to capitalize on the popularity of Sun Microsystem's Java language — despite the two having very little in common. This has been a source of confusion ever since.
 
-Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to [Ecma International](https://www.ecma-international.org/), a European standards organization, which resulted in the first edition of the [ECMAScript](/en-US/docs/Glossary/ECMAScript) standard that year. The standard received a significant update as ECMAScript edition 3 in 1999. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December 2009, and for the 6th major edition of the standard, published in June 2015. Since then a yearly edition has been published. For example, the [12th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) was published in June 2021.
+Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to [Ecma International](https://www.ecma-international.org/), a European standards organization, which resulted in the first edition of the [ECMAScript](/en-US/docs/Glossary/ECMAScript) standard that year. The standard received a significant update as ECMAScript edition 3 in 1999. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December 2009, and for the 6th major edition of the standard, published in June 2015. Since then a yearly edition has been published. For example, the [13th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) was published in June 2022.
 
 > **Note:** Because it is more familiar, we will refer to ECMAScript as "JavaScript" from this point on.
 
@@ -35,7 +35,7 @@ Let's start off by looking at the building blocks of any language: the types. Ja
 - [Object](/en-US/docs/Web/JavaScript/Data_structures#objects)
 - [Symbol](/en-US/docs/Web/JavaScript/Data_structures#symbol_type) (new in ES2015)
 
-... oh, and [undefined](/en-US/docs/Web/JavaScript/Data_structures#undefined_type) and [null](/en-US/docs/Web/JavaScript/Data_structures#null_type), which are ... slightly odd. And {{jsxref("Array")}}, which is a special kind of object. And {{jsxref("Date")}} and {{jsxref("RegExp")}}, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:
+In addition, there is also [undefined](/en-US/docs/Web/JavaScript/Data_structures#undefined_type) and [null](/en-US/docs/Web/JavaScript/Data_structures#null_type), which are slightly odd. And {{jsxref("Array")}}, which is a special kind of object. And {{jsxref("Date")}} and {{jsxref("RegExp")}}, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:
 
 - [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type)
 - [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type)
@@ -188,7 +188,7 @@ There's our first brush with JavaScript objects! Did we mention that you can use
 
 ## Other types
 
-JavaScript distinguishes between {{jsxref("null")}}, which is a value that indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which is a value of type `undefined` that indicates an uninitialized variable — that is, a value hasn't even been assigned yet. We'll talk about variables later, but in JavaScript it is possible to declare a variable without assigning a value to it. If you do this, the variable's type is `undefined`. `undefined` is actually a constant.
+JavaScript distinguishes between [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), which is a value that indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which is a value of type `undefined` that indicates an uninitialized variable — that is, a value hasn't even been assigned yet. We'll talk about variables later, but in JavaScript it is possible to declare a variable without assigning a value to it. If you do this, the variable's type is `undefined`. `undefined` is actually a constant.
 
 JavaScript has a boolean type, with possible values `true` and `false` (both of which are keywords.) Any value can be converted to a boolean according to the following rules:
 
@@ -261,7 +261,7 @@ An important difference between JavaScript and other languages like Java is that
 
 ## Operators
 
-JavaScript's numeric operators are `+`, `-`, `*`, `/` and `%` which is the remainder operator ([which is the same as modulo](/en-US/docs/Web/JavaScript/Reference/Operators#remainder_%28%29).) Values are assigned using `=`, and there are also compound assignment statements such as `+=` and `-=`. These extend out to `x = x operator y`.
+JavaScript's numeric operators are `+`, `-`, `*`, `/` and `%` which is the [remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder). Values are assigned using `=`, and there are also compound assignment statements such as `+=` and `-=`. These extend out to `x = x operator y`.
 
 ```js
 x += 5;
@@ -343,7 +343,7 @@ for (let i = 0; i < 5; i++) {
 JavaScript also contains two other prominent for loops: [`for`...`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
-for (let value of array) {
+for (const value of array) {
   // do something with value
 }
 ```
@@ -351,7 +351,7 @@ for (let value of array) {
 and [`for`...`in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in):
 
 ```js
-for (let property in object) {
+for (const property in object) {
   // do something with object property
 }
 ```
@@ -424,7 +424,7 @@ JavaScript objects can be thought of as simple collections of name-value pairs. 
 - HashMaps in Java.
 - Associative arrays in PHP.
 
-The fact that this data structure is so widely used is a testament to its versatility. Since everything (bar core types) in JavaScript is an object, any JavaScript program naturally involves a great deal of hash table lookups. It's a good thing they're so fast!
+The fact that this data structure is so widely used is a testament to its versatility. Since everything (except for core types) in JavaScript is an object, any JavaScript program naturally involves plenty of hash table lookups. It's a good thing they're so fast!
 
 The "name" part is a JavaScript string, while the value can be any JavaScript value — including more objects. This allows you to build data structures of arbitrary complexity.
 
@@ -483,7 +483,7 @@ obj.name = 'Simon';
 const name = obj.name;
 ```
 
-And...
+And:
 
 ```js
 // bracket notation
@@ -578,20 +578,20 @@ a.push(item);
 
 Arrays come with a number of methods. See also the [full documentation for array methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
-| Method name                                          | Description                                                                       |
-| ---------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `a.toString()`                                       | Returns a string with the `toString()` of each element separated by commas.       |
-| `a.toLocaleString()`                                 | Returns a string with the `toLocaleString()` of each element separated by commas. |
-| `a.concat(item1[, item2[, ...[, itemN]]])`           | Returns a new array with the items added on to it.                                |
-| `a.join(sep)`                                        | Converts the array to a string — with values delimited by the `sep` param         |
-| `a.pop()`                                            | Removes and returns the last item.                                                |
-| `a.push(item1, ..., itemN)`                          | Appends items to the end of the array.                                            |
-| `a.shift()`                                          | Removes and returns the first item.                                               |
-| `a.unshift(item1[, item2[, ...[, itemN]]])`          | Prepends items to the start of the array.                                         |
-| `a.slice(start[, end])`                              | Returns a sub-array.                                                              |
-| `a.sort([cmpfn])`                                    | Takes an optional comparison function.                                            |
-| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | Lets you modify an array by deleting a section and replacing it with more items.  |
-| `a.reverse()`                                        | Reverses the array.                                                               |
+| Method name                                        | Description                                                                       |
+|----------------------------------------------------| --------------------------------------------------------------------------------- |
+| `a.toString()`                                     | Returns a string with the `toString()` of each element separated by commas.       |
+| `a.toLocaleString()`                               | Returns a string with the `toLocaleString()` of each element separated by commas. |
+| `a.concat(item1, /* … ,*/ itemN)`                  | Returns a new array with the items added on to it.                                |
+| `a.join(sep)`                                      | Converts the array to a string — with values delimited by the `sep` param         |
+| `a.pop()`                                          | Removes and returns the last item.                                                |
+| `a.push(item1, /* … ,*/ itemN)`                    | Appends items to the end of the array.                                            |
+| `a.shift()`                                        | Removes and returns the first item.                                               |
+| `a.unshift(item1, /* … ,*/ itemN)`                 | Prepends items to the start of the array.                                         |
+| `a.slice(start[, end])`                            | Returns a sub-array.                                                              |
+| `a.sort([cmpfn])`                                  | Takes an optional comparison function.                                            |
+| `a.splice(start, delcount[, item1, /* … ,*/ itemN])` | Lets you modify an array by deleting a section and replacing it with more items.  |
+| `a.reverse()`                                      | Reverses the array.                                                               |
 
 ## Functions
 
@@ -756,7 +756,7 @@ Note that JavaScript functions are themselves objects — like everything else i
 ## Custom objects
 
 > **Note:** The content in this section does not cover modern JavaScript features, including support for [Classes](/en-US/docs/Web/JavaScript/Reference/Classes).
-> For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+> For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 In classic object-oriented programming, objects are collections of data and methods that operate on that data.
 JavaScript uses functions as classes.
@@ -790,10 +790,10 @@ function makePerson(first, last) {
   return {
     first: first,
     last: last,
-    fullName: function() {
+    fullName() {
       return this.first + ' ' + this.last;
     },
-    fullNameReversed: function() {
+    fullNameReversed() {
       return this.last + ', ' + this.first;
     }
   };

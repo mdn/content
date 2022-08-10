@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.organization
 slug: Web/API/PaymentAddress/organization
+page-type: web-api-instance-property
 tags:
   - API
   - Address

@@ -41,17 +41,17 @@ function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   console.log(filter.status);          // uninitialized
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     console.log(filter.status);        // transferringdata
   }
 
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     console.log(filter.status);        // transferringdata
     // pass through the response data
     filter.write(event.data);
   }
 
-  filter.onstop = event => {
+  filter.onstop = (event) => {
     console.log(filter.status);        // finishedtransferringdata
     filter.disconnect();
     console.log(filter.status);        // disconnected

@@ -1,6 +1,7 @@
 ---
 title: ScreenOrientation.angle
 slug: Web/API/ScreenOrientation/angle
+page-type: web-api-instance-property
 tags:
   - API
   - Orientation

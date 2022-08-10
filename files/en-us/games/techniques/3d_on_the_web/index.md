@@ -71,7 +71,7 @@ Three.js, like any other library, gives you a huge advantage: instead of writing
 
 Both [Unity](https://unity.com/) and [Unreal](https://www.unrealengine.com/) can export your game to [WebGL](/en-US/docs/Web/API/WebGL_API) with [asm.js](/en-US/docs/Games/Tools/asm.js), so you're free to use their tools and techniques to build games that will be exported to the web.
 
-![](shapes.png)
+![llustration of three 3D geometry shapes: a grey torus, a blue cube, and a yellow cylinder.](shapes.png)
 
 ## Where to go next
 

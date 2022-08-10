@@ -20,7 +20,7 @@ Looking at the final state, you can discern something about the series of inputs
 There are two types of basic state machines:
 
 - deterministic finite state machine
-  - : This kind allows only one possible transition for any allowed input. This is like the "if" {{Glossary("statement")}} in that `if x == true then doThis else doThat` is not possible. The computer must perform _one_ of the two options.
+  - : This kind allows only one possible transition for any allowed input. This is like the "if" {{Glossary("statement")}} in that `if x then doThis else doThat` is not possible. The computer must perform _one_ of the two options.
 - non-deterministic finite state machine
   - : Given some state, an input can lead to more than one different state.
 
@@ -32,7 +32,7 @@ In _Figure 1_, the state begins in State 1; the state changes to State 2 given i
 
 _Figure 2: Non-Deterministic Finite State Machine_
 
-[![](statemachine2.png)](http://postimg.org/image/mpq3nz82h/)
+![](statemachine2.png)
 
 In _Figure 2_, given input 'X', the state can persist or change to State 2.
 
@@ -40,7 +40,7 @@ Note that any {{Glossary("regular expression")}} can be represented by a state m
 
 ## See also
 
-- {{Interwiki("wikipedia", "Finite-state machine")}} on Wikipedia
-- {{Interwiki("wikipedia", "UML state machine")}} on Wikipedia
-- {{Interwiki("wikipedia", "Moore machine")}} on Wikipedia
-- {{Interwiki("wikipedia", "Mealy machine")}} on Wikipedia
+- [Finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine) on Wikipedia
+- [UML state machine](https://en.wikipedia.org/wiki/UML_state_machine) on Wikipedia
+- [Moore machine](https://en.wikipedia.org/wiki/Moore_machine) on Wikipedia
+- [Mealy machine](https://en.wikipedia.org/wiki/Mealy_machine) on Wikipedia

@@ -39,8 +39,8 @@ The following example assigns the weekday portion of the current date to the var
 `weekday`.
 
 ```js
-var today = new Date();
-var weekday = today.getUTCDay();
+const today = new Date();
+const weekday = today.getUTCDay();
 ```
 
 ## Specifications

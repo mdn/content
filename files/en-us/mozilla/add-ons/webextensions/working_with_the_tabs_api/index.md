@@ -29,7 +29,7 @@ We then conclude by looking at some other, miscellaneous features offered by the
 
 For the majority of the Tabs API functions you don't need any permissions; however, there are some exceptions:
 
-- `"tabs`" permission is needed to access the `Tab.url`, `Tab.title`, and `Tab.favIconUrl` properties of the Tab object. In Firefox, you also need `"tabs"` to perform a [query](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) by URL.
+- `"tabs"` permission is needed to access the `Tab.url`, `Tab.title`, and `Tab.favIconUrl` properties of the Tab object. In Firefox, you also need `"tabs"` to perform a [query](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) by URL.
 - [Host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) is needed for {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}}.
 
 The following is how you might request `"tabs"` permission in your extension's manifest.json file:
@@ -228,7 +228,7 @@ else if (e.target.id === "tabs-alertinfo") {
 Where `callOnActiveTab()` finds the active tab object by looping through the {{WebExtAPIRef("tabs.Tab")}} objects looking for the item with active set:
 
 ```js
-document.addEventListener("click", function(e) {
+document.addEventListener("click", (e) => {
   function callOnActiveTab(callback) {
     getCurrentWindowTabs().then((tabs) => {
       for (let tab of tabs) {
@@ -296,7 +296,7 @@ But first, here is a demonstration of the feature in action:
   - : To implement the "menu" defined in `tabs.html`, [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js) includes a listener for clicks in `tabs.html`:
 
     ```js
-    document.addEventListener("click", function(e) {
+    document.addEventListener("click", (e) => {
       function callOnActiveTab(callback) {
 
         getCurrentWindowTabs().then((tabs) => {
@@ -307,7 +307,7 @@ But first, here is a demonstration of the feature in action:
           }
         });
       }
-    }
+    });
     ```
 
     A series of `if` statements then look to match the `id` of the item clicked.

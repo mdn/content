@@ -34,7 +34,7 @@ Then, in the `preload` function, load the `paddle` image by adding the following
 
 ```js
 function preload() {
-    // ...
+    // …
     game.load.image('ball', 'img/ball.png');
     game.load.image('paddle', 'img/paddle.png');
 }
@@ -103,14 +103,14 @@ If you haven't already done so, reload your `index.html` and try it out!
 
 ## Position the ball
 
-We have the paddle working as expected, so let's position the ball on it. It's very similar to positioning the paddle — we need to have it placed in the middle of the screen horizontally and at the bottom vertically with a little offset from the bottom. To place it exactly as we want it we will set the anchor to the exact middle of the ball. Find the existing `ball = game.add.sprite( ... )` line, and replace it with the following two lines:
+We have the paddle working as expected, so let's position the ball on it. It's very similar to positioning the paddle — we need to have it placed in the middle of the screen horizontally and at the bottom vertically with a little offset from the bottom. To place it exactly as we want it we will set the anchor to the exact middle of the ball. Find the existing `ball = game.add.sprite()` line, and replace it with the following two lines:
 
 ```js
 ball = game.add.sprite(game.world.width*0.5, game.world.height-25, 'ball');
 ball.anchor.set(0.5);
 ```
 
-The velocity stays almost the same — we're just changing the second parameter's value from 150 to -150, so the ball will start the game by moving up instead of down. Find the existing `ball.body.velocity.set( ... )` line and update it to the following:
+The velocity stays almost the same — we're just changing the second parameter's value from 150 to -150, so the ball will start the game by moving up instead of down. Find the existing `ball.body.velocity.set()` line and update it to the following:
 
 ```js
 ball.body.velocity.set(150, -150);

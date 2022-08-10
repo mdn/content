@@ -1,6 +1,7 @@
 ---
 title: USBDevice.close()
 slug: Web/API/USBDevice/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - close
+  - Experimental
 browser-compat: api.USBDevice.close
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

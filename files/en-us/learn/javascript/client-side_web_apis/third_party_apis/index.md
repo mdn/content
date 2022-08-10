@@ -47,7 +47,7 @@ The APIs we've covered so far are built into the browser, but not all APIs are. 
 
 Third party APIs are APIs provided by third parties — generally companies such as Facebook, Twitter, or Google — to allow you to access their functionality via JavaScript and use it on your site. One of the most obvious examples is using mapping APIs to display custom maps on your pages.
 
-Let's look at a [Simple Mapquest API example](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/), and use it to illustrate how third-party APIs differ from browser APIs.
+Let's look at a [Simple Mapquest API example](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/mapquest), and use it to illustrate how third-party APIs differ from browser APIs.
 
 > **Note:** You might want to just [get all our code examples](/en-US/docs/Learn#getting_our_code_examples) at once, in which case you can then just search the repo for the example files you need in each section.
 
@@ -57,9 +57,9 @@ Browser APIs are built into the browser — you can access them from JavaScript 
 
 ```js
 const audioCtx = new AudioContext();
-  ...
+// …
 const audioElement = document.querySelector('audio');
-  ...
+// …
 const audioSource = audioCtx.createMediaElementSource(audioElement);
 // etc.
 ```
@@ -68,7 +68,7 @@ Third party APIs, on the other hand, are located on third party servers. To acce
 
 ```html
 <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js" defer></script>
-<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+<link rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
 ```
 
 You can then start using the objects available in that library. For example:
@@ -143,7 +143,7 @@ There are other types of control available, for example [`mapquest.searchControl
 
 ### Adding a custom marker
 
-Adding a marker (icon) at a certain point on the map is easy — you just use the [`L.marker()`](https://leafletjs.com/reference-1.3.0.html#marker) method (which seems to be documented in the related Leaflet.js docs). Add the following code to your example, again inside `window.onload`:
+Adding a marker (icon) at a certain point on the map is easy — you just use the [`L.marker()`](https://leafletjs.com/reference.html#marker) method (which seems to be documented in the related Leaflet.js docs). Add the following code to your example, again inside `window.onload`:
 
 ```js
 L.marker([53.480759, -2.242631], {
@@ -169,7 +169,7 @@ Finally, we chain `.addTo(map)` to the end of the chain to actually add the mark
 
 Have a play with the other options shown in the documentation and see what you can come up with! Mapquest provides some pretty advanced functionality, such as directions, searching, etc.
 
-> **Note:** If you have trouble getting the example to work, check your code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/)).
+> **Note:** If you have trouble getting the example to work, check your code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js).
 
 ## A RESTful API — NYTimes
 
@@ -267,9 +267,9 @@ Add the following code block inside the `fetchResults()` function, just above th
 ```js
 // Use fetch() to make the request to the API
 fetch(url)
-  .then( response => response.json() )
-  .then( json => displayResults(json) )
-  .catch( error => console.error(`Error fetching data: ${error.message}`) );
+  .then((response) => response.json())
+  .then((json) => displayResults(json))
+  .catch((error) => console.error(`Error fetching data: ${error.message}`));
 ```
 
 Here we run the request by passing our `url` variable to [`fetch()`](/en-US/docs/Web/API/fetch), convert the response body to JSON using the [`json()`](/en-US/docs/Web/API/Response/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI. We also catch and log any errors that might be thrown.
@@ -343,7 +343,7 @@ There's a lot of code here; let's explain it step by step:
 - If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the Article Search API reference (see [NYTimes APIs](https://developer.nytimes.com/apis)). Most of these operations are fairly obvious, but a few are worth calling out:
 
   - We used a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to go through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a `<p>`. This was done to make it easy to style each one.
-  - We used an `if()` block (`if(current.multimedia.length > 0) { ... }`) to check whether each article has any images associated with it (some stories don't.) We display the first image only if it exists (otherwise an error would be thrown).
+  - We used an `if ()` block (`if (current.multimedia.length > 0) { }`) to check whether each article has any images associated with it, as some stories don't. We display the first image only if it exists; otherwise, an error would be thrown.
 
 ### Wiring up the pagination buttons
 
@@ -414,6 +414,7 @@ This article has given you a useful introduction to using third-party APIs to ad
 - [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
 - [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
 - [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- **Third party APIs**
 - [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
 - [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

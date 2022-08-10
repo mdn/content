@@ -1,6 +1,7 @@
 ---
 title: Document.visibilityState
 slug: Web/API/Document/visibilityState
+page-type: web-api-instance-property
 tags:
   - DOM
   - Document
@@ -46,15 +47,15 @@ minimized.
 ## Syntax
 
 ```js
-var string = document.visibilityState
+document.visibilityState
 ```
 
 ## Examples
 
 ```js
-document.addEventListener("visibilitychange", function() {
-  console.log( document.visibilityState );
-  // Modify behavior...
+document.addEventListener("visibilitychange", () => {
+  console.log(document.visibilityState);
+  // Modify behavior…
 })
 ```
 

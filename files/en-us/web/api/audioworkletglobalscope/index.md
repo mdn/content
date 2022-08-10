@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletGlobalScope
 slug: Web/API/AudioWorkletGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -97,3 +98,4 @@ testNode.connect(audioContext.destination)
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using AudioWorklet](/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet)

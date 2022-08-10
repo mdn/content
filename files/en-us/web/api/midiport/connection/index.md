@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.connection
 slug: Web/API/MIDIPort/connection
+page-type: web-api-instance-property
 tags:
   - API
   - Property

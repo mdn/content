@@ -168,7 +168,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
         parent Object.
       </td>
       <td>
-        <p><code>if("geolocation" in navigator) { ... }</code></p>
+        <p><code>if("geolocation" in navigator) { }</code></p>
       </td>
     </tr>
     <tr>
@@ -183,7 +183,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
         <code
           >function supports_canvas() {<br />return
           !!document.createElement('canvas').getContext;<br />}<br /><br />if(supports_canvas())
-          { ... }</code
+          { }</code
         >
       </td>
     </tr>
@@ -237,7 +237,7 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 As an example, our [Snapshot](https://github.com/chrisdavidmills/snapshot) demo makes use of it to selectively apply the Brick JavaScript library and use it to handle the UI layout, but only for the small screen layout (480px wide or less). We first use the `media` attribute to only apply the Brick CSS to the page if the page width is 480px or less:
 
 ```css
-<link href="dist/brick.css" type="text/css" rel="stylesheet" media="all and (max-width: 480px)">
+<link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)">
 ```
 
 We then use `matchMedia()` in the JavaScript several times, to only run Brick navigation functions if we are on the small screen layout (in wider screen layouts, everything can be seen at once, so we don't need to navigate between different views).
@@ -289,7 +289,7 @@ At this point, try loading your page, and you'll get an idea of how Modernizr wo
 
 ```html
 <html class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
-blob-constructor cookies cors ...AND LOADS MORE VALUES!">
+blob-constructor cookies cors (and loads of more values)">
 ```
 
 It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support flexbox at all, `<html>` would be given a class name of `no-flexbox`. If it did support modern flexbox, it would get a class name of `flexbox`. If you search through the class list, you'll also see others relating to flexbox, like:

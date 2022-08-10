@@ -1,6 +1,7 @@
 ---
 title: Credential.id
 slug: Web/API/Credential/id
+page-type: web-api-instance-property
 tags:
   - API
   - Credential

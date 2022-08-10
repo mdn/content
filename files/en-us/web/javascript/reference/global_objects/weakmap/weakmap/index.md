@@ -31,12 +31,12 @@ new WeakMap(iterable)
 ### Using WeakMap
 
 ```js
-const wm1 = new WeakMap(),
-      wm2 = new WeakMap(),
-      wm3 = new WeakMap();
-const o1 = {},
-      o2 = function() {},
-      o3 = window;
+const wm1 = new WeakMap();
+const wm2 = new WeakMap();
+const wm3 = new WeakMap();
+const o1 = {};
+const o2 = function () {};
+const o3 = window;
 
 wm1.set(o1, 37);
 wm1.set(o2, 'azerty');

@@ -207,24 +207,23 @@ The second rule we'll add here makes it so that a panel with a `class` of `activ
 The final step to getting this feature working is to add some JavaScript. Put the following block of code, exactly as written in between your opening and closing {{htmlelement("script")}} tags (you'll find these below the HTML content):
 
 ```js
-var tabs = document.querySelectorAll('.info-box li a');
-var panels = document.querySelectorAll('.info-box article');
+const tabs = document.querySelectorAll('.info-box li a');
+const panels = document.querySelectorAll('.info-box article');
 
-for(i = 0; i < tabs.length; i++) {
-  var tab = tabs[i];
-  setTabHandler(tab, i);
+for (let i = 0; i < tabs.length; i++) {
+  setTabHandler(tabs[i], i);
 }
 
 function setTabHandler(tab, tabPos) {
-  tab.onclick = function() {
-    for(i = 0; i < tabs.length; i++) {
-      tabs[i].className = '';
+  tab.onclick = () => {
+    for (const tab of tabs) {
+      tab.className = '';
     }
 
     tab.className = 'active';
 
-    for(i = 0; i < panels.length; i++) {
-      panels[i].className = '';
+    for (const panel of panels) {
+      panel.className = '';
     }
 
     panels[tabPos].className = 'active-panel';
@@ -325,7 +324,7 @@ As a starting point, make a local copy of [hidden-info-panel-start.html](https:/
 <input type="checkbox" id="toggle">
 <aside>
 
-  ...
+…
 
 </aside>
 ```
@@ -394,7 +393,7 @@ There's a lot going on here — let's discuss it bit by bit:
 - Next, we set a fixed {{cssxref("width")}} on the panel, and make its {{cssxref("height")}} the entire height of the browser viewport.
 - We also include some horizontal {{cssxref("padding")}} to space it out a bit.
 - Next we set {{cssxref("position")}}`: fixed;` on the panel so it will always appear in the same place, even if the page has content to scroll. We glue it to the {{cssxref("top")}} of the viewport, and set it so that by default it is offscreen to the {{cssxref("right")}}.
-- Finally, we set a {{cssxref("transition")}} on the element. Transitions are an interesting feature that allow you to make changes between states happen smoothly, rather than just going "on", "off" abruptly. In this case we are intending to make the panel slide smoothly onscreen when the checkbox is checked. (Or to put it another way, when the question mark icon is clicked — remember, clicking the `<label>` will check the associated checkbox! We told you it was a hack.) You will learn a lot more about...
+- Finally, we set a {{cssxref("transition")}} on the element. Transitions are an interesting feature that allow you to make changes between states happen smoothly, rather than just going "on", "off" abruptly. In this case we are intending to make the panel slide smoothly onscreen when the checkbox is checked. (Or to put it another way, when the question mark icon is clicked — remember, clicking the `<label>` will check the associated checkbox! We told you it was a hack.) You will learn a lot more about…
 
 ### Setting the checked state
 

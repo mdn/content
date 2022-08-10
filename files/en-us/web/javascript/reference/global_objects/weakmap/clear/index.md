@@ -26,8 +26,8 @@ clear()
 ### Using the `clear` method
 
 ```js example-bad
-var wm = new WeakMap();
-var obj = {};
+const wm = new WeakMap();
+const obj = {};
 
 wm.set(obj, 'foo');
 wm.set(window, 'bar');

@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.mul()
 slug: Web/API/CSSNumericValue/mul
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -27,7 +28,7 @@ mul(number)
 ### Parameters
 
 - `number`
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 

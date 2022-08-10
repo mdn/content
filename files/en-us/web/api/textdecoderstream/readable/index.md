@@ -1,6 +1,7 @@
 ---
 title: TextDecoderStream.readable
 slug: Web/API/TextDecoderStream/readable
+page-type: web-api-instance-property
 tags:
   - API
   - Property

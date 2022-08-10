@@ -17,7 +17,7 @@ browser-compat: webextensions.api.webNavigation.TransitionType
 
 Cause of the navigation: for example, the user clicked a link, or typed an address, or clicked a bookmark.
 
-Note that many values here are not currently supported in Firefox: see the [browser compatibility table](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType#browser_compatibility) for details.
+Note that many values here are not currently supported in Firefox: see the [browser compatibility table](#browser_compatibility) for details.
 
 ## Type
 

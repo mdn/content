@@ -1,6 +1,7 @@
 ---
 title: clearTimeout()
 slug: Web/API/clearTimeout
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
@@ -48,26 +49,26 @@ one second, the alert only appears once.
 
 ```js
 const alarm = {
-  remind: function(aMessage) {
+  remind(aMessage) {
     alert(aMessage);
     this.timeoutID = undefined;
   },
 
-  setup: function() {
+  setup() {
     if (typeof this.timeoutID === 'number') {
       this.cancel();
     }
 
-    this.timeoutID = setTimeout(function(msg) {
+    this.timeoutID = setTimeout((msg) => {
       this.remind(msg);
-    }.bind(this), 1000, 'Wake up!');
+    }, 1000, 'Wake up!');
   },
 
-  cancel: function() {
+  cancel() {
     clearTimeout(this.timeoutID);
   }
 };
-window.addEventListener('click', () => alarm.setup() );
+window.addEventListener('click', () => alarm.setup());
 ```
 
 ## Notes

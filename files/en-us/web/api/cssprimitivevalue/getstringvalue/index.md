@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.getStringValue()
 slug: Web/API/CSSPrimitiveValue/getStringValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue
@@ -46,8 +47,8 @@ A `string` value.
 ## Examples
 
 ```js
-var cs = window.getComputedStyle(document.body);
-var cssValue = cs.getPropertyCSSValue("display");
+const cs = window.getComputedStyle(document.body);
+const cssValue = cs.getPropertyCSSValue("display");
 console.log(cssValue.getStringValue());
 ```
 

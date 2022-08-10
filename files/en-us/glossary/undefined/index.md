@@ -19,5 +19,5 @@ console.log("x's value is ", x) //logs "x's value is undefined"
 
 ## See also
 
-- {{Interwiki("wikipedia", "Undefined value")}} on Wikipedia
+- [Undefined value](https://en.wikipedia.org/wiki/Undefined_value) on Wikipedia
 - [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)

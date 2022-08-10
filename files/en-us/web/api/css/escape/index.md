@@ -1,6 +1,7 @@
 ---
 title: CSS.escape()
 slug: Web/API/CSS/escape
+page-type: web-api-static-method
 tags:
   - API
   - CSS
@@ -50,14 +51,14 @@ To escape a string for use as part of a selector, the `escape()` method can
 be used:
 
 ```js
-var element = document.querySelector('#' + CSS.escape(id) + ' > img');
+const element = document.querySelector(`#${CSS.escape(id)} > img`);
 ```
 
 The `escape()` method can also be used for escaping strings, although it
 escapes characters that don't strictly need to be escaped:
 
 ```js
-var element = document.querySelector('a[href="#' + CSS.escape(fragment) + '"]');
+const element = document.querySelector(`a[href="#${CSS.escape(fragment)}"]`);
 ```
 
 ## Specifications
@@ -71,5 +72,4 @@ var element = document.querySelector('a[href="#' + CSS.escape(fragment) + '"]');
 ## See also
 
 - The {{DOMxRef("CSS")}} interface where this static method resides.
-- [A
-  polyfill for the CSS.escape](https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js)
+- [A polyfill for the CSS.escape](https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js)

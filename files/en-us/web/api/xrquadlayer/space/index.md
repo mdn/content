@@ -1,6 +1,7 @@
 ---
 title: XRQuadLayer.space
 slug: Web/API/XRQuadLayer/space
+page-type: web-api-instance-property
 tags:
   - API
   - Property

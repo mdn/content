@@ -1,6 +1,7 @@
 ---
 title: 'Element: MSGestureHold event'
 slug: Web/API/Element/MSGestureHold_event
+page-type: web-api-event
 tags:
   - Event
   - Non-standard

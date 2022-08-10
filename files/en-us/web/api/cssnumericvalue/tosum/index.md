@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.toSum()
 slug: Web/API/CSSNumericValue/toSum
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

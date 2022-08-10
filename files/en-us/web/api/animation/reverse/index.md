@@ -1,6 +1,7 @@
 ---
 title: Animation.reverse()
 slug: Web/API/Animation/reverse
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -36,7 +37,7 @@ None ({{jsxref("undefined")}}).
 In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the bottle causes Alice's growing animation (`aliceChange`) to play backwards, causing her to get smaller. It is done by setting `aliceChange`'s {{ domxref("Animation.playbackRate") }} to `-1` like so:
 
 ```js
-var shrinkAlice = function() {
+const shrinkAlice = () => {
   // play Alice's animation in reverse
   aliceChange.playbackRate = -1;
   aliceChange.play();
@@ -49,7 +50,7 @@ var shrinkAlice = function() {
 But it could also have been done by calling `reverse()` on `aliceChange` like so:
 
 ```js
-var shrinkAlice = function() {
+const shrinkAlice = () => {
   // play Alice's animation in reverse
   aliceChange.reverse();
 

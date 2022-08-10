@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getActiveUniform()
 slug: Web/API/WebGLRenderingContext/getActiveUniform
+page-type: web-api-instance-method
 tags:
   - API
   - Method

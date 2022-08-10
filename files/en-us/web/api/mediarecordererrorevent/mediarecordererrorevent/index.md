@@ -1,6 +1,7 @@
 ---
 title: MediaRecorderErrorEvent()
 slug: Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent
+page-type: web-api-constructor
 tags:
   - API
   - Audio

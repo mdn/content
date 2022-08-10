@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.sampleSize
 slug: Web/API/MediaTrackSupportedConstraints/sampleSize
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -59,7 +60,7 @@ if (navigator.mediaDevices.getSupportedConstraints().sampleSize) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

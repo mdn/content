@@ -35,9 +35,9 @@ browser.action.getBadgeBackgroundColor(
 
   - : An object with the following properties:
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab to get the badge background color from.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Specifies the window from which to get the badge background color.
 
 <!---->

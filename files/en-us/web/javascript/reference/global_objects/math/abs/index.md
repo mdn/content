@@ -43,7 +43,7 @@ created (`Math` is not a constructor).
 
 Passing an empty object, an array with more than one member, a non-numeric string or
 {{jsxref("undefined")}}/empty variable returns {{jsxref("NaN")}}. Passing
-{{jsxref("null")}}, an empty string or an empty array returns 0.
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), an empty string or an empty array returns 0.
 
 ```js
 Math.abs('-1');     // 1

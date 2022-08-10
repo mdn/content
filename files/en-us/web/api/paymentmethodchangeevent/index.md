@@ -1,6 +1,7 @@
 ---
 title: PaymentMethodChangeEvent
 slug: Web/API/PaymentMethodChangeEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

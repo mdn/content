@@ -1,6 +1,7 @@
 ---
 title: RTCDTMFSender.toneBuffer
 slug: Web/API/RTCDTMFSender/toneBuffer
+page-type: web-api-instance-property
 tags:
   - Audio
   - DTMF

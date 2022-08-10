@@ -1,6 +1,7 @@
 ---
 title: 'Window: vrdisplaypointerrestricted event'
 slug: Web/API/Window/vrdisplaypointerrestricted_event
+page-type: web-api-event
 tags:
   - Reference
   - Web VR
@@ -23,9 +24,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplaypointerrestricted', event => { });
+addEventListener('vrdisplaypointerrestricted', (event) => { });
 
-onvrdisplaypointerrestricted = event => { };
+onvrdisplaypointerrestricted = (event) => { };
 ```
 
 ## Event type
@@ -38,9 +39,9 @@ An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
 
-- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}} {{readonlyInline}}
   - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}} {{readonlyInline}}
   - : A human-readable reason why the event was fired.
 
 ## Examples
@@ -48,7 +49,7 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplaypointerrestricted` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplaypointerrestricted', function() {
+window.addEventListener('vrdisplaypointerrestricted', () => {
   // Run code to handle pointer lock
 });
 ```
@@ -56,7 +57,7 @@ window.addEventListener('vrdisplaypointerrestricted', function() {
 Or use the `onvrdisplaypointerrestricted` event handler property:
 
 ```js
-window.onvrdisplaypointerrestricted = function() {
+window.onvrdisplaypointerrestricted = () => {
   // Run code to handle pointer lock
 };
 ```

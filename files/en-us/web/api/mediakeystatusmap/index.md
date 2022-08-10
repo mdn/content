@@ -1,6 +1,7 @@
 ---
 title: MediaKeyStatusMap
 slug: Web/API/MediaKeyStatusMap
+page-type: web-api-interface
 tags:
   - API
   - EncryptedMediaExtensions
@@ -16,7 +17,7 @@ The **`MediaKeyStatusMap`** interface of the [EncryptedMediaExtensions API](/en-
 ## Properties
 
 - {{domxref("MediaKeyStatusMap.size")}} {{readonlyinline}}
-  - : Returns the number of key/value pars in the status map.
+  - : Returns the number of key/value pairs in the status map.
 
 ## Methods
 

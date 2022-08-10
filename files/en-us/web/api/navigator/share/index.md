@@ -1,6 +1,7 @@
 ---
 title: Navigator.share()
 slug: Web/API/Navigator/share
+page-type: web-api-instance-method
 tags:
   - Method
   - Navigator
@@ -117,10 +118,12 @@ The following is a list of usually shareable file types. However, you should alw
 
 ## Examples
 
+### Sharing a URL
+
 The example below shows a button click invoking the Web Share API to share MDN's URL.
 This is taken from our [Web share test](https://mdn.github.io/dom-examples/web-share/) ([see the source code](https://github.com/mdn/dom-examples/blob/master/web-share/index.html)).
 
-### HTML
+#### HTML
 
 The HTML just creates a button to trigger the share, and a paragraph in which to display the result of the test.
 
@@ -129,56 +132,93 @@ The HTML just creates a button to trigger the share, and a paragraph in which to
 <p class="result"></p>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const shareData = {
-    title: 'MDN',
-    text: 'Learn web development on MDN!',
-    url: 'https://developer.mozilla.org'
+  title: 'MDN',
+  text: 'Learn web development on MDN!',
+  url: 'https://developer.mozilla.org'
+}
+
+const btn = document.querySelector('button');
+const resultPara = document.querySelector('.result');
+
+// Share must be triggered by "user activation"
+btn.addEventListener('click', async () => {
+  try {
+    await navigator.share(shareData);
+    resultPara.textContent = 'MDN shared successfully';
+  } catch (err) {
+    resultPara.textContent = `Error: ${err}`;
   }
-
-  const btn = document.querySelector('button');
-  const resultPara = document.querySelector('.result');
-
-  // Share must be triggered by "user activation"
-  btn.addEventListener('click', async () => {
-    try {
-      await navigator.share(shareData)
-      resultPara.textContent = 'MDN shared successfully'
-    } catch(err) {
-      resultPara.textContent = 'Error: ' + err
-    }
-  });
+});
 ```
 
-### Result
+#### Result
 
-Click the button to launch the share dialog on your platform.
-Text will appear below the button to indicate whether the share was successful or provide an error code.
+Click the button to launch the share dialog on your platform. Text will appear below the button to indicate whether the share was successful or provide an error code.
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Sharing a URL')}}
 
-#### **Sharing Files**
+### Sharing files
 
-To share files, first test for and call {{domxref("navigator.canShare()")}}. Then include an array of files in the call to `navigator.share()`:
+To share files, first test for and call {{domxref("navigator.canShare()")}}. Then include the list of files in the call to `navigator.share()`.
 
-> **Note:** This sample feature detects by testing for `navigator.canShare()` rather than for `navigator.share()`.
-> The data object passed to `canShare()` only includes the `files` property. Image, video, audio, and text files can be shared.
+#### HTML
+
+```html
+<div>
+  <label for="files">Select images to share:</label>
+  <input id="files" type="file" accept="image/*" multiple>
+</div>
+<button id="share" type="button">Share your images!</button>
+<output id="output"></output>
+```
+
+#### JavaScript
+
+Note that the data object passed to the `navigator.canShare()` only includes the `files` property, as the `title` and `text` shouldn't matter.
 
 ```js
-if (navigator.canShare && navigator.canShare({ files: filesArray })) {
-  navigator.share({
-    files: filesArray,
-    title: 'Pictures',
-    text: 'Our Pictures.',
-  })
-  .then(() => console.log('Share was successful.'))
-  .catch((error) => console.log('Sharing failed', error));
-} else {
-  console.log(`Your system doesn't support sharing files.`);
-}
+const input = document.getElementById('files')
+const output = document.getElementById('output')
+
+document.getElementById('share').addEventListener('click', async () => {
+  const files = input.files
+
+  if (files.length === 0) {
+    output.textContent = 'No files selected.'
+    return
+  }
+
+  // feature detecting navigator.canShare() also implies
+  // the same for the navigator.share()
+  if (!navigator.canShare) {
+    output.textContent = `Your browser doesn't support the Web Share API.`
+    return
+  }
+
+  if (navigator.canShare({ files })) {
+    try {
+      await navigator.share({
+        files,
+        title: 'Images',
+        text: 'Beautiful images'
+      })
+      output.textContent = 'Shared!'
+    } catch (error) {
+      output.textContent = `Error: ${error.message}`
+    }
+  } else {
+    output.textContent = `Your system doesn't support sharing these files.`
+  }
+})
 ```
+
+#### Result
+
+{{EmbedLiveSample('Sharing files')}}
 
 ## Specifications
 

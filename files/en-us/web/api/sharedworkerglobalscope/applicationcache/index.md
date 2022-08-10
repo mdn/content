@@ -1,6 +1,7 @@
 ---
 title: SharedWorkerGlobalScope.applicationCache
 slug: Web/API/SharedWorkerGlobalScope/applicationCache
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: AudioNode.channelInterpretation
 slug: Web/API/AudioNode/channelInterpretation
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode
@@ -25,17 +26,15 @@ In summary:
 - `speakers`
   - : Use set of "standard" mappings for combinations of common speaker input and outputs setups (mono, stereo, quad, 5.1). For example, with this setting a mono channel input will output to both channels of a stereo output.
 - `discrete`
-  - : Input channels are mapped to output channels in order. If there are more inputs that outputs the additional inputs are dropped; if there are fewer then the unused outputs are silent.
+  - : Input channels are mapped to output channels in order. If there are more inputs that outputs the additional inputs are dropped; if there are fewer than the unused outputs are silent.
 
 ## Examples
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
-var audioCtx = new AudioContext();
-
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+const oscillator = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
 
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);

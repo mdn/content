@@ -148,7 +148,7 @@ function eventHandler(event) {
 If the user clicks the option to create a tab for an identity, one is opened using tabs.create by passing the identity's cookie store ID.
 
 ```js
-  if (event.target.dataset.action == 'create') {
+  if (event.target.dataset.action === 'create') {
     browser.tabs.create({
       url: 'about:blank',
       cookieStoreId: event.target.dataset.identity
@@ -159,7 +159,7 @@ If the user clicks the option to create a tab for an identity, one is opened usi
 If the user selects the option to close all tabs for the identity, the script performs a tabs.query for all tabs that are using the identity's cookie store. The script then passes this list of tabs to `tabs.remove`.
 
 ```js
-  if (event.target.dataset.action == 'close-all') {
+  if (event.target.dataset.action === 'close-all') {
     browser.tabs.query({
       cookieStoreId: event.target.dataset.identity
     }).then((tabs) => {

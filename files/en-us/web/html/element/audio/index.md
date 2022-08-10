@@ -90,7 +90,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   </thead>
   <tbody>
     <tr>
-      <td>{{Event("audioprocess")}}</td>
+      <td>{{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}}</td>
       <td>
         The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is
         ready to be processed.
@@ -116,7 +116,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
       </td>
     </tr>
     <tr>
-      <td>{{Event("complete")}}</td>
+      <td>{{domxref("OfflineAudioContext/complete_event", "complete")}}</td>
       <td>
         The rendering of an {{DOMxRef("OfflineAudioContext")}} is
         terminated.
@@ -273,7 +273,7 @@ To get a consistent look and feel across browsers, you'll need to create custom 
 
 ### Detecting addition and removal of tracks
 
-You can detect when tracks are added to and removed from an `<audio>` element using the {{event("addtrack")}} and {{event("removetrack")}} events. However, these events aren't sent directly to the `<audio>` element itself. Instead, they're sent to the track list object within the `<audio>` element's {{domxref("HTMLMediaElement")}} that corresponds to the type of track that was added to the element:
+You can detect when tracks are added to and removed from an `<audio>` element using the {{domxref("AudioTrackList/addtrack_event", "addtrack")}} and {{domxref("AudioTrackList/removetrack_event", "removetrack")}} events. However, these events aren't sent directly to the `<audio>` element itself. Instead, they're sent to the track list object within the `<audio>` element's {{domxref("HTMLMediaElement")}} that corresponds to the type of track that was added to the element:
 
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : An {{domxref("AudioTrackList")}} containing all of the media element's audio tracks. You can add a listener for `addtrack` to this object to be alerted when new audio tracks are added to the element.
@@ -287,20 +287,20 @@ You can detect when tracks are added to and removed from an `<audio>` element us
 For example, to detect when audio tracks are added to or removed from an `<audio>` element, you can use code like this:
 
 ```js
-var elem = document.querySelector("audio");
+const elem = document.querySelector("audio");
 
-elem.audioTrackList.onaddtrack = function(event) {
+elem.audioTrackList.onaddtrack = (event) => {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTrackList.onremovetrack = function(event) {
+elem.audioTrackList.onremovetrack = (event) => {
   trackEditor.removeTrack(event.track);
 };
 ```
 
 This code watches for audio tracks to be added to and removed from the element, and calls a hypothetical function on a track editor to register and remove the track from the editor's list of available tracks.
 
-You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{event("addtrack")}} and {{event("removetrack")}} events.
+You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("AudioTrackList/addtrack_event", "addtrack")}} and {{domxref("AudioTrackList/removetrack_event", "removetrack")}} events.
 
 ## Examples
 

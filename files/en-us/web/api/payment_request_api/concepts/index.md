@@ -1,6 +1,7 @@
 ---
 title: Payment processing concepts
 slug: Web/API/Payment_Request_API/Concepts
+page-type: guide
 tags:
   - API
   - Apple Pay
@@ -73,7 +74,7 @@ Some payment handlers use **merchant validation**, which is the process of valid
 The exact validation technology depends on the payment handler, and merchant validation is entirely optional. In the end, the only thing that the web site or app is responsible for is fetching the merchant's validation key and passing it into the event's {{domxref("MerchantValidationEvent.complete", "complete()")}} method.
 
 ```js
-paymentRequest.onmerchantvalidation = function(event) {
+paymentRequest.onmerchantvalidation = (event) => {
   event.complete(fetchValidationData(event.validationURL));
 }
 ```

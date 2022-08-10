@@ -41,7 +41,7 @@ To return a new string with whitespace trimmed from just one end, use {{jsxref("
 The following example displays the lowercase string `'foo'`:
 
 ```js
-var orig = '   foo  ';
+const orig = '   foo  ';
 console.log(orig.trim()); // 'foo'
 ```
 

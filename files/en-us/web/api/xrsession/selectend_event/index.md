@@ -1,6 +1,7 @@
 ---
 title: 'XRSession: selectend event'
 slug: Web/API/XRSession/selectend_event
+page-type: web-api-event
 tags:
   - API
   - AR
@@ -31,9 +32,9 @@ The WebXR event **`selectend`** is sent to an {{domxref("XRSession")}} when one 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectend', event => { })
+addEventListener('selectend', (event) => { })
 
-onselectend = event => { }
+onselectend = (event) => { }
 ```
 
 ## Event type

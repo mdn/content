@@ -1,6 +1,7 @@
 ---
 title: AnimationEffect.getComputedTiming()
 slug: Web/API/AnimationEffect/getComputedTiming
+page-type: web-api-instance-method
 tags:
   - API
   - Animation

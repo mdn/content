@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -52,8 +53,8 @@ been established, this value is `null`.
 const pc = new RTCPeerConnection();
 
 function waitToCompleteIceGathering(pc) {
-    return new Promise(resolve => {
-        pc.addEventListener('icegatheringstatechange', e => (e.target.iceGatheringState === 'complete') && resolve(pc.localDescription));
+    return new Promise((resolve) => {
+        pc.addEventListener('icegatheringstatechange', (e) => (e.target.iceGatheringState === 'complete') && resolve(pc.localDescription));
     });
 }
 
@@ -69,7 +70,7 @@ async function newPeer(remoteOffer) {
 }
 // Handle error with try/catch
 
-pc.addEventListener('icecandidate', e => (pc.canTrickleIceCandidates) && sendCandidateToPeer(e.candidate));
+pc.addEventListener('icecandidate', (e) => (pc.canTrickleIceCandidates) && sendCandidateToPeer(e.candidate));
 ```
 
 ## Specifications
@@ -84,5 +85,4 @@ pc.addEventListener('icecandidate', e => (pc.canTrickleIceCandidates) && sendCan
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.addIceCandidate()")}}
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)

@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionEvent.resultIndex
 slug: Web/API/SpeechRecognitionEvent/resultIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -29,9 +30,9 @@ A number.
 ## Examples
 
 ```js
-recognition.onresult = function(event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+recognition.onresult = (event) => {
+  const color = event.results[0][0].transcript;
+  diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.resultIndex); // returns 0 if there is only one result
 }

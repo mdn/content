@@ -1,6 +1,7 @@
 ---
 title: Document.createNodeIterator()
 slug: Web/API/Document/createNodeIterator
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,7 +12,7 @@ browser-compat: api.Document.createNodeIterator
 ---
 {{APIRef("DOM")}}
 
-Returns a new [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) object.
+The **`Document.createNodeIterator()`** method returns a new [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) object.
 
 ## Syntax
 
@@ -22,10 +23,6 @@ createNodeIterator(root, whatToShow, filter)
 ```
 
 ### Parameters
-
-None.
-
-### Return value
 
 - `root`
   - : The root node at which to begin the {{ domxref("NodeIterator") }}'s traversal.
@@ -55,7 +52,11 @@ None.
     | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | Shows {{ domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                                              |
 
 - `filter` {{optional_inline}}
-  - : A callback function or an object with an `acceptNode()` method. The function or method will be called for each node in the subtree based at root which is accepted as included by the whatToShow flag to determine whether or not to include it in the list of iterable nodes. The method should return one of `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. See the [Example](#example).
+  - : A callback function or an object with an `acceptNode()` method. The function or method will be called for each node in the subtree based at root which is accepted as included by the whatToShow flag to determine whether or not to include it in the list of iterable nodes. The method should return one of `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. See the [Example](#examples).
+
+### Return value
+
+A new [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) object.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.setTransform()
 slug: Web/API/CanvasRenderingContext2D/setTransform
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

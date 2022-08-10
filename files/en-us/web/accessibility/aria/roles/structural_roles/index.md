@@ -19,7 +19,7 @@ Structural ARIA roles were originally created as a bridge to inform assistive te
 
 > **Note:**  These structural roles all have semantic HTML equivalents. They are included here for completeness of documentation. Preferably, they should not be used by web authors.
 
-Some structural roles, like [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role), don't have HTML equivalents, and therefore have separate documentation. Some structural roles with HTML equivalents, like [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role)), have ARIA-attribute requirements. They are listed below with links to their individual role documentation.
+Some structural roles, like [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role), don't have HTML equivalents, and therefore have separate documentation. Some structural roles with HTML equivalents, like [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role), have ARIA-attribute requirements. They are listed below with links to their individual role documentation.
 
 Most of the following roles were never needed but were added to ARIA for completeness. We've included them here for completeness as well.
 
@@ -37,7 +37,7 @@ The structure roles with HTML equivalents are listed below:
 | **`code`** <br/> A section representing a fragment of computer code. <br/> Prohibited attributes: `aria-label` and `aria-labelledby`. | {{HTMLElement('code')}} |
 | **`deletion`** <br/>Content that is marked as removed or suggested for removal.<br/> Prohibited attributes: `aria-label` and `aria-labelledby`. | {{HTMLElement('del')}} |
 | **`emphasis`** <br/> Used to stress or emphasize content, but not to suggest importance.<br/>Prohibited attributes: `aria-label` and `aria-labelledby`. | {{HTMLElement('em')}} |
-| [`figure`]((/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role)) <br/>Container for a graphical document, images, code snippets, or example text.| {{HTMLElement('figure')}} |
+| [`figure`](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role) <br/>Container for a graphical document, images, code snippets, or example text.| {{HTMLElement('figure')}} |
 | [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) <br/> A heading for a section of the page.<br/>The `aria-level` attribute is required to indicate the nesting level.<br/>See the [`heading` role](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) for more information. | {{HTMLElement('h1')}}, {{HTMLElement('h2')}}, {{HTMLElement('h3')}}, {{HTMLElement('h4')}}, {{HTMLElement('h5')}}, and {{HTMLElement('h6')}} |
 | **`image`** <br/>Container for a collection of elements that form an image. Synonym for `img` role. | {{HTMLElement('img')}} |
 | [`img`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) <br/>Container for a collection of elements that form an image. <br/>Accessible name is required. <br/>See the [`img` role](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) for more information.| {{HTMLElement('img')}} |

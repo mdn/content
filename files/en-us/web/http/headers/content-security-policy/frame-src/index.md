@@ -11,7 +11,7 @@ tags:
   - Security
   - frame-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.frame-src
+browser-compat: http.headers.Content-Security-Policy.frame-src
 ---
 {{HTTPSidebar}}
 

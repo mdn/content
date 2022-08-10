@@ -7,7 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: https://www.w3.org/TR/CSS22/syndata.html#x57
+browser-compat: css.at-rules.charset
 ---
 {{CSSRef}}
 
@@ -25,6 +25,4 @@ spec-urls: https://www.w3.org/TR/CSS22/syndata.html#x57
 
 ## Browser compatibility
 
-### `@charset` rule
-
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

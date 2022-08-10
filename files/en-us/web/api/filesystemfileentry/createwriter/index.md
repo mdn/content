@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileEntry.createWriter()
 slug: Web/API/FileSystemFileEntry/createWriter
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API
@@ -48,11 +49,11 @@ text string to the file corresponding to the passed-in directory entry.
 
 ```js
 function writeToFileEntry(entry, text) {
-  entry.createWriter(function(fileWriter) {
+  entry.createWriter((fileWriter) => {
     let data = Blob([text], { type: "text/plain" });
 
     fileWriter.write(data);
-  }, function(fileError) {
+  }, (fileError) => {
     /* do whatever to handle the error */
   });
 }

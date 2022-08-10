@@ -1,6 +1,7 @@
 ---
 title: EcKeyGenParams
 slug: Web/API/EcKeyGenParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

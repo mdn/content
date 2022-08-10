@@ -1,6 +1,7 @@
 ---
 title: HTMLQuoteElement
 slug: Web/API/HTMLQuoteElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

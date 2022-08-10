@@ -1,6 +1,7 @@
 ---
 title: VideoTrackList.getTrackById()
 slug: Web/API/VideoTrackList/getTrackById
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

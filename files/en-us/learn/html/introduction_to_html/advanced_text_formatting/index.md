@@ -197,10 +197,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
 
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -240,7 +240,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 To turn this into a block quote, we would just do this:
 
 ```html
-<p>Here below is a blockquote...</p>
+<p>Here is a blockquote:</p>
 <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
   <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
   Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
@@ -281,7 +281,7 @@ There is a {{htmlelement("cite")}} element, but this is meant to contain the tit
 </blockquote>
 
 <p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q> -- <a href="/en-US/docs/Web/HTML/Element/q">
+for short quotations that don't require paragraph breaks.</q> — <a href="/en-US/docs/Web/HTML/Element/q">
 <cite>MDN q page</cite></a>.</p>
 ```
 
@@ -299,8 +299,8 @@ Time for another active learning example! In this example we'd like you to:
 
 The citation sources you need are:
 
-- http\://www\.brainyquote.com/quotes/authors/c/confucius.html for the Confucius quote
-- http\://example.com/affirmationsforpositivethinking for "The Need To Eliminate Negative Self Talk".
+- `http://www.brainyquote.com/quotes/authors/c/confucius.html` for the Confucius quote
+- `http://example.com/affirmationsforpositivethinking` for "The Need To Eliminate Negative Self Talk".
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
@@ -402,10 +402,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
 
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -431,19 +431,21 @@ textarea.onkeyup = function(){
 
 ## Abbreviations
 
-Another fairly common element you'll meet when looking around the Web is {{htmlelement("abbr")}} — this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term (included inside a {{htmlattrxref("title")}} attribute.)
+Another fairly common element you'll meet when looking around the Web is {{htmlelement("abbr")}} — this is used to wrap around an abbreviation or acronym. When including either, provide a full expansion of the term in plain text on first use, along with the `<abbr>` to mark up the abbreviation. This provides a hint to user agents on how to announce/display the content while informing all users what the abbreviation means.
+
+If providing the expansion in addition to the abbreviation makes little sense, and the abbreviation or acronym is a fairly shortened term, provide the full expansion of the term as the value of {{htmlattrxref("title")}} attribute:
 
 ### Abbreviation example
 
 Let's look at an example.
 
 ```html
-<p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+<p>We use <abbr>HTML</abbr>, Hypertext Markup Language, to structure our web documents.</p>
 
 <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
 ```
 
-These will come out looking something like this (the expansion will appear in a tooltip when the term is hovered over):
+These will come out looking something like this:
 
 {{EmbedLiveSample('Abbreviation_example', '100%', '150')}}
 
@@ -463,7 +465,7 @@ For this simple active learning assignment, we'd like you to mark up an abbrevia
 <p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
 <textarea id="code" class="input" style="min-height: 50px; width: 95%">
-<p>NASA sure does some exciting work.</p>
+<p>NASA, the National Aeronautics and Space Administration, sure does some exciting work.</p>
 </textarea>
 
 <div class="playable-buttons">
@@ -525,7 +527,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const htmlSolution = '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>';
+const htmlSolution = '<p><abbr>NASA</abbr>, the National Aeronautics and Space Administration, sure does some exciting work.</p>';
 let solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -549,10 +551,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
 
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();

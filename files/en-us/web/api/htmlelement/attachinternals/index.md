@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.attachInternals()
 slug: Web/API/HTMLElement/attachInternals
+page-type: web-api-instance-method
 tags:
   - API
   - Element
@@ -48,11 +49,10 @@ class CustomCheckbox extends HTMLElement {
     super();
     this.internals_ = this.attachInternals();
   }
+  // …
+}
 
-  /* ... */
-
-  window.customElements.define("custom-checkbox", CustomCheckbox);
-})();
+window.customElements.define("custom-checkbox", CustomCheckbox);
 
 let element = document.getElementById("custom-checkbox");
 console.log(element.internals_.form);

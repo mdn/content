@@ -1,6 +1,7 @@
 ---
 title: MediaKeys.setServerCertificate()
 slug: Web/API/MediaKeys/setServerCertificate
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
@@ -26,7 +27,7 @@ setServerCertificate(serverCertificate)
 ### Parameters
 
 - `serverCertificate`
-  - : A BufferSource object containing the server certificate. The contents are Key System-specific. It MUST NOT contain executable code.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} object containing the server certificate. The contents are Key System-specific. It MUST NOT contain executable code.
 
 ### Return value
 

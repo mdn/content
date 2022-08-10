@@ -7,7 +7,14 @@ tags:
   - Constraint validation
   - Forms
   - required
-spec-urls: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled
+browser-compat:
+  - html.elements.button.disabled
+  - html.elements.fieldset.disabled
+  - html.elements.input.disabled
+  - html.elements.optgroup.disabled
+  - html.elements.option.disabled
+  - html.elements.select.disabled
+  - html.elements.textarea.disabled
 ---
 
 {{HTMLSidebar}}
@@ -110,7 +117,7 @@ When form controls are disabled, many browsers will display them in a lighter, g
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.disabled")}}
+{{Compat}}
 
 ## See also
 

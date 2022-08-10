@@ -53,8 +53,8 @@ The following example shows the use of `propertyIsEnumerable` on objects and
 arrays:
 
 ```js
-var o = {};
-var a = [];
+const o = {};
+const a = [];
 o.prop = 'is enumerable';
 a[0] = 'is enumerable';
 
@@ -68,7 +68,7 @@ The following example demonstrates the enumerability of user-defined vs. built-i
 properties:
 
 ```js
-var a = ['is enumerable'];
+const a = ['is enumerable'];
 
 a.propertyIsEnumerable(0);          // returns true
 a.propertyIsEnumerable('length');   // returns false
@@ -80,23 +80,23 @@ this.propertyIsEnumerable('Math');     // returns false
 ### Direct vs. inherited properties
 
 ```js
-var a = [];
+const a = [];
 a.propertyIsEnumerable('constructor');         // returns false
 
 function firstConstructor() {
   this.property = 'is not enumerable';
 }
 
-firstConstructor.prototype.firstMethod = function() {};
+firstConstructor.prototype.firstMethod = function () {};
 
 function secondConstructor() {
-  this.method = function() { return 'is enumerable'; };
+  this.method = function () { return 'is enumerable'; };
 }
 
 secondConstructor.prototype = new firstConstructor;
 secondConstructor.prototype.constructor = secondConstructor;
 
-var o = new secondConstructor();
+const o = new secondConstructor();
 o.arbitraryProperty = 'is enumerable';
 
 o.propertyIsEnumerable('arbitraryProperty');   // returns true

@@ -50,38 +50,36 @@ We can set up our video player and `<canvas>` element like this:
 This code handles altering the frames.
 
 ```js
-var processor = {
-  timerCallback: function() {
+const processor = {
+  timerCallback() {
     if (this.video.paused || this.video.ended) {
       return;
     }
     this.computeFrame();
-    var self = this;
-    setTimeout(function () {
-      self.timerCallback();
+    setTimeout(() => {
+      this.timerCallback();
     }, 16); // roughly 60 frames per second
   },
 
-  doLoad: function() {
+  doLoad() {
     this.video = document.getElementById("my-video");
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
-    var self = this;
 
-    this.video.addEventListener("play", function() {
-      self.width = self.video.width;
-      self.height = self.video.height;
-      self.timerCallback();
+    this.video.addEventListener("play", () => {
+      this.width = this.video.width;
+      this.height = this.video.height;
+      this.timerCallback();
     }, false);
   },
 
-  computeFrame: function() {
+  computeFrame() {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
-    var frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    var l = frame.data.length / 4;
+    const frame = this.ctx1.getImageData(0, 0, this.width, this.height);
+    const l = frame.data.length / 4;
 
-    for (var i = 0; i < l; i++) {
-      var grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
+    for (let i = 0; i < l; i++) {
+      const grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
 
       frame.data[i * 4 + 0] = grey;
       frame.data[i * 4 + 1] = grey;
@@ -114,9 +112,9 @@ You can achieve the same result by applying the {{cssxref("filter-function/grays
 
 [WebGL](/en-US/docs/Web/API/WebGL_API) is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Note:** You can find the [source code of this demo on GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) ([see it live](https://mdn.github.io/webgl-examples/tutorial/sample8/) also).
+> **Note:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
 
 ### Playback rate
 
@@ -128,14 +126,14 @@ Note that the `playbackRate` property works with both `<audio>` and `<video>`, b
 
 ```html
 <video id="my-video" controls
-       src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
+  src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
 </video>
 ```
 
 #### JavaScript
 
 ```js
-var myVideo = document.getElementById('my-video');
+const myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;
 ```
 
@@ -151,26 +149,26 @@ myVideo.playbackRate = 2;
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-var myVideo = document.getElementById('my-video');
+const myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;</textarea>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
-var code = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const edit = document.getElementById('edit');
+const code = textarea.value;
 
 function setPlaybackRate() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener('click', () => {
   textarea.value = code;
   setPlaybackRate();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener('click', () => {
   textarea.focus();
 })
 
@@ -190,7 +188,7 @@ window.addEventListener('load', setPlaybackRate);
 
 The Web Audio API can receive audio from a variety of sources, then process it and send it back out to an {{domxref("AudioDestinationNode")}} representing the output device to which the sound is sent after processing.
 
-| If the audio source is...                                                                                                                                                                  | Use this Web Audio node type                             |
+| If the audio source is…                                                                                                                                                                  | Use this Web Audio node type                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
 | An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                                   | {{domxref("MediaElementAudioSourceNode")}} |
 | A plain raw audio data buffer in memory                                                                                                                                                    | {{domxref("AudioBufferSourceNode")}}         |
@@ -205,16 +203,16 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 
 ```html
 <video id="my-video" controls
-       src="myvideo.mp4" type="video/mp4">
+  src="myvideo.mp4" type="video/mp4">
 </video>
 ```
 
 #### JavaScript
 
 ```js
-var context = new AudioContext(),
-    audioSource = context.createMediaElementSource(document.getElementById("my-video")),
-    filter = context.createBiquadFilter();
+const context = new AudioContext();
+const audioSource = context.createMediaElementSource(document.getElementById("my-video"));
+const filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
@@ -236,33 +234,34 @@ filter.gain.value = 25;
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-filter.type = "lowshelf";
-filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea>
+  filter.type = "lowshelf";
+  filter.frequency.value = 1000;
+  filter.gain.value = 25;
+</textarea>
 ```
 
 ```js hidden
-var context     = new AudioContext(),
-    audioSource = context.createMediaElementSource(document.getElementById("my-video")),
-    filter      = context.createBiquadFilter();
+const context = new AudioContext();
+const audioSource = context.createMediaElementSource(document.getElementById("my-video"));
+const filter  = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
-var code = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const edit = document.getElementById('edit');
+const code = textarea.value;
 
 function setFilter() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener('click', () => {
   textarea.value = code;
   setFilter();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener('click', () => {
   textarea.focus();
 })
 
@@ -296,7 +295,7 @@ It's also possible to apply impulse responses to audio using the {{domxref("Conv
 #### Example
 
 ```js
-var convolver = context.createConvolver();
+const convolver = context.createConvolver();
 convolver.buffer = this.impulseResponseBuffer;
 // Connect the graph.
 source.connect(convolver);
@@ -312,7 +311,7 @@ We can also position audio using a **panner node**. A panner node—{{domxref("P
 #### Example
 
 ```js
-var panner = context.createPanner();
+const panner = context.createPanner();
 panner.coneOuterGain = 0.2;
 panner.coneOuterAngle = 120;
 panner.coneInnerAngle = 0;
@@ -344,9 +343,9 @@ Libraries currently exist for the following formats :
 
 ## Examples
 
-- [Various Web Audio API (and other) examples](https://github.com/mdn/)
+- [Various Web Audio API (and other) examples](https://github.com/mdn/webaudio-examples)
 - [THREE.js Video Cube example](https://github.com/chrisdavidmills/threejs-video-cube)
-- [Convolution Effects in Real-Time](https://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
+- [Convolution Effects in Real-Time](https://github.com/cwilso/web-audio-samples/blob/master/samples/audio/convolution-effects.html)
 
 ## See also
 

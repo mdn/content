@@ -61,11 +61,6 @@ tags:
             >
           </li>
           <li>
-            <a href="https://webextensions.in/"
-              >Create your extension scaffold</a
-            >
-          </li>
-          <li>
             Get familiar with the
             <a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy"
               >add-on policies and developer agreement</a

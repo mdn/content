@@ -1,6 +1,7 @@
 ---
 title: 'Notification: show event'
 slug: Web/API/Notification/show_event
+page-type: web-api-event
 tags:
   - API
   - Notification
@@ -20,9 +21,9 @@ The **`show`** event of the {{domxref("Notification")}} interface fires when a {
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('show', event => { });
+addEventListener('show', (event) => { });
 
-onshow = event => { };
+onshow = (event) => { };
 ```
 
 ## Event type

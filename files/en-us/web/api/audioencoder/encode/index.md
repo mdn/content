@@ -1,15 +1,17 @@
 ---
 title: AudioEncoder.encode()
 slug: Web/API/AudioEncoder/encode
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - encode
   - AudioEncoder
+  - Experimental
 browser-compat: api.AudioEncoder.encode
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`encode()`** method of the {{domxref("AudioEncoder")}} interface enqueues a control message to encode a given {{domxref("AudioData")}} object.
 
@@ -26,7 +28,7 @@ encode(data)
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

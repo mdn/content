@@ -9,5 +9,5 @@ Reserved **syntax** consisting of punctuation or alphanumeric characters that ca
 
 ## See also
 
-- {{Interwiki("wikipedia", "Operator (computer programming)")}} on Wikipedia
+- [Operator (computer programming)](https://en.wikipedia.org/wiki/Operator_(computer_programming)) on Wikipedia
 - [JavaScript operators](/en-US/docs/Web/JavaScript/Reference/Operators)

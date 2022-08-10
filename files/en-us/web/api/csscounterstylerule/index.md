@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule
 slug: Web/API/CSSCounterStyleRule
+page-type: web-api-interface
 tags:
   - API
   - CSS Counter Styles

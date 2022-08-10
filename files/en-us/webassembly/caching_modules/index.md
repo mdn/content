@@ -48,7 +48,7 @@ The first helper function contained inside `instantiateCachedURL()` — `openDat
       var request = indexedDB.open(dbName, dbVersion);
       request.onerror = reject.bind(null, 'Error opening wasm cache database');
       request.onsuccess = () => { resolve(request.result) };
-      request.onupgradeneeded = event => {
+      request.onupgradeneeded = (event) => {
         var db = request.result;
         if (db.objectStoreNames.contains(storeName)) {
             console.log(`Clearing out version ${event.oldVersion} wasm cache`);
@@ -71,7 +71,7 @@ Our next function — `lookupInDatabase()` — provides a simple promise-based o
       var store = db.transaction([storeName]).objectStore(storeName);
       var request = store.get(url);
       request.onerror = reject.bind(null, `Error getting wasm module ${url}`);
-      request.onsuccess = event => {
+      request.onsuccess = (event) => {
         if (request.result)
           resolve(request.result);
         else
@@ -89,8 +89,8 @@ Next, we define a function `storeInDatabase()` that fires off an async operation
   function storeInDatabase(db, module) {
     var store = db.transaction([storeName], 'readwrite').objectStore(storeName);
     var request = store.put(module, url);
-    request.onerror = err => { console.log(`Failed to store in wasm cache: ${err}`) };
-    request.onsuccess = err => { console.log(`Successfully stored ${url} in wasm cache`) };
+    request.onerror = (err) => { console.log(`Failed to store in wasm cache: ${err}`) };
+    request.onsuccess = (err) => { console.log(`Successfully stored ${url} in wasm cache`) };
   }
 ```
 
@@ -99,8 +99,8 @@ Next, we define a function `storeInDatabase()` that fires off an async operation
 With all the Promise-based helper functions defined, we can now express the core logic of an IndexedDB cache lookup. We start by trying to open a database, then see if we already have a compiled Module with the key `url` stored in the given `db`:
 
 ```js
-  return openDatabase().then(db => {
-    return lookupInDatabase(db).then(module => {
+  return openDatabase().then((db) => {
+    return lookupInDatabase(db).then((module) => {
 ```
 
 If we do, we instantiate it with the given import object:
@@ -114,9 +114,9 @@ If we do, we instantiate it with the given import object:
 If not, we compile it from scratch and then store the compiled Module in the database with a key of URL, for next time we want to use it:
 
 ```js
-    errMsg => {
+    (errMsg) => {
       console.log(errMsg);
-      return WebAssembly.instantiateStreaming(fetch(url)).then(results => {
+      return WebAssembly.instantiateStreaming(fetch(url)).then((results) => {
         storeInDatabase(db, results.module);
         return results.instance;
       });
@@ -129,9 +129,9 @@ If not, we compile it from scratch and then store the compiled Module in the dat
 If opening the database failed (for example due to permissions or quota), we fall back to fetching and compiling the module and don't try to store the results (since there is no database to store them into).
 
 ```js
-  errMsg => {
+  (errMsg) => {
     console.log(errMsg);
-    return WebAssembly.instantiateStreaming(fetch(url)).then(results => {
+    return WebAssembly.instantiateStreaming(fetch(url)).then((results) => {
       return results.instance
     });
   });
@@ -149,9 +149,9 @@ With the above library function defined, getting a wasm module instance and usin
 ```js
 const wasmCacheVersion = 1;
 
-instantiateCachedURL(wasmCacheVersion, 'test.wasm').then(instance =>
+instantiateCachedURL(wasmCacheVersion, 'test.wasm').then((instance) =>
   console.log("Instance says the answer is: " + instance.exports.answer())
-).catch(err =>
+).catch((err) =>
   console.error("Failure to instantiate: " + err)
 );
 ```

@@ -118,7 +118,7 @@ If we have a look at the `rollup.config.js` file, we can see that the Svelte com
 
 ```js
 import svelte from 'rollup-plugin-svelte';
-[...]
+// …
 import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -137,7 +137,7 @@ export default {
       dev: !production,
       // we'll extract any component CSS out into
       // a separate file - better for performance
-      css: css => {
+      css: (css) => {
         css.write('public/build/bundle.css');
       }
     }),

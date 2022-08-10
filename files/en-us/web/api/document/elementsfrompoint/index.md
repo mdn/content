@@ -1,6 +1,7 @@
 ---
 title: Document.elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - Document
@@ -54,7 +55,7 @@ An array of {{domxref('Element')}} objects, ordered from the topmost to the bott
 let output = document.getElementById("output");
 if (document.elementsFromPoint) {
   let elements = document.elementsFromPoint(30, 20);
-  for (var i = 0; i < elements.length; i++) {
+  for (let i = 0; i < elements.length; i++) {
     output.textContent += elements[i].localName;
     if (i < elements.length - 1) {
       output.textContent += " < ";

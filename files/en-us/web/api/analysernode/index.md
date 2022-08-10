@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode
 slug: Web/API/AnalyserNode
+page-type: web-api-interface
 tags:
   - API
   - AnalyserNode
@@ -86,23 +87,23 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
 ```js
-var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 
-// ...
+// …
 
-var analyser = audioCtx.createAnalyser();
+const analyser = audioCtx.createAnalyser();
 analyser.fftSize = 2048;
 
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
+const bufferLength = analyser.frequencyBinCount;
+const dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
 
 // Connect the source to be analysed
 source.connect(analyser);
 
 // Get a canvas defined with ID "oscilloscope"
-var canvas = document.getElementById("oscilloscope");
-var canvasCtx = canvas.getContext("2d");
+const canvas = document.getElementById("oscilloscope");
+const canvasCtx = canvas.getContext("2d");
 
 // draw an oscilloscope of the current audio source
 
@@ -120,13 +121,13 @@ function draw() {
 
   canvasCtx.beginPath();
 
-  var sliceWidth = canvas.width * 1.0 / bufferLength;
-  var x = 0;
+  const sliceWidth = canvas.width * 1.0 / bufferLength;
+  let x = 0;
 
-  for (var i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
 
-    var v = dataArray[i] / 128.0;
-    var y = v * canvas.height / 2;
+    const v = dataArray[i] / 128.0;
+    const y = v * canvas.height / 2;
 
     if (i === 0) {
       canvasCtx.moveTo(x, y);

@@ -1,6 +1,7 @@
 ---
 title: Magnetometer()
 slug: Web/API/Magnetometer/Magnetometer
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

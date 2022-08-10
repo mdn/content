@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.border
 slug: Web/API/HTMLImageElement/border
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

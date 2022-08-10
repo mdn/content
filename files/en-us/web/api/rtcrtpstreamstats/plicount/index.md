@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.pliCount
 slug: Web/API/RTCRtpStreamStats/pliCount
+page-type: web-api-instance-property
 tags:
   - API
   - Data Loss

@@ -83,7 +83,7 @@ To configure IIS to send the `X-Frame-Options` header, add this to your site's `
 
 ```xml
 <system.webServer>
-  ...
+  …
 
   <httpProtocol>
     <customHeaders>
@@ -91,7 +91,7 @@ To configure IIS to send the `X-Frame-Options` header, add this to your site's `
     </customHeaders>
   </httpProtocol>
 
-  ...
+  …
 </system.webServer>
 ```
 

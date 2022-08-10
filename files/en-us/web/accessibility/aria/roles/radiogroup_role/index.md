@@ -1,9 +1,11 @@
 ---
-title: 'aria: radiogroup role'
+title: 'ARIA: radiogroup role'
 slug: web/accessibility/aria/roles/radiogroup_role
 tags:
   - accessibility
-  - aria
+  - ARIA
+  - ARIA Role
+  - Reference
   - roles
   - radiogroup
 spec-urls:
@@ -41,7 +43,7 @@ The `radiogroup` must have an accessible name either by a visible label referenc
 
 ### Keyboard interactions
 
-For `radio` buttons in a `radiogroup` that is NOT in a [`toolbar`](en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role), the following keyboard interactions must be supported:
+For `radio` buttons in a `radiogroup` that is NOT in a [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role), the following keyboard interactions must be supported:
 
 - <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd>
   - : Move focus into and out of the `radiogroup`. When focus moves into a `radiogroup`, if a radio button is checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
@@ -52,7 +54,7 @@ For `radio` buttons in a `radiogroup` that is NOT in a [`toolbar`](en-US/docs/We
 - <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd>
   - : Moves focus to the previous radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the first button, focus moves to the last button.
 
-Arrow keys are used to navigate among elements of a toolbar. When a `radiogroup` is nested inside a toolbar, users need to be able to navigate among all toolbar elements, including the radio buttons, without changing which radio button is checked. So, when navigating through a `radiogroup` in a [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/roles/toolbar_role) with arrow keys, the button that is checked does not change. Rather, when inside a `toolbar`, the <kbd>Space</kbd> and <kbd>Enter</kbd> keys check the focused `radio` button if it is not already checked, with <kbd>Tab</kbd> moving focus into and out of the `toolbar`.
+Arrow keys are used to navigate among elements of a toolbar. When a `radiogroup` is nested inside a toolbar, users need to be able to navigate among all toolbar elements, including the radio buttons, without changing which radio button is checked. So, when navigating through a `radiogroup` in a [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role) with arrow keys, the button that is checked does not change. Rather, when inside a `toolbar`, the <kbd>Space</kbd> and <kbd>Enter</kbd> keys check the focused `radio` button if it is not already checked, with <kbd>Tab</kbd> moving focus into and out of the `toolbar`.
 
 ### Required JavaScript features
 
@@ -116,7 +118,7 @@ This could have been written using semantic HTML, which requires no CSS or JavaS
     <input name="colorOption" type="radio" id="magenta">
     <label for="magenta">Magenta</label>
   </p>
-  <li>
+  <p>
     <input name="colorOption" type="radio" id="all">
     <label for="all">All of the above</label>
   </p>
@@ -138,3 +140,11 @@ In this {{HTMLElement('fieldset')}} example, while `role="radiogroup"` is not ne
 - [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

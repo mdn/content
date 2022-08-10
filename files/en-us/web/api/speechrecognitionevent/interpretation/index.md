@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionEvent.interpretation
 slug: Web/API/SpeechRecognitionEvent/interpretation
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -32,9 +33,9 @@ by the speech recognition system, `null` will be returned.
 ## Examples
 
 ```js
-recognition.onresult = function(event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+recognition.onresult = (event) => {
+  const color = event.results[0][0].transcript;
+  diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.interpretation);
 }

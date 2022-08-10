@@ -27,7 +27,7 @@ An HTML file is normally saved with an `.htm` or `.html` extension, served by a 
 
 ## See also
 
-- {{interwiki("wikipedia", "HTML", "HTML")}} on Wikipedia
+- [HTML](https://en.wikipedia.org/wiki/HTML) on Wikipedia
 - [Our HTML tutorial](/en-US/docs/Learn/HTML)
 - [The web course on codecademy.com](https://www.codecademy.com/learn/learn-html)
 - [The HTML documentation on MDN](/en-US/docs/Web/HTML)

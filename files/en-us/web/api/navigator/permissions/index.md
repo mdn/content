@@ -1,6 +1,7 @@
 ---
 title: Navigator.permissions
 slug: Web/API/Navigator/permissions
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -23,7 +24,7 @@ A {{domxref("Permissions")}} object.
 ## Examples
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(result) {
+navigator.permissions.query({name:'geolocation'}).then((result) => {
   if (result.state === 'granted') {
     showMap();
   } else if (result.state === 'prompt') {

@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback.cancelWatchAvailability()
 slug: Web/API/RemotePlayback/cancelWatchAvailability
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,7 +23,7 @@ cancelWatchAvailability(id)
 
 ### Parameters
 
-- `id`{{Optional_Inline}}
+- `id` {{optional_inline}}
 
   - : The `callbackId` of a particular remote playback device.
 

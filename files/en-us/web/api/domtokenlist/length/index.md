@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

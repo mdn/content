@@ -1,6 +1,7 @@
 ---
 title: USB
 slug: Web/API/USB
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,6 +9,7 @@ tags:
   - USB
   - WebUSB
   - WebUSB API
+  - Experimental
 browser-compat: api.USB
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

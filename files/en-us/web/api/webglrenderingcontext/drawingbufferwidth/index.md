@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.drawingBufferWidth
 slug: Web/API/WebGLRenderingContext/drawingBufferWidth
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -33,8 +34,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get the width of the drawing buffer with the following lines:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
 gl.drawingBufferWidth; // 300
 ```
 

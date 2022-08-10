@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.sourceBuffer
 slug: Web/API/VideoTrack/sourceBuffer
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

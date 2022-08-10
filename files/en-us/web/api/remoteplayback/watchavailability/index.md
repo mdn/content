@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback.watchAvailability()
 slug: Web/API/RemotePlayback/watchAvailability
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -40,10 +41,10 @@ A {{jsxref("Promise")}} that resolves with an integer. This is the `callbackId` 
 In the following example, after checking that there is no currently connected device, `watchAvailability()` is used to watch for remote devices becoming available. [See the working example](https://beaufortfrancois.github.io/sandbox/media/remote-playback.html) (Requires a supported device and a connected remote playback device).
 
 ```js
- if (video.remote.state == 'disconnected') {
+ if (video.remote.state === 'disconnected') {
   video.remote.watchAvailability(handleAvailabilityChange)
-  .then(id => {
-    log('> Started watching remote device availability: ' + id);
+  .then((id) => {
+    log(`> Started watching remote device availability: ${id}`);
     callbackId = id
   });
 }

@@ -1,10 +1,10 @@
 ---
 title: Element.requestPointerLock()
 slug: Web/API/Element/requestPointerLock
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
-  - Experimental
   - Method
   - NeedsExample
   - PointerEvent
@@ -12,7 +12,7 @@ tags:
   - mouse lock
 browser-compat: api.Element.requestPointerLock
 ---
-{{ APIRef("DOM") }}{{ SeeCompatTable }}
+{{ APIRef("DOM") }}
 
 The **`Element.requestPointerLock()`** method lets you
 asynchronously ask for the pointer to be locked on the given element.

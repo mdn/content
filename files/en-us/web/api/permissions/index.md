@@ -1,6 +1,7 @@
 ---
 title: Permissions
 slug: Web/API/Permissions
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -27,7 +28,7 @@ The Permissions interface of the [Permissions API](Permissions_API) provides the
 ## Example
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(result) {
+navigator.permissions.query({ name:' geolocation' }).then((result) => {
   if (result.state === 'granted') {
     showLocalNewsWithGeolocation();
   } else if (result.state === 'prompt') {

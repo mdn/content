@@ -1,6 +1,7 @@
 ---
 title: Element.scrollBy()
 slug: Web/API/Element/scrollBy
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View

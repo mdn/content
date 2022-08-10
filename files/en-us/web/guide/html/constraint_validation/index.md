@@ -322,7 +322,7 @@ First, we write a function checking the constraint itself:
 ```js
 function checkZIP() {
   // For each country, defines the pattern that the ZIP has to follow
-  var constraints = {
+  const constraints = {
     ch : [ '^(CH-)?\\d{4}$', "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950" ],
     fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
     de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
@@ -331,14 +331,14 @@ function checkZIP() {
   };
 
   // Read the country id
-  var country = document.getElementById("Country").value;
+  const country = document.getElementById("Country").value;
 
   // Get the NPA field
-  var ZIPField = document.getElementById("ZIP");
+  const ZIPField = document.getElementById("ZIP");
 
   // Build the constraint checker
-  var constraint = new RegExp(constraints[country][0], "");
-    console.log(constraint);
+  const constraint = new RegExp(constraints[country][0], "");
+  console.log(constraint);
 
   // Check it!
   if (constraint.test(ZIPField.value)) {
@@ -356,13 +356,11 @@ function checkZIP() {
 Then we link it to the **onchange** event for the {{ HTMLElement("select") }} and the **oninput** event for the {{ HTMLElement("input") }}:
 
 ```js
-window.onload = function () {
-    document.getElementById("Country").onchange = checkZIP;
-    document.getElementById("ZIP").oninput = checkZIP;
+window.onload = () => {
+  document.getElementById("Country").onchange = checkZIP;
+  document.getElementById("ZIP").oninput = checkZIP;
 }
 ```
-
-You can see a [live example](/@api/deki/files/4744/=constraint.html) of the postal code validation.
 
 ### Limiting the size of a file before its upload
 
@@ -383,8 +381,8 @@ The JavaScript reads the file selected, uses the `File.size()` method to get its
 
 ```js
 function checkFileSize() {
-  var FS = document.getElementById("FS");
-  var files = FS.files;
+  const FS = document.getElementById("FS");
+  const files = FS.files;
 
   // If there is (at least) one file selected
   if (files.length > 0) {
@@ -401,12 +399,10 @@ function checkFileSize() {
 Finally we hook the method with the correct event:
 
 ```js
-window.onload = function () {
+window.onload = () => {
   document.getElementById("FS").onchange = checkFileSize;
 }
 ```
-
-You can see a [live example](/@api/deki/files/4745/=fileconstraint.html) of the File size constraint validation.
 
 ## Visual styling of constraint validation
 

@@ -36,7 +36,7 @@ When a tabbed interface is initialized, one `tabpanel` is displayed and its asso
 
 If using `aria-hidden`, use CSS to hide the hidden tab panels. When a new `tab` is selected, remove the `hidden` attribute from the newly active panel or set the `aria-hidden` attribute to `false`, while adding `hidden` or `aria-hidden="true"` to the previously active `tabpanel`.
 
-The newly selected `tab` is considered "active" and should have it`s [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute set to`true` while all other tabs in the same `tablist` should have the `aria-selected` attribute set to `false`, or removed altogether. See [ARIA`tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) for move information.
+The newly selected `tab` is considered "active" and should have its [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute set to `true` while all other tabs in the same `tablist` should have the `aria-selected` attribute set to `false`, or removed altogether. See [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) for move information.
 
 If the `tablist` precedes the `tabpanel` in source order, the user will expect to be able to step through the remaining tabs in focus order or select the <kbd>down arrow</kbd> to give focus to the visible tabpanel when navigating by keyboard.
 
@@ -75,8 +75,8 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 
 - [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
 - [ARIA `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles)
-- [Example: Tabs with Automatic Activation](https://w3c.github.io/aria-practices/examples/tabs/tabs-1/tabs.html) - W3C
-- [Example: Tabs with Manual Activation](https://w3c.github.io/aria-practices/examples/tabs/tabs-2/tabs.html) -W3C
+- [Example: Tabs with Automatic Activation](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-automatic.html) - W3C
+- [Example: Tabs with Manual Activation](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html) -W3C
 - [Example: Codepen of tab interface](https://codepen.io/heydon/pen/veeaEa/) - Heydon Pickering
 
 <section id="Quick_links">

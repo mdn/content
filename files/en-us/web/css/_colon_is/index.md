@@ -36,28 +36,6 @@ footer p:hover {
 
 Pseudo-elements are not valid in the selector list for `:is()`.
 
-Note that older browsers support this functionality as `:matches()`, or through an older, prefixed pseudo-class — `:any()`, including older versions of Chrome, Firefox, and Safari. `:any()` works in exactly the same way as `:matches()`/`:is()`, except that it requires vendor prefixes and doesn't support [complex selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
-
-These legacy pseudo-classes can be used to provide backwards compatibility.
-
-```css
-/* Backwards-compatible version with :-*-any() and :matches()
-   (It is not possible to group selectors into single rule,
-   because presence of invalid selector would invalidate whole rule.) */
-:-webkit-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-:-moz-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-:matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
-
 ### Difference between :is() and :where()
 
 The difference between the two is that `:is()` counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas [`:where()`](/en-US/docs/Web/CSS/:where) has a specificity value of 0. This is demonstrated by the [example on the `:where()` reference page](/en-US/docs/Web/CSS/:where#examples).
@@ -70,7 +48,7 @@ In CSS when using a selector list, if any of the selectors are invalid then the 
 
 ```css
 :is(:valid, :unsupported) {
-  ...
+  /* … */
 }
 ```
 
@@ -78,7 +56,7 @@ Will still parse correctly and match `:valid` even in browsers which don't suppo
 
 ```css
 :valid, :unsupported {
-  ...
+  /* … */
 }
 ```
 
@@ -132,16 +110,16 @@ let matchedItems;
 
 try {
   matchedItems = document.querySelectorAll(':is(header, main, footer) p');
-} catch(e) {
+} catch (e) {
   try {
     matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
-  } catch(e) {
+  } catch (e) {
     try {
       matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
-    } catch(e) {
+    } catch (e) {
       try {
         matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
-      } catch(e) {
+      } catch (e) {
         console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
       }
     }
@@ -151,8 +129,8 @@ try {
 matchedItems.forEach(applyHandler);
 
 function applyHandler(elem) {
-  elem.addEventListener('click', function(e) {
-    alert('This paragraph is inside a ' + e.target.parentNode.nodeName);
+  elem.addEventListener('click', (e) => {
+    alert(`This paragraph is inside a ${e.target.parentNode.nodeName}`);
   });
 }
 ```
@@ -161,7 +139,7 @@ function applyHandler(elem) {
 
 ### Simplifying list selectors
 
-The `:is()` pseudo-class can greatly simplify your CSS selectors. For example, the following CSS:
+The `:is()` pseudo-class can greatly simplify your CSS selectors. For example, take the following CSS:
 
 ```css
 /* 3-deep (or more) unordered lists use a square */
@@ -181,7 +159,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 }
 ```
 
-... can be replaced with:
+You can replace it with:
 
 ```css
 /* 3-deep (or more) unordered lists use a square */
@@ -201,10 +179,12 @@ For example, without `:is()`, styling all the {{HTMLElement("h1")}} elements at 
 h1 {
   font-size: 30px;
 }
+
 /* Level 1 */
 section h1, article h1, aside h1, nav h1 {
   font-size: 25px;
 }
+
 /* Level 2 */
 section section h1, section article h1, section aside h1, section nav h1,
 article section h1, article article h1, article aside h1, article nav h1,
@@ -212,8 +192,9 @@ aside section h1, aside article h1, aside aside h1, aside nav h1,
 nav section h1, nav article h1, nav aside h1, nav nav h1 {
   font-size: 20px;
 }
+
 /* Level 3 */
-/* ... don't even think about it! */
+/* don't even think about it! */
 ```
 
 Using `:is()`, though, it's much easier:
@@ -261,7 +242,9 @@ some-element::after {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:is( <forgiving-selector-list> )
+```
 
 ## Specifications
 

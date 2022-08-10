@@ -10,6 +10,14 @@ tags:
   - Pseudo-element
   - Reference
   - Selector
+browser-compat:
+  - css.selectors.-webkit-scrollbar
+  - css.selectors.-webkit-scrollbar-button
+  - css.selectors.-webkit-scrollbar-thumb
+  - css.selectors.-webkit-scrollbar-track
+  - css.selectors.-webkit-scrollbar-track-piece
+  - css.selectors.-webkit-scrollbar-corner
+  - css.selectors.-webkit-resizer
 ---
 {{CSSRef}}{{Non-standard_Header}}
 
@@ -100,33 +108,7 @@ Not part of any standard.
 
 ## Browser compatibility
 
-### `::-webkit-scrollbar`
-
-{{Compat("css.selectors.-webkit-scrollbar")}}
-
-### `::-webkit-scrollbar-button`
-
-{{Compat("css.selectors.-webkit-scrollbar-button")}}
-
-### `::-webkit-scrollbar-thumb`
-
-{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
-
-### `::-webkit-scrollbar-track`
-
-{{Compat("css.selectors.-webkit-scrollbar-track")}}
-
-### `::-webkit-scrollbar-track-piece`
-
-{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
-
-### `::-webkit-scrollbar-corner`
-
-{{Compat("css.selectors.-webkit-scrollbar-corner")}}
-
-### `::-webkit-resizer`
-
-{{Compat("css.selectors.-webkit-resizer")}}
+{{Compat}}
 
 ## See also
 

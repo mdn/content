@@ -1,6 +1,7 @@
 ---
 title: XREquirectLayer
 slug: Web/API/XREquirectLayer
+page-type: web-api-interface
 tags:
   - API
   - AR

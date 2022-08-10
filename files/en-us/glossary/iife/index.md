@@ -24,21 +24,21 @@ The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web
 <td>
 <pre class="brush: js notranslate">
 (function () {
-  /* ... */
+  /* … */
 })();
 </pre>
 </td>
 <td>
 <pre class="brush: js notranslate">
 (() => {
-  /* ... */
+  /* … */
 })();
 </pre>
 </td>
 <td>
 <pre class="brush: js notranslate">
 (async () => {
-  /* ... */
+  /* … */
 })();
 </pre>
 </tr>
@@ -121,7 +121,7 @@ console.log(secondAccount.withdraw(20));  // 0
 
 We could see the following use of IIFE in some old code, before the introduction of the statements **let** and **const**
 in **ES6** and the block scope. With the statement **var**, we have only function scopes and the global scope.
-Suppose we want to create 2 buttons with the texts Button 0 and Button 1 and we click
+Suppose we want to create 2 buttons with the texts Button 0 and Button 1 and when we click
 them, we would like them to alert 0 and 1. The following code doesn't work:
 
 ```js
@@ -174,7 +174,7 @@ When clicked, these buttons alert 0 and 1.
 ## See also
 
 - [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions) (at the end of the "Functions" section, right before "Custom objects")
-- {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} (Wikipedia)
+- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Wikipedia)
 - [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Function")}}

@@ -1,6 +1,7 @@
 ---
 title: VRFieldOfView
 slug: Web/API/VRFieldOfView
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -32,9 +33,9 @@ The **`VRFieldOfView`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_A
 ## Examples
 
 ```js
-var info = document.querySelector('p');
-var list = document.querySelector('ul');
-var vrDisplay;
+const info = document.querySelector('p');
+const list = document.querySelector('ul');
+let vrDisplay;
 
 if(navigator.getVRDisplays) {
     reportFieldOfView();
@@ -43,36 +44,36 @@ if(navigator.getVRDisplays) {
 }
 
 function reportFieldOfView() {
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then((displays) => {
     vrDisplay = displays[0];
-    var lEye = vrDisplay.getEyeParameters('left');
-    var rEye = vrDisplay.getEyeParameters('right');
+    const lEye = vrDisplay.getEyeParameters('left');
+    const rEye = vrDisplay.getEyeParameters('right');
     // lEye and rEye are VREyeParameters objects
 
-    var lFOV = lEye.fieldOfView;
-    var rFOV = rEye.fieldOfView;
+    const lFOV = lEye.fieldOfView;
+    const rFOV = rEye.fieldOfView;
     // lFOV and rFOV are VRFieldOfView objects
 
-    var listitem1 = document.createElement('li');
-    var listitem2 = document.createElement('li');
+    const listitem1 = document.createElement('li');
+    const listitem2 = document.createElement('li');
 
-    listitem1.innerHTML = '<strong>Left eye parameters</strong>'
-                 + '<br>Offset: ' + lEye.offset
-                 + '<br>Render width: ' + lEye.renderWidth
-                 + '<br>Render height: ' + lEye.renderHeight
-                 + '<br>Up degrees: ' + lFOV.upDegrees
-                 + '<br>Right degrees: ' + lFOV.rightDegrees
-                 + '<br>Down degrees: ' + lFOV.downDegrees
-                 + '<br>Left degrees: ' + lFOV.leftDegrees
+    listitem1.innerHTML = `<strong>Left eye parameters</strong><br>` +
+      `Offset: ${lEye.offset}<br>` +
+      `Render width: ${lEye.renderWidth}<br>` +
+      `Render height: ${lEye.renderHeight}<br>` +
+      `Up degrees: ${lFOV.upDegrees}<br>` +
+      `Right degrees: ${lFOV.rightDegrees}<br>` +
+      `Down degrees: ${lFOV.downDegrees}<br>` +
+      `Left degrees: ${lFOV.leftDegrees}`;
 
-   listitem2.innerHTML = '<strong>Right eye parameters</strong>'
-                + '<br>Offset: ' + rEye.offset
-                + '<br>Render width: ' + rEye.renderWidth
-                + '<br>Render height: ' + rEye.renderHeight
-                + '<br>Up degrees: ' + rFOV.upDegrees
-                + '<br>Right degrees: ' + rFOV.rightDegrees
-                + '<br>Down degrees: ' + rFOV.downDegrees
-                + '<br>Left degrees: ' + rFOV.leftDegrees
+    listitem2.innerHTML = `<strong>Right eye parameters</strong><br>` +
+      `Offset: ${rEye.offset}<br>` +
+      `Render width: ${rEye.renderWidth}<br>` +
+      `Render height: ${rEye.renderHeight}<br>` +
+      `Up degrees: ${rFOV.upDegrees}<br>` +
+      `Right degrees: ${rFOV.rightDegrees}<br>` +
+      `Down degrees: ${rFOV.downDegrees}<br>` +
+      `Left degrees: ${rFOV.leftDegrees}`;
 
     list.appendChild(listitem1);
     list.appendChild(listitem2);

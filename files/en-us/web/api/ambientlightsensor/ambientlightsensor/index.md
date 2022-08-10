@@ -1,6 +1,7 @@
 ---
 title: AmbientLightSensor()
 slug: Web/API/AmbientLightSensor/AmbientLightSensor
+page-type: web-api-constructor
 tags:
   - API
   - Ambient Light Sensor API

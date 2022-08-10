@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.getAll()
 slug: Web/API/StylePropertyMapReadOnly/getAll
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

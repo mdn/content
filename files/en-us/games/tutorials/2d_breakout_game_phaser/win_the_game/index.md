@@ -31,11 +31,11 @@ function ballHitBrick(ball, brick) {
 
     var count_alive = 0;
     for (i = 0; i < bricks.children.length; i++) {
-      if (bricks.children[i].alive == true) {
+      if (bricks.children[i].alive) {
         count_alive++;
       }
     }
-    if (count_alive == 0) {
+    if (count_alive === 0) {
       alert('You won the game, congratulations!');
       location.reload();
     }

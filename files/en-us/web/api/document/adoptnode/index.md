@@ -1,6 +1,7 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -49,7 +50,7 @@ const iframe = document.querySelector('iframe');
 const iframeImages = iframe.contentDocument.querySelectorAll('img');
 const newParent = document.getElementById('images');
 
-iframeImages.forEach(function(imgEl) {
+iframeImages.forEach((imgEl) => {
   newParent.appendChild(document.adoptNode(imgEl));
 });
 ```

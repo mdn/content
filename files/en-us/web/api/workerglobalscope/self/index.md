@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope.self
 slug: Web/API/WorkerGlobalScope/self
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -28,7 +29,7 @@ console.log(self);
 
 inside a worker, you will get a worker global scope of the same type as that worker object written to the console — something like the following:
 
-```js
+```
 DedicatedWorkerGlobalScope {
 undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl: Object…}
     Infinity: Infinity

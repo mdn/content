@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.BigInt.asUintN
 ---
 {{JSRef}}
 
-The **`BigInt.asUintN`** static method clamps a BigInt value to an unsigned integer value, and returns that value.
+The **`BigInt.asUintN`** static method clamps a `BigInt` value to the given number of bits, and returns that value as an unsigned integer.
 
 {{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}
 
@@ -30,15 +30,25 @@ BigInt.asUintN(bits, bigint);
 
 ### Returns
 
-The value of `bigint` modulo
-2^`bits`, as an unsigned integer.
+The value of `bigint` modulo 2^`bits`, as an unsigned integer.
+
+## Description
+
+The `BigInt.asUintN` method clamps a `BigInt` value to the given number of bits, and interprets the result as an unsigned integer. Unsigned integers have no sign bits and are always non-negative. For example, for `BigInt.asUintN(4, 25n)`, the value `25n` is clamped to `9n`:
+
+```plain
+25n = 00011001 (base 2)
+         ^==== Clamp to four remaining bits
+===>      1001 (base 2) = 9n
+```
+
+> **Note:** `BigInt` values are always encoded as two's complement in binary.
 
 ## Examples
 
 ### Staying in 64-bit ranges
 
-The `BigInt.asUintN()` method can be useful to stay in the range of 64-bit
-arithmetic.
+The `BigInt.asUintN()` method can be useful to stay in the range of 64-bit arithmetic.
 
 ```js
 const max = 2n ** 64n - 1n;
@@ -48,7 +58,7 @@ BigInt.asUintN(64, max);
 
 BigInt.asUintN(64, max + 1n);
 // ↪ 0n
-// zero because of overflow
+// zero because of overflow: the lowest 64 bits are all zeros
 ```
 
 ## Specifications

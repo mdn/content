@@ -52,7 +52,7 @@ First a brief overview of [HTML Forms](/en-US/docs/Learn/Forms). Consider a simp
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
-The form is defined in HTML as a collection of elements inside `<form>...</form>` tags, containing at least one `input` element of `type="submit"`.
+The form is defined in HTML as a collection of elements inside `<form>…</form>` tags, containing at least one `input` element of `type="submit"`.
 
 ```html
 <form action="/team_name_url/" method="post">
@@ -130,20 +130,42 @@ The functions are defined as below:
   For example, the line below first defines that we're checking the "name" field and that a validation error will set an error message "Empty name". We then call the sanitization method `trim()` to remove whitespace from the start and end of the string, and then `isLength()` to check the resulting string isn't empty. Finally, we call `escape()` to remove HTML characters from the variable that might be used in JavaScript cross-site scripting attacks.
 
   ```js
-  body('name', 'Empty name').trim().isLength({ min: 1 }).escape(),
+  [
+    // …
+    body('name', 'Empty name')
+      .trim()
+      .isLength({ min: 1 })
+      .escape(),
+    // …
+  ];
   ```
 
   This test checks that the age field is a valid date and uses `optional()` to specify that null and empty strings will not fail validation.
 
   ```js
-  body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601().toDate(),
+  [
+    // …
+    body('age', 'Invalid age')
+      .optional({ checkFalsy: true })
+      .isISO8601()
+      .toDate(),
+    // …
+  ];
   ```
 
   You can also daisy chain different validators, and add messages that are displayed if the preceding validators are true.
 
   ```js
-  body('name').trim().isLength({ min: 1 }).withMessage('Name empty.')
-      .isAlpha().withMessage('Name must be alphabet letters.'),
+  [
+    // …
+    body('name')
+      .trim()
+      .isLength({ min: 1 })
+      .withMessage('Name empty.')
+      .isAlpha()
+      .withMessage('Name must be alphabet letters.'),
+    // …
+  ];
   ```
 
 - [`validationResult(req)`](https://express-validator.github.io/docs/validation-result-api.html#validationresultreq): Runs the validation, making errors available in the form of a `validation` result object. This is invoked in a separate callback, as shown below:

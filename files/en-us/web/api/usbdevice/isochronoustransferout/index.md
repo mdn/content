@@ -1,6 +1,7 @@
 ---
 title: USBDevice.isochronousTransferOut()
 slug: Web/API/USBDevice/isochronousTransferOut
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - isochronousTransferOut
+  - Experimental
 browser-compat: api.USBDevice.isochronousTransferOut
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
@@ -27,11 +29,11 @@ isochronousTransferOut(endpointNumber, data, packetLengths)
 
 ### Parameters
 
-- endpointNumber
+- `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
-- data
+- `data`
   - : A {{domxref("TypedArray")}} containing the data to send to the device.
-- packetLengths
+- `packetLengths`
   - : An array of lengths for the packets being transferred.
 
 ### Return value

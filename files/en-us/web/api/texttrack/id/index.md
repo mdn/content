@@ -1,6 +1,7 @@
 ---
 title: TextTrack.id
 slug: Web/API/TextTrack/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property

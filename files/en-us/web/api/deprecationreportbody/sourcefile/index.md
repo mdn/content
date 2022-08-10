@@ -1,6 +1,7 @@
 ---
 title: DeprecationReportBody.sourceFile
 slug: Web/API/DeprecationReportBody/sourceFile
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -30,7 +31,7 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.sourceFile);

@@ -18,7 +18,7 @@ browser-compat: html.elements.link
 The **`<link>`** [HTML](/en-US/docs/Web/HTML) element specifies relationships between the current document and an external resource.
 This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
 
-{{EmbedInteractiveExample("pages/tabbed/link.html")}}
+{{EmbedInteractiveExample("pages/tabbed/link.html", "tabbed-shorter")}}
 
 To link an external stylesheet, you'd include a `<link>` element inside your {{HTMLElement("head")}} like this:
 
@@ -347,15 +347,15 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 
 ```html
 <script>
-var myStylesheet = document.querySelector('#my-stylesheet');
+  const stylesheet = document.querySelector('#my-stylesheet');
 
-myStylesheet.onload = function() {
-  // Do something interesting; the sheet has been loaded
-}
+  stylesheet.onload = () => {
+    // Do something interesting; the sheet has been loaded
+  }
 
-myStylesheet.onerror = function() {
-  console.log("An error occurred loading the stylesheet!");
-}
+  stylesheet.onerror = () => {
+    console.log("An error occurred loading the stylesheet!");
+  }
 </script>
 
 <link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet">

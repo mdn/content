@@ -1,6 +1,7 @@
 ---
 title: Blob.arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Blob

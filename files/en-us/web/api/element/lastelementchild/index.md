@@ -1,6 +1,7 @@
 ---
 title: Element.lastElementChild
 slug: Web/API/Element/lastElementChild
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

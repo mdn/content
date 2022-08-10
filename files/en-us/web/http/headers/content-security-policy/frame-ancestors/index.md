@@ -10,7 +10,7 @@ tags:
   - HTTP
   - Security
   - frame-ancestors
-browser-compat: http.headers.csp.Content-Security-Policy.frame-ancestors
+browser-compat: http.headers.Content-Security-Policy.frame-ancestors
 ---
 {{HTTPSidebar}}
 

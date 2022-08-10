@@ -1,6 +1,7 @@
 ---
 title: TaskAttributionTiming.containerName
 slug: Web/API/TaskAttributionTiming/containerName
+page-type: web-api-instance-property
 tags:
   - API
   - Long Tasks API

@@ -1,6 +1,7 @@
 ---
 title: Navigator.product
 slug: Web/API/Navigator/product
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

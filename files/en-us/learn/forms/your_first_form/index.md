@@ -173,7 +173,7 @@ The {{htmlelement("button")}} element also accepts a `type` attribute — this a
 
 - A click on a `submit` button (the default value) sends the form's data to the web page defined by the `action` attribute of the {{HTMLelement("form")}} element.
 - A click on a `reset` button resets all the form widgets to their default value immediately. From a UX point of view, this is considered bad practice, so you should avoid using this type of button unless you really have a good reason to include one.
-- A click on a `button` button does... nothing! That sounds silly, but it's amazingly useful for building custom buttons — you can define their chosen functionality with JavaScript.
+- A click on a `button` button does _nothing_! That sounds silly, but it's amazingly useful for building custom buttons — you can define their chosen functionality with JavaScript.
 
 > **Note:** You can also use the {{HTMLElement("input")}} element with the corresponding `type` to produce a button, for example `<input type="submit">`. The main advantage of the {{HTMLelement("button")}} element is that the {{HTMLelement("input")}} element only allows plain text in its label whereas the {{HTMLelement("button")}} element allows full HTML content, allowing more complex, creative button content.
 
@@ -295,7 +295,7 @@ Let's look at some of our form code again:
     <textarea id="msg" name="user_message"></textarea>
   </li>
 
-  ...
+…
 ```
 
 In our example, the form will send 3 pieces of data named "`user_name`", "`user_email`", and "`user_message`".

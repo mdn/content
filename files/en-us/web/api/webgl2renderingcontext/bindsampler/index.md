@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.bindSampler()
 slug: Web/API/WebGL2RenderingContext/bindSampler
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,10 +23,10 @@ bindSampler(unit, sampler)
 
 ### Parameters
 
-- unit
+- `unit`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the texture unit to which to bind
     the sampler to.
-- sampler
+- `sampler`
   - : A {{domxref("WebGLSampler")}} object to bind.
 
 ### Return value
@@ -35,7 +36,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var sampler = gl.createSampler();
+const sampler = gl.createSampler();
 gl.bindSampler(0, sampler);
 ```
 

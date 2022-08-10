@@ -1,6 +1,7 @@
 ---
 title: 'HTMLTrackElement: cuechange event'
 slug: Web/API/HTMLTrackElement/cuechange_event
+page-type: web-api-event
 tags:
   - API
   - Accessibility
@@ -32,9 +33,9 @@ The **`cuechange`** event fires when a {{domxref("TextTrack")}} has changed the 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cuechange', event => { })
+addEventListener('cuechange', (event) => { })
 
-oncuechange = event => { }
+oncuechange = (event) => { }
 ```
 
 ## Event type
@@ -50,7 +51,7 @@ If the track _is_ associated with a media element, using the {{HTMLElement("trac
 ```js
 let textTrackElem = document.getElementById("texttrack");
 
-textTrackElem.addEventListener("cuechange", event => {
+textTrackElem.addEventListener("cuechange", (event) => {
   let cues = event.target.track.activeCues;
 });
 ```
@@ -60,9 +61,9 @@ Alternatively, you can use the `oncuechange` event handler:
 ```js
 let textTrackElem = document.getElementById("texttrack");
 
-textTrackElem.oncuechange = event => {
+textTrackElem.oncuechange = (event) => {
   let cues = event.target.track.activeCues;
-});
+};
 ```
 
 ## Specifications

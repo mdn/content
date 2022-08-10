@@ -1,6 +1,7 @@
 ---
 title: DeviceMotionEvent.acceleration
 slug: Web/API/DeviceMotionEvent/acceleration
+page-type: web-api-instance-property
 tags:
   - API
   - Device Orientation

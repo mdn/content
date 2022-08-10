@@ -1,6 +1,7 @@
 ---
 title: HTMLScriptElement.supports()
 slug: Web/API/HTMLScriptElement/supports
+page-type: web-api-static-method
 tags:
   - API
   - HTMLScriptElement
@@ -54,20 +55,20 @@ The code below shows how to check if `HTMLScriptElement.supports()` is defined, 
 ```
 
 ```js
-if (typeof HTMLScriptElement.supports == 'undefined') {
+if (typeof HTMLScriptElement.supports === 'undefined') {
   //Check if method is defined
-  log.textContent+="HTMLScriptElement.supports() method is not supported\n";
+  console.log("HTMLScriptElement.supports() method is not supported");
 }
 else
 {
   //Returns true for the supported values
-  log.textContent+="HTMLScriptElement.supports('module'): " + HTMLScriptElement.supports('module') +"\n";
-  log.textContent+="HTMLScriptElement.supports('classic'): " + HTMLScriptElement.supports('classic') +"\n";
-  log.textContent+="HTMLScriptElement.supports('importmap'): " + HTMLScriptElement.supports('importmap') +"\n";
-  log.textContent+="HTMLScriptElement.supports('speculationrules'): " + HTMLScriptElement.supports('speculationrules') +"\n";
+  console.log(`HTMLScriptElement.supports('module'): ${HTMLScriptElement.supports('module')}`);
+  console.log(`HTMLScriptElement.supports('classic'): ${HTMLScriptElement.supports('classic')}`);
+  console.log(`HTMLScriptElement.supports('importmap'): ${HTMLScriptElement.supports('importmap')}`);
+  console.log(`HTMLScriptElement.supports('speculationrules'): ${HTMLScriptElement.supports('speculationrules')}`);
 
   //Returns false for any other values
-  log.textContent+="HTMLScriptElement.supports('anything else'): " + HTMLScriptElement.supports('anything else') +"\n";
+  console.log(`HTMLScriptElement.supports('anything else'): ${HTMLScriptElement.supports('anything else')}`);
 }
 ```
 

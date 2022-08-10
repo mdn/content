@@ -21,7 +21,7 @@ The `Filter` object enables you to restrict the number of {{WebExtAPIRef("sessio
 
 Values of this type are objects. They contain the following properties:
 
-- `maxResults`{{optional_inline}}
+- `maxResults` {{optional_inline}}
   - : `number`. The maximum number of results to return.
 
 ## Browser compatibility

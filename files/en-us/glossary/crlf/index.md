@@ -19,5 +19,5 @@ A CR immediately followed by a LF (CRLF, `\r\n`, or `0x0D0A`) moves the cursor d
 
 ## See also
 
-- {{interwiki("wikipedia", "Newline#In_programming_languages", "Newline")}} on Wikipedia
-- {{interwiki("wikipedia", "Carriage_return#Computers", "Carriage return")}} on Wikipedia
+- [Newline](https://en.wikipedia.org/wiki/Newline#In_programming_languages) on Wikipedia
+- [Carriage return](https://en.wikipedia.org/wiki/Carriage_return#Computers) on Wikipedia

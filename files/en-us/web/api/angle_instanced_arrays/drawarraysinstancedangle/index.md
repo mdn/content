@@ -1,6 +1,7 @@
 ---
 title: ANGLE_instanced_arrays.drawArraysInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawArraysInstancedANGLE
+page-type: web-api-instance-method
 tags:
   - ANGLE_instanced_arrays
   - API
@@ -51,12 +52,12 @@ None ({{jsxref("undefined")}}).
 
 - If `mode` is not one of the accepted values, a `gl.INVALID_ENUM` error is thrown.
 - If `first`, `count` or `primcount` are negative, a `gl.INVALID_VALUE` error is thrown.
-- if `gl.CURRENT_PROGRAM` is {{jsxref("null")}}, a `gl.INVALID_OPERATION` error is thrown.
+- if `gl.CURRENT_PROGRAM` is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), a `gl.INVALID_OPERATION` error is thrown.
 
 ## Examples
 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension('ANGLE_instanced_arrays');
 ext.drawArraysInstancedANGLE(gl.POINTS, 0, 8, 4);
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Notification.renotify
 slug: Web/API/Notification/renotify
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -29,12 +30,12 @@ it has been replaced; a simple `options` object is created, and then the
 notification is fired using the `Notification()` constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my Notification?',
   renotify: true
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification', options);
 
 console.log(n.renotify) // should log true
 ```
@@ -49,5 +50,4 @@ console.log(n.renotify) // should log true
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

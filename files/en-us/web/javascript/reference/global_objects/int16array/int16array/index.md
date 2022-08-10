@@ -31,6 +31,16 @@ new Int16Array(buffer, byteOffset);
 new Int16Array(buffer, byteOffset, length);
 ```
 
+## Description
+
+The `Int16Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Int16Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+
+```js example-bad
+const dv = Int16Array([1, 2, 3]);
+// TypeError: calling a builtin Int16Array constructor
+// without new is forbidden
+```
+
 ### Parameters
 
 - `length`
@@ -64,29 +74,30 @@ new Int16Array(buffer, byteOffset, length);
 
 ```js
 // From a length
-var int16 = new Int16Array(2);
+const int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42
 console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 2
 
 // From an array
-var arr = new Int16Array([21,31]);
-console.log(arr[1]); // 31
+const x = new Int16Array([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-var x = new Int16Array([21, 31]);
-var y = new Int16Array(x);
+const y = new Int16Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(8);
-var z = new Int16Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(16);
+const z = new Int16Array(buffer, 2, 4);
+console.log(z.byteOffset); // 2
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
-var int16 = new Int16Array(iterable);
-// Int16Array[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const int16FromIterable = new Int16Array(iterable);
+console.log(int16FromIterable);
+// Int16Array [1, 2, 3]
 ```
 
 ## Specifications
@@ -96,23 +107,6 @@ var int16 = new Int16Array(iterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Int16Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Int16Array` constructor as a function without `new`, will throw a
-{{jsxref("TypeError")}} from now on.
-
-```js example-bad
-var dv = Int16Array([1, 2, 3]);
-// TypeError: calling a builtin Int16Array constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new Int16Array([1, 2, 3]);
-```
 
 ## See also
 

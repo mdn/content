@@ -1,6 +1,7 @@
 ---
 title: MediaDeviceInfo.deviceId
 slug: Web/API/MediaDeviceInfo/deviceId
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

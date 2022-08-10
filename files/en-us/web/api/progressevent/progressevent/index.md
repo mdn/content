@@ -1,6 +1,7 @@
 ---
 title: ProgressEvent()
 slug: Web/API/ProgressEvent/ProgressEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

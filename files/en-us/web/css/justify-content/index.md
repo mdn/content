@@ -155,10 +155,9 @@ justify-content: unset;
 ```
 
 ```js hidden
-var justifyContent = document.getElementById("justifyContent");
-justifyContent.addEventListener("change", function (evt) {
-  document.getElementById("container").style.justifyContent =
-      evt.target.value;
+const justifyContent = document.getElementById("justifyContent");
+justifyContent.addEventListener("change", (evt) => {
+  document.getElementById("container").style.justifyContent = evt.target.value;
 });
 ```
 
@@ -168,7 +167,7 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## Specifications
 
-{{Specifications("css.properties.justify-content.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

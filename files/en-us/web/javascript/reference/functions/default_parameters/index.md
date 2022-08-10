@@ -19,7 +19,7 @@ is passed.
 ## Syntax
 
 ```js
-function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { /* ... */ }
+function fnName(param1 = defaultValue1, /* … ,*/ paramN = defaultValueN) { /* … */ }
 ```
 
 ## Description
@@ -131,7 +131,7 @@ callSomething()  // 2
 Parameters defined earlier (to the left) are available to later default parameters:
 
 ```js
-function greet(name, greeting, message = greeting + ' ' + name) {
+function greet(name, greeting, message = `${greeting} ${name}`) {
   return [name, greeting, message]
 }
 
@@ -204,15 +204,16 @@ function f(a = go()) { // Throws a `ReferenceError` when `f` is invoked.
 }
 ```
 
-...and this function will print `undefined` because variable
-`var a` is hoisted only to the top of the scope created for the function body
-(and not the parent scope created for the parameter list):
+This function will print the value of the _parameter_ `a`, because the variable `var a` is hoisted only to the top of the scope created for the function body, not the parent scope created for the parameter list, so its value is not visible to `b`.
 
 ```js example-bad
 function f(a, b = () => console.log(a)) {
-  var a = 1
-  b() // Prints `undefined`, because default parameter values exist in their own scope
+  var a = 1;
+  b();
 }
+
+f(); // Logs "undefined"
+f(5); // Logs "5"
 ```
 
 ### Parameters without defaults after default parameters
@@ -268,4 +269,4 @@ preFilledObject({ z: 2 });  // 2
 
 ## See also
 
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [Original proposal at ecmascript.org](https://web.archive.org/web/20161222115423/http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)

@@ -1,6 +1,7 @@
 ---
 title: FetchEvent
 slug: Web/API/FetchEvent
+page-type: web-api-interface
 tags:
   - API
   - FetchEvent
@@ -55,11 +56,11 @@ For GET requests it tries to return a match in the cache, and falls back to the 
 self.addEventListener("fetch", (event) => {
   // Let the browser do its default thing
   // for non-GET requests.
-  if (event.request.method != "GET") return;
+  if (event.request.method !== "GET") return;
 
   // Prevent the default, and handle the request ourselves.
   event.respondWith(
-    (async function () {
+    (async () => {
       // Try to get the response from a cache.
       const cache = await caches.open("dynamic-v1");
       const cachedResponse = await cache.match(event.request);

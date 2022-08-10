@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.beginQuery()
 slug: Web/API/WebGL2RenderingContext/beginQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,17 +23,20 @@ beginQuery(target, query)
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the query. Possible values:
 
-    - `gl.ANY_SAMPLES_PASSED`: Specifies an occlusion query: these queries
-      detect whether an object is visible (whether the scoped drawing commands pass the
-      depth test and if so, how many samples pass).
-    - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`: Same as above, but less
-      accurate and faster version.
-    - `gl.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN`: Number of primitives that
-      are written to transform feedback buffers.
+    - `gl.ANY_SAMPLES_PASSED`
+      - : Specifies an occlusion query: these queries
+        detect whether an object is visible (whether the scoped drawing commands pass the
+        depth test and if so, how many samples pass).
+    - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`
+      - : Same as above, but less
+        accurate and faster version.
+    - `gl.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN`
+      - : Number of primitives that
+        are written to transform feedback buffers.
 
 - `query`
   - : A {{domxref("WebGLQuery")}} object for which to start the querying.
@@ -44,10 +48,10 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
-// ...
+// …
 ```
 
 ## Specifications

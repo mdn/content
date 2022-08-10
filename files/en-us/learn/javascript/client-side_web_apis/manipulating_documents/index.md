@@ -32,7 +32,7 @@ When writing web pages and apps, one of the most common things you'll want to do
       <th scope="row">Objective:</th>
       <td>
         To gain familiarity with the core DOM APIs, and the other APIs commonly
-        associated with DOM and document manipulation
+        associated with DOM and document manipulation.
       </td>
     </tr>
   </tbody>

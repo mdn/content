@@ -16,16 +16,8 @@ It uses the following syntax: `<msubsup> base subscript superscript </msubsup>`.
 
 ## Attributes
 
-- `class`, `id`, `style`
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
-- `href`
-  - : Used to set a hyperlink to a specified URI.
-- `mathbackground`
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- `mathcolor`
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - `subscriptshift` {{deprecated_inline}}
   - : The minimum space by which to shift the subscript below the baseline of the expression, as a [length value.](/en-US/docs/Web/MathML/Attribute/Values#lengths)
     This attribute is deprecated and will be removed in the future.
@@ -37,15 +29,15 @@ It uses the following syntax: `<msubsup> base subscript superscript </msubsup>`.
 
 Sample rendering: ![x1](msubsup.png)
 
-Rendering in your browser: <math><msubsup><mo>∫</mo> <mn>0 </mn><mn>1</mn></msubsup></math>
+Rendering in your browser: <math><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup></math>
 
 ```html
 <math displaystyle="true">
 
   <msubsup>
-    <mo> &#x222B;<!--Integral --> </mo>
-    <mn> 0 </mn>
-    <mn> 1 </mn>
+    <mo>&#x222B;<!--Integral --></mo>
+    <mn>0</mn>
+    <mn>1</mn>
   </msubsup>
 
 </math>

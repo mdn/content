@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTService.isPrimary
 slug: Web/API/BluetoothRemoteGATTService/isPrimary
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth

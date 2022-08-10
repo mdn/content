@@ -156,7 +156,7 @@ rect:hover, rect:active {
 
 ## Syntax
 
-```js
+```
 preserveAspectRatio="<align> [<meetOrSlice>]"
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.displayName
 slug: Web/API/VRDisplay/displayName
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

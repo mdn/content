@@ -1,6 +1,7 @@
 ---
 title: Resize Observer API
 slug: Web/API/Resize_Observer_API
+page-type: web-api-overview
 tags:
   - API
   - Draft
@@ -12,6 +13,7 @@ tags:
   - Resize Observer API
   - observe
   - size
+browser-compat: api.ResizeObserver
 ---
 {{DefaultAPISidebar("Resize Observer API")}}
 
@@ -48,14 +50,12 @@ You find a couple of simple examples on our GitHub repo:
 The code will usually follow this kind of pattern (taken from resize-observer-border-radius.html):
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.contentBoxSize) {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize[0].inlineSize/10) +
-                                                      (entry.contentBoxSize[0].blockSize/10)) + 'px';
+    if (entry.contentBoxSize) {
+      entry.target.style.borderRadius = `${Math.min(100, entry.contentBoxSize[0].inlineSize / 10 + entry.contentBoxSize[0].blockSize / 10)}px`;
     } else {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
-                                                      (entry.contentRect.height/10)) + 'px';
+      entry.target.style.borderRadius = `${Math.min(100, entry.contentRect.width / 10 + entry.contentRect.height / 10)}px`;
     }
   }
 });
@@ -65,11 +65,11 @@ resizeObserver.observe(document.querySelector('div'));
 
 ## Specifications
 
-{{Specifications("api.ResizeObserver")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.ResizeObserver")}}
+{{Compat}}
 
 ## See also
 

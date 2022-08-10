@@ -98,7 +98,7 @@ colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach((p) => {
     p.style.color = event.target.value;
   });
 }
@@ -146,8 +146,8 @@ The HTML is fairly straightforward — a couple of paragraphs of descriptive mat
 First, there's some setup. Here we establish some variables, setting up a variable that contains the color we'll set the color well to when we first load up, and then setting up a {{domxref("Window/load_event", "load")}} handler to do the main startup work once the page is fully loaded.
 
 ```js
-var colorWell;
-var defaultColor = "#0000ff";
+let colorWell;
+const defaultColor = "#0000ff";
 
 window.addEventListener("load", startup, false);
 ```
@@ -176,11 +176,8 @@ We provide two functions that deal with color changes. The `updateFirst()` funct
 
 ```js
 function updateFirst(event) {
-  var p = document.querySelector("p");
-
-  if (p) {
-    p.style.color = event.target.value;
-  }
+  const p = document.querySelector("p");
+  p?.style.color = event.target.value;
 }
 ```
 
@@ -188,7 +185,7 @@ When the color picker is dismissed, indicating that the value will not be changi
 
 ```js
 function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach((p) => {
     p.style.color = event.target.value;
   });
 }

@@ -1,6 +1,7 @@
 ---
 title: Using the Geolocation API
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
+page-type: guide
 tags:
   - Geolocation API
   - Guide

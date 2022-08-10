@@ -1,6 +1,7 @@
 ---
 title: HTMLTitleElement
 slug: Web/API/HTMLTitleElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -24,16 +25,16 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 ```html
 <!doctype html>
 <html>
-    <head>
-        <title>Hello world! <span class="highlight">Isn't this wonderful</span> really?</title>
-    </head>
-    <body></body>
+  <head>
+    <title>Hello world! <span class="highlight">Isn't this wonderful</span> really?</title>
+  </head>
+  <body></body>
 </html>
 ```
 
 ```js
-let title = document.getElementsByTagName('title')[0];
-console.log( title.text ); // yield: "Hello world!  really?"
+const title = document.getElementsByTagName('title')[0];
+console.log(title.text); // yield: "Hello world!  really?"
 ```
 
 As you can see, the tag `span` and its content were skipped.

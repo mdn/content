@@ -1,6 +1,7 @@
 ---
 title: WaveShaperNode.oversample
 slug: Web/API/WaveShaperNode/oversample
+page-type: web-api-instance-property
 tags:
   - API
   - Property

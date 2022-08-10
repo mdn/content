@@ -1,6 +1,7 @@
 ---
 title: console.clear()
 slug: Web/API/console/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Debugging

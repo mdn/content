@@ -31,9 +31,9 @@ browser.browserAction.setPopup(
 
   - : An object with the following properties:
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the popup only for a specific tab. The popup is reset when the user navigates this tab to a new page.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the popup only for the specified window.
     - `popup`
 
@@ -87,10 +87,10 @@ browser.contextMenus.create({
   checked: false
 }, onCreated);
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "popup-1") {
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "popup-1") {
     browser.browserAction.setPopup({popup: "/popup/popup1.html"})
-  } else if (info.menuItemId == "popup-2") {
+  } else if (info.menuItemId === "popup-2") {
     browser.browserAction.setPopup({popup: "/popup/popup2.html"})
   }
 });

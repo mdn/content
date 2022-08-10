@@ -1,6 +1,7 @@
 ---
 title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -70,14 +71,14 @@ that is created to advance through the nodes (now all elements) and push them in
 array.
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+  { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 
-var nodeList = [];
-var currentNode = treeWalker.currentNode;
+const nodeList = [];
+let currentNode = treeWalker.currentNode;
 
 while(currentNode) {
   nodeList.push(currentNode);

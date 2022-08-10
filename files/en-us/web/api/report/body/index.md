@@ -1,6 +1,7 @@
 ---
 title: Report.body
 slug: Web/API/Report/body
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -28,13 +29,12 @@ pages for more information on what the particular report body types contain.
 ## Examples
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver(([firstReport], observer) => {
   // Log the first report's report body, i.e. a DeprecationReportBody object
   console.log(firstReport.body);
 }, options);

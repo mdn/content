@@ -16,7 +16,7 @@ function Default() {
 
 // This is an overloaded constructor class Overloaded
 // with parameter arguments
-function Overloaded(arg1, arg2, ..., argN){
+function Overloaded(arg1, arg2, /* …, */ argN){
 }
 ```
 
@@ -33,6 +33,6 @@ var defaultReference = new Default();
 
 ## See also
 
-- {{Interwiki("wikipedia", "Constructor_%28object-oriented_programming%29", "Constructor")}} on Wikipedia
+- [Constructor](https://en.wikipedia.org/wiki/Constructor_%28object-oriented_programming%29) on Wikipedia
 - [The constructor in object oriented programming for JavaScript](/en-US/docs/Learn/JavaScript/Objects#the_constructor) on MDN
 - [New operator in JavaScript](/en-US/docs/Web/JavaScript/Reference/Operators/new) on MDN

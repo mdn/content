@@ -29,7 +29,7 @@ A new string representing the calling string converted to upper case.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : When called on {{jsxref("null")}} or {{jsxref("undefined")}}, for example,
+  - : When called on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, for example,
     `String.prototype.toUpperCase.call(undefined)`.
 
 ## Description
@@ -53,7 +53,7 @@ This method will convert any non-string value to a string, when you set its
 
 ```js
 const a = String.prototype.toUpperCase.call({
-  toString: function toString() {
+  toString() {
     return 'abcdef';
   }
 });

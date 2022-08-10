@@ -1,6 +1,7 @@
 ---
 title: XRView.eye
 slug: Web/API/XRView/eye
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -57,12 +58,12 @@ gl.clearColor(0,0, 0, 1.0);
 gl.clearDepth(1.0);
 gl.clear(gl.COLOR_BUFFER_BIT, gl.DEPTH_BUFFER_BIT);
 
-for (let view of xrPose.views) {
+for (const view of xrPose.views) {
   let skipView = false;
 
-  if (view.eye == "left" && body.leftEye.injured) ||
+  if (view.eye === "left" && body.leftEye.injured) {
     skipView = updateInjury(body.leftEye);
-  } else if (view.eye == "right" && body.rightEye.injured) {
+  } else if (view.eye === "right" && body.rightEye.injured) {
     skipView = updateInjury(body.rightEye);
   }
 

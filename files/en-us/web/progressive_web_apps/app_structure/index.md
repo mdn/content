@@ -148,9 +148,9 @@ document.getElementById('content').innerHTML = content;
 Next, it registers a service worker:
 
 ```js
-if('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
-};
+}
 ```
 
 The next code block requests permission for notifications when a button is clicked:
@@ -257,7 +257,7 @@ self.addEventListener('fetch', (e) => {
 The games data is present in the data folder in a form of a JavaScript object ([games.js](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js)):
 
 ```js
-var games = [
+const games = [
   {
     slug: 'lost-in-cyberspace',
     name: 'Lost in Cyberspace',

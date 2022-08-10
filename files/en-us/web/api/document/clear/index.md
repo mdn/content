@@ -1,6 +1,7 @@
 ---
 title: Document.clear()
 slug: Web/API/Document/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

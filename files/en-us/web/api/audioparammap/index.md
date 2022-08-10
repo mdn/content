@@ -1,6 +1,7 @@
 ---
 title: AudioParamMap
 slug: Web/API/AudioParamMap
+page-type: web-api-interface
 tags:
   - Draft
   - Experimental

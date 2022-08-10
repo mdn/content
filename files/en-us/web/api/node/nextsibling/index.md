@@ -1,6 +1,7 @@
 ---
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -49,7 +50,7 @@ i = 1;
 let result = "Siblings of div-1:<br/>";
 
 while (el) {
-  result += i + '. ' + el.nodeName+"<br/>";
+  result += `${i}. ${el.nodeName}<br/>`;
   el = el.nextSibling;
   i++;
 }

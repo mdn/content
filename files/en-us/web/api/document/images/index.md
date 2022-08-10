@@ -1,6 +1,7 @@
 ---
 title: Document.images
 slug: Web/API/Document/images
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -39,10 +40,10 @@ This example looks through the list of images and finds one whose name is
 `"banner.gif"`.
 
 ```js
-var ilist = document.images;
+const ilist = document.images;
 
-for(var i = 0; i < ilist.length; i++) {
-    if(ilist[i].src == 'banner.gif') {
+for (let i = 0; i < ilist.length; i++) {
+    if(ilist[i].src === 'banner.gif') {
         // found the banner
     }
 }

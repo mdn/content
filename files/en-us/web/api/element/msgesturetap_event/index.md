@@ -1,6 +1,7 @@
 ---
 title: 'Element: MSGestureTap event'
 slug: Web/API/Element/MSGestureTap_event
+page-type: web-api-event
 tags:
   - Event
   - Non-standard
@@ -9,7 +10,7 @@ browser-compat: api.Element.MSGestureTap_event
 ---
 {{APIRef}}{{Non-standard_header}}
 
-The **`MSGestureTap`** event is fired when the user "taps" the pointing device (e.g., touches the touch surface with their finger, taps the touch surface with a pen device, clicks with a mouse). Typically, it's preferable to listen for the {{event("click")}} event instead.
+The **`MSGestureTap`** event is fired when the user "taps" the pointing device (e.g., touches the touch surface with their finger, taps the touch surface with a pen device, clicks with a mouse). Typically, it's preferable to listen for the {{domxref("Element/click_event", "click")}} event instead.
 
 It is a proprietary event specific to Microsoft Edge and Internet Explorer.
 

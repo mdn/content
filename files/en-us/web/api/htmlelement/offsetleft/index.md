@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -25,8 +26,8 @@ An integer.
 ## Examples
 
 ```js
-var colorTable = document.getElementById("t1");
-var tOLeft = colorTable.offsetLeft;
+const colorTable = document.getElementById("t1");
+const tOLeft = colorTable.offsetLeft;
 
 if (tOLeft > 5) {
   // large left offset: do something here
@@ -46,9 +47,9 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 <div id="box" style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10">
 </div>
 
-<script type="text/javascript">
-  var box = document.getElementById("box");
-  var longspan = document.getElementById("longspan");
+<script>
+  const box = document.getElementById("box");
+  const longspan = document.getElementById("longspan");
   box.style.left = longspan.offsetLeft + document.body.scrollLeft + "px";
   box.style.top = longspan.offsetTop + document.body.scrollTop + "px";
   box.style.width = longspan.offsetWidth + "px";

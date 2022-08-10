@@ -1,6 +1,7 @@
 ---
 title: NavigationPreloadManager.getState()
 slug: Web/API/NavigationPreloadManager/getState
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -44,14 +45,12 @@ The code below shows a request for the current state, made once the service work
 
 ```js
 navigator.serviceWorker.ready
-  .then((registration) => {
-    return registration.navigationPreload.getState();
-  })
+  .then((registration) => registration.navigationPreload.getState())
   .then((state) => {
     console.log(state.enabled); // boolean
     console.log(state.headerValue); // string
   })
-  .catch(e => console.error("NavigationPreloadManager not supported: " + e.message));
+  .catch((e) => console.error(`NavigationPreloadManager not supported: ${e.message}`));
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletNode.port
 slug: Web/API/AudioWorkletNode/port
+page-type: web-api-instance-property
 tags:
   - API
   - AudioWorkletNode
@@ -82,5 +83,4 @@ every second.
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

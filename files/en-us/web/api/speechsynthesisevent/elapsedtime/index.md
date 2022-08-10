@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisEvent.elapsedTime
 slug: Web/API/SpeechSynthesisEvent/elapsedTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -26,8 +27,8 @@ A float containing the elapsed time, in seconds.
 ## Examples
 
 ```js
-utterThis.onboundary = function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
+utterThis.onboundary = (event) => {
+  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
 }
 ```
 

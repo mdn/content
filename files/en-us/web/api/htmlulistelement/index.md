@@ -1,6 +1,7 @@
 ---
 title: HTMLUListElement
 slug: Web/API/HTMLUListElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

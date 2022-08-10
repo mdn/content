@@ -46,12 +46,12 @@ Let's take a simple example. Suppose a web page loads a script:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
   </head>
   <body>
-    <script type="text/javascript" src="main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
 ```
@@ -88,7 +88,7 @@ Also note that unwrapping is transitive: when you use `wrappedJSObject`, any pro
 XPCNativeWrapper(window.wrappedJSObject.foo);
 ```
 
-See the document on [Xray vision](/en-US/docs/Mozilla/Tech/Xray_vision) for much more detail on this.
+See the document on [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) for much more detail on this.
 
 ## Sharing content script objects with page scripts
 
@@ -175,7 +175,7 @@ the cloneInto call must include
 the `cloneFunctions` option.
 */
 let messenger = {
-  notify: function(message) {
+  notify(message) {
     browser.runtime.sendMessage({
       content: "Object method call: " + message
     });
@@ -247,7 +247,7 @@ ev.propB = "wrapper";                             // define property on xray wra
 ev.wrappedJSObject.propB = "unwrapped";           // define same property on page object
 Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can operate on less privileged objects
   'propC', {
-     get: exportFunction(function() {             // getters must be exported like regular functions
+     get: exportFunction(() => {                  // getters must be exported like regular functions
        return 'propC';
      })
   }

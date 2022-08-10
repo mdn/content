@@ -1,6 +1,7 @@
 ---
 title: MediaCapabilities.decodingInfo()
 slug: Web/API/MediaCapabilities/decodingInfo
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -28,14 +29,17 @@ decodingInfo(configuration)
 
 - `configuration`
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaDecodingConfiguration in the spec -->
-  
+
     - `type`
       - : The type of media being tested. This takes one of three values:
 
-        - `file`: Represents a configuration that is meant to be used for a plain file playback.
-        - `media-source`: Represents a configuration that is meant to be used for playback of a {{domxref("MediaSource")}}.
-        - `webrtc`: Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}}.
-    
+        - `file`
+          - : Represents a configuration that is meant to be used for a plain file playback.
+        - `media-source`
+          - : Represents a configuration that is meant to be used for playback of a {{domxref("MediaSource")}}.
+        - `webrtc`
+          - : Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}}.
+
     - `video`
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
@@ -84,7 +88,6 @@ All supported audio codecs are reported to be power efficient.
 - {{jsxref("TypeError")}}
   - : Thrown if the `configuration` passed to the `decodingInfo()` method is invalid, either because the type is not video or audio, the `contentType` is not a valid codec MIME type, the media decoding configuration is not a valid value for the `type` (file, media-source, or webrtc), or any other error in the media configuration passed to the method, including omitting any values.
 
-
 ## Examples
 
 This example shows how to create a media configuration for an audio file and then use it in `MediaCapabilities.decodingInfo()`.
@@ -102,11 +105,10 @@ const mediaConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => {
-    console.log('This configuration is ' +
-        (result.supported ? '' : 'not ') + 'supported, ' +
-        (result.smooth ? '' : 'not ') + 'smooth, and ' +
-        (result.powerEfficient ? '' : 'not ') + 'power efficient.')
+navigator.mediaCapabilities.decodingInfo(mediaConfig).then((result) => {
+    console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
+    console.log(`${result.smooth ? '' : 'not '}smooth, and`);
+    console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
 });
 ```
 

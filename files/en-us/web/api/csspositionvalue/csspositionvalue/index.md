@@ -1,6 +1,7 @@
 ---
 title: CSSPositionValue()
 slug: Web/API/CSSPositionValue/CSSPositionValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -10,9 +11,10 @@ tags:
   - Houdini
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.CSSPositionValue.CSSPositionValue
 ---
-{{APIRef("CSS Typed Object Model API")}}{{deprecated_header}}
+{{APIRef("CSS Typed Object Model API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`CSSPositionValue()`** constructor
 creates a new {{domxref("CSSPositionValue")}} object which represents values for

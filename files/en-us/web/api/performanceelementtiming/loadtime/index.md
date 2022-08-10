@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.loadTime
 slug: Web/API/PerformanceElementTiming/loadTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -27,7 +28,7 @@ In this example calling `entry.loadTime` returns the loadTime of the image eleme
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.loadTime);
     }

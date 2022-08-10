@@ -71,7 +71,7 @@ Since we're going to make a component called `Todo`, you can start adding the co
 ```js
 export default function Todo() {
   return (
-
+    // …
   );
 }
 ```
@@ -262,7 +262,7 @@ To render our array of objects, we have to turn each one into a `<Todo />` compo
 Above the return statement of `App()`, make a new `const` called `taskList` and use `map()` to transform it. Let's start by turning our `tasks` array into something simple: the `name` of each task:
 
 ```js
-const taskList = props.tasks?.map(task => task.name);
+const taskList = props.tasks?.map((task) => task.name);
 ```
 
 Let's try replacing all the children of the `<ul>` with `taskList`:
@@ -284,13 +284,13 @@ This gets us some of the way towards showing all the components again, but we've
 To fix this, we need to return a `<Todo />` component from our `map()` function — remember that JSX allows us to mix up JavaScript and markup structures! Let's try the following instead of what we have already:
 
 ```js
- const taskList = props.tasks.map(task => <Todo />);
+ const taskList = props.tasks.map((task) => <Todo />);
 ```
 
 Look again at your app; now our tasks look more like they used to, but they're missing the names of the tasks themselves.  Remember that each task we map over has the `id`, `name`, and `checked` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
 
 ```js
-const taskList = props.tasks.map(task => (
+const taskList = props.tasks.map((task) => (
   <Todo id={task.id} name={task.name} completed={task.completed} />
 ));
 ```
@@ -304,7 +304,7 @@ Now that React is rendering our tasks out of an array, it has to keep track of w
 Because keys should be unique, we're going to re-use the `id` of each task object as its key. Update your `taskList` constant like so:
 
 ```js
-const taskList = props.tasks.map(task => (
+const taskList = props.tasks.map((task) => (
     <Todo
       id={task.id}
       name={task.name}
@@ -408,7 +408,7 @@ import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 
 function App(props) {
-  const taskList = props.tasks.map(task => (
+  const taskList = props.tasks.map((task) => (
     <Todo
         id={task.id}
         name={task.name}

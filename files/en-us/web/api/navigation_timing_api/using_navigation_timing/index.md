@@ -1,6 +1,7 @@
 ---
 title: Using Navigation Timing
 slug: Web/API/Navigation_timing_API/Using_Navigation_Timing
+page-type: guide
 tags:
   - Guide
   - Navigation Timing
@@ -19,12 +20,11 @@ Unlike other tools or libraries, the [Navigation Timing API](/en-US/docs/Web/API
 Using the API is as simple as obtaining the {{domxref("Performance")}} object using {{domxref("window.performance")}} and looking up what you need within the object returned. For example, to measure the perceived loading time for a page:
 
 ```js
-window.addEventListener("load", function() {
-  let now = new Date().getTime();
-  let loadingTime = now - performance.timing.navigationStart;
+window.addEventListener("load", () => {
+  const now = new Date().getTime();
+  const loadingTime = now - performance.timing.navigationStart;
 
-  document.querySelector(".output").innerText =
-        loadingTime + " ms";
+  document.querySelector(".output").innerText = `${loadingTime} ms`;
 }, false);
 ```
 
@@ -63,11 +63,11 @@ This information is provided by the {{domxref("Performance.navigation")}} proper
 Let's add this information to the example above. The new code looks like this:
 
 ```js
-window.addEventListener("load", function() {
-  let now = new Date().getTime();
-  let loadingTime = now - performance.timing.navigationStart;
+window.addEventListener("load", () => {
+  const now = new Date().getTime();
+  const loadingTime = now - performance.timing.navigationStart;
 
-  output = "Load time: " + loadingTime + " ms<br/>";
+  let output = `Load time: ${loadingTime} ms<br/>`;
   output += "Navigation type: ";
 
   switch(performance.navigation.type) {
@@ -85,8 +85,7 @@ window.addEventListener("load", function() {
       break;
   }
 
-  output += "<br/>Redirects: " +
-      performance.navigation.redirectCount;
+  output += `<br/>Redirects: ${performance.navigation.redirectCount}`;
   document.querySelector(".output").innerHTML = output;
 }, false);
 ```

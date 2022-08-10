@@ -1,6 +1,7 @@
 ---
 title: CSSSupportsRule
 slug: Web/API/CSSSupportsRule
+page-type: web-api-interface
 tags:
   - API
   - CSSOM

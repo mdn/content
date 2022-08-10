@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.framebufferHeight
 slug: Web/API/XRWebGLLayer/framebufferHeight
+page-type: web-api-instance-property
 tags:
   - API
   - AR

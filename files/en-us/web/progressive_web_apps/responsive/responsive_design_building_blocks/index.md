@@ -50,7 +50,7 @@ The markup is as follows:
 </x-deck>
 ```
 
-> **Note:** These weird x- elements may be unfamiliar; they are part of [Brick](https://mozbrick.github.io/), Mozilla's UI element library for mobile web apps. We have used Brick to create the mobile layout for Snapshot, which you will read more about below.
+> **Note:** These weird x- elements may be unfamiliar; they are part of [Brick](https://github.com/mozbrick/brick), Mozilla's UI element library for mobile web apps. We have used Brick to create the mobile layout for Snapshot, which you will read more about below.
 
 To get these sitting side-by-side we have used the following rules:
 
@@ -249,12 +249,12 @@ Next up, the `font-size` of the buttons is set to `6.8vw`. Why? Because the top-
 
 Last, we have used `flex: 1;` to make the buttons always take up the same proportion of space on the line. Let's have a look at the mobile layout, in the below image.
 
-![single column layout for mobile app view, with three buttons to navigate between cards, an image viewer, and a Save Picture button at the button.](mobile-layout.png)But there are more tricks up our sleeves for this mobile app layout! As mentioned above, we used [Mozilla Brick](https://mozilla.github.io/brick/), a collection of ready-rolled mobile UI components, in the making of the mobile app layout. In particular, we used the [deck](https://mozilla.github.io/brick/docs.html#deck) component for the nice transition effect between cards when the buttons are pressed. For more on using Brick, read [Mozilla Brick: ready made UI components](/en-US/docs/Web/Apps/app_layout/Mozilla_Brick_ready_made_UI_components).
+![single column layout for mobile app view, with three buttons to navigate between cards, an image viewer, and a Save Picture button at the button.](mobile-layout.png)But there are more tricks up our sleeves for this mobile app layout! As mentioned above, we used [Mozilla Brick](https://github.com/mozbrick/brick), a collection of ready-rolled mobile UI components, in the making of the mobile app layout. In particular, we used the [deck](https://github.com/mozbrick/brick/tree/master/dist/brick-deck/dist) component for the nice transition effect between cards when the buttons are pressed.
 
 What's more relevant to this article is that we didn't want the Brick CSS and JavaScript files being applied to the markup unless we were looking at the mobile app view. To achieve this, we applied the Brick CSS to the page using a separate {{HTMLElement("link")}} element with a `media` attribute:
 
 ```html
-<link href="dist/brick.css" type="text/css" rel="stylesheet" media="all and (max-width: 480px)">
+<link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)">
 ```
 
 This says that the whole stylesheet will not be linked to the HTML unless the viewport width is 480px or less. Moving on to the JavaScript, {{HTMLElement("script")}} elements don't accept `media` attributes, so I had to do this a different way. Fortunately there is a JavaScript construct called {{domxref("window.matchMedia()")}}, which can conditionally run JavaScript constructs depending on whether a media query returns `true` or not. We opened up the `brick.js` file and wrapped the whole lot in the following:
@@ -383,8 +383,8 @@ button {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
-       only screen and ( min-resolution: 192dpi),
-       only screen and ( min-resolution: 2dppx) {
+       only screen and (min-resolution: 192dpi),
+       only screen and (min-resolution: 2dppx) {
   button {
     background: url(images/high-res-header.jpg) 1rem center ;
   }
@@ -419,7 +419,7 @@ This allows your site to serve different video files based on the available spac
 
 ### \<img>
 
-HTML images are a more difficult proposition. There is no mechanism inherent in HTML images for serving different image files dependent on viewport size, and, due to a number of irksome browser behavior realities, solutions are more difficult to hack together than you would imagine. There are currently some standards proposals in the works that would provide this — the W3C [responsive images community group](https://www.w3.org/community/respimg/) discussed this problem for ages and arrived at the [\<picture>](https://www.w3.org/TR/html-picture-element/) element, which provides a similar markup structure to {{HTMLElement("video")}}[,](/en-US/docs/Web/HTML/Element/video) with {{HTMLElement("source")}} alternatives selectable via media query results. Another proposal, [srcset](https://html.spec.whatwg.org/srcset/w3c-srcset/), was put forward by Apple and takes a slightly different approach, instead providing a new `srcset` attribute for {{HTMLElement("img")}} inside which image references are placed along with "hints" that the browser can use to work out which image is most suitable to display given its viewport size, resolution, etc. These are not intended to be mutually exclusive.
+HTML images are a more difficult proposition. There is no mechanism inherent in HTML images for serving different image files dependent on viewport size, and, due to a number of irksome browser behavior realities, solutions are more difficult to hack together than you would imagine. There are currently some standards proposals in the works that would provide this — the W3C [responsive images community group](https://www.w3.org/community/respimg/) discussed this problem for ages and arrived at the [\<picture>](https://www.w3.org/TR/html-picture-element/) element, which provides a similar markup structure to {{HTMLElement("video")}}[,](/en-US/docs/Web/HTML/Element/video) with {{HTMLElement("source")}} alternatives selectable via media query results. Another proposal, [srcset](https://html.spec.whatwg.org/multipage/images.html#srcset-attributes), was put forward by Apple and takes a slightly different approach, instead providing a new `srcset` attribute for {{HTMLElement("img")}} inside which image references are placed along with "hints" that the browser can use to work out which image is most suitable to display given its viewport size, resolution, etc. These are not intended to be mutually exclusive.
 
 This all sounds good. But those solutions are definitely not ready for production yet — both are in a very early stage of standardization, and have no support across browsers. Currently we have to rely on various polyfills and other solutions, none of which are perfect for all situations, so you need to decide which one is right for your particular situation. Some available solutions are as follows:
 

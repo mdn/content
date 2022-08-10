@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.getCounterValue()
 slug: Web/API/CSSPrimitiveValue/getCounterValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue

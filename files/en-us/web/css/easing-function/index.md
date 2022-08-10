@@ -11,7 +11,7 @@ tags:
   - Layout
   - Reference
   - easing-function
-spec-urls: https://drafts.csswg.org/css-easing/#typedef-easing-function
+browser-compat: css.types.easing-function
 ---
 {{CSSRef}}
 
@@ -23,11 +23,11 @@ The easing functions in the cubic-bezier subset of easing functions are often ca
 
 Depending on the specific function used, the calculated output can sometimes grow to be greater than `1.0` or smaller than `0.0` during the course of an animation. This causes the value to go farther than the final state, and then return. In animations, for some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.
 
-![](tf_with_output_gt_than_1.png)
+![Graph of the easing function showing the output ratio going above 1, to 1.5, at the transition durations midpoint.](tf_with_output_gt_than_1.png)
 
 However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than `255` or smaller than `0` will be clipped to the closest allowed value (`255` and `0`, respectively). Some `cubic-bezier()` curves exhibit this property.
 
-![](tf_with_output_gt_than_1_clipped.png)
+![Graph of the easing function showing the output ratio reaching 1, and then staying at 1 for the rest of the time.](tf_with_output_gt_than_1_clipped.png)
 
 ### Easing functions
 
@@ -95,7 +95,7 @@ The interpolation starts abruptly, and then progressively slows down towards the
 
 #### The steps() class of easing functions
 
-The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps.This subclass of step functions are sometimes also called _staircase functions_.
+The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps. This subclass of step functions are sometimes also called _staircase functions_.
 
 ##### Syntax
 
@@ -109,11 +109,11 @@ where:
   - : Is a strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.
 - _direction_
 
-  - : Is a keyword indicating if it the function is [left- or right-continuous](https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity):
+  - : Is a keyword indicating when the jumps occur:
 
-    - `jump-start` denotes a left-continuous function, so that the first step or jump happens when the interpolation begins;
-    - `jump-end` denotes a right-continuous function, so that the last step or jump happens when the interpolation ends;
-    - `jump-both` denotes a right and left continuous function, includes pauses at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;
+    - `jump-start` denotes that the first step or jump happens when the interpolation begins;
+    - `jump-end` denotes that the last step or jump happens when the interpolation ends;
+    - `jump-both` denotes that jumps occur at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;
     - `jump-none` There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration
     - `start` is the equivalent of `jump-start`
     - `end` is the equivalent of `jump-end`
@@ -321,7 +321,7 @@ steps(0, jump-none)
 
 ## Browser compatibility
 
-{{Compat("css.types.easing-function", 2)}}
+{{Compat}}
 
 ## See also
 

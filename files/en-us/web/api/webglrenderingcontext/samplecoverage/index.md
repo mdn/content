@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.sampleCoverage()
 slug: Web/API/WebGLRenderingContext/sampleCoverage
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,10 +24,10 @@ sampleCoverage(value, invert)
 
 ### Parameters
 
-- value
+- `value`
   - : A {{domxref("WebGL_API/Types", "GLclampf")}} which sets a single floating-point coverage value clamped
     to the range \[0,1]. The default value is 1.0.
-- invert
+- `invert`
   - : A {{domxref("WebGL_API/Types", "GLboolean")}} which sets whether or not the coverage masks should be
     inverted. The default value is `false`.
 

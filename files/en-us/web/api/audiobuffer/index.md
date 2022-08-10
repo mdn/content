@@ -1,6 +1,7 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
+page-type: web-api-interface
 tags:
   - API
   - AudioBuffer
@@ -45,17 +46,17 @@ Objects of these types are designed to hold small audio snippets, typically less
 The following simple example shows how to create an `AudioBuffer` and fill it with random white noise. You can find the full source code at our [webaudio-examples](https://github.com/mdn/webaudio-examples) repository; a [running live](https://mdn.github.io/webaudio-examples/audio-buffer/) version is also available.
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
-var myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
 
 // Fill the buffer with white noise;
 // just random values between -1.0 and 1.0
-for (var channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
+for (let channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
   // This gives us the actual array that contains the data
-  var nowBuffering = myArrayBuffer.getChannelData(channel);
-  for (var i = 0; i < myArrayBuffer.length; i++) {
+  const nowBuffering = myArrayBuffer.getChannelData(channel);
+  for (let i = 0; i < myArrayBuffer.length; i++) {
     // Math.random() is in [0; 1.0]
     // audio needs to be in [-1.0; 1.0]
     nowBuffering[i] = Math.random() * 2 - 1;
@@ -64,7 +65,7 @@ for (var channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
 
 // Get an AudioBufferSourceNode.
 // This is the AudioNode to use when we want to play an AudioBuffer
-var source = audioCtx.createBufferSource();
+const source = audioCtx.createBufferSource();
 
 // set the buffer in the AudioBufferSourceNode
 source.buffer = myArrayBuffer;

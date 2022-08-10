@@ -1,6 +1,7 @@
 ---
 title: Notification.permission
 slug: Web/API/Notification/permission
+page-type: web-api-static-property
 tags:
   - API
   - Notification
@@ -20,12 +21,15 @@ display web notifications.
 
 A string representing the current permission. The value can be:
 
-- `granted`: The user has explicitly granted permission for the current
-  origin to display system notifications.
-- `denied`: The user has explicitly denied permission for the current
-  origin to display system notifications.
-- `default`: The user decision is unknown; in this case the application
-  will act as if permission was `denied`.
+- `granted`
+  - : The user has explicitly granted permission for the current
+    origin to display system notifications.
+- `denied`
+  - : The user has explicitly denied permission for the current
+    origin to display system notifications.
+- `default`
+  - : The user decision is unknown; in this case the application
+    will act as if permission was `denied`.
 
 ## Examples
 
@@ -43,15 +47,17 @@ function notifyMe() {
   // Let's check whether notification permissions have already been granted
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
-    var notification = new Notification("Hi there!");
+    const notification = new Notification("Hi there!");
+    // …
   }
 
   // Otherwise, we need to ask the user for permission
   else if (Notification.permission !== 'denied' || Notification.permission === "default") {
-    Notification.requestPermission(function (permission) {
+    Notification.requestPermission((permission) => {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        var notification = new Notification("Hi there!");
+        const notification = new Notification("Hi there!");
+        // …
       }
     });
   }

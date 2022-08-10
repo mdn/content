@@ -1,6 +1,7 @@
 ---
 title: CredentialsContainer.store()
 slug: Web/API/CredentialsContainer/store
+page-type: web-api-instance-method
 tags:
   - API
   - Credential Management API

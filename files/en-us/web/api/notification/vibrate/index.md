@@ -1,6 +1,7 @@
 ---
 title: Notification.vibrate
 slug: Web/API/Notification/vibrate
+page-type: web-api-instance-property
 tags:
   - API
   - Device
@@ -22,8 +23,7 @@ specified in the `vibrate` option of the
 
 ## Value
 
-A [vibration
-pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns), as specified in the [Vibration API spec](https://w3c.github.io/vibration/).
+A [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns), as specified in the [Vibration API spec](https://w3c.github.io/vibration/).
 
 ## Examples
 
@@ -32,12 +32,12 @@ vibration; a simple `options` object is created, and then the notification is
 fired using the `Notification()` constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my body?',
   vibrate: [200, 100, 200]
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.vibrate) // should log [200,100,200]
 ```
@@ -52,5 +52,4 @@ console.log(n.vibrate) // should log [200,100,200]
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -15,9 +16,7 @@ The **`CanvasRenderingContext2D.strokeStyle`** property of the
 Canvas 2D API specifies the color, gradient, or pattern to use for the strokes
 (outlines) around shapes. The default is `#000` (black).
 
-> **Note:** For more examples of stroke and fill styles, see [Applying
-> styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
-> tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+> **Note:** For more examples of stroke and fill styles, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Value
 
@@ -46,8 +45,8 @@ This example applies a blue stroke color to a rectangle.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 ctx.strokeStyle = 'blue';
 ctx.strokeRect(10, 10, 100, 100);
@@ -70,7 +69,7 @@ only modify the green and blue values. (The red channel has a fixed value.)
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+const ctx = document.getElementById('canvas').getContext('2d');
 
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {
@@ -104,8 +103,10 @@ In WebKit- and Blink-based browsers, the non-standard and deprecated method
 `ctx.setStrokeColor()` is implemented in addition to this property.
 
 ```js
-setStrokeColor(color, optional alpha);
-setStrokeColor(grayLevel, optional alpha);
+setStrokeColor(color);
+setStrokeColor(color,  alpha);
+setStrokeColor(grayLevel);
+setStrokeColor(grayLevel, alpha);
 setStrokeColor(r, g, b, a);
 setStrokeColor(c, m, y, k, a);
 ```

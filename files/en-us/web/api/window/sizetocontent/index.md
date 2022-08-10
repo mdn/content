@@ -1,6 +1,7 @@
 ---
 title: Window.sizeToContent()
 slug: Web/API/Window/sizeToContent
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

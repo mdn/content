@@ -76,13 +76,13 @@ Most browsers offer a debugger that can identify poorly-formed XML documents.
 
 Like HTML, XML offers methods (called entities) for referring to some special reserved characters (such as a greater than sign which is used for tags). There are five of these characters that you should know:
 
-| Entity | Character | Description                               |
-| ------ | --------- | ----------------------------------------- |
-| &lt;   | <         | Less than sign                            |
-| &gt;   | >         | Greater than sign                         |
-| &amp;  | &         | Ampersand                                 |
-| &quot; | "         | One double-quotation mark                 |
-| &apos; | '         | One apostrophe (or single-quotation mark) |
+| Entity     | Character | Description                               |
+| ---------- | --------- | ----------------------------------------- |
+| &amp;lt;   | <         | Less than sign                            |
+| &amp;gt;   | >         | Greater than sign                         |
+| &amp;amp;  | &         | Ampersand                                 |
+| &amp;quot; | "         | One double-quotation mark                 |
+| &amp;apos; | '         | One apostrophe (or single-quotation mark) |
 
 Even though there are only 5 declared entities, more can be added using the document's [Document Type Definition](/en-US/docs/Glossary/Doctype). For example, to create a new `&warning;` entity, you can do this:
 

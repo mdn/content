@@ -1,6 +1,7 @@
 ---
 title: Navigator.vendorSub
 slug: Web/API/Navigator/vendorSub
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

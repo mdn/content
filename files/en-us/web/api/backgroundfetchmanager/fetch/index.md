@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchManager.fetch()
 slug: Web/API/BackgroundFetchManager/fetch
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -12,7 +13,7 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager.fetch
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`fetch()`** method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects.
 

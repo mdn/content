@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.decrypt()
 slug: Web/API/SubtleCrypto/decrypt
+page-type: web-api-instance-method
 tags:
   - API
   - Decrypt
@@ -37,7 +38,7 @@ decrypt(algorithm, key, data)
   - : A {{domxref("CryptoKey")}} containing the key to be used for decryption.
     If using RSA-OAEP, this is the `privateKey` property of the {{domxref("CryptoKeyPair")}} object.
 - `data`
-  - : A {{domxref("BufferSource")}} containing the data to be decrypted (also known as {{glossary("ciphertext")}}).
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the data to be decrypted (also known as {{glossary("ciphertext")}}).
 
 ### Return value
 
@@ -71,11 +72,9 @@ This code decrypts `ciphertext` using RSA-OAEP. [See the complete code on GitHub
 ```js
 function decryptMessage(privateKey, ciphertext) {
   return window.crypto.subtle.decrypt(
-    {
-      name: "RSA-OAEP"
-    },
+    { name: "RSA-OAEP" },
     privateKey,
-    ciphertext
+    ciphertext,
   );
 }
 ```
@@ -88,13 +87,9 @@ This code decrypts `ciphertext` using AES in CTR mode. Note that
 ```js
 function decryptMessage(key, ciphertext) {
   return window.crypto.subtle.decrypt(
-    {
-      name: "AES-CTR",
-      counter,
-      length: 64
-    },
+    { name: "AES-CTR", counter, length: 64 },
     key,
-    ciphertext
+    ciphertext,
   );
 }
 ```
@@ -107,12 +102,9 @@ This code decrypts `ciphertext` using AES in CBC mode. Note that
 ```js
 function decryptMessage(key, ciphertext) {
   return window.crypto.subtle.decrypt(
-    {
-      name: "AES-CBC",
-      iv: iv
-    },
+    { name: "AES-CBC", iv },
     key,
-    ciphertext
+    ciphertext,
   );
 }
 ```
@@ -125,12 +117,9 @@ This code decrypts `ciphertext` using AES in GCM mode. Note that
 ```js
 function decryptMessage(key, ciphertext) {
   return window.crypto.subtle.decrypt(
-    {
-      name: "AES-GCM",
-      iv: iv
-    },
+    { name: "AES-GCM", iv },
     key,
-    ciphertext
+    ciphertext,
   );
 }
 ```

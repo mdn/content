@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.href
 slug: Web/API/WorkerLocation/href
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -21,7 +22,7 @@ A string.
 
 ```js
 // In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web
-var result = location.href; // Returns 'https://developer.mozilla.org/en-US/docs/Web'
+const result = location.href; // Returns 'https://developer.mozilla.org/en-US/docs/Web'
 ```
 
 ## Specifications

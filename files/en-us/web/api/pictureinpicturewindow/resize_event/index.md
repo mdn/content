@@ -1,6 +1,7 @@
 ---
 title: 'PictureInPictureWindow: resize event'
 slug: Web/API/PictureInPictureWindow/resize_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -22,9 +23,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('resize', event => { });
+addEventListener('resize', (event) => { });
 
-onresize = event => { };
+onresize = (event) => { };
 ```
 
 ## Event type
@@ -62,7 +63,7 @@ function resize(evt) {
 }
 
 video.requestPictureInPicture()
-  .then(pictureInPictureWindow => {
+  .then((pictureInPictureWindow) => {
     pictureInPictureWindow.onresize = resize;
     // or
     pictureInPictureWindow.addEventListener('resize', resize);

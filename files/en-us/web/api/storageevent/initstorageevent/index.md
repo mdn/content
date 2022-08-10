@@ -1,6 +1,7 @@
 ---
 title: StorageEvent.initStorageEvent()
 slug: Web/API/StorageEvent/initStorageEvent
+page-type: web-api-instance-method
 tags:
   - API
   - Method

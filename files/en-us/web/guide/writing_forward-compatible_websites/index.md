@@ -23,7 +23,7 @@ When an event handler content attribute (`onclick`, `onmouseover`, and so forth)
 <div onclick="alert(ownerDocument)">Click me</div>
 ```
 
-then clicking on the text alerts the `ownerDocument` of the `div`. This happens even if there is a `var ownerDocument` declared in global scope.
+then clicking on the text alerts the `ownerDocument` of the `div`. This happens even if there is an `ownerDocument` variable declared in the global scope.
 
 What this means is that any time you access a global variable in an event handler content attribute, including calling any function declared globally, you can end up with a name collision if a specification adds a new DOM property to elements or documents which has the same name as your function or variable, and a browser implements it. If that happens, then suddenly your function stops being called. This has happened multiple times to various sites already during the evolution of HTML5.
 
@@ -40,7 +40,7 @@ To avoid this, fully qualify global variable access using "window.", like so:
 
 ### Don't concatenate scripts you don't control
 
-The `"use strict;"` directive in ECMAScript, when used on the file level, applies to everything in the file. So appending a script that depends on non-strict-mode behavior to a strict-mode script will cause things to break.
+The `"use strict";` directive in ECMAScript, when used on the file level, applies to everything in the file. So appending a script that depends on non-strict-mode behavior to a strict-mode script will cause things to break.
 
 ### Ask the authors of any JavaScript libraries you use to also follow these guidelines
 

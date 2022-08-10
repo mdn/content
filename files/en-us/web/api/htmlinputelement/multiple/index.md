@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.multiple
 slug: Web/API/HTMLInputElement/multiple
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -25,7 +26,7 @@ A boolean value.
 // fileInput is a <input type=file multiple>
 let fileInput = document.getElementById('myfileinput');
 
-if (fileInput.multiple == true) {
+if (fileInput.multiple) {
 
   for (let i = 0; i < fileInput.files.length; i++) {
     // Loop fileInput.files

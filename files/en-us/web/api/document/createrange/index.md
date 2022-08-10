@@ -1,6 +1,7 @@
 ---
 title: Document.createRange()
 slug: Web/API/Document/createRange
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

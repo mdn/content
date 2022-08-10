@@ -1,11 +1,13 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
+page-type: web-api-overview
 tags:
   - API
   - Beginner
   - Mobile
   - Vibration
+browser-compat: api.Navigator.vibrate
 ---
 {{DefaultAPISidebar("Vibration API")}}
 
@@ -47,7 +49,7 @@ Calling {{DOMxRef("Navigator.vibrate()")}} with a value of `0`, an empty array, 
 Some basic `setInterval` and `clearInterval` action will allow you to create persistent vibration:
 
 ```js
-var vibrateInterval;
+let vibrateInterval;
 
 // Starts vibration at passed in level
 function startVibrate(duration) {
@@ -64,7 +66,7 @@ function stopVibrate() {
 // Start persistent vibration at given duration and interval
 // Assumes a number value is given
 function startPersistentVibrate(duration, interval) {
-    vibrateInterval = setInterval(function() {
+    vibrateInterval = setInterval(() => {
         startVibrate(duration);
     }, interval);
 }
@@ -74,13 +76,11 @@ Of course, the snippet above doesn't take into account the array method of vibra
 
 ## Specifications
 
-| Specification                                     |
-| ------------------------------------------------- |
-| [Vibration API](https://w3c.github.io/vibration/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## See also
 

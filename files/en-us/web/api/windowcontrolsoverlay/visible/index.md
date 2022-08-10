@@ -1,6 +1,7 @@
 ---
 title: WindowControlsOverlay.visible
 slug: Web/API/WindowControlsOverlay/visible
+page-type: web-api-instance-property
 tags:
   - API
   - Property

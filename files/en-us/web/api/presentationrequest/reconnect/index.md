@@ -1,12 +1,15 @@
 ---
 title: PresentationRequest.reconnect()
 slug: Web/API/PresentationRequest/reconnect
+page-type: web-api-instance-method
 tags:
   - Promise
   - controlled presentations
   - presentation identifier
 browser-compat: api.PresentationRequest.reconnect
 ---
+{{DefaultAPISidebar("Presentation API")}}
+
 When the `reconnect(presentationId)` method is called on a `PresentationRequest` _presentationRequest_, the [user agent](https://www.w3.org/TR/presentation-api/#dfn-user-agents) _MUST_ run the following steps to _reconnect to a presentation_:
 
 ## Input

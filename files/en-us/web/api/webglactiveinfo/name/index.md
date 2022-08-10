@@ -1,6 +1,7 @@
 ---
 title: WebGLActiveInfo.name
 slug: Web/API/WebGLActiveInfo/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,10 +16,10 @@ The read-only **`WebGLActiveInfo.name`** property represents the name of the req
 ## Examples
 
 ```js
-var activeAttrib = gl.getActiveAttrib(program, index);
+const activeAttrib = gl.getActiveAttrib(program, index);
 activeAttrib.name;
 
-var activeUniform = gl.getActiveUniform(program, index);
+const activeUniform = gl.getActiveUniform(program, index);
 activeUniform.name;
 ```
 

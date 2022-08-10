@@ -1,6 +1,7 @@
 ---
 title: InterventionReportBody.toJSON()
 slug: Web/API/InterventionReportBody/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -33,13 +34,13 @@ A JSON object that is the serialization of the {{domxref("InterventionReportBody
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then return a JSON representation of the first entry.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver((reports, observer) => {
+  const firstReport = reports[0];
   console.log(firstReport.toJSON());
 }, options);
 ```

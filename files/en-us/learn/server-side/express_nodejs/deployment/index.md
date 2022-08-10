@@ -20,10 +20,7 @@ Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn/Serv
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms"
-          >Express Tutorial Part 6: Working with forms</a
-        >.
+        Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.
       </td>
     </tr>
     <tr>
@@ -118,21 +115,19 @@ For example, the code fragment below shows how you might set up "author" logging
 The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.
 
 ```js
-var debug = require('debug')('author');
+const debug = require('debug')('author');
 
 // Display Author update form on GET
-exports.author_update_get = function(req, res, next) {
-
-    req.sanitize('id').escape().trim();
-    Author.findById(req.params.id, function(err, author) {
-        if (err) {
-            debug('update error:' + err);
-            return next(err);
-        }
-        //On success
-        res.render('author_form', { title: 'Update Author', author: author });
-    });
-
+exports.author_update_get = (req, res, next) => {
+  req.sanitize('id').escape().trim();
+  Author.findById(req.params.id, (err, author) => {
+    if (err) {
+      debug('update error:' + err);
+      return next(err);
+    }
+    // On success
+    res.render('author_form', { title: 'Update Author', author });
+  });
 };
 ```
 
@@ -169,7 +164,7 @@ var compression = require('compression');
 // Create the Express application object
 var app = express();
 
-...
+// …
 
 app.use(compression()); //Compress all routes
 
@@ -179,7 +174,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
-...
+// …
 ```
 
 > **Note:** For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like [Nginx](https://nginx.org/).
@@ -205,7 +200,7 @@ var helmet = require('helmet');
 var app = express();
 
 app.use(helmet());
-...
+// …
 ```
 
 > **Note:** The command above adds a _subset_ of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
@@ -263,6 +258,10 @@ There are a lot of ways to work with git. One easy workflow is to first set up a
     - Choose **Node** in the _Add .gitignore_ selection list.
     - Choose your preferred license in the _Add license_ selection list.
     - Check **Initialize this repository with a README**.
+
+    > **Warning:** The default "Public" access will make _all_ source code — including your database username and password — visible to anyone on the internet! Make sure the source code reads credentials _only_ from environment variables and does not have any credentials hard-coded.
+    >
+    > Otherwise, select the "Private" option to allow only selected people to see the source code.
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
@@ -353,7 +352,7 @@ Open **package.json**, and add this information as an **engines > node** section
     "node": "12.18.4"
   },
   "private": true,
-  ...
+  // …
 ```
 
 #### Database configuration
@@ -464,7 +463,17 @@ Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
 MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 ```
 
-> **Note:** On some operating systems you may need to set the URL between single quotation marks (e.g. `heroku config:set MONGODB_URI='mongodb+srv://...'`).
+> **Note:**
+>
+> - Special characters in usernames and passwords must be HTML encoded.
+>   Affected characters include: `:`, `/`, `?`, `#`, `[`, `]`, `@`.
+>   For example, if the password was `cool@pas&word` then you would set MONGODB_URI using:
+>
+>   ```
+>   heroku config:set MONGODB_URI=mongodb+srv://cooluser:cool%40pas%26word@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
+>   ```
+>
+> - On some operating systems you may need to set the URL between single quotation marks (e.g. `heroku config:set MONGODB_URI='mongodb+srv://...'`).
 
 You can inspect your configuration variables at any time using the `heroku config` command — try this now:
 

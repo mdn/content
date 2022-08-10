@@ -1,6 +1,7 @@
 ---
 title: Element.createShadowRoot()
 slug: Web/API/Element/createShadowRoot
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

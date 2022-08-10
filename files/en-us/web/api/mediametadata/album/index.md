@@ -1,6 +1,7 @@
 ---
 title: MediaMetadata.album
 slug: Web/API/MediaMetadata/album
+page-type: web-api-instance-property
 tags:
   - API
   - MediaMetadata
@@ -38,6 +39,7 @@ if ('mediaSession' in navigator) {
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
   });
+}
 ```
 
 ## Specifications

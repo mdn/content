@@ -56,7 +56,7 @@ The last index of the element in the array; `-1` if not found.
 ### Using lastIndexOf
 
 ```js
-var uint8 = new Uint8Array([2, 5, 9, 2]);
+const uint8 = new Uint8Array([2, 5, 9, 2]);
 uint8.lastIndexOf(2);     // 3
 uint8.lastIndexOf(7);     // -1
 uint8.lastIndexOf(2, 3);  // 3

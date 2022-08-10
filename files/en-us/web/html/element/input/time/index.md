@@ -115,7 +115,7 @@ You can set a default value for the input by including a valid time in the {{htm
 You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} `value` property, for example:
 
 ```js
-var timeControl = document.querySelector('input[type="time"]');
+const timeControl = document.querySelector('input[type="time"]');
 timeControl.value = '15:30';
 ```
 
@@ -141,10 +141,10 @@ First, a look at the HTML. This is simple enough, with the label and input as we
 The JavaScript code adds code to the time input to watch for the {{domxref("HTMLElement/input_event", "input")}} event, which is triggered every time the contents of an input element change. When this happens, the contents of the `<span>` are replaced with the new value of the input element.
 
 ```js
-var startTime = document.getElementById("startTime");
-var valueSpan = document.getElementById("value");
+const startTime = document.getElementById("startTime");
+const valueSpan = document.getElementById("value");
 
-startTime.addEventListener("input", function() {
+startTime.addEventListener("input", () => {
   valueSpan.innerText = startTime.value;
 }, false);
 ```
@@ -334,7 +334,7 @@ If you try to submit the form with an incomplete time (or with a time outside th
 
 As mentioned, older versions of Safari and a few other, less common, browsers don't support time inputs natively. In general, otherwise, support is good — especially on mobile platforms, which tend to have very nice user interfaces for specifying a time value. For example, the `time` picker on Chrome for Android looks like this:
 
-![](chrome-android-time.png)
+![Phone screen showing modal dialog with 10:21 as a header. the 10 is fully opaque. The 21 is not. the main area has a circle with the numbers 1 - 12 in a ring, and the number 13 -24 on an inner ring. The number 10 is highlighted with a blue circle. The buttons at the bottom are clear, cancel, and set.](chrome-android-time.png)
 
 Browsers that don't support time inputs gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 
@@ -464,20 +464,20 @@ input:valid+span:after {
 The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports `<input type="time">`, we create a new {{htmlelement("input")}} element, try setting its `type` to `time`, then immediately check what its type is set to — non-supporting browsers will return `text`, because the `time` type falls back to type `text`. If `<input type="time">` is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}s) instead.
 
 ```js
-// define variables
-var nativePicker = document.querySelector('.nativeTimePicker');
-var fallbackPicker = document.querySelector('.fallbackTimePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+// Define variables
+const nativePicker = document.querySelector('.nativeTimePicker');
+const fallbackPicker = document.querySelector('.fallbackTimePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var hourSelect = document.querySelector('#hour');
-var minuteSelect = document.querySelector('#minute');
+const hourSelect = document.querySelector('#hour');
+const minuteSelect = document.querySelector('#minute');
 
-// hide fallback initially
+// Hide fallback initially
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
-// test whether a new date input falls back to a text input or not
-var test = document.createElement('input');
+// Test whether a new date input falls back to a text input or not
+const test = document.createElement('input');
 
 try {
   test.type = 'time';
@@ -485,22 +485,22 @@ try {
   console.log(e.description);
 }
 
-// if it does, run the code inside the if() {} block
-if(test.type === 'text') {
-  // hide the native picker and show the fallback
+// If it does, run the code inside the if() {} block
+if (test.type === 'text') {
+  // Hide the native picker and show the fallback
   nativePicker.style.display = 'none';
   fallbackPicker.style.display = 'block';
   fallbackLabel.style.display = 'block';
 
-  // populate the hours and minutes dynamically
+  // Populate the hours and minutes dynamically
   populateHours();
   populateMinutes();
 }
 
 function populateHours() {
-  // populate the hours <select> with the 6 open hours of the day
-  for(var i = 12; i <= 18; i++) {
-    var option = document.createElement('option');
+  // Populate the hours <select> with the 6 open hours of the day
+  for (let i = 12; i <= 18; i++) {
+    const option = document.createElement('option');
     option.textContent = i;
     hourSelect.appendChild(option);
   }
@@ -508,8 +508,8 @@ function populateHours() {
 
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
-  for(var i = 0; i <= 59; i++) {
-    var option = document.createElement('option');
+  for (let i = 0; i <= 59; i++) {
+    const option = document.createElement('option');
     option.textContent = (i < 10) ? ("0" + i) : i;
     minuteSelect.appendChild(option);
   }
@@ -518,7 +518,7 @@ function populateMinutes() {
 // make it so that if the hour is 18, the minutes value is set to 00
 // — you can't select times past 18:00
  function setMinutesToZero() {
-   if(hourSelect.value === '18') {
+   if (hourSelect.value === '18') {
      minuteSelect.value = '00';
    }
  }

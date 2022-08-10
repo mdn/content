@@ -1,6 +1,7 @@
 ---
 title: ClipboardItem()
 slug: Web/API/ClipboardItem/ClipboardItem
+page-type: web-api-instance-property
 tags:
   - API
   - Clipboard
@@ -22,19 +23,18 @@ The **`ClipboardItem()`** constructor of the {{domxref("Clipboard API")}} create
 ## Syntax
 
 ```js
-new ClipboardItem(clipboardItemData)
-new ClipboardItem(clipboardItemData, clipboardItemOptions)
+new ClipboardItem(data)
+new ClipboardItem(data, options)
 ```
 
 ### Parameters
 
-- `clipboardItemData`
+- `data`
   - : An {{jsxref("Object")}} with the {{Glossary("MIME type")}} as the key and data as the value. The data can be represented as a {{domxref("Blob")}}, a {{jsxref("String")}} or a {{jsxref("Promise")}} which resolves to either a blob or string.
-- `clipboardItemOptions` {{optional_inline}}
-
-  - : An {{jsxref("Object")}} with the following properties:
-
-    - **`presentationStyle`**: One of `"unspecified"`, `"inline"` or `"attachment"`. The default is `"unspecified"`.
+- `options` {{optional_inline}}
+  - : An object with the following properties:
+    - `presentationStyle` {{optional_inline}}
+      - : One of the three strings: `unspecified`, `inline` or `attachment`. The default is `unspecified`.
 
 > **Note:** You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}}
 > interface.
@@ -58,7 +58,7 @@ async function writeClipImg() {
       })
     ]);
     console.log('Fetched image copied.');
-  } catch(err) {
+  } catch (err) {
     console.error(err.name, err.message);
   }
 }

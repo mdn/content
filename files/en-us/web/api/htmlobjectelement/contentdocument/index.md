@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.contentDocument
 slug: Web/API/HTMLObjectElement/contentDocument
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

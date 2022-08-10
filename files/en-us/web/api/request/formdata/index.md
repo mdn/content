@@ -1,6 +1,7 @@
 ---
 title: Request.formData()
 slug: Web/API/Request/formData
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -43,7 +44,7 @@ const request = new Request('/myEndpoint', {
   body: formData
 });
 
-request.formData().then(function(data) {
+request.formData().then((data) => {
   // do something with the formdata sent in the request
 });
 ```

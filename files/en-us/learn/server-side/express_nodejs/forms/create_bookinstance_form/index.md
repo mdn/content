@@ -15,7 +15,7 @@ This subarticle shows how to define a page/form to create `BookInstance` objects
 Open **/controllers/bookinstanceController.js**, and add the following lines at the top of the file:
 
 ```js
-const { body,validationResult } = require('express-validator');
+const { body, validationResult } = require("express-validator");
 ```
 
 ## Controller—get route
@@ -23,22 +23,24 @@ const { body,validationResult } = require('express-validator');
 At the top of the file, require the _Book_ module (needed because each `BookInstance` is associated with a particular `Book`).
 
 ```js
-var Book = require('../models/book');
+const Book = require("../models/book");
 ```
 
 Find the exported `bookinstance_create_get()` controller method and replace it with the following code.
 
 ```js
 // Display BookInstance create form on GET.
-exports.bookinstance_create_get = function(req, res, next) {
-
-    Book.find({},'title')
-    .exec(function (err, books) {
-      if (err) { return next(err); }
-      // Successful, so render.
-      res.render('bookinstance_form', {title: 'Create BookInstance', book_list: books});
+exports.bookinstance_create_get = (req, res, next) => {
+  Book.find({}, "title").exec((err, books) => {
+    if (err) {
+      return next(err);
+    }
+    // Successful, so render.
+    res.render("bookinstance_form", {
+      title: "Create BookInstance",
+      book_list: books,
     });
-
+  });
 };
 ```
 
@@ -51,46 +53,59 @@ Find the exported `bookinstance_create_post()` controller method and replace it 
 ```js
 // Handle BookInstance create on POST.
 exports.bookinstance_create_post = [
+  // Validate and sanitize fields.
+  body("book", "Book must be specified").trim().isLength({ min: 1 }).escape(),
+  body("imprint", "Imprint must be specified")
+    .trim()
+    .isLength({ min: 1 })
+    .escape(),
+  body("status").escape(),
+  body("due_back", "Invalid date")
+    .optional({ checkFalsy: true })
+    .isISO8601()
+    .toDate(),
 
-    // Validate and sanitize fields.
-    body('book', 'Book must be specified').trim().isLength({ min: 1 }).escape(),
-    body('imprint', 'Imprint must be specified').trim().isLength({ min: 1 }).escape(),
-    body('status').escape(),
-    body('due_back', 'Invalid date').optional({ checkFalsy: true }).isISO8601().toDate(),
+  // Process request after validation and sanitization.
+  (req, res, next) => {
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-    // Process request after validation and sanitization.
-    (req, res, next) => {
+    // Create a BookInstance object with escaped and trimmed data.
+    const bookinstance = new BookInstance({
+      book: req.body.book,
+      imprint: req.body.imprint,
+      status: req.body.status,
+      due_back: req.body.due_back,
+    });
 
-        // Extract the validation errors from a request.
-        const errors = validationResult(req);
-
-        // Create a BookInstance object with escaped and trimmed data.
-        var bookinstance = new BookInstance(
-          { book: req.body.book,
-            imprint: req.body.imprint,
-            status: req.body.status,
-            due_back: req.body.due_back
-           });
-
-        if (!errors.isEmpty()) {
-            // There are errors. Render form again with sanitized values and error messages.
-            Book.find({},'title')
-                .exec(function (err, books) {
-                    if (err) { return next(err); }
-                    // Successful, so render.
-                    res.render('bookinstance_form', { title: 'Create BookInstance', book_list: books, selected_book: bookinstance.book._id, errors: errors.array(), bookinstance: bookinstance });
-            });
-            return;
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values and error messages.
+      Book.find({}, "title").exec(function (err, books) {
+        if (err) {
+          return next(err);
         }
-        else {
-            // Data from form is valid.
-            bookinstance.save(function (err) {
-                if (err) { return next(err); }
-                   // Successful - redirect to new record.
-                   res.redirect(bookinstance.url);
-                });
-        }
+        // Successful, so render.
+        res.render("bookinstance_form", {
+          title: "Create BookInstance",
+          book_list: books,
+          selected_book: bookinstance.book._id,
+          errors: errors.array(),
+          bookinstance,
+        });
+      });
+      return;
     }
+
+    // Data from form is valid.
+    bookinstance.save((err) => {
+      if (err) {
+        return next(err);
+      }
+      
+      // Successful: redirect to new record.
+      res.redirect(bookinstance.url);
+    });
+  },
 ];
 ```
 
@@ -100,7 +115,7 @@ The structure and behavior of this code is the same as for creating our other ob
 
 Create **/views/bookinstance_form.pug** and copy in the text below.
 
-```plain
+```pug
 extends layout
 
 block content

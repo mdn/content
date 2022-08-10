@@ -1,10 +1,10 @@
 ---
 title: Cache.keys()
 slug: Web/API/Cache/keys
+page-type: web-api-instance-method
 tags:
   - API
   - Cache
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -15,7 +15,7 @@ browser-compat: api.Cache.keys
 {{APIRef("Service Workers API")}}
 
 The **`keys()`** method of the {{domxref("Cache")}} interface returns a
-{{jsxref("Promise")}} that resolves to an array of{{domxref("Request")}} objects
+{{jsxref("Promise")}} that resolves to an array of {{domxref("Request")}} objects
 representing the keys of the {{domxref("Cache")}}.
 
 The requests are returned in the same order that they were inserted.
@@ -71,9 +71,9 @@ objects.
 ## Examples
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.keys().then(function(keys) {
-    keys.forEach(function(request, index, array) {
+caches.open('v1').then((cache) => {
+  cache.keys().then((keys) => {
+    keys.forEach((request, index, array) => {
       cache.delete(request);
     });
   });
@@ -90,7 +90,6 @@ caches.open('v1').then(function(cache) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

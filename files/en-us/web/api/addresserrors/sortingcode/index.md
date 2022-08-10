@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.sortingCode
 slug: Web/API/AddressErrors/sortingCode
+page-type: web-api-instance-property
 tags:
   - API
   - Address

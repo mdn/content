@@ -1,6 +1,7 @@
 ---
 title: Credential Management API
 slug: Web/API/Credential_Management_API
+page-type: web-api-overview
 tags:
   - API
   - Credential Management API
@@ -9,6 +10,7 @@ tags:
   - Overview
   - Reference
   - credential management
+browser-compat: api.Credential
 ---
 {{DefaultAPISidebar("Credential Management API")}}{{ SeeCompatTable() }}
 
@@ -41,8 +43,8 @@ Later version of the spec allow credentials to be retrieved from a different sub
 
 ## Specifications
 
-{{Specifications("api.Credential")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Credential")}}
+{{Compat}}

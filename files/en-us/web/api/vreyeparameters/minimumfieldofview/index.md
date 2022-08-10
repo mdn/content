@@ -1,6 +1,7 @@
 ---
 title: VREyeParameters.minimumFieldOfView
 slug: Web/API/VREyeParameters/minimumFieldOfView
+page-type: web-api-instance-property
 tags:
   - API
 

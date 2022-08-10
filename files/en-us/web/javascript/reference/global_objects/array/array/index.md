@@ -17,10 +17,10 @@ The **`Array()`** constructor is used to create
 
 ```js
 // literal constructor
-[element0, element1, /* ... ,*/ elementN]
+[element0, element1, /* … ,*/ elementN]
 
 // construct from elements
-new Array(element0, element1, /* ... ,*/ elementN)
+new Array(element0, element1, /* … ,*/ elementN)
 
 // construct from array length
 new Array(arrayLength)
@@ -39,7 +39,7 @@ new Array(arrayLength)
     between 0 and 2^32 - 1 (inclusive), this returns a new JavaScript array with
     its `length` property set to that number (**Note:** this
     implies an array of `arrayLength` empty slots, not slots with actual
-    `undefined` values). If the argument is any other number, a
+    `undefined` values — see [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)). If the argument is any other number, a
     {{jsxref("RangeError")}} exception is thrown.
 
 ## Examples
@@ -50,7 +50,7 @@ Arrays can be created using the [literal](/en-US/docs/Web/JavaScript/Reference/L
 notation:
 
 ```js
-let fruits = ['Apple', 'Banana'];
+const fruits = ['Apple', 'Banana'];
 
 console.log(fruits.length); // 2
 console.log(fruits[0]);     // "Apple"
@@ -63,7 +63,7 @@ its `length` property set to that number and the array elements are empty
 slots.
 
 ```js
-let fruits = new Array(2);
+const fruits = new Array(2);
 
 console.log(fruits.length); // 2
 console.log(fruits[0]);     // undefined
@@ -75,7 +75,7 @@ If more than one argument is passed to the constructor, a new {{jsxref("Array")}
 the given elements is created.
 
 ```js
-let fruits = new Array('Apple', 'Banana');
+const fruits = new Array('Apple', 'Banana');
 
 console.log(fruits.length); // 2
 console.log(fruits[0]);     // "Apple"

@@ -1,11 +1,13 @@
 ---
 title: DocumentFragment.querySelector()
 slug: Web/API/DocumentFragment/querySelector
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
   - DocumentFragment
   - Method
+  - Reference
 browser-compat: api.DocumentFragment.querySelector
 ---
 {{ApiRef("DOM")}}
@@ -35,7 +37,8 @@ querySelector(selectors)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+An {{domxref("Element")}} object representing the first element in the document
+that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors), or `null` is returned if there are no matches.
 
 ## Examples
 
@@ -45,7 +48,7 @@ In this basic example, the first element in the {{domxref("DocumentFragment")}} 
 the class "`myclass`" is returned:
 
 ```js
-var el = documentfragment.querySelector(".myclass");
+const el = documentfragment.querySelector('.myclass');
 ```
 
 ### CSS syntax and the method's argument
@@ -60,10 +63,10 @@ double back slash:
 <div id="foo:bar"></div>
 
 <script>
-document.querySelector('#foo\bar')    // Does not match anything
-document.querySelector('#foo\\\\bar') // Match the first div
-document.querySelector('#foo:bar')     // Does not match anything
-document.querySelector('#foo\\:bar')   // Match the second div
+document.querySelector('#foo\bar');    // Does not match anything
+document.querySelector('#foo\\\\bar'); // Match the first div
+document.querySelector('#foo:bar');     // Does not match anything
+document.querySelector('#foo\\:bar');   // Match the second div
 </script>
 ```
 

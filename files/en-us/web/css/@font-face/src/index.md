@@ -55,7 +55,13 @@ As with other URLs in CSS, the URL may be relative, in which case it is resolved
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+[ <url> [ format( <string># ) ]? | local( <family-name> ) ]#
+
+<family-name> =
+  <string>        |
+  <custom-ident>+
+```
 
 ## Examples
 

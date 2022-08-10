@@ -1,6 +1,7 @@
 ---
 title: AddressErrors
 slug: Web/API/AddressErrors
+page-type: web-api-interface
 tags:
   - API
   - Address
@@ -46,13 +47,6 @@ See the [examples below](#examples) to see how this works.
   - : A string which, if present, indicates that the {{domxref("PaymentAddress.region", "region")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.sortingCode", "sortingCode")}}
   - : A string which, if present, indicates that the {{domxref("PaymentAddress.sortingCode", "sortingCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
-
-### Obsolete properties
-
-These properties have been removed from the specification and should no longer be used.
-
-- {{domxref("AddressErrors.languageCode", "languageCode")}} {{deprecated_inline}}
-  - : A string which, if present, indicates that the {{domxref("PaymentAddress.languageCode", "languageCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 
 ## Usage notes
 
@@ -147,11 +141,11 @@ function process() {
     // Add event listeners here.
     request.onshippingaddresschange = handleAddressChange;
     // Call show() to trigger the browser's payment flow.
-    request.show().then(function(instrumentResponse) {
+    request.show().then((instrumentResponse) => {
       // Do something with the response from the UI.
       console.log("Got response!");
     })
-    .catch(function(err) {
+    .catch((err) => {
       // Do something with the error from request.show().
       console.error(`Error from show(): ${err}`);
     });
@@ -205,10 +199,10 @@ The final step is to call the event's {{domxref("PaymentRequestUpdateEvent.updat
 
 ##### Setting up the Donate Now button
 
-This code creates a handler for the {{domxref("Window/load_event", "load")}} event on the {{domxref("Window", "window")}} which in turn adds the needed {{event("click")}} event handler to the "Donate Now" button so that clicking it starts the payment process.
+This code creates a handler for the {{domxref("Window/load_event", "load")}} event on the {{domxref("Window", "window")}} which in turn adds the needed {{domxref("Element/click_event", "click")}} event handler to the "Donate Now" button so that clicking it starts the payment process.
 
 ```js
-window.addEventListener("load", function(ev) {
+window.addEventListener("load", (ev) => {
   document.getElementById("pay").addEventListener("click", process, false);
 }, false);
 ```

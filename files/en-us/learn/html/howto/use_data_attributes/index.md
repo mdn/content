@@ -23,7 +23,7 @@ The syntax is simple. Any attribute on any element whose attribute name starts w
   data-columns="3"
   data-index-number="12314"
   data-parent="cars">
-...
+…
 </article>
 ```
 
@@ -47,7 +47,7 @@ Each property is a string and can be read and written. In the above case setting
 
 ## CSS access
 
-Note that, as data attributes are plain HTML attributes, you can even access them from [CSS](/en-US/docs/Web/CSS). For example to show the parent data on the article you can use [generated content](/en-US/docs/Web/CSS/content) in CSS with the [`attr()`](</en-US/docs/Web/CSS/attr()>) function:
+Note that, as data attributes are plain HTML attributes, you can even access them from [CSS](/en-US/docs/Web/CSS). For example to show the parent data on the article you can use [generated content](/en-US/docs/Web/CSS/content) in CSS with the [`attr()`](/en-US/docs/Web/CSS/attr) function:
 
 ```css
 article::before {
@@ -76,7 +76,7 @@ Data values are strings. Number values must be quoted in the selector for the st
 
 Do not store content that should be visible and accessible in data attributes, because assistive technology may not access them. In addition, search crawlers may not index data attributes' values.
 
-The main issues to consider are Internet Explorer support and performance. Internet Explorer 11+ provides support for the standard, but all earlier versions [do not support `dataset`](https://caniuse.com/#feat=dataset). To support IE 10 and under you need to access data attributes with {{domxref("Element.getAttribute", "getAttribute()")}} instead. Also, the [performance of reading data-attributes](https://jsperf.com/data-dataset) compared to storing this data in a regular JS object is poor.
+The main issues to consider are Internet Explorer support and performance. Internet Explorer 11+ provides support for the standard, but all earlier versions [do not support `dataset`](https://caniuse.com/#feat=dataset). To support IE 10 and under you need to access data attributes with {{domxref("Element.getAttribute", "getAttribute()")}} instead. Also, the performance of reading `data-*` attributes compared to storing the data in a regular JavaScript object is poor.
 
 That said, though, for custom element-associated metadata, they are a great solution.
 

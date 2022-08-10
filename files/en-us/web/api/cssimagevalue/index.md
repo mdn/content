@@ -1,6 +1,7 @@
 ---
 title: CSSImageValue
 slug: Web/API/CSSImageValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -49,14 +50,14 @@ We get the element's style map. We then get() the background-image from the styl
 
 ```js
 // get the element
-const button = document.querySelector( 'button' );
+const button = document.querySelector('button');
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = button.computedStyleMap();
 
 // Return the CSSImageValue Example
-console.log( allComputedStyles.get('background-image') );
-console.log( allComputedStyles.get('background-image').toString() );
+console.log(allComputedStyles.get('background-image'));
+console.log(allComputedStyles.get('background-image').toString());
 ```
 
 {{EmbedLiveSample("Examples", 120, 300)}}

@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisErrorEvent
 slug: Web/API/SpeechSynthesisErrorEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -32,22 +33,22 @@ _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} int
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector('form');
+const inputTxt = document.querySelector('input');
+const voiceSelect = document.querySelector('select');
 
-var voices = synth.getVoices();
+const voices = synth.getVoices();
 
-  ...
+// ...
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  for (let i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -55,8 +56,8 @@ inputForm.onsubmit = function(event) {
 
   synth.speak(utterThis);
 
-  utterThis.onerror = function(event) {
-    console.log('An error has occurred with the speech synthesis: ' + event.error);
+  utterThis.onerror = (event) => {
+    console.log(`An error has occurred with the speech synthesis: ${event.error}`);
   }
 
   inputTxt.blur();

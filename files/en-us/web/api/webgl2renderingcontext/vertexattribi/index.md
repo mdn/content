@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.vertexAttribI4[u]i[v]()
 slug: Web/API/WebGL2RenderingContext/vertexAttribI
+page-type: web-api-instance-method
 tags:
   - API
   - Method

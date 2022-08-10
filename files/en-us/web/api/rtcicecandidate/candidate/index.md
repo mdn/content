@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.candidate
 slug: Web/API/RTCIceCandidate/candidate
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -59,7 +60,7 @@ ICE candidate received from the remote peer during the signaling process.
 
 ```js
 function handleNewIceCandidate(candidateSDP) {
-  var candidateObj = new RTCIceCandidate(candidateSDP);
+  const candidateObj = new RTCIceCandidate(candidateSDP);
 
   myPeerConnection.addIceCandidate(candidateObj).catch({
     /* handle the error thrown by addIceCandidate() */
@@ -79,7 +80,7 @@ This example could be simplified somewhat; you may more often see the code look
 something like this, taking advantage of more advanced ECMAScript 2016 features:
 
 ```js
-let handleNewIceCandidate = candidateSDP =>
+let handleNewIceCandidate = (candidateSDP) =>
   myPeerConnection.addIceCandidate(new RTCIceCandidate(candidateSDP));
 ```
 
