@@ -176,7 +176,7 @@ As an illustration of `aria-atomic`, consider a site with a simple clock, showin
 ```js
 /* basic JavaScript to update the clock */
 function updateClock() {
-  var now = new Date();
+  const now = new Date();
   document.getElementById('clock-hours').innerHTML = now.getHours();
   document.getElementById('clock-mins').innerHTML = ("0"+now.getMinutes()).substr(-2);
 }
@@ -217,7 +217,7 @@ Another example of `aria-atomic` - an update/notification made as a result of a 
 
 ```js
 function change(event) {
-  var yearOut = document.getElementById("year-output");
+  const yearOut = document.getElementById("year-output");
 
   switch (event.target.id) {
     case "year":
