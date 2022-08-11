@@ -118,7 +118,7 @@ Listen for and log all the change info and new state:
 
 ```js
 function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log("Updated tab: " + tabId);
+  console.log(`Updated tab: ${tabId}`);
   console.log("Changed attributes: ");
   console.log(changeInfo);
   console.log("New tab Info: ");
@@ -133,8 +133,7 @@ Log changes to URLs:
 ```js
 function handleUpdated(tabId, changeInfo, tabInfo) {
   if (changeInfo.url) {
-    console.log("Tab: " + tabId +
-                " URL changed to " + changeInfo.url);
+    console.log(`Tab: ${tabId} URL changed to ${changeInfo.url}`);
   }
 }
 

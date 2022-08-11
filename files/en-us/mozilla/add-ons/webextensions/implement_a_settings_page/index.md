@@ -176,7 +176,7 @@ function onGot(item) {
   if (item.color) {
     color = item.color;
   }
-  document.body.style.border = "10px solid " + color;
+  document.body.style.border = `10px solid ${color}`;
 }
 
 let getting = browser.storage.sync.get("color");

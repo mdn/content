@@ -549,7 +549,7 @@ function populateHours() {
   // populate the hours <select> with the 24 hours of the day
   for (let i = 0; i <= 23; i++) {
     const option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? `0${i}` : i;
     hourSelect.appendChild(option);
   }
 }
@@ -558,7 +558,7 @@ function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
   for (let i = 0; i <= 59; i++) {
     const option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }

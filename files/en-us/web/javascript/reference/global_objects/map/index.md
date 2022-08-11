@@ -376,7 +376,7 @@ myMap.set(0, 'zero');
 myMap.set(1, 'one');
 
 for (const [key, value] of myMap) {
-  console.log(`${key } = ${value}`);
+  console.log(`${key} = ${value}`);
 }
 // 0 = zero
 // 1 = one

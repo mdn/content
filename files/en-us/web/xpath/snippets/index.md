@@ -80,7 +80,7 @@ You can now "query" the document with XPath expressions. Although walking the DO
 // display the last names of all people in the doc
 let results = evaluateXPath(people, "//person/@last-name");
 for (const i in results)
-  console.log("Person #" + i + " has the last name " + results[i].value);
+  console.log(`Person #${i} has the last name ${results[i].value}`);
 
 // get the 2nd person node
 results = evaluateXPath(people, "/people/person[2]");

@@ -189,7 +189,7 @@ This code logs the URL for every resource requested which matches the [\<all_url
 
 ```js
 function logURL(requestDetails) {
-  console.log("Loading: " + requestDetails.url);
+  console.log(`Loading: ${requestDetails.url}`);
 }
 
 browser.webRequest.onBeforeRequest.addListener(
@@ -207,7 +207,7 @@ let pattern = "https://mdn.mozillademos.org/*";
 // cancel function returns an object
 // which contains a property `cancel` set to `true`
 function cancel(requestDetails) {
-  console.log("Canceling: " + requestDetails.url);
+  console.log(`Canceling: ${requestDetails.url}`);
   return {cancel: true};
 }
 
@@ -230,7 +230,7 @@ let pattern = "https://mdn.mozillademos.org/*";
 // returns an object with a property `redirectURL`
 // set to the new URL
 function redirect(requestDetails) {
-  console.log("Redirecting: " + requestDetails.url);
+  console.log(`Redirecting: ${requestDetails.url}`);
   return {
     redirectUrl: "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif"
   };
@@ -257,7 +257,7 @@ let redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gi
 // redirect function returns a Promise
 // which is resolved with the redirect URL when a timer expires
 function redirectAsync(requestDetails) {
-  console.log("Redirecting async: " + requestDetails.url);
+  console.log(`Redirecting async: ${requestDetails.url}`);
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve({redirectUrl});
@@ -287,7 +287,7 @@ let image = `
 `;
 
 function listener(details) {
-  let redirectUrl = "data:image/svg+xml," + encodeURIComponent(image);
+  let redirectUrl = `data:image/svg+xml,${encodeURIComponent(image)}`;
   return {redirectUrl};
 }
 
@@ -302,7 +302,7 @@ Here's another version:
 
 ```js
 function randomColor() {
-  return "#" + Math.floor(Math.random()*16777215).toString(16);
+  return `#${Math.floor(Math.random()*16777215).toString(16)}`;
 }
 
 let pattern = "https://mdn.mozillademos.org/*";
@@ -314,7 +314,7 @@ let image = `
 `;
 
 function listener(details) {
-  let redirectUrl = "data:image/svg+xml," + encodeURIComponent(image);
+  let redirectUrl = `data:image/svg+xml,${encodeURIComponent(image)}`;
   return {redirectUrl};
 }
 
