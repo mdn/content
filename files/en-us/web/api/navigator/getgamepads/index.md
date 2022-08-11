@@ -34,7 +34,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+An {{jsxref("Array")}} of {{domxref("Gamepad")}} objects, eventually empty.
 
 ## Examples
 
