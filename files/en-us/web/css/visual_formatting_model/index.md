@@ -142,4 +142,12 @@ A block box is a block-level box that is also a block container. As described in
 
 ## See also
 
-- {{css_key_concepts}}
+- CSS Key Concepts: [CSS syntax](/en-US/docs/Web/CSS/Syntax), [at-rule](/en-US/docs/Web/CSS/At-rule), [comments](/en-US/docs/Web/CSS/Comments),
+  [specificity](/en-US/docs/Web/CSS/Specificity) and [inheritance](/en-US/docs/Web/CSS/inheritance),
+  the [box](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model),
+  [layout modes](/en-US/docs/Web/CSS/Layout_mode) and [visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model),
+  and [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing),
+  or the [initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [resolved](/en-US/docs/Web/CSS/resolved_value),
+  [specified](/en-US/docs/Web/CSS/specified_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values.
+  Definitions of [value syntax](/en-US/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  and [replaced elements](/en-US/docs/Web/CSS/Replaced_element). 
