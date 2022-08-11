@@ -46,7 +46,9 @@ scroll-snap-type-y: unset;
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+"scroll-snap-type-y":"none | mandatory | proximity";
+```
 
 ## Specifications
 

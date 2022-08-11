@@ -37,7 +37,9 @@ scroll-snap-destination: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+"scroll-snap-destination":"<position>";
+```
 
 ## Examples
 

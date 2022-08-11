@@ -42,7 +42,9 @@ scroll-snap-points-x: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+"scroll-snap-points-x":"none | repeat( <length-percentage> )";
+```
 
 ## Examples
 

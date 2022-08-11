@@ -62,7 +62,9 @@ Where:
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+"-webkit-mask-box-image":"";
+```
 
 ## Examples
 

@@ -64,7 +64,9 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 ### Formal syntax
 
-{{csssyntax}}
+```plain
+"repeating-radial-gradient()":"";
+```
 
 ## Examples
 

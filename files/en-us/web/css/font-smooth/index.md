@@ -50,7 +50,9 @@ font-smooth: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+"font-smooth":"auto | never | always | <absolute-size> | <length>";
+```
 
 ## Examples
 

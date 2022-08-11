@@ -103,7 +103,9 @@ While you can mix and match different angle units, don't. It makes CSS hard to r
 
 ### Formal syntax
 
-{{csssyntax}}
+```plain
+"repeating-conic-gradient()":"";
+```
 
 ## Accessibility concerns
 

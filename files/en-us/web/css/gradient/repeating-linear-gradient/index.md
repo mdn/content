@@ -66,7 +66,9 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 
 ### Formal syntax
 
-{{csssyntax}}
+```plain
+"repeating-linear-gradient()":"";
+```
 
 ## Examples
 
