@@ -17,7 +17,7 @@ This article is for Touch Event Horizon and A Game Related To It
 
 ![Box with the text touch to start](touch-to-start.png)
 
-![two circular blue buttons placed side-by-side with each player's score above each button](tapping.png)
+![Two circles placed side-by-side, one bigger than the other. The size of the circle represents a player's score. The scores are written above each circle.](tapping.png)
 
 [GitHub repository](https://github.com/EnclaveGames/Touch-Event-Horizon)
 
