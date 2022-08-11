@@ -128,7 +128,7 @@ If you look at the console, you'll see the error message "Uncaught TypeError: ca
 function showHeroes(jsonObj) {
   let heroes = jsonObj['members'];
 
-  for (let i = 0; i < heroes.length; i++) {
+  for (const hero of heroes) {
     // …
    }
 
