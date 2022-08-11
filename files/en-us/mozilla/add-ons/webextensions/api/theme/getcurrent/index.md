@@ -52,7 +52,7 @@ function getStyle(themeInfo) {
 }
 
 async function getCurrentThemeInfo() {
-  let themeInfo = await browser.theme.getCurrent();
+  const themeInfo = await browser.theme.getCurrent();
   getStyle(themeInfo);
 }
 

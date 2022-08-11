@@ -179,7 +179,7 @@ function onGot(item) {
   document.body.style.border = `10px solid ${color}`;
 }
 
-let getting = browser.storage.sync.get("color");
+const getting = browser.storage.sync.get("color");
 getting.then(onGot, onError);
 ```
 

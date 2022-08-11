@@ -208,7 +208,7 @@ let pattern = "https://mdn.mozillademos.org/*";
 // which contains a property `cancel` set to `true`
 function cancel(requestDetails) {
   console.log(`Canceling: ${requestDetails.url}`);
-  return {cancel: true};
+  return { cancel: true };
 }
 
 // add the listener,
@@ -260,7 +260,7 @@ function redirectAsync(requestDetails) {
   console.log(`Redirecting async: ${requestDetails.url}`);
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve({redirectUrl});
+      resolve({ redirectUrl });
     }, 2000);
   });
 }
@@ -287,8 +287,8 @@ let image = `
 `;
 
 function listener(details) {
-  let redirectUrl = `data:image/svg+xml,${encodeURIComponent(image)}`;
-  return {redirectUrl};
+  const redirectUrl = `data:image/svg+xml,${encodeURIComponent(image)}`;
+  return { redirectUrl };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
@@ -305,7 +305,7 @@ function randomColor() {
   return `#${Math.floor(Math.random()*16777215).toString(16)}`;
 }
 
-let pattern = "https://mdn.mozillademos.org/*";
+const pattern = "https://mdn.mozillademos.org/*";
 
 let image = `
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -314,8 +314,8 @@ let image = `
 `;
 
 function listener(details) {
-  let redirectUrl = `data:image/svg+xml,${encodeURIComponent(image)}`;
-  return {redirectUrl};
+  const redirectUrl = `data:image/svg+xml,${encodeURIComponent(image)}`;
+  return { redirectUrl };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
