@@ -50,7 +50,9 @@ const req = navigator.push.registrations();
 
 req.onsuccess = (e) => {
   if (req.result.length > 0) {
-    req.result.forEach((result) => console.log(`Existing registration ${result.pushEndpoint} ${result.version}`);
+    req.result.forEach((result) => {
+      console.log(`Existing registration ${result.pushEndpoint} ${result.version}`);
+    });
     // Reuse existing endpoints.
   } else {
     // Register for a new endpoint.
