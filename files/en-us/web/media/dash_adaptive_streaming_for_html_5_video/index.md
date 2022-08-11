@@ -16,13 +16,13 @@ Firefox 23 removed support for DASH for HTML5 WebM video. It will be replaced by
 
 ## Using DASH - Server Side
 
-First you'll need to convert your WebM video to a DASH manifest with the accompanying video files in various bit rates. To start with you'll only need the ffpmeg program from [ffmpeg.org](https://www.ffmpeg.org/), with libvpx and libvorbis support for WebM video and audio, at least version 2.5 (probably; this was tested ith 3.2.5).
+First you'll need to convert your WebM video to a DASH manifest with the accompanying video files in various bit rates. To start with you'll only need the ffpmeg program from [ffmpeg.org](https://www.ffmpeg.org/), with libvpx and libvorbis support for WebM video and audio, at least version 2.5 (probably; this was tested with 3.2.5).
 
 ### 1. Use your existing WebM file to create one audio file and multiple video files
 
 For example:
 
-The file** _in.video_** can be any container with at least one audio and one video stream that can be decoded by ffmpeg,
+The file **_in.video_** can be any container with at least one audio and one video stream that can be decoded by ffmpeg,
 
 Create the audio using:
 
@@ -87,7 +87,7 @@ ffmpeg \
 
 The `-map` arguments correspond to the input files in the sequence they are given; you should have one for each file. The `-adaptation_sets` argument assigns them into adaptation sets; for example, this creates one set (0) that contains the streams 0, 1, 2 and 3 (the videos), and another set (1) that contains only stream 4, the audio stream.
 
-Put the manifest and the associated video files on your web server or CDN. DASH works via HTTP, so as long as your HTTP server supports byte range requests, and it's set up to serve .mpd files with mimetype="application/dash+xml", then you're all set.
+Put the manifest and the associated video files on your web server or CDN. DASH works via HTTP, so as long as your HTTP server supports byte range requests, and it's set up to serve `.mpd` files with `mimetype="application/dash+xml"`, then you're all set.
 
 ## Using DASH - Client Side
 
