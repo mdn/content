@@ -182,4 +182,4 @@ box3.containsPoint(point.position);
 
 There are **two demos** you can take a look at on our [live demos page](https://mozdevs.github.io/gamedev-js-3d-aabb/). The [first one](https://mozdevs.github.io/gamedev-js-3d-aabb/api_point.html) showcases point vs. box collisions using `BoxHelper`. The [second one](https://mozdevs.github.io/gamedev-js-3d-aabb/api_box.html) performs box vs. box tests.
 
-![A Knot object, a Sphere object and a Cube object in 3-D space. The Knot and the Sphere are encompassed by a virtual bounding box. The Cube is intersecting the bounding box of the Sphere. Text at the bottom reads: Drag the cube around. Press Esc to toggle B-Boxes.](screen_shot_2015-10-19_at_12.10.06.png)
+![A knot object, a sphere object and a cube object in 3-D space. The knot and the sphere are encompassed by a virtual bounding box. The cube is intersecting the bounding box of the sphere. Text at the bottom reads: Drag the cube around. Press Esc to toggle B-Boxes.](screen_shot_2015-10-19_at_12.10.06.png)
