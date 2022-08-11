@@ -15,9 +15,9 @@ This article is for Touch Event Horizon and A Game Related To It
 
 ## The example game
 
-![](touch-to-start.png)
+![touch to start text type in blue font color](touch-to-start.png)
 
-![](tapping.png)
+![two circular blue buttons placed side-by-side with each player's score above each button](tapping.png)
 
 [GitHub repository](https://github.com/EnclaveGames/Touch-Event-Horizon)
 
