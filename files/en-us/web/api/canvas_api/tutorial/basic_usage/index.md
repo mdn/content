@@ -123,7 +123,7 @@ To begin, let's take a look at a simple example that draws two intersecting rect
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8"/>
     <title>Canvas experiment</title>

@@ -61,7 +61,7 @@ To change a particular element's style, you can adapt the following example for 
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -110,7 +110,7 @@ More important than the two properties noted here is the use of the `style` obje
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">

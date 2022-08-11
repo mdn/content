@@ -72,7 +72,7 @@ A trick to make all content elements in a containing box the same size, is to gi
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
     <title>-moz-box-flex example</title>

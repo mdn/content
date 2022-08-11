@@ -88,7 +88,7 @@ Our example seen above is represented by the following code (you can also [find 
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">

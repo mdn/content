@@ -27,7 +27,7 @@ scrollbars object is used.
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <title>Various DOM Tests</title>

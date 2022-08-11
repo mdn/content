@@ -72,7 +72,7 @@ See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-ap
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
    <head>
      <meta charset="UTF-8">
      <title>Parent Frame</title>
@@ -95,7 +95,7 @@ Below, the content of `child-frame.html`:
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
    <head>
      <meta charset="UTF-8">
      <title>Child Frame</title>

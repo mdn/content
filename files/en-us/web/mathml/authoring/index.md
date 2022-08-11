@@ -18,7 +18,7 @@ Each MathML equation is represented by a root [`math`](/en-US/docs/Web/MathML/El
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <title>MathML in HTML5</title>
@@ -111,7 +111,7 @@ A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) can be 
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
     <title>MathML in HTML5</title>
@@ -174,7 +174,7 @@ Instead of generating MathML expression at page load, you can instead rely on co
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
     <title>MathML in HTML5</title>
@@ -205,7 +205,7 @@ After running that command, a file `output.html` containing the following HTML o
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
     <title>MathML in HTML5</title>

@@ -67,7 +67,7 @@ namespaces are not supported.
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <title>getAttributeNS() test page</title>
