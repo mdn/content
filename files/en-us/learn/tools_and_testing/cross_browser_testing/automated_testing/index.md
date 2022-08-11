@@ -540,24 +540,24 @@ Let's have a brief look at how we'd access the API using Node.js.
     ```js
     const request = require("request");
 
-    let bsUser = "BROWSERSTACK_USERNAME";
-    let bsKey = "BROWSERSTACK_ACCESS_KEY";
-    let baseUrl = `https://${bsUser}:${bsKey}@www.browserstack.com/automate/`;
+    const bsUser = "BROWSERSTACK_USERNAME";
+    const bsKey = "BROWSERSTACK_ACCESS_KEY";
+    const baseUrl = `https://${bsUser}:${bsKey}@www.browserstack.com/automate/`;
 
-    function getPlanDetails(){
-        request({uri: `${baseUrl}plan.json`}, function(err, res, body){
-            console.log(JSON.parse(body));
-        });
-        /* Response:
+    function getPlanDetails() {
+      request({ uri: `${baseUrl}plan.json` }, (err, res, body) => {
+        console.log(JSON.parse(body));
+      });
+      /* Response:
         {
-            automate_plan: <string>,
-            parallel_sessions_running: <int>,
-            team_parallel_sessions_max_allowed: <int>,
-            parallel_sessions_max_allowed: <int>,
-            queued_sessions: <int>,
-            queued_sessions_max_allowed: <int>
+          automate_plan: <string>,
+          parallel_sessions_running: <int>,
+          team_parallel_sessions_max_allowed: <int>,
+          parallel_sessions_max_allowed: <int>,
+          queued_sessions: <int>,
+          queued_sessions_max_allowed: <int>
         }
-        */
+      */
     }
 
     getPlanDetails();
@@ -574,7 +574,7 @@ Below we've also provided some other ready-made functions you might find useful 
 
 ```js
 function getBuilds(){
-  request({uri: `${baseUrl}builds.json`}, function(err, res, body){
+  request({ uri: `${baseUrl}builds.json` }, (err, res, body) => {
     console.log(JSON.parse(body));
   });
   /* Response:
@@ -601,8 +601,8 @@ function getBuilds(){
 };
 
 function getSessionsInBuild(build){
-  let buildId = build.automation_build.hashed_id;
-  request({uri: `${baseUrl}builds/${buildId}/sessions.json`}, function(err, res, body){
+  const buildId = build.automation_build.hashed_id;
+  request({ uri: `${baseUrl}builds/${buildId}/sessions.json` }, (err, res, body) => {
     console.log(JSON.parse(body));
   });
   /* Response:
@@ -657,8 +657,8 @@ function getSessionsInBuild(build){
 }
 
 function getSessionDetails(session){
-  let sessionId = session.automation_session.hashed_id;
-  request({uri: `${baseUrl}sessions/${sessionId}.json`}, function(err, res, body){
+  const sessionId = session.automation_session.hashed_id;
+  request({uri: `${baseUrl}sessions/${sessionId}.json`}, (err, res, body) => {
     console.log(JSON.parse(body));
   });
   /* Response:
