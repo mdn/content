@@ -73,8 +73,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 
   - : A keyword value _must_ be specified, indicating either the type of cursor to use, or the fallback cursor to use if all specified icons fail to load.
 
-    The available keywords are listed in the table below. Other than `none`, which means no cursor, there is an image showing how the cursors used to be rendered.
-    You can hover your mouse over the table rows to see the effect of the different cursor keyword values on your browser today.
+    The available keywords are listed in the table below. Other than `none`, which means no cursor, there is an image showing how the cursors used to be rendered. You can hover your mouse over the table rows to see the effect of the different cursor keyword values on your browser today.
 
     <table class="standard-table">
       <thead>
@@ -344,14 +343,14 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
       </tbody>
     </table>
 
-## Formal syntax
-
-{{csssyntax}}
-
 ## Formal definition
 
 {{cssinfo}}
 
+## Formal syntax
+
+{{csssyntax}}
+            
 ## Usage notes
 
 ### Icon size limits
