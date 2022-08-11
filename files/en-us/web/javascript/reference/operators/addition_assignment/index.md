@@ -40,17 +40,17 @@ bar += 2 // 7
 // Boolean + Number -> addition
 baz += 1 // 2
 
-// Boolean + Boolean -> addition
+// Number + Boolean -> addition
 baz += false // 2
 
 // Number + String -> concatenation
-bar += 'foo' // "5foo"
+bar += 'foo' // "7foo"
 
 // String + Boolean -> concatenation
 foo += false // "foofalse"
 
 // String + String -> concatenation
-foo += 'bar' // "foobar"
+foo += 'bar' // "foofalsebar"
 ```
 
 ## Specifications
