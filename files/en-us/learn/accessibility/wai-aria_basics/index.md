@@ -156,7 +156,7 @@ If you try testing the example with a screenreader in a modern browser, you'll a
 
 If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and then using the cursor keys to cycle through the menu choices), you'll see that most of the elements are nicely listed so they can be accessed quickly.
 
-![](landmarks-list.png)
+![four landmarks namely banner, navigation, main, complementary are listed by Mac's VoiceOver menu for quick accessibility](landmarks-list.png)
 
 However, we could do better here. The search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (`<input type="search">`). In addition, some older browsers (most notably IE8) don't recognize the semantics of the HTML5 elements.
 

@@ -371,7 +371,7 @@ UI control text labels are very useful to all users, but getting them right is p
 
 You should make sure that your button and link text labels are understandable and distinctive. Don't just use "Click here" for your labels, as screen reader users sometimes get up a list of buttons and form controls. The following screenshot shows our controls being listed by VoiceOver on Mac.
 
-![](voiceover-formcontrols.png)
+![List of form input labels being listed by VoiceOver software on Mac. This list contains meaningless labels given to various form controls like button, textfield and link](voiceover-formcontrols.png)
 
 Make sure your labels make sense out of context, read on their own, as well as in the context of the paragraph they are in. For example, the following shows an example of good link text:
 
@@ -406,7 +406,7 @@ The following is a much better example:
 
 With code like this, the label will be clearly associated with the input; the description will be more like "Fill in your name: edit text."
 
-![](voiceover-good-form-label.png)
+![A good form label called "Fill in your name" is given to a text input form control. ](voiceover-good-form-label.png)
 
 As an added bonus, in most browsers associating a label with a form input means that you can click the label to select or activate the form element. This gives the input a bigger hit area, making it easier to select.
 

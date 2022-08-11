@@ -58,7 +58,7 @@ There are several SFTP clients out there. Our demo covers [FileZilla](https://fi
 
 Open the FileZilla application; you should see something like this:
 
-![](filezilla-ui.png)
+![Screenshot of the user interface of Filezilla application](filezilla-ui.png)
 
 ### Logging in
 
@@ -96,7 +96,7 @@ To connect your SFTP client to the distant server, follow these steps:
 
 Your window should look something like this:
 
-![](site-manager.png)
+![Screenshot of a fictious website with url "http://demozilla.examplehostingprovider.net/" whose content is empty](site-manager.png)
 
 Now press _Connect_ to connect to the SFTP server.
 
@@ -106,7 +106,7 @@ Note: Make sure your hosting provider offers SFTP (Secure FTP) connection to you
 
 Once connected, your screen should look something like this (we've connected to an example of our own to give you an idea):
 
-![](connected.png)
+![Screenshot of the SFTP client displaying the website contents once it has been connected to the SFTP server provided by the corresponding website's hosting provider](connected.png)
 
 Let's examine what you're seeing:
 

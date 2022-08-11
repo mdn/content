@@ -43,7 +43,7 @@ Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch]
 
 The finished assessment site should look like so:
 
-![](assessment-site-finished.png)
+![Screenshot of the finished assessment site](assessment-site-finished.png)
 
 You will see some differences/issues with the display of the starting state of the assessment — this is mainly due to the differences in the markup, which in turn cause some styling issues as the CSS is not applied properly. Don't worry — you'll be fixing these problems in the upcoming sections!
 
