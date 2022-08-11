@@ -12,7 +12,7 @@ tags:
   - escape()
 browser-compat: api.CSS.escape
 ---
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The **`CSS.escape()`** static method returns a
 string containing the escaped string passed as parameter, mostly for

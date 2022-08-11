@@ -10,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSAnimation
 ---
-{{APIRef("Web Animations API")}}{{SeeCompatTable}}
+{{APIRef("Web Animations API")}}
 
 The **`CSSAnimation`** interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object.
 

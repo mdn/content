@@ -6,7 +6,6 @@ tags:
   - API
   - CSS Typed Object Model API
   - CSSPositionValue
-  - Experimental
   - Houdini
   - Property
   - Reference

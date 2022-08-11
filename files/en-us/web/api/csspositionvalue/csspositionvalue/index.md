@@ -7,7 +7,6 @@ tags:
   - CSS Typed Object Model API
   - CSSPositionValue
   - Constructor
-  - Experimental
   - Houdini
   - Reference
   - Deprecated

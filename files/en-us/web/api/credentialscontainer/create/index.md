@@ -11,7 +11,7 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer.create
 ---
-{{APIRef("Credential Management API")}}{{SeeCompatTable}}
+{{APIRef("Credential Management API")}}
 
 The **`create()`** method of the
 {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that
