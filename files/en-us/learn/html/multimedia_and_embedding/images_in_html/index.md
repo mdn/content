@@ -229,18 +229,21 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -248,7 +251,7 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener('click', () => {
   if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
@@ -259,16 +262,13 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
-var solutionEntry = htmlSolution;
-
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -280,11 +280,11 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -404,18 +404,21 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171">\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -423,7 +426,7 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener('click', () => {
   if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
@@ -434,16 +437,13 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171">\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
-var solutionEntry = htmlSolution;
-
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -455,11 +455,11 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -470,7 +470,7 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
   if (solution.value === 'Show solution') {
