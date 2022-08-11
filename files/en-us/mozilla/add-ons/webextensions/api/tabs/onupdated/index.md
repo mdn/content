@@ -119,10 +119,8 @@ Listen for and log all the change info and new state:
 ```js
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
-  console.log("Changed attributes: ");
-  console.log(changeInfo);
-  console.log("New tab Info: ");
-  console.log(tabInfo);
+  console.log("Changed attributes: ", changeInfo);
+  console.log("New tab Info: ", tabInfo);
 }
 
 browser.tabs.onUpdated.addListener(handleUpdated);

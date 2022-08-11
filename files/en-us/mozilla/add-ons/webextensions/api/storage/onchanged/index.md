@@ -68,10 +68,8 @@ function logStorageChange(changes, area) {
 
   for (let item of changedItems) {
     console.log(`${item} has changed:`);
-    console.log("Old value: ");
-    console.log(changes[item].oldValue);
-    console.log("New value: ");
-    console.log(changes[item].newValue);
+    console.log("Old value: ", changes[item].oldValue);
+    console.log("New value: ", changes[item].newValue);
   }
 }
 
