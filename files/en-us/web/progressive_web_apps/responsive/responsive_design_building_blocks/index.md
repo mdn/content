@@ -121,7 +121,7 @@ This is because in our case, we do in fact want the video and image to stretch t
 
 Fluid grids are a great start, but you'll notice that at certain points (known as breakpoints) the layout starts to break down. At these points you'll want to change the layout to rectify the layout problem, and this can be done using media queries.
 
-> **Note:** Media queries are a CSS3 feature that allow you to selectively apply CSS depending on the results of media feature tests — for more on the basics, read [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
+> **Note:** Media queries are a CSS feature that allow you to selectively apply CSS depending on the results of media feature tests — for more on the basics, read [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
 
 ### Typical desktop layout
 

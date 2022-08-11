@@ -164,7 +164,7 @@ If you view the example on a supporting browser like desktop/Android Chrome or i
 
 CSS is arguably better at fallbacks than HTML. If a browser encounters a declaration or rule it doesn't understand, it just skips it completely without applying it or throwing an error. This might be frustrating for you and your users if such a mistake slips through to production code, but at least it means the whole site doesn't come crashing down because of one error, and if used cleverly you can use it to your advantage.
 
-Let's look at an example — a simple box styled with CSS, which has some styling provided by various CSS3 features:
+Let's look at an example — a simple box styled with CSS, which has some styling provided by various CSS features:
 
 ![A red pill button with rounded corners, inset shadow, and drop shadow](blingy-button.png)
 

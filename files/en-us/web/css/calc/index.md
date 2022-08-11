@@ -166,4 +166,4 @@ After all variables are expanded, `widthC`'s value will be `calc(calc(100px / 2)
 
 ## See also
 
-- [Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2010/06/css3-calc/)
+- [Firefox 4: CSS calc() ✩ Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2010/06/css3-calc/)
