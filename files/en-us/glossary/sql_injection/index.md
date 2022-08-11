@@ -12,11 +12,11 @@ SQL injection takes advantage of Web apps that fail to validate user input. Hack
 
 SQL injection can gain unauthorized access to a database or to retrieve information directly from the database. Many data breaches are due to SQL injection.
 
-[![This image is a pie chart which represents that SQL injection is responsible for 50% of vulnerabilities followed by Cross Site Scripting which is responsible for 42% of vulnerabilities](sql_inj_xss.gif)](https://cdn.acunetix.com/wp_content/uploads/2010/09/sql_inj_xss.gif)
+[![Pie chart of most common vulnerabilities: SQL Injection is responsible for 50% of vulnerabilities, Cross Site Scripting is responsible for 42% of vulnerabilities, Source Code Disclosure is responsible for 7% of vulnerabilities.](sql_inj_xss.gif)](https://cdn.acunetix.com/wp_content/uploads/2010/09/sql_inj_xss.gif)
 
 ## How It Works
 
-![This image is a screenshot of the login page of an application with username field and password field](updates_loginscreen.png)
+![Screenshot of the login form with username and password fields](updates_loginscreen.png)
 
 After entering username and password, behind the GUI the SQL queries work as follows:
 
