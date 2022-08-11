@@ -90,7 +90,7 @@ function draw() {
 
 Save your code again and try it in your browser. This works OK, although it appears that the ball is leaving a trail behind it:
 
-![](ball-trail.png)
+![a white background with a thick blue line drawn at 45 degrees from the right and not touching the base](ball-trail.png)
 
 ## Clearing the canvas before each frame
 
