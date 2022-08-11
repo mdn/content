@@ -350,7 +350,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 ## Formal syntax
 
 {{csssyntax}}
-            
+
 ## Usage notes
 
 ### Icon size limits
