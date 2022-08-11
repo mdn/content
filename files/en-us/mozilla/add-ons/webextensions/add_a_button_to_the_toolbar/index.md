@@ -172,7 +172,7 @@ document.addEventListener("click", (e) => {
     return;
   }
 
-  let chosenPage = "https://" + e.target.textContent;
+  let chosenPage = `https://${e.target.textContent}`;
   browser.tabs.create({
     url: chosenPage
   });

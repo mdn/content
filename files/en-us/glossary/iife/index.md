@@ -107,7 +107,7 @@ them, we would like them to alert 0 and 1. The following code doesn't work:
 ```js
 for (var i = 0; i < 2; i++) {
   const button = document.createElement('button');
-  button.innerText = 'Button ' + i;
+  button.innerText = `Button ${i}`;
   button.onclick = function() {
     console.log(i);
   };
@@ -122,7 +122,7 @@ with the last value 2. To fix this problem before ES6, we could use the IIFE pat
 ```js
 for (var i = 0; i < 2; i++) {
   const button = document.createElement('button');
-  button.innerText = 'Button ' + i;
+  button.innerText = `Button ${i}`;
   button.onclick = (function(copyOfI) {
     return () => {
       console.log(copyOfI);
@@ -140,7 +140,7 @@ Using the statement **let**, we could simply do:
 ```js
 for (let i = 0; i < 2; i++) {
   const button = document.createElement("button");
-  button.innerText = 'Button ' + i;
+  button.innerText = `Button ${i}`;
   button.onclick = function() {
     console.log(i);
   };

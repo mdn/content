@@ -158,7 +158,7 @@ You may already know what is wrong with this code, but let's explore it some mor
 Try inserting the following line just below line 31 (bolded above):
 
 ```js
-console.log(`Response value: ${superHeroes}`);
+console.log('Response value: ', superHeroes);
 ```
 
 Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before

@@ -50,7 +50,7 @@ List all visits to the most recently-visited page:
 
 ```js
 function gotVisits(visits) {
-  console.log("Visit count: " + visits.length);
+  console.log(`Visit count: ${visits.length}`);
   for (visit of visits) {
     console.log(visit.visitTime);
   }
@@ -58,7 +58,7 @@ function gotVisits(visits) {
 
 function listVisits(historyItems) {
   if (historyItems.length) {
-    console.log("URL " + historyItems[0].url);
+    console.log(`URL ${historyItems[0].url}`);
     let gettingVisits = browser.history.getVisits({
       url: historyItems[0].url
     });
