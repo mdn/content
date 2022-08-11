@@ -39,7 +39,7 @@ This interface is accessible through the {{domxref("VRDisplay.capabilities")}} p
 ```js
 function reportDisplays() {
   navigator.getVRDisplays().then((displays) => {
-    displays.foreach((display, i) => {
+    displays.forEach((display, i) => {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
       const listItem = document.createElement('li');
