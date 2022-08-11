@@ -46,7 +46,7 @@ function gotSelf(info) {
   console.log(`Add-on name: ${info.name}`);
 }
 
-let gettingSelf = browser.management.getSelf();
+const gettingSelf = browser.management.getSelf();
 gettingSelf.then(gotSelf);
 ```
 
