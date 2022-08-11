@@ -218,13 +218,13 @@ First, we dynamically create the array buffer from JSON data using a
 data to be in little-endian.
 
 ```js
-//load geometry with fetch() and Response.json()
+// Load geometry with fetch() and Response.json()
 const response = await fetch('assets/geometry.json');
 const vertices = await response.json();
 
-//Create array buffer
+// Create array buffer
 const buffer = new ArrayBuffer(20 * vertices.length);
-//Fill array buffer
+// Fill array buffer
 const dv = new DataView(buffer);
 for (let i = 0; i < vertices.length; i++) {
   dv.setFloat32(20 * i, vertices[i].position[0], true);

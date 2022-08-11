@@ -207,12 +207,12 @@ The most direct way to decide which controller is primary is to have a user-defi
 ```js
 let primaryInputSource = xrSession.inputSources[0];
 
-for (let i=0; i < xrSession.inputSources.length; i++) {
-  if (xrSession.inputSources[i].handedness === user.handedness) {
-    primaryInputSource = inputSources[i];
+xrSession.inputSources.forEach((inputSource) => {
+  if (inputSource.handedness === user.handedness) {
+    primaryInputSource = inputSource;
     break;
   }
-}
+});
 ```
 
 This snippet of code starts by assuming that the first input source is the primary, but then looks for one whose {{domxref("XRInputSource.handedness", "handedness")}} matches the one specified in the `user` object. If it matches, that input source is selected as the primary.

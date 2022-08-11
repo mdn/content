@@ -21,7 +21,7 @@ req.onload = (event) => {
   const arrayBuffer = req.response; // Note: not req.responseText
   if (arrayBuffer) {
     const byteArray = new Uint8Array(arrayBuffer);
-    for (let i = 0; i < byteArray.byteLength; i++) {
+    byteArray.forEach((element, index)) => {
       // do something with each byte in the array
     }
   }
@@ -100,9 +100,9 @@ const array = new ArrayBuffer(512);
 const longInt8View = new Uint8Array(array);
 
 // generate some data
-for (let i=0; i< longInt8View.length; i++) {
-  longInt8View[i] = i % 256;
-}
+longInt8View.forEach((element, i) =>  {
+  element = i % 256;
+});
 
 const xhr = new XMLHttpRequest;
 xhr.open("POST", url, false);

@@ -68,9 +68,9 @@ class MyAudioProcessor extends AudioWorkletProcessor {
   }
 
   process(inputList, outputList, parameters) {
-    /* using the inputs (or not, as needed), write the output
-       into each of the outputs */
-
+    // Use the inputs (or not, as needed),
+    // write the output into each of the outputs
+    // …
     return true;
   }
 };
@@ -130,8 +130,7 @@ process(inputList, outputList, parameters) {
       for (let i = 0; i < sampleCount; i++) {
         let sample = input[channelNum][i];
 
-        /* Manipulate the sample */
-
+        // Manipulate the sample
         output[channelNum][i] = sample;
       }
     }
@@ -209,7 +208,7 @@ async function createMyAudioProcessor() {
       audioContext = new AudioContext();
       await audioContext.resume();
       await audioContext.audioWorklet.addModule("module-url/module.js");
-    } catch (e) {
+    } catch(e) {
       return null;
     }
   }

@@ -45,11 +45,10 @@ First up is the addition of the function `sendToOneUser()`. As the name suggests
 ```js
 function sendToOneUser(target, msgString) {
   const isUnique = true;
-  let i;
 
-  for (i=0; i < connectionArray.length; i++) {
-    if (connectionArray[i].username === target) {
-      connectionArray[i].send(msgString);
+  for (const connection of connectionArray) {
+    if (connection.username === target) {
+      connection.send(msgString);
       break;
     }
   }
@@ -67,8 +66,8 @@ if (sendToClients) {
   if (msg.target && msg.target.length !== 0) {
     sendToOneUser(msg.target, msgString);
   } else {
-    for (i=0; i < connectionArray.length; i++) {
-      connectionArray[i].send(msgString);
+    for (const connection of connectionArray) {
+      connection.send(msgString);
     }
   }
 }
