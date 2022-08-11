@@ -83,15 +83,15 @@ function check_PerformanceEntry(obj) {
   const methods = ["toJSON"];
 
   // Check each property
-  properties.forEach((prop) => {
-    const supported = prop in obj;
-    console.log(`…${prop} = ${supported ? obj[prop] : "Not supported"}`);
+  properties.forEach((property) => {
+    const supported = property in obj;
+    console.log(`…${property} = ${supported ? obj[property] : "Not supported"}`);
   });
 
   // Check each method
   methods.forEach((meth) => {
     const supported = typeof obj[meth] === "function";
-    console.log(`…${meth} = ${supported ? obj[meth] : "Not supported"}`);
+    console.log(`…${method} = ${supported ? obj[method] : "Not supported"}`);
   });
 }
 ```
