@@ -125,7 +125,7 @@ We have prepared some [live demos](https://mozdevs.github.io/gamedev-js-3d-aabb/
 - [Box vs. Box and Sphere](https://mozdevs.github.io/gamedev-js-3d-aabb/raw_box.html)
 - [Sphere vs. Box and Sphere](https://mozdevs.github.io/gamedev-js-3d-aabb/raw_sphere.html)
 
-![A Knot object, a large Sphere object and a small Sphere object in 3-D space. Three vectors are drawn on the small Sphere. The vectors point in the directions of the three axes that define the space. Text at the bottom reads: Drag the ball around.](screen_shot_2015-10-20_at_15.19.16.png)
+![A knot object, a large sphere object and a small sphere object in 3-D space. Three vectors are drawn on the small sphere. The vectors point in the directions of the three axes that define the space. Text at the bottom reads: Drag the ball around.](screen_shot_2015-10-20_at_15.19.16.png)
 
 ## Using `BoxHelper`
 
