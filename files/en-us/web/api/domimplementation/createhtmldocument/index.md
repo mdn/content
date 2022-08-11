@@ -90,7 +90,7 @@ The returned document is pre-constructed with the following HTML:
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
 <meta charset="UTF-8">
 <title>title</title>

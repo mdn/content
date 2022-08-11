@@ -48,7 +48,7 @@ In the following example, we apply a very simple stylesheet to a document:
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <title>Test page</title>
@@ -72,7 +72,7 @@ In this example we've included two `<style>` elements — notice how the conflic
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <title>Test page</title>
@@ -105,7 +105,7 @@ In this example we build on the previous one, including a `media` attribute on t
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <title>Test page</title>

@@ -46,7 +46,7 @@ Take the following document, for example:
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <title>My Document</title>

@@ -24,7 +24,7 @@ The HTML document used to render this content is shown below.
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
     <title>Video test page</title>

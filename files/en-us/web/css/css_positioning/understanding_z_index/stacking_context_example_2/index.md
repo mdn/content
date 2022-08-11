@@ -36,7 +36,7 @@ To better understand the situation, this is the stacking context hierarchy:
 
 ```html
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">

@@ -21,7 +21,7 @@ A read-only array-like `MediaList` object.
 
 ```html
 <!DOCTYPE html>
-  <html lang="en-us">
+  <html lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
