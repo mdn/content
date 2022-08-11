@@ -26,7 +26,7 @@ Multiple-column layout is closely related to [Paged Media](/en-US/docs/Web/CSS/C
 
 ## Reference
 
-### Properties for multiple-column layout
+### Properties for multi-column layout
 
 - {{cssxref("column-count")}}
 - {{cssxref("column-fill")}}
@@ -49,15 +49,15 @@ Multiple-column layout is closely related to [Paged Media](/en-US/docs/Web/CSS/C
 
 ## Guides
 
-- [Basic concepts of multicol](/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [Basic concepts of multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
   - : An overview of the Multiple-column Layout specification
 - [Styling columns](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns)
   - : How to use column rules and manage the spacing between columns.
 - [Spanning and balancing](/en-US/docs/Web/CSS/CSS_Columns/Spanning_Columns)
   - : How to make elements span across all columns and controlling the way columns are filled.
-- [Handling overflow in multicol](/en-US/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol)
+- [Handling overflow in multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol)
   - : What happens when an item overflows the column it is in and what happens when there is too much columned content to fit a container.
-- [Handling content breaks in multicol](/en-US/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol)
+- [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol)
   - : Introduction to the Fragmentation specification and how to control where column content breaks.
 
 ## Specifications

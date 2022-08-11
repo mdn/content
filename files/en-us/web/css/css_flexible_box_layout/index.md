@@ -79,4 +79,3 @@ The properties `align-content`, `align-self`, `align-items` and `justify-content
   - {{Glossary("Main Axis", "", 1)}}
   - {{Glossary("Cross Axis", "", 1)}}
   - {{Glossary("Flex", "", 1)}}
-- [Flexbugs](https://github.com/philipwalton/flexbugs): a community-curated list of Flexbox browser bugs and workarounds

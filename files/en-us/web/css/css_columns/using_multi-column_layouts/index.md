@@ -59,7 +59,7 @@ The `column-count` property sets the number of columns to a particular number. E
 
 ### Result
 
-Will display the content in two columns (if you're using a multi-column compliant browser):
+The content will be displayed in two columns (if you're using a multi-column compliant browser):
 
 {{EmbedLiveSample("Example_1", "100%")}}
 

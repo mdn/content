@@ -759,4 +759,4 @@ We can control the order in which items stack up by using the `z-index` property
 
 ## Next steps
 
-In this article, we took a very quick look through the Grid Layout specification. Have a play with the code examples, and then move onto [the next part of this guide](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout), where we will really start to dig into the detail of CSS Grid Layout.
+In this article, we took a very quick look at the possibilities of grid layouts. Explore and play with the code examples, and then move on to [the next part of this guide](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout), where we will really start to dig into the details of CSS Grid Layout.

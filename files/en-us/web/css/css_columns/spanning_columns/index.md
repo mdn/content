@@ -9,7 +9,7 @@ tags:
 ---
 {{CSSRef}}
 
-In this guide, we look at how to make elements span across columns inside the multicol container and how to control how the columns are filled.
+In this guide, we look at how to make elements span across columns inside the multi-column (_multicol_) container and how to control how the columns are filled.
 
 > **Note:** The spanning and balancing functionality covered in this guide is not as well supported across browsers as the functionality covered in the previous two sections in this guide.
 

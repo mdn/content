@@ -1,5 +1,5 @@
 ---
-title: Handling overflow in multicol
+title: Handling overflow in multi-column layout
 slug: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 tags:
   - CSS
@@ -9,7 +9,7 @@ tags:
 ---
 {{CSSRef}}
 
-In this guide, we look at how multicol deals with overflow, both inside the column boxes and in situations where there is more content than will fit into the container.
+In this guide, we look at how to deal with overflow in a multi-column (_multicol_) layout, both inside the column boxes and in situations where there is more content than will fit into the container.
 
 ## Overflow inside column boxes
 
@@ -31,7 +31,7 @@ How overflowing columns are handled depends on whether the media context is frag
 
 In fragmented media, after a fragment (for example, a page) is filled with columns, the columns will move to a new page and fill that up with columns. In continuous media, columns will overflow in the inline direction. On the web this means that you will get a horizontal scrollbar.
 
-The example below shows this overflow behavior. My multicol container has a height and there is more text than space to create columns, therefore we get columns created outside of the container.
+The example below shows this overflow behavior. The multicol container has a height and there is more text than space to create columns; therefore, we get columns created outside of the container.
 
 {{EmbedGHLiveSample("css-examples/multicol/overflow/overflow-inline.html", '100%', 800)}}
 

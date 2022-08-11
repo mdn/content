@@ -9,7 +9,7 @@ tags:
 ---
 {{CSSRef}}
 
-As column boxes created inside multicol containers are anonymous boxes, there is little we can do to style them. However, we do have a few things that we can do. This guide explains how to change the gap and style rules between columns.
+As column boxes created inside multi-column (_multicol_) containers are anonymous boxes, there is little we can do to style them. However, we do have a few things that we can do. This guide explains how to change the gap and style rules between columns.
 
 ## Styling column boxes
 
@@ -19,7 +19,7 @@ Sadly, column boxes cannot be styled at present. The anonymous boxes that make u
 
 The gap between columns is controlled using the `column-gap` property. This property was originally defined in the Multi-column Layout specification. However, it is now defined in [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) in order to unify gaps between boxes in other specifications such as [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout).
 
-The initial value of `column-gap` in multicol is `1em`. This means your columns will not run into each other. In other layout methods the initial value for `column-gap` is 0. If you use the keyword value "normal" the gap will be set to 1em.
+The initial value of `column-gap` in multicol is `1em`. This means your columns will not run into each other. In other layout methods, the initial value for `column-gap` is 0. If you use the keyword value "normal", the gap will be set to 1em.
 
 You can change the gap by using any length unit as the value of `column-gap`. In the example below, the `column-gap` is set to 40px.
 
@@ -43,6 +43,6 @@ The example below uses a very wide rule of 40px and a 10px gap. The rule display
 
 {{EmbedGHLiveSample("css-examples/multicol/styling/column-rule-wide.html", '100%', 550)}}
 
-## Summary
+## Next steps
 
 This article details all the current ways in which column boxes can be styled. In the next guide, we will take a look at making elements inside a container [span across all columns](/en-US/docs/Web/CSS/CSS_Columns/Spanning_Columns).

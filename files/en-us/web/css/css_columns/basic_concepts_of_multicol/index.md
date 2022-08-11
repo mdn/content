@@ -1,5 +1,5 @@
 ---
-title: Basic concepts of multicol
+title: Basic concepts of multi-column layout
 slug: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 tags:
   - CSS
@@ -28,21 +28,21 @@ The properties defined by the specification are:
 - {{cssxref("column-fill")}}
 - {{cssxref("column-gap")}}
 
-By adding `column-count` or `column-width` to an element, that element becomes a _multi-column container_, or _multicol container_ for short. The columns are anonymous boxes and described as column boxes in the specification.
+By adding `column-count` or `column-width` to an element, the element becomes a _multi-column container_ or _multicol container_ for short. The columns are anonymous boxes and described as column boxes in the specification.
 
 ## Defining columns
 
-To create a multicol container you must use at least one of the `column-*` properties, these being `column-count` and `column-width`.
+To create a multicol container, you must use at least one of the `column-*` properties, these being `column-count` and `column-width`.
 
 ### Specifying the number of columns
 
 The `column-count` property specifies the number of columns that you would like the content to be displayed as. The browser will then assign the correct amount of space to each column box to create the requested number of columns.
 
-In the below example we use the `column-count` property to create three columns on the `.container` element. The content, including the children of `.container` is then split between the three columns.
+In the below example, we use the `column-count` property to create three columns on the `.container` element. The content, including the children of `.container`, is then split between the three columns.
 
 {{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}
 
-In the above example the content is wrapped in paragraph `p` tags with default styling. Therefore, there is a margin above each paragraph. You can see how this margin causes the first line of text to be pushed down. This is because a multicol container creates a new Block Formatting Context (BFC) which means margins on child elements do not collapse with any margin on the container.
+In the above example, the content is wrapped in paragraph `p` tags with default styling. Therefore, there is a margin above each paragraph. You can see how this margin causes the first line of text to be pushed down. This is because a multicol container creates a new Block Formatting Context (BFC) which means margins on child elements do not collapse with any margin on the container.
 
 ### Specifying the width of columns
 
@@ -50,7 +50,7 @@ The `column-width` property is used to set the optimal width for every column bo
 
 The column box will only shrink to be smaller than the declared column width in the case of a single column with less available width than the value of `column-width`.
 
-In the below example we use the `column-width` property with a value of 200px. We get as many 200 pixel columns as will fit the container, with the extra space shared equally.
+In the below example, we use the `column-width` property with a value of 200px. We get as many 200 pixel columns as will fit the container, with the extra space shared equally.
 
 {{EmbedGHLiveSample("css-examples/multicol/basics/column-width.html", '100%', 550)}}
 
@@ -64,7 +64,7 @@ In this next example, we use `column-width` of 200px and `column-count` of 2. Ev
 
 {{EmbedGHLiveSample("css-examples/multicol/basics/column-count-width.html", '100%', 550)}}
 
-### Shorthand for columns property
+### Shorthand for column properties
 
 You can use the `columns` shorthand to set `column-count` and `column-width`. If you set a length unit, this will be used for `column-width`, set an integer and it will be used for `column-count`. You can set both, separating the two values with a space.
 
@@ -94,4 +94,4 @@ This CSS would give the same result as example 3, with both `column-count` and `
 
 ## Next steps
 
-In this guide, we've learned the basic use of multiple-column layout. In the next guide, we will look at how much we can [style the columns themselves](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns).
+In this guide, we've learned the basic use of multi-column layout. In the next guide, we will look at how much we can [style the columns themselves](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns).
