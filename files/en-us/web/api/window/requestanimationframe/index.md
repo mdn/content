@@ -112,11 +112,6 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-## Notes
-
-Edge versions below 17 and Internet Explorer do not reliably fire
-`requestAnimationFrame` before the paint cycle.
-
 ## Specifications
 
 {{Specifications}}
