@@ -84,7 +84,7 @@ shadow.appendChild(para);
 // etc.
 ```
 
-## Working through a simple example
+## Walking through a simple example
 
 Now let's walk through a simple example to demonstrate the shadow DOM in action inside a custom element — [`<popup-info>`](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component) (see a [live example](https://mdn.github.io/web-components-examples/popup-info-box-web-component/) also). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information. To begin with, in our JavaScript file we define a class called `PopUpInfo`, which extends `HTMLElement`:
 
