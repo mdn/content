@@ -36,9 +36,9 @@ properties of all "`resource`"
 function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   const p = performance.getEntriesByType("resource");
-  for (let i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
+  p.forEach((entry) => {
+    print_start_and_end_properties(entry);
+  });
 }
 function print_start_and_end_properties(perfEntry) {
   // Print timestamps of the PerformanceEntry *start and *end properties

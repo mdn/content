@@ -94,7 +94,7 @@ window.addEventListener("load", (event) => {
 
   track.mode = "showing";
 
-  for (let index=0; index < track.cues.length; index++) {
+  for (let index  0; index < track.cues.length; index++) {
     let cue = track.cues[index];
     cue.pauseOnExit = true;
   };

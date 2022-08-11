@@ -55,9 +55,9 @@ function log_sizes(perfEntry){
 function check_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   const p = performance.getEntriesByType("resource");
-  for (let i=0; i < p.length; i++) {
-    log_sizes(p[i]);
-  }
+  p.forEach((entry) => {
+    log_sizes(entry[i]);
+  });
 }
 ```
 

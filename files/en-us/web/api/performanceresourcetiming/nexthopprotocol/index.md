@@ -35,17 +35,13 @@ The following example uses the `nextHopProtocol` property.
 function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   const p = performance.getEntriesByType("resource");
-  for (let i = 0; i < p.length; i++) {
-    print_nextHopProtocol(p[i]);
-  }
+  p.forEach((entry) => {
+    print_start_and_end_properties(entry);
+  });
 }
 function print_nextHopProtocol(perfEntry) {
   const value = "nextHopProtocol" in perfEntry;
-  if (value) {
-    console.log(`nextHopProtocol = ${perfEntry.nextHopProtocol}`);
-  } else {
-    console.log("nextHopProtocol = NOT supported");
-  }
+  console.log(`nextHopProtocol = ${value ? perfEntry.nextHopProtocol: "NOT supported"}`);
 }
 ```
 

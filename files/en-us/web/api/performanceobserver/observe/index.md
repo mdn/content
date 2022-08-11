@@ -70,9 +70,9 @@ for `"mark"` and `"frame"` events, and the other watches for
 ```js
 const observer = new PerformanceObserver((list, obj) => {
   const entries = list.getEntries();
-  for (let i=0; i < entries.length; i++) {
+  entries.forEach((entries) => {
     // Process "mark" and "frame" events
-  }
+  });
 });
 observer.observe({entryTypes: ["mark", "frame"]});
 

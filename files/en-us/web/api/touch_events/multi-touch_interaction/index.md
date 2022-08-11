@@ -94,10 +94,10 @@ function handle_pinch_zoom(ev) {
     // the 2-touch
     let point1 = -1;
     let point2 = -1;
-    for (let i = 0; i < tpCache.length; i++) {
-      if (tpCache[i].identifier === ev.targetTouches[0].identifier) point1 = i;
-      if (tpCache[i].identifier === ev.targetTouches[1].identifier) point2 = i;
-    }
+    tpCache.forEach((tp, i) => {
+      if (tp.identifier === ev.targetTouches[0].identifier) point1 = i;
+      if (tp.identifier === ev.targetTouches[1].identifier) point2 = i;
+    });
     if (point1 >= 0 && point2 >= 0) {
       // Calculate the difference between the start and move coordinates
       const diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);

@@ -99,7 +99,7 @@ function pointermove_handler(ev) {
  ev.target.style.border = "dashed";
 
  // Find this event in the cache and update its record with this event
- for (let i = 0; i < evCache.length; i++) {
+ for (const i in evCache) {
    if (ev.pointerId === evCache[i].pointerId) {
      evCache[i] = ev;
      break;
@@ -182,7 +182,7 @@ This function helps manage the global event caches `evCache`.
 ```js
 function remove_event(ev) {
  // Remove this event from the target's cache
- for (let i = 0; i < evCache.length; i++) {
+ for (const i in evCache) {
    if (evCache[i].pointerId === ev.pointerId) {
      evCache.splice(i, 1);
      break;

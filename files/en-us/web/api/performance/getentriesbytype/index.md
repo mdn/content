@@ -60,36 +60,36 @@ function usePerformanceEntryMethods() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  let p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
+  let perf = performance.getEntries();
+  perf.forEach((entry, i) => {
     log(`Entry[${i}]`);
-    checkPerformanceEntry(p[i]);
-  }
+    checkPerformanceEntry(entry);
+  });
 
   // Use getEntries(name, entryType) to get specific entries
-  p = performance.getEntries({name : "Begin", entryType: "mark"});
-  for (let i=0; i < p.length; i++) {
+  perf = performance.getEntries({ name : "Begin", entryType: "mark" });
+  perf.forEach((entry, i) => {
     log(`Begin[${i}]`);
-    checkPerformanceEntry(p[i]);
-  }
+    checkPerformanceEntry(entry);
+  });
 
   // Use getEntriesByType() to get all "mark" entries
-  p = performance.getEntriesByType("mark");
-  for (let i=0; i < p.length; i++) {
+  perf = performance.getEntriesByType("mark");
+  perf.forEach((entry, i) => {
     log(`Mark only entry[${i}]:`);
-    log(`  name      = ${p[i].name}`);
-    log(`  startTime = ${p[i].startTime}`);
-    log(`  duration  = ${p[i].duration}`);
-  }
+    log(`  name      = ${entry.name}`);
+    log(`  startTime = ${entry.startTime}`);
+    log(`  duration  = ${entry.duration}`);
+  });
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
-  p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i < p.length; i++) {
+  perf = performance.getEntriesByName("Begin", "mark");
+  perf.forEach((entry, i) => {
     log(`Mark and Begin entry[${i}]:`);
-    log(`  name      = ${p[i].name}`);
-    log(`  startTime = ${p[i].startTime}`);
-    log(`  duration  = ${p[i].duration}`);
-  }
+    log(`  name      = ${perf.name}`);
+    log(`  startTime = ${perf.startTime}`);
+    log(`  duration  = ${perf.duration}`);
+  });
 }
 ```
 

@@ -37,9 +37,9 @@ properties of all "`resource`"
 function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   const entries = performance.getEntriesByType("resource");
-  for (const entry of entries) {
+  p.forEach((entry) => {
     print_start_and_end_properties(entry);
-  }
+  });
 }
 function print_start_and_end_properties(perfEntry) {
   // Print timestamps of the *start and *end properties
@@ -50,16 +50,10 @@ function print_start_and_end_properties(perfEntry) {
                 "requestStart",
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
-
   for (const property of properties) {
-    // check each property
-    const supported = property in perfEntry;
+    // Check each property
     const value = perfEntry[property];
-    if (supported) {
-      console.log(`… ${property} = ${value}`);
-    } else {
-      console.log(`… ${property} = NOT supported`);
-    }
+    console.log(`… ${property} = ${property in PerfEntry ? value : "NOT supported"}`);
   }
 }
 ```

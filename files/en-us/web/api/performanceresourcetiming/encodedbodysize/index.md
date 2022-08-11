@@ -31,26 +31,12 @@ The following example, the value of the size properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
 ```js
-function log_sizes(perfEntry){
+function log_sizes(entry){
   // Check for support of the PerformanceEntry.*size properties and print their values
   // if supported.
-  if ("decodedBodySize" in perfEntry) {
-    console.log(`decodedBodySize = ${perfEntry.decodedBodySize}`);
-  } else {
-    console.log("decodedBodySize = NOT supported");
-  }
-
-  if ("encodedBodySize" in perfEntry) {
-    console.log(`encodedBodySize = ${perfEntry.encodedBodySize}`);
-  } else {
-    console.log("encodedBodySize = NOT supported");
-  }
-
-  if ("transferSize" in perfEntry) {
-    console.log(`transferSize = ${perfEntry.transferSize}`);
-  } else {
-    console.log("transferSize = NOT supported");
-  }
+  console.log(`decodedBodySize = ${"decodedBodySize" in entry ? entry.decodedBodySize : "NOT supported"}`);
+  console.log(`encodedBodySize = ${"encodedBodySize" in entry ? entry.encodedBodySize : "NOT supported"}`);
+  console.log(`transferSize = ${"transferSize" in entry ? entry.transferSize : "NOT supported"}`);
 }
 function check_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events

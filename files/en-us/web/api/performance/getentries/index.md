@@ -61,29 +61,29 @@ function use_PerformanceEntry_methods() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  let p = performance.getEntries();
-  for (let i = 0; i < p.length; i++) {
-    console.log(`Entry[${i}]`);
-    check_PerformanceEntry(p[i]);
-  }
+  let perf = performance.getEntries();
+  perf.forEach((entry, i) => {
+    log(`Entry[${i}]`);
+    checkPerformanceEntry(entry);
+  });
 
   // Use getEntriesByType() to get all "mark" entries
-  p = performance.getEntriesByType("mark");
-  for (let i=0; i < p.length; i++) {
-    console.log(`Mark only entry[${i}]:`);
-    console.log(`  name      = ${p[i].name}`);
-    console.log(`  startTime = ${p[i].startTime}`);
-    console.log(`  duration  = ${p[i].duration}`);
-  }
+  perf = performance.getEntriesByType("mark");
+  perf.forEach((entry, i) => {
+    log(`Mark only entry[${i}]:`);
+    log(`  name      = ${entry.name}`);
+    log(`  startTime = ${entry.startTime}`);
+    log(`  duration  = ${entry.duration}`);
+  });
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
-  p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i < p.length; i++) {
-    console.log(`Mark and Begin entry[${i}]:`);
-    console.log(`  name      = ${p[i].name}`);
-    console.log(`  startTime = ${p[i].startTime}`);
-    console.log(`  duration  = ${p[i].duration}`);
-  }
+  perf = performance.getEntriesByName("Begin", "mark");
+  perf.forEach((entry, i) => {
+    log(`Mark and Begin entry[${i}]:`);
+    log(`  name      = ${perf.name}`);
+    log(`  startTime = ${perf.startTime}`);
+    log(`  duration  = ${perf.duration}`);
+  });
 }
 ```
 

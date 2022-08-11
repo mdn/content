@@ -185,7 +185,7 @@ function push_event(ev) {
 function remove_event(ev) {
  // Remove this event from the target's cache
  const cache = get_cache(ev);
- for (let i = 0; i < cache.length; i++) {
+ for (const i in cache) {
    if (cache[i].pointerId === ev.pointerId) {
      cache.splice(i, 1);
      break;

@@ -30,23 +30,22 @@ The following example illustrates this property's usage.
 function print_nav_timing_data() {
   // Use getEntriesByType() to just get the "navigation" events
   const perfEntries = performance.getEntriesByType("navigation");
-
-  for (let i = 0; i < perfEntries.length; i++) {
+  perfEntries.forEach((p, i) => {
     console.log(`= Navigation entry[${i}]`);
-    const p = perfEntries[i];
-    // dom Properties
+    
+    // DOM Properties
     console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
     console.log(`DOM complete = ${p.domComplete}`);
     console.log(`DOM interactive = ${p.interactive}`);
 
-    // document load and unload time
+    // Document load and unload time
     console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
     console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
 
-    // other properties
+    // Other properties
     console.log(`type = ${p.type}`);
     console.log(`redirectCount = ${p.redirectCount}`);
-  }
+  });
 }
 ```
 

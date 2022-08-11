@@ -49,35 +49,28 @@ function run_PerformanceEntry() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  const p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
+  const perf = performance.getEntries();
+  perf.forEach((entry, i) => {
     log(`Entry[${i}]`);
-    check_PerformanceEntry(p[i]);
-  }
+    check_PerformanceEntry(entry);
+  });
 }
+
 function check_PerformanceEntry(obj) {
   const properties = ["name", "entryType", "startTime", "duration"];
   const methods = ["toJSON"];
 
-  for (let i=0; i < properties.length; i++) {
-    // check each property
-    const supported = properties[i] in obj;
-    if (supported) {
-      console.log(`…${properties[i]} = ${obj[properties[i]]}`);
-    } else {
-      console.log(`…${properties[i]} = Not supported`);
-    }
-  }
-  for (let i=0; i < methods.length; i++) {
-    // check each method
-    const supported = typeof obj[methods[i]] === "function";
-    if (supported) {
-      const js = obj[methods[i]]();
-      console.log(`…${methods[i]}() = ${JSON.stringify(js)}`);
-    } else {
-      console.log(`…${methods[i]} = Not supported`);
-    }
-  }
+  // Check each property
+  properties.forEach((prop) => {
+    const supported = prop in obj;
+    console.log(`…${prop} = ${supported ? obj[prop] : "Not supported"}`);
+  });
+
+  // Check each method
+  methods.forEach((meth) => {
+    const supported = typeof obj[meth] === "function";
+    console.log(`…${meth} = ${supported ? obj[meth] : "Not supported"}`);
+  });
 }
 ```
 

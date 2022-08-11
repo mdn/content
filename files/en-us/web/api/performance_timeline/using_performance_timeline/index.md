@@ -87,20 +87,15 @@ function print_PerformanceEntry(ev) {
   performance.mark("Stop");
   performance.measure("measure-1");
 
-  const p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
+  const perf = performance.getEntries();
+  perf.forEach((perfEntry, i) => {
     log(`PerfEntry[${i}]`);
-    for (let j=0; j < properties.length; j++) {
-      // check each property in window.performance
-      const supported = properties[j] in p[i];
-      if (supported) {
-        const pe = p[i];
-        console.log(`… ${properties[j]} = ${pe[properties[j]]}`);
-      } else {
-        console.log(`… ${properties[j]} = Not supported`);
-      }
-    }
-  }
+    properties.forEach((prop) => {
+      // Check each property in window.performance
+      const supported = prop in perfEntry;
+      console.log(`… ${prop} = ${suppported ? perfEntry[prop] : "Not supported"}`);
+    });
+  });
 }
 ```
 
@@ -143,21 +138,21 @@ function PerformanceObservers() {
   const observe_all = new PerformanceObserver((list, obs) => {
     // Print all entries
     let perfEntries = list.getEntries();
-    for (let i=0; i < perfEntries.length; i++) {
-      print_perf_entry(perfEntries[i]);
-    }
+    perfEntries.forEach((entry) =>  {
+      print_perf_entry(entry);
+    });
 
     // Print entries named "Begin" with type "mark"
     perfEntries = list.getEntriesByName("Begin", "mark");
-    for (let i=0; i < perfEntries.length; i++) {
-      print_perf_entry(perfEntries[i]);
-    }
+    perfEntries.forEach((entry) =>  {
+      print_perf_entry(entry);
+    });
 
     // Print entries with type "mark"
     perfEntries = list.getEntriesByType("mark");
-    for (let i=0; i < perfEntries.length; i++) {
-      print_perf_entry(perfEntries[i]);
-    }
+    perfEntries.forEach((entry) =>  {
+      print_perf_entry(entry);
+    });
   });
   // subscribe to all performance event types
   observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
@@ -165,10 +160,11 @@ function PerformanceObservers() {
   // Create observer for just the "mark" event type
   const observe_mark = new PerformanceObserver((list, obs) => {
     const perfEntries = list.getEntries();
+    
     // Should only have 'mark' entries
-    for (let i=0; i < perfEntries.length; i++) {
-      print_perf_entry(perfEntries[i]);
-    }
+    perfEntries.forEach((entry) =>  {
+      print_perf_entry(entry);
+    });
   });
   // subscribe to only the 'mark' event
   observe_mark.observe({entryTypes: ['mark']});
