@@ -337,7 +337,7 @@ Let's start with our `Alert.svelte` component.
     export let ms = 3000
 
       let visible: boolean
-      let timeout: number
+      let timeout: null | ReturnType<typeof setTimeout>
 
       const onMessageChange = (message: string, ms: number) => {
         clearTimeout(timeout)
