@@ -59,11 +59,7 @@ inputForm.onsubmit = (event) => {
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for (const voice of voices) {
-    if (voice.name === selectedOption) {
-      utterThis.voice = voice;
-    }
-  }
+  utterThis.voice = voices.find((v) => v.name === selectedOption);
   synth.speak(utterThis);
   inputTxt.blur();
 }
