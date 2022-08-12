@@ -68,8 +68,7 @@ browser.menus.create({
 });
 
 browser.menus.onClicked.addListener((info, tab) => {
-  console.log("Item " + info.menuItemId + " clicked " +
-              "in tab " + tab.id);
+  console.log(`Item ${info.menuItemId} clicked in tab ${tab.id}`);
 });
 ```
 

@@ -122,7 +122,7 @@ exports.author_update_get = (req, res, next) => {
   req.sanitize('id').escape().trim();
   Author.findById(req.params.id, (err, author) => {
     if (err) {
-      debug('update error:' + err);
+      debug(`update error: ${err}`);
       return next(err);
     }
     // On success

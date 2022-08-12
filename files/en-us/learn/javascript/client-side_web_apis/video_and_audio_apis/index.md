@@ -453,7 +453,7 @@ Here are some suggestions for ways you could enhance the existing example we've 
 
     ```js
     document.onclick = function(e) {
-      console.log(e.x) + ',' + console.log(e.y)
+      console.log(e.x, e.y);
     }
     ```
 
