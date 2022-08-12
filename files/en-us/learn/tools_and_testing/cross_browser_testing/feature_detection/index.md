@@ -178,7 +178,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
         Create an element in memory using
         {{domxref("Document.createElement()")}} and then check if a
         property exists on it. The example shown is a way of detecting
-        <a href="/en-US/docs/Web/API/Canvas_API">HTML5 Canvas</a> support.
+        <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> support.
       </td>
       <td>
         <code
