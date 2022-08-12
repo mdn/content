@@ -83,8 +83,8 @@ that:
 {{ EmbedLiveSample('Subtrees_of_msub_msup_msubsup', 700, 200, "", "") }}
 
 > **Note:** The MathML elements `<msub>` and `<msup>` are different from the
-> HTML elements [`<sub>`](/en-US/docs/Web/HTML/Element/sup) and
-> [`<sub>`](/en-US/docs/Web/HTML/Element/sup). They allow to use an arbitrary
+> HTML elements [`<sub>`](/en-US/docs/Web/HTML/Element/sub) and
+> [`<sup>`](/en-US/docs/Web/HTML/Element/sup). They allow to use an arbitrary
 > MathML subtree as scripts, not just text.
 
 ## Underscripts and overscripts
