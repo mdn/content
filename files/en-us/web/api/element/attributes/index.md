@@ -70,7 +70,7 @@ with id "paragraph", and prints each attribute's value.
       <p>
         <input type="button" value="Show first attribute name and value"
           onclick="listAttributes();">
-        <output id="result"></output>
+        <pre id="result"></pre>
       </p>
     </form>
   </body>
