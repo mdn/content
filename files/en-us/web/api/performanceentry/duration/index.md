@@ -89,8 +89,8 @@ function checkPerformanceEntry(obj) {
   });
 
   // Check each method
-  methods.forEach((meth) => {
-    const supported = typeof obj[meth] === "function";
+  methods.forEach((method) => {
+    const supported = typeof obj[method] === "function";
     console.log(`…${method} = ${supported ? obj[method] : "Not supported"}`);
   });
 }
