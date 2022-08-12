@@ -226,16 +226,16 @@ const vertices = await response.json();
 const buffer = new ArrayBuffer(20 * vertices.length);
 // Fill array buffer
 const dv = new DataView(buffer);
-for (let i = 0; i < vertices.length; i++) {
-  dv.setFloat32(20 * i, vertices[i].position[0], true);
-  dv.setFloat32(20 * i + 4, vertices[i].position[1], true);
-  dv.setFloat32(20 * i + 8, vertices[i].position[2], true);
-  dv.setInt8(20 * i + 12, vertices[i].normal[0] * 0x7F);
-  dv.setInt8(20 * i + 13, vertices[i].normal[1] * 0x7F);
-  dv.setInt8(20 * i + 14, vertices[i].normal[2] * 0x7F);
+vertices.forEach((vertice, i) => {
+  dv.setFloat32(20 * i, vertice.position[0], true);
+  dv.setFloat32(20 * i + 4, vertice.position[1], true);
+  dv.setFloat32(20 * i + 8, vertice.position[2], true);
+  dv.setInt8(20 * i + 12, vertice.normal[0] * 0x7F);
+  dv.setInt8(20 * i + 13, vertice.normal[1] * 0x7F);
+  dv.setInt8(20 * i + 14, vertice.normal[2] * 0x7F);
   dv.setInt8(20 * i + 15, 0);
-  dv.setUint16(20 * i + 16, vertices[i].texCoord[0] * 0xFFFF, true);
-  dv.setUint16(20 * i + 18, vertices[i].texCoord[1] * 0xFFFF, true);
+  dv.setUint16(20 * i + 16, vertice.texCoord[0] * 0xFFFF, true);
+  dv.setUint16(20 * i + 18, vertice.texCoord[1] * 0xFFFF, true);
 }
 ```
 
