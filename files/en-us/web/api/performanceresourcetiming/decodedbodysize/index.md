@@ -39,8 +39,7 @@ function logSizes(entry){
 }
 function checkPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  const entries = performance.getEntriesByType("resource");
-  for (const entry of entries) {
+  for (const entry of performance.getEntriesByType("resource")) {
     logSizes(entry);
   }
 }
