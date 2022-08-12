@@ -30,7 +30,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 
 - {{domxref("SVGStyleElement.title")}}
 
-  - : A string corresponding to the [`title` attribute](/en-US/docs/Web/SVG/Element/style#title) of the given element.
+  - : A string corresponding to the [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute of the given element.
 
 - {{domxref("SVGStyleElement.sheet")}} {{readonlyInline}}
   - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none.
@@ -46,9 +46,9 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ### Dynamically adding an SVG style element
 
-To dynamically create an SVG style element (`SVGStyleElement`) you need to use [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS), specifying a `style` element in the SVG namespace.
+To dynamically create an SVG style element ([`SVGStyleElement`](/en-US/docs/Web/API/SVGStyleElement)), you need to use [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS), specifying a `style` element in the SVG namespace.
 
-> **Note:** [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) can't be used to create SVG style elements (it returns an `HTMLStyleElement`).
+> **Note:** [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) can't be used to create SVG style elements (it returns an [`HTMLStyleElement`](/en-US/docs/Web/API/HTMLStyleElement)).
 
 Given the following SVG element:
 
@@ -62,7 +62,7 @@ You can create an SVG style element as shown:
 
 ```js
 // Get the the SVG element object by tag name
-const svg = document.getElementsByTagName("svg")[0];
+const svg = document.querySelector("svg");
 
 // Create the `style` element in the SVG namespace
 const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
@@ -94,14 +94,14 @@ For example, consider the HTML below that defines an SVG file with a style eleme
 To fetch the first `style` element in the first `svg` element, you might use {{Document.getElementsByTagName()}} as shown below.
 
 ```js
-const svg = document.getElementsByTagName("svg")[0];
-const style = svg.getElementsByTagName("style")[0];
+const svg = document.querySelector("svg");
+const style = svg.querySelector("style");
 ```
 
 Alternatively, you can could use {{Document.getElementById()}}, specifying the tag id:
 
 ```js
-const svg = document.getElementsByTagName("svg")[0];
+const svg = document.querySelector("svg");
 const style = svg.getElementById("circle_style_id")
 
 // or just get the element from document by id
@@ -114,7 +114,7 @@ This example demonstrates how to get and set the properties of a style element, 
 
 #### HTML
 
-The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element, along with an [HTML `<button>`](/en-US/docs/Web/HTML/Element/button) element that will be used to enable and disable the style, and an [HTML `<textarea>`](/en-US/docs/Web/HTML/Element/button) element for logging the property values.
+The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element, along with an HTML [`<button>`](/en-US/docs/Web/HTML/Element/button) element that will be used to enable and disable the style, and an HTML [`<textarea>`](/en-US/docs/Web/HTML/Element/button) element for logging the property values.
 
 ```html
 <button>Disable</button>
@@ -139,7 +139,7 @@ We have not set `type` as it is deprecated, or `disabled` because there is no su
 The code below gets the `style` element (an `SVGStyleElement`) using its id.
 
 ```js
-const svg = document.getElementsByTagName("svg")[0];
+const svg = document.querySelector("svg");
 const style = svg.getElementById("circle_style_id");
 ```
 
@@ -152,8 +152,7 @@ const log = document.getElementById("log")
 
 function setLogText() {
   //Log current values of properties
-  log.value = '';
-  log.value += `style.media: ${style.media} (frame width: ${window.innerWidth})\n`; // 'all' by default
+  log.value = `style.media: ${style.media} (frame width: ${window.innerWidth})\n`; // 'all' by default
   log.value += `style.title: ${style.title}\n`; // no default value
   log.value += `style.disabled: ${style.disabled}\n`;  // 'false' by default
   log.value += `style.type: ${style.type}\n`;  // deprecated (do not use)

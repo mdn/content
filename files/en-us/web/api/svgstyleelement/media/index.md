@@ -12,16 +12,16 @@ browser-compat: api.SVGStyleElement.media
 ---
 {{APIRef("SVG")}}
 
-The **`SVGStyleElement.media`** property is a media query string corresponding to the [`media` attribute](/en-US/docs/Web/SVG/Element/style#media) of the given SVG style element.
+The **`SVGStyleElement.media`** property is a media query string corresponding to the [`media`](/en-US/docs/Web/SVG/Element/style#media) attribute of the given SVG style element.
 
 The query must be matched for the style to apply.
 
 ## Value
 
 A string defining a valid media query list with one or more comma separated values.
-For example `"screen, print"`, or `all` (the default).
+For example `"screen, print"`, or `"all"` (the default).
 
-The value is initialized with the string specified in the corresponding style's [`media` attribute](/en-US/docs/Web/SVG/Element/style#media).
+The value is initialized with the string specified in the corresponding style's [`media`](/en-US/docs/Web/SVG/Element/style#media) attribute.
 
 ## Examples
 
@@ -29,8 +29,7 @@ This example demonstrates programmatically getting and setting the media propert
 
 #### HTML
 
-The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element that is conditional
-on the media query "all and (min-width: 600px)".
+The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element that is conditional on the media query `"all and (min-width: 600px)"`.
 We also define a `button` that will be used to display the current style and change the style.
 
 ```html
@@ -45,7 +44,7 @@ We also define a `button` that will be used to display the current style and cha
 The code below gets the `style` element (an `SVGStyleElement`) using its id.
 
 ```js
-const svg = document.getElementsByTagName("svg")[0];
+const svg = document.querySelector("svg");
 // Create the `style` element in the SVG namespace
 const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
 const node = document.createTextNode('circle { fill: red; }');

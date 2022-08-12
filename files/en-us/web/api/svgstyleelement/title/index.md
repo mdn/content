@@ -12,14 +12,14 @@ browser-compat: api.SVGStyleElement.title
 ---
 {{APIRef("SVG")}}
 
-The **`SVGStyleElement.title`** property is is a string corresponding to the [`title` attribute](/en-US/docs/Web/SVG/Element/style#title) of the given SVG style element.
+The **`SVGStyleElement.title`** property is is a string corresponding to the [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute of the given SVG style element.
 It may be used to select between [alternate style sheets](/en-US/docs/Web/CSS/Alternative_style_sheets).
 
 ## Value
 
 A string with any value.
 
-The value is initialized with the string specified in the corresponding style's [`title` attribute](/en-US/docs/Web/SVG/Element/style#title).
+The value is initialized with the string specified in the corresponding style's [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute.
 
 ## Examples
 
@@ -49,8 +49,8 @@ The code below gets the `style` element (an `SVGStyleElement`) using its tag nam
 ```js
 const log = document.getElementById("log")
 
-const svg = document.getElementsByTagName("svg")[0];
-const style = svg.getElementsByTagName("style")[0];
+const svg = document.querySelector("svg");
+const style = svg.querySelector("style");
 log.value = `Initial title: ${style.title}\n`;
 style.title = "Altered Title";
 log.value += `New title: ${style.title}`;

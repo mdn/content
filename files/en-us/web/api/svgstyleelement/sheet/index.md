@@ -38,7 +38,7 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 The code below creates a `style` element (an `SVGStyleElement`) and adds it to the SVG.
 
 ```js
-const svg = document.getElementsByTagName("svg")[0];
+const svg = document.querySelector("svg");
 // Create the `style` element in the SVG namespace
 const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
 const node = document.createTextNode('circle { fill: red; }');
