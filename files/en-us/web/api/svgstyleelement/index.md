@@ -76,7 +76,7 @@ svg.appendChild(style);
 ### Accessing an existing SVG style
 
 You can access an SVG style element that was defined in HTML (or an SVG file) using the normal HTML methods for getting tags, ids, and so on.
-These include: {{Document.getElementsByTagName()}}, {{Document.getElementById()}}, {{Document.querySelector()}}, {{Document.querySelectorAll()}}, and so on.
+These include: {{domxref("Document.getElementsByTagName()")}}, {{domxref("Document.getElementById()")}}, {{domxref("Document.querySelector()")}}, {{domxref("Document.querySelectorAll()")}}, and so on.
 
 For example, consider the HTML below that defines an SVG file with a style element.
 
