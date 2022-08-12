@@ -46,12 +46,7 @@ First up is the addition of the function `sendToOneUser()`. As the name suggests
 function sendToOneUser(target, msgString) {
   const isUnique = true;
 
-  for (const connection of connectionArray) {
-    if (connection.username === target) {
-      connection.send(msgString);
-      break;
-    }
-  }
+  connectionArray.find((conn) => conn.username === target).send(msgString);
 }
 ```
 
