@@ -9,7 +9,7 @@ tags:
   - Interface
   - Reference
   - Reporting API
-browser-compat: api.CrashReportBody 
+browser-compat: api.CrashReportBody
 ---
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
