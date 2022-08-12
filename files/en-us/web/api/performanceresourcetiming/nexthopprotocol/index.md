@@ -32,14 +32,15 @@ fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://da
 The following example uses the `nextHopProtocol` property.
 
 ```js
-function print_PerformanceEntries() {
+function printPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  const p = performance.getEntriesByType("resource");
-  p.forEach((entry) => {
-    print_start_and_end_properties(entry);
-  });
+  performance.getEntriesByType("resource")
+    .forEach((entry) => {
+      printNextHopProtocol(entry);
+    });
 }
-function print_nextHopProtocol(perfEntry) {
+
+function printNextHopProtocol(perfEntry) {
   const value = "nextHopProtocol" in perfEntry;
   console.log(`nextHopProtocol = ${value ? perfEntry.nextHopProtocol: "NOT supported"}`);
 }
