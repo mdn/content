@@ -68,7 +68,7 @@ class MyAudioProcessor extends AudioWorkletProcessor {
   }
 
   process(inputList, outputList, parameters) {
-    // Use the inputs (or not, as needed),
+    // Using the inputs (or not, as needed),
     // write the output into each of the outputs
     // …
     return true;
