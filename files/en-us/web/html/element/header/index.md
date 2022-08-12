@@ -119,7 +119,7 @@ The `<header>` element has an identical meaning to the site-wide[`banner` landma
 
 The `<header>` can define a global site header, or `banner`, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
 
-Otherwise, it is a `headerNotLandmark` or `section` within a browser's accessibility tree, and usually contain the surrounding section's heading (an `h1`–`h6` element) and optional subheading, but this is **not** required.
+Otherwise, it is a `section` in the accessibility tree, and usually contain the surrounding section's heading (an `h1`–`h6` element) and optional subheading, but this is **not** required.
 
 ### Historical Usage
 
