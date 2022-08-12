@@ -31,33 +31,20 @@ The following example, the value of size properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
 ```js
-function log_sizes(perfEntry){
+function logSizes(perfEntry){
   // Check for support of the PerformanceEntry.*size properties and print their values
   // if supported.
-  if ("decodedBodySize" in perfEntry) {
-    console.log(`decodedBodySize = ${perfEntry.decodedBodySize}`);
-  } else {
-    console.log("decodedBodySize = NOT supported");
-  }
-
-  if ("encodedBodySize" in perfEntry) {
-    console.log(`encodedBodySize = ${perfEntry.encodedBodySize}`);
-  } else {
-    console.log("encodedBodySize = NOT supported");
-  }
-
-  if ("transferSize" in perfEntry) {
-    console.log(`transferSize = ${perfEntry.transferSize}`);
-  } else {
-    console.log("transferSize = NOT supported");
-  }
+  console.log(`decodedBodySize = ${"decodedBodySize" in perfEntry ? perfEntry.decodedBodySize : "NOT supported"}`);
+  console.log(`encodedBodySize = ${"encodedBodySize" in perfEntry ? perfEntry.encodedBodySize : "NOT supported"}`);
+  console.log(`transferSize = ${"transferSize" in perfEntry ? perfEntry.transferSize : "NOT supported"}`);
 }
-function check_PerformanceEntries() {
+
+function checkPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  const p = performance.getEntriesByType("resource");
-  p.forEach((entry) => {
-    log_sizes(entry[i]);
-  });
+  performance.getEntriesByType("resource")
+    .forEach((entry) => {
+      logSizes(entry[i]);
+    });
 }
 ```
 
