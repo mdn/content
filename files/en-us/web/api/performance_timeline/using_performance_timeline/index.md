@@ -159,7 +159,7 @@ function PerformanceObservers() {
   });
   
   // Subscribe to all performance event types
-  observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
+  observeAll.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
 
   // Create observer for just the "mark" event type
   const observe_mark = new PerformanceObserver((list, obs) => {
