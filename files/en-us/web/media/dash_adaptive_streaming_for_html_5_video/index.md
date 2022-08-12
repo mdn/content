@@ -10,9 +10,9 @@ Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. T
 
 ## Browser Support
 
-Firefox 21 includes an implementation of DASH for HTML5 WebM video which is turned off by default. It can be enabled via "about:config" and the "media.dash.enabled" preference.
+Firefox 21 includes an implementation of DASH for HTML WebM video which is turned off by default. It can be enabled via "about:config" and the "media.dash.enabled" preference.
 
-Firefox 23 removed support for DASH for HTML5 WebM video. It will be replaced by an implementation of the [Media Source Extensions API](https://www.w3.org/TR/media-source/) which will allow support for DASH via Javascript libraries such as dash.js. See bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617) for details.
+Firefox 23 removed support for DASH for HTML WebM video. It will be replaced by an implementation of the [Media Source Extensions API](https://www.w3.org/TR/media-source/) which will allow support for DASH via Javascript libraries such as dash.js. See bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617) for details.
 
 ## Using DASH - Server Side
 

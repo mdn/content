@@ -37,7 +37,7 @@ These resources are created by forward-thinking companies and web developers who
 <!---->
 
 - [Creating a Simple Web Page with HTML](https://www.theblogstarter.com/html-for-beginners/)
-  - : An HTML guide for beginners that includes explanations of common tags, including HTML5 tags. Also includes a step-by-step guide to creating a basic web page with code examples.
+  - : An HTML guide for beginners that includes explanations of common tags, including HTML tags. Also includes a step-by-step guide to creating a basic web page with code examples.
 - [HTML Challenges](https://wikiversity.org/wiki/Web_Design/HTML_Challenges)
   - : Use these challenges to hone your HTML skills (for example, "Should I use an \<h2> element or a \<strong> element?"), focusing on meaningful markup.
 
@@ -116,7 +116,7 @@ These resources are created by forward-thinking companies and web developers who
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn how to draw graphics using scripting using the canvas element.
 - [HTML5 Doctor](https://html5doctor.com/)
-  - : Articles about using HTML5 right now.
+  - : Articles about using HTML right now.
 
 ## JavaScript Tutorials
 
