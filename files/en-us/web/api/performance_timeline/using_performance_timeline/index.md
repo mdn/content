@@ -172,7 +172,7 @@ function PerformanceObservers() {
   });
   
   // Subscribe to only the 'mark' event
-  observe_mark.observe({entryTypes: ['mark']});
+  observeMark.observe({entryTypes: ['mark']});
 }
 
 function printPerfEntry(pe) {
