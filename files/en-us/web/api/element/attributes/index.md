@@ -52,9 +52,9 @@ with id "paragraph", and prints each attribute's value.
 
        // First, let's verify that the paragraph has some attributes
        if (paragraph.hasAttributes()) {
-         let output = "";
+         let output = "Attributes of first paragraph:\n";
          for (const attr of paragraph.attributes) {
-           output += attr.name + "->" + attr.value;
+           output += `${attr.name} -> ${attr.value}\n`;
          }
          result.value = output;
        } else {
