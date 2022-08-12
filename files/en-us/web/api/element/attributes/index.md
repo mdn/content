@@ -36,49 +36,48 @@ const atts = para.attributes;
 
 ### Enumerating elements attributes
 
-Numerical indexing is useful for going through all of an element's attributes.
+You can enumerate through an element's attributes using [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
 The following example runs through the attribute nodes for the element in the document
 with id "paragraph", and prints each attribute's value.
 
 ```html
 <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Attributes example</title>
+    <script>
+    function listAttributes() {
+       const paragraph = document.getElementById("paragraph");
+       const result = document.getElementById("result");
 
-<html>
-
- <head>
-  <title>Attributes example</title>
-  <script>
-   function listAttributes() {
-     const paragraph = document.getElementById("paragraph");
-     const result = document.getElementById("result");
-
-     // First, let's verify that the paragraph has some attributes
-     if (paragraph.hasAttributes()) {
-       const attrs = paragraph.attributes;
-       let output = "";
-       for (let i = attrs.length - 1; i >= 0; i--) {
-         output += attrs[i].name + "->" + attrs[i].value;
+       // First, let's verify that the paragraph has some attributes
+       if (paragraph.hasAttributes()) {
+         let output = "Attributes of first paragraph:\n";
+         for (const attr of paragraph.attributes) {
+           output += `${attr.name} -> ${attr.value}\n`;
+         }
+         result.textContent = output;
+       } else {
+         result.textContent = "No attributes to show";
        }
-       result.value = output;
-     } else {
-       result.value = "No attributes to show";
-     }
-   }
-  </script>
- </head>
+    }
+    </script>
+  </head>
 
-<body>
- <p id="paragraph" style="color: green;">Sample Paragraph</p>
- <form action="">
-  <p>
-    <input type="button" value="Show first attribute name and value"
-      onclick="listAttributes();">
-    <input id="result" type="text" value="">
-  </p>
- </form>
-</body>
+  <body>
+    <p id="paragraph" style="color: green;">Sample Paragraph</p>
+    <form action="">
+      <p>
+        <input type="button" value="Show first attribute name and value"
+          onclick="listAttributes();">
+        <pre id="result"></pre>
+      </p>
+    </form>
+  </body>
 </html>
 ```
+
+{{EmbedLiveSample('enumerating_elements_attributes', 100, 300)}}
 
 ## Specifications
 
