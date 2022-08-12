@@ -77,6 +77,8 @@ with id "paragraph", and prints each attribute's value.
 </html>
 ```
 
+{{EmbedLiveSample('enumerating_elements_attributes', 100, 300)}}
+
 ## Specifications
 
 {{Specifications}}
