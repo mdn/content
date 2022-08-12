@@ -50,7 +50,7 @@ Next, create a file called "background.js" and add:
 
 ```js
 function logURL(requestDetails) {
-  console.log("Loading: " + requestDetails.url);
+  console.log(`Loading: ${requestDetails.url}`);
 }
 
 browser.webRequest.onBeforeRequest.addListener(
@@ -113,10 +113,10 @@ Next, replace "background.js" with this:
 
 ```js
 let pattern = "https://developer.mozilla.org/*";
-let targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+const targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
-  console.log("Redirecting: " + requestDetails.url);
+  console.log(`Redirecting: ${requestDetails.url}`);
   if (requestDetails.url === targetUrl) {
     return;
   }

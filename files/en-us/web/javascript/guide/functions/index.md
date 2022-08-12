@@ -236,7 +236,7 @@ function getScore() {
   const num2 = 3;
 
   function add() {
-    return name + ' scored ' + (num1 + num2);
+    return `${name} scored ${num1 + num2}`;
   }
 
   return add();
@@ -320,9 +320,9 @@ function foo(i) {
   if (i < 0) {
     return;
   }
-  console.log('begin: ' + i);
+  console.log(`begin: ${i}`);
   foo(i - 1);
-  console.log('end: ' + i);
+  console.log(`end: ${i}`);
 }
 foo(3);
 

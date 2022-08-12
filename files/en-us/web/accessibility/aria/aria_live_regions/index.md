@@ -178,7 +178,7 @@ As an illustration of `aria-atomic`, consider a site with a simple clock, showin
 function updateClock() {
   const now = new Date();
   document.getElementById('clock-hours').innerHTML = now.getHours();
-  document.getElementById('clock-mins').innerHTML = ("0"+now.getMinutes()).substr(-2);
+  document.getElementById('clock-mins').innerHTML = (`0${now.getMinutes()}`).substr(-2);
 }
 
 /* first run */

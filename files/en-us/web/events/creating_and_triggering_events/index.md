@@ -42,7 +42,7 @@ This will then allow you to access the additional data in the event listener:
 
 ```js
 function eventHandler(e) {
-  console.log('The time is: ' + e.detail);
+  console.log(`The time is: ${e.detail}`);
 }
 ```
 
