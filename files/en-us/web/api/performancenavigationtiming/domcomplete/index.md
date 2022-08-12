@@ -27,7 +27,7 @@ current document to _[complete](https://html.spec.whatwg.org/multipage/syntax.ht
 The following example illustrates this property's usage.
 
 ```js
-function print_nav_timing_data() {
+function printNavTimingData() {
   // Use getEntriesByType() to just get the "navigation" events
   const perfEntries = performance.getEntriesByType("navigation");
   perfEntries.forEach((p, i) => {
