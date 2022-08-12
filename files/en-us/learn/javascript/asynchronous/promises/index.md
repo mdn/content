@@ -303,7 +303,7 @@ We can even use a `try...catch` block for error handling, exactly as we would if
 
 Note though that async functions always return a promise, so you can't do something like:
 
-```js example-bad
+```js
 async function fetchProducts() {
   try {
     const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
