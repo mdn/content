@@ -36,7 +36,7 @@ const atts = para.attributes;
 
 ### Enumerating elements attributes
 
-You can enumerate through an element's attributes using `for...of`.
+You can enumerate through an element's attributes using [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
 The following example runs through the attribute nodes for the element in the document
 with id "paragraph", and prints each attribute's value.
 
