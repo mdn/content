@@ -127,12 +127,10 @@ process(inputList, outputList, parameters) {
     for (let channelNum = 0; channelNum < channelCount; channelNum++) {
       let sampleCount = input[channelNum].length;
 
-      for (let i = 0; i < sampleCount; i++) {
-        let sample = input[channelNum][i];
-
+      input[channelNum].forEach((sample, i) => {
         // Manipulate the sample
         output[channelNum][i] = sample;
-      }
+      });
     }
   };
 
