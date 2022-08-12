@@ -11,7 +11,6 @@ tags:
   - Learn
   - Web
 ---
-
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 In the previous few articles we looked at all the HTML you'll need to create and structure your web forms. In this article we will move on to looking at how to use [CSS](/en-US/docs/Web/CSS) to style your form controls. This has historically been difficult — form controls vary greatly in how easy they are to customize with CSS — but it is getting easier as old browsers are retired and modern browsers give us more features to use.
@@ -123,7 +122,7 @@ All text fields have complete support for every property related to the CSS box 
 
 **This is because each widget has their own rules for border, padding and margin.** To give the same size to several different widgets, you can use the {{cssxref("box-sizing")}} property along with some consistent values for other properties:
 
-```css 
+```css
 input, textarea, select, button {
   width : 150px;
   padding: 0;
@@ -311,7 +310,7 @@ When one of these fields gains focus, we highlight them with a light grey, trans
 
 ```css
 input:focus, textarea:focus {
-  background  : rgba(0,0,0,.1);
+  background   : rgba(0,0,0,.1);
   border-radius: 5px;
 }
 ```
