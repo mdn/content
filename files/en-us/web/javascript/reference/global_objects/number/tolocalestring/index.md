@@ -67,7 +67,7 @@ console.log(number.toLocaleString()); // Displays "3,500" if in U.S. English loc
 
 ### Checking for support for locales and options arguments
 
-Not all implementations are required to support ECMA-402 (the internationalization API). For those that don't, the `locales` and `options` arguments must both be ignored. You can check support by testing if illegal language tags are rejected with a {{jsxref("Global_Objects/RangeError", "RangeError")}}:
+Not all implementations are required to support ECMA-402 (the Internationalization API). For those that don't, the `locales` and `options` arguments must both be ignored. You can check support by testing if illegal language tags are rejected with a {{jsxref("Global_Objects/RangeError", "RangeError")}}:
 
 ```js
 function toLocaleStringSupportsLocales() {

@@ -54,8 +54,6 @@ Finally, there's the little box into which we'll insert the messages. This {{HTM
 
 While you can just [look at the code itself on GitHub](https://github.com/mdn/samples-server/blob/master/s/webrtc-simple-datachannel/main.js), below we'll review the parts of the code that do the heavy lifting.
 
-The WebRTC API makes heavy use of the {{jsxref("Promise")}} API, which makes it very easy to chain the steps of the connection process together. Similarly, this example uses [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to simplify syntax.
-
 ### Starting up
 
 When the script is run, we set up a {{domxref("Window/load_event", "load")}} event listener, so that once the page is fully loaded, our `startup()` function is called.

@@ -156,7 +156,7 @@ const [a, ...b,] = [1, 2, 3];
 
 ### Trailing commas in JSON
 
-As JSON is based on JavaScript's syntax prior to ES5, **trailing commas are not allowed in JSON**.
+As JSON is based on a very restricted subset of JavaScript syntax, **trailing commas are not allowed in JSON**.
 
 Both lines will throw a `SyntaxError`:
 

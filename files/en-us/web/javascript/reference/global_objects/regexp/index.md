@@ -43,7 +43,7 @@ Use a string as the first argument to the `RegExp()` constructor when you want t
 
 ### Flags in constructor
 
-`new RegExp(/ab+c/, flags)` will create a new `RegExp` using the source of the first parameter and the flags provided by the second.
+The expression `new RegExp(/ab+c/, flags)` will create a new `RegExp` using the source of the first parameter and the flags provided by the second.
 
 When using the constructor function, the normal string escape rules (preceding special characters with `\` when included in a string) are necessary.
 
