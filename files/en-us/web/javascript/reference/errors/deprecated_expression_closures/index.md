@@ -76,7 +76,7 @@ var obj = {
 };
 ```
 
-With ES2015 [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), this can be converted to:
+With [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), this can be converted to:
 
 ```js example-good
 const obj = {

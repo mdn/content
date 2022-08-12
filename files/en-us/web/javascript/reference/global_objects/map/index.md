@@ -69,7 +69,7 @@ cases:
         </p>
         <div class="notecard note">
           <p>
-            <strong>Note:</strong> As of ES5, this can be bypassed by using
+            <strong>Note:</strong> This can be bypassed by using
             {{jsxref("Object.create", "Object.create(null)")}},
             but this is seldom done.
           </p>

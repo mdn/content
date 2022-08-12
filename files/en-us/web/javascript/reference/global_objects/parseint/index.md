@@ -79,24 +79,11 @@ To convert a number to its string literal in a particular radix, use [`thatNumbe
 
 ### Octal interpretations with no radix
 
-Please note that following information doesn't apply to recent implementations as of 2021.
-
-Although discouraged by ECMAScript 3, many ECMAScript 3
-implementations had interpreted a numeric string beginning with a leading `0` as
-octal. The following might have had an octal result, or it might have had a decimal result.
+Contrary to number literals (and some legacy implementations), `parseInt()` does _not_ treat strings beginning with a `0` character as octal values.
 
 ```js
 parseInt('0e0')  // 0
-parseInt('08')   // 0, because '8' is not an octal digit.
-```
-
-The ECMAScript 5 specification of the function `parseInt` no longer allows
-implementations to treat Strings beginning with a `0` character as octal
-values. Many implementations have adopted this behavior as of 2021.
-
-```js
-parseInt('0e0')  // 0
-parseInt('08')   // 8
+parseInt('011')  // 11
 ```
 
 ### A stricter parse function

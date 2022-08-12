@@ -113,7 +113,7 @@ The _Nodejs_ package manager _NPM_ should also have been installed, and can be t
 
 As a slightly more exciting test let's create a very basic "pure node" server that prints out "Hello World" in the browser when you visit the correct URL in your browser:
 
-1. Copy the following text into a file named **hellonode.js**. This uses pure _Node_ features (nothing from Express) and some ES6 syntax:
+1. Copy the following text into a file named **hellonode.js**. This uses pure Node features (nothing from Express):
 
     ```js
     //Load HTTP module

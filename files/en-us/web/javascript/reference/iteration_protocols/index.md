@@ -12,7 +12,7 @@ tags:
 ---
 {{jsSidebar("More")}}
 
-As a couple of additions to ECMAScript 2015, **Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
+**Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
 
 There are two protocols: The [iterable protocol](#the_iterable_protocol) and the [iterator protocol](#the_iterator_protocol).
 

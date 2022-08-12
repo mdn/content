@@ -360,8 +360,7 @@ You must be careful which level of characters you are iterating on. For example,
 - {{jsxref("String.prototype.toUpperCase()")}}
   - : Returns the calling string value converted to uppercase.
 - {{jsxref("String.prototype.trim()")}}
-  - : Trims whitespace from the beginning and end of the string. Part of the ECMAScript 5
-    standard.
+  - : Trims whitespace from the beginning and end of the string.
 - {{jsxref("String.prototype.trimStart()")}}
   - : Trims whitespace from the beginning of the string.
 - {{jsxref("String.prototype.trimEnd()")}}

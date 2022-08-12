@@ -266,7 +266,7 @@ const obj = {
 JSON.stringify(obj);
 // '{"data":"data"}'
 
-JSON.stringify({ obj }); // Shorthand property names (ES2015).
+JSON.stringify({ obj });
 // '{"obj":"Now I am a nested object under key 'obj'"}'
 
 JSON.stringify([ obj ]);

@@ -19,14 +19,14 @@ using standard array index syntax (that is, using bracket notation).
 ## Syntax
 
 ```js
-new Int8Array(); // new in ES2017
-new Int8Array(length);
-new Int8Array(typedArray);
-new Int8Array(object);
+new Int8Array()
+new Int8Array(length)
+new Int8Array(typedArray)
+new Int8Array(object)
 
-new Int8Array(buffer);
-new Int8Array(buffer, byteOffset);
-new Int8Array(buffer, byteOffset, length);
+new Int8Array(buffer)
+new Int8Array(buffer, byteOffset)
+new Int8Array(buffer, byteOffset, length)
 ```
 
 ## Description

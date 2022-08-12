@@ -86,7 +86,7 @@ If you'd like to try this API for yourself, Smashing Magazine has written an [in
 
 ## Class components
 
-Although this tutorial doesn't mention them, it is possible to build React components using ES6 classes – these are called class components. Until the arrival of hooks, ES6 classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain other, more edge-case features, and they're very common in legacy React projects. The official React docs are a great place to start learning about them.
+Although this tutorial doesn't mention them, it is possible to build React components using classes – these are called class components. Until the arrival of hooks, classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain other, more edge-case features, and they're very common in legacy React projects. The official React docs are a great place to start learning about them.
 
 - [State and Lifecycle in the React Docs](https://reactjs.org/docs/state-and-lifecycle.html)
 - [Intro To React in the React Docs](https://reactjs.org/tutorial/tutorial.html)

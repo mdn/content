@@ -21,14 +21,14 @@ notation).
 ## Syntax
 
 ```js
-new Int16Array(); // new in ES2017
-new Int16Array(length);
-new Int16Array(typedArray);
-new Int16Array(object);
+new Int16Array()
+new Int16Array(length)
+new Int16Array(typedArray)
+new Int16Array(object)
 
-new Int16Array(buffer);
-new Int16Array(buffer, byteOffset);
-new Int16Array(buffer, byteOffset, length);
+new Int16Array(buffer)
+new Int16Array(buffer, byteOffset)
+new Int16Array(buffer, byteOffset, length)
 ```
 
 ## Description

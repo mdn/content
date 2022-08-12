@@ -62,7 +62,7 @@ More clearly, `Array.from(obj, mapFn, thisArg)` has the same result as `Array.fr
 
 The `length` property of the `from()` method is `1`.
 
-In ES2015, the class syntax allows sub-classing of both built-in and user-defined classes. As a result, static methods such as `Array.from()` are "inherited" by subclasses of `Array`, and create new instances _of the subclass_, not `Array`. The `Array.from()` method is also defined generically and can be defined on any constructor that accepts a single number argument.
+The [class](/en-US/docs/Web/JavaScript/Reference/Classes) syntax allows sub-classing of both built-in and user-defined classes. As a result, static methods such as `Array.from()` are "inherited" by subclasses of `Array`, and create new instances _of the subclass_, not `Array`. The `Array.from()` method is also defined generically and can be defined on any constructor that accepts a single number argument.
 
 ## Examples
 

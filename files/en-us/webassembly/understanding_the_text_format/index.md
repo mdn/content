@@ -151,7 +151,7 @@ There are a lot more things that can be put inside function bodies, but we will 
 
 ### Calling the function
 
-Our function won't do very much on its own — now we need to call it. How do we do that? Like in an ES2015 module, wasm functions must be explicitly exported by an `export` statement inside the module.
+Our function won't do very much on its own — now we need to call it. How do we do that? Like in an ES module, wasm functions must be explicitly exported by an `export` statement inside the module.
 
 Like locals, functions are identified by an index by default, but for convenience, they can be named. Let's start by doing this — first, we'll add a name preceded by a dollar sign, just after the `func` keyword:
 

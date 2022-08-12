@@ -12,9 +12,7 @@ browser-compat: javascript.functions.method_definitions
 ---
 {{JsSidebar("Functions")}}
 
-Starting with ECMAScript 2015, a shorter syntax for method definitions on objects
-initializers is introduced. It is a shorthand for a function assigned to the method's
-name.
+**Method definition** is a shorter syntax for defining a function property in an object initializer.
 
 {{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
 
@@ -41,8 +39,7 @@ const obj = {
 
 ## Description
 
-The shorthand syntax is similar to the [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) syntax introduced
-in ES5.
+The shorthand syntax is similar to the [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) syntax.
 
 Given the following code:
 

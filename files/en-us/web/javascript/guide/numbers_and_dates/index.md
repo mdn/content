@@ -55,18 +55,20 @@ const FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 
 ### Octal numbers
 
-Octal number syntax uses a leading zero. If the digits after the `0` are outside the range 0 through 7, the number will be interpreted as a decimal number.
+The standard syntax for octal numbers is to prefix them with `0o`, e.g.:
+
+```js
+const a = 0o10; // 8
+```
+
+There's also a legacy syntax for octal numbers — by prefixing the octal number with a zero: `0644 === 420` and `"\045" === "%"`. If the digits after the `0` are outside the range 0 through 7, the number will be interpreted as a decimal number.
 
 ```js
 const n = 0755; // 493
 const m = 0644; // 420
 ```
 
-Strict mode in ECMAScript 5 forbids octal syntax. Octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: `0644 === 420` and `"\045" === "%"`. In ECMAScript 2015, octal numbers are supported if they are prefixed with `0o`, e.g.:
-
-```js
-const a = 0o10; // ES2015: 8
-```
+[Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) forbids this octal syntax.
 
 ### Hexadecimal numbers
 
