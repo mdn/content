@@ -282,7 +282,7 @@ In normal template literals, the following escape sequences are allowed:
 - Hexadecimal escapes started by `\x`, for example `\xA9`
 - Octal literal escapes started by `\0o` and followed by one or more digits, for example `\0o251`
 
-Any other non-well-formed escape sequence is a syntax error. However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
+Any other non-well-formed escape sequence (e.g. one that begins with `\u` but is not followed by a four-digit hex sequence) is a syntax error. However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
 
 Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates.
 

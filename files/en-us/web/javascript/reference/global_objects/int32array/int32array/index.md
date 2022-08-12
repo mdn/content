@@ -25,6 +25,7 @@ new Int32Array()
 new Int32Array(length)
 new Int32Array(typedArray)
 new Int32Array(object)
+
 new Int32Array(buffer)
 new Int32Array(buffer, byteOffset)
 new Int32Array(buffer, byteOffset, length)

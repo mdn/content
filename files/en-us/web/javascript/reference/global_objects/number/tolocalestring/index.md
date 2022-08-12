@@ -81,7 +81,7 @@ function toLocaleStringSupportsLocales() {
 }
 ```
 
-However, prior to ES5.1, implementations were not required to throw a range error exception if `toLocaleString` is called with arguments. A check that works in all hosts, including those supporting ECMA-262 prior to ed 5.1, is to test for the features specified in ECMA-402 that are required to support regional options for `Number.prototype.toLocaleString` directly:
+However, prior to ES5.1, implementations were not required to throw a range error exception if `toLocaleString` is called with illegal arguments. A check that works in all hosts, including those supporting ECMA-262 prior to ed 5.1, is to test for the features specified in ECMA-402 that are required to support regional options for `Number.prototype.toLocaleString` directly:
 
 ```js
 function toLocaleStringSupportsOptions() {

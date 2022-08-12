@@ -55,7 +55,7 @@ const FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 
 ### Octal numbers
 
-The standard syntax for octal numbers is to prefix them with `0o`, e.g.:
+The standard syntax for octal numbers is to prefix them with `0o`. For example:
 
 ```js
 const a = 0o10; // 8
