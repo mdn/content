@@ -43,10 +43,10 @@ A new {{domxref("PerformanceObserver")}} object which will call the specified
 
 ```js
 const observer = new PerformanceObserver((list, obj) => {
-  const entries = list.getEntries();
-  entries.forEach((entries) => {
-    // Process "mark" and "frame" events
-  });
+  list.getEntries()
+    .forEach((entries) => {
+      // Process "mark" and "frame" events
+    });
 });
 observer.observe({entryTypes: ["mark", "frame"]});
 
