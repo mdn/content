@@ -42,7 +42,7 @@ focus(options)
         If `preventScroll` is set to `true`, no scrolling will occur.
     - `focusVisible` {{optional_inline}} {{experimental_inline}}
       - : A boolean value that should be set to `true` to force visible indication that the element is focused.
-        If the property is not `true` or not specified, a browser may still provide visible indication if it determines that this would improve accessibility for users.
+        By default, or if the property is not `true`, a browser may still provide visible indication if it determines that this would improve accessibility for users.
 
 ### Return value
 
