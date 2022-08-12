@@ -130,14 +130,14 @@ To read the payload data, you must know when to stop reading. That's why the pay
 
 ### Reading and unmasking the Data
 
-If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data `encoded`, and the key `mask`. To get `decoded`, loop through the octets (bytes a.k.a. characters for text data) of `encoded` and XOR the octet with the (i modulo 4)th octet of MASK. In pseudo-code (that happens to be valid JavaScript):
+If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data `ENCODED`, and the key `MASK`. To get `DECODED`, loop through the octets (bytes a.k.a. characters for text data) of `encoded` and XOR the octet with the (i modulo 4)th octet of `MASK`. In pseudo-code (that happens to be valid JavaScript):
 
 ```js
-const mask = [1, 2, 3, 4]; // 4-byte mask
-const encoded = [105, 103, 111, 104, 110]; // encoded string "hello"
+const MASK = [1, 2, 3, 4]; // 4-byte mask
+const ENCODED = [105, 103, 111, 104, 110]; // encoded string "hello"
 
 // Create the byte Array of decoded payload
-const decoded = encoded.from((elt, i) => elt ^ mask[i % 4]); // Perform an XOR on the mask
+const DECODED = Uint8Array.from(ENCODED(elt, i) => elt ^ mask[i % 4]); // Perform an XOR on the mask
 ```
 
 Now you can figure out what **DECODED** means depending on your application.
