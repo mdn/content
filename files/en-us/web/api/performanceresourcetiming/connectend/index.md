@@ -38,6 +38,7 @@ function printPerformanceEntries() {
       printStartAndEndProperties(entry);
     });
 }
+
 function printStartAndEndProperties(perfEntry) {
   // Print timestamps of the *start and *end properties
   properties = ["connectStart", "connectEnd",
