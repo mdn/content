@@ -62,7 +62,7 @@ arr.length; // 5
 
 #### Objects
 
-Starting with ECMAScript 5, trailing commas in object literals are legal as well:
+Trailing commas in object literals are legal as well:
 
 ```js
 const object = {
@@ -74,7 +74,7 @@ const object = {
 
 ### Trailing commas in functions
 
-ECMAScript 2017 allows trailing commas in function parameter lists.
+Trailing commas are also allowed in function parameter lists.
 
 #### Parameter definitions
 
@@ -156,9 +156,7 @@ const [a, ...b,] = [1, 2, 3];
 
 ### Trailing commas in JSON
 
-Trailing commas in objects were only introduced in ECMAScript 5. As JSON is based on
-JavaScript's syntax prior to ES5, **trailing commas are not allowed in
-JSON**.
+As JSON is based on a very restricted subset of JavaScript syntax, **trailing commas are not allowed in JSON**.
 
 Both lines will throw a `SyntaxError`:
 

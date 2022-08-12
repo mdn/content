@@ -23,7 +23,7 @@ methods that can be used with any typed array containing elements of any type.
 
 ## Description
 
-ECMAScript 2015 defines a `TypedArray` constructor that serves as
+The `TypedArray` constructor is a hidden global that serves as
 the `[[Prototype]]` of all `TypedArray` constructors.
 This constructor is not directly exposed: there is no global `%TypedArray%`
 or `TypedArray` property. It is only directly accessible through

@@ -88,63 +88,6 @@ provides a whole character, even if the string contains characters that are not 
 Basic Multi-lingual Plane.
 
 ```js
-const str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
-for (let i = 0, chr; i < str.length; i++) {
-  if ((chr = getWholeChar(str, i)) === false) {
-    continue;
-  }
-  // Adapt this line at the top of each loop, passing in the whole string and
-  // the current iteration and returning a variable to represent the
-  // individual character
-
-  console.log(chr);
-}
-
-function getWholeChar(str, i) {
-  const code = str.charCodeAt(i);
-
-  if (Number.isNaN(code)) {
-    return ''; // Position not found
-  }
-  if (code < 0xD800 || code > 0xDFFF) {
-    return str.charAt(i);
-  }
-
-  // High surrogate (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i + 1)) {
-      throw 'High surrogate without following low surrogate';
-    }
-    const next = str.charCodeAt(i + 1);
-    if (next < 0xDC00 || next > 0xDFFF) {
-      throw 'High surrogate without following low surrogate';
-    }
-    return str.charAt(i) + str.charAt(i + 1);
-  }
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
-  if (i === 0) {
-    throw 'Low surrogate without preceding high surrogate';
-  }
-  const prev = str.charCodeAt(i - 1);
-
-  // (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (prev < 0xD800 || prev > 0xDBFF) {
-    throw 'Low surrogate without preceding high surrogate';
-  }
-  // We can pass over low surrogates now as the second component
-  // in a pair which we have already processed
-  return false;
-}
-```
-
-In an ECMAScript 2016 environment which allows destructured assignment, the following
-is a more succinct and somewhat more flexible alternative in that it does increment for
-an incrementing variable automatically (if the character warrants it in being a
-surrogate pair).
-
-```js
 const str = 'A\uD87E\uDC04Z';  // We could also use a non-BMP character directly
 for (let i = 0; i < str.length; i++) {
   let chr;

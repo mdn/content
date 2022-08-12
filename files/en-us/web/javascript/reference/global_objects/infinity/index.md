@@ -23,8 +23,6 @@ The initial value of `Infinity` is {{jsxref("Number.POSITIVE_INFINITY")}}. The v
 
 This value behaves slightly differently than mathematical infinity; see {{jsxref("Number.POSITIVE_INFINITY")}} for details.
 
-As defined by the ECMAScript 5 specification, `Infinity` is read-only (implemented in JavaScript 1.8.5 / Firefox 4).
-
 ## Examples
 
 ### Using Infinity

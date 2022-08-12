@@ -67,7 +67,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
   - : Explanation of the widely misunderstood and underestimated prototype-based inheritance.
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-  - : Strict mode defines that you cannot use any variable before initializing it. It is a restricted variant of ECMAScript 5, for faster performance and easier debugging.
+  - : Strict mode defines that you cannot use any variable before initializing it. It is a restricted variant of the language, for faster performance and easier debugging.
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
   - : JavaScript typed arrays provide a mechanism for accessing raw binary data.
 - [Memory Management](/en-US/docs/Web/JavaScript/Memory_Management)

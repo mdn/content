@@ -17,14 +17,14 @@ array of 16-bit unsigned integers in the platform byte order.
 ## Syntax
 
 ```js
-new Uint16Array(); // new in ES2017
-new Uint16Array(length);
-new Uint16Array(typedArray);
-new Uint16Array(object);
+new Uint16Array()
+new Uint16Array(length)
+new Uint16Array(typedArray)
+new Uint16Array(object)
 
-new Uint16Array(buffer);
-new Uint16Array(buffer, byteOffset);
-new Uint16Array(buffer, byteOffset, length);
+new Uint16Array(buffer)
+new Uint16Array(buffer, byteOffset)
+new Uint16Array(buffer, byteOffset, length)
 ```
 
 ## Description

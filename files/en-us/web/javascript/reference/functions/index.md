@@ -317,9 +317,7 @@ The syntax for defining getters and setters uses the object literal syntax.
 
 ### Method definition syntax
 
-Starting with ECMAScript 2015, you are able to define own methods in a shorter syntax,
-similar to the getters and setters.
-See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
+In object literals, you are able to define own methods in a shorter syntax, similar to the getters and setters. See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
 
 ```js
 const obj = {

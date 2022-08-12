@@ -21,14 +21,14 @@ using standard array index syntax (that is, using bracket notation).
 ## Syntax
 
 ```js
-new Uint8ClampedArray(); // new in ES2017
-new Uint8ClampedArray(length);
-new Uint8ClampedArray(typedArray);
-new Uint8ClampedArray(object);
+new Uint8ClampedArray()
+new Uint8ClampedArray(length)
+new Uint8ClampedArray(typedArray)
+new Uint8ClampedArray(object)
 
-new Uint8ClampedArray(buffer);
-new Uint8ClampedArray(buffer, byteOffset);
-new Uint8ClampedArray(buffer, byteOffset, length);
+new Uint8ClampedArray(buffer)
+new Uint8ClampedArray(buffer, byteOffset)
+new Uint8ClampedArray(buffer, byteOffset, length)
 ```
 
 ### Parameters

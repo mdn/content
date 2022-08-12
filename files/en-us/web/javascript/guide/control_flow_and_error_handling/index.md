@@ -56,15 +56,8 @@ while (x < 10) {
 
 Here, `{ x++; }` is the block statement.
 
-> **Note:** JavaScript before ECMAScript2015 (6th edition)
-> **does not** have block scope! In older JavaScript, variables introduced
-> within a block are scoped to the containing function or script, and the effects of
-> setting them persist beyond the block itself. In other words, _block statements do
-> not define a scope_.
->
-> "Standalone" blocks in JavaScript can produce completely different results from what
-> they would produce in C or Java. For example:
->
+> **Note:** [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)-declared variables are not block-scoped, but are scoped to the containing function or script, and the effects of setting them persist beyond the block itself. For example:
+> 
 > ```js
 > var x = 1;
 > {
@@ -72,15 +65,10 @@ Here, `{ x++; }` is the block statement.
 > }
 > console.log(x); // outputs 2
 > ```
->
-> This outputs `2` because the `var x` statement within the block
-> is in the same scope as the `var x` statement before the block. (In C or
-> Java, the equivalent code would have output `1`.)
->
-> **Since ECMAScript2015**, the `let` and
-> `const` variable declarations are block-scoped. See the
-> {{jsxref("Statements/let", "let")}} and {{jsxref("Statements/const", "const")}}
-> reference pages for more information.
+> 
+> This outputs `2` because the `var x` statement within the block is in the same scope as the `var x` statement before the block. (In C or Java, the equivalent code would have output `1`.)
+> 
+> This scoping effect can be mitigated by using {{jsxref("Statements/let", "let")}} or {{jsxref("Statements/const", "const")}}.
 
 ## Conditional statements
 
