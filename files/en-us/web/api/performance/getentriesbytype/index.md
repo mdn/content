@@ -54,7 +54,7 @@ function usePerformanceEntryMethods() {
   doWork(50000);
   performance.mark("End");
   performance.mark("Begin");
-  do_work(100000);
+  doWork(100000);
   performance.mark("End");
   do_work(200000);
   performance.mark("End");
