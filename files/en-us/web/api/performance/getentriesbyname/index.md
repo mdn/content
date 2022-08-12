@@ -46,11 +46,11 @@ A list of {{domxref("PerformanceEntry")}} objects that have the specified
 ## Examples
 
 ```js
-function use_PerformanceEntry_methods() {
+function usePerformanceEntryMethods() {
   console.log("PerformanceEntry tests…");
 
   if (performance.mark === undefined) {
-    console.error("The property performance.mark is not supported.");
+    console.error("The property performance.mark is not supported");
     return;
   }
 
@@ -65,35 +65,41 @@ function use_PerformanceEntry_methods() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  let perf = performance.getEntries();
-  perf.forEach((entry, i) => {
-    log(`Entry[${i}]`);
-    checkPerformanceEntry(entry);
-  });
-
-  // Use getEntries(name, entryType) to get specific entries
-  perf = performance.getEntries({ name : "Begin", entryType: "mark" });
-  perf.forEach((entry, i) => {
-    log(`Begin[${i}]`);
-    checkPerformanceEntry(entry);
-  });
+  performance.getEntries()
+    .forEach((entry, i) => {
+      log(`Entry[${i}]`);
+      checkPerformanceEntry(entry);
+    });
 
   // Use getEntriesByType() to get all "mark" entries
-  perf = performance.getEntriesByType("mark");
-  perf.forEach((entry, i) => {
-    log(`Mark only entry[${i}]:`);
-    log(`  name      = ${entry.name}`);
-    log(`  startTime = ${entry.startTime}`);
-    log(`  duration  = ${entry.duration}`);
-  });
+  performance.getEntriesByType("mark")
+    .forEach((entry, i) => {
+      log(`Mark only entry[${i}]:`);
+      checkPerformanceEntry(entry);
+    });
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
-  perf = performance.getEntriesByName("Begin", "mark");
-  perf.forEach((entry, i) => {
-    log(`Mark and Begin entry[${i}]:`);
-    log(`  name      = ${perf.name}`);
-    log(`  startTime = ${perf.startTime}`);
-    log(`  duration  = ${perf.duration}`);
+  performance.getEntriesByName("Begin", "mark")
+    .forEach((entry, i) => {
+      log(`Mark and Begin entry[${i}]:`);
+      checkPerformanceEntry(entry);
+    });
+}
+
+function checkPerformanceEntry(obj) {
+  const properties = ["name", "entryType", "startTime", "duration"];
+  const methods = ["toJSON"];
+
+  // Check each property
+  properties.forEach((property) => {
+    const supported = property in obj;
+    console.log(`…${property} = ${supported ? obj[property] : "Not supported"}`);
+  });
+
+  // Check each method
+  methods.forEach((method) => {
+    const supported = typeof obj[method] === "function";
+    console.log(`…${method} = ${supported ? obj[method] : "Not supported"}`);
   });
 }
 ```
