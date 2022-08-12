@@ -56,7 +56,7 @@ function usePerformanceEntryMethods() {
   performance.mark("Begin");
   doWork(100000);
   performance.mark("End");
-  do_work(200000);
+  doWork(200000);
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
