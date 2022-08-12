@@ -4,7 +4,7 @@ slug: Web/CSS/text-decoration-thickness
 tags:
   - CSS
   - CSS Text Decoration
-  - Property
+  - CSS Property
   - Reference
   - recipe:css-property
   - text-decoration
@@ -56,7 +56,7 @@ text-decoration-thickness: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+{{text-decoration-thickness: auto | from-font | <length> | <percentage>;}}
 
 ## Examples
 

@@ -2,7 +2,7 @@
 title: 'Custom properties (--*): CSS variables'
 slug: Web/CSS/--*
 tags:
-  - CSS
+  - CSS Property
   - CSS Custom Properties
   - Guide
   - Reference
@@ -31,7 +31,7 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 ### Formal syntax
 
-{{CSSSyntax}}
+{{--<custom-property-name>: <declaration-value>;}}
 
 ## Example
 

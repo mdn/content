@@ -3,6 +3,7 @@ title: padding-inline
 slug: Web/CSS/padding-inline
 tags:
   - CSS
+  - CSS Property
   - recipe:css-shorthand-property
 browser-compat: css.properties.padding-inline
 ---
@@ -56,7 +57,7 @@ Values for this property correspond to the {{cssxref("padding-top")}} and {{cssx
 
 ## Formal syntax
 
-{{csssyntax}}
+{{padding-inline:[padding-inline-start] [padding-inline-end];}}
 
 ## Examples
 

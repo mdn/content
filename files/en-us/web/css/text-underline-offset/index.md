@@ -4,7 +4,7 @@ slug: Web/CSS/text-underline-offset
 tags:
   - CSS
   - CSS Text Decoration
-  - Property
+  - CSS Property
   - Reference
   - recipe:css-property
   - text-decoration
@@ -57,7 +57,7 @@ The `text-underline-offset` property is specified as a single value from the lis
 
 ## Formal syntax
 
-{{csssyntax}}
+{{text-underline-offset: auto | <length> | <percentage>;}}
 
 ## Examples
 

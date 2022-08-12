@@ -4,7 +4,7 @@ slug: Web/CSS/justify-tracks
 tags:
   - CSS
   - Experimental
-  - Property
+  - CSS Property
   - Reference
   - grid
   - justify-tracks
@@ -67,7 +67,15 @@ If there are fewer values than tracks, the last value is used for all remaining 
 
 ## Formal syntax
 
-{{csssyntax}}
+{{justify-tracks: [ normal | <content-distribution> | <overflow-position>? [ <content-position> | left | right ]; 
+
+<content-distribution> = 
+space-between |
+space-around |
+space-evenly |
+stretch
+
+}}
 
 ## Examples
 

@@ -3,6 +3,7 @@ title: padding-block
 slug: Web/CSS/padding-block
 tags:
   - CSS
+  - CSS Property
   - padding-block
   - recipe:css-shorthand-property
 browser-compat: css.properties.padding-block
@@ -54,7 +55,7 @@ These values corresponds to the {{cssxref("padding-top")}} and {{cssxref("paddin
 
 ## Formal syntax
 
-{{csssyntax}}
+{{padding-block: [padding-block-start] [padding-block-end];}}
 
 ## Examples
 

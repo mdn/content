@@ -3,7 +3,7 @@ title: scrollbar-gutter
 slug: Web/CSS/scrollbar-gutter
 tags:
   - CSS
-  - Property
+  - CSS Property
   - Reference
   - scrollbar-gutter
 browser-compat: css.properties.scrollbar-gutter
@@ -53,7 +53,7 @@ scrollbar-gutter: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+{{scrollbar-gutter: auto | stable && both-edges?;}}
 
 ## Examples
 

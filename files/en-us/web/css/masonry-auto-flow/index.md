@@ -4,7 +4,7 @@ slug: Web/CSS/masonry-auto-flow
 tags:
   - CSS
   - Experimental
-  - Property
+  - CSS Property
   - Reference
   - grid
   - masonry
@@ -57,7 +57,7 @@ This property may take one of two forms:
 
 ## Formal syntax
 
-{{csssyntax}}
+{{masonry-auto-flow: [ pack | next ] || [ definite-first | ordered ];}}
 
 ## Examples
 

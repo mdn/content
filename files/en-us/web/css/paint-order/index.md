@@ -3,6 +3,7 @@ title: paint-order
 slug: Web/CSS/paint-order
 tags:
   - CSS
+  - CSS Property
   - Reference
   - SVG
   - Web
@@ -55,7 +56,7 @@ When one value is specified, that one is painted first, followed by the other tw
 
 ## Formal syntax
 
-{{csssyntax}}
+{{paint-order: normal | [ fill || stroke || markers ];}}
 
 ## Examples
 
