@@ -24,7 +24,7 @@ In CSS, **`::after`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elem
 ::after
 ```
 
-> **Note:** CSS3 introduced the `::after` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept `:after`, introduced in CSS2.
+> **Note:** CSS introduced the `::after` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). For backward compatibility, browsers also accept `:after`, introduced earlier.
 
 ## Examples
 

@@ -5,7 +5,7 @@ page-type: web-api-interface
 tags:
   - API
   - CSS
-  - CSS3 Transitions
+  - CSS Transitions
   - CSSOM
   - Reference
 browser-compat: api.TransitionEvent
