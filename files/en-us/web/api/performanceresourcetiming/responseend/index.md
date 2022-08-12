@@ -31,15 +31,16 @@ properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
 ```js
-function print_PerformanceEntries() {
+function printPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  const p = performance.getEntriesByType("resource");
-  p.forEach((entry) => {
-    print_start_and_end_properties(entry);
-  });
+  performance.getEntriesByType("resource")
+    .forEach((entry) => {
+      printStartAndEndProperties(entry);
+    });
 }
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the PerformanceEntry *start and *end properties
+
+function printStartAndEndProperties(perfEntry) {
+  // Print timestamps of the *start and *end properties
   properties = ["connectStart", "connectEnd",
                 "domainLookupStart", "domainLookupEnd",
                 "fetchStart",
@@ -47,7 +48,7 @@ function print_start_and_end_properties(perfEntry) {
                 "requestStart",
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
-   for (const property of properties) {
+  for (const property of properties) {
     // Check each property
     const value = perfEntry[property];
     console.log(`… ${property} = ${property in PerfEntry ? value : "NOT supported"}`);
