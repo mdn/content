@@ -21,7 +21,7 @@ The following sections explain a theoretical model. Modern JavaScript engines im
 
 ### Visual representation
 
-![Stack, heap, queue](the_javascript_runtime_environment_example.svg)
+![A diagram showing how stacks are comprised of frames, heaps are comprised of objects, and queues are comprised of messages.](the_javascript_runtime_environment_example.svg)
 
 ### Stack
 

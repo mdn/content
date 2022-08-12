@@ -136,7 +136,7 @@ function radToDeg(rad) {
 
 If we want to calculate the height of an equilateral triangle, and we know its side length is 100, we can use the formulae _length of the adjacent multiplied by the tangent of the angle is equal to the opposite._
 
-![](trigonometry.png)
+![An equilateral triangle where a perpendicular of one edge is drawn from the opposite vertex, forming a right triangle with three sides marked as "adjacent", "opposite", and "hypotenuse". The angle between the "adjacent" and "hypotenuse" sides is 60 degrees.](trigonometry.png)
 
 In JavaScript, we can do this with the following:
 

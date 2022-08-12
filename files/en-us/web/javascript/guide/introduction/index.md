@@ -89,7 +89,7 @@ To open the Web Console (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on Window
 
 The Web Console appears at the bottom of the browser window. Along the bottom of the console is an input line that you can use to enter JavaScript, and the output appears in the panel above:
 
-![](2019-04-04_00-15-29.png)
+![A browser window with the web console open at the bottom, containing two lines of input and output. Text can be entered below that.](2019-04-04_00-15-29.png)
 
 The console works the exact same way as `eval`: the last expression entered is returned. For the sake of simplicity, it can be imagined that every time something is entered into the console, it is actually surrounded by `console.log` around `eval`, like so:
 
