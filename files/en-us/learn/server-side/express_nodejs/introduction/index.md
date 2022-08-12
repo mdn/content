@@ -203,7 +203,7 @@ We can import this module using `require()`, and then call the exported method(s
 
 ```js
 const square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
-console.log('The area of a square with a width of 4 is ' + square.area(4));
+console.log(`The area of a square with a width of 4 is ${square.area(4)}`);
 ```
 
 > **Note:** You can also specify an absolute path to the module (or a name, as we did initially).

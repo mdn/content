@@ -175,7 +175,7 @@ You can also concatenate strings using the `+` operator:
 ```js
 const greeting = "Hello";
 const name = "Chris";
-console.log(greeting + ", " + name); // "Hello, Chris"
+console.log(`${greeting}, ${name}`); // "Hello, Chris"
 ```
 
 However, template literals usually give you more readable code:

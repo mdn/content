@@ -34,7 +34,7 @@ The client and server we've described above don't tell the whole story. There ar
 
 For now, let's imagine that the web is a road. On one end of the road is the client, which is like your house. On the other end of the road is the server, which is a shop you want to buy something from.
 
-![](road.jpg)
+![A black-and-white photo of a person crossing a road at a crosswalk](road.jpg)
 
 In addition to the client and the server, we also need to say hello to:
 

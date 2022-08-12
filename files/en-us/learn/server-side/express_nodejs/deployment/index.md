@@ -122,7 +122,7 @@ exports.author_update_get = (req, res, next) => {
   req.sanitize('id').escape().trim();
   Author.findById(req.params.id, (err, author) => {
     if (err) {
-      debug('update error:' + err);
+      debug(`update error: ${err}`);
       return next(err);
     }
     // On success
@@ -158,11 +158,11 @@ npm install compression
 Open **./app.js** and require the compression library as shown. Add the compression library to the middleware chain with the `use()` method (this should appear before any routes you want compressed — in this case, all of them!)
 
 ```js
-var catalogRouter = require('./routes/catalog'); //Import routes for "catalog" area of site
-var compression = require('compression');
+const catalogRouter = require('./routes/catalog'); //Import routes for "catalog" area of site
+const compression = require('compression');
 
 // Create the Express application object
-var app = express();
+const app = express();
 
 // …
 
@@ -193,11 +193,11 @@ Open **./app.js** and require the _helmet_ library as shown.
 Then add the module to the middleware chain with the `use()` method.
 
 ```js
-var compression = require('compression');
-var helmet = require('helmet');
+const compression = require('compression');
+const helmet = require('helmet');
 
 // Create the Express application object
-var app = express();
+const app = express();
 
 app.use(helmet());
 // …
@@ -362,15 +362,15 @@ So far in this tutorial, we've used a single database that is hard-coded into **
 Open **app.js** and find the line that sets the MongoDB connection variable. It will look something like this:
 
 ```js
-var mongoDB = 'mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true';
+const mongoDB = 'mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true';
 ```
 
 Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below.)
 
 ```js
 // Set up mongoose connection
-var dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
-var mongoDB = process.env.MONGODB_URI || dev_db_url;
+const dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
 ```
 
 #### Get dependencies and re-test

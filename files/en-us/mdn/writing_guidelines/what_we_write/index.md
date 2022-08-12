@@ -110,7 +110,7 @@ The following examples describe situations when pages/content might be deleted:
 - Articles contain content that is inappropriate for MDN Web Docs.
 - Sections of MDN Web Docs are not focused on open web technologies and are a maintenance burden.
 
-For more information on _how_ to delete documents, please see the [Creating, moving and deleting pages](/en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting) guide.
+For more information on _how_ to delete documents, please see the [Creating, moving and deleting pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) guide.
 
 ## Types of documents allowed on MDN Web Docs
 

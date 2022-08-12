@@ -4,10 +4,10 @@ slug: Web/API/InputDeviceCapabilities
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - InputDeviceCapabilities
   - Interface
   - Reference
+  - Experimental
 browser-compat: api.InputDeviceCapabilities
 ---
 {{APIRef("InputDeviceCapabilities API")}}{{SeeCompatTable}}

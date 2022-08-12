@@ -426,7 +426,7 @@ Next, let's change the page title to a personalized welcome message when the use
     function setUserName() {
       const myName = prompt('Please enter your name.');
       localStorage.setItem('name', myName);
-      myHeading.textContent = 'Mozilla is cool, ' + myName;
+      myHeading.textContent = `Mozilla is cool, ${myName}`;
     }
     ```
 

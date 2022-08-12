@@ -220,18 +220,18 @@ player.ontimeupdate = () => {
   let secondValue;
 
   if (minutes < 10) {
-    minuteValue = "0" + minutes;
+    minuteValue = `0${minutes}`;
   } else {
     minuteValue = minutes;
   }
 
   if (seconds < 10) {
-    secondValue = "0" + seconds;
+    secondValue = `0${seconds}`;
   } else {
     secondValue = seconds;
   }
 
-  const mediaTime = minuteValue + ":" + secondValue;
+  const mediaTime = `${minuteValue}:${secondValue}`;
   timeLabel.textContent = mediaTime;
 };
 ```

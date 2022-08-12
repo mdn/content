@@ -4,7 +4,6 @@ slug: Web/API/HTMLVideoElement/requestPictureInPicture
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLVideoElement
   - Media

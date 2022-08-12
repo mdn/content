@@ -299,8 +299,9 @@ function createLink(testItem) {
   const listItem = document.createElement('li');
   const anchor = document.createElement('a');
 
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
+  const name = testItem.input.name;
+  anchor.textContent = `${name} field is empty: fill in your ${name}.`;
+  anchor.href = `#${name}`;
   anchor.onclick = () => {
     testItem.input.focus();
   };

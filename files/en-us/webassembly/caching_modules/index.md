@@ -151,9 +151,9 @@ With the above library function defined, getting a wasm module instance and usin
 const wasmCacheVersion = 1;
 
 instantiateCachedURL(wasmCacheVersion, 'test.wasm').then((instance) =>
-  console.log("Instance says the answer is: " + instance.exports.answer())
+  console.log(`Instance says the answer is: ${instance.exports.answer()}`)
 ).catch((err) =>
-  console.error("Failure to instantiate: " + err)
+  console.error(`Failure to instantiate: ${err}`)
 );
 ```
 

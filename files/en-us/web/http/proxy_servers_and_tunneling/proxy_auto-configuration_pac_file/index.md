@@ -253,7 +253,7 @@ Pattern and mask specification is done the same way as for SOCKS configuration.
 #### Examples
 
 ```js
-function alert_eval(str) { alert(str + ' is ' + eval(str)) }
+function alert_eval(str) { alert(`${str} is ${eval(str)}`) }
 function FindProxyForURL(url, host) {
   alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
@@ -538,7 +538,7 @@ Logs the message in the browser console.
 #### Examples
 
 ```js
-alert(host + " = " + dnsResolve(host));            // logs the host name and its IP address
+alert(`${host} = ${dnsResolve(host)}`);            // logs the host name and its IP address
 alert("Error: shouldn't reach this clause.");      // log a simple message
 ```
 

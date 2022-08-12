@@ -11,7 +11,7 @@ tags:
 ---
 This article provides:
 
-- a basic guide to creating a cross-browser HTML5 audio player with all the associated attributes, properties, and events explained
+- a basic guide to creating a cross-browser HTML audio player with all the associated attributes, properties, and events explained
 - a guide to custom controls created using the Media API
 
 ## Basic Audio example
@@ -23,7 +23,7 @@ The code below is an example of a basic audio implementation using HTML5:
   <source src="audiofile.mp3" type="audio/mpeg">
   <source src="audiofile.ogg" type="audio/ogg">
   <!-- fallback for non supporting browsers goes here -->
-  <p>Your browser does not support HTML5 audio, but you can still
+  <p>Your browser does not support HTML audio, but you can still
      <a href="audiofile.mp3">download the music</a>.</p>
 </audio>
 ```
@@ -39,9 +39,9 @@ The code below is an example of a basic audio implementation using HTML5:
 - If the {{ htmlelement("audio") }} element is not supported then {{ htmlelement("audio") }} and {{ htmlelement("source") }} will be ignored. However any supported text or elements that you define within {{ htmlelement("audio") }} will be displayed or acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing `</audio>` tag. In this case, we've provided a simple paragraph including a link to download the audio directly.
 - The `controls` attribute on the {{ htmlelement("audio") }} element is specified when we require the browser to provide us with default playback controls. If you don't specify this attribute, no controls will appear — and you will instead have to create your own controls and program their functionality using the Media API (see below). However, that can be a good approach, because the default controls look different among various browsers. So creating your own controls ensures a consistent look for the controls across all browsers.
 
-## HTML5 audio in detail
+## HTML audio in detail
 
-Now we've looked at a basic example, let's now explore the different aspects of HTML5 audio in more detail.
+Now we've looked at a basic example, let's now explore the different aspects of HTML audio in more detail.
 
 ### Audio HTML attributes
 
@@ -619,7 +619,7 @@ The following tables list basic audio support across desktop and mobile browsers
 - [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)
 - [HTMLMediaElement events](/en-US/docs/Web/API/HTMLMediaElement#events)
 - [Event reference > Media](/en-US/docs/Web/Events#media)
-- [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
 - [jPlayer](https://jPlayer.org): An open source audio and video library for jQuery and Zepto.
 - [Media Event Inspector](https://jplayer.org/HTML5.Media.Event.Inspector/)

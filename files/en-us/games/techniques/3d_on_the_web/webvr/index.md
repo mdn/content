@@ -78,9 +78,8 @@ function setView() {
   const posState = gPositionSensor.getState();
 
   if (posState.hasPosition) {
-    posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
-                                + roundToTwo(posState.position.y) + " z"
-                                + roundToTwo(posState.position.z);
+    const format = (axis) => `${axis}${roundToTwo(posState.position[axis])}`;
+    posPara.textContent = `Position: ${axis('x')} ${axis('y')} ${axis('x')}`;
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
     if (-posState.position.z > 0.01) {
