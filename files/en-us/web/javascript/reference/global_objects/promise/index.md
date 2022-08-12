@@ -322,8 +322,7 @@ function tetheredGetNumber(resolve, reject) {
 
 function determineParity(value) {
   const isOdd = value % 2 === 1;
-  const parityInfo = { value, isOdd };
-  return parityInfo;
+  return { value, isOdd };
 }
 
 function troubleWithGetNumber(reason) {
@@ -347,7 +346,7 @@ new Promise(tetheredGetNumber)
   .then(determineParity, troubleWithGetNumber)
   .then(promiseGetWord)
   .then((info) => {
-    console.log("Got: ", info.theNumber, " , ", info.wordEvenOdd);
+    console.log(`Got: ${info.value}, ${info.wordEvenOdd}`);
     return info;
   })
   .catch((reason) => {
