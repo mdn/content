@@ -58,7 +58,7 @@ The following snippet is taken from the [resize-observer-text.html](https://mdn.
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
+  for (const entry of entries) {
     if (entry.contentBoxSize) {
       if (entry.contentBoxSize[0]) {
         h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize[0].inlineSize / 200)}rem`;

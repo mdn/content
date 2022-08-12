@@ -39,16 +39,21 @@ multi-column scenarios. Each object in the array contains two properties:
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
-    if (entry.borderBoxSize && entry.borderBoxSize.length > 0) {
-      entry.target.style.borderRadius = `${Math.min(100, (entry.borderBoxSize[0].inlineSize / 10) + (entry.borderBoxSize[0].blockSize / 10))}px`;
+  const calcBorderRadius = (size1, size2) =>
+    `${Math.min(100, size1 / 10 + size2 / 10)}px`;
+
+  for (const entry of entries) {
+    if (entry.borderBoxSize?.length > 0) {
+      const { inlineSize, blockSize } = entry.borderBoxSize[0];
+      entry.target.style.borderRadius = calcBorderRadius(inlineSize, blockSize);
     } else {
-      entry.target.style.borderRadius = `${Math.min(100, (entry.contentRect.width / 10) + (entry.contentRect.height / 10))}px`;
+      const { width, height } = entry.contentRect;
+      entry.target.style.borderRadius = calcBorderRadius(width, height);
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## Specifications
