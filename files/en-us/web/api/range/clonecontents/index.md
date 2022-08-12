@@ -1,6 +1,7 @@
 ---
 title: Range.cloneContents()
 slug: Web/API/Range/cloneContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

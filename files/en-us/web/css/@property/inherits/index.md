@@ -42,7 +42,9 @@ The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using 
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+true | false
+```
 
 ## Examples
 
@@ -82,4 +84,4 @@ window.CSS.registerProperty({
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/en-US/docs/Web/Houdini)
+- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)

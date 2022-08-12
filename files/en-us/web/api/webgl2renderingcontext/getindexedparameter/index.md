@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getIndexedParameter()
 slug: Web/API/WebGL2RenderingContext/getIndexedParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -49,7 +50,7 @@ Depends on the requested information (as specified with `target`).
 ## Examples
 
 ```js
-var binding = gl.getIndexedParameter(gl.TRANSFORM_FEEDBACK_BUFFER_BINDING, 0);
+const binding = gl.getIndexedParameter(gl.TRANSFORM_FEEDBACK_BUFFER_BINDING, 0);
 ```
 
 ## Specifications

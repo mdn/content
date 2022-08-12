@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.shippingOption
 slug: Web/API/PaymentRequest/shippingOption
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request
@@ -39,13 +40,13 @@ payment sheet.
 ```js
 const request = new PaymentRequest(methodData, details, options);
 // Async update to details
-request.onshippingaddresschange = ev => {
+request.onshippingaddresschange = (ev) => {
   ev.updateWith(checkShipping(request));
 };
 // Sync update to the total
-request.onshippingoptionchange = ev => {
+request.onshippingoptionchange = (ev) => {
   const shippingOption = shippingOptions.find(
-    option => option.id === request.id
+    (option) => option.id === request.id
   );
   const newTotal = {
     currency: "USD",

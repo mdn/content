@@ -1,6 +1,7 @@
 ---
 title: PushSubscription
 slug: Web/API/PushSubscription
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -41,11 +42,11 @@ An instance of this interface can be serialized.
 ## Example
 
 ```js
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.getSubscription().then(function(subscription) {
-    subscription.unsubscribe().then(function(successful) {
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.getSubscription().then((subscription) => {
+    subscription.unsubscribe().then((successful) => {
       // You've successfully unsubscribed
-    }).catch(function(e) {
+    }).catch((e) => {
       // Unsubscribing failed
     })
   })

@@ -14,7 +14,7 @@ browser-compat: webextensions.api.tabs.captureTab
 ---
 {{AddonSidebar()}}
 
-Creates a data URI encoding the image of an area of the given tab. You must have the `<all_urls>` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method.
+Creates a data URL encoding the image of an area of the given tab. You must have the `<all_urls>` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -29,9 +29,9 @@ let capturing = browser.tabs.captureTab(
 
 ### Parameters
 
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. ID of the tab to capture. Defaults to the active tab in the current window.
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
   - : {{WebExtAPIRef('extensionTypes.ImageDetails')}}.
 
 ### Return value
@@ -51,7 +51,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let capturing = browser.tabs.captureTab();
   capturing.then(onCaptured, onError);
 });

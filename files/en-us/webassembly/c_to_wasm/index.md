@@ -11,7 +11,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-When you've written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](/en-US/docs/Mozilla/Projects/Emscripten). Let's look at how it works.
+When you've written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](https://emscripten.org/). Let's look at how it works.
 
 ## Emscripten Environment Setup
 
@@ -41,6 +41,7 @@ This is the simplest case we'll look at, whereby you get emscripten to generate 
 
     int main() {
         printf("Hello World\n");
+        return 0;
     }
     ```
 
@@ -80,6 +81,7 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 
     int main() {
         printf("Hello World\n");
+        return 0;
     }
     ```
 
@@ -113,26 +115,25 @@ If you have a function defined in your C code that you want to call as needed fr
 
     int main() {
         printf("Hello World\n");
+        return 0;
     }
 
     #ifdef __cplusplus
-    extern "C" {
+    #define EXTERN extern "C"
+    #else
+    #define EXTERN
     #endif
 
-    EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
+    EXTERN EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
         printf("MyFunction Called\n");
     }
-
-    #ifdef __cplusplus
-    }
-    #endif
     ```
 
     By default, Emscripten-generated code always just calls the `main()` function, and other functions are eliminated as dead code. Putting `EMSCRIPTEN_KEEPALIVE` before a function name stops this from happening. You also need to import the `emscripten.h` library to use `EMSCRIPTEN_KEEPALIVE`.
 
     > **Note:** We are including the `#ifdef` blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.
 
-2. Now add `html_template/shell_minimal.html` into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).
+2. Now add `html_template/shell_minimal.html` with `\{\{{ SCRIPT }}}` as content into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).
 3. Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with `NO_EXIT_RUNTIME`, which is necessary as otherwise when `main()` exits the runtime would be shut down — necessary for proper C emulation, e.g., atexits are called — and it wouldn't be valid to call compiled code.)
 
     ```bash
@@ -144,22 +145,23 @@ If you have a function defined in your C code that you want to call as needed fr
 6. Add a {{HTMLElement("button")}} element as shown below, just above the first opening `<script type='text/javascript'>` tag.
 
     ```html
-    <button class="mybutton">Run myFunction</button>
+    <button id="mybutton">Run myFunction</button>
     ```
 
 7. Now add the following code at the end of the first {{HTMLElement("script")}} element:
 
     ```js
-    document.querySelector('.mybutton')
-        .addEventListener('click', function() {
-            alert('check console');
-            var result = Module.ccall(
-                'myFunction',  // name of C function
-                null,  // return type
-                null,  // argument types
-                null  // arguments
-            );
-        });
+    document
+      .getElementById("mybutton")
+      .addEventListener("click", () => {
+        alert("check console");
+        const result = Module.ccall(
+          "myFunction",  // name of C function
+          null,  // return type
+          null,  // argument types
+          null,  // arguments
+        );
+      });
     ```
 
 This illustrates how `ccall()` is used to call the exported function.

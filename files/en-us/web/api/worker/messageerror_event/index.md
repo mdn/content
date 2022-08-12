@@ -1,6 +1,7 @@
 ---
 title: 'Worker: messageerror event'
 slug: Web/API/Worker/messageerror_event
+page-type: web-api-event
 tags:
   - API
   - Worker
@@ -20,9 +21,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('messageerror', event => { });
+addEventListener('messageerror', (event) => { });
 
-onmessageerror = event => { };
+onmessageerror = (event) => { };
 ```
 
 ## Event type
@@ -91,4 +92,4 @@ worker.onmessageerror = (event) => {
 ## See also
 
 - [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
-- Related events: [`message`](/docs/Web/API/Worker/message_event)
+- Related events: [`message`](/en-US/docs/Web/API/Worker/message_event)

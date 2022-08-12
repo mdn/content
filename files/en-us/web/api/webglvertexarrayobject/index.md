@@ -1,6 +1,7 @@
 ---
 title: WebGLVertexArrayObject
 slug: Web/API/WebGLVertexArrayObject
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -26,13 +27,15 @@ When working with `WebGLVertexArrayObject` objects, the following methods are us
 ## Examples
 
 ```js
-var vao = gl.createVertexArray();
+const vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
-// ...
+// …
+
 // calls to bindBuffer or vertexAttribPointer
 // which will be "recorded" in the VAO
-// ...
+
+// …
 ```
 
 ## Specifications

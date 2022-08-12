@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getSamplerParameter()
 slug: Web/API/WebGL2RenderingContext/getSamplerParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ getSamplerParameter(sampler, pname)
 
 ### Parameters
 
-- sampler
+- `sampler`
   - : A {{domxref("WebGLSampler")}} object.
 - `pname`
 
@@ -56,7 +57,7 @@ Depends on the `pname` parameter, either a {{domxref("WebGL_API/Types", "GLenum"
 ## Examples
 
 ```js
-var sampler = gl.createSampler();
+const sampler = gl.createSampler();
 gl.getSamplerParameter(sampler, gl.TEXTURE_COMPARE_FUNC);
 ```
 

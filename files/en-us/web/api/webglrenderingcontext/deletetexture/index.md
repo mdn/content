@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteTexture()
 slug: Web/API/WebGLRenderingContext/deleteTexture
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,7 +26,7 @@ deleteTexture(texture)
 
 ### Parameters
 
-- texture
+- `texture`
   - : A {{domxref("WebGLTexture")}} object to delete.
 
 ### Return value
@@ -37,11 +38,11 @@ None ({{jsxref("undefined")}}).
 ### Deleting a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var texture = gl.createTexture();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const texture = gl.createTexture();
 
-// ...
+// …
 
 gl.deleteTexture(texture);
 ```

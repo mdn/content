@@ -17,7 +17,7 @@ spec-urls: https://drafts.csswg.org/css-values/#sign-funcs
 
 The **`sign()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) contains one calculation, and returns `-1` if the numeric value of the argument is negative, `+1` if the numeric value of the argument is positive, `0⁺` if the numeric value of the argument is 0⁺, and `0⁻` if the numeric value of the argument is 0⁻.
 
-> **Note:** While [`abs()`](/en-US/docs/Web/CSS/abs()) returns the absolute value of the argument, `sign()` returns the sign of the argument.
+> **Note:** While [`abs()`](/en-US/docs/Web/CSS/abs) returns the absolute value of the argument, `sign()` returns the sign of the argument.
 
 ## Syntax
 
@@ -51,7 +51,7 @@ Another usecase is to control the {{cssxref("position")}} of the element. Either
 ```css
 div {
   position: absolute;
-  top: calc( 100px * sign( var( --value ) ) );
+  top: calc(100px * sign(var(--value)));
 }
 ```
 

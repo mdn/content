@@ -43,7 +43,7 @@ Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macro
 
 ### RTSP
 
-> **Note:** Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers, but be aware that [Firefox OS 1.3 supports RTSP](https://developer.mozilla.org/Firefox_OS/Releases/1.3).
+> **Note:** Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers.
 >
 > Some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT).
 
@@ -168,13 +168,13 @@ Although you can install software like GStreamer, SHOUTcast and Icecast you will
 ## See also
 
 - [HTTP Live Streaming](https://en.wikipedia.org/wiki/HTTP_Live_Streaming)
-- [HLS Browser Support](https://www.jwplayer.com/html5/hls)
+- [HLS Browser Support](https://www.jwplayer.com/blog/hls-in-html5)
 - [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts)
 - [The Basics of HTTP Live Streaming](https://larryjordan.com/articles/basics-of-http-live-streaming/)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
 - [Dynamic Adaptive Streaming over HTTP (MPEG-DASH)](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
-- [MPEG-DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
-- [DASH Reference Client](https://dashif.org/reference/players/javascript/1.0.0/index.html)
+- [MPEG-DASH Media Source Demo](https://web.archive.org/web/20170703160817/https://dash-mse-test.appspot.com/media.html)
+- [DASH Reference Client](https://reference.dashif.org/dash.js/v4.4.0/samples/dash-if-reference-player/index.html)
 - [Dynamic Streaming over HTTP](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [The State of MPEG-DASH Deployment](https://www.streamingmediaglobal.com/Articles/Editorial/Featured-Articles/The-State-of-MPEG-DASH-Deployment-96144.aspx)
 - [Look, no plugins: Live streaming to the browser using Media Source Extensions and MPEG-DASH](https://www.bbc.co.uk/rd/blog/2014-03-media-source-extensions)

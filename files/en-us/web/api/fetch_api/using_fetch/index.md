@@ -1,10 +1,10 @@
 ---
 title: Using the Fetch API
 slug: Web/API/Fetch_API/Using_Fetch
+page-type: guide
 tags:
   - API
   - BODY
-  - Experimental
   - Fetch
   - Guide
   - HTTP
@@ -25,14 +25,15 @@ The `fetch` specification differs from `jQuery.ajax()` in the following signific
 - The Promise returned from `fetch()` **won't reject on HTTP error status** even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the {{domxref("Response/ok", "ok")}} property of the response set to false if the response isn't in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing.
 - Unless `fetch()` is called with the [`credentials`](/en-US/docs/Web/API/fetch#credentials) option set to `include`, `fetch()`:
   - won't send cookies in cross-origin requests
-  - won’t set any cookies sent back in cross-origin responses
+  - won't set any cookies sent back in cross-origin responses
+  - As of August 2018, the default credentials policy changed to same-origin. Firefox was also modified in version 61.0b13)
 
 A basic fetch request is really simple to set up. Have a look at the following code:
 
 ```js
 fetch('http://example.com/movies.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 ```
 
 Here we are fetching a JSON file across the network and printing it to the console. The simplest use of `fetch()` takes one argument — the path to the resource you want to fetch — and does not directly return the JSON response body but instead returns a promise that resolves with a {{domxref("Response")}} object.
@@ -70,7 +71,7 @@ async function postData(url = '', data = {}) {
 }
 
 postData('https://example.com/answer', { answer: 42 })
-  .then(data => {
+  .then((data) => {
     console.log(data); // JSON data parsed by `data.json()` call
   });
 ```
@@ -128,8 +129,8 @@ fetch('https://example.com/profile', {
   },
   body: JSON.stringify(data),
 })
-.then(response => response.json())
-.then(data => {
+.then((response) => response.json())
+.then((data) => {
   console.log('Success:', data);
 })
 .catch((error) => {
@@ -152,11 +153,11 @@ fetch('https://example.com/profile/avatar', {
   method: 'PUT',
   body: formData
 })
-.then(response => response.json())
-.then(result => {
+.then((response) => response.json())
+.then((result) => {
   console.log('Success:', result);
 })
-.catch(error => {
+.catch((error) => {
   console.error('Error:', error);
 });
 ```
@@ -178,11 +179,11 @@ fetch('https://example.com/posts', {
   method: 'POST',
   body: formData,
 })
-.then(response => response.json())
-.then(result => {
+.then((response) => response.json())
+.then((result) => {
   console.log('Success:', result);
 })
-.catch(error => {
+.catch((error) => {
   console.error('Error:', error);
 });
 ```
@@ -239,16 +240,16 @@ A {{domxref("fetch()")}} promise will reject with a {{jsxref("TypeError")}} when
 
 ```js
 fetch('flowers.jpg')
-  .then(response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error('Network response was not OK');
     }
     return response.blob();
   })
-  .then(myBlob => {
+  .then((myBlob) => {
     myImage.src = URL.createObjectURL(myBlob);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error('There has been a problem with your fetch operation:', error);
   });
 ```
@@ -268,8 +269,8 @@ const myRequest = new Request('flowers.jpg', {
 });
 
 fetch(myRequest)
-  .then(response => response.blob())
-  .then(myBlob => {
+  .then((response) => response.blob())
+  .then((myBlob) => {
     myImage.src = URL.createObjectURL(myBlob);
   });
 ```
@@ -340,17 +341,17 @@ A good use case for headers is checking whether the content type is correct befo
 
 ```js
 fetch(myRequest)
-  .then(response => {
+  .then((response) => {
      const contentType = response.headers.get('content-type');
      if (!contentType || !contentType.includes('application/json')) {
        throw new TypeError("Oops, we haven't got JSON!");
      }
      return response.json();
   })
-  .then(data => {
+  .then((data) => {
       /* process your data further */
   })
-  .catch(error => console.error(error));
+  .catch((error) => console.error(error));
 ```
 
 ### Guard
@@ -382,7 +383,7 @@ They can also be created programmatically via JavaScript, but this is only reall
 ```js
 const myBody = new Blob();
 
-addEventListener('fetch', function(event) {
+addEventListener('fetch', (event) => {
   // ServiceWorker intercepting a fetch
   event.respondWith(
     new Response(myBody, {
@@ -401,9 +402,11 @@ The {{domxref("Response.Response","Response()")}} constructor takes two optional
 Both requests and responses may contain body data. A body is an instance of any of the following types:
 
 - {{jsxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array and friends)
-- {{domxref("Blob")}}/{{domxref("File")}}
-- string
+- {{jsxref("TypedArray")}} (Uint8Array and friends)
+- {{jsxref("DataView")}}
+- {{domxref("Blob")}}
+- {{domxref("File")}}
+- {{jsxref("String")}}, or a string literal
 - {{domxref("URLSearchParams")}}
 - {{domxref("FormData")}}
 

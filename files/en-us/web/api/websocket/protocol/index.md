@@ -1,6 +1,7 @@
 ---
 title: WebSocket.protocol
 slug: Web/API/WebSocket/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property

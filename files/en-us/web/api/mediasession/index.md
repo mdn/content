@@ -1,6 +1,7 @@
 ---
 title: MediaSession
 slug: Web/API/MediaSession
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -52,15 +53,19 @@ if ('mediaSession' in navigator) {
     ]
   });
 
-  navigator.mediaSession.setActionHandler('play', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('pause', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('stop', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekbackward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekforward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekto', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('play', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('pause', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('stop', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekbackward', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekforward', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekto', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('previoustrack', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('nexttrack', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('skipad', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('togglecamera', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('togglemicrophone', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('hangup', () => { /* Code excerpted. */ });
+
 }
 ```
 
@@ -71,13 +76,13 @@ const actionHandlers = [
   // play
   [
     'play',
-    async function() {
+    async () => {
       // play our audio
       await audioEl.play();
       // set playback state
       navigator.mediaSession.playbackState = "playing";
       // update our status element
-      updateStatus(allMeta[index], 'Action: play  |  Track is playing...')
+      updateStatus(allMeta[index], 'Action: play  |  Track is playing…')
     }
   ],
   [
@@ -88,7 +93,7 @@ const actionHandlers = [
       // set playback state
       navigator.mediaSession.playbackState = "paused";
       // update our status element
-      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused...');
+      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused…');
     }
   ],
 ]

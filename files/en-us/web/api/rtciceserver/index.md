@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer
 slug: Web/API/RTCIceServer
+page-type: web-api-interface
 tags:
   - Authentication
   - Configuration
@@ -42,7 +43,7 @@ _The following properties have been removed from the specification and should no
 The configuration below establishes two ICE servers. The first one, `stun:stun.services.mozilla.com`, requires authentication, so the username and password are provided. The second server has two URLs: `stun:stun.example.com` and `stun:stun-1.example.com`.
 
 ```js
-var configuration = { iceServers: [{
+const configuration = { iceServers: [{
                           urls: "stun:stun.services.mozilla.com",
                           username: "louis@mozilla.com",
                           credential: "webrtcdemo"
@@ -54,7 +55,7 @@ var configuration = { iceServers: [{
                       }]
 };
 
-var pc = new RTCPeerConnection(configuration);
+const pc = new RTCPeerConnection(configuration);
 ```
 
 Once the configuration object has been created, it is passed into the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor to use it as the configuration for the new peer connection.

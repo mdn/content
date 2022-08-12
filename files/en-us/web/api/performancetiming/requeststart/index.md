@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.requestStart
 slug: Web/API/PerformanceTiming/requestStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

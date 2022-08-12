@@ -7,18 +7,20 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.prefers-contrast
 ---
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-The **`prefers-contrast`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested that the web content is presented with a higher (or lower) contrast.
+The **`prefers-contrast`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect whether the user has requested the web content to be presented with a lower or higher contrast.
 
 ## Syntax
 
 - `no-preference`
-  - : Indicates that the user has made no preference known to the system. This keyword value evaluates as false in a Boolean context.
+  - : Indicates that the user has made no preference known to the system. This keyword value evaluates as false in the Boolean context.
 - `more`
   - : Indicates that user has notified the system that they prefer an interface that has a higher level of contrast.
 - `less`
   - : Indicates that user has notified the system that they prefer an interface that has a lower level of contrast.
+- `custom`
+  - : Indicates that user has notified the system for using a specific set of colors, and the contrast implied by these colors matches neither `more` nor `less`. This value will match the color palette specified by users of [`forced-colors: active`](/en-US/docs/Web/CSS/@media/forced-colors).
 
 ## User preferences
 

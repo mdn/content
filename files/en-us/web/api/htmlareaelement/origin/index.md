@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.origin
 slug: Web/API/HTMLAreaElement/origin
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement

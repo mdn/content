@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.src
 slug: Web/API/HTMLMediaElement/src
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -32,7 +33,7 @@ attribute.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.src); // ""
 ```
 

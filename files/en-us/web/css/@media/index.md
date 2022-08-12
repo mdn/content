@@ -177,7 +177,11 @@ Because of this potential, a browser may opt to fudge the returned values in som
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@media <media-query-list> {
+  <stylesheet>
+}
+```
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: GeolocationPositionError
 slug: Web/API/GeolocationPositionError
+page-type: web-api-interface
 tags:
   - API
   - Geolocation API

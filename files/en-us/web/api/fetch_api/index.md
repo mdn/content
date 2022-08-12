@@ -1,6 +1,7 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
+page-type: web-api-overview
 tags:
   - API
   - Fetch
@@ -9,7 +10,7 @@ tags:
   - Response
   - XMLHttpRequest
   - request
-spec-urls: https://fetch.spec.whatwg.org/
+browser-compat: api.fetch
 ---
 {{DefaultAPISidebar("Fetch API")}}
 
@@ -64,7 +65,7 @@ Browsers have started to add experimental support for the {{DOMxRef("AbortContro
 
 ## Browser compatibility
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.has()
 slug: Web/API/URLSearchParams/has
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,7 +26,7 @@ has(name)
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to find.
 
 ### Return value
@@ -38,7 +39,7 @@ A boolean value.
 let url = new URL('https://example.com?foo=1&bar=2');
 let params = new URLSearchParams(url.search);
 
-params.has('bar') === true; //true
+console.log(params.has('bar')); //true
 ```
 
 ## Specifications

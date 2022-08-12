@@ -1,6 +1,7 @@
 ---
 title: FontFace.lineGapOverride
 slug: Web/API/FontFace/lineGapOverride
+page-type: web-api-instance-property
 tags:
   - API
   - Property

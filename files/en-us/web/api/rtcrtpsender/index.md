@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender
 slug: Web/API/RTCRtpSender
+page-type: web-api-interface
 tags:
   - API
   - Audio

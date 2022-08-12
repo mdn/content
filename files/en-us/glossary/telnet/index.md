@@ -9,4 +9,4 @@ tags:
 
 ## See also
 
-- {{interwiki('wikipedia','Telnet')}} on Wikipedia
+- [Telnet](https://en.wikipedia.org/wiki/Telnet) on Wikipedia

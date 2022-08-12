@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.nextHopProtocol
 slug: Web/API/PerformanceResourceTiming/nextHopProtocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -33,17 +34,18 @@ The following example uses the `nextHopProtocol` property.
 ```js
 function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
+  const p = performance.getEntriesByType("resource");
+  for (let i = 0; i < p.length; i++) {
     print_nextHopProtocol(p[i]);
   }
 }
 function print_nextHopProtocol(perfEntry) {
-  var value = "nextHopProtocol" in perfEntry;
-  if (value)
-    console.log("nextHopProtocol = " + perfEntry.nextHopProtocol);
-  else
+  const value = "nextHopProtocol" in perfEntry;
+  if (value) {
+    console.log(`nextHopProtocol = ${perfEntry.nextHopProtocol}`);
+  } else {
     console.log("nextHopProtocol = NOT supported");
+  }
 }
 ```
 

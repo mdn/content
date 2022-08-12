@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.naturalHeight
 slug: Web/API/PerformanceElementTiming/naturalHeight
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -27,7 +28,7 @@ In this example the image file has a width of 1000px and a height of 750px. Call
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.naturalHeight);
     }

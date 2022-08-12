@@ -87,19 +87,19 @@ A minimal web manifest must have at least a `name` and an `icons` field with at 
 
 When the user visits the PWA with a supporting mobile browser, it should display a notification (such as a banner or dialog box) indicating that it's possible to install the app as a PWA.
 
-![Add to Home screen popup of js13kPWA.](js13kpwa-icon.png)
+![Screenshot of a mobile phone display with a popup saying "You can easily add this web site to your Home screen to have instant access and browse faster with an app-like experience", with a link to continue to the website below the text.](js13kpwa-icon.png)
 
 After the user indicates they wish to proceed with installation, the install banner is shown. That banner is automatically created by the browser, based on the information from the manifest file. For instance, the prompt includes the app's name and icon.
 
-![Install banner of js13kPWA.](js13kpwa-banner.png)
+![Screenshot of a mobile phone display with an install banner at the top displaying the title of the app, its URL, and a screen-wide blue button reading "+ Add to home screen".](js13kpwa-banner.png)
 
 If the user clicks the button, there is a final step showing what the app will look like, and letting the user choose if they definitely want to add the app.
 
-![Add to Home screen popup of js13kPWA.](js13kpwa-add.png)
+![Screenshot of a mobile phone display with a modal window displaying "Add to Home screen" followed by the name of the app, its icon, and two buttons labeled "Cancel" and "Add".](js13kpwa-add.png)
 
 When confirmed, the app will be installed on the home screen.
 
-![](js13kpwa-installed.png)
+![Screenshot of the mobile phone Home screen displaying the logo icon of the application.](js13kpwa-installed.png)
 
 Now the user can launch and use the web app just like any other application on their device. Depending on the device and operating system, the web app's icon may be badged with a small icon that indicates that it's a web app. In the screen shot above, for example, the app has a tiny Firefox icon, indicating that it's a web app that uses the Firefox runtime.
 
@@ -107,7 +107,7 @@ Now the user can launch and use the web app just like any other application on t
 
 In some browsers, a splash screen is also generated from the information in the manifest, which is shown when the PWA is launched and while it's being loaded started up.
 
-![](js13kpwa-splash.png)
+![Screenshot of the app's splash screen on a mobile phone. It is an all-red page with the application logo in the middle and its name below it: "js13kGames Progressive Web App"](js13kpwa-splash.png)
 
 The icon and the theme and background colors are used to create this screen.
 

@@ -10,10 +10,7 @@ tags:
   - ARIA roles
 spec-urls: https://w3c.github.io/aria/#widget
 ---
-
-
-
-The **`widget`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles), is an interactive component of a graphical user interface (GUI).
+The **`widget`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles), is an interactive component of a graphical user interface (GUI).
 
 > **Note:**  The `widget` role is an abstract role used for the ontology. It is included here for completeness of documentation. It should not be used by web authors.
 

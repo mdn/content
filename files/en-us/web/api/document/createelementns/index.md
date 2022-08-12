@@ -1,6 +1,7 @@
 ---
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -49,7 +50,7 @@ The new {{DOMxRef("Element")}}.
 - `NamespaceError` {{domxref("DOMException")}}
   - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI)
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Thrown if the [`qualifiedName`](#qualifiedName) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
+  - : Thrown if the [`qualifiedName`](#qualifiedname) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
 
 ## Important Namespace URIs
 

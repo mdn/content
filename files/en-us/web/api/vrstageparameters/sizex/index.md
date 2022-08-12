@@ -1,6 +1,7 @@
 ---
 title: VRStageParameters.sizeX
 slug: Web/API/VRStageParameters/sizeX
+page-type: web-api-instance-property
 tags:
   - API
 

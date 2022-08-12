@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createShader()
 slug: Web/API/WebGLRenderingContext/createShader
+page-type: web-api-instance-method
 tags:
   - API
   - Graphics
@@ -31,7 +32,7 @@ createShader(type)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A new ({{domxref("WebGLShader")}}).
 
 ## Examples
 

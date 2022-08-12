@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver.receiver
 slug: Web/API/RTCRtpTransceiver/receiver
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -35,6 +36,5 @@ incoming media data whose media ID is the same as the current value of
 
 ## See also
 
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCRtpReceiver")}}

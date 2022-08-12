@@ -1,6 +1,7 @@
 ---
 title: CSSMathMax.values
 slug: Web/API/CSSMathMax/values
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

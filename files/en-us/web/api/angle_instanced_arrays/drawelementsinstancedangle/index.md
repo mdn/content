@@ -1,6 +1,7 @@
 ---
 title: ANGLE_instanced_arrays.drawElementsInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawElementsInstancedANGLE
+page-type: web-api-instance-method
 tags:
   - ANGLE_instanced_arrays
   - API
@@ -64,7 +65,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension('ANGLE_instanced_arrays');
 ext.drawElementsInstancedANGLE(gl.POINTS, 2, gl.UNSIGNED_SHORT, 0, 4);
 ```
 

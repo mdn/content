@@ -1,6 +1,7 @@
 ---
 title: HTMLBRElement
 slug: Web/API/HTMLBRElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

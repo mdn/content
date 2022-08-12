@@ -41,7 +41,7 @@ On top of everything else, you must consider the kinds of situations mobile devi
 
 When developing mobile app layouts, you often run into problems with navigation menus. The concept is the same regardless of the target device — you want to provide a mechanism for users to search for things and get to different views/pages of the application — but because mobile screens are so much smaller, a reasonable desktop navigation can spoil the experience by filling up most of the initial view of the app, covering up the content.
 
-There several ways to solve the problem of navigation getting in the way on mobile, a few of which I'll discuss here. The main objective is to put the content first and to hide away the navigation until the user really needs it.
+There are several ways to solve the problem of navigation getting in the way on mobile, a few of which I'll discuss here. The main objective is to put the content first and to hide away the navigation until the user really needs it.
 
 First of all, you can consider a different navigation mechanism on mobile. So, if you were planning to have a vertical navigation menu on desktop, you might replace this on mobile with a select menu containing the options, or even a single button that when pressed brings the navigation options up in an overlay.
 
@@ -237,14 +237,14 @@ You can write your own feature detects (Mark Pilgrim's [All-In-One Almost-Alphab
 
 I put Modernizr inside my `js/lib` directory, then included it by putting the following construct inside my HTML file:
 
-```js
-<script type="text/javascript" src="js/lib/modernizr.js"></script>
+```html
+<script src="js/lib/modernizr.js"></script>
 ```
 
 With Modernizr in place, we can now use the following JS block to test whether media queries are supported, and if not, to load in [respond.js](https://github.com/scottjehl/Respond), Scott Jehl's `matchMedia` and media query polyfill.
 
 ```java
-if(!Modernizr.mq('only all')) {
+if (!Modernizr.mq('only all')) {
   require('respond');
 }
 ```
@@ -252,7 +252,7 @@ if(!Modernizr.mq('only all')) {
 `matchMedia` is also very useful in many other ways. Imagine you wanted to include some kind of WebGL chart in the desktop version of the site requiring a WebGL library like Three but didn't want it included in the mobile version? You could create a block to only load the library in the case of narrow screen devices:
 
 ```java
-if(window.matchMedia("(min-width: 481px)").matches) {
+if (window.matchMedia("(min-width: 481px)").matches) {
   require('three');
 }
 ```
@@ -284,7 +284,7 @@ This is not hugely pretty, but it does make the main content area more readable 
 Modernizr also puts its feature detect results in a JavaScript `Modenizr` object too, so that you can run JavaScript code selectively depending on feature support. For example, you could do this:
 
 ```js
-if(Modernizr.rgba) {
+if (Modernizr.rgba) {
 
   // run code that depends on RGBA colors being supported.
 

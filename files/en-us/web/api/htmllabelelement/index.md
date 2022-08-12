@@ -1,6 +1,7 @@
 ---
 title: HTMLLabelElement
 slug: Web/API/HTMLLabelElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

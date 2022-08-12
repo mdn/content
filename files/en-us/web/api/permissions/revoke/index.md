@@ -1,6 +1,7 @@
 ---
 title: Permissions.revoke()
 slug: Web/API/Permissions/revoke
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -33,15 +34,18 @@ revoke(descriptor)
     options for the operation consisting of a comma-separated list of name-value pairs.
     The available options are:
 
-    - `name`: The name of the API whose permissions you want to query.
-      Valid values are `'geolocation'`, `'midi'`,
-      `'notifications'`, and `'push'`.
-    - `userVisibleOnly`: (Push only, not supported in Firefox — see the
-      [Browser compatibility](#browser_compatibility) section below) Indicates whether you want to
-      show a notification for every message or be able to send silent push
-      notifications. The default is `false`.
-    - `sysex`: (MIDI only) Indicates whether you need and/or receive system
-      exclusive messages. The default is `false`.
+    - `name`
+      - : The name of the API whose permissions you want to query.
+        Valid values are `'geolocation'`, `'midi'`,
+        `'notifications'`, and `'push'`.
+    - `userVisibleOnly`
+      - : (Push only, not supported in Firefox — see the
+        [Browser compatibility](#browser_compatibility) section below) Indicates whether you want to
+        show a notification for every message or be able to send silent push
+        notifications. The default is `false`.
+    - `sysex` (MIDI only)
+      - : Indicates whether you need and/or receive system
+        exclusive messages. The default is `false`.
 
 > **Note:** As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is
 > granted (e.g. by the user, in the relevant permissions dialog),
@@ -71,7 +75,7 @@ be revoked.
 
 ```js
 function revokePermission() {
-  navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
+  navigator.permissions.revoke({ name: 'geolocation' }).then((result) => {
     report(result.state);
   });
 }

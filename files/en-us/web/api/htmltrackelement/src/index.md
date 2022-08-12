@@ -1,6 +1,7 @@
 ---
 title: HTMLTrackElement.src
 slug: Web/API/HTMLTrackElement/src
+page-type: web-api-instance-property
 tags:
   - HTML
   - HTML DOM

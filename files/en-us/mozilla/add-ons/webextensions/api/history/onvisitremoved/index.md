@@ -64,7 +64,7 @@ function onRemoved(removed) {
   if (removed.allHistory) {
     console.log("All history removed");
   } else if (removed.urls.length) {
-    console.log("URL removed: " + removed.urls[0]);
+    console.log(`URL removed: ${removed.urls[0]}`);
   }
 }
 

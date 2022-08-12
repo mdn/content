@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.setStringValue()
 slug: Web/API/CSSPrimitiveValue/setStringValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue

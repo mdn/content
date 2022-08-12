@@ -1,6 +1,7 @@
 ---
 title: Element.attributes
 slug: Web/API/Element/attributes
+page-type: web-api-instance-property
 tags:
   - API
   - Attributes
@@ -29,8 +30,8 @@ A {{domxref("NamedNodeMap")}} object.
 
 ```js
 // Get the first <p> element in the document
-var para = document.getElementsByTagName("p")[0];
-var atts = para.attributes;
+const para = document.getElementsByTagName("p")[0];
+const atts = para.attributes;
 ```
 
 ### Enumerating elements attributes
@@ -46,16 +47,16 @@ with id "paragraph", and prints each attribute's value.
 
  <head>
   <title>Attributes example</title>
-  <script type="text/javascript">
+  <script>
    function listAttributes() {
-     var paragraph = document.getElementById("paragraph");
-     var result = document.getElementById("result");
+     const paragraph = document.getElementById("paragraph");
+     const result = document.getElementById("result");
 
      // First, let's verify that the paragraph has some attributes
      if (paragraph.hasAttributes()) {
-       var attrs = paragraph.attributes;
-       var output = "";
-       for(var i = attrs.length - 1; i >= 0; i--) {
+       const attrs = paragraph.attributes;
+       let output = "";
+       for (let i = attrs.length - 1; i >= 0; i--) {
          output += attrs[i].name + "->" + attrs[i].value;
        }
        result.value = output;

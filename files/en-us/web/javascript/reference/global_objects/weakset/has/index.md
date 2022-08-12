@@ -35,15 +35,15 @@ has(value)
 
 ## Examples
 
-### Using the has method
+### Using the `has()` method
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+const ws = new WeakSet();
+const obj = {};
 ws.add(window);
 
-mySet.has(window);  // returns true
-mySet.has(obj);     // returns false
+ws.has(window);  // returns true
+ws.has(obj);     // returns false
 ```
 
 ## Specifications

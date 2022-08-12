@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.depthNear
 slug: Web/API/VRDisplay/depthNear
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -28,9 +29,9 @@ A double, representing the z-depth in meters; its initial value is `0.01`.
 ## Examples
 
 ```js
-var vrDisplay;
+let vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
   vrDisplay.depthNear = 1.0;
   vrDisplay.depthFar = 7500.0;

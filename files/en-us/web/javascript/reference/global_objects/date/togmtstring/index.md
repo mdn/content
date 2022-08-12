@@ -42,8 +42,8 @@ using the operating system's time-zone offset and returns a string value that is
 to the following form. The exact format depends on the platform.
 
 ```js
-var today = new Date();
-var str = today.toGMTString();  // deprecated! use toUTCString()
+const today = new Date();
+const str = today.toGMTString();  // deprecated! use toUTCString()
 
 console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
 ```

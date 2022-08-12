@@ -34,6 +34,11 @@ Values of this type are objects.
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Removes all items from the storage area.
 
+## Events
+
+- {{WebExtAPIRef("storage.StorageArea.onChanged")}}
+  - : Fires when one or more items in the storage area change.
+
 ## Browser compatibility
 
 {{Compat}}

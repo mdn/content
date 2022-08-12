@@ -1,6 +1,7 @@
 ---
 title: CSSPseudoElement
 slug: Web/API/CSSPseudoElement
+page-type: web-api-interface
 tags:
   - API
   - CSSPseudoElement

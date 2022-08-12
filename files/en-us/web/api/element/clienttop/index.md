@@ -1,6 +1,7 @@
 ---
 title: Element.clientTop
 slug: Web/API/Element/clientTop
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -68,7 +69,7 @@ In the following example, the client area has a white background and a 24px blac
 
 ### Result
 
-{{EmbedLiveSample("Example", 400, 350)}}
+{{EmbedLiveSample("Examples", 400, 350)}}
 
 ## Notes
 

@@ -104,7 +104,7 @@ The core client-side JavaScript language consists of some common programming fea
 
 - Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called `name`.
 - Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g. "Player 1: Chris".
-- Running code in response to certain events occurring on a web page. We used a {{Event("click")}} event in our example above to detect when the label is clicked and then run the code that updates the text label.
+- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the label is clicked and then run the code that updates the text label.
 - And much more!
 
 What is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called **Application Programming Interfaces** (**APIs**) provide you with extra superpowers to use in your JavaScript code.
@@ -207,7 +207,7 @@ Client-side code is code that is run on the user's computer — when a web page 
 In this module we are explicitly talking about **client-side JavaScript**.
 
 Server-side code on the other hand is run on the server, then its results are downloaded and displayed in the browser.
-Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET and... JavaScript!
+Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET, and even JavaScript!
 JavaScript can also be used as a server-side language, for example in the popular Node.js environment — you can find out more about server-side JavaScript in our [Dynamic Websites – Server-side programming](/en-US/docs/Learn/Server-side) topic.
 
 ### Dynamic versus static code
@@ -358,7 +358,7 @@ In the internal example, you can see this structure around the code:
 
 ```js
 document.addEventListener('DOMContentLoaded', () => {
-  ...
+  // …
 });
 ```
 
@@ -367,7 +367,7 @@ The JavaScript inside this block will not run until after that event is fired, t
 
 In the external example, we use a more modern JavaScript feature to solve the problem, the `defer` attribute, which tells the browser to continue downloading the HTML content once the `<script>` tag element has been reached.
 
-```js
+```html
 <script src="script.js" defer></script>
 ```
 

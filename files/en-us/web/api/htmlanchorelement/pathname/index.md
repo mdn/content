@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.pathname
 slug: Web/API/HTMLAnchorElement/pathname
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement

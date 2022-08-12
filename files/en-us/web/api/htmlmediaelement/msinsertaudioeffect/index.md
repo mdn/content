@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.msInsertAudioEffect()
 slug: Web/API/HTMLMediaElement/msInsertAudioEffect
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions
@@ -36,7 +37,7 @@ msInsertAudioEffect(activatableClassId, effectRequired, config)
 
 ### Return value
 
-None ({{jsxref("undefined")}}). 
+None ({{jsxref("undefined")}}).
 
 ## See also
 

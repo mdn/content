@@ -1,6 +1,7 @@
 ---
 title: 'Window: focus event'
 slug: Web/API/Window/focus_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -18,36 +19,30 @@ The **`focus`** event fires when an element has received focus.
 
 The opposite of `focus` is {{domxref("Window/blur_event", "blur")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("FocusEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onfocus", "onfocus")}}
-      </td>
-    </tr>
-    <tr>
-      <th>Sync / Async</th>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <th>Composed</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('focus', (event) => { });
+
+onfocus = (event) => { };
+```
+
+## Event type
+
+An {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("FocusEvent")}}
+
+## Event properties
+
+_This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
+
+- {{domxref("FocusEvent.relatedTarget")}}
+  - : An {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to `null` for security reasons.
 
 ## Examples
 

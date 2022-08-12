@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msIsStereo3D
 slug: Web/API/HTMLVideoElement/msIsStereo3D
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions
@@ -32,4 +33,4 @@ enhancement information (SEI) messages to determine the stereo capability of the
 ## See also
 
 - {{DOMxRef("HTMLVideoElement")}}
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

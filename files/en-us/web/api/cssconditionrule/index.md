@@ -1,6 +1,7 @@
 ---
 title: CSSConditionRule
 slug: Web/API/CSSConditionRule
+page-type: web-api-interface
 tags:
   - API
   - CSSOM

@@ -69,7 +69,7 @@ spec-urls: https://drafts.csswg.org/selectors/
 - [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
   - : The `+` combinator matches the second element only if it _immediately_ follows the first element.
     **Syntax:** `A + B`
-    **Example:** `h2 + p` will match all {{HTMLElement("p")}} elements that _immediately_ follow an {{HTMLElement("h2")}} element.
+    **Example:** `h2 + p` will match the first {{HTMLElement("p")}} element that _immediately_ follow an {{HTMLElement("h2")}} element.
 
 - [Column combinator](/en-US/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
   - : The `||` combinator selects nodes which belong to a column.
@@ -90,7 +90,7 @@ spec-urls: https://drafts.csswg.org/selectors/
 
 {{Specifications}}
 
-See the [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes#Specifications) and [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#Specifications) specification tables for details on those.
+See the [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#specifications) specification tables for details on those.
 
 ## See also
 

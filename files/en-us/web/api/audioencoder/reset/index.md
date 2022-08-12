@@ -1,15 +1,17 @@
 ---
 title: AudioEncoder.reset()
 slug: Web/API/AudioEncoder/reset
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - reset
   - AudioEncoder
+  - Experimental
 browser-compat: api.AudioEncoder.reset
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`reset()`** method of the {{domxref("AudioEncoder")}} interface resets all states including configuration, control messages in the control message queue, and all pending callbacks.
 
@@ -25,7 +27,7 @@ None.
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

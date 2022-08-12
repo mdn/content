@@ -17,7 +17,7 @@ browser-compat: javascript.builtins.String.fontcolor
 The **`fontcolor()`** method creates a {{HTMLElement("font")}}
 HTML element that causes a string to be displayed in the specified font color.
 
-> **Note:** The \<font> element has been removed in [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore.
+> **Note:** The \<font> element has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore.
 > Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
 
 ## Syntax
@@ -40,7 +40,7 @@ A string containing a {{HTMLElement("font")}} HTML element.
 
 If you express color as a hexadecimal RGB triplet, you must use the format
 `rrggbb`. For example, the hexadecimal RGB values for salmon are red=FA,
-green=80, and blue=72, so the RGB triplet for salmon is "`FA8072`".
+green=80, and blue=72, so the RGB triplet for salmon is `"FA8072"`.
 
 ## Examples
 
@@ -50,12 +50,12 @@ The following example uses the `fontcolor()` method to change the color of a
 string by producing a string with the HTML `<font>` element.
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 
-console.log(worldString.fontcolor('red') +  ' is red in this line');
+console.log(`${worldString.fontcolor('red')} is red in this line`);
 // '<font color="red">Hello, world</font> is red in this line'
 
-console.log(worldString.fontcolor('FF00') + ' is red in hexadecimal in this line');
+console.log(`${worldString.fontcolor('FF00')} is red in hexadecimal in this line`);
 // '<font color="FF00">Hello, world</font> is red in hexadecimal in this line'
 ```
 

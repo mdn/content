@@ -10,5 +10,5 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "CardDAV")}} on Wikipedia
+- [CardDAV](https://en.wikipedia.org/wiki/CardDAV) on Wikipedia
 - [RFC 6352: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV)](https://datatracker.ietf.org/doc/html/rfc6352)

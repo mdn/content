@@ -29,12 +29,12 @@ isn't a number and can't be converted into one.
 Math.min()
 Math.min(value0)
 Math.min(value0, value1)
-Math.min(value0, value1, ... , valueN)
+Math.min(value0, value1, /* … ,*/ valueN)
 ```
 
 ### Parameters
 
-- `value1, value2, ...`
+- `value1`, …, `valueN`
   - : Zero or more numbers among which the lowest value will be selected and returned.
 
 ### Return value
@@ -62,8 +62,8 @@ This finds the min of `x` and `y` and assigns it to
 `z`:
 
 ```js
-var x = 10, y = -20;
-var z = Math.min(x, y);
+const x = 10, y = -20;
+const z = Math.min(x, y);
 ```
 
 ### Clipping a value with Math.min()
@@ -72,7 +72,7 @@ var z = Math.min(x, y);
 equal to a boundary. For instance, this
 
 ```js
-var x = f(foo);
+let x = f(foo);
 
 if (x > boundary) {
   x = boundary;
@@ -82,7 +82,7 @@ if (x > boundary) {
 may be written as this
 
 ```js
-var x = Math.min(f(foo), boundary);
+const x = Math.min(f(foo), boundary);
 ```
 
 {{jsxref("Math.max()")}} can be used in a similar way to clip a value at the other end.

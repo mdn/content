@@ -1,6 +1,7 @@
 ---
 title: XPathResult.invalidIteratorState
 slug: Web/API/XPathResult/invalidIteratorState
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API
@@ -38,8 +39,8 @@ The following example shows the use of the `invalidIteratorState` property.
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
+const xpath = "//div";
+const result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
 // Invalidates the iterator state
 document.querySelector("div").remove();
 document.querySelector("output").textContent = result.invalidIteratorState ? "invalid" : "valid";
@@ -47,7 +48,7 @@ document.querySelector("output").textContent = result.invalidIteratorState ? "in
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

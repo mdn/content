@@ -1,6 +1,7 @@
 ---
 title: WebVR API
 slug: Web/API/WebVR_API
+page-type: web-api-overview
 tags:
   - API
   - Deprecated
@@ -11,6 +12,7 @@ tags:
   - VR
   - Virtual Reality
   - WebVR
+browser-compat: api.Navigator.getVRDisplays
 ---
 {{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}
 
@@ -66,13 +68,13 @@ Many WebVR hardware setups feature controllers that go along with the headset. T
 - {{DOMxRef("VRDisplay")}}
   - : Represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality.
 - {{DOMxRef("VRDisplayCapabilities")}}
-  - : Describes the capabilities of a {{DOMxRef("VRDisplay")}} — it's features can be used to perform VR device capability tests, for example can it return position information.
+  - : Describes the capabilities of a {{DOMxRef("VRDisplay")}} — its features can be used to perform VR device capability tests, for example can it return position information.
 - {{DOMxRef("VRDisplayEvent")}}
   - : Represents the event object of WebVR-related events (see the [window object extensions](#window) listed below).
 - {{DOMxRef("VRFrameData")}}
   - : Represents all the information needed to render a single frame of a VR scene; constructed by {{DOMxRef("VRDisplay.getFrameData()")}}.
 - {{DOMxRef("VRPose")}}
-  - : Represents the position state at a given timestamp (which includes orientation, position, velocity, and acceleration.)
+  - : Represents the position state at a given timestamp (which includes orientation, position, velocity, and acceleration).
 - {{DOMxRef("VREyeParameters")}}
   - : Provides access to all the information required to correctly render a scene for each given eye, including field of view information.
 - {{DOMxRef("VRFieldOfView")}}
@@ -88,7 +90,7 @@ The WebVR API extends the following APIs, adding the listed features.
 
 #### Gamepad
 
-- {{DOMxRef("Gamepad.displayId")}}{{ReadOnlyInline}}
+- {{DOMxRef("Gamepad.displayId")}} {{ReadOnlyInline}}
   - : _Returns the {{DOMxRef("VRDisplay.displayId")}} of the associated {{DOMxRef("VRDisplay")}} — the `VRDisplay` that the gamepad is controlling the displayed scene of._
 
 #### Navigator
@@ -133,9 +135,7 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## Browser compatibility
 
-### `Navigator.getVRDisplays`
-
-{{Compat("api.Navigator.getVRDisplays")}}
+{{Compat}}
 
 ## See also
 

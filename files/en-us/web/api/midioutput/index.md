@@ -1,6 +1,7 @@
 ---
 title: MIDIOutput
 slug: Web/API/MIDIOutput
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -32,9 +33,9 @@ _This interface also inherits methods from {{domxref("MIDIPort")}}._
 The following example sends a middle C immediately on MIDI channel 1.
 
 ```js
-function sendMiddleC( midiAccess, portID ) {
-  var noteOnMessage = [0x90, 60, 0x7f];    // note on, middle C, full velocity
-  var output = midiAccess.outputs.get(portID);
+function sendMiddleC(midiAccess, portID) {
+  const noteOnMessage = [0x90, 60, 0x7f];    // note on, middle C, full velocity
+  const output = midiAccess.outputs.get(portID);
   output.send(noteOnMessage); // sends the message.
 }
 ```

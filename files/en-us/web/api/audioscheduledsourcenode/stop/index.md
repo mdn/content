@@ -1,6 +1,7 @@
 ---
 title: AudioScheduledSourceNode.stop()
 slug: Web/API/AudioScheduledSourceNode/stop
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

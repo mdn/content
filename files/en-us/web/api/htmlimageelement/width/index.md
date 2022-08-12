@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.width
 slug: Web/API/HTMLImageElement/width
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -47,7 +48,7 @@ drawn at 400px.
 
 ```html
 <p>Image width: <span class="size">?</span>px (resize to update)</p>
-<img src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png.png"
+<img src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
       alt="Clock"
       srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
           /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w"
@@ -62,10 +63,10 @@ at the moment. This is performed in the window's {{domxref("Window.load_event",
 current width information is always available.
 
 ```js
-var clockImage = document.querySelector("img");
+const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateWidth = event => { output.innerText = clockImage.width; };
+const updateWidth = (event) => { output.innerText = clockImage.width; };
 
 window.addEventListener("load", updateWidth);
 window.addEventListener("resize", updateWidth);
@@ -73,9 +74,9 @@ window.addEventListener("resize", updateWidth);
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 450)}}
+{{EmbedLiveSample("Examples", 640, 450)}}
 
-This example may be easier to try out {{LiveSampleLink('Example', 'in its own window')}}.
+This example may be easier to try out {{LiveSampleLink('Examples', 'in its own window')}}.
 
 ## Specifications
 

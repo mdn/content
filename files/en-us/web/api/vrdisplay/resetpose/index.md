@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.resetPose()
 slug: Web/API/VRDisplay/resetPose
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -35,14 +36,14 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
 // Assuming vrDisplay already contains a VRDisplay object,
 // and we have a <button> referenced inside btn
-btn.addEventListener('click', function() {
+btn.addEventListener('click', () => {
   vrDisplay.resetPose();
   console.log('Current pose set as origin/center');
 });

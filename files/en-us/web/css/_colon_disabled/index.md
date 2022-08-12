@@ -23,11 +23,13 @@ input:disabled {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:disabled
+```
 
 ## Examples
 
-This example shows a basic shipping form. It uses the [JavaScript](/en-US/docs/Web/JavaScript) {{event("change")}} event to let the user enable/disable the billing fields.
+This example shows a basic shipping form. It uses the [JavaScript](/en-US/docs/Web/JavaScript) {{domxref("HTMLElement/change_event", "change")}} event to let the user enable/disable the billing fields.
 
 ### HTML
 
@@ -64,19 +66,19 @@ input[type="text"]:disabled {
 
 ```js
 // Wait for the page to finish loading
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   // Attach `change` event listener to checkbox
   document.getElementById('billing-checkbox').onchange = toggleBilling;
 }, false);
 
 function toggleBilling() {
   // Select the billing text fields
-  var billingItems = document.querySelectorAll('#billing input[type="text"]');
+  const billingItems = document.querySelectorAll('#billing input[type="text"]');
 
   // Toggle the billing text fields
-  for (var i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
-  }
+  billingItems.forEach((item) => {
+    item.disabled = !item.disabled;
+  });
 }
 ```
 

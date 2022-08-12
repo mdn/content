@@ -45,7 +45,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - In the past, the {{ cssxref(":hover") }} pseudoclass was not applied to class selectors when in quirks mode; for example, `.someclass:hover` did not work. This quirk has been removed.
 - The {{ cssxref(":indeterminate") }} pseudo-class can be applied to {{ HTMLElement("progress") }} elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.
 - The `-moz-win-exclude-glass` value has been added to the `-moz-appearance` CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.
-- {{ Bug(658949) }} changed how the hash (#) symbol is treated in data URIs which may break CSS stylesheets which contain such a symbol if it is not escaped.
+- {{ Bug(658949) }} changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such a symbol if it is not escaped.
 
 ### DOM
 
@@ -76,11 +76,11 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - The `mozResponseArrayBuffer` property of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object has been replaced with the `responseType` and `response` properties.
 - The {{ domxref("element.dataset") }} property has been added to the [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) interface allowing access to the [`data-*` global attributes](/en-US/docs/Web/HTML/Global_attributes#data-) of an element.
 - The {{ domxref("CustomEvent") }} interface has been implemented. (see {{ bug("427537") }})
-- For security reasons, `data:` and `javascript:` URIs no longer inherit the security context of the current page when the user enters them in the location bar; instead, a new, empty, security context is created. This means that script loaded by entering `javascript:` URIs in the location bar no longer has access to DOM methods and the like, for example. These URIs continue to work as before when used by script, however.
+- For security reasons, `data:` and `javascript:` URLs no longer inherit the security context of the current page when the user enters them in the location bar; instead, a new, empty, security context is created. This means that script loaded by entering `javascript:` URLs in the location bar no longer has access to DOM methods and the like, for example. These URLs continue to work as before when used by script, however.
 
 ### JavaScript
 
-- In the past, it was possible to use the `new` operator on several built-in functions (eval, parseInt, Date.parse...) that should not have allowed it, according to the specification. This behavior is no longer supported. Using the `new` operator in this way was never officially supported and was not widely done, so it's unlikely that this change affects you.
+- In the past, it was possible to use the `new` operator on several built-in functions (`eval()`, `parseInt()`, `Date.parse()`, …) that should not have allowed it, according to the specification. This behavior is no longer supported. Using the `new` operator in this way was never officially supported and was not widely done, so it's unlikely that this change affects you.
 - ECMAScript 2015 [WeakMaps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) have been added as a prototype implementation.
 
 ### SVG
@@ -125,15 +125,15 @@ For an overview of the changes you may need to make in order to make your add-on
 
 #### FileUtils.jsm
 
-- The `openSafeFileOutputStream()` method now opens files with the `DEFER_OPEN` [behavior flag](/en-US/docs/XPCOM_Interface_Reference/nsIFileOutputStream#Behavior_flag_constants) instead of attempting to open them immediately.
+- The `openSafeFileOutputStream()` method now opens files with the `DEFER_OPEN` [behavior flag](/en-US/docs/XPCOM_Interface_Reference/nsIFileOutputStream#behavior_flag_constants) instead of attempting to open them immediately.
 
 #### XPCOMUtils.jsm
 
-- The new [`importRelative()`](</en-US/docs/JavaScript_code_modules/XPCOMUtils.jsm#importRelative()>) method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
+- The new [`importRelative()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#importRelative()>) method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
 
 ### XPCOM
 
-- [`nsCOMArray<T>`](/en-US/docs/XPCOM_array_guide#nsCOMArray.3cT.3e) now has a [`RemoveObjectsAt()`](/en-US/docs/XPCOM_array_guide#Deleting_objects) method for removing multiple objects at once from the array.
+- [`nsCOMArray<T>`](/en-US/docs/XPCOM_array_guide#nsCOMArray.3cT.3e) now has a [`RemoveObjectsAt()`](/en-US/docs/XPCOM_array_guide#deleting_objects) method for removing multiple objects at once from the array.
 
 ### Using the DOM from chrome
 

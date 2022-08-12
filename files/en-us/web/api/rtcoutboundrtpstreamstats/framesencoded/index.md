@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.framesEncoded
 slug: Web/API/RTCOutboundRtpStreamStats/framesEncoded
+page-type: web-api-instance-property
 tags:
   - API
   - Encoding

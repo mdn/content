@@ -39,7 +39,7 @@ const string3 = `Yet another string primitive`;
 const string4 = new String("A String object");
 ```
 
-String primitives and string objects can be used interchangeably in most situations.
+String primitives and string objects share many behaviors, but have other important differences and caveats.
 See "[String primitives and String objects](#string_primitives_and_string_objects)" below.
 
 String literals can be specified using single or double quotes, which are treated
@@ -52,14 +52,14 @@ There are two ways to access an individual character in a string. The first is t
 {{jsxref("String.prototype.charAt()", "charAt()")}} method:
 
 ```js
-return 'cat'.charAt(1) // returns "a"
+'cat'.charAt(1) // gives value "a"
 ```
 
 The other way (introduced in ECMAScript 5) is to treat the string as an array-like
 object, where individual characters correspond to a numerical index:
 
 ```js
-return 'cat'[1] // returns "a"
+'cat'[1] // gives value "a"
 ```
 
 When using bracket notation for character access, attempting to delete or assign a
@@ -72,30 +72,29 @@ In C, the `strcmp()` function is used for comparing strings. In JavaScript,
 you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators):
 
 ```js
-let a = 'a'
-let b = 'b'
+const a = 'a';
+const b = 'b';
 if (a < b) { // true
-  console.log(a + ' is less than ' + b)
+  console.log(`${a} is less than ${b}`)
 } else if (a > b) {
-  console.log(a + ' is greater than ' + b)
+  console.log(`${a} is greater than ${b}`)
 } else {
-  console.log(a + ' and ' + b + ' are equal.')
+  console.log(`${a} and ${b} are equal.`)
 }
 ```
 
 A similar result can be achieved using the {{jsxref("String.prototype.localeCompare()",
   "localeCompare()")}} method inherited by `String` instances.
 
-Note that `a == b` compares the strings in `a` and
+Note that `a === b` compares the strings in `a` and
 `b` for being equal in the usual case-sensitive way. If you wish
 to compare without regard to upper or lower case characters, use a function similar to
 this:
 
 ```js
-function isEqual(str1, str2)
-{
-    return str1.toUpperCase() === str2.toUpperCase()
-} // isEqual
+function isEqual(str1, str2) {
+  return str1.toUpperCase() === str2.toUpperCase();
+}
 ```
 
 Upper case is used instead of lower case in this function, due to problems with certain
@@ -109,20 +108,20 @@ Note that JavaScript distinguishes between `String` objects and
 
 String literals (denoted by double or single quotes) and strings returned from
 `String` calls in a non-constructor context (that is, called without using
-the {{jsxref("Operators/new", "new")}} keyword) are primitive strings. JavaScript
-automatically converts primitives to `String` objects, so that it's possible
-to use `String` object methods for primitive strings. In contexts where a
+the {{jsxref("Operators/new", "new")}} keyword) are primitive strings. In contexts where a
 method is to be invoked on a primitive string or a property lookup occurs, JavaScript
 will automatically wrap the string primitive and call the method or perform the property
-lookup.
+lookup on the wrapper object instead.
 
 ```js
-let s_prim = 'foo'
-let s_obj = new String(s_prim)
+const strPrim = 'foo';
+const strObj = new String(strPrim);
 
-console.log(typeof s_prim) // Logs "string"
-console.log(typeof s_obj)  // Logs "object"
+console.log(typeof strPrim); // Logs "string"
+console.log(typeof strObj);  // Logs "object"
 ```
+
+> **Warning:** You should rarely find yourself using `String` as a constructor.
 
 String primitives and `String` objects also give different results when
 using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
@@ -130,10 +129,10 @@ using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
 all other objects are, by returning the object. For example:
 
 ```js
-let s1 = '2 + 2'              // creates a string primitive
-let s2 = new String('2 + 2')  // creates a String object
-console.log(eval(s1))         // returns the number 4
-console.log(eval(s2))         // returns the string "2 + 2"
+const s1 = '2 + 2';              // creates a string primitive
+const s2 = new String('2 + 2');  // creates a String object
+console.log(eval(s1));           // returns the number 4
+console.log(eval(s2));           // returns the string "2 + 2"
 ```
 
 For these reasons, the code may break when it encounters `String` objects
@@ -163,44 +162,66 @@ Special characters can be encoded using escape sequences:
 | `\t`                                                                                                                                                   | tab (U+0009 CHARACTER TABULATION)                                                                                          |
 | `\b`                                                                                                                                                   | backspace (U+0008 BACKSPACE)                                                                                               |
 | `\f`                                                                                                                                                   | form feed (U+000C FORM FEED)                                                                                               |
-| `\uXXXX` …where `XXXX` is exactly 4 hex digits in the range `0000`–`FFFF`; e.g., `\u000A` is the same as `\n` (LINE FEED); `\u0021` is "`!`"           | Unicode code point between `U+0000` and `U+FFFF` (the Unicode Basic Multilingual Plane)                                    |
-| `\u{X}`…`\u{XXXXXX}` …where `X`…`XXXXXX` is 1–6 hex digits in the range `0`–`10FFFF`; e.g., `\u{A}` is the same as `\n` (LINE FEED); `\u{21}` is "`!`" | Unicode code point between `U+0000` and `U+10FFFF` (the entirety of Unicode)                                               |
-| `\xXX` …where `XX` is exactly 2 hex digits in the range `00`–`FF`; e.g., `\x0A` is the same as `\n` (LINE FEED); `\x21` is "`!`"                       | Unicode code point between `U+0000` and `U+00FF` (the Basic Latin and Latin-1 Supplement blocks; equivalent to ISO-8859-1) |
+| `\uXXXX` …where `XXXX` is exactly 4 hex digits in the range `0000`–`FFFF`; e.g., `\u000A` is the same as `\n` (LINE FEED); `\u0021` is `!`           | Unicode code point between `U+0000` and `U+FFFF` (the Unicode Basic Multilingual Plane)                                    |
+| `\u{X}`…`\u{XXXXXX}` …where `X`…`XXXXXX` is 1–6 hex digits in the range `0`–`10FFFF`; e.g., `\u{A}` is the same as `\n` (LINE FEED); `\u{21}` is `!` | Unicode code point between `U+0000` and `U+10FFFF` (the entirety of Unicode)                                               |
+| `\xXX` …where `XX` is exactly 2 hex digits in the range `00`–`FF`; e.g., `\x0A` is the same as `\n` (LINE FEED); `\x21` is `!`                       | Unicode code point between `U+0000` and `U+00FF` (the Basic Latin and Latin-1 Supplement blocks; equivalent to ISO-8859-1) |
 
 ### Long literal strings
 
 Sometimes, your code will include strings which are very long. Rather than having lines
 that go on endlessly, or wrap at the whim of your editor, you may wish to specifically
 break the string into multiple lines in the source code without affecting the actual
-string contents. There are two ways you can do this.
+string contents.
 
-#### Method 1
-
-You can use the [+](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+You can use the [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
 operator to append multiple strings together, like this:
 
 ```js
-let longString = "This is a very long string which needs " +
-                 "to wrap across multiple lines because " +
-                 "otherwise my code is unreadable."
+const longString = "This is a very long string which needs " +
+                   "to wrap across multiple lines because " +
+                   "otherwise my code is unreadable."
 ```
 
-#### Method 2
-
-You can use the backslash character (`\`) at the end of each line to
+Or you can use the backslash character (`\`) at the end of each line to
 indicate that the string will continue on the next line. Make sure there is no space or
 any other character after the backslash (except for a line break), or as an indent;
 otherwise it will not work.
 
-That form looks like this:
-
 ```js
-let longString = "This is a very long string which needs \
+const longString = "This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable."
 ```
 
 Both of the above methods result in identical strings.
+
+### UTF-16 characters, Unicode codepoints, and grapheme clusters
+
+Strings are represented fundamentally as sequences of [UTF-16 code units](https://en.wikipedia.org/wiki/UTF-16). In UTF-16 encoding, every code unit is exact 16 bits long. This means there are a maximum of 2<sup>16</sup>, or 65536 possible characters representable as single UTF-16 code units. This character set is called the [basic multilingual plane (BMP)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane), and includes the most common characters like the Latin, Greek, Cyrillic alphabets, as well as many Easy Asian characters. Each code unit can be written in a string with `\u` followed by exactly four hex digits.
+
+However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. Therefore, "lone surrogates" are often not valid values for string manipulation — for example, [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) will throw a {{jsxref("URIError")}} for lone surrogates. Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode codepoint_. Each Unicode codepoint can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
+
+On top of Unicode characters, there are certain sequences of Unicode characters that should be treated as one visual unit, known as a _grapheme cluster_. The most common case is emojis: many emojis that have a range of variations are actually formed by multiple emojis, usually joined by the \<ZWJ> (`U+200D`) character.
+
+You must be careful which level of characters you are iterating on. For example, [`split("")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) will split by UTF-16 code units and will separate surrogate pairs. String indexes also refer to the index of each UTF-16 code unit. On the other hand, [`@@iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) iterates by Unicode codepoints. Iterating through grapheme clusters will require some custom code.
+
+```js
+"😄".split(""); // ['\ud83d', '\ude04']; splits into two lone surrogates
+
+// "Backhand Index Pointing Right: Dark Skin Tone"
+[..."👉🏿"]; // ['👉', '🏿']
+// splits into the basic "Backhand Index Pointing Right" emoji and
+// the "Dark skin tone" emoji
+
+// "Family: Man, Boy"
+[..."👨‍👦"]; // [ '👨', '‍', '👦' ]
+// splits into the "Man" and "Boy" emoji, joined by a ZWJ
+
+// The United Nations flag
+[..."🇺🇳"]; // [ '🇺', '🇳' ]
+// splits into two "region indicator" letters "U" and "N".
+// All flag emojis are formed by joining two region indicator letters
+```
 
 ## Constructor
 
@@ -226,7 +247,7 @@ Both of the above methods result in identical strings.
 
 ## Instance methods
 
-- {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}}{{Experimental_Inline}}
+- {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}} {{Experimental_Inline}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified `index`. Accepts negative integers, which count back from the last string character.
 - {{jsxref("String.prototype.charAt()", "String.prototype.charAt(<var>index</var>)")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified
@@ -348,7 +369,7 @@ Both of the above methods result in identical strings.
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("String.prototype.@@iterator()")}}
+- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
@@ -392,14 +413,14 @@ Both of the above methods result in identical strings.
 
 It's possible to use `String` as a more reliable
 {{jsxref("String.prototype.toString()", "toString()")}} alternative, as it works when
-used on {{jsxref("null")}} and {{jsxref("undefined")}}. For example:
+used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
 
 ```js
-var nullVar = null;
+const nullVar = null;
 nullVar.toString();       // TypeError: nullVar is null
 String(nullVar);          // "null"
 
-var undefinedVar;
+const undefinedVar = undefined;
 undefinedVar.toString();  // TypeError: undefinedVar is undefined
 String(undefinedVar);     // "undefined"
 ```
@@ -416,5 +437,3 @@ String(undefinedVar);     // "undefined"
 
 - [Text formatting in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 - {{jsxref("RegExp")}}
-- {{domxref("DOMString")}}
-- [Binary strings](/en-US/docs/Web/API/DOMString/Binary)

@@ -1,6 +1,7 @@
 ---
 title: BluetoothUUID.getCharacteristic()
 slug: Web/API/BluetoothUUID/getCharacteristic
+page-type: web-api-instance-method
 tags:
   - API
   - Method

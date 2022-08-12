@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrackEvent()
 slug: Web/API/MediaStreamTrackEvent/MediaStreamTrackEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -44,7 +45,7 @@ A new {{domxref("MediaStreamTrackEvent")}} object, initialized based on the prov
 
 ## See also
 
-- {{event("addtrack")}} and {{event("removetrack")}} events
+- {{domxref("MediaStream/addtrack_event", "addtrack")}} and {{domxref("MediaStream/removetrack_event", "removetrack")}} events
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStream")}}
 - [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)

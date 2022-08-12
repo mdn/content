@@ -102,7 +102,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 4. However, you can't include the same quote mark inside the string if it's being used to contain them. The following will error, as it confuses the browser as to where the string ends:
 
     ```js example-bad
-    const bigmouth = 'I've got no right to take my place...';
+    const bigmouth = 'I've got no right to take my place…';
     ```
 
     This leads us very nicely into our next subject.
@@ -112,7 +112,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 To fix our previous problem code line, we need to escape the problem quote mark. Escaping characters means that we do something to them to make sure they are recognized as text, not part of the code. In JavaScript, we do this by putting a backslash just before the character. Try this:
 
 ```js
-const bigmouth = 'I\'ve got no right to take my place...';
+const bigmouth = 'I\'ve got no right to take my place…';
 console.log(bigmouth);
 ```
 
@@ -175,7 +175,7 @@ You can also concatenate strings using the `+` operator:
 ```js
 const greeting = "Hello";
 const name = "Chris";
-console.log(greeting + ", " + name); // "Hello, Chris"
+console.log(`${greeting}, ${name}`); // "Hello, Chris"
 ```
 
 However, template literals usually give you more readable code:

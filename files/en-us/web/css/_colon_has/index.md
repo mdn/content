@@ -21,7 +21,9 @@ let test = document.querySelector('a:has(> img)');
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:has( <forgiving-relative-selector-list> )
+```
 
 ## Description
 

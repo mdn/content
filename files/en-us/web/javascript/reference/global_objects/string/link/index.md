@@ -53,10 +53,10 @@ The following example displays the word "MDN" as a hypertext link that returns t
 to the Mozilla Developer Network.
 
 ```js
-var hotText = 'MDN';
-var url = 'https://developer.mozilla.org/';
+const hotText = 'MDN';
+const url = 'https://developer.mozilla.org/';
 
-console.log('Click to return to ' + hotText.link(url));
+console.log(`Click to return to ${hotText.link(url)}`);
 // Click to return to <a href="https://developer.mozilla.org/">MDN</a>
 ```
 

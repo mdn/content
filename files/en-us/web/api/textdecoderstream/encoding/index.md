@@ -1,6 +1,7 @@
 ---
 title: TextDecoderStream.encoding
 slug: Web/API/TextDecoderStream/encoding
+page-type: web-api-instance-property
 tags:
   - API
   - Property

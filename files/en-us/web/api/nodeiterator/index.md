@@ -1,6 +1,7 @@
 ---
 title: NodeIterator
 slug: Web/API/NodeIterator
+page-type: web-api-interface
 tags:
   - API
   - DOM

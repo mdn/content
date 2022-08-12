@@ -12,15 +12,15 @@ browser-compat: css.at-rules.layer
 ---
 {{CSSRef}}
 
-The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to declare a cascade layer and can also used to define the order of precedence in case of multiple cascade layers.
+The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
 
 ## Syntax
 
 ```css
-@layer layer-name {rules};
+@layer layer-name {rules}
 @layer layer-name;
 @layer layer-name, layer-name, layer-name;
-@layer {rules};
+@layer {rules}
 ```
 
 where:
@@ -80,7 +80,7 @@ The third way is to create a cascade layer with no name. For example:
 
 This creates an _anonymous cascade layer_. This layer functions in the same way as named layers; however, rules cannot be assigned to it later. The order of precedence for anonymous layers is the order in which layers are declared, named or not, and lower than the styles declared outside of a layer.
 
-Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except the @charset rules.
+Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except the `@charset` rules.
 
 ```css
 @import 'theme.css' layer(utilities);
@@ -110,7 +110,11 @@ To append rules to the `layout` layer inside `framework`, join the two names wit
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```
+@layer [ <layer-name># | <layer-name>?  {
+  <stylesheet>
+} ]
+```
 
 ## Examples
 
@@ -152,7 +156,7 @@ p {
 
 ### Assigning rules to existing layers
 
-In the following example, two layers are created with no rules applied, then CSS rules are applied to the two layers. The `base` layer defines a color, border, font-size, and padding. The `special` layer defines a different color. As `special` comes last when the layers were defined, the color it provides is used and the text is displayed using `rebeccapurple`. All of the other rules from `base` still apply.
+In the following example, two layers are created with no rules applied, then CSS rules are applied to the two layers. The `base` layer defines a `color`, `border`, `font-size`, and `padding`. The `special` layer defines a different color. As `special` comes last when the layers were defined, the color it provides is used and the text is displayed using `rebeccapurple`. All of the other rules from `base` still apply.
 
 #### HTML
 

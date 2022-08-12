@@ -54,8 +54,8 @@ Events have three functions:
 In this simple example we add a listener to the {{WebExtAPIRef("notifications.onClicked")}} event to listen for system notifications being clicked. When this occurs, we log an appropriate message to the console.
 
 ```js
-browser.notifications.onClicked.addListener(function(notificationId) {
-  console.log('Notification ' + notificationId + ' was clicked by the user');
+browser.notifications.onClicked.addListener((notificationId) => {
+  console.log(`Notification ${notificationId} was clicked by the user`);
 });
 ```
 

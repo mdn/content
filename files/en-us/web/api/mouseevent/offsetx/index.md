@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.offsetX
 slug: Web/API/MouseEvent/offsetX
+page-type: web-api-instance-property
 tags:
   - API
   - MouseEvent

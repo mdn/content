@@ -1,6 +1,7 @@
 ---
 title: WebSocket.readyState
 slug: Web/API/WebSocket/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - Property

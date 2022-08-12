@@ -130,4 +130,3 @@ Because the `text-underline-position` property inherits and is not reset by the 
 ## See also
 
 - The {{cssxref("text-decoration")}} property is a shorthand for setting most text-decoration properties, including {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, and {{cssxref("text-decoration-style")}}. However, it does not set `text-underline-position`.
-- Microsoft [non-standard values documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-position)

@@ -1,6 +1,7 @@
 ---
 title: URL.origin
 slug: Web/API/URL/origin
+page-type: web-api-instance-property
 tags:
   - API
   - Property

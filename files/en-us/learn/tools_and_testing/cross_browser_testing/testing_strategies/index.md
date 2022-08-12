@@ -173,7 +173,7 @@ You might also notice that the button isn't usable using only the keyboard — t
 These test criteria are useful, because:
 
 - They give you a set of steps to follow when you are performing tests.
-- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to active the button using your mouse, and then the keyboard...") — see [User testing](#user_testing), below.
+- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to active the button using your mouse, and then the keyboard…") — see [User testing](#user_testing), below.
 - They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see [Selenium](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#selenium), later in the series).
 
 ## Putting together a testing lab
@@ -200,7 +200,7 @@ Some larger companies have device labs that stock a very large selection of diff
 
 We will cover each of the other options below.
 
-> **Note:** Some efforts have been made to create publicly accessible device labs — see [Open Device Labs](https://opendevicelab.com/).
+> **Note:** Some efforts have been made to create publicly accessible device labs — see [Open Device Labs](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/).
 
 > **Note:** We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.
 
@@ -217,7 +217,6 @@ More often than not though, you'll have to install some kind of emulator. The mo
 
 You can often find simulators for other mobile device environments too, for example:
 
-- [Blackberry](https://swdownloads.blackberry.com/Downloads/entry.do) (emulator available for Windows, Mac OSX and Linux).
 - You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
 - There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
 

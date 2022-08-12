@@ -49,7 +49,7 @@ Handle a change user's ability to connect to the internet:
 
 ```js
 function handleConnectivity(connectivityInfo) {
-  console.log("The captive portal status: " + connectivityInfo.status);
+  console.log(`The captive portal status: ${connectivityInfo.status}`);
 }
 
 browser.captivePortal.onConnectivityAvailable.addListener(handleConnectivity);

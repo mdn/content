@@ -1,6 +1,7 @@
 ---
 title: Node.removeChild()
 slug: Web/API/Node/removeChild
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

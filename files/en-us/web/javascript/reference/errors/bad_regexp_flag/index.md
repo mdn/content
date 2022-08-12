@@ -14,10 +14,10 @@ It may also be raised if the expression contains more than one instance of a val
 
 ## Message
 
-```js
-SyntaxError: Syntax error in regular expression (Edge)
-SyntaxError: invalid regular expression flag "x" (Firefox)
-SyntaxError: Invalid regular expression flags (Chrome)
+```
+SyntaxError: Invalid regular expression flags (V8-based)
+SyntaxError: invalid regular expression flag x (Firefox)
+SyntaxError: Invalid regular expression: invalid flags (Safari)
 ```
 
 ## Error type
@@ -75,8 +75,8 @@ Below is an example showing the use of some invalid flags `b`, `a` and `r`:
 The code below is incorrect, because `W`, `e` and `b` are not valid flags.
 
 ```js example-bad
-let obj = {
-  url: /docs/Web
+const obj = {
+  url: /docs/Web,
 };
 
 // SyntaxError: invalid regular expression flag "W"
@@ -86,8 +86,8 @@ An expression containing two slashes is interpreted as a regular expression lite
 Most likely the intent was to create a string literal, using single or double quotes as shown below:
 
 ```js example-good
-let obj = {
-  url: '/docs/Web'
+const obj = {
+  url: '/docs/Web',
 };
 ```
 

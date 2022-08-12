@@ -247,19 +247,19 @@ Take the following example:
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "colour", "description": "Color." }, ... }`
+        - `{ "colorLocalized": { "message": "colour", "description": "Color." }, /* … */ }`
 
       en
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "color", "description": "Color." }, ... }`
+        - `{ "colorLocalized": { "message": "color", "description": "Color." }, /* … */ }`
 
     - fr
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, ...}`
+        - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, /* … */}`
 
 Suppose the `default_locale` is set to `fr`, and the browser's current locale is `en_GB`:
 

@@ -1,6 +1,7 @@
 ---
 title: 'MediaStreamTrack: unmute event'
 slug: Web/API/MediaStreamTrack/unmute_event
+page-type: web-api-event
 tags:
   - Audio
   - Event
@@ -28,9 +29,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('unmute', event => { });
+addEventListener('unmute', (event) => { });
 
-onunmute = event => { };
+onunmute = (event) => { };
 ```
 
 ## Event type
@@ -42,11 +43,11 @@ A generic {{domxref("Event")}}.
 In this example, event handlers are established for the {{domxref("MediaStreamTrack/mute_event", "mute")}} and `unmute` events in order to detect when the media is not flowing from the source for the {{domxref("MediaStreamTrack")}} stored in the variable `musicTrack`.
 
 ```js
-musicTrack.addEventListener("mute", event => {
+musicTrack.addEventListener("mute", (event) => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 }, false);
 
-musicTrack.addEventListener("unmute", event => {
+musicTrack.addEventListener("unmute", (event) => {
  document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }, false);
 ```
@@ -56,11 +57,11 @@ With these event handlers in place, when the track `musicTrack` enters its {{dom
 You can also use the `onunmute` event handler property to set up a handler for this event; similarly, the {{domxref("MediaStreamTrack.mute_event", "onmute")}} event handler is available for setting up a handler for the `mute` event. The following example shows this:
 
 ```js
-musicTrack.onmute = event => {
+musicTrack.onmute = (event) => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 }
 
-musicTrack.mute = event = > {
+musicTrack.mute = (event) => {
   document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }
 ```
@@ -71,11 +72,11 @@ The following example shows how to unmute tracks using receivers.
 
 ```js
 // Peer 1 (Receiver)
-audioTrack.addEventListener('unmute', event => {
+audioTrack.addEventListener('unmute', (event) => {
   // Do something in UI
 });
 
-videoTrack.addEventListener('unmute', event => {
+videoTrack.addEventListener('unmute', (event) => {
   // Do something in UI
 });
 

@@ -1,6 +1,7 @@
 ---
 title: MediaKeys
 slug: Web/API/MediaKeys
+page-type: web-api-interface
 tags:
   - API
   - Audio

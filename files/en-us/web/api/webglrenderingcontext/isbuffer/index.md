@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isBuffer()
 slug: Web/API/WebGLRenderingContext/isBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,7 +23,7 @@ isBuffer(buffer)
 
 ### Parameters
 
-- buffer
+- `buffer`
   - : A {{domxref("WebGLBuffer")}} to check.
 
 ### Return value
@@ -34,9 +35,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the buff
 ### Creating a buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var buffer = gl.createBuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const buffer = gl.createBuffer();
 
 gl.isBuffer(buffer);
 ```

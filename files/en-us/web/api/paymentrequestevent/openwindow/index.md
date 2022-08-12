@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent.openWindow()
 slug: Web/API/PaymentRequestEvent/openWindow
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,7 +27,7 @@ openWindow(url)
 
 ### Parameters
 
-- url
+- `url`
   - : The URL to open in the new window. It must be on the same origin as the calling
     page.
 

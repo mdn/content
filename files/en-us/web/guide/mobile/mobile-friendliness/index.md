@@ -36,7 +36,7 @@ While not strictly a part of the definition of being mobile friendly, defining w
 The following approaches aim to achieve each of these goals by different means.
 
 - [Separate sites](/en-US/docs/Web/Guide/Mobile/Separate_sites)
-- [Responsive design](/en-US/docs/Web/Progressive_web_apps)
+- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [A hybrid approach](/en-US/docs/Web/Guide/Mobile/A_hybrid_approach)
 
 ## Original document information

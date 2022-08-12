@@ -1,6 +1,7 @@
 ---
 title: HTMLTrackElement
 slug: Web/API/HTMLTrackElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

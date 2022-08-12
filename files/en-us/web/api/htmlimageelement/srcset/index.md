@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -71,7 +72,7 @@ multiple image candidate strings that specify the same descriptor. All of the fo
 are valid image candidate strings:
 
 ```html
-"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"
+"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full.jpg 2048w"
 ```
 
 This string provides versions of an image to be used at the standard pixel density
@@ -126,7 +127,7 @@ the wrap must occur.
 ```css
 .box {
   width: 200px;
-  border: 2px solid rgba(150, 150, 150, 255);
+  border: 2px solid rgb(150, 150, 150);
   padding: 0.5em;
   word-break: break-all;
 }
@@ -161,10 +162,9 @@ display results in selecting the 1x or the 2x version of the image. If you happe
 have both standard and high density displays, try moving this window between them and
 reloading the page to see the results change.
 
-{{EmbedLiveSample("Example", 640, 320)}}
+{{EmbedLiveSample("Examples", 640, 320)}}
 
-For additional examples, see our guide to [responsive
-images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+For additional examples, see our guide to [responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
 ## Specifications
 
@@ -176,9 +176,6 @@ images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
 ## See also
 
-- [Images in
-  HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive
-  images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Image file type and format
-  guide](/en-US/docs/Web/Media/Formats/Image_types)
+- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)

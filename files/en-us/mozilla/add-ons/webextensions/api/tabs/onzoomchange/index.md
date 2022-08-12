@@ -64,9 +64,9 @@ Listen for zoom events and log the info:
 
 ```js
 function handleZoomed(zoomChangeInfo) {
-  console.log("Tab: " + zoomChangeInfo.tabId + " zoomed");
-  console.log("Old zoom: " + zoomChangeInfo.oldZoomFactor);
-  console.log("New zoom: " + zoomChangeInfo.newZoomFactor);
+  console.log(`Tab: ${zoomChangeInfo.tabId} zoomed`);
+  console.log(`Old zoom: ${zoomChangeInfo.oldZoomFactor}`);
+  console.log(`New zoom: ${zoomChangeInfo.newZoomFactor}`);
 }
 
 browser.tabs.onZoomChange.addListener(handleZoomed);

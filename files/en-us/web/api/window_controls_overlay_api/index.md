@@ -1,6 +1,7 @@
 ---
 title: Window Controls Overlay API
 slug: Web/API/Window_Controls_Overlay_API
+page-type: web-api-overview
 tags:
   - API
   - Window Controls Overlay
@@ -44,7 +45,8 @@ PWAs can use the API to position content in this area, and avoid having content 
 
 ## CSS environment variables
 
-Progressive Web Apps can position their web content in the area that the title bar normally occupies by using the `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, and `titlebar-area-height` CSS environment variables. See [Using env() to ensure content is not obscured by window control buttons in desktop PWAs](/en-US/docs/Web/CSS/env()#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
+Progressive Web Apps can position their web content in the area that the title bar normally occupies by using the `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, and `titlebar-area-height` CSS environment variables.
+See [Using env() to ensure content is not obscured by window control buttons in desktop PWAs](/en-US/docs/Web/CSS/env#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
 
 ## Interfaces
 

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createConicGradient()
 slug: Web/API/CanvasRenderingContext2D/createConicGradient
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -54,13 +55,13 @@ This example initializes a conic gradient using the `createConicGradient()` meth
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 // Create a conic gradient
 // The start angle is 0
 // The center position is 100, 100
-var gradient = ctx.createConicGradient(0, 100, 100);
+const gradient = ctx.createConicGradient(0, 100, 100);
 
 // Add five color stops
 gradient.addColorStop(0, "red");

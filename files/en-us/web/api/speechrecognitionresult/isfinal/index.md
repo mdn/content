@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResult.isFinal
 slug: Web/API/SpeechRecognitionResult/isFinal
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -28,7 +29,7 @@ A boolean value.
 ## Examples
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array
@@ -38,8 +39,8 @@ recognition.onresult = function(event) {
   // These also have getters so they can be accessed like arrays.
   // The second [0] returns the SpeechRecognitionAlternative at position 0.
   // We then return the transcript property of the SpeechRecognitionAlternative object
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  const color = event.results[0][0].transcript;
+  diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
 
   console.log(event.results[0].isFinal);

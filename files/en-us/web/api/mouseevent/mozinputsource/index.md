@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.mozInputSource
 slug: Web/API/MouseEvent/mozInputSource
+page-type: web-api-instance-property
 tags:
   - API
   - NeedsCompatTable

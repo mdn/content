@@ -1,10 +1,10 @@
 ---
 title: Cache.matchAll()
 slug: Web/API/Cache/matchAll
+page-type: web-api-instance-method
 tags:
   - API
   - Cache
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -39,7 +39,7 @@ matchAll(request, options)
 
     - `ignoreSearch`
       - : A boolean value that specifies whether the
-        matching process should ignore the query string in the URL.  If set to
+        matching process should ignore the query string in the URL. If set to
         `true`, the `?value=bar` part of
         `http://foo.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
@@ -67,14 +67,16 @@ A {{jsxref("Promise")}} that resolves to an array of all matching responses in t
 
 ## Examples
 
+The following example deletes all cached entries in the `v1` cache matching the URL `/`, even including potential query parameters. By using `{ ignoreSearch: true }`, using `matchAll` would retrieve `/` as well as `/?value=bar`.
+
 ```js
-caches.open('v1').then(function(cache) {
-  cache.matchAll('/images/').then(function(response) {
-    response.forEach(function(element, index, array) {
-      cache.delete(element);
-    });
+caches.open('v1').then((cache) => {
+  cache.matchAll('/', { ignoreSearch: true }).then((responses) => {
+    for (const response of responses) {
+      cache.delete(response);
+    }
   });
-})
+});
 ```
 
 ## Specifications
@@ -87,7 +89,6 @@ caches.open('v1').then(function(cache) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionErrorEvent.message
 slug: Web/API/SpeechRecognitionErrorEvent/message
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -28,11 +29,11 @@ the implementors to decide upon.
 ## Examples
 
 ```js
-var recognition = new SpeechRecognition();
+const recognition = new SpeechRecognition();
 
-recognition.onerror = function(event) {
-  console.log('Speech recognition error detected: ' + event.error);
-  console.log('Additional information: ' + event.message);
+recognition.onerror = (event) => {
+  console.log(`Speech recognition error detected: ${event.error}`);
+  console.log(`Additional information: ${event.message}`);
 }
 ```
 

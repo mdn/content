@@ -1,6 +1,7 @@
 ---
 title: PannerNode.panningModel
 slug: Web/API/PannerNode/panningModel
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode

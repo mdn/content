@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceArray.values()
 slug: Web/API/XRInputSourceArray/values
+page-type: web-api-instance-method
 tags:
   - API
   - AR

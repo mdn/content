@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.namedItem()
 slug: Web/API/HTMLSelectElement/namedItem
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

@@ -125,17 +125,17 @@ The following code shows a few headings with some content under them.
 ```html
 <h1>Heading elements</h1>
 <h2>Summary</h2>
-<p>Some text here...</p>
+<p>Some text here…</p>
 
 <h2>Examples</h2>
 <h3>Example 1</h3>
-<p>Some text here...</p>
+<p>Some text here…</p>
 
 <h3>Example 2</h3>
-<p>Some text here...</p>
+<p>Some text here…</p>
 
 <h2>See also</h2>
-<p>Some text here...</p>
+<p>Some text here…</p>
 ```
 
 Here is the result of this code:

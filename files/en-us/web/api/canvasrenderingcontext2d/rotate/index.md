@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.rotate()
 slug: Web/API/CanvasRenderingContext2D/rotate
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

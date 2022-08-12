@@ -1,6 +1,7 @@
 ---
 title: DragEvent()
 slug: Web/API/DragEvent/DragEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

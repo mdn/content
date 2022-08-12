@@ -1,6 +1,7 @@
 ---
 title: Element.part
 slug: Web/API/Element/part
+page-type: web-api-instance-property
 tags:
   - API
   - Element
@@ -31,8 +32,8 @@ the correct styling is applied to the active tab when tabs are clicked.
 let tabs = [];
 let children = this.shadowRoot.children;
 
-for(let elem of children) {
-  if(elem.getAttribute('part')) {
+for (let elem of children) {
+  if (elem.getAttribute('part')) {
     tabs.push(elem);
   }
 }

@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.payerEmail
 slug: Web/API/PaymentResponse/payerEmail
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

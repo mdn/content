@@ -10,4 +10,4 @@ An **exception** is a condition that interrupts normal code execution. In JavaSc
 
 ## See also
 
-- {{Interwiki("wikipedia", "Exception handling")}} on Wikipedia
+- [Exception handling](https://en.wikipedia.org/wiki/Exception_handling) on Wikipedia

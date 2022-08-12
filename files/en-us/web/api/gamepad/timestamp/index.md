@@ -1,6 +1,7 @@
 ---
 title: Gamepad.timestamp
 slug: Web/API/Gamepad/timestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -33,7 +34,7 @@ A {{domxref("DOMHighResTimeStamp")}} object.
 ## Examples
 
 ```js
-var gp = navigator.getGamepads()[0];
+const gp = navigator.getGamepads()[0];
 console.log(gp.timestamp);
 ```
 

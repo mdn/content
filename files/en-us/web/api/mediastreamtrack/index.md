@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
+page-type: web-api-interface
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: EXT_texture_filter_anisotropic
 slug: Web/API/EXT_texture_filter_anisotropic
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -28,15 +29,15 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 ## Examples
 
 ```js
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
-var ext = (
+const ext = (
   gl.getExtension('EXT_texture_filter_anisotropic') ||
   gl.getExtension('MOZ_EXT_texture_filter_anisotropic') ||
   gl.getExtension('WEBKIT_EXT_texture_filter_anisotropic')
 );
 if (ext){
-  var max = gl.getParameter(ext.MAX_TEXTURE_MAX_ANISOTROPY_EXT);
+  const max = gl.getParameter(ext.MAX_TEXTURE_MAX_ANISOTROPY_EXT);
   gl.texParameterf(gl.TEXTURE_2D, ext.TEXTURE_MAX_ANISOTROPY_EXT, max);
 }
 ```

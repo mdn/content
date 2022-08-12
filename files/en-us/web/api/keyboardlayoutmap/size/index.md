@@ -1,6 +1,7 @@
 ---
 title: KeyboardLayoutMap.size
 slug: Web/API/KeyboardLayoutMap/size
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

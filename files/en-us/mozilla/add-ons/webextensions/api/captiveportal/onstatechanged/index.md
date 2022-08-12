@@ -49,7 +49,7 @@ Handle a change in captive portal status:
 
 ```js
 function handlePortalStatus(portalstatusInfo) {
-  console.log("The portal status is now: " + portalstatusInfo.details);
+  console.log(`The portal status is now: ${portalstatusInfo.details}`);
 }
 
 browser.captivePortal.onStateChanged.addListener(handlePortalStatus)

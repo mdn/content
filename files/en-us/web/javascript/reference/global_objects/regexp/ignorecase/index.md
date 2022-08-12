@@ -12,13 +12,13 @@ browser-compat: javascript.builtins.RegExp.ignoreCase
 ---
 {{JSRef}}
 
-The **`ignoreCase`** property indicates whether or not the "`i`" flag is used with the regular expression. `ignoreCase` is a read-only property of an individual regular expression instance.
+The **`ignoreCase`** property indicates whether or not the `i` flag is used with the regular expression. `ignoreCase` is a read-only property of an individual regular expression instance.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-ignorecase.html")}}{{js_property_attributes(0, 0, 1)}}
 
 ## Description
 
-The value of `ignoreCase` is a {{jsxref("Boolean")}} and `true` if the "`i`" flag was used; otherwise, `false`. The "`i`" flag indicates that case should be ignored while attempting a match in a string.
+The value of `ignoreCase` is a {{jsxref("Boolean")}} and `true` if the `i` flag was used; otherwise, `false`. The `i` flag indicates that case should be ignored while attempting a match in a string.
 
 You cannot change this property directly.
 
@@ -27,7 +27,7 @@ You cannot change this property directly.
 ### Using ignoreCase
 
 ```js
-var regex = new RegExp('foo', 'i');
+const regex = new RegExp('foo', 'i');
 
 console.log(regex.ignoreCase); // true
 ```

@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.dropEffect
 slug: Web/API/DataTransfer/dropEffect
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -22,18 +23,18 @@ to a string value. On getting, it returns its current value. On setting, if the 
 value is one of the values listed below, then the property's current value will be set
 to the new value and other values will be ignored.
 
-For the {{event("dragenter")}} and {{event("dragover")}} events,
+For the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events,
 `dropEffect` will be initialized based on what action the user is requesting.
 How this is determined is platform specific, but typically the user can press modifier
 keys such as the alt key to adjust the desired action. Within event handlers for
-{{event("dragenter")}} and {{event("dragover")}} events, `dropEffect` should
+{{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events, `dropEffect` should
 be modified if a different action is desired than the action that the user is
 requesting.
 
-For the {{event("drop")}} and {{event("dragend")}} events, `dropEffect` will
+For the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events, `dropEffect` will
 be set to the action that was desired, which will be the value `dropEffect`
-had after the last {{event("dragenter")}} or {{event("dragover")}} event. In a
-{{event("dragend")}} event, for instance, if the desired dropEffect is "move", then the
+had after the last {{domxref("HTMLElement/dragenter_event", "dragenter")}} or {{domxref("HTMLElement/dragover_event", "dragover")}} event. In a
+{{domxref("HTMLElement/dragend_event", "dragend")}} event, for instance, if the desired dropEffect is "move", then the
 data being dragged should be removed from the source.
 
 ## Value
@@ -91,7 +92,7 @@ div {
 
 ```js
 function dragstart_handler(ev) {
-  console.log("dragStart: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
+  console.log(`dragStart: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`);
 
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
@@ -100,16 +101,16 @@ function dragstart_handler(ev) {
 }
 
 function drop_handler(ev) {
-  console.log("drop: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
+  console.log(`drop: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`);
   ev.preventDefault();
 
   // Get the id of the target and add the moved element to the target's DOM
-  var data = ev.dataTransfer.getData("text");
+  const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
 }
 
 function dragover_handler(ev) {
-  console.log("dragOver: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
+  console.log(`dragOver: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`);
   ev.preventDefault();
   // Set the dropEffect to move
   ev.dataTransfer.dropEffect = "move"

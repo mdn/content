@@ -1,6 +1,7 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -47,7 +48,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+Returns a {{domxref("DOMHighResTimeStamp")}} measured in milliseconds.
 
 ## Examples
 
@@ -82,14 +83,14 @@ performance.now();
 // 8781416
 // 8781815
 // 8782206
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 performance.now();
 // 8865400
 // 8866200
 // 8866700
-// ...
+// …
 ```
 
 In Firefox, you can also enable `privacy.resistFingerprinting` — this

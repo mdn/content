@@ -1,6 +1,7 @@
 ---
 title: XRRay
 slug: Web/API/XRRay
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -24,11 +25,11 @@ The **`XRRay`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_De
 
 ## Properties
 
-- {{domxref("XRRay.direction")}}{{ReadOnlyInline}}
+- {{domxref("XRRay.direction")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the ray's 3-dimensional directional vector.
-- {{domxref("XRRay.matrix")}}{{ReadOnlyInline}}
+- {{domxref("XRRay.matrix")}} {{ReadOnlyInline}}
   - : A transform that can be used to position objects along the `XRRay`. This is a 4 by 4 matrix given as a 16 element {{jsxref("Float32Array")}} in column major order.
-- {{domxref("XRRay.origin")}}{{ReadOnlyInline}}
+- {{domxref("XRRay.origin")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the 3-dimensional point in space that the ray originates from, in meters.
 
 ## Methods

@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserver
 slug: Web/API/PerformanceObserver
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -24,7 +25,7 @@ The **`PerformanceObserver`** interface is used to _observe_ performance measure
 
 ## Properties
 
-- {{domxref("PerformanceObserver.supportedEntryTypes")}}{{readonlyInline}}
+- {{domxref("PerformanceObserver.supportedEntryTypes")}} {{readonlyInline}}
   - : Returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
 
 ## Methods

@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.contextMenu
 slug: Web/API/HTMLElement/contextMenu
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -25,7 +26,7 @@ A {{HTMLElement("menu")}} element.
 ## Examples
 
 ```js
-var contextMenu = document.getElementById("element").contextMenu;
+const contextMenu = document.getElementById("element").contextMenu;
 
 // Change the label of the first menu entry
 contextMenu.firstElementChild.label = "New label";

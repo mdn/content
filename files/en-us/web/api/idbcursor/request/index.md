@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.request
 slug: Web/API/IDBCursor/request
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -34,11 +35,11 @@ function displayData() {
 
   const request = objectStore.openCursor();
 
-  request.onsuccess = function(event) {
+  request.onsuccess = (event) => {
     const cursor = event.target.result;
-      if(cursor) {
+      if (cursor) {
         const listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+        listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
         list.appendChild(listItem);
         console.log(cursor.request);
         cursor.continue();

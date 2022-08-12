@@ -1,6 +1,7 @@
 ---
 title: Document.readyState
 slug: Web/API/Document/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -13,7 +14,7 @@ browser-compat: api.Document.readyState
 The **`Document.readyState`** property describes the loading
 state of the {{domxref("document")}}.
 
-When the value of this property changes, a {{event("readystatechange")}} event fires on
+When the value of this property changes, a {{domxref("Document/readystatechange_event", "readystatechange")}} event fires on
 the {{domxref("document")}} object.
 
 ## Value
@@ -27,7 +28,7 @@ The `readyState` of a document can be one of following:
     such as scripts, images, stylesheets and frames are still loading.
 - `complete`
   - : The document and all sub-resources have finished loading. The state indicates that
-    the {{event("load")}} event is about to fire.
+    the {{domxref("Window/load_event", "load")}} event is about to fire.
 
 ## Examples
 
@@ -38,16 +39,19 @@ switch (document.readyState) {
   case "loading":
     // The document is still loading.
     break;
-  case "interactive":
+  case "interactive": {
     // The document has finished loading. We can now access the DOM elements.
     // But sub-resources such as scripts, images, stylesheets and frames are still loading.
     const span = document.createElement("span");
     span.textContent = "A <span> element.";
     document.body.appendChild(span);
     break;
+  }
   case "complete":
     // The page is fully loaded.
-    console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
+    console.log(
+      `The first CSS rule is: ${document.styleSheets[0].cssRules[0].cssText}`
+    );
     break;
 }
 ```
@@ -56,7 +60,7 @@ switch (document.readyState) {
 
 ```js
 // Alternative to DOMContentLoaded event
-document.onreadystatechange = function () {
+document.onreadystatechange = () => {
   if (document.readyState === 'interactive') {
     initApplication();
   }
@@ -67,7 +71,7 @@ document.onreadystatechange = function () {
 
 ```js
 // Alternative to load event
-document.onreadystatechange = function () {
+document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
     initApplication();
   }
@@ -77,11 +81,10 @@ document.onreadystatechange = function () {
 ### readystatechange as event listener to insert or modify the DOM before DOMContentLoaded
 
 ```js
-document.addEventListener('readystatechange', event => {
+document.addEventListener('readystatechange', (event) => {
   if (event.target.readyState === 'interactive') {
     initLoader();
-  }
-  else if (event.target.readyState === 'complete') {
+  } else if (event.target.readyState === 'complete') {
     initApp();
   }
 });
@@ -97,6 +100,6 @@ document.addEventListener('readystatechange', event => {
 
 ## See also
 
-- {{event("readystatechange")}} event
+- {{domxref("Document/readystatechange_event", "readystatechange")}} event
 - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event
-- {{event("load")}} event
+- {{domxref("Window/load_event", "load")}} event

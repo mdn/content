@@ -79,10 +79,10 @@ SVG makes use of a number of data types. This article lists these types along wi
       - `45min` = 45 minutes
       - `30s` = 30 seconds
       - `5ms` = 5 milliseconds
-      - `12.467`= 12 seconds and 467 milliseconds
+      - `12.467` = 12 seconds and 467 milliseconds
     - Fractional values are just (base 10) floating point definitions of seconds. Thus:
-      - `00.5s = 500 milliseconds
-      - 00:00.005 = 5 milliseconds`
+      - `00.5s` = 500 milliseconds
+      - `00:00.005` = 5 milliseconds
 
 ## Color
 
@@ -112,14 +112,14 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Coordinate
 
 - \<coordinate>
-  - : A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](/en-US/docs/Web/SVG/Content_type#length).
+  - : A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](#length).
 
     Within the SVG DOM, a \<coordinate> is represented as an {{domxref("SVGLength")}} or an {{domxref("SVGAnimatedLength")}}.
 
 ## Frequency
 
 - \<frequency>
-  - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [\<number>](/en-US/docs/Web/SVG/Content_type#number) immediately followed by a frequency unit identifier. The frequency unit identifiers are:
+  - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [\<number>](#number) immediately followed by a frequency unit identifier. The frequency unit identifiers are:
 
     - `Hz`: Hertz
     - `kHz`: kilo Hertz
@@ -273,7 +273,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Opacity value
 
 - \<opacity-value>
-  - : The opacity of the color or the content the current object is filled with, as a [\<number>](/en-US/docs/Web/SVG/Content_type#number). Any values outside the range `0.0` (fully transparent) to `1.0` (fully opaque) will be clamped to this range.
+  - : The opacity of the color or the content the current object is filled with, as a [\<number>](#number). Any values outside the range `0.0` (fully transparent) to `1.0` (fully opaque) will be clamped to this range.
 
 ## Paint
 

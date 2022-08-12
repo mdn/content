@@ -18,7 +18,7 @@ When the `display` attribute is set to `none`, then the given element does not b
 
 - If `display` is set to `none` on a {{SVGElement("tspan")}}, {{SVGElement("tref")}}, or {{SVGElement("altGlyph")}} element, then the text string is ignored for the purposes of text layout.
 - Regarding events, if `display` is set to `none`, the element receives no events.
-- The geometry of a [graphics element](/en-US/docs/Web/SVG/Element#Graphics_elements) with `display` set to `none` is not included in bounding box and clipping paths calculations.
+- The geometry of a [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements) with `display` set to `none` is not included in bounding box and clipping paths calculations.
 
 The `display` attribute only affects the direct rendering of a given element, whereas it does not prevent elements from being referenced by other elements. For example, setting it to `none` on a {{SVGElement("path")}} element will prevent that element from getting rendered directly onto the canvas, but the {{SVGElement("path")}} element can still be referenced by a {{SVGElement("textPath")}} element; furthermore, its geometry will be used in text-on-a-path processing even if the {{SVGElement("path")}} has a `display` value of `none`.
 

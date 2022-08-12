@@ -1,6 +1,7 @@
 ---
 title: 'Window: beforeinstallprompt event'
 slug: Web/API/Window/beforeinstallprompt_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -19,9 +20,9 @@ The **`beforeinstallprompt`** event fires on devices when a user is about to be 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforeinstallprompt', event => { });
+addEventListener('beforeinstallprompt', (event) => { });
 
-onbeforeinstallprompt = event => { };
+onbeforeinstallprompt = (event) => { };
 ```
 
 ## Event type
@@ -45,11 +46,11 @@ The following example uses the `beforeinstallprompt` event to make an
 install button operable, by using the event inside a click handler.
 
 ```js
-window.addEventListener("beforeinstallprompt", function(beforeInstallPromptEvent) {
+window.addEventListener("beforeinstallprompt", (beforeInstallPromptEvent) => {
   beforeInstallPromptEvent.preventDefault(); // Prevents immediate prompt display
 
   // Shows prompt after a user clicks an "install" button
-  installButton.addEventListener("click", function(mouseEvent) {
+  installButton.addEventListener("click", (mouseEvent) => {
     // you should not use the MouseEvent here, obviously
     beforeInstallPromptEvent.prompt();
   });

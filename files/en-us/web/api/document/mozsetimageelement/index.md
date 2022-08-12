@@ -1,6 +1,7 @@
 ---
 title: Document.mozSetImageElement()
 slug: Web/API/Document/mozSetImageElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -43,7 +44,7 @@ block is clicked by the user.
 [View this example live](https://media.prod.mdn.mozit.cloud/samples/domref/mozSetImageElement.html).
 
 ```html
-<style type="text/css">
+<style>
   #mybox {
     background-image: -moz-element(#canvasbg);
     text-align: center;
@@ -58,14 +59,14 @@ The CSS defined by the {{ HTMLElement("style") }} block above is used by our {{
   HTMLElement("div") }} to use an element with the id "canvasbg" as its background.
 
 ```js
-var c = 0x00;
+let c = 0x00;
 function clicked() {
-  var canvas = document.createElement("canvas");
+  const canvas = document.createElement("canvas");
   canvas.setAttribute("width", 100);
   canvas.setAttribute("height", 100);
 
-  var ctx = canvas.getContext('2d');
-  ctx.fillStyle = "#" + c.toString(16) + "0000";
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = `#${c.toString(16)}0000`;
   ctx.fillRect(25, 25, 75, 75);
 
   c += 0x11;

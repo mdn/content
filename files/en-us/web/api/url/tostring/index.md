@@ -1,6 +1,7 @@
 ---
 title: URL.toString()
 slug: Web/API/URL/toString
+page-type: web-api-instance-method
 tags:
   - API
   - Method

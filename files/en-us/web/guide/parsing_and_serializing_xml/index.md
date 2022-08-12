@@ -39,7 +39,7 @@ Using one of the following approaches to create an XML document (which is an ins
 This example converts an XML fragment in a string into a DOM tree using a {{domxref("DOMParser")}}:
 
 ```js
-const xmlStr = '<a id="a"><b id="b">hey!</b></a>';
+const xmlStr = '<q id="a"><span id="b">hey!</span></q>';
 const parser = new DOMParser();
 const doc = parser.parseFromString(xmlStr, "application/xml");
 // print the name of the root element or error message
@@ -60,11 +60,11 @@ Here is sample code that reads and parses a URL-addressable XML file into a DOM 
 ```js
 const xhr = new XMLHttpRequest();
 
-xhr.onload = function() {
+xhr.onload = () => {
   dump(xhr.responseXML.documentElement.nodeName);
 }
 
-xhr.onerror = function() {
+xhr.onerror = () => {
   dump("Error while getting XML.");
 }
 

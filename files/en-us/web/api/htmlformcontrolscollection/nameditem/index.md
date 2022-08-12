@@ -1,6 +1,7 @@
 ---
 title: HTMLFormControlsCollection.namedItem()
 slug: Web/API/HTMLFormControlsCollection/namedItem
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -35,7 +36,7 @@ namedItem(str)
 ### Return value
 
 - `item` is a {{domxref("RadioNodeList")}} , {{domxref("Element")}}, or
-  {{jsxref("null")}}.
+  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
 

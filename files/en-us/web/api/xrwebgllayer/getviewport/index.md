@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.getViewport()
 slug: Web/API/XRWebGLLayer/getViewport
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -91,6 +92,7 @@ function drawFrame(time, frame) {
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
       /* Render the scene now */
+    }
   }
 }
 ```

@@ -7,6 +7,7 @@ tags:
   - Layout
   - cookbook
   - recipes
+browser-compat: css.properties.grid-template-columns
 ---
 {{CSSRef}}
 
@@ -69,11 +70,7 @@ Although Grid enables us to position items anywhere (within reason), it is impor
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### grid-template-columns
-
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## See also
 

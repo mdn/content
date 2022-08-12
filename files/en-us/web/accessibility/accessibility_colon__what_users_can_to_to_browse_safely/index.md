@@ -21,7 +21,7 @@ From the article, "**[Understanding Success Criterion 2.3.1: Three Flashes or Be
 
 _"Flashing can be caused by the display, the computer rendering the image or by the content being rendered. The author has no control of the first two. They can be addressed by the design and speed of the display and computer"_
 
-### Hardware and operating systems on many computers offer control that is not afforded to developers.
+### Hardware and operating systems on many computers offer control that is not afforded to developers
 
 The user can do much to protect himself by learning his operating system, its personalization and accessibility settings. Those in the public sector who must accommodate those with special sensitivities, should consider setting aside at least one work station and becoming familiar with its personalization and accessibility settings. Understanding personalization and accessibility settings can actually be a money-saving endeavor. One work station can be set up to accommodate both a low-vision individual (needs high-contrast) and to accommodate an individual with photosensitive susceptibilities, by, adjusting personalization and accessibility settings.
 
@@ -69,7 +69,7 @@ Browsers offer much power to their users; it's just a matter of knowing where to
 
 ### Take advantage Operating System accessibility features
 
-Most operating systems such as Windows 10, have accessibility options that are surprisingly powerful. Usually they are quite easy to find by typing ( or saying) in the word, "Accessibility" in the search finder of the operating system.
+Most operating systems such as Windows 10, have accessibility options that are surprisingly powerful. Usually they are quite easy to find by typing (or saying) in the word, "Accessibility" in the search finder of the operating system.
 
 #### Turn off animations in the operating system
 

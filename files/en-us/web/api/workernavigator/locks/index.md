@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.locks
 slug: Web/API/WorkerNavigator/locks
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

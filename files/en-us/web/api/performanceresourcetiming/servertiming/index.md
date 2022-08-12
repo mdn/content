@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.serverTiming
 slug: Web/API/PerformanceResourceTiming/serverTiming
+page-type: web-api-instance-property
 tags:
   - API
   - PerformanceResourceTiming

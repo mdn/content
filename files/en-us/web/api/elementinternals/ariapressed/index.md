@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaPressed
 slug: Web/API/ElementInternals/ariaPressed
+page-type: web-api-instance-property
 tags:
   - API
   - Property

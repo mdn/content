@@ -1,6 +1,7 @@
 ---
 title: Navigator.onLine
 slug: Web/API/Navigator/onLine
+page-type: web-api-instance-property
 tags:
   - API
   - DOM Reference
@@ -67,9 +68,9 @@ listen for the events on `window.online` and `window.offline`, as
 in the following example:
 
 ```js
-window.addEventListener('offline', function(e) { console.log('offline'); });
+window.addEventListener('offline', (e) => { console.log('offline'); });
 
-window.addEventListener('online', function(e) { console.log('online'); });
+window.addEventListener('online', (e) => { console.log('online'); });
 ```
 
 ## Specifications
@@ -79,9 +80,3 @@ window.addEventListener('online', function(e) { console.log('online'); });
 ## Browser compatibility
 
 {{Compat}}
-
-## Notes
-
-See [Online/Offline Events](/en-US/docs/Web/API/Navigator/Online_and_offline_events) for a
-more detailed description of this property as well as new offline-related features
-introduced in Firefox 3.

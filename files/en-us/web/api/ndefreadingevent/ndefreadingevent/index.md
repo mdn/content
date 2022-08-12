@@ -1,6 +1,7 @@
 ---
 title: NDEFReadingEvent()
 slug: Web/API/NDEFReadingEvent/NDEFReadingEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -31,7 +32,7 @@ new NDEFReadingEvent(type, options)
     - `message`
       - : An object with the following members:
         - `data` {{optional_inline}}
-          - : Contains the data to be transmitted; one of a string, a {{domxref("BufferSource")}}, or an array of nested records.
+          - : Contains the data to be transmitted. It can be a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
         - `encoding` {{optional_inline}}
           - : A string specifying the record's encoding.
         - `id` {{optional_inline}}

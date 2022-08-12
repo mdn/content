@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.download
 slug: Web/API/HTMLAnchorElement/download
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

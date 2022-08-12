@@ -1,6 +1,7 @@
 ---
 title: LayoutShift
 slug: Web/API/LayoutShift
+page-type: web-api-interface
 tags:
   - API
   - Interface

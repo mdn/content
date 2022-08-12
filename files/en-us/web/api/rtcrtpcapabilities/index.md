@@ -1,6 +1,7 @@
 ---
 title: RTCRtpCapabilities
 slug: Web/API/RTCRtpCapabilities
+page-type: web-api-interface
 tags:
   - API
   - Audio

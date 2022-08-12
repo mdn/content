@@ -1,6 +1,7 @@
 ---
 title: Path2D()
 slug: Web/API/Path2D/Path2D
+page-type: web-api-constructor
 tags:
   - API
   - Canvas

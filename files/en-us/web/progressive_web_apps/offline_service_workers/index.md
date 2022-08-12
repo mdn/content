@@ -44,9 +44,9 @@ We'll start by looking at the code that registers a new Service Worker, in the a
 > **Note:** We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation
 
 ```js
-if('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./pwa-examples/js13kpwa/sw.js');
-};
+}
 ```
 
 If the service worker API is supported in the browser, it is registered against the site using the {{domxref("ServiceWorkerContainer.register()")}} method. Its contents reside in the sw\.js file, and can be executed after the registration is successful. It's the only piece of Service Worker code that sits inside the app.js file; everything else that is Service Worker-specific is written in the sw\.js file itself.
@@ -170,7 +170,7 @@ That's it! Our app is caching its resources on install and serving them with fet
 There is still one point to cover: how do you upgrade a Service Worker when a new version of the app containing new assets is available? The version number in the cache name is key to this:
 
 ```js
-var cacheName = 'js13kPWA-v1';
+const cacheName = 'js13kPWA-v1';
 ```
 
 When this updates to v2, we can then add all of our files (including our new files) to a new cache:

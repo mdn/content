@@ -15,7 +15,7 @@ The JavaScript warning "Using `//@` to indicate sourceURL pragmas is deprecated.
 
 ## Message
 
-```js
+```
 Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
 
 Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
@@ -31,7 +31,7 @@ There is a deprecated source map syntax in a JavaScript source.
 
 JavaScript sources are often combined and minified to make delivering them from the server more efficient. With [source maps](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/), the debugger can map the code being executed to the original source files.
 
-The source map specification changed the syntax due to a conflict with IE whenever it was found in the page after `//@cc_on` was interpreted to turn on conditional compilation in the IE JScript engine. The [conditional compilation comment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions/at-cc-on) in IE is a little known feature, but it broke source maps with [jQuery](https://bugs.jquery.com/ticket/13274) and other libraries.
+The source map specification changed the syntax due to a conflict with IE whenever it was found in the page after `//@cc_on` was interpreted to turn on conditional compilation in the IE JScript engine. The [conditional compilation comment](/en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions/at-cc-on) in IE is a little known feature, but it broke source maps with [jQuery](https://bugs.jquery.com/ticket/13274) and other libraries.
 
 ## Examples
 
@@ -53,7 +53,7 @@ Use the "#" sign instead.
 
 Or, alternatively, you can set a {{HTTPHeader("SourceMap")}} header to your JavaScript file to avoid having a comment at all:
 
-```js example-good
+```plain example-good
 SourceMap: /path/to/file.js.map
 ```
 

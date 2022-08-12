@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.altKey
 slug: Web/API/MouseEvent/altKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -26,7 +27,7 @@ A boolean value, where `true` indicates that the key is pressed, and `false` ind
 
 ## Examples
 
-This example logs the `altKey` property when you trigger a {{Event("click")}} event.
+This example logs the `altKey` property when you trigger a {{domxref("Element/click_event", "click")}} event.
 
 ### HTML
 
@@ -48,7 +49,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

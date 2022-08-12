@@ -1,6 +1,7 @@
 ---
 title: Window.screenLeft
 slug: Web/API/Window/screenLeft
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -52,7 +53,7 @@ function positionElem() {
   ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
   ctx.fill();
 
-  pElem.textContent = 'Window.screenLeft: ' + window.screenLeft + ', Window.screenTop: ' + window.screenTop;
+  pElem.textContent = `Window.screenLeft: ${window.screenLeft}, Window.screenTop: ${window.screenTop}`;
 
   window.requestAnimationFrame(positionElem);
 }
@@ -65,7 +66,7 @@ supported, and if not, polyfills in `screenLeft`/`screenTop` using
 {{domxref("Window.screenX")}}/{{domxref("Window.screenY")}}.
 
 ```js
-if(!window.screenLeft) {
+if (!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
 }

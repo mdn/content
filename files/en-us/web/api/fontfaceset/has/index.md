@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.has()
 slug: Web/API/FontFaceSet/has
+page-type: web-api-instance-method
 tags:
   - API
   - Method

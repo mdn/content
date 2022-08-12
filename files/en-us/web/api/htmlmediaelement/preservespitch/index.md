@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.preservesPitch
 slug: Web/API/HTMLMediaElement/preservesPitch
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -54,8 +55,7 @@ const pitch = document.querySelector('#pitch');
 pitch.addEventListener('change', () => {
   if ('preservesPitch' in audio) {
     audio.preservesPitch = pitch.checked;
-  }
-  else if ('mozPreservesPitch' in audio) { //deprecated
+  } else if ('mozPreservesPitch' in audio) { //deprecated
     audio.mozPreservesPitch = pitch.checked;
   }
 });

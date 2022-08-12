@@ -1,6 +1,7 @@
 ---
 title: AbsoluteOrientationSensor
 slug: Web/API/AbsoluteOrientationSensor
+page-type: web-api-interface
 tags:
   - API
   - AbsoluteOrientationSensor
@@ -55,8 +56,8 @@ sensor.addEventListener('reading', () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener('error', error => {
-  if (event.error.name == 'NotReadableError') {
+sensor.addEventListener('error', (error) => {
+  if (event.error.name === 'NotReadableError') {
     console.log("Sensor is not available.");
   }
 });
@@ -72,10 +73,10 @@ const sensor = new AbsoluteOrientationSensor();
 Promise.all([navigator.permissions.query({ name: "accelerometer" }),
              navigator.permissions.query({ name: "magnetometer" }),
              navigator.permissions.query({ name: "gyroscope" })])
-       .then(results => {
-         if (results.every(result => result.state === "granted")) {
+       .then((results) => {
+         if (results.every((result) => result.state === "granted")) {
            sensor.start();
-           ...
+           // …
          } else {
            console.log("No permissions to use AbsoluteOrientationSensor.");
          }

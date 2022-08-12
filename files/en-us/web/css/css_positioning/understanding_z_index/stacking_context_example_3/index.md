@@ -36,15 +36,15 @@ To better understand the situation, here is the stacking context hierarchy:
     - LEVEL #2 (z-index: 1)
 
       - LEVEL #3
-      - ...
+      - …
       - LEVEL #3
 
     - LEVEL #2 (z-index: 1)
-    - ...
+    - …
     - LEVEL #2 (z-index: 1)
 
   - LEVEL #1
-  - ...
+  - …
   - LEVEL #1
 
 This problem can be avoided by removing overlapping between different level menus, or by using individual (and different) `z-index` values assigned through the id selector instead of class selector, or by flattening the HTML hierarchy.
@@ -57,7 +57,7 @@ This problem can be avoided by removing overlapping between different level menu
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head><style type="text/css">
+<head><style>
 
 div { font: 12px Arial; }
 

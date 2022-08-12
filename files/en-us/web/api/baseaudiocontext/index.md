@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -22,7 +23,7 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
 
 ## Properties
 
-- {{domxref("BaseAudioContext.audioWorklet")}} {{experimental_inline}} {{readonlyInline}} {{securecontext_inline}}
+- {{domxref("BaseAudioContext.audioWorklet")}} {{readonlyInline}} {{securecontext_inline}}
   - : Returns the {{domxref("AudioWorklet")}} object, which can be used to create and manage {{domxref("AudioNode")}}s in which JavaScript code implementing the {{domxref("AudioWorkletProcessor")}} interface are run in the background to process audio data.
 - {{domxref("BaseAudioContext.currentTime")}} {{readonlyInline}}
   - : Returns a double representing an ever-increasing hardware time in seconds used for scheduling. It starts at `0`.

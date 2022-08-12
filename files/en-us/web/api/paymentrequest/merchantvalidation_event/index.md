@@ -1,6 +1,7 @@
 ---
 title: 'PaymentRequest: merchantvalidation event'
 slug: Web/API/PaymentRequest/merchantvalidation_event
+page-type: web-api-event
 tags:
   - API
   - Commerce
@@ -17,6 +18,9 @@ tags:
   - payment
 browser-compat: api.PaymentRequest.merchantvalidation_event
 ---
+
+{{APIRef("Payment Request API")}}
+
 {{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
 **`merchantvalidation`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when a payment handler requires that the merchant requesting the purchase validate itself as permitted to use the payment handler.
@@ -30,9 +34,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('merchantvalidation', event => { });
+addEventListener('merchantvalidation', (event) => { });
 
-onmerchantvalidation = event => { };
+onmerchantvalidation = (event) => { };
 ```
 
 ## Event type
@@ -53,14 +57,13 @@ An {{domxref("MerchantValidationEvent")}}. Inherits from {{domxref("Event")}}.
 In this example, an event handler is established for the `merchantvalidation` event. It uses the {{domxref("fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documentation. Typically, a client should not access the validation URL.
 
 ```js
-request.addEventListener("merchantvalidation", event => {
+request.addEventListener("merchantvalidation", (event) => {
   event.complete(async () => {
-    const merchantServerUrl = window.location.origin +
-        '/validate?url=' + encodeURIComponent(event.validationURL);
+    const merchantServerUrl = `${window.location.origin}/validate?url=${encodeURIComponent(event.validationURL)}`;
     // get validation data, and complete validation;
-    return await fetch(merchantServerUrl).then(response => response.text());
+    return await fetch(merchantServerUrl).then((response) => response.text());
   }, false);
-};
+});
 
 const response = await request.show();
 ```
@@ -70,12 +73,11 @@ How merchant server handles the validation depends on the server implementation 
 You can also use the `onmerchantvalidation` event handler property to set up the handler for this event:
 
 ```js
-request.onmerchantvalidation = event => {
+request.onmerchantvalidation = (event) => {
   event.complete(async () => {
-    const merchantServerUrl = window.location.origin +
-        '/validate?url=' + encodeURIComponent(event.validationURL);
+    const merchantServerUrl = `${window.location.origin}/validate?url=${encodeURIComponent(event.validationURL)}`;
     // get validation data, and complete validation;
-    return await fetch(merchantServerUrl).then(response => response.text());
+    return await fetch(merchantServerUrl).then((response) => response.text());
   });
 };
 

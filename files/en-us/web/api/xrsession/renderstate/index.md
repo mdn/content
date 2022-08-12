@@ -1,6 +1,7 @@
 ---
 title: XRSession.renderState
 slug: Web/API/XRSession/renderState
+page-type: web-api-instance-property
 tags:
   - API
   - AR

@@ -70,7 +70,7 @@ When animated, if both the beginning and end filters have a function list of the
 
 The `filter` property is specified as `none` or one or more of the functions listed below. If the parameter for any function is invalid, the function returns `none`. Except where noted, the functions that take a value expressed with a percent sign (as in `34%`) also accept the value expressed as decimal (as in `0.34`).
 
-When a single `filter` property has two or more functions it's results will be different from when two or more `filter` properties are separately applied with the same functions.
+When a `filter` property has two or more functions, its results are different from the same functions applied separately using multiple `filter` properties.
 
 ### SVG filter
 
@@ -687,7 +687,7 @@ table.standard-table td {
 ```html
 <svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg">
   <filter id="svgHueRotate">
-    <feColorMatrix type="hueRotate" values="[angle]"/>
+    <feColorMatrix type="hueRotate" values="90"/>
   </filter>
 </svg>
 ```

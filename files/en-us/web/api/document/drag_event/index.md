@@ -1,6 +1,7 @@
 ---
 title: 'Document: drag event'
 slug: Web/API/Document/drag_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -17,51 +18,45 @@ browser-compat: api.Document.drag_event
 
 The `drag` event is fired every few hundred milliseconds as an element or text selection is being dragged by the user.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Default action</th>
-      <td>Continue the drag &#x26; drop operation.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondrag", "ondrag")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('drag', (event) => {});
+
+ondrag = (event) => { };
+```
+
+## Event type
+
+A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("DragEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+  - : The data that is transferred during a drag and drop interaction.
 
 ## Examples
 
-See this code in a [JSFiddle demo](https://jsfiddle.net/radonirinamaminiaina/zfnj5rv4/) or interact with it below.
+### Drag and drop example
 
-### HTML
+#### HTML
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+  <div id="draggable" draggable="true">
     This div is draggable
   </div>
 </div>
 <div class="dropzone"></div>
-<div class="dropzone"></div>
-<div class="dropzone"></div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 body {
@@ -70,8 +65,6 @@ body {
 }
 
 #draggable {
-  width: 200px;
-  height: 20px;
   text-align: center;
   background: white;
 }
@@ -80,68 +73,76 @@ body {
   width: 200px;
   height: 20px;
   background: blueviolet;
-  margin-bottom: 10px;
+  margin: 10px;
   padding: 10px;
+}
+
+.dropzone.dragover {
+  background-color: purple;
+}
+
+.dragging {
+  opacity: .5;
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
-var dragged;
+let dragged;
 
 /* events fired on the draggable target */
-document.addEventListener("drag", function(event) {
+document.addEventListener("drag", (event) => {
+  console.log("dragging");
+});
 
-}, false);
-
-document.addEventListener("dragstart", function(event) {
+document.addEventListener("dragstart", (event) => {
   // store a ref. on the dragged elem
   dragged = event.target;
   // make it half transparent
-  event.target.style.opacity = .5;
-}, false);
+  event.target.classList.add("dragging");
+});
 
-document.addEventListener("dragend", function(event) {
+document.addEventListener("dragend", (event) => {
   // reset the transparency
-  event.target.style.opacity = "";
-}, false);
+  event.target.classList.remove("dragging");
+});
 
 /* events fired on the drop targets */
-document.addEventListener("dragover", function(event) {
+document.addEventListener("dragover", (event) => {
   // prevent default to allow drop
   event.preventDefault();
 }, false);
 
-document.addEventListener("dragenter", function(event) {
+document.addEventListener("dragenter", (event) => {
   // highlight potential drop target when the draggable element enters it
-  if (event.target.className == "dropzone") {
-    event.target.style.background = "purple";
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.add("dragover");
   }
+});
 
-}, false);
-
-document.addEventListener("dragleave", function(event) {
+document.addEventListener("dragleave", (event) => {
   // reset background of potential drop target when the draggable element leaves it
-  if (event.target.className == "dropzone") {
-    event.target.style.background = "";
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.remove("dragover");
   }
+});
 
-}, false);
-
-document.addEventListener("drop", function(event) {
+document.addEventListener("drop", (event) => {
   // prevent default action (open as link for some elements)
   event.preventDefault();
-  // move dragged elem to the selected drop target
-  if (event.target.className == "dropzone") {
-    event.target.style.background = "";
-    dragged.parentNode.removeChild( dragged );
-    event.target.appendChild( dragged );
+  // move dragged element to the selected drop target
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.remove("dragover");
+    dragged.parentNode.removeChild(dragged);
+    event.target.appendChild(dragged);
   }
-}, false);
+});
 ```
 
-{{EmbedLiveSample('Examples', '300', '200', '')}}
+#### Result
+
+{{EmbedLiveSample('Drag and drop example')}}
 
 ## Specifications
 

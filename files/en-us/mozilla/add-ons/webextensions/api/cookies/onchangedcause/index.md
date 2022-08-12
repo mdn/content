@@ -41,11 +41,11 @@ Values of this type are strings. Possible values are:
 You can listen to the {{WebExtAPIRef("cookies.onChanged")}} event to be notified when cookies change. The listener is passed a `changeInfo` object that contains a `cause` property, whose value is the `OnChangeCaused` string:
 
 ```js
-browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+browser.cookies.onChanged.addListener((changeInfo) => {
+  console.log(`Cookie changed: \n`
+    + ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n`
+    + ` * Cause: ${changeInfo.cause}\n`
+    + ` * Removed: ${changeInfo.removed}`);
 });
 ```
 

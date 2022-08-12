@@ -1,6 +1,7 @@
 ---
 title: Text
 slug: Web/API/Text
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -59,4 +60,4 @@ _Inherits methods from its parent, {{domxref("CharacterData")}}, {{domxref("Node
 
 ## See also
 
-- [The DOM API](/en-US/docs/Web/API/Document_Object_Model).
+- [The DOM API](/en-US/docs/Web/API/Document_Object_Model)

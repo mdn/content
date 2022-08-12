@@ -1,6 +1,7 @@
 ---
 title: Element.ariaSetSize
 slug: Web/API/Element/ariaSetSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -44,4 +45,4 @@ console.log(el.ariaSetSize); // 4
 
 ## See also
 
-- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)

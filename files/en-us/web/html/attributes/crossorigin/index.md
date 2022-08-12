@@ -9,9 +9,12 @@ tags:
   - NeedsContent
   - Reference
   - Security
-spec-urls:
-  - https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes
-  - https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin
+spec-urls: https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes
+browser-compat:
+  - html.elements.img.crossorigin
+  - html.elements.link.crossorigin
+  - html.elements.script.crossorigin
+  - html.elements.video.crossorigin
 ---
 {{HTMLSidebar}}
 
@@ -47,7 +50,7 @@ By default (that is, when the attribute is not specified), CORS is not used at a
     <tr>
       <td><code>script</code></td>
       <td>
-        Access to error logging via {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} will be limited.
+        Access to error logging via {{domxref('Window.error_event', 'window.onerror')}} will be limited.
       </td>
     </tr>
     <tr>
@@ -83,17 +86,7 @@ The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/
 
 ## Browser compatibility
 
-### script crossorigin
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### video crossorigin
-
-{{Compat("html.elements.video.crossorigin")}}
-
-### link crossorigin
-
-{{Compat("html.elements.link.crossorigin")}}
+{{Compat}}
 
 ## See also
 

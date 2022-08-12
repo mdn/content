@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.maxPacketLifeTime
 slug: Web/API/RTCDataChannel/maxPacketLifeTime
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -19,24 +20,12 @@ when the data channel was created, or `null`. This limits how long
 the browser can continue to attempt to transmit and retransmit the message before giving
 up.
 
-## Syntax
-
-```js
-var lifetime = aDataChannel.maxPacketLifeTime;
-```
-
-### Value
+## Value
 
 The number of milliseconds over which the browser may continue to attempt to transmit
 the message until it either succeeds or gives up. If not set when
 {{domxref("RTCPeerConnection.createDataChannel()")}} was called to create the data
 channel, this value is `null`.
-
-## Example
-
-```js
-// TBD
-```
 
 ## Specifications
 

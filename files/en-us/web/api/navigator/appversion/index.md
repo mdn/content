@@ -1,6 +1,7 @@
 ---
 title: Navigator.appVersion
 slug: Web/API/Navigator/appVersion
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -25,7 +26,7 @@ browser.
 ## Examples
 
 ```js
-alert('Your browser version is reported as ' + navigator.appVersion);
+alert(`Your browser version is reported as ${navigator.appVersion}`);
 ```
 
 ## Notes

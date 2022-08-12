@@ -1,6 +1,7 @@
 ---
 title: Animation.persist()
 slug: Web/API/Animation/persist
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -35,9 +36,9 @@ In our simple [replace indefinite animations demo](https://mdn.github.io/dom-exa
 ```js
 const divElem = document.querySelector('div');
 
-document.body.addEventListener('mousemove', evt => {
-  let anim = divElem.animate(
-    { transform: `translate(${ evt.clientX}px, ${evt.clientY}px)` },
+document.body.addEventListener('mousemove', (evt) => {
+  const anim = divElem.animate(
+    { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
     { duration: 500, fill: 'forwards' }
   );
 
@@ -45,7 +46,7 @@ document.body.addEventListener('mousemove', evt => {
 
   //anim.persist()
 
-  anim.onremove = event => { console.log('Animation removed');}
+  anim.onremove = (event) => { console.log('Animation removed');}
 
   console.log(anim.replaceState);
 });

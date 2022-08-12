@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.codecId
 slug: Web/API/RTCRtpStreamStats/codecId
+page-type: web-api-instance-property
 tags:
   - API
   - Codec

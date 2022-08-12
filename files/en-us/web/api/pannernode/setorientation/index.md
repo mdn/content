@@ -1,6 +1,7 @@
 ---
 title: PannerNode.setOrientation()
 slug: Web/API/PannerNode/setOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -11,6 +12,8 @@ tags:
 browser-compat: api.PannerNode.setOrientation
 ---
 {{ APIRef("Web Audio API") }} {{Deprecated_Header}}
+
+> **Note:** The suggested replacement for this deprecated method is to instead set the [`orientationX`](/en-US/docs/Web/API/PannerNode/orientationX), [`orientationY`](/en-US/docs/Web/API/PannerNode/orientationY), and [`orientationZ`](/en-US/docs/Web/API/PannerNode/orientationZ) attributes directly.
 
 The `setOrientation()` method of the {{ domxref("PannerNode") }} Interface defines the direction the audio source is playing in.
 
@@ -26,11 +29,11 @@ setOrientation(x, y, z)
 
 ### Parameters
 
-- x
+- `x`
   - : The x value of the panner's direction vector in 3D space.
-- y
+- `y`
   - : The y value of the panner's direction vector in 3D space.
-- z
+- `z`
   - : The z value of the panner's direction vector in 3D space.
 
 ### Return value

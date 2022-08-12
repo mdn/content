@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createRenderbuffer()
 slug: Web/API/WebGLRenderingContext/createRenderbuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -35,9 +36,9 @@ source or target of an rendering operation.
 ### Creating a render buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var renderBuffer = gl.createRenderbuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const renderBuffer = gl.createRenderbuffer();
 ```
 
 ## Specifications

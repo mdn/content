@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserverEntry.rootBounds
 slug: Web/API/IntersectionObserverEntry/rootBounds
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer

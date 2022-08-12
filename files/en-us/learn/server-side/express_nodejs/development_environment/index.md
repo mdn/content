@@ -260,7 +260,7 @@ npm install eslint --save-dev
 
 The following entry would then be added to your application's **package.json**:
 
-```js
+```json
   "devDependencies": {
     "eslint": "^7.10.0"
   }
@@ -278,9 +278,9 @@ For example, to define a script to run the _eslint_ development dependency that 
 
 ```json
 "scripts": {
-  ...
+  // …
   "lint": "eslint src/js"
-  ...
+  // …
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: URLPattern.protocol
 slug: Web/API/URLPattern/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property

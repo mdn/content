@@ -62,7 +62,7 @@ Listen for highlighting events, and log the IDs of highlighted tabs:
 
 ```js
 function handleHighlighted(highlightInfo) {
-  console.log("Highlighted tabs: " + highlightInfo.tabIds);
+  console.log(`Highlighted tabs: ${highlightInfo.tabIds}`);
 }
 
 browser.tabs.onHighlighted.addListener(handleHighlighted);

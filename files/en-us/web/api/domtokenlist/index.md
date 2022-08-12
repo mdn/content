@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -22,7 +23,7 @@ A `DOMTokenList` is indexed beginning with `0` as with JavaScript {{jsxref("Arra
 ## Methods
 
 - {{domxref("DOMTokenList.item()")}}
-  - : Returns the item in the list by its index, or `undefined` if the index is greater than or equal to the list's `length`.
+  - : Returns the item in the list by its index, or `null` if the index is greater than or equal to the list's `length`.
 - {{domxref("DOMTokenList.contains()")}}
   - : Returns `true` if the list contains the given token, otherwise `false`.
 - {{domxref("DOMTokenList.add()")}}

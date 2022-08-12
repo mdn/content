@@ -1,6 +1,7 @@
 ---
 title: DOMPoint
 slug: Web/API/DOMPoint
+page-type: web-api-interface
 tags:
   - API
   - Coordinate
@@ -41,13 +42,13 @@ _`DOMPoint` inherits methods from its parent, {{domxref("DOMPointReadOnly")}}._
 
 _`DOMPoint` inherits properties from its parent, {{domxref("DOMPointReadOnly")}}._
 
-- {{domxref("DOMPointReadOnly.x", "DOMPoint.x")}}
+- {{domxref("DOMPoint.x")}}
   - : The `x` coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.y", "DOMPoint.y")}}
+- {{domxref("DOMPoint.y")}}
   - : The `y` coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.z", "DOMPoint.z")}}
+- {{domxref("DOMPoint.z")}}
   - : The `z` coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.w", "DOMPoint.w")}}
+- {{domxref("DOMPoint.w")}}
   - : The perspective value of the `DOMPoint`.
 
 ## Examples
@@ -62,14 +63,9 @@ function onXRFrame(time, xrFrame) {
     let position = viewerPose.transform.position;
     let orientation = viewerPose.transform.orientation;
 
-    console.log('XR Viewer Position: {x: ' + roundToTwo(position.x)
-                                 + ', y: ' + roundToTwo(position.y)
-                                 + ', z: ' + roundToTwo(position.z));
+    console.log(`XR Viewer Position: {x: ${roundToTwo(position.x)}, y: ${roundToTwo(position.y)}, z: ${roundToTwo(position.z)}`);
 
-    console.log('XR Viewer Orientation: {x: ' + roundToTwo(orientation.x)
-                                    + ', y: ' + roundToTwo(orientation.y)
-                                    + ', z: ' + roundToTwo(orientation.z)
-                                    + ', w: ' + roundToTwo(orientation.w));
+    console.log(`XR Viewer Orientation: {x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(orientation.y)}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`);
   }
 }
 ```

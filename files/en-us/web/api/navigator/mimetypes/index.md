@@ -1,6 +1,7 @@
 ---
 title: Navigator.mimeTypes
 slug: Web/API/Navigator/mimeTypes
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -40,7 +41,7 @@ if ('application/pdf' in navigator.mimeTypes) {
   // browser supports inline viewing of PDF files.
 
   const { description, suffixes } = navigator.mimeTypes['application/pdf'];
-  console.log(`Description: ${ description }, Suffix: ${ suffixes }`);
+  console.log(`Description: ${description}, Suffix: ${suffixes}`);
   // expected output: Description: Portable Document Format, Suffix: pdf
 }
 ```

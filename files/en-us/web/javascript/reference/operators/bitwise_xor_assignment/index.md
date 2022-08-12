@@ -15,7 +15,7 @@ The bitwise XOR assignment operator (`^=`) uses the binary representation of
 both operands, does a bitwise XOR operation on them and assigns the result to the
 variable.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor-assignment.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor-assignment.html", "shorter")}}
 
 ## Syntax
 

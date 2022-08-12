@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.objectStoreNames
 slug: Web/API/IDBTransaction/ObjectStoreNames
+page-type: web-api-instance-property
 tags:
   - API
   - Database

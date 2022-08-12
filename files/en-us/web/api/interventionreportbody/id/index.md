@@ -1,6 +1,7 @@
 ---
 title: InterventionReportBody.id
 slug: Web/API/InterventionReportBody/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -23,13 +24,13 @@ A string.
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print the value of `id` to the console.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver((reports, observer) => {
+  const firstReport = reports[0];
   console.log(firstReport.type); // intervention
   console.log(firstReport.body.id);
 }, options);

@@ -1,6 +1,7 @@
 ---
 title: RelativeOrientationSensor()
 slug: Web/API/RelativeOrientationSensor/RelativeOrientationSensor
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

@@ -1,6 +1,7 @@
 ---
 title: RTCError
 slug: Web/API/RTCError
+page-type: web-api-interface
 tags:
   - API
   - Audio

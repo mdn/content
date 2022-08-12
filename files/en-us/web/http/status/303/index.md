@@ -31,6 +31,6 @@ redirected page is always {{HTTPMethod("GET")}}.
 
 ## See also
 
-- {{HTTPStatus("302", "302 Found")}}, the temporary redirect
-- {{HTTPStatus("307", "307 Temporary Redirect")}}, the equivalent of this status code
+- {{HTTPStatus("302", "302 Found")}}, a temporary redirect
+- {{HTTPStatus("307", "307 Temporary Redirect")}}, a temporary redirect
   where the method used never changes.

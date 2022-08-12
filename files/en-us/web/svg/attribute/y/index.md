@@ -1150,9 +1150,9 @@ For {{SVGElement('svg')}}, `y` defines the y coordinate of the upper left corner
 
 ## text
 
-For {{SVGElement('text')}}, if it contain a single value, `y` defines the y coordinate on where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by some properties like {{SVGAttr('text-anchor')}}, or {{cssxref('direction')}}.
+For {{SVGElement('text')}}, if it contains a single value, `y` defines the y coordinate where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
-If there are multiple values, `y` defines the y coordinate of each individual glyph from the text. If there are less values than glyphs, the remaining glyphs are placed in the continuity of the last positioned glyph. If there are more values than glyphs, extra values are ignored.
+If it contains multiple values, `y` defines the y coordinate of each individual glyph from the text. If there are fewer values than glyphs, the remaining glyphs are placed in line with the last positioned glyph. If there are more values than glyphs, the extra values are ignored.
 
 <table class="properties">
   <tbody>
@@ -1225,9 +1225,9 @@ line {
 
 > **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
-For {{SVGElement('tref')}}, if it contain a single value, `y` defines the y coordinate on where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by some properties like {{SVGAttr('text-anchor')}}, or {{cssxref('direction')}}.
+For {{SVGElement('tref')}}, if it contains a single value, `y` defines the y coordinate where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
-If there are multiple values, `y` defines the y coordinate of each individual glyph from the text. If there are less values than glyphs, the remaining glyphs are placed in the continuity of the last positioned glyph. If there are more values than glyphs, extra values are ignored.
+If it contains multiple values, `y` defines the y coordinate of each individual glyph from the text. If there are fewer values than glyphs, the remaining glyphs are placed in line with the last positioned glyph. If there are more values than glyphs, the extra values are ignored.
 
 <table class="properties">
   <tbody>
@@ -1260,9 +1260,9 @@ If there are multiple values, `y` defines the y coordinate of each individual gl
 
 ## tspan
 
-For {{SVGElement('tspan')}}, if it contain a single value, `y` defines the y coordinate on where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by some properties like {{SVGAttr('text-anchor')}}, or {{cssxref('direction')}}.
+For {{SVGElement('tspan')}}, if it contains a single value, `y` defines the y coordinate where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
-If there are multiple values, `y` defines the y coordinate of each individual glyph from the text. If there are less values than glyphs, the remaining glyphs are placed in the continuity of the last positioned glyph. If there are more values than glyphs, extra values are ignored.
+If it contains multiple values, `y` defines the y coordinate of each individual glyph from the text. If there are fewer values than glyphs, the remaining glyphs are placed in line with the last positioned glyph. If there are more values than glyphs, the extra values are ignored.
 
 <table class="properties">
   <tbody>
@@ -1314,7 +1314,7 @@ html,body,svg { height:100% }
 
     <!-- y with multiple values -->
     <tspan y="40%,60%,80%" x="55%">SVG</tspan>
-  </text
+  </text>
 </svg>
 ```
 

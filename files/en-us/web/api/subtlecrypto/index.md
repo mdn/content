@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
+page-type: web-api-interface
 tags:
   - API
   - Advanced

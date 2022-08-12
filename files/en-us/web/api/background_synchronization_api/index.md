@@ -1,6 +1,7 @@
 ---
 title: Background Synchronization API
 slug: Web/API/Background_Synchronization_API
+page-type: web-api-overview
 tags:
   - API
   - Background
@@ -11,8 +12,10 @@ tags:
   - Service Workers
   - Sync
   - Web Background Synchronization API
+  - Experimental
+browser-compat: api.SyncManager
 ---
-{{securecontext_header}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 {{DefaultAPISidebar("Background Sync")}}
 
@@ -32,7 +35,7 @@ As this API relies on service workers, functionality provided by this API is onl
 
 ## Background Synchronization Interfaces
 
-- {{domxref('SyncManager')}}
+- {{domxref('SyncManager')}} {{Experimental_Inline}}
   - : Registers tasks to be run in a service worker at a later time with network connectivity. These tasks are referred to as _background sync requests_.
 - {{domxref('SyncEvent')}}
   - : Represents a synchronization event, sent to the {{domxref('ServiceWorkerGlobalScope', 'global scope')}} of a {{domxref('ServiceWorker')}}. It provides a way to run tasks in the service worker with network connectivity.
@@ -44,7 +47,7 @@ The following additions to the {{domxref('Service Worker API')}} are specified i
 - {{domxref("ServiceWorkerRegistration.sync")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run with network connectivity.
 - {{domxref("ServiceWorkerGlobalScope.sync_event", "onsync")}}
-  - : An event handler fired whenever a {{Event("sync")}} event occurs. This happens either immediately if the network is available or as soon as the network becomes available.
+  - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}} event occurs. This happens either immediately if the network is available or as soon as the network becomes available.
 
 ## Examples
 
@@ -70,8 +73,8 @@ async function syncMessagesLater() {
 This code checks to see if a background sync task with a given tag is registered.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
-  registration.sync.getTags().then(tags => {
+navigator.serviceWorker.ready.then((registration) => {
+  registration.sync.getTags().then((tags) => {
     if (tags.includes('sync-messages'))
       console.log('Messages sync already requested');
   });
@@ -83,8 +86,8 @@ navigator.serviceWorker.ready.then(registration => {
 The following example shows how to respond to a background sync event in the service worker.
 
 ```js
-self.addEventListener('sync', event => {
-  if (event.tag == 'sync-messages') {
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'sync-messages') {
     event.waitUntil(sendOutboxMessages());
   }
 });
@@ -92,11 +95,11 @@ self.addEventListener('sync', event => {
 
 ## Specifications
 
-{{Specifications("api.SyncManager")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.SyncManager")}}
+{{Compat}}
 
 ## See also
 

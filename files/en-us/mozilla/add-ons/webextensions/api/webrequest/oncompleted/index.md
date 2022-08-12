@@ -49,11 +49,11 @@ Events have three functions:
   - : A function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `details`
-      - : [`object`](#details). Details about the request. See [`details`](#details) below.
+      - : [`object`](#details). Details about the request. See [`details`](#details_2) below.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
-- `extraInfoSpec`{{optional_inline}}
+- `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass just one value:
 
@@ -113,7 +113,7 @@ Events have three functions:
 
 - `requestId`
   - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.
-- `responseHeaders`{{optional_inline}}
+- `responseHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP response headers that were received along with this response.
 - `statusCode`
   - : `integer`. Standard HTTP status code returned by the server.

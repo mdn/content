@@ -1,6 +1,7 @@
 ---
 title: PluginArray
 slug: Web/API/PluginArray
+page-type: web-api-interface
 tags:
   - API
   - Add-ons
@@ -18,7 +19,7 @@ The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} obj
 
 ## Properties
 
-- {{DOMxRef("PluginArray.length")}}{{ReadOnlyInline}}
+- {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}}
   - : The number of plugins in the array.
 
 ## Methods
@@ -35,16 +36,16 @@ The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} obj
 The following example function returns the version of the Shockwave Flash plugin.
 
 ```js
-var pluginsLength = navigator.plugins.length;
+const pluginsLength = navigator.plugins.length;
 
-document.body.innerHTML = pluginsLength + " Plugin(s)<br>"
-  + '<table id="pluginTable"><thead>'
-  +'<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>'
-  +'</thead><tbody></tbody></table>';
+document.body.innerHTML = `${pluginsLength} Plugin(s)<br>`
+  + `<table id="pluginTable"><thead>`
+  + `<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>`
+  + `</thead><tbody></tbody></table>`;
 
-var table = document.getElementById('pluginTable');
+const table = document.getElementById('pluginTable');
 
-for(var i = 0; i < pluginsLength; i++) {
+for (let i = 0; i < pluginsLength; i++) {
   let newRow = table.insertRow();
   newRow.insertCell().textContent = navigator.plugins[i].name;
   newRow.insertCell().textContent = navigator.plugins[i].filename;
@@ -56,23 +57,16 @@ for(var i = 0; i < pluginsLength; i++) {
 The following example displays information about the installed plugin(s).
 
 ```js
-var pluginsLength = navigator.plugins.length;
+const pluginsLength = navigator.plugins.length;
 
 document.write(
-  pluginsLength.toString() + " Plugin(s)<br>" +
-  "Name | Filename | description<br>"
+  `${pluginsLength.toString()} Plugin(s)<br>` +
+  `Name | Filename | description<br>`
 );
 
-for(var i = 0; i < pluginsLength; i++) {
+for (let i = 0; i < pluginsLength; i++) {
   document.write(
-    navigator.plugins[i].name +
-    " | " +
-    navigator.plugins[i].filename +
-    " | " +
-    navigator.plugins[i].description +
-    " | " +
-    navigator.plugins[i].version +
-    "<br>"
+    `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`
   );
 }
 ```

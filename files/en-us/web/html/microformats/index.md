@@ -12,7 +12,7 @@ tags:
   - Search
 ---
 
-[_Microformats_](https://microformats.org/)are standards used to embed semantics and structured data in HTML, and provide an API to be used by social web applications, search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations.
+[_Microformats_](https://microformats.org/) are standards used to embed semantics and structured data in HTML, and provide an API to be used by social web applications, search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations.
 
 - To create a microformats object, h-\* class names are used in the class attribute.
 - To add a property to an object, the p-\*, u-\*, dt-\*, e-\* class names are used on one of the object's descendants.
@@ -400,7 +400,7 @@ Supported in all browsers's support for the class attribute and its DOM API.
 ## See also
 
 - [class attribute](/en-US/docs/Web/HTML/Global_attributes/class)
-- {{Interwiki("wikipedia", "Microformat")}} on Wikipedia
+- [Microformat](https://en.wikipedia.org/wiki/Microformat) on Wikipedia
 - [Microformats official website](https://microformats.org/)
 - [Search engines support](https://microformats.org/wiki/search_engines) on Microformats official website
 - [Microformats on IndieWebCamp](https://indieweb.org/microformats)

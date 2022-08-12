@@ -1,6 +1,7 @@
 ---
 title: performance.clearMarks()
 slug: Web/API/Performance/clearMarks
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -27,7 +28,7 @@ clearMarks(name)
 
 ### Parameters
 
-- name {{optional_inline}}
+- `name` {{optional_inline}}
   - : A string representing the name of the timestamp. If this argument
     is omitted, all {{domxref("PerformanceEntry","performance entries")}} with an
     {{domxref("PerformanceEntry.entryType","entry type")}} of "`mark`" will be
@@ -35,7 +36,7 @@ clearMarks(name)
 
 ### Return value
 
-void
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -45,7 +46,7 @@ The following example shows both uses of the `clearMarks()` method.
 // Create a small helper to show how many PerformanceMark entries there are.
 function logMarkCount() {
   console.log(
-    "Found this many entries: " + performance.getEntriesByType("mark").length
+    `Found this many entries: ${performance.getEntriesByType("mark").length}`
   );
 }
 

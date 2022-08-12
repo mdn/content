@@ -1,6 +1,7 @@
 ---
 title: VREyeParameters.maximumFieldOfView
 slug: Web/API/VREyeParameters/maximumFieldOfView
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

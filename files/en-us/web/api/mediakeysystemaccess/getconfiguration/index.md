@@ -1,6 +1,7 @@
 ---
 title: MediaKeySystemAccess.getConfiguration()
 slug: Web/API/MediaKeySystemAccess/getConfiguration
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

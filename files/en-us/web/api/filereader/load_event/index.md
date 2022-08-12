@@ -1,6 +1,7 @@
 ---
 title: 'FileReader: load event'
 slug: Web/API/FileReader/load_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -20,9 +21,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('load', event => { });
+addEventListener('load', (event) => { });
 
-onload = event => { };
+onload = (event) => { };
 ```
 
 ## Event type
@@ -58,11 +59,11 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
                accept="image/png, image/jpeg">
     </div>
 
-    <img src="" class="preview" height="200" alt="Image preview...">
+    <img src="" class="preview" height="200" alt="Image preview">
 
     <div class="event-log">
-        <label>Event log:</label>
-        <textarea readonly class="event-log-contents"></textarea>
+        <label for="eventLog">Event log:</label>
+        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
     </div>
 
   </div>
@@ -118,7 +119,7 @@ const eventLog = document.querySelector('.event-log-contents');
 const reader = new FileReader();
 
 function handleEvent(event) {
-    eventLog.textContent = eventLog.textContent + `${event.type}: ${event.loaded} bytes transferred\n`;
+    eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
 
     if (event.type === "load") {
         preview.src = reader.result;

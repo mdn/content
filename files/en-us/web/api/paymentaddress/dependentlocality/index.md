@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.dependentLocality
 slug: Web/API/PaymentAddress/dependentLocality
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request

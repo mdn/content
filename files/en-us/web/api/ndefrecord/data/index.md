@@ -1,6 +1,7 @@
 ---
 title: NDEFRecord.data
 slug: Web/API/NDEFRecord/data
+page-type: web-api-instance-property
 tags:
   - NDEF
   - Reference

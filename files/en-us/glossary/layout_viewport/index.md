@@ -15,7 +15,7 @@ This becomes important, for example, on mobile devices, where a pinching gesture
 ## See also
 
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
-- {{Interwiki("wikipedia", "Viewport")}} on Wikipedia
+- [Viewport](https://en.wikipedia.org/wiki/Viewport) on Wikipedia
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)
 - {{Glossary("Viewport")}} in the MDN Glossary
 - {{Glossary("Visual viewport")}} in the MDN Glossary

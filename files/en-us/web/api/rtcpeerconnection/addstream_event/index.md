@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: addstream event'
 slug: Web/API/RTCPeerConnection/addstream_event
+page-type: web-api-event
 tags:
   - Event
   - Media
@@ -30,9 +31,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('addstream', event => { });
+addEventListener('addstream', (event) => { });
 
-onaddstream = event => { };
+onaddstream = (event) => { };
 ```
 
 ## Event type
@@ -54,11 +55,11 @@ This example looks to determine if the user's browser supports the {{domxref("RT
 
 ```js
 if (pc.addTrack !== undefined) {
-  pc.ontrack = ev => {
-    ev.streams.forEach(stream => doAddStream(stream));
+  pc.ontrack = (ev) => {
+    ev.streams.forEach((stream) => doAddStream(stream));
   }
 } else {
-  pc.onaddstream = ev => {
+  pc.onaddstream = (ev) => {
     doAddStream(ev.stream);
   }
 }
@@ -69,7 +70,7 @@ This calls a function `doAddStream()` once for each stream being added to the {{
 You can also use the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method to set an event listener:
 
 ```js
-pc.addEventListener("addstream", ev => doAddStream(ev.stream), false);
+pc.addEventListener("addstream", (ev) => doAddStream(ev.stream), false);
 ```
 
 ## Browser compatibility

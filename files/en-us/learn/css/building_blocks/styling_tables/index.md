@@ -64,7 +64,7 @@ Let's start by looking at a typical HTML table. Well, I say typical — most HTM
       <td>London Calling</td>
     </tr>
 
-      ... some rows removed for brevity
+    <!-- several other great bands -->
 
     <tr>
       <th scope="row">The Stranglers</th>
@@ -97,7 +97,7 @@ Let's work through styling our table example together.
 3. Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
 
     ```html
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet">
     ```
 
 ### Spacing and layout

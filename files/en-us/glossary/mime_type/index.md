@@ -11,7 +11,7 @@ It serves the same purpose as filename extensions traditionally do on Windows. T
 
 ## See also
 
-- {{interwiki("wikipedia", "Internet media type", "Internet media type")}} on Wikipedia
+- [Internet media type](https://en.wikipedia.org/wiki/Internet_media_type) on Wikipedia
 - [List of MIME types](https://www.iana.org/assignments/media-types/media-types.xhtml)
 - [Properly Configuring Server MIME Types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
 - Details information about the usage of [MIME Types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) in a Web context.

@@ -36,9 +36,9 @@ html, body, svg {
     <feBlend in="SourceGraphic" in2="floodFill" mode="color-dodge"/>
   </filter>
 
-  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
       style="filter:url(#blending1);"/>
-  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
       style="filter:url(#blending2); transform:translateX(220px);"/>
 </svg>
 ```

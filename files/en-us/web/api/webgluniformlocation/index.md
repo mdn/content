@@ -1,6 +1,7 @@
 ---
 title: WebGLUniformLocation
 slug: Web/API/WebGLUniformLocation
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -23,10 +24,10 @@ The `WebGLUniformLocation` object does not define any methods or properties of i
 ### Getting an uniform location
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
 
-var location = gl.getUniformLocation(WebGLProgram, 'uniformName');
+const location = gl.getUniformLocation(WebGLProgram, 'uniformName');
 ```
 
 ## Specifications

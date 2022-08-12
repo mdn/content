@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.toggle()
 slug: Web/API/DOMTokenList/toggle
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -54,7 +55,7 @@ Now the JavaScript:
 const span = document.querySelector("span");
 const classes = span.classList;
 
-span.addEventListener('click', function() {
+span.addEventListener('click', () => {
   const result = classes.toggle("c");
 
   if (result) {

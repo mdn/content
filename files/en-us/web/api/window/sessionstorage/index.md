@@ -1,6 +1,7 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
+page-type: web-api-instance-property
 tags:
   - APIs
   - Property
@@ -53,8 +54,7 @@ session storage space.
 ### Exceptions
 
 - `SecurityError`
-  - : The request violates a policy decision, or the origin is not [a valid
-    scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the
+  - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the
     `file:` or `data:` scheme, for example). For example, the user
     may have their browser configured to deny permission to persist data for the specified
     origin.
@@ -94,14 +94,13 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // Listen for changes in the text field
-field.addEventListener("change", function() {
+field.addEventListener("change", () => {
   // And save the results into the session storage object
   sessionStorage.setItem("autosave", field.value);
 });
 ```
 
-> **Note:** Please refer to the [Using the Web
-> Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
+> **Note:** Please refer to the [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
 
 ## Specifications
 
@@ -113,6 +112,5 @@ field.addEventListener("change", function() {
 
 ## See also
 
-- [Using the
-  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 - {{DOMxRef("Window.localStorage")}}

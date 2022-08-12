@@ -1,6 +1,7 @@
 ---
 title: HmacImportParams
 slug: Web/API/HmacImportParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
@@ -19,7 +20,7 @@ The **`HmacImportParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/AP
   - : A string. This should be set to `HMAC`.
 - `hash`
 
-  - : A string representing the name of the [digest function](/en-US/docs//Web/API/SubtleCrypto/digest#supported_algorithms) to use. The can take a value of `SHA-256`, `SHA-384`, or `SHA-512`.
+  - : A string representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. The can take a value of `SHA-256`, `SHA-384`, or `SHA-512`.
 
     > **Warning:** Although you can technically pass `SHA-1` here, this is strongly discouraged as it is considered vulnerable.
 

@@ -11,7 +11,7 @@ browser-compat: svg.elements.svg.contentScriptType
 
 The **`contentScriptType`** attribute specifies the default scripting language for the given document fragment on the {{SVGElement("svg")}} element.
 
-This attribute sets the default scripting language used to process the value strings in [event attributes](/en-US/docs/Web/SVG/Attribute#Document_Event_Attributes). This language must be used for all instances of script that do not specify their own scripting language. The value specifies a media type, per [MIME Part Two: Media Types \[RFC2046\]](https://www.ietf.org/rfc/rfc2046.txt).
+This attribute sets the default scripting language used to process the value strings in [event attributes](/en-US/docs/Web/SVG/Attribute#document_event_attributes). This language must be used for all instances of script that do not specify their own scripting language. The value specifies a media type, per [MIME Part Two: Media Types \[RFC2046\]](https://www.ietf.org/rfc/rfc2046.txt).
 
 ## Usage notes
 

@@ -1,16 +1,36 @@
 ---
-title: Values
+title: MathML Attribute Values
 slug: Web/MathML/Attribute/Values
 tags:
   - Guide
   - MathML
   - MathML Reference
+browser-compat: mathml.attribute_values
 ---
 {{MathMLRef}}
 
-## Lengths
+## MathML-specific types
 
-Several MathML presentation elements have attributes that accept length values used for size or spacing. MathML accepts different units and constants for specifying lengths.
+In addition to [CSS data types](/en-US/docs/Web/CSS/CSS_Types), some MathML attributes accept the following types:
+
+- `<unsigned-integer>`: An [`<integer>`](/en-US/docs/Web/CSS/integer), whose first character is neither U+002D HYPHEN-MINUS character (-) nor U+002B PLUS SIGN (+); for example `1234`.
+- `<boolean>`: A string `true` or `false` representing a boolean value.
+
+## Legacy MathML lengths
+
+{{deprecated_header}}
+
+Instead of [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage), MathML used to define its own [type to describe lengths](https://www.w3.org/TR/MathML3/chapter2.html#type.length). Accepted values included non-zero unitless length values (e.g. `5` to mean `500%`), values containing numbers ending with a dot (e.g. `34.px`), or named spaces (e.g. `thinmathspace`). For compatibility reasons, it is recommended to replace non-zero unitless length values with equivalent [`<percentage>`](/en-US/docs/Web/CSS/percentage) values, to remove unnecessary dots in numbers, and to use the following replacement for named lengths:
+
+```
+veryverythinmathspace  => 0.05555555555555555em
+verythinmathspace      => 0.1111111111111111em
+thinmathspace          => 0.16666666666666666em
+mediummathspace        => 0.2222222222222222em
+thickmathspace         => 0.2777777777777778em
+verythickmathspace     => 0.3333333333333333em
+veryverythickmathspace => 0.3888888888888889em
+```
 
 ### Units
 
@@ -27,20 +47,6 @@ Several MathML presentation elements have attributes that accept length values u
 | `%`  | Percentage of the default value.                                                                                            |
 
 ### Constants
-
-{{deprecated_header}}
-
-A replacement for the deprecated constants below is:
-
-```
-veryverythinmathspace  => 0.05555555555555555em
-verythinmathspace      => 0.1111111111111111em
-thinmathspace          => 0.16666666666666666em
-mediummathspace        => 0.2222222222222222em
-thickmathspace         => 0.2777777777777778em
-verythickmathspace     => 0.3333333333333333em
-veryverythickmathspace => 0.3888888888888889em
-```
 
 | Constant                         | Value     |
 | -------------------------------- | --------- |
@@ -59,4 +65,12 @@ veryverythickmathspace => 0.3888888888888889em
 | `negativeverythickmathspace`     | -6/18`em` |
 | `negativeveryverythickmathspace` | -7/18`em` |
 
-Note: [Namedspace binding is deprecated](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) in MathML3 and has been removed in Gecko 15.0 {{ geckoRelease("15.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=673759)).
+## Browser compatibility
+
+{{Compat}}
+
+## Gecko-specific notes
+
+- [Namedspace binding is deprecated](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) in MathML3 and has been removed in Gecko 15.0 {{ geckoRelease("15.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=673759)).
+- Non-zero unitless length values are no longer supported in Gecko 70.0 {{ geckoRelease("70.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=1574749)).
+- Numbers ending with a dot are no longer supported in Gecko 70.0 {{ geckoRelease("70.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=1575596)).

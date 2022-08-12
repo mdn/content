@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement
 slug: Web/API/HTMLTableElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -24,9 +25,9 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
   - : A {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("thead")}} that is a child of the element, or `null` if none is found. When set, if the object doesn't represent a `<thead>`, a {{DOMxRef("DOMException")}} with the `HierarchyRequestError` name is thrown. If a correct object is given, it is inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, nor a {{HTMLElement("colgroup")}}, or as the last child if there is no such element, and the first `<thead>` that is a child of this element is removed from the tree, if any.
 - {{DOMxRef("HTMLTableElement.tFoot")}}
   - : A {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("tfoot")}} that is a child of the element, or `null` if none is found. When set, if the object doesn't represent a `<tfoot>`, a {{DOMxRef("DOMException")}} with the `HierarchyRequestError` name is thrown. If a correct object is given, it is inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, a {{HTMLElement("colgroup")}}, nor a {{HTMLElement("thead")}}, or as the last child if there is no such element, and the first `<tfoot>` that is a child of this element is removed from the tree, if any.
-- {{DOMxRef("HTMLTableElement.rows")}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLTableElement.rows")}} {{ReadOnlyInline}}
   - : Returns a live {{DOMxRef("HTMLCollection")}} containing all the rows of the element, that is all {{HTMLElement("tr")}} that are a child of the element, or a child of one of its {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} children. The rows members of a `<thead>` appear first, in tree order, and those members of a `<tbody>` last, also in tree order. The `HTMLCollection` is live and is automatically updated when the `HTMLTableElement` changes.
-- {{DOMxRef("HTMLTableElement.tBodies")}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLTableElement.tBodies")}} {{ReadOnlyInline}}
   - : Returns a live {{DOMxRef("HTMLCollection")}} containing all the {{HTMLElement("tbody")}} of the element. The `HTMLCollection` is live and is automatically updated when the `HTMLTableElement` changes.
 
 ### Obsolete Properties

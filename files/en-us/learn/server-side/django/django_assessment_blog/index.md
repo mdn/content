@@ -301,7 +301,7 @@ We briefly talked about passing a context to the template in a class-based view 
 
 ```python
 class SomeView(generic.ListView):
-    ...
+    # …
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context

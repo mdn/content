@@ -1,6 +1,7 @@
 ---
 title: PromiseRejectionEvent.reason
 slug: Web/API/PromiseRejectionEvent/reason
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -29,7 +30,7 @@ and whatever else you might wish to include.
 ## Examples
 
 ```js
-window.onunhandledrejection = function(e) {
+window.onunhandledrejection = (e) => {
   console.log(e.reason);
 }
 ```

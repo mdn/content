@@ -27,8 +27,8 @@ router.get('/', book_controller.index);  //This actually maps to /catalog/ becau
 Where the callback function parameter (`book_controller.index`) is defined in **/controllers/bookController.js**:
 
 ```js
-exports.index = function(req, res, next) {
-    res.send('NOT IMPLEMENTED: Site Home Page');
+exports.index = (req, res, next) => {
+  res.send('NOT IMPLEMENTED: Site Home Page');
 }
 ```
 
@@ -41,18 +41,18 @@ The index controller function needs to fetch information about how many `Book`, 
 > **Note:** We use the [`countDocuments()`](https://mongoosejs.com/docs/api.html#model_Model.countDocuments) method to get the number of instances of each model. This is called on a model, with an optional set of conditions to match against in the first argument, and a callback in the second argument (as discussed in [Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose), and you can also return a `Query` and then execute it with a callback later). The callback will be invoked when the database returns the count, with an error value as the first parameter (or `null`) and the count of documents as the second parameter (or `null` if there was an error) .
 >
 > ```js
-> SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
->  // ... do something if there is an err
->  // ... do something with the count if there was no error
+> SomeModel.countDocuments({ a_model_field: 'match_value' }, (err, count) => {
+>  // Do something if there is an err
+>  // Do something with the count if there was no error
 >  });
 > ```
 
 Open **/controllers/bookController.js**. Near the top of the file you should see the exported `index()` function.
 
 ```python
-var Book = require('../models/book')
+const Book = require('../models/book')
 
-exports.index = function(req, res, next) {
+exports.index = (req, res, next) => {
  res.send('NOT IMPLEMENTED: Site Home Page');
 }
 ```
@@ -63,34 +63,34 @@ We need to do this because we'll be using them to get our counts of documents.
 It then imports the _async_ module (which we discussed previously in [Asynchronous flow control using async](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)).
 
 ```js
-var Book = require('../models/book');
-var Author = require('../models/author');
-var Genre = require('../models/genre');
-var BookInstance = require('../models/bookinstance');
+const Book = require('../models/book');
+const Author = require('../models/author');
+const Genre = require('../models/genre');
+const BookInstance = require('../models/bookinstance');
 
-var async = require('async');
+const async = require('async');
 
-exports.index = function(req, res) {
-
-    async.parallel({
-        book_count: function(callback) {
-            Book.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
-        },
-        book_instance_count: function(callback) {
-            BookInstance.countDocuments({}, callback);
-        },
-        book_instance_available_count: function(callback) {
-            BookInstance.countDocuments({status:'Available'}, callback);
-        },
-        author_count: function(callback) {
-            Author.countDocuments({}, callback);
-        },
-        genre_count: function(callback) {
-            Genre.countDocuments({}, callback);
-        }
-    }, function(err, results) {
-        res.render('index', { title: 'Local Library Home', error: err, data: results });
-    });
+exports.index = (req, res) =>{
+  async.parallel({
+    book_count(callback) {
+      Book.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
+    },
+    book_instance_count(callback) {
+      BookInstance.countDocuments({}, callback);
+    },
+    book_instance_available_count(callback) {
+      BookInstance.countDocuments({ status:'Available' }, callback);
+    },
+    author_count(callback) {
+      Author.countDocuments({}, callback);
+    },
+    genre_count(callback) {
+      Genre.countDocuments({}, callback);
+    }
+  },
+  (err, results) => {
+    res.render('index', { title: 'Local Library Home', error: err, data: results });
+  });
 };
 ```
 
@@ -104,7 +104,7 @@ On success the callback function calls [`res.render()`](https://expressjs.com/en
 
 Open **/views/index.pug** and replace its content with the text below.
 
-```js
+```pug
 extends layout
 
 block content

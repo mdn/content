@@ -1,6 +1,7 @@
 ---
 title: WaveShaperNode.curve
 slug: Web/API/WaveShaperNode/curve
+page-type: web-api-instance-property
 tags:
   - API
   - Property

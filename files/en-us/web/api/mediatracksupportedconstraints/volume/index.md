@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.volume
 slug: Web/API/MediaTrackSupportedConstraints/volume
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -59,7 +60,7 @@ if (navigator.mediaDevices.getSupportedConstraints().volume) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Browser compatibility
 

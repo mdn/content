@@ -1,5 +1,5 @@
 ---
-title: 'aria-colspan'
+title: aria-colspan
 slug: Web/Accessibility/ARIA/Attributes/aria-colspan
 tags:
   - Accessibility
@@ -9,12 +9,11 @@ tags:
   - aria-colspan
 spec-urls: https://w3c.github.io/aria/#aria-colspan
 ---
-
 The `aria-colspan` attribute defines the number of columns spanned by a cell or gridcell within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 ## Description
 
-Intended for [`cell`s](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role) and [`gridcell`s](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) which are not contained in a native HTML {{HTMLElement('table')}}, the `aria-colspan` property value defines the number of columns spanned by an individual cell an ARIA [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
+Intended for [`cell`s](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) and [`gridcell`s](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) which are not contained in a native HTML {{HTMLElement('table')}}, the `aria-colspan` property value defines the number of columns spanned by an individual cell an ARIA [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 In HTML, {{HTMLElement('th')}} and {{HTMLElement('td')}} elements have the [`colspan`](/en-US/docs/Web/HTML/Element/td#attributes) attribute. When using the semantic {{HTMLElement('table')}}, use the native `colspan` attribute as designed.  This ARIA attribute is intended for cells and gridcells which are not contained in a native table, and will be ignored if used on a cell in a {{HTMLElement('table')}}.
 
@@ -120,7 +119,7 @@ The following is an example of part of a bowling tournament league scoring sprea
         <span role="cell">35</span>
         <span role="cell">7</span>
         <span role="cell">/</span>
-        ...
+        …
       </div>
       <div role="row" aria-rowindex="11">
         <span role="cell">McPherson</span>
@@ -131,7 +130,7 @@ The following is an example of part of a bowling tournament league scoring sprea
         <span role="cell">8</span>
         <span role="cell">1</span>
         <span role="cell">18</span>
-      ...
+      …
 ```
 
 If we had used a {{HTMLElement('table')}} and semantic table elements our markup would have been less verbose and accessible by default.
@@ -150,12 +149,12 @@ If we had used a {{HTMLElement('table')}} and semantic table elements our markup
 
 Used in roles:
 
-- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role)
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 
 Inherits into roles:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 
 ## Specifications
 
@@ -166,6 +165,6 @@ Inherits into roles:
 - The {{HTMLElement('th')}} and {{HTMLElement('td')}}  [`colspan`](/en-US/docs/Web/HTML/Element/td#attributes) attribute
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) property
 - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) property
-- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role) role
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role) role
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)role
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) role
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role

@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.mode
 slug: Web/API/SourceBuffer/mode
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -70,8 +71,8 @@ is currently set to `'segments'`, thus setting the play order to the sequence
 in which media segments are appended.
 
 ```js
-var curMode = sourceBuffer.mode;
-if (curMode == 'segments') {
+const curMode = sourceBuffer.mode;
+if (curMode === 'segments') {
   sourceBuffer.mode = 'sequence';
 }
 ```

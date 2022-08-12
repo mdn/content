@@ -132,7 +132,7 @@ For example, a bright red that's 50% opaque can be represented as `rgb(255, 0, 0
 
 ### HSL functional notation
 
-Designers and artists often prefer to work using the {{interwiki("wikipedia", "HSL and HSV", "HSL")}} (Hue/Saturation/Luminosity) color method. On the web, HSL colors are represented using HSL functional notation. The `hsl()` CSS function is very similar to the `rgb()` function in usage otherwise.
+Designers and artists often prefer to work using the [HSL](https://en.wikipedia.org/wiki/HSL_and_HSV) (Hue/Saturation/Luminosity) color method. On the web, HSL colors are represented using HSL functional notation. The `hsl()` CSS function is very similar to the `rgb()` function in usage otherwise.
 
 The diagram below shows an HSL color cylinder. Hue defines the actual color based on the position along a circular {{glossary("color wheel")}} representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). Image courtesy of user [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) on [Wikipedia](https://www.wikipedia.org/), distributed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license.
 
@@ -145,7 +145,7 @@ The saturation (S) component of the color specifies what percentage of the final
 Think of it like creating the perfect paint color:
 
 1. You start with base paint that's the maximum intensity possible for a given color, such as the most intense blue that can be represented by the user's screen. This is the **hue** (H) component: a value representing the angle around the {{glossary("color wheel")}} for the vivid hue we want to use as our base.
-2. Then select a greyscale paint that corresponds how bright you want the color to be; this is the luminance. Do you want it to be very bright and nearly white, or very dark and closer to black, or somewhere in between? This is specified using a percentage, where 0% is perfectly black and 100% is perfectly white. (regardless of the saturation or hue). In between values are a literal grey area.
+2. Then select a greyscale paint that corresponds how bright you want the color to be; this is the luminance. Do you want it to be very bright and nearly white, or very dark and closer to black, or somewhere in between? This is specified using a percentage, where 0% is perfectly black and 100% is perfectly white (regardless of the saturation or hue). In between values are a literal grey area.
 3. Now that you have a grey paint and a perfectly vivid color, you need to mix them together. The saturation (S) component of the color indicates what percentage of the final color should be comprised of that perfectly vivid color. The rest of the final color is made up of the grey paint that represents the saturation.
 
 You can also optionally include an alpha channel, to make the color less than 100% opaque.
@@ -214,7 +214,7 @@ th {
 
 ### HWB functional notation
 
-Much like the HSL functional notation above, the [hwb()](/en-US/docs/Web/CSS/color_value/hwb()) function uses the same hue value. But instead of lightness and saturation you specify whiteness and blackness values in percentages. Values are **not** separated with a comma and an optional alpha value can be included (it must be preceded by a forward slash `/`).
+Much like the HSL functional notation above, the [hwb()](/en-US/docs/Web/CSS/color_value/hwb) function uses the same hue value. But instead of lightness and saturation you specify whiteness and blackness values in percentages. Values are **not** separated with a comma and an optional alpha value can be included (it must be preceded by a forward slash `/`).
 
 Here are some examples of using HWB notation:
 
@@ -339,7 +339,7 @@ Finally, the `.boxRight` class describes the unique properties of the box that's
 
 ## Letting the user pick a color
 
-There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own {{interwiki("wikipedia", "color picker")}}, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
+There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://en.wikipedia.org/wiki/Color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
 
 The `<input>` element represents a color only in the [hexadecimal string notation](#hexadecimal_string_notation) covered above.
 
@@ -365,7 +365,7 @@ The HTML here creates a box that contains a color picker control (with a label c
 
 #### CSS
 
-The CSS establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color that won't last, courtesy of the JavaScript below\...
+The CSS establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color.
 
 ```css
 #box {
@@ -382,24 +382,24 @@ The CSS establishes a size for the box and some basic styling for appearances. T
 The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) element.
 
 ```js
-let colorPicker = document.getElementById("colorPicker");
-let box = document.getElementById("box");
-let output = document.getElementById("output");
+const colorPicker = document.getElementById("colorPicker");
+const box = document.getElementById("box");
+const output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", function(event) {
+colorPicker.addEventListener("input", (event) => {
   box.style.borderColor = event.target.value;
 }, false);
 
-colorPicker.addEventListener("change", function(event) {
-  output.innerText = "Color set to " + colorPicker.value + ".";
+colorPicker.addEventListener("change", (event) => {
+  output.innerText = `Color set to ${colorPicker.value}.`;
 }, false);
 ```
 
-The {{event("input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
+The {{domxref("HTMLElement/input_event", "input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
 
-The {{event("change")}} event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
+The {{domxref("HTMLElement/change_event", "change")}} event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
 
 ## Using color wisely
 
@@ -411,7 +411,7 @@ Coming up with just the right colors can be tricky, especially without training 
 
 #### Base color
 
-The first step is to choose your **base color**. This is the color that in some way defines your website or the subject matter of the site. Just as we associate green with the beverage {{interwiki("wikipedia", "Mountain Dew")}} and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:
+The first step is to choose your **base color**. This is the color that in some way defines your website or the subject matter of the site. Just as we associate green with the beverage [Mountain Dew](https://en.wikipedia.org/wiki/Mountain_Dew) and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:
 
 - A color that is naturally associated with the topic of your content, such as the existing color identified with a product or idea or a color representative of the emotion you wish to convey.
 - A color that comes from imagery associated with what your content is about. If you're creating a website about a given item or product, choose a color that's physically present on that item.
@@ -441,14 +441,14 @@ A full review of color theory is beyond the scope of this article, but there are
 
 - [Color Science](https://www.khanacademy.org/computing/pixar/color) ([Khan Academy](https://www.khanacademy.org/) in association with [Pixar](https://www.pixar.com/))
   - : An online course which introduces concepts such as what color is, how it's perceived, and how to use colors to express ideas. Presented by Pixar artists and designers.
-- {{interwiki("wikipedia", "Color theory")}} on Wikipedia
+- [Color theory](https://en.wikipedia.org/wiki/Color_theory) on Wikipedia
   - : Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color selection process, but is still full of useful information.
 
 ### Color and accessibility
 
 There are several ways color can be an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a website or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem. So it's important to consider your use of color carefully.
 
-You should do at least basic research into {{interwiki("wikipedia", "color blindness")}}. There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.
+You should do at least basic research into [color blindness](https://en.wikipedia.org/wiki/Color_blindness). There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.
 
 > **Note:** The most important rule: never use color as the only way to know something. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, perhaps use both text and color together, so that everyone can understand what's happening.
 

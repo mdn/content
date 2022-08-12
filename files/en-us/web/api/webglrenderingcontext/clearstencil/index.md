@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.clearStencil()
 slug: Web/API/WebGLRenderingContext/clearStencil
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: 'SVGAnimationElement: endEvent event'
 slug: Web/API/SVGAnimationElement/endEvent_event
+page-type: web-api-event
 tags:
   - API
   - Reference
@@ -23,9 +24,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('endEvent', event => { });
+addEventListener('endEvent', (event) => { });
 
-onend = event => { };
+onend = (event) => { };
 ```
 
 ## Event type
@@ -94,8 +95,8 @@ animateElem.addEventListener('endEvent', () => {
 animateElem.addEventListener('repeatEvent', (e) => {
   let listItem = document.createElement('li');
   let msg = 'repeatEvent fired';
-  if(e.detail) {
-    msg += '; repeat number: ' + e.detail;
+  if (e.detail) {
+    msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;
   list.appendChild(listItem);

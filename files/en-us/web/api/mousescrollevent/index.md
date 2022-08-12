@@ -1,6 +1,7 @@
 ---
 title: MouseScrollEvent
 slug: Web/API/MouseScrollEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM

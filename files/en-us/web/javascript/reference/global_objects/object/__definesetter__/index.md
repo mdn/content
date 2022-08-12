@@ -33,17 +33,10 @@ __defineSetter__(prop, fun)
 - `prop`
   - : A string containing the name of the property to be bound to the given function.
 - `fun`
-
   - : A function to be called when there is an attempt to set the specified property. This
-    function takes the form
-
-    ```js
-        function(val) { . . . }
-        ```
-
+    function receives the following parameter:
     - `val`
-      - : An alias for the variable that holds the value attempted to be assigned to
-        `prop`.
+      - : An alias for the variable that holds the value attempted to be assigned to `prop`.
 
 ### Return value
 
@@ -59,8 +52,10 @@ The `__defineSetter__` method allows a {{jsxref("Functions/set", "setter",
 ### Non-standard and deprecated way
 
 ```js
-var o = {};
-o.__defineSetter__('value', function(val) { this.anotherValue = val; });
+const o = {};
+o.__defineSetter__('value', function (val) {
+  this.anotherValue = val;
+});
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
@@ -70,17 +65,19 @@ console.log(o.anotherValue); // 5
 
 ```js
 // Using the set operator
-var o = { set value(val) { this.anotherValue = val; } };
+const o = { set value(val) { this.anotherValue = val; } };
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
+```
 
+```js
 // Using Object.defineProperty
-var o = {};
+const o = {};
 Object.defineProperty(o, 'value', {
-  set: function(val) {
+  set(val) {
     this.anotherValue = val;
-  }
+  },
 });
 o.value = 5;
 console.log(o.value); // undefined

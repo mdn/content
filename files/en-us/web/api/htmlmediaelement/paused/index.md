@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -22,7 +23,7 @@ paused.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.paused); // true
 ```
 

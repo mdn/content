@@ -1,6 +1,7 @@
 ---
 title: 'Window: copy event'
 slug: Web/API/Window/copy_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -9,34 +10,29 @@ tags:
   - Web
   - Window
   - copy
-browser-compat: api.Window.copy_event
+browser-compat: api.Element.copy_event
 ---
 {{APIRef}}
 
 The **`copy`** event fires when the user initiates a copy action through the browser's user interface.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ClipboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("HTMLElement/oncopy", "oncopy")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 The original target for this event is the {{domxref("Element")}} that was the intended target of the copy action. You can listen for this event on the {{domxref("Window")}} interface to handle it in the capture or bubbling phases. For full details on this event please see the page on the [Element: copy event](/en-US/docs/Web/API/Element/copy_event).
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('copy', (event) => { });
+
+oncopy = (event) => { };
+```
+
+## Event type
+
+A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ClipboardEvent")}}
 
 ## Examples
 

@@ -1,10 +1,12 @@
 ---
 title: Performance Timeline
 slug: Web/API/Performance_Timeline
+page-type: web-api-overview
 tags:
   - Guide
   - Overview
   - Web Performance
+spec-urls: https://w3c.github.io/performance-timeline/
 ---
 {{DefaultAPISidebar("Performance Timeline API")}}
 
@@ -54,9 +56,7 @@ Performance observers were added to the `Level 2` version of the standard and we
 
 ## Specifications
 
-| Specification                                                       |
-| ------------------------------------------------------------------- |
-| [Performance Timeline](https://w3c.github.io/performance-timeline/) |
+{{Specifications}}
 
 ## Implementation status
 

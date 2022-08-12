@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.downlink
 slug: Web/API/NetworkInformation/downlink
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

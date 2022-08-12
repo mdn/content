@@ -1,6 +1,7 @@
 ---
 title: OES_vertex_array_object
 slug: Web/API/OES_vertex_array_object
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -39,14 +40,14 @@ This extension exposes four new methods.
 ## Examples
 
 ```js
-var oes_vao_ext = gl.getExtension('OES_vertex_array_object');
-var vao = oes_vao_ext.createVertexArrayOES();
+const oes_vao_ext = gl.getExtension('OES_vertex_array_object');
+const vao = oes_vao_ext.createVertexArrayOES();
 oes_vao_ext.bindVertexArrayOES(vao);
 
-// ...
+// …
 // calls to bindBuffer or vertexAttribPointer
 // which will be "recorded" in the VAO
-// ...
+// …
 ```
 
 ## Specifications

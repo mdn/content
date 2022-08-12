@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
+page-type: web-api-interface
 tags:
   - AJAX
   - API
@@ -64,11 +65,11 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 
 ### Non-standard properties
 
-- {{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.channel")}} {{ReadOnlyInline}}
   - : The channel used by the object when performing the request.
-- {{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.mozAnon")}} {{ReadOnlyInline}}
   - : A boolean. If true, the request will be sent without cookie and authentication headers.
-- {{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.mozSystem")}} {{ReadOnlyInline}}
   - : A boolean. If true, the same origin policy will not be enforced on the request.
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
   - : A boolean. It indicates whether or not the object represents a background service request.

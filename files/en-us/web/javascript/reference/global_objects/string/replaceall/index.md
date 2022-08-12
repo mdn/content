@@ -114,7 +114,7 @@ When using a regular expression search value, it must be global. This won't work
 
 ```js example-bad
 'aabbcc'.replaceAll(/b/, '.');
-TypeError: replaceAll must be called with a global RegExp
+// TypeError: replaceAll must be called with a global RegExp
 ```
 
 This will work:

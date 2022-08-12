@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.bindVertexArray()
 slug: Web/API/WebGL2RenderingContext/bindVertexArray
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ bindVertexArray(vertexArray)
 
 ### Parameters
 
-- vertexArray
+- `vertexArray`
   - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to bind.
 
 ### Return value
@@ -33,13 +34,15 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var vao = gl.createVertexArray();
+const vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
-// ...
+// …
+
 // calls to bindBuffer or vertexAttribPointer
 // which will be "recorded" in the VAO
-// ...
+
+// …
 ```
 
 ## Specifications

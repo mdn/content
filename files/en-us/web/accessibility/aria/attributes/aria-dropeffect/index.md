@@ -30,7 +30,7 @@ Including the attribute provides assistive technologies the ability to convey th
 
 The `aria-dropeffect` property is expected to be replaced by a new feature in a future version of WAI-ARIA and is considered deprecated.
 
-Typically, drop effect functions can only be provided once an object has been grabbed for a drag operation, as the drop effect functions available are dependent on the object being dragged. Therefore, you'll generally add `aria-dropeffect` to all the potential drop targets when the {{event("dragstart")}} event is fired.
+Typically, drop effect functions can only be provided once an object has been grabbed for a drag operation, as the drop effect functions available are dependent on the object being dragged. Therefore, you'll generally add `aria-dropeffect` to all the potential drop targets when the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired.
 
 ## Values
 
@@ -64,7 +64,7 @@ Used in **ALL** roles.
 - HTML [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - {{domxref('dataTransfer')}}
 - {{domxref('DataTransfer.dropEffect')}}
-- {{event("dragstart")}}
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

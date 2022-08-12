@@ -1,6 +1,7 @@
 ---
 title: Blob
 slug: Web/API/Blob
+page-type: web-api-interface
 tags:
   - API
   - Blob
@@ -73,28 +74,44 @@ The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript
 The main piece of this code for example purposes is the `typedArrayToURL()` function, which creates a `Blob` from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's {{htmlattrxref("src", "img")}} attribute (assuming the data contains an image, of course).
 
 ```js
-function typedArrayToURL(typedArray, mimeType) {
-  return URL.createObjectURL(new Blob([typedArray.buffer], {type: mimeType}))
+function showViewLiveResultButton() {
+  if (window.self !== window.top) {
+    // Ensure that if our document is in a frame, we get the user
+    // to first open it in its own tab or window. Otherwise, this
+    // example won't work.
+    const p = document.querySelector("p");
+    p.textContent = "";
+    const button = document.createElement("button");
+    button.textContent = "View live result of the example code above";
+    p.append(button);
+    button.addEventListener('click', () => window.open(location.href));
+    return true;
+  }
+  return false;
 }
 
-const bytes = new Uint8Array(59);
+if (!showViewLiveResultButton()) {
+  function typedArrayToURL(typedArray, mimeType) {
+    return URL.createObjectURL(new Blob([typedArray.buffer],
+        {type: mimeType}))
+  }
+  const bytes = new Uint8Array(59);
 
-for(let i = 0; i < 59; i++) {
-  bytes[i] = 32 + i;
+  for (let i = 0; i < 59; i++) {
+    bytes[i] = 32 + i;
+  }
+
+  const url = typedArrayToURL(bytes, 'text/plain');
+
+  const link = document.createElement('a');
+  link.href = url;
+  link.innerText = 'Open the array URL';
+
+  document.body.appendChild(link);
 }
-
-const url = typedArrayToURL(bytes, 'text/plain');
-
-const link = document.createElement('a');
-link.href = url;
-link.innerText = 'Open the array URL';
-
-document.body.appendChild(link);
 ```
 
 #### Result
-
-Click the link in the example to see the browser decode the object URL.
 
 {{EmbedLiveSample("Creating_a_URL_representing_the_contents_of_a_typed_array", 600, 200)}}
 
@@ -138,4 +155,4 @@ By using other methods of `FileReader`, it is possible to read the contents of a
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("URL.createObjectURL")}}
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

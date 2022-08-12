@@ -1,6 +1,7 @@
 ---
 title: USBDevice.deviceClass
 slug: Web/API/USBDevice/deviceClass
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - deviceClass
+  - Experimental
 browser-compat: api.USBDevice.deviceClass
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}

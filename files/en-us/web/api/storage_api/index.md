@@ -1,6 +1,7 @@
 ---
 title: Storage API
 slug: Web/API/Storage_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
@@ -10,6 +11,7 @@ tags:
   - Storage
   - Storage API
   - Usage
+browser-compat: api.StorageManager
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}
 
@@ -71,7 +73,7 @@ User agents may use any method they choose to determine the size of origins' quo
 To determine the estimated quota and usage values for a given origin, use the {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}} method, which returns a promise that, when resolved, receives an object that contains these figures. For example:
 
 ```js
-navigator.storage.estimate().then(estimate => {
+navigator.storage.estimate().then((estimate) => {
   // estimate.quota is the estimated quota
   // estimate.usage is the estimated number of bytes used
 });
@@ -79,15 +81,11 @@ navigator.storage.estimate().then(estimate => {
 
 ## Specifications
 
-| Specification                                               |
-| ----------------------------------------------------------- |
-| [Storage Living Standard](https://storage.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `StorageManager`
-
-{{Compat("api.StorageManager")}}
+{{Compat}}
 
 ## See also
 

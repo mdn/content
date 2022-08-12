@@ -1,6 +1,7 @@
 ---
 title: WebGL types
 slug: Web/API/WebGL_API/Types
+page-type: guide
 tags:
   - Reference
   - Types

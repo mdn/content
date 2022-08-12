@@ -1,6 +1,7 @@
 ---
 title: FeaturePolicy.allowedFeatures()
 slug: Web/API/FeaturePolicy/allowedFeatures
+page-type: web-api-instance-method
 tags:
   - API
   - Directive

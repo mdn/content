@@ -1,6 +1,7 @@
 ---
 title: HTMLTableSectionElement
 slug: Web/API/HTMLTableSectionElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

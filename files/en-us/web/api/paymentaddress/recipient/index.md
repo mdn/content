@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.recipient
 slug: Web/API/PaymentAddress/recipient
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request

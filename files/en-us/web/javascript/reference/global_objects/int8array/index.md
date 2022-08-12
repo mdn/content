@@ -24,7 +24,7 @@ The **`Int8Array`** typed array represents an array of twos-complement 8-bit sig
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int8Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of an `Int8Array`.
 - {{jsxref("TypedArray.name", "Int8Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Int8Array` type: "`Int8Array`".
+  - : Returns the string value of the constructor name. In the case of the `Int8Array` type: `"Int8Array"`.
 
 ## Static methods
 
@@ -105,29 +105,30 @@ The **`Int8Array`** typed array represents an array of twos-complement 8-bit sig
 
 ```js
 // From a length
-var int8 = new Int8Array(2);
+const int8 = new Int8Array(2);
 int8[0] = 42;
 console.log(int8[0]); // 42
 console.log(int8.length); // 2
 console.log(int8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-var arr = new Int8Array([21,31]);
-console.log(arr[1]); // 31
+const x = new Int8Array([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-var x = new Int8Array([21, 31]);
-var y = new Int8Array(x);
+const y = new Int8Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(8);
-var z = new Int8Array(buffer, 1, 4);
+const buffer = new ArrayBuffer(8);
+const z = new Int8Array(buffer, 1, 4);
+console.log(z.byteOffset); // 1
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
-var int8 = new Int8Array(iterable);
-// Int8Array[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const int8FromIterable = new Int8Array(iterable);
+console.log(int8FromIterable);
+// Int8Array [1, 2, 3]
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: CharacterData.substringData()
 slug: Web/API/CharacterData/substringData
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

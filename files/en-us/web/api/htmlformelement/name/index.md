@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.name
 slug: Web/API/HTMLFormElement/name
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -27,9 +28,9 @@ A string.
 ## Examples
 
 ```js
-var form1name = document.getElementById('form1').name;
+const form1name = document.getElementById('form1').name;
 
-if (form1name != document.form.form1) {
+if (form1name !== document.form.form1) {
   // Browser doesn't support this form of reference
 }
 ```

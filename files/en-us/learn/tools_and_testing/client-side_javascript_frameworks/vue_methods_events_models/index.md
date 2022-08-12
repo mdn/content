@@ -160,7 +160,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
     - `.stop`: Stops the event from propagating. Equivalent to [`Event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) in regular JavaScript events.
     - `.prevent`: Prevents the event's default behavior. Equivalent to [`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
     - `.self`: Triggers the handler only if the event was dispatched from this exact element.
-    - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/KeyboardEvent/key/Key_Values); multi-word keys just need to be converted to kebab case (e.g. `page-down`).
+    - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values); multi-word keys just need to be converted to kebab case (e.g. `page-down`).
     - `.native`: Listens for a native event on the root (outer-most wrapping) element on your component.
     - `.once`: Listens for the event until it's been triggered once, and then no more.
     - `.left`: Only triggers the handler via the left mouse button event.
@@ -170,7 +170,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
 
     In this case, we need to use the `.prevent` handler to stop the browser's default submit action. Add `.prevent` to the `@submit` handler in your template like so:
 
-    ```js
+    ```html
     <form @submit.prevent="onSubmit">
     ```
 
@@ -205,7 +205,7 @@ The first thing we need is a `data` property in our form to track the value of t
 
     So in our case, we would add it to our `new-todo-input` field as seen below. Do this now:
 
-    ```js
+    ```html
     <input
       type="text"
       id="new-todo-input"
@@ -334,7 +334,7 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
 
     ```js
     onSubmit() {
-      if(this.label === "") {
+      if (this.label === "") {
         return;
       }
       this.$emit('todo-added', this.label);
@@ -353,7 +353,7 @@ Update your `ToDoForm` component's `onSubmit()` method to this:
 
 ```js
 onSubmit() {
-  if(this.label === "") {
+  if (this.label === "") {
     return;
   }
   this.$emit('todo-added', this.label);

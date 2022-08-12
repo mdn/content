@@ -33,7 +33,9 @@ The `@font-feature-values` at-rule may be used either at the top level of your C
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@font-feature-values <family-name># { <declaration-list> }
+```
 
 ## Examples
 

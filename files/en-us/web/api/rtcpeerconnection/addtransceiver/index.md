@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.addTransceiver()
 slug: Web/API/RTCPeerConnection/addTransceiver
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -71,7 +72,6 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCPeerConnection.addTrack()")}} also creates transceivers
 - {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}}

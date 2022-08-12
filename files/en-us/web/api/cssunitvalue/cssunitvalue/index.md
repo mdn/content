@@ -1,6 +1,7 @@
 ---
 title: CSSUnitValue()
 slug: Web/API/CSSUnitValue/CSSUnitValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API

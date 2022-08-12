@@ -88,7 +88,7 @@ Let's first look at `http://demozilla.examplehostingprovider.net/` — as you ca
 
 To connect your SFTP client to the distant server, follow these steps:
 
-1. Choose _File > Site Manager..._ from the main menu.
+1. Choose _File > Site Manager…_ from the main menu.
 2. In the _Site Manager_ window, press the _New Site_ button, then fill in the site name as **demozilla** in the provided space.
 3. Fill in the SFTP server your host provided in the _Host:_ field.
 4. In the _Logon Type:_ drop down, choose _Normal_, then fill in your provided username and password in the relevant fields.

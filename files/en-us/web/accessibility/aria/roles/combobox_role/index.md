@@ -52,7 +52,7 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : Required. Identifies whether the combobox is open (`true`) or closed (`false`).
-- [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-)
+- [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
   - : Implied. If omitted, defaults to `listbox`. Also supports `tree`, `grid`, or `dialog`. Identifies the combobox has having a popout, and indicates the type.
 
 ### Keyboard interactions

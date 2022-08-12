@@ -1,6 +1,7 @@
 ---
 title: FontFace.stretch
 slug: Web/API/FontFace/stretch
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API

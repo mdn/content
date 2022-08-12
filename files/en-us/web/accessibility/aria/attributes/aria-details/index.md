@@ -1,5 +1,5 @@
 ---
-title: 'aria-details'
+title: aria-details
 slug: Web/Accessibility/ARIA/Attributes/aria-details
 tags:
   - Accessibility
@@ -11,7 +11,6 @@ tags:
   - longdesc
 spec-urls: https://w3c.github.io/aria/#aria-details
 ---
-
 The global `aria-details` attribute identifies the element (or elements) that provide additional information related to the object.
 
 ## Description
@@ -34,7 +33,7 @@ Unlike `aria-describedby`, elements referenced by `aria-details` are not used in
 
 ## Example
 
-When it comes to definition and term roles, the `aria-details` would be included on the [`term`](/en-US/docs/Web/Accessibility/ARIA/roles/term_role) element with the `id` of the element with a [`definition`](/en-US/docs/Web/Accessibility/ARIA/roles/definition_role) role.
+When it comes to definition and term roles, the `aria-details` would be included on the [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) element with the `id` of the element with a [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role) role.
 
 ```html
 <p>The <strong>cubic-bezier()<strong> functional notation defines a cubic

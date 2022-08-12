@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.checkValidity()
 slug: Web/API/ElementInternals/checkValidity
+page-type: web-api-instance-method
 tags:
   - API
   - Method

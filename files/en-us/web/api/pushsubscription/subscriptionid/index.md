@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.subscriptionId
 slug: Web/API/PushSubscription/subscriptionId
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

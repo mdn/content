@@ -1,6 +1,7 @@
 ---
 title: PerformanceServerTiming.toJSON()
 slug: Web/API/PerformanceServerTiming/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method

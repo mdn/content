@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicy
 slug: Web/API/TrustedTypePolicy
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -16,7 +17,7 @@ A `TrustedTypePolicy` object is created by {{domxref("TrustedTypePolicyFactory.c
 
 ## Properties
 
-- {{domxref("TrustedTypePolicy.name")}}{{ReadOnlyInline}}
+- {{domxref("TrustedTypePolicy.name")}} {{ReadOnlyInline}}
   - : A string containing the name of the policy.
 
 ## Methods
@@ -40,7 +41,7 @@ The sanitized value can then be used with {{domxref("Element.innerHTML")}} to en
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<")
 });
 
 let el = document.getElementById("myDiv");

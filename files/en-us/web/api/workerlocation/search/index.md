@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.search
 slug: Web/API/WorkerLocation/search
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -21,7 +22,7 @@ A string.
 
 ```js
 // In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web?t=67
-var result = location.search; // Returns:'?t=67'
+const result = location.search; // Returns:'?t=67'
 ```
 
 ## Specifications

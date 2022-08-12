@@ -1,6 +1,7 @@
 ---
 title: How whitespace is handled by HTML, CSS, and in the DOM
 slug: Web/API/Document_Object_Model/Whitespace
+page-type: guide
 tags:
   - CSS
   - DOM
@@ -45,8 +46,9 @@ Take the following document, for example:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
   <title>My Document</title>
 </head>
 <body>
@@ -126,7 +128,7 @@ Inside this context, whitespace character processing can be summarized as follow
     <h1>◦Hello◦<span>World!</span>◦</h1>
     ```
 
-5. And finally, sequences of spaces at the beginning and end of a line are removed, so we finally get this:
+5. And finally, sequences of spaces at the beginning and end of an element are removed, so we finally get this:
 
     ```html
     <h1>Hello◦<span>World!</span></h1>
@@ -286,14 +288,14 @@ If you need to rely on `inline-block`, you could set the [`font-size`](/en-US/do
 ```css
 ul {
   font-size: 0;
-  ...
+  /* … */
 }
 
 li {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  ...
+  /* … */
 }
 ```
 
@@ -344,9 +346,7 @@ The JavaScript code below defines several functions that make it easier to deal 
  * @return     True if all of the text content of |nod| is whitespace,
  *             otherwise false.
  */
-function is_all_ws( nod )
-{
-  // Use ECMA-262 Edition 3 String and RegExp features
+function is_all_ws(nod) {
   return !(/[^\t\n\r ]/.test(nod.textContent));
 }
 
@@ -360,10 +360,9 @@ function is_all_ws( nod )
  *             and otherwise false.
  */
 
-function is_ignorable( nod )
-{
-  return ( nod.nodeType == 8) || // A comment node
-         ( (nod.nodeType == 3) && is_all_ws(nod) ); // a text node, all ws
+function is_ignorable(nod) {
+  return (nod.nodeType === 8) || // A comment node
+         (nod.nodeType === 3 && is_all_ws(nod)); // a text node, all ws
 }
 
 /**
@@ -379,10 +378,11 @@ function is_ignorable( nod )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function node_before( sib )
-{
+function node_before(sib) {
   while ((sib = sib.previousSibling)) {
-    if (!is_ignorable(sib)) return sib;
+    if (!is_ignorable(sib)) {
+      return sib;
+    }
   }
   return null;
 }
@@ -397,10 +397,11 @@ function node_before( sib )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function node_after( sib )
-{
+function node_after(sib) {
   while ((sib = sib.nextSibling)) {
-    if (!is_ignorable(sib)) return sib;
+    if (!is_ignorable(sib)) {
+      return sib;
+    }
   }
   return null;
 }
@@ -417,11 +418,12 @@ function node_after( sib )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function last_child( par )
-{
-  var res=par.lastChild;
+function last_child(par) {
+  let res = par.lastChild;
   while (res) {
-    if (!is_ignorable(res)) return res;
+    if (!is_ignorable(res)) {
+      return res;
+    }
     res = res.previousSibling;
   }
   return null;
@@ -437,11 +439,12 @@ function last_child( par )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function first_child( par )
-{
-  var res=par.firstChild;
+function first_child(par) {
+  let res = par.firstChild;
   while (res) {
-    if (!is_ignorable(res)) return res;
+    if (!is_ignorable(res)) {
+      return res;
+    }
     res = res.nextSibling;
   }
   return null;
@@ -456,15 +459,15 @@ function first_child( par )
  * @return     A string giving the contents of the text node with
  *             whitespace collapsed.
  */
-function data_of( txt )
-{
-  var data = txt.textContent;
-  // Use ECMA-262 Edition 3 String and RegExp features
+function data_of(txt) {
+  let data = txt.textContent;
   data = data.replace(/[\t\n\r ]+/g, " ");
-  if (data.charAt(0) == " ")
+  if (data[0] === " ") {
     data = data.substring(1, data.length);
-  if (data.charAt(data.length - 1) == " ")
+  }
+  if (data[data.length - 1] === " ") {
     data = data.substring(0, data.length - 1);
+  }
   return data;
 }
 ```
@@ -474,11 +477,9 @@ function data_of( txt )
 The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is `"This is the third paragraph"`, and then changes the class attribute and the contents of that paragraph.
 
 ```js
-var cur = first_child(document.getElementById("test"));
-while (cur)
-{
-  if (data_of(cur.firstChild) == "This is the third paragraph.")
-  {
+let cur = first_child(document.getElementById("test"));
+while (cur) {
+  if (data_of(cur.firstChild) === "This is the third paragraph.") {
     cur.className = "magic";
     cur.firstChild.textContent = "This is the magic paragraph.";
   }

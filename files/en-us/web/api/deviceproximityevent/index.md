@@ -1,6 +1,7 @@
 ---
 title: DeviceProximityEvent
 slug: Web/API/DeviceProximityEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -27,8 +28,8 @@ The **`DeviceProximityEvent`** interface provides information about the distance
 ## Examples
 
 ```js
-window.addEventListener('deviceproximity', function(event) {
-  console.log("value: " + event.value, "max: " + event.max, "min: " + event.min);
+window.addEventListener('deviceproximity', (event) => {
+  console.log(`value: ${event.value}`, `max: ${event.max}`, `min: ${event.min}`);
 });
 ```
 

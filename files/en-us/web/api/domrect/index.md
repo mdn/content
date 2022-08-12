@@ -1,6 +1,7 @@
 ---
 title: DOMRect
 slug: Web/API/DOMRect
+page-type: web-api-interface
 tags:
   - API
   - DOM

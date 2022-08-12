@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.generateKey()
 slug: Web/API/SubtleCrypto/generateKey
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -35,7 +36,7 @@ generateKey(algorithm, extractable, keyUsages)
     - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac):
       pass an [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object.
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw):
+      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
       pass an [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
 - `extractable`
   - : A boolean value indicating whether it

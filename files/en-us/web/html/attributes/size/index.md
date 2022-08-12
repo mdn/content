@@ -7,7 +7,7 @@ tags:
   - Input
   - Reference
   - Select
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-size
+browser-compat: html.elements.attribute.size
 ---
 
 {{HTMLSidebar}}
@@ -49,7 +49,7 @@ By adding `size` on some input types, the width of the input can be controlled. 
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.size")}}
+{{Compat}}
 
 ## See also
 

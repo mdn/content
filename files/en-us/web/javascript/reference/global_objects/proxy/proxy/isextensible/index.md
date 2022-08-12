@@ -19,7 +19,7 @@ The **`handler.isExtensible()`** method is a trap for
 
 ```js
 new Proxy(target, {
-  isExtensible: function(target) {
+  isExtensible(target) {
   }
 });
 ```
@@ -64,7 +64,7 @@ The following code traps {{jsxref("Object.isExtensible()")}}.
 
 ```js
 const p = new Proxy({}, {
-  isExtensible: function(target) {
+  isExtensible(target) {
     console.log('called');
     return true;
   }
@@ -78,7 +78,7 @@ The following code violates the invariant.
 
 ```js example-bad
 const p = new Proxy({}, {
-  isExtensible: function(target) {
+  isExtensible(target) {
     return false;
   }
 });
@@ -97,7 +97,7 @@ Object.isExtensible(p); // TypeError is thrown
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.isExtensible()")}}
 - {{jsxref("Reflect.isExtensible()")}}
 - {{jsxref("Reflect.preventExtensions()")}}

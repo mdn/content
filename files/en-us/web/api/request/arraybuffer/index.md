@@ -1,6 +1,7 @@
 ---
 title: Request.arrayBuffer()
 slug: Web/API/Request/arrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - ArrayBuffer
@@ -39,7 +40,7 @@ const request = new Request('/myEndpoint', {
   body: myArray
 });
 
-request.arrayBuffer().then(function(buffer) {
+request.arrayBuffer().then((buffer) => {
   // do something with the buffer sent in the request
 });
 ```

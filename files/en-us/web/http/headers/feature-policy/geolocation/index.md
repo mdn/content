@@ -80,5 +80,4 @@ even if those frames contain documents from the same origin.
 
 - {{HTTPHeader("Feature-Policy")}} header
 - [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
-- [Using Feature
-  Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

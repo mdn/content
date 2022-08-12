@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

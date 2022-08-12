@@ -43,7 +43,7 @@ li::-moz-list-number {
 
 ### Result
 
-{{EmbedLiveSample("Examples","auto","auto","/@api/deki/files/4668/=moz-list-number.png")}}
+{{ EmbedLiveSample("Examples", "auto", "auto", "moz-list-number.png") }}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: InterventionReportBody.sourceFile
 slug: Web/API/InterventionReportBody/sourceFile
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -25,13 +26,13 @@ A string, or `null` if the path is not known.
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print the value of `sourceFile` to the console.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver((reports, observer) => {
+  const firstReport = reports[0];
   console.log(firstReport.type); // intervention
   console.log(firstReport.body.sourceFile);
 }, options);

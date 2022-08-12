@@ -43,7 +43,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function logCommands(commands) {
-  commands.forEach(function(command) {
+  commands.forEach((command) => {
     console.log(command);
   });
 }

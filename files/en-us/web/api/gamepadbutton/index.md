@@ -1,6 +1,7 @@
 ---
 title: GamepadButton
 slug: Web/API/GamepadButton
+page-type: web-api-interface
 tags:
   - API
   - Gamepad API
@@ -29,23 +30,22 @@ The button values in the following example are stored as an array of {{domxref("
 
 ```js
 function gameLoop() {
+  const gp = navigator.getGamepads()[0];
 
-  let gp = navigator.getGamepads()[0];
-
-  if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
+  if (gp.buttons[0].value > 0 || gp.buttons[0].pressed) {
     b--;
-  } else if(gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
+  } else if (gp.buttons[1].value > 0 || gp.buttons[1].pressed) {
     a++;
-  } else if(gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
+  } else if (gp.buttons[2].value > 0 || gp.buttons[2].pressed) {
     b++;
-  } else if(gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
+  } else if (gp.buttons[3].value > 0 || gp.buttons[3].pressed) {
     a--;
   }
 
-  ball.style.left = a*2 + "px";
-  ball.style.top = b*2 + "px";
+  ball.style.left = `${a * 2}px`; // ball is a UI widget
+  ball.style.top = `${b * 2}px`;
 
-  let start = rAF(gameLoop);
+  requestAnimationFrame(gameLoop);
 };
 ```
 

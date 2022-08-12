@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msFrameStep()
 slug: Web/API/HTMLVideoElement/msFrameStep
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions
@@ -36,4 +37,4 @@ This method does not return a value.
 ## See also
 
 - {{DOMxRef("HTMLMediaElement")}}
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

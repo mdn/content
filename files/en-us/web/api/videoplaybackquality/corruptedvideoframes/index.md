@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality.corruptedVideoFrames
 slug: Web/API/VideoPlaybackQuality/corruptedVideoFrames
+page-type: web-api-instance-property
 tags:
   - API
   - Corruption
@@ -44,8 +45,8 @@ value is greater than 5%, calls a function called `downgradeVideo()` that
 would be implemented to switch to a different video that might tax the network less.
 
 ```js
-var videoElem = document.getElementById("my_vid");
-var quality = videoElem.getVideoPlaybackQuality();
+const videoElem = document.getElementById("my_vid");
+const quality = videoElem.getVideoPlaybackQuality();
 
 if (quality.corruptedVideoFrames/quality.totalVideoFrames > 0.05) {
   downgradeVideo(videoElem);

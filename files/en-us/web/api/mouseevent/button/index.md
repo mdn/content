@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.button
 slug: Web/API/MouseEvent/button
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -44,7 +45,7 @@ Others may have many buttons mapped to different functions and button values.
 ### HTML
 
 ```html
-<button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse...</button>
+<button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse…</button>
 <p id="log"></p>
 ```
 
@@ -52,31 +53,27 @@ Others may have many buttons mapped to different functions and button values.
 
 ```js
 let button = document.querySelector('#button');
-let log = document.querySelector('#log');
-button.addEventListener('mouseup', logMouseButton);
-
-function logMouseButton(e) {
-  if (typeof e === 'object') {
-    switch (e.button) {
-      case 0:
-        log.textContent = 'Left button clicked.';
-        break;
-      case 1:
-        log.textContent = 'Middle button clicked.';
-        break;
-      case 2:
-        log.textContent = 'Right button clicked.';
-        break;
-      default:
-        log.textContent = `Unknown button code: ${e.button}`;
-    }
+button.addEventListener('mouseup', (e) => {
+  let log = document.querySelector('#log');
+  switch (e.button) {
+    case 0:
+      log.textContent = 'Left button clicked.';
+      break;
+    case 1:
+      log.textContent = 'Middle button clicked.';
+      break;
+    case 2:
+      log.textContent = 'Right button clicked.';
+      break;
+    default:
+      log.textContent = `Unknown button code: ${e.button}`;
   }
-}
+});
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

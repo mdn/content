@@ -29,7 +29,7 @@ The fact that static images may cause seizures and other disorders is documented
 
 Although static images are possible as triggers, they are less consistent. The trigger that is well established and strong is flashing/strobe lights. Dr. Selim Benbadis of USF's Comprehensive Epilepsy Program notes, _"The only thing that is really documented is flashing lights, which can trigger seizures in patients with photosensitive epilepsy. Only a few types of epilepsies are photosensitive though, and the vast majority of epilepsies are not."_ In addition to seizures brought about by photosensitivity, listening to certain pieces of music can also trigger what are called musicogenic seizures, although these types of seizures seem to be much more rare. For a great introduction on the topic of musicogenic seizures, visit Epilepsy Ontario's web page on [Musicogenic Seizures](https://epilepsyontario.org/musicogenic-seizures/).
 
-Seizures and epilepsy are not the same. In its article ["A Revised Definition of Epilepsy"](https://www.epilepsy.com/stories/revised-definition-epilepsy), the Epilepsy Foundation notes that "_a seizure is an event and epilepsy is the disease involving recurrent unprovoked seizures_." According to the Epilepsy Foundation's page ["How Serious Are Seizures?"](https://www.epilepsy.com/start-here/about-epilepsy-basics/how-serious-are-seizures), _"Sudden unexpected death in epilepsy (SUDEP) is likely the most common disease-related cause of death in with epilepsy. It is not frequent but it is a very real problem and people need to be aware of its risk"_.
+Seizures and epilepsy are not the same. In its article ["A Revised Definition of Epilepsy"](https://www.epilepsy.com/stories/revised-definition-epilepsy), the Epilepsy Foundation notes that "_a seizure is an event and epilepsy is the disease involving recurrent unprovoked seizures_." According to the Epilepsy Foundation's page ["How Serious Are Seizures?"](https://www.epilepsy.com/what-is-epilepsy/understanding-seizures/how-serious-are-seizures), _"Sudden unexpected death in epilepsy (SUDEP) is likely the most common disease-related cause of death in with epilepsy. It is not frequent but it is a very real problem and people need to be aware of its risk"_.
 
 The point is, seizures most definitely can be and are fatal, and developers and designers are incredibly important for making the web a safer place for those with sensitivities to photosensitive or musicogenic triggers.
 
@@ -65,7 +65,7 @@ It's important to note that not all flashing and blinking is bad. NASA, in its d
 
 ### Flashing and flickering—how is danger quantified?
 
-According to the article ["Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group",](https://www.epilepsy.com/sites/core/files/atoms/files/Epilepsia%20vol%2046%20issue%209%20Photosensitivity.pdf) _"A flash is a potential hazard if it has luminance ≥20 cd/m<sup>2</sup>, occurs at a frequency of ≥3 Hz, and occupies a solid visual angle of ≥0.006 steradians (approximately 10% of the central visual field or 25% of screen area at typical viewing distances)."_
+According to the article ["Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group",](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.31405.x) _"A flash is a potential hazard if it has luminance ≥20 cd/m<sup>2</sup>, occurs at a frequency of ≥3 Hz, and occupies a solid visual angle of ≥0.006 steradians (approximately 10% of the central visual field or 25% of screen area at typical viewing distances)."_
 
 How far is a typical viewing distance? The recommendation considered for a typical viewing distance at the time of writing was "_the area can be taken as applying to an area >25% of the area of a television screen, assuming standard viewing distances of ≥2 m (∼9 feet)"_. Much has changed since that time, and we are now much closer to our screen.
 
@@ -82,7 +82,7 @@ These standards are based on earlier research. In 2004, The Epilepsy Foundation 
 
 ### Size and distance
 
-#### How big? It depends.
+#### How big? It depends
 
 "Relative" size and distance both matter. According to [PEAT](https://trace.umd.edu/peat/), _"The combined area of flashes occurring concurrently occupies no more than a total of one quarter of any 341 x 256 pixel rectangle anywhere on the displayed screen area when the content is viewed at 1024 by 768 pixels."_
 
@@ -119,7 +119,7 @@ It has been demonstrated that [some colors are more likely to cause epileptic fi
 - **Red Desaturation tests:** The human eye is so sensitively tuned to red that ophthalmologists set up a test using it. The Red desaturation test assesses the integrity of the optic nerve. For more information as to how an ophthalmologist uses this test, see [Red Desaturation](https://www.smart-optometry.com/red-desaturation/).
 - **Red Environment:** Studies have shown that for those who suffer Traumatic Brain Injury, [cognitive function is reduced in a red environment](https://pubmed.ncbi.nlm.nih.gov/20649469/).
 
-[Saturated Red](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance) is a special, dangerous case, and there are special tests for it. In addition to a red environment affecting the cognitive function of those with Traumatic Brain Injury, color in the red spectrum wavelength seems to require special concern and special tests. Dr. Gregg Vanderheiden, when testing the Photosensitive Epilepsy Analysis Tool, noted that the seizure rates were much higher than expected. They found that we are much more sensitive to saturated red flashing. (See the video, [The Photosensitive Epilepsy Analysis Tool](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/]).)
+[Saturated Red](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance) is a special, dangerous case, and there are special tests for it. In addition to a red environment affecting the cognitive function of those with Traumatic Brain Injury, color in the red spectrum wavelength seems to require special concern and special tests. Dr. Gregg Vanderheiden, when testing the Photosensitive Epilepsy Analysis Tool, noted that the seizure rates were much higher than expected. They found that we are much more sensitive to saturated red flashing. (See the video, [The Photosensitive Epilepsy Analysis Tool](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/).)
 
 #### Websafe does not mean seizure-safe
 
@@ -426,16 +426,16 @@ Use the {{HTMLElement('link')}} element, alongside with and together with the at
 ```html
 <head>
   <title>Home Page</title>
-  <link href="main.css" rel="stylesheet" type="text/css" title="Default Style">
-  <link href="alternate1.css" rel="alternate stylesheet" type="text/css" title="Alternate One">
-  <link href="alternate2.css" rel="alternate stylesheet" type="text/css" title="Alternate Two">
+  <link href="main.css" rel="stylesheet" title="Default Style">
+  <link href="alternate1.css" rel="alternate stylesheet" title="Alternate One">
+  <link href="alternate2.css" rel="alternate stylesheet" title="Alternate Two">
 </head>
 ```
 
 **{{CSSxref('@import')}}** is also a way to incorporate style sheets, but it is not quite as well supported as the {{HTMLElement('link')}} element.
 
 ```html
-<style type="text/css">
+<style>
   @import url(alternate1.css);
   @import url(alternate2.css);
 </style>
@@ -587,7 +587,7 @@ The Web Animations model is intended to provide the features necessary for expre
 
 - [Color Tutorial: describing color](https://colortutorial.design/) Tom Jewett
 - [Formula to Determine Brightness of RGB color](https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color) Stack Exchange Discussion Thread
-- [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/?error=cookies_not_supported&code=86d8b1f2-8d9a-40bf-85f9-6c224b7e023e) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
+- [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 
 #### Discussions
 
@@ -597,7 +597,7 @@ The Web Animations model is intended to provide the features necessary for expre
 #### Epilepsy and Seizures
 
 - [Shedding Light on Photosensitivity, One of Epilepsy's Most Complex Conditions](https://www.epilepsy.com/stories/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions-0) Epilepsy Foundation: _"Certain individuals are born with special sensitivity to flashing lights or contrasting visual patterns, such as stripes, grids and checkerboards. Because of this condition, their brain will produce seizure-like discharges when exposed to this type of visual stimulation."_
-- [Gamma oscillations and photosensitive epilepsy](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub) Current Biology [Volume 27, Issue 9](https://www.sciencedirect.com/journal/current-biology/vol/27/issue/9), 8 May 2017, Pages R336-R338: _"Certain [visual images](https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/retina-image), even in the absence of [motion](https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/motion) or flicker, can trigger seizures in patients with photosensitive epilepsy."_
+- [Gamma oscillations and photosensitive epilepsy](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub) Current Biology [Volume 27, Issue 9](https://www.sciencedirect.com/journal/current-biology/vol/27/issue/9), 8 May 2017, Pages R336-R338: _"Certain [visual images](https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/retina-image), even in the absence of motion or flicker, can trigger seizures in patients with photosensitive epilepsy."_
 - [Photosensitive Seizures. Cedars-Sinai](https://www.cedars-sinai.org/health-library/diseases-and-conditions/p/photosensitive-seizures.html) "_Photosensitive seizures are triggered by flashing or flickering lights. These seizures can also be triggered by certain patterns such as stripes._"
 - [Photic-and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](https://pubmed.ncbi.nlm.nih.gov/16146438/) Eplepsia 2005 Sept, 46(9):1423-5 PubMed.gov NCBI [Harding G](https://pubmed.ncbi.nlm.nih.gov/?term=Harding%20G%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Wilkins AJ](https://pubmed.ncbi.nlm.nih.gov/?term=Wilkins%20AJ%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Erba G](https://pubmed.ncbi.nlm.nih.gov/?term=Erba%20G%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Barkley GL](https://pubmed.ncbi.nlm.nih.gov/?term=Barkley%20GL%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Fisher RS](https://pubmed.ncbi.nlm.nih.gov/?term=Fisher%20RS%5BAuthor%5D&cauthor=true&cauthor_uid=16146438); [Epilepsy Foundation of America Working Group](https://pubmed.ncbi.nlm.nih.gov/?term=Epilepsy%20Foundation%20of%20America%20Working%20Group%5BCorporate%20Author%5D).
 
@@ -631,7 +631,7 @@ Along with the Harding tool, is generally recognized to be one of the two "gold 
 - [Three Flashes or Below Threshold Understanding Success Criterion 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html) Understanding WCAG 2.1
 - [Understanding Success Criteria 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
 - [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
-- [Web Animations Mode](https://www.w3.org/TR/web-animations-1/)l W3C Working Draft
+- [Web Animations Model](https://www.w3.org/TR/web-animations-1/) W3C Working Draft
 - [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/#relativeluminancedef) definition of relative luminance
 - [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
 

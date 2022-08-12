@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.track
 slug: Web/API/RTCRtpReceiver/track
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

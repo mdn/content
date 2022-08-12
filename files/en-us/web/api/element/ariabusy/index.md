@@ -1,6 +1,7 @@
 ---
 title: Element.ariaBusy
 slug: Web/API/Element/ariaBusy
+page-type: web-api-instance-property
 tags:
   - API
   - Property

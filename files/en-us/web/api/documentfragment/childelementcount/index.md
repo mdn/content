@@ -1,6 +1,7 @@
 ---
 title: DocumentFragment.childElementCount
 slug: Web/API/DocumentFragment/childElementCount
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

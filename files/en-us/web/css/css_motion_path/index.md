@@ -9,7 +9,7 @@ tags:
   - Motion Path
   - Overview
   - Reference
-spec-urls: https://drafts.fxtf.org/motion/
+browser-compat: css.properties.offset-path
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -61,6 +61,4 @@ The idea is that when you want to animate an element moving along a path, you pr
 
 ## Browser compatibility
 
-### offset property
-
-{{Compat("css.properties.offset-path")}}
+{{Compat}}

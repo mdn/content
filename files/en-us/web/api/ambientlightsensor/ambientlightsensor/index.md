@@ -1,6 +1,7 @@
 ---
 title: AmbientLightSensor()
 slug: Web/API/AmbientLightSensor/AmbientLightSensor
+page-type: web-api-constructor
 tags:
   - API
   - Ambient Light Sensor API
@@ -9,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.AmbientLightSensor.AmbientLightSensor
 ---
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{APIRef("Sensor API")}}
 
 The **`AmbientLightSensor()`** constructor creates a new {{domxref("AmbientLightSensor")}} object, which returns the current light level or illuminance of the ambient light around the hosting device.
 

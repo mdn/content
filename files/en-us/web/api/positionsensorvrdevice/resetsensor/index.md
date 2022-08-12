@@ -1,6 +1,7 @@
 ---
 title: PositionSensorVRDevice.resetSensor()
 slug: Web/API/PositionSensorVRDevice/resetSensor
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -34,10 +35,10 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Our [positionsensorvrdevice](https://mdn.github.io/webvr-tests/positionsensorvrdevice/) demo uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop. It features, among other things, a "Reset Sensor" button in the UI, which when pressed runs the `resetSensor()` function on the position sensor. The JavaScript looks like this:
+The following demo uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop. It features, among other things, a "Reset Sensor" button in the UI, which when pressed runs the `resetSensor()` function on the position sensor. The JavaScript looks like this:
 
 ```js
-document.querySelector('button').onclick = function() {
+document.querySelector('button').onclick = () => {
   gPositionSensor.resetSensor();
 }
 ```

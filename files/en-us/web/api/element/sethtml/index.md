@@ -1,6 +1,7 @@
 ---
 title: Element.setHTML()
 slug: Web/API/Element/setHTML
+page-type: web-api-instance-method
 tags:
   - HTML Sanitizer API
   - Method
@@ -9,7 +10,7 @@ tags:
   - Experimental
 browser-compat: api.Element.setHTML
 ---
-{{SeeCompatTable}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`setHTML()`** method of the {{domxref("Element")}} interface is used to parse and sanitize a string of HTML and then insert it into the DOM as a subtree of the element.
 It should be used instead of {{domxref("Element.innerHTML")}} for inserting untrusted strings of HTML into an element.

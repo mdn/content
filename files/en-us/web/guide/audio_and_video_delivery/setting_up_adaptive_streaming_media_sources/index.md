@@ -125,13 +125,13 @@ play list ->                /segments/news.mp4.mpd
 
 main segment folder ->      /segments/main/
 
-100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
+100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s … )
 
-200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
+200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s … )
 
-300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
+300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s … )
 
-400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )
+400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s … )
 ```
 
 The playlist or `.mpd` file contains XML that explicitly lists where all the various bitrate files reside.
@@ -178,7 +178,7 @@ The playlist or `.mpd` file contains XML that explicitly lists where all the var
           </SegmentList>
         </Representation>
 
-        ...
+        …
 
       </AdaptationSet>
     </Period>
@@ -206,11 +206,11 @@ it might be wise to provide a fallback:
 </video>
 ```
 
-> **Note:** MPEG-DASH playback relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and browser support for [Media Source Extensions](https://w3c.github.io/media-source/), see the latest [dash.js reference player](https://dashif.org/reference/players/javascript/index.html).
+> **Note:** MPEG-DASH playback relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and browser support for [Media Source Extensions](https://w3c.github.io/media-source/), see the latest [dash.js reference player](https://reference.dashif.org/dash.js/v4.4.0/samples/dash-if-reference-player/index.html).
 
 ## HLS Encoding
 
-HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://www.jwplayer.com/html5/hls).
+HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://www.jwplayer.com/blog/hls-in-html5).
 
 Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into an MPEG-2 Transport Stream, which is then broken into segments and saved as one or more `.ts` media files. Apple provides tools to convert media files to the appropriate format.
 
@@ -218,7 +218,6 @@ Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into
 
 There are a number of useful tools available for HLS encoding
 
-- For HLS live stream encoding [Adobe provide a Media Encoder for Mac](http://www.adobe.com/support/downloads/product.jsp?product=160&platform=Macintosh).
 - The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.
 - Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.
 
@@ -280,4 +279,4 @@ Further resources on adaptive streaming.
 Adaptive streaming examples
 
 - [ITEC – Dynamic Adaptive Streaming over HTTP](https://dash.itec.aau.at/dash-dataset/)
-- [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
+- [MPEG DASH Media Source Demo](https://web.archive.org/web/20170703160817/https://dash-mse-test.appspot.com/media.html)

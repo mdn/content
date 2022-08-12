@@ -6,6 +6,7 @@ tags:
   - HTTP
   - HTTP Header
   - Response Header
+spec-urls: https://www.w3.org/TR/ldp/#header-accept-post
 ---
 {{HTTPSidebar}}
 
@@ -54,9 +55,7 @@ Accept-Post: */*
 
 ## Specifications
 
-| Specification                                                                                                           | Title       |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [Linked Data Platform 1.0, Section 7.1: The Accept-Post Response Header](https://www.w3.org/TR/ldp/#header-accept-post) | ACCEPT POST |
+{{Specifications}}
 
 ## Browser compatibility
 

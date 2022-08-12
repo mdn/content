@@ -1,6 +1,7 @@
 ---
 title: MediaKeys.createSession()
 slug: Web/API/MediaKeys/createSession
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions

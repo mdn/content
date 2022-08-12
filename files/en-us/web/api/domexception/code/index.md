@@ -1,6 +1,7 @@
 ---
 title: DOMException.code
 slug: Web/API/DOMException/code
+page-type: web-api-instance-property
 tags:
   - API
   - Code
@@ -8,6 +9,7 @@ tags:
   - Property
   - Reference
   - deprecated
+  - Deprecated
 browser-compat: api.DOMException.code
 ---
 {{ APIRef("DOM") }} {{deprecated_header}}

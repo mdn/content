@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpaceEvent()
 slug: Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
+page-type: web-api-constructor
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: MediaKeySession.closed
 slug: Web/API/MediaKeySession/closed
+page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions

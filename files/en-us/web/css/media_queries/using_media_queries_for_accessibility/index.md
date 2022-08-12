@@ -52,7 +52,7 @@ This example has an annoying animation unless you turn on Reduce Motion in your 
 
 {{CSSRef}}{{Non-standard_header}}
 
-The **-ms-high-contrast** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) is a [Microsoft extension](/en-US/docs/Web/CSS/Microsoft_extensions) that describes whether the application is being displayed in high contrast mode, and with what color variation.
+The **-ms-high-contrast** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [Microsoft extension](/en-US/docs/Web/CSS/Microsoft_Extensions) that describes whether the application is being displayed in high contrast mode, and with what color variation.
 
 This will help not only users with low vision and contrast sensitivity issues but also users that are working on a computer or phone with direct sunlight.
 

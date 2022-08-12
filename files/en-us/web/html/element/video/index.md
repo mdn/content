@@ -20,7 +20,6 @@ tags:
   - Web
 browser-compat: html.elements.video
 ---
-
 {{HTMLRef}}
 
 The **`<video>`** [HTML](/en-US/docs/Web/HTML) element embeds a media player which supports video playback into the document. You can use `<video>` for audio content as well, but the {{HTMLElement("audio")}} element may provide a more appropriate user experience.
@@ -77,7 +76,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
 - {{htmlattrdef("height")}}
-  - : The height of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes).)
+  - : The height of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
 - {{htmlattrdef("loop")}}
   - : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
 - {{htmlattrdef("muted")}}
@@ -119,7 +118,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   <tbody>
     <tr>
       <td>
-        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}}{{Deprecated_Inline}}
+        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}} {{Deprecated_Inline}}
       </td>
       <td>
         The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is
@@ -270,7 +269,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
       <td>
         {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
       </td>
-      <td>Playback has stopped because of a temporary lack of data</td>
+      <td>Playback has stopped because of a temporary lack of data.</td>
     </tr>
   </tbody>
 </table>
@@ -283,7 +282,7 @@ Browsers don't all support the same video formats; you can provide multiple sour
 <video controls>
   <source src="myVideo.webm" type="video/webm">
   <source src="myVideo.mp4" type="video/mp4">
-  <p>Your browser doesn't support HTML5 video. Here is
+  <p>Your browser doesn't support HTML video. Here is
      a <a href="myVideo.mp4">link to the video</a> instead.</p>
 </video>
 ```
@@ -295,7 +294,7 @@ Other usage notes:
 - If you don't specify the `controls` attribute, the video won't include the browser's default controls; you can create your own custom controls using JavaScript and the {{domxref("HTMLMediaElement")}} API. See [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) for more details.
 - To allow precise control over your video (and audio) content, `HTMLMediaElement`s fire many different [events](/en-US/docs/Web/API/HTMLMediaElement#events). In addition to providing controllability, these events let you monitor the progress of both download and playback of the media, as well as the playback state and position.
 - You can use the {{cssxref("object-position")}} property to adjust the positioning of the video within the element's frame, and the {{cssxref("object-fit")}} property to control how the video's size is adjusted to fit within the frame.
-- To show subtitles/captions along with your video, you can use some JavaScript along with the {{htmlelement("track")}} element and the [WebVTT](/en-US/docs/Web/API/WebVTT_API) format. See [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information.
+- To show subtitles/captions along with your video, you can use some JavaScript along with the {{htmlelement("track")}} element and the [WebVTT](/en-US/docs/Web/API/WebVTT_API) format. See [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information.
 - You can play audio files using a `<video>` element. This can be useful if, for example, you need to perform audio with a [WebVTT](/en-US/docs/Web/API/WebVTT_API) transcript, since the {{HTMLElement("audio")}} element doesn't allow captions using WebVTT.
 - To test the fallback content on browsers that support the element, you can replace `<video>` with a non-existing element like `<notavideo>`.
 
@@ -321,20 +320,20 @@ You can detect when tracks are added to and removed from a `<video>` element usi
 For example, to detect when audio tracks are added to or removed from a `<video>` element, you can use code like this:
 
 ```js
-var elem = document.querySelector("video");
+const elem = document.querySelector("video");
 
-elem.audioTracks.onaddtrack = function(event) {
+elem.audioTracks.onaddtrack = (event) => {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTracks.onremovetrack = function(event) {
+elem.audioTracks.onremovetrack = (event) => {
   trackEditor.removeTrack(event.track);
 };
 ```
 
 This code watches for audio tracks to be added to and removed from the element, and calls a hypothetical function on a track editor to register and remove the track from the editor's list of available tracks.
 
-You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{event("removetrack")}} events.
+You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{domxref("VideoTrackList/removetrack_event", "removetrack")}} events.
 
 ### Server support for video
 
@@ -408,7 +407,7 @@ This example builds on the last one, offering three different sources for the me
     src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     type="video/mp4">
 
-  Your browser doesn't support HTML5 video tag.
+  Your browser doesn't support HTML video tag.
 </video>
 ```
 
@@ -416,13 +415,13 @@ This example builds on the last one, offering three different sources for the me
 
 {{EmbedLiveSample('Multiple sources', '', '400')}}
 
-First [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) is tried. If that can't be played, then [MP4](/en-US/docs/Web/Media/Formats/Containers#mp4) is tried. Finally, [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
+First [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) is tried. If that can't be played, then AVI is tried. Finally, [MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
 
 Some media file types let you provide more specific information using the [`codecs`](/en-US/docs/Web/Media/Formats/codecs_parameter) parameter as part of the file's type string. A relatively simple example is `video/webm; codecs="vp8, vorbis"`, which says that the file is a [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) video using [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) for its video and [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) for audio.
 
 ## Accessibility concerns
 
-Videos should provide both captions and transcripts that accurately describe its content (see [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
+Videos should provide both captions and transcripts that accurately describe its content (see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
 
 It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a {{HTMLElement("video")}} element, since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
 
@@ -450,7 +449,6 @@ It's… it's a…
 
 Captions should not obstruct the main subject of the video. They can be positioned using [the `align` VTT cue setting](/en-US/docs/Web/API/WebVTT_API#cue_settings).
 
-- [MDN Subtitles and closed caption — Plugins](/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
 - [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
@@ -483,7 +481,7 @@ Captions should not obstruct the main subject of the video. They can be position
           attribute: zero or more {{HTMLElement("track")}} elements,
           followed by transparent content that contains no media elements–that
           is no {{HTMLElement("audio")}} or
-          {{HTMLElement("video")}}
+          {{HTMLElement("video")}}.
         </p>
         <p>
           Else: zero or more {{HTMLElement("source")}} elements, followed
@@ -538,6 +536,6 @@ Captions should not obstruct the main subject of the video. They can be position
 
 - Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - {{htmlelement("audio")}}
-- [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Configuring servers for Ogg media](/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media)

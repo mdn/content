@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnectionIceErrorEvent.address
 slug: Web/API/RTCPeerConnectionIceErrorEvent/address
+page-type: web-api-instance-property
 tags:
   - API
   - Address

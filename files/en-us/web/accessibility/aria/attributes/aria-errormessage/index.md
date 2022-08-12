@@ -1,5 +1,5 @@
 ---
-title: 'aria-errormessage'
+title: aria-errormessage
 slug: Web/Accessibility/ARIA/Attributes/aria-errormessage
 tags:
   - Accessibility
@@ -10,7 +10,6 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-errormessage
 ---
-
 The `aria-errormessage` attribute on an object identifies the element that provides an error message for that object.
 
 ## Description
@@ -60,7 +59,7 @@ When an object is invalid, we use JavaScript to add `aria-invalid="true"`. The a
 </p>
 ```
 
-When we went from valid to invalid, the only JavaScript change for this example was an update to `aria-invalid` on the email input object. As the error message follows the input and becomes visible and available on the accessibility tree, we are able to keep our example simple. We could have also applied an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) property or used a live region roles such as [`alert`](/en-US/docs/Web/Accessibility/ARIA/roles/Alert_role).
+When we went from valid to invalid, the only JavaScript change for this example was an update to `aria-invalid` on the email input object. As the error message follows the input and becomes visible and available on the accessibility tree, we are able to keep our example simple. We could have also applied an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) property or used a live region roles such as [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
 
 ## Values
 
@@ -71,24 +70,24 @@ When we went from valid to invalid, the only JavaScript change for this example 
 
 Used in roles:
 
-- [`application`](/en-US/docs/Web/Accessibility/ARIA/roles/application_role)
-- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/roles/checkbox_role)
-- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/roles/combobox_role)
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/roles/gridcell_role)
-- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/roles/listbox_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/roles/radiogroup_role)
-- [`slider`](/en-US/docs/Web/Accessibility/ARIA/roles/slider_role)
-- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/roles/spinbutton_role)
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/roles/textbox_role)
-- [`tree`](/en-US/docs/Web/Accessibility/ARIA/roles/tree_role)
+- [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
+- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
+- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
+- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
 
 Inherits from roles:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/roles/columnheader_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/roles/rowheader_role)
-- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/roles/searchbox_role)
-- [`switch`](/en-US/docs/Web/Accessibility/ARIA/roles/switch_role)
-- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/roles/treegrid_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
 
 ## Specifications
 

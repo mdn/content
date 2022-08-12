@@ -59,7 +59,7 @@ You can use this attribute with the following SVG elements:
 
     It also indicates that a new (i.e., initially transparent black) background image canvas is established and that in effect all children of the current container element shall be rendered into the new background image canvas in addition to being rendered onto the target device.
 
-    The optional `<x>`, `<y>`, `<width>`, and `<height>` parameters are [`<number>`](/en-US/docs/Web/SVG/Content_type#Number) values that indicate the subregion of the container element's user space where access to the background image is allowed to happen. Those values act as a clipping rectangle on the background image canvas.
+    The optional `<x>`, `<y>`, `<width>`, and `<height>` parameters are [`<number>`](/en-US/docs/Web/SVG/Content_type#number) values that indicate the subregion of the container element's user space where access to the background image is allowed to happen. Those values act as a clipping rectangle on the background image canvas.
     Negative values for `<width>` or `<height>` are forbidden. If one, two, or three values are specified or if neither `<width>` nor `<height>` are specified, the `BackgroundImage` and `BackgroundAlpha` of a filter primitive are processed as if background image processing were not enabled.
 
 ## Specifications

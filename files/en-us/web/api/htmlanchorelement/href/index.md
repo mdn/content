@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.href
 slug: Web/API/HTMLAnchorElement/href
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement

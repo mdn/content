@@ -65,9 +65,9 @@ Events have three functions:
 
 ```js
 function handleRemoved(id, removeInfo) {
-  console.log("Item: " + id + " removed");
-  console.log("Title: " + removeInfo.node.title);
-  console.log("Url: " + removeInfo.node.url);
+  console.log(`Item: ${id} removed`);
+  console.log(`Title: ${removeInfo.node.title}`);
+  console.log(`Url: ${removeInfo.node.url}`);
 }
 
 function handleClick() {

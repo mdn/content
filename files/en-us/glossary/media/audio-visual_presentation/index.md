@@ -16,7 +16,7 @@ Media content can be recorded, played back, presented, and at times interacted w
 
 ## See also
 
-- {{interwiki("wikipedia", "Multimedia")}} on Wikipedia
+- [Multimedia](https://en.wikipedia.org/wiki/Multimedia) on Wikipedia
 - [Web media technologies](/en-US/docs/Web/Media): a guide to all the ways media can be used in web content
 - [Multimedia and Embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding) in the MDN learning area
 - {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements, used to present media in {{Glossary("HTML")}} documents

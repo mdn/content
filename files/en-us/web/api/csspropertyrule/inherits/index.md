@@ -1,12 +1,12 @@
 ---
 title: CSSPropertyRule.inherits
 slug: Web/API/CSSPropertyRule/inherits
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
   - CSS Properties and Values API
   - CSSPropertyRule
-  - Experimental
   - Houdini
   - Property
   - Reference

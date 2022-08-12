@@ -1,6 +1,7 @@
 ---
 title: MediaKeySession.generateRequest()
 slug: Web/API/MediaKeySession/generateRequest
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions

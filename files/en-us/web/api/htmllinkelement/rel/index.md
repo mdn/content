@@ -1,6 +1,7 @@
 ---
 title: HTMLLinkElement.rel
 slug: Web/API/HTMLLinkElement/rel
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -28,10 +29,9 @@ A string.
 ## Examples
 
 ```js
-var links = document.getElementsByTagName('link');
-var length = links.length;
-for (var i = 0; i < length; i++) {
-  alert(links[i]);
+const links = document.getElementsByTagName('link');
+for (const link of links) {
+  console.log(link);
 }
 ```
 

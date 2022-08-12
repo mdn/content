@@ -1,6 +1,7 @@
 ---
 title: SVGLength
 slug: Web/API/SVGLength
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGLength
 
 ## SVG length interface
 
-The `SVGLength` interface correspond to the [\<length>](/en-US/docs/Web/SVG/Content_type#Length) basic data type.
+The `SVGLength` interface correspond to the [\<length>](/en-US/docs/Web/SVG/Content_type#length) basic data type.
 
 An `SVGLength` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
@@ -91,10 +92,10 @@ An `SVGLength` object can be designated as read only, which means that attempts 
 
 ```xml
 <svg height="200" onload="start();" version="1.1" width="200" xmlns="http://www.w3.org/2000/svg">
-  <script type="text/javascript"><![CDATA[
+  <script><![CDATA[
 function start() {
-  var rect = document.getElementById("myRect");
-  var val  = rect.x.baseVal;
+  const rect = document.getElementById("myRect");
+  const val  = rect.x.baseVal;
 
   // read x in pixel and cm units
   console.log("value: " + val.value +

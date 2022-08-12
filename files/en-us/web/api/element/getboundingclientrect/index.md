@@ -1,6 +1,7 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
+page-type: web-api-instance-method
 tags:
   - API
   - Boundary
@@ -106,10 +107,10 @@ div {
 ```js
 let elem = document.querySelector('div');
 let rect = elem.getBoundingClientRect();
-for (var key in rect) {
-  if(typeof rect[key] !== 'function') {
+for (const key in rect) {
+  if (typeof rect[key] !== 'function') {
     let para = document.createElement('p');
-    para.textContent  = `${ key } : ${ rect[key] }`;
+    para.textContent  = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
 }
@@ -125,7 +126,7 @@ Also note how the values of `x`/`left`,
 to the absolute distance from the relevant edge of the viewport to that side of the
 element, in each case.
 
-#### Scrolling
+### Scrolling
 
 This example demonstrates how bounding client rect is changing when document is scrolled.
 
@@ -154,10 +155,10 @@ function update() {
   const rect = elem.getBoundingClientRect();
 
   container.innerHTML = '';
-  for (let key in rect) {
-    if(typeof rect[key] !== 'function') {
+  for (const key in rect) {
+    if (typeof rect[key] !== 'function') {
       let para = document.createElement('p');
-      para.textContent  = `${ key } : ${ rect[key] }`;
+      para.textContent  = `${key} : ${rect[key]}`;
       container.appendChild(para);
     }
   }
@@ -180,7 +181,5 @@ update();
 ## See also
 
 - {{domxref("Element.getClientRects", "getClientRects()")}}
-- [MSDN:
-  `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
-- [MSDN:
-  `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>), an earlier version of `DOMRect`
+- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
+- [MSDN: `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>), an earlier version of `DOMRect`

@@ -33,7 +33,7 @@ console.log([] instanceof MyArray); // true
 ```js
 function MyArray() { }
 Object.defineProperty(MyArray, Symbol.hasInstance, {
-  value: function(instance) { return Array.isArray(instance); }
+  value(instance) { return Array.isArray(instance); }
 });
 console.log([] instanceof MyArray); // true
 ```

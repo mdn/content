@@ -1,6 +1,7 @@
 ---
 title: StyleSheetList
 slug: Web/API/StyleSheetList
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -15,7 +16,7 @@ It is an array-like object but can't be iterated over using {{jsxref("Array")}} 
 
 ## Properties
 
-- {{domxref("StyleSheetList.length")}}{{ReadOnlyInline}}
+- {{domxref("StyleSheetList.length")}} {{ReadOnlyInline}}
   - : Returns the number of {{domxref("CSSStyleSheet")}} objects in the collection.
 
 ## Methods
@@ -42,13 +43,13 @@ for (i; i < styleSheetsNo; i++) {
 
 ```js
 const allCSS = [...document.styleSheets]
-  .map(styleSheet => {
+  .map((styleSheet) => {
     try {
       return [...styleSheet.cssRules]
-        .map(rule => rule.cssText)
+        .map((rule) => rule.cssText)
         .join('');
     } catch (e) {
-      console.log('Access to stylesheet %s is denied. Ignoring...', styleSheet.href);
+      console.log('Access to stylesheet %s is denied. Ignoring…', styleSheet.href);
     }
   })
   .filter(Boolean)

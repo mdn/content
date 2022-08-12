@@ -1,6 +1,7 @@
 ---
 title: FontFace.weight
 slug: Web/API/FontFace/weight
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API

@@ -1,6 +1,7 @@
 ---
 title: Window.setImmediate()
 slug: Web/API/Window/setImmediate
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -29,7 +30,7 @@ updates.
 setImmediate(func)
 setImmediate(func, param0)
 setImmediate(func, param0, param1)
-setImmediate(func, param0, param1, /* ... ,*/ paramN)
+setImmediate(func, param0, param1, /* … ,*/ paramN)
 ```
 
 ### Parameters
@@ -37,7 +38,7 @@ setImmediate(func, param0, param1, /* ... ,*/ paramN)
 - `func`
   - :  The function you wish to call.
 
-- `param0, ..., paramN`
+- `param0`, …, `paramN`
   - : All parameters will be passed directly to your function.
 
 ### Return value
@@ -51,8 +52,7 @@ the immediate actions, just like {{DOMxRef("clearTimeout")}} for
 {{DOMxRef("setTimeout()")}}.
 
 This method can be used instead of the `setTimeout(fn, 0)` method to execute
-[heavy
-operations](https://humanwhocodes.com/blog/2009/08/11/timed-array-processing-in-javascript/).
+[heavy operations](https://humanwhocodes.com/blog/2009/08/11/timed-array-processing-in-javascript/).
 
 The feature can be emulated in a few different ways:
 
@@ -62,8 +62,7 @@ The feature can be emulated in a few different ways:
 - {{DOMxRef("MessageChannel")}} can be used reliably inside of Web Workers whereas the
   semantics of postMessage mean it cannot be used there.
 - `setTimeout(fn, 0)` _can_ potentially be used, however as it is
-  clamped to 4ms for timers nested more than 5 levels deep [per the HTML
-  spec](https://html.spec.whatwg.org/multipage/webappapis.html#timers), it does not make for a suitable polyfill for the natural immediacy of
+  clamped to 4ms for timers nested more than 5 levels deep [per the HTML spec](https://html.spec.whatwg.org/multipage/webappapis.html#timers), it does not make for a suitable polyfill for the natural immediacy of
   `setImmediate`.
 
 All of these techniques are incorporated into a [robust setImmediate polyfill](https://github.com/YuzuJS/setImmediate).
@@ -82,5 +81,4 @@ specification is no longer being worked on.
 
 - [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
 - {{DOMxRef("Window.clearImmediate()")}}
-- [Microsoft
-  `setImmediate` API Demo](https://redirect.microsoft/testdrive/Performance/setImmediateSorting/Default.html)
+- [Microsoft `setImmediate` API Demo](https://jphpsf.github.io/setImmediate-shim-demo/)

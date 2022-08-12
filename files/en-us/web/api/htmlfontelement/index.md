@@ -1,6 +1,7 @@
 ---
 title: HTMLFontElement
 slug: Web/API/HTMLFontElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -24,7 +25,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLFontElement.face")}}
   - : A string that reflects the {{htmlattrxref("face", "font")}} HTML attribute, containing a comma-separated list of one or more font names.
 - {{domxref("HTMLFontElement.size")}}
-  - : A string that reflects the {{htmlattrxref("size", "font")}} HTML attribute, containing either a font size number ranging from 1 to 7 or a relative size to the {{htmlattrxref("size", "basefont")}} attribute of the {{HTMLElement("basefont")}} element, for example -2 or +1.
+  - : A string that reflects the {{htmlattrxref("size", "font")}} HTML attribute, containing either a font size ranging from 1 to 7 or a number relative to the default value 3, for example -2 or +1.
 
 ## Methods
 
@@ -32,7 +33,7 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 
 ## Specifications
 
-The `<font>` tag is not supported in HTML5 since it is now obsolete.
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.getRGBColorValue()
 slug: Web/API/CSSPrimitiveValue/getRGBColorValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue
@@ -48,8 +49,8 @@ An {{domxref("RGBColor")}} object representing the color value.
 ## Examples
 
 ```js
-var cs = window.getComputedStyle(document.body);
-var cssValue = cs.getPropertyCSSValue("color");
+const cs = window.getComputedStyle(document.body);
+const cssValue = cs.getPropertyCSSValue("color");
 console.log(cssValue.getRGBColorValue());
 ```
 

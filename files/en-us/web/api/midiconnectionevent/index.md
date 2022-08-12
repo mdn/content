@@ -1,6 +1,7 @@
 ---
 title: MIDIConnectionEvent
 slug: Web/API/MIDIConnectionEvent
+page-type: web-api-interface
 tags:
   - API
   - Draft
@@ -24,7 +25,7 @@ The **`MIDIConnectionEvent`** interface of the [Web MIDI API](/en-US/docs/Web/AP
 
 ## Properties
 
-- {{domxref("MIDIConnectionEvent.port")}}{{readonlyinline}}
+- {{domxref("MIDIConnectionEvent.port")}} {{readonlyinline}}
   - : Returns a reference to a {{domxref("MIDIPort")}} instance for a port that has been connected or disconnected."
 
 ## Examples
@@ -33,9 +34,9 @@ The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that r
 
 ```js
 navigator.requestMIDIAccess()
-  .then(function(access) {
+  .then((access) => {
 
-     access.onstatechange = event => {
+     access.onstatechange = (event) => {
        console.log(event.port.name, event.port.manufacturer, event.port.state);
      };
   });

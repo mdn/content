@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
+page-type: web-api-interface
 tags:
   - API
   - Element
@@ -92,7 +93,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Errors
 
-If an error occurs while trying to load or render the image, and an {{htmlattrxref("onerror")}} event handler has been configured to handle the {{event("error")}} event, that event handler will get called. This can happen in a number of situations, including:
+If an error occurs while trying to load or render the image, and an {{htmlattrxref("onerror")}} event handler has been configured to handle the {{domxref("Element/error_event", "error")}} event, that event handler will get called. This can happen in a number of situations, including:
 
 - The {{htmlattrxref("src", "img")}} attribute is empty or `null`.
 - The specified `src` URL is the same as the URL of the page the user is currently on.
@@ -103,12 +104,12 @@ If an error occurs while trying to load or render the image, and an {{htmlattrxr
 ## Example
 
 ```js
-var img1 = new Image(); // Image constructor
+const img1 = new Image(); // Image constructor
 img1.src = 'image1.png';
 img1.alt = 'alt';
 document.body.appendChild(img1);
 
-var img2 = document.createElement('img'); // Use DOM HTMLImageElement
+const img2 = document.createElement('img'); // Use DOM HTMLImageElement
 img2.src = 'image2.jpg';
 img2.alt = 'alt text';
 document.body.appendChild(img2);

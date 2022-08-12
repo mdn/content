@@ -1,6 +1,7 @@
 ---
 title: WindowControlsOverlayGeometryChangeEvent
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -35,7 +36,7 @@ event handler on the {{domxref("Navigator.windowControlsOverlay")}} property, to
 
 ```js
 if ('windowControlsOverlay' in navigator) {
-  navigator.windowControlsOverlay.addEventListener('geometrychange', event => {
+  navigator.windowControlsOverlay.addEventListener('geometrychange', (event) => {
     if (event.visible) {
       const rect = event.titlebarAreaRect;
       // Do something with the coordinates of the title bar area.

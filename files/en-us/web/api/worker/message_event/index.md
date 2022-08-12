@@ -1,6 +1,7 @@
 ---
 title: 'Worker: message event'
 slug: Web/API/Worker/message_event
+page-type: web-api-event
 tags:
   - API
   - Worker
@@ -20,9 +21,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type
@@ -58,7 +59,7 @@ worker.addEventListener('message', (event) => {
 });
 ```
 
-Alternatively, it could listen using the [`onmessage`](/en-US/docs/Web/API/Worker/onmessage) event handler property:
+Alternatively, it could listen using the `onmessage` event handler property:
 
 ```js
 const worker = new Worker("static/scripts/worker.js");
@@ -86,5 +87,5 @@ self.postMessage('I\'m alive!');
 
 ## See also
 
-- Related events: [`messageerror`](/docs/Web/API/Worker/messageerror_event).
+- Related events: [`messageerror`](/en-US/docs/Web/API/Worker/messageerror_event).
 - [`DedicatedWorkerGlobalScope.postMessage()`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage).

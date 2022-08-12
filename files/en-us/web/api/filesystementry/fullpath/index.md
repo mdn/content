@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.fullPath
 slug: Web/API/FileSystemEntry/fullPath
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API
@@ -36,7 +37,7 @@ its full path.
 function gotFileSystem(fs) {
   let path = "";
 
-  fs.root.getFile("data.json", { create: true, exclusive: true }, function(entry) {
+  fs.root.getFile("data.json", { create: true, exclusive: true }, (entry) => {
     path = fullPath;
   }, handleError(error));
 

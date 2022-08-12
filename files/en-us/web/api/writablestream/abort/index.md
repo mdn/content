@@ -1,6 +1,7 @@
 ---
 title: WritableStream.abort()
 slug: Web/API/WritableStream/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -39,17 +40,17 @@ A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` par
 ```js
 const writableStream = new WritableStream({
   write(chunk) {
-    ...
+    // ...
   },
   close() {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 }, queuingStrategy);
 
-...
+// ...
 
 // abort the stream later on, when required
 writableStream.abort();

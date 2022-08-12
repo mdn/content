@@ -1,6 +1,7 @@
 ---
 title: RTCRtpContributingSource
 slug: Web/API/RTCRtpContributingSource
+page-type: web-api-interface
 tags:
   - API
   - Contributing Source

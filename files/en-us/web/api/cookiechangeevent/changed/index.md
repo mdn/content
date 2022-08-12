@@ -1,15 +1,17 @@
 ---
 title: CookieChangeEvent.changed
 slug: Web/API/CookieChangeEvent/changed
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - changed
   - CookieChangeEvent
+  - Experimental
 browser-compat: api.CookieChangeEvent.changed
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`changed`** read-only property of the {{domxref("CookieChangeEvent")}} interface returns an array of the cookies that have been changed.
 

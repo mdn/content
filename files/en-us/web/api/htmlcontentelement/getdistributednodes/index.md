@@ -1,6 +1,7 @@
 ---
 title: HTMLContentElement.getDistributedNodes()
 slug: Web/API/HTMLContentElement/getDistributedNodes
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -24,7 +25,7 @@ A {{domxref("NodeList")}} object.
 
 ```js
 // Get the distributed nodes
-var nodes = myContentObject.getDistributedNodes();
+const nodes = myContentObject.getDistributedNodes();
 ```
 
 ## Specifications

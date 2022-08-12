@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.deleteCaption()
 slug: Web/API/HTMLTableElement/deleteCaption
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

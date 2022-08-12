@@ -28,7 +28,7 @@ In order to make an [HTTP](/en-US/docs/Web/HTTP) request to the server with Java
 
 ```js
 // Old compatibility code, no longer needed.
-if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
+if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+, etc.
     httpRequest = new XMLHttpRequest();
 } else if (window.ActiveXObject) { // IE 6 and older
     httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
@@ -46,7 +46,7 @@ httpRequest.onreadystatechange = nameOfTheFunction;
 Note that there are no parentheses or parameters after the function name, because you're assigning a reference to the function, rather than actually calling it. Alternatively, instead of giving a function name, you can use the JavaScript technique of defining functions on the fly (called "anonymous functions") to define the actions that will process the response, like this:
 
 ```js
-httpRequest.onreadystatechange = function(){
+httpRequest.onreadystatechange = () => {
     // Process the server response here.
 };
 ```
@@ -129,8 +129,8 @@ Let's put it all together with a simple HTTP request. Our JavaScript will reques
 <button id="ajaxButton" type="button">Make a request</button>
 
 <script>
-(function() {
-  var httpRequest;
+(() => {
+  let httpRequest;
   document.getElementById("ajaxButton").addEventListener('click', makeRequest);
 
   function makeRequest() {
@@ -183,9 +183,8 @@ function alertContents() {
         alert('There was a problem with the request.');
       }
     }
-  }
-  catch( e ) {
-    alert('Caught Exception: ' + e.description);
+  } catch (e) {
+    alert(`Caught Exception: ${e.description}`);
   }
 }
 ```
@@ -212,8 +211,8 @@ httpRequest.open('GET', 'test.xml');
 Then in `alertContents()`, we need to replace the line `alert(httpRequest.responseText);` with:
 
 ```js
-var xmldoc = httpRequest.responseXML;
-var root_node = xmldoc.getElementsByTagName('root').item(0);
+const xmldoc = httpRequest.responseXML;
+const root_node = xmldoc.querySelector('root');
 alert(root_node.firstChild.data);
 ```
 
@@ -237,9 +236,9 @@ First we'll add a text box to our HTML so the user can enter their name:
 We'll also add a line to our event handler to get the user's data from the text box and send it to the `makeRequest()` function along with the URL of our server-side script:
 
 ```js
-document.getElementById("ajaxButton").onclick = function() {
-    var userName = document.getElementById("ajaxTextbox").value;
-    makeRequest('test.php',userName);
+document.getElementById("ajaxButton").onclick = () => {
+  const userName = document.getElementById("ajaxTextbox").value;
+  makeRequest('test.php', userName);
 };
 ```
 
@@ -248,18 +247,20 @@ We need to modify `makeRequest()` to accept the user data and pass it along to t
 ```js
 function makeRequest(url, userName) {
 
-  ...
+  // …
 
   httpRequest.onreadystatechange = alertContents;
   httpRequest.open('POST', url);
   httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  httpRequest.send('userName=' + encodeURIComponent(userName));
+  httpRequest.send(`userName=${encodeURIComponent(userName)}`);
 }
 ```
 
 The function `alertContents()` can be written the same way it was in Step 3 to alert our computed string, if that's all the server returns. However, let's say the server is going to return both the computed string and the original user data. So if our user typed "Jane" in the text box, the server's response would look like this:
 
-`{"userData":"Jane","computedString":"Hi, Jane!"}`
+```json
+{ "userData": "Jane", "computedString": "Hi, Jane!" }
+```
 
 To use this data within `alertContents()`, we can't just alert the `responseText`, we have to parse it and alert `computedString`, the property we want:
 
@@ -267,7 +268,7 @@ To use this data within `alertContents()`, we can't just alert the `responseText
 function alertContents() {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
-      var response = JSON.parse(httpRequest.responseText);
+      const response = JSON.parse(httpRequest.responseText);
       alert(response.computedString);
     } else {
       alert('There was a problem with the request.');
@@ -306,7 +307,7 @@ This is repeated every 5 seconds, using a `setInterval()` call. The idea would b
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>XHR log time</title>
@@ -320,33 +321,33 @@ This is repeated every 5 seconds, using a `setInterval()` call. The idea would b
 
     <script>
 
-    const fullData = document.getElementById('writeData');
-    const lastData = document.getElementById('lastStamp');
+      const fullData = document.getElementById('writeData');
+      const lastData = document.getElementById('lastStamp');
 
-    function fetchData() {
-      console.log('Fetching updated data.');
-      let xhr = new XMLHttpRequest();
-      xhr.open("GET", "time-log.txt", true);
-      xhr.onload = function() {
-        updateDisplay(xhr.response);
-      }
-      xhr.send();
-    }
-
-    function updateDisplay(text) {
-      fullData.textContent = text;
-
-      let timeArray = text.split('\n');
-
-      // included because some file systems always include a blank line at the end of text files.
-      if(timeArray[timeArray.length-1] === '') {
-        timeArray.pop();
+      function fetchData() {
+        console.log('Fetching updated data.');
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "time-log.txt", true);
+        xhr.onload = () => {
+          updateDisplay(xhr.response);
+        }
+        xhr.send();
       }
 
-      lastData.textContent = timeArray[timeArray.length-1];
-    }
+      function updateDisplay(text) {
+        fullData.textContent = text;
 
-    setInterval(fetchData, 5000);
+        const timeArray = text.split('\n');
+
+        // included because some file systems always include a blank line at the end of text files.
+        if (timeArray[timeArray.length - 1] === '') {
+          timeArray.pop();
+        }
+
+        lastData.textContent = timeArray[timeArray.length - 1];
+      }
+
+      setInterval(fetchData, 5000);
     </script>
   </body>
 </html>

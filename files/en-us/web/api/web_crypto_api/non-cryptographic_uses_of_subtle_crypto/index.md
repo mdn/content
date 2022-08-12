@@ -1,6 +1,7 @@
 ---
 title: Non-cryptographic uses of SubtleCrypto
 slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
+page-type: guide
 tags:
   - Web Crypto API
 ---
@@ -72,7 +73,7 @@ async function fileHash(file) {
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
   // We then convert it to a regular array so we can convert each item to hexadecimal strings
   // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte).
-  const hashAsString = Array.from(uint8ViewOfHash).map(b => b.toString(16).padStart(2, '0')).join('');
+  const hashAsString = Array.from(uint8ViewOfHash).map((b) => b.toString(16).padStart(2, '0')).join('');
   return hashAsString;
 }
 
@@ -88,7 +89,7 @@ async function hashTheseFiles(e) {
 }
 ```
 
- {{EmbedLiveSample("hashing-a-file")}}
+ {{EmbedLiveSample("hashing_a_file")}}
 
 ### Where would you use this?
 
@@ -97,10 +98,10 @@ At this point you may be thinking to yourself "*I can use this on my own website
 - Executable downloads should **always** be done over HTTPS. This prevents intermediate parties from performing attacks like this so it would be redundant.
 - If the attacker is able to replace the download file on the original server, then they can also simply replace the code which invokes the SubtleCrypto interface to bypass it and just state that everything is fine. Probably something sneaky like replacing [strict equality](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_), which can be a pain to spot in your own code:
 
-```js
---- if (checksum === correctCheckSum) return true;
-+++ if (checksum = correctCheckSum) return true;
-```
+  ```diff
+  --- if (checksum === correctCheckSum) return true;
+  +++ if (checksum = correctCheckSum) return true;
+  ```
 
 One place it may be worthwhile, is if you want to test a file from a third party download source, which you do not control. This would be the case as long as the download location has [CORS](/en-US/docs/Glossary/CORS) headers enabled to let you scan the file before you make it available to your users. Unfortunately not many servers have CORS turned on by default.
 
@@ -157,7 +158,7 @@ async function fileHash(file) {
   // different binary representations of the letters in our message will result in different hashes
   const encoder = new TextEncoder();
   // Null-terminated means the string ends in the null character which in JavaScript is '\0'
-  const view = encoder.encode('blob ' + length + '\0');
+  const view = encoder.encode(`blob ${length}\0`);
 
   // We then combine the 2 Array Buffers together into a new Array Buffer.
   const newBlob = new Blob([view.buffer, arrayBuffer], {
@@ -172,7 +173,7 @@ async function fileHash(file) {
 
 function hashToString(arrayBuffer) {
   const uint8View = new Uint8Array(arrayBuffer);
-  return Array.from(uint8View).map(b => b.toString(16).padStart(2, '0')).join('');
+  return Array.from(uint8View).map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
 // like before we iterate over the files

@@ -1,6 +1,7 @@
 ---
 title: DOMPointReadOnly.toJSON()
 slug: Web/API/DOMPointReadOnly/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Coordinates
@@ -42,9 +43,9 @@ This example creates a {{domxref("DOMPoint")}} object representing the top-left 
 of the current window, in screen coordinates, then converts that to JSON.
 
 ```js
-var topLeft = new DOMPoint(window.screenX, window.screenY);
+const topLeft = new DOMPoint(window.screenX, window.screenY);
 
-var pointJSON = topLeft.toJSON();
+const pointJSON = topLeft.toJSON();
 ```
 
 ## Specifications
