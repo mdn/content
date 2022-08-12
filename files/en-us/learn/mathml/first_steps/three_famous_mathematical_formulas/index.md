@@ -101,7 +101,7 @@ is to replace the question marks `???` with actual MathML content.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>Three famous mathematical formulas</title>

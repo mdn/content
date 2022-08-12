@@ -82,7 +82,7 @@ Here is a simple exercise to verify whether you understood the relation between 
 
 ```html hidden
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My page with math characters</title>
@@ -234,7 +234,7 @@ also stretches to be as tall as their content.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My page with stretchy radical symbols</title>
@@ -271,7 +271,7 @@ fraction-like notations that don't draw a horizontal bar, attach a
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My binomial coefficient</title>

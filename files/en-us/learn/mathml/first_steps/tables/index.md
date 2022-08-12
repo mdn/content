@@ -55,7 +55,7 @@ Here is a basic example taken from the [article about the CSS
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My first matrix</title>
@@ -148,7 +148,7 @@ the outer matrix:
 
 ```html hidden
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My matrix with columnspan</title>
@@ -243,7 +243,7 @@ conditions are placed on two different columns.
 
 ```html hidden
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My first matrix</title>

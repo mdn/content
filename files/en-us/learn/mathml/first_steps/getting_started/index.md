@@ -48,7 +48,7 @@ document, it is inside a paragraph of text:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
  <title>My first math page</title>
 </head>
@@ -84,7 +84,7 @@ their own line as shown below. To achieve that, one only need to attach a
 
 ```html hidden
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
  <title>My first math page</title>
 </head>

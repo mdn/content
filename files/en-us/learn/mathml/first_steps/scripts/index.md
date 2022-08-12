@@ -161,7 +161,7 @@ corresponds to your expectation.
 
 ```html hidden
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My page with scripted elements</title>
@@ -302,7 +302,7 @@ and
 
 ```html hidden
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My page with horizontal stretchy operators</title>
@@ -415,7 +415,7 @@ interesting changes:
 
 ```html hidden
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My page with moved limits and small largeop</title>

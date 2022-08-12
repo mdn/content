@@ -48,7 +48,7 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My page with math characters</title>
@@ -82,7 +82,7 @@ corresponds to your expectation.
 
 ```html hidden
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My page with math characters</title>
@@ -240,7 +240,7 @@ the differences with the text-only version.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My page with math characters</title>
@@ -316,7 +316,7 @@ to read the source code when you are done.
 
 ```html hidden
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <title>My page with stretchy operators</title>
