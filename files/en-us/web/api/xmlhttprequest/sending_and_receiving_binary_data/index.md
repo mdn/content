@@ -97,10 +97,8 @@ You can send JavaScript typed arrays as binary data as well.
 
 ```js
 const array = new ArrayBuffer(512);
-const longInt8View = new Uint8Array(array);
-
-// generate some data
-longInt8View.forEach((element, i) =>  {
+// Create a new array with fake data (Consecutive numbers (0 - 255), looping back to 0) 
+const longInt8View = Uint8Array.from(array, (element, i) =>  {
   element = i % 256;
 });
 
