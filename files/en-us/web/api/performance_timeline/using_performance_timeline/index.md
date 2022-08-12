@@ -162,7 +162,7 @@ function PerformanceObservers() {
   observeAll.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
 
   // Create observer for just the "mark" event type
-  const observe_mark = new PerformanceObserver((list, obs) => {
+  const observeMark = new PerformanceObserver((list, obs) => {
     const perfEntries = list.getEntries();
     
     // Should only have 'mark' entries
