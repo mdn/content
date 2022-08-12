@@ -102,12 +102,12 @@ These resources are created by forward-thinking companies and web developers who
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
   - : Apply rotation, skewing, scaling, and translation using CSS.
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
-  - : CSS transitions, part of the draft CSS3 specification, provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
+  - : CSS transitions provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
 
 <!---->
 
 - [Quick Guide to Implement Web Fonts  (with @font-face)](https://www.html5rocks.com/en/tutorials/webfonts/quick/)
-  - : The @font-face feature from CSS3 allows you to use custom typefaces on the web in an accessible, manipulatable, and scalable way.
+  - : The CSS @font-face feature allows you to use custom typefaces on the web in an accessible, manipulatable, and scalable way.
 - [Starting to Write CSS](https://davidwalsh.name/starting-css)
   - : An introduction to tools and methodologies to write more succinct, maintainable, and scalable CSS.
 
