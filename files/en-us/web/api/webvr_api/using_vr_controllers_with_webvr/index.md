@@ -70,7 +70,7 @@ function reportDisplays() {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
       const listItem = document.createElement('li');
-      listItem.innerHTML = `<strong>Display ${i+1}</strong><br>` +
+      listItem.innerHTML = `<strong>Display ${i + 1}</strong><br>` +
         `VR Display ID: ${display.displayId}<br>` +
         `VR Display Name: ${display.displayName}<br>` +
         `Display can present content: ${cap.canPresent}<br>` +
