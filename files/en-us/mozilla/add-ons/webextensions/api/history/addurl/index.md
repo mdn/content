@@ -40,7 +40,7 @@ let addingUrl = browser.history.addUrl(
     - `transition` {{optional_inline}}
       - : {{WebExtAPIRef("history.TransitionType")}}. Describes how the browser navigated to the page on this occasion. If this is not supplied, a transition type of "link" will be recorded.
     - `visitTime` {{optional_inline}}
-      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.
+      - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.
 
 ### Return value
 
@@ -71,41 +71,40 @@ function onAdded() {
   searching.then(onGot);
 }
 
-let addingUrl = browser.history.addUrl({url: "https://example.org/"});
-addingUrl.then(onAdded);
+browser.history.addUrl({ url: "https://example.org/" }).then(onAdded);
 ```
 
 Add a record of a visit to "https\://example.org", but give it a `visitTime` 24 hours in the past, and a `transition` of "typed":
 
 ```js
-const DAY = 24 * 60* 60 * 1000;
+const DAY = 24 * 60 * 60 * 1000;
 
 function oneDayAgo() {
   return Date.now() - DAY;
 }
 
 function onGot(visits) {
-  for (visit of visits) {
+  for (const visit of visits) {
     console.log(new Date(visit.visitTime));
     console.log(visit.transition);
   }
 }
 
 function onAdded() {
-  let gettingVisits = browser.history.getVisits({
-    url: "https://example.org/"
-  });
-
-  gettingVisits.then(onGot);
+  browser.history
+    .getVisits({
+      url: "https://example.org/",
+    })
+    .then(onGot);
 }
 
-let addingUrl = browser.history.addUrl({
-  url: "https://example.org/",
-  visitTime: oneDayAgo(),
-  transition: "typed"
-});
-
-addingUrl.then(onAdded);
+browser.history
+  .addUrl({
+    url: "https://example.org/",
+    visitTime: oneDayAgo(),
+    transition: "typed",
+  })
+  .then(onAdded);
 ```
 
 {{WebExtExamples}}

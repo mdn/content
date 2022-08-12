@@ -53,8 +53,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  let detecting = browser.tabs.detectLanguage();
-  detecting.then(onLanguageDetected, onError);
+  browser.tabs.detectLanguage().then(onLanguageDetected, onError);
 });
 ```
 
@@ -70,16 +69,14 @@ function onError(error) {
 }
 
 function detectLanguages(tabs) {
-  for (tab of tabs) {
-    let onFulfilled = onLanguageDetected.bind(null, tab.url);
-    let detecting = browser.tabs.detectLanguage(tab.id);
-    detecting.then(onFulfilled, onError);
+  for (const tab of tabs) {
+    const onFulfilled = onLanguageDetected.bind(null, tab.url);
+    browser.tabs.detectLanguage(tab.id).then(onFulfilled, onError);
   }
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  let querying = browser.tabs.query({});
-  querying.then(detectLanguages, onError);
+  browser.tabs.query({}).then(detectLanguages, onError);
 });
 ```
 

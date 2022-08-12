@@ -169,9 +169,9 @@ To start with:
 ```js
 function listTabs() {
  getCurrentWindowTabs().then((tabs) => {
-    let tabsList = document.getElementById('tabs-list');
-    let currentTabs = document.createDocumentFragment();
-    let limit = 5;
+    const tabsList = document.getElementById('tabs-list');
+    const currentTabs = document.createDocumentFragment();
+    const limit = 5;
     let counter = 0;
 
     tabsList.textContent = '';
@@ -186,9 +186,9 @@ Next, we'll create the links for each tab:
     - The link's address is set using the tab's `id`.
 
 ```js
-for (let tab of tabs) {
+for (const tab of tabs) {
   if (!tab.active && counter <= limit) {
-    let tabLink = document.createElement('a');
+    const tabLink = document.createElement('a');
 
     tabLink.textContent = tab.title || tab.id;
 
@@ -217,7 +217,7 @@ Another related example feature is the "Alert active tab" info option that dumps
 else if (e.target.id === "tabs-alertinfo") {
   callOnActiveTab((tab) => {
     let props = "";
-    for (let item in tab) {
+    for (const item in tab) {
       props += `${ item } = ${ tab[item] } \n`;
     }
     alert(props);
@@ -231,7 +231,7 @@ Where `callOnActiveTab()` finds the active tab object by looping through the {{W
 document.addEventListener("click", (e) => {
   function callOnActiveTab(callback) {
     getCurrentWindowTabs().then((tabs) => {
-      for (let tab of tabs) {
+      for (const tab of tabs) {
         if (tab.active) {
           callback(tab, tabs);
         }
@@ -300,7 +300,7 @@ But first, here is a demonstration of the feature in action:
       function callOnActiveTab(callback) {
 
         getCurrentWindowTabs().then((tabs) => {
-          for (let tab of tabs) {
+          for (const tab of tabs) {
             if (tab.active) {
               callback(tab, tabs);
             }
@@ -336,7 +336,7 @@ But first, here is a demonstration of the feature in action:
     ```js
     function callOnActiveTab(callback) {
       getCurrentWindowTabs().then((tabs) => {
-        for (let tab of tabs) {
+        for (const tab of tabs) {
           if (tab.active) {
             callback(tab, tabs);
           }
@@ -351,7 +351,7 @@ A feature of tabs is that the user can _pin_ tabs in a window. Pinned tabs are p
 
 ```js
 function firstUnpinnedTab(tabs) {
-  for (let tab of tabs) {
+  for (const tab of tabs) {
     if (!tab.pinned) {
       return tab.index;
     }
@@ -410,7 +410,7 @@ Let's take a look at how the zoom in is implemented.
     ```js
       else if (e.target.id === "tabs-add-zoom") {
         callOnActiveTab((tab) => {
-          let gettingZoom = browser.tabs.getZoom(tab.id);
+          const gettingZoom = browser.tabs.getZoom(tab.id);
           gettingZoom.then((zoomFactor) => {
             //the maximum zoomFactor is 5, it can't go higher
             if (zoomFactor >= MAX_ZOOM) {
@@ -494,19 +494,19 @@ Let's walk through how it's set up.
 
     ```js
     const CSS = "body { border: 20px solid red; }";
-        const TITLE_APPLY = "Apply CSS";
-        const TITLE_REMOVE = "Remove CSS";
-        const APPLICABLE_PROTOCOLS = ["http:", "https:"];
+    const TITLE_APPLY = "Apply CSS";
+    const TITLE_REMOVE = "Remove CSS";
+    const APPLICABLE_PROTOCOLS = ["http:", "https:"];
 
     ```
 
     When first loaded, the extension uses {{WebExtAPIRef("tabs.query()")}} to get a list of all the tabs in the current browser window. It then loops through the tabs calling `initializePageAction()`.
 
     ```js
-    let gettingAllTabs = browser.tabs.query({});
+    const gettingAllTabs = browser.tabs.query({});
 
         gettingAllTabs.then((tabs) => {
-          for (let tab of tabs) {
+          for (const tab of tabs) {
             initializePageAction(tab);
           }
         });
@@ -517,7 +517,7 @@ Let's walk through how it's set up.
 
     ```js
     function protocolIsApplicable(url) {
-      let anchor =  document.createElement('a');
+      const anchor =  document.createElement('a');
       anchor.href = url;
       return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
     }
@@ -568,7 +568,7 @@ Let's walk through how it's set up.
         }
       }
 
-      let gettingTitle = browser.pageAction.getTitle({tabId: tab.id});
+      const gettingTitle = browser.pageAction.getTitle({tabId: tab.id});
 
       gettingTitle.then(gotTitle);
     }

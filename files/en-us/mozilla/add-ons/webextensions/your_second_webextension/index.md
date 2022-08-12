@@ -354,7 +354,7 @@ Create a new directory, under the extension root, called "content_scripts" and c
    */
   function insertBeast(beastURL) {
     removeExistingBeasts();
-    let beastImage = document.createElement("img");
+    const beastImage = document.createElement("img");
     beastImage.setAttribute("src", beastURL);
     beastImage.style.height = "100vh";
     beastImage.className = "beastify-image";
@@ -366,7 +366,7 @@ Create a new directory, under the extension root, called "content_scripts" and c
    */
   function removeExistingBeasts() {
     let existingBeasts = document.querySelectorAll(".beastify-image");
-    for (let beast of existingBeasts) {
+    for (const beast of existingBeasts) {
       beast.remove();
     }
   }
