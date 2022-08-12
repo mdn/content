@@ -51,7 +51,7 @@ function usePerformanceEntryMethods() {
 
   // Create some performance entries via the mark() method
   performance.mark("Begin");
-  do_work(50000);
+  doWork(50000);
   performance.mark("End");
   performance.mark("Begin");
   do_work(100000);
