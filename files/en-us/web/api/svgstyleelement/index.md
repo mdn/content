@@ -178,8 +178,7 @@ const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
    style.disabled = !style.disabled;
-   const buttonText = style.disabled ? 'Enable' : 'Disable';
-   button.innerText = buttonText;
+   button.textContent = style.disabled ? 'Enable' : 'Disable';
 
    // Log after button presses
    setLogText();

@@ -61,7 +61,7 @@ The button event handler also sets the value of the style's `media` property.
 const button = document.querySelector('button');
 
 function setButtonText() {
-  button.innerText = `Media: ${style.media} (Width: ${window.innerWidth})`;
+  button.textContent = `Media: ${style.media} (Width: ${window.innerWidth})`;
 }
 setButtonText();
 
