@@ -9,8 +9,7 @@ A **Web browser** or **browser** is a program that retrieves and displays pages 
 
 ## See also
 
-- {{Interwiki("wikipedia", "Web browser")}} on Wikipedia
-- [The evolution of the web](http://www.evolutionoftheweb.com/)
+- [Web browser](https://en.wikipedia.org/wiki/Web_browser) on Wikipedia
 - {{Glossary("user agent")}} (Glossary)
 - {{HTTPHeader("User-agent")}} (HTTP Header)
 - Download a browser

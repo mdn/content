@@ -10,6 +10,7 @@ tags:
   - Role
   - listitem
   - document structure role
+spec-urls: https://w3c.github.io/aria/#listitem
 ---
 The ARIA `listitem` role can be used to identify an item inside a list of items. It is normally used in conjunction with the [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) role, which is used to identify a list container.
 
@@ -27,7 +28,7 @@ Any content that consists of an outer container with a list of elements inside i
 
 There are no hard and fast rules about which elements you should use to mark up the list and list items, but you should make sure that the list items make sense in the context of a list, e.g. a shopping list, recipe steps, driving directions.
 
-> **Note:** If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a list and its listitems — {{HTMLElement("ul")}}/{{HTMLElement("ol")}} and {{HTMLElement("li")}}. See {{anch("Best practices")}} for a full example.
+> **Note:** If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a list and its listitems — {{HTMLElement("ul")}}/{{HTMLElement("ol")}} and {{HTMLElement("li")}}. See [Best practices](#best_practices) for a full example.
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
@@ -68,9 +69,7 @@ or use an ordered list if the order of the list items matters:
 
 ## Specifications
 
-| Specification                                            | Status                   |
-| -------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#listitem","listitem")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See also
 

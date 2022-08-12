@@ -1,6 +1,7 @@
 ---
 title: NodeIterator.whatToShow
 slug: Web/API/NodeIterator/whatToShow
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -14,11 +15,9 @@ The **`NodeIterator.whatToShow`** read-only property represents
 an `unsigned integer` representing a bitmask signifying what types of nodes
 should be returned by the {{domxref("NodeIterator")}}.
 
-## Syntax
+## Value
 
-```js
-var nodeTypes = nodeIterator.whatToShow;
-```
+An `unsigned integer`.
 
 The values that can be combined to form the bitmask are:
 
@@ -118,14 +117,13 @@ The values that can be combined to form the bitmask are:
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```js
-var nodeIterator = document.createNodeIterator(
-    document.body,
-    ( NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT | NodeFilter.SHOW_TEXT ),
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+const nodeIterator = document.createNodeIterator(
+  document.body,
+  NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT | NodeFilter.SHOW_TEXT,
+  { acceptNode: (node) => NodeFilter.FILTER_ACCEPT }
 );
 if ((nodeIterator.whatToShow & NodeFilter.SHOW_ALL) ||
     (nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT)) {

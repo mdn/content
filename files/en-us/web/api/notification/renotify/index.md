@@ -1,6 +1,7 @@
 ---
 title: Notification.renotify
 slug: Web/API/Notification/renotify
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -17,13 +18,7 @@ The **`renotify`** read-only property of the
 after a new notification replaces an old one, as specified in the `renotify`
 option of the {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
-
-```js
-var renotify = Notification.renotify;
-```
-
-### Value
+## Value
 
 A boolean value. `false` is the default; `true` makes
 the notification renotify the user.
@@ -35,12 +30,12 @@ it has been replaced; a simple `options` object is created, and then the
 notification is fired using the `Notification()` constructor.
 
 ```js
-var options = {
-  body: 'Do you like my body?',
+const options = {
+  body: 'Do you like my Notification?',
   renotify: true
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification', options);
 
 console.log(n.renotify) // should log true
 ```
@@ -55,5 +50,4 @@ console.log(n.renotify) // should log true
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

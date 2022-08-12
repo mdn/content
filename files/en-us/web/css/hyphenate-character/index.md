@@ -42,14 +42,14 @@ hyphenate-character: auto;
 ## Examples
 
 This example shows two identical blocks of text that have {{cssxref("hyphens")}} set to ensure that they break wherever needed, and on soft hyphen breaks (created using `&shy;`).
-The first block has the value of the hyphen changed to the equals symbol ("`*`").
+The first block has the value of the hyphen changed to the equals symbol ("`=`").
 The second block has no hyphenate-character set, which is equivalent to `hyphenate-character: auto` for user agents that support this property.
 
 #### HTML
 
 ```html
 <dl>
-  <dt><code>hyphenate-character: "*"</code></dt>
+  <dt><code>hyphenate-character: "="</code></dt>
   <dd id="string" lang="en">Superc&shy;alifragilisticexpialidocious</dd>
   <dt><code>hyphenate-character is not set</code></dt>
   <dd lang="en">Superc&shy;alifragilisticexpialidocious</dd>
@@ -66,8 +66,8 @@ dd {
 }
 
 dd#string {
-  -webkit-hyphenate-character: "*";
-  hyphenate-character: "*";
+  -webkit-hyphenate-character: "=";
+  hyphenate-character: "=";
 }
 ```
 

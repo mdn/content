@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.labels
 slug: Web/API/HTMLInputElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,18 +17,12 @@ The **`HTMLInputElement.labels`** read-only property returns a
 {{HTMLElement("input")}} element, if the element is not hidden. If the element has the
 type `hidden`, the property returns `null`.
 
-## Syntax
-
-```js
-var labelElements = input.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<input>` element.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -40,15 +35,15 @@ with the `<input>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("test");
-  for(var i = 0; i < input.labels.length; i++) {
-    console.log(input.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of input.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

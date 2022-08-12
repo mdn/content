@@ -25,22 +25,22 @@ Speaking of the assumptions that the browser can make, you should avoid causing 
 When you are animating {{ htmlelement("canvas") }} content, or when your DOM animations absolutely must synchronize with canvas content animations, do make sure to use {{ domxref("window.requestAnimationFrame") }}, and not older methods such as {{ domxref("setTimeout()") }}. Assuming you are running in an arbitrary browsing session, you can never really know how long the browser will take to draw a particular frame. `requestAnimationFrame` causes the browser to redraw and call your function before that frame gets to the screen. The downside of using this vs. `setTimeout` is that your animations must be time-based instead of frame-based, i.e. you must keep track of time and set your animation properties based on elapsed time. `requestAnimationFrame` includes a {{ domxref("DOMHighResTimeStamp") }} in its callback function prototype, which you definitely should use (as opposed to using the {{ domxref("Date") }} object), as this will be the time the frame began rendering, and ought to make your animations look more fluid. You may have a callback that ends up looking something like this:
 
 ```js
-var startTime = -1;
-var animationLength = 2000; // Animation length in milliseconds
+let startTime = -1;
+const animationLength = 2000; // Animation length in milliseconds
 
 function doAnimation(timestamp) {
   // Calculate animation progress
-  var progress = 0;
+  let progress = 0;
 
   if (startTime < 0) {
-      startTime = timestamp;
+    startTime = timestamp;
   } else {
-      progress = timestamp - startTime;
+    progress = timestamp - startTime;
   }
 
-  // Do animation ...
+  // Perform the animation
   if (progress < animationLength) {
-      requestAnimationFrame(doAnimation);
+    requestAnimationFrame(doAnimation);
   }
 }
 
@@ -55,10 +55,10 @@ To save battery life, it is best to only draw when there are things going on, so
 ```js
 function redraw() {
   drawPending = false;
-  // Do drawing ...
+  // Perform the drawing
 }
 
-var drawPending = false;
+let drawPending = false;
 function requestRedraw() {
   if (!drawPending) {
     drawPending = true;
@@ -69,13 +69,13 @@ function requestRedraw() {
 
 Following this pattern — or something similar — means that no matter how many times you call _requestRedraw_, your drawing function will only be called once per frame.
 
-Remember that when you do drawing with `requestAnimationFrame` (and in general), you may be blocking the browser from updating other things. Try to keep unnecessary work outside your animation functions. For example, it may make sense for animation setup to happen in a `setTimeout`/clearTimeout callback rather than a `requestAnimationFrame` callback. Though it is possibly overkill for simple games, you may also want to consider using [Web Worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) threads. It is worth trying to batch similar operations, and to schedule them at a time when screen updates are unlikely to occur, or when such updates are of a more subtle nature. Modern console games, for example, tend to prioritize framerate during player movement and combat, but may prioritize image quality or physics detail when compromise to framerate and input response would be less noticeable.
+Remember that when you do drawing with `requestAnimationFrame` (and in general), you may be blocking the browser from updating other things. Try to keep unnecessary work outside your animation functions. For example, it may make sense for animation setup to happen in a `setTimeout`/clearTimeout callback rather than a `requestAnimationFrame` callback. Though it is possibly overkill for simple games, you may also want to consider using [Web Worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) threads. It is worth trying to batch similar operations, and to schedule them at a time when screen updates are unlikely to occur, or when such updates are of a more subtle nature. Modern console games, for example, tend to prioritize frame rate during player movement and combat, but may prioritize image quality or physics detail when compromise to frame rate and input response would be less noticeable.
 
 ## Measure performance
 
-There are some popular animation-related libraries and UI toolkits with animation functions that still do things like using `setTimeout` to drive their animations, drive all their animations completely individually, or other similar things that aren't conducive to maintaining a high frame-rate. One of the goals for the [Puzzowl](http://teamgiraffe.co.uk/) game is for it to be a solid 60fps on reasonable hardware (for the record, it's almost there on Galaxy Nexus-class hardware) while still being playable on low-end devices (such as a Firefox OS Geeksphone Keon). It would have been good to use as much third party software as possible, but most of what we tried was either too complicated for simple use-cases, or had performance issues on mobile.
+There are some popular animation-related libraries and UI toolkits with animation functions that still do things like using `setTimeout` to drive their animations, drive all their animations completely individually, or other similar things that aren't conducive to maintaining a high frame-rate. One of the goals for the [Puzzowl](http://www.teamgiraffe.co.uk/) game is for it to be a solid 60fps on reasonable hardware (for the record, it's almost there on Galaxy Nexus-class hardware) while still being playable on low-end devices (such as a Firefox OS Geeksphone Keon). It would have been good to use as much third party software as possible, but most of what we tried was either too complicated for simple use-cases, or had performance issues on mobile.
 
-How this conclusion was reached, however, is more important than the conclusion itself. To begin with, the priority was to write the code quickly to iterate on gameplay (and we'd certainly recommend doing this). We assumed that our own, naive code was making the game slower than we would like. To an extent, this was true: we found plenty to optimize in our own code, but it got to the point where we knew what we were doing ought to perform quite well, and it still wasn't quite there. At this point, we turned to the Firefox [JavaScript profiler](/en-US/docs/Tools/Performance), and this told us almost exactly what low-hanging-fruit was left to address to improve performance. As it turned out, the code from some of the things mentioned above; the animation code had some corner cases where redraws were happening several times per frame, and some of the animations caused Firefox to need to redraw everything (they were fine in other browsers, as it happens — that particular issue is now fixed). Some of the third party code we were using was poorly optimized.
+How this conclusion was reached, however, is more important than the conclusion itself. To begin with, the priority was to write the code quickly to iterate on gameplay (and we'd certainly recommend doing this). We assumed that our own, naive code was making the game slower than we would like. To an extent, this was true: we found plenty to optimize in our own code, but it got to the point where we knew what we were doing ought to perform quite well, and it still wasn't quite there. At this point, we turned to the Firefox [JavaScript profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), and this told us almost exactly what low-hanging-fruit was left to address to improve performance. As it turned out, the code from some of the things mentioned above; the animation code had some corner cases where redraws were happening several times per frame, and some of the animations caused Firefox to need to redraw everything (they were fine in other browsers, as it happens — that particular issue is now fixed). Some of the third party code we were using was poorly optimized.
 
 ## A take-away
 
@@ -83,8 +83,8 @@ To help combat poor animation performance, Chris Lord wrote [Animator.js](https:
 
 ```js
 animator.requestAnimationFrame =
-  function(callback) {
-    requestAnimationFrame(function(t) {
+  (callback) => {
+    requestAnimationFrame((t) => {
       callback(t);
       redraw();
     });
@@ -95,4 +95,4 @@ The game's _redraw_ function does all drawing, and the animation callbacks just 
 
 {{EmbedYouTube("hap4iQTMh70")}}
 
-> **Note:** This article was originally written and published by Chris Lord, on his blog — see [Efficient animation for games on the (mobile) web](https://chrislord.net/index.php/2013/11/29/efficient-animation-for-games-on-the-mobile-web/).
+> **Note:** This article was originally written and published by Chris Lord, on his blog — see [Efficient animation for games on the (mobile) web](https://www.chrislord.net/2013/11/29/efficient-animation-for-games-on-the-mobile-web/).

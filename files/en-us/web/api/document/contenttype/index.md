@@ -1,6 +1,7 @@
 ---
 title: Document.contentType
 slug: Web/API/Document/contentType
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -21,13 +22,7 @@ performed by either the browser or extensions.
 > **Note:** This property is unaffected by {{HTMLElement("meta")}}
 > elements.
 
-## Syntax
-
-```js
-contentType = document.contentType;
-```
-
-### Value
+## Value
 
 `contentType` is a read-only property.
 

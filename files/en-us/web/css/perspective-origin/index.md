@@ -21,7 +21,7 @@ The **`perspective-origin`** [CSS](/en-US/docs/Web/CSS) property determines the 
 
 {{EmbedInteractiveExample("pages/css/perspective-origin.html")}}
 
-The **`perspective-origin`** and {{cssxref('perspective')}} properties are attached to the parent of a child transformed in 3-dimensional space, unlike the [`perspective()`](/en-US/docs/Web/CSS/transform-function/perspective()) transform function which is placed on the element being transformed.
+The **`perspective-origin`** and {{cssxref('perspective')}} properties are attached to the parent of a child transformed in 3-dimensional space, unlike the [`perspective()`](/en-US/docs/Web/CSS/transform-function/perspective) transform function which is placed on the element being transformed.
 
 ## Syntax
 
@@ -40,6 +40,7 @@ perspective-origin: y-position x-position;
 perspective-origin: inherit;
 perspective-origin: initial;
 perspective-origin: revert;
+perspective-origin: revert-layer;
 perspective-origin: unset;
 ```
 
@@ -91,4 +92,4 @@ An example showing how to change `perspective-origin` is given in [Using CSS tra
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}
-- [`transform: perspective()`](/en-US/docs/Web/CSS/transform-function/perspective()) function
+- [`transform: perspective()`](/en-US/docs/Web/CSS/transform-function/perspective) function

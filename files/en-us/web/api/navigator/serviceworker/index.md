@@ -1,6 +1,7 @@
 ---
 title: Navigator.serviceWorker
 slug: Web/API/Navigator/serviceWorker
+page-type: web-api-instance-property
 tags:
   - API
   - Navigator
@@ -14,19 +15,12 @@ browser-compat: api.Navigator.serviceWorker
 {{APIRef("Service Workers API")}}
 
 The **`Navigator.serviceWorker`**
-read-only property returns the {{domxref("ServiceWorkerContainer")}} object for the [associated
-document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window), which provides access to registration, removal, upgrade, and
+read-only property returns the {{domxref("ServiceWorkerContainer")}} object for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window), which provides access to registration, removal, upgrade, and
 communication with the {{domxref("ServiceWorker")}}.
 
 The feature may not be available in private mode.
 
-## Syntax
-
-```js
-const workerContainerInstance = navigator.serviceWorker;
-```
-
-### Value
+## Value
 
 {{domxref("ServiceWorkerContainer")}}.
 
@@ -51,5 +45,4 @@ if ('serviceWorker' in navigator) {
 ## See also
 
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)

@@ -159,7 +159,7 @@ We have completely filled our grid with areas in this example, leaving no white 
 
 {{ EmbedLiveSample('Leaving_a_grid_cell_empty', '300', '330') }}
 
-In order to make the layout neater I can use multiple `.` characters. As long as there is no white space between the full stops it will be counted as one cell. For a complex layout there is a benefit to having the rows and columns neatly aligned. It means that you can actually see, right there in the CSS, what this layout looks like.
+In order to make the layout neater I can use multiple `.` characters. As long as there is at least one white space between the full stops it will be counted as one cell. For a complex layout there is a benefit to having the rows and columns neatly aligned. It means that you can actually see, right there in the CSS, what this layout looks like.
 
 ## Spanning multiple cells
 

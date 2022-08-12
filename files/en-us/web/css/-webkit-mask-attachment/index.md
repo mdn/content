@@ -13,7 +13,7 @@ browser-compat: css.properties.-webkit-mask-attachment
 ---
 {{CSSRef}}{{Non-standard_Header}}
 
-If a {{CSSxRef("-webkit-mask-image")}} is specified, `-webkit-mask-attachment` determines whether the mask image's position is fixed within the viewport, or scrolls along with its containing block.
+If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determines whether the mask image's position is fixed within the viewport, or scrolls along with its containing block.
 
 ```css
 /* Keyword values */
@@ -69,10 +69,10 @@ Not part of any standard.
 
 ## See also
 
-- {{CSSxRef("-webkit-mask")}}
-- {{CSSxRef("-webkit-mask-clip")}}
+- {{CSSxRef("mask")}}
+- {{CSSxRef("mask-clip")}}
 - {{CSSxRef("-webkit-mask-box-image")}}
-- {{CSSxRef("-webkit-mask-origin")}}
-- {{CSSxRef("-webkit-mask-image")}}
+- {{CSSxRef("mask-origin")}}
+- {{CSSxRef("mask-image")}}
 - {{CSSxRef("-webkit-mask-composite")}}
-- {{CSSxRef("-webkit-mask-repeat")}}
+- {{CSSxRef("mask-repeat")}}

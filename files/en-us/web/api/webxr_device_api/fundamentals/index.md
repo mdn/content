@@ -1,6 +1,7 @@
 ---
 title: Fundamentals of WebXR
 slug: Web/API/WebXR_Device_API/Fundamentals
+page-type: guide
 tags:
   - API
   - AR
@@ -113,8 +114,6 @@ There are two basic types of AR device:
 
 Both types of device should be capable of also presenting VR sessions. WebXR doesn't generally care which type of device you're using, and the rendering process is almost exactly the same as for VR, except you don't erase the background or skybox before rendering each frame.
 
-For more information about using WebXR to create augmented reality experiences, see [Augmented reality with WebXR](/en-US/docs/Web/API/WebXR_Device_API/Augmented_reality).
-
 ## Types of WebXR hardware
 
 The simplest XR presentation involves rendering the scene directly to the user's screen, either in the context of a web document, or in full screen mode. This is most common when the user either doesn't have a dedicated XR device, or when the user is viewing the AR or VR app on a phone or other handheld device.
@@ -133,7 +132,7 @@ The vast majority of headsets use a single display whose frame is divided in hal
 
 The simplest headsets have no integrated sensors, and focus each half of the screen into the corresponding eye. A common example of this is [Google Cardboard](https://arvr.google.com/cardboard/), a type of headset first created by Google which can be cheaply created using cardboard or other inexpensive materials. These devices often work by snapping your phone into the headset so that its screen and onboard graphics processor can be used to render and display the XR scene.
 
-More advanced headsets have integrated displays and are strapped to the head using an elastic or strap or a strap with Velcro closure.  These headsets may include integrated speakers and microphone, and/or connectors to attach external ones. Additionally, these headsets may have various sensors for detecting when the headset moves through space. The types and number of sensors included will determine how many {{anch("degrees of freedom")}} the user has.
+More advanced headsets have integrated displays and are strapped to the head using an elastic or strap or a strap with Velcro closure.  These headsets may include integrated speakers and microphone, and/or connectors to attach external ones. Additionally, these headsets may have various sensors for detecting when the headset moves through space. The types and number of sensors included will determine how many [degrees of freedom](#degrees_of_freedom) the user has.
 
 ### Goggles and glasses
 
@@ -155,7 +154,7 @@ Because the entire act of creating a virtual 3D world is, in essence, a trick wh
 
 ### Virtual reality sickness
 
-**{{interwiki("wikipedia", "Virtual reality sickness")}}** is a condition in which a person experiencing virtual reality feels discomfort, disorientation, or even serious nausea during and sometimes for a short time after the experience.
+**[Virtual reality sickness](https://en.wikipedia.org/wiki/Virtual_reality_sickness)** is a condition in which a person experiencing virtual reality feels discomfort, disorientation, or even serious nausea during and sometimes for a short time after the experience.
 
 There are a number of theories surrounding exactly what about virtual reality causes some people to feel uncomfortable or sick, most of which focusing on the idea that even subtle differences between what the brain thinks should be happening and what is being seen can cause these symptoms.
 

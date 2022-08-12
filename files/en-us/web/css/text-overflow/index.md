@@ -36,6 +36,7 @@ text-overflow: ellipsis " [..]";
 text-overflow: inherit;
 text-overflow: initial;
 text-overflow: revert;
+text-overflow: revert-layer;
 text-overflow: unset;
 ```
 

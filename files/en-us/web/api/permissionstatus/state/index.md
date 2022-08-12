@@ -1,6 +1,7 @@
 ---
 title: PermissionStatus.state
 slug: Web/API/PermissionStatus/state
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -20,19 +21,21 @@ The **`state`** read-only property of the
 This property returns one of `'granted'`, `'denied'`, or
 `'prompt'`.
 
-## Syntax
+## Value
+
+One of the followings:
+
+- `'granted'`
+- `'denied'`
+- `'prompt'`
+
+## Examples
 
 ```js
-var permission = PermissionStatus.state;
-```
-
-## Example
-
-```js
-navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
-  console.log('geolocation permission state is ', permissionStatus.state);
-  permissionStatus.onchange = function() {
-    console.log('geolocation permission status has changed to ', this.state);
+navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus) => {
+  console.log(`geolocation permission state is ${permissionStatus.state}`);
+  permissionStatus.onchange = () => {
+    console.log(`geolocation permission status has changed to ${permissionStatus.state}`);
   };
 });
 ```

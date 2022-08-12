@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.type
 slug: Web/API/NetworkInformation/type
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -18,13 +19,7 @@ the type of connection a device is using to communicate with the network.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var type = netInfo.type
-```
-
-### Return value
+## Value
 
 An enumerated value that is one of the following values:
 

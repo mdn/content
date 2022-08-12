@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.putImageData()
 slug: Web/API/CanvasRenderingContext2D/putImageData
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -25,8 +26,8 @@ manipulation of canvas contents in the article [Pixel manipulation with canvas](
 ## Syntax
 
 ```js
-void ctx.putImageData(imageData, dx, dy);
-void ctx.putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);
+putImageData(imageData, dx, dy)
+putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
 ```
 
 ### Parameters
@@ -49,6 +50,10 @@ void ctx.putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight
   - : Width of the rectangle to be painted. Defaults to the width of the image data.
 - `dirtyHeight` {{optional_inline}}
   - : Height of the rectangle to be painted. Defaults to the height of the image data.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -73,27 +78,25 @@ of {{domxref("CanvasRenderingContext2D.fillRect()")}}.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 function putImageData(ctx, imageData, dx, dy,
     dirtyX, dirtyY, dirtyWidth, dirtyHeight) {
-  var data = imageData.data;
-  var height = imageData.height;
-  var width = imageData.width;
+  const data = imageData.data;
+  const height = imageData.height;
+  const width = imageData.width;
   dirtyX = dirtyX || 0;
   dirtyY = dirtyY || 0;
   dirtyWidth = dirtyWidth !== undefined? dirtyWidth: width;
   dirtyHeight = dirtyHeight !== undefined? dirtyHeight: height;
-  var limitBottom = dirtyY + dirtyHeight;
-  var limitRight = dirtyX + dirtyWidth;
-  for (var y = dirtyY; y < limitBottom; y++) {
-    for (var x = dirtyX; x < limitRight; x++) {
-      var pos = y * width + x;
-      ctx.fillStyle = 'rgba(' + data[pos*4+0]
-                        + ',' + data[pos*4+1]
-                        + ',' + data[pos*4+2]
-                        + ',' + (data[pos*4+3]/255) + ')';
+  const limitBottom = dirtyY + dirtyHeight;
+  const limitRight = dirtyX + dirtyWidth;
+  for (let y = dirtyY; y < limitBottom; y++) {
+    for (let x = dirtyX; x < limitRight; x++) {
+      const pos = y * width + x;
+      ctx.fillStyle =
+        `rgba(${data[pos*4+0]}, ${data[pos*4+1]}, ${data[pos*4+2]}, ${data[pos*4+3]/255})`;
       ctx.fillRect(x + dx, y + dy, 1, 1);
     }
   }
@@ -102,7 +105,7 @@ function putImageData(ctx, imageData, dx, dy,
 // Draw content onto the canvas
 ctx.fillRect(0, 0, 100, 100);
 // Create an ImageData object from it
-var imagedata = ctx.getImageData(0, 0, 100, 100);
+const imagedata = ctx.getImageData(0, 0, 100, 100);
 // use the putImageData function that illustrates how putImageData works
 putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
 ```

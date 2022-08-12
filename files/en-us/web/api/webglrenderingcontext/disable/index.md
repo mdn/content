@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.disable()
 slug: Web/API/WebGLRenderingContext/disable
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,12 +18,12 @@ capabilities for this context.
 ## Syntax
 
 ```js
-void gl.disable(cap);
+disable(capability)
 ```
 
 ### Parameters
 
-- `cap`
+- `capability`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which WebGL capability to disable. Possible
     values:
@@ -48,7 +49,7 @@ void gl.disable(cap);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -31,6 +31,7 @@ font-style: oblique 10deg;
 font-style: inherit;
 font-style: initial;
 font-style: revert;
+font-style: revert-layer;
 font-style: unset;
 ```
 
@@ -64,7 +65,7 @@ For TrueType or OpenType variable fonts, the `"slnt"` variation is used to imple
 
 Large sections of text set with a `font-style` value of `italic` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## Formal definition
@@ -111,6 +112,6 @@ Large sections of text set with a `font-style` value of `italic` may be difficul
 
 ## See also
 
-- {{cssxref("font-style")}}
+- {{cssxref("font-family")}}
 - {{cssxref("font-weight")}}
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)

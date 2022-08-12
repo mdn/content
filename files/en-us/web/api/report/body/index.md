@@ -1,15 +1,14 @@
 ---
 title: Report.body
 slug: Web/API/Report/body
+page-type: web-api-instance-property
 tags:
   - API
-  - BODY
   - Experimental
   - Property
   - Reference
-  - Report
   - Reporting API
-browser-compat: api.Report.body
+spec-urls: https://w3c.github.io/reporting/#dom-report-body
 ---
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
@@ -17,13 +16,7 @@ The **`body`** read-only property of the {{domxref("Report")}}
 interface returns the body of the report, which is a `ReportBody` object
 containing the detailed report information.
 
-## Syntax
-
-```js
-let reportBody = reportInstance.body
-```
-
-### Returns
+## Value
 
 A `ReportBody` object containing the detailed report information. Depending
 on what `type` the {{domxref("Report")}} is, the object returned will
@@ -36,13 +29,12 @@ pages for more information on what the particular report body types contain.
 ## Examples
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver(([firstReport], observer) => {
   // Log the first report's report body, i.e. a DeprecationReportBody object
   console.log(firstReport.body);
 }, options);
@@ -54,7 +46,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
 
 ## See also
 

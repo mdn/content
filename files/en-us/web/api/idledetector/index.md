@@ -1,6 +1,7 @@
 ---
 title: IdleDetector
 slug: Web/API/IdleDetector
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -19,28 +20,27 @@ This interface requires a secure context.
 
 ## Constructor
 
-- {{domxref("IdleDetector.IdleDetector()")}}
+- {{domxref("IdleDetector.IdleDetector", "IdleDetector()")}}
   _ : Creates a new `IdleDetector` object.
 
 ## Properties
 
-- {{domxref("IdleDetector.userState")}}{{ReadOnlyInline}}
+- {{domxref("IdleDetector.userState")}} {{ReadOnlyInline}}
   - : Returns a string indicating whether the users has interacted with either the screen or the device since the call to `start()`.
 
   _ : Returns either `"active"` to indicate that the user has interacted with the
 device within the threshold provided to `start()` or `"idle"` if they have not.
 This attribute returns `null` before `start()` is called.
 
-- {{domxref("IdleDetector.screenState")}}{{ReadOnlyInline}}
+- {{domxref("IdleDetector.screenState")}} {{ReadOnlyInline}}
   - : Returns a string indicating whether the screen is locked, one of
     `"locked"` or `"unlocked"`. This attribute returns `null` before `start()`
     is called.
 
 ## Events
 
-- {{domxref("IdleDetector.onchange")}}
-  - : Called when the value of `userState` or `screenState` has changed. This method
-receives an `Event` object.
+- {{domxref("IdleDetector.change_event", "change")}}
+  - : Called when the value of `userState` or `screenState` has changed.
 
 ## Methods
 
@@ -67,7 +67,7 @@ const controller = new AbortController();
 const signal = controller.signal;
 
 startButton.addEventListener('click', async () => {
-  if (await IdleDetector.requestPermission() != "granted") {
+  if (await IdleDetector.requestPermission() !== "granted") {
     console.error("Idle detection permission denied.");
     return;
   }

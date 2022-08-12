@@ -50,8 +50,8 @@ The value that has been stored.
 ### Using store()
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+const sab = new SharedArrayBuffer(1024);
+const ta = new Uint8Array(sab);
 
 Atomics.store(ta, 0, 12); // 12
 ```

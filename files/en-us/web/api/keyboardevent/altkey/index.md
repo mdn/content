@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,30 +11,27 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.altKey
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.altKey`** read-only property is a
-boolean value that indicates if the <kbd>alt</kbd> key (<kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) was pressed (`true`) or not (`false`) when
+boolean value that indicates if the <kbd>alt</kbd> key (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) was pressed (`true`) or not (`false`) when
 the event occurred.
 
-## Syntax
-
-```js
-var altKeyPressed = instanceOfKeyboardEvent.altKey
-```
-
-### Return value
+## Value
 
 A boolean value
 
 ## Examples
 
-```js
-<html>
+```html
+<!doctype HTML>
+<html lang="en-US">
 <head>
-<title>altKey example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>altKey example</title>
 
-<script type="text/javascript">
+<script>
 
 function showChar(e){
   alert(

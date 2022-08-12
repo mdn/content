@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: signalingstatechange event'
 slug: Web/API/RTCPeerConnection/signalingstatechange_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -18,35 +19,28 @@ browser-compat: api.RTCPeerConnection.signalingstatechange_event
 
 A **`signalingstatechange`** event is sent to an {{domxref("RTCPeerConnection")}} to notify it that its signaling state, as indicated by the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} property, has changed.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("RTCPeerConnection.onsignalingstatechange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('signalingstatechange', (event) => { });
+
+onsignalingstatechange = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
 Given an {{domxref("RTCPeerConnection")}}, `pc`, and an `updateStatus()` function that presents status information to the user, this code sets up an event handler to let the user know when the ICE negotiation process finishes up.
 
 ```js
-pc.addEventListener("signalingstatechange", ev => {
+pc.addEventListener("signalingstatechange", (ev) => {
   switch(pc.signalingState) {
     case "stable":
       updateStatus("ICE negotiation complete");
@@ -55,10 +49,10 @@ pc.addEventListener("signalingstatechange", ev => {
 }, false);
 ```
 
-Using {{domxref("RTCPeerConnection.onsignalingstatechange", "onsignalingstatechange")}}, it looks like this:
+Using `onsignalingstatechange`, it looks like this:
 
 ```js
-pc.onsignalingstatechange = ev => {
+pc.onsignalingstatechange = (ev) => {
   switch(pc.signalingState) {
     case "stable":
       updateStatus("ICE negotiation complete");

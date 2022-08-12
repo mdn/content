@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var unregistering = browser.proxy.unregister()
+let unregistering = browser.proxy.unregister()
 ```
 
 ### Parameters

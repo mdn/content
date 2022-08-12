@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
+page-type: web-api-instance-method
 tags:
   - API
   - HTTP
@@ -46,7 +47,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 ## Syntax
 
 ```js
-XMLHttpRequest.setRequestHeader(header, value)
+setRequestHeader(header, value)
 ```
 
 ### Parameters
@@ -58,7 +59,7 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
@@ -70,7 +71,5 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

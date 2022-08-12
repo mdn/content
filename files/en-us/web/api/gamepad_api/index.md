@@ -1,12 +1,13 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
+page-type: web-api-overview
 tags:
   - API
-  - Experimental
   - Gamepad API
   - Games
   - Overview
+browser-compat: api.Gamepad
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Gamepad API")}}
 
@@ -51,33 +52,11 @@ See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#e
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("GamepadExtensions")}}</td>
-      <td>{{Spec2("GamepadExtensions")}}</td>
-      <td>
-        Defines the {{anch("Experimental Gamepad extensions")}}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Gamepad", "", "The Gamepad API specification")}}
-      </td>
-      <td>{{Spec2("Gamepad")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## See also
 

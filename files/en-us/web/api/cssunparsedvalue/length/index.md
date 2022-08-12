@@ -1,11 +1,11 @@
 ---
 title: CSSUnparsedValue.length
 slug: Web/API/CSSUnparsedValue/length
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
   - CSSUnparsedValue
-  - Constructor
   - Experimental
   - Houdini
   - NeedsExample
@@ -19,25 +19,19 @@ browser-compat: api.CSSUnparsedValue.length
 The **`length`** read-only property of the
 {{domxref("CSSUnparsedValue")}} interface returns the number of items in the object.
 
-## Syntax
-
-```js
-var length = CSSUnparsedValue.length;
-```
-
-### Value
+## Value
 
 An integer.
 
 ## Examples
 
-In this example we employ the {{domxref('CSSUnparsedValue.CSSUnparsedValue()')}}
+In this example we employ the {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 constructor, then query the length:
 
 ```js
-let values = new CSSUnparsedValue( ['1em', '#445566', '-45px'] );
+const values = new CSSUnparsedValue(['1em', '#445566', '-45px']);
 
-console.log( values.length ) // 3
+console.log(values.length); // 3
 ```
 
 ## Specifications
@@ -50,7 +44,7 @@ console.log( values.length ) // 3
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 - {{domxref("CSSUnparsedValue.entries")}}
 - {{domxref("CSSUnparsedValue.forEach")}}
 - {{domxref("CSSUnparsedValue.keys")}}

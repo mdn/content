@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.getPose()
 slug: Web/API/VRDisplay/getPose
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -40,19 +41,19 @@ A {{domxref("VRPose")}} object.
 Once we have a reference to a {{domxref("VRDisplay")}} object, we can retrieve the {{domxref("VRPose")}} representing the current pose of the display.
 
 ```js
-if(navigator.getVRDisplays) {
+if (navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene
-    if(displays.length > 0) {
+    if (displays.length > 0) {
       vrDisplay = displays[0];
       console.log('Display found');
 
-          // Return the current VRPose object for the display
-          var pose = vrDisplay.getPose();
+      // Return the current VRPose object for the display
+      const pose = vrDisplay.getPose();
 
-          ...
+      // …
 
     }
   });
@@ -65,7 +66,7 @@ It is however recommended that you use the non-deprecated {{domxref("VRFrameData
 
 This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
 ## Browser compatibility
 

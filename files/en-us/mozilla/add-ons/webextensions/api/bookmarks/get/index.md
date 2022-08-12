@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getBookmarks = browser.bookmarks.get(
+let getBookmarks = browser.bookmarks.get(
   idOrIdList                // string or string array
 )
 ```
@@ -49,7 +49,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var gettingBookmarks = browser.bookmarks.get("bookmarkAAAA");
+let gettingBookmarks = browser.bookmarks.get("bookmarkAAAA");
 gettingBookmarks.then(onFulfilled, onRejected);
 ```
 
@@ -59,7 +59,7 @@ gettingBookmarks.then(onFulfilled, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-get) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-get) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

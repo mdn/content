@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -22,12 +23,9 @@ that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
 ## Syntax
 
 ```js
-var wave = AudioContext.createPeriodicWave(real, imag[, constraints]);
+createPeriodicWave(real, imag)
+createPeriodicWave(real, imag, constraints)
 ```
-
-### Returns
-
-A {{domxref("PeriodicWave")}}.
 
 ### Parameters
 
@@ -44,29 +42,34 @@ otherwise an error is thrown.
   - : An dictionary object that specifies whether normalization should be disabled (if
     not specified, normalization is enabled by default.) It takes one property:
 
-    - `disableNormalization`: If set to `true`,
-      normalization is disabled for the periodic wave. The default is
-      `false`.
+    - `disableNormalization`
+      - : If set to `true`,
+        normalization is disabled for the periodic wave. The default is
+        `false`.
 
 > **Note:** If normalized, the resulting wave will have a maximum absolute peak value of 1.
 
-## Example
+### Return value
+
+A {{domxref("PeriodicWave")}}.
+
+## Examples
 
 The following example illustrates simple usage of `createPeriodicWave()`, to
 create a {{domxref("PeriodicWave")}} object containing a simple sine wave.
 
 ```js
-var real = new Float32Array(2);
-var imag = new Float32Array(2);
-var ac = new AudioContext();
-var osc = ac.createOscillator();
+const real = new Float32Array(2);
+const imag = new Float32Array(2);
+const ac = new AudioContext();
+const osc = ac.createOscillator();
 
 real[0] = 0;
 imag[0] = 0;
 real[1] = 1;
 imag[1] = 0;
 
-var wave = ac.createPeriodicWave(real, imag, {disableNormalization: true});
+const wave = ac.createPeriodicWave(real, imag, {disableNormalization: true});
 
 osc.setPeriodicWave(wave);
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.naturalWidth
 slug: Web/API/HTMLImageElement/naturalWidth
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -32,17 +33,10 @@ returns the natural height of the image.
 
 > **Note:** Most of the time the natural width is the actual width of the image sent by the server.
 > Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
-> [degrades the resolution of
-> images on low-end devices](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7). In such cases, `naturalWidth` will consider the width of the image modified
+> [degrades the resolution of images on low-end devices](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7). In such cases, `naturalWidth` will consider the width of the image modified
 > by such browser interventions as the natural width, and returns this value.
 
-## Syntax
-
-```js
-let naturalWidth = htmlImageElement.naturalWidth;
-```
-
-### Value
+## Value
 
 An integer value indicating the intrinsic width of the image, in CSS pixels. This is
 the width at which the image is naturally drawn when no constraint or specific value is
@@ -54,7 +48,7 @@ If the intrinsic width is not available—either because the image does not spec
 intrinsic width or because the image data is not available in order to obtain this
 information, `naturalWidth` returns 0.
 
-## Example
+## Examples
 
 See [`HTMLImageElement.naturalHeight`](/en-US/docs/Web/API/HTMLImageElement/naturalHeight#example) for example code that displays an image in both its natural "density-adjusted" size, and in its rendered size as altered by the page's CSS and other factors.
 

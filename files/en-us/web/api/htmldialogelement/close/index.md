@@ -1,9 +1,9 @@
 ---
 title: HTMLDialogElement.close()
 slug: Web/API/HTMLDialogElement/close
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Method
@@ -13,27 +13,26 @@ browser-compat: api.HTMLDialogElement.close
 ---
 {{ APIRef("HTML DOM") }}
 
-{{ SeeCompatTable() }}
-
 The **`close()`** method of the {{domxref("HTMLDialogElement")}}
-interface closes the dialog. An optional {{domxref("DOMString")}} may be passed as an
+interface closes the dialog. An optional string may be passed as an
 argument, updating the `returnValue` of the dialog.
 
 ## Syntax
 
 ```js
-dialogInstance.close(returnValue);
+close()
+close(returnValue)
 ```
 
 ### Parameters
 
-- returnValue {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing an updated value for the
+- `returnValue` {{optional_inline}}
+  - : A string representing an updated value for the
     {{domxref("HTMLDialogElement.returnValue")}} of the dialog.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -68,14 +67,14 @@ button.
   </menu>
 
   <script>
-    (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var cancelButton = document.getElementById('cancel');
-      var dialog = document.getElementById('favDialog');
+    (() => {
+      const updateButton = document.getElementById('updateDetails');
+      const cancelButton = document.getElementById('cancel');
+      const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
-        if(dialog.open) {
+        if (dialog.open) {
           console.log('Dialog open');
         } else {
           console.log('Dialog closed');
@@ -83,13 +82,13 @@ button.
       }
 
       // Update button opens a modal dialog
-      updateButton.addEventListener('click', function() {
+      updateButton.addEventListener('click', () => {
         dialog.showModal();
         openCheck(dialog);
       });
 
       // Form cancel button closes the dialog box
-      cancelButton.addEventListener('click', function() {
+      cancelButton.addEventListener('click', () => {
         dialog.close('animalNotChosen');
         openCheck(dialog);
       });
@@ -99,8 +98,7 @@ button.
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

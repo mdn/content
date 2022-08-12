@@ -8,7 +8,6 @@ tags:
   - Reference
 browser-compat: html.elements.header
 ---
-
 {{HTMLRef}}
 
 The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
@@ -146,13 +145,13 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
     <p>Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by Jane Smith</p>
   </header>
   <p>We live on a planet that's blue and green, with so many things still unseen.</p>
-  <p><a href="https://example.com/the-planet-earth/">Continue reading....</a></p>
+  <p><a href="https://example.com/the-planet-earth/">Continue reading…</a></p>
 </article>
 ```
 
 ## Accessibility
 
-The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
+The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
 
 ## Specifications
 

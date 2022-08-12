@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.srcObject
 slug: Web/API/HTMLMediaElement/srcObject
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -27,15 +28,7 @@ The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
 > back to creating a URL with {{domxref("URL.createObjectURL()")}} and assign it to
 > {{domxref("HTMLMediaElement.src")}}. See below for an example.
 
-## Syntax
-
-```js
-var sourceObject = HTMLMediaElement.srcObject;
-
-HTMLMediaElement.srcObject = sourceObject;
-```
-
-### Value
+## Value
 
 A {{domxref('MediaStream')}}, {{domxref('MediaSource')}}, {{domxref('Blob')}}, or
 {{domxref('File')}} object (though see the compatibility table for what is actually
@@ -101,7 +94,7 @@ if ('srcObject' in video) {
   try {
     video.srcObject = mediaSource;
   } catch (err) {
-    if (err.name != "TypeError") {
+    if (err.name !== "TypeError") {
       throw err;
     }
     // Even if they do, they may only support MediaStream

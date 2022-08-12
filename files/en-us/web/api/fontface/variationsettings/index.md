@@ -1,6 +1,7 @@
 ---
 title: FontFace.variationSettings
 slug: Web/API/FontFace/variationSettings
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API
@@ -19,16 +20,9 @@ The **`variationSettings`** property of the
 It is equivalent to the
 {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.
 
-## Syntax
+## Value
 
-```js
-let variationSettingDescriptor = FontFace.variationSettings;
-FontFace.variationSettings = variationSettingDescriptor;
-```
-
-### Value
-
-A {{domxref('CSSOMString')}} containing a descriptor.
+A string containing a descriptor.
 
 ## Specifications
 

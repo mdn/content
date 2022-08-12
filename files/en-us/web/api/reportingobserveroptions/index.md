@@ -1,6 +1,7 @@
 ---
 title: ReportingObserverOptions
 slug: Web/API/ReportingObserverOptions
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
@@ -24,12 +25,12 @@ The `ReportingObserverOptions` dictionary of the [Reporting API](/en-US/docs/Web
 ## Examples
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```

@@ -1,6 +1,7 @@
 ---
 title: DOMRectReadOnly.width
 slug: Web/API/DOMRectReadOnly/width
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -14,13 +15,7 @@ browser-compat: api.DOMRectReadOnly.width
 
 The **`width`** read-only property of the **`DOMRectReadOnly`** interface represents the width of the `DOMRect`.
 
-## Syntax
-
-```js
-var recWidth = DOMRect.width;
-```
-
-### Value
+## Value
 
 A double.
 

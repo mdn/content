@@ -101,7 +101,7 @@ You can see an example of this in our video example (see the [full source code](
   <video controls>
     <source src="sintel-short.mp4" type="video/mp4">
     <source src="sintel-short.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="sintel-short.mp4">link to the video</a> instead.</p>
+    <p>Your browser doesn't support HTML video. Here is a <a href="sintel-short.mp4">link to the video</a> instead.</p>
   </video>
 </body>
 ```
@@ -161,8 +161,8 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
   </header>
 
   <script>
-    var mediaQueryList = window.matchMedia("(max-width: 600px)");
-    var header = document.querySelector('header');
+    const mediaQueryList = window.matchMedia("(max-width: 600px)");
+    const header = document.querySelector('header');
 
     if (mediaQueryList.matches) {
       header.style.backgroundImage = 'url(bg-image-narrow.png)';
@@ -184,7 +184,7 @@ This doesn't have to be limited to images, or even files of the same type — th
 Another nice thing about these preloads is that you can execute them with script. For example, here we create a {{domxref("HTMLLinkElement")}} instance, then attach it to the DOM:
 
 ```js
-var preloadLink = document.createElement("link");
+const preloadLink = document.createElement("link");
 preloadLink.href = "myscript.js";
 preloadLink.rel = "preload";
 preloadLink.as = "script";
@@ -194,7 +194,7 @@ document.head.appendChild(preloadLink);
 This means that the browser will preload the `myscript.js` file, but not actually use it yet. To use it, you could do this:
 
 ```js
-var preloadedScript = document.createElement("script");
+const preloadedScript = document.createElement("script");
 preloadedScript.src = "myscript.js";
 document.body.appendChild(preloadedScript);
 ```
@@ -206,7 +206,7 @@ This is useful when you want to preload a script, but then defer execution until
 Other preloading features exist, but none are quite as fit for purpose as `<link rel="preload">`:
 
 - `<link rel="prefetch">` has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the **_next_** navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give `prefetch` resources a lower priority than `preload` ones — the current page is more important than the next. See [Link prefetching FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) for more details.
-- `<link rel="prerender">` renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users bandwidth, Chrome treats `prerender` as a [NoState prefetch](https://developers.google.com/web/updates/2018/07/nostate-prefetch) instead.
+- `<link rel="prerender">` renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users bandwidth, Chrome treats `prerender` as a [NoState prefetch](https://developer.chrome.com/blog/nostate-prefetch/) instead.
 - `<link rel="subresource">` {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as `preload`, but it had a problem: there was no way to work out a priority for the items (`as` didn't exist back then), so they all got fetched with fairly low priority.
 - There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems.
 

@@ -68,7 +68,7 @@ function onError(error) {
 }
 
 function restoreMostRecent() {
-  var gettingSessions = browser.sessions.getRecentlyClosed({
+  let gettingSessions = browser.sessions.getRecentlyClosed({
     maxResults: 1
   });
   gettingSessions.then(restoreSession, onError);
@@ -79,7 +79,7 @@ browser.sessions.onChanged.addListener(restoreMostRecent);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.
+> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

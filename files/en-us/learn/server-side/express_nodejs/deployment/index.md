@@ -20,10 +20,7 @@ Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn/Serv
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms"
-          >Express Tutorial Part 6: Working with forms</a
-        >.
+        Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.
       </td>
     </tr>
     <tr>
@@ -87,7 +84,7 @@ Some of the things to consider when choosing a host:
 - Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
-The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, [Heroku](https://www.heroku.com/) provides a free but resource-limited _PaaS_ environment "forever", while [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Google Cloud](https://cloud.google.com/free/docs/gcp-free-tier), and [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/) provide free credit when you first join.
+The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, [Heroku](https://www.heroku.com/) provides a free but resource-limited _PaaS_ environment "forever", while [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Google Cloud](https://cloud.google.com/free/docs/gcp-free-tier), and [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/windows/) provide free credit when you first join.
 
 Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. [Digital Ocean](https://www.digitalocean.com/) is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $5 per month lower range at time of writing).
 
@@ -118,21 +115,19 @@ For example, the code fragment below shows how you might set up "author" logging
 The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.
 
 ```js
-var debug = require('debug')('author');
+const debug = require('debug')('author');
 
 // Display Author update form on GET
-exports.author_update_get = function(req, res, next) {
-
-    req.sanitize('id').escape().trim();
-    Author.findById(req.params.id, function(err, author) {
-        if (err) {
-            debug('update error:' + err);
-            return next(err);
-        }
-        //On success
-        res.render('author_form', { title: 'Update Author', author: author });
-    });
-
+exports.author_update_get = (req, res, next) => {
+  req.sanitize('id').escape().trim();
+  Author.findById(req.params.id, (err, author) => {
+    if (err) {
+      debug(`update error: ${err}`);
+      return next(err);
+    }
+    // On success
+    res.render('author_form', { title: 'Update Author', author });
+  });
 };
 ```
 
@@ -163,13 +158,13 @@ npm install compression
 Open **./app.js** and require the compression library as shown. Add the compression library to the middleware chain with the `use()` method (this should appear before any routes you want compressed — in this case, all of them!)
 
 ```js
-var catalogRouter = require('./routes/catalog'); //Import routes for "catalog" area of site
-var compression = require('compression');
+const catalogRouter = require('./routes/catalog'); //Import routes for "catalog" area of site
+const compression = require('compression');
 
 // Create the Express application object
-var app = express();
+const app = express();
 
-...
+// …
 
 app.use(compression()); //Compress all routes
 
@@ -179,7 +174,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
-...
+// …
 ```
 
 > **Note:** For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like [Nginx](https://nginx.org/).
@@ -198,21 +193,21 @@ Open **./app.js** and require the _helmet_ library as shown.
 Then add the module to the middleware chain with the `use()` method.
 
 ```js
-var compression = require('compression');
-var helmet = require('helmet');
+const compression = require('compression');
+const helmet = require('helmet');
 
 // Create the Express application object
-var app = express();
+const app = express();
 
 app.use(helmet());
-...
+// …
 ```
 
 > **Note:** The command above adds a _subset_ of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
 
 ## Example: Installing LocalLibrary on Heroku
 
-This section provides a practical demonstration of how to install _LocalLibrary_ on the [Heroku PaaS cloud](https://heroku.com).
+This section provides a practical demonstration of how to install _LocalLibrary_ on the [Heroku PaaS cloud](https://www.heroku.com/).
 
 ### Why Heroku?
 
@@ -253,7 +248,7 @@ Heroku is integrated with **git,** the source code version control system. The H
 
 > **Note:** If you're accustomed to following good software development practices you may already be using git or some other SCM system. If you already have a git repository, skip this step.
 
-There are a lot of ways of to work with git. One easy workflow is to first set up an account on [GitHub](https://github.com/), create a new repository there and then clone it to your local machine:
+There are a lot of ways to work with git. One easy workflow is to first set up an account on [GitHub](https://github.com/), create a new repository there and then clone it to your local machine:
 
 1. Visit <https://github.com/> and create an account.
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
@@ -263,6 +258,10 @@ There are a lot of ways of to work with git. One easy workflow is to first set u
     - Choose **Node** in the _Add .gitignore_ selection list.
     - Choose your preferred license in the _Add license_ selection list.
     - Check **Initialize this repository with a README**.
+
+    > **Warning:** The default "Public" access will make _all_ source code — including your database username and password — visible to anyone on the internet! Make sure the source code reads credentials _only_ from environment variables and does not have any credentials hard-coded.
+    >
+    > Otherwise, select the "Private" option to allow only selected people to see the source code.
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
@@ -324,7 +323,7 @@ When this operation completes, you should be able to go back to the page on GitH
 
 > **Note:** This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
 >
-> The _best_ way to do this is to use _git_ to manage your revisions. With _git_ you can not only go back to a particular past version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. [Learning Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) is well worth the effort, but is beyond the scope of this topic.
+> The _best_ way to do this is to use _git_ to manage your revisions. With _git_ you can not only go back to a particular past version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. [Learning Git](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources) is well worth the effort, but is beyond the scope of this topic.
 >
 > The _easiest_ way to do this is to just copy your files into another location. Use whichever approach best matches your knowledge of git!
 
@@ -353,7 +352,7 @@ Open **package.json**, and add this information as an **engines > node** section
     "node": "12.18.4"
   },
   "private": true,
-  ...
+  // …
 ```
 
 #### Database configuration
@@ -363,15 +362,15 @@ So far in this tutorial, we've used a single database that is hard-coded into **
 Open **app.js** and find the line that sets the MongoDB connection variable. It will look something like this:
 
 ```js
-var mongoDB = 'mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true';
+const mongoDB = 'mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true';
 ```
 
 Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below.)
 
 ```js
 // Set up mongoose connection
-var dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
-var mongoDB = process.env.MONGODB_URI || dev_db_url;
+const dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
 ```
 
 #### Get dependencies and re-test
@@ -464,7 +463,17 @@ Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
 MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 ```
 
-> **Note:** On some operating systems you may need to set the set the URL between single quotation marks (e.g. `heroku config:set MONGODB_URI='mongodb+srv://...'`).
+> **Note:**
+>
+> - Special characters in usernames and passwords must be HTML encoded.
+>   Affected characters include: `:`, `/`, `?`, `#`, `[`, `]`, `@`.
+>   For example, if the password was `cool@pas&word` then you would set MONGODB_URI using:
+>
+>   ```
+>   heroku config:set MONGODB_URI=mongodb+srv://cooluser:cool%40pas%26word@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
+>   ```
+>
+> - On some operating systems you may need to set the URL between single quotation marks (e.g. `heroku config:set MONGODB_URI='mongodb+srv://...'`).
 
 You can inspect your configuration variables at any time using the `heroku config` command — try this now:
 

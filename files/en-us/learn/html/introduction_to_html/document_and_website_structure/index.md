@@ -84,22 +84,18 @@ To implement such semantic mark up, HTML provides dedicated tags that you can us
 
 ### Active learning: exploring the code for our example
 
-Our example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.
+Our example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
     <title>My page title</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -156,7 +152,7 @@ Our example seen above is represented by the following code (you can also [find 
           <li><a href="#">Oh I do like to be beside the sea</a></li>
           <li><a href="#">Although in the North of England</a></li>
           <li><a href="#">It never stops raining</a></li>
-          <li><a href="#">Oh well...</a></li>
+          <li><a href="#">Oh well…</a></li>
         </ul>
       </aside>
 
@@ -213,7 +209,7 @@ In this case, the editor's note is supposed to merely provide extra direction fo
       <img src="../products/3333-0985/thumb.png" alt="Silver earrings">
     </li>
     <li>
-      ...
+      …
     </li>
   </ul>
   <p>Total cost: $237.89</p>
@@ -241,7 +237,7 @@ and his markup didn't read very well.</p>
 
 Without the `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html)); with `<br>` elements in the code, the markup renders like this:
 
-{{EmbedLiveSample('br_the_line_break_element', '100%', '125px')}}
+{{EmbedLiveSample('br_the_line_break_element', '100%', 150)}}
 
 #### \<hr>: the thematic break element
 
@@ -278,17 +274,13 @@ Try carrying out the above exercise for a website of your own creation. What wou
 
 > **Note:** Save your work somewhere; you might need it later on.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content). We'd advise going through the next article in the series first and not just skipping to it though!
-
 ## Summary
 
-At this point you should have a better idea about how to structure a web page/site. In the last article of this module, we'll study how to debug HTML.
+At this point, you should have a better idea about how to structure a web page/site. In the last article of this module, we'll learn how to [debug HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML).
 
 ## See also
 
-- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements): Advanced guide to HTML5 semantic elements and the HTML5 outline algorithm.
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements): Advanced guide to HTML semantic elements and the HTML outline algorithm.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 

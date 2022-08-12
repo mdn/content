@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.priority
 slug: Web/API/RTCIceCandidateStats/priority
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.priority
 ---
 {{APIRef("WebRTC")}}
@@ -78,4 +79,4 @@ value.
 
 ## See also
 
-- {{RFC(5245, "4.1.2.1")}}: Recommended Formula section in the ICE specification
+- {{RFC(5245, "", "4.1.2.1")}}: Recommended Formula section in the ICE specification

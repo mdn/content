@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints
 slug: Web/API/MediaTrackSupportedConstraints
+page-type: web-api-interface
 tags:
   - API
   - Capture
@@ -20,7 +21,7 @@ browser-compat: api.MediaTrackSupportedConstraints
 
 The **`MediaTrackSupportedConstraints`** dictionary establishes the list of constrainable properties recognized by the {{Glossary("user agent")}} or browser in its implementation of the {{domxref("MediaStreamTrack")}} object. An object conforming to `MediaTrackSupportedConstraints` is returned by {{domxref("MediaDevices.getSupportedConstraints()")}}.
 
-Because of the way interface definitions in WebIDL work, if a constraint is requested but not supported, no error will occur. Instead, the specified constraints will be applied, with any unrecognized constraints stripped from the request.That can lead to confusing and hard to debug errors, so be sure to use `getSupportedConstraints()` to retrieve this information before attempting to establish constraints if you need to know the difference between silently ignoring a constraint and a constraint being accepted.
+Because of the way interface definitions in WebIDL work, if a constraint is requested but not supported, no error will occur. Instead, the specified constraints will be applied, with any unrecognized constraints stripped from the request. That can lead to confusing and hard to debug errors, so be sure to use `getSupportedConstraints()` to retrieve this information before attempting to establish constraints if you need to know the difference between silently ignoring a constraint and a constraint being accepted.
 
 An actual constraint set is described using an object based on the {{domxref("MediaTrackConstraints")}} dictionary.
 
@@ -67,8 +68,6 @@ Some combination—but not necessarily all—of the following properties will ex
 
 For tracks containing video sources from the user's screen contents, the following additional properties are may be included in addition to those available for video tracks.
 
-- {{domxref("MediaTrackSupportedConstraints.cursor", "cursor")}}
-  - : A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.cursor", "cursor")}} constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.displaySurface", "displaySurface")}}
   - : A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.logicalSurface", "logicalSurface")}}

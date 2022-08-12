@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats
 slug: Web/API/RTCIceCandidatePairStats
+page-type: web-api-interface
 tags:
   - API
   - Candidate
@@ -39,24 +40,14 @@ _`RTCIceCandidatePairStats` is based upon {{domxref("RTCStats")}} and inherits i
   - : The total number of payload bytes received (that is, the total number of bytes received minus any headers, padding, or other administrative overhead) on this candidate pair so far.
 - {{domxref("RTCIceCandidatePairStats.bytesSent", "bytesSent")}} {{optional_inline}}
   - : The total number of payload bytes sent (that is, the total number of bytes sent minus any headers, padding, or other administrative overhead) so far on this candidate pair.
-- {{domxref("RTCIceCandidatePairStats.circuitBreakerTriggerCount", "circuitBreakerTriggerCount")}} {{optional_inline}}
-  - : An integer value indicating the number of times the circuit-breaker has been triggered for this particular 5-tuple (the set of five values comprising a TCP connection: source IP address, source port number, destination IP address, destination port number, and protocol). The circuit breaker is triggered whenever a connection times out or otherwise needs to be automatically aborted.
-- {{domxref("RTCIceCandidatePairStats.consentExpiredTimestamp", "consentExpiredTimestamp")}} {{optional_inline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} value indicating the time at which the most recent STUN binding response expired. This value is `undefined` if no valid STUN binding responses have been sent on the candidate pair; this can only happen if {{domxref("RTCIceCandidatePairStats.responsesReceived", "responsesReceived")}} is 0.
 - {{domxref("RTCIceCandidatePairStats.consentRequestsSent", "consentRequestsSent")}} {{optional_inline}}
   - : The total number of consent requests that have been sent on this candidate pair.
 - {{domxref("RTCIceCandidatePairStats.currentRoundTripTime", "currentRoundTripTime")}} {{optional_inline}}
   - : A floating-point value indicating the total time, in seconds, that elapsed between the most recently-sent STUN request and the response being received. This may be based upon requests that were involved in confirming permission to open the connection.
-- {{domxref("RTCIceCandidatePairStats.firstRequestTimestamp", "firstRequestTimestamp")}} {{optional_inline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} value which specifies the time at which the first STUN request was sent from the local peer to the remote peer for this candidate pair.
 - {{domxref("RTCIceCandidatePairStats.lastPacketReceivedTimestamp", "lastPacketReceivedTimestamp")}} {{optional_inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} value indicating the time at which the last packet was received by the local peer from the remote peer for this candidate pair. Timestamps are not recorded for STUN packets.
 - {{domxref("RTCIceCandidatePairStats.lastPacketSentTimestamp", "lastPacketSentTimestamp")}} {{optional_inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} value indicating the time at which the last packet was sent from the local peer to the remote peer for this candidate pair. Timestamps are not recorded for STUN packets.
-- {{domxref("RTCIceCandidatePairStats.lastRequestTimestamp", "lastRequestTimestamp")}} {{optional_inline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} value which specifies the time at which the last (most recent) STUN request was sent from the local peer to the remote peer for this candidate pair.
-- {{domxref("RTCIceCandidatePairStats.lastResponseTimestamp", "lastResponseTimestamp")}} {{optional_inline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} value that specifies the time at which the last (most recent) STUN response was received by the local candidate from the remote candidate in this pair.
 - {{domxref("RTCIceCandidatePairStats.localCandidateId", "localCandidateId")}} {{optional_inline}}
   - : The unique ID string corresponding to the {{domxref("RTCIceCandidate")}} from the data included in the {{domxref("RTCIceCandidateStats")}} object providing statistics for the candidate pair's local candidate.
 - {{domxref("RTCIceCandidatePairStats.nominated", "nominated")}} {{optional_inline}}
@@ -75,20 +66,16 @@ _`RTCIceCandidatePairStats` is based upon {{domxref("RTCStats")}} and inherits i
   - : The total number of connectivity check responses that have been received.
 - {{domxref("RTCIceCandidatePairStats.responsesSent", "responsesSent")}} {{optional_inline}}
   - : The total number of connectivity check responses that have been sent. This includes both connectivity check requests and STUN consent requests.
-- {{domxref("RTCIceCandidatePairStats.retransmissionsReceived", "retransmissionsReceived")}} {{optional_inline}}
-  - : The total number of times connectivity check request retransmissions were received. A retransmission is a connectivity check request whose `TRANSACTION_TRANSMIT_COUNTER` attribute's `req` field is greater than 1.
-- {{domxref("RTCIceCandidatePairStats.retransmissionsSent", "retransmissionsSent")}} {{optional_inline}}
-  - : The total number of times connectivity check request retransmissions were sent.
 - {{domxref("RTCIceCandidatePairStats.state", "state")}} {{optional_inline}}
-  - : A {{domxref("RTCStatsIceCandidatePairState")}} object which indicates the state of the connection between the two candidates.
+  - : A string which indicates the state of the connection between the two candidates.
 - {{domxref("RTCIceCandidatePairStats.totalRoundTripTime", "totalRoundTripTime")}} {{optional_inline}}
   - : A floating-point value indicating the total time, in seconds, that has elapsed between sending STUN requests and receiving responses to them, for all such requests made to date on this candidate pair. This includes both connectivity check and consent check requests. You can compute the average round trip time (RTT) by dividing this value by {{domxref("RTCIceCandidatePairStats.responsesReceived", "responsesReceived")}}.
 - {{domxref("RTCIceCandidatePairStats.transportId", "transportId")}} {{optional_inline}}
-  - : A {{domxref("DOMString")}} that uniquely identifies the {{domxref("RTCIceTransport")}} that was inspected to obtain the transport-related statistics (as found in {{domxref("RTCTransportStats")}}) used in generating this object.
+  - : A string that uniquely identifies the {{domxref("RTCIceTransport")}} that was inspected to obtain the transport-related statistics (as found in {{domxref("RTCTransportStats")}}) used in generating this object.
 
 ### Obsolete properties
 
-The following properties have been removed from the specification and should no longer be used. You should update any existing code to avoid using them as soon as is practical. Check the {{anch("Browser compatibility", "compatibility table")}} for details on which browsers support them and in which versions.
+The following properties have been removed from the specification and should no longer be used. You should update any existing code to avoid using them as soon as is practical. Check the [compatibility table](#browser_compatibility) for details on which browsers support them and in which versions.
 
 - {{domxref("RTCIceCandidatePairStats.priority", "priority")}} {{deprecated_inline}} {{optional_inline}}
   - : An integer value indicating the candidate pair's priority.
@@ -117,7 +104,7 @@ if (rtcStats && rtcStats.type === "candidate-pair") {
   let elapsed = (rtcStats.lastRequestTimestamp - rtcStats.firstRequestTimestamp)
                   / rtcStats.requestsSent;
 
-  log("Average time between ICE connectivity checks: " + elapsed + " ms.");
+  log(`Average time between ICE connectivity checks: ${elapsed} ms.`);
 }
 ```
 

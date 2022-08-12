@@ -18,17 +18,17 @@ Firefox 4, which shipped on March 22, 2011, enhances performance, adds more supp
 
 ## Features for web developers
 
-Gecko now uses the [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) directly in the HTML markup.
+Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) directly in the HTML markup.
 
 ### HTML
 
-- [Meet the HTML5 parser](/en-US/docs/Web/Guide/HTML/HTML5/HTML5_Parser)
+- [Meet the HTML5 parser](/en-US/docs/Learn/HTML)
   - : A look at what the HTML5 parser means to you, and how to embed SVG and MathML into your content inline.
 - [Forms in HTML5](/en-US/docs/Learn/Forms)
   - : A look at improvements to web forms in HTML5. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
 - [HTML5 Sections](/en-US/docs/Web/HTML/Element/Heading_Elements)
   - : Gecko now supports the new HTML5 elements related to sections in a document: {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("aside")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}} and {{HTMLElement("footer")}}.
-- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes#attr-hidden)
+- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes#hidden)
   - : This attribute, common to all elements, is used to hide content in a webpage that is not currently relevant to the user.
 - Other HTML5 elements
   - : Gecko now also supports the following new HTML5 elements: {{HTMLElement("mark")}}, {{HTMLElement("figure")}}, and {{HTMLElement("figcaption")}}.
@@ -54,8 +54,8 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - `canvas2dcontext.globalCompositeOperation` no longer throws an exception when set to an unrecognized value, and no longer supports the non-standard `darker` value.
 - Support for the obsolete {{HTMLElement("spacer")}} element, which was absent in all other browsers, has been removed.
 - The {{HTMLElement("isindex")}} element, when created by calling {{domxref("document.createElement()")}}, is now created as a simple element with no properties or methods.
-- Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](</en-US/docs/Web/API/File/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click()_method>) in the article [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications).
-- The {{HTMLElement("input")}} element supports a new [`mozactionhint`](/en-US/docs/Web/HTML/Element/input#attr-mozactionhint) attribute, which lets you specify the label for the enter key on virtual keyboards.
+- Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](/en-US/docs/Web/API/File/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click_method) in the article [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
+- The {{HTMLElement("input")}} element supports a new [`mozactionhint`](/en-US/docs/Web/HTML/Element/input#mozactionhint) attribute, which lets you specify the label for the enter key on virtual keyboards.
 - {{HTMLElement("script")}} elements inside {{HTMLElement("iframe")}}, {{HTMLElement("noembed")}}, and {{HTMLElement("noframes")}} elements now get executed, which they weren't in previous versions of Firefox. This is in compliance with the specification, and matches the behavior of other browsers.
 
 ### CSS
@@ -70,7 +70,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : The {{cssxref("-moz-image-rect")}} function makes it possible to use subrectangles of images as a {{cssxref("background-image")}}.
 - CSS touch properties
   - : Support for touch properties is added. Details, and real article names, to come later.
-- [Using arbitrary elements as CSS backgrounds](</en-US/docs/Web/CSS/element()>)
+- [Using arbitrary elements as CSS backgrounds](/en-US/docs/Web/CSS/element)
   - : You can use the `-moz-element` CSS function and the {{domxref("document.mozSetImageElement()")}} DOM function to use arbitrary HTML elements as backgrounds.
 - [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : Changes have been made to what information can be obtained about the style of visited links using CSS selectors. This may affect some web applications.
@@ -195,7 +195,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
       <td><code>-moz-calc</code></td>
       <td>
         Lets you specify
-        <code>{{cssxref("&lt;length&gt;")}}</code> values as
+        {{cssxref("&lt;length&gt;")}} values as
         mathematical expressions.
       </td>
     </tr>
@@ -249,7 +249,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - Media `buffered` attribute support
   - : The `buffered` attribute on {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements is now supported, letting you determine which ranges of a media file have been buffered. The {{domxref("TimeRanges")}} DOM interface has been implemented to support this.
 - Media `preload` attribute
-  - : The `preload` attribute from the HTML5 specification has been implemented, replacing the previously-implemented (and no longer supported) `autobuffer` attribute. This affects the {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements, as well as the {{interface("nsIDOMHTMLMediaElement")}} interface.
+  - : The `preload` attribute from the HTML5 specification has been implemented, replacing the previously-implemented (and no longer supported) `autobuffer` attribute. This affects the {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements, as well as the `nsIDOMHTMLMediaElement` interface.
 - SVG text positioning improvements
   - : You can now specify lists for the values of the `x`, `y`, `dx`, and `dy` properties on SVG {{SVGElement("text")}} and {{SVGElement("tspan")}} elements. This lets you control the positioning of each character in a string individually.
 
@@ -293,7 +293,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The {{domxref("document.onreadystatechange")}} event has been implemented.
 - The {{domxref("document.createElement")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
 - The {{domxref("element.setCapture()")}} and {{domxref("document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
-- The {{domxref("window.mozPaintCount")}} property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
+- The `window.mozPaintCount` property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
 - The language token has been removed from {{domxref("window.navigator.appVersion")}} and {{domxref("window.navigator.userAgent")}}. Use {{domxref("window.navigator.language")}} or the [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation) instead. {{Bug(572656)}}
 - The [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
@@ -301,11 +301,11 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The {{domxref("DOMImplementation.createHTMLDocument()")}} method lets you create a new HTML document.
 - {{domxref("Node.mozMatchesSelector()")}} now throws a `SYNTAX_ERR` exception if the specified selector string is invalid, instead of incorrectly returning `false`.
 - You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: `element.style.fill = 'lime'`. See {{domxref("element.style")}} for details.
-- The document root now has [a `privatebrowsingmode` attribute](/en-US/docs/Supporting_private_browsing_mode#Detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
+- The document root now has [a `privatebrowsingmode` attribute](/en-US/docs/Supporting_private_browsing_mode#detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
 - The second parameter of the {{domxref("window.getComputedStyle()")}} method is now optional, as it is in every other major browser.
 - The DOM [`StorageEvent`](/en-US/docs/DOM/event/StorageEvent) object now matches the latest version of the specification.
 - The minimum allowed delay for the {{domxref("setTimeout()")}} method is now a preference, `dom.min_timeout_value`.
-- The [`MozAfterPaint`](/en-US/docs/Gecko-Specific_DOM_Events#MozAfterPaint) event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.
+- The [`MozAfterPaint`](/en-US/docs/Gecko-Specific_DOM_Events#mozafterpaint) event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.
 
 ### Security
 
@@ -324,7 +324,7 @@ For an overview of the changes implemented in JavaScript 1.8.5, see [New in Java
 
 ### Developer tools
 
-- [Using the Web Console](/en-US/docs/Tools/Web_Console)
+- [Using the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
   - : The Web Console tool is a useful debugging aid for web developers and extension developers alike.
 
 > **Note:**The Error Console is disabled by default starting in {{Gecko("2.0")}}. You can re-enable it by changing the `devtools.errorconsole.enabled` preference to `true` and restarting the browser.
@@ -345,7 +345,7 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
   - : The new Add-ons Manager provides information about installed add-ons, support for managing them, and provides ways to install and remove add-ons.
 - [PopupNotifications.jsm](/en-US/docs/JavaScript_code_modules/PopupNotifications.jsm)
   - : The new popup notifications module makes it easy to present attractive, non-modal notifications to the user. You can see how to use this API in [Using popup notifications](/en-US/docs/Using_popup_notifications).
-- [Loading code modules from chrome: URLs](/en-US/docs/JavaScript_code_modules/Using#Locating_the_code_module)
+- [Loading code modules from chrome: URLs](/en-US/docs/JavaScript_code_modules/Using#locating_the_code_module)
   - : You can now load JavaScript code modules using **chrome:** URLs, even inside JAR files.
 - DownloadLastDir.jsm
   - : The [`DownloadLastDir.jsm`](/en-US/docs/JavaScript_code_modules/DownloadLastDir.jsm) code module provides the `gDownloadLastDir` global variable, which contains a string you can use to learn the path of the directory into which the last download occurred. This module handles issues related to private browsing for you.
@@ -354,8 +354,8 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 
 #### Miscellaneous changes to code modules
 
-- The `NetUtil.jsm` code module now offers the [`readInputStreamToString()`](</en-US/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()>) method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.
-- The XPCOMUtils.jsm code module now offers [IterSimpleEnumerator()](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#IterSimpleEnumerator()>) and [IterStringEnumerator()](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#IterStringEnumerator()>) helpers to iterate over XPCOM enumerators.
+- The `NetUtil.jsm` code module now offers the [`readInputStreamToString()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html#readInputStreamToString()>) method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.
+- The XPCOMUtils.jsm code module now offers [IterSimpleEnumerator()](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterSimpleEnumerator()>) and [IterStringEnumerator()](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterStringEnumerator()>) helpers to iterate over XPCOM enumerators.
 - You can now [use workers in JavaScript code modules](/en-US/docs/JavaScript_code_modules/Using_workers_in_JavaScript_code_modules).
 
 ### DOM changes
@@ -367,7 +367,7 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 
 #### Other DOM changes
 
-- The [new "document-element-inserted" notification](/en-US/docs/Observer_Notifications#Documents) is sent when a document's root element is created, but before any scripts are executed on it.
+- The [new "document-element-inserted" notification](/en-US/docs/Observer_Notifications#documents) is sent when a document's root element is created, but before any scripts are executed on it.
 
 ### XUL
 
@@ -376,7 +376,7 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 Several changes were made to the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element that impact extensions that interact with tabs. In addition to supporting app tabs, these changes also change the tab bar into a standard toolbar, which lets the user drag toolbar buttons into it.
 
 - The `TabClose`, `TabSelect`, and `TabOpen` events no longer bubble up to the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element (`gBrowser`). Event listeners for those events should be added to `gBrowser.tabContainer` rather than to `gBrowser` directly.
-- The tab context menu is no longer an anonymous child of the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser). It can therefore be overlaid directly with [XUL overlays](/en-US/docs/XUL_Overlays). It can also be accessed more directly in JavaScript via `gBrowser.tabContextMenu`. See [this blog post](https://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
+- The tab context menu is no longer an anonymous child of the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser). It can therefore be overlaid directly with [XUL overlays](/en-US/docs/XUL_Overlays). It can also be accessed more directly in JavaScript via `gBrowser.tabContextMenu`. See [this blog post](https://gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
 - The new [`visibleTabs`](/en-US/docs/XUL/Property/visibleTabs) property was added to let you get an array of the currently visible tabs; this lets you determine which tabs are visible in the current tab set. This is used by Firefox Panorama, for example.
 - Added the new [`showOnlyTheseTabs`](/en-US/docs/Mozilla/Tech/XUL/Method/showOnlyTheseTabs) method; this is used by Firefox Panorama.
 - Added the new [`getIcon`](/en-US/docs/Mozilla/Tech/XUL/Method/getIcon) method, which lets you get a tab's favicon without having to pull up the [`<xul:browser>`](/en-US/docs/Mozilla/Tech/XUL/browser) element.
@@ -392,7 +392,7 @@ Several changes were made to the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/X
 
 #### Remote XUL support removed
 
-Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using `file://` URLs unless you create the preference `dom.allow_XUL_XBL_for_file` and set it to `true`. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL. The [Remote XUL Manager extension](https://addons.mozilla.org/en-US/firefox/addon/235281/) lets you manage this whitelist.
+Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using `file://` URLs unless you create the preference `dom.allow_XUL_XBL_for_file` and set it to `true`. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL.
 
 #### Miscellaneous XUL changes
 
@@ -429,11 +429,11 @@ Remote XUL is no longer supported; this affects XUL documents being served throu
 
 #### Miscellaneous storage API changes
 
-- The {{interface("mozIStorageBindingParamsArray")}} interface now has a length attribute that indicates the number of {{interface("mozIStorageBindingParams")}} objects in the array.
-- The {{ifmethod("mozIStorageStatement", "bindParameters")}} now returns an error if the specified {{interface("mozIStorageBindingParamsArray")}} is empty.
-- Added the {{ifmethod("mozIStorageConnection", "clone")}} method, which lets you clone an existing database connection.
-- Added the {{ifmethod("mozIStorageConnection", "asyncClose")}} method, which lets you close a database connection asynchronously; you specify a callback to be notified when the close operation is complete.
-- Added the {{ifmethod("mozIStorageConnection", "setGrowthIncrement")}} method, which lets you specify the amount by which a database file is grown at a time, in order to help SQLite reduce fragmentation.
+- The `mozIStorageBindingParamsArray` interface now has a length attribute that indicates the number of `mozIStorageBindingParams` objects in the array.
+- The `mozIStorageStatement.bindParameters()` method now returns an error if the specified `mozIStorageBindingParamsArray` is empty.
+- Added the `mozIStorageConnection.clone()` method, which lets you clone an existing database connection.
+- Added the `mozIStorageConnection.asyncClose()` method, which lets you close a database connection asynchronously; you specify a callback to be notified when the close operation is complete.
+- Added the `mozIStorageConnection.setGrowthIncrement()` method, which lets you specify the amount by which a database file is grown at a time, in order to help SQLite reduce fragmentation.
 - The `SQLITE_CONSTRAINT` error is now reported as `NS_ERROR_STORAGE_CONSTRAINT` instead of as `NS_ERROR_FAILURE`.
 
 ### XPCOM
@@ -447,29 +447,29 @@ In addition to the specific changes referenced below, it's important to note tha
 
 ### Places
 
-- Places query results may now be observed by multiple observers, and queries may be executed asynchronously. This means there have been some changes to the {{interface("nsINavHistoryResult")}}, {{interface("nsINavHistoryQueryOptions")}}, and {{interface("nsINavHistoryContainerResultNode")}} interfaces. More significantly, the {{interface("nsINavHistoryResultViewer")}} interface has been renamed to {{interface("nsINavHistoryResultObserver")}}.
-- Some [new notifications](/en-US/docs/Observer_Notifications#Places) have been added to enable the browser to track the shutdown process of the Places service more reliably. Of these, most are for internal use only, but the `places-connection-closed` notification is available to know when the Places service has completed its shutdown process.
+- Places query results may now be observed by multiple observers, and queries may be executed asynchronously. This means there have been some changes to the `nsINavHistoryResult`, `nsINavHistoryQueryOptions`, and `nsINavHistoryContainerResultNode` interfaces. More significantly, the `nsINavHistoryResultViewer` interface has been renamed to `nsINavHistoryResultObserver`.
+- Some [new notifications](/en-US/docs/Observer_Notifications#places) have been added to enable the browser to track the shutdown process of the Places service more reliably. Of these, most are for internal use only, but the `places-connection-closed` notification is available to know when the Places service has completed its shutdown process.
 - The array size output parameter on several Places methods is now optional.
-- Support for `<menupopup type="places">` has been removed. Instead, you need to create and populate a menu with Places information manually, instead of having it done for you. See [Displaying Places information using views: Menu view](/en-US/docs/Displaying_Places_information_using_views#Menu_view) for details.
+- Support for `<menupopup type="places">` has been removed. Instead, you need to create and populate a menu with Places information manually, instead of having it done for you. See [Displaying Places information using views: Menu view](/en-US/docs/Displaying_Places_information_using_views#menu_view) for details.
 
 ### Interface changes
 
-- The {{interface("nsIDocShell")}} and {{interface("nsIWebBrowser")}} interfaces now have a new `isActive` attribute, which is used to allow optimization of code paths for documents that aren't currently visible.
-- The {{interface("nsIMemory")}} method {{ifmethod("nsIMemory","isLowMemory")}} has been deprecated. You should use ["memory-pressure" notifications](/en-US/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) to watch for low memory situations instead.
-- The API for handling redirects on HTTP channels has changed to let them be processed asynchronously. Any code that implements redirect handling using {{ifmethod("nsIChannelEventSink", "onChannelRedirect")}} needs to be updated to use {{ifmethod("nsIChannelEventSink", "asyncOnChannelRedirect")}} instead. This accepts a callback handler that must be called when a redirect is successfully completed.
-- The {{ifmethod("nsINavHistoryResultObserver", "batching")}} method has been added, providing a way to group Places operations into batches, reducing the number of update notifications delivered, which can improve performance when observers are performing relatively involved tasks (such as refreshing views).
-- The long-obsolete `nsIPref` interface has finally been removed. If you haven't already switched to {{interface("nsIPrefService")}}, now is the time.
-- The {{interface("nsISessionStore")}} and {{interface("nsISessionStartup")}} interfaces received changes to support on-demand session restore. See the {{ifmethod("nsISessionStore", "restoreLastSession")}} method.
-- The {{interface("nsIPrincipal")}} methods {{ifmethod("nsIPrincipal", "subsumes")}} and {{ifmethod("nsIPrincipal", "checkMayLoad")}}, as well as its `origin`, `csp`, and `URI` attributes, are now available from script; previously they were only available from native code.
-- The {{interface("nsIPrompt")}} interface now supports tab-modal alerts; see [Using tab-modal prompts](/en-US/docs/Using_tab-modal_prompts) for details.
-- The {{ifmethod("nsIEffectiveTLDService", "getPublicSuffixFromHost")}} method now correctly rejects host name starting with a period (".").
-- The {{ifmethod("mozIJSSubScriptLoader", "loadSubScript")}} method now has an optional argument allowing you to specify the character set of the script; if one is not provided, ASCII is assumed (as was always assumed previously).
+- The `nsIDocShell` and `nsIWebBrowser` interfaces now have a new `isActive` attribute, which is used to allow optimization of code paths for documents that aren't currently visible.
+- The `nsIMemory` method `nsIMemory.isLowMemory()` has been deprecated. You should use ["memory-pressure" notifications](/en-US/docs/XPCOM_Interface_Reference/nsIMemory#low_memory_notifications) to watch for low memory situations instead.
+- The API for handling redirects on HTTP channels has changed to let them be processed asynchronously. Any code that implements redirect handling using `nsIChannelEventSink.onChannelRedirect()` needs to be updated to use `nsIChannelEventSink.asyncOnChannelRedirect()` instead. This accepts a callback handler that must be called when a redirect is successfully completed.
+- The `nsINavHistoryResultObserver.batching()` method has been added, providing a way to group Places operations into batches, reducing the number of update notifications delivered, which can improve performance when observers are performing relatively involved tasks (such as refreshing views).
+- The long-obsolete `nsIPref` interface has finally been removed. If you haven't already switched to `nsIPrefService`, now is the time.
+- The `nsISessionStore` and `nsISessionStartup` interfaces received changes to support on-demand session restore. See the `nsISessionStore.restoreLastSession()` method.
+- The `nsIPrincipal` methods `nsIPrincipal.subsumes()` and `nsIPrincipal.checkMayLoad()`, as well as its `origin`, `csp`, and `URI` attributes, are now available from script; previously they were only available from native code.
+- The `nsIPrompt` interface now supports tab-modal alerts; see [Using tab-modal prompts](/en-US/docs/Using_tab-modal_prompts) for details.
+- The `nsIEffectiveTLDService.getPublicSuffixFromHost()` method now correctly rejects host name starting with a period (".").
+- The `mozIJSSubScriptLoader.loadSubScript()` method now has an optional argument allowing you to specify the character set of the script; if one is not provided, ASCII is assumed (as was always assumed previously).
 - The `nsIAccessProxy` interface has been removed. It was an implementation detail that has outlived its usefulness.
-- The {{interface("nsIContentView")}} and {{interface("nsIContentViewManager")}} interfaces have been added for Firefox Mobile. It represents a scrollable content view whose contents are actually drawn by a separate process.
-- The {{interface("nsIDiskCacheStreamInternal")}} interface has been added.
-- The {{interface("nsIExternalURLHandlerService")}} interface has been added.
-- The {{interface("nsISyncJPAKE")}} interface has been added. See {{bug("601645")}}.
-- The {{interface("nsIINIParserWriter")}} interface was added in Gecko 1.9.2.4 to support writing to INI files.
+- The `nsIContentView` and `nsIContentViewManager` interfaces have been added for Firefox Mobile. It represents a scrollable content view whose contents are actually drawn by a separate process.
+- The `nsIDiskCacheStreamInternal` interface has been added.
+- The `nsIExternalURLHandlerService` interface has been added.
+- The `nsISyncJPAKE` interface has been added. See {{bug("601645")}}.
+- The `nsIINIParserWriter` interface was added in Gecko 1.9.2.4 to support writing to INI files.
 
 ### Memory management
 
@@ -482,7 +482,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - The `accessibility.disablecache` preference is no longer supported; it was only exposed for debugging purposes and is no longer used.
 - Addons whose GUID changes from one version to another can now be updated properly.
 - As a side effect of the removal of platform-specific directories in add-on bundles, you can no longer provide different default preferences for each platform.
-- By default, [extensions are no longer unpacked when they are installed](https://blog.mozilla.com/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](/en-US/docs/Install_Manifests#unpack) property in the [install manifest](/en-US/docs/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](/en-US/docs/js-ctypes), [search plugins](/en-US/docs/Web/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](/en-US/docs/XUL_School/Local_Storage#SQLite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
+- By default, [extensions are no longer unpacked when they are installed](https://web.archive.org/web/20130707104214/https://blog.mozilla.org/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](/en-US/docs/Install_Manifests#unpack) property in the [install manifest](/en-US/docs/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](/en-US/docs/js-ctypes), [search plugins](/en-US/docs/Web/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](/en-US/docs/XUL_School/Local_Storage#sqlite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
 - You may now include extensions that [automatically get installed at application startup](/en-US/docs/Mozilla/Developer_guide/Customizing_Firefox#including_extensions_with_your_distribution_of_firefox) within a customized Firefox.
 
 ## Other changes
@@ -490,7 +490,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - Only the root chrome.manifest file is loaded
   - : Only the root `chrome.manifest` file is loaded now; if you need secondary manifest files to be loaded, you can use the [`manifest`](/en-US/docs/Chrome_Registration#manifest) command in your root `chrome.manifest` to load them.
 - Gopher support removed
-  - : The Gopher protocol is no longer supported natively. Continued support is available via the [OverbiteFF](https://addons.mozilla.org/addon/7685/) extension.
+  - : The Gopher protocol is no longer supported natively. Continued support is available via the [OverbiteFF](https://addons.mozilla.org/en-US/firefox/addon/overbitenx/) extension.
 - [Content process event handling](/en-US/docs/The_message_manager)
   - : In order to support out-of-process plugins and other multiple-process features, a new API has been introduced to support sending messages across processes.
 - [Bootstrapped extensions](/en-US/docs/Extensions/Bootstrapped_extensions)
@@ -498,7 +498,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - Default plugin removed
   - : The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. See {{bug("533891")}}.
 - Extension Manager replaced by Addon Manager
-  - : {{interface("nsIExtensionManager")}} has been replaced by [AddonManager](/en-US/docs/Addons/Add-on_Manager/AddonManager).
+  - : `nsIExtensionManager` has been replaced by [AddonManager](/en-US/docs/Addons/Add-on_Manager/AddonManager).
 - Child HWNDs no longer used
   - : Firefox no longer creates child HWNDs for its internal use on Windows. If you've written an extension that uses native code to manipulate these HWNDs, your extension will not work on Firefox 4. You'll need to either stop using HWNDs or wrap your code that relies on HWNDs in an [NPAPI](/en-US/docs/NPAPI) plugin. That's a lot of work, so if you can avoid using HWNDs directly, you should.
 - Gesture changes

@@ -9,6 +9,11 @@ tags:
   - flexbox
   - grid
   - sticky footer
+browser-compat:
+  - css.properties.grid-template-rows
+  - css.properties.flex-direction
+  - css.properties.flex-grow
+  - css.properties.flex-shrink
 ---
 {{CSSRef}}
 
@@ -29,7 +34,7 @@ The Sticky footer pattern needs to meet the following requirements:
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/sticky-footer--download.html)
 
 > **Note:** In this example and the following one we are using a wrapper set to `min-height: 100%` in order that our live example works. You could also achieve this for a full page by setting a {{cssxref("min-height")}} of `100vh` on the {{htmlelement("body")}} and then using it as your grid container.
 
@@ -49,21 +54,7 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 
 ## Browser compatibility
 
-### grid-template-rows
-
-{{Compat("css.properties.grid-template-rows")}}
-
-### flex-direction
-
-{{Compat("css.properties.flex-direction")}}
-
-### flex-grow
-
-{{Compat("css.properties.flex-grow")}}
-
-### flex-shrink
-
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Resources on MDN
 

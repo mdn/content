@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.playbackRate
 slug: Web/API/AudioBufferSourceNode/playbackRate
+page-type: web-api-instance-property
 tags:
   - API
   - AudioBufferSourceNode
@@ -22,13 +23,7 @@ values less than 1.0 cause the sound to play more slowly, while values greater t
 When set to another value, the `AudioBufferSourceNode` resamples the audio
 before sending it to the output.
 
-## Syntax
-
-```js
-AudioBufferSourceNode.playbackRate.value = playbackRateProportion;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}} whose {{domxref("AudioParam.value", "value")}} is a
 floating-point value indicating the playback rate of the audio as a decimal proportion
@@ -41,16 +36,14 @@ second). Let's see what a few values of `playbackRate` do:
 - A `playbackRate` of 0.5 plays the audio at half speed, or 22,050 Hz.
 - A `playbackRate` of 2.0 doubles the audio's playback rate to 88,200 Hz.
 
-## Example
+## Examples
 
 In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
 decode an audio track, and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
 are provided to play and stop the audio playback, and a slider control is used to change
 the `playbackRate` property value on the fly.
 
-> **Note:** You can [run the example
-> live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view
-> the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).) Play the song and alter the playback rate for some fun results.
+> **Note:** You can [run the example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)). Play the song and alter the playback rate for some fun results.
 
 ```html
 <input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1">
@@ -66,10 +59,10 @@ function getData() {
 
   request.responseType = 'arraybuffer';
 
-  request.onload = function() {
-    var audioData = request.response;
+  request.onload = () => {
+    const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, (buffer) => {
         myBuffer = buffer;
         source.buffer = myBuffer;
         source.playbackRate.value = playbackControl.value;
@@ -77,7 +70,7 @@ function getData() {
         source.loop = true;
       },
 
-      function(e){"Error with decoding audio data" + e.err});
+      (e) => console.error(`Error with decoding audio data: ${e.err}`));
 
   }
 
@@ -86,20 +79,20 @@ function getData() {
 
 // wire up buttons to stop and play audio, and range slider control
 
-play.onclick = function() {
+play.onclick = () => {
   getData();
   source.start(0);
   play.setAttribute('disabled', 'disabled');
   playbackControl.removeAttribute('disabled');
 }
 
-stop.onclick = function() {
+stop.onclick = () => {
   source.stop(0);
   play.removeAttribute('disabled');
   playbackControl.setAttribute('disabled', 'disabled');
 }
 
-playbackControl.oninput = function() {
+playbackControl.oninput = () => {
   source.playbackRate.value = playbackControl.value;
   playbackValue.innerHTML = playbackControl.value;
 }

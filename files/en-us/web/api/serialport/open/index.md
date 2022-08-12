@@ -1,6 +1,7 @@
 ---
 title: SerialPort.open()
 slug: Web/API/SerialPort/open
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,26 +17,26 @@ The **`open()`** method of the {{domxref("SerialPort")}} interface returns a {{j
 ## Syntax
 
 ```js
-var promise = SerialPort.open(options);
+open(options)
 ```
 
 ### Parameters
 
-- _`options`_
+- `options`
 
   - : An object with any of the following values:
 
     - `baudRate`
       - : A positive, non-zero value indicating the baud rate at which serial communication should be established.
-    - `bufferSize`{{optional_inline}}
+    - `bufferSize` {{optional_inline}}
       - : An unsigned long integer indicating the size of the read and write buffers that are to be established. If not passed, defaults to 255.
-    - `dataBits`{{optional_inline}}
+    - `dataBits` {{optional_inline}}
       - : An integer value of 7 or 8 indicating the number of data bits per frame. If not passed, defaults to 8.
-    - `flowControl`{{optional_inline}}
+    - `flowControl` {{optional_inline}}
       - : The flow control type, either `"none"` or `"hardware"`. The default value is `"none:`.
-    - `parity`{{optional_inline}}
+    - `parity` {{optional_inline}}
       - : The parity mode, either `"none"`, `"even"`, or `"odd"`. The default value is `"none"`.
-    - `stopBits`{{optional_inline}}
+    - `stopBits` {{optional_inline}}
       - : An integer value of 1 or 2 indicating the number of stop bits at the end of the frame. If not passed, defaults to 1.
 
 ### Return value
@@ -54,7 +55,7 @@ A {{jsxref("Promise")}}.
 Before communicating on a serial port it must be opened. Opening the port allows the site to specify the necessary parameters that control how data is transmitted and received. Developers should check the documentation for the device they are connecting to for the appropriate parameters.
 
 ```js
-await port.open({ baudRate: /* pick your baud rate */ });
+await port.open({ baudRate: 9600 /* pick your baud rate */ });
 ```
 
 ## Specifications

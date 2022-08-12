@@ -1,6 +1,7 @@
 ---
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -9,21 +10,18 @@ tags:
   - Reference
   - Stylesheets
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.styleSheetSets
 ---
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`styleSheetSets`** read-only property returns a live list of all of the currently-available style sheet sets.
 
-## Syntax
+## Value
 
-```js
-var sets = document.styleSheetSets;
-```
+A list of style sheet sets that are available.
 
-On return, `sets` is a list of style sheet sets that are available.
-
-## Example
+## Examples
 
 Given an {{HTMLElement("ul")}} (list) element with the ID "sheetList", you can populate
 it with the names of all the available style sheet sets with code like this:

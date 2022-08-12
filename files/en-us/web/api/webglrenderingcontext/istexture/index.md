@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isTexture()
 slug: Web/API/WebGLRenderingContext/isTexture
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,12 +18,12 @@ passed {{domxref("WebGLTexture")}} is valid and `false` otherwise.
 ## Syntax
 
 ```js
-GLboolean gl.isTexture(texture);
+isTexture(texture)
 ```
 
 ### Parameters
 
-- texture
+- `texture`
   - : A {{domxref("WebGLTexture")}} to check.
 
 ### Return value
@@ -34,9 +35,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the text
 ### Checking a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var texture = gl.createTexture();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const texture = gl.createTexture();
 
 gl.isTexture(texture);
 ```

@@ -36,6 +36,7 @@ outline-style: outset;
 outline-style: inherit;
 outline-style: initial;
 outline-style: revert;
+outline-style: revert-layer;
 outline-style: unset;
 ```
 

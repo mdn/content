@@ -114,7 +114,7 @@ This is fine if you know the index of an item, but what if you don't? You can fi
 ```js
 const birds = ['Parrot', 'Falcon', 'Owl'];
 console.log(birds.indexOf('Owl'));   //  2
-console.log(birds.indexOf('Rabbit')) // -1
+console.log(birds.indexOf('Rabbit')); // -1
 ```
 
 ## Adding items
@@ -183,7 +183,7 @@ if (index !== -1) {
 console.log(cities);     // [ "Manchester", "Edinburgh", "Carlisle" ]
 ```
 
-In this call to `splice()`, the first argument says where to start removing items, and the second argument says  how many items should be removed. So you can remove more than one item:
+In this call to `splice()`, the first argument says where to start removing items, and the second argument says how many items should be removed. So you can remove more than one item:
 
 ```js
 const cities = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
@@ -219,7 +219,7 @@ console.log(doubled);  // [ 10, 4, 14, 12 ]
 
 We give a function to the `map()`, and `map()` calls the function once for each item in the array, passing in the item. It then adds the return value from each function call to a new array, and finally returns the new array.
 
-Sometimes you'll want to create a new array containing only the items in the original array that match some test. You can do this using {{jsxref("Array.prototype.filter()","filter()")}}. The code below takes an array of strings and filters out all strings that are less than 8 characters long:
+Sometimes you'll want to create a new array containing only the items in the original array that match some test. You can do that using {{jsxref("Array.prototype.filter()","filter()")}}. The code below takes an array of strings and returns an array containing just the strings that are greater than 8 characters long:
 
 ```js
 function isLong(city) {
@@ -280,7 +280,7 @@ Let's return to the example we described earlier — printing out product names 
 
 1. Below the `// number 1` comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called `products`.
 2. Below the `// number 2` comment, start a `for...of()` loop to go through every item in the `products` array.
-3. Below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) article for some help, or even better, look at the {{anch("Converting between strings and arrays")}} section of this article.
+3. Below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) article for some help, or even better, look at the [Converting between strings and arrays](#converting_between_strings_and_arrays) section of this article.
 4. As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the [first strings article](/en-US/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
 5. There is a variable called `total` that is created and given a value of 0 at the top of the code. Inside the loop (below `// number 4`) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an [assignment operator](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators) to do this.
 6. We want you to change the line just below `// number 5` so that the `itemText` variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.
@@ -389,7 +389,7 @@ for (const product of products) {
   const name = subArray[0];
   const price = Number(subArray[1]);
   total += price;
-  const itemText = \`\$\{name} — $\$\{price}\`;
+  const itemText = \`\${name} — $\${price}\`;
 
   const listItem = document.createElement('li');
   listItem.textContent = itemText;
@@ -421,11 +421,11 @@ textarea.onkeydown = (event) => {
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -654,11 +654,11 @@ textarea.onkeydown = (event) => {
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();

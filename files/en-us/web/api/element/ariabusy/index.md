@@ -1,6 +1,7 @@
 ---
 title: Element.ariaBusy
 slug: Web/API/Element/ariaBusy
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,16 +16,9 @@ browser-compat: api.Element.ariaBusy
 
 The **`ariaBusy`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
 
-## Syntax
+## Value
 
-```js
-var ariaBusy = element.ariaBusy;
-element.ariaBusy = ariaBusy
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is being updated.

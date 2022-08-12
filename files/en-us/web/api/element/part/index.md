@@ -1,6 +1,7 @@
 ---
 title: Element.part
 slug: Web/API/Element/part
+page-type: web-api-instance-property
 tags:
   - API
   - Element
@@ -16,11 +17,9 @@ represents the part identifier(s) of the element (i.e. set using the `part`
 attribute), returned as a {{domxref("DOMTokenList")}}. These can be used to style parts
 of a shadow DOM, via the {{cssxref("::part")}} pseudo-element.
 
-## Syntax
+## Value
 
-```js
-let elementPartList = element.part
-```
+A {{domxref("DOMTokenList")}} object.
 
 ## Examples
 
@@ -33,8 +32,8 @@ the correct styling is applied to the active tab when tabs are clicked.
 let tabs = [];
 let children = this.shadowRoot.children;
 
-for(let elem of children) {
-  if(elem.getAttribute('part')) {
+for (let elem of children) {
+  if (elem.getAttribute('part')) {
     tabs.push(elem);
   }
 }

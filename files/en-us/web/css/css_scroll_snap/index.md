@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-scroll-snap/
 ---
 {{CSSRef}}
 
@@ -51,9 +52,7 @@ tags:
 
 ## Specifications
 
-| Specification                                        | Status                                           | Comment            |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Scroll Snap Points")}} | {{Spec2("CSS Scroll Snap Points")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

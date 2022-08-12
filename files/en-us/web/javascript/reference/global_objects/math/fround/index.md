@@ -14,8 +14,7 @@ browser-compat: javascript.builtins.Math.fround
 {{JSRef}}
 
 The **`Math.fround()`** function returns the
-nearest {{interwiki("wikipedia", "Single-precision floating-point format", "32-bit
-  single precision")}} float representation of a {{jsxref("Number")}}.
+nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision floating-point format) float representation of a {{jsxref("Number")}}.
 
 {{EmbedInteractiveExample("pages/js/math-fround.html")}}
 
@@ -33,8 +32,7 @@ Math.fround(doubleFloat)
 
 ### Return value
 
-The nearest {{interwiki("wikipedia", "Single-precision floating-point format", "32-bit
-  single precision")}} float representation of the given number.
+The nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of the given number.
 
 ## Description
 
@@ -84,47 +82,12 @@ Math.fround(1.337) === 1.337; // false
 Math.fround(2 ** 150); // Infinity
 ```
 
-If the parameter cannot be converted to a number, or it is {{interwiki("wikipedia",
-  "NaN", "not-a-number")}} (`NaN`), `Math.fround()` will return
+If the parameter cannot be converted to a number, or it is [not-a-number](https://en.wikipedia.org/wiki/NaN) (`NaN`), `Math.fround()` will return
 `NaN`:
 
 ```js
 Math.fround('abc'); // NaN
 Math.fround(NaN); // NaN
-```
-
-## Polyfill
-
-This can be emulated with the following function, if {{jsxref("Float32Array")}} are
-supported:
-
-```js
-Math.fround = Math.fround || (function (array) {
-  return function(x) {
-    return array[0] = x, array[0];
-  };
-})(new Float32Array(1));
-```
-
-Supporting older browsers is slower, but also possible:
-
-```js
-if (!Math.fround) Math.fround = function(arg) {
-  arg = Number(arg);
-  // Return early for ±0 and NaN.
-  if (!arg) return arg;
-  var sign = arg < 0 ? -1 : 1;
-  if (sign < 0) arg = -arg;
-  // Compute the exponent (8 bits, signed).
-  var exp = Math.floor(Math.log(arg) / Math.LN2);
-  var powexp = Math.pow(2, Math.max(-126, Math.min(exp, 127)));
-  // Handle subnormals: leading digit is zero if exponent bits are all zero.
-  var leading = exp < -127 ? 0 : 1;
-  // Compute 23 bits of mantissa, inverted to round toward zero.
-  var mantissa = Math.round((leading - arg / powexp) * 0x800000);
-  if (mantissa <= -0x800000) return sign * Infinity;
-  return sign * powexp * (leading - mantissa / 0x800000);
-};
 ```
 
 ## Specifications

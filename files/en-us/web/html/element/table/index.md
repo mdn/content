@@ -298,20 +298,15 @@ In the below example, you can see such an example. We are attaching it to the \<
 ##### JavaScript
 
 ```js
-HTMLTableSectionElement.prototype.sort = function(cb){
-  Array
-    .prototype
-    .slice
-    .call(this.rows)
+HTMLTableSectionElement.prototype.sort = function (cb) {
+  Array.from(this.rows)
     .sort(cb)
-    .forEach((e,i,a)=>{
-      this.appendChild(this.removeChild(e));
-    },this);
+    .forEach((e) => this.appendChild(this.removeChild(e)));
 }
 
-document.querySelector('table').tBodies[0].sort(function(a, b){
-    return a.textContent.localeCompare(b.textContent);
-});
+document.querySelector('table').tBodies[0].sort(
+  (a, b) => a.textContent.localeCompare(b.textContent),
+);
 ```
 
 ##### Result
@@ -354,22 +349,25 @@ The following example adds an event handler to every `<th>` element of every `<t
 ##### JavaScript
 
 ```js
-for (let table of document.querySelectorAll('table')) {
-  for (let th of table.tHead.rows[0].cells) {
-    th.onclick = function(){
-      const tBody = table.tBodies[0];
-      const rows = tBody.rows;
-      for (let tr of rows) {
-        Array.prototype.slice.call(rows)
-          .sort(function(tr1, tr2){
-            const cellIndex = th.cellIndex;
-            return tr1.cells[cellIndex].textContent.localeCompare(tr2.cells[cellIndex].textContent);
-          })
-          .forEach(function(tr){
-            this.appendChild(this.removeChild(tr));
-          }, tBody);
-      }
-    }
+const allTables = document.querySelectorAll('table');
+
+for (const table of allTables) {
+  const tBody = table.tBodies[0];
+  const rows = Array.from(tBody.rows);
+  const headerCells = table.tHead.rows[0].cells;
+
+  for (const th of headerCells) {
+    const cellIndex = th.cellIndex;
+
+    th.addEventListener('click', () => {
+      rows.sort((tr1, tr2) => {
+        const tr1Text = tr1.cells[cellIndex].textContent;
+        const tr2Text = tr2.cells[cellIndex].textContent;
+        return tr1Text.localeCompare(tr2Text);
+      });
+
+      tBody.append(...rows);
+    });
   }
 }
 ```

@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse
 slug: Web/API/PaymentResponse
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -22,18 +23,18 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web
 - {{domxref('PaymentResponse.details')}} {{readonlyinline}} {{securecontext_inline}}
   - : Returns a JSON-serializable object that provides a payment method specific message used by the merchant to process the transaction and determine successful fund transfer. The contents of the object depend on the payment method being used. Developers need to consult whomever controls the URL for the expected shape of the details object.
 - {{domxref('PaymentResponse.methodName')}} {{readonlyinline}} {{securecontext_inline}}
-  - : Returns the payment method identifier for the payment method that the user selected, for example, Visa, Mastercard, Paypal, etc..
-- {{domxref('PaymentResponse.payerEmail')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+  - : Returns the payment method identifier for the payment method that the user selected, for example, Visa, Mastercard, Paypal, etc.
+- {{domxref('PaymentResponse.payerEmail')}} {{readonlyinline}} {{securecontext_inline}} {{deprecated_inline}}
   - : Returns the email address supplied by the user. This option is only present when the `requestPayerEmail` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
-- {{domxref('PaymentResponse.payerName')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+- {{domxref('PaymentResponse.payerName')}} {{readonlyinline}} {{securecontext_inline}} {{deprecated_inline}}
   - : Returns the name supplied by the user. This option is only present when the `requestPayerName` option is set to true in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
-- {{domxref('PaymentResponse.payerPhone')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+- {{domxref('PaymentResponse.payerPhone')}} {{readonlyinline}} {{securecontext_inline}} {{deprecated_inline}}
   - : Returns the phone number supplied by the user. This option is only present when the `requestPayerPhone` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
 - {{domxref('PaymentResponse.requestId')}} {{readonlyinline}} {{securecontext_inline}}
   - : Returns the identifier of the {{domxref('PaymentRequest')}} that produced the current response. This is the same value supplied in the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor by `details.id`.
-- {{domxref('PaymentResponse.shippingAddress')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+- {{domxref('PaymentResponse.shippingAddress')}} {{readonlyinline}} {{securecontext_inline}} {{deprecated_inline}}
   - : Returns the shipping Address supplied by the user. This option is only present when the `requestShipping` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
-- {{domxref('PaymentResponse.shippingOption')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+- {{domxref('PaymentResponse.shippingOption')}} {{readonlyinline}} {{securecontext_inline}} {{deprecated_inline}}
   - : Returns the ID attribute of the shipping option selected by the user. This option is only present when the `requestShipping` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
 
 ## Methods
@@ -47,9 +48,8 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web
 
 Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`payerdetailchange`](/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event){{securecontext_inline}}{{deprecated_inline}}
+- [`payerdetailchange`](/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event) {{securecontext_inline}} {{deprecated_inline}}
   - : Fired during a retry when the user makes changes to their personal information while filling out a payment request form. Allows the developer to revalidate any requested user data (e.g., the phone number or the email address) if it changes.
-    Also available via the [`onpayerdetailchange`](/en-US/docs/Web/API/PaymentResponse/onpayerdetailchange) property.
 
 ## Specifications
 

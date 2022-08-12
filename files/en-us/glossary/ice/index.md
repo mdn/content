@@ -21,5 +21,5 @@ The framework algorithm looks for the lowest-latency path for connecting the two
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API), the principal web-related protocol which uses ICE
 - [WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
-- {{rfc("5245")}}, the IETF specification for ICE
+- {{rfc("8445")}}, the IETF specification for ICE
 - {{domxref("RTCIceCandidate")}}, the interface representing a ICE candidate

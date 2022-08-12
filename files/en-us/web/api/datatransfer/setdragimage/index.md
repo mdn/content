@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.setDragImage()
 slug: Web/API/DataTransfer/setDragImage
+page-type: web-api-instance-method
 tags:
   - API
   - H5 DnD
@@ -13,7 +14,7 @@ browser-compat: api.DataTransfer.setDragImage
 {{APIRef("HTML Drag and Drop API")}}
 
 When a drag occurs, a translucent image is generated from the drag target (the element
-the {{event("dragstart")}} event is fired at), and follows the mouse pointer during the
+the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired at), and follows the mouse pointer during the
 drag. This image is created automatically, so you do not need to create it yourself.
 However, if a custom image is desired, the
 **`DataTransfer.setDragImage()`** method can be used to set the
@@ -25,17 +26,17 @@ appear relative to the mouse pointer. These coordinates define the offset into t
 where the mouse cursor should be. For instance, to display the image so that the pointer
 is at its center, use values that are half the width and height of the image.
 
-This method must be called in the {{event("dragstart")}} event handler.
+This method must be called in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event handler.
 
 ## Syntax
 
 ```js
-void dataTransfer.setDragImage(img | element, xOffset, yOffset);
+setDragImage(imgElement, xOffset, yOffset)
 ```
 
-### Arguments
+### Parameters
 
-- _img |_ element
+- `imgElement`
 
   - : An image {{domxref("Element")}} element to use for the drag feedback image.
 
@@ -46,16 +47,16 @@ void dataTransfer.setDragImage(img | element, xOffset, yOffset);
 
     Note: If the {{domxref("Element")}} is an existing {{domxref("HTMLElement")}} it needs to be visible in the viewport in order to be shown as a drag feedback image. Alternatively, you can create a new DOM element that might be off-screen specifically for this purpose.
 
-- _xOffset_
+- `xOffset`
   - : A `long` indicating the horizontal offset within the image.
-- _yOffset_
+- `yOffset`
   - : A `long` indicating the vertical offset within the image.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example shows how to use the `setDragImage()` method. Note the example
 refers to an image file named `example.gif`. If that file is present, it will
@@ -64,7 +65,7 @@ default drag image.
 
 [demo](https://codepen.io/webgeeker/full/KBzrxE/)
 
-```js
+```html
 <!DOCTYPE html>
 <html lang=en>
 <title>Example of DataTransfer.setDragImage()</title>
@@ -90,7 +91,7 @@ function dragstart_handler(ev) {
  // Create an image and use it for the drag image
  // NOTE: change "example.gif" to an existing image or the image will not
  // be created and the default drag image will be used.
- var img = new Image();
+ const img = new Image();
  img.src = 'example.gif';
  ev.dataTransfer.setDragImage(img, 10, 10);
 }
@@ -104,7 +105,7 @@ function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  // Get the data, which is the id of the drop target
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
 }
 </script>

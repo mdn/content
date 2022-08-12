@@ -1,9 +1,9 @@
 ---
 title: Selection.anchorNode
 slug: Web/API/Selection/anchorNode
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Property
   - Read-only
@@ -11,7 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.anchorNode
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.anchorNode`** read-only property returns the
 {{domxref("Node")}} in which the selection begins.
@@ -22,11 +22,9 @@ be visualized by holding the Shift key and pressing the arrow keys on your keybo
 selection's anchor does not move, but the selection's focus, the other end of the
 selection, does move.
 
-## Syntax
+## Value
 
-```js
-node = sel.anchorNode
-```
+A {{domxref("Node")}} object.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: SVGGradientElement
 slug: Web/API/SVGGradientElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

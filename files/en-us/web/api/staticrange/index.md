@@ -1,6 +1,7 @@
 ---
 title: StaticRange
 slug: Web/API/StaticRange
+page-type: web-api-interface
 tags:
   - API
   - Content Range
@@ -42,11 +43,6 @@ _The properties below are inherited from its parent interface, {{domxref("Abstra
   - : Returns the DOM {{domxref("Node")}} which contains the starting point of the range (which is in turn identified by `startOffset`.
 - {{domxref("StaticRange.startOffset")}} {{ReadOnlyInline}}
   - : Returns an integer value indicating the offset into the node specified by `startContainer` at which the first character of the range is located.
-
-## Methods
-
-- {{domxref("StaticRange.toRange()")}}
-  - : Returns a new {{domxref("Range")}} object which describes the same range as the source `StaticRange`, but is "live" with values that change to reflect changes in the contents of the DOM tree.
 
 ## Usage notes
 

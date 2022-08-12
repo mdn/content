@@ -6,6 +6,7 @@ tags:
   - Accessibility
   - Meter
   - Web Development
+spec-urls: https://www.w3.org/TR/wai-aria-1.2/#meter
 ---
 The `meter` role is used to identify an element being used as a meter.
 
@@ -19,6 +20,28 @@ Each element with `role="meter"` must also have one of the following:
 
 - An [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute.
 - An [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute pointing to an element with text that describes the meter.
+
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `meter`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `meter` element as it is a role that does not support semantic children.
+
+For example, consider the following `meter` element, which contains a heading.
+
+```html
+<div role="meter"><h3>Title of my meter</h3></div>
+```
+
+Because descendants of `meter` are presentational, the following code is equivalent:
+
+```html
+<div role="meter"><h3 role="presentation">Title of my meter</h3></div>
+```
+
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree).:
+
+```html
+<div role="meter">Title of my meter</div>
+```
 
 ### Associated ARIA roles, states, and properties
 
@@ -49,7 +72,7 @@ An example of a meter using `role="meter"`:
        y="0"
        width="100%"
        height="100%"
-       fill="currentColor"></rect>
+       fill="currentcolor"></rect>
   </svg>
 </div>
 ```
@@ -58,13 +81,16 @@ In the above scenario, when the `aria-valuenow` value updates, the width of the 
 
 ## Specifications
 
-| Specification                                            | Status                       |
-| -------------------------------------------------------- | ---------------------------- |
-| {{SpecName("ARIA 1.2","#meter","meter")}} | {{Spec2('ARIA 1.2')}} |
+{{Specifications}}
 
 ## See also
 
 - {{HTMLElement('meter')}}
 - {{HTMLElement('progress')}}
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA
+          roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+  </ol>
+</section>

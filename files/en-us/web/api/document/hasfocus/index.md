@@ -1,6 +1,7 @@
 ---
 title: Document.hasFocus()
 slug: Web/API/Document/hasFocus
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -23,15 +24,19 @@ active element in a document has focus.
 ## Syntax
 
 ```js
-var focused = document.hasFocus();
+hasFocus()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 `false` if the active element in the document has no focus;
 `true` if the active element in the document has focus.
 
-## Example
+## Examples
 
 This example checks whether the document has focus every 300 milliseconds. To test the
 functionality of `hasFocus()`, click on the button to open a new window, and
@@ -48,14 +53,13 @@ try switching between the two pages.
 
 ```js
 function checkPageFocus() {
-  let body = document.querySelector('body');
-  let log = document.getElementById('log');
+  const body = document.querySelector('body');
+  const log = document.getElementById('log');
 
   if (document.hasFocus()) {
     log.textContent = 'This document has the focus.';
     body.style.background = '#fff';
-  }
-  else {
+  } else {
     log.textContent = 'This document does not have the focus.';
     body.style.background = '#ccc';
   }
@@ -71,7 +75,7 @@ setInterval(checkPageFocus, 300);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -83,5 +87,4 @@ setInterval(checkPageFocus, 300);
 
 ## See also
 
-- [Using
-  the Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)
+- [Using the Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)

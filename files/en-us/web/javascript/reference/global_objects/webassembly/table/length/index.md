@@ -22,18 +22,22 @@ of elements in the table.
 ### Using length
 
 The following example creates a new WebAssembly Table instance with an initial size of
-2 and a maximum size of 10.
+2 and a maximum size of 10:
 
 ```js
-var table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });
+const table = new WebAssembly.Table({
+  element: "anyfunc",
+  initial: 2,
+  maximum: 10,
+});
 ```
 
-You can then grow the table by 1 with the following:
+Grow the table by 1 using `WebAssembly.grow()`:
 
 ```js
-console.log(table.length);   // "2"
-console.log(table.grow(1));  // "2"
-console.log(table.length);   // "3"
+console.log(table.length);   // 2
+table.grow(1);
+console.log(table.length);   // 3
 ```
 
 ## Specifications
@@ -48,5 +52,4 @@ console.log(table.length);   // "3"
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

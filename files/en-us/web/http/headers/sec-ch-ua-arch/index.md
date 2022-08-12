@@ -42,7 +42,7 @@ Sec-CH-UA-Arch: <arch>
 ### Directives
 
 - `<arch>`
-  - : A string indicating the underlying platform architecture, such as: `"x86"`, `"ARM"`.
+  - : A string indicating the underlying platform architecture, such as: `"x86"`, `"ARM"`, `"[arm64-v8a, armeabi-v7a, armeabi]"`.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.requestsSent
 slug: Web/API/RTCIceCandidatePairStats/requestsSent
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity
@@ -24,13 +25,7 @@ The {{domxref("RTCIceCandidatePairStats")}} dictionary's
 {{Glossary("STUN")}} connectivity check requests that have been sent so far on the
 connection described by this pair of candidates.
 
-## Syntax
-
-```js
-requestsSent = rtcIceCandidatePairStats.requestsSent;
-```
-
-### Value
+## Value
 
 An integer value which specifies the number of STUN connectivity requests that have
 been sent to date on the connection described by this pair of {{Glossary("ICE")}}
@@ -40,7 +35,7 @@ candidates.
 > retransmissions. If a request had to be repeated due to network issues, it will be
 > counted multiple times here. This differs from
 > {{domxref("RTCIceCandidatePairStats.requestsReceived", "requestsReceived")}}, which
-> _does_ include retransmisions.
+> _does_ include retransmissions.
 
 ## Specifications
 

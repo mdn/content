@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removeContext = browser.contextualIdentities.remove(
+let removeContext = browser.contextualIdentities.remove(
   cookieStoreId                  // string
 )
 ```

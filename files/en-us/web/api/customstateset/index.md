@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet
 slug: Web/API/CustomStateSet
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -10,7 +11,7 @@ browser-compat: api.CustomStateSet
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`CustomStateSet`** interface of the {{domxref('Document_Object_Model','','',' ')}} stores a list of possible states for a custom element to be in, and allows states to be added and removed from the set.
+The **`CustomStateSet`** interface of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) stores a list of possible states for a custom element to be in, and allows states to be added and removed from the set.
 
 ## Description
 
@@ -57,14 +58,16 @@ The following function adds and removes the state `--checked` to a `CustomStateS
 The state of the element can be accessed from CSS using the custom state pseudo-class `--checked`.
 
 ```js
-set checked(flag) {
-  if (flag) {
-    this._internals.states.add('--checked');
-  } else {
-    this._internals.states.delete('--checked');
-  }
+class MyCustomElement extends HTMLElement {
+  set checked(flag) {
+    if (flag) {
+      this._internals.states.add('--checked');
+    } else {
+      this._internals.states.delete('--checked');
+    }
 
-  console.log(this._internals.states.has('--checked'));
+    console.log(this._internals.states.has('--checked'));
+  }
 }
 ```
 

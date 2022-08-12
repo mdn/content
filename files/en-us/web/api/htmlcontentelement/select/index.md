@@ -1,6 +1,7 @@
 ---
 title: HTMLContentElement.select
 slug: Web/API/HTMLContentElement/select
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -13,17 +14,15 @@ browser-compat: api.HTMLContentElement.select
 {{ APIRef("Web Components") }}{{Deprecated_header}}
 
 The **`HTMLContentElement.select`** property reflects the
-`select` attribute. It is a {{domxref("DOMString")}} containing a
+`select` attribute. It is a string containing a
 space-separated list of CSS selectors that select the content to insert in place of the
 \<content> element.
 
-## Syntax
+## Value
 
-```js
-object.select = "CSSselector CSSselector ...";
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 // Select <h1> elements and elements with class="error"

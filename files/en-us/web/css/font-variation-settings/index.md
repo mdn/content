@@ -28,6 +28,7 @@ font-variation-settings: "XHGT" 0.7;
 font-variation-settings: inherit;
 font-variation-settings: initial;
 font-variation-settings: revert;
+font-variation-settings: revert-layer;
 font-variation-settings: unset;
 ```
 
@@ -126,5 +127,5 @@ The following live example's CSS can be edited to allow you to play with font sl
 ## See also
 
 - [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
-- [OpenType Font Variations Overview](https://docs.microsoft.com/typography/opentype/spec/otvaroverview)
-- [OpenType Design-Variation Axis Tag Registry](https://docs.microsoft.com/typography/opentype/spec/dvaraxisreg)
+- [OpenType Font Variations Overview](https://docs.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
+- [OpenType Design-Variation Axis Tag Registry](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg)

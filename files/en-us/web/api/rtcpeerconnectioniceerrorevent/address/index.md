@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnectionIceErrorEvent.address
 slug: Web/API/RTCPeerConnectionIceErrorEvent/address
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -23,15 +24,9 @@ The {{domxref("RTCPeerConnectionIceErrorEvent")}} property
 being used to communicate with the {{Glossary("STUN")}} or {{Glossary("TURN")}} server
 during negotiations. The error which occurred involved this address.
 
-## Syntax
+## Value
 
-```js
-let address = rtcPeerConnectionIceErrorEvent.address;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which specifies the local IP address of the network
+A string which specifies the local IP address of the network
 connection to the ICE server with which negotiations were occurring when the error
 occurred. This address identifies the network interface on the local device which is
 being used to attempt to establish the connection to the remote peer.
@@ -39,7 +34,7 @@ being used to attempt to establish the connection to the remote peer.
 This can be useful on multi-homed systems—devices with more than one network
 connection—to determine which network interface is being used. For example, on a mobile
 phone, there are typically at least two network interfaces available: the cellular
-connection and a WiFi connection.
+connection and a Wi-Fi connection.
 
 If the local IP address isn't exposed as part of a local candidate, the value of
 `address` is `null`.

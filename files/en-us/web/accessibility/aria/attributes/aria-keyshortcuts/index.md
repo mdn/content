@@ -1,19 +1,22 @@
 ---
 title: 'aria-keyshortcuts'
 slug: Web/Accessibility/ARIA/Attributes/aria-keyshortcuts
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-keyshortcuts
+spec-urls:
+  - https://w3c.github.io/aria/#aria-keyshortcuts
+  - https://w3c.github.io/aria-practices/#kbd_shortcuts
 ---
 
 The global `aria-keyshortcuts` attribute indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 
 ## Description
 
-A keyboard shortcut is a series of one or several keys that tells software to perform a pre-programmed action. Keyboard shortcuts enable keyboard users to invoke commands using the keyboard that would otherwise require accessing a menu or using touch or a mouse.The `aria-keyshortcuts` property defines the keyboard keys that have been implemented to activate or give focus to the element on which the attribute is set.
+A keyboard shortcut is a series of one or several keys that tells software to perform a pre-programmed action. Keyboard shortcuts enable keyboard users to invoke commands using the keyboard that would otherwise require accessing a menu or using touch or a mouse. The `aria-keyshortcuts` property defines the keyboard keys that have been implemented to activate or give focus to the element on which the attribute is set.
 
 The `aria-keyshortcuts` attribute exposes the existence of the shortcut to assistive technologies so the presence of the shortcut can be communicated to its users. Like all ARIA attributes, it has no effect on the functionality of the page; the keyboard behavior must be added via JavaScript event handlers.
 
@@ -36,13 +39,13 @@ aria-keyshortcuts="alt+shift+p control+f"
 aria-keyshortcuts="Meta+C Meta+Shift+C"
 ```
 
-Modifier keys are keys that don't have any impact when used on their own. They are written as "Alt", "Control", "Shift", "Meta" (Command key on Mac), or "AltGraph" (Option key on Mac).  
+Modifier keys are keys that don't have any impact when used on their own. They are written as "Alt", "Control", "Shift", "Meta" (Command key on Mac), or "AltGraph" (Option key on Mac).
 
 Non-modifier keys are keys that have impact when used alone, be that printing a character, moving focus, or otherwise creating a keyboard event when used. Non-modifiers that print a single character include characters like `P`, `z` and `.`.
 
 Since the plus sign is used in writing key combinations, it is written as `plus` if used as the non-modifier. Other written-out non-modifiers include white space characters `Space`, `Tab`, and `Enter`, and all characters that result in actions, like `ArrowUp`, `PageUp`, and `Escape`.
 
-If you want to use a character that might cause problems, like a a double quote character within double quotes, escape the character: `Control+&#39;`.
+If you want to use a character that might cause problems, like a double quote character within double quotes, escape the character: `Control+&#39;`.
 
 Modifier keys must be listed first in each key combination. Possible key combinations include `Control+P` or `Shift+Space` and `Q`. If the full shortcut requires all three of these combinations in order, it would be written as `aria-keyshortcuts="Control+P Shift+Space Q"`.  When a key combination includes more than one modifier key, the order of the modifiers doesn't matter, but they all must come first, before the non-modifier.
 
@@ -70,13 +73,13 @@ In trying to improve the accessibility of your sites and applications, there are
 
 #### Don't override browser, assistive technology, or operating system shortcuts
 
-When implementing keyboard shortcuts, make sure you don't create shortcuts that are already being used by the browser, assistive technology, or operating system, unless they are used for the same thing. For example, `"Control+P"` is used by most user-agents to initiate print functionality. Generally a web application should not create a "Control+P" shortcut as it will usurp browser functionality. There are exceptions. Web appliations where printing is common, like email applications or Google Docs, usurping the browser's `"Control+P"` printing functionality for an application specific print flow would be expected.
+When implementing keyboard shortcuts, make sure you don't create shortcuts that are already being used by the browser, assistive technology, or operating system, unless they are used for the same thing. For example, `"Control+P"` is used by most user-agents to initiate print functionality. Generally a web application should not create a "Control+P" shortcut as it will usurp browser functionality. There are exceptions. Web applications where printing is common, like email applications or Google Docs, usurping the browser's `"Control+P"` printing functionality for an application specific print flow would be expected.
 
 Unless you're creating an HTML version of a productivity application, you should likely avoid implementing keyboard shortcut.  While overriding an operating system or browser keyboard shortcut can be annoying for non-assistive technology users, if you override a screen reader's keyboard functionality you can completely shut down access for the assistive technology user. If you must create keyboard shortcuts, avoid single letter keyboard shortcuts and common screen reader keyboard shortcuts.
 
 #### Consider language and keyboard differences
 
-Take into account the diversity of available keyboards and the various keyboard language preferences. Modifier keys are often used to create language specific common punctuation symbols and number characters. For example, numbers, when the keyboard language preference is set to French, use the Control key.
+Take into account the diversity of available keyboards and the various keyboard language preferences. Modifier keys are often used to create language specific common punctuation symbols and number characters. For example, numbers, when the keyboard language preference is set to French (France), use the Shift key.
 
 #### **Don't** use HTML instead
 
@@ -92,7 +95,7 @@ In this example, we ensured the presence of the shortcut was known to sited user
 
 While the goal of the `accesskey` attribute matches the intention of `aria-keyshortcuts` and to do so natively, `accesskey` is rife with issues. Because of these issues, it is generally advised not to use accesskeys for most general-purpose websites and web apps.
 
-In addition to poor browser support, the same concerns arise for `accesskey` as exist for `aria-keyshortcuts`:  
+In addition to poor browser support, the same concerns arise for `accesskey` as exist for `aria-keyshortcuts`:
 
 - An accesskey value can conflict with a system or browser keyboard shortcut, or assistive technology functionality.
 - Certain key values may not be present on certain keyboards, especially when internationalization is a concern. So adapting to specific languages could cause further problems.
@@ -115,9 +118,9 @@ In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt
 ## ARIAMixin API
 
 - {{domxref("Element.ariaKeyShortcuts")}}
-  - : The  [`ariaKeyShortcuts`](/en-US/docs/Web/API/Element/ariaKeyShortcuts) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
+  - : The [`ariaKeyShortcuts`](/en-US/docs/Web/API/Element/ariaKeyShortcuts) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
 - {{domxref("ElementInternals.ariaKeyShortcuts")}}
-  - : The  [`ariaKeyShortcuts`](/en-US/docs/Web/API/ElementInternals/ariaKeyShortcuts) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
+  - : The [`ariaKeyShortcuts`](/en-US/docs/Web/API/ElementInternals/ariaKeyShortcuts) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
 
 ## Associated roles
 
@@ -125,10 +128,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-keyshortcuts","ARIA: aria-keyshortcuts Attribute")}}  | {{Spec2('ARIA')}} |
-| {{SpecName("ARIA Authoring Practices 1.2","#kbd_shortcuts","keyboard shortcuts")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## See Also
 

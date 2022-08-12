@@ -64,18 +64,18 @@ _No change._
 
 ### XUL
 
-- Added the new {{XULAttr("fullscreenbutton")}} attribute to the {{XULElem("window")}} element; setting this to `true` adds a button to the window's chrome to enable full screen mode.
+- Added the new `fullscreenbutton` attribute to the `<window>` element; setting this to `true` adds a button to the window's chrome to enable full screen mode.
 
 ### Interfaces
 
-- The {{interface("nsILocalFile")}} interface has been merged into {{interface("nsIFile")}} ([bug 682360](https://bugzilla.mozilla.org/show_bug.cgi?id=682360)).
-- The methods in {{interface("nsIPlacesImportExportService")}} for importing bookmarks have all been removed in favor of the [`BookmarkHTMLUtils.jsm`](/en-US/docs/JavaScript_code_modules/BookmarkHTMLUtils.jsm) JavaScript code module.
-- The {{interface("nsIDOMGeoPositionAddress")}} interface has been removed.
-- The `getItemGUID`, `setItemGUID` and `getItemIdForGUID` methods have been removed from {{interface("nsINavBookmarksService")}} ({{bug("715355")}}).
+- The `nsILocalFile` interface has been merged into `nsIFile` ([bug 682360](https://bugzilla.mozilla.org/show_bug.cgi?id=682360)).
+- The methods in `nsIPlacesImportExportService` for importing bookmarks have all been removed in favor of the [`BookmarkHTMLUtils.jsm`](/en-US/docs/JavaScript_code_modules/BookmarkHTMLUtils.jsm) JavaScript code module.
+- The `nsIDOMGeoPositionAddress` interface has been removed.
+- The `getItemGUID`, `setItemGUID` and `getItemIdForGUID` methods have been removed from `nsINavBookmarksService` ({{bug("715355")}}).
 
 ### Spellchecking
 
-- Dictionary names are now parsed as full [BCP 47](https://datatracker.ietf.org/doc/html/bcp47) language tags ([bug 730209](https://bugzilla.mozilla.org/show_bug.cgi?id=730209), [bug 741842](https://bugzilla.mozilla.org/show_bug.cgi?id=741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.
+- Dictionary names are now parsed as full [BCP 47](https://www.rfc-editor.org/info/bcp47) language tags ([bug 730209](https://bugzilla.mozilla.org/show_bug.cgi?id=730209), [bug 741842](https://bugzilla.mozilla.org/show_bug.cgi?id=741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.
 
 ## See also
 

@@ -29,7 +29,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var downloading = browser.downloads.download(
+let downloading = browser.downloads.download(
   options                   // object
 )
 ```
@@ -40,28 +40,28 @@ var downloading = browser.downloads.download(
 
   - : An `object` specifying what file you wish to download, and any other preferences you wish to set concerning the download. It can contain the following properties:
 
-    - `allowHttpErrors`{{optional_inline}}
+    - `allowHttpErrors` {{optional_inline}}
 
       - : A `boolean` flag that enables downloads to continue even if they encounter HTTP errors. Using this flag, for example, enables the download of server error pages. Default value `false`. When set to:
 
         - `false`, the download is canceled when it encounters an HTTP error.
         - `true`, the download continues when an HTTP error is encountered and the HTTP server error is not reported. However, if the download fails due to file-related, network-related, user-related, or other error, that error is reported.
 
-    - `body`{{optional_inline}}
+    - `body` {{optional_inline}}
       - : A `string` representing the post body of the request.
-    - `conflictAction`{{optional_inline}}
+    - `conflictAction` {{optional_inline}}
       - : A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).
-    - `cookieStoreId`{{optional_inline}}
+    - `cookieStoreId` {{optional_inline}}
       - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
-    - `filename`{{optional_inline}}
+    - `filename` {{optional_inline}}
       - : A `string` representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, path components that start and/or end with a dot (.), and paths containing back-references (`../`) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.
-    - `headers`{{optional_inline}}
+    - `headers` {{optional_inline}}
       - : If the URL uses the HTTP or HTTPS protocols, an `array` of `objects` representing additional HTTP headers to send with the request. Each header is represented as a dictionary object containing the keys `name` and either `value` or `binaryValue`. The headers that are forbidden by `XMLHttpRequest` and `fetch` cannot be specified, however, Firefox 70 and later enables the use of the `Referer` header. Attempting to use a forbidden header throws an error.
-    - `incognito`{{optional_inline}}
+    - `incognito` {{optional_inline}}
       - : A `boolean`: if present and set to true, then associate this download with a private browsing session. This means that it will only appear in the download manager for any private windows that are currently open.
-    - `method`{{optional_inline}}
+    - `method` {{optional_inline}}
       - : A `string` representing the HTTP method to use if the `url` uses the HTTP\[S] protocol. This may be either "GET" or "POST".
-    - `saveAs`{{optional_inline}}
+    - `saveAs` {{optional_inline}}
 
       - : A `boolean` that specifies whether to provide a file chooser dialog to allow the user to select a filename (`true`), or not (`false`).
 
@@ -95,9 +95,9 @@ function onFailed(error) {
   console.log(`Download failed: ${error}`);
 }
 
-var downloadUrl = "https://example.org/image.png";
+let downloadUrl = "https://example.org/image.png";
 
-var downloading = browser.downloads.download({
+let downloading = browser.downloads.download({
   url : downloadUrl,
   filename : 'my-image-again.png',
   conflictAction : 'uniquify'
@@ -108,7 +108,7 @@ downloading.then(onStartedDownload, onFailed);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-download) API.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

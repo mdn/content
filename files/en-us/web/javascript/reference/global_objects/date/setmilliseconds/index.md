@@ -42,7 +42,7 @@ number of seconds is incremented by 1, and 5 is used for the milliseconds.
 ### Using setMilliseconds()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setMilliseconds(100);
 ```
 

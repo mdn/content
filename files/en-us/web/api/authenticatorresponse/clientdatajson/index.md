@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorResponse.clientDataJSON
 slug: Web/API/AuthenticatorResponse/clientDataJSON
+page-type: web-api-instance-property
 tags:
   - API
   - AuthenticatorResponse
@@ -21,14 +22,7 @@ child objects of `AuthenticatorResponse`, specifically
 {{domxref("AuthenticatorAttestationResponse")}} or
 {{domxref("AuthenticatorAssertionResponse")}}.
 
-## Syntax
-
-```js
-var arrayBuffer = AuthenticatorAttestationResponse.clientDataJSON;
-var arrayBuffer = AuthenticatorAssertionResponse.clientDataJSON;
-```
-
-### Value
+## Value
 
 An {{jsxref("ArrayBuffer")}}.
 
@@ -48,18 +42,17 @@ After the `clientDataJSON` object is converted from an
     {{domxref("PublicKeyCredentialCreationOptions.challenge")}}.
 - `origin`
   - : The fully qualified origin of the requester which has been given by the
-    client/browser to the authenticator. We should expect the [relying party's
-    id](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId) to be a suffix of this value.
+    client/browser to the authenticator. We should expect the _relying party's
+    id_ to be a suffix of this value.
 - `tokenBindingId` {{optional_inline}}
 
-  - : An object describing the state of [the
-    token binding protocol](https://datatracker.ietf.org/doc/html/rfc8471) for the communication with the relying party. It has
+  - : An object describing the state of [the token binding protocol](https://datatracker.ietf.org/doc/html/rfc8471) for the communication with the relying party. It has
     two properties:
 
     - `status`: A string which is either `"supported"` which
       indicates the client support token binding but did not negotiate with the relying
       party or `"present"` when token binding was used already
-    - `id`: A {{domxref("DOMString")}} which is the [base64url](/en-US/docs/Glossary/Base64)
+    - `id`: A string which is the [base64url](/en-US/docs/Glossary/Base64)
       encoding of the token binding ID which was used for the communication.
 
     Should this property be absent, it would indicate that the client does not support
@@ -73,8 +66,8 @@ function arrayBufferToStr(buf) {
 }
 
 // pk is a PublicKeyCredential that is the result of a create() or get() Promise
-var clientDataStr = arrayBufferToStr(pk.clientDataJSON);
-var clientDataObj = JSON.parse(clientDataStr);
+const clientDataStr = arrayBufferToStr(pk.clientDataJSON);
+const clientDataObj = JSON.parse(clientDataStr);
 
 console.log(clientDataObj.type);      // "webauthn.create" or "webauthn.get"
 console.log(clientDataObj.challenge); // base64 encoded String containing the original challenge

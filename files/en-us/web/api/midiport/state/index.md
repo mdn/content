@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.state
 slug: Web/API/MIDIPort/state
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,15 +14,9 @@ browser-compat: api.MIDIPort.state
 
 The **`state`** read-only property of the {{domxref("MIDIPort")}} interface returns the state of the port.
 
-## Syntax
+## Value
 
-```js
-let state = MIDIPort.state;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the state of the port, one of:
+A string containing the state of the port, one of:
 
 - `"disconnected"`
   - : The device that this `MIDIPort` represents is disconnected from the system.

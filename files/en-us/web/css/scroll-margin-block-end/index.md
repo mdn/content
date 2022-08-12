@@ -3,7 +3,11 @@ title: scroll-margin-block-end
 slug: Web/CSS/scroll-margin-block-end
 tags:
   - CSS
+  - CSS Property
+  - Reference
+  - Web
   - recipe:css-property
+  - scroll-margin-block
   - scroll-margin-block-end
 browser-compat: css.properties.scroll-margin-block-end
 ---
@@ -24,6 +28,7 @@ scroll-margin-block-end: 1em;
 scroll-margin-block-end: inherit;
 scroll-margin-block-end: initial;
 scroll-margin-block-end: revert;
+scroll-margin-block-end: revert-layer;
 scroll-margin-block-end: unset;
 ```
 

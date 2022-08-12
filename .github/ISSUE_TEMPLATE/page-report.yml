@@ -1,0 +1,65 @@
+name: "[via MDN pages only]"
+description: Issue filed via "Report a problem with this content on GitHub" link on MDN pages.
+labels: ["via page report", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Before you start
+
+        **Want to change this page yourself?** This content is open source!
+        ↩ Go back and use the _Edit on GitHub_ link on the page.
+
+        **Is your issue about the browser compatibility table?**
+        ↩ Go back and use the _Report problems with this compatibility data on GitHub_ link on the page.
+
+        **Need help with a browser?**
+        🙋 To get help with [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), or another browser, check the browser's support site.
+
+        ---
+  - type: input
+    id: mdn-url
+    attributes:
+      label: MDN URL
+      description: Set automatically. Do not modify.
+    validations:
+      required: true
+  # -- BEGIN fields that correspond to `content-bug.yml` —-
+  # If you edit these fields, edit them in both files!
+  - type: input
+    id: section
+    attributes:
+      label: What specific section or headline is this issue about?
+  - type: textarea
+    id: problem
+    attributes:
+      label: What information was incorrect, unhelpful, or incomplete?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to see?
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Do you have any supporting links, references, or citations?
+      description: Link to information that helps us confirm your issue.
+  - type: textarea
+    id: more-info
+    attributes:
+      label: Do you have anything more you want to share?
+      description: For example, steps to reproduce a bug, screenshots, screen recordings, or sample code
+  # -- END fields that correspond to `content-bug.yml` —-
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        You're finished! The following fields are prefilled. Please click **Submit new issue**.
+  - type: textarea
+    id: metadata
+    attributes:
+      label: MDN metadata
+      description: Set automatically. Do not modify.

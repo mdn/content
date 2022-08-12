@@ -1,6 +1,7 @@
 ---
 title: Background audio processing using AudioWorklet
 slug: Web/API/Web_Audio_API/Using_AudioWorklet
+page-type: guide
 tags:
   - API
   - Audio
@@ -14,7 +15,7 @@ tags:
   - WebAudio API
   - sound
 ---
-{{APIRef("Web Audio API")}}
+{{DefaultAPISidebar("Web Audio API")}}
 
 This article explains how to create an audio worklet processor and use it in a Web Audio application.
 
@@ -208,7 +209,7 @@ async function createMyAudioProcessor() {
       audioContext = new AudioContext();
       await audioContext.resume();
       await audioContext.audioWorklet.addModule("module-url/module.js");
-    } catch(e) {
+    } catch (e) {
       return null;
     }
   }
@@ -250,7 +251,7 @@ static get parameterDescriptors() {
     },
     {
       name: "frequency",
-      defaultValue: 440.0;
+      defaultValue: 440.0,
       minValue: 27.5,
       maxValue: 4186.009
     }
@@ -325,4 +326,4 @@ let currentGain = gainParam.value;
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Enter Audio Worklet](https://developers.google.com/web/updates/2017/12/audio-worklet) (Google Developers blog)
+- [Enter Audio Worklet](https://developer.chrome.com/blog/audio-worklet/) (Chrome Developers blog)

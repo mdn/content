@@ -1,6 +1,7 @@
 ---
 title: AnimationEffect.getComputedTiming()
 slug: Web/API/AnimationEffect/getComputedTiming
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -27,14 +28,14 @@ Although many of the attributes of the returned object are common to the object 
 ## Syntax
 
 ```js
-var currentTimeValues = animation.getComputedTiming();
+getComputedTiming()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 An object which contains the following properties:
 

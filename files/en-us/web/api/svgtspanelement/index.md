@@ -1,6 +1,7 @@
 ---
 title: SVGTSpanElement
 slug: Web/API/SVGTSpanElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

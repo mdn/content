@@ -23,7 +23,7 @@ To get the most out of this series of articles you should already have basic to 
 
 ## Lesson details
 
-All the lessons — and the different versions of the [MDN Breakout game](https://breakout.enclavegames.com/lesson10.html) we are building together — are [available on GitHub](https://github.com/end3r/Canvas-gamedev-workshop):
+All the lessons — and the different versions of the [MDN Breakout game](https://breakout.enclavegames.com/lesson10.html) we are building together — are [available on GitHub](https://github.com/end3r/Gamedev-Canvas-workshop):
 
 1. [Create the Canvas and draw on it](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
 2. [Move the ball](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)

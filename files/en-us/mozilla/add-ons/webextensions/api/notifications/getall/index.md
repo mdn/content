@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingAll = browser.notifications.getAll()
+let gettingAll = browser.notifications.getAll()
 ```
 
 ### Parameters
@@ -44,11 +44,11 @@ Note that you can define an ID for a notification explicitly by passing it into 
 This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification. It uses getAll() to figure out whether the notification is being shown:
 
 ```js
-var myNotification = "my-notification";
+let myNotification = "my-notification";
 
 function toggleAlarm(all) {
   let ids = Object.keys(all);
-  if (ids.indexOf(myNotification) != -1) {
+  if (ids.includes(myNotification)) {
     browser.notifications.clear(myNotification);
   } else {
     console.log("showing")
@@ -83,6 +83,6 @@ browser.notifications.getAll().then(logNotifications);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

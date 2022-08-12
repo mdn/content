@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.changeType()
 slug: Web/API/SourceBuffer/changeType
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -30,22 +31,22 @@ constraints change.
 ## Syntax
 
 ```js
-sourceBuffer.changeType(type);
+changeType(type)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} specifying the MIME type that future buffers will conform
+  - : A string specifying the MIME type that future buffers will conform
     to.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the specified string is empty, rather than indicating a valid MIME type.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("SourceBuffer")}} is not a member of the parent media source's
@@ -63,7 +64,7 @@ None.
 If the parent {{domxref("MediaSource")}} is in its `"ended"`
 {{domxref("MediaSource.readyState", "readyState")}}, calling `changeType()`
 will transition the media source to the `"open"` `readyState` and
-fire a simple event named {{event("sourceopen")}} at the parent media source.
+fire a simple event named {{domxref("MediaSource.sourceopen_event", "sourceopen")}} at the parent media source.
 
 ## Browser compatibility
 

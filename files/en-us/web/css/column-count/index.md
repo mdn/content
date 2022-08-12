@@ -31,6 +31,7 @@ column-count: 3;
 column-count: inherit;
 column-count: initial;
 column-count: revert;
+column-count: revert-layer;
 column-count: unset;
 ```
 

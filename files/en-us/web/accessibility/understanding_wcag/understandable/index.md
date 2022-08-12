@@ -1,6 +1,6 @@
 ---
 title: Understandable
-slug: Web/Accessibility/Understanding_WCAG/Understandable 
+slug: Web/Accessibility/Understanding_WCAG/Understandable
 tags:
   - Accessibility
   - HELP
@@ -199,7 +199,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         </p>
       </td>
       <td>
-        {{domxref("GlobalEventHandlers.onfocus")}} contains some
+        {{domxref("Element.focus_event")}} contains some
         useful information. Also see
         <a
           href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in"
@@ -224,7 +224,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         </p>
       </td>
       <td>
-        {{domxref("GlobalEventHandlers.oninput")}} is useful here.
+        {{domxref("HTMLElement.oninput")}} is useful here.
       </td>
     </tr>
     <tr>
@@ -486,7 +486,7 @@ This guideline centers around helping users enter correct information when requi
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
   1. [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
   2. [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)

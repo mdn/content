@@ -30,6 +30,7 @@ will-change: left, top;        /* Example of two <animatable-feature> */
 will-change: inherit;
 will-change: initial;
 will-change: revert;
+will-change: revert-layer;
 will-change: unset;
 ```
 
@@ -82,7 +83,7 @@ It may be appropriate to include `will-change` in your style sheet for an applic
 This is an example showing how to apply the `will-change` property through scripting, which is probably what you should be doing in most cases.
 
 ```js
-var el = document.getElementById('element');
+const el = document.getElementById('element');
 
 // Set will-change when the element is hovered
 el.addEventListener('mouseenter', hintBrowser);

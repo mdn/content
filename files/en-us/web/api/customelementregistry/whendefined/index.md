@@ -1,6 +1,7 @@
 ---
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
+page-type: web-api-instance-method
 tags:
   - API
   - CustomElementRegistry
@@ -20,42 +21,19 @@ resolves when the named element is defined.
 ## Syntax
 
 ```js
-customElements.whenDefined(name): Promise<CustomElementConstructor>;
+whenDefined(name)
 ```
 
 ### Parameters
 
-- name
-  - : Custom element name.
+- `name`
+  - : The name of the custom element.
 
 ### Return value
 
-A {{jsxref("Promise")}} that will be fulfilled with the [custom element](/en-US/docs/Web/API/Window/customElements)'s constructor when a [custom element](/en-US/docs/Web/API/Window/customElements) becomes defined with the
-given name. (If such a [custom element](/en-US/docs/Web/API/Window/customElements) is already defined, the
-returned promise will be immediately fulfilled.)
+A {{jsxref("Promise")}} that fulfills with the [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements)'s constructor when a custom element becomes defined with the given name. If a custom element has already been defined with the name, the promise will immediately fulfill.
 
-### Exceptions
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>SyntaxError</code></td>
-      <td>
-        If the provided name is not a
-        <a
-          href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name"
-          >valid custom element name</a
-        >, the promise rejects with a <code>SyntaxError</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+The promise is rejected with a `SyntaxError` {{domxref("DOMException")}} if the name is not a [valid custom element name]((https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)).
 
 ## Examples
 
@@ -65,11 +43,11 @@ content is ready to display.
 
 ```html
 <nav id="menu-container">
-  <div class="menu-placeholder">Loading...</div>
+  <div class="menu-placeholder">Loading…</div>
   <nav-menu>
     <menu-item>Item 1</menu-item>
     <menu-item>Item 2</menu-item>
-     ...
+     …
     <menu-item>Item N</menu-item>
   </nav-menu>
 </nav>
@@ -83,7 +61,7 @@ const undefinedElements = container.querySelectorAll(':not(:defined)');
 
 async function removePlaceholder(){
   const promises = [...undefinedElements].map(
-    button => customElements.whenDefined(button.localName)
+    (button) => customElements.whenDefined(button.localName)
   );
 
   // Wait for all the children to be upgraded

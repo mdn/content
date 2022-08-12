@@ -1,6 +1,7 @@
 ---
 title: CSSMathInvert.value
 slug: Web/API/CSSMathInvert/value
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -16,13 +17,7 @@ browser-compat: api.CSSMathInvert.value
 The CSSMathInvert.value read-only property of the
 {{domxref("CSSMathInvert")}} interface returns a {{domxref('CSSNumericValue')}} object.
 
-## Syntax
-
-```js
-var cssNumericValue = CSSMathInvert.value;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericValue')}}.
 

@@ -28,9 +28,13 @@ The **`-moz-box-flex`** and **`-webkit-box-flex`** [CSS](/en-US/docs/Web/CSS) pr
 /* Global values */
 -moz-box-flex: inherit;
 -moz-box-flex: initial;
+-moz-box-flex: revert;
+-moz-box-flex: revert-layer;
 -moz-box-flex: unset;
 -webkit-box-flex: inherit;
 -webkit-box-flex: initial;
+-webkit-box-flex: revert;
+-webkit-box-flex: revert-layer;
 -webkit-box-flex: unset;
 ```
 
@@ -68,8 +72,9 @@ A trick to make all content elements in a containing box the same size, is to gi
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8">
     <title>-moz-box-flex example</title>
     <style>
       div.example {

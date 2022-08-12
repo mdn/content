@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-inline
   - border-inline-end
@@ -40,6 +39,7 @@ border-inline-end: medium dashed blue;
 border-inline-end: inherit;
 border-inline-end: initial;
 border-inline-end: revert;
+border-inline-end: revert-layer;
 border-inline-end: unset;
 ```
 

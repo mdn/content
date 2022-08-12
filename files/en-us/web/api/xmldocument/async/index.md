@@ -1,6 +1,7 @@
 ---
 title: XMLDocument.async
 slug: Web/API/XMLDocument/async
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -19,14 +20,18 @@ browser-compat: api.XMLDocument.async
 
 (It has been possible to load documents synchronously since 1.4 alpha.)
 
-## Example
+## Value
+
+A boolean.
+
+## Examples
 
 ```js
 function loadXMLData(e) {
   alert(new XMLSerializer().serializeToString(e.target)); // Gives querydata.xml contents as string
 }
 
-var xmlDoc = document.implementation.createDocument("", "test", null);
+const xmlDoc = document.implementation.createDocument("", "test", null);
 
 xmlDoc.async = false;
 xmlDoc.onload = loadXMLData;

@@ -1,6 +1,7 @@
 ---
 title: 'Document: fullscreenchange event'
 slug: Web/API/Document/fullscreenchange_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -25,9 +26,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('fullscreenchange', event => { });
+addEventListener('fullscreenchange', (event) => { });
 
-onfullscreenchange = event => { };
+onfullscreenchange = (event) => { };
 ```
 
 ## Event type
@@ -56,7 +57,7 @@ What that means to the example code is that, if an element is currently in fulls
 ### JavaScript
 
 ```js
-function fullscreenchanged = (event) => {
+function fullscreenchanged (event) {
   // document.fullscreenElement will point to the element that
   // is in fullscreen mode if there is one. If there isn't one,
   // the value of the property is null.

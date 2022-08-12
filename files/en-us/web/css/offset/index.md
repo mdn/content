@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Motion Path
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-shorthand-property
 browser-compat: css.properties.offset
@@ -54,6 +53,7 @@ offset: url(arc.svg) 30deg / 50px 100px;
 offset: inherit;
 offset: initial;
 offset: revert;
+offset: revert-layer;
 offset: unset;
 ```
 

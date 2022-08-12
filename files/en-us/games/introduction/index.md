@@ -11,7 +11,7 @@ tags:
 
 The modern web has quickly become a viable platform not only for creating stunning, high quality games, but also for distributing those games.
 
-The range of games that can be created is on par with desktop and native OS counterparts. With modern Web technologies and a recent browser, it's entirely possible to make stunning, top-notch games for the Web. And we're not talking about simple card games or multi-player social games that have in the olden days been done using Flash®. We're talking about kick-ass 3D action shooters, RPGs, and more. Thanks to massive performance improvements in [JavaScript](/en-US/docs/Web/JavaScript) just-in-time compiler technology and new APIs, you can build games that run in the browser (or on [HTML5](/en-US/docs/Web/Guide/HTML/HTML5)-powered devices like those based on [Firefox OS](/en-US/docs/Glossary/Firefox_OS)) without making compromises.
+The range of games that can be created is on par with desktop and native OS counterparts. With modern Web technologies and a recent browser, it's entirely possible to make stunning, top-notch games for the Web. And we're not talking about simple card games or multi-player social games that have in the olden days been done using Flash®. We're talking about 3D action shooters, RPGs, and more. Thanks to massive performance improvements in [JavaScript](/en-US/docs/Web/JavaScript) just-in-time compiler technology and new APIs, you can build games that run in the browser (or on [HTML5](/en-US/docs/Glossary/HTML5)-powered devices) without making compromises.
 
 ## The HTML5 game platform
 
@@ -54,7 +54,7 @@ You can truly think of the Web as a better target platform for your game. As we 
       <td><strong>Language</strong></td>
       <td>
         <a href="/en-US/docs/Web/JavaScript">JavaScript</a> (or C/C++ using
-        <a href="https://github.com/kripken/emscripten/wiki">Emscripten</a> to
+        <a href="https://github.com/emscripten-core/emscripten/wiki">Emscripten</a> to
         compile to JavaScript)
       </td>
     </tr>
@@ -91,7 +91,7 @@ As a game developer, whether you're an individual or a large game studio, you wa
 2. Marketing and discoverability are improved. You're not limited to promoting your app on someone else's app store. Instead, you can advertise and promote your game all over the Web as well as other media, taking advantage of the Web's inherent linkability and shareability to reach new customers.
 3. You have control where it matters: Payments. You don't have to hand over 30% of your revenues to someone else just because your game is in their ecosystem. Instead, charge what you want and use whatever payment processing service you like.
 4. Again with more control, you can update your game whenever you want. No waiting breathlessly for approval while someone hidden within another company decides whether or not your critical bug fix will ship today or tomorrow.
-5. Control your analytics! Instead of relying on someone else to make all the decisions about what analytics you need, you can collect your own -- or choose the third party that you like the best -- to gather information about your sales and your game's reach.
+5. Control your analytics! Instead of relying on someone else to make all the decisions about what analytics you need, you can collect your own — or choose the third party that you like the best — to gather information about your sales and your game's reach.
 6. You get to manage your customer relationship more closely, in your own way. No more having customer feedback filtered through an app store's limited mechanisms. Engage with your customers the way you want to, without a middleman.
 7. Your players can play your game anywhere, anytime. Because the Web is ubiquitous, your customers can check their game's status on their phones, tablets, their home laptops, their work desktops, or anything else.
 
@@ -110,7 +110,7 @@ For the tech folks, let's dig into the APIs the Web brings to the table that cat
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)
   - : A powerful data storage API for maintaining user data on their own computer or device. A great way to save game state and other information locally so it doesn't have to be downloaded every time it's needed. Also useful to help make your game playable even when the user isn't connected to the Web (such as when they're stuck on an airplane for hours on end).
 - [JavaScript](/en-US/docs/Web/JavaScript)
-  - : JavaScript, the programming language used on the Web, is blazing fast in modern browsers and getting faster all the time. Use its power to write the code for your game, or look at using technologies like [Emscripten](https://github.com/kripken/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/) to easily port your existing games.
+  - : JavaScript, the programming language used on the Web, is blazing fast in modern browsers and getting faster all the time. Use its power to write the code for your game, or look at using technologies like [Emscripten](https://github.com/emscripten-core/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/) to easily port your existing games.
 - [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)
   - : The Pointer Lock API lets you lock the mouse or other pointing device within your game's interface so that instead of absolute cursor positioning you receive coordinate deltas that give you more precise measurements of what the user is doing, and prevent the user from accidentally sending their input somewhere else, thereby missing important action.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)

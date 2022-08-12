@@ -38,6 +38,7 @@ background-repeat: no-repeat round;
 background-repeat: inherit;
 background-repeat: initial;
 background-repeat: revert;
+background-repeat: revert-layer;
 background-repeat: unset;
 ```
 

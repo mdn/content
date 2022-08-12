@@ -1,8 +1,21 @@
 ---
 title: 'AudioTrackList: removetrack event'
 slug: Web/API/AudioTrackList/removetrack_event
+page-type: web-api-event
 tags:
+  - API
+  - Audio
+  - AudioTrackList
   - Event
+  - HTML DOM
+  - Media
+  - Property
+  - Reference
+  - Removing Audio Tracks
+  - Removing Tracks
+  - remove
+  - removetrack
+  - track
 browser-compat: api.AudioTrackList.removetrack_event
 ---
 
@@ -10,32 +23,41 @@ browser-compat: api.AudioTrackList.removetrack_event
 
 The `removetrack` event is fired when a track is removed from an [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("TrackEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/AudioTrackList/onremovetrack"
-            >onremovetrack</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('removetrack', (event) => { })
+
+onremovetrack = (event) => { }
+```
+
+## Event type
+
+An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("TrackEvent")}}
+
+## Event properties
+
+_`TrackEvent` is based on {{domxref("Event")}}, so properties of `Event` are also available on `TrackEvent` objects._
+
+- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
+  - : The DOM track object the event is in reference to. If not `null`, this is always an object of one of the media track types: {{domxref("AudioTrack")}}, {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}).
+
+## Description
+
+### Trigger
+
+The {{domxref("AudioTrackList/removetrack_event", "removetrack")}} event is called whenever a track is removed from the media
+element whose audio tracks are represented by the `AudioTrackList` object.
+
+This event is not cancelable and does not bubble.
+
+### Use cases
+
+You can use this event to react to a new audio track becoming unavailable. You may want to update your UI elements to disallow for user selection of the removed audio track, for example.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: Notification.data
 slug: Web/API/Notification/data
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -21,13 +22,7 @@ data, as specified in the `data` option of the
 The notification's data can be any arbitrary data that you want associated with the
 notification.
 
-## Syntax
-
-```js
-var data = Notification.data;
-```
-
-### Value
+## Value
 
 A structured clone.
 
@@ -38,12 +33,12 @@ created, then the notification is fired using the `Notification()`
 constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my body?',
   data: 'I like peas.'
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.data) // should return 'I like peas.'
 ```
@@ -58,5 +53,4 @@ console.log(n.data) // should return 'I like peas.'
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

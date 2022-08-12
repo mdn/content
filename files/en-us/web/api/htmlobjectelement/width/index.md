@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.width
 slug: Web/API/HTMLObjectElement/width
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -14,20 +15,13 @@ browser-compat: api.HTMLObjectElement.width
 {{APIRef("HTML DOM")}}
 
 The **`width`** property of the
-{{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
+{{domxref("HTMLObjectElement")}} interface returns a string that
 reflects the {{htmlattrxref("width", "object")}} HTML attribute, specifying the
 displayed width of the resource in CSS pixels.
 
-## Syntax
+## Value
 
-```js
-var String = HTMLObjectElement.width;
-HTMLObjectElement.width = String;
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

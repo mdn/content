@@ -15,7 +15,7 @@ equality (`==`).
 
 ## Message
 
-```js
+```
 Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
 ```
 
@@ -58,7 +58,7 @@ Otherwise, you probably meant to use a comparison operator (e.g. `==` or
 `===`):
 
 ```js
-if (x == y) {
+if (x === y) {
   // do the right thing
 }
 ```
@@ -66,5 +66,4 @@ if (x == y) {
 ## See also
 
 - [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Equality
-  operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators)
+- [Equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators)

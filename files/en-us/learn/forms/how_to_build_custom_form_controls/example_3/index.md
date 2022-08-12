@@ -179,7 +179,7 @@ NodeList.prototype.forEach = function (callback) {
 function deactivateSelect(select) {
   if (!select.classList.contains('active')) return;
 
-  var optList = select.querySelector('.optList');
+  const optList = select.querySelector('.optList');
 
   optList.classList.add('hidden');
   select.classList.remove('active');
@@ -193,15 +193,15 @@ function activeSelect(select, selectList) {
 };
 
 function toggleOptList(select, show) {
-  var optList = select.querySelector('.optList');
+  const optList = select.querySelector('.optList');
 
   optList.classList.toggle('hidden');
 }
 
 function highlightOption(select, option) {
-  var optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll('.option');
 
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.classList.remove('highlight');
   });
 
@@ -212,40 +212,40 @@ function highlightOption(select, option) {
 // Event binding //
 // ------------- //
 
-window.addEventListener("load", function () {
-  var form = document.querySelector('form');
+window.addEventListener("load", () => {
+  const form = document.querySelector('form');
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
 });
 
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener('load', () => {
+  const selectList = document.querySelectorAll('.select');
 
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll('.option');
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll('.option');
 
-    optionList.forEach(function (option) {
-      option.addEventListener('mouseover', function () {
+    optionList.forEach((option) => {
+      option.addEventListener('mouseover', () => {
         highlightOption(select, option);
       });
     });
 
-    select.addEventListener('click', function (event) {
+    select.addEventListener('click', (event) => {
       toggleOptList(select);
     },  false);
 
-    select.addEventListener('focus', function (event) {
+    select.addEventListener('focus', (event) => {
       activeSelect(select, selectList);
     });
 
-    select.addEventListener('blur', function (event) {
+    select.addEventListener('blur', (event) => {
       deactivateSelect(select);
     });
 
-    select.addEventListener('keyup', function (event) {
+    select.addEventListener('keyup', (event) => {
       if (event.keyCode === 27) {
-         deactivateSelect(select);
+        deactivateSelect(select);
       }
     });
   });

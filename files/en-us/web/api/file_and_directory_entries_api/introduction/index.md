@@ -1,6 +1,7 @@
 ---
 title: Introduction to the File and Directory Entries API
 slug: Web/API/File_and_Directory_Entries_API/Introduction
+page-type: guide
 tags:
   - API
   - Beginner
@@ -37,7 +38,7 @@ The File and Directory Entries API is an important API for the following reasons
 - It lets users of your web app directly edit a binary file that's in their local file directory.
 - It provides a storage API that is already familiar to your users, who are used to working with file systems.
 
-For examples of features you can create with this app, see the [Sample use cases](#sample-use-cases) section.
+For examples of features you can create with this app, see the [Sample use cases](#sample_use_cases) section.
 
 ### The File and Directory Entries API and other storage APIs
 
@@ -45,7 +46,7 @@ The File and Directory Entries API is an alternative to other storage APIs such 
 
 - The File and Directory Entries API offers client-side storage for use cases that are not addressed by databases. If you want to have large mutable chunks of data, the File and Directory Entries API is a much more efficient storage solution than a database.
 - While Firefox supports blob storage for IndexedDB, Chrome currently does not (Chrome is still implementing support for blob storage in IndexedDB). If you are targeting Chrome for your app and you want to store blobs, the File and Directory Entries API and App Cache are your only choices. However, AppCache storage isn't locally mutable, and doesn't allow for fine-grained client-side management.
-- In Chrome, you can use the File and Directory Entries API with the [Quota Management API](https://code.google.com/chrome/whitepapers/storage.html), which lets you ask for more storage and manage your storage quota.
+- In Chrome, you can use the File and Directory Entries API with the [Quota Management API](https://developer.chrome.com/docs/apps/offline_storage/), which lets you ask for more storage and manage your storage quota.
 
 ### Sample use cases
 
@@ -103,7 +104,7 @@ Use temporary storage for caching and persistent storage for data that you want 
 
 To prevent a web app from using up the entire disk, browsers might impose a quota for each app and allocate storage among web apps.
 
-How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML5 Offline Storage](https://code.google.com/chrome/whitepapers/storage.html).
+How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML5 Offline Storage](https://developer.chrome.com/docs/apps/offline_storage/).
 
 ### The File and Directory Entries API has asynchronous and synchronous versions
 
@@ -145,7 +146,7 @@ For security reasons, browsers impose restrictions on file access. If you ignore
 
 An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of file systems.
 
-The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in [http://www.example.com/app/](https://www.example.com/app/) can access files from [http://www.example.com/dir/](https://www.example.com/dir/), because they have the same origin, it cannot retrieve files from [http://www.example.com:8080/dir/](https://www.example.com:8080/dir/) (different port) or <https://www.example.com/dir/> (different protocol).
+The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in `http://www.example.com/app/` can access files from `http://www.example.com/dir/`, because they have the same origin, it cannot retrieve files from `http://www.example.com:8080/dir/` (different port) or `https://www.example.com/dir/` (different protocol).
 
 ### The File and Directory Entries API does not let you create and rename executable files
 
@@ -185,4 +186,4 @@ This section defines and explains terms used in the File and Directory Entries A
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Exploring the FileSystem APIs](https://www.html5rocks.com/en/tutorials/file/filesystem/) (HTML5 Rocks)
+- [Exploring the FileSystem APIs](https://web.dev/read-files/) (HTML5 Rocks)

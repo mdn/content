@@ -1,6 +1,7 @@
 ---
 title: FileReader.error
 slug: Web/API/FileReader/error
+page-type: web-api-instance-property
 tags:
   - API
   - File API
@@ -13,12 +14,6 @@ browser-compat: api.FileReader.error
 
 The {{domxref("FileReader")}} **`error`** property returns the
 error that occurred while reading the file.
-
-## Syntax
-
-```js
-var error = instanceOfFileReader.error
-```
 
 ## Value
 

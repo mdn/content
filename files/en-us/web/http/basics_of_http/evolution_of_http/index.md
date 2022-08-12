@@ -47,7 +47,7 @@ Unlike subsequent evolutions, there were no HTTP headers. This meant that only H
 HTTP/0.9 was very limited, but browsers and servers quickly made it more versatile:
 
 - Versioning information was sent within each request (`HTTP/1.0` was appended to the `GET` line).
-- A status code line was also sent at the beginning of a response. This allowed the browser itself recognize the success or failure of a request and adapt its behavior accordingly. For example, updating or using its local cache in a specific way.
+- A status code line was also sent at the beginning of a response. This allowed the browser itself to recognize the success or failure of a request and adapt its behavior accordingly. For example, updating or using its local cache in a specific way.
 - The concept of HTTP headers was introduced for both requests and responses. Metadata could be transmitted and the protocol became extremely flexible and extensible.
 - Documents other than plain HTML files could be transmitted thanks to the {{HTTPHeader("Content-Type")}} header.
 
@@ -181,7 +181,7 @@ The HTTP/2 protocol differs from HTTP/1.1 in a few ways:
 - It compresses headers. As these are often similar among a set of requests, this removes the duplication and overhead of data transmitted.
 - It allows a server to populate data in a client cache through a mechanism called the server push.
 
-Officially standardized in May 2015, HTTP/2 was incredibly successful. By July 2016, 8.7% of all websites used it (see [these stats](https://w3techs.com/technologies/details/ce-http2/all/all)), representing more than 68% of all requests (see [these statistics](https://www.keycdn.com/blog/http2-statistics/)). High-traffic websites showed the most rapid adoption in an effort to save on data transfer overhead and subsequent budgets.
+Officially standardized in May 2015, HTTP/2 was incredibly successful. By May 2022, 46.4% of all websites used it (see [these stats](https://w3techs.com/technologies/details/ce-http2)). High-traffic websites showed the most rapid adoption in an effort to save on data transfer overhead and subsequent budgets.
 
 This rapid adoption was likely because HTTP/2 didn't require changes to websites and applications. To use it, only an up-to-date server that communicated with a recent browser was necessary. Only a limited set of groups was needed to trigger adoption, and as legacy browser and server versions were renewed, usage was naturally increased, without significant work for web developers.
 

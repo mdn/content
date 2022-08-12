@@ -30,10 +30,7 @@ For more information, see the guide on [Using HTTP cookies](/en-US/docs/Web/HTTP
       <td>no</td>
     </tr>
     <tr>
-      <th scope="row">
-        <a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name"
-          >Forbidden response-header name</a>
-      </th>
+      <th scope="row">{{Glossary("Forbidden response header name")}}</th>
       <td>yes</td>
     </tr>
   </tbody>
@@ -66,7 +63,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     A cookie definition begins with a name-value pair.
 
     A `<cookie-name>` can contain any US-ASCII characters except for: the control character, space, or a tab.
-    It also must not contain a separator characters like the following: `( ) < > @ , ; : \ " / [ ] ? = { }`.
+    It also must not contain separator characters like the following: `( ) < > @ , ; : \ " / [ ] ? = { }`.
 
     A `<cookie-value>` can optionally be wrapped in double quotes and include any US-ASCII character excluding a control character, {{glossary("Whitespace")}}, double quotes, comma, semicolon, and backslash.
 
@@ -128,14 +125,14 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).
 - `SameSite=<samesite-value>` {{optional_inline}}
 
-  - : Controls whether or not a cookie is sent with cross-origin requests,
+  - : Controls whether or not a cookie is sent with cross-site requests,
     providing some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
 
     The possible attribute values are:
 
     - `Strict`
       - : means that the browser sends the cookie only for same-site requests, that is, requests originating from the same site that set the cookie.
-        If a request originates from a URL different from the current one, no cookies with the `SameSite=Strict` attribute are sent.
+        If a request originates from a different domain or scheme (even with the same domain), no cookies with the `SameSite=Strict` attribute are sent.
 
     - `Lax`
       - : means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).
@@ -224,7 +221,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
 - Starting with Chrome 52 and Firefox 52, insecure sites (`http:`) can't set cookies with the `Secure` attribute anymore.
 

@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest()
 slug: Web/API/PaymentRequest/PaymentRequest
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -21,7 +22,8 @@ process of generating, validating, and submitting a payment request.
 ## Syntax
 
 ```js
-var paymentRequest = new PaymentRequest(methodData, details, [options]);
+new PaymentRequest(methodData, details)
+new PaymentRequest(methodData, details, options)
 ```
 
 ### Parameters
@@ -36,7 +38,7 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
       - : For early implementations of the spec, this was a sequence of identifiers for
         payment methods that the merchant website accepts. Starting with more recent
         browsers, this parameter is more generic than credit cards, it is a single
-        {{domxref("DOMString")}}, and the meaning of the `data` parameter
+        string, and the meaning of the `data` parameter
         changes with the `supportedMethods`. For example, the Example Pay payment method
         is selected by specifying the string `https://example.com/pay` here.
     - `data`
@@ -117,11 +119,11 @@ The following example shows minimal functionality and focuses instead on showing
 complete context of instantiating a `PaymentRequest` object.
 
 ```js
-var supportedInstruments = [{
+const supportedInstruments = [{
  supportedMethods: 'https://example.com/pay'
 }];
 
-var details = {
+const details = {
   total: {label: 'Donation', amount: {currency: 'USD', value: '65.00'}},
   displayItems: [
     {
@@ -139,16 +141,16 @@ var details = {
   ]
 };
 
-var options = {requestShipping: true};
+const options = {requestShipping: true};
 
 try {
-  var request = new PaymentRequest(supportedInstruments, details, options);
+  const request = new PaymentRequest(supportedInstruments, details, options);
   // Add event listeners here.
   // Call show() to trigger the browser's payment flow.
-  request.show().then(function(instrumentResponse) {
+  request.show().then((instrumentResponse) => {
     // Do something with the response from the UI.
   })
-  .catch(function(err) {
+  .catch((err) => {
     // Do something with the error from request.show().
   });
 } catch (e) {

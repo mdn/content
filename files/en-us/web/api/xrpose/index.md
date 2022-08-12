@@ -1,6 +1,7 @@
 ---
 title: XRPose
 slug: Web/API/XRPose
+page-type: web-api-interface
 tags:
   - 3DoF
   - 6DoF

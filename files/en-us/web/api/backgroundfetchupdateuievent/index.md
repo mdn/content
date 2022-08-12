@@ -1,23 +1,25 @@
 ---
 title: BackgroundFetchUpdateUIEvent
 slug: Web/API/BackgroundFetchUpdateUIEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
   - Reference
   - BackgroundFetchUpdateUIEvent
+  - Experimental
 browser-compat: api.BackgroundFetchUpdateUIEvent
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`BackgroundFetchUpdateUIEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is an event type passed to {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchfail")}}, and provides a method for updating the title and icon of the app to inform a user of the success or failure of a background fetch.
+The **`BackgroundFetchUpdateUIEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is an event type for the {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} events, and provides a method for updating the title and icon of the app to inform a user of the success or failure of a background fetch.
 
 {{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}}
-  - : Creates a new `BackgroundFetchUIEvent` object. This constructor is not typically used, as the browser creates these objects itself and passed them to {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchfail")}}.
+- {{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}} {{Experimental_Inline}}
+  - : Creates a new `BackgroundFetchUIEvent` object. This constructor is not typically used, as the browser creates these objects itself for the {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} events.
 
 ## Properties
 
@@ -25,7 +27,7 @@ _This interface doesn't implement any specific properties, but inherits properti
 
 ## Methods
 
-- {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}}
+- {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}} {{Experimental_Inline}}
   - : Updates the title and icon in the user interface to show the status of a background fetch. Resolves with a {{jsxref("Promise")}}.
 
 ## Examples
@@ -36,7 +38,7 @@ In this example, the `backgroundfetchsuccess` event is listened for, indicating 
 addEventListener('backgroundfetchsuccess', (event) => {
   const bgFetch = event.registration;
 
-  event.waitUntil(async function() {
+  event.waitUntil((async () => {
     // Create/open a cache.
     const cache = await caches.open('downloads');
     // Get all the records.
@@ -52,7 +54,7 @@ addEventListener('backgroundfetchsuccess', (event) => {
 
     // Update the progress notification.
     event.updateUI({ title: 'Episode 5 ready to listen!' });
-  }());
+  })());
 });
 ```
 

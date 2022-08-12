@@ -44,6 +44,7 @@ offset-position: top right 10px;
 offset-position: inherit;
 offset-position: initial;
 offset-position: revert;
+offset-position: revert-layer;
 offset-position: unset;
 ```
 

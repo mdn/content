@@ -6,11 +6,10 @@ tags:
   - Glossary
 ---
 
-The **advance measure** of a glyph is its _advance width_ or _advance height_, whichever is in the inline axis of the element.
+The **advance measure** is the total space the glyph takes, either horizontally or vertically, depending on the current writing direction. It is equal to the distance traveled by the cursor, placed directly in front of, and then shifted behind, the character.
 
 This term is used in the definition of a number of CSS {{cssxref("&lt;length&gt;")}} units.
-For example, `ch` is the _advance measure_ of the "0" character in the given typeface.
-For a horizontal inline axis, this will be the width of the character.
+The _advance measure_ of unit `ch` is either width or height of character "0" in the given typeface, depending on whether horizontal or vertical axis is currently used. A similarly _advance measure_ of unit `ic` is width or height of character "水".
 
 ## See also
 

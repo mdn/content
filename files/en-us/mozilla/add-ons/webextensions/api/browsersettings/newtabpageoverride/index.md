@@ -27,7 +27,7 @@ Note that this is a read-only setting.
 Get the current value of the new tab URL:
 
 ```js
-browser.browserSettings.newTabPageOverride.get({}).then(result => {
+browser.browserSettings.newTabPageOverride.get({}).then((result) => {
   console.log(result.value);
 });
 ```

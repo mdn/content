@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-box/
 ---
 {{CSSRef}}
 
@@ -52,7 +53,7 @@ Margins surround the border edge of a box, and provide spacing between boxes.
 
 #### Properties controlling the paddings of a box
 
-Padding in inserted between the content edge and border edge of a box.
+Padding is inserted between the content edge and border edge of a box.
 
 - {{CSSxRef("padding")}}
 - {{CSSxRef("padding-bottom")}}
@@ -80,8 +81,4 @@ There are other properties that relate to the box model, that are defined elsewh
 
 ## Specifications
 
-| Specification                                | Status                       | Comment             |
-| -------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("CSS3 Box")}}             | {{Spec2("CSS3 Box")}} | Added `margin-trim` |
-| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}     |                     |
-| {{SpecName("CSS1")}}                 | {{Spec2("CSS1")}}     | Initial definition. |
+{{Specifications}}

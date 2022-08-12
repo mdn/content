@@ -1,6 +1,7 @@
 ---
 title: Element.ariaRowCount
 slug: Web/API/Element/ariaRowCount
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,16 +16,9 @@ browser-compat: api.Element.ariaRowCount
 
 The **`ariaRowCount`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
 
-## Syntax
+## Value
 
-```js
-var ariaRowCount = element.ariaRowCount;
-element.ariaRowCount = ariaRowCount
-```
-
-### Value
-
-A {{domxref("DOMString")}} which contains an integer.
+A string which contains an integer.
 
 ## Examples
 
@@ -75,4 +69,4 @@ console.log(el.ariaRowCount); // 101
 
 {{Compat}}
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

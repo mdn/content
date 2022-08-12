@@ -1,6 +1,7 @@
 ---
 title: Element.scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -14,14 +15,12 @@ browser-compat: api.Element.scrollLeftMax
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`Element.scrollLeftMax`** read-only property returns a
-{{jsxref("Number")}} representing the maximum left scroll offset possible for the
+number representing the maximum left scroll offset possible for the
 element.
 
-## Syntax
+## Value
 
-```js
-var pxl = element.scrollLeftMax;
-```
+A number.
 
 ## Specifications
 

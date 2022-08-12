@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope.location
 slug: Web/API/WorkerGlobalScope/location
+page-type: web-api-instance-property
 tags:
   - API
   - Location
@@ -14,17 +15,11 @@ browser-compat: api.WorkerGlobalScope.location
 
 The **`location`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 
-## Syntax
-
-```js
-var locationObj = self.location;
-```
-
-### Value
+## Value
 
 A {{domxref("WorkerLocation")}} object.
 
-## Example
+## Examples
 
 If you called the following in a document served at `localhost:8000`
 
@@ -34,7 +29,7 @@ console.log(location);
 
 inside a worker (which would basically be the equivalent of `self.console.log(self.location);`, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you will get a {{domxref("WorkerLocation")}} object written to the console — something like the following:
 
-```js
+```
 WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", hostname: "localhost"…}
   hash: ""
   host: "localhost:8000"

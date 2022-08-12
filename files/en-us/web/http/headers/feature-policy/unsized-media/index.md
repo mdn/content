@@ -38,4 +38,4 @@ The default value for unsized-media is `'*'`, that is unsized media elements are
 - {{HTTPHeader('Feature-Policy')}} header
 - [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
 - [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- [Proposal](https://github.com/w3c/webappsec-feature-policy/blob/master/policies/unsized-media.md)
+- [Proposal](https://github.com/w3c/webappsec-permissions-policy/blob/main/policies/unsized-media.md)

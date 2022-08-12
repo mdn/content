@@ -1,6 +1,7 @@
 ---
 title: AnimationTimeline.currentTime
 slug: Web/API/AnimationTimeline/currentTime
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -18,13 +19,7 @@ browser-compat: api.AnimationTimeline.currentTime
 
 The **`currentTime`** read-only property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("AnimationTimeline")}} interface returns the timeline's current time in milliseconds, or `null` if the timeline is inactive.
 
-## Syntax
-
-```js
-var currentTime = AnimationTimeline.currentTime;
-```
-
-### Value
+## Value
 
 A number representing the timeline's current time in milliseconds, or `null` if the timeline is inactive.
 
@@ -39,14 +34,14 @@ animationTimeline.currentTime;
 // 23.404
 // 24.192
 // 25.514
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 animationTimeline.currentTime;
 // 49.8
 // 50.6
 // 51.7
-// ...
+// …
 ```
 
 In Firefox, you can also enable `privacy.resistFingerprinting`; the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.priority
 slug: Web/API/RTCIceCandidate/priority
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -22,13 +23,7 @@ The **{{domxref("RTCIceCandidate")}}** interface's read-only **`priority`** prop
 The `priority` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
 You can't specify the value of `priority` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line, if it's formatted properly.
 
-## Syntax
-
-```js
-var priority = RTCIceCandidate.priority;
-```
-
-### Value
+## Value
 
 A long, unsigned integer value indicating the priority of the candidate according to the remote peer.
 The larger this value is, the more preferable the remote peer considers this candidate to be.
@@ -51,13 +46,13 @@ a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 The priority is the number after the protocol, so it's the fourth field in the candidate string.
 In this example, the priority is 2043278322.
 
-## Example
+## Examples
 
 This candidate examines the `priority` of the candidate and, if it's greater
 than the priority of a previously-seen candidate, remembers the candidate for later use.
 
 ```js
-var bestCandidate = {
+let bestCandidate = {
   candidate: "",
   sdpMid: null,
   sdpMLineIndex: null,
@@ -65,7 +60,7 @@ var bestCandidate = {
 };
 
 function handleCandidate(candidateString) {
-  var candidate = new RTCIceCandidate(candidateString);
+  const candidate = new RTCIceCandidate(candidateString);
 
   if (candidate.priority > bestCandidate.priority) {
     bestCandidate = candidate;

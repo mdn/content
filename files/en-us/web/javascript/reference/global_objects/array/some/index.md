@@ -23,35 +23,37 @@ function. It returns true if, in the array, it finds an element for which the pr
 
 ```js
 // Arrow function
-some((element) => { /* ... */ } )
-some((element, index) => { /* ... */ } )
-some((element, index, array) => { /* ... */ } )
+some((element) => { /* … */ } )
+some((element, index) => { /* … */ } )
+some((element, index, array) => { /* … */ } )
 
 // Callback function
 some(callbackFn)
 some(callbackFn, thisArg)
 
 // Inline callback function
-some(function(element) { /* ... */ })
-some(function(element, index) { /* ... */ })
-some(function(element, index, array){ /* ... */ })
-some(function(element, index, array) { /* ... */ }, thisArg)
+some(function(element) { /* … */ })
+some(function(element, index) { /* … */ })
+some(function(element, index, array){ /* … */ })
+some(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : A function to test for each element, taking three arguments:
+  - : A function to test for each element.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
+    - `array`
       - : The array `some()` was called upon.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`.
 
 ### Return value
@@ -77,8 +79,8 @@ If a `thisArg` parameter is provided to `some()`, it
 will be used as the callback's `this` value. Otherwise, the value
 {{jsxref("undefined")}} will be used as its `this` value. The
 `this` value ultimately observable by `callbackFn` is
-determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `some()` does not mutate the array on which it is called.
 
@@ -110,12 +112,12 @@ function isBiggerThan10(element, index, array) {
 
 ### Testing array elements using arrow functions
 
-[Arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
+[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+provide a shorter syntax for the same test.
 
 ```js
-[2, 5, 8, 1, 4].some(x => x > 10);  // false
-[12, 5, 8, 1, 4].some(x => x > 10); // true
+[2, 5, 8, 1, 4].some((x) => x > 10);  // false
+[12, 5, 8, 1, 4].some((x) => x > 10); // true
 ```
 
 ### Checking whether a value exists in an array
@@ -127,9 +129,7 @@ function returns `true` if the element exists in the array:
 const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
-  return arr.some(function(arrVal) {
-    return val === arrVal;
-  });
+  return arr.some((arrVal) => val === arrVal);
 }
 
 checkAvailability(fruits, 'kela');   // false
@@ -142,7 +142,7 @@ checkAvailability(fruits, 'banana'); // true
 const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
-  return arr.some(arrVal => val === arrVal);
+  return arr.some((arrVal) => val === arrVal);
 }
 
 checkAvailability(fruits, 'kela');   // false
@@ -155,15 +155,11 @@ checkAvailability(fruits, 'banana'); // true
 const TRUTHY_VALUES = [true, 'true', 1];
 
 function getBoolean(value) {
-  'use strict';
-
   if (typeof value === 'string') {
     value = value.toLowerCase().trim();
   }
 
-  return TRUTHY_VALUES.some(function(t) {
-    return t === value;
-  });
+  return TRUTHY_VALUES.some((t) => t === value);
 }
 
 getBoolean(false);   // false

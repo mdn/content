@@ -1,6 +1,7 @@
 ---
 title: UIEvent.which
 slug: Web/API/UIEvent/which
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.UIEvent.which
 ---
-{{ APIRef("DOM Events") }} {{Non-standard_header}}
+{{APIRef("UI Events")}} {{Non-standard_header}}
 
 The **`UIEvent.which`** read-only property of the {{domxref("UIEvent")}} interface returns a number that indicates which button was pressed on the mouse, or the numeric `keyCode` or the character code (`charCode`) of the key pressed on the keyboard.
 
@@ -37,14 +38,14 @@ In this case, the values are read from right to left.
 
 > **Note:** Consider {{domxref("MouseEvent.button")}} for new code.
 
-## Example
+## Examples
 
 ```html
 <html>
 <head>
 <title>charCode/keyCode/which example</title>
 
-<script type="text/javascript">
+<script>
 
 function showKeyPress(evt) {
 alert("onkeypress handler: \n"

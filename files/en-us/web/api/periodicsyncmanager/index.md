@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncManager
 slug: Web/API/PeriodicSyncManager
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -55,8 +56,8 @@ async function registerPeriodicNewsCheck() {
 This code checks to see if a Periodic Background Sync task with a given tag is registered.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
-  registration.periodicSync.getTags().then(tags => {
+navigator.serviceWorker.ready.then((registration) => {
+  registration.periodicSync.getTags().then((tags) => {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
   });
@@ -68,7 +69,7 @@ navigator.serviceWorker.ready.then(registration => {
 The following code removes a Periodic Background Sync task to stop articles syncing in the background.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
+navigator.serviceWorker.ready.then((registration) => {
   registration.periodicSync.unregister('get-latest-news');
 });
 ```

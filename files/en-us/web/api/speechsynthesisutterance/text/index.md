@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisUtterance.text
 slug: Web/API/SpeechSynthesisUtterance/text
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -20,38 +21,31 @@ The **`text`** property of the
 The text may be provided as plain text, or a well-formed [SSML](https://www.w3.org/TR/speech-synthesis/) document.
 The SSML tags will be stripped away by devices that don't support SSML.
 
-## Syntax
+## Value
 
-```js
-var myText = speechSynthesisUtteranceInstance.text;
-speechSynthesisUtteranceInstance.text = 'Hello I am speaking';
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the text to the synthesized.
+A string representing the text to the synthesized.
 The maximum length of the text that can be spoken in each utterance is 32,767 characters.
 
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector('form');
+const inputTxt = document.querySelector('input');
+const voiceSelect = document.querySelector('select');
 
-var voices = synth.getVoices();
+const voices = synth.getVoices();
 
-  ...
+// ...
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  for (let i = 0; i < voices.length ; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,15 +19,15 @@ attribute variable in a given {{domxref("WebGLProgram")}}.
 ## Syntax
 
 ```js
-GLint gl.getAttribLocation(program, name);
+getAttribLocation(program, name)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} containing the attribute variable.
-- name
-  - : A {{domxref("DOMString")}} specifying the name of the attribute variable whose
+- `name`
+  - : A string specifying the name of the attribute variable whose
     location to get.
 
 ### Return value

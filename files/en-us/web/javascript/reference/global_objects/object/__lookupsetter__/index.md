@@ -45,19 +45,19 @@ It is now possible to do this in a standardized way using
 ### Standard-compliant and non-standard ways to get a property setter
 
 ```js
-var obj = {
+const obj = {
   set foo(value) {
     this.bar = value;
   }
 };
 
 // Non-standard and deprecated way
-obj.__lookupSetter__('foo')
-// (function(value) { this.bar = value; })
+obj.__lookupSetter__('foo');
+// function foo(value)
 
 // Standard-compliant way
 Object.getOwnPropertyDescriptor(obj, 'foo').set;
-// (function(value) { this.bar = value; })
+// function foo(value)
 ```
 
 ## Specifications
@@ -77,5 +77,4 @@ Object.getOwnPropertyDescriptor(obj, 'foo').set;
   {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.prototype.__defineGetter__()")}}
 - {{jsxref("Object.prototype.__defineSetter__()")}}
-- [JS
-  Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)

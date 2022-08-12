@@ -1,6 +1,7 @@
 ---
 title: VTTCue.lineAlign
 slug: Web/API/VTTCue/lineAlign
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,16 +14,9 @@ browser-compat: api.VTTCue.lineAlign
 
 The **`lineAlign`** property of the {{domxref("VTTCue")}} interface represents the alignment of this VTT cue.
 
-## Syntax
+## Value
 
-```js
-let lineAlign = VTTCue.lineAlign;
-VTTCue.lineAlign = a;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing one of the following values:
+A string containing one of the following values:
 
 - `"start"`
   - : Start alignment.

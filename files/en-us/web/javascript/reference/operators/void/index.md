@@ -14,7 +14,7 @@ browser-compat: javascript.operators.void
 The **`void` operator** evaluates the given
 `expression` and then returns {{jsxref("undefined")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-voidoperator.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-voidoperator.html", "taller")}}
 
 ## Syntax
 
@@ -28,33 +28,31 @@ This operator allows evaluating expressions that produce a value into places whe
 expression that evaluates to {{jsxref("undefined")}} is desired.
 
 The `void` operator is often used merely to obtain the
-`undefined` primitive value, usually using "`void(0)`" (which is
-equivalent to "`void 0`"). In these cases, the global variable
+`undefined` primitive value, usually using `void(0)` (which is
+equivalent to `void 0`). In these cases, the global variable
 {{jsxref("undefined")}} can be used.
 
-It should be noted that [the
-precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) of the `void` operator should be taken into account and that
+It should be noted that [the precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+of the `void` operator should be taken into account and that
 parentheses can help clarify the resolution of the expression following the
 `void` operator:
 
 ```js
-void 2 == '2';   // (void 2) == '2', returns false
-void (2 == '2'); // void (2 == '2'), returns undefined
+void 2 === '2';   // (void 2) === '2', returns false
+void (2 === '2'); // void (2 === '2'), returns undefined
 ```
 
 ## Examples
 
 ### Immediately Invoked Function Expressions
 
-When using an [immediately-invoked function
-expression](/en-US/docs/Glossary/IIFE), `void` can be used to force the `function`
-keyword to be treated as an expression instead of a declaration.
+When using an [immediately-invoked function expression](/en-US/docs/Glossary/IIFE),
+`void` can be used to force the `function` keyword
+to be treated as an expression instead of a declaration.
 
 ```js
 void function iife() {
-
   console.log("Executed!");
-
 }();
 
 // Output: "Executed!"

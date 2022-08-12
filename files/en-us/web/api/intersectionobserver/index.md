@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver
 slug: Web/API/IntersectionObserver
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -18,7 +19,7 @@ When an `IntersectionObserver` is created, it's configured to watch for given ra
 
 ## Constructor
 
-- {{domxref("IntersectionObserver.IntersectionObserver()")}}
+- {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}
   - : Creates a new `IntersectionObserver` object which will execute a specified callback function when it detects that a target element's visibility has crossed one or more thresholds.
 
 ## Properties
@@ -44,7 +45,7 @@ When an `IntersectionObserver` is created, it's configured to watch for given ra
 ## Examples
 
 ```js
-var intersectionObserver = new IntersectionObserver(function(entries) {
+const intersectionObserver = new IntersectionObserver((entries) => {
   // If intersectionRatio is 0, the target is out of view
   // and we do not need to do anything.
   if (entries[0].intersectionRatio <= 0) return;

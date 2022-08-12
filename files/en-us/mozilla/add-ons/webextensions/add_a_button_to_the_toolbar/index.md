@@ -167,16 +167,15 @@ This is just a bit of styling for our popup.
 Next, create a "choose_page.js" file inside the "popup" directory, and give it these contents:
 
 ```js
-document.addEventListener("click", function(e) {
-  if (!e.target.classList.contains("page-choice")) {
+document.addEventListener("click", (event) => {
+  if (!event.target.classList.contains("page-choice")) {
     return;
   }
 
-  var chosenPage = "https://" + e.target.textContent;
+  const chosenPage = `https://${event.target.textContent}`;
   browser.tabs.create({
     url: chosenPage
   });
-
 });
 ```
 

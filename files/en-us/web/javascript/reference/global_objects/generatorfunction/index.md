@@ -12,49 +12,46 @@ browser-compat: javascript.builtins.GeneratorFunction
 ---
 {{JSRef}}
 
-The **`GeneratorFunction` constructor** creates a new
-{{jsxref("Statements/function*", "generator function", "", 1)}} object. In JavaScript,
-every generator function is actually a `GeneratorFunction` object.
-
-Note that `GeneratorFunction` is not a global object. It could be obtained
-by evaluating the following code.
+In JavaScript, every generator function is actually a `GeneratorFunction` object. There is no global object with the name `GeneratorFunction`, but you can create a `GeneratorFunction()` constructor using the following code:
 
 ```js
-Object.getPrototypeOf(function*(){}).constructor
+const GeneratorFunction = (function* () {}).constructor;
+
 ```
 
 ## Syntax
 
 ```js
-new Function(arg1, functionBody)
-new Function(arg1, arg2, functionBody)
-new Function(arg1, ... , argN, functionBody)
+new GeneratorFunction(functionBody)
+new GeneratorFunction(arg0, functionBody)
+new GeneratorFunction(arg0, arg1, functionBody)
+new GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
 
 ### Parameters
 
-- `arg1, arg2, ... argN`
+- `argN` {{optional_inline}}
 
   - : Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameter, optionally with a default), or a list of such strings separated with commas.
 
     As the parameters are parsed in the same way as function declarations, whitespace and comments are accepted. For example: `"x", "theValue = 42", "[a, b] /* numbers */"` — or `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` is also correct, though very confusing to read.)
 
 - `functionBody`
-  - : A string containing the JavaScript statements comprising the function definition.
+  - : A {{jsxref("String")}} containing the JavaScript statements comprising the function definition.
 
 ## Description
 
-{{jsxref("Statements/function*", "generator function")}} objects created with the
-`GeneratorFunction` constructor are parsed when the function is created. This
+{{jsxref("Statements/function*", "Generator function", "", "1")}} objects created with a
+constructor are parsed when the function is created. That
 is less efficient than declaring a generator function with a
 {{jsxref("Statements/function*", "function* expression")}} and calling it within your
 code, because such functions are parsed with the rest of the code.
 
-All arguments passed to the function are treated as the names of the identifiers of the
+All arguments passed to the function, except the last, are treated as the names of the identifiers of the
 parameters in the function to be created, in the order in which they are passed.
 
-> **Note:** {{jsxref("Statements/function*", "generator function")}}
-> created with the `GeneratorFunction` constructor do not create closures to
+> **Note:** {{jsxref("Statements/function*", "generator functions", "", "1")}}
+> created with a constructor do not create closures to
 > their creation contexts; they are always created in the global scope.
 >
 > When running them, they will only be able to access their own local variables and
@@ -64,17 +61,17 @@ parameters in the function to be created, in the order in which they are passed.
 > This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for
 > a generator function expression.
 
-Invoking the `GeneratorFunction` constructor as a function (without using
+Invoking a generator function constructor as a function (without using
 the `new` operator) has the same effect as invoking it as a constructor.
 
 ## Examples
 
-### Creating a generator function from a GeneratorFunction() constructor
+### Creating and using a GeneratorFunction() constructor
 
 ```js
-var GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor
-var g = new GeneratorFunction('a', 'yield a * 2');
-var iterator = g(10);
+const GeneratorFunction = (function* () {}).constructor;
+const g = new GeneratorFunction('a', 'yield a * 2');
+const iterator = g(10);
 console.log(iterator.next().value); // 20
 ```
 

@@ -97,34 +97,32 @@ The example loads using synchronous {{domxref("XMLHTTPRequest")}} both the .xsl 
 **Figure 6 : Example**
 
 ```js
-var xslStylesheet;
-var xsltProcessor = new XSLTProcessor();
-var myDOM;
+let xslStylesheet;
+const xsltProcessor = new XSLTProcessor();
+let myDOM;
 
-var xmlDoc;
+let xmlDoc;
 
-function Init(){
+function Init() {
 
-  // load the xslt file, example1.xsl
-  var myXMLHTTPRequest = new XMLHttpRequest();
+  // Load the xslt file, example1.xsl
+  let myXMLHTTPRequest = new XMLHttpRequest();
   myXMLHTTPRequest.open("GET", "example1.xsl", false);
   myXMLHTTPRequest.send(null);
 
   xslStylesheet = myXMLHTTPRequest.responseXML;
   xsltProcessor.importStylesheet(xslStylesheet);
 
-  // load the xml file, example1.xml
+  // Load the XML file, example1.xml
   myXMLHTTPRequest = new XMLHttpRequest();
   myXMLHTTPRequest.open("GET", "example1.xml", false);
   myXMLHTTPRequest.send(null);
 
   xmlDoc = myXMLHTTPRequest.responseXML;
 
-  var fragment = xsltProcessor.transformToFragment(xmlDoc, document);
-
-  document.getElementById("example").textContent = "";
-
+  const fragment = xsltProcessor.transformToFragment(xmlDoc, document);
   myDOM = fragment;
+  document.getElementById("example").textContent = "";
   document.getElementById("example").appendChild(fragment);
 }
 ```

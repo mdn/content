@@ -1,6 +1,7 @@
 ---
 title: IdleDeadline.didTimeout
 slug: Web/API/IdleDeadline/didTimeout
+page-type: web-api-instance-property
 tags:
   - API
   - Background Tasks
@@ -33,23 +34,16 @@ you should react by performing the needed task or, ideally, a minimal amount of 
 that can be done to keep things moving along, then schedule a new callback to try again
 to get the rest of the work done.
 
-## Syntax
-
-```js
-var timedOut = IdleDeadline.didTimeout;
-```
-
-### Value
+## Value
 
 A Boolean which is `true` if the callback is running due to the callback's
 timeout period elapsing or `false` if the callback is running because the
 user agent is idle and is offering time to the callback.
 
-## Example
+## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
-in the article [Cooperative Scheduling
-of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
+in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## Specifications
 
@@ -61,8 +55,7 @@ of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## See also
 
-- [Collaborative Scheduling of
-  Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
+- [Collaborative Scheduling of Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
 - {{domxref("IdleDeadline")}}
 - {{domxref("Window.requestIdleCallback()")}}
 - {{domxref("Window.cancelIdleCallback()")}}

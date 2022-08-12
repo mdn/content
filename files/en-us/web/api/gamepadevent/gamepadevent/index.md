@@ -1,6 +1,7 @@
 ---
 title: GamepadEvent()
 slug: Web/API/GamepadEvent/GamepadEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -11,26 +12,27 @@ browser-compat: api.GamepadEvent.GamepadEvent
 ---
 {{APIRef("Gamepad API")}}
 
-The **`GamepadEvent()`** constructor creates a new
-{{domxref("GamepadEvent")}} object.
+The **`GamepadEvent()`** constructor creates a new {{domxref("GamepadEvent")}} object.
 
 ## Syntax
 
 ```js
-var gamepadEvent = new GamepadEvent(typeArg, options)
+new GamepadEvent(type, options)
 ```
 
 ### Parameters
 
-- _typeArg_
-  - : A {{domxref("DOMString")}} that must be one of `gamepadconnected` or
-    `gamepaddisconnected`.
-- _options_ {{optional_inline}}
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers set it to `gamepadconnected` or `gamepaddisconnected`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `gamepad`
+      - : A {{domxref("Gamepad")}} object describing the gamepad associated with the event.
 
-  - : Options are as follows:
+### Return value
 
-    - `gamepad`: An instance of {{domxref("Gamepad")}} describing the
-      gamepad associated with the event.
+A new {{domxref("GamepadEvent")}} object.
 
 ## Specifications
 

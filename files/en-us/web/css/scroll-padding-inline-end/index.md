@@ -31,6 +31,7 @@ scroll-padding-inline-end: 10%;
 scroll-padding-inline-end: inherit;
 scroll-padding-inline-end: initial;
 scroll-padding-inline-end: revert;
+scroll-padding-inline-end: revert-layer;
 scroll-padding-inline-end: unset;
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: GeolocationPosition.coords
 slug: Web/API/GeolocationPosition/coords
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API
@@ -18,13 +19,7 @@ contains the location, that is longitude and latitude on the Earth, the altitude
 the speed of the object concerned, regrouped inside the returned value. It also contains
 accuracy information about these values.
 
-## Syntax
-
-```js
-let coord = geolocationPositionInstance.coords
-```
-
-### Value
+## Value
 
 A {{domxref("GeolocationCoordinates")}} object instance.
 

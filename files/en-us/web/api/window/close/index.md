@@ -1,6 +1,7 @@
 ---
 title: Window.close()
 slug: Web/API/Window/close
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko
@@ -27,8 +28,16 @@ objects returned by
 ## Syntax
 
 ```js
-window.close();
+close()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -39,8 +48,8 @@ window; this demonstrates how to use `Window.close()` to close a window
 opened by calling {{domxref("window.open()")}}.
 
 ```js
-//Global var to store a reference to the opened window
-var openedWindow;
+//Global variable to store a reference to the opened window
+let openedWindow;
 
 function openWindow() {
   openedWindow = window.open('moreinfo.htm');

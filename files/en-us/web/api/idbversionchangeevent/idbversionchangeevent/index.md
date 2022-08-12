@@ -1,6 +1,7 @@
 ---
 title: IDBVersionChangeEvent()
 slug: Web/API/IDBVersionChangeEvent/IDBVersionChangeEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -16,29 +17,31 @@ browser-compat: api.IDBVersionChangeEvent.IDBVersionChangeEvent
 The **`IDBVersionChangeEvent()`** constructor
 creates a new {{domxref("IDBVersionChangeEvent")}} object, which is used to represent
 when a version of the database has changed, as a result of the
-{{domxref('IDBOpenDBRequest.onupgradeneeded')}} event handler.
+{{domxref('IDBOpenDBRequest.upgradeneeded_event', 'onupgradeneeded')}} event handler.
 
 ## Syntax
 
 ```js
-var idbVersionChangeEvent = new IDBVersionChangeEvent();
+new IDBVersionChangeEvent(type)
+new IDBVersionChangeEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} indicating the event which occurred. For
-    `IDBVersionChangeEvent` this is `versionchange`.
-- `eventInitDict`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers set it to `versionchange`, `success`, or `blocked`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `oldVersion` {{optional_inline}}
+      - : A number representing the previous version of the database. It defaults to `0`.
+    - `newVersion` {{optional_inline}}
+      - : An unsigned long representing the new version of the database,
+        or `null` if the database is being deleted. It defaults is `null`.
 
-  - : An optional dictionary of initial values for the event's properties. These are as
-    follows:
+### Return value
 
-    - `oldVersion`: An unsigned long representing the previous version of
-      the database. Default is `0`.
-    - `newVersion`: An unsigned long representing the new version of the
-      database, or `null` if the database is being deleted. Default is
-      `null`.
+A new {{domxref("IDBVersionChangeEvent")}} object.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: XRHitTestSource
 slug: Web/API/XRHitTestSource
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -56,7 +57,7 @@ function onXRFrame(time, xrFrame) {
 
 ### Unsubscribe from hit test
 
-To unsubscribe from a hit test source, call {{domxref("XRHitTestSource.cancel()")}}. Since the object will no longer be usable, you can clean up and set the `XRHitTestSource` object to {{jsxref("null")}}.
+To unsubscribe from a hit test source, call {{domxref("XRHitTestSource.cancel()")}}. Since the object will no longer be usable, you can clean up and set the `XRHitTestSource` object to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ```js
 hitTestSource.cancel();

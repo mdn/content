@@ -57,9 +57,9 @@ async function install(url) {
     try {
         current = url;
         let {id} = await browser.management.install({url});
-        console.log("Theme installed: " + id);
+        console.log(`Theme installed: ${id}`);
     } catch (e) {
-        console.error("Installation failed: " + e);
+        console.error(`Installation failed: ${e}`);
     }
 }
 

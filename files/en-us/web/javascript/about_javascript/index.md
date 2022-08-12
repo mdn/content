@@ -11,11 +11,11 @@ tags:
 
 ## What is JavaScript?
 
-**JavaScript** (often shortened to **JS**) is a lightweight, interpreted, object-oriented language with [first-class functions](https://en.wikipedia.org/wiki/First-class_function), and is best known as the scripting language for Web pages, but it's [used in many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Uses_outside_Web_pages) as well. It is a [prototype-based](https://en.wikipedia.org/wiki/Prototype-based_programming "Prototype-based"), multi-paradigm scripting language that is dynamic, and supports object-oriented, imperative, and functional programming styles.
+**JavaScript** (often shortened to **JS**) is a lightweight, interpreted, object-oriented language with [first-class functions](https://en.wikipedia.org/wiki/First-class_function), and is best known as the scripting language for Web pages, but it's [used in many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) as well. It is a [prototype-based](https://en.wikipedia.org/wiki/Prototype-based_programming "Prototype-based"), multi-paradigm scripting language that is dynamic, and supports object-oriented, imperative, and functional programming styles.
 
 JavaScript runs on the client side of the web, which can be used to design / program how the web pages behave on the occurrence of an event. JavaScript is an easy to learn and also powerful scripting language, widely used for controlling web page behavior.
 
-Contrary to popular misconception, **JavaScript is _not_ "Interpreted Java"**. In a nutshell, JavaScript is a dynamic scripting language supporting [prototype based](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages) object construction. The basic syntax is intentionally similar to both Java and C++ to reduce the number of new concepts required to learn the language. Language constructs, such as `if` statements, `for` and `while` loops, and `switch` and `try ... catch` blocks function the same as in these languages (or nearly so).
+Contrary to popular misconception, **JavaScript is _not_ "Interpreted Java"**. In a nutshell, JavaScript is a dynamic scripting language supporting [prototype based](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) object construction. The basic syntax is intentionally similar to both Java and C++ to reduce the number of new concepts required to learn the language. Language constructs, such as `if` statements, `for` and `while` loops, and `switch` and `try ... catch` blocks function the same as in these languages (or nearly so).
 
 JavaScript can function as both a [procedural](https://en.wikipedia.org/wiki/Procedural_programming) and an [object oriented language](/en-US/docs/Learn/JavaScript/Objects). Objects are created programmatically in JavaScript, by attaching methods and properties to otherwise empty objects **at run time**, as opposed to the syntactic class definitions common in compiled languages like C++ and Java. Once an object has been constructed it can be used as a blueprint (or prototype) for creating similar objects.
 
@@ -31,14 +31,14 @@ Several major runtime optimizations such as TraceMonkey (Firefox 3.5), JägerMon
 
 Besides the above implementations, there are other popular JavaScript engines such as:-
 
-- Google's [V8](https://code.google.com/p/v8/), which is used in the Google Chrome browser and recent versions of Opera browser. This is also the engine used by [Node.js](http://nodejs.org).
-- The [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro) used in some WebKit browsers such as Apple Safari.
-- [Carakan](http://my.opera.com/ODIN/blog/carakan-faq) in old versions of Opera.
+- Google's [V8](https://v8.dev/), which is used in the Google Chrome browser and recent versions of Opera browser. This is also the engine used by [Node.js](https://nodejs.org).
+- The [JavaScriptCore](https://webkit.org/project/) (SquirrelFish/Nitro) used in some WebKit browsers such as Apple Safari.
+- [Carakan](https://dev.opera.com/blog/carakan-faq/) in old versions of Opera.
 - The [Chakra](https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) engine used in Internet Explorer (although the language it implements is formally called "JScript" in order to avoid trademark issues).
 
-Each of Mozilla's JavaScript engines expose a public API which application developers can use to integrate JavaScript into their software. By far, the most common host environment for JavaScript is web browsers. Web browsers typically use the public API to create **host objects** responsible for reflecting the [DOM](https://www.w3.org/DOM/) into JavaScript.
+Each of Mozilla's JavaScript engines expose a public API which application developers can use to integrate JavaScript into their software. By far, the most common host environment for JavaScript is web browsers. Web browsers typically use the public API to create **host objects** responsible for reflecting the [DOM](https://dom.spec.whatwg.org/) into JavaScript.
 
-Another common application for JavaScript is as a (Web) server side scripting language. A JavaScript web server would expose host objects representing a HTTP request and response objects, which could then be manipulated by a JavaScript program to dynamically generate web pages. [Node.js](http://nodejs.org) is a popular example of this.
+Another common application for JavaScript is as a (Web) server side scripting language. A JavaScript web server would expose host objects representing a HTTP request and response objects, which could then be manipulated by a JavaScript program to dynamically generate web pages. [Node.js](https://nodejs.org) is a popular example of this.
 
 ## JavaScript resources
 

@@ -8,6 +8,7 @@ tags:
   - Pseudo-element
   - Reference
   - Selectors
+spec-urls: https://www.w3.org/TR/CSS22/selector.html#pseudo-element-selectors
 ---
 {{CSSRef}}
 
@@ -45,7 +46,7 @@ A
 
 B
 
-- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
+- {{CSSxRef("::backdrop")}}
 - {{CSSxRef("::before", "::before (:before)")}}
 
 C
@@ -65,12 +66,12 @@ G
 
 M
 
-- {{CSSxRef("::marker")}} {{Experimental_Inline}}
+- {{CSSxRef("::marker")}}
 
 P
 
-- {{CSSxRef("::part", "::part()")}} {{Experimental_Inline}}
-- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
+- {{CSSxRef("::part", "::part()")}}
+- {{CSSxRef("::placeholder")}}
 
 S
 
@@ -84,9 +85,7 @@ T
 
 ## Specifications
 
-| Specification                | Status                   | Comment                                     |
-| ---------------------------- | ------------------------ | ------------------------------------------- |
-| {{SpecName("CSS1")}} | {{Spec2("CSS1")}} | Defined pseudo-classes and pseudo-elements. |
+{{Specifications}}
 
 ## Browser compatibility
 

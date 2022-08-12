@@ -1,6 +1,7 @@
 ---
 title: USBDevice.deviceProtocol
 slug: Web/API/USBDevice/deviceProtocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - deviceProtocol
+  - Experimental
 browser-compat: api.USBDevice.deviceProtocol
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
@@ -20,13 +22,7 @@ the purpose of loading a USB driver that will work with that device. The other t
 properties are `USBDevice.deviceClass`
 and `USBDevice.deviceSubclass`.
 
-## Syntax
-
-```js
-var number = USBDevice.deviceProtocol
-```
-
-### Value
+## Value
 
 A number.
 

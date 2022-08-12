@@ -1,6 +1,7 @@
 ---
 title: XRProjectionLayer
 slug: Web/API/XRProjectionLayer
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -35,7 +36,7 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 - {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}}
   - : A boolean enabling the layer's texture alpha channel.
 - {{domxref("XRCompositionLayer.chromaticAberrationCorrection")}}
-  - : A boolean enabling optical chromatic aberration correction for the layer if the device supports it, {{jsxref("null")}} otherwise.
+  - : A boolean enabling optical chromatic aberration correction for the layer if the device supports it, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
 - {{domxref("XRProjectionLayer.fixedFoveation")}}
   - : A number indicating the amount of foveation used by the XR compositor for the layer. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
 - {{domxref("XRProjectionLayer.ignoreDepthValues")}} {{ReadOnlyInline}}
@@ -45,7 +46,7 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 - {{domxref("XRCompositionLayer.mipLevels")}} {{ReadOnlyInline}}
   - : The actual number of mip levels in the color and texture data for the layer.
 - {{domxref("XRCompositionLayer.needsRedraw")}} {{ReadOnlyInline}}
-  - : A boolean signaling that the layer should be rerendered in the next frame.
+  - : A boolean signaling that the layer should be re-rendered in the next frame.
 - {{domxref("XRProjectionLayer.textureArrayLength")}} {{ReadOnlyInline}}
   - : The layer's layer count for array textures when using `texture-array` as the `textureType`.
 - {{domxref("XRProjectionLayer.textureHeight")}} {{ReadOnlyInline}}

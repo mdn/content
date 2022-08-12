@@ -1,6 +1,7 @@
 ---
 title: ContentIndexEvent.id
 slug: Web/API/ContentIndexEvent/id
+page-type: web-api-instance-property
 tags:
   - Content
   - Content Index API
@@ -9,21 +10,16 @@ tags:
   - Property
   - content indexing
   - events
+  - Experimental
 browser-compat: api.ContentIndexEvent.id
 ---
-{{DefaultAPISidebar("Content Index API")}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The read-only **`id`** property of the
 {{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies
 the deleted content index via its `id`.
 
-## Syntax
-
-```js
-var id = ContentIndexEvent.id;
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} representation of the deleted content index id.
 
@@ -33,7 +29,7 @@ This example listens for the {{domxref('ContentIndexEvent', 'contentdelete')}} e
 and logs the removed content index id.
 
 The {{domxref('ContentIndexEvent')}} is only available to the
-{{domxref('ServiceWorkerGlobalScope','global scope')}} of a
+[global scope](/en-US/docs/Web/API/ServiceWorkerGlobalScope) of a
 {{domxref('ServiceWorker')}}.
 
 ```js
@@ -55,9 +51,6 @@ self.addEventListener('contentdelete', (event) => {
 
 ## See also
 
-- [An introductory article on the
-  Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list
-  and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with
-  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

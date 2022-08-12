@@ -12,7 +12,7 @@ tags:
 
 The **`min`** instructions, are used for getting the lower of two numbers.
 
-{{EmbedInteractiveExample("pages/wat/min.html")}}
+{{EmbedInteractiveExample("pages/wat/min.html", "tabbed-taller")}}
 
 ## Syntax
 

@@ -1,13 +1,14 @@
 ---
 title: Element.shadowRoot
 slug: Web/API/Element/shadowRoot
+page-type: web-api-instance-property
 tags:
   - API
   - Element
   - Property
   - Reference
   - ShadowRoot
-  - shadow dom
+  - shadow DOM
 browser-compat: api.Element.shadowRoot
 ---
 {{APIRef("Shadow DOM")}}
@@ -17,13 +18,7 @@ represents the shadow root hosted by the element.
 
 Use {{DOMxRef("Element.attachShadow()")}} to add a shadow root to an existing element.
 
-## Syntax
-
-```js
-var shadowroot = element.shadowRoot;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("ShadowRoot")}} object instance, or `null` if the associated
 shadow root was attached with its {{DOMxRef("ShadowRoot.mode", "mode")}} set to
@@ -31,9 +26,8 @@ shadow root was attached with its {{DOMxRef("ShadowRoot.mode", "mode")}} set to
 
 ## Examples
 
-The following snippets are taken from our [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks)
-example ([see it live
-also](https://mdn.github.io/web-components-examples/life-cycle-callbacks)), which creates an element that displays a square of a size and color
+The following snippets are taken from our [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/main/life-cycle-callbacks)
+example ([see it live also](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)), which creates an element that displays a square of a size and color
 specified in the element's attributes.
 
 Inside the `<custom-square>` element's class definition we include
@@ -43,14 +37,16 @@ You'll see that we are passing it `this` (the custom element itself) as a
 parameter.
 
 ```js
-connectedCallback() {
-  console.log('Custom square element added to page.');
-  updateStyle(this);
-}
+class Square extends HTMLElement {
+  connectedCallback() {
+    console.log('Custom square element added to page.');
+    updateStyle(this);
+  }
 
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log('Custom square element attributes changed.');
-  updateStyle(this);
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log('Custom square element attributes changed.');
+    updateStyle(this);
+  }
 }
 ```
 
@@ -64,7 +60,7 @@ function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   const childNodes = Array.from(shadow.childNodes);
 
-  childNodes.forEach(childNode => {
+  childNodes.forEach((childNode) => {
     if (childNode.nodeName === 'STYLE') {
       childNode.textContent = `
         div {

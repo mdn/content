@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.location
 slug: Web/API/KeyboardEvent/location
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.location
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.location`** read-only property returns an
 `unsigned long` representing the location of the key on the keyboard or other
@@ -89,7 +90,7 @@ Possible values are:
     <tr>
       <td>
         <code>DOM_KEY_LOCATION_MOBILE</code>
-        {{Non-standard_inline()}}{{deprecated_inline}}
+        {{Non-standard_inline()}} {{deprecated_inline}}
       </td>
       <td>4</td>
       <td>
@@ -133,17 +134,15 @@ Possible values are:
   </tbody>
 </table>
 
-## Syntax
+## Value
 
-```js
-var location = event.location;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 function keyEvent(event) {
-  console.log("Location of key pressed: " + event.location);
+  console.log(`Location of key pressed: ${event.location}`);
 }
 ```
 

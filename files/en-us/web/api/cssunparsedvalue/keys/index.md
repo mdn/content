@@ -1,6 +1,7 @@
 ---
 title: CSSUnparsedValue.keys()
 slug: Web/API/CSSUnparsedValue/keys
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -23,7 +24,7 @@ for each index in the array.
 ## Syntax
 
 ```js
-CSSUnparsedValue.keys()
+keys()
 ```
 
 ### Parameters
@@ -44,7 +45,7 @@ A new {{jsxref("Array")}}.
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 - {{domxref("CSSUnparsedValue.entries")}}
 - {{domxref("CSSUnparsedValue.forEach")}}
 - {{domxref("CSSUnparsedValue.length")}}

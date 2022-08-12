@@ -18,7 +18,7 @@ with a {{jsxref("Statements/for...in", "for...in")}} loop, except that a
 `for...in` loop enumerates properties in the prototype
 chain as well.
 
-The order of the array returned by **`Object.entries()`** is
+The order of the array returned by `Object.entries()` is
 the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop. If
 there is a need for different ordering, then
 the array should be sorted first, like
@@ -49,35 +49,6 @@ An array of the given object's own enumerable string-keyed property
 to the enumerable string-keyed property `[key, value]`
 pairs found directly upon `object`. The ordering of the properties is the
 same as that given by looping over the property values of the object manually.
-
-## Polyfill
-
-To add compatible `Object.entries()` support in older environments that do
-not natively support it, you can use any of the following:
-
-- a demonstration implementation of `Object.entries` in the [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) (if
-  you don't need any support for IE);
-- a polyfill in the [es-shims/Object.entries](https://github.com/es-shims/Object.entries)
-  repositories;
-- or, you can use the simple, ready-to-deploy polyfill listed below:
-
-```js
-if (!Object.entries) {
-  Object.entries = function( obj ){
-    var ownProps = Object.keys( obj ),
-        i = ownProps.length,
-        resArray = new Array(i); // preallocate the Array
-    while (i--)
-      resArray[i] = [ownProps[i], obj[ownProps[i]]];
-
-    return resArray;
-  };
-}
-```
-
-For the above polyfill code snippet, if you need support for IE<9, then you will
-also need an `Object.keys()` polyfill (such as the one found on the
-{{jsxref("Object.keys")}} page).
 
 ## Examples
 
@@ -130,8 +101,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### Iterating through an `Object`
 
-Using [Array
-Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring), you can iterate through objects easily.
+Using [Array Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring), you can iterate through objects easily.
 
 ```js
 const obj = { foo: 'bar', baz: 42 };
@@ -149,8 +119,7 @@ Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); 
 ## See also
 
 - [Polyfill of `Object.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

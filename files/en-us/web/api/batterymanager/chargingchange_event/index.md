@@ -1,15 +1,13 @@
 ---
 title: 'BatteryManager: chargingchange event'
 slug: Web/API/BatteryManager/chargingchange_event
+page-type: web-api-event
 tags:
   - API
   - Event
-  - Deprecated
   - Reference
 browser-compat: api.BatteryManager.chargingchange_event
 ---
-{{deprecated_header}}
-
 {{APIRef("Battery API")}}
 
 The **`chargingchange`** event of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is fired when the battery {{domxref("BatteryManager.charging","charging")}} property is updated.
@@ -19,9 +17,9 @@ The **`chargingchange`** event of the [Battery Status API](/en-US/docs/Web/API/B
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('chargingchange', event => { });
+addEventListener('chargingchange', (event) => { });
 
-onchargingchange = event => { };
+onchargingchange = (event) => { };
 ```
 
 ## Event type
@@ -40,7 +38,7 @@ _A generic {{domxref("Event")}}._
 ### JavaScript Content
 
 ```js
-navigator.getBattery().then(battery => {
+navigator.getBattery().then((battery) => {
    battery.onchargingchange = () => {
       document.querySelector('#level').textContent = battery.level;
       document.querySelector('#chargingTime').textContent = battery.chargingTime;

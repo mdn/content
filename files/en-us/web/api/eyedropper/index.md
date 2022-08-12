@@ -1,6 +1,7 @@
 ---
 title: EyeDropper
 slug: Web/API/EyeDropper
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -22,7 +23,7 @@ The **`EyeDropper`** interface represents an instance of an eyedropper tool that
 
 _The `EyeDropper` interface doesn't inherit any methods_.
 
-- {{DOMxRef("EyeDropper.prototype.open()")}}
+- {{DOMxRef("EyeDropper.open()")}}
   - : Returns a promise that resolves to an object that gives access to the selected color.
 
 ## Examples
@@ -51,10 +52,10 @@ document.getElementById('start-button').addEventListener('click', () => {
 
   const eyeDropper = new EyeDropper();
 
-  eyeDropper.open().then(result => {
+  eyeDropper.open().then((result) => {
     resultElement.textContent = result.sRGBHex;
     resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch(e => {
+  }).catch((e) => {
     resultElement.textContent = e;
   });
 });
@@ -89,10 +90,10 @@ document.getElementById('start-button').addEventListener('click', () => {
   const eyeDropper = new EyeDropper();
   const abortController = new AbortController();
 
-  eyeDropper.open({ signal: abortController.signal }).then(result => {
+  eyeDropper.open({ signal: abortController.signal }).then((result) => {
     resultElement.textContent = result.sRGBHex;
     resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch(e => {
+  }).catch((e) => {
     resultElement.textContent = e;
   });
 

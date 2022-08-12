@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter()
 slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -21,12 +22,12 @@ constructor creates a new {{domxref("WritableStreamDefaultWriter")}} object inst
 ## Syntax
 
 ```js
-var writableStreamDefaultWriter = new WritableStreamDefaultWriter(stream);
+new WritableStreamDefaultWriter(stream)
 ```
 
 ### Parameters
 
-- stream
+- `stream`
   - : The {{domxref("WritableStream")}} to be written to.
 
 ### Return value
@@ -35,7 +36,7 @@ An instance of the {{domxref("WritableStreamDefaultWriter")}} object.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The provided `stream` value is not a {{domxref("WritableStream")}}, or it
     is locked to another writer already.
 
@@ -60,9 +61,7 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
         console.log("Chunk written to sink.");
       })
@@ -91,20 +90,20 @@ const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
+      const buffer = new ArrayBuffer(1);
+      const view = new Uint8Array(buffer);
       view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      const decoded = decoder.decode(view, { stream: true });
+      const listItem = document.createElement('li');
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
     });
   },
   close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    const listItem = document.createElement('li');
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {
@@ -115,8 +114,7 @@ const writableStream = new WritableStream({
 sendMessage("Hello, world.", writableStream);
 ```
 
-You can find the full code in our [Simple writer
-example](https://mdn.github.io/dom-examples/streams/simple-writer/).
+You can find the full code in our [Simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
 ## Specifications
 

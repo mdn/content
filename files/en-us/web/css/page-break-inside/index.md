@@ -24,6 +24,7 @@ page-break-inside: avoid;
 page-break-inside: inherit;
 page-break-inside: initial;
 page-break-inside: revert;
+page-break-inside: revert-layer;
 page-break-inside: unset;
 ```
 

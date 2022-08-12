@@ -1,5 +1,5 @@
 ---
-title: Firefox developer release notes
+title: Firefox release notes for developers
 slug: Mozilla/Firefox/Releases
 tags:
   - Firefox

@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryEntry.getDirectory()
 slug: Web/API/FileSystemDirectoryEntry/getDirectory
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API
@@ -21,20 +22,24 @@ somewhere within the directory subtree rooted at the directory on which it's cal
 ## Syntax
 
 ```js
-FileSystemDirectoryEntry.getDirectory([path][, options][, successCallback][, errorCallback]);
+getDirectory()
+getDirectory(path)
+getDirectory(path, options)
+getDirectory(path, options, successCallback)
+getDirectory(path, options, successCallback, errorCallback)
 ```
 
 ### Parameters
 
 - `path` {{optional_inline}}
-  - : A {{domxref("USVString")}} representing an absolute path or a path relative to the
+  - : A string representing an absolute path or a path relative to the
     directory on which the method is called, describing which directory entry to return.
     Absolute paths may not be able to be used, for security reasons.
 - `options` {{optional_inline}}
   - : An object which allows you
     to specify whether or not to create the entry if it's missing and if it's an error if
     the file already exists. These options are currently not useful in Web contexts.
-    See the {{anch("options parameter")}} section for more details.
+    See the [options parameter](#options_parameter) section for more details.
 - `successCallback` {{optional_inline}}
   - : A method to be called once the {{domxref("FileSystemDirectoryEntry")}} has been
     created. The method receives a single parameter: the
@@ -69,7 +74,7 @@ The table below describes the result of each possible combination of these flags
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -83,7 +88,7 @@ None.
     unsupported file descriptor such as a pipe; this depends on the user agent to some
     extent.
 
-## Example
+## Examples
 
 In this example, a function is presented whose job it is to locate within a user's app
 data directory a JSON file containing a user dictionary for a specified language, then
@@ -95,12 +100,12 @@ let dictionary = null;
 function loadDictionaryForLanguage(appDataDirEntry, lang) {
   dictionary = null;
 
-  appDataDirEntry.getDirectory("Dictionaries", {}, function(dirEntry) {
-    dirEntry.getFile(lang + "-dict.json", {}, function(fileEntry) {
-      fileEntry.file(function(dictFile) {
+  appDataDirEntry.getDirectory("Dictionaries", {}, (dirEntry) => {
+    dirEntry.getFile(`${lang}-dict.json`, {}, (fileEntry) => {
+      fileEntry.file((dictFile) => {
         let reader = new FileReader();
 
-        reader.addEventListener("loadend", function() {
+        reader.addEventListener("loadend", () => {
           dictionary = JSON.parse(reader.result);
         });
 
@@ -119,7 +124,7 @@ calls {{domxref("FileSystemDirectoryEntry.getFile", "getFile()")}} to get a
 {{domxref("FileSystemFileEntry")}} object representing the dictionary file; the success
 callback for this, in turn, creates a new {{domxref("FileReader")}} and uses it to load
 the contents of the file. When that is loaded successfully (as indicated by the
-{{event("loadend")}} event being fired), the loaded text is passed into
+{{domxref("FileReader/loadend_event", "loadend")}} event being fired), the loaded text is passed into
 {{jsxref("JSON.parse()")}} to be reconstituted into a JavaScript object.
 
 ## Specifications
@@ -133,5 +138,5 @@ the contents of the file. When that is loaded successfully (as indicated by the
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}

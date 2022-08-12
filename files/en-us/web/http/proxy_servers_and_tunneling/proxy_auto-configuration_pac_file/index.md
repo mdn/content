@@ -11,16 +11,12 @@ tags:
 
 A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
 
-```js
-function FindProxyForURL(url, host) {
-  // ...
-}
-```
-
 ## Syntax
 
 ```js
-function FindProxyForURL(url, host)
+function FindProxyForURL(url, host) {
+  // …
+}
 ```
 
 ### Parameters
@@ -129,7 +125,7 @@ These functions can be used in building the PAC file:
 
   - `ProxyConfig.bindings` {{deprecated_inline}}
 
-> **Note:** pactester (part of the [pacparser](https://github.com/pacparser/pacparser) package) was used to test the following syntax examples.
+> **Note:** pactester (part of the [pacparser](https://github.com/manugarg/pacparser) package) was used to test the following syntax examples.
 >
 > - The PAC file is named `proxy.pac`
 > - Command line: `pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org` (passes the `host` parameter `www.mozilla.org` and the `url` parameter `http://www.mozilla.org`)
@@ -257,7 +253,7 @@ Pattern and mask specification is done the same way as for SOCKS configuration.
 #### Examples
 
 ```js
-function alert_eval(str) { alert(str + ' is ' + eval(str)) }
+function alert_eval(str) { alert(`${str} is ${eval(str)}`) }
 function FindProxyForURL(url, host) {
   alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
@@ -423,7 +419,7 @@ weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note,
 
 #### Syntax
 
-```js
+```
 dateRange(<day> | <month> | <year>, [gmt])  // ambiguity is resolved by assuming year is greater than 31
 dateRange(<day1>, <day2>, [gmt])
 dateRange(<month1>, <month2>, [gmt])
@@ -520,7 +516,7 @@ timerange(12);                // returns true from noon to 1pm
 timerange(12, 13);            // returns true from noon to 1pm
 timerange(12, "GMT");         // returns true from noon to 1pm, in GMT timezone
 timerange(9, 17);             // returns true from 9am to 5pm
-timerange(8, 30, 17, 00);     // returns true from 8:30am to 5:00pm
+timerange(8, 30, 17, 0);      // returns true from 8:30am to 5:00pm
 timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight
 ```
 
@@ -542,7 +538,7 @@ Logs the message in the browser console.
 #### Examples
 
 ```js
-alert(host + " = " + dnsResolve(host));            // logs the host name and its IP address
+alert(`${host} = ${dnsResolve(host)}`);            // logs the host name and its IP address
 alert("Error: shouldn't reach this clause.");      // log a simple message
 ```
 
@@ -598,10 +594,10 @@ This example will work in an environment where the internal DNS server is set up
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host))
+  if (isResolvable(host)) {
     return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -615,9 +611,8 @@ function FindProxyForURL(url, host) {
     isResolvable(host)
   ) {
     return "DIRECT";
-  } else {
-    return "PROXY proxy.mydomain.com:8080";
   }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -629,10 +624,10 @@ In this example all of the hosts in a given subnet are connected-to directly, ot
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0"))
+  if (isInNet(host, "198.95.0.0", "255.255.0.0")) {
     return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -669,21 +664,15 @@ All local accesses are desired to be direct. All proxy servers run on the port 8
 
 ```js
 function FindProxyForURL(url, host) {
-
-  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
+  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com")) {
     return "DIRECT";
-
-  else if (shExpMatch(host, "*.com"))
-    return "PROXY proxy1.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
-  else if (shExpMatch(host, "*.edu"))
-    return "PROXY proxy2.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
-  else
-    return "PROXY proxy3.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
+  } else if (shExpMatch(host, "*.com")) {
+    return "PROXY proxy1.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  } else if (shExpMatch(host, "*.edu")) {
+    return "PROXY proxy2.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  } else {
+    return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  }
 }
 ```
 
@@ -695,22 +684,16 @@ Most of the standard JavaScript functionality is available for use in the `FindP
 
 ```js
 function FindProxyForURL(url, host) {
-
-  if (url.startsWith("http:"))
+  if (url.startsWith("http:")) {
     return "PROXY http-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("ftp:"))
+  } else if (url.startsWith("ftp:")) {
     return "PROXY ftp-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("gopher:"))
+  } else if (url.startsWith("gopher:")) {
     return "PROXY gopher-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("https:") || url.startsWith("snews:"))
+  } else if (url.startsWith("https:") || url.startsWith("snews:")) {
     return "PROXY security-proxy.mydomain.com:8080";
-
-  else
-    return "DIRECT";
-
+  }
+  return "DIRECT";
 }
 ```
 
@@ -719,11 +702,9 @@ function FindProxyForURL(url, host) {
 For example:
 
 ```js
-// ...
 if (shExpMatch(url, "http:*")) {
   return "PROXY http-proxy.mydomain.com:8080";
 }
-// ...
 ```
 
 > **Note:** The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the `REMOTE_ADDR` environment variable in CGI).
@@ -734,6 +715,6 @@ if (shExpMatch(url, "http:*")) {
 
 Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, at the same time when JavaScript was introduced. Open-sourcing Netscape eventually lead to Firefox itself.
 
-The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://cs.chromium.org/chromium/src/services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://dxr.mozilla.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
+The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://searchfox.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
 
-Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).
+Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).

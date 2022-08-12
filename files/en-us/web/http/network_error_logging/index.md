@@ -6,6 +6,7 @@ tags:
   - HTTP
   - Network Error Logging
   - Reference
+browser-compat: http.headers.NEL
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 
@@ -54,7 +55,7 @@ In these examples, the entire reporting API payload is shown. The top-level **`"
 
 ### HTTP 400 (Bad Request) response
 
-```js
+```json
 {
   "age": 20,
   "type": "network-error",
@@ -78,7 +79,7 @@ In these examples, the entire reporting API payload is shown. The top-level **`"
 
 Note that the phase is set to `dns` in this report and no `server_ip` is available to include.
 
-```js
+```json
 {
   "age": 20,
   "type": "network-error",
@@ -137,10 +138,8 @@ The type of the network error may be one of the following pre-defined values fro
 
 ## Specifications
 
-| Specification                                                                      |
-| ---------------------------------------------------------------------------------- |
-| [Network Error Logging](https://w3c.github.io/network-error-logging/#introduction) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("http.headers.NEL")}}
+{{Compat}}

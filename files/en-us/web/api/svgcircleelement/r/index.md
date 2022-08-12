@@ -1,6 +1,7 @@
 ---
 title: SVGCircleElement.r
 slug: Web/API/SVGCircleElement/r
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,17 +17,11 @@ The **`r`** read-only property of the {{domxref("SVGCircleElement")}} interface 
 
 If unspecified, the effect is as if the value is set to `0`.
 
-## Syntax
-
-```js
-var radius = element.r;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedLength")}} representing the radius of the circle.
 
-## Example
+## Examples
 
 ### SVG
 
@@ -43,7 +38,7 @@ const circle = document.getElementById('circle');
 console.log(circle.r);
 ```
 
-{{EmbedLiveSample("Example", "200", "200")}}
+{{EmbedLiveSample("Examples", "200", "200")}}
 
 ## Specifications
 

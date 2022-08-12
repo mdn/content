@@ -1,6 +1,7 @@
 ---
 title: FontFace.load()
 slug: Web/API/FontFace/load
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Font Loading API
@@ -14,12 +15,14 @@ browser-compat: api.FontFace.load
 ---
 {{APIRef("CSS Font Loading API")}}
 
-The **`load()`** method of the {{domxref("FontFace")}} interface loads a font based on current object's constructor-passed requirements, including a location or source buffer, and returns a {{jsxref('Promise')}} that resolves with the current `FontFace` object.
+The **`load()`** method of the {{domxref("FontFace")}} interface requests and loads a font whose `source` was specified as a URL. It returns a {{jsxref('Promise')}} that resolves with the current `FontFace` object.
+
+If the `source` for the font face was specified  as binary data, or the font {{domxref("FontFace/status", "status")}} property of the font face is anything other than `unloaded`, then this method does nothing.
 
 ## Syntax
 
 ```js
-FontFace.load()
+load()
 ```
 
 ### Parameters
@@ -47,14 +50,14 @@ This simple example loads a font and uses it to display some text in a canvas el
 ```js
 const mycanvas = document.getElementById("js-canvas");
 
-// load the "Bitter" font from google fonts
+// load the "Bitter" font from Google Fonts
 let font_file = new FontFace('FontFamily Style Bitter', 'url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)');
 
-font_file.load().then( () => {
+font_file.load().then(() => {
   // font loaded successfully!
   mycanvas.width = 650;
   mycanvas.height = 100;
-  var ctx = mycanvas.getContext('2d')
+  const ctx = mycanvas.getContext('2d')
 
   ctx.font = '36px "FontFamily Style Bitter"'
   ctx.fillText('Bitter font loaded', 20, 50)

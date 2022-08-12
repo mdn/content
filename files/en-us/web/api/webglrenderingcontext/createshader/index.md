@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createShader()
 slug: Web/API/WebGLRenderingContext/createShader
+page-type: web-api-instance-method
 tags:
   - API
   - Graphics
@@ -21,13 +22,17 @@ method **`createShader()`** of the [WebGL API](/en-US/docs/Web/API/WebGL_API) cr
 ## Syntax
 
 ```js
-WebGLShader gl.createShader(type);
+createShader(type)
 ```
 
 ### Parameters
 
 - `type`
   - : Either `gl.VERTEX_SHADER` or `gl.FRAGMENT_SHADER`
+
+### Return value
+
+A new ({{domxref("WebGLShader")}}).
 
 ## Examples
 

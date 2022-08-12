@@ -1,6 +1,7 @@
 ---
 title: 'Element: msContentZoom event'
 slug: Web/API/Element/msContentZoom_event
+page-type: web-api-event
 tags:
   - Event
   - Event:Microsoft Extensions
@@ -41,7 +42,7 @@ Zoomed elements can expose their zoom level through `msContentZoom` (ie. scrollT
 ## Example
 
 ```js
-  contentZoom.addEventListener("MSContentZoom", function(e) {
+  contentZoom.addEventListener("MSContentZoom", (e) => {
      zoomFactor.value = contentZoom.msContentZoomFactor.toFixed(2);
   });
 ```

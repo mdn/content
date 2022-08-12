@@ -36,7 +36,7 @@ Values of this type are strings. Possible values are:
 - `main_frame`
   - : Top-level documents loaded into a tab.
 - `media`
-  - : Resources loaded by a  {{HTMLElement("video")}} or  {{HTMLElement("audio")}} element.
+  - : Resources loaded by a {{HTMLElement("video")}} or {{HTMLElement("audio")}} element.
 - `object`
 
   - : Resources loaded by an {{HTMLElement("object")}} or {{HTMLElement("embed")}} element.
@@ -54,7 +54,7 @@ Values of this type are strings. Possible values are:
 - `script`
   - : Code that is loaded to be executed by a {{HTMLElement("script")}} element or running in a [Worker](/en-US/docs/Web/API/Web_Workers_API).
 - `speculative`
-  - : In a speculative connection the browser has determined that a request to a URI may be coming soon, so it starts a TCP and/or TLS handshake immediately, so it is ready more quickly when the resource is actually requested.
+  - : In a speculative connection, the browser has determined that a request to a URI may be coming soon, so it starts a TCP and/or TLS handshake immediately, so it is ready more quickly when the resource is actually requested. Note that this type of connection does not provide valid tab information, so request details such as `tabId`, `frameId`, `parentFrameId`, etc. are inaccurate.
 - `stylesheet`
   - : [CSS](/en-US/docs/Web/CSS) stylesheets loaded to describe the representation of a document.
 - `sub_frame`
@@ -80,7 +80,7 @@ Values of this type are strings. Possible values are:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#type-ResourceType) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#type-ResourceType) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

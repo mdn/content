@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletNode.parameters
 slug: Web/API/AudioWorkletNode/parameters
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -21,13 +22,7 @@ underlying {{domxref("AudioWorkletProcessor")}} according to its
 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static
 getter.
 
-## Syntax
-
-```js
-audioWorkletNodeInstance.parameters
-```
-
-### Value
+## Value
 
 The {{domxref("AudioParamMap")}} object containing {{domxref("AudioParam")}} instances.
 They can be automated in the same way as with default `AudioNode`s, and their
@@ -65,7 +60,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 
   process (inputs, outputs, parameters) {
     const output = outputs[0]
-    output.forEach(channel => {
+    output.forEach((channel) => {
       for (let i = 0; i < channel.length; i++) {
         channel[i] = (Math.random() * 2 - 1) *
           (parameters['customGain'].length > 1 ? parameters['customGain'][i] : parameters['customGain'][0])
@@ -111,5 +106,4 @@ gainParam.linearRampToValueAtTime(0.5, audioContext.currentTime + 0.5)
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

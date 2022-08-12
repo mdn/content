@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback.cancelWatchAvailability()
 slug: Web/API/RemotePlayback/cancelWatchAvailability
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,13 +17,13 @@ The **`cancelWatchAvailability()`** method of the {{domxref("RemotePlayback")}} 
 ## Syntax
 
 ```js
-RemotePlayback.cancelWatchAvailability();
-RemotePlayback.cancelWatchAvailability(id);
+cancelWatchAvailability()
+cancelWatchAvailability(id)
 ```
 
 ### Parameters
 
-- `id`{{Optional_Inline}}
+- `id` {{optional_inline}}
 
   - : The `callbackId` of a particular remote playback device.
 

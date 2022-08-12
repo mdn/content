@@ -1,6 +1,7 @@
 ---
 title: Element.ariaRelevant
 slug: Web/API/Element/ariaRelevant
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,16 +16,9 @@ browser-compat: api.Element.ariaRelevant
 
 The **`ariaRelevant`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
 
-## Syntax
+## Value
 
-```js
-var ariaRelevant = element.ariaRelevant;
-element.ariaRelevant = ariaRelevant
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing one or more of the following values, space separated:
+A string containing one or more of the following values, space separated:
 
 - `"additions"`
   - : Additions of Element Nodes within the live region should be considered relevant.

@@ -1,6 +1,7 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
+page-type: web-api-instance-method
 tags:
   - API
   - Geolocation
@@ -20,7 +21,7 @@ location/error monitoring handlers previously installed using
 ## Syntax
 
 ```js
-navigator.geolocation.clearWatch(id);
+clearWatch(id)
 ```
 
 ### Parameters
@@ -29,22 +30,28 @@ navigator.geolocation.clearWatch(id);
   - : The ID number returned by the {{domxref("Geolocation.watchPosition()")}} method when
     installing the handler you wish to remove.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
-var id, target, option;
+let id;
+let target;
+let options;
 
 function success(pos) {
-  var crd = pos.coords;
+  const crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log('Congratulation, you reach the target');
+    console.log('Congratulations, you\'ve reached the target!');
     navigator.geolocation.clearWatch(id);
   }
 };
 
 function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
+  console.error(`ERROR(${err.code}): ${err.message}`);
 };
 
 target = {

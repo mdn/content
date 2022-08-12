@@ -59,7 +59,7 @@ In this example the extension Hansel connects to the extension Gretel:
 
 ```js
 console.log("connecting to Gretel");
-var myPort = browser.runtime.connect(
+let myPort = browser.runtime.connect(
   "gretel@mozilla.org"
 );
 
@@ -75,7 +75,7 @@ browser.browserAction.onClicked.addListener(() => {
 Gretel listens for the connection and checks that the sender is really Hansel:
 
 ```js
-var portFromHansel;
+let portFromHansel;
 
 browser.runtime.onConnectExternal.addListener((port) => {
   console.log(port);
@@ -95,7 +95,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnectExternal) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onConnectExternal) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.width
 slug: Web/API/HTMLCanvasElement/width
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -19,12 +20,9 @@ default value of `300` is used.
 This is one of the two properties, the other being
 {{domxref("HTMLCanvasElement.height")}}, that controls the size of the canvas.
 
-## Syntax
+## Value
 
-```js
-var pxl = canvas.width;
-canvas.width = pxl;
-```
+A number.
 
 ## Examples
 
@@ -37,7 +35,7 @@ Given this {{HTMLElement("canvas")}} element:
 You can get the width of the canvas with the following code:
 
 ```js
-var canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas');
 console.log(canvas.width); // 300
 ```
 

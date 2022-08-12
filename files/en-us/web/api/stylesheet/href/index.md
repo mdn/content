@@ -1,6 +1,7 @@
 ---
 title: Stylesheet.href
 slug: Web/API/StyleSheet/href
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -13,24 +14,22 @@ browser-compat: api.StyleSheet.href
 The **`href`** property of the {{domxref("StyleSheet")}}
 interface returns the location of the style sheet.
 
-## Syntax
+## Value
 
-```js
-uri = stylesheet.href
-```
+A string containing the stylesheet's URI.
 
-### Parameters
-
-- `uri` is a string containing the stylesheet's URI.
-
-## Example
+## Examples
 
 On a local machine:
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-  <link rel="StyleSheet" href="example.css" type="text/css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>href example</title>
+  <link rel="styleSheet" href="example.css" />
   <script>
   function sref() {
     alert(document.styleSheets[0].href);

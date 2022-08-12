@@ -1,6 +1,7 @@
 ---
 title: AudioListener.forwardZ
 slug: Web/API/AudioListener/forwardZ
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -17,19 +18,11 @@ The `forwardZ` read-only property of the {{ domxref("AudioListener") }} interfac
 
 > **Note:** The parameter is _a-rate_ when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "panningModel")}} is set to equalpower, or _k-rate_ otherwise.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;
-myListener.forwardZ.value = 0;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}}. Its default value is -1, and it can range between positive and negative infinity.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 

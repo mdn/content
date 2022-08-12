@@ -1,5 +1,5 @@
 ---
-title: 'aria-brailleroledescription'
+title: aria-brailleroledescription
 slug: Web/Accessibility/ARIA/Attributes/aria-brailleroledescription
 tags:
   - Accessibility
@@ -7,8 +7,8 @@ tags:
   - ARIA attribute
   - ARIA property
   - aria-brailleroledescription
+spec-urls: https://w3c.github.io/aria/#aria-brailleroledescription
 ---
-
 The global `aria-brailleroledescription` attribute defines a human-readable, author-localized abbreviated description for the role of an element intended to be converted into Braille.
 
 ## Description
@@ -38,7 +38,7 @@ A few rules to remember:
 
 - Only apply `aria-brailleroledescription` to elements with a valid ARIA role or elements with implicit role semantics.
 - The `aria-brailleroledescription`, if present, must have a non-empty, none null value that is different from the `aria-roledescription` value, which, in turn, is different from the ARIA explicit or role or implicit semantic role.
-- Avoid using Unicode Braille Patterns. If they must be used, ensure the `aria-brailleroledescription` value contains  content other than Unicode Braille Patterns, whitespace, and Braille Pattern dots-0.
+- Avoid using Unicode Braille Patterns. If they must be used, ensure the `aria-brailleroledescription` value contains content other than Unicode Braille Patterns, whitespace, and Braille Pattern dots-0.
 - Ensure the value is always localized to the document's language.
 
 > **Warning:** If the content is only in Unicode Braille Patterns, the value will not be translated according to the user's preferred translation table.
@@ -60,13 +60,11 @@ The `aria-brailleroledescription` value will not be exposed to the braille user 
 
 ## Associated roles
 
-Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/roles/generic_role)).
+Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)).
 
 ## Specifications
 
-| Specification         | Status      |
-| ---------------- | ---------------- |
-| {{SpecName("ARIA","#aria-brailleroledescription","ARIA: aria-brailleroledescription Attribute")}}   | {{Spec2('ARIA')}}   |
+{{Specifications}}
 
 ## See Also
 

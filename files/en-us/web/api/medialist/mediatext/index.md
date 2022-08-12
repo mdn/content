@@ -1,6 +1,7 @@
 ---
 title: MediaList.mediaText
 slug: Web/API/MediaList/mediaText
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -13,19 +14,12 @@ browser-compat: api.MediaList.mediaText
 {{APIRef("CSSOM")}}
 
 The **`mediaText`** property of the {{domxref("MediaList")}}
-interface is a {{Glossary("stringifier")}} that returns a {{domxref("DOMString")}} representing the
+interface is a {{Glossary("stringifier")}} that returns a string representing the
 `MediaList` as text, and also allows you to set a new `MediaList`.
 
-## Syntax
+## Value
 
-```js
-mediaListInstance.mediaText;
-mediaListInstance.mediaText = string;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the media queries of a stylesheet. Each one is
+A string representing the media queries of a stylesheet. Each one is
 separated by a comma, for example
 `screen and (min-width: 480px), print`.
 

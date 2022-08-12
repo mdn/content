@@ -42,7 +42,7 @@ Let's start with the simplest, shortest possible wasm module.
 
 This module is totally empty, but is still a valid module.
 
-If we convert our module to binary now (see [Converting WebAssembly text format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm)), we'll see just the 8 byte module header described in the [binary format](https://webassembly.org/docs/binary-encoding/#high-level-structure):
+If we convert our module to binary now (see [Converting WebAssembly text format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm)), we'll see just the 8 byte module header described in the [binary format](https://webassembly.github.io/spec/core/binary/index.html#high-level-structure):
 
 ```wasm
 0000000: 0061 736d              ; WASM_BINARY_MAGIC
@@ -72,7 +72,8 @@ The signature is a sequence of parameter type declarations followed by a list of
 - The absence of a `(result)` means the function doesn't return anything.
 - In the current iteration, there can be at most 1 return type, but [later this will be relaxed](https://github.com/WebAssembly/spec/blob/master/proposals/multi-value/Overview.md) to any number.
 
-Each parameter has a type explicitly declared; wasm currently has four available number types (plus reference types; see the {{anch("Reference types")}}) section below):
+Each parameter has a type explicitly declared; wasm [Number types](#number_types), [Reference types](#reference_types), [Vector types](#vector_types).
+The number types are:
 
 - `i32`: 32-bit integer
 - `i64`: 64-bit integer
@@ -82,7 +83,7 @@ Each parameter has a type explicitly declared; wasm currently has four available
 A single parameter is written `(param i32)` and the return type is written `(result i32)`, hence a binary function that takes two 32-bit integers and returns a 64-bit float would be written like this:
 
 ```wasm
-(func (param i32) (param i32) (result f64) ... )
+(func (param i32) (param i32) (result f64) ...)
 ```
 
 After the signature, locals are listed with their type, for example `(local i32)`. Parameters are basically just locals that are initialized with the value of the corresponding argument passed by the caller.
@@ -155,7 +156,7 @@ Our function won't do very much on its own — now we need to call it. How do we
 Like locals, functions are identified by an index by default, but for convenience, they can be named. Let's start by doing this — first, we'll add a name preceded by a dollar sign, just after the `func` keyword:
 
 ```wasm
-(func $add … )
+(func $add …)
 ```
 
 Now we need to add an export declaration — this looks like so:
@@ -184,7 +185,7 @@ Next, we'll load our binary into a typed array called `addCode` (as described in
 
 ```js
 WebAssembly.instantiateStreaming(fetch('add.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.add(1, 2));  // "3"
   });
 ```
@@ -223,7 +224,7 @@ The JavaScript code to call our above module looks like so:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('call.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.getAnswerPlus1());  // "43"
   });
 ```
@@ -251,16 +252,16 @@ For the above, we need an object (let's call it `importObject`) such that `impor
 This would look like the following:
 
 ```js
-var importObject = {
+const importObject = {
   console: {
-    log: function(arg) {
+    log(arg) {
       console.log(arg);
     }
   }
 };
 
 WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     obj.instance.exports.logIt();
   });
 ```
@@ -294,7 +295,7 @@ const global = new WebAssembly.Global({value: "i32", mutable: true}, 0);
 
 ### WebAssembly Memory
 
-The above example is a pretty terrible logging function: it only prints a single integer! What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory** (although we also have {{anch("Reference types")}} in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing from [linear memory](https://webassembly.org/docs/semantics/#linear-memory).
+The above example is a pretty terrible logging function: it only prints a single integer! What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory** (although we also have [Reference types](#reference_types) in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing from [linear memory](https://webassembly.github.io/spec/core/exec/index.html#linear-memory).
 
 From JavaScript's point of view, it's as though memory is all inside one big (resizable) {{jsxref("ArrayBuffer")}}. That's literally all that asm.js has to play with (except that it isn't resizable; see the asm.js [Programming model](http://asmjs.org/spec/latest/#programming-model)).
 
@@ -314,8 +315,8 @@ On the JavaScript side, we can use the [TextDecoder API](/en-US/docs/Web/API/Tex
 
 ```js
 function consoleLogString(offset, length) {
-  var bytes = new Uint8Array(memory.buffer, offset, length);
-  var string = new TextDecoder('utf8').decode(bytes);
+  const bytes = new Uint8Array(memory.buffer, offset, length);
+  const string = new TextDecoder('utf8').decode(bytes);
   console.log(string);
 }
 ```
@@ -350,12 +351,12 @@ Our final wasm module looks like this:
 Now from JavaScript we can create a Memory with 1 page and pass it in. This results in "Hi" being printed to the console:
 
 ```js
-var memory = new WebAssembly.Memory({initial:1});
+const memory = new WebAssembly.Memory({ initial: 1 });
 
-var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
+const importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
 WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-  .then(obj => {
+  .then((obj) => {
     obj.instance.exports.writeHi();
   });
 ```
@@ -366,7 +367,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 To finish this tour of the WebAssembly text format, let's look at the most intricate, and often confusing, part of WebAssembly: **tables**. Tables are basically resizable arrays of references that can be accessed by index from WebAssembly code.
 
-To see why tables are needed, we need to first observe that the `call` instruction we saw earlier (see {{anch("Calling functions from other functions in the same module")}}) takes a static function index and thus can only ever call one function — but what if the callee is a runtime value?
+To see why tables are needed, we need to first observe that the `call` instruction we saw earlier (see [Calling functions from other functions in the same module](#calling_functions_from_other_functions_in_the_same_module)) takes a static function index and thus can only ever call one function — but what if the callee is a runtime value?
 
 - In JavaScript we see this all the time: functions are first-class values.
 - In C/C++, we see this with function pointers.
@@ -404,13 +405,13 @@ So how do we place wasm functions in our table? Just like `data` sections can be
 In JavaScript, the equivalent calls to create such a table instance would look something like this:
 
 ```js
-function() {
+function () {
   // table section
-  var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+  const tbl = new WebAssembly.Table({initial: 2, element: "anyfunc"});
 
   // function sections:
-  var f1 = ... /* some imported WebAssembly function */
-  var f2 = ... /* some imported WebAssembly function */
+  const f1 = ... /* some imported WebAssembly function */
+  const f2 = ... /* some imported WebAssembly function */
 
   // elem section
   tbl.set(0, f1);
@@ -442,7 +443,7 @@ You could also declare the `call_indirect` parameter explicitly during the comma
 
 In a higher level, more expressive language like JavaScript, you could imagine doing the same thing with an array (or probably more likely, object) containing functions. The pseudo code would look something like `tbl[i]()`.
 
-So, back to the typechecking. Since WebAssembly is typechecked, and the `funcref` can be potentially any function signature, we have to supply the presumed signature of the callee at the callsite, hence we include the `$return_i32` type, to tell the program a function returning an `i32` is expected. If the callee doesn't have a matching signature (say an `f32` is returned instead), a {{JSxRef("WebAssembly.RuntimeError")}} is thrown.
+So, back to the typechecking. Since WebAssembly is type checked, and the `funcref` can be potentially any function signature, we have to supply the presumed signature of the callee at the callsite, hence we include the `$return_i32` type, to tell the program a function returning an `i32` is expected. If the callee doesn't have a matching signature (say an `f32` is returned instead), a {{JSxRef("WebAssembly.RuntimeError")}} is thrown.
 
 So what links the `call_indirect` to the table we are calling? The answer is that there is only one table allowed right now per module instance, and that is what `call_indirect` is implicitly calling. In the future, when multiple tables are allowed, we would also need to specify a table identifier of some kind, along the lines of
 
@@ -471,7 +472,7 @@ We load it into a webpage using the following JavaScript:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.callByIndex(0)); // returns 42
     console.log(obj.instance.exports.callByIndex(1)); // returns 13
     console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
@@ -484,9 +485,9 @@ WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
 
 ### Mutating tables and dynamic linking
 
-Because JavaScript has full access to function references, the Table object can be mutated from JavaScript using the [`grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) and [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) methods. And WebAssembly code is itself able to manipulate tables using instructions added as part of {{anch("Reference types")}}, such as `table.get` and `table.set`.
+Because JavaScript has full access to function references, the Table object can be mutated from JavaScript using the [`grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) and [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) methods. And WebAssembly code is itself able to manipulate tables using instructions added as part of [Reference types](#reference_types), such as `table.get` and `table.set`.
 
-Because tables are mutable, they can be used to implement sophisticated load-time and run-time [dynamic linking schemes](https://webassembly.org/docs/dynamic-linking). When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled `.dll`s share a single process's address space.
+Because tables are mutable, they can be used to implement sophisticated load-time and run-time [dynamic linking schemes](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled `.dll`s share a single process's address space.
 
 To see this in action, we'll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple [`instantiate()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) calls.
 
@@ -539,7 +540,7 @@ These work as follows:
 After converting to assembly, we then use `shared0.wasm` and `shared1.wasm` in JavaScript via the following code:
 
 ```js
-var importObj = {
+const importObj = {
   js: {
     memory : new WebAssembly.Memory({ initial: 1 }),
     table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
@@ -549,7 +550,7 @@ var importObj = {
 Promise.all([
   WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
   WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
-]).then(function(results) {
+]).then((results) => {
   console.log(results[1].instance.exports.doIt());  // prints 42
 });
 ```
@@ -574,12 +575,27 @@ The new operations are:
 
 > **Note:** You can find more information in the [Bulk Memory Operations and Conditional Segment Initialization](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md) proposal.
 
-## Reference types
+## Types
+
+### Number types
+
+Web assembly currently has four available _number types_:
+
+- `i32`: 32-bit integer
+- `i64`: 64-bit integer
+- `f32`: 32-bit float
+- `f64`: 64-bit float
+
+### Vector types
+
+- `v128`: 128 bit vector of packed integer, floating-point data, or a single 128 bit type.
+
+### Reference types
 
 The [reference types proposal](https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md) (supported in [Firefox 79](/en-US/docs/Mozilla/Firefox/Releases/79)) provides two main features:
 
 - A new type, `externref`, which can hold _any_ JavaScript value, for example strings, DOM references, objects, etc. `externref` is opaque from the point of view of WebAssembly — a wasm module can't access and manipulate these values and instead can only receive them and pass them back out. But this is very useful for allowing wasm modules to call JavaScript functions, DOM APIs, etc., and generally to pave the way for easier interoperability with the host environment. `externref` can be used for value types and table elements.
-- A number of new instructions that allow wasm modules to directly manipulate {{anch("WebAssembly tables")}}, rather than having to do it via the JavaScript API.
+- A number of new instructions that allow wasm modules to directly manipulate [WebAssembly tables](#webassembly_tables), rather than having to do it via the JavaScript API.
 
 > **Note:** The [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) documentation contains some useful information on how to take advantage of `externref` from Rust.
 
@@ -617,7 +633,7 @@ As described above, you can create shared WebAssembly [`Memory`](/en-US/docs/Web
 Over on the JavaScript API side, the [`WebAssembly.Memory()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory) constructor's initialization object now has a `shared` property, which when set to `true` will create a shared memory:
 
 ```js
-let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+const memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
 ```
 
 the memory's [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) property will now return a `SharedArrayBuffer`, instead of the usual `ArrayBuffer`:

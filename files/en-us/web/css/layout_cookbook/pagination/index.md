@@ -8,6 +8,9 @@ tags:
   - css layout
   - flexbox
   - pagination
+browser-compat:
+  - css.properties.justify-content
+  - css.properties.column-gap.flex_context
 ---
 {{CSSRef}}
 
@@ -27,7 +30,7 @@ Typically, the pagination component will be centered horizontally underneath the
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/pagination--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/pagination--download.html)
 
 ## Choices made
 
@@ -57,19 +60,13 @@ We have also added some additional content that would be read by a screenreader 
 
 The "See Also" section at the end of this document has links to related accessibility topics.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-_Include the compat data for key properties you used, as in the example below which includes align-items._
-
-### justify-content
-
-{{Compat("css.properties.justify-content")}}
-
-### column-gap in Flex layout
-
-{{Compat("css.properties.column-gap.flex_context")}}
+{{Compat}}
 
 ## See also
 
@@ -77,4 +74,4 @@ _Include the compat data for key properties you used, as in the example below wh
 - [Know your ARIA: 'Hidden' vs 'None'](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)
 - [Invisible content just for screen reader users](https://webaim.org/techniques/css/invisiblecontent/#techniques)
 - [Writing CSS With Accessibility in mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
-- [a11y Style Guide: Pagination](http://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)
+- [a11y Style Guide: Pagination](https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)

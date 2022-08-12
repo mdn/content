@@ -13,8 +13,6 @@ browser-compat: css.properties.animation-iteration-count
 
 The **`animation-iteration-count`** [CSS](/en-US/docs/Web/CSS) property sets the number of times an animation sequence should be played before stopping.
 
-If multiple values are specified, each time the animation is played the next value in the list is used, cycling back to the first value after the last one is used.
-
 {{EmbedInteractiveExample("pages/css/animation-iteration-count.html")}}
 
 It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
@@ -36,6 +34,7 @@ animation-iteration-count: 2, 0, infinite;
 animation-iteration-count: inherit;
 animation-iteration-count: initial;
 animation-iteration-count: revert;
+animation-iteration-count: revert-layer;
 animation-iteration-count: unset;
 ```
 
@@ -60,7 +59,9 @@ The **`animation-iteration-count`** property is specified as one or more comma-s
 
 ## Examples
 
-### The animation will run 10 times.
+### Setting iteration count
+
+This animation will run 10 times.
 
 #### HTML
 
@@ -76,6 +77,9 @@ The **`animation-iteration-count`** property is specified as one or more comma-s
   border-radius: 10px;
   width: 100px;
   height: 100px;
+}
+
+.box:hover {
   animation-name: rotate;
   animation-duration: 0.7s;
   animation-iteration-count: 10;
@@ -93,7 +97,9 @@ The **`animation-iteration-count`** property is specified as one or more comma-s
 
 #### Result
 
-{{EmbedLiveSample("Examples","100%","250")}}
+Hover over the rectangle to start the animation.
+
+{{EmbedLiveSample("Setting iteration count","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 

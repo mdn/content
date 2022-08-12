@@ -1,6 +1,7 @@
 ---
 title: EncodedAudioChunk.duration
 slug: Web/API/EncodedAudioChunk/duration
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,7 +14,7 @@ browser-compat: api.EncodedAudioChunk.duration
 
 The **`duration`** read-only property of the {{domxref("EncodedAudioChunk")}} interface returns an integer indicating the duration of the audio in microseconds.
 
-### Value
+## Value
 
 An integer.
 

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.responsesReceived
 slug: Web/API/RTCIceCandidatePairStats/responsesReceived
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity
@@ -26,13 +27,7 @@ in the {{domxref("RTCIceCandidatePairStats")}} dictionary indicates the total nu
 of {{Glossary("STUN")}} connectivity check responses that have been received on the
 connection described by this pair of candidates.
 
-## Syntax
-
-```js
-responsesReceived = rtcIceCandidatePairStats.responsesReceived;
-```
-
-### Value
+## Value
 
 An integer value which specifies the number of STUN connectivity request responses that
 have been received on the connection described by this pair of candidates so far.

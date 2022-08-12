@@ -64,7 +64,7 @@ html,body,svg { height:100% }
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><code>none</code> | <var>&#x3C;dasharray></var></td>
+      <td><code>none</code> | <code>&#x3C;dasharray></code></td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -82,34 +82,10 @@ html,body,svg { height:100% }
 
     If an odd number of values is provided, then the list of values is repeated to yield an even number of values. Thus, `5,3,2` is equivalent to `5,3,2,5,3,2`.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-## Specifications
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#StrokeDasharrayProperty", "stroke-dasharray")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for shapes and texts</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#StrokeDasharrayProperty", "stroke-dasharray")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for shapes and texts</td>
-    </tr>
-  </tbody>
-</table>

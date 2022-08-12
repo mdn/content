@@ -1,6 +1,7 @@
 ---
 title: Window.innerHeight
 slug: Web/API/Window/innerHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -25,13 +26,7 @@ The value of `innerHeight` is taken from the height of the window's
 {{Glossary("layout viewport")}}. The width can be obtained using the
 {{domxref("Window.innerWidth", "innerWidth")}} property.
 
-## Syntax
-
-```js
-let intViewportHeight = window.innerHeight;
-```
-
-### Value
+## Value
 
 An integer value indicating the window's layout viewport height in pixels. The property
 is read only and has no default value.
@@ -49,21 +44,21 @@ the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight",
 Both `innerHeight` and `innerWidth` are available on any window
 or any object that behaves like a window, such as a tab or frame.
 
-## Example
+## Examples
 
 ### Assuming a frameset
 
 ```js
-var intFrameHeight = window.innerHeight; // or
+console.log(window.innerHeight); // or
 
-var intFrameHeight = self.innerHeight;
-// will return the height of the frame viewport within the frameset
+console.log(self.innerHeight);
+// will log the height of the frame viewport within the frameset
 
-var intFramesetHeight = parent.innerHeight;
-// will return the height of the viewport of the closest frameset
+console.log(parent.innerHeight);
+// will log the height of the viewport of the closest frameset
 
-var intOuterFramesetHeight = top.innerHeight;
-// will return the height of the viewport of the outermost frameset
+console.log(top.innerHeight);
+// will log the height of the viewport of the outermost frameset
 ```
 
 To change the size of a window, see {{domxref("window.resizeBy()")}} and

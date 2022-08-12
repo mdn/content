@@ -1,6 +1,7 @@
 ---
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -42,7 +43,7 @@ insertBefore(newNode, referenceNode);
     node's child nodes.
     > **Note:** `referenceNode` is **not** an optional parameter.
     > You must explicitly pass a {{domxref("Node")}} or `null`.
-    > Failing to provide it or passing invalid values may [behave](https://code.google.com/p/chromium/issues/detail?id=419780) [differently](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) in different browser versions.
+    > Failing to provide it or passing invalid values may [behave](https://bugs.chromium.org/p/chromium/issues/detail?id=419780) [differently](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) in different browser versions.
 
 ### Return value
 
@@ -64,24 +65,24 @@ Pre-insert validity
 
 <script>
 // Create the new node to insert
-let newNode = document.createElement("span")
+const newNode = document.createElement("span");
 
 // Get a reference to the parent node
-let parentDiv = document.getElementById("childElement").parentNode
+const parentDiv = document.getElementById("childElement").parentNode;
 
 // Begin test case [ 1 ] : Existing childElement (all works correctly)
-let sp2 = document.getElementById("childElement")
-parentDiv.insertBefore(newNode, sp2)
+const sp2 = document.getElementById("childElement");
+parentDiv.insertBefore(newNode, sp2);
 // End test case [ 1 ]
 
 // Begin test case [ 2 ] : childElement is of Type undefined
-let sp2 = undefined // Non-existent node of id "childElement"
-parentDiv.insertBefore(newNode, sp2) // Implicit dynamic cast to type Node
+const sp2 = undefined; // Non-existent node of id "childElement"
+parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
 // End test case [ 2 ]
 
-// Begin test case [ 3 ] : childElement is of Type "undefined" ( string )
-let sp2 = "undefined" // Non-existent node of id "childElement"
-parentDiv.insertBefore(newNode, sp2) // Generates "Type Error: Invalid Argument"
+// Begin test case [ 3 ] : childElement is of Type "undefined" (string)
+const sp2 = "undefined"; // Non-existent node of id "childElement"
+parentDiv.insertBefore(newNode, sp2); // Generates "Type Error: Invalid Argument"
 // End test case [ 3 ]
 </script>
 ```

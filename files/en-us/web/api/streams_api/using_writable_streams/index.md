@@ -1,6 +1,7 @@
 ---
 title: Using writable streams
 slug: Web/API/Streams_API/Using_writable_streams
+page-type: guide
 tags:
   - API
   - Controller
@@ -14,13 +15,10 @@ tags:
 
 As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the [Streams API](/en-US/docs/Web/API/Streams_API)'s writable stream functionality.
 
-> **Note:** This article assumes that you understand the use cases of writable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#Concepts_and_usage) and dedicated [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts) article, then come back.
+> **Note:** This article assumes that you understand the use cases of writable streams, and are aware of the high-level concepts.
+> If not, we suggest that you first read the [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#concepts_and_usage) and dedicated [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts) article, then come back.
 
-> **Note:** If you are looking for information about readable streams, try [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) instead.
-
-## Browser support
-
-The Streams API is experimental, and support is at an early stage right now. Only Chrome currently has basic writable streams implemented.
+> **Note:** If you are looking for information about readable streams, try [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) and [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) instead.
 
 ## Introducing an example
 
@@ -41,7 +39,7 @@ const stream = new WritableStream({
   start(controller) {
 
   },
-  write(chunk,controller) {
+  write(chunk, controller) {
 
   },
   close(controller) {
@@ -51,12 +49,12 @@ const stream = new WritableStream({
 
   }
 }, {
-  highWaterMark,
-  size()
+  highWaterMark: 3,
+  size: () => 1
 });
 ```
 
-The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying sink the data is being written to. The second object is optional, and allows you to specify a [custom queueing strategy](/en-US/docs/Web/API/Streams_API/Concepts#Internal_queues_and_queuing_strategies) to use for your stream, which takes the form of an instance of {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}.
+The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying sink the data is being written to. The second object is optional, and allows you to specify a [custom queueing strategy](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) to use for your stream, which takes the form of an instance of {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}.
 
 The first object can contain up to four members, all of which are optional:
 
@@ -75,25 +73,25 @@ const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
+      const buffer = new ArrayBuffer(1);
+      const view = new Uint8Array(buffer);
       view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      const decoded = decoder.decode(view, { stream: true });
+      const listItem = document.createElement('li');
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
     });
   },
   close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    const listItem = document.createElement('li');
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {
-    console.log("Sink error:", err);
-  }
+    console.error("Sink error:", err);
+  },
 }, queuingStrategy);
 ```
 
@@ -119,28 +117,16 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
-      .then(() => {
-        console.log("Chunk written to sink.");
-      })
-      .catch((err) => {
-        console.log("Chunk error:", err);
-      });
+      .then(() => defaultWriter.write(chunk))
+      .then(() => console.log("Chunk written to sink."))
+      .catch((err) => console.error("Chunk error:", err));
   });
   // Call ready again to ensure that all chunks are written
   //   before closing the writer.
   defaultWriter.ready
-    .then(() => {
-      defaultWriter.close();
-    })
-    .then(() => {
-      console.log("All chunks written");
-    })
-    .catch((err) => {
-      console.log("Stream error:", err);
-    });
+    .then(() => defaultWriter.close())
+    .then(() => console.log("All chunks written"))
+    .catch((err) => console.error("Stream error:", err));
 }
 ```
 

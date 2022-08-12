@@ -55,31 +55,31 @@ The `downloadDelta` object has the following properties available:
 
 - `id`
   - : An `integer` representing the `id` of the {{WebExtAPIRef('downloads.DownloadItem')}} that changed.
-- `url`{{optional_inline}}
+- `url` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `url`.
-- `filename`{{optional_inline}}
+- `filename` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `filename`.
-- `danger`{{optional_inline}}
+- `danger` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `danger`.
-- `mime`{{optional_inline}}
+- `mime` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `mime`.
-- `startTime`{{optional_inline}}
+- `startTime` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `startTime`.
-- `endTime`{{optional_inline}}
+- `endTime` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `endTime`.
-- `state`{{optional_inline}}
+- `state` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `state`.
-- `canResume`{{optional_inline}}
+- `canResume` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.BooleanDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `canResume` status.
-- `paused`{{optional_inline}}
+- `paused` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.BooleanDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `paused` status.
-- `error`{{optional_inline}}
+- `error` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `error` status.
-- `totalBytes`{{optional_inline}}
+- `totalBytes` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.DoubleDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `totalBytes`.
-- `fileSize`{{optional_inline}}
+- `fileSize` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.DoubleDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `fileSize`.
-- `exists`{{optional_inline}}
+- `exists` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.BooleanDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `exists` status.
 
 ## Browser compatibility
@@ -102,7 +102,7 @@ browser.downloads.onChanged.addListener(handleChanged);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#event-onChanged) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onChanged) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

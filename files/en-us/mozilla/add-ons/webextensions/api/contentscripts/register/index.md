@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var registering = browser.contentScripts.register(
+let registering = browser.contentScripts.register(
   contentScriptOptions       // object
 )
 ```
@@ -37,25 +37,25 @@ var registering = browser.contentScripts.register(
 
     The `RegisteredContentScriptOptions` object has the following properties:
 
-    - `allFrames`{{optional_inline}}
+    - `allFrames` {{optional_inline}}
       - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `cookieStoreId` {{optional_inline}}
       - : A string or array of strings. Registers the content script in the tabs that belong to one or more cookie store IDs. This enables scripts to be registered for all default or non-contextual identity tabs, private browsing tabs (if extensions are enabled in private browsing), the tabs of a [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), or a combination of these.
-    - `css`{{optional_inline}}
+    - `css` {{optional_inline}}
       - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a CSS file to register, or a property named `code`, which is some CSS code to register.
-    - `excludeGlobs`{{optional_inline}}
+    - `excludeGlobs` {{optional_inline}}
       - : Same as `exclude_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
-    - `excludeMatches`{{optional_inline}}
+    - `excludeMatches` {{optional_inline}}
       - : Same as `exclude_matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
-    - `includeGlobs`{{optional_inline}}
+    - `includeGlobs` {{optional_inline}}
       - : Same as `include_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
-    - `js`{{optional_inline}}
+    - `js` {{optional_inline}}
       - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a JavaScript file to register, or a property named `code`, which is some JavaScript code to register.
-    - `matchAboutBlank`{{optional_inline}}
+    - `matchAboutBlank` {{optional_inline}}
       - : Same as `match_about_blank` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `matches`
       - : Same as `matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
-    - `runAt`{{optional_inline}}
+    - `runAt` {{optional_inline}}
       - : Same as `run_at` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
 
 ### Return value
@@ -86,7 +86,7 @@ async function register(hosts, code) {
 
 }
 
-var registered = register(defaultHosts, defaultCode);
+let registered = register(defaultHosts, defaultCode);
 ```
 
 This code registers the JS file at content_scripts/example.js:

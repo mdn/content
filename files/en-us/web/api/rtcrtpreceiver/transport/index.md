@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.transport
 slug: Web/API/RTCRtpReceiver/transport
+page-type: web-api-instance-property
 tags:
   - API
   - Communications

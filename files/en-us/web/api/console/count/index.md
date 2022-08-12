@@ -1,6 +1,7 @@
 ---
 title: console.count()
 slug: Web/API/console/count
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -21,15 +22,20 @@ this particular call to `count()` has been called.
 ## Syntax
 
 ```js
-console.count([label]);
+count()
+count(label)
 ```
 
 ### Parameters
 
 - `label` {{Optional_Inline}}
-  - : A {{jsxref("String")}}. If supplied, `count()` outputs the number of
+  - : A string. If supplied, `count()` outputs the number of
     times it has been called with that label. If omitted, `count()` behaves as
     though it was called with the "default" label.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -40,7 +46,7 @@ let user = "";
 
 function greet() {
   console.count();
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";
@@ -70,7 +76,7 @@ let user = "";
 
 function greet() {
   console.count(user);
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";

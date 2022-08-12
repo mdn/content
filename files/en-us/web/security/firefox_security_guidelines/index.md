@@ -10,7 +10,7 @@ This document outlines a set of security guidelines that will generally apply to
 
 ## Secure Coding Principles
 
-Ensure that the application follows the [OWASP Secure Coding Principles](https://www.owasp.org/index.php/Secure_Coding_Principles):
+Ensure that the application follows the [OWASP Secure Coding Principles](https://wiki.owasp.org/index.php/Secure_Coding_Principles):
 
 1. Minimize attack surface area
 2. Establish secure defaults
@@ -42,7 +42,7 @@ If so ensure they are safe and that no better alternatives are available.
 | Name                     | Risk Level | Problem                                                            | Solution                                            |
 | ------------------------ | ---------- | ------------------------------------------------------------------ | --------------------------------------------------- |
 | eval                     | Very High  | Invokes JavaScript parser - dangerous if used with untrusted input | Avoid eval if at all possible.                      |
-| setTimeout(string, time) | Very High  | Acts like eval                                                     | Use setTimeout(function, time, param1, param2, ...) |
+| setTimeout(string, time) | Very High  | Acts like eval                                                     | Use setTimeout(function, time, param1, param2, …) |
 
 ## C++ - Dangerous Functions
 
@@ -154,6 +154,6 @@ If so ensure they are safe and that no better alternatives are available.
 ## References
 
 - [Web Security Verification](https://wiki.mozilla.org/WebAppSec/Web_Security_Verification)
-- [Mozilla Security Review and Best Practices](https://www.mozilla.org/projects/security/components/reviewguide.html)
+- [Mozilla Security Review and Best Practices](https://www-archive.mozilla.org/projects/security/components/reviewguide.html)
 - [Security tips for Mozilla and extension developers](https://www.squarefree.com/securitytips/mozilla-developers.html)
 - [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf)

@@ -1,6 +1,7 @@
 ---
 title: VideoTrackList.selectedIndex
 slug: Web/API/VideoTrackList/selectedIndex
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -19,13 +20,7 @@ The read-only **{{domxref("VideoTrackList")}}**
 property **`selectedIndex`** returns the index of the
 currently selected track, if any, or `-1` otherwise.
 
-## Syntax
-
-```js
-var index = VideoTrackList.selectedIndex;
-```
-
-### Value
+## Value
 
 A number indicating the index of the currently selected track, if any, or
 `-1` otherwise.

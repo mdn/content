@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpace.getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -43,7 +44,7 @@ call `getOffsetReferenceSpace()`*.
 Then, when drawing the scene, you can use the offset reference space to not only
 position objects relative to one another, but to apply the needed transforms to render
 objects properly based upon the viewer's position. This is demonstrated in the example
-{{anch("Implementing rotation based on non-XR inputs")}}, which demonstrates a way to
+[Implementing rotation based on non-XR inputs](#implementing_rotation_based_on_non-xr_inputs), which demonstrates a way to
 use this method to let the user use their mouse to pitch and yaw their viewing angle.
 
 ## Syntax
@@ -184,9 +185,7 @@ drawing a frame, immediately before fetching the viewer's pose using
 {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}, and the rendering should be
 performed in this reference space.
 
-You can see code similar to this in use in our broader WebXR tutorial article called [Movement, orientation,
-and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion). In particular, check out the section called [Starting
-up the WebXR session](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#starting_up_the_webxr_session).
+You can see code similar to this in use in our broader WebXR tutorial article called [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion). In particular, check out the section called [Starting up the WebXR session](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#starting_up_the_webxr_session).
 
 ## Specifications
 

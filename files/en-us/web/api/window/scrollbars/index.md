@@ -1,6 +1,7 @@
 ---
 title: Window.scrollbars
 slug: Web/API/Window/scrollbars
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,21 +16,20 @@ browser-compat: api.Window.scrollbars
 The **`Window.scrollbars`** property returns the
 `scrollbars` object, whose visibility can be checked.
 
-## Syntax
+## Value
 
-```js
-objRef = window.scrollbars
-```
+A `scrollbars` object.
 
-## Example
+## Examples
 
 The following complete HTML example shows how the `visible` property of the
 scrollbars object is used.
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
   <title>Various DOM Tests</title>
   <script>
     let visibleScrollbars = window.scrollbars.visible;

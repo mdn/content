@@ -1,6 +1,7 @@
 ---
 title: ScreenOrientation.angle
 slug: Web/API/ScreenOrientation/angle
+page-type: web-api-instance-property
 tags:
   - API
   - Orientation
@@ -17,13 +18,7 @@ The **`angle`** read-only property of the
 {{domxref("ScreenOrientation")}} interface returns the document's current orientation
 angle.
 
-## Syntax
-
-```js
-angle = screen.orientation.angle
-```
-
-### Value
+## Value
 
 An unsigned short integer.
 

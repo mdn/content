@@ -31,6 +31,7 @@ masonry-auto-flow: next ordered;
 masonry-auto-flow: inherit;
 masonry-auto-flow: initial;
 masonry-auto-flow: revert;
+masonry-auto-flow: revert-layer;
 masonry-auto-flow: unset;
 ```
 
@@ -120,9 +121,9 @@ This property may take one of two forms:
 const selectElem = document.querySelector('select');
 
 function changeMasonryFlow() {
-  var grid = document.getElementById("grid");
-  var direction = document.getElementById("flow");
-  var masonryAutoFlow = direction.value === "pack" ? "pack" : "next";
+  const grid = document.getElementById("grid");
+  const direction = document.getElementById("flow");
+  const masonryAutoFlow = direction.value === "pack" ? "pack" : "next";
 
   grid.style.masonryAutoFlow = masonryAutoFlow;
 }

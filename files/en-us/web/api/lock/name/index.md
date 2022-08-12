@@ -1,9 +1,9 @@
 ---
 title: Locks.name
 slug: Web/API/Lock/name
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Web Locks API
@@ -12,7 +12,7 @@ tags:
   - name
 browser-compat: api.Lock.name
 ---
-{{SeeCompatTable}}{{APIRef("Web Locks")}}
+{{APIRef("Web Locks")}}
 
 The **`name`** read-only property of
 the {{domxref("Lock")}} interface returns the _name_ passed to
@@ -24,17 +24,11 @@ across multiple tabs, workers, or other code within the origin. For example, if 
 tab of a web application should be synchronizing network resources with an offline
 database, it could use a lock name such as `"net_db_sync"`.
 
-## Syntax
+## Value
 
-```js
-var name = Lock.name
-```
+A string.
 
-### Value
-
-A {{domxref("DOMString")}}.
-
-## Example
+## Examples
 
 The following examples show how the name property passed in the call
 to {{domxref('LockManager.request()')}}. `LockManager` is the object returned

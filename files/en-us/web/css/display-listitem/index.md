@@ -9,6 +9,7 @@ tags:
   - Reference
   - display-listitem
   - list-item
+browser-compat: css.properties.display.list-item
 ---
 {{CSSRef}}
 
@@ -45,15 +46,11 @@ A single value of `list-item` will cause the element to behave like a list item.
 
 ## Specifications
 
-| Specification                                                                                            | Status                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-listitem', 'display-listitem')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Support of `list-item`
-
-{{Compat("css.properties.display.list-item", 10)}}
+{{Compat}}
 
 ## See also
 

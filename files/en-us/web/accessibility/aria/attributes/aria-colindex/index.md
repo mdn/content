@@ -1,13 +1,14 @@
 ---
 title: 'aria-colindex'
 slug: Web/Accessibility/ARIA/Attributes/aria-colindex
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-colindex
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-colindex
 ---
 
 The `aria-colindex` attribute defines an element's column index or position with respect to the total number of columns within a `table`, `grid`, or `treegrid`.
@@ -73,7 +74,7 @@ When using semantic table header elements and not all columns are in the DOM, th
       <td>New York</td>
       <td>14127</td>
     </tr>
-    ...
+    …
   </tbody>
 </table>
 ```
@@ -88,9 +89,9 @@ If all the columns are in the DOM, neither `aria-colcount` nor `aria-colindex` a
 ## ARIAMixin API
 
 - {{domxref("Element.ariaColIndex")}}
-  - : The  [`ariaColIndex`](/en-US/docs/Web/API/Element/ariaColIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-colindex` attribute.
+  - : The [`ariaColIndex`](/en-US/docs/Web/API/Element/ariaColIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-colindex` attribute.
 - {{domxref("ElementInternals.ariaColIndex")}}
-  - : The  [`ariaColIndex`](/en-US/docs/Web/API/ElementInternals/ariaColIndex) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-colindex` attribute.
+  - : The [`ariaColIndex`](/en-US/docs/Web/API/ElementInternals/ariaColIndex) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-colindex` attribute.
 
 ## Associated roles
 
@@ -107,9 +108,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-colindex","ARIA: aria-colindex Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

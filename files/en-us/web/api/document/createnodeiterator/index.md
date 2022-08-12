@@ -1,6 +1,7 @@
 ---
 title: Document.createNodeIterator()
 slug: Web/API/Document/createNodeIterator
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,21 +12,24 @@ browser-compat: api.Document.createNodeIterator
 ---
 {{APIRef("DOM")}}
 
-Returns a new [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) object.
+The **`Document.createNodeIterator()`** method returns a new [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) object.
 
 ## Syntax
 
 ```js
-const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
+createNodeIterator(root)
+createNodeIterator(root, whatToShow)
+createNodeIterator(root, whatToShow, filter)
 ```
 
-### Values
+### Parameters
 
 - `root`
   - : The root node at which to begin the {{ domxref("NodeIterator") }}'s traversal.
-- `whatToShow` {{ optional_inline() }}
 
-  - : Is an optional `unsigned long` representing a bitmask created by
+- `whatToShow` {{optional_inline}}
+
+  - : An optional `unsigned long` representing a bitmask created by
     combining the constant properties of
     [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter).
     It is a convenient way of filtering for certain types of node. It defaults to
@@ -47,16 +51,30 @@ const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
     | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                        | `64`                                            | Shows {{ domxref("ProcessingInstruction") }} nodes.                                                                                                                                                                                                                                                                                                                                                      |
     | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | Shows {{ domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                                              |
 
-- `filter` {{ optional_inline() }}
-  - : An object implementing the {{ domxref("NodeFilter") }} interface. Its
-    `acceptNode()` method will be called for each node in the subtree based at
-    root which is accepted as included by the whatToShow flag to determine whether or not
-    to include it in the list of iterable nodes (a simple callback function may also be
-    used instead). The method should return one of `NodeFilter.FILTER_ACCEPT`,
-    `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. See the
-    {{ anch("Example") }}.
+- `filter` {{optional_inline}}
+  - : A callback function or an object with an `acceptNode()` method. The function or method will be called for each node in the subtree based at root which is accepted as included by the whatToShow flag to determine whether or not to include it in the list of iterable nodes. The method should return one of `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. See the [Example](#examples).
 
-## Example
+### Return value
+
+A new [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) object.
+
+## Examples
+
+```js
+const nodeIterator = document.createNodeIterator(
+    document.body,
+    NodeFilter.SHOW_ELEMENT,
+    (node) => node.nodeName.toLowerCase() === 'p' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+);
+const pars = [];
+let currentNode;
+
+while (currentNode = nodeIterator.nextNode()) {
+  pars.push(currentNode);
+}
+```
+
+The same, but using an object with an `acceptNode()` method:
 
 ```js
 const nodeIterator = document.createNodeIterator(

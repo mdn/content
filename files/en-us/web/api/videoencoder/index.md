@@ -1,6 +1,7 @@
 ---
 title: VideoEncoder
 slug: Web/API/VideoEncoder
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,18 +9,19 @@ tags:
   - VideoEncoder
 browser-compat: api.VideoEncoder
 ---
+{{APIRef("WebCodecs API")}}
 The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}} encodes {{domxref("VideoFrame")}} objects.
 
 ## Constructor
 
-- {{domxref("VideoEncoder.VideoEncoder()")}}
+- {{domxref("VideoEncoder.VideoEncoder", "VideoEncoder()")}}
   - : Creates a new `VideoEncoder` object.
 
 ## Properties
 
-- {{domxref("VideoEncoder.encodeQueueSize")}}{{ReadOnlyInline}}
+- {{domxref("VideoEncoder.encodeQueueSize")}} {{ReadOnlyInline}}
   - : An integer representing the number of encode queue requests.
-- {{domxref("VideoEncoder.state")}}{{ReadOnlyInline}}
+- {{domxref("VideoEncoder.state")}} {{ReadOnlyInline}}
   - : Represents the state of the underlying codec and whether it is configured for encoding.
 
 ## Methods
@@ -30,6 +32,8 @@ The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}
   - : Enqueues a control message to encode a given {{domxref("VideoFrame")}}.
 - {{domxref("VideoEncoder.flush()")}}
   - : Returns a promise that resolves once all pending messages in the queue have been completed.
+- {{domxref("VideoEncoder.isConfigSupported()")}}
+  - : Returns a promise indicating whether the provided `VideoEncoderConfig` is supported.
 - {{domxref("VideoEncoder.reset()")}}
   - : Resets all states including configuration, control messages in the control message queue, and all pending callbacks.
 - {{domxref("VideoEncoder.close()")}}

@@ -52,7 +52,7 @@ browser.sidebarAction.setPanel(
         - If `windowId` is specified, and the window has a window-specific panel set, then the window will inherit the global panel.
         - Otherwise, the global panel will be reset to the manifest panel.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the panel only for the given tab.
     - `windowId` {{optional_inline}}
       - : `integer`. Sets the panel only for the given window.
@@ -67,8 +67,8 @@ browser.sidebarAction.setPanel(
 This code toggles the sidebar document when the user clicks a browser action:
 
 ```js
-var thisPanel = browser.runtime.getURL("/this.html");
-var thatPanel = browser.runtime.getURL("/that.html");
+let thisPanel = browser.runtime.getURL("/this.html");
+let thatPanel = browser.runtime.getURL("/that.html");
 
 function toggle(panel) {
   if (panel === thisPanel) {

@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -25,12 +26,9 @@ This enumerated attribute can have the following values:
 You can use the {{domxref("HTMLElement.isContentEditable")}} property to test the
 computed boolean value of this property.
 
-## Syntax
+## Value
 
-```js
-editable = element.contentEditable
-element.contentEditable = 'true'
-```
+A string.
 
 ## Specifications
 

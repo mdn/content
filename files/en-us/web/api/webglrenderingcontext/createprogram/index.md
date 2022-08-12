@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createProgram()
 slug: Web/API/WebGLRenderingContext/createProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ The **`WebGLRenderingContext.createProgram()`** method of the
 ## Syntax
 
 ```js
-WebGLProgram gl.createProgram();
+createProgram()
 ```
 
 ### Parameters
@@ -29,14 +30,14 @@ None.
 
 A {{domxref("WebGLProgram")}} object that is a combination of two compiled
 {{domxref("WebGLShader")}}s consisting of a vertex shader and a fragment shader (both
-written in GLSL). These are then linked into a usable program..
+written in GLSL). These are then linked into a usable program.
 
 ## Examples
 
 ### Creating a WebGL program
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -44,9 +45,9 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
-  var info = gl.getProgramInfoLog(program);
-  throw 'Could not compile WebGL program. \n\n' + info;
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  const info = gl.getProgramInfoLog(program);
+  throw `Could not compile WebGL program. \n\n${info}`;
 }
 ```
 

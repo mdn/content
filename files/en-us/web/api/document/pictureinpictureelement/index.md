@@ -1,6 +1,7 @@
 ---
 title: Document.pictureInPictureElement
 slug: Web/API/Document/pictureInPictureElement
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -25,13 +26,7 @@ picture-in-picture mode is not currently in use.
 Although this property is read-only, it will not throw if it is modified (even in
 strict mode); the setter is a no-operation and will be ignored.
 
-## Syntax
-
-```js
-document.pictureInPictureElement;
-```
-
-### Return value
+## Value
 
 A reference to the {{domxref("Element")}} object that's currently in
 picture-in-picture mode; if picture-in-picture mode isn't currently in use by the

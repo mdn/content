@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.domContentLoadedEventEnd
 slug: Web/API/PerformanceTiming/domContentLoadedEventEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -24,11 +25,9 @@ read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, right after all the scripts that need to be
 executed as soon as possible, in order or not, has been executed.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domContentLoadedEventEnd;
-```
+An `unsigned long long`.
 
 ## Specifications
 

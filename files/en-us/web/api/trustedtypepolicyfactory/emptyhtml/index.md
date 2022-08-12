@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.emptyHTML
 slug: Web/API/TrustedTypePolicyFactory/emptyHTML
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,13 +16,7 @@ The **`emptyHTML`** read-only property of the {{domxref("TrustedTypePolicyFactor
 
 This object can be used when the application requires an empty string to be inserted into an injection sink.
 
-## Syntax
-
-```js
-var emptyHTML = TrustedTypePolicyFactory.emptyHTML;
-```
-
-### Value
+## Value
 
 A {{domxref("TrustedHTML")}} object.
 

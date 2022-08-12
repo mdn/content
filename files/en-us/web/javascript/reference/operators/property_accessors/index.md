@@ -38,25 +38,21 @@ notation_.
 
 ### Dot notation
 
-In the `object.property` syntax, the `property` must
-be a valid JavaScript [identifier](/en-US/docs/Glossary/Identifier). (In the
-ECMAScript standard, the names of properties are technically "IdentifierNames", not
-"Identifiers", so reserved words can be used but are not recommended). For example,
-`object.$1` is valid, while `object.1` is
-not.
+In the `object.property` syntax, the `property` must be a valid JavaScript [identifier](/en-US/docs/Glossary/Identifier). (In the ECMAScript standard, the names of properties are technically "IdentifierNames", not "Identifiers", so reserved words can be used but are not recommended). For example, `object.$1` is valid, while `object.1` is not.
 
 ```js
-const variable = object.property_name;
-
-object.property_name = value;
+const variable = object.propertyName;
+object.propertyName = value;
 ```
 
 ```js
 const object = {};
-
 object.$1 = 'foo';
 console.log(object.$1);  // 'foo'
+```
 
+```js example-bad
+const object = {};
 object.1 = 'bar';        // SyntaxError
 console.log(object.1);   // SyntaxError
 ```
@@ -88,13 +84,11 @@ method call, so that the dot is not interpreted as a decimal point.
 
 ### Bracket notation
 
-In the `object[property_name]` syntax,
-the `property_name` is just a string or [Symbol](/en-US/docs/Glossary/Symbol). So, it can be any string, including
-`'1foo'`, `'!bar!'`, or even `' '` (a space).
+In the `object[propertyName]` syntax, the `propertyName` is just a string or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). So, it can be any string, including `'1foo'`, `'!bar!'`, or even `' '` (a space).
 
 ```js
-const variable = object[property_name]
-object[property_name] = value;
+const variable = object[propertyName];
+object[propertyName] = value;
 ```
 
 This does the exact same thing as the previous example.
@@ -111,23 +105,25 @@ document ['createElement']('pre')
 
 ### Property names
 
-Property names are string or [Symbol](/en-US/docs/Glossary/Symbol). Any
+Property names are string or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Any
 other value, including a number, is coerced to a string. This outputs
 `'value'`, since `1` is coerced into `'1'`.
 
 ```js
-let object = {}
-object['1'] = 'value'
-console.log(object[1])
+const object = {};
+object['1'] = 'value';
+console.log(object[1]);
 ```
 
 This also outputs `'value'`, since both `foo` and
 `bar` are converted to the same string.
 
 ```js
-let foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
-object[foo] = 'value'
-console.log(object[bar])
+const foo = { uniqueProp: 1 };
+const bar = { uniqueProp: 2 };
+const object = {};
+object[foo] = 'value';
+console.log(object[bar]);
 ```
 
 ### Method binding
@@ -135,12 +131,12 @@ console.log(object[bar])
 A method is not bound to the object that it is a method of. Specifically,
 `this` is not fixed in a method. Put another way, `this` does not
 necessarily refer to the object containing a method. Instead, `this` is
-"passed" by the function call. See [method
-binding](/en-US/docs/Web/JavaScript/Reference/Operators/this#method_binding).
+"passed" by the function call.
+See [method binding](/en-US/docs/Web/JavaScript/Reference/Operators/this#method_binding).
 
 ## Examples
 
-### Bracket notation vs. `eval`
+### Bracket notation vs. eval()
 
 JavaScript novices often make the mistake of using {{jsxref("Global_Objects/eval", "eval()")}} where
 the bracket notation can be used instead.
@@ -148,7 +144,7 @@ the bracket notation can be used instead.
 For example, the following syntax is often seen in many scripts.
 
 ```js
-x = eval('document.forms.form_name.elements.' + strFormControl + '.value')
+x = eval(`document.forms.form_name.elements.${strFormControl}.value`);
 ```
 
 `eval()` is slow and should be avoided whenever possible. Also,
@@ -157,7 +153,7 @@ names and `id`s of form controls. It is better to use bracket notation
 instead:
 
 ```js
-x = document.forms['form_name'].elements[strFormControl].value
+x = document.forms['form_name'].elements[strFormControl].value;
 ```
 
 ## Specifications
@@ -172,5 +168,4 @@ x = document.forms['form_name'].elements[strFormControl].value
 
 - {{jsxref("Object")}}
 - {{jsxref("Object.defineProperty()")}}
-- [Optional
-  chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)

@@ -1,6 +1,7 @@
 ---
 title: Introduction to the Real-time Transport Protocol (RTP)
 slug: Web/API/WebRTC_API/Intro_to_RTP
+page-type: guide
 tags:
   - API
   - Connectivity
@@ -43,7 +44,7 @@ RTP's primary benefits in terms of WebRTC include:
 
 RTP itself doesn't provide every possible feature, which is why other protocols are also used by WebRTC. Some of the more noteworthy things RTP doesn't include:
 
-- RTP does _not_ guarantee **{{interwiki("wikipedia", "quality-of-service")}}** (**QoS**).
+- RTP does _not_ guarantee **[quality-of-service](https://en.wikipedia.org/wiki/Quality-of-service)** (**QoS**).
 - While RTP is intended for use in latency-critical scenarios, it doesn't inherently offer any features that ensure QoS. Instead, it only offers the information necessary to allow QoS to be implemented elsewhere in the stack.
 - RTP doesn't handle allocation or reservation of resources that may be needed.
 
@@ -62,7 +63,7 @@ Each {{domxref("RTCPeerConnection")}} has methods which provide access to the li
 
 ### Leveraging RTP to implement a "hold" feature
 
-Because the streams for an `RTCPeerConnection` are implemented using RTP and the interfaces {{anch("RTCPeerConnection and RTP", "above")}}, you can take advantage of the access this gives you to the internals of streams to make adjustments. Among the simplest things you can do is to implement a "hold" feature, wherein a participant in a call can click a button and turn off their microphone, begin sending music to the other peer instead, and stop accepting incoming audio.
+Because the streams for an `RTCPeerConnection` are implemented using RTP and the interfaces [above](#rtcpeerconnection_and_rtp), you can take advantage of the access this gives you to the internals of streams to make adjustments. Among the simplest things you can do is to implement a "hold" feature, wherein a participant in a call can click a button and turn off their microphone, begin sending music to the other peer instead, and stop accepting incoming audio.
 
 > **Note:** This example makes use of modern JavaScript features including [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) expression. This enormously simplifies and makes far more readable the code dealing with the promises returned by WebRTC methods.
 
@@ -80,7 +81,7 @@ async function enableHold(audioStream) {
     await audioTransceiver.sender.replaceTrack(audioStream.getAudioTracks()[0]);
     audioTransceiver.receiver.track.enabled = false;
     audioTransceiver.direction = "sendonly";
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -92,7 +93,7 @@ The three lines of code within the [`try`](/en-US/docs/Web/JavaScript/Reference/
 2. Disable the incoming audio track.
 3. Switch the audio transceiver into send-only mode.
 
-This triggers renegotiation of the `RTCPeerConnection` by sending it a {{event("negotiationneeded")}} event, which your code responds to generating an SDP offer using {{domxref("RTCPeerConnection.createOffer")}} and sending it through the signaling server to the remote peer.
+This triggers renegotiation of the `RTCPeerConnection` by sending it a {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event, which your code responds to generating an SDP offer using {{domxref("RTCPeerConnection.createOffer")}} and sending it through the signaling server to the remote peer.
 
 The `audioStream`, containing the audio to play instead of the local peer's microphone audio, can come from anywhere. One possibility is to have a hidden {{HTMLElement("audio")}} element and use {{domxref("HTMLMediaElement.captureStream", "HTMLAudioElement.captureStream()")}} to get its audio stream.
 
@@ -107,7 +108,7 @@ async function holdRequested(offer) {
     await audioTransceiver.sender.replaceTrack(null);
     audioTransceiver.direction = "recvonly";
     await sendAnswer();
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -153,7 +154,7 @@ async function holdEnded(offer, micStream) {
     await audioTransceiver.sender.replaceTrack(micStream.getAudioTracks()[0]);
     audioTransceiver.direction = "sendrecv";
     await sendAnswer();
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }

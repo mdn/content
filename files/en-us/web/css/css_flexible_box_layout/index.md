@@ -8,6 +8,7 @@ tags:
   - Overview
   - Reference
   - flexbox
+spec-urls: https://drafts.csswg.org/css-flexbox/
 ---
 {{CSSRef}}
 
@@ -76,9 +77,7 @@ The properties `align-content`, `align-self`, `align-items` and `justify-content
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('CSS3 Flexbox') }} | {{ Spec2('CSS3 Flexbox') }} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

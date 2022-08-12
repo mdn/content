@@ -40,9 +40,9 @@ You don't have to tell people to search for your game in an app store with HTML5
 
 The vast majority of the traffic we are interested in — people playing HTML5 games — comes from mobile devices so that's something you will have to focus on if you truly want to succeed. Mobile devices are where HTML5 technology can truly shine and show its advantages. There's no Flash, and HTML5 is fully multiplatform.
 
-Trying to compete with desktop games directly is very difficult. You can put your HTML5 games into the same arena (see {{anch("Native desktop")}}, later on) and you should because it's good to diversify the platforms you support, but you have to remember that developers creating desktop games have years of experience, great tools and stable distribution channels. Many HTML5 games will target different market segments than native desktop games, e.g. simple time killer games to be played while on the move rather than huge immersive experiences. Such games are often designed to be played with two, or even one finger, so you can hold the device, play the game and be able to use the second hand for whatever you currently need.
+Trying to compete with desktop games directly is very difficult. You can put your HTML5 games into the same arena (see [Native desktop](#native_desktop), later on) and you should because it's good to diversify the platforms you support, but you have to remember that developers creating desktop games have years of experience, great tools and stable distribution channels. Many HTML5 games will target different market segments than native desktop games, e.g. simple time killer games to be played while on the move rather than huge immersive experiences. Such games are often designed to be played with two, or even one finger, so you can hold the device, play the game and be able to use the second hand for whatever you currently need.
 
-Saying this, desktop platforms can be used for distribution quite easily with the availability of wrappers that can help you prepare native builds of your game see {{anch("Packaging games")}}. It's also nice to provide desktop controls for your games even if you're mostly targeting mobile. Players are enjoying your games on any platform available, and desktop is one of them. Plus, it is usually easier to build and test the game first on desktop, and then move on to debugging mobile.
+Saying this, desktop platforms can be used for distribution quite easily with the availability of wrappers that can help you prepare native builds of your game see [Packaging games](#packaging_games). It's also nice to provide desktop controls for your games even if you're mostly targeting mobile. Players are enjoying your games on any platform available, and desktop is one of them. Plus, it is usually easier to build and test the game first on desktop, and then move on to debugging mobile.
 
 ## Publishing the game
 
@@ -60,7 +60,7 @@ If you are a front-end developer, you may already know what to do. An HTML5 game
 
 If you want to make money out of game dev, you should secure your source code one way or another against people who could easily take it and sell it as their own. You can concatenate and minify the code to make it smaller and uglify it so it's a lot harder to reverse engineer your game. Another good measure to take is to provide an online demo if you're planning on packaging it and selling it in a closed store like iTunes or Steam.
 
-If you're working on a side project just for fun, then leaving the source open will benefit those who would like to learn from what you've created. You don't even have to worry about looking for a hosting provider as it's possible to [host games on GitHub Pages](https://dev.end3r.com/2014/02/host-your-html5-games-on-github-pages/). You'll get free hosting, version control and possible contributors if your project is interesting enough.
+If you're working on a side project just for fun, then leaving the source open will benefit those who would like to learn from what you've created. You don't even have to worry about looking for a hosting provider as it's possible to [host games on GitHub Pages](https://end3r.com/blog/2014/02/host-your-html5-games-on-github-pages/). You'll get free hosting, version control and possible contributors if your project is interesting enough.
 
 ### Publishers and portals
 
@@ -70,7 +70,7 @@ There are also independent portals collecting interesting games like [HTML5Games
 
 ### Web and native stores
 
-You can also upload and publish your game directly to different types of stores, or marketplaces. To do that you'll have to prepare and package it to a build format specific for every app ecosystem you want to target it at. See {{anch("Marketplaces — distribution platforms")}} for more details of what marketplace types are available.
+You can also upload and publish your game directly to different types of stores, or marketplaces. To do that you'll have to prepare and package it to a build format specific for every app ecosystem you want to target it at. See [Marketplaces — distribution platforms](#marketplaces_—_distribution_platforms) for more details of what marketplace types are available.
 
 ## Marketplaces — Distribution platforms
 
@@ -83,7 +83,6 @@ Let's see what the available options are regarding the marketplaces/stores avail
 The best platforms for HTML5 games are the Web-based stores. It's easy to [prepare a game for them](https://code.tutsplus.com/tutorials/preparing-for-firefox-os--mobile-18515) as such an action involves little to no modification of the game itself — usually adding a manifest file containing necessary information in a zipped package containing all the resources is enough.
 
 - [The Chrome Web Store](https://chrome.google.com/webstore/) is also an attractive option — again, having a manifest file ready, zipping your game and filling in the online submission form is about all that's required.
-- [Tizen](https://www.tizenstore.com/) is also putting a high value on supporting apps written in JavaScript. Their store is another available option.
 
 ### Native mobile stores
 
@@ -110,14 +109,14 @@ The web is the first and the best choice for HTML5 games, but if you want to rea
 There are various tools to choose from depending on your skills, preferred frameworks or target platforms. It's all about picking the best tool for your particular task.
 
 - [Phonegap](https://phonegap.com/) — based on Cordova, this is the most popular tool for building/packaging JavaScript apps for native platforms.
-- [CocoonIO](http://cocoon.io/) — the most popular tool specifically for building HTML5 games for multiple native stores. It has it's own performance optimizations for games rendered on Canvas and supports many game frameworks.
+- [CocoonIO](http://cocoon.io/) — the most popular tool specifically for building HTML5 games for multiple native stores. It has its own performance optimizations for games rendered on Canvas and supports many game frameworks.
 - [Ejecta](https://impactjs.com/ejecta) — a tool specifically for packaging games created with [the ImpactJS](https://impactjs.com/) framework for iOS, built by the ImpactJS author. It provides seamless integration with ImpactJS, but it only supports only one framework and app store.
 - [NW.js](https://nwjs.io/) — formerly known as Node-Webkit, this is the first choice when it comes to building a desktop game that works on Windows, Mac and Linux. The distributions are packaged with the WebKit engine to provide rendering on any platform.
 
 Other alternative tools are:
 
-- [Intel XDK](https://software.intel.com/en-us/intel-xdk) — an exciting alternative, similar to CocoonIO.
-- [Electron](https://electron.atom.io/) — known as Atom Shell — is an open-sourced and cross-platform tool from GitHub.
+- [Intel XDK](https://www.intel.com/content/www/us/en/developer/tools/overview.html) — an exciting alternative, similar to CocoonIO.
+- [Electron](https://www.electronjs.org/) — known as Atom Shell — is an open-sourced and cross-platform tool from GitHub.
 - [Manifold.js](https://manifoldjs.com/) — this tool from the Microsoft team can create native distributions of HTML5 games from iOS, Android, and Windows.
 
 ## Summary

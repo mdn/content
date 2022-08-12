@@ -1,6 +1,7 @@
 ---
 title: URLPattern()
 slug: Web/API/URLPattern/URLPattern
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -22,20 +23,20 @@ object representing the url pattern defined by the parameters.
 ## Syntax
 
 ```js
-new URLPattern(input);
-new URLPattern(input, baseURL);
+new URLPattern(input)
+new URLPattern(input, baseURL)
 ```
 
 ### Parameters
 
 - `input`
   - : The pattern that will be used for matching. This can either be a
-    {{domxref("USVString")}}, or an object providing patterns for each URL part
+    string, or an object providing patterns for each URL part
     individually. The object members can be any of `protocol`, `username`,
     `password`, `hostname`, `port`, `pathname`, `search`, `hash`, or `baseURL`.
     Omitted parts in the object will be treated as wildcards (`*`).
 - `baseURL` {{optional_inline}}
-  - : A {{domxref("USVString")}} representing the base URL to use in cases where
+  - : A string representing the base URL to use in cases where
     `input` is a relative pattern. If not specified, it defaults to `undefined`.
 
 ### Exceptions
@@ -49,27 +50,34 @@ new URLPattern(input, baseURL);
 
 ```js
 // Matching a pathname
-let pattern = new URLPattern('https://example.com/books/:id')
-    = new URLPattern(
-        '/books/:id',
-        'https://example.com',
-      )
-    = new URLPattern({
-        protocol: 'https',
-        hostname: 'example.com',
-        pathname: '/books/:id',
-      })
-    = new URLPattern({
-        pathname: '/books/:id',
-        baseURL: 'https://example.com',
-      });
+let pattern1 = new URLPattern('https://example.com/books/:id')
+// same as
+let pattern2 = new URLPattern(
+  '/books/:id',
+  'https://example.com',
+);
+// or
+let pattern3 = new URLPattern({
+  protocol: 'https',
+  hostname: 'example.com',
+  pathname: '/books/:id',
+});
+// or
+let pattern4 = new URLPattern({
+  pathname: '/books/:id',
+  baseURL: 'https://example.com',
+});
+```
 
+```js
 // Match the protocol and hostname
 let pattern = new URLPattern({
-    protocol: 'http{s}?',
-    hostname: ':subdomain.example.com',
-  });
+  protocol: 'http{s}?',
+  hostname: ':subdomain.example.com',
+});
+```
 
+```js
 // Match all possible structured parts
 let pattern = new URLPattern({
   protocol: 'http{s}?',
@@ -90,7 +98,8 @@ pattern object, or a pattern string and optional baseURL.
 
 ```js
 new URLPattern(obj);
-new URLPattern(pattern[, baseURL]);
+new URLPattern(pattern);
+new URLPattern(pattern, baseURL);
 ```
 
 The first type of constructor (see above) takes an object that describes the

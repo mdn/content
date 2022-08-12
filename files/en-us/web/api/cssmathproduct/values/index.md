@@ -1,6 +1,7 @@
 ---
 title: CSSMathProduct.values
 slug: Web/API/CSSMathProduct/values
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -20,13 +21,7 @@ property of the {{domxref("CSSMathProduct")}} interface returns a
 {{domxref('CSSNumericArray')}} object which contains one or more
 {{domxref('CSSNumericValue')}} objects.
 
-## Syntax
-
-```js
-var cssNumericArray = CSSMathProduct.values;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericArray')}}.
 

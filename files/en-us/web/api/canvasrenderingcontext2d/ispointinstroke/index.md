@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.isPointInStroke()
 slug: Web/API/CanvasRenderingContext2D/isPointInStroke
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -19,8 +20,8 @@ area contained by the stroking of a path.
 ## Syntax
 
 ```js
-ctx.isPointInStroke(x, y);
-ctx.isPointInStroke(path, x, y);
+isPointInStroke(x, y)
+isPointInStroke(path, x, y)
 ```
 
 ### Parameters
@@ -96,12 +97,11 @@ ctx.fill(ellipse);
 ctx.stroke(ellipse);
 
 // Listen for mouse moves
-canvas.addEventListener('mousemove', function(event) {
+canvas.addEventListener('mousemove', (event) => {
   // Check whether point is inside ellipse's stroke
   if (ctx.isPointInStroke(ellipse, event.offsetX, event.offsetY)) {
     ctx.strokeStyle = 'green';
-  }
-  else {
+  } else {
     ctx.strokeStyle = 'red';
   }
 

@@ -1,6 +1,7 @@
 ---
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
+page-type: web-api-constructor
 tags:
   - Constructor
   - Reference
@@ -39,14 +40,14 @@ class MyEventTarget extends EventTarget {
 };
 
 let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret;  // == 5
-myEventTarget.addEventListener("foo", function(e) {
-  this._secret = e.detail;
+let value = myEventTarget.secret;  // === 5
+myEventTarget.addEventListener("foo", (e) => {
+  myEventTarget._secret = e.detail;
 });
 
 let event = new CustomEvent("foo", { detail: 7 });
 myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // == 7
+let newValue = myEventTarget.secret; // === 7
 ```
 
 ## Specifications

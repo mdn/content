@@ -1,6 +1,7 @@
 ---
 title: Document.pointerLockElement
 slug: Web/API/Document/pointerLockElement
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -18,13 +19,7 @@ element set as the target for mouse events while the pointer is locked. It is
 `null` if lock is pending, pointer is unlocked, or the target is in another
 document.
 
-## Syntax
-
-```js
-document.pointerLockElement;
-```
-
-### Value
+## Value
 
 An {{domxref("Element")}} or `null`.
 

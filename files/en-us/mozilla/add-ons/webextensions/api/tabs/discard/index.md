@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var discarding = browser.tabs.discard(
+let discarding = browser.tabs.discard(
   tabIds          // integer or integer array
 )
 ```
@@ -55,7 +55,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var discarding = browser.tabs.discard(2);
+let discarding = browser.tabs.discard(2);
 discarding.then(onDiscarded, onError);
 ```
 
@@ -70,7 +70,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var discarding = browser.tabs.discard([15, 14, 1]);
+let discarding = browser.tabs.discard([15, 14, 1]);
 discarding.then(onDiscarded, onError);
 ```
 
@@ -80,7 +80,7 @@ discarding.then(onDiscarded, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-discard) API.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-discard) API.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

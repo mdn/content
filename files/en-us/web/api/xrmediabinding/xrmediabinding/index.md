@@ -1,6 +1,7 @@
 ---
 title: XRMediaBinding()
 slug: Web/API/XRMediaBinding/XRMediaBinding
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -36,7 +37,7 @@ A newly-created {{domxref("XRMediaBinding")}}.
     - The {{domxref("XRSession")}} specified by `session` has already been stopped.
     - The specified `session` is not immersive.
 
-## Example
+## Examples
 
 ### Creating a new `XRMediaBinding`
 

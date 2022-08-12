@@ -13,6 +13,8 @@ browser-compat: css.properties.ruby-position
 
 The **`ruby-position`** CSS property defines the position of a ruby element relatives to its base element. It can be positioned over the element (`over`), under it (`under`), or between the characters on their right side (`inter-character`).
 
+{{EmbedInteractiveExample("pages/css/ruby-position.html")}}
+
 ## Syntax
 
 ```css
@@ -26,6 +28,7 @@ ruby-position: alternate;
 ruby-position: inherit;
 ruby-position: initial;
 ruby-position: revert;
+ruby-position: revert-layer;
 ruby-position: unset;
 ```
 

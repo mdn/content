@@ -25,19 +25,19 @@ The `<gradient>` data type is defined with one of the function types listed belo
 
 #### Linear gradient
 
-Linear gradients transition colors progressively along an imaginary line. They are generated with the {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} function.
+Linear gradients transition colors progressively along an imaginary line. They are generated with the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} function.
 
 #### Radial gradient
 
-Radial gradients transition colors progressively from a center point (origin). They are generated with the {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} function.
+Radial gradients transition colors progressively from a center point (origin). They are generated with the {{cssxref("gradient/radial-gradient", "radial-gradient()")}} function.
 
 #### Repeating gradient
 
-Repeating gradients duplicate a gradient as much as necessary to fill a given area. They are generated with the {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}} functions.
+Repeating gradients duplicate a gradient as much as necessary to fill a given area. They are generated with the {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} functions.
 
 #### Conic gradient
 
-Conic gradients transition colors progressively around a circle. They are generated with the {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} function.
+Conic gradients transition colors progressively around a circle. They are generated with the {{cssxref("gradient/conic-gradient", "conic-gradient()")}} function.
 
 ## Interpolation
 
@@ -156,7 +156,7 @@ div {
 ## See also
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- Gradient functions: {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
+- Gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
 - [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
 - [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)

@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.firCount
 slug: Web/API/RTCInboundRtpStreamStats/firCount
+page-type: web-api-instance-property
 tags:
   - API
   - FIR
@@ -28,13 +29,7 @@ the receiver to the sender.
 The receiver sends a FIR packet when the stream
 falls behind and needs to skip frames in order to catch up.
 
-## Syntax
-
-```js
-var firCount = rtcInboundRtpStreamStats.firCount;
-```
-
-### Value
+## Value
 
 An integer value indicating how many FIR packets have been received by the sender
 during the current connection. This statistic is available only for video tracks.

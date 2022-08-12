@@ -26,7 +26,7 @@ For compatibility with other browsers, Firefox makes this method available via t
 ```js
 browser.menus.create(
   createProperties, // object
-  function() {...}  // optional function
+  () => {/* … */}   // optional function
 )
 ```
 
@@ -80,8 +80,8 @@ browser.menus.create(
 
         > **Note:** The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
-    - `id` {{optional_inline}}
-      - : `string`. The unique ID to assign to this item. Mandatory for event pages. Cannot be the same as another ID for this extension.
+    - `id` {{optional_inline}}1
+      - : `string`. The unique ID to assign to this item. Is mandatory for non-persistent [background (event) pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) in Manifest V2 and in Manifest V3. Cannot be the same as another ID for this extension.
     - `onclick` {{optional_inline}}
       - : `function`. A function that will be called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
     - `parentId` {{optional_inline}}
@@ -129,8 +129,8 @@ browser.menus.create({
   contexts: ["selection"]
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "log-selection") {
+browser.menus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "log-selection") {
     console.log(info.selectionText);
   }
 });
@@ -141,7 +141,7 @@ This example adds two radio items, which you can use to choose whether to apply 
 ```js
 function onCreated() {
   if (browser.runtime.lastError) {
-    console.log("error creating item:" + browser.runtime.lastError);
+    console.log("error creating item:", browser.runtime.lastError);
   } else {
     console.log("item created successfully");
   }
@@ -163,15 +163,15 @@ browser.menus.create({
   checked: false
 }, onCreated);
 
-var makeItBlue = 'document.body.style.border = "5px solid blue"';
-var makeItGreen = 'document.body.style.border = "5px solid green"';
+let makeItBlue = 'document.body.style.border = "5px solid blue"';
+let makeItGreen = 'document.body.style.border = "5px solid green"';
 
-browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "radio-blue") {
+browser.menus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "radio-blue") {
     browser.tabs.executeScript(tab.id, {
       code: makeItBlue
     });
-  } else if (info.menuItemId == "radio-green") {
+  } else if (info.menuItemId === "radio-green") {
     browser.tabs.executeScript(tab.id, {
       code: makeItGreen
     });
@@ -185,7 +185,7 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#method-create) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#method-create) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

@@ -19,7 +19,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getting = browser.devtools.network.getHAR()
+let getting = browser.devtools.network.getHAR()
 ```
 
 ### Parameters
@@ -52,7 +52,7 @@ logRequestsButton.addEventListener("click", logRequests);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/docs/extensions/reference/devtools_network/) API.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

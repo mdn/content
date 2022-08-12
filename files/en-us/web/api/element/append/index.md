@@ -1,6 +1,7 @@
 ---
 title: Element.append()
 slug: Web/API/Element/append
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -13,13 +14,13 @@ browser-compat: api.Element.append
 {{APIRef("DOM")}}
 
 The **`Element.append()`** method
-inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after
-the last child of the `Element`. {{domxref("DOMString")}} objects
+inserts a set of {{domxref("Node")}} objects or string objects after
+the last child of the `Element`. String objects
 are inserted as equivalent {{domxref("Text")}} nodes.
 
 Differences from {{domxref("Node.appendChild()")}}:
 
-- `Element.append()` allows you to also append {{domxref("DOMString")}}
+- `Element.append()` allows you to also append string
   objects, whereas `Node.appendChild()` only accepts {{domxref("Node")}}
   objects.
 - `Element.append()` has no return value, whereas
@@ -30,13 +31,19 @@ Differences from {{domxref("Node.appendChild()")}}:
 ## Syntax
 
 ```js
-append(...nodesOrDOMStrings)
+append(param1)
+append(param1, param2)
+append(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters
 
-- `nodesOrDOMStrings`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} or string objects to insert.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -33,7 +33,7 @@ npm install luxon
     const { DateTime } = require("luxon");
     ```
 
-Add the virtual property `due_back_formatted` just after the url property.
+Add the virtual property `due_back_formatted` just after the URL property.
 
 ```js
 BookInstanceSchema
@@ -50,7 +50,7 @@ BookInstanceSchema
 
 Open **/views/bookinstance_list.pug** and replace `due_back` with `due_back_formatted`.
 
-```js
+```pug
       if val.status != 'Available'
         //span  (Due: #{val.due_back} )
         span  (Due: #{val.due_back_formatted} )

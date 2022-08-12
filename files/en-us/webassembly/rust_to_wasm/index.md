@@ -18,7 +18,7 @@ There are two main use cases for Rust and WebAssembly:
 - Build an entire application — an entire web app based in Rust.
 - Build a part of an application — using Rust in an existing JavaScript frontend.
 
-For now, the Rust team is focusing on the latter case, and so that's what we cover here. For the former case, check out projects like [`yew`](https://github.com/DenisKolodin/yew).
+For now, the Rust team is focusing on the latter case, and so that's what we cover here. For the former case, check out projects like [`yew`](https://github.com/yewstack/yew).
 
 In this tutorial, we build a package using `wasm-pack`, a tool for building JavaScript packages in Rust. This package will contain only WebAssembly and JavaScript code, and so the users of the package won't need Rust installed. They may not even notice that it's written in Rust.
 
@@ -28,7 +28,7 @@ Let's go through all the required steps to get our environment set up.
 
 ### Install Rust
 
-Install Rust by going to the [Install Rust](https://www.rust-lang.org/install.html) page and following the instructions. This installs a tool called "rustup", which lets you manage multiple versions of Rust. By default, it installs the latest stable Rust release, which you can use for general Rust development. Rustup installs `rustc`, the Rust compiler, as well as `cargo`, Rust's package manager, `rust-std`, Rust's standard libraries, and some helpful docs — `rust-docs`.
+Install Rust by going to the [Install Rust](https://www.rust-lang.org/tools/install) page and following the instructions. This installs a tool called "rustup", which lets you manage multiple versions of Rust. By default, it installs the latest stable Rust release, which you can use for general Rust development. Rustup installs `rustc`, the Rust compiler, as well as `cargo`, Rust's package manager, `rust-std`, Rust's standard libraries, and some helpful docs — `rust-docs`.
 
 > **Note:** Pay attention to the post-install note about needing cargo's `bin` directory in your system `PATH`. This is added automatically, but you must restart your terminal for it to take effect.
 
@@ -192,7 +192,7 @@ This does a number of things (and they take a lot of time, especially the first 
 
 1. Compiles your Rust code to WebAssembly.
 2. Runs `wasm-bindgen` on that WebAssembly, generating a JavaScript file that wraps up that WebAssembly file into a module the browser can understand.
-3. Creates a `pkg` directory and move that JavaScript file and your WebAssembly code into it.
+3. Creates a `pkg` directory and moves that JavaScript file and your WebAssembly code into it.
 4. Reads your `Cargo.toml` and produces an equivalent `package.json`.
 5. Copies your `README.md` (if you have one) into the package.
 
@@ -210,7 +210,7 @@ Let's start by creating a file named `index.html` in the root of the project, an
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>hello-wasm example</title>
@@ -233,7 +233,7 @@ Serve the root directory of the project with a local web server, (e.g. `python3 
 
 > **Note:** Make sure to use an up to date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.
 
-Load `index.html` from the web server (if you used the python3 example: `http://localhost:8000`). An alert box appears on the screen, with `Hello, WebAssembly!` in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.
+Load `index.html` from the web server (if you used the Python3 example: `http://localhost:8000`). An alert box appears on the screen, with `Hello, WebAssembly!` in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.
 
 ## Making our package available to npm
 
@@ -249,7 +249,7 @@ $ wasm-pack build --target bundler
 
 We are building an npm package, so you need to have Node.js and npm installed.
 
-To get Node.js and npm, go to the [Get npm!](https://www.npmjs.com/get-npm) page and follow the instructions. When it comes to picking a version, choose any one you'd like; this tutorial isn't version-specific.
+To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-started/) page and follow the instructions. When it comes to picking a version, choose any one you'd like; this tutorial isn't version-specific.
 
 Next, let's use \`npm link\` to make this package available to other JavaScript packages installed
 
@@ -319,7 +319,7 @@ Finally, we need to modify the HTML file; open the `index.html` file and replace
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>hello-wasm example</title>

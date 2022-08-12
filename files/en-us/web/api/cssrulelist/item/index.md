@@ -1,6 +1,7 @@
 ---
 title: CSSRuleList.item()
 slug: Web/API/CSSRuleList/item
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`item()`** method of the {{domxref("CSSRuleList")}} interface returns the 
 ## Syntax
 
 ```js
-CSSRuleList.item(index);
+item(index)
 ```
 
 ### Parameters

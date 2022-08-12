@@ -79,8 +79,8 @@ If a `thisArg` parameter is provided to `forEach()`,
 it will be passed to `callback` when invoked, for use as its
 `this` value. Otherwise, the value `undefined` will be passed for
 use as its `this` value. The `this` value ultimately observable by
-`callback` is determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+`callback` is determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 Each value is visited once, except in the case when it was deleted and re-added before
 `forEach()` has finished. `callback` is not invoked for
@@ -98,7 +98,7 @@ The following code logs a line for each element in a `Set` object:
 
 ```js
 function logSetElements(value1, value2, set) {
-    console.log('s[' + value1 + '] = ' + value2);
+  console.log(`s[${value}] = ${value2}`);
 }
 
 new Set(['foo', 'bar', undefined]).forEach(logSetElements);

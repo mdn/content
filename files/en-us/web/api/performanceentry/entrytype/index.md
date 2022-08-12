@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
+page-type: web-api-instance-property
 tags:
   - API
   - Performance Timeline API
@@ -13,18 +14,12 @@ browser-compat: api.PerformanceEntry.entryType
 {{APIRef("Performance Timeline API")}}
 
 The **`entryType`** property returns
-a {{domxref("DOMString")}} representing the type of performance metric such as, for
+a string representing the type of performance metric such as, for
 example, "`mark`". This property is read only.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var type = entry.entryType;
-```
-
-### Return value
+## Value
 
 The return value depends on the subtype of the `PerformanceEntry` object and
 affects the value of the {{domxref('PerformanceEntry.name')}} property as shown by the
@@ -45,7 +40,7 @@ table below.
     <tr>
       <td><code>element</code></td>
       <td>{{domxref('PerformanceElementTiming')}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>Reports load time of elements.</td>
     </tr>
     <tr>
@@ -68,7 +63,7 @@ table below.
     <tr>
       <td><code>mark</code></td>
       <td>{{domxref('PerformanceMark')}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>
         The name used when the mark was created by calling
         {{domxref("Performance.mark","performance.mark()")}}.
@@ -77,7 +72,7 @@ table below.
     <tr>
       <td><code>measure</code></td>
       <td>{{domxref('PerformanceMeasure')}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>
         name used when the measure was created by calling
         {{domxref("Performance.measure","performance.measure()")}}.
@@ -86,7 +81,7 @@ table below.
     <tr>
       <td><code>paint</code></td>
       <td>{{domxref('PerformancePaintTiming')}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>
         Either <code>'first-paint'</code> or
         <code>'first-contentful-paint'</code>.
@@ -95,13 +90,13 @@ table below.
     <tr>
       <td><code>longtask</code></td>
       <td>{{domxref('PerformanceLongTaskTiming')}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>reports instances of long tasks</td>
     </tr>
   </tbody>
 </table>
 
-## Example
+## Examples
 
 The following example shows the use of the `entryType` property.
 
@@ -118,10 +113,10 @@ function run_PerformanceEntry() {
   performance.mark("begin");
 
   // Check the entryType of all the "begin" entries
-  var entriesNamedBegin = performance.getEntriesByName("begin");
-  for (var i=0; i < entriesNamedBegin.length; i++) {
-      var typeOfEntry = entriesNamedBegin[i].entryType;
-      console.log("Entry is type: " + typeOfEntry);
+  const entriesNamedBegin = performance.getEntriesByName("begin");
+  for (let i=0; i < entriesNamedBegin.length; i++) {
+      const typeOfEntry = entriesNamedBegin[i].entryType;
+      console.log(`Entry is type: ${typeOfEntry}`);
   }
 
 }

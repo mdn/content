@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
+page-type: web-api-interface
 tags:
   - API
   - CSS
@@ -32,7 +33,7 @@ h1, h2 {
 
 Another rule might be an _at-rule_ such as {{cssxref("@import")}} or {{cssxref("@media")}}, and so forth.
 
-See the {{anch("Obtaining a StyleSheet")}} section for the various ways a `CSSStyleSheet` object can be obtained. A `CSSStyleSheet` object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling _Constructable Stylesheets_.
+See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the various ways a `CSSStyleSheet` object can be obtained. A `CSSStyleSheet` object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling _Constructable Stylesheets_.
 
 ## Constructor
 
@@ -43,13 +44,13 @@ See the {{anch("Obtaining a StyleSheet")}} section for the various ways a `CSSSt
 
 _Inherits properties from its parent, {{domxref("StyleSheet")}}._
 
-- {{domxref("CSSStyleSheet.cssRules")}}{{ReadOnlyInline}}
+- {{domxref("CSSStyleSheet.cssRules")}} {{ReadOnlyInline}}
 
   - : Returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of the {{domxref("CSSRule")}} objects that comprise the stylesheet.
 
-    > **Note:** In some browsers, if a stylesheet is loaded from a different domain, accessing `cssRules` results in a`SecurityError`.
+    > **Note:** In some browsers, if a stylesheet is loaded from a different domain, accessing `cssRules` results in a `SecurityError`.
 
-- {{domxref("CSSStyleSheet.ownerRule")}}{{ReadOnlyInline}}
+- {{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}
   - : If this stylesheet is imported into the document using an {{cssxref("@import")}} rule, the `ownerRule` property returns the corresponding {{domxref("CSSImportRule")}}; otherwise, this property's value is `null`.
 
 ## Methods

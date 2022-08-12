@@ -1,11 +1,12 @@
 ---
 title: File.name
 slug: Web/API/File/name
+page-type: web-api-instance-property
 tags:
   - API
   - File API
-  - Files
   - Property
+  - Read-only
   - Reference
 browser-compat: api.File.name
 ---
@@ -14,46 +15,43 @@ browser-compat: api.File.name
 Returns the name of the file represented by a {{domxref("File")}} object. For security
 reasons, the path is excluded from this property.
 
-## Syntax
-
-```js
-var name = file.name;
-```
-
 ## Value
 
 A string, containing the name of the file without path, such as "My Resume.rtf".
 
-## Example
+## Examples
+
+### HTML
 
 ```html
-<input type="file" multiple onchange="processSelectedFiles(this)">
-
-<div id="output"></div>
+<input type="file" id="filepicker" multiple>
+<div>
+  <p>List of selected files:</p>
+  <ul id="output"></ul>
+</div>
 ```
+
+### JavaScript
 
 ```js
-const output = document.querySelector("#output");
-function processSelectedFiles(fileInput) {
-  let files = fileInput.files;
-  output.textContent = "List of Selected Files:";
+const output = document.getElementById('output');
+const filepicker = document.getElementById('filepicker');
 
-  for (let i = 0; i < files.length; i++) {
-    output.textContent += `\nFilename: ${files[i].name}`;
+filepicker.addEventListener('change', (event) => {
+  const files = event.target.files;
+  output.textContent = '';
+
+  for (const file of files) {
+    const li = document.createElement('li');
+    li.textContent = file.name;
+    output.appendChild(li);
   }
-}
+})
 ```
 
-```css hidden
-#output{
-  padding: 0.5em 0;
-  white-space: pre;
-}
-```
+### Result
 
-#### Result
-
-{{ EmbedLiveSample('Example', 300, 100) }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 
@@ -65,5 +63,4 @@ function processSelectedFiles(fileInput) {
 
 ## See also
 
-- [Using files from web
-  applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

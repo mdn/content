@@ -1,6 +1,7 @@
 ---
 title: Animation.replaceState
 slug: Web/API/Animation/replaceState
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -14,19 +15,16 @@ browser-compat: api.Animation.replaceState
 
 The read-only **`Animation.replaceState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns the [replace state](https://drafts.csswg.org/web-animations-1/#animation-replace-state) of the animation. This will be `active` if the animation has been removed, or `persisted` if {{domxref("Animation.persist()")}} has been invoked on it.
 
-## Syntax
-
-```js
-let myReplaceState = Animation.replaceState;
-```
-
-### Value
+## Value
 
 A string that represents the replace state of the animation. The value can be one of:
 
-- `active`: The initial value of the animation's replace state; when the animation has been removed by the browser's [Automatically removing filling animations](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) behavior.
-- `persisted`: The animation has been explicitly persisted by invoking {{domxref("Animation.persist()")}} on it.
-- `removed`: The animation has been explicitly removed.
+- `active`
+  - : The initial value of the animation's replace state; when the animation has been removed by the browser's [Automatically removing filling animations](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) behavior.
+- `persisted`
+  - : The animation has been explicitly persisted by invoking {{domxref("Animation.persist()")}} on it.
+- `removed`
+  - : The animation has been explicitly removed.
 
 ## Examples
 
@@ -35,9 +33,9 @@ In our simple [replace indefinite animations demo](https://mdn.github.io/dom-exa
 ```js
 const divElem = document.querySelector('div');
 
-document.body.addEventListener('mousemove', evt => {
+document.body.addEventListener('mousemove', (evt) => {
   let anim = divElem.animate(
-    { transform: `translate(${ evt.clientX}px, ${evt.clientY}px)` },
+    { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
     { duration: 500, fill: 'forwards' }
   );
 
@@ -45,7 +43,7 @@ document.body.addEventListener('mousemove', evt => {
 
   //anim.persist()
 
-  anim.onremove = event => {console.log('Animation removed');}
+  anim.onremove = (event) => {console.log('Animation removed');}
 
   console.log(anim.replaceState);
 });

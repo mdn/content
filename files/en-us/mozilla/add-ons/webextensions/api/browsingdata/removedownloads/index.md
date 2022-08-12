@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.browsingData.removeDownloads(
+let removing = browser.browsingData.removeDownloads(
   removalOptions            // RemovalOptions object
 )
 ```
@@ -39,10 +39,6 @@ var removing = browser.browsingData.removeDownloads(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -61,7 +57,7 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.removeDownloads(
   {since: oneWeekAgo}).
@@ -83,9 +79,13 @@ browser.browsingData.removeDownloads({}).
 then(onRemoved, onError);
 ```
 
+## Browser compatibility
+
+{{Compat}}
+
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API.
+> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

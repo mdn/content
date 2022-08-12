@@ -1,6 +1,7 @@
 ---
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -15,22 +16,20 @@ browser-compat: api.Element.namespaceURI
 The **`Element.namespaceURI`** read-only property returns the
 namespace URI of the element, or `null` if the element is not in a namespace.
 
-## Syntax
+## Value
 
-```js
-namespace = element.namespaceURI
-```
+A string, or `null`.
 
-## Example
+## Examples
 
-In this snippet, an element is being examined for its {{domxref("localName")}} and its
+In this snippet, an element is being examined for its {{domxref("Element.localName", "localName")}} and its
 `namespaceURI`. If the `namespaceURI` returns the XUL namespace
 and the `localName` returns "browser", then the node is understood to be a
 XUL `<browser/>`.
 
 ```js
-if (element.localName == "browser" &&
-    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (element.localName === "browser" &&
+    element.namespaceURI === "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
   // this is a XUL browser
 }
 ```
@@ -43,7 +42,7 @@ frozen at the node creation time.
 
 In Firefox 3.5 and earlier, the namespace URI for HTML elements in HTML documents is
 `null`. In later versions, in compliance with HTML5, it is
-[`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml)
+[`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/)
 as in XHTML.
 
 You can create an element with the specified `namespaceURI` using the DOM

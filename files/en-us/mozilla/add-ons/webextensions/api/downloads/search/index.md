@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var searching = browser.downloads.search(query);
+let searching = browser.downloads.search(query);
 ```
 
 ### Parameters
@@ -56,7 +56,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
   query:["imgur"]
 });
 
@@ -79,9 +79,9 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var id = 13;
+let id = 13;
 
-var searching = browser.downloads.search({id});
+let searching = browser.downloads.search({id});
 searching.then(logDownloads, onError);
 ```
 
@@ -101,7 +101,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var searching = browser.downloads.search({});
+let searching = browser.downloads.search({});
 searching.then(logDownloads, onError);
 ```
 
@@ -121,7 +121,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
    limit: 1,
    orderBy: ["-startTime"]
 });
@@ -132,7 +132,7 @@ You can see this code in action in our [latest-download](https://github.com/mdn/
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-search) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-search) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: RTCRemoteOutboundRtpStreamStats.localId
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/localId
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -30,15 +31,9 @@ used to identify the {{domxref("RTCInboundRtpStreamStats")}} object whose
 Together, these two objects provide statistics about the inbound and outbound
 sides of the same synchronization source (SSRC).
 
-## Syntax
+## Value
 
-```js
-let localId = rtcRemoteOutboundRtpStreamStats.localId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which can be compared to the value of an
+A string which can be compared to the value of an
 {{domxref("RTCInboundRtpStreamStats")}} object's
 {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} property to see if the two
 represent statistics for each of the two sides of the same set of data received by the
@@ -49,22 +44,22 @@ local peer.
 You can think of the local and remote views of the same RTP stream as pairs, each of
 which has a reference back to the other one. Thus, if an {{domxref("RTCStatsReport")}}
 includes an `remote-outbound-rtp` statistics object (of type
-`RTCRemoteOutboundRtpStreamstats`), it should also have a corresponding
+`RTCRemoteOutboundRtpStreamStats`), it should also have a corresponding
 `inbound-rtp` object. Both of these provide information about the same batch
 of packets being transmitted from the remote peer to the local device. The difference is
 that `remote-outbound-rtp` describes statistics about the transmission(s)
 from the perspective of the remote peer, while `inbound-rtp` offers
 statistics about the incoming data from the local peer's perspective.
 
-You can {{anch("Try it and fork it", "examine, try out, and experiment")}} with this
+You can [examine, try out, and experiment](#try_it_and_fork_it) with this
 example on Glitch.
 
-## Example
+## Examples
 
 In this example, we have a pair of functions: the first,
 `networkTestStart()`, captures an initial report, and the second,
-`networkTestStop()`, captures a second report, then uses the two reports to
-output some information about the network conditions... XXX ...
+`networkTestStop()`, captures a second report.
+The second function uses the two reports to output some information about the network conditions.
 
 ### networkTestStart()
 
@@ -90,8 +85,7 @@ data has been collected by `networkTestStop()`.
 ### networkTestStop()
 
 The `networkTestStop()` function obtains a second report,
-`endReport`, then uses the two reports together to determine several... XXX
-...
+`endReport`, then computes and outputs the results.
 
 #### Finding paired statistics
 
@@ -188,7 +182,7 @@ Here's what's going on in the `networkTestStop()` function: after calling
 the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.getStats",
   "getStats()")}} to get the latest statistics report for the connection and storing it in
 `endReport`,  This is an {{domxref("RTCStatsReport")}} object, which maps
-strings taken from the {{domxref("RTCStatsType")}} enumerated type to objects of the
+strings to objects of the
 corresponding {{domxref("RTCStats")}}-based type.
 
 Now we can begin to process the results, starting with the ending statistics found in
@@ -249,9 +243,7 @@ and `networkTestStop()`).
 
 ### Try it and fork it
 
-This example is [available
-on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.  You can also [access
-it directly](https://33030790-3517-4d21-9b93-511347fa1ebd@api.glitch.com/git/websocket-webrtc-chat-with-stats) using Glitch's Git server.
+This example is [available on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.
 
 [Remix It](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=remix_this&utm_medium=button&utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats)
 

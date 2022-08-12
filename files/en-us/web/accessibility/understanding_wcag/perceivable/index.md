@@ -1,6 +1,6 @@
 ---
 title: Perceivable
-slug: Web/Accessibility/Understanding_WCAG/Perceivable 
+slug: Web/Accessibility/Understanding_WCAG/Perceivable
 tags:
   - Accessibility
   - Principle 1
@@ -290,7 +290,7 @@ This guideline refers to the ability of content to be consumed by users in multi
             screenreader if required.
           </li>
           <li>
-            "Swipe from the right hand side of the screen to reveal the menu"<br />Some
+            "Swipe from the right-hand side of the screen to reveal the menu"<br />Some
             users might not be able to swipe the screen, either due to
             disability or because their device does not support touch. An
             alternative should be provided, such as a keyboard shortcut or
@@ -661,7 +661,7 @@ This guideline relates to making sure core content is easy to discern from backg
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
   1. Perceivable
   2. [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)

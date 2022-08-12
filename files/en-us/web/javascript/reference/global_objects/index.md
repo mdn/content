@@ -45,9 +45,8 @@ These global functions—functions which are called globally, rather than on an 
 - {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
 - **Deprecated**
 
-  - {{Deprecated_Inline}} {{JSxRef("Global_Objects/escape", "escape()")}}
-  - {{Deprecated_Inline}} {{JSxRef("Global_Objects/unescape", "unescape()")}}
-  - {{Deprecated_Inline}} {{JSxRef("Global_Objects/uneval", "uneval()")}}
+  - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
+  - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
 
 ### Fundamental objects
 
@@ -65,7 +64,7 @@ Error objects are a special type of fundamental object. They include the basic {
 - {{JSxRef("Error")}}
 - {{JSxRef("AggregateError")}}
 - {{JSxRef("EvalError")}}
-- {{Non-Standard_Inline}} {{JSxRef("InternalError")}}
+- {{JSxRef("InternalError")}} {{Non-Standard_Inline}}
 - {{JSxRef("RangeError")}}
 - {{JSxRef("ReferenceError")}}
 - {{JSxRef("SyntaxError")}}
@@ -163,7 +162,3 @@ Additions to the ECMAScript core for language-sensitive functionalities.
 - {{JSxRef("WebAssembly.CompileError")}}
 - {{JSxRef("WebAssembly.LinkError")}}
 - {{JSxRef("WebAssembly.RuntimeError")}}
-
-### Other
-
-- {{JSxRef("Functions/arguments", "arguments")}}

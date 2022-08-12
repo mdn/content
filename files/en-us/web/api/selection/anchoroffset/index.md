@@ -1,9 +1,9 @@
 ---
 title: Selection.anchorOffset
 slug: Web/API/Selection/anchorOffset
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Property
   - Read-only
@@ -11,7 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.anchorOffset
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.anchorOffset`** read-only property returns the
 number of characters that the selection's anchor is offset within the
@@ -20,11 +20,9 @@ number of characters that the selection's anchor is offset within the
 This number is zero-based. If the selection begins with the first character in the
 {{domxref("Selection.anchorNode")}}, `0` is returned.
 
-## Syntax
+## Value
 
-```js
-number = sel.anchorOffset
-```
+A number.
 
 ## Specifications
 

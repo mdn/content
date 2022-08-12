@@ -10,21 +10,16 @@ tags:
 browser-compat: mathml.elements.mfenced
 ---
 {{MathMLRef}}
+{{deprecated_header}}
 
 The deprecated MathML `<mfenced>` element used to provide the possibility to add custom opening and closing parentheses (such as brackets) and separators (such as commas or semicolons) to an expression. It has been removed from the latest MathML standard and modern browsers no longer support it. Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead.
 
 ## Attributes
 
-- `class`, `id`, `style`
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - `close`
   - : A string for the closing delimiter. The default value is `")`" and any white space is trimmed.
-- `href`
-  - : Used to set a hyperlink to a specified URI.
-- `mathbackground`
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- `mathcolor`
-  - : The text color and also the fraction line color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
 - `open`
   - : A string for the opening delimiter. The default value is `"("` and any white space is trimmed.
 - `separators`
@@ -70,7 +65,7 @@ Rendering in your browser: <math><mfenced close="]" open separators="||||,"><mi>
 
 ## Specifications
 
-The \<mfenced> element is no longer part of the [latest MathML standard](https://github.com/mathml-refresh/mathml/issues/2). Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead, or, for backwards compatibility, see [mathml-polyfills/mfenced.](https://github.com/mathml-refresh/mathml-polyfills/tree/master/mfenced)
+The \<mfenced> element is no longer part of the [latest MathML standard](https://github.com/w3c/mathml/issues/2). Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead, or, for backwards compatibility, see [mathml-polyfills/mfenced.](https://github.com/mathml-refresh/mathml-polyfills/tree/main/mfenced)
 
 ## Browser compatibility
 

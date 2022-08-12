@@ -1,6 +1,7 @@
 ---
 title: CSSRotate.z
 slug: Web/API/CSSRotate/z
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -20,13 +21,7 @@ The **`z`** property of the
 vector. A positive value moves the element towards the viewer, and a negative value
 farther away.
 
-## Syntax
-
-```js
-var rotateZ = CSSRotate.z;
-```
-
-### Value
+## Value
 
 A double integer or a {{domxref("CSSNumericValue")}}
 

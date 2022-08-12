@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.replaceSync()
 slug: Web/API/CSSStyleSheet/replaceSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,23 +19,23 @@ The `replaceSync()` and {{domxref("CSSStyleSheet.replace()")}} methods can only 
 ## Syntax
 
 ```js
-CSSStyleSheet.replaceSync(text);
+replaceSync(text)
 ```
 
 ### Parameters
 
 - `text`
-  - : A {{domxref("USVString","string")}} containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
+  - : A string containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
 
-> **Note:** If any of the rules passed in `text` are an external stylesheet imported with the {{cssxref("@import")}} rule, those rules will be removed, and a warning printed to the console.
+    > **Note:** If any of the rules passed in `text` are an external stylesheet imported with the {{cssxref("@import")}} rule, those rules will be removed, and a warning printed to the console.
 
 ### Return value
 
-Undefined.
+None (`undefined`).
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor or if the stylesheet is flagged as unmodifiable.
 
 ## Examples
@@ -42,9 +43,9 @@ Undefined.
 In the following example a new stylesheet is created and two CSS rules are added using `replaceSync`.
 
 ```js
-let stylesheet = new CSSStyleSheet();
+const stylesheet = new CSSStyleSheet();
 
-stylesheet.replaceSync('body { font-size: 1.4em };p { color: red; }');
+stylesheet.replaceSync('body { font-size: 1.4em; } p { color: red; }');
 ```
 
 ## Specifications
@@ -54,3 +55,8 @@ stylesheet.replaceSync('body { font-size: 1.4em };p { color: red; }');
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)

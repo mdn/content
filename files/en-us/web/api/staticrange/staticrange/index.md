@@ -1,6 +1,7 @@
 ---
 title: StaticRange()
 slug: Web/API/StaticRange/StaticRange
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -24,7 +25,7 @@ the range as well as a Boolean indicating whether or not the range is
 ## Syntax
 
 ```js
-var staticRange = new StaticRange(rangeSpec)
+new StaticRange(rangeSpec)
 ```
 
 ### Parameters
@@ -59,7 +60,7 @@ the `rangeSpec` object.
     are `Node.DOCUMENT_TYPE_NODE` (representing the {{domxref("DocumentType")}}
     node derived from the {{Glossary("Doctype", "DTD")}} identified using the `doctype`
     preamble in the HTML, for example) and the {{domxref("Attr")}} node describing an
-    attribute of an element on the DOM..
+    attribute of an element on the DOM.
 
 ## Specifications
 

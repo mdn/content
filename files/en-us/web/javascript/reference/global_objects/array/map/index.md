@@ -23,39 +23,38 @@ every element in the calling array.
 
 ```js
 // Arrow function
-map((element) => { /* ... */ })
-map((element, index) => { /* ... */ })
-map((element, index, array) => { /* ... */ })
+map((element) => { /* … */ })
+map((element, index) => { /* … */ })
+map((element, index, array) => { /* … */ })
 
 // Callback function
 map(callbackFn)
 map(callbackFn, thisArg)
 
 // Inline callback function
-map(function(element) { /* ... */ })
-map(function(element, index) { /* ... */ })
-map(function(element, index, array){ /* ... */ })
-map(function(element, index, array) { /* ... */ }, thisArg)
+map(function(element) { /* … */ })
+map(function(element, index) { /* … */ })
+map(function(element, index, array){ /* … */ })
+map(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : Function that is called for every element of `arr`. Each time
-    `callbackFn` executes, the returned value is added to
-    `newArray`.
+  - : Function that is called for every element of `arr`.
+    Each time `callbackFn` executes, the returned value is added to `newArray`.
 
-    The `callbackFn` function accepts the following arguments:
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
+    - `array`
       - : The array `map` was called upon.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value
@@ -93,8 +92,8 @@ element, the index of the element, and the array object being mapped.
 If a `thisArg` parameter is provided, it will be used as callback's
 `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as
 its `this` value. The `this` value ultimately observable by
-`callbackFn` is determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+`callbackFn` is determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `map` does not mutate the array on which it is called (although
 `callbackFn`, if invoked, may do so).
@@ -134,9 +133,11 @@ The following code takes an array of objects and creates a new array containing 
 newly reformatted objects.
 
 ```js
-const kvArray = [{ key: 1, value: 10 },
-                 { key: 2, value: 20 },
-                 { key: 3, value: 30 }];
+const kvArray = [
+  { key: 1, value: 10 },
+  { key: 2, value: 20 },
+  { key: 3, value: 30 },
+];
 
 const reformattedArray = kvArray.map(({ key, value}) => ({ [key]: value }));
 
@@ -191,7 +192,7 @@ An easier way would be the {{jsxref("Array.from()")}} method.
 
 ### Tricky use case
 
-([inspired by this blog post](http://www.wirfs-brock.com/allen/posts/166))
+([inspired by this blog post](https://wirfs-brock.com/allen/posts/166))
 
 It is common to use the callback with one argument (the element being traversed).
 Certain functions are also commonly used with one argument, even though they take

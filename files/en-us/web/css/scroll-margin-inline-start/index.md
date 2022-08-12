@@ -28,6 +28,7 @@ scroll-margin-inline-start: 1em;
 scroll-margin-inline-start: inherit;
 scroll-margin-inline-start: initial;
 scroll-margin-inline-start: revert;
+scroll-margin-inline-start: revert-layer;
 scroll-margin-inline-start: unset;
 ```
 

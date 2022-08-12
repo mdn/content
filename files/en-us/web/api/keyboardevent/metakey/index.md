@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.metaKey
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.metaKey`** read-only property returning a
 boolean value that indicates if the <kbd>Meta</kbd> key was pressed
@@ -23,17 +24,11 @@ systems may intercept the key so it is never detected.
 > "Meta" key. `KeyboardEvent.metaKey` is `false` when the <kbd>⊞
 > Windows</kbd> key is pressed.
 
-## Syntax
-
-```js
-var metaKeyPressed = instanceOfKeyboardEvent.metaKey
-```
-
-### Return value
+## Value
 
 A boolean value
 
-## Example
+## Examples
 
 ```html
 <button onclick="ismetaKey(event)">Click me with the meta key</button>
@@ -43,13 +38,13 @@ A boolean value
 
 ```js
 function ismetaKey(e) {
-  document.querySelector("#output").textContent = "metaKey pressed? " + e.metaKey;
+  document.querySelector("#output").textContent = `metaKey pressed? ${e.metaKey}`;
 }
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Example', 400, 90) }}
+{{ EmbedLiveSample('Examples', 400, 90) }}
 
 ## Specifications
 

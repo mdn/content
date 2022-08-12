@@ -1,11 +1,13 @@
 ---
 title: Geolocation API
 slug: Web/API/Geolocation_API
+page-type: web-api-overview
 tags:
   - Geolocation API
   - Guide
   - Intermediate
   - Overview
+browser-compat: api.Geolocation
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
@@ -51,18 +53,18 @@ See [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Ge
 
 ## Specifications
 
-{{Specifications("api.Geolocation")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ### Availability
 
-As WiFi-based locationing is often provided by Google, the vanilla Geolocation API may be unavailable in China. You may use local third-party providers such as [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), or [Tencent](https://lbs.qq.com/tool/component-geolocation.html). These services use the user's IP address and/or a local app to provide enhanced positioning.
+As Wi-Fi-based locating is often provided by Google, the vanilla Geolocation API may be unavailable in China. You may use local third-party providers such as [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), or [Tencent](https://lbs.qq.com/tool/component-geolocation.html). These services use the user's IP address and/or a local app to provide enhanced positioning.
 
 ## See also
 
 - [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- [Geolocation API on w3.org](https://www.w3.org/TR/geolocation-API/)
+- [Geolocation API on w3.org](https://www.w3.org/TR/geolocation/)
 - [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)

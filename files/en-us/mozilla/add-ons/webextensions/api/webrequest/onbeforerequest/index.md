@@ -60,13 +60,13 @@ Events have three functions:
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `details`
-      - : [`object`](#details). Details about the request. See [`details`](#details) below.
+      - : [`object`](#details). Details about the request. See [`details`](#details_2) below.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set either its `cancel` or its `redirectUrl` properties. From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
-- `extraInfoSpec`{{optional_inline}}
+- `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:
 
@@ -130,19 +130,19 @@ Events have three functions:
     - `failoverTimeout`
       - : `integer`. Failover timeout in seconds. If the proxy connection fails, the proxy will not be used again for this period.
 
-- `requestBody`{{optional_inline}}
+- `requestBody` {{optional_inline}}
 
   - : `object`. Contains the HTTP request body data. Only provided if `extraInfoSpec` contains `"requestBody"`.
 
-    - `error`{{optional_inline}}
+    - `error` {{optional_inline}}
       - : `string`. This is set if any errors were encountered when obtaining request body data.
-    - `formData`{{optional_inline}}
+    - `formData` {{optional_inline}}
 
       - : `object`. This object is present if the request method is POST and the body is a sequence of key-value pairs encoded in UTF-8 as either "multipart/form-data" or "application/x-www-form-urlencoded".
 
         It is a dictionary in which each key contains the list of all values for that key. For example: `{'key': ['value1', 'value2']}`. If the data is of another media type, or if it is malformed, the object is not present.
 
-    - `raw`{{optional_inline}}
+    - `raw` {{optional_inline}}
       - : `array` of `{{WebExtAPIRef('webRequest.UploadData')}}`. If the request method is PUT or POST, and the body is not already parsed in `formData`, then this array contains the unparsed request body elements.
 
 - `requestId`
@@ -189,7 +189,7 @@ This code logs the URL for every resource requested which matches the [\<all_url
 
 ```js
 function logURL(requestDetails) {
-  console.log("Loading: " + requestDetails.url);
+  console.log(`Loading: ${requestDetails.url}`);
 }
 
 browser.webRequest.onBeforeRequest.addListener(
@@ -202,13 +202,13 @@ This code cancels requests for images that are made to URLs under "https\://mdn.
 
 ```js
 // match pattern for the URLs to redirect
-var pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
 // cancel function returns an object
 // which contains a property `cancel` set to `true`
 function cancel(requestDetails) {
-  console.log("Canceling: " + requestDetails.url);
-  return {cancel: true};
+  console.log(`Canceling: ${requestDetails.url}`);
+  return { cancel: true };
 }
 
 // add the listener,
@@ -224,13 +224,13 @@ This code replaces, by redirection, all network requests for images that are mad
 
 ```js
 // match pattern for the URLs to redirect
-var pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
 // redirect function
 // returns an object with a property `redirectURL`
 // set to the new URL
 function redirect(requestDetails) {
-  console.log("Redirecting: " + requestDetails.url);
+  console.log(`Redirecting: ${requestDetails.url}`);
   return {
     redirectUrl: "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif"
   };
@@ -249,18 +249,18 @@ This code is exactly like the previous example, except that the listener handles
 
 ```js
 // match pattern for the URLs to redirect
-var pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
 // URL we will redirect to
-var redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
+let redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
 
 // redirect function returns a Promise
 // which is resolved with the redirect URL when a timer expires
 function redirectAsync(requestDetails) {
-  console.log("Redirecting async: " + requestDetails.url);
+  console.log(`Redirecting async: ${requestDetails.url}`);
   return new Promise((resolve, reject) => {
-    window.setTimeout(() => {
-      resolve({redirectUrl});
+    setTimeout(() => {
+      resolve({ redirectUrl });
     }, 2000);
   });
 }
@@ -274,12 +274,12 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-Another example, that redirects all images to a data url:
+Another example, that redirects all images to a data URL:
 
 ```js
-var pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
-var image = `
+let image = `
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
     <rect style="stroke-width: 10; stroke: #666;" width="100%" height="100%" fill="#d4d0c8" />
     <text transform="translate(0, 9)" x="50%" y="50%" width="100%" fill="#666" height="100%" style="text-anchor: middle; font: bold 10pt 'Segoe UI', Arial, Helvetica, Sans-serif;">Blocked</text>
@@ -287,8 +287,8 @@ var image = `
 `;
 
 function listener(details) {
-  let redirectUrl = "data:image/svg+xml," + encodeURIComponent(image);
-  return {redirectUrl};
+  const redirectUrl = `data:image/svg+xml,${encodeURIComponent(image)}`;
+  return { redirectUrl };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
@@ -302,20 +302,20 @@ Here's another version:
 
 ```js
 function randomColor() {
-  return "#" + Math.floor(Math.random()*16777215).toString(16);
+  return `#${Math.floor(Math.random()*16777215).toString(16)}`;
 }
 
-var pattern = "https://mdn.mozillademos.org/*";
+const pattern = "https://mdn.mozillademos.org/*";
 
-var image = `
+let image = `
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
     <rect width="100%" height="100%" fill="${randomColor()}"/>
   </svg>
 `;
 
 function listener(details) {
-  let redirectUrl = "data:image/svg+xml," + encodeURIComponent(image);
-  return {redirectUrl};
+  const redirectUrl = `data:image/svg+xml,${encodeURIComponent(image)}`;
+  return { redirectUrl };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
@@ -327,7 +327,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onBeforeRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onBeforeRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

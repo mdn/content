@@ -1,6 +1,7 @@
 ---
 title: CSSNumericArray.length
 slug: Web/API/CSSNumericArray/length
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -17,13 +18,7 @@ The read-only **`length`** property of the
 {{domxref("CSSNumericArray")}} interface returns the number of
 {{domxref("CSSNumericValue")}} objects in the list.
 
-## Syntax
-
-```js
-var length = CSSNumericArray.length;
-```
-
-### Return value
+## Value
 
 An integer representing the number of {{domxref("CSSNumericValue")}} objects in the
 list.

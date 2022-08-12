@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-block
   - border-block-start
@@ -31,6 +30,7 @@ border-block-start-width: thick;
 border-block-start-width: inherit;
 border-block-start-width: initial;
 border-block-start-width: revert;
+border-block-start-width: revert-layer;
 border-block-start-width: unset;
 ```
 

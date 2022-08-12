@@ -15,21 +15,21 @@ The **`border-bottom`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [C
 
 {{EmbedInteractiveExample("pages/css/border-bottom.html")}}
 
-As with all shorthand properties, `border-bottom` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...
+As with all shorthand properties, `border-bottom` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
 
 ```css
 border-bottom-style: dotted;
 border-bottom: thick green;
 ```
 
-... is actually the same as ...
+It is actually the same as this one:
 
 ```css
 border-bottom-style: dotted;
 border-bottom: none thick green;
 ```
 
-... and the value of {{cssxref("border-bottom-style")}} given before `border-bottom` is ignored. Since the default value of {{cssxref("border-bottom-style")}} is `none`, not specifying the `border-style` part results in no border.
+The value of {{cssxref("border-bottom-style")}} given before `border-bottom` is ignored. Since the default value of {{cssxref("border-bottom-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Constituent properties
 
@@ -50,6 +50,7 @@ border-bottom: medium dashed blue;
 border-bottom: inherit;
 border-bottom: initial;
 border-bottom: revert;
+border-bottom: revert-layer;
 border-bottom: unset;
 ```
 

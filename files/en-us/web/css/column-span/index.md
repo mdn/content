@@ -24,6 +24,7 @@ column-span: all;
 column-span: inherit;
 column-span: initial;
 column-span: revert;
+column-span: revert-layer;
 column-span: unset;
 ```
 

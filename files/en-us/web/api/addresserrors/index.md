@@ -1,6 +1,7 @@
 ---
 title: AddressErrors
 slug: Web/API/AddressErrors
+page-type: web-api-interface
 tags:
   - API
   - Address
@@ -20,39 +21,32 @@ browser-compat: api.AddressErrors
 
 The **`AddressErrors`** dictionary is used by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to report validation errors in a physical address (typically a billing address or a shipping address). Any members which are present indicate that a validation error occurred for the member of the same name in an address described using {{domxref("PaymentAddress")}}.
 
-`AddressErrors` is the type of the object returned by `shippingAddressErrors` in the object passed into {{domxref("PaymentRequestUpdateEvent.updateWith()")}} by the {{event("shippingaddresschange")}} event handler if a change to the address resulted in a validation error occurring.
+`AddressErrors` is the type of the object returned by `shippingAddressErrors` in the object passed into {{domxref("PaymentRequestUpdateEvent.updateWith()")}} by the {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event handler if a change to the address resulted in a validation error occurring.
 
-See the {{anch("Examples", "examples below")}} to see how this works.
+See the [examples below](#examples) to see how this works.
 
 ## Properties
 
 - {{domxref("AddressErrors.addressLine", "addressLine")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.addressLine", "addressLine")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.addressLine", "addressLine")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.city", "city")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.city", "city")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.city", "city")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.country", "country")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.country", "country")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.country", "country")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.dependentLocality", "dependentLocality")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.dependentLocality", "dependentLocality")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.dependentLocality", "dependentLocality")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.organization", "organization")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.organization", "organization")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.organization", "organization")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.phone", "phone")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.phone", "phone")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.phone", "phone")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.postalCode", "postalCode")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.postalCode", "postalCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.postalCode", "postalCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.recipient", "recipient")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.recipient", "recipient")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.recipient", "recipient")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.region", "region")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.region", "region")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.region", "region")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 - {{domxref("AddressErrors.sortingCode", "sortingCode")}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.sortingCode", "sortingCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
-
-### Obsolete properties
-
-These properties have been removed from the specification and should no longer be used.
-
-- {{domxref("AddressErrors.languageCode", "languageCode")}} {{deprecated_inline}}
-  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.languageCode", "languageCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+  - : A string which, if present, indicates that the {{domxref("PaymentAddress.sortingCode", "sortingCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 
 ## Usage notes
 
@@ -62,7 +56,7 @@ Keep in mind that some violation errors may be outside the ability of the user t
 
 ### Snippet: Limiting destination countries
 
-This first example is just a snippet showing an implementation of the event handler for the {{event("shippingaddresschange")}} event which checks to be sure the chosen address is located within one of a limited number of countries.
+This first example is just a snippet showing an implementation of the event handler for the {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event which checks to be sure the chosen address is located within one of a limited number of countries.
 
 ```js
 function handleAddressChange(ev) {
@@ -90,7 +84,7 @@ function handleAddressChange(ev) {
 }
 ```
 
-See {{anch("Handling address changes")}} for a description of how this code works.
+See [Handling address changes](#handling_address_changes) for a description of how this code works.
 
 ### Complete example
 
@@ -147,11 +141,11 @@ function process() {
     // Add event listeners here.
     request.onshippingaddresschange = handleAddressChange;
     // Call show() to trigger the browser's payment flow.
-    request.show().then(function(instrumentResponse) {
+    request.show().then((instrumentResponse) => {
       // Do something with the response from the UI.
       console.log("Got response!");
     })
-    .catch(function(err) {
+    .catch((err) => {
       // Do something with the error from request.show().
       console.error(`Error from show(): ${err}`);
     });
@@ -163,7 +157,7 @@ function process() {
 
 This code creates a new {{domxref("PaymentRequest")}}, providing the supported handlers and payment options we set up above, as well as additional options (in this case, that we want to ask for shipping information).
 
-After that, we set up the handler for the {{event("shippingaddresschange")}} event so we can validate address information and call the request's {{domxref("PaymentRequest.show", "show()")}} method to start running the payment UI.
+After that, we set up the handler for the {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event so we can validate address information and call the request's {{domxref("PaymentRequest.show", "show()")}} method to start running the payment UI.
 
 ##### Handling address changes
 
@@ -205,10 +199,10 @@ The final step is to call the event's {{domxref("PaymentRequestUpdateEvent.updat
 
 ##### Setting up the Donate Now button
 
-This code creates a handler for the {{event("load")}} event on the {{domxref("Window", "window")}} which in turn adds the needed {{event("click")}} event handler to the "Donate Now" button so that clicking it starts the payment process.
+This code creates a handler for the {{domxref("Window/load_event", "load")}} event on the {{domxref("Window", "window")}} which in turn adds the needed {{domxref("Element/click_event", "click")}} event handler to the "Donate Now" button so that clicking it starts the payment process.
 
 ```js
-window.addEventListener("load", function(ev) {
+window.addEventListener("load", (ev) => {
   document.getElementById("pay").addEventListener("click", process, false);
 }, false);
 ```

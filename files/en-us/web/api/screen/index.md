@@ -1,6 +1,7 @@
 ---
 title: Screen
 slug: Web/API/Screen
+page-type: web-api-interface
 tags:
   - API
   - CSSOM View
@@ -14,7 +15,11 @@ The `Screen` interface represents a screen, usually the one on which the current
 
 Note that browsers determine which screen to report as current by detecting which screen has the center of the browser window.
 
+{{InheritanceDiagram}}
+
 ## Properties
+
+_Also inherits properties from its parent {{domxref("EventTarget")}}_.
 
 - {{DOMxRef("Screen.availTop")}} {{Non-standard_Inline}}
   - : Specifies the y-coordinate of the first pixel that is not allocated to permanent or semipermanent user interface features.
@@ -34,7 +39,7 @@ Note that browsers determine which screen to report as current by detecting whic
   - : Returns the {{DOMxRef("ScreenOrientation")}} instance associated with this screen.
 - {{DOMxRef("Screen.pixelDepth")}}
   - : Gets the bit depth of the screen.
-- {{DOMxRef("Screen.top")}} {{deprecated_inline}}{{Non-standard_Inline}}
+- {{DOMxRef("Screen.top")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Returns the distance in pixels from the top side of the current screen.
 - {{DOMxRef("Screen.width")}}
   - : Returns the width of the screen.
@@ -43,21 +48,19 @@ Note that browsers determine which screen to report as current by detecting whic
 - {{DOMxRef("Screen.mozBrightness")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Controls the brightness of a device's screen. A double between 0 and 1.0 is expected.
 
-### Events handler
-
-- {{DOMxRef("Screen.onorientationchange")}} {{Deprecated_Inline}}
-  - : A handler for the {{Event("orientationchange")}} event.
-
 ## Methods
+
+_Also inherits methods from its parent {{domxref("EventTarget")}}_.
 
 - {{DOMxRef("Screen.lockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Lock the screen orientation (only works in fullscreen or for installed apps)
 - {{DOMxRef("Screen.unlockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Unlock the screen orientation (only works in fullscreen or for installed apps)
 
-_Methods inherited from {{DOMxRef("EventTarget")}}:_
+## Events
 
-{{Page("/en-US/docs/Web/API/EventTarget", "Methods")}}
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
+  - : Fires when the screen orientation changes.
 
 ## Example
 

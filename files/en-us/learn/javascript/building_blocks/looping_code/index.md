@@ -82,22 +82,21 @@ const btn = document.querySelector('button');
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-const WIDTH = document.documentElement.clientWidth;
-const HEIGHT = document.documentElement.clientHeight;
-
-canvas.width = WIDTH;
-canvas.height = HEIGHT;
+document.addEventListener('DOMContentLoaded', () => {
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+})
 
 function random(number) {
   return Math.floor(Math.random()*number);
 }
 
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
     ctx.fillStyle = 'rgba(255,0,0,0.5)';
-    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+    ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
 }
@@ -113,13 +112,12 @@ You don't have to understand all the code for now, but let's look at the part of
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
   ctx.fillStyle = 'rgba(255,0,0,0.5)';
-  ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+  ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
   ctx.fill();
 }
 ```
 
 - `random(x)`, defined earlier in the code, returns a whole number between `0` and `x-1`.
-- `WIDTH` and `HEIGHT` are the width and height of the inner browser window.
 
 You should get the basic idea — we are using a loop to run 100 iterations of this code, each one of which draws a circle in a random position on the page.
 The amount of code needed would be the same whether we were drawing 100 circles, 1000, or 10,000.
@@ -130,7 +128,7 @@ If we weren't using a loop here, we'd have to repeat the following code for ever
 ```js
 ctx.beginPath();
 ctx.fillStyle = 'rgba(255,0,0,0.5)';
-ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
 ctx.fill();
 ```
 
@@ -263,7 +261,7 @@ function calculate() {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += '\n...finished!';
+  results.textContent += '\nFinished!';
 }
 
 const calculateBtn = document.querySelector('#calculate');
@@ -290,8 +288,8 @@ Inside the loop, we calculate the square of the current value of `i`, that is: `
 
 1. During the first run, `i = 1`, so we will add `1 x 1 = 1`.
 2. During the second run, `i = 2`, so we will add `2 x 2 = 4`.
-3. ...and so on.
-4. When `i` becomes equal to `10` we will stop running the loop and move straight to the next bit of code below the loop, printing out the `...finished!` message.
+3. And so on…
+4. When `i` becomes equal to `10` we will stop running the loop and move straight to the next bit of code below the loop, printing out the `Finished!` message on a new line.
 
 ### Looping through collections with a for loop
 
@@ -337,7 +335,7 @@ const cats = ['Pete', 'Biggles', 'Jasmine'];
 let myFavoriteCats = 'My cats are called ';
 
 for (const cat of cats) {
-  myFavoriteCats = `${myFavoriteCats}${cat}, `
+  myFavoriteCats += `${cat}, `
 }
 
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
@@ -364,9 +362,9 @@ let myFavoriteCats = 'My cats are called ';
 
 for (let i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {   // We are at the end of the array
-    myFavoriteCats = `${myFavoriteCats}and ${cats[i]}.`
+    myFavoriteCats += `and ${cats[i]}.`
   } else {
-    myFavoriteCats = `${myFavoriteCats}${cats[i]}, `
+    myFavoriteCats += `${cats[i]}, `
   }
 }
 
@@ -407,7 +405,7 @@ btn.addEventListener('click', () => {
   for (const contact of contacts) {
     const splitContact = contact.split(':');
     if (splitContact[0].toLowerCase() === searchName) {
-      para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+      para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
       break;
     }
   }
@@ -431,7 +429,7 @@ btn.addEventListener('click', () => {
 
 5. After the loop, we check whether we set a contact, and if not we set the paragraph text to "Contact not found.".
 
-> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
+> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
 ## Skipping iterations with continue
 
@@ -479,9 +477,9 @@ Here's the output:
 3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
 4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
 
-> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
+> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
-## while and do ... while
+## while and do...while
 
 `for` is not the only type of loop available in JavaScript. There are actually many others and, while you don't need to understand all of these now, it is worth having a look at the structure of a couple of others so that you can recognize the same features at work in a slightly different way.
 
@@ -525,7 +523,7 @@ while (i < cats.length) {
 console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **Note:** This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
+> **Note:** This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
 
 The [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
@@ -564,7 +562,7 @@ do {
 console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **Note:** Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
+> **Note:** Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
 
 > **Warning:** With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.
 > If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
@@ -590,7 +588,7 @@ Specifically, we want you to:
 
 - Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you **don't** want `i++` — how do you iterate downwards?
 
-> **Note:** If you start typing the loop (for example (while(i>=0)), the browser might stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
+> **Note:** If you start typing the loop (for example (while(i>=0)), the browser might get stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
 
 If you make a mistake, you can always reset the example with the "Reset" button.
 If you get really stuck, press "Show solution" to see a solution.
@@ -662,7 +660,7 @@ reset.addEventListener('click', function() {
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -678,18 +676,18 @@ output.innerHTML = '';
 let i = 10;
 
 while (i >= 0) {
- const para = document.createElement('p');
- if (i === 10) {
- para.textContent = \`Countdown \$\{i}\`;
- } else if (i === 0) {
-  para.textContent = 'Blast off!';
- } else {
- para.textContent = i;
- }
+  const para = document.createElement('p');
+  if (i === 10) {
+    para.textContent = \`Countdown \${i}\`;
+  } else if (i === 0) {
+    para.textContent = 'Blast off!';
+  } else {
+    para.textContent = i;
+  }
 
- output.appendChild(para);
+  output.appendChild(para);
 
- i--;
+  i--;
 }`;
 
 let solutionEntry = jsSolution;
@@ -714,11 +712,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -727,10 +725,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -781,7 +779,7 @@ const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay',
 const admitted = document.querySelector('.admitted');
 const refused = document.querySelector('.refused');
 admitted.textContent = 'Admit: ';
-refused.textContent = 'Refuse: '
+refused.textContent = 'Refuse: ';
 
 // loop starts here
 
@@ -838,7 +836,7 @@ reset.addEventListener('click', function() {
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -890,11 +888,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -903,10 +901,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -975,7 +973,7 @@ You've reached the end of this article, but can you remember the most important 
 ## Conclusion
 
 This article has revealed to you the basic concepts behind, and different options available when looping code in JavaScript.
-You should now be clear on why loops are a good mechanism for dealing with repetitive code and are raring to use them in your own examples!
+You should now be clear on why loops are a good mechanism for dealing with repetitive code and raring to use them in your own examples!
 
 If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/docs/Learn#contact_us) to ask for help.
 

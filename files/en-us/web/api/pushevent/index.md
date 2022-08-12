@@ -1,6 +1,7 @@
 ---
 title: PushEvent
 slug: Web/API/PushEvent
+page-type: web-api-interface
 tags:
   - API
   - ExtendableEvent
@@ -21,7 +22,7 @@ The **`PushEvent`** interface of the [Push API](/en-US/docs/Web/API/Push_API) re
 
 ## Constructor
 
-- {{domxref("PushEvent.PushEvent()")}}
+- {{domxref("PushEvent.PushEvent", "PushEvent()")}}
   - : Creates a new `PushEvent` object.
 
 ## Properties
@@ -40,29 +41,24 @@ _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 The following example takes data from a `PushEvent` and displays it on all of the service worker's clients.
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener('push', (event) => {
   if (!(self.Notification && self.Notification.permission === 'granted')) {
     return;
   }
 
-  var data = {};
-  if (event.data) {
-    data = event.data.json();
-  }
-  var title = data.title || "Something Has Happened";
-  var message = data.message || "Here's something you might want to check out.";
-  var icon = "images/new-notification.png";
+  const data = event.data?.json() ?? {};
+  const title = data.title || "Something Has Happened";
+  const message = data.message || "Here's something you might want to check out.";
+  const icon = "images/new-notification.png";
 
-  var notification = new self.Notification(title, {
+  const notification = new self.Notification(title, {
     body: message,
     tag: 'simple-push-demo-notification',
-    icon: icon
+    icon,
   });
 
-  notification.addEventListener('click', function() {
-    if (clients.openWindow) {
-      clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
-    }
+  notification.addEventListener('click', () => {
+    clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
   });
 });
 ```

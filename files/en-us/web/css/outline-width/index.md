@@ -34,6 +34,7 @@ outline-width: 0.1em;
 outline-width: inherit;
 outline-width: initial;
 outline-width: revert;
+outline-width: revert-layer;
 outline-width: unset;
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Window.statusbar
 slug: Web/API/Window/statusbar
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,13 +17,11 @@ browser-compat: api.Window.statusbar
 The **`Window.statusbar`** property returns the statusbar
 object, whose visibility can be toggled in the window.
 
-## Syntax
+## Value
 
-```js
-objRef = window.statusbar
-```
+A `statusbar` object.
 
-## Example
+## Examples
 
 The following complete HTML example shows a way that the visible property of the
 various "bar" objects is used, and also the change to the privileges necessary to write

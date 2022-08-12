@@ -1,27 +1,23 @@
 ---
 title: HIDDevice.productName
 slug: Web/API/HIDDevice/productName
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - productName
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice.productName
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`productName`** read-only property of the {{domxref("HIDDevice")}} interface returns the product name of the connected HID device.
 
-## Syntax
+## Value
 
-```js
-let productName = HIDDevice.productName;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 
@@ -30,7 +26,7 @@ The following example retrieves devices with {{domxref("HID.getDevices()")}} and
 ```js
 document.addEventListener('DOMContentLoaded', async () => {
   let devices = await navigator.hid.getDevices();
-  devices.forEach(device => {
+  devices.forEach((device) => {
     console.log(`HID: ${device.productName}`);
   });
 });

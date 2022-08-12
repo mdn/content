@@ -1,6 +1,7 @@
 ---
 title: 'SpeechSynthesisUtterance: resume event'
 slug: Web/API/SpeechSynthesisUtterance/resume_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -16,9 +17,9 @@ The **`resume`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_AP
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('resume', event => { })
+addEventListener('resume', (event) => { })
 
-onresume = event => { }
+onresume = (event) => { }
 ```
 
 ## Event type
@@ -36,7 +37,7 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref("SpeechSynthesisEvent.elapsedTime", "elapsedTime")}} {{readonlyinline}}
   - : Returns the elapsed time in seconds after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the event was triggered at.
 - {{domxref("SpeechSynthesisEvent.name", "name")}} {{readonlyinline}}
-  - : Returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken: the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in the case of a {{event("mark")}} event, or the type of boundary reached in the case of a {{event("boundary")}} event.
+  - : Returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken: the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in the case of a {{domxref("SpeechSynthesisUtterance.mark_event", "mark")}} event, or the type of boundary reached in the case of a {{domxref("SpeechSynthesisUtterance.boundary_event", "boundary")}} event.
 - {{domxref("SpeechSynthesisEvent.utterance", "utterance")}} {{readonlyinline}}
   - : Returns the {{domxref("SpeechSynthesisUtterance")}} instance that the event was triggered on.
 
@@ -45,16 +46,16 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `resume` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('resume', function(event) {
-  console.log('Speech resumed after ' + event.elapsedTime + ' seconds.');
+utterThis.addEventListener('resume', (event) => {
+  console.log(`Speech resumed after ${event.elapsedTime} seconds.`);
 });
 ```
 
 Or use the `onresume` event handler property:
 
 ```js
-utterThis.onresume = function(event) {
-  console.log('Speech resumed after ' + event.elapsedTime + ' seconds.');
+utterThis.onresume = (event) => {
+  console.log(`Speech resumed after ${event.elapsedTime} seconds.`);
 }
 ```
 

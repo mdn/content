@@ -1,6 +1,7 @@
 ---
 title: WheelEvent()
 slug: Web/API/WheelEvent/WheelEvent
+page-type: web-api-constructor
 tags:
   - Constructor
   - DOM
@@ -9,48 +10,47 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent.WheelEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-The **`WheelEvent()`** constructor returns a newly created
-{{domxref("WheelEvent")}} object.
+The **`WheelEvent()`** constructor returns a new {{domxref("WheelEvent")}} object.
+
+> **Note:** If you construct a synthetic event using this constructor, that event will not be _trusted_, for security reasons.
+> Only browser-generated `WheelEvent` objects are trusted and only trusted events trigger default actions.
 
 ## Syntax
 
 ```js
-var wheelEvent = new WheelEvent(typeArg, wheelEventInit);
+new WheelEvent(type)
+new WheelEvent(type, options)
 ```
 
 ### Properties
 
-- `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
-- `wheelEventInit` {{optional_inline}}
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `wheel`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("MouseEvent/MouseEvent", "MouseEvent()")}}_, can have the following properties:
+    - `deltaX` {{optional_inline}}
+      - : A floating number representing the horizontal scroll amount in the `deltaMode` unit.
+        It defaults to `0.0`.
+    - `deltaY` {{optional_inline}}
+      - : A floating number representing the vertical scroll amount in the `deltaMode` unit.
+        It defaults to `0.0`.
+    - `deltaZ` {{optional_inline}}
+      - : A floating number  representing the scroll amount for the z-axis scroll amount in the `deltaMode` unit.
+        It defaults to `0.0`.
+    - `deltaMode` {{optional_inline}}
+      - : An integer representing the unit of the delta values scroll amount. It defaults to `0x00`. Permitted values are:
+        | Constant          | Value  | Description                               |
+        | ----------------- | ------ | ----------------------------------------- |
+        | `DOM_DELTA_PIXEL` | `0x00` | The delta values are specified in pixels. |
+        | `DOM_DELTA_LINE`  | `0x01` | The delta values are specified in lines.  |
+        | `DOM_DELTA_PAGE`  | `0x02` | The delta values are specified in pages.  |
 
-  - : Is a `WheelEventInit` dictionary, having the following fields:
+### Return value
 
-    - `"deltaX"`, optional and defaulting to `0.0`, is a
-      `double` representing the horizontal scroll amount in the
-      `deltaMode` unit.
-    - `"deltaY"`, optional and defaulting to `0.0`, is a
-      `double` representing the vertical scroll amount in the
-      `deltaMode` unit.
-    - `"deltaZ"`, optional and defaulting to `0.0`, is a
-      `double` representing the scroll amount for the z-axis in the
-      `deltaMode` unit.
-    - `"deltaMode"`, optional and defaulting to `0`, is a
-      `unsigned long` representing the unit of the delta values scroll
-      amount. Permitted values are:
-
-      | Constant          | Value  | Description                               |
-      | ----------------- | ------ | ----------------------------------------- |
-      | `DOM_DELTA_PIXEL` | `0x00` | The delta values are specified in pixels. |
-      | `DOM_DELTA_LINE`  | `0x01` | The delta values are specified in lines.  |
-      | `DOM_DELTA_PAGE`  | `0x02` | The delta values are specified in pages.  |
-
-    > **Note:** The `WheelEventInit` dictionary also accepts fields from the
-    > {{domxref("MouseEvent.MouseEvent", "MouseEventInit")}},
-    > {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event",
-        "EventInit")}} dictionaries.
+A new {{domxref("WheelEvent")}} object.
 
 ## Specifications
 

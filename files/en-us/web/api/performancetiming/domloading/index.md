@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.domLoading
 slug: Web/API/PerformanceTiming/domLoading
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -23,13 +24,11 @@ The legacy
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, when the parser started its work, that is when its
 {{domxref("Document.readyState")}} changes to `'loading'` and the
-corresponding {{event("readystatechange")}} event is thrown.
+corresponding {{domxref("Document/readystatechange_event", "readystatechange")}} event is thrown.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domLoading;
-```
+An `unsigned long long`.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.bufferedAmount
 slug: Web/API/RTCDataChannel/bufferedAmount
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -34,13 +35,7 @@ property, the user agent fires the {{DOMxRef("RTCDataChannel.bufferedamountlow_e
 be used, for example, to implement code which queues more messages to be sent whenever
 there's room to buffer them.
 
-## Syntax
-
-```js
-var amount = aDataChannel.bufferedAmount;
-```
-
-### Value
+## Value
 
 The number of bytes of data currently queued to be sent over the data channel but have
 not yet been sent.
@@ -52,14 +47,14 @@ The snippet below includes a function which changes the contents of a block with
 {{domxref("RTCDataChannel")}}.
 
 ```js
-var dc = peerConnection.createDataChannel("File Transfer");
+const dc = peerConnection.createDataChannel("File Transfer");
 
-/* ... */
+// …
 
 function showBufferedAmount(channel) {
-  let el = document.getElementById("bufferSize");
+  const el = document.getElementById("bufferSize");
 
-  el.innerHTML = channel.bufferedAmount + " bytes";
+  el.innerText = `${channel.bufferedAmount} bytes`;
 }
 ```
 
@@ -74,9 +69,7 @@ function showBufferedAmount(channel) {
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- [Using WebRTC data
-  channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}
 - {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event
-- {{domxref("RTCDataChannel.onbufferedamountlow")}}

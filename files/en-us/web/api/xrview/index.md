@@ -1,6 +1,7 @@
 ---
 title: XRView
 slug: Web/API/XRView
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -32,7 +33,7 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** inte
 - {{domxref("XRView.projectionMatrix", "projectionMatrix")}} {{ReadOnlyInline}}
   - : The projection matrix that will transform the scene to appear correctly given the point-of-view indicated by `eye`. This matrix should be used directly in order to avoid presentation distortions that may lead to potentially serious user discomfort.
 - {{domxref("XRView.recommendedViewportScale", "recommendedViewportScale")}} {{ReadOnlyInline}}
-  - : The recommended viewport scale value that you can use for `requestViewportScale()` if the user agent has such a recommendation; {{jsxref("null")}} otherwise.
+  - : The recommended viewport scale value that you can use for `requestViewportScale()` if the user agent has such a recommendation; [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
 - {{domxref("XRView.transform", "transform")}} {{ReadOnlyInline}}
   - : An {{domxref("XRRigidTransform")}} which describes the current position and orientation of the viewpoint in relation to the {{domxref("XRReferenceSpace")}} specified when {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} was called on the {{domxref("XRFrame")}} being rendered.
 
@@ -63,7 +64,7 @@ If in the future it becomes possible for each view to render into a different la
 
 ### Preparing to render every view for a pose
 
-To draw everything the user sees, each frame requires iterating over the list of views returned by the {{domxref("XRViewerPose")}} object's  {{domxref("XRViewerPose.views", "views")}} list:
+To draw everything the user sees, each frame requires iterating over the list of views returned by the {{domxref("XRViewerPose")}} object's {{domxref("XRViewerPose.views", "views")}} list:
 
 ```js
 for (let view of pose.views) {

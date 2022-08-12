@@ -1,6 +1,7 @@
 ---
 title: Node.parentNode
 slug: Web/API/Node/parentNode
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -12,7 +13,7 @@ browser-compat: api.Node.parentNode
 The read-only **`parentNode`** property of the {{domxref("Node")}} interface
 returns the parent of the specified node in the DOM tree.
 
-`Document` and `DocumentFragment` [nodes](/en-US/docs/DOM/Node/nodeType) can never have a parent, so
+`Document` and `DocumentFragment` [nodes](/en-US/docs/Web/API/Node/nodeType) can never have a parent, so
 `parentNode` will always return `null`.
 It also returns `null` if the node has just been created
 and is not yet attached to the tree.

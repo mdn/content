@@ -83,7 +83,7 @@ All web pages available on the web are reachable through a unique address. To ac
 
 ### Web site
 
-A _website_ is a collection of linked web pages (plus their associated resources) that share a unique domain name. Each web page of a given website provides explicit links—most of the time in the form of clickable portion of text—that allow the user to move from one page of the website to another.
+A _website_ is a collection of linked web pages (plus their associated resources) that share a unique domain name. Each web page of a given website provides explicit links—most of the time in the form of clickable portions of text—that allow the user to move from one page of the website to another.
 
 To access a website, type its domain name in your browser address bar, and the browser will display the website's main web page, or _homepage_ (casually referred as "the home"):
 
@@ -101,7 +101,7 @@ Don't confuse _websites_ and _web servers_. For example, if you hear someone say
 
 Search engines are a common source of confusion on the web. A search engine is a special kind of website that helps users find web pages from _other_ websites.
 
-There are plenty out there: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://www.yandex.com/), [DuckDuckGo](https://duckduckgo.com/), and many more. Some are generic, some are specialized about certain topics. Use whichever you prefer.
+There are plenty out there: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://yandex.com/), [DuckDuckGo](https://duckduckgo.com/), and many more. Some are generic, some are specialized about certain topics. Use whichever you prefer.
 
 Many beginners on the web confuse search engines and browsers. Let's make it clear: A **_browser_** is a piece of software that retrieves and displays web pages; a **_search engine_** is a website that helps people find web pages from other websites. The confusion arises because, the first time someone launches a browser, the browser displays a search engine's homepage. This makes sense, because, obviously, the first thing you want to do with a browser is to find a web page to display. Don't confuse the infrastructure (e.g., the browser) with the service (e.g., the search engine). The distinction will help you quite a bit, but even some professionals speak loosely, so don't feel anxious about it.
 

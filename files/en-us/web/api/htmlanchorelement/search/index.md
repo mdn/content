@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.search
 slug: Web/API/HTMLAnchorElement/search
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement
@@ -11,7 +12,7 @@ browser-compat: api.HTMLAnchorElement.search
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.search`** property is a search
-string, also called a _query string_, that is {{domxref("USVString")}} containing
+string, also called a _query string_, that is a string containing
 a `'?'` followed by the parameters of the URL.
 
 Modern browsers provide
@@ -20,14 +21,9 @@ and
 [`URL.searchParams`](/en-US/docs/Web/API/URL/searchParams#examples)
 to make it easy to parse out the parameters from the querystring.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = anchor.search;
-// Setter
-anchor.search = string;
-```
+A string.
 
 ## Examples
 

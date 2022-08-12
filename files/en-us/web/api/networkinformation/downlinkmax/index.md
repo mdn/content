@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.downlinkMax
 slug: Web/API/NetworkInformation/downlinkMax
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -19,16 +20,9 @@ connection technology.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-var max = NetworkInformation.downlinkMax
-```
-
-### Return value
-
-- an `unrestricted double` representing the maximum downlink speed,
-  in megabits per second (Mb/s), for the underlying connection technology.
+An `unrestricted double` representing the maximum downlink speed, in megabits per second (Mb/s), for the underlying connection technology.
 
 ## Examples
 
@@ -37,8 +31,8 @@ logs changes as they occur.
 
 ```js
 function logConnectionType() {
-  var connectionType = 'not supported';
-  var downlinkMax = 'not supported';
+  let connectionType = 'not supported';
+  let downlinkMax = 'not supported';
 
   if ('connection' in navigator) {
     connectionType = navigator.connection.effectiveType;
@@ -48,8 +42,7 @@ function logConnectionType() {
     }
   }
 
-  console.log('Current connection type: ' + connectionType +
-    ' (downlink max: ' + downlinkMax + ')');
+  console.log(`Current connection type: ${connectionType} (downlink max: ${downlinkMax})`);
 }
 
 logConnectionType();

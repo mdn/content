@@ -1,18 +1,21 @@
 ---
 title: WritableStream
 slug: Web/API/WritableStream
+page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - Streams
   - WritableStream
 browser-compat: api.WritableStream
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-The **`WritableStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing.
+The **`WritableStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a standard abstraction for writing streaming data to a destination, known as a sink.
+This object comes with built-in backpressure and queuing.
+
+`WritableStream` is a {{glossary("Transferable objects","transferable object")}}.
 
 ## Constructor
 
@@ -47,9 +50,7 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
         console.log("Chunk written to sink.");
       })
@@ -78,20 +79,20 @@ const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
+      const buffer = new ArrayBuffer(1);
+      const view = new Uint8Array(buffer);
       view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      const decoded = decoder.decode(view, { stream: true });
+      const listItem = document.createElement('li');
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
     });
   },
   close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    const listItem = document.createElement('li');
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {
@@ -106,7 +107,8 @@ You can find the full code in our [Simple writer example](https://mdn.github.io/
 
 ### Backpressure
 
-Because of how backpressure is supported in the API, its implementation in code may be less than obvious. To see how backpressure is implemented look for three things.
+Because of how [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) is supported in the API, its implementation in code may be less than obvious.
+To see how backpressure is implemented look for three things:
 
 - The `highWaterMark` property, which is set when creating the counting strategy (line 35), sets the maximum amount of data that the `WritableStream` instance will handle in a single `write()` operation. In this example, it's the maximum amount of data that can be sent to `defaultWriter.write()` (line 11).
 - The `defaultWriter.ready` property returns a promise that resolves when the sink (the first property of the `WritableStream` constructor) is done writing data. The data source can either write more data (line 9) or call `close()` (line 24). Calling close() too early can prevent data from being written. This is why the example calls `defaultWriter.ready` twice (lines 9 and 22).

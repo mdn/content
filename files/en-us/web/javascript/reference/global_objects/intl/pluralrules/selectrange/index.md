@@ -1,5 +1,5 @@
 ---
-title: Intl.PluralRules.select()
+title: Intl.PluralRules.selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 tags:
   - Internationalization
@@ -11,28 +11,27 @@ tags:
   - Prototype
   - Reference
   - selectRange
+  - Experimental
 browser-compat: javascript.builtins.Intl.PluralRules.selectRange
 ---
-{{JSRef}}
+{{JSRef}} {{SeeCompatTable}}
 
-The **`Intl.PluralRules.prototype.selectRange()`** method receives two values and returns a {{jsxref("String")}} indicating which plural rule to use for locale-aware formatting.
+The **`Intl.PluralRules.prototype.selectRange()`** method receives two values and returns a string indicating which plural rule to use for locale-aware formatting.
 
 ## Syntax
 
 ```js
-formatRange(startRange, endRange)
+selectRange(startRange, endRange)
 ```
 
 ### Return value
 
-A string representing the pluralization category of the `number`; can be one
-of `zero`, `one`, `two`, `few`,
-`many` or `other`, that are relevant for the locale whose localization is specified in [LDML Language Plural Rules](https://unicode-org.github.io/cldr-staging/charts/37/supplemental/language_plural_rules.html#rules).
+A string representing the pluralization category of the `number`.
+This can be one of `zero`, `one`, `two`, `few`, `many` or `other`, that are relevant for the locale whose localization is specified in [LDML Language Plural Rules](https://unicode-org.github.io/cldr-staging/charts/37/supplemental/language_plural_rules.html#rules).
 
 ## Description
 
-This function selects a pluralization category according to the locale and formatting
-options of an {{jsxref("Intl.PluralRules")}} object.
+This function selects a pluralization category according to the locale and formatting options of an {{jsxref("Intl.PluralRules")}} object.
 
 ## Examples
 

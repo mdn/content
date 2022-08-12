@@ -1,6 +1,7 @@
 ---
 title: Element.getAttributeNames()
 slug: Web/API/Element/getAttributeNames
+page-type: web-api-instance-method
 tags:
   - API
   - Attribute
@@ -26,10 +27,18 @@ The names returned by **`getAttributeNames()`** are _qualified_ attribute names,
 ## Syntax
 
 ```js
-let attributeNames = element.getAttributeNames();
+getAttributeNames()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 The following example shows how:
 
@@ -63,22 +72,6 @@ for (let name of element.getAttributeNames()) {
 // href https://example.com
 // xlink:href https://example.com
 // show new
-```
-
-## Polyfill
-
-```js
-if (Element.prototype.getAttributeNames == undefined) {
-  Element.prototype.getAttributeNames = function () {
-    var attributes = this.attributes;
-    var length = attributes.length;
-    var result = new Array(length);
-    for (var i = 0; i < length; i++) {
-      result[i] = attributes[i].name;
-    }
-    return result;
-  };
-}
 ```
 
 ## Specifications

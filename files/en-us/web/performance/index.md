@@ -66,9 +66,9 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 
 ## Other documentation
 
-- [Developer Tools Performance Features](/en-US/docs/Tools/Performance)
-  - : This section provides information on how to use and understand the performance features in your developer tools, including [Waterfall](/en-US/docs/Tools/Performance/Waterfall), [Call Tree](/en-US/docs/Tools/Performance/Call_Tree), and [Flame Charts](/en-US/docs/Tools/Performance/Flame_Chart).
-- [Profiling with the built-in profiler](/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler)
+- [Firefox Profiler Performance Features](https://profiler.firefox.com/docs/#/)
+  - : This website provides information on how to use and understand the performance features in your developer tools, including [Call Tree](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-call-tree), [Flame Graph](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-flame-graph), [Stack Chart](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-stack-chart), [Marker Chart](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-marker-chart) and [Network Chart](https://profiler.firefox.com/docs/#/./guide-ui-tour-panels?id=the-network-chart).
+- [Profiling with the built-in profiler](https://profiler.firefox.com/docs/#/./guide-getting-started)
   - : Learn how to profile app performance with Firefox's built-in profiler.
 
 ## Glossary Terms
@@ -122,37 +122,6 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - {{glossary('TCP', 'Transmission Control Protocol (TCP)')}}
 - {{glossary('Tree shaking')}}
 - {{glossary('Web performance')}}
-
-## Documents yet to be written
-
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript)
-  - : JavaScript, when used properly, can allow for interactive and immersive web experiences ... or it can significantly harm download time, render time, in app performance, battery life, and user experience. This article outlines some JavaScript best practices that can ensure even complex content's performance is the highest possible.
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-  - : With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU, and battery life, it is important to consider the performance of your web content on these platforms. This article also looks at mobile-specific performance considerations.
-- Web font performance
-  - : An often overlooked aspect of performance landscape are web fonts. Web fonts are more prominent in web design than ever, yet many developers embed them from a third party service and think nothing of it. In this article, we'll covers methods for getting your font files as small as possible with efficient file formats and sub setting. From there, we'll go on to talk about how browsers text, and how you can use CSS and JavaScript features to ensure your fonts render quickly, and with minimal disruption to the user experience.
-- Understanding bandwidth
-  - : Bandwidth is the amount of data measured in Megabits(Mb) or Kilobits(Kb) that one can send per second. This article explains the role of bandwidth in media-rich internet applications, how you can measure it, and how you can optimize applications to make the best use of available bandwidth
-- The role of TLS in performance
-  - : TLS—or HTTPS as we tend to call it—is crucial in creating secure and safe user experiences. While hardware has reduced the negative impacts TLS has had on server performance, it still represents a substantial slice of the time we spend waiting for browsers to connect to servers. This article explains the TLS handshake process, and offers some tips for reducing this time, such as OCSP stapling, HSTS preload headers, and the potential role of resource hints in masking TLS latency for third parties.
-- Reading performance charts
-  - : Developer tools provide information on performance, memory, and network requests. Knowing how to read [waterfall](/en-US/docs/Tools/Performance/Waterfall) charts, [call trees](/en-US/docs/Tools/Performance/Call_Tree), traces, [flame charts](/en-US/docs/Tools/Performance/Flame_Chart) , and [allocations](/en-US/docs/Tools/Performance/Allocations) in your browser developer tools will help you understand waterfall and flame charts in other performance tools.
-- Alternative media formats
-  - : When it comes to images and videos, there are more formats than you're likely aware of. Some of these formats can take your highly optimized media-rich pages even further by offering additional reductions in file size. In this guide we'll discuss some alternative media formats, how to use them responsibly so that non-supporting browsers don't get left out in the cold, and some advanced guidance on transcoding your existing assets to them.
-- Analyzing JavaScript bundles
-  - : No doubt, JavaScript is a big part of modern web development. While you should always strive to reduce the amount of JavaScript you use in your applications, it can be difficult to know where to start. In this guide, we'll show you how to analyze your application's script bundles, so you know _what_ you're using, as well how to detect if your app contains duplicated scripts between bundles.
-- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading)
-  - : It isn't always necessary to load all of a web applications assets on initial page load. Lazy Loading is deferring the loading of assets on a page, such as scripts, images, etc., on a page to a later point in time i.e when those assets are actually needed.
-- Lazy-loading JavaScript with dynamic imports
-  - : When developers hear the term "lazy loading", they immediately think of below-the-fold imagery that loads when it scrolls into the viewport. But did you know you can lazy load JavaScript as well? In this guide we'll talk about the dynamic import() statement, which is a feature in modern browsers that loads a JavaScript module on demand. Of course, since this feature isn't available everywhere, we'll also show you how you can configure your tooling to use this feature in a widely compatible fashion.
-- [Controlling resource delivery with resource hints](/en-US/docs/Web/Performance/Controlling_resource_delivery_with_resource_hints)
-  - : Browsers often know better than we do when it comes to resource prioritization and delivery however they're far from clairvoyant. Native browser features enable us to hint to the browser when it should connect to another server, or preload a resource before the browser knows it ever needs it. When used judiciously, this can make fast experience seem even faster. In this article, we cover native browser features like rel=preconnect, rel=dns-prefetch, rel=prefetch, and rel=preload, and how to use them to your advantage.
-- [Performance Budgets](/en-US/docs/Web/Performance/Performance_budgets)
-  - : Marketing, design, and sales needs, and developer experience, often ad bloat, third-party scripts, and other features that can slow down web performance. To help set priorities, it is helpful to set a performance budget: a set of restrictions to not exceed during the development phase. In this article, we'll discuss creating and sticking to a performance budget.
-- [Web performance checklist](/en-US/docs/Web/Performance/Checklist)
-  - : A performance checklist of features to consider when developing applications with links to tutorials on how to implement each feature, include service workers, diagnosing performance problems, font loading best practices, client hints, creating performant animations, etc.
-- [Mobile performance checklist](/en-US/docs/Web/Performance/Mobile_performance_checklist)
-  - : A concise checklist of performance considerations impacting mobile network users on hand-held, battery operated devices.
 
 ## See also
 
@@ -213,10 +182,7 @@ Headers
 
 Tools
 
-- [Performance in Firefox Developer Tools](/en-US/docs/Tools/Performance)
-- Flame charts
-- The Network panel
-- Waterfall charts
+- [Performance in Firefox Developer Tools](https://profiler.firefox.com/docs/#/)
 
 Additional Metrics
 

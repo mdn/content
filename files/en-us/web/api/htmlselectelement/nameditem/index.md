@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.namedItem()
 slug: Web/API/HTMLSelectElement/namedItem
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -21,18 +22,18 @@ In JavaScript, using `selectElt.namedItem('value')` is equivalent to `selectElt.
 ## Syntax
 
 ```js
-var item = select.namedItem(str);
+namedItem(str)
 ```
 
 ### Parameters
 
-- `str` is a {{domxref("DOMString")}}.
+- `str` is a string.
 
 ### Return value
 
 - `item` is a {{domxref("HTMLOptionElement")}}.
 
-## Example
+## Examples
 
 ### HTML
 

@@ -1,6 +1,7 @@
 ---
 title: Screen.mozBrightness
 slug: Web/API/Screen/mozBrightness
+page-type: web-api-instance-property
 tags:
   - API
   - API:Mozilla Extensions
@@ -20,11 +21,9 @@ attribute, the attribute may not have the same value X when you later read it. M
 screens don't support as many different brightness levels as there are doubles between 0
 and 1. The value's precision might be reduced before storing it.
 
-## Syntax
+## Value
 
-```js
-let screenBrightness = window.screen.mozBrightness;
-```
+A number.
 
 ## Specifications
 

@@ -9,7 +9,7 @@ tags:
   - Learn
   - Styling
   - client-side
-  - vue
+  - Vue
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -426,7 +426,7 @@ Next, copy the following CSS into the newly created `<style>` element:
   left: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid currentColor;
+  border: 2px solid currentcolor;
   background: transparent;
 }
 .custom-checkbox > input[type="checkbox"]:focus + label::before {
@@ -465,6 +465,15 @@ Next, copy the following CSS into the newly created `<style>` element:
 Now we need to add some CSS classes to our template to connect the styles.
 
 To the root `<div>`, add a `custom-checkbox` class. To the `<input>`, add a `checkbox` class. Last of all, to the `<label>` add a `checkbox-label` class. The updated template is below:
+
+```html
+<template>
+  <div class="custom-checkbox">
+    <input type="checkbox" :id="id" :checked="isDone" class="checkbox" />
+    <label :for="id" class="checkbox-label">\{{label}}</label>
+  </div>
+</template>
+```
 
 The app should now have custom checkboxes. Your app should look something like the screenshot below.
 

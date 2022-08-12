@@ -135,6 +135,6 @@ Web Components is an HTML-related technology which makes it possible to, essenti
 
 ## Obsolete and deprecated elements
 
-> **Warning:** These are old HTML elements which are deprecated and should not be used. **You should never use them in new projects, and should replace them in old projects as soon as you can.** They are listed here for completeness only.
+> **Warning:** These are old HTML elements which are deprecated and should not be used. **You should never use them in new projects, and you should replace them in old projects as soon as you can.** They are listed here for completeness only.
 
 {{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}

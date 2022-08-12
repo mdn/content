@@ -1,6 +1,7 @@
 ---
 title: NodeIterator.previousNode()
 slug: Web/API/NodeIterator/previousNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -25,17 +26,24 @@ throw.
 ## Syntax
 
 ```js
-node = nodeIterator.previousNode();
+previousNode()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
-var nodeIterator = document.createNodeIterator(
+const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false // this optional argument is not used any more
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 currentNode = nodeIterator.nextNode(); // returns the next node
 previousNode = nodeIterator.previousNode(); // same result, since we backtracked to the previous node

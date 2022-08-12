@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.lastPacketSentTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -25,13 +26,7 @@ The {{domxref("RTCIceCandidatePairStats")}} property
 connection described by the candidate pair last sent a packet, not including
 {{Glossary("STUN")}} packets.
 
-## Syntax
-
-```js
-lastPacketSentTimestamp = rtcIceCandidatePairStats.lastPacketSentTimestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} object indicating the timestamp at which the
 connection described by pair of candidates last sent a packet, STUN packets excluded.

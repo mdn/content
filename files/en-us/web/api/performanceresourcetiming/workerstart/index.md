@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.workerStart
 slug: Web/API/PerformanceResourceTiming/workerStart
+page-type: web-api-instance-property
 tags:
   - API
   - PerformanceResourceTiming
@@ -21,17 +22,11 @@ is not intercepted by a Service Worker the property will always return 0.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.workerStart;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}}.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"
@@ -40,8 +35,8 @@ properties of all "`resource`"
 ```js
 function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
+  const p = performance.getEntriesByType("resource");
+  for (let i=0; i < p.length; i++) {
     print_start_and_end_properties(p[i]);
   }
 }
@@ -56,14 +51,13 @@ function print_start_and_end_properties(perfEntry) {
                 "secureConnectionStart",
                 "workerStart"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (let i=0; i < properties.length; i++) {
     // check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
+    const value = perfEntry[properties[i]];
+    if (properties[i] in perfEntry) {
+      console.log(`… ${properties[i]} = ${value}`);
     } else {
-      console.log("... " + properties[i] + " = NOT supported");
+      console.log(`… ${properties[i]} = NOT supported`);
     }
   }
 }

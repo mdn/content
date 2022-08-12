@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.component
 slug: Web/API/RTCIceCandidate/component
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -27,13 +28,7 @@ an RTCP candidate.
 If a candidate represents both RTP and RTCP multiplexed together, it is reported as an
 RTP candidate.
 
-## Syntax
-
-```js
-var component = RTCIceCandidate.component;
-```
-
-### Value
+## Value
 
 A string which is one of the following:
 
@@ -57,15 +52,15 @@ component ID. A value of `"1"` indicates RTP, which is recorded in the
 `"2"`, the a-line would be describing an RTCP candidate, and
 `component` would be `"rtcp"`.
 
-## Example
+## Examples
 
 This code snippet examines a candidate's component type and dispatches the candidate to
 different handlers depending on the value.
 
 ```js
-if (candidate.component == "rtp") {
+if (candidate.component === "rtp") {
   handleRTPCandidate(candidate);
-} else if (candidate.component == "rtcp") {
+} else if (candidate.component === "rtcp") {
   handleRTCPCandidate(candidate);
 } else {
   handleUnknownCandidate(candidate);

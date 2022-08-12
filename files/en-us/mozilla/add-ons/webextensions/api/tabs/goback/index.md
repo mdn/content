@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var withGoingBack = browser.tabs.goBack(
+let withGoingBack = browser.tabs.goBack(
   tabId,                  // optional integer
   callback                  // optional function
 )
@@ -29,9 +29,9 @@ var withGoingBack = browser.tabs.goBack(
 
 ### Parameters
 
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. The ID of the tab to navigate. Defaults to the active tab of the current window.
-- `callback`{{optional_inline}}
+- `callback` {{optional_inline}}
   - : `function`. When the page navigation finishes, this function is called without parameters.
 
 ### Return value
@@ -55,13 +55,13 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var goingBack = browser.tabs.goBack();
+let goingBack = browser.tabs.goBack();
 goingBack.then(onGoBack, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-getZoomSettings) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-getZoomSettings) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

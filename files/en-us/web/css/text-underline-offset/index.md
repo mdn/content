@@ -15,6 +15,8 @@ browser-compat: css.properties.text-underline-offset
 
 The **`text-underline-offset`** [CSS](/en-US/docs/Web/CSS) property sets the offset distance of an underline text decoration line (applied using {{cssxref("text-decoration")}}) from its original position.
 
+{{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}
+
 `text-underline-offset` is not part of the {{cssxref('text-decoration')}} shorthand. While an element can have multiple `text-decoration` lines, `text-underline-offset` only impacts underlining, and **not** other possible line decoration options such as `overline` or `line-through`.
 
 ## Syntax
@@ -34,6 +36,7 @@ text-underline-offset: 20%;
 text-underline-offset: inherit;
 text-underline-offset: initial;
 text-underline-offset: revert;
+text-underline-offset: revert-layer;
 text-underline-offset: unset;
 ```
 

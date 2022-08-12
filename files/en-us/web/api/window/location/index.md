@@ -1,6 +1,7 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -17,19 +18,16 @@ The **`Window.location`** read-only property returns a
 document.
 
 Though `Window.location` is a _read-only_ `Location`
-object, you can also assign a {{domxref("DOMString")}} to it. This means that you can
+object, you can also assign a string to it. This means that you can
 work with `location` as if it were a string in most cases:
 `location = 'http://www.example.com'` is a synonym of
 `location.href = 'http://www.example.com'`.
 
 See {{domxref("Location")}} for all available properties.
 
-## Syntax
+## Value
 
-```js
-var oldLocation = location;
-location = newLocation;
-```
+A {{domxref("Location")}} object.
 
 ## Examples
 
@@ -45,8 +43,7 @@ Whenever a new value is assigned to the location object, a document will be load
 using the URL as if `location.assign()` had been called with the modified
 URL.
 
-Note that [navigation-related
-sandbox flags](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) may result in an exception being thrown and the navigation failing.
+Note that [navigation-related sandbox flags](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) may result in an exception being thrown and the navigation failing.
 
 ```js
 location.assign("http://www.mozilla.org"); // or
@@ -66,8 +63,7 @@ insert the value of `location.pathname` into the hash:
 
 ```js
 function reloadPageWithHash() {
-  var initialPage = location.pathname;
-  location.replace('http://example.com/#' + initialPage);
+  location.replace(`http://example.com/#${location.pathname}`);
 }
 ```
 
@@ -75,11 +71,11 @@ function reloadPageWithHash() {
 
 ```js
 function showLoc() {
-  var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
-  for (var sProp in oLocation){
-  aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " + (oLocation[sProp] || "n/a"));
+  const logLines = ["Property (Typeof): Value", `location (${typeof location}): ${location}`];
+  for (const prop in location) {
+    logLines.push(`${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`);
   }
-  alert(aLog.join("\n"));
+  alert(logLines.join("\n"));
 }
 
 // in html: <button onclick="showLoc();">Show location properties</button>
@@ -88,8 +84,8 @@ function showLoc() {
 ### Example #5: Send a string of data to the server by modifying the `search` property:
 
 ```js
-function sendData (sData) {
-  location.search = sData;
+function sendData(data) {
+  location.search = data;
 }
 
 // in html: <button onclick="sendData('Some data');">Send data</button>
@@ -101,30 +97,35 @@ taken by the server, the current document is reloaded with the modified search s
 ### Example #6: Using bookmarks without changing the `hash` property:
 
 ```html
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8"/>
-<title>MDN Example</title>
-<script>
-function showNode (oNode) {
-  document.documentElement.scrollTop = oNode.offsetTop;
-  document.documentElement.scrollLeft = oNode.offsetLeft;
-}
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8"/>
+  <title>MDN Example</title>
+  <script>
+    function showNode(node) {
+      document.documentElement.scrollTop = node.offsetTop;
+      document.documentElement.scrollLeft = node.offsetLeft;
+    }
 
-function showBookmark (sBookmark, bUseHash) {
-  if (arguments.length === 1 || bUseHash) { location.hash = sBookmark; return; }
-  var oBookmark = document.querySelector(sBookmark);
-  if (oBookmark) { showNode(oBookmark); }
-}
-</script>
-<style>
-span.intLink {
-    cursor: pointer;
-    color: #0000ff;
-    text-decoration: underline;
-}
-</style>
+    function showBookmark(bookmark, useHash) {
+      if (arguments.length === 1 || useHash) {
+        location.hash = bookmark;
+        return; 
+      }
+      const bookmarkElement = document.querySelector(bookmark);
+      if (bookmarkElement) { 
+        showNode(bookmarkElement);
+      }
+    }
+  </script>
+  <style>
+    span.intLink {
+        cursor: pointer;
+        color: #0000ff;
+        text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
@@ -158,41 +159,61 @@ span.intLink {
 …the same thing but with an animated page scroll:
 
 ```js
-var showBookmark = (function () {
-  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
-   /*
-   * nDuration: the duration in milliseconds of each frame
-   * nFrames: number of frames for each scroll
-   */
-   nDuration = 200, nFrames = 10;
+const showBookmark = (() => {
+  let _useHash;
+  let _scrollX;
+  let _scrollY;
+  let _nodeX;
+  let _nodeY;
+  let _itFrame;
+  let _scrollId = -1;
+  let _bookMark;
+  
+  // duration: the duration in milliseconds of each frame
+  // frames: number of frames for each scroll
+  let duration = 200;
+  let frames = 10;
 
-  function _next () {
-  if (_itFrame > nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
-  _isBot = true;
-  document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
-  document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
-  if (_useHash && _itFrame === nFrames) { location.hash = _bookMark; }
-  _itFrame++;
+  function _next() {
+    if (_itFrame > frames) {
+      clearInterval(_scrollId); 
+      _scrollId = -1; 
+      return;
+    }
+    _isBot = true;
+    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / frames);
+    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / frames);
+    if (_useHash && _itFrame === frames) {
+      location.hash = _bookMark;
+    }
+    _itFrame++;
   }
 
-  function _chkOwner () {
-  if (_isBot) { _isBot = false; return; }
-  if (_scrollId > -1) { clearInterval(_scrollId); _scrollId = -1; }
+  function _chkOwner() {
+    if (_isBot) {
+      _isBot = false;
+      return;
+    }
+    if (_scrollId > -1) {
+      clearInterval(_scrollId);
+      _scrollId = -1;
+    }
   }
 
-  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
-  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
-
-  return function (sBookmark, bUseHash) {
-    var oNode = document.querySelector(sBookmark);
-  _scrollY = document.documentElement.scrollTop;
-  _scrollX = document.documentElement.scrollLeft;
-  _bookMark = sBookmark;
-  _useHash = bUseHash === true;
-  _nodeX = oNode.offsetLeft;
-    _nodeY = oNode.offsetTop;
+  window.addEventListener("scroll", _chkOwner, false);
+  
+  return (bookmark, useHash) => {
+    const node = document.querySelector(bookmark);
+    _scrollY = document.documentElement.scrollTop;
+    _scrollX = document.documentElement.scrollLeft;
+    _bookMark = bookmark;
+    _useHash = useHash === true;
+    _nodeX = node.offsetLeft;
+    _nodeY = node.offsetTop;
     _itFrame = 1;
-  if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
+    if (_scrollId === -1) {
+      _scrollId = setInterval(_next, Math.round(duration / frames));
+    }
   };
 })();
 ```
@@ -211,4 +232,4 @@ var showBookmark = (function () {
 - A similar information, but attached to the document,
   {{domxref("Document.location")}}.
 - [Manipulating the browser history](/en-US/docs/Web/API/History_API)
-- {{event("hashchange")}}
+- {{domxref("Window/hashchange_event", "hashchange")}}

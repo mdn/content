@@ -1,6 +1,7 @@
 ---
 title: USBDevice.usbVersionSubminor
 slug: Web/API/USBDevice/usbVersionSubminor
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - usbVersionSubminor
+  - Experimental
 browser-compat: api.USBDevice.usbVersionSubminor
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
@@ -19,13 +21,7 @@ The **`usbVersionSubminor`** read only property of the
 protocol version supported by the device. The other two properties
 are USBDevice.usbVersionMajor and USBDevice.usbVersionMinor.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.usbVersionSubminor
-```
-
-### Value
+## Value
 
 The first of three properties that declare the USB protocol version supported by the
 device.

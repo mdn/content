@@ -11,7 +11,7 @@ tags:
   - conditional rendering
   - v-else
   - v-if
-  - vue
+  - Vue
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -198,9 +198,9 @@ methods: {
 
 ## Conditionally displaying components via `v:if` and `v:else`
 
-Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://vuejs.org/v2/api/#v-if).
+Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://v2.vuejs.org/v2/api/#v-if).
 
-The `v-if` directive will only render a block if the value passed to it is truthy. This is similar to how an `if` statement works in JavaScript. `v-if` also has corresponding [`v-else-if`](https://vuejs.org/v2/api/#v-else-if) and [`v-else`](https://vuejs.org/v2/api/#v-else) directives to provide the equivalent of JavaScript `else if` and `else` logic inside Vue templates.
+The `v-if` directive will only render a block if the value passed to it is truthy. This is similar to how an `if` statement works in JavaScript. `v-if` also has corresponding [`v-else-if`](https://v2.vuejs.org/v2/api/#v-else-if) and [`v-else`](https://v2.vuejs.org/v2/api/#v-else) directives to provide the equivalent of JavaScript `else if` and `else` logic inside Vue templates.
 
 It's important to note that `v-else` and `v-else-if` blocks need to be the first sibling of a `v-if`/`v-else-if` block, otherwise Vue will not recognize them. You can also attach `v-if` to a `<template>` tag if you need to conditionally render an entire template.
 
@@ -263,7 +263,7 @@ Last for this section, we'll add event handlers for the events emitted by the `T
 
 Update your `<to-do-item-edit-form></to-do-item-edit-form>` call to look like so:
 
-```js
+```html
 <to-do-item-edit-form v-else :id="id" :label="label"
                       @item-edited="itemEdited"
                       @edit-cancelled="editCancelled">
@@ -278,11 +278,11 @@ Add the following new methods to your `App.vue`'s component object, below the ex
 
 ```js
 deleteToDo(toDoId) {
-  const itemIndex = this.ToDoItems.findIndex(item => item.id === toDoId);
+  const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
   this.ToDoItems.splice(itemIndex, 1);
 },
 editToDo(toDoId, newLabel) {
-  const toDoToEdit = this.ToDoItems.find(item => item.id === toDoId);
+  const toDoToEdit = this.ToDoItems.find((item) => item.id === toDoId);
   toDoToEdit.label = newLabel;
 }
 ```
@@ -294,7 +294,7 @@ Next, we'll add the event listeners for the `item-deleted` and `item-edited` eve
 
 Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to look like this:
 
-```js
+```html
 <to-do-item :label="item.label" :done="item.done" :id="item.id"
             @checkbox-changed="updateDoneStatus(item.id)"
             @item-deleted="deleteToDo(item.id)"
@@ -314,7 +314,7 @@ This is great so far, but we've actually introduced a bug by adding in the edit 
 
 Note the state of the checkbox after you cancel — not only has the app forgotten the state of the checkbox, but the done status of that todo item is now out of whack. If you try checking (or unchecking) it again, the completed count will change in the opposite way to what you'd expect. This is because the `isDone` inside `data` is only given the value `this.done` on component load.
 
-Fixing this is fortunately quite easy — we can do this by converting our `isDone` data item into a [computed property](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties) — another advantage of computed properties is that they preserve [reactivity](https://vuejs.org/v2/guide/reactivity.html), meaning (among other things) that their state is saved when the template changes like ours is now doing.
+Fixing this is fortunately quite easy — we can do this by converting our `isDone` data item into a [computed property](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties) — another advantage of computed properties is that they preserve [reactivity](https://v2.vuejs.org/v2/guide/reactivity.html), meaning (among other things) that their state is saved when the template changes like ours is now doing.
 
 So, let's implement the fix:
 

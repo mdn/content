@@ -18,7 +18,7 @@ Below is some JavaScript pseudocode (it's not truly executable code) demonstrati
 ```js
 /* JavaScript if statement */
 if (boolean conditional) {
-   // code to execute if the conditional is true
+  // code to execute if the conditional is true
 }
 
 if (boolean conditional) {
@@ -31,16 +31,12 @@ if (boolean conditional) {
 for (control variable; boolean conditional; counter) {
   // code to execute repeatedly if the conditional is true
 }
-
-for (var i=0; i < 4; i++) {
-  console.log("I print only when the boolean conditional is true");
-}
 ```
 
-The Boolean value is named after English mathematician {{interwiki("wikipedia", "George Boole")}}, who pioneered the field of mathematical logic.
+The Boolean value is named after English mathematician [George Boole](https://en.wikipedia.org/wiki/George_Boole), who pioneered the field of mathematical logic.
 
 ## See also
 
-- {{Interwiki("wikipedia", "Boolean data type", "Boolean")}} on Wikipedia
+- [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) on Wikipedia
 - The JavaScript global object: {{jsxref("Boolean")}}
 - [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)

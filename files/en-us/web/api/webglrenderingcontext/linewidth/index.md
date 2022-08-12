@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.lineWidth()
 slug: Web/API/WebGLRenderingContext/lineWidth
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,17 +27,17 @@ lines.
 ## Syntax
 
 ```js
-void gl.lineWidth(width);
+lineWidth(width)
 ```
 
 ### Parameters
 
-- width
+- `width`
   - : A {{domxref("WebGL_API/Types", "GLfloat")}} specifying the width of rasterized lines. Default value: 1.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

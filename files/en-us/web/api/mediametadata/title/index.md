@@ -1,6 +1,7 @@
 ---
 title: MediaMetadata.title
 slug: Web/API/MediaMetadata/title
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -19,14 +20,7 @@ The **`title`** property of the
 {{domxref("MediaMetaData")}} interface returns or sets the title of the media to be
 played.
 
-## Syntax
-
-```js
-var title = mediaMetaData.title
-mediaMetaData.title = title
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} containing the title of the media.
 
@@ -50,6 +44,7 @@ if ('mediaSession' in navigator) {
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
   });
+}
 ```
 
 ## Specifications

@@ -52,7 +52,7 @@ We will also see how to develop our own custom store to persist the todo informa
 
 ### Git
 
-Clone the github repo (if you haven't already done it) with:
+Clone the GitHub repo (if you haven't already done it) with:
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
@@ -88,7 +88,7 @@ Sometimes, your app state will need to be accessed by multiple components that a
 
 Moreover, when your app becomes complicated and your component hierarchy gets complex, it might become too difficult for components to relay data between each other. In that case, moving to a global data store might be a good option. If you've already worked with [Redux](https://redux.js.org/) or [Vuex](https://vuex.vuejs.org/), then you'll be familiar with how this kind of store works. Svelte stores offer similar features for state management.
 
-A store is an object with a `subscribe()` method that allows interested parties to be notified whenever the store value changes, and an optional `set()` method that allows you to set new values for the store. This minimal API is known as the [store contract](https://svelte.dev/docs#Store_contract).
+A store is an object with a `subscribe()` method that allows interested parties to be notified whenever the store value changes, and an optional `set()` method that allows you to set new values for the store. This minimal API is known as the [store contract](https://svelte.dev/docs#component-format-script-4-prefix-stores-with-$-to-access-their-values-store-contract).
 
 Svelte provides functions for creating [readable](https://svelte.dev/docs#readable), [writable](https://svelte.dev/docs#writable), and [derived](https://svelte.dev/docs#derived) stores in the `svelte/store` module.
 
@@ -131,7 +131,7 @@ Let's now create our `Alert` component and see how we can read values from the s
 
       let alertContent = ''
 
-      const unsubscribe = alert.subscribe(value => alertContent = value)
+      const unsubscribe = alert.subscribe((value) => alertContent = value)
 
       onDestroy(unsubscribe)
     </script>
@@ -167,7 +167,7 @@ Let's now create our `Alert` component and see how we can read values from the s
     }
     div svg {
       height: 1.6rem;
-      fill: currentColor;
+      fill: currentcolor;
       width: 1.4rem;
       margin-right: 0.5rem;
     }
@@ -205,20 +205,20 @@ Let's now use our component.
 
 3. Load your test app now, and you should now see the `Alert` message on screen. You can click on it to dismiss it.
 
-    ![A simple notification in the top right hand corner of an app saying welcome to the to-do list app](01-alert-message.png)
+    ![A simple notification in the top right-hand corner of an app saying welcome to the to-do list app](01-alert-message.png)
 
 ## Making stores reactive with the reactive `$store` syntax
 
 This works, but you'll have to copy and paste all this code every time you want to subscribe to a store:
 
-```js
+```html
 <script>
   import myStore from './stores.js'
   import { onDestroy } from 'svelte'
 
   let myStoreContent = ''
 
-  const unsubscribe = myStore.subscribe(value => myStoreContent = value)
+  const unsubscribe = myStore.subscribe((value) => myStoreContent = value)
 
   onDestroy(unsubscribe)
 </script>
@@ -254,7 +254,7 @@ And `$myStore` will be fully reactive. This also applies to your own custom stor
 
 2. Check your app again and you'll see that this works just like before. That's much better!
 
-Behind the scenes Svelte has generated the code to declare the local variable `$alert`, subscribe to the `alert` store, update `$alert` whenever the store's content is modified, and unsubscribe when the component is unmounted. It will also generate the `alert.set(...)` statements whenever we assign a value to `$alert`.
+Behind the scenes Svelte has generated the code to declare the local variable `$alert`, subscribe to the `alert` store, update `$alert` whenever the store's content is modified, and unsubscribe when the component is unmounted. It will also generate the `alert.set()` statements whenever we assign a value to `$alert`.
 
 The end result of this nifty trick is that you can access global stores just as easily as using reactive local variables.
 
@@ -283,7 +283,7 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     function removeTodo(todo) {
-      todos = todos.filter(t => t.id !== todo.id)
+      todos = todos.filter((t) => t.id !== todo.id)
       todosStatus.focus()             // give focus to status heading
       $alert = `Todo '${todo.name}' has been deleted`
     }
@@ -293,7 +293,7 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     function updateTodo(todo) {
-      const i = todos.findIndex(t => t.id === todo.id)
+      const i = todos.findIndex((t) => t.id === todo.id)
       if (todos[i].name !== todo.name)            $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`
       if (todos[i].completed !== todo.completed)  $alert = `todo '${todos[i].name}' marked as ${todo.completed ? 'completed' : 'active'}`
       todos[i] = { ...todos[i], ...todo }
@@ -304,9 +304,13 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     $: {
-      if (filter === 'all')               $alert = 'Browsing all to-dos'
-      else if (filter === 'active')       $alert = 'Browsing active to-dos'
-      else if (filter === 'completed')    $alert = 'Browsing completed to-dos'
+      if (filter === 'all') {
+        $alert = 'Browsing all to-dos';
+      } else if (filter === 'active') {
+        $alert = 'Browsing active to-dos';
+      } else if (filter === 'completed') {
+        $alert = 'Browsing completed to-dos';
+      }
     }
     ```
 
@@ -314,18 +318,18 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
     ```js
     const checkAllTodos = (completed) => {
-      todos = todos.map(t => ({...t, completed}))
+      todos = todos.map((t) => ({...t, completed}))
       $alert = `${completed ? 'Checked' : 'Unchecked'} ${todos.length} to-dos`
     }
     const removeCompletedTodos = () => {
-      $alert = `Removed ${todos.filter(t => t.completed).length} to-dos`
-      todos = todos.filter(t => !t.completed)
+      $alert = `Removed ${todos.filter((t) => t.completed).length} to-dos`
+      todos = todos.filter((t) => !t.completed)
     }
     ```
 
 7. So basically, we've imported the store and updated it on every event, which causes a new alert to show each time. Have a look at your app again, and try adding/deleting/updating a few to-dos!
 
-As soon as we execute `$alert = ...`, Svelte will run `alert.set(...)`. Our `Alert` component — like every subscriber to the alert store — will be notified when it receives a new value, and thanks to Svelte reactivity its markup will be updated.
+As soon as we execute `$alert = …`, Svelte will run `alert.set()`. Our `Alert` component — like every subscriber to the alert store — will be notified when it receives a new value, and thanks to Svelte reactivity its markup will be updated.
 
 We could do the same within any component or `.js` file.
 
@@ -340,28 +344,25 @@ Lets see how to do that. We'll specify a prop with the milliseconds to wait befo
 1. Update the `<script>` section of your `Alert.svelte` component like so:
 
     ```js
-    <script>
-      import { onDestroy } from 'svelte'
-      import { alert } from '../stores.js'
+    import { onDestroy } from 'svelte'
+    import { alert } from '../stores.js'
 
-      export let ms = 3000
-      let visible
-      let timeout
+    export let ms = 3000
+    let visible
+    let timeout
 
-      const onMessageChange = (message, ms) => {
-        clearTimeout(timeout)
-        if (!message) {               // hide Alert if message is empty
-          visible = false
-        } else {
-          visible = true                                              // show alert
-          if (ms > 0) timeout = setTimeout(() => visible = false, ms) // and hide it after ms milliseconds
-        }
+    const onMessageChange = (message, ms) => {
+      clearTimeout(timeout)
+      if (!message) {               // hide Alert if message is empty
+        visible = false
+      } else {
+        visible = true                                              // show alert
+        if (ms > 0) timeout = setTimeout(() => visible = false, ms) // and hide it after ms milliseconds
       }
-      $: onMessageChange($alert, ms)      // whenever the alert store or the ms props changes run onMessageChange
+    }
+    $: onMessageChange($alert, ms)      // whenever the alert store or the ms props changes run onMessageChange
 
-      onDestroy(()=> clearTimeout(timeout))           // make sure we clean-up the timeout
-
-    </script>
+    onDestroy(() => clearTimeout(timeout))           // make sure we clean-up the timeout
     ```
 
 2. And update the `Alert.svelte` markup section like so:
@@ -397,7 +398,7 @@ In our case, just adding a `role="alert"` to the `<div>` container will do the t
 <div role="alert" on:click={() => visible = false}>
 ```
 
-In general, testing your applications using screen readers is a good idea, not only to discover accessibility issues but also to get used to how visually impaired people use the Web. You have several options, like [NVDA](https://www.nvaccess.org/) for Windows, [ChromeVox](http://www.chromevox.com/) for Chrome, [Orca](https://wiki.gnome.org/Projects/Orca) on Linux, and [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/) for Mac OS X and iOS, among other options.
+In general, testing your applications using screen readers is a good idea, not only to discover accessibility issues but also to get used to how visually impaired people use the Web. You have several options, like [NVDA](https://www.nvaccess.org/) for Windows, [ChromeVox](https://support.google.com/chromebook/answer/7031755) for Chrome, [Orca](https://wiki.gnome.org/Projects/Orca) on Linux, and [VoiceOver](https://www.apple.com/accessibility/vision/) for macOS and iOS, among other options.
 
 To learn more about detecting and fixing accessibility issues, check out our [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) article.
 
@@ -493,13 +494,13 @@ export const writable = (initial_value = 0) => {
   const subscribe = (handler) => {
     subs = [...subs, handler]                                 // add handler to the array of subscribers
     handler(value)                                            // call handler with current value
-    return () => subs = subs.filter(sub => sub !== handler)   // return unsubscribe function
+    return () => subs = subs.filter((sub) => sub !== handler)   // return unsubscribe function
   }
 
   const set = (new_value) => {
     if (value === new_value) return         // same value, exit
     value = new_value                       // update value
-    subs.forEach(sub => sub(value))         // update subscribers
+    subs.forEach((sub) => sub(value))         // update subscribers
   }
 
   const update = (update_fn) => set(update_fn(value))   // update function
@@ -521,7 +522,7 @@ function myStore() {
 
   return {
     subscribe,
-    addOne: () => update(n => n + 1),
+    addOne: () => update((n) => n + 1),
     reset: () => set(0)
   };
 }
@@ -661,7 +662,7 @@ Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelt
 
 > **Note:** Being a compiler allows Svelte to optimize the size of our bundle by excluding features that are not used. In this case, if we compile our app for production with `npm run build`, our `public/build/bundle.js` file will weight a little less than 22 KB. If we remove the `transitions:fly` directive Svelte is smart enough to realize the fly function is not being used and the `bundle.js` file size will drop down to just 18 KB.
 
-This is just the tip of the iceberg. Svelte has lots of options for dealing with animations and transitions. Svelte also supports specifying different transitions to apply when the element is added or removed from the DOM with the `in:fn`/`out:fn` directives, and it also allows you to define your [custom CSS](https://svelte.dev/tutorial/custom-css-transitions) and [JavaScript](https://svelte.dev/tutorial/custom-js-transitions) transitions. It also has several easing functions to specify the rate of change over time. Have a look at the [ease visualizer](https://svelte.dev/examples#easing) to explore the various ease functions available.
+This is just the tip of the iceberg. Svelte has lots of options for dealing with animations and transitions. Svelte also supports specifying different transitions to apply when the element is added or removed from the DOM with the `in:fn`/`out:fn` directives, and it also allows you to define your [custom CSS](https://svelte.dev/tutorial/custom-css-transitions) and [JavaScript](https://svelte.dev/tutorial/custom-js-transitions) transitions. It also has several easing functions to specify the rate of change over time. Have a look at the [ease visualizer](https://svelte.dev/examples/easing) to explore the various ease functions available.
 
 ## The code so far
 

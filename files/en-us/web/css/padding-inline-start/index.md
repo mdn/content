@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - padding-inline
   - padding-inline-start
@@ -32,6 +31,7 @@ padding-inline-start: 5%;     /* A padding relative to the block container's wid
 padding-inline-start: inherit;
 padding-inline-start: initial;
 padding-inline-start: revert;
+padding-inline-start: revert-layer;
 padding-inline-start: unset;
 ```
 
@@ -40,7 +40,7 @@ padding-inline-start: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value. Must be nonnegative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the _inline-size_ of the containing block. Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
 
 ## Description
 

@@ -1,6 +1,7 @@
 ---
 title: performance.setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,22 +24,21 @@ A browser's recommended resource timing buffer size is at least 150
 ## Syntax
 
 ```js
-performance.setResourceTimingBufferSize(maxSize);
+setResourceTimingBufferSize(maxSize)
 ```
 
-### Arguments
+### Parameters
 
-- maxSize
+- `maxSize`
   - : A `number` representing the maximum number of
     {{domxref("PerformanceEntry","performance entry")}} objects the browser should hold in
     its performance entry buffer.
 
 ### Return value
 
-- none
-  - : This method has no return value.
+This method has no return value.
 
-## Example
+## Examples
 
 ```js
 function setResourceTimingBufferSize(maxSize) {
@@ -46,12 +46,12 @@ function setResourceTimingBufferSize(maxSize) {
     log("Browser does not support Web Performance");
     return;
   }
-  var supported = typeof performance.setResourceTimingBufferSize == "function";
+  const supported = typeof performance.setResourceTimingBufferSize === "function";
   if (supported) {
-    log("... Performance.setResourceTimingBufferSize() = Yes");
+    console.log("… Performance.setResourceTimingBufferSize() = Yes");
     performance.setResourceTimingBufferSize(maxSize);
   } else {
-    log("... Performance.setResourceTimingBufferSize() = NOT supported");
+    console.error("The method Performance.setResourceTimingBufferSize() is not supported.");
   }
 }
 ```

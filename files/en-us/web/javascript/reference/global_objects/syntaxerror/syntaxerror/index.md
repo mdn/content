@@ -18,6 +18,7 @@ that represents an error when trying to interpret syntactically invalid code.
 ```js
 new SyntaxError()
 new SyntaxError(message)
+new SyntaxError(message, options)
 new SyntaxError(message, fileName)
 new SyntaxError(message, fileName, lineNumber)
 ```
@@ -26,9 +27,14 @@ new SyntaxError(message, fileName, lineNumber)
 
 - `message` {{optional_inline}}
   - : Human-readable description of the error
-- `fileName` {{optional_inline}}
+- `options` {{optional_inline}}
+  - : An object that has the following properties:
+    - `cause` {{optional_inline}}
+      - : A property indicating the specific cause of the error.
+          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+- `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception
-- `lineNumber` {{optional_inline}}
+- `lineNumber` {{optional_inline}} {{non-standard_inline}}
   - : The line number of the code that caused the exception
 
 ## Examples

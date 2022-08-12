@@ -34,6 +34,7 @@ perspective: 3.5em;
 perspective: inherit;
 perspective: initial;
 perspective: revert;
+perspective: revert-layer;
 perspective: unset;
 ```
 

@@ -11,6 +11,6 @@ This concept is important for {{Glossary("garbage collection")}} because it mean
 
 ## See also
 
-- {{interwiki("wikipedia", "Dominator (graph theory)", "Dominator")}} on Wikipedia
-- [Dominators](/en-US/docs/Tools/Memory/Dominators)
+- [Dominator](https://en.wikipedia.org/wiki/Dominator_(graph_theory)) on Wikipedia
+- [Dominators](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators/index.html)
 - [Garbage collection](/en-US/docs/Web/JavaScript/Memory_Management#garbage_collection)

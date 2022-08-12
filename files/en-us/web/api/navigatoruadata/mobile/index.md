@@ -1,6 +1,7 @@
 ---
 title: NavigatorUAData.mobile
 slug: Web/API/NavigatorUAData/mobile
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,17 +10,11 @@ tags:
   - NavigatorUAData
 browser-compat: api.NavigatorUAData.mobile
 ---
-{{DefaultAPISidebar("")}}
+{{DefaultAPISidebar("User-Agent Client Hints API")}}
 
 The **`mobile`** read-only property of the {{domxref("NavigatorUAData")}} interface returns a value indicating whether the device is a mobile device.
 
-## Syntax
-
-```js
-let mobile = NavigatorUAData.mobile;
-```
-
-### Value
+## Value
 
 A {{jsxref("Boolean")}}, `true` if this is a mobile device.
 
@@ -38,3 +33,7 @@ console.log(navigator.userAgentData.mobile);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- The {{HTTPHeader("Sec-CH-UA-Mobile")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)) contains the same information.

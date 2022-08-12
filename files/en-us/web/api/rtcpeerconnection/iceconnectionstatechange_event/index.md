@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: iceconnectionstatechange event'
 slug: Web/API/RTCPeerConnection/iceconnectionstatechange_event
+page-type: web-api-event
 tags:
   - API
   - Connection
@@ -23,30 +24,23 @@ browser-compat: api.RTCPeerConnection.iceconnectionstatechange_event
 An **`iceconnectionstatechange`** event is sent to an {{domxref("RTCPeerConnection")}} object each time the {{Glossary("ICE")}} connection state changes during the negotiation process.
 The new ICE connection state is available in the object's {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} property.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("RTCPeerConnection.oniceconnectionstatechange", "oniceconnectionstatechange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 One common task performed by the `iceconnectionstatechange` event listener: to trigger ICE restart when the state changes to `failed`. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}} for further information.
+
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('iceconnectionstatechange', (event) => { });
+
+oniceconnectionstatechange = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Usage notes
 
@@ -62,12 +56,12 @@ When the negotiation process runs out of candidates to check, the ICE connection
 
 ## Examples
 
-An event handler for this event can be added using the {{domxref("RTCPeerConnection.oniceconnectionstatechange")}} property or by using {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the `RTCPeerConnection`.
+An event handler for this event can be added using the `oniceconnectionstatechange` property or by using {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the `RTCPeerConnection`.
 
 In this example, a handler for `iceconnectionstatechange` is set up to update a call state indicator by using the value of {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} to create a string which corresponds to the name of a CSS class that we can assign to the status indicator to cause it to reflect the current state of the connection.
 
 ```js
-pc.addEventListener("iceconnectionstatechange", ev => {
+pc.addEventListener("iceconnectionstatechange", (ev) => {
   let stateElem = document.querySelector("#call-state");
   stateElem.className = `${pc.iceConnectionState}-state`;
 }, false);
@@ -76,7 +70,7 @@ pc.addEventListener("iceconnectionstatechange", ev => {
 This can also be written as:
 
 ```js
-pc.oniceconnectionstatechange = ev => {
+pc.oniceconnectionstatechange = (ev) => {
   let stateElem = document.querySelector("#call-state");
   stateElem.className = `${pc.iceConnectionState}-state`;
 }
@@ -94,5 +88,4 @@ pc.oniceconnectionstatechange = ev => {
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection")}}
-- {{domxref("RTCPeerConnection.onIceConnectionStateChange")}}
 - {{domxref("RTCPeerConnection.iceConnectionState")}}

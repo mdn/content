@@ -1,6 +1,7 @@
 ---
 title: USBDevice.open()
 slug: Web/API/USBDevice/open
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - open
+  - Experimental
 browser-compat: api.USBDevice.open
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
@@ -21,7 +23,7 @@ started.
 ## Syntax
 
 ```js
-var promise = USBDevice.open()
+open()
 ```
 
 ### Parameters

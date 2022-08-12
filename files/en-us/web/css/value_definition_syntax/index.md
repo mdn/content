@@ -6,6 +6,7 @@ tags:
   - Guide
   - Reference
   - Syntax
+spec-urls: https://drafts.csswg.org/css-values/#value-defs
 ---
 {{CSSRef}}
 
@@ -381,11 +382,7 @@ But not:
 
 ## Specifications
 
-| Specification                                                                                                | Status                           | Comment                               |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------- |
-| {{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}                 | {{Spec2("CSS3 Values")}} | Adds the hash mark multiplier.        |
-| {{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}         | {{Spec2("CSS2.1")}}         | Adds the double ampersand combinator. |
-| {{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}} | {{Spec2("CSS1")}}         | Initial definition                    |
+{{Specifications}}
 
 ## See also
 

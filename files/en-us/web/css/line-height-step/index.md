@@ -23,6 +23,7 @@ line-height-step: 18pt;
 line-height-step: inherit;
 line-height-step: initial;
 line-height-step: revert;
+line-height-step: revert-layer;
 line-height-step: unset;
 ```
 

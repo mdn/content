@@ -45,9 +45,9 @@ Even though the `!` operator can be used with operands that are not Boolean
 values, it can still be considered a boolean operator since its return value can always
 be converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#boolean_type).
 To explicitly convert its return value (or any expression in general) to the
-corresponding boolean value, use a double [NOT
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}
-constructor.
+corresponding boolean value,
+use a double [NOT operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT)
+or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
 
 ## Examples
 

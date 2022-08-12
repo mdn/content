@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.decode()
 slug: Web/API/HTMLImageElement/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Decode
@@ -33,7 +34,7 @@ a delay while the image loads.
 ## Syntax
 
 ```js
-var promise = HTMLImageElement.decode();
+decode()
 ```
 
 ### Parameters
@@ -64,9 +65,9 @@ low-resolution image with the full-resolution one that's now available.
 
 The following example shows how to use the `decode()` method to control when
 an image is appended to the DOM. Without a {{jsxref('Promise')}}-returning method, you
-would add the image to the DOM in a {{event("load")}} event handler, such as by using
-the {{domxref("GlobalEventHandlers.onload", "img.onload")}} event handler, and by
-handling the error in the {{event("error")}} event's handler.
+would add the image to the DOM in a {{domxref("Window/load_event", "load")}} event handler, such as by using
+the {{domxref("HTMLImageElement.load_event", "img.onload")}} event handler, and by
+handling the error in the {{domxref("Element/error_event", "error")}} event's handler.
 
 ```js
 const img = new Image();

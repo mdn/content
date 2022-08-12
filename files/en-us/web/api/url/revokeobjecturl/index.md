@@ -1,6 +1,7 @@
 ---
 title: URL.revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL
+page-type: web-api-static-method
 tags:
   - API
   - Method
@@ -28,19 +29,22 @@ longer.
 ## Syntax
 
 ```js
-URL.revokeObjectURL(objectURL)
+revokeObjectURL(objectURL)
 ```
 
 ### Parameters
 
 - `objectURL`
-  - : A {{domxref("DOMString")}} representing a object URL that was previously created by
+  - : A string representing a object URL that was previously created by
     calling {{domxref("URL.createObjectURL", "createObjectURL()") }}.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [Using
-object URLs to display images](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images).
+See [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
 ## Specifications
 
@@ -52,8 +56,6 @@ object URLs to display images](/en-US/docs/Web/API/File/Using_files_from_web_app
 
 ## See also
 
-- [Using files
-  from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
-- [Using
-  object URLs to display images](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
+- [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.createObjectURL()") }}

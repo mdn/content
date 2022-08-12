@@ -20,9 +20,9 @@ The `nth-col` pseudo-class is specified with a single argument, which represents
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-### Formal syntax
-
-{{csssyntax}}
+```
+:nth-col
+```
 
 ## Examples
 

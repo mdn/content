@@ -41,6 +41,16 @@ After getting familiar with the basics of JavaScript, you should be in a positio
 
 ## Modules
 
+> **Callout:**
+>
+> **Our policy on modern JavaScript**
+>
+> JavaScript is an actively evolving language and has changed greatly over the years. In particular, the 6th edition of the language (sometimes known as ECMAScript 2015 or ES6), introduced in 2015, added many new features. At the same time, to maintain backwards compatibility with older websites, old features of the language have been retained, even when they are no longer considered good practice.
+>
+> We think that the features added to JavaScript in ECMAScript 2015 and subsequent versions enable developers to write more readable, reliable, and expressive code, and that it's important to learn about them.
+>
+> The features we teach in this course are stable and have been supported by all major browsers for several years. You're only likely to have trouble using them in obsolete browsers, in particular Internet Explorer. If you do need to support obsolete browsers, we recommend using a tool like [Babel](https://babeljs.io/), which enables you to write modern JavaScript but have it run in browsers that don't support it.
+
 This topic contains the following modules, in a suggested order for working through them.
 
 - [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps)
@@ -63,6 +73,6 @@ This topic contains the following modules, in a suggested order for working thro
 - [JavaScript on MDN](/en-US/docs/Web/JavaScript)
   - : The main entry point for core JavaScript documentation on MDN — this is where you'll find extensive reference docs on all aspects of the JavaScript language, and some advanced tutorials aimed at experienced JavaScripters.
 - [Learn JavaScript](https://learnjavascript.online/)
-  - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
+  - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free.
 - [Coding math](https://www.youtube.com/user/codingmath)
   - : An excellent series of video tutorials to teach the math you need to understand to be an effective programmer, by [Keith Peters](https://twitter.com/bit101).

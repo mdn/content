@@ -1,6 +1,7 @@
 ---
 title: 'Animation: remove event'
 slug: Web/API/Animation/remove_event
+page-type: web-api-event
 tags:
   - API
   - Reference
@@ -16,8 +17,8 @@ The **`remove`** event of the {{domxref("Animation")}} interface fires when the 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('remove', event => { })
-onremove = event => { }
+addEventListener('remove', (event) => { })
+onremove = (event) => { }
 ```
 
 ## Event type
@@ -42,9 +43,9 @@ In our simple [replace indefinite animations demo](https://mdn.github.io/dom-exa
 ```js
 const divElem = document.querySelector('div');
 
-document.body.addEventListener('mousemove', evt => {
+document.body.addEventListener('mousemove', (evt) => {
   let anim = divElem.animate(
-    { transform: `translate(${ evt.clientX}px, ${evt.clientY}px)` },
+    { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
     { duration: 500, fill: 'forwards' }
   );
 
@@ -52,7 +53,7 @@ document.body.addEventListener('mousemove', evt => {
 
   //anim.persist()
 
-  anim.onremove = event => { console.log('Animation removed');}
+  anim.onremove = (event) => { console.log('Animation removed');}
 
   console.log(anim.replaceState);
 });

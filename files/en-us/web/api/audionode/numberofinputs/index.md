@@ -1,6 +1,7 @@
 ---
 title: AudioNode.numberOfInputs
 slug: Web/API/AudioNode/numberOfInputs
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode
@@ -17,17 +18,11 @@ the {{domxref("AudioNode")}} interface returns the number of inputs feeding the
 node. Source nodes are defined as nodes having a `numberOfInputs`
 property with a value of 0.
 
-## Syntax
-
-```js
-var numInputs = audioNode.numberOfInputs;
-```
-
-### Value
+## Value
 
 An integer ≥ 0.
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();
@@ -52,5 +47,4 @@ console.log(audioCtx.destination.numberOfInputs); // 1
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.hash
 slug: Web/API/HTMLAreaElement/hash
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement
@@ -12,20 +13,15 @@ browser-compat: api.HTMLAreaElement.hash
 
 The
 **`HTMLAreaElement.hash`** property returns a
-{{domxref("USVString")}} containing a `'#'` followed by the fragment
+string containing a `'#'` followed by the fragment
 identifier of the URL.
 
 The fragment is not [percent-decoded](/en-US/docs/Glossary/percent-encoding). If the URL does not
 have a fragment identifier, this property contains an empty string, `""`.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.hash;
-// Setter
-area.hash = string;
-```
+A string.
 
 ## Examples
 

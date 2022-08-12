@@ -1,6 +1,7 @@
 ---
 title: History
 slug: Web/API/History
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -22,7 +23,7 @@ _The `History` interface doesn't inherit any property._
 - {{domxref("History.scrollRestoration","scrollRestoration")}}
   - : Allows web applications to explicitly set default scroll restoration behavior on history navigation. This property can be either `auto` or `manual`.
 - {{domxref("History.state","state")}} {{readOnlyInline}}
-  - : Returns an `any` value representing the state at the top of the history stack. This is a way to look at the state without having to wait for a {{event("popstate")}} event.
+  - : Returns an `any` value representing the state at the top of the history stack. This is a way to look at the state without having to wait for a {{domxref("Window/popstate_event", "popstate")}} event.
 
 ## Methods
 

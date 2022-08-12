@@ -22,7 +22,7 @@ ECMAScript 2015 introduces a new data structure to map values to values. A {{jsx
 The following code shows some basic operations with a `Map`. See also the {{jsxref("Map")}} reference page for more examples and the complete API. You can use a {{jsxref("Statements/for...of","for...of")}} loop to return an array of `[key, value]` for each iteration.
 
 ```js
-let sayings = new Map();
+const sayings = new Map();
 sayings.set('dog', 'woof');
 sayings.set('cat', 'meow');
 sayings.set('elephant', 'toot');
@@ -33,8 +33,8 @@ sayings.has('bird'); // false
 sayings.delete('dog');
 sayings.has('dog'); // false
 
-for (let [key, value] of sayings) {
-  console.log(key + ' goes ' + value);
+for (const [key, value] of sayings) {
+  console.log(`${key} goes ${value}`);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -66,7 +66,7 @@ The `WeakMap` API is essentially the same as the `Map` API. However, a `WeakMap`
 
 For more information and example code, see also "Why *Weak*Map?" on the {{jsxref("WeakMap")}} reference page.
 
-One use case of `WeakMap` objects is to store private data for an object, or to hide implementation details. The following example is from Nick Fitzgerald's blog post ["Hiding Implementation Details with ECMAScript 6 WeakMaps"](https://fitzgeraldnick.com/weblog/53/). The private data and methods belong inside the object and are stored in the `privates` `WeakMap` object. Everything exposed on the instance and prototype is public; everything else is inaccessible from the outside world because `privates` is not exported from the module.
+One use case of `WeakMap` objects is to store private data for an object, or to hide implementation details. The following example is from Nick Fitzgerald's blog post ["Hiding Implementation Details with ECMAScript 6 WeakMaps"](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html). The private data and methods belong inside the object and are stored in the `privates` `WeakMap` object. Everything exposed on the instance and prototype is public; everything else is inaccessible from the outside world because `privates` is not exported from the module.
 
 ```js
 const privates = new WeakMap();
@@ -80,7 +80,8 @@ function Public() {
 
 Public.prototype.method = function () {
   const me = privates.get(this);
-  // Do stuff with private data in `me`...
+  // Do stuff with private data in `me`
+  // …
 };
 
 module.exports = Public;
@@ -95,7 +96,7 @@ module.exports = Public;
 The following code shows some basic operations with a `Set`. See also the {{jsxref("Set")}} reference page for more examples and the complete API.
 
 ```js
-let mySet = new Set();
+const mySet = new Set();
 mySet.add(1);
 mySet.add('some text');
 mySet.add('foo');
@@ -104,7 +105,9 @@ mySet.has(1); // true
 mySet.delete('foo');
 mySet.size; // 2
 
-for (let item of mySet) console.log(item);
+for (const item of mySet) {
+  console.log(item);
+}
 // 1
 // "some text"
 ```
@@ -145,7 +148,7 @@ The use cases of `WeakSet` objects are limited. They will not leak memory, so it
 
 ## Key and value equality of Map and Set
 
-Both the key equality of `Map` objects and the value equality of `Set` objects, are based on the "[same-value-zero algorithm](https://tc39.github.io/ecma262/#sec-samevaluezero)":
+Both the key equality of `Map` objects and the value equality of `Set` objects, are based on the "[same-value-zero algorithm](https://tc39.es/ecma262/#sec-samevaluezero)":
 
 - Equality works like the identity comparison operator `===`.
 - `-0` and `+0` are considered equal.

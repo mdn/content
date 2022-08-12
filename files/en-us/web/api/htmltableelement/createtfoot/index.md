@@ -1,6 +1,7 @@
 ---
-title: 'HTMLTableElement: createTFoot()'
+title: HTMLTableElement.createTFoot()
 slug: Web/API/HTMLTableElement/createTFoot
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -25,18 +26,22 @@ method creates it, and then returns it.
 ## Syntax
 
 ```js
-table.createTFoot();
+createTFoot()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 {{domxref("HTMLTableSectionElement")}}
 
-## Example
+## Examples
 
 ```js
 let myfoot = mytable.createTFoot();
-// Now this should be true: myfoot == mytable.tFoot
+// Now this should be true: myfoot === mytable.tFoot
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -24,11 +25,11 @@ The **`AnimationEvent`** interface represents events providing information relat
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} that generated the animation.
+  - : A string containing the value of the {{cssxref("animation-name")}} that generated the animation.
 - {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
-  - : Is a `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `animationstart` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
+  - : A `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `animationstart` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
 - {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMString")}}, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
+  - : A string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Methods
 

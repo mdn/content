@@ -1,6 +1,7 @@
 ---
 title: USBIsochronousInTransferPacket
 slug: Web/API/USBIsochronousInTransferPacket
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -12,20 +13,20 @@ tags:
   - WebUSB API
 browser-compat: api.USBIsochronousInTransferPacket
 ---
-{{securecontext_header}}{{APIRef("WebUSB API")}}
+{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The `USBIsochronousInTransferPacket` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) is part of the response from a call to the `isochronousTransferIn()` method of the `USBDevice` interface. It represents the status of an individual packet from a request to transfer data from the USB device to the USB host over an isochronous endpoint.
 
 ## Constructor
 
-- {{domxref("USBIsochronousInTransferPacket.USBIsochronousInTransferPacket()")}}
+- {{domxref("USBIsochronousInTransferPacket.USBIsochronousInTransferPacket", "USBIsochronousInTransferPacket()")}}
   - : Creates a new `USBIsochronousInTransferPacket` object with the provided `status` and `data` fields.
 
 ## Properties
 
-- {{domxref("USBIsochronousInTransferPacket.data")}}{{readonlyInline}}{{readonlyInline}}
+- {{domxref("USBIsochronousInTransferPacket.data")}} {{readonlyInline}} {{readonlyInline}}
   - : Returns a `DataView` object containing the data received from the USB device in this packet, if any.
-- {{domxref("USBIsochronousInTransferPacket.status")}}{{readonlyInline}}{{readonlyInline}}
+- {{domxref("USBIsochronousInTransferPacket.status")}} {{readonlyInline}} {{readonlyInline}}
 
   - : Returns the status of the transfer request, one of:
 

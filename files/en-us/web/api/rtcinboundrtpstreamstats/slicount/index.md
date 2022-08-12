@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.sliCount
 slug: Web/API/RTCInboundRtpStreamStats/sliCount
+page-type: web-api-instance-property
 tags:
   - API
   - Corruption
@@ -36,13 +37,7 @@ In general, what's usually of interest is that the higher this number is, the mo
 stream data is becoming corrupted between the sender and the receiver, requiring resends
 or dropping frames.
 
-## Syntax
-
-```js
-var sliCount = rtcInboundRtpStreamStats.sliCount;
-```
-
-### Value
+## Value
 
 An unsigned integer indicating the number of SLI packets this receiver sent to the
 remote sender due to lost runs of macroblocks. A high value of `sliCount` may
@@ -63,6 +58,6 @@ This is a very technical part of how video codecs work. For details, see {{RFC(4
 
 ## See also
 
-- {{RFC(4585, "6.3.2")}}: Definition of "Slice Loss Indication" in the document
+- {{RFC(4585, "", "6.3.2")}}: Definition of "Slice Loss Indication" in the document
   _Extended RTP Profile for Real-time Transport Control Protocol (RTCP)-Based
   Feedback (RTP/AVPF)_.

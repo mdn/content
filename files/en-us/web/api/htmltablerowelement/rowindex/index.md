@@ -1,6 +1,7 @@
 ---
 title: HTMLTableRowElement.rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -20,17 +21,11 @@ table in the right order. Therefore the rows count from `<thead>` to
 `<tbody>`, from `<tbody>` to
 `<tfoot>`.
 
-## Syntax
-
-```js
-var index = HTMLTableRowElement.rowIndex
-```
-
-### Value
+## Value
 
 Returns the index of the row, or `-1` if the row is not part of a table.
 
-## Example
+## Examples
 
 This example uses JavaScript to label all the row numbers in a table.
 
@@ -66,7 +61,7 @@ rows.forEach((row) => {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Browser compatibility
 

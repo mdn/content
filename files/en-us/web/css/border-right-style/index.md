@@ -36,6 +36,7 @@ border-right-style: outset;
 border-right-style: inherit;
 border-right-style: initial;
 border-right-style: revert;
+border-right-style: revert-layer;
 border-right-style: unset;
 ```
 

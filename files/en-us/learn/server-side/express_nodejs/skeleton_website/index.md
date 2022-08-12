@@ -23,17 +23,14 @@ This second article in our [Express Tutorial](/en-US/docs/Learn/Server-side/Expr
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
-          >Set up a Node development environment</a
-        >. Review the Express Tutorial.
+        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Set up a Node development environment</a>.
+          Review the Express Tutorial.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To be able to start your own new website projects using the
-        <em>Express Application Generator</em>.
+        To be able to start your own new website projects using the <em>Express Application Generator</em>.
       </td>
     </tr>
   </tbody>
@@ -73,7 +70,7 @@ The generator has a number of options, which you can view on the command line us
     -H, --hogan          add hogan.js engine support
     -v, --view <engine>  add view <engine> support (dust|ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
         --no-view        use static html instead of view engine
-    -c, --css <engine>   add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)
+    -c, --css <engine>   add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain CSS)
         --git            add .gitignore
     -f, --force          force on non-empty directory
     -h, --help           output usage information
@@ -91,7 +88,7 @@ You can also choose a view (template) engine using `--view` and/or a CSS generat
 
 ### What view engine should I use?
 
-The _Express Application Generator_ allows you to configure a number of popular view/templating engines, including [EJS](https://www.npmjs.com/package/ejs), [Hbs](https://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), and [Vash](https://www.npmjs.com/package/vash), although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages [out of the box](https://github.com/expressjs/express/wiki#template-engines).
+The _Express Application Generator_ allows you to configure a number of popular view/templating engines, including [EJS](https://www.npmjs.com/package/ejs), [Hbs](https://github.com/pillarjs/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), and [Vash](https://www.npmjs.com/package/vash), although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages [out of the box](https://github.com/expressjs/express/wiki#template-engines).
 
 > **Note:** If you want to use a template engine that isn't supported by the generator then see [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) and the documentation for your target view engine.
 
@@ -376,7 +373,7 @@ The file **/bin/www** is the application entry point! The very first thing this 
  * Module dependencies.
  */
 
-var app = require('../app');
+const app = require('../app');
 ```
 
 > **Note:** `require()` is a global node function that is used to import modules into the current file. Here we specify **app.js** module using a relative path and omitting the optional (.**js**) file extension.
@@ -388,9 +385,9 @@ The remainder of the code in this file sets up a node HTTP server with `app` set
 This file creates an `express` application object (named `app`, by convention), sets up the application with various settings and middleware, and then exports the app from the module. The code below shows just the parts of the file that create and export the app object:
 
 ```js
-var express = require('express');
-var app = express();
-...
+const express = require('express');
+const app = express();
+// …
 module.exports = app;
 ```
 
@@ -399,18 +396,18 @@ Back in the **www** entry point file above, it is this `module.exports` object t
 Let's work through the **app.js** file in detail. First, we import some useful node libraries into the file using `require()`, including _http-errors_, *express*, *morgan* and _cookie-parser_ that we previously downloaded for our application using NPM; and _path_, which is a core Node library for parsing file and directory paths.
 
 ```js
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 ```
 
 Then we `require()` modules from our routes directory. These modules/files contain code for handling particular sets of related "routes" (URL paths). When we extend the skeleton application, for example to list all books in the library, we will add a new file for dealing with book-related routes.
 
 ```js
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 ```
 
 > **Note:** At this point, we have just _imported_ the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
@@ -418,15 +415,16 @@ var usersRouter = require('./routes/users');
 Next, we create the `app` object using our imported _express_ module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First, we set the '`views`' value to specify the folder where the templates will be stored (in this case the subfolder **/views**). Then we set the '`view engine`' value to specify the template library (in this case "pug").
 
 ```js
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 ```
 
-The next set of functions call `app.use()` to add the _middleware_ libraries into the request handling chain.
-In addition to the 3rd party libraries we imported previously, we use the `express.static` middleware to get _Express_ to serve all the static files in the **/public** directory in the project root.
+The next set of functions call `app.use()` to add the _middleware_ libraries that we imported above into the request handling chain.
+For example, `express.json()` and `express.urlencoded()` are needed to populate [`req.body`](https://expressjs.com/en/api.html#req.body) with the form fields.
+After these libraries we also use the `express.static` middleware, which makes _Express_ serve all the static files in the **/public** directory in the project root.
 
 ```js
 app.use(logger('dev'));
@@ -451,12 +449,12 @@ The last middleware in the file adds handler methods for errors and HTTP 404 res
 
 ```js
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -480,11 +478,11 @@ First, it loads the _express_ module and uses it to get an `express.Router` obje
 Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into **app.js**).
 
 ```js
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
   res.send('respond with a resource');
 });
 
@@ -503,14 +501,14 @@ The views (templates) are stored in the **/views** directory (as specified in **
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
   res.render('index', { title: 'Express' });
 });
 ```
 
 The corresponding template for the above route is given below (**index.pug**). We'll talk more about the syntax later. All you need to know for now is that the `title` variable (with value `'Express'`) is inserted where specified in the template.
 
-```plain
+```pug
 extends layout
 
 block content

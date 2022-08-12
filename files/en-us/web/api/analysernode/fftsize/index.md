@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.fftSize
 slug: Web/API/AnalyserNode/fftSize
+page-type: web-api-instance-property
 tags:
   - API
   - AnalyserNode
@@ -14,14 +15,7 @@ browser-compat: api.AnalyserNode.fftSize
 
 The **`fftSize`** property of the {{domxref("AnalyserNode")}} interface is an unsigned long value and represents the window size in samples that is used when performing a [Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) (FFT) to get frequency domain data.
 
-## Syntax
-
-```js
-var curValue = analyserNode.fftSize;
-analyserNode.fftSize = newValue;
-```
-
-### Value
+## Value
 
 An unsigned integer, representing the window size of the FFT, given in number of samples. A higher value will result in more details in the frequency domain but fewer details in the time domain.
 
@@ -32,59 +26,58 @@ Must be a power of 2 between 2^5 and 2^15, so one of: `32`, `64`, `128`, `256`, 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if the value set is not a power of 2, or is outside the allowed range.
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
 
-  ...
+// …
 
 analyser.fftSize = 2048;
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
+const bufferLength = analyser.frequencyBinCount;
+const dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
 
 // draw an oscilloscope of the current audio source
 
 function draw() {
 
-      drawVisual = requestAnimationFrame(draw);
+  drawVisual = requestAnimationFrame(draw);
 
-      analyser.getByteTimeDomainData(dataArray);
+  analyser.getByteTimeDomainData(dataArray);
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.fillStyle = "rgb(200, 200, 200)";
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+  canvasCtx.lineWidth = 2;
+  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 
-      canvasCtx.beginPath();
+  canvasCtx.beginPath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+  const sliceWidth = (WIDTH * 1.0) / bufferLength;
+  let x = 0;
 
-      for(var i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
+    const v = dataArray[i] / 128.0;
+    const y = (v * HEIGHT) / 2;
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+    if (i === 0) {
+      canvasCtx.moveTo(x, y);
+    } else {
+      canvasCtx.lineTo(x, y);
+    }
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
+    x += sliceWidth;
+  }
 
-        x += sliceWidth;
-      }
+  canvasCtx.lineTo(canvas.width, canvas.height / 2);
+  canvasCtx.stroke();
+}
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
-
-    draw();
+draw();
 ```
 
 ## Specifications

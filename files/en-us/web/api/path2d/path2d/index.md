@@ -1,6 +1,7 @@
 ---
 title: Path2D()
 slug: Web/API/Path2D/Path2D
+page-type: web-api-constructor
 tags:
   - API
   - Canvas
@@ -21,9 +22,9 @@ copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/
 ## Syntax
 
 ```js
-new Path2D();
-new Path2D(path);
-new Path2D(d);
+new Path2D()
+new Path2D(path)
+new Path2D(d)
 ```
 
 ### Parameters

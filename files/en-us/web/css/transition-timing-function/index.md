@@ -52,6 +52,7 @@ transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 transition-timing-function: inherit;
 transition-timing-function: initial;
 transition-timing-function: revert;
+transition-timing-function: revert-layer;
 transition-timing-function: unset;
 ```
 
@@ -151,13 +152,13 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ```js hidden
 function updateTransition() {
-  var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  const els = document.querySelectorAll(".parent > div[class]");
+  for (let i = 0; i < els.length; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+const intervalID = setInterval(updateTransition, 10000);
 ```
 
 ```css
@@ -221,13 +222,13 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 ```js hidden
 function updateTransition() {
-  var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  const els = document.querySelectorAll(".parent > div[class]");
+  for (let i = 0; i < els.length; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+const intervalID = setInterval(updateTransition, 10000);
 ```
 
 ```css

@@ -15,7 +15,7 @@ Why a re-introduction? Because [JavaScript](/en-US/docs/Glossary/JavaScript) is 
 
 It's useful to start with an overview of the language's history. JavaScript was created in 1995 by Brendan Eich while he was an engineer at Netscape. JavaScript was first released with Netscape 2 early in 1996. It was originally going to be called LiveScript, but it was renamed in an ill-fated marketing decision that attempted to capitalize on the popularity of Sun Microsystem's Java language — despite the two having very little in common. This has been a source of confusion ever since.
 
-Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to [Ecma International](https://www.ecma-international.org/), a European standards organization, which resulted in the first edition of the [ECMAScript](/en-US/docs/Glossary/ECMAScript) standard that year. The standard received a significant update as [ECMAScript edition 3](https://www.ecma-international.org/publications/standards/Ecma-262.htm) in 1999, and it has stayed pretty much stable ever since. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December of 2009, and for the 6th major edition of the standard, published in June of 2015.
+Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to [Ecma International](https://www.ecma-international.org/), a European standards organization, which resulted in the first edition of the [ECMAScript](/en-US/docs/Glossary/ECMAScript) standard that year. The standard received a significant update as ECMAScript edition 3 in 1999. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December 2009, and for the 6th major edition of the standard, published in June 2015. Since then a yearly edition has been published. For example, the [13th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) was published in June 2022.
 
 > **Note:** Because it is more familiar, we will refer to ECMAScript as "JavaScript" from this point on.
 
@@ -35,7 +35,7 @@ Let's start off by looking at the building blocks of any language: the types. Ja
 - [Object](/en-US/docs/Web/JavaScript/Data_structures#objects)
 - [Symbol](/en-US/docs/Web/JavaScript/Data_structures#symbol_type) (new in ES2015)
 
-... oh, and [undefined](/en-US/docs/Web/JavaScript/Data_structures#undefined_type) and [null](/en-US/docs/Web/JavaScript/Data_structures#null_type), which are ... slightly odd. And {{jsxref("Array")}}, which is a special kind of object. And {{jsxref("Date")}} and {{jsxref("RegExp")}}, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:
+In addition, there is also [undefined](/en-US/docs/Web/JavaScript/Data_structures#undefined_type) and [null](/en-US/docs/Web/JavaScript/Data_structures#null_type), which are slightly odd. And {{jsxref("Array")}}, which is a special kind of object. And {{jsxref("Date")}} and {{jsxref("RegExp")}}, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:
 
 - [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type)
 - [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type)
@@ -79,7 +79,7 @@ The standard [arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operato
 
 ```js
 Math.sin(3.5);
-var circumference = 2 * Math.PI * r;
+const circumference = 2 * Math.PI * r;
 ```
 
 You can convert a string to an integer using the built-in {{jsxref("Global_Objects/parseInt", "parseInt()")}} function. This takes the base for the conversion as an optional second argument, which you should always provide:
@@ -188,7 +188,7 @@ There's our first brush with JavaScript objects! Did we mention that you can use
 
 ## Other types
 
-JavaScript distinguishes between {{jsxref("null")}}, which is a value that indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which is a value of type `undefined` that indicates an uninitialized variable — that is, a value hasn't even been assigned yet. We'll talk about variables later, but in JavaScript it is possible to declare a variable without assigning a value to it. If you do this, the variable's type is `undefined`. `undefined` is actually a constant.
+JavaScript distinguishes between [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), which is a value that indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which is a value of type `undefined` that indicates an uninitialized variable — that is, a value hasn't even been assigned yet. We'll talk about variables later, but in JavaScript it is possible to declare a variable without assigning a value to it. If you do this, the variable's type is `undefined`. `undefined` is actually a constant.
 
 JavaScript has a boolean type, with possible values `true` and `false` (both of which are keywords.) Any value can be converted to a boolean according to the following rules:
 
@@ -236,7 +236,7 @@ const Pi = 3.14; // variable Pi is set
 Pi = 1; // will throw an error because you cannot change a constant variable.
 ```
 
-**`var`** is the most common declarative keyword. It does not have the restrictions that the other two keywords have. This is because it was traditionally the only way to declare a variable in JavaScript. A variable declared with the **`var`** keyword is available from the _function_ it is declared in.
+**`var`** does not have the restrictions that the other two keywords have. This is because it was traditionally the only way to declare a variable in JavaScript. A variable declared with the **`var`** keyword is available from the _function_ it is declared in.
 
 ```js
 var a;
@@ -261,7 +261,7 @@ An important difference between JavaScript and other languages like Java is that
 
 ## Operators
 
-JavaScript's numeric operators are `+`, `-`, `*`, `/` and `%` which is the remainder operator ([which is the same as modulo](/en-US/docs/Web/JavaScript/Reference/Operators#remainder_%28%29).) Values are assigned using `=`, and there are also compound assignment statements such as `+=` and `-=`. These extend out to `x = x operator y`.
+JavaScript's numeric operators are `+`, `-`, `*`, `/` and `%` which is the [remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder). Values are assigned using `=`, and there are also compound assignment statements such as `+=` and `-=`. These extend out to `x = x operator y`.
 
 ```js
 x += 5;
@@ -308,7 +308,7 @@ JavaScript also has [bitwise operations](/en-US/docs/Web/JavaScript/Reference/Op
 JavaScript has a similar set of control structures to other languages in the C family. Conditional statements are supported by `if` and `else`; you can chain them together if you like:
 
 ```js
-var name = 'kittens';
+let name = 'kittens';
 if (name === 'puppies') {
   name += ' woof';
 } else if (name === 'kittens') {
@@ -326,7 +326,7 @@ while (true) {
   // an infinite loop!
 }
 
-var input;
+let input;
 do {
   input = get_input();
 } while (inputIsNotValid(input));
@@ -335,7 +335,7 @@ do {
 JavaScript's [`for` loop](/en-US/docs/Web/JavaScript/Reference/Statements/for) is the same as that in C and Java: it lets you provide the control information for your loop on a single line.
 
 ```js
-for (var i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
   // Will execute 5 times
 }
 ```
@@ -343,7 +343,7 @@ for (var i = 0; i < 5; i++) {
 JavaScript also contains two other prominent for loops: [`for`...`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
-for (let value of array) {
+for (const value of array) {
   // do something with value
 }
 ```
@@ -351,7 +351,7 @@ for (let value of array) {
 and [`for`...`in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in):
 
 ```js
-for (let property in object) {
+for (const property in object) {
   // do something with object property
 }
 ```
@@ -359,19 +359,19 @@ for (let property in object) {
 The `&&` and `||` operators use short-circuit logic, which means whether they will execute their second operand is dependent on the first. This is useful for checking for null objects before accessing their attributes:
 
 ```js
-var name = o && o.getName();
+const name = o && o.getName();
 ```
 
 Or for caching values (when falsy values are invalid):
 
 ```js
-var name = cachedName || (cachedName = getName());
+const name = cachedName || (cachedName = getName());
 ```
 
 JavaScript has a ternary operator for conditional expressions:
 
 ```js
-var allowed = (age > 18) ? 'yes' : 'no';
+const allowed = (age > 18) ? 'yes' : 'no';
 ```
 
 The `switch` statement can be used for multiple branches based on a number or string:
@@ -424,20 +424,20 @@ JavaScript objects can be thought of as simple collections of name-value pairs. 
 - HashMaps in Java.
 - Associative arrays in PHP.
 
-The fact that this data structure is so widely used is a testament to its versatility. Since everything (bar core types) in JavaScript is an object, any JavaScript program naturally involves a great deal of hash table lookups. It's a good thing they're so fast!
+The fact that this data structure is so widely used is a testament to its versatility. Since everything (except for core types) in JavaScript is an object, any JavaScript program naturally involves plenty of hash table lookups. It's a good thing they're so fast!
 
 The "name" part is a JavaScript string, while the value can be any JavaScript value — including more objects. This allows you to build data structures of arbitrary complexity.
 
 There are two basic ways to create an empty object:
 
 ```js
-var obj = new Object();
+const obj = new Object();
 ```
 
 And:
 
 ```js
-var obj = {};
+const obj = {};
 ```
 
 These are semantically equivalent; the second is called object literal syntax and is more convenient. This syntax is also the core of JSON format and should be preferred at all times.
@@ -445,7 +445,7 @@ These are semantically equivalent; the second is called object literal syntax an
 Object literal syntax can be used to initialize an object in its entirety:
 
 ```js
-var obj = {
+const obj = {
   name: 'Carrot',
   _for: 'Max', // 'for' is a reserved word, use '_for' instead.
   details: {
@@ -471,7 +471,7 @@ function Person(name, age) {
 }
 
 // Define an object
-var you = new Person('You', 24);
+const you = new Person('You', 24);
 // We are creating a new person named "You" aged 24.
 ```
 
@@ -480,17 +480,17 @@ var you = new Person('You', 24);
 ```js
 // dot notation
 obj.name = 'Simon';
-var name = obj.name;
+const name = obj.name;
 ```
 
-And...
+And:
 
 ```js
 // bracket notation
 obj['name'] = 'Simon';
-var name = obj['name'];
+const name = obj['name'];
 // can use a variable to define a key
-var user = prompt('what is your key?')
+const user = prompt('what is your key?')
 obj[user] = prompt('what is its value?')
 ```
 
@@ -505,7 +505,7 @@ obj['for'] = 'Simon'; // works fine
 
 For more on objects and prototypes see [Object.prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object). For an explanation of object prototypes and the object prototype chains see [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-> **Note:** Starting in ECMAScript 2015, object keys can be defined by the variable using bracket notation upon being created. `{[phoneType]: 12345}` is possible instead of just `var userPhone = {}; userPhone[phoneType] = 12345`.
+> **Note:** Starting in ECMAScript 2015, object keys can be defined by the variable using bracket notation upon being created. `{[phoneType]: 12345}` is possible instead of just `const userPhone = {}; userPhone[phoneType] = 12345`.
 
 ## Arrays
 
@@ -514,7 +514,7 @@ Arrays in JavaScript are actually a special type of object. They work very much 
 One way of creating arrays is as follows:
 
 ```js
-var a = new Array();
+const a = new Array();
 a[0] = 'dog';
 a[1] = 'cat';
 a[2] = 'hen';
@@ -524,14 +524,14 @@ a.length; // 3
 A more convenient notation is to use an array literal:
 
 ```js
-var a = ['dog', 'cat', 'hen'];
+const a = ['dog', 'cat', 'hen'];
 a.length; // 3
 ```
 
 Note that `array.length` isn't necessarily the number of items in the array. Consider the following:
 
 ```js
-var a = ['dog', 'cat', 'hen'];
+const a = ['dog', 'cat', 'hen'];
 a[100] = 'fox';
 a.length; // 101
 ```
@@ -547,7 +547,7 @@ typeof a[90]; // undefined
 If you take the above about `[]` and `length` into account, you can iterate over an array using the following `for` loop:
 
 ```js
-for (var i = 0; i < a.length; i++) {
+for (let i = 0; i < a.length; i++) {
   // Do something with a[i]
 }
 ```
@@ -578,20 +578,20 @@ a.push(item);
 
 Arrays come with a number of methods. See also the [full documentation for array methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
-| Method name                                          | Description                                                                       |
-| ---------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `a.toString()`                                       | Returns a string with the `toString()` of each element separated by commas.       |
-| `a.toLocaleString()`                                 | Returns a string with the `toLocaleString()` of each element separated by commas. |
-| `a.concat(item1[, item2[, ...[, itemN]]])`           | Returns a new array with the items added on to it.                                |
-| `a.join(sep)`                                        | Converts the array to a string — with values delimited by the `sep` param         |
-| `a.pop()`                                            | Removes and returns the last item.                                                |
-| `a.push(item1, ..., itemN)`                          | Appends items to the end of the array.                                            |
-| `a.shift()`                                          | Removes and returns the first item.                                               |
-| `a.unshift(item1[, item2[, ...[, itemN]]])`          | Prepends items to the start of the array.                                         |
-| `a.slice(start[, end])`                              | Returns a sub-array.                                                              |
-| `a.sort([cmpfn])`                                    | Takes an optional comparison function.                                            |
-| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | Lets you modify an array by deleting a section and replacing it with more items.  |
-| `a.reverse()`                                        | Reverses the array.                                                               |
+| Method name                                        | Description                                                                       |
+|----------------------------------------------------| --------------------------------------------------------------------------------- |
+| `a.toString()`                                     | Returns a string with the `toString()` of each element separated by commas.       |
+| `a.toLocaleString()`                               | Returns a string with the `toLocaleString()` of each element separated by commas. |
+| `a.concat(item1, /* … ,*/ itemN)`                  | Returns a new array with the items added on to it.                                |
+| `a.join(sep)`                                      | Converts the array to a string — with values delimited by the `sep` param         |
+| `a.pop()`                                          | Removes and returns the last item.                                                |
+| `a.push(item1, /* … ,*/ itemN)`                    | Appends items to the end of the array.                                            |
+| `a.shift()`                                        | Removes and returns the first item.                                               |
+| `a.unshift(item1, /* … ,*/ itemN)`                 | Prepends items to the start of the array.                                         |
+| `a.slice(start[, end])`                            | Returns a sub-array.                                                              |
+| `a.sort([cmpfn])`                                  | Takes an optional comparison function.                                            |
+| `a.splice(start, delcount[, item1, /* … ,*/ itemN])` | Lets you modify an array by deleting a section and replacing it with more items.  |
+| `a.reverse()`                                      | Reverses the array.                                                               |
 
 ## Functions
 
@@ -726,8 +726,8 @@ function countChars(elm) {
   if (elm.nodeType == 3) { // TEXT_NODE
     return elm.nodeValue.length;
   }
-  var count = 0;
-  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+  let count = 0;
+  for (let i = 0, child; child = elm.childNodes[i]; i++) {
     count += countChars(child);
   }
   return count;
@@ -737,12 +737,12 @@ function countChars(elm) {
 This highlights a potential problem with anonymous functions: how do you call them recursively if they don't have a name? JavaScript lets you name function expressions for this. You can use named [IIFEs (Immediately Invoked Function Expressions)](/en-US/docs/Glossary/IIFE) as shown below:
 
 ```js
-var charsInBody = (function counter(elm) {
+const charsInBody = (function counter(elm) {
   if (elm.nodeType == 3) { // TEXT_NODE
     return elm.nodeValue.length;
   }
-  var count = 0;
-  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+  let count = 0;
+  for (let i = 0, child; child = elm.childNodes[i]; i++) {
     count += counter(child);
   }
   return count;
@@ -756,7 +756,7 @@ Note that JavaScript functions are themselves objects — like everything else i
 ## Custom objects
 
 > **Note:** The content in this section does not cover modern JavaScript features, including support for [Classes](/en-US/docs/Web/JavaScript/Reference/Classes).
-> For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Details of the object model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+> For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 In classic object-oriented programming, objects are collections of data and methods that operate on that data.
 JavaScript uses functions as classes.
@@ -772,13 +772,13 @@ function makePerson(first, last) {
   };
 }
 function personFullName(person) {
-  return person.first + ' ' + person.last;
+  return `${person.first} ${person.last}`;
 }
 function personFullNameReversed(person) {
-  return person.last + ', ' + person.first;
+  return `${person.last}, ${person.first}`;
 }
 
-var s = makePerson('Simon', 'Willison');
+const s = makePerson('Simon', 'Willison');
 personFullName(s); // "Simon Willison"
 personFullNameReversed(s); // "Willison, Simon"
 ```
@@ -790,16 +790,16 @@ function makePerson(first, last) {
   return {
     first: first,
     last: last,
-    fullName: function() {
-      return this.first + ' ' + this.last;
+    fullName() {
+      return `${this.first} ${this.last}`;
     },
-    fullNameReversed: function() {
-      return this.last + ', ' + this.first;
+    fullNameReversed() {
+      return `${this.last}, ${this.first}`;
     }
   };
 }
 
-var s = makePerson('Simon', 'Willison');
+const s = makePerson('Simon', 'Willison');
 s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // "Willison, Simon"
 ```
@@ -809,8 +809,8 @@ Note on the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) keywor
 Note that `this` is a frequent cause of mistakes. For example:
 
 ```js
-var s = makePerson('Simon', 'Willison');
-var fullName = s.fullName;
+const s = makePerson('Simon', 'Willison');
+const fullName = s.fullName;
 fullName(); // undefined undefined
 ```
 
@@ -823,13 +823,13 @@ function Person(first, last) {
   this.first = first;
   this.last = last;
   this.fullName = function() {
-    return this.first + ' ' + this.last;
+    return `${this.first} ${this.last}`;
   };
   this.fullNameReversed = function() {
-    return this.last + ', ' + this.first;
+    return `${this.last}, ${this.first}`;
   };
 }
-var s = new Person('Simon', 'Willison');
+const s = new Person('Simon', 'Willison');
 ```
 
 We have introduced another keyword: [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). `new` is strongly related to `this`. It creates a brand new empty object, and then calls the function specified, with `this` set to that new object. Notice though that the function specified with `this` does not return a value but merely modifies the `this` object. It's `new` that returns the `this` object to the calling site. Functions that are designed to be called by `new` are called constructor functions. Common practice is to capitalize these functions as a reminder to call them with `new`.
@@ -840,10 +840,10 @@ Our person objects are getting better, but there are still some ugly edges to th
 
 ```js
 function personFullName() {
-  return this.first + ' ' + this.last;
+  return `${this.first} ${this.last}`;
 }
 function personFullNameReversed() {
-  return this.last + ', ' + this.first;
+  return `${this.last}, ${this.first}`;
 }
 function Person(first, last) {
   this.first = first;
@@ -861,10 +861,10 @@ function Person(first, last) {
   this.last = last;
 }
 Person.prototype.fullName = function() {
-  return this.first + ' ' + this.last;
+  return `${this.first} ${this.last}`;
 };
 Person.prototype.fullNameReversed = function() {
-  return this.last + ', ' + this.first;
+  return `${this.last}, ${this.first}`;
 };
 ```
 
@@ -873,7 +873,7 @@ Person.prototype.fullNameReversed = function() {
 This is an incredibly powerful tool. JavaScript lets you modify something's prototype at any time in your program, which means you can add extra methods to existing objects at runtime:
 
 ```js
-var s = new Person('Simon', 'Willison');
+const s = new Person('Simon', 'Willison');
 s.firstNameCaps(); // TypeError on line 1: s.firstNameCaps is not a function
 
 Person.prototype.firstNameCaps = function() {
@@ -885,12 +885,12 @@ s.firstNameCaps(); // "SIMON"
 Interestingly, you can also add things to the prototype of built-in JavaScript objects. Let's add a method to `String` that returns that string in reverse:
 
 ```js
-var s = 'Simon';
+const s = 'Simon';
 s.reversed(); // TypeError on line 1: s.reversed is not a function
 
 String.prototype.reversed = function() {
-  var r = '';
-  for (var i = this.length - 1; i >= 0; i--) {
+  let r = '';
+  for (let i = this.length - 1; i >= 0; i--) {
     r += this[i];
   }
   return r;
@@ -908,11 +908,11 @@ Our new method even works on string literals!
 As mentioned before, the prototype forms part of a chain. The root of that chain is `Object.prototype`, whose methods include `toString()` — it is this method that is called when you try to represent an object as a string. This is useful for debugging our `Person` objects:
 
 ```js
-var s = new Person('Simon', 'Willison');
+const s = new Person('Simon', 'Willison');
 s.toString(); // [object Object]
 
 Person.prototype.toString = function() {
-  return '<Person: ' + this.fullName() + '>';
+  return `<Person: ${this.fullName()}>`;
 }
 
 s.toString(); // "<Person: Simon Willison>"
@@ -922,7 +922,7 @@ Remember how `avg.apply()` had a null first argument? We can revisit that now. T
 
 ```js
 function trivialNew(constructor, ...args) {
-  var o = {}; // Create an object
+  const o = {}; // Create an object
   constructor.apply(o, args);
   return o;
 }
@@ -933,13 +933,13 @@ This isn't an exact replica of `new` as it doesn't set up the prototype chain (i
 Calling
 
 ```js
-var bill = trivialNew(Person, 'William', 'Orange');
+const bill = trivialNew(Person, 'William', 'Orange');
 ```
 
 is therefore almost equivalent to
 
 ```js
-var bill = new Person('William', 'Orange');
+const bill = new Person('William', 'Orange');
 ```
 
 `apply()` has a sister function named [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), which again lets you set `this` but takes an expanded argument list as opposed to an array.
@@ -948,7 +948,7 @@ var bill = new Person('William', 'Orange');
 function lastNameCaps() {
   return this.last.toUpperCase();
 }
-var s = new Person('Simon', 'Willison');
+const s = new Person('Simon', 'Willison');
 lastNameCaps.call(s);
 // Is the same as:
 s.lastNameCaps = lastNameCaps;
@@ -961,10 +961,10 @@ JavaScript function declarations are allowed inside other functions. We've seen 
 
 ```js
 function parentFunc() {
-  var a = 1;
+  const a = 1;
 
   function nestedFunc() {
-    var b = 4; // parentFunc can't use this
+    const b = 4; // parentFunc can't use this
     return a + b;
   }
   return nestedFunc(); // 5
@@ -985,8 +985,8 @@ function makeAdder(a) {
     return a + b;
   };
 }
-var add5 = makeAdder(5);
-var add20 = makeAdder(20);
+const add5 = makeAdder(5);
+const add20 = makeAdder(20);
 add5(6); // ?
 add20(7); // ?
 ```

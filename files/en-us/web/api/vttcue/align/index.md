@@ -1,6 +1,7 @@
 ---
 title: VTTCue.align
 slug: Web/API/VTTCue/align
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,16 +14,9 @@ browser-compat: api.VTTCue.align
 
 The **`align`** property of the {{domxref("VTTCue")}} interface represents the alignment of all of the lines of text in the text box.
 
-## Syntax
+## Value
 
-```js
-let align = VTTCue.align;
-VTTCue.align = a;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing one of the following values:
+A string containing one of the following values:
 
 - `"start"`
   - : Start alignment.

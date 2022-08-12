@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 90 that will affe
 
 ### Developer Tools
 
-- The response view now shows a [preview for web fonts](/en-US/docs/Tools/Network_Monitor/request_details#response_tab) ({{bug(872078)}}).
+- The response view now shows a [preview for web fonts](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab) ({{bug(872078)}}).
 
 ### HTML
 
@@ -26,7 +26,7 @@ This article provides information about the changes in Firefox 90 that will affe
 
 ### CSS
 
-- `-webkit-image-set()` has been implemented as an alias of the standard {{cssxref("image/image-set()")}} function ({{bug(1709415)}}).
+- `-webkit-image-set()` has been implemented as an alias of the standard {{cssxref("image/image-set", "image/image-set()")}} function ({{bug(1709415)}}).
 
 ### JavaScript
 

@@ -1,6 +1,7 @@
 ---
 title: MediaQueryList.matches
 slug: Web/API/MediaQueryList/matches
+page-type: web-api-instance-property
 tags:
   - API
   - Adaptive Design
@@ -25,13 +26,7 @@ You can be notified when the value of `matches` changes by watching for the
 {{domxref("MediaQueryList.change_event", "change")}} event to be fired at the
 `MediaQueryList`.
 
-## Syntax
-
-```js
-var matches = <varm>MediaQueryList.matches;
-```
-
-### Value
+## Value
 
 A boolean value that is `true` if the {{DOMxRef("document")}}
 currently matches the media query list; otherwise, it's `false`.
@@ -52,7 +47,7 @@ function addMQListener(mq, callback) {
 }
 
 addMQListener(window.matchMedia("(orientation:landscape)"),
-  event => {
+  (event) => {
     if (event.matches) {
       /* now in landscape orientation */
     } else {
@@ -73,8 +68,7 @@ addMQListener(window.matchMedia("(orientation:landscape)"),
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from
-  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

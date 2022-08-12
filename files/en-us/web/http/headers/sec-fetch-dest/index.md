@@ -65,7 +65,7 @@ Servers should ignore this header if it contains any other value.
 
 ## Directives
 
-> **Note:** These directives correspond to the values returned by {{domxref("Request.destination")}}).
+> **Note:** These directives correspond to the values returned by {{domxref("Request.destination")}}.
 
 - `audio`
   - : The destination is audio data. This might originate from an HTML {{HTMLElement("audio")}} tag.
@@ -86,7 +86,7 @@ Servers should ignore this header if it contains any other value.
 - `image`
   - : The destination is an image. This might originate from an HTML {{HTMLElement("image")}}, SVG {{SVGElement("image")}}, CSS {{cssxref("background-image")}}, CSS {{cssxref("cursor")}}, CSS {{cssxref("list-style-image")}}, etc.
 - `manifest`
-  - : The destination is a manifest. This might originate from an HTML [\<link rel=manifest>](/en-US/docs/Web/HTML/Link_types/manifest)).
+  - : The destination is a manifest. This might originate from an HTML [\<link rel=manifest>](/en-US/docs/Web/HTML/Link_types/manifest).
 - `object`
   - : The destination is an object. This might originate from an HTML {{HTMLElement("object")}} tag.
 - `paintworklet`
@@ -108,7 +108,7 @@ Servers should ignore this header if it contains any other value.
 - `worker`
   - : The destination is a {{domxref("Worker")}}.
 - `xslt`
-  - : The destination is an XLST transform.
+  - : The destination is an XSLT transform.
 
 ## Examples
 

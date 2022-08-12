@@ -1,14 +1,14 @@
 ---
-title: "aria-current"
+title: aria-current
 slug: Web/Accessibility/ARIA/Attributes/aria-current
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-current
+spec-urls: https://w3c.github.io/aria/#aria-current
 ---
-
 A non-null `aria-current` state on an element indicates that this element represents the current item within a container or set of related elements.
 
 ## Description
@@ -19,11 +19,11 @@ In a breadcrumb list, when a link within a set of pagination links is styled to 
 
 The `aria-current` attribute indicates the element on which it is set, to a value other than `false`, represents the current item within a container or set of related elements. Only mark one element in a set of elements as current with `aria-current`.
 
-The `aria-current` attribute accepts a limited list of [values](#Values) including `page`, `step`, `location`, `date`, `time`, `true`, and `false`. Any non-null string value not included in this list of enumerated values is treated as if `aria-current="true"` were set, not the default `false` value. If the attribute is not present, is an empty string, is present with no value, or is set to `aria-current="false"` it is not exposed to the user.
+The `aria-current` attribute accepts a limited list of [values](#values) including `page`, `step`, `location`, `date`, `time`, `true`, and `false`. Any non-null string value not included in this list of enumerated values is treated as if `aria-current="true"` were set, not the default `false` value. If the attribute is not present, is an empty string, is present with no value, or is set to `aria-current="false"` it is not exposed to the user.
 
-When something is selected rather than current, such as a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tablist_role), use [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to indicate the currently-displayed tabpanel.
+When something is selected rather than current, such as a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role), use [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to indicate the currently-displayed tabpanel.
 
-> **Note:** Don't use `aria-current` as a substitute for [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) in [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_role) or [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role).
+> **Note:** Don't use `aria-current` as a substitute for [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) in [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) or [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role).
 
 ## Example
 
@@ -85,17 +85,15 @@ If the element representing the current page in the breadcrumb was not a link, t
 - {{domxref("Element.ariaCurrent")}}
   - : The [`ariaCurrent`](/en-US/docs/Web/API/Element/ariaCurrent) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-current` attribute.
 - {{domxref("ElementInternals.ariaCurrent")}}
-  - : The [`ariaCurrent`](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaCurrent) property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-current` attribute.
+  - : The [`ariaCurrent`](/en-US/docs/Web/API/ElementInternals/ariaCurrent) property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-current` attribute.
 
 ## Associated roles
 
-Usable in all roles; except in for elements with the role of [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_role) and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) where [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) should be used
+Usable in all roles; except in for elements with the role of [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) where [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) should be used
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-current","ARIA: aria-current Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

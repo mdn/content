@@ -1,6 +1,7 @@
 ---
 title: Range.setEndBefore()
 slug: Web/API/Range/setEndBefore
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -18,19 +19,23 @@ a `Range` relative to another {{domxref("Node")}}. The parent
 ## Syntax
 
 ```js
-range.setEndBefore(referenceNode);
+setEndBefore(referenceNode)
 ```
 
 ### Parameters
 
-- _referenceNode_
+- `referenceNode`
   - : The {{domxref("Node")}} to end the `Range` before.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
-var range = document.createRange();
-var referenceNode = document.getElementsByTagName("div").item(0);
+const range = document.createRange();
+const referenceNode = document.getElementsByTagName("div").item(0);
 
 range.setEndBefore(referenceNode);
 ```

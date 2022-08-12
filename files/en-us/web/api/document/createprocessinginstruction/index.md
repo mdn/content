@@ -1,6 +1,7 @@
 ---
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -19,7 +20,7 @@ The new node usually will be inserted into an XML document in order to accomplis
 ## Syntax
 
 ```js
-piNode = document.createProcessingInstruction(target, data)
+createProcessingInstruction(target, data)
 ```
 
 ### Parameters
@@ -27,6 +28,10 @@ piNode = document.createProcessingInstruction(target, data)
 - `piNode` is the resulting {{ domxref("ProcessingInstruction") }} node.
 - `target` is a string containing the first part of the processing instruction (i.e., `<?target … ?>`)
 - `data` is a string containing any information the processing instruction should carry, after the target. The data is up to you, but it can't contain `?>`, since that closes the processing instruction.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -37,11 +42,11 @@ piNode = document.createProcessingInstruction(target, data)
     - The [`target`](#target) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
     - The _closing processing instruction sequence_ (`?>`) is part of the [`data`](#data) value.
 
-## Example
+## Examples
 
 ```js
-var doc = new DOMParser().parseFromString('<foo />', 'application/xml');
-var pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
+const doc = new DOMParser().parseFromString('<foo />', 'application/xml');
+const pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css"');
 
 doc.insertBefore(pi, doc.firstChild);
 

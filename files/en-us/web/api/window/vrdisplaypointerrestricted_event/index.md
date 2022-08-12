@@ -1,11 +1,13 @@
 ---
 title: 'Window: vrdisplaypointerrestricted event'
 slug: Web/API/Window/vrdisplaypointerrestricted_event
+page-type: web-api-event
 tags:
   - Reference
   - Web VR
   - Window
-  - events
+  - Event
+  - Deprecated
   - vrdisplaypointerrestricted
 browser-compat: api.Window.vrdisplaypointerrestricted_event
 ---
@@ -15,47 +17,47 @@ The **`vrdisplaypointerrestricted`** event of the [WebVR API](/en-US/docs/Web/AP
 
 > **Note:** This event was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("VRDisplayEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/Window/onvrdisplaypointerrestricted"
-            >onvrdisplaypointerrestricted</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('vrdisplaypointerrestricted', (event) => { });
+
+onvrdisplaypointerrestricted = (event) => { };
+```
+
+## Event type
+
+An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("VRDisplayEvent")}}
+
+## Event properties
+
+_`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
+
+- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}} {{readonlyInline}}
+  - : The {{domxref("VRDisplay")}} associated with this event.
+- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}} {{readonlyInline}}
+  - : A human-readable reason why the event was fired.
 
 ## Examples
 
 You can use the `vrdisplaypointerrestricted` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplaypointerrestricted', function() {
+window.addEventListener('vrdisplaypointerrestricted', () => {
   // Run code to handle pointer lock
 });
 ```
 
-Or use the [`onvrdisplaypointerrestricted`](/en-US/docs/Web/API/Window/onvrdisplaypointerrestricted) event handler property:
+Or use the `onvrdisplaypointerrestricted` event handler property:
 
 ```js
-window.onvrdisplaypointerrestricted = function() {
+window.onvrdisplaypointerrestricted = () => {
   // Run code to handle pointer lock
 };
 ```
@@ -64,7 +66,7 @@ window.onvrdisplaypointerrestricted = function() {
 
 This event was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR Device API](https://immersive-web.github.io/webxr/), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
+Until all browsers have implemented the new [WebXR Device API](https://immersive-web.github.io/webxr/), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
 ## Browser compatibility
 

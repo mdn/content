@@ -73,7 +73,7 @@ As you work through the tutorial we'll provide the appropriate code snippets for
 
 Instead of copying and pasting all the code snippets, try typing them out, It'll benefit you in the long run as you'll be more familiar with the code next time you come to write something similar.
 
-If you get stuck, you can find the fully developed version of the website [on Github here](https://github.com/mdn/express-locallibrary-tutorial).
+If you get stuck, you can find the fully developed version of the website [on GitHub here](https://github.com/mdn/express-locallibrary-tutorial).
 
 > **Note:** The specific versions of node, Express, and the other modules that this documentation was tested against are listed in the project [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json).
 

@@ -1,6 +1,7 @@
 ---
 title: DataTransferItemList.length
 slug: Web/API/DataTransferItemList/length
+page-type: web-api-instance-property
 tags:
   - API
   - DataTransferItemList
@@ -20,19 +21,13 @@ The read-only **`length`** property of the
 {{domxref("DataTransferItemList")}} interface returns the number of items currently in
 the drag item list.
 
-## Syntax
-
-```js
-length = DataTransferItemList.length;
-```
-
-### Value
+## Value
 
 The number of drag data items in the list, or 0 if the list is empty or disabled. The
 drag item list is considered to be disabled if the item list's
 {{domxref("DataTransfer")}} object is not associated with a drag data store.
 
-## Example
+## Examples
 
 This example shows the use of the `length` property.
 
@@ -43,33 +38,33 @@ function dragstart_handler(ev) {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
-  var dataList = ev.dataTransfer.items;
+  const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
   // Add some other items to the drag payload
-  dataList.add("<p>... paragraph ...</p>", "text/html");
+  dataList.add("<p>Paragraph…</p>", "text/html");
   dataList.add("http://www.example.org","text/uri-list");
 }
 
 function drop_handler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  var data = ev.dataTransfer.items;
+  const data = ev.dataTransfer.items;
   // Loop through the dropped items and log their data
-  for (var i = 0; i < data.length; i++) {
-    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
+  for (let i = 0; i < data.length; i++) {
+    if ((data[i].kind === 'string') && (data[i].type.match('^text/plain'))) {
       // This item is the target node
-      data[i].getAsString(function (s){
+      data[i].getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
+    } else if ((data[i].kind === 'string') && (data[i].type.match('^text/html'))) {
       // Drag data item is HTML
-      data[i].getAsString(function (s){
-        console.log("... Drop: HTML = " + s);
+      data[i].getAsString((s) => {
+        console.log(`… Drop: HTML = ${s}`);
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
+    } else if ((data[i].kind === 'string') && (data[i].type.match('^text/uri-list'))) {
       // Drag data item is URI
-      data[i].getAsString(function (s){
-        console.log("... Drop: URI = " + s);
+      data[i].getAsString((s) => {
+        console.log(`… Drop: URI = ${s}`);
       });
     }
   }
@@ -84,7 +79,7 @@ function dragover_handler(ev) {
 
 function dragend_handler(ev) {
   console.log("dragEnd");
-  var dataList = ev.dataTransfer.items;
+  const dataList = ev.dataTransfer.items;
   // Clear any remaining drag data
   dataList.clear();
 }
@@ -120,7 +115,7 @@ div {
 
 ### Result
 
-{{EmbedLiveSample('Example', 100, 250)}}
+{{EmbedLiveSample('Examples', 100, 250)}}
 
 ## Specifications
 

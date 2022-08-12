@@ -81,19 +81,19 @@ I make the `.wrapper` a grid container.
 
 {{ EmbedLiveSample('The_Grid_container', '200', '330') }}
 
-All the direct children are now grid items. In a web browser, you won't see any difference to how these items are displayed before turning them into a grid, as grid has created a single column grid for the items. At this point, you may find it useful to work with the [Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts), available as part of Firefox's Developer Tools. If you view this example in Firefox and inspect the grid, you will see a small icon next to the value `grid`. Click this and then the grid on this element will be overlaid in the browser window.
+All the direct children are now grid items. In a web browser, you won't see any difference to how these items are displayed before turning them into a grid, as grid has created a single column grid for the items. At this point, you may find it useful to work with the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), available as part of Firefox's Developer Tools. If you view this example in Firefox and inspect the grid, you will see a small icon next to the value `grid`. Click this and then the grid on this element will be overlaid in the browser window.
 
 ![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
 
-As you learn and then work with the CSS Grid Layout this tool will give you a better idea of what is happening with your grids visually.
+As you learn and then work with the CSS Grid Layout, this tool will give you a better idea of what is happening with your grids visually.
 
 If we want to start making this more grid-like we need to add column tracks.
 
 ## Grid tracks
 
-We define rows and columns on our grid with the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties. These define grid tracks. A _grid track_ is the space between any two lines on the grid. In the below image you can see a track highlighted – this is the first row track in our grid.
+We define rows and columns on our grid with the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties. These define grid tracks. A _grid track_ is the space between any two lines on the grid. In the below image you can see a track highlighted – this is the first row track in our grid.
 
-![](1_grid_track.png)
+![A box with 3 grid items. Above the three items is a solid light green area which is the track.](1_grid_track.png)
 
 ### Basic example
 
@@ -351,7 +351,7 @@ In the below example we use `grid-auto-rows` to ensure that tracks created in th
 
 When setting up an explicit grid or defining the sizing for automatically created rows or columns we may want to give tracks a minimum size, but also ensure they expand to fit any content that is added. For example, I may want my rows to never collapse smaller than 100 pixels, but if my content stretches to 300 pixels in height, then I would like the row to stretch to that height.
 
-Grid has a solution for this with the {{cssxref("minmax()", "minmax()")}} function. In this next example I am using `minmax()` in the value of {{cssxref("grid-auto-rows")}}. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of `auto`. Using `auto` means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.
+Grid has a solution for this with the {{cssxref("minmax", "minmax()")}} function. In this next example I am using `minmax()` in the value of {{cssxref("grid-auto-rows")}}. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of `auto`. Using `auto` means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.
 
 ```css
 .wrapper {
@@ -461,7 +461,7 @@ The second item starts on grid column line 1, and spans one track. This is the d
 
 {{ EmbedLiveSample('Positioning_items_against_lines', '230', '450') }}
 
-> **Note:** Don't forget that you can use the [Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
+> **Note:** Don't forget that you can use the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
 
 ### Line-positioning shorthands
 

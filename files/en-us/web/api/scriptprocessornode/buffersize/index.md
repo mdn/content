@@ -1,6 +1,7 @@
 ---
 title: ScriptProcessorNode.bufferSize
 slug: Web/API/ScriptProcessorNode/bufferSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,19 +17,11 @@ The `bufferSize` property of the {{domxref("ScriptProcessorNode")}} interface re
 
 > **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
-console.log(scriptNode.bufferSize);
-```
-
-### Value
+## Value
 
 An integer.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createScriptProcessor()`](/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example) for example code.
 

@@ -1,6 +1,7 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -29,13 +30,7 @@ fit without a need for vertical scrollbar, its `scrollHeight` is equal to
 > **Note:** This property will round the value to an integer. If you need a fractional value, use
 > {{domxref("Element.getBoundingClientRect()")}}.
 
-## Syntax
-
-```js
-elemScrollHeight = element.scrollHeight;
-```
-
-### Value
+## Value
 
 An integer corresponding to the scrollHeight pixel value of the element.
 
@@ -69,7 +64,7 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 
 ### Checking that the user has read a text
 
-Associated with the {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} event, this
+Associated with the {{domxref("Element.scroll_event", "scroll")}} event, this
 equivalence can be useful to determine whether a user has read a text or not (see also
 the {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}}
 properties).
@@ -94,7 +89,7 @@ dictum ipsum aliquet erat eleifend sit amet sollicitudin felis tempus. Aliquam c
 luctus pellentesque placerat. Mauris nisl odio, condimentum sed fringilla a, consectetur id ligula. Praesent sem
 sem, aliquet non faucibus vitae, iaculis nec elit. Nullam volutpat, lectus et blandit bibendum, nulla lorem congue
 turpis, ac pretium tortor sem ut nibh. Donec vel mi in ligula hendrerit sagittis. Donec faucibus viverra fermentum.
-Fusce in arcu arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
+Fusce in arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
 ligula. Vivamus vitae urna mauris, eget euismod nunc. Aenean semper gravida enim non feugiat. In hac habitasse
 platea dictumst. Cras eleifend nisl volutpat ante condimentum convallis. Donec varius dolor malesuada erat
 consequat congue. Donec eu lacus ut sapien venenatis tincidunt. Quisque sit amet tellus et enim bibendum varius et
@@ -147,8 +142,8 @@ function checkReading () {
   checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
 }
 
-onload = function () {
-  var oToBeRead = document.getElementById("rules");
+onload = () => {
+  const oToBeRead = document.getElementById("rules");
   checkReading.noticeBox = document.createElement("span");
   document.registration.accept.checked = false;
   checkReading.noticeBox.id = "notice";
@@ -171,10 +166,7 @@ onload = function () {
 
 ## See also
 
-- [MSDN:
-  Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer
-  9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
+- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("HTMLElement.offsetHeight")}}
-- [Determining
-  the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

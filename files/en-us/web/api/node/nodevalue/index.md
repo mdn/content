@@ -1,6 +1,7 @@
 ---
 title: Node.nodeValue
 slug: Web/API/Node/nodeValue
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -17,7 +18,7 @@ For the document itself, `nodeValue` returns `null`.
 For text, comment, and CDATA nodes, `nodeValue` returns the content of the node.
 For attribute nodes, the value of the attribute is returned.
 
-The following table shows the return values for different elements:
+The following table shows the return values for different types of nodes.
 
 | Node                                 | Value of nodeValue                  |
 | ------------------------------------ | ----------------------------------- |
@@ -47,7 +48,7 @@ and the following script:
 let node = document.getElementsByTagName("body")[0].firstChild;
 let result = "<br/>Node names are:<br/>";
 while (node) {
-  result += "Value of " + node.nodeName + ": " + node.nodeValue + "<br/>";
+  result += `Value of ${node.nodeName}: ${node.nodeValue}<br/>`;
   node = node.nextSibling
 }
 

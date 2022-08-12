@@ -48,7 +48,14 @@ The `symbols` descriptor must be specified when the value of the {{cssxref('@cou
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol>+
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 
@@ -95,5 +102,5 @@ The `symbols` descriptor must be specified when the value of the {{cssxref('@cou
 
 - The `symbols` descriptor is used within the {{cssxref("@counter-style")}} at-rule.
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()")}}, the functional notation creating anonymous counter styles
-- {{cssxref("url()", "url()")}} function
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles
+- {{cssxref("url", "url()")}} function

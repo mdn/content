@@ -18,6 +18,6 @@ Most PRNGs are not cryptographically secure.
 
 ## See also
 
-- {{Interwiki("wikipedia", "Pseudorandom number generator")}} on Wikipedia
+- [Pseudorandom number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) on Wikipedia
 - {{jsxref("Math.random()")}}, a built-in JavaScript PRNG function. Note that this is not a cryptographically secure PRNG.
 - {{domxref("Crypto.getRandomValues()")}}: this is intended to provide cryptographically secure numbers.

@@ -28,9 +28,10 @@ font-variant-alternates: annotation(user-defined-ident);
 font-variant-alternates: swash(ident1) annotation(ident2);
 
 /* Global values */
-font-variant-alternates: initial;
 font-variant-alternates: inherit;
+font-variant-alternates: initial;
 font-variant-alternates: revert;
+font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
 
@@ -76,14 +77,16 @@ This property may take one of two forms:
 
 ## Examples
 
-### HTML
+### Enabling swash glyphs
+
+#### HTML
 
 ```html
 <p>Firefox rocks!</p>
 <p class="variant">Firefox rocks!</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 @font-feature-values "Leitura Display Swashes" {
@@ -100,15 +103,15 @@ p {
 }
 ```
 
-### Result
+#### Result
 
-> **Note:** You need to install the OpenType font _Leitura Display Swashes_ for this example to work. You can find a few free versions for testing purposes, for example from [fontsgeek.com](http://fontsgeek.com/fonts/Leitura-Display-Swashes).
+> **Note:** You need to install the OpenType font _Leitura Display Swashes_ for this example to work. You can find a few free versions for testing purposes, for example from [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes).
 
-{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/font-variant-alternates') }}
+{{ EmbedLiveSample('Enabling swash glyphs') }}
 
 ## Specifications
 
-Not part of any standard.
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -121,3 +124,4 @@ Not part of any standard.
 - {{cssxref("font-variant-east-asian")}}
 - {{cssxref("font-variant-ligatures")}}
 - {{cssxref("font-variant-numeric")}}
+- {{cssxref("@font-feature-values")}}

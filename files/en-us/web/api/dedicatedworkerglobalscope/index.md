@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope
 slug: Web/API/DedicatedWorkerGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - DedicatedWorkerGlobalScope
@@ -35,15 +36,6 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. `WorkerNavigator` is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
 - {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
-
-### Event handlers
-
-_This interface inherits event handlers from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
-
-- {{domxref("DedicatedWorkerGlobalScope.onmessage")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("message")}} event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)
-- {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("messageerror")}} event is raised.
 
 ## Methods
 
@@ -80,10 +72,8 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 
 - [`message`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event)
   - : Fired when the worker receives a message from its parent.
-    Also available via the [`onmessage`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage) property.
 - [`messageerror`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
   - : Fired when a worker receives a message that can't be deserialized.
-    Also available via the [`onmessageerror`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessageerror) property.
 
 ## Specifications
 

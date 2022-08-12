@@ -28,6 +28,7 @@ margin-trim: all;
 margin-trim: inherit;
 margin-trim: initial;
 margin-trim: revert;
+margin-trim: revert-layer;
 margin-trim: unset;
 ```
 
@@ -90,7 +91,7 @@ It is a pain having to write another rule to achieve this, and it is also not ve
 ```css
  article {
   margin-trim: in-flow;
-  ...
+  /* … */
 }
 ```
 

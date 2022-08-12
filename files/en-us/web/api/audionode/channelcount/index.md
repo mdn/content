@@ -1,6 +1,7 @@
 ---
 title: AudioNode.channelCount
 slug: Web/API/AudioNode/channelCount
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode
@@ -20,26 +21,17 @@ The **`channelCount`** property of the {{ domxref("AudioNode") }} interface repr
 - It is used as a maximum value if the `channelCountMode` value is `clamped-max`.
 - It is used as the exact value if the `channelCountMode` value is `explicit`.
 
-## Syntax
-
-```js
-var oscillator = audioCtx.createOscillator();
-var channels = oscillator.channelCount;
-```
-
-### Value
+## Value
 
 An integer.
 
-## Example
+## Examples
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
-var audioCtx = new AudioContext();
-
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+const oscillator = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
 
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);

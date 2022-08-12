@@ -22,11 +22,6 @@ or
 
 ## Features to document
 
-
-
 ## Related Gecko bugs
 
-
-
 ## Other
-

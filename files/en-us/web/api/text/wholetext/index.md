@@ -1,6 +1,7 @@
 ---
 title: Text.wholeText
 slug: Web/API/Text/wholeText
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -19,7 +20,7 @@ This allows specifying any text node and obtaining all adjacent text as a single
 
 ## Value
 
-A {{jsxref("String")}} with the concatenated text.
+A string with the concatenated text.
 
 ## Example
 
@@ -44,7 +45,7 @@ Now you end up with _"Through-hiking is great! However, casting a ballot is tric
 To get those two nodes at once, you would call `para.childNodes[0].wholeText`:
 
 ```js
-console.log( "'" + para.childNodes[0].wholeText + "'" ); // 'Through-hiking is great!   However, '
+console.log(`'${para.childNodes[0].wholeText}'`); // 'Through-hiking is great!   However, '
 ```
 
 ## Specifications

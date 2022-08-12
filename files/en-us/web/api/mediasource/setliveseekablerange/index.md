@@ -1,6 +1,7 @@
 ---
 title: MediaSource.setLiveSeekableRange()
 slug: Web/API/MediaSource/setLiveSeekableRange
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -23,18 +24,18 @@ media element.
 ## Syntax
 
 ```js
-mediaSource.setLiveSeekableRange(start, end)
+setLiveSeekableRange(start, end)
 ```
 
 ### Parameters
 
-- start
+- `start`
   - : The start of the seekable range to set in seconds measured from the beginning of the
     source. If the duration of the media source is positive infinity, then the
     {{domxref("TimeRanges")}} object returned by the
     {{domxref("HTMLMediaElement.seekable")}} property will have a start timestamp no
     greater than this value.
-- end
+- `end`
   - : The end of the seekable range to set in seconds measured from the beginning of the
     source. If the duration of the media source is positive infinity, then the
     {{domxref("TimeRanges")}} object returned by the
@@ -43,9 +44,9 @@ mediaSource.setLiveSeekableRange(start, end)
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
 // TBD

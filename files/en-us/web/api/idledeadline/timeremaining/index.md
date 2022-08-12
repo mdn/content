@@ -1,6 +1,7 @@
 ---
 title: IdleDeadline.timeRemaining()
 slug: Web/API/IdleDeadline/timeRemaining
+page-type: web-api-instance-method
 tags:
   - API
   - Background Tasks API
@@ -27,8 +28,12 @@ should return control to the user agent's event loop.
 ## Syntax
 
 ```js
-timeRemaining = IdleDeadline.timeRemaining();
+timeRemaining()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -39,11 +44,10 @@ idle period. The value is ideally accurate to within about 5 microseconds.
 If the {{domxref("IdleDeadline")}} object's {{domxref("IdleDeadline.didTimeout",
   "didTimeout")}} property is true, this method returns zero.
 
-## Example
+## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
-in the article [Cooperative Scheduling
-of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
+in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## Specifications
 
@@ -55,8 +59,7 @@ of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## See also
 
-- [Collaborative Scheduling of
-  Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
+- [Collaborative Scheduling of Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
 - {{domxref("IdleDeadline")}}
 - {{domxref("Window.requestIdleCallback()")}}
 - {{domxref("Window.cancelIdleCallback()")}}

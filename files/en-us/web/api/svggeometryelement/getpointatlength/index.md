@@ -1,6 +1,7 @@
 ---
 title: SVGGeometryElement.getPointAtLength()
 slug: Web/API/SVGGeometryElement/getPointAtLength
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,7 +21,7 @@ point at a given distance along the path.
 ## Syntax
 
 ```js
-DOMPoint someElement.getPointAtLength(float distance);
+getPointAtLength(distance)
 ```
 
 ### Parameters

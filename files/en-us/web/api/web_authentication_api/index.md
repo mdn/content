@@ -1,6 +1,7 @@
 ---
 title: Web Authentication API
 slug: Web/API/Web_Authentication_API
+page-type: web-api-overview
 tags:
   - 2FA
   - API
@@ -9,6 +10,13 @@ tags:
   - Reference
   - Web Authentication API
   - WebAuthn
+browser-compat:
+  - api.Credential
+  - api.CredentialsContainer
+  - api.PublicKeyCredential
+  - api.AuthenticatorResponse
+  - api.AuthenticatorAttestationResponse
+  - api.AuthenticatorAssertionResponse
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
@@ -16,7 +24,7 @@ The Web Authentication API is an extension of the [Credential Management API](/e
 
 ## Web authentication concepts and usage
 
-The Web Authentication API (also referred to as WebAuthn) uses {{interwiki("wikipedia", "Public-key_cryptography", "asymmetric (public-key) cryptography")}} instead of passwords or SMS texts for registering, authenticating, and {{interwiki("wikipedia", "Multi-factor_authentication", "second-factor authentication")}} with websites. This has some benefits:
+The Web Authentication API (also referred to as WebAuthn) uses [asymmetric (public-ke](https://en.wikipedia.org/wiki/Public-key_cryptography) instead of passwords or SMS texts for registering, authenticating, and [second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) with websites. This has some benefits:
 
 - **Protection against phishing:** An attacker who creates a fake login website can't login as the user because the signature changes with the [origin](/en-US/docs/Glossary/Origin) of the website.
 - **Reduced impact of data breaches:** Developers don't need to hash the public key, and if an attacker gets access to the public key used to verify the authentication, it can't authenticate because it needs the private key.
@@ -59,7 +67,7 @@ After this, the registration steps are:
     2. Ensuring that the origin was the origin expected
     3. Validating that the signature over the clientDataHash and the attestation using the certificate chain for that specific model of the authenticator
 
-    A complete list of validation steps [can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#registering-a-new-credential). Assuming that the checks pan out, the server will store the new public key associated with the user's account for future use -- that is, whenever the user desires to use the public key for authentication.
+    A complete list of validation steps [can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#registering-a-new-credential). Assuming that the checks pan out, the server will store the new public key associated with the user's account for future use — that is, whenever the user desires to use the public key for authentication.
 
 ### Authentication
 
@@ -69,9 +77,9 @@ After a user has registered with web authentication, they can subsequently authe
 
 _Figure 2 - similar to Figure 1, a diagram showing the sequence of actions for a web authentication and the essential data associated with each action._
 
-First (labeled step 0 in the diagram), the application makes the initial registration request. The protocol and format of this request are outside the scope of the Web Authentication API.
+First (labeled step 0 in the diagram), the application makes the initial authentication request. The protocol and format of this request are outside the scope of the Web Authentication API.
 
-After this, the registration steps are:
+After this, the authentication steps are:
 
 1. **Server Sends Challenge** - The server sends a challenge to the JavaScript program. The protocol for communicating with the server is not specified and is outside of the scope of the Web Authentication API. Typically, server communications would be [REST](/en-US/docs/Glossary/REST) over https (probably using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) or [Fetch](/en-US/docs/Web/API/Fetch_API)), but they could also be [SOAP](/en-US/docs/Glossary/SOAP), [RFC 2549](https://datatracker.ietf.org/doc/html/rfc2549) or nearly any other protocol provided that the protocol is secure. The parameters received from the server will be passed to the [get()](/en-US/docs/Web/API/CredentialsContainer/get) call, typically with little or no modification. **Note that it is absolutely critical that the challenge be a buffer of random information (at least 16 bytes) and it MUST be generated on the server in order to ensure the security of the authentication process.**
 2. **Browser Calls authenticatorGetCredential() on Authenticator** - Internally, the browser will validate the parameters and fill in any defaults, which become the {{domxref("AuthenticatorResponse.clientDataJSON")}}. One of the most important parameters is the origin, which recorded as part of the clientData so that the origin can be verified by the server later. The parameters to the get() call are passed to the authenticator, along with a SHA-256 hash of the clientDataJSON (only a hash is sent because the link to the authenticator may be a low-bandwidth NFC or Bluetooth link and the authenticator is just going to sign over the hash to ensure that it isn't tampered with).
@@ -113,7 +121,7 @@ After this, the registration steps are:
 ### Demo sites
 
 - [Mozilla Demo](https://webauthn.bin.coffee/) website and its [source code](https://github.com/jcjones/webauthn.bin.coffee).
-- [Google Demo](https://webauthndemo.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
+- [Google Demo](https://try-webauthn.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
 - [https://webauthn.io/ Demo](https://github.com/duo-labs/webauthn.io) website and its [source code](https://github.com/duo-labs/webauthn.io).
 - [github.com/webauthn-open-source](https://github.com/webauthn-open-source) and its [client source code](https://github.com/webauthn-open-source/webauthn-simple-app) and [server source code](https://github.com/webauthn-open-source/fido2-lib)
 - [OWASP Single Sign-On](https://owasp.org/www-project-sso/)
@@ -124,7 +132,7 @@ After this, the registration steps are:
 
 ```js
 // sample arguments for registration
-var createCredentialDefaultArgs = {
+const createCredentialDefaultArgs = {
     publicKey: {
         // Relying Party (a.k.a. - Service):
         rp: {
@@ -155,7 +163,7 @@ var createCredentialDefaultArgs = {
 };
 
 // sample arguments for login
-var getCredentialDefaultArgs = {
+const getCredentialDefaultArgs = {
     publicKey: {
         timeout: 60000,
         // allowCredentials: [newCredential] // see below
@@ -172,8 +180,8 @@ navigator.credentials.create(createCredentialDefaultArgs)
         console.log("NEW CREDENTIAL", cred);
 
         // normally the credential IDs available for an account would come from a server
-        // but we can just copy them from above...
-        var idList = [{
+        // but we can just copy them from above…
+        const idList = [{
             id: cred.rawId,
             transports: ["usb", "nfc", "ble"],
             type: "public-key"
@@ -191,40 +199,8 @@ navigator.credentials.create(createCredentialDefaultArgs)
 
 ## Specifications
 
-| Specification                                                                                      |
-| -------------------------------------------------------------------------------------------------- |
-| [Web Authentication: An API for accessing Public Key Credentials](https://w3c.github.io/webauthn/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Credential
-
-{{Compat("api.Credential")}}
-
-### CredentialsContainer
-
-{{Compat("api.CredentialsContainer")}}
-
-### PublicKeyCredential
-
-{{Compat("api.PublicKeyCredential")}}
-
-### AuthenticatorResponse
-
-{{Compat("api.AuthenticatorResponse")}}
-
-### AuthenticatorAttestationResponse
-
-{{Compat("api.AuthenticatorAttestationResponse")}}
-
-### AuthenticatorAssertionResponse
-
-{{Compat("api.AuthenticatorAssertionResponse")}}
-
-### PublicKeyCredentialCreationOptions
-
-{{Compat("api.PublicKeyCredentialCreationOptions")}}
-
-### PublicKeyCredentialRequestOptions
-
-{{Compat("api.PublicKeyCredentialRequestOptions")}}
+{{Compat}}

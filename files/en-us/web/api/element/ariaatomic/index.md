@@ -1,6 +1,7 @@
 ---
 title: Element.ariaAtomic
 slug: Web/API/Element/ariaAtomic
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,16 +16,9 @@ browser-compat: api.Element.ariaAtomic
 
 The **`ariaAtomic`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the {{domxref("aria-relevant")}} attribute.
 
-## Syntax
+## Value
 
-```js
-var ariaAtomic = element.ariaAtomic;
-element.ariaAtomic = ariaAtomic
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"false"`
   - : Assistive technologies will present only the changed node or nodes.

@@ -23,6 +23,7 @@ mask-type: alpha;
 mask-type: inherit;
 mask-type: initial;
 mask-type: revert;
+mask-type: revert-layer;
 mask-type: unset;
 ```
 

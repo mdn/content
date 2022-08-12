@@ -1,6 +1,7 @@
 ---
 title: TextDecoder
 slug: Web/API/TextDecoder
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -58,19 +59,19 @@ console.log(win1251decoder.decode(bytes)); // Привет, мир!
 
 _The `TextDecoder` interface doesn't inherit any properties._
 
-- {{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
-- {{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}
+- {{DOMxRef("TextDecoder.encoding")}} {{ReadOnlyInline}}
+  - : A string containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
+- {{DOMxRef("TextDecoder.fatal")}} {{ReadOnlyInline}}
   - : A {{jsxref('Boolean')}} indicating whether the error mode is fatal.
-- {{DOMxRef("TextDecoder.prototype.ignoreBOM")}}{{ReadOnlyInline}}
+- {{DOMxRef("TextDecoder.ignoreBOM")}} {{ReadOnlyInline}}
   - : A {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) is ignored.
 
 ## Methods
 
 _The `TextDecoder` interface doesn't inherit any method_.
 
-- {{DOMxRef("TextDecoder.prototype.decode()")}}
-  - : Returns a {{DOMxRef("DOMString")}} containing the text decoded with the method of the specific `TextDecoder` object.
+- {{DOMxRef("TextDecoder.decode()")}}
+  - : Returns a string containing the text decoded with the method of the specific `TextDecoder` object.
 
 ## Specifications
 
@@ -83,5 +84,5 @@ _The `TextDecoder` interface doesn't inherit any method_.
 ## See also
 
 - The {{DOMxRef("TextEncoder")}} interface describing the inverse operation.
-- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
+- A [shim](https://github.com/inexorabletash/text-encoding) allowing to use this interface in browsers that don't support it.
 - [Node.js supports global export from v11.0.0](https://nodejs.org/api/util.html#util_class_util_textdecoder)

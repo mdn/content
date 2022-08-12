@@ -1,6 +1,7 @@
 ---
 title: SVGMarkerElement.markerWidth
 slug: Web/API/SVGMarkerElement/markerWidth
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.SVGMarkerElement.markerWidth
 
 The **`markerWidth`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the width of the {{SVGElement("marker")}} viewport as defined by the {{SVGattr("markerWidth")}} attribute.
 
-## Syntax
-
-```js
-let width = SVGMarkerElement.markerWidth;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedLength")}} object. The `baseVal` property of this object returns an {{domxref("SVGLength")}}, the value of which returns the `width`.
 

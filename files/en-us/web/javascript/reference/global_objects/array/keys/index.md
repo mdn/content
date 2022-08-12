@@ -34,9 +34,9 @@ A new {{jsxref("Array")}} iterator object.
 ### Key iterator doesn't ignore holes
 
 ```js
-var arr = ['a', , 'c'];
-var sparseKeys = Object.keys(arr);
-var denseKeys = [...arr.keys()];
+const arr = ['a', , 'c'];
+const sparseKeys = Object.keys(arr);
+const denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
 console.log(denseKeys);  // [0, 1, 2]
 ```

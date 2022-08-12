@@ -5,14 +5,11 @@ tags:
   - Intermediate
   - Mobile
   - Motion
-  - NeedsContent
   - Orientation
   - páginas_a_traducir
   - rotation
 ---
-{{ Draft() }}
-
-## Summary
+{{DefaultAPISidebar("Device Orientation Events")}}
 
 When using orientation and motion events, it's important to understand what the values you're given by the browser mean. This article provides details about the coordinate systems at play and how you use them.
 
@@ -32,7 +29,7 @@ The Earth coordinate frame is the coordinate frame fixed on the center of the Ea
 
 The device coordinate frame is the coordination frame fixed on the center of the device. We use lower-case letters ("x", "y", and "z") to describe the axes of the device coordinate frame.
 
-![](axes.png)
+![Drawing representing three axes of a mobile device](axes.png)
 
 - The **x** axis is in the plane of the screen and is positive toward the right and negative toward the left.
 - The **y** axis is in the plane of the screen and is positive toward the top and negative toward the bottom.
@@ -46,15 +43,15 @@ Rotation is described about any given axis in terms of the number of degrees of 
 
 ### Alpha
 
-Rotation around the z axis -- that is, twisting the device -- causes the **alpha** rotation angle to change:
+Rotation around the z axis — that is, twisting the device — causes the **alpha** rotation angle to change:
 
-![](alpha.png)
+![Positive beta pitches the device outward from the screen.](alpha.png)
 
 The alpha angle is 0° when top of the device is pointed directly toward the Earth's north pole, and increases as the device is rotated toward the left.
 
 ### Beta
 
-Rotation around the x axis -- that is, tipping the device away from or toward the user -- causes the **beta** rotation angle to change:
+Rotation around the x axis — that is, tipping the device away from or toward the user — causes the **beta** rotation angle to change:
 
 ![Positive beta pitches the device forward toward the user.](beta2.png)
 
@@ -62,10 +59,8 @@ The beta angle is 0° when the device's top and bottom are the same distance fro
 
 ### Gamma
 
-Rotation around the y axis -- that is, tilting the device toward the left or right -- causes the **gamma** rotation angle to change:
+Rotation around the y axis — that is, tilting the device toward the left or right — causes the **gamma** rotation angle to change:
 
-![](gamma.png)
+![Positive beta pitches the device forward toward the top.](gamma.png)
 
 The gamma angle is 0° when the device's left and right sides are the same distance from the surface of the Earth, and increases toward 90° as the device is tipped toward the right, and toward -90° as the device is tipped toward the left.
-
-<section id="Quick_links"><ul><li><a href="/en-US/docs/Web/Events/Detecting_device_orientation">Detecting device orientation</a></li><li>{{domxref("DeviceOrientationEvent")}}</li><li>{{domxref("DeviceMotionEvent")}}</li><li><a href="/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D Transforms</a></li><li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li></ul></section>

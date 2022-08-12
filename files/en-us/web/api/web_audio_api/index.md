@@ -1,6 +1,7 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
+page-type: web-api-overview
 tags:
   - API
   - Audio
@@ -9,6 +10,7 @@ tags:
   - Overview
   - Web Audio API
   - sound
+browser-compat: api.AudioContext
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
@@ -74,7 +76,7 @@ General containers and definitions that shape audio graphs in Web Audio API usag
   - : Provides a map-like interface to a group of {{domxref("AudioParam")}} interfaces, which means it provides the methods `forEach()`, `get()`, `has()`, `keys()`, and `values()`, as well as a `size` property.
 - {{domxref("BaseAudioContext")}}
   - : The **`BaseAudioContext`** interface acts as a base definition for online and offline audio-processing graphs, as represented by {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} respectively. You wouldn't use `BaseAudioContext` directly â€” you'd use its features via one of these two inheriting interfaces.
-- The {{event("ended")}} event
+- The {{domxref("AudioScheduledSourceNode/ended_event", "ended")}} event
   - : The `ended` event is fired when playback has stopped because the end of the media was reached.
 
 ### Defining audio sources
@@ -115,7 +117,7 @@ Interfaces for defining effects that you want to apply to your audio sources.
 - {{domxref("PeriodicWave")}}
   - : Describes a periodic waveform that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
 - {{domxref("IIRFilterNode")}}
-  - : Implements a general **[infinite impulse response](https://en.wikipedia.org/wiki/infinite%20impulse%20response "infinite impulse response")** (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers as well.
+  - : Implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response "infinite impulse response") (IIR) filter; this type of filter can be used to implement tone-control devices and graphic equalizers as well.
 
 ### Defining audio destinations
 
@@ -162,7 +164,7 @@ Using audio worklets, you can define custom audio nodes written in JavaScript or
 - {{domxref("AudioWorkletNode")}}
   - : The `AudioWorkletNode` interface represents an {{domxref("AudioNode")}} that is embedded into an audio graph and can pass messages to the corresponding `AudioWorkletProcessor`.
 - {{domxref("AudioWorkletProcessor")}}
-  - : The `AudioWorkletProcessor` interface represents audio processing code running in a `AudioWorkletGlobalScope` that generates, processes, or analyses audio directly, and can pass messages to the corresponding `AudioWorkletNode`.
+  - : The `AudioWorkletProcessor` interface represents audio processing code running in a `AudioWorkletGlobalScope` that generates, processes, or analyzes audio directly, and can pass messages to the corresponding `AudioWorkletNode`.
 - {{domxref("AudioWorkletGlobalScope")}}
   - : The `AudioWorkletGlobalScope` interface is a `WorkletGlobalScope`-derived object representing a worker context in which an audio processing script is run; it is designed to enable the generation, processing, and analysis of audio data directly using JavaScript in a worklet thread rather than on the main thread.
 
@@ -172,7 +174,7 @@ Before audio worklets were defined, the Web Audio API used the `ScriptProcessorN
 
 - {{domxref("ScriptProcessorNode")}} {{deprecated_inline}}
   - : The **`ScriptProcessorNode`** interface allows the generation, processing, or analyzing of audio using JavaScript. It is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the current input, one containing the output. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.
-- {{event("audioprocess")}} (event) {{deprecated_inline}}
+- {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} (event) {{deprecated_inline}}
   - : The `audioprocess` event is fired when an input buffer of a Web Audio API {{domxref("ScriptProcessorNode")}} is ready to be processed.
 - {{domxref("AudioProcessingEvent")}} {{deprecated_inline}}
   - : The `AudioProcessingEvent` represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
@@ -183,10 +185,10 @@ It is possible to process/render an audio graph very quickly in the background â
 
 - {{domxref("OfflineAudioContext")}}
   - : The **`OfflineAudioContext`** interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard `AudioContext`, an `OfflineAudioContext` doesn't really render the audio but rather generates it, _as fast as it can_, in a buffer.
-- {{event("complete")}} (event)
+- {{domxref("OfflineAudioContext/complete_event", "complete")}} (event)
   - : The `complete` event is fired when the rendering of an {{domxref("OfflineAudioContext")}} is terminated.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event uses this interface.
+  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{domxref("OfflineAudioContext/complete_event", "complete")}} event uses this interface.
 
 ## Guides and tutorials
 
@@ -198,13 +200,13 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 
 ## Specifications
 
-{{Specifications("api.AudioContext")}}
+{{Specifications}}
 
 ## Browser compatibility
 
 ### AudioContext
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## See also
 
@@ -218,17 +220,17 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
+- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
+- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/en/tutorials/webaudio/games/)
 - [Porting webkitAudioContext code to standards based AudioContext](/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
 
 ### Libraries
 
 - [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
 - [Tone.js](https://tonejs.github.io/): a framework for creating interactive music in the browser.
-- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML5 Audio](https://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
+- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML5 Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
-- [XSound](https://korilakkuma.github.io/XSound/): Web Audio API Library for Synthesizer, Effects, Visualization, Recording ... etc
+- [XSound](https://xsound.jp/): Web Audio API Library for Synthesizer, Effects, Visualization, Recording, etc.
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using the Web Audio API to record and combine video and audio from different sources into a single file ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
 - [Pts.js](https://ptsjs.org/): Simplifies web audio visualization ([guide](https://ptsjs.org/guide/sound-0800))
 

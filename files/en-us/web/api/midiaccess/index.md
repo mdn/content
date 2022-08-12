@@ -1,6 +1,7 @@
 ---
 title: MIDIAccess
 slug: Web/API/MIDIAccess
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -23,9 +24,9 @@ The **`MIDIAccess`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MID
 - {{domxref("MIDIAccess.sysexEnabled")}} {{readonlyinline}}
   - : A boolean attribute indicating whether system exclusive support is enabled on the current MIDIAccess instance.
 
-### Event Handlers
+### Events
 
-- {{domxref("MIDIAccess.onstatechange")}}
+- {{domxref("MIDIAccess.statechange_event")}}
   - : Called whenever a new MIDI port is added or an existing port changes state.
 
 ## Examples
@@ -36,16 +37,16 @@ When a port changes state, information about that port is printed to the console
 
 ```js
 navigator.requestMIDIAccess()
-  .then(function(access) {
+  .then((access) => {
 
      // Get lists of available MIDI controllers
      const inputs = access.inputs.values();
      const outputs = access.outputs.values();
 
-     access.onstatechange = function(e) {
+     access.onstatechange = (event) => {
 
        // Print information about the (dis)connected MIDI controller
-       console.log(e.port.name, e.port.manufacturer, e.port.state);
+       console.log(event.port.name, event.port.manufacturer, event.port.state);
      };
   });
 ```

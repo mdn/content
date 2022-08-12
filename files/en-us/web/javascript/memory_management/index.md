@@ -29,24 +29,24 @@ The second part is explicit in all languages. The first and last parts are expli
 In order to not bother the programmer with allocations, JavaScript will automatically allocate memory when values are initially declared.
 
 ```js
-var n = 123; // allocates memory for a number
-var s = 'azerty'; // allocates memory for a string
+const n = 123; // allocates memory for a number
+const s = 'azerty'; // allocates memory for a string
 
-var o = {
+const o = {
   a: 1,
-  b: null
+  b: null,
 }; // allocates memory for an object and contained values
 
 // (like object) allocates memory for the array and
 // contained values
-var a = [1, null, 'abra'];
+const a = [1, null, 'abra'];
 
 function f(a) {
   return a + 2;
 } // allocates a function (which is a callable object)
 
 // function expressions also allocate an object
-someElement.addEventListener('click', function() {
+someElement.addEventListener('click', () => {
   someElement.style.backgroundColor = 'blue';
 }, false);
 ```
@@ -56,23 +56,23 @@ someElement.addEventListener('click', function() {
 Some function calls result in object allocation.
 
 ```js
-var d = new Date(); // allocates a Date object
+const d = new Date(); // allocates a Date object
 
-var e = document.createElement('div'); // allocates a DOM element
+const e = document.createElement('div'); // allocates a DOM element
 ```
 
 Some methods allocate new values or objects:
 
 ```js
-var s = 'azerty';
-var s2 = s.substr(0, 3); // s2 is a new string
+const s = 'azerty';
+const s2 = s.substr(0, 3); // s2 is a new string
 // Since strings are immutable values,
 // JavaScript may decide to not allocate memory,
 // but just store the [0, 3] range.
 
-var a = ['ouais ouais', 'nan nan'];
-var a2 = ['generation', 'nan nan'];
-var a3 = a.concat(a2);
+const a = ['ouais ouais', 'nan nan'];
+const a2 = ['generation', 'nan nan'];
+const a3 = a.concat(a2);
 // new array with 4 elements being
 // the concatenation of a and a2 elements.
 ```
@@ -106,7 +106,7 @@ This is the most naive garbage collection algorithm. This algorithm reduces the 
 #### Example
 
 ```js
-var x = {
+let x = {
   a: {
     b: 2
   }
@@ -115,12 +115,12 @@ var x = {
 // The other is referenced by virtue of being assigned to the 'x' variable.
 // Obviously, none can be garbage-collected.
 
-var y = x;      // The 'y' variable is the second thing that has a reference to the object.
+let y = x;      // The 'y' variable is the second thing that has a reference to the object.
 
 x = 1;          // Now, the object that was originally in 'x' has a unique reference
                 //   embodied by the 'y' variable.
 
-var z = y.a;    // Reference to 'a' property of the object.
+let z = y.a;    // Reference to 'a' property of the object.
                 //   This object now has 2 references: one as a property,
                 //   the other as the 'z' variable.
 
@@ -139,8 +139,8 @@ There is a limitation when it comes to circular references. In the following exa
 
 ```js
 function f() {
-  var x = {};
-  var y = {};
+  const x = {};
+  const y = {};
   x.a = y;        // x references y
   y.a = x;        // y references x
 
@@ -150,20 +150,7 @@ function f() {
 f();
 ```
 
-#### Real-life example
-
-Internet Explorer 6 and 7 are known to have reference-counting garbage collectors for DOM objects. Cycles are a common mistake that can generate memory leaks:
-
-```js
-var div;
-window.onload = function() {
-  div = document.getElementById('myDivElement');
-  div.circularReference = div;
-  div.lotsOfData = new Array(10000).join('*');
-};
-```
-
-In the above example, the DOM element "myDivElement" has a circular reference to itself in the "circularReference" property. If the property is not explicitly removed or nulled, a reference-counting garbage collector will always have at least one reference intact and will keep the DOM element in memory even if it was removed from the DOM tree. If the DOM element holds a large amount of data (illustrated in the above example with the "lotsOfData" property), the memory consumed by this data will never be released and can lead to memory related issues such as the browser becoming increasingly slower.
+Internet Explorer 6 and 7 are known to have reference-counting garbage collectors, which have caused memory leaks with circular references. No modern engine uses reference-counting for garbage collection anymore.
 
 ### Mark-and-sweep algorithm
 
@@ -193,7 +180,9 @@ Node.js offers additional options and tools for configuring and debugging memory
 
 The max amount of available heap memory can be increased with a flag:
 
-`node --max-old-space-size=6000 index.js`
+```bash
+node --max-old-space-size=6000 index.js
+```
 
 We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/docs/guides/debugging-getting-started/):
 
@@ -203,4 +192,4 @@ node --expose-gc --inspect index.js
 
 #### See also
 
-- [Kangax article on how to register event handler and avoid memory leaks (2010)](https://msdn.microsoft.com/magazine/ff728624.aspx)
+- [Kangax article on how to register event handler and avoid memory leaks (2010)](https://docs.microsoft.com/en-us/previous-versions/msdn10/ff728624(v=msdn.10))

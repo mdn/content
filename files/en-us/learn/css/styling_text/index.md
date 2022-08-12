@@ -1,5 +1,5 @@
 ---
-title: Styling text
+title: CSS styling text
 slug: Learn/CSS/Styling_text
 tags:
   - Beginner

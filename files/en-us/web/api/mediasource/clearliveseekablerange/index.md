@@ -1,6 +1,7 @@
 ---
 title: MediaSource.clearLiveSeekableRange()
 slug: Web/API/MediaSource/clearLiveSeekableRange
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -23,7 +24,7 @@ to {{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}}.
 ## Syntax
 
 ```js
-mediaSource.clearLiveSeekableRange()
+clearLiveSeekableRange()
 ```
 
 ### Parameters
@@ -32,7 +33,7 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

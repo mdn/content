@@ -14,9 +14,9 @@ tags:
 
 Highlights:
 
-- [Dominators view in the Memory tool](/en-US/docs/Tools/Memory/Dominators_view)
-- [Allocations view in the Performance tool](/en-US/docs/Tools/Performance/Allocations)
-- [One click to apply @media rule conditions in the Style Editor](/en-US/docs/Tools/Style_Editor#the_media_sidebar)
+- [Dominators view in the Memory tool](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators_view/index.html)
+- [Allocations view in the Performance tool](https://web.archive.org/web/20211207010022/https://firefox-source-docs.mozilla.org/devtools-user/performance/allocations/index.html)
+- [One click to apply @media rule conditions in the Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html#the-media-sidebar)
 
 [All devtools bugs fixed between Firefox 45 and Firefox 46.](https://bugzilla.mozilla.org/buglist.cgi?list_id=13263754&resolution=FIXED&classification=Client%20Software&chfieldto=2016-01-25&query_format=advanced&chfield=resolution&chfieldfrom=2015-12-14&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%20about%3Adebugging&component=Developer%20Tools%3A%20Animation%20Inspector&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20DOM&component=Developer%20Tools%3A%20Font%20Inspector&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20JSON%20Viewer&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Design%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Shared%20Components&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox)
 
@@ -36,7 +36,7 @@ Highlights:
 - Gecko now accepts the `-webkit-` prefixed version of [some properties](https://wiki.mozilla.org/Compatibility/Mobile/Non_Standard_Compatibility); it requires to switch `layout.css.prefixes.webkit` to `true` ({{bug(1213126)}}).
 - The experimental support of the {{cssxref("@font/font-display", "font-display")}} descriptor (of {{cssxref("@font")}}; it requires to switch `layout.css.font-display.enabled` to `true` ({{bug(1157064)}}).
 - Added support for [`@media (-webkit-transform-3d)`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) as a media query for 3D transform support, if about:config pref `layout.css.prefixes.webkit` is set to `true` ({{bug(1239799)}}).
-- {{cssxref("linear-gradient()")}} support for the omission of `0deg` units ({{bug(1239153)}}).
+- {{cssxref("gradient/linear-gradient", "linear-gradient()")}} support for the omission of `0deg` units ({{bug(1239153)}}).
 - Added `-webkit-filter` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ({{bug(1236506)}}).
 - \[css-align] "unsafe start" (formerly "true start") should serialize to "start" etc ({{bug(1230398)}}).
 
@@ -46,7 +46,7 @@ Highlights:
 - The ES2015 block-level functions have been implemented ({{bug(1071646)}}).
 - The ES2015 {{jsxref("TypedArray.prototype.sort()")}} method has been implemented ({{bug(1121937)}}).
 - The ES2015 {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}} has been implemented ({{bug(1067049)}}).
-- The experimental [EcmaScript Shared Memory API](https://tc39.github.io/ecmascript_sharedmem/shmem.html) has been implemented. See the {{jsxref("SharedArrayBuffer")}} and {{jsxref("Atomics")}} objects. To use this experimental API set `javascript.options.shared_memory` to `true` in about:config.
+- The experimental [EcmaScript Shared Memory API](https://web.archive.org/web/20220124015148/https://tc39.es/ecmascript_sharedmem/shmem.html) has been implemented. See the {{jsxref("SharedArrayBuffer")}} and {{jsxref("Atomics")}} objects. To use this experimental API set `javascript.options.shared_memory` to `true` in about:config.
 - Redeclaration of [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) variables now throws a {{jsxref("SyntaxError")}} instead of a {{jsxref("TypeError")}} as per the ECMAScript specification ({{bug(1198833)}}).
 - In [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), setting properties on {{Glossary("primitive")}} values will now throw a {{jsxref("TypeError")}} ({{bug(603201)}}).
 - The non-standard {{jsxref("WeakMap.prototype.clear()")}} and {{jsxref("WeakSet.prototype.clear()")}} methods have been removed ({{bug(1101817)}}).
@@ -93,7 +93,7 @@ _No change._
 
 #### New APIs
 
-- In SVG, the {{domxref("SVGStyleElement")}} interface now implements the `LinkStyle` mixin ){{bug(1239128)}}.
+- In SVG, the {{domxref("SVGStyleElement")}} interface now implements the `LinkStyle` mixin ) {{bug(1239128)}}.
 
 #### Miscellaneous
 

@@ -1,6 +1,7 @@
 ---
 title: XRInputSourcesChangeEvent.session
 slug: Web/API/XRInputSourcesChangeEvent/session
+page-type: web-api-instance-property
 tags:
   - API
   - AR

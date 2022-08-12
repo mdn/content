@@ -1,6 +1,7 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -36,7 +37,7 @@ console.log(child_nodes.length); // outputs "3"
 
 ### Static NodeLists
 
-In other cases, the `NodeList` is _static,_ where any changes in the DOM does not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method returns a _static_ `NodeList`.
+In other cases, the `NodeList` is _static,_ where any changes in the DOM do not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method returns a _static_ `NodeList`.
 
 It's good to keep this distinction in mind when you choose how to iterate over the items in the `NodeList`, and whether you should cache the list's `length`.
 
@@ -78,21 +79,12 @@ for (let i = 0; i < myNodeList.length; i++) {
 
 ```js
 const list = document.querySelectorAll('input[type=checkbox]');
-for (let checkbox of list) {
+for (const checkbox of list) {
   checkbox.checked = true;
 }
 ```
 
 Recent browsers also support iterator methods ({{domxref("NodeList.forEach()", "forEach()")}}) as well as {{domxref("NodeList.entries()", "entries()")}}, {{domxref("NodeList.values()", "values()")}}, and {{domxref("NodeList.keys()", "keys()")}}.
-
-There is also an Internet Explorer-compatible way to use {{jsxref("Array.forEach()", "Array.prototype.forEach")}} for iteration:
-
-```js
-const list = document.querySelectorAll('input[type=checkbox]');
-Array.prototype.forEach.call(list, function (checkbox) {
-  checkbox.checked = true;
-});
-```
 
 ## Specifications
 

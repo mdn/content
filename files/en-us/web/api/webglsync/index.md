@@ -1,6 +1,7 @@
 ---
 title: WebGLSync
 slug: Web/API/WebGLSync
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -31,7 +32,7 @@ When working with `WebGLSync` objects, the following methods of the {{domxref("W
 in this example, `gl` must be a {{domxref("WebGL2RenderingContext")}}. `WebGLSync` objects are not available in WebGL 1.
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 ```
 
 ## Specifications

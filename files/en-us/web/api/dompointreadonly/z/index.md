@@ -1,6 +1,7 @@
 ---
 title: DOMPointReadOnly.z
 slug: Web/API/DOMPointReadOnly/z
+page-type: web-api-instance-property
 tags:
   - API
   - Coordinates
@@ -29,13 +30,7 @@ In general, positive values of `z` mean toward the user (out from the
 screen), and negative values of `z` mean away from the user (into the
 screen), assuming no transforms have resulted in a reversal.
 
-## Syntax
-
-```js
-const zPos = someDOMPointReadOnly.z;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the z coordinate's value for the
 point. This value is **unrestricted**, meaning that it is allowed to be

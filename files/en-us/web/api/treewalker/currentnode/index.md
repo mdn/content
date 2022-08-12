@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.currentNode
 slug: Web/API/TreeWalker/currentNode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -13,20 +14,17 @@ browser-compat: api.TreeWalker.currentNode
 The **`TreeWalker.currentNode`** property represents the
 {{domxref("Node")}} on which the {{domxref("TreeWalker")}} is currently pointing at.
 
-## Syntax
+## Value
+
+A {{domxref("Node")}}.
+
+## Examples
 
 ```js
-node = treeWalker.currentNode;
-treeWalker.currentNode = node;
-```
-
-## Example
-
-```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 root = treeWalker.currentNode; // the root element as it is the first element!

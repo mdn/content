@@ -1,10 +1,10 @@
 ---
 title: SecurityPolicyViolationEvent.blockedURI
 slug: Web/API/SecurityPolicyViolationEvent/blockedURI
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
-  - Experimental
   - HTTP
   - Property
   - Reference
@@ -12,23 +12,17 @@ tags:
   - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.blockedURI
 ---
-{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
+{{HTTPSidebar}}
 
 The **`blockedURI`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("USVString")}}
+{{domxref("SecurityPolicyViolationEvent")}} interface is a string
 representing the URI of the resource that was blocked because it violates a policy.
 
-## Syntax
+## Value
 
-```js
-let blockedURI = violationEventInstance.blockedURI;
-```
+A string representing the URI of the blocked resource.
 
-### Value
-
-A {{domxref("USVString")}} representing the URI of the blocked resource.
-
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

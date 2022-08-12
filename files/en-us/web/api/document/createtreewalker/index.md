@@ -1,6 +1,7 @@
 ---
 title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -17,7 +18,9 @@ newly created {{domxref("TreeWalker")}} object.
 ## Syntax
 
 ```js
-document.createTreeWalker(root[, whatToShow[, filter[, expandEntityReferences]]]);
+createTreeWalker(root)
+createTreeWalker(root, whatToShow)
+createTreeWalker(root, whatToShow, filter)
 ```
 
 ### Parameters
@@ -53,15 +56,12 @@ document.createTreeWalker(root[, whatToShow[, filter[, expandEntityReferences]]]
   - : A {{domxref("NodeFilter")}}, that is an object with a method
     `acceptNode`, which is called by the {{domxref("TreeWalker")}} to determine
     whether or not to accept a node that has passed the `whatToShow` check.
-- `expandEntityReferences` {{optional_inline}} {{deprecated_inline}}
-  - : A boolean flag indicating if when discarding an
-    entity reference its whole sub-tree must be discarded at the same time.
 
 ### Return value
 
 A new {{domxref("TreeWalker")}} object.
 
-## Example
+## Examples
 
 The following example goes through all nodes in the body,
 filters out any non nodes that aren't elements (with the \`NodeFilter.SHOW_ELEMENT\` value),
@@ -71,15 +71,14 @@ that is created to advance through the nodes (now all elements) and push them in
 array.
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-  false
+  { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 
-var nodeList = [];
-var currentNode = treeWalker.currentNode;
+const nodeList = [];
+let currentNode = treeWalker.currentNode;
 
 while(currentNode) {
   nodeList.push(currentNode);

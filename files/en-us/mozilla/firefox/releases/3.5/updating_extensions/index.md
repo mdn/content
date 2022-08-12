@@ -97,7 +97,7 @@ The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSO
 To ensure compatibility with both Firefox 3 and Firefox 3.5, you can do the following:
 
 ```js
-if (typeof(JSON) == "undefined") {
+if (typeof JSON === "undefined") {
   Components.utils.import("resource://gre/modules/JSON.jsm");
   JSON.parse = JSON.fromString;
   JSON.stringify = JSON.toString;
@@ -106,7 +106,7 @@ if (typeof(JSON) == "undefined") {
 
 This works by importing the JSON.jsm JavaScript module if JSON isn't supported natively, then mapping the methods provided by that module to the ones used by native JSON, so that the same calls work.
 
-You can also bypass this issue by using the {{ interface("nsIJSON") }} interface directly.
+You can also bypass this issue by using the `nsIJSON` interface directly.
 
 ## Changes to context menus
 
@@ -114,13 +114,13 @@ In order to support the new audio and video features added in Gecko 1.9.1, the `
 
 ## Changes to chrome registration
 
-Firefox 3.5 closes a security hole that made it possible to use remote chrome.  This will affect any add-on that includes a resource in their `chrome.manifest` file that references a web site, data or resource urls.  See [Security changes in Firefox 3.5](/en-US/Security_changes_in_Firefox_3.5) for details.
+Firefox 3.5 closes a security hole that made it possible to use remote chrome.  This will affect any add-on that includes a resource in their `chrome.manifest` file that references a web site, data or resource URLs.  See [Security changes in Firefox 3.5](/en-US/Security_changes_in_Firefox_3.5) for details.
 
 ## Getting a load context from a request
 
 Previously, it was possible to get a load context from a request by querying various docShell APIs. In particular, it was a common practice to use `notificationCallbacks.getInterface(nsIDOMWindow)` to get the window object associated with the load. While the older approach may work in some circumstances, it is not recommended to use it anymore ([details](https://bugzilla.mozilla.org/show_bug.cgi?id=457153#c16)).
 
-This correct and reliable way to do this is to use an {{ interface("nsILoadContext") }} (see the [interface definition](http://mxr.mozilla.org/mozilla-central/source/docshell/base/nsILoadContext.idl) on mxr).
+This correct and reliable way to do this is to use an `nsILoadContext` (see the [interface definition](http://mxr.mozilla.org/mozilla-central/source/docshell/base/nsILoadContext.idl) on mxr).
 
 From JavaScript, you do it like this:
 
@@ -148,20 +148,20 @@ Another Javascript example if the above does not work:
 
 function getWindowForRequest(request){
   if (request instanceof Components.interfaces.nsIRequest){
-    try{
+    try {
       if (request.notificationCallbacks){
         return request.notificationCallbacks
                       .getInterface(Components.interfaces.nsILoadContext)
                       .associatedWindow;
       }
-    } catch(e) {}
-    try{
+    } catch (e) {}
+    try {
       if (request.loadGroup && request.loadGroup.notificationCallbacks){
         return request.loadGroup.notificationCallbacks
                       .getInterface(Components.interfaces.nsILoadContext)
                       .associatedWindow;
       }
-    } catch(e) {}
+    } catch (e) {}
   }
   return null;
 }
@@ -177,7 +177,7 @@ NS_QueryNotificationCallbacks(channel, loadContext);
 
 ## Customizable toolbars
 
-In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and  adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in {{ Bug(407725) }} and {{ Bug(467045) }}.
+In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in {{ Bug(407725) }} and {{ Bug(467045) }}.
 
 ## XPCNativeWrapper
 
@@ -196,4 +196,4 @@ Firefox 3.5 introduces support for adding and removing progress listeners that l
 ## For Theme developers:
 
 - Check [Theme changes in Firefox 3.1](/en-US/Theme_changes_in_Firefox_3.1).
-- Go to the Mozillazine forum [Theme changes for FF3.1](http://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).
+- Go to the Mozillazine forum [Theme changes for FF3.1](https://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).

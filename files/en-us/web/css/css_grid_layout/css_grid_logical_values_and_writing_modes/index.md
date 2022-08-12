@@ -35,7 +35,7 @@ Another place you might see physical keywords in use, is when using `text-align:
 
 We call these keywords and properties _physical_ because they relate to the screen you are looking at. Left is always left, no matter what direction your text is running.
 
-This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don't even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. One has no {{cssxref("text-align")}} property set, the second has `text-align` set to left. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left` . The second however, switches direction and the text runs from right to left .
+This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don't even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. The first paragraph has {{cssxref("text-align")}} set to `left`, the second has no `text-align` property set. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left` . The second however, switches direction and the text runs from right to left .
 
 ![A simple example of text direction.](8_direction_simple_example.png)
 
@@ -310,7 +310,7 @@ In this next example, I have a grid which is in the default `ltr` direction. I h
 
 ### Line-based placement with right to left text
 
-If I now add the {{cssxref("direction")}} property with a value of `rtl` to the grid container, line 1 becomes the right hand side of the grid, and line -1 on the left.
+If I now add the {{cssxref("direction")}} property with a value of `rtl` to the grid container, line 1 becomes the right-hand side of the grid, and line -1 on the left.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -436,4 +436,4 @@ If you use absolute positioning within a grid area, then you will again be using
 
 Our new layout methods give us the ability to use these logical values to place items, however, as soon as we start to combine them with the physical properties used for margins and padding, we need to remember that those physical properties will not change according to writing mode.
 
-The [CSS Logical Properties specification](https://drafts.csswg.org/css-logical-props/) means that you can use the [logical equivalents](/en-US/docs/Web/CSS/CSS_Logical_Properties) for properties, such as {{cssxref("margin-left")}} and {{cssxref("margin-right")}}, in your CSS. These properties and values have good support in modern browsers. Your understanding of block and inline through grid will help you to understand how to use these too.
+The [CSS Logical Properties specification](https://drafts.csswg.org/css-logical/) means that you can use the [logical equivalents](/en-US/docs/Web/CSS/CSS_Logical_Properties) for properties, such as {{cssxref("margin-left")}} and {{cssxref("margin-right")}}, in your CSS. These properties and values have good support in modern browsers. Your understanding of block and inline through grid will help you to understand how to use these too.

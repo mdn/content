@@ -12,7 +12,9 @@ browser-compat: css.selectors.autofill
 
 The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when an {{HTMLElement("input")}} element has its value autofilled by the browser. The class stops matching if the user edits the field.
 
-> **Note:** The user agent style sheets of many browsers use `!important` in their `:-webkit-autofill` style declarations, making them non-overrideable by webpages without resorting to JavaScript hacks. For example Chrome has the following in its internal stylesheet:
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-autofill.html", "tabbed-shorter")}}
+
+> **Note:** The user agent style sheets of many browsers use `!important` in their `:-webkit-autofill` style declarations, making them non-overridable by webpages without resorting to JavaScript hacks. For example Chrome has the following in its internal stylesheet:
 >
 > ```css
 > background-color: rgb(232, 240, 254) !important;
@@ -24,7 +26,7 @@ The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) match
 
 ## Syntax
 
-```css
+```
 :autofill
 ```
 
@@ -64,7 +66,7 @@ input:autofill {
 
 ## See also
 
-- [Chromium issue 46543: Auto-filled input text box yellow background highlight cannot be turned off!](https://code.google.com/p/chromium/issues/detail?id=46543)
+- [Chromium issue 46543: Auto-filled input text box yellow background highlight cannot be turned off!](https://bugs.chromium.org/p/chromium/issues/detail?id=46543)
 - [WebKit bug 66032: Allow site authors to override autofilled fields' colors.](https://bugs.webkit.org/show_bug.cgi?id=66032)
 - [Mozilla bug 740979: implement `:-moz-autofill` pseudo-class on input elements with an autofilled value](https://bugzilla.mozilla.org/show_bug.cgi?id=740979)
-- [new css4-ui features - more selectors](https://wiki.csswg.org/spec/css4-ui#more-selectors)
+- [new CSS4-UI features - more selectors](https://wiki.csswg.org/spec/css4-ui#more-selectors)

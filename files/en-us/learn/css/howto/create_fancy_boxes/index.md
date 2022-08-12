@@ -119,7 +119,7 @@ Okay, let's have fun with backgrounds:
 
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
-> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://lea.verou.me/css3patterns/). Just remember that such use of gradient is quite expensive, performance wise. If you want to learn more about gradient, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
+> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). Just remember that such use of gradient is quite expensive, performance wise. If you want to learn more about gradient, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
 
 ## Pseudo-elements
 
@@ -180,7 +180,7 @@ Let's have an example by turning our box into a cloud:
 }
 
 .fancy::before {
-  /* This is the  size of the clouds left ear */
+  /* This is the size of the clouds left ear */
   width  : 125px;
   height : 125px;
 

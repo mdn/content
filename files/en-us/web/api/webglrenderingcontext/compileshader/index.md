@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.compileShader()
 slug: Web/API/WebGLRenderingContext/compileShader
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,7 @@ data so that it can be used by a {{domxref("WebGLProgram")}}.
 ## Syntax
 
 ```js
-void gl.compileShader(shader);
+compileShader(shader)
 ```
 
 ### Parameters
@@ -25,10 +26,14 @@ void gl.compileShader(shader);
 - `shader`
   - : A fragment or vertex {{domxref("WebGLShader")}}.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js
-var shader = gl.createShader(gl.VERTEX_SHADER);
+const shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, shaderSource);
 gl.compileShader(shader);
 ```

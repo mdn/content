@@ -1,6 +1,7 @@
 ---
 title: NamedNodeMap.setNamedItemNS()
 slug: Web/API/NamedNodeMap/setNamedItemNS
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -55,16 +56,16 @@ const pre = document.getElementsByTagName("pre")[0];
 const warning = doc.getElementsByTagName("warning")[0];
 const attrMap = span.attributes;
 
-let result = "The `<span>` element initially contains " + attrMap.length + " attribute.\n\n";
+let result = `The '<span>' element initially contains ${attrMap.length} attribute.\n\n`;
 
-result += "We remove `one` from `<span>` and adds it to `<pre>`.\n";
+result += "We remove `one` from '<span>' and adds it to '<pre>'.\n";
 const one = warning.attributes.removeNamedItemNS("http://www.example.com/ob", "one");
 attrMap.setNamedItemNS(one);
-result += "The `<span>` element now contains " + span.attributes.length + " attributes:\n\n";
+result += `The '<span>' element now contains ${span.attributes.length} attributes:\n\n`;
 result += "Prefix\tLocal name\tQualified name\n";
 result += "=========================================\n";
-for(let attr of attrMap) {
-  result += attr.prefix + "\t" + attr.localName + "\t\t" + attr.name + "\n";
+for (let attr of attrMap) {
+  result += `${attr.prefix}\t${attr.localName}\t\t${attr.name}\n`;
 }
 
 pre.textContent = result;

@@ -7,6 +7,9 @@ tags:
   - Guide
   - Overview
   - Reference
+browser-compat:
+  - css.properties.backdrop-filter
+  - css.properties.filter
 ---
 {{CSSRef}}
 
@@ -25,16 +28,8 @@ tags:
 
 ## Specifications
 
-| Specification                                                                | Status                               | Comment             |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Filters 1.0', '#FilterProperty', 'filter') }} | {{ Spec2('Filters 1.0') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `backdrop-filter` property
-
-{{Compat("css.properties.backdrop-filter")}}
-
-### `filter` property
-
-{{Compat("css.properties.filter")}}
+{{Compat}}

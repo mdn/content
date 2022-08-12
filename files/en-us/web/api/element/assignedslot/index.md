@@ -1,6 +1,7 @@
 ---
 title: Element.assignedSlot
 slug: Web/API/Element/assignedSlot
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -8,7 +9,7 @@ tags:
   - Slottable
   - Web Components
   - assignedSlot
-  - shadow dom
+  - shadow DOM
 browser-compat: api.Element.assignedSlot
 ---
 {{APIRef("Shadow DOM")}}
@@ -18,13 +19,7 @@ property of the {{domxref("Element")}} interface returns an
 {{domxref("HTMLSlotElement")}} representing the {{htmlelement("slot")}} element the
 node is inserted in.
 
-## Syntax
-
-```js
-var slotElement = elementInstance.assignedSlot
-```
-
-### Value
+## Value
 
 An {{domxref('HTMLSlotElement')}} instance, or `null` if the element is not
 assigned to a slot, or if the associated shadow root was attached with its
@@ -33,9 +28,7 @@ assigned to a slot, or if the associated shadow root was attached with its
 
 ## Examples
 
-In our [simple-template
-example](https://github.com/mdn/web-components-examples/tree/master/simple-template) ([see it
-live](https://mdn.github.io/web-components-examples/simple-template/)), we create a trivial custom element example called
+In our [simple-template example](https://github.com/mdn/web-components-examples/tree/main/simple-template) ([see it live](https://mdn.github.io/web-components-examples/simple-template/)), we create a trivial custom element example called
 `<my-paragraph>` in which a shadow root is attached and then populated
 using the contents of a template that contains a slot named `my-text`.
 

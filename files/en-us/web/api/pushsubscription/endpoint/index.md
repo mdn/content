@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.endpoint
 slug: Web/API/PushSubscription/endpoint
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -16,7 +17,7 @@ browser-compat: api.PushSubscription.endpoint
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
 The **`endpoint`** read-only property of the
-{{domxref("PushSubscription")}} interface returns a {{domxref("USVString")}} containing
+{{domxref("PushSubscription")}} interface returns a string containing
 the endpoint associated with the push subscription.
 
 The endpoint takes the form of a custom URL pointing to a push server, which can be
@@ -24,21 +25,15 @@ used to send a push message to the particular service worker instance that subsc
 the push service. For this reason, it is a good idea to keep your endpoint a secret, so
 others do not hijack it and abuse the push functionality.
 
-## Syntax
+## Value
+
+A string.
+
+## Examples
 
 ```js
-var myEnd = pushSubscription.endpoint;
-```
-
-### Value
-
-A {{domxref("USVString")}}.
-
-## Example
-
-```js
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.subscribe({userVisibleOnly: true}).then(function(subscription) {
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.subscribe({userVisibleOnly: true}).then((subscription) => {
     console.log(subscription.endpoint);
 
       // At this point you would most likely send the subscription

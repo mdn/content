@@ -50,6 +50,7 @@ border-image-slice: 10% fill 7 12;
 border-image-slice: inherit;
 border-image-slice: initial;
 border-image-slice: revert;
+border-image-slice: revert-layer;
 border-image-slice: unset;
 ```
 
@@ -155,7 +156,7 @@ const sliceOutput = document.getElementById('slice-output');
 const divElem = document.querySelector('div > div');
 
 widthSlider.addEventListener('input', () => {
-  const newValue = widthSlider.value + 'px';
+  const newValue = `${widthSlider.value}px`;
   divElem.style.borderWidth = newValue;
   widthOutput.textContent = newValue;
 })

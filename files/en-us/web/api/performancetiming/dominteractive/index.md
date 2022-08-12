@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.domInteractive
 slug: Web/API/PerformanceTiming/domInteractive
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -23,20 +24,17 @@ The legacy
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, when the parser finished its work on the main
 document, that is when its {{domxref("Document.readyState")}} changes to
-`'interactive'` and the corresponding {{event("readystatechange")}} event is
+`'interactive'` and the corresponding {{domxref("Document/readystatechange_event", "readystatechange")}} event is
 thrown.
 
 This property can be used to measure the speed of loading Web sites that users
 _feels_. Nevertheless there are a few caveats that happens if scripts are
-blocking rendering and not loaded asynchronously or with custom Web fonts. [Check
-if you are in one of these cases](http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/) before using this property as a proxy for the
+blocking rendering and not loaded asynchronously or with custom Web fonts. [Check if you are in one of these cases](https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/) before using this property as a proxy for the
 user experience of a Web site's speed of loading.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domInteractive;
-```
+An `unsigned long long`.
 
 ## Specifications
 
@@ -50,6 +48,5 @@ Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 ## See also
 
 - The {{domxref("PerformanceTiming")}} interface it belongs to.
-- The article "[domInteractive:
-  is it? really?](http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/)" explaining when you can use this property as a proxy for the
+- The article "[domInteractive: is it? really?](https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/)" explaining when you can use this property as a proxy for the
   user experience of loading a Web site.

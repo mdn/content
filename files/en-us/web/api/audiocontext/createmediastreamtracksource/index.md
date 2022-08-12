@@ -1,6 +1,7 @@
 ---
 title: AudioContext.createMediaStreamTrackSource()
 slug: Web/API/AudioContext/createMediaStreamTrackSource
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -33,8 +34,7 @@ first, lexicographically (alphabetically).
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var track = audioCtx.createMediaStreamTrackSource(track);
+createMediaStreamTrackSource(track)
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ var track = audioCtx.createMediaStreamTrackSource(track);
 A {{domxref("MediaStreamTrackAudioSourceNode")}} object which acts as a source for
 audio data found in the specified audio track.
 
-## Example
+## Examples
 
 In this example, {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} is used to
 request access to the user's microphone. Once that access is attained, an audio context
@@ -65,15 +65,16 @@ filter's output is in turn routed to the audio context's
 
 ```js
 navigator.mediaDevices.getUserMedia ({audio: true, video: false})
-.then(function(stream) {
+.then((stream) => {
   audio.srcObject = stream;
-  audio.onloadedmetadata = function(e) {
+  audio.onloadedmetadata = (e) => {
     audio.play();
     audio.muted = true;
   };
 
   let audioCtx = new AudioContext();
-  let source = audioCtx.createMediaStreamSource(stream);
+  let audioTracks = stream.getAudioTracks();
+  let source = audioCtx.createMediaStreamTrackSource(audioTracks[0]);
 
   let biquadFilter = audioCtx.createBiquadFilter();
   biquadFilter.type = "lowshelf";
@@ -83,7 +84,7 @@ navigator.mediaDevices.getUserMedia ({audio: true, video: false})
   source.connect(biquadFilter);
   biquadFilter.connect(audioCtx.destination);
 })
-.catch(function(err) {
+.catch((err) => {
   // Handle getUserMedia() error
 });
 ```

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.usernameFragment
 slug: Web/API/RTCIceCandidate/usernameFragment
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -26,15 +27,9 @@ If you call the constructor with an m-line string instead of the options object,
 
 Note that 24 bits of the username fragment are required to be randomized by the browser. See [Randomization](#randomization) below for details.
 
-## Syntax
+## Value
 
-```js
-var ufrag = RTCIceCandidate.usernameFragment;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the username fragment (usually referred to in
+A string containing the username fragment (usually referred to in
 shorthand as "ufrag" or "ice-ufrag") that, along with the ICE password ("ice-pwd"),
 uniquely identifies a single ongoing ICE interaction, including for any communication
 with the {{Glossary("STUN")}} server. The string may be up to 256 characters long, and
@@ -61,7 +56,7 @@ to inject themselves into an ICE exchange.
 
 The `usernameFragment` and password both change every time an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) occurs.
 
-## Example
+## Examples
 
 Although the WebRTC infrastructure will filter out obsolete candidates for you after an
 ICE restart, you can do it yourself if you're trying to absolutely minimize the number
@@ -85,11 +80,11 @@ from the signaling server that contains an ICE candidate to be added to the
 restart, we can use code like this:
 
 ```js
-const ssNewCandidate = signalMsg => {
+const ssNewCandidate = (signalMsg) => {
   let candidate = new RTCIceCandidate(signalMsg.candidate);
   let receivers = pc.getReceivers();
 
-  receivers.forEach(receiver => {
+  receivers.forEach((receiver) => {
     let parameters = receiver.transport.getParameters();
 
     if (parameters.usernameFragment === candidate.usernameFragment) {

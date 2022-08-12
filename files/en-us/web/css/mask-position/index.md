@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.mask-position
@@ -35,6 +34,7 @@ mask-position: 1rem 1rem, center;
 mask-position: inherit;
 mask-position: initial;
 mask-position: revert;
+mask-position: revert-layer;
 mask-position: unset;
 ```
 

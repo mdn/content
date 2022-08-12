@@ -37,6 +37,7 @@ text-decoration: none;
 text-decoration: inherit;
 text-decoration: initial;
 text-decoration: revert;
+text-decoration: revert-layer;
 text-decoration: unset;
 ```
 

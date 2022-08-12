@@ -7,6 +7,9 @@ tags:
   - HTML
   - for
   - Reference
+browser-compat:
+  - html.elements.label.for
+  - html.elements.output.for
 ---
 
 {{HTMLSidebar}}
@@ -36,52 +39,8 @@ See examples of usage on the element pages for {{htmlelement("label")}} and {{ht
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'forms.html#attr-label-for', 'for as used with label')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'form-elements.html#attr-output-for', 'for as used with output')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'sec-forms.html#element-attrdef-label-for', 'for as used with label')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'sec-forms.html#element-attrdef-output-for', 'for as used with output')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-### Support with label
-
-{{Compat("html.elements.label.for")}}
-
-### Support with output
-
-{{Compat("html.elements.output.for")}}
+{{Compat}}

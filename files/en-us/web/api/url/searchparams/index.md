@@ -1,6 +1,7 @@
 ---
 title: URL.searchParams
 slug: Web/API/URL/searchParams
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -18,13 +19,7 @@ access to the {{httpmethod("GET")}} decoded query arguments contained in the URL
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const urlSearchParams = url.searchParams
-```
-
-### Value
+## Value
 
 A {{domxref("URLSearchParams")}} object.
 

@@ -23,11 +23,14 @@ browser-compat: webextensions.manifest.permissions
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json;">
 "permissions": [
-  "*://developer.mozilla.org/*",
   "webRequest"
 ]</pre
         >
@@ -44,11 +47,13 @@ For information on how to test and preview permission requests, see [Test permis
 
 The key can contain three kinds of permissions:
 
-- host permissions
+- host permissions (Manifest V2 only, host permissions are specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key for Manifest V3 or higher.)
 - API permissions
 - the `activeTab` permission
 
 ## Host permissions
+
+> **Note:** When using Manifest V3 or higher, host permissions must be specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
 
 Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be `"*://developer.mozilla.org/*"`.
 
@@ -111,6 +116,7 @@ The following keywords are currently available:
 - `pkcs11`
 - `privacy`
 - `proxy`
+- `scripting`
 - `search`
 - `sessions`
 - `storage`
@@ -125,10 +131,10 @@ The following keywords are currently available:
 
 In most cases the permission just grants access to the API, with the following exceptions:
 
-- `tabs` gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}} without the need for [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
+- `tabs` gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}} without the need for [host permissions](#host_permissions): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
 
   - In Firefox 85 and earlier, you also need `tabs` if you want to include `url` in the `queryInfo` parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the `tabs` API can be used without requesting any permission.
-  - As of Firefox 86 and Chrome 50, matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) can also be used instead of the "tabs" permission.
+  - As of Firefox 86 and Chrome 50, matching [host permissions](#host_permissions) can also be used instead of the "tabs" permission.
 
 - `webRequestBlocking` enables you to use the `"blocking"` argument, so you can {{webextAPIref("WebRequest", "modify and cancel requests")}}.
 - `downloads.open` lets you use the {{WebExtAPIRef("downloads.open()")}} API.
@@ -183,7 +189,7 @@ The `unlimitedStorage` permission:
  "permissions": ["*://developer.mozilla.org/*"]
 ```
 
-Request privileged access to pages under `developer.mozilla.org`.
+In Manifest V2 only, request privileged access to pages under `developer.mozilla.org`.
 
 ```json
   "permissions": ["tabs"]
@@ -195,7 +201,7 @@ Request access to the privileged pieces of the `tabs` API.
   "permissions": ["*://developer.mozilla.org/*", "tabs"]
 ```
 
-Request both of the above permissions.
+In Manifest V2 only, request both of the above permissions.
 
 ## Browser compatibility
 

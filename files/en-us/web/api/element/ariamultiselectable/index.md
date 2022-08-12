@@ -1,6 +1,7 @@
 ---
 title: Element.ariaMultiSelectable
 slug: Web/API/Element/ariaMultiSelectable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,16 +18,9 @@ The **`ariaMultiSelectable`** property of the {{domxref("Element")}} interface r
 
 > **Note:** Where possible use an HTML {{htmlelement("select")}} element as this has built in semantics and does not require ARIA attributes.
 
-## Syntax
+## Value
 
-```js
-var ariaMultiSelectable = element.ariaMultiSelectable;
-element.ariaMultiSelectable = ariaMultiSelectable
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : More than one item may be selected at a time.

@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.rootMargin
 slug: Web/API/IntersectionObserver/rootMargin
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer
@@ -11,7 +12,7 @@ tags:
   - rootMargin
 browser-compat: api.IntersectionObserver.rootMargin
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} interface's read-only
 **`rootMargin`** property is a string with syntax similar to
@@ -27,13 +28,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root e
   and root margin")}} for a more in-depth look at the root margin and how it works with
 the root's bounding box.
 
-## Syntax
-
-```js
-var marginString = IntersectionObserver.rootMargin;
-```
-
-### Value
+## Value
 
 A string, formatted similarly to the CSS {{cssxref("margin")}} property's value, which
 contains offsets for one or more sides of the root's bounding box. These offsets are

@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality.totalFrameDelay
 slug: Web/API/VideoPlaybackQuality/totalFrameDelay
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -21,17 +22,15 @@ creation of the associated {{domxref("HTMLVideoElement")}}. The frame delay is t
 difference between a frame's theoretical presentation time and its effective display
 time.
 
-## Syntax
+## Value
+
+A number.
+
+## Examples
 
 ```js
-value = videoPlaybackQuality.totalFrameDelay;
-```
-
-## Example
-
-```js
-var videoElt = document.getElementById('my_vid');
-var quality = videoElt.getVideoPlaybackQuality();
+const videoElt = document.getElementById('my_vid');
+const quality = videoElt.getVideoPlaybackQuality();
 
 alert(quality.totalFrameDelay);
 ```

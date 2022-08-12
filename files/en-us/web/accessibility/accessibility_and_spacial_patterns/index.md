@@ -1,5 +1,5 @@
 ---
-title: Accessibility and Spacial Patterns 
+title: Accessibility and Spacial Patterns
 slug: Web/Accessibility/Accessibility_and_Spacial_Patterns
 tags:
   - Accessibility
@@ -7,7 +7,6 @@ tags:
   - patterns
   - photosensitive seizure
 ---
-{{draft}}
 
 ### Spatial Localization
 
@@ -84,7 +83,7 @@ The nature of space can change depending upon what MIME type is being used, and 
 
 - [Color constancy in context: Roles for local adaptation and levels of reference](https://jov.arvojournals.org/article.aspx?articleid=2192799)
 - [Gamma oscillations and photosensitive epilepsy](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub)
-- [Characterizing the Patterned Images That Precipitate Seizures and Optimizing Guidelines To Prevent Them](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.01405.x)  Arnold Wilkins, John Emmett, and Graham Harding
+- [Characterizing the Patterned Images That Precipitate Seizures and Optimizing Guidelines To Prevent Them](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.01405.x) Arnold Wilkins, John Emmett, and Graham Harding
 
 #### Contributors:
 

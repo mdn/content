@@ -41,6 +41,7 @@ align-items: unsafe center;
 align-items: inherit;
 align-items: initial;
 align-items: revert;
+align-items: revert-layer;
 align-items: unset;
 ```
 
@@ -192,8 +193,6 @@ select {
     <option value="end">end</option>
     <option value="self-start">self-start</option>
     <option value="self-end">self-end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
 
     <option value="first baseline">first baseline</option>
     <option value="last baseline">last baseline</option>
@@ -213,15 +212,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+const values = document.getElementById('values');
+const display = document.getElementById('display');
+const container = document.getElementById('container');
 
-values.addEventListener('change', function (evt) {
+values.addEventListener('change', (evt) => {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener('change', (evt) => {
   container.className = evt.target.value;
 });
 ```
@@ -232,7 +231,7 @@ display.addEventListener('change', function (evt) {
 
 ## Specifications
 
-{{Specifications("css.properties.align-items.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

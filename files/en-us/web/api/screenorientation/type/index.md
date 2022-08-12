@@ -1,6 +1,7 @@
 ---
 title: ScreenOrientation.type
 slug: Web/API/ScreenOrientation/type
+page-type: web-api-instance-property
 tags:
   - API
   - Orientation
@@ -18,13 +19,7 @@ The **`type`** read-only property of the
 type, one of "portrait-primary", "portrait-secondary", "landscape-primary", or
 "landscape-secondary".
 
-## Syntax
-
-```js
-type = screen.orientation.type
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}}.
 

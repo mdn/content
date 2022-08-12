@@ -45,10 +45,11 @@ border-width: 1px 2em 1.5cm;
 /* top | right | bottom | left */
 border-width: 1px 2em 0 4rem;
 
-/* Global keywords */
+/* Global values */
 border-width: inherit;
 border-width: initial;
 border-width: revert;
+border-width: revert-layer;
 border-width: unset;
 ```
 

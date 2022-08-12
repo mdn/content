@@ -10,8 +10,8 @@ A **protocol** is a system of rules that define how data is exchanged within or 
 
 ## See also
 
-- {{Interwiki("wikipedia", "Communications protocol")}} on Wikipedia
-- [RFC Official Internet Protocol Standards](https://www.rfc-editor.org/search/standards.php)
+- [Communications protocol](https://en.wikipedia.org/wiki/Communications_protocol) on Wikipedia
+- [RFC Official Internet Protocol Standards](https://www.rfc-editor.org/standards)
 - [HTTP overview](/en-US/docs/Web/HTTP/Overview)
 - Glossary:
 

@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletNode()
 slug: Web/API/AudioWorkletNode/AudioWorkletNode
+page-type: web-api-constructor
 tags:
   - API
   - AudioWorkletNode
@@ -19,8 +20,8 @@ processing.
 ## Syntax
 
 ```js
-var node = new AudioWorkletNode(context, name);
-var node = new AudioWorkletNode(context, name, options);
+new AudioWorkletNode(context, name)
+new AudioWorkletNode(context, name, options)
 ```
 
 ### Parameters
@@ -52,10 +53,6 @@ var node = new AudioWorkletNode(context, name, options);
     - `processorOptions` {{optional_inline}}
       - : Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.
 
-### Return value
-
-The newly constructed {{domxref("AudioWorkletNode")}} instance.
-
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
@@ -77,7 +74,7 @@ If `outputChannelCount` isn't specified, and `numberOfInputs` and `numberOfOutpu
 
 Otherwise, if `outputChannelCount` is provided *and* if the values of `numberOfInputs` and `numberOfOutputs` are both 1, the audio worklet node's channel count is set to the value of `outputChannelCount`. Otherwise, the channel count of each channel in the set of output channels is set to match the corresponding value in the `outputChannelCount` array.
 
-## Example
+## Examples
 
 _For a complete example demonstrating user-defined audio processing, see the
 {{domxref("AudioWorkletNode")}} page._

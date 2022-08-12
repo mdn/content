@@ -15,13 +15,13 @@ browser-compat: webextensions.api.storage.managed
 ---
 {{AddonSidebar()}}
 
-A {{WebExtAPIRef("storage.StorageArea")}} object that represents the `managed` storage area. Items in `managed` storage are set by the domain administrator or other native applications installed on user's computer, and are read-only for the extension. Trying to modify this storage area results in an error.
+A {{WebExtAPIRef("storage.StorageArea")}} object that represents the `managed` storage area. Items in `managed` storage are set by the domain administrator or other native applications installed on the user's computer and are read-only for the extension. Trying to modify this storage area results in an error.
 
 ## Provisioning managed storage
 
-The procedure for provisioning managed storage is different for different browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/extensions/manifest/storage) article.
+The procedure for provisioning managed storage varies between browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/docs/extensions/mv3/manifest/storage/) article.
 
-For Firefox, you need to create a JSON manifest file in a specific format, in a specific location. For the details of manifest syntax and location, see [Native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
+For Firefox, you need to create a JSON manifest file in a specific format and location. For the details of manifest syntax and location, see [Native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 
 Here's an example manifest:
 
@@ -40,19 +40,35 @@ Here's an example manifest:
 Given this manifest, the "favorite-color-examples\@mozilla.org" extension could access the data using code like this:
 
 ```js
-var storageItem = browser.storage.managed.get('color');
+let storageItem = browser.storage.managed.get('color');
 storageItem.then((res) => {
   console.log(`Managed color is: ${res.color}`);
 });
 ```
 
+## Methods
+
+The `managed` object implements the methods defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
+
+- {{WebExtAPIRef("storage.StorageArea.get()", "storage.managed.get()")}}
+  - : Retrieves one or more items from the storage area.
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.managed.getBytesInUse()")}}
+  - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
+
+## Events
+
+The `managed` object implements the events defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
+
+- {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.managed.onChanged")}}
+  - : Fires when one or more items in the storage area change.
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-managed) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#property-managed) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

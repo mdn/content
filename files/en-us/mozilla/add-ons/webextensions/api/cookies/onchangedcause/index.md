@@ -41,17 +41,17 @@ Values of this type are strings. Possible values are:
 You can listen to the {{WebExtAPIRef("cookies.onChanged")}} event to be notified when cookies change. The listener is passed a `changeInfo` object that contains a `cause` property, whose value is the `OnChangeCaused` string:
 
 ```js
-browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+browser.cookies.onChanged.addListener((changeInfo) => {
+  console.log(`Cookie changed: \n`
+    + ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n`
+    + ` * Cause: ${changeInfo.cause}\n`
+    + ` * Removed: ${changeInfo.removed}`);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-OnChangedCause) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#type-OnChangedCause) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

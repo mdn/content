@@ -8,6 +8,7 @@ tags:
   - Data Type
   - Reference
   - display-outside
+browser-compat: css.properties.display.display-outside
 ---
 {{CSSRef}}
 
@@ -50,13 +51,11 @@ span {
 
 ## Specifications
 
-| Specification                                                                                        | Status                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-outside', 'display-outside')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.properties.display.display-outside", 10)}}
+{{Compat}}
 
 ## See also
 

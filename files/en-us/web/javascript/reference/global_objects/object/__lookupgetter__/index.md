@@ -46,7 +46,7 @@ It is now possible to do this in a standardized way using
 ### Standard-compliant and non-standard ways to get a property getter
 
 ```js
-var obj = {
+const obj = {
   get foo() {
     return Math.random() > 0.5 ? 'foo' : 'bar';
   }
@@ -54,11 +54,11 @@ var obj = {
 
 // Non-standard and deprecated way
 obj.__lookupGetter__('foo');
-// (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
+// [Function: get foo]
 
 // Standard-compliant way
 Object.getOwnPropertyDescriptor(obj, "foo").get;
-// (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
+// [Function: get foo]
 ```
 
 ## Specifications
@@ -78,5 +78,4 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
   {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.prototype.__defineGetter__()")}}
 - {{jsxref("Object.prototype.__defineSetter__()")}}
-- [JS
-  Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)

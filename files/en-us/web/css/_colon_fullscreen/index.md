@@ -18,7 +18,9 @@ The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 
 ## Syntax
 
-{{csssyntax}}
+```
+:fullscreen
+```
 
 ## Usage notes
 

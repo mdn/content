@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -32,13 +33,12 @@ transparent black in the returned `ImageData` object.
 > {{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} method.
 
 You can find more information about `getImageData()` and general
-manipulation of canvas contents in [Pixel
-manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).
+manipulation of canvas contents in [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).
 
 ## Syntax
 
 ```js
-ctx.getImageData(sx, sy, sw, sh);
+getImageData(sx, sy, sw, sh)
 ```
 
 ### Parameters
@@ -61,7 +61,7 @@ ctx.getImageData(sx, sy, sw, sh);
 An {{domxref("ImageData")}} object containing the image data for the rectangle of the
 canvas specified. The coordinates of the rectangle's top-left corner are
 `(sx, sy)`, while the coordinates of the bottom corner are
-`(sx + sw, sy + sh)`.
+`(sx + sw - 1, sy + sh - 1)`.
 
 ### Exceptions
 
@@ -74,35 +74,42 @@ canvas specified. The coordinates of the rectangle's top-left corner are
     configure CORS to allow the source image to be used in this way.
     See [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image).
 
-## Example
+## Examples
 
 ### Getting image data from a canvas
 
-This example draws a rectangle, and then uses `getImageData()` to grab a
+This example draws an image, and then uses `getImageData()` to grab a
 portion of the canvas.
 
+We use `getImageData()` to extract a slice of the image, starting at `(10, 20)`, with a width of `80` and a height of `230`. We then draw this slice three times, positioning the slices progressively below and to the right of the last slice.
+
+#### HTML
+
 ```html
-<canvas id="canvas"></canvas>
+<canvas id="canvas" width="700" height="400"></canvas>
 ```
 
-The object retrieved by `getImageData()` has a width of 200 and a height of
-100, for a total of 20,000 pixels. Of those pixels, most are either transparent or taken
-from off the canvas; only 2,500 of them are opaque black (the color of the drawn
-rectangle).
+#### JavaScript
 
 ```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-ctx.rect(10, 10, 100, 100);
-ctx.fill();
 
-let imageData = ctx.getImageData(60, 60, 200, 100);
-ctx.putImageData(imageData, 150, 10);
+const image = new Image();
+image.src = 'plumeria.jpg';
+image.addEventListener('load', () => {
+  ctx.drawImage(image, 0, 0, 233, 320);
+
+  const imageData = ctx.getImageData(10, 20, 80, 230);
+  ctx.putImageData(imageData, 260, 0);
+  ctx.putImageData(imageData, 380, 50);
+  ctx.putImageData(imageData, 500, 100);
+});
 ```
 
 #### Result
 
-{{EmbedLiveSample("Getting_image_data_from_a_canvas", 700, 180)}}
+{{EmbedLiveSample("Getting_image_data_from_a_canvas", "", 420)}}
 
 ## Specifications
 

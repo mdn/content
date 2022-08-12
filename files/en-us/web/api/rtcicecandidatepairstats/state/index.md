@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.state
 slug: Web/API/RTCIceCandidatePairStats/state
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -21,26 +22,27 @@ browser-compat: api.RTCIceCandidatePairStats.state
 ---
 {{APIRef("WebRTC")}}
 
-The **`state`** property in an
-{{domxref("RTCIceCandidatePairStats")}} object indicates the state of the check list
-of which the candidate pair is a member.
+The **`state`** property in a string that indicates the state of the check list of which the candidate pair is a member.
 
-## Syntax
+## Value
 
-```js
-state = rtcIceCandidatePairStats.state;
-```
+A string whose value is one of the following:
 
-### Value
-
-A {{domxref("DOMString")}} whose value is one of those found in the
-{{domxref("RTCStatsIceCandidatePairState")}} enumerated type.
+- `failed`
+  - : A check for this pair has been performed but failed. A failure can occur either because no response was received or because the response indicated that an unrecoverable error occurred.
+- `frozen`
+  - : No check has been performed yet for this candidate pair, and performing the check is blocked until another check is successful. Once that check has succeeded, this pair will unfreeze and move into the `waiting` state.
+- `in-progress`
+  - : A check has been initiated for this pair, but the check's transaction is still in progress.
+- `succeeded`
+  - : A check for this pair has been completed successfully.
+- `waiting`
+  - : This pair has not yet been checked, but the check can be performed as soon as this pair is the highest priority pair remaining in the `waiting` state.
 
 ## ICE check lists
 
 During ICE negotiation, the ICE layer builds up a **check list**, which is
-a list of potential pairings of ICE candidates. Each pair has a state, whose value is
-represented by `RTCStatsIceCandidatePairState`.
+a list of potential pairings of ICE candidates. Each pair has a state, represented by a string literal.
 
 ![A diagram showing how ICE candidate pairs change state as the check list is analyzed](ice-check-list-states.svg)
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.disabled
 slug: Web/API/HTMLSelectElement/disabled
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,13 +16,11 @@ The **`HTMLSelectElement.disabled`** is a boolean value that reflects the
 HTML attribute, which indicates whether the control is disabled. If it is disabled, it
 does not accept clicks. A disabled element is unusable and un-clickable.
 
-## Syntax
+## Value
 
-```js
-aSelectElement.disabled = aBool;
-```
+A boolean value.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -43,10 +42,10 @@ aSelectElement.disabled = aBool;
 ### JavaScript
 
 ```js
-var allowDrinksCheckbox = document.getElementById("allow-drinks");
-var drinkSelect = document.getElementById("drink-select");
+const allowDrinksCheckbox = document.getElementById("allow-drinks");
+const drinkSelect = document.getElementById("drink-select");
 
-allowDrinksCheckbox.addEventListener("change", function(event) {
+allowDrinksCheckbox.addEventListener("change", (event) => {
   if (event.target.checked) {
     drinkSelect.disabled = false;
   } else {
@@ -57,7 +56,7 @@ allowDrinksCheckbox.addEventListener("change", function(event) {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

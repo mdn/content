@@ -10,6 +10,9 @@ tags:
   - Switch
   - a11y
   - toggle
+spec-urls:
+  - https://w3c.github.io/aria/#switch
+  - https://w3c.github.io/html-aria/#index-aria-switch
 ---
 The ARIA **`switch`** role is functionally identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except that instead of representing "checked" and "unchecked" states, which are fairly generic in meaning, the `switch` role represents the states "on" and "off."
 
@@ -26,11 +29,33 @@ This example creates a widget and assigns the ARIA `switch` role to it.
 
 ## Description
 
-The ARIA **`switch`** role is identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except instead of being "checked" or "unchecked", it is either "on" or "off". Like the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute is required. The two possible values are `true` and `false`. Unlike a `<checkbox>` or `role="checkbox"`, there is no `indeterminate` or `mixed` state. The `switch` role does not support the value `mixed` for the `aria-checked` attribute; assigning a value of `mixed` to a `switch` instead sets the value to `false`.
+The ARIA **`switch`** role is identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except instead of being "checked" or "unchecked", it is either "on" or "off". Like the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute is required. The two possible values are `true` and `false`. Unlike an `<input type="checkbox">` or `role="checkbox"`, there is no `indeterminate` or `mixed` state. The `switch` role does not support the value `mixed` for the `aria-checked` attribute; assigning a value of `mixed` to a `switch` instead sets the value to `false`.
 
 Assistive technologies may choose to represent `switch` widgets with a specialized presentation to reflect the notion of an on/off switch.
 
 Since a switch is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the `tabindex` attribute to change this. The expected keyboard shortcut for toggling the value of a switch is the <kbd>Space</kbd> key. The developer is required to change the value of the `aria-checked` attribute dynamically when the switch is toggled.
+
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `switch`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `switch` element as it is a role that does not support semantic children.
+
+For example, consider the following `switch` element, which contains a heading.
+
+```html
+<div role="switch"><h3>Title of my switch</h3></div>
+```
+
+Because descendants of `switch` are presentational, the following code is equivalent:
+
+```html
+<div role="switch"><h3 role="presentation">Title of my switch</h3></div>
+```
+
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="switch">Title of my switch</div>
+```
 
 ### Associated ARIA roles, states, and properties
 
@@ -93,7 +118,7 @@ document.querySelectorAll(".switch").forEach(function(theSwitch) {
 function handleClickEvent(evt) {
   let el = evt.target;
 
-  if (el.getAttribute("aria-checked") == "true") {
+  if (el.getAttribute("aria-checked") === "true") {
       el.setAttribute("aria-checked", "false");
   } else {
       el.setAttribute("aria-checked", "true");
@@ -158,15 +183,12 @@ The result looks like this:
 
 ## Specifications
 
-| Specification                                                        | Status                           | Comment                                                                 |
-| -------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------- |
-| {{SpecName('ARIA', '#switch')}}                             | {{Spec2('ARIA')}}         | Defines ARIA in general along with all roles, properties, and so forth. |
-| {{SpecName('ARIA in HTML', '#index-aria-switch')}} | {{Spec2('ARIA in HTML')}} | Describes how ARIA's features integrate into HTML.                      |
+{{Specifications}}
 
 ## See also
 
 - [ARIA: checkbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-- [`<input type="checkbox">`](en-US/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 
 <section id="Quick_links">

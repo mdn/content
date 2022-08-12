@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.tabs.remove(
+let removing = browser.tabs.remove(
   tabIds          // integer or integer array
 )
 ```
@@ -49,7 +49,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var removing = browser.tabs.remove(2);
+let removing = browser.tabs.remove(2);
 removing.then(onRemoved, onError);
 ```
 
@@ -64,7 +64,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var removing = browser.tabs.remove([15, 14, 1]);
+let removing = browser.tabs.remove([15, 14, 1]);
 removing.then(onRemoved, onError);
 ```
 
@@ -74,7 +74,7 @@ removing.then(onRemoved, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-remove) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-remove) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

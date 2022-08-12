@@ -3,6 +3,7 @@ title: scroll-padding-top
 slug: Web/CSS/scroll-padding-top
 tags:
   - CSS
+  - CSS Property
   - Reference
   - Web
   - recipe:css-property
@@ -31,6 +32,7 @@ scroll-padding-top: 10%;
 scroll-padding-top: inherit;
 scroll-padding-top: initial;
 scroll-padding-top: revert;
+scroll-padding-top: revert-layer;
 scroll-padding-top: unset;
 ```
 

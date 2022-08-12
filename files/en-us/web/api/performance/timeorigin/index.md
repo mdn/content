@@ -1,9 +1,9 @@
 ---
 title: Performance.timeOrigin
 slug: Web/API/Performance/timeOrigin
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - High Resolution Time API
   - Performance
   - Property
@@ -11,7 +11,7 @@ tags:
   - timeOrigin
 browser-compat: api.Performance.timeOrigin
 ---
-{{SeeCompatTable}}{{APIRef("High Resolution Time")}}
+{{APIRef("High Resolution Time")}}
 
 The **`timeOrigin`** read-only property of the
 {{domxref("Performance")}} interface returns the high resolution timestamp of the
@@ -19,13 +19,7 @@ start time of the performance measurement.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var timeOrigin = performance.timeOrigin
-```
-
-### Value
+## Value
 
 A high resolution timestamp.
 

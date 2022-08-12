@@ -1,6 +1,7 @@
 ---
 title: ProcessingInstruction.target
 slug: Web/API/ProcessingInstruction/target
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -18,11 +19,11 @@ For example:
 <?xml version="1.0"?>
 ```
 
-is a processing instruction whose `target`is `xml`.
+is a processing instruction whose `target` is `xml`.
 
 ## Value
 
-A {{jsxref("String")}} containing the name of the application.
+A string containing the name of the application.
 
 ## Example
 
@@ -39,7 +40,7 @@ const pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" t
 doc.insertBefore(pi, doc.firstChild);
 
 const output = document.getElementsByTagName("output")[0];
-output.textContent = "This processing instruction's target is: " + doc.firstChild.target;
+output.textContent = `This processing instruction's target is: ${doc.firstChild.target}`;
 ```
 
 {{EmbedLiveSample("In an XML document", "100%", 50)}}
@@ -56,7 +57,7 @@ The processing instruction line will be considered, and represented, as a {{domx
 ```js
 let node = document.getElementsByTagName("pre")[0].previousSibling.previousSibling;
 
-let result = "Node with the processing instruction: " + node.nodeName + ": " + node.nodeValue + "\n";
+let result = `Node with the processing instruction: ${node.nodeName}: ${node.nodeValue}\n`;
 
 document.getElementsByTagName("pre")[0].textContent = result;
 ```

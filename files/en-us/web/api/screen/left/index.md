@@ -1,6 +1,7 @@
 ---
 title: Screen.left
 slug: Web/API/Screen/left
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions
@@ -16,11 +17,9 @@ browser-compat: api.Screen.left
 Returns the distance in pixels from the left side of the main screen to the left side
 of the current screen.
 
-## Syntax
+## Value
 
-```js
-var left = window.screen.left;
-```
+A number.
 
 ## Browser compatibility
 

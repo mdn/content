@@ -30,11 +30,11 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 - `window.devicePixelRatio` has been landed. ({{bug("564815")}})
 - The MacOS X backend for `window.navigator.battery` has been implemented. ({{bug("696045")}})
 - {{domxref("BlobBuilder", "MozBlobBuilder")}} is removed. Developers need to use {{domxref("Blob")}} constructor for creating a `Blob` object. ({{bug("744907")}})
-- The {{event("visibilitychange")}} event and the [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) has been unprefixed ({{bug("812086")}}).
+- The {{domxref("document.visibilitychange_event", "visibilitychange")}} event and the [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) has been unprefixed ({{bug("812086")}}).
 - {{domxref("TextDecoder")}} and {{domxref("TextEncoder")}} have been added. Note that the implementation and spec of these evolved and have been changed in Firefox 19 ({{bug("764234")}}).
-- `HTMLMediaElement.src` has been separate in two properties: the standard `src` property, dealing with {{domxref("DOMString")}}, and the prefixed `mozSrcObject` property, dealing with [media streams](/en-US/docs/Web/API/Media_Streams_API) ({{bug("792665")}}).
+- `HTMLMediaElement.src` has been separate in two properties: the standard `src` property, dealing with strings, and the prefixed `mozSrcObject` property, dealing with [media streams](/en-US/docs/Web/API/Media_Streams_API) ({{bug("792665")}}).
 - Support for [transferable objects.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#passing_data_by_transferring_.c2.a0ownership_%28transferable_objects%29)
-- The {{domxref("Screen.lockOrientation()")}} method now supports an `Array` of {{domxref("DOMString")}} as argument ({{bug("784549")}}.
+- The {{domxref("Screen.lockOrientation()")}} method now supports an `Array` of strings as argument ({{bug("784549")}}.
 
 ### JavaScript
 
@@ -62,16 +62,16 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 
 ### Interface changes
 
-- {{interface("nsIStreamListener")}}
+- `nsIStreamListener`
   - : The 4th parameter (aOffset) of `onDataAvailable()` method changes to unsigned long long. ({{bug("784912")}})
-- {{interface("nsIUploadChannel")}}
+- `nsIUploadChannel`
   - : `setUploadStream()` supports over 2GB content-length ({{bug("790617")}})
-- {{interface("nsIEditor")}}
-  - : `addEditorObserver()` has been removed, use `setEditorObserver()` instead, `removeEditorObserver()` no longer takes a {{interface("nsIEditorObserver")}} parameter ({{bug("785091")}})
-- {{interface("nsIHttpProtocolHandler")}}
+- `nsIEditor`
+  - : `addEditorObserver()` has been removed, use `setEditorObserver()` instead, `removeEditorObserver()` no longer takes a `nsIEditorObserver` parameter ({{bug("785091")}})
+- `nsIHttpProtocolHandler`
   - : `http-on-modify-request` observers are no longer guaranteed to be called synchronously during `nsIChannel.asyncOpen()`.
     For observers that need to be called during `asyncOpen`(), the new `http-on-opening-request` observer topic has been added. `See` ({{bug("800799")}})
-- {{interface("nsIProtocolProxyService")}}
+- `nsIProtocolProxyService`
   - : The `resolve` method has been removed. Now, only the `asyncResolve` method can be used. See ({{bug("769764")}})
 
 #### New interfaces
@@ -80,11 +80,11 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 
 The following interfaces have been removed.
 
-- {{interface("nsIEditorObserver")}}
+- `nsIEditorObserver`
 
 ## See also
 
-- [Firefox 18 Beta Release Notes](https://www.mozilla.org/en-US/firefox/18.0beta/releasenotes/)
+- [Firefox 18 Beta Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/18.0beta/releasenotes/)
 - [Aurora 18: HiDPI & Touch Events](https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/) (Mozilla Hacks)
 - [Add-on Compatibility for Firefox 18](https://blog.mozilla.org/addons/2012/12/28/compatibility-for-firefox-18/) (Add-ons Blog)
 

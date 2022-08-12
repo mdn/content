@@ -1,6 +1,7 @@
 ---
 title: Non-cryptographic uses of SubtleCrypto
 slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
+page-type: guide
 tags:
   - Web Crypto API
 ---
@@ -9,7 +10,7 @@ This article will focus on uses of the [`digest`](/en-US/docs/Web/API/SubtleCryp
 
 This article does not discuss the cryptographic uses of the [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto). An important thing to take away from this article is **don't use this API** for production cryptographic purposes because it is powerful and low level. To use it correctly you will need to take many context specific steps to accomplish cryptographic tasks correctly. If any of those steps are taken incorrectly at best your code won't run, at worse it *will* run and you will unknowingly be putting your users at risk with an insecure product.
 
-You may not even need to use the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) at all. Many of the things you would want to use cryptography for are already solved and part of the Web platform. For example, if you are worried about man-in-the-middle attacks, such as wifi hotspots reading the information between the client and the server, this is solved by ensuring correct use of [HTTPS](/en-US/docs/Glossary/https). Do you want to securely send information between users? Then you can set up a data connection between users using [WebRTC Data Channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels) which is encrypted as part of the standard.
+You may not even need to use the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) at all. Many of the things you would want to use cryptography for are already solved and part of the Web platform. For example, if you are worried about man-in-the-middle attacks, such as Wi-Fi hotspots reading the information between the client and the server, this is solved by ensuring correct use of [HTTPS](/en-US/docs/Glossary/https). Do you want to securely send information between users? Then you can set up a data connection between users using [WebRTC Data Channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels) which is encrypted as part of the standard.
 
 The [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto) provides low level primitives for working with cryptography, but implementing a system using these tools is a complicated task. Mistakes are hard to notice and the results can mean your user's data is not as secure as you think it is. Which could have catastrophic results if your users are sharing sensitive or valuable data.
 
@@ -67,12 +68,12 @@ async function fileHash(file) {
   // The resulting hash is stored in an array buffer
   const hashAsArrayBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
 
-  // To display it as as a string we will get the hexadecimal value of each byte of the array buffer
+  // To display it as a string we will get the hexadecimal value of each byte of the array buffer
   // This gets us an array where each byte of the array buffer becomes one item in the array
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
   // We then convert it to a regular array so we can convert each item to hexadecimal strings
   // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte).
-  const hashAsString = Array.from(uint8ViewOfHash).map(b => b.toString(16).padStart(2, '0')).join('');
+  const hashAsString = Array.from(uint8ViewOfHash).map((b) => b.toString(16).padStart(2, '0')).join('');
   return hashAsString;
 }
 
@@ -88,7 +89,7 @@ async function hashTheseFiles(e) {
 }
 ```
 
- {{EmbedLiveSample("hashing-a-file")}}
+ {{EmbedLiveSample("hashing_a_file")}}
 
 ### Where would you use this?
 
@@ -97,10 +98,10 @@ At this point you may be thinking to yourself "*I can use this on my own website
 - Executable downloads should **always** be done over HTTPS. This prevents intermediate parties from performing attacks like this so it would be redundant.
 - If the attacker is able to replace the download file on the original server, then they can also simply replace the code which invokes the SubtleCrypto interface to bypass it and just state that everything is fine. Probably something sneaky like replacing [strict equality](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_), which can be a pain to spot in your own code:
 
-```js
---- if (checksum === correctCheckSum) return true;
-+++ if (checksum = correctCheckSum) return true;
-```
+  ```diff
+  --- if (checksum === correctCheckSum) return true;
+  +++ if (checksum = correctCheckSum) return true;
+  ```
 
 One place it may be worthwhile, is if you want to test a file from a third party download source, which you do not control. This would be the case as long as the download location has [CORS](/en-US/docs/Glossary/CORS) headers enabled to let you scan the file before you make it available to your users. Unfortunately not many servers have CORS turned on by default.
 
@@ -157,7 +158,7 @@ async function fileHash(file) {
   // different binary representations of the letters in our message will result in different hashes
   const encoder = new TextEncoder();
   // Null-terminated means the string ends in the null character which in JavaScript is '\0'
-  const view = encoder.encode('blob ' + length + '\0');
+  const view = encoder.encode(`blob ${length}\0`);
 
   // We then combine the 2 Array Buffers together into a new Array Buffer.
   const newBlob = new Blob([view.buffer, arrayBuffer], {
@@ -172,7 +173,7 @@ async function fileHash(file) {
 
 function hashToString(arrayBuffer) {
   const uint8View = new Uint8Array(arrayBuffer);
-  return Array.from(uint8View).map(b => b.toString(16).padStart(2, '0')).join('');
+  return Array.from(uint8View).map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
 // like before we iterate over the files

@@ -1,6 +1,7 @@
 ---
 title: PannerNode.distanceModel
 slug: Web/API/PannerNode/distanceModel
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -25,19 +26,11 @@ The possible values are:
 
 `inverse` is the default value of `distanceModel`.
 
-## Syntax
+## Value
 
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.distanceModel = 'inverse';
-```
+An enum — see [`DistanceModelType`](https://webaudio.github.io/web-audio-api/#idl-def-DistanceModelType).
 
-### Value
-
-A enum — see [`DistanceModelType`](https://webaudio.github.io/web-audio-api/#idl-def-DistanceModelType).
-
-## Example
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
@@ -52,4 +45,4 @@ See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/cre
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.ssrc
 slug: Web/API/RTCRtpStreamStats/ssrc
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -24,13 +25,7 @@ The {{domxref("RTCRtpStreamStats")}} dictionary's
 packets whose statistics are covered by the {{domxref("RTCStatsReport")}} that
 includes this `RTCRtpStreamStats` dictionary.
 
-## Syntax
-
-```js
-var ssrc = RTCRtpStreamStats.ssrc;
-```
-
-### Value
+## Value
 
 The Synchronization Source (SSRC) is a 32-bit integer uniquely identifying the source
 of the RTP packets whose statistics are covered by the {{domxref("RTCStatsReport")}}

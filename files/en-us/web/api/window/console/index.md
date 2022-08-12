@@ -1,6 +1,7 @@
 ---
 title: Window.console
 slug: Web/API/Window/console
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -8,6 +9,7 @@ tags:
   - Reference
   - Window
   - console
+spec-urls: https://console.spec.whatwg.org/
 ---
 {{APIRef}}
 
@@ -33,8 +35,6 @@ See {{SectionOnPage("/en-US/docs/Web/API/console", "Usage")}} for more thorough 
 
 ## Specifications
 
-| Specification                        | Status                           | Comment             |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Console API')}} | {{Spec2('Console API')}} | Initial definition. |
+{{Specifications}}
 
 > **Note:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.

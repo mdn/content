@@ -1,6 +1,7 @@
 ---
 title: USBDevice.clearHalt()
 slug: Web/API/USBDevice/clearHalt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - clearHalt
+  - Experimental
 browser-compat: api.USBDevice.clearHalt
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
@@ -23,15 +25,15 @@ terminology) to clear that condition. See the for details.
 ## Syntax
 
 ```js
-var promise = USBDevice.clearHalt(direction, endpointNumber)
+clearHalt(direction, endpointNumber)
 ```
 
 ### Parameters
 
-- direction
+- `direction`
   - : Indicates whether the devices input or output should be cleared. Valid values
     are `'in'` or `'out'`.
-- endpointNumber
+- `endpointNumber`
   - : Indicates the number of the endpoint to clear. The promise will reject if an invalid
     endpoint is supplied.
 
@@ -39,7 +41,7 @@ var promise = USBDevice.clearHalt(direction, endpointNumber)
 
 A {{jsxref("promise")}}.
 
-## Example
+## Examples
 
 The following example shows how to test for and clear a `'stall'` condition
 in the result of a data transfer.
@@ -52,9 +54,9 @@ while (true) {
   let result = await data.transferIn(1, 6);
 
   if (result.data && result.data.byteLength === 6) {
-    console.log('Channel 1: ' + result.data.getUint16(0));
-    console.log('Channel 2: ' + result.data.getUint16(2));
-    console.log('Channel 5: ' + result.data.getUint16(4));
+    console.log(`Channel 1: ${result.data.getUint16(0)}`);
+    console.log(`Channel 2: ${result.data.getUint16(2)}`);
+    console.log(`Channel 5: ${result.data.getUint16(4)}`);
   }
 
   if (result.status === 'stall') {

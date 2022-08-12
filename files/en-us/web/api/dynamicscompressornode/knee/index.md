@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.knee
 slug: Web/API/DynamicsCompressorNode/knee
+page-type: web-api-instance-property
 tags:
   - API
   - DynamicsCompressorNode
@@ -18,25 +19,17 @@ The `knee` property's default value is `30` and it can be set between `0` and `4
 
 ![Describes the effect of a knee, showing two curves one for a hard knee, the other for a soft knee.](webaudioknee.png)
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();
-compressor.knee.value = 40;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}}.
 
 > **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
-## Example
+## Examples
 
 ```js
-var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();
+const audioCtx = new AudioContext();
+const compressor = audioCtx.createDynamicsCompressor();
 compressor.knee.value = 40;
 ```
 

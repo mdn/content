@@ -60,6 +60,7 @@ grid-area: 2 span / another-grid-area span;
 grid-area: inherit;
 grid-area: initial;
 grid-area: revert;
+grid-area: revert-layer;
 grid-area: unset;
 ```
 
@@ -152,4 +153,4 @@ grid-area: unset;
 
 - Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}
 - Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Video tutorial: *[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)*
+- Video tutorial: *[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)*

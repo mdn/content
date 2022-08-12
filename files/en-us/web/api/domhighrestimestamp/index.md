@@ -34,14 +34,14 @@ event.timeStamp
 // 1519211809934
 // 1519211810362
 // 1519211811670
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 event.timeStamp;
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// …
 ```
 
 In Firefox, you can also enable `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
@@ -82,7 +82,7 @@ To determine how much time has elapsed since a particular point in your code, yo
 ```js
 let startTime = performance.now();
 
-/* ... do things for a while ... */
+/* do things for a while */
 
 let elapsedTime = performance.now() - startTime;
 ```

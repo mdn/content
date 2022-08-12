@@ -1,6 +1,7 @@
 ---
 title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
+page-type: web-api-instance-property
 tags:
   - API
   - Gecko
@@ -15,15 +16,11 @@ browser-compat: api.Window.scrollMaxX
 The **`Window.scrollMaxX`** read-only property returns the
 maximum number of pixels that the document can be scrolled horizontally.
 
-## Syntax
+## Value
 
-```js
-xMax = window.scrollMaxX
-```
+A number.
 
-- `xMax` is the number of pixels.
-
-## Example
+## Examples
 
 ```js
 // Scroll to right edge of the page
@@ -34,7 +31,7 @@ window.scrollTo(maxX, 0);
 
 ## Notes
 
-Do not use this property to get the total document width, which is not equivalent to [window.innerWidth](/en-US/docs/DOM/window.innerWidth) + window\.scrollMaxX,
+Do not use this property to get the total document width, which is not equivalent to [window.innerWidth](/en-US/docs/Web/API/Window/innerWidth) + window\.scrollMaxX,
 because {{domxref("window.innerWidth")}} includes the width of any visible vertical
 scrollbar, thus the result would exceed the total document width by the width of any
 visible vertical scrollbar. Instead use

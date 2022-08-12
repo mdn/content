@@ -25,8 +25,9 @@ The [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Statements)
 contains exhaustive details about the statements in this chapter. The semicolon
 (`;`) character is used to separate statements in JavaScript code.
 
-Any JavaScript expression is also a statement. See [Expressions and
-operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) for complete information about expressions.
+Any JavaScript expression is also a statement.
+See [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+for complete information about expressions.
 
 ## Block statement
 
@@ -35,10 +36,10 @@ statements. The block is delimited by a pair of curly brackets:
 
 ```js
 {
-  statement_1;
-  statement_2;
-  ⋮
-  statement_n;
+  statement1;
+  statement2;
+  // …
+  statementN;
 }
 ```
 
@@ -74,7 +75,7 @@ Here, `{ x++; }` is the block statement.
 >
 > This outputs `2` because the `var x` statement within the block
 > is in the same scope as the `var x` statement before the block. (In C or
-> Java, the equivalent code would have outputted `1`.)
+> Java, the equivalent code would have output `1`.)
 >
 > **Since ECMAScript2015**, the `let` and
 > `const` variable declarations are block-scoped. See the
@@ -87,7 +88,7 @@ A conditional statement is a set of commands that executes if a specified condit
 true. JavaScript supports two conditional statements: `if...else` and
 `switch`.
 
-### `if...else` statement
+### if...else statement
 
 Use the `if` statement to execute a statement if a logical condition is
 `true`. Use the optional `else` clause to execute a statement if
@@ -97,9 +98,9 @@ An `if` statement looks like this:
 
 ```js
 if (condition) {
-  statement_1;
+  statement1;
 } else {
-  statement_2;
+  statement2;
 }
 ```
 
@@ -117,20 +118,20 @@ You can also compound the statements using `else if` to have multiple
 conditions tested in sequence, as follows:
 
 ```js
-if (condition_1) {
-  statement_1;
-} else if (condition_2) {
-  statement_2;
-} else if (condition_n) {
-  statement_n;
+if (condition1) {
+  statement1;
+} else if (condition2) {
+  statement2;
+} else if (conditionN) {
+  statementN;
 } else {
-  statement_last;
+  statementLast;
 }
 ```
 
 In the case of multiple conditions, only the first logical condition which evaluates to
 `true` will be executed. To execute multiple statements, group them within a
-block statement (`{ … }`).
+block statement (`{ /* … */ }`).
 
 #### Best practice
 
@@ -139,15 +140,15 @@ nesting `if` statements:
 
 ```js
 if (condition) {
-  statement_1_runs_if_condition_is_true;
-  statement_2_runs_if_condition_is_true;
+  // Statements for when condition is true
+  // …
 } else {
-  statement_3_runs_if_condition_is_false;
-  statement_4_runs_if_condition_is_false;
+  // Statements for when condition is false
+  // …
 }
 ```
 
-In general it's good practice to not have an `if...else` with an assignment like "`x = y`" as a condition:
+In general it's good practice to not have an `if...else` with an assignment like `x = y` as a condition:
 
 ```js example-bad
 if (x = y) {
@@ -178,12 +179,16 @@ conditional statement.
 > For example:
 >
 > ```js
-> var b = new Boolean(false);
-> if (b)         // this condition evaluates to true
-> if (b == true) // this condition evaluates to false
+> const b = new Boolean(false);
+> if (b) {
+>   // this condition evaluates to true
+> }
+> if (b == true) {
+>   // this condition evaluates to false
+> }
 > ```
 
-#### **Example**
+#### Example
 
 In the following example, the function `checkData` returns `true`
 if the number of characters in a `Text` object is three. Otherwise, it
@@ -191,18 +196,16 @@ displays an alert and returns `false`.
 
 ```js
 function checkData() {
-  if (document.form1.threeChar.value.length == 3) {
+  if (document.form1.threeChar.value.length === 3) {
     return true;
   } else {
-    alert(
-        'Enter exactly three characters. ' +
-        `${document.form1.threeChar.value} is not valid.`);
+    alert(`Enter exactly three characters. ${document.form1.threeChar.value} is not valid.`);
     return false;
   }
 }
 ```
 
-### `switch` statement
+### switch statement
 
 A `switch` statement allows a program to evaluate an expression and attempt
 to match the expression's value to a `case` label. If a match is found, the
@@ -212,16 +215,15 @@ A `switch` statement looks like this:
 
 ```js
 switch (expression) {
-  case label_1:
-    statements_1
-    [break;]
-  case label_2:
-    statements_2
-    [break;]
-    …
+  case label1:
+    statements1;
+    break;
+  case label2:
+    statements2;
+    break;
+  // …
   default:
-    statements_def
-    [break;]
+    statementsDefault;
 }
 ```
 
@@ -248,9 +250,9 @@ executed, and then continues execution at the statement following `switch`.
 If `break` is omitted, the program continues execution inside the
 `switch` statement (and will evaluate the next `case`, and so on).
 
-##### **Example**
+##### Example
 
-In the following example, if `fruittype` evaluates to
+In the following example, if `fruitType` evaluates to
 `'Bananas'`, the program matches the value with case `'Bananas'`
 and executes the associated statement. When `break` is encountered, the
 program exits the `switch` and continues execution from the statement
@@ -258,7 +260,7 @@ following `switch`. If `break` were omitted, the statement for
 `case 'Cherries'` would also be executed.
 
 ```js
-switch (fruittype) {
+switch (fruitType) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
     break;
@@ -278,7 +280,7 @@ switch (fruittype) {
     console.log('Mangoes and papayas are $2.79 a pound.');
     break;
   default:
-   console.log(`Sorry, we are out of ${fruittype}.`);
+    console.log(`Sorry, we are out of ${fruitType}.`);
 }
 console.log("Is there anything else you'd like?");
 ```
@@ -298,12 +300,11 @@ are created equal. While it is common to throw numbers or strings as errors, it 
 frequently more effective to use one of the exception types specifically created for
 this purpose:
 
-- [ECMAScript
-  exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
+- [ECMAScript exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
 - [`DOMException`](/en-US/docs/Web/API/DOMException)
   and [`DOMError`](/en-US/docs/Web/API/DOMError)
 
-### `throw` statement
+### throw statement
 
 Use the `throw` statement to throw an exception. A `throw`
 statement specifies the value to be thrown:
@@ -319,27 +320,7 @@ code throws several exceptions of varying types:
 throw 'Error2';   // String type
 throw 42;         // Number type
 throw true;       // Boolean type
-throw {toString: function() { return "I'm an object!"; } };
-```
-
-> **Note:** You can specify an object when you throw an exception. You can
-> then reference the object's properties in the `catch` block.
-
-```js
-// Create an object type UserException
-function UserException(message) {
-  this.message = message;
-  this.name = 'UserException';
-}
-
-// Make the exception convert to a pretty string when used as a string
-// (e.g., by the error console)
-UserException.prototype.toString = function() {
-  return `${this.name}: "${this.message}"`;
-}
-
-// Create an instance of the object type and throw it
-throw new UserException('Value too high');
+throw {toString() { return "I'm an object!"; } };
 ```
 
 ### `try...catch` statement
@@ -365,31 +346,32 @@ The following example uses a `try...catch` statement. The example calls a
 function that retrieves a month name from an array based on the value passed to the
 function. If the value does not correspond to a month number
 (`1`–`12`), an exception is thrown with the value
-`"InvalidMonthNo"` and the statements in the `catch` block set the
+`'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
 ```js
 function getMonthName(mo) {
-  mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
-                'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  mo--; // Adjust month number for array index (1 = Jan, 12 = Dec)
+  const months = [
+    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
-    throw 'InvalidMonthNo'; // throw keyword is used here
+    throw new Error('InvalidMonthNo'); // throw keyword is used here
   }
 }
 
 try { // statements to try
   monthName = getMonthName(myMonth); // function could throw exception
-}
-catch (e) {
+} catch (e) {
   monthName = 'unknown';
   logMyErrors(e); // pass exception object to error handler (i.e. your own function)
 }
 ```
 
-#### The `catch` block
+#### The catch block
 
 You can use a `catch` block to handle all exceptions that may be generated
 in the `try` block.
@@ -415,8 +397,7 @@ transfers to the `catch` block.
 ```js
 try {
   throw 'myException'; // generates an exception
-}
-catch (err) {
+} catch (err) {
   // statements to handle any exceptions
   logMyErrors(err);    // pass exception object to error handler
 }
@@ -427,7 +408,7 @@ catch (err) {
 > `console.log()` is advised for debugging. It formats the message as an
 > error, and adds it to the list of error messages generated by the page.
 
-#### The `finally` block
+#### The finally block
 
 The `finally` block contains statements to be executed _after_ the
 `try` and `catch` blocks execute. Additionally, the
@@ -453,7 +434,7 @@ if an error occurs.
 openMyFile();
 try {
   writeMyFile(theData); // This may throw an error
-} catch(e) {
+} catch (e) {
   handleError(e); // If an error occurred, handle it
 } finally {
   closeMyFile(); // Always close the resource
@@ -469,7 +450,7 @@ function f() {
   try {
     console.log(0);
     throw 'bogus';
-  } catch(e) {
+  } catch (e) {
     console.log(1);
     return true;    // this return statement is suspended
                     // until finally block has completed
@@ -492,7 +473,7 @@ exceptions thrown or re-thrown inside of the `catch` block:
 function f() {
   try {
     throw 'bogus';
-  } catch(e) {
+  } catch (e) {
     console.log('caught inner "bogus"');
     throw e; // this throw statement is suspended until
              // finally block has completed
@@ -504,7 +485,7 @@ function f() {
 
 try {
   console.log(f());
-} catch(e) {
+} catch (e) {
   // this is never reached!
   // while f() executes, the `finally` block returns false,
   // which overwrites the `throw` inside the above `catch`
@@ -527,9 +508,8 @@ If an inner `try` block does _not_ have a corresponding
 2. the enclosing `try...catch` statement's `catch` block is
     checked for a match.
 
-For more information, see [nested
-try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks) on the
-[`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks)
+on the [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 reference page.
 
 ### Utilizing Error objects
@@ -556,7 +536,7 @@ function doSomethingErrorProne() {
     doSomethingToGetAJavascriptError();
   }
 }
-⋮
+
 try {
   doSomethingErrorProne();
 } catch (e) {               // NOW, we actually use `console.error()`

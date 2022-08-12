@@ -1,6 +1,7 @@
 ---
 title: Response.clone()
 slug: Web/API/Response/clone
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -14,24 +15,39 @@ browser-compat: api.Response.clone
 
 The **`clone()`** method of the {{domxref("Response")}} interface creates a clone of a response object, identical in every way, but stored in a different variable.
 
+Like the underlying {{domxref("ReadableStream.tee")}} api,
+the {{domxref("Response.body", "body")}} of a cloned `Response`
+will signal backpressure at the rate of the _faster_ consumer of the two bodies,
+and unread data is enqueued internally on the slower consumed `body`
+without any limit or backpressure.
+Backpressure refers to the mechanism by which the streaming consumer of data
+(in this case, the code that reads the body)
+slows down the producer of data (such as the TCP server)
+so as not to load large amounts of data in memory
+that is waiting to be used by the application.
+If only one cloned branch is consumed, then the entire body will be buffered in memory.
+Therefore, `clone()` is one way to read a response twice in sequence,
+but you should not use it to read very large bodies
+in parallel at different speeds.
+
 `clone()` throws a {{jsxref("TypeError")}} if the response body has already been used.
 In fact, the main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only.)
 
 ## Syntax
 
 ```js
-var response2 = response1.clone();
+clone()
 ```
 
 ### Parameters
 
 None.
 
-### Value
+### Return value
 
 A {{domxref("Response")}} object.
 
-## Example
+## Examples
 
 In our [Fetch Response clone example](https://github.com/mdn/fetch-examples/tree/master/fetch-response-clone) (see [Fetch Response clone live](https://mdn.github.io/fetch-examples/fetch-response-clone/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
 We then fetch this request using {{domxref("fetch()")}}.
@@ -39,21 +55,21 @@ When the fetch resolves successfully, we clone it, extract a blob from both resp
 {{domxref("URL.createObjectURL")}}, and display them in two separate {{htmlelement("img")}} elements.
 
 ```js
-var image1 = document.querySelector('.img1');
-var image2 = document.querySelector('.img2');
+const image1 = document.querySelector('.img1');
+const image2 = document.querySelector('.img2');
 
-var myRequest = new Request('flowers.jpg');
+const myRequest = new Request('flowers.jpg');
 
-fetch(myRequest).then(function(response) {
-  var response2 = response.clone();
+fetch(myRequest).then((response) => {
+  const response2 = response.clone();
 
-  response.blob().then(function(myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
+  response.blob().then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
     image1.src = objectURL;
   });
 
-  response2.blob().then(function(myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
+  response2.blob().then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
     image2.src = objectURL;
   });
 });

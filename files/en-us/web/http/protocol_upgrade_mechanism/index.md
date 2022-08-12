@@ -32,7 +32,7 @@ Connection: upgrade
 Upgrade: example/1, foo/2
 ```
 
-Other headers may be required depending on the requested protocol; for example, [WebSocket](/en-US/docs/Web/API/WebSocket) upgrades allow additional headers to configure details about the WebSocket connection as well as to offer a degree of security in opening the connection. See {{anch("Upgrading to a WebSocket connection")}} for more details.
+Other headers may be required depending on the requested protocol; for example, [WebSocket](/en-US/docs/Web/API/WebSocket) upgrades allow additional headers to configure details about the WebSocket connection as well as to offer a degree of security in opening the connection. See [Upgrading to a WebSocket connection](#upgrading_to_a_websocket_connection) for more details.
 
 If the server decides to upgrade the connection, it sends back a {{HTTPStatus(101, "101 Switching Protocols")}} response status with an Upgrade header that specifies the protocol(s) being switched to. If it does not (or cannot) upgrade the connection, it ignores the `Upgrade` header and sends back a regular response (for example, a {{HTTPStatus(200, "200 OK")}}).
 
@@ -145,7 +145,7 @@ Sec-WebSocket-Accept: hash
 ```
 
 - `hash`
-  - : If a {{HTTPHeader("Sec-WebSocket-Key")}} header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the {{interwiki("wikipedia", "SHA-1")}} hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/en-US/docs/Glossary/Base64) encoded to obtain the value of this property.
+  - : If a {{HTTPHeader("Sec-WebSocket-Key")}} header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the [SHA-1](https://en.wikipedia.org/wiki/SHA-1) hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/en-US/docs/Glossary/Base64) encoded to obtain the value of this property.
 
 ## References
 

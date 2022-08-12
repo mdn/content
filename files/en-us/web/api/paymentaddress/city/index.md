@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.city
 slug: Web/API/PaymentAddress/city
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -23,15 +24,9 @@ The **`city`** read-only property of
 the {{domxref('PaymentAddress')}} interface returns a string containing the city or
 town portion of the address.
 
-## Syntax
+## Value
 
-```js
-var paymentCity = PaymentAddress.city;
-```
-
-### Value
-
-A {{domxref("DOMString")}} indicating the city or town portion of the address described
+A string indicating the city or town portion of the address described
 by the {{domxref("PaymentAddress")}} object.
 
 ## Browser compatibility

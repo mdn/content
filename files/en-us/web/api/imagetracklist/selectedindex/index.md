@@ -1,6 +1,7 @@
 ---
 title: ImageTrackList.selectedIndex
 slug: Web/API/ImageTrackList/selectedIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,7 +14,7 @@ browser-compat: api.ImageTrackList.selectedIndex
 
 The **`selectedIndex`** property of the {{domxref("ImageTrackList")}} interface returns the `index` of the selected track.
 
-### Value
+## Value
 
 An integer.
 

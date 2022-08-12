@@ -1,6 +1,7 @@
 ---
 title: 'FileReader: error event'
 slug: Web/API/FileReader/error_event
+page-type: web-api-event
 tags:
   - API
   - Error
@@ -16,26 +17,34 @@ browser-compat: api.FileReader.error_event
 
 The `error` event is fired when the read failed due to an error (for example, because the file was not found or not readable).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ProgressEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("FileReader.onerror")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('error', (event) => { });
+
+onerror = (event) => { };
+```
+
+## Event type
+
+An {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ProgressEvent")}}
+
+## Event properties
+
+_Also inherits properties from its parent {{domxref("Event")}}_.
+
+- {{domxref("ProgressEvent.lengthComputable")}} {{readonlyInline}}
+  - : A boolean flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.
+- {{domxref("ProgressEvent.loaded")}} {{readonlyInline}}
+  - : A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing `total` by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
+- {{domxref("ProgressEvent.total")}} {{readonlyInline}}
+  - : A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the `Content-Length` (the size of the body of the message), and doesn't include the headers and other overhead.
 
 ## Examples
 

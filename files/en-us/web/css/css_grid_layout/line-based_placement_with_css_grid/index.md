@@ -16,7 +16,7 @@ Starting your exploration of grid with numbered lines is the most logical place 
 
 As a very simple example we can take a grid with 3 column tracks and 3 row tracks. This gives us 4 lines in each dimension.
 
-Inside our grid container I have four child elements. If we do not place these on to the grid in any way they will lay out according to the auto-placement rules, one item in each of the first four cells. If you use the [Firefox Grid Highlighter](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) you can see how the grid has defined columns and rows.
+Inside our grid container we have four child elements. If we do not place these on to the grid in any way they will lay out according to the auto-placement rules, one item in each of the first four cells. If you use the [Firefox Grid Highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) you can see how the grid has defined columns and rows.
 
 ![Our Grid highlighted in DevTools](3_hilighted_grid.png)
 
@@ -59,7 +59,7 @@ Inside our grid container I have four child elements. If we do not place these o
 
 ## Positioning items by line number
 
-We can use line-based placement to control where these items sit on the grid. I would like the first item to start on the far left of the grid and span a single column track. It should also start on the first row line, at the top of the grid and span to the fourth row line.
+We can use line-based placement to control where these items sit on the grid. We would like the first item to start on the far left of the grid and span a single column track. It should also start on the first row line, at the top of the grid and span to the fourth row line.
 
 ```css
 .box1 {
@@ -135,7 +135,7 @@ Addressing each item individually we can place all four items spanning row and c
 
 ## The `grid-column` and `grid-row` shorthands
 
-We have quite a lot of code here to position each item. It should come as no surprise to know there is a {{glossary("shorthand properties", "shorthand")}}. The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.
+We have quite a lot of code here to position each item. It should come as no surprise to know there is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties). The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -190,7 +190,7 @@ We have quite a lot of code here to position each item. It should come as no sur
 
 ## Default spans
 
-In the above examples I specified every end row and column line, in order to demonstrate the properties, however in practice if an item only spans one track you can omit the `grid-column-end` or `grid-row-end` value. Grid defaults to spanning one track.
+In the above examples, we specified every end row and column line, in order to demonstrate the properties, however in practice if an item only spans one track you can omit the `grid-column-end` or `grid-row-end` value. Grid defaults to spanning one track.
 
 ### Default spans with longhand placement
 
@@ -374,9 +374,9 @@ When we specify our grid area using the `grid-area` property we first define bot
 
 ## Counting backwards
 
-We can also count backwards from the block and inline end of the grid, for English that would be the right hand column line and final row line. These lines can be addressed as `-1`, and you can count back from there – so the second last line is `-2`. It is worth noting that the final line is the final line of the _explicit grid_, the grid defined by `grid-template-columns` and `grid-template-rows`, and does not take into account any rows or columns added in the _implicit grid_ outside of that.
+We can also count backwards from the block and inline end of the grid, for English that would be the right-hand column line and final row line. These lines can be addressed as `-1`, and you can count back from there – so the second last line is `-2`. It is worth noting that the final line is the final line of the _explicit grid_, the grid defined by `grid-template-columns` and `grid-template-rows`, and does not take into account any rows or columns added in the _implicit grid_ outside of that.
 
-In this next example I have flipped the layout we were working with by working from the right and bottom of our grid when placing the items.
+In this next example, we have flipped the layout we were working with by working from the right and bottom of our grid when placing the items.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -607,4 +607,4 @@ In the second example, we specify the end row line we want the item to finish at
 
 To become familiar with line based positioning in grid try to build a few common layouts by placing items onto grids with varying numbers of columns. Remember that if you do not place all of the items, any leftover items will be placed according to auto-placement rules. This may result in the layout you want, but if something is appearing somewhere unexpected, check that you have set a position for it.
 
-Also, remember that items on the grid can overlap each other when you place them explicitly like this. That can create some nice effects, however you can also end up with things overlapping incorrectly if you specify the wrong start or end line. The [Firefox Grid Highlighter](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) can be very useful as you learn, especially if your grid is quite complicated.
+Also, remember that items on the grid can overlap each other when you place them explicitly like this. That can create some nice effects, however you can also end up with things overlapping incorrectly if you specify the wrong start or end line. The [Firefox Grid Highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) can be very useful as you learn, especially if your grid is quite complicated.

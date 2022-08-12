@@ -1,6 +1,7 @@
 ---
 title: PushMessageData.blob()
 slug: Web/API/PushMessageData/blob
+page-type: web-api-instance-method
 tags:
   - API
   - Blob
@@ -19,22 +20,22 @@ The **`blob()`** method of the {{domxref("PushMessageData")}} interface extracts
 ## Syntax
 
 ```js
-var myBlob = PushEvent.data.blob();
+blob()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{domxref("Blob")}}.
 
 ## Examples
 
 ```js
-self.addEventListener('push', function(event) {
-  var blob = event.data.blob();
+self.addEventListener('push', (event) => {
+  const blob = event.data.blob();
 
   // do something with your Blob
 });

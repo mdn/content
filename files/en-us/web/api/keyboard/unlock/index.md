@@ -1,6 +1,7 @@
 ---
 title: Keyboard.unlock()
 slug: Web/API/Keyboard/unlock
+page-type: web-api-instance-method
 tags:
   - API
   - Keyboard API
@@ -11,7 +12,7 @@ tags:
   - unLock
 browser-compat: api.Keyboard.unlock
 ---
-{{APIRef("Keyboard API")}}{{SeeCompatTable}}
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`unlock()`** method of the
 {{domxref("Keyboard")}} interface unlocks all keys captured by the
@@ -20,7 +21,7 @@ The **`unlock()`** method of the
 ## Syntax
 
 ```js
-Keyboard.unlock()
+unlock()
 ```
 
 ### Parameters
@@ -29,7 +30,7 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

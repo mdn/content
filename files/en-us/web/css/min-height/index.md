@@ -40,6 +40,7 @@ min-height: fit-content(20em);
 min-height: inherit;
 min-height: initial;
 min-height: revert;
+min-height: revert-layer;
 min-height: unset;
 ```
 

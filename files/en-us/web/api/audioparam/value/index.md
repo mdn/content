@@ -1,6 +1,7 @@
 ---
 title: AudioParam.value
 slug: Web/API/AudioParam/value
+page-type: web-api-instance-property
 tags:
   - API
   - AudioParam
@@ -23,14 +24,7 @@ calling {{domxref("AudioParam.setValueAtTime")}} with the time returned by the
 `AudioContext`'s {{domxref("BaseAudioContext/currentTime", "currentTime")}}
 property.
 
-## Syntax
-
-```js
-var curValue = audioParam.value;
-audioParam.value = newValue;
-```
-
-### Value
+## Value
 
 A floating-point {{jsxref("Number")}} indicating the parameter's value as of the
 current time. This value will be between the values specified by the
@@ -49,7 +43,7 @@ not always exactly equal what you set it to.
 Consider this example:
 
 ```js
-const source = new AudioBufferSourceNode(...);
+const source = new AudioBufferSourceNode(/* … */);
 const rate = 5.3;
 source.playbackRate.value = rate;
 console.log(source.playbackRate.value === rate);
@@ -62,7 +56,7 @@ method, which returns the single-precision value equivalent to the 64-bit JavaSc
 value specified—when setting `value`, like this:
 
 ```js
-const source = new AudioBufferSourceNode(...);
+const source = new AudioBufferSourceNode(/* … */);
 const rate = Math.fround(5.3);
 source.playbackRate.value = rate;
 console.log(source.playbackRate.value === rate);
@@ -104,7 +98,7 @@ the value of a parameter:
 Thus, the `value` of a parameter is maintained to accurately reflect the
 state of the parameter over time.
 
-## Example
+## Examples
 
 This example instantly changes the volume of a {{domxref("GainNode")}} to 40%.
 
@@ -127,8 +121,7 @@ gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);
 When changing the gain value of a {{domxref("GainNode")}}, Google Chrome prior to
 version 64 (January 2018) would perform a smooth interpolation to prevent dezippering.
 Starting with version 64, the value is changed instantly to bring it in line with the
-Web Audio spec. See [Chrome Platform
-Status](https://www.chromestatus.com/feature/5287995770929152) for details.
+Web Audio spec. See [Chrome Platform Status](https://chromestatus.com/feature/5287995770929152) for details.
 
 ## See also
 

@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-inline
   - border-inline-end
@@ -32,6 +31,7 @@ border-inline-end-style: groove;
 border-inline-end-style: inherit;
 border-inline-end-style: initial;
 border-inline-end-style: revert;
+border-inline-end-style: revert-layer;
 border-inline-end-style: unset;
 ```
 

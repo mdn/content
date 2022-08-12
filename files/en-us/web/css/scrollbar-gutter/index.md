@@ -34,6 +34,7 @@ scrollbar-gutter: stable both-edges;
 scrollbar-gutter: inherit;
 scrollbar-gutter: initial;
 scrollbar-gutter: revert;
+scrollbar-gutter: revert-layer;
 scrollbar-gutter: unset;
 ```
 

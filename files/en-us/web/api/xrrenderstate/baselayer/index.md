@@ -1,6 +1,7 @@
 ---
 title: XRRenderState.baseLayer
 slug: Web/API/XRRenderState/baseLayer
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -24,7 +25,7 @@ that is the source of bitmap images and a description of how the image is to be 
 in the device.
 
 This property is read-only; however, you can indirectly change its
-value using  {{domxref("XRSession.updateRenderState")}}.
+value using {{domxref("XRSession.updateRenderState")}}.
 
 ## Value
 
@@ -52,7 +53,7 @@ function setNewWebGLLayer(gl) {
   }
 
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl);
+    baseLayer: new XRWebGLLayer(xrSession, gl)
   });
 };
 ```

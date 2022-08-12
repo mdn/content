@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.domComplete
 slug: Web/API/PerformanceTiming/domComplete
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -23,14 +24,12 @@ The legacy
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, when the parser finished its work on the main
 document, that is when its {{domxref("Document.readyState")}} changes to
-`'complete'` and the corresponding {{event("readystatechange")}} event is
+`'complete'` and the corresponding {{domxref("Document/readystatechange_event", "readystatechange")}} event is
 thrown.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domComplete;
-```
+An `unsigned long long`.
 
 ## Specifications
 

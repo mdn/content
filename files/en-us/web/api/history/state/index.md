@@ -1,6 +1,7 @@
 ---
 title: History.state
 slug: Web/API/History/state
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -14,17 +15,11 @@ browser-compat: api.History.state
 
 The **`History.state`** property
 returns a value representing the state at the top of the history stack. This is
-a way to look at the state without having to wait for a {{event("popstate")}} event.
+a way to look at the state without having to wait for a {{domxref("Window/popstate_event", "popstate")}} event.
 
-## Syntax
+## Value
 
-```js
-const currentState = history.state
-```
-
-### Value
-
-The state at the top of the history stack. The value is {{jsxref("null")}} until the
+The state at the top of the history stack. The value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) until the
 {{domxref("History.pushState","pushState()")}} or
 {{domxref("History.replaceState","replaceState()")}} method is used.
 

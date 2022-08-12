@@ -1,6 +1,7 @@
 ---
 title: Response
 slug: Web/API/Response
+page-type: web-api-interface
 tags:
   - API
   - Fetch
@@ -14,7 +15,7 @@ browser-compat: api.Response
 
 The **`Response`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the response to a request.
 
-You can create a new `Response` object using the {{domxref("Response.Response()")}} constructor, but you are more likely to encounter a `Response` object being returned as the result of another API operation—for example, a service worker {{domxref("FetchEvent.respondWith")}}, or a simple {{domxref("fetch()")}}.
+You can create a new `Response` object using the {{domxref("Response.Response", "Response()")}} constructor, but you are more likely to encounter a `Response` object being returned as the result of another API operation—for example, a service worker {{domxref("FetchEvent.respondWith")}}, or a simple {{domxref("fetch()")}}.
 
 ## Constructor
 
@@ -75,14 +76,14 @@ You'll notice that since we are requesting an image, we need to run {{domxref("R
 ```js
 const image = document.querySelector('.my-image');
 fetch('flowers.jpg')
-.then(response => response.blob())
-.then(blob => {
+.then((response) => response.blob())
+.then((blob) => {
   const objectURL = URL.createObjectURL(blob);
   image.src = objectURL;
 });
 ```
 
-You can also use the {{domxref("Response.Response()")}} constructor to create your own custom `Response` object:
+You can also use the {{domxref("Response.Response", "Response()")}} constructor to create your own custom `Response` object:
 
 ```js
 const response = new Response();

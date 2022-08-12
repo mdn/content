@@ -8,6 +8,9 @@ tags:
   - Accessibility
   - main role
   - landmark role
+spec-urls:
+  - https://w3c.github.io/aria/#main
+  - https://w3c.github.io/aria-practices/#aria_lh_main
 ---
 The `main` landmark role is used to indicate the primary content of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the main function of an application.
 
@@ -22,13 +25,13 @@ This is the main section of a document that discusses avocados. Subsections of t
 
 ## Description
 
-The `main` role is a navigational [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) role identifying the main content of a document. Landmarks can be used by assistive technology such as screen readers to quickly identify and navigate to large sections of the document.
+The `main` role is a navigational [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) role identifying the main content of a document. Landmarks can be used by assistive technology such as screen readers to quickly identify and navigate to large sections of the document.
 
 By classifying and labeling sections of a page, structural information conveyed visually through layout can be represented programmatically. Screen readers use landmark roles to provide keyboard navigation to important sections of a page. For those navigating via landmark roles, the main role is an alternative for "skip to main content" links.
 
 There should only be one `main` landmark role per document.
 
-The {{HTMLElement('main')}} element has a role of `main`. Developers should use semantic HTML -- in this case  {{HTMLElement('main')}} -- over using ARIA.
+The {{HTMLElement('main')}} element has a role of `main`. Developers should use semantic HTML — in this case {{HTMLElement('main')}} — over using ARIA.
 
 ### Associated ARIA roles, states, and properties
 
@@ -38,7 +41,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or `aria-labelledby`
 
-  - : Providing an accessible name can with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible header is present, otherwise with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute), can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
+  - : Providing an accessible name can with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible header is present, otherwise with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label), can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
 
 ## Example
 
@@ -47,7 +50,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
   <!-- primary navigation -->
 
   <div role="main">
-    <h1>The The First Indochina War</h1>
+    <h1>The First Indochina War</h1>
     <!-- article content -->
   </div>
 
@@ -59,7 +62,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 
 ### Use only one `main` role per document
 
-The `main` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) should only be used once per document.
+The `main` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) should only be used once per document.
 
 If a document contains two `main` roles, say updating page content when triggered by JavaScript, the inactive `main` role's presence should be removed from assistive technology via techniques such as toggling the [`hidden` attribute](/en-US/docs/Web/HTML/Global_attributes/hidden).
 
@@ -119,16 +122,13 @@ Which is the equivalent of:
 
 ## Specifications
 
-| Specification                                                                                                    | Status                                           |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#main","ARIA Navigation Role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_main","Navigation Landmark Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
 - The {{HTMLElement('main')}} element
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
+- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)
 

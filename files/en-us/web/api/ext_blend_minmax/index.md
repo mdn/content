@@ -1,6 +1,7 @@
 ---
 title: EXT_blend_minmax
 slug: Web/API/EXT_blend_minmax
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -28,7 +29,7 @@ This extension adds two new constants, which can be used in {{domxref("WebGLRend
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_blend_minmax');
+const ext = gl.getExtension('EXT_blend_minmax');
 
 gl.blendEquation(ext.MIN_EXT);
 gl.blendEquation(ext.MAX_EXT);

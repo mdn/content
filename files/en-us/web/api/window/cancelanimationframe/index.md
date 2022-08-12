@@ -1,6 +1,7 @@
 ---
 title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -21,7 +22,7 @@ animation frame request previously scheduled through a call to
 ## Syntax
 
 ```js
-window.cancelAnimationFrame(requestID);
+cancelAnimationFrame(requestID)
 ```
 
 ### Parameters
@@ -30,21 +31,25 @@ window.cancelAnimationFrame(requestID);
   - : The ID value returned by the call to {{domxref("window.requestAnimationFrame()")}}
     that requested the callback.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+const requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                             window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+const cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-var start = Date.now();
+const start = Date.now();
 
-var myReq;
+let myReq;
 
 function step(timestamp) {
-  var progress = timestamp - start;
-  d.style.left = Math.min(progress / 10, 200) + 'px';
+  const progress = timestamp - start;
+  d.style.left = `${Math.min(progress / 10, 200)}px`;
   if (progress < 2000) {
     // it's important to update the requestId each time you're calling requestAnimationFrame
     myReq = requestAnimationFrame(step);

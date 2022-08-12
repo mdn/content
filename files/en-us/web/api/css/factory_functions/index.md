@@ -1,6 +1,7 @@
 ---
 title: CSS numeric factory functions
 slug: Web/API/CSS/factory_functions
+page-type: web-api-static-method
 tags:
   - API
   - CSS
@@ -8,7 +9,9 @@ tags:
   - Houdini
   - Reference
   - factory function
+browser-compat: api.CSS
 ---
+{{APIRef("CSSOM")}}
 {{SeeCompatTable}}
 
 The **CSS numeric factory
@@ -16,7 +19,7 @@ functions**, such as `CSS.em()` and
 `CSS.turn()` are methods that return [CSSUnitValues](/en-US/docs/Web/API/CSSUnitValue) with the value being
 the numeric argument and the unit being the name of the method used. These
 functions create new numeric values less verbosely than using the
-{{domxref('CSSUnitValue.CSSUnitValue()')}} constructor.
+{{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}} constructor.
 
 ## Syntax
 
@@ -75,11 +78,11 @@ We use the `CSS.vmax()` numeric factory function to create a
 {{domxref('CSSUnitValue')}}:
 
 ```js
-let height = CSS.vmax(50);
+const height = CSS.vmax(50);
 
-console.log( height );       // CSSUnitValue {value: 50, unit: "vmax"}
-console.log( height.value )  // 50
-console.log( height.unit )   // vmax
+console.log(height);       // CSSUnitValue {value: 50, unit: "vmax"}
+console.log(height.value); // 50
+console.log(height.unit);  // vmax
 ```
 
 In this example, we set the margin on our element using the `CSS.px()`
@@ -87,18 +90,18 @@ factory function:
 
 ```js
 myElement.attributeStyleMap.set('margin', CSS.px(40));
-let currentMargin = myElement.attributeStyleMap.get('margin');
+const currentMargin = myElement.attributeStyleMap.get('margin');
 console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
 ```
 
 ## Specifications
 
-{{Specifications("api.CSS")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.CSS")}}
+{{Compat}}
 
 ## See also
 
-- {{domxref('CSSUnitValue.CSSUnitValue()')}}
+- {{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}}

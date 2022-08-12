@@ -26,9 +26,10 @@ background-blend-mode: normal;
 background-blend-mode: darken, luminosity;
 
 /* Global values */
-background-blend-mode: initial;
 background-blend-mode: inherit;
+background-blend-mode: initial;
 background-blend-mode: revert;
+background-blend-mode: revert-layer;
 background-blend-mode: unset;
 ```
 
@@ -92,8 +93,8 @@ background-blend-mode: unset;
 ```
 
 ```js hidden
-document.getElementById("select").onchange = function(event) {
-    document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
+document.getElementById("select").onchange = (event) => {
+  document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
 }
 console.log(document.getElementById('div'));
 ```

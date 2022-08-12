@@ -69,10 +69,10 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - Our experimental implementation of Media Source Extensions, behind the `media.mediasource.enabled` preference, enabled by default in Nightly and Aurora only, now supports MP4 ({{bug(1000686)}}).
 - The properties {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} have been experimentally implemented. They are controlled by the `media.track.enabled`, off by default ({{bug(744896)}}).
 - The non-standard `XMLHttpRequest.mozBackgroundRequest()` is no more accessible from Web sites. Only Firefox-internal code (Chrome code) can use it ({{bug(1035242)}}).
-- The {{event("touchenter")}} and {{event("touchleave")}} events, removed from the specification, have been removed ({{bug(1036444)}}).
-- The formerly called `loaded` event, sent on a {{domxref("HTMLTrackElement")}} has been renamed {{event("load")}} to match the specification ({{bug(1035505)}}).
+- The `touchenter` and `touchleave` events, removed from the specification, have been removed ({{bug(1036444)}}).
+- The formerly called `loaded` event, sent on a {{domxref("HTMLTrackElement")}} has been renamed {{domxref("Window/load_event", "load")}} to match the specification ({{bug(1035505)}}).
 - The IndexedDB interface `FileHandle` has been renamed in {{domxref("IDBMutableFile")}} ({{bug(1006485)}}).
-- The IndexedDB interface {{domxref("LockedFile")}} has been renamed in {{domxref("IDBFileHandle")}} ({{bug(1006485)}}).
+- The IndexedDB interface `LockedFile` has been renamed in {{domxref("IDBFileHandle")}} ({{bug(1006485)}}).
 - The {{domxref("ServiceWorker")}} interface has been implemented, behind the `dom.serviceWorkers.enabled` flag ({{bug(903441)}}).
 - The {{domxref("NetworkInformation.type")}} now also support the `"unknown"` value ({{bug(1023029)}}).
 
@@ -99,7 +99,7 @@ _No change._
 
 ## Changes for add-on and Mozilla developers
 
-- The [JavaScript Debugger Service (JSD)](/en-US/docs/Mozilla/Add-ons/Code_snippets/JavaScript_Debugger_Service) has been removed in favor of the new [Debugger API](/en-US/docs/Tools/Debugger-API) ({{bug(800200)}}).
+- The [JavaScript Debugger Service (JSD)](/en-US/docs/Mozilla/Add-ons/Code_snippets/JavaScript_Debugger_Service) has been removed in favor of the new [Debugger API](https://firefox-source-docs.mozilla.org/devtools-user/debugger-api/index.html) ({{bug(800200)}}).
 - The interface nsIX509CertDB2 has been removed and the methods from that interface have been moved to the nsIX509CertDB interface.
 
 ### Add-on SDK

@@ -1,6 +1,7 @@
 ---
 title: XRWebGLBinding.nativeProjectionScaleFactor
 slug: Web/API/XRWebGLBinding/nativeProjectionScaleFactor
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -20,7 +21,7 @@ For more details, see {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()"
 
 ## Value
 
-A floating-point number representing by how much the devices's native frame buffer size is scaled by.
+A floating-point number representing by how much the device's native frame buffer size is scaled by.
 
 ## Specifications
 

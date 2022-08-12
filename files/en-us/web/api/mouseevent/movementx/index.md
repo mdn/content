@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.movementX
 slug: Web/API/MouseEvent/movementX
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -14,16 +15,18 @@ tags:
   - pointer lock
 browser-compat: api.MouseEvent.movementX
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`movementX`** read-only property of the {{domxref("MouseEvent")}} interface provides the difference in the X coordinate of the mouse pointer between the given event and the previous {{domxref("Element/mousemove_event", "mousemove")}} event.
 In other words, the value of the property is computed like this: `currentEvent.movementX = currentEvent.screenX - previousEvent.screenX`.
+
+> **Warning:** Browsers [use different units for `movementX` and {{domxref("MouseEvent.screenX", "screenX")}}](https://github.com/w3c/pointerlock/issues/42) than what the specification defines. Depending on the browser and operating system, the `movementX` units may be a physical pixel, a logical pixel, or a CSS pixel.
 
 ## Value
 
 A number.
 
-## Example
+## Examples
 
 This example logs the amount of mouse movement using `movementX` and {{domxref("MouseEvent.movementY", "movementY")}}.
 
@@ -47,7 +50,7 @@ document.addEventListener('mousemove', logMovement);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

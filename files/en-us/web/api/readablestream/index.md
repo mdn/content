@@ -1,6 +1,7 @@
 ---
 title: ReadableStream
 slug: Web/API/ReadableStream
+page-type: web-api-interface
 tags:
   - API
   - Fetch
@@ -19,6 +20,8 @@ browser-compat: api.ReadableStream
 
 The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a readable stream of byte data. The [Fetch API](/en-US/docs/Web/API/Fetch_API) offers a concrete instance of a `ReadableStream` through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.
 
+`ReadableStream` is a {{glossary("Transferable objects","transferable object")}}.
+
 ## Constructor
 
 - {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}
@@ -27,7 +30,7 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 ## Properties
 
 - {{domxref("ReadableStream.locked")}} {{readonlyInline}}
-  - : The `locked` getter returns whether or not the readable stream is [locked to a reader](https://streams.spec.whatwg.org/#locked-to-a-reader).
+  - : The `locked` getter returns whether or not the readable stream is locked to a reader.
 
 ## Methods
 
@@ -52,42 +55,42 @@ It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with
 
 ```js
 fetch('https://www.example.org')
-.then(response => response.body)
-.then(rb => {
-  const reader = rb.getReader();
+  .then((response) => response.body)
+  .then((rb) => {
+    const reader = rb.getReader();
 
-  return new ReadableStream({
-    start(controller) {
-      // The following function handles each data chunk
-      function push() {
-        // "done" is a Boolean and value a "Uint8Array"
-        reader.read().then( ({done, value}) => {
-          // If there is no more data to read
-          if (done) {
-            console.log('done', done);
-            controller.close();
-            return;
-          }
-          // Get the data and send it to the browser via the controller
-          controller.enqueue(value);
-          // Check chunks by logging to the console
-          console.log(done, value);
-          push();
-        })
-      }
+    return new ReadableStream({
+      start(controller) {
+        // The following function handles each data chunk
+        function push() {
+          // "done" is a Boolean and value a "Uint8Array"
+          reader.read().then(({ done, value }) => {
+            // If there is no more data to read
+            if (done) {
+              console.log('done', done);
+              controller.close();
+              return;
+            }
+            // Get the data and send it to the browser via the controller
+            controller.enqueue(value);
+            // Check chunks by logging to the console
+            console.log(done, value);
+            push();
+          });
+        }
 
-      push();
-    }
+        push();
+      },
+    });
+  })
+  .then((stream) =>
+    // Respond with our stream
+    new Response(stream, { headers: { 'Content-Type': 'text/html' } }).text()
+  )
+  .then((result) => {
+    // Do things with result
+    console.log(result);
   });
-})
-.then(stream => {
-  // Respond with our stream
-  return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
-})
-.then(result => {
-  // Do things with result
-  console.log(result);
-});
 ```
 
 ### Async iterator to stream

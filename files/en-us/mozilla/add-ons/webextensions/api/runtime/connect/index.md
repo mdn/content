@@ -27,7 +27,7 @@ Note that you can't use this function to connect an extension to its content scr
 ## Syntax
 
 ```js
-var port = browser.runtime.connect(
+let port = browser.runtime.connect(
   extensionId, // optional string
   connectInfo  // optional object
 )
@@ -35,15 +35,15 @@ var port = browser.runtime.connect(
 
 ### Parameters
 
-- `extensionId`{{optional_inline}}
+- `extensionId` {{optional_inline}}
   - : `string`. The ID of the extension to connect to. If the target has set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the target.
-- `connectInfo`{{optional_inline}}
+- `connectInfo` {{optional_inline}}
 
   - : `object`. Details of the connection:
 
-    - `name`{{optional_inline}}
+    - `name` {{optional_inline}}
       - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} for processes that are listening for the connection event.
-    - `includeTlsChannelId`{{optional_inline}}
+    - `includeTlsChannelId` {{optional_inline}}
       - : `boolean`. Whether the TLS channel ID will be passed into {{WebExtAPIRef("runtime.onConnectExternal")}} for processes that are listening for the connection event.
 
 ### Return value
@@ -65,15 +65,15 @@ This content script:
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
+let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
+document.body.addEventListener("click", () => {
   myPort.postMessage({greeting: "they clicked the page!"});
 });
 ```
@@ -92,12 +92,12 @@ The corresponding background script:
 ```js
 // background-script.js
 
-var portFromCS;
+let portFromCS;
 
 function connected(p) {
   portFromCS = p;
   portFromCS.postMessage({greeting: "hi there content script!"});
-  portFromCS.onMessage.addListener(function(m) {
+  portFromCS.onMessage.addListener((m) => {
     console.log("In background script, received message from content script")
     console.log(m.greeting);
   });
@@ -105,14 +105,14 @@ function connected(p) {
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   portFromCS.postMessage({greeting: "they clicked the button!"});
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-connect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-connect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

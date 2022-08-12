@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.lastPacketReceivedTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -23,13 +24,7 @@ The {{domxref("RTCIceCandidatePairStats")}} property
 the connection described by the candidate pair last received a packet.
 {{Glossary("STUN")}} packets are not included.
 
-## Syntax
-
-```js
-lastPacketReceivedTimestamp = rtcIceCandidatePairStats.lastPacketReceivedTimestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} object indicating the timestamp at which the
 connection described by pair of candidates last received a packet, STUN packets

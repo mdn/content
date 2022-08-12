@@ -1,6 +1,7 @@
 ---
 title: VisualViewport.pageTop
 slug: Web/API/VisualViewport/pageTop
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,13 +18,7 @@ The **`pageTop`** read-only property of the
 {{domxref("VisualViewport")}} interface returns the y coordinate of the top edge of the
 visual viewport relative to the initial containing block origin, in CSS pixels.
 
-## Syntax
-
-```js
-var pageTop = VisualViewport.pageTop
-```
-
-### Value
+## Value
 
 A double.
 

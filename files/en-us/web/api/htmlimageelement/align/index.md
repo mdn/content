@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.align
 slug: Web/API/HTMLImageElement/align
+page-type: web-api-instance-property
 tags:
   - API
   - Align
@@ -30,16 +31,9 @@ to the left or right margin.
 The `align` property reflects the HTML {{htmlattrxref("align", "img")}}
 content attribute.
 
-## Syntax
+## Value
 
-```js
-htmlImageElement.align = alignMode;
-alignMode = htmlImageElement.align;
-```
-
-### Value
-
-A {{domxref("DOMString")}} specifying one of the following strings which set the
+A string specifying one of the following strings which set the
 alignment mode for the image.
 
 #### Baseline alignment

@@ -27,6 +27,7 @@ break-inside: avoid-region;
 break-inside: inherit;
 break-inside: initial;
 break-inside: revert;
+break-inside: revert-layer;
 break-inside: unset;
 ```
 
@@ -155,7 +156,7 @@ article {
 
 ## Specifications
 
-{{Specifications("css.properties.break-inside.multicol_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

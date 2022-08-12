@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var requestingCheck = browser.runtime.requestUpdateCheck()
+let requestingCheck = browser.runtime.requestUpdateCheck()
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 - `status`
   - : A {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}} value — the result of the update check.
-- `details`{{optional_inline}}
+- `details` {{optional_inline}}
 
   - : `object`. If `status` is `update_available`, this contains more information about the update. It is an object containing a single property:
 
@@ -62,13 +62,13 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var requestingCheck = browser.runtime.requestUpdateCheck(onRequested);
+let requestingCheck = browser.runtime.requestUpdateCheck(onRequested);
 requestingCheck.then(onRequested, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-requestUpdateCheck) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-requestUpdateCheck) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -5,6 +5,7 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
+spec-urls: https://svgwg.org/specs/animations/#EndAttribute
 ---
 {{SVGRef}}
 
@@ -40,7 +41,7 @@ You can use this attribute with the following SVG elements:
 The `<end-value-list>` is a semicolon-separated list of values. Each value can be one of the following:
 
 - `<offset-value>`
-  - : This value defines a [clock-value](/en-US/docs/Web/SVG/Content_type#Clock-value) that represents a point in time relative to the beginning of the SVG document (usually the {{domxref("SVGElement/load_event", "load")}} or {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event). Negative values are valid.
+  - : This value defines a [clock-value](/en-US/docs/Web/SVG/Content_type#clock-value) that represents a point in time relative to the beginning of the SVG document (usually the {{domxref("SVGElement/load_event", "load")}} or {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event). Negative values are valid.
 - `<syncbase-value>`
   - : This value defines a *syncbase* and an optional offset from that *syncbase*. The element's animation end time is defined relative to the begin or active end of another animation.
 
@@ -192,28 +193,4 @@ The `<end-value-list>` is a semicolon-separated list of values. Each value can b
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#EndAttribute", "end")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#EndAttribute", "end")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

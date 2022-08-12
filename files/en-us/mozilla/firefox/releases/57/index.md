@@ -18,7 +18,7 @@ Firefox 57 has been given the release name **Quantum**, after the [Firefox Quant
 
 > **Note:** To read more about the Quantum features in this release, see [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) by Dan Callahan.
 
-[Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/) — also known as **Quantum CSS** or **Stylo** — is enabled by default in Firefox 57 for desktop, with Mobile versions of Firefox to follow later on. Developers shouldn't notice anything significantly different, aside from a whole host of performance improvements. There are however a number of minor functional differences in Stylo, implemented to fix non-standard Gecko behavior that should be eliminated. We will report on such differences on reference pages and in the release notes as appropriate (see {{anch("Quantum CSS notes")}}).
+[Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/) — also known as **Quantum CSS** or **Stylo** — is enabled by default in Firefox 57 for desktop, with Mobile versions of Firefox to follow later on. Developers shouldn't notice anything significantly different, aside from a whole host of performance improvements. There are however a number of minor functional differences in Stylo, implemented to fix non-standard Gecko behavior that should be eliminated. We will report on such differences on reference pages and in the release notes as appropriate (see [Quantum CSS notes](#quantum_css_notes)).
 
 ## Changes for Web developers
 
@@ -50,7 +50,7 @@ Following bugs have been fixed in Quantum:
 - Gecko reuses the same mechanism used when parsing a url-token when parsing the `domain()` or `url-prefix()` URL matching functions for a {{CSSxRef("@document", "@-moz-document")}} rule. Quantum CSS does not use the same mechanism and it does not consider tokens invalid when they contain brackets or quotes ({{bug(1362333)}}).
 - In Gecko, when you set a system font as the value of a canvas 2D context's {{DOMxRef("CanvasRenderingContext2D.font", "font")}} (e.g. `menu`), getting the font value fails to return the expected font (it returns nothing). This has been fixed in Quantum. ({{bug(1374885)}}).
 - In Gecko, when you create a detached subtree (e.g. a {{htmlelement("div")}} created using {{DOMxRef("Document.createElement","createElement()")}} that is not yet inserted into the DOM), the subtree's root element is set as a block-level element. In Quantum CSS this is set as inline, as per spec ({{bug(1374994)}}).
-- In Gecko, {{CSSxRef("calc()")}} expressions are rejected — causing the value to be invalid — when used as the radius component of a {{CSSxRef("radial-gradient()")}} function ({{bug(1376019)}}).
+- In Gecko, {{CSSxRef("calc", "calc()")}} expressions are rejected — causing the value to be invalid — when used as the radius component of a {{CSSxRef("radial-gradient", "radial-gradient()")}} function ({{bug(1376019)}}).
 - In Gecko, `calc(1*2*3)` is not parsed successfully; Quantum CSS fixes this ({{bug(1379467)}}).
 - In Quantum CSS, [`calc()` is supported everywhere that the spec explains it should be](https://drafts.csswg.org/css-values-3/#calc-notation) ({{bug(1350857)}}). In Gecko it is not.
 - Gecko has a bug whereby the {{CSSxRef("::before")}} and {{CSSxRef("::after")}} pseudo-elements are still generated even if the {{CSSxRef("content")}} property value is set to `normal` or `none`. As per spec, they shouldn't be ({{bug(1387931)}}).
@@ -82,7 +82,7 @@ _No changes._
 - {{DOMxRef("Document.createEvent", "Document.createEvent('FocusEvent')")}} is now supported ({{bug(1388069)}}).
 - The `files` property of the {{DOMxRef("HTMLInputElement")}} interface is now settable ({{bug(1384030)}}).
 - The `HTMLDocument.getSelection()` method has been moved to the {{DOMxRef("Document/getSelection","Document")}} interface so it is available to XML documents ({{bug(718711)}}).
-- The {{Event("messageerror")}} event is now implemented, and can have code run in response to it firing via event handlers implemented on message targets — see {{DOMxRef("MessagePort.onmessageerror")}}, {{DOMxRef("DedicatedWorkerGlobalScope.onmessageerror")}}, {{DOMxRef("Worker.onmessageerror")}}, {{DOMxRef("BroadcastChannel.onmessageerror")}}, and {{DOMxRef("Window.onmessageerror")}} ({{bug(1359017)}}).
+- The `messageerror` event is now implemented, and can have code run in response to it firing via event handlers implemented on message targets — see {{DOMxRef("MessagePort.messageerror_event")}}, {{DOMxRef("DedicatedWorkerGlobalScope.messageerror_event")}}, {{DOMxRef("Worker.messageerror_event")}}, {{DOMxRef("BroadcastChannel.messageerror_event")}}, and {{DOMxRef("Window.messageerror_event")}} ({{bug(1359017)}}).
 - When {{DOMxRef("Headers")}} values are iterated over, they are automatically sorted in lexicographical order, and values from duplicate header names are combined ({{bug(1396848)}}).
 
 #### DOM events
@@ -96,14 +96,14 @@ _No changes._
   > **Note:** Because Firefox doesn't yet support the SCTP ndata protocol that provides the ability to interleave SCTP messages from multiple sources, sending large data objects can cause significant delays on all other SCTP traffic. See {{bug(1381145)}} to track progress on implementing and deploying ndata support in Firefox.
 
 - The {{DOMxRef("RTCDataChannel.send()")}} method can now throw a `TypeError` exception if the size of the message you're trying to send is not compatible with the receiving {{Glossary("user agent")}} (this is implemented as part of {{bug(979417)}}).
-- The [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) has been updated so that {{event("error")}} events sent to report problems that occur while recording are now of type {{DOMxRef("MediaRecorderErrorEvent")}} rather than being generic events.
+- The [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) has been updated so that {{domxref("MediaRecorder/error_event", "error")}} events sent to report problems that occur while recording are now of type {{DOMxRef("MediaRecorderErrorEvent")}} rather than being generic events.
 - Updated the documentation around {{DOMxRef("OfflineAudioContext")}} since its constructor's inputs can now be specified in an object rather than as a list of parameters ({{bug(1388591)}}).
 - The Web Audio API now properly supports multi-channel output ({{bug(1378070)}}).
 
 ### Security
 
 - `resource://` URLs no longer leak information ({{bug(863246)}})
-- Data URIs are now treated as unique opaque origins, rather than inheriting the origin of the settings object responsible for the navigation ({{bug(1324406)}}).
+- Data URLs are now treated as unique opaque origins, rather than inheriting the origin of the settings object responsible for the navigation ({{bug(1324406)}}).
 
 ### Plugins
 
@@ -117,7 +117,7 @@ _No changes._
 
 ### HTML
 
-- `<link rel="preload">` (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Preloading_content)) has been disabled in Firefox 57 because of various web compatibility issues (e.g. {{bug(1405761)}}). An improved version that works for non-cacheable resources is expected to land in Firefox 58.
+- `<link rel="preload">` (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload)) has been disabled in Firefox 57 because of various web compatibility issues (e.g. {{bug(1405761)}}). An improved version that works for non-cacheable resources is expected to land in Firefox 58.
 
 ### APIs
 

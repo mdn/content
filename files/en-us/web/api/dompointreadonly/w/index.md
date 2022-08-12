@@ -1,6 +1,7 @@
 ---
 title: DOMPointReadOnly.w
 slug: Web/API/DOMPointReadOnly/w
+page-type: web-api-instance-property
 tags:
   - API
   - Coordinates
@@ -27,13 +28,7 @@ If your script needs to be able
 to change the value of this property, you should instead use the {{domxref("DOMPoint")}}
 object.
 
-## Syntax
-
-```js
-const perspective = someDOMPointReadOnly.w
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the `w` perspective value
 for the point. This value is **unrestricted**, meaning that it is allowed

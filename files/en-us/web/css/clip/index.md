@@ -25,6 +25,7 @@ clip: rect(1px, 10em, 3rem, 2ch);
 clip: inherit;
 clip: initial;
 clip: revert;
+clip: revert-layer;
 clip: unset;
 ```
 

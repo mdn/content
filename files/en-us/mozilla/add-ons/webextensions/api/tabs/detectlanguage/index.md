@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var detecting = browser.tabs.detectLanguage(
+let detecting = browser.tabs.detectLanguage(
   tabId,                  // optional integer
   callback                // optional function
 )
@@ -52,8 +52,8 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  var detecting = browser.tabs.detectLanguage();
+browser.browserAction.onClicked.addListener(() => {
+  let detecting = browser.tabs.detectLanguage();
   detecting.then(onLanguageDetected, onError);
 });
 ```
@@ -71,14 +71,14 @@ function onError(error) {
 
 function detectLanguages(tabs) {
   for (tab of tabs) {
-    var onFulfilled = onLanguageDetected.bind(null, tab.url);
-    var detecting = browser.tabs.detectLanguage(tab.id);
+    let onFulfilled = onLanguageDetected.bind(null, tab.url);
+    let detecting = browser.tabs.detectLanguage(tab.id);
     detecting.then(onFulfilled, onError);
   }
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  var querying = browser.tabs.query({});
+browser.browserAction.onClicked.addListener(() => {
+  let querying = browser.tabs.query({});
   querying.then(detectLanguages, onError);
 });
 ```
@@ -89,7 +89,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-detectLanguage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-detectLanguage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

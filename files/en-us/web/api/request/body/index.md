@@ -1,6 +1,7 @@
 ---
 title: Request.body
 slug: Web/API/Request/body
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -18,15 +19,9 @@ that have been added to the request. Note that a request using the
 `GET` or `HEAD` method cannot have a body
 and `null` is return in these cases.
 
-## Syntax
+## Value
 
-```js
-request.body
-```
-
-### Value
-
-A {{domxref("ReadableStream")}} or {{jsxref("null")}}.
+A {{domxref("ReadableStream")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
 

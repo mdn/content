@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.type
 slug: Web/API/RTCIceCandidate/type
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -23,15 +24,9 @@ The **{{domxref("RTCIceCandidate")}}** interface's read-only **`type`** specifie
 The `type` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
 You can't specify the value of `type` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line (the `cand-type` field), if it's formatted properly.
 
-## Syntax
+## Value
 
-```js
-var type = RTCIceCandidate.type;
-```
-
-### Value
-
-A {{domxref("DOMString")}} whose value is one of those defined below. These candidate types are listed in order of priority; the higher in the list they are, the more efficient they are.
+A string whose value is one of those defined below. These candidate types are listed in order of priority; the higher in the list they are, the more efficient they are.
 
 - `host`
   - : The candidate is a host candidate, whose IP address as specified in the {{domxref("RTCIceCandidate.address")}} property is in fact the true address of the remote peer.
@@ -47,7 +42,7 @@ If `type` is `null`, that information was missing from the
 {{domxref("RTCPeerConnection.addIceCandidate()")}} to throw an
 `OperationError` exception.
 
-## Example
+## Examples
 
 In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is used to
 present a modified user interface for host candidates (those where the
@@ -55,7 +50,7 @@ present a modified user interface for host candidates (those where the
 an intermediary).
 
 ```js
-if (candidate.type == "host") {
+if (candidate.type === "host") {
   showHostControls();
 } else {
   hideHostControls();

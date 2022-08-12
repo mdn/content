@@ -1,6 +1,7 @@
 ---
 title: Node.lookupNamespaceURI()
 slug: Web/API/Node/lookupNamespaceURI
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -26,7 +27,7 @@ lookupNamespaceURI(prefix);
 
 ### Return value
 
-A {{jsxref("String")}} containing the namespace URI corresponding to the prefix.
+A string containing the namespace URI corresponding to the prefix.
 If the prefix is not found, it returns `null`.
 If the requested `prefix` is `null`, it returns the default namespace URI.
 
@@ -45,10 +46,10 @@ Namespace URL for <code>xml</code> on &lt;svg&gt;: <output>Not tested</output>.<
 ```
 
 ```js
-const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
-  const aHtmlElt = document.getElementsByTagName('output')[0];
-  const aSvgElt = document.getElementsByTagName('svg')[0];
+const button = document.querySelector('button');
+button.addEventListener("click", () => {
+  const aHtmlElt = document.querySelector('output');
+  const aSvgElt = document.querySelector('svg');
 
   const result = document.getElementsByTagName('output');
   result[0].value = aHtmlElt.lookupNamespaceURI("xlink");

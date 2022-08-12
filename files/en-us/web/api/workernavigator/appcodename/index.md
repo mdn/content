@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.appCodeName
 slug: Web/API/WorkerNavigator/appCodeName
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -19,13 +20,7 @@ compatibility purposes.
 > **Note:** Do not rely on this property to return a real
 > product name. All browsers return "`Mozilla`" as the value of this property.
 
-## Syntax
-
-```js
-codeName = navigator.appCodeName
-```
-
-### Value
+## Value
 
 The string "`Mozilla`".
 

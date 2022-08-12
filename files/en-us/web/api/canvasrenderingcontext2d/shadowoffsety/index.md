@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.shadowOffsetY
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetY
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -23,16 +24,9 @@ vertically.
     "shadowOffsetX")}}, or `shadowOffsetY` properties must be non-zero, as
 > well.
 
-## Syntax
+## Value
 
-```js
-ctx.shadowOffsetY = offset;
-```
-
-- `offset`
-  - : A float specifying the distance that shadows will be offset vertically. Positive
-    values are down, and negative are up. The default value is `0` (no vertical
-    offset). {{jsxref("Infinity")}} and {{jsxref("NaN")}} values are ignored.
+A float specifying the distance that shadows will be offset vertically. Positive values are down, and negative are up. The default value is `0` (no vertical offset). {{jsxref("Infinity")}} and {{jsxref("NaN")}} values are ignored.
 
 ## Examples
 

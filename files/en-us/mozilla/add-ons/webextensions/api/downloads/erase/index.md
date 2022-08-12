@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var erasing = browser.downloads.erase(
+let erasing = browser.downloads.erase(
   query                    // DownloadQuery
 )
 ```
@@ -57,7 +57,7 @@ function onError(error) {
   console.log(`Error erasing item: ${error}`);
 }
 
-var erasing = browser.downloads.erase({
+let erasing = browser.downloads.erase({
   limit: 1,
   orderBy: ["-startTime"]
 });
@@ -76,13 +76,13 @@ function onError(error) {
   console.log(`Error erasing item: ${error}`);
 }
 
-var erasing = browser.downloads.erase({});
+let erasing = browser.downloads.erase({});
 erasing.then(onErased, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-erase) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-erase) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

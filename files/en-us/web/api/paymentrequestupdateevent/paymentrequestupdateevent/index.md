@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestUpdateEvent()
 slug: Web/API/PaymentRequestUpdateEvent/PaymentRequestUpdateEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -23,7 +24,7 @@ are made by passing options to the
 ## Syntax
 
 ```js
-var paymentRequestUpdateEvent = new PaymentRequestUpdateEvent()
+new PaymentRequestUpdateEvent()
 ```
 
 ### Parameters

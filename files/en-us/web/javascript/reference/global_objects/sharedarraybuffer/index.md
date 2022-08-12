@@ -22,7 +22,7 @@ To share memory using {{jsxref("SharedArrayBuffer")}} objects from one agent in 
 The structured clone algorithm accepts `SharedArrayBuffer` objects and typed arrays mapped onto `SharedArrayBuffer` objects. In both cases, the `SharedArrayBuffer` object is transmitted to the receiver resulting in a new, private `SharedArrayBuffer` object in the receiving agent (just as for {{jsxref("ArrayBuffer")}}). However, the shared data block referenced by the two `SharedArrayBuffer` objects is the same data block, and a side effect to the block in one agent will eventually become visible in the other agent.
 
 ```js
-var sab = new SharedArrayBuffer(1024);
+const sab = new SharedArrayBuffer(1024);
 worker.postMessage(sab);
 ```
 
@@ -69,13 +69,13 @@ See also [Planned changes to shared memory](/en-US/docs/Web/JavaScript/Reference
 `SharedArrayBuffer` objects must be constructed with the {{jsxref("Operators/new", "new")}} operator. Calling `SharedArrayBuffer()` as a function without using `new` will throw a {{jsxref("TypeError")}}.
 
 ```js example-bad
-var sab = SharedArrayBuffer(1024);
+const sab = SharedArrayBuffer(1024);
 // TypeError: calling a builtin SharedArrayBuffer constructor
 // without new is forbidden
 ```
 
 ```js example-good
-var sab = new SharedArrayBuffer(1024);
+const sab = new SharedArrayBuffer(1024);
 ```
 
 ## Constructor
@@ -98,7 +98,7 @@ var sab = new SharedArrayBuffer(1024);
 ### Creating a new SharedArrayBuffer
 
 ```js
-var sab = new SharedArrayBuffer(1024);
+const sab = new SharedArrayBuffer(1024);
 ```
 
 ### Slicing the SharedArrayBuffer
@@ -135,5 +135,5 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
-- [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
+- [Shared Memory – a brief tutorial](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)
 - [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

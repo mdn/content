@@ -43,6 +43,7 @@ font-variant-caps: titling-caps;
 font-variant-caps: inherit;
 font-variant-caps: initial;
 font-variant-caps: revert;
+font-variant-caps: revert-layer;
 font-variant-caps: unset;
 ```
 
@@ -69,7 +70,7 @@ The `font-variant-caps` property is specified using a single keyword value from 
 
 Large sections of text set with a `font-variant` value of `all-small-caps` or `all-petite-caps` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## Formal definition

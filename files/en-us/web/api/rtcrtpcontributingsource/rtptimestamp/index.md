@@ -1,6 +1,7 @@
 ---
 title: RTCRtpContributingSource.rtpTimestamp
 slug: Web/API/RTCRtpContributingSource/rtpTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -24,13 +25,7 @@ property of the {{domxref("RTCRtpContributingSource")}} dictionary contains a
 {{domxref("DOMHighResTimeStamp")}} indicating the source-generated time at which the
 media contained int he packet was first sampled or obtained.
 
-## Syntax
-
-```js
-let rtpTimestamp = RTCRtpContributingSource.rtpTimestamp
-```
-
-### Value
+## Value
 
 An integer value specifying a source-generated timestamp indicating the time at which
 the media in this packet, scheduled for play out at the time indicated by

@@ -53,11 +53,11 @@ A tilemap can either fit into the visible screen area screen or be larger. In th
 Rendering static tilemaps is easy, and can be done with a nested loop iterating over columns and rows. A high-level algorithm could be:
 
 ```js
-for (var column = 0; column < map.columns; column++) {
-  for (var row = 0; row < map.rows; row++) {
-    var tile = map.getTile(column, row);
-    var x = column * map.tileSize;
-    var y = row * map.tileSize;
+for (let column = 0; column < map.columns; column++) {
+  for (let row = 0; row < map.rows; row++) {
+    const tile = map.getTile(column, row);
+    const x = column * map.tileSize;
+    const y = row * map.tileSize;
     drawTile(tile, x, y);
   }
 }
@@ -89,7 +89,7 @@ function screenToWorld(x,y) {
 
 #### Rendering
 
-A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, subtracting the camera coordinates (like in the `worldToScreen()` example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. **Only tiles that are at visible should be rendered** ideally — see the {{anch("Performance")}} section for more ideas on improving rendering performance.
+A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, subtracting the camera coordinates (like in the `worldToScreen()` example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. **Only tiles that are at visible should be rendered** ideally — see the [Performance](#performance) section for more ideas on improving rendering performance.
 
 You can read more about implementing scrolling tilemaps and see some example implementations in [Square tilemaps implementation: Scrolling maps](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps).
 

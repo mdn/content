@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.advance()
 slug: Web/API/IDBCursor/advance
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -23,7 +24,7 @@ its position forward.
 ## Syntax
 
 ```js
-cursor.advance(count);
+advance(count)
 ```
 
 ### Parameters
@@ -31,18 +32,22 @@ cursor.advance(count);
 - `count`
   - : The number of times to move the cursor forward.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this IDBCursor's transaction is inactive.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the value passed into the `count` parameter was zero or a negative number.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the cursor is currently being iterated or has iterated past its end.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through the records in the object store. Here we use
@@ -52,8 +57,7 @@ every other result will be displayed. `advance()` works in a similar way to
 a time, not just always go onto the next record.
 
 Note that in each iteration of the loop, you can grab
-data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor
-example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)>
+data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function advanceResult() {
@@ -61,11 +65,11 @@ function advanceResult() {
   const transaction = db.transaction(['rushAlbumList'], "readonly");
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
       cursor.advance(2);
     } else {
@@ -91,5 +95,4 @@ function advanceResult() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).

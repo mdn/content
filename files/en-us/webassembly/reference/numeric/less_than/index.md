@@ -14,7 +14,7 @@ The **`lt`** instructions, short for *less than*, check if a number is less than
 
 The integer types have separate less than instructions for signed (**`lt_s`**) and unsigned (**`lt_u`**) numbers.
 
-{{EmbedInteractiveExample("pages/wat/lt.html")}}
+{{EmbedInteractiveExample("pages/wat/lt.html", "tabbed-taller")}}
 
 ## Syntax
 

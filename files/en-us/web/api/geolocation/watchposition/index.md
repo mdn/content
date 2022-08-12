@@ -1,6 +1,7 @@
 ---
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
+page-type: web-api-instance-method
 tags:
   - API
   - Geolocation
@@ -18,9 +19,9 @@ You can also, optionally, specify an error handling callback function.
 ## Syntax
 
 ```js
-navigator.geolocation.watchPosition(success)
-navigator.geolocation.watchPosition(success, error)
-navigator.geolocation.watchPosition(success, error, options)
+watchPosition(success)
+watchPosition(success, error)
+watchPosition(success, error, options)
 ```
 
 ### Parameters
@@ -41,10 +42,12 @@ The ID can be passed to the {{domxref("Geolocation.clearWatch()")}} to unregiste
 ## Examples
 
 ```js
-var id, target, options;
+let id;
+let target;
+let options;
 
 function success(pos) {
-  var crd = pos.coords;
+  const crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
     console.log('Congratulations, you reached the target');
@@ -53,7 +56,7 @@ function success(pos) {
 }
 
 function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
+  console.error(`ERROR(${err.code}): ${err.message}`);
 }
 
 target = {

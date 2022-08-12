@@ -1,6 +1,7 @@
 ---
 title: Element.ariaLevel
 slug: Web/API/Element/ariaLevel
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,16 +18,9 @@ The **`ariaLevel`** property of the {{domxref("Element")}} interface reflects th
 
 > **Note:** Where possible use an HTML {{htmlelement("h1")}} or other correct heading level as these have built in semantics and do not require ARIA attributes.
 
-## Syntax
+## Value
 
-```js
-var ariaLevel = element.ariaLevel;
-element.ariaLevel = ariaLevel
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing an integer.
+A string containing an integer.
 
 ## Examples
 

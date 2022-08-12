@@ -18,7 +18,7 @@ If an HTTP response includes the {{HTTPHeader("Accept-Ranges")}} header and its 
 curl -I http://i.imgur.com/z4d4kWk.jpg
 
 HTTP/1.1 200 OK
-...
+…
 Accept-Ranges: bytes
 Content-Length: 146515
 ```
@@ -31,7 +31,7 @@ If sites omit the `Accept-Ranges` header, they likely don't support partial requ
 curl -I https://www.youtube.com/watch?v=EwTZ2xpQwpA
 
 HTTP/1.1 200 OK
-...
+…
 Accept-Ranges: none
 ```
 
@@ -63,7 +63,7 @@ The server responses with the {{HTTPStatus("206")}} `Partial Content` status:
 HTTP/1.1 206 Partial Content
 Content-Range: bytes 0-1023/146515
 Content-Length: 1024
-...
+…
 (binary content)
 ```
 
@@ -88,8 +88,8 @@ Content-Length: 282
 Content-Type: text/html
 Content-Range: bytes 0-50/1270
 
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
     <title>Example Do
 --3d6b6a416f9b5
@@ -126,4 +126,4 @@ The {{HTTPHeader("Transfer-Encoding")}} header allows chunked encoding, which is
 
 - Related status codes {{HTTPStatus("200")}}, {{HTTPStatus("206")}}, {{HTTPStatus("416")}}.
 - Related headers: {{HTTPHeader("Accept-Ranges")}}, {{HTTPHeader("Range")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("If-Range")}}, {{HTTPHeader("Transfer-Encoding")}}.
-- [Download resumption in Internet Explorer](https://blogs.msdn.microsoft.com/ieinternals/2011/06/03/download-resumption-in-internet-explorer/)
+- [Download resumption in Internet Explorer](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/download-resumption-in-internet-explorer)

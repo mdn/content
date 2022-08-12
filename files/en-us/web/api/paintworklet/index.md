@@ -1,6 +1,7 @@
 ---
 title: PaintWorklet
 slug: Web/API/PaintWorklet
+page-type: web-api-interface
 tags:
   - API
   - CSS
@@ -39,7 +40,7 @@ _This interface inherits methods from {{domxref('Worklet')}}._
 
 - {{domxref('PaintWorklet.registerPaint()')}}
   - : Registers a class programmatically generate an image where a CSS property expects a file.
-- {{domxref('Worklet.addModule', 'CSS.PaintWorklet.addModule()')}}
+- {{domxref('Worklet.addModule', 'PaintWorklet.addModule()')}}
   - : The [`addModule()`](/en-US/docs/Web/API/Worklet/addModule) method, inherited from the _{{domxref('Worklet')}}_ interface loads the module in the given JavaScript file and adds it to the current PaintWorklet.
 
 ## Examples
@@ -56,8 +57,8 @@ class CheckerboardPainter {
     // Use `ctx` as if it was a normal canvas
     const colors = ['red', 'green', 'blue'];
     const size = 32;
-    for(let y = 0; y < geom.height/size; y++) {
-      for(let x = 0; x < geom.width/size; x++) {
+    for (let y = 0; y < (geom.height / size); y++) {
+      for (let x = 0; x < (geom.width / size); x++) {
         const color = colors[(x + y) % colors.length];
         ctx.beginPath();
         ctx.fillStyle = color;
@@ -77,11 +78,9 @@ registerPaint('checkerboard', CheckerboardPainter);
 The following example demonstrates loading the above worklet from its js file and does so by feature detection.
 
 ```js
-<script>
-  if ('paintWorklet' in CSS) {
-    CSS.paintWorklet.addModule('checkerboard.js');
-  }
-</script>
+if ('paintWorklet' in CSS) {
+  CSS.paintWorklet.addModule('checkerboard.js');
+}
 ```
 
 ### Use a PaintWorklet
@@ -117,4 +116,4 @@ You can also use the {{cssxref('@supports')}} at-rule.
 ## See also
 
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
-- [Houdini APIs](/en-US/docs/Web/Houdini)
+- [Houdini APIs](/en-US/docs/Web/Guide/Houdini)

@@ -1,6 +1,7 @@
 ---
 title: TextEncoder
 slug: Web/API/TextEncoder
+page-type: web-api-interface
 tags:
   - API
   - Encoding
@@ -33,17 +34,17 @@ console.log(view); // Uint8Array(3) [226, 130, 172]
 
 _The `TextEncoder` interface doesn't inherit any property._
 
-- {{DOMxRef("TextEncoder.prototype.encoding")}}{{ReadOnlyInline}}
+- {{DOMxRef("TextEncoder.prototype.encoding")}} {{ReadOnlyInline}}
   - : Always returns "`utf-8`".
 
 ## Methods
 
 _The `TextEncoder` interface doesn't inherit any method_.
 
-- {{DOMxRef("TextEncoder.prototype.encode()")}}
-  - : Takes a {{domxref("USVString")}} as input, and returns a {{jsxref("Uint8Array")}} containing UTF-8 encoded text.
-- {{DOMxRef("TextEncoder.prototype.encodeInto()")}}
-  - : Takes a {{domxref("USVString")}} to encode and a destination {{jsxref("Uint8Array")}} to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the progress of the encoding. This is potentially more performant than the older `encode()` method.
+- {{DOMxRef("TextEncoder.encode()")}}
+  - : Takes a string as input, and returns a {{jsxref("Uint8Array")}} containing UTF-8 encoded text.
+- {{DOMxRef("TextEncoder.encodeInto()")}}
+  - : Takes a string to encode and a destination {{jsxref("Uint8Array")}} to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the progress of the encoding. This is potentially more performant than the older `encode()` method.
 
 ## Specifications
 

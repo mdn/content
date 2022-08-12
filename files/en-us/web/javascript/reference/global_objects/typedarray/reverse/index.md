@@ -16,8 +16,7 @@ browser-compat: javascript.builtins.TypedArray.reverse
 The **`reverse()`** method reverses a typed array in place. The
 first typed array element becomes the last and the last becomes the first. This method
 has the same algorithm as {{jsxref("Array.prototype.reverse()")}}. _TypedArray_
-is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-reverse.html","shorter")}}
 
@@ -36,7 +35,7 @@ The reversed array.
 ### Using reverse
 
 ```js
-var uint8 = new Uint8Array([1, 2, 3]);
+const uint8 = new Uint8Array([1, 2, 3]);
 uint8.reverse();
 
 console.log(uint8); // Uint8Array [3, 2, 1]

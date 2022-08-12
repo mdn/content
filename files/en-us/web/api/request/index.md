@@ -1,6 +1,7 @@
 ---
 title: Request
 slug: Web/API/Request
+page-type: web-api-interface
 tags:
   - API
   - Fetch
@@ -42,6 +43,8 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Contains the request's method (`GET`, `POST`, etc.)
 - {{domxref("Request.mode")}} {{readonlyInline}}
   - : Contains the mode of the request (e.g., `cors`, `no-cors`, `same-origin`, `navigate`.)
+- {{domxref("Request.priority")}} {{readonlyInline}}
+  - : Contains the request's priority hint (e.g., `high`, `low`, `auto`).
 - {{domxref("Request.redirect")}} {{readonlyinline}}
   - : Contains the mode for how redirects are handled. It may be one of `follow`, `error`, or `manual`.
 - {{domxref("Request.referrer")}} {{readonlyInline}}
@@ -84,13 +87,13 @@ You could then fetch this request by passing the `Request` object in as a parame
 
 ```js
 fetch(request)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     image.src = URL.createObjectURL(blob);
   });
 ```
 
-In the following snippet, we create a new request using the `Request()` constructor with some initial data and body content for an api request which need a body payload:
+In the following snippet, we create a new request using the `Request()` constructor with some initial data and body content for an API request which need a body payload:
 
 ```js
 const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
@@ -101,23 +104,23 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **Note:** The body type can only be a {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} or {{domxref("ReadableStream")}} type, so for adding a JSON object to the payload you need to stringify that object.
+> **Note:** The body can only be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, a {{domxref("ReadableStream")}}, or a {{jsxref("String")}} object, as well as a string literal, so for adding a JSON object to the payload you need to stringify that object.
 
-You could then fetch this api request by passing the `Request` object in as a parameter to a {{domxref("fetch()")}} call, for example and get the response:
+You could then fetch this API request by passing the `Request` object in as a parameter to a {{domxref("fetch()")}} call, for example and get the response:
 
 ```js
 fetch(request)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error('Something went wrong on api server!');
+      throw new Error('Something went wrong on API server!');
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
-    // ...
-  }).catch(error => {
+    // …
+  }).catch((error) => {
     console.error(error);
   });
 ```

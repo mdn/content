@@ -1,6 +1,7 @@
 ---
 title: VRFrameData
 slug: Web/API/VRFrameData
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -20,22 +21,22 @@ The **`VRFrameData`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API
 
 ## Constructor
 
-- {{domxref("VRFrameData.VRFrameData()")}} {{deprecated_inline}}
+- {{domxref("VRFrameData.VRFrameData", "VRFrameData()")}} {{deprecated_inline}}
   - : Creates a `VRFrameData` object instance.
 
 ## Properties
 
-- {{domxref("VRFrameData.leftProjectionMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.leftProjectionMatrix")}} {{deprecated_inline}} {{readonlyInline}}
   - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the left eye's rendering.
-- {{domxref("VRFrameData.leftViewMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.leftViewMatrix")}} {{deprecated_inline}} {{readonlyInline}}
   - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the left eye's rendering.
-- {{domxref("VRFrameData.pose")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.pose")}} {{deprecated_inline}} {{readonlyInline}}
   - : The {{domxref("VRPose")}} of the {{domxref("VRDisplay")}} at the current {{domxref("VRFrameData.timestamp")}}.
-- {{domxref("VRFrameData.rightProjectionMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.rightProjectionMatrix")}} {{deprecated_inline}} {{readonlyInline}}
   - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the right eye's rendering.
-- {{domxref("VRFrameData.rightViewMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.rightViewMatrix")}} {{deprecated_inline}} {{readonlyInline}}
   - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the right eye's rendering.
-- {{domxref("VRFrameData.timestamp")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.timestamp")}} {{deprecated_inline}} {{readonlyInline}}
   - : A constantly increasing timestamp value representing the time a frame update occurred.
 
 ## Examples
@@ -46,7 +47,7 @@ See [`VRDisplay.getFrameData()`](/en-US/docs/Web/API/VRDisplay/getFrameData#exam
 
 This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
 ## Browser compatibility
 

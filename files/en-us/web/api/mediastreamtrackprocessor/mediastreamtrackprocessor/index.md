@@ -1,6 +1,7 @@
 ---
-title: MediaStreamTrackProcessor.MediaStreamTrackProcessor()
+title: MediaStreamTrackProcessor()
 slug: Web/API/MediaStreamTrackProcessor/MediaStreamTrackProcessor
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,7 +16,7 @@ The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("Media
 ## Syntax
 
 ```js
-new MediaStreamTrackProcessor(init);
+new MediaStreamTrackProcessor(options)
 ```
 
 ### Parameters
@@ -24,7 +25,7 @@ new MediaStreamTrackProcessor(init);
   - : An object with the following properties:
     - `track`
       - : A {{domxref("MediaStreamTrack")}}.
-    - `maxBufferSize`{{Optional_Inline}}
+    - `maxBufferSize` {{optional_inline}}
       - : An integer specifying the maximum number of media frames to be buffered.
 
 ## Examples

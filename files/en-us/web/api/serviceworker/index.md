@@ -1,6 +1,7 @@
 ---
 title: ServiceWorker
 slug: Web/API/ServiceWorker
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -28,16 +29,16 @@ _The `ServiceWorker` interface inherits properties from its parent, {{domxref("E
 - {{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}
   - : Returns the `ServiceWorker` serialized script URL defined as part of {{domxref("ServiceWorkerRegistration")}}. The URL must be on the same origin as the document that registers the `ServiceWorker`.
 - {{domxref("ServiceWorker.state")}} {{readonlyinline}}
-  - : Returns the state of the service worker. It returns one of the following values: `installing`, `installed,` `activating`, `activated`, or `redundant`.
-
-### Event handlers
-
-- {{domxref("ServiceWorker.onstatechange")}} {{readonlyinline}}
-  - : An {{domxref("EventListener")}} property called whenever an event of type `statechange` is fired; it is basically fired anytime the {{domxref("ServiceWorker.state")}} changes.
+  - : Returns the state of the service worker. It returns one of the following values: `parsed`, `installing`, `installed,` `activating`, `activated`, or `redundant`.
 
 ## Methods
 
 _The `ServiceWorker` interface inherits methods from its parent, {{domxref("EventTarget")}}._
+
+## Events
+
+- {{domxref("ServiceWorker.statechange_event", "statechange")}} {{readonlyinline}}
+  - : Fires anytime the {{domxref("ServiceWorker.state")}} changes.
 
 ## Examples
 
@@ -47,8 +48,8 @@ This code snippet is from the [service worker registration-events sample](https:
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
-    }).then(function (registration) {
-        var serviceWorker;
+    }).then((registration) => {
+        let serviceWorker;
         if (registration.installing) {
             serviceWorker = registration.installing;
             document.querySelector('#kind').textContent = 'installing';
@@ -61,11 +62,11 @@ if ('serviceWorker' in navigator) {
         }
         if (serviceWorker) {
             // logState(serviceWorker.state);
-            serviceWorker.addEventListener('statechange', function (e) {
+            serviceWorker.addEventListener('statechange', (e) => {
                 // logState(e.target.state);
             });
         }
-    }).catch (function (error) {
+    }).catch((error) => {
         // Something went wrong during registration. The service-worker.js file
         // might be unavailable or contain a syntax error.
     });

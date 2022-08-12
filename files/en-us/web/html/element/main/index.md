@@ -9,7 +9,6 @@ tags:
   - main
 browser-compat: html.elements.main
 ---
-
 {{HTMLRef}}
 
 The **`<main>`** [HTML](/en-US/docs/Web/HTML) element represents the dominant content of the {{HTMLElement("body")}} of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
@@ -102,16 +101,16 @@ The content of a `<main>` element should be unique to the document. Content that
     <h2>Red Delicious</h2>
     <p>These bright red apples are the most common found in many
     supermarkets.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>…</p>
+    <p>…</p>
   </article>
 
   <article>
     <h2>Granny Smith</h2>
     <p>These juicy, green apples make a great filling for
     apple pies.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>…</p>
+    <p>…</p>
   </article>
 </main>
 
@@ -122,7 +121,7 @@ The content of a `<main>` element should be unique to the document. Content that
 
 ### Landmark
 
-The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role) role. [Landmarks](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) can be used by assistive technology to quickly identify and navigate to large sections of the document. Prefer using the `<main>` element over declaring `role="main"`, unless there are [legacy browser support concerns](#browser_compatibility).
+The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) role. [Landmarks](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) can be used by assistive technology to quickly identify and navigate to large sections of the document. Prefer using the `<main>` element over declaring `role="main"`, unless there are [legacy browser support concerns](#browser_compatibility).
 
 ### Skip navigation
 
@@ -164,4 +163,4 @@ To support Internet Explorer 11 and lower, you can add an {{glossary("ARIA")}} r
 
 - Basic structural elements: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}
 - Section-related elements: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, or {{HTMLElement("nav")}}
-- [ARIA: Main role](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role)
+- [ARIA: Main role](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role)

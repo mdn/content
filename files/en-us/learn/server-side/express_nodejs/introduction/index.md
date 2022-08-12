@@ -119,9 +119,9 @@ While _Express_ itself is fairly minimalist, developers have created compatible 
 
 ## Where did Node and Express come from?
 
-Node was initially released, for Linux only, in 2009. The NPM package manager was released in 2010, and native Windows support was added in 2012. At time of writing the current LTS release is Node v12.18.4 while the latest release is Node 14.13.0. This is a tiny snapshot of a rich history; delve into [Wikipedia](https://en.wikipedia.org/wiki/Node.js#History) if you want to know more.
+Node was initially released, for Linux only, in 2009. The NPM package manager was released in 2010, and native Windows support was added in 2012. Delve into [Wikipedia](https://en.wikipedia.org/wiki/Node.js#History) if you want to know more.
 
-Express was initially released in November 2010 and is currently on version 4.17.1 of the API (with 5.0 in "alpha"). You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
+Express was initially released in November 2010 and is currently on major version 4 of the API. You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
 
 ## How popular are Node and Express?
 
@@ -203,7 +203,7 @@ We can import this module using `require()`, and then call the exported method(s
 
 ```js
 const square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
-console.log('The area of a square with a width of 4 is ' + square.area(4));
+console.log(`The area of a square with a width of 4 is ${square.area(4)}`);
 ```
 
 > **Note:** You can also specify an absolute path to the module (or a name, as we did initially).
@@ -212,11 +212,11 @@ If you want to export a complete object in one assignment instead of building it
 
 ```js
 module.exports = {
-  area: function(width) {
+  area(width) {
     return width * width;
   },
 
-  perimeter: function(width) {
+  perimeter(width) {
     return 4 * width;
   }
 };
@@ -250,7 +250,7 @@ There are a number of ways for an asynchronous API to notify your application th
 
 > **Note:** Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <http://callbackhell.com/>), using a module like [async](https://www.npmjs.com/package/async), or even moving to ES6 features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Note:** A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your _callback functions_ is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: [The Node.js Way - Understanding Error-First Callbacks](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js) (fredkschott.com).
+> **Note:** A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your _callback functions_ is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: [The Node.js Way - Understanding Error-First Callbacks](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (fredkschott.com).
 
 ### Creating route handlers
 
@@ -270,11 +270,11 @@ The _Express application_ object also provides methods to define route handlers 
 
 `checkout()`, `copy()`, **`delete()`**, **`get()`**, `head()`, `lock()`, `merge()`, `mkactivity()`, `mkcol()`, `move()`, `m-search()`, `notify()`, `options()`, `patch()`, **`post()`**, `purge()`, **`put()`**, `report()`, `search()`, `subscribe()`, `trace()`, `unlock()`, `unsubscribe()`.
 
-There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/api/http.html#http_http_methods)).
+There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/docs/latest/api/http.html#httpmethods)).
 
 ```js
 app.all('/secret', function(req, res, next) {
-  console.log('Accessing the secret section ...');
+  console.log('Accessing the secret section…');
   next(); // pass control to the next handler
 });
 ```
@@ -308,11 +308,11 @@ To use the router in our main app file we would then `require()` the route modul
 
 ```js
 const wiki = require('./wiki.js');
-// ...
+// …
 app.use('/wiki', wiki);
 ```
 
-We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section [Routes and controllers .](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
+We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section [Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes).
 
 ### Using middleware
 
@@ -336,7 +336,7 @@ const express = require('express');
 const logger = require('morgan');
 const app = express();
 app.use(logger('dev'));
-...
+// …
 ```
 
 > **Note:** Middleware and routing functions are called in the order that they are declared. For some middleware the order is important (for example if session middleware depends on cookie middleware, then the cookie handler must be added first). It is almost always the case that middleware is called before setting routes, or your route handlers will not have access to functionality added by your middleware.
@@ -352,8 +352,8 @@ const express = require('express');
 const app = express();
 
 // An example middleware function
-let a_middleware_function = function(req, res, next) {
-  // ... perform some operations
+const a_middleware_function = function(req, res, next) {
+  // Perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
 }
 
@@ -446,31 +446,36 @@ $ npm install mongodb
 
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.
 
+This works with older versions of mongodb version ~ 2.2.33:
+
 ```js
-//this works with older versions of  mongodb version ~ 2.2.33
 const MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
+MongoClient.connect('mongodb://localhost:27017/animals', (err, db) => {
   if (err) throw err;
 
-  db.collection('mammals').find().toArray(function (err, result) {
+  db.collection('mammals').find().toArray((err, result) => {
     if (err) throw err;
 
     console.log(result);
   });
 });
+```
 
-//for mongodb version 3.0 and up
+For mongodb version 3.0 and up:
+
+```js
 const MongoClient = require('mongodb').MongoClient;
-MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){
-   if(err) throw err;
 
-   let db = client.db('animals');
-   db.collection('mammals').find().toArray(function(err, result){
-     if(err) throw err;
-     console.log(result);
-     client.close();
-   });
+MongoClient.connect('mongodb://localhost:27017/animals', (err, client) => {
+  if (err) throw err;
+
+  const db = client.db('animals');
+  db.collection('mammals').find().toArray((err, result) => {
+    if (err) throw err;
+    console.log(result);
+    client.close();
+  });
 });
 ```
 
@@ -480,9 +485,9 @@ For more information see [Database integration](https://expressjs.com/en/guide/d
 
 ### Rendering data (views)
 
-Template engines (referred to as "view engines" by _Express_) allow you to specify the _structure_ of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for [a number of template engines](https://github.com/expressjs/express/wiki#template-engines), and there is a useful comparison of the more popular engines here: [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/).
+Template engines (also referred to as "view engines" by _Express_'s documentation) allow you to specify the _structure_ of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for [a number of template engines](https://github.com/expressjs/express/wiki#template-engines), and there is a useful comparison of the more popular engines here: [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/).
 
-In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engines' settings, as shown below (you will also have to install the package containing your template library too!)
+In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engine' settings, as shown below (you will also have to install the package containing your template library too!)
 
 ```js
 const express = require('express');

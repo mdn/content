@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.getAllKeys()
 slug: Web/API/IDBObjectStore/getAllKeys
+page-type: web-api-instance-method
 tags:
   - API
   - IDBObjectStore
@@ -32,9 +33,9 @@ method provides a cursor if the record exists, and no cursor if it does not.
 ## Syntax
 
 ```js
-var request = objectStore.getAllKeys();
-var request = objectStore.getAllKeys(query);
-var request = objectStore.getAllKeys(query, count);
+getAllKeys()
+getAllKeys(query)
+getAllKeys(query, count)
 ```
 
 ### Parameters
@@ -78,5 +79,4 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

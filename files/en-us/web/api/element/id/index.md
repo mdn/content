@@ -1,6 +1,7 @@
 ---
 title: Element.id
 slug: Web/API/Element/id
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -26,17 +27,9 @@ the document with [CSS](/en-US/docs/Web/CSS).
 > **Note:** Identifiers are case-sensitive, but you should avoid creating
 > IDs that differ only in the capitalization.
 
-## Syntax
+## Value
 
-```js
-var idStr = element.id; // Get the id
-```
-
-```js
-element.id = 'newid'; // Set the id
-```
-
-- `idStr` is the identifier of the element.
+A string.
 
 ## Specifications
 

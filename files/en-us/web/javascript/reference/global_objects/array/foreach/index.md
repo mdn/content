@@ -22,32 +22,34 @@ for each array element.
 
 ```js
 // Arrow function
-forEach((element) => { /* ... */ })
-forEach((element, index) => { /* ... */ })
-forEach((element, index, array) => { /* ... */ })
+forEach((element) => { /* … */ })
+forEach((element, index) => { /* … */ })
+forEach((element, index, array) => { /* … */ })
 
 // Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function(element) { /* ... */ })
-forEach(function(element, index) { /* ... */ })
-forEach(function(element, index, array){ /* ... */ })
-forEach(function(element, index, array) { /* ... */ }, thisArg)
+forEach(function(element) { /* … */ })
+forEach(function(element, index) { /* … */ })
+forEach(function(element, index, array){ /* … */ })
+forEach(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : Function to execute on each element. It accepts between one and three arguments:
+  - : Function to execute on each element.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index` {{optional_inline}}
+    - `index`
       - : The index of `element` in the array.
-    - `array` {{optional_inline}}
+    - `array`
       - : The array `forEach()` was called upon.
 
 - `thisArg` {{optional_inline}}
@@ -72,8 +74,8 @@ that have been deleted or are uninitialized. (For sparse arrays, [see example be
 If a `thisArg` parameter is provided to `forEach()`,
 it will be used as callback's `this` value. The
 `thisArg` value ultimately observable by
-`callbackFn` is determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+`callbackFn` is determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 The range of elements processed by `forEach()` is set before the first
 invocation of `callbackFn`. Elements which are assigned to indexes
@@ -83,8 +85,7 @@ deleted, their value as passed to `callbackFn` will be the value at
 the time `forEach()` visits them; elements that are deleted before being
 visited are not visited. If elements that are already visited are removed (e.g. using
 {{jsxref("Array.prototype.shift()", "shift()")}}) during the iteration, later elements
-will be skipped. ([See
-this example, below](#modifying_the_array_during_iteration).)
+will be skipped. ([See this example, below](#modifying_the_array_during_iteration).)
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
@@ -144,7 +145,7 @@ effects at the end of a chain.
 ### No operation for uninitialized values (sparse arrays)
 
 ```js
-const arraySparse = [1, 3,, 7];
+const arraySparse = [1, 3, /* empty */, 7];
 let numCallbackRuns = 0;
 
 arraySparse.forEach((element) => {
@@ -191,12 +192,12 @@ The following code logs a line for each element in an array:
 
 ```js
 const logArrayElements = (element, index, array) => {
-  console.log('a[' + index + '] = ' + element);
+  console.log(`a[${index}] = ${element}`);
 };
 
 // Notice that index 2 is skipped, since there is no item at
-// that position in the array...
-[2, 5,, 9].forEach(logArrayElements);
+// that position in the array.
+[2, 5, , 9].forEach(logArrayElements);
 // logs:
 // a[0] = 2
 // a[1] = 5
@@ -209,17 +210,19 @@ The following (contrived) example updates an object's properties from each entry
 array:
 
 ```js
-function Counter() {
-  this.sum = 0
-  this.count = 0
+class Counter {
+  constructor() {
+    this.sum = 0;
+    this.count = 0;
+  }
+  add(array) {
+    // Only function expressions will have its own this binding
+    array.forEach(function countEntry(entry) {
+      this.sum += entry;
+      ++this.count;
+    }, this);
+  }
 }
-
-Counter.prototype.add = function(array) {
-  array.forEach(function countEntry(entry) {
-    this.sum += entry;
-    ++this.count;
-  }, this);
-};
 
 const obj = new Counter();
 obj.add([2, 5, 9]);
@@ -231,8 +234,9 @@ Since the `thisArg` parameter (`this`) is provided to
 `forEach()`, it is passed to `callback` each time it's
 invoked. The callback uses it as its `this` value.
 
-> **Note:** If passing the callback function used an [arrow function
-> expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), the `thisArg` parameter could be omitted,
+> **Note:** If passing the callback function used an
+> [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+> the `thisArg` parameter could be omitted,
 > since all arrow functions lexically bind the {{jsxref("Operators/this", "this")}}
 > value.
 

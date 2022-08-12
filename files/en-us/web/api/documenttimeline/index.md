@@ -1,6 +1,7 @@
 ---
 title: DocumentTimeline
 slug: Web/API/DocumentTimeline
+page-type: web-api-interface
 tags:
   - API
   - Animation
@@ -60,4 +61,4 @@ for (const cat of cats) {
 - {{domxref("AnimationTimeline")}}
 - {{domxref("AnimationTimeline.currentTime")}}
 - {{domxref("Document.timeline")}}
-- {{domxref("DocumentTimeline.DocumentTimeline()")}}
+- {{domxref("DocumentTimeline.DocumentTimeline", "DocumentTimeline()")}}

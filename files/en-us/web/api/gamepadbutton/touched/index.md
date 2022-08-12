@@ -1,6 +1,7 @@
 ---
 title: GamepadButton.touched
 slug: Web/API/GamepadButton/touched
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -21,12 +22,12 @@ If the button is not capable of detecting touch but can return an analog value, 
 
 A {{jsxref("Boolean")}}. True if touched.
 
-## Example
+## Examples
 
 ```js
 let gp = navigator.getGamepads()[0]; // Get the first gamepad object
 
-if(gp.buttons[0].touched == true) {
+if (gp.buttons[0].touched) {
   // respond to button being touched
 }
 ```

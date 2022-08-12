@@ -1,22 +1,24 @@
 ---
 title: CustomStateSet.has()
 slug: Web/API/CustomStateSet/has
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - has
   - CustomStateSet
+  - Experimental
 browser-compat: api.CustomStateSet.has
 ---
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`has()`** method of the {{domxref("CustomStateSet")}} interface returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.
 
 ## Syntax
 
 ```js
-CustomStateSet.has(value)
+has(value)
 ```
 
 ### Parameters
@@ -24,7 +26,7 @@ CustomStateSet.has(value)
 - `value`
   - : The value to test for in the `CustomStateSet` object.
 
-### Return Value
+### Return value
 
 A {{jsxref("Boolean")}}, `true` if `value` exists in the `CustomStateSet`.
 

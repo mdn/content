@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.hardwareConcurrency
 slug: Web/API/WorkerNavigator/hardwareConcurrency
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,12 +17,6 @@ browser-compat: api.WorkerNavigator.hardwareConcurrency
 The **`navigator.hardwareConcurrency`** read-only property
 returns the number of logical processors available to run threads on the user's
 computer.
-
-## Syntax
-
-```js
-logicalProcessors = navigator.hardwareConcurrency
-```
 
 ## Value
 

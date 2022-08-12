@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - NeedsContent
   - Reference
   - margin-inline
@@ -34,6 +33,7 @@ margin-inline-end: auto;
 margin-inline-end: inherit;
 margin-inline-end: initial;
 margin-inline-end: revert;
+margin-inline-end: revert-layer;
 margin-inline-end: unset;
 ```
 

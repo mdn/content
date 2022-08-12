@@ -39,7 +39,7 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 - The `color` value of the {{HTMLElement("input")}} {{htmlattrxref("type", "input")}} attribute has been implemented on desktop platforms. It was already available on mobile ones.
 - The `allow-popups` directive is now supported with the {{htmlattrxref("sandbox", "iframe")}} attribute of the {{HTMLElement("iframe")}} element ({{bug(766282)}}).
 - Blending of HTML elements using the {{cssxref("mix-blend-mode")}} property has been implemented. The `layout.css.mix-blend-mode.enabled` preference must be set to `true` ({{bug(902525)}}).
-- The {{htmlattrxref("typemustmatch", "object")}} attribute on the {{HTMLElement("object")}} element is now supported ({{bug(827160)}}).
+- The {{domxref("Object.typeMustMatch", "typeMustMatch")}} property of the {{HTMLElement("object")}} element is now supported ({{bug(827160)}}).
 
 ### JavaScript
 
@@ -87,7 +87,7 @@ _No change._
 
 ## See also
 
-- [List of changes](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&component=Marionette&product=Testing&target_milestone=mozilla27) in [Marionette](https://firefox-source-docs.mozilla.org/testing/marionette/marionette/index.html) for Firefox 27.
+- [List of changes](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&component=Marionette&product=Testing&target_milestone=mozilla27) in [Marionette](https://firefox-source-docs.mozilla.org/testing/marionette/index.html) for Firefox 27.
 
 ### Older versions
 

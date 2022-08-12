@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue()
 slug: Web/API/CSSTransformValue/CSSTransformValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS
@@ -21,15 +22,15 @@ individual transform objects.
 ## Syntax
 
 ```js
-var CSSTransformValue = new CSSTransformValue(transforms);
+new CSSTransformValue(transforms)
 ```
 
 ### Parameters
 
-- transforms
+- `transforms`
   - : A list of {{domxref("CSSTransformComponent")}} objects to iterate over.
 
-### Returns
+### Return value
 
 A new {{domxref("CSSTransformValue")}}.
 

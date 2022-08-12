@@ -1,6 +1,7 @@
 ---
 title: XRViewport.y
 slug: Web/API/XRViewport/y
+page-type: web-api-instance-property
 tags:
   - API
   - AR

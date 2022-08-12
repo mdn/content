@@ -28,8 +28,8 @@ inserted, to invoke a debugger (if one exists) when the function is called.
 
 ```js
 function potentiallyBuggyCode() {
-    debugger;
-    // do potentially buggy stuff to examine, step through, etc.
+  debugger;
+  // do potentially buggy stuff to examine, step through, etc.
 }
 ```
 
@@ -48,4 +48,4 @@ statement. It is like a breakpoint in the script source.
 
 ## See also
 
-- [The Debugger in the Firefox Developer Tools](/en-US/docs/Tools/Debugger)
+- [The Debugger in the Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)

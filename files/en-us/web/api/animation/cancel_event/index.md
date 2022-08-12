@@ -1,6 +1,7 @@
 ---
 title: 'Animation: cancel event'
 slug: Web/API/Animation/cancel_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -9,7 +10,7 @@ browser-compat: api.Animation.cancel_event
 ---
 {{ APIRef("Web Animations") }}
 
-The **`finish`** event of the {{domxref("Animation")}} interface is fired when the {{domxref("Animation.cancel()")}} method is called or when the animation enters the `"idle"` play state from another state, such as when the animation is removed from an element before it finishes playing.
+The **`cancel`** event of the {{domxref("Animation")}} interface is fired when the {{domxref("Animation.cancel()")}} method is called or when the animation enters the `"idle"` play state from another state, such as when the animation is removed from an element before it finishes playing.
 
 > **Note:** Creating a new animation that is initially idle does not trigger a `cancel` event on the new animation.
 
@@ -18,8 +19,8 @@ The **`finish`** event of the {{domxref("Animation")}} interface is fired when t
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cancel', event => { })
-oncancel = event => { }
+addEventListener('cancel', (event) => { })
+oncancel = (event) => { }
 ```
 
 ## Event type
@@ -42,7 +43,7 @@ _In addition to the properties listed below, properties from the parent interfac
 If this animation is canceled, remove its element.
 
 ```js
-animation.oncancel = event => { animation.effect.target.remove(); };
+animation.oncancel = (event) => { animation.effect.target.remove(); };
 ```
 
 ## Specifications

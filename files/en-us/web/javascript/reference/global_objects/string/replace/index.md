@@ -9,6 +9,7 @@ tags:
   - Reference
   - Regular
   - String
+  - Polyfill
 browser-compat: javascript.builtins.String.replace
 ---
 {{JSRef}}
@@ -16,8 +17,8 @@ browser-compat: javascript.builtins.String.replace
 The **`replace()`** method returns a
 new string with some or all matches of a `pattern` replaced by a
 `replacement`. The `pattern` can be a string or a
-{{jsxref("RegExp")}}, and the `replacement` can be a string or a function to
-be called for each match. If `pattern` is a string, only the first occurrence
+{{jsxref("RegExp")}}, and the `replacement` can be a string or a function
+called for each match. If `pattern` is a string, only the first occurrence
 will be replaced.
 
 The original string is left unchanged.
@@ -56,8 +57,8 @@ replace(substr, replacerFunction)
 - `replacerFunction` (replacement)
   - : A function to be invoked to create the new substring to be used to replace the
     matches to the given `regexp` or `substr`.
-    The arguments supplied to this function are described in the "[Specifying a function as a
-    parameter](#specifying_a_function_as_a_parameter)" section below.
+    The arguments supplied to this function are described in the
+    "[Specifying a function as a parameter](#specifying_a_function_as_a_parameter)" section below.
 
 ### Return value
 
@@ -112,10 +113,10 @@ to `'abc - 12345 - #$*%'`:
 
 ```js
 function replacer(match, p1, p2, p3, offset, string) {
-  // p1 is nondigits, p2 digits, and p3 non-alphanumerics
+  // p1 is non-digits, p2 digits, and p3 non-alphanumerics
   return [p1, p2, p3].join(' - ');
 }
-let newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+const newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 console.log(newString);  // abc - 12345 - #$*%
 ```
 
@@ -127,8 +128,8 @@ In the following example, the regular expression is defined in `replace()`
 and includes the ignore case flag.
 
 ```js
-let str = 'Twas the night before Xmas...';
-let newstr = str.replace(/xmas/i, 'Christmas');
+const str = 'Twas the night before Xmas...';
+const newstr = str.replace(/xmas/i, 'Christmas');
 console.log(newstr);  // Twas the night before Christmas...
 ```
 
@@ -140,14 +141,15 @@ This logs `'Twas the night before Christmas...'`.
 ### Using global and ignore with replace()
 
 Global replace can only be done with a regular expression. In the following example,
-the regular expression includes the [global
-and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2) which permits `replace()` to replace each
+the regular expression includes the
+[global and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)
+which permits `replace()` to replace each
 occurrence of `'apples'` in the string with `'oranges'`.
 
 ```js
-let re = /apples/gi;
-let str = 'Apples are round, and apples are juicy.';
-let newstr = str.replace(re, 'oranges');
+const re = /apples/gi;
+const str = 'Apples are round, and apples are juicy.';
+const newstr = str.replace(re, 'oranges');
 console.log(newstr);  // oranges are round, and oranges are juicy.
 ```
 
@@ -156,13 +158,13 @@ This logs `'oranges are round, and oranges are juicy'`.
 ### Switching words in a string
 
 The following script switches the words in the string. For the replacement text, the
-script uses [capturing
-groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) and the `$1` and `$2` replacement patterns.
+script uses [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+and the `$1` and `$2` replacement patterns.
 
 ```js
-let re = /(\w+)\s(\w+)/;
-let str = 'John Smith';
-let newstr = str.replace(re, '$2, $1');
+const re = /(\w+)\s(\w+)/;
+const str = 'John Smith';
+const newstr = str.replace(re, '$2, $1');
 console.log(newstr);  // Smith, John
 ```
 
@@ -222,10 +224,10 @@ Fahrenheit degree passed in a string to the `f2c()` function.
 ```js
 function f2c(x) {
   function convert(str, p1, offset, s) {
-    return ((p1 - 32) * 5/9) + 'C';
+    return `${(p1 - 32) * 5 / 9}C`;
   }
-  let s = String(x);
-  let test = /(-?\d+(?:\.\d*)?)F\b/g;
+  const s = String(x);
+  const test = /(-?\d+(?:\.\d*)?)F\b/g;
   return s.replace(test, convert);
 }
 ```
@@ -240,6 +242,7 @@ function f2c(x) {
 
 ## See also
 
+- [Polyfill of `String.prototype.replace` in `core-js` with fixes and implementation of modern behavior like `Symbol.replace` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replaceAll", "String.prototype.replaceAll()")}}
 - {{jsxref("String.prototype.match", "String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}

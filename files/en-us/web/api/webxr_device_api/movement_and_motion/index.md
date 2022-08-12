@@ -1,6 +1,7 @@
 ---
 title: 'Movement, orientation, and motion: A WebXR example'
 slug: Web/API/WebXR_Device_API/Movement_and_motion
+page-type: guide
 tags:
   - 3D
   - API
@@ -112,7 +113,7 @@ const RADIANS_PER_DEGREE = Math.PI / 180.0;
 
 The first two—`viewerStartPosition` and `viewerStartOrientation`—indicate where the viewer will be placed relative to the center of the space, and the direction in which they'll initially be looking. `cubeOrientation` will store the current orientation of the cube, while `cubeMatrix` and `mouseMatrix` are storage for matrices used during the rendering of the scene. `inverseOrientation` is a quaternion which will be used to represent the rotation to apply to the reference space for the object in the frame being rendered.
 
-`RADIANS_PER_DEGREEE` is the value to multiply an angle in degrees by to convert the angle into radians.
+`RADIANS_PER_DEGREE` is the value to multiply an angle in degrees by to convert the angle into radians.
 
 The last four variables declared are storage for references to the {{HTMLElement("div")}} elements into which we'll output the matrices when we want to show them to the user.
 
@@ -131,7 +132,7 @@ function LogGLError(where) {
 
 This takes as its only input a string, `where`, which is used to indicate what part of the program generated the error, since similar errors can have in multiple situations.
 
-### The vertex and fragment  shaders
+### The vertex and fragment shaders
 
 The vertex and fragment shaders are both exactly the same as those used in the example for our article [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL). [Refer to that](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL#update_the_shaders) if you're interested in the [GLSL](/en-US/docs/Web/API/WebGL_API/By_example/Hello_GLSL) source code for the basic shaders used here.
 
@@ -261,7 +262,7 @@ function sessionStarted(session) {
     baseLayer: new XRWebGLLayer(xrSession, gl)
   });
 
-  if (SESSION_TYPE == "immersive-vr") {
+  if (SESSION_TYPE === "immersive-vr") {
     refSpaceType = "local";
   } else {
     refSpaceType = "viewer";
@@ -296,7 +297,7 @@ We then look at the value of the `SESSION_TYPE` constant to see whether the WebX
 
 The `glMatrix` library's `fromTranslation()` function for 4x4 matrices is used to convert the viewer's start position as given in the `viewerStartPosition` constant into a transform matrix, `cubeMatrix`. The viewer's starting orientation, `viewerStartOrientation` constant, is copied into the `cubeOrientation`, which will be used to track the rotation of the cube over time.
 
-`sessionStarted()` finishes up by calling the session's {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} method to get a reference space object describing the space in which the object is being created. When the promise returned resolves to a {{domxref("XRReferenceSpace")}} object, we call its {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace")}} method to obtain a reference space object to represent the object's coordinate system. The  origin of the new space is located at the world coordinates specified by the `viewerStartPosition` and its orientation set to `cubeOrientation`. Then we let the session know we're ready to draw a frame by calling its {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method. We record the returned request ID in case we need to cancel the request later.
+`sessionStarted()` finishes up by calling the session's {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} method to get a reference space object describing the space in which the object is being created. When the promise returned resolves to a {{domxref("XRReferenceSpace")}} object, we call its {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace")}} method to obtain a reference space object to represent the object's coordinate system. The origin of the new space is located at the world coordinates specified by the `viewerStartPosition` and its orientation set to `cubeOrientation`. Then we let the session know we're ready to draw a frame by calling its {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method. We record the returned request ID in case we need to cancel the request later.
 
 Finally, `sessionStarted()` returns the {{domxref("XRSession")}}  representing the user's WebXR session.
 
@@ -517,7 +518,7 @@ function applyViewerControls(refSpace) {
 }
 ```
 
-If all the input offsets are zero, we just return the original reference space. Otherwise, we create from the orientation changes in `mousePitch` and `mouseYaw` a quaternion specifying the inverse of that orientation, so that applying the `inverseOrientation` to  the cube will correctly appear to reflect the viewer's movement.
+If all the input offsets are zero, we just return the original reference space. Otherwise, we create from the orientation changes in `mousePitch` and `mouseYaw` a quaternion specifying the inverse of that orientation, so that applying the `inverseOrientation` to the cube will correctly appear to reflect the viewer's movement.
 
 Then it's time to create a new {{domxref("XRRigidTransform")}} object representing the transform that will be used to create the new {{domxref("XRReferenceSpace")}} for the moved and/or re-oriented object. The position is a new vector whose `x`, `y`, and `z` correspond to the offsets moved along each of those axes. The orientation is the `inverseOrientation` quaternion.
 
@@ -527,7 +528,7 @@ We copy the transform's {{domxref("XRRigidTransform.matrix", "matrix")}} into `m
 
 The `renderScene()`  function is called to actually render the parts of the world that are visible to the user at the moment. It's called once for each eye, with slightly different positions for each eye, in order to establish the 3D effect needed for XR gear.
 
-Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example \[[view the code on GitHub](https://github.com/mdn/webgl-examples/blob/gh-pages/tutorial/sample7/webgl-demo.js)]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.
+Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example \[[view the code on GitHub](https://github.com/mdn/dom-examples/blob/master/webgl-examples/tutorial/sample7/webgl-demo.js)]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.
 
 ```js
 const normalMatrix = mat4.create();
@@ -694,7 +695,7 @@ The rest of the code is identical to that found in the earlier examples:
 - `loadShader()`
   - : Creates a shader object and loads the specified source code into it before compiling the code and checking to ensure that the compiler succeeded before returning the newly compiled shader to the caller. If an error occurs, `NULL` is returned instead.
 - `initBuffers()`
-  - : Initializes the buffers that contain data to be passed into WebGL. These buffers include the array of vertex positions, the array of vertex normals, the texture coordinates for each surface of the cube, and the array of vertex indices (specifying which entry in the vertex list represents each corner of the cube). An object containing references to eard
+  - : Initializes the buffers that contain data to be passed into WebGL. These buffers include the array of vertex positions, the array of vertex normals, the texture coordinates for each surface of the cube, and the array of vertex indices (specifying which entry in the vertex list represents each corner of the cube).
 - `loadTexture()`
   - : Loads the image at a given URL and creates a WebGL texture from it. If the image's dimensions aren't both powers of two (see the `isPowerOf2()` function), mipmapping is disabled and wrapping is clamped to the edges. This is because optimized rendering of mipmapped textures only works for textures whose dimensions are powers of two in WebGL 1. WebGL 2 supports arbitrarily-sized textures for mipmapping.
 - `isPowerOf2()`
@@ -712,6 +713,6 @@ There are few limitations on what can be done if you set yourself to it.
 
 ## See also
 
-- [Learn WebGL](http://learnwebgl.brown37.net/#) (includes some great visualizations of the camera and how it relates to the virtual world)
+- [Learn WebGL](https://learnwebgl.brown37.net/#) (includes some great visualizations of the camera and how it relates to the virtual world)
 - [WebGL Fundamentals](https://webglfundamentals.org)
 - [Learn OpenGL](https://learnopengl.com/)

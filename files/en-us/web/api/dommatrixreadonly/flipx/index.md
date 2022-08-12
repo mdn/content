@@ -1,6 +1,7 @@
 ---
 title: DOMMatrixReadOnly.flipX()
 slug: Web/API/DOMMatrixReadOnly/flipX
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -21,7 +22,13 @@ Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) containing a new matrix b
 
 ## Examples
 
-This SVG contains two paths in the shape of a triangle, both drawn to the same position.  Note that the x co-ordinate of the viewBox attribute is negative, showing us content from both sides of the x-axis.
+### Inverting a triangle
+
+In this example, the SVG contains two paths in the shape of a triangle, both drawn to the same position. Note that the x co-ordinate of the viewBox attribute is negative, showing us content from both sides of the x-axis.
+
+The JavaScript first creates an identity matrix, then uses the `flipX()` method to create a new matrix, which is then applied to the blue triangle, inverting it across the x-axis. The red triangle is left in place.
+
+#### HTML
 
 ```html
 <svg width="100" height="100" viewBox="-50 0 100 100">
@@ -30,7 +37,7 @@ This SVG contains two paths in the shape of a triangle, both drawn to the same p
 </svg>
 ```
 
-This JavaScript first creates an identity matrix, then uses the \`flipX()\` method to create a new matrix, which is then applied to the blue triangle, inverting it across the x-axis.  The red triangle is left in place.
+#### JavaScript
 
 ```js
 const flipped = document.getElementById('flipped');
@@ -39,7 +46,9 @@ const flippedMatrix = matrix.flipX();
 flipped.setAttribute('transform', flippedMatrix.toString());
 ```
 
-{{ EmbedLiveSample('Examples', '100', '100', 'flipx.png', 'Web/API/DOMMatrixReadOnly/flipX') }}
+#### Result
+
+{{EmbedLiveSample('Inverting a triangle')}}
 
 ## Specifications
 

@@ -138,8 +138,6 @@ Your code will be richer and more professional as a result, and you'll be able t
 ## Angular tutorials
 
 > **Note:** Angular tutorials last tested in April 2021, with Angular CLI (NG) 11.2.5.
->
-> If you need to check your code against our version, you can find a finished version of the sample Angular app code at [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src).
 
 - [1. Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - : In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.
@@ -167,4 +165,4 @@ There is a variety of reasons for this:
 
 We want to say this upfront — we've **not** chosen the frameworks we are focusing on because we think they are the best, or because we endorse them in any way. We just think they score highly on the above criteria.
 
-Note that we were hoping to have more frameworks included upon initial publication, but we decided to release the content and then add more framework guides later, rather than delay it longer. If your favorite framework is not represented in this content and you'd like to help change that, feel free to discuss it with us! Get in touch with us via [Matrix](https://wiki.mozilla.org/Matrix), or [Discourse](https://discourse.mozilla.org/c/mdn), or drop us a mail on the [mdn-admins list](mailto:mdn-admins@mozilla.org).
+Note that we were hoping to have more frameworks included upon initial publication, but we decided to release the content and then add more framework guides later, rather than delay it longer. If your favorite framework is not represented in this content and you'd like to help change that, feel free to discuss it with us! Get in touch with us via [Matrix](https://wiki.mozilla.org/Matrix), or [Discourse](https://discourse.mozilla.org/c/mdn/236), or drop us a mail on the [mdn-admins list](mailto:mdn-admins@mozilla.org).

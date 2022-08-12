@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.loop
 slug: Web/API/AudioBufferSourceNode/loop
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -21,14 +22,7 @@ the {{domxref("AudioBuffer")}} is reached.
 
 The `loop` property's default value is `false`.
 
-## Syntax
-
-```js
-var loopingEnabled = AudioBufferSourceNode.loop;
-AudioBufferSourceNode.loop = true | false;
-```
-
-### Value
+## Value
 
 A Boolean which is `true` if looping is enabled; otherwise, the value is
 `false`.
@@ -39,7 +33,7 @@ time specified by the {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}} pr
 is reached, playback continues at the time specified by
 {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}
 
-## Example
+## Examples
 
 In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
 decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
@@ -47,9 +41,7 @@ are provided to play and stop the audio playback, and a slider control is used t
 the `playbackRate` property value on the fly. When the audio is played, it
 loops.
 
-> **Note:** You can [run the full
-> example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view
-> the source](https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html).)
+> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view the source](https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html).)
 
 ```js
 function getData() {
@@ -60,10 +52,10 @@ function getData() {
 
   request.responseType = 'arraybuffer';
 
-  request.onload = function() {
-    var audioData = request.response;
+  request.onload = () => {
+    const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, (buffer) => {
         myBuffer = buffer;
         source.buffer = myBuffer;
         source.playbackRate.value = playbackControl.value;
@@ -71,7 +63,7 @@ function getData() {
         source.loop = true;
       },
 
-      function(e){"Error with decoding audio data" + e.err});
+      (e) => console.error(`Error with decoding audio data: ${e.err}`));
 
   }
 
@@ -80,7 +72,7 @@ function getData() {
 
 // wire up buttons to stop and play audio, and range slider control
 
-play.onclick = function() {
+play.onclick = () => {
   getData();
   source.start(0);
   play.setAttribute('disabled', 'disabled');
@@ -99,6 +91,5 @@ play.onclick = function() {
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioBufferSourceNode")}}

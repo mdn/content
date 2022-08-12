@@ -1,6 +1,7 @@
 ---
 title: Window.navigator
 slug: Web/API/Window/navigator
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,18 +17,17 @@ The **`Window.navigator`** read-only property returns a
 reference to the {{domxref("Navigator")}} object, which has methods and properties about
 the application running the script.
 
-## Syntax
+## Value
 
-```js
-navigatorObject = window.navigator
-```
+The {{domxref("navigator")}} object.
 
 ## Examples
 
 ### Example #1: Browser detect and return a string
 
 ```js
-var sBrowser, sUsrAg = navigator.userAgent;
+let sBrowser;
+const sUsrAg = navigator.userAgent;
 
 // The order matters here, and this may report false positives for unlisted browsers.
 
@@ -59,7 +59,7 @@ if (sUsrAg.indexOf("Firefox") > -1) {
   sBrowser = "unknown";
 }
 
-alert("You are using: " + sBrowser);
+alert(`You are using: ${sBrowser}`);
 ```
 
 ## Specifications

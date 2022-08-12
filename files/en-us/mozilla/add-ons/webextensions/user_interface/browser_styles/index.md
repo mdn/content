@@ -8,6 +8,12 @@ tags:
   - Extensions
   - Guide
   - WebExtensions
+browser-compat:
+  - webextensions.manifest.action
+  - webextensions.manifest.browser_action
+  - webextensions.manifest.page_action
+  - webextensions.manifest.sidebar_action
+  - webextensions.manifest.options_ui
 ---
 {{AddonSidebar}}
 
@@ -24,7 +30,7 @@ When considering using `browser_style: true`, you need to test your extension wi
 
 > **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style`, so if you wish to support them, you need to add both keys.
 
-In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css`. The extra stylesheet at `chrome://browser/content/extension-mac.css` is also included on OS X.
+In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css`. The extra stylesheet at `chrome://browser/content/extension-mac.css` is also included on macOS.
 
 Most styles are automatically applied, but some elements require you to add the non-standard `browser-style` class to get their styling, as detailed in the table below:
 
@@ -109,7 +115,7 @@ Most styles are automatically applied, but some elements require you to add the 
 
 ## Browser compatibility
 
-{{Compat("webextensions.browser_style")}}
+{{Compat}}
 
 ## Firefox Panel Components
 

@@ -1,6 +1,7 @@
 ---
 title: XRSpace
 slug: Web/API/XRSpace
+page-type: web-api-interface
 tags:
   - API
   - AR

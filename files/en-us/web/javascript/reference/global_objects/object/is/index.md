@@ -16,8 +16,7 @@ browser-compat: javascript.builtins.Object.is
 {{JSRef}}
 
 The **`Object.is()`** method determines whether two values are
-[the same
-value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+[the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 
 ## Syntax
 
@@ -38,11 +37,10 @@ A {{jsxref("Boolean")}} indicating whether or not the two arguments are the same
 
 ## Description
 
-`Object.is()` determines whether two values are [the same
-value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness). Two values are the same if one of the following holds:
+`Object.is()` determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness). Two values are the same if one of the following holds:
 
 - both {{jsxref("undefined")}}
-- both {{jsxref("null")}}
+- both [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 - both `true` or both `false`
 - both strings of the same length with the same characters in the same order
 - both the same object (meaning both values reference the same object in memory)
@@ -81,8 +79,8 @@ Object.is(null, null);            // true
 Object.is(undefined, undefined);  // true
 Object.is(window, window);        // true
 Object.is([], []);                // false
-var foo = { a: 1 };
-var bar = { a: 1 };
+const foo = { a: 1 };
+const bar = { a: 1 };
 Object.is(foo, foo);              // true
 Object.is(foo, bar);              // false
 
@@ -97,30 +95,6 @@ Object.is(NaN, 0/0);              // true
 Object.is(NaN, Number.NaN)        // true
 ```
 
-## Polyfill
-
-```js
-if (!Object.is) {
-  Object.defineProperty(Object, "is", {
-    value: function (x, y) {
-      // SameValue algorithm
-      if (x === y) {
-        // return true if x and y are not 0, OR
-        // if x and y are both 0 of the same sign.
-        // This checks for cases 1 and 2 above.
-        return x !== 0 || 1 / x === 1 / y;
-      } else {
-        // return true if both x AND y evaluate to NaN.
-        // The only possibility for a variable to not be strictly equal to itself
-        // is when that variable evaluates to NaN (example: Number.NaN, 0/0, NaN).
-        // This checks for case 3.
-        return x !== x && y !== y;
-      }
-    }
-  });
-}
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -132,6 +106,5 @@ if (!Object.is) {
 ## See also
 
 - [Polyfill of `Object.is` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Equality
-  comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) — a comparison of all three built-in sameness
+- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) — a comparison of all three built-in sameness
   facilities

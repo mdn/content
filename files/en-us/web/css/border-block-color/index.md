@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.border-block-color
@@ -28,6 +27,7 @@ border-block-color: #F5F6F7;
 border-block-color: inherit;
 border-block-color: initial;
 border-block-color: revert;
+border-block-color: revert-layer;
 border-block-color: unset;
 ```
 

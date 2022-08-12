@@ -10,8 +10,8 @@ tags:
   - widget role
   - widget
   - slider role
+spec-urls: https://w3c.github.io/aria/#slider
 ---
-
 The `slider` role defines an input where the user selects a value from within a given range.
 
 ## Description
@@ -26,11 +26,12 @@ The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) r
 
 The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, similar to HTML's {{HTMLElement('meter')}} element, is a read-only gauge indicating the amount of something within a known range, such as a computer's battery indicator or a car's gas gauge.
 
-The `slider` role, similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), is a read-write input range. Sliders allow users to select a value between between set minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value.
+The `slider` role, similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), is a read-write input range. Sliders allow users to select a value between set minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value.
 
 While all three of these ranges have the same ARIA states and properties, the `slider` role is the only read-write range: it is the only one whose value changes via user interaction. As such, it must be able to receive focus. In addition, keyboard interaction, mouse clicks, and touch interaction must be supported.
 
-> **Warning** To change the slider value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events. Fully test slider widgets using assistive technologies on devices where touch is a primary input mechanism before using the `slider` role (and all range widgets).
+> **Warning:** To change the slider value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.
+> Fully test slider widgets using assistive technologies on devices where touch is a primary input mechanism before using the `slider` role (and all range widgets).
 
 #### Common attributes
 
@@ -48,7 +49,7 @@ The `aria-valuetext` value must be updated as the `value` or `aria-valuenow` is 
 
 When `aria-valuetext` is an important feature for a slider, consider using {{HTMLElement('select')}} with {{HTMLElement('option')}} elements instead. While not visually a range, every option's value is more accessible to all users, not just users of assistive technology.
 
-An accessible name is **required**. If the range's role is applied to an HTML {{HTMLElement('input')}} element (or `<meter>` or `<progress>` element), the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
+An accessible name is **required**. If the range's role is applied to an HTML {{HTMLElement('input')}} element (or `<meter>` or `<progress>` element), the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
 
 When not using the HTML {{HTMLElement('input')}} element to create your slider, include the {{htmlattrxref('tabindex')}} attribute to make the slider focusable. Of the three range types, only `slider` is user-interactive, and so is the only one that requires being able to receive focus. Focus should be placed on the slider thumb.
 
@@ -58,7 +59,7 @@ Sliders have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA
 
 Unlike the read-only `meter` and `progressbar` roles, a `slider` is an input, accepting user interaction. In addition to including the {{htmlattrxref('tabindex')}} attribute to enable slider focus, keyboard and pointer device support must be implemented.
 
-The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. User actions that must be supported include changing the value by dragging the thumb or clicking the slider for pointing devices and using directional keys such as arrow keys for the keyboard users. See [keyboard interactions](#Keyboard_interactions) below.
+The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. User actions that must be supported include changing the value by dragging the thumb or clicking the slider for pointing devices and using directional keys such as arrow keys for the keyboard users. See [keyboard interactions](#keyboard_interactions) below.
 
 > **Note:** It is recommended to use native [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) elements rather than the `slider` role. User agents provide a stylized widget for the range input element, based on the current `value` as it relates to the minimum and maximum values. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
 
@@ -69,6 +70,28 @@ A multi-thumb slider is a slider with two or more thumbs that each set a value i
 In many two-thumb sliders, the thumbs are not allowed to pass one another, such as when the slider sets the minimum and maximum values for a range. For example, in a price-range selector, the maximum value of the thumb that sets the lower end of the range is limited by the current value of the thumb that sets the upper end of the range. The minimum value of the upper-end thumb is also limited by the current value of the lower-end thumb.
 
 It is not a requirement that the thumbs in multi-thumb sliders be dependent on the other thumb values, but intuitive user experience is a requirement, so it is recommended to avoid this anti-pattern.
+
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `slider`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `slider` element as it is a role that does not support semantic children.
+
+For example, consider the following `slider` element, which contains a heading.
+
+```html
+<div role="slider"><h3>Temperature in Celsius</h3></div>
+```
+
+Because descendants of `slider` are presentational, the following code is equivalent:
+
+```html
+<div role="slider"><h3 role="presentation">Temperature in Celsius</h3></div>
+```
+
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="slider">Temperature in Celsius</div>
+```
 
 ## Associated roles, states, and properties
 
@@ -123,12 +146,12 @@ The position of the thumb is the maximum value minus the current value times the
   position: absolute;
   height: 1rem;
   width: 2rem;
-  background-color: currentColor;
+  background-color: currentcolor;
   left: -0.5rem;
 }
 ```
 
-For this example to work, we have to write a script to handle all keyboard and pointer events, including event listeners for `pointermove`, `pointerup`, `focus`, `blur`, and `keydown`, and provide styles for the default state and when the thumb and slider receive focus. The position of the thumb, the `aria-valuenow` and`aria-valuetext` values, and the inner text of the element with the {{HTMLattrxref('id')}} "temperatureValue" need to be updated every time <kbd>ArrowLeft</kbd>, <kbd>ArrowDown</kbd>, <kbd>ArrowRight</kbd>, <kbd>ArrowUp</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, and, optionally, <kbd>PageDown</kbd> and <kbd>PageUp</kbd> keys are released and when the user drags the thumb or otherwise clicks on the temperature slider.
+For this example to work, we have to write a script to handle all keyboard and pointer events, including event listeners for `pointermove`, `pointerup`, `focus`, `blur`, and `keydown`, and provide styles for the default state and when the thumb and slider receive focus. The position of the thumb, the `aria-valuenow` and `aria-valuetext` values, and the inner text of the element with the {{HTMLattrxref('id')}} "temperatureValue" need to be updated every time <kbd>ArrowLeft</kbd>, <kbd>ArrowDown</kbd>, <kbd>ArrowRight</kbd>, <kbd>ArrowUp</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, and, optionally, <kbd>PageDown</kbd> and <kbd>PageUp</kbd> keys are released and when the user drags the thumb or otherwise clicks on the temperature slider.
 
 Using semantic HTML, this could have been written as:
 
@@ -154,7 +177,7 @@ There are a few ways to make a range input vertical. In this example, we used [C
 | Right and Up arrows | Increase the selected value by one step |
 | Left and Down arrows | Decrease the selected value by one step|
 | Page Up | (Optional) increase the value by a set amount greater than one step |
-| Page Up and Page Down | (Optional) decrease the value by a set amount greater than one step |
+| Page Down | (Optional) decrease the value by a set amount greater than one step |
 | Home | Set the slider to the minimum value. |
 | End | Set the slider to the maximum value. |
 
@@ -172,9 +195,7 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#slider","ARIA: slider role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See also
 

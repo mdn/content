@@ -18,8 +18,8 @@ The **`handler.has()`** method is a trap for the
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
-  has: function(target, prop) {
+new Proxy(target, {
+  has(target, prop) {
   }
 });
 ```
@@ -70,10 +70,10 @@ The following code traps the {{jsxref("Operators/in", "in")}} operator.
 
 ```js
 const p = new Proxy({}, {
-  has: function(target, prop) {
-    console.log('called: ' + prop);
+  has(target, prop) {
+    console.log(`called: ${prop}`);
     return true;
-  }
+  },
 });
 
 console.log('a' in p); // "called: a"
@@ -87,9 +87,9 @@ const obj = { a: 10 };
 Object.preventExtensions(obj);
 
 const p = new Proxy(obj, {
-  has: function(target, prop) {
+  has(target, prop) {
     return false;
-  }
+  },
 });
 
 'a' in p; // TypeError is thrown
@@ -106,6 +106,6 @@ const p = new Proxy(obj, {
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Operators/in", "in")}} operator
 - {{jsxref("Reflect.has()")}}

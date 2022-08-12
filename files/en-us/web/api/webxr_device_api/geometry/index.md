@@ -1,6 +1,7 @@
 ---
 title: Geometry and reference spaces in WebXR
 slug: Web/API/WebXR_Device_API/Geometry
+page-type: guide
 tags:
   - API
   - Geometry
@@ -37,13 +38,13 @@ WebGL measures all distances and lengths in **meters**. WebXR inherits this stan
 
 ![Diagram showing a WebXR space whose X, Y, and Z coordinate axes each have a minimum value of -1 and a maximum of 1.](defaultspacedimensions.svg)
 
-This two cubic meter space encompasses the entire universe for the purposes of your code. Everything you draw must have its coordinates mapped to fit into this space, either explicitly within your code, or by using a transform to adjust the coordinates of all vertices. The most efficient way, of course, is to design your objects and code to use the same coordinate system as WebGL does.
+This eight cubic meter space encompasses the entire universe for the purposes of your code. Everything you draw must have its coordinates mapped to fit into this space, either explicitly within your code, or by using a transform to adjust the coordinates of all vertices. The most efficient way, of course, is to design your objects and code to use the same coordinate system as WebGL does.
 
 The WebGL coordinates and lengths are transformed automatically at render time to the size of the viewport in which the scene is being rendered.
 
 #### Angles
 
-Angles are specified using **{{interwiki("wikipedia", "radians")}}**. To convert degrees to radians, multiply the value in degrees by `π/180`. The following code snippet shows two simple functions, `degreesToRadians()` and `radiansToDegrees()`, which convert back and forth between the two units for measuring angles.
+Angles are specified using **[radians](https://en.wikipedia.org/wiki/Radians)**. To convert degrees to radians, multiply the value in degrees by `π/180`. The following code snippet shows two simple functions, `degreesToRadians()` and `radiansToDegrees()`, which convert back and forth between the two units for measuring angles.
 
 ```js
 const RADIANS_PER_DEGREE = Math.PI / 180.0;

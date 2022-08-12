@@ -1,6 +1,7 @@
 ---
 title: TransformStream()
 slug: Web/API/TransformStream/TransformStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,15 +16,15 @@ The **`TransformStream()`** constructor creates a new {{domxref("TransformStream
 ## Syntax
 
 ```js
-new TransformStream();
-new TransformStream(transformer);
-new TransformStream(transformer, writableStrategy);
-new TransformStream(transformer, writableStrategy, readableStrategy);
+new TransformStream()
+new TransformStream(transformer)
+new TransformStream(transformer, writableStrategy)
+new TransformStream(transformer, writableStrategy, readableStrategy)
 ```
 
 ### Parameters
 
-- `transformer`{{Optional_Inline}}
+- `transformer` {{optional_inline}}
 
   - : An object representing the `transformer`. If not supplied the resulting stream will be an **identity transform stream** which forwards all chunks written to its writable side to its readable side, without any changes.
 
@@ -36,7 +37,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy);
     - `flush(controller)`
       - : Called after all chunks written to the writable side have been successfully transformed, and the writable side is about to be closed.
 
-- `writableStrategy`{{Optional_Inline}}
+- `writableStrategy` {{optional_inline}}
 
   - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:
@@ -48,7 +49,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy);
       - : A method containing a parameter `chunk`. This indicates the size to
         use for each chunk, in bytes.
 
-- `readableStrategy`{{Optional_Inline}}
+- `readableStrategy` {{optional_inline}}
 
   - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:

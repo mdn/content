@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
+page-type: web-api-instance-method
 tags:
   - API
   - AnalyserNode
@@ -18,10 +19,7 @@ If the array has fewer elements than the {{domxref("AnalyserNode.fftSize")}}, ex
 ## Syntax
 
 ```js
-const audioCtx = new AudioContext();
-const analyser = audioCtx.createAnalyser();
-const dataArray = new Uint8Array(analyser.fftSize); // Uint8Array should be the same length as the fftSize
-analyser.getByteTimeDomainData(dataArray); // fill the Uint8Array with data returned from getByteTimeDomainData()
+getByteTimeDomainData(array)
 ```
 
 ### Parameters
@@ -32,9 +30,9 @@ analyser.getByteTimeDomainData(dataArray); // fill the Uint8Array with data retu
 
 ### Return value
 
-**`void`** | None
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
@@ -42,7 +40,7 @@ The following example shows basic usage of an {{domxref("AudioContext")}} to cre
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
 
-  ...
+// …
 
 analyser.fftSize = 2048;
 const bufferLength = analyser.fftSize;
@@ -64,14 +62,15 @@ function draw() {
   let x = 0;
 
   canvasCtx.beginPath();
-  for(var i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     const v = dataArray[i]/128.0;
     const y = v * HEIGHT/2;
 
-    if(i === 0)
+    if (i === 0) {
       canvasCtx.moveTo(x, y);
-    else
+    } else {
       canvasCtx.lineTo(x, y);
+    }
 
     x += sliceWidth;
   }

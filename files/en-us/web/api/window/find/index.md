@@ -1,6 +1,7 @@
 ---
 title: Window.find()
 slug: Web/API/Window/find
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -23,9 +24,10 @@ The **`Window.find()`** method finds a string in a window sequentially.
 ## Syntax
 
 ```js
-window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
-            aWholeWord, aSearchInFrames, aShowDialog);
+find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFrames, aShowDialog)
 ```
+
+### Parameters
 
 - `aString`
   - : The text string for which to search.
@@ -36,22 +38,21 @@ window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
 - `aWrapAround`
   - : A boolean value. If `true`, specifies a wrap around search.
 - `aWholeWord` {{Unimplemented_Inline}}
-  - : A boolean value. If `true`, specifies a whole word search. This is
-    not implemented; see {{bug(481513)}}.
+  - : A boolean value. If `true`, specifies a whole word search. This is not implemented; see {{bug(481513)}}.
 - `aSearchInFrames`
   - : A boolean value. If `true`, specifies a search in frames.
 
-### Returns
+### Return value
 
 `true` if the string is found; otherwise, `false`.
 
-## Example
+## Examples
 
 ### JavaScript
 
 ```js
 function findString(text) {
-  document.querySelector("#output").textContent="String found? " + window.find(text);
+  document.querySelector("#output").textContent=`String found? ${window.find(text)}`;
 }
 ```
 
@@ -68,7 +69,7 @@ function findString(text) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Notes
 

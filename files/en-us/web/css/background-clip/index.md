@@ -34,6 +34,7 @@ background-clip: text;
 background-clip: inherit;
 background-clip: initial;
 background-clip: revert;
+background-clip: revert-layer;
 background-clip: unset;
 ```
 

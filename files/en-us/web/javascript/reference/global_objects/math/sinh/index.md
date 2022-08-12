@@ -50,25 +50,6 @@ Because `sinh()` is a static method of `Math`, you always use it
 as `Math.sinh()`, rather than as a method of a `Math` object you
 created (`Math` is not a constructor).
 
-## Polyfill
-
-This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
-
-```js
-Math.sinh = Math.sinh || function(x) {
-  return (Math.exp(x) - Math.exp(-x)) / 2;
-}
-```
-
-or using only one call to the {{jsxref("Math.exp()")}} function:
-
-```js
-Math.sinh = Math.sinh || function(x) {
-  var y = Math.exp(x);
-  return (y - 1 / y) / 2;
-}
-```
-
 ## Examples
 
 ### Using Math.sinh()

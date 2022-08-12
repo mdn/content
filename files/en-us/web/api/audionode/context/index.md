@@ -1,6 +1,7 @@
 ---
 title: AudioNode.context
 slug: Web/API/AudioNode/context
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode
@@ -17,18 +18,12 @@ The read-only `context` property of the
 {{domxref("BaseAudioContext")}}, that is the object representing the processing graph
 the node is participating in.
 
-## Syntax
-
-```js
-var aContext = anAudioNode.context;
-```
-
-### Value
+## Value
 
 The {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}} object that was
 used to construct this `AudioNode`.
 
-## Example
+## Examples
 
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -52,5 +47,4 @@ console.log(oscillator.context === audioCtx); // true
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

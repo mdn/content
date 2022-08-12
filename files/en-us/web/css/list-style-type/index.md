@@ -44,6 +44,7 @@ list-style-type: none;
 list-style-type: inherit;
 list-style-type: initial;
 list-style-type: revert;
+list-style-type: revert-layer;
 list-style-type: unset;
 ```
 
@@ -63,7 +64,7 @@ Note that:
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : A identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
-- {{cssxref("symbols()")}}
+- {{cssxref("symbols", "symbols()")}}
   - : Defines an anonymous style of the list.
 - {{cssxref("&lt;string&gt;")}}
   - : The specified string will be used as the item's marker.
@@ -103,7 +104,7 @@ Note that:
   - : Han "Earthly Branch" ordinals.
 - `cjk-heavenly-stem`, `-moz-cjk-heavenly-stem`
   - : Han "Heavenly Stem" ordinals.
-- `cjk-ideographic`{{experimental_inline}}
+- `cjk-ideographic` {{experimental_inline}}
   - : Identical to `trad-chinese-informal`.
 - `devanagari`, `-moz-devanagari`
   - : Devanagari numbering.
@@ -120,7 +121,7 @@ Note that:
 - `hiragana` {{experimental_inline}}
   - : Dictionary-order hiragana lettering.
 - `hiragana-iroha` {{experimental_inline}}
-  - : {{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} hiragana lettering
+  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) hiragana lettering
 - `japanese-formal` {{experimental_inline}}
   - : Japanese formal numbering to be used in legal or financial documents. The kanjis are designed so that they can't be modified to look like another correct one.
 - `japanese-informal` {{experimental_inline}}
@@ -130,7 +131,7 @@ Note that:
 - `katakana` {{experimental_inline}}
   - : Dictionary-order katakana lettering
 - `katakana-iroha` {{experimental_inline}}
-  - : {{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} katakana lettering
+  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) katakana lettering
 - `korean-hangul-formal` {{experimental_inline}}
   - : Korean hangul numbering.
 - `korean-hanja-formal` {{experimental_inline}}
@@ -200,7 +201,7 @@ ul li::before {
 }
 ```
 
-- [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
+- [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html)
 - [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
@@ -449,8 +450,8 @@ ol.shortcut {
     <input type="radio" id="tamil" name="type" value="tamil">tamil
   </label>
 
-  <label for="telegu">
-    <input type="radio" id="telegu" name="type" value="telegu">telegu
+  <label for="telugu">
+    <input type="radio" id="telugu" name="type" value="telugu">telugu
   </label>
 
   <label for="thai">
@@ -557,7 +558,7 @@ input {
 
 ```js
 const container = document.querySelector(".container");
-container.addEventListener("change", event => {
+container.addEventListener("change", (event) => {
   const list = document.querySelector("ol");
   list.setAttribute("style", `list-style-type: ${event.target.value}`);
 });

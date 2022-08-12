@@ -1,6 +1,7 @@
 ---
 title: Window.scrollY
 slug: Web/API/Window/scrollY
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -22,13 +23,7 @@ browsers, meaning that it isn't necessarily a whole number. You can get the numb
 pixels the document is scrolled horizontally from the {{domxref("Window.scrollX",
   "scrollX")}} property.
 
-## Syntax
-
-```js
-var y = window.scrollY
-```
-
-### Value
+## Value
 
 In practice, the returned value is a double-precision floating-point value indicating
 the number of pixels the document is currently scrolled vertically from the origin,
@@ -43,7 +38,7 @@ In more technical terms, `scrollY` returns the Y coordinate of the top edge
 of the current {{Glossary("viewport")}}. If there is no viewport, the returned value is
 0\.
 
-## Example
+## Examples
 
 ```js
 // make sure and go down to the second page
@@ -66,19 +61,6 @@ property:
 
 ```js
 window.pageYOffset === window.scrollY; // always true
-```
-
-For cross-browser compatibility, use `window.pageYOffset` instead of
-`window.scrollY`. **Additionally**, older versions of Internet
-Explorer (< 9) do not support either property and must be worked around by checking
-other non-standard properties. A fully compatible example:
-
-```js
-var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
-
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 ```
 
 ## Specifications

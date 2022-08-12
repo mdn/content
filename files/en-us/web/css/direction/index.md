@@ -34,6 +34,7 @@ direction: rtl;
 direction: inherit;
 direction: initial;
 direction: revert;
+direction: revert-layer;
 direction: unset;
 ```
 

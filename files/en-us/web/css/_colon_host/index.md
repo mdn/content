@@ -30,7 +30,7 @@ The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 ## Syntax
 
-```css
+```
 :host
 ```
 
@@ -38,7 +38,7 @@ The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 ### Styling the shadow host
 
-The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
+The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
 In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
 
@@ -78,5 +78,5 @@ The `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` rule styles all i
 ## See also
 
 - [Web components](/en-US/docs/Web/Web_Components)
-- {{cssxref(":host()")}}
-- {{cssxref(":host-context()")}}
+- {{cssxref(":host_function", ":host()")}}
+- {{cssxref(":host-context", ":host-context()")}}

@@ -18,7 +18,7 @@ Returns the time since the last request was completed.
 ## Syntax
 
 ```js
-var state = browser.captivePortal.getLastChecked()
+let state = browser.captivePortal.getLastChecked()
 ```
 
 ### Return value

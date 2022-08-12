@@ -1,6 +1,7 @@
 ---
 title: Document.plugins
 slug: Web/API/Document/plugins
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -19,13 +20,7 @@ containing one or more {{domxref("HTMLEmbedElement")}}s representing the
 > **Note:** For a list of installed plugins, use [Navigator.plugins](/en-US/docs/Web/API/Navigator/plugins)
 > instead.
 
-## Syntax
-
-```js
-embedArrayObj = document.plugins
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}}.
 
@@ -39,5 +34,4 @@ An {{domxref("HTMLCollection")}}.
 
 ## See also
 
-- [MSDN
-  documentation](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)
+- [MSDN documentation](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)

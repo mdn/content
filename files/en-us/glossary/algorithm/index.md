@@ -12,7 +12,7 @@ In other words, an algorithm is a means of describing a way to solve a problem s
 For example:
 
 - A cooking recipe is a simple algorithm for humans.
-- A sorting algorithm is often used in computer programming to explain a machine how to sort data.
+- A sorting algorithm is often used in computer programming to explain to a machine how to sort data.
 
 Common algorithms are Pathfinding algorithms such as the Traveling Salesman Problem, Tree Traversal algorithms and so on.
 
@@ -20,6 +20,6 @@ There are also Machine Learning algorithms such as Linear Regression, Logistic R
 
 ## See also
 
-- {{Interwiki("wikipedia", "Algorithm", "Algorithm")}} on Wikipedia
+- [Algorithm](https://en.wikipedia.org/wiki/Algorithm) on Wikipedia
 - [Explanations of sorting algorithms](https://www.toptal.com/developers/sorting-algorithms)
-- [Explanations of algorithmic complexity](https://bigocheatsheet.com/)
+- [Explanations of algorithmic complexity](https://www.bigocheatsheet.com/)

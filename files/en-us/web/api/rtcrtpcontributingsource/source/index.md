@@ -1,6 +1,7 @@
 ---
 title: RTCRtpContributingSource.source
 slug: Web/API/RTCRtpContributingSource/source
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -22,13 +23,7 @@ or synchronization source (SSRC) identifier, depending on whether the object is 
 `RTCRtpContributingSource` or {{domxref("RTCRtpSynchronizationSource")}},
 which is based on the former.
 
-## Syntax
-
-```js
-var sourceID = RTCRtpContributingSource.source
-```
-
-### Value
+## Value
 
 An unsigned, 32-bit integer value which uniquely identifies the source of RTP packets
 described by this `RTCRtpContributingSource` (in which case the value is a

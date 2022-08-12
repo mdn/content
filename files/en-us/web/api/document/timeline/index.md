@@ -1,13 +1,13 @@
 ---
 title: Document.timeline
 slug: Web/API/Document/timeline
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
   - AnimationTimeline
   - Document
   - DocumentTimeline
-  - Experimental
   - Property
   - Reference
   - Web Animations
@@ -16,7 +16,7 @@ tags:
   - web animations api
 browser-compat: api.Document.timeline
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+{{ APIRef("Web Animations") }}
 
 The `timeline` readonly property of the {{domxref("Document")}} interface represents the default timeline of the current document. This timeline is a special instance of {{domxref("DocumentTimeline")}} that is automatically created on page load.
 
@@ -26,14 +26,7 @@ The time values for this timeline are calculated as a fixed offset from the glob
 
 > **Note:** A document timeline that is associated with a non-active document is also considered to be **inactive**.
 
-## Syntax
-
-```js
-var pageTimeline = document.timeline;
-var thisMoment = pageTimeline.currentTime;
-```
-
-### Value
+## Value
 
 A {{domxref("DocumentTimeline")}} object.
 

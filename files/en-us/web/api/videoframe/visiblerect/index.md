@@ -1,6 +1,7 @@
 ---
 title: VideoFrame.visibleRect
 slug: Web/API/VideoFrame/visibleRect
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,7 +14,7 @@ browser-compat: api.VideoFrame.visibleRect
 
 The **`visibleRect`**  property of the {{domxref("VideoFrame")}} interface returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
 
-### Value
+## Value
 
 A {{domxref("DOMRectReadOnly")}}.
 

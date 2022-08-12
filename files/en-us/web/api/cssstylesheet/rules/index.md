@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.rules
 slug: Web/API/CSSStyleSheet/rules
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -31,13 +32,7 @@ stylesheet.
 > While `rules` is unlikely to be removed soon, its availability is not as
 > widespread and using it will result in compatibility problems for your site or app.
 
-## Syntax
-
-```js
-var rules = cssStyleSheet.rules;
-```
-
-### Value
+## Value
 
 A live-updating {{domxref("CSSRuleList")}} containing each of the CSS rules making up
 the stylesheet. Each entry in the rule list is a {{domxref("CSSRule")}} object
@@ -54,5 +49,4 @@ describing one rule making up the stylesheet.
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

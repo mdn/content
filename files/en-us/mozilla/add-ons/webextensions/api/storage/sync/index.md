@@ -15,9 +15,9 @@ browser-compat: webextensions.api.storage.sync
 ---
 {{AddonSidebar()}}
 
-Represents the `sync` storage area. Items in `sync` storage are synced by the browser, and are available across all instances of that browser that the user is logged into (e.g. via Firefox sync, or a Google account), across different devices.
+Represents the `sync` storage area. Items in `sync` storage are synced by the browser. The data is then available on all instances of the browser the user is logged into (for example, when using Firefox account on desktop versions of Firefox or a Google account on Chrome) across different devices.
 
-For Firefox a user must have `Add-ons` checked under the "Sync Settings" options in `"about:preferences"`.
+For Firefox, a user must have `Add-ons` checked under the "Sync Settings" options in `"about:preferences"`.
 
 Note that the implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json key.
 
@@ -57,38 +57,58 @@ The browser enforces limits on the amount of data each extension is allowed to s
     <tr>
       <td>Maximum number of items</td>
       <td>
-        The maximum number of items that each extension is allowed to store in
-        the sync storage area.
+        The maximum number of items that each extension can store in the sync storage
+        area.
       </td>
       <td><p>512</p></td>
     </tr>
   </tbody>
 </table>
 
-If an extension attempts to store items that exceed these limits, the call to [`storage.sync.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) will be rejected with an error. An extension can use [`storage.sync.getBytesInUse()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse) to find out how much of its maximum total quota it is currently using.
+If an extension attempts to store items that exceed these limits, calls to {{WebExtAPIRef("storage.StorageArea.set()", "storage.sync.set()")}} are rejected with an error. An extension can use {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.sync.getBytesInUse()")}} to find out how much of its quota is in use.
+
+## Synchronization process
+
+In Firefox, extension data is synced every 10 minutes or whenever the user selects **Sync Now** in **Settings** > **Sync** or Firefox account. When the browser performs a sync, for each key stored, it:
+
+- compares the value on the server with the value at the last sync; if they are different, the value from the server is written to the key in the browser's sync storage.
+- compares the browser's sync storage values with the value on the server; if they are different, writes the browser's key value to the server.
+
+This means that, for each key, a change on the server takes precedence over a change in the browser's sync storage.
+
+This mechanism is generally OK for data such as user preferences or other global settings changed by the user.
+
+However, a key's value can be updated on one browser and synchronized then updated on a second browser before the second browser is synchronized, resulting in the local update being overwritten during sync. This mechanism is, therefore, not ideal for data aggregated across devices, such as a count of page views or how many times an option is used. To handle such cases, use {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.sync.onChanged")}} to listen for sync updates from the server (for example, a count of page views on another browser instance). Then adjust the value locally to take the remote value into account (for example, update the total views based on the remote count and new local count).
 
 ## Methods
 
 The `sync` object implements the methods defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
 
-- {{WebExtAPIRef("storage.StorageArea.get()", "storage.<var>StorageArea</var>.get()")}}
+- {{WebExtAPIRef("storage.StorageArea.get()", "storage.sync.get()")}}
   - : Retrieves one or more items from the storage area.
-- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.<var>StorageArea</var>.getBytesInUse()")}}
-  - : Gets the amount of storage space (in bytes) used one or more items being stored in the storage area.
-- {{WebExtAPIRef("storage.StorageArea.set()", "storage.<var>StorageArea</var>.set()")}}
-  - : Stores one or more items in the storage area. If the item already exists, its value will be updated.
-- {{WebExtAPIRef("storage.StorageArea.remove()", "storage.<var>StorageArea</var>.remove()")}}
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.sync.getBytesInUse()")}}
+  - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
+- {{WebExtAPIRef("storage.StorageArea.set()", "storage.sync.set()")}}
+  - : Stores one or more items in the storage area. If the item exists, its value is updated.
+- {{WebExtAPIRef("storage.StorageArea.remove()", "storage.sync.remove()")}}
   - : Removes one or more items from the storage area.
-- {{WebExtAPIRef("storage.StorageArea.clear()", "storage.<var>StorageArea</var>.clear()")}}
+- {{WebExtAPIRef("storage.StorageArea.clear()", "storage.sync.clear()")}}
   - : Removes all items from the storage area.
+
+## Events
+
+The `sync` object implements the events defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
+
+- {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.sync.onChanged")}}
+  - : Fires when one or more items in the storage area change.
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-sync) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#property-sync) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

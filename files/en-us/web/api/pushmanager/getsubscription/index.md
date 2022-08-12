@@ -1,6 +1,7 @@
 ---
 title: PushManager.getSubscription()
 slug: Web/API/PushManager/getSubscription
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -19,30 +20,30 @@ It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscriptio
 ## Syntax
 
 ```js
-PushManager.getSubscription().then(function(pushSubscription) { /* ... */ } );
+getSubscription()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object or `null`.
 
-## Example
+## Examples
 
-This code snippet is taken from a [push messaging and notification sample](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications). (No live demo is available.)
+This code snippet is taken from a [push messaging and notification sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications). (No live demo is available.)
 
 ```js
 // We need the service worker registration to check for a subscription
-  navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
+  navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
     // Do we already have a push message subscription?
     serviceWorkerRegistration.pushManager.getSubscription()
-      .then(function(subscription) {
+      .then((subscription) => {
         // Enable any UI which subscribes / unsubscribes from
         // push messages.
-        var pushButton = document.querySelector('.js-push-button');
+        const pushButton = document.querySelector('.js-push-button');
         pushButton.disabled = false;
 
         if (!subscription) {
@@ -61,8 +62,8 @@ This code snippet is taken from a [push messaging and notification sample](https
         pushButton.textContent = 'Disable Push Messages';
         isPushEnabled = true;
       })
-      .catch(function(err) {
-        window.Demo.debug.log('Error during getSubscription()', err);
+      .catch((err) => {
+        console.error(`Error during getSubscription(): ${err}`);
       });
   });
 ```

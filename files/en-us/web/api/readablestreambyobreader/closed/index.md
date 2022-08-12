@@ -1,9 +1,9 @@
 ---
 title: ReadableStreamBYOBReader.closed
 slug: Web/API/ReadableStreamBYOBReader/closed
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - ReadableStreamBYOBReader
   - Reference
@@ -11,27 +11,26 @@ tags:
   - closed
 browser-compat: api.ReadableStreamBYOBReader.closed
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-The **`closed`** read-only property
-of the {{domxref("ReadableStreamBYOBReader")}} interface returns a
-{{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the
-stream throws an error or the reader's lock is released. This property enables you
-to write code that responds to an end to the streaming process.
+The **`closed`** read-only property of the {{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the stream throws an error or the reader's lock is released.
 
-## Syntax
+This property enables you to write code that responds to an end to the streaming process.
 
-```js
-var closed = readableStreamBYOBReader.closed;
-```
-
-### Value
+## Value
 
 A {{jsxref("Promise")}}.
 
 ## Examples
 
-TBD.
+The code below shows the pattern for handling the closed/error state of a BYOBReader.
+
+```js
+const reader = stream.getReader({mode: "byob"});
+reader.closed
+  .then(() => { /* Resolved - code to handle stream closing */ } )
+  .catch(() => { /* Rejected - code to handle error */ } );
+```
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: 'RTCIceTransport: selectedcandidatepairchange event'
 slug: Web/API/RTCIceTransport/selectedcandidatepairchange_event
+page-type: web-api-event
 tags:
   - Connectivity
   - ICE
@@ -24,28 +25,21 @@ The pair of candidates is in turn described by an {{domxref("RTCIceCandidatePair
 
 Together, the candidates can be used to establish a connection to be used by the {{domxref("RTCIceTransport")}}, and, by extension, by an {{domxref("RTCPeerConnection")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("RTCIceTransport.onselectedcandidatepairchange", "onselectedcandidatepairchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('selectedcandidatepairchange', (event) => { });
+
+onselectedcandidatepairchange = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -56,21 +50,21 @@ let iceTransport = pc.getSenders[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 
-iceTransport.addEventListener("selectedcandidatepairchange", ev => {
+iceTransport.addEventListener("selectedcandidatepairchange", (ev) => {
   let pair = iceTransport.getSelectedCandidatePair();
   localProtoElem.innerText = pair.local.protocol.toUpperCase();
   remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
 }, false)
 ```
 
-This can also be done by setting the {{domxref("RTCIceTransport.onselectedcandidatepairchange", "onselectedcandidatepairchange")}} event handler property directly.
+This can also be done by setting the `onselectedcandidatepairchange` event handler property directly.
 
 ```js
 let iceTransport = pc.getSenders[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 
-iceTransport.onselectedcandidatepairchange = ev => {
+iceTransport.onselectedcandidatepairchange = (ev) => {
   let pair = iceTransport.getSelectedCandidatePair();
   localProtoElem.innerText = pair.local.protocol.toUpperCase();
   remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
@@ -89,17 +83,16 @@ iceTransport.onselectedcandidatepairchange = ev => {
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
-- {{domxref("RTCIceTransport.onselectedcandidatepairchange")}}
 
 ### Related RTCIceTransport events
 
-- {{event("statechange")}}
-- {{event("gatheringstatechange")}}
+- {{domxref("RTCIceTransport/statechange_event", "statechange")}}
+- {{domxref("RTCIceTransport.gatheringstatechange_event", "gatheringstatechange")}}
 
 ### Related RTCPeerConnection events
 
-- {{event("negotiationneeded")}}
-- {{event("signalingstatechange")}}
-- {{event("iceconnectionstatechange")}}
-- {{event("icegatheringstatechange")}}
-- {{event("connectionstatechange")}}
+- {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
+- {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
+- {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
+- {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
+- {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}

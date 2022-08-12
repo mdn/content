@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.packetsDuplicated
 slug: Web/API/RTCInboundRtpStreamStats/packetsDuplicated
+page-type: web-api-instance-property
 tags:
   - API
   - Duplicate
@@ -28,13 +29,7 @@ packets.
 These packets are not counted by the
 {{domxref("RTCInboundRtpStreamStats.packetsDiscarded", "packetsDiscarded")}} property.
 
-## Syntax
-
-```js
-var packetsDuplicated = rtcInboundRtpStreamStats.packetsDuplicated;
-```
-
-### Value
+## Value
 
 An integer value which specifies how many duplicate packets have been received by the
 local end of this RTP stream so far. These duplicate packets are not included in the

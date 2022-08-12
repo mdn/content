@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.domainLookupEnd
 slug: Web/API/PerformanceResourceTiming/domainLookupEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -21,18 +22,12 @@ times when the user agent starts and ends the domain data retrieval from the cac
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.domainLookupEnd;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the
 browser finishes the domain name lookup for the resource.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"
@@ -41,9 +36,9 @@ properties of all "`resource`"
 ```js
 function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
+  const entries = performance.getEntriesByType("resource");
+  for (const entry of entries) {
+    print_start_and_end_properties(entry);
   }
 }
 function print_start_and_end_properties(perfEntry) {
@@ -56,14 +51,14 @@ function print_start_and_end_properties(perfEntry) {
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (const property of properties) {
     // check each property
-    var supported = properties[i] in perfEntry;
+    const supported = property in perfEntry;
+    const value = perfEntry[property];
     if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
+      console.log(`… ${property} = ${value}`);
     } else {
-      console.log("... " + properties[i] + " = NOT supported");
+      console.log(`… ${property} = NOT supported`);
     }
   }
 }

@@ -14,8 +14,6 @@ tags:
 
 Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.
 
-{{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}
-
 ## Develop web games
 
 Welcome to the MDN game development center! In this area of the site, we provide resources for web developers wanting to develop games. You will find many useful tutorials and technique articles in the main menu on the left, so feel free to explore.
@@ -26,13 +24,13 @@ We've also included a reference section so you can easily find information about
 
 ## Port native games to the Web
 
-If you are a native developer (for example writing games in C++), and you are interested in how you can port your games over to the Web, you should learn more about our [Emscripten](https://kripken.github.io/emscripten-site/index.html) tool — this is an LLVM to JavaScript compiler, which takes LLVM bytecode (e.g. generated from C/C++ using Clang, or from another language) and compiles that into [asm.js](/en-US/docs/Games/Tools/asm.js), which can be run on the Web.
+If you are a native developer (for example writing games in C++), and you are interested in how you can port your games over to the Web, you should learn more about our [Emscripten](https://emscripten.org/index.html) tool — this is an LLVM to JavaScript compiler, which takes LLVM bytecode (e.g. generated from C/C++ using Clang, or from another language) and compiles that into [asm.js](/en-US/docs/Games/Tools/asm.js), which can be run on the Web.
 
 To get started, see:
 
-- [About Emscripten](https://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html) for an introduction including high-level details.
-- [Download and Install](https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html) for installing the toolchain.
-- [Emscripten Tutorial](https://kripken.github.io/emscripten-site/docs/getting_started/Tutorial.html) for a tutorial to teach you how to get started.
+- [About Emscripten](https://emscripten.org/docs/introducing_emscripten/about_emscripten.html) for an introduction including high-level details.
+- [Download and Install](https://emscripten.org/docs/getting_started/downloads.html) for installing the toolchain.
+- [Emscripten Tutorial](https://emscripten.org/docs/getting_started/Tutorial.html) for a tutorial to teach you how to get started.
 
 ## Examples
 
@@ -55,7 +53,7 @@ For a list of web game examples, see our [examples page](/en-US/docs/Games/Examp
 
 - [HTML5 Game Engine](https://html5gameengine.com/)
   - : List of the most popular HTML5 game frameworks along with their rating, features and samples.
-- [JSBreakouts](https://www.jsbreakouts.org/)
+- [JSBreakouts](https://jsbreakouts.org/)
   - : Compare JavaScript Breakout clones in different frameworks to help you choose the right one for you.
 - [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/)
   - : Tutorials and articles about game development in general.

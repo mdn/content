@@ -14,7 +14,7 @@ The JavaScript warning "-file- is being assigned a //# sourceMappingURL, but alr
 
 ## Message
 
-```html
+```
 Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
 ```
 
@@ -40,11 +40,11 @@ Setting a source map by using a comment in the file:
 
 Or, alternatively, you can set a header to your JavaScript file:
 
-```js example-good
+```plain example-good
 X-SourceMap: /path/to/file.js.map
 ```
 
 ## See also
 
-- [How to use a source map – Firefox Tools documentation](/en-US/docs/Tools/Debugger/How_to/Use_a_source_map)
+- [How to use a source map – Firefox Tools documentation](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
 - [Introduction to source maps – HTML5 rocks](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)

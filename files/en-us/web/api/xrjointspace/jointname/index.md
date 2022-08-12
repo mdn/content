@@ -1,6 +1,7 @@
 ---
 title: XRJointSpace.jointName
 slug: Web/API/XRJointSpace/jointName
+page-type: web-api-instance-property
 tags:
   - API
   - Controller
@@ -20,7 +21,7 @@ browser-compat: api.XRJointSpace.jointName
 ---
 {{APIRef("WebXR Device API")}}
 
-The read-only **`jointName`** property of the {{domxref("XRJointSpace")}} interface contains the name of the the joint it tracks.
+The read-only **`jointName`** property of the {{domxref("XRJointSpace")}} interface contains the name of the joint it tracks.
 
 ## Value
 
@@ -34,11 +35,11 @@ Given a `XRJointSpace`, the `jointName` property will contain the hand joint nam
 
 ```js
 navigator.xr.requestSession({optionalFeatures: ["hand-tracking"]}).then(
-  // ...
+  // …
 );
 
 function renderFrame(session, frame) {
-   // ...
+   // …
 
    for (inputSource of session.inputSources) {
       if (inputSource.hand) {

@@ -48,12 +48,13 @@ animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 animation-timing-function: inherit;
 animation-timing-function: initial;
 animation-timing-function: revert;
+animation-timing-function: revert-layer;
 animation-timing-function: unset;
 ```
 
 Timing functions may be specified on individual keyframes in a [@keyframes](/en-US/docs/Web/CSS/@keyframes) rule. If no **`animation-timing-function`** is specified on a keyframe, the corresponding value of **`animation-timing-function`** from the element to which the animation is applied is used for that keyframe.
 
-A keyframe's timing function is applied on a property-by-property basis from the keyframe on which it is specified until the next keyframe specifying that property, or until the end of the animation if there is no subsequent keyframe specifying that property. As a result, an **`animation-timing-function`** specified on the **`100%`** or **`to`** keyframe will never be used.
+Within a keyframe, `animating-timing-function` is an at-rule-specific descriptor, not the property of the same name. The timing is not being animated. Rather, a keyframe's timing function is applied on a property-by-property basis from the keyframe on which it is specified until the next keyframe specifying that property, or until the end of the animation if there is no subsequent keyframe specifying that property. As a result, an **`animation-timing-function`** specified on the **`100%`** or **`to`** keyframe will never be used.
 
 ### Values
 
@@ -70,7 +71,7 @@ A keyframe's timing function is applied on a property-by-property basis from the
 - `ease-in`
   - : Equal to `cubic-bezier(0.42, 0, 1.0, 1.0)`, starts off slowly, with the speed of the transition of the animating property increasing until complete.
 - `ease-out`
-  - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts quickly, slowing down the animation continues. •
+  - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts quickly, slowing down the animation continues.
 - `ease-in-out`
   - : Equal to `cubic-bezier(0.42, 0, 0.58, 1.0)`, with the animating properties slowly transitioning, speeding up, and then slowing down again.
 - `cubic-bezier(p1, p2, p3, p4)`

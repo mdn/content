@@ -1,6 +1,7 @@
 ---
 title: Screen.availHeight
 slug: Web/API/Screen/availHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -22,13 +23,7 @@ exposed on the {{DOMxRef("Window")}} interface's {{DOMxRef("Window.screen",
 You can similarly use {{DOMxRef("Screen.availWidth")}} to get the number of pixels
 which are horizontally available to the browser for its use.
 
-## Syntax
-
-```js
-let availHeight = window.screen.availHeight;
-```
-
-### Value
+## Value
 
 A numeric value indicating the number of CSS pixels tall the screen's available space
 is. This can be no larger than the value of {{DOMxRef("Screen.height",
@@ -42,7 +37,7 @@ the Dock and menu bar, as seen in the diagram below.
 
 [![Diagram showing how Screen.availHeight relates to Screen.height and the screen's contents](availheight-diagram.svg)](availheight-diagram.svg)
 
-## Example
+## Examples
 
 If your web application needs to open a new window, such as a tool palette which can
 contain multiple panels, and wants to position it so that it occupies the entire
@@ -85,4 +80,4 @@ other interface elements that reserve space.
 - {{DOMxRef("Window")}}
 - {{DOMxRef("Screen")}}
 - {{DOMxRef("Screen.availWidth")}}
-- {{DOMxRef("Window.height")}}
+- {{DOMxRef("Window.innerHeight")}}

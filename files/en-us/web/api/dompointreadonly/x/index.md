@@ -1,6 +1,7 @@
 ---
 title: DOMPointReadOnly.x
 slug: Web/API/DOMPointReadOnly/x
+page-type: web-api-instance-property
 tags:
   - API
   - Coordinates
@@ -25,13 +26,7 @@ read-only version of the `DOMPoint` object.
 In general, positive values `x` mean to the right, and negative values of
 `x` means to the left, assuming no transforms have resulted in a reversal.
 
-## Syntax
-
-```js
-const xPos = someDOMPointReadOnly.x;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the x coordinate's value for the
 point. This value is **unrestricted**, meaning that it is allowed to be

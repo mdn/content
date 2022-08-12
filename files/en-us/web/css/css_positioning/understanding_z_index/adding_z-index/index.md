@@ -16,7 +16,7 @@ The first part of this article, [Stacking without the z-index property](/en-US/d
 The `z-index` property can be specified with an integer value (positive, zero, or negative), which represents the position of the element along the z-axis. If you are not familiar with the z-axis, imagine the page as a stack of layers, each one having a number. Layers are rendered in numerical order, with larger numbers above smaller numbers.
 
 - bottom layer _(farthest from the observer)_
-- ...
+- …
 - Layer -3
 - Layer -2
 - Layer -1
@@ -24,7 +24,7 @@ The `z-index` property can be specified with an integer value (positive, zero, o
 - Layer 1
 - Layer 2
 - Layer 3
-- ...
+- …
 - top layer _(closest to the observer)_
 
 > **Note:**
@@ -42,31 +42,31 @@ In the following example, the layers' stacking order is rearranged using `z-inde
 
 ```html
 <div id="abs1">
-  <b>DIV #1</b>
+  <strong>DIV #1</strong>
   <br />position: absolute;
   <br />z-index: 5;
 </div>
 
 <div id="rel1">
-  <b>DIV #2</b>
+  <strong>DIV #2</strong>
   <br />position: relative;
   <br />z-index: 3;
 </div>
 
 <div id="rel2">
-  <b>DIV #3</b>
+  <strong>DIV #3</strong>
   <br />position: relative;
   <br />z-index: 2;
 </div>
 
 <div id="abs2">
-  <b>DIV #4</b>
+  <strong>DIV #4</strong>
   <br />position: absolute;
   <br />z-index: 1;
 </div>
 
 <div id="sta1">
-  <b>DIV #5</b>
+  <strong>DIV #5</strong>
   <br />no positioning
   <br />z-index: 8;
 </div>
@@ -81,7 +81,7 @@ div {
   text-align: center;
 }
 
-b {
+strong {
   font-family: sans-serif;
 }
 

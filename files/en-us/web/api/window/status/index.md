@@ -1,6 +1,7 @@
 ---
 title: Window.status
 slug: Web/API/Window/status
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -19,11 +20,9 @@ bar at the bottom of the browser window. However, the HTML standard now requires
 setting `window.status` to have no effect on the text displayed in the
 status bar.
 
-## Syntax
+## Value
 
-```js
-window.status = string; var value = window.status;
-```
+A string.
 
 ## Specifications
 

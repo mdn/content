@@ -14,19 +14,13 @@ browser-compat: css.selectors.first-of-type
 
 The **`:first-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element of its type among a group of sibling elements.
 
-```css
-/* Selects any <p> that is the first element
-   of its type among its siblings */
-p:first-of-type {
-  color: red;
-}
-```
-
-> **Note:** As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-first-of-type.html", "tabbed-shorter")}}
 
 ## Syntax
 
-{{csssyntax}}
+```
+:first-of-type
+```
 
 ## Examples
 
@@ -55,7 +49,7 @@ p:first-of-type {
 
 ### Nested elements
 
-This example shows how nested elements can also be targeted. Note that the [universal selector](/en-US/docs/Web/CSS/Universal_selectors) (`*`) is implied when no simple selector is written.
+This example shows how nested elements can also be targeted. Note that the [universal selector](/en-US/docs/Web/CSS/Universal_selectors) (`*`) is implied when no type selector is written.
 
 #### HTML
 
@@ -65,7 +59,7 @@ This example shows how nested elements can also be targeted. Note that the [univ
   <div>This <span>nested `span` is first</span>!</div>
   <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
   <div>This <span>nested `span` gets styled</span>!</div>
-  <b>This `b` qualifies!</b>
+  <p>This `p` qualifies!</p>
   <div>This is the final `div`.</div>
 </article>
 ```

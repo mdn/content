@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue
 slug: Web/API/CSSPrimitiveValue
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -30,15 +31,15 @@ Conversions are allowed between absolute values (from millimeters to centimeters
 
 ## Properties
 
-_Inherits properties from its parent, `{{DOMxRef("CSSValue")}}`_.
+_Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
-- {{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{readonlyInline}}
+- {{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{readonlyInline}} {{Deprecated_Inline}}
 
   - : An `unsigned short` representing the type of the value. Possible values are:
 
     | Constant         | Description                                                                                                                                                                      |
     | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `CSS_ATTR`       | The value is an {{CSSxRef("attr()")}} function. The value can be obtained by using the `getStringValue()` method.                                                         |
+    | `CSS_ATTR`       | The value is an {{CSSxRef("attr", "attr()")}} function. The value can be obtained by using the `getStringValue()` method.                                                         |
     | `CSS_CM`         | The value is a {{CSSxRef("&lt;length&gt;")}} in centimeters. The value can be obtained by using the `getFloatValue()` method.                                         |
     | `CSS_COUNTER`    | The value is a [counter or counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) function. The value can be obtained by using the `getCounterValue()` method. |
     | `CSS_DEG`        | The value is an {{CSSxRef("&lt;angle&gt;")}} in degrees. The value can be obtained by using the `getFloatValue()` method.                                                |
@@ -63,28 +64,28 @@ _Inherits properties from its parent, `{{DOMxRef("CSSValue")}}`_.
     | `CSS_S`          | The value is a {{CSSxRef("&lt;time&gt;")}} in seconds. The value can be obtained by using the `getFloatValue()` method.                                                 |
     | `CSS_STRING`     | The value is a {{CSSxRef("&lt;string&gt;")}}. The value can be obtained by using the `getStringValue()` method.                                                       |
     | `CSS_UNKNOWN`    | The value is not a recognized CSS2 value. The value can only be obtained by using the {{DOMxRef("CSSValue.cssText", "cssText")}} attribute.                        |
-    | `CSS_URI`        | The value is a {{CSSxRef("url()")}}. The value can be obtained by using the `getStringValue()` method.                                                                   |
+    | `CSS_URI`        | The value is a {{CSSxRef("url", "url()")}}. The value can be obtained by using the `getStringValue()` method.                                                                   |
 
 ## Methods
 
-- {{DOMxRef("CSSPrimitiveValue.getCounterValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.getCounterValue()")}} {{Deprecated_Inline}}
   - : This method is used to get the [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) value. If this CSS value doesn't contain a counter value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("Counter")}} interface.
-- {{DOMxRef("CSSPrimitiveValue.getFloatValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.getFloatValue()")}} {{Deprecated_Inline}}
   - : This method is used to get a float value in a specified unit. If this CSS value doesn't contain a float value or can't be converted into the specified unit, a {{DOMxRef("DOMException")}} is raised.
-- {{DOMxRef("CSSPrimitiveValue.getRGBColorValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.getRGBColorValue()")}} {{Deprecated_Inline}}
   - : This method is used to get the RGB color. If this CSS value doesn't contain a RGB color value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("RGBColor")}} interface.
-- {{DOMxRef("CSSPrimitiveValue.getRectValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.getRectValue()")}} {{Deprecated_Inline}}
   - : This method is used to get the Rect value. If this CSS value doesn't contain a rect value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("Rect")}} interface.
-- {{DOMxRef("CSSPrimitiveValue.getStringValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.getStringValue()")}} {{Deprecated_Inline}}
   - : This method is used to get the string value. If the CSS value doesn't contain a string value, a {{DOMxRef("DOMException")}} is raised.
-- {{DOMxRef("CSSPrimitiveValue.setFloatValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.setFloatValue()")}} {{Deprecated_Inline}}
   - : A method to set the float value with a specified unit. If the property attached with this value can not accept the specified unit or the float value, the value will be unchanged and a {{DOMxRef("DOMException")}} will be raised.
-- {{DOMxRef("CSSPrimitiveValue.setStringValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.setStringValue()")}} {{Deprecated_Inline}}
   - : A method to set the string value with the specified unit. If the property attached to this value can't accept the specified unit or the string value, the value will be unchanged and a {{DOMxRef("DOMException")}} will be raised.
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

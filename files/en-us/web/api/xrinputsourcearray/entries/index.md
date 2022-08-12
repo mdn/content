@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceArray.entries()
 slug: Web/API/XRInputSourceArray/entries
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -32,11 +33,7 @@ Most frequently, you will use this in tandem with statements such as
 ## Syntax
 
 ```js
-let inputSourceIterator = xrInputSourceArray.entries();
-
-for (let entry of xrInputSourceArray.entries()) {
-  /* ... */
-}
+entries()
 ```
 
 ### Parameters
@@ -45,8 +42,7 @@ None.
 
 ### Return value
 
-An
-[`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+An [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 which can be used to walk through the list of `XRInputSource` objects
 included in the input source array.
 
@@ -61,14 +57,14 @@ let sources = xrSession.inputSources;
 for (let input of sources.entries()) {
   if (input.gamepad) {
     checkGamepad(input.gamepad);
+  } else if (
+    input.targetRayMode === "tracked-pointer" &&
+    input.handedness === player.handedness
+  ) {
+    /* Handle main hand controller */
+    handleMainHandInput(input);
   } else {
-    if (input.targetRayMode === "tracked-pointer" &&
-        input.handedness === player.handedness) {
-      /* Handle main hand controller */
-      handleMainHandInput(input);
-    } else {
-      /* Handle other inputs */
-    }
+    /* Handle other inputs */
   }
 }
 ```

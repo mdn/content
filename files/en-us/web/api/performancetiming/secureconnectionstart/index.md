@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.secureConnectionStart
 slug: Web/API/PerformanceTiming/secureConnectionStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -14,8 +15,7 @@ browser-compat: api.PerformanceTiming.secureConnectionStart
 ---
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
-> **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2
-> specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.
+> **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
 The legacy
 **`PerformanceTiming.secureConnectionStart`**
@@ -23,11 +23,9 @@ read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, where the secure connection handshake starts. If
 no such connection is requested, it returns `0`.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.secureConnectionStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

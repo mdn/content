@@ -48,11 +48,11 @@ Even now with the new focus on mobile Web, almost all mainstream webpages are bu
 
 These elements are quite common in all form factors, but they can be laid out different ways. Here are some examples (**1** represents header, **2** footer; **A** main content; **B1, B2** things on the side):
 
-**1-column layout.** Especially important for mobile browsers so you don't clutter the small screen up.
+**1-column layout**. Especially important for mobile browsers so you don't clutter the small screen up.
 
 ![Example of a 1 column layout: Main on top and asides stacked beneath it.](1-col-layout.png)
 
-**2-column layout.** Often used to target tablets, since they have medium-size screens.
+**2-column layout**. Often used to target tablets, since they have medium-size screens.
 
 ![Example of a basic 2 column layout: One aside on the left column, and main on the right column.](2-col-layout-right.png) ![Example of a basic 2 column layout: One aside on the right column, and main on the left column.](2-col-layout-left.png)
 
@@ -84,7 +84,7 @@ Let's study some more concrete examples taken from well-known websites.
 
 Quite straightforward. Just remember, many people will still browse your site from desktops, so make your content usable/readable there as well.
 
-### Two-column layout.
+### Two-column layout
 
 **[Abduzeedo](https://abduzeedo.com/typography-mania-261)**, a simple blog layout. Blogs usually have two columns, a fat one for the main content and a thin one for stuff on the side (like widgets, secondary navigation levels, and ads).
 
@@ -94,11 +94,11 @@ In this example, look at the image (B1) right underneath the header. It's relate
 
 ### It's a trap
 
-**[MICA](https://www.mica.edu/About_MICA.html)**. This is a bit trickier. It looks like a three-column layout...
+**[MICA](https://www.mica.edu/about-mica/)**. This is a bit trickier. It looks like a three-column layout:
 
 ![Example of a false 3 columns layout](screenshot-education.jpg)        ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
 
-...but it's not. B1 and B2 float around the main content. Remember that word "float"--it will ring a bell when you start learning about {{Glossary("CSS")}}.
+But it's not! B1 and B2 float around the main content. Remember that word "float"--it will ring a bell when you start learning about {{Glossary("CSS")}}.
 
 Why would you think it's a three-column layout? Because the image on the top-right is L-shaped, because B1 looks like a column supporting the shifted main content, and because the "M" and "I" of the MICA logo create a vertical line of force.
 
@@ -106,7 +106,7 @@ This is a good example of a classic layout supporting some design creativity. Si
 
 ### A much trickier layout
 
-**The [Opera de Paris](https://www.operadeparis.fr/en/saison-2014-2015/opera/la-boheme-puccini).**
+**The Opera de Paris**.
 
 ![An example of a tricky layout.](screenshot-opera.jpg)        ![This is a 2 column layout but the header is overlapping the main content.](screenshot-opera-overlay.jpg)
 

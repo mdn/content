@@ -95,9 +95,8 @@ The state of our component will be represented by these three top-level variable
         { id: 2, name: 'Create your first component', completed: true },
         { id: 3, name: 'Complete the rest of the tutorial', completed: false }
       ]
-
       let totalTodos = todos.length
-      let completedTodos = todos.filter(todo => todo.completed).length
+      let completedTodos = todos.filter((todo) => todo.completed).length
     </script>
     ```
 
@@ -116,7 +115,7 @@ The state of our component will be represented by these three top-level variable
 
 At the moment, our displayed to-do items are all static. We want to iterate over each item in our `todos` array and render the markup for each task, so let's do that now.
 
-HTML doesn't have a way of expressing logic — like conditionals and loops. Svelte does. In this case we use the [`{#each...}`](https://svelte.dev/docs#each) directive to iterate over the `todos` array. The second parameter, if provided, will contain the index of the current item. Also, a key expression can be provided, which will uniquely identify each item. Svelte will use it to diff the list when data changes, rather than adding or removing items at the end, and it's a good practice to always specify one. Finally, an `:else` block can be provided, which will be rendered when the list is empty.
+HTML doesn't have a way of expressing logic — like conditionals and loops. Svelte does. In this case we use the [`{#each}`](https://svelte.dev/docs#each) directive to iterate over the `todos` array. The second parameter, if provided, will contain the index of the current item. Also, a key expression can be provided, which will uniquely identify each item. Svelte will use it to diff the list when data changes, rather than adding or removing items at the end, and it's a good practice to always specify one. Finally, an `:else` block can be provided, which will be rendered when the list is empty.
 
 Let's give it a try.
 
@@ -176,7 +175,7 @@ We've turned our static markup into a dynamic template ready to display the task
 
 With a hardcoded list of to-dos, our `Todos` component is not very useful. To turn our component into a general purpose to-do editor, we should allow the parent of this component to pass in the list of to-dos to edit. This would allow us to save them to a web service or local storage and later retrieve them for update. So let's turn the array into a `prop`.
 
-1. In `Todos.svelte`, replace the existing `let todos = ...` block with `export let todos = []`.
+1. In `Todos.svelte`, replace the existing `let todos = …` block with `export let todos = []`.
 
     ```js
     export let todos = []
@@ -191,7 +190,7 @@ With a hardcoded list of to-dos, our `Todos` component is not very useful. To tu
 2. Have a look at the app, and you'll see the "Nothing to do here!" message. This is because we are currently not passing any value into it from `App.svelte`, so it's using the default value.
 3. Now let's move our to-dos to `App.svelte` and pass them to the `Todos.svelte` component as a prop. Update `src/App.svelte` as follows:
 
-    ```js
+    ```html
     <script>
       import Todos from './components/Todos.svelte'
 
@@ -207,7 +206,7 @@ With a hardcoded list of to-dos, our `Todos` component is not very useful. To tu
 
 4. When the attribute and the variable have the same name, Svelte allows you to just specify the variable as a handy shortcut, so we can rewrite our last line like this. Try this now.
 
-    ```js
+    ```html
     <Todos {todos} />
     ```
 
@@ -230,7 +229,7 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
 
     ```js
     function removeTodo(todo) {
-      todos = todos.filter(t => t.id !== todo.id)
+      todos = todos.filter((t) => t.id !== todo.id)
     }
     ```
 
@@ -260,7 +259,7 @@ The same is not true for `totalTodos` and `completedTodos`, however. In the foll
 
 ```js
 let totalTodos = todos.length
-let completedTodos = todos.filter(todo => todo.completed).length
+let completedTodos = todos.filter((todo) => todo.completed).length
 ```
 
 We could recalculate them after toggling and removing to-dos, but there's an easier way to do it.
@@ -273,7 +272,7 @@ Update your `totalTodos` and `completedTodos` variable definitions inside `src/c
 
 ```js
 $: totalTodos = todos.length
-$: completedTodos = todos.filter(todo => todo.completed).length
+$: completedTodos = todos.filter((todo) => todo.completed).length
 ```
 
 If you check your app now, you'll see that the heading's numbers are updated when to-dos are completed or deleted. Nice!
@@ -292,7 +291,7 @@ Now on to the next major task for this article — let's add some functionality 
 
 2. Now we will use this value in the `<input>` for adding new tasks. To do that we need to bind our `newTodoName` variable to the `todo-0` input, so that the `newTodoName` variable value stays in sync with the input's `value` property. We could do something like this:
 
-    ```js
+    ```html
     <input value={newTodoName} on:keydown={(e) => newTodoName = e.target.value} />
     ```
 
@@ -365,12 +364,12 @@ If you try to add new to-dos in your app now, you'll be able to add a new to-do 
         if (totalTodos === 0) {
           newTodoId = 1;
         } else {
-          newTodoId = Math.max(...todos.map(t => t.id)) + 1;
+          newTodoId = Math.max(...todos.map((t) => t.id)) + 1;
         }
       }
     ```
 
-    > **Note:** As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map(t => t.id)) + 1 : 1`
+    > **Note:** As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
 2. How does Svelte achieve this? The compiler parses the whole reactive statement, and detects that it depends on the `totalTodos` variable and the `todos` array. So whenever either of them is modified, this code is re-evaluated, updating `newTodoId` accordingly.
 
@@ -392,8 +391,8 @@ Finally for this article, let's implement the ability to filter our to-dos by st
     ```js
     let filter = 'all'
     const filterTodos = (filter, todos) =>
-      filter === 'active' ? todos.filter(t => !t.completed) :
-      filter === 'completed' ? todos.filter(t => t.completed) :
+      filter === 'active' ? todos.filter((t) => !t.completed) :
+      filter === 'completed' ? todos.filter((t) => t.completed) :
       todos
     ```
 
@@ -405,17 +404,17 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 
     ```html
     <div class="filters btn-group stack-exception">
-      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={()=> filter = 'all'} >
+      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={() => filter = 'all'} >
         <span class="visually-hidden">Show</span>
         <span>All</span>
         <span class="visually-hidden">tasks</span>
       </button>
-      <button class="btn toggle-btn" class:btn__primary={filter === 'active'} aria-pressed={filter === 'active'} on:click={()=> filter = 'active'} >
+      <button class="btn toggle-btn" class:btn__primary={filter === 'active'} aria-pressed={filter === 'active'} on:click={() => filter = 'active'} >
         <span class="visually-hidden">Show</span>
         <span>Active</span>
         <span class="visually-hidden">tasks</span>
       </button>
-      <button class="btn toggle-btn" class:btn__primary={filter === 'completed'} aria-pressed={filter === 'completed'} on:click={()=> filter = 'completed'} >
+      <button class="btn toggle-btn" class:btn__primary={filter === 'completed'} aria-pressed={filter === 'completed'} on:click={() => filter = 'completed'} >
         <span class="visually-hidden">Show</span>
         <span>Completed</span>
         <span class="visually-hidden">tasks</span>
@@ -431,20 +430,20 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 
     Something similar happens with `aria-pressed={filter === 'all'}`: when the JavaScript expression passed between curly braces evaluates to a truthy value, the `aria-pressed` attribute will be added to the button.
 
-    Whenever we click on a button, we update the filter variable by issuing `on:click={()=> filter = 'all'}`. Read on to find out how Svelte reactivity will take care of the rest.
+    Whenever we click on a button, we update the filter variable by issuing `on:click={() => filter = 'all'}`. Read on to find out how Svelte reactivity will take care of the rest.
 
 3. Now we just need to use the helper function in the `{#each}` loop; update it like this:
 
     ```html
-    ...
+    …
       <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
       {#each filterTodos(filter, todos) as todo (todo.id)}
-    ...
+    …
     ```
 
     After analyzing our code, Svelte detects that our `filterTodos()` function depends on the variables `filter` and `todos`. And, just like with any other dynamic expression embedded in the markup, whenever any of these dependencies changes, the DOM will be updated accordingly. So whenever `filter` or `todos` changes, the `filterTodos()` function will be re-evaluated and the items inside the loop will be updated.
 
-> **Note:** Reactivity can be tricky sometimes. Svelte recognizes `filter` as a dependency because we are referencing it in the `filterTodos(filter, todo)` expression. `filter` is a top-level variable, so we might be tempted to remove it from the helper function params, and just call it like this: `filterTodos(todo)`. This would work, but now Svelte has no way to find out that `{#each filterTodos(todos)... }` depends on `filter`, and the list of filtered to-dos won't be updated when the filter changes. Always remember that Svelte analyzes our code to find out dependencies, so it's better to be explicit about it and not rely on the visibility of top-level variables. Besides, it's a good practice to make our code clear and explicit about what information it is using.
+> **Note:** Reactivity can be tricky sometimes. Svelte recognizes `filter` as a dependency because we are referencing it in the `filterTodos(filter, todo)` expression. `filter` is a top-level variable, so we might be tempted to remove it from the helper function params, and just call it like this: `filterTodos(todo)`. This would work, but now Svelte has no way to find out that `{#each filterTodos(todos) }` depends on `filter`, and the list of filtered to-dos won't be updated when the filter changes. Always remember that Svelte analyzes our code to find out dependencies, so it's better to be explicit about it and not rely on the visibility of top-level variables. Besides, it's a good practice to make our code clear and explicit about what information it is using.
 
 ## The code so far
 

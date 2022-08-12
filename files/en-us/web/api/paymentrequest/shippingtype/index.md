@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.shippingType
 slug: Web/API/PaymentRequest/shippingType
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -19,13 +20,7 @@ The **`shippingType`** read-only property of the
 `"delivery"`, `"pickup"`, or `null` if one was not
 provided by the constructor.
 
-## Syntax
-
-```js
-var shippingType = paymentRequest.shippingType
-```
-
-### Value
+## Value
 
 One of `"shipping"`, `"delivery"`, `"pickup"`, or
 `null`.

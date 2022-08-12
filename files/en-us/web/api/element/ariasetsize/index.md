@@ -1,6 +1,7 @@
 ---
 title: Element.ariaSetSize
 slug: Web/API/Element/ariaSetSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,16 +16,9 @@ browser-compat: api.Element.ariaSetSize
 
 The **`ariaSetSize`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) attribute, which defines the number of items in the current set of listitems or treeitems.
 
-## Syntax
+## Value
 
-```js
-var ariaSetSize = element.ariaSetSize;
-element.ariaSetSize = ariaSetSize
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing an integer.
+A string containing an integer.
 
 ## Examples
 
@@ -51,4 +45,4 @@ console.log(el.ariaSetSize); // 4
 
 ## See also
 
-- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)

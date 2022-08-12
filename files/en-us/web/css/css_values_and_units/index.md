@@ -6,21 +6,25 @@ tags:
   - Guide
   - Reference
   - values and units
+spec-urls:
+  - https://drafts.csswg.org/css-values/
+  - https://drafts.csswg.org/css-color/
+  - https://drafts.csswg.org/css-images/
 ---
 {{CSSRef}}
 
-Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types -- values and units -- that CSS properties accept. Below is an overview of most of these data types. Refer to the page for each value type for more detailed information.
+Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types — values and units — that CSS properties accept. Below is an overview of most of these data types. Refer to the page for each value type for more detailed information.
 
 ## Textual data types
 
 - {{cssxref("&lt;custom-ident&gt;")}}
 - Pre-defined keywords as an `<ident>`
 - {{cssxref("&lt;string&gt;")}}
-- {{cssxref("url()","url()")}}
+- {{cssxref("url","url()")}}
 
 Text data types are either `<string>`, a quoted series of characters, or an `<ident>`, a "CSS Identifier" which is an unquoted string. A `<string>` must be quoted with either single or double quotes. CSS Identifiers, listed in the specifications as `<ident>` or `<custom-ident>`, must be unquoted.
 
-In the CSS specifications, values that can be defined by the web developer, like keyframe animations, font-family names, or grid areas are listed as a  {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}}, or both.
+In the CSS specifications, values that can be defined by the web developer, like keyframe animations, font-family names, or grid areas are listed as a {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}}, or both.
 
 When both quoted and unquoted user defined text values are permitted, the specification will list `<custom-ident> | <string>`, meaning quotes are optional, such as is the case with animation names:
 
@@ -81,7 +85,7 @@ A fourth value of {{cssxref("revert")}} was added in the Cascade Level 4 specifi
 
 ### URLs
 
-A {{cssxref("url()","url()")}} type uses functional notation, which accepts a `<string>` that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.
+A {{cssxref("url","url()")}} type uses functional notation, which accepts a `<string>` that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.
 
 ```css
 .box {
@@ -93,7 +97,7 @@ A {{cssxref("url()","url()")}} type uses functional notation, which accepts a `<
 }
 ```
 
-The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url()","url()")}}  for more information.
+The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url","url()")}}  for more information.
 
 ## Numeric data types
 
@@ -174,7 +178,7 @@ Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept
 
 #### Time units
 
-Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier -- the `s` or `ms` -- is required. It accepts the following values.
+Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier — the `s` or `ms` — is required. It accepts the following values.
 
 | Unit | Name         | Description                               |
 | ---- | ------------ | ----------------------------------------- |
@@ -240,17 +244,17 @@ The {{cssxref("&lt;image&gt;")}} value specifies all the different types of imag
 
 #### Position
 
-The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a  {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://www.w3.org/TR/css-backgrounds-3/).
+The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://www.w3.org/TR/css-backgrounds-3/).
 
 ### Functional notation
 
-- {{cssxref("calc()", "calc()")}}
-- {{cssxref("min()", "min()")}}
-- {{cssxref("max()", "max()")}}
-- {{cssxref("minmax()", "minmax()")}}
-- {{cssxref("clamp()", "clamp()")}}
+- {{cssxref("calc", "calc()")}}
+- {{cssxref("min", "min()")}}
+- {{cssxref("max", "max()")}}
+- {{cssxref("minmax", "minmax()")}}
+- {{cssxref("clamp", "clamp()")}}
 - {{cssxref("toggle", "toggle()")}}
-- {{cssxref("attr()", "attr()")}}
+- {{cssxref("attr", "attr()")}}
 
 [Functional notation](/en-US/docs/Web/CSS/CSS_Functions) is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
 
@@ -260,87 +264,7 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 ## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSS4 Values")}}</td>
-      <td>{{Spec2("CSS4 Values")}}</td>
-      <td>
-        Adds the <code>vi</code>, <code>vb</code>, <code>ic</code>,
-        <code>cap</code>, <code>lh</code> and <code>rlh</code> units.<br />Adds
-        the <code>min()</code>, <code>max()</code> and
-        <code>clamp()</code> functional notation<br />Adds <code>toggle()</code>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Values")}}</td>
-      <td>{{Spec2("CSS3 Values")}}</td>
-      <td>
-        Adds
-        <code>calc()</code
-        >, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code
-          >Q</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
-      <td>{{Spec2("CSS4 Colors")}}</td>
-      <td>
-        Adds commaless syntaxes for
-        the <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>,
-        and <code>hsla()</code> functions. Allows alpha values
-        in <code>rgb()</code> and <code>hsl()</code>,
-        turning <code>rgba()</code> and <code>hsla()</code> into (deprecated)
-        aliases for them.<br />Adds color keyword <code>rebeccapurple</code>.<br />Adds
-        4- and 8-digit hex color values, where the last digit(s) represents the
-        alpha value.<br />Adds <code>hwb()</code>, <code>device-cmyk()</code>,
-        and <code>color()</code> functions.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Colors")}}</td>
-      <td>{{Spec2("CSS3 Colors")}}</td>
-      <td>
-        Deprecates system-colors. Adds SVG colors. Adds
-        the <code>rgba()</code>, <code>hsl()</code>,
-        and <code>hsla()</code> functions.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS4 Images")}}</td>
-      <td>{{Spec2("CSS4 Images")}}</td>
-      <td>
-        <p>
-          Adds <code>element()</code>, <code>image()</code>,
-          <code>image-set()</code>, <code>conic-gradient()</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Images")}}</td>
-      <td>{{Spec2("CSS3 Images")}}</td>
-      <td>Initial definition of image.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS1")}}</td>
-      <td>{{Spec2("CSS1")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope.close()
 slug: Web/API/DedicatedWorkerGlobalScope/close
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -18,10 +19,18 @@ The **`close()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interf
 ## Syntax
 
 ```js
-self.close();
+close()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 If you want to close your worker instance from inside the worker itself, you can call the following:
 

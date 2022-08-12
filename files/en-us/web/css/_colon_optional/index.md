@@ -27,7 +27,9 @@ This pseudo-class is useful for styling fields that are not required to submit a
 
 ## Syntax
 
-{{csssyntax}}
+```
+:optional
+```
 
 ## Examples
 

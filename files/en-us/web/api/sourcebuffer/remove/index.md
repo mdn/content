@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.remove()
 slug: Web/API/SourceBuffer/remove
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -26,19 +27,19 @@ interface removes media segments within a specific time range from the
 ## Syntax
 
 ```js
-sourceBuffer.remove(start, end);
+remove(start, end)
 ```
 
 ### Parameters
 
-- start
+- `start`
   - : A double representing the start of the time range, in seconds.
-- end
+- `end`
   - : A double representing the end of the time range, in seconds.
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -50,7 +51,7 @@ sourceBuffer.remove(start, end);
         to `true`, or this `SourceBuffer` has been removed
         from {{domxref("MediaSource")}}.
 
-## Example
+## Examples
 
 TBD.
 

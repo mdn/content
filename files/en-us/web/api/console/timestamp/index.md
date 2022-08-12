@@ -1,6 +1,7 @@
 ---
 title: console.timeStamp()
 slug: Web/API/console/timeStamp
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -13,8 +14,7 @@ browser-compat: api.console.timeStamp
 ---
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-The **`console.timeStamp`** method adds a single marker to the browser's [Performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference)
-or [Waterfall](/en-US/docs/Tools/Performance/Waterfall) tool. This lets you
+The **`console.timeStamp`** method adds a single marker to the browser's Performance tool ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)). This lets you
 correlate a point in your code with the other events recorded in the timeline, such as
 layout and paint events.
 
@@ -26,13 +26,17 @@ be shown alongside the marker.
 ## Syntax
 
 ```js
-console.timeStamp(label);
+timeStamp(label)
 ```
 
-## Parameters
+### Parameters
 
 - `label`
   - : Label for the timestamp. Optional.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Browser compatibility
 
@@ -42,5 +46,4 @@ console.timeStamp(label);
 
 - {{domxref("console.time()")}}
 - {{domxref("console.timeEnd()")}}
-- [Adding
-  timestamps to the Waterfall](/en-US/docs/Tools/Performance/Waterfall#timestamp_markers)
+- [Adding markers with the console API](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#adding-markers-with-the-console-api)

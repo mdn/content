@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Fragmentation
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.box-decoration-break
@@ -34,9 +33,10 @@ box-decoration-break: slice;
 box-decoration-break: clone;
 
 /* Global values */
-box-decoration-break: initial;
 box-decoration-break: inherit;
+box-decoration-break: initial;
 box-decoration-break: revert;
+box-decoration-break: revert-layer;
 box-decoration-break: unset;
 ```
 
@@ -63,26 +63,27 @@ The `box-decoration-break` property is specified as one of the keyword values li
 
 An inline element that contains line breaks styled with:
 
-```css
-.example {
-  background: linear-gradient(to bottom right, yellow, green);
-  box-shadow:
-    8px 8px 10px 0px deeppink,
-    -5px -5px 5px 0px blue,
-    5px 5px 15px 0px yellow;
-  padding: 0em 1em;
-  border-radius: 16px;
-  border-style: solid;
-  margin-left: 10px;
-  font: 24px sans-serif;
-  line-height: 2;
-}
-
-...
+```html
+<style>
+  .example {
+    background: linear-gradient(to bottom right, yellow, green);
+    box-shadow:
+      8px 8px 10px 0px deeppink,
+      -5px -5px 5px 0px blue,
+      5px 5px 15px 0px yellow;
+    padding: 0em 1em;
+    border-radius: 16px;
+    border-style: solid;
+    margin-left: 10px;
+    font: 24px sans-serif;
+    line-height: 2;
+  }
+</style>
+…
 <span class="example">The<br>quick<br>orange fox</span>
 ```
 
-... results in:
+This results in:
 
 ![A screenshot of the rendering of an inline element styled with box-decoration-break:slice and styles given in the example.](box-decoration-break-inline-slice.png)
 
@@ -93,17 +94,17 @@ Adding `box-decoration-break: clone` to the above styles:
 box-decoration-break: clone;
 ```
 
-... results in:
+This one results in:
 
 ![A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example](box-decoration-break-inline-clone.png)
 
-You can [try the two inline examples above](https://mdn.mozillademos.org/files/8179/box-decoration-break-inline.html) in your browser.
+You can [try the two inline examples above](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8179/df096e9eb57177d8b7fdcd0c8f64ef18/box-decoration-break-inline.html) in your browser.
 
 Here's an example of an inline element using a large `border-radius` value. The second `"iM"` has a line-break between the `"i"` and the `"M"`. For comparison, the first `"iM"` is without line breaks. Note that if you stack the rendering of the two fragments horizontally next to each other it will result in the non-fragmented rendering.
 
 ![A screenshot of the rendering of the second inline element example.](box-decoration-break-slice-inline-2.png)
 
-[Try the above example](https://mdn.mozillademos.org/files/8191/box-decoration-break-inline-extreme.html) in your browser.
+[Try the above example](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8191/7a067e5731355081e856ea02b978ea2e/box-decoration-break-inline-extreme.html) in your browser.
 
 ### Block box fragments
 
@@ -123,7 +124,7 @@ Now, the same example but styled with `box-decoration-break: clone` results in:
 
 Note here that each fragment has an identical replicated border, box-shadow, and background.
 
-You can [try the block examples above](https://mdn.mozillademos.org/files/8187/box-decoration-break-block.html) in your browser.
+You can [try the block examples above](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8187/6288bde9d276d78e203c9f8b9a26ff65/box-decoration-break-block.html) in your browser.
 
 ## Specifications
 

@@ -79,7 +79,7 @@ Now let's examine how to easily publish your site via GitHub Pages.
 
     > **Note:** It may take a few minutes for your website to go live. If your website does not display immediately, wait a few minutes. Try again.
 
-To learn more, see [GitHub Pages Help](https://help.github.com/categories/github-pages-basics/).
+To learn more, see [GitHub Pages Help](https://docs.github.com/en/pages/getting-started-with-github-pages).
 
 ## Further reading
 

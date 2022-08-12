@@ -1,6 +1,7 @@
 ---
 title: Streams API
 slug: Web/API/Streams_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -8,6 +9,9 @@ tags:
   - Landing
   - Reference
   - Streams
+browser-compat:
+  - api.ReadableStream
+  - api.WritableStream
 ---
 {{DefaultAPISidebar("Streams")}}
 
@@ -33,7 +37,7 @@ More complicated uses involve creating your own stream using the {{domxref("Read
 
 You can also write data to streams using {{domxref("WritableStream")}}.
 
-> **Note:** You can find a lot more details about the theory and practice of streams in our articles — [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts), [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams), and [Using writable streams](/en-US/docs/Web/API/Streams_API/Using_writable_streams).
+> **Note:** You can find a lot more details about the theory and practice of streams in our articles — [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts), [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams), [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams), and [Using writable streams](/en-US/docs/Web/API/Streams_API/Using_writable_streams).
 
 ## Stream interfaces
 
@@ -78,8 +82,6 @@ You can also write data to streams using {{domxref("WritableStream")}}.
 
 ### ByteStream-related interfaces
 
-> **Warning:** these are not implemented anywhere as yet, and questions have been raised as to whether the spec details are in a finished enough state for them to be implemented. This may change over time.
-
 - {{domxref("ReadableStreamBYOBReader")}}
   - : Represents a BYOB ("bring your own buffer") reader that can be used to read stream data supplied by the developer (e.g. a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).
 - {{domxref("ReadableByteStreamController")}}
@@ -104,22 +106,15 @@ Examples from other developers:
 
 ## Specifications
 
-| Specification                                               |
-| ----------------------------------------------------------- |
-| [Streams Living Standard](https://streams.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### ReadableStream
-
-{{Compat("api.ReadableStream")}}
-
-### WritableStream
-
-{{Compat("api.WritableStream")}}
+{{Compat}}
 
 ## See also
 
 - [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts)
 - [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
 - [Using writable streams](/en-US/docs/Web/API/Streams_API/Using_writable_streams)

@@ -8,7 +8,7 @@ tags:
   - HTTP
   - Sandbox
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.sandbox
+browser-compat: http.headers.Content-Security-Policy.sandbox
 ---
 {{HTTPSidebar}}
 
@@ -60,8 +60,7 @@ where `<value>` can optionally be one of the following values:
 - `allow-orientation-lock`
   - : Allows the page to disable the ability to lock the screen orientation.
 - `allow-pointer-lock`
-  - : Allows the page to use the [Pointer Lock
-    API](/en-US/docs/Web/API/Pointer_Lock_API).
+  - : Allows the page to use the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API).
 - `allow-popups`
   - : Allows popups (like from `window.open`, `target="_blank"`,
     `showModalDialog`). If this keyword is not used, that functionality will
@@ -69,7 +68,7 @@ where `<value>` can optionally be one of the following values:
 - `allow-popups-to-escape-sandbox`
   - : Allows a sandboxed document to open new windows without forcing the sandboxing flags
     upon them. This will allow, for example, a third-party advertisement to be safely
-    sandboxed without forcing the same restrictions upon a landing page.
+    sandboxed without forcing the same restrictions upon the page the ad links to.
 - `allow-presentation`
   - : Allows embedders to have control over whether an iframe can start a presentation
     session.
@@ -87,6 +86,8 @@ where `<value>` can optionally be one of the following values:
 - `allow-top-navigation-by-user-activation`
   - : Lets the resource navigate the top-level browsing context, but only if initiated by
     a user gesture.
+- `allow-top-navigation-to-custom-protocols`
+  - :  Allows navigations toward non-fetch schemes to be handed off to external software.
 
 ## Examples
 

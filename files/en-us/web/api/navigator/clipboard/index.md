@@ -1,6 +1,7 @@
 ---
 title: Navigator.clipboard
 slug: Web/API/Navigator/clipboard
+page-type: web-api-instance-property
 tags:
   - API
   - Clip
@@ -15,8 +16,7 @@ tags:
   - paste
 browser-compat: api.Navigator.clipboard
 ---
-The [Clipboard
-API](/en-US/docs/Web/API/Clipboard_API) adds to the **{{domxref("Navigator")}}** interface the
+The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) adds to the **{{domxref("Navigator")}}** interface the
 read-only **`clipboard`** property, which returns the
 {{domxref("Clipboard")}} object used to read and write the clipboard's
 contents.
@@ -29,13 +29,7 @@ the web site or app permission to access the clipboard. This permission must be 
 from the [Permissions API](/en-US/docs/Web/API/Permissions_API) using the
 `"clipboard-read"` and/or `"clipboard-write"` permissions.
 
-## Syntax
-
-```js
-theClipboard = navigator.clipboard;
-```
-
-### Value
+## Value
 
 The {{domxref("Clipboard")}} object used to access the system clipboard.
 
@@ -46,7 +40,7 @@ in order to read the contents of the clipboard.
 
 ```js
 navigator.clipboard.readText().then(
-  clipText => document.querySelector(".cliptext").innerText = clipText);
+  (clipText) => document.querySelector(".cliptext").innerText = clipText);
 ```
 
 This snippet replaces the contents of the element whose class is

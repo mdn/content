@@ -46,31 +46,31 @@ In terms of prerequisite knowledge, you don't need to know anything about web de
 
 It is also preferable that you have some basic terminal knowledge, so for example moving between directories, creating files, and modifying the system `PATH`.
 
-> **Note:** Github is not the only site/toolset you can use with Git. There are other alternatives such as [GitLab](https://about.gitlab.com/) that you could try, and you could also try setting your own Git server up and using it instead of GitHub. We've only stuck with GitHub in this course to provide a single way that works.
+> **Note:** GitHub is not the only site/toolset you can use with Git. There are other alternatives such as [GitLab](https://about.gitlab.com/) that you could try, and you could also try setting your own Git server up and using it instead of GitHub. We've only stuck with GitHub in this course to provide a single way that works.
 
 ## Guides
 
 Note that the links below take you to resources on external sites. Eventually, we are aiming to have our own dedicated Git/GitHub course, but for now, these will help you get to grips with the subject at hand.
 
-- [Hello, World (from GitHub)](https://guides.github.com/activities/hello-world/)
+- [Hello, World (from GitHub)](https://docs.github.com/en/get-started/quickstart/hello-world)
   - : This is a good place to start — this practical guide gets you to jump right into using GitHub, learning the basics of Git such as creating repositories and branches, making commits, and opening and merging pull requests.
-- [Git Handbook (from GitHub)](https://guides.github.com/introduction/git-handbook/)
+- [Git Handbook (from GitHub)](https://docs.github.com/en/get-started/using-git/about-git)
   - : This Git Handbook goes into a little more depth, explaining what a VCS is, what a repository is, how the basic GitHub model works, Git commands and examples, and more.
-- [Forking Projects (from GitHub)](https://guides.github.com/activities/forking/)
+- [Forking Projects (from GitHub)](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
   - : Forking projects is essential when you want to contribute to someone else's code. This guide explains how.
-- [About Pull Requests (from GitHub)](https://help.github.com/en/articles/about-pull-requests)
+- [About Pull Requests (from GitHub)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
   - : A useful guide to managing pull requests, the way that your suggested code changes are delivered to people's repositories for consideration.
-- [Mastering issues (from GitHub)](https://guides.github.com/features/issues/)
+- [Mastering issues (from GitHub)](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
   - : Issues are like a forum for your GitHub project, where people can ask questions and report problems, and you can manage updates (for example assigning people to fix issues, clarifying the issue, letting people know things are fixed). This article tells you what you need to know about issues.
 
 > **Note:** There is **a lot more** that you can do with Git and GitHub, but we feel that the above represents the minimum you need to know to start using Git effectively. As you get deeper into Git, you'll start to realize that it is easy to go wrong when you start using more complicated commands. Don't worry, even professional web developers find Git confusing sometimes, and often solve problems by searching for solutions on the web, or consulting sites like [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) and [Dangit, git!](https://dangitgit.com/)
 
 ## See also
 
-- [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
+- [Understanding the GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
 - [Git command list](https://git-scm.com/docs)
-- [Mastering markdown](https://guides.github.com/features/mastering-markdown/) (the text format you write in on PR, issue comments, and `.md` files).
-- [Getting Started with GitHub Pages](https://guides.github.com/features/pages/) (how to publish demos and websites on GitHub).
+- [Mastering markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (the text format you write in on PR, issue comments, and `.md` files).
+- [Getting Started with GitHub Pages](https://docs.github.com/en/pages/quickstart) (how to publish demos and websites on GitHub).
 - [Learn Git branching](https://learngitbranching.js.org/)
 - [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (a very useful compendium of ways to achieve specific things in Git, including how to correct things when you went wrong).
 - [Dangit, git!](https://dangitgit.com/) (another useful compendium, specifically of ways to correct things when you went wrong).

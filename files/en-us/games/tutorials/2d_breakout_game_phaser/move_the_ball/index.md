@@ -25,8 +25,8 @@ Remember the `update()` function and its definition? The code inside it is execu
 
 ```js
 function update() {
-    ball.x += 1;
-    ball.y += 1;
+  ball.x += 1;
+  ball.y += 1;
 }
 ```
 

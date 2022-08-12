@@ -11,8 +11,9 @@ browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 {{JSRef}}
 
 > **Note:** `SharedArrayBuffer` was disabled by default in all major
-> browsers on 5 January, 2018 in response to [Spectre](https://meltdownattack.com/). Chrome [re-enabled it in
-> v67](https://bugs.chromium.org/p/chromium/issues/detail?id=821270) on platforms where its site-isolation feature is enabled to protect against
+> browsers on 5 January, 2018 in response to [Spectre](https://meltdownattack.com/).
+> Chrome [re-enabled it in v67](https://bugs.chromium.org/p/chromium/issues/detail?id=821270)
+> on platforms where its site-isolation feature is enabled to protect against
 > Spectre-style vulnerabilities.
 
 The **`SharedArrayBuffer()` constructor** is used to create a
@@ -47,13 +48,13 @@ initialized to 0.
 constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
 
 ```js example-bad
-var sab = SharedArrayBuffer(1024);
+const sab = SharedArrayBuffer(1024);
 // TypeError: calling a builtin SharedArrayBuffer constructor
 // without new is forbidden
 ```
 
 ```js example-good
-var sab = new SharedArrayBuffer(1024);
+const sab = new SharedArrayBuffer(1024);
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: WebSocket.protocol
 slug: Web/API/WebSocket/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,15 +17,9 @@ name of the sub-protocol the server selected; this will be one of the strings sp
 in the `protocols` parameter when creating the {{domxref("WebSocket")}}
 object, or the empty string if no connection is established.
 
-## Syntax
-
-```js
-const protocol = aWebSocket.protocol;
-```
-
 ## Value
 
-A [`DOMString`](/en-US/docs/Web/API/DOMString).
+A string.
 
 ## Specifications
 

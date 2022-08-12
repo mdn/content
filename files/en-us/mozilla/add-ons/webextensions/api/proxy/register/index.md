@@ -100,7 +100,7 @@ The first proxy in the array will be tried first. If it does not respond in `fai
 
 ### PAC file environment
 
-The global helper functions usually available for PAC files ([`isPlainHostName()`](</en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isplainhostname()_2>), [`dnsDomainIs()`](</en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsdomainis()>), and so on) are not available.
+The global helper functions usually available for PAC files ([`isPlainHostName()`](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isplainhostname), [`dnsDomainIs()`](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsdomainis), and so on) are not available.
 
 Code running in the PAC file does not get access to:
 
@@ -120,7 +120,7 @@ browser.runtime.sendMessage(`Proxy-blocker: blocked ${url}`);
 
 function handleMessage(message, sender) {
   // only handle messages from the proxy script
-  if (sender.url != browser.extension.getURL(proxyScriptURL)) {
+  if (sender.url !== browser.extension.getURL(proxyScriptURL)) {
     return;
   }
   console.log(message);
@@ -132,7 +132,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 ## Syntax
 
 ```js
-var registering = browser.proxy.register(
+let registering = browser.proxy.register(
   url   // string
 )
 ```

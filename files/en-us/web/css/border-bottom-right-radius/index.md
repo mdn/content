@@ -43,6 +43,7 @@ border-bottom-right-radius: 0.5em 1em;
 border-bottom-right-radius: inherit;
 border-bottom-right-radius: initial;
 border-bottom-right-radius: revert;
+border-bottom-right-radius: revert-layer;
 border-bottom-right-radius: unset;
 ```
 

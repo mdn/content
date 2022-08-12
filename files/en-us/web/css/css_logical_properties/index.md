@@ -8,6 +8,7 @@ tags:
   - Landing
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-logical/
 ---
 {{CSSRef}}
 
@@ -121,9 +122,7 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 
 ## Specifications
 
-| Specification                                        | Status                                           | Comment             |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties")}} | {{Spec2("CSS Logical Properties")}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

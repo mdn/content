@@ -14,10 +14,10 @@ The `playbackRate` property of the {{ htmlelement("audio") }} and {{ htmlelement
 
 Let's starting by looking at a brief example of `playbackRate` usage:
 
-```java
-var myAudio = document.createElement('audio');
-myAudio.setAttribute('src','audiofile.mp3');
-myAudio.playbackRate = 0.5;
+```js
+const audio = document.createElement('audio');
+audio.setAttribute('src','audiofile.mp3');
+audio.playbackRate = 0.5;
 ```
 
 Here we create an {{ htmlelement("audio") }} element, and set its `src` to a file of our choice. Next we set `playbackRate` to 0.5, which represents half normal speed (the `playbackRate` is a multiplier applied to the original rate.)
@@ -41,16 +41,15 @@ Let's create a {{ htmlelement("video") }} element first, and set up video and pl
 And apply some JavaScript to it:
 
 ```js
-window.onload = function () {
+window.onload = () => {
+  const v = document.getElementById("myVideo");
+  const p = document.getElementById("pbr");
+  const c = document.getElementById("currentPbr");
 
-  var v = document.getElementById("myVideo");
-  var p = document.getElementById("pbr");
-  var c = document.getElementById("currentPbr");
-
-  p.addEventListener('input',function(){
+  p.addEventListener('input', () => {
     c.innerHTML = p.value;
     v.playbackRate = p.value;
-  },false);
+  }, false);
 
 };
 ```
@@ -61,7 +60,7 @@ Finally, we listen for the `input` event firing on the {{ htmlelement("input") }
 
 ## defaultPlaybackRate and ratechange
 
-In addition to `playbackRate,` we also have a `defaultPlaybackRate` property available, which lets us set the default playback rate: the playback rate to which the media resets; for example, if we change the source of the video, or (in some browsers) when an `ended` event is generated.
+In addition to `playbackRate`, we also have a `defaultPlaybackRate` property available, which lets us set the default playback rate: the playback rate to which the media resets; for example, if we change the source of the video, or (in some browsers) when an `ended` event is generated.
 
 So `defaultPlaybackRate` allows us to set the playback rate _before_ playing the media, while `playbackRate` allows us to change it during media playback.
 

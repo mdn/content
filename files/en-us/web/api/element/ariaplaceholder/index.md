@@ -1,6 +1,7 @@
 ---
 title: Element.ariaPlaceholder
 slug: Web/API/Element/ariaPlaceholder
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,16 +18,9 @@ The **`ariaPlaceholder`** property of the {{domxref("Element")}} interface refle
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
-## Syntax
+## Value
 
-```js
-var ariaPlaceholder = element.ariaPlaceholder;
-element.ariaPlaceholder = ariaPlaceholder
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

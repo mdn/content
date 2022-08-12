@@ -12,7 +12,7 @@ browser-compat: css.at-rules.counter-style.suffix
 ---
 {{CSSRef}}
 
-The **`suffix`** descriptor of the{{cssxref("@counter-style")}} rule specifies content that will be appended to the marker representation.
+The **`suffix`** descriptor of the {{cssxref("@counter-style")}} rule specifies content that will be appended to the marker representation.
 
 ## Syntax
 
@@ -34,7 +34,14 @@ suffix: url(bullet.png);
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol>
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 
@@ -80,4 +87,4 @@ suffix: url(bullet.png);
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles

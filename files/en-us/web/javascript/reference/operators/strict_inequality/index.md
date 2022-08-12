@@ -25,9 +25,10 @@ x !== y
 
 ## Description
 
-The strict inequality operator checks whether its operands are not equal. It is the
-negation of the [strict
-equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operator so the following two lines will always give the same result:
+The strict inequality operator checks whether its operands are not equal.
+It is the negation of the
+[strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operator
+so the following two lines will always give the same result:
 
 ```js
 x !== y
@@ -35,8 +36,8 @@ x !== y
 !(x === y)
 ```
 
-For details of the comparison algorithm, see the page for the [strict
-equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operator.
+For details of the comparison algorithm, see the page for the
+[strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operator.
 
 Like the strict equality operator, the strict inequality operator will always consider
 operands of different types to be different:
@@ -97,9 +98,6 @@ console.log(object1 !== object1);  // false
 
 ## See also
 
-- [Equality
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Inequality
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict
-  equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)

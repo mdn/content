@@ -1,6 +1,7 @@
 ---
 title: Response.headers
 slug: Web/API/Response/headers
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -20,7 +21,7 @@ with the response.
 
 A {{domxref("Headers")}} object.
 
-## Example
+## Examples
 
 In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/))
 we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
@@ -30,15 +31,15 @@ create an object URL out of it using {{domxref("URL.createObjectURL")}}, and dis
 Note that at the top of the `fetch()` block, we log the response headers to the console.
 
 ```js
-var myImage = document.querySelector('img');
+const myImage = document.querySelector('img');
 
-var myRequest = new Request('flowers.jpg');
+const myRequest = new Request('flowers.jpg');
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then((response) => {
   // for each response header, log an array with header name as key
   console.log(...response.headers);
-  response.blob().then(function(myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
+  response.blob().then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
 });

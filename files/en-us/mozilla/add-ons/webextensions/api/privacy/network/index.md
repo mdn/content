@@ -21,7 +21,7 @@ Default values for these properties tend to vary across browsers.
 ## Properties
 
 - `networkPredictionEnabled`
-  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `true`, the browser attempts to speed up web browsing by pre-resolving DNS entries, prerendering sites (using, for example, `<link rel='prefetch' ...>`), and preemptively opening TCP and SSL connections to servers.
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `true`, the browser attempts to speed up web browsing by pre-resolving DNS entries, prerendering sites (using, for example, `<link rel='prefetch' …>`), and preemptively opening TCP and SSL connections to servers.
 - `peerConnectionEnabled`
   - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `false`, the [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) interface is disabled. Note that [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) is _not_ affected by this setting.
 - `webRTCIPHandlingPolicy`
@@ -62,12 +62,12 @@ function onSet(result) {
 
 browser.browserAction.onClicked.addListener(() => {
 
-  var getting = browser.privacy.network.webRTCIPHandlingPolicy.get({});
+  let getting = browser.privacy.network.webRTCIPHandlingPolicy.get({});
   getting.then((got) => {
     console.log(got.value);
     if ((got.levelOfControl === "controlled_by_this_extension") ||
         (got.levelOfControl === "controllable_by_this_extension")) {
-      var setting = browser.privacy.network.webRTCIPHandlingPolicy.set({
+      let setting = browser.privacy.network.webRTCIPHandlingPolicy.set({
         value: "default_public_interface_only"
       });
       setting.then(onSet);
@@ -81,7 +81,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

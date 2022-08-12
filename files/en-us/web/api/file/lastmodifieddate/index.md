@@ -1,6 +1,7 @@
 ---
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -17,27 +18,21 @@ browser-compat: api.File.lastModifiedDate
 
 The **`File.lastModifiedDate`** read-only property returns the last modified date of the file. Files without a known last modified date returns the current date .
 
-## Syntax
-
-```js
-var time = instanceOfFile.lastModifiedDate
-```
-
-### Value
+## Value
 
 A [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object indicating the date and time at which the file was last modified.
 
-## Example
+## Examples
 
 ```js
 // fileInput is a HTMLInputElement: <input type="file" multiple id="myfileinput">
-var fileInput = document.getElementById("myfileinput");
+const fileInput = document.getElementById("myfileinput");
 
 // files is a FileList object (similar to NodeList)
-var files = fileInput.files;
+const files = fileInput.files;
 
-for (var i = 0; i < files.length; i++) {
-  alert(files[i].name + " has a last modified date of " + files[i].lastModifiedDate);
+for (let i = 0; i < files.length; i++) {
+  alert(`${files[i].name} has a last modified date of ${files[i].lastModifiedDate}`);
 }
 ```
 
@@ -53,14 +48,14 @@ someFile.lastModifiedDate.getTime();
 // 1519211809934
 // 1519211810362
 // 1519211811670
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 someFile.lastModifiedDate.getTime();
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// …
 ```
 
 In Firefox, you can also enable `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.

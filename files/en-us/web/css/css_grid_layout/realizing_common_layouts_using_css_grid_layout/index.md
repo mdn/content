@@ -101,7 +101,7 @@ This will not create any layout, however our items now have names we can use to 
 }
 ```
 
-After setting up a mobile layout we will get this single column at all screen sizes, we can now add a [media query](/en-US/docs/Web/CSS/Media_Queries) and redefine our layout for the circumstance of having enough screen real estate to show two columns.
+With our mobile layout in place, we can now proceed to add a [media query](/en-US/docs/Web/CSS/Media_Queries) to adapt this layout for bigger screens with enough real estate to display two columns.
 
 ```css
 @media (min-width: 500px) {
@@ -209,7 +209,7 @@ I can then place these on the grid using the named lines, and also the span keyw
 
 As described in the [guide to named lines](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines), we are using the named line to place our item. As we have 12 lines all with the same name we use the name, and then the index of the line. You could also use the line index itself if you prefer and avoid using named lines at all.
 
-Rather than setting the end line number, I have chosen to say how many tracks this element should span, using the `span` keyword. I like this approach as when working with a multiple-column layout system we usually think of blocks in terms of the number of tracks of the grid they span, and adjust that for different breakpoints. To see how the blocks align themselves to the tracks, use the [Firefox Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts). It clearly demonstrates how our items are placed.
+Rather than setting the end line number, I have chosen to say how many tracks this element should span, using the `span` keyword. I like this approach as when working with a multiple-column layout system we usually think of blocks in terms of the number of tracks of the grid they span, and adjust that for different breakpoints. To see how the blocks align themselves to the tracks, use the [Firefox Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html). It clearly demonstrates how our items are placed.
 
 ![Showing the items placed on the grid with grid tracks highlighted.](11-grid-inspector-12col.png)
 
@@ -336,7 +336,7 @@ Finally we go to the three-column version of this layout. The header continues t
 
 {{ EmbedLiveSample('Building_a_layout_using_the_12-column_system', '800', '450') }}
 
-Once again the [Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) is useful to help us see how our layout has taken shape.
+Once again the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) is useful to help us see how our layout has taken shape.
 
 ![Showing the layout with grid tracks highlighted by the grid inspector.](11-grid-inspector-12col-layout.png)
 
@@ -429,7 +429,7 @@ We are going to create a grid with a flexible number of flexible columns. I want
   margin: 2em;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 ```
 

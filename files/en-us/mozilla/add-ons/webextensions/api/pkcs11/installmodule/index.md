@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var installing = browser.pkcs11.installModule(
+let installing = browser.pkcs11.installModule(
   name,              // string
   flags              // integer
 )
@@ -31,7 +31,7 @@ var installing = browser.pkcs11.installModule(
 
 - `name`
   - : `string`. Name of the module to install. This must match the `name` property in the [PKCS #11 manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_manifests) for the module.
-- `flags`{{optional_inline}}
+- `flags` {{optional_inline}}
   - : `integer`. Flags to pass to the module.
 
 ### Return value

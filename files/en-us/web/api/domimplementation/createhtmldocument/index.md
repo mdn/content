@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -19,15 +20,20 @@ new HTML {{ domxref("Document") }}.
 ## Syntax
 
 ```js
-const newDoc = document.implementation.createHTMLDocument(title)
+createHTMLDocument()
+createHTMLDocument(title)
 ```
 
 ### Parameters
 
 - `title`  {{optional_inline}} (except in IE)
-  - : A {{domxref("DOMString")}} containing the title to give the new HTML document.
+  - : A string containing the title to give the new HTML document.
 
-## Example
+### Return value
+
+A new HTML {{domxref("Document")}} object.
+
+## Examples
 
 This example creates a new HTML document and inserts it into an {{
   HTMLElement("iframe") }} in the current document.
@@ -53,7 +59,7 @@ function makeDocument() {
 
   try {
     doc.body.appendChild(p);
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 
@@ -83,9 +89,10 @@ replaces the contents of the frame with the new document's contents.
 The returned document is pre-constructed with the following HTML:
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
+<meta charset="UTF-8">
 <title>title</title>
 </head>
 <body>

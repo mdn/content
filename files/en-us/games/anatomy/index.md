@@ -32,8 +32,8 @@ JavaScript works best with events and callback functions. Modern browsers strive
 Some code needs to be run frame-by-frame so why attach that function to anything other than the browser's redraw schedule? On the Web, `{{ domxref("window.requestAnimationFrame()") }}` will be the foundation of most well-programmed per-frame main loops. A callback function must be passed in to it when it is called. That callback function will be executed at a suitable time before the next repaint. Here is an example of a simple main loop:
 
 ```js
-window.main = function () {
-  window.requestAnimationFrame( main );
+window.main = () => {
+  window.requestAnimationFrame(main);
 
   // Whatever your main loop needs to do
 };
@@ -43,7 +43,7 @@ main(); // Start the cycle
 
 > **Note:** In each of the `main()` methods discussed here, we schedule a new `requestAnimationFrame` before performing our loop contents. That is not by accident and it is considered best practice. Calling the next `requestAnimationFrame` early ensures the browser receives it on time to plan accordingly even if your current frame misses its VSync window.
 
-The above chunk of code has two statements. The first statement creates a function as a global variable called `main()`. This function does some work and also tells the browser to call itself next frame with `window.requestAnimationFrame()`. The second statement calls the `main()` function, defined in the first statement. Because `main()` is called once in the second statement and every call of it places itself in the queue of things to do next frame, `main()` is synchronized to your framerate.
+The above chunk of code has two statements. The first statement creates a function as a global variable called `main()`. This function does some work and also tells the browser to call itself next frame with `window.requestAnimationFrame()`. The second statement calls the `main()` function, defined in the first statement. Because `main()` is called once in the second statement and every call of it places itself in the queue of things to do next frame, `main()` is synchronized to your frame rate.
 
 Of course this loop is not perfect. Before we discuss ways to change it, let us discuss what it already does well.
 
@@ -63,9 +63,9 @@ There are two obvious issues with our previous main loop: `main()` pollutes the 
 * marks the beginning of our new line if the previous one was not empty or terminated.
 */
 
-;(function () {
+;(() => {
   function main() {
-    window.requestAnimationFrame( main );
+    window.requestAnimationFrame(main);
 
     // Your main loop contents
   }
@@ -90,9 +90,9 @@ For the second issue, stopping the main loop, you will need to cancel the call t
 * Let us also assume that MyGame is previously defined.
 */
 
-;(function () {
+;(() => {
   function main() {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
     // Your main loop contents
   }
@@ -104,7 +104,7 @@ For the second issue, stopping the main loop, you will need to cancel the call t
 We now have a variable declared in our `MyGame` namespace, which we call `stopMain`, that contains the ID returned from our main loop's most recent call to `requestAnimationFrame()`. At any point, we can stop the main loop by telling the browser to cancel the request that corresponds to our token.
 
 ```js
-window.cancelAnimationFrame( MyGame.stopMain );
+window.cancelAnimationFrame(MyGame.stopMain);
 ```
 
 The key to programming a main loop, in JavaScript, is to attach it to whatever event should be driving your action and pay attention to how the different systems involved interplay. You may have multiple components driven by multiple different types of events. This feels like unnecessary complexity but it might just be good optimization (not necessarily, of course). The problem is that you are not programming a typical main loop. In Javascript, you are using the browser's main loop and you are trying to do so effectively.
@@ -129,7 +129,7 @@ While we are on the topic of budgeting time, many web browsers have a tool calle
 This value is not too useful alone, since it is relative to a fairly uninteresting event, but it can be subtracted from another timestamp to accurately and precisely determine how much time elapsed between those two points. To acquire one of these timestamps, you can call `window.performance.now()` and store the result as a variable.
 
 ```js
-var tNow = window.performance.now();
+const tNow = window.performance.now();
 ```
 
 Back to the topic of the main loop. You will often want to know when your main function was invoked. Because this is common, `window.requestAnimationFrame()` always provides a `DOMHighResTimeStamp` to callbacks as an argument when they are executed. This leads to another enhancement to our previous main loops.
@@ -144,12 +144,12 @@ Back to the topic of the main loop. You will often want to know when your main f
 * Let us also assume that MyGame is previously defined.
 */
 
-;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+;(() => {
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
     // Your main loop contents
-    // tFrame, from "function main ( tFrame )", is now a DOMHighResTimeStamp provided by rAF.
+    // tFrame, from "function main(tFrame)", is now a DOMHighResTimeStamp provided by rAF.
   }
 
   main(); // Start the cycle
@@ -158,7 +158,7 @@ Back to the topic of the main loop. You will often want to know when your main f
 
 Several other optimizations are possible and it really depends on what your game attempts to accomplish. Your game genre will obviously make a difference but it could even be more subtle than that. You could draw every pixel individually on a canvas or you could layer DOM elements (including multiple WebGL canvases with transparent backgrounds if you want) into a complex hierarchy. Each of these paths will lead to different opportunities and constraints.
 
-## It is decision... time
+## It is decision… time
 
 You will need to make hard decisions about your main loop: how to simulate the accurate progress of time. If you demand per-frame control then you will need to determine how frequently your game will update and draw. You might even want update and draw to occur at different rates. You will also need to consider how gracefully your game will fail if the user's system cannot keep up with the workload. Let us start by assuming that you will handle user input and update the game state every time you draw. We will branch out later.
 
@@ -178,11 +178,11 @@ If your game can hit the maximum refresh rate of any hardware you support then y
 * Let us also assume that MyGame is previously defined.
 */
 
-;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+;(() => {
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
-    update( tFrame ); // Call your update method. In our case, we give it rAF's timestamp.
+    update(tFrame); // Call your update method. In our case, we give it rAF's timestamp.
     render();
   }
 
@@ -258,30 +258,30 @@ A separate update and draw method could look like the following example. For the
 *                   It is just a generic example function that you might have added.
 */
 
-;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
-    var nextTick = MyGame.lastTick + MyGame.tickLength;
-    var numTicks = 0;
+;(() => {
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
+    const nextTick = MyGame.lastTick + MyGame.tickLength;
+    let numTicks = 0;
 
     // If tFrame < nextTick then 0 ticks need to be updated (0 is default for numTicks).
     // If tFrame = nextTick then 1 tick needs to be updated (and so forth).
     // Note: As we mention in summary, you should keep track of how large numTicks is.
     // If it is large, then either your game was asleep, or the machine cannot keep up.
     if (tFrame > nextTick) {
-      var timeSinceTick = tFrame - MyGame.lastTick;
-      numTicks = Math.floor( timeSinceTick / MyGame.tickLength );
+      const timeSinceTick = tFrame - MyGame.lastTick;
+      numTicks = Math.floor(timeSinceTick / MyGame.tickLength);
     }
 
-    queueUpdates( numTicks );
-    render( tFrame );
+    queueUpdates(numTicks);
+    render(tFrame);
     MyGame.lastRender = tFrame;
   }
 
-  function queueUpdates( numTicks ) {
-    for(var i=0; i < numTicks; i++) {
-      MyGame.lastTick = MyGame.lastTick + MyGame.tickLength; // Now lastTick is this tick.
-      update( MyGame.lastTick );
+  function queueUpdates(numTicks) {
+    for (let i = 0; i < numTicks; i++) {
+      MyGame.lastTick += MyGame.tickLength; // Now lastTick is this tick.
+      update(MyGame.lastTick);
     }
   }
 

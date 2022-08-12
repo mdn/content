@@ -1,6 +1,7 @@
 ---
 title: Document.documentElement
 slug: Web/API/Document/documentElement
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -16,13 +17,11 @@ browser-compat: api.Document.documentElement
 {{domxref("Element")}} that is the root element of the {{domxref("document")}} (for
 example, the {{HTMLElement("html")}} element for HTML documents).
 
-## Syntax
+## Value
 
-```js
-const element = document.documentElement
-```
+A {{domxref("Element")}} object.
 
-## Example
+## Examples
 
 ```js
 const rootElement = document.documentElement;

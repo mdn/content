@@ -1,10 +1,10 @@
 ---
 title: SecurityPolicyViolationEvent.originalPolicy
 slug: Web/API/SecurityPolicyViolationEvent/originalPolicy
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
-  - Experimental
   - HTTP
   - Property
   - Reference
@@ -13,24 +13,18 @@ tags:
   - originalPolicy
 browser-compat: api.SecurityPolicyViolationEvent.originalPolicy
 ---
-{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
+{{HTTPSidebar}}
 
 The **`originalPolicy`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("DOMString")}}
+{{domxref("SecurityPolicyViolationEvent")}} interface is a string
 containing the policy whose enforcement uncovered the violation.
 
-## Syntax
+## Value
 
-```js
-let origPolicy = violationEventInstance.originalPolicy;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the policy whose enforcement uncovered the
+A string representing the policy whose enforcement uncovered the
 violation.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

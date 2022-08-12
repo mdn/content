@@ -36,11 +36,11 @@ tags:
 
 ### Developer Tools
 
-- [The Web Console now understands source maps.](/en-US/docs/Tools/Web_Console/Console_messages#source_maps)
-- [The Storage Inspector now lets you delete individual items from IndexedDB object stores.](/en-US/docs/Tools/Storage_Inspector#indexeddb)
-- [The Memory tool is enabled by default.](/en-US/docs/Tools/Memory)
-- [The Box model view is moved into the Computed view.](/en-US/docs/Tools/Page_Inspector/UI_Tour#computed_view)
-- [The Web Console now displays stack traces for XHR or Fetch() network requests.](/en-US/docs/Tools/Web_Console/Console_messages#viewing_network_request_details)
+- [The Web Console now understands source maps.](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#source-maps)
+- [The Storage Inspector now lets you delete individual items from IndexedDB object stores.](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html#indexeddb)
+- [The Memory tool is enabled by default.](https://firefox-source-docs.mozilla.org/devtools-user/memory/index.html)
+- [The Box model view is moved into the Computed view.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#computed-view)
+- [The Web Console now displays stack traces for XHR or Fetch() network requests.](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#viewing-network-request-details)
 
 [All devtools bugs fixed between Firefox 49 and Firefox 50](https://bugzilla.mozilla.org/buglist.cgi?list_id=13263766&chfield=resolution&chfieldfrom=2016-06-06&chfieldvalue=FIXED&resolution=FIXED&classification=Client%20Software&chfieldto=2016-08-01&query_format=advanced&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%20about%3Adebugging&component=Developer%20Tools%3A%20Animation%20Inspector&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20DOM&component=Developer%20Tools%3A%20Font%20Inspector&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20JSON%20Viewer&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Design%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Shared%20Components&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox).
 
@@ -62,7 +62,7 @@ tags:
 ### Networking
 
 - When a error has happened during an asynchronous {{domxref("XMLHttpRequest")}}, the {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} method now returns an empty string ({{bug(1286744)}}).
-- Instead of returning a `NetworkError`, asynchronous {{domxref("XMLHttpRequest")}} that fails for CORS or other network constraints now raises an {{event("error")}} that can be caught like any other error ({{bug(709991)}}).
+- Instead of returning a `NetworkError`, asynchronous {{domxref("XMLHttpRequest")}} that fails for CORS or other network constraints now raises an {{domxref("XMLHttpRequest/error_event", "error")}} that can be caught like any other error ({{bug(709991)}}).
 - {{domxref("XMLHttpRequest.getResponseHeader()")}} and {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} now also return empty headers by default. This can be controlled via the preference `network.http.keep_empty_response_headers_as_empty_string` ({{bug(918721)}}).
 - The `only-if-cached` option has been added to [`Request.cache`](/en-US/docs/Web/API/Request/cache) ({{bug(1272436)}}).
 
@@ -90,7 +90,7 @@ tags:
 
 ### IndexedDB
 
-- A {{event("close")}} event is now sent to the {{domxref("IDBDatabase")}} object when the corresponding database is unexpectedly closed ({{bug(1151017)}}).
+- A {{domxref("IDBDatabase/close_event", "close")}} event is now sent to the {{domxref("IDBDatabase")}} object when the corresponding database is unexpectedly closed ({{bug(1151017)}}).
 
 ### Service Workers
 
@@ -103,16 +103,16 @@ tags:
 
 ### WebRTC
 
-- Adding a track to a {{domxref("MediaStream")}} now generates the {{event("addtrack")}} event as described in the specification. The event is of type {{domxref("MediaStreamTrackEvent")}} and is fired on the stream to which the track was added. You can use either {{domxref("EventTarget.addEventListener", "MediaStream.addEventListener('addtrack', ...)")}} or the {{domxref("MediaStream.onaddtrack")}} property to handle `"addtrack"` events.
-- The {{domxref("MediaStreamTrack")}} interface now supports the {{event("ended")}} event and the {{domxref("MediaStreamTrack.onended")}} event handler.
+- Adding a track to a {{domxref("MediaStream")}} now generates the {{domxref("MediaStream/addtrack_event", "addtrack")}} event as described in the specification. The event is of type {{domxref("MediaStreamTrackEvent")}} and is fired on the stream to which the track was added. You can use either {{domxref("EventTarget.addEventListener", "MediaStream.addEventListener('addtrack', ...)")}} or the `onaddtrack` property to handle `"addtrack"` events.
+- The {{domxref("MediaStreamTrack")}} interface now supports the {{domxref("MediaStreamTrack.ended_event", "ended")}} event and its event handler.
 - Firefox now supports the {{domxref("MediaStreamTrack.readyState")}} property, which indicates whether the track is live or permanently ended.
 - The {{domxref("MediaStreamTrack")}} methods {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} and {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} have been implemented; these let you get the most recently applied set of customized property constraints and the actual values of all of the track's constrainable properties, respectively. The accompanying data types have been documented as well.
-- The {{domxref("RTCDataChannel.stream")}} property has been removed. This was replaced with {{domxref("RTCDataChannel.id")}} in [Firefox 24](/en-US/docs/Mozilla/Firefox/Releases/24), but was supported for backward compatibility. Please be sure to update your code to use the `id` property if you haven't done so yet.
+- The `RTCDataChannel.stream` property has been removed. This was replaced with {{domxref("RTCDataChannel.id")}} in [Firefox 24](/en-US/docs/Mozilla/Firefox/Releases/24), but was supported for backward compatibility. Please be sure to update your code to use the `id` property if you haven't done so yet.
 
 ### Web Audio API
 
 - The {{domxref("PannerNode")}} interface now supports the 3D Cartesian space properties for the position ({{domxref("PannerNode.positionX")}}, {{domxref("PannerNode.positionY")}}, and {{domxref("PannerNode.positionZ")}}) and directionality ({{domxref("PannerNode.orientationX")}}, {{domxref("PannerNode.orientationY")}}, {{domxref("PannerNode.orientationZ")}}) of an audio source.
-- The interface {{domxref("IIRFilterNode")}}, which implements a general {{interwiki("wikipedia", "infinite impulse response")}} (IIR) filter, has been implemented.
+- The interface {{domxref("IIRFilterNode")}}, which implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response) (IIR) filter, has been implemented.
 - Throttling in background tabs of timers created by {{domxref("setInterval()")}} and {{domxref("setTimeout()")}} no longer occurs if a [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ({{bug(1181073)}}).
 
 ### Audio/Video

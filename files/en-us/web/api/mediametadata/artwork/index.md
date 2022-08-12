@@ -1,6 +1,7 @@
 ---
 title: MediaMetadata.artwork
 slug: Web/API/MediaMetadata/artwork
+page-type: web-api-instance-property
 tags:
   - Audio
   - Media
@@ -20,14 +21,7 @@ The **`artwork`** property of the
 {{domxref("MediaImage")}} objects representing images associated with playing
 media.
 
-## Syntax
-
-```js
-var artwork[] = mediaMetadata.artwork
-mediaMetadata.artwork = artwork[]
-```
-
-### Value
+## Value
 
 An {{jsxref("Array")}} of {{domxref("MediaImage")}} objects.
 
@@ -51,6 +45,7 @@ if ('mediaSession' in navigator) {
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
   });
+}
 ```
 
 ## Specifications

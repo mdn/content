@@ -34,6 +34,7 @@ object-fit: scale-down;
 object-fit: inherit;
 object-fit: initial;
 object-fit: revert;
+object-fit: revert-layer;
 object-fit: unset;
 ```
 

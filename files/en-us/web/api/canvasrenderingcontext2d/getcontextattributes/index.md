@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.getContextAttributes()
 slug: Web/API/CanvasRenderingContext2D/getContextAttributes
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,8 +22,12 @@ on context creation.
 ## Syntax
 
 ```js
-ctx.getContextAttributes();
+getContextAttributes()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

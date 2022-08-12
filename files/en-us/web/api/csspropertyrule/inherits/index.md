@@ -1,12 +1,12 @@
 ---
 title: CSSPropertyRule.inherits
 slug: Web/API/CSSPropertyRule/inherits
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
   - CSS Properties and Values API
   - CSSPropertyRule
-  - Experimental
   - Houdini
   - Property
   - Reference
@@ -17,13 +17,7 @@ browser-compat: api.CSSPropertyRule.inherits
 
 The read-only **`inherits`** property of the {{domxref("CSSPropertyRule")}} interface returns the inherit flag of the custom property registration represented by the {{cssxref("@property")}} rule, a boolean describing whether or not the property inherits by default.
 
-## Syntax
-
-```js
-const inherits = CSSPropertyRule.inherits;
-```
-
-### Value
+## Value
 
 A boolean.
 

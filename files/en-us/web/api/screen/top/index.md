@@ -1,6 +1,7 @@
 ---
 title: Screen.top
 slug: Web/API/Screen/top
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions
@@ -16,11 +17,9 @@ browser-compat: api.Screen.top
 
 Returns the distance in pixels from the top side of the current screen.
 
-## Syntax
+## Value
 
-```js
-let top = window.screen.top;
-```
+A number.
 
 ## Specifications
 

@@ -32,6 +32,7 @@ scroll-padding-block-start: 10%;
 scroll-padding-block-start: inherit;
 scroll-padding-block-start: initial;
 scroll-padding-block-start: revert;
+scroll-padding-block-start: revert-layer;
 scroll-padding-block-start: unset;
 ```
 

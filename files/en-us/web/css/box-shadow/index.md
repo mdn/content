@@ -23,7 +23,7 @@ The **`box-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadow effects aro
 
 The `box-shadow` property enables you to cast a drop shadow from the frame of almost any element. If a {{cssxref("border-radius")}} is specified on the element with a box shadow, the box shadow takes on the same rounded corners. The z-ordering of multiple box shadows is the same as multiple [text shadows](/en-US/docs/Web/CSS/text-shadow) (the first specified shadow is on top).
 
-[Box-shadow generator](/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator) is an interactive tool allowing you to generate a `box-shadow`.
+[Box-shadow generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator) is an interactive tool allowing you to generate a `box-shadow`.
 
 ## Syntax
 
@@ -46,10 +46,11 @@ box-shadow: inset 5em 1em gold;
 /* Any number of shadows, separated by commas */
 box-shadow: 3px 3px red, -1em 0 0.4em olive;
 
-/* Global keywords */
+/* Global values */
 box-shadow: inherit;
 box-shadow: initial;
 box-shadow: revert;
+box-shadow: revert-layer;
 box-shadow: unset;
 ```
 
@@ -70,7 +71,7 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 
 - `inset`
   - : If not specified (default), the shadow is assumed to be a drop shadow (as if the box were raised above the content).
-    The presence of the `inset` keyword changes the shadow to one inside the frame (as if the content was depressed inside the box). Inset shadows are drawn inside the border (even transparent ones), above the background, but below content.
+    The presence of the `inset` keyword changes the shadow to one inside the frame (as if the content was debossed inside the box). Inset shadows are drawn inside the border (even transparent ones), above the background, but below content.
 - `<offset-x>` `<offset-y>`
   - : These are two {{cssxref("&lt;length&gt;")}} values to set the shadow offset. `<offset-x>` specifies the horizontal distance. Negative values place the shadow to the left of the element. `<offset-y>` specifies the vertical distance. Negative values place the shadow above the element. See {{cssxref("&lt;length&gt;")}} for possible units.
     If both values are `0`, the shadow is placed behind the element (and may generate a blur effect if `<blur-radius>` and/or `<spread-radius>` is set).
@@ -84,11 +85,13 @@ To specify multiple shadows, provide a comma-separated list of shadows.
   - : This is a fourth {{cssxref("&lt;length&gt;")}} value. Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink. If not specified, it will be `0` (the shadow will be the same size as the element).
 - `<color>`
   - : See {{cssxref("&lt;color&gt;")}} values for possible keywords and notations.
-    If not specified, it defaults to {{cssxref("&lt;color&gt;","currentColor","#currentcolor_keyword")}}.
+    If not specified, it defaults to {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}}.
 
 ### Interpolation
 
-Each shadow in the list (treating `none` as a 0-length list) is interpolated via the color (as color) component, and x, y, blur, and (when appropriate) spread (as length) components. For each shadow, if both input shadows are or are not `inset`, then the interpolated shadow must match the input shadows in that regard. If any pair of input shadows has one `inset` and the other not `inset`, the entire shadow list is uninterpolated. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is `transparent`, all lengths are `0`, and whose `inset` (or not) matches the longer list.
+When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition.  For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as [`<color>`](/en-US/docs/Web/CSS/color_value), and the other values as [`<length>`](/en-US/docs/Web/CSS/length)s.
+
+In interpolating multiple shadows between two comma-separated lists of multiple box shadows, the shadows are paired, in order, with interpolation occurring between paired shadows. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is `transparent`, and X, Y, and blur are `0`, with the inset, or lack of inset, being set to match. If, in any pair of shadows, one has `inset` set and the other is does not, the entire shadow list is uninterpolated; the shadows will change to the new values without an animating effect.
 
 ## Formal definition
 
@@ -171,4 +174,4 @@ p {
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("text-shadow")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

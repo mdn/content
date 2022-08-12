@@ -8,6 +8,7 @@ tags:
   - Reference
   - Regular Expressions
   - String
+  - Polyfill
 browser-compat: javascript.builtins.String.search
 ---
 {{JSRef}}
@@ -27,8 +28,7 @@ search(regexp)
 
 - `regexp`
 
-  - : A [regular
-    expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) object.
+  - : A [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) object.
 
     If a non-RegExp object `regexp` is passed, it is implicitly
     converted to a {{jsxref("RegExp")}} with `new RegExp(regexp)`.
@@ -57,11 +57,11 @@ The following example searches a string with two different regex objects to show
 successful search (positive value) vs. an unsuccessful search (`-1`)
 
 ```js
-let str = "hey JudE"
-let re = /[A-Z]/g
-let reDot = /[.]/g
-console.log(str.search(re))    // returns 4, which is the index of the first capital letter "J"
-console.log(str.search(reDot)) // returns -1 cannot find '.' dot punctuation
+const str = "hey JudE";
+const re = /[A-Z]/g;
+const reDot = /[.]/g;
+console.log(str.search(re)); // returns 4, which is the index of the first capital letter "J"
+console.log(str.search(reDot)); // returns -1 cannot find '.' dot punctuation
 ```
 
 ## Specifications
@@ -74,7 +74,7 @@ console.log(str.search(reDot)) // returns -1 cannot find '.' dot punctuation
 
 ## See also
 
-- [Using regular
-  expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Polyfill of `String.prototype.search` in `core-js` with fixes and implementation of modern behavior like `Symbol.search` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}

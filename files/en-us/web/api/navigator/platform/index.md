@@ -1,6 +1,7 @@
 ---
-title: Navigator.platform
+title: navigator.platform
 slug: Web/API/Navigator/platform
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -11,25 +12,28 @@ tags:
   - platform
 browser-compat: api.Navigator.platform
 ---
-{{ APIRef("HTML DOM") }} {{Deprecated_Header}}
+{{ APIRef("HTML DOM") }}
 
-> **Note:** The recommended alternative to this property is {{domxref("NavigatorUAData.platform", "navigator.userAgentData.platform")}}. However, {{domxref("NavigatorUAData.platform", "navigator.userAgentData.platform")}} is not yet supported by some major browsers, and the specification which defines it has not yet been adopted by any standards group (specifically, it is not part of any specification published by the W3C or WHATWG).
+The **`platform`** property read-only property of the {{domxref("Navigator")}} interface returns a string identifying the platform on which the user's browser is running.
 
-Returns a string representing the platform of the browser.
-The specification allows browsers to always return the empty string, so don't rely on this property to get a reliable answer.
+> **Note:** In general, you should whenever possible avoid writing code that uses methods or properties like this one to try to find out information about the user's environment, and instead write code that does [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection).
 
 ## Value
 
-A {{domxref("DOMString")}} identifying the platform on which the browser is running, or an empty string if the browser declines to (or is unable to) identify the platform.
-`platform` is a string that must be an empty string or a string representing the platform on which the browser is executing.
+A string identifying the platform on which the user's browser is running; for example: `"MacIntel"`, `"Win32"`, `"Linux x86_64"`, `"Linux x86_64"`.
 
-For example: "`MacIntel`", "`Win32`", "`FreeBSD i386`", "`WebTV OS`"
+## Examples
 
-## Example
+`navigator.platform` should almost always be avoided in favor of [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection). But there is one case where, among the options you could use, `navigator.platform` may be the least-bad option: When you need to show users advice about whether the modifier key for keyboard shortcuts is the `⌘` command key (found on Apple systems) rather than the `⌃` control key (on non-Apple systems):
 
 ```js
-console.log(navigator.platform);
+let modifierKeyPrefix = "^"; // control key
+if (navigator.platform.indexOf("Mac") === 0 || navigator.platform === "iPhone") {
+    modifierKeyPrefix = "⌘"; // command key
+}
 ```
+
+That is, check if `navigator.platform` starts with `"Mac"` or else is an exact match for `"iPhone"`, and then based on whether either of those is true, choose the modifier key your web application's UI will advise users to press in keyboard shortcuts.
 
 ## Usage notes
 
@@ -43,3 +47,7 @@ Internet Explorer and versions of Firefox prior to version 63 still report `"Win
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`navigator.userAgentData.platform`](/en-US/docs/Web/API/NavigatorUAData/platform)

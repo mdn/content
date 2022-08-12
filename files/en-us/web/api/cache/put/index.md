@@ -1,10 +1,10 @@
 ---
 title: Cache.put()
 slug: Web/API/Cache/put
+page-type: web-api-instance-method
 tags:
   - API
   - Cache
-  - Experimental
   - Method
   - NeedsExample
   - Reference
@@ -27,7 +27,7 @@ better off using
 they are shorthand functions for one or more of these operations.
 
 ```js
-fetch(url).then(function(response) {
+fetch(url).then((response) => {
   if (!response.ok) {
     throw new TypeError('Bad response status');
   }
@@ -47,29 +47,28 @@ fetch(url).then(function(response) {
 ## Syntax
 
 ```js
-cache.put(request, response).then(function() {
-  // request/response pair has been added to the cache
-});
+put(request, response)
 ```
 
 ### Parameters
 
-- request
+- `request`
   - : The {{domxref("Request")}} object or URL that you want to add to the cache.
-- response
+- `response`
   - : The {{domxref("Response")}} you want to match up to the request.
 
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with `undefined`.
 
-> **Note:** The promise will reject with a `TypeError` if the
-> URL scheme is not `http` or `https`.
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Returned if the URL scheme is not `http` or `https`.
 
 ## Examples
 
-This example is from the MDN [sw-test
-example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
+This example is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
 Here we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response
 like so:
 
@@ -82,18 +81,18 @@ like so:
 3. If this fails (e.g., because the network is down), return a fallback response.
 
 ```js
-var response;
-var cachedResponse = caches.match(event.request).catch(function() {
-  return fetch(event.request);
-}).then(function(r) {
-  response = r;
-  caches.open('v1').then(function(cache) {
-    cache.put(event.request, response);
-  });
-  return response.clone();
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
+let response;
+const cachedResponse = caches
+  .match(event.request)
+  .catch(() => fetch(event.request))
+  .then((r) => {
+    response = r;
+    caches.open('v1').then((cache) => {
+      cache.put(event.request, response);
+    });
+    return response.clone();
+  })
+  .catch(() => caches.match('/sw-test/gallery/myLittleVader.jpg'));
 ```
 
 ## Specifications
@@ -106,7 +105,6 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

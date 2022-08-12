@@ -1,6 +1,7 @@
 ---
 title: MediaSource.removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -24,17 +25,17 @@ object.
 ## Syntax
 
 ```js
-mediaSource.removeSourceBuffer(sourceBuffer);
+removeSourceBuffer(sourceBuffer)
 ```
 
 ### Parameters
 
-- sourceBuffer
+- `sourceBuffer`
   - : The {{domxref("SourceBuffer")}} object to be removed.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -44,8 +45,8 @@ mediaSource.removeSourceBuffer(sourceBuffer);
 ## Examples
 
 ```js
-for (i = 0; i < 10; i++) {
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+for (let i = 0; i < 10; i++) {
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
 }
 
 mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);

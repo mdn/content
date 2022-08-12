@@ -1,6 +1,7 @@
 ---
 title: XRQuadLayer.width
 slug: Web/API/XRQuadLayer/width
+page-type: web-api-instance-property
 tags:
   - API
   - Property

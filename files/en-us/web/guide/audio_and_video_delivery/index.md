@@ -40,7 +40,7 @@ The code above will create an audio player that attempts to preload as much audi
 
 > **Note:** The `preload` attribute may be ignored by some mobile browsers.
 
-For further info see [Cross Browser Audio Basics (HTML5 Audio In Detail)](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
+For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
 
 ### HTML Video
 
@@ -62,7 +62,7 @@ For further info see [Cross Browser Audio Basics (HTML5 Audio In Detail)](/en-US
 
 The code above creates a video player of dimensions 640x480 pixels, displaying a poster image until the video is played. We instruct the video to autoplay but to be muted by default.
 
-> **Note:** The `autoplay` attribute may be ignored by some mobile browsers. Also, the autoplay feature can be controversial when misused. It's strongly recommended that you read the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) to learn how to use autoplay wisely..
+> **Note:** The `autoplay` attribute may be ignored by some mobile browsers. Also, the autoplay feature can be controversial when misused. It's strongly recommended that you read the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) to learn how to use autoplay wisely.
 
 For further info see [\<video> element](/en-US/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player).
 
@@ -88,7 +88,7 @@ We set the source of the audio depending on the type of audio file the browser s
 It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing to generate audio on the fly:
 
 ```html
-<audio id="player" src="data:audio/x-wav;base64,UklGRvC..."></audio>
+<audio id="player" src="data:audio/x-wav;base64,UklGRvC…"></audio>
 ```
 
 [Speak.js](https://github.com/kripken/speak.js/) employs this technique. [Try the demo](https://speak-demo.herokuapp.com).
@@ -123,8 +123,8 @@ try {
   request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
   request.responseType = "arraybuffer";
 
-  request.onload = function() {
-    context.decodeAudioData(request.response, function(buffer) {
+  request.onload = () => {
+    context.decodeAudioData(request.response, (buffer) => {
       source = context.createBufferSource();
       source.buffer = buffer;
       source.connect(context.destination);
@@ -135,7 +135,7 @@ try {
 
   request.send();
 
-} catch(e) {
+} catch (e) {
   alert('web audio api not supported');
 }
 ```
@@ -184,18 +184,18 @@ navigator.mediaDevices.getUserMedia({audio:true})
     const recorder = new MediaRecorder(stream);
 
     const data = [];
-    recorder.ondataavailable = function(e) {
+    recorder.ondataavailable = (e) => {
       data.push(e.data);
     };
     recorder.start();
-    recorder.onerror = function(e) {
+    recorder.onerror = (e) => {
       throw e.error || new Error(e.name); // e.name is FF non-spec
     }
-    recorder.onstop = function(e) {
+    recorder.onstop = (e) => {
       const audio = document.createElement('audio');
       audio.src = window.URL.createObjectURL(new Blob(data));
     }
-    setTimeout(function() {
+    setTimeout(() => {
       rec.stop();
     }, 5000);
   })
@@ -208,11 +208,11 @@ See [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) for more 
 
 ## Media Source Extensions (MSE)
 
-[Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) is a W3C working draft that plans to extend {{domxref("HTMLMediaElement")}} to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
+[Media Source Extensions](https://w3c.github.io/media-source/) is a W3C working draft that plans to extend {{domxref("HTMLMediaElement")}} to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
 
 ### Encrypted Media Extensions (EME)
 
-[Encrypted Media Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/encrypted-media/encrypted-media.html) is a W3C proposal to extend `HTMLMediaElement`, providing APIs to control playback of protected content.
+[Encrypted Media Extensions](https://w3c.github.io/encrypted-media/) is a W3C proposal to extend `HTMLMediaElement`, providing APIs to control playback of protected content.
 
 The API supports use cases ranging from simple clear key decryption to high value video (given an appropriate user agent implementation). License/key exchange is controlled by the application, facilitating the development of robust playback applications supporting a range of content decryption and protection technologies.
 
@@ -248,13 +248,12 @@ A quick example — first set up your audio and custom controls in HTML:
 add a bit of JavaScript to detect events to play and pause the audio:
 
 ```js
-window.onload = function() {
-
+window.onload = () => {
   const myAudio = document.getElementById('my-audio');
   const myControl = document.getElementById('my-control');
 
   function switchState() {
-    if (myAudio.paused == true) {
+    if (myAudio.paused) {
       myAudio.play();
       myControl.textContent = "pause";
     } else {
@@ -264,16 +263,16 @@ window.onload = function() {
   }
 
   function checkKey(e) {
-    if (e.keycode == 32 ) { //spacebar
+    if (e.keycode === 32) { // space bar
       switchState();
     }
   }
 
-  myControl.addEventListener('click', function() {
+  myControl.addEventListener('click', () => {
     switchState();
   }, false);
 
-  window.addEventListener( "keypress", checkKey, false );
+  window.addEventListener("keypress", checkKey, false);
 }
 ```
 
@@ -338,7 +337,7 @@ A few examples:
 
 ## Error handling
 
-Starting in Gecko 2.0 {{ geckoRelease("2.0") }}, error handling has been revised to match the latest version of the HTML5 specification. Instead of the `error` event being dispatched to the media element itself, it now gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
+Starting in Gecko 2.0 {{ geckoRelease("2.0") }}, error handling has been revised to match the latest version of the HTML specification. Instead of the `error` event being dispatched to the media element itself, it now gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
 
 This lets you detect which sources failed to load, which may be useful. Consider this HTML:
 
@@ -399,10 +398,10 @@ AddType video/webm webmv
 
 Your files may have been encoded incorrectly — try encoding using one of the following tools, which are proven to be pretty reliable:
 
-- [Audacity](http://audacity.sourceforge.net/) — Free Audio Editor and Recorder
+- [Audacity](https://sourceforge.net/projects/audacity/) — Free Audio Editor and Recorder
 - [Miro](https://www.getmiro.com/) — Free, open-source music and video player
 - [Handbrake](https://handbrake.fr/) — Open Source Video Transcoder
-- [Firefogg](http://firefogg.org/) — Video and Audio encoding for Firefox
+- [Firefogg](http://www.firefogg.org/) — Video and Audio encoding for Firefox
 - [FFmpeg2](https://www.ffmpeg.org/) — Comprehensive command line encoder
 - [Libav](https://libav.org/) — Comprehensive command line encoder
 - [Vid.ly](https://m.vid.ly/) — Video player,transcoding and delivery
@@ -429,10 +428,10 @@ Another way to show the fallback content of a video, when none of the sources co
 ```
 
 ```js
-let v = document.querySelector('video'),
-    sources = v.querySelectorAll('source'),
-    lastsource = sources[sources.length-1];
-lastsource.addEventListener('error', function(ev) {
+const v = document.querySelector('video');
+const sources = v.querySelectorAll('source');
+const lastsource = sources[sources.length - 1];
+lastsource.addEventListener('error', (ev) => {
   const d = document.createElement('div');
   d.innerHTML = v.innerHTML;
   v.parentNode.replaceChild(d, v);
@@ -451,15 +450,15 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ### Video only
 
-- [flowplayer](https://flowplayer.org/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
+- [flowplayer](https://flowplayer.com/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
 - [JWPlayer](https://www.jwplayer.com): Requires registration to download. Open Source Edition (Creative Commons License.)
 - [SublimeVideo](https://www.sublimevideo.net/): Requires registration. Form based set up with domain specific link to CDN hosted library.
-- [Video.js](https://www.videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
+- [Video.js](https://videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
 
 ### Audio and Video
 
 - [jPlayer](https://jPlayer.org): Gratis and Open Source (MIT Licensed.)
-- [mediaelement.js](http://mediaelementjs.com/): Gratis and Open Source (MIT Licensed.)
+- [mediaelement.js](https://www.mediaelementjs.com/): Gratis and Open Source (MIT Licensed.)
 
 ### Web Audio API
 
@@ -472,10 +471,10 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Video player styling basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)
   - : With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, responsive styling for the player.
 - [Cross-browser audio basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)
-  - : This article provides a basic guide to creating an HTML5 audio player that works cross browser, with all the associated attributes, properties and events explained, and a quick guide to custom controls created using the Media API.
+  - : This article provides a basic guide to creating an HTML audio player that works cross browser, with all the associated attributes, properties and events explained, and a quick guide to custom controls created using the Media API.
 - [Media buffering, seeking, and time ranges](/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)
   - : Sometimes it's useful to know how much {{ htmlelement("audio") }} or {{ htmlelement("video") }} has downloaded or is playable without delay — a good example of this is the buffered progress bar of an audio or video player. This article discusses how to build a buffer/seek bar using [TimeRanges](/en-US/docs/Web/API/TimeRanges), and other features of the media API.
-- [HTML5 playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+- [HTML playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
   - : The `playbackRate` property allows us to change the speed or rate at which a piece of web audio or video is playing. This article explains it in detail.
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
   - : Explains the basics of using the Web Audio API to grab, manipulate and play back an audio source.
@@ -491,8 +490,8 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ## Advanced tutorials
 
-- [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
+- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+  - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
 - [Writing Web Audio API code that works in every browser](/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser)
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)

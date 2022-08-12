@@ -7,6 +7,9 @@ tags:
   - Constraint validation
   - Forms
   - required
+browser-compat:
+  - html.elements.input.readonly
+  - html.elements.textarea.readonly
 ---
 
 {{HTMLSidebar}}
@@ -27,7 +30,7 @@ When an input has the `readonly` attribute, the {{cssxref(":read-only")}} pseudo
 
 The difference between [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) and `readonly` is that read-only controls can still function and are still focusable, whereas disabled controls can not receive focus and are not submitted with the form and generally do not function as controls until they are enabled.
 
-Because a read-only field cannot have it's value changed by a user interaction, [`required`](/en-US/docs/Web/HTML/Attributes/required) does not have any effect on inputs with the `readonly` attribute also specified.
+Because a read-only field cannot have its value changed by a user interaction, [`required`](/en-US/docs/Web/HTML/Attributes/required) does not have any effect on inputs with the `readonly` attribute also specified.
 
 The only way to modify dynamically the value of the readonly attribute is through a script.
 
@@ -35,7 +38,7 @@ The only way to modify dynamically the value of the readonly attribute is throug
 
 ### Usability
 
-Browsers display the `readonly` attribute...
+Browsers display the `readonly` attribute.
 
 ### Constraint validation
 
@@ -74,42 +77,11 @@ If the element is read-only, then the element's value can not be updated by the 
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'forms.html#attr-input-readonly', 'readonly attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'forms.html#attr-input-readonly', 'readonly attribute')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5.1', 'sec-forms.html#the-readonly-attribute', 'readonly attribute')}}
-      </td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.readonly")}}
+{{Compat}}
 
 ## See also
 

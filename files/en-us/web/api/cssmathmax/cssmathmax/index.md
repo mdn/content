@@ -1,6 +1,7 @@
 ---
 title: CSSMathMax()
 slug: Web/API/CSSMathMax/CSSMathMax
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -20,12 +21,12 @@ new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max()',
 ## Syntax
 
 ```js
-var CSSMathMax = new CSSMathMax(args);
+new CSSMathMax(args)
 ```
 
 ### Parameters
 
-- args
+- `args`
   - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
     integer or a {{domxref('CSSNumericValue')}}.
 

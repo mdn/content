@@ -37,7 +37,7 @@ None.
 This code toggles a registered content script on a browser action click:
 
 ```js
-var registered = null;
+let registered = null;
 
 async function register() {
 

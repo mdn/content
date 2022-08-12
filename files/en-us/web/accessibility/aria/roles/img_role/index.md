@@ -10,6 +10,7 @@ tags:
   - document structure role
   - Role
   - figure
+spec-urls: https://w3c.github.io/aria/#img
 ---
 The ARIA `img` role can be used to identify multiple elements inside page content that should be considered as a single image. These elements could be images, code snippets, text, emojis, or other content that can be combined to deliver information in a visual manner.
 
@@ -42,7 +43,7 @@ For example:
 
 ```html
 <div role="img" aria-labelledby="image-1">
-  ...
+  …
   <p id="image-1">Text that describes the group of images.</p>
 </div>
 ```
@@ -51,7 +52,7 @@ If an image is purely presentational, consider using the [`presentation`](/en-US
 
 ### SVG and role="img"
 
-If you are using embedded SVG images in your page, it is a good idea to set `role="img"` on the outer {{HTMLElement('svg')}} element and give it a label. This will cause screen readers to just consider it as a single entity and describe it using the label, rather than trying to read out all the child nodes:
+If you are using embedded SVG images in your page, it is a good idea to set `role="img"` on the outer {{SVGElement('svg')}} element and give it a label. This will cause screen readers to just consider it as a single entity and describe it using the label, rather than trying to read out all the child nodes:
 
 ```html
 <svg role="img" aria-label="Description of your SVG image">
@@ -89,6 +90,28 @@ Another example where this might be suitable is when using ASCII emoji combinati
 
 If `aria-labelledby` were used, the screen reader would read it. In this case, only the contents of the `aria-label` are announced to screen reader users, hiding the gibberish of the characters without the need for descendant ARIA to hide things, but also hiding potential content that may be part of the image.
 
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in an `img`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `img` element as it is a role that does not support semantic children.
+
+For example, consider the following `img` element, which contains a heading.
+
+```html
+<div role="img"><h3>Title of my image</h3></div>
+```
+
+Because descendants of `img` are presentational, the following code is equivalent:
+
+```html
+<div role="img"><h3 role="presentation">Title of my image</h3></div>
+```
+
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree).:
+
+```html
+<div role="img">Title of my image</div>
+```
+
 ### Associated WAI-ARIA Roles, States, and Properties
 
 - `aria-label` or `aria-labelledby`
@@ -108,14 +131,12 @@ If `aria-labelledby` were used, the screen reader would read it. In this case, o
 
 ## Specifications
 
-| Specification                                | Status                   |
-| -------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#img","img")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See also
 
 - The {{HTMLElement('img')}} element
-- The {{HTMLElement('svg')}} element
+- The {{SVGElement('svg')}} element
 - The {{HTMLElement('picture')}} element
 - The {{HTMLElement('audio')}} element
 - The {{HTMLElement('video')}} element

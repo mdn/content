@@ -1,6 +1,7 @@
 ---
 title: Element.lastElementChild
 slug: Web/API/Element/lastElementChild
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -17,16 +18,11 @@ are no child elements.
 `Element.lastElementChild` includes only element nodes.
 To get all child nodes, including non-element nodes like text and comment nodes, use {{domxref("Node.lastChild")}}.
 
-## Syntax
+## Value
 
-```js
-// Getter
-element = el.lastElementChild;
+A {{domxref("Element")}} object, or `null`.
 
-// No setter; read-only property
-```
-
-## Example
+## Examples
 
 ```html
 <ul id="list">

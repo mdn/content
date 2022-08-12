@@ -18,9 +18,9 @@ To use an EXSLT function, you need to declare the namespace the function is in, 
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:regexp="http://exslt.org/regular-expressions">
   <xsl:template match="/">
-    ...
+    …
     <xsl:value-of select="regexp:replace(/root/@value, 'before', 'gi', 'AFTER')"/>
-    ...
+    …
   </xsl:template>
 
 </xsl:stylesheet>
@@ -83,6 +83,42 @@ The EXSLT Strings package provides functions that allow the manipulation of stri
 
 ## See also
 
-- [EXSLT web site](http://www.exslt.org/)
+- [EXSLT web site](http://exslt.org/)
 
-<section id="Quick_links"><ol><li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li><li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li><li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/EXSLT/exsl">Common (exsl)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/exsl", "", "", "exsl:", ")")}}</details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/EXSLT/math">Math (math)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/math", "", "", "math:", ")")}}</details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/EXSLT/regexp">Regular expressions (regexp)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/regexp", "", "", "regexp:", ")")}}</details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/EXSLT/set">Sets (set)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/set", "", "", "set:", ")")}}</details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/EXSLT/str">Strings (str)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/str", "", "", "str:", ")")}}</details></li></ol></section>
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li>
+    <li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li>
+    <li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li>
+    <li class="toggle">
+      <details open>
+        <summary><a href="/en-US/docs/Web/EXSLT/exsl">Common (exsl)</a></summary>
+        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/exsl", "", "", "exsl:", ")")}}
+      </details>
+    </li>
+    <li class="toggle">
+      <details open>
+        <summary><a href="/en-US/docs/Web/EXSLT/math">Math (math)</a></summary>
+        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/math", "", "", "math:", ")")}}
+      </details>
+    </li>
+    <li class="toggle">
+      <details open>
+        <summary><a href="/en-US/docs/Web/EXSLT/regexp">Regular expressions (regexp)</a></summary>
+        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/regexp", "", "", "regexp:", ")")}}
+      </details>
+    </li>
+    <li class="toggle">
+      <details open>
+        <summary><a href="/en-US/docs/Web/EXSLT/set">Sets (set)</a></summary>
+        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/set", "", "", "set:", ")")}}
+      </details>
+    </li>
+    <li class="toggle">
+      <details open>
+        <summary><a href="/en-US/docs/Web/EXSLT/str">Strings (str)</a></summary>
+        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/str", "", "", "str:", ")")}}
+      </details>
+    </li>
+  </ol>
+</section>

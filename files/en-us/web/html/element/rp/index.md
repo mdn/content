@@ -79,7 +79,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ### Using ruby annotations
 
-This example uses ruby annotations to display the {{interwiki("wikipedia", "Romaji")}} equivalents for each character.
+This example uses ruby annotations to display the [Romaji](https://en.wikipedia.org/wiki/Romaji) equivalents for each character.
 
 ```html
 <ruby>
@@ -99,6 +99,22 @@ The result looks like this in your browser:
 {{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
 
 See the article about the {{HTMLElement("ruby")}} element for further examples.
+
+### Without ruby support
+
+If your browser does not support ruby annotations, the result looks like this instead:
+
+```html hidden
+漢 (Kan) 字 (ji)
+```
+
+```css hidden
+body {
+  font-size: 22px;
+}
+```
+
+{{EmbedLiveSample("Without_ruby_support", 600, 60)}}
 
 ## Specifications
 

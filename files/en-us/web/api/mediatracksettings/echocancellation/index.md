@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.echoCancellation
 slug: Web/API/MediaTrackSettings/echoCancellation
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -40,21 +41,14 @@ Because {{Glossary("RTP")}} doesn't include this information, tracks associated 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
 will never include this property.
 
-## Syntax
-
-```js
-var echoCancellation = MediaTrackSettings.echoCancellation;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the track has echo cancellation
 functionality enabled or `false` if echo cancellation is disabled.
 
-## Example
+## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
 
 ## Specifications
 
@@ -67,7 +61,6 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.echoCancellation")}}
 - {{domxref("MediaTrackSettings")}}

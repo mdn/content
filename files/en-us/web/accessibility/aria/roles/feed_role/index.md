@@ -7,24 +7,25 @@ tags:
   - Reference
   - feed
   - document structure role
+spec-urls: https://w3c.github.io/aria/#feed
 ---
 A `feed` is a dynamic scrollable `list` of `articles` in which articles are added to or removed from either end of the list as the user scrolls. A `feed` enables screen readers to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads.
 
 ```html
 <section role="feed" aria-busy="false">
-  ...
-  <article aria-posinset="427" aria-setsize="-1">...</article>
-  <article aria-posinset="428" aria-setsize="-1">...</article>
-  <article aria-posinset="429" aria-setsize="-1">...</article>
-  ...
+  …
+  <article aria-posinset="427" aria-setsize="-1">…</article>
+  <article aria-posinset="428" aria-setsize="-1">…</article>
+  <article aria-posinset="429" aria-setsize="-1">…</article>
+  …
 </section>
 ```
 
 ## Description
 
-A `feed` is a type of [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role), the containing role for a scrollable  of [`articles`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) where scrolling may cause articles to be added to the top or end of the list. The role enables assistive technology to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Twitter, or even a list of related products on an eCommerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the `feed` pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.
+A `feed` is a type of [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role), the containing role for a scrollable of [`articles`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) where scrolling may cause articles to be added to the top or end of the list. The role enables assistive technology to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Twitter, or even a list of related products on an eCommerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the `feed` pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.
 
-Unlike the document structure elements that representing static HTML elements, the `feed` role requires specific interactions and implementation of keyboard navigation. The `feed` is a container element whose children are {{HTMLElement('article')}}s or have role `article`. Each article within a feed should be focusable, with tabindex of 0 or -1. An article should be scrolled into view when it, or a descendant element, receives focus. If the addition of articles occupies the main browser thread, make sure to set `aria-busy="true"` on the feed itself, and make sure to set it back to `false` when processing ends, or the user may not see the updates.
+Unlike the document structure elements that represent static HTML elements, the `feed` role requires specific interactions and implementation of keyboard navigation. The `feed` is a container element whose children are {{HTMLElement('article')}}s or have role `article`. Each article within a feed should be focusable, with tabindex of 0 or -1. An article should be scrolled into view when it, or a descendant element, receives focus. If the addition of articles occupies the main browser thread, make sure to set `aria-busy="true"` on the feed itself, and make sure to set it back to `false` when processing ends, or the user may not see the updates.
 
 If the number of articles is known, set [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) on the articles themselves. However, if the total number is extremely large, indefinite, or changes often, set `aria-setsize="-1"` to indicate that the size of the feed is not known.
 
@@ -66,19 +67,19 @@ If a feed is nested within a feed, such as a comments feed within a feed of blog
 
 None, except as required by any attributes. For example, setting [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) to `true` during the update operation if needed, and then to `false` upon completion.
 
+Note: It is the author's responsibility to apply the "above" keyboard behavior.
+
 ## Examples
 
 [Example Implementation of Feed Pattern](https://w3c.github.io/aria-practices/examples/feed/feed.html)
 
 ## Best practices
 
-To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See {{anch('Keyboard interactions')}}.
+To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See [Keyboard interactions](#keyboard_interactions).
 
 ## Specifications
 
-| Specification                                    | Status                   |
-| ------------------------------------------------ | ------------------------ |
-| {{SpecName("ARIA","#feed","feed")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See also
 

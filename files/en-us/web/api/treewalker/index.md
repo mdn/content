@@ -1,6 +1,7 @@
 ---
 title: TreeWalker
 slug: Web/API/TreeWalker
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -40,8 +41,6 @@ _This interface doesn't inherit any property._
 
 - {{domxref("TreeWalker.filter")}} {{readonlyInline}}
   - : Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.
-- {{domxref("TreeWalker.expandEntityReferences")}} {{readonlyInline}}{{deprecated_inline}}
-  - : Is a boolean value indicating, when discarding an entity reference its whole sub-tree must be discarded at the same time.
 - {{domxref("TreeWalker.currentNode")}}
   - : Is the {{domxref("Node")}} on which the `TreeWalker` is currently pointing at.
 
@@ -56,25 +55,29 @@ _This interface doesn't inherit any method._
 - {{domxref("TreeWalker.firstChild()")}}
   - : Moves the current {{domxref("Node")}} to the first _visible_ child of the current node, and returns the found child. It also moves the current node to this child. If no such child exists, returns `null` and the current node is not changed. Note that the node returned by `firstChild()` is dependent on the value of `whatToShow` set during instantiation of the `TreeWalker` object. Assuming the following HTML tree, and if you set the `whatToShow` to `NodeFilter.SHOW_ALL` a call to `firstChild()` will return a `Text` node and not an `HTMLDivElement` object.
 
-  ```html
-  <!DOCTYPE html>
-  <html>
-    <head><title>Demo</title>
-    <body>
-      <div id="container"></div>
-    </body>
-  </html>
-  ```
+    ```html
+    <!DOCTYPE html>
+    <html>
+      <head><title>Demo</title>
+      <body>
+        <div id="container"></div>
+      </body>
+    </html>
+    ```
 
-  ```js
-  let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ALL);
-  let node = walker.firstChild(); // nodeName: "#text"
-  // But if we do:
-  let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
-  let node = walker.firstChild(); // nodeName: "DIV"
-  ```
+    ```js
+    let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ALL);
+    let node = walker.firstChild(); // nodeName: "#text"
+    ```
 
-  The same applies to `nextSibling()`, `previousSibling()`, `firstChild()` and `lastChild()`
+    But if we do:
+
+    ```js
+    let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
+    let node = walker.firstChild(); // nodeName: "DIV"
+    ```
+
+    The same applies to `nextSibling()`, `previousSibling()`, `firstChild()` and `lastChild()`
 - {{domxref("TreeWalker.lastChild()")}}
   - : Moves the current {{domxref("Node")}} to the last _visible_ child of the current node, and returns the found child. It also moves the current node to this child. If no such child exists, `null` is returned and the current node is not changed.
 - {{domxref("TreeWalker.previousSibling()")}}

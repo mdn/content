@@ -44,8 +44,8 @@ setUint8(byteOffset, value)
 ### Using the setUint8 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.setUint8(1, 3);
 dataview.getUint8(1); // 3
 ```

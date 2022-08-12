@@ -9,15 +9,15 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "_variable_ is a reserved identifier" occurs when [reserved
-keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) are used as identifiers.
+The JavaScript exception "_variable_ is a reserved identifier" occurs
+when [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) are used as identifiers.
 
 ## Message
 
-```js
-SyntaxError: The use of a future reserved word for an identifier is invalid (Edge)
-SyntaxError: "x" is a reserved identifier (Firefox)
-SyntaxError: Unexpected reserved word (Chrome)
+```
+SyntaxError: Unexpected reserved word (V8-based)
+SyntaxError: implements is a reserved identifier (Firefox)
+SyntaxError: Cannot use the reserved word 'implements' as a variable name. (Safari)
 ```
 
 ## Error type
@@ -26,8 +26,8 @@ SyntaxError: Unexpected reserved word (Chrome)
 
 ## What went wrong?
 
-[Reserved
-keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) will throw in if they are used as identifiers. These are reserved in
+[Reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) will throw in
+if they are used as identifiers. These are reserved in
 strict mode and sloppy mode:
 
 - `enum`
@@ -50,7 +50,7 @@ The following are only reserved when they are found in strict mode code:
 The `enum` identifier is generally reserved.
 
 ```js example-bad
-var enum = { RED: 0, GREEN: 1, BLUE: 2 };
+const enum = { RED: 0, GREEN: 1, BLUE: 2 };
 // SyntaxError: enum is a reserved identifier
 ```
 
@@ -58,15 +58,15 @@ In strict mode code, more identifiers are reserved.
 
 ```js example-bad
 "use strict";
-var package = ["potatoes", "rice", "fries"];
+const package = ["potatoes", "rice", "fries"];
 // SyntaxError: package is a reserved identifier
 ```
 
 You'll need to rename these variables.
 
 ```js example-good
-var colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
-var list = ["potatoes", "rice", "fries"];
+const colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
+const list = ["potatoes", "rice", "fries"];
 ```
 
 ### Update older browsers

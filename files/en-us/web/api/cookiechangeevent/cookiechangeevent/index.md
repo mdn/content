@@ -1,37 +1,45 @@
 ---
 title: CookieChangeEvent()
 slug: Web/API/CookieChangeEvent/CookieChangeEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
   - Reference
   - CookieChangeEvent
+  - Experimental
 browser-compat: api.CookieChangeEvent.CookieChangeEvent
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-The **`CookieChangeEvent()`** constructor creates a new {{domxref("CookieChangeEvent")}} object which is the event type passed to {{domxref("CookieStore.onchange()")}}. This constructor is called by the browser when a change event occurs.
+The **`CookieChangeEvent()`** constructor creates a new {{domxref("CookieChangeEvent")}} object
+which is the event type passed to {{domxref("CookieStore/change_event", "CookieStore.onchange()")}}.
+This constructor is called by the browser when a change event occurs.
 
-> **Note:** This event constructor is generally not needed for production web sites. It's primary use is for tests that require an instance of this event.
+> **Note:** This event constructor is generally not needed for production websites. It's primary use is for tests that require an instance of this event.
 
 ## Syntax
 
 ```js
-var CookieChangeEvent = new CookieChangeEvent(type,eventInitDict);
+new CookieChangeEvent(type)
+new CookieChangeEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} with the value `"changed"` or `"deleted"`.
-- `eventInitDict`{{Optional_Inline}}
-
-  - : An object containing:
-
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `cookiechange`.
+- `options` {{Optional_Inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `changed`
-      - : An array containing a changed cookie.
+      - : An array containing the changed cookies.
     - `deleted`
-      - : An array containing a deleted cookie.
+      - : An array containing the deleted cookies.
+
+### Return value
+
+A new {{domxref("CookieChangeEvent")}} object.
 
 ## Specifications
 

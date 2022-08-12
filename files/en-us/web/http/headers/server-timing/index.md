@@ -29,7 +29,7 @@ The **`Server-Timing`** header communicates one or more metrics and descriptions
 
 The syntax of the `Server-Timing` header allows you to communicate metrics in different ways: server metric name only, metric with value, metric with value and description, and metric with description.
 
-The specification advices that names and descriptions should be kept as short as possible (use abbreviations and omit optional values where possible) to minimize the HTTP overhead.
+The specification advises that names and descriptions should be kept as short as possible (use abbreviations and omit optional values where possible) to minimize the HTTP overhead.
 
 ```
 // Single metric without value

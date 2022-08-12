@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozItemCount
 slug: Web/API/DataTransfer/mozItemCount
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard
@@ -10,9 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozItemCount
 ---
-{{APIRef("HTML Drag and Drop API")}}
-
-{{ Non-standard_header() }}{{deprecated_header}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozItemCount`** property returns the number
 of items being dragged. This can be used, for example, to get the number of files being
@@ -22,26 +21,20 @@ dragged.
 
 This property is {{readonlyInline}}.
 
-## Syntax
-
-```js
-dataTransfer.mozItemCount;
-```
-
-### Return value
+## Value
 
 A `number` representing the number of items being dragged.
 
-## Example
+## Examples
 
 This example shows the use of the `mozItemCount` property.
 
 ```js
 function drop_handler(event)
 {
-  var files = [];
-  var dt = event.dataTransfer;
-  for (var i = 0; i < dt.mozItemCount; i++)
+  const files = [];
+  const dt = event.dataTransfer;
+  for (let i = 0; i < dt.mozItemCount; i++)
     files.push(dt.mozGetDataAt("application/x-moz-file", i));
 }
 ```

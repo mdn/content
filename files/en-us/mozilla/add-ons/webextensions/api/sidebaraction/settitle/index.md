@@ -52,9 +52,9 @@ browser.sidebarAction.setTitle(
         - If `windowId` is specified, and the window has a window-specific title set, then the window will inherit the global title.
         - Otherwise, the global title will be reset to the manifest title.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the title only for the given tab.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the title only for the given window.
 
 <!---->
@@ -71,7 +71,7 @@ browser.sidebarAction.setTitle(
 This code changes the title for the sidebar when the user clicks a browser action, but only for the current tab:
 
 ```js
-var title = "A different title";
+let title = "A different title";
 
 function setTitleForTab(tab) {
   browser.sidebarAction.setTitle({title, tabId: tab.id});

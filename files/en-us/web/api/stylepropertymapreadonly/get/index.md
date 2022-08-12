@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.get()
 slug: Web/API/StylePropertyMapReadOnly/get
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -20,12 +21,12 @@ object for the first value of the specified property.
 ## Syntax
 
 ```js
-var declarationBlock = StylePropertyMapReadOnly.get(property)
+get(property)
 ```
 
 ### Parameters
 
-- property
+- `property`
   - : The name of the property to retrieve the value of.
 
 ### Return value
@@ -77,17 +78,16 @@ const stylesList = document.querySelector('#results');
 const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
 
 // iterate over our properties of interest
-for ( let i = 0; i < ofInterest.length; i++ ) {
-
+for (const property of ofInterest) {
   // properties
   const cssProperty = document.createElement('dt');
-  cssProperty.innerText = ofInterest[i];
+  cssProperty.innerText = property;
   stylesList.appendChild(cssProperty);
 
   // values
   const cssValue = document.createElement('dd');
   // use get() to find the value
-  cssValue.innerText = styleMap.get(ofInterest[i]);
+  cssValue.innerText = styleMap.get(property);
   stylesList.appendChild(cssValue);
 }
 ```
@@ -104,6 +104,5 @@ for ( let i = 0; i < ofInterest.length; i++ ) {
 
 ## See also
 
-- [CSS Typed Object Model API](/en-US/docs/Web/Houdini/CSS_Typed_OM)
-- [Learning Houdini: the CSS Typed
-  Object Model](/en-US/docs/Web/Houdini/learn/CSS_Typed_OM)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [Learning Houdini: the CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)

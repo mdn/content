@@ -17,6 +17,10 @@ browser-compat: css.properties.line-break
 
 The **`line-break`** CSS property sets how to break lines of Chinese, Japanese, or Korean (CJK) text when working with punctuation and symbols.
 
+{{EmbedInteractiveExample("pages/css/line-break.html")}}
+
+## Syntax
+
 ```css
 /* Keyword values */
 line-break: auto;
@@ -29,10 +33,9 @@ line-break: anywhere;
 line-break: inherit;
 line-break: initial;
 line-break: revert;
+line-break: revert-layer;
 line-break: unset;
 ```
-
-## Syntax
 
 ### Values
 

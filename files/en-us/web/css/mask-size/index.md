@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.mask-size
@@ -43,6 +42,7 @@ mask-size: 6px, auto, contain;
 mask-size: inherit;
 mask-size: initial;
 mask-size: revert;
+mask-size: revert-layer;
 mask-size: unset;
 ```
 

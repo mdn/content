@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.reportValidity()
 slug: Web/API/ElementInternals/reportValidity
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,7 +21,7 @@ This method behaves in a similar way to {{domxref("ElementInternals.checkValidit
 ## Syntax
 
 ```js
-ElementInternals.reportValidity();
+reportValidity()
 ```
 
 ### Parameters

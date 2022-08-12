@@ -1,6 +1,7 @@
 ---
 title: IDBKeyRange.only()
 slug: Web/API/IDBKeyRange/only
+page-type: web-api-static-method
 tags:
   - API
   - Database
@@ -22,12 +23,13 @@ interface creates a new key range containing a single value.
 ## Syntax
 
 ```js
-var myIDBKeyRange = IDBKeyRange.only(value);
+only(value)
 ```
 
 ### Parameters
 
-*value* is the value for the new key range.
+- `value`
+  - : The value for the new key range.
 
 ### Return value
 
@@ -35,13 +37,10 @@ var myIDBKeyRange = IDBKeyRange.only(value);
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the `value` parameter was not a valid key.
 
-| Exception   | Description                                     |
-| ----------- | ----------------------------------------------- |
-| `DataError` | The value parameter passed was not a valid key. |
-
-## Example
+## Examples
 
 The following example illustrates how you'd use an only key range. Here we declare
 a `keyRangeValue = IDBKeyRange.only("A");` — a range that only includes the
@@ -51,22 +50,21 @@ declaring `keyRangeValue` as its optional key range value. This means that
 the cursor will only retrieve the record with the key value "A".
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange)
-> repo ([view the example
-> live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+> key range, have a look at our [IDBKeyRange](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbkeyrange)
+> repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {
-  var keyRangeValue = IDBKeyRange.only("A");
+  const keyRangeValue = IDBKeyRange.only("A");
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(['fThings'], 'readonly');
+  const objectStore = transaction.objectStore('fThings');
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
-    var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
+    const cursor = event.target.result;
+      if (cursor) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -93,5 +91,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

@@ -1,6 +1,7 @@
 ---
 title: Push API
 slug: Web/API/Push_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -9,6 +10,9 @@ tags:
   - Push
   - Reference
   - Service Workers
+browser-compat:
+  - api.PushEvent
+  - api.PushMessageData
 ---
 {{ApiRef("Push API")}}
 
@@ -25,7 +29,7 @@ For an app to receive push messages, it has to have an active [service worker](/
 
 The resulting {{domxref("PushSubscription")}} includes all the information that the application needs to send a push message: an endpoint and the encryption key needed for sending data.
 
-The service worker will be started as necessary to handle incoming push messages, which are delivered to the {{domxref("ServiceWorkerGlobalScope.onpush")}} event handler. This allows apps to react to push messages being received, for example, by displaying a notification (using {{domxref("ServiceWorkerRegistration.showNotification()")}}.)
+The service worker will be started as necessary to handle incoming push messages, which are delivered to the {{domxref("ServiceWorkerGlobalScope.push_event", "onpush")}} event handler. This allows apps to react to push messages being received, for example, by displaying a notification (using {{domxref("ServiceWorkerRegistration.showNotification()")}}.)
 
 Each subscription is unique to a service worker. The endpoint for the subscription is a unique [capability URL](https://www.w3.org/TR/capability-urls/): knowledge of the endpoint is all that is necessary to send a message to your application. The endpoint URL therefore needs to be kept secret, or other applications might be able to send push messages to your application.
 
@@ -40,7 +44,7 @@ Activating a service worker to deliver a push message can result in increased re
 - {{domxref("PushMessageData")}}
   - : Provides access to push data sent by a server, and includes methods to manipulate the received data.
 - {{domxref("PushSubscription")}}
-  - : Provides a subcription's URL endpoint, and allows unsubscription from a push service.
+  - : Provides a subscription's URL endpoint, and allows unsubscribing from a push service.
 - {{domxref("PushSubscriptionOptions")}}
   - : Represents the options associated with the push subscription.
 
@@ -50,35 +54,27 @@ The following additions to the [Service Worker API](/en-US/docs/Web/API/Service_
 
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status. This is the entry point into using Push messaging.
-- {{domxref("ServiceWorkerGlobalScope.onpush")}}
-  - : An event handler fired whenever a {{Event("push")}} event occurs; that is, whenever a server push message is received.
-- {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}
-  - : An event handler fired whenever a {{Event("pushsubscriptionchange")}} event occurs; for example, when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time.)
+- {{domxref("ServiceWorkerGlobalScope.push_event", "onpush")}}
+  - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/push_event", "push")}} event occurs; that is, whenever a server push message is received.
+- {{domxref("ServiceWorkerGlobalScope.pushsubscriptionchange_event", "onpushsubscriptionchange")}}
+  - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} event occurs; for example, when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time.)
 
 ## Examples
 
-Mozilla's [ServiceWorker Cookbook](https://github.com/mozilla/serviceworker-cookbook) contains many useful Push examples.
+Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook) contains many useful Push examples.
 
 ## Specifications
 
-| Specification                               |
-| ------------------------------------------- |
-| [Push API](https://w3c.github.io/push-api/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `PushEvent`
-
-{{Compat("api.PushEvent")}}
-
-### `PushMessageData`
-
-{{Compat("api.PushMessageData")}}
+{{Compat}}
 
 ## See also
 
 - [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
-- [Web Push Notifications: Timely, Relevant, and Precise](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/), Joseph Medley
+- [Push notifications overview](https://web.dev/push-notifications-overview/)
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
 
 {{DefaultAPISidebar("Push API")}}

@@ -1,6 +1,7 @@
 ---
 title: CSSFontFaceRule.style
 slug: Web/API/CSSFontFaceRule/style
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -14,13 +15,7 @@ browser-compat: api.CSSFontFaceRule.style
 
 The read-only **`style`** property of the {{domxref("CSSFontFaceRule")}} interface returns the style information from the {{cssxref("@font-face")}} [at-rule](/en-US/docs/Web/CSS/At-rule). This will be in the form of a {{domxref("CSSStyleDeclaration")}} object.
 
-## Syntax
-
-```js
-var style = CSSFontFaceRule.style;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSStyleDeclaration")}}.
 

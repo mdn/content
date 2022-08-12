@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
+page-type: web-api-instance-method
 tags:
   - HTML
   - HTMLFormElement
@@ -29,7 +30,7 @@ HTMLFormElement.reportValidity()
 ## Example
 
 ```js
-document.forms['myform'].addEventListener('submit', function() {
+document.forms['myform'].addEventListener('submit', () => {
   document.forms['myform'].reportValidity();
 }, false);
 ```

@@ -1,6 +1,7 @@
 ---
 title: 'Window: rejectionhandled event'
 slug: Web/API/Window/rejectionhandled_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -23,36 +24,43 @@ The **`rejectionhandled`** event is sent to the script's global scope (usually {
 
 This can be used in debugging and for general application resiliency, in tandem with the {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} event, which is sent when a promise is rejected but there is no handler for the rejection.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PromiseRejectionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("WindowEventHandlers.onrejectionhandled", "onrejectionhandled")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('rejectionhandled', (event) => { });
+onrejectionhandled = (event) => { };
+```
+
+## Event type
+
+A {{domxref("PromiseRejectionEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PromiseRejectionEvent")}}
+
+## Event properties
+
+- {{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}
+  - : The JavaScript {{jsxref("Promise")}} that was rejected.
+- {{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}
+  - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
+
+## Event handler aliases
+
+In addition to the `Window` interface, the event handler property `onrejectionhandled` is also available on the following targets:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## Example
 
 You can use the `rejectionhandled` event to log promises that get rejected to the console, along with the reasons why they were rejected:
 
 ```js
-window.addEventListener("rejectionhandled", event => {
-  console.log("Promise rejected; reason: " + event.reason);
+window.addEventListener("rejectionhandled", (event) => {
+  console.log(`Promise rejected; reason: ${event.reason}`);
 }, false);
 ```
 

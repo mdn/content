@@ -10,7 +10,7 @@ tags:
   - client-side
   - focus management
   - refs
-  - vue
+  - Vue
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -82,7 +82,7 @@ Vue, like some other frameworks, uses a virtual DOM (VDOM) to manage elements. T
 
 Since reading and writing actual DOM nodes is often more expensive than virtual nodes, this can result in better performance. However, it also means you often should not edit your HTML elements directly through native browser APIs (like [`Document.getElementById`](/en-US/docs/Web/API/Document/getElementById)) when using frameworks, because it results in the VDOM and real DOM going out of sync.
 
-Instead, if you need to access the underlying DOM nodes (like when setting focus), you can use **[Vue refs](https://vuejs.org/v2/api/#ref)**. For custom Vue components, you can also use refs to directly access the internal structure of a child component, however this should be done with caution as it can make code harder to reason about and understand.
+Instead, if you need to access the underlying DOM nodes (like when setting focus), you can use **[Vue refs](https://v2.vuejs.org/v2/api/#ref)**. For custom Vue components, you can also use refs to directly access the internal structure of a child component, however this should be done with caution as it can make code harder to reason about and understand.
 
 To use a ref in a component, you add a `ref` attribute to the element that you want to access, with a string identifier for the value of the attribute. It's important to note that a ref needs to be unique within a component. No two elements rendered at the same time should have the same ref.
 
@@ -139,7 +139,7 @@ Try editing and then saving/cancelling a to-do item via your keyboard. You'll no
 
 Well, remember that when we change `isEditing` to `true`, we no longer render the section of the component featuring the "Edit" Button. This means there's no element to bind the ref to, so it becomes `undefined`.
 
-You might now be thinking "hey, don't we set `isEditing=false` before we try to access the `ref`, so therefore shouldn't the `v-if` now be displaying the button?" This is where the virtual DOM comes into play. Because Vue is trying to optimize and batch changes, it won't immediately update the DOM when we set `isEditing` to `false`. So when we call `focusOnEdit()`, the "Edit" Button has not been rendered yet.
+You might now be thinking "hey, don't we set `isEditing=false` before we try to access the `ref`, so therefore shouldn't the `v-if` now be displaying the button?" This is where the virtual DOM comes into play. Because Vue is trying to optimize and batch changes, it won't immediately update the DOM when we set `isEditing` to `false`. So when we call `focusOnEditButton()`, the "Edit" Button has not been rendered yet.
 
 Instead, we need to wait until after Vue undergoes the next DOM update cycle. To do that, Vue components have a special method called `$nextTick()`. This method accepts a callback function, which then executes after the DOM updates.
 
@@ -175,7 +175,7 @@ Vue lets you run methods at various stages of this lifecycle using **lifecycle m
 9. `activated()` — Only used in components wrapped in a special `keep-alive` tag. Runs after the component is activated.
 10. `deactivated()` — only used in components wrapped in a special `keep-alive` tag. Runs after the component is deactivated.
 
-> **Note:** The Vue Docs provide a [nice diagram for visualizing when these hooks happen](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram). This article from the [Digital Ocean Community Blog dives into the lifecycle methods more deeply](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle).
+> **Note:** The Vue Docs provide a [nice diagram for visualizing when these hooks happen](https://v2.vuejs.org/v2/guide/instance.html#Lifecycle-Diagram). This article from the [Digital Ocean Community Blog dives into the lifecycle methods more deeply](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle).
 
 Now that we've gone over the lifecycle methods, let's use one to trigger focus when our `ToDoItemEditForm` component is mounted.
 
@@ -226,7 +226,7 @@ Now that we have a `ref` and have let browsers know that we can programmatically
 
 ```js
 deleteToDo(toDoId) {
-    const itemIndex = this.ToDoItems.findIndex(item => item.id === toDoId);
+    const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
     this.ToDoItems.splice(itemIndex, 1);
     this.$refs.listSummary.focus();
 }

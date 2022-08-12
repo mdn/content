@@ -1,6 +1,7 @@
 ---
 title: 'Window: resize event'
 slug: Web/API/Window/resize_event
+page-type: web-api-event
 tags:
   - API
   - Reference
@@ -14,34 +15,42 @@ browser-compat: api.Window.resize_event
 
 The **`resize`** event fires when the document view (window) has been resized.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("UIEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onresize", "onresize")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
 
 In some earlier browsers it was possible to register `resize` event handlers on any HTML element. It is still possible to set `onresize` attributes or use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set a handler on any element. However, `resize` events are only fired on the {{domxref("Window", "window")}} object (i.e. returned by {{domxref("document.defaultView")}}). Only handlers registered on the `window` object will receive `resize` events.
 
-There is a proposal to allow all elements to be notified of resize changes. See [Resize Observer](https://wicg.github.io/ResizeObserver/) to read the draft document, and [GitHub issues](https://github.com/WICG/ResizeObserver/issues) to read the on-going discussions.
+While the `resize` event fires only for the window nowadays, you can get resize notifications for other elements using the [ResizeObserver](/en-US/docs/Web/API/ResizeObserver) API.
 
-If the resize event is triggered too many times for your application, see [Optimizing window.onresize](http://bencentra.com/code/2015/02/27/optimizing-window-resize.html) to control the time after which the event fires.
+If the resize event is triggered too many times for your application, see [Optimizing window.onresize](https://web.archive.org/web/20220714020647/https://bencentra.com/code/2015/02/27/optimizing-window-resize.html) to control the time after which the event fires.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('resize', (event) => {});
+
+onresize = (event) => {};
+```
+
+## Event type
+
+An {{domxref("UIEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("UIEvent")}}
+
+## Event properties
+
+_This interface also inherits properties of its parent, {{domxref("Event")}}._
+
+- {{domxref("UIEvent.detail")}} {{readonlyinline}}
+  - : Returns a `long` with details about the event, depending on the event type.
+- {{domxref("UIEvent.sourceCapabilities")}} {{experimental_inline}} {{readonlyinline}}
+  - : Returns an instance of the `InputDeviceCapabilities` interface, which provides information about the physical device responsible for generating a touch event.
+- {{domxref("UIEvent.view")}} {{readonlyinline}}
+  - : Returns a {{domxref("WindowProxy")}} that contains the view that generated the event.
+- {{domxref("UIEvent.which")}} {{deprecated_inline}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the numeric `keyCode` of the key pressed, or the character code (`charCode`) for an alphanumeric key pressed.
 
 ## Examples
 
@@ -84,7 +93,3 @@ window.addEventListener('resize', reportWindowSize);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("GlobalEventHandlers.onresize")}}

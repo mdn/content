@@ -1,25 +1,21 @@
 ---
 title: BackgroundFetchRecord.responseReady
 slug: Web/API/BackgroundFetchRecord/responseReady
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - responseReady
   - BackgroundFetchRecord
+  - Experimental
 browser-compat: api.BackgroundFetchRecord.responseReady
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`responseReady`** read-only property of the {{domxref("BackgroundFetchRecord")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.
 
-## Syntax
-
-```js
-var response = BackgroundFetchRecord.responseReady;
-```
-
-### Value
+## Value
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.
 

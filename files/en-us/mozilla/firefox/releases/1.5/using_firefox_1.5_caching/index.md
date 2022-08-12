@@ -41,7 +41,7 @@ Two new browser events enable Web authors to do both.
 
 If you use these new events, your pages will continue to display properly in other browsers (we've tested earlier versions of Firefox, Internet Explorer, Opera, and Safari), and will use this new caching functionality when loaded in Firefox 1.5.
 
-Note: as of 10-2009 development versions of Safari added support for these new events (see [the webkit bug](https://bugs.webkit.org/show_bug.cgi?id=28758)).
+Note: as of 10-2009 development versions of Safari added support for these new events (see [the WebKit bug](https://bugs.webkit.org/show_bug.cgi?id=28758)).
 
 Standard behavior for Web pages is:
 
@@ -100,7 +100,7 @@ body, p {
   font-size: 12px;
      }
 </style>
-<script type="text/javascript">
+<script>
 function onLoad() {
   loadOnlyFirst();
   onPageShow();

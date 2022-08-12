@@ -1,6 +1,7 @@
 ---
 title: PresentationConnection.binaryType
 slug: Web/API/PresentationConnection/binaryType
+page-type: web-api-instance-property
 tags:
   - API
   - NeedsBrowserCompatibility
@@ -15,7 +16,7 @@ tags:
   - binaryType
 browser-compat: api.PresentationConnection.binaryType
 ---
-{{APIRef("Presentation API")}}
+{{DefaultAPISidebar("Presentation API")}}
 
 When a {{DOMxRef("PresentationConnection")}} object is created, its `binaryType` IDL attribute _MUST_ be set to the string `"arraybuffer"`. Upon getting, the attribute *MUST* return its most recent value (the value it was last set as). Upon setting, the user agent _MUST_ set the IDL attribute to the new value.
 

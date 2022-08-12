@@ -1,6 +1,7 @@
 ---
 title: 'HTMLVideoElement: leavepictureinpicture event'
 slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -16,36 +17,27 @@ browser-compat: api.HTMLVideoElement.leavepictureinpicture_event
 
 The `leavepictureinpicture` event is fired when the {{DOMxRef("HTMLVideoElement")}} leaves picture-in-picture mode successfully.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("PictureInPictureEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>{{DOMxRef("HTMLVideoElement")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("HTMLVideoElement.onleavepictureinpicture")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('leavepictureinpicture', (event) => { });
+
+onleavepictureinpicture = (event) => { };
+```
+
+## Event type
+
+An {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PictureInPictureEvent")}}
+
+## Event properties
+
+This interface also inherits properties from its parent {{domxref("Event")}}.
 
 ## Examples
 
@@ -63,7 +55,7 @@ function onExitPip() {
 
 video.addEventListener("leavepictureinpicture", onExitPip, false);
 
-button.onclick = function() => {
+button.onclick = () => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
@@ -82,7 +74,7 @@ function onExitPip() {
 
 video.onleavepictureinpicture = onExitPip;
 
-button.onclick = function() => {
+button.onclick = () => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
