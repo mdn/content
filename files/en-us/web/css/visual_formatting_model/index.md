@@ -150,4 +150,4 @@ A block box is a block-level box that is also a block container. As described in
   or the [initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [resolved](/en-US/docs/Web/CSS/resolved_value),
   [specified](/en-US/docs/Web/CSS/specified_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values.
   Definitions of [value syntax](/en-US/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  and [replaced elements](/en-US/docs/Web/CSS/Replaced_element). 
+  and [replaced elements](/en-US/docs/Web/CSS/Replaced_element).
