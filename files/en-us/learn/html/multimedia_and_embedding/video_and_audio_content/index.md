@@ -64,7 +64,7 @@ The {{htmlelement("video")}} element allows you to embed a video very easily. A 
 
 ```html
 <video src="rabbit320.webm" controls>
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.webm">link to the video</a> instead.</p>
+  <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.webm">link to the video</a> instead.</p>
 </video>
 ```
 
@@ -129,7 +129,7 @@ So how do we do this? Take a look at the following [updated example](https://git
 <video controls>
   <source src="rabbit320.mp4" type="video/mp4">
   <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
 </video>
 ```
 
@@ -155,7 +155,7 @@ There are a number of other features you can include when displaying an HTML vid
 
 The resulting UI looks something like this:
 
-![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](poster_screenshot_updated.png)
+![A video player showing a poster image before it plays. The poster image says HTML video example, OMG hell yeah!](poster_screenshot_updated.png)
 
 The new features are:
 
@@ -187,7 +187,7 @@ The {{htmlelement("audio")}} element works just like the {{htmlelement("video")}
 <audio controls>
   <source src="viper.mp3" type="audio/mp3">
   <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <p>Your browser doesn't support HTML audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
 </audio>
 ```
 
@@ -261,7 +261,7 @@ This will result in a video that has subtitles displayed, kind of like this:
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-For more details, including on how to add labels please read [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can [find the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
+For more details, including on how to add labels please read [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can [find the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 
 > **Note:** Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 
@@ -292,7 +292,7 @@ And that's a wrap — we hope you had fun playing with video and audio in web pa
 ## See also
 
 - The HTML media elements: {{htmlelement("audio")}}, {{htmlelement("video")}}, {{htmlelement("source")}}, and {{htmlelement("track")}}
-- [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
 - [Audio and Video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery): A LOT of detail about putting audio and video onto web pages using HTML and JavaScript.
 - [Audio and Video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation): A LOT of detail about manipulating audio and video using JavaScript (for example adding filters.)
 - [Web media technologies](/en-US/docs/Web/Media)

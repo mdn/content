@@ -21,7 +21,7 @@ a {
 }
 ```
 
-Type selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML5 with inline SVG or MathML, or XML that mixes multiple vocabularies.
+Type selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
 
 - `ns|h1` - matches `<h1>` elements in namespace _ns_
 - `*|h1` - matches all `<h1>` elements

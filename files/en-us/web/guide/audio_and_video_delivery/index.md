@@ -40,7 +40,7 @@ The code above will create an audio player that attempts to preload as much audi
 
 > **Note:** The `preload` attribute may be ignored by some mobile browsers.
 
-For further info see [Cross Browser Audio Basics (HTML5 Audio In Detail)](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
+For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
 
 ### HTML Video
 
@@ -337,7 +337,7 @@ A few examples:
 
 ## Error handling
 
-Starting in Gecko 2.0 {{ geckoRelease("2.0") }}, error handling has been revised to match the latest version of the HTML5 specification. Instead of the `error` event being dispatched to the media element itself, it now gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
+Starting in Gecko 2.0 {{ geckoRelease("2.0") }}, error handling has been revised to match the latest version of the HTML specification. Instead of the `error` event being dispatched to the media element itself, it now gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
 
 This lets you detect which sources failed to load, which may be useful. Consider this HTML:
 
@@ -471,10 +471,10 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Video player styling basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)
   - : With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, responsive styling for the player.
 - [Cross-browser audio basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)
-  - : This article provides a basic guide to creating an HTML5 audio player that works cross browser, with all the associated attributes, properties and events explained, and a quick guide to custom controls created using the Media API.
+  - : This article provides a basic guide to creating an HTML audio player that works cross browser, with all the associated attributes, properties and events explained, and a quick guide to custom controls created using the Media API.
 - [Media buffering, seeking, and time ranges](/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)
   - : Sometimes it's useful to know how much {{ htmlelement("audio") }} or {{ htmlelement("video") }} has downloaded or is playable without delay — a good example of this is the buffered progress bar of an audio or video player. This article discusses how to build a buffer/seek bar using [TimeRanges](/en-US/docs/Web/API/TimeRanges), and other features of the media API.
-- [HTML5 playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+- [HTML playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
   - : The `playbackRate` property allows us to change the speed or rate at which a piece of web audio or video is playing. This article explains it in detail.
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
   - : Explains the basics of using the Web Audio API to grab, manipulate and play back an audio source.
@@ -490,8 +490,8 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ## Advanced tutorials
 
-- [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
+- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+  - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
 - [Writing Web Audio API code that works in every browser](/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser)
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)

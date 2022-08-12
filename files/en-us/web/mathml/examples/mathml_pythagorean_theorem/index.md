@@ -5,7 +5,7 @@ tags:
   - Beginner
   - Example
   - Guide
-  - HTML5 Math
+  - HTML Math
   - Math education
   - MathML
   - NeedsBeginnerUpdate

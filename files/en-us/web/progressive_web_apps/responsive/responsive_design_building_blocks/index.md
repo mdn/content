@@ -26,7 +26,7 @@ There are disadvantages to responsive-design approach, however. If the content, 
 
 The best place to start is with fluid measurements for our application layout — essentially, this means using a combination of percentages and ems/rems to size your containers and text, not fixed widths such as pixels. This has a lot of advantages in that the layout will adapt to different viewport dimensions. Let's look at an example.
 
-We've written a simple-but-fun prototype for an application called Snapshot, which takes a video stream from your webcam (using {{domxref("navigator.getUserMedia", "getUserMedia()")}}) then allows you to capture stills from that video stream (using HTML5 {{HTMLElement("canvas")}}), and save them to a gallery. You can then view previously-captured images and delete them. Other articles will discuss the functionality in more detail, but here we're interested in the layout.
+We've written a simple-but-fun prototype for an application called Snapshot, which takes a video stream from your webcam (using {{domxref("navigator.getUserMedia", "getUserMedia()")}}) then allows you to capture stills from that video stream (using HTML {{HTMLElement("canvas")}}), and save them to a gallery. You can then view previously-captured images and delete them. Other articles will discuss the functionality in more detail, but here we're interested in the layout.
 
 > **Note:** You can find the [Snapshot app on GitHub](https://github.com/chrisdavidmills/snapshot); check out the code and help improve it. You can also see [Snapshot running live](https://chrisdavidmills.github.io/snapshot/). Note that `getUserMedia()` is an experimental technology, which currently only works in Google Chrome and Firefox desktop. More functionality and a clean up of the styling of Snapshot are planned for a future date.
 
@@ -395,7 +395,7 @@ This looks rather complicated, but really it's not — we are providing a number
 
 ### \<video>
 
-HTML5 video is fairly well catered for in terms of responsive capabilities. If you wish, you can point to multiple video files via {{HTMLElement("source")}} attributes, each with their own source and MIME type:
+HTML video is fairly well catered for in terms of responsive capabilities. If you wish, you can point to multiple video files via {{HTMLElement("source")}} attributes, each with their own source and MIME type:
 
 ```html
 <video controls>

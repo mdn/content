@@ -117,4 +117,4 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
 ## See also
 
 - Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Sections and outlines of an HTML5 document](/en-US/docs/Web/HTML/Element/Heading_Elements).
+- [Sections and outlines of an HTML document](/en-US/docs/Web/HTML/Element/Heading_Elements).
