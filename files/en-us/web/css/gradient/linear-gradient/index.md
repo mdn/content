@@ -117,7 +117,7 @@ linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);
 
 By default, if there is no color with a 0% stop, the first color declared will be at that point. Similarly, the last color will continue to the 100% mark, or be at the 100% mark if no length has been declared on that last stop.
 
-### Formal syntax
+## Formal syntax
 
 {{csssyntax}}
 

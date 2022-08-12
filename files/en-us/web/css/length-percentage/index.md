@@ -19,6 +19,10 @@ The **`<length-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs
 
 Refer to the documentation for {{Cssxref("length")}} and {{Cssxref("percentage")}} for details of the individual syntaxes allowed by this type.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### length-percentage examples
