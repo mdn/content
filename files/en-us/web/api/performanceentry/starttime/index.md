@@ -52,7 +52,7 @@ the {{domxref("PerformanceResourceTiming.fetchStart")}}
 The following example shows the use of the `startTime` property.
 
 ```js
-function run_PerformanceEntry() {
+function runPerformanceEntry() {
   console.log("PerformanceEntry support…");
 
   if (performance.mark === undefined) {
@@ -66,27 +66,27 @@ function run_PerformanceEntry() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  const perf = performance.getEntries();
-  perf.forEach((entry, i) => {
-    log(`Entry[${i}]`);
-    check_PerformanceEntry(entry);
-  });
+  performance.getEntries()
+    .forEach((entry, i) => {
+      log(`Entry[${i}]`);
+      checkPerformanceEntry(entry);
+    });
 }
 
-function check_PerformanceEntry(obj) {
+function checkPerformanceEntry(obj) {
   const properties = ["name", "entryType", "startTime", "duration"];
   const methods = ["toJSON"];
 
   // Check each property
-  properties.forEach((prop) => {
-    const supported = prop in obj;
-    console.log(`…${prop} = ${supported ? obj[prop] : "Not supported"}`);
+  properties.forEach((property) => {
+    const supported = property in obj;
+    console.log(`…${property} = ${supported ? obj[property] : "Not supported"}`);
   });
 
   // Check each method
-  methods.forEach((meth) => {
-    const supported = typeof obj[meth] === "function";
-    console.log(`…${meth} = ${supported ? obj[meth] : "Not supported"}`);
+  methods.forEach((method) => {
+    const supported = typeof obj[method] === "function";
+    console.log(`…${method} = ${supported ? obj[method] : "Not supported"}`);
   });
 }
 ```
