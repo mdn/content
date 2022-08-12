@@ -36,14 +36,15 @@ initiated the performance event, as specified above.
 ## Examples
 
 ```js
-function print_PerformanceEntries() {
+function printPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  const p = performance.getEntriesByType("resource");
-  p.forEach((entry) => {
-    print_start_and_end_properties(entry);
-  });
+  performance.getEntriesByType("resource")
+    .forEach((entry) => {
+      printInitiatorType(entry);
+    });
 }
-function print_initiatorType(perfEntry) {
+
+function printInitiatorType(perfEntry) {
   // Print this performance entry object's initiatorType value
   const value = "initiatorType" in perfEntry;
   console.log(`… initiatorType = ${value ? perfEntry.initiatorType : "NOT supported"}`);
