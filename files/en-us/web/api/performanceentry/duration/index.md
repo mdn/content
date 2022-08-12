@@ -57,7 +57,7 @@ the difference between the {{domxref("PerformanceResourceTiming.responseEnd")}} 
 The following example shows the use of the `duration` property.
 
 ```js
-function run_PerformanceEntry() {
+function runPerformanceEntry() {
   console.log("PerformanceEntry support…");
 
   if (performance.mark === undefined) {
@@ -71,14 +71,14 @@ function run_PerformanceEntry() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  const perf = performance.getEntries();
-  perf.forEach((entry, i) => {
-    log(`Entry[${i}]`);
-    check_PerformanceEntry(entry);
-  });
+  performance.getEntries()
+    .forEach((entry, i) => {
+      log(`Entry[${i}]`);
+      checkPerformanceEntry(entry);
+    });
 }
 
-function check_PerformanceEntry(obj) {
+function checkPerformanceEntry(obj) {
   const properties = ["name", "entryType", "startTime", "duration"];
   const methods = ["toJSON"];
 
