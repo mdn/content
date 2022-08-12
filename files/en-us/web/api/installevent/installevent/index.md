@@ -5,15 +5,15 @@ page-type: web-api-constructor
 tags:
   - API
   - Constructor
-  - Experimental
   - InstallEvent
   - Reference
   - Service Workers
   - ServiceWorker
+  - Deprecated
+  - Non-standard
 browser-compat: api.InstallEvent.InstallEvent
 ---
-
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 {{non-standard_header}}{{deprecated_header}}{{SeeCompatTable}}
 
