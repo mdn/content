@@ -56,9 +56,9 @@ with id "paragraph", and prints each attribute's value.
          for (const attr of paragraph.attributes) {
            output += `${attr.name} -> ${attr.value}\n`;
          }
-         result.value = output;
+         result.textContent = output;
        } else {
-         result.value = "No attributes to show";
+         result.textContent = "No attributes to show";
        }
     }
     </script>
