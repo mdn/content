@@ -285,7 +285,6 @@ const splitCommands = {
 
 const commands = "light on; brightness up; brightness up; brightness up; light on; brightness down; brightness down; light off";
 console.log(commands.split(splitCommands, 3)); // => ["light on", "brightness up", "brightness down"]
-
 ```
 
 ## Specifications

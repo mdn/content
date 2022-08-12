@@ -508,7 +508,6 @@ This issue was resolved in <https://github.com/mdn/content/issues/3923>.
 Writers will be able to include KumaScript macro calls in prose content:
 
 ```plain
-
 The **`margin`** [CSS](/en-US/docs/Web/CSS) property
 sets the margin area on all four sides of an element. It is a shorthand for
 \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},

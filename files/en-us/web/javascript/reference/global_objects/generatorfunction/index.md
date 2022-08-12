@@ -16,7 +16,6 @@ In JavaScript, every generator function is actually a `GeneratorFunction` object
 
 ```js
 const GeneratorFunction = (function* () {}).constructor;
-
 ```
 
 ## Syntax

@@ -62,7 +62,6 @@ body {
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
 }
-
 ```
 
 ```html hidden

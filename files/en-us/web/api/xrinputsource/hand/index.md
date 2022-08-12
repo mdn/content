@@ -30,7 +30,6 @@ An {{domxref("XRHand")}} object or [`null`](/en-US/docs/Web/JavaScript/Reference
 ## Examples
 
 ```js
-
 navigator.xr.requestSession({optionalFeatures: ["hand-tracking"]}).then(
   // …
 );

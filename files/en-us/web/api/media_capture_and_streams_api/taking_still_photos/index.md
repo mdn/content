@@ -423,7 +423,6 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   // once loading is complete.
   window.addEventListener('load', startup, false);
 })();
-
 ```
 
 ### Result

@@ -45,7 +45,6 @@ Returns the old attribute if replaced, or `null` if the attribute is new.
 ```
 
 ```js
-
 const parser = new DOMParser();
 // ob:one in <span> is not in a namespace, while ob:one in <warning>, is.
 const xmlString = '<warning ob:one="test" xmlns:ob="http://www.example.com/ob">Beware!</warning>';

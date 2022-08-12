@@ -379,19 +379,25 @@ There are some microformats that are applied to a page by using a special `rel=`
 
 This attribute states that the linked document represents the author of the current page.
 
-```<a rel="author" href="https://jamesg.blog">James Gallagher</a>```
+```html
+<a rel="author" href="https://jamesg.blog">James Gallagher</a>
+```
 
 ### rel=license
 
 This attribute states that the linked document contains the license under which the current page is published.
 
-```<a rel="license" href="https://mit-license.org/">MIT License</a>```
+```html
+<a rel="license" href="https://mit-license.org/">MIT License</a>
+```
 
 ### rel=nofollow
 
 This attribute states that the linked document should not be given any weight by search engine ranking algorithms that may derive from the current page. This is useful to prevent link graph algorithms from weighing a page higher than it otherwise would after seeing a link to a document.
 
-```<a rel="nofollow" href="https://jamesg.blog">James Gallagher</a>```
+```html
+<a rel="nofollow" href="https://jamesg.blog">James Gallagher</a>
+```
 
 ## Browser compatibility
 

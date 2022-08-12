@@ -77,7 +77,6 @@ This example shows different values for `text-overflow` applied to a paragraph, 
 #### HTML
 
 ```html
-
 <div class="ltr">
   <h2>Left to right text</h2>
   <pre>clip</pre>
