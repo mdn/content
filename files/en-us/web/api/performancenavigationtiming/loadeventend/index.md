@@ -25,25 +25,25 @@ event of the current document is completed.
 The following example illustrates this property's usage.
 
 ```js
-function print_nav_timing_data() {
+function printNavTimingData() {
   // Use getEntriesByType() to just get the "navigation" events
-  const perfEntries = performance.getEntriesByType("navigation");
-  perfEntries.forEach((p, i) => {
-    console.log(`= Navigation entry[${i}]`);
-    
-    // DOM Properties
-    console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
-    console.log(`DOM complete = ${p.domComplete}`);
-    console.log(`DOM interactive = ${p.interactive}`);
+  performance.getEntriesByType("navigation")
+    .forEach((p, i) => {
+      console.log(`= Navigation entry[${i}]`);
 
-    // Document load and unload time
-    console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
-    console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
+      // DOM Properties
+      console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
+      console.log(`DOM complete = ${p.domComplete}`);
+      console.log(`DOM interactive = ${p.domInteractive}`);
 
-    // Other properties
-    console.log(`type = ${p.type}`);
-    console.log(`redirectCount = ${p.redirectCount}`);
-  });
+      // Document load and unload time
+      console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
+      console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
+
+      // Other properties
+      console.log(`type = ${p.type}`);
+      console.log(`redirectCount = ${p.redirectCount}`);
+    });
 }
 ```
 
