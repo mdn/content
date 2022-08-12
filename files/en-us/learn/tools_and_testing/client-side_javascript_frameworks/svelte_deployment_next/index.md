@@ -226,7 +226,7 @@ To demonstrate this, we will deploy our todos app to [GitLab Pages](https://abou
     git remote add origin https://gitlab.com/[your-user]/mdn-svelte-todo.git
     git add .
     git commit -m "Initial commit"
-    git push -u origin master
+    git push -u origin main
     ```
 
     > **Note:** You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/ssh/index.html#generating-a-new-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
@@ -250,10 +250,10 @@ Let's have a go at doing this now.
         paths:
           - public
       only:
-        - master
+        - main
     ```
 
-    Here we are telling GitLab to use an image with the latest version of node to build our app. Next we are declaring a `pages` job, to enable GitLab Pages. Whenever there's a push to our repo, GitLab will run `npm install` and `npm run build` to build our application. We are also telling GitLab to deploy the contents of the `public` folder. On the last line, we are configuring GitLab to redeploy our app only when there's a push to our master branch.
+    Here we are telling GitLab to use an image with the latest version of node to build our app. Next we are declaring a `pages` job, to enable GitLab Pages. Whenever there's a push to our repo, GitLab will run `npm install` and `npm run build` to build our application. We are also telling GitLab to deploy the contents of the `public` folder. On the last line, we are configuring GitLab to redeploy our app only when there's a push to our main branch.
 
 2. Since our app will be published at a subdirectory (like `https://your-user.gitlab.io/mdn-svelte-todo`), we'll have to make the references to the JavaScript and CSS files in our `public/index.html` file relative. To do this, we just remove the leading slashes (`/`) from the `/global.css`, `/build/bundle.css`, and `/build/bundle.js` URLs, like this:
 
@@ -282,7 +282,7 @@ Let's have a go at doing this now.
     Writing objects: 100% (5/5), 541 bytes | 541.00 KiB/s, done.
     Total 5 (delta 3), reused 0 (delta 0)
     To gitlab.com:opensas/mdn-svelte-todo.git
-       7dac9f3..5725f46  master -> master
+       7dac9f3..5725f46  main -> main
     ```
 
 Whenever there's a job running GitLab will display an icon showing the process of the job. Clicking on it will let you inspect the output of the job.
