@@ -69,78 +69,34 @@ Since ES2018, the spec requires the return value of `toString()` to be the exact
 
 ### Comparing actual source code and toString results
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Function</th>
-      <th scope="col">Function.prototype.toString result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><pre class="brush: js">function f(){}</pre></td>
-      <td><pre class="brush: js">"function f(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">class A { a(){} }</pre></td>
-      <td><pre class="brush: js">"class A { a(){} }"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">function* g(){}</pre></td>
-      <td><pre class="brush: js">"function* g(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">a => a</pre></td>
-      <td><pre class="brush: js">"a => a"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">({ a(){} }.a)</pre></td>
-      <td><pre class="brush: js">"a(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">({ *a(){} }.a)</pre></td>
-      <td><pre class="brush: js">"*a(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">({ [0](){} }[0])</pre></td>
-      <td><pre class="brush: js">"[0](){}"</pre></td>
-    </tr>
-    <tr>
-      <td>
-        <pre class="brush: js">
-Object.getOwnPropertyDescriptor({
-  get a() {}
-}, "a").get</pre
-        >
-      </td>
-      <td><pre class="brush: js">"get a() {}"</pre></td>
-    </tr>
-    <tr>
-      <td>
-        <pre class="brush: js">
-Object.getOwnPropertyDescriptor({
-  set a(x) {}
-}, "a").set</pre
-        >
-      </td>
-      <td><pre class="brush: js">"set a(x) {}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">Function.prototype.toString</pre></td>
-      <td>
-        <pre class="brush: js">"function toString() { [native code] }"</pre>
-      </td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">(function f(){}.bind(0))</pre></td>
-      <td><pre class="brush: js">"function () { [native code] }"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">Function("a", "b")</pre></td>
-      <td><pre class="brush: js">"function anonymous(a\n) {\nb\n}"</pre></td>
-    </tr>
-  </tbody>
-</table>
+```js
+function test(fn) {
+  console.log(fn.toString());
+}
+
+function f() {}
+class A { a() {} }
+function* g() {}
+
+test(f); // "function f() {}"
+test(A); // "class A { a() {} }"
+test(g); // "function* g() {}"
+test((a) => a); // "(a) => a"
+test({ a() {} }.a); // "a() {}"
+test({ *a() {} }.a); // "*a() {}"
+test({ [0](){} }[0]); // "[0]() {}"
+test(Object.getOwnPropertyDescriptor({
+  get a() {},
+}, "a").get); // "get a() {}"
+test(Object.getOwnPropertyDescriptor({
+  set a(x) {},
+}, "a").set); // "set a(x) {}"
+test(Function.prototype.toString); // "function toString() { [native code] }"
+test(function f() {}.bind(0)); // "function () { [native code] }"
+test(Function("a", "b")); // function anonymous(a\n) {\nb\n}
+```
+
+Note that after the `Function.prototype.toString()` revision, when `toString()` is called, implementations are never allowed to synthesize a function's source that is not a native function string. The method always returns the exact source code used to create the function — including the [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) examples above. The [`Function`](/en-US/docs/Web/JavaScript/Reference/Functions) constructor itself has the capability of synthesizing the source code for the function (and is therefore a form of implicit [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
 
 ### Getting source text of a function
 
