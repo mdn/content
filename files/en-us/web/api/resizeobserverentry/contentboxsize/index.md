@@ -51,11 +51,15 @@ const resizeObserver = new ResizeObserver((entries) => {
 
   for (const entry of entries) {
     if (entry.borderBoxSize?.length > 0) {
-      const { inlineSize, blockSize } = entry.borderBoxSize[0];
-      entry.target.style.borderRadius = calcBorderRadius(inlineSize, blockSize);
+      entry.target.style.borderRadius = calcBorderRadius(
+        entry.borderBoxSize[0].inlineSize,
+        entry.borderBoxSize[0].blockSize
+      );
     } else {
-      const { width, height } = entry.contentRect;
-      entry.target.style.borderRadius = calcBorderRadius(width, height);
+      entry.target.style.borderRadius = calcBorderRadius(
+        entry.contentRect.width,
+        entry.contentRect.height
+      );
     }
   }
 });
