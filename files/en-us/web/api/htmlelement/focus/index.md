@@ -20,7 +20,7 @@ The **`HTMLElement.focus()`** method sets focus on the specified element, if it 
 The focused element is the element that will receive keyboard and similar events by default.
 
 By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a "focus ring" around the element).
-Parameter options are provided disable the default scrolling and force visible indication on elements.
+Parameter options are provided to disable the default scrolling and force visible indication on elements.
 
 ## Syntax
 
