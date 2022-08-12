@@ -313,12 +313,14 @@ function modifyText(new_text) {
 
 // Function to add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener("click", () => { modifyText("four"); }, false);
+el.addEventListener("click", function () { modifyText("four"); }, false);
 ```
 
 Notice that the listener is an anonymous function that encapsulates code that is then,
 in turn, able to send parameters to the `modifyText()` function, which is
 responsible for actually responding to the event.
+
+When possible, try to use _arrow functions_ instead of _anonymous functions_.
 
 #### Result
 
