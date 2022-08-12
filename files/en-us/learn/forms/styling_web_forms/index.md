@@ -123,7 +123,8 @@ All text fields have complete support for every property related to the CSS box 
 
 **This is because each widget has their own rules for border, padding and margin.** To give the same size to several different widgets, you can use the {{cssxref("box-sizing")}} property along with some consistent values for other properties:
 
-```css input, textarea, select, button {
+```css 
+input, textarea, select, button {
   width : 150px;
   padding: 0;
   margin: 0;
@@ -228,7 +229,7 @@ First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the b
 ```css
 @font-face {
     font-family: 'handwriting';
-    src: url('fonts/journal-webfont.woff2') format('woff2'), 
+    src: url('fonts/journal-webfont.woff2') format('woff2'),
          url('fonts/journal-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -297,12 +298,12 @@ The text fields require some common rules. In other words, we remove their {{css
 
 ```css
 input, textarea {
-  font: 1.4em/1.5em "handwriting", cursive, sans-serif;
-  border: none;
-  padding: 0 10px;
-  margin: 0;
-  width: 80%;
-  background: none;
+  font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
+  border  : none;
+  padding : 0 10px;
+  margin  : 0;
+  width   : 80%;
+  background : none;
 }
 ```
 
@@ -310,7 +311,7 @@ When one of these fields gains focus, we highlight them with a light grey, trans
 
 ```css
 input:focus, textarea:focus {
-  background: rgba(0, 0, 0, 0.1);
+  background  : rgba(0,0,0,.1);
   border-radius: 5px;
 }
 ```
@@ -358,9 +359,9 @@ button:after {
 
 button:hover,
 button:focus {
-  outline      : none;
-  background   : #000;
-  color        : #FFF;
+  outline     : none;
+  background  : #000;
+  color       : #FFF;
 }
 ```
 
