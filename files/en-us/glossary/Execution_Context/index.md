@@ -149,6 +149,8 @@ So javascript is done executing the code so the whole execution context will be 
 
 So Call Stack maintains the order of execution of `Execution Context`.
 
+This is how the whole javascript code is executed inside the JS Engine.
+
 
 
 ## See also
