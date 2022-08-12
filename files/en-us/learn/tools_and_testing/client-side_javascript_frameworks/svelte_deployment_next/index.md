@@ -102,7 +102,7 @@ By default, when you create a new app with `npx degit sveltejs/template my-svelt
 
 > **Note:** There is also an official template for using [webpack](https://webpack.js.org/) and also many [community-maintained plugins](https://github.com/sveltejs/integrations#bundler-plugins) for other bundlers.
 
-In the file `package.json` you can see that the `dev` and `start` scripts are just calling rollup:
+In the file `package.json` you can see that the `build` and `dev` scripts are just calling rollup:
 
 ```json
 "scripts": {
