@@ -42,4 +42,4 @@ const observer = new ReportingObserver((reports, observer) => {
 
 ## Browser compatibility
 
-{{Compat}}.
+{{Compat}}
