@@ -110,7 +110,7 @@ Since we wish to select the entire contents of the `<p>` element, including its 
 
 If we wish to instead copy the text "An interesting thing…" from the {{HTMLElement("section")}}'s heading (an {{HTMLElement("Heading_Elements", "h2")}} element) through the end of the letters "ve" in the {{HTMLElement("em")}} within the paragraph below it, the following code would work:
 
-```html
+```js
 let r = document.createRange();
 let startNode = document.querySelector("section h2").childNodes[0];
 r.setStart(startNode, 11);

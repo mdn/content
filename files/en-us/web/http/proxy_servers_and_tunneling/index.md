@@ -64,13 +64,13 @@ A [Proxy Auto-Configuration (PAC)](/en-US/docs/Web/HTTP/Proxy_servers_and_tunnel
 
 The auto-config file should be saved to a file with a `.pac` filename extension:
 
-```html
+```plain
 proxy.pac
 ```
 
 And the MIME type set to:
 
-```html
+```plain
 application/x-ns-proxy-autoconfig
 ```
 

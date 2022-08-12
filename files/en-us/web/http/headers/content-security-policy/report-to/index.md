@@ -17,7 +17,7 @@ The `Content-Security-Policy`
 **_`Report-To`_** HTTP response header field
 instructs the user agent to store reporting endpoints for an origin.
 
-```html
+```plain
 Content-Security-Policy: …; report-to groupname
 ```
 

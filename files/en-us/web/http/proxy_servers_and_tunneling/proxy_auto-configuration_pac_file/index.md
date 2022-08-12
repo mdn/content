@@ -71,13 +71,13 @@ If all proxies are down, and there was no DIRECT option specified, the browser w
 
 The auto-config file should be saved to a file with a .pac filename extension:
 
-```html
+```plain
 proxy.pac
 ```
 
 And the MIME type should be set to:
 
-```html
+```plain
 application/x-ns-proxy-autoconfig
 ```
 
@@ -436,14 +436,14 @@ dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 - day
   - : Is the ordered day of the month between 1 and 31 (as an integer).
 
-```html
+```plain
 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
 ```
 
 - month
   - : Is one of the ordered month strings below.
 
-```html
+```plain
 "JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
 ```
 
@@ -487,7 +487,7 @@ dateRange(1995, 1997);
 
 #### Syntax
 
-```html
+```js
 // The full range of expansions is analogous to dateRange.
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
@@ -524,7 +524,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 #### Syntax
 
-```html
+```js
 alert(message)
 ```
 
