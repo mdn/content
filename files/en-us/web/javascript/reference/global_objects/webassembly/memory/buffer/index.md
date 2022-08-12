@@ -36,7 +36,6 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), { js: { mem: memory } })
     const sum = obj.instance.exports.accumulate(0, 10);
     console.log(sum);
   });
-
 ```
 
 ## Specifications

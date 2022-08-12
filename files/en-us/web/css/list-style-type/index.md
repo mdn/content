@@ -536,7 +536,6 @@ ol.shortcut {
 #### CSS
 
 ```css
-
 ol {
   font-size: 1.2rem;
 }

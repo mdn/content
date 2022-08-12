@@ -269,7 +269,6 @@ const clearBtn = document.querySelector('#clear');
 
 calculateBtn.addEventListener('click', calculate);
 clearBtn.addEventListener('click', () => results.textContent = '');
-
 ```
 
 This gives us the following output:

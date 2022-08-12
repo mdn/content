@@ -40,7 +40,6 @@ In this example, try scrolling the inner container with the dashed border, and s
 #### HTML
 
 ```html
-
 <div id="container">
   <div id="scroller">
       <p>Far out in the uncharted backwaters of the unfashionable end

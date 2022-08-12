@@ -118,7 +118,6 @@ browser.runtime.onInstalled.addListener(() => {
 browser.bookmarks.onCreated.addListener(() => {
   // do something
 });
-
 ```
 
 Do not register listeners asynchronously, as they will not be properly triggered. So, rather than:

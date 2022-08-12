@@ -44,7 +44,6 @@ const ndef = new NDEFReader();
   }).catch((error) => {
     console.log(`Error! Scan failed to start: ${error}.`);
   });
-
 ```
 
 ## Specifications

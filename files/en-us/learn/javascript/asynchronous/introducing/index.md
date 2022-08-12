@@ -148,7 +148,6 @@ Try typing in here immediately after pressing "Generate primes"
 </textarea>
 
 <div id="output"></div>
-
 ```
 
 ```css hidden

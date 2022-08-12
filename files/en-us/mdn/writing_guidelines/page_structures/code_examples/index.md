@@ -122,7 +122,6 @@ p.fancy {
 \{{EmbedLiveSample("Styling a paragraph")}}
 
 Only the `<p>` element with `class="fancy"` will get styled `red`.
-
 ````
 
 ### Hidden code
@@ -161,7 +160,6 @@ p.fancy {
 \{{EmbedLiveSample("Styling a paragraph")}}
 
 Only the `<p>` element with `class="fancy"` will get styled `red`.
-
 ````
 
 ## GitHub live samples
