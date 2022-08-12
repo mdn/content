@@ -36,7 +36,7 @@ function printNavTimingData() {
     // DOM Properties
     console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
     console.log(`DOM complete = ${p.domComplete}`);
-    console.log(`DOM interactive = ${p.interactive}`);
+    console.log(`DOM interactive = ${p.domInteractive}`);
 
     // Document load and unload time
     console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
