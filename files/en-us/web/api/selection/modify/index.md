@@ -1,6 +1,7 @@
 ---
 title: Selection.modify()
 slug: Web/API/Selection/modify
+page-type: web-api-instance-method
 tags:
   - API
   - API:Mozilla Extensions

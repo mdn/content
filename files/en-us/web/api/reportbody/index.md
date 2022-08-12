@@ -1,6 +1,7 @@
 ---
 title: ReportBody
 slug: Web/API/ReportBody
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -31,13 +32,12 @@ An instance of `ReportBody` is returned as the value of {{domxref("Report.body")
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports. The {{domxref("InterventionReportBody")}} interface inherits from `ReportBody`.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver(([firstReport], observer) => {
   console.log(firstReport.type); // intervention
 }, options);
 ```

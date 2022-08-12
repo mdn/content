@@ -1,6 +1,7 @@
 ---
 title: Using the CSS Painting API
 slug: Web/API/CSS_Painting_API/Guide
+page-type: guide
 tags:
   - CSS
   - CSS Paint API
@@ -118,19 +119,17 @@ The code to do this looks like so:
 
 ```js
 registerPaint('headerHighlight', class {
-
   static get contextOptions() {
-           return { alpha: true };
+    return { alpha: true };
   }
 
-    /*
-        ctx is the 2D drawing context
-        size is the paintSize, the dimensions (height and width) of the box being painted
-    */
-
+  /*
+    ctx is the 2D drawing context
+    size is the paintSize, the dimensions (height and width) of the box being painted
+  */
   paint(ctx, size) {
-        ctx.fillStyle = 'hsla(55, 90%, 60%, 1.0)';
-        ctx.fillRect( 0, size.height / 3, size.width * 0.4, size.height * 0.6 );
+    ctx.fillStyle = 'hsla(55, 90%, 60%, 1.0)';
+    ctx.fillRect(0, size.height / 3, size.width * 0.4, size.height * 0.6);
   }
 });
 ```
@@ -315,28 +314,27 @@ registerPaint('headerHighlight', class {
     const y = size.height * 0.3;
     const blockWidth = size.width * 0.33;
     const highlightHeight = size.height * 0.85;
-        const color = props.get('--highColor');
+    const color = props.get('--highColor');
 
     ctx.fillStyle = color;
 
     ctx.beginPath();
-    ctx.moveTo( x, y );
-    ctx.lineTo( blockWidth, y );
-    ctx.lineTo( blockWidth + highlightHeight, highlightHeight );
-    ctx.lineTo( x, highlightHeight );
-    ctx.lineTo( x, y );
+    ctx.moveTo(x, y);
+    ctx.lineTo(blockWidth, y);
+    ctx.lineTo(blockWidth + highlightHeight, highlightHeight);
+    ctx.lineTo(x, highlightHeight);
+    ctx.lineTo(x, y);
     ctx.closePath();
     ctx.fill();
 
     /* create the dashes */
-    for (let i = 0; i < 4; i++) {
-      let start = i * 2;
+    for (let start = 0; start < 8; start += 2) {
       ctx.beginPath();
-      ctx.moveTo( (blockWidth) + (start * 10) + 10, y );
-      ctx.lineTo( (blockWidth) + (start * 10) + 20, y );
-      ctx.lineTo( (blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight );
-      ctx.lineTo( (blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight );
-      ctx.lineTo( (blockWidth) + (start * 10) + 10, y );
+      ctx.moveTo((blockWidth) + (start * 10) + 10, y);
+      ctx.lineTo((blockWidth) + (start * 10) + 20, y);
+      ctx.lineTo((blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight);
+      ctx.lineTo((blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight);
+      ctx.lineTo((blockWidth) + (start * 10) + 10, y);
       ctx.closePath();
       ctx.fill();
     }
@@ -410,7 +408,7 @@ paint(ctx, size, props, args) {
     ctx.fillStyle = 'transparent';
     ctx.strokeStyle = color;
   }
-  ...
+  // …
 }
 ```
 
@@ -446,20 +444,20 @@ When we `get` our list of argument values, we can ask specifically for a `<lengt
 static get inputArguments() { return ['*', '<length>']; }
 ```
 
-Now we can access the type and value properties, meaning we can get the number of pixels and a number type right out of the box. (Admittedly, `ctx.lineWidth` takes a float as a value rather than a value with length units, but for example's sake...)
+Now we can access the type and value properties, meaning we can get the number of pixels and a number type right out of the box. (Admittedly, `ctx.lineWidth` takes a float as a value rather than a value with length units, but for example's sake…)
 
 ```js
 paint(ctx, size, props, args) {
 
-    const strokeWidth = args[1];
+  const strokeWidth = args[1];
 
-    if (strokeWidth.unit === 'px') {
-      ctx.lineWidth = strokeWidth.value;
-    } else {
-      ctx.lineWidth = 1.0;
-    }
+  if (strokeWidth.unit === 'px') {
+    ctx.lineWidth = strokeWidth.value;
+  } else {
+    ctx.lineWidth = 1.0;
+  }
 
-  ...
+  // …
 }
 ```
 
@@ -495,21 +493,21 @@ registerPaint('hollowHighlights', class {
     const blockHeight = size.height * 0.85;
 
     // the values passed in the paint() function in the CSS
-    const color = props.get( '--boxColor' );
+    const color = props.get('--boxColor');
     const strokeType = args[0].toString();
     const strokeWidth = parseInt(args[1]);
 
     // set the stroke width
-    if ( strokeWidth ) {
+    if (strokeWidth) {
       ctx.lineWidth = strokeWidth;
     } else {
       ctx.lineWidth = 1.0;
     }
     // set the fill type
-    if ( strokeType === 'stroke' ) {
+    if (strokeType === 'stroke') {
       ctx.fillStyle = 'transparent';
       ctx.strokeStyle = color;
-    } else if ( strokeType === 'filled' ) {
+    } else if (strokeType === 'filled') {
       ctx.fillStyle = color;
       ctx.strokeStyle = color;
     } else {
@@ -519,11 +517,11 @@ registerPaint('hollowHighlights', class {
 
     // block
     ctx.beginPath();
-    ctx.moveTo( x, y );
-    ctx.lineTo( blockWidth, y );
-    ctx.lineTo( blockWidth + blockHeight, blockHeight );
-    ctx.lineTo( x, blockHeight );
-    ctx.lineTo( x, y );
+    ctx.moveTo(x, y);
+    ctx.lineTo(blockWidth, y);
+    ctx.lineTo(blockWidth + blockHeight, blockHeight);
+    ctx.lineTo(x, blockHeight);
+    ctx.lineTo(x, y);
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
@@ -531,11 +529,11 @@ registerPaint('hollowHighlights', class {
     for (let i = 0; i < 4; i++) {
       let start = i * 2;
       ctx.beginPath();
-      ctx.moveTo( blockWidth + (start * 10) + 10, y);
-      ctx.lineTo( blockWidth + (start * 10) + 20, y);
-      ctx.lineTo( blockWidth + (start * 10) + 20 + blockHeight, blockHeight);
-      ctx.lineTo( blockWidth + (start * 10) + 10 + blockHeight, blockHeight);
-      ctx.lineTo( blockWidth + (start * 10) + 10, y);
+      ctx.moveTo(blockWidth + (start * 10) + 10, y);
+      ctx.lineTo(blockWidth + (start * 10) + 20, y);
+      ctx.lineTo(blockWidth + (start * 10) + 20 + blockHeight, blockHeight);
+      ctx.lineTo(blockWidth + (start * 10) + 10 + blockHeight, blockHeight);
+      ctx.lineTo(blockWidth + (start * 10) + 10, y);
       ctx.closePath();
       ctx.fill();
       ctx.stroke();

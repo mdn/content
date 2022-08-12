@@ -1,6 +1,7 @@
 ---
 title: TextTrackCue
 slug: Web/API/TextTrackCue
+page-type: web-api-interface
 tags:
   - API
   - Accessibility
@@ -28,7 +29,7 @@ browser-compat: api.TextTrackCue
 
 _This interface also inherits properties from {{domxref("EventTarget")}}._
 
-- {{domxref("TextTrackCue.track")}}{{readOnlyInline}}
+- {{domxref("TextTrackCue.track")}} {{readOnlyInline}}
   - : The {{domxref("TextTrack")}} that this cue belongs to, or `null` if it doesn't belong to any.
 - {{domxref("TextTrackCue.id")}}
   - : A string that identifies the cue.

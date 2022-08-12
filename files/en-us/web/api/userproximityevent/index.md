@@ -1,6 +1,7 @@
 ---
 title: UserProximityEvent
 slug: Web/API/UserProximityEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -24,7 +25,7 @@ The **`UserProximityEvent`** indicates whether a nearby physical object is prese
 ## Examples
 
 ```js
-window.addEventListener('userproximity', function(event) {
+window.addEventListener('userproximity', (event) => {
   if (event.near) {
     // let's power off the screen
     navigator.mozPower.screenEnabled = false;

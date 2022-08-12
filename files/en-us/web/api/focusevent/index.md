@@ -1,6 +1,7 @@
 ---
 title: FocusEvent
 slug: Web/API/FocusEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM

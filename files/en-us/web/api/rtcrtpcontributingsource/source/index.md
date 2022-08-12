@@ -1,6 +1,7 @@
 ---
 title: RTCRtpContributingSource.source
 slug: Web/API/RTCRtpContributingSource/source
+page-type: web-api-instance-property
 tags:
   - API
   - Media

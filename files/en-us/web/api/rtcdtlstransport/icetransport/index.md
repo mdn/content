@@ -1,6 +1,7 @@
 ---
 title: RTCDtlsTransport.iceTransport
 slug: Web/API/RTCDtlsTransport/iceTransport
+page-type: web-api-instance-property
 tags:
   - API
   - Property

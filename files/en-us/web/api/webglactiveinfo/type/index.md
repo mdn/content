@@ -1,6 +1,7 @@
 ---
 title: WebGLActiveInfo.type
 slug: Web/API/WebGLActiveInfo/type
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,10 +16,10 @@ The read-only **`WebGLActiveInfo.type`** property represents the type of the req
 ## Examples
 
 ```js
-var activeAttrib = gl.getActiveAttrib(program, index);
+const activeAttrib = gl.getActiveAttrib(program, index);
 activeAttrib.type;
 
-var activeUniform = gl.getActiveUniform(program, index);
+const activeUniform = gl.getActiveUniform(program, index);
 activeUniform.type;
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: MediaQueryListEvent.matches
 slug: Web/API/MediaQueryListEvent/matches
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -26,7 +27,7 @@ currently matches the media query list, `false` if not.
 ## Examples
 
 ```js
-var mql = window.matchMedia('(max-width: 600px)');
+const mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -54,8 +55,7 @@ mql.addListener(screenTest);
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from
-  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

@@ -1,6 +1,7 @@
 ---
 title: MessageEvent.source
 slug: Web/API/MessageEvent/source
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -27,7 +28,7 @@ message emitter.
 ## Examples
 
 ```js
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
   console.log('Message received from worker');
   console.log(e.source);

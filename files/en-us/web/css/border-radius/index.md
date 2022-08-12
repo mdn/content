@@ -163,7 +163,7 @@ For example:
 ```css
 border-radius: 1em/5em;
 
-/* ... is equivalent to: */
+/* It is equivalent to: */
 border-top-left-radius:     1em 5em;
 border-top-right-radius:    1em 5em;
 border-bottom-right-radius: 1em 5em;
@@ -173,7 +173,7 @@ border-bottom-left-radius:  1em 5em;
 ```css
 border-radius: 4px 3px 6px / 2px 4px;
 
-/* ... is equivalent to: */
+/* It is equivalent to: */
 border-top-left-radius:     4px 2px;
 border-top-right-radius:    3px 4px;
 border-bottom-right-radius: 6px 2px;

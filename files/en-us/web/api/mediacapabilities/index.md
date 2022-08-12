@@ -1,10 +1,10 @@
 ---
 title: MediaCapabilities
 slug: Web/API/MediaCapabilities
+page-type: web-api-interface
 tags:
   - API
   - Audio
-  - Experimental
   - Interface
   - Media
   - MediaCapabilities

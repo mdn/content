@@ -1,6 +1,7 @@
 ---
 title: Range.isPointInRange()
 slug: Web/API/Range/isPointInRange
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,7 +21,7 @@ indicating whether the given point is in the {{domxref("Range")}}. It returns
 ## Syntax
 
 ```js
-isPointInRange( referenceNode, offset )
+isPointInRange(referenceNode, offset)
 ```
 
 ### Parameters

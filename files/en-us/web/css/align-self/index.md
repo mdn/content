@@ -135,7 +135,7 @@ div:nth-child(3) {
 
 ## Specifications
 
-{{Specifications("css.properties.align-self.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

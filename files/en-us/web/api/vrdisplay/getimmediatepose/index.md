@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.getImmediatePose()
 slug: Web/API/VRDisplay/getImmediatePose
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

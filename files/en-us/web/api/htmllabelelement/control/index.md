@@ -1,6 +1,7 @@
 ---
 title: HTMLLabelElement.control
 slug: Web/API/HTMLLabelElement/control
+page-type: web-api-instance-property
 tags:
   - Forms
   - HTML DOM

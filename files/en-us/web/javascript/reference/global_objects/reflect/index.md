@@ -58,7 +58,7 @@ Some of these methods are also the same as corresponding methods on {{jsxref("Ob
 const duck = {
   name: 'Maurice',
   color: 'white',
-  greeting: function() {
+  greeting() {
     console.log(`Quaaaack! My name is ${this.name}`);
   }
 }
@@ -94,5 +94,5 @@ Reflect.set(duck, 'eyes', 'black');
 
 ## See also
 
-- The {{jsxref("Proxy")}} global object.
-- The {{jsxref("Proxy/Proxy", "handler")}} object.
+- The {{jsxref("Proxy")}} global object
+- The [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)

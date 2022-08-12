@@ -8,6 +8,7 @@ tags:
   - Guide
   - Security
   - access
+browser-compat: http.headers.Content-Security-Policy
 ---
 {{HTTPSidebar}}
 
@@ -93,7 +94,7 @@ Content-Security-Policy: default-src 'self'
 A web site administrator wants to allow content from a trusted domain and all its subdomains (it doesn't have to be the same domain that the CSP is set on.)
 
 ```http
-Content-Security-Policy: default-src 'self' trusted.com *.trusted.com
+Content-Security-Policy: default-src 'self' example.com *.example.com
 ```
 
 ### Example 3
@@ -101,32 +102,32 @@ Content-Security-Policy: default-src 'self' trusted.com *.trusted.com
 A web site administrator wants to allow users of a web application to include images from any origin in their own content,
 but to restrict audio or video media to trusted providers, and all scripts only to a specific server that hosts trusted code.
 
-```
-Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com
+```http
+Content-Security-Policy: default-src 'self'; img-src *; media-src example.org example.net; script-src userscripts.example.com
 ```
 
 Here, by default, content is only permitted from the document's origin, with the following exceptions:
 
 - Images may load from anywhere (note the "\*" wildcard).
-- Media is only allowed from media1.com and media2.com (and not from subdomains of those sites).
+- Media is only allowed from example.org and example.net (and not from subdomains of those sites).
 - Executable script is only allowed from userscripts.example.com.
 
 ### Example 4
 
 A web site administrator for an online banking site wants to ensure that all its content is loaded using TLS, in order to prevent attackers from eavesdropping on requests.
 
-```
-Content-Security-Policy: default-src https://onlinebanking.jumbobank.com
+```http
+Content-Security-Policy: default-src https://onlinebanking.example.com
 ```
 
-The server permits access only to documents being loaded specifically over HTTPS through the single origin onlinebanking.jumbobank.com.
+The server permits access only to documents being loaded specifically over HTTPS through the single origin onlinebanking.example.com.
 
 ### Example 5
 
 A web site administrator of a web mail site wants to allow HTML in email, as well as images loaded from anywhere, but not JavaScript or other potentially dangerous content.
 
 ```http
-Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *
+Content-Security-Policy: default-src 'self' *.example.com; img-src *
 ```
 
 Note that this example doesn't specify a {{CSP("script-src")}}; with the example CSP,
@@ -196,13 +197,14 @@ The HTML of `signup.html` looks like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    ... Content ...
+    Here be content.
   </body>
 </html>
 ```
@@ -210,7 +212,7 @@ The HTML of `signup.html` looks like this:
 Can you spot the mistake? Stylesheets are allowed to be loaded only from `cdn.example.com`, yet the website tries to load one from its own origin (`http://example.com`).
 A browser capable of enforcing CSP would send the following violation report as a POST request to `http://example.com/_/csp-reports`, when the document is visited:
 
-```js
+```json
 {
   "csp-report": {
     "document-uri": "http://example.com/signup.html",
@@ -231,7 +233,9 @@ In summary, this is done to prevent leaking sensitive information about cross-or
 
 ## Browser compatibility
 
-{{Compat("http.headers.csp")}}
+{{Compat}}
+
+### Compatibility notes
 
 A specific incompatibility exists in some versions of the Safari web browser, whereby if a Content Security Policy header is set, but not a Same Origin header,
 the browser will block self-hosted content and off-site content, and incorrectly report that this is due to the Content Security Policy not allowing the content.

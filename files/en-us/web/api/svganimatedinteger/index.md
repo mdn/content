@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedInteger
 slug: Web/API/SVGAnimatedInteger
+page-type: web-api-interface
 tags:
   - API
   - NeedsBrowserCompatibility

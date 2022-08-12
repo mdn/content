@@ -48,7 +48,7 @@ function logItems(bookmarkItem, indent) {
   if (bookmarkItem.url) {
     console.log(makeIndent(indent) + bookmarkItem.url);
   } else {
-    console.log(makeIndent(indent) + "Folder");
+    console.log(`${makeIndent(indent)}Folder`);
     indent++;
   }
   if (bookmarkItem.children) {

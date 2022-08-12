@@ -79,8 +79,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>...</head>
-  <body>...</body>
+  <head>…</head>
+  <body>…</body>
 </html>
 ```
 

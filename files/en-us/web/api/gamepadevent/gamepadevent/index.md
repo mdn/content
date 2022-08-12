@@ -1,6 +1,7 @@
 ---
 title: GamepadEvent()
 slug: Web/API/GamepadEvent/GamepadEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

@@ -38,8 +38,8 @@ The following example assigns the day of month of the current date to the variab
 `dayOfMonth`.
 
 ```js
-var today = new Date();
-var dayOfMonth = today.getUTCDate();
+const today = new Date();
+const dayOfMonth = today.getUTCDate();
 ```
 
 ## Specifications

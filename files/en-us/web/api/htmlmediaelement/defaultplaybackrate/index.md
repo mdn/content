@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.defaultPlaybackRate
 slug: Web/API/HTMLMediaElement/defaultPlaybackRate
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -25,7 +26,7 @@ A double. `1.0` is "normal speed," values lower than `1.0` make the media play s
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.defaultPlaybackRate); // 1
 ```
 

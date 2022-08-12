@@ -112,7 +112,7 @@ New extensions to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API):
 
 #### IndexedDB
 
-- {{domxref("IDBTransaction")}} are now non-durable by default ({{bug(1112702)}}). This favors performance over reliability and matches what other browsers are doing. For more information, read our [durability definition](/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#durable).
+- {{domxref("IDBTransaction")}} are now non-durable by default ({{bug(1112702)}}). This favors performance over reliability and matches what other browsers are doing. For more information, read our [durability definition](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#durable).
 
 #### Dev Tools
 

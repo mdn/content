@@ -1,6 +1,7 @@
 ---
 title: HTMLOutputElement.labels
 slug: Web/API/HTMLOutputElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -33,15 +34,15 @@ with the `<output>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const output = document.getElementById("test");
-  for(var i = 0; i < output.labels.length; i++) {
-    console.log(output.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of output.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

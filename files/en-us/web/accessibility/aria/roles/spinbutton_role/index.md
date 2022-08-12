@@ -39,7 +39,8 @@ The `slider` role, similar to HTML's `input` of type `range`, [`<input type="ran
 
 While all three of these ranges have the same ARIA states and properties, the `spinbutton` role is the only read-write range: it is the only one whose value changes via user interaction. As such, it must be able to receive focus. In addition, keyboard interaction, mouse clicks, and touch interaction must be supported.
 
-> **Warning** To change the spinbutton value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events. Fully test spinbutton widgets using assistive technologies on devices where touch is a primary input mechanism before using the `spinbutton` role (and all range widgets).
+> **Warning:** To change the spinbutton value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.
+> Fully test spinbutton widgets using assistive technologies on devices where touch is a primary input mechanism before using the `spinbutton` role (and all range widgets).
 
 #### Common attributes
 

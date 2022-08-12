@@ -1,6 +1,7 @@
 ---
 title: Bluetooth.requestDevice()
 slug: Web/API/Bluetooth/requestDevice
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -8,6 +9,7 @@ tags:
   - Reference
   - Web Bluetooth API
   - requestDevice
+  - Experimental
 browser-compat: api.Bluetooth.requestDevice
 ---
 {{APIRef("Bluetooth API")}} {{securecontext_header}}{{SeeCompatTable}}
@@ -80,17 +82,14 @@ let options = {
   optionalServices: ['battery_service']
 }
 
-navigator.bluetooth.requestDevice(options).then(function(device) {
-  console.log('Name: ' + device.name);
+navigator.bluetooth.requestDevice(options).then((device) => {
+  console.log(`Name: ${device.name}`);
   // Do something with the device.
 })
-.catch(function(error) {
-  console.log("Something went wrong. " + error);
-});
+.catch((error) => console.error(`Something went wrong. ${error}`));
 ```
 
-[Detailed
-examples](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services) are in the specification.
+[Detailed examples](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services) are in the specification.
 
 ## Specifications
 

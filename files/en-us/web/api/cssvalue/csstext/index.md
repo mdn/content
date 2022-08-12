@@ -1,6 +1,7 @@
 ---
 title: CSSValue.cssText
 slug: Web/API/CSSValue/cssText
+page-type: web-api-instance-property
 tags:
   - API
   - CSSValue
@@ -30,8 +31,8 @@ A string representing the current CSS property value.
 ## Examples
 
 ```js
-var styleDeclaration = document.styleSheets[0].cssRules[0].style;
-var cssValue = styleDeclaration.getPropertyCSSValue("color");
+const styleDeclaration = document.styleSheets[0].cssRules[0].style;
+const cssValue = styleDeclaration.getPropertyCSSValue("color");
 console.log(cssValue.cssText);
 ```
 

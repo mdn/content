@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest
 slug: Web/API/PaymentRequest
+page-type: web-api-interface
 tags:
   - API
   - Commerce
@@ -28,13 +29,13 @@ The [Payment Request API's](/en-US/docs/Web/API/Payment_Request_API) **`PaymentR
 
 ## Properties
 
-- {{domxref('PaymentRequest.id')}} {{readonlyinline}}{{securecontext_inline}}
+- {{domxref('PaymentRequest.id')}} {{readonlyinline}} {{securecontext_inline}}
   - : An unique identifier for a particular `PaymentRequest`, which can be set via `details.id`. When none is set, it defaults to a UUID.
-- {{domxref('PaymentRequest.shippingAddress')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+- {{domxref('PaymentRequest.shippingAddress')}} {{readonlyinline}} {{securecontext_inline}} {{deprecated_inline}}
   - : If requested via payment options, returns the shipping address chosen by the user for the purposes of calculating shipping. This property is only populated if the constructor is called with the `requestShipping` flag set to true. Additionally, in some browsers, the parts of the address will be redacted for privacy until the user indicates they are ready to complete the transaction (i.e., they hit "Pay").
-- {{domxref('PaymentRequest.shippingOption')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+- {{domxref('PaymentRequest.shippingOption')}} {{readonlyinline}} {{securecontext_inline}} {{deprecated_inline}}
   - : Returns the identifier of the selected shipping option. This property is only populated if the constructor is called with the `requestShipping` flag set to true.
-- {{domxref('PaymentRequest.shippingType')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+- {{domxref('PaymentRequest.shippingType')}} {{readonlyinline}} {{securecontext_inline}} {{deprecated_inline}}
   - : Returns the type of shipping used to fulfill the transaction. This will be one of `shipping`, `delivery`, `pickup`, or `null` if a value was not provided in the constructor.
 
 ## Methods
@@ -52,9 +53,9 @@ The [Payment Request API's](/en-US/docs/Web/API/Payment_Request_API) **`PaymentR
   - : With some payment handlers (e.g., Apple Pay), this event handler is called to handle the {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event, which is dispatched when the user agent requires that the merchant validate that the merchant or vendor requesting payment is legitimate.
 - {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} {{securecontext_inline}}
   - : With some payment handlers (e.g., Apple Pay), dispatched whenever the user changes payment instrument, like switching from a credit card to a debit card.
-- {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} {{securecontext_inline}}{{deprecated_inline}}
+- {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} {{securecontext_inline}} {{deprecated_inline}}
   - : Dispatched whenever the user changes their shipping address.
-- {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} {{securecontext_inline}}{{deprecated_inline}}
+- {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} {{securecontext_inline}} {{deprecated_inline}}
   - : Dispatched whenever the user changes a shipping option.
 
 ## Specifications

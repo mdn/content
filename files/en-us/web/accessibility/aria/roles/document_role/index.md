@@ -18,11 +18,11 @@ The `document` role is for the top container containing content that assistive t
 
 ```html
 <div role="dialog">
- ...
+ …
  <div id="InfoText" role="document" tabindex="0">
   <p>Some informational text goes here.</p>
  </div>
- ...
+ …
  <button>Close</button>
 </div>
 ```

@@ -1,6 +1,7 @@
 ---
 title: LayoutShiftAttribution.currentRect
 slug: Web/API/LayoutShiftAttribution/currentRect
+page-type: web-api-instance-property
 tags:
   - API
   - Property

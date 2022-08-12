@@ -1,6 +1,7 @@
 ---
 title: Range.intersectsNode()
 slug: Web/API/Range/intersectsNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -18,7 +19,7 @@ indicating whether the given {{domxref("Node")}} intersects the {{domxref("Range
 ## Syntax
 
 ```js
-intersectsNode( referenceNode )
+intersectsNode(referenceNode)
 ```
 
 ### Parameters
@@ -33,10 +34,10 @@ A boolean.
 ## Examples
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
 range.selectNode(document.getElementsByTagName("div").item(0));
-var bool = range.intersectsNode(document.getElementsByTagName("p").item(0));
+const intersectingNode = range.intersectsNode(document.getElementsByTagName("p").item(0));
 ```
 
 ## Specifications

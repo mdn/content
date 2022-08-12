@@ -1,6 +1,7 @@
 ---
 title: AudioListener.setPosition()
 slug: Web/API/AudioListener/setPosition
+page-type: web-api-instance-method
 tags:
   - API
   - AudioListener

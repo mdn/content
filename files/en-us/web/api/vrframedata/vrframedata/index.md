@@ -1,6 +1,7 @@
 ---
 title: VRFrameData()
 slug: Web/API/VRFrameData/VRFrameData
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

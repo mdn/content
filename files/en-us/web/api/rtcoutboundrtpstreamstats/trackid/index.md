@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.trackId
 slug: Web/API/RTCOutboundRtpStreamStats/trackId
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

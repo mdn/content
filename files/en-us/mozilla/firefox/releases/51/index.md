@@ -88,7 +88,7 @@ tags:
 
 ### Web Workers
 
-- The non-standard and obsolete {{domxref("WorkerGlobalScope.onclose")}} event handler and {{domxref("Worker")}} use of the {{event("close")}} event have been removed from Firefox.
+- The non-standard and obsolete {{domxref("WorkerGlobalScope.onclose")}} event handler and {{domxref("Worker")}} use of the `close` event have been removed from Firefox.
 
 ### Networking
 
@@ -105,7 +105,7 @@ tags:
 
 ### WebRTC
 
-- The {{domxref("RTCPeerConnection.removeStream()")}} method has been removed. It was deprecated back in Firefox 22, and has been throwing a `NotSupportedError` {{domxref("DOMException")}}for a long time. You need to use {{domxref("RTCPeerConnection.removeTrack()")}} instead, for each track on the stream.
+- The {{domxref("RTCPeerConnection.removeStream()")}} method has been removed. It was deprecated back in Firefox 22, and has been throwing a `NotSupportedError` {{domxref("DOMException")}} for a long time. You need to use {{domxref("RTCPeerConnection.removeTrack()")}} instead, for each track on the stream.
 - WebRTC now supports the VP9 codec by default. When added in Firefox 46, VP9 was disabled by default, but when enabled was the preferred codec; however, it has been moved to be the second choice (after VP8) due to its current level of CPU usage.
 - The method {{domxref("HTMLMediaElement.captureStream()")}}, which returns a {{domxref("MediaStream")}} containing the content of the specified {{HTMLElement("video")}} or {{HTMLElement("audio")}}. It's worth noting that this is prefixed still as `mozCaptureStream()`, and that it doesn't yet exactly match the spec.
 
@@ -119,7 +119,7 @@ tags:
 
 - The {{domxref("DOMImplementation.hasFeature()")}} now returns `true` in all cases ({{bug(984778)}}).
 - The {{domxref("HTMLInputElement")}} and {{domxref("HTMLTextAreaElement")}} properties `selectionStart` and `selectionEnd` now correctly return the current position of the text input cursor when there's no selection, instead of returning 0 ({{bug(1287655)}}).
-- The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the {{htmlattrxref("onerror")}} event handler, sending {{event("error")}} events to the element whenever [errors occur attempting to load or interpret images](/en-US/docs/Web/API/HTMLImageElement#errors).
+- The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the {{htmlattrxref("onerror")}} event handler, sending {{domxref("Element/error_event", "error")}} events to the element whenever [errors occur attempting to load or interpret images](/en-US/docs/Web/API/HTMLImageElement#errors).
 - You can now change a Web {{domxref("Animation")}}'s effect by setting the value of its {{domxref("Animation.effect", "effect")}} property. Previously, this property was read-only ({{bug(1049975)}}).
 - The Permissions API method {{domxref("Permissions.revoke()")}} has been put behind a preference (`dom.permissions.revoke.enable`) and disabled by default since its design and even its very existence is under discussion in the [Web Application Security Working Group](https://www.w3.org/2011/webappsec/).
 - The [Storage API](/en-US/docs/Web/API/Storage_API)'s {{domxref("NavigatorStorage.storage", "navigator.storage")}} property and {{domxref("StorageManager.estimate()")}} method have been implemented along with the needed supporting code. Storage unit persistence features are not yet implemented. See {{bug(1267941)}}.
@@ -127,8 +127,8 @@ tags:
 
 ### Events
 
-- Firefox now supports the {{domxref("GlobalEventHandlers.onanimationstart", "onanimationstart")}}, {{domxref("GlobalEventHandlers.onanimationiteration", "onanimationiteration")}}, and {{domxref("GlobalEventHandlers.onanimationstart", "onanimationstart")}} event handlers, in addition to supporting the corresponding events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} ({{bug(911987)}}).
-- Firefox now supports the {{domxref("GlobalEventHandlers.ontransitionend", "ontransitionend")}} event handler ({{bug(911987)}}).
+- Firefox now supports the {{domxref("Element.onanimationstart", "onanimationstart")}}, {{domxref("Element.onanimationiteration", "onanimationiteration")}}, and {{domxref("Element.onanimationstart", "onanimationstart")}} event handlers, in addition to supporting the corresponding events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} ({{bug(911987)}}).
+- Firefox now supports the {{domxref("Element.transitionend_event", "ontransitionend")}} event handler ({{bug(911987)}}).
 
 ### Security
 

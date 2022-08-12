@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.sinkId
 slug: Web/API/HTMLMediaElement/sinkId
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

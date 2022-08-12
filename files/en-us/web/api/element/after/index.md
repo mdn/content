@@ -1,6 +1,7 @@
 ---
 title: Element.after()
 slug: Web/API/Element/after
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -21,7 +22,7 @@ String objects are inserted as equivalent {{domxref("Text")}} nodes.
 ```js
 after(node1)
 after(node1, node2)
-after(node1, node2, /* ... ,*/ nodeN)
+after(node1, node2, /* … ,*/ nodeN)
 ```
 
 ### Parameters

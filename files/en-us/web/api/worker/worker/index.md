@@ -1,6 +1,7 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -52,10 +53,10 @@ new Worker(aURL, options)
 The following code snippet shows creation of a {{domxref("Worker")}} object using the `Worker()` constructor and subsequent usage of the object:
 
 ```js
-var myWorker = new Worker('worker.js');
+const myWorker = new Worker('worker.js');
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+first.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 ```

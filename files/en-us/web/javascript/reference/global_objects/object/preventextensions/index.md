@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Object.preventExtensions
 
 The **`Object.preventExtensions()`** method prevents new
 properties from ever being added to an object (i.e. prevents future extensions to the
-object).
+object). It also prevents the object's prototype from being re-assigned.
 
 {{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}
 
@@ -39,20 +39,15 @@ An object is extensible if new properties can be added to it.
 it will never have properties beyond the ones it had at the time it was marked as
 non-extensible. Note that the properties of a non-extensible object, in general, may
 still be _deleted_. Attempting to add new properties to a non-extensible object
-will fail, either silently or by throwing a {{jsxref("TypeError")}} (most commonly, but
-not exclusively, when in {{jsxref("Functions_and_function_scope/Strict_mode", "strict
-  mode", "", 1)}}).
+will fail, either silently or, in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throwing a {{jsxref("TypeError")}}.
 
-`Object.preventExtensions()` only prevents addition of own properties.
-Properties can still be added to the object prototype.
+Unlike [`Object.seal()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal) and [`Object.freeze()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze), `Object.preventExtensions()` invokes an intrinsic JavaScript behavior and cannot be replaced with a composition of several other operations. It also has its `Reflect` counterpart (which only exists for intrinsic operations), [`Reflect.preventExtensions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions).
 
-This method makes the `[[prototype]]` of the target immutable; any
-`[[prototype]]` re-assignment will throw a `TypeError`. This
-behavior is specific to the internal `[[prototype]]` property, other
-properties of the target object will remain mutable.
+`Object.preventExtensions()` only prevents addition of own properties. Properties can still be added to the object prototype.
 
-There is no way to make an object extensible again once it has been made
-non-extensible.
+This method makes the `[[Prototype]]` of the target immutable; any `[[Prototype]]` re-assignment will throw a `TypeError`. This behavior is specific to the internal `[[Prototype]]` property; other properties of the target object will remain mutable.
+
+There is no way to make an object extensible again once it has been made non-extensible.
 
 ## Examples
 
@@ -61,21 +56,21 @@ non-extensible.
 ```js
 // Object.preventExtensions returns the object
 // being made non-extensible.
-var obj = {};
-var obj2 = Object.preventExtensions(obj);
+const obj = {};
+const obj2 = Object.preventExtensions(obj);
 obj === obj2; // true
 
 // Objects are extensible by default.
-var empty = {};
+const empty = {};
 Object.isExtensible(empty); // === true
 
-// ...but that can be changed.
+// They can be made un-extensible
 Object.preventExtensions(empty);
 Object.isExtensible(empty); // === false
 
 // Object.defineProperty throws when adding
 // a new property to a non-extensible object.
-var nonExtensible = { removable: true };
+const nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
 Object.defineProperty(nonExtensible, 'new', {
   value: 8675309
@@ -94,7 +89,7 @@ fail();
 A non-extensible object's prototype is immutable:
 
 ```js
-var fixed = Object.preventExtensions({});
+const fixed = Object.preventExtensions({});
 // throws a 'TypeError'.
 fixed.__proto__ = { oh: 'hai' };
 ```

@@ -1,6 +1,7 @@
 ---
 title: Improving compatibility using WebRTC adapter.js
 slug: Web/API/WebRTC_API/adapter.js
+page-type: guide
 tags:
   - API
   - Audio

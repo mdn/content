@@ -1,6 +1,7 @@
 ---
 title: TextDecoder.decode()
 slug: Web/API/TextDecoder/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Encoding
@@ -13,7 +14,7 @@ browser-compat: api.TextDecoder.decode
 
 The **`TextDecode.decode()`** method returns a
 string containing the text, given in parameters, decoded with the
-specific method for that {{domxref("TextDecoder")}}> object.
+specific method for that {{domxref("TextDecoder")}} object.
 
 ## Syntax
 
@@ -26,9 +27,8 @@ decode(buffer, options)
 ### Parameters
 
 - `buffer` {{Optional_Inline}}
-  - : Is either an
-    [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-    or an [`ArrayBufferView`](/en-US/docs/Web/API/ArrayBufferView)
+  - : Is an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer),
+    a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object
     containing the text to decode.
 - `options` {{Optional_Inline}}
 

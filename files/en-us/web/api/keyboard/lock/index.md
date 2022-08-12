@@ -1,6 +1,7 @@
 ---
 title: Keyboard.lock()
 slug: Web/API/Keyboard/lock
+page-type: web-api-instance-method
 tags:
   - API
   - Keyboard API
@@ -30,8 +31,7 @@ lock(keyCodes)
 
 - `keyCodes` {{optional_inline}}
   - : An {{jsxref('Array')}} of one or more key codes to lock. If no keycodes are provided
-    all keys will be locked. A list of valid code values is found in the [UI
-    Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
+    all keys will be locked. A list of valid code values is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
 
 ### Return value
 

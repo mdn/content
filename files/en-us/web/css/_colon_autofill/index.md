@@ -12,6 +12,8 @@ browser-compat: css.selectors.autofill
 
 The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when an {{HTMLElement("input")}} element has its value autofilled by the browser. The class stops matching if the user edits the field.
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-autofill.html", "tabbed-shorter")}}
+
 > **Note:** The user agent style sheets of many browsers use `!important` in their `:-webkit-autofill` style declarations, making them non-overridable by webpages without resorting to JavaScript hacks. For example Chrome has the following in its internal stylesheet:
 >
 > ```css
@@ -24,7 +26,7 @@ The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) match
 
 ## Syntax
 
-```css
+```
 :autofill
 ```
 

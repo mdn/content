@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.region
 slug: Web/API/AddressErrors/region
+page-type: web-api-instance-property
 tags:
   - API
   - Address

@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.getAsFile()
 slug: Web/API/DataTransferItem/getAsFile
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItem
@@ -36,33 +37,33 @@ None.
 ## Examples
 
 This example shows the use of the `getAsFile()` method in a
-{{event("drop")}} event handler.
+{{domxref("HTMLElement/drop_event", "drop")}} event handler.
 
 ```js
 function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
- var data = ev.dataTransfer.items;
- for (var i = 0; i < data.length; i += 1) {
-   if ((data[i].kind == 'string') &&
+ const data = ev.dataTransfer.items;
+ for (let i = 0; i < data.length; i += 1) {
+   if ((data[i].kind === 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
-     data[i].getAsString(function (s){
+     data[i].getAsString((s) => {
        ev.target.appendChild(document.getElementById(s));
      });
-   } else if ((data[i].kind == 'string') &&
+   } else if ((data[i].kind === 'string') &&
               (data[i].type.match('^text/html'))) {
      // Drag data item is HTML
-     console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'string') &&
+     console.log("… Drop: HTML");
+   } else if ((data[i].kind === 'string') &&
               (data[i].type.match('^text/uri-list'))) {
      // Drag data item is URI
-     console.log("... Drop: URI");
-   } else if ((data[i].kind == 'file') &&
+     console.log("… Drop: URI");
+   } else if ((data[i].kind === 'file') &&
               (data[i].type.match('^image/'))) {
      // Drag data item is an image file
-     var f = data[i].getAsFile();
-     console.log("... Drop: File ");
+     const f = data[i].getAsFile();
+     console.log("… Drop: File ");
    }
  }
 }

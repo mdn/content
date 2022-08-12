@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.fetchStart
 slug: Web/API/PerformanceTiming/fetchStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

@@ -1,6 +1,7 @@
 ---
 title: Simple color animation
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -61,11 +62,11 @@ window.addEventListener("load", function setupAnimation (evt) {
   window.removeEventListener(evt.type, setupAnimation, false);
 
   // A variable to hold a timer that drives the animation.
-  var timer;
+  let timer;
 
   // Click event handlers.
-  var button = document.querySelector("#animation-onoff");
-  var verb = document.querySelector("strong");
+  const button = document.querySelector("#animation-onoff");
+  const verb = document.querySelector("strong");
   function startAnimation(evt) {
     button.removeEventListener(evt.type, startAnimation, false);
     button.addEventListener("click", stopAnimation, false);
@@ -87,10 +88,10 @@ window.addEventListener("load", function setupAnimation (evt) {
   // handlers for canvas and button.
   stopAnimation({type: "click"});
 
-  var gl;
+  let gl;
   function drawAnimation () {
     if (!gl) {
-      var canvas = document.getElementById("canvas-view");
+      const canvas = document.getElementById("canvas-view");
       gl = canvas.getContext("webgl")
         ||canvas.getContext("experimental-webgl");
       if (!gl) {
@@ -104,7 +105,7 @@ window.addEventListener("load", function setupAnimation (evt) {
     }
 
     // Get a random color value using a helper function.
-    var color = getRandomColor();
+    const color = getRandomColor();
     // Set the WebGLRenderingContext clear color to the
     // random color.
     gl.clearColor(color[0], color[1], color[2], 1.0);

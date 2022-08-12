@@ -1,6 +1,7 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
+page-type: web-api-interface
 tags:
   - API
   - Communications
@@ -20,7 +21,7 @@ An `EventSource` instance opens a persistent connection to an [HTTP](/en-US/docs
 
 {{InheritanceDiagram}}
 
-Once the connection is opened, incoming messages from the server are delivered to your code in the form of events. If there is an event field in the incoming message, the triggered event is the same as the event field value. If no event field is present, then a generic {{event("message")}} event is fired.
+Once the connection is opened, incoming messages from the server are delivered to your code in the form of events. If there is an event field in the incoming message, the triggered event is the same as the event field value. If no event field is present, then a generic {{domxref("EventSource/message_event", "message")}} event is fired.
 
 Unlike [WebSockets](/en-US/docs/Web/API/WebSockets_API), server-sent events are unidirectional; that is, data messages are delivered in one direction, from the server to the client (such as a user's web browser). That makes them an excellent choice when there's no need to send data from the client to the server in message form. For example, `EventSource` is a useful approach for handling things like social media status updates, news feeds, or delivering data into a [client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) mechanism like [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) or [web storage](/en-US/docs/Web/API/Web_Storage_API).
 
@@ -65,20 +66,20 @@ Additionally, the event source itself may send messages with an event field, whi
 In this basic example, an `EventSource` is created to receive unnamed events from the server; a page with the name `sse.php` is responsible for generating the events.
 
 ```js
-var evtSource = new EventSource('sse.php');
-var eventList = document.querySelector('ul');
+const evtSource = new EventSource('sse.php');
+const eventList = document.querySelector('ul');
 
-evtSource.onmessage = function(e) {
-  var newElement = document.createElement("li");
+evtSource.onmessage = (e) => {
+  const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 }
 ```
 
 Each received event causes our `EventSource` object's `onmessage` event handler to be run. It, in turn, creates a new {{HTMLElement("li")}} element and writes the message's data into it, then appends the new element to the list element already in the document.
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
 
 To listen to named events, you'll require a listener for each type of event sent.
 
@@ -93,14 +94,14 @@ To listen to named events, you'll require a listener for each type of event sent
    * id: someid
    *
    */
-  sse.addEventListener("notice", function(e) {
+  sse.addEventListener("notice", (e) => {
     console.log(e.data)
   })
 
   /* Similarly, this will listen for events
    * with the field `event: update`
    */
-  sse.addEventListener("update", function(e) {
+  sse.addEventListener("update", (e) => {
     console.log(e.data)
   })
 
@@ -110,7 +111,7 @@ To listen to named events, you'll require a listener for each type of event sent
    * `event: message` It will not trigger on any
    * other event type.
    */
-  sse.addEventListener("message", function(e) {
+  sse.addEventListener("message", (e) => {
     console.log(e.data)
   })
 

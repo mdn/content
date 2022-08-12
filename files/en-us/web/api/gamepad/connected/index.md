@@ -1,6 +1,7 @@
 ---
 title: Gamepad.connected
 slug: Web/API/Gamepad/connected
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -27,7 +28,7 @@ A boolean.
 ## Examples
 
 ```js
-var gp = navigator.getGamepads()[0];
+const gp = navigator.getGamepads()[0];
 console.log(gp.connected);
 ```
 

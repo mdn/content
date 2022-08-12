@@ -1,6 +1,7 @@
 ---
 title: HTMLMeterElement
 slug: Web/API/HTMLMeterElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -31,7 +32,7 @@ _Also inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A `double` representing the optimum, reflecting the {{htmlattrxref("optimum","meter")}} attribute.
 - {{domxref("HTMLMeterElement.value")}}
   - : A `double` representing the current value, reflecting the {{htmlattrxref("value","meter")}} attribute.
-- {{domxref("HTMLMeterElement.labels")}}{{ReadOnlyInline}}
+- {{domxref("HTMLMeterElement.labels")}} {{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} of {{HTMLElement("label")}} elements that are associated with the element.
 
 ## Methods

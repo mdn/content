@@ -1,6 +1,7 @@
 ---
 title: Location
 slug: Web/API/Location
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -41,11 +42,11 @@ body { display: table-cell; text-align: center; vertical-align: middle; font-fam
 ```
 
 ```js hidden
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', (evt) => {
     evt.preventDefault();
 
     window.location.hash = evt.target.hasAttribute('id')
-        ? '#' + evt.target.getAttribute('id')
+        ? `#${evt.target.getAttribute('id')}`
         : '';
 });
 ```
@@ -90,7 +91,7 @@ document.body.addEventListener('click', function (evt) {
 
 ```js
 // location: https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
-var loc = document.location;
+const loc = document.location;
 console.log(loc.href);      // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
 console.log(loc.protocol);  // https:
 console.log(loc.host);      // developer.mozilla.org:8080

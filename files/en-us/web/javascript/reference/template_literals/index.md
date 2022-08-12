@@ -37,26 +37,29 @@ tagFunction`string text ${expression} string text`
 
 ## Description
 
-Template literals are enclosed by backtick (\`) characters instead
-of double or single quotes.
+Template literals are enclosed by backtick (\`) characters instead of double or single quotes.
 
-Along with having normal strings, template literals can also contain other parts called _placeholders_, which are embedded expressions delimited by a dollar sign and curly braces: `${expression}`. The strings and placeholders get passed to a function — either a default function, or a function you supply. The default function (when you don’t supply your own) just performs [string interpolation](#string_interpolation) to do substitution of the placeholders and then concatenate the parts into a single string.
+Along with having normal strings, template literals can also contain other parts called _placeholders_, which are embedded expressions delimited by a dollar sign and curly braces: `${expression}`. The strings and placeholders get passed to a function — either a default function, or a function you supply. The default function (when you don't supply your own) just performs [string interpolation](#string_interpolation) to do substitution of the placeholders and then concatenate the parts into a single string.
 
 To supply a function of your own, precede the template literal with a function name; the result is called a [**tagged template**](#tagged_templates). In that case, the template literal is passed to your tag function, where you can then perform whatever operations you want on the different parts of the template literal.
 
-To escape a backtick in a template literal, put a backslash (`\`) before the
-backtick.
+To escape a backtick in a template literal, put a backslash (`\`) before the backtick.
 
 ```js
 `\`` === '`' // --> true
+```
+
+Dollar signs can be escaped as well to prevent interpolation.
+
+```js
+`\${1}` === '${1}' // --> true
 ```
 
 ### Multi-line strings
 
 Any newline characters inserted in the source are part of the template literal.
 
-Using normal strings, you would have to use the following syntax in order to get
-multi-line strings:
+Using normal strings, you would have to use the following syntax in order to get multi-line strings:
 
 ```js
 console.log('string text line 1\n' +
@@ -76,11 +79,11 @@ string text line 2`);
 
 ### String interpolation
 
-Without template literals, when you want to combine output from expressions with strings, you’d [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using_) using the "`+`" (plus sign) ([addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)):
+Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using_) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
 
 ```js
-let a = 5;
-let b = 10;
+const a = 5;
+const b = 10;
 console.log('Fifteen is ' + (a + b) + ' and\nnot ' + (2 * a + b) + '.');
 // "Fifteen is 15 and
 // not 20."
@@ -88,22 +91,28 @@ console.log('Fifteen is ' + (a + b) + ' and\nnot ' + (2 * a + b) + '.');
 
 That can be hard to read – especially when you have multiple expressions.
 
-With template literals, you can avoid the concatenation operator — and improve the readability of your code — by using placeholders of the form "`${expression}`" to perform substitutions for embedded expressions:
+With template literals, you can avoid the concatenation operator — and improve the readability of your code — by using placeholders of the form `${expression}` to perform substitutions for embedded expressions:
 
 ```js
-let a = 5;
-let b = 10;
+const a = 5;
+const b = 10;
 console.log(`Fifteen is ${a + b} and
 not ${2 * a + b}.`);
 // "Fifteen is 15 and
 // not 20."
 ```
 
+Note that there's a mild difference between the two syntaxes. Addition would coerce the expression to a _primitive_, which calls [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) in priority; on the other hand, template literal would coerce the expression to a _string_, which calls [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) in priority. If the expression has a [`@@toPrimitive`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) method, string concatenation calls it with `"default"` as hint, while template literals use `"string"`. This is important for objects that have different string and primitive representations — such as [Temporal](https://github.com/tc39/proposal-temporal), whose `valueOf()` method throws.
+
+```js
+const t = Temporal.Now.instant();
+"" + t; // Throws TypeError
+`${t}`; // '2022-07-31T04:48:56.113918308Z'
+```
+
 ### Nesting templates
 
-In certain cases, nesting a template is the easiest (and perhaps more readable) way to
-have configurable strings. Within a backtick-delimited template, it is simple to allow inner
-backticks by using them inside an `${expression}` placeholder within the template.
+In certain cases, nesting a template is the easiest (and perhaps more readable) way to have configurable strings. Within a backtick-delimited template, it is simple to allow inner backticks by using them inside an `${expression}` placeholder within the template.
 
 For example, without template literals, if you wanted to return a certain value based on a particular condition, you could do something like the following:
 
@@ -132,37 +141,28 @@ const classes = `header ${ isLargeScreen() ? '' :
 
 A more advanced form of template literals are _tagged_ templates.
 
-Tags allow you to parse template literals with a function. The first argument of a tag
-function contains an array of string values. The remaining arguments are related to the
-expressions.
+Tags allow you to parse template literals with a function. The first argument of a tag function contains an array of string values. The remaining arguments are related to the expressions.
 
-The tag function can then perform whatever operations on these arguments you wish, and
-return the manipulated string. (Alternatively, it can return something completely
-different, as described in one of the following examples.)
+The tag function can then perform whatever operations on these arguments you wish, and return the manipulated string. (Alternatively, it can return something completely different, as described in one of the following examples.)
 
 The name of the function used for the tag can be whatever you want.
 
 ```js
-let person = 'Mike';
-let age = 28;
+const person = 'Mike';
+const age = 28;
 
 function myTag(strings, personExp, ageExp) {
-  let str0 = strings[0]; // "That "
-  let str1 = strings[1]; // " is a "
-  let str2 = strings[2]; // "."
+  const str0 = strings[0]; // "That "
+  const str1 = strings[1]; // " is a "
+  const str2 = strings[2]; // "."
 
-  let ageStr;
-  if (ageExp > 99){
-    ageStr = 'centenarian';
-  } else {
-    ageStr = 'youngster';
-  }
+  const ageStr = ageExp > 99 ? 'centenarian' : 'youngster';
 
   // We can even return a string built using a template literal
   return `${str0}${personExp}${str1}${ageStr}${str2}`;
 }
 
-let output = myTag`That ${ person } is a ${ age }.`;
+const output = myTag`That ${person} is a ${age}.`;
 
 console.log(output);
 // That Mike is a youngster.
@@ -172,36 +172,57 @@ Tag functions don't even need to return a string!
 
 ```js
 function template(strings, ...keys) {
-  return (function(...values) {
-    let dict = values[values.length - 1] || {};
-    let result = [strings[0]];
-    keys.forEach(function(key, i) {
-      let value = Number.isInteger(key) ? values[key] : dict[key];
+  return (...values) => {
+    const dict = values[values.length - 1] || {};
+    const result = [strings[0]];
+    keys.forEach((key, i) => {
+      const value = Number.isInteger(key) ? values[key] : dict[key];
       result.push(value, strings[i + 1]);
     });
     return result.join('');
-  });
+  };
 }
 
-let t1Closure = template`${0}${1}${0}!`;
-//let t1Closure = template(["","","","!"],0,1,0);
+const t1Closure = template`${0}${1}${0}!`;
+// const t1Closure = template(["","","","!"],0,1,0);
 t1Closure('Y', 'A');                      // "YAY!"
 
-let t2Closure = template`${0} ${'foo'}!`;
-//let t2Closure = template([""," ","!"],0,"foo");
-t2Closure('Hello', {foo: 'World'}); // "Hello World!"
+const t2Closure = template`${0} ${'foo'}!`;
+// const t2Closure = template([""," ","!"],0,"foo");
+t2Closure('Hello', { foo: 'World' }); // "Hello World!"
 
-let t3Closure = template`I'm ${'name'}. I'm almost ${'age'} years old.`;
-//let t3Closure = template(["I'm ", ". I'm almost ", " years old."], "name", "age");
-t3Closure('foo', {name: 'MDN', age: 30}); //"I'm MDN. I'm almost 30 years old."
-t3Closure({name: 'MDN', age: 30}); //"I'm MDN. I'm almost 30 years old."
+const t3Closure = template`I'm ${'name'}. I'm almost ${'age'} years old.`;
+// const t3Closure = template(["I'm ", ". I'm almost ", " years old."], "name", "age");
+t3Closure('foo', { name: 'MDN', age: 30 }); // "I'm MDN. I'm almost 30 years old."
+t3Closure({ name: 'MDN', age: 30 }); // "I'm MDN. I'm almost 30 years old."
 ```
+
+The first argument received by the tag function is an array of strings. For any template literal, its length is equal to the number of substitutions (occurrences of `${…}`) plus one, and is therefore always non-empty.
+
+For any particular tagged template literal expression, the tag function will always be called with the exact same literal array, no matter how many times the literal is evaluated.
+
+```js
+const callHistory = [];
+
+function tag(strings, ...values) {
+  callHistory.push(strings);
+  // Return a freshly made object
+  return {};
+}
+
+function evaluateLiteral() {
+  return tag`Hello, ${'world'}!`;
+}
+
+console.log(evaluateLiteral() === evaluateLiteral()); // false; each time `tag` is called, it returns a new object
+console.log(callHistory[0] === callHistory[1]); // true; all evaluations of the same tagged literal would pass in the same strings array
+```
+
+This allows the tag to cache the result based on the identity of its first argument. To further ensure the array value's stability, the first argument and its [`raw` property](#raw_strings) are both [frozen](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen), so you can't mutate them in any way.
 
 ### Raw strings
 
-The special `raw` property, available on the first argument to the tag
-function, allows you to access the raw strings as they were entered, without processing
-[escape sequences](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#using_special_characters_in_strings).
+The special `raw` property, available on the first argument to the tag function, allows you to access the raw strings as they were entered, without processing [escape sequences](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#using_special_characters_in_strings).
 
 ```js
 function tag(strings) {
@@ -213,11 +234,10 @@ tag`string text line 1 \n string text line 2`;
 // including the two characters '\' and 'n'
 ```
 
-In addition, the {{jsxref("String.raw()")}} method exists to create raw strings—just
-like the default template function and string concatenation would create.
+In addition, the {{jsxref("String.raw()")}} method exists to create raw strings just like the default template function and string concatenation would create.
 
 ```js
-let str = String.raw`Hi\n${2+3}!`;
+const str = String.raw`Hi\n${2+3}!`;
 // "Hi\\n5!"
 
 str.length;
@@ -227,23 +247,44 @@ Array.from(str).join(',');
 // "H,i,\\,n,5,!"
 ```
 
+`String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e. escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
+
+```js
+const identity = (strings, ...values) => String.raw({ raw: strings }, ...values);
+console.log(identity`Hi\n${2 + 3}!`);
+// Hi
+// 5!
+```
+
+This is useful for many tools which give special treatment to literals tagged by a particular name.
+
+```js
+const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
+// Some formatters will format this literal's content as HTML
+const doc = html`<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Hello</title>
+  </head>
+  <body>
+    <h1>Hello world!</h1>
+  </body>
+</html>
+`;
+```
+
 ### Tagged templates and escape sequences
 
 #### ES2016 behavior
 
-As of ECMAScript 2016, tagged templates conform to the rules of the following escape
-sequences:
+As of ECMAScript 2016, tagged templates conform to the rules of the following escape sequences:
 
-- Unicode escapes started by "`\u`", for example `\u00A9`
-- Unicode code point escapes indicated by "`\u{}`", for example
-  `\u{2F804}`
-- Hexadecimal escapes started by "`\x`", for example `\xA9`
-- Octal literal escapes started by "`\0o`" and followed by one or more
-  digits, for example `\0o251`
+- Unicode escapes started by `\u`, for example `\u00A9`
+- Unicode code point escapes indicated by `\u{}`, for example `\u{2F804}`
+- Hexadecimal escapes started by `\x`, for example `\xA9`
+- Octal literal escapes started by `\0o` and followed by one or more digits, for example `\0o251`
 
-This means that a tagged template like the following is problematic, because, per
-ECMAScript grammar, a parser looks for valid Unicode escape sequences, but finds
-malformed syntax:
+This means that a tagged template like the following is problematic, because, per ECMAScript grammar, a parser looks for valid Unicode escape sequences, but finds malformed syntax:
 
 ```js
 latex`\unicode`
@@ -253,15 +294,10 @@ latex`\unicode`
 
 #### ES2018 revision of illegal escape sequences
 
-Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences
-are common.
-The ECMAScript proposal [Template Literal Revision](https://tc39.es/proposal-template-literal-revision/)
-(integrated in the ECMAScript 2018 standard) removed the
-syntax restriction of ECMAScript escape sequences from tagged templates.
+Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. The ECMAScript proposal [Template Literal Revision](https://tc39.es/proposal-template-literal-revision/)
+(integrated in the ECMAScript 2018 standard) removed the syntax restriction of ECMAScript escape sequences from tagged templates.
 
-However, illegal escape sequences must still be represented in the "cooked"
-representation. They will show up as {{jsxref("undefined")}} element in the "cooked"
-array:
+However, illegal escape sequences must still be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:
 
 ```js
 function latex(str) {
@@ -273,11 +309,10 @@ latex`\unicode`
 // { cooked: undefined, raw: "\\unicode" }
 ```
 
-Note that the escape sequence restriction is only dropped from _tagged_
-templates—not from _untagged_ template literals:
+Note that the escape-sequence restriction is only dropped from _tagged_ templates—not from _untagged_ template literals:
 
 ```js example-bad
-let bad = `bad escape sequence: \unicode`;
+const bad = `bad escape sequence: \unicode`;
 ```
 
 ## Specifications

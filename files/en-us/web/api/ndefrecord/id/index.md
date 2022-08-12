@@ -1,6 +1,7 @@
 ---
 title: NDEFRecord.id
 slug: Web/API/NDEFRecord/id
+page-type: web-api-instance-property
 tags:
   - NDEF
   - NDEFRecord

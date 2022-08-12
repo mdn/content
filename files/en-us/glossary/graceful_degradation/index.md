@@ -14,7 +14,7 @@ It is a useful technique that allows Web developers to focus on developing the b
 
 ## See also
 
-- {{Interwiki("wikipedia", "Graceful degradation")}} on Wikipedia
+- [Graceful degradation](https://en.wikipedia.org/wiki/Graceful_degradation) on Wikipedia
 - [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
 - [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
 - [MDN Web Docs Glossary](/en-US/docs/Glossary)

@@ -1,6 +1,7 @@
 ---
 title: MediaQueryList.addListener()
 slug: Web/API/MediaQueryList/addListener
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -37,13 +38,13 @@ addListener(func)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-var paragraph = document.querySelector('p');
-var mediaQueryList = window.matchMedia('(max-width: 600px)');
+const paragraph = document.querySelector('p');
+const mediaQueryList = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -71,8 +72,7 @@ mediaQueryList.addListener(screenTest);
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from
-  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

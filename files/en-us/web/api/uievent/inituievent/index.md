@@ -1,6 +1,7 @@
 ---
 title: UIEvent.initUIEvent()
 slug: Web/API/UIEvent/initUIEvent
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -33,18 +34,18 @@ initUIEvent(type, canBubble, cancelable, view, detail)
 
 ### Parameters
 
-- _`type`_
+- `type`
   - : A string defining the type of event.
-- _`canBubble`_
+- `canBubble`
   - : A boolean value deciding whether the event should bubble up through the
     event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }}
     will give its value.
-- _`cancelable`_
+- `cancelable`
   - : A boolean value defining whether the event can be canceled. Once set, the
     read-only property {{ domxref("Event.cancelable") }} will give its value.
-- _`view`_
+- `view`
   - : Is the {{domxref("WindowProxy")}} associated with the event.
-- _`detail`_
+- `detail`
   - : An `unsigned long`  specifying some detail information about the
     event, depending on the type of event. For mouse events, it indicates how many times
     the mouse has been clicked on a given screen location.
@@ -56,7 +57,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var e = document.createEvent("UIEvent");
+const e = document.createEvent("UIEvent");
 // creates a click event that bubbles, can be cancelled,
 // and with its view and detail property initialized to window and 1,
 // respectively

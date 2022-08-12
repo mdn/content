@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserverEntry.intersectionRect
 slug: Web/API/IntersectionObserverEntry/intersectionRect
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer
@@ -38,7 +39,7 @@ area is redrawn.
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     refreshZones.push({
       element: entry.target,
       rect: entry.intersectionRect

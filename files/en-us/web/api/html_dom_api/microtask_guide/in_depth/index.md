@@ -1,6 +1,7 @@
 ---
 title: 'In depth: Microtasks and the JavaScript runtime environment'
 slug: Web/API/HTML_DOM_API/Microtask_guide/In_depth
+page-type: guide
 tags:
   - API
   - Advanced
@@ -59,7 +60,7 @@ function greetUser(user) {
     }
     return greeting;
   }
-  outputElem.innerHTML += localGreeting(user) + "<br>\r";
+  outputElem.innerHTML += `${localGreeting(user)}<br>\r`;
 }
 
 greetUser("Mike");

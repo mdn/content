@@ -170,7 +170,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
 
     In this case, we need to use the `.prevent` handler to stop the browser's default submit action. Add `.prevent` to the `@submit` handler in your template like so:
 
-    ```js
+    ```html
     <form @submit.prevent="onSubmit">
     ```
 
@@ -205,7 +205,7 @@ The first thing we need is a `data` property in our form to track the value of t
 
     So in our case, we would add it to our `new-todo-input` field as seen below. Do this now:
 
-    ```js
+    ```html
     <input
       type="text"
       id="new-todo-input"
@@ -334,7 +334,7 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
 
     ```js
     onSubmit() {
-      if(this.label === "") {
+      if (this.label === "") {
         return;
       }
       this.$emit('todo-added', this.label);
@@ -353,7 +353,7 @@ Update your `ToDoForm` component's `onSubmit()` method to this:
 
 ```js
 onSubmit() {
-  if(this.label === "") {
+  if (this.label === "") {
     return;
   }
   this.$emit('todo-added', this.label);

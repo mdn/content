@@ -1,6 +1,7 @@
 ---
 title: performance.mark()
 slug: Web/API/Performance/mark
+page-type: web-api-instance-method
 tags:
   - API
   - Method

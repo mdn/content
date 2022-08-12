@@ -1,15 +1,15 @@
 ---
 title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
+page-type: web-api-global-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - crossOriginIsolated
 browser-compat: api.crossOriginIsolated
 ---
-{{APIRef()}}{{SeeCompatTable}}
+{{APIRef()}}
 
 The global **`crossOriginIsolated`** read-only property returns a boolean value that
 indicates whether a {{JSxRef("SharedArrayBuffer")}} can be sent via a
@@ -25,7 +25,7 @@ A boolean value
 ## Examples
 
 ```js
-if(crossOriginIsolated) {
+if (crossOriginIsolated) {
   // Post SharedArrayBuffer
 } else {
   // Do something else

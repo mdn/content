@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.isPresenting
 slug: Web/API/VRDisplay/isPresenting
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -32,12 +33,12 @@ function onVRExitPresent () {
   // we weren't presenting.)
   if (!vrDisplay.isPresenting)
     return;
-  vrDisplay.exitPresent().then(function () {
+  vrDisplay.exitPresent().then(() => {
     // Nothing to do because we're handling things in onVRPresentChange.
-  }, function (err) {
-    var errMsg = "exitPresent failed.";
+  }, (err) => {
+    let errMsg = "exitPresent failed.";
     if (err && err.message) {
-      errMsg += "<br/>" + err.message
+      errMsg += `<br/>${err.message}`;
     }
     VRSamplesUtil.addError(errMsg, 2000);
   });

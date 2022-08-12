@@ -1,6 +1,7 @@
 ---
 title: RTCRtpContributingSource.rtpTimestamp
 slug: Web/API/RTCRtpContributingSource/rtpTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

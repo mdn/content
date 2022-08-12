@@ -1,6 +1,7 @@
 ---
 title: Using WebRTC data channels
 slug: Web/API/WebRTC_API/Using_data_channels
+page-type: guide
 tags:
   - Communications
   - Data Transfer
@@ -72,8 +73,6 @@ WebRTC data channels support buffering of outbound data. This is handled automat
 
 **<<\<write more about using bufferedAmount, bufferedAmountLowThreshold, onbufferedamountlow, and bufferedamountlow here>>>**
 
-...
-
 ## Understanding message size limits
 
 For any data being transmitted over a network, there are size restrictions. At a fundamental level, the individual network packets can't be larger than a certain value (the exact number depends on the network and the transport layer being used). At the application level—that is, within the {{Glossary("user agent", "user agent's")}} implementation of WebRTC on which your code is running—the WebRTC implementation implements features to support messages that are larger than the maximum packet size on the network's transport layer.
@@ -86,7 +85,7 @@ Messages smaller than 16kiB can be sent without concern, as all major user agent
 
 ### Concerns with large messages
 
-Currently, it's not practical to use `RTCDataChannel` for messages larger than 64kiB (16kiB if you want to support cross-browser exchange of data). The problem arises from the fact that SCTP—the protocol used for sending and receiving data on an `RTCDataChannel`—was originally designed for use as a signaling protocol. It was expected that messages would be relatively small. Support for messages larger than the network layer's {{interwiki("wikipedia", "Maximum transmission unit", "MTU")}} was added almost as an afterthought, in case signaling messages needed to be larger than the MTU. This feature requires that each piece of the message have consecutive sequence numbers, so they have to be transmitted one after another, without any other data interleaved between them.
+Currently, it's not practical to use `RTCDataChannel` for messages larger than 64kiB (16kiB if you want to support cross-browser exchange of data). The problem arises from the fact that SCTP—the protocol used for sending and receiving data on an `RTCDataChannel`—was originally designed for use as a signaling protocol. It was expected that messages would be relatively small. Support for messages larger than the network layer's [MTU](https://en.wikipedia.org/wiki/Maximum_transmission_unit) was added almost as an afterthought, in case signaling messages needed to be larger than the MTU. This feature requires that each piece of the message have consecutive sequence numbers, so they have to be transmitted one after another, without any other data interleaved between them.
 
 This eventually became a problem. Over time, various applications (including those implementing WebRTC) began to use SCTP to transmit larger and larger messages. Eventually it was realized that when the messages become too large, it's possible for the transmission of a large message to block all other data transfers on that data channel—including critical signaling messages.
 

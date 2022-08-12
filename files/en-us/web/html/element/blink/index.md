@@ -29,7 +29,7 @@ This element is unsupported and thus implements the {{domxref("HTMLUnknownElemen
 
 ### Result (toned down!)
 
-![](htmlblinkelement.gif)
+![Text "why would somebody use this" flashing on and off.](htmlblinkelement.gif)
 
 ## CSS polyfill
 
@@ -77,7 +77,7 @@ blink {
 
 ## See also
 
-- [History of the creation of the HTML `<blink>` element](https://www.montulli.org/theoriginofthe%3Cblink%3Etag).
+- [History of the creation of the HTML `<blink>` element](https://web.archive.org/web/20220331020029/http://www.montulli.org/theoriginofthe%3Cblink%3Etag).
 - {{cssxref("text-decoration")}}, where a blink value exists, though browsers are not required to effectively make it blink.
 - {{htmlelement("marquee")}}, another similar non-standard element.
 - [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) are the way to go to create such an effect.

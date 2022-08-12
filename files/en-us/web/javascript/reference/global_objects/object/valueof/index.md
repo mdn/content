@@ -56,7 +56,9 @@ Suppose you have an object type `MyNumberType` and you want to create a
 to the object's `valueOf` method:
 
 ```js
-MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
+MyNumberType.prototype.valueOf = function () {
+  return customPrimitiveValue;
+};
 ```
 
 With the preceding code in place, any time an object of type `MyNumberType`
@@ -74,7 +76,7 @@ myNumberType.valueOf()
 > {{jsxref("Object.toString", "toString()")}} method, which is different from
 > {{jsxref("String")}} objects converting to string primitives using
 > `valueOf`. All objects have a string conversion, if only
-> "`[object type]`". But many objects do not convert to number,
+> `"[object type]"`. But many objects do not convert to number,
 > boolean, or function.
 
 ## Examples
@@ -83,14 +85,14 @@ myNumberType.valueOf()
 
 ```js
 function MyNumberType(n) {
-    this.number = n;
+  this.number = n;
 }
 
-MyNumberType.prototype.valueOf = function() {
-    return this.number;
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
 };
 
-var myObj = new MyNumberType(4);
+const myObj = new MyNumberType(4);
 myObj + 3; // 7
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -47,7 +48,7 @@ A live {{domxref("NodeList")}} collection, meaning it automatically updates as n
 ```
 
 ```js
-var up_names = document.getElementsByName("up");
+const up_names = document.getElementsByName("up");
 console.log(up_names[0].tagName); // displays "INPUT"
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: VRFrameData
 slug: Web/API/VRFrameData
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -25,17 +26,17 @@ The **`VRFrameData`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API
 
 ## Properties
 
-- {{domxref("VRFrameData.leftProjectionMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.leftProjectionMatrix")}} {{deprecated_inline}} {{readonlyInline}}
   - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the left eye's rendering.
-- {{domxref("VRFrameData.leftViewMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.leftViewMatrix")}} {{deprecated_inline}} {{readonlyInline}}
   - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the left eye's rendering.
-- {{domxref("VRFrameData.pose")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.pose")}} {{deprecated_inline}} {{readonlyInline}}
   - : The {{domxref("VRPose")}} of the {{domxref("VRDisplay")}} at the current {{domxref("VRFrameData.timestamp")}}.
-- {{domxref("VRFrameData.rightProjectionMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.rightProjectionMatrix")}} {{deprecated_inline}} {{readonlyInline}}
   - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the right eye's rendering.
-- {{domxref("VRFrameData.rightViewMatrix")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.rightViewMatrix")}} {{deprecated_inline}} {{readonlyInline}}
   - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the right eye's rendering.
-- {{domxref("VRFrameData.timestamp")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRFrameData.timestamp")}} {{deprecated_inline}} {{readonlyInline}}
   - : A constantly increasing timestamp value representing the time a frame update occurred.
 
 ## Examples

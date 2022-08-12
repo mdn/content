@@ -1,6 +1,7 @@
 ---
 title: TrustedScript.toJSON()
 slug: Web/API/TrustedScript/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method

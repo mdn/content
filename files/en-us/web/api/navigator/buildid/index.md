@@ -1,6 +1,7 @@
 ---
 title: Navigator.buildID
 slug: Web/API/Navigator/buildID
+page-type: web-api-instance-property
 tags:
   - API
   - Gecko

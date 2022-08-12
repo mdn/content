@@ -1,6 +1,7 @@
 ---
 title: Resource Timing API
 slug: Web/API/Resource_Timing_API
+page-type: web-api-overview
 tags:
   - API
   - Guide
@@ -10,6 +11,7 @@ tags:
   - Resource Timing API
   - Timing
   - Web Performance
+spec-urls: https://w3c.github.io/resource-timing/
 ---
 {{DefaultAPISidebar("Resource Timing API")}}
 
@@ -63,9 +65,7 @@ The {{domxref("PerformanceResourceTiming")}} interface's {{domxref("PerformanceR
 
 ## Specifications
 
-| Specification                                             |
-| --------------------------------------------------------- |
-| [Resource Timing](https://w3c.github.io/resource-timing/) |
+{{Specifications}}
 
 ## Implementation status
 

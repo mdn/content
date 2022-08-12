@@ -1,6 +1,7 @@
 ---
 title: HTMLTimeElement.dateTime
 slug: Web/API/HTMLTimeElement/dateTime
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -161,7 +162,7 @@ A string.
 ```js
 // Assumes there is <time id="t"> element in the HTML
 
-var t = document.getElementById("t");
+const t = document.getElementById("t");
 t.dateTime = "6w 5h 34m 5s";
 ```
 

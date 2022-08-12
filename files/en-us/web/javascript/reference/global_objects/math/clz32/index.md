@@ -30,20 +30,17 @@ Math.clz32(x)
 
 ### Return value
 
-The number of leading zero bits in the 32-bit binary representation of the given
-number.
+The number of leading zero bits in the 32-bit binary representation of the given number.
 
 ## Description
 
-"`clz32`" is short for **CountLeadingZeroes32**.
+`clz32` is short for **CountLeadingZeroes32**.
 
-If `x` is not a number, then it will be converted to a number
-first, then converted to a 32-bit unsigned integer.
+If `x` is not a number, then it will be converted to a number first, then converted to a 32-bit unsigned integer.
 
-If the converted 32-bit unsigned integer is `0`, then return
-`32`, because all bits are `0`.
+If the converted 32-bit unsigned integer is `0`, then return `32`, because all bits are `0`.
 
-This function is particularly useful for systems that compile to JS, like [Emscripten](/en-US/docs/Emscripten).
+This function is particularly useful for systems that compile to JS, like [Emscripten](https://emscripten.org).
 
 ### Count Leading Ones and beyond
 
@@ -59,19 +56,20 @@ zeros.
 Consider the following 32-bit word:
 
 ```js
-var a = 32776;   // 00000000000000001000000000001000 (16 leading zeros)
+const a = 32776;   // 00000000000000001000000000001000 (16 leading zeros)
 Math.clz32(a);   // 16
 
-var b = ~32776;  // 11111111111111110111111111110111 (32776 inverted, 0 leading zeros)
+const b = ~32776;  // 11111111111111110111111111110111 (32776 inverted, 0 leading zeros)
 Math.clz32(b);   // 0 (this is equal to how many leading one's there are in a)
 ```
 
 Using this logic, a `clon` function can be created as follows:
 
 ```js
-var clz = Math.clz32;
-function clon(integer){
-    return clz(~integer);
+const clz = Math.clz32;
+
+function clon(integer) {
+  return clz(~integer);
 }
 ```
 
@@ -80,78 +78,89 @@ fills in all the high bits with the lowest filled bit, then negates the bits to 
 all higher set bits so that `clz` can then be used.
 
 ```js example-bad
-var clz = Math.clz32;
-function ctrz(integer){ // count trailing zeros
-    // 1. fill in all the higher bits after the first one
-    integer |= integer << 16;
-    integer |= integer << 8;
-    integer |= integer << 4;
-    integer |= integer << 2;
-    integer |= integer << 1;
-    // 2. Now, inversing the bits reveals the lowest bits
-    return 32 - clz(~integer) |0; // `|0` ensures integer coercion
+const clz = Math.clz32;
+
+// count trailing zeros
+function ctrz(integer) {
+  // 1. fill in all the higher bits after the first one
+  integer |= integer << 16;
+  integer |= integer << 8;
+  integer |= integer << 4;
+  integer |= integer << 2;
+  integer |= integer << 1;
+  // 2. Now, inversing the bits reveals the lowest bits
+  return 32 - clz(~integer);
 }
 ```
 
 However, a simpler and possibly more efficient algorithm is the following:
 
 ```js example-good
-function ctrz(integer){
-    integer >>>= 0 // ensures coercion to Uint32
-    if (integer === 0) return 32; // skipping this step would make it return -1
-    integer &= -integer; // equivalent to `int = int & (~int + 1)`
-    return 31 - clz(x);
+function ctrz(integer) {
+  integer >>>= 0; // ensures coercion to Uint32
+  if (integer === 0) {
+    // skipping this step would make it return -1
+    return 32;
+  }
+  integer &= -integer; // equivalent to `int = int & (~int + 1)`
+  return 31 - clz(integer);
 }
 ```
 
 Then we can define a "Count Trailing Ones" function like so:
 
 ```js
-function ctron(integer){ // count trailing ones
-    // No shift-filling-in-with-ones operator is available in
-    // JavaScript, so the below code is the fastest
-    return ctrz(~integer);
-    /* Alternate implementation for demonstrational purposes:
-       // 1. erase all the higher bits after the first zero
-       integer &= (integer << 16) | 0xffff;
-       integer &= (integer << 8 ) | 0x00ff;
-       integer &= (integer << 4 ) | 0x000f;
-       integer &= (integer << 2 ) | 0x0003;
-       integer &= (integer << 1 ) | 0x0001;
-       // 2. Now, inversing the bits reveals the lowest zeros
-       return 32 - clon(~integer) |0;
-    */
+// count trailing ones
+function ctron(integer) {
+  // No shift-filling-in-with-ones operator is available in
+  // JavaScript, so the below code is the fastest
+  return ctrz(~integer);
+
+  /* Alternate implementation for demonstrational purposes:
+      // 1. erase all the higher bits after the first zero
+      integer &= (integer << 16) | 0xffff;
+      integer &= (integer << 8 ) | 0x00ff;
+      integer &= (integer << 4 ) | 0x000f;
+      integer &= (integer << 2 ) | 0x0003;
+      integer &= (integer << 1 ) | 0x0001;
+      // 2. Now, inversing the bits reveals the lowest zeros
+      return 32 - clon(~integer);
+  */
 }
 ```
 
-Make these helper functions into ASM.JS module; then, you have a true performance
-masterpiece. Situations like these are exactly what ASM.JS was designed for.
+These helper functions can be made into an [asm.js](/en-US/docs/Games/Tools/asm.js) module for a potential performance improvement.
 
 ```js
-var countTrailsMethods = (function(stdlib, foreign, heap) {
-    "use asm";
-    var clz = stdlib.Math.clz32;
-    function ctrz(integer) { // count trailing zeros
-        integer = integer | 0; // coerce to an integer
-        // 1. fill in all the higher bits after the first one
-        // ASMjs for some reason does not allow ^=,&=, or |=
-        integer = integer | (integer << 16);
-        integer = integer | (integer << 8);
-        integer = integer | (integer << 4);
-        integer = integer | (integer << 2);
-        integer = integer | (integer << 1);
-        // 2. Now, inversing the bits reveals the lowest bits
-        return 32 - clz(~integer) |0;
-    }
-    function ctron(integer) { // count trailing ones
-        integer = integer | 0; // coerce to an integer
-        return ctrz(~integer) |0;
-    }
-    // unfortunately, ASM.JS demands slow crummy objects:
-    return {a: ctrz, b: ctron};
+const countTrailsMethods = (function (stdlib, foreign, heap) {
+  "use asm";
+  const clz = stdlib.Math.clz32;
+
+  // count trailing zeros
+  function ctrz(integer) {
+    integer = integer | 0; // coerce to an integer
+    // 1. fill in all the higher bits after the first one
+    // Note: asm.js doesn't have compound assignment operators such as |=
+    integer = integer | (integer << 16);
+    integer = integer | (integer << 8);
+    integer = integer | (integer << 4);
+    integer = integer | (integer << 2);
+    integer = integer | (integer << 1);
+    // 2. Now, inversing the bits reveals the lowest bits
+    return 32 - clz(~integer) | 0;
+  }
+
+  // count trailing ones
+  function ctron(integer) {
+    integer = integer | 0; // coerce to an integer
+    return ctrz(~integer) | 0;
+  }
+
+  // asm.js demands plain objects:
+  return { ctrz: ctrz, ctron: ctron };
 })(window, null, null);
-var ctrz = countTrailsMethods.a;
-var ctron = countTrailsMethods.b;
+
+const { ctrz, ctron } = countTrailsMethods;
 ```
 
 ## Examples
@@ -163,31 +172,11 @@ Math.clz32(1);           // 31
 Math.clz32(1000);        // 22
 Math.clz32();            // 32
 
-var stuff = [NaN, Infinity, -Infinity, 0, -0, false, null, undefined, 'foo', {}, []];
-stuff.every(n => Math.clz32(n) == 32);  // true
+const stuff = [NaN, Infinity, -Infinity, 0, -0, false, null, undefined, 'foo', {}, []];
+stuff.every((n) => Math.clz32(n) === 32);  // true
 
 Math.clz32(true);        // 31
 Math.clz32(3.5);         // 30
-```
-
-## Polyfill
-
-The following polyfill is the most efficient.
-
-```js
-if (!Math.clz32) Math.clz32 = (function(log, LN2){
-  return function(x) {
-    // Let n be ToUint32(x).
-    // Let p be the number of leading zero bits in
-    // the 32-bit binary representation of n.
-    // Return p.
-    var asUint = x >>> 0;
-    if (asUint === 0) {
-      return 32;
-    }
-    return 31 - (log(asUint) / LN2 | 0) |0; // the "| 0" acts like math.floor
-  };
-})(Math.log, Math.LN2);
 ```
 
 ## Specifications

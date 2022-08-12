@@ -76,16 +76,6 @@ Alternatively, in the absence of `Number.isNaN`, the expression
 `NaN` or not, as the result is not subject to the false positives that make
 `isNaN` unreliable.
 
-A polyfill for `isNaN` would be (the polyfill leverages the unique
-never-equal-to-itself characteristic of `NaN`):
-
-```js
-const isNaN = function(value) {
-    const n = Number(value);
-    return n !== n;
-};
-```
-
 ## Examples
 
 ```js

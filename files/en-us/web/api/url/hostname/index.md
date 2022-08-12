@@ -1,6 +1,7 @@
 ---
 title: URL.hostname
 slug: Web/API/URL/hostname
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: HTMLDataElement.value
 slug: Web/API/HTMLDataElement/value
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

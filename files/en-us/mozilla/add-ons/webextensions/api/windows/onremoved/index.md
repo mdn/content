@@ -55,7 +55,7 @@ Log the IDs of windows as they are removed.
 
 ```js
 browser.windows.onRemoved.addListener((windowId) => {
-  console.log("Closed window: " + windowId);
+  console.log(`Closed window: ${windowId}`);
 });
 ```
 

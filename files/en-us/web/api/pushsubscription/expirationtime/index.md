@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.expirationTime
 slug: Web/API/PushSubscription/expirationTime
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

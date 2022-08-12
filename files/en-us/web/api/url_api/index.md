@@ -1,6 +1,7 @@
 ---
 title: URL API
 slug: Web/API/URL_API
+page-type: web-api-overview
 tags:
   - API
   - Address
@@ -13,6 +14,7 @@ tags:
   - URL API
   - Web
   - hostname
+browser-compat: api.URL
 ---
 {{DefaultAPISidebar("URL API")}}
 
@@ -57,7 +59,7 @@ let addr = new URL("https://example.com/login?user=someguy&page=news");
 try {
   loginUser(addr.searchParams.get("user"));
   gotoPage(addr.searchParams.get("page"));
-} catch(err) {
+} catch (err) {
   showErrorMessage(err);
 }
 ```
@@ -103,13 +105,11 @@ A working version of this example can be [found on Glitch](https://url-api.glitc
 
 ## Specifications
 
-| Specification                                       |
-| --------------------------------------------------- |
-| [URL Living Standard](https://url.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## See also
 

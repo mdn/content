@@ -1,6 +1,7 @@
 ---
 title: Using textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+page-type: guide
 tags:
   - Tutorial
   - WebGL
@@ -15,7 +16,7 @@ Now that our sample program has a rotating 3D cube, let's map a texture onto it 
 
 The first thing to do is add code to load the textures. In our case, we'll be using a single texture, mapped onto all six sides of our rotating cube, but the same technique can be used for any number of textures.
 
-> **Note:** It's important to note that the loading of textures follows [cross-domain rules](/en-US/docs/Web/HTTP/CORS); that is, you can only load textures from sites for which your content has CORS approval. See [Cross-domain textures below](#Cross-domain_textures) for details.
+> **Note:** It's important to note that the loading of textures follows [cross-domain rules](/en-US/docs/Web/HTTP/CORS); that is, you can only load textures from sites for which your content has CORS approval. See [Cross-domain textures below](#cross-domain_textures) for details.
 
 The code that loads the texture looks like this:
 
@@ -46,7 +47,7 @@ function loadTexture(gl, url) {
                 pixel);
 
   const image = new Image();
-  image.onload = function() {
+  image.onload = () => {
     gl.bindTexture(gl.TEXTURE_2D, texture);
     gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
                   srcFormat, srcType, image);
@@ -71,7 +72,7 @@ function loadTexture(gl, url) {
 }
 
 function isPowerOf2(value) {
-  return (value & (value - 1)) == 0;
+  return value & (value - 1) === 0;
 }
 ```
 
@@ -98,9 +99,15 @@ Again, with these parameters, compatible WebGL devices will automatically accept
 
 To load the image, add a call to our `loadTexture()` function within our `main()` function. This can be added after the `initBuffers(gl)` call.
 
+But also note: Browsers copy pixels from the loaded image in top-to-bottom order — from the top-left corner; but WebGL wants the pixels in bottom-to-top order — starting from the bottom-left corner. (For more details, see [Why is my WebGL texture upside-down?](https://jameshfisher.com/2020/10/22/why-is-my-webgl-texture-upside-down/).)
+
+So in order to prevent the resulting image texture from having the wrong orientation when rendered, we also need call [`pixelStorei()`](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei) with the `gl.UNPACK_FLIP_Y_WEBGL` parameter set to `true` — to cause the pixels to be flipped into the bottom-to-top order that WebGL expects.
+
 ```js
 // Load texture
 const texture = loadTexture(gl, 'cubetexture.png');
+// Flip image pixels into the bottom-to-top order that WebGL expects.
+gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 ```
 
 ## Mapping the texture onto the faces
@@ -147,7 +154,7 @@ At this point, the texture is loaded and ready to use. But before we can use it,
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
                 gl.STATIC_DRAW);
 
-...
+  // …
   return {
     position: positionBuffer,
     textureCoord: textureCoordBuffer,
@@ -204,7 +211,7 @@ The fragment shader likewise needs to be updated:
   `;
 ```
 
-Instead of assigning a color value to the fragment's color, the fragment's color is computed by fetching the **texel** (that is, the pixel within the texture) based on the value of `vTextureCoord` which like the colors is interpolated between vertices.
+Instead of assigning a color value to the fragment's color, the fragment's color is computed by fetching the {{Glossary("texel")}} (that is, the pixel within the texture) based on the value of `vTextureCoord` which like the colors is interpolated between vertices.
 
 ### Attribute and Uniform Locations
 
@@ -264,15 +271,17 @@ Lastly, add `texture` as a parameter to the `drawScene()` function, both where i
 
 ```js
 drawScene(gl, programInfo, buffers, texture, deltaTime);
-...
+// …
 function drawScene(gl, programInfo, buffers, texture, deltaTime) {
+  // …
+}
 ```
 
 At this point, the rotating cube should be good to go.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample6/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample6) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
 
 ## Cross-domain textures
 
@@ -280,7 +289,7 @@ Loading of WebGL textures is subject to cross-domain access controls. In order f
 
 Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from `file:///` URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for help.
 
-See this [hacks.mozilla.org article](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for an explanation of how to use CORS-approved images as WebGL textures, with [a self-contained example](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
+See this [hacks.mozilla.org article](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for an explanation of how to use CORS-approved images as WebGL textures.
 
 > **Note:** CORS support for WebGL textures and the `crossOrigin` attribute for image elements is implemented in {{Gecko("8.0")}}.
 

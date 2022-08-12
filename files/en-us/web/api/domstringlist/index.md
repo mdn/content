@@ -1,6 +1,7 @@
 ---
 title: DOMStringList
 slug: Web/API/DOMStringList
+page-type: web-api-interface
 tags:
   - API
   - DOM

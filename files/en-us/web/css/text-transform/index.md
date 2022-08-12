@@ -88,10 +88,10 @@ Large sections of text set with a `text-transform` value of `uppercase` may be d
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: none
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 
@@ -110,10 +110,10 @@ This demonstrates no text transformation.
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: capitalize
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 
@@ -198,10 +198,10 @@ This demonstrates how the Dutch _ij_ digraph must be handled like one single let
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: uppercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 
@@ -242,10 +242,10 @@ This demonstrates how Greek vowels except disjunctive _eta_ should have no accen
 
 ```html
 <p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>text-transform: lowercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span></strong>
 </p>
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Navigator.webdriver
 slug: Web/API/Navigator/webdriver
+page-type: web-api-instance-property
 tags:
   - API
   - Navigator

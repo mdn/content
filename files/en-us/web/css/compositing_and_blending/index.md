@@ -7,7 +7,10 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: https://drafts.fxtf.org/compositing-1/
+browser-compat:
+  - css.properties.background-blend-mode
+  - css.properties.isolation
+  - css.properties.mix-blend-mode
 ---
 {{CSSRef}}
 
@@ -31,14 +34,4 @@ spec-urls: https://drafts.fxtf.org/compositing-1/
 
 ## Browser compatibility
 
-### `background-blend-mode` property
-
-{{Compat("css.properties.background-blend-mode")}}
-
-### `isolation` property
-
-{{Compat("css.properties.isolation")}}
-
-### `mix-blend-mode` property
-
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}

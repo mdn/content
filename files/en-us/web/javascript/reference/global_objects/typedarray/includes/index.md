@@ -45,7 +45,7 @@ A {{jsxref("Boolean")}}.
 ### Using includes
 
 ```js
-var uint8 = new Uint8Array([1,2,3]);
+const uint8 = new Uint8Array([1,2,3]);
 uint8.includes(2);     // true
 uint8.includes(4);     // false
 uint8.includes(3, 3);  // false

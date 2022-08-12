@@ -1,6 +1,7 @@
 ---
 title: DOMRectReadOnly()
 slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

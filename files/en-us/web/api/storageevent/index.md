@@ -1,6 +1,7 @@
 ---
 title: StorageEvent
 slug: Web/API/StorageEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -28,7 +29,7 @@ _In addition to the properties listed below, this interface inherits the propert
 
 - {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
   - : Returns a string that represents the key changed.
-    The `key` attribute is {{jsxref("null")}}
+    The `key` attribute is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
     when the change is caused by the storage `clear()` method.
 - {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
   - : Returns a string with the new value of the `key`.

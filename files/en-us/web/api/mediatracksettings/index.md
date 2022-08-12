@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings
 slug: Web/API/MediaTrackSettings
+page-type: web-api-interface
 tags:
   - API
   - Audio

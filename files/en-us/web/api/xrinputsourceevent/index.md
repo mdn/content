@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceEvent
 slug: Web/API/XRInputSourceEvent
+page-type: web-api-interface
 tags:
   - 3D
   - API
@@ -68,7 +69,7 @@ _The `XRInputSourceEvent` interface doesn't define any methods; however, several
 The code below sets up handlers for primary action events in order to determine when the user clicks on (shoots at/pokes at/whatever) objects in the scene.
 
 ```js
-xrSession.addEventListener("select", event => {
+xrSession.addEventListener("select", (event) => {
   let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace, myRefSpace);
 
   if (targetRayPose) {

@@ -1,6 +1,7 @@
 ---
 title: FontFace()
 slug: Web/API/FontFace/FontFace
+page-type: web-api-constructor
 tags:
   - API
   - CSS Font Loading API

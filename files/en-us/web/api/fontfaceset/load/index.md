@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.load()
 slug: Web/API/FontFaceSet/load
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Font Loading API
@@ -40,7 +41,7 @@ failed to load.
 The following example returns a promise that will be fulfilled or rejected according the success of loading "MyFont". The code in `then()` can assume the availability of that font.
 
 ```js
-document.fonts.load("12px MyFont", "ß").then(…);
+document.fonts.load("12px MyFont", "ß").then(/* ... */);
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: XRFrame.getDepthInformation()
 slug: Web/API/XRFrame/getDepthInformation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -53,7 +54,7 @@ const session = navigator.xr.requestSession("immersive-ar", {
   }
 });
 
-// ...
+// …
 
 // Obtain depth information in an active and animated frame
 function rafCallback(time, frame) {

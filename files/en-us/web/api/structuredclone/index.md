@@ -1,6 +1,7 @@
 ---
 title: structuredClone()
 slug: Web/API/structuredClone
+page-type: web-api-global-function
 tags:
   - API
   - DOM
@@ -73,8 +74,8 @@ The following code shows how to clone an array and transfer its underlying resou
 On return, the original `uInt8Array.buffer` will be cleared.
 
 ```js
-var uInt8Array = new Uint8Array(1024 * 1024 * 16); // 16MB
-for (var i = 0; i < uInt8Array.length; ++i) {
+const uInt8Array = new Uint8Array(1024 * 1024 * 16); // 16MB
+for (let i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 

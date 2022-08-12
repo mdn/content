@@ -8,7 +8,7 @@ tags:
   - Data Type
   - Reference
   - display-box
-spec-urls: https://drafts.csswg.org/css-display/#typedef-display-box
+browser-compat: css.properties.display.contents
 ---
 {{CSSRef}}
 
@@ -96,9 +96,7 @@ In this example the outer {{htmlelement("div")}} has a 2-pixel red border and a 
 
 ## Browser compatibility
 
-### Support of contents
-
-{{Compat("css.properties.display.contents", 10)}}
+{{Compat}}
 
 ## See also
 

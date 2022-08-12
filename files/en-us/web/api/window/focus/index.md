@@ -1,6 +1,7 @@
 ---
 title: Window.focus()
 slug: Web/API/Window/focus
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko

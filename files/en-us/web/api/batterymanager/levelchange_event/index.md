@@ -1,6 +1,7 @@
 ---
 title: 'BatteryManager: levelchange event'
 slug: Web/API/BatteryManager/levelchange_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -16,9 +17,9 @@ The **`levelchange`** event of the [Battery Status API](/en-US/docs/Web/API/Batt
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('levelchange', event => { });
+addEventListener('levelchange', (event) => { });
 
-onlevelchange = event => { };
+onlevelchange = (event) => { };
 ```
 
 ## Event type
@@ -37,17 +38,16 @@ _A generic {{domxref("Event")}}._
 ### JavaScript
 
 ```js
-navigator.getBattery().then(battery => {
+navigator.getBattery().then((battery) => {
   battery.onlevelchange = () => {
     document.querySelector('#level').textContent = battery.level;
 
-    if(battery.charging) {
+    if (battery.charging) {
       document.querySelector('#stateBattery').textContent =
-          "Charging time: " + (battery.chargingTime / 60);
-    }
-    else {
+        `Charging time: ${battery.chargingTime / 60}`;
+    } else {
       document.querySelector('#stateBattery').textContent =
-          "Discharging time: " + (battery.dischargingTime / 60);
+        `Discharging time: ${battery.dischargingTime / 60}`;
     }
   };
 });

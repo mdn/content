@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.send()
 slug: Web/API/RTCDataChannel/send
+page-type: web-api-instance-method
 tags:
   - API
   - Communication
@@ -42,8 +43,7 @@ send(data)
 
 - `data`
   - : The data to transmit across the connection. This may be a string,
-    a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, or an
-    {{domxref("ArrayBufferView")}}.
+    a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
 ### Return value
 
@@ -76,11 +76,11 @@ object as input and sends to the remote peer, over the {{domxref("RTCDataChannel
 JSON string with the specified object and a time stamp.
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("BackChannel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("BackChannel");
 
 function sendMessage(msg) {
-  let obj = {
+  const obj = {
     "message": msg,
     "timestamp": new Date()
   }

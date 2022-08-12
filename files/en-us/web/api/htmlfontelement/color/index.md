@@ -1,6 +1,7 @@
 ---
 title: HTMLFontElement.color
 slug: Web/API/HTMLFontElement/color
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -35,7 +36,7 @@ A string.
 ```js
 // Assumes there is <font id="f"> element in the HTML
 
-var f = document.getElementById("f");
+const f = document.getElementById("f");
 f.color = "green";
 ```
 

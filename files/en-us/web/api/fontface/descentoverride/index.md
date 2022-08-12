@@ -1,6 +1,7 @@
 ---
 title: FontFace.descentOverride
 slug: Web/API/FontFace/descentOverride
+page-type: web-api-instance-property
 tags:
   - API
   - Property

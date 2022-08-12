@@ -37,7 +37,7 @@ These resources are created by forward-thinking companies and web developers who
 <!---->
 
 - [Creating a Simple Web Page with HTML](https://www.theblogstarter.com/html-for-beginners/)
-  - : An HTML guide for beginners that includes explanations of common tags, including HTML5 tags. Also includes a step-by-step guide to creating a basic web page with code examples.
+  - : An HTML guide for beginners that includes explanations of common tags, including HTML tags. Also includes a step-by-step guide to creating a basic web page with code examples.
 - [HTML Challenges](https://wikiversity.org/wiki/Web_Design/HTML_Challenges)
   - : Use these challenges to hone your HTML skills (for example, "Should I use an \<h2> element or a \<strong> element?"), focusing on meaningful markup.
 
@@ -102,12 +102,12 @@ These resources are created by forward-thinking companies and web developers who
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
   - : Apply rotation, skewing, scaling, and translation using CSS.
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
-  - : CSS transitions, part of the draft CSS3 specification, provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
+  - : CSS transitions provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
 
 <!---->
 
-- [Quick Guide to Implement Web Fonts  (with @font-face)](https://www.html5rocks.com/tutorials/webfonts/quick/)
-  - : The @font-face feature from CSS3 allows you to use custom typefaces on the web in an accessible, manipulatable, and scalable way.
+- [Quick Guide to Implement Web Fonts  (with @font-face)](https://www.html5rocks.com/en/tutorials/webfonts/quick/)
+  - : The CSS @font-face feature allows you to use custom typefaces on the web in an accessible, manipulatable, and scalable way.
 - [Starting to Write CSS](https://davidwalsh.name/starting-css)
   - : An introduction to tools and methodologies to write more succinct, maintainable, and scalable CSS.
 
@@ -116,7 +116,7 @@ These resources are created by forward-thinking companies and web developers who
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn how to draw graphics using scripting using the canvas element.
 - [HTML5 Doctor](https://html5doctor.com/)
-  - : Articles about using HTML5 right now.
+  - : Articles about using HTML right now.
 
 ## JavaScript Tutorials
 

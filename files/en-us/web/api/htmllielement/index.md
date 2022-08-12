@@ -1,6 +1,7 @@
 ---
 title: HTMLLIElement
 slug: Web/API/HTMLLIElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

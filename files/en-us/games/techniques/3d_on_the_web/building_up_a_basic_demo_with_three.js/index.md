@@ -35,7 +35,7 @@ Here's the HTML structure we will use:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <title>MDN Games: Three.js demo</title>
@@ -64,7 +64,7 @@ Before reading further, copy this code to a new text file, and save it in your w
 A renderer is a tool which displays scenes right in your browser. There are a few different renderers: WebGL is the default, and others you can use are Canvas, SVG, CSS, and DOM. They differ in how everything is rendered, so the WebGL implementation will implement differently than the CSS one. Despite the variety of ways they achieve the goal, the experience will look the same for the user. Thanks to this approach, a fallback can be used, if a desired technology is not supported by the browser.
 
 ```js
-var renderer = new THREE.WebGLRenderer({antialias:true});
+const renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0xDDDDDD, 1);
 document.body.appendChild(renderer.domElement);
@@ -137,7 +137,7 @@ In this case, we define a simple cube that is 10 x 10 x 10 units. The geometry i
 A material is what covers an object, the colors, or textures on its surface. In our case, we will choose a simple blue color to paint our box. There are a number of predefined materials which can be used: Basic, Phong, Lambert. Let's play with the last two later, but for now, the Basic one should be enough:
 
 ```js
-var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
+const basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
 ```
 
 Add this line below the previously added.
@@ -149,7 +149,7 @@ Our material is now ready, what next?
 To apply the material to a geometry, a mesh is used. This takes on a shape, and adds the specified material to every face:
 
 ```js
-var cube = new THREE.Mesh(boxGeometry, basicMaterial);
+const cube = new THREE.Mesh(boxGeometry, basicMaterial);
 ```
 
 Again, add this line below the one you previously added.
@@ -189,9 +189,9 @@ cube.position.x = -25;
 Now onto more shapes and materials. What might happen when you add a torus, wrapped in the Phong material? Try adding the following lines, just below the lines defining the cube.
 
 ```js
-var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
-var phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF9500});
-var torus = new THREE.Mesh(torusGeometry, phongMaterial);
+const torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
+const phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF9500});
+const torus = new THREE.Mesh(torusGeometry, phongMaterial);
 scene.add(torus);
 ```
 
@@ -200,9 +200,9 @@ These lines will add a torus geometry; the `TorusGeometry()` method's parameters
 We can choose more fun predefined shapes. Let's play some more. Add the following lines, below those defining the torus:
 
 ```js
-var dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
-var lambertMaterial = new THREE.MeshLambertMaterial({color: 0xEAEFF2});
-var dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
+const dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
+const lambertMaterial = new THREE.MeshLambertMaterial({color: 0xEAEFF2});
+const dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
 dodecahedron.position.x = 25;
 scene.add(dodecahedron);
 ```
@@ -216,7 +216,7 @@ As mentioned above, the new objects currently just look black. To have both, the
 There are various types of light sources available in Three.js. The most basic is `PointLight`, which works like a flashlight, shining a spotlight in a defined direction. Add the following lines, below your shape definitions:
 
 ```js
-var light = new THREE.PointLight(0xFFFFFF);
+const light = new THREE.PointLight(0xFFFFFF);
 light.position.set(-10, 15, 50);
 scene.add(light);
 ```
@@ -246,7 +246,7 @@ This rotates the cube on every frame, by a tiny bit, so the animation looks smoo
 We can also scale an object. Applying a constant value, we would make it grow, or shrink just once. Let's make things more interesting. First, we implement a helper variable, called `t,` for counting elapsed time. Add it right before the `render()` function:
 
 ```js
-var t = 0;
+let t = 0;
 ```
 
 Now let's increase the value by a given constant value, on each frame of the animation. Add the following lines, just below the `requestAnimationFrame()` invocation:

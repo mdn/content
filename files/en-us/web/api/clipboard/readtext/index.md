@@ -1,6 +1,7 @@
 ---
 title: Clipboard.readText()
 slug: Web/API/Clipboard/readText
+page-type: web-api-instance-method
 tags:
   - API
   - Async Clipboard API
@@ -56,7 +57,7 @@ text into an element's contents.
 
 ```js
 navigator.clipboard.readText().then(
-  clipText => document.getElementById("outbox").innerText = clipText);
+  (clipText) => document.getElementById("outbox").innerText = clipText);
 ```
 
 ## Specifications
@@ -70,9 +71,7 @@ navigator.clipboard.readText().then(
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on
-  Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async
-  Clipboard article](https://web.dev/async-clipboard/)
+- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("Clipboard.write()")}}

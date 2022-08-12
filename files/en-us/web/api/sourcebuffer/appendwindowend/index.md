@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.appendWindowEnd
 slug: Web/API/SourceBuffer/appendWindowEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

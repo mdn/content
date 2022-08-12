@@ -39,7 +39,7 @@ has(key)
 ### Using the has method
 
 ```js
-var wm = new WeakMap();
+const wm = new WeakMap();
 wm.set(window, 'foo');
 
 wm.has(window); // returns true

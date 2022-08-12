@@ -28,7 +28,9 @@ simple-custom:defined {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:defined
+```
 
 ## Examples
 

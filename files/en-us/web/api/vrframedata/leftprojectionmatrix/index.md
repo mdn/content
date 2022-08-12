@@ -1,6 +1,7 @@
 ---
 title: VRFrameData.leftProjectionMatrix
 slug: Web/API/VRFrameData/leftProjectionMatrix
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -22,8 +23,6 @@ The **`leftProjectionMatrix`** read-only property of the {{domxref("VRFrameData"
 This value may be passed directly to WebGL's {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}} function.
 
 > **Warning:** It is highly recommended that applications use this matrix without modification. Failure to use this projection matrix when rendering may cause the presented frame to be distorted or badly aligned, resulting in varying degrees of user discomfort.
-
-## Syntax
 
 ## Value
 

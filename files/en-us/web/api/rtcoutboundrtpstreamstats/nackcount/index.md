@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.nackCount
 slug: Web/API/RTCOutboundRtpStreamStats/nackCount
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

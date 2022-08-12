@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioContext.resume()
 slug: Web/API/OfflineAudioContext/resume
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.hasFeature()
 slug: Web/API/DOMImplementation/hasFeature
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,9 +11,7 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.hasFeature
 ---
-{{ApiRef("DOM")}}
-
-{{Deprecated_Header}}
+{{ApiRef("DOM")}}{{Deprecated_Header}}
 
 The
 **`DOMImplementation.hasFeature()`** method returns a

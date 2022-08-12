@@ -1,5 +1,5 @@
 ---
-title: WebAssembly control flow
+title: WebAssembly control flow instructions
 slug: WebAssembly/Reference/Control_flow
 tags:
   - WebAssembly
@@ -10,7 +10,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-WebAssembly control flow operators.
+WebAssembly control flow instructions.
 
 - [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block)
   - : Creates a label that can later be branched out of with a [`br`](/en-US/docs/WebAssembly/Reference/Control_flow/br).

@@ -1,6 +1,7 @@
 ---
 title: Console API
 slug: Web/API/Console_API
+page-type: guide
 tags:
   - API
   - Debugging
@@ -10,6 +11,7 @@ tags:
   - log
   - output
   - test
+browser-compat: api.console
 ---
 {{DefaultAPISidebar("Console API")}}
 
@@ -46,14 +48,14 @@ See the [console](/en-US/docs/Web/API/console#usage) reference page for more exa
 
 ## Specifications
 
-{{Specifications("api.console")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.console")}}
+{{Compat}}
 
 ## See also
 
 - [Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
 - [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web Console in Firefox handles console API calls
-- [Remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — how to see console output when the debugging target is a mobile device
+- [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) — how to see console output when the debugging target is a mobile device

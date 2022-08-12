@@ -1,6 +1,7 @@
 ---
 title: MediaStreamAudioSourceNode.mediaStream
 slug: Web/API/MediaStreamAudioSourceNode/mediaStream
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -12,6 +13,7 @@ tags:
   - Web Audio
   - Web Audio API
   - stream
+  - Property
 browser-compat: api.MediaStreamAudioSourceNode.mediaStream
 ---
 {{APIRef("Web Audio API")}}
@@ -26,13 +28,7 @@ either using the {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNod
   "MediaStreamAudioSourceNode()")}} constructor or the
 {{domxref("AudioContext.createMediaStreamSource()")}} method.
 
-## Syntax
-
-```js
-audioSourceStream = mediaStreamAudioSourceNode.mediaStream;
-```
-
-### Value
+## Value
 
 A {{domxref("MediaStream")}} representing the stream which contains the
 {{domxref("MediaStreamTrack")}} serving as the source of audio for the node.

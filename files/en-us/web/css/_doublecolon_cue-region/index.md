@@ -27,7 +27,9 @@ The properties are applied to the entire set of cues as if they were a single un
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+::cue-region | ::cue-region( <selector> )
+```
 
 ## Permitted properties
 

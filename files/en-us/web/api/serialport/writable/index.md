@@ -1,6 +1,7 @@
 ---
 title: SerialPort.writable
 slug: Web/API/SerialPort/writable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,7 +12,7 @@ browser-compat: api.SerialPort.writable
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-The **`writable`** read-only property of the {{domxref("SerialPort")}} interface returns a {{domxref("WritableStream")}} for sending data to the device connected to the port. Chunks written to this stream must be instances of {{domxref("BufferSource")}} (for example, an {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} such as {{jsxref("Uint8Array")}}). This property is non-null as long as the port is open and has not encountered a fatal error.
+The **`writable`** read-only property of the {{domxref("SerialPort")}} interface returns a {{domxref("WritableStream")}} for sending data to the device connected to the port. Chunks written to this stream must be instances of {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}}. This property is non-null as long as the port is open and has not encountered a fatal error.
 
 ## Value
 

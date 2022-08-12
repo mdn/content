@@ -1,6 +1,7 @@
 ---
 title: SVGPointList.insertItemBefore()
 slug: Web/API/SVGPointList/insertItemBefore
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -32,7 +33,7 @@ The {{domxref("SVGPoint")}} object that was inserted.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 
 ## Examples

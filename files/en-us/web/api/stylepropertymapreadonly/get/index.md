@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.get()
 slug: Web/API/StylePropertyMapReadOnly/get
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -77,17 +78,16 @@ const stylesList = document.querySelector('#results');
 const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
 
 // iterate over our properties of interest
-for ( let i = 0; i < ofInterest.length; i++ ) {
-
+for (const property of ofInterest) {
   // properties
   const cssProperty = document.createElement('dt');
-  cssProperty.innerText = ofInterest[i];
+  cssProperty.innerText = property;
   stylesList.appendChild(cssProperty);
 
   // values
   const cssValue = document.createElement('dd');
   // use get() to find the value
-  cssValue.innerText = styleMap.get(ofInterest[i]);
+  cssValue.innerText = styleMap.get(property);
   stylesList.appendChild(cssValue);
 }
 ```

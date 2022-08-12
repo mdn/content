@@ -1,6 +1,7 @@
 ---
 title: MessageEvent.data
 slug: Web/API/MessageEvent/data
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -23,7 +24,7 @@ The data sent by the message emitter; this can be any data type.
 ## Examples
 
 ```js
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
   console.log('Message received from worker');
 };

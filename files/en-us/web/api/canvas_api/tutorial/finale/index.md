@@ -1,6 +1,7 @@
 ---
 title: Finale
 slug: Web/API/Canvas_API/Tutorial/Finale
+page-type: guide
 tags:
   - Canvas
   - Graphics

@@ -106,7 +106,9 @@ The `scroll-offset` property determines where, within the scrolling, the animati
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@scroll-timeline <timeline-name> { <declaration-list> }
+```
 
 ## Examples
 
@@ -163,10 +165,6 @@ We create an `@scroll-timeline` called `squareTimeline`, setting the `source` as
 #### Result
 
 {{EmbedLiveSample("Simple_example")}}
-
-## Specifications
-
-{{Specifications}}
 
 ## Browser compatibility
 

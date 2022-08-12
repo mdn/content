@@ -1,6 +1,7 @@
 ---
 title: CSSVariableReferenceValue.variable
 slug: Web/API/CSSVariableReferenceValue/variable
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -10,6 +11,7 @@ tags:
   - Property
   - Reference
   - variable
+  - Experimental
 browser-compat: api.CSSVariableReferenceValue.variable
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}

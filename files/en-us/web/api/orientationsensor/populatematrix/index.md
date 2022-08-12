@@ -1,6 +1,7 @@
 ---
 title: OrientationSensor.populateMatrix()
 slug: Web/API/OrientationSensor/populateMatrix
+page-type: web-api-instance-method
 tags:
   - API
   - Generic Sensor API

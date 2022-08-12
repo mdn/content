@@ -1,6 +1,7 @@
 ---
 title: NDEFRecord.encoding
 slug: Web/API/NDEFRecord/encoding
+page-type: web-api-instance-property
 tags:
   - Encoding
   - NDEF

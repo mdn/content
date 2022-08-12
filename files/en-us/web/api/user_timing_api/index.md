@@ -1,6 +1,7 @@
 ---
 title: User Timing API
 slug: Web/API/User_Timing_API
+page-type: web-api-overview
 tags:
   - Guide
   - Overview

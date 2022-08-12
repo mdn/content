@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaExpanded
 slug: Web/API/ElementInternals/ariaExpanded
+page-type: web-api-instance-property
 tags:
   - API
   - Property

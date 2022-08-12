@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.attack
 slug: Web/API/DynamicsCompressorNode/attack
+page-type: web-api-instance-property
 tags:
   - API
   - Attack
@@ -25,8 +26,8 @@ An {{domxref("AudioParam")}}.
 ## Examples
 
 ```js
-var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();
+const audioCtx = new AudioContext();
+const compressor = audioCtx.createDynamicsCompressor();
 compressor.attack.value = 0;
 ```
 

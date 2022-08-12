@@ -71,7 +71,7 @@ function sendMessageToTabs(tabs) {
     browser.tabs.sendMessage(
       tab.id,
       {greeting: "Hi from background script"}
-    ).then(response => {
+    ).then((response) => {
       console.log("Message from the content script:");
       console.log(response.response);
     }).catch(onError);
@@ -92,7 +92,7 @@ Here's the corresponding content script:
 // content-script.js
 "use strict";
 
-browser.runtime.onMessage.addListener(request => {
+browser.runtime.onMessage.addListener((request) => {
   console.log("Message from the background script:");
   console.log(request.greeting);
   return Promise.resolve({response: "Hi from content script"});

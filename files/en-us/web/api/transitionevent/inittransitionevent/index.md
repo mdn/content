@@ -1,13 +1,13 @@
 ---
 title: TransitionEvent.initTransitionEvent()
 slug: Web/API/TransitionEvent/initTransitionEvent
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
-  - CSS3 Transitions
+  - CSS Transitions
   - CSSOM
   - Deprecated
-  - Experimental
   - Method
   - Reference
   - TransitionEvent
@@ -31,31 +31,25 @@ method.
 ## Syntax
 
 ```js
-initTransitionEvent(typeArg, canBubbleArg, cancelableArg, transitionNameArg, elapsedTimeArg)
+initTransitionEvent(type, canBubble, cancelable, transitionName, elapsedTime)
 ```
 
 ### Parameters
 
-- _typeArg_
-
+- `type`
   - : A string identifying the specific type of transition event that
-    occurred. The following value is allowed:
-
-    | Value           | Meaning                   |
-    | --------------- | ------------------------- |
-    | `transitionend` | The transition completed. |
-
-- _canBubbleArg_
+    occurred. Browsers always set it up to `transitionend`.
+- `canBubble`
   - : A boolean flag indicating if the event can bubble
-    (`true`) or not (`false)`.
-- _cancelableArg_
+    (`true`) or not (`false`).
+- `cancelable`
   - : A boolean flag indicating if the event associated action can be
-    avoided (`true`) or not (`false)`.
-- _transitionNameArg_
+    avoided (`true`) or not (`false`).
+- `transitionName`
   - : A string containing the name of the CSS property associated
     with the transition. This value is not affected by the {{cssxref("transition-delay")}}
     property.
-- _elapsedTimeArg_
+- `elapsedTime`
   - : Is `float` giving the amount of time the transition has been running, in
     seconds, when this event fired.
 

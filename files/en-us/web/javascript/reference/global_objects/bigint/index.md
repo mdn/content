@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.BigInt
 
 ## Description
 
-A **BigInt value**, also sometimes just called a **BigInt**, is a `bigint` {{Glossary("Primitive", "primitive")}}, created by appending `n` to the end of an integer literal, or by calling the {{jsxref("Global_Objects/BigInt/BigInt", "BigInt()")}} constructor (but without the `new` operator) and giving it an integer value or string value.
+A **BigInt value**, also sometimes just called a **BigInt**, is a `bigint` {{Glossary("Primitive", "primitive")}}, created by appending `n` to the end of an integer literal, or by calling the {{jsxref("Global_Objects/BigInt/BigInt", "BigInt()")}} function (without the `new` operator) and giving it an integer value or string value.
 
 ```js
 const previouslyMaxSafeInteger = 9007199254740991n
@@ -39,7 +39,7 @@ BigInt values are similar to Number values in some ways, but also differ in a fe
 
 ### Type information
 
-When tested against `typeof`, a BigInt value (`bigint` primitive) will give "`bigint`":
+When tested against `typeof`, a BigInt value (`bigint` primitive) will give `"bigint"`:
 
 ```js
 typeof 1n === 'bigint'           // true
@@ -152,7 +152,7 @@ mixed.sort((a, b) => (a < b) ? -1 : ((a > b) ? 1 : 0))
 Note that comparisons with `Object`-wrapped BigInt values act as with other objects, only indicating equality when the same object instance is compared:
 
 ```js
-0n === Object(0n)          // false
+Object(0n) === 0n          // false
 Object(0n) === Object(0n)  // false
 
 const o = Object(0n)

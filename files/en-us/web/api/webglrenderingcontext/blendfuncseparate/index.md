@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.blendFuncSeparate()
 slug: Web/API/WebGLRenderingContext/blendFuncSeparate
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -197,7 +198,7 @@ To get the current blend function, query the `BLEND_SRC_RGB`,
 ```js
 gl.enable(gl.BLEND);
 gl.blendFuncSeparate(gl.SRC_COLOR, gl.DST_COLOR, gl.ONE, gl.ZERO);
-gl.getParameter(gl.BLEND_SRC_RGB) == gl.SRC_COLOR;
+gl.getParameter(gl.BLEND_SRC_RGB) === gl.SRC_COLOR;
 // true
 ```
 

@@ -1,16 +1,16 @@
 ---
 title: ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
+page-type: web-api-constructor
 tags:
   - API
   - ByteLengthQueuingStrategy
   - Constructor
-  - Experimental
   - Reference
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy()`**
 constructor creates and returns a `ByteLengthQueuingStrategy` object
@@ -44,17 +44,17 @@ const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
 const readableStream = new ReadableStream({
   start(controller) {
-    ...
+    // …
   },
   pull(controller) {
-    ...
+    // …
   },
   cancel(err) {
     console.log("stream error:", err);
   }
 }, queuingStrategy);
 
-var size = queuingStrategy.size(chunk);
+const size = queuingStrategy.size(chunk);
 ```
 
 ## Specifications

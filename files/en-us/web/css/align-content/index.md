@@ -11,7 +11,7 @@ browser-compat: css.properties.align-content
 ---
 The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)'s cross-axis or a [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout)'s block axis.
 
-The interactive example below use Grid Layout to demonstrate some of the values of this property.
+The interactive example below uses Grid Layout to demonstrate some of the values of this property.
 
 {{EmbedInteractiveExample("pages/css/align-content.html")}}
 
@@ -229,15 +229,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+const values = document.getElementById('values');
+const display = document.getElementById('display');
+const container = document.getElementById('container');
 
-values.addEventListener('change', function (evt) {
+values.addEventListener('change', (evt) => {
   container.style.alignContent = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener('change', (evt) => {
   container.className = evt.target.value;
 });
 ```
@@ -248,7 +248,7 @@ display.addEventListener('change', function (evt) {
 
 ## Specifications
 
-{{Specifications("css.properties.align-content.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

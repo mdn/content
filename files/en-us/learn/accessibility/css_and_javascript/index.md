@@ -16,7 +16,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
-CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences ... or they can significantly harm accessibility if misused. This article outlines some CSS and JavaScript best practices that should be considered to ensure even complex content is as accessible as possible.
+CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, or they can significantly harm accessibility if misused. This article outlines some CSS and JavaScript best practices that should be considered to ensure even complex content is as accessible as possible.
 
 <table>
   <tbody>
@@ -117,7 +117,7 @@ You will however rarely need to style emphasis elements in any significant way. 
 An element that allows an abbreviation, acronym, or initialization to be associated with its expansion:
 
 ```html
-<p>Web content is marked up using <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+<p>Web content is marked up using Hypertext Markup Language, or <abbr>HTML</abbr>.</p>
 ```
 
 Again, you might want to style it in some simple way:
@@ -218,7 +218,7 @@ On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{css
 It is possible for users to override your styles with their own custom styles, for example:
 
 - See Sarah Maddox's [How to use a custom style sheet (CSS) with Firefox](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/) for a useful guide covering how to do this manually in Firefox, and [How to use a custom style sheet (CSS) with Internet Explorer](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/) by Adrian Gordon for the equivalent IE instructions.
-- It is probably easier to do it using an extension, for example the Stylish extension is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/), [Safari](https://safari-extensions.apple.com/details/?id=com.sobolev.stylish-5555L95H45), [Opera](https://addons.opera.com/en/extensions/details/stylish/), and [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe).
+- It is probably easier to do it using an extension, for example, the Stylish extension is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/) and [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe).
 
 Users might do this for a variety of reasons. A visually impaired user might want to make the text bigger on all websites they visit, or a user with severe color deficiency might want to put all websites in high contrast colors that are easy for them to see. Whatever the need, you should be comfortable with this, and make your designs flexible enough so that such changes will work in your design. As an example, you might want to make sure your main content area can handle bigger text (maybe it will start to scroll to allow it all to be seen), and won't just hide it, or break completely.
 
@@ -274,13 +274,13 @@ function validate(e) {
   errorList.innerHTML = '';
   for(let i = 0; i < formItems.length; i++) {
     const testItem = formItems[i];
-    if(testItem.input.value === '') {
+    if (testItem.input.value === '') {
       errorField.style.left = '360px';
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== '') {
     e.preventDefault();
   }
 }
@@ -288,9 +288,9 @@ function validate(e) {
 
 > **Note:** In this example, we are hiding and showing the error message box using absolute positioning rather than another method such as visibility or display, because it doesn't interfere with the screen reader being able to read content from it.
 
-Real form validation would be much more complex than this — you'd want to check that the entered name actually looks like a name, the entered age is actually a number and is realistic (e.g. nonnegative and less than 4 digits). Here we've just implemented a simple check that a value has been filled in to each input field (`if(testItem.input.value === '')`).
+Real form validation would be much more complex than this — you'd want to check that the entered name actually looks like a name, the entered age is actually a number and is realistic (e.g. nonnegative and less than 4 digits). Here we've just implemented a simple check that a value has been filled in to each input field (`if (testItem.input.value === '')`).
 
-When the validation has been performed, if the tests pass then the form is submitted. If there are errors (`if(errorList.innerHTML !== '')`) then we stop the form submitting (using [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)), and display any error messages that have been created (see below). This mechanism means that the errors will only be shown if there are errors, which is better for usability.
+When the validation has been performed, if the tests pass then the form is submitted. If there are errors (`if (errorList.innerHTML !== '')`) then we stop the form submitting (using [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)), and display any error messages that have been created (see below). This mechanism means that the errors will only be shown if there are errors, which is better for usability.
 
 For each input that doesn't have a value filled in when the form is submitted, we create a list item with a link and insert it in the `errorList`.
 
@@ -299,9 +299,10 @@ function createLink(testItem) {
   const listItem = document.createElement('li');
   const anchor = document.createElement('a');
 
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
+  const name = testItem.input.name;
+  anchor.textContent = `${name} field is empty: fill in your ${name}.`;
+  anchor.href = `#${name}`;
+  anchor.onclick = () => {
     testItem.input.focus();
   };
   listItem.appendChild(anchor);
@@ -354,7 +355,7 @@ imgThumb.onblur = hideImg;
 
 The first two lines run the functions when the mouse pointer hovers over and stops hovering over the thumbnail, respectively. This won't allow us to access the zoomed view by keyboard though — to allow that, we've included the last two lines, which run the functions when the image is focused and blurred (when focus stops). This can be done by tabbing over the image, because we've included `tabindex="0"` on it.
 
-The [click](/en-US/docs/Web/API/Element/click_event) event is interesting — it sounds mouse-dependent, but most browsers will activate [onclick](/en-US/docs/Web/API/GlobalEventHandlers/onclick) event handlers after Enter/Return is pressed on a link or form element that has focus, or when such an element is tapped on a touchscreen device. This doesn't work by default however when you allow a non-default-focusable event to have focus using tabindex — in such cases you need to detect specifically when that exact key is pressed (see [Building keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in)).
+The [click](/en-US/docs/Web/API/Element/click_event) event is interesting — it sounds mouse-dependent, but most browsers will activate [onclick](/en-US/docs/Web/API/Element/click_event) event handlers after Enter/Return is pressed on a link or form element that has focus, or when such an element is tapped on a touchscreen device. This doesn't work by default however when you allow a non-default-focusable event to have focus using tabindex — in such cases you need to detect specifically when that exact key is pressed (see [Building keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in)).
 
 ## Test your skills!
 

@@ -1,6 +1,7 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
+page-type: web-api-instance-property
 tags:
   - API
   - Document

@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.toString()
 slug: Web/API/HTMLAnchorElement/toString
+page-type: web-api-instance-method
 tags:
   - API
   - HTMLAnchorElement

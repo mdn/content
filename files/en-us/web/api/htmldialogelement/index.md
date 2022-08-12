@@ -1,16 +1,16 @@
 ---
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
+page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Interface
   - Reference
 browser-compat: api.HTMLDialogElement
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLElement("dialog")}} elements. It inherits properties and methods from the {{domxref("HTMLElement")}} interface.
 
@@ -40,10 +40,8 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : Fired when the user instructs the browser that they wish to dismiss the current open dialog.
-    Also available via the {{domxref("GlobalEventHandlers/oncancel", "oncancel")}} property.
 - {{domxref("HTMLDialogElement/close_event", "close")}}
   - : Fired when the dialog is closed.
-    Also available via the {{domxref("GlobalEventHandlers/onclose", "onclose")}} property.
 
 ## Examples
 
@@ -74,14 +72,14 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
   </menu>
 
   <script>
-    (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var cancelButton = document.getElementById('cancel');
-      var dialog = document.getElementById('favDialog');
+    (() => {
+      const updateButton = document.getElementById('updateDetails');
+      const cancelButton = document.getElementById('cancel');
+      const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
-        if(dialog.open) {
+        if (dialog.open) {
           console.log('Dialog open');
         } else {
           console.log('Dialog closed');
@@ -89,13 +87,13 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
       }
 
       // Update button opens a modal dialog
-      updateButton.addEventListener('click', function() {
+      updateButton.addEventListener('click', () => {
         dialog.showModal();
         openCheck(dialog);
       });
 
       // Form cancel button closes the dialog box
-      cancelButton.addEventListener('click', function() {
+      cancelButton.addEventListener('click', () => {
         dialog.close('animalNotChosen');
         openCheck(dialog);
       });

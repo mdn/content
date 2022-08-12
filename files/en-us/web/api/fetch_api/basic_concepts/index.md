@@ -1,6 +1,7 @@
 ---
 title: Fetch basic concepts
 slug: Web/API/Fetch_API/Basic_concepts
+page-type: guide
 tags:
   - API
   - Fetch

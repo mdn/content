@@ -69,7 +69,7 @@ See the example below:
 function A() { console.log('called A'); return false; }
 function B() { console.log('called B'); return true; }
 
-console.log( A() && B() );
+console.log(A() && B());
 // logs "called A" to the console due to the call for function A,
 // && evaluates to false (function A returns false), then false is logged to the console;
 // the AND operator short-circuits here and ignores function B
@@ -80,9 +80,9 @@ console.log( A() && B() );
 The AND operator has a higher precedence than the OR operator, meaning the `&&` operator is executed before the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
-true || false && false           // returns true
-true && (false || false)         // returns false
-(2 == 3) || (4 < 0) && (1 == 1)  // returns false
+true || false && false // returns true
+true && (false || false) // returns false
+(2 === 3) || (4 < 0) && (1 === 1) // returns false
 ```
 
 ## Examples
@@ -93,15 +93,15 @@ The following code shows examples of the `&&` (logical AND)
 operator.
 
 ```js
-a1 = true  && true       // t && t returns true
-a2 = true  && false      // t && f returns false
-a3 = false && true       // f && t returns false
-a4 = false && (3 == 4)   // f && f returns false
-a5 = 'Cat' && 'Dog'      // t && t returns "Dog"
-a6 = false && 'Cat'      // f && t returns false
-a7 = 'Cat' && false      // t && f returns false
-a8 = ''    && false      // f && f returns ""
-a9 = false && ''         // f && f returns false
+a1 = true && true // t && t returns true
+a2 = true && false // t && f returns false
+a3 = false && true // f && t returns false
+a4 = false && (3 === 4) // f && f returns false
+a5 = 'Cat' && 'Dog' // t && t returns "Dog"
+a6 = false && 'Cat' // f && t returns false
+a7 = 'Cat' && false // t && f returns false
+a8 = '' && false // f && f returns ""
+a9 = false && '' // f && f returns false
 ```
 
 ### Conversion rules for booleans

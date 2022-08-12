@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.decode()
 slug: Web/API/VideoDecoder/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,7 +27,7 @@ decode(chunk)
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -40,11 +41,11 @@ decode(chunk)
 The following example demonstrates how to use the `decode()` method to decode {{domxref("EncodedVideoChunk")}} objects created from encoded video data.
 
 ```js
-let responses = await downloadVideoChunksFromServer(timestamp);
-for (let i = 0; i < responses.length; i++) {
-  let chunk = new EncodedVideoChunk({
-    timestamp: responses[i].timestamp,
-    data: new Uint8Array ( responses[i].body )
+const responses = await downloadVideoChunksFromServer(timestamp);
+for (const response of responses) {
+  const chunk = new EncodedVideoChunk({
+    timestamp: response.timestamp,
+    data: new Uint8Array(response.body),
   });
   decoder.decode(chunk);
 }

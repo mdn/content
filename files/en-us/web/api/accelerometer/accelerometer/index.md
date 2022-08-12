@@ -1,6 +1,7 @@
 ---
 title: Accelerometer()
 slug: Web/API/Accelerometer/Accelerometer
+page-type: web-api-constructor
 tags:
   - API
   - Accelerometer
@@ -11,6 +12,7 @@ tags:
   - Sensor
   - Sensor APIs
   - Sensors
+  - Experimental
 browser-compat: api.Accelerometer.Accelerometer
 ---
 {{APIRef("Sensor API")}}{{SeeCompatTable}}

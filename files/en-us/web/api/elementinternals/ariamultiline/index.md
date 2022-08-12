@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaMultiLine
 slug: Web/API/ElementInternals/ariaMultiLine
+page-type: web-api-instance-property
 tags:
   - API
   - Property

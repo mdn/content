@@ -1,6 +1,7 @@
 ---
 title: CanvasGradient
 slug: Web/API/CanvasGradient
+page-type: web-api-interface
 tags:
   - API
   - Canvas

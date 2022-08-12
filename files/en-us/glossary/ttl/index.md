@@ -21,6 +21,6 @@ In the context of caching, TTL (as an unsigned 32-bit integer) being a part of t
 
 ## See also
 
-- {{Interwiki("wikipedia", "Time to live", "TTL")}} on Wikipedia
+- [TTL](https://en.wikipedia.org/wiki/Time_to_live) on Wikipedia
 - [RFC 2181](https://datatracker.ietf.org/doc/html/rfc2181#section-8) on IETF
 - [RFC1035](https://datatracker.ietf.org/doc/html/rfc1035) on IETF

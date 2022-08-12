@@ -32,7 +32,7 @@ One of HTML's main jobs is to give text structure so that a browser can display 
       <th scope="row">Objective:</th>
       <td>
         Learn how to mark up a basic page of text to give it structure and
-        meaning—including paragraphs, headings, lists, emphasis, and quotations.
+        meaning — including paragraphs, headings, lists, emphasis, and quotations.
       </td>
     </tr>
   </tbody>
@@ -71,11 +71,11 @@ For example, in this story, the `<h1>` element represents the title of the story
 
 <h2>Chapter 1: The dark night</h2>
 
-<p>It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...</p>
+<p>It was a dark night. Somewhere, an owl hooted. The rain lashed down on the…</p>
 
 <h2>Chapter 2: The eternal silence</h2>
 
-<p>Our protagonist could not so much as a whisper out of the shadowy figure ...</p>
+<p>Our protagonist could not so much as a whisper out of the shadowy figure…</p>
 
 <h3>The specter speaks</h3>
 
@@ -90,7 +90,7 @@ It's really up to you what the elements involved represent, as long as the hiera
 
 ### Why do we need structure?
 
-To answer this question, let's take a look at [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html)—the starting point of our running example for this article (a nice hummus recipe). You should save a copy of this file on your local machine, as you'll need it for the exercises later on. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with linebreaks (Enter/Return pressed to go onto the next line).
+To answer this question, let's take a look at [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html)—the starting point of our running example for this article (a nice hummus recipe). You should save a copy of this file on your local machine, as you'll need it for the exercises later on. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with line breaks (Enter/Return pressed to go onto the next line).
 
 However, when you open the document in your browser, you'll see that the text appears as a big chunk!
 
@@ -153,18 +153,21 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<h1>My short story</h1>\n<p>I am a statistician and my name is Trish.</p>\n<p>My legs are made of cardboard and I am married to a fish.</p>';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -172,8 +175,8 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -183,16 +186,12 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<h1>My short story</h1>\n<p>I am a statistician and my name is Trish.</p>\n<p>My legs are made of cardboard and I am married to a fish.</p>';
-var solutionEntry = htmlSolution;
-
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
-// stop tab key tabbing out of textarea and
+// Stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
-
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -204,13 +203,13 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -218,11 +217,10 @@ function insertAtCaret(text) {
 }
 
 // Update the saved userCode every time the user updates the text area code
-
 textarea.onkeyup = function(){
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -338,18 +336,21 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<ul>\n<li>milk</li>\n<li>eggs</li>\n<li>bread</li>\n<li>hummus</li>\n</ul>';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -357,8 +358,8 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -368,16 +369,13 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<ul>\n<li>milk</li>\n<li>eggs</li>\n<li>bread</li>\n<li>hummus</li>\n</ul>';
-var solutionEntry = htmlSolution;
-
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -389,13 +387,13 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -403,11 +401,10 @@ function insertAtCaret(text) {
 }
 
 // Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -491,18 +488,21 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<ol>\n<li>Drive to the end of the road</li>\n<li>Turn right</li>\n<li>Go straight across the first two roundabouts</li>\n<li>Turn left at the third roundabout</li>\n<li>The school is on your right, 300 meters up the road</li>\n</ol>';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -510,8 +510,8 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -521,16 +521,13 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<ol>\n<li>Drive to the end of the road</li>\n<li>Turn right</li>\n<li>Go straight across the first two roundabouts</li>\n<li>Turn left at the third roundabout</li>\n<li>The school is on your right, 300 meters up the road</li>\n</ol>';
-var solutionEntry = htmlSolution;
-
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -542,13 +539,13 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -556,11 +553,10 @@ function insertAtCaret(text) {
 }
 
 // Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -647,18 +643,21 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<h1>Quick hummus recipe</h1>\n\n<p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>\n\n<p>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>\n\n<h2>Ingredients</h2>\n\n<ul>\n<li>1 can (400g) of chick peas (garbanzo beans)</li>\n<li>175g of tahini</li>\n<li>6 sundried tomatoes</li>\n<li>Half a red pepper</li>\n<li>A pinch of cayenne pepper</li>\n<li>1 clove of garlic</li>\n<li>A dash of olive oil</li>\n</ul>\n\n<h2>Instructions</h2>\n\n<ol>\n<li>Remove the skin from the garlic, and chop coarsely.</li>\n<li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>\n<li>Add all the ingredients into a food processor.</li>\n<li>Process all the ingredients into a paste.</li>\n<li>If you want a coarse "chunky" hummus, process it for a short time.</li>\n<li>If you want a smooth hummus, process it for a longer time.</li>\n</ol>\n\n<p>For a different flavor, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>\n\n<h2>Storage</h2>\n\n<p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you\'ve made it. If it starts to become fizzy, you should definitely discard it.</p>\n\n<p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -666,8 +665,8 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -677,16 +676,13 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<h1>Quick hummus recipe</h1>\n\n<p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>\n\n<p>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>\n\n<h2>Ingredients</h2>\n\n<ul>\n<li>1 can (400g) of chick peas (garbanzo beans)</li>\n<li>175g of tahini</li>\n<li>6 sundried tomatoes</li>\n<li>Half a red pepper</li>\n<li>A pinch of cayenne pepper</li>\n<li>1 clove of garlic</li>\n<li>A dash of olive oil</li>\n</ul>\n\n<h2>Instructions</h2>\n\n<ol>\n<li>Remove the skin from the garlic, and chop coarsely.</li>\n<li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>\n<li>Add all the ingredients into a food processor.</li>\n<li>Process all the ingredients into a paste.</li>\n<li>If you want a coarse "chunky" hummus, process it for a short time.</li>\n<li>If you want a smooth hummus, process it for a longer time.</li>\n</ol>\n\n<p>For a different flavor, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>\n\n<h2>Storage</h2>\n\n<p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you\'ve made it. If it starts to become fizzy, you should definitely discard it.</p>\n\n<p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>';
-var solutionEntry = htmlSolution;
-
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -698,13 +694,13 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -712,11 +708,10 @@ function insertAtCaret(text) {
 }
 
 // Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -857,18 +852,21 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -876,8 +874,8 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -887,16 +885,12 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>';
-var solutionEntry = htmlSolution;
-
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
-// stop tab key tabbing out of textarea and
+// Stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
-
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -908,13 +902,13 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -922,11 +916,10 @@ function insertAtCaret(text) {
 }
 
 // Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -938,19 +931,21 @@ textarea.onkeyup = function(){
 
 {{ EmbedLiveSample('Active_learning_Lets_be_important', 700, 520, "", "") }}
 
-### Italic, bold, underline...
+### Italic, bold, underline…
 
 The elements we've discussed so far have clearcut associated semantics. The situation with {{htmlelement("b")}}, {{htmlelement("i")}}, and {{htmlelement("u")}} is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as **presentational elements** and should no longer be used because, as we've seen before, semantics is so important to accessibility, SEO, etc.
 
 HTML5 redefined `<b>`, `<i>`, and `<u>` with new, somewhat confusing, semantic roles.
 
-Here's the best rule you can remember: It's likely appropriate to use `<b>`, `<i>`, or `<u>` to convey a meaning traditionally conveyed with bold, italics, or underline, provided there is no more suitable element. However, it always remains critical to keep an accessibility mindset. The concept of italics isn't very helpful to people using screen readers, or to people using a writing system other than the Latin alphabet.
+Here's the best rule you can remember: It's only appropriate to use `<b>`, `<i>`, or `<u>` to convey a meaning traditionally conveyed with bold, italics, or underline when there isn't a more suitable element; and there usually is. Consider whether `<strong>`, `<em>`, `<mark>`, or `<span>` might be more appropriate.
 
-- {{HTMLElement('i')}} is used to convey a meaning traditionally conveyed by italic: foreign words, taxonomic designation, technical terms, a thought...
-- {{HTMLElement('b')}} is used to convey a meaning traditionally conveyed by bold: key words, product names, lead sentence...
-- {{HTMLElement('u')}} is used to convey a meaning traditionally conveyed by underline: proper name, misspelling...
+Always keep an accessibility mindset. The concept of italics isn't very helpful to people using screen readers, or to people using a writing system other than the Latin alphabet.
 
-> **Note:** People strongly associate underlining with hyperlinks. Therefore, on the web, it's best to underline only links. Use the `<u>` element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the web. The example below illustrates how it can be done.
+- {{HTMLElement('i')}} is used to convey a meaning traditionally conveyed by italic: foreign words, taxonomic designation, technical terms, a thought…
+- {{HTMLElement('b')}} is used to convey a meaning traditionally conveyed by bold: keywords, product names, lead sentence…
+- {{HTMLElement('u')}} is used to convey a meaning traditionally conveyed by underline: proper name, misspelling…
+
+> **Note:** People strongly associate underlining with hyperlinks. Therefore, on the web, it's best to only underline links. Use the `<u>` element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the web. The example below illustrates how it can be done.
 
 ```html
 <!-- scientific names -->
@@ -967,19 +962,14 @@ Here's the best rule you can remember: It's likely appropriate to use `<b>`, `<i
 
 <!-- a known misspelling -->
 <p>
-  Someday I'll learn how to <u style="text-decoration-line: underline; text-decoration-style: wavy;">spel</u> better.
+  Someday I'll learn how to <u class="spelling-error">spel</u> better.
 </p>
 
-<!-- Highlight keywords in a set of instructions -->
-<ol>
-  <li>
-    <b>Slice</b> two pieces of bread off the loaf.
-  </li>
-  <li>
-    <b>Insert</b> a tomato slice and a leaf of
-    lettuce between the slices of bread.
-  </li>
-</ol>
+<!-- term being defined when used in a definition -->
+<dl>
+  <dt>Semantic HTML</dt>
+  <dd>Use the elements based on their <b>semantic</b> meaning, not their appearance.</dd>
+</dl>
 ```
 
 ## Test your skills!

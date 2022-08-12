@@ -1,6 +1,7 @@
 ---
-title: PaymentRequest.prototype.id
+title: PaymentRequest.id
 slug: Web/API/PaymentRequest/id
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -50,15 +51,9 @@ const json = response.toJSON();
 console.log(json.requestId,response.requestId, request.id);
 ```
 
-## Syntax
+## Value
 
-```js
-var id = paymentRequest.id
-```
-
-### Value
-
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

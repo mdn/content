@@ -1,6 +1,7 @@
 ---
 title: WaveShaperNode
 slug: Web/API/WaveShaperNode
+page-type: web-api-interface
 tags:
   - API
   - Interface

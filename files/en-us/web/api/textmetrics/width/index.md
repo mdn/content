@@ -1,6 +1,7 @@
 ---
 title: TextMetrics.width
 slug: Web/API/TextMetrics/width
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -15,13 +16,13 @@ The read-only **`width`** property of the {{domxref("TextMetrics")}} interface c
 
 ## Examples
 
-Given this {{HTMLElement("canvas")}} element:
+Start with this {{HTMLElement("canvas")}} element:
 
 ```html
 <canvas id="canvas"></canvas>
 ```
 
-... you can get a {{domxref("TextMetrics")}} object using the following code:
+You can get a {{domxref("TextMetrics")}} object using the following code:
 
 ```js
 const canvas = document.getElementById('canvas');

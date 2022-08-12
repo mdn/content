@@ -1,6 +1,7 @@
 ---
 title: Service Worker API
 slug: Web/API/Service_Worker_API
+page-type: web-api-overview
 tags:
   - API
   - Landing
@@ -9,6 +10,7 @@ tags:
   - Reference
   - Service Workers
   - Workers
+spec-urls: https://w3c.github.io/ServiceWorker/
 ---
 {{ServiceWorkerSidebar}}
 
@@ -125,9 +127,7 @@ In the future, service workers will be able to do a number of other useful thing
 
 ## Specifications
 
-| Specification                                           |
-| ------------------------------------------------------- |
-| [Service Workers](https://w3c.github.io/ServiceWorker/) |
+{{Specifications}}
 
 ## See also
 

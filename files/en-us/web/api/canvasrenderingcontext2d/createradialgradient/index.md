@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createRadialGradient()
 slug: Web/API/CanvasRenderingContext2D/createRadialGradient
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -73,13 +74,13 @@ is rendered to a filled rectangle.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 // Create a radial gradient
 // The inner circle is at x=110, y=90, with radius=30
 // The outer circle is at x=100, y=100, with radius=70
-var gradient = ctx.createRadialGradient(110,90,30, 100,100,70);
+const gradient = ctx.createRadialGradient(110,90,30, 100,100,70);
 
 // Add three color stops
 gradient.addColorStop(0, 'pink');

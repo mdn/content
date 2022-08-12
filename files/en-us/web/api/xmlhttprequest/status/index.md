@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
+page-type: web-api-instance-property
 tags:
   - API
   - Error
@@ -25,17 +26,17 @@ A number.
 ## Examples
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 console.log('UNSENT: ', xhr.status);
 
 xhr.open('GET', '/server');
 console.log('OPENED: ', xhr.status);
 
-xhr.onprogress = function () {
+xhr.onprogress = () => {
   console.log('LOADING: ', xhr.status);
 };
 
-xhr.onload = function () {
+xhr.onload = () => {
   console.log('DONE: ', xhr.status);
 };
 

@@ -555,8 +555,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
         >. The <em>end control point</em> is specified by
         <code><var>x2</var></code
         >,<code><var>y2</var></code
-        >. The <em>start control point</em> is a reflection of the
-        <em>end control point</em> of the previous curve command. If the
+        >. The <em>start control point</em> is the reflection of the
+        <em>end control point</em> of the previous curve command about the <em>current point</em>. If the
         previous command wasn't a cubic Bézier curve, the
         <em>start control point</em> is the same as the curve starting point
         (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are
@@ -581,8 +581,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
         <em>end control point</em> is the <em>current point</em> (starting point
         of the curve) shifted by <code><var>dx2</var></code> along the x-axis
         and <code><var>dy2</var></code> along the y-axis. The
-        <em>start control point</em> is a reflection of the
-        <em>end control point</em> of the previous curve command. If the
+        <em>start control point</em> is the reflection of the
+        <em>end control point</em> of the previous curve command about the <em>current point</em>. If the
         previous command wasn't a cubic Bézier curve, the
         <em>start control point</em> is the same as the curve starting point
         (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are
@@ -747,8 +747,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
           <em>current point</em> to the <em>end point</em> specified by
           <code><var>x</var></code
           >,<code><var>y</var></code
-          >. The <em>control point</em> is a reflection of the
-          <em>control point</em> of the previous curve command. If the previous
+          >. The <em>control point</em> is the reflection of the
+          <em>control point</em> of the previous curve command about the <em>current point</em>. If the previous
           command wasn't a quadratic Bézier curve, the <em>control point</em> is
           the same as the curve starting point (<em>current point</em>). Any
           subsequent coordinate pair(s) are interpreted as parameter(s) for
@@ -779,8 +779,8 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
           <em>current point</em> to the <em>end point</em>, which is the
           <em>current point</em> shifted by <code><var>dx</var></code> along the
           x-axis and <code><var>dy</var></code> along the y-axis. The
-          <em>control point</em> is a reflection of the
-          <em>control point</em> of the previous curve command. If the previous
+          <em>control point</em> is the reflection of the
+          <em>control point</em> of the previous curve command about the <em>current point</em>. If the previous
           command wasn't a quadratic Bézier curve, the <em>control point</em> is
           the same as the curve starting point (<em>current point</em>). Any
           subsequent coordinate pair(s) are interpreted as parameter(s) for

@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.put()
 slug: Web/API/IDBObjectStore/put
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -70,15 +71,6 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the data being stored could not be cloned by the internal structured cloning algorithm.
 
-### Parameters
-
-- value
-  - : The value to be stored.
-- key
-  - : The key to use to identify the record. If unspecified, it results to null. If the
-    object store has a key generator (e.g. autoincrement) the key of the object must be
-    passed in to update the object.
-
 ## Examples
 
 The following example requests a given record title; when that request is successful
@@ -110,7 +102,7 @@ objectStoreTitleRequest.onsuccess = () => {
   const updateTitleRequest = objectStore.put(data);
 
   // Log the transaction that originated this request
-  console.log("The transaction that originated this request is " + updateTitleRequest.transaction);
+  console.log(`The transaction that originated this request is ${updateTitleRequest.transaction}`);
 
   // When this new request succeeds, run the displayData() function again to update the display
   updateTitleRequest.onsuccess = () => {
@@ -135,5 +127,4 @@ objectStoreTitleRequest.onsuccess = () => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

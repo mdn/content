@@ -1,6 +1,7 @@
 ---
 title: FontFace.display
 slug: Web/API/FontFace/display
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API
@@ -37,18 +38,23 @@ below.)
 
 A string with one of the following values.
 
-- `'auto'`: Use the font display strategy provided by the user agent.
-- `'block'`: Gives the font face a short block period and an infinite swap
-  period. The spec recommends 3 seconds for the block period, though this may vary from
-  browser to browser.
-- `'fallback'`: Gives the font face a short block period and a short swap
-  period. The spec recommends 100 ms or less for the block period and 3 seconds for the
-  swap period, though these values may vary from browser to browser.
-- `'optional'`: Gives the font face a short block period and no swap
-  period. The spec recommends 100 ms or less, though this may vary from browser to
-  browser.
-- `'swap'`: Gives the font face a 0 second block period and an infinite
-  swap period.
+- `'auto'`
+  - : Use the font display strategy provided by the user agent.
+- `'block'`
+  - : Gives the font face a short block period and an infinite swap
+    period. The spec recommends 3 seconds for the block period, though this may vary from
+    browser to browser.
+- `'fallback'`
+  - : Gives the font face a short block period and a short swap
+    period. The spec recommends 100 ms or less for the block period and 3 seconds for the
+    swap period, though these values may vary from browser to browser.
+- `'optional'`
+  - : Gives the font face a short block period and no swap
+    period. The spec recommends 100 ms or less, though this may vary from browser to
+    browser.
+- `'swap'`
+  - : Gives the font face a 0 second block period and an infinite
+    swap period.
 
 ## Specifications
 

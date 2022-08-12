@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.tFoot
 slug: Web/API/HTMLTableElement/tFoot
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -22,8 +23,8 @@ A {{HTMLElement("tfoot")}} element or `null`.
 ## Examples
 
 ```js
-if (table.tFoot == my_foot) {
-  // ...
+if (table.tFoot === my_foot) {
+  // …
 }
 ```
 

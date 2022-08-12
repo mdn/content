@@ -5,7 +5,7 @@ tags:
   - HTTPS
   - Security
 ---
-Starting with [Firefox 23](/en-US/docs/Mozilla/Firefox/Releases/23), Firefox blocks [active mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_active_content) by default. This follows a practice adopted by Internet Explorer ([since version 9](https://blogs.msdn.com/b/ie/archive/2011/06/23/internet-explorer-9-security-part-4-protecting-consumers-from-malicious-mixed-content.aspx)) and [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1).
+Starting with [Firefox 23](/en-US/docs/Mozilla/Firefox/Releases/23), Firefox blocks [active mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_active_content) by default. This follows a practice adopted by Internet Explorer ([since version 9](https://all-markup-news.com/internet-explorer-9-security-part-4-protecting-consumers-from-malicious-mixed-content/)) and [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1).
 
 This page explains what you should be aware of as a web developer.
 

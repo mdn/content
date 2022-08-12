@@ -81,7 +81,6 @@
       ],
       "interfaces": [
         "CanvasGradient",
-        "CanvasImageSource",
         "CanvasPattern",
         "CanvasRenderingContext2D",
         "HTMLCanvasElement",
@@ -122,6 +121,16 @@
         "Element: paste"
       ]
     },
+    "Compression Streams API": {
+      "overview": ["Compression Streams API"],
+      "interfaces": [
+        "CompressionStream",
+        "DecompressionStream"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
       "interfaces": ["ContactsManager"],
@@ -146,6 +155,18 @@
       "interfaces": ["Console"],
       "methods": [],
       "properties": ["Window.console", "WorkerGlobalScope.console"],
+      "events": []
+    },
+    "Cookie Store API": {
+      "overview": ["Cookie Store API"],
+      "interfaces": [
+        "CookieStore",
+        "CookieStoreManager",
+        "CookieChangeEvent",
+        "ExtendableCookieChangeEvent"
+      ],
+      "methods": [],
+      "properties": [],
       "events": []
     },
     "Credential Management API": {
@@ -384,18 +405,18 @@
       "events": []
     },
     "File API": {
+      "overview": ["File API"],
       "guides": [
-        "/docs/Using_files_from_web_applications",
-        "/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
+        "/docs/Web/API/File_API/Using_files_from_web_applications"
       ],
       "interfaces": [
+        "Blob",
         "File",
         "FileList",
         "FileReader",
-        "FileReaderSync",
-        "Blob"
+        "FileReaderSync"
       ],
-      "methods": [],
+      "methods": ["URL.createObjectURL()", "URL.revokeObjectURL()"],
       "properties": [],
       "events": []
     },
@@ -513,14 +534,12 @@
         "BeforeUnloadEvent",
         "DOMStringMap",
         "ErrorEvent",
-        "GlobalEventHandlers",
         "HashChangeEvent",
         "ImageData",
         "HTMLAnchorElement",
         "HTMLAreaElement",
         "HTMLAudioElement",
         "HTMLBaseElement",
-        "HTMLBaseFontElement",
         "HTMLBodyElement",
         "HTMLBRElement",
         "HTMLButtonElement",
@@ -730,7 +749,9 @@
       "overview": ["Intersection Observer API"],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": [],
+      "properties": [
+        "indexedDB"
+      ],
       "events": []
     },
     "Layout Instability API": {
@@ -768,10 +789,12 @@
       "dictionaries": []
     },
     "Media Capture and Streams": {
-      "overview": ["Media Streams API"],
-      "guides": ["/docs/Web/API/Media_Streams_API/Constraints"],
+      "overview": ["Media Capture and Streams API"],
+      "guides": [
+        "/docs/Web/API/Media_Capture_and_Streams_API/Constraints",
+        "/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos"
+      ],
       "interfaces": [
-        "BlobEvent",
         "CanvasCaptureMediaStreamTrack",
         "MediaDevices",
         "MediaStream",
@@ -789,6 +812,19 @@
       ],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
+    },
+    "Media Recorder API": {
+      "overview": ["Media Recorder API"],
+      "interfaces": ["MediaRecorder", "BlobEvent"],
+      "methods": [],
+      "properties": ["window.MediaRecorder"],
+      "events": [],
+      "dictionaries": [
+        "MediaRecorderOptions",
+        "BlobEventInit"
+      ],
+      "types": ["BitrateMode", "RecordingState"],
+      "callbacks": []
     },
     "Media Session API": {
       "overview": ["Media Session API"],
@@ -982,16 +1018,6 @@
         "Element.releasePointerCapture()"
       ],
       "properties": [
-        "GlobalEventHandlers.ongotpointercapture",
-        "GlobalEventHandlers.onlostpointercapture",
-        "GlobalEventHandlers.onpointerdown",
-        "GlobalEventHandlers.onpointermove",
-        "GlobalEventHandlers.onpointerup",
-        "GlobalEventHandlers.onpointercancel",
-        "GlobalEventHandlers.onpointerover",
-        "GlobalEventHandlers.onpointerout",
-        "GlobalEventHandlers.onpointerenter",
-        "GlobalEventHandlers.onpointerleave",
         "Navigator.maxTouchPoints"
       ],
       "events": [
@@ -1037,6 +1063,14 @@
         "Navigator.presentation",
         "Navigator.mozPresentationDeviceInfo"
       ],
+      "events": []
+    },
+    "Prioritized Task Scheduling API": {
+      "overview": ["Prioritized Task Scheduling API"],
+      "guides": [],
+      "interfaces": ["Scheduler", "TaskController", "TaskSignal", "AbortSignal", "TaskPriorityChangeEvent"],
+      "methods": [],
+      "properties": ["Window.scheduler"],
       "events": []
     },
     "Proximity Events": {
@@ -1139,9 +1173,7 @@
     "Selection API": {
       "overview": ["Selection API"],
       "interfaces": ["Selection"],
-      "properties": [
-        "GlobalEventHandlers.onselectstart"
-      ],
+      "properties": [],
       "methods": ["Document.getSelection()", "Window.getSelection()"],
       "events": ["Document: selectionchange", "Document: selectstart"]
     },
@@ -1221,6 +1253,7 @@
       "guides": [
         "/docs/Web/API/Streams_API/Concepts",
         "/docs/Web/API/Streams_API/Using_readable_streams",
+        "/docs/Web/API/Streams_API/Using_readable_byte_streams",
         "/docs/Web/API/Streams_API/Using_writable_streams"
       ],
       "interfaces": [
@@ -1529,6 +1562,7 @@
         "/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API",
         "/docs/Web/API/Web_Audio_API/Best_practices",
         "/docs/Web/API/Web_Audio_API/Advanced_techniques",
+        "/docs/Web/API/Web_Audio_API/Using_AudioWorklet",
         "/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode",
         "/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext",
         "/docs/Web/API/Web_Audio_API/Simple_synth",
@@ -1822,7 +1856,6 @@
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
         "/docs/Web/API/WebRTC_API/adapter.js",
-        "/docs/Web/API/WebRTC_API/Taking_still_photos",
         "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample"
       ],
       "interfaces": [
@@ -1905,32 +1938,6 @@
         "RTCIceCandidatePairStats",
         "RTCCertificateStats",
         "RTCRTPStreamStats"
-      ],
-      "types": [
-        "RTCIceTransportPolicy",
-        "RTCBundlePolicy",
-        "RTCRtcpMuxPolicy",
-        "RTCSignalingState",
-        "RTCIceGatheringState",
-        "RTCPeerConnectionState",
-        "RTCIceConnectionState",
-        "RTCIceProtocol",
-        "RTCIceTcpCandidateType",
-        "RTCIceCandidateType",
-        "RTCPriorityType",
-        "RTCRtpTransceiverDirection",
-        "RTCDtxStatus",
-        "RTCDegradationPreference",
-        "RTCDtlsTransportState",
-        "RTCIceGathererState",
-        "RTCIceComponent",
-        "RTCSctpTransportState",
-        "RTCDataChannelState",
-        "RTCErrorDetailType",
-        "RTCStatsType",
-        "RTCCodecType",
-        "RTCQualityLimitationReason",
-        "RTCStatsIceCandidatePairState"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
       "properties": ["Navigator.mediaDevices"],
@@ -2033,6 +2040,27 @@
         "WorkerGlobalScope",
         "WorkerLocation",
         "WorkerNavigator"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "WebUSB API": {
+      "overview": ["WebUSB API"],
+      "interfaces": [
+        "USB",
+        "USBAlternateInterface",
+        "USBConfiguration",
+        "USBConnectionEvent",
+        "USBDevice",
+        "USBEndPoint",
+        "USBInterface",
+        "USBInTransferResult",
+        "USBIsochronousInTransferPacket",
+        "USBIsochronousInTransferResult",
+        "USBIsochronousOutTransferPacket",
+        "USBIsochronousOutTransferResult",
+        "USBOutTransferResult"
       ],
       "methods": [],
       "properties": [],

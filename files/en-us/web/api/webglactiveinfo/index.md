@@ -1,6 +1,7 @@
 ---
 title: WebGLActiveInfo
 slug: Web/API/WebGLActiveInfo
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -27,12 +28,6 @@ A `WebGLActiveInfo` object is returned by:
 - {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
 - {{domxref("WebGLRenderingContext.getActiveUniform()")}} or
 - {{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}
-
-```js
-WebGLActiveInfo? getActiveAttrib(WebGLProgram? program, GLuint index);
-WebGLActiveInfo? getActiveUniform(WebGLProgram? program, GLuint index);
-WebGLActiveInfo? getTransformFeedbackVarying(WebGLProgram? program, GLuint index)
-```
 
 ## Specifications
 

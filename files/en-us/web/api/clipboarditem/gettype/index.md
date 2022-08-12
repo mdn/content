@@ -1,6 +1,7 @@
 ---
 title: ClipboardItem.getType()
 slug: Web/API/ClipboardItem/getType
+page-type: web-api-instance-method
 tags:
   - Clipboard
   - Clipboard API
@@ -19,7 +20,7 @@ The **`getType()`** method of the {{domxref("ClipboardItem")}} interface returns
 ## Syntax
 
 ```js
-var blob = clipboardItem.getType(type);
+getType(type)
 ```
 
 ### Parameters
@@ -77,7 +78,5 @@ async function getClipboardContents() {
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on
-  Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async
-  Clipboard article](https://web.dev/async-clipboard/)
+- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

@@ -9,10 +9,13 @@ tags:
   - Web
   - color
   - hsla
+browser-compat: css.types.color.hsla
 ---
 {{CSSRef}}
 
 The **`hsla()`** functional notation expresses a given color according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
+
+{{EmbedInteractiveExample("pages/css/function-hsla.html")}}
 
 > **Note:** The Level 4 specification allows for space-separated in addition to comma-separated values.
 
@@ -28,7 +31,7 @@ hsla(235 100% 50% / 1); /* CSS Colors 4 space-separated values */
 
 - Functional notation: `hsla(H, S, L[, A])`
 
-  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#the-hsl-notation) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
     `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal."
 
@@ -37,10 +40,10 @@ hsla(235 100% 50% / 1); /* CSS Colors 4 space-separated values */
 - Functional notation: `hsla(H S L[ / A])`
   - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
-{{Compat("css.types.color.alpha")}}
-
-### Space-separated values
-
-{{Compat("css.types.color.space_separated_functional_notation")}}
+{{Compat}}

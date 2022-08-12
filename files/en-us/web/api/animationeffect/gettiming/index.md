@@ -1,6 +1,7 @@
 ---
 title: AnimationEffect.getTiming()
 slug: Web/API/AnimationEffect/getTiming
+page-type: web-api-instance-method
 tags:
   - API
   - Animation

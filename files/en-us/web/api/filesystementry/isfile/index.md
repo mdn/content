@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.isFile
 slug: Web/API/FileSystemEntry/isFile
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API

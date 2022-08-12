@@ -1,6 +1,7 @@
 ---
 title: performance.clearMeasures()
 slug: Web/API/Performance/clearMeasures
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -35,7 +36,7 @@ clearMeasures(name)
 
 ### Return value
 
-void
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -45,7 +46,7 @@ The following example shows both uses of the `clearMeasures()` method.
 // Create a small helper to show how many PerformanceMeasure entries there are.
 function logMeasureCount() {
   console.log(
-    "Found this many entries: " + performance.getEntriesByType("measure").length
+    `Found this many entries: ${performance.getEntriesByType("measure").length}`
   );
 }
 

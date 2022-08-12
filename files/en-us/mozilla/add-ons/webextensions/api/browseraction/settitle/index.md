@@ -42,9 +42,9 @@ browser.browserAction.setTitle(
         - if `windowId` is specified, and the window has a window-specific title set, then the window will inherit the global title.
         - Otherwise, the global title will be reset to the manifest title.
 
-    - `tabId`{{Optional_Inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the title only for the given tab.
-    - `windowId`{{Optional_Inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the title for the given window.
 
 <!---->
@@ -62,7 +62,7 @@ This code switches the title between "this" and "that" each time the user clicks
 
 ```js
 function toggleTitle(title) {
-  if (title == "this") {
+  if (title === "this") {
     browser.browserAction.setTitle({title: "that"});
   } else {
     browser.browserAction.setTitle({title: "this"});

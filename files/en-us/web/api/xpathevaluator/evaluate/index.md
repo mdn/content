@@ -1,6 +1,7 @@
 ---
 title: XPathEvaluator.evaluate()
 slug: Web/API/XPathEvaluator/evaluate
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -28,18 +29,18 @@ evaluate(expression, contextNode, resolver, type, result)
 
 ### Parameters
 
-- expression
+- `expression`
   - : A string representing the XPath expression to be parsed and
     evaluated.
-- contextNode
+- `contextNode`
   - : A {{domxref("Node")}} representing the context to use for evaluating the expression.
-- resolver {{optional_inline}}
+- `resolver` {{optional_inline}}
   - : Permits translation of all prefixes, including the `xml` namespace
     prefix, within the XPath expression into appropriate namespace URIs.
-- type {{optional_inline}}
+- `type` {{optional_inline}}
   - : Specifies the type of result to be returned by evaluating the expression. This must
     be one of the {{domxref("XPathResult", "XPathResult", "Constants")}}.
-- result {{optional_inline}}
+- `result` {{optional_inline}}
   - : Allows to specify a result object which may be reused and returned by this method.
     If this is specified as `null` or the implementation does not reuse the
     specified result, a new result object will be returned.
@@ -94,8 +95,8 @@ The following example shows the use of the `evaluate()` method.
 ### JavaScript
 
 ```js
-var evaluator = new XPathEvaluator();
-var result = evaluator.evaluate("//div", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const evaluator = new XPathEvaluator();
+const result = evaluator.evaluate("//div", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

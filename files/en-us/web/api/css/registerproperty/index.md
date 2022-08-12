@@ -1,13 +1,16 @@
 ---
 title: CSS.registerProperty()
 slug: Web/API/CSS/RegisterProperty
+page-type: web-api-static-method
 tags:
   - CSS
   - Houdini
   - Reference
+  - Experimental
 browser-compat: api.CSS.registerProperty
 ---
 {{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** method registers
 {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default
@@ -29,16 +32,16 @@ A `PropertyDefinition` dictionary object, which can contain the following
 members:
 
 - `name`
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) indicating the
+  - : A string representing the
     name of the property being defined.
 - `syntax` {{optional_inline}}
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing
+  - : A string representing
     the expected syntax of the defined property. Defaults to `"*"`.
 - `inherits`
   - : A boolean value defining whether the defined property should be inherited
     (`true`), or not (`false`). Defaults to `false`.
 - `initialValue` {{optional_inline}}
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing
+  - : A string representing
     the initial value of the defined property.
 
 ### Return value
@@ -122,8 +125,7 @@ We can add these styles to some buttons:
 
 ## See also
 
-- [Using the CSS
-  properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - {{DOMxRef("CSS")}}
 - {{DOMxRef("CSS.supports()")}}
 - {{DOMxRef("CSS.escape()")}}

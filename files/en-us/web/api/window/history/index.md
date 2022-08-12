@@ -1,6 +1,7 @@
 ---
 title: Window.history
 slug: Web/API/Window/history
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

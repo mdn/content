@@ -11,7 +11,7 @@ tags:
   - Layout
   - Reference
   - easing-function
-spec-urls: https://drafts.csswg.org/css-easing/#typedef-easing-function
+browser-compat: css.types.easing-function
 ---
 {{CSSRef}}
 
@@ -23,11 +23,11 @@ The easing functions in the cubic-bezier subset of easing functions are often ca
 
 Depending on the specific function used, the calculated output can sometimes grow to be greater than `1.0` or smaller than `0.0` during the course of an animation. This causes the value to go farther than the final state, and then return. In animations, for some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.
 
-![](tf_with_output_gt_than_1.png)
+![Graph of the easing function showing the output ratio going above 1, to 1.5, at the transition durations midpoint.](tf_with_output_gt_than_1.png)
 
 However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than `255` or smaller than `0` will be clipped to the closest allowed value (`255` and `0`, respectively). Some `cubic-bezier()` curves exhibit this property.
 
-![](tf_with_output_gt_than_1_clipped.png)
+![Graph of the easing function showing the output ratio reaching 1, and then staying at 1 for the rest of the time.](tf_with_output_gt_than_1_clipped.png)
 
 ### Easing functions
 
@@ -38,13 +38,13 @@ CSS supports: linear, the subset of the [cubic Bézier curves](/en-US/docs/Gloss
 
 ##### linear
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A straight diagonal line extends from the origin to the X 1 Y 1 position.](cubic-bezier-linear.png)
+![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A straight diagonal line extends from the origin to the X 1 Y 1 position.](cubic-bezier-linear.png)
 
 The interpolation is done at a constant rate from beginning to end. This keyword represents the easing function `cubic-bezier(0.0, 0.0, 1.0, 1.0)`.
 
 #### The cubic-bezier() class of easing functions
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A curved line extends from the origin to the X 1 Y 1 position. The X 0 Y 0 point of the line is labeled  'P₀ = (0, 0)'. Extending from the X 0 Y 0 point is a Bezier handle labeled 'P₁ = (0.075, 0.75)'. The X 1 Y 1 point of the line is labeled 'P₃ = (1, 1)'. Extending from the X 1 Y 1 point is a Bezier handle labeled 'P₂ = (0.0875, 0.36)'.](cubic-bezier-example.png)
+![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A curved line extends from the origin to the X 1 Y 1 position. The X 0 Y 0 point of the line is labeled  'P₀ = (0, 0)'. Extending from the X 0 Y 0 point is a Bezier handle labeled 'P₁ = (0.075, 0.75)'. The X 1 Y 1 point of the line is labeled 'P₃ = (1, 1)'. Extending from the X 1 Y 1 point is a Bezier handle labeled 'P₂ = (0.0875, 0.36)'.](cubic-bezier-example.png)
 
 The `cubic-bezier()` functional notation defines a [cubic Bézier curve](/en-US/docs/Glossary/Bezier_curve). As these curves are continuous, they are often used to smooth down the start and end of the interpolation and are therefore sometimes called _easing functions_.
 
@@ -71,31 +71,31 @@ where:
 
 ##### ease
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A curving line extends from the origin to the X 1 Y 1 position, quickly rising and arcing.](cubic-bezier-ease.png)
+![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A curving line extends from the origin to the X 1 Y 1 position, quickly rising and arcing.](cubic-bezier-ease.png)
 
 The interpolation starts slowly, accelerates sharply, and then slows gradually towards the end. This keyword represents the easing function `cubic-bezier(0.25, 0.1, 0.25, 1.0)`. It is similar to [`ease-in-out`](#ease-in-out), though it accelerates more sharply at the beginning.
 
 ##### ease-in
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A slightly curving line extends from the origin to the X 1 Y 1 position, with most of the curve close to the origin, straightening out as it approaches X 1 Y 1.](cubic-bezier-ease-in.png)
+![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A slightly curving line extends from the origin to the X 1 Y 1 position, with most of the curve close to the origin, straightening out as it approaches X 1 Y 1.](cubic-bezier-ease-in.png)
 
 The interpolation starts slowly, and then progressively speeds up until the end, at which point it stops abruptly. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 1.0, 1.0)`.
 
 ##### `ease-in-out`
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A slightly curving line extends from the origin to the X 1 Y 1 position. The curve is symmetrical, resembling a stretched out letter S.](cubic-bezier-ease-in-out.png)
+![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A slightly curving line extends from the origin to the X 1 Y 1 position. The curve is symmetrical, resembling a stretched out letter S.](cubic-bezier-ease-in-out.png)
 
 The interpolation starts slowly, speeds up, and then slows down towards the end. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 0.58, 1.0)`. At the beginning, it behaves like the [`ease-in`](#ease-in) function; at the end, it is like the [`ease-out`](#ease-out) function.
 
 ##### ease-out
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A slightly curving line extends from the origin to the X 1 Y 1 position, starting as an almost straight diagonal line and curving as it gets close to X 1 Y 1.](cubic-bezer-ease-out.png)
+![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A slightly curving line extends from the origin to the X 1 Y 1 position, starting as an almost straight diagonal line and curving as it gets close to X 1 Y 1.](cubic-bezer-ease-out.png)
 
 The interpolation starts abruptly, and then progressively slows down towards the end. This keyword represents the easing function `cubic-bezier(0.0, 0.0, 0.58, 1.0)`.
 
 #### The steps() class of easing functions
 
-The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps.This subclass of step functions are sometimes also called _staircase functions_.
+The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps. This subclass of step functions are sometimes also called _staircase functions_.
 
 ##### Syntax
 
@@ -109,11 +109,11 @@ where:
   - : Is a strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.
 - _direction_
 
-  - : Is a keyword indicating if it the function is [left- or right-continuous](https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity):
+  - : Is a keyword indicating when the jumps occur:
 
-    - `jump-start` denotes a left-continuous function, so that the first step or jump happens when the interpolation begins;
-    - `jump-end` denotes a right-continuous function, so that the last step or jump happens when the interpolation ends;
-    - `jump-both` denotes a right and left continuous function, includes pauses at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;
+    - `jump-start` denotes that the first step or jump happens when the interpolation begins;
+    - `jump-end` denotes that the last step or jump happens when the interpolation ends;
+    - `jump-both` denotes that jumps occur at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;
     - `jump-none` There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration
     - `start` is the equivalent of `jump-start`
     - `end` is the equivalent of `jump-end`
@@ -125,7 +125,7 @@ where:
 - `steps(2, jump-start)`
   `steps(2, start)`
 
-  ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Three dots are present, the first at the X 0 Y 0 position, the second at the X 0.5 Y 0.5 position, and the third at the X 1 Y 1 position. The second and third dots have horizontal lines extending 0.5 units backwards towards the Y axis.](steps-2-start.png)
+  ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. Three dots are present, the first at the X 0 Y 0 position, the second at the X 0.5 Y 0.5 position, and the third at the X 1 Y 1 position. The second and third dots have horizontal lines extending 0.5 units backwards towards the Y axis.](steps-2-start.png)
 
 - `steps(4, jump-end) steps(4, end)`
 
@@ -137,15 +137,15 @@ where:
 
 - `steps(3, jump-both)`
 
-  ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Five dots are present, the first at the X 0 Y 0 position, the second at the X 0 Y 0.25 position, the third at the X 0.5 Y 0.5 position, the fourth at the X 0.75 Y 0.75 position, and the fifth at the X 1 Y 1 position. The second, third, and fourth dots have horizontal lines extending 0.25 units forwards away from the Y axis.](step3both.png)
+  ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. Five dots are present, the first at the X 0 Y 0 position, the second at the X 0 Y 0.25 position, the third at the X 0.5 Y 0.5 position, the fourth at the X 0.75 Y 0.75 position, and the fifth at the X 1 Y 1 position. The second, third, and fourth dots have horizontal lines extending 0.25 units forwards away from the Y axis.](step3both.png)
 
 ##### step-start
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The second dot has a horizontal lines extending 1 units back towards the Y axis.](steps-1-start.png) The interpolation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function `steps(1, jump-start)` or `steps(1, start)`.
+![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The second dot has a horizontal lines extending 1 units back towards the Y axis.](steps-1-start.png) The interpolation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function `steps(1, jump-start)` or `steps(1, start)`.
 
 ##### step-end
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The first dot has a horizontal lines extending 1 unit forwards away from the Y axis.](steps-1-end.png) The interpolation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function `steps(1, jump-end)` or `steps(1, end)`.
+![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The first dot has a horizontal lines extending 1 unit forwards away from the Y axis.](steps-1-end.png) The interpolation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function `steps(1, jump-end)` or `steps(1, end)`.
 
 ## Examples
 
@@ -226,7 +226,7 @@ const startBtn = document.querySelector('button');
 const divElem = document.querySelector('div > div');
 
 startBtn.addEventListener('click', () => {
-  if(startBtn.textContent === 'Start animation') {
+  if (startBtn.textContent === 'Start animation') {
     divElem.style.animationName = 'move-right';
     startBtn.textContent = 'Stop animation';
     divElem.style.animationTimingFunction = selectElem.value;
@@ -321,7 +321,7 @@ steps(0, jump-none)
 
 ## Browser compatibility
 
-{{Compat("css.types.easing-function", 2)}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: 'Movement, orientation, and motion: A WebXR example'
 slug: Web/API/WebXR_Device_API/Movement_and_motion
+page-type: guide
 tags:
   - 3D
   - API
@@ -261,7 +262,7 @@ function sessionStarted(session) {
     baseLayer: new XRWebGLLayer(xrSession, gl)
   });
 
-  if (SESSION_TYPE == "immersive-vr") {
+  if (SESSION_TYPE === "immersive-vr") {
     refSpaceType = "local";
   } else {
     refSpaceType = "viewer";
@@ -527,7 +528,7 @@ We copy the transform's {{domxref("XRRigidTransform.matrix", "matrix")}} into `m
 
 The `renderScene()`  function is called to actually render the parts of the world that are visible to the user at the moment. It's called once for each eye, with slightly different positions for each eye, in order to establish the 3D effect needed for XR gear.
 
-Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example \[[view the code on GitHub](https://github.com/mdn/webgl-examples/blob/gh-pages/tutorial/sample7/webgl-demo.js)]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.
+Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example \[[view the code on GitHub](https://github.com/mdn/dom-examples/blob/master/webgl-examples/tutorial/sample7/webgl-demo.js)]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.
 
 ```js
 const normalMatrix = mat4.create();
@@ -694,7 +695,7 @@ The rest of the code is identical to that found in the earlier examples:
 - `loadShader()`
   - : Creates a shader object and loads the specified source code into it before compiling the code and checking to ensure that the compiler succeeded before returning the newly compiled shader to the caller. If an error occurs, `NULL` is returned instead.
 - `initBuffers()`
-  - : Initializes the buffers that contain data to be passed into WebGL. These buffers include the array of vertex positions, the array of vertex normals, the texture coordinates for each surface of the cube, and the array of vertex indices (specifying which entry in the vertex list represents each corner of the cube). An object containing references to eard
+  - : Initializes the buffers that contain data to be passed into WebGL. These buffers include the array of vertex positions, the array of vertex normals, the texture coordinates for each surface of the cube, and the array of vertex indices (specifying which entry in the vertex list represents each corner of the cube).
 - `loadTexture()`
   - : Loads the image at a given URL and creates a WebGL texture from it. If the image's dimensions aren't both powers of two (see the `isPowerOf2()` function), mipmapping is disabled and wrapping is clamped to the edges. This is because optimized rendering of mipmapped textures only works for textures whose dimensions are powers of two in WebGL 1. WebGL 2 supports arbitrarily-sized textures for mipmapping.
 - `isPowerOf2()`
@@ -712,6 +713,6 @@ There are few limitations on what can be done if you set yourself to it.
 
 ## See also
 
-- [Learn WebGL](http://learnwebgl.brown37.net/#) (includes some great visualizations of the camera and how it relates to the virtual world)
+- [Learn WebGL](https://learnwebgl.brown37.net/#) (includes some great visualizations of the camera and how it relates to the virtual world)
 - [WebGL Fundamentals](https://webglfundamentals.org)
 - [Learn OpenGL](https://learnopengl.com/)

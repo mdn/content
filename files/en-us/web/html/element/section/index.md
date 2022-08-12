@@ -31,7 +31,7 @@ The **`<section>`** [HTML](/en-US/docs/Web/HTML) element represents a generic st
         <a
           href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content"
           >Sectioning content</a
-        >, palpable content.
+        >, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>
@@ -111,7 +111,7 @@ Also consider these cases:
 - If the contents represent the main content area of a document, use {{HTMLElement("main")}}.
 - If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}}. An unwritten rule is that a `<section>` should logically appear in the outline of a document.
 
-To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement('h1')}}-{{HTMLElement('h6')}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
+To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement('h1')}} - {{HTMLElement('h6')}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
 
 ## Examples
 

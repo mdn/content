@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.onMSVideoFormatChanged
 slug: Web/API/HTMLVideoElement/onMSVideoFormatChanged
+page-type: web-api-instance-property
 tags:
   - onMsVideoFormatChanged
 ---

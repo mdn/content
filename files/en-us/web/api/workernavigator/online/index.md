@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.onLine
 slug: Web/API/WorkerNavigator/onLine
+page-type: web-api-instance-property
 tags:
   - API
   - DOM Reference
@@ -66,9 +67,9 @@ listen for the events on `online` and `offline`, as
 in the following example:
 
 ```js
-addEventListener('offline', function(e) { console.log('offline'); });
+addEventListener('offline', (e) => { console.log('offline'); });
 
-addEventListener('online', function(e) { console.log('online'); });
+addEventListener('online', (e) => { console.log('online'); });
 ```
 
 ## Specifications

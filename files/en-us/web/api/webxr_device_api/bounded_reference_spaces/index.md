@@ -1,6 +1,7 @@
 ---
 title: Using bounded reference spaces
 slug: Web/API/WebXR_Device_API/Bounded_reference_spaces
+page-type: guide
 tags:
   - 3D
   - Graphics
@@ -71,7 +72,7 @@ Before actually attempting to create a bounded reference space, you need to crea
 ```js
 async function onActivateXRButton(event) {
   if (!xrSession) {
-    navigator.xr.requestSession("immersive-vr"), {
+    navigator.xr.requestSession("immersive-vr", {
       requiredFeatures: ["local-floor"],
       optionalFeatures: ["bounded-floor"]
     }).then((session) => {
@@ -117,7 +118,7 @@ function onRefSpaceCreated(refSpace) {
   });
 
   // Now set up matrices, create a secondary reference space to
-  // transform the viewer's pose, and so forth. Then...
+  // transform the viewer's pose, and so forth.
 
   xrSession.requestAnimationFrame(onDrawFrame);
 }

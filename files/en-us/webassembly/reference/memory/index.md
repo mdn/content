@@ -1,5 +1,5 @@
 ---
-title: WebAssembly memory
+title: WebAssembly memory instructions
 slug: WebAssembly/Reference/Memory
 tags:
   - WebAssembly
@@ -10,9 +10,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-WebAssembly bitwise instructions.
-
-> **Note:** These bitwise instructions are only available for the integer types and not for the floating point types.
+WebAssembly memory instructions.
 
 - [`Grow`](/en-US/docs/WebAssembly/Reference/Memory/Grow)
   - : Increase the size of the memory instance.

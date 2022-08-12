@@ -11,7 +11,3 @@ tags:
 The EXSLT Math package provides functions for working with numeric values and comparing nodes. The namespace for the Math package is `http://exslt.org/math`.
 
 {{SubpagesWithSummaries}}
-
-## Browser compatibility
-
-{{Compat("xslt.exslt.math")}}

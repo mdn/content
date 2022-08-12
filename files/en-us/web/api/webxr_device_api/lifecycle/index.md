@@ -1,6 +1,7 @@
 ---
 title: WebXR application life cycle
 slug: Web/API/WebXR_Device_API/Lifecycle
+page-type: guide
 tags:
   - API
   - Application

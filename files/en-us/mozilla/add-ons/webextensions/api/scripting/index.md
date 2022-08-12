@@ -18,7 +18,7 @@ Inserts JavaScript and CSS into websites. This API offers two approaches to inse
 - {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}}, and {{WebExtAPIRef("scripting.removeCSS()")}} that provide for one-off injections.
 - {{WebExtAPIRef("scripting.registerContentScripts()")}} that registers content scripts dynamically, which can then be retrieved with {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} and unregistered with {{WebExtAPIRef("scripting.unregisterContentScripts()")}}).
 
-> **Note:** **Note:** This API is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this API is also available in Manifest V2.
+> **Note:** This API is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this API is also available in Manifest V2.
 
 This API requires the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) permission and [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the target in the tab into which JavaScript or CSS is injected.
 
@@ -49,13 +49,13 @@ Alternatively, you can get permission temporarily in the active tab and only in 
   - : Updates one or more content scripts already registered.
 - {{WebExtAPIRef("scripting.unregisterContentScripts()")}}
   - : Unregisters one or more content scripts.
-  
+
 ## Browser compatibility
 
 {{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting) API.
+> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

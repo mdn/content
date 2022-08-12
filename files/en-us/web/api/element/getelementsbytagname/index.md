@@ -1,6 +1,7 @@
 ---
 title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

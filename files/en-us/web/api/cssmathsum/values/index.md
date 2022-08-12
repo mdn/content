@@ -1,6 +1,7 @@
 ---
 title: CSSMathSum.values
 slug: Web/API/CSSMathSum/values
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

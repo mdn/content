@@ -1,6 +1,7 @@
 ---
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
+page-type: web-api-instance-method
 tags:
   - Deprecated
   - Method

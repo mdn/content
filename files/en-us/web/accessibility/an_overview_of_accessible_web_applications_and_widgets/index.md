@@ -132,7 +132,7 @@ The JavaScript to update the **`aria-hidden`** property has the form shown in Ex
 _Example 2c. JavaScript to update the aria-hidden attribute_
 
 ```js
-var showTip = function(el) {
+function showTip(el) {
   el.setAttribute('aria-hidden', 'false');
 }
 ```

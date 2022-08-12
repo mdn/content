@@ -273,12 +273,12 @@ You can use the macros [\\{{cssxref}}](https://github.com/mdn/yari/blob/main/kum
 
 It may happen that the syntax contains references to specific values. Such values normally define their own syntaxes. Those syntaxes should be stored [syntaxes.json](https://github.com/mdn/data/blob/main/css/syntaxes.json) with their name as key. E.g. the {{cssxref("font-family")}} property has a syntax of `[ <family-name> | <generic-family> ]#`. The syntaxes for the values `<family-name>` and `<generic-family>` are stored like this:
 
-```js
+```json
 {
-    "syntaxes": {
-        "family-name": "<string> | <custom-ident>+",
-        "generic-family": "serif | sans-serif | cursive | fantasy | monospace"
-    }
+  "syntaxes": {
+    "family-name": "<string> | <custom-ident>+",
+    "generic-family": "serif | sans-serif | cursive | fantasy | monospace"
+  }
 }
 ```
 

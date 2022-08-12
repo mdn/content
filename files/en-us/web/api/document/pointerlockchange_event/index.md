@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointerlockchange event'
 slug: Web/API/Document/pointerlockchange_event
+page-type: web-api-event
 tags:
   - Document
   - Event
@@ -20,9 +21,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointerlockchange', event => { });
+addEventListener('pointerlockchange', (event) => { });
 
-onpointerlockchange = event => { };
+onpointerlockchange = (event) => { };
 ```
 
 ## Event type

@@ -37,12 +37,12 @@ browser.contextMenus.create({
 Your extension then listens for clicks on the menu items. The passed information about the item clicked, the context where the click happened, and details of the tab where the click took place can then be used to invoke the appropriate extension functionality.
 
 ```js
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener((info, tab) => {
   switch (info.menuItemId) {
     case "log-selection":
       console.log(info.selectionText);
       break;
-    ...
+    // …
   }
 })
 ```

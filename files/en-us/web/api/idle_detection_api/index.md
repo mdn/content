@@ -1,6 +1,7 @@
 ---
 title: Idle Detection API
 slug: Web/API/Idle_Detection_API
+page-type: web-api-overview
 tags:
   - API
   - IdleDetector
@@ -32,7 +33,7 @@ const controller = new AbortController();
 const signal = controller.signal;
 
 startButton.addEventListener('click', async () => {
-  if (await IdleDetector.requestPermission() != "granted") {
+  if (await IdleDetector.requestPermission() !== "granted") {
     console.error("Idle detection permission denied.");
     return;
   }

@@ -1,6 +1,7 @@
 ---
 title: Window.find()
 slug: Web/API/Window/find
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -51,7 +52,7 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
 
 ```js
 function findString(text) {
-  document.querySelector("#output").textContent="String found? " + window.find(text);
+  document.querySelector("#output").textContent=`String found? ${window.find(text)}`;
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: RTCError.receivedAlert
 slug: Web/API/RTCError/receivedAlert
+page-type: web-api-instance-property
 tags:
   - API
   - DTLS

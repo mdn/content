@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.enable()
 slug: Web/API/WebGLRenderingContext/enable
+page-type: web-api-instance-method
 tags:
   - API
   - Method

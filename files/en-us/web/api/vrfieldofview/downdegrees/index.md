@@ -1,6 +1,7 @@
 ---
 title: VRFieldOfView.downDegrees
 slug: Web/API/VRFieldOfView/downDegrees
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

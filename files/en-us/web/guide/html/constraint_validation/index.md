@@ -12,7 +12,7 @@ The creation of web forms has always been a complex task. While marking up the f
 
 For a basic introduction to these concepts, with examples, see the [Form validation tutorial](/en-US/docs/Learn/Forms/Form_validation).
 
-> **Note:** HTML5 Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent by non-compliant browsers (for instance, browsers without HTML5 and without JavaScript) or by bad people trying to trick your web application. Therefore, like with HTML4, you need to also validate input constraints on the server side, in a way that is consistent with what is done on the client side.
+> **Note:** HTML Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent by non-compliant browsers (for instance, browsers without HTML5 and without JavaScript) or by bad people trying to trick your web application. Therefore, like with HTML4, you need to also validate input constraints on the server side, in a way that is consistent with what is done on the client side.
 
 ## Intrinsic and basic constraints
 
@@ -322,7 +322,7 @@ First, we write a function checking the constraint itself:
 ```js
 function checkZIP() {
   // For each country, defines the pattern that the ZIP has to follow
-  var constraints = {
+  const constraints = {
     ch : [ '^(CH-)?\\d{4}$', "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950" ],
     fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
     de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
@@ -331,21 +331,20 @@ function checkZIP() {
   };
 
   // Read the country id
-  var country = document.getElementById("Country").value;
+  const country = document.getElementById("Country").value;
 
   // Get the NPA field
-  var ZIPField = document.getElementById("ZIP");
+  const ZIPField = document.getElementById("ZIP");
 
   // Build the constraint checker
-  var constraint = new RegExp(constraints[country][0], "");
-    console.log(constraint);
+  const constraint = new RegExp(constraints[country][0], "");
+  console.log(constraint);
 
   // Check it!
   if (constraint.test(ZIPField.value)) {
     // The ZIP follows the constraint, we use the ConstraintAPI to tell it
     ZIPField.setCustomValidity("");
-  }
-  else {
+  } else {
     // The ZIP doesn't follow the constraint, we use the ConstraintAPI to
     // give a message about the format required for this country
     ZIPField.setCustomValidity(constraints[country][1]);
@@ -356,13 +355,11 @@ function checkZIP() {
 Then we link it to the **onchange** event for the {{ HTMLElement("select") }} and the **oninput** event for the {{ HTMLElement("input") }}:
 
 ```js
-window.onload = function () {
-    document.getElementById("Country").onchange = checkZIP;
-    document.getElementById("ZIP").oninput = checkZIP;
+window.onload = () => {
+  document.getElementById("Country").onchange = checkZIP;
+  document.getElementById("ZIP").oninput = checkZIP;
 }
 ```
-
-You can see a [live example](/@api/deki/files/4744/=constraint.html) of the postal code validation.
 
 ### Limiting the size of a file before its upload
 
@@ -383,8 +380,8 @@ The JavaScript reads the file selected, uses the `File.size()` method to get its
 
 ```js
 function checkFileSize() {
-  var FS = document.getElementById("FS");
-  var files = FS.files;
+  const FS = document.getElementById("FS");
+  const files = FS.files;
 
   // If there is (at least) one file selected
   if (files.length > 0) {
@@ -401,12 +398,10 @@ function checkFileSize() {
 Finally we hook the method with the correct event:
 
 ```js
-window.onload = function () {
+window.onload = () => {
   document.getElementById("FS").onchange = checkFileSize;
 }
 ```
-
-You can see a [live example](/@api/deki/files/4745/=fileconstraint.html) of the File size constraint validation.
 
 ## Visual styling of constraint validation
 

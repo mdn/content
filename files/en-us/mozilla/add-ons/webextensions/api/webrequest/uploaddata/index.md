@@ -21,9 +21,9 @@ Contains data uploaded in a URL request.
 
 Values of this type are objects. They contain the following properties:
 
-- `bytes`{{optional_inline}}
+- `bytes` {{optional_inline}}
   - : `any`. An ArrayBuffer with a copy of the data.
-- `file`{{optional_inline}}
+- `file` {{optional_inline}}
   - : `string`. A string with the file's path and name.
 
 ## Browser compatibility

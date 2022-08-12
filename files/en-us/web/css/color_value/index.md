@@ -26,13 +26,13 @@ A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Al
 
 A `<color>` can be defined in any of the following ways:
 
-- Using a keyword (such as `blue` or `transparent`). All existing keywords specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+- Using a keyword (such as `blue` or `transparent`). All existing keywords specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [RGB cubic-coordinate](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) system (via the #-hexadecimal or the `rgb()` and `rgba()` functional notations).
-  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [HSL cylindrical-coordinate](https://en.wikipedia.org/wiki/HSL_and_HSV) system (via the {{cssxref("color_value/hsl","hsl()")}} and {{cssxref("color_value/hsla","hsla()")}} functional notations).
-  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [HWB cylindrical-coordinate](https://en.wikipedia.org/wiki/HWB_color_model) system (via the {{cssxref("color_value/hwb","hwb()")}} functional notation).
-  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [LCH cylindrical coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC), via the {{cssxref("color_value/lch","lch()")}} functional notation.
   This can specify any visible color.
 - Using the [Lab coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space), via the {{cssxref("color_value/lab","lab()")}} functional notation.
@@ -61,21 +61,21 @@ The `transparent` keyword represents a fully transparent color. This makes the b
 
 > **Note:** `transparent` wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular `<color>` value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, `transparent` was redefined as a true color. It can now be used wherever a `<color>` value can be used.
 
-### currentColor keyword
+### currentcolor keyword
 
-The `currentColor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
+The `currentcolor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
 
-If `currentColor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
+If `currentcolor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
 
 ```html
-<div style="color: blue; border: 1px dashed currentColor;">
+<div style="color: blue; border: 1px dashed currentcolor;">
   The color of this text is blue.
-  <div style="background: currentColor; height:9px;"></div>
+  <div style="background: currentcolor; height:9px;"></div>
   This block is surrounded by a blue border.
 </div>
 ```
 
-{{EmbedLiveSample('currentColor_keyword', 600, 80)}}
+{{EmbedLiveSample('currentcolor_keyword', 600, 80)}}
 
 ### RGB color model
 
@@ -83,7 +83,7 @@ The RGB color model defines a given color in the [sRGB color space](https://en.w
 
 RGB colors can be expressed through both hexadecimal (prefixed with `#`) and functional (`rgb()`, `rgba()`) notations.
 
-- [Hexadecimal notation](/en-US/docs/Web/CSS/color_value/hexadecimal_rgb): `#RGB[A]` or`#RRGGBB[AA]`
+- [Hexadecimal notation](/en-US/docs/Web/CSS/hex-color): `#RGB[A]` or`#RRGGBB[AA]`
   - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
 - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) or [`rgba()`](/en-US/docs/Web/CSS/color_value/rgba): `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
   - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
@@ -99,9 +99,9 @@ HSL colors are expressed through the functional `hsl()` and `hsla()` notations.
 
 - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) or [`hsla()`](/en-US/docs/Web/CSS/color_value/hsla): `hsl[a](H, S, L[, A])` or `hsl[a](H S L[ / A])`
 
-  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#the-hsl-notation) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
-    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal."
+    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal".
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
@@ -115,11 +115,11 @@ As with HSL, HWB can be more intuitive to use than RGB. A hue is specified in th
 
 HWB colors are expressed through the functional `hwb()` notation.
 
-> **Note:** The HWB function does **not** use commas to separate it's values as with previous color functions.
+> **Note:** The HWB function does **not** use commas to separate its values as with previous color functions.
 
 - [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb): `hwb(H W B[ / A])`
 
-  - : Same as HSL: `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+  - : Same as HSL: `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#the-hsl-notation) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
     `W` (whiteness) and `B` (blackness) are percentages. These two colors mix, so you would need `0%` **whiteness** and `100%` **blackness** to produce the color black. And vice versa `100%` whiteness and `0%` blackness for the color white. `50%` of both values renders a mid grey and any other variations a shade of the hue specified.
 
@@ -209,7 +209,7 @@ function validTextColor(stringToTest) {
 }
 
 inputElem.addEventListener('change', () => {
-  if(validTextColor(inputElem.value)) {
+  if (validTextColor(inputElem.value)) {
     divElem.style.backgroundColor = inputElem.value;
     divElem.textContent = '';
   } else {

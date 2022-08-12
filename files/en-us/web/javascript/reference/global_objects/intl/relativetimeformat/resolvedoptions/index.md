@@ -41,27 +41,27 @@ The resulting object has the following properties:
 
   - : The length of the internationalized message. Possible values are:
 
-    - "`long`" (default, e.g., `in 1 month`)
-    - "`short`" (e.g., `in 1 mo.`),
-    - or "`narrow`" (e.g., `in 1 mo.`). The narrow style could be similar to the short style for some locales.
+    - `"long"` (default, e.g., `in 1 month`)
+    - `"short"` (e.g., `in 1 mo.`),
+    - or `"narrow"` (e.g., `in 1 mo.`). The narrow style could be similar to the short style for some locales.
 
 - `numeric`
 
   - : The format of output message. Possible values are:
 
-    - "`always`" (default, e.g., `1 day ago`),
-    - or "`auto`" (e.g., `yesterday`). The "`auto`" value allows to not always have to use numeric values in the output.
+    - `"always"` (default, e.g., `1 day ago`),
+    - or `"auto"` (e.g., `yesterday`). The `"auto"` value allows to not always have to use numeric values in the output.
 
 - `numberingSystem`
-  - : The value requested using the Unicode extension key "`nu`" or filled in as a default.
+  - : The value requested using the Unicode extension key `"nu"` or filled in as a default.
 
 ## Examples
 
 ### Using the resolvedOptions() method
 
 ```js
-var de = new Intl.RelativeTimeFormat('de-DE');
-var usedOptions = de.resolvedOptions();
+const de = new Intl.RelativeTimeFormat('de-DE');
+const usedOptions = de.resolvedOptions();
 
 usedOptions.locale;          // "de-DE"
 usedOptions.style;           // "long"

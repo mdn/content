@@ -1,10 +1,10 @@
 ---
 title: ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
-  - Experimental
   - ExtendableMessageEvent
   - Reference
   - Service Workers
@@ -66,10 +66,7 @@ const myEME = new ExtendableMessageEvent('message', init);
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service
-  workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Channel Messaging](/en-US/docs/Web/API/Channel_Messaging_API)

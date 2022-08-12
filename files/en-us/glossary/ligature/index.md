@@ -12,4 +12,4 @@ You can implement ligatures in your webpage with {{cssxref("font-variant-ligatur
 
 ## See also
 
-- {{interwiki("wikipedia", "Typographic ligature", "Ligature")}} on Wikipedia
+- [Ligature](https://en.wikipedia.org/wiki/Typographic_ligature) on Wikipedia

@@ -1,9 +1,9 @@
 ---
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - FetchEvent
   - Method
   - Offline
@@ -103,16 +103,16 @@ This fetch event tries to return a response from the cache API, falling back to 
 network otherwise.
 
 ```js
-addEventListener('fetch', event => {
+addEventListener('fetch', (event) => {
   // Prevent the default, and handle the request ourselves.
-  event.respondWith(async function() {
+  event.respondWith((async () => {
     // Try to get the response from a cache.
     const cachedResponse = await caches.match(event.request);
     // Return it if we found one.
     if (cachedResponse) return cachedResponse;
     // If we didn't find a match in the cache, use the network.
     return fetch(event.request);
-  }());
+  })());
 });
 ```
 
@@ -132,9 +132,7 @@ addEventListener('fetch', event => {
 
 ## See also
 
-- [Using
-  Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

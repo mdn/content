@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.createTHead()
 slug: Web/API/HTMLTableElement/createTHead
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -40,7 +41,7 @@ None.
 
 ```js
 let myhead = mytable.createTHead();
-// Now this should be true: myhead == mytable.tHead
+// Now this should be true: myhead === mytable.tHead
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: VREyeParameters.fieldOfView
 slug: Web/API/VREyeParameters/fieldOfView
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

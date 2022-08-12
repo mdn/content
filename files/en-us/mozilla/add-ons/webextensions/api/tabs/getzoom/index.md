@@ -29,7 +29,7 @@ let gettingZoom = browser.tabs.getZoom(
 
 ### Parameters
 
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. The ID of the tab to get the current zoom factor from. Defaults to the active tab of the current window.
 
 ### Return value

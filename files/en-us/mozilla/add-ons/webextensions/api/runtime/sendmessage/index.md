@@ -39,7 +39,7 @@ let sending = browser.runtime.sendMessage(
 
 ### Parameters
 
-- `extensionId`{{optional_inline}}
+- `extensionId` {{optional_inline}}
 
   - : `string`. The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the intended recipient.
 
@@ -47,11 +47,11 @@ let sending = browser.runtime.sendMessage(
 
 - `message`
   - : `any`. An object that can be structured clone serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : `object`.
 
-    - `includeTlsChannelId`{{optional_inline}}
+    - `includeTlsChannelId` {{optional_inline}}
 
       - : `boolean`. Whether the TLS channel ID will be passed into {{WebExtAPIRef('runtime.onMessageExternal')}} for processes that are listening for the connection event.
 
@@ -90,7 +90,7 @@ Here's a content script that sends a message to the background script when the u
 // content-script.js
 
 function handleResponse(message) {
-  console.log(`Message from the background script:  ${message.response}`);
+  console.log(`Message from the background script: ${message.response}`);
 }
 
 function handleError(error) {
@@ -98,8 +98,8 @@ function handleError(error) {
 }
 
 function notifyBackgroundPage(e) {
-  let sending = browser.runtime.sendMessage({
-    greeting: "Greeting from the content script"
+  const sending = browser.runtime.sendMessage({
+    greeting: "Greeting from the content script",
   });
   sending.then(handleResponse, handleError);
 }
@@ -111,11 +111,9 @@ The corresponding background script looks like this:
 
 ```js
 // background-script.js
-
 function handleMessage(request, sender, sendResponse) {
-  console.log("Message from the content script: " +
-    request.greeting);
-  sendResponse({response: "Response from background script"});
+  console.log(`A content script sent a message: ${request.greeting}`);
+  sendResponse({ response: "Response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);

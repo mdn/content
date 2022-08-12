@@ -1,6 +1,7 @@
 ---
 title: XRHitTestResult.createAnchor()
 slug: Web/API/XRHitTestResult/createAnchor
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -39,7 +40,7 @@ The following example starts with an {{domxref("XRHitTestResult")}} retrieved by
 hitTestResult.createAnchor().then((anchor) => {
   // add anchored objects to the scene
 }, (error) => {
-  console.error("Could not create anchor: " + error);
+  console.error(`Could not create anchor: ${error}`);
 });
 ```
 

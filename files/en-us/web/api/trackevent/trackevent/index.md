@@ -1,6 +1,7 @@
 ---
 title: TrackEvent()
 slug: Web/API/TrackEvent/TrackEvent
+page-type: web-api-constructor
 tags:
   - API
   - Audio

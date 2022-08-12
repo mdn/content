@@ -40,14 +40,14 @@ Returns `true` if an element with the specified value exists in the
 ### Using the has() method
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 mySet.add('foo');
 
 mySet.has('foo');  // returns true
 mySet.has('bar');  // returns false
 
-var set1 = new Set();
-var obj1 = {'key1': 1};
+const set1 = new Set();
+const obj1 = {'key1': 1};
 set1.add(obj1);
 
 set1.has(obj1);        // returns true

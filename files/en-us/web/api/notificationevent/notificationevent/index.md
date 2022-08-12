@@ -1,6 +1,7 @@
 ---
 title: NotificationEvent()
 slug: Web/API/NotificationEvent/NotificationEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

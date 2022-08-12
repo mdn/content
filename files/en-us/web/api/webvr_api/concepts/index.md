@@ -1,6 +1,7 @@
 ---
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
+page-type: guide
 tags:
   - Acceleration
   - Apps
@@ -32,7 +33,7 @@ The first VR gaming attempts were big and expensive — in 1991 Virtuality Group
 
 ### VR in recent times
 
-So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an affordable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas more recent headsets such as the [HTC VIVE](https://www.vive.com/uk/) and [Oculus Rift](https://www.oculus.com/rift/) are available for hundreds of dollars, and cheaper solutions are available — mobile device-based solutions like [Gear VR](https://www.samsung.com/global/galaxy/gear-vr/) and [Google Cardboard](https://arvr.google.com/cardboard/).
+So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an affordable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas more recent headsets such as the [HTC VIVE](https://www.vive.com/uk/) and [Oculus Rift](https://www.oculus.com/rift/) are available for hundreds of dollars, and cheaper solutions are available — mobile device-based solutions like [Gear VR](https://www.samsung.com/global/galaxy/what-is/gear-vr/) and [Google Cardboard](https://arvr.google.com/cardboard/).
 
 On the software side, Valve has created [SteamVR](https://store.steampowered.com/search/?category1=993) software, which is compatible with the VIVE and other solutions, and serves to provide access to software, such as a usable VR UI.
 
@@ -81,7 +82,7 @@ The output information falls into four categories:
 
 ## Field of view
 
-The field of view (FOV) is the area that each of the user's eyes can reasonably be expected to see. It roughly takes the form of a pyramid shape, laid down on one side, with the apex inside the user's head, and the rest of the pyramid emanating from the user's eye. Each eye has it's own FOV, one slightly overlapping the other.
+The field of view (FOV) is the area that each of the user's eyes can reasonably be expected to see. It roughly takes the form of a pyramid shape, laid down on one side, with the apex inside the user's head, and the rest of the pyramid emanating from the user's eye. Each eye has its own FOV, one slightly overlapping the other.
 
 ![FOV related properties](fovrelatedproperties.png)
 
@@ -151,21 +152,21 @@ Latency is the time between the physical head movement and the visual display re
 
 The Oculus Rift headset has a latency of 20 ms or less, but with mobile device-based setups it will depend heavily on the smartphone CPU power and other capabilities.
 
-### Frame rate ( Frames per second / FPS )
+### Frame rate (Frames per second / FPS)
 
 Based on the Wikipedia definition, frame rate is the frequency at which an imaging device produces unique consecutive images, called frames. A rate of 60fps is an acceptable rate for a smooth user experience, but depending on the performance of the machine the app is running on, or the complexity of the content you want to show, it can drastically lower. Less than 30fps is generally considered jittery, and annoying to the user.
 
 One of the most difficult tasks is to maintain a constant and high frame rate value, so we must optimize our code to make it as efficient as possible. It is preferable to have a decent frame rate that doesn't constantly or suddenly change; for this you need to as few necessary objects moving into the scene as possible and (in the case of WebGL) try to reduce draw calls.
 
-### Interpupillary distance ( IPD )
+### Interpupillary distance (IPD)
 
 Based on the Wikipedia definition, IPD is the distance between the centers of the pupils of the two eyes. IPD is critical for the design of binocular viewing systems, where both eye pupils need to be positioned within the exit pupils of the viewing system.
 
-Interpupillary distance ( IPD ) can be calculated using {{domxref("VREyeParameters.offset")}} in WebVR, which is equal to half the IPD.
+Interpupillary distance (IPD) can be calculated using {{domxref("VREyeParameters.offset")}} in WebVR, which is equal to half the IPD.
 
 This value is returned by the HMD and its value may be around 60 to 70 mm; in the case of some HMDs like Oculus Rift's, you can set your own IPD. Normally we don't change this value but you can play with it to change the scale of the entire scene. For example, if your IPD is set to 6000 mm, the user would view the scene like a giant looking at a Lilliputian world.
 
-### Degrees of Freedom ( DoF )
+### Degrees of Freedom (DoF)
 
 DoF refers to the movement of a rigid body inside space. There is no uniformity in creating acronyms for this term — we can find references to 3DoF in the context of sensors that detect only rotational head tracking, and 6DoF when an input allows us to control position and orientation simultaneously. We even sometimes find 9DoF references when the hardware contains three sensors like gyroscope, accelerometer and magnetometer, but the results of the 3 x 3DoF values will actually return a 6 degrees of freedom tracking.
 

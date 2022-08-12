@@ -1,6 +1,7 @@
 ---
 title: 'Document: visibilitychange event'
 slug: Web/API/Document/visibilitychange_event
+page-type: web-api-event
 tags:
   - API
   - Document
@@ -22,9 +23,9 @@ The event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('visibilitychange', event => { });
+addEventListener('visibilitychange', (event) => { });
 
-onvisibilitychange = event => { };
+onvisibilitychange = (event) => { };
 ```
 
 ## Event type
@@ -46,7 +47,7 @@ The transition to `hidden` is also a good point at which pages can stop making U
 This example begins playing a music track when the document becomes visible, and pauses the music when the document is no longer visible.
 
 ```js
-document.addEventListener("visibilitychange", function() {
+document.addEventListener("visibilitychange", () => {
   if (document.visibilityState === 'visible') {
     backgroundMusic.play();
   } else {
@@ -61,7 +62,7 @@ This example treats the transition to `hidden` as the end of the user's session,
 API:
 
 ```js
-document.onvisibilitychange = function() {
+document.onvisibilitychange = () => {
   if (document.visibilityState === 'hidden') {
     navigator.sendBeacon('/log', analyticsData);
   }

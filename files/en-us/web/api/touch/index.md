@@ -1,6 +1,7 @@
 ---
 title: Touch
 slug: Web/API/Touch
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -56,7 +57,7 @@ _This interface has no parent, and doesn't inherit or implement other properties
   - : Returns the Y radius of the ellipse that most closely circumscribes the area of contact with the screen. The value is in pixels of the same scale as `screenY`.
 - {{domxref("Touch.rotationAngle")}} {{readonlyInline}} {{experimental_inline}}
   - : Returns the angle (in degrees) that the ellipse described by radiusX and radiusY must be rotated, clockwise, to most accurately cover the area of contact between the user and the surface.
-- {{domxref("Touch.force")}}{{readonlyInline}} {{experimental_inline}}
+- {{domxref("Touch.force")}} {{readonlyInline}} {{experimental_inline}}
   - : Returns the amount of pressure being applied to the surface by the user, as a `float` between `0.0` (no pressure) and `1.0` (maximum pressure).
 
 ## Methods

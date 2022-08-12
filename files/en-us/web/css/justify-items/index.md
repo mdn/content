@@ -181,7 +181,7 @@ article {
 
 ## Specifications
 
-{{Specifications("css.properties.justify-items.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

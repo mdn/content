@@ -1,6 +1,7 @@
 ---
 title: CharacterData.after()
 slug: Web/API/CharacterData/after
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -17,7 +18,7 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 ## Syntax
 
 ```js
-after(... nodes)
+after(...nodes)
 ```
 
 ### Parameters

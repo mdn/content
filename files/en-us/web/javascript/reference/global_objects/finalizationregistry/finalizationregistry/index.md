@@ -17,13 +17,13 @@ The **`FinalizationRegistry`** constructor creates a {{jsxref("FinalizationRegis
 
 ```js
 // Arrow callback function
-new FinalizationRegistry(heldValue => { /* ... */ } )
+new FinalizationRegistry((heldValue) => { /* … */ } )
 
 // Callback function
 new FinalizationRegistry(callbackFn)
 
 // Inline callback function
-new FinalizationRegistry(function(heldValue) { /* ... */ })
+new FinalizationRegistry(function(heldValue) { /* … */ })
 ```
 
 ### Parameters
@@ -38,8 +38,8 @@ new FinalizationRegistry(function(heldValue) { /* ... */ })
 You create the registry passing in the callback:
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
-  // ....
+const registry = new FinalizationRegistry((heldValue) => {
+  // …
 });
 ```
 

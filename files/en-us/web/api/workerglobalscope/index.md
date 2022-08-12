@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -46,7 +47,10 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - {{domxref("isSecureContext")}} {{readOnlyinline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("origin")}} {{readOnlyinline}}
-  - : Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)
+  - : Returns the global object's origin, serialized as a string.
+- [`scheduler`](/en-US/docs/Web/API/Window/scheduler) {{readOnlyInline}}
+  - : Returns the {{domxref("Scheduler")}} object associated with the current context.
+    This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 
 ## Events
 
@@ -120,5 +124,5 @@ console.log(navigator);
 ## See also
 
 - Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, {{domxref("ServiceWorkerGlobalScope")}}
-- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, and {{domxref("ServiceWorkerGlobalScope")}}.
-- [Using web workers.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, and {{domxref("ServiceWorkerGlobalScope")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

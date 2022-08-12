@@ -1,6 +1,7 @@
 ---
 title: PeriodicWave
 slug: Web/API/PeriodicWave
+page-type: web-api-interface
 tags:
   - API
   - Audio

@@ -9,6 +9,13 @@ tags:
   - Reference
   - display-inside
 spec-urls: https://drafts.csswg.org/css-display/#typedef-display-inside
+browser-compat:
+  - css.properties.display.multi-keyword_values
+  - css.properties.display.flow-root
+  - css.properties.display.table_values
+  - css.properties.display.grid
+  - css.properties.display.flex
+  - css.properties.display.ruby_values
 ---
 {{CSSRef}}
 
@@ -81,31 +88,7 @@ In this example the parent box has been given `display: flow-root` and so establ
 
 ## Browser compatibility
 
-### Support of multiple keyword values
-
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
-
-- Chromium bug: <https://bugs.chromium.org/p/chromium/issues/detail?id=804600>
-
-### Support of flow-root
-
-{{Compat("css.properties.display.flow-root", 10)}}
-
-### Support of table
-
-{{Compat("css.properties.display.table_values", 10)}}
-
-### Support of grid
-
-{{Compat("css.properties.display.grid", 10)}}
-
-### Support of flex
-
-{{Compat("css.properties.display.flex", 10)}}
-
-### Support of ruby
-
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: TextTrackList.getTrackById()
 slug: Web/API/TextTrackList/getTrackById
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

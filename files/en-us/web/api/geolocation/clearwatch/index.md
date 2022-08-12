@@ -1,6 +1,7 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
+page-type: web-api-instance-method
 tags:
   - API
   - Geolocation
@@ -36,10 +37,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var id, target, option;
+let id;
+let target;
+let options;
 
 function success(pos) {
-  var crd = pos.coords;
+  const crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
     console.log('Congratulations, you\'ve reached the target!');
@@ -48,7 +51,7 @@ function success(pos) {
 };
 
 function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
+  console.error(`ERROR(${err.code}): ${err.message}`);
 };
 
 target = {

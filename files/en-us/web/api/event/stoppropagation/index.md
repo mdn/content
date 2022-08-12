@@ -1,6 +1,7 @@
 ---
 title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

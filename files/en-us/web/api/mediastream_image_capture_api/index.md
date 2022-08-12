@@ -1,6 +1,7 @@
 ---
 title: MediaStream Image Capture API
 slug: Web/API/MediaStream_Image_Capture_API
+page-type: web-api-overview
 tags:
   - API
   - Image
@@ -9,7 +10,7 @@ tags:
   - Overview
   - Reference
   - Video
-spec-urls: https://w3c.github.io/mediacapture-image/
+browser-compat: api.ImageCapture
 ---
 {{DefaultAPISidebar("Image Capture API")}}{{SeeCompatTable}}
 
@@ -23,7 +24,7 @@ First, get a reference to a device by calling {{domxref("MediaDevices.getUserMed
 
 ```js
 navigator.mediaDevices.getUserMedia({ video: true })
-  .then(mediaStream => {
+  .then((mediaStream) => {
     // Do something with the stream.
   })
 ```
@@ -40,7 +41,7 @@ At this point, you might want to configure the device capabilities before captur
 let zoom = document.querySelector('#zoom');
 const capabilities = track.getCapabilities();
 // Check whether zoom is supported or not.
-if(!capabilities.zoom) {
+if (!capabilities.zoom) {
   return;
 }
 track.applyConstraints({ advanced : [{ zoom: zoom.value }] });
@@ -63,7 +64,7 @@ let imageCapture = new ImageCapture(track);
 
 ## Browser compatibility
 
-{{Compat("api.ImageCapture")}}
+{{Compat}}
 
 ## See also
 

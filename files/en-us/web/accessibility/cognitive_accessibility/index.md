@@ -146,7 +146,7 @@ All users benefit from information about where they are in a site's hierarchy, e
 
 For these users, the ability to read and understand may depend on the availability of specific definitions or the expanded forms of acronyms or abbreviations. Some users may experience great difficulty in recognizing written words yet they understand extremely complex and sophisticated documents when the text is read aloud, or when key processes and ideas are illustrated visually.
 
-### Declare the language of the page and any content not in that main language.
+### Declare the language of the page and any content not in that main language
 
 The language of every page must be declared by using the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute on the {{HTMLElement('html')}} element. Include the `lang` attribute again on text that is in a language other than the main language of the document.
 
@@ -243,7 +243,7 @@ Start the form with text instructions on how to operate it. Include labels or in
 
 Labels should be descriptive and positioned close to the input they relate to. When requiring a specific format for input, provide an example formatted in the proper way. Additionally, consider performing server-side validation to help format input data, to aid in the ease of user input.
 
-If a form control is required, indicate it both visually and [via code](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute). If a form control changes context, describe what will happen in a way that the user will understand it before they cause the context change to happen.
+If a form control is required, indicate it both visually and [via code](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required). If a form control changes context, describe what will happen in a way that the user will understand it before they cause the context change to happen.
 
 ### Error Suggestion
 

@@ -1,6 +1,7 @@
 ---
 title: Element.hasAttributes()
 slug: Web/API/Element/hasAttributes
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -36,16 +37,6 @@ let foo = document.getElementById('foo');
 if (foo.hasAttributes()) {
   // Do something with 'foo.attributes'
 }
-```
-
-## Polyfill
-
-```js
-;(function(prototype) {
-  prototype.hasAttributes = prototype.hasAttributes || function() {
-    return (this.attributes.length > 0);
-  }
-})(Element.prototype);
 ```
 
 ## Specifications

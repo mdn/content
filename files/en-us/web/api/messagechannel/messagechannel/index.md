@@ -1,6 +1,7 @@
 ---
 title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
+page-type: web-api-constructor
 tags:
   - API
   - Channel messaging
@@ -42,11 +43,11 @@ The `handleMessage` handler then responds to a message being sent back from the
 The {{domxref("MessageChannel.port1", "port1")}} is listened to, to check when the message arrives.
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector('p');
+const channel = new MessageChannel();
+const para = document.querySelector('p');
 
-var ifr = document.querySelector('iframe');
-var otherWindow = ifr.contentWindow;
+const ifr = document.querySelector('iframe');
+const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 

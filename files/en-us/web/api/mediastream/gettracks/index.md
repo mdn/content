@@ -1,6 +1,7 @@
 ---
 title: MediaStream.getTracks()
 slug: Web/API/MediaStream/getTracks
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -38,7 +39,7 @@ An array of {{domxref("MediaStreamTrack")}} objects.
 
 ```js
 navigator.mediaDevices.getUserMedia({audio: false, video: true})
-.then(mediaStream => {
+.then((mediaStream) => {
   document.querySelector('video').srcObject = mediaStream;
   // Stop the stream after 5 seconds
   setTimeout(() => {

@@ -1,6 +1,7 @@
 ---
 title: CanvasPattern
 slug: Web/API/CanvasPattern
+page-type: web-api-interface
 tags:
   - API
   - Canvas

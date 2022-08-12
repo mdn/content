@@ -1,6 +1,7 @@
 ---
 title: Document.createElement()
 slug: Web/API/Document/createElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -47,8 +48,9 @@ This creates a new `<div>` and inserts it before the element with the ID "`div1`
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
   <title>||Working with elements||</title>
 </head>
 <body>
@@ -94,7 +96,7 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // constructor definition left out for brevity
-    ...
+    // …
   }
 }
 

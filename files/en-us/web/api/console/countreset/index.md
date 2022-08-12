@@ -1,6 +1,7 @@
 ---
 title: console.countReset()
 slug: Web/API/console/countReset
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -46,7 +47,7 @@ let user = "";
 
 function greet() {
   console.count();
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";
@@ -80,7 +81,7 @@ let user = "";
 
 function greet() {
   console.count(user);
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";

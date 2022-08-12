@@ -52,9 +52,9 @@ browser.sidebarAction.setTitle(
         - If `windowId` is specified, and the window has a window-specific title set, then the window will inherit the global title.
         - Otherwise, the global title will be reset to the manifest title.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the title only for the given tab.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the title only for the given window.
 
 <!---->

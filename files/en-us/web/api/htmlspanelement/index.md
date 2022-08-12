@@ -1,6 +1,7 @@
 ---
 title: HTMLSpanElement
 slug: Web/API/HTMLSpanElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: HTMLStyleElement.scoped
 slug: Web/API/HTMLStyleElement/scoped
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

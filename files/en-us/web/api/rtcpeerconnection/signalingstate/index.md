@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.signalingState
 slug: Web/API/RTCPeerConnection/signalingState
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -86,8 +87,8 @@ The allowed string values are:
 ## Examples
 
 ```js
-var pc = new RTCPeerConnection(configuration);
-var state = pc.signalingState;
+const pc = new RTCPeerConnection(configuration);
+const state = pc.signalingState;
 ```
 
 ## Specifications
@@ -100,8 +101,7 @@ var state = pc.signalingState;
 
 ## See also
 
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
 - {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

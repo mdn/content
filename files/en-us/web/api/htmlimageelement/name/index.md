@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.name
 slug: Web/API/HTMLImageElement/name
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

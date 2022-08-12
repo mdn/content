@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: abort event'
 slug: Web/API/HTMLMediaElement/abort_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -14,28 +15,21 @@ browser-compat: api.HTMLMediaElement.abort_event
 
 The **`abort`** event is fired when the resource was not fully loaded, but not as the result of an error.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onabort", "onabort")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('abort', (event) => {});
+
+onabort = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

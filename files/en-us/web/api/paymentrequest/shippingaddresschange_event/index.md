@@ -1,6 +1,7 @@
 ---
 title: 'PaymentRequest: shippingaddresschange event'
 slug: Web/API/PaymentRequest/shippingaddresschange_event
+page-type: web-api-event
 tags:
   - API
   - Address
@@ -27,9 +28,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('shippingaddresschange', event => { });
+addEventListener('shippingaddresschange', (event) => { });
 
-onshippingaddresschange = event => { };
+onshippingaddresschange = (event) => { };
 ```
 
 ## Event type
@@ -53,12 +54,12 @@ In this example, a handler for the `shippingaddresschange` event is set up to va
 ```js
 const paymentRequest = new PaymentRequest(methodData, details, options);
 
-paymentRequest.addEventListener("shippingaddresschange", event => {
+paymentRequest.addEventListener("shippingaddresschange", (event) => {
   let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
   event.updateWith(detailsUpdate);
 }, false);
 
-const checkAddress = theAddress => {
+const checkAddress = (theAddress) => {
   let detailsUpdate = {};
 
   // Check the address, return an object with any changes or errors.
@@ -70,7 +71,7 @@ const checkAddress = theAddress => {
 You can also establish a handler for `shippingaddresschange` using the `onshippingaddresschange` event handler property:
 
 ```js
-paymentRequest.onshippingaddresschange = event => {
+paymentRequest.onshippingaddresschange = (event) => {
   let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
   event.updateWith(detailsUpdate);
 };

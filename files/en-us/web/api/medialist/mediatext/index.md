@@ -1,6 +1,7 @@
 ---
 title: MediaList.mediaText
 slug: Web/API/MediaList/mediaText
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

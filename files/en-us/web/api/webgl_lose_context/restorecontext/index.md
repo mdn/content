@@ -1,6 +1,7 @@
 ---
 title: WEBGL_lose_context.restoreContext()
 slug: Web/API/WEBGL_lose_context/restoreContext
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -42,10 +43,10 @@ With this method, you can simulate the
 event:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
 
-canvas.addEventListener('webglcontextrestored', function(e) {
+canvas.addEventListener('webglcontextrestored', (e) => {
   console.log(e);
 }, false);
 

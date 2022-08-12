@@ -34,7 +34,9 @@ descent-override: 90%;
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+normal | <percentage>
+```
 
 ## Examples
 

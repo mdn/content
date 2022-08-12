@@ -38,12 +38,12 @@ element in the given `Set`, in insertion order.
 ### Using entries()
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 mySet.add('foobar');
 mySet.add(1);
 mySet.add('baz');
 
-var setIter = mySet.entries();
+const setIter = mySet.entries();
 
 console.log(setIter.next().value); // ["foobar", "foobar"]
 console.log(setIter.next().value); // [1, 1]

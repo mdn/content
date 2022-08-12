@@ -1,6 +1,7 @@
 ---
 title: XRAnchor.anchorSpace
 slug: Web/API/XRAnchor/anchorSpace
+page-type: web-api-instance-property
 tags:
   - API
   - Property

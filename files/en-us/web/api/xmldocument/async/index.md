@@ -1,6 +1,7 @@
 ---
 title: XMLDocument.async
 slug: Web/API/XMLDocument/async
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -30,7 +31,7 @@ function loadXMLData(e) {
   alert(new XMLSerializer().serializeToString(e.target)); // Gives querydata.xml contents as string
 }
 
-var xmlDoc = document.implementation.createDocument("", "test", null);
+const xmlDoc = document.implementation.createDocument("", "test", null);
 
 xmlDoc.async = false;
 xmlDoc.onload = loadXMLData;

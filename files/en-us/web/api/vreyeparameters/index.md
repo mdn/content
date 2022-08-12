@@ -1,6 +1,7 @@
 ---
 title: VREyeParameters
 slug: Web/API/VREyeParameters
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -36,20 +37,20 @@ This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()
 ## Examples
 
 ```js
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   // If a display is available, use it to present the scene
   vrDisplay = displays[0];
   console.log('Display found');
   // Starting the presentation when the button is clicked:
   //   It can only be called in response to a user gesture
-  btn.addEventListener('click', function() {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+  btn.addEventListener('click', () => {
+    vrDisplay.requestPresent([{ source: canvas }]).then(() => {
       console.log('Presenting to WebVR display');
 
       // Set the canvas size to the size of the vrDisplay viewport
 
-      var leftEye = vrDisplay.getEyeParameters('left');
-      var rightEye = vrDisplay.getEyeParameters('right');
+      const leftEye = vrDisplay.getEyeParameters('left');
+      const rightEye = vrDisplay.getEyeParameters('right');
 
       canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
       canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);

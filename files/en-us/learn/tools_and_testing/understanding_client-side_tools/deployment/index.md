@@ -77,9 +77,9 @@ We're going to add the build command to our `package.json` file as an npm script
 1. Open the `package.json` file in your project's root directory, and find the `scripts` property.
 2. We'll add a `build` command that we can run to build our code. Add the following line to your project now:
 
-    ```bash
+    ```json
     "scripts": {
-      ...
+      // …
       "build": "parcel build src/index.html"
     }
     ```

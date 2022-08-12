@@ -1,6 +1,7 @@
 ---
 title: RTCSessionDescription.sdp
 slug: Web/API/RTCSessionDescription/sdp
+page-type: web-api-instance-property
 tags:
   - Experimental
   - Property
@@ -19,7 +20,7 @@ string containing the {{Glossary("SDP")}} which describes the session.
 ## Syntax
 
 ```js
-var value = sessionDescription.sdp;
+const value = sessionDescription.sdp;
 sessionDescription.sdp = value;
 ```
 

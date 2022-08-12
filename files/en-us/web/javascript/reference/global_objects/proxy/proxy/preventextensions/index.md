@@ -18,7 +18,7 @@ The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.prev
 
 ```js
 new Proxy(target, {
-  preventExtensions: function(target) {
+  preventExtensions(target) {
   }
 });
 ```
@@ -61,7 +61,7 @@ The following code traps {{jsxref("Object.preventExtensions()")}}.
 
 ```js
 const p = new Proxy({}, {
-  preventExtensions: function(target) {
+  preventExtensions(target) {
     console.log('called');
     Object.preventExtensions(target);
     return true;
@@ -76,7 +76,7 @@ The following code violates the invariant.
 
 ```js example-bad
 const p = new Proxy({}, {
-  preventExtensions: function(target) {
+  preventExtensions(target) {
     return true;
   }
 });
@@ -95,6 +95,6 @@ Object.preventExtensions(p); // TypeError is thrown
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.preventExtensions()")}}
 - {{jsxref("Reflect.preventExtensions()")}}

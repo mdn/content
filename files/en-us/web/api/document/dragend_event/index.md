@@ -1,6 +1,7 @@
 ---
 title: 'Document: dragend event'
 slug: Web/API/Document/dragend_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -17,32 +18,30 @@ browser-compat: api.Document.dragend_event
 
 The `dragend` event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Default action</th>
-      <td>Varies</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondragend", "ondragend")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('dragend', (event) => {});
+
+ondragend = (event) => { };
+```
+
+## Event type
+
+A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("DragEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+  - : The data that is transferred during a drag and drop interaction.
 
 ## Examples
 
@@ -93,12 +92,12 @@ body {
 #### JavaScript
 
 ```js
-document.addEventListener("dragstart", event => {
+document.addEventListener("dragstart", (event) => {
   // make it half transparent
   event.target.classList.add("dragging");
 });
 
-document.addEventListener("dragend", event => {
+document.addEventListener("dragend", (event) => {
   // reset the transparency
   event.target.classList.remove("dragging");
 });

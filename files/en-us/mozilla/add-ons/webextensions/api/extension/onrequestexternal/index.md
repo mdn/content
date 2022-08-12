@@ -23,10 +23,10 @@ Fired when a request is sent from another extension.
 
 ```js
 chrome.extension.onRequestExternal.addListener(function(
-  request,         // optional any
-  sender,          // runtime.MessageSender
-  function() {...} // function
-) {...})
+  request,      // optional any
+  sender,       // runtime.MessageSender
+  sendResponse, // function
+) { })
 chrome.extension.onRequestExternal.removeListener(listener)
 chrome.extension.onRequestExternal.hasListener(listener)
 ```

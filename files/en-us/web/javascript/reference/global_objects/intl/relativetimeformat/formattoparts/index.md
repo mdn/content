@@ -31,7 +31,7 @@ formatToParts(value, unit)
 - `value`
   - : Numeric value to use in the internationalized relative time message.
 - `unit`
-  - : Unit to use in the relative time internationalized message. Possible values are: "`year`", "`quarter`", "`month`", "`week`", "`day`", "`hour`", "`minute`", "`second`". Plural forms are also permitted.
+  - : Unit to use in the relative time internationalized message. Possible values are: `"year"`, `"quarter"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"`. Plural forms are also permitted.
 
 ### Return value
 

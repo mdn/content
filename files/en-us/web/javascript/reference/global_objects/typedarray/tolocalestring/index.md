@@ -48,7 +48,7 @@ A string representing the elements of the typed array.
 ### Using toLocaleString
 
 ```js
-var uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
+const uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
 
 uint.toLocaleString();
 // if run in a de-DE locale

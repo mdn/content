@@ -1,6 +1,7 @@
 ---
 title: Basic scissoring
 slug: Web/API/WebGL_API/By_example/Basic_scissoring
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -56,8 +57,8 @@ canvas {
 window.addEventListener("load", function setupWebGL (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupWebGL, false);
-  var paragraph = document.querySelector("p");
-  var canvas = document.querySelector("canvas");
+  const paragraph = document.querySelector("p");
+  const canvas = document.querySelector("canvas");
 
   // The following two lines set the size (in CSS pixels) of
   // the drawing buffer to be identical to the size of the
@@ -65,7 +66,7 @@ window.addEventListener("load", function setupWebGL (evt) {
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
 
-  var gl = canvas.getContext("webgl")
+  const gl = canvas.getContext("webgl")
     || canvas.getContext("experimental-webgl");
   if (!gl) {
     paragraph.innerHTML = "Failed to get WebGL context. "

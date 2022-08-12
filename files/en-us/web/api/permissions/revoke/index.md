@@ -1,6 +1,7 @@
 ---
 title: Permissions.revoke()
 slug: Web/API/Permissions/revoke
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -74,7 +75,7 @@ be revoked.
 
 ```js
 function revokePermission() {
-  navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
+  navigator.permissions.revoke({ name: 'geolocation' }).then((result) => {
     report(result.state);
   });
 }

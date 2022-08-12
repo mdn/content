@@ -1,6 +1,7 @@
 ---
 title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -21,15 +22,15 @@ We are going to use a ball for our animation studies, so let's first draw that b
 As usual, we need a drawing context first. To draw the ball, we will create a `ball` object which contains properties and a `draw()` method to paint it on the canvas.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -48,18 +49,18 @@ Nothing special here, the ball is actually a simple circle and gets drawn with t
 Now that we have a ball, we are ready to add a basic animation like we have learned in the [last chapter](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations) of this tutorial. Again, {{domxref("window.requestAnimationFrame()")}} helps us to control the animation. The ball gets moving by adding a velocity vector to the position. For each frame, we also {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} the canvas to remove old circles from prior frames.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 2,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -76,11 +77,11 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener('mouseover', (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener('mouseout', (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -113,18 +114,18 @@ Let's see how it looks in action so far.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 2,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -151,11 +152,11 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener('mouseover', (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener('mouseout', (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -190,18 +191,18 @@ This slows down the vertical velocity each frame, so that the ball will just bou
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 2,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -230,11 +231,11 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener('mouseover', (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener('mouseout', (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -265,18 +266,18 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 2,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -306,11 +307,11 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener('mouseover', (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener('mouseout', (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -336,19 +337,19 @@ To get some control over the ball, we can make it follow our mouse using the [`m
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
-var running = false;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let raf;
+let running = false;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 1,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -378,7 +379,7 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mousemove', function(e) {
+canvas.addEventListener('mousemove', (e) => {
   if (!running) {
     clear();
     ball.x = e.clientX;
@@ -387,14 +388,14 @@ canvas.addEventListener('mousemove', function(e) {
   }
 });
 
-canvas.addEventListener('click', function(e) {
+canvas.addEventListener('click', (e) => {
   if (!running) {
     raf = window.requestAnimationFrame(draw);
     running = true;
   }
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener('mouseout', (e) => {
   window.cancelAnimationFrame(raf);
   running = false;
 });

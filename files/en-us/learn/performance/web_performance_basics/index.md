@@ -39,7 +39,7 @@ To load CSS asynchronously one can set the media type to print and then change t
 The downside with this approach is the flash of unstyled text (FOUT.) The simplest way to address this is by inlining CSS that is required for any content that is rendered above the fold, or what you see in the browser viewport before scrolling. These styles will improve perceived performance as the CSS does not require a file request.
 
 ```html
-<style type="text/css">
+<style>
 // Insert your CSS here
 </style>
 ```
@@ -62,9 +62,9 @@ If possible avoid icon web fonts and use compressed SVGs. To further optimize in
 
 - Learn to use the [Firefox Dev Tools](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) to profile your site.
 - [PageSpeed Insights](https://pagespeed.web.dev/) can analyze your page and give some general hints to improve performance.
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse/) can give you a detailed breakdown of many aspects of your site including performance, SEO and accessibility.
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) can give you a detailed breakdown of many aspects of your site including performance, SEO and accessibility.
 - Test your page's speed using [WebPageTest.org](https://webpagetest.org/), where you can use different real device types and locations.
-- Try the [Chrome User Experience Report](https://developers.google.com/web/tools/chrome-user-experience-report) which quantifies real user metrics.
+- Try the [Chrome User Experience Report](https://developer.chrome.com/docs/crux/) which quantifies real user metrics.
 - Define a [performance budget](/en-US/docs/Web/Performance/Performance_budgets).
 
 ### APIs

@@ -24,20 +24,20 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
 ```js
 // Arrow function
-reduceRight((accumulator, currentValue) => { /* ... */ } )
-reduceRight((accumulator, currentValue, index) => { /* ... */ } )
-reduceRight((accumulator, currentValue, index, array) => { /* ... */ } )
-reduceRight((accumulator, currentValue, index, array) => { /* ... */ }, initialValue)
+reduceRight((accumulator, currentValue) => { /* … */ } )
+reduceRight((accumulator, currentValue, index) => { /* … */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* … */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* … */ }, initialValue)
 
 // Callback function
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
 
 // Callback reducer function
-reduceRight(function(accumulator, currentValue) { /* ... */ })
-reduceRight(function(accumulator, currentValue, index) { /* ... */ })
-reduceRight(function(accumulator, currentValue, index, array){ /* ... */ })
-reduceRight(function(accumulator, currentValue, index, array) { /* ... */ }, initialValue)
+reduceRight(function(accumulator, currentValue) { /* … */ })
+reduceRight(function(accumulator, currentValue, index) { /* … */ })
+reduceRight(function(accumulator, currentValue, index, array){ /* … */ })
+reduceRight(function(accumulator, currentValue, index, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
@@ -79,8 +79,8 @@ The call to the reduceRight `callbackFn` would look something like
 this:
 
 ```js
-arr.reduceRight(function(accumulator, currentValue, index, array) {
-  // ...
+arr.reduceRight((accumulator, currentValue, index, array) => {
+  // …
 });
 ```
 
@@ -103,9 +103,9 @@ would be returned without calling `callbackFn`.
 Some example run-throughs of the function would look like this:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
-  return accumulator + currentValue;
-});
+[0, 1, 2, 3, 4].reduceRight(
+  (accumulator, currentValue, index, array) => accumulator + currentValue,
+);
 ```
 
 The callback would be invoked four times, with the arguments and return values in each
@@ -175,9 +175,10 @@ And if you were to provide an `initialValue`, the result would
 look like this:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
-  return accumulator + currentValue;
-}, 10);
+[0, 1, 2, 3, 4].reduceRight(
+  (accumulator, currentValue, index, array) => accumulator + currentValue,
+  10
+);
 ```
 
 <table>
@@ -253,18 +254,19 @@ The value returned by `reduceRight` this time would be, of course,
 ### Sum up all values within an array
 
 ```js
-const sum = [0, 1, 2, 3].reduceRight(function(a, b) {
-  return a + b;
-});
+const sum = [0, 1, 2, 3].reduceRight((a, b) => a + b);
 // sum is 6
 ```
 
 ### Flatten an array of arrays
 
 ```js
-const flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
-    return a.concat(b);
-}, []);
+const arrays = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+const flattened = arrays.reduceRight((a, b) => a.concat(b), []);
 // flattened is [4, 5, 2, 3, 0, 1]
 ```
 
@@ -274,10 +276,10 @@ const flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
 const waterfall = (...functions) => (callback, ...args) =>
   functions.reduceRight(
     (composition, fn) => (...results) => fn(composition, ...results),
-    callback
+    callback,
   )(...args);
 
-const randInt = max => Math.floor(Math.random() * max)
+const randInt = (max) => Math.floor(Math.random() * max);
 
 const add5 = (callback, x) => {
   setTimeout(callback, randInt(1000), x + 5);
@@ -304,23 +306,23 @@ computation(console.log, 5) // -> 14
 // same as:
 
 const computation2 = (input, callback) => {
-  const f6 = x=> div4(callback, x);
+  const f6 = (x) => div4(callback, x);
   const f5 = (x, y) => add(f6, x, y);
-  const f4 = x => split(f5, x);
-  const f3 = x => sub2(f4, x);
-  const f2 = x => mult3(f3, x);
+  const f4 = (x) => split(f5, x);
+  const f3 = (x) => sub2(f4, x);
+  const f2 = (x) => mult3(f3, x);
   add5(f2, input);
-}
+};
 ```
 
-### Difference between `reduce` and `reduceRight`
+### Difference between reduce and reduceRight
 
 ```js
-const a = ['1', '2', '3', '4', '5'];
-const left  = a.reduce(function(prev, cur)      { return prev + cur; });
-const right = a.reduceRight(function(prev, cur) { return prev + cur; });
+const a = ["1", "2", "3", "4", "5"];
+const left = a.reduce((prev, cur) => prev + cur);
+const right = a.reduceRight((prev, cur) => prev + cur);
 
-console.log(left);  // "12345"
+console.log(left); // "12345"
 console.log(right); // "54321"
 ```
 
@@ -334,13 +336,16 @@ to implement function composition.
 See also [Function composition](<https://en.wikipedia.org/wiki/Function_composition_(computer_science)>) on Wikipedia.
 
 ```js
-const compose = (...args) => (value) => args.reduceRight((acc, fn) => fn(acc), value)
+const compose =
+  (...args) =>
+  (value) =>
+    args.reduceRight((acc, fn) => fn(acc), value);
 
 // Increment passed number
-const inc = (n) => n + 1
+const inc = (n) => n + 1;
 
 // Doubles the passed value
-const double = (n) => n * 2
+const double = (n) => n * 2;
 
 // using composition function
 console.log(compose(double, inc)(2)); // 6

@@ -1,6 +1,7 @@
 ---
 title: RsaHashedKeyGenParams
 slug: Web/API/RsaHashedKeyGenParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

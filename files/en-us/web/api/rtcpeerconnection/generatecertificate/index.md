@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.generateCertificate() static function
 slug: Web/API/RTCPeerConnection/generateCertificate
+page-type: web-api-static-method
 tags:
   - API
   - Media
@@ -105,8 +106,8 @@ RTCPeerConnection.generateCertificate({
     hash: 'SHA-256',
     modulusLength: 2048,
     publicExponent: new Uint8Array([1, 0, 1])
-}).then(function(cert) {
-  var pc = new RTCPeerConnection({certificates: [cert]});
+}).then((cert) => {
+  const pc = new RTCPeerConnection({certificates: [cert]});
 });
 ```
 

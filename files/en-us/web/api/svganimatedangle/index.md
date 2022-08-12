@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedAngle
 slug: Web/API/SVGAnimatedAngle
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

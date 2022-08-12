@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue
 slug: Web/API/CSSPrimitiveValue
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -32,7 +33,7 @@ Conversions are allowed between absolute values (from millimeters to centimeters
 
 _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
-- {{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{readonlyInline}}
+- {{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{readonlyInline}} {{Deprecated_Inline}}
 
   - : An `unsigned short` representing the type of the value. Possible values are:
 
@@ -67,19 +68,19 @@ _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
 ## Methods
 
-- {{DOMxRef("CSSPrimitiveValue.getCounterValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.getCounterValue()")}} {{Deprecated_Inline}}
   - : This method is used to get the [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) value. If this CSS value doesn't contain a counter value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("Counter")}} interface.
-- {{DOMxRef("CSSPrimitiveValue.getFloatValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.getFloatValue()")}} {{Deprecated_Inline}}
   - : This method is used to get a float value in a specified unit. If this CSS value doesn't contain a float value or can't be converted into the specified unit, a {{DOMxRef("DOMException")}} is raised.
-- {{DOMxRef("CSSPrimitiveValue.getRGBColorValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.getRGBColorValue()")}} {{Deprecated_Inline}}
   - : This method is used to get the RGB color. If this CSS value doesn't contain a RGB color value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("RGBColor")}} interface.
-- {{DOMxRef("CSSPrimitiveValue.getRectValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.getRectValue()")}} {{Deprecated_Inline}}
   - : This method is used to get the Rect value. If this CSS value doesn't contain a rect value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("Rect")}} interface.
-- {{DOMxRef("CSSPrimitiveValue.getStringValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.getStringValue()")}} {{Deprecated_Inline}}
   - : This method is used to get the string value. If the CSS value doesn't contain a string value, a {{DOMxRef("DOMException")}} is raised.
-- {{DOMxRef("CSSPrimitiveValue.setFloatValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.setFloatValue()")}} {{Deprecated_Inline}}
   - : A method to set the float value with a specified unit. If the property attached with this value can not accept the specified unit or the float value, the value will be unchanged and a {{DOMxRef("DOMException")}} will be raised.
-- {{DOMxRef("CSSPrimitiveValue.setStringValue()")}}
+- {{DOMxRef("CSSPrimitiveValue.setStringValue()")}} {{Deprecated_Inline}}
   - : A method to set the string value with the specified unit. If the property attached to this value can't accept the specified unit or the string value, the value will be unchanged and a {{DOMxRef("DOMException")}} will be raised.
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: VisualViewport.offsetleft
 slug: Web/API/VisualViewport/offsetleft
+page-type: web-api-instance-property
 tags:
   - API
   - Property

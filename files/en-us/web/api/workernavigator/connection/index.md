@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.connection
 slug: Web/API/WorkerNavigator/connection
+page-type: web-api-instance-property
 tags:
   - API
   - Connection

@@ -1,10 +1,10 @@
 ---
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
+page-type: web-api-instance-method
 tags:
   - API
   - CustomElementRegistry
-  - Experimental
   - Method
   - Reference
   - Web Components

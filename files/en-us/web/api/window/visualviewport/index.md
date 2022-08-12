@@ -1,6 +1,7 @@
 ---
 title: Window.visualViewport
 slug: Web/API/Window/visualViewport
+page-type: web-api-instance-property
 tags:
   - API
   - Property

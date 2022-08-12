@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent.openWindow()
 slug: Web/API/PaymentRequestEvent/openWindow
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -23,19 +23,19 @@ function. It returns true if, in the array, it finds an element for which the pr
 
 ```js
 // Arrow function
-some((element) => { /* ... */ } )
-some((element, index) => { /* ... */ } )
-some((element, index, array) => { /* ... */ } )
+some((element) => { /* … */ } )
+some((element, index) => { /* … */ } )
+some((element, index, array) => { /* … */ } )
 
 // Callback function
 some(callbackFn)
 some(callbackFn, thisArg)
 
 // Inline callback function
-some(function(element) { /* ... */ })
-some(function(element, index) { /* ... */ })
-some(function(element, index, array){ /* ... */ })
-some(function(element, index, array) { /* ... */ }, thisArg)
+some(function(element) { /* … */ })
+some(function(element, index) { /* … */ })
+some(function(element, index, array){ /* … */ })
+some(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -53,7 +53,7 @@ some(function(element, index, array) { /* ... */ }, thisArg)
     - `array`
       - : The array `some()` was called upon.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`.
 
 ### Return value
@@ -116,8 +116,8 @@ function isBiggerThan10(element, index, array) {
 provide a shorter syntax for the same test.
 
 ```js
-[2, 5, 8, 1, 4].some(x => x > 10);  // false
-[12, 5, 8, 1, 4].some(x => x > 10); // true
+[2, 5, 8, 1, 4].some((x) => x > 10);  // false
+[12, 5, 8, 1, 4].some((x) => x > 10); // true
 ```
 
 ### Checking whether a value exists in an array
@@ -129,9 +129,7 @@ function returns `true` if the element exists in the array:
 const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
-  return arr.some(function(arrVal) {
-    return val === arrVal;
-  });
+  return arr.some((arrVal) => val === arrVal);
 }
 
 checkAvailability(fruits, 'kela');   // false
@@ -144,7 +142,7 @@ checkAvailability(fruits, 'banana'); // true
 const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
-  return arr.some(arrVal => val === arrVal);
+  return arr.some((arrVal) => val === arrVal);
 }
 
 checkAvailability(fruits, 'kela');   // false
@@ -157,15 +155,11 @@ checkAvailability(fruits, 'banana'); // true
 const TRUTHY_VALUES = [true, 'true', 1];
 
 function getBoolean(value) {
-  'use strict';
-
   if (typeof value === 'string') {
     value = value.toLowerCase().trim();
   }
 
-  return TRUTHY_VALUES.some(function(t) {
-    return t === value;
-  });
+  return TRUTHY_VALUES.some((t) => t === value);
 }
 
 getBoolean(false);   // false

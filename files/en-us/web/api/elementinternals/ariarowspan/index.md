@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaRowSpan
 slug: Web/API/ElementInternals/ariaRowSpan
+page-type: web-api-instance-property
 tags:
   - API
   - Property

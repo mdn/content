@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.videoWidth
 slug: Web/API/HTMLVideoElement/videoWidth
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

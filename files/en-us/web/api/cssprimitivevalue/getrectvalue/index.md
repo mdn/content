@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.getRectValue()
 slug: Web/API/CSSPrimitiveValue/getRectValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue
@@ -48,8 +49,8 @@ A {{domxref("Rect")}} object representing the rect value.
 ## Examples
 
 ```js
-var cs = window.getComputedStyle(document.getElementById("clippedDiv"));
-var cssValue = cs.getPropertyCSSValue("clip");
+const cs = window.getComputedStyle(document.getElementById("clippedDiv"));
+const cssValue = cs.getPropertyCSSValue("clip");
 console.log(cssValue.getRectValue());
 ```
 

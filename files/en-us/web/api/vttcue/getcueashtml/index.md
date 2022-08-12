@@ -1,6 +1,7 @@
 ---
 title: VTTCue.getCueAsHTML()
 slug: Web/API/VTTCue/getCueAsHTML
+page-type: web-api-instance-method
 tags:
   - API
   - Method

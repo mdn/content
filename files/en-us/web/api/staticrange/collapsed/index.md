@@ -1,6 +1,7 @@
 ---
 title: StaticRange.collapsed
 slug: Web/API/StaticRange/collapsed
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

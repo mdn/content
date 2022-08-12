@@ -22,7 +22,7 @@ Strict mode has been designed so that the transition to it can be made gradually
 
 When adding `'use strict';`, the following cases will throw a {{jsxref("SyntaxError")}} before the script is executing:
 
-- Octal syntax `var n = 023;`
+- Octal syntax `const n = 023;`
 - [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement
 - Using [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) on a variable name `delete myVariable`;
 - Using [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) or [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) as variable or function argument name
@@ -43,7 +43,7 @@ JavaScript used to silently fail in contexts where what was done was an error. S
 ```js
 function f(x) {
   'use strict';
-  var a = 12;
+  const a = 12;
   b = a + x * 35; // error!
 }
 f(42);
@@ -52,11 +52,11 @@ f(42);
 This used to change a value on the global object which is rarely the expected effect. If you really want to set a value to the global object, pass it as an argument and explicitly assign it as a property:
 
 ```js
-var global = this; // in the top-level context, "this" always
-                   // refers to the global object
+const global = this; // in the top-level context, "this" always
+                     // refers to the global object
 function f(x) {
   'use strict';
-  var a = 12;
+  const a = 12;
   global.b = a + x * 35;
 }
 f(42);
@@ -77,13 +77,14 @@ Accessing `arguments.callee`, `arguments.caller`, `anyFunction.caller`, or `anyF
 
 ```js
 // example taken from vanillajs: http://vanilla-js.com/
-var s = document.getElementById('thing').style;
+const s = document.getElementById('thing').style;
 s.opacity = 1;
-(function() {
-  if ((s.opacity-=.1) < 0)
+(function () {
+  if ((s.opacity -= .1) < 0) {
     s.display = 'none';
-  else
+  } else {
     setTimeout(arguments.callee, 40);
+  }
 })();
 ```
 
@@ -91,13 +92,14 @@ which can be rewritten as:
 
 ```js
 'use strict';
-var s = document.getElementById('thing').style;
+const s = document.getElementById('thing').style;
 s.opacity = 1;
 (function fadeOut() { // name the function
-  if((s.opacity-=.1) < 0)
+  if ((s.opacity -= .1) < 0) {
     s.display = 'none';
-  else
+  } else {
     setTimeout(fadeOut, 40); // use the name of the function
+  }
 })();
 ```
 
@@ -126,7 +128,7 @@ A potential "downside" of moving strict code to strict mode is that the semantic
 
     1. `eval`: use it only if you know what you're doing
     2. `arguments`: always access function arguments via their name or perform a copy of the arguments object using:
-        `var args = Array.prototype.slice.call(arguments)`
+        `const args = Array.prototype.slice.call(arguments)`
         as the first line of your function
     3. `this`: only use `this` when it refers to an object you created.
 

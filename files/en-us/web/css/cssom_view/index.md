@@ -9,7 +9,7 @@ tags:
   - Layout
   - Overview
   - Reference
-spec-urls: https://drafts.csswg.org/cssom-view/
+browser-compat: css.properties.scroll-behavior
 ---
 {{CSSRef}}
 
@@ -32,6 +32,4 @@ spec-urls: https://drafts.csswg.org/cssom-view/
 
 ## Browser compatibility
 
-### `scroll-behavior` property
-
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

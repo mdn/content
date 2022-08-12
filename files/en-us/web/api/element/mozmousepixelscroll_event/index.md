@@ -1,6 +1,7 @@
 ---
 title: 'Element: MozMousePixelScroll event'
 slug: Web/API/Element/MozMousePixelScroll_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -22,24 +23,21 @@ The Firefox-only, _non-standard_, and _obsolete_ **`MozMousePixelScroll`** event
 
 > **Note:** Do not use this non-standard and obsolete event. Instead, you should always use the standard {{domxref("Element.wheel_event", "wheel")}} event.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>
-        {{domxref("MouseScrollEvent")}} {{Deprecated_inline}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('MozMousePixelScroll', (event) => {});
+
+onMozMousePixelScroll = (event) => { };
+```
+
+## Event type
+
+A {{domxref("MouseWheelEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("MouseWheelEvent")}}
 
 ## Getting the distance scrolled
 

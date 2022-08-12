@@ -1,6 +1,7 @@
 ---
 title: PushManager.permissionState()
 slug: Web/API/PushManager/permissionState
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

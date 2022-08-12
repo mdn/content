@@ -1,6 +1,7 @@
 ---
 title: 'PaymentRequest: shippingoptionchange event'
 slug: Web/API/PaymentRequest/shippingoptionchange_event
+page-type: web-api-event
 tags:
   - API
   - Commerce
@@ -28,9 +29,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('shippingoptionchange', event => { });
+addEventListener('shippingoptionchange', (event) => { });
 
-onshippingoptionchange = event => { };
+onshippingoptionchange = (event) => { };
 ```
 
 ## Event type
@@ -48,7 +49,7 @@ _Provides only the properties inherited from {{domxref("Event")}}._
 This code snippet sets up a handler for the `shippingoptionchange` event. The code recalculates the total charge for the payment based on the selected shipping option. For example, if there are three options (such as "Free ground shipping", "2-day air", and "Next day"), each time the user chooses one of those options, this event handler is called to recalculate the total based on the changed shipping option.
 
 ```js
-paymentRequest.addEventListener("shippingoptionchange", event => {
+paymentRequest.addEventListener("shippingoptionchange", (event) => {
   const value = calculateNewTotal(paymentRequest.shippingOption);
   const total = {
     currency: "EUR",
@@ -64,7 +65,7 @@ After calling a custom function, `calculateNewTotal()`, to compute the updated t
 You can also create an event handler for `shippingoptionchange` using its corresponding event handler property, `onshippingoptionchange`:
 
 ```js
-paymentRequest.onshippingoptionchange = event => {
+paymentRequest.onshippingoptionchange = (event) => {
   const value = calculateNewTotal(paymentRequest.shippingOption);
   const total = {
     currency: "EUR",

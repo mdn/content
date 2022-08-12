@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.webkitEntries
 slug: Web/API/HTMLInputElement/webkitEntries
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API
@@ -49,8 +50,8 @@ and process the selected files.
 ### JavaScript
 
 ```js
-document.getElementById("files").addEventListener("change", function(event) {
-  event.target.webkitEntries.forEach(function(entry) {
+document.getElementById("files").addEventListener("change", (event) => {
+  event.target.webkitEntries.forEach((entry) => {
     /* do stuff with the entry */
   });
 });

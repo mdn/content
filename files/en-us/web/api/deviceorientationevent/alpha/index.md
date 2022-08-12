@@ -1,6 +1,7 @@
 ---
 title: DeviceOrientationEvent.alpha
 slug: Web/API/DeviceOrientationEvent/alpha
+page-type: web-api-instance-property
 tags:
   - API
   - DeviceOrientation API

@@ -1,6 +1,7 @@
 ---
 title: The structured clone algorithm
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
+page-type: guide
 tags:
   - Advanced
   - DOM
@@ -8,6 +9,8 @@ tags:
   - JavaScript
   - Reference
 ---
+{{DefaultAPISidebar("Web Workers API") }}
+
 The **structured clone algorithm** copies complex JavaScript objects.
 It is used internally when invoking {{domxref("structuredClone()")}}, to transfer data between [Workers](/en-US/docs/Web/API/Worker) via {{domxref("Worker.postMessage()", "postMessage()")}}, storing objects with [IndexedDB](/en-US/docs/Glossary/IndexedDB), or copying objects for [other APIs](#see_also).
 
@@ -23,9 +26,6 @@ It clones by recursing through the input object while maintaining a map of previ
   - Property descriptors, setters, getters, and similar metadata-like features are not duplicated.
     For example, if an object is marked readonly with a [property descriptor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor), it will be read/write in the duplicate, since that's the default.
   - The prototype chain is not walked or duplicated.
-
-> **Note:** Native {{jsxref("Error")}} types can be cloned in Chrome.
-> Firefox can clone {{domxref("DOMException")}}, and is [working on the other error types](https://bugzilla.mozilla.org/show_bug.cgi?id=1556604).
 
 ## Supported types
 
@@ -76,10 +76,12 @@ It clones by recursing through the input object while maintaining a map of previ
       <td></td>
     </tr>
     <tr>
-      <td>{{domxref("ArrayBufferView")}}</td>
-      <td>
-        Including other <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a>.
-      </td>
+      <td>{{jsxref("TypedArray")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("DataView")}}</td>
+      <td></td>
     </tr>
     <tr>
       <td>{{domxref("ImageBitmap")}}</td>
@@ -107,7 +109,16 @@ It clones by recursing through the input object while maintaining a map of previ
     </tr>
     <tr>
       <td>{{domxref("DOMException")}}</td>
-      <td>Most browsers only clone the properties {{domxref("DOMException.name","name")}} and {{domxref("DOMException.message","message")}} (in theory stack traces and other attributes may also be cloned).</td>
+      <td>Browsers must serialize the properties {{domxref("DOMException.name","name")}} and {{domxref("DOMException.message","message")}}.
+      Other attributes may also be serialized/cloned.</td>
+    </tr>
+    <tr>
+      <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Native <code>Error</code> types</a></td>
+      <td>
+        <p>The error name must be one of: {{jsxref("Error")}}, {{JSxRef("EvalError")}}, {{JSxRef("RangeError")}}, {{JSxRef("ReferenceError")}}, {{JSxRef("SyntaxError")}}, {{JSxRef("TypeError")}}, {{JSxRef("URIError")}} (or will be set to "Error").</p>
+        <p>Browsers must serialize the properties <code>name</code> and <code>message</code>, and are expected to serialize other "interesting" properties of the errors such as <code>stack</code>, <code>cause</code>, etc.</p>
+        <p>{{JSxRef("AggregateError")}} support is expected to be added to the specification in <a href="https://github.com/whatwg/html/pull/5749">whatwg/html#5749</a> (and is already supported in some browsers).</p>
+      </td>
     </tr>
   </tbody>
 </table>

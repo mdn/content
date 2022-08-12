@@ -197,19 +197,19 @@ Like other locale subtags, the collation type can be added to the {{jsxref("Intl
 
 ### Adding a collation type via the locale string
 
-In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), collation types are locale key "extension subtags". These subtags add additional data about the locale, and are added to locale identifiers by using the `-u` extension. Thus, the collation type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor. To add the collation type, first add the `-u` extension to the string. Next, add the `-co` extension to indicate that you are adding a collation type. Finally, add the collation to the string.
+In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), collation types are locale key "extension subtags". These subtags add additional data about the locale, and are added to locale identifiers by using the `-u` extension. Thus, the collation type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. To add the collation type, first add the `-u` extension to the string. Next, add the `-co` extension to indicate that you are adding a collation type. Finally, add the collation to the string.
 
 ```js
-let locale = new Intl.Locale("zh-Hant-u-co-zhuyin");
+const locale = new Intl.Locale("zh-Hant-u-co-zhuyin");
 console.log(locale.collation); // Prints "zhuyin"
 ```
 
 ### Adding a collation type via the configuration object argument
 
-The {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor has an optional configuration object argument, which can contain any of several extension types, including collation types. Set the `collation` property of the configuration object to your desired collation type, and then pass it into the constructor.
+The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optional configuration object argument, which can contain any of several extension types, including collation types. Set the `collation` property of the configuration object to your desired collation type, and then pass it into the constructor.
 
 ```js
-let locale = new Intl.Locale("zh-Hant", { collation: "zhuyin" });
+const locale = new Intl.Locale("zh-Hant", { collation: "zhuyin" });
 console.log(locale.collation); // Prints "zhuyin"
 ```
 

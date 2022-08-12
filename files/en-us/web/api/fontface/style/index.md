@@ -1,6 +1,7 @@
 ---
 title: FontFace.style
 slug: Web/API/FontFace/style
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API

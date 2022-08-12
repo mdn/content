@@ -42,7 +42,7 @@ The `big()` method embeds a string in a `<big>` element:
 The following example uses string methods to change the size of a string:
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 
 console.log(worldString.small());     // <small>Hello, world</small>
 console.log(worldString.big());       // <big>Hello, world</big>

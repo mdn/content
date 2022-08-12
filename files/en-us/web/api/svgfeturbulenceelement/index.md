@@ -1,6 +1,7 @@
 ---
 title: SVGFETurbulenceElement
 slug: Web/API/SVGFETurbulenceElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

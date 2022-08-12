@@ -1,6 +1,7 @@
 ---
 title: IDBVersionChangeEvent.oldVersion
 slug: Web/API/IDBVersionChangeEvent/oldVersion
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -29,12 +30,12 @@ A number containing a 64-bit integer.
 ## Examples
 
 ```js
-var dbName = "sampleDB";
-var dbVersion = 2;
-var request = indexedDB.open(dbName, dbVersion);
+const dbName = "sampleDB";
+const dbVersion = 2;
+const request = indexedDB.open(dbName, dbVersion);
 
-request.onupgradeneeded = function(e) {
-  var db = request.result;
+request.onupgradeneeded = (e) => {
+  const db = request.result;
   if (e.oldVersion < 1) {
     db.createObjectStore("store1");
   }
@@ -44,7 +45,7 @@ request.onupgradeneeded = function(e) {
     db.createObjectStore("store2");
   }
 
-  // etc. for version < 3, 4...
+  // etc. for version < 3, 4…
 };
 ```
 

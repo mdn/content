@@ -213,7 +213,7 @@ Add the following at the bottom of your CSS:
 .col.span2 { width: 140px; }
 /* Three column widths (180px) plus two gutter widths (40px) */
 .col.span3 { width: 220px; }
-/* And so on... */
+/* And so on… */
 .col.span4 { width: 300px; }
 .col.span5 { width: 380px; }
 .col.span6 { width: 460px; }
@@ -306,7 +306,7 @@ Update the bottom block of CSS rules with the following:
 .col.span2 { width: 14.58333333%; }
 /* Three column widths (18.75%) plus two gutter widths (4.1666666) */
 .col.span3 { width: 22.91666666%; }
-/* And so on... */
+/* And so on… */
 .col.span4 { width: 31.24999999%; }
 .col.span5 { width: 39.58333332%; }
 .col.span6 { width: 47.91666665%; }
@@ -324,7 +324,7 @@ Now save your code, load it in a browser, and try changing the viewport width �
 
 ### Easier calculations using the calc() function
 
-You could use the {{cssxref("calc", "calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See [this example from a MediaRecorder API tutorial](</en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
+You could use the {{cssxref("calc", "calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See [this example from a MediaRecorder API tutorial](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc).
 
 Anyway, back to our grids! Any column that spans more than one column of our grid has a total width of 6.25% multiplied by the number of columns spanned plus 2.08333333% multiplied by the number of gutters (which will always be the number of columns minus 1). The `calc()` function allows us to do this calculation right inside the width value, so for any item spanning 4 columns we can do this, for example:
 

@@ -1,29 +1,29 @@
 ---
 title: Touch()
 slug: Web/API/Touch/Touch
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
-  - Experimental
   - Reference
   - touch
 browser-compat: api.Touch.Touch
 ---
-{{APIRef("Touch Events")}} {{SeeCompatTable}}
+{{APIRef("Touch Events")}}
 
 The **`Touch()`** constructor creates a new {{domxref("Touch")}} object.
 
 ## Syntax
 
 ```js
-new Touch(touchInit)
+new Touch(options)
 ```
 
 ### Parameters
 
 - `touchInit`
 
-  - : A `TouchInit` dictionary, having the following fields:
+  - : An object with the following fields:
 
     - `identifier`
       - : A `long` value, that is the identification number for the touch point.

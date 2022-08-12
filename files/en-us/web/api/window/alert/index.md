@@ -1,6 +1,7 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -42,7 +43,7 @@ alert("Hello world!");
 
 Both produce:
 
-![](alerthelloworld.png)
+![Black alert dialog box. At the top left small circle icon follow by white open and close brackets containing this white text: Javascript application. Below on the left, a Hello world! white text. And on the bottom right a small blue button. The button's text is: ok in black.](alerthelloworld.png)
 
 ## Notes
 

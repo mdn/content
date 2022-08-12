@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiveParameters
 slug: Web/API/RTCRtpReceiveParameters
+page-type: web-api-interface
 tags:
   - API
   - Configuration

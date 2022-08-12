@@ -1,6 +1,7 @@
 ---
 title: CaretPosition
 slug: Web/API/CaretPosition
+page-type: web-api-interface
 tags:
   - API
   - CSSOM View
@@ -17,14 +18,14 @@ The `CaretPosition` interface represents the caret position, an indicator for th
 
 _This interface doesn't inherit any properties._
 
-- {{domxref("CaretPosition.offsetNode")}} {{readonlyInline}}
+- {{domxref("CaretPosition.offsetNode")}} {{readonlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Node")}} containing the found node at the caret's position.
-- {{domxref("CaretPosition.offset")}} {{readonlyInline}}
+- {{domxref("CaretPosition.offset")}} {{readonlyInline}} {{Experimental_Inline}}
   - : Returns a `long` representing the character offset in the caret position node.
 
 ## Methods
 
-- {{domxref("CaretPosition.getClientRect")}}
+- {{domxref("CaretPosition.getClientRect")}} {{Experimental_Inline}}
   - : Returns the client rectangle for the caret range.
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
+page-type: web-api-overview
 tags:
   - API
   - Audio
@@ -9,6 +10,7 @@ tags:
   - Overview
   - Web Audio API
   - sound
+browser-compat: api.AudioContext
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
@@ -74,7 +76,7 @@ General containers and definitions that shape audio graphs in Web Audio API usag
   - : Provides a map-like interface to a group of {{domxref("AudioParam")}} interfaces, which means it provides the methods `forEach()`, `get()`, `has()`, `keys()`, and `values()`, as well as a `size` property.
 - {{domxref("BaseAudioContext")}}
   - : The **`BaseAudioContext`** interface acts as a base definition for online and offline audio-processing graphs, as represented by {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} respectively. You wouldn't use `BaseAudioContext` directly â€” you'd use its features via one of these two inheriting interfaces.
-- The {{event("ended")}} event
+- The {{domxref("AudioScheduledSourceNode/ended_event", "ended")}} event
   - : The `ended` event is fired when playback has stopped because the end of the media was reached.
 
 ### Defining audio sources
@@ -183,10 +185,10 @@ It is possible to process/render an audio graph very quickly in the background â
 
 - {{domxref("OfflineAudioContext")}}
   - : The **`OfflineAudioContext`** interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard `AudioContext`, an `OfflineAudioContext` doesn't really render the audio but rather generates it, _as fast as it can_, in a buffer.
-- {{event("complete")}} (event)
+- {{domxref("OfflineAudioContext/complete_event", "complete")}} (event)
   - : The `complete` event is fired when the rendering of an {{domxref("OfflineAudioContext")}} is terminated.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event uses this interface.
+  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{domxref("OfflineAudioContext/complete_event", "complete")}} event uses this interface.
 
 ## Guides and tutorials
 
@@ -198,13 +200,13 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 
 ## Specifications
 
-{{Specifications("api.AudioContext")}}
+{{Specifications}}
 
 ## Browser compatibility
 
 ### AudioContext
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## See also
 
@@ -218,8 +220,8 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
+- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
+- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/en/tutorials/webaudio/games/)
 - [Porting webkitAudioContext code to standards based AudioContext](/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
 
 ### Libraries
@@ -228,7 +230,7 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 - [Tone.js](https://tonejs.github.io/): a framework for creating interactive music in the browser.
 - [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML5 Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
-- [XSound](https://xsound.jp/): Web Audio API Library for Synthesizer, Effects, Visualization, Recording ... etc
+- [XSound](https://xsound.jp/): Web Audio API Library for Synthesizer, Effects, Visualization, Recording, etc.
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using the Web Audio API to record and combine video and audio from different sources into a single file ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
 - [Pts.js](https://ptsjs.org/): Simplifies web audio visualization ([guide](https://ptsjs.org/guide/sound-0800))
 

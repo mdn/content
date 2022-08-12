@@ -1,10 +1,10 @@
 ---
 title: Clients.matchAll()
 slug: Web/API/Clients/matchAll
+page-type: web-api-instance-method
 tags:
   - API
   - Clients
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -54,10 +54,10 @@ order, correct as per spec.
 ## Examples
 
 ```js
-clients.matchAll(options).then(function(clientList) {
-  for (var i = 0 ; i < clientList.length ; i++) {
-    if (clientList[i].url === 'index.html') {
-      clients.openWindow(clientList[i]);
+clients.matchAll(options).then((clientList) => {
+  for (const client of clientList) {
+    if (client.url === 'index.html') {
+      clients.openWindow(client);
       // or do something else involving the matching client
     }
   }

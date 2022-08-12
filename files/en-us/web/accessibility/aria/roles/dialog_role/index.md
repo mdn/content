@@ -56,7 +56,7 @@ If a dialog already has a visible title bar, the text inside that bar can be use
 A dialog has particular requirements for how keyboard focus should be managed:
 
 - Dialogs should always have at least one focusable control. For many dialogs, there will be a button like "Close", "OK" or "Cancel". In addition to the needed control, dialogs can contain any number of focusable elements, even entire forms or other container widgets like tabs.
-- When the dialog appears on the screen, keyboard focus (whose control depends upon the dialogs purpose) should be moved to the default focusable control inside the dialog. For dialogs that only provide a basic message, it could be an "OK" button. For dialogs containing a form it could be the first field in the form.
+- When the dialog appears on the screen, keyboard focus (whose control depends upon the dialog's purpose) should be moved to the default focusable control inside the dialog. For dialogs that only provide a basic message, it could be an "OK" button. For dialogs containing a form it could be the first field in the form.
 - After the dialog is dismissed, keyboard focus should be moved back to where it was before it moved into the dialog. Otherwise the focus can be dropped to the beginning of the page.
 - For most dialogs, the expected behavior is that the dialog's tab order *wraps*, which means that when the user tabs through the focusable elements in the dialog, the first focusable element will be focused after the last one has been reached. In other words, the tab order should be contained within and by the dialog.
 - If the dialog can be moved or resized, ensure that these actions must be performable by keyboard users as well as mouse users. Similarly, if a dialog provides special features like toolbars or context menus, these must be reachable and operable by keyboard users as well.
@@ -129,7 +129,7 @@ Coming soon
 ## See also
 
 - [ARIA: alertdialog role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
-- [Using the alertdialog role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+- [Using the alertdialog role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - {{HTMLElement('dialog', 'The HTML <code>&lt;dialog&gt;</code> element')}}
 
 <section id="Quick_links">

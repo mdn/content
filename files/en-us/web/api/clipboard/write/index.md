@@ -1,6 +1,7 @@
 ---
 title: Clipboard.write()
 slug: Web/API/Clipboard/write
+page-type: web-api-instance-method
 tags:
   - API
   - Clip
@@ -55,15 +56,15 @@ string.
 
 ```js
 function setClipboard(text) {
-    var type = "text/plain";
-    var blob = new Blob([text], { type });
-    var data = [new ClipboardItem({ [type]: blob })];
+    const type = "text/plain";
+    const blob = new Blob([text], { type });
+    const data = [new ClipboardItem({ [type]: blob })];
 
     navigator.clipboard.write(data).then(
-        function () {
+        () => {
         /* success */
         },
-        function () {
+        () => {
         /* failure */
         }
     );
@@ -83,12 +84,12 @@ and an error function.
 
 ```js
 function copyCanvasContentsToClipboard(canvas, onDone, onError) {
-  canvas.toBlob(function (blob) {
+  canvas.toBlob((blob) => {
     let data = [new ClipboardItem({ [blob.type]: blob })];
 
-    navigator.clipboard.write(data).then(function () {
+    navigator.clipboard.write(data).then(() => {
       onDone();
-    }, function (err) {
+    }, (err) => {
       onError(err);
     })
   });
@@ -108,7 +109,5 @@ function copyCanvasContentsToClipboard(canvas, onDone, onError) {
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on
-  Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async
-  Clipboard article](https://web.dev/async-clipboard/)
+- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

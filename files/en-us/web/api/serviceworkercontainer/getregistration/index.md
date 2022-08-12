@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerContainer.getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -38,8 +39,8 @@ object or `undefined`.
 ## Examples
 
 ```js
-navigator.serviceWorker.getRegistration('/app').then(function(registration) {
-  if(registration){
+navigator.serviceWorker.getRegistration('/app').then((registration) => {
+  if (registration) {
     document.querySelector('#status').textContent = 'ServiceWorkerRegistration found.';
   }
 });

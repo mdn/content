@@ -6,7 +6,7 @@ tags:
   - Directive
   - HTTP
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.trusted-types
+browser-compat: http.headers.Content-Security-Policy.trusted-types
 ---
 {{HTTPSidebar}}
 
