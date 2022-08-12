@@ -30,8 +30,8 @@ Returns a string containing the connection state of the port, one of:
 The following example loops through all input ports and prints the connection status of each to the console.
 
 ```js
-for (let entry of midiAccess.inputs) {
-  let input = entry[1];
+for (const entry of midiAccess.inputs) {
+  const input = entry[1];
   console.log(input.connection);
 }
 ```
