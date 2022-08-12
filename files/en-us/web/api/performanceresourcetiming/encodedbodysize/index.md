@@ -31,18 +31,19 @@ The following example, the value of the size properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
 ```js
-function log_sizes(entry){
+function logSizes(entry){
   // Check for support of the PerformanceEntry.*size properties and print their values
   // if supported.
   console.log(`decodedBodySize = ${"decodedBodySize" in entry ? entry.decodedBodySize : "NOT supported"}`);
   console.log(`encodedBodySize = ${"encodedBodySize" in entry ? entry.encodedBodySize : "NOT supported"}`);
   console.log(`transferSize = ${"transferSize" in entry ? entry.transferSize : "NOT supported"}`);
 }
-function check_PerformanceEntries() {
+
+function checkPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   const entries = performance.getEntriesByType("resource");
   for (const entry of entries) {
-    log_sizes(entry);
+    logSizes(entry);
   }
 }
 ```
