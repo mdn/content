@@ -42,40 +42,38 @@ with id "paragraph", and prints each attribute's value.
 
 ```html
 <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Attributes example</title>
+    <script>
+    function listAttributes() {
+       const paragraph = document.getElementById("paragraph");
+       const result = document.getElementById("result");
 
-<html>
-
- <head>
-  <title>Attributes example</title>
-  <script>
-   function listAttributes() {
-     const paragraph = document.getElementById("paragraph");
-     const result = document.getElementById("result");
-
-     // First, let's verify that the paragraph has some attributes
-     if (paragraph.hasAttributes()) {
-       let output = "";
-       for (const attr of paragraph.attributes) {
-         output += attr.name + "->" + attr.value;
+       // First, let's verify that the paragraph has some attributes
+       if (paragraph.hasAttributes()) {
+         let output = "";
+         for (const attr of paragraph.attributes) {
+           output += attr.name + "->" + attr.value;
+         }
+         result.value = output;
+       } else {
+         result.value = "No attributes to show";
        }
-       result.value = output;
-     } else {
-       result.value = "No attributes to show";
-     }
-   }
-  </script>
- </head>
+    }
+    </script>
+  </head>
 
-<body>
- <p id="paragraph" style="color: green;">Sample Paragraph</p>
- <form action="">
-  <p>
-    <input type="button" value="Show first attribute name and value"
-      onclick="listAttributes();">
-    <input id="result" type="text" value="">
-  </p>
- </form>
-</body>
+  <body>
+    <p id="paragraph" style="color: green;">Sample Paragraph</p>
+    <form action="">
+      <p>
+        <input type="button" value="Show first attribute name and value"
+          onclick="listAttributes();">
+        <output id="result"></output>
+      </p>
+    </form>
+  </body>
 </html>
 ```
 
