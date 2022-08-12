@@ -12,7 +12,7 @@ tags:
 
 ## Syntax
 
-```js
+```plain
 set:intersection(nodeSet1, nodeSet2)
 ```
 
