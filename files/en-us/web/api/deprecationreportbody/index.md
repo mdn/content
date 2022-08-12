@@ -81,16 +81,16 @@ function displayReports(reports) {
   outputElem.appendChild(list);
 
   for (let i = 0; i < reports.length; i++) {
-    let listItem = document.createElement('li');
-    let textNode = document.createTextNode(`Report ${i + 1}, type: ${reports[i].type}`);
+    const listItem = document.createElement('li');
+    const textNode = document.createTextNode(`Report ${i + 1}, type: ${reports[i].type}`);
     listItem.appendChild(textNode);
-    let innerList = document.createElement('ul');
+    const innerList = document.createElement('ul');
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
-    for (let key in reports[i].body) {
-      let innerListItem = document.createElement('li');
-      let keyValue = reports[i].body[key];
+    for (const key in reports[i].body) {
+      const innerListItem = document.createElement('li');
+      const keyValue = reports[i].body[key];
       innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);
     }
