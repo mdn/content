@@ -41,8 +41,7 @@ function printPerformanceEntries() {
 }
 
 function printNextHopProtocol(perfEntry) {
-  const value = "nextHopProtocol" in perfEntry;
-  console.log(`nextHopProtocol = ${value ? perfEntry.nextHopProtocol: "NOT supported"}`);
+  console.log(`nextHopProtocol = ${perfEntry.nextHopProtocol ?? "NOT supported"}`);
 }
 ```
 
