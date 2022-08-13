@@ -99,7 +99,7 @@ function pointermove_handler(ev) {
  ev.target.style.border = "dashed";
 
  // Find this event in the cache and update its record with this event
- for (const i in evCache) {
+ evCache.forEach((event, i, evCache) => {
    if (ev.pointerId === evCache[i].pointerId) {
      evCache[i] = ev;
      break;
