@@ -63,12 +63,13 @@ console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] us
 
 If `pattern` is an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method (including `RegExp` objects), that method is called with the target string and `replacement` as arguments. Its return value becomes the return value of `replaceAll()`. In this case the behavior of `replaceAll()` is entirely encoded by the `@@replace` method, and therefore will have the same result as `replace()` (apart from the extra input validation that the regex is global).
 
-If the `pattern` is an empty string or a global regexp that matches empty strings, the replacement will be inserted in between every UTF-16 code unit, similar to [`split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) behavior.
+If the `pattern` is an empty string, the replacement will be inserted in between every UTF-16 code unit, similar to [`split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) behavior.
 
 ```js
 "xxx".replaceAll("", "_"); // "_x_x_x_"
-"xxx".replaceAll(/(?:)/g, "_"); // "_x_x_x_"
 ```
+
+For more information about how regex properties (especially the [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flag) interact with `replaceAll()`, see [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
 
 ## Examples
 

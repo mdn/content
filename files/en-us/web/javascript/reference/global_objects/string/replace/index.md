@@ -45,12 +45,13 @@ A string pattern will only be replaced once. To perform a global search and repl
 
 If `pattern` is an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method (including `RegExp` objects), that method is called with the target string and `replacement` as arguments. Its return value becomes the return value of `replace()`. In this case the behavior of `replace()` is entirely encoded by the `@@replace` method — for example, any mention of "capturing groups" in the description below is actually semantic provided by [`RegExp.prototype[@@replace]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
 
-If the `pattern` is a global regexp that matches empty strings, the replacement will be inserted in between every UTF-16 code unit, similar to [`split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) behavior. If it's an empty string, the replacement is prepended to the start of the string.
+If the `pattern` is an empty string, the replacement is prepended to the start of the string.
 
 ```js
 "xxx".replace("", "_"); // "_xxx"
-"xxx".replace(/(?:)/g, "_"); // "_x_x_x_"
 ```
+
+A regexp with the `g` flag is the only case where `replace()` replaces more than once. For more information about how regex properties (especially the [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flag) interact with `replace()`, see [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
 
 ### Specifying a string as the replacement
 
@@ -143,8 +144,6 @@ console.log(newstr);  // oranges are round, and oranges are juicy.
 ```
 
 This logs `'oranges are round, and oranges are juicy'`.
-
-A regexp with the `g` flag is the only case where `replace()` replaces more than once. For more information about how regex flags (especially the [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flag) interact with `replace()`, see [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
 
 ### Switching words in a string
 

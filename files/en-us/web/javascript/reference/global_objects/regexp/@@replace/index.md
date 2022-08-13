@@ -70,6 +70,13 @@ When the regex is sticky and global, it would still perform sticky matches — i
 console.log("aa-a".replace(/a/gy, "b")); // "bb-a"
 ```
 
+If the current match is an empty string, the `lastIndex` would still be advanced — if the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it would advance by one Unicode codepoint; otherwise, it advances by one UTF-16 code unit.
+
+```js
+console.log("😄".replace(/(?:)/g, " ")); // " \ud83d \ude04 "
+console.log("😄".replace(/(?:)/gu, " ")); // " 😄 "
+```
+
 This method exists for customizing replace behavior in `RegExp` subclasses.
 
 ## Examples
