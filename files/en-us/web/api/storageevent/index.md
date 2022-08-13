@@ -49,7 +49,7 @@ _In addition to the properties listed below, this interface inherits the propert
 
 _In addition to the methods listed below, this interface inherits the methods of its parent interface, {{domxref("Event")}}._
 
-- {{domxref("StorageEvent.initStorageEvent", "initStorageEvent()")}} {{deprecated_inline}}
+- {{domxref("StorageEvent.initStorageEvent", "initStorageEvent()")}}
   - : Initializes the event in a manner analogous to the similarly-named {{domxref("Event.initEvent", "initEvent()")}} method in the DOM
     Events interfaces. Use the constructor instead.
 
