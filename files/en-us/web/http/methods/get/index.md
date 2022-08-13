@@ -61,3 +61,6 @@ GET /index.html
 - [HTTP Headers](/en-US/docs/Web/HTTP/Headers)
 - {{HTTPHeader("Range")}}
 - {{HTTPMethod("POST")}}
+<p></p>
+
+- [Example](https://pastebin.com/raw/YTi5UzLq)
