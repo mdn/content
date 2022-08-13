@@ -784,7 +784,7 @@
         "mediaCapabilities.decodingInfo()",
         "mediaCapabilities.encodingInfo()"
       ],
-      "properties": [],
+      "properties": ["navigator.mediaCapabilities"],
       "events": [],
       "dictionaries": []
     },
