@@ -286,7 +286,7 @@ Now that the repository ("repo") is created we are going to want to clone it on 
 
 The final step is to copy in your application and then add the files to your repo using git:
 
-1. Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from NPM as needed).
+1. Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from npm as needed).
 2. Open a command prompt/terminal and use the `add` command to add all files to git.
 
     ```bash

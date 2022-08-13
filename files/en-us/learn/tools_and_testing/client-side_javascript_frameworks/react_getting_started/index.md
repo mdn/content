@@ -150,7 +150,7 @@ This creates a `moz-todo-react` directory, and does several things inside it:
 - Creates a structure of files and directories that define the basic app architecture.
 - Initializes the directory as a git repository, if you have git installed on your computer.
 
-> **Note:** if you have the Yarn package manager installed, create-react-app will default to using it instead of npm. If you have both package managers installed and explicitly want to use NPM, you can add the flag `--use-npm` when you run create-react-app:
+> **Note:** if you have the Yarn package manager installed, create-react-app will default to using it instead of npm. If you have both package managers installed and explicitly want to use npm, you can add the flag `--use-npm` when you run create-react-app:
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm
