@@ -5,7 +5,6 @@ page-type: web-api-static-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - MediaSource

@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - MediaSource
@@ -15,7 +14,7 @@ tags:
   - endOfStream
 browser-compat: api.MediaSource.endOfStream
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`endOfStream()`** method of the
 {{domxref("MediaSource")}} interface signals the end of the stream.
