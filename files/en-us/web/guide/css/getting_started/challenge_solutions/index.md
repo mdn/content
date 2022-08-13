@@ -157,7 +157,7 @@ The challenges on page are:
   - : Add this rule to your stylesheet:
 
     ```css
-    p:before{
+    p::before{
       content: url("yellow-pin.png");
     }
     ```
@@ -191,7 +191,7 @@ The challenges on page [Lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
     ```css
     /* numbered headings */
     body {counter-reset: headnum;}
-    h3:before {
+    h3::before {
       content: "(" counter(headnum, upper-latin) ") ";
       counter-increment: headnum;
     }

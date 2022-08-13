@@ -236,12 +236,12 @@ label {
   width: 300px;
 }
 
-input:invalid+span:after {
+input:invalid+span::after {
     content: '✖';
     padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid+span::after {
     content: '✓';
     padding-left: 5px;
 }
@@ -299,7 +299,7 @@ input:invalid + span {
   position: relative;
 }
 
-input:invalid + span:after {
+input:invalid + span::after {
   content: '✖';
   position: absolute;
   right: -18px;
@@ -309,7 +309,7 @@ input:valid + span {
   position: relative;
 }
 
-input:valid + span:after {
+input:valid + span::after {
   content: '✓';
   position: absolute;
   right: -18px;
@@ -424,13 +424,13 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid+span::after {
   position: absolute;
   content: '✖';
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid+span::after {
   position: absolute;
   content: '✓';
   padding-left: 5px;

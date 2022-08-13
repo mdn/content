@@ -338,12 +338,12 @@ div {
     padding-right: 30px;
   }
 
-  input:invalid+span:after {
+  input:invalid+span::after {
     position: absolute; content: '✖';
     padding-left: 5px;
   }
 
-  input:valid+span:after {
+  input:valid+span::after {
     position: absolute;
     content: '✓';
     padding-left: 5px;
