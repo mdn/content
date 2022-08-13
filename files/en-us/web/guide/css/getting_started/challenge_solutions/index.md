@@ -157,7 +157,7 @@ The challenges on page are:
   - : Add this rule to your stylesheet:
 
     ```css
-    p::before{
+    p::before {
       content: url("yellow-pin.png");
     }
     ```
@@ -212,7 +212,7 @@ The challenges on page [Boxes](/en-US/docs/Learn/CSS/Building_blocks) are:
     ```css
     ul {
       border: 10px solid lightblue;
-      width:  100px;
+      width: 100px;
     }
     ```
 
@@ -237,7 +237,7 @@ The challenges on page [Layout](/en-US/docs/Learn/CSS/CSS_layout) are:
 
     ```css
     #fixed-pin {
-      position:fixed;
+      position: fixed;
       top: 3px;
       right: 3px;
     }
@@ -257,7 +257,7 @@ The challenges on page [Tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_ta
 
     ```css
     #demo-table tbody td {
-      border:1px solid #7a7;
+      border: 1px solid #7a7;
     }
     ```
 

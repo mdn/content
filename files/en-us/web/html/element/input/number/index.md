@@ -274,13 +274,13 @@ div {
   margin-bottom: 10px;
 }
 
-input:invalid+span::after {
-  content: '✖';
+input:invalid + span::after {
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span::after {
-  content: '✓';
+input:valid + span::after {
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -356,15 +356,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span::after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span::after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```

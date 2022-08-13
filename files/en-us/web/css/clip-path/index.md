@@ -450,7 +450,7 @@ html,body {
 .container {
   display: inline-block;
   border: 1px dotted grey;
-  position:relative;
+  position: relative;
 }
 
 .container::before {
