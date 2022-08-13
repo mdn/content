@@ -53,7 +53,6 @@ Now create a new file called "manifest.json", and give it the following contents
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Beastify",
   "version": "1.0",
@@ -79,7 +78,6 @@ Now create a new file called "manifest.json", and give it the following contents
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 ```
 
@@ -280,11 +278,13 @@ function listenForClicks() {
      * then call "beastify()" or "reset()" as appropriate.
      */
     if (e.target.classList.contains("beast")) {
-      browser.tabs.query({ active: true, currentWindow: true })
+      browser.tabs
+        .query({ active: true, currentWindow: true })
         .then(beastify)
         .catch(reportError);
     } else if (e.target.classList.contains("reset")) {
-      browser.tabs.query( {active: true, currentWindow: true })
+      browser.tabs
+        .query({ active: true, currentWindow: true })
         .then(reset)
         .catch(reportError);
     }
@@ -306,9 +306,10 @@ function reportExecuteScriptError(error) {
  * and add a click handler.
  * If we couldn't inject the script, handle the error.
  */
-browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
-.then(listenForClicks)
-.catch(reportExecuteScriptError);
+browser.tabs
+  .executeScript({ file: "/content_scripts/beastify.js" })
+  .then(listenForClicks)
+  .catch(reportExecuteScriptError);
 ```
 
 The place to start here is line 96. The popup script executes a content script in the active tab as soon as the popup is loaded, using the [`browser.tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API. If executing the content script is successful, then the content script will stay loaded in the page until the tab is closed or the user navigates to a different page.
@@ -365,7 +366,7 @@ Create a new directory, under the extension root, called "content_scripts" and c
    * Remove every beast from the page.
    */
   function removeExistingBeasts() {
-    let existingBeasts = document.querySelectorAll(".beastify-image");
+    const existingBeasts = document.querySelectorAll(".beastify-image");
     for (const beast of existingBeasts) {
       beast.remove();
     }
@@ -382,7 +383,6 @@ Create a new directory, under the extension root, called "content_scripts" and c
       removeExistingBeasts();
     }
   });
-
 })();
 ```
 
