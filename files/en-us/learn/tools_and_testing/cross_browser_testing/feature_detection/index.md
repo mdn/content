@@ -81,7 +81,8 @@ Let's implement something that demonstrates this, although we'll keep it simple 
     ```html
     <script src="html5shiv.min.js"></script>
     ```
-> **Note:** This step is no longer needed. All modern browsers are able to render semantic elements. 
+
+> **Note:** This step is no longer needed. All modern browsers are able to render semantic elements.
 
 3. Have a look at your example CSS files — you'll see that `basic-styling.css` handles all the styling that we want to give to every browser, whereas the other two CSS files contain the CSS we want to selectively apply to browsers depending on their support levels. You can look at the different effects these two files have by manually changing the CSS file referred to by the second {{htmlelement("link")}} element, but let's instead implement some JavaScript to automatically swap them as needed.
 4. First, remove the contents of the second `<link>` element's `href` attribute. We will fill this in dynamically later on.

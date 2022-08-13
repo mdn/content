@@ -46,8 +46,8 @@ svg.appendChild(style);
 style.appendChild(node);
 ```
 
-The code below then logs the sheet and CSS rule associated with this new element, using `style.sheet`. 
-To make 
+The code below then logs the sheet and CSS rule associated with this new element, using `style.sheet`.
+To make
 
 ```js
 // Log the sheet associated with this new element.
