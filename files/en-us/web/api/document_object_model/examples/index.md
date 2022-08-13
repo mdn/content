@@ -149,7 +149,7 @@ For a document with a single stylesheet in which the following three rules are d
 
 ```css
 body { background-color: darkblue; }
-p { font-face: Arial; font-size: 10pt; margin-left: .125in; }
+p { font-family: Arial; font-size: 10pt; margin-left: .125in; }
 #lumpy { display: none; }
 ```
 

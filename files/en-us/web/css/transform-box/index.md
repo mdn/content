@@ -74,10 +74,10 @@ In this example we have an SVG:
 In the CSS we have an animation that uses a transform to rotate the rectangle infinitely. `transform-box: fill-box` is used to make the `transform-origin` the center of the bounding box, so the rectangle spins in place. Without it, the transform origin is the center of the SVG canvas, and so you get a very different effect.
 
 ```css
-svg{
-  width:80vh;
-  border:1px solid #d9d9d9;
-  position:absolute;
+svg {
+  width: 80vh;
+  border: 1px solid #d9d9d9;
+  position: absolute;
   margin: auto;
   top: 0;
   right: 0;
@@ -85,8 +85,8 @@ svg{
   left: 0;
 }
 
-#box{
-  transform-origin:50% 50%;
+#box {
+  transform-origin: 50% 50%;
   /*+++++++++++++++++++++++++++*/
   /* if I remove this rule the pen won't work properly on Chrome for Mac, FF, Safari
   Will still work properly on Chrome for PC & Opera*/
@@ -100,6 +100,7 @@ svg{
   to {
     transform: rotate(360deg);
   }
+}
 ```
 
 Full credit for this example goes to [Pogany](https://codepen.io/giaco); see [this codepen](https://codepen.io/giaco/pen/OwowJQ) for a live version.

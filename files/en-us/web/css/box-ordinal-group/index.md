@@ -48,15 +48,15 @@ In an older version of the spec, `box-ordinal-group` was included to allow you t
 
 ```css
 article:nth-child(1) {
-  -webkit-box-ordinal-group: 2
-  -moz-box-ordinal-group: 2
-  box-ordinal-group: 2
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  box-ordinal-group: 2;
 }
 
 article:nth-child(2) {
-  -webkit-box-ordinal-group: 1
-  -moz-box-ordinal-group: 1
-  box-ordinal-group: 1
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  box-ordinal-group: 1;
 }
 ```
 
