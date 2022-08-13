@@ -31,7 +31,7 @@ The following example, the value of size properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
 ```js
-function logSizes(perfEntry){
+function logSizes(perfEntry) {
   // Check for support of the PerformanceEntry.*size properties and print their values
   // if supported.
   console.log(`decodedBodySize = ${"decodedBodySize" in perfEntry ? perfEntry.decodedBodySize : "NOT supported"}`);
