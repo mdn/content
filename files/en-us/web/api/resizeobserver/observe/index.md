@@ -61,7 +61,7 @@ The following snippet is taken from the [resize-observer-text.html](https://mdn.
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
+  for (const entry of entries) {
     if (entry.contentBoxSize) {
       // Checking for chrome as using a non-standard array
       if (entry.contentBoxSize[0]) {

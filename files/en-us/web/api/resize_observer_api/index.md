@@ -51,16 +51,25 @@ The code will usually follow this kind of pattern (taken from resize-observer-bo
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
-    if (entry.contentBoxSize) {
-      entry.target.style.borderRadius = `${Math.min(100, entry.contentBoxSize[0].inlineSize / 10 + entry.contentBoxSize[0].blockSize / 10)}px`;
+  const calcBorderRadius = (size1, size2) =>
+    `${Math.min(100, size1 / 10 + size2 / 10)}px`;
+
+  for (const entry of entries) {
+    if (entry.borderBoxSize) {
+      entry.target.style.borderRadius = calcBorderRadius(
+        entry.borderBoxSize[0].inlineSize,
+        entry.borderBoxSize[0].blockSize
+      );
     } else {
-      entry.target.style.borderRadius = `${Math.min(100, entry.contentRect.width / 10 + entry.contentRect.height / 10)}px`;
+      entry.target.style.borderRadius = calcBorderRadius(
+        entry.contentRect.width,
+        entry.contentRect.height
+      );
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## Specifications

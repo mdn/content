@@ -54,7 +54,7 @@ type of input device it supports using.
 ```js
 let sources = xrSession.inputSources;
 
-for (let input of sources.entries()) {
+for (const input of sources.entries()) {
   if (input.gamepad) {
     checkGamepad(input.gamepad);
   } else if (

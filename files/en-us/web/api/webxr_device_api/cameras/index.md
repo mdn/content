@@ -408,13 +408,13 @@ A fairly basic (but typical) callback for rendering frames might look like this:
 
 ```js
 function myAnimationFrameCallback(time, frame) {
-  let adjustedRefSpace = applyPositionOffsets(xrReferenceSpace);
-  let pose = frame.getViewerPose(adjustedRefSpace);
+  const adjustedRefSpace = applyPositionOffsets(xrReferenceSpace);
+  const pose = frame.getViewerPose(adjustedRefSpace);
 
   animationFrameRequestID = frame.session.requestAnimationFrame(myAnimationFrameCallback);
 
   if (pose) {
-    let glLayer = frame.session.renderState.baseLayer;
+    const glLayer = frame.session.renderState.baseLayer;
     gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
     CheckGLError("Binding the framebuffer");
 
@@ -426,8 +426,8 @@ function myAnimationFrameCallback(time, frame) {
     const deltaTime = (time - lastFrameTime) * 0.001;
     lastFrameTime = time;
 
-    for (let view of pose.views) {
-      let viewport = glLayer.getViewport(view);
+    for (const view of pose.views) {
+      const viewport = glLayer.getViewport(view);
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
       CheckGLError(`Setting viewport for eye: ${view.eye}`);
 
