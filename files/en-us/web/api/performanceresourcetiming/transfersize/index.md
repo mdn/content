@@ -34,9 +34,9 @@ The following example, the value of size properties of all "`resource`"
 function logSizes(perfEntry) {
   // Check for support of the PerformanceEntry.*size properties and print their values
   // if supported.
-  console.log(`decodedBodySize = ${"decodedBodySize" in perfEntry ? perfEntry.decodedBodySize : "NOT supported"}`);
-  console.log(`encodedBodySize = ${"encodedBodySize" in perfEntry ? perfEntry.encodedBodySize : "NOT supported"}`);
-  console.log(`transferSize = ${"transferSize" in perfEntry ? perfEntry.transferSize : "NOT supported"}`);
+  console.log(`decodedBodySize = ${perfEntry.decodedBodySize ?? "NOT supported"}`);
+  console.log(`encodedBodySize = ${perfEntry.encodedBodySize ?? "NOT supported"}`);
+  console.log(`transferSize = ${perfEntry.transferSize ?? "NOT supported"}`);
 }
 
 function checkPerformanceEntries() {
