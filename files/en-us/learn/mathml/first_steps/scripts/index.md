@@ -40,17 +40,21 @@ We continue the review of basic math notations and focuses on building MathML el
 
 ## Subscripts and superscripts
 
-Similarly to what we saw in the [previous article](/en-US/docs/Learn/MathML/First_steps/Fractions_and_roots), the `<msub>`, `<msup>` and `<msubsup>` have a special structure expecting exactly two elements (for `<msub>`, `<msup>`)  or three elements (for `<msubsup>`):
+Similarly to what we saw in the [previous article](/en-US/docs/Learn/MathML/First_steps/Fractions_and_roots), the `<msub>`, `<msup>` and `<msubsup>` have a special structure expecting exactly two elements (for `<msub>`, `<msup>`) or three elements (for `<msubsup>`):
 
 ```html
-<p>msub:
+<p>
+  msub:
   <math>
     <msub>
       <mtext>child1</mtext>
       <mtext>child2</mtext>
     </msub>
   </math>
-<p>msup:
+</p>
+
+<p>
+  msup:
   <math>
     <msup>
       <mtext>child1</mtext>
@@ -58,7 +62,8 @@ Similarly to what we saw in the [previous article](/en-US/docs/Learn/MathML/Firs
     </msup>
   </math>
 </p>
-<p>msubsup:
+<p>
+  msubsup:
   <math>
     <msubsup>
       <mtext>child1</mtext>
@@ -69,40 +74,29 @@ Similarly to what we saw in the [previous article](/en-US/docs/Learn/MathML/Firs
 </p>
 ```
 
-Below is the rendering of the above example in your browser. You should notice
-that:
+Below is the rendering of the above example in your browser. You should notice that:
 
-* The second child of the `<msub>` element is attached as a subscript of
-  its first child.
-* The second child of the `<msup>` element is attached as a superscript of
-  its first child.
-* The second and third children of the `<msubsup>` element are respectively
-  attached as a subscript and superscript of its first child.
-* The text inside scripts is scaled down.
+- The second child of the `<msub>` element is attached as a subscript of its first child.
+- The second child of the `<msup>` element is attached as a superscript of its first child.
+- The second and third children of the `<msubsup>` element are respectively attached as a subscript and superscript of its first child.
+- The text inside scripts is scaled down.
 
 {{ EmbedLiveSample('Subtrees_of_msub_msup_msubsup', 700, 200, "", "") }}
 
-> **Note:** The MathML elements `<msub>` and `<msup>` are different from the
-> HTML elements [`<sub>`](/en-US/docs/Web/HTML/Element/sub) and
-> [`<sup>`](/en-US/docs/Web/HTML/Element/sup). They allow to use an arbitrary
-> MathML subtree as scripts, not just text.
+> **Note:** The MathML elements `<msub>` and `<msup>` are different from the HTML elements [`<sub>`](/en-US/docs/Web/HTML/Element/sub) and [`<sup>`](/en-US/docs/Web/HTML/Element/sup). They allow to use an arbitrary MathML subtree as scripts, not just text.
 
 ## Underscripts and overscripts
 
-The `<munder>`, `<mover>` and `<munderover>` elements are very similar except
-that they are used to attach underscripts and overscripts. Instead of giving
-details, we will let you figure out their definitions yourself with the
-following exercise.
+The `<munder>`, `<mover>` and `<munderover>` elements are very similar except that they are used to attach underscripts and overscripts. Instead of giving details, we will let you figure out their definitions yourself with the following exercise.
 
 ### Active learning: Recognize under/over scripts
 
-In the following example,
-try to guess the names of the mystery elements (written as question
-marks) and click the button to reveal the solution:
+In the following example, try to guess the names of the mystery elements (written as question marks) and click the button to reveal the solution:
 
 ```html hidden
-<p><code>&lt;<span>????????</span>&gt;</code> element
-    with exactly two children (child1, child2):
+<p>
+  <code>&lt;<span>????????</span>&gt;</code> element with exactly two children
+  (child1, child2):
   <math>
     <mover>
       <mtext>child1</mtext>
@@ -110,8 +104,9 @@ marks) and click the button to reveal the solution:
     </mover>
   </math>
 </p>
-<p><code>&lt;<span>????????</span>&gt;</code> element
-    with exactly three children (child1, child2 and child3):
+<p>
+  <code>&lt;<span>????????</span>&gt;</code> element with exactly three children
+  (child1, child2 and child3):
   <math>
     <munderover>
       <mtext>child1</mtext>
@@ -120,8 +115,9 @@ marks) and click the button to reveal the solution:
     </munderover>
   </math>
 </p>
-<p><code>&lt;<span>????????</span>&gt;</code> element
-    with exactly two children (child1, child2):
+<p>
+  <code>&lt;<span>????????</span>&gt;</code> element with exactly two children
+  (child1, child2):
   <math>
     <munder>
       <mtext>child1</mtext>
@@ -130,19 +126,19 @@ marks) and click the button to reveal the solution:
   </math>
 </p>
 
-<p><input type="button" id="showSolution" value="Show solution"></p>
+<p><input type="button" id="showSolution" value="Show solution" /></p>
 ```
 
 ```css hidden
 p {
-  padding: .5em;
+  padding: 0.5em;
 }
 ```
 
 ```js hidden
 document.getElementById("showSolution").addEventListener("click", () => {
   const maths = Array.from(document.getElementsByTagName("math"));
-  Array.from(document.getElementsByTagName("span")).forEach( (span, index) => {
+  Array.from(document.getElementsByTagName("span")).forEach((span, index) => {
     span.textContent = maths[index].firstElementChild.tagName;
   });
 });
@@ -152,20 +148,18 @@ document.getElementById("showSolution").addEventListener("click", () => {
 
 ### Active learning: Recognize scripted elements
 
-The following MathML formula contains a more complex expression, nesting
-fractions, roots and scripts. Try to guess the elements laid out with scripted
-elements `<msub>`, `<msup>`, `<msubsup>`, `<munder>`, `<mover>`, `<munderover>`.
-Each time you click such an element, it is highlighted and a confirmation
-message is displayed. Finally, read the MathML source to verify whether that
-corresponds to your expectation.
+The following MathML formula contains a more complex expression, nesting fractions, roots and scripts. Try to guess the elements laid out with scripted elements `<msub>`, `<msup>`, `<msubsup>`, `<munder>`, `<mover>`, `<munderover>`. Each time you click such an element, it is highlighted and a confirmation message is displayed. Finally, read the MathML source to verify whether that corresponds to your expectation.
 
 ```html hidden
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My page with scripted elements</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <math display="block">
@@ -180,7 +174,8 @@ corresponds to your expectation.
       </mroot>
       <mo>+</mo>
       <mfrac>
-        <mrow><mo>|</mo>
+        <mrow
+          ><mo>|</mo>
           <mover>
             <mi>α</mi>
             <mo>→</mo>
@@ -219,7 +214,7 @@ corresponds to your expectation.
         </msqrt>
       </mrow>
     </math>
-    <input type="button" id="clearOutput" value="Reset">
+    <input type="button" id="clearOutput" value="Reset" />
     <div id="output"></div>
   </body>
 </html>
@@ -230,100 +225,73 @@ corresponds to your expectation.
   color: red;
 }
 math {
- font-size: 200%;
+  font-size: 200%;
 }
 ```
 
 ```js hidden
-  const scriptedElements = Array.from(document.querySelectorAll('msub, msup, msubsup, munder, mover, munderover'));
-  const outputDiv = document.getElementById("output");
-  function clearHighlight() {
-    scriptedElements.forEach(scripted => {
-      scripted.classList.remove('highlight');
-    });
-  }
-  scriptedElements.forEach(scripted => {
-      scripted.addEventListener('click', () => {
-        clearHighlight();
-        scripted.classList.add('highlight');
-        outputDiv.insertAdjacentHTML('beforeend',
-          `<p><strong>You clicked an <code>&lt;${scripted.tagName}&gt;</code> element.</strong></p>`);
-      });
+const scriptedElements = Array.from(
+  document.querySelectorAll("msub, msup, msubsup, munder, mover, munderover"),
+);
+const outputDiv = document.getElementById("output");
+function clearHighlight() {
+  scriptedElements.forEach((scripted) => {
+    scripted.classList.remove("highlight");
   });
-  document.getElementById("clearOutput").addEventListener("click", () => {
+}
+scriptedElements.forEach((scripted) => {
+  scripted.addEventListener("click", () => {
     clearHighlight();
-    outputDiv.innerHTML = "";
+    scripted.classList.add("highlight");
+    outputDiv.insertAdjacentHTML(
+      "beforeend",
+      `<p><strong>You clicked an <code>&lt;${scripted.tagName}&gt;</code> element.</strong></p>`,
+    );
   });
+});
+document.getElementById("clearOutput").addEventListener("click", () => {
+  clearHighlight();
+  outputDiv.innerHTML = "";
+});
 ```
 
 {{ EmbedLiveSample('Active_learning_recognize_scripted_elements', 700, 400, "", "") }}
 
 ## More operator properties
 
-We have previously seen some [properties of the `<mo>` element](/en-US/docs/Learn/MathML/First_steps/Text_containers#operator_properties_of_mo)
-namely stretching in the vertical direction and spacing. Now that scripted
-elements are available, we can extend that list. We will do that by tweaking
-our [previous example](#active_learning_recognize_scripted_elements).
+We have previously seen some [properties of the `<mo>` element](/en-US/docs/Learn/MathML/First_steps/Text_containers#operator_properties_of_mo) namely stretching in the vertical direction and spacing. Now that scripted elements are available, we can extend that list. We will do that by tweaking our [previous example](#active_learning_recognize_scripted_elements).
 
 ### Stretching in horizontal direction
 
-Let's first perform the substitutions
-<math>
-  <mi>β</mi>
-  <mo>≔</mo>
-  <mrow>
-    <msub>
-      <mi>z</mi>
-      <mn>1</mn>
-    </msub>
-    <mo>+</mo>
-    <msub>
-      <mi>z</mi>
-      <mn>2</mn>
-    </msub>
-  </mrow>
-</math>
-and
-<math>
-  <mi>α</mi>
-  <mo>≔</mo>
-  <mrow>
-    <msub>
-      <mi>v</mi>
-      <mn>1</mn>
-    </msub>
-    <mo>+</mo>
-    <msub>
-      <mi>v</mi>
-      <mn>2</mn>
-    </msub>
-  </mrow>
-</math>:
+Let's first perform the substitutions <math> <mi>β</mi> <mo>≔</mo> <mrow> <msub> <mi>z</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>z</mi> <mn>2</mn> </msub> </mrow> </math> and <math> <mi>α</mi> <mo>≔</mo> <mrow> <msub> <mi>v</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>v</mi> <mn>2</mn> </msub> </mrow> </math>:
 
 ```html hidden
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My page with horizontal stretchy operators</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <math display="block">
       <mroot>
         <mrow>
           <munder>
-  <mrow>
-    <msub>
-      <mi>z</mi>
-      <mn>1</mn>
-    </msub>
-    <mo>+</mo>
-    <msub>
-      <mi>z</mi>
-      <mn>2</mn>
-    </msub>
-  </mrow>
+            <mrow>
+              <msub>
+                <mi>z</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>z</mi>
+                <mn>2</mn>
+              </msub>
+            </mrow>
             <mo>⎵</mo>
           </munder>
         </mrow>
@@ -331,19 +299,20 @@ and
       </mroot>
       <mo>+</mo>
       <mfrac>
-        <mrow><mo>|</mo>
+        <mrow
+          ><mo>|</mo>
           <mover>
-  <mrow>
-    <msub>
-      <mi>v</mi>
-      <mn>1</mn>
-    </msub>
-    <mo>+</mo>
-    <msub>
-      <mi>v</mi>
-      <mn>2</mn>
-    </msub>
-  </mrow>
+            <mrow>
+              <msub>
+                <mi>v</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>v</mi>
+                <mn>2</mn>
+              </msub>
+            </mrow>
             <mo>→</mo>
           </mover>
           <mo>|</mo>
@@ -389,54 +358,47 @@ and
   color: red;
 }
 math {
- font-size: 200%;
+  font-size: 200%;
 }
 ```
 
 {{ EmbedLiveSample('Stretching_in_horizontal_direction', 700, 200, "", "") }}
 
-We now realize that the bottom bracket "⎵" and the rightward arrow "→"
-stretch horizontally to cover the width of the substitued values. Recall that
-[some vertical operators can stretch](/en-US/docs/Learn/MathML/First_steps/Text_containers#active_learning_stretchy_operators) to cover the height of
-non-stretchy siblings inside an `<mrow>`.
-Similarly some horizontal operators can stretch
-to cover the width of non-stretchy siblings in an `<munder>`, `<mover>` or
-`<munderover>` element.
+We now realize that the bottom bracket "⎵" and the rightward arrow "→" stretch horizontally to cover the width of the substitued values. Recall that [some vertical operators can stretch](/en-US/docs/Learn/MathML/First_steps/Text_containers#active_learning_stretchy_operators) to cover the height of non-stretchy siblings inside an `<mrow>`. Similarly some horizontal operators can stretch to cover the width of non-stretchy siblings in an `<munder>`, `<mover>` or `<munderover>` element.
 
-> **Note:** Stretching can happen for any child of the
-> `<munder>`, `<mover>` or `<munderover>` element, not just the underscript
-> or overscript.
+> **Note:** Stretching can happen for any child of the `<munder>`, `<mover>` or `<munderover>` element, not just the underscript or overscript.
 
 ### Large operator and limits
 
-So far our example has actually been rendered in [*display* mode](/en-US/docs/Learn/MathML/First_steps/Getting_started#inline_and_display_modes). Let's detach the
-`display="block"` attribute from the `<math>` element to show up some
-interesting changes:
+So far our example has actually been rendered in [_display_ mode](/en-US/docs/Learn/MathML/First_steps/Getting_started#inline_and_display_modes). Let's detach the `display="block"` attribute from the `<math>` element to show up some interesting changes:
 
 ```html hidden
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My page with moved limits and small largeop</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <math>
       <mroot>
         <mrow>
           <munder>
-  <mrow>
-    <msub>
-      <mi>z</mi>
-      <mn>1</mn>
-    </msub>
-    <mo>+</mo>
-    <msub>
-      <mi>z</mi>
-      <mn>2</mn>
-    </msub>
-  </mrow>
+            <mrow>
+              <msub>
+                <mi>z</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>z</mi>
+                <mn>2</mn>
+              </msub>
+            </mrow>
             <mo>⎵</mo>
           </munder>
         </mrow>
@@ -444,19 +406,20 @@ interesting changes:
       </mroot>
       <mo>+</mo>
       <mfrac>
-        <mrow><mo>|</mo>
+        <mrow
+          ><mo>|</mo>
           <mover>
-  <mrow>
-    <msub>
-      <mi>v</mi>
-      <mn>1</mn>
-    </msub>
-    <mo>+</mo>
-    <msub>
-      <mi>v</mi>
-      <mn>2</mn>
-    </msub>
-  </mrow>
+            <mrow>
+              <msub>
+                <mi>v</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>v</mi>
+                <mn>2</mn>
+              </msub>
+            </mrow>
             <mo>→</mo>
           </mover>
           <mo>|</mo>
@@ -502,43 +465,30 @@ interesting changes:
   color: red;
 }
 math {
- font-size: 200%;
+  font-size: 200%;
 }
 ```
 
 {{ EmbedLiveSample('Large_operator_and_limits', 700, 200, "", "") }}
 
-As expected, the formula is no longer centered and the rendering is modified to
-minimized the height. Focusing on the summation symbol, one can notice that
-the sigma is drawn smaller and that the scripts of the `<munderover>` element
-are now attached as a subscript and a superscript! This is due to two
-properties of the "∑" operator:
+As expected, the formula is no longer centered and the rendering is modified to minimized the height. Focusing on the summation symbol, one can notice that the sigma is drawn smaller and that the scripts of the `<munderover>` element are now attached as a subscript and a superscript! This is due to two properties of the "∑" operator:
 
-* *largeop*: The operator is drawn with a bigger glyph in *display* mode.
-* *movablelimits*: The underscripts and overscripts attached to the
-  operator are respectively rendered as subscripts and superscripts in
-  *inline* mode.
+- _largeop_: The operator is drawn with a bigger glyph in _display_ mode.
+- _movablelimits_: The underscripts and overscripts attached to the operator are respectively rendered as subscripts and superscripts in _inline_ mode.
 
-> **Note:** The *largeop* property is actually unrelated to scripts, even though
-> operators having this property are typically scripted. The *movablelimits*
-> property is taken into account for `<munder>` and `<mover>` elements too.
+> **Note:** The _largeop_ property is actually unrelated to scripts, even though operators having this property are typically scripted. The _movablelimits_ property is taken into account for `<munder>` and `<mover>` elements too.
 
 ## Summary
 
-In this article, we've finished reviewing basic layout introducing elements
-`<msub>`, `<msup>`, `<msubsup>`, `<munder>`, `<mover>`, `<munderover>` for
-subscripts, superscripts, underscripts and overscripts. Using these elements,
-we were able to briefly introduce new properties of the `<mo>` element.
-In the next article, we
-will continue focus on [tabular layout](/en-US/docs/Learn/MathML/First_steps/Tables).
+In this article, we've finished reviewing basic layout introducing elements `<msub>`, `<msup>`, `<msubsup>`, `<munder>`, `<mover>`, `<munderover>` for subscripts, superscripts, underscripts and overscripts. Using these elements, we were able to briefly introduce new properties of the `<mo>` element. In the next article, we will continue focus on [tabular layout](/en-US/docs/Learn/MathML/First_steps/Tables).
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
 
 ## See also
 
-* [The `<msub>` element](/en-US/docs/Web/MathML/Element/msub)
-* [The `<msup>` element](/en-US/docs/Web/MathML/Element/msup)
-* [The `<msubsup>` element](/en-US/docs/Web/MathML/Element/msubsup)
-* [The `<munder>` element](/en-US/docs/Web/MathML/Element/munder)
-* [The `<mover>` element](/en-US/docs/Web/MathML/Element/mover)
-* [The `<munderover>` element](/en-US/docs/Web/MathML/Element/munderover)
+- [The `<msub>` element](/en-US/docs/Web/MathML/Element/msub)
+- [The `<msup>` element](/en-US/docs/Web/MathML/Element/msup)
+- [The `<msubsup>` element](/en-US/docs/Web/MathML/Element/msubsup)
+- [The `<munder>` element](/en-US/docs/Web/MathML/Element/munder)
+- [The `<mover>` element](/en-US/docs/Web/MathML/Element/mover)
+- [The `<munderover>` element](/en-US/docs/Web/MathML/Element/munderover)

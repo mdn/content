@@ -8,8 +8,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}
 
-Relying on text containers, this article describes how to build more complex
-MathML expressions by nesting fractions and roots.
+Relying on text containers, this article describes how to build more complex MathML expressions by nesting fractions and roots.
 
 <table>
   <tbody>
@@ -40,7 +39,7 @@ MathML expressions by nesting fractions and roots.
   </tbody>
 </table>
 
-## Subtrees of `<mfrac>`, `<msqrt>` and `<mroot>`
+## Subtrees of \<mfrac>, \<msqrt> and \<mroot>
 
 In the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Getting_started) article, we've already met the `<mfrac>` element to describe a fraction. Let's consider a basic example which adds new elements for roots (`<msqrt>` and `<mroot>`):
 
@@ -51,7 +50,7 @@ In the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Gettin
     <mtext>child2</mtext>
   </mfrac>
 </math>
-<br>
+<br />
 <math>
   <msqrt>
     <mtext>child1</mtext>
@@ -60,7 +59,7 @@ In the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Gettin
     <mtext>childN</mtext>
   </msqrt>
 </math>
-<br>
+<br />
 <math>
   <mroot>
     <mtext>child1</mtext>
@@ -70,15 +69,16 @@ In the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Gettin
 ```
 
 Below is a screenshot of how it is rendered by a browser:
-* We already know that the `<mfrac>` element is rendered as a fraction: the first child (the numerator) and is drawn above the second child (the denominator) separated by a horizontal bar.
-* The `<msqrt>` is rendered as a square root: its children are laid out like an [`<mrow>`](/en-US/docs/Learn/MathML/First_steps/Getting_started#grouping_with_the_mrow_element), prefixed by a root symbol √ and completely covered by an overbar.
-* Finally, the `<mroot>` element is rendered as an nth root: the first element is covered by the radical symbol while the second element is used as the degree of the root and rendered as a prefix superscript.
+
+- We already know that the `<mfrac>` element is rendered as a fraction: the first child (the numerator) and is drawn above the second child (the denominator) separated by a horizontal bar.
+- The `<msqrt>` is rendered as a square root: its children are laid out like an [`<mrow>`](/en-US/docs/Learn/MathML/First_steps/Getting_started#grouping_with_the_mrow_element), prefixed by a root symbol √ and completely covered by an overbar.
+- Finally, the `<mroot>` element is rendered as an nth root: the first element is covered by the radical symbol while the second element is used as the degree of the root and rendered as a prefix superscript.
 
 ![Screenshot of mfrac, msqrt, mroot](mfrac-msqrt-mroot.png)
 
 ### Active learning: nesting different elements
 
-Here is a simple exercise to verify whether you understood the relation between a MathML subtree and its visual rendering. The document contains a MathML formula and you must check all subtrees corresponding to a subtree in that MathML formula. Once you are done, you can inspect the source of the MathML formula and verify if it matches your expectation.</p>
+Here is a simple exercise to verify whether you understood the relation between a MathML subtree and its visual rendering. The document contains a MathML formula and you must check all subtrees corresponding to a subtree in that MathML formula. Once you are done, you can inspect the source of the MathML formula and verify if it matches your expectation.
 
 ```html hidden
 <!DOCTYPE html>
@@ -187,40 +187,44 @@ math [id] .highlight {
   background: lightblue;
 }
 p {
-  padding: .5em;
+  padding: 0.5em;
 }
 ```
 
 ```js hidden
-const options = document.getElementById('options');
-const comment = document.getElementById('comment');
+const options = document.getElementById("options");
+const comment = document.getElementById("comment");
 const checkboxes = Array.from(options.getElementsByTagName("input"));
-const status = document.getElementById('status');
+const status = document.getElementById("status");
 function verifyOption(checkbox) {
   let mathml = checkbox.dataset.highlight;
-  if (mathml)
+  if (mathml) {
     mathml = document.getElementById(mathml);
+  }
   if (checkbox.checked) {
     comment.textContent = checkbox.dataset.comment;
-    if (mathml)
-      mathml.classList.add('highlight');
-    else
+    if (mathml) {
+      mathml.classList.add("highlight");
+    } else {
       checkbox.checked = false;
+    }
   } else {
     comment.textContent = "";
-    if (mathml)
-      mathml.classList.remove('highlight');
+    if (mathml) {
+      mathml.classList.remove("highlight");
+    }
   }
-  let finished = true;
-  checkboxes.forEach(checkbox => {
-    if (!!checkbox.checked != !!checkbox.dataset.highlight)
-      finished = false;
-  });
-  status.textContent = finished ? "Congratulations, you checked all the correct answers!" : "";
-
+  const finished = checkboxes.every(
+    (checkbox) => !!checkbox.checked === !!checkbox.dataset.highlight,
+  );
+  status.textContent = finished
+    ? "Congratulations, you checked all the correct answers!"
+    : "";
 }
-checkboxes.forEach(checkbox => {
-  checkbox.addEventListener('change', () => { verifyOption(checkbox); });
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", () => {
+    verifyOption(checkbox);
+  });
 });
 ```
 
@@ -228,17 +232,18 @@ checkboxes.forEach(checkbox => {
 
 ## Stretchy radical symbols
 
-As previously seen, the overbar of the `<msqrt>` and `<mroot>` elements
-stretches horizontally to cover their content. But actually the root symbol √
-also stretches to be as tall as their content.
+As previously seen, the overbar of the `<msqrt>` and `<mroot>` elements stretches horizontally to cover their content. But actually the root symbol √ also stretches to be as tall as their content.
 
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My page with stretchy radical symbols</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <math display="block">
@@ -262,20 +267,18 @@ also stretches to be as tall as their content.
 
 ## Fractions without bar
 
-Some mathematical concepts are sometimes written using fraction-like notations
-such [binomial coefficients](https://en.wikipedia.org/wiki/Combination) or
-[Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol). It is
-appropriate to use an `<mfrac>` element to markup such notations. For
-fraction-like notations that don't draw a horizontal bar, attach a
-<code>linethickness="0"</code> attribute to the `<mfrac>` element:
+Some mathematical concepts are sometimes written using fraction-like notations such [binomial coefficients](https://en.wikipedia.org/wiki/Combination) or [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol). It is appropriate to use an `<mfrac>` element to markup such notations. For fraction-like notations that don't draw a horizontal bar, attach a `linethickness="0"` attribute to the `<mfrac>` element:
 
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My binomial coefficient</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <math display="block">
@@ -305,14 +308,12 @@ fraction-like notations that don't draw a horizontal bar, attach a
 
 ## Summary
 
-In this lesson, we've seen how to build fractions and roots using the
-`<mfrac>`, `<msqrt>` and `<mroot>` elements. We noticed some special feature of
-these elements, namely the fraction and radical symbol. We've seen how to use the `linethickness` attribute to draw fractions without bars. In the next article, we will continue with basic math notations and consider [scripts](/en-US/docs/Learn/MathML/First_steps/Scripts).
+In this lesson, we've seen how to build fractions and roots using the `<mfrac>`, `<msqrt>` and `<mroot>` elements. We noticed some special feature of these elements, namely the fraction and radical symbol. We've seen how to use the `linethickness` attribute to draw fractions without bars. In the next article, we will continue with basic math notations and consider [scripts](/en-US/docs/Learn/MathML/First_steps/Scripts).
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}
 
 ## See also
 
-* [The `<mfrac>` element](/en-US/docs/Web/MathML/Element/mfrac)
-* [The `<msqrt>` element](/en-US/docs/Web/MathML/Element/msqrt)
-* [The `<mroot>` element](/en-US/docs/Web/MathML/Element/mroot)
+- [The `<mfrac>` element](/en-US/docs/Web/MathML/Element/mfrac)
+- [The `<msqrt>` element](/en-US/docs/Web/MathML/Element/msqrt)
+- [The `<mroot>` element](/en-US/docs/Web/MathML/Element/mroot)

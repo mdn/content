@@ -50,9 +50,12 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My page with math characters</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <p style="font-family: Latin Modern Math">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
@@ -64,29 +67,27 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
 
 ## A bit of semantics...
 
-We noticed in the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Getting_started) article that the text in MathML formulas are wrapped in specific container elements such as the `<mn>` or `<mo>`. More generally, every text in MathML formulas must be included inside such container elements, called *token* elements. In addition, MathML provides multiple token elements in order to distinguish different meanings of the text content:
+We noticed in the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Getting_started) article that the text in MathML formulas are wrapped in specific container elements such as the `<mn>` or `<mo>`. More generally, every text in MathML formulas must be included inside such container elements, called _token_ elements. In addition, MathML provides multiple token elements in order to distinguish different meanings of the text content:
 
-* The `<mi>` element, which represents a symbolic name or arbitrary text that should be rendered as an identifier. Examples: `<mi>x</mi>` (variable), `<mi>cos</mi>` (function name) and `<mi>π</mi>` (symbolic constant).
-* The `<mn>` element represents a "numeric literal" or other data that should be rendered as a numeric literal. Examples: `<mn>2</mn>` (integer), `<mn>0.123</mn>` (decimal number) or `<mn>0xFFEF</mn>` (hexadecimal value).
-* The `<mo>` element represents an operator or anything that should be rendered as an operator. For example `<mo>+</mo>` (binary operation), `<mo>≤</mo>` (binary relation), `<mo>∑</mo>` (summation symbol) or `<mo>[</mo>` (fence).
-* The `<mtext>` element is used to represent arbitrary text. For example short words in formulas such as `<mtext>if<mtext>` or `<mtext>maps to</mtext>`.
+- The `<mi>` element, which represents a symbolic name or arbitrary text that should be rendered as an identifier. Examples: `<mi>x</mi>` (variable), `<mi>cos</mi>` (function name) and `<mi>π</mi>` (symbolic constant).
+- The `<mn>` element represents a "numeric literal" or other data that should be rendered as a numeric literal. Examples: `<mn>2</mn>` (integer), `<mn>0.123</mn>` (decimal number) or `<mn>0xFFEF</mn>` (hexadecimal value).
+- The `<mo>` element represents an operator or anything that should be rendered as an operator. For example `<mo>+</mo>` (binary operation), `<mo>≤</mo>` (binary relation), `<mo>∑</mo>` (summation symbol) or `<mo>[</mo>` (fence).
+- The `<mtext>` element is used to represent arbitrary text. For example short words in formulas such as `<mtext>if<mtext>` or `<mtext>maps to</mtext>`.
 
 ### Active learning: recognize token elements
 
-Below is a more complex example, which says that the absolute value of a real
-number is equal to that number if and only if it is nonnegative. Spot the
-different token elements and what they are used for.
-Each time you click the corresponding text, it is highlighted and a confirmation
-message is displayed. Finally, read the MathML source to verify whether that
-corresponds to your expectation.
+Below is a more complex example, which says that the absolute value of a real number is equal to that number if and only if it is nonnegative. Spot the different token elements and what they are used for. Each time you click the corresponding text, it is highlighted and a confirmation message is displayed. Finally, read the MathML source to verify whether that corresponds to your expectation.
 
 ```html hidden
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My page with math characters</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <math display="block">
@@ -106,63 +107,54 @@ corresponds to your expectation.
         <mn>0</mn>
       </mrow>
     </math>
-    <input type="button" id="clearOutput" value="Reset">
+    <input type="button" id="clearOutput" value="Reset" />
     <div id="output"></div>
   </body>
 </html>
 ```
-
 
 ```css hidden
 .highlight {
   color: red;
 }
 math {
- font-size: 200%;
+  font-size: 200%;
 }
 ```
 
-
 ```js hidden
-  const tokenElements = Array.from(document.querySelectorAll('mi, mo, mn, mtext'));
-  const outputDiv = document.getElementById("output");
-  function clearHighlight() {
-    tokenElements.forEach(token => {
-      token.classList.remove('highlight');
-    });
-  }
-  tokenElements.forEach(token => {
-      token.addEventListener('click', () => {
-        clearHighlight();
-        token.classList.add('highlight');
-        outputDiv.insertAdjacentHTML('beforeend',
-          `<p><strong>You clicked an <code>&lt;${token.tagName}&gt;</code> element.</strong></p>`);
-      });
+const tokenElements = Array.from(
+  document.querySelectorAll("mi, mo, mn, mtext"),
+);
+const outputDiv = document.getElementById("output");
+function clearHighlight() {
+  tokenElements.forEach((token) => {
+    token.classList.remove("highlight");
   });
-  document.getElementById("clearOutput").addEventListener("click", () => {
+}
+tokenElements.forEach((token) => {
+  token.addEventListener("click", () => {
     clearHighlight();
-    outputDiv.innerHTML = "";
+    token.classList.add("highlight");
+    outputDiv.insertAdjacentHTML(
+      "beforeend",
+      `<p><strong>You clicked an <code>&lt;${token.tagName}&gt;</code> element.</strong></p>`,
+    );
   });
+});
+document.getElementById("clearOutput").addEventListener("click", () => {
+  clearHighlight();
+  outputDiv.innerHTML = "";
+});
 ```
 
 {{ EmbedLiveSample('Active_learning_recognize_token_elements', 700, 400, "", "") }}
 
+> **Note:** It is sometimes difficult to decide the token element to use for a given text content. In practice, choosing the wrong element should not cause major issues because all token elements are generally rendered the same by browser implementations (for visual display and for assistive technologies). However, the `<mi>` and `<mo>` elements have special distinguishing features that one should be aware of. They are explained in the following sections.
 
-> **Note:** It is sometimes difficult to decide the token element to use for
-> a given text content. In practice, choosing the wrong element should not cause
-> major issues because all token elements are generally
-> rendered the same by browser implementations (for visual display and for
-> assistive technologies). However, the `<mi>` and `<mo>` elements have special
-> distinguishing features that one should be aware of. They are explained
-> in the following sections.
+## Automatic italicization of \<mi>
 
-## Automatic italicization of `<mi>`
-
-One typographic convention in mathematics is to use italic letters for variables.
-In order to help with that, `<mi>` elements with a single character may be
-automatically rendered as italic. This is the case for all the letters from the
-latin and greek alphabets. Compare the rendering of the two `<mi>`
-elements in the following formula:
+One typographic convention in mathematics is to use italic letters for variables. In order to help with that, `<mi>` elements with a single character may be automatically rendered as italic. This is the case for all the letters from the latin and greek alphabets. Compare the rendering of the two `<mi>` elements in the following formula:
 
 ```html
 <math>
@@ -171,12 +163,9 @@ elements in the following formula:
 </math>
 ```
 
-> **Note:** [This table from MathML Core](https://w3c.github.io/mathml-core/#italic-mappings)
-> provide the exhaustive list of characters that are subject to italicization,
-> together with the corresponding italic characters.
+> **Note:** [This table from MathML Core](https://w3c.github.io/mathml-core/#italic-mappings) provide the exhaustive list of characters that are subject to italicization, together with the corresponding italic characters.
 
-It is sometimes needed to revert this default italic transformation. For that purpose, just attach a `mathvariant="normal"` attribute on the `<mi>` element.
-Compare the rendering of the uppercase gamma letters in the following formula:
+It is sometimes needed to revert this default italic transformation. For that purpose, just attach a `mathvariant="normal"` attribute on the `<mi>` element. Compare the rendering of the uppercase gamma letters in the following formula:
 
 ```html
 <math>
@@ -187,7 +176,7 @@ Compare the rendering of the uppercase gamma letters in the following formula:
 
 > **Note:** Although the [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant) provides other values to perform such transformations, it is recommended to just pick the desired [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols) when possible.
 
-## Operator properties of `<mo>`
+## Operator properties of \<mo>
 
 MathML contains an [operator dictionary](https://w3c.github.io/mathml-core/#operator-dictionary-human) that defines default properties of `<mo>` elements depending on their content and the position within its container (prefix, infix or postfix). Let's consider a concrete example:
 
@@ -232,19 +221,18 @@ Operators have many other properties that we will see in more details later. For
 
 ### Active learning: spot the difference
 
-Now that you are a bit familiar with special features of `<mi>` and `<mo>`,
-let's rewrite the `<p>` element in the
-[example at the top of the page](#unicode_characters_for_mathematics) with some
-actual MathML. Compare the visual rendering in your browser and explain
-the differences with the text-only version.
+Now that you are a bit familiar with special features of `<mi>` and `<mo>`, let's rewrite the `<p>` element in the [example at the top of the page](#unicode_characters_for_mathematics) with some actual MathML. Compare the visual rendering in your browser and explain the differences with the text-only version.
 
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My page with math characters</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <p style="font-family: Latin Modern Math">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
@@ -276,28 +264,32 @@ the differences with the text-only version.
         </mrow>
       </math>
     </p>
-    <input id="showSolution" type="button" value="Show solution"/>
+    <input id="showSolution" type="button" value="Show solution" />
     <div id="solution"></div>
-</body>
+  </body>
 </html>
 ```
 
 ```css hidden
 div {
-  padding: .5em;
+  padding: 0.5em;
 }
 ```
 
 ```js hidden
-document.getElementById('showSolution').addEventListener('click', () => {
-  document.getElementById('solution').insertAdjacentHTML(
-    "beforeEnd",
-    `<ul>
+document.getElementById("showSolution").addEventListener(
+  "click",
+  () => {
+    document.getElementById("solution").insertAdjacentHTML(
+      "beforeEnd",
+      `<ul>
       <li><strong>The <code>&lt;mi&gt;</code> elements containing the "A" and "n" variables are rendered in italic</strong>. However, the <code>&lt;mi&gt;</code> elements with multiple characters "𝔰𝔩" or whose character is "𝔽" are still rendered upright.</li>
       <li><strong>Spacing is automatically added around the <code>&lt;mo&gt;</code> elements whose text is "∀", "∊", "=" or a comma</strong>. However, some of them have no spacing added before while the parentheses still have no spacing around them.</li>
-    </ul>`
-  );
-}, {once: true});
+    </ul>`,
+    );
+  },
+  { once: true },
+);
 ```
 
 {{ EmbedLiveSample('active_learning_spot_the_difference', 700, 500, "", "") }}
@@ -306,26 +298,23 @@ document.getElementById('showSolution').addEventListener('click', () => {
 
 ### Active learning: stretchy operators
 
-The operator dictionary defines a default *stretchy* property as well as
-corresponding *stretch axis* for some operators. For example, an operator
-can stretch vertically by default to cover the maximum height of non-stretchy
-siblings within its `<mrow>` container. By tweaking a bit the
-[previous exercise](#active_learning_recognize_token_elements), one can
-make operators stretch vertically. Can you find them? As usual, you are invited
-to read the source code when you are done.
+The operator dictionary defines a default _stretchy_ property as well as corresponding _stretch axis_ for some operators. For example, an operator can stretch vertically by default to cover the maximum height of non-stretchy siblings within its `<mrow>` container. By tweaking a bit the [previous exercise](#active_learning_recognize_token_elements), one can make operators stretch vertically. Can you find them? As usual, you are invited to read the source code when you are done.
 
 ```html hidden
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My page with stretchy operators</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <math display="block">
       <mrow>
-         <mrow>
+        <mrow>
           <mo>|</mo>
           <mfrac>
             <mn>1</mn>
@@ -355,52 +344,55 @@ to read the source code when you are done.
         <mn>0</mn>
       </mrow>
     </math>
-    <input type="button" id="clearOutput" value="Reset">
+    <input type="button" id="clearOutput" value="Reset" />
     <div id="output"></div>
   </body>
 </html>
 ```
-
 
 ```css hidden
 .highlight {
   color: red;
 }
 math {
- font-size: 200%;
+  font-size: 200%;
 }
 ```
 
-
 ```js hidden
-  const tokenElements = Array.from(document.querySelectorAll('mi, mo, mn, mtext'));
-  const stretchyMoElements = Array.from(document.getElementsByTagName("mo")).slice(0, 2);
-  const outputDiv = document.getElementById("output");
-  function clearHighlight() {
-    tokenElements.forEach(token => {
-      token.classList.remove('highlight');
-    });
-  }
-  tokenElements.forEach(token => {
-      token.addEventListener('click', () => {
-        clearHighlight();
-        token.classList.add('highlight');
-        let message = "";
-        let tagName = `<code>&lt;${token.tagName}&gt;</code>`;
-        if (token.tagName !== "mo")
-          message = `No, this is an ${tagName} element!`;
-        else if (!stretchyMoElements.includes(token))
-          message = `No, this is an ${tagName} element, but it's not vertically stretched.`;
-        else
-          message = `Correct, this ${tagName} element is indeed stretched to the height of its <code>&lt;mfrac&gt;</code> sibling.`
-        outputDiv.insertAdjacentHTML('beforeend',
-          `<p><strong>${message}</strong></p>`);
-      });
+const tokenElements = Array.from(
+  document.querySelectorAll("mi, mo, mn, mtext"),
+);
+const stretchyMoElements = Array.from(
+  document.getElementsByTagName("mo"),
+).slice(0, 2);
+const outputDiv = document.getElementById("output");
+function clearHighlight() {
+  tokenElements.forEach((token) => {
+    token.classList.remove("highlight");
   });
-  document.getElementById("clearOutput").addEventListener("click", () => {
+}
+tokenElements.forEach((token) => {
+  token.addEventListener("click", () => {
     clearHighlight();
-    outputDiv.innerHTML = "";
+    token.classList.add("highlight");
+    let message = "";
+    let tagName = `<code>&lt;${token.tagName}&gt;</code>`;
+    if (token.tagName !== "mo") message = `No, this is an ${tagName} element!`;
+    else if (!stretchyMoElements.includes(token))
+      message = `No, this is an ${tagName} element, but it's not vertically stretched.`;
+    else
+      message = `Correct, this ${tagName} element is indeed stretched to the height of its <code>&lt;mfrac&gt;</code> sibling.`;
+    outputDiv.insertAdjacentHTML(
+      "beforeend",
+      `<p><strong>${message}</strong></p>`,
+    );
   });
+});
+document.getElementById("clearOutput").addEventListener("click", () => {
+  clearHighlight();
+  outputDiv.innerHTML = "";
+});
 ```
 
 {{ EmbedLiveSample('Active_learning_stretchy_fences', 700, 400, "", "") }}
@@ -409,13 +401,13 @@ math {
 
 ## Summary
 
-In this article, we have learnt about a few *token* elements that are used as text containers as well as their different semantics, namely `<mi>` (identifier), `<mn>` (numbers), `<mo>` (operators), `<mtext>` (generic text). We have seen special Unicode characters that are commonly found in math formulas and given an overview of some observable behaviors of the `<mi>` and `<mo>` elements. In the next article, we will see how to rely on *token* elements to build much complex expressions such as [fractions and roots](/en-US/docs/Learn/MathML/First_steps/Fractions_and_roots).
+In this article, we have learnt about a few _token_ elements that are used as text containers as well as their different semantics, namely `<mi>` (identifier), `<mn>` (numbers), `<mo>` (operators), `<mtext>` (generic text). We have seen special Unicode characters that are commonly found in math formulas and given an overview of some observable behaviors of the `<mi>` and `<mo>` elements. In the next article, we will see how to rely on _token_ elements to build much complex expressions such as [fractions and roots](/en-US/docs/Learn/MathML/First_steps/Fractions_and_roots).
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
 
 ## See also
 
-* [The `<mi>` element](/en-US/docs/Web/MathML/Element/mi)
-* [The `<mn>` element](/en-US/docs/Web/MathML/Element/mn)
-* [The `<mo>` element](/en-US/docs/Web/MathML/Element/mo)
-* [The `<mtext>` element](/en-US/docs/Web/MathML/Element/mtext)
+- [The `<mi>` element](/en-US/docs/Web/MathML/Element/mi)
+- [The `<mn>` element](/en-US/docs/Web/MathML/Element/mn)
+- [The `<mo>` element](/en-US/docs/Web/MathML/Element/mo)
+- [The `<mtext>` element](/en-US/docs/Web/MathML/Element/mtext)

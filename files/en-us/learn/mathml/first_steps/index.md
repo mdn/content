@@ -15,8 +15,7 @@ MathML is the markup language used to write mathematical formulas in Web pages. 
 >
 > #### Looking to become a front-end web developer?
 >
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
+> We have put together a course that includes all the essential information you need to work towards your goal.
 >
 > [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 

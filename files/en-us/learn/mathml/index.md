@@ -19,8 +19,7 @@ Mathematical Markup Language — or {{glossary("MathML")}} — is the markup lan
 >
 > #### Looking to become a front-end web developer?
 >
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
+> We have put together a course that includes all the essential information you need to work towards your goal.
 >
 > [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 

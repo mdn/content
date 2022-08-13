@@ -43,23 +43,20 @@ Once all basic math notations are known, it remains to consider tabular layout w
 
 ## MathML tabular elements
 
-The MathML tabular elements are similar to the ones for [HTML tables](/en-US/docs/Learn/HTML/Tables): the `<mtable>` element represents a table, the
-`<mtr>` element represents a row and the `<mtd>` element represents a cell.
-An `<mtable>` table can be inserted anywhere in a MathML formula. The `<mtd>`
-cell can contain any number of MathML children and will lay them out
-as an `<mrow>` container.
+The MathML tabular elements are similar to the ones for [HTML tables](/en-US/docs/Learn/HTML/Tables): the `<mtable>` element represents a table, the `<mtr>` element represents a row and the `<mtd>` element represents a cell. An `<mtable>` table can be inserted anywhere in a MathML formula. The `<mtd>` cell can contain any number of MathML children and will lay them out as an `<mrow>` container.
 
-Tables are typically used for matrix-like expressions (including vectors).
-Here is a basic example taken from the [article about the CSS
-`matrix()` function](/en-US/docs/Web/CSS/transform-function/matrix):
+Tables are typically used for matrix-like expressions (including vectors). Here is a basic example taken from the [article about the CSS `matrix()` function](/en-US/docs/Web/CSS/transform-function/matrix):
 
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My first matrix</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <math display="block">
@@ -140,19 +137,18 @@ Here is a basic example taken from the [article about the CSS
 
 ## Allowing cells to span multiple rows and columns
 
-This is again similar to [HTML's article](/en-US/docs/Learn/HTML/Tables/Basics#allowing_cells_to_span_multiple_rows_and_columns). The `<mtd>` element accepts
-the `columnspan` and `rowspan` attributes to indicate that the cell spans
-multiples rows and columns. Below the inner matrix spans two columns of
-the outer matrix:
-
+This is again similar to [HTML's article](/en-US/docs/Learn/HTML/Tables/Basics#allowing_cells_to_span_multiple_rows_and_columns). The `<mtd>` element accepts the `columnspan` and `rowspan` attributes to indicate that the cell spans multiples rows and columns. Below the inner matrix spans two columns of the outer matrix:
 
 ```html hidden
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My matrix with columnspan</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <math display="block">
@@ -229,25 +225,22 @@ the outer matrix:
 
 {{ EmbedLiveSample('allowing_cells_to_span_multiple_rows_and_columns', 700, 200, "", "") }}
 
-> **Note:** For historical reason, the MathML attribute for column spaning is
-> called `columnspan` not `colspan`.
+> **Note:** For historical reason, the MathML attribute for column spaning is called `columnspan` not `colspan`.
 
 ## Usage for advanced layout
 
-Besides representing matrix-like objects, MathML tables are sometimes used for
-advanced layout inside mathematical formulas,
-for example in [Wikipedia's definition of
-Legendre symbol](https://en.wikipedia.org/wiki/Legendre_symbol). Here, the
-different cases are written on three different rows while the values and
-conditions are placed on two different columns.
+Besides representing matrix-like objects, MathML tables are sometimes used for advanced layout inside mathematical formulas, for example in [Wikipedia's definition of Legendre symbol](https://en.wikipedia.org/wiki/Legendre_symbol). Here, the different cases are written on three different rows while the values and conditions are placed on two different columns.
 
 ```html hidden
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My first matrix</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+    />
   </head>
   <body>
     <math display="block">
@@ -315,21 +308,11 @@ conditions are placed on two different columns.
 
 {{ EmbedLiveSample('Usage_for_advanced_layout', 700, 200, "", "") }}
 
-> **Warning:** The [`<mtable>` article](/en-US/docs/Web/MathML/Element/mtable)
-> provides more advanced layout options via special attributes such as
-> alignment or spacing. This is inherited from the original design of MathML,
-> that was supposed to work in
-> engines that are not CSS-aware. However, these attributes may not be
-> implemented in all browsers. In the future, it is likely that usages of
-> `<mtable>` for layout-only purpose (i.e. not actual matrix-like objects)
-> can be replaced with CSS-based alternatives.
+> **Warning:** The [`<mtable>` article](/en-US/docs/Web/MathML/Element/mtable) provides more advanced layout options via special attributes such as alignment or spacing. This is inherited from the original design of MathML, that was supposed to work in engines that are not CSS-aware. However, these attributes may not be implemented in all browsers. In the future, it is likely that usages of `<mtable>` for layout-only purpose (i.e. not actual matrix-like objects) can be replaced with CSS-based alternatives.
 
 ## Summary
 
-In this article, we've reviewed the
-`<mtable>`, `<mtr>` and `<mtd>` elements which are the equivalent of HTML
-elements for tables. We have seen how to use them for representing matrix-like
-objects and how it is sometimes used for advanced layout.
+In this article, we've reviewed the `<mtable>`, `<mtr>` and `<mtd>` elements which are the equivalent of HTML elements for tables. We have seen how to use them for representing matrix-like objects and how it is sometimes used for advanced layout.
 
 You've nearly finished this module — we only have one more thing to do. In the [three famous mathematical formulas assessment](/en-US/docs/Learn/MathML/First_steps/Three_famous_mathematical_formulas) you'll use your new knowledge to rewrite a small mathematical article using HTML and MathML.
 
@@ -337,7 +320,7 @@ You've nearly finished this module — we only have one more thing to do. In the
 
 ## See also
 
-* [Learning about HTML tables](/en-US/docs/Learn/HTML/Tables)
-* [The `<mtable>` element](/en-US/docs/Web/MathML/Element/mtable)
-* [The `<mtr>` element](/en-US/docs/Web/MathML/Element/mtr)
-* [The `<mtd>` element](/en-US/docs/Web/MathML/Element/mtd)
+- [Learning about HTML tables](/en-US/docs/Learn/HTML/Tables)
+- [The `<mtable>` element](/en-US/docs/Web/MathML/Element/mtable)
+- [The `<mtr>` element](/en-US/docs/Web/MathML/Element/mtr)
+- [The `<mtd>` element](/en-US/docs/Web/MathML/Element/mtd)
