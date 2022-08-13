@@ -38,7 +38,7 @@ You can download the HTML, CSS, and a set of six images [here](https://github.co
 
 Save the HTML document and stylesheet into a directory on your computer, and add the images into a folder named `images`. Opening the `index.html` file in a browser should give you a page with basic styling but no layout, which should look something like the image below.
 
-![](layout-task-start.png)
+![Screenshot of the website provided as the starting point of the layout task. The elements are not laid out neatly.](layout-task-start.png)
 
 This starting point has all of the content of your layout as displayed by the browser in normal flow.
 
@@ -75,7 +75,7 @@ There are a few ways in which you could achieve some of these tasks, and there o
 
 The following screenshot shows an example of what the finished layout for the design should look like:
 
-![](layout-task-complete.png)
+![Screenshot of the finished layout task website. The elements are laid out neatly.](layout-task-complete.png)
 
 ## Assessment or further help
 
