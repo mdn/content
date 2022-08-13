@@ -54,15 +54,15 @@ Event handlers are registered for the following pointer events: {{domxref("HTMLE
 function init() {
  // Install event handlers for the pointer target
  const el = document.getElementById("target");
- el.onpointerdown = pointerdown_handler;
- el.onpointermove = pointermove_handler;
+ el.onpointerdown = pointerdownHandler;
+ el.onpointermove = pointermoveHandler;
 
  // Use same handler for pointer{up,cancel,out,leave} events since
  // the semantics for these events - in this app - are the same.
- el.onpointerup = pointerup_handler;
- el.onpointercancel = pointerup_handler;
- el.onpointerout = pointerup_handler;
- el.onpointerleave = pointerup_handler;
+ el.onpointerup = pointerupHandler;
+ el.onpointercancel = pointerupHandler;
+ el.onpointerout = pointerupHandler;
+ el.onpointerleave = pointerupHandler;
 }
 ```
 
@@ -71,7 +71,7 @@ function init() {
 The {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired when a pointer (mouse, pen/stylus or touch point on a touchscreen) makes contact with the _contact surface_. In this application, the event's state must be cached in case this down event is part of a two-pointer pinch/zoom gesture.
 
 ```js
-function pointerdown_handler(ev) {
+function pointerdownHandler(ev) {
  // The pointerdown event signals the start of a touch interaction.
  // This event is cached to support 2-finger gestures
  evCache.push(ev);
@@ -86,7 +86,7 @@ The {{domxref("HTMLElement/pointermove_event", "pointermove")}} event handler de
 When this event is processed, the target's border is set to `dashed` to provide a clear visual indication the element has received a move event.
 
 ```js
-function pointermove_handler(ev) {
+function pointermoveHandler(ev) {
  // This function implements a 2-pointer horizontal pinch/zoom gesture.
  //
  // If the distance between the two pointers has increased (zoom in),
@@ -133,7 +133,7 @@ The {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is fired when 
 In this application, this handler is also used for {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} and {{domxref("HTMLElement/pointerout_event", "pointerout")}} events.
 
 ```js
-function pointerup_handler(ev) {
+function pointerupHandler(ev) {
   log(ev.type, ev);
   // Remove this pointer from the cache and reset the target's
   // background and border
@@ -176,7 +176,7 @@ These functions support the application but aren't directly involved in the even
 This function helps manage the global event caches `evCache`.
 
 ```js
-function remove_event(ev) {
+function removeEvent(ev) {
  // Remove this event from the target's cache
  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
  evCache.splice(index, 1);
