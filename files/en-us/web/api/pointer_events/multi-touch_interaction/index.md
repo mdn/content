@@ -63,18 +63,18 @@ const evCache3 = [];
 Event handlers are registered for the following pointer events: {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}} and {{domxref("HTMLElement/pointerup_event", "pointerup")}}. The handler for {{domxref("HTMLElement/pointerup_event", "pointerup")}} is used for the {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}} and {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} events, since these four events have the same semantics in this application.
 
 ```js
-function set_handlers(name) {
+function setHandlers(name) {
  // Install event handlers for the given element
  const el = document.getElementById(name);
- el.onpointerdown = pointerdown_handler;
- el.onpointermove = pointermove_handler;
+ el.onpointerdown = pointerdownHandler;
+ el.onpointermove = pointermoveHandler;
 
  // Use same handler for pointer{up,cancel,out,leave} events since
  // the semantics for these events - in this app - are the same.
- el.onpointerup = pointerup_handler;
+ el.onpointerup = pointerupHandler;
  el.onpointercancel = pointerup_handler;
- el.onpointerout = pointerup_handler;
- el.onpointerleave = pointerup_handler;
+ el.onpointerout = pointerupHandler;
+ el.onpointerleave = pointerupHandler;
 }
 
 function init() {
@@ -91,13 +91,13 @@ The {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired w
 In this application, when a pointer is placed down on an element, the background color of the element changes, depending on the number of active touch points the element has. See the [`update_background`](#update_background_color) function for more details about the color changes.
 
 ```js
-function pointerdown_handler(ev) {
+function pointerdownHandler(ev) {
  // The pointerdown event signals the start of a touch interaction.
  // Save this event for later processing (this could be part of a
  // multi-touch interaction) and update the background color
- push_event(ev);
+ pushEvent(ev);
  if (logEvents) log(`pointerDown: name = ${ev.target.id}`, ev);
- update_background(ev);
+ updateBackground(ev);
 }
 ```
 
@@ -108,14 +108,14 @@ The {{domxref("HTMLElement/pointermove_event", "pointermove")}} handler is calle
 In this application, a pointer move is represented by the target's border being set to `dashed` to provide a clear visual indication that the element has received this event.
 
 ```js
-function pointermove_handler(ev) {
+function pointermoveHandler(ev) {
  // Note: if the user makes more than one "simultaneous" touch, most browsers
  // fire at least one pointermove event and some will fire several pointermoves.
  //
  // This function sets the target element's border to "dashed" to visually
  // indicate the target received a move event.
  if (logEvents) log("pointerMove", ev);
- update_background(ev);
+ updateBackground(ev);
  ev.target.style.border = "dashed";
 }
 ```
@@ -127,12 +127,12 @@ The {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is fired when 
 In this application, this handler is also used for {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} and {{domxref("HTMLElement/pointerout_event", "pointerout")}} events.
 
 ```js
-function pointerup_handler(ev) {
+function pointerupHandler(ev) {
   if (logEvents) log(ev.type, ev);
   // Remove this touch point from the cache and reset the target's
   // background and border
-  remove_event(ev);
-  update_background(ev);
+  removeEvent(ev);
+  updateBackground(ev);
   ev.target.style.border = "1px solid black";
 }
 ```
@@ -166,31 +166,27 @@ These functions support the application but aren't directly involved with the ev
 These functions manage the global event caches `evCache1`, `evCache2` and `evCache3`.
 
 ```js
-function get_cache(ev) {
- // Return the cache for this event's target element
- switch(ev.target.id) {
-   case "target1": return evCache1;
-   case "target2": return evCache2;
-   case "target3": return evCache3;
-   default: log("Error with cache handling",ev);
- }
+function getCache(ev) {
+  // Return the cache for this event's target element
+  switch(ev.target.id) {
+    case "target1": return evCache1;
+    case "target2": return evCache2;
+    case "target3": return evCache3;
+    default: log("Error with cache handling",ev);
+  }
 }
 
-function push_event(ev) {
- // Save this event in the target's cache
- const cache = get_cache(ev);
- cache.push(ev);
+function pushEvent(ev) {
+  // Save this event in the target's cache
+  const evCache = getCache(ev);
+  evCache.push(ev);
 }
 
-function remove_event(ev) {
- // Remove this event from the target's cache
- const cache = get_cache(ev);
- for (const i in cache) {
-   if (cache[i].pointerId === ev.pointerId) {
-     cache.splice(i, 1);
-     break;
-   }
- }
+function removeEvent(ev) {
+  // Remove this event from the target's cache
+  const evCache = getCache(ev);
+  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  evCache.splice(index, 1);
 }
 ```
 
@@ -199,15 +195,15 @@ function remove_event(ev) {
 The background color of the touch areas will change as follows: no active touches is `white`; one active touch is `yellow`; two simultaneous touches is `ping` and three or more simultaneous touches is `lightblue`.
 
 ```js
-function update_background(ev) {
- // Change background color based on the number of simultaneous touches/pointers
- // currently down:
- //   white - target element has no touch points i.e. no pointers down
- //   yellow - one pointer down
- //   pink - two pointers down
- //   lightblue - three or more pointers down
- const evCache = get_cache(ev);
- switch (evCache.length) {
+function updateBackground(ev) {
+  // Change background color based on the number of simultaneous touches/pointers
+  // currently down:
+  //   white - target element has no touch points i.e. no pointers down
+  //   yellow - one pointer down
+  //   pink - two pointers down
+  //   lightblue - three or more pointers down
+  const evCache = getCache(ev);
+  switch (evCache.length) {
    case 0:
      // Target element has no touch points
      ev.target.style.background = "white";
@@ -223,7 +219,7 @@ function update_background(ev) {
    default:
      // Three or more simultaneous touches
      ev.target.style.background = "lightblue";
- }
+  }
 }
 ```
 
