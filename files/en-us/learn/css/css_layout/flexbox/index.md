@@ -231,7 +231,7 @@ button:first-child {
 }
 ```
 
-![](flexbox_first-child_flex-end.png)
+![Image shows the layout of flex items(child elements) in flex container after applying align-self property with value "flex-end" to first child element](flexbox_first-child_flex-end.png)
 
 Have a look at what effect this has and remove it again when you've finished.
 
@@ -278,7 +278,7 @@ button:last-child {
 
 It's possible to create some pretty complex layouts with flexbox. It's perfectly OK to set a flex item to also be a flex container, so that its children are also laid out like flexible boxes. Have a look at [complex-flexbox.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/complex-flexbox.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
 
-![](flexbox-example7.png)
+![Image shows a complex flexbox layout with nested flex items and flex containers](flexbox-example7.png)
 
 The HTML for this is fairly simple. We've got a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. The third {{htmlelement("article")}} contains three {{htmlelement("div")}}s, and the first {{htmlelement("div")}} contains five {{htmlelement("button")}}s :
 
