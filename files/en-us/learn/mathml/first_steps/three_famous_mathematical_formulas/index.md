@@ -125,7 +125,7 @@ To get this assessment started, you can rely on our usual HTML template. By defa
 
 ## Hints and tips
 
-- Start by distinguishing the _inline_ and _display_ formulas and set the `display` attribute accordingly.
+- Start by inserting empty `<math>` tags, deciding whether they should have a `display="block"` attribute or not.
 - Check the text used and find their [Unicode characters](https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode) ("−", "ℂ", "∑", ...).
 - Analyze the semantics of each portion of text (variable? operator? number?) and determine the proper token element to use for each of them.
 - Look for advanced constructions (fractions? roots? scripts? matrices?) and determine the proper MathML element to use for each of them.

@@ -70,9 +70,9 @@ The `<mfrac>` element specifies a fraction with a numerator (its first child) an
 
 > **Warning:** If you just see "1 3" instead of a fraction, then your browser may not support MathML. Check out the [browser compatibility table](/en-US/docs/Web/MathML/Element/math#browser_compatibility) for further details.
 
-### Inline and display modes
+### The display attribute
 
-Note that in the previous example, the formula is on the same line as the text of the paragraph, this is called _inline_ mode. However, it is quite common for large mathematical formulas to use _display_ mode: they are instead centered on their own line as shown below. To achieve that, one only need to attach a `display="block"` attribute on the `<math>` element.
+Note that in the previous example, the formula is on the same line as the text of the paragraph. However, it is quite common to instead render large mathematical formulas centered on their own line as shown below. To achieve that, one only need to attach a `display="block"` attribute on the `<math>` element.
 
 ```html hidden
 <!DOCTYPE html>
@@ -95,11 +95,13 @@ Note that in the previous example, the formula is on the same line as the text o
 </html>
 ```
 
-{{ EmbedLiveSample('Inline_and_display_modes', 700, 100, "", "") }}
+{{ EmbedLiveSample('The_display_attribute', 700, 100, "", "") }}
 
-You may also notice some subtle change in the appearance: the text and vertical spacing of the fraction becomes a bit bigger. In _inline_ mode, the height is minimized to avoid disturbing the flow of the surrounding text. In _display_ mode, priority is instead put on legibility of the mathematical formula.
+You may also notice some subtle change in the appearance: the text and vertical spacing of the fraction becomes a bit bigger. Without the `display="block"` attribute, the height is minimized to avoid disturbing the flow of the surrounding text. With the `display="block"` attribute, priority is instead put on legibility of the mathematical formula.
 
 > **Note:** This corresponds to the LaTeX's concept of _inline_ formulas (delimited by dollar signs `$...$`) and _display_ formulas (delimited by `\[...\]`).
+
+> **Note:** The appearance change mentioned above is actually controlled by the  [`math-style`](/en-US/docs/Web/CSS/math-style) property which is initally `normal` for `<math display="block">` and `compact` otherwise. In some MathML subtrees, this property can then automatically become `compact` but we will ignore this subtility for this introductory tutorial. Again, this is similar to LaTeX.
 
 ## Grouping with the \<mrow> element
 
@@ -193,9 +195,7 @@ As an exercise, figure out how to write the following expressions using only the
 
 ## Summary
 
-In this article, we have taken a look at how to use the `<math>` element to insert a mathematical formula inside a HTML document. We have learned about the difference between _inline_ and _display_ formulas and how to specify them via the `display` attribute of the `<math>` element.
-
-In addition, we stumbled upon a couple of other MathML elements: `<mfrac>` for fractions, `<mrow>` for grouping and finally a few text elements. We will analyze these [text containers](/en-US/docs/Learn/MathML/First_steps/Text_containers) further in the next article.
+In this article, we have taken a look at how to use the `<math>` element to insert a mathematical formula inside a HTML document. We have learned about rendering differences between `<math>` elements that use `display="block"` or not. In addition, we stumbled upon a couple of other MathML elements: `<mfrac>` for fractions, `<mrow>` for grouping and finally a few text elements. We will analyze these [text containers](/en-US/docs/Learn/MathML/First_steps/Text_containers) further in the next article.
 
 {{LearnSidebar}}{{NextMenu("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps")}}
 
@@ -205,4 +205,5 @@ In addition, we stumbled upon a couple of other MathML elements: `<mfrac>` for f
 - [The `<math>` element](/en-US/docs/Web/MathML/Element/math)
 - [The `<mfrac>` element](/en-US/docs/Web/MathML/Element/mfrac)
 - [The `<mrow>` element](/en-US/docs/Web/MathML/Element/mrow)
+- [The `math-style` property](/en-US/docs/Web/CSS/math-style)
 - [The `math-depth` property](/en-US/docs/Web/CSS/math-depth)

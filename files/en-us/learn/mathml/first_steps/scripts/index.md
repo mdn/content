@@ -370,7 +370,7 @@ We now realize that the bottom bracket "⎵" and the rightward arrow "→" stret
 
 ### Large operator and limits
 
-So far our example has actually been rendered in [_display_ mode](/en-US/docs/Learn/MathML/First_steps/Getting_started#inline_and_display_modes). Let's detach the `display="block"` attribute from the `<math>` element to show up some interesting changes:
+So far our example has actually been rendered with the [`display="block"`](/en-US/docs/Learn/MathML/First_steps/Getting_started#the_display_attribute) attribute. Let's detach it from the `<math>` element to show up some interesting changes:
 
 ```html hidden
 <!DOCTYPE html>
@@ -473,8 +473,8 @@ math {
 
 As expected, the formula is no longer centered and the rendering is modified to minimized the height. Focusing on the summation symbol, one can notice that the sigma is drawn smaller and that the scripts of the `<munderover>` element are now attached as a subscript and a superscript! This is due to two properties of the "∑" operator:
 
-- _largeop_: The operator is drawn with a bigger glyph in _display_ mode.
-- _movablelimits_: The underscripts and overscripts attached to the operator are respectively rendered as subscripts and superscripts in _inline_ mode.
+- _largeop_: The operator is drawn with a bigger glyph if the `<math>` tag has a `display="block"` attribute.
+- _movablelimits_: The underscripts and overscripts attached to the operator are respectively rendered as subscripts and superscripts if the `<math>` tag does not have the `display="block"` attribute.
 
 > **Note:** The _largeop_ property is actually unrelated to scripts, even though operators having this property are typically scripted. The _movablelimits_ property is taken into account for `<munder>` and `<mover>` elements too.
 
