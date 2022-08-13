@@ -70,8 +70,9 @@ function onError(error) {
 
 function detectLanguages(tabs) {
   for (const tab of tabs) {
-    const onFulfilled = onLanguageDetected.bind(null, tab.url);
-    browser.tabs.detectLanguage(tab.id).then(onFulfilled, onError);
+    browser.tabs
+      .detectLanguage(tab.id)
+      .then((lang) => onLanguageDetected(tab.url, lang), onError);
   }
 }
 
