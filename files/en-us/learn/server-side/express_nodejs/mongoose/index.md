@@ -147,7 +147,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 You can get the default `Connection` object with `mongoose.connection`. Once connected, the open event is fired on the `Connection` instance.
 
-> **Note:** If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options etc.) as `connect()` and returns a `Connection` object).
+> **Note:** If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options, etc.) as `connect()` and returns a `Connection` object).
 
 ### Defining and creating models
 
@@ -747,7 +747,7 @@ Everything else should be familiar from our previous schema.
 
 ### Genre model - challenge!
 
-Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc).
+Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc.).
 
 The definition will be very similar to the other models:
 

@@ -33,7 +33,7 @@ Our final Ember article provides you with a list of resources that you can use t
         </p>
         <p>
           A deeper understanding of modern JavaScript features (such as classes,
-          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          modules, etc.), will be extremely beneficial, as Ember makes heavy use
           of them.
         </p>
       </td>

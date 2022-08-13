@@ -528,7 +528,7 @@ function myStore() {
 }
 ```
 
-If our to-do list app gets too complex, we could let our to-dos store handle every state modification. We could move all the methods that modify the `todo` array (like `addTodo()`, `removeTodo()`, etc) from our `Todos` component to the store. If you have a central place where all the state modification is applied, components could just call those methods to modify the app's state and reactively display the info exposed by the store. Having a unique place to handle state modifications makes it easier to reason about the state flow and spot issues.
+If our to-do list app gets too complex, we could let our to-dos store handle every state modification. We could move all the methods that modify the `todo` array (like `addTodo()`, `removeTodo()`, etc.) from our `Todos` component to the store. If you have a central place where all the state modification is applied, components could just call those methods to modify the app's state and reactively display the info exposed by the store. Having a unique place to handle state modifications makes it easier to reason about the state flow and spot issues.
 
 Svelte won't force you to organize your state management in a specific way; it just provides the tools for you to choose how to handle it.
 
