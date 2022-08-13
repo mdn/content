@@ -404,8 +404,7 @@ Let's take a look at how the zoom in is implemented.
     ```js
       else if (e.target.id === "tabs-add-zoom") {
         callOnActiveTab((tab) => {
-          const gettingZoom = browser.tabs.getZoom(tab.id);
-          gettingZoom.then((zoomFactor) => {
+          browser.tabs.getZoom(tab.id).then((zoomFactor) => {
             //the maximum zoomFactor is 5, it can't go higher
             if (zoomFactor >= MAX_ZOOM) {
               alert("Tab zoom factor is already at max!");
@@ -489,8 +488,7 @@ Let's walk through how it's set up.
     When first loaded, the extension uses {{WebExtAPIRef("tabs.query()")}} to get a list of all the tabs in the current browser window. It then loops through the tabs calling `initializePageAction()`.
 
     ```js
-    const gettingAllTabs = browser.tabs.query({});
-    gettingAllTabs.then((tabs) => {
+    browser.tabs.query({}).then((tabs) => {
       for (const tab of tabs) {
         initializePageAction(tab);
       }
@@ -551,9 +549,7 @@ Let's walk through how it's set up.
         }
       }
 
-      const gettingTitle = browser.pageAction.getTitle({ tabId: tab.id });
-
-      gettingTitle.then(gotTitle);
+      browser.pageAction.getTitle({ tabId: tab.id }).then(gotTitle);
     }
     ```
 
