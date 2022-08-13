@@ -49,7 +49,8 @@ function printStartAndEndProperties(perfEntry) {
                 "redirectStart", "redirectEnd",
                 "requestStart",
                 "responseStart", "responseEnd",
-                "secureConnectionStart"];
+                "secureConnectionStart",
+                "workerStart"];
   for (const property of properties) {
     // Check each property
     const value = perfEntry[property];
