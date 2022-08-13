@@ -5499,7 +5499,7 @@
 /en-US/docs/MDN/Contribute/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /en-US/docs/MDN/Contribute/Style_guide	/en-US/docs/MDN/Writing_guidelines
-/en-US/docs/MDN/Contribute/Style_guide/Compatibility_tables	/en-US/docs/MDN/MDN/Writing_guidelines/Page_structures/Compatibility_tables
+/en-US/docs/MDN/Contribute/Style_guide/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /en-US/docs/MDN/Contribute/Style_guide/Content_blocks	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Style_guide/Custom_macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /en-US/docs/MDN/Contribute/Style_guide/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
