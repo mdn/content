@@ -140,26 +140,25 @@ The HTML file looks like this:
 
 ```html
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <link rel="stylesheet" href="choose_beast.css" />
   </head>
 
-<body>
-  <div id="popup-content">
-    <div class="button beast">Frog</div>
-    <div class="button beast">Turtle</div>
-    <div class="button beast">Snake</div>
-    <div class="button reset">Reset</div>
-  </div>
-  <div id="error-content" class="hidden">
-    <p>Can't beastify this web page.</p><p>Try a different page.</p>
-  </div>
-  <script src="choose_beast.js"></script>
-</body>
-
+  <body>
+    <div id="popup-content">
+      <div class="button beast">Frog</div>
+      <div class="button beast">Turtle</div>
+      <div class="button beast">Snake</div>
+      <div class="button reset">Reset</div>
+    </div>
+    <div id="error-content" class="hidden">
+      <p>Can't beastify this web page.</p>
+      <p>Try a different page.</p>
+    </div>
+    <script src="choose_beast.js"></script>
+  </body>
 </html>
 ```
 
@@ -172,7 +171,8 @@ Note that we include the CSS and JS files from this file, just like a web page.
 The CSS fixes the size of the popup, ensures that the three choices fill the space, and gives them some basic styling. It also hides elements with `class="hidden"`: this means that our `"error-content"` `<div>` will be hidden by default.
 
 ```css
-html, body {
+html,
+body {
   width: 100px;
 }
 
@@ -224,7 +224,6 @@ const hidePage = `body > :not(.beastify-image) {
  */
 function listenForClicks() {
   document.addEventListener("click", (e) => {
-
     /**
      * Given the name of a beast, get the URL to the corresponding image.
      */
@@ -245,7 +244,7 @@ function listenForClicks() {
      * send a "beastify" message to the content script in the active tab.
      */
     function beastify(tabs) {
-      browser.tabs.insertCSS({code: hidePage}).then(() => {
+      browser.tabs.insertCSS({ code: hidePage }).then(() => {
         let url = beastNameToURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "beastify",
@@ -259,7 +258,7 @@ function listenForClicks() {
      * send a "reset" message to the content script in the active tab.
      */
     function reset(tabs) {
-      browser.tabs.removeCSS({code: hidePage}).then(() => {
+      browser.tabs.removeCSS({ code: hidePage }).then(() => {
         browser.tabs.sendMessage(tabs[0].id, {
           command: "reset",
         });
