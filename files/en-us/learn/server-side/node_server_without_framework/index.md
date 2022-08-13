@@ -19,6 +19,7 @@ A simple static file server built with Node.js:
 
 <details>
 <summary>CJS implementation</summary>
+
 ```js
 'use strict';
 
@@ -68,10 +69,12 @@ http.createServer(async (req, res) => {
 
 console.log(`Server running at http://127.0.0.1:${PORT}/`);
 ```
+
 </details>
 
 <details open>
 <summary>ESM implementation</summary>
+
 ```js
 import * as fs from 'node:fs';
 import * as http from 'node:http';
@@ -119,8 +122,8 @@ http.createServer(async (req, res) => {
 
 console.log(`Server running at http://127.0.0.1:${PORT}/`);
 ```
-</details>
 
+</details>
 
 ### Breakdown
 
@@ -128,6 +131,7 @@ The following lines load internal Node.js modules.
 
 <details>
 <summary>CJS implementation</summary>
+
 ```js
 'use strict';
 
@@ -135,15 +139,18 @@ const fs = require('node:fs');
 const http = require('node:http');
 const path = require('node:path');
 ```
+
 </details>
 
 <details open>
 <summary>ESM implementation</summary>
+
 ```js
 import * as fs from 'node:fs';
 import * as http from 'node:http';
 import * as path from 'node:path';
 ```
+
 </details>
 
 Next we have a function for creating the server. `https.createServer` returns a `Server` object, which we can start up by listening on `PORT`.
