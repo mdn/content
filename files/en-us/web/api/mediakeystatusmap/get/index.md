@@ -11,7 +11,7 @@ tags:
   - get()
 browser-compat: api.MediaKeyStatusMap.get
 ---
-{{APIRef("MediaKeyStatusMap")}}
+{{APIRef("EncryptedMediaExtensions API")}}
 
 The **`get`** property of the
 {{domxref("MediaKeyStatusMap")}} interface returns the value associated with the given
