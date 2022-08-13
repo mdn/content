@@ -46,8 +46,7 @@ function printPerformanceEntries() {
 
 function printInitiatorType(perfEntry) {
   // Print this performance entry object's initiatorType value
-  const value = "initiatorType" in perfEntry;
-  console.log(`… initiatorType = ${value ? perfEntry.initiatorType : "NOT supported"}`);
+  console.log(`… initiatorType = ${perfEntry.initiatorType ?? "NOT supported"}`);
 }
 ```
 
