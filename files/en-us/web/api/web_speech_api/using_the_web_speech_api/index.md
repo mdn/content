@@ -258,7 +258,7 @@ function populateVoiceList() {
     const option = document.createElement('option');
     option.textContent = `${voice.name} (${voice.lang})`;
 
-    if (voices[i].default) {
+    if (voice.default) {
       option.textContent += ' — DEFAULT';
     }
 
