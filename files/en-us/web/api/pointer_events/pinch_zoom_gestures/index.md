@@ -99,12 +99,8 @@ function pointermove_handler(ev) {
  ev.target.style.border = "dashed";
 
  // Find this event in the cache and update its record with this event
- evCache.forEach((event, i, evCache) => {
-   if (ev.pointerId === evCache[i].pointerId) {
-     evCache[i] = ev;
-     break;
-   }
- }
+ const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+ evCache[index] = ev;
 
  // If two pointers are down, check for pinch gestures
  if (evCache.length === 2) {
