@@ -15,7 +15,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 
 ## Active locales
 
-> **Note:** If you want to contribute to one of the existing active locales get in touch with one of the active members listed below, or [contact us for help](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+> **Note:** If you want to contribute to one of the existing active locales get in touch with one of the active members listed below, or [contact us for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
 ### Brazilian Portuguese (pt-BR)
 
