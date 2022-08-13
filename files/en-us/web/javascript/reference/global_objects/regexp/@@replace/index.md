@@ -38,7 +38,7 @@ A new string, with one, some, or all matches of the pattern replaced by the spec
 
 ## Description
 
-This method is called internally in {{jsxref("String.prototype.replace()")}} if the `pattern` argument is a {{jsxref("RegExp")}} object. For example, the following two examples return the same result.
+This method is called internally in {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} if the `pattern` argument is a {{jsxref("RegExp")}} object. For example, the following two examples return the same result.
 
 ```js
 'abc'.replace(/a/, 'A');
@@ -123,6 +123,7 @@ console.log(newstr); // ###34567
 
 - [Polyfill of `RegExp.prototype[@@replace]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replace()")}}
+- {{jsxref("String.prototype.replaceAll()")}}
 - {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
 - {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
 - {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
