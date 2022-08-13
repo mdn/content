@@ -128,7 +128,7 @@ To read the payload data, you must know when to stop reading. That's why the pay
 2. Read the next 16 bits and interpret those as an unsigned integer. You're **done**.
 3. Read the next 64 bits and interpret those as an unsigned integer. (The most significant bit _must_ be 0.) You're **done**.
 
-### Reading and unmasking the Data
+### Reading and unmasking the data
 
 If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data `ENCODED`, and the key `MASK`. To get `DECODED`, loop through the octets (bytes a.k.a. characters for text data) of `encoded` and XOR the octet with the (i modulo 4)th octet of `MASK`. In pseudo-code (that happens to be valid JavaScript):
 
