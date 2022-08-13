@@ -45,11 +45,11 @@ capture, `false` if it doesn't.
       // Element 'target' will receive/capture further events
       el.setPointerCapture(ev.pointerId);
 
-      /* ... */
+      // …
 
       // Check whether element still has pointer capture
       let pointerCap = el.hasPointerCapture(ev.pointerId);
-      if(pointerCap) {
+      if (pointerCap) {
         // We've still got pointer capture
       } else {
         // oops, we've lost pointer capture!

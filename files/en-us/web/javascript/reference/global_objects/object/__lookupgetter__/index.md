@@ -54,11 +54,11 @@ const obj = {
 
 // Non-standard and deprecated way
 obj.__lookupGetter__('foo');
-// (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
+// [Function: get foo]
 
 // Standard-compliant way
 Object.getOwnPropertyDescriptor(obj, "foo").get;
-// (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
+// [Function: get foo]
 ```
 
 ## Specifications

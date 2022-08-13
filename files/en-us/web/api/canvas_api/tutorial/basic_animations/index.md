@@ -157,7 +157,7 @@ function clock() {
   ctx.save();
   ctx.lineWidth = 5;
   for (i = 0; i < 60; i++) {
-    if (i % 5!= 0) {
+    if (i % 5 !== 0) {
       ctx.beginPath();
       ctx.moveTo(117, 0);
       ctx.lineTo(120, 0);
@@ -175,7 +175,7 @@ function clock() {
 
   // write Hours
   ctx.save();
-  ctx.rotate(hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) *sec);
+  ctx.rotate((Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec);
   ctx.lineWidth = 14;
   ctx.beginPath();
   ctx.moveTo(-20, 0);
@@ -269,7 +269,7 @@ let clearX;
 let clearY;
 let ctx;
 
-img.onload = function() {
+img.onload = () => {
     imgW = img.width * scale;
     imgH = img.height * scale;
 
@@ -302,30 +302,28 @@ function draw() {
 
     // if image is <= Canvas Size
     if (imgW <= CanvasXSize) {
-        // reset, start from beginning
-        if (x > CanvasXSize) {
-            x = -imgW + x;
-        }
-        // draw additional image1
-        if (x > 0) {
-            ctx.drawImage(img, -imgW + x, y, imgW, imgH);
-        }
-        // draw additional image2
-        if (x - imgW > 0) {
-            ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
-        }
-    }
-
-    // image is > Canvas Size
-    else {
-        // reset, start from beginning
-        if (x > (CanvasXSize)) {
-            x = CanvasXSize - imgW;
-        }
-        // draw additional image
-        if (x > (CanvasXSize-imgW)) {
-            ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
-        }
+      // reset, start from beginning
+      if (x > CanvasXSize) {
+        x = -imgW + x;
+      }
+      // draw additional image1
+      if (x > 0) {
+        ctx.drawImage(img, -imgW + x, y, imgW, imgH);
+      }
+      // draw additional image2
+      if (x - imgW > 0) {
+        ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+      }
+    } else {
+      // image is > Canvas Size
+      // reset, start from beginning
+      if (x > (CanvasXSize)) {
+        x = CanvasXSize - imgW;
+      }
+      // draw additional image
+      if (x > (CanvasXSize-imgW)) {
+        ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+      }
     }
     // draw image
     ctx.drawImage(img, x, y,imgW, imgH);
@@ -464,8 +462,6 @@ function anim() {
 
 ## Other examples
 
-- [A basic ray-caster](/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : A good example of how to do animations using keyboard controls.
 - [Advanced animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : We will have a look at some advanced animation techniques and physics in the next chapter.
 

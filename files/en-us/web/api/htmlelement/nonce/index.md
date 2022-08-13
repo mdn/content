@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Content Security Policy
-  - Experimental
   - HTML DOM
   - HTMLElement
   - Property
@@ -31,7 +30,7 @@ let nonce = script['nonce'] || script.getAttribute('nonce');
 
 However, recent browsers version hide `nonce` values that are accessed this way (an empty string will be returned). The IDL property (`script['nonce']`) will be the only way to access nonces.
 
-Nonce hiding helps preventing that attackers exfiltrate nonce data via mechanisms that can grab data from content attributes like this:
+Nonce hiding helps prevent attackers from exfiltrating nonce data via mechanisms that can grab data from content attributes like this:
 
 ```css example-bad
 script[nonce~=whatever] {

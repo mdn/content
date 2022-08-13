@@ -52,10 +52,10 @@ A {{jsxref("Promise")}} that resolves to a list of {{domxref("Notification")}} o
 ```js
 navigator.serviceWorker.register('sw.js');
 
-var options = { tag : 'user_alerts' };
+const options = { tag : 'user_alerts' };
 
-navigator.serviceWorker.ready.then(function(registration) {
-  registration.getNotifications(options).then(function(notifications) {
+navigator.serviceWorker.ready.then((registration) => {
+  registration.getNotifications(options).then((notifications) => {
     // do something with your notifications
   })
 });

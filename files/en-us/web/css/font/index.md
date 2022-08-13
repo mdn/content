@@ -273,51 +273,42 @@ body, input {
 ```
 
 ```js hidden
-var textAreas = document.getElementsByClassName("curCss"),
-    shortText = "",
-    getCheckedValue,
-    setCss,
-    getProperties,
-    injectCss;
+const textAreas = document.getElementsByClassName("curCss");
 
-getProperties = function () {
-  shortText =
-      getCheckedValue("font_style") + " " +
-      getCheckedValue("font_variant") + " " +
-      getCheckedValue("font_weight") + " " +
-      getCheckedValue("font_size") +
-      getCheckedValue("line_height") + " " +
-      getCheckedValue("font_family");
-
-  return shortText;
+function getProperties() {
+  return `${getCheckedValue("font_style")} `
+    + `${getCheckedValue("font_variant")} `
+    + `${getCheckedValue("font_weight")} `
+    + `${getCheckedValue("font_size")}`
+    + `${getCheckedValue("line_height")} `
+    + `${getCheckedValue("font_family")}`;
 }
 
-getCheckedValue = function(radio_name) {
-  oRadio = document.forms[0].elements[radio_name];
-  for (var i = 0; i < oRadio.length; i++) {
-    if(oRadio[i].checked) {
-      var propInput = "input_" + radio_name,
-          curElemName = "input_" + radio_name,
-          curElem = document.getElementById(curElemName);
-      curElem.value = oRadio[i].value;
+function getCheckedValue(radioName) {
+  const radios = document.forms[0].elements[radioName];
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      const curElemName = `input_${radioName}`;
+      const curElem = document.getElementById(curElemName);
+      curElem.value = radios[i].value;
 
-      return oRadio[i].value;
+      return radios[i].value;
     }
   }
 }
 
-setCss = function () {
+function setCss() {
   getProperties();
   injectCss(shortText);
 }
 
-injectCss = function(cssFragment) {
-  old = document.body.getElementsByTagName("style");
+function injectCss(cssFragment) {
+  const old = document.body.getElementsByTagName("style");
   if (old.length > 1) {
     old[1].parentElement.removeChild(old[1]);
   }
   css = document.createElement("style");
-  css.innerHTML = ".fontShortHand{font: " + cssFragment + "}";
+  css.textContent = `.fontShortHand{font: ${cssFragment}}`;
   document.body.appendChild(css);
 }
 

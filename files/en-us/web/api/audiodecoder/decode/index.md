@@ -8,9 +8,10 @@ tags:
   - Reference
   - decode
   - AudioDecoder
+  - Experimental
 browser-compat: api.AudioDecoder.decode
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`decode()`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to decode a given chunk of audio.
 
@@ -27,7 +28,7 @@ decode(chunk)
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

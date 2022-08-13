@@ -38,13 +38,13 @@ A boolean value
 
 ```js
 function ismetaKey(e) {
-  document.querySelector("#output").textContent = "metaKey pressed? " + e.metaKey;
+  document.querySelector("#output").textContent = `metaKey pressed? ${e.metaKey}`;
 }
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Example', 400, 90) }}
+{{ EmbedLiveSample('Examples', 400, 90) }}
 
 ## Specifications
 

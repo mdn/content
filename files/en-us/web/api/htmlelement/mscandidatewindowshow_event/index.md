@@ -25,9 +25,9 @@ Web applications need only register for this event once per element (the handler
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mscandidatewindowshow', event => { })
+addEventListener('mscandidatewindowshow', (event) => { })
 
-onmscandidatewindowshow = event => { }
+onmscandidatewindowshow = (event) => { }
 ```
 
 ## Event type
@@ -39,12 +39,12 @@ A generic {{DOMxRef("Event")}} with no added properties.
 in IE11, developers can detect the opening of the IME candidate window by listening to `MSCandidateWindowShow` event, then call `getCandidateWindowClientRect()` function to find out where the candidate window is and position the suggestion UI away from it:
 
 ```js
-var context = document.getElementById("mySearchBox").msGetInputContext();
+const context = document.getElementById("mySearchBox").msGetInputContext();
 context.addEventListener("MSCandidateWindowShow", candidateWindowShowHandler);
 
 function candidateWindowShowHandler(e) {
-   var imeRect = context.getCandidateWindowClientRect();
-   var suggestionRect = document.getElementById("mySuggestionList").getBoundingClientRect();
+   const imeRect = context.getCandidateWindowClientRect();
+   const suggestionRect = document.getElementById("mySuggestionList").getBoundingClientRect();
    // Check if the two rects intersect, and position them away from each other.
 }
 ```

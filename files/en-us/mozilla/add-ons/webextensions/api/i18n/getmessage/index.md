@@ -37,7 +37,7 @@ browser.i18n.getMessage(
     - Firefox returns "" and logs an error.
     - Chrome returns "" and does not log an error.
 
-- `substitutions`{{optional_inline}}
+- `substitutions` {{optional_inline}}
 
   - : `string` or `array` of `string`. A single substitution string, or an array of substitution strings.
 

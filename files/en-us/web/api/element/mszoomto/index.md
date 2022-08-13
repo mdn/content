@@ -15,7 +15,7 @@ tags:
 
 The **`msZoomTo`** method scrolls and/or zooms an element to its specified coordinate with animation.
 
-Zoomed elements can expose their zoom level through {{Event("msContentZoom")}} (ie. scrollTop/Left). The zoom level can be reset with `msZoomTo`.
+Zoomed elements can expose their zoom level through {{domxref("Element/msContentZoom_event", "msContentZoom")}} (ie. scrollTop/Left). The zoom level can be reset with `msZoomTo`.
 
 This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
@@ -60,7 +60,7 @@ msZoomTo(arguments)
           - : Aligns the specified y-coordinate of the viewport to the element's contentY value.
 
     - `scaleFactor`
-      - : Floating-point. The scale factor (msContentZoomFactor) to zoom to. If no value is specified, defaults to the current zoom level (no additional zoom occurs).This argument is ignored if the element is not zoomable.
+      - : Floating-point. The scale factor (msContentZoomFactor) to zoom to. If no value is specified, defaults to the current zoom level (no additional zoom occurs). This argument is ignored if the element is not zoomable.
 
     - `animate`
       - : The type of animation to use.
@@ -79,10 +79,10 @@ This method does not return a value.
 
 ```js
 /* Zooming in on an element while still keeping it centered in the viewport */
-var args = {
-    contentX: target.offsetLeft + target.offsetWidth/2;
-    contentY: target.offsetTop + target.offsetHeight/2;
-    scaleFactor: 2.0;
+const args = {
+    contentX: target.offsetLeft + target.offsetWidth/2,
+    contentY: target.offsetTop + target.offsetHeight/2,
+    scaleFactor: 2.0,
 }
 zoomer.msZoomTo(args);
 ```

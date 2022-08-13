@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - MediaSource
@@ -15,7 +14,7 @@ tags:
   - duration
 browser-compat: api.MediaSource.duration
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`duration`** property of the {{domxref("MediaSource")}}
 interface gets and sets the duration of the current media being presented.
@@ -40,25 +39,26 @@ The following exceptions may be thrown when setting a new value for this propert
 
 ## Examples
 
-The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)  The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
-function sourceOpen (_) {
-  //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+const mediaSource = getMediaSource();
+
+function sourceOpen() {
+  console.log(this.readyState); // open
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  fetchAB(assetURL, (buf) => {
+    sourceBuffer.addEventListener('updateend', () => {
       mediaSource.endOfStream();
       mediaSource.duration = 120;
       video.play();
-      //console.log(mediaSource.readyState); // ended
+      console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
 };
 
-...
+// …
 ```
 
 ## Specifications

@@ -34,8 +34,8 @@ A {{domxref("Blob")}}.
 ## Examples
 
 ```js
-self.addEventListener('push', function(event) {
-  var blob = event.data.blob();
+self.addEventListener('push', (event) => {
+  const blob = event.data.blob();
 
   // do something with your Blob
 });

@@ -10,9 +10,9 @@ tags:
   - Keyboard Map
   - Overview
   - Reference
-spec-urls:
-  - https://wicg.github.io/keyboard-map/
-  - https://wicg.github.io/keyboard-lock/
+browser-compat:
+  - api.Keyboard
+  - api.KeyboardLayoutMap
 ---
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
@@ -32,11 +32,11 @@ The following example demonstrates how to get the location-specific or layout-sp
 
 ```js
 if (navigator.keyboard) {
-  var keyboard = navigator.keyboard;
+  const keyboard = navigator.keyboard;
   keyboard.getLayoutMap()
-  .then(keyboardLayoutMap => {
-    var upKey = keyboardLayoutMap.get('KeyW');
-    window.alert('Press ' + upKey + ' to move up.');
+  .then((keyboardLayoutMap) => {
+    const upKey = keyboardLayoutMap.get('KeyW');
+    window.alert(`Press ${upKey} to move up.`);
   });
 } else {
   // Do something else.
@@ -78,10 +78,4 @@ The codes passed {{domxref('Keyboard.lock')}} and the various methods of the {{d
 
 ## Browser compatibility
 
-### Keyboard API
-
-{{Compat("api.Keyboard")}}
-
-### Keyboard lock API
-
-{{Compat("api.KeyboardLayoutMap")}}
+{{Compat}}

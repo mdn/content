@@ -25,8 +25,8 @@ A string.
 
 ```js
 // Let's <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/Location.username"> be in the document
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.username; // Returns:'anonymous'
+const anchor = document.getElementByID("myAnchor");
+const result = anchor.username; // Returns:'anonymous'
 ```
 
 ## Browser compatibility

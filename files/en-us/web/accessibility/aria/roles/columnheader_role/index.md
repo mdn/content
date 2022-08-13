@@ -64,7 +64,7 @@ JavaScript is only required if the `aria-sort` attribute is used.
     </tr>
   </thead>
   <tbody>
-    ...
+    …
   </tbody>
 </table>
 ```

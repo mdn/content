@@ -37,9 +37,9 @@ This extension implicitly enables the {{domxref("WEBGL_color_buffer_float")}} ex
 ## Examples
 
 ```js
-var ext = gl.getExtension('OES_texture_float');
+const ext = gl.getExtension('OES_texture_float');
 
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.FLOAT, image);

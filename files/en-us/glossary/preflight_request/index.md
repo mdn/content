@@ -33,7 +33,7 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
 Access-Control-Max-Age: 86400
 ```
 
-The preflight response can be optionally cached for the requests created in the same {{Glossary("URL")}} using {{HTTPHeader("Access-Control-Max-Age")}} header like in the above example.
+The preflight response can be optionally cached for the requests created in the same {{Glossary("URL")}} using {{HTTPHeader("Access-Control-Max-Age")}} header like in the above example. To cache preflight responses, the browser uses a specific cache that is separate from the general HTTP cache that the browser manages. Preflight responses are never cached in the browser's general HTTP cache.
 
 ## See also
 

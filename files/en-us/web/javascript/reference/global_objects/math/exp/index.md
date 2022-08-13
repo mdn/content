@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Math.exp
 {{JSRef}}
 
 The **`Math.exp()`** function returns
-`e^x`, where `x` is the argument, and `e` is
+e<sup>x</sup>, where x is the argument, and e is
 {{jsxref("Math.E", "Euler's number (also known as Napier's constant)", "", 1)}}, the
 base of the natural logarithms.
 
@@ -30,8 +30,8 @@ Math.exp(x)
 
 ### Return value
 
-A number representing `e^x`, where `e` is
-{{jsxref("Math.E", "Euler's number", "", 1)}} and `x` is the
+A number representing e<sup>x</sup>, where e is
+{{jsxref("Math.E", "Euler's number", "", 1)}} and x is the
 argument.
 
 ## Description

@@ -65,7 +65,7 @@ const observerOptions = {
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
 
-/* ...later, when it's time to stop observing... */
+/* later, when it's time to stop observing… */
 
 /* handle any still-pending mutations */
 

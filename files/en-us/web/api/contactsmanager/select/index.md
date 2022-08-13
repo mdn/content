@@ -9,9 +9,10 @@ tags:
   - Method
   - PWA
   - contact picker
+  - Experimental
 browser-compat: api.ContactsManager.select
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+{{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`select()`** method of the
 {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which, when

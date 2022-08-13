@@ -82,17 +82,17 @@ corresponding primary key of the referenced record into an HTML table.
 ```js
 function displayDataByIndex() {
   tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
+  const transaction = db.transaction(['contactsList'], 'readonly');
+  const objectStore = transaction.objectStore('contactsList');
 
-  var myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index('lName');
 
-  myIndex.openKeyCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
-    if(cursor) {
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.key + '</td>'
-                           + '<td>' + cursor.primaryKey + '</td>';
+  myIndex.openKeyCursor().onsuccess = (event) => {
+    const cursor = event.target.result;
+    if (cursor) {
+      const tableRow = document.createElement('tr');
+      tableRow.innerHTML = `<td>${cursor.key}</td>`
+                         + `<td>${cursor.primaryKey}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();

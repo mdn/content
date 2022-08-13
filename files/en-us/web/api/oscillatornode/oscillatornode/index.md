@@ -48,7 +48,7 @@ new OscillatorNode(context, options)
       - : A detuning value (in cents) which will offset
         the `frequency` by the given amount. Its default is 0.
     - `frequency`
-      - : The frequency (in {{interwiki("wikipedia", "hertz")}}) of the periodic
+      - : The frequency (in [hertz](https://en.wikipedia.org/wiki/Hertz)) of the periodic
         waveform. Its default is 440.
     - `periodicWave`
       - : An arbitrary period waveform described by a {{domxref("PeriodicWave")}}

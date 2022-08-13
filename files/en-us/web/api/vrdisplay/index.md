@@ -25,7 +25,7 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
 
 ## Properties
 
-- {{domxref("VRDisplay.capabilities")}} {{readonlyInline}}{{deprecated_inline}}
+- {{domxref("VRDisplay.capabilities")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a {{domxref("VRDisplayCapabilities")}} object that indicates the various capabilities of the `VRDisplay`.
 - {{domxref("VRDisplay.depthFar")}} {{deprecated_inline}}
   - : Gets and sets the z-depth defining the far plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e. the furthest viewable boundary of the scene.
@@ -70,12 +70,12 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
 ## Examples
 
 ```js
-if(navigator.getVRDisplays) {
+if (navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene
-    if(displays.length > 0) {
+    if (displays.length > 0) {
       vrDisplay = displays[0];
       // Now we have our VRDisplay object and can do what we want with it
     }

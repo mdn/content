@@ -56,7 +56,7 @@ function success(pos) {
 }
 
 function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
+  console.error(`ERROR(${err.code}): ${err.message}`);
 }
 
 target = {

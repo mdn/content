@@ -59,22 +59,22 @@ Given these two {{HTMLElement("canvas")}} elements
 the following code will provide the rendering using an `OffscreenCanvas` as described above.
 
 ```js
-var one = document.getElementById("one").getContext("bitmaprenderer");
-var two = document.getElementById("two").getContext("bitmaprenderer");
+const one = document.getElementById("one").getContext("bitmaprenderer");
+const two = document.getElementById("two").getContext("bitmaprenderer");
 
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext('webgl');
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext('webgl');
 
-// ... some drawing for the first canvas using the gl context ...
+// Perform some drawing for the first canvas using the gl context
 
 // Commit rendering to the first canvas
-var bitmapOne = offscreen.transferToImageBitmap();
+const bitmapOne = offscreen.transferToImageBitmap();
 one.transferFromImageBitmap(bitmapOne);
 
-// ... some more drawing for the second canvas using the gl context ...
+// Perform some more drawing for the second canvas
 
 // Commit rendering to the second canvas
-var bitmapTwo = offscreen.transferToImageBitmap();
+const bitmapTwo = offscreen.transferToImageBitmap();
 two.transferFromImageBitmap(bitmapTwo);
 ```
 
@@ -85,33 +85,33 @@ Another way to use the `OffscreenCanvas` API, is to call {{domxref("HTMLCanvasEl
 main.js (main thread code):
 
 ```js
-var htmlCanvas = document.getElementById("canvas");
-var offscreen = htmlCanvas.transferControlToOffscreen();
+const htmlCanvas = document.getElementById("canvas");
+const offscreen = htmlCanvas.transferControlToOffscreen();
 
-var worker = new Worker("offscreencanvas.js");
+const worker = new Worker("offscreencanvas.js");
 worker.postMessage({canvas: offscreen}, [offscreen]);
 ```
 
 offscreencanvas.js (worker code):
 
 ```js
-onmessage = function(evt) {
-  var canvas = evt.data.canvas;
-  var gl = canvas.getContext("webgl");
+onmessage = (evt) => {
+  const canvas = evt.data.canvas;
+  const gl = canvas.getContext("webgl");
 
-  // ... some drawing using the gl context ...
+  // Perform some drawing using the gl context
 };
 ```
 
 You can also use requestAnimationFrame in workers
 
 ```js
-onmessage = function(evt) {
+onmessage = (evt) => {
   const canvas = evt.data.canvas;
   const gl = canvas.getContext("webgl");
 
   function render(time) {
-    // ... some drawing using the gl context ...
+    // Perform some drawing using the gl context
     requestAnimationFrame(render);
   }
   requestAnimationFrame(render);

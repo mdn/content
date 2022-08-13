@@ -20,7 +20,7 @@ string containing the {{Glossary("SDP")}} which describes the session.
 ## Syntax
 
 ```js
-var value = sessionDescription.sdp;
+const value = sessionDescription.sdp;
 sessionDescription.sdp = value;
 ```
 

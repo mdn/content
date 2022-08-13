@@ -32,11 +32,11 @@ An integer value in pixels for the x-coordinate of the mouse
 <head>
 <title>pageX\pageY & layerX\layerY example</title>
 
-<script type="text/javascript">
+<script>
 
 function showCoords(evt){
-  var form = document.forms.form_coords;
-  var parent_id = evt.target.parentNode.id;
+  const form = document.forms.form_coords;
+  const parent_id = evt.target.parentNode.id;
   form.parentId.value = parent_id;
   form.pageXCoords.value = evt.pageX;
   form.pageYCoords.value = evt.pageY;
@@ -45,7 +45,7 @@ function showCoords(evt){
 }
 </script>
 
-<style type="text/css">
+<style>
 
  #d1 {
   border: solid blue 1px;

@@ -41,9 +41,10 @@ Note that the devtools page does not get access to any other WebExtension APIs, 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
+    <title>DevTools Extension</title>
   </head>
   <body>
     <script src="devtools.js"></script>
@@ -51,7 +52,7 @@ Note that the devtools page does not get access to any other WebExtension APIs, 
 </html>
 ```
 
-The devtools.js file will hold the actual code creating your dev tools extensions.
+The `devtools.js` file will hold the actual code creating your dev tools extensions.
 
 ## Creating panels
 
@@ -62,8 +63,8 @@ Using the `devtools.panels.create()` API, you can create your own panel in the d
 ```js
 browser.devtools.panels.create(
   "My Panel",                      // title
-  "icons/star.png",                // icon
-  "devtools/panel/panel.html"      // content
+  "/icons/star.png",               // icon
+  "/devtools/panel/panel.html"     // content
 ).then((newPanel) => {
   newPanel.onShown.addListener(initialisePanel);
   newPanel.onHidden.addListener(unInitialisePanel);
@@ -135,7 +136,7 @@ The following are not supported:
 
 None of the options to `inspectedWindow.eval()` are supported.
 
-Scripts injected using `inspectedWindow.eval()` can't use all the Console's command-line helper functions, but `$0` and `inspect(...)` are both supported (starting from Firefox 55).
+Scripts injected using `inspectedWindow.eval()` can't use all the Console's command-line helper functions, but `$0` and `inspect()` are both supported (starting from Firefox 55).
 
 ### devtools.panels
 

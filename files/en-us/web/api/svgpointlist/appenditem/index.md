@@ -31,7 +31,7 @@ The {{domxref("SVGPoint")}} object that was appended.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 
 ## Examples

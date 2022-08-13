@@ -45,9 +45,7 @@ const warning = doc.getElementsByTagName("warning")[0];
 
 const attrMap = warning.attributes;
 
-pre.textContent = "The `ob:one` attribute contains: " +
-                  attrMap.getNamedItemNS("http://www.example.com/ob", "one").value + ".";
-
+pre.textContent = `The 'ob:one' attribute contains: ${attrMap.getNamedItemNS("http://www.example.com/ob", "one").value}.`;
 ```
 
 {{EmbedLiveSample("Example", "100%", 80)}}

@@ -85,9 +85,9 @@ The CSS used for this example is shown below.
 #### JavaScript
 
 ```js
-var box = document.querySelector(".box");
-var pageX = document.getElementById("x");
-var pageY = document.getElementById("y");
+const box = document.querySelector(".box");
+const pageX = document.getElementById("x");
+const pageY = document.getElementById("y");
 
 function updateDisplay(event) {
   pageX.innerText = event.pageX;

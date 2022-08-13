@@ -23,7 +23,7 @@ devices like cameras and microphones, as well as screen sharing.
 ## Syntax
 
 ```js
-var mediaDevices = navigator.mediaDevices;
+const mediaDevices = navigator.mediaDevices;
 ```
 
 ### Return value

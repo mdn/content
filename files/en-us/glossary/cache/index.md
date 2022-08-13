@@ -9,4 +9,4 @@ A **cache** (web cache or HTTP cache) is a component that stores HTTP responses 
 
 ## See also
 
-- {{interwiki("wikipedia", "Web cache")}} on Wikipedia
+- [Web cache](https://en.wikipedia.org/wiki/Web_cache) on Wikipedia

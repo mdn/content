@@ -81,7 +81,7 @@ async function initPaymentRequest() {
     return;
   }
 
-  // Otherwise... let's see if we can use Example Pay
+  // Otherwise, let's see if we can use Example Pay
   const supportsExamplePay = await new PaymentRequest(
     [{ supportedMethods: "https://example.com/pay" }],
     details

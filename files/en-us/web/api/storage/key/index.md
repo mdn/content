@@ -39,7 +39,7 @@ The following function iterates over the local storage keys:
 
 ```js
 function forEachKey(callback) {
-  for (var i = 0; i < localStorage.length; i++) {
+  for (let i = 0; i < localStorage.length; i++) {
     callback(localStorage.key(i));
   }
 }
@@ -49,7 +49,7 @@ The following function iterates over the local storage keys and gets the value s
 each key:
 
 ```js
-for (var i = 0; i < localStorage.length; i++) {
+for (let i = 0; i < localStorage.length; i++) {
   console.log(localStorage.getItem(localStorage.key(i)));
 }
 ```

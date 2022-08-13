@@ -107,12 +107,11 @@ ctx.fillStyle = 'red';
 ctx.fill(circle);
 
 // Listen for mouse moves
-canvas.addEventListener('mousemove', function(event) {
+canvas.addEventListener('mousemove', (event) => {
   // Check whether point is inside circle
   if (ctx.isPointInPath(circle, event.offsetX, event.offsetY)) {
     ctx.fillStyle = 'green';
-  }
-  else {
+  } else {
     ctx.fillStyle = 'red';
   }
 

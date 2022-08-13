@@ -68,14 +68,14 @@ A number.
 ```js
 const button = document.getElementById('slide');
 
-button.onclick = function () {
+button.onclick = () => {
   document.getElementById('container').scrollLeft += 20;
 };
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

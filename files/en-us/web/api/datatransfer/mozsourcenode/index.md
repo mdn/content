@@ -8,11 +8,10 @@ tags:
   - Property
   - Reference
   - drag and drop
+  - Experimental
 browser-compat: api.DataTransfer.mozSourceNode
 ---
-{{APIRef("HTML Drag and Drop API")}}
-
-{{ Non-standard_header() }}
+{{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`DataTransfer.mozSourceNode`** property is used to
 determine the {{domxref("Node")}} over which the mouse cursor was located when the drag
@@ -39,10 +38,11 @@ function dragend_handler(event)
 {
   const dragData = event.dataTransfer;
   const node = dragData.mozSourceNode;
-  if (node != null)
-    console.log("mozSourceNode = " + dragData.mozSourceNode);
-  else
+  if (node) {
+    console.log(`mozSourceNode = ${dragData.mozSourceNode}`);
+  } else {
     console.log("mozSourceNode is null");
+  }
 }
 ```
 

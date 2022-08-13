@@ -25,7 +25,7 @@ A string representing a serialized media query.
 ## Examples
 
 ```js
-var mql = window.matchMedia('(max-width: 600px)');
+const mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {

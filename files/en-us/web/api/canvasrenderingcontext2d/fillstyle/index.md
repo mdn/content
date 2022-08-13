@@ -100,8 +100,8 @@ In WebKit- and Blink-based browsers, the non-standard and deprecated method
 `ctx.setFillColor()` is implemented in addition to this property.
 
 ```js
-setFillColor(color, optional alpha);
-setFillColor(grayLevel, optional alpha);
+setFillColor(color, /* (optional) */ alpha);
+setFillColor(grayLevel, /* (optional) */ alpha);
 setFillColor(r, g, b, a);
 setFillColor(c, m, y, k, a);
 ```

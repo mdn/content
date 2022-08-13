@@ -70,7 +70,7 @@ Unlike many other global objects, `Math` is not a constructor. All properties an
 - {{jsxref("Global_Objects/Math/cosh", "Math.cosh(<var>x</var>)")}}
   - : Returns the hyperbolic cosine of `x`.
 - {{jsxref("Global_Objects/Math/exp", "Math.exp(<var>x</var>)")}}
-  - : Returns `e^x`, where `x` is the argument, and `e` is Euler's constant (`2.718`…, the base of the natural logarithm).
+  - : Returns e<sup>x</sup>, where x is the argument, and e is Euler's constant (`2.718`…, the base of the natural logarithm).
 - {{jsxref("Global_Objects/Math/expm1", "Math.expm1(<var>x</var>)")}}
   - : Returns subtracting `1` from `exp(x)`.
 - {{jsxref("Global_Objects/Math/floor", "Math.floor(<var>x</var>)")}}
@@ -94,7 +94,7 @@ Unlike many other global objects, `Math` is not a constructor. All properties an
 - {{jsxref("Global_Objects/Math/min", "Math.min([<var>x</var>[, <var>y</var>[, …]]])")}}
   - : Returns the smallest of zero or more numbers.
 - {{jsxref("Global_Objects/Math/pow", "Math.pow(<var>x</var>, <var>y</var>)")}}
-  - : Returns base `x` to the exponent power `y` (that is, `x^y`).
+  - : Returns base `x` to the exponent power `y` (that is, `x`<sup><code>y</code></sup>).
 - {{jsxref("Global_Objects/Math/random", "Math.random()")}}
   - : Returns a pseudo-random number between `0` and `1`.
 - {{jsxref("Global_Objects/Math/round", "Math.round(<var>x</var>)")}}
@@ -125,11 +125,11 @@ Since humans tend to think in degrees, and some functions (such as CSS transform
 ```js
 function degToRad(degrees) {
   return degrees * (Math.PI / 180);
-};
+}
 
 function radToDeg(rad) {
   return rad / (Math.PI / 180);
-};
+}
 ```
 
 ### Calculating the height of an equilateral triangle
@@ -141,7 +141,7 @@ If we want to calculate the height of an equilateral triangle, and we know its s
 In JavaScript, we can do this with the following:
 
 ```js
-50 * Math.tan(degToRad(60)).
+50 * Math.tan(degToRad(60))
 ```
 
 We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.

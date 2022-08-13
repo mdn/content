@@ -7,6 +7,8 @@ tags:
   - Experimental
   - Network Information API
   - NetworkInformation
+  - Property
+  - Read-only
   - Reference
   - effectiveType
 browser-compat: api.NetworkInformation.effectiveType
@@ -18,13 +20,7 @@ The **`effectiveType`** read-only property of the
 meaning one of 'slow-2g', '2g', '3g', or '4g'. This value is determined using a
 combination of recently observed, round-trip time and downlink values.
 
-## Syntax
-
-```js
-var effectiveType = NetworkInformation.effectiveType
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} containing one of 'slow-2g', '2g', '3g', or '4g'.
 

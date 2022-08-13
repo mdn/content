@@ -78,11 +78,11 @@ We use the `CSS.vmax()` numeric factory function to create a
 {{domxref('CSSUnitValue')}}:
 
 ```js
-let height = CSS.vmax(50);
+const height = CSS.vmax(50);
 
-console.log( height );       // CSSUnitValue {value: 50, unit: "vmax"}
-console.log( height.value )  // 50
-console.log( height.unit )   // vmax
+console.log(height);       // CSSUnitValue {value: 50, unit: "vmax"}
+console.log(height.value); // 50
+console.log(height.unit);  // vmax
 ```
 
 In this example, we set the margin on our element using the `CSS.px()`
@@ -90,7 +90,7 @@ factory function:
 
 ```js
 myElement.attributeStyleMap.set('margin', CSS.px(40));
-let currentMargin = myElement.attributeStyleMap.get('margin');
+const currentMargin = myElement.attributeStyleMap.get('margin');
 console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
 ```
 

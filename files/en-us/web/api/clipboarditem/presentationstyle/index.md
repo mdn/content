@@ -20,7 +20,7 @@ browser-compat: api.ClipboardItem.presentationStyle
 
 The read-only
 **`presentationStyle`** property of the {{domxref("ClipboardItem")}}
-interface returns a {{jsxref("String")}} indicating how an item should be presented.
+interface returns a string indicating how an item should be presented.
 
 ## Value
 

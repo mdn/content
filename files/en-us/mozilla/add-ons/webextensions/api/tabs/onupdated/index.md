@@ -53,7 +53,7 @@ Events have three functions:
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.
 
-- `extraParameters`{{optional_inline}}
+- `extraParameters` {{optional_inline}}
 
   - : `object`. A set of filters that restricts the events that will be sent to this listener. This is an object which may have one or more of the following properties. Events will only be sent if they satisfy all the filters given.
 
@@ -91,25 +91,25 @@ Lists the changes to the state of the tab that was updated. To learn more about 
 
 - `attention` {{optional_inline}}
   - : `boolean`. Indicates whether the tab is drawing attention. For example, when the tab displays a modal dialog, `attention` will be `true`.
-- `audible`{{optional_inline}}
+- `audible` {{optional_inline}}
   - : `boolean`. The tab's new audible state.
 - `discarded` {{optional_inline}}
   - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.
-- `favIconUrl`{{optional_inline}}
+- `favIconUrl` {{optional_inline}}
   - : `string`. The tab's new favicon URL.
-- `hidden`{{optional_inline}}
+- `hidden` {{optional_inline}}
   - : `boolean`. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.
-- `isArticle`{{optional_inline}}
+- `isArticle` {{optional_inline}}
   - : `boolean`. True if the tab is an article and is therefore eligible for display in {{WebExtAPIRef("tabs.toggleReaderMode()", "Reader Mode")}}.
-- `mutedInfo`{{optional_inline}}
+- `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}. The tab's new muted state and the reason for the change.
-- `pinned`{{optional_inline}}
+- `pinned` {{optional_inline}}
   - : `boolean`. The tab's new pinned state.
-- `status`{{optional_inline}}
+- `status` {{optional_inline}}
   - : `string`. The status of the tab. Can be either _loading_ or _complete_.
-- `title`{{optional_inline}}
+- `title` {{optional_inline}}
   - : `string`. The tab's new title.
-- `url`{{optional_inline}}
+- `url` {{optional_inline}}
   - : `string`. The tab's URL if it has changed.
 
 ## Examples
@@ -118,11 +118,9 @@ Listen for and log all the change info and new state:
 
 ```js
 function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log("Updated tab: " + tabId);
-  console.log("Changed attributes: ");
-  console.log(changeInfo);
-  console.log("New tab Info: ");
-  console.log(tabInfo);
+  console.log(`Updated tab: ${tabId}`);
+  console.log("Changed attributes: ", changeInfo);
+  console.log("New tab Info: ", tabInfo);
 }
 
 browser.tabs.onUpdated.addListener(handleUpdated);
@@ -133,8 +131,7 @@ Log changes to URLs:
 ```js
 function handleUpdated(tabId, changeInfo, tabInfo) {
   if (changeInfo.url) {
-    console.log("Tab: " + tabId +
-                " URL changed to " + changeInfo.url);
+    console.log(`Tab: ${tabId} URL changed to ${changeInfo.url}`);
   }
 }
 

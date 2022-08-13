@@ -52,7 +52,7 @@ Depends on the `pname` parameter, either a {{domxref("WebGL_API/Types", "GLenum"
 ## Examples
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 gl.getSyncParameter(sync, gl.SYNC_STATUS);
 ```
 

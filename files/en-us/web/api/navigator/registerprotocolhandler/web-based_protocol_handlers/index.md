@@ -45,12 +45,14 @@ Registering the same protocol handler more than once will pop up a different not
 
 ### Example
 
-```js
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html lang="en">
+```html
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width">
   <title>Web Protocol Handler Sample - Register</title>
-  <script type="text/javascript">
+  <script>
     navigator.registerProtocolHandler("web+burger",
                                   "http://www.google.co.uk/?uri=%s",
                                   "Burger handler");

@@ -27,10 +27,10 @@ The following code creates a request for a database to be opened asynchronously,
 which the database is opened when the request's `onsuccess` handler is fired:
 
 ```js
-var db;
+let db;
 function openDB() {
- var DBOpenRequest = window.indexedDB.open('toDoList');
- DBOpenRequest.onsuccess = function(e) {
+ const DBOpenRequest = window.indexedDB.open('toDoList');
+ DBOpenRequest.onsuccess = (e) => {
    db = DBOpenRequest.result;
  }
 }

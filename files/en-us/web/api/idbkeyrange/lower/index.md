@@ -39,22 +39,22 @@ After declaring the key range, we log its `lower` property value to the
 console, which should appear as "F".
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo.
-> (View the example [live](https://mdn.github.io/indexeddb-examples/idbkeyrange/) too.
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbkeyrange) repo.
+> (View the example [live](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/) too.
 
 ```js
 function displayData() {
-  var keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
+  const keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.lower);
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(['fThings'], 'readonly');
+  const objectStore = transaction.objectStore('fThings');
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
-    var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
+    const cursor = event.target.result;
+      if (cursor) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
         list.appendChild(listItem);
 
         cursor.continue();

@@ -53,7 +53,7 @@ displayed after a user agrees to an unusual request.
 
 ```js
 document.getElementById("okButton")
-        .addEventListener("click", function() {
+        .addEventListener("click", () => {
   document.getElementById("welcome").hidden = true;
   document.getElementById("awesome").hidden = false;
 }, false);
@@ -121,7 +121,7 @@ h1 {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('Examples', 560, 200) }}
 
 ## Specifications
 

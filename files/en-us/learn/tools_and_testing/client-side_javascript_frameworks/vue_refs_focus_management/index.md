@@ -108,7 +108,7 @@ toggleToItemEditForm() {
 
 If you activate the "Edit" Button at this point, you should see an HTML `<button>` element referenced in your console.
 
-## Vue's `$nextTick()` method
+## Vue's $nextTick() method
 
 We want to set focus on the "Edit" Button when a user saves or cancels their edit. To do that, we need to handle focus in the `ToDoItem` component's `itemEdited()` and `editCancelled()` methods.
 
@@ -139,7 +139,7 @@ Try editing and then saving/cancelling a to-do item via your keyboard. You'll no
 
 Well, remember that when we change `isEditing` to `true`, we no longer render the section of the component featuring the "Edit" Button. This means there's no element to bind the ref to, so it becomes `undefined`.
 
-You might now be thinking "hey, don't we set `isEditing=false` before we try to access the `ref`, so therefore shouldn't the `v-if` now be displaying the button?" This is where the virtual DOM comes into play. Because Vue is trying to optimize and batch changes, it won't immediately update the DOM when we set `isEditing` to `false`. So when we call `focusOnEdit()`, the "Edit" Button has not been rendered yet.
+You might now be thinking "hey, don't we set `isEditing=false` before we try to access the `ref`, so therefore shouldn't the `v-if` now be displaying the button?" This is where the virtual DOM comes into play. Because Vue is trying to optimize and batch changes, it won't immediately update the DOM when we set `isEditing` to `false`. So when we call `focusOnEditButton()`, the "Edit" Button has not been rendered yet.
 
 Instead, we need to wait until after Vue undergoes the next DOM update cycle. To do that, Vue components have a special method called `$nextTick()`. This method accepts a callback function, which then executes after the DOM updates.
 
@@ -226,7 +226,7 @@ Now that we have a `ref` and have let browsers know that we can programmatically
 
 ```js
 deleteToDo(toDoId) {
-    const itemIndex = this.ToDoItems.findIndex(item => item.id === toDoId);
+    const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
     this.ToDoItems.splice(itemIndex, 1);
     this.$refs.listSummary.focus();
 }

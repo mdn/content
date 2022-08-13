@@ -47,11 +47,11 @@ The basic properties of the "viewport" `<meta>` tag include:
 - `user-scalable`
   - : Controls whether zoom in and zoom out actions are allowed on the page. Valid values: `0`, `1`, `yes`, or `no`. Default: `1`, which is the same as `yes`. Setting the value to `0`, which is the same as `no`, is against Web Content Accessibility Guidelines (WCAG).
 
-> **Warning:** Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. [WCAG](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) requires a minimum of 2x scaling; however, the best practice is to enable a 5x zoom.
+> **Warning:** Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) requires a minimum of 2x scaling; however, the best practice is to enable a 5x zoom.
 
 ## Screen density
 
-Screen resolutions have risen to the size that individual pixels are indistinguishable by the humans. For example, smartphones often have small screens with resolutions upwards of 1920—1080 pixels (\~400 dpi). Because of this, many browsers can display their pages in a smaller physical size by translating multiple hardware pixels for each CSS "pixel". Initially, this caused usability and readability problems on many touch-optimized web sites.
+Screen resolutions have risen to the size that individual pixels are indistinguishable by the human eye. For example, smartphones often have small screens with resolutions upwards of 1920—1080 pixels (\~400 dpi). Because of this, many browsers can display their pages in a smaller physical size by translating multiple hardware pixels for each CSS "pixel". Initially, this caused usability and readability problems on many touch-optimized web sites.
 
 On high dpi screens, pages with `initial-scale=1` will effectively be zoomed by browsers. Their text will be smooth and crisp, but their bitmap images may not take advantage of the full screen resolution. To get sharper images on these screens, web developers may want to design images – or whole layouts – at a higher scale than their final size and then scale them down using CSS or viewport properties.
 

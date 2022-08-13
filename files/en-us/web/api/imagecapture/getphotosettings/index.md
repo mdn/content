@@ -56,10 +56,10 @@ shows how the {{domxref("ImageCapture")}} object is created using a
 ```js
 const input = document.querySelector('input[type="range"]');
 
-var imageCapture;
+let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream => {
+.then((mediaStream) => {
   document.querySelector('video').srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];
@@ -67,7 +67,7 @@ navigator.mediaDevices.getUserMedia({video: true})
 
   return imageCapture.getPhotoCapabilities();
 })
-.then(photoCapabilities => {
+.then((photoCapabilities) => {
   const settings = imageCapture.track.getSettings();
 
   input.min = photoCapabilities.imageWidth.min;
@@ -76,10 +76,10 @@ navigator.mediaDevices.getUserMedia({video: true})
 
   return imageCapture.getPhotoSettings();
 })
-.then(photoSettings => {
+.then((photoSettings) => {
   input.value = photoSettings.imageWidth;
 })
-.catch(error => console.log('Argh!', error.name || error));
+.catch((error) => console.error('Argh!', error.name || error));
 ```
 
 ## Specifications

@@ -354,7 +354,7 @@ You can tell Svelte to ignore this warning for the next block of markup with a [
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A">
 ```
 
-> **Note:** With VSCode you can automatically add this ignore comment by clicking on the _Quick fix..._ link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.
+> **Note:** With VSCode you can automatically add this ignore comment by clicking on the _Quick fix…_ link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.
 
 If you want to globally disable this warning, you can add this `onwarn` handler to your `rollup.config.js` file inside the configuration for the `Svelte` plugin, like this:
 
@@ -362,7 +362,7 @@ If you want to globally disable this warning, you can add this `onwarn` handler 
 plugins: [
   svelte({
     dev: !production,
-    css: css => {
+    css: (css) => {
       css.write('public/build/bundle.css');
     },
     // Warnings are normally passed straight to Rollup. You can
@@ -377,7 +377,7 @@ plugins: [
     }
   }),
 
-  ...
+  // …
 ]
 ```
 

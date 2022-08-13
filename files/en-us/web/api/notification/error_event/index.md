@@ -21,9 +21,9 @@ The **`error`** event of the {{domxref("Notification")}} interface fires when so
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
+addEventListener('error', (event) => { });
 
-onerror = event => { };
+onerror = (event) => { };
 ```
 
 ## Event type

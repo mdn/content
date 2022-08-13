@@ -98,11 +98,10 @@ The `decodingInfo()` and {{domxref("MediaCapabilities.encodingInfo", "encodingIn
 Instead of the assigning the promise to a variable, we can output the values returned by the promise to the console:
 
 ```js
-navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(result => {
-  console.log('This configuration is ' +
-    (result.supported ? '' : 'not ') + 'supported, ' +
-    (result.smooth ? '' : 'not ') + 'smooth, and ' +
-    (result.powerEfficient ? '' : 'not ') + 'power efficient.')
+navigator.mediaCapabilities.decodingInfo(videoConfiguration).then((result) => {
+  console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
+  console.log(`${result.smooth ? '' : 'not '}smooth, and`);
+  console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
 });
 ```
 
@@ -118,8 +117,8 @@ The error can be due to the `type` not being one of the two possible values, the
 ```js
 navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(
   console.log('It worked')
-).catch(error =>
-  console.log('It failed: ' + error)
+).catch((error) =>
+  console.error(`It failed: ${error}`)
 );
 ```
 
@@ -194,13 +193,13 @@ and whether decoding will be smooth and power efficient:</p>
 let mc = {
   videoConfiguration : new Object(),
 
-  tryIt: function () {
+  tryIt() {
    mc.createConfiguration();
    mc.testIt();
   },
 
-  createConfiguration: function () {
-    var size = document.getElementById('size').value.split('x');
+  createConfiguration() {
+    const size = document.getElementById('size').value.split('x');
     mc.videoConfiguration = {
       type: 'file',
       video: {
@@ -213,23 +212,21 @@ let mc = {
     }
   },
 
-  testIt: function () {
+  testIt() {
     let content = '';
-    navigator.mediaCapabilities.decodingInfo(mc.videoConfiguration).then(result => {
-      var li = document.createElement('li'),
+    navigator.mediaCapabilities.decodingInfo(mc.videoConfiguration).then((result) => {
+      const li = document.createElement('li'),
         mcv = mc.videoConfiguration.video;
-      content = 'A ' + mcv.width + 'x' + mcv.height + ', ' + mcv.contentType + ' at ' +
-        mcv.framerate  + 'fps and ' +  mcv.bitrate + ' bps video ' +
-        (result.supported ? ' IS ' : 'IS NOT ') + ' supported, ' +
-        (result.smooth ? ' IS ' : ' is NOT ') + ' smooth, and' +
-        (result.powerEfficient ? ' IS ' : ' IS NOT ') + 'power efficient.';
-      var ul = document.getElementById("results")
+      content = `A ${mcv.width}x${mcv.height}, ${mcv.contentType} at ${mcv.framerate}fps and ${mcv.bitrate} bps video ${result.supported ? ' IS ' : 'IS NOT '} supported,`;
+      content += `${result.smooth ? ' IS ' : ' is NOT '} smooth, and`;
+      content += `${result.powerEfficient ? ' IS ' : ' IS NOT '}power efficient.`;
+      const ul = document.getElementById("results")
       li.innerHTML = content;
       ul.appendChild(li);
     }).catch((error) => {
-        var li = document.createElement('li'),
+        const li = document.createElement('li'),
             ul = document.getElementById("results");
-        li.innerText = 'Codec ' + mc.videoConfiguration.video.contentType + ' threw an error: ' + error;
+        li.textContent = `Codec ${mc.videoConfiguration.video.contentType} threw an error: ${error}`;
         ul.appendChild(li);
     });
   }

@@ -23,8 +23,8 @@ A {{HTMLElement("tfoot")}} element or `null`.
 ## Examples
 
 ```js
-if (table.tFoot == my_foot) {
-  // ...
+if (table.tFoot === my_foot) {
+  // …
 }
 ```
 

@@ -64,7 +64,7 @@ The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{
 
 ### Layout for input type="search"
 
-Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See {{bug(558594)}} for more details)
+Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See {{bug(558594)}} for more details.)
 
 <table>
   <thead>
@@ -433,7 +433,7 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
 
 The {{cssxref('@scroll-timeline')}} at-rule and {{cssxref('animation-timeline')}} property allow you to define animations that are linked to container scroll progress (rather than time).
 Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
-For more information see {{bug(1676791)}} and {{bug(1676782)}}
+For more information see {{bug(1676791)}} and {{bug(1676782)}}.
 
 <table>
   <thead>
@@ -519,7 +519,7 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ### Array grouping methods
 
-The {{jsxref("Array.prototype.groupBy()")}} and {{jsxref("Array.prototype.groupByToMap()")}} methods are used to group the elements of an array using a string or value, respectively, returned by a test function.
+The {{jsxref("Array.prototype.group()")}} and {{jsxref("Array.prototype.groupToMap()")}} methods are used to group the elements of an array using a string or value, respectively, returned by a test function.
 The `groupBy` method should be used when strings can be used to represent element groups, while `groupByToMap()` should be used in cases where it makes sense to use a value as the key.
 (See {{bug(1739648)}} for more details.)
 
@@ -649,7 +649,7 @@ When this preference is enabled, any WebGL extensions currently in "draft" statu
 
 #### WebGPU API
 
-This new API provides low-level support for performing computation and graphics rendering using the {{interwiki("wikipedia", "Graphics Processing Unit")}} (GPU) of the user's device or computer. The [specification](https://gpuweb.github.io/gpuweb/) is still a work-in-progress. See {{bug(1602129)}} for our progress on this API.
+This new API provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer. The [specification](https://gpuweb.github.io/gpuweb/) is still a work-in-progress. See {{bug(1602129)}} for our progress on this API.
 
 <table>
   <thead>
@@ -1110,7 +1110,7 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
 
 #### ClipboardRead
 
-The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See ({{bug(1701512)}}) for more details.)
+The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See {{bug(1701512)}} for more details.)
 
 <table>
   <thead>
@@ -1150,7 +1150,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
 
 #### HTML Sanitizer API
 
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.
+The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See {{bug('1673309')}} for more details.
 
 <table>
   <thead>
@@ -1310,12 +1310,12 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 
 #### ElementInternals: Form associated custom element methods and properties
 
-New {{domxref("ElementInternals")}} properties and methods that allow a custom elements to interact with a form:
+New {{domxref("ElementInternals")}} properties and methods that allow custom elements to interact with a form:
 
-- property: {{domxref("ElementInternals.form","form")}} gets the form associated with the element
-- property: {{domxref("ElementInternals.labels","labels")}} gets the list of labels associated with the element
-- property: {{domxref("ElementInternals.willValidate", "willValidate")}} checks if a custom form element will be validated.
-- method: {{domxref("ElementInternals.setFormValue()","setFormValue()")}} set the sanitized value and user-entered data, if needed.
+- The {{domxref("ElementInternals.form","form")}} property gets the form associated with the element.
+- The {{domxref("ElementInternals.labels","labels")}} property gets the list of labels associated with the element.
+- The {{domxref("ElementInternals.willValidate", "willValidate")}} property checks if a custom form element will be validated.
+- The {{domxref("ElementInternals.setFormValue()","setFormValue()")}} method sets the sanitized value and user-entered data, if needed.
 
 See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}, {{bug(1556449)}}.
 
@@ -1494,50 +1494,6 @@ The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Sched
 
 This is enabled on Firefox Nightly (only) from Firefox 101.
 No preference is provided to allow it to be enabled in other releases.
-
-### Streaming API
-
-#### Transferable streams
-
-[`ReadableStream`](/en-US/docs/Web/API/ReadableStream), [`WritableStream`](/en-US/docs/Web/API/WritableStream), [`TransformStream`](/en-US/docs/Web/API/TransformStream) are now [Transferable objects](/en-US/docs/Glossary/Transferable_objects), which means that ownership can be transferred when sharing the objects between a window and workers using `postMessage`, or when using [structuredClone()](/en-US/docs/Web/API/structuredClone) to copy an object.
-After transferring, the original object cannot be used.
-See {{bug(1659025)}} for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version changed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>102</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>102</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>102</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>102</td>
-      <td>No.</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.streams.transferable.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
 
 ## Security and privacy
 

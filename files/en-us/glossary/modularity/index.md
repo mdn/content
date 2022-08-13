@@ -9,4 +9,4 @@ The term Modularity refers to the degree to which a system's components may be s
 
 ## See also
 
-- {{Interwiki("wikipedia", "Modularity")}} on Wikipedia
+- [Modularity](https://en.wikipedia.org/wiki/Modularity) on Wikipedia

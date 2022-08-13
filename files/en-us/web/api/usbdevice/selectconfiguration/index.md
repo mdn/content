@@ -11,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - selectConfiguration
+  - Experimental
 browser-compat: api.USBDevice.selectConfiguration
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

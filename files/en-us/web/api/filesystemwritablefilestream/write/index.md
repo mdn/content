@@ -33,14 +33,15 @@ write(data)
 
 - `data`
 
-  - : Can be either the file data to write, in the form of a {{domxref('BufferSource')}},
-    a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal. Or an object containing the following
-    properties:
+  - : Can be either the file data to write, in the form of an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+    a {{jsxref("DataView")}}, a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal.
+    Or an object containing the following properties:
 
     - `type`
       - : A string that is one of the following: `"write"`, `"seek"`, or `"truncate"`.
     - `data`
-      - : The file data to write. Can be a {{domxref('BufferSource')}}, a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal.
+      - : The file data to write. Can be an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},
+        a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal.
         This property is required if `type` is set to `write`.
     - `position`
       - : The byte position the current file cursor should move to if type `seek` is used.
@@ -94,16 +95,16 @@ The following show different examples of options that can be passed into the
 
 ```js
 // just pass in the data (no options)
-writableStream.write(data)
+writableStream.write(data);
 
 // writes the data to the stream from the determined position
-writableStream.write({ type: "write", position: position, data: data })
+writableStream.write({ type: "write", position, data });
 
 // updates the current file cursor offset to the position specified
-writableStream.write({ type: "seek", position: position })
+writableStream.write({ type: "seek", position });
 
 // resizes the file to be size bytes long
-writableStream.write({ type: "truncate", size: size })
+writableStream.write({ type: "truncate", size });
 ```
 
 ## Specifications

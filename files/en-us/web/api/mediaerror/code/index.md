@@ -81,8 +81,8 @@ for it, and then sets the element's {{htmlattrxref("src", "video")}} attribute t
 video resource to present in the element. The error handler outputs a message
 
 ```js
-var obj = document.createElement('video');
-obj.onerror = function() {console.log("Error with media: " + obj.error.code);}
+const obj = document.createElement('video');
+obj.onerror = () => {console.error(`Error with media: ${obj.error.code}`);}
 obj.src="https://example.com/blahblah.mp4";
 ```
 

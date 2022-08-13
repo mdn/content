@@ -47,7 +47,7 @@ new MutationObserver(callback)
     2. the {{domxref("MutationObserver")}} which invoked the
         `callback`.
 
-    See the [example](#example) below for more details.
+    See the [examples](#examples) below for more details.
 
 ### Return value
 
@@ -64,7 +64,7 @@ changes to attributes on any of the elements in the tree.
 
 ```js
 function callback(mutationList, observer) {
-  mutationList.forEach( (mutation) => {
+  mutationList.forEach((mutation) => {
     switch(mutation.type) {
       case 'childList':
         /* One or more children have been added to and/or removed

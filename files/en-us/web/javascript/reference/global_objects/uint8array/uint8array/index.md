@@ -19,14 +19,24 @@ using standard array index syntax (that is, using bracket notation).
 ## Syntax
 
 ```js
-new Uint8Array(); // new in ES2017
-new Uint8Array(length);
-new Uint8Array(typedArray);
-new Uint8Array(object);
+new Uint8Array()
+new Uint8Array(length)
+new Uint8Array(typedArray)
+new Uint8Array(object)
 
-new Uint8Array(buffer);
-new Uint8Array(buffer, byteOffset);
-new Uint8Array(buffer, byteOffset, length);
+new Uint8Array(buffer)
+new Uint8Array(buffer, byteOffset)
+new Uint8Array(buffer, byteOffset, length)
+```
+
+## Description
+
+The `Uint8Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Uint8Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+
+```js example-bad
+const dv = Uint8Array([1, 2, 3]);
+// TypeError: calling a builtin Uint8Array constructor
+// without new is forbidden
 ```
 
 ### Parameters
@@ -69,22 +79,23 @@ console.log(uint8.length); // 2
 console.log(uint8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-const arr = new Uint8Array([21,31]);
-console.log(arr[1]); // 31
+const x = new Uint8Array([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-const x = new Uint8Array([21, 31]);
 const y = new Uint8Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
 const buffer = new ArrayBuffer(8);
 const z = new Uint8Array(buffer, 1, 4);
+console.log(z.byteOffset); // 1
 
 // From an iterable
-const iterable = function*(){ yield* [1,2,3]; }();
-const uint8Arr = new Uint8Array(iterable);
-// Uint8Array[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const uint8FromIterable = new Uint8Array(iterable);
+console.log(uint8FromIterable);
+// Uint8Array [1, 2, 3]
 ```
 
 ## Specifications
@@ -94,23 +105,6 @@ const uint8Arr = new Uint8Array(iterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Uint8Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Uint8Array` constructor as a function without `new`, will throw a
-{{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Uint8Array([1, 2, 3]);
-// TypeError: calling a builtin Uint8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Uint8Array([1, 2, 3]);
-```
 
 ## See also
 

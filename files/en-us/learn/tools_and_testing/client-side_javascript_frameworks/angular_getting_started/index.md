@@ -118,14 +118,14 @@ To install Angular on your local system, you need the following:
 You can use the Angular CLI to run commands in your terminal for generating, building, testing, and deploying Angular applications.
 To install the Angular CLI, run the following command in your terminal:
 
-```js
+```bash
 npm install -g @angular/cli
 ```
 
 Angular CLI commands all start with `ng`, followed by what you'd like the CLI to do.
 In the Desktop directory, use the following `ng new` command to create a new application called `todo`:
 
-```js
+```bash
 ng new todo --routing=false --style=css
 ```
 
@@ -137,13 +137,13 @@ If you are prompted to enforce stricter type checking, you can respond with yes.
 
 Navigate into your new project with the following `cd` command:
 
-```js
+```bash
 cd todo
 ```
 
 To run your `todo` application, use `ng serve`:
 
-```js
+```bash
 ng serve
 ```
 
@@ -184,7 +184,11 @@ TypeScript is a superset of JavaScript meaning that any valid JavaScript is vali
 TypeScript offers typing and a more concise syntax than plain JavaScript, which gives you a tool for creating more maintainable code and minimizing bugs.
 
 Components are the building blocks of an Angular application.
-A component includes a TypeScript class that has a `@Component()` decorator, an HTML template, and styles.
+A component includes a TypeScript class that has a `@Component()` decorator.
+
+### The decorator
+
+You use the `@Component()` decorator to specify metadata (HTML template and styles) about a class.
 
 ### The class
 
@@ -212,8 +216,11 @@ export class ItemComponent {
 
 This component is called `ItemComponent`, and its selector is `app-item`.
 You use a selector just like regular HTML tags by placing it within other templates.
-When a selector is in a template, the browser renders the template of that component.
+When a selector is in a template, the browser renders the template of that component whenever an instance of the selector is encountered.
 This tutorial guides you through creating two components and using one within the other.
+
+**NOTE:** The name of the component above is `ItemComponent` which is also the name of the class. Why?
+The names are the same simply because a component is nothing but a class supplemented by a TypeScript decorator.
 
 Angular's component model offers strong encapsulation and an intuitive application structure.
 Components also make your application easier to unit test and can improve the overall readability of your code.

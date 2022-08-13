@@ -38,14 +38,13 @@ _The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from it
 ## Examples
 
 ```js
-utterThis.onpause = function(event) {
-  var char = event.utterance.text.charAt(event.charIndex);
-  console.log('Speech paused at character ' + event.charIndex + ' of "' +
-  event.utterance.text + '", which is "' + char + '".');
+utterThis.onpause = (event) => {
+  const char = event.utterance.text.charAt(event.charIndex);
+  console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
 }
 
-utterThis.onboundary = function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
+utterThis.onboundary = (event) => {
+  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
 }
 ```
 

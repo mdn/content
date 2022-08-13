@@ -31,7 +31,7 @@ new ContentIndexEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `contentdelete`.
 - `options`
-  - : An object that,_in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, has the following properties:
+  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, has the following properties:
     - `id`
       - : The id of the indexed content you want the {{domxref("ContentIndex")}} object to remove.
 
@@ -44,11 +44,11 @@ A new {{domxref("ContentIndexEvent")}} object configured using the given options
 This examples constructs a new {{domxref('ContentIndexEvent')}} with the relevant id.
 
 ```js
-var removeData = {
+const removeData = {
   id : 'unique-content-id'
 }
 
-var ciEvent = new ContentIndexEvent('contentdelete', removeData);
+const ciEvent = new ContentIndexEvent('contentdelete', removeData);
 
 ciEvent.id; // should return 'unique-content-id'
 ```

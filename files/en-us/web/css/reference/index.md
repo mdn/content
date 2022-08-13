@@ -23,7 +23,7 @@ style-rule ::=
     }
 ```
 
-... where :
+Where :
 
 ```css
 selectors-list ::=
@@ -81,7 +81,7 @@ The following are the various [selectors](/en-US/docs/Web/CSS/CSS_Selectors), wh
 
 ### Combinators
 
-Combinators are selectors that establish a relationship between two or more simple selectors, such as "`A` is a child of `B`" or "`A` is adjacent to `B`."
+Combinators are selectors that establish a relationship between two or more simple selectors, such as "`A` is a child of `B`" or "`A` is adjacent to `B`", creating a complex selector.
 
 - [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
   - : Specifies that the elements selected by both `A` and `B` have the same parent and that the element selected by `B` immediately follows the element selected by `A` horizontally.

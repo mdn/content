@@ -15,9 +15,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('success', event => { });
+addEventListener('success', (event) => { });
 
-onsuccess = event => { };
+onsuccess = (event) => { };
 ```
 
 ## Event type
@@ -40,7 +40,7 @@ openRequest.onupgradeneeded = (event) => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -69,7 +69,7 @@ openRequest.onupgradeneeded = (event) => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });

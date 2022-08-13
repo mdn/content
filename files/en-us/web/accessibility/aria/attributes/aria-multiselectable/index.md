@@ -171,13 +171,12 @@ If the above isn't stylable to your liking, you can also create a list of select
 </fieldset>
 ```
 
-Instead of `aria-selected="true"`, include the [`checked`](en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute. The browser does the rest.
+Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute. The browser does the rest.
 
 ## Values
 
 - `true`
   - : More than one item in the widget may be selected at a time
-  -
 - `false`
   - : Only one item can be selected
 

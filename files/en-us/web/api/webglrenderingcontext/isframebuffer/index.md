@@ -36,9 +36,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the fram
 ### Checking a frame buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var framebuffer = gl.createFramebuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const framebuffer = gl.createFramebuffer();
 
 gl.isFramebuffer(framebuffer);
 ```

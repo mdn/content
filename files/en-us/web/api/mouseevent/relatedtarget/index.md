@@ -161,7 +161,7 @@ function overListener(event) {
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 280)}}
+{{EmbedLiveSample("Examples", 700, 280)}}
 
 ## Specifications
 

@@ -1,20 +1,21 @@
 ---
 title: Prioritized Task Scheduling API
 slug: Web/API/Prioritized_Task_Scheduling_API
+page-type: web-api-overview
 tags:
   - API
   - Prioritized Task Scheduling API
   - Reference
   - Landing
   - Experimental
-spec-urls: https://wicg.github.io/scheduling-apis/
+browser-compat: api.Scheduler
 ---
 {{DefaultAPISidebar("Prioritized Task Scheduling API")}} {{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **Prioritized Task Scheduling API** provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
 
 The [task priorities](#task-priorities) are very course-grained, and are based around whether tasks block user interaction, or otherwise impact the user experience, or can run in the background.
-Developers and frameworks may implement more fine-grained prioritisation schemes within the broad categories define by the API
+Developers and frameworks may implement more fine-grained prioritization schemes within the broad categories define by the API
 
 The API is promise-based and supports the ability to set and change task priorities, to delay tasks being added to the scheduler, to abort tasks, and to monitor for priority change and abort events.
 
@@ -34,33 +35,33 @@ This creates a task with default priority [`user-visible`](#user-visible) that h
 const promise = scheduler.postTask(myTask);
 ```
 
-Because the method returns a promise you can wait on its resolution asyncronously using `then`, and catch errors thrown by the task callback function (or when the task is aborted) using `catch`.
+Because the method returns a promise you can wait on its resolution asynchronously using `then`, and catch errors thrown by the task callback function (or when the task is aborted) using `catch`.
 The callback function can be any kind of function (below we demonstrate an arrow function).
 
 ```js
-scheduler.postTask( ()=>{ return 'Task executing'; } )
- // Promise resolved: log task result when promise resolves
- .then( (taskResult) => { console.log(`${taskResult}`); })
- // Promise rejected: log AbortError or errors thrown by task
- .catch( (error) => { console.log(`Error: ${error}`); });  
+scheduler
+  .postTask(() => 'Task executing')
+  // Promise resolved: log task result when promise resolves
+  .then((taskResult) => console.log(`${taskResult}`))
+  // Promise rejected: log AbortError or errors thrown by task
+  .catch((error) => console.error(`Error: ${error}`));
 ```
 
 The same task might be waited on using `await`/`async` as shown below (note, this is run in an [Immediately Invoked Function Expression (IIFE)](/en-US/docs/Glossary/IIFE)):
 
 ```js
-(async function() {
+(async () => {
   try {
-    const result = await scheduler.postTask( ()=>{ return 'Task executing'; } );
+    const result = await scheduler.postTask(() => 'Task executing');
     console.log(result);
-  }
-  catch (error) {
+  } catch (error) {
     // Log AbortError or error thrown in task function
-    console.log(`Error: ${error}`)
+    console.error(`Error: ${error}`);
   }
 })();
 ```
 
-You can also specify an options object to the `postTask()` method if you want to change the default behaviour.
+You can also specify an options object to the `postTask()` method if you want to change the default behavior.
 The options are:
 
 - `priority` This allows you to specify a particular immutable priority.
@@ -73,9 +74,10 @@ The options are:
 The same example as above with a priority option would look like this:
 
 ```js
-scheduler.postTask( ()=>{ return 'Task executing'; }, {priority: 'user-blocking'} )
- .then( (taskResult) => { console.log(`${taskResult}`); }) // Log the task result
- .catch( (error) => { console.log(`Error: ${error}`); });  // Log any errors
+scheduler
+  .postTask(() => 'Task executing', { priority: 'user-blocking' })
+  .then((taskResult) => console.log(`${taskResult}`)) // Log the task result
+  .catch((error) => console.error(`Error: ${error}`)); // Log any errors
 ```
 
 ### Task priorities
@@ -101,7 +103,7 @@ There are just three priorities, which are listed below (ordered from highest to
 ### Mutable and immutable task priority
 
 There are many use cases where the task priority never needs to change, while for others it does.
-For example fetching an image might change from a `background` task to `user-visible` as a carousel is scrolled into the veiwing area.
+For example fetching an image might change from a `background` task to `user-visible` as a carousel is scrolled into the viewing area.
 
 Task priorities can be set as static (immutable) or dynamic (modifiable) depending on the arguments passed to {{domxref('Scheduler.postTask()')}}.=
 
@@ -136,7 +138,7 @@ The Prioritized Task Scheduling API extends the following APIs, adding the liste
 
 - [`scheduler`](/en-US/docs/Web/API/Window/scheduler)
   - : This property is the entry point for using this API.
-    It is implemented on [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler), making an instance of {{domxref("Scheduler")}} available thorugh `this` in most scopes.
+    It is implemented on [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler), making an instance of {{domxref("Scheduler")}} available through `this` in most scopes.
 
 ## Examples
 
@@ -148,9 +150,11 @@ The code for the log area and method is generally hidden in order to not to dist
 ```
 
 ```js
-//hidden logger code - simplifies example
+// hidden logger code - simplifies example
 let log = document.getElementById('log');
-function mylog(text) { log.textContent += `${text}\n`; }
+function mylog(text) {
+  log.textContent += `${text}\n`;
+}
 ```
 
 ### Feature checking
@@ -166,15 +170,16 @@ The code below prints "Feature: Supported" if the API is supported on this brows
 ```js hidden
 //hidden logger code - simplifies example
 let log = document.getElementById('log');
-function mylog(text) { log.textContent += `${text}\n`; }
+function mylog(text) {
+  log.textContent += `${text}\n`;
+}
 ```
 
 ```js
 // Check that feature is supported
 if ('scheduler' in this) {
   mylog('Feature: Supported');
-}
-else {
+} else {
   mylog('Feature: NOT Supported');
 }
 ```
@@ -192,7 +197,9 @@ The method returns a {{jsxref("Promise")}} that resolves with the return value o
 
 ```js hidden
 let log = document.getElementById('log');
-function mylog(text) { log.textContent += `${text}\n`; }
+function mylog(text) {
+  log.textContent += `${text}\n`;
+}
 ```
 
 Because it returns a promise, {{domxref('Scheduler.postTask()')}} can be [chained with other promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises).
@@ -201,12 +208,14 @@ This uses the default priority (`user-visible`).
 
 ```js
 // A function that defines a task
-function myTask() { return 'Task 1: user-visible'; }
+function myTask() {
+  return 'Task 1: user-visible';
+}
 
 if ('scheduler' in this) {
   // Post task with default priority: 'user-visible' (no other options)
   // When the task resolves, Promise.then() logs the result.
-  scheduler.postTask(myTask).then( (taskResult) => { mylog(`${taskResult}`); });
+  scheduler.postTask(myTask).then((taskResult) => mylog(`${taskResult}`));
 }
 ```
 
@@ -214,12 +223,16 @@ The method can also be used with [`await`](/en-US/docs/Web/JavaScript/Reference/
 The code below shows how you might use this approach to wait on a `user-blocking` task.
 
 ```js
-function myTask2() { return 'Task 2: user-blocking'; }
+function myTask2() {
+  return 'Task 2: user-blocking';
+}
 
 async function runTask2() {
-  const result = await scheduler.postTask(myTask2, {priority: 'user-blocking'});
-  mylog(result) // Logs 'Task 2: user-blocking'.
-};
+  const result = await scheduler.postTask(myTask2, {
+    priority: 'user-blocking',
+  });
+  mylog(result); // Logs 'Task 2: user-blocking'.
+}
 runTask2();
 ```
 
@@ -228,7 +241,9 @@ For simplicity many of the examples here simply log the result as the task execu
 
 ```js
 // A function that defines a task
-function myTask3() { mylog('Task 3: user-visible'); }
+function myTask3() {
+  mylog('Task 3: user-visible');
+}
 
 if ('scheduler' in this) {
   // Post task and log result when it runs
@@ -252,23 +267,25 @@ When run, each task simply logs it's expected order (we're not waiting on the re
 
 ```js hidden
 let log = document.getElementById('log');
-function mylog(text) { log.textContent += `${text}\n`; }
+function mylog(text) {
+  log.textContent += `${text}\n`;
+}
 ```
 
 ```js
 if ('scheduler' in this) {
   // three tasks, in reverse order of priority
-  scheduler.postTask( ()=>{ mylog('bckg 1'); }, {priority: 'background'});
-  scheduler.postTask( ()=>{ mylog('usr-vis 1'); }, {priority: 'user-visible'});
-  scheduler.postTask( ()=>{ mylog('usr-blk 1'); } , {priority: 'user-blocking'});
+  scheduler.postTask(() => mylog('bckg 1'), { priority: 'background' });
+  scheduler.postTask(() => mylog('usr-vis 1'), { priority: 'user-visible' });
+  scheduler.postTask(() => mylog('usr-blk 1'), { priority: 'user-blocking' });
 
   // three more tasks, in reverse order of priority
-  scheduler.postTask( ()=>{ mylog('bckg 2'); }, {priority: 'background'});
-  scheduler.postTask( ()=>{ mylog('usr-vis 2'); }, {priority: 'user-visible'});
-  scheduler.postTask( ()=>{ mylog('usr-blk 2'); } , {priority: 'user-blocking'});
+  scheduler.postTask(() => mylog('bckg 2'), { priority: 'background' });
+  scheduler.postTask(() => mylog('usr-vis 2'), { priority: 'user-visible' });
+  scheduler.postTask(() => mylog('usr-blk 2'), { priority: 'user-blocking' });
 
   // Task with default priority: user-visible
-  scheduler.postTask( ()=>{ mylog('usr-vis 3 (default)'); } );
+  scheduler.postTask(() => mylog('usr-vis 3 (default)'));
 }
 ```
 
@@ -300,25 +317,26 @@ The task is then posted, passing in the signal, and then we immediately change t
 
 ```js hidden
 let log = document.getElementById('log');
-function mylog(text) { log.textContent += `${text}\n`; }
+function mylog(text) {
+  log.textContent += `${text}\n`;
+}
 ```
 
 ```js
 if ('scheduler' in this) {
   // Create a TaskController, setting its signal priority to 'user-blocking'
-  const controller = new TaskController({priority: 'user-blocking'});
-  
+  const controller = new TaskController({ priority: 'user-blocking' });
+
   // Listen for 'prioritychange' events on the controller's signal.
-  controller.signal.addEventListener('prioritychange', 
-    event => { 
-      const previousPriority = event.previousPriority;
-      const newPriority = event.target.priority;
-      mylog(`Priority changed from ${previousPriority} to ${newPriority}.`);
-    });
+  controller.signal.addEventListener('prioritychange', (event) => {
+    const previousPriority = event.previousPriority;
+    const newPriority = event.target.priority;
+    mylog(`Priority changed from ${previousPriority} to ${newPriority}.`);
+  });
 
   // Post task using the controller's signal.
   // The signal priority sets the initial priority of the task
-  scheduler.postTask( ()=>{ mylog('Task 1'); }, {signal: controller.signal} );
+  scheduler.postTask(() => mylog('Task 1'), { signal: controller.signal });
 
   // Change the priority to 'background' using the controller
   controller.setPriority('background');
@@ -341,7 +359,9 @@ The only difference is that you must use {{domxref("TaskController")}} if you al
 
 ```js hidden
 let log = document.getElementById('log');
-function mylog(text) { log.textContent += `${text}\n`; }
+function mylog(text) {
+  log.textContent += `${text}\n`;
+}
 ```
 
 The code below creates a controller and passes its signal to the task.
@@ -354,10 +374,13 @@ if ('scheduler' in this) {
   // Declare a TaskController with default priority
   const abortTaskController = new TaskController();
   // Post task passing the controller's signal
-  scheduler.postTask( ()=>{ mylog('Task executing'); }, {signal: abortTaskController.signal} )
-    .then( (taskResult) => { mylog(`${taskResult}`); }) //This won't run!
-    .catch( (error) => { mylog(`Error: ${error}`); });  // Log the error
-  
+  scheduler
+    .postTask(() => mylog('Task executing'), {
+      signal: abortTaskController.signal,
+    })
+    .then((taskResult) => mylog(`${taskResult}`)) // This won't run!
+    .catch((error) => mylog(`Error: ${error}`)); // Log the error
+
   // Abort the task
   abortTaskController.abort();
 }
@@ -379,7 +402,9 @@ The `delay` is the minimum amount of time before the task is added to the schedu
 
 ```js hidden
 let log = document.getElementById('log');
-function mylog(text) { log.textContent += `${text}\n`; }
+function mylog(text) {
+  log.textContent += `${text}\n`;
+}
 ```
 
 The code below shows two tasks added (as arrow functions) with a delay.
@@ -387,10 +412,12 @@ The code below shows two tasks added (as arrow functions) with a delay.
 ```js
 if ('scheduler' in this) {
   // Post task as arrow function with delay of 2 seconds
-  scheduler.postTask( ()=>{ return 'Task delayed by 2000ms'; }, {delay: 2000} )
-    .then( (taskResult) => { mylog(`${taskResult}`); })
-  scheduler.postTask( ()=>{ return 'Next task should complete in about 2000ms'; }, {delay: 1} )
-    .then( (taskResult) => { mylog(`${taskResult}`); }) 
+  scheduler.
+    postTask(() => 'Task delayed by 2000ms', { delay: 2000 })
+    .then((taskResult) => mylog(`${taskResult}`));
+  scheduler
+    .postTask(() => 'Next task should complete in about 2000ms', { delay: 1 })
+    .then((taskResult) => mylog(`${taskResult}`));
 }
 ```
 
@@ -405,7 +432,7 @@ Note that the second string appears in log after about 2 seconds.
 
 ## Browser compatibility
 
-{{Compat("api.Scheduler")}}
+{{Compat}}
 
 ## See also
 

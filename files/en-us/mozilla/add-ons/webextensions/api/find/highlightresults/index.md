@@ -30,7 +30,7 @@ browser.find.highlightResults(
 
 ### Parameters
 
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
 

@@ -544,8 +544,6 @@ text{
 
 {{EmbedLiveSample("Testing feature support", "400", "400")}}
 
-See also [requiredFeatures.svg](/files/3286/requiredFeatures.svg)
-
 ## Specifications
 
 {{Specifications}}

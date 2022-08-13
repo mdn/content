@@ -8,7 +8,7 @@ tags:
   - HTML
   - Input
   - Reference
-browser-compat: html.elements.input.attributes.accept
+browser-compat: html.elements.input.accept
 ---
 
 {{HTMLSidebar}}

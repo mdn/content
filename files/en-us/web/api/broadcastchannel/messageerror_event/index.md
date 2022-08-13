@@ -15,8 +15,8 @@ The `messageerror` event is fired on a {{domxref('BroadcastChannel')}} object wh
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('messageerror', event => { })
-onmessageerror = event => { }
+addEventListener('messageerror', (event) => { })
+onmessageerror = (event) => { }
 ```
 
 ## Event type
@@ -47,11 +47,11 @@ This code uses [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventList
 ```js
 const channel = new BroadcastChannel('example-channel');
 
-channel.addEventListener('message', event => {
+channel.addEventListener('message', (event) => {
   received.textContent = event.data;
 });
 
-channel.addEventListener('messageerror', event => {
+channel.addEventListener('messageerror', (event) => {
   console.error(event);
 });
 ```
@@ -61,11 +61,11 @@ The same, but using the `onmessage` and `onmessageerror` event handler propertie
 ```js
 const channel = new BroadcastChannel('example-channel');
 
-channel.onmessage = event => {
+channel.onmessage = (event) => {
   received.textContent = event.data;
 };
 
-channel.onmessageerror = event => {
+channel.onmessageerror = (event) => {
   console.log(event);
 };
 ```

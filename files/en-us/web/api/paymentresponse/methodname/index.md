@@ -40,8 +40,8 @@ object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a
 real-world implementation this data would then be sent to a payment server.
 
 ```js
-payment.show().then(paymentResponse => {
-  var paymentData = {
+payment.show().then((paymentResponse) => {
+  const paymentData = {
     // payment method string
     method: paymentResponse.methodName,
     // payment details as you requested

@@ -16,23 +16,25 @@ browser-compat: javascript.builtins.Array.flatMap
 
 The **`flatMap()`** method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a {{jsxref("Array.prototype.map","map()")}} followed by a {{jsxref("Array.prototype.flat","flat()")}} of depth 1 (`arr.map(...args).flat()`), but slightly more efficient than calling those two methods separately.
 
+{{EmbedInteractiveExample("pages/js/array-flatmap.html","shorter")}}
+
 ## Syntax
 
 ```js
 // Arrow function
-flatMap((currentValue) => { /* ... */ } )
-flatMap((currentValue, index) => { /* ... */ } )
-flatMap((currentValue, index, array) => { /* ... */ } )
+flatMap((currentValue) => { /* … */ } )
+flatMap((currentValue, index) => { /* … */ } )
+flatMap((currentValue, index, array) => { /* … */ } )
 
 // Callback function
 flatMap(callbackFn)
 flatMap(callbackFn, thisArg)
 
 // Inline callback function
-flatMap(function(currentValue) { /* ... */ })
-flatMap(function(currentValue, index) { /* ... */ })
-flatMap(function(currentValue, index, array){ /* ... */ })
-flatMap(function(currentValue, index, array) { /* ... */ }, thisArg)
+flatMap(function(currentValue) { /* … */ })
+flatMap(function(currentValue, index) { /* … */ })
+flatMap(function(currentValue, index, array){ /* … */ })
+flatMap(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -50,7 +52,7 @@ flatMap(function(currentValue, index, array) { /* ... */ }, thisArg)
     - `array`
       - : The array `flatMap` was called upon.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value
@@ -74,7 +76,7 @@ of depth 1.
 ```js
 const arr = [1, 2, 3, 4];
 
-arr.flatMap(x => [x, x * 2]);
+arr.flatMap((x) => [x, x * 2]);
 // is equivalent to
 const n = arr.length;
 const acc = new Array(n * 2);
@@ -99,14 +101,14 @@ its flexibility and readability are desired.
 ```js
 const arr1 = [1, 2, 3, 4];
 
-arr1.map(x => [x * 2]);
+arr1.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
 // only one level is flattened
-arr1.flatMap(x => [[x * 2]]);
+arr1.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
@@ -118,10 +120,10 @@ Let's generate a list of words from a list of sentences.
 ```js
 const arr1 = ["it's Sunny in", "", "California"];
 
-arr1.map(x => x.split(" "));
+arr1.map((x) => x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap(x => x.split(" "));
+arr1.flatMap((x) => x.split(" "));
 // ["it's","Sunny","in", "", "California"]
 ```
 
@@ -140,15 +142,15 @@ Return a 1-element array to keep the item, a multiple-element array to add items
 // Let's say we want to remove all the negative numbers
 // and split the odd numbers into an even number and a 1
 const a = [5, 4, -3, 20, 17, -33, -4, 18]
-//       |\  \  x   |  | \   x   x   |
-//      [4,1, 4,   20, 16, 1,       18]
+//         |\  \  x   |  | \   x   x   |
+//        [4,1, 4,   20, 16, 1,       18]
 
-a.flatMap( (n) =>
-  (n < 0) ?      [] :
-  (n % 2 == 0) ? [n] :
-                 [n-1, 1]
-)
-
+const result = a.flatMap((n) => {
+  if (n < 0) {
+    return [];
+  }
+  return n % 2 === 0 ? [n] : [n - 1, 1];
+});
 // expected output: [4, 1, 4, 20, 16, 1, 18]
 ```
 

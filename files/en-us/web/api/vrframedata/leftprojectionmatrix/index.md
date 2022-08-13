@@ -24,8 +24,6 @@ This value may be passed directly to WebGL's {{domxref("WebGLRenderingContext.un
 
 > **Warning:** It is highly recommended that applications use this matrix without modification. Failure to use this projection matrix when rendering may cause the presented frame to be distorted or badly aligned, resulting in varying degrees of user discomfort.
 
-## Syntax
-
 ## Value
 
 A {{jsxref("Float32Array")}} object.

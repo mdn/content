@@ -13,11 +13,11 @@ A `feed` is a dynamic scrollable `list` of `articles` in which articles are adde
 
 ```html
 <section role="feed" aria-busy="false">
-  ...
-  <article aria-posinset="427" aria-setsize="-1">...</article>
-  <article aria-posinset="428" aria-setsize="-1">...</article>
-  <article aria-posinset="429" aria-setsize="-1">...</article>
-  ...
+  …
+  <article aria-posinset="427" aria-setsize="-1">…</article>
+  <article aria-posinset="428" aria-setsize="-1">…</article>
+  <article aria-posinset="429" aria-setsize="-1">…</article>
+  …
 </section>
 ```
 

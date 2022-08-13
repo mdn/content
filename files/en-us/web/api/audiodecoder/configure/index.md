@@ -8,9 +8,10 @@ tags:
   - Reference
   - configure
   - AudioDecoder
+  - Experimental
 browser-compat: api.AudioDecoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
 
@@ -30,8 +31,8 @@ configure(config)
       - : An integer representing the number of frame samples per second.
     - `numberOfChannels`
       - : An integer representing the number of audio channels.
-    - `description`{{Optional_Inline}}
-      - : A {{domxref("BufferSource")}} containing a sequence of codec specific bytes, commonly known as extradata.
+    - `description` {{optional_inline}}
+      - : Aa {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
 
 > **Note:** The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
 

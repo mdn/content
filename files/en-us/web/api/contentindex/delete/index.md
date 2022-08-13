@@ -12,9 +12,10 @@ tags:
   - content index
   - content indexing
   - delete
+  - Experimental
 browser-compat: api.ContentIndex.delete
 ---
-{{DefaultAPISidebar("Content Index API")}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`delete()`** method of the
 {{domxref("ContentIndex")}} interface unregisters an item from the currently indexed
@@ -26,7 +27,7 @@ content.
 ## Syntax
 
 ```js
-ContentIndex.delete(id).then(...);
+ContentIndex.delete(id).then(/* … */);
 ```
 
 ### Parameters
@@ -65,7 +66,7 @@ async function unregisterContent(article) {
 ```
 
 The `delete` method can also be used within the
-{{domxref('ServiceWorker','service worker')}} scope.
+[service worker](/en-US/docs/Web/API/ServiceWorker) scope.
 
 ```js
 self.registration.index.delete('my-id');

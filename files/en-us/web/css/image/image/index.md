@@ -18,15 +18,15 @@ The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_
 
 ## Syntax
 
-{{CSSSyntax("image()")}}
+{{CSSSyntax}}
 
 where:
 
-- `image-tags`{{Optional_Inline}}
+- `image-tags` {{optional_inline}}
   - : The directionality of the image, either `ltr` for left-to-right or `rtl` for right-to-left.
 - `image-src` {{Optional_Inline}}
   - : Zero or more {{CSSxRef("url", "url()")}}s or {{CSSxRef("&lt;string&gt;")}}s specifying the image sources, with optional image fragment identifiers.
-- `color`{{Optional_Inline}}
+- `color` {{optional_inline}}
   - : A color, specifying a solid background color to use as a fallback if no `image-src` is found, supported, or declared.
 
 ### Bi-directional awareness

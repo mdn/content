@@ -41,11 +41,11 @@ new TouchEvent(type, options)
       - : and defaulting to `[]`, of type `Touch[]`, that is a list of objects for every point of contact which contributed to the event.
     - `ctrlKey` {{optional_inline}}
       - : A boolean value, defaulting to `false`, indicating if the <kbd>ctrl</kbd> key was simultaneously pressed.
-    - `shiftKey`{{optional_inline}}
+    - `shiftKey` {{optional_inline}}
       - : A boolean value, defaulting to `false`, indicating if the <kbd>shift</kbd> key was simultaneously pressed.
-    - `altKey`{{optional_inline}}
+    - `altKey` {{optional_inline}}
       - : A boolean value, defaulting to `false`, indicating if the <kbd>alt</kbd> key was simultaneously pressed.
-    - `metaKey`{{optional_inline}}
+    - `metaKey` {{optional_inline}}
       - : A boolean value, defaulting to `false`, indicating if the <kbd>meta</kbd> key was simultaneously pressed.
 
 ### Return value

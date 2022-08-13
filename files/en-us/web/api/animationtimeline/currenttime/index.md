@@ -34,14 +34,14 @@ animationTimeline.currentTime;
 // 23.404
 // 24.192
 // 25.514
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 animationTimeline.currentTime;
 // 49.8
 // 50.6
 // 51.7
-// ...
+// …
 ```
 
 In Firefox, you can also enable `privacy.resistFingerprinting`; the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.

@@ -35,9 +35,9 @@ The compressed texture formats are exposed by 4 constants and can be used in two
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_texture_compression_bptc');
+const ext = gl.getExtension('EXT_texture_compression_bptc');
 
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGBA_BPTC_UNORM_EXT, 128, 128, 0, textureData);

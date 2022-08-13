@@ -53,7 +53,7 @@ function setNewWebGLLayer(gl) {
   }
 
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl);
+    baseLayer: new XRWebGLLayer(xrSession, gl)
   });
 };
 ```

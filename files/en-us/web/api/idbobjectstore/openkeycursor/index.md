@@ -64,12 +64,12 @@ In this simple fragment we create a transaction, retrieve an object store, then 
 cursor to iterate through all the records in the object store:
 
 ```js
-var transaction = db.transaction("name", "readonly");
-var objectStore = transaction.objectStore("name");
-var request = objectStore.openKeyCursor();
-request.onsuccess = function(event) {
-  var cursor = event.target.result;
-  if(cursor) {
+const transaction = db.transaction("name", "readonly");
+const objectStore = transaction.objectStore("name");
+const request = objectStore.openKeyCursor();
+request.onsuccess = (event) => {
+  const cursor = event.target.result;
+  if (cursor) {
     // cursor.key contains the key of the current record being iterated through
     // note that there is no cursor.value, unlike for openCursor
     // this is where you'd do something with the result

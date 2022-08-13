@@ -120,7 +120,7 @@ browser.runtime.sendMessage(`Proxy-blocker: blocked ${url}`);
 
 function handleMessage(message, sender) {
   // only handle messages from the proxy script
-  if (sender.url != browser.extension.getURL(proxyScriptURL)) {
+  if (sender.url !== browser.extension.getURL(proxyScriptURL)) {
     return;
   }
   console.log(message);

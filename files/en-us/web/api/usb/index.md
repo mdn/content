@@ -9,6 +9,7 @@ tags:
   - USB
   - WebUSB
   - WebUSB API
+  - Experimental
 browser-compat: api.USB
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

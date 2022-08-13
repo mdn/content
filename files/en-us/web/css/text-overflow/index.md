@@ -77,7 +77,6 @@ This example shows different values for `text-overflow` applied to a paragraph, 
 #### HTML
 
 ```html
-
 <div class="ltr">
   <h2>Left to right text</h2>
   <pre>clip</pre>
@@ -196,7 +195,7 @@ p {
 // Scroll each paragraph so the start is also hidden
 const paras = document.querySelectorAll("p");
 
-for (let para of paras) {
+for (const para of paras) {
   para.scroll(100, 0);
 }
 ```

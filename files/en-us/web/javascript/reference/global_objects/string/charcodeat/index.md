@@ -130,12 +130,11 @@ function knownCharCodeAt(str, idx) {
   const end = str.length;
 
   const surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) != null) {
+  while ((surrogatePairs.exec(str)) !== null) {
     const li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
-    }
-    else {
+    } else {
       break;
     }
   }

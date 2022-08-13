@@ -9,7 +9,7 @@ tags:
   - CompressionStream
 browser-compat: api.CompressionStream
 ---
-{{DefaultAPISidebar("Compression Streams API")}}
+{{APIRef("Compression Streams API")}}
 
 The **`CompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} is an API for compressing a stream of data.
 

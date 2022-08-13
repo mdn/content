@@ -35,12 +35,12 @@ This method is usually called internally by JavaScript and not explicitly in web
 ### Using valueOf
 
 ```js
-let numObj = new Number(10)
-console.log(typeof numObj)  // object
+const numObj = new Number(10);
+console.log(typeof numObj); // object
 
-let num = numObj.valueOf()
-console.log(num)            // 10
-console.log(typeof num)     // number
+const num = numObj.valueOf();
+console.log(num); // 10
+console.log(typeof num); // number
 ```
 
 ## Specifications
@@ -53,4 +53,4 @@ console.log(typeof num)     // number
 
 ## See also
 
-- {{jsxref("Number.prototype.toSource()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

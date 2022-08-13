@@ -19,9 +19,9 @@ The `readingerror` event of the {{DOMxRef("NDEFReader")}} interface is fired whe
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('readingerror', event => { });
+addEventListener('readingerror', (event) => { });
 
-onreadingerror = event => { };
+onreadingerror = (event) => { };
 ```
 
 ## Event type
@@ -42,10 +42,9 @@ const ndef = new NDEFReader();
     ndef.onreading = (event) => {
       console.log("NDEF message read.");
     };
-  }).catch(error => {
+  }).catch((error) => {
     console.log(`Error! Scan failed to start: ${error}.`);
   });
-
 ```
 
 ## Specifications

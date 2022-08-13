@@ -38,7 +38,7 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
   - : An integer that is auto-incremented to be unique for each device currently connected to the system.
 - {{domxref("Gamepad.mapping")}} {{readonlyInline}}
   - : A string indicating whether the browser has remapped the controls on the device to a known layout.
-- {{domxref("Gamepad.pose")}} {{readonlyInline}}{{Experimental_Inline}}
+- {{domxref("Gamepad.pose")}} {{readonlyInline}} {{Experimental_Inline}}
   - : A {{domxref("GamepadPose")}} object representing the pose information associated with a WebVR controller (e.g. its position and orientation in 3D space).
 - {{domxref("Gamepad.timestamp")}} {{readonlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the last time the data for this gamepad was updated.
@@ -46,7 +46,7 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
 ## Example
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", (e) => {
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);

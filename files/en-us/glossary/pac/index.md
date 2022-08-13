@@ -9,7 +9,7 @@ A Proxy Auto-Configuration file (**PAC file**) is a file which contains a functi
 
 ```js
 function FindProxyForURL(url, host) {
-  /* ... */
+  // …
 }
 
 ret = FindProxyForURL(url, host)

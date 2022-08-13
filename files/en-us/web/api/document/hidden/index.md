@@ -23,15 +23,15 @@ value indicating if the page is considered hidden or not.
 ## Syntax
 
 ```js
-var boolean = document.hidden
+document.hidden
 ```
 
 ## Examples
 
 ```js
-document.addEventListener("visibilitychange", function() {
-  console.log( document.hidden );
-  // Modify behavior...
+document.addEventListener("visibilitychange", () => {
+  console.log(document.hidden);
+  // Modify behavior…
 });
 ```
 

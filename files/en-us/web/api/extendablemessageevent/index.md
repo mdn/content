@@ -4,7 +4,6 @@ slug: Web/API/ExtendableMessageEvent
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - ExtendableMessageEvent
   - Interface
   - Reference
@@ -13,7 +12,7 @@ browser-compat: api.ExtendableMessageEvent
 ---
 {{APIRef("Service Workers API")}}
 
-The **`ExtendableMessageEvent`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the event object of a {{event("message_(ServiceWorker)","message")}} event fired on a service worker (when a message is received on the {{domxref("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
+The **`ExtendableMessageEvent`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a message is received on the {{domxref("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
@@ -53,12 +52,12 @@ if (navigator.serviceWorker) {
 
   navigator.serviceWorker.register('service-worker.js');
 
-  navigator.serviceWorker.addEventListener('message', event => {
+  navigator.serviceWorker.addEventListener('message', (event) => {
     // event is a MessageEvent object
     console.log(`The service worker sent me a message: ${event.data}`);
   });
 
-  navigator.serviceWorker.ready.then( registration => {
+  navigator.serviceWorker.ready.then((registration) => {
     registration.active.postMessage("Hi service worker");
   });
 
@@ -69,7 +68,7 @@ The service worker can receive the message by listening to the `message` event:
 
 ```js
 // in the service worker
-addEventListener('message', event => {
+addEventListener('message', (event) => {
   // event is an ExtendableMessageEvent object
   console.log(`The client sent me a message: ${event.data}`);
 

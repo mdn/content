@@ -8,9 +8,10 @@ tags:
   - Reference
   - sendReport
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice.sendReport
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`sendReport()`** method of the {{domxref("HIDDevice")}} interface sends an output report to the HID device.
 
@@ -27,7 +28,7 @@ sendReport(reportId, data)
 - `reportId`
   - : An 8-bit report ID. If the HID device does not use report IDs, send `0`.
 - `data`
-  - : Bytes as a {{domxref("BufferSource")}}.
+  - : Bytes as an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
 
 ### Return value
 
@@ -35,7 +36,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` once the report has been 
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if sending the report fails for any reason.
 
 ## Examples
@@ -50,7 +51,7 @@ await device.sendReport(0x01, new Uint8Array(enableVibrationData));
 
 // Then, send a command to make the Joy-Con device rumble.
 // Actual bytes are available in the sample below.
-const rumbleData = [ /* ... */ ];
+const rumbleData = [ /* … */ ];
 await device.sendReport(0x10, new Uint8Array(rumbleData));
 ```
 

@@ -28,10 +28,10 @@ This example illustrates accessing the drag and drop data within the
 
 ```js
 function processData(d) {
-   // Process the data ...
+   // Process the data …
 }
 
-dragTarget.addEventListener("dragend", function(ev) {
+dragTarget.addEventListener("dragend", (ev) => {
    // Call the drag and drop data processor
    if (ev.dataTransfer !== null) processData(ev.dataTransfer);
  }, false);

@@ -191,7 +191,7 @@ This CSS establishes the look of the menu, with the background and text colors b
 > - adding the element to the DOM using `.appendChild()`
 > - removing an element's `display: none;` property.
 >
-> This is treated as if the initial state had never occurred and the element was always in its final state. The easy way to overcome this limitation is to apply a `window.setTimeout()` of a handful of milliseconds before changing the CSS property you intend to transition to.
+> This is treated as if the initial state had never occurred and the element was always in its final state. The easy way to overcome this limitation is to apply a `setTimeout()` of a handful of milliseconds before changing the CSS property you intend to transition to.
 
 ### Using transitions to make JavaScript functionality smooth
 
@@ -205,11 +205,11 @@ Transitions are a great tool to make things look much smoother without having to
 Using JavaScript you can make the effect of moving the ball to a certain position happen:
 
 ```js
-var f = document.getElementById('foo');
-document.addEventListener('click', function(ev){
-    f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
+const f = document.getElementById('foo');
+document.addEventListener('click', (ev) => {
+  f.style.transform = `translateY(${ev.clientY - 25}px)`;
+  f.style.transform += `translateX(${ev.clientX - 25}px)`;
+}, false);
 ```
 
 With CSS you can make it smooth without any extra effort. Add a transition to the element and any change will happen smoothly:
@@ -231,7 +231,7 @@ With CSS you can make it smooth without any extra effort. Add a transition to th
 
 ### Detecting the start and completion of a transition
 
-You can use the {{event("transitionend")}} event to detect that an animation has finished running. This is a {{domxref("TransitionEvent")}} object, which has two added properties beyond a typical {{domxref("Event")}} object:
+You can use the {{domxref("HTMLElement/transitionend_event", "transitionend")}} event to detect that an animation has finished running. This is a {{domxref("TransitionEvent")}} object, which has two added properties beyond a typical {{domxref("Event")}} object:
 
 - `propertyName`
   - : A string indicating the name of the CSS property whose transition completed.
@@ -244,7 +244,7 @@ As usual, you can use the {{domxref("EventTarget.addEventListener", "addEventLis
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-You detect the beginning of a transition using {{event("transitionrun")}} (fires before any delay) and {{event("transitionstart")}} (fires after any delay), in the same kind of fashion:
+You detect the beginning of a transition using {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} (fires before any delay) and {{domxref("HTMLElement/transitionstart_event", "transitionstart")}} (fires after any delay), in the same kind of fashion:
 
 ```js
 el.addEventListener("transitionrun", signalStart, true);
@@ -259,5 +259,5 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## See also
 
-- The {{domxref("TransitionEvent")}} interface and the {{event("transitionend")}} event.
+- The {{domxref("TransitionEvent")}} interface and the {{domxref("HTMLElement/transitionend_event", "transitionend")}} event.
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)

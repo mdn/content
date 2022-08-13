@@ -20,7 +20,7 @@ The **`RsaHashedImportParams`** dictionary of the [Web Crypto API](/en-US/docs/W
   - : A string. This should be set to `RSASSA-PKCS1-v1_5`, `RSA-PSS`, or `RSA-OAEP`, depending on the algorithm you want to use.
 - `hash`
 
-  - : A string representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto#digest_algorithms) to use. This can be one of `SHA-256`, `SHA-384`, or `SHA-512`.
+  - : A string representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto#supported_algorithms) to use. This can be one of `SHA-256`, `SHA-384`, or `SHA-512`.
 
     > **Warning:** Although you can technically pass `SHA-1` here, this is strongly discouraged as it is considered vulnerable.
 

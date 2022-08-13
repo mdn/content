@@ -112,25 +112,23 @@ A good way to visualize these nodes is by drawing an audio graph so you can visu
 Now we can add the play and pause functionality.
 
 ```js
-// select our play button
+// Select our play button
 const playButton = document.querySelector('button');
 
-playButton.addEventListener('click', function() {
+playButton.addEventListener('click', () => {
+  // Check if context is in suspended state (autoplay policy)
+  if (audioContext.state === 'suspended') {
+    audioContext.resume();
+  }
 
-    // check if context is in suspended state (autoplay policy)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
-    }
-
-    // play or pause track depending on state
-    if (this.dataset.playing === 'false') {
-        audioElement.play();
-        this.dataset.playing = 'true';
-    } else if (this.dataset.playing === 'true') {
-        audioElement.pause();
-        this.dataset.playing = 'false';
-    }
-
+  // Play or pause track depending on state
+  if (playButton.dataset.playing === 'false') {
+    audioElement.play();
+    playButton.dataset.playing = 'true';
+  } else if (playButton.dataset.playing === 'true') {
+    audioElement.pause();
+    playButton.dataset.playing = 'false';
+  }
 }, false);
 ```
 
@@ -138,7 +136,7 @@ We also need to take into account what to do when the track finishes playing. Ou
 
 ```js
 audioElement.addEventListener('ended', () => {
-    playButton.dataset.playing = 'false';
+  playButton.dataset.playing = 'false';
 }, false);
 ```
 
@@ -177,8 +175,8 @@ So let's grab this input's value and update the gain value when the input node h
 ```js
 const volumeControl = document.querySelector('#volume');
 
-volumeControl.addEventListener('input', function() {
-    gainNode.gain.value = this.value;
+volumeControl.addEventListener('input', () => {
+  gainNode.gain.value = volumeControl.value;
 }, false);
 ```
 
@@ -220,8 +218,8 @@ We use the values from that input to adjust our panner values in the same way as
 ```js
 const pannerControl = document.querySelector('#panner');
 
-pannerControl.addEventListener('input', function() {
-    panner.pan.value = this.value;
+pannerControl.addEventListener('input', () => {
+  panner.pan.value = pannerControl.value;
 }, false);
 ```
 
@@ -247,7 +245,7 @@ The [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic) is a fun
 
 ![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](voice-change-o-matic.png)
 
-Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/violent-theremin)).
+Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/webaudio-examples/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)).
 
 ![A page full of rainbow colors, with two buttons labeled Clear screen and mute.](violent-theremin.png)
 

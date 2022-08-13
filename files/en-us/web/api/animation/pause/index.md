@@ -41,7 +41,7 @@ None.
 
 ```js
 // animation of the cupcake slowly getting eaten up
-var nommingCake = document.getElementById('eat-me_sprite').animate(
+const nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
   { transform: 'translateY(-80%)' }
@@ -59,7 +59,7 @@ Additionally, when resetting :
 
 ```js
 // An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."
-var stopPlayingAlice = function() {
+const stopPlayingAlice = () => {
   aliceChange.pause();
   nommingCake.pause();
   drinking.pause();

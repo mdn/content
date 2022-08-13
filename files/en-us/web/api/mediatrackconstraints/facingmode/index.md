@@ -42,7 +42,7 @@ An `exact` value in this case indicates that the specified facing mode is
 specifically required; for example:
 
 ```js
-var constraints = {
+const constraints = {
   facingMode: { exact: "user" }
 };
 ```

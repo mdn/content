@@ -46,11 +46,10 @@ This example shows how to access the active source buffers of the {{domxref("Med
 
 ```js
 // Video is an already playing video using a MediaSource srcObject
-var video = document.querySelector('video');
-var mediaSource = video.srcObject;
-var sourceBufferList = mediaSource.activeSourceBuffers;
-for (var i = 0; i < sourceBufferList.length; i++) {
-  var sourceBuffer = sourceBufferList[i];
+const video = document.querySelector('video');
+const mediaSource = video.srcObject;
+const sourceBufferList = mediaSource.activeSourceBuffers;
+for (const sourceBuffer of sourceBufferList) {
   // Do something with each SourceBuffer, such as call abort()
   sourceBuffer.abort();
 }

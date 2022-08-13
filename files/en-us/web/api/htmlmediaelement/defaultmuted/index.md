@@ -21,7 +21,7 @@ A boolean value. A value of `true` means that the audio output will be muted by 
 ## Examples
 
 ```js
-var videoEle = document.createElement('video');
+const videoEle = document.createElement('video');
 videoEle.defaultMuted = true;
 console.log(videoEle.outerHTML); // <video muted=""></video>
 ```

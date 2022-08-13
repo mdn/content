@@ -29,7 +29,7 @@ None.
 
 ### Return value
 
-A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
+A `DOMRequest` object to handle the success or failure of the method call.
 
 If the method call is successful, the request's `result` will be a string,
 which is the endpoint URL.
@@ -40,15 +40,15 @@ which is the endpoint URL.
 ## Examples
 
 ```js
-var req = navigator.push.register();
+const req = navigator.push.register();
 
-req.onsuccess = function(e) {
-  var endpoint = req.result;
-  debug("New endpoint: " + endpoint );
+req.onsuccess = (e) => {
+  const endpoint = req.result;
+  console.log(`New endpoint: ${endpoint}`);
 }
 
-req.onerror = function(e) {
-  debug("Error getting a new endpoint: " + JSON.stringify(e));
+req.onerror = (e) => {
+  console.error(`Error getting a new endpoint: ${e.error}`);
 }
 ```
 
@@ -63,4 +63,3 @@ This feature is not part of any specification. It is no longer on track to becom
 ## See also
 
 - {{domxref("PushManager")}}
-- {{domxref("DOMRequest")}}

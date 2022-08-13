@@ -47,8 +47,7 @@ function draw() {
   const ctx = document.getElementById('canvas').getContext('2d');
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 6; j++) {
-      ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
-                       Math.floor(255 - 42.5 * j) + ', 0)';
+      ctx.fillStyle = `rgb(${Math.floor(255 - 42.5 * i)}, ${Math.floor(255 - 42.5 * j)}, 0)`;
       ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
@@ -76,8 +75,7 @@ This example is similar to the one above, but uses the `strokeStyle` property to
     const ctx = document.getElementById('canvas').getContext('2d');
     for (let i = 0; i < 6; i++) {
       for (let j = 0; j < 6; j++) {
-        ctx.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +
-                         Math.floor(255 - 42.5 * j) + ')';
+        ctx.strokeStyle = `rgb(0, ${Math.floor(255 - 42.5 * i)}, ${Math.floor(255 - 42.5 * j)})`;
         ctx.beginPath();
         ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
         ctx.stroke();
@@ -178,7 +176,7 @@ function draw() {
 
   // Draw semi transparent rectangles
   for (let i = 0; i < 10; i++) {
-    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
+    ctx.fillStyle = `rgba(255, 255, 255, ${(i + 1) / 10})`;
     for (let j = 0; j < 4; j++) {
       ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
     }
@@ -404,7 +402,7 @@ function draw() {
   ctx.beginPath();
   ctx.moveTo(0, 100);
   for (i = 0; i < 24 ; i++) {
-    const dy = i % 2 == 0 ? 25 : -25;
+    const dy = i % 2 === 0 ? 25 : -25;
     ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
   ctx.stroke();
@@ -418,7 +416,7 @@ function draw() {
     <td><canvas id="canvas" width="150" height="150"></canvas></td>
     <td>Change the <code>miterLimit</code> by entering a new value below and clicking the redraw button.<br><br>
       <form onsubmit="return draw();">
-        <label>Miter limit</label>
+        <label for="miterLimit">Miter limit</label>
         <input type="number" size="3" id="miterLimit"/>
         <input type="submit" value="Redraw"/>
       </form>
@@ -684,7 +682,7 @@ function draw() {
   // create new image object to use as pattern
   const img = new Image();
   img.src = 'canvas_createpattern.png';
-  img.onload = function() {
+  img.onload = () => {
 
     // create pattern
     const ptrn = ctx.createPattern(img, 'repeat');

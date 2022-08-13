@@ -34,7 +34,7 @@ JSON.stringify(value, replacer, space)
   - : The value to convert to a JSON string.
 - `replacer` {{optional_inline}}
   - : A function that alters the behavior of the stringification process, or an array of
-    strings or numbers naming properties of `value` that should be included in the output. If `replacer` is {{JSxRef("null")}} or not provided,
+    strings or numbers naming properties of `value` that should be included in the output. If `replacer` is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or not provided,
     all properties of the object are included in the resulting JSON string.
 - `space` {{optional_inline}}
 
@@ -47,7 +47,7 @@ JSON.stringify(value, replacer, space)
     If this is a `String`, the string (or the first 10 characters of the
     string, if it's longer than that) is used as white space.
 
-    If this parameter is not provided (or is {{JSxRef("null")}}), no white space is used.
+    If this parameter is not provided (or is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)), no white space is used.
 
 ### Return value
 
@@ -71,9 +71,9 @@ A JSON string representing the given value, or undefined.
   the traditional conversion semantics.
 - {{JSxRef("undefined")}}, {{JSxRef("Function")}}s, and {{JSxRef("Symbol")}}s are not
   valid JSON values. If any such values are encountered during conversion they are
-  either omitted (when found in an object) or changed to {{JSxRef("null")}} (when found
+  either omitted (when found in an object) or changed to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (when found
   in an array). `JSON.stringify()` can return `undefined` when
-  passing in "pure" values like `JSON.stringify(function() {})` or
+  passing in "pure" values like `JSON.stringify(() => {})` or
   `JSON.stringify(undefined)`.
 - All {{JSxRef("Symbol")}}-keyed properties will be completely ignored, even when
   using the `replacer` function.
@@ -81,7 +81,7 @@ A JSON string representing the given value, or undefined.
   returning a string (the same as `date.toISOString()`). Thus, they are
   treated as strings.
 - The numbers {{JSxRef("Infinity")}} and {{JSxRef("NaN")}}, as well as the value
-  {{JSxRef("null")}}, are all considered `null`.
+  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), are all considered `null`.
 - All the other {{JSxRef("Object")}} instances (including {{JSxRef("Map")}},
   {{JSxRef("Set")}}, {{JSxRef("WeakMap")}}, and {{JSxRef("WeakSet")}}) will have only
   their enumerable properties serialized.
@@ -108,7 +108,7 @@ JSON.stringify([new Number(3), new String('false'), new Boolean(false)]);
 // '[3,"false",false]'
 
 // String-keyed array elements are not enumerable and make no sense in JSON
-let a = ['foo', 'bar'];
+const a = ['foo', 'bar'];
 a['baz'] = 'quux';      // a: [ 0: 'foo', 1: 'bar', baz: 'quux' ]
 JSON.stringify(a);
 // '["foo","bar"]'
@@ -139,7 +139,7 @@ JSON.stringify({ [Symbol('foo')]: 'foo' });
 // '{}'
 JSON.stringify({ [Symbol.for('foo')]: 'foo' }, [Symbol.for('foo')]);
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
+JSON.stringify({ [Symbol.for('foo')]: 'foo' }, (k, v) => {
   if (typeof k === 'symbol') {
     return 'a symbol';
   }
@@ -147,7 +147,7 @@ JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
 // undefined
 
 // Non-enumerable properties:
-JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: { value: 'y', enumerable: true } }) );
+JSON.stringify(Object.create(null, { x: { value: 'x', enumerable: false }, y: { value: 'y', enumerable: true } }));
 // '{"y":"y"}'
 
 // BigInt values throw
@@ -170,7 +170,7 @@ the object or array being stringified.
 It should return the value that should be added to the JSON string, as follows:
 
 - If you return a {{JSxRef("Number")}}, {{JSxRef("String")}}, {{JSxRef("Boolean")}},
-  or {{JSxRef("null")}}, the stringified version of that value is used as the property's
+  or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the stringified version of that value is used as the property's
   value.
 - If you return a {{JSxRef("Function")}}, {{JSxRef("Symbol")}}, or
   {{JSxRef("undefined")}}, the property is not included in the output.
@@ -256,20 +256,17 @@ For example:
 
 ```js
 const obj = {
-    data: 'data',
+  data: 'data',
 
-    toJSON (key) {
-        if (key)
-            return `Now I am a nested object under key '${key}'`;
-        else
-            return this;
-    }
+  toJSON(key) {
+    return key ? `Now I am a nested object under key '${key}'` : this;
+  },
 };
 
 JSON.stringify(obj);
 // '{"data":"data"}'
 
-JSON.stringify({ obj }); // Shorthand property names (ES2015).
+JSON.stringify({ obj });
 // '{"obj":"Now I am a nested object under key 'obj'"}'
 
 JSON.stringify([ obj ]);
@@ -312,23 +309,24 @@ utility can be used:
 
 ```js
 function jsFriendlyJSONStringify (s) {
-    return JSON.stringify(s).
-        replace(/\u2028/g, '\\u2028').
-        replace(/\u2029/g, '\\u2029');
+  return JSON.stringify(s)
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
 }
 
 const s = {
-    a: String.fromCharCode(0x2028),
-    b: String.fromCharCode(0x2029)
+  a: String.fromCharCode(0x2028),
+  b: String.fromCharCode(0x2029),
 };
+
 try {
-    eval('(' + JSON.stringify(s) + ')');
+  eval(`(${JSON.stringify(s)})`);
 } catch (e) {
-    console.log(e); // "SyntaxError: unterminated string literal"
+  console.log(e); // "SyntaxError: unterminated string literal"
 }
 
 // No need for a catch
-eval('(' + jsFriendlyJSONStringify(s) + ')');
+eval(`(${jsFriendlyJSONStringify(s)})`);
 
 // console.log in Firefox unescapes the Unicode if
 //   logged to console, so we use alert

@@ -21,7 +21,7 @@ constructor creates a new {{DOMxRef("HTMLImageElement")}} instance. It is functi
 equivalent to {{DOMxRef("Document.createElement()",
     "document.createElement('img')")}}.
 
-> **Note:** This function should not be confused with the CSS [`image()`](</en-US/docs/Web/CSS/image/image()>) function.
+> **Note:** This function should not be confused with the CSS [`image()`](/en-US/docs/Web/CSS/image/image) function.
 
 ## Syntax
 
@@ -53,7 +53,7 @@ constructor both pairs of properties have the same values.
 ## Examples
 
 ```js
-var myImage = new Image(100, 200);
+const myImage = new Image(100, 200);
 myImage.src = 'picture.jpg';
 document.body.appendChild(myImage);
 ```

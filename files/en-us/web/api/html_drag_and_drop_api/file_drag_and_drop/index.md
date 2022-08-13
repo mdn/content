@@ -17,19 +17,19 @@ Note that {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} defines two
 
 ## Define the drop _zone_
 
-The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event needs an {{domxref("GlobalEventHandlers.ondrop","ondrop")}} global event handler. The following code snippet shows how this is done with a {{HTMLelement("div")}} element:
+The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event needs an `ondrop` event handler. The following code snippet shows how this is done with a {{HTMLelement("div")}} element:
 
 ```html
 <div id="drop_zone" ondrop="dropHandler(event);">
-  <p>Drag one or more files to this Drop Zone ...</p>
+  <p>Drag one or more files to this <i>drop zone</i>.</p>
 </div>
 ```
 
-Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("GlobalEventHandlers.ondragover","ondragover")}} global event handler:
+Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("HTMLElement.dragover_event","ondragover")}} event handler:
 
 ```html
 <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-  <p>Drag one or more files to this Drop Zone ...</p>
+  <p>Drag one or more files to this <i>drop zone</i>.</p>
 </div>
 ```
 
@@ -66,13 +66,13 @@ function dropHandler(ev) {
       // If dropped items aren't files, reject them
       if (ev.dataTransfer.items[i].kind === 'file') {
         const file = ev.dataTransfer.items[i].getAsFile();
-        console.log('... file[' + i + '].name = ' + file.name);
+        console.log(`… file[${i}].name = ${file.name}`);
       }
     }
   } else {
     // Use DataTransfer interface to access the file(s)
     for (let i = 0; i < ev.dataTransfer.files.length; i++) {
-      console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
+      console.log(`… file[${i}].name = ${ev.dataTransfer.files[i].name}`);
     }
   }
 }

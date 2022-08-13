@@ -121,7 +121,7 @@ Mozilla has been working on integrating its own Web developer tools that complem
 
 ### Other changes
 
-- The editor component (known as [Midas](/en-US/docs/Midas)) now [only accepts events](/en-US/docs/Using_the_Editor_from_XUL#Editor_event_handling) from privileged code.
+- The editor component (known as [Midas](/en-US/docs/Midas)) now [only accepts events](/en-US/docs/Using_the_Editor_from_XUL#editor_event_handling) from privileged code.
 
 ## See also
 

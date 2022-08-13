@@ -30,21 +30,21 @@ const writableStream = new WritableStream({
   start(controller) {
   },
   write(chunk, controller) {
-    ...
+    // ...
   },
   close(controller) {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 }, queuingStrategy);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 
-..
+// ..
 
 // check if the stream is closed
 writer.closed.then(() => {

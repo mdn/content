@@ -21,15 +21,15 @@ Description of a declarative rule for handling events.
 
 Values of this type are objects. They contain the following properties:
 
-- `id`{{optional_inline}}
+- `id` {{optional_inline}}
   - : `string`. Optional identifier that allows referencing this rule.
-- `tags`{{optional_inline}}
+- `tags` {{optional_inline}}
   - : `array` of `string`. Tags can be used to annotate rules and perform operations on sets of rules.
 - `conditions`
   - : `array` of `any`. List of conditions that can trigger the actions.
 - `actions`
   - : `array` of `any`. List of actions that are triggered if one of the conditions is fulfilled.
-- `priority`{{optional_inline}}
+- `priority` {{optional_inline}}
   - : `integer`. Optional priority of this rule. Defaults to 100.
 
 ## Browser compatibility

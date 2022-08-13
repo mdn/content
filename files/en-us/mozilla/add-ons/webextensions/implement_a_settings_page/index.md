@@ -112,7 +112,7 @@ Next, because we've promised to provide `options.html`, let's create it. Create 
   <body>
 
     <form>
-        <label>Border color<input type="text" id="color" ></label>
+        <label>Border color <input type="text" id="color" name="color"></label>
         <button type="submit">Save</button>
     </form>
 
@@ -176,10 +176,10 @@ function onGot(item) {
   if (item.color) {
     color = item.color;
   }
-  document.body.style.border = "10px solid " + color;
+  document.body.style.border = `10px solid ${color}`;
 }
 
-let getting = browser.storage.sync.get("color");
+const getting = browser.storage.sync.get("color");
 getting.then(onGot, onError);
 ```
 

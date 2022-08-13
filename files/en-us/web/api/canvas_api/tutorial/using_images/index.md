@@ -74,7 +74,7 @@ If you try to call `drawImage()` before the image has finished loading, it won't
 
 ```js
 const img = new Image();   // Create new img element
-img.addEventListener('load', function() {
+img.addEventListener('load', () => {
   // execute drawImage statements here
 }, false);
 img.src = 'myImage.png'; // Set source path
@@ -110,7 +110,7 @@ function getMyVideo() {
 }
 ```
 
-This returns the {{domxref("HTMLVideoElement")}} object for the video, which, as covered earlier, can be used as an image source for the canvse.
+This returns the {{domxref("HTMLVideoElement")}} object for the video, which, as covered earlier, can be used as an image source for the canvas.
 
 ## Drawing images
 
@@ -137,7 +137,7 @@ In the following example, we will use an external image as the backdrop for a sm
 function draw() {
   const ctx = document.getElementById('canvas').getContext('2d');
   const img = new Image();
-  img.onload = function() {
+  img.onload = () => {
     ctx.drawImage(img, 0, 0);
     ctx.beginPath();
     ctx.moveTo(30, 96);
@@ -179,7 +179,7 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 function draw() {
   const ctx = document.getElementById('canvas').getContext('2d');
   const img = new Image();
-  img.onload = function() {
+  img.onload = () => {
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 3; j++) {
         ctx.drawImage(img, j * 50, i * 38, 50, 38);
@@ -305,7 +305,7 @@ function draw() {
   for (let i = 0; i < document.images.length; i++) {
 
     // Don't add a canvas for the frame image
-    if (document.images[i].getAttribute('id') != 'frame') {
+    if (document.images[i].getAttribute('id') !== 'frame') {
 
       // Create canvas element
       canvas = document.createElement('canvas');

@@ -51,14 +51,12 @@ A new {{domxref("MediaElementAudioSourceNode")}} object instance.
 ## Examples
 
 ```js
-var ac = new AudioContext();
-var mediaElement = document.createElement('audio');
+const ac = new AudioContext();
+const mediaElement = document.createElement('audio');
 
-var options = {
-  mediaElement : mediaElement
-}
-
-var myAudioSource = new MediaElementAudioSourceNode(ac, options);
+const myAudioSource = new MediaElementAudioSourceNode(ac, {
+  mediaElement,
+});
 ```
 
 ## Specifications

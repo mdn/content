@@ -56,8 +56,8 @@ ctx.closePath();
 ctx.fillStyle = 'yellow';
 ctx.fill();
 
-const netutilCallback = function() {
-    return function(result) {
+const netutilCallback = () => {
+    return (result) => {
        if (!Components.isSuccessCode(result)) {
           alert('FAILED to create icon');
        } else {
@@ -66,9 +66,9 @@ const netutilCallback = function() {
     };
 }
 
-const mfasCallback = function(iconName) {
-    return function(inStream) {
-       const file = FileUtils.getFile('Desk', [iconName + '.ico']);
+const mfasCallback = (iconName) => {
+    return (inStream) => {
+       const file = FileUtils.getFile('Desk', [`${iconName}.ico`]);
        const outStream = FileUtils.openFileOutputStream(file);
        Cu.import('resource://gre/modules/NetUtil.jsm');
        NetUtil.asyncCopy(inStream, outStream, netutilCallback());

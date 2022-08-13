@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
 
 The **`Intl.Segmenter.supportedLocalesOf()`** method returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-supportedlocalesof.html")}}
+{{EmbedInteractiveExample("pages/js/intl-segmenter-supportedlocalesof.html", "shorter")}}
 
 ## Syntax
 
@@ -31,8 +31,8 @@ supportedLocalesOf(locales, options)
   - : An object that may have the following property:
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are
-        "`lookup`" and "`best fit`"; the default is
-        "`best fit`". For information about this option, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
+        `"lookup"` and `"best fit"`; the default is
+        `"best fit"`. For information about this option, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
 
 ### Return value
 
@@ -47,8 +47,8 @@ Assuming a runtime that supports Indonesian and German but not Balinese in list
 formatting, `supportedLocalesOf` returns the Indonesian and German language
 tags unchanged, even though `pinyin` collation is neither relevant to segmentation
 nor used with Indonesian, and a specialized German for Indonesia is
-unlikely to be supported. Note the specification of the "`lookup`"
-algorithm here — a "`best fit`" matcher might decide that Indonesian is an
+unlikely to be supported. Note the specification of the `"lookup"`
+algorithm here — a `"best fit"` matcher might decide that Indonesian is an
 adequate match for Balinese since most Balinese speakers also understand Indonesian,
 and therefore return the Balinese language tag as well.
 

@@ -28,7 +28,7 @@ A string.
 ```html
 <a id="myAnchor" href="/en-US/docs/Location.href#Examples">Examples</a>
 <script>
-  var anchor = document.getElementById("myAnchor");
+  const anchor = document.getElementById("myAnchor");
   console.log(anchor.hash); // Returns '#Examples'
 </script>
 ```

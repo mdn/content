@@ -4,7 +4,6 @@ slug: Web/API/Gamepad_API
 page-type: web-api-overview
 tags:
   - API
-  - Experimental
   - Gamepad API
   - Games
   - Overview

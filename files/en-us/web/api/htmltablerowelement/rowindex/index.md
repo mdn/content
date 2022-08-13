@@ -61,7 +61,7 @@ rows.forEach((row) => {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Browser compatibility
 

@@ -9,7 +9,9 @@ tags:
   - Textures
   - WebGL
   - WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext.texParameterf
+browser-compat:
+  - api.WebGLRenderingContext.texParameterf
+  - api.WebGLRenderingContext.texParameteri
 ---
 {{APIRef("WebGL")}}
 
@@ -19,8 +21,8 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) set texture parameters.
 ## Syntax
 
 ```js
-texParameterf(target, GLenum pname, GLfloat param)
-texParameteri(target, GLenum pname, GLint param)
+texParameterf(target, pname, param)
+texParameteri(target, pname, param)
 ```
 
 ### Parameters
@@ -165,13 +167,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST)
 
 ## Browser compatibility
 
-### `WebGLRenderingContext.texParameterf()`
-
 {{Compat}}
-
-### `WebGLRenderingContext.texParameteri()`
-
-{{Compat("api.WebGLRenderingContext.texParameteri")}}
 
 ## See also
 

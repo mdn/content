@@ -170,6 +170,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{jsxref("Statements/function", "function")}}
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/async_function*", "async function*")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Statements/class", "class")}}
 
@@ -203,12 +204,13 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/yield", "yield")}}
 - {{JSxRef("Operators/yield*", "yield*")}}
 - {{JSxRef("Operators/async_function", "async function")}}
+- {{JSxRef("Operators/async_function*", "async function*")}}
 - {{JSxRef("Operators/await", "await")}}
 - {{JSxRef("Global_Objects/Array", "[]")}}
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
-- {{JSxRef("null")}}
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 
 ### Left-hand-side expressions
 
@@ -216,7 +218,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/Optional_chaining", "<code>?.</code> (Optional chaining)", "", 1)}}
 - {{JSxRef("Operators/new", "new")}}
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
-- {{JSxRef("Statements/import%2Emeta", "import.meta")}}
+- {{JSxRef("Operators/import%2Emeta", "import.meta")}}
 - {{JSxRef("Operators/super", "super")}}
 - {{JSxRef("Operators/Spread_syntax", "...obj")}}
 

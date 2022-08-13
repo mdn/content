@@ -60,7 +60,7 @@ if (navigator.mediaDevices.getSupportedConstraints().sampleSize) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

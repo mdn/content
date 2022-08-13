@@ -39,22 +39,22 @@ Here is an example which can do just that. It allows creation of a simple range 
 
 ```js
 function makeRangeIterator(start = 0, end = Infinity, step = 1) {
-    let nextIndex = start;
-    let iterationCount = 0;
+  let nextIndex = start;
+  let iterationCount = 0;
 
-    const rangeIterator = {
-       next() {
-           let result;
-           if (nextIndex < end) {
-               result = { value: nextIndex, done: false }
-               nextIndex += step;
-               iterationCount++;
-               return result;
-           }
-           return { value: iterationCount, done: true }
-       }
-    };
-    return rangeIterator;
+  const rangeIterator = {
+    next() {
+      let result;
+      if (nextIndex < end) {
+        result = { value: nextIndex, done: false };
+        nextIndex += step;
+        iterationCount++;
+        return result;
+      }
+      return { value: iterationCount, done: true };
+    }
+  };
+  return rangeIterator;
 }
 ```
 
@@ -85,13 +85,13 @@ The function can be called as many times as desired, and returns a new Generator
 We can now adapt the example from above. The behavior of this code is identical, but the implementation is much easier to write and read.
 
 ```js
-function* makeRangeIterator(start = 0, end = 100, step = 1) {
-    let iterationCount = 0;
-    for (let i = start; i < end; i += step) {
-        iterationCount++;
-        yield i;
-    }
-    return iterationCount;
+function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
+  let iterationCount = 0;
+  for (let i = start; i < end; i += step) {
+    iterationCount++;
+    yield i;
+  }
+  return iterationCount;
 }
 ```
 
@@ -107,17 +107,17 @@ Iterables which can iterate only once (such as Generators) customarily return `t
 
 ```js
 function* makeIterator() {
-    yield 1;
-    yield 2;
+  yield 1;
+  yield 2;
 }
 
 const it = makeIterator();
 
 for (const itItem of it) {
-    console.log(itItem);
+  console.log(itItem);
 }
 
-console.log(it[Symbol.iterator]() === it) // true;
+console.log(it[Symbol.iterator]() === it); // true
 
 // This example show us generator(iterator) is iterable object,
 // which has the @@iterator method return the it (itself),
@@ -139,21 +139,23 @@ You can make your own iterables like this:
 
 ```js
 const myIterable = {
-    *[Symbol.iterator]() {
-        yield 1;
-        yield 2;
-        yield 3;
-    }
+  *[Symbol.iterator]() {
+    yield 1;
+    yield 2;
+    yield 3;
+  }
 }
+```
 
-for (let value of myIterable) {
-    console.log(value);
+User-defined iterables can be used in `for...of` loops or the spread syntax as usual.
+
+```js
+for (const value of myIterable) {
+  console.log(value);
 }
 // 1
 // 2
 // 3
-
-or
 
 [...myIterable]; // [1, 2, 3]
 ```
@@ -167,8 +169,8 @@ or
 Some statements and expressions expect iterables. For example: the {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/yield*","yield*")}}.
 
 ```js
-for (let value of ['a', 'b', 'c']) {
-    console.log(value);
+for (const value of ['a', 'b', 'c']) {
+  console.log(value);
 }
 // "a"
 // "b"
@@ -204,11 +206,11 @@ function* fibonacci() {
   let current = 0;
   let next = 1;
   while (true) {
-    let reset = yield current;
+    const reset = yield current;
     [current, next] = [next, next + current];
     if (reset) {
-        current = 0;
-        next = 1;
+      current = 0;
+      next = 1;
     }
   }
 }

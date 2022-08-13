@@ -4,7 +4,6 @@ slug: Web/API/fetch
 page-type: web-api-global-function
 tags:
   - API
-  - Experimental
   - Fetch
   - Fetch API
   - GlobalFetch
@@ -44,7 +43,7 @@ rather than the directive of the resources it's retrieving.
 
 ```js
 fetch(resource)
-fetch(resource, init)
+fetch(resource, options)
 ```
 
 ### Parameters
@@ -56,7 +55,7 @@ fetch(resource, init)
     - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
     - A {{domxref("Request")}} object.
 
-- `init` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object containing any custom settings that you want to apply to the request. The
     possible options are:
@@ -65,17 +64,17 @@ fetch(resource, init)
       - : The request method, e.g., `GET`, `POST`. Note that the
         {{httpheader("Origin")}} header is not set on Fetch requests with a method of
         {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
-        (This behavior was corrected in Firefox 65 — see {{bug(1508661)}}).
+        (This behavior was corrected in Firefox 65 — see {{bug(1508661)}}.)
     - `headers`
       - : Any headers you want to add to your request, contained within a
         {{domxref("Headers")}} object or an object literal with {{jsxref("String")}}
         values. Note that [some names are forbidden](/en-US/docs/Glossary/Forbidden_header_name).
     - `body`
-      - : Any body that you want to add to your request: this can be a
-        {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
-        {{domxref("URLSearchParams")}}, string, or
-        {{domxref("ReadableStream")}} object. Note that a request using the
-        `GET` or `HEAD` method cannot have a body.
+      - : Any body that you want to add to your request:
+        this can be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},
+        a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, string object or literal,
+        or a {{domxref("ReadableStream")}} object. This latest possibility is still experimental; check the [compatibility information](/en-US/docs/Web/API/Request#browser_compatibility) to verify you can use it.
+        Note that a request using the `GET` or `HEAD` method cannot have a body.
     - `mode`
       - : The mode you want to use for the request, e.g., `cors`,
         `no-cors`, or `same-origin`.
@@ -86,7 +85,7 @@ fetch(resource, init)
         - `omit`
           - : Tells browsers to exclude credentials from the request, and ignore any credentials sent back in the response (e.g., any {{HTTPHeader("Set-Cookie")}} header).
         - `same-origin`
-          - : Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs.
+          - : Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs. **This is the default value.**
         - `include`
 
           - : Tells browsers to include credentials in both same- and cross-origin requests, and always use any credentials sent back in responses.
@@ -99,7 +98,7 @@ fetch(resource, init)
 
       - : How to handle a `redirect` response:
 
-        - `follow`: Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`
+        - `follow`: Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`.
         - `error`: Abort with an error if a redirect occurs.
         - `manual`: Caller intends to process the response in another context.
           See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) for more information.
@@ -279,7 +278,7 @@ const myRequest = new Request('flowers.jpg');
 fetch(myRequest)
   .then((response) => {
     if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${ response.status }`);
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     return response.blob();
@@ -309,7 +308,7 @@ const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest, myInit)
   .then((response) => {
-    // ...
+    // …
   });
 ```
 

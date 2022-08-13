@@ -36,6 +36,8 @@ A floating point number parsed from the given `string`.
 Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted to a
 number.
 
+> **Note:** JavaScript does not have the distinction of "floating point numbers" and "integers" on the language level. [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) and `parseFloat()` only differ in their parsing behavior, but not necessarily their return values. For example, `parseInt("42")` and `parseFloat("42")` would return the same value: a {{jsxref("Number")}} 42.
+
 ## Description
 
 `parseFloat` is a function property of the global object.
@@ -76,7 +78,7 @@ parseFloat('  3.14  ');
 parseFloat('314e-2');
 parseFloat('0.0314E+2');
 parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat({ toString() { return "3.14" } });
 ```
 
 ### `parseFloat` returning `NaN`

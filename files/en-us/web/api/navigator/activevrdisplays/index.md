@@ -32,9 +32,9 @@ An array of {{domxref("VRDisplay")}} objects.
 
 ```js
 function showActive() {
-  var displays = navigator.activeVRDisplays;
-  for(var i = 0; i < displays.length; i++) {
-    console.log('Display ' + displays[i].displayId + ' is active.');
+  const displays = navigator.activeVRDisplays;
+  for (let i = 0; i < displays.length; i++) {
+    console.log(`Display ${displays[i].displayId} is active.`);
   }
 }
 ```

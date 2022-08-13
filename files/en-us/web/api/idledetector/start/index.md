@@ -28,7 +28,7 @@ start(options)
 
 ### Parameters
 
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
   - : An object with the following properties:
     - `threshold`
       - : The minimum number of idle milliseconds before reporting should begin.

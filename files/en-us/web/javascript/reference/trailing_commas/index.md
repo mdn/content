@@ -40,7 +40,7 @@ function parameters and to named imports and named exports.
 JavaScript ignores trailing commas in arrays:
 
 ```js
-var arr = [
+const arr = [
   1,
   2,
   3,
@@ -56,16 +56,16 @@ iterating arrays for example with {{jsxref("Array.prototype.forEach()")}} or
 {{jsxref("Array.prototype.map()")}}, array holes are skipped.
 
 ```js
-var arr = [1, 2, 3,,,];
+const arr = [1, 2, 3,,,];
 arr.length; // 5
 ```
 
 #### Objects
 
-Starting with ECMAScript 5, trailing commas in object literals are legal as well:
+Trailing commas in object literals are legal as well:
 
 ```js
-var object = {
+const object = {
   foo: "bar",
   baz: "qwerty",
   age: 42,
@@ -74,7 +74,7 @@ var object = {
 
 ### Trailing commas in functions
 
-ECMAScript 2017 allows trailing commas in function parameter lists.
+Trailing commas are also allowed in function parameter lists.
 
 #### Parameter definitions
 
@@ -98,7 +98,7 @@ class C {
   two(a, b,) {}
 }
 
-var obj = {
+const obj = {
   one(a,) {},
   two(a, b,) {},
 };
@@ -140,25 +140,23 @@ A trailing comma is also allowed on the left-hand side when using
 [a, b,] = [1, 2];
 
 // object destructuring with trailing comma
-var o = {
+const o = {
   p: 42,
   q: true,
 };
-var {p, q,} = o;
+const {p, q,} = o;
 ```
 
 Again, when using a rest element, a {{jsxref("SyntaxError")}} will be thrown:
 
 ```js example-bad
-var [a, ...b,] = [1, 2, 3];
+const [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 ```
 
 ### Trailing commas in JSON
 
-Trailing commas in objects were only introduced in ECMAScript 5. As JSON is based on
-JavaScript's syntax prior to ES5, **trailing commas are not allowed in
-JSON**.
+As JSON is based on a very restricted subset of JavaScript syntax, **trailing commas are not allowed in JSON**.
 
 Both lines will throw a `SyntaxError`:
 

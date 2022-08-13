@@ -44,7 +44,7 @@ within the button elements style attribute.
 const buttonEl = document.querySelector('.example');
 
 // find what's in the style attribute with attributeStyleMap and has()
-const hasPadTop = buttonEl.attributeStyleMap.has('padding-top);
+const hasPadTop = buttonEl.attributeStyleMap.has('padding-top');
 
 console.log(hasPadTop); // logs true if padding-top is present in style attribute
 ```

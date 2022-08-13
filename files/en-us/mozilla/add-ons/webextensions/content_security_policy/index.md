@@ -6,7 +6,7 @@ tags:
 ---
 {{AddonSidebar}}
 
-Extensions developed with WebExtension APIs have a Content Security Policy (CSP) applied to them by default. This restricts the sources from which they can load [\<script>](/en-US/docs/Web/HTML/Element/script) and [\<object>](/en-US/docs/Web/HTML/Element/object) resources, and disallows potentially unsafe practices such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).This article explains briefly what a CSP is, what the default policy is and what it means for an extension, and how an extension can change the default CSP.
+Extensions developed with WebExtension APIs have a Content Security Policy (CSP) applied to them by default. This restricts the sources from which they can load [\<script>](/en-US/docs/Web/HTML/Element/script) and [\<object>](/en-US/docs/Web/HTML/Element/object) resources, and disallows potentially unsafe practices such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). This article explains briefly what a CSP is, what the default policy is and what it means for an extension, and how an extension can change the default CSP.
 
 [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) is a mechanism to help prevent websites from inadvertently executing malicious content. A website specifies a CSP using an HTTP header sent from the server. The CSP is mostly concerned with specifying legitimate sources of various types of content, such as scripts or embedded plugins. For example, a website can use it to specify that the browser should only execute JavaScript served from the website itself, and not from any other sources. A CSP can also instruct the browser to disallow potentially unsafe practices, such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
@@ -83,11 +83,11 @@ eval("console.log('some output');");
 ```
 
 ```js
-window.setTimeout("alert('Hello World!');", 500);
+setTimeout("alert('Hello World!');", 500);
 ```
 
 ```js
-let f = new Function("console.log('foo');");
+const f = new Function("console.log('foo');");
 ```
 
 ### Inline JavaScript

@@ -30,7 +30,7 @@ constructor to fire a notification, passing it arguments to specify the body, ic
 title we want.
 
 ```js
-var notification = new Notification('To do list', {
+const notification = new Notification('To do list', {
   body: text,
   icon: img
 });

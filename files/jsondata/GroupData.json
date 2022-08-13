@@ -121,6 +121,16 @@
         "Element: paste"
       ]
     },
+    "Compression Streams API": {
+      "overview": ["Compression Streams API"],
+      "interfaces": [
+        "CompressionStream",
+        "DecompressionStream"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
       "interfaces": ["ContactsManager"],
@@ -145,6 +155,18 @@
       "interfaces": ["Console"],
       "methods": [],
       "properties": ["Window.console", "WorkerGlobalScope.console"],
+      "events": []
+    },
+    "Cookie Store API": {
+      "overview": ["Cookie Store API"],
+      "interfaces": [
+        "CookieStore",
+        "CookieStoreManager",
+        "CookieChangeEvent",
+        "ExtendableCookieChangeEvent"
+      ],
+      "methods": [],
+      "properties": [],
       "events": []
     },
     "Credential Management API": {
@@ -512,14 +534,12 @@
         "BeforeUnloadEvent",
         "DOMStringMap",
         "ErrorEvent",
-        "GlobalEventHandlers",
         "HashChangeEvent",
         "ImageData",
         "HTMLAnchorElement",
         "HTMLAreaElement",
         "HTMLAudioElement",
         "HTMLBaseElement",
-        "HTMLBaseFontElement",
         "HTMLBodyElement",
         "HTMLBRElement",
         "HTMLButtonElement",
@@ -729,7 +749,9 @@
       "overview": ["Intersection Observer API"],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": [],
+      "properties": [
+        "indexedDB"
+      ],
       "events": []
     },
     "Layout Instability API": {
@@ -767,10 +789,12 @@
       "dictionaries": []
     },
     "Media Capture and Streams": {
-      "overview": ["Media Streams API"],
-      "guides": ["/docs/Web/API/Media_Streams_API/Constraints"],
+      "overview": ["Media Capture and Streams API"],
+      "guides": [
+        "/docs/Web/API/Media_Capture_and_Streams_API/Constraints",
+        "/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos"
+      ],
       "interfaces": [
-        "BlobEvent",
         "CanvasCaptureMediaStreamTrack",
         "MediaDevices",
         "MediaStream",
@@ -788,6 +812,19 @@
       ],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
+    },
+    "Media Recorder API": {
+      "overview": ["Media Recorder API"],
+      "interfaces": ["MediaRecorder", "BlobEvent"],
+      "methods": [],
+      "properties": ["window.MediaRecorder"],
+      "events": [],
+      "dictionaries": [
+        "MediaRecorderOptions",
+        "BlobEventInit"
+      ],
+      "types": ["BitrateMode", "RecordingState"],
+      "callbacks": []
     },
     "Media Session API": {
       "overview": ["Media Session API"],
@@ -981,16 +1018,6 @@
         "Element.releasePointerCapture()"
       ],
       "properties": [
-        "GlobalEventHandlers.ongotpointercapture",
-        "GlobalEventHandlers.onlostpointercapture",
-        "GlobalEventHandlers.onpointerdown",
-        "GlobalEventHandlers.onpointermove",
-        "GlobalEventHandlers.onpointerup",
-        "GlobalEventHandlers.onpointercancel",
-        "GlobalEventHandlers.onpointerover",
-        "GlobalEventHandlers.onpointerout",
-        "GlobalEventHandlers.onpointerenter",
-        "GlobalEventHandlers.onpointerleave",
         "Navigator.maxTouchPoints"
       ],
       "events": [
@@ -1146,9 +1173,7 @@
     "Selection API": {
       "overview": ["Selection API"],
       "interfaces": ["Selection"],
-      "properties": [
-        "GlobalEventHandlers.onselectstart"
-      ],
+      "properties": [],
       "methods": ["Document.getSelection()", "Window.getSelection()"],
       "events": ["Document: selectionchange", "Document: selectstart"]
     },
@@ -1228,6 +1253,7 @@
       "guides": [
         "/docs/Web/API/Streams_API/Concepts",
         "/docs/Web/API/Streams_API/Using_readable_streams",
+        "/docs/Web/API/Streams_API/Using_readable_byte_streams",
         "/docs/Web/API/Streams_API/Using_writable_streams"
       ],
       "interfaces": [
@@ -1830,7 +1856,6 @@
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
         "/docs/Web/API/WebRTC_API/adapter.js",
-        "/docs/Web/API/WebRTC_API/Taking_still_photos",
         "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample"
       ],
       "interfaces": [
@@ -1913,15 +1938,6 @@
         "RTCIceCandidatePairStats",
         "RTCCertificateStats",
         "RTCRTPStreamStats"
-      ],
-      "types": [
-        "RTCPriorityType",
-        "RTCDtxStatus",
-        "RTCDegradationPreference",
-        "RTCSctpTransportState",
-        "RTCErrorDetailType",
-        "RTCQualityLimitationReason",
-        "RTCStatsType"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
       "properties": ["Navigator.mediaDevices"],
@@ -2024,6 +2040,27 @@
         "WorkerGlobalScope",
         "WorkerLocation",
         "WorkerNavigator"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "WebUSB API": {
+      "overview": ["WebUSB API"],
+      "interfaces": [
+        "USB",
+        "USBAlternateInterface",
+        "USBConfiguration",
+        "USBConnectionEvent",
+        "USBDevice",
+        "USBEndPoint",
+        "USBInterface",
+        "USBInTransferResult",
+        "USBIsochronousInTransferPacket",
+        "USBIsochronousInTransferResult",
+        "USBIsochronousOutTransferPacket",
+        "USBIsochronousOutTransferResult",
+        "USBOutTransferResult"
       ],
       "methods": [],
       "properties": [],

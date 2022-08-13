@@ -22,9 +22,9 @@ The **`error`** event of the {{domxref("SharedWorker")}} interface fires when an
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
+addEventListener('error', (event) => { });
 
-onerror = event => { };
+onerror = (event) => { };
 ```
 
 ## Event type
@@ -36,10 +36,10 @@ A generic {{domxref("Event")}}.
 The following code snippet creates a {{domxref("SharedWorker")}} object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor and sets up an `onerror` handler on the resulting object:
 
 ```js
-var mySharedWorker = new SharedWorker('shared-worker.js');
+const mySharedWorker = new SharedWorker('shared-worker.js');
 
-mySharedWorker.onerror = function(event) {
-  console.log('There is an error with your worker!');
+mySharedWorker.onerror = (event) => {
+  console.error('There is an error with your worker!');
 }
 ```
 

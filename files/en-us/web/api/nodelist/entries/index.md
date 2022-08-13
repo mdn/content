@@ -30,18 +30,18 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 ## Example
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+const node = document.createElement("div");
+const kid1 = document.createElement("p");
+const kid2 = document.createTextNode("hey");
+const kid3 = document.createElement("span");
 node.appendChild(kid1);
 node.appendChild(kid2);
 node.appendChild(kid3);
 
-var list = node.childNodes;
+const list = node.childNodes;
 
 // Using for..of
-for(var entry of list.entries()) {
+for (const entry of list.entries()) {
   console.log(entry);
 }
 ```

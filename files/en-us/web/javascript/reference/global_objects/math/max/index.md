@@ -25,12 +25,12 @@ The **`Math.max()`** function returns the largest of the zero or more numbers gi
 Math.max()
 Math.max(value0)
 Math.max(value0, value1)
-Math.max(value0, value1, /* ... ,*/ valueN)
+Math.max(value0, value1, /* … ,*/ valueN)
 ```
 
 ### Parameters
 
-- `value1`, `value2`, ... , `valueN`
+- `value1`, `value2`, … , `valueN`
   - : Zero or more numbers among which the largest value will be selected and returned.
 
 ### Return value
@@ -67,9 +67,7 @@ element in a numeric array, by comparing each value:
 
 ```js
 const arr = [1,2,3];
-const max = arr.reduce(function(a, b) {
-    return Math.max(a, b);
-}, -Infinity);
+const max = arr.reduce((a, b) => Math.max(a, b), -Infinity);
 ```
 
 The following function uses {{jsxref("Function.prototype.apply()")}} to get the maximum

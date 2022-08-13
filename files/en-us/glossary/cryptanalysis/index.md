@@ -11,4 +11,4 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "Cryptanalysis")}} on Wikipedia
+- [Cryptanalysis](https://en.wikipedia.org/wiki/Cryptanalysis) on Wikipedia

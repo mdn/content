@@ -11,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - clearHalt
+  - Experimental
 browser-compat: api.USBDevice.clearHalt
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
@@ -53,9 +54,9 @@ while (true) {
   let result = await data.transferIn(1, 6);
 
   if (result.data && result.data.byteLength === 6) {
-    console.log('Channel 1: ' + result.data.getUint16(0));
-    console.log('Channel 2: ' + result.data.getUint16(2));
-    console.log('Channel 5: ' + result.data.getUint16(4));
+    console.log(`Channel 1: ${result.data.getUint16(0)}`);
+    console.log(`Channel 2: ${result.data.getUint16(2)}`);
+    console.log(`Channel 5: ${result.data.getUint16(4)}`);
   }
 
   if (result.status === 'stall') {

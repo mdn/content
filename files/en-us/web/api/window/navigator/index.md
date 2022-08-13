@@ -26,7 +26,8 @@ The {{domxref("navigator")}} object.
 ### Example #1: Browser detect and return a string
 
 ```js
-var sBrowser, sUsrAg = navigator.userAgent;
+let sBrowser;
+const sUsrAg = navigator.userAgent;
 
 // The order matters here, and this may report false positives for unlisted browsers.
 
@@ -58,7 +59,7 @@ if (sUsrAg.indexOf("Firefox") > -1) {
   sBrowser = "unknown";
 }
 
-alert("You are using: " + sBrowser);
+alert(`You are using: ${sBrowser}`);
 ```
 
 ## Specifications

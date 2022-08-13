@@ -96,7 +96,7 @@ While more common in script typefaces, in the below example they are used to cre
 
 Associated CSS property: {{cssxref("font-variant-position")}}
 
-Position variants are used to enable typographic superscript and subscript glyphs. These are designed to work with the surrounding text without altering the baseline or line spacing. This is one of the key benefits over using the {{htmlelement("sub")}} or {{htmlelement("sup")}} elements.
+Position variants are used to enable typographic superscript and subscript glyphs. These are designed to work with the surrounding text without altering the baseline or line spacing. This is especially useful with the {{htmlelement("sub")}} or {{htmlelement("sup")}} elements.
 
 {{EmbedGHLiveSample("css-examples/font-features/font-variant-position.html", '100%', 550)}}
 

@@ -28,8 +28,8 @@ A {{domxref("ServiceWorker")}} object.
 ## Examples
 
 ```js
-self.addEventListener('install', function(event) {
-  var myActiveWorker = event.activeWorker;
+self.addEventListener('install', (event) => {
+  const myActiveWorker = event.activeWorker;
 });
 ```
 

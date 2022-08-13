@@ -46,7 +46,7 @@ degrading performance.
 ## Examples
 
 ```js
-var preloadLink = document.createElement("link");
+const preloadLink = document.createElement("link");
 preloadLink.href = "myimage.jpg";
 preloadLink.rel = "preload";
 preloadLink.as = "image";

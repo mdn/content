@@ -9,7 +9,7 @@ tags:
   - Navigation
   - Reference
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.navigate-to
+browser-compat: http.headers.Content-Security-Policy.navigate-to
 ---
 {{HTTPSidebar}}
 

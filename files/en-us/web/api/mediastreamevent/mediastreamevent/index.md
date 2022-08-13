@@ -38,7 +38,7 @@ A new {{domxref("MediaStreamEvent")}} object.
 
 ```js
 // s is a MediaStream
-var event = new MediaStreamEvent("addstream", {"stream": s});
+const event = new MediaStreamEvent("addstream", {"stream": s});
 ```
 
 ## Specifications

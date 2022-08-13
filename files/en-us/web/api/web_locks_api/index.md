@@ -10,7 +10,9 @@ tags:
   - Reference
   - Web Locks API
   - lock
-spec-urls: https://w3c.github.io/web-locks/
+browser-compat:
+  - api.LockManager
+  - api.Lock
 ---
 {{SeeCompatTable}}{{APIRef("Web Locks")}}{{DefaultAPISidebar}}{{securecontext_header}}
 
@@ -27,7 +29,7 @@ The API is used as follows:
 3. The lock is automatically released when the task completes.
 
 ```js
-navigator.locks.request('my_resource', async lock => {
+navigator.locks.request('my_resource', async (lock) => {
   // The lock has been acquired.
   await do_something();
   await do_something_else();
@@ -57,7 +59,7 @@ For example:
 await do_something_without_lock();
 
 // Request the lock.
-await navigator.locks.request('my_resource', async lock => {
+await navigator.locks.request('my_resource', async (lock) => {
   // The lock has been acquired.
   await do_something_with_lock();
   await do_something_else_with_lock();
@@ -87,15 +89,17 @@ For more complicated cases, such as holding the lock for an arbitrary amount of 
 ```js
 // Capture promise control functions:
 let resolve, reject;
-const p = new Promise((res, rej) => { resolve = res; reject = rej; });
+const p = new Promise((res, rej) => {
+  resolve = res;
+  reject = rej;
+});
 
 // Request the lock:
-navigator.locks.request('my_resource', lock => {
+navigator.locks.request(
+  'my_resource',
   // Lock is acquired.
-
-  return p;
-  // Now lock will be held until either resolve() or reject() is called.
-});
+  (lock) => p, // Now lock will be held until either resolve() or reject() is called.
+);
 ```
 
 ### Deadlocks
@@ -115,10 +119,4 @@ A deadlock occurs when a process can no longer make progress because each part i
 
 ## Browser compatibility
 
-### LockManager
-
-{{Compat("api.LockManager")}}
-
-### Lock
-
-{{Compat("api.Lock")}}
+{{Compat}}

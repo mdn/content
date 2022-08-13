@@ -79,35 +79,25 @@ Example of calling `open` with the current specification's
 `version` parameter:
 
 ```js
-var request = window.indexedDB.open("toDoList", 4);
+const request = window.indexedDB.open("toDoList", 4);
 ```
 
 In the following code snippet, we make a request to open a database, and include
 handlers for the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([View the example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
-var note = document.querySelector("ul");
-
-// In the following line, you should include the prefixes
-// of implementations you want to test.
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-// DON'T use "var indexedDB = ..." if you're not in a function.
-// Moreover, you may need references to some window.IDB* objects:
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-// (Mozilla has never prefixed these objects, so we don't
-//  need window.mozIDB*)
+const note = document.querySelector("ul");
 
 // Let us open version 4 of our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened
 // successfully, or not
-DBOpenRequest.onerror = function(event) {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += '<li>Error loading database.</li>';
 };
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db

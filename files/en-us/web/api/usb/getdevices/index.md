@@ -10,6 +10,7 @@ tags:
   - WebUSB
   - WebUSB API
   - getDevices()
+  - Experimental
 browser-compat: api.USB.getDevices
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
@@ -42,10 +43,10 @@ console. For information on pairing devices, see
 
 ```js
 navigator.usb.getDevices()
-.then(devices => {
-  console.log("Total devices: " + devices.length);
-  devices.forEach(device => {
-    console.log("Product name: " + device.productName + ", serial number " + device.serialNumber);
+.then((devices) => {
+  console.log(`Total devices: ${devices.length}`);
+  devices.forEach((device) => {
+    console.log(`Product name: ${device.productName}, serial number ${device.serialNumber}`);
   });
 });
 ```

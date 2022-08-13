@@ -16,7 +16,7 @@ constructor call is invalid somehow.
 
 ## Message
 
-```js
+```
 SyntaxError: Expected {x} (Edge)
 SyntaxError: malformed formal parameter (Firefox)
 ```
@@ -49,25 +49,20 @@ Firefox engineers are huge fans of 19th-century Gothic horror novels.
 ### Invalid cases
 
 ```js example-bad
-var f = Function('x y', 'return x + y;');
+const f = Function('x y', 'return x + y;');
 // SyntaxError (missing a comma)
 
-var f = Function('x,', 'return x;');
-// SyntaxError (extraneous comma)
-
-var f = Function(37, "alert('OK')");
+const g = Function(37, "alert('OK')");
 // SyntaxError (numbers can't be argument names)
 ```
 
 ### Valid cases
 
 ```js example-good
-var f = Function('x, y', 'return x + y;');  // correctly punctuated
-
-var f = Function('x', 'return x;');
+const f = Function('x, y', 'return x + y;');  // correctly punctuated
 
 // if you can, avoid using Function - this is much faster
-var f = function(x) { return x; };
+const g = function (x) { return x; };
 ```
 
 ## See also

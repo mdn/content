@@ -83,11 +83,11 @@ The code simply gets the previous element of the selected button and calls `show
 
 ```js
 document.querySelectorAll("button").forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (event) => {
     const input = event.srcElement.previousElementSibling;
     try {
       input.showPicker();
-    } catch(error) {
+    } catch (error) {
       window.alert(error);
     }
   });
@@ -98,7 +98,7 @@ document.querySelectorAll("button").forEach((button) => {
 
 Click the button next to each input type to show its picker.
 
-{{EmbedLiveSample("Showing the normal pickers","100%", "140px")}}
+{{EmbedLiveSample("Normal input pickers", "100%", "140px")}}
 
 ### showPicker() for a datalist input
 

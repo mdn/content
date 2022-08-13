@@ -35,7 +35,7 @@ When working with `WebGLQuery` objects, the following methods of the {{domxref("
 in this example, `gl` must be a {{domxref("WebGL2RenderingContext")}}. `WebGLQuery` objects are not available in WebGL 1.
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 ```
 
 ## Specifications

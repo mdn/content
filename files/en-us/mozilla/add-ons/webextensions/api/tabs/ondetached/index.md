@@ -65,9 +65,9 @@ Listen for detach events, and log the info:
 
 ```js
 function handleDetached(tabId, detachInfo) {
-  console.log("Tab: " + tabId + " moved");
-  console.log("Old window: " + detachInfo.oldWindowId);
-  console.log("Old index: " + detachInfo.oldPosition);
+  console.log(`Tab: ${tabId} moved`);
+  console.log(`Old window: ${detachInfo.oldWindowId}`);
+  console.log(`Old index: ${detachInfo.oldPosition}`);
 }
 
 browser.tabs.onDetached.addListener(handleDetached);

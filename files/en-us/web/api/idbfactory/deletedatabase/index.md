@@ -63,13 +63,13 @@ are fired.
 ## Examples
 
 ```js
-var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
+const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
-DBDeleteRequest.onerror = function(event) {
-  console.log("Error deleting database.");
+DBDeleteRequest.onerror = (event) => {
+  console.error("Error deleting database.");
 };
 
-DBDeleteRequest.onsuccess = function(event) {
+DBDeleteRequest.onsuccess = (event) => {
   console.log("Database deleted successfully");
 
   console.log(event.result); // should be undefined

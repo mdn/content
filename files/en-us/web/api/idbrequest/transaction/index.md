@@ -48,31 +48,31 @@ our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
 ([View the example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
-var title = "Walk dog";
+const title = "Walk dog";
 
 // Open up a transaction as usual
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
 // Get the to-do list object that has this title as it's title
-var objectStoreTitleRequest = objectStore.get(title);
+const objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = () => {
   // Grab the data object returned as the result
-  var data = objectStoreTitleRequest.result;
+  const data = objectStoreTitleRequest.result;
 
   // Update the notified value in the object to "yes"
   data.notified = "yes";
 
   // Create another request that inserts the item back
   // into the database
-  var updateTitleRequest = objectStore.put(data);
+  const updateTitleRequest = objectStore.put(data);
 
   // Log the transaction that originated this request
-  console.log("The transaction that originated this request is " + updateTitleRequest.transaction);
+  console.log(`The transaction that originated this request is ${updateTitleRequest.transaction}`);
 
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = () => {
     displayData();
   };
 };
@@ -82,24 +82,24 @@ This example shows how a the **`transaction`** property can be
 used during a version upgrade to access existing object stores:
 
 ```js
-var openRequest = indexedDB.open('db', 2);
+const openRequest = indexedDB.open('db', 2);
 console.log(openRequest.transaction); // Will log "null".
 
-openRequest.onupgradeneeded = function(event) {
+openRequest.onupgradeneeded = (event) => {
   console.log(openRequest.transaction.mode); // Will log "versionchange".
-  var db = openRequest.result;
+  const db = openRequest.result;
   if (event.oldVersion < 1) {
     // New database, create "books" object store.
     db.createObjectStore('books');
   }
   if (event.oldVersion < 2) {
     // Upgrading from v1 database: add index on "title" to "books" store.
-    var bookStore = openRequest.transaction.objectStore('books');
+    const bookStore = openRequest.transaction.objectStore('books');
     bookStore.createIndex('by_title', 'title');
   }
 };
 
-openRequest.onsuccess = function() {
+openRequest.onsuccess = () => {
   console.log(openRequest.transaction); // Will log "null".
 };
 ```

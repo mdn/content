@@ -41,11 +41,11 @@ The following example demonstrates how to get the location- or layout-specific s
 associated with the key that corresponds to the 'W' key on an English QWERTY keyboard.
 
 ```js
-var keyboard = navigator.keyboard;
+const keyboard = navigator.keyboard;
 keyboard.getLayoutMap()
-.then(keyboardLayoutMap => {
-  var upKey = keyboardLayoutMap.get('KeyW');
-  window.alert('Press ' + upKey + ' to move up.');
+.then((keyboardLayoutMap) => {
+  const upKey = keyboardLayoutMap.get('KeyW');
+  window.alert(`Press ${upKey} to move up.`);
 })
 ```
 

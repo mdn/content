@@ -28,7 +28,7 @@ an {{domxref("OffscreenCanvas")}},
 or another {{domxref("VideoFrame")}}).
 This means that a frame can be created from an image or video element.
 
-A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in a {{domxref("BufferSource")}}.
+A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
 
 Created frames may then turned into a media track, for example with the {{domxref("MediaStreamTrackGenerator")}} interface that creates a media track from a stream of frames.
 
@@ -39,25 +39,25 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 ## Properties
 
-- {{domxref("VideoFrame.format")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.format")}} {{ReadOnlyInline}}
   - : Returns the pixel format of the `VideoFrame`.
-- {{domxref("VideoFrame.codedWidth")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.codedWidth")}} {{ReadOnlyInline}}
   - : Returns the width of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
-- {{domxref("VideoFrame.codedHeight")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.codedHeight")}} {{ReadOnlyInline}}
   - : Returns the height of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
-- {{domxref("VideoFrame.codedRect")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.codedRect")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} with the width and height matching `codedWidth` and `codedHeight`.
-- {{domxref("VideoFrame.visibleRect")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.visibleRect")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
-- {{domxref("VideoFrame.displayWidth")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.displayWidth")}} {{ReadOnlyInline}}
   - : Returns the width of the `VideoFrame` when displayed after applying aspect ratio adjustments.
-- {{domxref("VideoFrame.displayHeight")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.displayHeight")}} {{ReadOnlyInline}}
   - : Returns the height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
-- {{domxref("VideoFrame.duration")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.duration")}} {{ReadOnlyInline}}
   - : Returns an integer indicating the duration of the video in microseconds.
-- {{domxref("VideoFrame.timestamp")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.timestamp")}} {{ReadOnlyInline}}
   - : Returns an integer indicating the timestamp of the video in microseconds.
-- {{domxref("VideoFrame.colorSpace")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.colorSpace")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("VideoColorSpace")}} object.
 
 ## Methods
@@ -94,7 +94,7 @@ while (true) {
       frame.close();
     } else {
       frame_counter++;
-      const insert_keyframe = (frame_counter % 150) == 0;
+      const insert_keyframe = frame_counter % 150 === 0;
       encoder.encode(frame, { keyFrame: insert_keyframe });
       frame.close();
     }

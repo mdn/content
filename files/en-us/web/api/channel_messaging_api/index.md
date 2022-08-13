@@ -8,6 +8,9 @@ tags:
   - HTML API
   - Overview
   - Reference
+browser-compat:
+  - api.MessageChannel
+  - api.MessagePort
 ---
 {{DefaultAPISidebar("Channel Messaging API")}}
 
@@ -41,17 +44,11 @@ Find out more about how to use this API in [Using channel messaging](/en-US/docs
 
 ## Specifications
 
-{{Specifications("api.MessageChannel")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-### `MessageChannel`
-
-{{Compat("api.MessageChannel", 0)}}
-
-### `MessagePort`
-
-{{Compat("api.MessagePort", 0)}}
+{{Compat}}
 
 ## See also
 

@@ -22,7 +22,7 @@ An {{domxref("HTMLCollection")}}.
 
 ```js
 const links = document.links;
-for(let i = 0; i < links.length; i++) {
+for (let i = 0; i < links.length; i++) {
   const linkHref = document.createTextNode(links[i].href);
   const lineBreak = document.createElement("br");
   document.body.appendChild(linkHref);

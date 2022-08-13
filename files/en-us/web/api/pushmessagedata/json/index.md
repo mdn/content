@@ -29,13 +29,13 @@ None.
 
 ### Return value
 
-The result of parsing push event data as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number...
+The result of parsing push event data as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number…
 
 ## Examples
 
 ```js
-self.addEventListener('push', function(event) {
-  var myData = event.data.json();
+self.addEventListener('push', (event) => {
+  const myData = event.data.json();
 
   // do something with your data
 });

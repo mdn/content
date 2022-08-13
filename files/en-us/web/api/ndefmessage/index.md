@@ -19,7 +19,7 @@ The **`NDEFMessage`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC
 
 ## Attributes
 
-- {{DOMxRef("NDEFMessage.records")}}{{ReadOnlyInline}}
+- {{DOMxRef("NDEFMessage.records")}} {{ReadOnlyInline}}
   - : Returns the list of NDEF records contained in the message.
 
 ## Specifications

@@ -9,7 +9,7 @@ tags:
   - Interface
   - Reference
   - Reporting API
-spec-urls: https://wicg.github.io/deprecation-reporting/#deprecationreportbody
+browser-compat: api.DeprecationReportBody
 ---
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
@@ -57,7 +57,7 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```
@@ -80,18 +80,18 @@ function displayReports(reports) {
   const list = document.createElement('ul');
   outputElem.appendChild(list);
 
-  for(let i = 0; i < reports.length; i++) {
-    let listItem = document.createElement('li');
-    let textNode = document.createTextNode('Report ' + (i + 1) + ', type: ' + reports[i].type);
+  for (let i = 0; i < reports.length; i++) {
+    const listItem = document.createElement('li');
+    const textNode = document.createTextNode(`Report ${i + 1}, type: ${reports[i].type}`);
     listItem.appendChild(textNode);
-    let innerList = document.createElement('ul');
+    const innerList = document.createElement('ul');
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
-    for (let key in reports[i].body) {
-      let innerListItem = document.createElement('li');
-      let keyValue = reports[i].body[key];
-      innerListItem.textContent = key + ': ' + keyValue;
+    for (const key in reports[i].body) {
+      const innerListItem = document.createElement('li');
+      const keyValue = reports[i].body[key];
+      innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);
     }
   }
@@ -106,7 +106,7 @@ The `reports` parameter contains an array of all the reports in the observer's r
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}
 
 ## See also
 

@@ -31,7 +31,7 @@ The above example creates a focusable button, but requires JavaScript and CSS to
 <button type="button" id="saveChanges">Save</button>
 ```
 
-> **Note:** If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and define event handlers for {{event("click")}} and {{event("keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
+> **Note:** If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and define event handlers for {{domxref("Element/click_event", "click")}} and {{domxref("Element/keydown_event", "keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
 
 In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element.
 
@@ -162,7 +162,7 @@ function handleCommand(event) {
     newNameInput.focus();  // give the text field focus to enable entering and additional name.
 
     // Don't add blank entries to the list.
-    if(name.length > 0) {
+    if (name.length > 0) {
         listItem = document.createElement('li');
         listItem.appendChild(document.createTextNode(name));
 
@@ -230,13 +230,16 @@ function handleBtnKeyDown(event) {
 }
 
 function toggleButton(element) {
-  var audio = document.getElementById('audio');
+  const audio = document.getElementById('audio');
+
   // Check to see if the button is pressed
-  var pressed = (element.getAttribute("aria-pressed") === "true");
+  const pressed = element.getAttribute("aria-pressed") === "true";
+  
   // Change aria-pressed to the opposite state
   element.setAttribute("aria-pressed", !pressed);
-  // toggle the play state of the audio file
-  if(pressed) {
+  
+  // Toggle the play state of the audio file
+  if (pressed) {
      audio.pause();
   } else {
      audio.play();

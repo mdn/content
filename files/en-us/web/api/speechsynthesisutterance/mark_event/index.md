@@ -17,9 +17,9 @@ The **`mark`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mark', event => { })
+addEventListener('mark', (event) => { })
 
-onmark = event => { }
+onmark = (event) => { }
 ```
 
 ## Event type
@@ -46,16 +46,16 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `mark` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('mark', function(event) {
-  console.log('A mark was reached: ' + event.name);
+utterThis.addEventListener('mark', (event) => {
+  console.log(`A mark was reached: ${event.name}`);
 });
 ```
 
 Or use the `onmark` event handler property:
 
 ```js
-utterThis.onmark = function(event) {
-  console.log('A mark was reached: ' + event.name);
+utterThis.onmark = (event) => {
+  console.log(`A mark was reached: ${event.name}`);
 }
 ```
 

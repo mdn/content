@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - Media
   - MediaKeys
   - Method
@@ -13,7 +12,7 @@ tags:
   - setServerCertificate
 browser-compat: api.MediaKeys.setServerCertificate
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+{{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeys.setServerCertificate()`** method provides a
 server certificate to be used to encrypt messages to the license server.
@@ -27,7 +26,7 @@ setServerCertificate(serverCertificate)
 ### Parameters
 
 - `serverCertificate`
-  - : A BufferSource object containing the server certificate. The contents are Key System-specific. It MUST NOT contain executable code.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} object containing the server certificate. The contents are Key System-specific. It MUST NOT contain executable code.
 
 ### Return value
 

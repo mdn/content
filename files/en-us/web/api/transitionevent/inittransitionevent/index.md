@@ -5,10 +5,9 @@ page-type: web-api-instance-method
 tags:
   - API
   - CSS
-  - CSS3 Transitions
+  - CSS Transitions
   - CSSOM
   - Deprecated
-  - Experimental
   - Method
   - Reference
   - TransitionEvent

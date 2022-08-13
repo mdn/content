@@ -12,5 +12,5 @@ Computers may make use of DTMF when dialing a modem, or when sending commands to
 
 ## See also
 
-- {{interwiki("wikipedia", "Dual-tone multi-frequency signaling")}} on Wikipedia
-- {{interwiki("wikipedia", "Pulse dialing")}} on Wikipedia
+- [Dual-tone multi-frequency signaling](https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling) on Wikipedia
+- [Pulse dialing](https://en.wikipedia.org/wiki/Pulse_dialing) on Wikipedia

@@ -46,14 +46,14 @@ The following example shows the use of the `singleNodeValue` property.
 ### JavaScript
 
 ```js
-var xpath = "//*[text()='XPath example']";
-var result = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+const xpath = "//*[text()='XPath example']";
+const result = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
 document.querySelector("output").textContent = result.singleNodeValue.localName;
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

@@ -48,7 +48,7 @@ showOpenFilePicker()
 
 ### Return value
 
-A {{jsxref('Array')}} of {{domxref('FileSystemFileHandle')}} objects.
+A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}} of {{domxref('FileSystemFileHandle')}} objects.
 
 ### Exceptions
 

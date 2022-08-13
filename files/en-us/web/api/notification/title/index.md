@@ -27,12 +27,12 @@ A string.
 
 ```js
 function spawnNotification(theBody,theIcon,theTitle) {
-  var options = {
+  const options = {
       body: theBody,
       icon: theIcon
   }
 
-  var n = new Notification(theTitle,options);
+  const n = new Notification(theTitle,options);
 
   console.log(n.title)
 }

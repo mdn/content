@@ -64,7 +64,7 @@ openRequest.onsuccess = (event) => {
   let request = store.getKey(IDBKeyRange(yesterday, today));
   request.onsuccess = (event) => {
     let when = event.target.result;
-    alert("The 1st activity in last 24 hours was occurred at " + when);
+    alert(`The 1st activity in last 24 hours was occurred at ${when}`);
   };
 };
 ```

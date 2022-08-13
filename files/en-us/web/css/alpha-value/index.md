@@ -21,9 +21,13 @@ The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/C
 
 The value of an `<alpha-value>` is given as either a [`<number>`](/en-US/docs/Web/CSS/number) or a [`<percentage>`](/en-US/docs/Web/CSS/percentage).
 
-If given as a number, the useful range is 0 (fully transparent) to 1.0 (fully opaque), with decimal values in between; that is, 0.5 indicates that half of the foreground color is used and half of the background color is used. Values outside the range of 0 to 1 are permitted, but are [clamped](<https://en.wikipedia.org/wiki/Clamping_(graphics)>) to like within the range 0 to 1.
+If given as a number, the useful range is 0 (fully transparent) to 1.0 (fully opaque), with decimal values in between; that is, 0.5 indicates that half of the foreground color is used and half of the background color is used. Values outside the range of 0 to 1 are permitted, but are [clamped](<https://en.wikipedia.org/wiki/Clamping_(graphics)>) to lie within the range 0 to 1.
 
 If the alpha value is given as a percentage, 0% corresponds to fully transparent while 100% indicates fully opaque.
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Interpolation
 

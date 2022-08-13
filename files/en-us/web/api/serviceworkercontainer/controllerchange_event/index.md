@@ -26,9 +26,9 @@ The **`controllerchange`** event of the
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('controllerchange', event => { });
+addEventListener('controllerchange', (event) => { });
 
-oncontrollerchange = event => { };
+oncontrollerchange = (event) => { };
 ```
 
 ## Event type

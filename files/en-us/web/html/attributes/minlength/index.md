@@ -10,7 +10,9 @@ tags:
   - Reference
   - minlength
   - textarea
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-minlength
+browser-compat:
+  - html.elements.input.minlength
+  - html.elements.textarea.minlength
 ---
 
 {{HTMLSidebar}}
@@ -49,7 +51,7 @@ input:invalid:focus {
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.minlength")}}
+{{Compat}}
 
 ## See also
 

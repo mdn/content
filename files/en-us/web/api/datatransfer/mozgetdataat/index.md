@@ -11,9 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozGetDataAt
 ---
-{{APIRef("HTML Drag and Drop API")}}
-
-{{ Non-standard_header() }}{{deprecated_header}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozGetDataAt()`** method is used to
 retrieve an item in the drag event's {{domxref("DataTransfer","data transfer")}} object,
@@ -54,16 +52,16 @@ function drop_handler(event)
 {
   const dt = event.dataTransfer;
   const count = dt.mozItemCount;
-  output("Items: " + count + "\n");
+  output(`Items: ${count}\n`);
 
   for (let i = 0; i < count; i++) {
-    output(" Item " + i + ":\n");
+    output(` Item ${i}:\n`);
     const types = dt.mozTypesAt(i);
     for (let t = 0; t < types.length; t++) {
-      output("  " + types[t] + ": ");
+      output(`  ${types[t]}: `);
       try {
         const data = dt.mozGetDataAt(types[t], i);
-        output("(" + (typeof data) + ") : <" + data + " >\n");
+        output(`(${typeof data}) : <${data}>\n`);
       } catch (ex) {
         output("<>\n");
         dump(ex);

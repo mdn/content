@@ -70,7 +70,7 @@ new MouseEvent(type, options)
       - : An {{domxref("EventTarget")}}, defaulting to `null` that is the element just left
         (in case of a {{domxref("Element/mouseenter_event", "mouseenter")}} or {{domxref("Element/mouseover_event", "mouseover")}})
         or is entering (in case of a {{domxref("Element/mouseout_event", "mouseout")}} or {{domxref("Element/mouseleave_event", "mouseleave")}}).
-    - `region` {{non-standard_inline}}{{optional_inline}}
+    - `region` {{non-standard_inline}} {{optional_inline}}
       - : A string, defaulting to `null`, that is the ID of the hit region affected by the event.
         The absence of any affected hit region is represented with the `null` value.
 
@@ -84,50 +84,6 @@ new MouseEvent(type, options)
 ## Browser compatibility
 
 {{Compat}}
-
-## Polyfill
-
-You can polyfill the `MouseEvent()` constructor functionality in Internet
-Explorer 9 and higher with the following code:
-
-```js
-(function (window) {
-  try {
-    new MouseEvent('test');
-    return false; // No need to polyfill
-  } catch (e) {
-    // Need to polyfill - fall through
-  }
-
-    // Polyfills DOM4 MouseEvent
-  var MouseEventPolyfill = function (eventType, params) {
-    params = params || { bubbles: false, cancelable: false };
-    var mouseEvent = document.createEvent('MouseEvent');
-    mouseEvent.initMouseEvent(eventType,
-      params.bubbles,
-      params.cancelable,
-      window,
-      0,
-      params.screenX || 0,
-      params.screenY || 0,
-      params.clientX || 0,
-      params.clientY || 0,
-      params.ctrlKey || false,
-      params.altKey || false,
-      params.shiftKey || false,
-      params.metaKey || false,
-      params.button || 0,
-      params.relatedTarget || null
-    );
-
-    return mouseEvent;
-  }
-
-  MouseEventPolyfill.prototype = Event.prototype;
-
-  window.MouseEvent = MouseEventPolyfill;
-})(window);
-```
 
 ## See also
 

@@ -38,9 +38,9 @@ demonstrates how to prevent that from happening:
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener("click", function(event) {
-         document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
-         event.preventDefault();
+document.querySelector("#id-checkbox").addEventListener("click", (event) => {
+  document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
+  event.preventDefault();
 }, false);
 ```
 
@@ -103,7 +103,7 @@ And here's the JavaScript code that does the job. First, listen for
 {{domxref("Element/keypress_event", "keypress")}} events:
 
 ```js
-var myTextbox = document.getElementById('my-textbox');
+const myTextbox = document.getElementById('my-textbox');
 myTextbox.addEventListener('keypress', checkName, false);
 ```
 
@@ -112,13 +112,13 @@ whether to allow it:
 
 ```js
 function checkName(evt) {
-  var charCode = evt.charCode;
-  if (charCode != 0) {
+  const charCode = evt.charCode;
+  if (charCode !== 0) {
     if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
       displayWarning(
-        "Please use lowercase letters only."
-        + "\n" + "charCode: " + charCode + "\n"
+        "Please use lowercase letters only.\n" +
+        `charCode: ${charCode}\n`
       );
     }
   }
@@ -129,24 +129,24 @@ The `displayWarning()` function presents a notification of a problem. It's
 not an elegant function but does the job for the purposes of this example:
 
 ```js
-var warningTimeout;
-var warningBox = document.createElement("div");
+let warningTimeout;
+const warningBox = document.createElement("div");
 warningBox.className = "warning";
 
 function displayWarning(msg) {
   warningBox.innerHTML = msg;
 
   if (document.body.contains(warningBox)) {
-    window.clearTimeout(warningTimeout);
+    clearTimeout(warningTimeout);
   } else {
     // insert warningBox after myTextbox
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(function() {
-      warningBox.parentNode.removeChild(warningBox);
-      warningTimeout = -1;
-    }, 2000);
+  warningTimeout = setTimeout(() => {
+    warningBox.parentNode.removeChild(warningBox);
+    warningTimeout = -1;
+  }, 2000);
 }
 ```
 

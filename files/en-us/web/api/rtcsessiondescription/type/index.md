@@ -21,7 +21,7 @@ string value which describes the description's type.
 ## Syntax
 
 ```js
-var value = sessionDescription.type;
+const value = sessionDescription.type;
 sessionDescription.type = value;
 ```
 

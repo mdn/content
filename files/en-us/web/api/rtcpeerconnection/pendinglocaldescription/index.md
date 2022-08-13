@@ -40,9 +40,9 @@ This example looks at the `pendingLocalDescription` to determine whether or
 not there's a description change being processed.
 
 ```js
-var pc = new RTCPeerConnection();
-…
-var sd = pc.pendingLocalDescription;
+const pc = new RTCPeerConnection();
+// ...
+const sd = pc.pendingLocalDescription;
 if (sd) {
   // There's a description change underway!
 }

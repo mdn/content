@@ -16,10 +16,10 @@ The read-only **`WebGLActiveInfo.size`** property is a {{jsxref("Number")}} repr
 ## Examples
 
 ```js
-var activeAttrib = gl.getActiveAttrib(program, index);
+const activeAttrib = gl.getActiveAttrib(program, index);
 activeAttrib.size;
 
-var activeUniform = gl.getActiveUniform(program, index);
+const activeUniform = gl.getActiveUniform(program, index);
 activeUniform.size;
 ```
 

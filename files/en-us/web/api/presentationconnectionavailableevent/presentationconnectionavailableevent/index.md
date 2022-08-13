@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent
 ---
-{{APIRef("Presentation API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Presentation API")}}{{SeeCompatTable}}
 The **`PresentationConnectionAvailableEvent()`** constructor creates a new {{domxref("PresentationConnectionAvailableEvent")}} object.
 
 ## Syntax

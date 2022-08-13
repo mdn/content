@@ -72,7 +72,7 @@ promise to be immediately rejected with a `NotAllowedError`. Web sites should
 be prepared to handle this situation. For example, a site should not present a user
 interface that assumes playback has begun automatically, but should instead update their
 UI based on whether the returned promise is fulfilled or rejected. See the
-[example](#example) below for more information.
+[example](#examples) below for more information.
 
 > **Note:** The `play()` method may cause the user to be asked
 > to grant permission to play the media, resulting in a possible delay before the
@@ -97,7 +97,7 @@ async function playVideo() {
   try {
     await videoElem.play();
     playButton.classList.add("playing");
-  } catch(err) {
+  } catch (err) {
     playButton.classList.remove("playing");
   }
 }
@@ -123,7 +123,7 @@ state of playback by watching for the resolution or rejection of the
 
 When this example is executed, it begins by collecting references to the
 {{HTMLElement("video")}} element as well as the {{HTMLElement("button")}} used to toggle
-playback on and off. It then sets up an event handler for the {{event("click")}} event
+playback on and off. It then sets up an event handler for the {{domxref("Element/click_event", "click")}} event
 on the play toggle button and attempts to automatically begin playback by calling
 `playVideo()`.
 

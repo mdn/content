@@ -25,8 +25,8 @@ A string.
 ## Examples
 
 ```js
-utterThis.onboundary = function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
+utterThis.onboundary = (event) => {
+  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
 }
 ```
 

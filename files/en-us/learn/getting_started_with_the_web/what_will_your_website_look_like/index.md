@@ -59,7 +59,7 @@ To choose a color, go to [the Color Picker](/en-US/docs/Web/CSS/CSS_Colors/Color
 To choose an image, go to [Google Images](https://www.google.com/imghp?gws_rd=ssl) and search for something suitable.
 
 1. When you find the image you want, click on the image to get an enlarged view of it.
-2. Right-click the image (Ctrl + click on a Mac), choose _Save Image As..._, and choose a safe place to save your image. Alternatively, copy the image's web address from your browser's address bar for later use.
+2. Right-click the image (Ctrl + click on a Mac), choose _Save Image As…_, and choose a safe place to save your image. Alternatively, copy the image's web address from your browser's address bar for later use.
 
 ![](updated-google-images.png)
 

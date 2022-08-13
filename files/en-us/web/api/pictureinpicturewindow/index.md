@@ -56,8 +56,8 @@ function printPipWindowDimensions(evt) {
   // The floating window dimensions are: 640x360px
 }
 
-button.onclick = function() {
-  video.requestPictureInPicture().then(pictureInPictureWindow => {
+button.onclick = () => {
+  video.requestPictureInPicture().then((pictureInPictureWindow) => {
     pictureInPictureWindow.onresize = printPipWindowDimensions;
   });
 };

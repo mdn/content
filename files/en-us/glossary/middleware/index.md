@@ -11,5 +11,5 @@ In server-side web application frameworks, the term is often more specifically u
 
 ## See also
 
-- {{Interwiki("wikipedia", "Middleware_(distributed_applications)", "Middleware_(distributed_applications)")}} on Wikipedia
-- {{Interwiki("wikipedia", "Middleware", "Middleware")}} on Wikipedia
+- [Middleware_(distributed_applications)](https://en.wikipedia.org/wiki/Middleware_(distributed_applications)) on Wikipedia
+- [Middleware](https://en.wikipedia.org/wiki/Middleware) on Wikipedia

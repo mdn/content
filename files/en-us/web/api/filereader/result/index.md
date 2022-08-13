@@ -84,13 +84,13 @@ the `result` is obtained and passed to the callback function provided to
 The content is handled as raw text data.
 
 ```js
-var fileInput = document.querySelector('input[type="file"]');
+const fileInput = document.querySelector('input[type="file"]');
 
 function read(callback) {
-  var file = fileInput.files.item(0);
-  var reader = new FileReader();
+  const file = fileInput.files.item(0);
+  const reader = new FileReader();
 
-  reader.onload = function() {
+  reader.onload = () => {
     callback(reader.result);
   }
 

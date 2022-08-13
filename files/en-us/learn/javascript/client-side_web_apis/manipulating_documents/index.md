@@ -60,7 +60,7 @@ We have created a simple example page at [dom-example.html](https://github.com/m
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>Simple DOM example</title>

@@ -34,8 +34,8 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Let's imagine an <a id="myAnchor" href="/en-US/docs/Location/toString"> element is in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.toString(); // Returns: 'https://developer.mozilla.org/en-US/docs/Location/toString'
+const anchor = document.getElementById("myAnchor");
+const result = anchor.toString(); // Returns: 'https://developer.mozilla.org/en-US/docs/Location/toString'
 ```
 
 ## Specifications

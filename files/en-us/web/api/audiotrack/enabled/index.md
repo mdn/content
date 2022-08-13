@@ -42,13 +42,13 @@ function swapCommentaryMain() {
   let audioTrackMain;
   let audioTrackCommentary;
 
-  videoElem.audioTracks.forEach(track) {
+  videoElem.audioTracks.forEach((track) => {
     if (track.kind === "main") {
       audioTrackMain = track;
     } else if (track.kind === "commentary") {
       audioTrackCommentary = track;
     }
-  }
+  });
 
   if (audioTrackMain && audioTrackCommentary) {
     const commentaryEnabled = audioTrackCommentary.enabled;

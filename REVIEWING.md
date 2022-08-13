@@ -36,7 +36,7 @@ out-of-date. This is being handled as follows:
 
 ## Review guidelines
 
-If you are reviewing mdn content changes, read through the following
+If you are reviewing MDN content changes, read through the following
 guidelines. There's quite a lot here, but don't worry if you don't review
 perfectly in accordance with all of these points immediately. It is more
 important to make sure the content is readable, useful, correct, and not

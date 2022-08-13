@@ -8,7 +8,7 @@ tags:
   - HTTP
   - Sandbox
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.sandbox
+browser-compat: http.headers.Content-Security-Policy.sandbox
 ---
 {{HTTPSidebar}}
 

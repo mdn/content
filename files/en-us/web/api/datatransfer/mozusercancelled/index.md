@@ -8,11 +8,10 @@ tags:
   - Property
   - Reference
   - drag and drop
+  - Experimental
 browser-compat: api.DataTransfer.mozUserCancelled
 ---
-{{APIRef("HTML Drag and Drop API")}}
-
-{{ Non-standard_header() }}
+{{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`DataTransfer.mozUserCancelled`** property is used in the
 {{domxref("HTMLElement/dragend_event", "dragend")}} event handler to determine if the user canceled the drag or not. If
@@ -38,7 +37,7 @@ This example shows the use of the `mozUserCancelled` property in the
 function dragend_handler(event)
 {
   const dragData = event.dataTransfer;
-  console.log("mozUserCancelled = " + dragData.mozUserCancelled);
+  console.log(`mozUserCancelled = ${dragData.mozUserCancelled}`);
 }
 ```
 

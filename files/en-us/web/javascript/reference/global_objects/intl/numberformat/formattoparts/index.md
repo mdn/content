@@ -18,6 +18,8 @@ The **`Intl.Numberformat.prototype.formatToParts()`** method
 allows locale-aware formatting of strings produced by `NumberFormat`
 formatters.
 
+{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-formattoparts.html")}}
+
 ## Syntax
 
 ```js

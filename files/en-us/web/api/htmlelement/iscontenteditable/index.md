@@ -43,7 +43,7 @@ document.getElementById('infoText2').innerHTML += document.getElementById('myTex
 
 ### Result
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('Examples') }}
 
 ## Specifications
 

@@ -51,7 +51,7 @@ tags:
 - Checkboxes and radio buttons support the `indeterminate` property
   - : HTML [`input`](/en-US/docs/Web/HTML/Element/input) elements of types `checkbox` and `radio` now support the indeterminate property, which allows a third, "indeterminate" state.
 - Canvas image smoothing can be controlled
-  - : The new [`mozImageSmoothingEnabled`](/en-US/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior) property can be used to turn on and off image smoothing when scaling in [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements.
+  - : The new [`mozImageSmoothingEnabled`](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#controlling_image_scaling_behavior) property can be used to turn on and off image smoothing when scaling in [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements.
 - Asynchronous script execution
   - : By setting the `async` attribute on a [`script`](/en-US/docs/Web/HTML/Element/script) element, the `script` will not block loading or display of the rest of the page. Instead the `script` executes as soon as it is downloaded.
 
@@ -115,7 +115,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 - [Locale-aware collation of data is now supported by the Storage API](</en-US/docs/Storage#Collation_(sorting)>)
   - : Gecko 1.9.2 added several new collation methods to provide optimized collation (sorting) of results using locale-aware techniques.
-- [Properties on a statement can now be enumerated](/en-US/docs/mozIStorageStatementParams#Enumeration_of_properties)
+- [Properties on a statement can now be enumerated](/en-US/docs/mozIStorageStatementParams#enumeration_of_properties)
   - : You can now use a [`for..in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) enumeration to enumerate all the properties on a statement.
 - mozIStorageStatement's getParameterIndex changed behavior between 3.5 and 3.6.
   - : See {{bug(528166)}} for details.

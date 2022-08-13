@@ -96,7 +96,7 @@ The first and second lines contain most of the information we talked about above
 - The target/host website (developer.mozilla.org).
 - The end of the first line also includes a short string identifying the specific protocol version (`HTTP/1.1`).
 
-The final line contains information about the client-side cookies — you can see in this case the cookie includes an id for managing sessions (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`).
+The final line contains information about the client-side cookies — you can see in this case the cookie includes an id for managing sessions (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; …`).
 
 The remaining lines contain information about the browser used and the sort of responses it can handle.
 For example, you can see here that:
@@ -139,7 +139,7 @@ Content-Length: 41823
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
-  ...
+  …
 ```
 
 The remainder of the response header includes information about the response (e.g. when it was generated), the server, and how it expects the browser to handle the page (e.g. the `X-Frame-Options: DENY` line tells the browser not to allow this page to be embedded in an {{htmlelement("iframe")}} in another site).

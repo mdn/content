@@ -49,7 +49,7 @@ in the browser to see it change.
 ### JavaScript
 
 ```js
-window.setInterval(function () {
+setInterval(() => {
   console.log(window.getSelection().rangeCount);
 }, 1000);
 ```
@@ -60,7 +60,7 @@ Open your console to see how many ranges are in the selection. In Gecko browsers
 can select multiple ranges across table cells by holding down <kbd>Ctrl</kbd> while
 dragging with the mouse.
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

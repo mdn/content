@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Client
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -47,8 +46,8 @@ None ({{jsxref("undefined")}}).
 Sending a message from a service worker to a client:
 
 ```js
-addEventListener('fetch', event => {
-  event.waitUntil(async function() {
+addEventListener('fetch', (event) => {
+  event.waitUntil((async () => {
     // Exit early if we don't have access to the client.
     // Eg, if it's cross-origin.
     if (!event.clientId) return;
@@ -65,14 +64,14 @@ addEventListener('fetch', event => {
       url: event.request.url
     });
 
-  }());
+  })());
 });
 ```
 
 Receiving that message:
 
 ```js
-navigator.serviceWorker.addEventListener('message', event => {
+navigator.serviceWorker.addEventListener('message', (event) => {
   console.log(event.data.msg, event.data.url);
 });
 ```

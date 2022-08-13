@@ -100,7 +100,7 @@ The HTML specification defines the following set of standard metadata names:
   > - Dynamically inserting `<meta name="referrer">` (with {{domxref("Document.write", "document.write()")}} or {{domxref("Node.appendChild", "appendChild()")}}) makes the referrer behavior unpredictable.
   > - When several conflicting policies are defined, the `no-referrer` policy is applied.
 
-- [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color): indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface. The `content` attribute contains a valid CSS {{cssxref("&lt;color&gt;")}}.
+- [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color): indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface. The `content` attribute contains a valid CSS {{cssxref("&lt;color&gt;")}}. The `media` attribute with a valid media query list can be included to set the media the theme color metadata applies to.
 - `color-scheme`: specifies one or more color schemes with which the document is compatible.
 
   The browser will use this information in tandem with the user's browser or device settings to determine what colors to use for everything from background and foregrounds to form controls and scrollbars. The primary use for `<meta name="color-scheme">` is to indicate compatibility with—and order of preference for—light and dark color modes.
@@ -257,3 +257,8 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
+- [Metadata: the `<meta>` element](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element) in [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)

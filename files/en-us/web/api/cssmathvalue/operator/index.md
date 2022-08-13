@@ -38,7 +38,7 @@ A {{jsxref('String')}}.
 ## Examples
 
 We create an element with a [`width`](/en-US/docs/Web/CSS/width)
-determined using a [`calc()`](</en-US/docs/Web/CSS/calc()>) function,
+determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function,
 then {{DOMxRef("console.log()")}} the
 `operator`.
 
@@ -59,10 +59,10 @@ We add the JavaScript
 ```js
 const styleMap = document.querySelector('div').computedStyleMap();
 
-console.log( styleMap.get('width') );                   // CSSMathSum {values: CSSNumericArray, operator: "sum"}
-console.log( styleMap.get('width').values );            // CSSNumericArray {0: CSSUnitValue, 1: CSSMathNegate, length: 2}
-console.log( styleMap.get('width').operator );          // 'sum'
-console.log( styleMap.get('width').values[1].operator ) // 'negate'
+console.log(styleMap.get('width'));                   // CSSMathSum {values: CSSNumericArray, operator: "sum"}
+console.log(styleMap.get('width').values);            // CSSNumericArray {0: CSSUnitValue, 1: CSSMathNegate, length: 2}
+console.log(styleMap.get('width').operator);          // 'sum'
+console.log(styleMap.get('width').values[1].operator); // 'negate'
 ```
 
 {{EmbedLiveSample("Examples", 120, 300)}}

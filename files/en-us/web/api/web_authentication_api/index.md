@@ -10,6 +10,13 @@ tags:
   - Reference
   - Web Authentication API
   - WebAuthn
+browser-compat:
+  - api.Credential
+  - api.CredentialsContainer
+  - api.PublicKeyCredential
+  - api.AuthenticatorResponse
+  - api.AuthenticatorAttestationResponse
+  - api.AuthenticatorAssertionResponse
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
@@ -17,7 +24,7 @@ The Web Authentication API is an extension of the [Credential Management API](/e
 
 ## Web authentication concepts and usage
 
-The Web Authentication API (also referred to as WebAuthn) uses {{interwiki("wikipedia", "Public-key_cryptography", "asymmetric (public-key) cryptography")}} instead of passwords or SMS texts for registering, authenticating, and {{interwiki("wikipedia", "Multi-factor_authentication", "second-factor authentication")}} with websites. This has some benefits:
+The Web Authentication API (also referred to as WebAuthn) uses [asymmetric (public-ke](https://en.wikipedia.org/wiki/Public-key_cryptography) instead of passwords or SMS texts for registering, authenticating, and [second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) with websites. This has some benefits:
 
 - **Protection against phishing:** An attacker who creates a fake login website can't login as the user because the signature changes with the [origin](/en-US/docs/Glossary/Origin) of the website.
 - **Reduced impact of data breaches:** Developers don't need to hash the public key, and if an attacker gets access to the public key used to verify the authentication, it can't authenticate because it needs the private key.
@@ -60,7 +67,7 @@ After this, the registration steps are:
     2. Ensuring that the origin was the origin expected
     3. Validating that the signature over the clientDataHash and the attestation using the certificate chain for that specific model of the authenticator
 
-    A complete list of validation steps [can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#registering-a-new-credential). Assuming that the checks pan out, the server will store the new public key associated with the user's account for future use -- that is, whenever the user desires to use the public key for authentication.
+    A complete list of validation steps [can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#registering-a-new-credential). Assuming that the checks pan out, the server will store the new public key associated with the user's account for future use — that is, whenever the user desires to use the public key for authentication.
 
 ### Authentication
 
@@ -125,7 +132,7 @@ After this, the authentication steps are:
 
 ```js
 // sample arguments for registration
-var createCredentialDefaultArgs = {
+const createCredentialDefaultArgs = {
     publicKey: {
         // Relying Party (a.k.a. - Service):
         rp: {
@@ -156,7 +163,7 @@ var createCredentialDefaultArgs = {
 };
 
 // sample arguments for login
-var getCredentialDefaultArgs = {
+const getCredentialDefaultArgs = {
     publicKey: {
         timeout: 60000,
         // allowCredentials: [newCredential] // see below
@@ -173,8 +180,8 @@ navigator.credentials.create(createCredentialDefaultArgs)
         console.log("NEW CREDENTIAL", cred);
 
         // normally the credential IDs available for an account would come from a server
-        // but we can just copy them from above...
-        var idList = [{
+        // but we can just copy them from above…
+        const idList = [{
             id: cred.rawId,
             transports: ["usb", "nfc", "ble"],
             type: "public-key"
@@ -192,32 +199,8 @@ navigator.credentials.create(createCredentialDefaultArgs)
 
 ## Specifications
 
-| Specification                                                                                      |
-| -------------------------------------------------------------------------------------------------- |
-| [Web Authentication: An API for accessing Public Key Credentials](https://w3c.github.io/webauthn/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Credential
-
-{{Compat("api.Credential")}}
-
-### CredentialsContainer
-
-{{Compat("api.CredentialsContainer")}}
-
-### PublicKeyCredential
-
-{{Compat("api.PublicKeyCredential")}}
-
-### AuthenticatorResponse
-
-{{Compat("api.AuthenticatorResponse")}}
-
-### AuthenticatorAttestationResponse
-
-{{Compat("api.AuthenticatorAttestationResponse")}}
-
-### AuthenticatorAssertionResponse
-
-{{Compat("api.AuthenticatorAssertionResponse")}}
+{{Compat}}

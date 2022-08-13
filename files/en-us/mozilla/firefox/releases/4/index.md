@@ -25,7 +25,7 @@ Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs,
 - [Meet the HTML5 parser](/en-US/docs/Learn/HTML)
   - : A look at what the HTML5 parser means to you, and how to embed SVG and MathML into your content inline.
 - [Forms in HTML5](/en-US/docs/Learn/Forms)
-  - : A look at improvements to web forms in HTML5. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
+  - : A look at improvements to web forms. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
 - [HTML5 Sections](/en-US/docs/Web/HTML/Element/Heading_Elements)
   - : Gecko now supports the new HTML5 elements related to sections in a document: {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("aside")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}} and {{HTMLElement("footer")}}.
 - [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes#hidden)
@@ -301,11 +301,11 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The {{domxref("DOMImplementation.createHTMLDocument()")}} method lets you create a new HTML document.
 - {{domxref("Node.mozMatchesSelector()")}} now throws a `SYNTAX_ERR` exception if the specified selector string is invalid, instead of incorrectly returning `false`.
 - You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: `element.style.fill = 'lime'`. See {{domxref("element.style")}} for details.
-- The document root now has [a `privatebrowsingmode` attribute](/en-US/docs/Supporting_private_browsing_mode#Detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
+- The document root now has [a `privatebrowsingmode` attribute](/en-US/docs/Supporting_private_browsing_mode#detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
 - The second parameter of the {{domxref("window.getComputedStyle()")}} method is now optional, as it is in every other major browser.
 - The DOM [`StorageEvent`](/en-US/docs/DOM/event/StorageEvent) object now matches the latest version of the specification.
 - The minimum allowed delay for the {{domxref("setTimeout()")}} method is now a preference, `dom.min_timeout_value`.
-- The [`MozAfterPaint`](/en-US/docs/Gecko-Specific_DOM_Events#MozAfterPaint) event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.
+- The [`MozAfterPaint`](/en-US/docs/Gecko-Specific_DOM_Events#mozafterpaint) event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.
 
 ### Security
 
@@ -345,7 +345,7 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
   - : The new Add-ons Manager provides information about installed add-ons, support for managing them, and provides ways to install and remove add-ons.
 - [PopupNotifications.jsm](/en-US/docs/JavaScript_code_modules/PopupNotifications.jsm)
   - : The new popup notifications module makes it easy to present attractive, non-modal notifications to the user. You can see how to use this API in [Using popup notifications](/en-US/docs/Using_popup_notifications).
-- [Loading code modules from chrome: URLs](/en-US/docs/JavaScript_code_modules/Using#Locating_the_code_module)
+- [Loading code modules from chrome: URLs](/en-US/docs/JavaScript_code_modules/Using#locating_the_code_module)
   - : You can now load JavaScript code modules using **chrome:** URLs, even inside JAR files.
 - DownloadLastDir.jsm
   - : The [`DownloadLastDir.jsm`](/en-US/docs/JavaScript_code_modules/DownloadLastDir.jsm) code module provides the `gDownloadLastDir` global variable, which contains a string you can use to learn the path of the directory into which the last download occurred. This module handles issues related to private browsing for you.
@@ -367,7 +367,7 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 
 #### Other DOM changes
 
-- The [new "document-element-inserted" notification](/en-US/docs/Observer_Notifications#Documents) is sent when a document's root element is created, but before any scripts are executed on it.
+- The [new "document-element-inserted" notification](/en-US/docs/Observer_Notifications#documents) is sent when a document's root element is created, but before any scripts are executed on it.
 
 ### XUL
 
@@ -392,7 +392,7 @@ Several changes were made to the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/X
 
 #### Remote XUL support removed
 
-Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using `file://` URLs unless you create the preference `dom.allow_XUL_XBL_for_file` and set it to `true`. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL. The [Remote XUL Manager extension](https://addons.mozilla.org/en-US/firefox/addon/235281/) lets you manage this whitelist.
+Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using `file://` URLs unless you create the preference `dom.allow_XUL_XBL_for_file` and set it to `true`. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL.
 
 #### Miscellaneous XUL changes
 
@@ -448,14 +448,14 @@ In addition to the specific changes referenced below, it's important to note tha
 ### Places
 
 - Places query results may now be observed by multiple observers, and queries may be executed asynchronously. This means there have been some changes to the `nsINavHistoryResult`, `nsINavHistoryQueryOptions`, and `nsINavHistoryContainerResultNode` interfaces. More significantly, the `nsINavHistoryResultViewer` interface has been renamed to `nsINavHistoryResultObserver`.
-- Some [new notifications](/en-US/docs/Observer_Notifications#Places) have been added to enable the browser to track the shutdown process of the Places service more reliably. Of these, most are for internal use only, but the `places-connection-closed` notification is available to know when the Places service has completed its shutdown process.
+- Some [new notifications](/en-US/docs/Observer_Notifications#places) have been added to enable the browser to track the shutdown process of the Places service more reliably. Of these, most are for internal use only, but the `places-connection-closed` notification is available to know when the Places service has completed its shutdown process.
 - The array size output parameter on several Places methods is now optional.
-- Support for `<menupopup type="places">` has been removed. Instead, you need to create and populate a menu with Places information manually, instead of having it done for you. See [Displaying Places information using views: Menu view](/en-US/docs/Displaying_Places_information_using_views#Menu_view) for details.
+- Support for `<menupopup type="places">` has been removed. Instead, you need to create and populate a menu with Places information manually, instead of having it done for you. See [Displaying Places information using views: Menu view](/en-US/docs/Displaying_Places_information_using_views#menu_view) for details.
 
 ### Interface changes
 
 - The `nsIDocShell` and `nsIWebBrowser` interfaces now have a new `isActive` attribute, which is used to allow optimization of code paths for documents that aren't currently visible.
-- The `nsIMemory` method `nsIMemory.isLowMemory()` has been deprecated. You should use ["memory-pressure" notifications](/en-US/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) to watch for low memory situations instead.
+- The `nsIMemory` method `nsIMemory.isLowMemory()` has been deprecated. You should use ["memory-pressure" notifications](/en-US/docs/XPCOM_Interface_Reference/nsIMemory#low_memory_notifications) to watch for low memory situations instead.
 - The API for handling redirects on HTTP channels has changed to let them be processed asynchronously. Any code that implements redirect handling using `nsIChannelEventSink.onChannelRedirect()` needs to be updated to use `nsIChannelEventSink.asyncOnChannelRedirect()` instead. This accepts a callback handler that must be called when a redirect is successfully completed.
 - The `nsINavHistoryResultObserver.batching()` method has been added, providing a way to group Places operations into batches, reducing the number of update notifications delivered, which can improve performance when observers are performing relatively involved tasks (such as refreshing views).
 - The long-obsolete `nsIPref` interface has finally been removed. If you haven't already switched to `nsIPrefService`, now is the time.
@@ -482,7 +482,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - The `accessibility.disablecache` preference is no longer supported; it was only exposed for debugging purposes and is no longer used.
 - Addons whose GUID changes from one version to another can now be updated properly.
 - As a side effect of the removal of platform-specific directories in add-on bundles, you can no longer provide different default preferences for each platform.
-- By default, [extensions are no longer unpacked when they are installed](https://blog.mozilla.org/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](/en-US/docs/Install_Manifests#unpack) property in the [install manifest](/en-US/docs/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](/en-US/docs/js-ctypes), [search plugins](/en-US/docs/Web/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](/en-US/docs/XUL_School/Local_Storage#SQLite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
+- By default, [extensions are no longer unpacked when they are installed](https://web.archive.org/web/20130707104214/https://blog.mozilla.org/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](/en-US/docs/Install_Manifests#unpack) property in the [install manifest](/en-US/docs/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](/en-US/docs/js-ctypes), [search plugins](/en-US/docs/Web/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](/en-US/docs/XUL_School/Local_Storage#sqlite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
 - You may now include extensions that [automatically get installed at application startup](/en-US/docs/Mozilla/Developer_guide/Customizing_Firefox#including_extensions_with_your_distribution_of_firefox) within a customized Firefox.
 
 ## Other changes

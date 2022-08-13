@@ -20,13 +20,13 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Properties
 
-- {{domxref("ImageDecoder.complete")}}{{ReadOnlyInline}}
+- {{domxref("ImageDecoder.complete")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether encoded data is completely buffered.
-- {{domxref("ImageDecoder.completed")}}{{ReadOnlyInline}}
+- {{domxref("ImageDecoder.completed")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves once `complete` is true.
-- {{domxref("ImageDecoder.tracks")}}{{ReadOnlyInline}}
+- {{domxref("ImageDecoder.tracks")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("ImageTrackList")}} object listing the available tracks and providing a method for selecting a track to decode.
-- {{domxref("ImageDecoder.type")}}{{ReadOnlyInline}}
+- {{domxref("ImageDecoder.type")}} {{ReadOnlyInline}}
   - : Returns a string reflecting the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) configured during construction.
 
 ## Methods
@@ -65,11 +65,11 @@ function renderImage(result) {
 
   const track = imageDecoder.tracks.selectedTrack;
 
-  // We check complete here since `frameCount` won't be stable until all data
-  // has been received. This may cause us to receive a RangeError during the
-  // decode() call below which needs to be handled.
+  // We check complete here since `frameCount` won't be stable until all
+  // data has been received. This may cause us to receive a RangeError
+  // during the decode() call below which needs to be handled.
   if (imageDecoder.complete) {
-    if (track.frameCount == 1)
+    if (track.frameCount === 1)
       return;
 
     if (imageIndex + 1 >= track.frameCount)
@@ -79,17 +79,19 @@ function renderImage(result) {
   // Decode the next frame ahead of display so it's ready in time.
   imageDecoder.decode({frameIndex: ++imageIndex})
       .then(
-          nextResult => setTimeout(
-              _ => {
+          (nextResult) => setTimeout(
+              () => {
                 renderImage(nextResult);
               },
               result.image.duration / 1000.0))
-      .catch(e => {
-        // We can end up requesting an imageIndex past the end since we're using
-        // a ReadableStream from fetch(), when this happens just wrap around.
+      .catch((e) => {
+        // We can end up requesting an imageIndex past the end since
+        // we're using a ReadableStream from fetch(), when this happens
+        // just wrap around.
         if (e instanceof RangeError) {
           imageIndex = 0;
-          imageDecoder.decode({frameIndex: imageIndex}).then(renderImage);
+          imageDecoder.decode({frameIndex: imageIndex})
+              .then(renderImage);
         } else {
           throw e;
         }
@@ -97,11 +99,12 @@ function renderImage(result) {
 }
 
 function decodeImage(imageByteStream) {
-  imageDecoder = new ImageDecoder({data: imageByteStream, type: 'image/gif'});
+  imageDecoder = new ImageDecoder(
+      {data: imageByteStream, type: 'image/gif'});
   imageDecoder.decode({frameIndex: imageIndex}).then(renderImage);
 }
 
-fetch('fancy.gif').then(response => decodeImage(response.body));
+fetch('fancy.gif').then((response) => decodeImage(response.body));
 ```
 
 ## Specifications

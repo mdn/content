@@ -19,7 +19,7 @@ the first audio track of a given {{domxref("MediaStream")}} as its source.
 
 > **Note:** Another way to create a
 > `MediaStreamAudioSourceNode` is to call
-> the{{domxref("AudioContext.createMediaStreamSource()")}} method, specifying the stream
+> the {{domxref("AudioContext.createMediaStreamSource()")}} method, specifying the stream
 > from which you want to obtain audio.
 
 ## Syntax
@@ -58,7 +58,7 @@ access to the user's camera, then creates a new
 
 ```js
 // define variables
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // getUserMedia block - grab stream
 // put it into a MediaStreamAudioSourceNode
@@ -68,15 +68,15 @@ if (navigator.mediaDevices.getUserMedia) {
       {
          audio: true,
          video: false
-      }).then(function(stream) {
-        var options = {
+      }).then((stream) => {
+        const options = {
           mediaStream : stream
         }
 
-        var source = new MediaStreamAudioSourceNode(audioCtx, options);
+        const source = new MediaStreamAudioSourceNode(audioCtx, options);
         source.connect(audioCtx.destination);
-      }).catch(function(err) {
-       console.log('The following gUM error occurred: ' + err);
+      }).catch((err) => {
+       console.error(`The following gUM error occurred: ${err}`);
       });
 } else {
   console.log('new getUserMedia not supported on your browser!');

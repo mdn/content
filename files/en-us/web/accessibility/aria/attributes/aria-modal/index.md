@@ -1,13 +1,14 @@
 ---
 title: 'aria-modal'
 slug: Web/Accessibility/ARIA/Attributes/aria-modal
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-modal
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-modal
 ---
 
 The `aria-modal` attribute indicates whether an element is modal when displayed.
@@ -34,12 +35,11 @@ There is an [`inert`](/en-US/docs/Web/API/HTMLElement/inert) attribute that, whe
 
 When supported, including `aria-modal="true"` on a [`dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role), removes the requirement of putting [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) on background content, as the `aria-modal` informs assistive technologies that content outside a dialog is inert. Note that there are still compatibility issues for the `dialog` element, so using it in production is not recommended.
 
-If a dialog is not modal -- there is no inert background and focus isn't confined to the dialog -- either include `aria-modal="false"` or omit the attribute altogether.
+If a dialog is not modal — there is no inert background and focus isn't confined to the dialog — either include `aria-modal="false"` or omit the attribute altogether.
 
 ## Example
 
 ```html
-
 <div id="backdrop" class="no-scroll">
   <div role="alertdialog"
        aria-modal="true"
@@ -87,20 +87,18 @@ The `aria-modal` attribute exposes the existence of the modal to assistive techn
 
 ## Associated roles
 
-Used in roles:  
+Used in roles:
 
 - [`window`](/en-US/docs/Web/Accessibility/ARIA/Roles/window_role)
 
-Inherits into roles:  
+Inherits into roles:
 
 - [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-modal","ARIA: aria-modal Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

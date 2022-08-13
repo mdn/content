@@ -7,9 +7,10 @@ tags:
   - Interface
   - Reference
   - HIDInputReportEvent
+  - Experimental
 browser-compat: api.HIDInputReportEvent
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`HIDInputReportEvent`** interface of the {{domxref('WebHID API')}} is passed to {{domxref("HIDDevice.inputreport_event")}} when an input report is received from any associated HID device.
 
@@ -19,11 +20,11 @@ The **`HIDInputReportEvent`** interface of the {{domxref('WebHID API')}} is pass
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
-- {{domxref("HIDInputReportEvent.data")}}{{readonlyinline}}
+- {{domxref("HIDInputReportEvent.data")}} {{readonlyinline}}
   - : A {{jsxref("DataView")}} containing the data from the input report, excluding the `reportId` if the HID interface uses report IDs.
-- {{domxref("HIDInputReportEvent.device")}}{{readonlyinline}}
+- {{domxref("HIDInputReportEvent.device")}} {{readonlyinline}}
   - : The {{domxref("HIDDevice")}} instance that represents the HID interface that sent the input report.
-- {{domxref("HIDInputReportEvent.reportId")}}{{readonlyinline}}
+- {{domxref("HIDInputReportEvent.reportId")}} {{readonlyinline}}
   - : The one-byte identification prefix for this report, or 0 if the HID interface does not use report IDs.
 
 ## Methods
@@ -35,7 +36,7 @@ _This interface inherits methods from its parent, {{domxref("Event")}}._
 The following example demonstrates listening for an `inputReport` that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
 
 ```js
-device.addEventListener("inputreport", event => {
+device.addEventListener("inputreport", (event) => {
   const { data, device, reportId } = event;
 
   // Handle only the Joy-Con Right device and a specific report ID.

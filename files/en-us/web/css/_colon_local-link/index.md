@@ -1,7 +1,7 @@
 ---
 title: ':local-link'
 slug: Web/CSS/:local-link
-browser-compat: css.selectors.local-link
+spec-urls: https://drafts.csswg.org/selectors/#local-link-pseudo
 ---
 {{ CSSRef }}
 
@@ -47,8 +47,8 @@ a:local-link {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is a proposal integrated into the specification. Currently, no browser supports it.
 
 ## See also
 
-- Link-related pseudo-classes: {{ cssxref(":link") }},{{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}
+- Link-related pseudo-classes: {{ cssxref(":link") }}, {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}, {{ cssxref(":any-link") }}

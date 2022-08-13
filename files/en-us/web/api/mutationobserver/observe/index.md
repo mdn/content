@@ -124,7 +124,7 @@ const elementToObserve = document.querySelector("#targetElementId");
 
 // create a new instance of `MutationObserver` named `observer`,
 // passing it a callback function
-const observer = new MutationObserver(function() {
+const observer = new MutationObserver(() => {
     console.log('callback that runs when observer is triggered');
 });
 
@@ -143,7 +143,7 @@ for example, reflect changes to users' nicknames, or to mark them as away from k
 
 ```js
 function callback(mutationList) {
-  mutationList.forEach(function(mutation) {
+  mutationList.forEach((mutation) => {
     switch(mutation.type) {
       case "attributes":
         switch(mutation.attributeName) {
@@ -159,9 +159,9 @@ function callback(mutationList) {
   });
 }
 
-var userListElement = document.querySelector("#userlist");
+const userListElement = document.querySelector("#userlist");
 
-var observer = new MutationObserver(callback);
+const observer = new MutationObserver(callback);
 observer.observe(userListElement, {
   attributeFilter: [ "status", "username" ],
   attributeOldValue: true,

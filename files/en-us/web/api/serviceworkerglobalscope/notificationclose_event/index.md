@@ -14,7 +14,7 @@ The **`notificationclose`** event fires when a user closes a displayed notificat
 
 Notifications created on the main thread or in workers which aren't service workers
 using the {{domxref("Notification.Notification","Notification()")}} constructor will
-instead receive a {{Event("close")}} event on the `Notification` object
+instead receive a {{domxref("Notification/close_event", "close")}} event on the `Notification` object
 itself.
 
 > **Note:** Trying to create a notification inside the
@@ -29,9 +29,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('notificationclose', event => { });
+addEventListener('notificationclose', (event) => { });
 
-onnotificationclose = event => { };
+onnotificationclose = (event) => { };
 ```
 
 ## Event type
@@ -53,7 +53,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 ```js
 //Inside a service worker.
-self.onnotificationclose = function(event) {
+self.onnotificationclose = (event) => {
   console.log('On notification close: ', event.notification.tag);
 };
 ```

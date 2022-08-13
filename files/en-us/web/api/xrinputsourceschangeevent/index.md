@@ -60,8 +60,8 @@ The following example shows how to set up an event handler which uses `inputsour
 xrSession.addEventListener("inputsourceschange", onInputSourcesChange);
 
 function onInputSourcesChange(event) {
-  for (let input of event.added) {
-    if (input.targetRayMode == "tracked-pointer") {
+  for (const input of event.added) {
+    if (input.targetRayMode === "tracked-pointer") {
       loadControllerMesh(input);
     }
   }

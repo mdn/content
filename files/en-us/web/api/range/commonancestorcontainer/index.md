@@ -85,7 +85,7 @@ body {
 ### JavaScript
 
 ```js
-document.addEventListener('pointerup', e => {
+document.addEventListener('pointerup', (e) => {
   const selection = window.getSelection();
 
   if (selection.type === 'Range') {
@@ -110,7 +110,7 @@ function playAnimation(el) {
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 190)}}
+{{EmbedLiveSample("Examples", 700, 190)}}
 
 ## Specifications
 

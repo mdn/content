@@ -41,12 +41,12 @@ A live {{domxref("HTMLCollection")}} of found elements in the order they appear 
 
 ```js
 // check the alignment on a number of cells in a table in an XHTML document.
-var table = document.getElementById("forecast-table");
-var cells = table.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "td");
+const table = document.getElementById("forecast-table");
+const cells = table.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "td");
 
-for (var i = 0; i < cells.length; i++) {
-    var axis = cells[i].getAttribute("axis");
-    if (axis == "year") {
+for (let i = 0; i < cells.length; i++) {
+    const axis = cells[i].getAttribute("axis");
+    if (axis === "year") {
         // grab the data
     }
 }

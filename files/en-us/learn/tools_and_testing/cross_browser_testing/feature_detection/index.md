@@ -82,6 +82,8 @@ Let's implement something that demonstrates this, although we'll keep it simple 
     <script src="html5shiv.min.js"></script>
     ```
 
+> **Note:** This step is no longer needed. All modern browsers are able to render semantic elements.
+
 3. Have a look at your example CSS files — you'll see that `basic-styling.css` handles all the styling that we want to give to every browser, whereas the other two CSS files contain the CSS we want to selectively apply to browsers depending on their support levels. You can look at the different effects these two files have by manually changing the CSS file referred to by the second {{htmlelement("link")}} element, but let's instead implement some JavaScript to automatically swap them as needed.
 4. First, remove the contents of the second `<link>` element's `href` attribute. We will fill this in dynamically later on.
 5. Next, add a `<script></script>` element at the bottom of your body (just before the closing `</body>` tag).
@@ -107,7 +109,7 @@ When you save everything and try out your example, you should see the flexbox la
 
 #### @supports
 
-In recent times, CSS has had its own native feature detection mechanism introduced — the {{cssxref("@supports")}} at-rule. This works in a similar manner to [media queries](/en-US/docs/Web/CSS/Media_Queries) (see also [Responsive design problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#responsive_design_problems)) — except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported.
+CSS has a native feature detection mechanism: the {{cssxref("@supports")}} at-rule. This works in a similar manner to [media queries](/en-US/docs/Web/CSS/Media_Queries) (see also [Responsive design problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#responsive_design_problems)) — except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported.
 
 For example, we could rewrite our previous example to use `@supports` — see [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) and [`supports-styling.css`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). If you look at the latter, you'll see a couple of `@supports` blocks, for example:
 
@@ -142,7 +144,7 @@ This at-rule block applies the CSS rule within only if the current browser suppo
 }
 ```
 
-This may look a lot more convenient than the previous example — we can do all of our feature detection in CSS, no JavaScript required, and we can handle all the logic in a single CSS file, cutting down on HTTP requests. the problem here is browser support — `@supports` is not supported at all in IE, and only supported in very recent versions of Safari/iOS WebKit (9+/9.2+), whereas the JavaScript version should work in much older browsers (probably back to IE8 or 9, although older versions of IE will have additional problems, such as not supporting {{domxref("Document.querySelector")}}, and having a messed up box model).
+This may look a lot more convenient than the previous example — we can do all of our feature detection in CSS, no JavaScript required, and we can handle all the logic in a single CSS file, cutting down on HTTP requests. This is the preferred method of determining browser support for CSS features.
 
 ### JavaScript
 
@@ -168,7 +170,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
         parent Object.
       </td>
       <td>
-        <p><code>if("geolocation" in navigator) { ... }</code></p>
+        <p><code>if ("geolocation" in navigator) { }</code></p>
       </td>
     </tr>
     <tr>
@@ -177,13 +179,13 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
         Create an element in memory using
         {{domxref("Document.createElement()")}} and then check if a
         property exists on it. The example shown is a way of detecting
-        <a href="/en-US/docs/Web/API/Canvas_API">HTML5 Canvas</a> support.
+        <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> support.
       </td>
       <td>
         <code
           >function supports_canvas() {<br />return
-          !!document.createElement('canvas').getContext;<br />}<br /><br />if(supports_canvas())
-          { ... }</code
+          !!document.createElement('canvas').getContext;<br />}<br /><br />if (supports_canvas())
+          { }</code
         >
       </td>
     </tr>
@@ -237,7 +239,7 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 As an example, our [Snapshot](https://github.com/chrisdavidmills/snapshot) demo makes use of it to selectively apply the Brick JavaScript library and use it to handle the UI layout, but only for the small screen layout (480px wide or less). We first use the `media` attribute to only apply the Brick CSS to the page if the page width is 480px or less:
 
 ```css
-<link href="dist/brick.css" type="text/css" rel="stylesheet" media="all and (max-width: 480px)">
+<link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)">
 ```
 
 We then use `matchMedia()` in the JavaScript several times, to only run Brick navigation functions if we are on the small screen layout (in wider screen layouts, everything can be seen at once, so we don't need to navigate between different views).
@@ -289,7 +291,7 @@ At this point, try loading your page, and you'll get an idea of how Modernizr wo
 
 ```html
 <html class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
-blob-constructor cookies cors ...AND LOADS MORE VALUES!">
+blob-constructor cookies cors (and loads of more values)">
 ```
 
 It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support flexbox at all, `<html>` would be given a class name of `no-flexbox`. If it did support modern flexbox, it would get a class name of `flexbox`. If you search through the class list, you'll also see others relating to flexbox, like:

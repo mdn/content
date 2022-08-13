@@ -26,9 +26,9 @@ After this event has occurred, the {{domxref('Sensor')}} object becomes idle. If
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { })
+addEventListener('error', (event) => { })
 
-onerror = event => { }
+onerror = (event) => { }
 ```
 
 ## Event type
@@ -52,7 +52,7 @@ This example adds an event listener to log errors occurred on an {{domxref("Acce
 
 ```js
 const acl = new Accelerometer({frequency: 60});
-acl.addEventListener('error', error => console.log(`Error: ${error.name}`));
+acl.addEventListener('error', (error) => console.log(`Error: ${error.name}`));
 acl.start();
 ```
 

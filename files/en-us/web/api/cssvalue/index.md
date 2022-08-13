@@ -28,7 +28,7 @@ The **`CSSValue`** interface represents the current computed value of a CSS prop
 
 - {{DOMxRef("CSSValue.cssText")}}
   - : A string representing the current value.
-- {{DOMxRef("CSSValue.cssValueType")}}{{ReadOnlyInline}}
+- {{DOMxRef("CSSValue.cssValueType")}} {{ReadOnlyInline}}
 
   - : An `unsigned short` representing a code defining the type of the value. Possible values are:
 

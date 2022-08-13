@@ -22,32 +22,37 @@ For an introduction to regular expressions, read the [Regular Expressions chapte
 
 There are two ways to create a `RegExp` object: a _literal notation_ and a _constructor_.
 
-- **The literal notation's** parameters are enclosed between slashes and do not use quotation marks.
-- **The constructor function's** parameters are not enclosed between slashes but do use quotation marks.
+- The _literal notation_ takes a pattern between two slashes, followed by optional flags, after the second slash.
+- The _constructor function_ takes either a string or a `RegExp` object as its first parameter and a string of optional flags as its second parameter.
 
 The following three expressions create the same regular expression object:
 
 ```js
-let re = /ab+c/i; // literal notation
-let re = new RegExp('ab+c', 'i') // constructor with string pattern as first argument
-let re = new RegExp(/ab+c/, 'i') // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
+const re = /ab+c/i; // literal notation
+// OR
+const re = new RegExp('ab+c', 'i'); // constructor with string pattern as first argument
+// OR
+const re = new RegExp(/ab+c/, 'i'); // constructor with regular expression literal as first argument
 ```
 
-The literal notation results in compilation of the regular expression when the expression is evaluated. Use literal notation when the regular expression will remain constant. For example, if you use literal notation to construct a regular expression used in a loop, the regular expression won't be recompiled on each iteration.
+Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. More about the process can be found in [dotnet docs](https://docs.microsoft.com/en-us/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions).
 
-The constructor of the regular expression object—for example, `new RegExp('ab+c')`—results in runtime compilation of the regular expression. Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and obtain it from another source, such as user input.
+The literal notation results in compilation of the regular expression when the expression is evaluated. On the other hand, the constructor of the `RegExp` object, `new RegExp('ab+c')`, results in runtime compilation of the regular expression.
+
+Use a string as the first argument to the `RegExp()` constructor when you want to [build the regular expression from dynamic input](#building_a_regular_expression_from_dynamic_inputs).
 
 ### Flags in constructor
 
-Starting with ECMAScript 6, `new RegExp(/ab+c/, 'i')` no longer throws a {{jsxref("TypeError")}} (`"can't supply flags when constructing one RegExp from another"`) when the first argument is a `RegExp` and the second `flags` argument is present. A new `RegExp` from the arguments is created instead.
+The expression `new RegExp(/ab+c/, flags)` will create a new `RegExp` using the source of the first parameter and the flags provided by the second.
 
 When using the constructor function, the normal string escape rules (preceding special characters with `\` when included in a string) are necessary.
 
 For example, the following are equivalent:
 
 ```js
-let re = /\w+/
-let re = new RegExp('\\w+')
+const re = /\w+/;
+// OR
+const re = new RegExp('\\w+');
 ```
 
 ### Perl-like RegExp properties
@@ -117,10 +122,10 @@ The following script uses the {{jsxref("String.prototype.replace()", "replace()"
 In the replacement text, the script uses `$1` and `$2` to indicate the results of the corresponding matching parentheses in the regular expression pattern.
 
 ```js
-let re = /(\w+)\s(\w+)/
-let str = 'John Smith'
-let newstr = str.replace(re, '$2, $1')
-console.log(newstr)
+const re = /(\w+)\s(\w+)/;
+const str = 'John Smith';
+const newstr = str.replace(re, '$2, $1');
+console.log(newstr);
 ```
 
 This displays `"Smith, John"`.
@@ -130,9 +135,9 @@ This displays `"Smith, John"`.
 The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.
 
 ```js
-let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
-let lines = text.split(/\r\n|\r|\n/)
-console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+const text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end';
+const lines = text.split(/\r\n|\r|\n/);
+console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
 Note that the order of the patterns in the regular expression matters.
@@ -140,7 +145,7 @@ Note that the order of the patterns in the regular expression matters.
 ### Using regular expression on multiple lines
 
 ```js
-let s = 'Please yes\nmake my day!'
+const s = 'Please yes\nmake my day!';
 
 s.match(/yes.*day/);
 // Returns null
@@ -154,12 +159,12 @@ s.match(/yes[^]*day/);
 The {{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} flag indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
 
 ```js
-let str = '#foo#'
-let regex = /foo/y
+const str = '#foo#';
+const regex = /foo/y;
 
-regex.lastIndex = 1
+regex.lastIndex = 1;
 regex.test(str)      // true
-regex.lastIndex = 5
+regex.lastIndex = 5;
 regex.test(str)      // false (lastIndex is taken into account with sticky flag)
 regex.lastIndex      // 0 (reset after match failure)
 ```
@@ -169,8 +174,11 @@ regex.lastIndex      // 0 (reset after match failure)
 With the sticky flag `y`, the next match has to happen at the `lastIndex` position, while with the global flag `g`, the match can happen at the `lastIndex` position or later:
 
 ```js
-re = /\d/y;
-while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
+const re = /\d/y;
+let r;
+while ((r = re.exec("123 456"))) {
+  console.log(r, "AND re.lastIndex", re.lastIndex);
+}
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
@@ -189,16 +197,16 @@ To match characters from other languages such as Cyrillic or Hebrew, use `\uhhhh
 This example demonstrates how one can separate out Unicode characters from a word.
 
 ```js
-let text = 'Образец text на русском языке'
-let regex = /[\u0400-\u04FF]+/g
+const text = 'Образец text на русском языке';
+const regex = /[\u0400-\u04FF]+/g;
 
-let match = regex.exec(text)
-console.log(match[0])        // logs 'Образец'
-console.log(regex.lastIndex) // logs '7'
+const match = regex.exec(text);
+console.log(match[0]); // logs 'Образец'
+console.log(regex.lastIndex); // logs '7'
 
-let match2 = regex.exec(text)
-console.log(match2[0])       // logs 'на' [did not log 'text']
-console.log(regex.lastIndex) // logs '15'
+const match2 = regex.exec(text);
+console.log(match2[0]); // logs 'на' [did not log 'text']
+console.log(regex.lastIndex); // logs '15'
 
 // and so on
 ```
@@ -214,6 +222,16 @@ console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // logs 'xxx'
 
 > **Note:** Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the [URL API](/en-US/docs/Web/API/URL_API).
 
+### Building a regular expression from dynamic inputs
+
+```js
+const breakfasts = ['bacon', 'eggs', 'oatmeal', 'toast', 'cereal'];
+const order = 'Let me get some bacon and eggs, please';
+
+order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g'));
+// Returns ['bacon', 'eggs']
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -228,16 +246,16 @@ Starting with Firefox 34, in the case of a capturing group with quantifiers prev
 
 ```js
 // Firefox 33 or older
-'x'.replace(/x(.)?/g, function(m, group) {
-  console.log("'group:" + group + "'");
+'x'.replace(/x(.)?/g, (m, group) => {
+  console.log(`group: ${JSON.stringify(group)}`);
 });
-// 'group:'
+// group: ""
 
 // Firefox 34 or newer
-'x'.replace(/x(.)?/g, function(m, group) {
-  console.log("'group:" + group + "'");
+'x'.replace(/x(.)?/g, (m, group) => {
+  console.log(`group: ${group}`);
 });
-// 'group:undefined'
+// group: undefined
 ```
 
 Note that due to web compatibility, `RegExp.$N` will still return an empty string instead of `undefined` ([bug 1053944](https://bugzilla.mozilla.org/show_bug.cgi?id=1053944)).

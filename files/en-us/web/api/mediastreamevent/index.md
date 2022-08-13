@@ -33,8 +33,8 @@ A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event also
 ## Examples
 
 ```js
-pc.onaddstream = function( ev ) {
-  alert("A stream (id: '" + ev.stream.id + "') has been added to this connection.");
+pc.onaddstream = (ev) => {
+  alert(`A stream (id: '${ev.stream.id}') has been added to this connection.`);
 };
 ```
 

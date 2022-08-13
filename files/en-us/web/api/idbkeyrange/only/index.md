@@ -50,21 +50,21 @@ declaring `keyRangeValue` as its optional key range value. This means that
 the cursor will only retrieve the record with the key value "A".
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange)
-> repo ([view the example live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+> key range, have a look at our [IDBKeyRange](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbkeyrange)
+> repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {
-  var keyRangeValue = IDBKeyRange.only("A");
+  const keyRangeValue = IDBKeyRange.only("A");
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(['fThings'], 'readonly');
+  const objectStore = transaction.objectStore('fThings');
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
-    var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
+    const cursor = event.target.result;
+      if (cursor) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
         list.appendChild(listItem);
 
         cursor.continue();

@@ -39,8 +39,7 @@ A string containing a {{HTMLElement("font")}} HTML element.
 
 When you specify size as an integer, you set the font size of `str` to one
 of the 7 defined sizes. When you specify `size` as a string such as "-2", you
-adjust the font size of `str` relative to the size set in the
-{{HTMLElement("basefont")}} element.
+adjust the font size of `str` relative to 3, the default value.
 
 ## Examples
 

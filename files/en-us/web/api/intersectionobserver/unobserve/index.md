@@ -41,10 +41,10 @@ This snippet shows an observer being created, an element being observed, and the
 unobserved.
 
 ```js
-var observer = new IntersectionObserver(callback);
+const observer = new IntersectionObserver(callback);
 observer.observe(document.getElementById("elementToObserve"));
 
-/* ... */
+// …
 
 observer.unobserve(document.getElementById("elementToObserve"));
 ```

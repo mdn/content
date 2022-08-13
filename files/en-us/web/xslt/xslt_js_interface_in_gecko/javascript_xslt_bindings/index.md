@@ -14,14 +14,14 @@ JavaScript can run XSLT transformations through the {{domxref('XSLTProcessor')}}
 **Figure 1 : Instantiating an {{domxref('XSLTProcessor')}}**
 
 ```js
-  var xsltProcessor = new XSLTProcessor();
+  const xsltProcessor = new XSLTProcessor();
 
   // Load the xsl file using synchronous (third param is set to false) XMLHttpRequest
-  var myXMLHTTPRequest = new XMLHttpRequest();
+  const myXMLHTTPRequest = new XMLHttpRequest();
   myXMLHTTPRequest.open("GET", "example.xsl", false);
   myXMLHTTPRequest.send(null);
 
-  var xslRef = myXMLHTTPRequest.responseXML;
+  const xslRef = myXMLHTTPRequest.responseXML;
 
   // Finally import the .xsl
   xsltProcessor.importStylesheet(xslRef);
@@ -32,15 +32,15 @@ For the actual transformation, {{domxref('XSLTProcessor')}} requires an XML docu
 **Figure 2 : Creating an XML document based on part of a document's DOM**
 
 ```js
-  // create a new XML document in memory
-  var xmlRef = document.implementation.createDocument("", "", null);
+  // Create a new XML document in memory
+  const xmlRef = document.implementation.createDocument("", "", null);
 
-  // we want to move a part of the DOM from an HTML document to an XML document.
+  // We want to move a part of the DOM from an HTML document to an XML document.
   // importNode is used to clone the nodes we want to process via XSLT - true makes it do a deep clone
-  var myNode = document.getElementById("example");
-  var clonedNode = xmlRef.importNode(myNode, true);
+  const myNode = document.getElementById("example");
+  const clonedNode = xmlRef.importNode(myNode, true);
 
-  // add the cloned DOM into the XML document
+  // Add the cloned DOM into the XML document
   xmlRef.appendChild(clonedNode);
 ```
 
@@ -51,12 +51,12 @@ Once the stylesheet has been imported, {{domxref('XSLTProcessor')}} has to perfo
 While you can use IE `loadXML` method to load a string containing XML you have to perform some tweaking and tuning to do the same in Mozilla. You must use the DomParser.no to create any document, as this is handled by the DomParser.
 
 ```js
-var parser = new DOMParser();
-var doc = parser.parseFromString(aStr, "text/xml");
+const parser = new DOMParser();
+const doc = parser.parseFromString(aStr, "text/xml");
 ```
 
 **Figure 3 : Performing the transformation**
 
 ```js
-  var fragment = xsltProcessor.transformToFragment(xmlRef, document);
+  const fragment = xsltProcessor.transformToFragment(xmlRef, document);
 ```

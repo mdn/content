@@ -33,12 +33,12 @@ created, then the notification is fired using the `Notification()`
 constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my body?',
   data: 'I like peas.'
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.data) // should return 'I like peas.'
 ```

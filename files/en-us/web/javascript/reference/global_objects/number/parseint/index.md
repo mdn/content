@@ -56,7 +56,7 @@ This method has the same functionality as the global {{jsxref("parseInt",
 Number.parseInt === parseInt // true
 ```
 
-and is part of ECMAScript 2015 (its purpose is modularization of globals). Please see
+Its purpose is modularization of globals. Please see
 {{jsxref("parseInt", "parseInt()")}} for more detail and examples.
 
 ## Specifications

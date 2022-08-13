@@ -134,14 +134,7 @@ Date.parse('foo-bar 2014');
 > **Note:** This section contains implementation-specific behavior that can be inconsistent
 > across implementations.
 
-Given a non-standard date string of `"March 7, 2014"`, `parse()`
-assumes a local time zone, but given a simplification of the ISO 8601 calendar date
-extended format such as `"2014-03-07"`, it will assume a time zone of UTC
-(ES5 and ECMAScript 2015). Therefore {{jsxref("Date")}} objects produced using those
-strings may represent different moments in time depending on the version of ECMAScript
-supported unless the system is set with a local time zone of UTC. This means that two
-date strings that appear equivalent may result in two different values depending on the
-format of the string that is being converted.
+Given a non-standard date string of `"March 7, 2014"`, `parse()` assumes a local time zone, but given a simplification of the ISO 8601 calendar date extended format such as `"2014-03-07"`, it will assume a time zone of UTC. Therefore {{jsxref("Date")}} objects produced using those strings may represent different moments in time depending on the version of ECMAScript supported unless the system is set with a local time zone of UTC. This means that two date strings that appear equivalent may result in two different values depending on the format of the string that is being converted.
 
 ## Examples
 
@@ -238,11 +231,11 @@ provided.
   `50` are parsed as 21st century years. For example,
   `04/16/17`, previously parsed as April 16, 1917, will be April 16, 2017
   now. To avoid any interoperability issues or ambiguous years, it is recommended to use
-  the ISO 8601 format like "`2017-04-16`" ([bug 1265136](https://bugzilla.mozilla.org/show_bug.cgi?id=1265136)).
+  the ISO 8601 format like `"2017-04-16"` ([bug 1265136](https://bugzilla.mozilla.org/show_bug.cgi?id=1265136)).
 - Google Chrome will accept a numerical string as a valid
   `dateString` parameter. This means that, for instance, while
   `!!Date.parse("42")` evaluates to `false` in Firefox, it
-  evaluates to `true` in Google Chrome because "`42`" is
+  evaluates to `true` in Google Chrome because `"42"` is
   interpreted as the first of January 2042.
 
 ## See also

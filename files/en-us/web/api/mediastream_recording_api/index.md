@@ -41,15 +41,15 @@ If anything goes wrong during recording, an {{domxref("MediaRecorder/error_event
 Example here, we use an HTML Canvas as source of the {{domxref("MediaStream")}}, and stop recording after 9 seconds.
 
 ```js
-var canvas = document.querySelector("canvas");
+const canvas = document.querySelector("canvas");
 
 // Optional frames per second argument.
-var stream = canvas.captureStream(25);
-var recordedChunks = [];
+const stream = canvas.captureStream(25);
+const recordedChunks = [];
 
 console.log(stream);
-var options = { mimeType: "video/webm; codecs=vp9" };
-mediaRecorder = new MediaRecorder(stream, options);
+const options = { mimeType: "video/webm; codecs=vp9" };
+const mediaRecorder = new MediaRecorder(stream, options);
 
 mediaRecorder.ondataavailable = handleDataAvailable;
 mediaRecorder.start();
@@ -61,15 +61,15 @@ function handleDataAvailable(event) {
     console.log(recordedChunks);
     download();
   } else {
-    // ...
+    // …
   }
 }
 function download() {
-  var blob = new Blob(recordedChunks, {
+  const blob = new Blob(recordedChunks, {
     type: "video/webm"
   });
-  var url = URL.createObjectURL(blob);
-  var a = document.createElement("a");
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
   document.body.appendChild(a);
   a.style = "display: none";
   a.href = url;
@@ -79,7 +79,7 @@ function download() {
 }
 
 // demo: to download after 9sec
-setTimeout(event => {
+setTimeout((event) => {
   console.log("stopping");
   mediaRecorder.stop();
 }, 9000);
@@ -99,12 +99,12 @@ In this code snippet, `enumerateDevices()` is used to examine the available inpu
 
 ```js
 navigator.mediaDevices.enumerateDevices()
-.then(function(devices) {
-  devices.forEach(function(device) {
-    let menu = document.getElementById("inputdevices");
-    if (device.kind == "audioinput") {
-      let item = document.createElement("option");
-      item.innerText = device.label;
+.then((devices) => {
+  devices.forEach((device) => {
+    const menu = document.getElementById("inputdevices");
+    if (device.kind === "audioinput") {
+      const item = document.createElement("option");
+      item.textContent = device.label;
       item.value = device.deviceId;
       menu.appendChild(item);
     }

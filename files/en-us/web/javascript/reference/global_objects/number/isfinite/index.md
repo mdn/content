@@ -57,14 +57,6 @@ Number.isFinite(null);      // false, would've been true with
                             // global isFinite(null)
 ```
 
-## Polyfill
-
-```js
-if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === 'number' && isFinite(value);
-}
-```
-
 ## Specifications
 
 {{Specifications}}

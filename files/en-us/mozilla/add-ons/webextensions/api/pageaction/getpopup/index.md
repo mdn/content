@@ -58,8 +58,8 @@ browser.contextMenus.create({
   title: "Get popup URL"
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "get-popup") {
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "get-popup") {
     let gettingPopup = browser.pageAction.getPopup({tabId: tab.id});
     gettingPopup.then(gotPopup);
   }

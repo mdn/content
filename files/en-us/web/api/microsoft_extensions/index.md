@@ -18,11 +18,11 @@ Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) suppo
 ## Touch APIs
 
 - {{DOMxRef("Element.msZoomTo()")}}
-- {{Event("msContentZoom")}}
+- {{domxref("Element/msContentZoom_event", "msContentZoom")}}
 - {{DOMxRef("MSManipulationEvent")}}
-- {{Event("MSManipulationStateChanged")}}
+- {{domxref("Element/MSManipulationStateChanged_event", "MSManipulationStateChanged")}}
 - {{DOMxRef("Touch.MsManipulationViewsEnabled")}}
-- {{Event("MSPointerHover")}} {{Deprecated_Inline}}
+- `MSPointerHover` {{Deprecated_Inline}}
 
 ## Media APIs
 

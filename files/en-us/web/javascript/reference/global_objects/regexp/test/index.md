@@ -60,7 +60,7 @@ previous match.
 
 ### Using test()
 
-Simple example that tests if "`hello`" is contained at the very beginning of
+Simple example that tests if `"hello"` is contained at the very beginning of
 a string, returning a boolean result.
 
 ```js
@@ -135,4 +135,3 @@ regex.test('foobar')  //false
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the
   [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}
-- {{jsxref("RegExp.prototype")}}

@@ -9,9 +9,10 @@ tags:
   - File API
   - Deprecated
   - Reference
+  - Non-standard
 browser-compat: api.BlobBuilder
 ---
-{{APIRef("File API")}}{{ deprecated_header}}
+{{APIRef("File API")}}{{ deprecated_header}}{{Non-standard_header}}
 
 > **Note:** The `BlobBuilder` interface has been
 > deprecated in favor of the newly introduced {{domxref('Blob')}} constructor.
@@ -80,7 +81,7 @@ being built. If the value you specify isn't a {{domxref("Blob")}}, [`ArrayBuffer
 or [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String),
 the value is coerced to a string before being appended to the blob.
 
-```js
+```
 void append(
   in ArrayBuffer data
 );
@@ -110,9 +111,9 @@ void append(
 Returns the {{domxref("Blob")}} object that has been constructed using the data passed
 through calls to [`append()`](#append).
 
-```js
+```
 Blob getBlob(
-  in DOMString contentType {{optional_inline}}
+  in DOMString contentType // optional
 );
 ```
 
@@ -133,7 +134,7 @@ starting a new, empty blob.
 
 Returns a {{domxref("File")}} object.
 
-```js
+```
 File getFile(
   in DOMString name,
   [optional] in DOMString contentType

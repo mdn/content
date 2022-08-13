@@ -20,12 +20,12 @@ Conversion to Markdown is done, so remove the old CSS style guide and redirect t
 
 Multiple updates to the CSS style guide to reflect the move towards Markdown, and encourage authors to write HTML in a Markdown-compatible way.
 
-- Note and warning boxes no longer have a separate `<h4>` heading for the title (e.g. `<h4>Warning</h4>` ).
+- Note and warning boxes no longer have a separate `<h4>` heading for the title (e.g. `<h4>Warning</h4>`).
 
   See our [Markdown in MDN](/en-US/docs/MDN/Contribute/Markdown_in_MDN#notes_warnings_and_callouts) guide for the correct syntax.
 
 - The `seoSummary` class should no longer be used.
-- The `standard-table` class should no longer be used. The styling provided by this class is now applied to tables by default (see <https://github.com/mdn/mdn-minimalist/issues/680>).
+- The `standard-table` class should no longer be used. The styling provided by this class is now applied to tables by default.
 - The {{HTMLElement("details")}} element should no longer be used.
 - The `hidden`, `example-good`, and `example-bad` classes used to be primarily for code blocks but could be used on other elements. Now they can only be used on code blocks.
 

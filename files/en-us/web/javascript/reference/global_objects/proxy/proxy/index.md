@@ -93,7 +93,7 @@ const target = {
 };
 
 const handler = {
-  get: function(target, prop, receiver) {
+  get(target, prop, receiver) {
     if (prop === "proxied") {
       return "replaced value";
     }

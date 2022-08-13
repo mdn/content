@@ -36,17 +36,16 @@ _This interface has no methods of its own, but inherits the methods of its paren
 
 ## Examples
 
-An object of this type is returned in the hander for a `prioritychange` event.
+An object of this type is returned in the handler for a `prioritychange` event.
 The code below shows a handler in which the `newPriority` and `previousPriority` are logged.
 
-```js  
-  // Listen for 'prioritychange' events on the controller's signal.
-  controller.signal.addEventListener('prioritychange', 
-    event => { 
-      const previousPriority = event.previousPriority;
-      const newPriority = event.target.priority;
-      console.log(`Priority changed from ${previousPriority} to ${newPriority}.`);
-    });
+```js
+// Listen for 'prioritychange' events on the controller's signal.
+controller.signal.addEventListener('prioritychange', (event) => {
+  const previousPriority = event.previousPriority;
+  const newPriority = event.target.priority;
+  console.log(`Priority changed from ${previousPriority} to ${newPriority}.`);
+});
 ```
 
 A more complete live example can be found in [`prioritychange` event > Examples](/en-US/docs/Web/API/TaskSignal/prioritychange_event).

@@ -13,4 +13,4 @@ tags:
 ## See also
 
 - [WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
-- {{interwiki("wikipedia", "NAT")}} on Wikipedia
+- [NAT](https://en.wikipedia.org/wiki/NAT) on Wikipedia

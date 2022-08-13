@@ -188,7 +188,6 @@ This example shows how to set a search provider.
     "favicon_url": "https://www.discogs.com/favicon.ico"
   }
 }
-
 ```
 
 ## Browser compatibility

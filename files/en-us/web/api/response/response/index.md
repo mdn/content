@@ -30,7 +30,9 @@ new Response(body, options)
     the default value), or one of:
 
     - {{domxref("Blob")}}
-    - {{domxref("BufferSource")}}
+    - {{jsxref("ArrayBuffer")}}
+    - {{jsxref("TypedArray")}}
+    - {{jsxref("DataView")}}
     - {{domxref("FormData")}}
     - {{domxref("ReadableStream")}}
     - {{domxref("URLSearchParams")}}
@@ -58,9 +60,9 @@ In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/maste
 we create a new `Response` object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom `status` and `statusText`:
 
 ```js
-var myBlob = new Blob();
-var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
-var myResponse = new Response(myBlob,init);
+const myBlob = new Blob();
+const myOptions = { status: 200, statusText: 'SuperSmashingGreat!' };
+const myResponse = new Response(myBlob, myOptions);
 ```
 
 ## Specifications

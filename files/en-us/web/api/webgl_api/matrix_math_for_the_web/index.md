@@ -179,7 +179,7 @@ A really easy way to start using a matrix is to use the CSS {{cssxref("transform
 ```html
 <div id='move-me' class='transformable'>
   <h2>Move me with a matrix</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</p>
 </div>
 ```
 
@@ -188,7 +188,7 @@ Finally, for each of the examples we will generate a 4x4 matrix, then update the
 ```js
 // Create the matrix3d style property from a matrix array
 function matrixArrayToCssMatrix(array) {
-  return 'matrix3d(' + array.join(',') + ')';
+  return `matrix3d(${array.join(',')})`;
 }
 
 // Grab the DOM element

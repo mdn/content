@@ -41,7 +41,7 @@ None.
 
 ```js
 let myfoot = mytable.createTFoot();
-// Now this should be true: myfoot == mytable.tFoot
+// Now this should be true: myfoot === mytable.tFoot
 ```
 
 ## Specifications

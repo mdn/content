@@ -374,7 +374,7 @@ The conformance criteria under this guideline relate to ways in which users can 
     <tr>
       <td>2.4.6 Headings and labels (AA)</td>
       <td>
-        Heading (e.g. {{htmlelement("h2")}}) and
+        Heading (e.g. {{htmlelement("Heading_Elements", "&lt;h2&gt;")}}) and
         {{htmlelement("label")}} elements clearly describe the purpose
         of the content and form elements they are supposed to be describing.
       </td>
@@ -525,7 +525,7 @@ The conformance criteria under this guideline ensures that users are able to int
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
   1. [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
   2. Operable

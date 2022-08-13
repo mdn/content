@@ -31,7 +31,7 @@ A new {{domxref("FontFaceSet")}}.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidModificationError`
+- `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown if this font is already included via the CSS {{cssxref("@font-face")}} rule.
 
 ## Examples

@@ -81,14 +81,14 @@ If you have a static background image, you can draw it onto a plain {{HTMLElemen
 [CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) are faster since they use the GPU. The best case is to not scale the canvas, or have a smaller canvas and scale up rather than a bigger canvas and scale down.
 
 ```js
-var scaleX = window.innerWidth / canvas.width;
-var scaleY = window.innerHeight / canvas.height;
+const scaleX = window.innerWidth / canvas.width;
+const scaleY = window.innerHeight / canvas.height;
 
-var scaleToFit = Math.min(scaleX, scaleY);
-var scaleToCover = Math.max(scaleX, scaleY);
+const scaleToFit = Math.min(scaleX, scaleY);
+const scaleToCover = Math.max(scaleX, scaleY);
 
 stage.style.transformOrigin = '0 0'; //scale from top left
-stage.style.transform = 'scale(' + scaleToFit + ')';
+stage.style.transform = `scale(${scaleToFit})`;
 ```
 
 ### Turn off transparency
@@ -96,7 +96,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 If your application uses canvas and doesn't need a transparent backdrop, set the `alpha` option to `false` when creating a drawing context with {{domxref("HTMLCanvasElement.getContext()")}}. This information can be used internally by the browser to optimize rendering.
 
 ```js
-var ctx = canvas.getContext('2d', { alpha: false });
+const ctx = canvas.getContext('2d', { alpha: false });
 ```
 
 ### Scaling for high resolution displays
@@ -105,8 +105,8 @@ You may find that canvas items appear blurry on higher-resolution displays. Whil
 
 ```js
 // Get the DPR and size of the canvas
-var dpr = window.devicePixelRatio;
-var rect = canvas.getBoundingClientRect();
+const dpr = window.devicePixelRatio;
+const rect = canvas.getBoundingClientRect();
 
 // Set the "actual" size of the canvas
 canvas.width = rect.width * dpr;
@@ -116,8 +116,8 @@ canvas.height = rect.height * dpr;
 ctx.scale(dpr, dpr);
 
 // Set the "drawn" size of the canvas
-canvas.style.width = rect.width + 'px';
-canvas.style.height = rect.height + 'px';
+canvas.style.width = `${rect.width}px`;
+canvas.style.height = `${rect.height}px`;
 ```
 
 ### More tips

@@ -11,5 +11,5 @@ Interpolation is a process of calculating values based on known values. The inte
 
 ## See also
 
-- {{interwiki("wikipedia", "Interpolation", "Interpolation")}} on Wikipedia
-- {{interwiki("wikipedia", "String_interpolation", "String interpolation")}} on Wikipedia
+- [Interpolation](https://en.wikipedia.org/wiki/Interpolation) on Wikipedia
+- [String interpolation](https://en.wikipedia.org/wiki/String_interpolation) on Wikipedia

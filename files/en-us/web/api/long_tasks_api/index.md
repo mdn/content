@@ -14,7 +14,9 @@ tags:
   - Reference
   - TaskAttributionTiming
   - Web Performance
-spec-urls: https://w3c.github.io/longtasks/
+browser-compat:
+  - api.PerformanceLongTaskTiming
+  - api.TaskAttributionTiming
 ---
 {{DefaultAPISidebar("Long Tasks")}}
 
@@ -53,12 +55,11 @@ A list of containers that the task occurred within. For tasks that don't occur w
 ## Usage
 
 ```js
-var observer = new PerformanceObserver(function(list) {
-    var perfEntries = list.getEntries();
-    for (var i = 0; i < perfEntries.length; i++) {
+const observer = new PerformanceObserver((list) => {
+    const perfEntries = list.getEntries();
+    for (let i = 0; i < perfEntries.length; i++) {
         // Process long task notifications:
         // report back for analytics and monitoring
-        // ...
     }
 });
 // register observer for long task notifications
@@ -80,13 +81,7 @@ observer.observe({entryTypes: ["longtask"]});
 
 ## Browser compatibility
 
-### `PerformanceLongTaskTiming`
-
-{{Compat("api.PerformanceLongTaskTiming")}}
-
-### `TaskAttributionTiming`
-
-{{Compat("api.TaskAttributionTiming")}}
+{{Compat}}
 
 ## See also
 

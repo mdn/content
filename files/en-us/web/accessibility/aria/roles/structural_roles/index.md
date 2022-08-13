@@ -19,7 +19,7 @@ Structural ARIA roles were originally created as a bridge to inform assistive te
 
 > **Note:**  These structural roles all have semantic HTML equivalents. They are included here for completeness of documentation. Preferably, they should not be used by web authors.
 
-Some structural roles, like [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role), don't have HTML equivalents, and therefore have separate documentation. Some structural roles with HTML equivalents, like [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role)), have ARIA-attribute requirements. They are listed below with links to their individual role documentation.
+Some structural roles, like [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role), don't have HTML equivalents, and therefore have separate documentation. Some structural roles with HTML equivalents, like [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role), have ARIA-attribute requirements. They are listed below with links to their individual role documentation.
 
 Most of the following roles were never needed but were added to ARIA for completeness. We've included them here for completeness as well.
 

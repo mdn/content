@@ -32,7 +32,7 @@ let getting = browser.tabs.getAllInWindow(
 
 ### Parameters
 
-- `windowId`{{Optional_Inline}}
+- `windowId` {{optional_inline}}
   - : `integer`. Defaults to the current window.
 
 ### Return value

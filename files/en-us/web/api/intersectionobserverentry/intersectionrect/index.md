@@ -39,7 +39,7 @@ area is redrawn.
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     refreshZones.push({
       element: entry.target,
       rect: entry.intersectionRect

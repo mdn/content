@@ -90,7 +90,7 @@ So what went wrong?
 
 ![Le list of images in our project](demozilla-images-list.png)
 
-At first glance, the image we asked for seems to be in the right place... but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
+At first glance, the image we asked for seems to be in the right place but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
 
 ![Deleting the 's'](code-correct.png)
 
@@ -137,7 +137,7 @@ We have listed a few simple ways to check that your website works properly, as w
 
 #### How's the performance?
 
-Does the page load fast enough? Resources like [WebPageTest.org](https://www.webpagetest.org/) or browser add-ons like [YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) can tell you a few interesting things:
+Does the page load fast enough? Resources like [WebPageTest.org](https://www.webpagetest.org/) or browser add-ons like [YSlow](https://github.com/marcelduran/yslow) can tell you a few interesting things:
 
 ![Yslow diagnostics](yslow-diagnostics.png)
 

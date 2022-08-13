@@ -4,7 +4,6 @@ slug: Web/API/HTMLDialogElement/showModal
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Method
@@ -12,7 +11,7 @@ tags:
   - showModal
 browser-compat: api.HTMLDialogElement.showModal
 ---
-{{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}
+{{ APIRef("HTML DOM") }}
 
 The **`showModal()`** method of the
 {{domxref("HTMLDialogElement")}} interface displays the dialog as a modal, over the top
@@ -72,14 +71,14 @@ button.
   </menu>
 
   <script>
-    (function() {
+    (() => {
       const updateButton = document.getElementById('updateDetails');
       const cancelButton = document.getElementById('cancel');
       const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
-        if(dialog.open) {
+        if (dialog.open) {
           console.log('Dialog open');
         } else {
           console.log('Dialog closed');
@@ -87,13 +86,13 @@ button.
       }
 
       // Update button opens a modal dialog
-      updateButton.addEventListener('click', function() {
+      updateButton.addEventListener('click', () => {
         dialog.showModal();
         openCheck(dialog);
       });
 
       // Form cancel button closes the dialog box
-      cancelButton.addEventListener('click', function() {
+      cancelButton.addEventListener('click', () => {
         dialog.close('animalNotChosen');
         openCheck(dialog);
       });

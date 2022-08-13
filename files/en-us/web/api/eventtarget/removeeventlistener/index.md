@@ -142,7 +142,7 @@ clickTarget.addEventListener('click',
   false
 );
 
-mouseOverTarget.addEventListener('mouseover', function () {
+mouseOverTarget.addEventListener('mouseover', () => {
   clickTarget.removeEventListener('click',
     makeBackgroundYellow,
     false

@@ -163,7 +163,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
     <summary>
       <span>
         <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
-        <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+        <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
       </span>
     </summary>
     <div class="attributes">

@@ -36,11 +36,12 @@ Number.isNaN(value)
 
 ## Description
 
-Due to both equality operators, {{jsxref("Operators", "==",
-  "#Equality")}} and {{jsxref("Operators", "===", "#Identity")}},
+Due to both equality operators, [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) and [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality),
 evaluating to `false` when checking if {{jsxref("NaN")}} _is_
 {{jsxref("NaN")}}, the function `Number.isNaN()` has become necessary. This
 situation is unlike all other possible value comparisons in JavaScript.
+
+Since `x !== x` is only true for `NaN` among all possible JavaScript values, `Number.isNaN(x)` can also be replaced with a test for `x !== x`, despite the latter being less readable.
 
 In comparison to the global {{jsxref("isNaN", "isNaN()")}} function,
 `Number.isNaN()` doesn't suffer the problem of forcefully converting the
@@ -72,17 +73,6 @@ Number.isNaN('37');
 Number.isNaN('37.37');
 Number.isNaN('');
 Number.isNaN(' ');
-```
-
-## Polyfill
-
-The following works because NaN is the only value in JavaScript which is not equal to
-itself.
-
-```js
-Number.isNaN = Number.isNaN || function isNaN(input) {
-    return typeof input === 'number' && input !== input;
-}
 ```
 
 ## Specifications

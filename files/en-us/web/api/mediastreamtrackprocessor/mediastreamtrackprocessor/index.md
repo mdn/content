@@ -25,7 +25,7 @@ new MediaStreamTrackProcessor(options)
   - : An object with the following properties:
     - `track`
       - : A {{domxref("MediaStreamTrack")}}.
-    - `maxBufferSize`{{Optional_Inline}}
+    - `maxBufferSize` {{optional_inline}}
       - : An integer specifying the maximum number of media frames to be buffered.
 
 ## Examples

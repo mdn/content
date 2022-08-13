@@ -19,7 +19,7 @@ current handle.
 ## Syntax
 
 ```js
-var PermissionState = FileSystemHandle.queryPermission(FileSystemHandlePermissionDescriptor);
+queryPermission(FileSystemHandlePermissionDescriptor)
 ```
 
 ### Parameters

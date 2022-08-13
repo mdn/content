@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Cache
-  - Experimental
   - Method
   - NeedsExample
   - Reference
@@ -28,7 +27,7 @@ better off using
 they are shorthand functions for one or more of these operations.
 
 ```js
-fetch(url).then(function(response) {
+fetch(url).then((response) => {
   if (!response.ok) {
     throw new TypeError('Bad response status');
   }
@@ -82,18 +81,18 @@ like so:
 3. If this fails (e.g., because the network is down), return a fallback response.
 
 ```js
-var response;
-var cachedResponse = caches.match(event.request).catch(function() {
-  return fetch(event.request);
-}).then(function(r) {
-  response = r;
-  caches.open('v1').then(function(cache) {
-    cache.put(event.request, response);
-  });
-  return response.clone();
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
+let response;
+const cachedResponse = caches
+  .match(event.request)
+  .catch(() => fetch(event.request))
+  .then((r) => {
+    response = r;
+    caches.open('v1').then((cache) => {
+      cache.put(event.request, response);
+    });
+    return response.clone();
+  })
+  .catch(() => caches.match('/sw-test/gallery/myLittleVader.jpg'));
 ```
 
 ## Specifications

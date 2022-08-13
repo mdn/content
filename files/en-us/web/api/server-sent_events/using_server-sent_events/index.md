@@ -34,11 +34,11 @@ const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredent
 Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{domxref("EventSource.message_event", "message")}} event:
 
 ```js
-evtSource.onmessage = function(event) {
+evtSource.onmessage = (event) => {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
-  newElement.textContent = "message: " + event.data;
+  newElement.textContent = `message: ${event.data}`;
   eventList.appendChild(newElement);
 }
 ```
@@ -48,11 +48,11 @@ This code listens for incoming messages (that is, notices from the server that d
 You can also listen for events with `addEventListener()`:
 
 ```js
-evtSource.addEventListener("ping", function(event) {
+evtSource.addEventListener("ping", (event) => {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
   const time = JSON.parse(event.data).time;
-  newElement.textContent = "ping at " + time;
+  newElement.textContent = `ping at ${time}`;
   eventList.appendChild(newElement);
 });
 ```
@@ -95,7 +95,7 @@ while (true) {
 
   // Break the loop if the client aborted the connection (closed the page)
 
-  if ( connection_aborted() ) break;
+  if (connection_aborted()) break;
 
   sleep(1);
 }
@@ -112,7 +112,7 @@ to break the loop if the connection has been closed (e.g. client closes the page
 When problems occur (such as a network timeout or issues pertaining to [access control](/en-US/docs/Web/HTTP/CORS)), an error event is generated. You can take action on this programmatically by implementing the `onerror` callback on the `EventSource` object:
 
 ```js
-evtSource.onerror = function(err) {
+evtSource.onerror = (err) => {
   console.error("EventSource failed:", err);
 };
 ```

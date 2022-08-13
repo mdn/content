@@ -35,7 +35,7 @@ If there is no visible caption, [`aria-label`](/en-US/docs/Web/Accessibility/ARI
 
 ```html
 <div role="figure" aria-labelledby="figure-1">
-  ...
+  …
   <p id="figure-1">Text that describes the figure.</p>
 </div>
 ```

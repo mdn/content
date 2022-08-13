@@ -30,7 +30,7 @@ unregister(pushEndpoint)
 
 ### Return value
 
-A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
+A `DOMRequest` object to handle the success or failure of the method call.
 
 If the method call is successful, the request's `result` will be a
 [PushRegistration](#pushregistration) object representing the endpoint that has been
@@ -48,15 +48,15 @@ Those objects are anonymous JavaScript objects with the following properties:
 ## Examples
 
 ```js
-var req = navigator.push.unregister(pushEndpoint);
+const req = navigator.push.unregister(pushEndpoint);
 
-req.onsuccess = function(e) {
-  var endpoint = req.result;
-  debug("Unregistered endpoint: " + endpoint );
+req.onsuccess = (e) => {
+  const endpoint = req.result;
+  console.log(`Unregistered endpoint: ${endpoint}`);
 }
 
-req.onerror = function(e) {
-  debug("Error unregistering the endpoint: " + JSON.stringify(e));
+req.onerror = (e) => {
+  console.error(`Error unregistering the endpoint: ${e.error}`);
 }
 ```
 
@@ -71,4 +71,3 @@ This feature is not part of any specification anymore. It is no longer on track 
 ## See also
 
 - {{domxref("PushManager")}}
-- {{domxref("DOMRequest")}}

@@ -45,29 +45,27 @@ console, which should appear as "true": the upper bound is open, so won't be inc
 the range.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) repo ([view the example live too](https://mdn.github.io/IDBKeyRange-example/).)
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/blob/master/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {
-  var keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
+  const keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.upperOpen);
-
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
-
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
-    var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
-        list.appendChild(listItem);
-
-        cursor.continue();
-      } else {
-        console.log('Entries all displayed.');
-      }
-    };
+  
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
+    const cursor = event.target.result;
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
+      list.appendChild(listItem);
+      cursor.continue();
+    } else {
+      console.log("Entries all displayed.");
+    }
   };
+}
 ```
 
 ## Specifications

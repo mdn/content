@@ -36,8 +36,8 @@ async function startCapture(displayMediaOptions) {
 
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
-    console.error("Error: " + err);
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
   return captureStream;
 }
@@ -50,7 +50,7 @@ You can write this code either using an asynchronous function and the [`await`](
 ```js
 function startCapture(displayMediaOptions) {
  return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
-    .catch(err => { console.error("Error:" + err); return null; });
+    .catch((err) => { console.error(`Error:${err}`); return null; });
 }
 ```
 
@@ -176,7 +176,7 @@ const stopElem = document.getElementById("stop");
 
 // Options for getDisplayMedia()
 
-var displayMediaOptions = {
+const displayMediaOptions = {
   video: {
     cursor: "always"
   },
@@ -184,11 +184,11 @@ var displayMediaOptions = {
 };
 
 // Set event listeners for the start and stop buttons
-startElem.addEventListener("click", function(evt) {
+startElem.addEventListener("click", (evt) => {
   startCapture();
 }, false);
 
-stopElem.addEventListener("click", function(evt) {
+stopElem.addEventListener("click", (evt) => {
   stopCapture();
 }, false);
 ```
@@ -198,10 +198,10 @@ stopElem.addEventListener("click", function(evt) {
 To make logging of errors and other issues easy, this example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
 
 ```js
-console.log = msg => logElem.innerHTML += `${msg}<br>`;
-console.error = msg => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
-console.warn = msg => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
-console.info = msg => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
+console.log = (msg) => logElem.innerHTML += `${msg}<br>`;
+console.error = (msg) => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
+console.warn = (msg) => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
+console.info = (msg) => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
 ```
 
 This allows us to use the familiar {{domxref("console.log()")}}, {{domxref("console.error()")}}, and so on to log information to the log box in the document.
@@ -217,8 +217,8 @@ async function startCapture() {
   try {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
-  } catch(err) {
-    console.error("Error: " + err);
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
 }
 ```
@@ -239,7 +239,7 @@ The `stopCapture()` method is called when the "Stop Capture" button is clicked. 
 function stopCapture(evt) {
   let tracks = videoElem.srcObject.getTracks();
 
-  tracks.forEach(track => track.stop());
+  tracks.forEach((track) => track.stop());
   videoElem.srcObject = null;
 }
 ```

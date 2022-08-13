@@ -57,7 +57,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var e = document.createEvent("UIEvent");
+const e = document.createEvent("UIEvent");
 // creates a click event that bubbles, can be cancelled,
 // and with its view and detail property initialized to window and 1,
 // respectively

@@ -11,7 +11,7 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer.create
 ---
-{{APIRef("Credential Management API")}}{{SeeCompatTable}}
+{{APIRef("Credential Management API")}}
 
 The **`create()`** method of the
 {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that
@@ -66,7 +66,8 @@ create(options)
         - `user`
           - : An object describing the user account for which the credential is generated.
         - `challenge`
-          - : A {{domxref("BufferSource")}}, emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.
+          - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}
+          emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.
         - `pubKeyCredParams`
           - : An {{jsxref("Array")}} of element which specify the desired features of the credential, including its type and the algorithm used for the cryptographic signature operations. This array is sorted by descending order of preference.
         - `timeout` {{optional_inline}}

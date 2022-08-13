@@ -14,6 +14,8 @@ Class fields are {{ jsxref('Classes/Public_class_fields','public') }} by default
 by using a hash `#` prefix. The privacy encapsulation of these class features is
 enforced by JavaScript itself.
 
+Private members are not native to the language before this syntax existed. In prototypical inheritance, its behavior may be emulated with [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) objects or [closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures), but they can't compare to the `#` syntax in terms of ergonomics.
+
 ## Syntax
 
 ```js
@@ -145,8 +147,10 @@ class SubClass extends BaseClassWithPrivateStaticField { };
 let error = null;
 
 try {
-  SubClass.basePublicStaticMethod()
-} catch(e) { error = e};
+  SubClass.basePublicStaticMethod();
+} catch (e) {
+  error = e;
+}
 
 console.log(error instanceof TypeError);
 // true

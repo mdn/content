@@ -3,6 +3,7 @@ title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 tags:
   - Class
+  - Uint8ClampedArray
   - JavaScript
   - TypedArray
   - TypedArrays
@@ -23,7 +24,7 @@ The **`Uint8ClampedArray`** typed array represents an array of 8-bit unsigned in
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8ClampedArray.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of an `Uint8ClampedArray`.
 - {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Uint8ClampedArray` type: "`Uint8ClampedArray`".
+  - : Returns the string value of the constructor name. In the case of the `Uint8ClampedArray` type: `"Uint8ClampedArray"`.
 
 ## Static methods
 
@@ -113,22 +114,23 @@ console.log(uintc8.length); // 2
 console.log(uintc8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-const arr = new Uint8ClampedArray([21,31]);
-console.log(arr[1]); // 31
+const x = new Uint8ClampedArray([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-const x = new Uint8ClampedArray([21, 31]);
 const y = new Uint8ClampedArray(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
 const buffer = new ArrayBuffer(8);
 const z = new Uint8ClampedArray(buffer, 1, 4);
+console.log(z.byteOffset); // 1
 
 // From an iterable
-const iterable = function*(){ yield* [1,2,3]; }();
-const uintc8Arr = new Uint8ClampedArray(iterable);
-// Uint8ClampedArray[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const uintc8FromIterable = new Uint8ClampedArray(iterable);
+console.log(uintc8FromIterable);
+// Uint8ClampedArray [1, 2, 3]
 ```
 
 ## Specifications

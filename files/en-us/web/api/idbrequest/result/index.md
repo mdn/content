@@ -35,28 +35,28 @@ one property of the record, and then puts the updated record back into the objec
 store. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([View the example live](https://mdn.github.io/to-do-notifications/)>.)
 
 ```js
-var title = "Walk dog";
+const title = "Walk dog";
 
 // Open up a transaction as usual
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
 // Get the to-do list object that has this title as it's title
-var objectStoreTitleRequest = objectStore.get(title);
+const objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = () => {
   // Grab the data object returned as the result
-  var data = objectStoreTitleRequest.result;
+  const data = objectStoreTitleRequest.result;
 
   // Update the notified value in the object to "yes"
   data.notified = "yes";
 
   // Create another request that inserts the item
   // back into the database
-  var updateTitleRequest = objectStore.put(data);
+  const updateTitleRequest = objectStore.put(data);
 
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = () => {
     displayData();
   };
 };

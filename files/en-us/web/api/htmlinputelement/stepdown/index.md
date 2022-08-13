@@ -27,7 +27,7 @@ defaults to 1 if not specified, and
 default value for `step` if not specified.
 
 Valid on all numeric, date, and time input types that support the step attribute,
-including{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
+including {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
 {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}},
 {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number",
   "number")}}, and {{HTMLElement("input/range", "range")}}.
@@ -153,17 +153,17 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
 ```js
 /* make the button call the function */
 let button = document.getElementById('theButton');
-button.addEventListener('click', function() {
-  stepondown();}
-);
+button.addEventListener('click', () => {
+  stepondown();
+});
 
 function stepondown() {
   let input = document.getElementById('theNumber');
   let val = document.getElementById('decrementer').value;
 
-  if (val) {  /* decrement with a parameter */
+  if (val) {  // decrement with a parameter
     input.stepDown(val);
-  } else {    /* or without a parameter. Try it with 0, 5, -2, etc. */
+  } else {    // or without a parameter. Try it with 0, 5, -2, etc.
     input.stepDown();
   }
 }

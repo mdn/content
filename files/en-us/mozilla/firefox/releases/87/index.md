@@ -83,7 +83,7 @@ _No changes._
 
 ## Changes for add-on developers
 
-- [nativeMessaging](en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) is now an [optional permission](en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) ({{bug(1630415)}}).
+- [nativeMessaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) is now an [optional permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) ({{bug(1630415)}}).
 - Added support for querying and setting color management related features with {{WebExtAPIRef("browserSettings.colorManagement")}} ({{bug(1719688)}}) and ({{bug(1714428)}}).
 
 ## Older versions

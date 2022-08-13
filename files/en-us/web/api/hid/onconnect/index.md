@@ -8,9 +8,10 @@ tags:
   - Reference
   - onconnect
   - HID
+  - Experimental
 browser-compat: api.HID.onconnect
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`onconnect`** [event handler](/en-US/docs/Web/Events/Event_handlers) of the {{domxref("HID")}} interface processes the events fired when the user agent connects to the HID device.
 

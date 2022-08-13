@@ -30,7 +30,7 @@ lengths in bytes.
 
 ```html
 <input type="file" id="input" multiple>
-<output id="output">Choose files...</output>
+<output id="output">Choose files…</output>
 ```
 
 ```css hidden
@@ -57,7 +57,7 @@ input.addEventListener('change', (event) => {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

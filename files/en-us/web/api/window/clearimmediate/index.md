@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 ```js
 let immediateID = setImmediate(() => {
   // Run some code
-}
+});
 
 document.getElementById("button")
   .addEventListener(() => {

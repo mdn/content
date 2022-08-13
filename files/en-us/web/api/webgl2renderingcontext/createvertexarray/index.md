@@ -36,13 +36,15 @@ points to vertex array data.
 ## Examples
 
 ```js
-var vao = gl.createVertexArray();
+const vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
-// ...
+// …
+
 // calls to bindBuffer or vertexAttribPointer
 // which will be "recorded" in the VAO
-// ...
+
+// …
 ```
 
 ## Specifications

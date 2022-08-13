@@ -46,24 +46,24 @@ let inserting = browser.tabs.insertCSS(
 
   - : An object describing the CSS to insert. It contains the following properties:
 
-    - `allFrames`{{optional_inline}}
+    - `allFrames` {{optional_inline}}
       - : `boolean`. If `true`, the CSS will be injected into all frames of the current page. If it is `false`, CSS is only injected into the top frame. Defaults to `false`.
-    - `code`{{optional_inline}}
+    - `code` {{optional_inline}}
       - : `string`. Code to inject, as a text string.
-    - `cssOrigin`{{optional_inline}}
+    - `cssOrigin` {{optional_inline}}
 
       - : `string`. This can take one of two values: "user", to add the CSS as a user stylesheet or "author" to add it as an author stylesheet. If this option is omitted, the CSS is added as an author stylesheet.
 
         - "user" enables you to prevent websites from overriding the CSS you insert: see [Cascading order](/en-US/docs/Web/CSS/Cascade#cascading_order).
         - "author" stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page's scripts, even if that addition happens after the `insertCSS` call completes.
 
-    - `file`{{optional_inline}}
+    - `file` {{optional_inline}}
       - : `string`. Path to a file containing the code to inject. In Firefox, relative URLs are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the extension's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this: `"/path/to/stylesheet.css"`.
-    - `frameId`{{optional_inline}}
+    - `frameId` {{optional_inline}}
       - : `integer`. The frame where the CSS should be injected. Defaults to `0` (the top-level frame).
-    - `matchAboutBlank`{{optional_inline}}
+    - `matchAboutBlank` {{optional_inline}}
       - : `boolean`. If `true`, the code will be injected into embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. The code cannot be inserted in top-level about: frames. Defaults to `false`.
-    - `runAt`{{optional_inline}}
+    - `runAt` {{optional_inline}}
       - : {{WebExtAPIRef('extensionTypes.RunAt')}}. The soonest that the code will be injected into the tab. Defaults to "document_idle".
 
 ### Return value

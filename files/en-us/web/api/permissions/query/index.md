@@ -26,7 +26,7 @@ query(permissionDescriptor)
   - : An object that sets options for the `query` operation consisting of a comma-separated list of name-value pairs. The available options are:
 
     - `name`
-      - : The name of the API whose permissions you want to query. An up-to-date list of permission names can be found in the spec under the [PermissionName enum](https://w3c.github.io/permissions/#enumdef-permissionname), but bear in mind that the actual permissions supported by browsers is currently much smaller than this. Firefox for example currently supports `geolocation`, `notifications`, `push`, and `persistent-storage` (see our [`Permissions.webidl` file](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)).
+      - : The name of the API whose permissions you want to query. Each browser supports a different set of values. You'll find Firefox values [there](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10), Chromium values [there](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl), and WebKit values [there](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl).
     - `userVisibleOnly`
       - : (Push only, not supported in Firefox — see the Browser Support section below) Indicates whether you want to show a notification for every message or be able to send silent push notifications. The default is `false`.
     - `sysex` (Midi only)
@@ -65,10 +65,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} objec
 ## Examples
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(result) {
- if (result.state == 'granted') {
+navigator.permissions.query({ name: 'geolocation' }).then((result) => {
+ if (result.state === 'granted') {
    showLocalNewsWithGeolocation();
- } else if (result.state == 'prompt') {
+ } else if (result.state === 'prompt') {
    showButtonToEnableLocalNews();
  }
  // Don't do anything if the permission was denied.

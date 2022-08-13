@@ -39,8 +39,8 @@ encrypt(algorithm, key, data)
 - `key`
   - : A {{domxref("CryptoKey")}} containing the key to be used for encryption.
 - `data`
-  - : A {{domxref("BufferSource")}} containing the data to
-    be encrypted (also known as the {{glossary("plaintext")}}).
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}
+    containing the data to be encrypted (also known as the {{glossary("plaintext")}}).
 
 ### Return value
 
@@ -170,18 +170,24 @@ let data = new Uint8Array(12345);
 //crypto functions are wrapped in promises so we have to use await and make sure the function that
 //contains this code is an async function
 //encrypt function wants a cryptokey object
-const key_encoded = await crypto.subtle.importKey(  "raw",    key.buffer,   'AES-CTR' ,  false,   ["encrypt", "decrypt"]);
+const key_encoded = await crypto.subtle.importKey(
+  "raw",
+  key.buffer,
+  "AES-CTR",
+  false,
+  ["encrypt", "decrypt"],
+);
 const encrypted_content = await window.crypto.subtle.encrypt(
-    {
-      name: "AES-CTR",
-      counter: iv,
-      length: 128
-    },
-    key_encoded,
-    data
-  );
+  {
+    name: "AES-CTR",
+    counter: iv,
+    length: 128,
+  },
+  key_encoded,
+  data,
+);
 
-//Uint8Array
+// Uint8Array
 console.log(encrypted_content);
 ```
 
@@ -205,10 +211,10 @@ function encryptMessage(key) {
   return window.crypto.subtle.encrypt(
     {
       name: "AES-CBC",
-      iv
+      iv,
     },
     key,
-    encoded
+    encoded,
   );
 }
 ```
@@ -221,22 +227,19 @@ it using AES in GCM mode. [See the complete code on GitHub.](https://github.com/
 ```js
 function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-gcm #message");
-  let message = messageBox.value;
-  let enc = new TextEncoder();
+  const message = messageBox.value;
+  const enc = new TextEncoder();
   return enc.encode(message);
 }
 
 function encryptMessage(key) {
-  let encoded = getMessageEncoding();
+  const encoded = getMessageEncoding();
   // iv will be needed for decryption
-  iv = window.crypto.getRandomValues(new Uint8Array(12));
+  const iv = window.crypto.getRandomValues(new Uint8Array(12));
   return window.crypto.subtle.encrypt(
-    {
-      name: "AES-GCM",
-      iv: iv
-    },
+    { name: "AES-GCM", iv },
     key,
-    encoded
+    encoded,
   );
 }
 ```

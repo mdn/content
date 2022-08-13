@@ -18,4 +18,4 @@ HTTP is textual (all communication is done in plain text) and stateless (no comm
 ## See also
 
 - [HTTP on MDN](/en-US/docs/Web/HTTP)
-- {{interwiki("wikipedia", "Hypertext Transfer Protocol", "HTTP")}} on Wikipedia
+- [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) on Wikipedia

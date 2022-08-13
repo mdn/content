@@ -24,7 +24,7 @@ Creating a new offscreen canvas and returning or setting the height of the offsc
 canvas:
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
+const offscreen = new OffscreenCanvas(256, 256);
 offscreen.height; // 256
 offscreen.height = 512;
 ```

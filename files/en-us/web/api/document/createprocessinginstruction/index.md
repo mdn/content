@@ -45,8 +45,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var doc = new DOMParser().parseFromString('<foo />', 'application/xml');
-var pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
+const doc = new DOMParser().parseFromString('<foo />', 'application/xml');
+const pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css"');
 
 doc.insertBefore(pi, doc.firstChild);
 

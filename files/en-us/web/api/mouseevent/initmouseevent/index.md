@@ -109,16 +109,15 @@ None ({{jsxref("undefined")}}).
 ### JavaScript
 
 ```js
-document.body.onclick = function(){
-  e = arguments[0];
-  var dt = e.target,stag = dt.tagName.toLowerCase();
-  document.getElementById("out").innerHTML = stag;
+document.body.onclick = (event) => {
+  const elementTag = event.target.tagName.toLowerCase();
+  document.getElementById("out").innerHTML = elementTag;
 };
 
-var simulateClick = function(){
-  var evt = document.createEvent("MouseEvents");
-  evt.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
-  document.body.dispatchEvent(evt);
+const simulateClick = () => {
+  const event = document.createEvent("MouseEvents");
+  event.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
+  document.body.dispatchEvent(event);
 }
 
 simulateClick();

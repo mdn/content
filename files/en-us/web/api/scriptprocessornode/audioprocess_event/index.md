@@ -44,20 +44,20 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}.
 ## Examples
 
 ```js
-scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
+scriptNode.addEventListener('audioprocess', (audioProcessingEvent) => {
   // The input buffer is a song we loaded earlier
-  var inputBuffer = audioProcessingEvent.inputBuffer;
+  const inputBuffer = audioProcessingEvent.inputBuffer;
 
   // The output buffer contains the samples that will be modified and played
-  var outputBuffer = audioProcessingEvent.outputBuffer;
+  const outputBuffer = audioProcessingEvent.outputBuffer;
 
   // Loop through the output channels (in this case there is only one)
-  for (var channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
-    var inputData = inputBuffer.getChannelData(channel);
-    var outputData = outputBuffer.getChannelData(channel);
+  for (let channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
+    const inputData = inputBuffer.getChannelData(channel);
+    const outputData = outputBuffer.getChannelData(channel);
 
     // Loop through the 4096 samples
-    for (var sample = 0; sample < inputBuffer.length; sample++) {
+    for (let sample = 0; sample < inputBuffer.length; sample++) {
       // make output equal to the same as the input
       outputData[sample] = inputData[sample];
 
@@ -71,8 +71,8 @@ scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
 You could also set up the event handler using the `onaudioprocess` property:
 
 ```js
-scriptNode.onaudioprocess = audioProcessingEvent => {
-  ...
+scriptNode.onaudioprocess = (audioProcessingEvent) => {
+  // ...
 }
 ```
 
