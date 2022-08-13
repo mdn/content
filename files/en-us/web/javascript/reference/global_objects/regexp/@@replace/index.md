@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.RegExp.@@replace
 ---
 {{JSRef}}
 
-The **`[@@replace]()`** method of a RegExp replaces one, some, or all matches of the pattern in a string by a `replacement`, and returns the result of the replacement as a new string. The `replacement` can be a string or a function to be called for each match.
+The **`[@@replace]()`** method of a regular expression specifies how [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) and [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) should behave when the regular expression is passed in as the pattern.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}
 

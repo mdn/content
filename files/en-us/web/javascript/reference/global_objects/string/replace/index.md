@@ -144,7 +144,7 @@ console.log(newstr);  // oranges are round, and oranges are juicy.
 
 This logs `'oranges are round, and oranges are juicy'`.
 
-A regexp with the `g` flag is the only case where `replace()` replaces more than once. For more information about how regex flags interact with `replace()`, see [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+A regexp with the `g` flag is the only case where `replace()` replaces more than once. For more information about how regex flags (especially the [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flag) interact with `replace()`, see [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
 
 ### Switching words in a string
 
