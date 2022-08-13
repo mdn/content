@@ -312,11 +312,8 @@ function tetheredGetNumber(resolve, reject) {
   setTimeout(() => {
     const randomInt = Date.now();
     const value = randomInt % 10;
-    if (value >= THRESHOLD_A) {
-      reject(`Too large: ${value}`);
-    } else {
-      resolve(value);
-    }
+    if (value < THRESHOLD_A) resolve(value);
+    else reject(`Too large: ${value}`);
   }, 500);
 }
 
@@ -326,8 +323,9 @@ function determineParity(value) {
 }
 
 function troubleWithGetNumber(reason) {
-  console.error(`Trouble getting number: ${reason}`);
-  throw -999; // must "throw" something, to maintain error state down the chain
+  const err = new Error('Trouble getting number', { cause: reason });
+  console.error(err);
+  throw err;
 }
 
 function promiseGetWord(parityInfo) {
@@ -336,7 +334,7 @@ function promiseGetWord(parityInfo) {
     if (value >= THRESHOLD_A - 1) {
       reject(`Still too large: ${value}`);
     } else {
-      parityInfo.wordEvenOdd = parityInfo.isOdd ? "odd" : "even";
+      parityInfo.wordEvenOdd = parityInfo.isOdd ? 'odd' : 'even';
       resolve(parityInfo);
     }
   });
@@ -350,13 +348,13 @@ new Promise(tetheredGetNumber)
     return info;
   })
   .catch((reason) => {
-    if (reason === -999) {
-      console.error("Had previously handled error");
+    if (reason.cause) {
+      console.error('Had previously handled error');
     } else {
       console.error(`Trouble with promiseGetWord(): ${reason}`);
     }
   })
-  .finally((info) => console.log("All done"));
+  .finally((info) => console.log('All done'));
 ```
 
 ### Advanced Example
@@ -377,19 +375,22 @@ By clicking the button several times in a short amount of time, you'll even see 
 #### JavaScript
 
 ```js
-"use strict";
+'use strict';
+
 let promiseCount = 0;
 
 function testPromise() {
   const thisPromiseCount = ++promiseCount;
-  const log = document.getElementById("log");
+  const log = document.getElementById('log');
   // begin
-  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Started<br>`);
-  // We make a new promise: we promise a numeric count of this promise, starting from 1 (after waiting 3s)
+  log.insertAdjacentHTML('beforeend', `${thisPromiseCount}) Started<br>`);
+  // We make a new promise: we promise a numeric count of this promise,
+  // starting from 1 (after waiting 3s)
   const p1 = new Promise((resolve, reject) => {
-    // The executor function is called with the ability to resolve or reject the promise
+    // The executor function is called with the ability
+    // to resolve or reject the promise
     log.insertAdjacentHTML(
-      "beforeend",
+      'beforeend',
       `${thisPromiseCount}) Promise constructor<br>`
     );
     // This is only an example to create asynchronism
@@ -403,17 +404,17 @@ function testPromise() {
   // and what to do when the promise is rejected with the catch() call
   p1.then((val) => {
     // Log the fulfillment value
-    log.insertAdjacentHTML("beforeend", `${val}) Promise fulfilled<br>`);
+    log.insertAdjacentHTML('beforeend', `${val}) Promise fulfilled<br>`);
   }).catch((reason) => {
     // Log the rejection reason
     console.log(`Handle rejected promise (${reason}) here.`);
   });
   // end
-  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Promise made<br>`);
+  log.insertAdjacentHTML('beforeend', `${thisPromiseCount}) Promise made<br>`);
 }
 
-const btn = document.getElementById("make-promise");
-btn.addEventListener("click", testPromise);
+const btn = document.getElementById('make-promise');
+btn.addEventListener('click', testPromise);
 ```
 
 #### Result
