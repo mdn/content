@@ -35,16 +35,16 @@ const voiceSelect = document.querySelector('select');
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for (let i = 0; i < voices.length ; i++) {
+  for (const voice of voices) {
     const option = document.createElement('option');
-    option.textContent = `${voices[i].name} (${voices[i].lang})`;
+    option.textContent = `${voice.name} (${voice.lang})`;
 
-    if (voices[i].default) {
+    if (voice.default) {
       option.textContent += ' — DEFAULT';
     }
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
+    option.setAttribute('data-lang', voice.lang);
+    option.setAttribute('data-name', voice.name);
     voiceSelect.appendChild(option);
   }
 }
@@ -59,11 +59,7 @@ inputForm.onsubmit = (event) => {
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for (let i = 0; i < voices.length ; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
-    }
-  }
+  utterThis.voice = voices.find((v) => v.name === selectedOption);
   synth.speak(utterThis);
   inputTxt.blur();
 }

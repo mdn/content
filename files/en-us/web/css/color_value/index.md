@@ -166,6 +166,10 @@ In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 
 Some people have difficulty distinguishing colors. The [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [Color and color contrast](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast) for more information.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Color value tester

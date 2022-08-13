@@ -66,20 +66,20 @@ Here we first use a tracking variable, `initialRun`, to note that this is the fi
 function reportDisplays() {
   navigator.getVRDisplays().then((displays) => {
     console.log(`${displays.length} displays`);
-    for (let i = 0; i < displays.length; i++) {
-      const cap = displays[i].capabilities;
+    displays.forEach((display, i) => {
+      const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
       const listItem = document.createElement('li');
-      listItem.innerHTML = `<strong>Display ${i+1}</strong><br>` +
-        `VR Display ID: ${displays[i].displayId}<br>` +
-        `VR Display Name: ${displays[i].displayName}<br>` +
+      listItem.innerHTML = `<strong>Display ${i + 1}</strong><br>` +
+        `VR Display ID: ${display.displayId}<br>` +
+        `VR Display Name: ${display.displayName}<br>` +
         `Display can present content: ${cap.canPresent}<br>` +
         `Display is separate from the computer's main display: ${cap.hasExternalDisplay}<br>` +
         `Display can return position info: ${cap.hasPosition}<br>` +
         `Display can return orientation info: ${cap.hasOrientation}<br>` +
         `Display max layers: ${cap.maxLayers}`;
       list.appendChild(listItem);
-    }
+    });
 
     setTimeout(reportGamepads, 1000);
     // For VR, controllers will only be active after their corresponding headset is active
@@ -99,8 +99,7 @@ The `reportGamepads()` function looks like this:
 function reportGamepads() {
     const gamepads = navigator.getGamepads();
     console.log(`${gamepads.length} controllers`);
-    for (let i = 0; i < gamepads.length; ++i) {
-        const gp = gamepads[i];
+    for (const gp of gamepads) {
         const listItem = document.createElement('li');
         listItem.classList = 'gamepad';
         listItem.innerHTML = `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +

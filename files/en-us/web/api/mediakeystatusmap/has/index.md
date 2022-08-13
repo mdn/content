@@ -11,7 +11,7 @@ tags:
   - has()
 browser-compat: api.MediaKeyStatusMap.has
 ---
-{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
+{{APIRef("EncryptedMediaExtensions API")}}
 
 The **`has`** property of the
 {{domxref("MediaKeyStatusMap")}} interface returns a {{jsxref('Boolean')}}, asserting

@@ -37,11 +37,11 @@ function onXRFrame(time, xrFrame) {
   xrSession.requestAnimationFrame(onXRFrame);
 
   gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
-  let viewport = xrGlBinding.getSubImage(layer, xrFrame).viewport;
+  const viewport = xrGlBinding.getSubImage(layer, xrFrame).viewport;
   gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
-  for (let view in xrViewerPose.views) {
-    let subImage = xrGlBinding.getViewSubImage(layer, view);
+  for (const view in xrViewerPose.views) {
+    const subImage = xrGlBinding.getViewSubImage(layer, view);
     gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
       subImage.colorTexture, 0, subImage.imageIndex);
     gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT,

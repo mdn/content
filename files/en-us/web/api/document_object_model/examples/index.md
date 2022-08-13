@@ -319,7 +319,7 @@ function showEventProperties(e) {
   const tbody = document.createElement('tbody');
   table.appendChild(tbody);
 
-  for (let p in event) {
+  for (const p in event) {
     row = tbody.insertRow(-1);
     row.className = (row.rowIndex % 2)? 'odd':'even';
     addCell(row, row.rowIndex);

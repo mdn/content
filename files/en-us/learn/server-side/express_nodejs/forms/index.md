@@ -252,7 +252,7 @@ A few tips:
 
 ## Summary
 
-_Express_, node, and third-party packages on NPM provide everything you need to add forms to your website. In this article, you've learned how to create forms using _Pug_, validate and sanitize input using _express-validator_, and add, delete, and modify records in the database.
+_Express_, node, and third-party packages on npm provide everything you need to add forms to your website. In this article, you've learned how to create forms using _Pug_, validate and sanitize input using _express-validator_, and add, delete, and modify records in the database.
 
 You should now understand how to add basic forms and form-handling code to your own node websites!
 

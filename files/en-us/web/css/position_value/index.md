@@ -43,25 +43,15 @@ value value              /* A value for each direction (horizontal then vertical
 keyword value keyword value /* Each value is an offset from the keyword that precedes it */
 ```
 
-### Formal syntax
-
-```css
-[
- [ left | center | right ] || [ top | center | bottom ]
-|
- [ left | center | right | <length> | <percentage> ]
- [ top | center | bottom | <length> | <percentage> ]?
-|
- [ [ left | right ] [ <length> | <percentage> ] ] &&
- [ [ top | bottom ] [ <length> | <percentage> ] ]
-]
-```
-
 > **Note:** The {{cssxref("background-position")}} property also accepts a three-value syntax. This is not allowed in other properties that use `<position>`.
 
 ## Interpolation
 
 When animated, a point's abscissa and ordinate values are interpolated independently. However, because the speed of the interpolation is determined by a single [timing function](/en-US/docs/Web/CSS/easing-function) for both coordinates, the point will move in a straight line.
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 

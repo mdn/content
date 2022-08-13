@@ -309,7 +309,7 @@ Next, create a file named `index.js`, and give it these contents:
 
 ```js
 import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
-  js.greet("WebAssembly with NPM");
+  js.greet("WebAssembly with npm");
 });
 ```
 
@@ -337,7 +337,7 @@ $ npm install
 $ npm run serve
 ```
 
-This starts a web server. Load `http://localhost:8080` and an alert box appears on the screen, with `Hello, WebAssembly with NPM!` in it. We've successfully used the Rust module with npm.
+This starts a web server. Load `http://localhost:8080` and an alert box appears on the screen, with `Hello, WebAssembly with npm!` in it. We've successfully used the Rust module with npm.
 
 ## Conclusion
 

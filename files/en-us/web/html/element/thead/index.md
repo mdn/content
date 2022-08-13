@@ -105,7 +105,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "thead")}} is not set to `char`, this attribute is ignored.
 
-    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard. 
+    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 
 - {{htmlattrdef("charoff")}} {{deprecated_inline}}
 

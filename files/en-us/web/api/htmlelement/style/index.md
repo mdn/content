@@ -57,12 +57,12 @@ let out = "";
 const elementStyle = element.style;
 const computedStyle = window.getComputedStyle(element, null);
 
-for (prop in elementStyle) {
+for (const prop in elementStyle) {
   if (Object.hasOwn(elementStyle, prop)) {
     out += `  ${prop} = '${elementStyle[prop]}' > '${computedStyle[prop]}'\n`;
   }
 }
-console.log(out)
+console.log(out);
 ```
 
 The output would be something like:
