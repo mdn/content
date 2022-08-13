@@ -151,7 +151,7 @@ process(inputList, outputList, parameters) {
     let channelCount = Math.min(input.length, output.length);
 
     for (let channelNum = 0; channelNum < channelCount; channelNum++) {
-      for (let i = 0; i < input[channelNum].lengt; i++) {
+      for (let i = 0; i < input[channelNum].length; i++) {
         let sample = output[channelNum][i] + input[channelNum][i];
 
         if (sample > 1.0) {
