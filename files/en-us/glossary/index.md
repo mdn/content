@@ -16,8 +16,6 @@ Glossary terms can be selected from the sidebar.
 
 > **Note:** This glossary is a never-ending work in progress. You can help improve it by [writing new entries](/en-US/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) or by making the existing ones better.
 
-<section id="Quick_links">
- <ol>
-  <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
- </ol>
-</section>
+## See Also
+
+- **[MDN Web Docs Glossary](/en-US/docs/Glossary)** {{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}
