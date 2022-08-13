@@ -62,7 +62,7 @@ The benefit of using an ORM is that programmers can continue to think in terms o
 
 ### What ORM/ODM should I use?
 
-There are many ODM/ORM solutions available on the NPM package manager site (check out the [odm](https://www.npmjs.com/search?q=keywords:odm) and [orm](https://www.npmjs.com/search?q=keywords:orm) tags for a subset!).
+There are many ODM/ORM solutions available on the npm package manager site (check out the [odm](https://www.npmjs.com/search?q=keywords:odm) and [orm](https://www.npmjs.com/search?q=keywords:orm) tags for a subset!).
 
 A few solutions that were popular at the time of writing are:
 
@@ -116,7 +116,7 @@ This section provides an overview of how to connect Mongoose to a MongoDB databa
 
 ### Installing Mongoose and MongoDB
 
-Mongoose is installed in your project (**package.json**) like any other dependency — using NPM. To install it, use the following command inside your project folder:
+Mongoose is installed in your project (**package.json**) like any other dependency — using npm. To install it, use the following command inside your project folder:
 
 ```bash
 npm install mongoose
