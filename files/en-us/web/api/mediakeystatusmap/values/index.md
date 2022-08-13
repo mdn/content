@@ -11,7 +11,7 @@ tags:
   - values()
 browser-compat: api.MediaKeyStatusMap.values
 ---
-{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
+{{APIRef("EncryptedMediaExtensions API")}}
 
 The **`values`** property of the
 {{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object, containing
