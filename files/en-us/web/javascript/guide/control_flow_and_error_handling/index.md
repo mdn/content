@@ -57,7 +57,7 @@ while (x < 10) {
 Here, `{ x++; }` is the block statement.
 
 > **Note:** [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)-declared variables are not block-scoped, but are scoped to the containing function or script, and the effects of setting them persist beyond the block itself. For example:
-> 
+>
 > ```js
 > var x = 1;
 > {
@@ -65,9 +65,9 @@ Here, `{ x++; }` is the block statement.
 > }
 > console.log(x); // outputs 2
 > ```
-> 
+>
 > This outputs `2` because the `var x` statement within the block is in the same scope as the `var x` statement before the block. (In C or Java, the equivalent code would have output `1`.)
-> 
+>
 > This scoping effect can be mitigated by using {{jsxref("Statements/let", "let")}} or {{jsxref("Statements/const", "const")}}.
 
 ## Conditional statements
