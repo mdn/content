@@ -32,7 +32,7 @@ Call {{domxref("XRFrame.getJointPose()")}} with an {{domxref("XRJointSpace")}} a
 ```js
 navigator.xr
   .requestSession({ optionalFeatures: ["hand-tracking"] })
-  .then(/** … */);
+  .then(/* … */);
 
 function renderFrame(session, frame) {
   // …
