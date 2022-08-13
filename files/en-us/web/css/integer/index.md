@@ -27,7 +27,7 @@ When animated, values of the `<integer>` data type are {{Glossary("interpolation
 
 ### Valid integers
 
-```css example-good
+```plain example-good
 12          Positive integer (without a leading + sign)
 +123        Positive integer (with a leading + sign)
 -456        Negative integer
