@@ -52,17 +52,17 @@ Event handlers are registered for the following pointer events: {{domxref("HTMLE
 
 ```js
 function init() {
- // Install event handlers for the pointer target
- const el = document.getElementById("target");
- el.onpointerdown = pointerdownHandler;
- el.onpointermove = pointermoveHandler;
+  // Install event handlers for the pointer target
+  const el = document.getElementById("target");
+  el.onpointerdown = pointerdownHandler;
+  el.onpointermove = pointermoveHandler;
 
- // Use same handler for pointer{up,cancel,out,leave} events since
- // the semantics for these events - in this app - are the same.
- el.onpointerup = pointerupHandler;
- el.onpointercancel = pointerupHandler;
- el.onpointerout = pointerupHandler;
- el.onpointerleave = pointerupHandler;
+  // Use same handler for pointer{up,cancel,out,leave} events since
+  // the semantics for these events - in this app - are the same.
+  el.onpointerup = pointerupHandler;
+  el.onpointercancel = pointerupHandler;
+  el.onpointerout = pointerupHandler;
+  el.onpointerleave = pointerupHandler;
 }
 ```
 
@@ -72,10 +72,10 @@ The {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired w
 
 ```js
 function pointerdownHandler(ev) {
- // The pointerdown event signals the start of a touch interaction.
- // This event is cached to support 2-finger gestures
- evCache.push(ev);
- log("pointerDown", ev);
+  // The pointerdown event signals the start of a touch interaction.
+  // This event is cached to support 2-finger gestures
+  evCache.push(ev);
+  log("pointerDown", ev);
 }
 ```
 
@@ -87,42 +87,42 @@ When this event is processed, the target's border is set to `dashed` to provide 
 
 ```js
 function pointermoveHandler(ev) {
- // This function implements a 2-pointer horizontal pinch/zoom gesture.
- //
- // If the distance between the two pointers has increased (zoom in),
- // the target element's background is changed to "pink" and if the
- // distance is decreasing (zoom out), the color is changed to "lightblue".
- //
- // This function sets the target element's border to "dashed" to visually
- // indicate the pointer's target received a move event.
- log("pointerMove", ev);
- ev.target.style.border = "dashed";
+  // This function implements a 2-pointer horizontal pinch/zoom gesture.
+  //
+  // If the distance between the two pointers has increased (zoom in),
+  // the target element's background is changed to "pink" and if the
+  // distance is decreasing (zoom out), the color is changed to "lightblue".
+  //
+  // This function sets the target element's border to "dashed" to visually
+  // indicate the pointer's target received a move event.
+  log("pointerMove", ev);
+  ev.target.style.border = "dashed";
 
- // Find this event in the cache and update its record with this event
- const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
- evCache[index] = ev;
+  // Find this event in the cache and update its record with this event
+  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  evCache[index] = ev;
 
- // If two pointers are down, check for pinch gestures
- if (evCache.length === 2) {
-   // Calculate the distance between the two pointers
-   const curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
+  // If two pointers are down, check for pinch gestures
+  if (evCache.length === 2) {
+    // Calculate the distance between the two pointers
+    const curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
 
-   if (prevDiff > 0) {
-     if (curDiff > prevDiff) {
-       // The distance between the two pointers has increased
-       log("Pinch moving OUT -> Zoom in", ev);
-       ev.target.style.background = "pink";
-     }
-     if (curDiff < prevDiff) {
-       // The distance between the two pointers has decreased
-       log("Pinch moving IN -> Zoom out",ev);
-       ev.target.style.background = "lightblue";
-     }
-   }
+    if (prevDiff > 0) {
+      if (curDiff > prevDiff) {
+         // The distance between the two pointers has increased
+         log("Pinch moving OUT -> Zoom in", ev);
+         ev.target.style.background = "pink";
+      }
+      if (curDiff < prevDiff) {
+        // The distance between the two pointers has decreased
+        log("Pinch moving IN -> Zoom out",ev);
+        ev.target.style.background = "lightblue";
+      }
+    }
 
-   // Cache the distance for the next move event
-   prevDiff = curDiff;
- }
+    // Cache the distance for the next move event
+    prevDiff = curDiff;
+  }
 }
 ```
 
@@ -177,9 +177,9 @@ This function helps manage the global event caches `evCache`.
 
 ```js
 function removeEvent(ev) {
- // Remove this event from the target's cache
- const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
- evCache.splice(index, 1);
+  // Remove this event from the target's cache
+  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  evCache.splice(index, 1);
 }
 ```
 
@@ -207,8 +207,8 @@ function log(prefix, ev) {
 }
 
 function clearLog(event) {
- const o = document.getElementsByTagName('output')[0];
- o.innerHTML = "";
+  const o = document.getElementsByTagName('output')[0];
+  o.innerHTML = "";
 }
 ```
 
