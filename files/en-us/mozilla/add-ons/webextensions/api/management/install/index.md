@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [Promise](/en-US/docs/Web/JavaSc
 ## Syntax
 
 ```js
-const { id } = await browser.management.install({ url });
+browser.management.install(options)
 ```
 
 ### Parameters

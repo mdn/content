@@ -62,16 +62,16 @@ function onGot(results) {
   }
 }
 
-function onAdded() {
-  let searching = browser.history.search({
-    text: "https://example.org/",
-    startTime: 0,
-    maxResults: 1
-  });
-  searching.then(onGot);
-}
-
-browser.history.addUrl({ url: "https://example.org/" }).then(onAdded);
+browser.history
+  .addUrl({ url: "https://example.org/" })
+  .then(() =>
+    browser.history.search({
+      text: "https://example.org/",
+      startTime: 0,
+      maxResults: 1,
+    })
+  )
+  .then(onGot);
 ```
 
 Add a record of a visit to "https\://example.org", but give it a `visitTime` 24 hours in the past, and a `transition` of "typed":
@@ -90,21 +90,18 @@ function onGot(visits) {
   }
 }
 
-function onAdded() {
-  browser.history
-    .getVisits({
-      url: "https://example.org/",
-    })
-    .then(onGot);
-}
-
 browser.history
   .addUrl({
     url: "https://example.org/",
     visitTime: oneDayAgo(),
     transition: "typed",
   })
-  .then(onAdded);
+  .then(() =>
+    browser.history.getVisits({
+      url: "https://example.org/",
+    })
+  )
+  .then(onGot);
 ```
 
 {{WebExtExamples}}
