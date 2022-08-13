@@ -117,7 +117,7 @@ background-size: 25% 25%;
 
 And, yes, you can mix and match different angle units, but don't. The above is hard to read.
 
-### Formal syntax
+## Formal syntax
 
 {{csssyntax}}
 
