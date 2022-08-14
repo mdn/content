@@ -13,8 +13,7 @@ browser-compat: javascript.builtins.RegExp.@@matchAll
 ---
 {{JSRef}}
 
-The **`[@@matchAll]`** method returns all matches of the
-regular expression against a string.
+The **`[@@matchAll]()`** method of a regular expression specifies how [`String.prototype.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) should behave.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html", "taller")}}
 
@@ -31,29 +30,50 @@ regexp[Symbol.matchAll](str)
 
 ### Return value
 
-An [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators).
+An [iterable iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) (which is not restartable) of matches. Each match is an array with the same shape as the return value of {{jsxref("RegExp.prototype.exec()")}}.
 
 ## Description
 
-This method is called internally in {{jsxref("String.prototype.matchAll()")}}. For
-example, the following two examples return same result.
+This method is called internally in {{jsxref("String.prototype.matchAll()")}}. For example, the following two examples return the same result.
 
 ```js
-'abc'.matchAll(/a/);
+'abc'.matchAll(/a/g);
 
-/a/[Symbol.matchAll]('abc');
+/a/g[Symbol.matchAll]('abc');
 ```
 
-This method exists for customizing the behavior of `matchAll()` in
-{{jsxref('RegExp')}} subclasses.
+Like [`@@split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split), `@@matchAll` starts by using [`@@species`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@species) to construct a new regex, thus avoiding mutating the original regexp in any way. [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) starts as the original regex's value.
+
+```js
+const regexp = /[a-c]/g;
+regexp.lastIndex = 1;
+const str = 'abc';
+Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
+// Array [ "1 b", "1 c" ]
+```
+
+The validation that the input is a global regex happens in [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll). `@@matchAll` does not validate the input. If the regex is not global, the returned iterator yields the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) result once and then returns `undefined`. If the regexp is global, each time the returned iterator's `next()` method is called, the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) is called and the result is yielded.
+
+When the regex is sticky and global, it would still perform sticky matches — i.e. it would fail to match any occurrences beyond the `lastIndex`.
+
+```js
+console.log(Array.from("ab-c".matchAll(/[abc]/gy))); // [ 'a', 'b' ]
+```
+
+If the current match is an empty string, the [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) would still be advanced — if the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it would advance by one Unicode codepoint; otherwise, it advances by one UTF-16 code unit.
+
+```js
+console.log(Array.from("😄".matchAll(/(?:)/g))); // [ '', '', '' ]
+console.log(Array.from("😄".match(/(?:)/gu))); // [ '', '' ]
+```
+
+This method exists for customizing the behavior of `matchAll()` in {{jsxref('RegExp')}} subclasses.
 
 ## Examples
 
 ### Direct call
 
-This method can be used in almost the same way as
-{{jsxref("String.prototype.matchAll()")}}, except for the different value of
-`this` and the different order of arguments.
+This method can be used in almost the same way as {{jsxref("String.prototype.matchAll()")}}, except for the different value of `this` and the different order of arguments.
 
 ```js
 const re = /[0-9]+/g;
@@ -66,8 +86,7 @@ console.log(Array.from(result, (x) => x[0]));
 
 ### Using @@matchAll in subclasses
 
-Subclasses of {{jsxref("RegExp")}} can override the `[@@matchAll]()` method
-to modify the default behavior.
+Subclasses of {{jsxref("RegExp")}} can override the `[@@matchAll]()` method to modify the default behavior.
 
 For example, to return an {{jsxref("Array")}} instead of an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators):
 
