@@ -93,18 +93,18 @@ The program below uses a very inefficient algorithm to generate multiple large p
 ```js
 const MAX_PRIME = 1000000;
 
-const isPrime = (n) => {
+function isPrime(n) {
   for (let i = 2; i <= Math.sqrt(n); i++) {
     if (n % i === 0) {
       return false;
     }
   }
   return n > 1;
-};
+}
 
 const random = (max) => Math.floor(Math.random() * max);
 
-const generatePrimes = (quota) => {
+function generatePrimes(quota) {
   const primes = [];
   while (primes.length < quota) {
     const candidate = random(MAX_PRIME);
@@ -113,7 +113,7 @@ const generatePrimes = (quota) => {
     }
   }
   return primes;
-};
+}
 
 const quota = document.querySelector('#quota');
 const output = document.querySelector('#output');
@@ -162,25 +162,27 @@ textarea {
 ```js hidden
 const MAX_PRIME = 1000000;
 
-const isPrime = (n) => {
+function isPrime(n) {
   for (let i = 2; i <= Math.sqrt(n); i++) {
     if (n % i === 0) {
       return false;
     }
   }
   return n > 1;
-};
+}
 
 const random = (max) => Math.floor(Math.random() * max);
 
-const generatePrimes = (quota) => {
+function generatePrimes(quota) {
   const primes = [];
   while (primes.length < quota) {
     const candidate = random(MAX_PRIME);
-    if (isPrime(candidate)) primes.push(candidate);
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
   }
   return primes;
-};
+}
 
 const quota = document.querySelector('#quota');
 const output = document.querySelector('#output');
