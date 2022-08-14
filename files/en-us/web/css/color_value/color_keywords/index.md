@@ -306,11 +306,6 @@ There are a few caveats to consider when using color keywords:
       <td style="background: darkslategray"></td>
     </tr>
     <tr>
-      <td style="text-align: center"><code>darkslategrey</code></td>
-      <td><code>#2f4f4f</code></td>
-      <td style="background: darkslategrey"></td>
-    </tr>
-    <tr>
       <td style="text-align: center"><code>darkturquoise</code></td>
       <td><code>#00ced1</code></td>
       <td style="background: darkturquoise"></td>
