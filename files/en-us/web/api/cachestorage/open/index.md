@@ -43,7 +43,7 @@ A {{jsxref("Promise")}} that resolves to the requested {{domxref("Cache")}} obje
 
 ## Examples
 
-This example is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
+This example is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker) (see [simple service worker running live](https://mdn.github.io/dom-examples/service-worker/simple-service-worker/)).
 Here we wait for an {{domxref("InstallEvent")}} to fire, then runs
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for
 the app. This consists of calling `CacheStorage.open()` to create a new

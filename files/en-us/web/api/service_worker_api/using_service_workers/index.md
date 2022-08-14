@@ -9,6 +9,7 @@ tags:
   - Workers
   - basics
 ---
+
 {{ServiceWorkerSidebar}}
 
 This article provides information on getting started with service workers, including basic architecture, registering a service worker, the install and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of a simple app with offline functionality.
@@ -47,11 +48,11 @@ The below graphic shows a summary of the available service worker events:
 
 ## Service workers demo
 
-To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [sw-test](https://github.com/mdn/sw-test), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
+To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [simple service worker](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
 
 ![](demo-screenshot.png)
 
-You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [view the example live](https://mdn.github.io/sw-test/).
+You can see the [source code on GitHub](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker), and the [simple service worker running live](https://mdn.github.io/dom-examples/service-worker/simple-service-worker/).
 
 ### Registering your worker
 
@@ -59,20 +60,20 @@ The first block of code in our app's JavaScript file — `app.js` — is as foll
 
 ```js
 const registerServiceWorker = async () => {
-  if ('serviceWorker' in navigator) {
+  if ("serviceWorker" in navigator) {
     try {
       const registration = await navigator.serviceWorker.register(
-        '/sw-test/sw.js',
+        "/sw-test/sw.js",
         {
-          scope: '/sw-test/',
+          scope: "/sw-test/",
         }
       );
       if (registration.installing) {
-        console.log('Service worker installing');
+        console.log("Service worker installing");
       } else if (registration.waiting) {
-        console.log('Service worker installed');
+        console.log("Service worker installed");
       } else if (registration.active) {
-        console.log('Service worker active');
+        console.log("Service worker active");
       }
     } catch (error) {
       console.error(`Registration failed with ${error}`);
@@ -165,20 +166,19 @@ A `fetch` event fires every time any resource controlled by a service worker is 
 You can attach a `fetch` event listener to the service worker, then call the `respondWith()` method on the event to hijack our HTTP responses and update them with your own magic.
 
 ```js
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
+self.addEventListener("fetch", (event) => {
+  event
+    .respondWith
     // magic goes here
-  );
+    ();
 });
 ```
 
 We could start by responding with the resource whose URL matches that of the network request, in each case:
 
 ```js
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-  );
+self.addEventListener("fetch", (event) => {
+  event.respondWith(caches.match(event.request));
 });
 ```
 
@@ -188,38 +188,41 @@ Let's look at a few other options we have when defining our magic (see our [Fetc
 
 1. The {{domxref("Response.Response","Response()")}} constructor allows you to create a custom response. In this case, we are just returning a simple text string:
 
-    ```js
-    new Response('Hello from your friendly neighborhood service worker!');
-    ```
+   ```js
+   new Response("Hello from your friendly neighborhood service worker!");
+   ```
 
 2. This more complex `Response` below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:
 
-    ```js
-    new Response('<p>Hello from your friendly neighborhood service worker!</p>', {
-      headers: { 'Content-Type': 'text/html' }
-    });
-    ```
+   ```js
+   new Response(
+     "<p>Hello from your friendly neighborhood service worker!</p>",
+     {
+       headers: { "Content-Type": "text/html" },
+     }
+   );
+   ```
 
 3. If a match wasn't found in the cache, you could tell the browser to {{domxref("fetch()")}} the default network request for that resource, to get the new resource from the network if it is available:
 
-    ```js
-    fetch(event.request);
-    ```
+   ```js
+   fetch(event.request);
+   ```
 
 4. If a match wasn't found in the cache, and the network isn't available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:
 
-    ```js
-    caches.match('./fallback.html');
-    ```
+   ```js
+   caches.match("./fallback.html");
+   ```
 
 5. You can retrieve a lot of information about each request by calling parameters of the {{domxref("Request")}} object returned by the {{domxref("FetchEvent")}}:
 
-    ```js
-    event.request.url
-    event.request.method
-    event.request.headers
-    event.request.body
-    ```
+   ```js
+   event.request.url;
+   event.request.method;
+   event.request.headers;
+   event.request.body;
+   ```
 
 ## Recovering failed requests
 
@@ -236,7 +239,7 @@ const cacheFirst = async (request) => {
   return fetch(request);
 };
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(cacheFirst(event.request));
 });
 ```
@@ -249,7 +252,7 @@ If we were being really clever, we would not only request the resource from the 
 const putInCache = async (request, response) => {
   const cache = await caches.open("v1");
   await cache.put(request, response);
-}
+};
 
 const cacheFirst = async (request) => {
   const responseFromCache = await caches.match(request);
@@ -257,18 +260,18 @@ const cacheFirst = async (request) => {
     return responseFromCache;
   }
   const responseFromNetwork = await fetch(request);
-  putInCache(request, responseFromNetwork.clone())
+  putInCache(request, responseFromNetwork.clone());
   return responseFromNetwork;
 };
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(cacheFirst(event.request));
 });
 ```
 
 If the request URL is not available in the cache, we request the resource from the network request with `await fetch(request)`. After that, we put a clone of the response into the cache. The `putInCache` function uses `caches.open('v1')` and `cache.put()` to add the resource to the cache. The original response is returned to the browser to be given to the page that called it.
 
-Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
+Cloning the response is necessary because request and response streams can only be read once. In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
 
 What might look a bit weird is that the promise returned by `putInCache` is not awaited. But the reason is that we don't want to wait until the response clone has been added to the cache before returning a response.
 
@@ -303,9 +306,9 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     // when even the fallback response is not available,
     // there is nothing we can do, but we must always
     // return a Response object
-    return new Response('Network error happened', {
+    return new Response("Network error happened", {
       status: 408,
-      headers: { 'Content-Type': 'text/plain' },
+      headers: { "Content-Type": "text/plain" },
     });
   }
 };
@@ -338,7 +341,7 @@ const enableNavigationPreload = async () => {
   }
 };
 
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(enableNavigationPreload());
 });
 ```
@@ -356,12 +359,12 @@ The new process is:
 
 ```js
 const addResourcesToCache = async (resources) => {
-  const cache = await caches.open('v1');
+  const cache = await caches.open("v1");
   await cache.addAll(resources);
 };
 
 const putInCache = async (request, response) => {
-  const cache = await caches.open('v1');
+  const cache = await caches.open("v1");
   await cache.put(request, response);
 };
 
@@ -375,7 +378,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
   // Next try to use (and cache) the preloaded response, if it's there
   const preloadResponse = await preloadResponsePromise;
   if (preloadResponse) {
-    console.info('using preload response', preloadResponse);
+    console.info("using preload response", preloadResponse);
     putInCache(request, preloadResponse.clone());
     return preloadResponse;
   }
@@ -396,9 +399,9 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     // when even the fallback response is not available,
     // there is nothing we can do, but we must always
     // return a Response object
-    return new Response('Network error happened', {
+    return new Response("Network error happened", {
       status: 408,
-      headers: { 'Content-Type': 'text/plain' },
+      headers: { "Content-Type": "text/plain" },
     });
   }
 };
@@ -411,32 +414,32 @@ const enableNavigationPreload = async () => {
   }
 };
 
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(enableNavigationPreload());
 });
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
     addResourcesToCache([
-      '/sw-test/',
-      '/sw-test/index.html',
-      '/sw-test/style.css',
-      '/sw-test/app.js',
-      '/sw-test/image-list.js',
-      '/sw-test/star-wars-logo.jpg',
-      '/sw-test/gallery/bountyHunters.jpg',
-      '/sw-test/gallery/myLittleVader.jpg',
-      '/sw-test/gallery/snowTroopers.jpg',
+      "/sw-test/",
+      "/sw-test/index.html",
+      "/sw-test/style.css",
+      "/sw-test/app.js",
+      "/sw-test/image-list.js",
+      "/sw-test/star-wars-logo.jpg",
+      "/sw-test/gallery/bountyHunters.jpg",
+      "/sw-test/gallery/myLittleVader.jpg",
+      "/sw-test/gallery/snowTroopers.jpg",
     ])
   );
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
     cacheFirst({
       request: event.request,
       preloadResponsePromise: event.preloadResponse,
-      fallbackUrl: '/sw-test/gallery/myLittleVader.jpg',
+      fallbackUrl: "/sw-test/gallery/myLittleVader.jpg",
     })
   );
 });
@@ -454,24 +457,24 @@ You'll want to update your `install` event listener in the new service worker to
 
 ```js
 const addResourcesToCache = async (resources) => {
-  const cache = await caches.open('v2')
+  const cache = await caches.open("v2");
   await cache.addAll(resources);
-}
+};
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(addResourcesToCache(
-    [
-      './sw-test/',
-      './sw-test/index.html',
-      './sw-test/style.css',
-      './sw-test/app.js',
-      './sw-test/image-list.js',
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    addResourcesToCache([
+      "./sw-test/",
+      "./sw-test/index.html",
+      "./sw-test/style.css",
+      "./sw-test/app.js",
+      "./sw-test/image-list.js",
 
       // ...
 
       // include other new resources for the new version…
-    ]
-  ));
+    ])
+  );
 });
 ```
 
@@ -481,23 +484,23 @@ When no pages are using the current version, the new worker activates and become
 
 ### Deleting old caches
 
-You also get an `activate` event. This is generally used to do stuff that would have broken the previous version while it was still running, for example getting rid of old caches. This is also useful for removing data that is no longer needed to avoid filling up too much disk space — each browser has a hard limit on the amount of cache storage that a given service worker can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin.  The browser will generally delete all of the data for an origin or none of the data for an origin.
+You also get an `activate` event. This is generally used to do stuff that would have broken the previous version while it was still running, for example getting rid of old caches. This is also useful for removing data that is no longer needed to avoid filling up too much disk space — each browser has a hard limit on the amount of cache storage that a given service worker can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin. The browser will generally delete all of the data for an origin or none of the data for an origin.
 
 Promises passed into `waitUntil()` will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first `fetch` event on the new service worker.
 
 ```js
 const deleteCache = async (key) => {
-  await caches.delete(key)
-}
+  await caches.delete(key);
+};
 
 const deleteOldCaches = async () => {
-   const cacheKeepList = ['v2'];
-   const keyList = await caches.keys()
-   const cachesToDelete = keyList.filter((key) => !cacheKeepList.includes(key))
-   await Promise.all(cachesToDelete.map(deleteCache));
-}
+  const cacheKeepList = ["v2"];
+  const keyList = await caches.keys();
+  const cachesToDelete = keyList.filter((key) => !cacheKeepList.includes(key));
+  await Promise.all(cachesToDelete.map(deleteCache));
+};
 
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(deleteOldCaches());
 });
 ```

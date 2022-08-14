@@ -49,7 +49,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Examples
 
-This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/).)
+This code snippet is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker) (see [simple service worker running live](https://mdn.github.io/dom-examples/service-worker/simple-service-worker/).)
 This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
 
 In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:
