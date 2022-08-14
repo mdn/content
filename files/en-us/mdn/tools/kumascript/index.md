@@ -269,7 +269,7 @@ The result of 2 + 2 = <%= math_lib.add(2, 2) %>
 
 And, the output of this template would be:
 
-```plain
+```
 The result of 2 + 2 = 4
 ```
 
