@@ -38,15 +38,9 @@ The markup is as follows:
 
 ```html
 <x-deck selected-index="0">
-  <x-card>
-    …
-  </x-card>
-  <x-card>
-    …
-  </x-card>
-  <x-card>
-    …
-  </x-card>
+  <x-card> … </x-card>
+  <x-card> … </x-card>
+  <x-card> … </x-card>
 </x-deck>
 ```
 
@@ -59,7 +53,8 @@ x-card {
   width: 100%;
 }
 
-x-card:nth-child(1), x-card:nth-child(2) {
+x-card:nth-child(1),
+x-card:nth-child(2) {
   width: 30%;
   float: left;
   padding: 2rem;
@@ -81,7 +76,9 @@ So we're giving the first two columns a {{cssxref("width")}} of `30%`, and the t
 The padding does not affect the overall width and height of the containers because we have set the {{cssxref("box-sizing")}} of all elements to `border-box`:
 
 ```css
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -99,7 +96,8 @@ Things are working fairly well now, but there are still some issues just waiting
 Because the size of replaced elements is dictated by the size of the media inserted into them, and the media is a fixed size, they explode out of their containing elements and make a mess of the layout. This is pretty horrible, but generally this kind of problem is easily fixed with some simple CSS:
 
 ```css
-img, video {
+img,
+video {
   max-width: 100%;
 }
 ```
@@ -107,9 +105,10 @@ img, video {
 This tells the replaced elements to remain constrained inside their container's widths, no matter what. However, if they aren't as wide as their containers, they will not stretch to fill them. In the snapshot example, we ended up with slightly different code:
 
 ```css
-x-card:nth-child(1) video, x-card:nth-child(2) img {
+x-card:nth-child(1) video,
+x-card:nth-child(2) img {
   width: 100%;
-    …
+  /* … */
 }
 ```
 
@@ -135,7 +134,8 @@ We also have a mid-width layout, which is aimed at working well on tablets and n
 
 ```css
 @media all and (max-width: 1024px) {
-  x-card:nth-child(1), x-card:nth-child(2) {
+  x-card:nth-child(1),
+  x-card:nth-child(2) {
     width: 50%;
   }
 
@@ -182,26 +182,29 @@ We then have a narrow screen layout, designed to fit the bill for a mobile app/o
 This first block resets a number of different things from the widescreen layouts that weren't required for the mobile app.
 
 ```css
-  x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
-    margin-top: 17.5vw;
-  }
+x-card:nth-child(1) video,
+x-card:nth-child(2) img,
+x-card:nth-child(3) {
+  margin-top: 17.5vw;
+}
 
-  x-card:nth-child(1) button, x-card:nth-child(2) button {
-    position: absolute;
-    bottom: 0;
-  }
+x-card:nth-child(1) button,
+x-card:nth-child(2) button {
+  position: absolute;
+  bottom: 0;
+}
 
-  x-card:nth-child(2) button:nth-of-type(2) {
-    bottom: 5.9rem;
-  }
+x-card:nth-child(2) button:nth-of-type(2) {
+  bottom: 5.9rem;
+}
 
-  x-card:nth-child(1) button {
-    font-size: 7vw;
-  }
+x-card:nth-child(1) button {
+  font-size: 7vw;
+}
 
-  x-card:nth-child(2) button {
-    font-size: 7vw;
-  }
+x-card:nth-child(2) button {
+  font-size: 7vw;
+}
 ```
 
 The next rules do some sizing on the buttons inside the first two cards, and give all card contents a top margin so that their content won't be lost under the navigation buttons (see below). This was necessary because Mozilla Brick (also see below) forces its components to be 100% of the screen width and height. We have used `vw` (viewport width) units for these — `1vw` is equivalent to 1% of the viewport width. This makes the dimensions scale up and down nicely along with the viewport width. Last for this section, we absolutely positioned all buttons at the bottom of the cards they are in, so the layout looks OK at different viewport size variations. We then add a rule that positions the second button in any card a button's width higher up the card. When you click on an image in the gallery it brings up options to delete or cancel deletion of the card, and you don't want two buttons on top of one another.
@@ -312,11 +315,14 @@ We also came across some problems with orientation: the mobile-app layout of our
     border-left: 0;
   }
 
-  x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
+  x-card:nth-child(1) video,
+  x-card:nth-child(2) img,
+  x-card:nth-child(3) {
     margin-top: 0;
   }
 
-  x-card:nth-child(1) button, x-card:nth-child(2) button {
+  x-card:nth-child(1) button,
+  x-card:nth-child(2) button {
     font-size: 2rem;
   }
 }
@@ -379,14 +385,14 @@ This means that mobile browsers only download the mobile background image asset 
 
 ```css
 button {
-  background: url(images/low-res-header.jpg) 1rem center ;
+  background: url(images/low-res-header.jpg) 1rem center;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
        only screen and (min-resolution: 192dpi),
        only screen and (min-resolution: 2dppx) {
   button {
-    background: url(images/high-res-header.jpg) 1rem center ;
+    background: url(images/high-res-header.jpg) 1rem center;
   }
 }
 ```
