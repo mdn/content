@@ -49,7 +49,7 @@ for (const pair of myHeaders.entries()) {
 
 The result is:
 
-```
+```text
 content-type: text/xml
 vary: Accept-Language
 ```

@@ -41,7 +41,7 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
 - {{domxref("Headers.entries()")}}
   - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing to go through all key/value pairs contained in this object.
 - {{domxref("Headers.forEach()")}}
-  - : Executes a provided function once for each array element.
+  - : Executes a provided function once for each key/value pair in Headers object.
 - {{domxref("Headers.get()")}}
   - : Returns a {{jsxref("String")}} sequence of all the values of a header within a `Headers` object with a given name.
 - {{domxref("Headers.has()")}}
