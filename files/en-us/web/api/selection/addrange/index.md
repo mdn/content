@@ -56,9 +56,9 @@ button.addEventListener('click', () => {
     selection.removeAllRanges();
   }
 
-  for (let i = 0; i < strongs.length; i++) {
+  for (const node of strongs) {
     const range = document.createRange();
-    range.selectNode(strongs[i]);
+    range.selectNode(node);
     selection.addRange(range);
   }
 });
