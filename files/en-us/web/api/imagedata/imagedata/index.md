@@ -88,7 +88,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const arr = new Uint8ClampedArray(40_000);
 
-// Fill the array with the same RGBA valuesl
+// Fill the array with the same RGBA values
 for (let i = 0; i < arr.length; i += 4) {
   arr[i + 0] = 0;    // R value
   arr[i + 1] = 190;  // G value
