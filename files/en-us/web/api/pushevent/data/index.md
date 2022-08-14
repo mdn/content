@@ -4,7 +4,6 @@ slug: Web/API/PushEvent/data
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Push
   - PushEvent

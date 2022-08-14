@@ -9,7 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.type
 ---
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{APIRef("Navigation Timing")}}
 
 The **`type`** read-only property returns the type of navigation.
 
