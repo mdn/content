@@ -88,22 +88,22 @@ where:
 #### Keywords for common cubic-bezier easing functions
 
 - `ease`
-    - : The interpolation starts slowly, accelerates sharply, and then slows gradually towards the end. This keyword represents the easing function `cubic-bezier(0.25, 0.1, 0.25, 1.0)`. It is similar to [`ease-in-out`](#ease-in-out), though it accelerates more sharply at the beginning.
+  - : The interpolation starts slowly, accelerates sharply, and then slows gradually towards the end. This keyword represents the easing function `cubic-bezier(0.25, 0.1, 0.25, 1.0)`. It is similar to [`ease-in-out`](#ease-in-out), though it accelerates more sharply at the beginning.
 
 ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A curving line extends from the origin to the X 1 Y 1 position, quickly rising and arcing.](cubic-bezier-ease.png)
 
 - `ease-in`
-    - : The interpolation starts slowly, and then progressively speeds up until the end, at which point it stops abruptly. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 1.0, 1.0)`.
+  - : The interpolation starts slowly, and then progressively speeds up until the end, at which point it stops abruptly. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 1.0, 1.0)`.
 
 ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A slightly curving line extends from the origin to the X 1 Y 1 position, with most of the curve close to the origin, straightening out as it approaches X 1 Y 1.](cubic-bezier-ease-in.png)
 
 - `ease-in-out`
-    - : The interpolation starts slowly, speeds up, and then slows down towards the end. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 0.58, 1.0)`. At the beginning, it behaves like the [`ease-in`](#ease-in) function; at the end, it is like the [`ease-out`](#ease-out) function.
+  - : The interpolation starts slowly, speeds up, and then slows down towards the end. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 0.58, 1.0)`. At the beginning, it behaves like the [`ease-in`](#ease-in) function; at the end, it is like the [`ease-out`](#ease-out) function.
 
 ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A slightly curving line extends from the origin to the X 1 Y 1 position. The curve is symmetrical, resembling a stretched out letter S.](cubic-bezier-ease-in-out.png)
 
 - `ease-out`
-    - : The interpolation starts abruptly, and then progressively slows down towards the end. This keyword represents the easing function `cubic-bezier(0.0, 0.0, 0.58, 1.0)`.
+  - : The interpolation starts abruptly, and then progressively slows down towards the end. This keyword represents the easing function `cubic-bezier(0.0, 0.0, 0.58, 1.0)`.
 
 ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. A slightly curving line extends from the origin to the X 1 Y 1 position, starting as an almost straight diagonal line and curving as it gets close to X 1 Y 1.](cubic-bezer-ease-out.png)
 
@@ -156,12 +156,12 @@ where:
 #### Step function keywords
 
 - `step-start`
-    - :  The interpolation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function `steps(1, jump-start)` or `steps(1, start)`.
+  - :  The interpolation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function `steps(1, jump-start)` or `steps(1, start)`.
 
 ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The second dot has a horizontal lines extending 1 units back towards the Y axis.](steps-1-start.png)
 
 - `step-end`
-    - : The interpolation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function `steps(1, jump-end)` or `steps(1, end)`.
+  - : The interpolation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function `steps(1, jump-end)` or `steps(1, end)`.
 
 ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio'. Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The first dot has a horizontal lines extending 1 unit forwards away from the Y axis.](steps-1-end.png)
 
