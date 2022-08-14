@@ -5,7 +5,6 @@ page-type: web-api-constructor
 tags:
   - Constructor
   - Deprecated
-  - Experimental
   - Media
   - RTCSessionDescription
   - Reference
@@ -13,8 +12,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.RTCSessionDescription
 ---
-
-{{APIRef("WebRTC")}}{{SeeCompatTable}}{{deprecated_header}}
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
 The **`RTCSessionDescription()`** constructor creates a new
 {{domxref("RTCSessionDescription")}} with its properties initialized as described in the

@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Bounding Box
-  - Experimental
   - Interface
   - Reference
   - Resize Observer API
