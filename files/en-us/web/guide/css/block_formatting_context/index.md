@@ -171,14 +171,14 @@ Creating a new BFC to avoid the [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_
 ```html
 <div class="blue"></div>
 <div class="red-outer">
-  <div class="red-inner">red inner</div>
+  <div class="yellow-inner">yellow inner</div>
 </div>
 ```
 
 #### CSS
 
 ```css
-.blue, .red-inner {
+.blue, .yellow-inner {
   height: 50px;
   margin: 10px 0;
 }
@@ -190,6 +190,10 @@ Creating a new BFC to avoid the [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_
 .red-outer {
   overflow: hidden;
   background: red;
+}
+
+.yellow-inner {
+  background: yellow;
 }
 ```
 
