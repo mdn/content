@@ -12,8 +12,6 @@ browser-compat: api.RTCIceServer.username
 ---
 {{APIRef("WebRTC")}}
 
-{{SeeCompatTable}}
-
 The {{domxref("RTCIceServer")}} dictionary's **`username`**
 property is a string which specifies the username to use when authenticating with the
 {{Glossary("ICE")}} server being described.

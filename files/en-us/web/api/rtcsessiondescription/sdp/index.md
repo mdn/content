@@ -10,8 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.sdp
 ---
-
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}
 
 The property **`RTCSessionDescription.sdp`** is a read-only
 string containing the {{Glossary("SDP")}} which describes the session.

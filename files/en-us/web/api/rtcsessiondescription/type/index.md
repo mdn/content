@@ -11,8 +11,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.type
 ---
-
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}
 
 The property **`RTCSessionDescription.type`** is a read-only
 string value which describes the description's type.
