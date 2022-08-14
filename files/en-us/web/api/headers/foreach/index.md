@@ -35,7 +35,7 @@ forEach(function (value, key) { /* … */ }, thisContext)
       - : Value of each iteration.
     - `key`
       - : Key of each iteration.
-    - `object`
+    - `object` {{Optional_Inline}}
       - : The Headers object being iterated.
 - `thisContext` {{Optional_Inline}}
   - : Value to use as `this` when executing `callback`.
