@@ -6,7 +6,7 @@ tags:
   - JavaScript
 ---
 
-In JavaScript, you write some code and it gets interpreted by the JS engine. To understand what happens behind the scenes, you need to have an understanding of `Execution Context`. 
+In JavaScript, you write some code and it gets interpreted by the JS engine. To understand what happens behind the scenes, you need to have an understanding of `Execution Context`. The concept of execution context important in order to understand other JavaScript concepts such as Hoisting, Scope, and Closures.
 
 An **Execution Context** is the environment in which Javascript code executes. It consists of the {{glossary("scope")}}, the information that links a variable name with the actual variable storing data, and of the binding of the {{jsxref("this")}} reference, the object `this` refers to.
 
