@@ -65,9 +65,9 @@ Listen for attach events, and log the info:
 
 ```js
 function handleAttached(tabId, attachInfo) {
-  console.log("Tab: " + tabId + " attached");
-  console.log("New window: " + attachInfo.newWindowId);
-  console.log("New index: " + attachInfo.newPosition);
+  console.log(`Tab: ${tabId} attached`);
+  console.log(`New window: ${attachInfo.newWindowId}`);
+  console.log(`New index: ${attachInfo.newPosition}`);
 }
 
 browser.tabs.onAttached.addListener(handleAttached);

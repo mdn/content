@@ -24,7 +24,7 @@ One of the advantages of hoisting is that it lets you use a function before you 
 catName("Tiger");
 
 function catName(name) {
-  console.log("My cat's name is " + name);
+  console.log(`My cat's name is ${name}`);
 }
 /*
 The result of the code above is: "My cat's name is Tiger"
@@ -35,7 +35,7 @@ Without hoisting you would _have_ to write the same code like this:
 
 ```js
 function catName(name) {
-  console.log("My cat's name is " + name);
+  console.log(`My cat's name is ${name}`);
 }
 
 catName("Tiger");
@@ -92,7 +92,7 @@ The code snippet below will work, because even though it isn't hoisted, the vari
 a = 'Cran'; // Initialize a
 b = 'berry'; // Initialize b
 
-console.log(a + "" + b); // 'Cranberry'
+console.log(`${a}${b}`); // 'Cranberry'
 ```
 
 ### `let` and `const` hoisting

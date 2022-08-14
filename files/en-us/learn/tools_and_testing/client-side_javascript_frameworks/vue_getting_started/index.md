@@ -75,7 +75,7 @@ To use Vue in an existing site, you can drop one of the following [`<script>`](/
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   ```
 
-However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue NPM package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI to streamline the development process. To use the npm package & the CLI you will need:
+However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue npm package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI to streamline the development process. To use the npm package & the CLI you will need:
 
 1. Node.js 8.11+ installed.
 2. npm or yarn.

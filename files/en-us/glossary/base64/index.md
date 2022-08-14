@@ -109,7 +109,7 @@ function base64DecToArr(sBase64, nBlocksSize){
   let nMod3;
   let nMod4;
   let nUint24 = 0;
-  let nOutId = 0;
+  let nOutIdx = 0;
   for (let nInIdx = 0; nInIdx < nInLen; nInIdx++) {
     nMod4 = nInIdx & 3;
     nUint24 |= b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 6 * (3 - nMod4);

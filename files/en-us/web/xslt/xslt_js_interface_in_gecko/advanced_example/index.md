@@ -83,7 +83,6 @@ function sort() {
   // Add the new content from the transformation
   document.getElementById("example").appendChild(fragment)
 }
-
 ```
 
 XSL Stylesheet:

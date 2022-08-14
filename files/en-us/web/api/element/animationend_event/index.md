@@ -6,7 +6,6 @@ tags:
   - Animation
   - AnimationEvent
   - CSS Animations
-  - CSS3 Animations
   - Event
   - Element
   - Reference

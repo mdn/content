@@ -14,7 +14,7 @@ To use WebAssembly in JavaScript, you first need to pull your module into memory
 
 ## What are the options?
 
-WebAssembly is not yet integrated with `<script type='module'>` or ES2015 `import` statements, thus there is not a path to have the browser fetch modules for you using imports.
+WebAssembly is not yet integrated with `<script type='module'>` or `import` statements, thus there is not a path to have the browser fetch modules for you using imports.
 
 The older {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} methods require you to create an {{jsxref("ArrayBuffer")}} containing your WebAssembly module binary after fetching the raw bytes, and then compile/instantiate it. This is analogous to `new Function(string)`, except that we are substituting a string of characters (JavaScript source code) with an array buffer of bytes (WebAssembly source code).
 

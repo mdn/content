@@ -41,7 +41,7 @@ async function name(param0, param1, /* … ,*/ paramN) {
 }
 ```
 
-As of ES2015, you can also use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+Async functions can also be defined with the [arrow syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Parameters
 

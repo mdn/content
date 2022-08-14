@@ -59,8 +59,8 @@ Think carefully about the way you handle communication in the project — make s
 As a rule, do:
 
 - Use [GitHub discussion](https://github.com/mdn/mdn-community/discussions) before filing an issue. This helps to keep issues focused and productive.
-- Ask questions using other mechanisms like [chat rooms](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [forums](<(https://discourse.mozilla.org/c/mdn/236)>) if you are not sure whether something is useful or have a simple question.
-- Read our [contribution guidelines](https://developer.mozilla.org/en-US/docs/MDN/Community) and [writing guidelines](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines) first to try to solve the issue yourself.
+- Ask questions using other mechanisms like [chat rooms](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [forums](https://discourse.mozilla.org/c/mdn/236) if you are not sure whether something is useful or have a simple question.
+- Read our [contribution guidelines](/en-US/docs/MDN/Community) and [writing guidelines](/en-US/docs/MDN/Writing_guidelines) first to try to solve the issue yourself.
 
 Don't:
 

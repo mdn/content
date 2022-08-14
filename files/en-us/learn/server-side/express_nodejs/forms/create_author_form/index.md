@@ -28,6 +28,7 @@ Find the exported `author_create_get()` controller method and replace it with th
 // Display Author create form on GET.
 exports.author_create_get = (req, res, next) => {
   res.render("author_form", { title: "Create Author" });
+
 };
 ```
 
@@ -61,7 +62,6 @@ exports.author_create_post = [
     .optional({ checkFalsy: true })
     .isISO8601()
     .toDate(),
-
   // Process request after validation and sanitization.
   (req, res, next) => {
     // Extract the validation errors from a request.

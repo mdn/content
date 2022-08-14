@@ -69,7 +69,7 @@ cases:
         </p>
         <div class="notecard note">
           <p>
-            <strong>Note:</strong> As of ES5, this can be bypassed by using
+            <strong>Note:</strong> This can be bypassed by using
             {{jsxref("Object.create", "Object.create(null)")}},
             but this is seldom done.
           </p>
@@ -376,7 +376,7 @@ myMap.set(0, 'zero');
 myMap.set(1, 'one');
 
 for (const [key, value] of myMap) {
-  console.log(`${key } = ${value}`);
+  console.log(`${key} = ${value}`);
 }
 // 0 = zero
 // 1 = one

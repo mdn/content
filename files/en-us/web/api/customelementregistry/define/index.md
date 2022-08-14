@@ -225,7 +225,6 @@ class PopUpInfo extends HTMLElement {
     // this will cause an error to be thrown when the element is defined.
   }
 }
-
 ```
 
 ## Specifications

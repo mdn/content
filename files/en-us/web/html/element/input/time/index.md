@@ -510,7 +510,7 @@ function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
   for (let i = 0; i <= 59; i++) {
     const option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }

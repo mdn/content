@@ -88,7 +88,7 @@ At this point you should insert the above code block into the draw() function, j
 
 Test your code at this point, and you will be impressed — now we have a ball that bounced off all four edges of the canvas! We have another problem however — when the ball hits each wall it sinks into it slightly before changing direction:
 
-![](ball-in-wall.png)
+![skyblue ball disappearing into the top of the white wall.](ball-in-wall.png)
 
 This is because we're calculating the collision point of the wall and the center of the ball, while we should be doing it for its circumference. The ball should bounce right after if touches the wall, not when it's already halfway in the wall, so let's adjust our statements a bit to include that. Update the last code you added to this:
 

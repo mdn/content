@@ -9,7 +9,7 @@ tags:
   - Experimental
   - anticipatedRemoval
   - DeprecationReportBody
-spec-urls: https://wicg.github.io/deprecation-reporting/#dom-deprecationreportbody-anticipatedremoval
+browser-compat: api.DeprecationReportBody.anticipatedRemoval
 ---
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
@@ -42,4 +42,4 @@ let observer = new ReportingObserver((reports, observer) => {
 
 ## Browser compatibility
 
-This feature is not yet available by default on any released browser. It can be activated on Firefox by setting `dom_reporting_enabled` to `true` and Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools) in it.
+{{Compat}}

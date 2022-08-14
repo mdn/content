@@ -125,7 +125,6 @@ The "index.html" file and the "style.css" files are already complete:
   </body>
 
 </html>
-
 ```
 
 ```css

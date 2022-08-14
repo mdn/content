@@ -4,12 +4,12 @@ slug: Web/API/Permissions/revoke
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Permissions
   - Permissions API
   - Reference
   - revoke
+  - Deprecated
 browser-compat: api.Permissions.revoke
 ---
 {{APIRef("Permissions API")}}{{deprecated_header}}

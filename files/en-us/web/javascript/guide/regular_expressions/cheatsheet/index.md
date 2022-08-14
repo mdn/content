@@ -103,7 +103,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           including newlines.
         </p>
         <p>
-          ES2018 added the <code>s</code> "dotAll" flag, which allows the dot to
+          The <code>s</code> "dotAll" flag allows the dot to
           also match line terminators.
         </p>
       </td>

@@ -23,7 +23,7 @@ To start off with, let's take a look at the HTML that makes up the player.
 
 ### The video
 
-First of all the {{ htmlelement("video") }} element is defined, contained within a {{ htmlelement("figure") }} element that acts as the video container. To anyone familiar with HTML5 markup and the {{ htmlelement("video") }} element, there should be nothing here that surprises you.
+First of all the {{ htmlelement("video") }} element is defined, contained within a {{ htmlelement("figure") }} element that acts as the video container. To anyone familiar with HTML markup and the {{ htmlelement("video") }} element, there should be nothing here that surprises you.
 
 ```html
 <figure id="videoContainer">
@@ -52,9 +52,9 @@ A poster image is defined for the video, and the `preload` attribute is set to `
 
 > **Note:** IE9 behaves differently than most other browsers when a `poster` attribute is set. Most browsers interpret the presence of a `poster` attribute to mean that the specified image is to be displayed until the user chooses to play the video. IE9 will only use the specified poster image in this way if `preload="none"` is set; otherwise, it will take the first still of the video and display that instead.
 
-Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML5 video. For further information on video formats and browser compatibility, see [supported media formats](/en-US/docs/Web/Media/Formats#browser_compatibility).
+Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML video. For further information on video formats and browser compatibility, see [supported media formats](/en-US/docs/Web/Media/Formats#browser_compatibility).
 
-For browsers that do not support HTML5 video, a Flash player is provided that will allow playback of the MP4 video source, provided the end user has Flash installed. In addition a download link is displayed to allow users to download the MP4 video file, should they wish to (providing those without Flash installed with a method of viewing the video, a fallback for a fallback if you like).
+For browsers that do not support HTML video, a Flash player is provided that will allow playback of the MP4 video source, provided the end user has Flash installed. In addition a download link is displayed to allow users to download the MP4 video file, should they wish to (providing those without Flash installed with a method of viewing the video, a fallback for a fallback if you like).
 
 The code above would allow playback of the video in most browsers, using the browser's default control set. The next step is to define a custom control set, also in HTML, which will be used to control the video.
 
@@ -97,13 +97,13 @@ Of course this custom control set is currently useless and doesn't do a thing: L
 
 ## Using the Media API
 
-HTML5 comes with a JavaScript [Media API](/en-US/docs/Web/API/HTMLMediaElement) that allows developers access to and control of HTML media. This API will be used to make the custom control set defined above actually do something. In addition, the fullscreen button will use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API), another W3C API that controls the ability of web browsers to show apps using your computer's full screen.
+HTML comes with a JavaScript [Media API](/en-US/docs/Web/API/HTMLMediaElement) that allows developers access to and control of HTML media. This API will be used to make the custom control set defined above actually do something. In addition, the fullscreen button will use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API), another W3C API that controls the ability of web browsers to show apps using your computer's full screen.
 
 ### Setup
 
 Before dealing with the individual buttons, a number of initialization calls are required.
 
-To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML5 {{ htmlelement("video") }} element should.
+To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML {{ htmlelement("video") }} element should.
 
 ```js
 const supportsVideo = !!document.createElement('video').canPlayType;
@@ -113,7 +113,7 @@ if (supportsVideo) {
 }
 ```
 
-Once it has been confirmed that the browser does indeed support HTML5 video, it's time to set up the custom controls. A number of variables pointing to HTML elements are required:
+Once it has been confirmed that the browser does indeed support HTML video, it's time to set up the custom controls. A number of variables pointing to HTML elements are required:
 
 ```js
 const videoContainer = document.getElementById('videoContainer');

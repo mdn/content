@@ -39,7 +39,7 @@ Make sure anyone reading the description can immediately understand the defined 
 
 Add a few extra paragraphs if you must, but it's easy to find yourself writing an entire article.
 Writing an article is fine, but please don't create it in/for the glossary.
-If you aren't sure where to put your article, feel free to [reach out to discuss it](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+If you aren't sure where to put your article, feel free to [reach out to discuss it](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
 There are a few simple guidelines to consider for writing a better glossary entry:
 

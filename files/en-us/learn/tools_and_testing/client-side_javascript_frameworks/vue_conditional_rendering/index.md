@@ -137,7 +137,7 @@ There is a "Save" button and a "Cancel" button:
 - When the "Save" button is clicked, the component emits the new label via an `item-edited` event.
 - When the "Cancel" button is clicked, the component signals this by emitting an `edit-cancelled` event.
 
-## Modifying our `ToDoItem` component
+## Modifying our ToDoItem component
 
 Before we can add `ToDoItemEditForm` to our app, we need to make a few modifications to our `ToDoItem` component. Specifically, we need to add a variable to track if the item is being edited, and a button to toggle that variable. We'll also add a `Delete` button since deletion is closely related.
 
@@ -163,7 +163,7 @@ Update your `ToDoItem`'s template as shown below.
 </template>
 ```
 
-We've added a wrapper \<div> around the whole template for layout purposes.
+We've added a wrapper `<div>` around the whole template for layout purposes.
 
 We've also added "Edit" and "Delete" buttons:
 
@@ -196,7 +196,7 @@ methods: {
   }
 ```
 
-## Conditionally displaying components via `v:if` and `v:else`
+## Conditionally displaying components via v:if and v:else
 
 Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://v2.vuejs.org/v2/api/#v-if).
 

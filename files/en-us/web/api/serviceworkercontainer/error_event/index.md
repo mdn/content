@@ -4,16 +4,17 @@ slug: Web/API/ServiceWorkerContainer/error_event
 page-type: web-api-event
 tags:
   - API
-  - Experimental
   - Event
   - Reference
   - Service Workers
   - ServiceWorker
   - ServiceWorkerContainer
   - error
+  - Deprecated
+  - Non-standard
 browser-compat: api.ServiceWorkerContainer.error_event
 ---
-{{APIRef("Service Workers API")}}{{Deprecated_header}}
+{{APIRef("Service Workers API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The `error` event fires when an error occurs in the service worker.
 

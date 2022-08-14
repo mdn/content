@@ -181,7 +181,7 @@ let port = browser.runtime.connectNative("ping_pong");
 Listen for messages from the app.
 */
 port.onMessage.addListener((response) => {
-  console.log("Received: " + response);
+  console.log(`Received: ${response}`);
 });
 
 /*
@@ -212,7 +212,7 @@ Here's the example above, rewritten to use `runtime.sendNativeMessage()`:
 
 ```js
 function onResponse(response) {
-  console.log("Received " + response);
+  console.log(`Received ${response}`);
 }
 
 function onError(error) {

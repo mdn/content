@@ -51,8 +51,8 @@ In a guide or tutorial, the introductory paragraph(s) should inform the reader a
 
 - **Example of long introduction**: This example has an updated introduction, but now it's far too long.
   Too much detail is included, and the text delves too deeply into describing other methods and properties.
-  > Instead, the introduction should focus on the `strokeText()` method and should refer to the appropriate guides where the other details are described.
-  >
+  Instead, the introduction should focus on the `strokeText()` method and should refer to the appropriate guides where the other details are described.
+
   > When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`** strokes the characters in the specified string beginning at the coordinates specified, using the current pen color.
   > In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
   >
@@ -140,10 +140,10 @@ The following checklist is good to keep in mind while writing and reviewing cont
   Here are some basic guidelines to help you create pages that have enough content to be properly searchable without resorting to cluttering them up with unnecessary text:
 
   - **Avoid stubs**: Obviously, if the article is a stub or is missing content, add it. We try to avoid outright "stub" pages on MDN web Docs, although they do exist, but there are plenty of pages that are missing large portions of their content.
-  - **Review page structure**: Review the page to ensure that it's structured properly for the [type of page](/en-US/docs/MDN/Structures/Page_types) it is <!--link to be revised-->. Be sure every section that it should have is present and has appropriate content.
+  - **Review page structure**: Review the page to ensure that it's structured properly for the [type of page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is <!--link to be revised-->. Be sure every section that it should have is present and has appropriate content.
   - **Ensure completeness**: Review sections to ensure that no information is missing. Ensure that all parameters listed and explained. Ensure that any exceptions are covered — this is a particularly common place where content is missing.
   - **Ensure all concepts are fully fleshed-out**: It's easy to give a quick explanation of something, but make sure that all the nuances are covered. Are there special cases? Are there any known restrictions that the reader might need to know about?
-  - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details and the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Guidelines/Code_guidelines) for more useful information. <!--link to be revised-->
+  - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details and the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information. <!--link to be revised-->
   - **Explain use cases**: If there are particularly common use cases for the feature being described, talk about them! Instead of assuming that a user will figure out that the method being documented can be used to solve a common development problem, actually add a section about that use case with an example and text explaining how the example works.
   - **Add image information**: Include proper {{htmlattrxref("alt", "img")}} text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
     > **Note:** It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
@@ -237,7 +237,7 @@ The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>
 Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code's syntax requires lower-casing).
 Some examples include:
 
-- Boolean (named for English mathematician and logician [George Boole](https://en.m.wikipedia.org/wiki/George_Boole))
+- Boolean (named for English mathematician and logician [George Boole](https://en.wikipedia.org/wiki/George_Boole))
 - JavaScript (a trademark of Oracle Corporation, it should always be written as trademarked)
 - Python, TypeScript, Django, and other programming languages and framework names
 
@@ -404,9 +404,9 @@ The following are some recommended practices when writing a code example for MDN
   - A short description preceding the example code that states the specifics of the example to which you want to draw reader's attention. For example, "In the example below, two cascade layers are defined in the CSS, `base` and `special`. "
   - An explanation after the example code that describes the result and how the code works.
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
-- When adding [live samples](/en-US/docs/MDN/Structures/Live_samples) <!--link to be revised-->, it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
+- When adding [live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) <!--link to be revised-->, it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
 
-To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Guidelines/Code_guidelines). <!--link to be revised-->
+To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide). <!--link to be revised-->
 
 ### External links
 
@@ -557,7 +557,7 @@ Deciding what you want to document and how you will structure that content is on
 
 Keep these guidelines in mind when writing titles for a page and sections or subsections:
 
-- **Go higher to lower**: As stated in the [Heading levels](<!-- link TBD-->) section, go from higher `##` to lower `####`, without skipping levels. Use higher level headings for broader introductory titles, and use more specific titles as you progress to lower-level headings.
+- **Go higher to lower**: As stated in the [Heading levels](#heading_levels) section, go from higher `##` to lower `####`, without skipping levels. Use higher level headings for broader introductory titles, and use more specific titles as you progress to lower-level headings.
 - **Group logically**: Make sure all related subsections are grouped together logically under a higher level heading. Naming titles of various sections can help you in this exercise.
 - **Keep titles short**: Shorter titles are easier to scan in text and in table of contents.
 - **Keep titles specific**: Use the title to convey the specific information that will be covered in the section. For example, for a section introducing HTML elements, use the title "HTML elements" instead of "Introduction" or "Overview".
@@ -588,7 +588,7 @@ For questions of spelling, please refer to [Dictionary.com](https://www.dictiona
 The spelling checker for this site uses American English.
 Please do not use variant spellings (e.g., use _color_ rather than _colour_).
 
-We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, [please get in touch](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help), so we know what should be added.
+We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, [please get in touch](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help), so we know what should be added.
 
 ### Language, grammar, spelling
 

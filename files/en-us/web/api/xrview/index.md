@@ -46,7 +46,7 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** inte
 
 ### Positions and number of XRViews per frame
 
-While rendering a scene, the set of views that are used to render the scene for the viewer as of the current frame are obtained by calling the {{domxref("XRFrame")}} object's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}  method to get the {{domxref("XRViewerPose")}} representing (in essence) the position of the viewer's head. That object's {{domxref("XRViewerPose.views", "views")}} property is a list of all of the `XRView` objects representing the viewpoints which can be used to construct the scene for presentation to the user.
+While rendering a scene, the set of views that are used to render the scene for the viewer as of the current frame are obtained by calling the {{domxref("XRFrame")}} object's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method to get the {{domxref("XRViewerPose")}} representing (in essence) the position of the viewer's head. That object's {{domxref("XRViewerPose.views", "views")}} property is a list of all of the `XRView` objects representing the viewpoints which can be used to construct the scene for presentation to the user.
 
 It's possible to have `XRView` objects which represent overlapping regions as well as entirely disparate regions; in a game, you might have views that can be presented to observe a remote site using a security camera or other device, for example. In other words, don't assume there are exactly two views on a given viewer; there can be as few as one (such as when rendering the scene in `inline` mode, and potentially many (especially if the field of view is very large). There might also be views representing observers watching the action, or other viewpoints not directly associated with a player's eye.
 
@@ -67,8 +67,8 @@ If in the future it becomes possible for each view to render into a different la
 To draw everything the user sees, each frame requires iterating over the list of views returned by the {{domxref("XRViewerPose")}} object's {{domxref("XRViewerPose.views", "views")}} list:
 
 ```js
-for (let view of pose.views) {
-  let viewport = glLayer.getViewport(view);
+for (const view of pose.views) {
+  const viewport = glLayer.getViewport(view);
 
   gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 

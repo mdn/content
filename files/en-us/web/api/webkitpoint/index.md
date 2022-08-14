@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - CSS Transforms
-  - CSS3 Transforms
   - Interface
   - Non-standard
   - Point

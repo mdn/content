@@ -18,8 +18,8 @@ The **`opacity`** CSS property sets the opacity of an element. Opacity is the de
 ## Syntax
 
 ```css
-opacity: 0.9
-opacity: 90%
+opacity: 0.9;
+opacity: 90%;
 
 /* Global values */
 opacity: inherit;
@@ -88,7 +88,11 @@ The following example demonstrates how the `opacity` property changes the opacit
 #### CSS
 
 ```css
-div { background-color: yellow; font-weight: bold; font-size: 130%; }
+div {
+  background-color: yellow;
+  font-weight: bold;
+  font-size: 130%;
+}
 .light {
   opacity: 0.2; /* Barely see the text over the background */
 }
@@ -133,8 +137,11 @@ img.opacity:hover {
   width: 200px;
   height: 160px;
   background-color: #f03cc3;
-  background-image: linear-gradient(90deg, transparent 50%,
-  rgba(255,255,255,.5) 50%);
+  background-image: linear-gradient(
+    90deg,
+    transparent 50%,
+    rgba(255, 255, 255, 0.5) 50%
+  );
   background-size: 20px 20px;
 }
 ```

@@ -15,4 +15,4 @@ JSON can represent numbers, booleans, strings, `null`, arrays (ordered sequences
 ## See also
 
 - [JSON](https://en.wikipedia.org/wiki/JSON) on Wikipedia
-- {{Link("/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON")}} on MDN
+- [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) on MDN

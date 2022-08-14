@@ -29,8 +29,7 @@ that will be called when that property is looked up.
 - `prop`
   - : The name of the property to bind to the given function.
 - `expression`
-  - : Starting with ECMAScript 2015, you can also use expressions for a computed property
-    name to bind to the given function.
+  - : You can also use expressions for a computed property name to bind to the given function.
 
 ## Description
 

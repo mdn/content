@@ -25,6 +25,10 @@ The value of a `<frequency-percentage>` is either a {{Cssxref("frequency")}} or 
 
 Where a `<frequency-percentage>` is specified as an allowable type, this means that the percentage resolves to a frequency and therefore can be used in a [`calc()`](/en-US/docs/Web/CSS/calc) expression.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Valid percentage values

@@ -22,14 +22,14 @@ notation).
 ## Syntax
 
 ```js
-new Float64Array(); // new in ES2017
-new Float64Array(length);
-new Float64Array(typedArray);
-new Float64Array(object);
+new Float64Array()
+new Float64Array(length)
+new Float64Array(typedArray)
+new Float64Array(object)
 
-new Float64Array(buffer);
-new Float64Array(buffer, byteOffset);
-new Float64Array(buffer, byteOffset, length);
+new Float64Array(buffer)
+new Float64Array(buffer, byteOffset)
+new Float64Array(buffer, byteOffset, length)
 ```
 
 ## Description

@@ -138,7 +138,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCPeerConnection.close", "close()")}}
   - : Closes the current peer connection.
 - {{DOMxRef("RTCPeerConnection.createAnswer", "createAnswer()")}}
-  - : Initiates the creation an {{Glossary("SDP")}} answer
+  - : Initiates the creation of an {{Glossary("SDP")}} answer
     to an offer received from a remote peer
     during the offer/answer negotiation of a WebRTC connection.
     The answer contains information

@@ -74,9 +74,9 @@ console.log(...someObj); // 'a', 'b'
 If an iterable's `@@iterator` method does not return an iterator object, then it is a non-well-formed iterable. Using it as such is likely to result in runtime exceptions or buggy behavior:
 
 ```js example-bad
-const nonWellFormedIterable = {}
-nonWellFormedIterable[Symbol.iterator] = () => 1
-[...nonWellFormedIterable] // TypeError: [] is not a function
+const nonWellFormedIterable = {};
+nonWellFormedIterable[Symbol.iterator] = () => 1;
+[...nonWellFormedIterable] // TypeError: [Symbol.iterator]() returned a non-object value
 ```
 
 ## Specifications

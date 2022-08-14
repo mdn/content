@@ -11,7 +11,7 @@ tags:
 
 Every reference page on MDN should provide information about the specification or specifications in which that API or technology was defined. This article demonstrates what these tables look like and explains how to add them.
 
-These tables are similar to the [compatibility tables](/en-US/docs/MDN/Structures/Compatibility_tables) and usually both are part of a reference page.
+These tables are similar to the [compatibility tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) and usually both are part of a reference page.
 
 ## Standard specification tables
 

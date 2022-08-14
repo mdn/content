@@ -4,7 +4,6 @@ slug: Web/API/PushManager/permissionState
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - PushManager
   - Reference
@@ -12,7 +11,7 @@ tags:
   - permissionState
 browser-compat: api.PushManager.permissionState
 ---
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}
 
 The **`permissionState()`** method of the
 {{domxref("PushManager")}} interface returns a {{jsxref("Promise")}} that resolves to a

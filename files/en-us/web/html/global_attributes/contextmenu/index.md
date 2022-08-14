@@ -16,7 +16,7 @@ browser-compat: html.global_attributes.contextmenu
 
 The **`contextmenu`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is the [**id**](/en-US/docs/Web/HTML/Global_attributes/id) of a {{HTMLElement("menu")}} to use as the contextual menu for this element.
 
-A _context menu_ is a menu that appears upon user interaction, such as a right-click. HTML5 now allows us to customize this menu. Here are some implementation examples, including nested menus.
+A _context menu_ is a menu that appears upon user interaction, such as a right-click. HTML now allows us to customize this menu. Here are some implementation examples, including nested menus.
 
 ## Example
 

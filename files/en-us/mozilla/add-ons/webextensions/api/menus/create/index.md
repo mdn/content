@@ -141,7 +141,7 @@ This example adds two radio items, which you can use to choose whether to apply 
 ```js
 function onCreated() {
   if (browser.runtime.lastError) {
-    console.log("error creating item:" + browser.runtime.lastError);
+    console.log("error creating item:", browser.runtime.lastError);
   } else {
     console.log("item created successfully");
   }

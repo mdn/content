@@ -236,7 +236,7 @@ function getScore() {
   const num2 = 3;
 
   function add() {
-    return name + ' scored ' + (num1 + num2);
+    return `${name} scored ${num1 + num2}`;
   }
 
   return add();
@@ -320,9 +320,9 @@ function foo(i) {
   if (i < 0) {
     return;
   }
-  console.log('begin: ' + i);
+  console.log(`begin: ${i}`);
   foo(i - 1);
-  console.log('end: ' + i);
+  console.log(`end: ${i}`);
 }
 foo(3);
 
@@ -572,13 +572,11 @@ See the {{jsxref("Function")}} object in the JavaScript reference for more infor
 
 ## Function parameters
 
-Starting with ECMAScript 2015, there are two new kinds of parameters: _default parameters_ and _rest parameters_.
+There are two special kinds of parameter syntax: _default parameters_ and _rest parameters_.
 
 ### Default parameters
 
 In JavaScript, parameters of functions default to `undefined`. However, in some situations it might be useful to set a different default value. This is exactly what default parameters do.
-
-#### Without default parameters (pre-ECMAScript 2015)
 
 In the past, the general strategy for setting defaults was to test parameter values in the body of the function and assign a value if they are `undefined`.
 
@@ -592,8 +590,6 @@ function multiply(a, b) {
 
 multiply(5); // 5
 ```
-
-#### With default parameters (post-ECMAScript 2015)
 
 With _default parameters_, a manual check in the function body is no longer necessary. You can put `1` as the default value for `b` in the function head:
 
@@ -624,7 +620,7 @@ console.log(arr); // [2, 4, 6]
 
 ## Arrow functions
 
-An [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (previously, and now incorrectly known as **fat arrow function**) has a shorter syntax compared to function expressions and does not have its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), [super](/en-US/docs/Web/JavaScript/Reference/Operators/super), or [new.target](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Arrow functions are always anonymous. See also this hacks.mozilla.org blog post: "[ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
+An [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (also called a _fat arrow_ to distinguish from a hypothetical `->` syntax in future JavaScript) has a shorter syntax compared to function expressions and does not have its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), or [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Arrow functions are always anonymous.
 
 Two factors influenced the introduction of arrow functions: _shorter functions_ and _non-binding_ of `this`.
 
@@ -649,7 +645,7 @@ const a3 = a.map((s) => s.length);
 console.log(a3); // logs [8, 6, 7, 9]
 ```
 
-### No separate `this`
+### No separate this
 
 Until arrow functions, every new function defined its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value (a new object in the case of a constructor, undefined in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) function calls, the base object if the function is called as an "object method", etc.). This proved to be less than ideal with an object-oriented style of programming.
 
@@ -710,7 +706,7 @@ JavaScript has several top-level, built-in functions:
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
   - : The global **`isFinite()`** function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : The **`isNaN()`** function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the `isNaN` function has [interesting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) rules; you may alternatively want to use {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015, or you can use [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) to determine if the value is Not-A-Number.
+  - : The **`isNaN()`** function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the `isNaN` function has [interesting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) rules; you may alternatively want to use {{jsxref("Number.isNaN()")}} to determine if the value is Not-A-Number.
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - : The **`parseFloat()`** function parses a string argument and returns a floating point number.
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}

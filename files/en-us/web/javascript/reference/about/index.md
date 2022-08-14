@@ -33,7 +33,7 @@ In the JavaScript reference you can find the following chapters:
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
   - : Chapter about JavaScript functions.
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-  - : Chapter about JavaScript classes introduced in ECMAScript 2015.
+  - : Chapter about JavaScript classes.
 - [Errors](/en-US/docs/Web/JavaScript/Reference/Errors)
   - : Chapter about specific errors, exceptions and warnings thrown by JavaScript.
 

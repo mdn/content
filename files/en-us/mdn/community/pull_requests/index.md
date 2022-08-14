@@ -80,7 +80,7 @@ Therefore, if you receive a pull request review request and then see that you ha
 ## Topic review owners
 
 The following specific topic areas are being reviewed by the kind souls listed underneath them. Be kind to them, and thank them for all the help they give to this project. If you would like to help with MDN content reviews,
-[get in touch with us](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#Step_4_Ask_for_help).
+[get in touch with us](https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#Step_4_Ask_for_help).
 
 Note that changes to any content areas not explicitly listed below will be handled by the [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content) team.
 

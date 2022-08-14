@@ -33,7 +33,7 @@ browser-compat: webextensions.manifest.host_permissions
         <pre class="brush: json;">
 "host_permissions": [
   "*://developer.mozilla.org/*",
-  "*://*/*"
+  "*://*.example.org/*"
 ]</pre
         >
       </td>

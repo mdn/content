@@ -102,18 +102,18 @@ An attempt to access an undeclared variable results in a {{jsxref("ReferenceErro
 
 ```js
 var a;
-console.log('The value of a is ' + a); // The value of a is undefined
+console.log(`The value of a is ${a}`); // The value of a is undefined
 
-console.log('The value of b is ' + b); // The value of b is undefined
+console.log(`The value of b is ${b}`); // The value of b is undefined
 var b;
 // This one may puzzle you until you read 'Variable hoisting' below
 
-console.log('The value of c is ' + c); // Uncaught ReferenceError: c is not defined
+console.log(`The value of c is ${c}`); // Uncaught ReferenceError: c is not defined
 
 let x;
-console.log('The value of x is ' + x); // The value of x is undefined
+console.log(`The value of x is ${x}`); // The value of x is undefined
 
-console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defined
+console.log(`The value of y is ${y}`); // Uncaught ReferenceError: y is not defined
 let y;
 ```
 
@@ -222,7 +222,7 @@ var myvar = 'my value';
 
 Because of hoisting, all `var` statements in a function should be placed as near to the top of the function as possible. This best practice increases the clarity of the code.
 
-In ECMAScript 2015, `let` and `const` **are hoisted but not initialized**. Referencing the variable in the block before the variable declaration results in a {{jsxref("ReferenceError")}}, because the variable is in a "temporal dead zone" from the start of the block until the declaration is processed.
+`let` and `const` **are hoisted but not initialized**. Referencing the variable in the block before the variable declaration results in a {{jsxref("ReferenceError")}}, because the variable is in a "temporal dead zone" from the start of the block until the declaration is processed.
 
 ```js
 console.log(x); // ReferenceError
@@ -548,7 +548,7 @@ function carTypes(name) {
   if (name === 'Honda') {
     return name;
   } else {
-    return "Sorry, we don't sell " + name + ".";
+    return `Sorry, we don't sell ${name}.`;
   }
 }
 
@@ -731,104 +731,22 @@ In addition to ordinary characters, you can also include special characters in s
 
 The following table lists the special characters that you can use in JavaScript strings.
 
-<table class="standard-table">
-  <caption>
-    Table: JavaScript special characters
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">Character</th>
-      <th scope="col">Meaning</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>\0</code></td>
-      <td>Null Byte</td>
-    </tr>
-    <tr>
-      <td><code>\b</code></td>
-      <td>Backspace</td>
-    </tr>
-    <tr>
-      <td><code>\f</code></td>
-      <td>Form feed</td>
-    </tr>
-    <tr>
-      <td><code>\n</code></td>
-      <td>New line</td>
-    </tr>
-    <tr>
-      <td><code>\r</code></td>
-      <td>Carriage return</td>
-    </tr>
-    <tr>
-      <td><code>\t</code></td>
-      <td>Tab</td>
-    </tr>
-    <tr>
-      <td><code>\v</code></td>
-      <td>Vertical tab</td>
-    </tr>
-    <tr>
-      <td><code>\'</code></td>
-      <td>Apostrophe or single quote</td>
-    </tr>
-    <tr>
-      <td><code>\"</code></td>
-      <td>Double quote</td>
-    </tr>
-    <tr>
-      <td><code>\\</code></td>
-      <td>Backslash character</td>
-    </tr>
-    <tr>
-      <td>
-        <code>\<em>XXX</em></code>
-      </td>
-      <td>
-        The character with the Latin-1 encoding specified by up to three octal
-        digits <em>XXX</em> between <code>0</code> and
-        <code>377</code>.<br />For example, <code>\251</code> is the octal
-        sequence for the copyright symbol.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>\x<em>XX</em></code>
-      </td>
-      <td>
-        The character with the Latin-1 encoding specified by the two
-        hexadecimal digits <em>XX</em> between <code>00</code> and
-        <code>FF</code>.<br />For example, <code>\xA9</code> is the
-        hexadecimal sequence for the copyright symbol.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>\u<em>XXXX</em></code>
-      </td>
-      <td>
-        The Unicode character specified by the four hexadecimal digits
-        <em>XXXX</em>.<br />For example, <code>\u00A9</code> is the Unicode
-        sequence for the copyright symbol. See
-        <a
-          href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals"
-          >Unicode escape sequences</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>\u<em>{XXXXX}</em></code>
-      </td>
-      <td>
-        Unicode code point escapes.<br />For example, <code>\u{2F804}</code> is
-        the same as the simple Unicode escapes <code>\uD87E\uDC04</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Character   | Meaning                    |
+|-------------|----------------------------|
+| `\0`        | Null Byte                  |
+| `\b`        | Backspace                  |
+| `\f`        | Form Feed                  |
+| `\n`        | New Line                   |
+| `\r`        | Carriage Return            |
+| `\t`        | Tab                        |
+| `\v`        | Vertical tab               |
+| `\'`        | Apostrophe or single quote |
+| `\"`        | Double quote               |
+| `\\`        | Backslash character        |
+| `\XXX`      | The character with the Latin-1 encoding specified by up to three octal digits `XXX` between `0` and `377`. For example, `\251` is the octal sequence for the copyright symbol. |
+| `\xXX`      | The character with the Latin-1 encoding specified by the two hexadecimal digits `XX` between `00` and `FF`. For example, `\xA9` is the hexadecimal sequence for the copyright symbol. |
+| `\uXXXX`    | The Unicode character specified by the four hexadecimal digits `XXXX`. For example, `\u00A9` is the Unicode sequence for the copyright symbol. See [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals). |
+| `\u{XXXXX}` | Unicode code point escapes. For example, `\u{2F804}` is the same as the simple Unicode escapes `\uD87E\uDC04`.
 
 #### Escaping characters
 

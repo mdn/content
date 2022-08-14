@@ -69,14 +69,13 @@ BarcodeDetector.getSupportedFormats()
 This example uses the `detect()` method to detect the barcodes within the given image. These are iterated over and the barcode data is logged to the console.
 
 ```js
-  barcodeDetector.detect(imageEl)
-    .then((barcodes) => {
-      barcodes.forEach((barcode) => console.log(barcode.rawData));
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-
+barcodeDetector.detect(imageEl)
+  .then((barcodes) => {
+    barcodes.forEach((barcode) => console.log(barcode.rawData));
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 ## Specifications
