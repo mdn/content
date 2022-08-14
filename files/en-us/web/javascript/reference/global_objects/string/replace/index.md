@@ -43,7 +43,7 @@ This method does not mutate the string value it's called on. It returns a new st
 
 A string pattern will only be replaced once. To perform a global search and replace, use a regular expression with the `g` flag, or use [`replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) instead.
 
-If `pattern` is an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method (including `RegExp` objects), that method is called with the target string and `replacement` as arguments. Its return value becomes the return value of `replace()`. In this case the behavior of `replace()` is entirely encoded by the `@@replace` method — for example, any mention of "capturing groups" in the description below is actually semantic provided by [`RegExp.prototype[@@replace]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+If `pattern` is an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method (including `RegExp` objects), that method is called with the target string and `replacement` as arguments. Its return value becomes the return value of `replace()`. In this case the behavior of `replace()` is entirely encoded by the `@@replace` method — for example, any mention of "capturing groups" in the description below is actually functionality provided by [`RegExp.prototype[@@replace]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
 
 If the `pattern` is an empty string, the replacement is prepended to the start of the string.
 
