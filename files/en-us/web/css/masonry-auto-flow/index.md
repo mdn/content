@@ -57,7 +57,7 @@ This property may take one of two forms:
 
 ## Formal syntax
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Examples
 

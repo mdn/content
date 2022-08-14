@@ -53,7 +53,7 @@ scrollbar-gutter: unset;
 
 ## Formal syntax
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Examples
 

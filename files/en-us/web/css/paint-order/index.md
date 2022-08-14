@@ -56,7 +56,7 @@ When one value is specified, that one is painted first, followed by the other tw
 
 ## Formal syntax
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Examples
 

@@ -67,7 +67,7 @@ If there are fewer values than tracks, the last value is used for all remaining 
 
 ## Formal syntax
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Examples
 

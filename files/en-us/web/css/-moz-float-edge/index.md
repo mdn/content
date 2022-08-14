@@ -47,7 +47,7 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 
 ## Formal syntax
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Examples
 

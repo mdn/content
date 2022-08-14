@@ -56,7 +56,7 @@ text-decoration-thickness: unset;
 
 ## Formal syntax
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Examples
 
