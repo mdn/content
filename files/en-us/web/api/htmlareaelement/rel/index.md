@@ -27,7 +27,7 @@ A string.
 ```js
 const areas = document.getElementsByTagName("area");
 for (const area of areas) {
-  alert(`Rel: ${area.rel}`);
+  console.log(`Rel: ${area.rel}`);
 }
 ```
 
