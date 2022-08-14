@@ -34,7 +34,7 @@ An [iterable iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 
 ## Description
 
-This method is called internally in {{jsxref("String.prototype.matchAll()")}}. For example, the following two examples return same result.
+This method is called internally in {{jsxref("String.prototype.matchAll()")}}. For example, the following two examples return the same result.
 
 ```js
 'abc'.matchAll(/a/g);
