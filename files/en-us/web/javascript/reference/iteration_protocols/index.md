@@ -291,7 +291,7 @@ Using one is likely to result in runtime errors or buggy behavior:
 ```js example-bad
 const nonWellFormedIterable = {};
 nonWellFormedIterable[Symbol.iterator] = () => 1;
-[...nonWellFormedIterable]; // TypeError: [Symbol.iteratot]() returned a non-object value
+[...nonWellFormedIterable]; // TypeError: [Symbol.iterator]() returned a non-object value
 ```
 
 ## Iterator examples
