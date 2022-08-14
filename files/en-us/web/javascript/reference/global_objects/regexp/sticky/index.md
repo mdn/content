@@ -1,5 +1,5 @@
 ---
-title: RegExp.prototype.sticky
+title: get RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 tags:
   - ECMAScript 2015
@@ -14,15 +14,19 @@ browser-compat: javascript.builtins.RegExp.sticky
 ---
 {{JSRef}}
 
-The **`sticky`** property reflects whether or not the search is sticky (searches in strings only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression). `sticky` is a read-only property of an individual regular expression object.
+The **`sticky`** accessor property indicates whether or not the `y` flag is used with the regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}{{js_property_attributes(0, 0, 1)}}
+{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}
 
 ## Description
 
-The value of `sticky` is a {{jsxref("Boolean")}} and true if the `y` flag was used; otherwise, false. The `y` flag indicates that it matches only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression in the target string (and does not attempt to match from any later indexes). A regular expression defined as both `sticky` and `global` ignores the `global` flag.
+`RegExp.prototype.sticky` is a getter-only property that returns `true` if the `y` flag was used; otherwise, `false`. The `y` flag indicates that it matches only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression in the target string (and does not attempt to match from any later indexes).
 
-You cannot change this property directly. It is read-only.
+When the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method is called and the regex fails to match at the current position indicated by {{jsxref("RegExp.lastIndex", "lastIndex")}}, a global regex will continue to attempt at the next character, while a sticky regex immediately returns `null` and resets `lastIndex` to 0. When the match succeeds, `lastIndex` is advanced to the end of the match, just like global regexps do. When `lastIndex` is out of bounds of the currently matched string, it's reset to 0, just like global regexps do.
+
+For the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method, a regex that's both sticky and [global](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) behaves the same as a sticky and non-global regex. However, due to many other methods special-casing the behavior of global regexps, the global flag is, in general, orthogonal to the sticky flag. For more information about how each individual regex-related method (such as [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) and [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)) interact with the sticky and global flags, see their respective pages.
+
+You cannot change this property directly.
 
 ## Examples
 

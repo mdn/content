@@ -1,5 +1,5 @@
 ---
-title: RegExp.prototype.unicode
+title: get RegExp.prototype.unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 tags:
   - ECMAScript 2015
@@ -13,22 +13,26 @@ browser-compat: javascript.builtins.RegExp.unicode
 ---
 {{JSRef}}
 
-The **`unicode`** property indicates whether or not the `u` flag is used with a regular expression. `unicode` is a read-only property of an individual regular expression instance.
+The **`unicode`** accessor property indicates whether or not the `u` flag is used with the regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}{{js_property_attributes(0, 0, 1)}}
+{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}
 
 ## Description
 
-The value of `unicode` is a {{jsxref("Boolean")}} and `true` if the `u` flag was used; otherwise `false`. The `u` flag enables various Unicode-related features. With the "u" flag, any Unicode code point escapes will be interpreted as such, for example.
+`RegExp.prototype.unicode` is a getter-only property that returns `true` if the `u` flag was used; otherwise, `false`. The `u` flag enables various Unicode-related features. With the "u" flag:
 
-You cannot change this property directly. It is read-only.
+- Any [Unicode codepoint escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) (`\u{xxxx}`, `\p{UnicodePropertyValue}`) will be interpreted as such instead of literal characters.
+- Surrogate pairs will be interpreted as whole characters instead of two separate characters. For example, `/[😄]/u` would only match `"😄"` but not `"\ud83d"`.
+- When [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) is automatically advanced (such as when calling [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)), unicode regexps advance by Unicode codepoints instead of UTF-16 code units.
+
+You cannot change this property directly.
 
 ## Examples
 
 ### Using the unicode property
 
 ```js
-const regex = new RegExp('\u{61}', 'u');
+const regex = /\u{61}/u;
 
 console.log(regex.unicode); // true
 ```

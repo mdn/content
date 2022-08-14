@@ -1,8 +1,7 @@
 ---
-title: RegExp.prototype.dotAll
+title: get RegExp.prototype.dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 tags:
-  - Draft
   - JavaScript
   - Property
   - Prototype
@@ -14,15 +13,13 @@ browser-compat: javascript.builtins.RegExp.dotAll
 ---
 {{JSRef}}
 
-The **`dotAll`** property indicates whether or not the `s` flag is used with the regular expression. `dotAll` is a read-only property of an individual regular expression instance.
+The **`dotAll`** accessor property indicates whether or not the `s` flag is used with the regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-dotall.html")}}
 
-{{JS_Property_Attributes(0, 0, 1)}}
-
 ## Description
 
-The value of `dotAll` is a {{JSxRef("Boolean")}} and `true` if the `s` flag was used; otherwise, `false`. The `s` flag indicates that the dot special character (`.`) should additionally match the following line terminator ("newline") characters in a string, which it would not match otherwise:
+`RegExp.prototype.dotAll` is a getter-only property that returns `true` if the `s` flag was used; otherwise, `false`. The `s` flag indicates that the dot special character (`.`) should additionally match the following line terminator ("newline") characters in a string, which it would not match otherwise:
 
 - U+000A LINE FEED (LF) (`\n`)
 - U+000D CARRIAGE RETURN (CR) (`\r`)
@@ -35,20 +32,20 @@ You cannot change this property directly.
 
 ## Examples
 
-### Using `dotAll`
+### Using dotAll
 
 ```js
 const str1 = 'bar\nexample foo example';
 
-const regex1 = new RegExp('bar.example','s');
+const regex1 = /bar.example/s;
 
 console.log(regex1.dotAll); // Output: true
 
-console.log(str1.replace(regex1,'')); // Output: foo example
+console.log(str1.replace(regex1, '')); // Output: foo example
 
 const str2 = 'bar\nexample foo example';
 
-const regex2 = new RegExp('bar.example');
+const regex2 = /bar.example/;
 
 console.log(regex2.dotAll); // Output: false
 
