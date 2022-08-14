@@ -187,7 +187,7 @@ This is because `'$&'.toLowerCase()` would first be evaluated as a string litera
 
 The following example replaces a Fahrenheit degree with its equivalent Celsius degree. The Fahrenheit degree should be a number ending with `"F"`. The function returns the Celsius number ending with `"C"`. For example, if the input number is `"212F"`, the function returns `"100C"`. If the number is `"0F"`, the function returns `"-17.77777777777778C"`.
 
-The regular expression `test` checks for any number that ends with `F`. The number of Fahrenheit degree is accessible to the function through its second parameter, `p1`. The function sets the Celsius number based on the Fahrenheit degree passed in a string to the `f2c()` function. `f2c()` then returns the Celsius number. This function approximates Perl's `s///e` flag.
+The regular expression `test` checks for any number that ends with `F`. The number of Fahrenheit degrees is accessible to the function through its second parameter, `p1`. The function sets the Celsius number based on the number of Fahrenheit degrees passed in a string to the `f2c()` function. `f2c()` then returns the Celsius number. This function approximates Perl's `s///e` flag.
 
 ```js
 function f2c(x) {
