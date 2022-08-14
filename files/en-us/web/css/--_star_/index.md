@@ -31,7 +31,7 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 ### Formal syntax
 
-{{--<custom-property-name>: <declaration-value>;}}
+{{CSSSyntax}}
 
 ## Example
 

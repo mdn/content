@@ -66,29 +66,7 @@ If there are fewer values than tracks, the last value is used for all remaining 
 
 ## Formal syntax
 
-{{align-tracks: normal | <baseline-position> | <content-distribution> | <overflow-position>? <content-position>;
-
-<baseline-position> = 
-[ first | last ]? 
-baseline
-
-<content-distribution> = 
-space-between |
-space-around |
-space-evenly |
-stretch
-
-<overflow-position> = 
-unsafe |
-safe
-
-<content-position> = 
-center |
-start | 
-end | 
-flex-start |
-flex-end
- }}
+{{CSSSyntax}}
 
 ## Examples
 

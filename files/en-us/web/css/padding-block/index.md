@@ -55,7 +55,7 @@ These values corresponds to the {{cssxref("padding-top")}} and {{cssxref("paddin
 
 ## Formal syntax
 
-{{padding-block: [padding-block-start] [padding-block-end];}}
+{{CSSSyntax}}
 
 ## Examples
 

@@ -57,7 +57,7 @@ Values for this property correspond to the {{cssxref("padding-top")}} and {{cssx
 
 ## Formal syntax
 
-{{padding-inline:[padding-inline-start] [padding-inline-end];}}
+{{CSSSyntax}}
 
 ## Examples
 

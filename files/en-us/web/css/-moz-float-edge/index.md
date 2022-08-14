@@ -47,7 +47,7 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 
 ## Formal syntax
 
-{{-moz-float-edge: border-box | content-box | margin-box | padding-box; }}
+{{CSSSyntax}}
 
 ## Examples
 

@@ -57,7 +57,7 @@ The `text-underline-offset` property is specified as a single value from the lis
 
 ## Formal syntax
 
-{{text-underline-offset: auto | <length> | <percentage>;}}
+{{CSSSyntax}}
 
 ## Examples
 

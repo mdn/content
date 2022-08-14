@@ -53,7 +53,7 @@ scrollbar-gutter: unset;
 
 ## Formal syntax
 
-{{scrollbar-gutter: auto | stable && both-edges?;}}
+{{CSSSyntax}}
 
 ## Examples
 

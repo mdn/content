@@ -56,7 +56,7 @@ text-decoration-thickness: unset;
 
 ## Formal syntax
 
-{{text-decoration-thickness: auto | from-font | <length> | <percentage>;}}
+{{CSSSyntax}}
 
 ## Examples
 
