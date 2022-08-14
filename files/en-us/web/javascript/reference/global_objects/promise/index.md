@@ -337,7 +337,7 @@ function promiseGetWord(parityInfo) {
     if (value >= THRESHOLD_A - 1) {
       reject(`Still too large: ${value}`);
     } else {
-      parityInfo.wordEvenOdd = parityInfo.isOdd ? 'odd' : 'even';
+      parityInfo.wordEvenOdd = parityInfo.isOdd ? "odd" : "even";
       resolve(parityInfo);
     }
   });
