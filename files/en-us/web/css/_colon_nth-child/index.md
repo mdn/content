@@ -16,7 +16,7 @@ The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
 
-Note that, in the `element:nth-child()` syntax, the child count includes children of any element type; but it is considered a match only if the element *at that child position* is of the specified element type.
+Note that, in the <code><var>element</var>:nth-child()</code> syntax, the child count includes children of any element type; but it is considered a match only if the element *at that child position* is of the specified element type.
 
 ## Syntax
 
@@ -29,21 +29,21 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
 ### Keyword values
 
 - `odd`
-  - : Represents elements whose numeric position in a series of siblings is odd: 1, 3, 5, etc.
+  - : Represents elements whose numeric position in a series of siblings is odd (1, 3, 5, etc.)
 - `even`
-  - : Represents elements whose numeric position in a series of siblings is even: 2, 4, 6, etc.
+  - : Represents elements whose numeric position in a series of siblings is even (2, 4, 6, etc.)
 
 ### Functional notation
 
-- `<An+B>`
+- <code>&lt;<var>A</var>n+<var>B</var>&gt;</code>
 
-  - : Represents elements in a list whose indices match those found in a custom pattern of numbers, defined by `An+B`, where:
+  - : Represents elements in a list whose indices match those found in a custom pattern of numbers, defined by <code>&lt;<var>A</var>n+<var>B</var>&gt;</code>, where:
 
-    - `A` is an integer step size,
-    - `B` is an integer offset,
-    - `n` is all nonnegative integers, starting from 0.
+    - <code><var>A</var></code> is an integer step size,
+    - <code><var>B</var></code> is an integer offset,
+    - `n` is all non-negative integers, starting from 0.
 
-    It can be read as the *An+B*th element of a list.
+    It can be read as the <em><code><var>A</var>n+<var>B</var></code>th</em> element of a list.
 
 ## Examples
 
