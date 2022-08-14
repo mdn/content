@@ -4,7 +4,6 @@ slug: Web/API/ExtendableMessageEvent/source
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - ExtendableMessageEvent
   - Property
   - Reference
@@ -33,17 +32,17 @@ object of `onmessage` will be a `ExtendableMessageEvent`.
 ```js
 let port;
 
-self.addEventListener('push', function(e) {
+self.addEventListener('push', (e) => {
   const obj = e.data.json();
 
-  if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === 'subscribe' || obj.action === 'unsubscribe') {
     port.postMessage(obj);
-  } else if(obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === 'init' || obj.action === 'chatMsg') {
     port.postMessage(obj);
   }
 });
 
-self.onmessage = function(e) {
+self.onmessage = (e) => {
   console.log(e.source);
   port = e.ports[0];
 }

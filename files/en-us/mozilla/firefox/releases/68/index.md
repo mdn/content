@@ -45,7 +45,7 @@ This article provides information about the changes in Firefox 68 that will affe
 
 - The [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) now includes a new _Check for issues_ feature, which will include a number of audit tools to highlight accessibility problems on your web pages. The first available check is _contrast_, for highlighting color contrast problems.
 - The preference that controls the visibility of internal extensions (system add-ons and hidden extensions) on the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) page has been changed from `devtools.aboutdebugging.showSystemAddons` to `devtools.aboutdebugging.showHiddenAddons` ({{bug(1544372)}}).
-- [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) has been redesigned — the _Device Settings_ dialog (device selection menu > _Edit List..._) is now more intuitive and simpler to use ({{bug(1487857)}}).
+- [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) has been redesigned — the _Device Settings_ dialog (device selection menu > _Edit List…_) is now more intuitive and simpler to use ({{bug(1487857)}}).
 
 #### Removals
 
@@ -173,6 +173,7 @@ _No changes._
 - When an add-on attempts to add a bookmark folder to the root folder, the resulting error message is now much more intuitive ({{bug(1512171)}}).
 - The promise returned by [`browser.tabs.duplicate()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/duplicate) now resolves immediately, before the tabs are completely loaded ({{bug(1394376)}}).
 - Support has been added for chrome.storage.managed, allowing web extension settings to be implemented via enterprise policy ({{bug(1230802)}}).
+- `proxyAuthorization` and `connectionIsolation` in {{WebExtAPIRef("proxy.onRequest")}} now apply only to HTTPS proxies ({{bug(1549368)}}.
 
 ### Manifest changes
 

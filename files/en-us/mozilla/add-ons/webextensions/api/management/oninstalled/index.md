@@ -55,7 +55,7 @@ Log the names of add-ons when they are installed:
 
 ```js
 browser.management.onInstalled.addListener((info) => {
-  console.log(info.name + " was installed");
+  console.log(`${info.name} was installed`);
 });
 ```
 

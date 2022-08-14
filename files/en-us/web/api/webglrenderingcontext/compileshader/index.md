@@ -33,7 +33,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var shader = gl.createShader(gl.VERTEX_SHADER);
+const shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, shaderSource);
 gl.compileShader(shader);
 ```

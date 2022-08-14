@@ -51,8 +51,8 @@ the connection.
 ```js
 navigator.mediaDevices.getUserMedia(
   { video: true, audio: true },
-  function (stream) {
-    var pc = new RTCPeerConnection();
+  (stream) => {
+    const pc = new RTCPeerConnection();
     pc.addStream(stream);
   }
 );
@@ -64,9 +64,9 @@ navigator.mediaDevices.getUserMedia(
 code to instead use the {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method:
 
 ```js
-navigator.getUserMedia({ video: true, audio: true }, function (stream) {
-  var pc = new RTCPeerConnection();
-  stream.getTracks().forEach(function (track) {
+navigator.getUserMedia({ video: true, audio: true }, (stream) => {
+  const pc = new RTCPeerConnection();
+  stream.getTracks().forEach((track) => {
     pc.addTrack(track, stream);
   });
 });
@@ -97,7 +97,7 @@ if (pc.addTrack) {
 
 stream.removeTrack(track);
 if (pc.removeTrack) {
-  pc.removeTrack(pc.getSenders().find((sender) => sender.track == track));
+  pc.removeTrack(pc.getSenders().find((sender) => sender.track === track));
 } else {
   // If you have code listening for negotiationneeded events:
   setTimeout(() => pc.dispatchEvent(new Event("negotiationneeded")));

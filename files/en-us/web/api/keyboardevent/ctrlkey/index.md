@@ -23,12 +23,12 @@ A boolean value
 
 ## Examples
 
-```js
+```html
 <html>
 <head>
 <title>ctrlKey example</title>
 
-<script type="text/javascript">
+<script>
 
 function showChar(e){
   alert(

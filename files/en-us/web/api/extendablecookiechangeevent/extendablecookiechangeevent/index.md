@@ -7,10 +7,9 @@ tags:
   - Constructor
   - Reference
   - ExtendableCookieChangeEvent
-  - Experimental
 browser-compat: api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
 ---
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 The **`ExtendableCookieChangeEvent()`** constructor creates a new {{domxref("ExtendableCookieChangeEvent")}} object
 which is the event type passed to {{domxref("ServiceWorkerRegistration/cookiechange_event", "ServiceWorkerRegistration.oncookiechange()")}}.
@@ -30,7 +29,7 @@ new ExtendableCookieChangeEvent(type, options)
 - `type`
   - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `cookiechange`.
-- `options`{{Optional_Inline}}
+- `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, can have the following properties:
     - `changed`
       - : An array containing a changed cookie.

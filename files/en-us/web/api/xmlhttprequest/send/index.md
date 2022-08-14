@@ -72,10 +72,10 @@ None ({{jsxref("undefined")}}).
 ## Example: GET
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
-xhr.onload = function () {
+xhr.onload = () => {
   // Request finished. Do processing here.
 };
 
@@ -89,16 +89,16 @@ xhr.send(null);
 ## Example: POST
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open("POST", '/server', true);
 
 //Send the proper header information along with the request
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-xhr.onreadystatechange = function() { // Call a function when the state changes.
-    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-        // Request finished. Do processing here.
-    }
+xhr.onreadystatechange = () => { // Call a function when the state changes.
+  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+    // Request finished. Do processing here.
+  }
 }
 xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(new Int8Array());

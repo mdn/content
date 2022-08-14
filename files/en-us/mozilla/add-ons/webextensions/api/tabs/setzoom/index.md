@@ -30,7 +30,7 @@ let zooming = browser.tabs.setZoom(
 
 ### Parameters
 
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. The ID of the tab to zoom. Defaults to the active tab of the current window.
 - `zoomFactor`
   - : `number`. The new zoom factor. Use a value of 0 here to set the tab to its current default zoom factor. Otherwise, this must be a number between 0.3 and 5, specifying a zoom factor.

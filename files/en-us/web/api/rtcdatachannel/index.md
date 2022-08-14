@@ -84,16 +84,13 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Indicates whether or not the data channel is _reliable_.
-- {{DOMxRef("RTCDataChannel.stream", "stream")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : Returns an ID number (between 0 and 65,535)
-    which uniquely identifies the data channel.
 
 ## Methods
 
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.close", "close()")}}
-  - : Closes the{{domxref("RTCDataChannel")}}.
+  - : Closes the {{domxref("RTCDataChannel")}}.
     Either peer is permitted to call this method
     to initiate closure of the channel.
 - {{DOMxRef("RTCDataChannel.send", "send()")}}
@@ -126,18 +123,18 @@ The underlying data format is defined by the IEEE specification [SDP Offer/Answe
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
-dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+dc.onmessage = (event) => {
+  console.log(`received: ${event.data}`);
 };
 
-dc.onopen = function () {
+dc.onopen = () => {
   console.log("datachannel open");
 };
 
-dc.onclose = function () {
+dc.onclose = () => {
   console.log("datachannel close");
 };
 ```

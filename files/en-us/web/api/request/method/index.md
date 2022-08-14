@@ -27,8 +27,8 @@ In the following snippet, we create a new request using the
 the script), then save the method of the request in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myMethod = myRequest.method; // GET
+const myRequest = new Request('flowers.jpg');
+const myMethod = myRequest.method; // GET
 ```
 
 ## Specifications

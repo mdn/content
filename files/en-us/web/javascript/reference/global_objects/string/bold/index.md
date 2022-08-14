@@ -36,7 +36,7 @@ The `bold()` method embeds a string in a `<b>` element:
 
 ### Using bold()
 
-The following example uses string methods to change the formatting of a string:
+The following example uses deprecated string methods to change the formatting of a string:
 
 ```js
 const worldString = 'Hello, world';

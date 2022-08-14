@@ -13,12 +13,7 @@ browser-compat: css.selectors.first-letter
 
 The **`::first-letter`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first letter of the first line of a [block-level element](/en-US/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes), but only when not preceded by other content (such as images or inline tables).
 
-```css
-/* Selects the first letter of a <p> */
-p::first-letter {
-  font-size: 130%;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-letter.html", "tabbed-shorter")}}
 
 The first letter of an element is not always trivial to identify:
 
@@ -26,7 +21,7 @@ The first letter of an element is not always trivial to identify:
 - Some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element.
 - A combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, `::first-letter` will match the first letter of this generated content.
 
-> **Note:** CSS3 introduced the `::first-letter` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept `:first-letter`, introduced in CSS2.
+> **Note:** CSS introduced the `::first-letter` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). For backward compatibility, browsers also accept `:first-letter`, introduced earlier.
 >
 > Browser support for digraphs such as `IJ` in Dutch is poor. Check the compatibility table below to see the current state of support.
 

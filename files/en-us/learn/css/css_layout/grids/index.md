@@ -198,7 +198,6 @@ body {
   background-color: rgb(207,232,220);
   border: 2px solid rgb(79,185,227);
 }
-
 ```
 
 ```html hidden

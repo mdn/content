@@ -64,7 +64,7 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
 
-Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/indexeddb-examples/tree/master/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/).)
+Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/).)
 
 ```js
 function displayDataByIndex() {
@@ -73,18 +73,18 @@ function displayDataByIndex() {
   const objectStore = transaction.objectStore('contactsList');
 
   const myIndex = objectStore.index('lName');
-  myIndex.openCursor().onsuccess = function(event) {
+  myIndex.openCursor().onsuccess = (event) => {
    const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
-                           + '<td>' + cursor.value.lName + '</td>'
-                           + '<td>' + cursor.value.fName + '</td>'
-                           + '<td>' + cursor.value.jTitle + '</td>'
-                           + '<td>' + cursor.value.company + '</td>'
-                           + '<td>' + cursor.value.eMail + '</td>'
-                           + '<td>' + cursor.value.phone + '</td>'
-                           + '<td>' + cursor.value.age + '</td>';
+      tableRow.innerHTML = `<td>${cursor.value.id}</td>`
+                         + `<td>${cursor.value.lName}</td>`
+                         + `<td>${cursor.value.fName}</td>`
+                         + `<td>${cursor.value.jTitle}</td>`
+                         + `<td>${cursor.value.company}</td>`
+                         + `<td>${cursor.value.eMail}</td>`
+                         + `<td>${cursor.value.phone}</td>`
+                         + `<td>${cursor.value.age}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();

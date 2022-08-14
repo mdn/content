@@ -48,15 +48,14 @@ const options = {
 };
 
 navigator.credentials.get({  publicKey: options })
-  .then(function (assertionPKCred) {
+  .then((assertionPKCred) => {
     const signature = assertionPKCred.response.signature;
 
     // Send response and client extensions to the server so that it can
     // go on with the authentication
 
-}).catch(function (err) {
-   console.error(err);
-});
+  })
+  .catch((err) => console.error(err));
 ```
 
 ## Specifications

@@ -11,7 +11,7 @@ The **`srcdoc`** property of the {{domxref("HTMLIFrameElement")}} specifies the 
 ## Examples
 
 ```js
-var iframe = document.createElement("iframe");
+const iframe = document.createElement("iframe");
 iframe.srcdoc = `<!DOCTYPE html><p>Hello World!</p>`;
 document.body.appendChild(iframe);
 ```

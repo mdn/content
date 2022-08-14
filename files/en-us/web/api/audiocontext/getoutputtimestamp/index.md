@@ -63,7 +63,7 @@ You can see full code of this [example at output-timestamp](https://github.com/m
 
 ```js
 play.addEventListener('click', () => {
-  if(!audioCtx) {
+  if (!audioCtx) {
     audioCtx = new window.AudioContext();
   }
 
@@ -84,7 +84,7 @@ stop.addEventListener('click', () => {
 
 function outputTimestamps() {
   let ts = audioCtx.getOutputTimestamp()
-  console.log('Context time: ' + ts.contextTime + ' | Performance time: ' + ts.performanceTime);
+  console.log(`Context time: ${ts.contextTime} | Performance time: ${ts.performanceTime}`);
   rAF = requestAnimationFrame(outputTimestamps);
 }
 ```

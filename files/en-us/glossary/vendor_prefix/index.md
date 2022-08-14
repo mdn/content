@@ -55,13 +55,13 @@ The prefixes for properties and methods are lower-case:
 Sample usage:
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame ||
-                            window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame ||
-                            window.oRequestAnimationFrame ||
-                            window.msRequestAnimationFrame;
+window.requestAnimationFrame = window.requestAnimationFrame ||
+                               window.mozRequestAnimationFrame ||
+                               window.webkitRequestAnimationFrame ||
+                               window.oRequestAnimationFrame ||
+                               window.msRequestAnimationFrame;
 ```
 
 ## See also
 
-- {{Interwiki("wikipedia", "CSS_hack#Browser_prefixes", "Vendor prefix")}} on Wikipedia
+- [Vendor prefix](https://en.wikipedia.org/wiki/CSS_hack#Browser_prefixes) on Wikipedia

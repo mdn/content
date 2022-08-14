@@ -75,7 +75,7 @@ pause
 To use that code:
 
 1. Save that code in a file named `sri-hash.bat` in the Windows SendTo folder in your environment (for example, `C:\Users\USER\AppData\Roaming\Microsoft\Windows\SendTo`).
-2. Right-click a file in the File Explorer, select **Send to...**, and then select `sri-hash`. You will see the integrity value in a command box.
+2. Right-click a file in the File Explorer, select **Send to…**, and then select `sri-hash`. You will see the integrity value in a command box.
 3. Select the integrity value and right-click to copy it to the Clipboard.
 4. Press any key to dismiss the command box.
 

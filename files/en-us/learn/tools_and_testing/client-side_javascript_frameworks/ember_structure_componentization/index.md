@@ -34,7 +34,7 @@ In this article we'll get right on with planning out the structure of our TodoMV
         </p>
         <p>
           A deeper understanding of modern JavaScript features (such as classes,
-          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          modules, etc.), will be extremely beneficial, as Ember makes heavy use
           of them.
         </p>
       </td>
@@ -79,7 +79,7 @@ However, we don't want this. Instead, we want it to contain the TodoMVC app stru
 </section>
 ```
 
-> **Note:** [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) provides a label for assistive technology to make use of — for example, for a screenreader to read out. This is useful in such cases where we have an [`<input>`](/en-US/docs/Web/HTML/Element/input) being used with no corresponding HTML text that could be turned into a label.
+> **Note:** [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) provides a label for assistive technology to make use of — for example, for a screenreader to read out. This is useful in such cases where we have an [`<input>`](/en-US/docs/Web/HTML/Element/input) being used with no corresponding HTML text that could be turned into a label.
 
 When you save `application.hbs`, the development server you started earlier will automatically rebuild the app and refresh the browser. The rendered output should now look like this:
 

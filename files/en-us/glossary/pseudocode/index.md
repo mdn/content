@@ -10,4 +10,4 @@ Pseudocode refers to code-like syntax that is generally used to indicate to huma
 
 ## See also
 
-- {{interwiki("wikipedia", "Pseudocode", "Pseudocode")}} on Wikipedia.
+- [Pseudocode](https://en.wikipedia.org/wiki/Pseudocode) on Wikipedia.

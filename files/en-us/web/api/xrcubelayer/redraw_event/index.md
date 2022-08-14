@@ -24,9 +24,9 @@ See also the {{domxref("XRCompositionLayer.needsRedraw")}} property which is als
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('redraw', event => { })
+addEventListener('redraw', (event) => { })
 
-onredraw = event => { }
+onredraw = (event) => { }
 ```
 
 ## Event type
@@ -47,7 +47,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can pass `redraw` to {{domxref("EventTarget.addEventListener()", "addEventListener()")}}:
 
 ```js
-cubeLayer.addEventListener("redraw", function(event) {
+cubeLayer.addEventListener("redraw", (event) => {
   // redraw the layer
 });
 ```
@@ -55,7 +55,7 @@ cubeLayer.addEventListener("redraw", function(event) {
 Alternatively, you can use the `onredraw` event handler property to establish a handler for the `redraw` event:
 
 ```js
-cubeLayer.onredraw = function(event) {
+cubeLayer.onredraw = (event) => {
  // redraw the layer
 }
 ```

@@ -12,4 +12,4 @@ VoIP allows you to make a call directly from a computer, a special VoIP phone, o
 
 ## See also
 
-- {{Interwiki("wikipedia", "VoIP")}} on Wikipedia
+- [VoIP](https://en.wikipedia.org/wiki/VoIP) on Wikipedia

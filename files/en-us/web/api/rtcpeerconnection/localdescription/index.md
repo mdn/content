@@ -19,7 +19,7 @@ If it has not yet been set, this is `null`.
 ## Syntax
 
 ```js
- var sessionDescription = peerConnection.localDescription;
+const sessionDescription = peerConnection.localDescription;
 ```
 
 On a more fundamental level, the returned value is the value of {{domxref("RTCPeerConnection.pendingLocalDescription")}} if that property isn't `null`;
@@ -31,13 +31,11 @@ See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and 
 This example looks at the `localDescription` and displays an alert containing the {{domxref("RTCSessionDescription")}} object's `type` and `sdp` fields.
 
 ```js
-var pc = new RTCPeerConnection();
-…
-var sd = pc.localDescription;
+const pc = new RTCPeerConnection();
+// ...
+const sd = pc.localDescription;
 if (sd) {
-  alert("Local session: type='" +
-        sd.type + "'; sdp description='" +
-        sd.sdp + "'");
+  alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
 }
 else {
   alert("No local session yet.");

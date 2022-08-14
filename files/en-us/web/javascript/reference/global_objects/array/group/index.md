@@ -24,19 +24,19 @@ If you need to group elements using a key that is some arbitrary value, use {{js
 
 ```js
 // Arrow function
-group((element) => { /* ... */ } )
-group((element, index) => { /* ... */ } )
-group((element, index, array) => { /* ... */ } )
+group((element) => { /* … */ } )
+group((element, index) => { /* … */ } )
+group((element, index, array) => { /* … */ } )
 
 // Callback function
 group(callbackFn)
 group(callbackFn, thisArg)
 
 // Inline callback function
-group(function(element) { /* ... */ })
-group(function(element, index) { /* ... */ })
-group(function(element, index, array){ /* ... */ })
-group(function(element, index, array) { /* ... */ }, thisArg)
+group(function(element) { /* … */ })
+group(function(element, index) { /* … */ })
+group(function(element, index, array){ /* … */ })
+group(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -122,7 +122,7 @@ const inventory = [
 The code below groups the elements by the value of their `type` property.
 
 ```js
-let result = inventory.group( ({ type }) => type );
+const result = inventory.group(({ type }) => type);
 
 /* Result is:
 {
@@ -150,11 +150,11 @@ We can also create groups inferred from values in one or more properties of the 
 Below is a very similar example that puts the items into `ok` or `restock` groups based on the value of the `quantity` field.
 
 ```js
-function myCallback( { quantity } ) {
+function myCallback({ quantity }) {
   return quantity > 5 ? 'ok' : 'restock';
 }
 
-result = inventory.group( myCallback );
+result = inventory.group(myCallback);
 
 /* Result is:
 {

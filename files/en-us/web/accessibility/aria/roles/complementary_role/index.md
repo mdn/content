@@ -64,7 +64,7 @@ If there is more than one `complementary` landmark role or {{HTMLElement('aside'
   <!-- content -->
 </aside>
 
-...
+…
 
 <aside id="sidebar" aria-label="Sponsors">
   <!-- content -->

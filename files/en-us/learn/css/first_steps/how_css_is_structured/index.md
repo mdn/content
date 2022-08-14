@@ -59,7 +59,7 @@ You reference an external CSS stylesheet from an HTML `<link>` element:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="utf-8">
     <title>My CSS experiment</title>
@@ -107,7 +107,7 @@ The HTML for an internal stylesheet might look like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="utf-8">
     <title>My CSS experiment</title>
@@ -140,7 +140,7 @@ Inline styles are CSS declarations that affect a single HTML element, contained 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="utf-8">
     <title>My CSS experiment</title>
@@ -251,7 +251,7 @@ p {
 
 However, in the case of our earlier example with the conflict between the class selector and the element selector, the class prevails, rendering the paragraph text red. How can this happen even though a conflicting style appears later in the stylesheet? A class is rated as being more specific, as in having more **specificity** than the element selector, so it cancels the other conflicting style declaration.
 
-Try this experiment for yourself! Add HTML, then add the two `p { ... }` rules to your stylesheet. Next, change the first `p` selector to `.special` to see how it changes the styling.
+Try this experiment for yourself! Add HTML, then add the two `p { }` rules to your stylesheet. Next, change the first `p` selector to `.special` to see how it changes the styling.
 
 The rules of specificity and the cascade can seem complicated at first. These rules are easier to understand as you become more familiar with CSS. The [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) section in the next module explains this in detail, including how to calculate specificity.
 
@@ -547,7 +547,7 @@ padding-left: 10px;
 
 But these declarations are invalid:
 
-```css
+```css example-bad
 margin: 0auto;
 padding- left: 10px;
 ```

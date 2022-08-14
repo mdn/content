@@ -534,14 +534,12 @@
         "BeforeUnloadEvent",
         "DOMStringMap",
         "ErrorEvent",
-        "GlobalEventHandlers",
         "HashChangeEvent",
         "ImageData",
         "HTMLAnchorElement",
         "HTMLAreaElement",
         "HTMLAudioElement",
         "HTMLBaseElement",
-        "HTMLBaseFontElement",
         "HTMLBodyElement",
         "HTMLBRElement",
         "HTMLButtonElement",
@@ -751,7 +749,9 @@
       "overview": ["Intersection Observer API"],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": [],
+      "properties": [
+        "indexedDB"
+      ],
       "events": []
     },
     "Layout Instability API": {
@@ -784,18 +784,17 @@
         "mediaCapabilities.decodingInfo()",
         "mediaCapabilities.encodingInfo()"
       ],
-      "properties": [],
+      "properties": ["navigator.mediaCapabilities"],
       "events": [],
       "dictionaries": []
     },
     "Media Capture and Streams": {
-      "overview": ["Media Streams API"],
+      "overview": ["Media Capture and Streams API"],
       "guides": [
-        "/docs/Web/API/Media_Streams_API/Constraints",
-        "/docs/Web/API/Media_Streams_API/Taking_still_photos"
+        "/docs/Web/API/Media_Capture_and_Streams_API/Constraints",
+        "/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos"
       ],
       "interfaces": [
-        "BlobEvent",
         "CanvasCaptureMediaStreamTrack",
         "MediaDevices",
         "MediaStream",
@@ -813,6 +812,19 @@
       ],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
+    },
+    "Media Recorder API": {
+      "overview": ["Media Recorder API"],
+      "interfaces": ["MediaRecorder", "BlobEvent"],
+      "methods": [],
+      "properties": ["window.MediaRecorder"],
+      "events": [],
+      "dictionaries": [
+        "MediaRecorderOptions",
+        "BlobEventInit"
+      ],
+      "types": ["BitrateMode", "RecordingState"],
+      "callbacks": []
     },
     "Media Session API": {
       "overview": ["Media Session API"],
@@ -1006,16 +1018,6 @@
         "Element.releasePointerCapture()"
       ],
       "properties": [
-        "GlobalEventHandlers.ongotpointercapture",
-        "GlobalEventHandlers.onlostpointercapture",
-        "GlobalEventHandlers.onpointerdown",
-        "GlobalEventHandlers.onpointermove",
-        "GlobalEventHandlers.onpointerup",
-        "GlobalEventHandlers.onpointercancel",
-        "GlobalEventHandlers.onpointerover",
-        "GlobalEventHandlers.onpointerout",
-        "GlobalEventHandlers.onpointerenter",
-        "GlobalEventHandlers.onpointerleave",
         "Navigator.maxTouchPoints"
       ],
       "events": [
@@ -1171,9 +1173,7 @@
     "Selection API": {
       "overview": ["Selection API"],
       "interfaces": ["Selection"],
-      "properties": [
-        "GlobalEventHandlers.onselectstart"
-      ],
+      "properties": [],
       "methods": ["Document.getSelection()", "Window.getSelection()"],
       "events": ["Document: selectionchange", "Document: selectstart"]
     },
@@ -1253,6 +1253,7 @@
       "guides": [
         "/docs/Web/API/Streams_API/Concepts",
         "/docs/Web/API/Streams_API/Using_readable_streams",
+        "/docs/Web/API/Streams_API/Using_readable_byte_streams",
         "/docs/Web/API/Streams_API/Using_writable_streams"
       ],
       "interfaces": [

@@ -35,7 +35,7 @@ A number.
 ### JavaScript Content
 
 ```js
-navigator.getBattery().then(battery => {
+navigator.getBattery().then((battery) => {
   const time = battery.dischargingTime;
 
   document.querySelector('#dischargingTime').textContent = `Remaining time to fully discharge the battery: ${time}`;

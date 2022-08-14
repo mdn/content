@@ -46,7 +46,7 @@ arr.length = 5; // set array length to 5 while currently 2.
 console.log(arr);
 // [ 1, 2, <3 empty items> ]
 
-arr.forEach(element => console.log(element));
+arr.forEach((element) => console.log(element));
 // 1
 // 2
 ```

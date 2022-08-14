@@ -12,7 +12,7 @@ tags:
   - Style
   - source
   - style-src
-browser-compat: http.headers.csp.Content-Security-Policy.style-src
+browser-compat: http.headers.Content-Security-Policy.style-src
 ---
 {{HTTPSidebar}}
 
@@ -66,7 +66,7 @@ Content-Security-Policy: style-src https://example.com/
 the following stylesheets are blocked and won't load:
 
 ```html
-<link href="https://not-example.com/styles/main.css" rel="stylesheet" type="text/css" />
+<link href="https://not-example.com/styles/main.css" rel="stylesheet" />
 
 <style>
 #inline-style { background: red; }

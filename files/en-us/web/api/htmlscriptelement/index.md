@@ -55,7 +55,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.fetchPriority")}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLScriptElement.noModule")}}
-  - : A boolean value that if true, stops the script's execution in browsers that support [ES2015 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
+  - : A boolean value that if true, stops the script's execution in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : A string that reflects the {{htmlattrxref("referrerPolicy", "script")}} HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 
@@ -79,7 +79,7 @@ For more details, see the [`defer`](#defer_property) and [`async`](#async_proper
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(`The script ${oError.target.src} didn't load correctly.`);
 }
 
 function prefixScript(url, onloadFunction) {
@@ -95,7 +95,7 @@ This next function, instead of prepending the new scripts immediately before the
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(`The script ${oError.target.src} didn't load correctly.`);
 }
 
 function affixScriptToHead(url, onloadFunction) {
@@ -111,7 +111,7 @@ Sample usage:
 
 ```js
 affixScriptToHead("myScript1.js");
-affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js\" has been correctly loaded."); });
+affixScriptToHead("myScript2.js", () => { alert("The script \"myScript2.js\" has been correctly loaded."); });
 ```
 
 ### Checking if a script type is supported

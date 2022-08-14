@@ -17,9 +17,9 @@ The **`error`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { })
+addEventListener('error', (event) => { })
 
-onerror = event => { }
+onerror = (event) => { }
 ```
 
 ## Event type
@@ -48,16 +48,16 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `error` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('error', function(event) {
-  console.log('An error has occurred with the speech synthesis: ' + event.error');
+utterThis.addEventListener('error', (event) => {
+  console.log(`An error has occurred with the speech synthesis: ${event.error}`);
 });
 ```
 
 Or use the `onerror` event handler property:
 
 ```js
-utterThis.onerror = function(event) {
-  console.log('An error has occurred with the speech synthesis: ' + event.error');
+utterThis.onerror = (event) => {
+  console.log(`An error has occurred with the speech synthesis: ${event.error}`);
 }
 ```
 

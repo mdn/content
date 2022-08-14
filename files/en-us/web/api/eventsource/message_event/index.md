@@ -21,9 +21,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type
@@ -58,7 +58,7 @@ const eventList = document.querySelector('ul');
 evtSource.addEventListener('message', (e) => {
   const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 });
 ```
@@ -69,7 +69,7 @@ evtSource.addEventListener('message', (e) => {
 evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 };
 ```

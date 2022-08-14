@@ -21,7 +21,7 @@ The `Referer` header can contain an _origin_, _path_, and _querystring_, and may
 The request's _referrer policy_ defines the data that can be included. See {{HTTPHeader("Referrer-Policy")}} for more [information](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives) and [examples](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples).
 
 > **Note:** The header name "referer" is actually a misspelling of the word "referrer".
-> See {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}} for more details.
+> See [HTTP referer on Wikipedia](https://en.wikipedia.org/wiki/HTTP_referer) for more details.
 
 > **Warning:** This header may have undesirable consequences for user security and privacy.
 > See [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for more information and mitigations.
@@ -70,7 +70,7 @@ Referer: https://example.com/
 
 ## See also
 
-- {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
+- [HTTP referer on Wikipedia](https://en.wikipedia.org/wiki/HTTP_referer)
 - [Fetch](/en-US/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 - The obsolete {{HTTPHeader("Content-Security-Policy")}} {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} directive.
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)

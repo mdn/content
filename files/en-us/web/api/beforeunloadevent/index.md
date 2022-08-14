@@ -39,12 +39,12 @@ When a non-empty string is assigned to the `returnValue` Event property, a dialo
 ## Examples
 
 ```js
-window.addEventListener("beforeunload", function( event ) {
-  event.returnValue = "\o/";
+window.addEventListener("beforeunload", (event) => {
+  event.returnValue = "\\o/";
 });
 
 // is equivalent to
-window.addEventListener("beforeunload", function( event ) {
+window.addEventListener("beforeunload", (event) => {
   event.preventDefault();
 });
 ```
@@ -52,8 +52,8 @@ window.addEventListener("beforeunload", function( event ) {
 WebKit-derived browsers don't follow the spec for the dialog box. An almost-cross-browser working example would be close to the below example.
 
 ```js
-window.addEventListener("beforeunload", function (e) {
-  const confirmationMessage = "\o/";
+window.addEventListener("beforeunload", (e) => {
+  const confirmationMessage = "\\o/";
 
   (e || window.event).returnValue = confirmationMessage;     // Gecko + IE
   return confirmationMessage;                                /* Safari, Chrome, and other
@@ -74,6 +74,6 @@ window.addEventListener("beforeunload", function (e) {
 - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
 - {{domxref("Document/readystatechange_event", "readystatechange")}}
 - {{domxref("Window/load_event", "load")}}
-- {{Event("beforeunload")}}
+- {{domxref("Window/beforeunload_event", "beforeunload")}}
 - {{domxref("Window/unload_event", "unload")}}
 - [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)

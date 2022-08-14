@@ -47,7 +47,7 @@ Here's a fake simple banner with a skip to navigation link, a logo, a title and 
   <img src="images/w3c.png" alt="W3C Logo">
   <h1>ARIA Landmarks</h1>
   <p>Identifying page subsections for easy navigation</p>
-  <nav>...</nav>
+  <nav>…</nav>
 </div>
 ```
 
@@ -59,7 +59,7 @@ We could also have written the above with the HTML `header` element:
   <img src="images/w3c.png" alt="W3C Logo">
   <h1>ARIA Landmarks</h1>
   <p>Identifying page subsections for easy navigation</p>
-  <nav>...</nav>
+  <nav>…</nav>
 </header>
 ```
 

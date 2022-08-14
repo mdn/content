@@ -32,7 +32,7 @@ Along with placing them directly in the markup, ARIA attributes can be added to 
 
 ```js
 // Find the progress bar <div> in the DOM.
-var progressBar = document.getElementById("percent-loaded");
+const progressBar = document.getElementById("percent-loaded");
 
 // Set its ARIA roles and states,
 // so that assistive technologies know what kind of widget it is.

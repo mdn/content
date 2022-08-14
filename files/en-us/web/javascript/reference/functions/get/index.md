@@ -20,8 +20,8 @@ that will be called when that property is looked up.
 ## Syntax
 
 ```js
-{get prop() { /* ... */ } }
-{get [expression]() { /* ... */ } }
+{ get prop() { /* … */ } }
+{ get [expression]() { /* … */ } }
 ```
 
 ### Parameters
@@ -29,8 +29,7 @@ that will be called when that property is looked up.
 - `prop`
   - : The name of the property to bind to the given function.
 - `expression`
-  - : Starting with ECMAScript 2015, you can also use expressions for a computed property
-    name to bind to the given function.
+  - : You can also use expressions for a computed property name to bind to the given function.
 
 ## Description
 
@@ -61,7 +60,7 @@ Note the following when working with the `get` syntax:
 
   ```js example-bad
   {
-    x: ..., get x() { }
+    x: /* … */, get x() { /* … */ }
   }
   ```
 
@@ -102,7 +101,7 @@ To append a getter to an existing object later at any time, use
 ```js
 const o = {a: 0};
 
-Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
+Object.defineProperty(o, 'b', { get() { return this.a + 1; } });
 
 console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
 ```
@@ -165,13 +164,15 @@ property, the property is removed from the object and re-added, but implicitly a
 property this time. Finally, the value gets returned.
 
 ```js
-get notifier() {
-  delete this.notifier;
-  return this.notifier = document.getElementById('bookmarked-notification-anchor');
-},
+const obj = {
+  get notifier() {
+    delete this.notifier;
+    return this.notifier = document.getElementById('bookmarked-notification-anchor');
+  },
+}
 ```
 
-### `get` vs. `defineProperty`
+### get vs. defineProperty
 
 While using the `get` keyword and {{jsxref("Object.defineProperty()")}} have
 similar results, there is a subtle difference between the two when used on

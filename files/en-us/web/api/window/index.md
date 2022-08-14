@@ -305,73 +305,12 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Displays a modal dialog.
 
-## Event handlers
-
-These are properties of the window object that can be set to establish event handlers for the various things that can happen in the window that might be of interest.
-
-_This interface inherits event handlers from the {{domxref("EventTarget")}} interface._
-
-- {{domxref("Window.onuserproximity")}} {{deprecated_inline}}
-  - : An event handler property for user proximity events (see {{domxref("UserProximityEvent")}}).
-
-### Event handlers implemented from elsewhere
-
-- {{domxref("GlobalEventHandlers.onabort")}}
-  - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress.
-- {{domxref("GlobalEventHandlers.onchange")}}
-  - : An event handler property for change events on the window.
-- {{domxref("GlobalEventHandlers.onclick")}}
-  - : Called after the ANY mouse button is pressed & released.
-- {{domxref("GlobalEventHandlers.ondblclick")}}
-  - : Called when a double click is made with ANY mouse button.
-- {{domxref("GlobalEventHandlers.onclose")}}
-  - : Called after the window is closed.
-- {{domxref("GlobalEventHandlers.oncontextmenu")}}
-  - : Called when the RIGHT mouse button is pressed.
-- {{domxref("GlobalEventHandlers.onerror")}}
-  - : Called when a resource fails to load OR when an error occurs at runtime. See {{domxref("Window/error_event", "error")}} event.
-- {{domxref("GlobalEventHandlers.oninput")}}
-  - : Called when the value of an \<input> element changes.
-- {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : Called when you begin pressing ANY key. See {{event("keydown")}} event.
-- {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See {{event("keypress")}} event.
-- {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : Called when you finish releasing ANY key. See {{event("keyup")}} event.
-- {{domxref("GlobalEventHandlers.onload")}}
-  - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
-- {{domxref("GlobalEventHandlers.onmousedown")}}
-  - : Called when ANY mouse button is pressed.
-- {{domxref("GlobalEventHandlers.onmousemove")}}
-  - : Called continuously when the mouse is moved inside the window.
-- {{domxref("GlobalEventHandlers.onmouseout")}}
-  - : Called when the pointer leaves the window.
-- {{domxref("GlobalEventHandlers.onmouseover")}}
-  - : Called when the pointer enters the window.
-- {{domxref("GlobalEventHandlers.onmouseup")}}
-  - : Called when ANY mouse button is released.
-- {{domxref("GlobalEventHandlers.onreset")}}
-  - : Called when a form is reset.
-- {{domxref("GlobalEventHandlers.onresize")}}
-  - : Called continuously as you are resizing the window.
-- {{domxref("GlobalEventHandlers.onscroll")}}
-  - : Called when the scroll bar is moved via ANY means. If the resource fully fits in the window, then this event cannot be invoked.
-- {{domxref("GlobalEventHandlers.onwheel")}}
-  - : Called when the mouse wheel is rotated around any axis.
-- {{domxref("GlobalEventHandlers.onselect")}}
-  - : Called after text in an input field is selected.
-- {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `selectionchange` event is raised.
-- {{domxref("GlobalEventHandlers.onsubmit")}}
-  - : Called when a form is submitted.
-
 ## Events
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref("Window/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
-    Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} property.
 - {{domxref("Window/languagechange_event", "languagechange")}}
   - : Fired at the global scope object when the user's preferred language changes.
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{deprecated_inline}}
@@ -382,7 +321,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
 - {{domxref("Window/resize_event", "resize")}}
   - : Fired when the window has been resized.
-    Also available via the {{domxref("GlobalEventHandlers/onresize", "onresize")}} property.
 - {{domxref("Window/storage_event", "storage")}}
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
 - {{domxref("Window.vrdisplayconnect_event", "vrdisplayconnect")}} {{deprecated_inline}}
@@ -404,16 +342,12 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/animationcancel_event", "animationcancel")}}
   - : Fired when an animation unexpectedly aborts.
-    Also available via the {{domxref("GlobalEventHandlers/onanimationcancel", "onanimationcancel")}} property.
 - {{domxref("Window/animationend_event", "animationend")}}
   - : Fired when an animation has completed normally.
-    Also available via the {{domxref("GlobalEventHandlers/onanimationend", "onanimationend")}} property.
 - {{domxref("Window/animationiteration_event", "animationiteration")}}
   - : Fired when an animation iteration has completed.
-    Also available via the {{domxref("GlobalEventHandlers/onanimationiteration", "onanimationiteration")}} property.
 - {{domxref("Window/animationstart_event", "animationstart")}}
   - : Fired when an animation starts.
-    Also available via the {{domxref("GlobalEventHandlers/onanimationstart", "onanimationstart")}} property.
 
 ### Clipboard events
 
@@ -438,10 +372,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/blur_event", "blur")}}
   - : Fired when an element has lost focus.
-    Also available via the {{domxref("GlobalEventHandlers/onblur", "onblur")}} property.
 - {{domxref("Window/focus_event", "focus")}}
   - : Fired when an element has gained focus.
-    Also available via the {{domxref("GlobalEventHandlers/onfocus", "onfocus")}} property.
 
 ### Gamepad events
 
@@ -469,7 +401,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 - {{domxref("Window/load_event", "load")}}
   - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
-    Also available via the {{domxref("GlobalEventHandlers/onload", "onload")}} property.
 - {{domxref("Window/unload_event", "unload")}}
   - : Fired when the document or a child resource is being unloaded.
 
@@ -505,16 +436,12 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
-    Also available via the {{domxref("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}} property.
 - {{domxref("Window/transitionend_event", "transitionend")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
-    Also available via the {{domxref("GlobalEventHandlers/ontransitionend", "ontransitionend")}} property.
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
-    Also available via the {{domxref("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}} property.
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
-    Also available via the {{domxref("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} property.
 
 ### WebVR events
 

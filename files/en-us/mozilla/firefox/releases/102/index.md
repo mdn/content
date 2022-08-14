@@ -32,7 +32,7 @@ No notable changes.
 - [Transform streams](/en-US/docs/Web/API/TransformStream) are now supported, allowing you to pipe from {{domxref("ReadableStream")}} to a {{domxref("WritableStream")}}, executing a transformation on the chunks.
   The update includes the new interfaces [`TransformStream`](/en-US/docs/Web/API/TransformStream) and [`TransformStreamDefaultController`](/en-US/docs/Web/API/TransformStreamDefaultController) and the method [`ReadableStream.pipeThrough()`](/en-US/docs/Web/API/ReadableStream/pipeThrough) ({{bug(1767507)}}).
 
-- [Readable byte streams](/en-US/docs/Web/API/Streams_API#bytestream-related_interfaces) are now supported, allowing efficient zero-byte transfer of data from an underlying byte source to a consumer (bypassing the stream's internal queues).
+- [Readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) are now supported, allowing efficient zero-byte transfer of data from an underlying byte source to a consumer (bypassing the stream's internal queues).
   The new interfaces are {{domxref("ReadableStreamBYOBReader")}}, {{domxref("ReadableByteStreamController")}} and {{domxref("ReadableStreamBYOBRequest")}} ({{bug(1767342)}}).
 
 #### DOM
@@ -40,6 +40,19 @@ No notable changes.
 - The Firefox-only property {{domxref("Window.sidebar")}} has been moved behind a preference and is planned for removal ({{bug(1768486)}}).
 
 ### WebDriver conformance
+
+#### WebDriver BiDi
+
+- There are some improvements to Webdriver BiDi's `browsingContext.navigate`
+  - Fixed edge cases where the navigation could incorrectly timeout ({{bug(1766217)}}).
+  - Added support for hash changes ({{bug(1763127)}}).
+  - Added support navigation to error pages ({{bug(1763124)}}).
+
+#### Marionette
+
+- Allow marionette to connect to a windowless instance of Firefox  ({{bug(1726465)}}).
+- Fixed issue where `WebDriver:Navigate` with a PageLoadStrategy of "none" returns before navigation has started  ({{bug(1754132)}}).
+- Fixed a potential race condition in `WebDriver:SwitchToWindow` when switching to a different tab  ({{bug(1749666)}}).
 
 ## Changes for add-on developers
 

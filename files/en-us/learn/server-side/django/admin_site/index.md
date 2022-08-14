@@ -105,7 +105,7 @@ When you've finished adding books, click on the **Home** link in the top bookmar
 
 ![Admin Site - List of book objects](admin_book_list.png)
 
-From this list you can delete books by selecting the checkbox next to the book you don't want, selecting the _delete..._ action from the *Action* drop-down list, and then pressing the **Go** button. You can also add new books by pressing the **ADD BOOK** button.
+From this list you can delete books by selecting the checkbox next to the book you don't want, selecting the _delete…_ action from the *Action* drop-down list, and then pressing the **Go** button. You can also add new books by pressing the **ADD BOOK** button.
 
 You can edit a book by selecting its name in the link. The edit page for a book, shown below, is almost identical to the "Add" page. The main differences are the page title (_Change book_) and the addition of **Delete**, **HISTORY** and **VIEW ON SITE** buttons (this last button appears because we defined the `get_absolute_url()` method in our model).
 
@@ -151,7 +151,7 @@ To change how a model is displayed in the admin interface you define a [ModelAdm
 
 Let's start with the `Author` model. Open **admin.py** in the catalog application (**/locallibrary/catalog/admin.py**). Comment out your original registration (prefix it with a #) for the `Author` model:
 
-```js
+```python
 # admin.site.register(Author)
 ```
 
@@ -168,7 +168,7 @@ admin.site.register(Author, AuthorAdmin)
 
 Now we'll add `ModelAdmin` classes for `Book`, and `BookInstance`. We again need to comment out the original registrations:
 
-```js
+```python
 # admin.site.register(Book)
 # admin.site.register(BookInstance)
 ```

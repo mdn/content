@@ -55,7 +55,7 @@ the `Promise` to be fulfilled and returns the fulfilled value.
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -63,7 +63,7 @@ function resolveAfter2Seconds(x) {
 }
 
 async function f1() {
-  var x = await resolveAfter2Seconds(10);
+  const x = await resolveAfter2Seconds(10);
   console.log(x); // 10
 }
 
@@ -78,7 +78,7 @@ the same.
 ```js
 async function f2() {
   const thenable = {
-    then: function(resolve, _reject) {
+    then(resolve, _reject) {
       resolve('resolved!')
     }
   };
@@ -95,7 +95,7 @@ If the value is not a `Promise`, it converts the value to a resolved
 
 ```js
 async function f3() {
-  var y = await 20;
+  const y = await 20;
   console.log(y); // 20
 }
 
@@ -109,8 +109,8 @@ If the `Promise` is rejected, the rejected value is thrown.
 ```js
 async function f4() {
   try {
-    var z = await Promise.reject(30);
-  } catch(e) {
+    const z = await Promise.reject(30);
+  } catch (e) {
     console.error(e); // 30
   }
 }
@@ -123,7 +123,8 @@ f4();
 Handle rejected `Promise` without try block.
 
 ```js
-var response = await promisedFunction().catch((err) => { console.error(err); });
+const response = await promisedFunction()
+  .catch((err) => { console.error(err); });
 // response will be undefined if the promise is rejected
 ```
 
@@ -136,7 +137,7 @@ Here is an example of a simple module using the [Fetch API](/en-US/docs/Web/API/
 ```js
 // fetch request
 const colors = fetch('../data/colors.json')
-  .then(response => response.json());
+  .then((response) => response.json());
 
 export default await colors;
 ```

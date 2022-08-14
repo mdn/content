@@ -20,7 +20,7 @@ The **`importScripts()`** method of the {{domxref("WorkerGlobalScope")}} interfa
 ```js
 importScripts(path0)
 importScripts(path0, path1)
-importScripts(path0, path1, /* ... ,*/ pathN)
+importScripts(path0, path1, /* … ,*/ pathN)
 ```
 
 ### Parameters

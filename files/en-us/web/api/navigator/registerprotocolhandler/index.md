@@ -65,7 +65,7 @@ None ({{jsxref("undefined")}}).
     - The browser requires that this function is called from a secure context.
     - The browser requires that the handler's URL be over HTTPS.
 
-- `SyntaxError`{{domxref("DOMException")}}
+- `SyntaxError` {{domxref("DOMException")}}
   - : The `%s` placeholder is missing from the handler URL.
 
 ## Permitted schemes

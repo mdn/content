@@ -31,6 +31,8 @@ setActionHandler(type, callback)
 - `type`
   - : A string representing an action type to listen for. It will be one
     of the following:
+    - `hangup`
+      - : End a call.
     - `nexttrack`
       - : Advances playback to the next track.
     - `pause`
@@ -55,6 +57,10 @@ setActionHandler(type, callback)
         This action may or may not be available, depending on the platform and {{Glossary("user agent")}}, or may be disabled due to subscription level or other circumstances.
     - `stop`
       - : Halts playback entirely.
+    - `togglecamera`
+      - : Turn the user's active camera on or off.
+    - `togglemicrophone`
+      - : Mute or unmute the user's microphone.
 - `callback`
   - : A function to call when the specified action type is invoked. The callback should not return a value. The callback receives a dictionary containing the following properties:
     - `action`
@@ -100,15 +106,15 @@ if ('mediaSession' in navigator) {
     ]
   });
 
-  navigator.mediaSession.setActionHandler('play', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('pause', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('stop', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekbackward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekforward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekto', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('play', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('pause', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('stop', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekbackward', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekforward', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekto', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('previoustrack', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('nexttrack', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('skipad', () => { /* Code excerpted. */ });
 }
 ```
 
@@ -119,13 +125,13 @@ const actionHandlers = [
   // play
   [
     'play',
-    async function() {
+    async () => {
       // play our audio
       await audioEl.play();
       // set playback state
       navigator.mediaSession.playbackState = "playing";
       // update our status element
-      updateStatus(allMeta[index], 'Action: play  |  Track is playing...')
+      updateStatus(allMeta[index], 'Action: play  |  Track is playing…')
     }
   ],
   [
@@ -136,7 +142,7 @@ const actionHandlers = [
       // set playback state
       navigator.mediaSession.playbackState = "paused";
       // update our status element
-      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused...');
+      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused…');
     }
   ],
 ]
@@ -155,12 +161,12 @@ This example uses appropriate action handlers to allow seeking in either directi
 ```js
 let skipTime = 10; // Time to skip in seconds
 
-navigator.mediaSession.setActionHandler('seekbackward', evt => {
+navigator.mediaSession.setActionHandler('seekbackward', (evt) => {
  // User clicked "Seek Backward" media notification icon.
  audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
 });
 
-navigator.mediaSession.setActionHandler('seekforward', evt => {
+navigator.mediaSession.setActionHandler('seekforward', (evt) => {
  // User clicked "Seek Forward" media notification icon.
  audio.currentTime = Math.min(audio.currentTime + skipTime,
                audio.duration);

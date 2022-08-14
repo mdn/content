@@ -54,9 +54,9 @@ which clears the contents of the specified `SourceBuffer`.
 
 ```js
 async function emptySourceBuffer(msBuffer) {
-  await msBuffer.removeAsync(0, Infinity).catch(function(e) {
+  await msBuffer.removeAsync(0, Infinity).catch((e) => {
     handleException(e);
-  }
+  });
 }
 ```
 

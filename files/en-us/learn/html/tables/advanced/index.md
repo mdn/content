@@ -52,7 +52,7 @@ You can give your table a caption by putting it inside a {{htmlelement("caption"
 <table>
   <caption>Dinosaurs in the Jurassic period</caption>
 
-  ...
+  …
 </table>
 ```
 
@@ -116,7 +116,7 @@ Your finished table should look something like the following:
 
 ```html hidden
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>My spending record</title>
@@ -284,14 +284,11 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
   </caption>
   <tbody>
     <tr>
-      <td></td>
-      <td></td>
+      <td colspan="2" rowspan="2"></td>
       <th colspan="3" scope="colgroup">Clothes</th>
       <th colspan="2" scope="colgroup">Accessories</th>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
       <th scope="col">Trousers</th>
       <th scope="col">Skirts</th>
       <th scope="col">Dresses</th>
@@ -353,7 +350,7 @@ This section of the article provides further techniques for making tables as acc
 
 Screenreaders will identify all headers and use them to make programmatic associations between those headers and the cells they relate to. The combination of column and row headers will identify and interpret the data in each cell so that screenreader users can interpret the table similarly to how a sighted user does.
 
-We already covered headers in our previous article — see [Adding headers with \<th> elements](/en-US/docs/Learn/HTML/Tables/Basics#adding_headers_with_%3cth%3e_elements).
+We already covered headers in our previous article — see [Adding headers with \<th> elements](/en-US/docs/Learn/HTML/Tables/Basics#adding_headers_with_th_elements).
 
 ### The scope attribute
 
@@ -417,7 +414,7 @@ Returning to our spending costs example, the previous two snippets could be rewr
   <td headers="cost haircut">30</td>
 </tr>
 
-  ...
+  …
 
 </tbody>
 ```

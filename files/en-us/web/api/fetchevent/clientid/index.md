@@ -4,7 +4,6 @@ slug: Web/API/FetchEvent/clientId
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - FetchEvent
   - Property
   - Reference
@@ -28,7 +27,7 @@ A string that represents the client ID.
 ## Examples
 
 ```js
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', (event) => {
   console.log(event.clientId);
 });
 ```

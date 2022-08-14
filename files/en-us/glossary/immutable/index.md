@@ -14,4 +14,4 @@ An object can be immutable for various reasons, for example:
 
 ## See also
 
-- {{interwiki("wikipedia", "Immutable object", "Immutable")}} on Wikipedia
+- [Immutable](https://en.wikipedia.org/wiki/Immutable_object) on Wikipedia

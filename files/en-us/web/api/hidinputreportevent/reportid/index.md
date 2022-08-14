@@ -24,7 +24,7 @@ A one-byte identification prefix.
 In the following example the `reportId` of an incoming input report is logged to the console.
 
 ```js
-device.addEventListener("inputreport", event => {
+device.addEventListener("inputreport", (event) => {
   const { data, device, reportId } = event;
   console.log(reportId);
 });

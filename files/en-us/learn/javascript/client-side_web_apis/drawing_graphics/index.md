@@ -136,7 +136,7 @@ ctx.fillStyle = 'rgb(0, 0, 0)';
 ctx.fillRect(0, 0, width, height);
 ```
 
-Here we are setting a fill color using the canvas' {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property (this takes [color values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors) just like CSS properties do), then drawing a rectangle that covers the entire area of the canvas with the{{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} method (the first two parameters are the coordinates of the rectangle's top left-hand corner; the last two are the width and height you want the rectangle drawn at — we told you those `width` and `height` variables would be useful)!
+Here we are setting a fill color using the canvas' {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property (this takes [color values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors) just like CSS properties do), then drawing a rectangle that covers the entire area of the canvas with the {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} method (the first two parameters are the coordinates of the rectangle's top left-hand corner; the last two are the width and height you want the rectangle drawn at — we told you those `width` and `height` variables would be useful)!
 
 OK, our template is done and it's time to move on.
 
@@ -543,7 +543,7 @@ Now let's create our own simple animation — we'll get a character from a certa
     let posX = 0;
     ```
 
-    Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' [Create a sprite sheet walk cycle using CSS animation](https://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/ "Permanent Link to Create a sprite sheet walk cycle using CSS animation")). The image looks like this:
+    Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' [Walking cycle using CSS animation](https://codepen.io/mikethomas/pen/kQjKLW) CodePen). The image looks like this:
 
     ![](walk-right.png)
 
@@ -589,14 +589,14 @@ Now let's create our own simple animation — we'll get a character from a certa
       }
     ```
 
-    We are wrapping the whole block in `if (posX % 13 === 0) { ... }`. We use the modulo (`%`) operator (also known as the [remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)) to check whether the `posX` value can be exactly divided by 13 with no remainder. If so, we move on to the next sprite by incrementing `sprite` (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (`requestAnimationFrame()` calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!
+    We are wrapping the whole block in `if (posX % 13 === 0) { }`. We use the modulo (`%`) operator (also known as the [remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)) to check whether the `posX` value can be exactly divided by 13 with no remainder. If so, we move on to the next sprite by incrementing `sprite` (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (`requestAnimationFrame()` calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!
 
-    Inside the outer block we use an [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement to check whether the `sprite` value is at 5 (the last sprite, given that the sprite numbers run from 0 to 5). If we are showing the last sprite already, we reset `sprite` back to 0; if not we just increment it by 1.
+    Inside the outer block we use an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement to check whether the `sprite` value is at 5 (the last sprite, given that the sprite numbers run from 0 to 5). If we are showing the last sprite already, we reset `sprite` back to 0; if not we just increment it by 1.
 
 9. Next we need to work out how to change the `posX` value on each frame — add the following code block just below your last one.
 
     ```js
-      if(posX > width/2) {
+      if (posX > width/2) {
         let newStartPos = -((width/2) + 102);
         posX = Math.ceil(newStartPos);
         console.log(posX);
@@ -605,7 +605,7 @@ Now let's create our own simple animation — we'll get a character from a certa
       }
     ```
 
-    We are using another `if ... else` statement to see if the value of `posX` has become greater than `width/2`, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.
+    We are using another `if...else` statement to see if the value of `posX` has become greater than `width/2`, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.
 
     If our character hasn't yet walked off the edge of the screen, we increment `posX` by 2. This will make him move a little bit to the right the next time we draw him.
 
@@ -637,7 +637,7 @@ let curY;
 let pressed = false;
 
 // update mouse pointer coordinates
-document.addEventListener('mousemove', e => {
+document.addEventListener('mousemove', (e) => {
   curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
   curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
 });
@@ -660,7 +660,7 @@ The drawing loop is pretty simple this time around — if pressed is `true`, we 
 
 ```js
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
     ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
@@ -735,13 +735,13 @@ Let's look at a simple example of how to create something with a WebGL library. 
 
     const loader = new THREE.TextureLoader();
 
-    loader.load('metal003.png', texture => {
+    loader.load('metal003.png', (texture) => {
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.RepeatWrapping;
       texture.repeat.set(2, 2);
 
       const geometry = new THREE.BoxGeometry(2.4,2.4,2.4);
-      const material = new THREE.MeshLambertMaterial( { map: texture } );
+      const material = new THREE.MeshLambertMaterial({ map: texture });
       cube = new THREE.Mesh(geometry, material);
       scene.add(cube);
 
@@ -763,7 +763,7 @@ Let's look at a simple example of how to create something with a WebGL library. 
     scene.add(light);
 
     const spotLight = new THREE.SpotLight('rgb(255,255,255)');
-    spotLight.position.set( 100, 1000, 1000 );
+    spotLight.position.set(100, 1000, 1000);
     spotLight.castShadow = true;
     scene.add(spotLight);
     ```
@@ -807,7 +807,7 @@ Here we have covered only the real basics of canvas — there is so much more to
 
 ## Examples
 
-- [Violent theremin](https://github.com/mdn/webaudio-examples/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
+- [Violent theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
 - [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic) — Uses a canvas to visualize real-time audio data from the Web Audio API.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

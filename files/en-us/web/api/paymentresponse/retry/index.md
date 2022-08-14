@@ -60,7 +60,7 @@ concept, in outline form, is:
     (`new` {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
 2. Display the payment request ({{domxref("PaymentRequest.show()")}}
 3. If `show()` resolves, the returned {{domxref("PaymentResponse")}}
-    describes the requested payment and the options chosen by the user. Continue by...
+    describes the requested payment and the options chosen by the user. Continue with the following steps:
 
     1. Validate the returned response; if there are any fields whose values are not
         acceptable, call the response's {{domxref("PaymentResponse.complete",
@@ -81,13 +81,13 @@ async function handlePayment() {
   try {
     let payResponse = await payRequest.show();
 
-    while (payResponse has errors) {
+    while (validate(payResponse)) {
       /* let the user edit the payment information,
          wait until they submit */
       await response.retry();
     }
     await payResponse.complete("success");
-  } catch(err) {
+  } catch (err) {
     /* handle the exception */
   }
 }
@@ -125,7 +125,7 @@ async function recursiveValidate(request, response) {
 }
 
 function fixField(requestOrResponse, event, validator) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     // Browser keeps calling this until promise resolves.
     requestOrResponse.addEventListener(event, async function listener(ev) {
       const promiseToValidate = validator(requestOrResponse);

@@ -27,7 +27,7 @@ getPropertyType(tagName, property, elementNS)
   - : A string containing the name of an HTML tag.
 - `property`
   - : A string containing a property, for example `"innerHTML"`.
-- `elementNS`{{optional_inline}}
+- `elementNS` {{optional_inline}}
   - : A string containing a namespace, if empty defaults to the HTML namespace.
 
 ### Return value

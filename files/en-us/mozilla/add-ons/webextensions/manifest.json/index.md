@@ -129,7 +129,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 
   "default_locale": "en",
 
-  "description": "...",
+  "description": "…",
 
   "icons": {
     "48": "icon.png",
@@ -138,7 +138,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 
   "manifest_version": 2,
 
-  "name": "...",
+  "name": "…",
 
   "page_action": {
     "default_icon": {

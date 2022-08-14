@@ -10,7 +10,7 @@ tags:
   - Security
   - font
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.font-src
+browser-compat: http.headers.Content-Security-Policy.font-src
 ---
 {{HTTPSidebar}}
 

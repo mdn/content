@@ -104,7 +104,7 @@ if (rtcStats && rtcStats.type === "candidate-pair") {
   let elapsed = (rtcStats.lastRequestTimestamp - rtcStats.firstRequestTimestamp)
                   / rtcStats.requestsSent;
 
-  log("Average time between ICE connectivity checks: " + elapsed + " ms.");
+  log(`Average time between ICE connectivity checks: ${elapsed} ms.`);
 }
 ```
 

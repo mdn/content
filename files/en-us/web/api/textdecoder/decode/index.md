@@ -14,7 +14,7 @@ browser-compat: api.TextDecoder.decode
 
 The **`TextDecode.decode()`** method returns a
 string containing the text, given in parameters, decoded with the
-specific method for that {{domxref("TextDecoder")}}> object.
+specific method for that {{domxref("TextDecoder")}} object.
 
 ## Syntax
 

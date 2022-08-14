@@ -37,7 +37,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}
   - : Returns a {{domxref("TimeRanges")}} object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the `buffered` property is accessed.
 - {{domxref("HTMLMediaElement.controls")}}
-  - : A {{jsxref('Boolean')}} that reflects the {{htmlattrxref("controls", "video")}} HTML attribute, indicating whether user interface items for controlling the resource should be displayed.
+  - : A boolean that reflects the {{htmlattrxref("controls", "video")}} HTML attribute, indicating whether user interface items for controlling the resource should be displayed.
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
   - : Returns a {{domxref("DOMTokenList")}} that helps the user agent select what controls to show on the media element whenever the user agent shows its own set of controls. The `DOMTokenList` takes one or more of three possible values: `nodownload`, `nofullscreen`, and `noremoteplayback`.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
@@ -47,27 +47,27 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.currentTime")}}
   - : A double-precision floating-point value indicating the current playback time in seconds; if the media has not started to play and has not been seeked, this value is the media's initial playback time. Setting this value seeks the media to the new time. The time is specified relative to the media's timeline.
 - {{domxref("HTMLMediaElement.defaultMuted")}}
-  - : A {{jsxref('Boolean')}} that reflects the {{htmlattrxref("muted", "video")}} HTML attribute, which indicates whether the media element's audio output should be muted by default.
+  - : A boolean that reflects the {{htmlattrxref("muted", "video")}} HTML attribute, which indicates whether the media element's audio output should be muted by default.
 - {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
   - : A `double` indicating the default playback rate for the media.
 - {{domxref("HTMLMediaElement.disableRemotePlayback")}}
-  - : A {{jsxref('Boolean')}} that sets or returns the remote playback state, indicating whether the media element is allowed to have a remote playback UI.
+  - : A boolean that sets or returns the remote playback state, indicating whether the media element is allowed to have a remote playback UI.
 - {{domxref("HTMLMediaElement.duration")}} {{readonlyinline}}
   - : A read-only double-precision floating-point value indicating the total duration of the media in seconds. If no media data is available, the returned value is `NaN`. If the media is of indefinite length (such as streamed live media, a WebRTC call's media, or similar), the value is `+Infinity`.
 - {{domxref("HTMLMediaElement.ended")}} {{readonlyinline}}
-  - : Returns a {{jsxref('Boolean')}} that indicates whether the media element has finished playing.
+  - : Returns a boolean that indicates whether the media element has finished playing.
 - {{domxref("HTMLMediaElement.error")}} {{readonlyinline}}
   - : Returns a {{domxref("MediaError")}} object for the most recent error, or `null` if there has not been an error.
 - {{domxref("HTMLMediaElement.loop")}}
-  - : A {{jsxref('Boolean')}} that reflects the {{htmlattrxref("loop", "video")}} HTML attribute, which indicates whether the media element should start over when it reaches the end.
+  - : A boolean that reflects the {{htmlattrxref("loop", "video")}} HTML attribute, which indicates whether the media element should start over when it reaches the end.
 - {{domxref("HTMLMediaElement.mediaKeys")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref("MediaKeys")}} object or `null`. MediaKeys is a set of keys that an associated HTMLMediaElement can use for decryption of media data during playback.
 - {{domxref("HTMLMediaElement.muted")}}
-  - : A {{jsxref('Boolean')}} that determines whether audio is muted. `true` if the audio is muted and `false` otherwise.
+  - : A boolean that determines whether audio is muted. `true` if the audio is muted and `false` otherwise.
 - {{domxref("HTMLMediaElement.networkState")}} {{readonlyinline}}
   - : Returns a `unsigned short` (enumeration) indicating the current state of fetching the media over the network.
 - {{domxref("HTMLMediaElement.paused")}} {{readonlyinline}}
-  - : Returns a {{jsxref('Boolean')}} that indicates whether the media element is paused.
+  - : Returns a boolean that indicates whether the media element is paused.
 - {{domxref("HTMLMediaElement.playbackRate")}}
   - : A `double` that indicates the rate at which the media is being played back.
 - {{domxref("HTMLMediaElement.played")}} {{readonlyinline}}
@@ -81,7 +81,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.seekable")}} {{readonlyinline}}
   - : Returns a {{domxref('TimeRanges')}} object that contains the time ranges that the user is able to seek to, if any.
 - {{domxref("HTMLMediaElement.seeking")}} {{readonlyinline}}
-  - : Returns a {{jsxref('Boolean')}} that indicates whether the media is in the process of seeking to a new position.
+  - : Returns a boolean that indicates whether the media is in the process of seeking to a new position.
 - {{domxref("HTMLMediaElement.sinkId")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a string that is the unique ID of the audio device delivering output, or an empty string if it is using the user agent default. This ID should be one of the `MediaDeviceInfo.deviceid` values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
 - {{domxref("HTMLMediaElement.src")}}
@@ -111,7 +111,7 @@ These properties are obsolete and should not be used, even if a browser still su
 - {{domxref("HTMLMediaElement.mediaGroup")}} {{deprecated_inline}}
   - : A string that reflects the {{ htmlattrxref("mediagroup", "video")}} HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
 - {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns a {{jsxref('Boolean')}}. Related to audio stream capture.
+  - : Returns a boolean. Related to audio stream capture.
 - {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}} {{deprecated_inline}}
   - : A `double` that provides access to the fragment end time if the media element has a fragment URI for `currentSrc`, otherwise it is equal to the media duration.
 
@@ -153,7 +153,7 @@ _These methods are obsolete and should not be used, even if a browser still supp
 
 ## Events
 
-_Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the {{domxref('GlobalEventHandlers')}} mixin. Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+_Inherits methods from its parent, {{domxref("HTMLElement")}}_. Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref("HTMLMediaElement.abort_event", 'abort')}}
   - : Fired when the resource was not fully loaded, but not as the result of an error.
@@ -187,7 +187,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
   - : Fired when the playback rate has changed.
 - {{domxref("HTMLMediaElement.resize_event", 'resize ')}}
   - : Fired when one or both of the `videoWidth` and `videoHeight` properties have just been updated.
-- {{domxref("HTMLMediaElement.seeked_event", 'seeked ')}}
+- {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
   - : Fired when a seek operation completes.
 - {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
   - : Fired when a seek operation begins.

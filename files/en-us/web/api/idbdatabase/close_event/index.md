@@ -18,8 +18,8 @@ Note that it is not fired if the database connection is closed normally using [`
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('close', event => { });
-onclose = event => { };
+addEventListener('close', (event) => { });
+onclose = (event) => { };
 ```
 
 ## Event type
@@ -34,7 +34,7 @@ This example opens a database and listens for the `close` event:
 // Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-dBOpenRequest.onupgradeneeded = event => {
+dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   // Create an objectStore for this database
@@ -48,7 +48,7 @@ dBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-dBOpenRequest.onsuccess = event => {
+dBOpenRequest.onsuccess = (event) => {
 
   const db = dBOpenRequest.result;
   db.addEventListener('close', () => {
@@ -64,7 +64,7 @@ The same example, using the `onclose` property instead of `addEventListener()`:
 // Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-dBOpenRequest.onupgradeneeded = event => {
+dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   // Create an objectStore for this database
@@ -78,7 +78,7 @@ dBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-dBOpenRequest.onsuccess = event => {
+dBOpenRequest.onsuccess = (event) => {
 
   const db = dBOpenRequest.result;
   db.onclose = () => {

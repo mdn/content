@@ -53,7 +53,7 @@ const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoL
 // Get the to-do list object that has this title as it's title
 const objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = () => {
   // Grab the data object returned as the result
   const data = objectStoreTitleRequest.result;
 
@@ -65,11 +65,11 @@ objectStoreTitleRequest.onsuccess = function() {
   const updateTitleRequest = objectStore.put(data);
 
   // Log the source of this request
-  console.log("The readyState of this request is " + updateTitleRequest.readyState);
+  console.log(`The readyState of this request is ${updateTitleRequest.readyState}`);
 
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = () => {
     displayData();
   };
 };

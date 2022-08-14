@@ -61,7 +61,7 @@ function handleDataAvailable(event) {
     console.log(recordedChunks);
     download();
   } else {
-    // ...
+    // …
   }
 }
 function download() {
@@ -79,7 +79,7 @@ function download() {
 }
 
 // demo: to download after 9sec
-setTimeout(event => {
+setTimeout((event) => {
   console.log("stopping");
   mediaRecorder.stop();
 }, 9000);
@@ -99,12 +99,12 @@ In this code snippet, `enumerateDevices()` is used to examine the available inpu
 
 ```js
 navigator.mediaDevices.enumerateDevices()
-.then(function(devices) {
-  devices.forEach(function(device) {
+.then((devices) => {
+  devices.forEach((device) => {
     const menu = document.getElementById("inputdevices");
-    if (device.kind == "audioinput") {
+    if (device.kind === "audioinput") {
       const item = document.createElement("option");
-      item.innerText = device.label;
+      item.textContent = device.label;
       item.value = device.deviceId;
       menu.appendChild(item);
     }

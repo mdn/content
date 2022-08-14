@@ -9,4 +9,4 @@ tags:
 
 ## See also
 
-{{Interwiki("wikipedia", "ASCII")}} on Wikipedia
+[ASCII](https://en.wikipedia.org/wiki/ASCII) on Wikipedia

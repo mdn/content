@@ -30,7 +30,7 @@ let settingZoomSettings = browser.tabs.setZoomSettings(
 
 ### Parameters
 
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. The ID of the tab to change the zoom settings for. Defaults to the active tab of the current window.
 - `zoomSettings`
   - : {{WebExtAPIRef('tabs.ZoomSettings')}}. Defines how zoom changes are handled and at what scope.

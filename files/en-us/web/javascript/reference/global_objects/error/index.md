@@ -17,6 +17,8 @@ browser-compat: javascript.builtins.Error
 
 Runtime errors result in new `Error` objects being created and thrown.
 
+`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+
 ### Error types
 
 Besides the generic `Error` constructor, there are other core error constructors in JavaScript. For client-side exceptions, see [Exception handling statements](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements).
@@ -40,23 +42,28 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ## Constructor
 
-- [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)
+- {{jsxref("Error/Error", "Error()")}}
   - : Creates a new `Error` object.
 
 ## Static methods
 
-- {{JSxRef("Error.captureStackTrace()")}}
-  - : A non-standard **V8** function that creates the {{JSxRef("Error.prototype.stack", "stack")}} property on an Error instance.
+- `Error.captureStackTrace()` {{non-standard_inline}}
+  - : A non-standard V8 function that creates the {{JSxRef("Error.prototype.stack", "stack")}} property on an Error instance.
+
+- `Error.stackTraceLimit` {{non-standard_inline}}
+  - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
+
+- `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
+  - : A non-standard V8 function that, if provided by usercode, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.
 
 ## Instance properties
 
 - {{jsxref("Error.prototype.message")}}
-  - : Error message.
+  - : Error message. For user-created `Error` objects, this is the string provided as the constructor's first argument.
 - {{jsxref("Error.prototype.name")}}
-  - : Error name.
+  - : Error name. This is determined by the constructor function.
 - {{jsxref("Error.prototype.cause")}}
-  - : Error cause.
-     If an error is caught and re-thrown, this property should contain the original error.
+  - : Error cause indicating the reason why the current error is thrown — usually another caught error. For user-created `Error` objects, this is the value provided as the `cause` property of the constructor's second argument.
 - {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the path to the file that raised this error.
 - {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
@@ -64,7 +71,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the column number in the line that raised this error.
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-  - : A non-standard Mozilla property for a stack trace.
+  - : A non-standard property for a stack trace.
 
 ## Instance methods
 
@@ -80,9 +87,9 @@ You can handle the error using the {{JSxRef("Statements/try...catch", "try...cat
 
 ```js
 try {
-  throw new Error('Whoops!')
+  throw new Error('Whoops!');
 } catch (e) {
-  console.error(e.name + ': ' + e.message)
+  console.error(`${e.name}: ${e.message}`);
 }
 ```
 
@@ -92,14 +99,14 @@ You can choose to handle only specific error types by testing the error type wit
 
 ```js
 try {
-  foo.bar()
+  foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(`${e.name}: ${e.message}`);
   } else if (e instanceof RangeError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(`${e.name}: ${e.message}`);
   }
-  // ... etc
+  // etc.
 
   else {
     // If none of our cases matched leave the Error unhandled
@@ -145,7 +152,7 @@ try {
 }
 ```
 
-> **Note:** If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
+> **Note:** If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
 
 [Custom error types](#custom_error_types) can also use the [`cause`](#error.prototype.cause) property, provided the subclasses' constructor passes the `options` parameter when calling `super()`:
 
@@ -190,7 +197,7 @@ class CustomError extends Error {
 
 try {
   throw new CustomError('baz', 'bazMessage');
-} catch(e) {
+} catch (e) {
   console.error(e.name);    // CustomError
   console.error(e.foo);     // baz
   console.error(e.message); // bazMessage
@@ -204,7 +211,7 @@ try {
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
-  let instance = new Error(message, fileName, lineNumber);
+  var instance = new Error(message, fileName, lineNumber);
   instance.foo = foo;
   Object.setPrototypeOf(instance, CustomError.prototype);
   if (Error.captureStackTrace) {
@@ -221,7 +228,7 @@ CustomError.prototype.name = 'CustomError';
 
 try {
   throw new CustomError('baz', 'bazMessage');
-} catch(e) {
+} catch (e) {
   console.error(e.name); // CustomError
   console.error(e.foo); // baz
   console.error(e.message); // bazMessage
@@ -241,3 +248,4 @@ try {
 - [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}
+- The [V8 documentation](https://v8.dev/docs/stack-trace-api) for `Error.captureStackTrace()`, `Error.stackTraceLimit`, and `Error.prepareStackTrace()`.

@@ -60,7 +60,7 @@ let db;
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
@@ -78,11 +78,11 @@ function addData() {
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
-  transaction.oncomplete = event => {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
-  transaction.onerror = event => {
+  transaction.onerror = (event) => {
     note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
@@ -92,7 +92,7 @@ function addData() {
   // add our newItem object to the object store
   const objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = event => {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
     note.innerHTML += '<li>Request successful.</li>';

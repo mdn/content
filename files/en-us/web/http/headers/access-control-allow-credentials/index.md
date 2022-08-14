@@ -74,7 +74,7 @@ Access-Control-Allow-Credentials: true
 Using [XHR](/en-US/docs/Web/API/XMLHttpRequest) with credentials:
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/', true);
 xhr.withCredentials = true;
 xhr.send(null);

@@ -11,7 +11,7 @@ tags:
   - Plugin
   - Plugins
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.plugin-types
+browser-compat: http.headers.Content-Security-Policy.plugin-types
 ---
 {{HTTPSidebar}}{{deprecated_header}}
 

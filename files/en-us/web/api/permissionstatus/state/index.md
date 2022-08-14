@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
-  - Experimental
   - PermissionStatus
   - Permissions
   - Permissions API
@@ -14,7 +13,7 @@ tags:
   - status
 browser-compat: api.PermissionStatus.state
 ---
-{{APIRef("Permissions API")}}{{SeeCompatTable}}
+{{APIRef("Permissions API")}}
 
 The **`state`** read-only property of the
 {{domxref("PermissionStatus")}} interface returns the state of a requested permission.
@@ -32,10 +31,10 @@ One of the followings:
 ## Examples
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
-  console.log('geolocation permission state is ', permissionStatus.state);
-  permissionStatus.onchange = function() {
-    console.log('geolocation permission status has changed to ', this.state);
+navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus) => {
+  console.log(`geolocation permission state is ${permissionStatus.state}`);
+  permissionStatus.onchange = () => {
+    console.log(`geolocation permission status has changed to ${permissionStatus.state}`);
   };
 });
 ```

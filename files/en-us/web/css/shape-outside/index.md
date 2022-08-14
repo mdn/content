@@ -77,7 +77,7 @@ The `shape-outside` property is specified using the values from the list below, 
 - {{cssxref("&lt;image&gt;")}}
   - : The float area is extracted and computed based on the alpha channel of the specified {{cssxref("&lt;image&gt;")}} as defined by {{cssxref("shape-image-threshold")}}.
 
-> **Note:** {{glossary("User agent", "User agents")}} must use the potentially CORS-enabled fetch method defined by the HTML5 specification for all URLs in a `shape-outside` value. When fetching, user agents must use "Anonymous" mode, set the referrer source to the stylesheet's URL, and set the origin to the URL of the containing document. If this results in network errors such that there is no valid fallback image, the effect is as if the value **`none`** had been specified.
+> **Note:** {{glossary("User agent", "User agents")}} must use the potentially CORS-enabled fetch method defined by the HTML specification for all URLs in a `shape-outside` value. When fetching, user agents must use "Anonymous" mode, set the referrer source to the stylesheet's URL, and set the origin to the URL of the containing document. If this results in network errors such that there is no valid fallback image, the effect is as if the value **`none`** had been specified.
 
 ## Interpolation
 

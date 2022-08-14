@@ -71,10 +71,10 @@ object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch)
 call, and it will pass the response into the function when it fulfills.
 
 ```js
-var importObject = { imports: { imported_func: arg => console.log(arg) } };
+const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+  .then((obj) => obj.instance.exports.exported_func());
 ```
 
 The `ResultObject`'s instance member is then accessed, and the contained

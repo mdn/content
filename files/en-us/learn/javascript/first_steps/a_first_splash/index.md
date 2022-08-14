@@ -148,7 +148,8 @@ In our example:
 - The next two constants store references to the form text input and submit button and are used to control submitting the guess later on.
 
   ```html
-  <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+  <label for="guessField">Enter a guess: </label>
+  <input type="text" id="guessField" class="guessField">
   <input type="submit" value="Submit guess" class="guessSubmit">
   ```
 
@@ -290,7 +291,7 @@ function checkGuess() {
   if (guessCount === 1) {
     guesses.textContent = 'Previous guesses: ';
   }
-  guesses.textContent += userGuess + ' ';
+  guesses.textContent += `${userGuess} `;
 
   if (userGuess === randomNumber) {
     lastResult.textContent = 'Congratulations! You got it right!';
@@ -304,9 +305,9 @@ function checkGuess() {
   } else {
     lastResult.textContent = 'Wrong!';
     lastResult.style.backgroundColor = 'red';
-    if(userGuess < randomNumber) {
+    if (userGuess < randomNumber) {
       lowOrHi.textContent = 'Last guess was too low!';
-    } else if(userGuess > randomNumber) {
+    } else if (userGuess > randomNumber) {
       lowOrHi.textContent = 'Last guess was too high!';
     }
   }
@@ -331,8 +332,8 @@ This is a lot of code — phew! Let's go through each section and explain what i
 - Line 6 appends the current `userGuess` value onto the end of the `guesses` paragraph, plus a blank space so there will be a space between each guess shown.
 - The next block does a few checks:
 
-  - The first `if(){ }` checks whether the user's guess is equal to the `randomNumber` set at the top of our JavaScript. If it is, the player has guessed correctly and the game is won, so we show the player a congratulations message with a nice green color, clear the contents of the Low/High guess information box, and run a function called `setGameOver()`, which we'll discuss later.
-  - Now we've chained another test onto the end of the last one using an `else if(){ }` structure. This one checks whether this turn is the user's last turn. If it is, the program does the same thing as in the previous block, except with a game over message instead of a congratulations message.
+  - The first `if (){ }` checks whether the user's guess is equal to the `randomNumber` set at the top of our JavaScript. If it is, the player has guessed correctly and the game is won, so we show the player a congratulations message with a nice green color, clear the contents of the Low/High guess information box, and run a function called `setGameOver()`, which we'll discuss later.
+  - Now we've chained another test onto the end of the last one using an `else if (){ }` structure. This one checks whether this turn is the user's last turn. If it is, the program does the same thing as in the previous block, except with a game over message instead of a congratulations message.
   - The final block chained onto the end of this code (the `else { }`) contains code that is only run if neither of the other two tests returns true (i.e. the player didn't guess right, but they have more guesses left). In this case we tell them they are wrong, then we perform another conditional test to check whether the guess was higher or lower than the answer, displaying a further message as appropriate to tell them higher or lower.
 
 - The last three lines in the function (lines 26–28 above) get us ready for the next guess to be submitted. We add 1 to the `guessCount` variable so the player uses up their turn (`++` is an incrementation operation — increment by 1), and empty the value out of the form text field and focus it again, ready for the next guess to be entered.
@@ -514,7 +515,7 @@ Let's play with some browser objects a bit.
 
     Every element on a page has a `style` property, which itself contains an object whose properties contain all the inline CSS styles applied to that element. This allows us to dynamically set new CSS styles on elements using JavaScript.
 
-## Finished for now...
+## Finished for now…
 
 So that's it for building the example. You got to the end — well done! Try your final code out, or [play with our finished version here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). If you can't get the example to work, check it against the [source code](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 

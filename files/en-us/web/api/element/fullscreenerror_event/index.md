@@ -26,9 +26,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('fullscreenchange', event => { });
+addEventListener('fullscreenchange', (event) => { });
 
-onfullscreenchange = event => { };
+onfullscreenchange = (event) => { };
 ```
 
 ## Event type

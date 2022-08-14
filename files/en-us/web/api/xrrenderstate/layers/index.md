@@ -31,7 +31,7 @@ Layers can be set using the {{domxref("XRSession.updateRenderState()")}} method.
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
   optionalFeatures: ["layers"]
-}
+});
 
 function onXRSessionStarted(xrSession) {
   const glCanvas = document.createElement("canvas");

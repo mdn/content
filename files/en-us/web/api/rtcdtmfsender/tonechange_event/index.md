@@ -26,9 +26,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('tonechange', event => { });
+addEventListener('tonechange', (event) => { });
 
-ontonechange = event => { };
+ontonechange = (event) => { };
 ```
 
 ## Event type
@@ -51,7 +51,7 @@ This example establishes a handler for the [`tonechange`](/en-US/docs/Web/API/RT
 This can be done using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-dtmfSender.addEventListener("tonechange", ev => {
+dtmfSender.addEventListener("tonechange", (ev) => {
   let tone = ev.tone;
   if (tone === "") {
     tone = "&lt;none&gt;";
@@ -64,7 +64,7 @@ dtmfSender.addEventListener("tonechange", ev => {
 You can also just set the `ontonechange` event handler property directly:
 
 ```js
-dtmfSender.ontonechange = function( ev ) {
+dtmfSender.ontonechange = (ev) => {
   let tone = ev.tone;
   if (tone === "") {
     tone = "&lt;none&gt;"

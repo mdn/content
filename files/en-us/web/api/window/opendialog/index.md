@@ -36,7 +36,7 @@ to interact with the opener window until they close the modal dialog.
 openDialog(url)
 openDialog(url, name)
 openDialog(url, name, features)
-openDialog(url, name, features, arg0, arg1, /* ... ,*/ argN)
+openDialog(url, name, features, arg0, arg1, /* … ,*/ argN)
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ openDialog(url, name, features, arg0, arg1, /* ... ,*/ argN)
   - : The window name. See {{domxref("window.open()")}} description for detailed information.
 - `features` {{optional_inline}}
   - : See {{domxref("window.open()")}} for details.
-- `arg1`, `arg2`, ...
+- `arg1`, `arg2`, …
   - : The arguments to be passed to the new window (optional).
 
 ### Return value
@@ -57,7 +57,7 @@ The opened window.
 ## Examples
 
 ```js
-var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+const win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
 ```
 
 ## Notes
@@ -100,8 +100,8 @@ window.
 To access these extra parameters from within dialog code, use the following scheme:
 
 ```js
-var food  = window.arguments[0];
-var price = window.arguments[1];
+const food  = window.arguments[0];
+const price = window.arguments[1];
 ```
 
 Note that you can access this property from within anywhere in the dialog code.
@@ -120,7 +120,7 @@ properties on it, containing the values you want to return or preserve past the
 `window.close()` operation.
 
 ```js
-var retVals = { address: null, delivery: null };
+const retVals = { address: null, delivery: null };
 openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98,
     retVals);
 ```
@@ -132,7 +132,7 @@ described below, you can now access them via the `retVals` array after the
 Inside the dialog code, you can set the properties as follows:
 
 ```js
-var retVals = window.arguments[2];
+const retVals = window.arguments[2];
 retVals.address  = enteredAddress;
 retVals.delivery = "immediate";
 ```

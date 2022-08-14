@@ -46,33 +46,11 @@ A boolean value.
 ```js
 const keyRangeValue = IDBKeyRange.bound('A', 'K', false, false);
 
-const myResult = keyRangeValue.includes('F');
+keyRangeValue.includes('F');
 // Returns true
 
-const myResult = keyRangeValue.includes('W');
+keyRangeValue.includes('W');
 // Returns false
-```
-
-## Polyfill
-
-The `includes()` method was added in the second edition of the Indexed DB
-specification. For browsers that do not support it, the following polyfill can be used.
-
-```js
-IDBKeyRange.prototype.includes = IDBKeyRange.prototype.includes || function(key) {
-  var r = this, c;
-  if (r.lower !== undefined) {
-    c = indexedDB.cmp(key, r.lower);
-    if (r.lowerOpen && c <= 0) return false;
-    if (!r.lowerOpen && c < 0) return false;
-  }
-  if (r.upper !== undefined) {
-    c = indexedDB.cmp(key, r.upper);
-    if (r.upperOpen && c >= 0) return false;
-    if (!r.upperOpen && c > 0) return false;
-  }
-  return true;
-};
 ```
 
 ## Specifications

@@ -34,21 +34,10 @@ A boolean.
 ## Examples
 
 ```js
-var foo = document.getElementById("foo");
+const foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
     // do something
 }
-```
-
-## Polyfill
-
-```js
-;(function(prototype) {
-    prototype.hasAttribute = prototype.hasAttribute || function(name) {
-        return !!(this.attributes[name] &&
-                  this.attributes[name].specified);
-    }
-})(Element.prototype);
 ```
 
 ## Notes

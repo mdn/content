@@ -37,8 +37,8 @@ This one-line example obtains the current candidate pair and then from that gets
 remote candidate.
 
 ```js
-var candidatePair = pc.getSenders()[0].transport.transport.getSelectedCandidatePair();
-var remoteCandidate = candidatePair.remote;
+const candidatePair = pc.getSenders()[0].transport.transport.getSelectedCandidatePair();
+const remoteCandidate = candidatePair.remote;
 ```
 
 The {{domxref("RTCIceTransport")}} is found by getting the list of

@@ -52,7 +52,7 @@ Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as
 ```js
 for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
   const file = fileList[i];
-  // ...
+  // …
 }
 ```
 
@@ -73,7 +73,7 @@ The following example shows a possible use of the `size` property:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <title>File(s) size</title>
@@ -100,7 +100,7 @@ The following example shows a possible use of the `size` property:
     let sOutput = nBytes + " bytes";
     // optional code for multiples approximation
     const aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
-    for (nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
+    for (let nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
       sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
     }
     // end of optional code
@@ -128,10 +128,10 @@ Consider this HTML:
 The code that handles the `click` event can look like this:
 
 ```js
-const fileSelect = document.getElementById("fileSelect"),
-  fileElem = document.getElementById("fileElem");
+const fileSelect = document.getElementById("fileSelect");
+const fileElem = document.getElementById("fileElem");
 
-fileSelect.addEventListener("click", function (e) {
+fileSelect.addEventListener("click", (e) => {
   if (fileElem) {
     fileElem.click();
   }
@@ -237,7 +237,7 @@ function handleFiles(files) {
     preview.appendChild(img); // Assuming that "preview" is the div output where the content will be displayed.
 
     const reader = new FileReader();
-    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+    reader.onload = (e) => { aImg.src = e.target.result; };
     reader.readAsDataURL(file);
   }
 }
@@ -288,7 +288,7 @@ const fileSelect = document.getElementById("fileSelect"),
     fileElem = document.getElementById("fileElem"),
     fileList = document.getElementById("fileList");
 
-fileSelect.addEventListener("click", function (e) {
+fileSelect.addEventListener("click", (e) => {
   if (fileElem) {
     fileElem.click();
   }
@@ -311,12 +311,12 @@ function handleFiles() {
       const img = document.createElement("img");
       img.src = URL.createObjectURL(this.files[i]);
       img.height = 60;
-      img.onload = function() {
+      img.onload = () => {
         URL.revokeObjectURL(this.src);
       }
       li.appendChild(img);
       const info = document.createElement("span");
-      info.innerHTML = this.files[i].name + ": " + this.files[i].size + " bytes";
+      info.innerHTML = `${this.files[i].name}: ${this.files[i].size} bytes`;
       li.appendChild(info);
     }
   }
@@ -374,21 +374,21 @@ function FileUpload(img, file) {
   this.xhr = xhr;
 
   const self = this;
-  this.xhr.upload.addEventListener("progress", function(e) {
+  this.xhr.upload.addEventListener("progress", (e) => {
         if (e.lengthComputable) {
           const percentage = Math.round((e.loaded * 100) / e.total);
           self.ctrl.update(percentage);
         }
       }, false);
 
-  xhr.upload.addEventListener("load", function(e){
+  xhr.upload.addEventListener("load", (e) => {
           self.ctrl.update(100);
           const canvas = self.ctrl.ctx.canvas;
           canvas.parentNode.removeChild(canvas);
       }, false);
   xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
   xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
-  reader.onload = function(evt) {
+  reader.onload = (evt) => {
     xhr.send(evt.target.result);
   };
   reader.readAsBinaryString(file);
@@ -404,7 +404,7 @@ function createThrobber(img) {
   img.parentNode.appendChild(throbber);
   throbber.ctx = throbber.getContext('2d');
   throbber.ctx.fillStyle = 'orange';
-  throbber.update = function(percent) {
+  throbber.update = (percent) => {
     throbber.ctx.fillRect(0, 0, throbberWidth * percent / 100, throbberHeight);
     if (percent === 100) {
       throbber.ctx.fillStyle = 'green';
@@ -430,7 +430,7 @@ Before actually transferring the data, several preparatory steps are taken:
 
 This example, which uses PHP on the server side and JavaScript on the client side, demonstrates asynchronous uploading of a file.
 
-```js
+```php
 <?php
 if (isset($_FILES['myFile'])) {
     // Example:
@@ -438,10 +438,10 @@ if (isset($_FILES['myFile'])) {
     exit;
 }
 ?><!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-    <title>dnd binary upload</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>dnd binary upload</title>
     <script type="application/javascript">
         function sendFile(file) {
             const uri = "/index.php";
@@ -449,8 +449,8 @@ if (isset($_FILES['myFile'])) {
             const fd = new FormData();
 
             xhr.open("POST", uri, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
                     alert(xhr.responseText); // handle response.
                 }
             };
@@ -459,14 +459,14 @@ if (isset($_FILES['myFile'])) {
             xhr.send(fd);
         }
 
-        window.onload = function() {
+        window.onload = () => {
             const dropzone = document.getElementById("dropzone");
-            dropzone.ondragover = dropzone.ondragenter = function(event) {
+            dropzone.ondragover = dropzone.ondragenter = (event) => {
                 event.stopPropagation();
                 event.preventDefault();
             }
 
-            dropzone.ondrop = function(event) {
+            dropzone.ondrop = (event) => {
                 event.stopPropagation();
                 event.preventDefault();
 
@@ -480,7 +480,7 @@ if (isset($_FILES['myFile'])) {
 </head>
 <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here...</div>
+        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here</div>
     </div>
 </body>
 </html>

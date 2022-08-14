@@ -22,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connect', event => { });
+addEventListener('connect', (event) => { });
 
-onconnect = event => { };
+onconnect = (event) => { };
 ```
 
 ## Event type
@@ -55,11 +55,11 @@ This example shows a shared worker file — when a connection to the worker occu
 The connecting port can be referenced through the event object's `ports` parameter; this reference can have an `onmessage` handler attached to it to handle messages coming in through the port, and its `postMessage()` method can be used to send messages back to the main thread using the worker.
 
 ```js
-self.onconnect = function(e) {
-    var port = e.ports[0];
+self.onconnect = (e) => {
+    const port = e.ports[0];
 
-    port.onmessage = function(e) {
-      var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    port.onmessage = (e) => {
+      const workerResult = `Result: ${e.data[0] * e.data[1]}`;
       port.postMessage(workerResult);
     }
 
@@ -74,11 +74,11 @@ For a complete running example, see our [Basic shared worker example](https://gi
 You could also set up an event handler using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:
 
 ```js
-self.addEventListener('connect', function(e) {
-  var port = e.ports[0];
+self.addEventListener('connect', (e) => {
+  const port = e.ports[0];
 
-  port.onmessage = function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  port.onmessage = (e) => {
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   }
 

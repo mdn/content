@@ -58,8 +58,8 @@ sensor.addEventListener('reading', () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener('error', error => {
-  if (event.error.name == 'NotReadableError') {
+sensor.addEventListener('error', (error) => {
+  if (event.error.name === 'NotReadableError') {
     console.log("Sensor is not available.");
   }
 });
@@ -74,10 +74,10 @@ Using orientation sensors requires requesting permissions for multiple device se
 const sensor = new RelativeOrientationSensor();
 Promise.all([navigator.permissions.query({ name: "accelerometer" }),
              navigator.permissions.query({ name: "gyroscope" })])
-       .then(results => {
-         if (results.every(result => result.state === "granted")) {
+       .then((results) => {
+         if (results.every((result) => result.state === "granted")) {
            sensor.start();
-           ...
+           // ...
          } else {
            console.log("No permissions to use RelativeOrientationSensor.");
          }

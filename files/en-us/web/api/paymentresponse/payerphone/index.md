@@ -4,7 +4,6 @@ slug: Web/API/PaymentResponse/payerPhone
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentResponse
@@ -12,6 +11,8 @@ tags:
   - Reference
   - Secure context
   - payerPhone
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentResponse.payerPhone
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}

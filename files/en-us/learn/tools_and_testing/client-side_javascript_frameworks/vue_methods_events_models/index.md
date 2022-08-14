@@ -96,7 +96,7 @@ We now have an app that displays a list of to-do items. However, we can't update
     import ToDoForm from './components/ToDoForm';
     ```
 
-5. You also need to register the new component in your App component — update the `components` property of the component object so that it looks like this:
+5. You also need to register the new component in your `App` component — update the `components` property of the component object so that it looks like this:
 
     ```js
     components: {
@@ -105,7 +105,7 @@ We now have an app that displays a list of to-do items. However, we can't update
     }
     ```
 
-6. Finally for this section, render your `ToDoForm` component inside your App by adding the `<to-do-form />` element inside your `App`'s `<template>`, like so:
+6. Finally for this section, render your `ToDoForm` component inside your app by adding the `<to-do-form />` element inside your `App`'s `<template>`, like so:
 
     ```html
     <template>
@@ -170,7 +170,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
 
     In this case, we need to use the `.prevent` handler to stop the browser's default submit action. Add `.prevent` to the `@submit` handler in your template like so:
 
-    ```js
+    ```html
     <form @submit.prevent="onSubmit">
     ```
 
@@ -205,7 +205,7 @@ The first thing we need is a `data` property in our form to track the value of t
 
     So in our case, we would add it to our `new-todo-input` field as seen below. Do this now:
 
-    ```js
+    ```html
     <input
       type="text"
       id="new-todo-input"
@@ -234,7 +234,7 @@ The first thing we need is a `data` property in our form to track the value of t
     Label value: My value
     ```
 
-## Changing `v-model` behavior with modifiers
+## Changing v-model behavior with modifiers
 
 In a similar fashion to event modifiers, we can also add modifiers to change the behavior of `v-model`. In our case, there are two worth considering. The first, `.trim`, will remove whitespace from before or after the input. We can add the modifier to our `v-model` statement like so: `v-model.trim="label"`.
 
@@ -334,7 +334,7 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
 
     ```js
     onSubmit() {
-      if(this.label === "") {
+      if (this.label === "") {
         return;
       }
       this.$emit('todo-added', this.label);
@@ -345,7 +345,7 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
 
 ![Our todo list app rendered with a text input to enter new todos](rendered-form-with-new-items.png)
 
-## Using `v-model` to update an input value
+## Using v-model to update an input value
 
 There's one more thing to fix in our `ToDoForm` component — after submitting, the `<input>` still contains the old value. But this is easy to fix — because we're using `v-model` to bind the data to the `<input>` in `ToDoForm`, if we set the name parameter to equal an empty string, the input will update as well.
 
@@ -353,7 +353,7 @@ Update your `ToDoForm` component's `onSubmit()` method to this:
 
 ```js
 onSubmit() {
-  if(this.label === "") {
+  if (this.label === "") {
     return;
   }
   this.$emit('todo-added', this.label);

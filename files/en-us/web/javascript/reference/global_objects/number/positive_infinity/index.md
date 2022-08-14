@@ -44,7 +44,7 @@ In the following example, the variable `bigNumber` is assigned a value that is l
 ```js
 let bigNumber = Number.MAX_VALUE * 2;
 
-if (bigNumber == Number.POSITIVE_INFINITY) {
+if (bigNumber === Number.POSITIVE_INFINITY) {
   bigNumber = returnFinite();
 }
 ```

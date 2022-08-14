@@ -72,17 +72,6 @@ Because `tanh()` is a static method of `Math`, you always use it
 as `Math.tanh()`, rather than as a method of a `Math` object you
 created (`Math` is not a constructor).
 
-## Polyfill
-
-This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
-
-```js
-Math.tanh = Math.tanh || function(x){
-    var a = Math.exp(+x), b = Math.exp(-x);
-    return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
-}
-```
-
 ## Examples
 
 ### Using Math.tanh()

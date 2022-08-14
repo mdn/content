@@ -12,7 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.CanvasRenderingContext2D.drawWindow
 ---
-{{APIRef}} {{deprecated_header}}
+{{APIRef}} {{deprecated_header}}{{Non-standard_header}}
 
 The deprecated, non-standard and internal only
 **`CanvasRenderingContext2D.drawWindow()`**
@@ -90,7 +90,7 @@ canvas. For example,
 ctx.drawWindow(window, 0, 0, 100, 200, 'rgb(255,255,255)');
 ```
 
-... would draw the contents of the current window, in the rectangle (0,0,100,200) in
+… would draw the contents of the current window, in the rectangle (0,0,100,200) in
 pixels relative to the top-left of the viewport, on a white background, into the canvas.
 By specifying "`rgba(255,255,255,0)`" as the color, the contents would be
 drawn with a transparent background (which would be slower).

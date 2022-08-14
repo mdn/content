@@ -45,7 +45,7 @@ In CSS when using a selector list, if any of the selectors are invalid then the 
 
 ```css
 :where(:valid, :unsupported) {
-  ...
+  /* … */
 }
 ```
 
@@ -53,7 +53,7 @@ Will still parse correctly and match `:valid` even in browsers which don't suppo
 
 ```css
 :valid, :unsupported {
-  ...
+  /* … */
 }
 ```
 

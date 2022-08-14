@@ -32,7 +32,7 @@ getComputedStyle(element, pseudoElt)
 
 - `element`
   - : The {{DOMxRef("Element")}} for which to get the computed style.
-- `pseudoElt`{{Optional_Inline}}
+- `pseudoElt` {{optional_inline}}
   - : A string specifying the pseudo-element to match. Omitted (or `null`) for
     real elements.
 
@@ -83,13 +83,10 @@ p {
 ### JavaScript
 
 ```js
-let para = document.querySelector('p');
-let compStyles = window.getComputedStyle(para);
-para.textContent = 'My computed font-size is ' +
-    compStyles.getPropertyValue('font-size') +
-    ',\nand my computed line-height is ' +
-    compStyles.getPropertyValue('line-height') +
-    '.';
+const para = document.querySelector('p');
+const compStyles = window.getComputedStyle(para);
+para.textContent = `My computed font-size is ${compStyles.getPropertyValue('font-size')},\n` +
+  `and my computed line-height is ${compStyles.getPropertyValue('line-height')}.`;
 ```
 
 ### Result
@@ -109,7 +106,7 @@ the two objects have different purposes:
   **set** styles on that element, or inspect styles directly added to it
   from JavaScript manipulation or the global `style` attribute.
 
-The first argument must be an {{domxref("Element")}}. non-elements, like a
+The first argument must be an {{domxref("Element")}}. Non-elements, like a
 {{DOMxRef("Text")}} node, will throw an error.
 
 ## defaultView
@@ -137,8 +134,8 @@ Java.
 <h3>Generated content</h3>
 
 <script>
-  var h3 = document.querySelector('h3');
-  var result = getComputedStyle(h3, ':after').content;
+  const h3 = document.querySelector('h3');
+  const result = getComputedStyle(h3, ':after').content;
 
   console.log('the generated content is: ', result); // returns ' rocks!'
 </script>

@@ -37,7 +37,7 @@ None.
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array([/* bytes sent from the server */]),
   rpId: "example.com", /* will only work if the current domain
                          is something like foo.example.com */
@@ -63,10 +63,10 @@ var options = {
 };
 
 navigator.credentials.get({ "publicKey": options })
-    .then(function (credentialInfoAssertion) {
+    .then((credentialInfoAssertion) => {
     // send assertion response back to the server
     // to proceed with the control of the credential
-}).catch(function (err) {
+}).catch((err) => {
      console.error(err);
 });
 ```

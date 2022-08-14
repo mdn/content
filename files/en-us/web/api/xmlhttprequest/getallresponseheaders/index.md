@@ -74,27 +74,27 @@ This example examines the headers in the request's {{domxref("XMLHttpRequest/rea
 the raw header string, as well as how to convert it into an array of individual headers
 and then how to take that array and create a mapping of header names to their values.
 
-```html
-var request = new XMLHttpRequest();
+```js
+const request = new XMLHttpRequest();
 request.open("GET", "foo.txt", true);
 request.send();
 
-request.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
+request.onreadystatechange = () => {
+  if (request.readyState === this.HEADERS_RECEIVED) {
 
     // Get the raw header string
-    var headers = request.getAllResponseHeaders();
+    const headers = request.getAllResponseHeaders();
 
     // Convert the header string into an array
     // of individual headers
-    var arr = headers.trim().split(/[\r\n]+/);
+    const arr = headers.trim().split(/[\r\n]+/);
 
     // Create a map of header names to values
-    var headerMap = {};
-    arr.forEach(function (line) {
-      var parts = line.split(': ');
-      var header = parts.shift();
-      var value = parts.join(': ');
+    const headerMap = {};
+    arr.forEach((line) => {
+      const parts = line.split(': ');
+      const header = parts.shift();
+      const value = parts.join(': ');
       headerMap[header] = value;
     });
   }
@@ -104,7 +104,7 @@ request.onreadystatechange = function() {
 Once this is done, you can, for example:
 
 ```js
-var contentType = headerMap["content-type"];
+const contentType = headerMap["content-type"];
 ```
 
 This obtains the value of the {{httpheader("Content-Type")}} header into the variable

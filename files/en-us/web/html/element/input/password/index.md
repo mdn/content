@@ -224,7 +224,7 @@ As with other textual entry controls, you can use the {{domxref("HTMLInputElemen
 #### JavaScript
 
 ```js
-document.getElementById("selectAll").onclick = function() {
+document.getElementById("selectAll").onclick = () => {
   document.getElementById("userPassword").select();
 }
 ```
@@ -277,10 +277,10 @@ The {{htmlattrxref("inputmode", "input")}} is set to `numeric` to encourage devi
 This is just some simple code to display the entered SSN onscreen so you can see it. Obviously this defeats the purpose of a password field, but it's helpful for experimenting with the `pattern`.
 
 ```js
-var ssn = document.getElementById("ssn");
-var current = document.getElementById("current");
+const ssn = document.getElementById("ssn");
+const current = document.getElementById("current");
 
-ssn.oninput = function(event) {
+ssn.oninput = (event) => {
   current.textContent = ssn.value;
 }
 ```

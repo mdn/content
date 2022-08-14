@@ -44,8 +44,8 @@ dropped. If that exceeds 10% (0.1), a function called
 indicator to show an increase in frame loss.
 
 ```js
-var videoElem = document.getElementById("my_vid");
-var quality = videoElem.getVideoPlaybackQuality();
+const videoElem = document.getElementById("my_vid");
+const quality = videoElem.getVideoPlaybackQuality();
 
 if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames > 0.1) {
   lostFramesThresholdExceeded();

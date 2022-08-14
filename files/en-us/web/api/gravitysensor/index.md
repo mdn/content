@@ -47,7 +47,7 @@ Gravity is typically read in the {{domxref('Sensor.reading_event', 'reading')}} 
 ```js
 let gravitySensor = new GravitySensor({frequency: 60});
 
-gravitySensor.addEventListener("reading", e => {
+gravitySensor.addEventListener("reading", (e) => {
   console.log(`Gravity along the X-axis ${gravitySensor.x}`);
   console.log(`Gravity along the Y-axis ${gravitySensor.y}`);
   console.log(`Gravity along the Z-axis ${gravitySensor.z}`);

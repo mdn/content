@@ -21,7 +21,6 @@ The **`Location`** interface represents the location (URL) of the object it is l
 ```
 
 ```css hidden
-
 html { display: table; width: 100%; }
 
 body { display: table-cell; text-align: center; vertical-align: middle; font-family: Georgia; font-size: 200%; line-height: 1em; white-space: nowrap; }
@@ -42,11 +41,11 @@ body { display: table-cell; text-align: center; vertical-align: middle; font-fam
 ```
 
 ```js hidden
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', (evt) => {
     evt.preventDefault();
 
     window.location.hash = evt.target.hasAttribute('id')
-        ? '#' + evt.target.getAttribute('id')
+        ? `#${evt.target.getAttribute('id')}`
         : '';
 });
 ```

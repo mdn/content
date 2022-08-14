@@ -54,7 +54,7 @@ async function fillSourceBuffer(buffer, msBuffer) {
     while(true) {
       await msBuffer.appendBufferAsync(buffer);
     }
-  } catch(e) {
+  } catch (e) {
     handleException(e);
   }
 }

@@ -16,23 +16,23 @@ The **[Performance Timeline](https://w3c.github.io/performance-timeline/)** stan
 
 ```js
 function log(s) {
-  var o = document.getElementsByTagName("output")[0];
-  o.innerHTML += s + " <br>";
+  const o = document.getElementsByTagName("output")[0];
+  o.innerHTML += `${s} <br>`;
 }
 function do_work (n) {
-  for (var i=0 ; i < n; i++) {
-     var m = Math.random();
+  for (let i=0 ; i < n; i++) {
+     const m = Math.random(); // This is an example of work taking some time
   }
 }
 function print_perf_entry(pe) {
-  log("..name: "        + pe.name      +
-      "; entryType: " + pe.entryType +
-      "; startTime: " + pe.startTime +
-      "; duration: "  + pe.duration);
+  log(`name: ${pe.name}`);
+  log(`entryType: ${pe.entryType}`);
+  log(`startTime: ${pe.startTime}`);
+  log(`duration: ${pe.duration}`);
 }
 function print_PerformanceEntries() {
   if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
+    console.error("The property performance.mark is not supported.");
     return;
   }
 
@@ -44,32 +44,32 @@ function print_PerformanceEntries() {
   performance.measure("Measure1", "Begin", "End");
 
   // Use getEntries() to iterate all entries
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("All Entry[" + i + "]");
-    print_perf_entry(p[i]);
-  }
+  let p = performance.getEntries();
+  p.forEach((entry, i) => {
+    log(`All Entry[${i}]`);
+    print_perf_entry(entry);
+  });
 
   // Use getEntries(name, entryType) to get specific entries
   p = performance.getEntries({name : "Measure1", entryType: "measure"});
-  for (var i=0; i < p.length; i++) {
-    log("Begin and Measure [" + i + "]");
-    print_perf_entry(p[i]);
-  }
+  p.forEach((entry, i) => {
+    log(`Begin and Measure [${i}]`);
+    print_perf_entry(entry);
+  });
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark only [" + i + "]");
-    print_perf_entry(p[i]);
-  }
+  p.forEach((entry, i) => {
+    log(`Mark only [${i}]`);
+    print_perf_entry(entry);
+  });
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Begin and Mark [" + i + "]");
-    print_perf_entry(p[i]);
-  }
+  p.forEach((entry, i) => {
+    log(`Begin and Mark [${i}]`);
+    print_perf_entry(entry);
+  });
 }
 ```
 
@@ -79,7 +79,7 @@ The {{domxref("PerformanceEntry")}} interface encapsulates a single _performance
 
 ```js
 function print_PerformanceEntry(ev) {
-  var properties = ["name", "entryType", "startTime", "duration"];
+  const properties = ["name", "entryType", "startTime", "duration"];
 
   // Create a few performance entries
   performance.mark("Start");
@@ -87,17 +87,17 @@ function print_PerformanceEntry(ev) {
   performance.mark("Stop");
   performance.measure("measure-1");
 
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("PerfEntry[" + i + "]");
-    for (var j=0; j < properties.length; j++) {
+  const p = performance.getEntries();
+  for (let i=0; i < p.length; i++) {
+    log(`PerfEntry[${i}]`);
+    for (let j=0; j < properties.length; j++) {
       // check each property in window.performance
-      var supported = properties[j] in p[i];
+      const supported = properties[j] in p[i];
       if (supported) {
-        var pe = p[i];
-        log("... " + properties[j] + " = " + pe[properties[j]]);
+        const pe = p[i];
+        console.log(`… ${properties[j]} = ${pe[properties[j]]}`);
       } else {
-        log("... " + properties[j] + " = Not supported");
+        console.log(`… ${properties[j]} = Not supported`);
       }
     }
   }
@@ -114,8 +114,8 @@ function PerfEntry_toJSON() {
   performance.mark("mark-2");
   performance.measure("meas-1", "mark-1", "mark-2");
 
-  var peList = performance.getEntries();
-  var pe = peList[0];
+  const peList = performance.getEntries();
+  const pe = peList[0];
 
   if (pe.toJSON === undefined) {
     log ("PerformanceEntry.toJSON() is NOT supported");
@@ -123,9 +123,9 @@ function PerfEntry_toJSON() {
   }
 
   // Print the PerformanceEntry object
-  var json = pe.toJSON();
-  var s = JSON.stringify(json);
-  log("PerformanceEntry.toJSON = " + s);
+  const json = pe.toJSON();
+  const s = JSON.stringify(json);
+  log(`PerformanceEntry.toJSON = ${s}`);
 }
 ```
 
@@ -140,24 +140,22 @@ The following example shows how to register two observers: the first one registe
 ```js
 function PerformanceObservers() {
   // Create observer for all performance event types
-  var observe_all = new PerformanceObserver(function(list, obs) {
-    var perfEntries;
-
+  const observe_all = new PerformanceObserver((list, obs) => {
     // Print all entries
-    perfEntries = list.getEntries();
-    for (var i=0; i < perfEntries.length; i++) {
+    let perfEntries = list.getEntries();
+    for (let i=0; i < perfEntries.length; i++) {
       print_perf_entry(perfEntries[i]);
     }
 
     // Print entries named "Begin" with type "mark"
     perfEntries = list.getEntriesByName("Begin", "mark");
-    for (var i=0; i < perfEntries.length; i++) {
+    for (let i=0; i < perfEntries.length; i++) {
       print_perf_entry(perfEntries[i]);
     }
 
     // Print entries with type "mark"
     perfEntries = list.getEntriesByType("mark");
-    for (var i=0; i < perfEntries.length; i++) {
+    for (let i=0; i < perfEntries.length; i++) {
       print_perf_entry(perfEntries[i]);
     }
   });
@@ -165,10 +163,10 @@ function PerformanceObservers() {
   observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
 
   // Create observer for just the "mark" event type
-  var observe_mark = new PerformanceObserver(function(list, obs) {
-    var perfEntries = list.getEntries();
+  const observe_mark = new PerformanceObserver((list, obs) => {
+    const perfEntries = list.getEntries();
     // Should only have 'mark' entries
-    for (var i=0; i < perfEntries.length; i++) {
+    for (let i=0; i < perfEntries.length; i++) {
       print_perf_entry(perfEntries[i]);
     }
   });
@@ -176,10 +174,10 @@ function PerformanceObservers() {
   observe_mark.observe({entryTypes: ['mark']});
 }
 function print_perf_entry(pe) {
-  log("name: "        + pe.name      +
-      "; entryType: " + pe.entryType +
-      "; startTime: " + pe.startTime +
-      "; duration: "  + pe.duration);
+  log(`name: ${pe.name}`);
+  log(`entryType: ${pe.entryType}`);
+  log(`startTime: ${pe.startTime}`);
+  log(`duration: ${pe.duration}`);
 }
 ```
 

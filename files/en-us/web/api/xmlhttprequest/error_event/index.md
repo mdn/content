@@ -20,9 +20,9 @@ The `error` event is fired when the request encountered an error.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { })
+addEventListener('error', (event) => { })
 
-onerror = event => { }
+onerror = (event) => { }
 ```
 
 ## Event type
@@ -82,7 +82,7 @@ const xhrButtonAbort = document.querySelector('.xhr.abort');
 const log = document.querySelector('.event-log');
 
 function handleEvent(e) {
-    log.textContent = log.textContent + `${e.type}: ${e.loaded} bytes transferred\n`;
+    log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
 }
 
 function addListeners(xhr) {

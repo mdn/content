@@ -46,7 +46,7 @@ To be suitable, the survey proposal needs to be:
 1. Submitter submits a proposal through the submissions form, outlining:
 
     - Topic.
-    - Category, e.g. CSS, JavaScript, Accessibility, documentation...
+    - Category, e.g. CSS, JavaScript, Accessibility, documentation…
     - Objective for the survey.
     - Date (range) when the survey ideally should be run.
     - Actions which will be taken based on the results.

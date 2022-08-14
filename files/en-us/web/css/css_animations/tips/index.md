@@ -77,8 +77,8 @@ Next we'll look at the JavaScript that does the work. The meat of this technique
 ```js
 function play() {
   document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function(time) {
-    window.requestAnimationFrame(function(time) {
+  requestAnimationFrame((time) => {
+    requestAnimationFrame((time) => {
       document.querySelector(".box").className = "box changing";
     });
   });
@@ -90,7 +90,7 @@ This looks weird, doesn't it? That's because the only way to play an animation a
 Here's what happens when the `play()` function gets called:
 
 1. The box's list of CSS classes is reset to `"box"`. This has the effect of removing any other classes currently applied to the box, including the `"changing"` class that handles animation. In other words, we're removing the animation effect from the box. However, changes to the class list don't take effect until the style recomputation is complete and a refresh has occurred to reflect the change.
-2. To be sure that the styles are recalculated, we use {{domxref("window.requestAnimationFrame()")}}, specifying a callback. Our callback gets executed just before the next repaint of the document. The problem for us is that because it's before the repaint, the style recomputation hasn't actually happened yet! So...
+2. To be sure that the styles are recalculated, we use {{domxref("window.requestAnimationFrame()")}}, specifying a callback. Our callback gets executed just before the next repaint of the document. The problem for us is that because it's before the repaint, the style recomputation hasn't actually happened yet!
 3. Our callback cleverly calls `requestAnimationFrame()` a second time! This time, the callback is run before the next repaint, which is after the style recomputation has occurred. This callback adds the `"changing"` class back onto the box, so that the repaint will start the animation once again.
 
 Of course, we also need to add an event handler to our "Run" button so it'll actually do something:
@@ -141,7 +141,7 @@ The following demo shows how you'd achieve the aforementioned JavaScript techniq
 ```
 
 ```js
-let watchme = document.getElementById('watchme')
+const watchme = document.getElementById('watchme');
 
 watchme.className = 'slidein'
 const listener = (e) => {

@@ -23,22 +23,22 @@ and a list of the characteristics of this service.
 
 ## Properties
 
-- {{domxref("BluetoothRemoteGATTService.device")}}{{readonlyinline}}
+- {{domxref("BluetoothRemoteGATTService.device")}} {{readonlyinline}} {{Experimental_Inline}}
   - : Returns information about a Bluetooth device through an instance of
     {{domxref("BluetoothDevice")}}.
-- {{domxref("BluetoothRemoteGATTService.isPrimary")}}{{readonlyinline}}
+- {{domxref("BluetoothRemoteGATTService.isPrimary")}} {{readonlyinline}} {{Experimental_Inline}}
   - : Returns a boolean value indicating whether this is a primary or secondary
     service.
-- {{domxref("BluetoothRemoteGATTService.uuid")}}{{readonlyinline}}
+- {{domxref("BluetoothRemoteGATTService.uuid")}} {{readonlyinline}} {{Experimental_Inline}}
   - : Returns a string representing the UUID of this service.
 
 ## Methods
 
-- {{domxref("BluetoothRemoteGATTService.getCharacteristic()")}}
+- {{domxref("BluetoothRemoteGATTService.getCharacteristic()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} to an instance of
     {{domxref("BluetoothRemoteGATTCharacteristic")}} for a given universally unique identifier
     (UUID).
-- {{domxref("BluetoothRemoteGATTService.getCharacteristics()")}}
+- {{domxref("BluetoothRemoteGATTService.getCharacteristics()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} to an {{jsxref("Array")}} of
     {{domxref("BluetoothRemoteGATTCharacteristic")}} instances for an optional universally
     unique identifier (UUID).

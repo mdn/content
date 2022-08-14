@@ -23,18 +23,18 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string representing the text of the document's title, and only the text part. For example, consider this:
 
 ```html
-<!doctype html>
-<html>
-    <head>
-        <title>Hello world! <span class="highlight">Isn't this wonderful</span> really?</title>
-    </head>
-    <body></body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Hello world! <span class="highlight">Isn't this wonderful</span> really?</title>
+  </head>
+  <body></body>
 </html>
 ```
 
 ```js
-let title = document.getElementsByTagName('title')[0];
-console.log( title.text ); // yield: "Hello world!  really?"
+const title = document.getElementsByTagName('title')[0];
+console.log(title.text); // yield: "Hello world!  really?"
 ```
 
 As you can see, the tag `span` and its content were skipped.

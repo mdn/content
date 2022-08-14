@@ -39,18 +39,18 @@ function displayData() {
   const objectStore = transaction.objectStore('fThings');
 
   const myIndex = objectStore.index('lName');
-  myIndex.openCursor(keyRangeValue).onsuccess = function(event) {
+  myIndex.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '&lt;td&gt;' + cursor.value.id + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.lName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.fName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.jTitle + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.company + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.eMail + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.phone + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.age + '&lt;/td&gt;';
+      tableRow.innerHTML = `<td>${cursor.value.id}</td>`
+                         + `<td>${cursor.value.lName}</td>`
+                         + `<td>${cursor.value.fName}</td>`
+                         + `<td>${cursor.value.jTitle}</td>`
+                         + `<td>${cursor.value.company}</td>`
+                         + `<td>${cursor.value.eMail}</td>`
+                         + `<td>${cursor.value.phone}</td>`
+                         + `<td>${cursor.value.age}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();

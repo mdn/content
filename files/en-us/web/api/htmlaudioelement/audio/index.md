@@ -37,7 +37,7 @@ new Audio(url)
 ### Return value
 
 A new {{domxref("HTMLAudioElement")}} object, configured to be used for playing back
-the audio from the file specified by `url`.The new object's
+the audio from the file specified by `url`. The new object's
 {{domxref("HTMLMediaElement.preload", "preload")}} property is set
 to `auto` and its `src` property is set to the specified URL
 or `null` if no URL is given. If a URL is specified, the browser begins
@@ -70,7 +70,7 @@ playback to begin:
 The event-based approach is best:
 
 ```js
-myAudioElement.addEventListener("canplaythrough", event => {
+myAudioElement.addEventListener("canplaythrough", (event) => {
   /* the audio is now playable; play it if permissions allow */
   myAudioElement.play();
 });

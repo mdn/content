@@ -128,7 +128,7 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
   must call `event.preventDefault()` to keep the focus from leaving the
   `HTMLElement`
 - Behavior of the focus in relation to different HTML features like
-  {{HTMLAttrxRef("tabindex")}} or {{Glossary("shadow tree","shadow dom", 1)}},
+  [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) or {{Glossary("shadow tree","shadow dom", 1)}},
   which previously remained under-specified, were recently updated (as October
   of 2019). Checkout [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) for more info.
 

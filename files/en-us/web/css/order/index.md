@@ -63,13 +63,13 @@ This example uses CSS to create a classic two-sidebar layout surrounding a conte
 #### HTML
 
 ```html
-<header>...</header>
+<header>…</header>
 <main>
   <article>Article</article>
   <nav>Nav</nav>
   <aside>Aside</aside>
 </main>
-<footer>...</footer>
+<footer>…</footer>
 ```
 
 #### CSS

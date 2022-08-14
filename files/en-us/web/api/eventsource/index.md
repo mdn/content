@@ -21,7 +21,7 @@ An `EventSource` instance opens a persistent connection to an [HTTP](/en-US/docs
 
 {{InheritanceDiagram}}
 
-Once the connection is opened, incoming messages from the server are delivered to your code in the form of events. If there is an event field in the incoming message, the triggered event is the same as the event field value. If no event field is present, then a generic {{event("message")}} event is fired.
+Once the connection is opened, incoming messages from the server are delivered to your code in the form of events. If there is an event field in the incoming message, the triggered event is the same as the event field value. If no event field is present, then a generic {{domxref("EventSource/message_event", "message")}} event is fired.
 
 Unlike [WebSockets](/en-US/docs/Web/API/WebSockets_API), server-sent events are unidirectional; that is, data messages are delivered in one direction, from the server to the client (such as a user's web browser). That makes them an excellent choice when there's no need to send data from the client to the server in message form. For example, `EventSource` is a useful approach for handling things like social media status updates, news feeds, or delivering data into a [client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) mechanism like [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) or [web storage](/en-US/docs/Web/API/Web_Storage_API).
 
@@ -69,10 +69,10 @@ In this basic example, an `EventSource` is created to receive unnamed events fro
 const evtSource = new EventSource('sse.php');
 const eventList = document.querySelector('ul');
 
-evtSource.onmessage = function(e) {
+evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 }
 ```
@@ -84,37 +84,38 @@ Each received event causes our `EventSource` object's `onmessage` event handler 
 To listen to named events, you'll require a listener for each type of event sent.
 
 ```js
-  const sse = new EventSource('/api/v1/sse');
+const sse = new EventSource('/api/v1/sse');
 
-  /* This will listen only for events
-   * similar to the following:
-   *
-   * event: notice
-   * data: useful data
-   * id: someid
-   *
-   */
-  sse.addEventListener("notice", function(e) {
-    console.log(e.data)
-  })
+/*
+ * This will listen only for events
+ * similar to the following:
+ *
+ * event: notice
+ * data: useful data
+ * id: someid
+ */
+sse.addEventListener("notice", (e) => {
+  console.log(e.data)
+})
 
-  /* Similarly, this will listen for events
-   * with the field `event: update`
-   */
-  sse.addEventListener("update", function(e) {
-    console.log(e.data)
-  })
+/*
+ * Similarly, this will listen for events
+ * with the field `event: update`
+ */
+sse.addEventListener("update", (e) => {
+  console.log(e.data)
+})
 
-  /* The event "message" is a special case, as it
-   * will capture events without an event field
-   * as well as events that have the specific type
-   * `event: message` It will not trigger on any
-   * other event type.
-   */
-  sse.addEventListener("message", function(e) {
-    console.log(e.data)
-  })
-
+/*
+ * The event "message" is a special case, as it
+ * will capture events without an event field
+ * as well as events that have the specific type
+ * `event: message` It will not trigger on any
+ * other event type.
+ */
+sse.addEventListener("message", (e) => {
+  console.log(e.data)
+});
 ```
 
 ## Specifications

@@ -36,12 +36,10 @@ The following example compiles the loaded `simple.wasm` byte code using the {{js
 See the `index-compile.html` [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) or [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html).
 
 ```js
-var worker = new Worker("wasm_worker.js");
+const worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(mod =>
-  worker.postMessage(mod)
-);
+  .then((mod) => worker.postMessage(mod));
 ```
 
 The worker function [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js) defines an import object for the module to use. The function then sets up an event handler to receive the module from the main thread. When the module is received, we create an instance from it using the {{jsxref("WebAssembly.instantiate()")}} method and invoke an exported function from inside it.
@@ -49,17 +47,17 @@ The worker function [`wasm_worker.js`](https://github.com/mdn/webassembly-exampl
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func(arg) {
       console.log(arg);
     }
   }
 };
 
-onmessage = function(e) {
+onmessage = (e) => {
   console.log('module received from main thread');
   const mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then((instance) => {
     instance.exports.exported_func();
   });
 };

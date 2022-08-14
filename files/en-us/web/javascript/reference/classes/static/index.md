@@ -19,12 +19,12 @@ Static methods are often utility functions, such as functions to create or clone
 
 > **Note:** In the context of classes, MDN Web Docs content uses the terms properties and [fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) interchangeably.
 
-{{EmbedInteractiveExample("pages/js/classes-static.html")}}
+{{EmbedInteractiveExample("pages/js/classes-static.html", "taller")}}
 
 ## Syntax
 
 ```js
-static methodName() { /* ... */ }
+static methodName() { /* … */ }
 static propertyName [= value];
 
 // Class static initialization block
@@ -83,10 +83,10 @@ In order to call a static method or property within another static method of the
 class StaticMethodCall {
   static staticProperty = 'static property';
   static staticMethod() {
-    return 'Static method and ' + this.staticProperty + ' has been called';
+    return `Static method and ${this.staticProperty} has been called`;
   }
   static anotherStaticMethod() {
-    return this.staticMethod() + ' from another static method';
+    return `${this.staticMethod()} from another static method`;
   }
 }
 StaticMethodCall.staticMethod();

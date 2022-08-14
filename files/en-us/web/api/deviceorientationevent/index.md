@@ -37,8 +37,8 @@ The **`DeviceOrientationEvent`** object provides web developers with information
 ## Example
 
 ```js
-window.addEventListener('deviceorientation', function(event) {
-  console.log(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
+window.addEventListener('deviceorientation', (event) => {
+  console.log(`${event.alpha} : ${event.beta} : ${event.gamma}`);
 });
 ```
 

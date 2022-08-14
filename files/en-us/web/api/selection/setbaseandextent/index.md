@@ -92,25 +92,25 @@ selection into the output paragraph at the very bottom of the HTML.
 The JavaScript looks like so:
 
 ```js
-var one = document.querySelector('.one');
-var two = document.querySelector('.two');
+const one = document.querySelector('.one');
+const two = document.querySelector('.two');
 
-var aOffset = document.getElementById('aOffset');
-var fOffset = document.getElementById('fOffset');
+const aOffset = document.getElementById('aOffset');
+const fOffset = document.getElementById('fOffset');
 
-var button = document.querySelector('button');
+const button = document.querySelector('button');
 
-var output = document.querySelector('.output');
+const output = document.querySelector('.output');
 
-var selection;
+let selection;
 
-button.onclick = function() {
+button.onclick = () => {
   try {
     selection = document.getSelection();
     selection.setBaseAndExtent(one, aOffset.value, two, fOffset.value);
-    var text = selection.toString();
+    const text = selection.toString();
     output.textContent = text;
-  } catch(e) {
+  } catch (e) {
     output.textContent = e.message;
   }
 }

@@ -47,8 +47,8 @@ A `string` value.
 ## Examples
 
 ```js
-var cs = window.getComputedStyle(document.body);
-var cssValue = cs.getPropertyCSSValue("display");
+const cs = window.getComputedStyle(document.body);
+const cssValue = cs.getPropertyCSSValue("display");
 console.log(cssValue.getStringValue());
 ```
 

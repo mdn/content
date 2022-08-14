@@ -145,8 +145,8 @@ The Screen Orientation API is made to prevent or handle such a change.
 The {{domxref("Window.orientationchange_event", "orientationchange")}} event is triggered each time the device change the orientation of the screen and the orientation itself can be read with the {{domxref("Screen.orientation")}} property.
 
 ```js
-screen.addEventListener("orientationchange", function () {
-  console.log("The orientation of the screen is: " + screen.orientation);
+screen.addEventListener("orientationchange", () => {
+  console.log(`The orientation of the screen is: ${screen.orientation}`);
 });
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: Function.displayName
+title: Function.prototype.displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 tags:
   - Function
@@ -10,18 +10,18 @@ browser-compat: javascript.builtins.Function.displayName
 ---
 {{JSRef}} {{non-standard_header}}
 
-The **`function.displayName`** property returns the display name of the function.
+A {{jsxref("Function")}} object's optional **`displayName`** property returns the display name of the function.
 
 ## Examples
 
 ### Setting a displayName
 
-It is usually preferred by consoles and profilers over {{jsxref("Function.name", "func.name")}} to display the name of a function.
+If present, it may be preferred by consoles and profilers over the {{jsxref("Function.prototype.name", "name")}} property to be displayed as the name of a function.
 
-By entering the following in a console, it should display as something like "`function My Function()`":
+By entering the following in a console, it should display as something like `function My Function()`:
 
 ```js
-const a = function() {};
+const a = function () {};
 a.displayName = 'My Function';
 
 a; // "function My Function()"
@@ -34,7 +34,9 @@ function doSomething() {}
 
 console.log(doSomething.displayName); // "undefined"
 
-const popup = function(content) { console.log(content); };
+const popup = function (content) {
+  console.log(content);
+};
 
 popup.displayName = 'Show Popup';
 
@@ -47,14 +49,14 @@ You can define a function with a display name in a {{jsxref("Functions", "functi
 
 ```js
 const object = {
-  someMethod: function() {}
+  someMethod() {}
 };
 
 object.someMethod.displayName = 'someMethod';
 
 console.log(object.someMethod.displayName); // logs "someMethod"
 
-try { someMethod } catch(e) { console.log(e); }
+try { someMethod } catch (e) { console.log(e); }
 // ReferenceError: someMethod is not defined
 ```
 
@@ -65,8 +67,8 @@ You can dynamically change the `displayName` of a function:
 ```js
 const object = {
   // anonymous
-  someMethod: function(value) {
-    arguments.callee.displayName = 'someMethod (' + value + ')';
+  someMethod: function someMethod(value) {
+    someMethod.displayName = `someMethod (${value})`;
   }
 };
 
@@ -86,4 +88,4 @@ Not part of any standard.
 
 ## See also
 
-- {{jsxref("Function.name")}}
+- {{jsxref("Function.prototype.name")}}

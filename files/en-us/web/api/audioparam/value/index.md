@@ -43,7 +43,7 @@ not always exactly equal what you set it to.
 Consider this example:
 
 ```js
-const source = new AudioBufferSourceNode(...);
+const source = new AudioBufferSourceNode(/* … */);
 const rate = 5.3;
 source.playbackRate.value = rate;
 console.log(source.playbackRate.value === rate);
@@ -56,7 +56,7 @@ method, which returns the single-precision value equivalent to the 64-bit JavaSc
 value specified—when setting `value`, like this:
 
 ```js
-const source = new AudioBufferSourceNode(...);
+const source = new AudioBufferSourceNode(/* … */);
 const rate = Math.fround(5.3);
 source.playbackRate.value = rate;
 console.log(source.playbackRate.value === rate);

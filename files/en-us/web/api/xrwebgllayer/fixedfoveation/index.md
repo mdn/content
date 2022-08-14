@@ -36,7 +36,7 @@ Note that some user agents might implement certain levels of foveation, so you m
 - `2/3`: medium foveation
 - `1.0`: maximum foveation
 
-Some devices don't support foveated rendering. In that case `fixedFoveation` is {{jsxref("null")}} and setting it will not do anything.
+Some devices don't support foveated rendering. In that case `fixedFoveation` is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and setting it will not do anything.
 
 ## Examples
 

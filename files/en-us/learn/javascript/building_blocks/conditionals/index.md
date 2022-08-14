@@ -49,7 +49,7 @@ Conditional statements allow us to represent such decision making in JavaScript,
 
 Let's look at by far the most common type of conditional statement you'll use in JavaScript — the humble [`if...else` statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
 
-### Basic if ... else syntax
+### Basic if...else syntax
 
 Basic `if...else` syntax looks like this:
 
@@ -115,7 +115,7 @@ This code as shown always results in the `shoppingDone` variable returning `fals
 
 The last example provided us with two choices, or outcomes — but what if we want more than two?
 
-There is a way to chain on extra choices/outcomes to your `if...else` — using `else if`. Each extra choice requires an additional block to put in between `if() { ... }` and `else { ... }` — check out the following more involved example, which could be part of a simple weather forecast application:
+There is a way to chain on extra choices/outcomes to your `if...else` — using `else if`. Each extra choice requires an additional block to put in between `if () { }` and `else { }` — check out the following more involved example, which could be part of a simple weather forecast application:
 
 ```html
 <label for="weather">Select the weather type today: </label>
@@ -157,8 +157,8 @@ function setWeather() {
 
 1. Here we've got an HTML {{htmlelement("select")}} element allowing us to make different weather choices, and a simple paragraph.
 2. In the JavaScript, we are storing a reference to both the {{htmlelement("select")}} and {{htmlelement("p")}} elements, and adding an event listener to the `<select>` element so that when its value is changed, the `setWeather()` function is run.
-3. When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if() {...}` blocks, except for the first one, which is tested in an `if() {...}` block.
-4. The very last choice, inside the `else {...}` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example, if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
+3. When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if () { }` blocks, except for the first one, which is tested in an `if () { }` block.
+4. The very last choice, inside the `else { }` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example, if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
 
 > **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-else-if.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
 
@@ -197,14 +197,14 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
 }
 ```
 
-### Nesting if ... else
+### Nesting if...else
 
 It is perfectly OK to put one `if...else` statement inside another one — to nest them. For example, we could update our weather forecast application to show a further set of choices depending on what the temperature is:
 
 ```js
 if (choice === 'sunny') {
   if (temperature < 86) {
-    para.textContent = `It is ${temperature} degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.`;
+    para.textContent = `It is ${temperature} degrees outside — nice and sunny. Let's go out to the beach, or the park, and get an ice cream.`;
   } else if (temperature >= 86) {
     para.textContent = `It is ${temperature} degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.`;
   }
@@ -224,7 +224,7 @@ To give you an AND example, the previous example snippet can be rewritten to thi
 
 ```js
 if (choice === 'sunny' && temperature < 86) {
-  para.textContent = `It is ${temperature} degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.`;
+  para.textContent = `It is ${temperature} degrees outside — nice and sunny. Let's go out to the beach, or the park, and get an ice cream.`;
 } else if (choice === 'sunny' && temperature >= 86) {
   para.textContent = `It is ${temperature} degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.`;
 }
@@ -270,7 +270,7 @@ if (x === 5 || 7 || 10 || 20) {
 }
 ```
 
-In this case the condition inside `if(...)` will always evaluate to true since 7 (or any other non-zero value) always evaluates to `true`. This condition is actually saying "if x equals 5, or 7 is true — which it always is". This is logically not what we want! To make this work you've got to specify a complete test either side of each OR operator:
+In this case the condition inside `if ()` will always evaluate to true since 7 (or any other non-zero value) always evaluates to `true`. This condition is actually saying "if x equals 5, or 7 is true — which it always is". This is logically not what we want! To make this work you've got to specify a complete test either side of each OR operator:
 
 ```js
 if (x === 5 || x === 7 || x === 10 || x === 20) {
@@ -367,13 +367,15 @@ function setWeather() {
 There is one final bit of syntax we want to introduce you to before we get you to play with some examples. The [ternary or conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
 
 ```
-( condition ) ? run this code : run this code instead
+condition ? run this code : run this code instead
 ```
 
 So let's look at a simple example:
 
 ```js
-let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';
+const greeting = isBirthday
+  ? 'Happy birthday Mrs. Smith — we hope you have a great day!'
+  : 'Good morning Mrs. Smith.';
 ```
 
 Here we have a variable called `isBirthday` — if this is `true`, we give our guest a happy birthday message; if not, we give her the standard daily greeting.
@@ -402,14 +404,17 @@ function update(bgColor, textColor) {
   html.style.color = textColor;
 }
 
-select.addEventListener('change', () => ( select.value === 'black' ) ? update('black','white') : update('white','black'));
+select.addEventListener('change', () => select.value === 'black'
+  ? update('black', 'white')
+  : update('white', 'black')
+);
 ```
 
 {{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "") }}
 
 Here we've got a {{htmlelement('select')}} element to choose a theme (black or white), plus a simple {{htmlelement('h1')}} to display a website title. We also have a function called `update()`, which takes two colors as parameters (inputs). The website's background color is set to the first provided color, and its text color is set to the second provided color.
 
-Finally, we've also got an [onchange](/en-US/docs/Web/API/GlobalEventHandlers/onchange) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site colors are inverted.
+Finally, we've also got an [onchange](/en-US/docs/Web/API/HTMLElement/change_event) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site colors are inverted.
 
 > **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
 
@@ -553,7 +558,7 @@ reset.addEventListener('click', function() {
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -614,11 +619,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -630,7 +635,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = function(){
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -733,7 +738,7 @@ reset.addEventListener('click', function() {
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -795,11 +800,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -811,7 +816,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = function(){
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

@@ -40,8 +40,8 @@ The following JavaScript code removes the `background-color` CSS property
 from a selector rule:
 
 ```js
-var declaration = document.styleSheets[0].rules[0].style;
-var oldValue = declaration.removeProperty('background-color');
+const declaration = document.styleSheets[0].rules[0].style;
+const oldValue = declaration.removeProperty('background-color');
 ```
 
 ## Specifications

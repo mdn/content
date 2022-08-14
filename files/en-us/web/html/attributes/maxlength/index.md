@@ -11,7 +11,7 @@ tags:
   - maxlength
   - textarea
 browser-compat:
-  - html.elements.input.attributes.maxlength
+  - html.elements.input.maxlength
   - html.elements.textarea.maxlength
 ---
 

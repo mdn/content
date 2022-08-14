@@ -23,12 +23,15 @@ A boolean value
 
 ## Examples
 
-```js
-<html>
+```html
+<!doctype HTML>
+<html lang="en-US">
 <head>
-<title>altKey example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>altKey example</title>
 
-<script type="text/javascript">
+<script>
 
 function showChar(e){
   alert(

@@ -29,16 +29,16 @@ Function calls form a stack of _frames_.
 
 ```js
 function foo(b) {
-  let a = 10
-  return a + b + 11
+  const a = 10;
+  return a + b + 11;
 }
 
 function bar(x) {
-  let y = 3
-  return foo(x * y)
+  const y = 3;
+  return foo(x * y);
 }
 
-const baz = bar(7) // assigns 42 to baz
+const baz = bar(7); // assigns 42 to baz
 ```
 
 Order of operations:
@@ -68,7 +68,7 @@ The **event loop** got its name because of how it's usually implemented, which u
 
 ```js
 while (queue.waitForMessage()) {
-  queue.processNextMessage()
+  queue.processNextMessage();
 }
 ```
 
@@ -93,14 +93,14 @@ Here is an example that demonstrates this concept (`setTimeout` does not run imm
 ```js
 const seconds = new Date().getSeconds();
 
-setTimeout(function() {
+setTimeout(() => {
   // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
   console.log(`Ran after ${new Date().getSeconds() - seconds} seconds`);
 }, 500)
 
 while (true) {
   if (new Date().getSeconds() - seconds >= 2) {
-    console.log("Good, looped for 2 seconds")
+    console.log("Good, looped for 2 seconds");
     break;
   }
 }
@@ -115,17 +115,17 @@ The execution depends on the number of waiting tasks in the queue. In the exampl
 The `setTimeout` needs to wait for all the code for queued messages to complete even though you specified a particular time limit for your `setTimeout`.
 
 ```js
-(function() {
+(() => {
 
   console.log('this is the start');
 
-  setTimeout(function cb() {
+  setTimeout(() => {
     console.log('Callback 1: this is a msg from call back');
   }); // has a default time value of 0
 
   console.log('this is just a message');
 
-  setTimeout(function cb1() {
+  setTimeout(() => {
     console.log('Callback 2: this is a msg from call back');
   }, 0);
 

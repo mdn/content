@@ -41,14 +41,14 @@ We then fetch this request using {{domxref("fetch()")}}, extract a blob from the
 Note that at the top of the `fetch()` block we log the response `type` to the console.
 
 ```js
-var myImage = document.querySelector('img');
+const myImage = document.querySelector('img');
 
-var myRequest = new Request('flowers.jpg');
+const myRequest = new Request('flowers.jpg');
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then((response) => {
   console.log(response.type); // returns basic by default
-  response.blob().then(function(myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
+  response.blob().then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
 });

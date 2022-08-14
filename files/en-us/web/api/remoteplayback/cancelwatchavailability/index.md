@@ -23,7 +23,7 @@ cancelWatchAvailability(id)
 
 ### Parameters
 
-- `id`{{Optional_Inline}}
+- `id` {{optional_inline}}
 
   - : The `callbackId` of a particular remote playback device.
 

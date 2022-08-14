@@ -235,8 +235,8 @@ An `unsigned short` representing the type of the value. Possible values are:
 ## Examples
 
 ```js
-var cs = window.getComputedStyle(document.body);
-var cssValue = cs.getPropertyCSSValue("color");
+const cs = window.getComputedStyle(document.body);
+const cssValue = cs.getPropertyCSSValue("color");
 console.log(cssValue.primitiveType);
 ```
 

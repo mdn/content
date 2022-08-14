@@ -179,7 +179,7 @@ Let's build up the example, so you can understand how it works.
 
     ```js
     // Stop the form from submitting when a button is pressed
-    form.addEventListener('submit', e => e.preventDefault());
+    form.addEventListener('submit', (e) => e.preventDefault());
     ```
 
 5. Now we need to add an event listener, the handler function of which will run when the "Say hello" button is clicked. The comments explain in detail what each bit does, but in essence here we are taking the name the user has entered into the text input box and saving it in web storage using `setItem()`, then running a function called `nameDisplayCheck()` that will handle updating the actual website text. Add this to the bottom of your code:
@@ -212,7 +212,7 @@ Let's build up the example, so you can understand how it works.
     // define the nameDisplayCheck() function
     function nameDisplayCheck() {
       // check whether the 'name' data item is stored in web Storage
-      if(localStorage.getItem('name')) {
+      if (localStorage.getItem('name')) {
         // If it is, display personalized greeting
         const name = localStorage.getItem('name');
         h1.textContent = `Welcome, ${name}`;
@@ -318,7 +318,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
     ```js
     // Set up the database tables if this has not already been done
-    openRequest.addEventListener('upgradeneeded', e => {
+    openRequest.addEventListener('upgradeneeded', (e) => {
 
       // Grab a reference to the opened database
       db = e.target.result;
@@ -343,11 +343,11 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
 So with this database schema set up, when we start adding records to the database, each one will be represented as an object along these lines:
 
-```js
+```json
 {
-  title: "Buy milk",
-  body: "Need both cows milk and soy.",
-  id: 8
+  "title": "Buy milk",
+  "body": "Need both cows milk and soy.",
+  "id": 8
 }
 ```
 
@@ -425,12 +425,12 @@ function displayData() {
   // Open our object store and then get a cursor - which iterates through all the
   // different data items in the store
   const objectStore = db.transaction('notes_os').objectStore('notes_os');
-  objectStore.openCursor().addEventListener('success', e => {
+  objectStore.openCursor().addEventListener('success', (e) => {
     // Get a reference to the cursor
     const cursor = e.target.result;
 
     // If there is still another data item to iterate through, keep running this code
-    if(cursor) {
+    if (cursor) {
       // Create a list item, h3, and p to put each data item inside when displaying it
       // structure the HTML fragment, and append it inside the list
       const listItem = document.createElement('li');
@@ -462,7 +462,7 @@ function displayData() {
       cursor.continue();
     } else {
       // Again, if list item is empty, display a 'No notes stored' message
-      if(!list.firstChild) {
+      if (!list.firstChild) {
         const listItem = document.createElement('li');
         listItem.textContent = 'No notes stored.'
         list.appendChild(listItem);
@@ -480,7 +480,7 @@ Again, let's break this down:
 - Next, we get a reference to the `notes_os` object store using {{domxref("IDBDatabase.transaction()")}} and {{domxref("IDBTransaction.objectStore()")}} like we did in `addData()`, except here we are chaining them together in one line.
 - The next step is to use the {{domxref("IDBObjectStore.openCursor()")}} method to open a request for a cursor — this is a construct that can be used to iterate over the records in an object store. We chain a `success` event handler on to the end of this line to make the code more concise — when the cursor is successfully returned, the handler is run.
 - We get a reference to the cursor itself (an {{domxref("IDBCursor")}} object) using `const cursor = e.target.result`.
-- Next, we check to see if the cursor contains a record from the datastore (`if(cursor){ ... }`) — if so, we create a DOM fragment, populate it with the data from the record, and insert it into the page (inside the `<ul>` element). We also include a delete button that, when clicked, will delete that note by running the `deleteItem()` function, which we will look at in the next section.
+- Next, we check to see if the cursor contains a record from the datastore (`if (cursor){ }`) — if so, we create a DOM fragment, populate it with the data from the record, and insert it into the page (inside the `<ul>` element). We also include a delete button that, when clicked, will delete that note by running the `deleteItem()` function, which we will look at in the next section.
 - At the end of the `if` block, we use the {{domxref("IDBCursor.continue()")}} method to advance the cursor to the next record in the datastore, and run the content of the `if` block again. If there is another record to iterate to, this causes it to be inserted into the page, and then `continue()` is run again, and so on.
 - When there are no more records to iterate over, `cursor` will return `undefined`, and therefore the `else` block will run instead of the `if` block. This block checks whether any notes were inserted into the `<ul>` — if not, it inserts a message to say no note was stored.
 
@@ -509,7 +509,7 @@ function deleteItem(e) {
     console.log(`Note ${noteId} deleted.`);
 
     // Again, if list item is empty, display a 'No notes stored' message
-    if(!list.firstChild) {
+    if (!list.firstChild) {
       const listItem = document.createElement('li');
       listItem.textContent = 'No notes stored.';
       list.appendChild(listItem);
@@ -549,7 +549,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
 2. To start with, once the database is successfully opened we run an `init()` function. This loops through the different video names, trying to load a record identified by each name from the `videos` database.
 
-    If each video is found in the database (checked by seeing whether `request.result` evaluates to `true` — if the record is not present, it will be `undefined`), its video files (stored as blobs) and the video name are passed straight to the `displayVideo()` function to place them in the UI. If not, the video name is passed to the `fetchVideoFromNetwork()` function to ... you guessed it — fetch the video from the network.
+    If each video is found in the database (checked by seeing whether `request.result` evaluates to `true` — if the record is not present, it will be `undefined`), its video files (stored as blobs) and the video name are passed straight to the `displayVideo()` function to place them in the UI. If not, the video name is passed to the `fetchVideoFromNetwork()` function to, you guessed it, fetch the video from the network.
 
     ```js
     function init() {
@@ -560,7 +560,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
         const request = objectStore.get(video.name);
         request.addEventListener('success', () => {
           // If the result exists in the database (is not undefined)
-          if(request.result) {
+          if (request.result) {
             // Grab the videos from IDB and display them using displayVideo()
             console.log('taking videos from IDB');
             displayVideo(request.result.mp4, request.result.webm, request.result.name);
@@ -582,11 +582,11 @@ Let's walk through the most interesting parts of the example. We won't look at i
     ```js
     // Fetch the MP4 and WebM versions of the video using the fetch() function,
     // then expose their response bodies as blobs
-    const mp4Blob = fetch(`videos/${video.name}.mp4`).then(response => response.blob());
-    const webmBlob = fetch(`videos/${video.name}.mp4`).then(response => response.blob());
+    const mp4Blob = fetch(`videos/${video.name}.mp4`).then((response) => response.blob());
+    const webmBlob = fetch(`videos/${video.name}.webm`).then((response) => response.blob());
 
     // Only run the next code when both promises have fulfilled
-    Promise.all([mp4Blob, webmBlob]).then(values => {
+    Promise.all([mp4Blob, webmBlob]).then((values) => {
       // display the video fetched from the network with displayVideo()
       displayVideo(values[0], values[1], video.name);
       // store it in the IDB using storeVideo()
@@ -598,18 +598,12 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
     ```js
     // Define the storeVideo() function
-    function storeVideo(mp4Blob, webmBlob, name) {
+    function storeVideo(mp4, webm, name) {
       // Open transaction, get object store; make it a readwrite so we can write to the IDB
       const objectStore = db.transaction(['videos_os'], 'readwrite').objectStore('videos_os');
-      // Create a record to add to the IDB
-      const record = {
-        mp4 : mp4Blob,
-        webm : webmBlob,
-        name : name
-      }
 
       // Add the record to the IDB using add()
-      const request = objectStore.add(record);
+      const request = objectStore.add({ mp4, webm, name });
 
       request.addEventListener('success', () => console.log('Record addition attempt finished'));
       request.addEventListener('error', () => console.error(request.error));
@@ -673,7 +667,7 @@ The first thing to note is that there's an extra bit of code placed in the main 
 
 ```js
 // Register service worker to control making site work offline
-if('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js')
     .then(() => console.log('Service Worker Registered'));
@@ -693,17 +687,19 @@ Inside the `install` handler we use the {{domxref("ExtendableEvent.waitUntil()")
 Here is where we see the Cache API in action. We use the {{domxref("CacheStorage.open()")}} method to open a new cache object in which responses can be stored (similar to an IndexedDB object store). This promise fulfills with a {{domxref("Cache")}} object representing the `video-store` cache. We then use the {{domxref("Cache.addAll()")}} method to fetch a series of assets and add their responses to the cache.
 
 ```js
-self.addEventListener('install', e => {
- e.waitUntil(
-   caches.open('video-store').then(cache => {
-     return cache.addAll([
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css'
-     ]);
-   })
- );
+self.addEventListener('install', (e) => {
+  e.waitUntil(
+    caches
+      .open('video-store')
+      .then((cache) =>
+        cache.addAll([
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css',
+        ])
+      )
+  );
 });
 ```
 
@@ -722,10 +718,10 @@ Inside this block we use {{domxref("CacheStorage.match()")}} to check whether a 
 If a match is found, we return it as the custom response. If not, we [fetch()](/en-US/docs/Web/API/fetch) the response from the network and return that instead.
 
 ```js
-self.addEventListener('fetch', e => {
+self.addEventListener('fetch', (e) => {
   console.log(e.request.url);
   e.respondWith(
-    caches.match(e.request).then(response => response || fetch(e.request))
+    caches.match(e.request).then((response) => response || fetch(e.request))
   );
 });
 ```

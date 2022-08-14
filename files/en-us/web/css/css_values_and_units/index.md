@@ -13,7 +13,7 @@ spec-urls:
 ---
 {{CSSRef}}
 
-Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types -- values and units -- that CSS properties accept. Below is an overview of most of these data types. Refer to the page for each value type for more detailed information.
+Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types — values and units — that CSS properties accept. Below is an overview of most of these data types. Refer to the page for each value type for more detailed information.
 
 ## Textual data types
 
@@ -61,7 +61,7 @@ Pre-defined keywords are text values defined by the specification for that prope
 
 When viewing CSS property value syntax in a CSS specification or the MDN property page, allowable keywords will be listed in the following form. The following values are the pre-defined keyword values allowed for {{cssxref("float")}}.
 
-```css
+```plain
 left | right | none | inline-start | inline-end
 ```
 
@@ -178,7 +178,7 @@ Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept
 
 #### Time units
 
-Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier -- the `s` or `ms` -- is required. It accepts the following values.
+Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier — the `s` or `ms` — is required. It accepts the following values.
 
 | Unit | Name         | Description                               |
 | ---- | ------------ | ----------------------------------------- |

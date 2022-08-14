@@ -50,7 +50,7 @@ Now you only need some HTML and JavaScript to load your new module:
 ```html
 <script src="./a.out.js"></script>
 <script>
-  Module.onRuntimeInitialized = async _ => {
+  Module.onRuntimeInitialized = async () => {
     const api = {
       version: Module.cwrap('version', 'number', []),
     };
@@ -74,7 +74,7 @@ The first question you need to answer is: how do I get the image into wasm? Look
 ```js
  async function loadImage(src) {
   // Load image
-  const imgBlob = await fetch(src).then(resp => resp.blob());
+  const imgBlob = await fetch(src).then((resp) => resp.blob());
   const img = await createImageBitmap(imgBlob);
   // Make canvas same size as image
   const canvas = document.createElement('canvas');
@@ -129,7 +129,7 @@ The image is now available in wasm. It is time to call the WebP encoder to do it
 
 The result of the encoding operation is an output buffer and its length. Because functions in C can't have arrays as return types (unless you allocate memory dynamically), this example resorts to a static global array. This may not be clean C. In fact, it relies on wasm pointers being 32 bits wide. But this is a fair shortcut for keeping things simple:
 
-```js
+```cpp
 int result[2];
 EMSCRIPTEN_KEEPALIVE
 void encode(uint8_t* img_in, int width, int height, float quality) {

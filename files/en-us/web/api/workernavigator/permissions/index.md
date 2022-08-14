@@ -26,7 +26,7 @@ A {{domxref("Permissions")}} object.
 ## Examples
 
 ```js
-navigator.permissions.query({name:'notifications'}).then(function(result) {
+navigator.permissions.query({name:'notifications'}).then((result) => {
   if (result.state === 'granted') {
     showNotification();
   } else if (result.state === 'prompt') {

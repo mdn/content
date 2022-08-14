@@ -32,7 +32,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
 range.selectNode(document.getElementsByTagName("div").item(0));
 range.detach();

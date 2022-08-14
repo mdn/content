@@ -72,8 +72,9 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
 
 ```css
 .bold {
+    font-family: Arial;
+    font-size: 12px;
     font-weight: bold;
-    font: 12px Arial;
 }
 #div1,
 #div3 {

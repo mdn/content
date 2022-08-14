@@ -12,7 +12,7 @@ tags:
 ### Developer Tools
 
 - A Box Model Highlighter has been implemented ({{bug(663778)}}).
-- Anywhere a DOM node appears in the console output, it is highlighted when you hover over that console output ({{bug(757866)}}). Similarly all JS functions and objects are highlighted in the console output ({{bug(584733)}}). More information about the console improvement can be found in this [blog post](https://www.robodesign.ro/mihai/blog/web-console-improvements-episode-30).
+- Anywhere a DOM node appears in the console output, it is highlighted when you hover over that console output ({{bug(757866)}}). Similarly all JS functions and objects are highlighted in the console output ({{bug(584733)}}). More information about the console improvement can be found in this [blog post](https://web.archive.org/web/20150427210606/http://mihai.sucan.ro/mihai/blog/web-console-improvements-episode-30).
 - Support for {{domxref("console.count()")}} has been added ({{bug(922208)}}).
 
 ### CSS

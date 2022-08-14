@@ -45,7 +45,7 @@ In this case, the values are read from right to left.
 <head>
 <title>charCode/keyCode/which example</title>
 
-<script type="text/javascript">
+<script>
 
 function showKeyPress(evt) {
 alert("onkeypress handler: \n"

@@ -36,9 +36,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the rend
 ### Checking a renderbuffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var renderbuffer = gl.createRenderbuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const renderbuffer = gl.createRenderbuffer();
 
 gl.isRenderbuffer(renderbuffer);
 ```

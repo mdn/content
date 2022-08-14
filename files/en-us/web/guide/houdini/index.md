@@ -12,7 +12,7 @@ tags:
 
 Houdini is a set of low-level APIs that exposes parts of the CSS engine,
 giving developers the power to extend CSS by hooking into the styling and layout process of a browser's rendering engine.
-Houdini is a group of APIs that give developers direct access to the {{domxref("CSS_Object_Model")}} (CSSOM),
+Houdini is a group of APIs that give developers direct access to the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) (CSSOM),
 enabling developers to write code the browser can parse as CSS,
 thereby creating new CSS features without waiting for them to be implemented natively in browsers.
 
@@ -26,7 +26,7 @@ Houdini code doesn't wait for that first rendering cycle to be complete.
 Rather, it is included in that first cycle — creating renderable, understandable styles.
 Houdini provides an object-based API for working with CSS values in JavaScript.
 
-Houdini's {{domxref("CSS Typed OM API")}} is a CSS Object Model with types and methods,
+Houdini's [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is a CSS Object Model with types and methods,
 exposing values as JavaScript objects
 making for more intuitive CSS manipulation than previous string based {{domxref("HTMLElement.style")}} manipulations.
 Every element and style sheet rule has a style map which is accessible via its {{domxref("StylePropertyMap")}}.

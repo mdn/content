@@ -40,7 +40,7 @@ Next, let's look at what structure our test site should have. The most common th
 3. **`styles` folder**: This folder will contain the CSS code used to style your content (for example, setting text and background colors). Create a folder called `styles`, inside your `test-site` folder.
 4. **`scripts` folder**: This folder will contain all the JavaScript code used to add interactive functionality to your site (e.g. buttons that load data when clicked). Create a folder called `scripts`, inside your `test-site` folder.
 
-> **Note:** On Windows computers, you might have trouble seeing the file names, because Windows has an option called **Hide extensions for known file types** turned on by default. Generally, you can turn this off by going to Windows Explorer, selecting the **Folder options...** option, unchecking the **Hide extensions for known file types** check box, then clicking **OK**. For more specific information covering your version of Windows, you can search on the web.
+> **Note:** On Windows computers, you might have trouble seeing the file names, because Windows has an option called **Hide extensions for known file types** turned on by default. Generally, you can turn this off by going to Windows Explorer, selecting the **Folder options…** option, unchecking the **Hide extensions for known file types** check box, then clicking **OK**. For more specific information covering your version of Windows, you can search on the web.
 
 ## File paths
 
@@ -51,7 +51,7 @@ To make files talk to one another, you have to provide a file path between them 
 
     ```html
     <!DOCTYPE html>
-    <html>
+    <html lang="en-US">
       <head>
         <meta charset="utf-8">
         <title>My test page</title>
@@ -64,7 +64,8 @@ To make files talk to one another, you have to provide a file path between them 
 
 3. The line `<img src="" alt="My test image">` is the HTML code that inserts an image into the page. We need to tell the HTML where the image is. The image is inside the _images_ directory, which is in the same directory as `index.html`. To walk down the file structure from `index.html` to our image, the file path we'd need is `images/your-image-filename`. For example, our image is called `firefox-icon.png`, so the file path is `images/firefox-icon.png`.
 4. Insert the file path into your HTML code between the double quote marks of the `src=""` code.
-5. Save your HTML file, then load it in your web browser (double-click the file). You should see your new webpage displaying your image!
+5. Change the contents of the `alt` attribute to a [description of the image](/en-US/docs/Web/HTML/Element/img#authoring_meaningful_alternate_descriptions) you are including. In this case, `alt="Firefox logo: flaming fox wrapping the world"`.
+6. Save your HTML file, then load it in your web browser (double-click the file). You should see your new webpage displaying your image!
 
 ![A screenshot of our basic website showing just the Firefox logo - a flaming fox wrapping the world](website-screenshot.png)
 

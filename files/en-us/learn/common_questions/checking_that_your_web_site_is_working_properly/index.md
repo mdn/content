@@ -43,7 +43,7 @@ Let's see how to diagnose and solve those problems.
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Dig deeper
 
@@ -90,7 +90,7 @@ So what went wrong?
 
 ![Le list of images in our project](demozilla-images-list.png)
 
-At first glance, the image we asked for seems to be in the right place... but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
+At first glance, the image we asked for seems to be in the right place but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
 
 ![Deleting the 's'](code-correct.png)
 

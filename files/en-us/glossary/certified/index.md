@@ -15,4 +15,4 @@ For details on certification in {{glossary("Cryptography")}}, please refer to {{
 
 ## See also
 
-- {{Interwiki("wikipedia", "Professional_certification_(computer_technology)#Information_systems_security", "Certification")}} on Wikipedia
+- [Certification](https://en.wikipedia.org/wiki/Professional_certification_(computer_technology)#Information_systems_security) on Wikipedia

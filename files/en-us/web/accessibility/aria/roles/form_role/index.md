@@ -70,7 +70,7 @@ It is recommended to use `<form>` instead.
 
 ```html
 <form id="send-comment" aria-label="Add a comment">
-  ....
+  …
 </form>
 ```
 

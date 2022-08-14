@@ -29,7 +29,7 @@ browser.action.enable(
 
 ### Parameters
 
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. The id of the tab for which you want to enable the browser action.
 
 ## Examples

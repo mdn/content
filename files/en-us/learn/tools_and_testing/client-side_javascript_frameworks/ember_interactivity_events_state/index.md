@@ -37,7 +37,7 @@ At this point we'll start adding some interactivity to our app, providing the ab
         </p>
         <p>
           A deeper understanding of modern JavaScript features (such as classes,
-          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          modules, etc.), will be extremely beneficial, as Ember makes heavy use
           of them.
         </p>
       </td>
@@ -190,7 +190,7 @@ First add another `import` statement below the previous one, to make actions ava
 import { action } from '@ember/object';
 ```
 
-Update the existing `export default class TodoDataService extends Service { … }` block as follows:
+Update the existing `export default class TodoDataService extends Service { }` block as follows:
 
 ```js
 export default class TodoDataService extends Service {
@@ -223,7 +223,7 @@ First of all, the service needs to be injected into the template via the `@injec
 import { inject as service } from '@ember/service';
 ```
 
-With this import in place, we can now make the `todo-data` service available inside the `HeaderComponent` class via the `todos` object, using the `@service` decorator. Add the following line just below the opening `export...` line:
+With this import in place, we can now make the `todo-data` service available inside the `HeaderComponent` class via the `todos` object, using the `@service` decorator. Add the following line just below the opening `export…` line:
 
 ```js
 @service('todo-data') todos;
@@ -274,14 +274,14 @@ get all() {
 
 Now we can access the data using `this.todos.all`, which is much more intuitive. To put this in action, go to your `todo-list.hbs` component, and replace the static component calls:
 
-```js
+```html
 <Todo />
 <Todo />
 ```
 
 With a dynamic `#each` block (which is basically syntactic sugar over the top of JavaScript's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) that creates a `<Todo />` component for each todo available in the list of todos returned by the service's `all()` getter:
 
-```js
+```html
 \{{#each this.todos.all as |todo|}}
   <Todo @todo=\{{todo}} />
 \{{/each}}
@@ -303,7 +303,7 @@ This is because the text label inside each list item is hardcoded to that text, 
 
 Update this line to use the Argument `@todo` — which will represent the Todo that we passed in to this component when it was invoked in `todo-list.hbs`, in the line `<Todo @todo=\{{todo}} />`:
 
-```js
+```html
 <label>\{{@todo.text}}</label>
 ```
 

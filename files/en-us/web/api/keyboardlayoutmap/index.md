@@ -46,9 +46,9 @@ The following example demonstrates how to get the location- or layout-specific s
 ```js
 const keyboard = navigator.keyboard;
 keyboard.getLayoutMap()
-.then(keyboardLayoutMap => {
+.then((keyboardLayoutMap) => {
   const upKey = keyboardLayoutMap.get('KeyW');
-  window.alert('Press ' + upKey + ' to move up.');
+  window.alert(`Press ${upKey} to move up.`);
 })
 ```
 

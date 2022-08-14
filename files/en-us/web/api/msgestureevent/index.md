@@ -14,7 +14,7 @@ browser-compat: api.MSGestureEvent
 
 {{Non-standard_header()}}
 
-The **`MSGestureEvent`** is a proprietary interface specific to Internet Explorer and Microsoft Edge which represents events that occur due to touch gestures. Events using this interface include {{event("MSGestureStart")}}, {{event("MSGestureEnd")}}, {{event("MSGestureTap")}}, {{event("MSGestureHold")}}, {{event("MSGestureChange")}}, and {{event("MSInertiaStart")}}.
+The **`MSGestureEvent`** is a proprietary interface specific to Internet Explorer and Microsoft Edge which represents events that occur due to touch gestures. Events using this interface include {{domxref("Element/MSGestureStart_event", "MSGestureStart")}}, {{domxref("Element/MSGestureEnd_event", "MSGestureEnd")}}, {{domxref("Element/MSGestureTap_event", "MSGestureTap")}}, {{domxref("Element/MSGestureHold_event", "MSGestureHold")}}, {{domxref("Element/MSGestureChange_event", "MSGestureChange")}}, and {{domxref("Element/MSInertiaStart_event", "MSInertiaStart")}}.
 
 `MSGestureEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}. Though the {{domxref("MSGestureEvent.initGestureEvent()")}} method is kept for backward compatibility, the creation of an `MSGestureEvent` object should be done using the {{domxref("MSGestureEvent.MSGestureEvent", "MSGestureEvent()")}} constructor.
 
@@ -57,12 +57,12 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 ## Gesture event types
 
-- {{event("MSGestureStart")}}
-- {{event("MSGestureEnd")}}
-- {{event("MSGestureTap")}}
-- {{event("MSGestureHold")}}
-- {{event("MSGestureChange")}}
-- {{event("MSInertiaStart")}}
+- {{domxref("Element/MSGestureStart_event", "MSGestureStart")}}
+- {{domxref("Element/MSGestureEnd_event", "MSGestureEnd")}}
+- {{domxref("Element/MSGestureTap_event", "MSGestureTap")}}
+- {{domxref("Element/MSGestureHold_event", "MSGestureHold")}}
+- {{domxref("Element/MSGestureChange_event", "MSGestureChange")}}
+- {{domxref("Element/MSInertiaStart_event", "MSInertiaStart")}}
 
 ## Specifications
 
@@ -77,6 +77,6 @@ _Not part of any specification._ Microsoft has [a description on MSDN](<https://
 - WebKit equivalents:
 
   - {{domxref("GestureEvent")}}
-  - {{event("gesturestart")}}
-  - {{event("gesturechange")}}
-  - {{event("gestureend")}}
+  - {{domxref("Element/gesturestart_event", "gesturestart")}}
+  - {{domxref("Element/gesturechange_event", "gesturechange")}}
+  - {{domxref("Element/gestureend_event", "gestureend")}}

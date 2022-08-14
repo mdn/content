@@ -102,12 +102,12 @@ This example shows why it is better to use {{cssxref("&lt;number&gt;")}} values 
 ```html
 <div class="box green">
  <h1>Avoid unexpected results by using unitless line-height.</h1>
-  length and percentage line-heights have poor inheritance behavior ...
+  Length and percentage line-heights have poor inheritance behavior.
 </div>
 
 <div class="box red">
  <h1>Avoid unexpected results by using unitless line-height.</h1>
-  length and percentage line-heights have poor inheritance behavior ...
+  Length and percentage line-heights have poor inheritance behavior
 </div>
 
 <!-- The first <h1> line-height is calculated from its own font-size   (30px × 1.1) = 33px  -->

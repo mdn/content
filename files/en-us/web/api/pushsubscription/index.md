@@ -4,7 +4,6 @@ slug: Web/API/PushSubscription
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Push
   - Push API
@@ -13,7 +12,7 @@ tags:
   - Service Workers
 browser-compat: api.PushSubscription
 ---
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}
 
 The `PushSubscription` interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a subscription's URL endpoint and allows unsubscribing from a push service.
 
@@ -42,11 +41,11 @@ An instance of this interface can be serialized.
 ## Example
 
 ```js
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.getSubscription().then(function(subscription) {
-    subscription.unsubscribe().then(function(successful) {
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.getSubscription().then((subscription) => {
+    subscription.unsubscribe().then((successful) => {
       // You've successfully unsubscribed
-    }).catch(function(e) {
+    }).catch((e) => {
       // Unsubscribing failed
     })
   })

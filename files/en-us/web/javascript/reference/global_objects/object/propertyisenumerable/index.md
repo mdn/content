@@ -87,10 +87,10 @@ function firstConstructor() {
   this.property = 'is not enumerable';
 }
 
-firstConstructor.prototype.firstMethod = function() {};
+firstConstructor.prototype.firstMethod = function () {};
 
 function secondConstructor() {
-  this.method = function() { return 'is enumerable'; };
+  this.method = function () { return 'is enumerable'; };
 }
 
 secondConstructor.prototype = new firstConstructor;

@@ -4,7 +4,6 @@ slug: Web/API/RTCPeerConnectionIceEvent
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - RTCIceCandidateEvent
   - Reference
@@ -39,12 +38,8 @@ _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this 
 ## Examples
 
 ```js
-pc.onicecandidate = function (ev) {
-  alert(
-    "The ICE candidate (transport address: '" +
-      ev.candidate.candidate +
-      "') has been added to this connection."
-  );
+pc.onicecandidate = (ev) => {
+  console.log(`The ICE candidate (trsp addr: '${ev.candidate.candidate}') added to connection.`);
 };
 ```
 

@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.String.matchAll
 
 The **`matchAll()`** method returns an iterator of all results
 matching a _string_ against a _[regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)_,
-including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
+including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
 
 {{EmbedInteractiveExample("pages/js/string-matchall.html")}}
 
@@ -29,14 +29,11 @@ matchAll(regexp)
 
 - `regexp`
 
-  - : A regular expression object.
+  - : A regular expression object, or any object that has a [`Symbol.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll) method.
 
-    If a non-`RegExp` object `obj` is passed, it is
-    implicitly converted to a {{jsxref("RegExp")}} by using
-    `new RegExp(obj)`.
+    If `regexp` is not a `RegExp` object and does not have a `Symbol.matchAll` method, it is implicitly converted to a {{jsxref("RegExp")}} by using `new RegExp(regexp, 'g')`.
 
-    The `RegExp` object must have the `/g` flag, otherwise a
-    `TypeError` will be thrown.
+    If `regexp` is a `RegExp`, it must have the `g` flag, otherwise a {{jsxref("TypeError")}} will be thrown.
 
 ### Return value
 
@@ -48,13 +45,17 @@ Each match is an array (with extra properties `index` and
 array has the matched text as the first item, and then one item for each
 parenthetical capture group of the matched text.
 
+## Description
+
+The implementation of `String.prototype.matchAll` itself is very simple — it simply calls the `Symbol.matchAll` method of the argument with the string as the first parameter. The actual implementation comes from [`RegExp.prototype[@@matchAll]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll).
+
 ## Examples
 
 ### Regexp.exec() and matchAll()
 
 Prior to the addition of `matchAll` to JavaScript, it was possible to use
 calls to [regexp.exec](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)
-(and regexes with the `/g` flag) in a loop to obtain all the matches:
+(and regexes with the `g` flag) in a loop to obtain all the matches:
 
 ```js
 const regexp = new RegExp('foo[a-z]*','g');
@@ -89,7 +90,7 @@ for (const match of matches) {
 
 // matches iterator is exhausted after the for..of iteration
 // Call matchAll again to create a new iterator
-Array.from(str.matchAll(regexp), m => m[0]);
+Array.from(str.matchAll(regexp), (m) => m[0]);
 // Array [ "football", "foosball" ]
 ```
 
@@ -110,7 +111,7 @@ str.matchAll(regexp);
 const regexp = new RegExp('[a-c]','g');
 regexp.lastIndex = 1;
 const str = 'abc';
-Array.from(str.matchAll(regexp), m => `${regexp.lastIndex} ${m[0]}`);
+Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 // Array [ "1 b", "1 c" ]
 ```
 
@@ -120,11 +121,11 @@ Another compelling reason for `matchAll` is the improved access to capture
 groups.
 
 Capture groups are ignored when using {{jsxref("Global_Objects/String/match",
-  "match()")}} with the global `/g` flag:
+  "match()")}} with the global `g` flag:
 
 ```js
-let regexp = /t(e)(st(\d?))/g;
-let str = 'test1test2';
+const regexp = /t(e)(st(\d?))/g;
+const str = 'test1test2';
 
 str.match(regexp);
 // Array ['test1', 'test2']
@@ -133,12 +134,26 @@ str.match(regexp);
 Using `matchAll`, you can access capture groups easily:
 
 ```js
-let array = [...str.matchAll(regexp)];
+const array = [...str.matchAll(regexp)];
 
 array[0];
 // ['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', length: 4]
 array[1];
 // ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
+```
+
+### Using matchAll() with a non-RegExp implementing @@matchAll
+
+If an object has a `Symbol.matchAll` method, it can be used as a custom matcher. The return value of `Symbol.matchAll` becomes the return value of `matchAll()`.
+
+```js
+const str = "Hmm, this is interesting.";
+
+str.matchAll({
+  [Symbol.matchAll](str) {
+    return [["Yes, it's interesting."]];
+  }
+}); // returns [["Yes, it's interesting."]]
 ```
 
 ## Specifications
@@ -154,7 +169,7 @@ array[1];
 - [Polyfill of `String.prototype.matchAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.match()")}}
 - [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [Capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+- [Capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}

@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.caretPositionFromPoint
 ---
-{{APIRef("CSSOM View")}} {{SeeCompatTable}}
+{{APIRef("CSSOM View")}}
 
 The **`caretPositionFromPoint()`**
 property of the {{domxref("Document")}} interface returns a
@@ -66,7 +66,7 @@ function insertBreakAtPoint(e) {
     return;
   }
   // Only split TEXT_NODEs
-  if (textNode && textNode.nodeType == 3) {
+  if (textNode?.nodeType === 3) {
     let replacement = textNode.splitText(offset);
     let br = document.createElement('br');
     textNode.parentNode.insertBefore(br, replacement);

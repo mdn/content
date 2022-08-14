@@ -37,7 +37,7 @@ let gettingSpace = browser.storage.<storageType>.getBytesInUse(
 ### Parameters
 
 - `keys`
-  - : A key (string) or keys (an array of strings) to identify the item(s) whose storage space you want to retrieve. If an array is passed in, 0 will be returned. If you pass `null` or `undefined` here, the function will return the space used by the entire storage area.
+  - : A key (string) or keys (an array of strings) to identify the item(s) whose storage space you want to retrieve. If an empty array is passed in, 0 will be returned. If you pass `null` or `undefined` here, the function will return the space used by the entire storage area.
 
 ### Return value
 

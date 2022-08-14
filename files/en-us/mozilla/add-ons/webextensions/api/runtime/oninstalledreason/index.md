@@ -25,7 +25,7 @@ Values of this type are strings. Possible values are:
   - : The extension was installed.
 - `"update"`
   - : The extension was updated to a new version.
-- `"browser_update"`
+- `"browser_update"` or, for Chrome, `"chrome_update"`
   - : The browser was updated to a new version.
 - `"shared_module_update"`
   - : Another extension, which contains a module used by this extension, was updated.

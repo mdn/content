@@ -18,7 +18,7 @@ The **`ariaLabel`** property of the {{domxref("Element")}} interface reflects th
 
 ## Value
 
-A string.
+A string or `null`.
 
 ## Examples
 

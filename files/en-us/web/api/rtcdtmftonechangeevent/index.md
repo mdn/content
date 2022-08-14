@@ -38,7 +38,7 @@ _Supports the methods defined in {{domxref("Event")}}. There are no additional m
 This snippet is derived loosely from the full, working example you'll find in {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_DTMF", "When a tone finishes playing")}}. It appends each tone to a display box as it's played, and, once all tones have been sent, re-enabled a previously-disabled "Send" button, allowing the next DMTF string to be entered.
 
 ```js
-dtmfSender.addEventListener("change", function(event) {
+dtmfSender.addEventListener("change", (event) => {
   if (event.tone !== "") {
     dialStringBox.innerText += event.tone;
   } else {

@@ -30,7 +30,7 @@ An enumerated value that can be:
 ## Examples
 
 ```js
-if (document.compatMode == "BackCompat") {
+if (document.compatMode === "BackCompat") {
   // in Quirks mode
 }
 ```

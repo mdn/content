@@ -213,7 +213,7 @@ Add the following at the bottom of your CSS:
 .col.span2 { width: 140px; }
 /* Three column widths (180px) plus two gutter widths (40px) */
 .col.span3 { width: 220px; }
-/* And so on... */
+/* And so on… */
 .col.span4 { width: 300px; }
 .col.span5 { width: 380px; }
 .col.span6 { width: 460px; }
@@ -306,7 +306,7 @@ Update the bottom block of CSS rules with the following:
 .col.span2 { width: 14.58333333%; }
 /* Three column widths (18.75%) plus two gutter widths (4.1666666) */
 .col.span3 { width: 22.91666666%; }
-/* And so on... */
+/* And so on… */
 .col.span4 { width: 31.24999999%; }
 .col.span5 { width: 39.58333332%; }
 .col.span6 { width: 47.91666665%; }

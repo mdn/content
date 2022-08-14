@@ -12,7 +12,7 @@ tags:
 ---
 {{jsSidebar("More")}}
 
-As a couple of additions to ECMAScript 2015, **Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
+**Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
 
 There are two protocols: The [iterable protocol](#the_iterable_protocol) and the [iterator protocol](#the_iterator_protocol).
 
@@ -22,9 +22,8 @@ There are two protocols: The [iterable protocol](#the_iterable_protocol) and the
 
 In order to be **iterable**, an object must implement the **`@@iterator`** method, meaning that the object (or one of the objects up its [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) must have a property with a `@@iterator` key which is available via constant {{jsxref("Symbol.iterator")}}:
 
-| Property            | Value                                                                                                           |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `[Symbol.iterator]` | A zero-argument function that returns an object, conforming to the [iterator protocol](#the_iterator_protocol). |
+- `[Symbol.iterator]`
+  - : A zero-argument function that returns an object, conforming to the [iterator protocol](#the_iterator_protocol).
 
 Whenever an object needs to be iterated (such as at the beginning of a {{jsxref("Statements/for...of", "for...of")}} loop), its `@@iterator` method is called with no arguments, and the returned **iterator** is used to obtain the values to be iterated.
 
@@ -38,17 +37,16 @@ This function can be an ordinary function, or it can be a generator function, so
 
 An object is an iterator when it implements a **`next()`** method with the following semantics:
 
-| Property | Value                                                                                                                                                                                                                                                                                          |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `next()` | A function that accepts zero or one argument and returns an object conforming to the `IteratorResult` interface (see below). If a non-object value gets returned (such as `false` or `undefined`) when a built-in language feature (such as `for...of`) is using the iterator, a {{jsxref("TypeError")}} (`"iterator.next() returned a non-object value"`) will be thrown. |
+- `next()`
+  - : A function that accepts zero or one argument and returns an object conforming to the `IteratorResult` interface (see below). If a non-object value gets returned (such as `false` or `undefined`) when a built-in language feature (such as `for...of`) is using the iterator, a {{jsxref("TypeError")}} (`"iterator.next() returned a non-object value"`) will be thrown.
 
 All iterator protocol methods (`next()`, `return()`, and `throw()`) are expected to return an object implementing the `IteratorResult` interface. It must have the following properties:
 
-- `done` (boolean)
-  - : Has the value `false` if the iterator was able to produce the next value in the sequence. (This is equivalent to not specifying the `done` property altogether.)
+- `done` {{optional_inline}}
+  - : A boolean that's `false` if the iterator was able to produce the next value in the sequence. (This is equivalent to not specifying the `done` property altogether.)
 
     Has the value `true` if the iterator has completed its sequence. In this case, `value` optionally specifies the return value of the iterator.
-- `value`
+- `value` {{optional_inline}}
   - : Any JavaScript value returned by the iterator. Can be omitted when `done` is `true`.
 
 In practice, neither property is strictly required; if an object without either property is returned, it's effectively equivalent to `{ done: false, value: undefined }`.
@@ -59,10 +57,10 @@ The `next` method can receive a value which will be made available to the method
 
 Optionally, the iterator can also implement the **`return(value)`** and **`throw(exception)`** methods, which, when called, tells the iterator that the caller is done with iterating it and can perform any necessary cleanup (such as closing database connection).
 
-| Property        | Value                                                                                                                                                                                                  |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `return(value)` | A function that accepts zero or one argument and returns an object conforming to the `IteratorResult` interface, typically with `value` equal to the `value` passed in and `done` equal to `true`. Calling this method tells the iterator that the caller does not intend to make any more `next()` calls and can perform any cleanup actions. |
-| `throw(exception)` | A function that accepts zero or one argument and returns an object conforming to the `IteratorResult` interface, typically with `done` equal to `true`. Calling this method tells the iterator that the caller detects an error condition, and `exception` is typically an {{jsxref("Error")}} instance. |
+- `return(value)` {{optional_inline}}
+  - : A function that accepts zero or one argument and returns an object conforming to the `IteratorResult` interface, typically with `value` equal to the `value` passed in and `done` equal to `true`. Calling this method tells the iterator that the caller does not intend to make any more `next()` calls and can perform any cleanup actions.
+- `throw(exception)` {{optional_inline}}
+  - : A function that accepts zero or one argument and returns an object conforming to the `IteratorResult` interface, typically with `done` equal to `true`. Calling this method tells the iterator that the caller detects an error condition, and `exception` is typically an {{jsxref("Error")}} instance.
 
 > **Note:** It is not possible to know reflectively whether a particular object implements the iterator protocol. However, it is easy to create an object that satisfies _both_ the iterator and iterable protocols (as shown in the example below).
 >
@@ -71,16 +69,34 @@ Optionally, the iterator can also implement the **`return(value)`** and **`throw
 > ```js
 > // Satisfies both the Iterator Protocol and Iterable
 > const myIterator = {
->   next: function () {
+>   next() {
 >     // ...
 >   },
->   [Symbol.iterator]: function () {
+>   [Symbol.iterator] () {
 >     return this;
 >   },
 > };
 > ```
 >
 > However, when possible, it's better for `iterable[Symbol.iterator]` to return different iterators that always start from the beginning, like [`Set.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) does.
+
+## The async iterator and async iterable protocols
+
+There are another pair of protocols used for async iteration, named **async iterator** and **async iterable** protocols. They have very similar interfaces compared to the iterable and iterator protocols, except that each return value from the calls to the iterator methods is wrapped in a promise.
+
+An object implements the async iterable protocol when it implements the following methods:
+
+- [`[Symbol.asyncIterator]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator)
+  - : A zero-argument function that returns an object, conforming to the async iterator protocol.
+
+An object implements the async iterator protocol when it implements the following methods:
+
+- `next()`
+  - : A function that accepts zero or one argument and returns a promise. The promise fulfills to an object conforming to the `IteratorResult` interface, and the properties have the same semantics as those of the sync iterator's.
+- `return(value)` {{optional_inline}}
+  - : A function that accepts zero or one argument and returns a promise. The promise fulfills to an object conforming to the `IteratorResult` interface, and the properties have the same semantics as those of the sync iterator's.
+- `throw(exception)` {{optional_inline}}
+  - : A function that accepts zero or one argument and returns a promise. The promise fulfills to an object conforming to the `IteratorResult` interface, and the properties have the same semantics as those of the sync iterator's.
 
 ## Examples using the iteration protocols
 
@@ -95,7 +111,7 @@ console.log(typeof someString[Symbol.iterator]); // "function"
 
 ```js
 const iterator = someString[Symbol.iterator]();
-console.log(iterator + ""); // "[object String Iterator]"
+console.log(`${iterator}`); // "[object String Iterator]"
 
 console.log(iterator.next()); // { value: "h", done: false }
 console.log(iterator.next()); // { value: "i", done: false }
@@ -117,7 +133,7 @@ const someString = new String("hi");
 someString[Symbol.iterator] = function () {
   return {
     // this is the iterator object, returning a single element (the string "bye")
-    next: function () {
+    next() {
       return this._first
         ? {
             value: "bye",
@@ -136,7 +152,7 @@ Notice how redefining `@@iterator` affects the behavior of built-in constructs t
 
 ```js
 console.log([...someString]); // ["bye"]
-console.log(someString + ""); // "hi"
+console.log(`${someString}`); // "hi"
 ```
 
 ## Iterable examples
@@ -275,7 +291,7 @@ Using one is likely to result in runtime errors or buggy behavior:
 ```js example-bad
 const nonWellFormedIterable = {};
 nonWellFormedIterable[Symbol.iterator] = () => 1;
-[...nonWellFormedIterable]; // TypeError: [] is not a function
+[...nonWellFormedIterable]; // TypeError: [Symbol.iterator]() returned a non-object value
 ```
 
 ## Iterator examples
@@ -286,7 +302,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1;
 function makeIterator(array) {
   let nextIndex = 0;
   return {
-    next: function () {
+    next() {
       return nextIndex < array.length
         ? {
             value: array[nextIndex++],
@@ -312,7 +328,7 @@ console.log(it.next().done); // true
 function idMaker() {
   let index = 0;
   return {
-    next: function () {
+    next() {
       return {
         value: index++,
         done: false,

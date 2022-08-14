@@ -43,10 +43,10 @@ Log the add-on's name:
 
 ```js
 function gotSelf(info) {
-  console.log("Add-on name: " + info.name);
+  console.log(`Add-on name: ${info.name}`);
 }
 
-let gettingSelf = browser.management.getSelf();
+const gettingSelf = browser.management.getSelf();
 gettingSelf.then(gotSelf);
 ```
 

@@ -5,12 +5,11 @@ page-type: web-api-instance-property
 tags:
   - API
   - DOM
-  - Experimental
   - NodeIterator
   - Property
 browser-compat: api.NodeIterator.pointerBeforeReferenceNode
 ---
-{{APIRef("DOM")}} {{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`NodeIterator.pointerBeforeReferenceNode`** read-only
 property returns a boolean flag that indicates whether the
@@ -28,7 +27,7 @@ A boolean.
 const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 flag = nodeIterator.pointerBeforeReferenceNode;
 ```

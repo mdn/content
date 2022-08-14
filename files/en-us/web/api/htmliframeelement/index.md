@@ -47,7 +47,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : A string being the width of the frame margin.
 - {{domxref("HTMLIFrameElement.name")}}
   - : A string that reflects the {{htmlattrxref("name", "iframe")}} HTML attribute, containing a name by which to refer to the frame.
-- {{domxref("HTMLIFrameElement.featurePolicy")}} {{readonlyinline}}{{experimental_inline}}
+- {{domxref("HTMLIFrameElement.featurePolicy")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}} {{experimental_inline}}
   - : A string that reflects the {{htmlattrxref("referrerPolicy", "iframe")}} HTML attribute indicating which referrer to use when fetching the linked resource.

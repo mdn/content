@@ -10,7 +10,7 @@ Animation on the web can be done via {{domxref('SVGAnimationElement', 'SVG')}}, 
 
 For animated media, such as video and animated gifs, the main performance concern is file size - downloading the file fast enough to not negatively impact performance is the greatest issue. Code based animations, be it CSS, SVG, \<canvas>, webGL or other JavaScript animations, can cause performance issues even if the bandwidth footprint is small. These animations can consume CPU and/or cause jank.
 
-Users expect all interface interactions to be smooth and all user interfaces to be responsive. Animation can help make a site feel faster and responsive, but animations can also make a site feel slower and janky if not done correctly. Responsive user interfaces have a frame rate of [60 frames per second (fps)](https://firefox-source-docs.mozilla.org/devtools-user/performance/frame_rate/index.html). While it is not always possible to maintain 60fps, it is important to maintain a high and steady frame rate for all animations.
+Users expect all interface interactions to be smooth and all user interfaces to be responsive. Animation can help make a site feel faster and responsive, but animations can also make a site feel slower and janky if not done correctly. Responsive user interfaces have a frame rate of 60 frames per second (fps). While it is not always possible to maintain 60fps, it is important to maintain a high and steady frame rate for all animations.
 
 With [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) you specify a number of [keyframes](/en-US/docs/Web/CSS/@keyframes), each of which uses CSS to define the appearance of the element at a particular stage of the animation. The browser creates the animation as a transition from each keyframe to the next.
 
@@ -49,8 +49,9 @@ In the context of the rendering waterfall, some properties are more expensive th
         <em>position</em> trigger a style recalculation, a layout and a repaint.
       </td>
       <td>
-        <img alt="" src="recalculate-style.png" />
-        <img alt="" src="layout.png" /> <img alt="" src="paint.png" />
+        <img alt="Recalculate: Yes" src="recalculate-style.png" />
+        <img alt="Does calculate layout" src="layout.png" />
+        <img alt="Does repaint" src="paint.png" />
       </td>
       <td>
         <p>
@@ -75,8 +76,9 @@ In the context of the rendering waterfall, some properties are more expensive th
         </p>
       </td>
       <td>
-        <img alt="" src="recalculate-style.png" />
-        <img alt="" src="layout-faint.png" /> <img alt="" src="paint.png" />
+        <img alt="does recalculate styles " src="recalculate-style.png" />
+        <img alt="No layout" src="layout-faint.png" />
+        <img alt="does repaint" src="paint.png" />
       </td>
       <td>
         <p>
@@ -90,9 +92,9 @@ In the context of the rendering waterfall, some properties are more expensive th
         repaint, because the update is handled in composition.
       </td>
       <td>
-        <img alt="" src="recalculate-style.png" />
-        <img alt="" src="layout-faint.png" />
-        <img alt="" src="paint-faint.png" />
+        <img alt="Does recalculate styles" src="recalculate-style.png" />
+        <img alt="No layout" src="layout-faint.png" />
+        <img alt="No repaint" src="paint-faint.png" />
       </td>
       <td>
         <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code

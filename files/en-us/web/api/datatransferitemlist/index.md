@@ -50,7 +50,7 @@ function dragstart_handler(ev) {
   const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
   // Add some other items to the drag payload
-  dataList.add("<p>... paragraph ...</p>", "text/html");
+  dataList.add("<p>Paragraph…</p>", "text/html");
   dataList.add("http://www.example.org","text/uri-list");
 }
 
@@ -60,20 +60,20 @@ function drop_handler(ev) {
   const data = ev.dataTransfer.items;
   // Loop through the dropped items and log their data
   for (let i = 0; i < data.length; i++) {
-    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
+    if ((data[i].kind === 'string') && (data[i].type.match('^text/plain'))) {
       // This item is the target node
-      data[i].getAsString(function (s){
+      data[i].getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
+    } else if ((data[i].kind === 'string') && (data[i].type.match('^text/html'))) {
       // Drag data item is HTML
-      data[i].getAsString(function (s){
-        console.log("... Drop: HTML = " + s);
+      data[i].getAsString((s) => {
+        console.log(`… Drop: HTML = ${s}`);
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
+    } else if ((data[i].kind === 'string') && (data[i].type.match('^text/uri-list'))) {
       // Drag data item is URI
-      data[i].getAsString(function (s){
-        console.log("... Drop: URI = " + s);
+      data[i].getAsString((s) => {
+        console.log(`… Drop: URI = ${s}`);
       });
     }
   }

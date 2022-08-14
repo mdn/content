@@ -28,9 +28,9 @@ msLaunchUri(uri, successCallback, noHandlerCallback)
 
 - `uri`
   - : A string specifying the URL containing including the protocol of the document or resource to be displayed.
-- `successCallback`{{Optional_Inline}}
+- `successCallback` {{optional_inline}}
   - : A function matching the signature of {{DOMxRef("MSLaunchUriCallback")}} to be executed if the protocol handler is present.
-- `noHandlerCallback`{{Optional_Inline}}
+- `noHandlerCallback` {{optional_inline}}
   - : A function matching {{DOMxRef("MSLaunchUriCallback")}} to be executed if the protocol handler is _not_ present.
 
 ### Return value

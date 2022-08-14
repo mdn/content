@@ -39,7 +39,7 @@ See the [`<area>` element reference page](/en-US/docs/Web/HTML/Element/area) for
 
 For any container whose contents act as a dialog box (for example, a modal dialog asking the user to make a choice or respond to an action being taken), give it a descriptive label or name, so that assistive technology users can easily discover what its purpose is.
 
-A dialog box is generally denoted by an ARIA [`role="dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role); you can use the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) attributes to provide a label.
+A dialog box is generally denoted by an ARIA [`role="dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role); you can use the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attributes to provide a label.
 
 ### Examples
 
@@ -66,9 +66,9 @@ If the dialog box doesn't have a heading, you can instead use `aria-label` to co
 ### See also
 
 - [`role="dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-- [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [WAI-ARIA: dialog role](https://www.w3.org/TR/wai-aria-1.2/#dialog)
 - [Dialog authoring practices](https://www.w3.org/TR/wai-aria-practices/#dialog_roles_states_props)
 
@@ -166,10 +166,10 @@ The form element can be placed inside the {{htmlelement("label")}}, in which cas
 
 ```html
 <label>I agree to the terms and conditions.
-  <input type="checkbox" id="terms">
+  <input type="checkbox" id="terms" name="terms">
 </label>
 
-<input type="checkbox" id="emailoptin">
+<input type="checkbox" id="emailoptin" name="optin">
 <label for="emailoptin">Yes, please send me news about this product.</label>
 ```
 
@@ -181,7 +181,7 @@ In addition to having a {{htmlelement("label")}} for every form element, those l
 
 Frame elements, both {{htmlelement("iframe")}} and the older, obsolete {{htmlelement("frame")}}, must have a title to describe the contents of the frame. Use the `title` attribute to label a frame element. Without a title, users of assistive technologies have to navigate into the frame in order to understand what it contains, which can be difficult and confusing.
 
-The {{HTMLElement('frame')}} element is no longer part of the HTML specification as of HTML5. Support for it may be dropped by browsers in the future. In addition, it is difficult for screen readers to navigate pages with {{HTMLElement('frame')}} elements. For best accessibility and future maintenance, redesign any pages that use frames to use CSS to achieve a similar layout.
+The {{HTMLElement('frame')}} element is no longer part of the HTML specification. Support for it may be dropped by browsers in the future. In addition, it is difficult for screen readers to navigate pages with {{HTMLElement('frame')}} elements. For best accessibility and future maintenance, redesign any pages that use frames to use CSS to achieve a similar layout.
 
 As a best practice, also provide a {{htmlelement("title")}} for the document that is enclosed in the frame, with content identical to the frame's `title` attribute. (This assumes that the enclosed document is under your control; if not, try to match the frame's `title` attribute to the document's title.) Some screen readers replace the contents of the `title` attribute with the contents of the enclosed document's {{htmlelement("title")}}. It's safest and most accessible to provide the same title in both places.
 
@@ -225,7 +225,7 @@ Provide descriptive text for all contentful (that is, non-decorative) images and
 
 ## Interactive elements must be labeled
 
-If an element is intended for users to interact with it, it should have a label. Interactive elements include links ({{htmlelement("a")}}), form elements, buttons, and any element that has a handler for mouse or keyboard events. The way to label an element depends on its type: for form elements, use a {{htmlelement("label")}}; for links, buttons and clickable elements, the text content of the element typically provides the label. If no other option exists for labeling an element, use the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) attribute.
+If an element is intended for users to interact with it, it should have a label. Interactive elements include links ({{htmlelement("a")}}), form elements, buttons, and any element that has a handler for mouse or keyboard events. The way to label an element depends on its type: for form elements, use a {{htmlelement("label")}}; for links, buttons and clickable elements, the text content of the element typically provides the label. If no other option exists for labeling an element, use the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute.
 
 ## Use label attribute on optgroup elements
 
@@ -253,7 +253,7 @@ In this example, the `label` attribute on the {{HTMLElement('optgroup')}} elemen
 
 ## Toolbars must be labeled when there is more than one toolbar
 
-If you define more than one toolbar in a web application using the ARIA `toolbar` role, you must use the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) attribute to label each one so that it can be described by assistive technology. It is a good practice to label a toolbar, even if there is only one per page.
+If you define more than one toolbar in a web application using the ARIA `toolbar` role, you must use the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute to label each one so that it can be described by assistive technology. It is a good practice to label a toolbar, even if there is only one per page.
 
 ### See also
 
