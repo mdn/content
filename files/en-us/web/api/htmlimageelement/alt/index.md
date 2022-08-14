@@ -27,7 +27,7 @@ This
 may be the case because of an error, because the user has disabled the loading of
 images, or because the image hasn't finished loading yet.
 
-Perhaps the most important reason to use the `alt` attribute is to support [accessibility](/en-US/docs/Web/Accessibility), as the `alt` text
+Perhaps the most important reason to use the `alt` property is to support [accessibility](/en-US/docs/Web/Accessibility), as the `alt` text
 may be used by screen readers and other assistive technologies to help differently-abled
 users make full use of your content. It will be read aloud or sent to the touch device,
 for example, to support visually impaired users.
