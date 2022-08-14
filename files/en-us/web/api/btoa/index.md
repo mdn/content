@@ -88,7 +88,7 @@ function toBinary(string) {
   
   let result = "";
   charCodes.forEach((char) => {
-    result += String.fromCharCode(charCodes[i]);
+    result += String.fromCharCode(char);
   });
   return result;
 }
