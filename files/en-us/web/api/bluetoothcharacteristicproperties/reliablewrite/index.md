@@ -24,7 +24,7 @@ is permitted.
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Specifications
 
