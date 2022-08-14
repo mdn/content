@@ -28,7 +28,7 @@ A string representing the given date.
 
 ## Description
 
-The {{jsxref("Date")}} object overrides the `toString` method of {{jsxref("Object")}}.
+The {{jsxref("Date")}} object overrides the `toString()` method of {{jsxref("Object")}}.
 `Date.prototype.toString()` returns a string representation of the Date in
 the format specified in ECMA-262 which can be summarized as:
 
