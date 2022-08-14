@@ -12,7 +12,7 @@ tags:
 
 ## Syntax
 
-```js
+```plain
 regexp:replace(originalString, regExpString, flagsString, replaceString)
 ```
 

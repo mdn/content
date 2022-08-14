@@ -14,7 +14,7 @@ To compute the maximum value of the node-set, the node set is sorted into descen
 
 ## Syntax
 
-```js
+```plain
 math:max(nodeSet)
 ```
 
