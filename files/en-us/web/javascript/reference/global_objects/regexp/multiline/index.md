@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.RegExp.multiline
 
 The **`multiline`** accessor property indicates whether or not the `m` flag is used with the regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}
+{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}
 
 ## Description
 
