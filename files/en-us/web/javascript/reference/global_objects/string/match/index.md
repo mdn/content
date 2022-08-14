@@ -80,7 +80,7 @@ console.log(found);
 
 ### Using global and ignoreCase flags with match()
 
-The following example demonstrates the use of the global and ignore case flags with `match()`. All letters `A` through `E` and `a` through `e` are returned, each its own element in the array.
+The following example demonstrates the use of the global flag and ignore-case flag with `match()`. All letters `A` through `E` and `a` through `e` are returned, each its own element in the array.
 
 ```js
 const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
