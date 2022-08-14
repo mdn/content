@@ -33,7 +33,6 @@ const areas = document.getElementsByTagName("area");
 const length = areas.length;
 
 for (const area of areas) {
-  const list = area.relList;
   console.log("New area found.");
   area.relList.forEach((relValue) => {
     console.log(relValue);
