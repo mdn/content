@@ -54,7 +54,7 @@ For more information about the semantics of `match()` when a regex is passed, se
 
 ### Using match()
 
-In the following example, `match()` is used to find `"Chapter"` followed by 1 or more numeric characters followed by a decimal point and numeric character 0 or more times.
+In the following example, `match()` is used to find `"Chapter"` followed by one or more numeric characters followed by a decimal point and numeric character zero or more times.
 
 The regular expression includes the `i` flag so that upper/lower case differences will be ignored.
 
