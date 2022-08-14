@@ -9,7 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.unloadEventStart
 ---
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{APIRef("Navigation Timing")}}
 
 The **`unloadEventStart`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the

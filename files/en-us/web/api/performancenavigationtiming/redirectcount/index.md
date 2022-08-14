@@ -9,7 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.redirectCount
 ---
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{APIRef("Navigation Timing")}}
 
 The **`redirectCount`** property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the number of redirects

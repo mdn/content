@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Commerce
-  - Experimental
   - Method
   - Payment Request
   - Payment Request API
