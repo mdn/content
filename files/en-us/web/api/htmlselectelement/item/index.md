@@ -51,9 +51,9 @@ item(index)
 
 ### JavaScript
 
-```css
+```js
 // Returns the HTMLOptionElement representing #o2
-elem1 = document.forms[0]['myFormControl'][1];
+elem1 = document.forms[0]["myFormControl"][1];
 ```
 
 ## Specifications

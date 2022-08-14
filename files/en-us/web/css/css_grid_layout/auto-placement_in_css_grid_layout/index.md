@@ -446,7 +446,7 @@ Having done this, grid will now backfill the gaps, as it moves through the grid 
 
 There is a mention in the specification of anonymous grid items. These are created if you have a string of text inside your grid container, that is not wrapped in any other element. In the example below we have three grid items, assuming you had set the parent with a class of `grid` to `display: grid`. The first is an anonymous item as it has no enclosing markup, this item will always be dealt with via the auto-placement rules. The other two are grid items enclosed in a div, they might be auto-placed or you could place these with a positioning method onto your grid.
 
-```css
+```html
 <div class="grid">
   I am a string and will become an anonymous item
   <div>A grid item</div>

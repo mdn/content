@@ -61,7 +61,7 @@ Pre-defined keywords are text values defined by the specification for that prope
 
 When viewing CSS property value syntax in a CSS specification or the MDN property page, allowable keywords will be listed in the following form. The following values are the pre-defined keyword values allowed for {{cssxref("float")}}.
 
-```css
+```plain
 left | right | none | inline-start | inline-end
 ```
 

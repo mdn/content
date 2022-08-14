@@ -20,10 +20,14 @@ A string.
 
 ## Examples
 
-```css
-let fontFace = new FontFace('Roboto', 'url(https://fonts.example.com/roboto.woff2)', {'ascentOverride':'90%'});
+```js
+let fontFace = new FontFace(
+  "Roboto",
+  "url(https://fonts.example.com/roboto.woff2)",
+  { ascentOverride: "90%" }
+);
 console.log(fontFace.ascentOverride); // 90%
-fontFace.ascentOverride = 'normal';
+fontFace.ascentOverride = "normal";
 console.log(fontFace.ascentOverride); // 'normal'
 ```
 
