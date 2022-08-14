@@ -81,7 +81,7 @@ cookie ==> This is a demo cookie
 
 ## See also
 
-- [Map.forEach](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)
+- [`Map.prototype.forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
