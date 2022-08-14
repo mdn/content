@@ -804,20 +804,22 @@ can respond to the change).
 ### Memory issues
 
 ```js
-const els = document.getElementsByTagName('*');
+const elts = document.getElementsByTagName('*');
 
 // Case 1
-for (let i = 0; i < els.length; i++){
-  els[i].addEventListener("click", (e) => {/*do something*/}, false);
+for (const elt of elts) {
+  elt.addEventListener("click", (e) => {
+    // Do something
+  }, false);
 }
 
 // Case 2
 function processEvent(e){
-  /* do something */
+  // Do something
 }
 
-for (let i = 0 ; i < els.length; i++){
-  els[i].addEventListener("click", processEvent, false);
+for (const elt of elts) {
+  elt.addEventListener("click", processEvent, false);
 }
 ```
 

@@ -302,10 +302,10 @@ Tying it all together is the JavaScript to draw our framed images:
 function draw() {
 
   // Loop through all images
-  for (let i = 0; i < document.images.length; i++) {
+  for (const image of document.images) {
 
     // Don't add a canvas for the frame image
-    if (document.images[i].getAttribute('id') !== 'frame') {
+    if (image.getAttribute('id') !== 'frame') {
 
       // Create canvas element
       canvas = document.createElement('canvas');
@@ -313,12 +313,12 @@ function draw() {
       canvas.setAttribute('height', 150);
 
       // Insert before the image
-      document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+      image.parentNode.insertBefore(image);
 
       ctx = canvas.getContext('2d');
 
       // Draw image to canvas
-      ctx.drawImage(document.images[i], 15, 20);
+      ctx.drawImage(image, 15, 20);
 
       // Add frame
       ctx.drawImage(document.getElementById('frame'), 0, 0);

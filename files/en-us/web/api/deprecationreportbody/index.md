@@ -52,12 +52,12 @@ This interface also inherits methods from {{domxref("ReportBody")}}.
 In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver((reports, observer) => {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```
@@ -80,9 +80,9 @@ function displayReports(reports) {
   const list = document.createElement('ul');
   outputElem.appendChild(list);
 
-  for (let i = 0; i < reports.length; i++) {
+  reports.forEach((report, i) => {
     const listItem = document.createElement('li');
-    const textNode = document.createTextNode(`Report ${i + 1}, type: ${reports[i].type}`);
+    const textNode = document.createTextNode(`Report ${i + 1}, type: ${report.type}`);
     listItem.appendChild(textNode);
     const innerList = document.createElement('ul');
     listItem.appendChild(innerList);

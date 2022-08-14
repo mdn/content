@@ -43,10 +43,10 @@ This example shows the use of the `clear()` method.
 
 ```html
  <div>
-   <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+   <p id="source" ondragstart="dragstartHandler(event);" ondragend="dragendHandler(event);" draggable="true">
      Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
  </div>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+ <div id="target" ondrop="dropHhandler(event);" ondragover="dragoverHandler(event);">Drop Zone</div>
 ```
 
 #### CSS
@@ -68,55 +68,52 @@ This example shows the use of the `clear()` method.
 #### JavaScript
 
 ```js
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   console.log("dragStart");
+
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
-  let dataList = ev.dataTransfer.items;
+  const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
-  // Add some other items to the drag payload
-  dataList.add("<p>Paragraph…</p>", "text/html");
-  dataList.add("http://www.example.org","text/uri-list");
 }
 
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  const data = event.dataTransfer.items;
+
   // Loop through the dropped items and log their data
-  for (let i = 0; i < data.length; i++) {
-    if ((data[i].kind === 'string') && (data[i].type.match('^text/plain'))) {
+  for (const item of ev.dataTransfer.items) {
+    if ((item.kind === 'string') && (item.type.match('^text/plain'))) {
       // This item is the target node
-      data[i].getAsString((s) => {
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind === 'string') && (data[i].type.match('^text/html'))) {
+    } else if ((item.kind === 'string') && (item.type.match('^text/html'))) {
       // Drag data item is HTML
-      data[i].getAsString((s) => {
+      item.getAsString((s) => {
         console.log(`… Drop: HTML = ${s}`);
       });
-    } else if ((data[i].kind === 'string') && (data[i].type.match('^text/uri-list'))) {
+    } else if ((item.kind === 'string') && (item.type.match('^text/uri-list'))) {
       // Drag data item is URI
-      data[i].getAsString((s) => {
+      ditem.getAsString((s) => {
         console.log(`… Drop: URI = ${s}`);
       });
     }
   }
 }
 
-function dragover_handler(ev) {
+function dragoverHandler(ev) {
   console.log("dragOver");
   ev.preventDefault();
+
   // Set the dropEffect to move
   ev.dataTransfer.dropEffect = "move"
 }
 
-function dragend_handler(ev) {
+function dragendHandler(ev) {
   console.log("dragEnd");
   const dataList = ev.dataTransfer.items;
-  for (let i = 0; i < dataList.length; i++) {
-    dataList.remove(i);
-  }
+  
   // Clear any remaining drag data
   dataList.clear();
 }
@@ -125,8 +122,6 @@ function dragend_handler(ev) {
 #### Result
 
 {{EmbedLiveSample('Examples', 400, 300)}}
-
-{{LiveSampleLink('Examples','Result link')}}
 
 ## Specifications
 
