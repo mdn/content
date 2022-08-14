@@ -58,19 +58,19 @@ The following code logs a line for each key/value in Headers object.
 ```js
 // Create a new test Headers object
 const myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json")
-myHeaders.append("Cookie", "This is a demo cookie")
-myHeaders.append("compression", "gzip")
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Cookie", "This is a demo cookie");
+myHeaders.append("compression", "gzip");
 
 // Display the key/value pairs
-myHeaders.forEach((value, key)=> {
-    console.log(`${key} ==> ${value}`)
+myHeaders.forEach((value, key) => {
+  console.log(`${key} ==> ${value}`);
 })  
 ```
 
 The result is:
 
-```text
+```
 compression ==> gzip
 content-type ==> application/json
 cookie ==> This is a demo cookie
