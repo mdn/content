@@ -238,7 +238,7 @@ function addClientRectsOverlay(elt) {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
   const elts = document.getElementsByClassName('withClientRectsOverlay');
-  for (const elt of elts.length) {
+  for (const elt of elts) {
     addClientRectsOverlay(elt);
   }
 })();
