@@ -355,7 +355,7 @@ For example:
   **Result**: `updateDoneStatus()` method invoked to update done status of associated todo item.
 - `item-deleted` event emitted by the `deleteToDo()` method inside the `ToDoItem` component when the "Delete" button is pressed.
   **Result**: `deleteToDo()` method invoked to delete associated todo item.
-- `item-edited` event emitted by the `itemEdited()` method inside the `ToDoItem` component when the `item-edited` event emitted by the `onSubmit()` method inside the `ToDoItemEditForm` has been successfully listened for. Yes, this is a chain of two different `item-edit` events!
+- `item-edited` event emitted by the `itemEdited()` method inside the `ToDoItem` component when the `item-edited` event emitted by the `onSubmit()` method inside the `ToDoItemEditForm` has been successfully listened for. Yes, this is a chain of two different `item-edited` events!
   **Result**: `editToDo()` method invoked to update label of associated todo item.
 
 **ToDoForm.vue**
@@ -372,7 +372,7 @@ For example:
 **Result**: `toggleToItemEditForm()` method is invoked, which toggles `this.isEditing` to `true`, which in turn displays the todo item's edit form on re-render.
 
 "Delete" `<button>` listens for `click` event.
-**Result**: `deleteToDo()` method is invoked, which emits the `item-deleted` event (which is then listened for inside `App.vue`; see above)
+**Result**: `deleteToDo()` method is invoked, which emits the `item-deleted` event (which is then listened for inside `App.vue`; see above).
 
 `<to-do-item-edit-form>` listens for:
 
