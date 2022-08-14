@@ -54,7 +54,7 @@ When using `exec()`, the global flag has no effect when the sticky flag is set â
 
 - If you only care whether the regex matches a string, but not what is actually being matched, use {{jsxref("RegExp.prototype.test()")}} instead.
 - If you are finding all occurrences of a global regex and you don't care about information like capturing groups, use {{jsxref("String.prototype.match()")}} instead. In addition, {{jsxref("String.prototype.matchAll()")}} helps to simplify matching multiple parts of a string (with capture groups) by allowing you to iterate over the matches.
-- If you are executing a match to find its index position in the string, use {{jsxref("String.prototype.search()")}} method instead.
+- If you are executing a match to find its index position in the string, use the {{jsxref("String.prototype.search()")}} method instead.
 
 ## Examples
 
