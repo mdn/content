@@ -312,8 +312,11 @@ function tetheredGetNumber(resolve, reject) {
   setTimeout(() => {
     const randomInt = Date.now();
     const value = randomInt % 10;
-    if (value < THRESHOLD_A) resolve(value);
-    else reject(`Too large: ${value}`);
+    if (value < THRESHOLD_A) {
+      resolve(value);
+    } else {
+      reject(`Too large: ${value}`);
+    }
   }, 500);
 }
 
