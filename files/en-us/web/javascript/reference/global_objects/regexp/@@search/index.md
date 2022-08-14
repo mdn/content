@@ -63,7 +63,7 @@ This method exists for customizing the search behavior in `RegExp` subclasses.
 
 ### Direct call
 
-This method can be used in almost the same way as {{jsxref("String.prototype.search()")}}, except the different `this` and the different arguments order.
+This method can be used in almost the same way as {{jsxref("String.prototype.search()")}}, except for the different value of `this` and the different arguments order.
 
 ```js
 const re = /-/g;
