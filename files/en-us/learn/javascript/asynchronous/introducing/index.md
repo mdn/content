@@ -91,38 +91,40 @@ The program below uses a very inefficient algorithm to generate multiple large p
 ```
 
 ```js
-function generatePrimes(quota) {
+const MAX_PRIME = 1000000;
 
-  function isPrime(n) {
-    for (let c = 2; c <= Math.sqrt(n); ++c) {
-      if (n % c === 0) {
-          return false;
-       }
+function isPrime(n) {
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
     }
-    return true;
   }
+  return n > 1;
+}
 
+const random = (max) => Math.floor(Math.random() * max);
+
+function generatePrimes(quota) {
   const primes = [];
-  const maximum = 1000000;
-
   while (primes.length < quota) {
-    const candidate = Math.floor(Math.random() * (maximum + 1));
+    const candidate = random(MAX_PRIME);
     if (isPrime(candidate)) {
       primes.push(candidate);
     }
   }
-
   return primes;
 }
 
+const quota = document.querySelector('#quota');
+const output = document.querySelector('#output');
+
 document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
-  const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+  const primes = generatePrimes(quota.value);
+  output.textContent = `Finished generating ${quota.value} primes!`;
 });
 
 document.querySelector('#reload').addEventListener('click', () => {
-  document.location.reload()
+  document.location.reload();
 });
 ```
 
@@ -158,38 +160,39 @@ textarea {
 ```
 
 ```js hidden
-function generatePrimes(quota) {
+const MAX_PRIME = 1000000;
 
-  function isPrime(n) {
-    for (let c = 2; c <= Math.sqrt(n); ++c) {
-      if (n % c === 0) {
-          return false;
-       }
+function isPrime(n) {
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
     }
-    return true;
   }
+  return n > 1;
+}
 
+const random = (max) => Math.floor(Math.random() * max);
+
+function generatePrimes(quota) {
   const primes = [];
-  const maximum = 1000000;
-
   while (primes.length < quota) {
-    const candidate = Math.floor(Math.random() * (maximum + 1));
+    const candidate = random(MAX_PRIME);
     if (isPrime(candidate)) {
       primes.push(candidate);
     }
   }
-
   return primes;
 }
 
+const quota = document.querySelector('#quota');
+const output = document.querySelector('#output');
+
 document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
-  const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+  const primes = generatePrimes(quota.value);
+  output.textContent = `Finished generating ${quota.value} primes!`;
 });
 
 document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -310,7 +313,6 @@ function doOperation() {
       });
     });
   });
-
 }
 
 doOperation();
