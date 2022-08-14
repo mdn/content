@@ -13,7 +13,7 @@ tags:
   - controllerchange
 browser-compat: api.ServiceWorkerContainer.controllerchange_event
 ---
-{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
+{{APIRef("Service Workers API")}}
 
 The **`controllerchange`** event of the
 {{domxref("ServiceWorkerContainer")}} interface fires when the document's associated
