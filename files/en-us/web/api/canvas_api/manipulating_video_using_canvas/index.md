@@ -130,7 +130,7 @@ The `computeFrame()` method, shown below, is responsible for actually fetching a
     const frame = this.ctx1.getImageData(0, 0, this.width, this.height);
     const data = frame.data;
 
-    for (let i = 0; i < frame.data.length; i += 4) {
+    for (let i = 0; i < data.length; i += 4) {
       const red = data[i + 0];
       const green = data[i + 1];
       const blue = data[i + 2];
