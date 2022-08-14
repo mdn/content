@@ -57,7 +57,7 @@ When animated, a point's abscissa and ordinate values are interpolated independe
 
 ### Valid positions
 
-```css example-good
+```plain example-good
 center
 left
 center top

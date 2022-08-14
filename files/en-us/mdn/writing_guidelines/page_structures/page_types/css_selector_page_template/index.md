@@ -44,14 +44,14 @@ browser-compat: css.selectors.NameOfTheSelector
 >
 >     Include the following tags as appropriate:
 >     - Type of selector: **Layout**, **Basic Selectors**, **Combinators**, **Pseudo-classes**, **Pseudo-elements**
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
+>     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)).
 >     - Any other tags that represent terms people might search for related to the technology.
 > - **browser-compat**
 >   - : Replace the placeholder value <code>css.selectors.NameOfTheSelector</code> with the query string for the selector in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
 >     The toolchain automatically uses the key to populate the compatibility and specifications sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros in those sections, respectively).
 >
 >     Note that you may first need to create/update an entry for the selector and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.
->     See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
+>     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
 > ---
 >
@@ -60,10 +60,10 @@ browser-compat: css.selectors.NameOfTheSelector
 > A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
 > You should update or delete them according to the advice below:
 >
-> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental).
+> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology you are documenting is not experimental, you can remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete).
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
 >   If it isn't, then you can remove the macro call.
 > - `\{{CSSRef}}` — this must be present on every CSS selector page. It generates a suitable CSS sidebar, depending on what tags are included on the page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
@@ -96,7 +96,7 @@ The summary paragraph — start by naming the selector and saying what it does. 
 
 Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
-See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
+See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
 > **Note:** Sometimes you will want to link to examples given on another page.
 >

@@ -42,7 +42,7 @@ perfectly in accordance with all of these points immediately. It is more
 important to make sure the content is readable, useful, correct, and not
 inappropriate, than it is to follow every guideline to the letter.
 
-1. Familiarize yourself with the [MDN Code example guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines)
+1. Familiarize yourself with the [MDN Code example guidelines](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
    and make sure that code examples follow the guidelines. You'll get used to
    them eventually, and we are intending to automatically lint against our
    guidelines at some point in the future.
@@ -134,7 +134,7 @@ then don't review the pull request — just wait for an approval request.
 The following specific topic areas are being reviewed by the kind souls listed
 underneath them. Be kind to them, and thank them for all the help they give
 to this project. If you would like to help with MDN content reviews,
-[get in touch with us](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#Step_4_Ask_for_help).
+[get in touch with us](https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#Step_4_Ask_for_help).
 
 Note that changes to any content areas not explicitly listed below will be
 handled by the [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content)
