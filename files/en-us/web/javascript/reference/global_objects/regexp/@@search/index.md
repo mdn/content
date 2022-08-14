@@ -74,7 +74,7 @@ console.log(result);  // 4
 
 ### Using @@search in subclasses
 
-Subclass of {{jsxref("RegExp")}} can override `[@@search]()` method to modify the behavior.
+Subclasses of {{jsxref("RegExp")}} can override `[@@search]()` method to modify the behavior.
 
 ```js
 class MyRegExp extends RegExp {
