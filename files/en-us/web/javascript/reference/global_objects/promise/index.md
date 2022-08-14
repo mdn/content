@@ -300,7 +300,7 @@ This example shows diverse techniques for using Promise capabilities and diverse
 
 The example function `tetheredGetNumber()` shows that a promise generator will utilize `reject()` while setting up an asynchronous call, or within the call-back, or both. The function `promiseGetWord()` illustrates how an API function might generate and return a promise in a self-contained manner.
 
-Note that the function `troubleWithGetNumber()` ends with a `throw`. That is forced because a promise chain goes through all the `.then()` promises, even after an error, and without the `throw`, the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `rejectionFunc` throughout the chain of `.then()` promises, and just have a single `rejectionFunc` in the final `catch()`. The alternative is to throw a special value (in this case "-999", but a custom Error type would be more appropriate).
+Note that the function `troubleWithGetNumber()` ends with a `throw`. That is forced because a promise chain goes through all the `.then()` promises, even after an error, and without the `throw`, the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `rejectionFunc` throughout the chain of `.then()` promises, and just have a single `rejectionFunc` in the final `catch()`.
 
 This code can be run under NodeJS. Comprehension is enhanced by seeing the errors actually occur. To force more errors, change the `threshold` values.
 
@@ -312,10 +312,10 @@ function tetheredGetNumber(resolve, reject) {
   setTimeout(() => {
     const randomInt = Date.now();
     const value = randomInt % 10;
-    if (value >= THRESHOLD_A) {
-      reject(`Too large: ${value}`);
-    } else {
+    if (value < THRESHOLD_A) {
       resolve(value);
+    } else {
+      reject(`Too large: ${value}`);
     }
   }, 500);
 }
@@ -326,8 +326,9 @@ function determineParity(value) {
 }
 
 function troubleWithGetNumber(reason) {
-  console.error(`Trouble getting number: ${reason}`);
-  throw -999; // must "throw" something, to maintain error state down the chain
+  const err = new Error("Trouble getting number", { cause: reason });
+  console.error(err);
+  throw err;
 }
 
 function promiseGetWord(parityInfo) {
@@ -350,7 +351,7 @@ new Promise(tetheredGetNumber)
     return info;
   })
   .catch((reason) => {
-    if (reason === -999) {
+    if (reason.cause) {
       console.error("Had previously handled error");
     } else {
       console.error(`Trouble with promiseGetWord(): ${reason}`);
@@ -378,6 +379,7 @@ By clicking the button several times in a short amount of time, you'll even see 
 
 ```js
 "use strict";
+
 let promiseCount = 0;
 
 function testPromise() {
@@ -385,16 +387,18 @@ function testPromise() {
   const log = document.getElementById("log");
   // begin
   log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Started<br>`);
-  // We make a new promise: we promise a numeric count of this promise, starting from 1 (after waiting 3s)
+  // We make a new promise: we promise a numeric count of this promise,
+  // starting from 1 (after waiting 3s)
   const p1 = new Promise((resolve, reject) => {
-    // The executor function is called with the ability to resolve or reject the promise
+    // The executor function is called with the ability
+    // to resolve or reject the promise
     log.insertAdjacentHTML(
       "beforeend",
       `${thisPromiseCount}) Promise constructor<br>`
     );
     // This is only an example to create asynchronism
     setTimeout(() => {
-      // We fulfill the promise !
+      // We fulfill the promise
       resolve(thisPromiseCount);
     }, Math.random() * 2000 + 1000);
   });
