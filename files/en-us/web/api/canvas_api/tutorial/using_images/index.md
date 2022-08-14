@@ -313,7 +313,7 @@ function draw() {
       canvas.setAttribute('height', 150);
 
       // Insert before the image
-      image.parentNode.insertBefore(image);
+      image.parentNode.insertBefore(canvas, image);
 
       ctx = canvas.getContext('2d');
 
