@@ -76,7 +76,7 @@ If an iterable's `@@iterator` method does not return an iterator object, then it
 ```js example-bad
 const nonWellFormedIterable = {}
 nonWellFormedIterable[Symbol.iterator] = () => 1
-[...nonWellFormedIterable] // TypeError: [] is not a function
+[...nonWellFormedIterable] // TypeError: [Symbol.iterator]() returned a non-object value
 ```
 
 ## Specifications
