@@ -3,7 +3,6 @@ title: RTCIceServer.username
 slug: Web/API/RTCIceServer/username
 page-type: web-api-instance-property
 tags:
-  - Experimental
   - Property
   - RTCIceServer
   - Reference

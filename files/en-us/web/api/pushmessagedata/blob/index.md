@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Blob
-  - Experimental
   - Method
   - Push
   - PushMessageData

@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
-  - Experimental
   - Property
   - Push
   - Push API

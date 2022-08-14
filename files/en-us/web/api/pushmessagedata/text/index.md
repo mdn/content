@@ -4,7 +4,6 @@ slug: Web/API/PushMessageData/text
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Plain text
   - Push
