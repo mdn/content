@@ -108,7 +108,9 @@ const generatePrimes = (quota) => {
   const primes = [];
   while (primes.length < quota) {
     const candidate = random(MAX_PRIME);
-    if (isPrime(candidate)) primes.push(candidate);
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
   }
   return primes;
 };
