@@ -19,7 +19,7 @@ boolean value that indicates if the <kbd>shift</kbd> key was pressed
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Examples
 

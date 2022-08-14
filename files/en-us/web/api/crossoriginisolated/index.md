@@ -20,7 +20,7 @@ This value is dependent on any {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Examples
 
