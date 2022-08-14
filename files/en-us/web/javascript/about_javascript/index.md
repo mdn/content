@@ -42,8 +42,8 @@ Another common application for JavaScript is as a (Web) server side scripting la
 
 ## JavaScript resources
 
-- [Language resources](/en-US/docs/Web/JavaScript/Language_Resources)
-  - : Pointers to published JavaScript standards.
+- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview)
+  - : Pointers to published JavaScript standards and relevant resources.
 - [A re-introduction to JavaScript](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
   - : [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 
