@@ -229,7 +229,7 @@ function labelPoint(p, offset, i = 0) {
 
 function drawPoints(points) {
   points.forEach((p, i) => {
-    labelPoint(p, { x: 0, y: -20 } , i)
+    labelPoint(p, { x: 0, y: -20 }, i)
   });
 }
 
