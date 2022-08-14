@@ -6,7 +6,9 @@ tags:
   - JavaScript
 ---
 
-An **execution context** is the environment in which Javascript code executes. It consists of the {{glossary("scope")}}, the information that links a variable name with the actual variable storing data, and of the binding of the {{jsxref("this")}} reference, the object `this` refers to.
+In JavaScript, you write some code and it gets interpreted by the JS engine. To understand what happens behind the scenes, you need to have an understanding of `Execution Context`. 
+
+An **Execution Context** is the environment in which Javascript code executes. It consists of the {{glossary("scope")}}, the information that links a variable name with the actual variable storing data, and of the binding of the {{jsxref("this")}} reference, the object `this` refers to.
 
 When running, the JavaScript engine initially creates the _global execution context_, then a new context is created for each function or `eval` call.
 
@@ -32,12 +34,9 @@ const square4 = square(4);
 
 Before the Javascript Code starts executing, memory will be allocated to all the variable(s) and function(s). This phase is known as Memory creation Phase.
 
-| Memory Component                                  | Code Component    | 
-| --------------------------------------------------| :----------------:| 
-| n : undefined                                     |                   | 
-| square: f() { var ans = num* num; return ans}     |                   |  
-| square2: undefined                                |                   |
-| square4: undefined                                |                   |
+
+<img width="557" alt="Screenshot 2022-08-14 at 2 13 02 PM" src="https://user-images.githubusercontent.com/41745320/184529394-3a29808a-562c-4668-a2d3-d87e150e1e94.png">
+
 
 For variable(s), key is the variable name itself and value is undefined (even if the variable is initialized).
 For function(s), key is the function name and value is body of the code.
@@ -49,98 +48,32 @@ It starts assigning the values to the variables in memory.
 Code Component is also called as `Thread of Execution`
 
 
-
-| Memory Component                                  | Code Component    | 
-| --------------------------------------------------| :----------------:| 
-| n : 2                                             |                   | 
-| square: f() { var ans = num* num; return ans}     |                   |  
-| square2: undefined                                |                   |
-| square4: undefined                                |                   |
+<img width="791" alt="Screenshot 2022-08-14 at 2 18 05 PM" src="https://user-images.githubusercontent.com/41745320/184529515-82a6a2f1-4810-44c3-ab68-99083b2ef999.png">
 
 
-
-
-| Memory Component                                  |                   Code Component                | 
-| --------------------------------------------------| :----------------------------------------------:| 
-| n : 2                                             |                                                 | 
-| square: f() { var ans = num* num; return ans}     |   ------------------------------------------|   |
-| square2: undefined                                |   | __memory___________ |_______code_______ |   |
-| square4: undefined                                |   |                     |                   |   |
-|                                                   |   |       num = 2       |                   |   |
-|                                                   |   |       ans = 4       |      return ans   |   |
-|                                                   |   | ________________________________________|   |   
-|                                                   |                                                 |
--------------------------------------------------------------------------------------------------------
-
-
-
-
-| Memory Component                                  |                   Code Component                | 
-| --------------------------------------------------| :----------------------------------------------:| 
-| n : 2                                             |                                                 | 
-| square: f() { var ans = num* num; return ans}     |   ------------------------------------------|   |
-| square2: 4                                        |   | __memory___________ |_______code_______ |   |
-| square4: undefined                                |   |                     |                   |   |
-|                                                   |   |       num = 2       |                   |   |
-|                                                   |   |       ans = 4       |      return ans   |   |
-|                                                   |   | ________________________________________|   |   
-|                                                   |                                                 |
--------------------------------------------------------------------------------------------------------
-
+<img width="781" alt="Screenshot 2022-08-14 at 2 20 24 PM" src="https://user-images.githubusercontent.com/41745320/184529581-53b070f4-3100-46ce-a7bd-dd3d11a63375.png">
 
 
 #### Now, the Execution context inside the code component of Global Execution context gets deleted.
 
+<img width="595" alt="Screenshot 2022-08-14 at 2 23 56 PM" src="https://user-images.githubusercontent.com/41745320/184529679-b084aae1-a88b-4c20-8df8-c62c4b72875d.png">
 
-
-| Memory Component                                  | Code Component    | 
-| --------------------------------------------------| :----------------:| 
-| n : 2                                             |                   | 
-| square: f() { var ans = num* num; return ans}     |                   |  
-| square2: 4                                        |                   |
-| square4: undefined                                |                   |
 
 
 Now, again the execution context will be created for the square function, for assigning the value in `square4`.
 
 
-
-| Memory Component                                  |                   Code Component                | 
-| --------------------------------------------------| :----------------------------------------------:| 
-| n : 2                                             |                                                 | 
-| square: f() { var ans = num* num; return ans}     |   ------------------------------------------|   |
-| square2: 4                                        |   | __memory___________ |_______code_______ |   |
-| square4: undefined                                |   |                     |                   |   |
-|                                                   |   |       num = 4       |                   |   |
-|                                                   |   |       ans = 16      |      return ans   |   |
-|                                                   |   | ________________________________________|   |   
-|                                                   |                                                 |
--------------------------------------------------------------------------------------------------------
+<img width="782" alt="Screenshot 2022-08-14 at 2 27 04 PM" src="https://user-images.githubusercontent.com/41745320/184529775-7e4420ad-9dfc-47ba-8f48-a055e8ed6a27.png">
 
 
 
-
-| Memory Component                                  |                   Code Component                | 
-| --------------------------------------------------| :----------------------------------------------:| 
-| n : 2                                             |                                                 | 
-| square: f() { var ans = num* num; return ans}     |   ------------------------------------------|   |
-| square2: 4                                        |   | __memory___________ |_______code_______ |   |
-| square4: 16                                       |   |                     |                   |   |
-|                                                   |   |       num = 4       |                   |   |
-|                                                   |   |       ans = 16      |      return ans   |   |
-|                                                   |   | ________________________________________|   |   
-|                                                   |                                                 |
--------------------------------------------------------------------------------------------------------
 
 Now, again the local execution_context gets deleted after assigning the value in `square4`.
 
 
-| Memory Component                                  | Code Component    | 
-| --------------------------------------------------| :----------------:| 
-| n : 2                                             |                   | 
-| square: f() { var ans = num* num; return ans}     |                   |  
-| square2: 4                                        |                   |
-| square4: 16                                       |                   |
+<img width="564" alt="Screenshot 2022-08-14 at 2 28 11 PM" src="https://user-images.githubusercontent.com/41745320/184529806-3fd6d619-93bc-4b4f-839e-1507d378eea7.png">
+
+
 
 
 So javascript is done executing the code so the whole execution context will be deleted.
