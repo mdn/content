@@ -48,7 +48,7 @@ Invoking a template is done with a _macro_, which can be used anywhere in any pa
 
 The output of the macro would look like this:
 
-```plain
+```
 Hello #0
 Hello #1
 Hello #2

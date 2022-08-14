@@ -69,17 +69,9 @@ If all proxies are down, and there was no DIRECT option specified, the browser w
 - `PROXY w3proxy.netscape.com:8080; SOCKS socks:1080`
   - : Use SOCKS if the primary proxy goes down.
 
-The auto-config file should be saved to a file with a .pac filename extension:
+The auto-config file should be saved to a file with a .pac filename extension, `proxy.pac`.
 
-```plain
-proxy.pac
-```
-
-And the MIME type should be set to:
-
-```plain
-application/x-ns-proxy-autoconfig
-```
+And the MIME type should be set to `application/x-ns-proxy-autoconfig`.
 
 Next, you should configure your server to map the .pac filename extension to the MIME type.
 
@@ -436,14 +428,14 @@ dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 - day
   - : Is the ordered day of the month between 1 and 31 (as an integer).
 
-```plain
+```
 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
 ```
 
 - month
   - : Is one of the ordered month strings below.
 
-```plain
+```
 "JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
 ```
 
