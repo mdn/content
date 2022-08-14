@@ -75,7 +75,6 @@ Now, again the local execution_context gets deleted after assigning the value in
 
 
 
-
 So javascript is done executing the code so the whole execution context will be deleted.
 
 `Note`: Whenever Execution Context is created, it will be pushed into the call-stack. Whenever it's done it will be pulled out of the stack.
