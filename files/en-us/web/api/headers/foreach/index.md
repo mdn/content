@@ -18,32 +18,31 @@ The **`Headers.forEach()`** method executes a callback function once per each ke
 
 ```js
 // Arrow function
-forEach((value, key)=>{ /*...*/ })
-forEach((value, key, object)=>{ /*...*/ })
+forEach((value, key) => { /* … */ })
+forEach((value, key, object) => { /* … */ })
 
 // Inline callback function
-forEach(function(value, key){ /* ... */ })
-forEach(function(value, key, object){ /* ... */ })
-forEach(function(value, key){ /* ... */ }, [thisContext])
+forEach(function (value, key) { /* … */ })
+forEach(function (value, key, object) { /* … */ })
+forEach(function (value, key) { /* … */ }, thisContext)
 ```
 
 ### Parameters
 
 - `callbackFn`
-  - : Function to execute for each entry in the map. It takes the following
-    arguments:
+  - : Function to execute for each entry in the map. It takes the following arguments:
     - `value`
       - : Value of each iteration.
     - `key`
       - : Key of each iteration.
-    - `object` {{Optional_Inline}}
+    - `object`
       - : The Headers object being iterated.
 - `thisContext` {{Optional_Inline}}
   - : Value to use as `this` when executing `callback`.
 
 ### Return value
 
-{{jsxref("undefined")}}
+{{jsxref("undefined")}}.
 
 ## Description
 
