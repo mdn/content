@@ -8,6 +8,16 @@ tags:
 ---
 JavaScript **Hoisting** refers to the process whereby the interpreter appears to move the _declaration_ of functions, variables or classes to the top of their scope, prior to execution of the code.
 
+2 Golden Rules of Hoisting:
+1. Variable declarations are scanned and are made undefined(if it is var, otherwise it will thrown reference error in case of let and const).
+2. Function declarations are scanned and are made available.
+
+This is due to the Execution Context. 
+In the first phase i.e. the Memory Creation phase, memory is allocated to all the functions and variables.
+
+Refer to: https://github.com/mdn/content/pull/16337
+
+
 Hoisting allows functions to be safely used in code before they are declared.
 
 Variable and class _declarations_ are also hoisted, so they too can be referenced before they are declared.
