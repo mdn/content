@@ -15,22 +15,14 @@ a date, and returns the number of milliseconds since January 1, 1970, 00:00:00 U
 `NaN` if the string is unrecognized or, in some cases, contains illegal date
 values (e.g. 2015-02-31).
 
-As until ES5, parsing of strings was entirely implementation-dependent. After the ES5 spec, the [ISO 8601 format](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) is explicitly specified, while other formats are still implementation-defined and may not work across all browsers. A library can help if many different formats are to be accommodated.
+Only the [ISO 8601 format](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) is explicitly specified to be supported. Other formats are implementation-defined and may not work across all browsers. A library can help if many different formats are to be accommodated.
 
 {{EmbedInteractiveExample("pages/js/date-parse.html")}}
 
 ## Syntax
 
-Direct call:
-
 ```js
 Date.parse(dateString)
-```
-
-Implicit call:
-
-```js
-new Date(dateString)
 ```
 
 ### Parameters
@@ -100,12 +92,12 @@ will be treated as a local date of 25 November, 2015 in Firefox 30 and an invali
 in Safari 7.
 
 However, if the string is recognized as an ISO format string and it contains invalid
-values, it will return {{jsxref("NaN")}} in all browsers compliant with ES5 and later:
+values, it will return {{jsxref("NaN")}}:
 
 ```js
 // ISO string with invalid values
 new Date('2014-25-23').toISOString();
-// throws "RangeError: invalid date" in all ES5-compliant browsers
+// throws "RangeError: invalid date"
 ```
 
 SpiderMonkey's implementation-specific heuristic can be found in [`jsdate.cpp`](https://searchfox.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889).
@@ -140,9 +132,7 @@ Given a non-standard date string of `"March 7, 2014"`, `parse()` assumes a local
 
 ### Using Date.parse()
 
-The following calls all return `1546300800000`. The first according to ES5
-will imply UTC time, and the others are specifying UTC timezone via the ISO date
-specification (`Z` and `+00:00`)
+The following calls all return `1546300800000`. The first will imply UTC time, and the others are specifying UTC timezone via the ISO date specification (`Z` and `+00:00`).
 
 ```js
 Date.parse("2019-01-01")
