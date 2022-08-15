@@ -6,7 +6,7 @@ tags:
   - Game Development
   - Gamedev
   - Games
-  - HTML5 Games
+  - HTML Games
   - JavaScript Games
   - Web
 ---
@@ -45,9 +45,7 @@ For a list of web game examples, see our [examples page](/en-US/docs/Games/Examp
 - [Game Programming Patterns](https://gameprogrammingpatterns.com/)
   - : An online book, written by Bob Nystrom, which discusses programming patterns in the context of game development with the aim of helping game developers produce more effective and efficient code.
 - [Gamedev.js Weekly](https://gamedevjsweekly.com/)
-  - : Weekly newsletter about HTML5 game development, sent every Friday. Contains the latest articles, tutorials, tools, and resources.
-- [HTML5 Game Devs Forum](https://www.html5gamedevs.com/)
-  - : Forums for developers, framework creators, and publishers. Ask questions, get feedback and help others.
+  - : Weekly newsletter about HTML game development, sent every Friday. Contains the latest articles, tutorials, tools, and resources.
 
 <!---->
 
