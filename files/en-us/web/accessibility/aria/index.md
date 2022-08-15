@@ -57,7 +57,7 @@ It would have been much simpler to use the native {{HTMLElement('progress')}} el
 
 > **Note:** The `min` attribute is not allowed for the {{HTMLElement('progress')}} element; its minimum value is always `0`.
 
-> **Note:** HTML landmark elements ({{HTMLElement("main")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}} etc.) have built-in implicit ARIA roles, so there is no need to duplicate them.
+> **Note:** HTML landmark elements ({{HTMLElement("main")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}}, etc.) have built-in implicit ARIA roles, so there is no need to duplicate them.
 
 ## Support
 
@@ -84,7 +84,7 @@ It is also important to test your authored ARIA with actual assistive technology
 ## ARIA for scripted widgets
 
 - [Writing keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : Built-in elements like {{HTMLElement("input")}}, {{HTMLElement("button")}} etc have built-in keyboard accessibility. If you 'fake' these with {{HTMLElement("div")}}s and ARIA, you must ensure your widgets are keyboard accessible.
+  - : Built-in elements like {{HTMLElement("input")}}, {{HTMLElement("button")}}, etc. have built-in keyboard accessibility. If you 'fake' these with {{HTMLElement("div")}}s and ARIA, you must ensure your widgets are keyboard accessible.
 - [Live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : Live regions provide suggestions to screen readers about how to handle changes to the contents of a page.
 
