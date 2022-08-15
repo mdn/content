@@ -517,7 +517,7 @@ HTML includes two elements — {{htmlelement("figure")}} and {{htmlelement("figc
 
 ```html
 <figure>
-  <img src="dinosaur.png" alt="The Mozilla Tyrannosaurus" aria-decribedby="dinodescr">
+  <img src="dinosaur.png" alt="The Mozilla Tyrannosaurus" aria-describedby="dinodescr">
   <figcaption id="dinodescr">A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.</figcaption>
 </figure>
 ```
