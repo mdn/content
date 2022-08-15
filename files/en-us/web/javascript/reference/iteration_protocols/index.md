@@ -125,7 +125,7 @@ The language specifies APIs that either produce or consume iterables and iterato
 
 {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and {{jsxref("Intl.Segments")}} are all built-in iterables, because each of their `prototype` objects implements an `@@iterator` method. In addition, the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object and some DOM collection types such as {{domxref("NodeList")}} are also iterables. There are no built-in async iterables currently.
 
-[Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) return [generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator), which are iterable iterators. [Async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) return [async generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Async_Generator), which are async iterable iterators.
+[Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) return [generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator), which are iterable iterators. [Async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) return [async generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator), which are async iterable iterators.
 
 The iterators returned from built-in iterables actually all inherit from a common class (currently unexposed), which implements the aforementioned `[Symbol.iterator]() { return this; }` method, making them all iterable iterators. In the future, these built-in iterators may have additional [helper methods](https://github.com/tc39/proposal-iterator-helpers) in addition to the `next()` method required by the iterator protocol. You can inspect an iterator's prototype chain by logging it in a graphical console.
 
@@ -230,7 +230,7 @@ for (const b of obj) {
 // Closing
 ```
 
-The [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop is the only way to interact with async iterables. Using `for...of`, array spreading, etc. on an async iterable that's not also a sync iterable (i.e. it has `[@@asyncIterator]()` but no `[@@iterator]()`) will throw a TypeError: x is not iterable.
+The [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop and [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*) in [async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) (but not [sync generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)) are the only ways to interact with async iterables. Using `for...of`, array spreading, etc. on an async iterable that's not also a sync iterable (i.e. it has `[@@asyncIterator]()` but no `[@@iterator]()`) will throw a TypeError: x is not iterable.
 
 ### Non-well-formed iterables
 
