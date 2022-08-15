@@ -22,12 +22,13 @@ Modern browsers have two main rendering modes:
 
 Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode))_ that has only a few minor quirks.
 
-This is a list of the most commonly used `DOCTYPE` declarations that will trigger Standards or Almost Standards mode:
+The standard `DOCTYPE` declarations that will trigger standards or mode is:
 
 ```html
-<!DOCTYPE html> /* This is the HTML5 doctype. Given that each modern browser uses an HTML5
-                    parser, this is the recommended doctype */
+<!DOCTYPE html> 
 ```
+
+When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:
 
 ```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
@@ -48,8 +49,6 @@ This is a list of the most commonly used `DOCTYPE` declarations that will trigge
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
-
-When at all possible, you should just use the HTML5 doctype.
 
 ## Why doesn't my CSS, which is valid, render at all?
 
