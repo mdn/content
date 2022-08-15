@@ -71,9 +71,9 @@ function dropHandler(ev) {
     });
   } else {
     // Use DataTransfer interface to access the file(s)
-    [...ev.dataTransfer.files].forEach(file, i) =>  {
+    [...ev.dataTransfer.files].forEach((file, i) => {
       console.log(`… file[${i}].name = ${file.name}`);
-    }
+    });
   }
 }
 ```
