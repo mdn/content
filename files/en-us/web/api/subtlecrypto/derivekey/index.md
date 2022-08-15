@@ -228,7 +228,7 @@ async function encrypt(plaintext, salt, iv) {
   const key = await window.crypto.subtle.deriveKey(
     {
       name: "PBKDF2",
-      salt,
+      salt: salt,
       iterations: 100000,
       hash: "SHA-256",
     },
