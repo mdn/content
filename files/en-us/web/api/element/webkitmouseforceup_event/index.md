@@ -114,4 +114,3 @@ _Not part of any specification._ Apple has [a description at the Mac Developer L
 - {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}
 - {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}
-- {{domxref("Force_Touch_events")}}

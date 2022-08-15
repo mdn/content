@@ -20,7 +20,7 @@ Modern browsers have two main rendering modes:
 - _Quirks Mode_: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing `DOCTYPE` declaration or a known `DOCTYPE` declaration in common use before 2001 will be rendered in Quirks Mode.
 - _Standards Mode_: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern `DOCTYPE` declaration will be rendered with Standards Mode.
 
-Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode (Gecko's_"Almost_Standards"_Mode))_ that has only a few minor quirks.
+Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode))_ that has only a few minor quirks.
 
 This is a list of the most commonly used `DOCTYPE` declarations that will trigger Standards or Almost Standards mode:
 

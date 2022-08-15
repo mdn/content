@@ -8,7 +8,7 @@ tags:
 ---
 {{DefaultAPISidebar("Web Workers API") }}
 
-In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}}, etc), there are a variety of functions available from the DOM to workers. This article provides a list of those.
+In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}}, etc.), there are a variety of functions available from the DOM to workers. This article provides a list of those.
 
 ## Worker Contexts & Functions
 
