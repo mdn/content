@@ -217,43 +217,13 @@ example, `typeof []` , is `'object'`, as well as
 For greater specificity in checking types, here we present a custom `type(value)` function, which mostly mimics the behavior of `typeof`, but for non-primitives (i.e. objects and functions), it returns a more granular type name where possible.
 
 ```js
-function type(value) {
-  if (typeof value !== "object" && typeof value !== "function") {
-    return typeof value;
-  }
-  if (value === null) {
-    return "null";
-  }
-
-  if (
-    Object.getPrototypeOf(value) === Function.prototype &&
-    /^class/.test(String(value))
-  ) {
-    return "class";
-  }
-
-  // Symbol.toStringTag often specifies the "display name" of the
-  // object's class.
-  if (
-    Symbol.toStringTag in value &&
-    typeof value[Symbol.toStringTag] === "string"
-  ) {
-    return value[Symbol.toStringTag];
-  }
-
-  // The name of the constructor; for example `Array`, `GeneratorFunction`,
-  // `Number`, `String`, `Boolean` or `MyCustomObject`
-  if (
-    typeof value.constructor.name === "string" &&
-    value.constructor.name !== ""
-  ) {
-    return value.constructor.name;
-  }
-
-  // At this point there's no robust way to get the type of value,
-  // so we use the base implementation.
-  return typeof value;
-}
+const type = (value) => {
+  if (value === null) return 'null';
+  const type = typeof value;
+  if (!['object', 'function'].includes(type)) return type;
+  if (value.toString().startsWith('class')) return 'class';
+  return value.constructor.name;
+};
 ```
 
 For checking non-existent variables that would otherwise throw
