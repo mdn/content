@@ -11,7 +11,7 @@ tags:
   - timeRemaining
 browser-compat: api.IdleDeadline.timeRemaining
 ---
-{{APIRef("Background Tasks")}}{{SeeCompatTable}}
+{{APIRef("Background Tasks")}}
 
 The **`timeRemaining()`** method
 on the {{domxref("IdleDeadline")}} interface returns the estimated number of
