@@ -176,7 +176,7 @@ An accessor property has the following attributes:
 - `get`
   - : A function called with an empty argument list to retrieve the property value whenever a get access to the value is performed. See also [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get). May be `undefined`.
 - `set`
-  - : A function called with an argument that contains the assigned value. Executed whenever a specified property is attempted to be changed. See also [setters](/en-US/docs/Web/JavaScript/Reference/Functions/get). May be `undefined`.
+  - : A function called with an argument that contains the assigned value. Executed whenever a specified property is attempted to be changed. See also [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set). May be `undefined`.
 - `enumerable`
   - : A boolean value indicating if the property can be enumerated by a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
 - `configurable`
