@@ -114,7 +114,7 @@ const newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 console.log(newString);  // abc - 12345 - #$*%
 ```
 
-The function will be invoked multiple times for each full match to be replaced if the regular expression in the first parameter is global. 
+The function will be invoked multiple times for each full match to be replaced if the regular expression in the first parameter is global.
 
 ## Examples
 
