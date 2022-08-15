@@ -52,7 +52,7 @@ The `Headers.forEach()` method executes the provided callback once for each key 
 
 ### Printing the contents of Headers object
 
-The following code logs a line for each key/value in Headers object.
+The following code logs a line for each key/value in the `myHeaders` object.
 
 ```js
 // Create a new test Headers object
