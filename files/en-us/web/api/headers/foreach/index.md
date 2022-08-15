@@ -12,7 +12,7 @@ browser-compat: api.Headers.forEach
 ---
 {{APIRef}}
 
-The **`Headers.forEach()`** method executes a callback function once per each key/value pair in the {{domxref("Headers.Headers()", "Headers()")}} object.
+The **`Headers.forEach()`** method executes a callback function once per each key/value pair in the [`Headers`](/en-US/docs/Web/API/Headers) object.
 
 ## Syntax
 
