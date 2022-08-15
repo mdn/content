@@ -141,16 +141,16 @@ Events have three functions:
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
     
-    **Note** If Firefox Tracking Protection blocks the request an empty object is returned and `error` returns one of these descriptions:
-    - "The URI is malware"
-    - "The URI is phishing"
-    - "The URI is tracking"
-    - "The URI is unwanted"
-    - "The URI is blocked"
-    - "The URI is harmful"
-    - "The URI is fingerprinting"
-    - "The URI is cryptomining"
-    - "The URI is social tracking"
+    **Note** If Firefox Tracking Protection blocks the request an empty object is returned and `error` returns one of these codes:
+    - `NS_ERROR_MALWARE_URI` indicating a malware URI.
+    - `NS_ERROR_PHISHING_URI` indicating a phishing URI.
+    - `NS_ERROR_TRACKING_URI` indicating a tracking URI.
+    - `NS_ERROR_UNWANTED_URI` indicating a unwanted URI.
+    - `NS_ERROR_BLOCKED_URI` indicating a blocked URI.
+    - `NS_ERROR_HARMFUL_URI` indicating a harmful URI.
+    - `NS_ERROR_FINGERPRINTING` indicating a fingerprinting URI.
+    - `NS_ERROR_CRYPTOMINING_URI` indicating a cryptomining URI.
+    - `NS_ERROR_SOCIALTRACKING_URI` indicating a social tracking URI.
 
 ## Browser compatibility
 
