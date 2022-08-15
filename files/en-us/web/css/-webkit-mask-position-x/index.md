@@ -58,7 +58,9 @@ The `-webkit-mask-position-x` CSS property sets the initial horizontal position 
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+"-webkit-mask-position-x":"[ <length-percentage> | left | center | right ]#";
+```
 
 ## Examples
 

@@ -52,7 +52,9 @@ One or more of the following, in any order:
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+"-webkit-border-before":"<'border-width'> || <'border-style'> || <color>";
+```
 
 ## Examples
 

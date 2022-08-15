@@ -53,7 +53,9 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+"-webkit-box-reflect":"[ above | below | right | left ]? <length>? <image>?";
+```
 
 ## Specifications
 

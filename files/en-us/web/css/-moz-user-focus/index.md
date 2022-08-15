@@ -57,7 +57,9 @@ By setting its value to `ignore`, you can disable focusing the element, which me
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+"-moz-user-focus":"ignore | normal | select-after | select-before | select-menu | select-same | select-all | none";
+```
 
 ## Examples
 

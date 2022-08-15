@@ -58,7 +58,9 @@ The `-webkit-mask-position-y` CSS property sets the initial vertical position of
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+"-webkit-mask-position-y":"[ <length-percentage> | top | center | bottom ]#";
+```
 
 ## Examples
 
