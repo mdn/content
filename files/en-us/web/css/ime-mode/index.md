@@ -67,9 +67,7 @@ The Mac version of Gecko 1.9 (Firefox 3) can't recover the previous state of the
 
 ## Formal syntax
 
-```plain
-"ime-mode":"auto | normal | active | inactive | disabled";
-```
+{{csssyntax}}
 
 ## Examples
 

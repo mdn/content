@@ -40,13 +40,7 @@ The `box-flex-group` property is specified as any positive {{CSSxRef("&lt;intege
 
 ## Formal syntax
 
-<<<<<<< HEAD
 {{CSSSyntax}}
-=======
-```plain
-"box-flex-group":"<integer>";
-```
->>>>>>> 1e97cb9b9a (Added formal syntax)
 
 ## Examples
 

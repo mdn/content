@@ -36,7 +36,7 @@ ondblclick = (event) => { };
 
 ## Event type
 
-A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
+An {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MouseEvent")}}
 

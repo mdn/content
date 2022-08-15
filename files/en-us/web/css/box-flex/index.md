@@ -64,9 +64,7 @@ A trick to make all content elements in a containing box the same size, is to gi
 
 ## Formal syntax
 
-```plain
-"box-flex":"<number>";
-```
+{{csssyntax}}
 
 ## Examples
 

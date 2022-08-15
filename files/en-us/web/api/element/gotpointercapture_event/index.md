@@ -27,7 +27,7 @@ ongotpointercapture = (event) => { };
 
 ## Event type
 
-A {{domxref("PointerEvent")}}. Inherits from {{domxref("Event")}}.
+An {{domxref("PointerEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PointerEvent")}}
 

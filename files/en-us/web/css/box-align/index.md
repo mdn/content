@@ -66,9 +66,7 @@ If the alignment is set using the element's `align` attribute, then the style is
 
 ## Formal syntax
 
-```plain
-"box-align":"start | center | end | baseline | stretch";
-```
+{{csssyntax}}
 
 ## Examples
 

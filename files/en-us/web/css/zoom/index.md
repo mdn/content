@@ -55,9 +55,7 @@ zoom: unset;
 
 ## Formal syntax
 
-```plain
-"zoom":"normal | reset | <number> | <percentage>";
-```
+{{csssyntax}}
 
 ## Examples
 

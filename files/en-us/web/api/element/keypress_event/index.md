@@ -31,7 +31,7 @@ onkeypress = (event) => { };
 
 ## Event type
 
-A {{domxref("KeyboardEvent")}}. Inherits from {{domxref("Event")}}.
+An {{domxref("KeyboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("KeyboardEvent")}}
 

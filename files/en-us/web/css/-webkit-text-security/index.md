@@ -29,9 +29,7 @@ browser-compat: css.properties.-webkit-text-security
 
 ## Formal syntax
 
-```plain
-"-webkit-text-security":""
-```
+{{CSSSyntax}}
 
 ## Examples
 

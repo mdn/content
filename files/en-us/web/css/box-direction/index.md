@@ -55,9 +55,7 @@ If the direction is set using the element's `dir` attribute, then the style is i
 
 ## Formal syntax
 
-```plain
-"box-direction":"normal | reverse | inherit";
-```
+{{csssyntax}}
 
 ## Examples
 
