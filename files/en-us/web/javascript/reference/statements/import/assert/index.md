@@ -7,6 +7,7 @@ tags:
   - Reference
   - Statement
   - import
+  - Experimental
 browser-compat: javascript.statements.import.import_assertions
 ---
 
