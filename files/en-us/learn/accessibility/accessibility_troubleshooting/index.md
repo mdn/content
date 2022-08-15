@@ -61,7 +61,7 @@ The text is difficult to read because of the current color scheme. Can you do a 
 
 1. The content is still not very accessible — report on what happens when you try to navigate it using a screenreader.
 2. Can you update the article text to make it easier for screenreader users to navigate?
-3. The navigation menu part of the site (wrapped in `<div class="nav"></div>`) could be made more accessible by putting it in a proper HTML5 semantic element. Which one should it be updated to? Make the update.
+3. The navigation menu part of the site (wrapped in `<div class="nav"></div>`) could be made more accessible by putting it in a proper HTML semantic element. Which one should it be updated to? Make the update.
 
 > **Note:** You'll need to update the CSS rule selectors that style the tags to their proper equivalents for the semantic headings. Once you add paragraph elements, you'll notice the styling looking better.
 
@@ -72,7 +72,7 @@ The images are currently inaccessible to screenreader users. Can you fix this?
 ### The audio player
 
 1. The `<audio>` player isn't accessible to hearing impaired (deaf) people — can you add some kind of accessible alternative for these users?
-2. The `<audio>` player isn't accessible to those using older browsers that don't support HTML5 audio. How can you allow them to still access the audio?
+2. The `<audio>` player isn't accessible to those using older browsers that don't support HTML audio. How can you allow them to still access the audio?
 
 ### The forms
 
