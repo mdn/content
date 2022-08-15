@@ -36,7 +36,7 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
 - `options`
   - : An object containing import options, which correspond to the appendices of the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement. The follow keys are recognized:
     - `assert`
-      - : The [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assertions).
+      - : The [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assert).
 
 ### Return value
 
@@ -57,7 +57,7 @@ Use dynamic import only when necessary. The static form is preferable for loadin
 
 If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations, but the asynchronous dynamic import syntax will always be available, allowing you to import modules into non-module environments.
 
-The `options` parameter allows different kinds of import options, for example, [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assertions):
+The `options` parameter allows different kinds of import options, for example, [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assert):
 
 ```js
 import("./data.json", { assert: { type: "json" } });

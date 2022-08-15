@@ -1,6 +1,6 @@
 ---
 title: import assertions
-slug: Web/JavaScript/Reference/Statements/import/assertions
+slug: Web/JavaScript/Reference/Statements/import/assert
 tags:
   - JavaScript
   - Modules
@@ -31,7 +31,7 @@ export { exports } from "module-name" assert { key: "data", key2: "data2", /* �
 > **Note:** Assertions can be attached to any kind of `import`/`export from` statement, including default import, namespace import, etc.
 
 - `keyN`
-  - : One assertion key. Can be an identifier or a string literal — similar to what you can use in an [object literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), modulo number literals and computed properties.
+  - : One assertion key. Can be an identifier or a string literal — similar to what you can use in an [object literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), except number literals and computed properties.
 - `"dataN"`
   - : One assertion value. Must be a string literal.
 
