@@ -24,7 +24,7 @@ forEach((value, key, object) => { /* … */ })
 // Inline callback function
 forEach(function (value, key) { /* … */ })
 forEach(function (value, key, object) { /* … */ })
-forEach(function (value, key) { /* … */ }, thisContext)
+forEach(function (value, key) { /* … */ }, thisArg)
 ```
 
 ### Parameters
