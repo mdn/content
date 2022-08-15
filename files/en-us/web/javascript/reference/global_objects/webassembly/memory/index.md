@@ -21,7 +21,7 @@ Both WebAssembly and JavaScript can create `Memory` objects. If you want to acce
 
 ## Instance properties
 
-- {{jsxref("WebAssembly/Memory/buffer", "Memory.prototype.buffer")}}
+- {{jsxref("WebAssembly/Memory/buffer", "Memory.prototype.buffer")}} {{ReadOnlyInline}}
   - : An accessor property that returns the buffer contained in the memory.
 
 ## Instance methods
