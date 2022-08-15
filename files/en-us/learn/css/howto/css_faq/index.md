@@ -22,7 +22,7 @@ Modern browsers have two main rendering modes:
 
 Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode))_ that has only a few minor quirks.
 
-The standard `DOCTYPE` declarations that will trigger standards or mode is:
+The standard `DOCTYPE` declarations that will trigger standards mode is:
 
 ```html
 <!DOCTYPE html> 
