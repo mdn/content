@@ -376,7 +376,7 @@ A page on MDN Web Docs can contain more than one code example. The following lis
 
 - Each piece of example code should include:
   - **Heading**: A short `###` (`<h3>`) heading to describe the scenario being demonstrated through the code example. For example, "Using offset printing" and "Reverting to style in previous layer".
-  - **Description**: A short description preceding the example code that states the specifics of the example to which you want to draw reader's attention. For example, "In the example below, two cascade layers are defined in the CSS, `base` and `special`. "
+  - **Description**: A short description preceding the example code that states the specifics of the example to which you want to draw reader's attention. For example, "In the example below, two cascade layers are defined in the CSS, `base` and `special`."
   - **Result explanation**: An explanation after the example code that describes the result and how the code works.
 - In general, the code example should not only demonstrate the syntax of the feature and how it is used, but also highlight the purpose and situations in which a web developer might want or need to use the feature.
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
@@ -429,10 +429,9 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 - **Don't create single subsections.** Don't subdivide a topic into a single subtopic.
   It's either two subheadings or more or none at all.
-- **Don't use styles and classes within headings.** This includes the {{HTMLElement("code")}} element for code terms.
+- **Don't use styles, classes, or macros within headings.** This includes the {{HTMLElement("code")}} element for code terms.
   So don't format the heading as "Using the `SuperAmazingThing` interface".
   It should instead just be "Using the SuperAmazingThing interface".
-- **Avoid using macros within headings.** (Except for certain macros that are specifically designed to be used in headings).
 - **Don't create "bumping heads".** These are headings followed immediately by a subheading, with no content text in between them.
   This doesn't look good and leaves readers without any explanatory text at the beginning of the outer section.
 
