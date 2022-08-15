@@ -218,11 +218,27 @@ For greater specificity in checking types, here we present a custom `type(value)
 
 ```js
 const type = (value) => {
-  if (value === null) return 'null';
+  if (value === null) {
+    return 'null';
+  }
+  // Primitive types
   const type = typeof value;
-  if (!['object', 'function'].includes(type)) return type;
-  if (value.toString().startsWith('class')) return 'class';
-  return value.constructor.name;
+  if (!['object', 'function'].includes(type)) {
+    return type;
+  }
+  // If litaral starts from class keyword
+  if (String(value).startsWith('class')) {
+    return 'class';
+  }
+  // Symbol.toStringTag often contains object's class name
+  const tag = value[Symbol.toStringTag];
+  if (typeof tag === 'string') {
+    return tag;
+  }
+  // Constructor name, for example:
+  // Array, GeneratorFunction, Number, DomainClass
+  const { name } = value.constructor;
+  return typeof name === 'string' ? name : type;
 };
 ```
 
