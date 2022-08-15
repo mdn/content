@@ -32,9 +32,9 @@ forEach(function (value, key) { /* … */ }, thisArg)
 - `callbackFn`
   - : Function to execute for each entry in the map. It takes the following arguments:
     - `value`
-      - : Value of each iteration.
+      - : Value of the currently visited header entry.
     - `key`
-      - : Key of each iteration.
+      - : Name of the currently visited header entry.
     - `object`
       - : The Headers object being iterated.
 - `thisArg` {{Optional_Inline}}
