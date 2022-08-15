@@ -51,7 +51,7 @@ Content-Location: <url>
 ### Requesting data from a server in different formats
 
 Let's say a site's API can return data in {{glossary("JSON")}}, {{glossary("XML")}}, or
-[CSV](https://en.wikipedia.org/wiki/Comma-separated_values "Comma-separated values") formats. If the URL for a particular document
+[CSV](https://en.wikipedia.org/wiki/Comma-separated_values) formats. If the URL for a particular document
 is at `https://example.com/documents/foo`, the site could return different
 URLs for `Content-Location` depending on the request's
 {{HTTPHeader("Accept")}} header:

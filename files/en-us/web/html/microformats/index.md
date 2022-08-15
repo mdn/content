@@ -70,7 +70,7 @@ All microformats class names use prefixes. Prefixes are **syntax independent fro
 
 - **"dt-\*" for datetime properties**, e.g. "dt-start", "dt-end", "dt-bday"
 
-  - Special parsing: time element datetime attribute, [value-class-pattern](https://microformats.org/wiki/value-class-pattern "value-class-pattern") and separate date time value parsing for readability.
+  - Special parsing: time element datetime attribute, [value-class-pattern](https://microformats.org/wiki/value-class-pattern) and separate date time value parsing for readability.
 
 - **"e-\*" for element tree properties** where the entire contained element hierarchy is the value, e.g. "e-content". The "e-" prefix can also be mnemonically remembered as "element tree", "embedded markup", or "encapsulated markup".
 
@@ -228,7 +228,7 @@ Example h-entry as a blog post:
 
 ### h-feed
 
-The [h-feed](https://microformats.org/wiki/h-feed) is a stream or feed of [h-entry](https://microformats.org/wiki/h-entry "h-entry") posts, like complete posts on a home page or archive pages, or summaries or other brief lists of posts.
+The [h-feed](https://microformats.org/wiki/h-feed) is a stream or feed of [h-entry](https://microformats.org/wiki/h-entry) posts, like complete posts on a home page or archive pages, or summaries or other brief lists of posts.
 
 #### Example h-feed
 
