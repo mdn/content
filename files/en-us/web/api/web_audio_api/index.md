@@ -117,7 +117,7 @@ Interfaces for defining effects that you want to apply to your audio sources.
 - {{domxref("PeriodicWave")}}
   - : Describes a periodic waveform that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
 - {{domxref("IIRFilterNode")}}
-  - : Implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response "infinite impulse response") (IIR) filter; this type of filter can be used to implement tone-control devices and graphic equalizers as well.
+  - : Implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response) (IIR) filter; this type of filter can be used to implement tone-control devices and graphic equalizers as well.
 
 ### Defining audio destinations
 
