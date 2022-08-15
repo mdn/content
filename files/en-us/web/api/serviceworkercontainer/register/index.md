@@ -65,14 +65,14 @@ register(scriptURL, options)
             worker contexts.
 
     - `updateViaCache`
-      - : A string indicating how much of a service worker's resources will be updated when a call is made to {{domxref('ServiceWorkerRegistration.update()')}}. Valid values are:
+      - : A string indicating how the HTTP cache is used for service worker scripts resources during updates. Note: This only refers to the service worker script and its imports, not other resources fetched by these scripts.
 
         - `'all'`
-          - : The service worker script and all of its imports will be updated.
+          - : The HTTP cache will be queried for the main script, and all imported scripts. If no fresh entry is found in the HTTP cache, then the scripts are fetched from the network.
         - `'imports'`
-          - : Only imports referenced by the service worker script will be updated. This is the default.
+          - : The HTTP cache will be queried for imports, but the main script will always be updated from the network. If no fresh entry is found in the HTTP cache for the imports, they're fetched from the network.
         - `'none'`
-          - : Neither the service worker, nor its imports will be updated.
+          - : The HTTP cache will not be used for the main script or its imports. All service worker script resources will be updated from the network.
 
 ### Return value
 
