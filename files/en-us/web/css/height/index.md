@@ -19,6 +19,8 @@ The **`height`** CSS property specifies the height of an element. By default, th
 
 {{EmbedInteractiveExample("pages/css/height.html")}}
 
+You can experiment by typing new values of the `height` attribute in the box above. For example, click on `height: 150px;` and change it to `height: 100px;` or `height: 25vh;` and see the height of the blue box on the right change dynamically as you type.
+
 The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override `height`.
 
 ## Syntax
