@@ -435,7 +435,7 @@ Here are the full implementation:
     <title>MDN Example - Queryable worker</title>
     <script type="text/javascript">
       // QueryableWorker instances methods:
-      //   * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc): calls a Worker's queryable function
+      //   * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc.): calls a Worker's queryable function
       //   * postMessage(string or JSON Data): see Worker.prototype.postMessage()
       //   * terminate(): terminates the Worker
       //   * addListener(name, function): adds a listener

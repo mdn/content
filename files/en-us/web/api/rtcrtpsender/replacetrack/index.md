@@ -24,7 +24,7 @@ The {{domxref("RTCRtpSender")}} method
 as the sender's source with a new {{domxref("MediaStreamTrack")}}.
 
 The new
-track must be of the same media kind (audio, video, etc) and switching the track should
+track must be of the same media kind (audio, video, etc.) and switching the track should
 not require negotiation.
 
 Among the use cases for `replaceTrack()` is the common need to switch

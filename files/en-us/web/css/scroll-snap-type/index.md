@@ -31,7 +31,7 @@ scroll-snap-type: x mandatory;
 scroll-snap-type: y proximity;
 scroll-snap-type: both mandatory;
 
-/* etc */
+/* etc. */
 
 /* Global values */
 scroll-snap-type: inherit;
