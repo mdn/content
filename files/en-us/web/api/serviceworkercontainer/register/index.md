@@ -65,7 +65,7 @@ register(scriptURL, options)
             worker contexts.
 
     - `updateViaCache`
-      - : A string indicating how much of a service worker's resources will be updated when a call is made to {{domxref('ServiceWorkerRegistration.updateViaCache')}}. Valid values are:
+      - : A string indicating how much of a service worker's resources will be updated when a call is made to {{domxref('ServiceWorkerRegistration.update()')}}. Valid values are:
 
         - `'all'`
           - : The service worker script and all of its imports will be updated.
