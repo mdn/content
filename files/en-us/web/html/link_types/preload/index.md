@@ -14,7 +14,7 @@ browser-compat: html.elements.link.rel.preload
 
 The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute lets you declare fetch requests in the
 HTML's {{htmlelement("head")}}, specifying resources that your page will need very soon, which you want to start loading early in the page lifecycle,
-before browsers' main rendering machinery kicks in. This ensures they are available earlier and are less likely to block the page's render, improving performance.
+before browsers' main rendering machinery kicks in. This ensures they are available earlier and are less likely to block the page's render, improving performance. Even though the name contains "load", it does not actually load(or execute) the script, but only fetches and caches it with high priority.
 
 ## The basics
 
