@@ -101,7 +101,7 @@ class PopUpInfo extends HTMLElement {
 
     // Insert icon
     let imgUrl;
-    if(this.hasAttribute('img')) {
+    if (this.hasAttribute('img')) {
       imgUrl = this.getAttribute('img');
     } else {
       imgUrl = 'img/default.png';
@@ -179,7 +179,7 @@ class WordCount extends HTMLParagraphElement {
 
     function countWords(node){
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter(a => a.trim().length > 0).length;
+      return text.trim().split(/\s+/g).filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Words: ${countWords(wcParent)}`;
@@ -195,7 +195,7 @@ class WordCount extends HTMLParagraphElement {
     shadow.appendChild(text);
 
     // Update count when element content changes
-    setInterval(function() {
+    setInterval(() => {
       const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
     }, 200);
@@ -225,7 +225,6 @@ class PopUpInfo extends HTMLElement {
     // this will cause an error to be thrown when the element is defined.
   }
 }
-
 ```
 
 ## Specifications

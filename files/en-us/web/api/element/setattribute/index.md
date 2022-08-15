@@ -45,7 +45,7 @@ or the attribute's name, with no leading or trailing whitespace. See the [exampl
 
 Since the specified `value` gets converted into a string, specifying
 `null` doesn't necessarily do what you expect. Instead of removing the
-attribute or setting its value to be {{jsxref("null")}}, it instead sets the attribute's
+attribute or setting its value to be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it instead sets the attribute's
 value to the string `"null"`. If you wish to remove an attribute, call
 {{domxref("Element.removeAttribute", "removeAttribute()")}}.
 

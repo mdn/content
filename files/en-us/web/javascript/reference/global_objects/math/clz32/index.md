@@ -173,7 +173,7 @@ Math.clz32(1000);        // 22
 Math.clz32();            // 32
 
 const stuff = [NaN, Infinity, -Infinity, 0, -0, false, null, undefined, 'foo', {}, []];
-stuff.every(n => Math.clz32(n) === 32);  // true
+stuff.every((n) => Math.clz32(n) === 32);  // true
 
 Math.clz32(true);        // 31
 Math.clz32(3.5);         // 30

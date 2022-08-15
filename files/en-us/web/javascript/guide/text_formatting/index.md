@@ -43,7 +43,7 @@ The Unicode escape sequences require at least four hexadecimal digits following 
 
 #### Unicode code point escapes
 
-New in ECMAScript 2015. With Unicode code point escapes, any character can be escaped using hexadecimal numbers so that it is possible to use Unicode code points up to `0x10FFFF`. With simple Unicode escapes it is often necessary to write the surrogate halves separately to achieve the same result.
+With Unicode code point escapes, any character can be escaped using hexadecimal numbers so that it is possible to use Unicode code points up to `0x10FFFF`. With simple Unicode escapes it is often necessary to write the surrogate halves separately to achieve the same result.
 
 See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
 
@@ -279,7 +279,7 @@ const americanDateTime = new Intl.DateTimeFormat('en-US', options).format;
 // Local timezone vary depending on your settings
 // In CEST, logs: 07/17/14, 02:00 AM GMT+2
 // In PDT, logs: 07/16/14, 05:00 PM GMT-7
-console.log(americanDateTime(july172014)); 
+console.log(americanDateTime(july172014));
 ```
 
 ### Number formatting

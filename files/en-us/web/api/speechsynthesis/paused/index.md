@@ -32,11 +32,11 @@ A boolean value.
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
 synth.pause();
 
-var amIPaused = synth.paused; // will return true
+const amIPaused = synth.paused; // will return true
 ```
 
 ## Specifications

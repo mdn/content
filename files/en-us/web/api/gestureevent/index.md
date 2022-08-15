@@ -18,11 +18,6 @@ The **`GestureEvent`** is a proprietary interface specific to WebKit which gives
 
 `GestureEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}.
 
-## Constructor
-
-- {{domxref("GestureEvent.GestureEvent", "GestureEvent()")}}
-  - : Creates a `GestureEvent` object.
-
 ## Properties
 
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._

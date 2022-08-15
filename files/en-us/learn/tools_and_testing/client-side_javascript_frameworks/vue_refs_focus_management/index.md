@@ -108,7 +108,7 @@ toggleToItemEditForm() {
 
 If you activate the "Edit" Button at this point, you should see an HTML `<button>` element referenced in your console.
 
-## Vue's `$nextTick()` method
+## Vue's $nextTick() method
 
 We want to set focus on the "Edit" Button when a user saves or cancels their edit. To do that, we need to handle focus in the `ToDoItem` component's `itemEdited()` and `editCancelled()` methods.
 
@@ -226,7 +226,7 @@ Now that we have a `ref` and have let browsers know that we can programmatically
 
 ```js
 deleteToDo(toDoId) {
-    const itemIndex = this.ToDoItems.findIndex(item => item.id === toDoId);
+    const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
     this.ToDoItems.splice(itemIndex, 1);
     this.$refs.listSummary.focus();
 }

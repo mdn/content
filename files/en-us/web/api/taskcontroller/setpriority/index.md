@@ -57,9 +57,9 @@ Then we pass the controller's signal to the [`Scheduler.postTask()`](/en-US/docs
 ```js
 // Post task passing the controller's signal.
 // The signal priority sets the initial priority of the task
-scheduler.postTask( ()=>{ return 'Task execute'; }, {signal: controller.signal} )
-  .then( (taskResult) => { console.log(`${taskResult}`); }) // Run on success)
-  .catch( (error) => { console.log(`Catch error: ${error}`); });  // Run on fail
+scheduler.postTask(() => 'Task execute', {signal: controller.signal})
+  .then((taskResult) => { console.log(`${taskResult}`); }) // Run on success)
+  .catch((error) => { console.log(`Catch error: ${error}`); });  // Run on fail
 ```
 
 The controller can then be used to change the priority

@@ -39,11 +39,11 @@ _Node_ and _Express_ make it very easy to set up your computer in order to start
 
 ### What is the Express development environment?
 
-The _Express_ development environment includes an installation of _Nodejs_, the _NPM package manager_, and (optionally) the _Express Application Generator_ on your local computer.
+The _Express_ development environment includes an installation of _Nodejs_, the _npm package manager_, and (optionally) the _Express Application Generator_ on your local computer.
 
-*Node* and the _NPM_ package manager are installed together from prepared binary packages, installers, operating system package managers or from source (as shown in the following sections). *Express* is then installed by NPM as a dependency of your individual *Express* web applications (along with other libraries like template engines, database drivers, authentication middleware, middleware to serve static files, etc.)
+_Node_ and the _npm_ package manager are installed together from prepared binary packages, installers, operating system package managers or from source (as shown in the following sections). *Express* is then installed by npm as a dependency of your individual *Express* web applications (along with other libraries like template engines, database drivers, authentication middleware, middleware to serve static files, etc.).
 
-_NPM_ can also be used to (globally) install the *Express Application Generator*, a handy tool for creating skeleton _Express_ web apps that follow the [MVC pattern](/en-US/docs/Glossary/MVC). The application generator is optional because you don't _need_ to use this tool to create apps that use Express, or construct Express apps that have the same architectural layout or dependencies. We'll be using it though, because it makes getting started a lot easier, and promotes a modular application structure.
+_npm_ can also be used to (globally) install the *Express Application Generator*, a handy tool for creating skeleton _Express_ web apps that follow the [MVC pattern](/en-US/docs/Glossary/MVC). The application generator is optional because you don't _need_ to use this tool to create apps that use Express, or construct Express apps that have the same architectural layout or dependencies. We'll be using it though, because it makes getting started a lot easier, and promotes a modular application structure.
 
 > **Note:** Unlike some other web frameworks, the development environment does not include a separate development web server. In _Node_/_Express_ a web application creates and runs its own web server!
 
@@ -65,17 +65,17 @@ For _Express_ you should always use the latest version.
 
 ### What about databases and other dependencies?
 
-Other dependencies, such as database drivers, template engines, authentication engines, etc. are part of the application, and are imported into the application environment using the NPM package manager. We'll discuss them in later app-specific articles.
+Other dependencies, such as database drivers, template engines, authentication engines, etc. are part of the application, and are imported into the application environment using the npm package manager. We'll discuss them in later app-specific articles.
 
 ## Installing Node
 
-In order to use _Express_ you will first have to install _Nodejs_ and the [Node Package Manager (NPM)](https://docs.npmjs.com/) on your operating system. The following sections explain the easiest way to install the Long Term Supported (LTS) version of Nodejs on Ubuntu Linux 20.04, macOS, and Windows 10.
+In order to use _Express_ you will first have to install _Nodejs_ and the [Node Package Manager (npm)](https://docs.npmjs.com/) on your operating system. The following sections explain the easiest way to install the Long Term Supported (LTS) version of Nodejs on Ubuntu Linux 20.04, macOS, and Windows 10.
 
-> **Note:** The sections below show the easiest way to install _Node_ and _NPM_ on our target OS platforms. If you're using another OS or just want to see some of the other approaches for the current platforms then see [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org).
+> **Note:** The sections below show the easiest way to install _Node_ and _npm_ on our target OS platforms. If you're using another OS or just want to see some of the other approaches for the current platforms then see [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org).
 
 ### macOS and Windows
 
-Installing _Node_ and _NPM_ on Windows and macOS is straightforward because you can just use the provided installer:
+Installing _Node_ and _npm_ on Windows and macOS is straightforward because you can just use the provided installer:
 
 1. Download the required installer:
 
@@ -95,7 +95,7 @@ sudo apt-get install -y nodejs
 
 > **Warning:** Don't install directly from the normal Ubuntu repositories because they contain very old versions of node.
 
-### Testing your Nodejs and NPM installation
+### Testing your Nodejs and npm installation
 
 The easiest way to test that node is installed is to run the "version" command in your terminal/command prompt and check that a version string is returned:
 
@@ -104,7 +104,7 @@ The easiest way to test that node is installed is to run the "version" command i
 v12.18.4
 ```
 
-The _Nodejs_ package manager _NPM_ should also have been installed, and can be tested in the same way:
+The _Nodejs_ package manager _npm_ should also have been installed, and can be tested in the same way:
 
 ```bash
 > npm -v
@@ -113,7 +113,7 @@ The _Nodejs_ package manager _NPM_ should also have been installed, and can be t
 
 As a slightly more exciting test let's create a very basic "pure node" server that prints out "Hello World" in the browser when you visit the correct URL in your browser:
 
-1. Copy the following text into a file named **hellonode.js**. This uses pure _Node_ features (nothing from Express) and some ES6 syntax:
+1. Copy the following text into a file named **hellonode.js**. This uses pure Node features (nothing from Express):
 
     ```js
     //Load HTTP module
@@ -149,19 +149,19 @@ As a slightly more exciting test let's create a very basic "pure node" server th
 
 3. Navigate to the URL `http://127.0.0.1:3000`. If everything is working, the browser should display the string "Hello World".
 
-## Using NPM
+## Using npm
 
-Next to _Node_ itself, [NPM](https://docs.npmjs.com/) is the most important tool for working with _Node_ applications. NPM is used to fetch any packages (JavaScript libraries) that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process.
+Next to _Node_ itself, [npm](https://docs.npmjs.com/) is the most important tool for working with _Node_ applications. npm is used to fetch any packages (JavaScript libraries) that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process.
 
-> **Note:** From Node's perspective, _Express_ is just another package that you need to install using NPM and then require in your own code.
+> **Note:** From Node's perspective, _Express_ is just another package that you need to install using npm and then require in your own code.
 
-You can manually use NPM to separately fetch each needed package. Typically we instead manage dependencies using a plain-text definition file named [package.json](https://docs.npmjs.com/files/package.json/). This file lists all the dependencies for a specific JavaScript "package", including the package's name, version, description, initial file to execute, production dependencies, development dependencies, versions of _Node_ it can work with, etc. The **package.json** file should contain everything NPM needs to fetch and run your application (if you were writing a reusable library you could use this definition to upload your package to the npm repository and make it available for other users).
+You can manually use npm to separately fetch each needed package. Typically we instead manage dependencies using a plain-text definition file named [package.json](https://docs.npmjs.com/files/package.json/). This file lists all the dependencies for a specific JavaScript "package", including the package's name, version, description, initial file to execute, production dependencies, development dependencies, versions of _Node_ it can work with, etc. The **package.json** file should contain everything npm needs to fetch and run your application (if you were writing a reusable library you could use this definition to upload your package to the npm repository and make it available for other users).
 
 ### Adding dependencies
 
-The following steps show how you can use NPM to download a package, save it into the project dependencies, and then require it in a Node application.
+The following steps show how you can use npm to download a package, save it into the project dependencies, and then require it in a Node application.
 
-> **Note:** Here we show the instructions to fetch and install the _Express_ package. Later on we'll show how this package, and others, are already specified for us using the *Express Application Generator*. This section is provided because it is useful to understand how NPM works and what is being created by the application generator.
+> **Note:** Here we show the instructions to fetch and install the _Express_ package. Later on we'll show how this package, and others, are already specified for us using the *Express Application Generator*. This section is provided because it is useful to understand how npm works and what is being created by the application generator.
 
 1. First create a directory for your new application and navigate into it:
 
@@ -252,7 +252,7 @@ The following steps show how you can use NPM to download a package, save it into
 
 ### Development dependencies
 
-If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool [ESLint](https://eslint.org/) you would call NPM as shown:
+If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool [ESLint](https://eslint.org/) you would call npm as shown:
 
 ```bash
 npm install eslint --save-dev
@@ -260,7 +260,7 @@ npm install eslint --save-dev
 
 The following entry would then be added to your application's **package.json**:
 
-```js
+```json
   "devDependencies": {
     "eslint": "^7.10.0"
   }
@@ -270,7 +270,7 @@ The following entry would then be added to your application's **package.json**:
 
 ### Running tasks
 
-In addition to defining and fetching dependencies you can also define _named_ scripts in your **package.json** files and call NPM to execute them with the [run-script](https://docs.npmjs.com/cli/run-script/) command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyze your code, etc).
+In addition to defining and fetching dependencies you can also define _named_ scripts in your **package.json** files and call npm to execute them with the [run-script](https://docs.npmjs.com/cli/run-script/) command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyze your code, etc.).
 
 > **Note:** Task runners like [Gulp](https://gulpjs.com/) and [Grunt](https://gruntjs.com/) can also be used to run tests and other external tools.
 
@@ -286,7 +286,7 @@ For example, to define a script to run the _eslint_ development dependency that 
 
 To explain a little further, `eslint src/js` is a command that we could enter in our terminal/command line to run `eslint` on JavaScript files contained in the `src/js` directory inside our app directory. Including the above inside our app's package.json file provides a shortcut for this command — `lint`.
 
-We would then be able to run _eslint_ using NPM by calling:
+We would then be able to run _eslint_ using npm by calling:
 
 ```bash
 npm run-script lint
@@ -298,7 +298,7 @@ This example may not look any shorter than the original command, but you can inc
 
 ## Installing the Express Application Generator
 
-The [Express Application Generator](https://expressjs.com/en/starter/generator.html) tool generates an Express application "skeleton". Install the generator using NPM as shown:
+The [Express Application Generator](https://expressjs.com/en/starter/generator.html) tool generates an Express application "skeleton". Install the generator using npm as shown:
 
 ```bash
 npm install express-generator -g
@@ -326,7 +326,7 @@ express helloworld
 >
 > This has the same effect as installing and then running `express` but does not install the package on your system. However, this means you cannot call `express` from anywhere.
 
-NPM will create the new Express app in a sub folder of your current location, displaying build progress on the console. On completion, the tool will display the commands you need to enter to install the Node dependencies and start the app.
+npm will create the new Express app in a sub folder of your current location, displaying build progress on the console. On completion, the tool will display the commands you need to enter to install the Node dependencies and start the app.
 
 > **Note:** The new app will have a **package.json** file in its root directory. You can open this to see what dependencies are installed, including Express and the template library Jade:
 >
@@ -349,7 +349,7 @@ NPM will create the new Express app in a sub folder of your current location, di
 > }
 > ```
 
-Install all the dependencies for the helloworld app using NPM as shown:
+Install all the dependencies for the helloworld app using npm as shown:
 
 ```bash
 cd helloworld
@@ -388,7 +388,7 @@ We'll talk more about the generated app when we get to the article on generating
 
 ## Summary
 
-You now have a Node development environment up and running on your computer that can be used for creating Express web applications. You've also seen how NPM can be used to import Express into an application, and also how you can create applications using the Express Application Generator tool and then run them.
+You now have a Node development environment up and running on your computer that can be used for creating Express web applications. You've also seen how npm can be used to import Express into an application, and also how you can create applications using the Express Application Generator tool and then run them.
 
 In the next article we start working through a tutorial to build a complete web application using this environment and associated tools.
 

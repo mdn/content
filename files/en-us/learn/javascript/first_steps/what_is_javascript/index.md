@@ -367,7 +367,7 @@ The JavaScript inside this block will not run until after that event is fired, t
 
 In the external example, we use a more modern JavaScript feature to solve the problem, the `defer` attribute, which tells the browser to continue downloading the HTML content once the `<script>` tag element has been reached.
 
-```js
+```html
 <script src="script.js" defer></script>
 ```
 

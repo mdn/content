@@ -25,7 +25,7 @@ This method does not change the existing arrays, but instead returns a new array
 concat()
 concat(value0)
 concat(value0, value1)
-concat(value0, value1, ... , valueN)
+concat(value0, value1, /* … ,*/ valueN)
 ```
 
 ### Parameters

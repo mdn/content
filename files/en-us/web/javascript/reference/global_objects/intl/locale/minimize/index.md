@@ -52,11 +52,14 @@ in the locale identifier are called extension subtags and are not affected by th
 ### Using minimize
 
 ```js
-let myLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+const myLocale = new Intl.Locale("fr-Latn-FR", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(myLocale.baseName); // Prints "fr-Latn-FR"
 console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
 
-let myLocMinimized = myLocale.minimize();
+const myLocMinimized = myLocale.minimize();
 
 // Prints "fr", since French is only written in the Latin script
 // and is most likely to be spoken in France.

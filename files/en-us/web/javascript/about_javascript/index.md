@@ -11,7 +11,7 @@ tags:
 
 ## What is JavaScript?
 
-**JavaScript** (often shortened to **JS**) is a lightweight, interpreted, object-oriented language with [first-class functions](https://en.wikipedia.org/wiki/First-class_function), and is best known as the scripting language for Web pages, but it's [used in many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) as well. It is a [prototype-based](https://en.wikipedia.org/wiki/Prototype-based_programming "Prototype-based"), multi-paradigm scripting language that is dynamic, and supports object-oriented, imperative, and functional programming styles.
+**JavaScript** (often shortened to **JS**) is a lightweight, interpreted, object-oriented language with [first-class functions](https://en.wikipedia.org/wiki/First-class_function), and is best known as the scripting language for Web pages, but it's [used in many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) as well. It is a [prototype-based](https://en.wikipedia.org/wiki/Prototype-based_programming), multi-paradigm scripting language that is dynamic, and supports object-oriented, imperative, and functional programming styles.
 
 JavaScript runs on the client side of the web, which can be used to design / program how the web pages behave on the occurrence of an event. JavaScript is an easy to learn and also powerful scripting language, widely used for controlling web page behavior.
 
@@ -42,8 +42,8 @@ Another common application for JavaScript is as a (Web) server side scripting la
 
 ## JavaScript resources
 
-- [Language resources](/en-US/docs/Web/JavaScript/Language_Resources)
-  - : Pointers to published JavaScript standards.
+- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview)
+  - : Pointers to published JavaScript standards and relevant resources.
 - [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 
 JavaScript® is a trademark or registered trademark of Oracle in the U.S. and other countries.

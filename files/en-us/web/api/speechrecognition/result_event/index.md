@@ -17,9 +17,9 @@ The **`result`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_AP
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('result', event => { })
+addEventListener('result', (event) => { })
 
-onresult = event => { }
+onresult = (event) => { }
 ```
 
 ## Event type
@@ -50,7 +50,7 @@ You can use the `result` event in an [`addEventListener`](/en-US/docs/Web/API/Ev
 ```js
 const recognition = new SpeechRecognition();
 
-recognition.addEventListener('result', function(event) {
+recognition.addEventListener('result', (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
@@ -60,7 +60,7 @@ recognition.addEventListener('result', function(event) {
 Or use the `onresult` event handler property:
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;

@@ -21,14 +21,24 @@ notation).
 ## Syntax
 
 ```js
-new Uint32Array(); // new in ES2017
-new Uint32Array(length);
-new Uint32Array(typedArray);
-new Uint32Array(object);
+new Uint32Array()
+new Uint32Array(length)
+new Uint32Array(typedArray)
+new Uint32Array(object)
 
-new Uint32Array(buffer);
-new Uint32Array(buffer, byteOffset);
-new Uint32Array(buffer, byteOffset, length);
+new Uint32Array(buffer)
+new Uint32Array(buffer, byteOffset)
+new Uint32Array(buffer, byteOffset, length)
+```
+
+## Description
+
+The `Uint32Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Uint32Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+
+```js example-bad
+const dv = Uint32Array([1, 2, 3]);
+// TypeError: calling a builtin Uint32Array constructor
+// without new is forbidden
 ```
 
 ### Parameters
@@ -97,23 +107,6 @@ console.log(uint32FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Uint32Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Uint32Array` constructor as a function without `new`, will throw
-a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Uint32Array([1, 2, 3]);
-// TypeError: calling a builtin Uint32Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Uint32Array([1, 2, 3]);
-```
 
 ## See also
 

@@ -65,16 +65,15 @@ returned promise with a {{domxref("DOMException")}}, specifically, one of the fo
 To request a hit test source, start an {{domxref("XRSession")}} with the `hit-test` session feature enabled. Next, configure the hit test source and store it for later use in the frame loop and call {{domxref("XRFrame.getHitTestResults()")}} to obtain the result.
 
 ```js
-
 const xrSession = navigator.xr.requestSession("immersive-ar", {
-   requiredFeatures: ["local", "hit-test"]
+  requiredFeatures: ["local", "hit-test"]
 });
 
 let hitTestSource = null;
 
 xrSession.requestHitTestSource({
-  space : viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
-  offsetRay : new XRRay({y: 0.5})
+  space: viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
+  offsetRay: new XRRay({y: 0.5})
 }).then((viewerHitTestSource) => {
   hitTestSource = viewerHitTestSource;
 });

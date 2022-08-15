@@ -471,7 +471,7 @@ const docCookies = new Proxy(docCookies, {
     return target.setItem(key, value);
   },
   deleteProperty(target, key) {
-    if (!key in target) { return false; }
+    if (!(key in target)) { return false; }
     return target.removeItem(key);
   },
   ownKeys(target) {
@@ -499,11 +499,11 @@ const docCookies = new Proxy(docCookies, {
 
 /* Cookies test */
 
-console.log(docCookies.my_cookie1 = 'First value');
-console.log(docCookies.getItem('my_cookie1'));
+console.log(docCookies.myCookie1 = 'First value');
+console.log(docCookies.getItem('myCookie1'));
 
-docCookies.setItem('my_cookie1', 'Changed value');
-console.log(docCookies.my_cookie1);
+docCookies.setItem('myCookie1', 'Changed value');
+console.log(docCookies.myCookie1);
 ```
 
 ## Specifications

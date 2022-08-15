@@ -55,7 +55,7 @@ createPattern(image, repetition)
     - `"no-repeat"` (neither direction)
 
     If `repetition` is specified as an empty string (`""`) or
-    {{jsxref("null")}} (but not {{jsxref("undefined")}}), a value of `"repeat"`
+    [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (but not {{jsxref("undefined")}}), a value of `"repeat"`
     will be used.
 
 ### Return value
@@ -89,7 +89,7 @@ const ctx = canvas.getContext('2d');
 
 const img = new Image();
 img.src = 'canvas_createpattern.png';
-img.onload = function() {
+img.onload = () => {
   const pattern = ctx.createPattern(img, 'repeat');
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 300, 300);

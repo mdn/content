@@ -42,7 +42,7 @@ new EventSource(url, options)
 const evtSource = new EventSource('sse.php');
 const eventList = document.querySelector('ul');
 
-evtSource.onmessage = function(e) {
+evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
   newElement.textContent = `message: ${e.data}`;

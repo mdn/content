@@ -10,6 +10,7 @@ tags:
 browser-compat: mathml.elements.mfenced
 ---
 {{MathMLRef}}
+{{deprecated_header}}
 
 The deprecated MathML `<mfenced>` element used to provide the possibility to add custom opening and closing parentheses (such as brackets) and separators (such as commas or semicolons) to an expression. It has been removed from the latest MathML standard and modern browsers no longer support it. Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead.
 

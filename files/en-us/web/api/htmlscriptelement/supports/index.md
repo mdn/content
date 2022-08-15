@@ -8,11 +8,10 @@ tags:
   - Method
   - Reference
   - supports
-  - Experimental
   - Feature detection
 browser-compat: api.HTMLScriptElement.supports
 ---
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`supports()`** static method of the {{domxref("HTMLScriptElement")}} interface provides a simple and consistent method to feature-detect what types of scripts are supported by the user agent.
 
@@ -55,7 +54,7 @@ The code below shows how to check if `HTMLScriptElement.supports()` is defined, 
 ```
 
 ```js
-if (typeof HTMLScriptElement.supports == 'undefined') {
+if (typeof HTMLScriptElement.supports === 'undefined') {
   //Check if method is defined
   console.log("HTMLScriptElement.supports() method is not supported");
 }

@@ -47,7 +47,7 @@ function loadTexture(gl, url) {
                 pixel);
 
   const image = new Image();
-  image.onload = function() {
+  image.onload = () => {
     gl.bindTexture(gl.TEXTURE_2D, texture);
     gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
                   srcFormat, srcType, image);
@@ -72,7 +72,7 @@ function loadTexture(gl, url) {
 }
 
 function isPowerOf2(value) {
-  return (value & (value - 1)) == 0;
+  return value & (value - 1) === 0;
 }
 ```
 
@@ -99,9 +99,15 @@ Again, with these parameters, compatible WebGL devices will automatically accept
 
 To load the image, add a call to our `loadTexture()` function within our `main()` function. This can be added after the `initBuffers(gl)` call.
 
+But also note: Browsers copy pixels from the loaded image in top-to-bottom order — from the top-left corner; but WebGL wants the pixels in bottom-to-top order — starting from the bottom-left corner. (For more details, see [Why is my WebGL texture upside-down?](https://jameshfisher.com/2020/10/22/why-is-my-webgl-texture-upside-down/).)
+
+So in order to prevent the resulting image texture from having the wrong orientation when rendered, we also need call [`pixelStorei()`](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei) with the `gl.UNPACK_FLIP_Y_WEBGL` parameter set to `true` — to cause the pixels to be flipped into the bottom-to-top order that WebGL expects.
+
 ```js
 // Load texture
 const texture = loadTexture(gl, 'cubetexture.png');
+// Flip image pixels into the bottom-to-top order that WebGL expects.
+gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 ```
 
 ## Mapping the texture onto the faces
@@ -205,7 +211,7 @@ The fragment shader likewise needs to be updated:
   `;
 ```
 
-Instead of assigning a color value to the fragment's color, the fragment's color is computed by fetching the **texel** (that is, the pixel within the texture) based on the value of `vTextureCoord` which like the colors is interpolated between vertices.
+Instead of assigning a color value to the fragment's color, the fragment's color is computed by fetching the {{Glossary("texel")}} (that is, the pixel within the texture) based on the value of `vTextureCoord` which like the colors is interpolated between vertices.
 
 ### Attribute and Uniform Locations
 

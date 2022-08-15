@@ -19,7 +19,7 @@ By now you are quite used to seeing the same pieces of {{Glossary("HTML")}}, {{G
 
 Specifically, the HTML has a {{HTMLElement("p")}} element that contains some descriptive text about the page and may also hold error messages; a {{HTMLElement("canvas")}} element; and optionally a {{HTMLElement("button")}}. The CSS contains rules for `body`, `canvas`, and `button`. Any additional non-trivial CSS and HTML will be displayed on the pages of specific examples.
 
-In following examples, we will use a JavaScript helper function, `getRenderingContext()`, to initialize the {{domxref("WebGLRenderingContext","WebGL rendering context", "", 1)}}. By now, you should be able to understand what the function does. Basically, it gets the WebGL rendering context from the canvas element, initializes the drawing buffer, clears it black, and returns the initialized context. In case of error, it displays an error message and returns {{jsxref("null")}}.
+In following examples, we will use a JavaScript helper function, `getRenderingContext()`, to initialize the {{domxref("WebGLRenderingContext","WebGL rendering context", "", 1)}}. By now, you should be able to understand what the function does. Basically, it gets the WebGL rendering context from the canvas element, initializes the drawing buffer, clears it black, and returns the initialized context. In case of error, it displays an error message and returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 Finally, all JavaScript code will run within an immediate function, which is a common JavaScript technique (see {{Glossary("Function")}}). The function declaration and invocation will also be hidden.
 

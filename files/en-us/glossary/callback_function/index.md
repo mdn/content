@@ -13,11 +13,11 @@ Here is a quick example:
 
 ```js
 function greeting(name) {
-  alert('Hello ' + name);
+  alert(`Hello, ${name}`);
 }
 
 function processUserInput(callback) {
-  var name = prompt('Please enter your name.');
+  const name = prompt('Please enter your name.');
   callback(name);
 }
 
@@ -30,4 +30,4 @@ Note, however, that callbacks are often used to continue code execution after an
 
 ## See also
 
-- {{interwiki("wikipedia", "Callback_(computer_programming)", "Callback")}} on Wikipedia
+- [Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming)) on Wikipedia

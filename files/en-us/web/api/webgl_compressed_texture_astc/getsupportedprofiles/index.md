@@ -43,7 +43,7 @@ tonal range of real-world scenes (100,000:1).
 ## Examples
 
 ```js
-var ext = gl.getExtension('WEBGL_compressed_texture_astc');
+const ext = gl.getExtension('WEBGL_compressed_texture_astc');
 ext.getSupportedProfiles(); // ["ldr"]
 ```
 

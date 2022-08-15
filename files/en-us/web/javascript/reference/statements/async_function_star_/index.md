@@ -2,12 +2,12 @@
 title: async function*
 slug: Web/JavaScript/Reference/Statements/async_function*
 tags:
-   - Function
-   - Iterator
-   - JavaScript
-   - Language feature
-   - Statement
-browser-compat: javascript.statements.async_generator_function 
+  - Function
+  - Iterator
+  - JavaScript
+  - Language feature
+  - Statement
+browser-compat: javascript.statements.async_generator_function
 ---
 {{jsSidebar("Statements")}}
 
@@ -87,7 +87,7 @@ gen.next()
   .then((res) => {
     console.log(res); // { value: 4, done: false }
     return gen.next();
-  });
+  })
   .then((res) => {
     console.log(res); // { value: undefined, done: true }
     return gen.next();

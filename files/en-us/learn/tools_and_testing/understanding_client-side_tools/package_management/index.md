@@ -237,7 +237,7 @@ In the `index.js` file, add the following code and save it:
 import { formatDistanceToNow } from 'date-fns'
 
 const date = '1996-09-13 10:00:00';
-document.body.textContent = formatDistanceToNow(new Date(date)) + ' ago';
+document.body.textContent = `${formatDistanceToNow(new Date(date))} ago`;
 ```
 
 Go back to `http://localhost:1234` and you'll see how long ago it is since the author turned 18.

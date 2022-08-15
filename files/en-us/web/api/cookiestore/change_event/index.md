@@ -21,9 +21,9 @@ A `change` event is fired at a {{domxref("CookieStore")}} object when a change i
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-cookieStore.addEventListener('change', event => { })
+cookieStore.addEventListener('change', (event) => { })
 
-cookieStore.onchange = event => { }
+cookieStore.onchange = (event) => { }
 ```
 
 ## Examples
@@ -31,7 +31,7 @@ cookieStore.onchange = event => { }
 To be informed when a cookie has changed, you can add a handler to the `cookieStore` instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-cookieStore.addEventListener('change', function(event) {
+cookieStore.addEventListener('change', (event) => {
   console.log('1 change event');
 });
 ```
@@ -39,7 +39,7 @@ cookieStore.addEventListener('change', function(event) {
 Alternatively, you can use the `CookieStore.onchange` event handler property to establish a handler for the `change` event:
 
 ```js
-cookieStore.onchange = function(event) {
+cookieStore.onchange = (event) => {
     console.log('1 change event');
 };
 ```

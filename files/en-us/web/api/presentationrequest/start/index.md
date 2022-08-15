@@ -11,19 +11,16 @@ tags:
   - start()
 browser-compat: api.PresentationRequest.start
 ---
-{{APIRef("Presentation API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Presentation API")}}{{SeeCompatTable}}
 
-The **`start()`** property of the
-{{domxref("PresentationRequest")}} interface returns a {{jsxref("Promise")}} that
-resolves with a {{domxref("PresentationConnection")}} after the user agent prompts the
-user to select a display and grant permission to use that display.
+The **`start()`** property of the {{domxref("PresentationRequest")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("PresentationConnection")}} after the user agent prompts the user to select a display and grant permission to use that display.
 
 ## Syntax
 
 ```js
 const promise = presentationRequest.start()
-promise.then(function(PresentationConnection) { /* ... */ })
-       .catch(function(error) { /* ... */ })
+promise.then((PresentationConnection) => { /* ... */ })
+       .catch((error) => { /* ... */ })
 ```
 
 ### Parameters

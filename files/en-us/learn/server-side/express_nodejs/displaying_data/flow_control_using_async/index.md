@@ -31,7 +31,7 @@ exports.some_model_count = function(req, res, next) {
     // Do something if there is an err.
 
     // On success, render the result by passing count into the render function (here, as the variable 'data').
-    res.render('the_template', { data: count } );
+    res.render('the_template', { data: count });
   });
 }
 ```
@@ -74,7 +74,7 @@ The method [`async.series()`](https://caolan.github.io/async/v3/docs.html#series
 async.series({
   one(callback) { /* … */ },
   two(callback) { /* … */ },
-  …
+  // …
   something_else(callback) { /* … */ }
   },
   // optional callback after the last asynchronous function completes.
@@ -131,7 +131,7 @@ async.waterfall([
 
 ## Installing async
 
-Install the async module using the NPM package manager so that we can use it in our code. You do this in the usual way, by opening a prompt in the root of the _LocalLibrary_ project and entering the following command:
+Install the async module using the npm package manager so that we can use it in our code. You do this in the usual way, by opening a prompt in the root of the _LocalLibrary_ project and entering the following command:
 
 ```bash
 npm install async

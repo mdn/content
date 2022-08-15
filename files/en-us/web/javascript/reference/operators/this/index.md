@@ -16,15 +16,7 @@ A **function's `this` keyword** behaves a little differently in
 JavaScript compared to other languages. It also has some differences between [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and non-strict
 mode.
 
-In most cases, the value of `this` is determined by how a function is called
-(runtime binding). It can't be set by assignment during execution, and it may be
-different each time the function is called. ES5 introduced the
-{{jsxref("Function.prototype.bind()", "bind()")}} method to {{jsxref('Operators/this',
-  "set the value of a function's <code>this</code> regardless of how it's called",
-  'The_bind_method', 1)}}, and ES2015 introduced
-[arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-which don't provide their own `this` binding (it retains the
-`this` value of the enclosing lexical context).
+In most cases, the value of `this` is determined by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different each time the function is called. The {{jsxref("Function.prototype.bind()", "bind()")}} method can [set the value of a function's `this` regardless of how it's called](#the_bind_method), and [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) don't provide their own `this` binding (it retains the `this` value of the enclosing lexical context).
 
 {{EmbedInteractiveExample("pages/js/expressions-this.html")}}
 
@@ -274,8 +266,8 @@ console.log(obj.func() === globalObject); // true
 console.log(foo.call(obj) === globalObject); // true
 
 // Attempt to set this using bind
-foo = foo.bind(obj);
-console.log(foo() === globalObject); // true
+const boundFoo = foo.bind(obj);
+console.log(boundFoo() === globalObject); // true
 ```
 
 No matter what, `foo`'s `this` is set to what it was when it was
@@ -426,7 +418,10 @@ const o = {
 };
 
 Object.defineProperty(o, 'sum', {
-    get: sum, enumerable: true, configurable: true});
+  get: sum,
+  enumerable: true,
+  configurable: true,
+});
 
 console.log(o.average, o.sum); // 2, 6
 ```
@@ -478,7 +473,7 @@ console.log(o.a); // 38
 
 In the last example (`C2`), because an object was returned during
 construction, the new object that `this` was bound to gets discarded. (This
-essentially makes the statement "`this.a = 37;`" dead code. It's not exactly
+essentially makes the statement `this.a = 37;` dead code. It's not exactly
 dead because it gets executed, but it can be eliminated with no outside effects.)
 
 ### As a DOM event handler
@@ -523,7 +518,7 @@ The above alert shows `button`. Note however that only the outer code has
 its `this` set this way:
 
 ```html
-<button onclick="alert((function() { return this; })());">
+<button onclick="alert((function () { return this; })());">
   Show inner this
 </button>
 ```

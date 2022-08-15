@@ -56,8 +56,8 @@ In `table2.html`, we create a `WebAssembly.Table`:
 
 ```js
 const tbl = new WebAssembly.Table({
-  initial: 2, 
-  element: "anyfunc"
+  initial: 2,
+  element: "anyfunc",
 });
 ```
 
@@ -73,9 +73,7 @@ Next, we create an import object that contains the `WebAssembly.Table`:
 
 ```js
 const importObject = {
-  js: {
-    tbl: tbl
-  }
+  js: { tbl },
 };
 ```
 
@@ -105,7 +103,7 @@ After instantiating `table2.wasm`, `tbl` is updated with the following:
 The items at indexes 0 and 1 of the table are now callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions). To call them, note that we must add the function invocation operator `()` after the `get()` call:
 
 ```js
-instantiating.then(obj => {
+instantiating.then((obj) => {
   console.log(tbl.length);      // 2
   console.log(tbl.get(0)());    // 42
   console.log(tbl.get(1)());    // 83

@@ -554,7 +554,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `size`
 
-  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/CSS/width) property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
+  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
 
 - `src`
   - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
@@ -802,7 +802,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
       <td>
         Form controls that have constraint validation applied and are currently
         not valid. Matches a form control whose value doesn't match the
-        constraints set on it by it's attributes, such as
+        constraints set on it by its attributes, such as
         <a href="#required"><code>required</code></a>,
         <a href="#pattern"><code>pattern</code></a>,
         <a href="#step"><code>step</code></a> and <a href="#max"><code>max</code></a>.
@@ -1103,7 +1103,7 @@ If there is an error, supporting browsers will both alert the user and prevent t
 ```js
 function validate(input) {
   let validityState_object = input.validity;
-  if(validityState_object.valueMissing) {
+  if (validityState_object.valueMissing) {
      input.setCustomValidity('A value is required');
   } else if (validityState_object.rangeUnderflow) {
     input.setCustomValidity('Your value is too low');
@@ -1142,7 +1142,7 @@ nameInput.addEventListener('input', () => {
 });
 
 nameInput.addEventListener('invalid', () => {
-  if(nameInput.value === '') {
+  if (nameInput.value === '') {
     nameInput.setCustomValidity('Enter your username!');
   } else {
     nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
@@ -1157,7 +1157,7 @@ The example renders like so:
 In brief:
 
 - We check the valid state of the input element every time its value is changed by running the `checkValidity()` method via the `input` event handler.
-- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if()` block, and set a custom validity error message.
+- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if ()` block, and set a custom validity error message.
 - As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
 - If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.
 

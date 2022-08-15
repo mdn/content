@@ -40,7 +40,7 @@ These WebGL 1 extensions are universally supported, and can be relied upon to be
 
 _(see also: [WebGL feature levels and % support](https://kdashg.github.io/misc/webgl/webgl-feature-levels.html))_
 
-Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/jdashg/misc/blob/master/webgl/webgl-v1.1.js>
+Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/kdashg/misc/blob/tip/webgl/webgl-v1.1.js>
 
 ## Understand system limits
 
@@ -537,11 +537,11 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) => {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
-      if (res == gl.WAIT_FAILED) {
+      if (res === gl.WAIT_FAILED) {
         reject();
         return;
       }
-      if (res == gl.TIMEOUT_EXPIRED) {
+      if (res === gl.TIMEOUT_EXPIRED) {
         setTimeout(test, interval_ms);
         return;
       }
@@ -583,7 +583,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 ### `devicePixelRatio` and high-dpi rendering
 
-Handling `devicePixelRatio != 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
+Handling `devicePixelRatio !== 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
 
 Instead, we can use non-integer values for CSS's `top`/`bottom`/`left`/`right` to fairly reliably 'pre-snap' our canvas to whole integer device coordinates.
 
@@ -594,9 +594,9 @@ Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-pr
 On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
 
 ```js
-window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
-   await new Promise(fn_resolve => {
-      const observer = new ResizeObserver(entries => {
+window.getDevicePixelSize = window.getDevicePixelSize || (async (elem) => {
+   await new Promise((fn_resolve) => {
+      const observer = new ResizeObserver((entries) => {
          for (const cur of entries) {
             const dev_size = cur.devicePixelContentBoxSize;
             const ret = {
@@ -611,7 +611,7 @@ window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
       });
       observer.observe(elem, {box: 'device-pixel-content-box'});
    });
-};
+});
 ```
 
 Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.

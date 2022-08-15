@@ -58,7 +58,7 @@ Otherwise, you probably meant to use a comparison operator (e.g. `==` or
 `===`):
 
 ```js
-if (x == y) {
+if (x === y) {
   // do the right thing
 }
 ```

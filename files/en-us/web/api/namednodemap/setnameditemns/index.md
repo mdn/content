@@ -45,7 +45,6 @@ Returns the old attribute if replaced, or `null` if the attribute is new.
 ```
 
 ```js
-
 const parser = new DOMParser();
 // ob:one in <span> is not in a namespace, while ob:one in <warning>, is.
 const xmlString = '<warning ob:one="test" xmlns:ob="http://www.example.com/ob">Beware!</warning>';
@@ -64,7 +63,8 @@ attrMap.setNamedItemNS(one);
 result += `The '<span>' element now contains ${span.attributes.length} attributes:\n\n`;
 result += "Prefix\tLocal name\tQualified name\n";
 result += "=========================================\n";
-for(let attr of attrMap) {
+
+for (const attr of attrMap) {
   result += `${attr.prefix}\t${attr.localName}\t\t${attr.name}\n`;
 }
 

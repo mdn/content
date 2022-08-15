@@ -130,20 +130,42 @@ The functions are defined as below:
   For example, the line below first defines that we're checking the "name" field and that a validation error will set an error message "Empty name". We then call the sanitization method `trim()` to remove whitespace from the start and end of the string, and then `isLength()` to check the resulting string isn't empty. Finally, we call `escape()` to remove HTML characters from the variable that might be used in JavaScript cross-site scripting attacks.
 
   ```js
-  body('name', 'Empty name').trim().isLength({ min: 1 }).escape(),
+  [
+    // …
+    body('name', 'Empty name')
+      .trim()
+      .isLength({ min: 1 })
+      .escape(),
+    // …
+  ];
   ```
 
   This test checks that the age field is a valid date and uses `optional()` to specify that null and empty strings will not fail validation.
 
   ```js
-  body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601().toDate(),
+  [
+    // …
+    body('age', 'Invalid age')
+      .optional({ checkFalsy: true })
+      .isISO8601()
+      .toDate(),
+    // …
+  ];
   ```
 
   You can also daisy chain different validators, and add messages that are displayed if the preceding validators are true.
 
   ```js
-  body('name').trim().isLength({ min: 1 }).withMessage('Name empty.')
-      .isAlpha().withMessage('Name must be alphabet letters.'),
+  [
+    // …
+    body('name')
+      .trim()
+      .isLength({ min: 1 })
+      .withMessage('Name empty.')
+      .isAlpha()
+      .withMessage('Name must be alphabet letters.'),
+    // …
+  ];
   ```
 
 - [`validationResult(req)`](https://express-validator.github.io/docs/validation-result-api.html#validationresultreq): Runs the validation, making errors available in the form of a `validation` result object. This is invoked in a separate callback, as shown below:
@@ -154,11 +176,10 @@ The functions are defined as below:
       const errors = validationResult(req);
 
       if (!errors.isEmpty()) {
-          // There are errors. Render form again with sanitized values/errors messages.
-          // Error messages can be returned in an array using `errors.array()`.
-          }
-      else {
-          // Data from form is valid.
+        // There are errors. Render form again with sanitized values/errors messages.
+        // Error messages can be returned in an array using `errors.array()`.
+      } else {
+        // Data from form is valid.
       }
   }
   ```
@@ -231,7 +252,7 @@ A few tips:
 
 ## Summary
 
-_Express_, node, and third-party packages on NPM provide everything you need to add forms to your website. In this article, you've learned how to create forms using _Pug_, validate and sanitize input using _express-validator_, and add, delete, and modify records in the database.
+_Express_, node, and third-party packages on npm provide everything you need to add forms to your website. In this article, you've learned how to create forms using _Pug_, validate and sanitize input using _express-validator_, and add, delete, and modify records in the database.
 
 You should now understand how to add basic forms and form-handling code to your own node websites!
 

@@ -42,17 +42,19 @@ We return the keys of the caches in the {{domxref("CacheStorage")}} object using
 If not, we delete it using {{domxref("CacheStorage.delete()")}}.
 
 ```js
-this.addEventListener('activate', function(event) {
+this.addEventListener('activate', (event) => {
   const cacheAllowlist = ['v2'];
 
   event.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cacheAllowlist.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+    caches.keys().then((keyList) =>
+      Promise.all(
+        keyList.map((key) => {
+          if (!cacheAllowlist.includes(key)) {
+            return caches.delete(key);
+          }
+        })
+      )
+    )
   );
 });
 ```

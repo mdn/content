@@ -4,12 +4,12 @@ slug: Web/API/Permissions/revoke
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Permissions
   - Permissions API
   - Reference
   - revoke
+  - Deprecated
 browser-compat: api.Permissions.revoke
 ---
 {{APIRef("Permissions API")}}{{deprecated_header}}
@@ -75,7 +75,7 @@ be revoked.
 
 ```js
 function revokePermission() {
-  navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
+  navigator.permissions.revoke({ name: 'geolocation' }).then((result) => {
     report(result.state);
   });
 }

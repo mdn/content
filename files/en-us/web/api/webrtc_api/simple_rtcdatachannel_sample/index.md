@@ -54,8 +54,6 @@ Finally, there's the little box into which we'll insert the messages. This {{HTM
 
 While you can just [look at the code itself on GitHub](https://github.com/mdn/samples-server/blob/master/s/webrtc-simple-datachannel/main.js), below we'll review the parts of the code that do the heavy lifting.
 
-The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy to chain the steps of the connection process together; if you haven't already read up on this functionality of [ECMAScript 2015](/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla), you should read up on them. Similarly, this example uses [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to simplify syntax.
-
 ### Starting up
 
 When the script is run, we set up a {{domxref("Window/load_event", "load")}} event listener, so that once the page is fully loaded, our `startup()` function is called.
@@ -126,11 +124,11 @@ The next step is to set up each connection with ICE candidate listeners; these w
 > **Note:** In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.
 
 ```js
-    localConnection.onicecandidate = e => !e.candidate
+    localConnection.onicecandidate = (e) => !e.candidate
         || remoteConnection.addIceCandidate(e.candidate)
         .catch(handleAddCandidateError);
 
-    remoteConnection.onicecandidate = e => !e.candidate
+    remoteConnection.onicecandidate = (e) => !e.candidate
         || localConnection.addIceCandidate(e.candidate)
         .catch(handleAddCandidateError);
 ```
@@ -143,10 +141,10 @@ The last thing we need to do in order to begin connecting our peers is to create
 
 ```js
     localConnection.createOffer()
-    .then(offer => localConnection.setLocalDescription(offer))
+    .then((offer) => localConnection.setLocalDescription(offer))
     .then(() => remoteConnection.setRemoteDescription(localConnection.localDescription))
     .then(() => remoteConnection.createAnswer())
-    .then(answer => remoteConnection.setLocalDescription(answer))
+    .then((answer) => remoteConnection.setLocalDescription(answer))
     .then(() => localConnection.setRemoteDescription(remoteConnection.localDescription))
     .catch(handleCreateDescriptionError);
 ```
@@ -314,7 +312,7 @@ This starts by closing each peer's {{domxref("RTCDataChannel")}}, then, similarl
 
 ## Next steps
 
-You should [try out this example](https://mdn-samples.mozilla.org/s/webrtc-simple-datachannel) and take a look at the [webrtc-simple-datachannel](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel) source code, available on GitHub.
+Take a look at the [webrtc-simple-datachannel](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel) source code, available on GitHub.
 
 ## See also
 

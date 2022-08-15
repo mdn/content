@@ -71,7 +71,7 @@ Events have three functions:
       browser.tabs.update({url: CATGIFS});
     });
 
-    browser.pageAction.onClicked.addListener(function () {
+    browser.pageAction.onClicked.addListener(() => {
     });
     ```
 

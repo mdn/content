@@ -45,6 +45,10 @@ Valid `<display-internal>` values:
 - `ruby-text-container` {{Experimental_Inline}}
   - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### CSS tables example

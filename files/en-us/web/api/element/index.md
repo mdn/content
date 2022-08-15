@@ -301,11 +301,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
 
-  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI. Also available via the {{domxref("GlobalEventHandlers/oncancel", "oncancel")}} property.
+  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI.
 
 - {{domxref("Element/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
-    Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} property.
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
@@ -315,7 +314,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when some text has been selected.
 - {{domxref("Element/show_event", "show")}} {{deprecated_inline}}
   - : Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) attribute.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
 
@@ -344,10 +342,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/blur_event", "blur")}}
   - : Fired when an element has lost focus.
-    Also available via the {{domxref("GlobalEventHandlers/onblur", "onblur")}} property.
 - {{domxref("Element/focus_event", "focus")}}
   - : Fired when an element has gained focus.
-    Also available via the {{domxref("GlobalEventHandlers/onfocus", "onfocus")}} property
 - {{domxref("Element/focusin_event", "focusin")}}
   - : Fired when an element is about to gain focus.
 - {{domxref("Element/focusout_event", "focusout")}}
@@ -364,51 +360,37 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/keydown_event", "keydown")}}
   - : Fired when a key is pressed.
-    Also available via the {{domxref("GlobalEventHandlers/onkeydown", "onkeydown")}} property.
 - {{domxref("Element/keypress_event", "keypress")}}  {{deprecated_inline}}
   - : Fired when a key that produces a character value is pressed down.
-    Also available via the {{domxref("GlobalEventHandlers/onkeypress", "onkeypress")}} property.
 - {{domxref("Element/keyup_event", "keyup")}}
   - : Fired when a key is released.
-    Also available via the {{domxref("GlobalEventHandlers/onkeyup", "onkeyup")}} property.
 
 ### Mouse events
 
 - {{domxref("Element/auxclick_event", "auxclick")}}
   - : Fired when a non-primary pointing device button (e.g., any mouse button other than the left button) has been pressed and released on an element.
-    Also available via the {{domxref("GlobalEventHandlers/onauxclick", "onauxclick")}} property.
 - {{domxref("Element/click_event", "click")}}
   - : Fired when a pointing device button (e.g., a mouse's primary button) is pressed and released on a single element.
-    Also available via the {{domxref("GlobalEventHandlers/onclick", "onclick")}} property.
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
   - : Fired when the user attempts to open a context menu.
-    Also available via the {{domxref("GlobalEventHandlers/oncontextmenu", "oncontextmenu")}} property.
 - {{domxref("Element/dblclick_event", "dblclick")}}
   - : Fired when a pointing device button (e.g., a mouse's primary button) is clicked twice on a single element.
-    Also available via the {{domxref("GlobalEventHandlers/ondblclick", "ondblclick")}} property.
 - {{domxref("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}
   - : Occurs when an element is activated, for instance, through a mouse click or a keypress.
 - {{domxref("Element/mousedown_event", "mousedown")}}
   - : Fired when a pointing device button is pressed on an element.
-    Also available via the {{domxref("GlobalEventHandlers/onmousedown", "onmousedown")}} property.
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
   - : Fired when a pointing device (usually a mouse) is moved over the element that has the listener attached.
-    Also available via the {{domxref("GlobalEventHandlers/onmouseenter", "onmouseenter")}} property.
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
   - : Fired when the pointer of a pointing device (usually a mouse) is moved out of an element that has the listener attached to it.
-    Also available via the {{domxref("GlobalEventHandlers/onmouseleave", "onmouseleave")}} property.
 - {{domxref("Element/mousemove_event", "mousemove")}}
   - : Fired when a pointing device (usually a mouse) is moved while over an element.
-    Also available via the {{domxref("GlobalEventHandlers/onmousemove", "onmousemove")}} property.
 - {{domxref("Element/mouseout_event", "mouseout")}}
   - : Fired when a pointing device (usually a mouse) is moved off the element to which the listener is attached or off one of its children.
-    Also available via the {{domxref("GlobalEventHandlers/onmouseout", "onmouseout")}} property.
 - {{domxref("Element/mouseover_event", "mouseover")}}
   - : Fired when a pointing device is moved onto the element to which the listener is attached or onto one of its children.
-    Also available via the {{domxref("GlobalEventHandlers/onmouseover", "onmouseover")}} property.
 - {{domxref("Element/mouseup_event", "mouseup")}}
   - : Fired when a pointing device button is released on an element.
-    Also available via the {{domxref("GlobalEventHandlers/onmouseup", "onmouseup")}} property.
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}
   - : Fired each time the amount of pressure changes on the trackpadtouchscreen.
 - {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}
@@ -422,16 +404,12 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/touchcancel_event", "touchcancel")}}
   - : Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
-    Also available via the {{domxref("GlobalEventHandlers/ontouchcancel", "ontouchcancel")}} property.
 - {{domxref("Element/touchend_event", "touchend")}}
   - : Fired when one or more touch points are removed from the touch surface.
-    Also available via the {{domxref("GlobalEventHandlers/ontouchend", "ontouchend")}} property
 - {{domxref("Element/touchmove_event", "touchmove")}}
   - : Fired when one or more touch points are moved along the touch surface.
-    Also available via the {{domxref("GlobalEventHandlers/ontouchmove", "ontouchmove")}} property
 - {{domxref("Element/touchstart_event", "touchstart")}}
   - : Fired when one or more touch points are placed on the touch surface.
-    Also available via the {{domxref("GlobalEventHandlers/ontouchstart", "ontouchstart")}} property
 
 ## Specifications
 

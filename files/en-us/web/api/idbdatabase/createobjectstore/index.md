@@ -88,10 +88,10 @@ const request = window.indexedDB.open("toDoList", 4);
 // or when a new version number is submitted by calling
 // window.indexedDB.open().
 // This handler is only supported in recent browsers.
-request.onupgradeneeded = event => {
+request.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = event => {
+  db.onerror = (event) => {
     note.innerHTML += "<li>Error loading database.</li>";
   };
 

@@ -120,7 +120,7 @@ One important fact to keep in mind: em values compound. Take the following HTML 
 
 ```css
 html {
-  font-size: 100% 
+  font-size: 100%;
 }
 span {
   font-size: 1.6em;
@@ -147,7 +147,7 @@ The CSS below is nearly identical to the previous example. The only exception is
 
 ```css
 html {
-  font-size: 100%; 
+  font-size: 100%;
 }
 span {
   font-size: 1.6rem;

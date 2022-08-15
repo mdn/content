@@ -23,9 +23,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplayblur', event => { });
+addEventListener('vrdisplayblur', (event) => { });
 
-onvrdisplayblur = event => { };
+onvrdisplayblur = (event) => { };
 ```
 
 ## Event type
@@ -48,7 +48,7 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplayblur` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplayblur', function() {
+window.addEventListener('vrdisplayblur', () => {
   info.textContent = 'Display unfocused.';
   reportDisplays();
 });
@@ -57,7 +57,7 @@ window.addEventListener('vrdisplayblur', function() {
 Or use the `onvrdisplayblur` event handler property:
 
 ```js
-window.onvrdisplayblur = function() {
+window.onvrdisplayblur = () => {
   info.textContent = 'Display unfocused.';
   reportDisplays();
 };

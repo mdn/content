@@ -31,7 +31,7 @@ Below is a list of interfaces based on the CSSMathValue interface.
 
 ## Properties
 
-- {{domxref('CSSMathValue.operator')}}
+- {{domxref('CSSMathValue.operator')}} {{Experimental_Inline}}
   - : Indicates the operator that the current subtype represents.
 
 ### Event handlers
@@ -63,9 +63,9 @@ We add the JavaScript
 ```js
 const styleMap = document.querySelector('div').computedStyleMap();
 
-console.log( styleMap.get('width') );                  // CSSMathSum {values: CSSNumericArray, operator: "sum"}
-console.log( styleMap.get('width').operator );         // 'sum'
-console.log( styleMap.get('width').values[1].value );  // -20
+console.log(styleMap.get('width'));                  // CSSMathSum {values: CSSNumericArray, operator: "sum"}
+console.log(styleMap.get('width').operator);         // 'sum'
+console.log(styleMap.get('width').values[1].value);  // -20
 ```
 
 {{EmbedLiveSample("Examples", 120, 300)}}

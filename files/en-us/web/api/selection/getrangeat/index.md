@@ -38,7 +38,7 @@ let ranges = [];
 
 sel = window.getSelection();
 
-for(let i = 0; i < sel.rangeCount; i++) {
+for (let i = 0; i < sel.rangeCount; i++) {
  ranges[i] = sel.getRangeAt(i);
 }
 /* Each item in the ranges array is now

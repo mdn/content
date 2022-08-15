@@ -10,4 +10,4 @@ In the context of data or an object **{{Glossary("Wrapper", "wrapper")}}** aroun
 
 ## See also
 
-- {{Interwiki("wikipedia", "Primitive wrapper class")}} on Wikipedia
+- [Primitive wrapper class](https://en.wikipedia.org/wiki/Primitive_wrapper_class) on Wikipedia

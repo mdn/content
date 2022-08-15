@@ -162,8 +162,8 @@ function randomColor() {
 const stylesheet = document.styleSheets[1];
 let boxParaRule;
 
-for(let i = 0; i < stylesheet.cssRules.length; i++) {
-  if(stylesheet.cssRules[i].selectorText === '.box p') {
+for (let i = 0; i < stylesheet.cssRules.length; i++) {
+  if (stylesheet.cssRules[i].selectorText === '.box p') {
     boxParaRule = stylesheet.cssRules[i];
   }
 }

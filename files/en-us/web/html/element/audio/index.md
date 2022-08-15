@@ -243,7 +243,7 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Formats/C
 <audio controls>
   <source src="myAudio.mp3" type="audio/mpeg">
   <source src="myAudio.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is
+  <p>Your browser doesn't support HTML audio. Here is
      a <a href="myAudio.mp3">link to the audio</a> instead.</p>
 </audio>
 ```
@@ -287,13 +287,13 @@ You can detect when tracks are added to and removed from an `<audio>` element us
 For example, to detect when audio tracks are added to or removed from an `<audio>` element, you can use code like this:
 
 ```js
-var elem = document.querySelector("audio");
+const elem = document.querySelector("audio");
 
-elem.audioTrackList.onaddtrack = function(event) {
+elem.audioTrackList.onaddtrack = (event) => {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTrackList.onremovetrack = function(event) {
+elem.audioTrackList.onremovetrack = (event) => {
   trackEditor.removeTrack(event.track);
 };
 ```
@@ -373,7 +373,7 @@ Also it's a good practice to provide some content (such as the direct download l
   <source src="myAudio.mp3" type="audio/mpeg">
   <source src="myAudio.ogg" type="audio/ogg">
   <p>
-    Your browser doesn't support HTML5 audio.
+    Your browser doesn't support HTML audio.
     Here is a <a href="myAudio.mp3">link to download the audio</a> instead.
   </p>
 </audio>

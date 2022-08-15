@@ -5,13 +5,12 @@ page-type: web-api-interface
 tags:
   - API
   - ByteLengthQueuingStrategy
-  - Experimental
   - Interface
   - Reference
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in byte length queuing strategy that can be used when constructing streams.
 
@@ -46,7 +45,7 @@ const readableStream = new ReadableStream({
   }
 }, queueingStrategy);
 
-var size = queueingStrategy.size(chunk);
+const size = queueingStrategy.size(chunk);
 ```
 
 ## Specifications

@@ -99,11 +99,11 @@ if not, it is the same object as the one passed as the `result` parameter.
 ## Examples
 
 ```js
-var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
+const headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
 /* Search the document for all h2 elements.
  * The result will likely be an unordered node iterator. */
-var thisHeading = headings.iterateNext();
-var alertText = "Level 2 headings in this document are:\n";
+let thisHeading = headings.iterateNext();
+let alertText = "Level 2 headings in this document are:\n";
 while (thisHeading) {
   alertText += `${thisHeading.textContent}\n`;
   thisHeading = headings.iterateNext();

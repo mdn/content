@@ -40,8 +40,8 @@ Two arrays are used to access transient input hit test results. First, you get a
 function onXRFrame(time, xrFrame) {
   let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
 
-  hitTestResults.forEach(resultsPerInputSource => {
-    resultsPerInputSource.results.forEach(hitTest => {
+  hitTestResults.forEach((resultsPerInputSource) => {
+    resultsPerInputSource.results.forEach((hitTest) => {
       // do something with the hit test
       hitTest.getPose(referenceSpace);
     });
@@ -58,8 +58,8 @@ The {{domxref("XRTransientInputHitTestResult.inputSource", "inputSource")}} prop
 function onXRFrame(time, xrFrame) {
   let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
 
-  hitTestResults.forEach(resultsPerInputSource => {
-    if (resultsPerInputSource.inputSource == myPreferredInputSource) {
+  hitTestResults.forEach((resultsPerInputSource) => {
+    if (resultsPerInputSource.inputSource === myPreferredInputSource) {
       // act on hit test results from the preferred input source
     }
   });

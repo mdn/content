@@ -84,9 +84,6 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Indicates whether or not the data channel is _reliable_.
-- {{DOMxRef("RTCDataChannel.stream", "stream")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : Returns an ID number (between 0 and 65,535)
-    which uniquely identifies the data channel.
 
 ## Methods
 
@@ -129,15 +126,15 @@ The underlying data format is defined by the IEEE specification [SDP Offer/Answe
 const pc = new RTCPeerConnection();
 const dc = pc.createDataChannel("my channel");
 
-dc.onmessage = function (event) {
+dc.onmessage = (event) => {
   console.log(`received: ${event.data}`);
 };
 
-dc.onopen = function () {
+dc.onopen = () => {
   console.log("datachannel open");
 };
 
-dc.onclose = function () {
+dc.onclose = () => {
   console.log("datachannel close");
 };
 ```

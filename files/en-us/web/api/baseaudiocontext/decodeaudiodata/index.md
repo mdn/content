@@ -103,17 +103,17 @@ function getData() {
 
   request.responseType = 'arraybuffer';
 
-  request.onload = function() {
+  request.onload = () => {
     const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, (buffer) => {
         source.buffer = buffer;
 
         source.connect(audioCtx.destination);
         source.loop = true;
       },
 
-      function(e){ console.log(`Error with decoding audio data: ${e.err}`); });
+      (err) => console.error(`Error with decoding audio data: ${err.err}`));
 
   }
 
@@ -122,13 +122,13 @@ function getData() {
 
 // wire up buttons to stop and play audio
 
-play.onclick = function() {
+play.onclick = () => {
   getData();
   source.start(0);
   play.setAttribute('disabled', 'disabled');
 }
 
-stop.onclick = function() {
+stop.onclick = () => {
   source.stop(0);
   play.removeAttribute('disabled');
 }
@@ -141,7 +141,7 @@ pre.innerHTML = myScript.innerHTML;
 ### New promise-based syntax
 
 ```js
-ctx.decodeAudioData(audioData).then(function(decodedData) {
+ctx.decodeAudioData(audioData).then((decodedData) => {
  // use the decoded data here
 });
 ```

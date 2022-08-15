@@ -228,7 +228,7 @@ else if (e.target.id === "tabs-alertinfo") {
 Where `callOnActiveTab()` finds the active tab object by looping through the {{WebExtAPIRef("tabs.Tab")}} objects looking for the item with active set:
 
 ```js
-document.addEventListener("click", function(e) {
+document.addEventListener("click", (e) => {
   function callOnActiveTab(callback) {
     getCurrentWindowTabs().then((tabs) => {
       for (let tab of tabs) {
@@ -296,7 +296,7 @@ But first, here is a demonstration of the feature in action:
   - : To implement the "menu" defined in `tabs.html`, [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js) includes a listener for clicks in `tabs.html`:
 
     ```js
-    document.addEventListener("click", function(e) {
+    document.addEventListener("click", (e) => {
       function callOnActiveTab(callback) {
 
         getCurrentWindowTabs().then((tabs) => {
@@ -307,7 +307,7 @@ But first, here is a demonstration of the feature in action:
           }
         });
       }
-    }
+    });
     ```
 
     A series of `if` statements then look to match the `id` of the item clicked.

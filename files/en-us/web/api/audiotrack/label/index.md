@@ -47,7 +47,7 @@ function getTrackList(el) {
     "main", "alternative", "main-desc", "translation", "commentary"
   ];
 
-  el.audioTracks.forEach(function(track) {
+  el.audioTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,

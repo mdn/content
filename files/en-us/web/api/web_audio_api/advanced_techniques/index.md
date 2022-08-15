@@ -494,7 +494,7 @@ Let's create a `playSample()` function similarly to how we did with the other so
 function playSample(audioContext, audioBuffer, time) {
   const sampleSource = new AudioBufferSourceNode(audioCtx, {
     buffer: audioBuffer,
-    playbackRate: playbackRate,
+    playbackRate,
   });
   sampleSource.connect(audioContext.destination);
   sampleSource.start(time);
@@ -533,7 +533,7 @@ We'll then add a line to update the `playbackRate` property to our `playSample()
 function playSample(audioContext, audioBuffer, time) {
   const sampleSource = new AudioBufferSourceNode(audioCtx, {
     buffer: audioBuffer,
-    playbackRate: playbackRate,
+    playbackRate,
   });
   sampleSource.connect(audioContext.destination);
   sampleSource.start(time);
@@ -596,7 +596,7 @@ const notesInQueue = [];
 
 function scheduleNote(beatNumber, time) {
   // Push the note on the queue, even if we're not playing.
-  notesInQueue.push({ note: beatNumber, time: time });
+  notesInQueue.push({ note: beatNumber, time });
 
   if (pads[0].querySelectorAll("input")[beatNumber].checked) {
     playSweep(time);
@@ -688,7 +688,7 @@ setupSample().then((sample) => {
       requestAnimationFrame(draw); // start the drawing loop.
       ev.target.dataset.playing = "true";
     } else {
-      window.clearTimeout(timerID);
+      clearTimeout(timerID);
       ev.target.dataset.playing = "false";
     }
   });

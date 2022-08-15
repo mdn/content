@@ -36,15 +36,15 @@ This interface is accessible through the {{domxref("VRDisplay.stageParameters")}
 const info = document.querySelector('p');
 let vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
   const stageParams = vrDisplay.stageParameters;
   // stageParams is a VRStageParameters object
 
-  if(stageParams === null) {
+  if (stageParams === null) {
     info.textContent = 'Your VR Hardware does not support room-scale experiences.'
   } else {
-    info.innerHTML = `<strong>Display stage parameters</strong><br>` + 
+    info.innerHTML = `<strong>Display stage parameters</strong><br>` +
       `Sitting to standing transform: ${stageParams.sittingToStandingTransform}<br>` +
       `Play area width (m): ${stageParams.sizeX}<br>` +
       `Play area depth (m): ${stageParams.sizeY}`;

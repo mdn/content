@@ -22,14 +22,24 @@ notation).
 ## Syntax
 
 ```js
-new Float64Array(); // new in ES2017
-new Float64Array(length);
-new Float64Array(typedArray);
-new Float64Array(object);
+new Float64Array()
+new Float64Array(length)
+new Float64Array(typedArray)
+new Float64Array(object)
 
-new Float64Array(buffer);
-new Float64Array(buffer, byteOffset);
-new Float64Array(buffer, byteOffset, length);
+new Float64Array(buffer)
+new Float64Array(buffer, byteOffset)
+new Float64Array(buffer, byteOffset, length)
+```
+
+## Description
+
+The `Float64Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Float64Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+
+```js example-bad
+const dv = Float64Array([1, 2, 3]);
+// TypeError: calling a builtin Float64Array constructor
+// without new is forbidden
 ```
 
 ### Parameters
@@ -98,23 +108,6 @@ console.log(float64FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Float64Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Float64Array` constructor as a function without `new`, will throw
-a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Float64Array([1, 2, 3]);
-// TypeError: calling a builtin Float64Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Float64Array([1, 2, 3]);
-```
 
 ## See also
 

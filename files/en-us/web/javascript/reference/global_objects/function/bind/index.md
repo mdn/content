@@ -23,7 +23,7 @@ is called.
 
 ```js
 bind(thisArg)
-bind(thisArg, arg1, …, argN)
+bind(thisArg, arg1, /* …, */ argN)
 ```
 
 ### Parameters
@@ -97,8 +97,8 @@ inserted at the start of the arguments passed to the target function, followed b
 whatever arguments are passed to the bound function at the time it is called.
 
 ```js
-function list() {
-  return Array.prototype.slice.call(arguments);
+function list(...args) {
+  return args;
 }
 
 function addArguments(arg1, arg2) {
@@ -131,7 +131,7 @@ const result3 = addThirtySeven(5, 10);
 //  (the second argument is ignored)
 ```
 
-### With `setTimeout()`
+### With setTimeout()
 
 By default within {{domxref("setTimeout()")}}, the `this` keyword will be set to the
 {{domxref("window")}} (or `global`) object. When working with class methods
@@ -139,18 +139,18 @@ that require `this` to refer to class instances, you may explicitly bind
 `this` to the callback function, in order to maintain the instance.
 
 ```js
-function LateBloomer() {
-  this.petalCount = Math.floor(Math.random() * 12) + 1;
+class LateBloomer {
+  constructor() {
+    this.petalCount = Math.floor(Math.random() * 12) + 1;
+  }
+  bloom() {
+    // Declare bloom after a delay of 1 second
+    setTimeout(this.declare.bind(this), 1000);
+  }
+  declare() {
+    console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
+  }
 }
-
-// Declare bloom after a delay of 1 second
-LateBloomer.prototype.bloom = function() {
-  window.setTimeout(this.declare.bind(this), 1000);
-};
-
-LateBloomer.prototype.declare = function() {
-  console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
-};
 
 const flower = new LateBloomer();
 flower.bloom();
@@ -177,7 +177,7 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
+Point.prototype.toString = function () {
   return `${this.x},${this.y}`;
 };
 
@@ -185,14 +185,10 @@ const p = new Point(1, 2);
 p.toString();
 // '1,2'
 
-//  not supported in the polyfill below,
-
-//  works fine with native bind:
-
-const YAxisPoint = Point.bind(null, 0/*x*/);
+let YAxisPoint = Point.bind(null, 0/*x*/);
 
 const emptyObj = {};
-const YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+YAxisPoint = Point.bind(emptyObj, 0/*x*/);
 
 const axisPoint = new YAxisPoint(5);
 axisPoint.toString();                    // '0,5'

@@ -6,12 +6,11 @@ tags:
   - API
   - ByteLengthQueuingStrategy
   - Constructor
-  - Experimental
   - Reference
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy()`**
 constructor creates and returns a `ByteLengthQueuingStrategy` object
@@ -55,7 +54,7 @@ const readableStream = new ReadableStream({
   }
 }, queuingStrategy);
 
-var size = queuingStrategy.size(chunk);
+const size = queuingStrategy.size(chunk);
 ```
 
 ## Specifications

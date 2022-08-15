@@ -19,16 +19,18 @@ boolean value that indicates if the <kbd>shift</kbd> key was pressed
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Examples
 
 ```html
-<html>
+<html lang="en-US">
 <head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width">
 <title>shiftKey example</title>
 
-<script type="text/javascript">
+<script>
 
 function showChar(e){
   alert(

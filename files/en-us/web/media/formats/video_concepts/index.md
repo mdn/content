@@ -41,9 +41,9 @@ The name "YUV" is generally used today to describe this color system, even thoug
 
 #### Contemplating human vision
 
-We're able to represent an image this way because the human eye sees far more detail in greyscale than in color, thanks to biology. The human eye contains two kinds of {{interwiki("wikipedia", "Photoreceptor cell", "photoreceptor")}} (light-sensing) cells. The **rods** are highly-sensitive light intensity sensors. The **cones** are less sensitive but are able to detect color.
+We're able to represent an image this way because the human eye sees far more detail in greyscale than in color, thanks to biology. The human eye contains two kinds of [photoreceptor](https://en.wikipedia.org/wiki/Photoreceptor_cell) (light-sensing) cells. The **rods** are highly-sensitive light intensity sensors. The **cones** are less sensitive but are able to detect color.
 
-Because the eye has vastly more rods than cones (about 120 million rods to around 6 or 7 million cones), we see detail in greyscale, with color being far less detailed. In essence, our eyes are like a camera with two image sensor chips: one greyscale and one color. The greyscale sensor is 120 megapixels, while the color sensor is only about 7 megapixels. These sensors physically occupy the same surface, called the **{{interwiki("wikipedia", "Visual system#Retina", "retina")}}**, at the back of the eye.
+Because the eye has vastly more rods than cones (about 120 million rods to around 6 or 7 million cones), we see detail in greyscale, with color being far less detailed. In essence, our eyes are like a camera with two image sensor chips: one greyscale and one color. The greyscale sensor is 120 megapixels, while the color sensor is only about 7 megapixels. These sensors physically occupy the same surface, called the **[retina](https://en.wikipedia.org/wiki/Visual_system#Retina)**, at the back of the eye.
 
 There are three types of cones, each of which responds to a particular wavelength band of incoming light, but also to the intensity of the light at that wavelength. Each type of cone, then, captures the relative response peaks at various wavelengths, and the brain uses this data to figure out the intensity and hue of the color of the light arriving at that part of the retina.
 

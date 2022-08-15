@@ -24,7 +24,7 @@ An {{domxref("HIDDevice")}}.
 In the following example `device` is a {{domxref("HIDDevice")}} instance, representing the device sending the report. The `productName` of this device is logged to the console.
 
 ```js
-device.addEventListener("inputreport", event => {
+device.addEventListener("inputreport", (event) => {
   const { data, device, reportId } = event;
   console.log(device.productName);
 });

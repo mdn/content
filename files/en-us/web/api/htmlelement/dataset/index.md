@@ -114,7 +114,7 @@ delete el.dataset.dateOfBirth;
 // Result on JS: el.dataset.dateOfBirth === undefined
 // Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe">John Doe</div>
 
-if ('someDataAttr' in el.dataset === false) {
+if (!('someDataAttr' in el.dataset)) {
   el.dataset.someDataAttr = 'mydata';
   // Result on JS: 'someDataAttr' in el.dataset === true
   // Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe" data-some-data-attr="mydata">John Doe</div>

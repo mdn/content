@@ -154,14 +154,14 @@ Let's add a little bit of code to our example so we can examine the data generat
 Then we add some [JavaScript](/en-US/docs/Web/JavaScript) to set up an event listener on the {{domxref("HTMLFormElement/submit_event", "submit")}} event, which is sent when the user clicks the "Submit" button:
 
 ```js
-var form = document.querySelector("form");
-var log = document.querySelector("#log");
+const form = document.querySelector("form");
+const log = document.querySelector("#log");
 
-form.addEventListener("submit", function(event) {
-  var data = new FormData(form);
-  var output = "";
+form.addEventListener("submit", (event) => {
+  const data = new FormData(form);
+  let output = "";
   for (const entry of data) {
-    output = output + entry[0] + "=" + entry[1] + "\r";
+    output = `${output}${entry[0]}=${entry[1]}\r`;
   };
   log.innerText = output;
   event.preventDefault();

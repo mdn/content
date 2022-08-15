@@ -90,7 +90,7 @@ Here's a content script that sends a message to the background script when the u
 // content-script.js
 
 function handleResponse(message) {
-  console.log(`Message from the background script:  ${message.response}`);
+  console.log(`Message from the background script: ${message.response}`);
 }
 
 function handleError(error) {
@@ -98,8 +98,8 @@ function handleError(error) {
 }
 
 function notifyBackgroundPage(e) {
-  let sending = browser.runtime.sendMessage({
-    greeting: "Greeting from the content script"
+  const sending = browser.runtime.sendMessage({
+    greeting: "Greeting from the content script",
   });
   sending.then(handleResponse, handleError);
 }
@@ -111,11 +111,9 @@ The corresponding background script looks like this:
 
 ```js
 // background-script.js
-
 function handleMessage(request, sender, sendResponse) {
-  console.log("Message from the content script: " +
-    request.greeting);
-  sendResponse({response: "Response from background script"});
+  console.log(`A content script sent a message: ${request.greeting}`);
+  sendResponse({ response: "Response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);

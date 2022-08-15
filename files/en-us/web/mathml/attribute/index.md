@@ -7,15 +7,9 @@ tags:
 ---
 {{MathMLRef}}
 
-This is an alphabetical list of MathML attributes. More details for each attribute are available on relevant [MathML element pages](/en-US/docs/Web/MathML/Element)
-and on the [global attributes page](/en-US/docs/Web/MathML/Global_attributes).
+This is an alphabetical list of MathML attributes. More details for each attribute are available on relevant [MathML element pages](/en-US/docs/Web/MathML/Element) and on the [global attributes page](/en-US/docs/Web/MathML/Global_attributes). See the [Values](/en-US/docs/Web/MathML/Attribute/Values) page for notes on values and units in MathML.
 
-Notes:
-
-- The MathML {{ MathMLElement("mstyle") }} and {{ MathMLElement("math") }} elements accept all attributes of all MathML presentation elements.
-- See [values](/en-US/docs/Web/MathML/Attribute/Values) for notes on values and units in MathML.
-- The attributes `background`, `color`, `fontfamily`, `fontsize`, `fontstyle`, `fontweight` and `xlink:href` are deprecated.
-- The [XLink](/en-US/docs/Glossary/XLink) attributes on MathML elements: `xlink:actuate`, `xlink:href`, `xlink:show` and `xlink:type` are deprecated as well.
+> **Note:** As explained on the main [MathML](/en-US/docs/Web/MathML) page, documentation is focused on a subset of the language that is relevant for browsers. See the [MathML Full](https://w3c.github.io/mathml/) specification if you want details about other MathML attributes.
 
 <table class="standard-table">
   <thead>
@@ -58,7 +52,7 @@ Notes:
       <td>
         {{ MathMLElement("mtable") }}<br />{{ MathMLElement("munder") }},
         {{ MathMLElement("mover") }},
-        {{ MathMLElement("munderover") }}<br />{{ MathMLElement("mstack") }}
+        {{ MathMLElement("munderover") }}
       </td>
       <td>
         Specifies different alignments of several elements (see element pages
@@ -66,14 +60,11 @@ Notes:
       </td>
     </tr>
     <tr>
+      <td><code>background</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        {{ unimplemented_inline() }}<br /><code>altimg</code><br /><code
-          >altimg-width</code
-        ><br /><code>altimg-height</code><br /><code>altimg-valign</code
-        ><br /><code>alttext</code>
+        Use CSS <a href="/en-US/docs/Web/CSS/background-color"><code>background-color</code></a> instead.
       </td>
-      <td>{{ MathMLElement("math") }}</td>
-      <td>Visual and textual fall-back options.</td>
     </tr>
     <tr>
       <td><code>bevelled</code> {{deprecated_inline}}</td>
@@ -84,14 +75,16 @@ Notes:
       </td>
     </tr>
     <tr>
-      <td>{{ unimplemented_inline() }} <code>charalign</code></td>
-      <td>{{ MathMLElement("mstack") }}</td>
-      <td>Specifies the horizontal alignment of digits.</td>
-    </tr>
-    <tr>
       <td><code>close</code></td>
       <td>{{ MathMLElement("mfenced") }}</td>
       <td>A string for the closing delimiter.</td>
+    </tr>
+    <tr>
+      <td><code>color</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        Use CSS <a href="/en-US/docs/Web/CSS/color"><code>color</code></a> instead.
+      </td>
     </tr>
     <tr>
       <td><code>columnalign</code></td>
@@ -119,11 +112,6 @@ Notes:
         A non-negative integer value that indicates over how many table columns
         the cell extends.
       </td>
-    </tr>
-    <tr>
-      <td>{{ unimplemented_inline() }} <code>crossout</code></td>
-      <td>{{ MathMLElement("mscarry") }}</td>
-      <td>Specifies what kind of line is drawn to cross out carries.</td>
     </tr>
     <tr>
       <td><code>denomalign</code> {{deprecated_inline}}</td>
@@ -178,16 +166,39 @@ Notes:
       </td>
     </tr>
     <tr>
-      <td>{{ unimplemented_inline() }} <code>edge</code></td>
-      <td>{{ MathMLElement("malignmark") }}</td>
-      <td></td>
-    </tr>
-    <tr>
       <td><code>fence</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
         A Boolean value specifying whether the operator is a fence (such as
         parentheses). There is no visual effect for this attribute.
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontfamily</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        Use CSS <a href="/en-US/docs/Web/CSS/font-family"><code>font-family</code></a> instead.
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontsize</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        Use CSS <a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a> instead.
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontstyle</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        Use CSS <a href="/en-US/docs/Web/CSS/font-style"><code>font-style</code></a> instead.
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontweight</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        Use CSS <a href="/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a> instead.
       </td>
     </tr>
     <tr>
@@ -206,11 +217,6 @@ Notes:
         Specifies additional space added between the table and
         <code>frame</code>.
       </td>
-    </tr>
-    <tr>
-      <td>{{ unimplemented_inline() }} <code>groupalign</code></td>
-      <td>{{ MathMLElement("maligngroup") }}</td>
-      <td></td>
     </tr>
     <tr>
       <td><code>height</code></td>
@@ -240,50 +246,9 @@ Notes:
       <td></td>
     </tr>
     <tr>
-      <td>{{ unimplemented_inline() }} <code>linebreak</code></td>
-      <td>{{ MathMLElement("mo") }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{ unimplemented_inline() }} <code>linebreakmultchar</code>
-      </td>
-      <td>
-        {{ MathMLElement("mo") }},
-        {{ MathMLElement("mspace") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{ unimplemented_inline() }} <code>linebreakstyle</code></td>
-      <td>
-        {{ MathMLElement("mo") }},
-        {{ MathMLElement("mspace") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{ unimplemented_inline() }} <code>lineleading</code></td>
-      <td>
-        {{ MathMLElement("mo") }},
-        {{ MathMLElement("mspace") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
       <td><code>linethickness</code></td>
       <td>{{ MathMLElement("mfrac") }}</td>
       <td>The thickness of the horizontal fraction line.</td>
-    </tr>
-    <tr>
-      <td>{{ unimplemented_inline() }} <code>location</code></td>
-      <td>{{ MathMLElement("mscarries") }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{ unimplemented_inline() }} <code>longdivstyle</code></td>
-      <td>{{ MathMLElement("mlongdiv") }}</td>
-      <td>Controls the style of the long division layout.</td>
     </tr>
     <tr>
       <td><code>lspace</code></td>
@@ -383,16 +348,6 @@ Notes:
       <td>A string for the opening delimiter.</td>
     </tr>
     <tr>
-      <td>{{ unimplemented_inline() }} <code>position</code></td>
-      <td>
-        {{ MathMLElement("msgroup") }},
-        {{ MathMLElement("msrow") }},
-        {{ MathMLElement("mscarries") }},
-        {{ MathMLElement("msline") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
       <td><code>rowalign</code></td>
       <td>
         {{ MathMLElement("mtable") }},
@@ -478,16 +433,6 @@ Notes:
       </td>
     </tr>
     <tr>
-      <td>{{ unimplemented_inline() }} <code>shift</code></td>
-      <td>{{ MathMLElement("msgroup") }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{ unimplemented_inline() }} <code>stackalign</code></td>
-      <td>{{ MathMLElement("mstack") }}</td>
-      <td></td>
-    </tr>
-    <tr>
       <td><code>stretchy</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
@@ -544,14 +489,6 @@ Notes:
         Specifies the desired width. See
         <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">lengths</a>
         for possible values.
-      </td>
-    </tr>
-    <tr>
-      <td><code>xlink:href</code> {{deprecated_inline}}</td>
-      <td><em>All</em></td>
-      <td>
-        Can be used to set a hyperlink to a specified URI. However, authors are
-        encouraged to use the <code>href</code> attribute instead.
       </td>
     </tr>
     <tr>

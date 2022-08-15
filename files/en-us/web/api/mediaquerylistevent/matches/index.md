@@ -27,7 +27,7 @@ currently matches the media query list, `false` if not.
 ## Examples
 
 ```js
-var mql = window.matchMedia('(max-width: 600px)');
+const mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {

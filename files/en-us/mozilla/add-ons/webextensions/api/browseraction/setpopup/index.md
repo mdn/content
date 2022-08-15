@@ -65,7 +65,7 @@ This code adds a pair of context menu items that you can use to switch between t
 ```js
 function onCreated() {
   if (browser.runtime.lastError) {
-    console.log("error creating item:" + browser.runtime.lastError);
+    console.log("error creating item:", browser.runtime.lastError);
   } else {
     console.log("item created successfully");
   }
@@ -87,10 +87,10 @@ browser.contextMenus.create({
   checked: false
 }, onCreated);
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "popup-1") {
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "popup-1") {
     browser.browserAction.setPopup({popup: "/popup/popup1.html"})
-  } else if (info.menuItemId == "popup-2") {
+  } else if (info.menuItemId === "popup-2") {
     browser.browserAction.setPopup({popup: "/popup/popup2.html"})
   }
 });

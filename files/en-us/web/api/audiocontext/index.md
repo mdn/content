@@ -29,9 +29,9 @@ An audio context controls both the creation of the nodes it contains and the exe
 
 _Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}._
 
-- {{domxref("AudioContext.baseLatency")}} {{readonlyinline}} {{experimental_inline}}
+- {{domxref("AudioContext.baseLatency")}} {{readonlyinline}}
   - : Returns the number of seconds of processing latency incurred by the {{domxref("AudioContext")}} passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.
-- {{domxref("AudioContext.outputLatency")}} {{readonlyinline}} {{experimental_inline}}
+- {{domxref("AudioContext.outputLatency")}} {{readonlyinline}}
   - : Returns an estimation of the output latency of the current audio context.
 
 ## Methods
@@ -60,18 +60,11 @@ _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}
 Basic audio context declaration:
 
 ```js
-var audioCtx = new AudioContext();
-```
+const audioCtx = new AudioContext();
 
-Cross browser variant:
-
-```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
-
-var oscillatorNode = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
-var finish = audioCtx.destination;
+const oscillatorNode = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
+const finish = audioCtx.destination;
 // etc.
 ```
 

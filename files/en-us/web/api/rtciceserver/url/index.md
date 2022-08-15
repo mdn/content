@@ -3,7 +3,6 @@ title: RTCIceServer.url
 slug: Web/API/RTCIceServer/url
 page-type: web-api-instance-property
 tags:
-  - Experimental
   - Deprecated
   - Property
   - RTCIceServer
@@ -29,13 +28,13 @@ property instead.
 ## Syntax
 
 ```js
-var iceServer = {
+const iceServer = {
   // ...
   url: iceServerUrl,
   // ...
 };
 
-var serverUrl = iceServer.url;
+const serverUrl = iceServer.url;
 
 iceServer.url = iceServerUrl;
 ```

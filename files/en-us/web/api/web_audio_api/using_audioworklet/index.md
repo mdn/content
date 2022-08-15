@@ -68,9 +68,9 @@ class MyAudioProcessor extends AudioWorkletProcessor {
   }
 
   process(inputList, outputList, parameters) {
-    /* using the inputs (or not, as needed), write the output
-       into each of the outputs */
-
+    // Using the inputs (or not, as needed),
+    // write the output into each of the outputs
+    // …
     return true;
   }
 };
@@ -120,20 +120,15 @@ process(inputList, outputList, parameters) {
   const sourceLimit = Math.min(inputList.length, outputList.length);
 
   for (let inputNum = 0; inputNum < sourceLimit; inputNum++) {
-    let input = inputList[inputNum];
-    let output = outputList[inputNum];
-    let channelCount = Math.min(input.length, output.length);
+    const input = inputList[inputNum];
+    const output = outputList[inputNum];
+    const channelCount = Math.min(input.length, output.length);
 
     for (let channelNum = 0; channelNum < channelCount; channelNum++) {
-      let sampleCount = input[channelNum].length;
-
-      for (let i = 0; i < sampleCount; i++) {
-        let sample = input[channelNum][i];
-
-        /* Manipulate the sample */
-
+      input[channelNum].forEach((sample, i) => {
+        // Manipulate the sample
         output[channelNum][i] = sample;
-      }
+      });
     }
   };
 
@@ -156,9 +151,7 @@ process(inputList, outputList, parameters) {
     let channelCount = Math.min(input.length, output.length);
 
     for (let channelNum = 0; channelNum < channelCount; channelNum++) {
-      let sampleCount = input[channelNum].length;
-
-      for (let i = 0; i < sampleCount; i++) {
+      for (let i = 0; i < input[channelNum].length; i++) {
         let sample = output[channelNum][i] + input[channelNum][i];
 
         if (sample > 1.0) {
@@ -209,7 +202,7 @@ async function createMyAudioProcessor() {
       audioContext = new AudioContext();
       await audioContext.resume();
       await audioContext.audioWorklet.addModule("module-url/module.js");
-    } catch(e) {
+    } catch (e) {
       return null;
     }
   }

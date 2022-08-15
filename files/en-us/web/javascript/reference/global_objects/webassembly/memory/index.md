@@ -21,7 +21,7 @@ Both WebAssembly and JavaScript can create `Memory` objects. If you want to acce
 
 ## Instance properties
 
-- {{jsxref("WebAssembly/Memory/buffer", "Memory.prototype.buffer")}}
+- {{jsxref("WebAssembly/Memory/buffer", "Memory.prototype.buffer")}} {{ReadOnlyInline}}
   - : An accessor property that returns the buffer contained in the memory.
 
 ## Instance methods
@@ -51,7 +51,7 @@ const memory = new WebAssembly.Memory({
 });
 
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), { js: { mem: memory } })
-.then(obj => {
+.then((obj) => {
   const summands = new Uint32Array(memory.buffer);
   for (let i = 0; i < 10; i++) {
     summands[i] = i;
@@ -65,7 +65,7 @@ The second way to get a WebAssembly.Memory object is to have it exported by a We
 
 ```js
 WebAssembly.instantiateStreaming(fetch("memory.wasm"))
-.then(obj => {
+.then((obj) => {
   const values = new Uint32Array(obj.instance.exports.memory.buffer);
   console.log(values[0]);
 });

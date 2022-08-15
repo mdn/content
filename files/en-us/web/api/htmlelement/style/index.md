@@ -43,8 +43,8 @@ The `style` property is not useful for completely learning about the styles appl
 The following code snippet demonstrates the difference between the values obtained using the element's `style` property and that obtained using the `getComputedStyle()` method:
 
 ```html
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
   <body style="font-weight:bold;">
     <div style="color:red" id="myElement">..</div>
   </body>
@@ -52,17 +52,17 @@ The following code snippet demonstrates the difference between the values obtain
 ```
 
 ```js
-var element = document.getElementById("myElement");
-var out = "";
-var elementStyle = element.style;
-var computedStyle = window.getComputedStyle(element, null);
+const element = document.getElementById("myElement");
+let out = "";
+const elementStyle = element.style;
+const computedStyle = window.getComputedStyle(element, null);
 
-for (prop in elementStyle) {
+for (const prop in elementStyle) {
   if (Object.hasOwn(elementStyle, prop)) {
     out += `  ${prop} = '${elementStyle[prop]}' > '${computedStyle[prop]}'\n`;
   }
 }
-console.log(out)
+console.log(out);
 ```
 
 The output would be something like:

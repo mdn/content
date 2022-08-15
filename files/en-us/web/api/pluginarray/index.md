@@ -6,9 +6,9 @@ tags:
   - API
   - Add-ons
   - DOM
-  - Experimental
   - NeedsContent
   - Plugins
+  - Deprecated
 browser-compat: api.PluginArray
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
@@ -19,16 +19,16 @@ The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} obj
 
 ## Properties
 
-- {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}}
+- {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : The number of plugins in the array.
 
 ## Methods
 
-- {{DOMxRef("PluginArray.item")}}
+- {{DOMxRef("PluginArray.item")}} {{Deprecated_Inline}}
   - : Returns the {{DOMxRef("Plugin")}} at the specified index into the array.
-- {{DOMxRef("PluginArray.namedItem")}}
+- {{DOMxRef("PluginArray.namedItem")}} {{Deprecated_Inline}}
   - : Returns the {{DOMxRef("Plugin")}} with the specified name.
-- {{DOMxRef("PluginArray.refresh")}}
+- {{DOMxRef("PluginArray.refresh")}} {{Deprecated_Inline}}
   - : Refreshes all plugins on the current page, optionally reloading documents.
 
 ## Examples
@@ -45,7 +45,7 @@ document.body.innerHTML = `${pluginsLength} Plugin(s)<br>`
 
 const table = document.getElementById('pluginTable');
 
-for(let i = 0; i < pluginsLength; i++) {
+for (let i = 0; i < pluginsLength; i++) {
   let newRow = table.insertRow();
   newRow.insertCell().textContent = navigator.plugins[i].name;
   newRow.insertCell().textContent = navigator.plugins[i].filename;
@@ -64,7 +64,7 @@ document.write(
   `Name | Filename | description<br>`
 );
 
-for(let i = 0; i < pluginsLength; i++) {
+for (let i = 0; i < pluginsLength; i++) {
   document.write(
     `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`
   );

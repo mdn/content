@@ -25,7 +25,7 @@ A {{domxref("NodeList")}} object.
 
 ```js
 // Get the distributed nodes
-var nodes = myContentObject.getDistributedNodes();
+const nodes = myContentObject.getDistributedNodes();
 ```
 
 ## Specifications

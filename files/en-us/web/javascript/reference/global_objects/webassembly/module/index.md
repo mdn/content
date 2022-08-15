@@ -53,11 +53,11 @@ const importObject = {
   }
 };
 
-onmessage = function(e) {
+onmessage = (e) => {
   console.log('module received from main thread');
   const mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then((instance) => {
     instance.exports.exported_func();
   });
 };

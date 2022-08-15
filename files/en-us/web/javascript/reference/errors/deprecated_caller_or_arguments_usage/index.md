@@ -45,10 +45,10 @@ are deprecated (see the reference articles for more information).
 'use strict';
 
 function myFunc() {
-  if (myFunc.caller == null) {
+  if (myFunc.caller === null) {
     return 'The function was called from the top!';
   } else {
-    return 'This function\'s caller was ' + myFunc.caller;
+    return `This function's caller was ${myFunc.caller}`;
   }
 }
 
@@ -67,14 +67,14 @@ information).
 function f(n) { g(n - 1); }
 
 function g(n) {
-  console.log('before: ' + g.arguments[0]);
+  console.log(`before: ${g.arguments[0]}`);
   if (n > 0) { f(n); }
-  console.log('after: ' + g.arguments[0]);
+  console.log(`after: ${g.arguments[0]}`);
 }
 
 f(2);
 
-console.log('returned: ' + g.arguments);
+console.log(`returned: ${g.arguments}`);
 // TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
 ```
 

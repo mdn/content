@@ -76,7 +76,7 @@ General containers and definitions that shape audio graphs in Web Audio API usag
   - : Provides a map-like interface to a group of {{domxref("AudioParam")}} interfaces, which means it provides the methods `forEach()`, `get()`, `has()`, `keys()`, and `values()`, as well as a `size` property.
 - {{domxref("BaseAudioContext")}}
   - : The **`BaseAudioContext`** interface acts as a base definition for online and offline audio-processing graphs, as represented by {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} respectively. You wouldn't use `BaseAudioContext` directly — you'd use its features via one of these two inheriting interfaces.
-- The {{domxerf("AudioScheduledSourceNode/ended_event", "ended")}} event
+- The {{domxref("AudioScheduledSourceNode/ended_event", "ended")}} event
   - : The `ended` event is fired when playback has stopped because the end of the media was reached.
 
 ### Defining audio sources
@@ -117,7 +117,7 @@ Interfaces for defining effects that you want to apply to your audio sources.
 - {{domxref("PeriodicWave")}}
   - : Describes a periodic waveform that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
 - {{domxref("IIRFilterNode")}}
-  - : Implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response "infinite impulse response") (IIR) filter; this type of filter can be used to implement tone-control devices and graphic equalizers as well.
+  - : Implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response) (IIR) filter; this type of filter can be used to implement tone-control devices and graphic equalizers as well.
 
 ### Defining audio destinations
 

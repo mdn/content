@@ -4,7 +4,6 @@ slug: Web/API/Media_Capabilities_API
 page-type: web-api-overview
 tags:
   - API
-  - Experimental
   - Media Capabilities
   - Overview
   - Reference
@@ -32,7 +31,7 @@ if ('mediaCapabilities' in navigator) {
     }
   };
 
-  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then(result => {
+  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then((result) => {
     console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
     console.log(`${result.smooth ? '' : 'not '}smooth, and`);
     console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);

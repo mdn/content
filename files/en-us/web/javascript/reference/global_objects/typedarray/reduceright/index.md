@@ -74,7 +74,7 @@ index, and the typed array over which iteration is occurring.
 The call to the `reduceRight` callback would look something like this:
 
 ```js
-typedarray.reduceRight(function(accumulator, currentValue, index, typedarray) {
+typedarray.reduceRight((accumulator, currentValue, index, typedarray) => {
   // ...
 });
 ```
@@ -100,10 +100,8 @@ value would be returned without calling `callbackFn`.
 ### Sum up all values within an array
 
 ```js
-const total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
-  return a + b;
-});
-// total == 6
+const total = new Uint8Array([0, 1, 2, 3]).reduceRight((a, b) => a + b);
+// total === 6
 ```
 
 ## Specifications

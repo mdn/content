@@ -9,7 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.unloadEventStart
 ---
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{APIRef("Navigation Timing")}}
 
 The **`unloadEventStart`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
@@ -29,11 +29,11 @@ The following example illustrates this property's usage.
 ```js
 function print_nav_timing_data() {
   // Use getEntriesByType() to just get the "navigation" events
-  var perfEntries = performance.getEntriesByType("navigation");
+  const perfEntries = performance.getEntriesByType("navigation");
 
-  for (var i=0; i < perfEntries.length; i++) {
+  for (let i = 0; i < perfEntries.length; i++) {
     console.log(`= Navigation entry[${i}]`);
-    var p = perfEntries[i];
+    const p = perfEntries[i];
     // dom Properties
     console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
     console.log(`DOM complete = ${p.domComplete}`);

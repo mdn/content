@@ -57,7 +57,7 @@ retrieve a track for passing to the {{domxref("ImageCapture.ImageCapture",
 let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream => {
+.then((mediaStream) => {
   document.querySelector('video').srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];

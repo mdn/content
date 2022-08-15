@@ -17,9 +17,9 @@ The **`pause`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pause', event => { })
+addEventListener('pause', (event) => { })
 
-onpause = event => { }
+onpause = (event) => { }
 ```
 
 ## Event type
@@ -46,7 +46,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `pause` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('pause', function(event) {
+utterThis.addEventListener('pause', (event) => {
   console.log(`Speech paused after ${event.elapsedTime} seconds.`);
 });
 ```
@@ -54,7 +54,7 @@ utterThis.addEventListener('pause', function(event) {
 Or use the `onpause` event handler property:
 
 ```js
-utterThis.onpause = function(event) {
+utterThis.onpause = (event) => {
   console.log(`Speech paused after ${event.elapsedTime} seconds.`);
 }
 ```

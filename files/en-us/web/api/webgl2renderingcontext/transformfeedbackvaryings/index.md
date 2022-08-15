@@ -41,12 +41,15 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var transformFeedback = gl.createTransformFeedback();
+const transformFeedback = gl.createTransformFeedback();
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback);
-var transformFeedbackOutputs = ['gl_Position', 'anotherOutput'];
+const transformFeedbackOutputs = ['gl_Position', 'anotherOutput'];
 
-gl.transformFeedbackVaryings(shaderProg, transformFeedbackOutputs,
-                             gl.INTERLEAVED_ATTRIBS);
+gl.transformFeedbackVaryings(
+  shaderProg,
+  transformFeedbackOutputs,
+  gl.INTERLEAVED_ATTRIBS
+);
 gl.linkProgram(shaderProg);
 ```
 

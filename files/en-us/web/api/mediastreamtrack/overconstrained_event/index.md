@@ -20,9 +20,9 @@ The **`overconstrained`** event fires when the track has too many conflicting co
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('overconstrained', event => { });
+addEventListener('overconstrained', (event) => { });
 
-onoverconstrained = event => { };
+onoverconstrained = (event) => { };
 ```
 
 ## Event type
@@ -32,7 +32,7 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-dc.onoverconstrained = function() { alert("overconstrained event detected!"); };
+dc.onoverconstrained = () => console.log("overconstrained event detected!");
 ```
 
 ## Browser compatibility

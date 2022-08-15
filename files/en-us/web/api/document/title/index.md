@@ -19,7 +19,7 @@ When present, it defaults to the value of the [`<title>`](/en-US/docs/Web/HTML/E
 
 ## Value
 
-A string containing the _document_'s title. If the title was overridden by setting `document.title`, it contains that value. Otherwise, it contains the title specified in the markup (see the [Notes](#notes) below).
+A string containing the _document_'s title. If the title was overridden by setting `document.title`, it contains that value. Otherwise, it contains the title specified in the [`<title>`](/en-US/docs/Web/HTML/Element/title) element.
 
 ```js
 document.title = newTitle;
@@ -35,8 +35,9 @@ document).
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
   <title>Hello World!</title>
 </head>
 <body>

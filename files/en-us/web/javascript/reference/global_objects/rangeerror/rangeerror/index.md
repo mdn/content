@@ -38,51 +38,39 @@ new RangeError(message, fileName, lineNumber)
 
 ## Examples
 
-### Using `RangeError` (for numeric values)
+### Using RangeError (for numeric values)
 
 ```js
-function check(n)
-{
-    if( !(n >= -500 && n <= 500) )
-    {
-        throw new RangeError("The argument must be between -500 and 500.")
-    }
+function check(n) {
+  if (!(n >= -500 && n <= 500)) {
+    throw new RangeError("The argument must be between -500 and 500.");
+  }
 }
 
-try
-{
-    check(2000)
-}
-catch(error)
-{
-    if (error instanceof RangeError)
-    {
-        // Handle the error
-    }
+try {
+  check(2000);
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Handle the error
+  }
 }
 ```
 
-### Using `RangeError` (for non-numeric values)
+### Using RangeError (for non-numeric values)
 
 ```js
-function check(value)
-{
-    if(["apple", "banana", "carrot"].includes(value) === false)
-    {
-        throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
-    }
+function check(value) {
+  if (!["apple", "banana", "carrot"].includes(value)) {
+    throw new RangeError('The argument must be an "apple", "banana", or "carrot".');
+  }
 }
 
-try
-{
-    check("cabbage")
-}
-catch(error)
-{
-    if(error instanceof RangeError)
-    {
-        // Handle the error
-    }
+try {
+  check("cabbage");
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Handle the error
+  }
 }
 ```
 

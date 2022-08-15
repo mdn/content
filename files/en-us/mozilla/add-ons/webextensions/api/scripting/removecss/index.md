@@ -64,7 +64,7 @@ This example adds some CSS using {{WebExtAPIRef("scripting.insertCSS")}}, then r
 // });
 //
 // We can remove it when a user clicked an extension button like this:
-browser.action.onClicked.addListener(async tab => {
+browser.action.onClicked.addListener(async (tab) => {
   try {
     await browser.scripting.removeCSS({
       target: {

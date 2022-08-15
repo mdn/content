@@ -23,9 +23,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplayconnect', event => { });
+addEventListener('vrdisplayconnect', (event) => { });
 
-onvrdisplayconnect = event => { };
+onvrdisplayconnect = (event) => { };
 ```
 
 ## Event type
@@ -48,7 +48,7 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplayconnect` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplayconnect', function() {
+window.addEventListener('vrdisplayconnect', () => {
   info.textContent = 'Display connected.';
   reportDisplays();
 });
@@ -57,7 +57,7 @@ window.addEventListener('vrdisplayconnect', function() {
 Or use the `onvrdisplayconnect` event handler property:
 
 ```js
-window.onvrdisplayconnect = function() {
+window.onvrdisplayconnect = () => {
   info.textContent = 'Display connected.';
   reportDisplays();
 };

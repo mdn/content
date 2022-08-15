@@ -42,7 +42,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var oVideo1 = document.getElementById("video1");
+const oVideo1 = document.getElementById("video1");
 oVideo1.msInsertVideoEffect("Windows.Media.VideoEffects.VideoStabilization", true, null);
 ```
 

@@ -41,7 +41,7 @@ WebXR supports a variety of different types of devices to handle targeting and a
 - Motion-sensing controllers, which use accelerometers, magnetometers, and other sensors for motion tracking and targeting and may additionally include any number of buttons, joysticks, thumbpads, touchpads, force sensors, and so on to provide additional input sources for both targeting and selection.
 - Squeezable triggers or glove grip pads to provide squeeze actions.
 - Voice commands using speech recognition.
-- Spatially-tracked articulated hands, such as {{interwiki("wikipedia", "haptic gloves")}} can provide both targeting and squeeze actions, as well as selection if outfitted with buttons or other sources of selection actions.
+- Spatially-tracked articulated hands, such as [wired gloves](https://en.wikipedia.org/wiki/Wired_glove) can provide both targeting and squeeze actions, as well as selection if outfitted with buttons or other sources of selection actions.
 - Single-button click devices.
 - Gaze tracking (following the movements of the eye to choose targets).
 
@@ -159,10 +159,10 @@ let inputSourceList = NULL;
 let leftHandSource = NULL;
 let rightHandSource = NULL;
 
-xrSession.addEventListener("inputsourceschange", event => {
+xrSession.addEventListener("inputsourceschange", (event) => {
   inputSourceList = event.session.inputSources;
 
-  inputSourceList.forEach(source => {
+  inputSourceList.forEach((source) => {
     switch(source) {
       case "left":
         leftHandSource = source;
@@ -205,14 +205,9 @@ There are a few ways you can decide upon a primary controller. We'll look at thr
 The most direct way to decide which controller is primary is to have a user-definable "Handedness" preference that the user sets to indicate which of their hands is dominant. You would then look at each input source and find one matching this, if available, falling back to another controller if no controller is in that hand.
 
 ```js
-let primaryInputSource = xrSession.inputSources[0];
-
-for (let i=0; i < xrSession.inputSources.length; i++) {
-  if (xrSession.inputSources[i].handedness === user.handedness) {
-    primaryInputSource = inputSources[i];
-    break;
-  }
-}
+const primaryInputSource =
+  xrSession.inputSources.find((src) => src.handedness === user.handedness) ??
+  xrSession.inputSources[0];
 ```
 
 This snippet of code starts by assuming that the first input source is the primary, but then looks for one whose {{domxref("XRInputSource.handedness", "handedness")}} matches the one specified in the `user` object. If it matches, that input source is selected as the primary.
@@ -224,7 +219,7 @@ Another option is to use the first input the user triggers the select action on.
 ```js
 let primaryInputSource = xrSession.inputSources[0];
 
-xrSession.onselect = function(event) {
+xrSession.onselect = (event) => {
   primaryInputSource = event.inputSource;
   xrSession.onselect = realSelectHandler;
   return realSelectHandler(event);
@@ -314,7 +309,7 @@ The `select` event, on the other hand, is the event that tells your code that th
 If your primary action is a simple trigger action and you don't need to animate anything while the trigger is engaged, you can ignore the `selectstart` and `selectend` events and act on the `select` event.
 
 ```js
-xrSession.addEventListener("select", event => {
+xrSession.addEventListener("select", (event) => {
   let inputSource = event.inputSource;
   let frame = event.frame;
 
@@ -347,7 +342,7 @@ This sample code shows a set of squeeze event handlers that implement these even
 ##### Picking up an object: handling squeezestart events
 
 ```js
-xrSession.addEventListener("squeezestart", event => {
+xrSession.addEventListener("squeezestart", (event) => {
   const targetRaySpace = event.inputSource.targetRaySpace;
   const hand = event.inputSource.handedness;
 
@@ -381,7 +376,7 @@ The {{domxref("XRSession.squeeze_event", "squeeze")}} event is received when the
 This code presumes the existence of additional functions `findTargetPosition()`, which follows the target ray until it collides with something, then returns the coordinates at which the collision occurred, and `putObject()`, which places the object held in the specified `hand` at the given position, removing it from the hand.
 
 ```js
-xrSession.addEventListener("squeeze", event => {
+xrSession.addEventListener("squeeze", (event) => {
   const targetRaySpace = event.inputSource.targetRaySpace;
   const hand = event.inputSource.handedness;
 
@@ -411,7 +406,7 @@ With the position in hand, we can then drop the object by calling the `putObject
 The {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is received after the squeeze is complete, even if it fails. We handle it by returning the currently-held object to where it was when it was picked up.
 
 ```js
-xrSession.addEventListener("squeezeend", event => {
+xrSession.addEventListener("squeezeend", (event) => {
   const targetRaySpace = event.inputSource.targetRaySpace;
   const hand = event.inputSource.handedness;
 
@@ -457,7 +452,7 @@ The targeting ray, which is a ray whose origin is located at the origin of the t
 This space is found in the input source's {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}} property. It can be used to determine the direction the controller is pointing and to determine the origin and orientation of the target ray. That can be accomplished by doing something like the following example, which implements a {{domxref("XRSession.select_event", "select")}} event handler that needs this information. As usual, this code is assuming the use of [glMatrix](https://glmatrix.net/) to perform the matrix and vector math:
 
 ```js
-xrSession.addEventListener("select", event => {
+xrSession.addEventListener("select", (event) => {
   const targetRaySpace = event.inputSource.targetRaySpace;
 
   let targetRayPose = event.frame.getPose(targetRaySpace, viewerRefSpace);
@@ -539,7 +534,7 @@ To accomplish that, we include in the `avatar` object a `posDelta` property, of 
 The corresponding code for keyboard input might look something like this:
 
 ```js
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", (event) => {
   switch(event.key) {
     case "a":
     case "A":

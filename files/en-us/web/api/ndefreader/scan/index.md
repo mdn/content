@@ -64,7 +64,7 @@ ndef.scan().then(() => {
   ndef.onreading = (event) => {
     console.log("NDEF message read.");
   };
-}).catch(error => {
+}).catch((error) => {
   console.log(`Error! Scan failed to start: ${error}.`);
 });
 ```

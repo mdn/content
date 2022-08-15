@@ -57,11 +57,9 @@ assertion:
 
 ```js
 const errorMsg = 'the # is not even';
-for (let number = 2; number <= 5; number += 1) {
-    console.log(`the # is ${number}`);
-    console.assert(number % 2 === 0, {number: number, errorMsg: errorMsg});
-    // or, using ES2015 object property shorthand:
-    // console.assert(number % 2 === 0, {number, errorMsg});
+for (let number = 2; number <= 5; number++) {
+  console.log(`the # is ${number}`);
+  console.assert(number % 2 === 0, { number, errorMsg });
 }
 // output:
 // the # is 2
@@ -72,7 +70,7 @@ for (let number = 2; number <= 5; number += 1) {
 // Assertion failed: {number: 5, errorMsg: "the # is not even"}
 ```
 
-See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for further
+See [Using string substitutions](/en-US/docs/Web/API/console#using_string_substitutions) in the documentation of {{domxref("console")}} for further
 details.
 
 ## Specifications

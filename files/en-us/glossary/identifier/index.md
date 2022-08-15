@@ -15,7 +15,7 @@ An identifier differs from a string in that a {{glossary("string")}} is data, wh
 
 ## See also
 
-- {{interwiki("wikipedia", "Identifier#In_computer_science", "Identifier")}} on Wikipedia
+- [Identifier](https://en.wikipedia.org/wiki/Identifier#In_computer_science) on Wikipedia
 - [Glossary](/en-US/docs/Glossary)
 
   - {{glossary("Identifier")}}

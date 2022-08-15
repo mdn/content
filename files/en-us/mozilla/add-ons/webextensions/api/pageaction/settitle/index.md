@@ -51,8 +51,8 @@ Whenever a tab is updated, show the page action for that tab, and set its title 
 browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
   browser.pageAction.show(tabId);
   browser.pageAction.setTitle({
-    tabId: tabId,
-    title: "Tab ID: " + tabId
+    tabId,
+    title: `Tab ID: ${tabId}`,
   });
 });
 ```

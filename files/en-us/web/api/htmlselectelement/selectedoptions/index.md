@@ -81,11 +81,11 @@ let orderButton = document.getElementById("order");
 let itemList = document.getElementById("foods");
 let outputBox = document.getElementById("output");
 
-orderButton.addEventListener("click", function() {
+orderButton.addEventListener("click", () => {
   let collection = itemList.selectedOptions;
   let output = "";
 
-  for (let i=0; i<collection.length; i++) {
+  for (let i = 0; i < collection.length; i++) {
     if (output === "") {
       output = "Your order for the following items has been placed: ";
     }
@@ -112,7 +112,7 @@ This script sets up a {{domxref("Element/click_event", "click")}} event listener
 clicked, the event handler fetches the list of selected options using
 `selectedOptions`, then iterates over the options in the list. A string is
 constructed to list the ordered items, with logic to build the list using proper English
-grammar rules (including a {{interwiki("wikipedia", "serial comma")}}).
+grammar rules (including a [serial comma](https://en.wikipedia.org/wiki/Serial_comma)).
 
 ### Result
 

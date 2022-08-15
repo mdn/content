@@ -87,7 +87,7 @@ does not refer to the currently executing function, so you must refer to
 
 There are several ways to define functions:
 
-### The function declaration (`function` statement)
+### The function declaration
 
 There is a special syntax for declaring functions
 (see [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) for details):
@@ -105,7 +105,7 @@ function name([param[, param[, ... param]]]) {
 - `statements`
   - : The statements comprising the body of the function.
 
-### The function expression (`function` expression)
+### The function expression
 
 A function expression is similar to and has the same syntax as a function declaration
 (see [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) for details).
@@ -158,14 +158,14 @@ function expressions.
 When functions are used only once, a common pattern is an [IIFE (Immediately Invoked Function Expression)](/en-US/docs/Glossary/IIFE).
 
 ```js
-(function() {
+(function () {
   statements
 })();
 ```
 
 IIFE are function expressions that are invoked as soon as the function is declared.
 
-### The generator function declaration (`function*` statement)
+### The generator function (function*) declaration
 
 There is a special syntax for generator function declarations (see
 {{jsxref('Statements/function*', 'function* statement')}} for details):
@@ -183,7 +183,7 @@ function* name([param[, param[, ... param]]]) {
 - `statements`
   - : The statements comprising the body of the function.
 
-### The generator function expression (`function*` expression)
+### The generator function (function*) expression
 
 A generator function expression is similar to and has the same syntax as a generator
 function declaration (see {{jsxref('Operators/function*', 'function* expression')}} for
@@ -214,17 +214,19 @@ An arrow function expression has a shorter syntax and lexically binds its `this`
 }
 
 param => expression
+
+(param) => expression
 ```
 
 - `param`
   - : The name of an argument. Zero arguments need to be indicated with `()`.
-    For only one argument, the parentheses are not required.
+    For exactly one argument, the parentheses are not required.
     (like `foo => 1`)
 - `statements` or `expression`
   - : Multiple statements need to be enclosed in brackets. A single expression requires
     no brackets. The expression is also the implicit return value of the function.
 
-### The `Function` constructor
+### The Function constructor
 
 > **Note:** Using the `Function` constructor to create
 > functions is not recommended since it needs the function body as a string which may
@@ -246,7 +248,7 @@ new Function (arg1, arg2, ... argN, functionBody)
 Invoking the `Function` constructor as a function (without using the
 `new` operator) has the same effect as invoking it as a constructor.
 
-### The `GeneratorFunction` constructor
+### The GeneratorFunction constructor
 
 > **Note:** `GeneratorFunction` is not a global object, but
 > could be obtained from generator function instance (see
@@ -266,8 +268,7 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 - `arg1, arg2, ... argN`
   - : Zero or more names to be used by the function as formal argument names. Each must
     be a string that conforms to the rules for a valid JavaScript identifier or a list
-    of such strings separated with a comma; for example "`x`",
-    "`theValue`", or "`a,b`".
+    of such strings separated with a comma; for example `"x"`, `"theValue"`, or `"a,b"`.
 - `functionBody`
   - : A string containing the JavaScript statements comprising the function definition.
 
@@ -287,20 +288,17 @@ see [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_
 The rest parameter syntax allows representing an indefinite number of arguments as an array.
 For more details, see [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
 
-## The `arguments` object
+## The arguments object
 
 You can refer to a function's arguments within the function by using the
 `arguments` object. See [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments).
 
-- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments):
-  An array-like object containing the arguments passed to the currently executing
-  function.
+- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+  - : An array-like object containing the arguments passed to the currently executing function.
 - [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-  : The currently executing function.
-- [`arguments.caller`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller)
-  : The function that invoked the currently executing function.
-- [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length):
-  The number of arguments passed to the function.
+  - : The currently executing function.
+- [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length)
+  - : The number of arguments passed to the function.
 
 ## Defining method functions
 
@@ -319,9 +317,7 @@ The syntax for defining getters and setters uses the object literal syntax.
 
 ### Method definition syntax
 
-Starting with ECMAScript 2015, you are able to define own methods in a shorter syntax,
-similar to the getters and setters.
-See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
+In object literals, you are able to define own methods in a shorter syntax, similar to the getters and setters. See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
 
 ```js
 const obj = {
@@ -470,16 +466,16 @@ once, while those defined by the `Function` constructor are not. That is,
 the function body string passed to the `Function` constructor must be parsed
 each and every time the constructor is called. Although a function expression creates a
 closure every time, the function body is not reparsed, so function expressions are
-still faster than "`new Function(...)`". Therefore the `Function`
+still faster than `new Function(...)`. Therefore the `Function`
 constructor should generally be avoided whenever possible.
 
 It should be noted, however, that function expressions and function declarations nested
-within the function generated by parsing a `Function constructor` 's string
+within the function generated by parsing a `Function()` constructor's string
 aren't parsed repeatedly. For example:
 
 ```js
-const foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
-foo(); // The segment "function() {\n\talert(bar);\n}" of the function body string is not re-parsed.
+const foo = (new Function("const bar = 'FOO!'; return function() { alert(bar); };"))();
+foo(); // The segment "function() { alert(bar); }" of the function body string is not re-parsed.
 ```
 
 A function declaration is very easily (and often unintentionally) turned into a
@@ -608,7 +604,7 @@ function padZeros(num, totalLen) {
   let numStr = num.toString();             // Initialize return value as string
   const numZeros = totalLen - numStr.length; // Calculate no. of zeros
   for (let i = 1; i <= numZeros; i++) {
-    numStr = "0" + numStr;
+    numStr = `0${numStr}`;
   }
   return numStr;
 }

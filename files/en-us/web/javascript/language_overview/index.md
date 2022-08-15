@@ -681,7 +681,7 @@ Note that JavaScript functions are themselves objects — like everything else i
 ## Custom objects
 
 > **Note:** The content in this section does not cover modern JavaScript features, including support for [Classes](/en-US/docs/Web/JavaScript/Reference/Classes).
-> For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+> For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 In classic object-oriented programming, objects are collections of data and methods that operate on that data.
 JavaScript uses functions as classes.
@@ -697,10 +697,10 @@ function makePerson(first, last) {
   };
 }
 function personFullName(person) {
-  return person.first + ' ' + person.last;
+  return `${person.first} ${person.last}`;
 }
 function personFullNameReversed(person) {
-  return person.last + ', ' + person.first;
+  return `${person.last}, ${person.first}`;
 }
 
 const s = makePerson('Simon', 'Willison');
@@ -716,10 +716,10 @@ function makePerson(first, last) {
     first: first,
     last: last,
     fullName() {
-      return this.first + ' ' + this.last;
+      return `${this.first} ${this.last}`;
     },
     fullNameReversed() {
-      return this.last + ', ' + this.first;
+      return `${this.last}, ${this.first}`;
     }
   };
 }
@@ -748,10 +748,10 @@ function Person(first, last) {
   this.first = first;
   this.last = last;
   this.fullName = function() {
-    return this.first + ' ' + this.last;
+    return `${this.first} ${this.last}`;
   };
   this.fullNameReversed = function() {
-    return this.last + ', ' + this.first;
+    return `${this.last}, ${this.first}`;
   };
 }
 const s = new Person('Simon', 'Willison');
@@ -765,10 +765,10 @@ Our person objects are getting better, but there are still some ugly edges to th
 
 ```js
 function personFullName() {
-  return this.first + ' ' + this.last;
+  return `${this.first} ${this.last}`;
 }
 function personFullNameReversed() {
-  return this.last + ', ' + this.first;
+  return `${this.last}, ${this.first}`;
 }
 function Person(first, last) {
   this.first = first;
@@ -786,10 +786,10 @@ function Person(first, last) {
   this.last = last;
 }
 Person.prototype.fullName = function() {
-  return this.first + ' ' + this.last;
+  return `${this.first} ${this.last}`;
 };
 Person.prototype.fullNameReversed = function() {
-  return this.last + ', ' + this.first;
+  return `${this.last}, ${this.first}`;
 };
 ```
 
@@ -837,7 +837,7 @@ const s = new Person('Simon', 'Willison');
 s.toString(); // [object Object]
 
 Person.prototype.toString = function() {
-  return '<Person: ' + this.fullName() + '>';
+  return `<Person: ${this.fullName()}>`;
 }
 
 s.toString(); // "<Person: Simon Willison>"

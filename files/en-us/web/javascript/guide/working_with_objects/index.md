@@ -47,7 +47,7 @@ const myCar = {
 };
 ```
 
-Unassigned properties of an object are {{jsxref("undefined")}} (and not {{jsxref("null")}}).
+Unassigned properties of an object are {{jsxref("undefined")}} (and not [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
 
 ```js
 myCar.color; // undefined
@@ -90,7 +90,7 @@ console.log(myObj.myString);
     date created: "This key has a space"
     myString: "This key is in variable str"
     type: "Dot syntax for a key named type"
-*/ 
+*/
 // notice that in the log, the order of the properties listed is not the same as the order they were created.
 
 // [Log] This key is in variable str
@@ -113,7 +113,7 @@ console.log(myObj.myString); //[Log] This key is in variable str
 This allows accessing any property as determined at runtime:
 
 ```js
-const propertyName = 'make';
+let propertyName = 'make';
 myCar[propertyName] = 'Ford';
 
 // access different properties by changing the contents of the variable
@@ -184,13 +184,13 @@ The syntax for an object using an object initializer is:
 
 ```js
 const obj = {
-  property_1:   value_1,   // property name may be an identifier
-  2:            value_2,   // or a number
-  'property n': value_n    // or a string
+  property1: value1,   // property name may be an identifier
+  2: value2,   // or a number
+  'property n': value3    // or a string
 };
 ```
 
-where `obj` is the name of the new object, each property name before colons is an identifier (either a name, a number, or a string literal), and each `value_i` is an expression whose value is assigned to the property name. The `obj` and assignment are optional; if you do not need to refer to this object elsewhere, you do not need to assign it to a variable. (Note that you may need to wrap the object literal in parentheses if the object appears where a statement is expected, so as not to have the literal be confused with a block statement.)
+where `obj` is the name of the new object, each property name before colons is an identifier (either a name, a number, or a string literal), and each `valueN` is an expression whose value is assigned to the property name. The `obj` and assignment are optional; if you do not need to refer to this object elsewhere, you do not need to assign it to a variable. (Note that you may need to wrap the object literal in parentheses if the object appears where a statement is expected, so as not to have the literal be confused with a block statement.)
 
 Object initializers are expressions, and each object initializer results in a new object being created whenever the statement in which it appears is executed. Identical object initializers create distinct objects that will not compare to each other as equal. Objects are created as if a call to `new Object()` were made; that is, objects made from object literal expressions are instances of `Object`.
 
@@ -483,8 +483,8 @@ Getters and setters can also be added to an object at any time after creation us
 const myObj = { a: 0 };
 
 Object.defineProperties(myObj, {
-     'b': { get() { return this.a + 1; } },
-     'c': { set(x) { this.a = x / 2; } }
+  b: { get() { return this.a + 1; } },
+  c: { set(x) { this.a = x / 2; } },
 });
 
 myObj.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
@@ -539,6 +539,6 @@ For more information about comparison operators, see [equality operators](/en-US
 ## See also
 
 - To dive deeper, read about [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
-- To learn about ECMAScript 2015 classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
+- To learn about classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Using_Classes")}}

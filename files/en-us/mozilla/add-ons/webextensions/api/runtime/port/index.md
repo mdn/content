@@ -117,12 +117,12 @@ This content script:
 let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
+document.body.addEventListener("click", () => {
   myPort.postMessage({greeting: "they clicked the page!"});
 });
 ```
@@ -146,7 +146,7 @@ let portFromCS;
 function connected(p) {
   portFromCS = p;
   portFromCS.postMessage({greeting: "hi there content script!"});
-  portFromCS.onMessage.addListener(function(m) {
+  portFromCS.onMessage.addListener((m) => {
     console.log("In background script, received message from content script")
     console.log(m.greeting);
   });
@@ -154,7 +154,7 @@ function connected(p) {
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   portFromCS.postMessage({greeting: "they clicked the button!"});
 });
 ```
@@ -175,8 +175,8 @@ function connected(p) {
 
 browser.runtime.onConnect.addListener(connected)
 
-browser.browserAction.onClicked.addListener(function() {
-  ports.forEach(p => {
+browser.browserAction.onClicked.addListener(() => {
+  ports.forEach((p) => {
         p.postMessage({greeting: "they clicked the button!"})
     })
 });
@@ -196,7 +196,7 @@ let port = browser.runtime.connectNative("ping_pong");
 Listen for messages from the app.
 */
 port.onMessage.addListener((response) => {
-  console.log("Received: " + response);
+  console.log(`Received: ${response}`);
 });
 
 /*

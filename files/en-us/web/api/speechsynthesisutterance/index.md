@@ -85,7 +85,7 @@ let voices;
 
 function loadVoices() {
   voices = synth.getVoices();
-  for(let i = 0; i < voices.length; i++) {
+  for (let i = 0; i < voices.length; i++) {
     const option = document.createElement('option');
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
     option.value = i;
@@ -100,7 +100,7 @@ if ('onvoiceschanged' in synth) {
   loadVoices();
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);

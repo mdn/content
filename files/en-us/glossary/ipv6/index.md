@@ -13,4 +13,4 @@ tags:
 
 ## See also
 
-- {{interwiki("wikipedia", "IPv6", "IPv6")}} on Wikipedia
+- [IPv6](https://en.wikipedia.org/wiki/IPv6) on Wikipedia

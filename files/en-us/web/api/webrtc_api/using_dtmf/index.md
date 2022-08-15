@@ -116,7 +116,7 @@ These are, in order:
 When the page loads, we do some basic setup: we fetch references to the dial button and the log output box elements, and we use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add an event listener to the dial button so that clicking it calls the `connectAndDial()` function to begin the connection process.
 
 ```js
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
   logElement = document.querySelector(".log");
   dialButton = document.querySelector("#dial");
 
@@ -151,7 +151,7 @@ function connectAndDial() {
 
   navigator.mediaDevices.getUserMedia(mediaConstraints)
   .then(gotStream)
-  .catch(err => log(err.message));
+  .catch((err) => log(err.message));
 }
 ```
 
@@ -177,7 +177,7 @@ function gotStream(stream) {
 
   if (hasAddTrack) {
     if (audioTracks.length > 0) {
-      audioTracks.forEach(track => callerPC.addTrack(track, stream));
+      audioTracks.forEach((track) => callerPC.addTrack(track, stream));
     }
   } else {
     log("Your browser doesn't support RTCPeerConnection.addTrack(). Falling " +
@@ -218,13 +218,13 @@ function handleToneChangeEvent(event) {
     log(`Tone played: ${event.tone}`);
   } else {
     log("All tones have played. Disconnecting.");
-    callerPC.getLocalStreams().forEach(function(stream) {
-      stream.getTracks().forEach(function(track) {
+    callerPC.getLocalStreams().forEach((stream) => {
+      stream.getTracks().forEach((track) => {
         track.stop();
       });
     });
-    receiverPC.getLocalStreams().forEach(function(stream) {
-      stream.getTracks().forEach(function(track) {
+    receiverPC.getLocalStreams().forEach((stream) => {
+      stream.getTracks().forEach((track) => {
         track.stop();
       });
     });
@@ -257,7 +257,7 @@ function handleCallerIceEvent(event) {
     log(`Adding candidate to receiver: ${event.candidate.candidate}`);
 
     receiverPC.addIceCandidate(new RTCIceCandidate(event.candidate))
-    .catch(err => log(`Error adding candidate to receiver: ${err}`));
+    .catch((err) => log(`Error adding candidate to receiver: ${err}`));
   } else {
     log("Caller is out of candidates.");
   }
@@ -294,27 +294,27 @@ When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after
 function handleCallerNegotiationNeeded() {
   log("Negotiating…");
   callerPC.createOffer(offerOptions)
-  .then(function(offer) {
+  .then((offer) => {
     log(`Setting caller's local description: ${offer.sdp}`);
     return callerPC.setLocalDescription(offer);
   })
-  .then(function() {
+  .then(() => {
     log("Setting receiver's remote description to the same as caller's local");
     return receiverPC.setRemoteDescription(callerPC.localDescription)
   })
-  .then(function() {
+  .then(() => {
     log("Creating answer");
     return receiverPC.createAnswer();
   })
-  .then(function(answer) {
+  .then((answer) => {
     log(`Setting receiver's local description to ${answer.sdp}`);
     return receiverPC.setLocalDescription(answer);
   })
-  .then(function() {
+  .then(() => {
     log("Setting caller's remote description to match");
     return callerPC.setRemoteDescription(receiverPC.localDescription);
   })
-  .catch(err => log(`Error during negotiation: ${err.message}`));
+  .catch((err) => log(`Error during negotiation: ${err.message}`));
 }
 ```
 
@@ -354,7 +354,7 @@ function handleReceiverIceEvent(event) {
     log(`Adding candidate to caller: ${event.candidate.candidate}`);
 
     callerPC.addIceCandidate(new RTCIceCandidate(event.candidate))
-    .catch(err => log(`Error adding candidate to caller: ${err}`));
+    .catch((err) => log(`Error adding candidate to caller: ${err}`));
   } else {
     log("Receiver is out of candidates.");
   }

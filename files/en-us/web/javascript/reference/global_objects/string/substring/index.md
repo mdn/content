@@ -80,15 +80,13 @@ particular string. This method may be easier to remember, given that you don't n
 know the starting and ending indices as you would in the above examples.
 
 ```js
-// Displays 'illa' the last 4 characters
-const anyString = 'Mozilla';
-const anyString4 = anyString.substring(anyString.length - 4);
-console.log(anyString4);
+const text = 'Mozilla';
 
-// Displays 'zilla' the last 5 characters
-const anyString = 'Mozilla';
-const anyString5 = anyString.substring(anyString.length - 5);
-console.log(anyString5);
+// Takes 4 last characters of string
+console.log(text.substring(text.length - 4)); // prints "illa"
+
+// Takes 5 last characters of string
+console.log(text.substring(text.length - 5)); // prints "zilla"
 ```
 
 ### The difference between substring() and substr()
@@ -156,7 +154,7 @@ changes the string `Brave New World` to `Brave New Web`.
 // Replaces oldS with newS in the string fullS
 function replaceString(oldS, newS, fullS) {
   for (let i = 0; i < fullS.length; ++i) {
-    if (fullS.substring(i, i + oldS.length) == oldS) {
+    if (fullS.substring(i, i + oldS.length) === oldS) {
       fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length);
     }
   }

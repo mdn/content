@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Create a test URLSearchParams object
-var searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
+const searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
 
 // Sort the key/value pairs
 searchParams.sort();

@@ -26,7 +26,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{domxref("ShadowRoot.adoptedStyleSheets")}}
   - : Add an array of constructed stylesheets to be used by the shadow DOM subtree.
     These may be shared with other DOM subtrees that share the same parent {{domxref("Document")}} node, and the document itself.
-- {{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
+- {{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}}
   - : Returns a boolean that indicates whether `delegatesFocus` was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
   - : The element that's currently in full screen mode for this shadow tree.
@@ -86,14 +86,15 @@ From here we use standard DOM traversal techniques to find the {{htmlelement("st
 function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   const childNodes = shadow.childNodes;
-  for(let i = 0; i < childNodes.length; i++) {
-    if(childNodes[i].nodeName === 'STYLE') {
-      childNodes[i].textContent =
-        'div {' +
-          'width: ' + elem.getAttribute('l') + 'px;' +
-          'height: ' + elem.getAttribute('l') + 'px;' +
-          'background-color: ' + elem.getAttribute('c') + ';' +
-        '}';
+  for (const node of childNodes) {
+    if (node.nodeName === 'STYLE') {
+      node.textContent = `
+div {
+  width: ${elem.getAttribute('l')}px;
+  height: ${elem.getAttribute('l')}px;
+  background-color: ${elem.getAttribute('c')};
+}
+      `;
     }
   }
 }

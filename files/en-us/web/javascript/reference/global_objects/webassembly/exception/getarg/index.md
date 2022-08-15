@@ -90,10 +90,10 @@ const importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
-  .then(obj => {
+  .then((obj) => {
     console.log(obj.instance.exports.run());
   })
-  .catch(e => {
+  .catch((e) => {
     console.error(e);
     console.log(`getArg 0 : ${e.getArg(tagToImport, 0)}`);
   });
@@ -118,13 +118,13 @@ Here is the same WebAssembly module, simply replacing the import with an export.
   (tag $tagname (export "exptag") (param i32))
 
   (func $throwException (param i32)
-     local.get 0
-     throw $tagname
+    local.get 0
+    throw $tagname
   )
 
   (func (export "run")
-     i32.const 1
-     call $throwException
+    i32.const 1
+    call $throwException
   )
 )
 ```
@@ -136,12 +136,12 @@ To make it a little more "safe", here we also test that we have the right tag us
 let tagExportedFromWasm;
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"))
-  .then(obj => {
+  .then((obj) => {
     // Import the tag using its name from the WebAssembly module
     tagExportedFromWasm = obj.instance.exports.exptag;
     console.log(obj.instance.exports.run());
   })
-  .catch(e => {
+  .catch((e) => {
     console.error(e);
     // If the tag is correct, get the value
     if (e.is(tagExportedFromWasm)) {

@@ -13,28 +13,30 @@ browser-compat: api.HTMLFormElement.formdata_event
 
 The **`formdata`** event fires after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.
 
-## General info
+This event is not cancelable and does not bubble.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("FormDataEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onformdata")}}</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('formdata', (event) => {});
+
+onformdata = (event) => { };
+```
+
+## Event type
+
+A {{domxref("FormDataEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("FormDataEvent")}}
+
+## Event properties
+
+_Inherits properties from its parent interface, {{domxref("Event")}}._
+
+- {{domxref("FormDataEvent.formData")}}
+  - : Contains the {{domxref("FormData")}} object representing the data contained in the form when the event was fired.
 
 ## Examples
 

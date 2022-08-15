@@ -19,7 +19,7 @@ browser-compat: api.PaymentAddress.country
 
 The **`country`** read-only property of the
 {{domxref('PaymentAddress')}} interface is a string identifying the address's country
-using the {{interwiki("wikipedia", "ISO 3166-1 alpha-2")}} standard. The string is
+using the [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard. The string is
 always in its canonical upper-case form.
 
 Some examples of valid `country` values: `"US"`,

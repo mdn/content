@@ -53,7 +53,7 @@ This used to change a value on the global object which is rarely the expected ef
 
 ```js
 const global = this; // in the top-level context, "this" always
-                   // refers to the global object
+                     // refers to the global object
 function f(x) {
   'use strict';
   const a = 12;
@@ -79,7 +79,7 @@ Accessing `arguments.callee`, `arguments.caller`, `anyFunction.caller`, or `anyF
 // example taken from vanillajs: http://vanilla-js.com/
 const s = document.getElementById('thing').style;
 s.opacity = 1;
-(function() {
+(function () {
   if ((s.opacity -= .1) < 0) {
     s.display = 'none';
   } else {

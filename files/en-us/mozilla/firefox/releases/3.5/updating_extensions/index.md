@@ -97,7 +97,7 @@ The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSO
 To ensure compatibility with both Firefox 3 and Firefox 3.5, you can do the following:
 
 ```js
-if (typeof(JSON) == "undefined") {
+if (typeof JSON === "undefined") {
   Components.utils.import("resource://gre/modules/JSON.jsm");
   JSON.parse = JSON.fromString;
   JSON.stringify = JSON.toString;
@@ -148,20 +148,20 @@ Another Javascript example if the above does not work:
 
 function getWindowForRequest(request){
   if (request instanceof Components.interfaces.nsIRequest){
-    try{
+    try {
       if (request.notificationCallbacks){
         return request.notificationCallbacks
                       .getInterface(Components.interfaces.nsILoadContext)
                       .associatedWindow;
       }
-    } catch(e) {}
-    try{
+    } catch (e) {}
+    try {
       if (request.loadGroup && request.loadGroup.notificationCallbacks){
         return request.loadGroup.notificationCallbacks
                       .getInterface(Components.interfaces.nsILoadContext)
                       .associatedWindow;
       }
-    } catch(e) {}
+    } catch (e) {}
   }
   return null;
 }

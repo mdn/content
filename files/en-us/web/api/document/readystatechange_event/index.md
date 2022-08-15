@@ -20,9 +20,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('readystatechange', event => { });
+addEventListener('readystatechange', (event) => { });
 
-onreadystatechange = event => { };
+onreadystatechange = (event) => { };
 ```
 
 ## Event type
@@ -86,7 +86,7 @@ const reload = document.querySelector('#reload');
 
 reload.addEventListener('click', () => {
   log.textContent ='';
-  window.setTimeout(() => {
+  setTimeout(() => {
       window.location.reload(true);
   }, 200);
 });

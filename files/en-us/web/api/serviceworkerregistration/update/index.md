@@ -43,15 +43,15 @@ handler to a button so you can explicitly update the service worker whenever des
 
 ```js
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
+  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then((registration) => {
     // registration worked
     console.log('Registration succeeded.');
-    button.onclick = function() {
+    button.onclick = () => {
       registration.update();
     }
-  }).catch(function(error) {
+  }).catch((error) => {
     // registration failed
-    console.log(`Registration failed with ${error}`);
+    console.error(`Registration failed with ${error}`);
   });
 };
 ```

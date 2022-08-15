@@ -49,28 +49,28 @@ example I've just allowed either.
 function gameLoop() {
   let a = 0;
   let b = 0;
-  if(navigator.webkitGetGamepads) {
+  if (navigator.webkitGetGamepads) {
     const gp = navigator.webkitGetGamepads()[0];
 
-    if(gp.buttons[0] == 1) {
+    if (gp.buttons[0] === 1) {
       b--;
-    } else if(gp.buttons[1] == 1) {
+    } else if (gp.buttons[1] === 1) {
       a++;
-    } else if(gp.buttons[2] == 1) {
+    } else if (gp.buttons[2] === 1) {
       b++;
-    } else if(gp.buttons[3] == 1) {
+    } else if (gp.buttons[3] === 1) {
       a--;
     }
   } else {
     const gp = navigator.getGamepads()[0];
 
-    if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
+    if (gp.buttons[0].value > 0 || gp.buttons[0].pressed) {
       b--;
-    } else if(gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
+    } else if (gp.buttons[1].value > 0 || gp.buttons[1].pressed) {
       a++;
-    } else if(gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
+    } else if (gp.buttons[2].value > 0 || gp.buttons[2].pressed) {
       b++;
-    } else if(gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
+    } else if (gp.buttons[3].value > 0 || gp.buttons[3].pressed) {
       a--;
     }
   }

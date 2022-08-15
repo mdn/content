@@ -101,7 +101,7 @@ descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exce
 Bear in mind that these attributes are not necessarily the descriptor's own properties.
 Inherited properties will be considered as well. In order to ensure these defaults are
 preserved, you might freeze the {{jsxref("Object")}} upfront, specify all
-options explicitly, or point to {{jsxref("null")}} with {{jsxref("Object.create",
+options explicitly, or point to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) with {{jsxref("Object.create",
   "Object.create(null)")}}.
 
 ```js
@@ -128,7 +128,7 @@ function withValue(value) {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: value
+      value,
     }
   );
 
@@ -175,12 +175,8 @@ Object.defineProperty(o, 'a', {
 
 // Example of an object property added
 // with defineProperty with an accessor property descriptor
-const bValue = 38;
+let bValue = 38;
 Object.defineProperty(o, 'b', {
-  // Using shorthand method names (ES2015 feature).
-  // This is equivalent to:
-  // get: function() { return bValue; },
-  // set: function(newValue) { bValue = newValue; },
   get() { return bValue; },
   set(newValue) { bValue = newValue; },
   enumerable: true,
@@ -225,16 +221,16 @@ o.a = 25; // No error thrown
 console.log(o.a); // logs 37. The assignment didn't work.
 
 // strict mode
-(function() {
+(() => {
   'use strict';
   const o = {};
   Object.defineProperty(o, 'b', {
     value: 2,
-    writable: false
+    writable: false,
   });
   o.b = 3; // throws TypeError: "b" is read-only
   return o.b; // returns 2 without the line above
-}());
+})();
 ```
 
 As seen in the example, trying to write into the non-writable property doesn't change
@@ -403,7 +399,7 @@ function Archiver() {
     }
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = () => archive;
 }
 
 const arc = new Archiver();
@@ -417,17 +413,16 @@ In this example, a getter always returns the same value.
 
 ```js
 const pattern = {
-    get() {
-        return 'I always return this string, ' +
-               'whatever you have assigned';
-    },
-    set() {
-        this.myname = 'this is my name string';
-    }
+  get() {
+    return 'I always return this string, whatever you have assigned';
+  },
+  set() {
+    this.myname = 'this is my name string';
+  },
 };
 
 function TestDefineSetAndGet() {
-    Object.defineProperty(this, 'myproperty', pattern);
+  Object.defineProperty(this, 'myproperty', pattern);
 }
 
 const instance = new TestDefineSetAndGet();
@@ -475,10 +470,10 @@ function MyClass() {
 
 Object.defineProperty(MyClass.prototype, "x", {
   get() {
-    return this.stored_x;
+    return this.storedX;
   },
   set(x) {
-    this.stored_x = x;
+    this.storedX = x;
   }
 });
 

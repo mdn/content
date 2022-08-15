@@ -76,7 +76,7 @@ Unlike many other global objects, `Math` is not a constructor. All properties an
 - {{jsxref("Global_Objects/Math/floor", "Math.floor(<var>x</var>)")}}
   - : Returns the largest integer less than or equal to `x`.
 - {{jsxref("Global_Objects/Math/fround", "Math.fround(<var>x</var>)")}}
-  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format "link to the wikipedia page on single precision") float representation of `x`.
+  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of `x`.
 - {{jsxref("Global_Objects/Math/hypot", "Math.hypot([<var>x</var>[, <var>y</var>[, …]]])")}}
   - : Returns the square root of the sum of squares of its arguments.
 - {{jsxref("Global_Objects/Math/imul", "Math.imul(<var>x</var>, <var>y</var>)")}}
@@ -125,11 +125,11 @@ Since humans tend to think in degrees, and some functions (such as CSS transform
 ```js
 function degToRad(degrees) {
   return degrees * (Math.PI / 180);
-};
+}
 
 function radToDeg(rad) {
   return rad / (Math.PI / 180);
-};
+}
 ```
 
 ### Calculating the height of an equilateral triangle
@@ -141,7 +141,7 @@ If we want to calculate the height of an equilateral triangle, and we know its s
 In JavaScript, we can do this with the following:
 
 ```js
-50 * Math.tan(degToRad(60)).
+50 * Math.tan(degToRad(60))
 ```
 
 We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.

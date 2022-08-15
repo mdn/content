@@ -19,14 +19,24 @@ using standard array index syntax (that is, using bracket notation).
 ## Syntax
 
 ```js
-new Int8Array(); // new in ES2017
-new Int8Array(length);
-new Int8Array(typedArray);
-new Int8Array(object);
+new Int8Array()
+new Int8Array(length)
+new Int8Array(typedArray)
+new Int8Array(object)
 
-new Int8Array(buffer);
-new Int8Array(buffer, byteOffset);
-new Int8Array(buffer, byteOffset, length);
+new Int8Array(buffer)
+new Int8Array(buffer, byteOffset)
+new Int8Array(buffer, byteOffset, length)
+```
+
+## Description
+
+The `Int8Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Int8Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+
+```js example-bad
+const dv = Int8Array([1, 2, 3]);
+// TypeError: calling a builtin Int8Array constructor
+// without new is forbidden
 ```
 
 ### Parameters
@@ -95,23 +105,6 @@ console.log(int8FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Int8Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Int8Array` constructor as a function without `new`, will throw a
-{{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Int8Array([1, 2, 3]);
-// TypeError: calling a builtin Int8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Int8Array([1, 2, 3]);
-```
 
 ## See also
 

@@ -54,22 +54,24 @@ the app. This consists of calling {{domxref("CacheStorage.open")}} to create a n
 cache, then using `addAll()` to add a series of assets to it.
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
+    caches
+      .open('v1')
+      .then((cache) =>
+        cache.addAll([
+          '/sw-test/',
+          '/sw-test/index.html',
+          '/sw-test/style.css',
+          '/sw-test/app.js',
+          '/sw-test/image-list.js',
+          '/sw-test/star-wars-logo.jpg',
+          '/sw-test/gallery/',
+          '/sw-test/gallery/bountyHunters.jpg',
+          '/sw-test/gallery/myLittleVader.jpg',
+          '/sw-test/gallery/snowTroopers.jpg',
+        ])
+      )
   );
 });
 ```

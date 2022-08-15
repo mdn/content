@@ -46,15 +46,15 @@ unregisters it again:
 
 ```js
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
+  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then((registration) => {
     // registration worked
     console.log('Registration succeeded.');
-    registration.unregister().then(function(boolean) {
+    registration.unregister().then((boolean) => {
       // if boolean = true, unregister is successful
     });
-  }).catch(function(error) {
+  }).catch((error) => {
     // registration failed
-    console.log(`Registration failed with ${error}`);
+    console.error(`Registration failed with ${error}`);
   });
 };
 ```

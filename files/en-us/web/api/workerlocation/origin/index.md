@@ -22,7 +22,7 @@ A string.
 
 ```js
 // On this page, returns the origin
-var result = self.location.origin; // Returns:'https://developer.mozilla.org:443'
+const result = self.location.origin; // Returns:'https://developer.mozilla.org:443'
 ```
 
 ## Specifications

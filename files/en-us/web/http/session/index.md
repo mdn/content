@@ -100,7 +100,7 @@ Age: 7
   <title>A simple webpage</title>
 </head>
 <body>
-  <h1>Simple HTML5 webpage</h1>
+  <h1>Simple HTML webpage</h1>
   <p>Hello, world!</p>
 </body>
 </html>

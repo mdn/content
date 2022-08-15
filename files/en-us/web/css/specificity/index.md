@@ -60,7 +60,7 @@ If the password input type is nested in an element with `id="myApp"` set, the sp
 
 ```css
 [type="password"]             /* 0-1-0 */
-input:focus                   /* 0-1-1 */ 
+input:focus                   /* 0-1-1 */
 :root #myApp input:required   /* 1-2-1 */
 ```
 
@@ -266,7 +266,7 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
 <style>
   @import importantOverrides.css layer();
 </style>
-````
+```
 
 #### Method #2
 
@@ -275,22 +275,22 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
     ```css
     @layer importantOverrides;
     ```
-  
+
 2. Each time you need to override an important declaration, declare it within the named layer. Only declare important rules within the layer.
-  
- ```css
- [id="myElement"] p {
-   /* normal styles here */
- }
- @layer importantOverrides {
+
+    ```css
     [id="myElement"] p {
-      /* important style here */;
+      /* normal styles here */
     }
- }
-```
-  
+    @layer importantOverrides {
+      [id="myElement"] p {
+        /* important style here */;
+      }
+    }
+    ```
+
 The specificity of the selector of the important style within the layer can be low, as long as it matches the element you are trying to override. Normal layers should be declared outside the layer because layered styles have lower precedence than unlayered styles.
-  
+
 ### Tree proximity ignorance
 
 The proximity of an element to other elements that are referenced in a given selector has no impact on specificity.
@@ -372,8 +372,24 @@ A few things to remember about specificity:
 
 ## See also
 
-- {{CSS_Key_Concepts}}
 - ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2)
 - [SpeciFISHity](https://specifishity.com)
 - [Specificity Calculator](https://specificity.keegan.st/): An interactive website to test and understand your own CSS rules
 - [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) a specificity quiz
+- CSS key concepts:
+  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - [At-rules](/en-US/docs/Web/CSS/At-rule)
+  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Values
+    - [Initial values](/en-US/docs/Web/CSS/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

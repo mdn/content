@@ -1,9 +1,11 @@
 ---
-title: 'aria: radiogroup role'
+title: 'ARIA: radiogroup role'
 slug: web/accessibility/aria/roles/radiogroup_role
 tags:
   - accessibility
-  - aria
+  - ARIA
+  - ARIA Role
+  - Reference
   - roles
   - radiogroup
 spec-urls:
@@ -116,7 +118,7 @@ This could have been written using semantic HTML, which requires no CSS or JavaS
     <input name="colorOption" type="radio" id="magenta">
     <label for="magenta">Magenta</label>
   </p>
-  <li>
+  <p>
     <input name="colorOption" type="radio" id="all">
     <label for="all">All of the above</label>
   </p>
@@ -138,3 +140,11 @@ In this {{HTMLElement('fieldset')}} example, while `role="radiogroup"` is not ne
 - [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

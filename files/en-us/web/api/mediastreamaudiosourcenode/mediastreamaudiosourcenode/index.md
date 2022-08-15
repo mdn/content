@@ -68,14 +68,14 @@ if (navigator.mediaDevices.getUserMedia) {
       {
          audio: true,
          video: false
-      }).then(function(stream) {
+      }).then((stream) => {
         const options = {
           mediaStream : stream
         }
 
         const source = new MediaStreamAudioSourceNode(audioCtx, options);
         source.connect(audioCtx.destination);
-      }).catch(function(err) {
+      }).catch((err) => {
        console.error(`The following gUM error occurred: ${err}`);
       });
 } else {

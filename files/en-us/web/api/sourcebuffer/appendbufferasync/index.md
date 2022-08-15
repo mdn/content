@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media
   - Media Source Extensions
@@ -17,7 +16,7 @@ tags:
   - appendBufferAsync
 browser-compat: api.SourceBuffer.appendBufferAsync
 ---
-{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{non-standard_header}}
 
 The **`appendBufferAsync()`** method
 of the {{domxref("SourceBuffer")}} interface begins the process of asynchronously
@@ -54,7 +53,7 @@ async function fillSourceBuffer(buffer, msBuffer) {
     while(true) {
       await msBuffer.appendBufferAsync(buffer);
     }
-  } catch(e) {
+  } catch (e) {
     handleException(e);
   }
 }

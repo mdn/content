@@ -102,8 +102,8 @@ new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
 [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
-new Uint8Array([12, 5, 8, 130, 44]).every(elem => elem >= 10); // false
-new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
+new Uint8Array([12, 5, 8, 130, 44]).every((elem) => elem >= 10); // false
+new Uint8Array([12, 54, 18, 130, 44]).every((elem) => elem >= 10); // true
 ```
 
 ## Specifications

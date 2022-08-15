@@ -39,7 +39,7 @@ Strings are iterated by Unicode codepoints. This means grapheme clusters will be
 ```js
 // "Backhand Index Pointing Right: Dark Skin Tone"
 [..."👉🏿"]; // ['👉', '🏿']
-// splits into the basic "Backhand Index Pointing Right" emoji and 
+// splits into the basic "Backhand Index Pointing Right" emoji and
 // the "Dark skin tone" emoji
 
 // "Family: Man, Boy"

@@ -5,13 +5,12 @@ page-type: web-api-instance-method
 tags:
   - API
   - DOM
-  - Experimental
   - Method
   - Range
   - Reference
 browser-compat: api.Range.intersectsNode
 ---
-{{ApiRef("DOM")}} {{SeeCompatTable}}
+{{ApiRef("DOM")}}
 
 The **`Range.intersectsNode()`** method returns a boolean
 indicating whether the given {{domxref("Node")}} intersects the {{domxref("Range")}}.
@@ -19,7 +18,7 @@ indicating whether the given {{domxref("Node")}} intersects the {{domxref("Range
 ## Syntax
 
 ```js
-intersectsNode( referenceNode )
+intersectsNode(referenceNode)
 ```
 
 ### Parameters

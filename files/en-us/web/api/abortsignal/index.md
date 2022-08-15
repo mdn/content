@@ -6,7 +6,6 @@ tags:
   - API
   - AbortSignal
   - DOM
-  - Experimental
   - Interface
   - Reference
 browser-compat: api.AbortSignal
@@ -60,26 +59,28 @@ When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the
 Below you can see that the fetch operation is aborted in the second event listener, which triggered when the abort button (`abortBtn`) is clicked.
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+const controller = new AbortController();
+const signal = controller.signal;
 
-var downloadBtn = document.querySelector('.download');
-var abortBtn = document.querySelector('.abort');
+const url = 'video.mp4';
+const downloadBtn = document.querySelector('.download');
+const abortBtn = document.querySelector('.abort');
 
 downloadBtn.addEventListener('click', fetchVideo);
 
-abortBtn.addEventListener('click', function() {
+abortBtn.addEventListener('click', () => {
   controller.abort();
   console.log('Download aborted');
 });
 
 function fetchVideo() {
-  // …
-  fetch(url, {signal}).then(function(response) {
-    // …
-  }).catch(function(e) {
-    reports.textContent = `Download error: ${e.message}`;
-  })
+  fetch(url, { signal })
+    .then((response) => {
+      console.log('Download complete', response);
+    })
+    .catch((err) => {
+      console.error(`Download error: ${err.message}`);
+    });
 }
 ```
 
@@ -97,19 +98,23 @@ Note that when there is a timeout the `fetch()` promise rejects with a "`Timeout
 This allows code to differentiate between timeouts (for which user notification is probably required), and user aborts.
 
 ```js
+const url = 'video.mp4';
+
 try {
   const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
   const result = await res.blob();
   // …
-} catch (e) {
-    if (e.name === "TimeoutError") {
-      // Notify the user it took more than 5 seconds to get the result.
-    } else if (e.name === "AbortError") {
-      // fetch aborted by user action (browser stop button, closing tab, etc.)
-    } else {
-      // A network error, or some other problem.
-      console.log(`Type: ${e.name}, Message: ${e.message}`)
-    }
+} catch (err) {
+  if (err.name === "TimeoutError") {
+    console.error("Timeout: It took more than 5 seconds to get the result!");
+  } else if (err.name === "AbortError") {
+    console.error("Fetch aborted by user action (browser stop button, closing tab, etc.");
+  } else if (err.name === "TypeError") {
+    console.error("AbortSignal.timeout() method is not supported");
+  } else {
+    // A network error, or some other problem.
+    console.error(`Error: type: ${err.name}, message: ${err.message}`);
+  }
 }
 ```
 

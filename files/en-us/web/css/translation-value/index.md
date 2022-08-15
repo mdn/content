@@ -39,8 +39,8 @@ Choose one, and the transform is applied to the cube; after 2 seconds, the cube 
   </section>
 
   <div class="select-form">
-    <label>Select a transform function</label>
-    <select>
+    <label for="transfunction">Select a transform function</label>
+    <select id="transfunction">
       <option selected>Choose a function</option>
       <option>translate(100px, 100px)</option>
       <option>translateX(100px)</option>
@@ -124,11 +124,11 @@ const selectElem = document.querySelector('select');
 const example = document.querySelector('#example-element');
 
 selectElem.addEventListener('change', () => {
-  if(selectElem.value === 'Choose a function') {
+  if (selectElem.value === 'Choose a function') {
     return;
   } else {
     example.style.transform = `rotate3d(1, 1, 1, 30deg) ${selectElem.value}`;
-    setTimeout(function() {
+    setTimeout(() => {
       example.style.transform = 'rotate3d(1, 1, 1, 30deg)';
     }, 2000)
   }

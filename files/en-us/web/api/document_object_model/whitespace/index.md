@@ -46,8 +46,9 @@ Take the following document, for example:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
   <title>My Document</title>
 </head>
 <body>
@@ -345,9 +346,7 @@ The JavaScript code below defines several functions that make it easier to deal 
  * @return     True if all of the text content of |nod| is whitespace,
  *             otherwise false.
  */
-function is_all_ws( nod )
-{
-  // Use ECMA-262 Edition 3 String and RegExp features
+function is_all_ws(nod) {
   return !(/[^\t\n\r ]/.test(nod.textContent));
 }
 
@@ -361,10 +360,9 @@ function is_all_ws( nod )
  *             and otherwise false.
  */
 
-function is_ignorable( nod )
-{
-  return ( nod.nodeType == 8) || // A comment node
-         ( (nod.nodeType == 3) && is_all_ws(nod) ); // a text node, all ws
+function is_ignorable(nod) {
+  return (nod.nodeType === 8) || // A comment node
+         (nod.nodeType === 3 && is_all_ws(nod)); // a text node, all ws
 }
 
 /**
@@ -380,10 +378,11 @@ function is_ignorable( nod )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function node_before( sib )
-{
+function node_before(sib) {
   while ((sib = sib.previousSibling)) {
-    if (!is_ignorable(sib)) return sib;
+    if (!is_ignorable(sib)) {
+      return sib;
+    }
   }
   return null;
 }
@@ -398,10 +397,11 @@ function node_before( sib )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function node_after( sib )
-{
+function node_after(sib) {
   while ((sib = sib.nextSibling)) {
-    if (!is_ignorable(sib)) return sib;
+    if (!is_ignorable(sib)) {
+      return sib;
+    }
   }
   return null;
 }
@@ -418,11 +418,12 @@ function node_after( sib )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function last_child( par )
-{
-  let res=par.lastChild;
+function last_child(par) {
+  let res = par.lastChild;
   while (res) {
-    if (!is_ignorable(res)) return res;
+    if (!is_ignorable(res)) {
+      return res;
+    }
     res = res.previousSibling;
   }
   return null;
@@ -438,11 +439,12 @@ function last_child( par )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function first_child( par )
-{
-  let res=par.firstChild;
+function first_child(par) {
+  let res = par.firstChild;
   while (res) {
-    if (!is_ignorable(res)) return res;
+    if (!is_ignorable(res)) {
+      return res;
+    }
     res = res.nextSibling;
   }
   return null;
@@ -457,15 +459,15 @@ function first_child( par )
  * @return     A string giving the contents of the text node with
  *             whitespace collapsed.
  */
-function data_of( txt )
-{
+function data_of(txt) {
   let data = txt.textContent;
-  // Use ECMA-262 Edition 3 String and RegExp features
   data = data.replace(/[\t\n\r ]+/g, " ");
-  if (data.charAt(0) == " ")
+  if (data[0] === " ") {
     data = data.substring(1, data.length);
-  if (data.charAt(data.length - 1) == " ")
+  }
+  if (data[data.length - 1] === " ") {
     data = data.substring(0, data.length - 1);
+  }
   return data;
 }
 ```
@@ -475,11 +477,9 @@ function data_of( txt )
 The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is `"This is the third paragraph"`, and then changes the class attribute and the contents of that paragraph.
 
 ```js
-const cur = first_child(document.getElementById("test"));
-while (cur)
-{
-  if (data_of(cur.firstChild) == "This is the third paragraph.")
-  {
+let cur = first_child(document.getElementById("test"));
+while (cur) {
+  if (data_of(cur.firstChild) === "This is the third paragraph.") {
     cur.className = "magic";
     cur.firstChild.textContent = "This is the magic paragraph.";
   }

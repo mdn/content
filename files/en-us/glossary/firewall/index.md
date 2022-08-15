@@ -14,4 +14,4 @@ Firewalls can be as simple as a single piece of software, or more complex, like 
 
 ## See also
 
-- {{Interwiki("wikipedia", "Firewall (computing)")}} on Wikipedia
+- [Firewall (computing)](https://en.wikipedia.org/wiki/Firewall_(computing)) on Wikipedia

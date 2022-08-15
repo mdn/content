@@ -100,11 +100,6 @@ showModalDialog(uri, arguments, options)
 
  Holds the `returnValue` property as set by the document specified by `uri`.
 
-## Notes
-
-`showModalDialog()` was briefly standardized as part of HTML5. The third
-argument for additional options was not present in the HTML5 version.
-
 ## Specifications
 
 - [MSDN page for `showModalDialog`](<https://msdn.microsoft.com/library/ms536759(VS.85).aspx>)

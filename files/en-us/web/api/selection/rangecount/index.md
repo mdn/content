@@ -49,7 +49,7 @@ in the browser to see it change.
 ### JavaScript
 
 ```js
-window.setInterval(function () {
+setInterval(() => {
   console.log(window.getSelection().rangeCount);
 }, 1000);
 ```

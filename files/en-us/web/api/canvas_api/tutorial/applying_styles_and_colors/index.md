@@ -402,7 +402,7 @@ function draw() {
   ctx.beginPath();
   ctx.moveTo(0, 100);
   for (i = 0; i < 24 ; i++) {
-    const dy = i % 2 == 0 ? 25 : -25;
+    const dy = i % 2 === 0 ? 25 : -25;
     ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
   ctx.stroke();
@@ -682,7 +682,7 @@ function draw() {
   // create new image object to use as pattern
   const img = new Image();
   img.src = 'canvas_createpattern.png';
-  img.onload = function() {
+  img.onload = () => {
 
     // create pattern
     const ptrn = ctx.createPattern(img, 'repeat');

@@ -25,9 +25,9 @@ A decimal representing the inline size in pixels.
 In this example we return an array of sizing information with {{domxref("ResizeObserverEntry.contentBoxSize")}}. The `inlineSize` property returns the inline dimension size of the observed element.
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    let elemSize = entry.contentBoxSize[0];
+const resizeObserver = new ResizeObserver((entries) => {
+  for (const entry of entries) {
+    const elemSize = entry.contentBoxSize[0];
     console.log(elemSize.inlineSize); // a decimal
   }
 });

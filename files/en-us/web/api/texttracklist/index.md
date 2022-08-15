@@ -66,7 +66,7 @@ In addition to being able to obtain direct access to the text tracks present on 
 To get a media element's `TextTrackList`, use its {{domxref("HTMLMediaElement.textTracks", "textTracks")}} property.
 
 ```js
-var textTracks = document.querySelector("video").textTracks;
+const textTracks = document.querySelector("video").textTracks;
 ```
 
 ### Monitoring track count changes

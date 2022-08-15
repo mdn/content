@@ -72,7 +72,7 @@ Consider a web page like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   </head>
@@ -98,7 +98,7 @@ document.body.appendChild(p);
 window.foo = "This global variable was added by a page script";
 
 // redefine the built-in window.confirm() function
-window.confirm = function() {
+window.confirm = () => {
   alert("The page script has also redefined 'confirm'");
 }
 ```
@@ -268,7 +268,7 @@ If the click was on a link, it sends a message to the background page with the t
 window.addEventListener("click", notifyExtension);
 
 function notifyExtension(e) {
-  if (e.target.tagName != "A") {
+  if (e.target.tagName !== "A") {
     return;
   }
   browser.runtime.sendMessage({"url": e.target.href});
@@ -330,12 +330,12 @@ For example, as soon as it loads, the following content script:
 let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
+document.body.addEventListener("click", () => {
   myPort.postMessage({greeting: "they clicked the page!"});
 });
 ```
@@ -359,14 +359,14 @@ let portFromCS;
 function connected(p) {
   portFromCS = p;
   portFromCS.postMessage({greeting: "hi there content script!"});
-  portFromCS.onMessage.addListener(function(m) {
-    portFromCS.postMessage({greeting: "In background script, received message from content script:" + m.greeting});
+  portFromCS.onMessage.addListener((m) => {
+    portFromCS.postMessage({greeting: `In background script, received message from content script: ${m.greeting}`});
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   portFromCS.postMessage({greeting: "they clicked the button!"});
 });
 ```
@@ -387,8 +387,8 @@ function connected(p) {
 
 browser.runtime.onConnect.addListener(connected)
 
-browser.browserAction.onClicked.addListener(function() {
-  ports.forEach( p => {
+browser.browserAction.onClicked.addListener(() => {
+  ports.forEach((p) => {
         p.postMessage({greeting: "they clicked the button!"})
     })
 });
@@ -434,11 +434,12 @@ function messageContentScript() {
 ```js
 // content-script.js
 
-window.addEventListener("message", function(event) {
-  if (event.source == window &&
-      event.data &&
-      event.data.direction == "from-page-script") {
-    alert("Content script received message: \"" + event.data.message + "\"");
+window.addEventListener("message", (event) => {
+  if (
+    event.source === window &&
+    event?.data?.direction === "from-page-script"
+  ) {
+    alert(`Content script received message: "${event.data.message}"`);
   }
 });
 ```
@@ -452,10 +453,11 @@ For a complete working example of this, [visit the demo page on GitHub](https://
 > ```js example-bad
 > // content-script.js
 >
-> window.addEventListener("message", function(event) {
->   if (event.source == window &&
->       event.data.direction   &&
->       event.data.direction == "from-page-script") {
+> window.addEventListener("message", (event) => {
+>   if (
+>     event.source === window &&
+>     event?.data?.direction === "from-page-script"
+>   ) {
 >     eval(event.data.message);
 >   }
 > });
@@ -496,7 +498,7 @@ This code just creates some variables `x` and `y` using `window.eval()` and `eva
 On receiving the message, the page script logs the same variables:
 
 ```js
-window.addEventListener("message", function(event) {
+window.addEventListener("message", (event) => {
   if (event.source === window && event.data && event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
@@ -533,7 +535,7 @@ The same applies to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), [`setInter
 >
 > let original = console.log;
 >
-> console.log = function() {
+> console.log = () => {
 >   original(true);
 > }
 > ```

@@ -23,7 +23,7 @@ The arguments.length property provides the number of arguments actually passed t
 In this example we define a function that can add two or more numbers together.
 
 ```js
-function adder(base /*, n2, ... */) {
+function adder(base /*, num1, …, numN */) {
   base = Number(base);
   for (let i = 1; i < arguments.length; i++) {
     base += Number(arguments[i]);

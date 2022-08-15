@@ -34,7 +34,7 @@ That's why the circles have different x positions, but the same stroke value.
 
 {{EmbedLiveSample('Example', 100, 100)}}
 
-The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the `use` element is, much like cloned [template elements](/en-US/docs/Web/HTML/Element/template) in HTML5.
+The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the `use` element is, much like cloned [template elements](/en-US/docs/Web/HTML/Element/template).
 
 Most attributes on `use` do **not** override those already on the element *referenced* by `use`. (This differs from how CSS style attributes override those set 'earlier' in the cascade). **Only** the attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} and {{SVGAttr("href")}} on the `use` element will override those set on the referenced element. However, *any other attributes* not set on the referenced element **will** be applied to the `use` element.
 

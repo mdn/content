@@ -120,10 +120,9 @@ const markerNameB = "example-marker-b"
 
 // Run some nested timeouts, and create a PerformanceMark for each.
 performance.mark(markerNameA);
-setTimeout(function() {
+setTimeout(() => {
   performance.mark(markerNameB);
-  setTimeout(function() {
-
+  setTimeout(() => {
     // Create a variety of measurements.
     performance.measure("measure a to b", markerNameA, markerNameB);
     performance.measure("measure a to now", markerNameA);

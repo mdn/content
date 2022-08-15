@@ -107,7 +107,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
 [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
-new Uint8Array([12, 5, 8, 130, 44]).filter(elem => elem >= 10);
+new Uint8Array([12, 5, 8, 130, 44]).filter((elem) => elem >= 10);
 // Uint8Array [ 12, 130, 44 ]
 ```
 

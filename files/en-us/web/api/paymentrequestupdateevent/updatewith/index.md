@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Change
-  - Experimental
   - Method
   - Payment Change
   - Payment Details
@@ -42,7 +41,7 @@ updateWith(details)
         - `amount`
           - : An object describing the monetary value of the item. This object includes the following fields:
             - `currency`
-              - : A string containing a valid 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency identifier ({{interwiki("wikipedia", "ISO 4217")}}) indicating the currency used for the payment `value`.
+              - : A string containing a valid 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency identifier ([ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)) indicating the currency used for the payment `value`.
             - `value`
               - : A string containing a valid decimal value representing the mount of currency constituting the payment amount. This string must only contain an optional leading "-" to indicate a negative value, then one or more digits from 0 to 9, and an optional decimal point (".", regardless of locale) followed by at least one more digit. No whitespace is permitted.
         - `label`

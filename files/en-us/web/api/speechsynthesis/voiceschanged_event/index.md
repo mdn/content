@@ -17,9 +17,9 @@ The **`voiceschanged`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Sp
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('voiceschanged', event => { })
+addEventListener('voiceschanged', (event) => { })
 
-onvoiceschanged = event => { }
+onvoiceschanged = (event) => { }
 ```
 
 ## Event type
@@ -33,9 +33,9 @@ This could be used to repopulate a list of voices that the user can choose betwe
 ```js
 const synth = window.speechSynthesis;
 
-synth.addEventListener('voiceschanged', function() {
+synth.addEventListener('voiceschanged', () => {
   const voices = synth.getVoices();
-  for(let i = 0; i < voices.length ; i++) {
+  for (let i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
     option.setAttribute('data-lang', voices[i].lang);
@@ -49,9 +49,9 @@ Or use the `onvoiceschanged` event handler property:
 
 ```js
 const synth = window.speechSynthesis;
-synth.onvoiceschanged = function() {
+synth.onvoiceschanged = () => {
   const voices = synth.getVoices();
-  for(let i = 0; i < voices.length ; i++) {
+  for (let i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
     option.setAttribute('data-lang', voices[i].lang);

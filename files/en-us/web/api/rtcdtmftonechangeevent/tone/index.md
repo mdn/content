@@ -7,7 +7,7 @@ tags:
   - Property
   - RTCDTMFToneChangeEvent
   - Reference
-  - Touch-
+  - Touch
   - WebRTC
   - WebRTC API
   - tone
@@ -31,7 +31,7 @@ an element to display the currently playing tone in its content, or, if all tone
 played, the string "\<none>".
 
 ```js
-dtmfSender.ontonechange = function( ev ) {
+dtmfSender.ontonechange = (ev) => {
   let tone = ev.tone;
   if (tone === "") {
     tone = "&lt;none&gt;"

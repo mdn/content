@@ -70,7 +70,7 @@ playback to begin:
 The event-based approach is best:
 
 ```js
-myAudioElement.addEventListener("canplaythrough", event => {
+myAudioElement.addEventListener("canplaythrough", (event) => {
   /* the audio is now playable; play it if permissions allow */
   myAudioElement.play();
 });

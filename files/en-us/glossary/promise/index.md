@@ -13,6 +13,6 @@ When the called function finishes its work {{Glossary("asynchronous", "asynchron
 
 ## See also
 
-- {{interwiki("wikipedia", "Futures and promises")}}
+- [Futures and promises](https://en.wikipedia.org/wiki/Futures_and_promises)
 - {{jsxref("Promise")}} in the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference).
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)

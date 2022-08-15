@@ -70,19 +70,19 @@ for (const { alternates } of device.configuration.interfaces) {
 
   // Identify the interface implementing the USB CDC class.
   const USB_CDC_CLASS = 10;
-  if (alternate.interfaceClass != USB_CDC_CLASS) {
+  if (alternate.interfaceClass !== USB_CDC_CLASS) {
     continue;
   }
 
   for (const endpoint of alternate.endpoints) {
     // Identify the bulk transfer endpoints.
-    if (endpoint.type != "bulk") {
+    if (endpoint.type !== "bulk") {
       continue;
     }
 
-    if (endpoint.direction == "in") {
+    if (endpoint.direction === "in") {
       inEndpoint = endpoint.endpointNumber;
-    } else if (endpoint.direction == "out") {
+    } else if (endpoint.direction === "out") {
       outEndpoint = endpoint.endpointNumber;
     }
   }

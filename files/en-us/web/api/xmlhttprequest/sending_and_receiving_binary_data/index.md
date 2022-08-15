@@ -8,39 +8,37 @@ tags:
   - MIME
   - XMLHttpRequest
 ---
-## Receiving binary data using JavaScript typed arrays
-
 The `responseType` property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, and `"text"`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This is `null` if the request is not complete or was not successful.
 
 This example reads an image as a binary file and creates an 8-bit unsigned integer array from the raw bytes. Note that this will not decode the image and read the pixels. You will need a [png decoding library](https://github.com/foliojs/png.js) for that.
 
 ```js
-const oReq = new XMLHttpRequest();
-oReq.open("GET", "/myfile.png", true);
-oReq.responseType = "arraybuffer";
+const req = new XMLHttpRequest();
+req.open("GET", "/myfile.png", true);
+req.responseType = "arraybuffer";
 
-oReq.onload = function (oEvent) {
-  const arrayBuffer = oReq.response; // Note: not oReq.responseText
+req.onload = (event) => {
+  const arrayBuffer = req.response; // Note: not req.responseText
   if (arrayBuffer) {
     const byteArray = new Uint8Array(arrayBuffer);
-    for (let i = 0; i < byteArray.byteLength; i++) {
+    byteArray.forEach((element, index)) => {
       // do something with each byte in the array
     }
   }
 };
 
-oReq.send(null);
+req.send(null);
 ```
 
 You can also read a binary file as a {{domxref("Blob")}} by setting the string `"blob"` to the `responseType` property.
 
 ```js
-const oReq = new XMLHttpRequest();
-oReq.open("GET", "/myfile.png", true);
-oReq.responseType = "blob";
+const req = new XMLHttpRequest();
+req.open("GET", "/myfile.png", true);
+req.responseType = "blob";
 
-oReq.onload = function(oEvent) {
-  const blob = oReq.response;
+req.onload = (event) => {
+  const blob = req.response;
   // ...
 };
 
@@ -55,10 +53,11 @@ The `load_binary_resource()` function shown below loads binary data from the spe
 function load_binary_resource(url) {
   const req = new XMLHttpRequest();
   req.open('GET', url, false);
+  
   //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
-  req.overrideMimeType('text\/plain; charset=x-user-defined');
+  req.overrideMimeType('text/plain; charset=x-user-defined');
   req.send(null);
-  if (req.status != 200) return '';
+  if (req.status !== 200) return '';
   return req.responseText;
 }
 ```
@@ -81,15 +80,15 @@ The `send` method of the XMLHttpRequest has been extended to enable easy transmi
 The following example creates a text file on-the-fly and uses the `POST` method to send the "file" to the server. This example uses plain text, but you can imagine the data being a binary file instead.
 
 ```js
-const oReq = new XMLHttpRequest();
-oReq.open("POST", url, true);
-oReq.onload = function (oEvent) {
+const req = new XMLHttpRequest();
+req.open("POST", url, true);
+req.onload = (event) => {
   // Uploaded.
 };
 
-const blob = new Blob(['abc123'], {type: 'text/plain'});
+const blob = new Blob(['abc123'], { type: 'text/plain' });
 
-oReq.send(blob);
+req.send(blob);
 ```
 
 ## Sending typed arrays as binary data
@@ -97,13 +96,9 @@ oReq.send(blob);
 You can send JavaScript typed arrays as binary data as well.
 
 ```js
-const myArray = new ArrayBuffer(512);
-const longInt8View = new Uint8Array(myArray);
-
-// generate some data
-for (let i=0; i< longInt8View.length; i++) {
-  longInt8View[i] = i % 256;
-}
+const array = new ArrayBuffer(512);
+// Create a new array with fake data (Consecutive numbers (0 - 255), looping back to 0) 
+const longInt8View = Uint8Array.from(array, (v, i) => i % 256);
 
 const xhr = new XMLHttpRequest;
 xhr.open("POST", url, false);
@@ -111,8 +106,6 @@ xhr.send(myArray);
 ```
 
 This is building a 512-byte array of 8-bit integers and sending it; you can use any binary data you'd like, of course.
-
-> **Note:** Support for sending [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) objects using XMLHttpRequest was added to Gecko 9.0 {{geckoRelease("9.0")}}. **Add information about other browsers' support here.**
 
 ## Submitting forms and uploading files
 

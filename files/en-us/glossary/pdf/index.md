@@ -11,4 +11,4 @@ tags:
 
 ## See also
 
-- {{Interwiki("wikipedia", "Portable Document Format", "PDF")}} on Wikipedia
+- [PDF](https://en.wikipedia.org/wiki/Portable_Document_Format) on Wikipedia

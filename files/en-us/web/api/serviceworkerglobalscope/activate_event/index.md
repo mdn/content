@@ -21,9 +21,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('activate', event => { });
+addEventListener('activate', (event) => { });
 
-onactivate = event => { };
+onactivate = (event) => { };
 ```
 
 ## Event type
@@ -41,12 +41,12 @@ _Doesn't implement any specific properties, but inherits properties from its par
 The following snippet shows how you could use an `activate` event handler to upgrade a cache.
 
 ```js
-globalScope.addEventListener('activate', function(event) {
+globalScope.addEventListener('activate', (event) => {
   const cacheAllowlist = ['v2'];
 
   event.waitUntil(
-    caches.forEach(function(cache, cacheName) {
-      if (cacheAllowlist.indexOf(cacheName) == -1) {
+    caches.forEach((cache, cacheName) => {
+      if (!cacheAllowlist.includes(cacheName)) {
         return caches.delete(cacheName);
       }
     })
@@ -57,7 +57,7 @@ globalScope.addEventListener('activate', function(event) {
 You can also set up the event handler using the `onactivate` property:
 
 ```js
-globalScope.onactivate = function(event) {
+globalScope.onactivate = (event) => {
   // ...
 };
 ```

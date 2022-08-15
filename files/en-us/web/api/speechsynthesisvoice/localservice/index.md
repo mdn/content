@@ -31,11 +31,11 @@ A boolean value.
 ## Examples
 
 ```js
-for(let i = 0; i < voices.length ; i++) {
+for (let i = 0; i < voices.length ; i++) {
   const option = document.createElement('option');
   option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
-  if(voices[i].default) {
+  if (voices[i].default) {
     option.textContent += ' — DEFAULT';
   }
 

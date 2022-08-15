@@ -60,7 +60,7 @@ function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   const childNodes = Array.from(shadow.childNodes);
 
-  childNodes.forEach(childNode => {
+  childNodes.forEach((childNode) => {
     if (childNode.nodeName === 'STYLE') {
       childNode.textContent = `
         div {

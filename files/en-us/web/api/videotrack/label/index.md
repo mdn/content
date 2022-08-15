@@ -42,12 +42,12 @@ only allow certain track kinds through.
 
 ```js
 function getTrackList(el) {
-  let trackList = [];
+  const trackList = [];
   const wantedKinds = [
     "main", "alternative", "commentary"
   ];
 
-  el.videoTracks.forEach(function(track) {
+  el.videoTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,

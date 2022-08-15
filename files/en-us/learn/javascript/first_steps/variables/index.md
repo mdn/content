@@ -192,7 +192,7 @@ var myName = 'Bob';
 
 But the following would throw an error on the second line:
 
-```js
+```js example-bad
 let myName = 'Chris';
 let myName = 'Bob';
 ```
@@ -349,7 +349,7 @@ We won't be looking at objects any more for now — you can learn more about tho
 
 ## Dynamic typing
 
-JavaScript is a "dynamically typed language", which means that, unlike some other languages, you don't need to specify what data type a variable will contain (numbers, strings, arrays, etc).
+JavaScript is a "dynamically typed language", which means that, unlike some other languages, you don't need to specify what data type a variable will contain (numbers, strings, arrays, etc.).
 
 For example, if you declare a variable and give it a value enclosed in quotes, the browser treats the variable as a string:
 

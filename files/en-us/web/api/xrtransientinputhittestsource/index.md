@@ -57,7 +57,7 @@ function onXRFrame(time, xrFrame) {
 
 ### Unsubscribe from a transient input hit test
 
-To unsubscribe from a transient input hit test source, use the {{domxref("XRTransientInputHitTestSource.cancel()")}} method. Since the object will no longer be usable, you can clean up and set the `XRTransientInputHitTestSource` object to {{jsxref("null")}}.
+To unsubscribe from a transient input hit test source, use the {{domxref("XRTransientInputHitTestSource.cancel()")}} method. Since the object will no longer be usable, you can clean up and set the `XRTransientInputHitTestSource` object to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ```js
 transientHitTestSource.cancel();

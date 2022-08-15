@@ -73,44 +73,47 @@ The following example shows a possible use of the `size` property:
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>File(s) size</title>
-</head>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>File(s) size</title>
+  </head>
 
-<body>
-  <form name="uploadForm">
-    <div>
-      <input id="uploadInput" type="file" name="myFiles" multiple>
-      selected files: <span id="fileNum">0</span>;
-      total size: <span id="fileSize">0</span>
-    </div>
-    <div><input type="submit" value="Send file"></div>
-  </form>
+  <body>
+    <form name="uploadForm">
+      <div>
+        <input id="uploadInput" type="file" multiple>
+        selected files: <output id="fileNum">0</output>;
+        total size: <output id="fileSize">0</output>
+      </div>
+      <div><input type="submit" value="Send file"></div>
+    </form>
 
-  <script>
-  function updateSize() {
-    let nBytes = 0,
-        oFiles = this.files,
-        nFiles = oFiles.length;
-    for (let nFileId = 0; nFileId < nFiles; nFileId++) {
-      nBytes += oFiles[nFileId].size;
-    }
-    let sOutput = nBytes + " bytes";
-    // optional code for multiples approximation
-    const aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
-    for (nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
-      sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
-    }
-    // end of optional code
-    document.getElementById("fileNum").innerHTML = nFiles;
-    document.getElementById("fileSize").innerHTML = sOutput;
-  }
+    <script>
+      const uploadInput = document.getElementById("uploadInput");
+      uploadInput.addEventListener("change", () => {
+        // Calculate total size
+        let numberOfBytes = 0;
+        for (const file of uploadInput.files) {
+          numberOfBytes += file.size;
+        }
 
-  document.getElementById("uploadInput").addEventListener("change", updateSize, false);
-  </script>
-</body>
+        // Approximate to the closest prefixed unit
+        const units = ["B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
+        const exponent = Math.min(
+          Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
+          units.length - 1,
+        );
+        const approx = numberOfBytes / 1024 ** exponent;
+        const output = exponent === 0 
+          ? `${numberOfBytes} bytes` 
+          : `${approx.toFixed(3)} ${units[exponent]} (${numberOfBytes} bytes)`;
+
+        document.getElementById("fileNum").textContent = fileList.length;
+        document.getElementById("fileSize").textContent = output;
+      }, false);
+    </script>
+  </body>
 </html>
 ```
 
@@ -128,10 +131,10 @@ Consider this HTML:
 The code that handles the `click` event can look like this:
 
 ```js
-const fileSelect = document.getElementById("fileSelect"),
-  fileElem = document.getElementById("fileElem");
+const fileSelect = document.getElementById("fileSelect");
+const fileElem = document.getElementById("fileElem");
 
-fileSelect.addEventListener("click", function (e) {
+fileSelect.addEventListener("click", (e) => {
   if (fileElem) {
     fileElem.click();
   }
@@ -237,7 +240,7 @@ function handleFiles(files) {
     preview.appendChild(img); // Assuming that "preview" is the div output where the content will be displayed.
 
     const reader = new FileReader();
-    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+    reader.onload = (e) => { aImg.src = e.target.result; };
     reader.readAsDataURL(file);
   }
 }
@@ -288,7 +291,7 @@ const fileSelect = document.getElementById("fileSelect"),
     fileElem = document.getElementById("fileElem"),
     fileList = document.getElementById("fileList");
 
-fileSelect.addEventListener("click", function (e) {
+fileSelect.addEventListener("click", (e) => {
   if (fileElem) {
     fileElem.click();
   }
@@ -311,7 +314,7 @@ function handleFiles() {
       const img = document.createElement("img");
       img.src = URL.createObjectURL(this.files[i]);
       img.height = 60;
-      img.onload = function() {
+      img.onload = () => {
         URL.revokeObjectURL(this.src);
       }
       li.appendChild(img);
@@ -374,21 +377,21 @@ function FileUpload(img, file) {
   this.xhr = xhr;
 
   const self = this;
-  this.xhr.upload.addEventListener("progress", function(e) {
+  this.xhr.upload.addEventListener("progress", (e) => {
         if (e.lengthComputable) {
           const percentage = Math.round((e.loaded * 100) / e.total);
           self.ctrl.update(percentage);
         }
       }, false);
 
-  xhr.upload.addEventListener("load", function(e){
+  xhr.upload.addEventListener("load", (e) => {
           self.ctrl.update(100);
           const canvas = self.ctrl.ctx.canvas;
           canvas.parentNode.removeChild(canvas);
       }, false);
   xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
   xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
-  reader.onload = function(evt) {
+  reader.onload = (evt) => {
     xhr.send(evt.target.result);
   };
   reader.readAsBinaryString(file);
@@ -404,7 +407,7 @@ function createThrobber(img) {
   img.parentNode.appendChild(throbber);
   throbber.ctx = throbber.getContext('2d');
   throbber.ctx.fillStyle = 'orange';
-  throbber.update = function(percent) {
+  throbber.update = (percent) => {
     throbber.ctx.fillRect(0, 0, throbberWidth * percent / 100, throbberHeight);
     if (percent === 100) {
       throbber.ctx.fillStyle = 'green';
@@ -438,10 +441,10 @@ if (isset($_FILES['myFile'])) {
     exit;
 }
 ?><!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-    <title>dnd binary upload</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>dnd binary upload</title>
     <script type="application/javascript">
         function sendFile(file) {
             const uri = "/index.php";
@@ -449,8 +452,8 @@ if (isset($_FILES['myFile'])) {
             const fd = new FormData();
 
             xhr.open("POST", uri, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
                     alert(xhr.responseText); // handle response.
                 }
             };
@@ -459,14 +462,14 @@ if (isset($_FILES['myFile'])) {
             xhr.send(fd);
         }
 
-        window.onload = function() {
+        window.onload = () => {
             const dropzone = document.getElementById("dropzone");
-            dropzone.ondragover = dropzone.ondragenter = function(event) {
+            dropzone.ondragover = dropzone.ondragenter = (event) => {
                 event.stopPropagation();
                 event.preventDefault();
             }
 
-            dropzone.ondrop = function(event) {
+            dropzone.ondrop = (event) => {
                 event.stopPropagation();
                 event.preventDefault();
 

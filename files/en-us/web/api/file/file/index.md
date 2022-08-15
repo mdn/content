@@ -38,7 +38,7 @@ new File(bits, name, options)
 
     - `type`
       - : A string representing the MIME type of the
-        content that will be put into the file. Defaults to a value of `"".`
+        content that will be put into the file. Defaults to a value of `""`.
     - `lastModified`
       - : A number representing the number of milliseconds
         between the Unix time epoch and when the file was last modified. Defaults to a

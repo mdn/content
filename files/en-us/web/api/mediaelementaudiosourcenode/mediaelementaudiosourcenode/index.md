@@ -54,11 +54,9 @@ A new {{domxref("MediaElementAudioSourceNode")}} object instance.
 const ac = new AudioContext();
 const mediaElement = document.createElement('audio');
 
-const options = {
-  mediaElement : mediaElement
-}
-
-const myAudioSource = new MediaElementAudioSourceNode(ac, options);
+const myAudioSource = new MediaElementAudioSourceNode(ac, {
+  mediaElement,
+});
 ```
 
 ## Specifications

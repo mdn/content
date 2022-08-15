@@ -36,7 +36,7 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 ## Examples
 
 ```js
-var vao = gl.createVertexArray();
+const vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
 // …

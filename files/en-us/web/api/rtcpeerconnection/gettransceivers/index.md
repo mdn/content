@@ -44,7 +44,7 @@ The following snippet of code stops all transceivers associated with an
 `RTCPeerConnection`.
 
 ```js
-pc.getTransceivers().forEach(transceiver => {
+pc.getTransceivers().forEach((transceiver) => {
   transceiver.stop();
 });
 ```

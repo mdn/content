@@ -31,7 +31,7 @@ When working with `WebGLSampler` objects, the following methods of the {{domxref
 in this example, `gl` must be a {{domxref("WebGL2RenderingContext")}}. `WebGLSampler` objects are not available in WebGL 1.
 
 ```js
-var sampler = gl.createSampler();
+const sampler = gl.createSampler();
 ```
 
 ## Specifications

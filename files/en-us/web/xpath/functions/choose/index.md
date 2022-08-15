@@ -10,7 +10,7 @@ tags:
 
 The `choose` function returns one of the specified objects based on a boolean parameter.
 
-> **Note:** This method should be used instead of `if()`, which has been deprecated.
+> **Note:** This method should be used instead of `if ()`, which has been deprecated.
 
 ### Syntax
 

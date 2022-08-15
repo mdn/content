@@ -37,9 +37,9 @@ In this example, the event handler will fire each time a new selection is made.
 text, or a range has been selected.
 
 ```js
-var selection;
+let selection;
 
-document.onselectionchange = function() {
+document.onselectionchange = () => {
   console.log('New selection made');
   selection = document.getSelection();
   console.log(selection.type);

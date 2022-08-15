@@ -4,11 +4,11 @@ slug: Web/API/Navigator/doNotTrack
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTML DOM
   - Navigator
   - Property
   - Reference
+  - Deprecated
 browser-compat: api.Navigator.doNotTrack
 ---
 {{ApiRef("HTML DOM")}}{{Deprecated_header}}

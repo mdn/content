@@ -74,7 +74,7 @@ Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook
 ## See also
 
 - [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
-- [Web Push Notifications: Timely, Relevant, and Precise](https://web.dev/push-notifications/), Joseph Medley
+- [Push notifications overview](https://web.dev/push-notifications-overview/)
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
 
 {{DefaultAPISidebar("Push API")}}

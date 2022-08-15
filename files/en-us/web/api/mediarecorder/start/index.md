@@ -100,7 +100,7 @@ handler to respond to these errors.
 ## Examples
 
 ```js
-record.onclick = function() {
+record.onclick = () => {
   mediaRecorder.start();
   console.log("recorder started");
 }

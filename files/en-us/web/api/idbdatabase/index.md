@@ -76,9 +76,9 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the IDBDatabase object,
 // when the database is opened successfully, or not
-DBOpenRequest.onerror = event => { note.innerHTML += '<li>Error loading database.</li>'; };
+DBOpenRequest.onerror = (event) => { note.innerHTML += '<li>Error loading database.</li>'; };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db
@@ -95,10 +95,10 @@ DBOpenRequest.onsuccess = event => {
 // been created before, or a new version number has been
 // submitted via the window.indexedDB.open line above
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = (event) => {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 

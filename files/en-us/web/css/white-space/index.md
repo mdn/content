@@ -222,10 +222,10 @@ pre {
 ```
 
 ```js hidden
-var select  = document.querySelector("#css-code select");
-var results = document.querySelector("#results p");
-select.addEventListener("change", function(e) {
-  results.setAttribute("style", "white-space: "+e.target.value);
+const select  = document.querySelector("#css-code select");
+const results = document.querySelector("#results p");
+select.addEventListener("change", (e) => {
+  results.setAttribute("style", `white-space: ${e.target.value}`);
 })
 ```
 

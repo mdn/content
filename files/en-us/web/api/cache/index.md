@@ -67,32 +67,32 @@ const CURRENT_CACHES = {
   font: `font-cache-v${CACHE_VERSION}`
 };
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', (event) => {
   // Delete all caches that aren't named in CURRENT_CACHES.
   // While there is only one cache in this example, the same logic will handle the case where
   // there are multiple versioned caches.
   const expectedCacheNamesSet = new Set(Object.values(CURRENT_CACHES));
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
+    caches.keys().then((cacheNames) =>
+      Promise.all(
+        cacheNames.map((cacheName) => {
           if (!expectedCacheNamesSet.has(cacheName)) {
             // If this cache name isn't present in the set of "expected" cache names, then delete it.
             console.log('Deleting out of date cache:', cacheName);
             return caches.delete(cacheName);
           }
         })
-      );
-    })
+      )
+    )
   );
 });
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', (event) => {
   console.log('Handling fetch event for', event.request.url);
 
   event.respondWith(
-    caches.open(CURRENT_CACHES.font).then(function(cache) {
-      return cache.match(event.request).then(function(response) {
+    caches.open(CURRENT_CACHES.font).then((cache) => {
+      return cache.match(event.request).then((response) => {
         if (response) {
           // If there is an entry in the cache for event.request, then response will be defined
           // and we can just return it. Note that in this example, only font resources are cached.
@@ -109,7 +109,7 @@ self.addEventListener('fetch', function(event) {
         // We call .clone() on the request since we might use it in a call to cache.put() later on.
         // Both fetch() and cache.put() "consume" the request, so we need to make a copy.
         // (see https://developer.mozilla.org/en-US/docs/Web/API/Request/clone)
-        return fetch(event.request.clone()).then(function(response) {
+        return fetch(event.request.clone()).then((response) => {
           console.log('  Response for %s from network is: %O',
             event.request.url, response);
 
@@ -136,7 +136,7 @@ self.addEventListener('fetch', function(event) {
           // Return the original response object, which will be used to fulfill the resource request.
           return response;
         });
-      }).catch(function(error) {
+      }).catch((error) => {
         // This catch() will handle exceptions that arise from the match() or fetch() operations.
         // Note that a HTTP error response (e.g. 404) will NOT trigger an exception.
         // It will return a normal response object that has the appropriate error code set.

@@ -116,7 +116,7 @@ Your finished table should look something like the following:
 
 ```html hidden
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>My spending record</title>

@@ -94,7 +94,7 @@ Object.seal(arr);
 // Copy the initial array to shorten the copy
 const copy = Array.from(arr);
 copy.length = 1;
-// arr.length == 3
+// arr.length === 3
 ```
 
 ## See also

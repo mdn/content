@@ -86,15 +86,14 @@ const publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
+  .then((newCredentialInfo) => {
     const attestationObj = newCredentialInfo.response.attestationObject;
     // This will be a CBOR encoded ArrayBuffer
 
     // Do something with the response
     // (sending it back to the relying party server maybe?)
-  }).catch(function (err) {
-     console.error(err);
-  });
+  })
+  .catch((err) => console.error(err));
 ```
 
 ## Specifications

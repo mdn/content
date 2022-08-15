@@ -30,7 +30,7 @@ To create an options page, write an HTML file defining the page. This page can i
 
   <body>
     <form>
-      <label>Favorite color</label>
+      <label for="color">Favorite color</label>
       <input type="text" id="color" name="color"/>
       <button type="submit">Save</button>
     </form>

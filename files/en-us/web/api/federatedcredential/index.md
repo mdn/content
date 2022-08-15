@@ -44,18 +44,18 @@ None.
 ## Examples
 
 ```js
-var cred = new FederatedCredential({
-  id: id,
-  name: name,
+const cred = new FederatedCredential({
+  id,
+  name,
   provider: 'https://account.google.com',
-  iconURL: iconUrl
+  iconURL,
 });
 
 // Store it
 navigator.credentials.store(cred)
-  .then(function() {
-  // Do something else.
-});
+  .then(() => {
+    // Do something else.
+  });
 ```
 
 ## Specifications

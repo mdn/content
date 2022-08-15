@@ -24,9 +24,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beginEvent', event => { });
+addEventListener('beginEvent', (event) => { });
 
-onbegin = event => { };
+onbegin = (event) => { };
 ```
 
 ## Event type
@@ -86,7 +86,7 @@ animateElem.addEventListener('beginEvent', () => {
 animateElem.addEventListener('repeatEvent', (e) => {
   let listItem = document.createElement('li');
   let msg = 'repeatEvent fired';
-  if(e.detail) {
+  if (e.detail) {
     msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;

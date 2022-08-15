@@ -1,7 +1,7 @@
 ---
 title: 'aria-modal'
 slug: Web/Accessibility/ARIA/Attributes/aria-modal
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -40,7 +40,6 @@ If a dialog is not modal — there is no inert background and focus isn't confin
 ## Example
 
 ```html
-
 <div id="backdrop" class="no-scroll">
   <div role="alertdialog"
        aria-modal="true"
@@ -88,11 +87,11 @@ The `aria-modal` attribute exposes the existence of the modal to assistive techn
 
 ## Associated roles
 
-Used in roles:  
+Used in roles:
 
 - [`window`](/en-US/docs/Web/Accessibility/ARIA/Roles/window_role)
 
-Inherits into roles:  
+Inherits into roles:
 
 - [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)

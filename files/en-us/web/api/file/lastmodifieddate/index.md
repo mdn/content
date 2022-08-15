@@ -26,13 +26,10 @@ A [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object indi
 
 ```js
 // fileInput is a HTMLInputElement: <input type="file" multiple id="myfileinput">
-var fileInput = document.getElementById("myfileinput");
+const fileInput = document.getElementById("myfileinput");
 
-// files is a FileList object (similar to NodeList)
-var files = fileInput.files;
-
-for (var i = 0; i < files.length; i++) {
-  alert(`${files[i].name} has a last modified date of ${files[i].lastModifiedDate}`);
+for (const file of fileInput.files) {
+  console.log(`${file.name} has a last modified date of ${file.lastModifiedDate}`);
 }
 ```
 

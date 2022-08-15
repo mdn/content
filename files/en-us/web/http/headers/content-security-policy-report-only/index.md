@@ -96,8 +96,9 @@ The HTML of `signup.html` looks like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -109,7 +110,7 @@ The HTML of `signup.html` looks like this:
 
 Can you spot the violation? Stylesheets are only allowed to be loaded from `cdn.example.com`, yet the website tries to load one from its own origin (`http://example.com`). A browser capable of enforcing CSP will send the following violation report as a POST request to `http://example.com/_/csp-reports`, when the document is visited:
 
-```js
+```json
 {
   "csp-report": {
     "document-uri": "http://example.com/signup.html",

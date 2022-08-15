@@ -22,4 +22,4 @@ This non-exhaustive list gives you an idea of which standards websites and netwo
 
 ## See also
 
-- {{Interwiki("wikipedia", "Web standards")}} on Wikipedia
+- [Web standards](https://en.wikipedia.org/wiki/Web_standards) on Wikipedia

@@ -31,7 +31,7 @@ The **`<section>`** [HTML](/en-US/docs/Web/HTML) element represents a generic st
         <a
           href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content"
           >Sectioning content</a
-        >, palpable content.
+        >, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>

@@ -57,7 +57,7 @@ text into an element's contents.
 
 ```js
 navigator.clipboard.readText().then(
-  clipText => document.getElementById("outbox").innerText = clipText);
+  (clipText) => document.getElementById("outbox").innerText = clipText);
 ```
 
 ## Specifications

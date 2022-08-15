@@ -62,7 +62,7 @@ In addition to being able to obtain direct access to the video tracks present on
 To get a media element's {{domxref("VideoTrackList")}}, use its {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} property.
 
 ```js
-var videoTracks = document.querySelector("video").videoTracks;
+const videoTracks = document.querySelector("video").videoTracks;
 ```
 
 ### Monitoring track count changes

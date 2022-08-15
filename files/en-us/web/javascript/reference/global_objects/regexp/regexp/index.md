@@ -36,7 +36,7 @@ RegExp(pattern[, flags])
 
   - : The text of the regular expression.
 
-    As of ES5, this can also be another `RegExp` object or literal (for the
+    This can also be another `RegExp` object or literal (for the
     two RegExp constructor notations only). Patterns may include
     [special characters](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#using_special_characters)
     to match a wider range of values than would a literal string.
@@ -46,9 +46,9 @@ RegExp(pattern[, flags])
   - : If specified, `flags` is a string that contains the flags to
     add.
 
-    Alternatively, if an object is supplied for the pattern, the
+    Alternatively, if an object is supplied for the `pattern`, the
     `flags` string will replace any of that object's flags (and
-    `lastIndex` will be reset to `0`) (as of ES2015).
+    `lastIndex` will be reset to `0`).
 
     If `flags` is not specified and a regular expressions object
     is supplied, that object's flags (and `lastIndex` value) will be copied
@@ -105,7 +105,7 @@ Before regular expressions can be used, they have to be compiled. This process a
 
 The literal notation results in compilation of the regular expression when the expression is evaluated. On the other hand, the constructor of the `RegExp` object, `new RegExp('ab+c')`, results in runtime compilation of the regular expression.
 
-Use a string as the first argument to the `RegExp()` constructor when you want to [build the regular expression from dynamic input](#Building_a_regular_expression_from_dynamic_inputs).
+Use a string as the first argument to the `RegExp()` constructor when you want to [build the regular expression from dynamic input](#building_a_regular_expression_from_dynamic_inputs).
 
 ### Building a regular expression from dynamic inputs
 
@@ -113,7 +113,7 @@ Use a string as the first argument to the `RegExp()` constructor when you want t
 const breakfasts = ['bacon', 'eggs', 'oatmeal', 'toast', 'cereal'];
 const order = 'Let me get some bacon and eggs, please';
 
-order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g')); 
+order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g'));
 // Returns ['bacon', 'eggs']
 ```
 

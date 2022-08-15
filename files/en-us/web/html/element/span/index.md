@@ -73,9 +73,7 @@ The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline contai
     <tr>
       <th scope="row">DOM interface</th>
       <td>
-        {{domxref("HTMLSpanElement")}} (before
-        {{glossary("HTML5")}}, the interface was
-        {{domxref("HTMLElement")}})
+        {{domxref("HTMLSpanElement")}}
       </td>
     </tr>
   </tbody>

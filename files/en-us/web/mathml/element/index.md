@@ -7,13 +7,11 @@ tags:
 ---
 {{MathMLRef}}
 
-This is an alphabetical list of MathML **presentation** elements.
+This is an alphabetical list of MathML elements. All of them implement the {{domxref("MathMLElement")}} class.
 
-The term **presentation markup** is used to describe the layout structure of mathematical notation whereas **content markup** provides the underlying mathematical meaning and is not supposed to be rendered by the MathML parser (see {{ bug(276028) }}). If you want to learn more about content markup you should consider [Chapter 4](https://www.w3.org/TR/MathML3/chapter4.html) in the [MathML 3 specification](https://www.w3.org/TR/MathML3/).
+> **Note:** As explained on the main [MathML](/en-US/docs/Web/MathML) page, documentation is focused on a subset of the language that is relevant for browsers. See the [MathML Full](https://w3c.github.io/mathml/) specification if you want details about other MathML elements.
 
-MathML elements implement the {{domxref("MathMLElement")}} class.
-
-## MathML presentation elements A to Z
+## MathML elements A to Z
 
 ### math
 
@@ -88,7 +86,7 @@ MathML elements implement the {{domxref("MathMLElement")}} class.
 - [`<annotation>`](/en-US/docs/Web/MathML/Element/semantics#annotation) (Data annotations)
 - [`<annotation-xml>`](/en-US/docs/Web/MathML/Element/semantics#annotation-xml) (XML annotations)
 
-## MathML presentation elements by category
+## MathML elements by category
 
 ### Top-level elements
 

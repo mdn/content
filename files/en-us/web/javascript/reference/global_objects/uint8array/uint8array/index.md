@@ -19,14 +19,24 @@ using standard array index syntax (that is, using bracket notation).
 ## Syntax
 
 ```js
-new Uint8Array(); // new in ES2017
-new Uint8Array(length);
-new Uint8Array(typedArray);
-new Uint8Array(object);
+new Uint8Array()
+new Uint8Array(length)
+new Uint8Array(typedArray)
+new Uint8Array(object)
 
-new Uint8Array(buffer);
-new Uint8Array(buffer, byteOffset);
-new Uint8Array(buffer, byteOffset, length);
+new Uint8Array(buffer)
+new Uint8Array(buffer, byteOffset)
+new Uint8Array(buffer, byteOffset, length)
+```
+
+## Description
+
+The `Uint8Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Uint8Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+
+```js example-bad
+const dv = Uint8Array([1, 2, 3]);
+// TypeError: calling a builtin Uint8Array constructor
+// without new is forbidden
 ```
 
 ### Parameters
@@ -95,23 +105,6 @@ console.log(uint8FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Uint8Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Uint8Array` constructor as a function without `new`, will throw a
-{{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Uint8Array([1, 2, 3]);
-// TypeError: calling a builtin Uint8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Uint8Array([1, 2, 3]);
-```
 
 ## See also
 

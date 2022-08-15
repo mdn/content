@@ -102,7 +102,7 @@ class MockHypotheticalSocket {
     this.max_per_read = 100; // max data per read
     this.min_per_read = 40; // min data per read
     this.data_read = 0; // total data read so far (capped is maxdata)
-    this.socketdata = null; // 
+    this.socketdata = null;
   }
 
   /* Method returning promise when this socket is readable. */
@@ -118,7 +118,7 @@ class MockHypotheticalSocket {
       }
 
       // Emulate slow read of data
-      window.setTimeout(() => {
+      setTimeout(() => {
         const numberBytesReceived = this.getNumberRandomBytesSocket();
         this.data_read += numberBytesReceived;
         this.socketdata = this.randomByteArray(numberBytesReceived);
@@ -272,11 +272,10 @@ function makeSocketStream(host, port) {
     type: "bytes",
 
     start(controller) {
-      readRepeatedly().catch(e => controller.error(e));
-          
+      readRepeatedly().catch((e) => controller.error(e));
       function readRepeatedly() {
         return socket.select2().then(() => {
-          // Since the socket can become readable even when there’s
+          // Since the socket can become readable even when there's
           // no pending BYOB requests, we need to handle both cases.
           let bytesRead;
           if (controller.byobRequest) {
@@ -316,7 +315,7 @@ function makeSocketStream(host, port) {
 ```
 
 Note that `readRepeatedly()` returns a promise, and we use this to catch any errors from setting up or handling the read operation.
-The errors are then passed to the controller as shown above (see `readRepeatedly().catch(e => controller.error(e));`).
+The errors are then passed to the controller as shown above (see `readRepeatedly().catch((e) => controller.error(e));`).
 
 A `cancel()` method is provided at the end to close the underlying source; the `pull()` callback is not needed, and is therefore not implemented.
 
@@ -336,38 +335,39 @@ readStream(reader);
 
 function readStream(reader) {
   let bytesReceived = 0;
-  let offset =  0;
+  let offset = 0;
 
-  while (offset < buffer.byteLength) {    
+  while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received
-    reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(async function processText({ done, value }) {
-      // Result objects contain two properties:
+    reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+      .then(async function processText({ done, value }) {
+        // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
         // value - some data. Always undefined when done is true.
-      
-      if (done) {
-        logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
-        return;
-      }
 
-      buffer = value.buffer;
-      offset += value.byteLength;
-      bytesReceived += value.byteLength;
+        if (done) {
+          logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
+          return;
+        }
 
-      //logConsumer(`Read ${bytesReceived} bytes: ${value}`);
-      logConsumer(`Read ${bytesReceived} bytes`);
-      result += value;
+        buffer = value.buffer;
+        offset += value.byteLength;
+        bytesReceived += value.byteLength;
 
-      // Add delay to emulate when data can't be read and data is enqueued
-      if (bytesReceived > 300 && bytesReceived < 600) {
-        logConsumer(`Delaying read to emulate slow stream reading`);
-        const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-        await delay(1000);
-      }
+        //logConsumer(`Read ${bytesReceived} bytes: ${value}`);
+        logConsumer(`Read ${bytesReceived} bytes`);
+        result += value;
 
-      // Read some more, and call this function again
-      return reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(processText);
-    });
+        // Add delay to emulate when data can't be read and data is enqueued
+        if (bytesReceived > 300 && bytesReceived < 600) {
+          logConsumer(`Delaying read to emulate slow stream reading`);
+          const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+          await delay(1000);
+        }
+
+        // Read some more, and call this function again
+        return reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset)).then(processText);
+      });
   }
 }
 ```
@@ -379,7 +379,9 @@ For this example we call the method if a button is clicked with a reason "user c
 We also log when the cancel operation completes.
 
 ```js
-button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
+button.addEventListener('click', () => {
+  reader.cancel("user choice").then(() => logConsumer('reader.cancel complete'));
+});
 ```
 
 {{domxref("ReadableStreamBYOBReader.releaseLock()")}} can be used to release the reader without cancelling the stream.
@@ -393,8 +395,8 @@ While no errors are expected in this case, the following code should log the com
 
 ```js
 reader.closed
-  .then( () => { logConsumer("ReadableStreamBYOBReader.closed: resolved")} )
-  .catch( () => { logConsumer("ReadableStreamBYOBReader.closed: rejected:")} );
+  .then(() => { logConsumer("ReadableStreamBYOBReader.closed: resolved")} )
+  .catch(() => { logConsumer("ReadableStreamBYOBReader.closed: rejected:")} );
 ```
 
 #### Result
@@ -445,12 +447,12 @@ class MockUnderlyingFileHandle {
       for (let i = 0; i < length; i++) {
         myview[i]=this.filedata[position + i];
         resultobj["bytesRead"] = i;
-        if (position + i >= this.maxdata) {  
+        if (position + i >= this.maxdata) {
           break;
         }
-      }   
+      }
       // Emulate slow read of data
-      window.setTimeout(() => { resolve(resultobj); }, 1000);
+      setTimeout(() => { resolve(resultobj); }, 1000);
     });
   }
 
@@ -565,7 +567,7 @@ function makeReadableByteFileStream(filename) {
     async pull(controller) {
       // Called when there is a pull request for data
       const theView = controller.byobRequest.view;
-      const {bytesRead, buffer} = 
+      const { bytesRead, buffer } =
         await fileHandle.read(theView.buffer, theView.offset, theView.length, position)
       if (bytesRead === 0) {
         await fileHandle.close();
@@ -603,28 +605,29 @@ function readStream(reader) {
   let bytesReceived = 0;
   let offset =  0;
 
-  while (offset < buffer.byteLength) {    
+  while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received
-    reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(function processText({ done, value }) {
-      // Result objects contain two properties:
+    reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+      .then(function processText({ done, value }) {
+        // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
         // value - some data. Always undefined when done is true.
-      
-      if (done) {
-        logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
-        return;
-      }
 
-      buffer = value.buffer;
-      offset += value.byteLength;
-      bytesReceived += value.byteLength;
+        if (done) {
+          logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
+          return;
+        }
 
-      logConsumer(`Read ${bytesReceived} bytes: ${value}`);
-      result += value;
+        buffer = value.buffer;
+        offset += value.byteLength;
+        bytesReceived += value.byteLength;
 
-      // Read some more, and call this function again
-      return reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(processText);
-    });
+        logConsumer(`Read ${bytesReceived} bytes: ${value}`);
+        result += value;
+
+        // Read some more, and call this function again
+        return reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset)).then(processText);
+      });
   }
 }
 ```
@@ -632,7 +635,7 @@ function readStream(reader) {
 Lastly, we add a handler that will cancel the stream if a button is clicked (other HTML and code for the button not shown).
 
 ```js
-button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
+button.addEventListener('click', () => { reader.cancel("user choice").then(() => { logConsumer(`reader.cancel complete`) }) } );
 ```
 
 #### Result
@@ -675,14 +678,14 @@ class MockUnderlyingFileHandle {
       const myview = new Uint8Array(buffer, offset, length);
       // Write the length of data specified
       for (let i = 0; i < length; i++) {
-        myview[i]=this.filedata[position + i];
+        myview[i] = this.filedata[position + i];
         resultobj["bytesRead"] = i;
-        if (position + i >= this.maxdata) {  
+        if (position + i >= this.maxdata) {
           break;
         }
-      }   
+      }
       // Emulate slow read of data
-      window.setTimeout(() => { resolve(resultobj); }, 1000);
+      setTimeout(() => resolve(resultobj), 1000);
     });
   }
 
@@ -739,7 +742,6 @@ button {
   <ul>
   </ul>
 </div>
-
 ```
 
 ```js hidden
@@ -788,7 +790,7 @@ function makeReadableByteFileStream(filename) {
     async pull(controller) {
       // Called when there is a pull request for data
       const theView = controller.byobRequest.view;
-      const {bytesRead, buffer} = 
+      const { bytesRead, buffer } =
         await fileHandle.read(theView.buffer, theView.offset, theView.length, position)
       if (bytesRead === 0) {
         await fileHandle.close();
@@ -849,7 +851,7 @@ function readStream(reader) {
 Lastly, we add a handler that will cancel the stream if a button is clicked (other HTML and code for the button not shown).
 
 ```js
-button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
+button.addEventListener('click', () => { reader.cancel("user choice").then(() => { logConsumer(`reader.cancel complete`) }) } );
 ```
 
 #### Result
@@ -892,12 +894,12 @@ class MockUnderlyingFileHandle {
       for (let i = 0; i < length; i++) {
         myview[i]=this.filedata[position + i];
         resultobj["bytesRead"] = i;
-        if (position + i >= this.maxdata) {  
+        if (position + i >= this.maxdata) {
           break;
         }
-      }   
+      }
       // Emulate slow read of data
-      window.setTimeout(() => { resolve(resultobj); }, 1000);
+      setTimeout(() => { resolve(resultobj); }, 1000);
     });
   }
 
@@ -1016,7 +1018,7 @@ function makeReadableByteFileStream(filename) {
          }
       } else {
         // No BYOBRequest so enqueue data to stream
-        // NOTE, this branch would only execute for a default reader if autoAllocateChunkSize is not defined. 
+        // NOTE, this branch would only execute for a default reader if autoAllocateChunkSize is not defined.
         const mynewBuffer = new Uint8Array(DEFAULT_CHUNK_SIZE);
         const {bytesRead, buffer} = await fileHandle.read(mynewBuffer.buffer, mynewBuffer.offset, mynewBuffer.length, position);
         if (bytesRead === 0) {
@@ -1029,7 +1031,6 @@ function makeReadableByteFileStream(filename) {
            controller.enqueue(mynewBuffer);
            logSource(`pull() with no byobRequest. enqueue() ${bytesRead} bytes`);
         }
-        
       }
     },
     cancel(reason) {
@@ -1037,7 +1038,7 @@ function makeReadableByteFileStream(filename) {
       // Clean up any resources
       fileHandle.close();
       logSource(`cancel() with reason: ${reason}`);
-    }  
+    },
   });
 }
 ```
@@ -1073,7 +1074,7 @@ function readStream(reader) {
 ```
 
 ```js hidden
-button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
+button.addEventListener('click', () => { reader.cancel("user choice").then(() => { logConsumer(`reader.cancel complete`) }) } );
 ```
 
 #### Result

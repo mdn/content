@@ -20,9 +20,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type
@@ -55,14 +55,14 @@ The following code snippet shows creation of a {{domxref("Worker")}} object usin
 
 const myWorker = new Worker("worker.js");
 
-first.onchange = function() {
+first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
 // worker.js
 
-self.onmessage = function(e) {
+self.onmessage = (e) => {
   console.log('Message received from main script');
   const workerResult = `Result: ${e.data[0] * e.data[1]}`;
   console.log('Posting message back to main script');
@@ -75,7 +75,7 @@ In the `main.js` script, an `onmessage` handler is used to handle messages from 
 ```js
 // main.js
 
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
   console.log('Message received from worker');
 }
@@ -86,7 +86,7 @@ Alternatively, the script can listen for the message using [`addEventListener()`
 ```js
 // worker.js
 
-self.addEventListener('message', function(e) {
+self.addEventListener('message', (e) => {
   result.textContent = e.data;
   console.log('Message received from worker');
 });

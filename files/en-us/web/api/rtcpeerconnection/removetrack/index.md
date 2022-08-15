@@ -56,14 +56,15 @@ This example adds a video track to a connection and sets up a listener on a clos
 button which removes the track when the user clicks the button.
 
 ```js
-var pc, sender;
-navigator.getUserMedia({video: true}, function(stream) {
+let pc;
+let sender;
+navigator.getUserMedia({video: true}, (stream) => {
   pc = new RTCPeerConnection();
-  var track = stream.getVideoTracks()[0];
+  const [track] = stream.getVideoTracks();
   sender = pc.addTrack(track, stream);
 });
 
-document.getElementById("closeButton").addEventListener("click", function(event) {
+document.getElementById("closeButton").addEventListener("click", (event) => {
   pc.removeTrack(sender);
   pc.close();
 }, false);

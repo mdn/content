@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Draft
-  - Experimental
   - Interface
   - NeedsContent
   - NeedsExample
@@ -120,7 +119,7 @@ function tallySenders(pc) {
   };
 
   let senderList = pc.getSenders();
-  senderList.forEach(sender => {
+  senderList.forEach((sender) => {
     let transport = sender.transport;
 
     if (!transport) {

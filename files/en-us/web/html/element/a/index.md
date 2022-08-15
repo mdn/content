@@ -20,7 +20,7 @@ browser-compat: html.elements.a
 
 The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#attr-href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
-Content within each `<a>` **should** indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
+Content within each `<a>` _should_ indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
 {{EmbedInteractiveExample("pages/tabbed/a.html", "tabbed-shorter")}}
 
@@ -325,8 +325,8 @@ a {
 ##### JavaScript
 
 ```js
-var canvas = document.querySelector('canvas'),
-    c = canvas.getContext('2d');
+const canvas = document.querySelector('canvas');
+const c = canvas.getContext('2d');
 c.fillStyle = 'hotpink';
 
 function draw(x, y) {
@@ -338,13 +338,13 @@ function draw(x, y) {
   }
 }
 
-canvas.addEventListener('mousemove', event =>
+canvas.addEventListener('mousemove', (event) =>
   draw(event.offsetX, event.offsetY)
 );
 canvas.addEventListener('mousedown', () => isDrawing = true);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 
-document.querySelector('a').addEventListener('click', event =>
+document.querySelector('a').addEventListener('click', (event) =>
   event.target.href = canvas.toDataURL()
 );
 ```

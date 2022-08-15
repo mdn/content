@@ -45,8 +45,8 @@ The following example shows the use of the `numberValue` property.
 ### JavaScript
 
 ```js
-var xpath = "count(//div)";
-var result = document.evaluate(xpath, document, null, XPathResult.NUMBER_TYPE, null);
+const xpath = "count(//div)";
+const result = document.evaluate(xpath, document, null, XPathResult.NUMBER_TYPE, null);
 document.querySelector("output").textContent = result.numberValue;
 ```
 

@@ -24,9 +24,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplaypointerrestricted', event => { });
+addEventListener('vrdisplaypointerrestricted', (event) => { });
 
-onvrdisplaypointerrestricted = event => { };
+onvrdisplaypointerrestricted = (event) => { };
 ```
 
 ## Event type
@@ -49,7 +49,7 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplaypointerrestricted` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplaypointerrestricted', function() {
+window.addEventListener('vrdisplaypointerrestricted', () => {
   // Run code to handle pointer lock
 });
 ```
@@ -57,7 +57,7 @@ window.addEventListener('vrdisplaypointerrestricted', function() {
 Or use the `onvrdisplaypointerrestricted` event handler property:
 
 ```js
-window.onvrdisplaypointerrestricted = function() {
+window.onvrdisplaypointerrestricted = () => {
   // Run code to handle pointer lock
 };
 ```

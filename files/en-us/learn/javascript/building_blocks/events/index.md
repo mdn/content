@@ -372,7 +372,7 @@ Some event objects add extra properties that are relevant to that particular typ
 ```js
 const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
-textBox.addEventListener('keydown', event => output.textContent = `You pressed "${event.key}".`);
+textBox.addEventListener('keydown', (event) => output.textContent = `You pressed "${event.key}".`);
 ```
 
 ```css hidden
@@ -429,7 +429,7 @@ const fname = document.getElementById('fname');
 const lname = document.getElementById('lname');
 const para = document.querySelector('p');
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
   if (fname.value === '' || lname.value === '') {
     e.preventDefault();
     para.textContent = 'You need to fill in both names!';
@@ -545,7 +545,7 @@ This example shows and hides a {{htmlelement("div")}} with a {{htmlelement("vide
   <video>
     <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4">
     <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
   </video>
 </div>
 ```
@@ -728,7 +728,7 @@ The standard [`Event`](/en-US/docs/Web/API/Event) object has a function availabl
 So we can fix our current problem by changing the second handler function in the previous code block to this:
 
 ```js
-video.addEventListener('click', e => {
+video.addEventListener('click', (e) => {
   e.stopPropagation();
   video.play();
 });
@@ -795,7 +795,7 @@ function bgChange() {
 
 const container = document.querySelector('#container');
 
-container.addEventListener('click', event => event.target.style.backgroundColor = bgChange());
+container.addEventListener('click', (event) => event.target.style.backgroundColor = bgChange());
 ```
 
 The output is as follows (try clicking around on it):

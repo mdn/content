@@ -52,8 +52,8 @@ current window, then creates a second point based on the first, which is then of
 100 pixels both vertically and horizontally.
 
 ```js
-var windTopLeft = new DOMPoint(window.screenX, window.screenY);
-var newTopLeft = DOMPoint.fromPoint(windTopLeft);
+const windTopLeft = new DOMPoint(window.screenX, window.screenY);
+const newTopLeft = DOMPoint.fromPoint(windTopLeft);
 newTopLeft.x += 100;
 newTopLeft.y += 100;
 ```

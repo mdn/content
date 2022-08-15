@@ -100,7 +100,7 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
 </select>
 */
 
-var select = document.getElementById('s');
+const select = document.getElementById('s');
 
 // return the index of the selected option
 console.log(select.selectedIndex); // 1

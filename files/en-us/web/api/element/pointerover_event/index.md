@@ -23,7 +23,7 @@ onpointerover = (event) => { };
 
 ## Event type
 
-An {{domxref("PointerEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PointerEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PointerEvent")}}
 
