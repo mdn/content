@@ -52,7 +52,7 @@ Content-Type: application/json; charset=utf-8
 {"name":"John"}
 ```
 
-JSON modules are identified by the `application/json` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types). When the host sees this MIME type instead of `text/javascript` (for JavaScript source), it would parse the result as JSON instead of executing it as code — and that's generally a safer thing to do. However, there's no in-code metadata that signals the author's intent that a particular module should always be interpreted as JSON. Very importantly, the extension (the last part of the URL) cannot be used to identify a file's type — only the MIME type can. If the `https://exmaple.com/data.json` URL actually returns a JS file with `text/javascript` MIME, the `import` would unintentionally execute external code, which is a security threat.
+JSON modules are identified by the `application/json` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types). When the host sees this MIME type instead of `text/javascript` (for JavaScript source), it would parse the result as JSON instead of executing it as code — and the former is generally a safer thing to do. However, there's no in-code metadata that signals the author's intent that a particular module should always be interpreted as JSON. Very importantly, the extension (the last part of the URL) cannot be used to identify a file's type — only the MIME type can. If the `https://exmaple.com/data.json` URL actually returns a JS file with `text/javascript` MIME, the `import` would unintentionally execute external code, causing a security threat.
 
 Import assertions fix this problem by allowing the author to explicitly specify how a module should be validated. For example, the import statement above would actually fail in a browser:
 
@@ -85,9 +85,9 @@ import data from "https://exmaple.com/module.js" assert { this: "looks good" };
 
 This likely does nothing unless your host reads that key. The assertion:
 
-- Does not affect the module's behavior. What the importer has asserted about the module is not available to the module being imported. (For example, it's not part of [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta).) Only the host can do the assertion.
+- Does not affect the module's behavior. What the importer has asserted about the module is not available to the module being imported. (For example, it's not part of [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta).) Only the host can read and validate the assertion.
 - Does not affect how the host interprets the module. For example, the host will not decide to parse a module as JSON if it has already decided that the module contains JavaScript — via MIME type in browsers or extensions in Node.js — even when there's a `type: "json"` assertion. It would simply fail the import.
-- Is not used by the host to cache the module. If a particular assertion is optional or ignored by the host, then importing the module twice, once with the assertion and once without, would result in the exact same module without re-executing it.
+- Is not used by the host to cache the module. If a module with the same specifier is imported twice twice, once with the assertion and once without, and neither import fails, then they would result in the exact same module without re-executing it.
 
 The specification explicitly calls out `type: "json"` to be supported. If a module is asserted to be `type: "json"` and the host does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without `type: "json"` assertions, the host may still parse it as JSON if security is not an issue in this environment.
 

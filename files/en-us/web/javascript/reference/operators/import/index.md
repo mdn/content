@@ -57,7 +57,7 @@ Use dynamic import only when necessary. The static form is preferable for loadin
 
 If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations, but the asynchronous dynamic import syntax will always be available, allowing you to import modules into non-module environments.
 
-The `options` parameter allows different kinds of import options, for example, [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assert):
+The `options` parameter allows different kinds of import options. For example, [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assert):
 
 ```js
 import("./data.json", { assert: { type: "json" } });
