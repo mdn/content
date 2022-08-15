@@ -94,7 +94,7 @@ These are both very North America-centric, and not particularly accurate, but th
 
 For example, let's go to [Netmarketshare](https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0). You can see that Opera is listed as having small but visible usage figures, so we should add it to our support chart too as grade C.
 
-IE8 is listed as being significant too, but it is older and no longer capable. Opera Mini is also significant, but it isn't very capable in terms of running complex JavaScript at runtime, etc. (see [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details). We should put this into grade B as well.
+IE8 is listed as being significant too, but it is older and no longer capable. Opera Mini is also significant, but it isn't very capable in terms of running complex JavaScript at runtime, etc. See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
 
 ### Using analytics
 
