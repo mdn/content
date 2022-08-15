@@ -133,4 +133,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## See also
 
+- [`load` event not propagating to `window`](https://bugzilla.mozilla.org/show_bug.cgi?id=1784246)
 - Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}}, {{domxref("Window/unload_event", "unload")}}
