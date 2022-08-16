@@ -217,29 +217,42 @@ example, `typeof []` , is `'object'`, as well as
 For greater specificity in checking types, here we present a custom `type(value)` function, which mostly mimics the behavior of `typeof`, but for non-primitives (i.e. objects and functions), it returns a more granular type name where possible.
 
 ```js
-const type = (value) => {
+function type(value) {
   if (value === null) {
-    return 'null';
+    return "null";
   }
+  const baseType = typeof value;
   // Primitive types
-  const type = typeof value;
-  if (!['object', 'function'].includes(type)) {
-    return type;
+  if (!["object", "function"].includes(baseType)) {
+    return baseType;
   }
-  // If litaral starts from class keyword
-  if (String(value).startsWith('class')) {
-    return 'class';
+
+  // If it's a function whose source code starts with the "class" keyword
+  if (
+    baseType === "function" &&
+    Function.prototype.toString.call(value).startsWith('class')
+  ) {
+    return "class";
   }
-  // Symbol.toStringTag often contains object's class name
+
+  // Symbol.toStringTag often specifies the "display name" of the
+  // object's class.
   const tag = value[Symbol.toStringTag];
-  if (typeof tag === 'string') {
+  if (typeof tag === "string") {
     return tag;
   }
-  // Constructor name, for example:
-  // Array, GeneratorFunction, Number, DomainClass
-  const { name } = value.constructor;
-  return typeof name === 'string' ? name : type;
-};
+
+  // The name of the constructor; for example `Array`, `GeneratorFunction`,
+  // `Number`, `String`, `Boolean` or `MyCustomClass`
+  const className = value.constructor.name;
+  if (typeof className === "string" && className !== "") {
+    return className;
+  }
+
+  // At this point there's no robust way to get the type of value,
+  // so we use the base implementation.
+  return baseType;
+}
 ```
 
 For checking non-existent variables that would otherwise throw
