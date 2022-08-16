@@ -368,7 +368,7 @@ button:focus {
 
 And voila! Your form should now look like this:
 
-![Image shows the final look and layout of the form after applying all styling and tweaking to it as described above](updated-form-screenshot.jpg)
+![The final look and layout of the form after applying all styling and tweaking to it as described above](updated-form-screenshot.jpg)
 
 > **Note:** If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
 
