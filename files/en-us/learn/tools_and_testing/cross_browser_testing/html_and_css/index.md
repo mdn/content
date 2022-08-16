@@ -135,7 +135,7 @@ For example:
 
 This example includes a simple link allowing you to download the video if even the HTML video player doesn't work, so at least the user can still access the video.
 
-Newer form elements also exhibit fallback qualities — HTML5 introduced some special [`<input>`](/en-US/docs/Web/HTML/Element/input) types for inputting specific information into forms, such as times, dates, colors, numbers, etc. These are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Supporting platforms provide special UI widgets when these input types are used, such as a calendar widget for entering dates.
+Another example is form elements. When new [`<input>`](/en-US/docs/Web/HTML/Element/input) types were introduced for inputting specific information into forms, such as times, dates, colors, numbers, etc, if a browser didn't support the new feature, the browser used the default of `type="text"`. Input types were added, which are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Platforms provide different UI widgets depending on the input type used, such as a calendar widget for entering dates. Should a browser not support an input type, the user can still enter the required data.
 
 The following example shows date and time inputs:
 
@@ -158,7 +158,7 @@ The output of this code is as follows:
 
 > **Note:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
 
-If you view the example on a supporting browser like desktop/Android Chrome or iOS Safari, you'll see the special widgets/features in action as you try to input data. On a non-supporting platform such Internet Explorer, the inputs will just fallback to normal text inputs, so at least the user can still enter some information.
+If you view the example on a supporting browser, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type specific keypads will be displayed. On a non-supporting browser lik Internet Explorer, the inputs will just fallback to normal text inputs, meaning the user can still enter the correct information.
 
 #### CSS fallback behavior
 
@@ -293,7 +293,7 @@ There are many other issues you'll encounter with HTML and CSS, making knowledge
 
 Among the best sources of support information are the Mozilla Developer Network (that's where you are now!), [stackoverflow.com](https://stackoverflow.com/), and [caniuse.com](https://caniuse.com/).
 
-To use the Mozilla Developer Network (MDN), most people do a search engine search of the technology they are trying to find information on, plus the term "mdn", for example, "mdn HTML5 video". MDN contains several useful types of content:
+To use the Mozilla Developer Network (MDN), most people do a search engine search of the technology they are trying to find information on, plus the term "mdn", for example, "mdn HTML video". MDN contains several useful types of content:
 
 - Reference material with browser support information for client-side web technologies, e.g. the [\<video> reference page](/en-US/docs/Web/HTML/Element/video).
 - Other supporting reference material, e.g. the [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats),
@@ -301,7 +301,7 @@ To use the Mozilla Developer Network (MDN), most people do a search engine searc
 
 [caniuse.com](https://caniuse.com/) provides support information, along with a few useful external resource links. For example, see <https://caniuse.com/#search=video> (you just have to enter the feature you are searching for into the text box).
 
-[stackoverflow.com](https://stackoverflow.com/) (SO) is a forum site where you can ask questions and have fellow developers share their solutions, look up previous posts, and help other developers. You are advised to look and see if there is an answer to your question already, before posting a new question. For example, we searched for "cross browser html5 video" on SO, and very quickly came up with [HTML5 Video with full cross browser compatibility](https://stackoverflow.com/questions/16212510/html5-video-with-full-cross-browser-compatibility).
+[stackoverflow.com](https://stackoverflow.com/) (SO) is a forum site where you can ask questions and have fellow developers share their solutions, look up previous posts, and help other developers. You are advised to look and see if there is an answer to your question already, before posting a new question. For example, we searched for "disabling autofocus on HTML dialog" on SO, and very quickly came up with [Disable showModal auto-focusing using HTML attributes](https://stackoverflow.com/questions/63267581/disable-showmodal-auto-focusing-using-html-attributes).
 
 Aside from that, try searching your favorite search engine for an answer to your problem. It is often useful to search for specific error messages if you have them — other developers will be likely to have had the same problems as you.
 
