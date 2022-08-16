@@ -112,7 +112,7 @@ The table below shows examples of three chroma subsampling models.
         <img alt="A matrix of U and V values for a 4:2:2 decoding operation. The first row contains 2 chroma samples for U: a blue and a green. The second row contains 2 chroma samples for V: a pink and a yellow." src="yuv-chroma-422.svg" />
       </td>
       <td style="width: 144px; text-align: right">
-        <img alt="A matrix of U and V values for a 4:4:4 decoding operation. The first row contains 4 chroma samples for U: a light blue, a yellow, a green and a deep blue. The second row contains 4 chroma samples for V: a pink, a white, a red and a grey." src="yuv-chroma-444.svg" />
+        <img alt="A matrix of U and V values for a 4:4:4 decoding operation. The first row contains 4 chroma samples for U: a light blue, a yellow, a green and a deep blue. The second row contains 4 chroma samples for V: a pink, a white, a red and a gray." src="yuv-chroma-444.svg" />
       </td>
     </tr>
     <tr>
