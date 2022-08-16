@@ -75,7 +75,7 @@ function insertBreakAtPoint(e) {
 
 let paragraphs = document.getElementsByTagName("p");
 for (const paragraph of paragraphs) {
-  paragraphs.addEventListener('click', insertBreakAtPoint, false);
+  paragraph.addEventListener('click', insertBreakAtPoint, false);
 }
 ```
 
