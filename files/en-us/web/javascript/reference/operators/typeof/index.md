@@ -227,19 +227,19 @@ function type(value) {
     return baseType;
   }
 
-  // If it's a function whose source code starts with the "class" keyword
-  if (
-    baseType === "function" &&
-    Function.prototype.toString.call(value).startsWith('class')
-  ) {
-    return "class";
-  }
-
   // Symbol.toStringTag often specifies the "display name" of the
-  // object's class.
+  // object's class. It's used in Object.prototype.toString().
   const tag = value[Symbol.toStringTag];
   if (typeof tag === "string") {
     return tag;
+  }
+
+  // If it's a function whose source code starts with the "class" keyword
+  if (
+    baseType === "function" &&
+    Function.prototype.toString.call(value).startsWith("class")
+  ) {
+    return "class";
   }
 
   // The name of the constructor; for example `Array`, `GeneratorFunction`,
