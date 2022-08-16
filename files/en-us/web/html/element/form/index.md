@@ -157,7 +157,7 @@ The following attributes control behavior during form submission.
   - : This Boolean attribute indicates that the form shouldn't be validated when submitted. If this attribute is not set (and therefore the form **_is_** validated), it can be overridden by a {{htmlattrxref("formnovalidate", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element belonging to the form.
 - {{htmlattrdef("target")}}
 
-  - : Indicates where to display the response after submitting the form. In HTML 4, this is the name/keyword for a frame. In HTML5, it is a name/keyword for a _browsing context_ (for example, tab, window, or iframe). The following keywords have special meanings:
+  - : Indicates where to display the response after submitting the form. In HTML 4, this was the name/keyword for a frame. In modern standards, it is a name/keyword for a _browsing context_ (for example, tab, window, or iframe). The following keywords have special meanings:
 
     - `_self` (default): Load into the same browsing context as the current one.
     - `_blank`: Load into a new unnamed browsing context.
