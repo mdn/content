@@ -60,5 +60,5 @@ SourceMap: /path/to/file.js.map
 ## See also
 
 - [How to use a source map – Firefox Tools documentation](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- [Introduction to source maps](https://developer.chrome.com/blog/sourcemaps/)
+- [Introduction to source maps (2012)](https://developer.chrome.com/blog/sourcemaps/)
 - {{HTTPHeader("SourceMap")}}
