@@ -89,7 +89,7 @@ Navigation menu:
 
 The following screenshot shows an example of what the finished design could look like:
 
-![](example2.png)
+![A screenshot of the finished design of the 'Community school website homepage' text styling assessment. The heading reads 'St Huxley's Community College'. It has few paragraphs which imply the importance of college to Students. It has a list of links of the top course choices offered by the college. There is a vertical navigation bar on the right-hand side of the screen that has buttons to navigate to different pages of the website.](example2.png)
 
 ## Assessment or further help
 

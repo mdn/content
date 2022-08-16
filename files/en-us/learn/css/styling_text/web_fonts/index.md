@@ -166,7 +166,7 @@ To implement these fonts in your demo, follow these steps:
 
 You should end up with a demo page with some nice fonts implemented on them. Because different fonts are created at different sizes, you may have to adjust the size, spacing, etc., to sort out the look and feel.
 
-![](web-font-example.png)
+![The finished design of a Web font active learning exercise. The page has two headings and three paragraphs. The page contains different fonts created at different sizes.](web-font-example.png)
 
 > **Note:** If you have any problems getting this to work, feel free to compare your version to our finished files — see [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) and [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css). You can also download the [code from GitHub](https://github.com/mdn/learning-area/tree/main/css/styling-text/web-fonts) or [run the finished example live](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html).
 

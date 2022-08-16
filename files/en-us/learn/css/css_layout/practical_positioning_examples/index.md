@@ -40,7 +40,7 @@ This article shows how to build some real world examples to illustrate what kind
 
 The first example we'll look at is a classic tabbed info box — a very common feature used when you want to pack a lot of information into a small area. This includes information-heavy apps like strategy/war games, mobile versions of websites where the screen is narrow and space is limited, and compact information boxes where you might want to make lots of information available without having it fill the whole UI. Our simple example will look like this once we are finished:
 
-![](tabbed-info-box.png)
+![Tab 1 is selected. 'Tab 2' and 'Tab 3' are the other two tabs. Only the contents of the selected tab are visible. When a tab is selected, it's text-color changes from black to white and it's background-color changes from orange-red to saddle-brown.](tabbed-info-box.png)
 
 > **Note:** You can see the finished example running live at [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
@@ -248,7 +248,7 @@ That's it for the first example. Keep your code open, as we'll be adding to it i
 
 In our second example, we will take our first example — our info-box — and add it into the context of a full web page. But not only that — we'll give it fixed position so that it stays in the same position in the browser window. When the main content scrolls, the info-box will stay in the same position on the screen. Our finished example will look like this:
 
-![](fixed-info-box.png)
+![Info-box is a container with 3 tabs out of which the first tab is selected and only the contents of the first tab are displayed. It is given a fixed position. The info-box is jammed to the left-hand side top corner of the window. It's width is 452 pixels. A container with fake content for demonstration purposes occupies the right half of the window and has a height greater than the window height and is scrollable. When the page is scrolled, only the right-hand side container moves and the info-box will stay in the same position on the screen. ](fixed-info-box.png)
 
 > **Note:** You can see the finished example running live at [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
@@ -313,7 +313,7 @@ The final example we'll present here is a panel that slides on and off the scree
 
 Our finished example will look like this:
 
-![](hidden-sliding-panel.png)
+![The screen has a panel displaying some information on the right-hand side of it. A 'question mark' icon is jammed to the right-hand top corner of the window. The panel slides on and off the screen at the press of this 'question mark' icon.](hidden-sliding-panel.png)
 
 > **Note:** You can see the finished example running live at [hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). Check it out to get an idea of what you will be building in this section of the article.
 
