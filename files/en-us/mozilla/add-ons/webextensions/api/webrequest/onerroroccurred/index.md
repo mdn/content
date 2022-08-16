@@ -140,7 +140,7 @@ Events have three functions:
     - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
-    
+
     **Note** If Firefox Tracking Protection blocks the request an empty object is returned and `error` returns one of these codes:
     - `NS_ERROR_MALWARE_URI` indicating a malware URI.
     - `NS_ERROR_PHISHING_URI` indicating a phishing URI.
