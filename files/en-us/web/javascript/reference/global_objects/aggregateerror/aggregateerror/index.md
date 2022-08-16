@@ -10,8 +10,7 @@ browser-compat: javascript.builtins.AggregateError.AggregateError
 ---
 {{JSRef}}
 
-The **`AggregateError()`** constructor creates an error for
-several errors that need to be wrapped in a single error.
+The **`AggregateError()`** constructor creates an error for several errors that need to be wrapped in a single error.
 
 ## Syntax
 
@@ -19,7 +18,13 @@ several errors that need to be wrapped in a single error.
 new AggregateError(errors)
 new AggregateError(errors, message)
 new AggregateError(errors, message, options)
+
+AggregateError(errors)
+AggregateError(errors, message)
+AggregateError(errors, message, options)
 ```
+
+> **Note:** `AggregateError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) — they have the same effect of constructing `AggregateError` instances.
 
 ### Parameters
 
@@ -35,7 +40,7 @@ new AggregateError(errors, message, options)
 
 ## Examples
 
-### Creating an `AggregateError`
+### Creating an AggregateError
 
 ```js
 try {

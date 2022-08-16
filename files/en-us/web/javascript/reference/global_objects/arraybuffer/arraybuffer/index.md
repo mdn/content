@@ -12,8 +12,7 @@ browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 
 {{JSRef}}
 
-The **`ArrayBuffer()`** constructor is used to create
-{{jsxref("ArrayBuffer")}} objects.
+The **`ArrayBuffer()`** constructor is used to create {{jsxref("ArrayBuffer")}} objects.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html","shorter")}}
 
@@ -22,6 +21,8 @@ The **`ArrayBuffer()`** constructor is used to create
 ```js
 new ArrayBuffer(length)
 ```
+
+> **Note:** `ArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) — attempting to call it without `new` would throw a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -35,8 +36,8 @@ initialized to 0.
 
 ### Exceptions
 
-A {{jsxref("RangeError")}} is thrown if the `length` is larger than
-{{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) or negative.
+- {{jsxref("RangeError")}}
+  - : Thrown if the `length` is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (≥ 2<sup>53</sup>) or negative.
 
 ## Examples
 

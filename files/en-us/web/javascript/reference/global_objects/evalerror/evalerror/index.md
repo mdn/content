@@ -9,10 +9,7 @@ browser-compat: javascript.builtins.EvalError.EvalError
 ---
 {{JSRef}}
 
-The **`EvalError`** constructor creates a new error regarding
-the global {{jsxref("Global_Objects/eval", "eval()")}} function. This exception is not
-thrown by JavaScript anymore, however the `EvalError` object remains for
-compatibility.
+The **`EvalError()`** constructor creates a new {{jsxref("EvalError")}} instance.
 
 ## Syntax
 
@@ -22,7 +19,15 @@ new EvalError(message)
 new EvalError(message, options)
 new EvalError(message, fileName)
 new EvalError(message, fileName, lineNumber)
+
+EvalError()
+EvalError(message)
+EvalError(message, options)
+EvalError(message, fileName)
+EvalError(message, fileName, lineNumber)
 ```
+
+> **Note:** `EvalError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) — they have the same effect of constructing `EvalError` instances.
 
 ### Parameters
 

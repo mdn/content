@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Function.Function
 ---
 {{JSRef}}
 
-The **`Function` constructor** creates a new `Function` **object**. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues as {{jsxref("Global_Objects/eval", "eval()")}}. However, unlike `eval` (which may have access to the local scope), the `Function` constructor creates functions which execute in the global scope only.
+The **`Function()`** constructor creates a new [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues as {{jsxref("Global_Objects/eval", "eval()")}}. However, unlike `eval` (which may have access to the local scope), the `Function` constructor creates functions which execute in the global scope only.
 
 {{EmbedInteractiveExample("pages/js/function-constructor.html", "shorter")}}
 
@@ -21,7 +21,14 @@ new Function(functionBody)
 new Function(arg0, functionBody)
 new Function(arg0, arg1, functionBody)
 new Function(arg0, arg1, /* … ,*/ argN, functionBody)
+
+Function(functionBody)
+Function(arg0, functionBody)
+Function(arg0, arg1, functionBody)
+Function(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
+
+> **Note:** `Function()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) — they have the same effect of constructing `Function` instances.
 
 ### Parameters
 
@@ -46,9 +53,6 @@ All arguments passed to the function, except the last, are treated as the names 
 parameters in the function to be created, in the order in which they are passed.
 Omitting an argument will result in the value of that parameter being
 `undefined`.
-
-Invoking the `Function` constructor as a function (without using the
-`new` operator) has the same effect as invoking it as a constructor.
 
 ## Examples
 
