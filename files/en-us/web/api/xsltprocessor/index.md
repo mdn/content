@@ -49,7 +49,7 @@ transformation to documents.
   - : Sets a parameter in the XSLT stylesheet that was imported. (Sets the value of an
     `<xsl:param>`.) A null value for `namespaceURI` is treated
     the same as an empty string.
-- {{domxref("XSLTProcessor.getParameter")}}
+- {{domxref("XSLTProcessor.getParameter()")}}
   - : Gets the value of a parameter from the XSLT stylesheet. A null value for
     `namespaceURI` is treated the same as an empty string.
 - {{domxref("XSLTProcessor.removeParameter")}}
