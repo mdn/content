@@ -116,7 +116,9 @@ Consider the following form:
 
 Since the `GET` method has been used, you'll see the URL `www.foo.com/?say=Hi&to=Mom` appear in the browser address bar when you submit the form.
 
-![Image shows the changed url with query parameters after submitting the form with GET method](url-parameters.png)The data is appended to the URL as a series of name/value pairs. After the URL web address has ended, we include a question mark (`?`) followed by the name/value pairs, each one separated by an ampersand (`&`). In this case we are passing two pieces of data to the server:
+![The changed url with query parameters after submitting the form with GET method with a "server not found" browser error page](url-parameters.png)
+
+The data is appended to the URL as a series of name/value pairs. After the URL web address has ended, we include a question mark (`?`) followed by the name/value pairs, each one separated by an ampersand (`&`). In this case we are passing two pieces of data to the server:
 
 - `say`, which has a value of `Hi`
 - `to`, which has a value of `Mom`
