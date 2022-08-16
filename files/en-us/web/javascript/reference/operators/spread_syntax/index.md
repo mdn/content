@@ -216,7 +216,7 @@ const spread = { set foo(val) { console.log(val); }, ...{ foo: 1 } };
 // Nothing is logged; spread.foo is 1
 ```
 
-You cannot naively re-implement the {{jsxref("Object.assign()")}} function through spread syntax:
+You cannot naively re-implement the {{jsxref("Object.assign()")}} function through a single spreading:
 
 ```js
 const obj1 = { foo: 'bar', x: 42 };
