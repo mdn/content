@@ -14,12 +14,23 @@ spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 {{CSSRef}}
 
-The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the cosine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. That is, `cos(45deg)`, `cos(0.125turn)`, and `cos(3.14159 / 4)` all represent the same value, approximately `.707`.
+The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the cosine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. That is, `cos(45deg)`, `cos(0.125turn)`, and `cos(3.14159 / 4)` all represent the same value, approximately `0.707`.
 
 ## Syntax
 
 ```css
-width: calc( cos(-45deg) * 1px );
+/* Single <angle> values */
+width: calc( cos(45deg) * 100px );
+width: calc( cos(0.125turn) * 100px );
+width: calc( cos(0.785398163rad) * 100px );
+
+/* Single <number> values */
+width: calc( cos(63.673) * 100px );
+width: calc( cos(2 * 0.125) * 100px );
+
+/* Other values */
+width: calc( cos(pi) * 100px );
+width: calc( cos(e / 2) * 100px );
 ```
 
 ### Argument
