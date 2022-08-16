@@ -19,7 +19,7 @@ This aim of this skill test is to assess whether you've understood our [The HTML
 
 ## HTML controls 1
 
-First let's explore some input types. Create appropriate inputs for a user to update their details for:
+First, let's explore some input types. Create appropriate inputs for a user to update their details for:
 
 1. Email
 2. Website
