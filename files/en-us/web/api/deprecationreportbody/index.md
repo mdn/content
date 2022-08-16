@@ -88,10 +88,9 @@ function displayReports(reports) {
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
-    for (const key in reports[i].body) {
+    for (const [key, value] of Object.entries(report.body)) {
       const innerListItem = document.createElement('li');
-      const keyValue = reports[i].body[key];
-      innerListItem.textContent = `${key}: ${keyValue}`;
+      innerListItem.textContent = `${key}: ${value}`;
       innerList.appendChild(innerListItem);
     }
   }
