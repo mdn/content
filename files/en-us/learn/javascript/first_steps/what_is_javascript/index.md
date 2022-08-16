@@ -56,7 +56,7 @@ The three layers build on top of one another nicely. Let's take a simple text la
 <p>Player 1: Chris</p>
 ```
 
-![Paragraph of Player 1: Chris](just-html.png)
+![Paragraph of Player 1: Chris as plain text](just-html.png)
 
 Then we can add some CSS into the mix to get it looking nice:
 
@@ -114,7 +114,7 @@ They do the same thing for programming that ready-made furniture kits do for hom
 
 They generally fall into two categories.
 
-![A screenshot showing the two categories of API; 3rd party APIs and browser APIs](browser.png)
+![Two categories of API; 3rd party APIs are shown to the side of the browser and browser APIs are in the browser](browser.png)
 
 **Browser APIs** are built into your web browser, and are able to expose data from the surrounding computer environment, or do useful complex things. For example:
 
@@ -144,7 +144,7 @@ Here we'll actually start looking at some code, and while doing so, explore what
 
 Let's briefly recap the story of what happens when you load a web page in a browser (first talked about in our [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work) article). When you load a web page in your browser, you are running your code (the HTML, CSS, and JavaScript) inside an execution environment (the browser tab). This is like a factory that takes in raw materials (the code) and outputs a product (the web page).
 
-![An image showing how the code comes togther and shows on the browser tab when the page is loaded](execution.png)
+![HTML, CSS and JavaScript code come together to create the content in the browser tab when the page is loaded](execution.png)
 
 A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above).
 Note that the code in your web documents is generally loaded and executed in the order it appears on the page.
@@ -395,7 +395,7 @@ They won't run until the page content has all loaded, which is useful if your sc
 
 Here is a visual representation of the different script loading methods and what that means for your page:
 
-![An image showing how the three script loading method works](async-defer.jpg)
+![How the three script loading method work: default has parsing blocked while JavaScript is fetched and executed. With async, the parsing pauses for execution only. With defer, parsing isn't paused, but execution on happens after everything is else is parsed.](async-defer.jpg)
 
 _This image is from the [HTML spec](https://html.spec.whatwg.org/images/asyncdefer.svg), copied and cropped to a reduced version, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license terms._
 
