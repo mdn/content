@@ -93,7 +93,7 @@ For example, consider the HTML below that defines an SVG file with a style eleme
 </svg>
 ```
 
-To fetch the first `style` element in the first `svg` element, you might use {{domxref("Document.querySelector()"}} as shown below.
+To fetch the first `style` element in the first `svg` element, you might use {{domxref("Document.querySelector()")}} as shown below.
 
 ```js
 const svg = document.querySelector("svg");
