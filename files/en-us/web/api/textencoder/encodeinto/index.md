@@ -4,14 +4,13 @@ slug: Web/API/TextEncoder/encodeInto
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - TextEncoder
   - encodeInto
 browser-compat: api.TextEncoder.encodeInto
 ---
-{{APIRef("Encoding API")}}{{SeeCompatTable}}
+{{APIRef("Encoding API")}}
 
 The **`TextEncoder.encodeInto()`** method takes a
 string to encode and a destination {{jsxref("Uint8Array")}} to put

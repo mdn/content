@@ -86,7 +86,7 @@ Various coordinate models can be used to describe an HTML element's size and sha
 
 In the Cartesian coordinate system, a two-dimensional point is described using two values: an x coordinate (abscissa) and a y coordinate (ordinate). This is represented by the vector notation `(x, y)`.
 
-![](coord_in_r2.png)
+![A cartesian plane showing the negative Y and positive X axis starting from origin with three points P1, P2 and P3 with corresponding X and Y values](coord_in_r2.png)
 
 In CSS (and most computer graphics), the origin `(0, 0)` represents the _top-left_ corner of any element. Positive coordinates are down and to the right of the origin, while negative ones are up and to the left. Thus, a point that's 2 units to the right and 5 units down would be `(2, 5)`, while a point 3 units to the left and 12 units up would be `(-3, -12)`.
 

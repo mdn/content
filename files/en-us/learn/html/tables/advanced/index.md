@@ -60,7 +60,7 @@ As you can infer from the brief example above, the caption is meant to contain a
 
 A caption is placed directly beneath the `<table>` tag.
 
-> **Note:** The {{htmlattrxref("summary","table")}} attribute can also be used on the `<table>` element to provide a description — this is also read out by screenreaders. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated by the HTML5 spec, and can't be read by sighted users (it doesn't appear on the page).
+> **Note:** The {{htmlattrxref("summary","table")}} attribute can also be used on the `<table>` element to provide a description — this is also read out by screenreaders. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated and can't be read by sighted users (it doesn't appear on the page).
 
 ### Active learning: Adding a caption
 

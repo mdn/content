@@ -20,14 +20,15 @@ Modern browsers have two main rendering modes:
 - _Quirks Mode_: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing `DOCTYPE` declaration or a known `DOCTYPE` declaration in common use before 2001 will be rendered in Quirks Mode.
 - _Standards Mode_: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern `DOCTYPE` declaration will be rendered with Standards Mode.
 
-Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode (Gecko's_"Almost_Standards"_Mode))_ that has only a few minor quirks.
+Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode))_ that has only a few minor quirks.
 
-This is a list of the most commonly used `DOCTYPE` declarations that will trigger Standards or Almost Standards mode:
+The standard `DOCTYPE` declaration that will trigger standards mode is:
 
 ```html
-<!DOCTYPE html> /* This is the HTML5 doctype. Given that each modern browser uses an HTML5
-                    parser, this is the recommended doctype */
+<!DOCTYPE html> 
 ```
+
+When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:
 
 ```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
@@ -48,8 +49,6 @@ This is a list of the most commonly used `DOCTYPE` declarations that will trigge
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
-
-When at all possible, you should just use the HTML5 doctype.
 
 ## Why doesn't my CSS, which is valid, render at all?
 

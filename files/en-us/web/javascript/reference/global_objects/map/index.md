@@ -465,7 +465,7 @@ const second = new Map([
 ]);
 
 // Merge two maps. The last repeated key wins.
-// Spread operator essentially converts a Map to an Array
+// Spread syntax essentially converts a Map to an Array
 const merged = new Map([...first, ...second]);
 
 console.log(merged.get(1)); // uno

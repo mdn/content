@@ -178,7 +178,7 @@ function display_measures(ev) {
   entries = performance.getEntriesByType("measure");
   entries.forEach((entry, i) => {
     if (i === 0) log("= getEntriesByType('measure')", 1);
-    log(`... [${i}] = ${entriy.name}`, 1);
+    log(`... [${i}] = ${entry.name}`, 1);
   });
 
   // Display each measure using getEntriesName() - have to look for each measure separately

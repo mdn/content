@@ -76,7 +76,7 @@ Unlike many other global objects, `Math` is not a constructor. All properties an
 - {{jsxref("Global_Objects/Math/floor", "Math.floor(<var>x</var>)")}}
   - : Returns the largest integer less than or equal to `x`.
 - {{jsxref("Global_Objects/Math/fround", "Math.fround(<var>x</var>)")}}
-  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format "link to the wikipedia page on single precision") float representation of `x`.
+  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of `x`.
 - {{jsxref("Global_Objects/Math/hypot", "Math.hypot([<var>x</var>[, <var>y</var>[, …]]])")}}
   - : Returns the square root of the sum of squares of its arguments.
 - {{jsxref("Global_Objects/Math/imul", "Math.imul(<var>x</var>, <var>y</var>)")}}

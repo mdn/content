@@ -73,14 +73,14 @@ There are three main reasons:
 
 There are two different types of client-side validation that you'll encounter on the web:
 
-- **Built-in form validation** uses HTML5 form validation features, which we've discussed in many places throughout this module.
+- **Built-in form validation** uses HTML form validation features, which we've discussed in many places throughout this module.
   This validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation.
 - **JavaScript** validation is coded using JavaScript.
   This validation is completely customizable, but you need to create it all (or use a library).
 
 ## Using built-in form validation
 
-One of the most significant features of [HTML5 form controls](/en-US/docs/Learn/Forms/HTML5_input_types) is the ability to validate most user data without relying on JavaScript.
+One of the most significant features of [modern form controls](/en-US/docs/Learn/Forms/HTML5_input_types) is the ability to validate most user data without relying on JavaScript.
 This is done by using validation attributes on form elements.
 We've seen many of these earlier in the course, but to recap:
 
@@ -139,7 +139,7 @@ To begin, make a copy of `fruit-start.html` in a new directory on your hard driv
 
 ### The required attribute
 
-The simplest HTML5 validation feature is the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute.
+The simplest HTML validation feature is the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute.
 To make an input mandatory, add this attribute to the element.
 When this attribute is set, the element matches the {{cssxref(':required')}} UI pseudo-class and the form won't submit, displaying an error message on submission when the input is empty.
 While empty, the input will also be considered invalid, matching the {{cssxref(':invalid')}} UI pseudo-class.
@@ -439,7 +439,7 @@ The Constraint Validation API also makes the following methods available on the 
 
 #### Implementing a customized error message
 
-As you saw in the HTML5 validation constraint examples earlier, each time a user tries to submit an invalid form, the browser displays an error message. The way this message is displayed depends on the browser.
+As you saw in the HTML validation constraint examples earlier, each time a user tries to submit an invalid form, the browser displays an error message. The way this message is displayed depends on the browser.
 
 These automated messages have two drawbacks:
 

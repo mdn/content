@@ -16,6 +16,8 @@ The **`load`** event is fired when the whole page has loaded, including all depe
 
 This event is not cancelable and does not bubble.
 
+> **Note:** The `load` event that is dispatched on the `Document` when the main document has finished loading will propagate to `Window`. However, _all other events named `load` will not propagate to `Window`_, including load events for resources inside the document (such as images) and custom events with `bubbles` initialized to `true`.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.

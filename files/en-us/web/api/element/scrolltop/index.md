@@ -94,6 +94,6 @@ scroller.addEventListener("scroll", (event) => {
 
 ## See also
 
-- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
+- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx>)
 - {{domxref("Element.scrollLeft")}}
 - {{domxref("Element.scrollTo()")}}
