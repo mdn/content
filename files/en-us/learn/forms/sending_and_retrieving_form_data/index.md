@@ -207,7 +207,7 @@ Whichever HTTP method you choose, the server receives a string that will be pars
 
 This example displays a page with the data we sent. You can see this in action in our example [php-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.html) file — which contains the same example form as we saw before, with a `method` of `POST` and an `action` of `php-example.php`. When it is submitted, it sends the form data to [php-example.php](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.php), which contains the PHP code seen in the above block. When this code is executed, the output in the browser is `Hi Mom`.
 
-![Image shows received data in response after submitting form data to a php file with POST method](php-result.png)
+![Otherwise blank web page with "hi mom", the data received in response after submitting form data to a php file with POST method](php-result.png)
 
 > **Note:** This example won't work when you load it into a browser locally — browsers cannot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) and [AMPPS](https://ampps.com/downloads/) (Mac, Windows, Linux).
 >
