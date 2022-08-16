@@ -46,7 +46,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ### Dynamically adding an SVG style element
 
-To dynamically create an SVG style element ([`SVGStyleElement`](/en-US/docs/Web/API/SVGStyleElement)), you need to use [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS), specifying a `style` element in the SVG namespace.
+To dynamically create an SVG style element (`SVGStyleElement`), you need to use [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS), specifying a `style` element in the SVG namespace.
 
 > **Note:** [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) can't be used to create SVG style elements (it returns an [`HTMLStyleElement`](/en-US/docs/Web/API/HTMLStyleElement)).
 
@@ -93,14 +93,14 @@ For example, consider the HTML below that defines an SVG file with a style eleme
 </svg>
 ```
 
-To fetch the first `style` element in the first `svg` element, you might use {{Document.querySelector()}} as shown below.
+To fetch the first `style` element in the first `svg` element, you might use {{domxref("Document.querySelector()"}} as shown below.
 
 ```js
 const svg = document.querySelector("svg");
 const style = svg.querySelector("style");
 ```
 
-Alternatively, you can could use {{Document.getElementById()}}, specifying the tag id:
+Alternatively, you can could use {{domxref("Document.getElementById()")}}, specifying the tag id:
 
 ```js
 const svg = document.querySelector("svg");
