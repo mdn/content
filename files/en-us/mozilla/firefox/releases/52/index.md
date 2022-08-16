@@ -54,7 +54,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
   - Alpha values can now be specified as percentages as well as numbers, e.g. `rgb(255 0 0 / 50%)`.
   - The hue component in `hsl()` colors can now be specified as an angle, as well as a number, e.g. `hsl(120deg, 60%, 70%)`.
 
-- Firefox's implementation of child-indexed pseudo-classes (such as {{cssxref(":nth-child")}}, {{cssxref(":first-child")}}, and so forth) has been updated to match the CSS4 specification: these pseudo-classes now match the appropriate sibling elements rather than the children of their parent element. This allows these pseudo-classes to be used when there is no parent, or the parent is not an {{domxref("Element")}} ({{bug(1300374)}}.
+- Firefox's implementation of child-indexed pseudo-classes (such as {{cssxref(":nth-child")}}, {{cssxref(":first-child")}}, and so forth) has been updated to match the CSS selectors level 4 specification: these pseudo-classes now match the appropriate sibling elements rather than the children of their parent element. This allows these pseudo-classes to be used when there is no parent, or the parent is not an {{domxref("Element")}} ({{bug(1300374)}}.
 
 #### CSS Grids
 

@@ -4,7 +4,7 @@ slug: Web/CSS/image/paint
 tags:
   - CSS
   - CSS Function
-  - CSS4-images
+  - CSS images
   - Function
   - Houdini
   - Reference
