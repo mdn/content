@@ -179,7 +179,7 @@ HTTP requests are never displayed to the user (if you want to see them, you need
 
 You can then get the form data, as shown in the image below.
 
-![Image shows the HTTP requests and response data in network monitoring tab in browser's developer tools](network-monitor.png)
+![HTTP requests and response data in network monitoring tab in browser's developer tools](network-monitor.png)
 
 The only thing displayed to the user is the URL called. As we mentioned above, with a `GET` request the user will see the data in their URL bar, but with a `POST` request they won't. This can be very important for two reasons:
 
