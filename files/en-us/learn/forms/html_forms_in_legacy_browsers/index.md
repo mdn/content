@@ -11,9 +11,9 @@ tags:
 ---
 {{LearnSidebar}}
 
-All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind Safari or old versions of Internet Explorer, but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
+All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind Safari and Internet Explorer, but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
 
-Dealing with this wilderness is part of the job. Fortunately, there are a few tricks to know that can help you to solve most of the problems caused by legacy browsers. And HTML5 {{htmlelement('input')}} types don't fail when not supported: they fall back to `type=text`.
+Dealing with this wilderness is part of the job. Fortunately, there are a few tricks to know that can help you to solve most of the problems caused by legacy browsers. If a browser doesn't support an HTML {{htmlelement('input')}} type, it doesn't fail: it just uses the default value of `type=text`.
 
 ## Learn about the issues
 
@@ -29,7 +29,7 @@ Let's see some examples related to HTML forms.
 
 #### HTML input types
 
-The input types added in HTML5 are all useable, even in ancient browsers, because the way they degrade is highly predictable. If a browser does not know the value of the {{htmlattrxref("type","input")}} attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
+All HTML input types are useable in all browsers, even ancient ones, because the way they degrade is highly predictable. If a browser does not know the value of the {{htmlattrxref("type","input")}} attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
 
 ```html
 <label for="myColor">
@@ -164,7 +164,7 @@ Here is an example:
 
 ```js
 Modernizr.load({
-  // This tests if your browser supports the HTML5 form validation API
+  // This tests if your browser supports the form validation API
   test : Modernizr.formvalidation,
 
   // If the browser does not support it, the following polyfill is loaded
