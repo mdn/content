@@ -17,7 +17,7 @@ browser-compat: webextensions.api.bookmarks.onMoved
 
 Fired when a bookmark or folder is moved to a different parent folder or position within a folder.
 
-> **Note:** If you're moving multiple bookmarks, because this API is asynchronous, the moves may get processed in any order. Consequently, the value of each bookmark's index may change or be unknown until all the moves are completed. If you want to obtain the index values after a move, you must wait for all the calls to resolve or reject before reading the index values.
+> **Note:** If you're moving multiple bookmarks, because this API is asynchronous, the move calls may get processed in any order. Consequently, the value of each bookmark's index may change or be unknown until all the move calls are completed. If the index associated with a bookmark matters to your extension, then – when moving multiple bookmarks – the extension should wait for each `bookmarks.move` call to complete before moving the next bookmark. Waiting ensures that the index associated with each bookmark is not affected by a move call executing concurrently while the original call is in progress.
 
 ## Syntax
 
