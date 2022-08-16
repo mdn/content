@@ -316,6 +316,46 @@ Similar to the behavior in C, case labels act as jump tables, so if you don't ad
 
 Unlike some languages like Rust, control-flow structures are statements in JavaScript, meaning you can't assign them to a value, like `const a = if (x) { 1 } else { 2 }`.
 
+JavaScript errors are handled using the [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement.
+
+```js
+try {
+  buildMySite("./website");
+} catch (e) {
+  console.error("Building site failed:", e);
+}
+```
+
+Errors can be thrown using the [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw) statement. Many built-in operations may throw as well.
+
+```js
+function buildMySite(siteDirectory) {
+  if (!pathExists(siteDirectory)) {
+    throw new Error("Site directory does not exist");
+  }
+}
+```
+
+In general, you can't tell the type of the error you just caught, because anything can be thrown from a `throw` statement. However, you can usually assume it's an [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) instance, as is the example above. There are some subclasses of `Error` built-in, like [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) and [`RangeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError), that you can use to provide extra semantics about the error. There's no conditional catch in JavaScript — if you only want to handle one type of error, you need to catch everything, identify the type of error using [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof), and then rethrow the other cases.
+
+```js
+try {
+  buildMySite("./website");
+} catch (e) {
+  if (e instanceof RangeError) {
+    console.error("Seems like a parameter is out of range:", e);
+    console.log("Retrying...");
+    buildMySite("./website");
+  } else {
+    // Don't know how to handle other error types; throw them so
+    // something else up in the call stack may catch and handle it
+    throw e;
+  }
+}
+```
+
+If an error is uncaught by any `try...catch` in the call stack, the program would exit.
+
 For a comprehensive list of control flow statements, see the [reference section](/en-US/docs/Web/JavaScript/Reference/Statements).
 
 ## Objects
@@ -660,6 +700,12 @@ const withAuthentication = (cls) =>
 Static properties are created by prepending `static`. Private properties are created by prepending a hash `#` (not `private`). The hash is an integral part of the property name. (Think about `#` as `_` in Python.) Unlike most other languages, there's absolutely no way to read a private property outside the class body — not even in derived classes.
 
 For a detailed guide on various class features, you can read the [guide page](/en-US/docs/Web/JavaScript/Guide/Using_Classes).
+
+## Asynchronous programming
+
+JavaScript are single-threaded by nature.
+
+<!-- TODO -->
 
 ## Modules
 
