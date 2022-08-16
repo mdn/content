@@ -49,8 +49,6 @@ _This interface has no parent, and doesn't inherit or implement other properties
 
 ### Touch area
 
-{{SeeCompatTable}}
-
 - {{domxref("Touch.radiusX")}} {{readonlyInline}}
   - : Returns the X radius of the ellipse that most closely circumscribes the area of contact with the screen. The value is in pixels of the same scale as `screenX`.
 - {{domxref("Touch.radiusY")}} {{readonlyInline}}
