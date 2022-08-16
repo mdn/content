@@ -39,17 +39,13 @@ feature:
 
 ```js
 const mql = window.matchMedia("(orientation:landscape)");
-
-// callback function
-const checkOrientation = (e) => {
-    if (e.matches) {
-        console.log("Now in landscape orientation");
-    } else {
-        console.log("Now in portrait orientation");
-    }
-}
-
-mql.addEventListener("change", checkOrientation);
+mql.addEventListener("change", (event) => {
+  if (event.matches) {
+    console.log("Now in landscape orientation");
+  } else {
+    console.log("Now in portrait orientation");
+  }
+});
 ```
 
 ## Specifications
