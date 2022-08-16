@@ -50,9 +50,9 @@ The below graphic shows a summary of the available service worker events:
 
 To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [simple service worker](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
 
-![](demo-screenshot.png)
+![The words Star Wars followed by an image of a leego version of the Darth Vader character](demo-screenshot.png)
 
-You can see the [source code on GitHub](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker), and the [simple service worker running live](https://mdn.github.io/dom-examples/service-worker/simple-service-worker/).
+You can see the [source code on GitHub](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker), and the [simple service worker running live](https://bncb2v.csb.app/).
 
 ### Registering your worker
 
@@ -62,12 +62,9 @@ The first block of code in our app's JavaScript file — `app.js` — is as foll
 const registerServiceWorker = async () => {
   if ("serviceWorker" in navigator) {
     try {
-      const registration = await navigator.serviceWorker.register(
-        "/sw-test/sw.js",
-        {
-          scope: "/sw-test/",
-        }
-      );
+      const registration = await navigator.serviceWorker.register("/sw.js", {
+        scope: "/",
+      });
       if (registration.installing) {
         console.log("Service worker installing");
       } else if (registration.waiting) {
@@ -88,7 +85,7 @@ registerServiceWorker();
 
 1. The if-block performs a feature detection test to make sure service workers are supported before trying to register one.
 2. Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
-3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`/sw-test/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
+3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`'/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
 
 This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.
 
@@ -103,7 +100,7 @@ A single service worker can control many pages. Each time a page within your sco
 This could be for the following reasons:
 
 1. You are not running your application through HTTPS.
-2. The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app's root directory. In our example, the worker is at `https://mdn.github.io/sw-test/sw.js`, and the app's root is `https://mdn.github.io/sw-test/`. But the path needs to be written as `/sw-test/sw.js`, not `/sw.js`.
+2. The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app's root directory. In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`. But the path needs to be written as `/sw.js`.
 3. It is also not allowed to point to a service worker of a different origin than that of your app.
 
 ![](important-notes.png)
@@ -132,15 +129,15 @@ const addResourcesToCache = async (resources) => {
 self.addEventListener("install", (event) => {
   event.waitUntil(
     addResourcesToCache([
-      "/sw-test/",
-      "/sw-test/index.html",
-      "/sw-test/style.css",
-      "/sw-test/app.js",
-      "/sw-test/image-list.js",
-      "/sw-test/star-wars-logo.jpg",
-      "/sw-test/gallery/bountyHunters.jpg",
-      "/sw-test/gallery/myLittleVader.jpg",
-      "/sw-test/gallery/snowTroopers.jpg",
+      "/",
+      "/index.html",
+      "/style.css",
+      "/app.js",
+      "/image-list.js",
+      "/star-wars-logo.jpg",
+      "/gallery/bountyHunters.jpg",
+      "/gallery/myLittleVader.jpg",
+      "/gallery/snowTroopers.jpg",
     ])
   );
 });
@@ -317,7 +314,7 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     cacheFirst({
       request: event.request,
-      fallbackUrl: "/sw-test/gallery/myLittleVader.jpg",
+      fallbackUrl: "/gallery/myLittleVader.jpg",
     })
   );
 });
@@ -421,15 +418,15 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("install", (event) => {
   event.waitUntil(
     addResourcesToCache([
-      "/sw-test/",
-      "/sw-test/index.html",
-      "/sw-test/style.css",
-      "/sw-test/app.js",
-      "/sw-test/image-list.js",
-      "/sw-test/star-wars-logo.jpg",
-      "/sw-test/gallery/bountyHunters.jpg",
-      "/sw-test/gallery/myLittleVader.jpg",
-      "/sw-test/gallery/snowTroopers.jpg",
+      "/",
+      "/index.html",
+      "/style.css",
+      "/app.js",
+      "/image-list.js",
+      "/star-wars-logo.jpg",
+      "/gallery/bountyHunters.jpg",
+      "/gallery/myLittleVader.jpg",
+      "/gallery/snowTroopers.jpg",
     ])
   );
 });
@@ -439,7 +436,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       preloadResponsePromise: event.preloadResponse,
-      fallbackUrl: "/sw-test/gallery/myLittleVader.jpg",
+      fallbackUrl: "/gallery/myLittleVader.jpg",
     })
   );
 });
@@ -464,11 +461,11 @@ const addResourcesToCache = async (resources) => {
 self.addEventListener("install", (event) => {
   event.waitUntil(
     addResourcesToCache([
-      "./sw-test/",
-      "./sw-test/index.html",
-      "./sw-test/style.css",
-      "./sw-test/app.js",
-      "./sw-test/image-list.js",
+      "/",
+      "/index.html",
+      "/style.css",
+      "/app.js",
+      "/image-list.js",
 
       // ...
 

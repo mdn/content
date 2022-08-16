@@ -45,7 +45,7 @@ handler to a button so you can explicitly update the service worker whenever des
 ```js
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("/sw-test/sw.js", { scope: "sw-test" })
+    .register("/sw.js", { scope: "/" })
     .then((registration) => {
       // registration worked
       console.log("Registration succeeded.");
