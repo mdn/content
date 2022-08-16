@@ -52,7 +52,7 @@ transformation to documents.
 - {{domxref("XSLTProcessor.getParameter()")}}
   - : Gets the value of a parameter from the XSLT stylesheet. A null value for
     `namespaceURI` is treated the same as an empty string.
-- {{domxref("XSLTProcessor.removeParameter")}}
+- {{domxref("XSLTProcessor.removeParameter()")}}
   - : Removes the parameter if it was previously set. This will make the
     `XSLTProcessor` use the default value for the parameter as specified in the
     stylesheet. A null value for `namespaceURI` is treated the same as an empty
