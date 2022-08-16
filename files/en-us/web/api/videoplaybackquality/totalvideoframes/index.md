@@ -4,7 +4,6 @@ slug: Web/API/VideoPlaybackQuality/totalVideoFrames
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Frames
   - HTML DOM
   - Media
