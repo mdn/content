@@ -9,7 +9,7 @@ tags:
 
 {{jsSidebar}}
 
-JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with object prototypes, and also supports functional programming — because they are objects, functions may be stored in variables and passed around like any other object.
+JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with object prototypes and classes. It also supports functional programming since functions can be easily created via expressions and passed around like any other object.
 
 This page serves as a quick overview of various JavaScript language features, written for readers with background in other languages, such as C or Java.
 
@@ -17,15 +17,15 @@ This page serves as a quick overview of various JavaScript language features, wr
 
 Let's start off by looking at the building blocks of any language: the types. JavaScript programs manipulate values, and those values all belong to a type. JavaScript offers seven _primitive types_:
 
-- [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type)
-- [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type)
-- [String](/en-US/docs/Web/JavaScript/Data_structures#string_type)
-- [Boolean](/en-US/docs/Web/JavaScript/Data_structures#boolean_type)
-- [Symbol](/en-US/docs/Web/JavaScript/Data_structures#symbol_type)
-- [Undefined](/en-US/docs/Web/JavaScript/Data_structures#undefined_type)
-- [Null](/en-US/docs/Web/JavaScript/Data_structures#null_type)
+- [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type): used for all number values (integer and floating point) except for _very_ big integers.
+- [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type): used for arbitrarily large integers.
+- [String](/en-US/docs/Web/JavaScript/Data_structures#string_type): used to store text.
+- [Boolean](/en-US/docs/Web/JavaScript/Data_structures#boolean_type): `true` and `false` — usually used for conditional logic.
+- [Symbol](/en-US/docs/Web/JavaScript/Data_structures#symbol_type): used for creating unique identifiers that won't collide.
+- [Undefined](/en-US/docs/Web/JavaScript/Data_structures#undefined_type): indicating that a variable has not been assigned a value.
+- [Null](/en-US/docs/Web/JavaScript/Data_structures#null_type): indicating a deliberate non-value.
 
-Everything else is known as an [Object](/en-US/docs/Web/JavaScript/Data_structures#objects). Functions are just a special type of object in JavaScript that can be called. Common object types include:
+Everything else is known as an [Object](/en-US/docs/Web/JavaScript/Data_structures#objects). Common object types include:
 
 - {{jsxref("Function")}}
 - {{jsxref("Array")}}
@@ -33,11 +33,13 @@ Everything else is known as an [Object](/en-US/docs/Web/JavaScript/Data_structur
 - {{jsxref("RegExp")}}
 - {{jsxref("Error")}}
 
+Functions aren't special data structures in JavaScript — they are just a special type of object that can be called.
+
 ### Numbers
 
-JavaScript has two built-in numeric types: **Number** and **BigInt**.
+JavaScript has two built-in numeric types: Number and BigInt.
 
-The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2<sup>53</sup> − 1) and 2<sup>53</sup> − 1). Within numbers, JavaScript does not distinguish between floating point numbers and integers.
+The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format), which means integers can be safely represented between [-(2<sup>53</sup> − 1)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) and [2<sup>53</sup> − 1](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) without loss of precision, and floating point numbers can be stored all the way up to [1.79 × 10<sup>308</sup>](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE). Within numbers, JavaScript does not distinguish between floating point numbers and integers.
 
 ```js
 console.log(3 / 2); // 1.5, not 1
@@ -80,7 +82,7 @@ By IEEE 754 specification, Number values also include {{jsxref("NaN")}} (short f
 
 ### Strings
 
-Strings in JavaScript are sequences of [Unicode characters](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#unicode). This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are sequences of UTF-16 code units; each code unit is represented by a 16-bit number. Each Unicode character is represented by either 1 or 2 code units. Strings can be written with either single or double quotes — JavaScript does not have the distinction between characters and strings. If you want to represent a single character, you just use a string consisting of that single character.
+Strings in JavaScript are sequences of [Unicode characters](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#unicode). This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are [UTF-16 encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters). Strings can be written with either single or double quotes — JavaScript does not have the distinction between characters and strings. If you want to represent a single character, you just use a string consisting of that single character.
 
 ```js
 console.log("Hello, world");
@@ -94,8 +96,8 @@ The `+` operator is overloaded for strings: when one of the operands is a string
 
 ```js
 const age = 25;
-console.log("I am " + age + " years old.");
-console.log(`I am ${age} years old.`);
+console.log("I am " + age + " years old."); // String concatenation
+console.log(`I am ${age} years old.`); // Template literal
 ```
 
 ### Other types
@@ -118,7 +120,7 @@ Boolean(""); // false
 Boolean(234); // true
 ```
 
-However, this is rarely necessary, as JavaScript will silently perform this conversion when it expects a boolean, such as in an `if` statement (see below). For this reason, we sometimes speak of "true values" and "false values", meaning values that become `true` and `false`, respectively, when converted to booleans. Alternatively, such values can be called "truthy" and "falsy", respectively.
+However, this is rarely necessary, as JavaScript will silently perform this conversion when it expects a boolean, such as in an `if` statement (see below). For this reason, we sometimes speak of "[truthy](/en-US/docs/Glossary/Truthy)" and "[falsy](/en-US/docs/Glossary/Falsy)", meaning values that become `true` and `false`, respectively, when used in boolean contexts.
 
 Boolean operations such as `&&` (logical _and_), `||` (logical _or_), and `!` (logical _not_) are supported; see below.
 
@@ -128,7 +130,7 @@ The Symbol type is often used to create unique identifiers. Every symbol created
 
 New variables in JavaScript are declared using one of three keywords: [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var).
 
-**`let`** allows you to declare block-level variables. The declared variable is available from the _block_ it is enclosed in.
+`let` allows you to declare block-level variables. The declared variable is available from the _block_ it is enclosed in.
 
 ```js
 let a;
@@ -143,14 +145,14 @@ for (let myLetVariable = 0; myLetVariable < 5; myLetVariable++) {
 // myLetVariable is *not* visible out here
 ```
 
-**`const`** allows you to declare variables whose values are never intended to change. The variable is available from the _block_ it is declared in.
+`const` allows you to declare variables whose values are never intended to change. The variable is available from the _block_ it is declared in.
 
 ```js
 const Pi = 3.14; // variable Pi is set
 Pi = 1; // will throw an error because you cannot change a constant variable.
 ```
 
-`const` declarations only prevent _re-assignments_ — they don't prevent _mutations_ of the variable's value, if it's an object.
+`const` declarations only prevent _reassignments_ — they don't prevent _mutations_ of the variable's value, if it's an object.
 
 ```js
 const obj = {};
@@ -162,7 +164,23 @@ console.log(obj); // { a: 1 }
 
 If you declare a variable without assigning any value to it, its value is `undefined`. You can't declare a `const` variable without an initializer, because you can't change it later anyway.
 
-JavaScript is _dynamically typed_. Types (as described in [the previous section](#data_types)) are only associated with values, but not with variables. For `let`-declared variables, you can always change its type through re-assignment.
+`let` and `const` declared variables still occupy the entire scope they are defined in, and are in a region known as the [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz). This has some interesting interactions with variable shadowing unseen in other languages.
+
+```js
+function foo(x, condition) {
+  if (condition) {
+    console.log(x);
+    const x = 2;
+    console.log(x);
+  }
+}
+
+foo(1, true);
+```
+
+In most other languages, this would log "1" and "2", because before the `const x = 2` line, `x` should still refer to the parameter `x` in the upper scope. In JavaScript, because each declaration occupies the entire scope, this would throw an error on the first `console.log`: "Cannot access 'x' before initialization". For more information, see the reference page of [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let).
+
+JavaScript is _dynamically typed_. Types (as described in [the previous section](#data_types)) are only associated with values, but not with variables. For `let`-declared variables, you can always change its type through reassignment.
 
 ```js
 let a = 1;
@@ -226,11 +244,11 @@ Or for caching values (when falsy values are invalid):
 const name = cachedName || (cachedName = getName());
 ```
 
-For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators).
+For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
 ## Control structures
 
-JavaScript has a similar set of control structures to other languages in the C family. Conditional statements are supported by `if` and `else`; you can chain them together if you like:
+JavaScript has a similar set of control structures to other languages in the C family. Conditional statements are supported by [`if` and `else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else); you can chain them together if you like:
 
 ```js
 let name = "kittens";
@@ -244,7 +262,9 @@ if (name === "puppies") {
 name === "kittens meow";
 ```
 
-JavaScript has `while` loops and `do-while` loops. The first is good for basic looping; the second for loops where you wish to ensure that the body of the loop is executed at least once:
+JavaScript doesn't have `elif`, and `else if` is really just an `else` block comprised of a single `if` statement.
+
+JavaScript has [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loops and [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loops. The first is good for basic looping; the second for loops where you wish to ensure that the body of the loop is executed at least once:
 
 ```js
 while (true) {
@@ -366,7 +386,9 @@ obj.details.color; // orange
 obj["details"]["size"]; // 12
 ```
 
-For more on objects and prototypes see the [`Object` reference page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object). For more information on the object initializer syntax, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). This page has omitted all details about object prototypes and inheritance; for more information, see [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+For more on objects and prototypes see the [`Object` reference page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object). For more information on the object initializer syntax, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+
+This page has omitted all details about object prototypes and inheritance because you can usually achieve inheritance with [classes](#classes) without touching the underlying mechanism (which you may have heard to be abstruse). To learn about them, see [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 ## Arrays
 
@@ -388,7 +410,7 @@ console.log(a.length); // 101
 console.log(a); // ['dog', 'cat', 'hen', empty × 97, 'fox']
 ```
 
-This state is called a [_sparse array_](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) because there are uninhabited slots in the middle, and will cause the engine to deoptimize it from an array to a hashtable. Make sure your array is densely populated!
+The array we got above is called a [_sparse array_](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) because there are uninhabited slots in the middle, and will cause the engine to deoptimize it from an array to a hashtable. Make sure your array is densely populated!
 
 Out-of-bounds indexing doesn't throw. If you query a non-existent array index, you'll get a value of `undefined` in return:
 
@@ -439,18 +461,14 @@ function add(x, y) {
 }
 ```
 
-This demonstrates a basic function. A JavaScript function can take 0 or more named parameters. The function body can contain as many statements as you like and can declare its own variables which are local to that function. The [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement can be used to return a value at any time, terminating the function. If no return statement is used (or an empty return with no value), JavaScript returns `undefined`.
+A JavaScript function can take 0 or more parameters. The function body can contain as many statements as you like and can declare its own variables which are local to that function. The [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement can be used to return a value at any time, terminating the function. If no return statement is used (or an empty return with no value), JavaScript returns `undefined`.
 
-Functions can be called with more or fewer parameters than it specifies. You can call a function without passing the parameters it expects, in which case they will be set to `undefined`.
+Functions can be called with more or fewer parameters than it specifies. If you call a function without passing the parameters it expects, they will be set to `undefined`. If you pass more parameters than it expects, the function will ignore those.
 
 ```js
 add(); // NaN
 // Equivalent to add(undefined, undefined)
-```
 
-You can also pass in more arguments than the function is expecting:
-
-```js
 add(2, 3, 4); // 5
 // added the first two; 4 was ignored
 ```
@@ -514,7 +532,7 @@ const avg = function (...args) {
 
 That makes the anonymous function invocable by calling `avg()` with some arguments — that is, it's semantically equivalent to declaring the function using the `function avg()` named-function form.
 
-There's another way to define anonymous functions — with [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+There's another way to define anonymous functions — using an [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ```js
 // Note that there's no function name before the parentheses
@@ -628,7 +646,7 @@ class Person {
 const p = new Person("John");
 ```
 
-JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time they are constructed, they return an object containing the methods and properties that they specified. They don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file.
+JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time they are constructed, they return an object containing the methods and properties that they specified. They don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad-hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
 
 ```js
 const withAuthentication = (cls) =>
@@ -645,7 +663,7 @@ For a detailed guide on various class features, you can read the [guide page](/e
 
 ## Modules
 
-JavaScript also specifies a module system supported by most runtimes. You can use the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements to exchange data between modules (which are always files):
+JavaScript also specifies a module system supported by most runtimes. A module is usually a file, identified by it's file path or URL. You can use the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements to exchange data between modules:
 
 ```js
 import { foo } from "./foo.js";
@@ -657,5 +675,7 @@ export const a = 1;
 ```
 
 Unlike Haskell, Python, Java, etc., JavaScript module resolution is entirely host-defined — it's usually based on URLs or file paths, so relative file paths "just work" and are relative to the current module's path instead of some project root path.
+
+However, JavaScript doesn't have standard library modules offered by the language — all core functionalities are powered by global variables like [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) and [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) instead. This is due to the long history of JavaScript lacking a module system, and the fact that opting into the module system involves some changes to the runtime setup.
 
 For more information, see the [modules guide page](/en-US/docs/Web/JavaScript/Guide/Modules).
