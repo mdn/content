@@ -486,7 +486,7 @@ In React:
 - Components can import modules they need and must export themselves at the bottom of their files.
 - Component functions are named with `PascalCase`.
 - You can read JSX variables by putting them between curly braces, like `{so}`.
-- Some JSX attributes are different than HTML attributes so that they don't conflict with JavaScript reserved words. For example, `class` in HTML translates to `className` in JSX. Note that multi-word attributes are `camelCased`.
+- Some JSX attributes are different than HTML attributes so that they don't conflict with JavaScript reserved words. For example, `class` in HTML translates to `className` in JSX. Note that multi-word attributes are in `camelCase`.
 - Props are written just like attributes inside component calls and are passed into components.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
