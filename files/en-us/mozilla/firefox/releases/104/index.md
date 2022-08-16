@@ -47,6 +47,10 @@ This article provides information about the changes in Firefox 104 that will aff
 
 #### DOM
 
+- [`HTMLElement.focus()`](/en-US/docs/Web/API/HTMLElement/focus) now supports the parameter [`option.focusVisible`](/en-US/docs/Web/API/HTMLElement/focus#focusvisible), which can be used force a browser to display visual indication after the element is focused.
+  Note that browsers may automatically provide visual indication on focused elements if the implementation determines that it will improve accessibility.
+  (See {{bug(1765083)}} for more details.)
+
 #### Media, WebRTC, and Web Audio
 
 #### SVG
