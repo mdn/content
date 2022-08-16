@@ -19,7 +19,7 @@ Every modern web browser includes a powerful suite of developer tools. These too
 
 The devtools live inside your browser in a subwindow that looks roughly like this, depending on what browser you are using:
 
-![Screenshot of a browser tab with developer tools sub-window open. The body element of the document is selected by default.](devtools_63_inspector.png)
+![Screenshot of a browser with developer tools open. The web page is displayed in the top half of the browser, the developer tools occupy the bottom half. There are three panels open in the developer tools: HTML, with the body element selected, a CSS panel showing styles blocks targeting the hilited body, and a computed styles panel showing all the author styles; the browser styles checkbox is not checked.](devtools_63_inspector.png)
 
 How do you pull it up? Three ways:
 
@@ -33,14 +33,14 @@ How do you pull it up? Three ways:
 
 - **_Menu bar:_**
 
-  - **Firefox:** Menu ![Firefox menu icon that has more options to customise and control Firefox.](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
+  - **Firefox:** Menu ![Firefox hamburger menu icon that has more options to customize and control Firefox.](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
   - **Chrome:** _More tools ➤ Developer tools_
   - **Safari:** _Develop ➤ Show Web Inspector._ If you can't see the _Develop_ menu, go to _Safari ➤ Preferences ➤ Advanced_, and check the _Show Develop menu in menu bar_ checkbox.
   - **Opera**: _Developer ➤ Developer tools_
 
 - **_Context menu:_** Press-and-hold/right-click an item on a webpage (Ctrl-click on the Mac), and choose _Inspect Element_ from the context menu that appears. (_An added bonus:_ this method straight-away highlights the code of the element you right-clicked.)
 
-![The image of firefox logo which is a DOM element in an example website. The context menu appears when the image is right-clicked. The context menu appears when any item on the web page is right-clicked. One of the menu items is 'Inspect element'.](inspector_context.png)
+![The firefox logo as a DOM element in an example website with a context menu showing. A context menu appears when any item on the web page is right-clicked. The last menu items is 'Inspect element'.](inspector_context.png)
 
 ## The Inspector: DOM explorer and CSS editor
 
@@ -82,7 +82,7 @@ Try editing some of your DOM now. Double-click an element, or right-click it and
 
 By default, the CSS editor displays the CSS rules applied to the currently selected element:
 
-![This is a snip of the CSS editor that can be seen adjacent to the HTML editor in the browser developer tools. By default, the CSS editor displays the CSS rules applied to the currently selected element in the HTML editor.](css_inspector.png)
+![Snippet of the CSS panel and the layout panel that can be seen adjacent to the HTML editor in the browser developer tools. By default, the CSS editor displays the CSS rules applied to the currently selected element in the HTML editor. The layout panel shows the box model properties of the selected element.](css_inspector.png)
 
 These features are especially handy:
 
@@ -136,7 +136,7 @@ There are three panes in the JavaScript Debugger on Firefox.
 
 The first pane on the left contains the list of files associated with the page you are debugging. Select the file you want to work with from this list. Click on a file to select it and view its contents in the center pane of the Debugger.
 
-![A screen snip of the sources pane of the debugger tab in the browser developer tools. The files related to the current page that you are debugging are visible under the folder whose name is same as the url of the site that is open in the current browser tab.](file_list.png)
+![Snippet of the sources pane of the debugger tab in the browser developer tools. The files related to the current page that you are debugging are visible under the folder whose name is same as the url of the site that is open in the current browser tab.](file_list.png)
 
 #### Source code
 
@@ -158,7 +158,7 @@ The **Call stack** section shows you what code was executed to get to the curren
 
 The final section, **Scopes**, shows what values are visible from various points within your code. For example, in the image below, you can see the objects available to the code in the addItemClick function.
 
-![A screen snip of the file that is selected from the sources pane of the debugger tab of the browser developer tools. Line 18 of the file is highlighted as a breakpoint is set at this line.](watch_items.png)
+![Snippet of the sources pane of the debugger tab of the browser developer tools. In the call stack it shows the function that is called at Line 18, highlighting that a breakpoint is set at this line and showing the scope.](watch_items.png)
 
 ### Find out more
 
@@ -175,11 +175,11 @@ The JavaScript console is an incredibly useful tool for debugging JavaScript tha
 
 If the developer tools are already open, click or press the Console tab.
 
-If not, Firefox allows you to open the console directly using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> or using the menu command: Menu ![Firefox menu icon that has more options to customise and control Firefox.](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._ On other browser, open the developer tools and then click the Console tab.
+If not, Firefox allows you to open the console directly using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> or using the menu command: Menu ![Firefox menu](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._ On other browser, open the developer tools and then click the Console tab.
 
 This will give you a window like the following:
 
-![A screen snip of the Console tab of the browser developer tools. You can execute JavaScript code in the console. 'html' element is selected from the DOM and it's background-color is set to purple.](console_only.png)
+![The Console tab of the browser developer tools. Two JavaScript functions have been executed in the console. The user entered functions, and the console displayed the return values.](console_only.png)
 
 To see what happens, try entering the following snippets of code into the console one by one (and then pressing Enter):
 
