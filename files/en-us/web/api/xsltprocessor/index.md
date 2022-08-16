@@ -10,7 +10,7 @@ tags:
   - XSLT
 browser-compat: api.XSLTProcessor
 ---
-{{Non-standard_header}}{{SeeCompatTable}}{{APIRef("XSLT")}}
+{{APIRef("XSLT")}}
 
 An **`XSLTProcessor`** applies an [XSLT](/en-US/docs/Web/XSLT) stylesheet transformation to an XML document to
 produce a new XML document as output. It has methods to load the XSLT stylesheet, to
