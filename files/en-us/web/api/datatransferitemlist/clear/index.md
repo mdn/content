@@ -95,7 +95,7 @@ function dropHandler(ev) {
       });
     } else if (item.kind === 'string' && item.type.match(/^text\/uri-list/)) {
       // Drag data item is URI
-      ditem.getAsString((s) => {
+      item.getAsString((s) => {
         console.log(`… Drop: URI = ${s}`);
       });
     }
