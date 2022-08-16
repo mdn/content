@@ -21,6 +21,8 @@ This article provides information about the changes in Firefox 104 that will aff
 
 ### CSS
 
+- `linear(...)` easing function is now supported; however, it is behind a preference setting {{layout.css.linear-easing-function.enabled}}. (See {{bug(1764126)}} for more details.)
+
 #### Removals
 
 ### JavaScript
