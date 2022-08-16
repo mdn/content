@@ -814,7 +814,7 @@ for (const elt of elts) {
 }
 
 // Case 2
-function processEvent(e){
+function processEvent(e) {
   // Do something
 }
 
