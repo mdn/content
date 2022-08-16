@@ -83,7 +83,10 @@ convert the string such that each 16-bit unit occupies only one byte. For exampl
 // convert a Unicode string to a string in which
 // each 16-bit unit occupies only one byte
 function toBinary(string) {
-  const codeUnits = Uint16Array.from({ length: string.length }, (element, index) => string.charCodeAt(i));
+  const codeUnits = Uint16Array.from(
+    { length: string.length },
+    (element, index) => string.charCodeAt(i),
+  );
   const charCodes = new Uint8Array(codeUnits.buffer);
   
   let result = "";
@@ -105,7 +108,10 @@ If you do this, of course you'll have to reverse the conversion on the decoded s
 
 ```js
 function fromBinary(binary) {
-  const bytes = Uint8Arrayfrom({ length: binary.length }, (element, index) => string.charCodeAt(i));;
+  const bytes = Uint8Array.from(
+    { length: binary.length },
+    (element, index) => string.charCodeAt(i),
+  );
   const charCodes = new Uint16Array(bytes.buffer);
 
   let result = "";
