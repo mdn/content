@@ -686,7 +686,7 @@ avg.apply(null, [2, 3, 4, 5]); // 3.5
 
 The second argument to `apply()` is the array to use as arguments; the first will be discussed later on. This emphasizes the fact that functions are objects too.
 
-You can achieve the same result using the [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call.
+You can achieve the same result using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call.
 
 For instance: `avg(...numbers)`
 
