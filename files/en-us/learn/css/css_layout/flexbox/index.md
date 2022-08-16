@@ -108,7 +108,7 @@ You'll see that this puts the items back in a column layout, much like they were
 
 One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox-wrap0.html) example and try [viewing it live](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (take a local copy of this file now if you want to follow along with this example):
 
-![The flex container has an heading that reads 'Sample flexbox example' and has a white text-color and dimgray background-color. The flex items are laid out along the row of the flex container. The eigth flex item starts to overflow as it cannot be accomodated within the width of the flex container as the previous seven flex items have taken the space available within the flex container. By default, the Browser tries to place all the flex items in a single row if the flex-direction is set to row or a single column if the flex-direction is set to column.](flexbox-example3.png)
+![The Sample flexbox example has all the flex items laid out in a single row of the flex container. The eighth flex item overflows the browser window, and the page has visible horizontal and vertical scroll bars as it cannot be accommodated within the width of the window as the previous seven flex items have taken the space available within the viewport. By default, the Browser tries to place all the flex items in a single row if the flex-direction is set to row or a single column if the flex-direction is set to column.](flexbox-example3.png)
 
 Here we see that the children are indeed breaking out of their container. One way in which you can fix this is to add the following declaration to your {{htmlelement("section")}} rule:
 
@@ -124,7 +124,9 @@ flex: 200px;
 
 Try this now. You'll see that the layout looks much better with this included:
 
-![The flex container has an heading that reads 'Sample flexbox example' and has a white text-color and dimgray background-color. The flex items are laid out along the row of the flex container. The flex-wrap property is set to 'wrap' in the flex container which displays the flex items in a new row if the flex items in the pervious row overflow outside the flexbox container. Each flex item is given a width of 200 pixels.](flexbox-example4.png)We now have multiple rows. Each row has as many flexbox children fitted into it as is sensible. Any overflow is moved down to the next line. The `flex: 200px` declaration set on the articles means that each will be at least 200px wide. We'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.
+![Flex items are laid out in multiple rows in the flex container. The flex-wrap property is set to 'wrap' in the flex container which displays the flex items in a new row if the flex items in the previous row overflow outside the flexbox container. Each flex item is given a width of 200 pixels. All the items are stretched to be the same height, as tall as the flex item with the most content.](flexbox-example4.png)
+
+We now have multiple rows. Each row has as many flexbox children fitted into it as is sensible. Any overflow is moved down to the next line. The `flex: 200px` declaration set on the articles means that each will be at least 200px wide. We'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.
 
 But there's more we can do here. First of all, try changing your {{cssxref("flex-direction")}} property value to `row-reverse`. Now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.
 
@@ -181,7 +183,7 @@ article:nth-of-type(3) {
 
 This basically states, "Each flex item will first be given 200px of the available space. After that, the rest of the available space will be shared according to the proportion units." Try refreshing and you'll see a difference in how the space is shared.
 
-![The flex container has an heading that reads 'Sample flexbox example' and has a white text-color and dimgray background-color. The flex-direction is 'row'. The flex container has three flex items. All the flex items have a minimum width of 200 pixels—set using 'flex'. The value of flex for first two flex items is 1 and for the third item is 2. This splits the remaining space in the flex container into 4 proportion units. One unit is assigned to each of the first two flex items and 2 units are assigned to the third flex item.](flexbox-example1.png)
+![The Sample flexbox example flex container has three flex items. All the flex items have a minimum width of 200 pixels—set using 'flex'. The value of flex for first two flex items is 1 and for the third item is 2. This splits the remaining space in the flex container into 4 proportion units. One unit is assigned to each of the first two flex items and 2 units are assigned to the third flex item, making the third flex item wider than the other two, which are of the same width.](flexbox-example1.png)
 
 The real value of flexbox can be seen in its flexibility/responsiveness. If you resize the browser window or add another {{htmlelement("article")}} element, the layout continues to work just fine.
 
@@ -231,7 +233,7 @@ button:first-child {
 }
 ```
 
-![Five buttons with labels Smile, Laugh, Wink, Shrug & Blush are laid out in a row in a flex container. All the flex items except the first one are positioned at the center of the cross-axis by setting the align-items property to center. The flex items are spaced evenly along the main-axis by setting the justify-content property to space-around. The alignment of the first flex item is set to the end of the cross-axis by setting the align-self property of the first flex item to flex-end.](flexbox_first-child_flex-end.png)
+![Five buttons with labels Smile, Laugh, Wink, Shrug & Blush are laid out in a row in a flex container. All the flex items except the first one are positioned at the center of the cross-axis, or vertically centered, by setting the align-items property to center. The first item is flush against the bottom of the flex container, at the end of the cross-axis, with the align-self property set to flex-end. The flex items are spaced evenly along the main-axis, or width, of the container.](flexbox_first-child_flex-end.png)
 
 Have a look at what effect this has and remove it again when you've finished.
 
@@ -278,7 +280,7 @@ button:last-child {
 
 It's possible to create some pretty complex layouts with flexbox. It's perfectly OK to set a flex item to also be a flex container, so that its children are also laid out like flexible boxes. Have a look at [complex-flexbox.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/complex-flexbox.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
 
-![The flex container has an heading that reads 'Sample flexbox example' and has a white text-color and dimgray background-color. Under that, three flex items are laid out in a row. Third flex item has a layout inside of it that has 4 rows. The first row has 4 buttons that are laid out in a row. The second row has a single button which takes up the entire row. This a little complex layout where few flex items are treated as flex containers.](flexbox-example7.png)
+![The Sample flexbox example has three flex item children laid out in a row. The first two are the same width, the third is slightly wider. The third flex item is also a flex container. It has a set of buttons in two rows followed by text. The first row of buttons has 4 buttons that are laid out in a row; the buttons are the same width, taking up the full width of the container. The second row has a single button that takes up the entire width of the row on its own. This complex layout where few flex items are treated as flex containers.](flexbox-example7.png)
 
 The HTML for this is fairly simple. We've got a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. The third {{htmlelement("article")}} contains three {{htmlelement("div")}}s, and the first {{htmlelement("div")}} contains five {{htmlelement("button")}}s :
 
