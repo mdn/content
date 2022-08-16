@@ -29,7 +29,7 @@ transformation to documents.
   - : Imports the XSLT stylesheet. If the given node is a document node, you can pass in a
     full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt/#result-element-stylesheet); otherwise,
     it must be an `<xsl:stylesheet>` or `<xsl:transform>` element.
-- {{domxref("XSLTProcessor.transformToFragment")}}
+- {{domxref("XSLTProcessor.transformToFragment()")}}
   - : Transforms the node source by applying the stylesheet imported using the
     {{domxref("XSLTProcessor.importStylesheet()")}} function. The owner document of the
     resulting document fragment is the owner node.
