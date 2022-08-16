@@ -86,22 +86,33 @@ Ensure that elements set with a `height` aren't truncated and/or don't obscure o
 #### HTML
 
 ```html
-<div id="taller">I'm 50 pixels tall.</div>
-<div id="shorter">I'm 25 pixels tall.</div>
-<div id="parent">
-  <div id="child">
-    I'm half the height of my parent.
+<div id="container">
+  I'm three quarters the height of the<br/>viewport and at least 250 pixels tall. 
+  <div id="taller">I'm 50 pixels tall.</div>
+  <div id="shorter">I'm 25 pixels tall.</div>
+  <div id="parent">
+    I'm the parent.
+    <div id="child">
+      I'm half the height of my parent.
+    </div>
   </div>
-</div>
+</div>  
 ```
 
 #### CSS
 
 ```css
 div {
-  width: 250px;
-  margin-bottom: 5px;
+  width: auto;
+  margin: 3px;
   border: 2px solid blue;
+  padding: 3px;
+}
+
+#container {
+  width: 250px;
+  min-height: 250px;
+  height: 75vh;
 }
 
 #taller {
@@ -118,7 +129,6 @@ div {
 
 #child {
   height: 50%;
-  width: 75%;
 }
 ```
 
