@@ -30,7 +30,7 @@ currently matches the media query list, `false` if not.
 const para = document.querySelector("p"); // This is the UI element where to display the text
 const mql = window.matchMedia('(max-width: 600px)');
 
-mql.addEventListener("change", (event) {
+mql.addEventListener("change", (event) => {
   if (event.matches) {
     // The viewport is 600 pixels wide or less
     para.textContent = 'This is a narrow screen — less than 600px wide.';
