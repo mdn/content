@@ -33,7 +33,7 @@ transformation to documents.
   - : Transforms the node source by applying the stylesheet imported using the
     {{domxref("XSLTProcessor.importStylesheet()")}} function. The owner document of the
     resulting document fragment is the owner node.
-- [{{domxref("Document")}}
+- {{domxref("XSLTProcessor.transformToDocument()")}}
   - : Transforms the node source applying the stylesheet given importing using the
     {{domxref("XSLTProcessor.importStylesheet()")}} function.
 
