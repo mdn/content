@@ -118,13 +118,13 @@ The table below shows examples of three chroma subsampling models.
     <tr>
       <th scope="col" style="width: 144px">Decoded pixels</th>
       <td style="width: 144px; text-align: right">
-        <img alt="A 4:2 (8-pixel) block of decoded pixels from a 4:2:0 decoding operation. The pixels are colored by applying the 2 samples (blue and green for both U and V) of a chroma matrix to each row in the block of luminance data." src="yuv-decoded-420.png" />
+        <img alt="A 4:2 block of decoded pixels after a 4:2:0 decoding operation that applies the 2 samples of the chroma matrix to each row in the block of luminance data. The colors of the samples become darker when applied to gray shades, black when applied to solid black, and remain unchanged when applied to white." src="yuv-decoded-420.png" />
       </td>
       <td style="width: 144px; text-align: right">
-        <img alt="A 4:2 (8-pixel) block of decoded pixels from a 4:2:2 decoding operation. The pixels are colored by applying the 2 samples in each row of a chroma matrix (blue and green for U, pink and a yellow for V) to the corresponding rows in the block of luminance data." src="yuv-decoded-422.png" />
+        <img alt="A 4:2 block of decoded pixels after a 4:2:2 decoding operation that applies the 2 samples contained in each row of the chroma matrix to the corresponding rows in the block of luminance data. The colors of the samples become darker when applied to gray shades, black when applied to solid black and remain unchanged when applied to white." src="yuv-decoded-422.png" />
       </td>
       <td style="width: 144px; text-align: right">
-        <img alt="A 4:2 (8-pixel) block of decoded pixels from a 4:4:4 decoding operation. The pixels are colored by applying the 4 samples in each row of a chroma matrix (light blue, yellow, green and deep blue for U. Pink, white, red and grey for V) to the corresponding rows in the block of luminance data." src="yuv-decoded-444.png" />
+        <img alt="A 4:2 block of decoded pixels after a 4:4:4 decoding operation that applies the 4 samples contained in each row of the chroma matrix to the corresponding rows in the block of luminance data. The colors of the samples become darker when applied to gray shades, black when applied to solid black and remain unchanged when applied to white." src="yuv-decoded-444.png" />
       </td>
     </tr>
   </tbody>
