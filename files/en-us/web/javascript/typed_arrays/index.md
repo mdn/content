@@ -156,7 +156,7 @@ const typedArray = new Uint8Array([1, 2, 3, 4]);
 const normalArray = Array.from(typedArray);
 ```
 
-as well as the {{jsxref("operators/spread_syntax", "spread operator", "", 1)}}
+as well as the {{jsxref("operators/spread_syntax", "spread syntax", "", 1)}}
 
 ```js
 const typedArray = new Uint8Array([1, 2, 3, 4]);

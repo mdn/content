@@ -160,7 +160,6 @@ Most macros will also take a second argument allowing you to change the display 
         <code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}
       </td>
     </tr>
-    </tr>
   </tbody>
 </table>
 

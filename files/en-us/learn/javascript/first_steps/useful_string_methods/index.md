@@ -258,7 +258,7 @@ const greetings = ['Happy Birthday!',
                  'You\'re all I want for Christmas',
                  'Get well soon'];
 
-for (let greeting of greetings) {
+for (const greeting of greetings) {
   // Your conditional test needs to go inside the parentheses
   // in the line below, replacing what's currently there
   if (greeting) {
@@ -337,7 +337,7 @@ const greetings = [
   'Get well soon',
 ];
 
-for (let greeting of greetings) {
+for (const greeting of greetings) {
   // Your conditional test needs to go inside the parentheses
   // in the line below, replacing what's currently there
   if (greeting.includes('Christmas')) {
@@ -427,7 +427,7 @@ const list = document.querySelector('.output ul');
 list.innerHTML = '';
 const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
-for (let city of cities) {
+for (const city of cities) {
   // write your code just below here
 
   const result = city;
@@ -499,7 +499,7 @@ const jsSolution = `const list = document.querySelector('.output ul');
 list.innerHTML = '';
 const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
-for (let city of cities) {
+for (const city of cities) {
   // write your code just below here
   const lower = city.toLowerCase();
   const firstLetter = lower.slice(0,1);
@@ -605,7 +605,7 @@ const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                   'SYB4f65hf75f736463;Stalybridge',
                   'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
-for (let station of stations) {
+for (const station of stations) {
   // write your code just below here
 
   const result = station;
@@ -681,7 +681,7 @@ const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                   'SYB4f65hf75f736463;Stalybridge',
                   'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
-for (let station of stations) {
+for (const station of stations) {
   // write your code just below here
   const code = station.slice(0,3);
   const semiColon = station.indexOf(';');

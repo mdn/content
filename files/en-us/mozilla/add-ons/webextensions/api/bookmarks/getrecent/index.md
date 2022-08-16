@@ -42,7 +42,7 @@ This example logs the URL for the most recently added bookmark:
 
 ```js
 function onFulfilled(bookmarks) {
-  for (bookmark of bookmarks) {
+  for (const bookmark of bookmarks) {
     console.log(bookmark.url);
   }
 }
@@ -51,8 +51,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-let gettingRecent = browser.bookmarks.getRecent(1);
-gettingRecent.then(onFulfilled, onRejected);
+browser.bookmarks.getRecent(1).then(onFulfilled, onRejected);
 ```
 
 {{WebExtExamples}}
