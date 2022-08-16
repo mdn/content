@@ -30,7 +30,7 @@ onloadend = (event) => { }
 
 ## Event type
 
-An {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ProgressEvent")}}
 
