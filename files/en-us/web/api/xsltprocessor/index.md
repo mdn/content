@@ -85,5 +85,3 @@ _This are no properties for this interface._
 ## See also
 
 - [Using the Mozilla JavaScript interface to XSL Transformations](/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
-- Gecko implementation: [XSLTProcessor.webidl](https://dxr.mozilla.org/mozilla-central/source/dom/webidl/XSLTProcessor.webidl) and [txXSLTProcessor.cpp](https://dxr.mozilla.org/mozilla-central/source/dom/xslt/xslt/txXSLTProcessor.cpp)
-- 
