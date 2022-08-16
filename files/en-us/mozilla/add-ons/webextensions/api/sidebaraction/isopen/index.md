@@ -62,12 +62,12 @@ Check all open windows:
 
 ```js
 async function checkWindow(windowId) {
-  let result = await browser.sidebarAction.isOpen({windowId});
+  const result = await browser.sidebarAction.isOpen({ windowId });
   console.log(`window: ${windowId} status: ${result}`);
 }
 
 browser.windows.getAll().then((all) => {
-  for (let {id} of all) {
+  for (const { id } of all) {
     checkWindow(id);
   }
 });
