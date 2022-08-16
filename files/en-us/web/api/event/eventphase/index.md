@@ -144,7 +144,7 @@ function onDivClick(e) {
 function clearDivs() {
   divs.forEach((div, i) => {
     if (div.id !== 'divInfo') {
-      div.style.backgroundColor = (i & 1) ? '#f6eedb' : '#cceeff';
+      div.style.backgroundColor = i % 2 !== 0 ? '#f6eedb' : '#cceeff';
     }
   }
   divInfo.textContent = '';
