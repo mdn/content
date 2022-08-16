@@ -25,7 +25,7 @@ transformation to documents.
 
 ## Methods
 
-- {{domxref("XSLTProcessor.importStylesheet")}}
+- {{domxref("XSLTProcessor.importStylesheet()")}}
   - : Imports the XSLT stylesheet. If the given node is a document node, you can pass in a
     full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt/#result-element-stylesheet); otherwise,
     it must be an `<xsl:stylesheet>` or `<xsl:transform>` element.
