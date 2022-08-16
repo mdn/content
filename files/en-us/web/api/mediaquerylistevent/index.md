@@ -52,7 +52,7 @@ function screenTest(e) {
   }
 }
 
-mql.addListener(screenTest);
+mql.addEventListener("change", screenTest);
 ```
 
 ## Specifications

@@ -38,23 +38,18 @@ This example detects viewport orientation changes by creating a media query usin
 feature:
 
 ```js
-function addMQListener(mq, callback) {
-  if (mq.addEventListener) {
-    mq.addEventListener("change", callback);
-  } else {
-    mq.addListener(callback);
-  }
+const mql = window.matchMedia("(orientation:landscape)");
+
+// callback function
+const checkOrientation = (e) => {
+    if (e.matches) {
+        console.log("Now in landscape orientation");
+    } else {
+        console.log("Now in portrait orientation");
+    }
 }
 
-addMQListener(window.matchMedia("(orientation:landscape)"),
-  (event) => {
-    if (event.matches) {
-      /* now in landscape orientation */
-    } else {
-      /* now in portrait orientation */
-    }
-  }
-);
+mql.addEventListener("change", checkOrientation);
 ```
 
 ## Specifications

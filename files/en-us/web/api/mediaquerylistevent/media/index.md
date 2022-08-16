@@ -41,7 +41,7 @@ function screenTest(e) {
   console.log(e.media);
 }
 
-mql.addListener(screenTest);
+mql.addEventListener("change", screenTest);
 ```
 
 ## Specifications
