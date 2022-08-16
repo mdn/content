@@ -45,7 +45,7 @@ transformation to documents.
     | `xml`         | {{domxref("XMLDocument")}}                                                                             |
     | `text`        | {{domxref("XMLDocument")}} with a single root element `<transformiix:result>` with the text as a child |
 
-- {{domxref("XSLTProcessor.setParameter")}}
+- {{domxref("XSLTProcessor.setParameter()")}}
   - : Sets a parameter in the XSLT stylesheet that was imported. (Sets the value of an
     `<xsl:param>`.) A null value for `namespaceURI` is treated
     the same as an empty string.
