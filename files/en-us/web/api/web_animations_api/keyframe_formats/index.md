@@ -13,7 +13,7 @@ tags:
   - web animations api
 browser-compat: api.Element.animate
 ---
-{{ APIRef("Web Animations API") }}
+{{APIRef("Web Animations API")}}
 
 {{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
 
