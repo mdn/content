@@ -135,7 +135,7 @@ For example:
 
 This example includes a simple link allowing you to download the video if even the HTML video player doesn't work, so at least the user can still access the video.
 
-Another example is form elements. When new [`<input>`](/en-US/docs/Web/HTML/Element/input) types were introduced for inputting specific information into forms, such as times, dates, colors, numbers, etc, if a browser didn't support the new feature, the browser used the default of `type="text"`. Input types were added, which are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Platforms provide different UI widgets depending on the input type used, such as a calendar widget for entering dates. Should a browser not support an input type, the user can still enter the required data.
+Another example is form elements. When new [`<input>`](/en-US/docs/Web/HTML/Element/input) types were introduced for inputting specific information into forms, such as times, dates, colors, numbers, etc, if a browser didn't support the new feature, the browser used the default of `type="text"`. Input types were added, which are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Platforms provide different UI widgets depending on the input type, such as a calendar widget for entering dates. Should a browser not support an input type, the user can still enter the required data.
 
 The following example shows date and time inputs:
 
