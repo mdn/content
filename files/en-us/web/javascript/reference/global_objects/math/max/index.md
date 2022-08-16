@@ -82,7 +82,7 @@ function getMaxOfArray(numArray) {
 }
 ```
 
-The new [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+The [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 is a shorter way of writing the `apply` solution to get the
 maximum of an array:
 
