@@ -21,7 +21,7 @@ possible.
 ## Syntax
 
 ```js
-x += y // x = x + y
+x += y; // x = x + y
 ```
 
 ## Examples
