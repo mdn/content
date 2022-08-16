@@ -71,7 +71,7 @@ section {
 
 This causes the \<section> element to become a **flex container** and its children to become **flex items**. The result of this should be something like so:
 
-![](flexbox-example2.png)
+![A two row container that includes a single column in the first row and a 3-column layout in the second row that shows how a webpage can be divided into different layouts depending on the contents](flexbox-example2.png)
 
 So, this single declaration gives us everything we need. Incredible, right? We have our multiple column layout with equal-sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.
 
