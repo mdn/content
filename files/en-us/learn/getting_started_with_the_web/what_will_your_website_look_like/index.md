@@ -52,7 +52,7 @@ You should still have your paragraphs and title from earlier. Keep these close b
 
 To choose a color, go to [the Color Picker](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool) and find a color you like. When you click on a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
 
-![Screenshot of Color-Picker-Tool on MDN Docs website](color-picker.png)
+![Color-Picker-Tool on MDN Docs website with RGB, HSL, and HEX colors ](color-picker.png)
 
 ### Images
 
