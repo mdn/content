@@ -34,7 +34,7 @@ To begin, you'll need to answer these questions:
 
 Next, grab pen and paper and sketch out roughly how you want your site to look. For your first simple webpage, there's not much to sketch out, but you should get in the habit of doing this now. It really helps — you don't have to be Van Gogh!
 
-![](website-drawing-scan.png)
+![A rough drawing and sketch of a website on paper](website-drawing-scan.png)
 
 > **Note:** Even on real, complex websites, the design teams usually start out with rough sketches on paper and later on build digital mockups using a graphics editor or web technologies.
 >
@@ -52,7 +52,7 @@ You should still have your paragraphs and title from earlier. Keep these close b
 
 To choose a color, go to [the Color Picker](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool) and find a color you like. When you click on a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
 
-![](color-picker.png)
+![Screenshot of Color-Picker-Tool on MDN Docs website](color-picker.png)
 
 ### Images
 
@@ -61,11 +61,11 @@ To choose an image, go to [Google Images](https://www.google.com/imghp?gws_rd=ss
 1. When you find the image you want, click on the image to get an enlarged view of it.
 2. Right-click the image (Ctrl + click on a Mac), choose _Save Image As…_, and choose a safe place to save your image. Alternatively, copy the image's web address from your browser's address bar for later use.
 
-![](updated-google-images.png)
+![Search results for a search term on Google Images](updated-google-images.png)
 
 Note that most images on the web, including in Google Images, are copyrighted. To reduce your likelihood of violating copyright, you can use Google's license filter. Click on the _Tools_ button, then on the resulting _Usage rights_ option that appears below. You should choose the option _Creative Commons licenses_.
 
-![](updated-google-images-licensing.png)
+![Filtered search results to get images of Creative Commons Licenses on Google Images](updated-google-images-licensing.png)
 
 ### Font
 
