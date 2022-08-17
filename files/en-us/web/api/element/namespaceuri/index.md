@@ -36,7 +36,7 @@ This is not a computed value that is the result of a namespace lookup based on a
 
 The namespace URI for HTML elements in HTML documents is [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) as in XHTML.
 
-You can create an element with the specified `namespaceURI` using the DOM Level 2 method [document.createElementNS](/en-US/docs/Web/API/Document/createElementNS).
+You can create an element with the specified `namespaceURI` using the [`document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS) method.
 
 The DOM does not handle or enforce namespace validation per se. It is up to the DOM application to do any validation necessary. Also note that the namespace prefix, once it is associated with a particular element, cannot be changed.
 
