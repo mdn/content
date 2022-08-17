@@ -15,7 +15,7 @@ spec-urls: https://drafts.csswg.org/css-position/
 
 ## Reference
 
-### CSS properties
+### Properties
 
 - {{cssxref("top")}}
 - {{cssxref("right")}}

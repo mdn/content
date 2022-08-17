@@ -1,5 +1,5 @@
 ---
-title: CSS Grid Layout and Progressive Enhancement
+title: CSS Grid Layout and progressive enhancement
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 tags:
   - CSS

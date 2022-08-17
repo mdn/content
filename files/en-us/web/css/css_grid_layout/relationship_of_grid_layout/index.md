@@ -446,7 +446,7 @@ I have given `.box3` position relative and then positioned the sub-item with the
 
 {{ EmbedLiveSample('With_a_grid_area_as_the_parent', '500', '460') }}
 
-## Grid and `display: contents`
+## Grid and display: contents
 
 A final interaction with another layout specification that is worth noting is the interaction between CSS Grid Layout and `display: contents`. The `contents` value of the display property is a new value that is described in the [Display specification](https://drafts.csswg.org/css-display/#box-generation) as follows:
 
@@ -510,7 +510,7 @@ In the following markup, I have a grid and the first item on the grid is set to 
 
 {{ EmbedLiveSample('Grid_layout_with_nested_child_elements', '400', '440') }}
 
-### Using `display: contents`
+### Using display: contents
 
 If I now add `display:` `contents` to the rules for `box1`, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.
 
@@ -573,5 +573,5 @@ As you can see from this guide, CSS Grid Layout is just one part of your toolkit
 
 ## See also
 
-- [Flexbox Guides](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Multiple-column Layout Guides](/en-US/docs/Web/CSS/CSS_Columns)
+- [Flexbox guides](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Multiple-column layout guides](/en-US/docs/Web/CSS/CSS_Columns)
