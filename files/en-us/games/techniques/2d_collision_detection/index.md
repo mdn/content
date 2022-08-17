@@ -105,17 +105,12 @@ const circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
 const circle2 = Crafty.e("2D, Canvas, Circle, Fourway").fourway(2).attr(dim2).circle(20, "blue");
 
 circle2.bind("EnterFrame", () => {
-    const dx = circle1.x - circle2.x;
-    const dy = circle1.y - circle2.y;
-    const distance = Math.sqrt(dx * dx + dy * dy);
+  const dx = circle1.x - circle2.x;
+  const dy = circle1.y - circle2.y;
+  const distance = Math.sqrt(dx * dx + dy * dy);
 
-    if (distance < circle1.radius + circle2.radius) {
-        // collision detected!
-        this.color = "green";
-    } else {
-        // no collision
-        this.color = "blue";
-    }
+  const collision = distance < circle1.radius + circle2.radius;
+  this.color = collision ? "green" : "blue";
 });
 ```
 

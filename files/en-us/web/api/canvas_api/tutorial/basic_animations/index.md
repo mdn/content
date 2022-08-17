@@ -270,65 +270,57 @@ let clearY;
 let ctx;
 
 img.onload = () => {
-    imgW = img.width * scale;
-    imgH = img.height * scale;
+  imgW = img.width * scale;
+  imgH = img.height * scale;
 
-    if (imgW > CanvasXSize) {
-        // image larger than canvas
-        x = CanvasXSize - imgW;
-    }
-    if (imgW > CanvasXSize) {
-        // image width larger than canvas
-        clearX = imgW;
-    } else {
-        clearX = CanvasXSize;
-    }
-    if (imgH > CanvasYSize) {
-        // image height larger than canvas
-        clearY = imgH;
-    } else {
-        clearY = CanvasYSize;
-    }
+  if (imgW > CanvasXSize) {
+    // image larger than canvas
+    x = CanvasXSize - imgW;
+  }
 
-    // get canvas context
-    ctx = document.getElementById('canvas').getContext('2d');
+  // check if image dimension is larger than canvas
+  clearX = imgW > CanvasXSize ? imgW : CanvasXSize;
+  clearY = imgH > CanvasYSize ? imgH : CanvasYSize;
 
-    // set refresh rate
-    return setInterval(draw, speed);
+  // get canvas context
+  ctx = document.getElementById('canvas').getContext('2d');
+
+  // set refresh rate
+  return setInterval(draw, speed);
 }
 
 function draw() {
-    ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
+  ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-    // if image is <= Canvas Size
-    if (imgW <= CanvasXSize) {
-      // reset, start from beginning
-      if (x > CanvasXSize) {
-        x = -imgW + x;
-      }
-      // draw additional image1
-      if (x > 0) {
-        ctx.drawImage(img, -imgW + x, y, imgW, imgH);
-      }
-      // draw additional image2
-      if (x - imgW > 0) {
-        ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
-      }
-    } else {
-      // image is > Canvas Size
-      // reset, start from beginning
-      if (x > (CanvasXSize)) {
-        x = CanvasXSize - imgW;
-      }
-      // draw additional image
-      if (x > (CanvasXSize-imgW)) {
-        ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
-      }
+  // if image is <= Canvas Size
+  if (imgW <= CanvasXSize) {
+    // reset, start from beginning
+    if (x > CanvasXSize) {
+      x = -imgW + x;
     }
-    // draw image
-    ctx.drawImage(img, x, y,imgW, imgH);
-    // amount to move
-    x += dx;
+    // draw additional image1
+    if (x > 0) {
+      ctx.drawImage(img, -imgW + x, y, imgW, imgH);
+    }
+    // draw additional image2
+    if (x - imgW > 0) {
+      ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+    }
+  } else {
+    // image is > Canvas Size
+    // reset, start from beginning
+    if (x > (CanvasXSize)) {
+      x = CanvasXSize - imgW;
+    }
+    // draw additional image
+    if (x > (CanvasXSize-imgW)) {
+      ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+    }
+  }
+  // draw image
+  ctx.drawImage(img, x, y,imgW, imgH);
+  // amount to move
+  x += dx;
 }
 ```
 
