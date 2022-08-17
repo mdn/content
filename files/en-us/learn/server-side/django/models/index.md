@@ -307,7 +307,7 @@ The model has a single `CharField` field (`name`), which is used to describe the
 
 ### Book model
 
-Copy the `Book` model below and again paste it into the bottom of your file. The `Book` model represents all information about an available book in a general sense, but not a particular physical "instance" or "copy" available for loan. The model uses a `CharField` to represent the book's `title` and `isbn`. For `isbn`, note how the first unnamed parameter explicitly sets the label as "ISBN" (otherwise it would default to "Isbn").  We also set parameter `unique` as `true` in order to ensure all books have a unique ISBN (the unique parameter makes the field value globally unique in a table). The model uses `TextField` for the `summary`, because this text may need to be quite long.
+Copy the `Book` model below and again paste it into the bottom of your file. The `Book` model represents all information about an available book in a general sense, but not a particular physical "instance" or "copy" available for loan. The model uses a `CharField` to represent the book's `title` and `isbn`. For `isbn`, note how the first unnamed parameter explicitly sets the label as "ISBN" (otherwise, it would default to "Isbn"). We also set the parameter `unique` as `true` to ensure all books have a unique ISBN (the unique parameter makes the field value globally unique in a table). The model uses `TextField` for the `summary`, because this text may need to be quite long.
 
 ```python
 from django.urls import reverse # Used to generate URLs by reversing the URL patterns
