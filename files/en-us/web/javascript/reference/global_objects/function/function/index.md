@@ -27,28 +27,49 @@ new Function(arg0, arg1, /* … ,*/ argN, functionBody)
 
 - `argN` {{optional_inline}}
 
-  - : Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameter, optionally with a default), or a list of such strings separated with commas.
+  - : Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameter, optionally with a [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)), or a list of such strings separated with commas.
 
-    As the parameters are parsed in the same way as function declarations, whitespace and comments are accepted. For example: `"x", "theValue = 42", "[a, b] /* numbers */"` — or `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` is also correct, though very confusing to read.)
+    As the parameters are parsed in the same way as function expressions, whitespace and comments are accepted. For example: `"x", "theValue = 42", "[a, b] /* numbers */"` — or `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` is also correct, though very confusing to read.)
 
 - `functionBody`
   - : A string containing the JavaScript statements comprising the function definition.
 
 ## Description
 
-`Function` objects created with the `Function` constructor are
-parsed when the function is created. This is less efficient than declaring a function
-with a {{jsxref("Operators/function", "function expression", "", 1)}} or
-{{jsxref("Statements/function", "function statement", "", 1)}} and calling it within
-your code because such functions are parsed with the rest of the code.
+`Function` objects created with the `Function` constructor are parsed when the function is created. This is less efficient than creating a function with a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) or [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function) and calling it within your code, because such functions are parsed with the rest of the code.
 
-All arguments passed to the function, except the last, are treated as the names of the identifiers of the
-parameters in the function to be created, in the order in which they are passed.
-Omitting an argument will result in the value of that parameter being
-`undefined`.
+All arguments passed to the function, except the last, are treated as the names of the identifiers of the parameters in the function to be created, in the order in which they are passed. The function will be dynamically compiled as a function expression, with the source assembled in the following fashion:
 
-Invoking the `Function` constructor as a function (without using the
-`new` operator) has the same effect as invoking it as a constructor.
+```js
+`function anonymous(${args.join(",")}
+) {
+${functionBody}
+}`
+```
+
+This is observable by calling the function's [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString) method.
+
+However, unlike normal [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function), the name `anonymous` is not added to the `functionBody`'s scope, since `functionBody` only has access the global scope. If `functionBody` is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (the body itself needs to have the `"use strict"` directive since it doesn't inherit the strictness from the context), you may use [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) to refer to the function itself. Alternatively, you can define the recursive part as an inner function:
+
+```js
+const recursiveFn = new Function("count", `
+(function recursiveFn(count) {
+  if (count < 0) {
+    return;
+  }
+  console.log(count);
+  recursiveFn(count - 1);
+})(count);
+`);
+```
+
+Note that the two dynamic parts of the assembled source — the parameters list `args.join(",")` and `functionBody` — will first be parsed separately to ensure they are each syntactically valid. This prevents injection-like attempts.
+
+```js
+new Function("/*", "*/) {");
+// SyntaxError: Unexpected end of arg string
+// Doesn't become "function anonymous(/*) {*/) {}"
+```
 
 ## Examples
 
@@ -67,8 +88,7 @@ adder(2, 6);
 // 8
 ```
 
-The arguments `a` and `b` are formal argument names that are
-used in the function body, `return a + b`.
+The arguments `a` and `b` are formal argument names that are used in the function body, `return a + b`.
 
 ### Creating a function object from a function declaration or function expression
 
