@@ -20,14 +20,18 @@ new Number(value)
 Number(value)
 ```
 
+> **Note:** `Number()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+
 ### Parameters
 
 - `value`
   - : The numeric value of the object being created.
 
-## Description
+### Return value
 
-When `Number` is called as a function, it coerces the parameter to a number primitive. If the value can't be converted, it returns {{jsxref("NaN")}}. When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Number")}} object, which is **not** a primitive.
+When `Number` is called as a constructor (with [`new`]((/en-US/docs/Web/JavaScript/Reference/Operators/new))), it creates a {{jsxref("Number")}} object, which is **not** a primitive.
+
+When `Number` is called as a function, it coerces the parameter to a number primitive. If the value can't be converted, it returns {{jsxref("NaN")}}.
 
 > **Warning:** You should rarely find yourself using `Number` as a constructor.
 
