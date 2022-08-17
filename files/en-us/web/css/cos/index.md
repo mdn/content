@@ -95,7 +95,7 @@ div.rotated-scaled-diamond {
 }
 ```
 
-{{EmbedLiveSample('keep_rotated_element_size', '100%', '200px')}}
+{{EmbedLiveSample('example', '100%', '200px')}}
 
 ## Specifications
 
