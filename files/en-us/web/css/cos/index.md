@@ -58,7 +58,7 @@ For example, if you rotate a `100px`/`100px` square `45deg`, the diamond it crea
 <div class="rotated-scaled-diamond"></div>
 ```
 
-```css hiden
+```css hidden
 body {
   height: 100vh;
   display: flex;
