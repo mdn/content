@@ -151,14 +151,11 @@ class MockHypotheticalSocket {
 
   /* Return random number bytes in this call of socket */
   getNumberRandomBytesSocket() {
-    //Capped to remaining data and the max min return-per-read range
+    // Capped to remaining data and the max min return-per-read range
     const remaining_data = this.max_data - this.data_read;
-    let numberBytesReceived = 0;
-    if (remaining_data < this.min_per_read) {
-      numberBytesReceived = remaining_data;
-    } else {
-      numberBytesReceived = this.getRandomIntInclusive(this.min_per_read, Math.min(this.max_per_read, remaining_data));
-    }
+    const numberBytesReceived = remaining_data < this.min_per_read
+      ? remaining_data
+      : this.getRandomIntInclusive(this.min_per_read, Math.min(this.max_per_read, remaining_data));
     return numberBytesReceived;
   }
 

@@ -552,11 +552,8 @@ All hosts which aren't fully qualified, or the ones that are in local domain, wi
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) {
-    return "DIRECT";
-  } else {
-    return "PROXY w3proxy.mozilla.org:8080; DIRECT";
-  }
+  const useDirect = isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org");
+  return useDirect ? "DIRECT" : "PROXY w3proxy.mozilla.org:8080; DIRECT";
 }
 ```
 
@@ -570,15 +567,9 @@ If there are hosts (such as the main Web server) that belong to the local domain
 
 ```js
 function FindProxyForURL(url, host) {
-  if (
-    (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) &&
-    !localHostOrDomainIs(host, "www.mozilla.org") &&
-    !localHostOrDomainIs(host, "merchant.mozilla.org")
-  ) {
-    return "DIRECT";
-  } else {
-    return "PROXY w3proxy.mozilla.org:8080; DIRECT";
-  }
+  const useDirect = isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org");
+  const isException = localHostOrDomainIs(host, "www.mozilla.org") || localHostOrDomainIs(host, "merchant.mozilla.org");
+  return useDirect && !isException ? "DIRECT" : "PROXY w3proxy.mozilla.org:8080; DIRECT";
 }
 ```
 
@@ -594,10 +585,7 @@ This example will work in an environment where the internal DNS server is set up
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host)) {
-    return "DIRECT";
-  }
-  return "PROXY proxy.mydomain.com:8080";
+  return isResolvable(host) ? "DIRECT" : "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -605,14 +593,8 @@ The above requires consulting the DNS every time; it can be grouped intelligentl
 
 ```js
 function FindProxyForURL(url, host) {
-  if (
-    isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
-    isResolvable(host)
-  ) {
-    return "DIRECT";
-  }
-  return "PROXY proxy.mydomain.com:8080";
+  const useDirect = isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com") || isResolvable(host);
+  return useDirect ? "DIRECT" : "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -624,10 +606,8 @@ In this example all of the hosts in a given subnet are connected-to directly, ot
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0")) {
-    return "DIRECT";
-  }
-  return "PROXY proxy.mydomain.com:8080";
+  const useDirect = isInNet(host, "198.95.0.0", "255.255.0.0");
+  return useDirect ? "DIRECT" : "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -635,15 +615,8 @@ Again, use of the DNS server in the above can be minimized by adding redundant r
 
 ```js
 function FindProxyForURL(url, host) {
-  if (
-    isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
-    isInNet(host, "198.95.0.0", "255.255.0.0")
-  ) {
-    return "DIRECT";
-  } else {
-    return "PROXY proxy.mydomain.com:8080";
-  }
+  const useDirect = isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com") || isInNet(host, "198.95.0.0", "255.255.0.0");
+  return useDirect ? "DIRECT" : "PROXY proxy.mydomain.com:8080";
 }
 ```
 

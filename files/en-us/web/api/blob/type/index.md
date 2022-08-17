@@ -55,11 +55,8 @@ input.addEventListener('change', (event) => {
     return;
   }
 
-  if (Array.from(files).every((file) => allowedFileTypes.includes(file.type))) {
-    output.innerText = 'All files clear!';
-  } else {
-    output.innerText = 'Please choose image files only.';
-  }
+  const allAllowed = Array.from(files).every((file) => allowedFileTypes.includes(file.type));
+  output.innerText = allAllowed ? 'All files clear!' : 'Please choose image files only.';
 });
 ```
 

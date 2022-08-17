@@ -167,11 +167,8 @@ payment or reject the payment as failed:
 ```js
 async function validateResponse(response) {
   try {
-    if (await checkAllValues(response)) {
-      await response.complete("success");
-    } else {
-      await response.complete("fail");
-    }
+    const allValid = await checkAllValues(response);
+    await (allValid ? response.complete("success") : response.complete("fail"));
   } catch (err) {
     await response.complete("fail");
   }

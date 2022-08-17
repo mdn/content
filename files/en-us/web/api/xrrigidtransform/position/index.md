@@ -60,13 +60,9 @@ function onSessionStarted(xrSession) {
 }
 
 function refSpaceCreated(refSpace) {
-  if (immersiveSession) {
-    xrReferenceSpace = refSpace;
-  } else {
-    xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-      new XRRigidTransform({y: -1.5})
-    );
-  }
+  xrReferenceSpace = immersiveSession
+    ? refSpace
+    : refSpace.getOffsetReferenceSpace(new XRRigidTransform({ y: -1.5 }));
   xrSession.requestAnimationFrame(onFrame);
 }
 ```
