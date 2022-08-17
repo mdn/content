@@ -32,7 +32,7 @@ The IE version has additional properties not required in the new specification o
 
 ### Autoprefixer grid layout support
 
-The popular tool _[Autoprefixer](https://github.com/postcss/autoprefixer)_ has been updated to support the `-ms-` grid version. By default, grid prefixes are disabled, but you can enable it with `grid: true` option.
+If you are still supporting Internet Explorer, the popular tool _[Autoprefixer](https://github.com/postcss/autoprefixer)_ has been updated to support the `-ms-` grid version. By default, grid prefixes are disabled, but you can enable it with `grid: true` option.
 
 ```js
 autoprefixer({ grid: 'autoplace' })
@@ -42,15 +42,15 @@ Grid prefixes are disabled by default because some properties can't be prefixed.
 
 ## Is it safe to use CSS grids for my layout?
 
-As with any front-end technology choice, the decision to use CSS Grid Layout will come down to the browsers your site visitors are typically using. If they tend to use up-to-date versions of Firefox, Chrome, Opera, and Safari, then it would make sense to start using CSS grids once those browsers update. If your site serves a market sector that is tied to older browsers, however, it may not make sense yet. However, my suggestion is not to make assumptions based on how new specifications have been rolled out in browsers in the past. CSS Grid Layout is very different, in terms of the amount of time it has been in development, and the work of the various browser vendors to ensure that what ships works in the same way for everyone.
+Yes. As with any front-end technology choice, the decision to use CSS Grid Layout will come down to the browsers your site visitors are typically using. If your site serves a market sector that is tied to older browsers, you may consider the above `-ms-` fallback for IE.
 
 ## Starting to use Grid in production
 
-It is worth noting that you do not have to use grid in an _all or nothing_ way. You could start by enhancing elements in your design with grid, that could otherwise display using an older method. Overwriting of legacy methods with grid layout works surprisingly well, due to the way grid interacts with these other methods.
+It is worth noting that you do not have to use grid in an _all or nothing_ way. Start by enhancing elements in your design with grid, that could otherwise display using an older method. Overwriting of legacy methods with grid layout works surprisingly well, due to the way grid interacts with these other methods.
 
 ### Floats
 
-We have typically used [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats) to create multiple column layouts. If you have floated an item, which is also a grid item in a supporting browser, the float will no longer apply to the item. The fact is that _a grid item takes precedence._ In the example below, I have a simple media object. In a non-supporting browser, I use {{cssxref("float")}}, however I have also defined the container as a grid container, in order to use the alignment properties that are implemented in CSS Grids.
+[Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats) used to be used to create multiple column layouts. If you're supporting an old codebase with floated layouts, there will be no conflict. Grid items ignore the float property; the fact is that _a grid item takes precedence._ In the example below, I have a simple media object. If the {{cssxref("float")}} is not removed from legacy CSS, as the container is a grid container, it's OK. We can use the alignment properties that are implemented in CSS Grids.
 
 The {{cssxref("float")}} no longer applies, and I can use the CSS Box Alignment property {{cssxref("align-self")}} to align my content to the end of the container:
 
@@ -75,14 +75,16 @@ img {
     display: block;
     clear: both;
 }
+.media .text {
+    padding: 10px;
+    align-self: end;
+}
+
+\* old code we can't remove *\
 .media .image {
     float: left;
     width: 150px;
     margin-right: 20px;
-}
-.media .text {
-    padding: 10px;
-    align-self: end;
 }
 ```
 
@@ -97,7 +99,7 @@ img {
 
 The image below shows the media object in a non-supporting browser on the left, and a supporting one on the right:
 
-![A simple example of overriding a floated layout using grid.](10-float-simple-override.png)
+![A simple example of overriding a floated layout using grid. Both have the image aligned left. The text is vertically aligned at top in the float example and at the bottom in the grid example.](10-float-simple-override.png)
 
 ### Using feature queries
 
@@ -169,13 +171,13 @@ In this next example, I have a set of floated cards. I have given the cards a {{
 
 The example demonstrates the typical problem that we have with floated layouts: if additional content is added to any one card, the layout breaks.
 
-![A floated cards layout demonstrating the problem caused by uneven content height.](10-floated-cards.png)
+![A floated cards layout demonstrating the problem caused by uneven content height. The top row has 3 cards. The fourth card is floated under the third card. Then a bottom row has contains the fifth and sixth cards. There is a largish empty space under the fourth card. ](10-floated-cards.png)
 
 As a concession for older browsers, I have set a {{cssxref("min-height")}} on the items, and hope that my content editors won't add too much content and make a mess of the layout!
 
 I then enhance the layout using grid. I can turn my {{HTMLElement("ul")}} into a grid container with three column tracks. However, the width I have assigned to the list items themselves still applies, and it now makes those items a third of the width of the track:
 
-![After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width.](10-float-width-problem.png)
+![Six very tall, very narrow grid items with text overflowing on the right. After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width.](10-float-width-problem.png)
 
 If I reset the width to `auto`, then this will stop the float behavior happening for older browsers. I need to be able to define the width for older browsers, and remove the width for grid supporting browsers. Thanks to [CSS Feature Queries](/en-US/docs/Web/CSS/@supports) I can do this, right in my CSS.
 
@@ -366,7 +368,7 @@ The CSS Grid Layout specification details why we can overwrite the behavior of c
 - [Grid Items](https://drafts.csswg.org/css-grid/#grid-items)
 - [Grid Item Display](https://drafts.csswg.org/css-grid/#grid-item-display)
 
-As this behavior is detailed in the specification, you are safe to rely on using these overrides in your support for older browsers. Nothing that I am describing here should be seen as a "hack", we are taking advantage of the fact that the grid specification details the interaction between different layout methods.
+As this behavior is detailed in the specification, you are safe to rely on using these overrides in your support for older browsers. Nothing described here should be seen as a "hack". Rather, we are taking advantage of the fact that the grid specification details the interaction between different layout methods.
 
 ### Other values of display
 
@@ -388,7 +390,7 @@ You can also use multiple column layout as your legacy browser plan, as the `col
 
 ## Further reading
 
-- For an excellent explanation of feature queries, and how to use them well, see [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/).
-- A write-up of the differences between the IE/Edge (≤15) Grid implementation and the modern implementation, also covering _autoprefixer_ support, take a look at: _[Should I try to use the IE implementation of CSS Grid Layout?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)_
+- For an excellent explanation of feature queries, and how to use them well, see [Using Feature Queries in CSS (2016)](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/).
+- A write-up of the differences between the IE/Edge (≤15) Grid implementation and the modern implementation, also covering _autoprefixer_ support, take a look at: _[Should I try to use the IE implementation of CSS Grid Layout? (2016)](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)_
 - [Autoprefixer and Grid Autoplacement support in IE](https://github.com/postcss/autoprefixer#grid-autoplacement-support-in-ie)
-- [CSS Grid and the New Autoprefixer](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/)
+- [CSS Grid and the New Autoprefixer (2018)](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/)
