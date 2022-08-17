@@ -44,9 +44,9 @@ The `cos(A)` function accepts only one expression as its argument.
 
 {{CSSSyntax}}
 
-## Examples
+## Example
 
-### Keep rotated element size
+The `cos()` function can be used to keep the size of a rotated box.
 
 When the element is rotated using {{cssxref("transform-function/rotate", "rotate()")}}, it goes beyond its initial size. To fix this, we will use `cos()` to update the element size.
 
