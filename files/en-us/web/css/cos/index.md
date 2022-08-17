@@ -20,17 +20,17 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 
 ```css
 /* Single <angle> values */
-width: calc( cos(45deg) * 100px );
-width: calc( cos(0.125turn) * 100px );
-width: calc( cos(0.785398163rad) * 100px );
+width: calc(cos(45deg) * 100px);
+width: calc(cos(0.125turn) * 100px);
+width: calc(cos(0.785398163rad) * 100px);
 
 /* Single <number> values */
-width: calc( cos(63.673) * 100px );
-width: calc( cos(2 * 0.125) * 100px );
+width: calc(cos(63.673) * 100px);
+width: calc(cos(2 * 0.125) * 100px);
 
 /* Other values */
-width: calc( cos(pi) * 100px );
-width: calc( cos(e / 2) * 100px );
+width: calc(cos(pi) * 100px);
+width: calc(cos(e / 2) * 100px);
 ```
 
 ### Argument
