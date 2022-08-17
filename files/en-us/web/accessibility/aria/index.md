@@ -12,7 +12,7 @@ Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** is a set of [roles
 
 It supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies when there is not otherwise a mechanism. For example, ARIA enables accessible JavaScript widgets, form hints and error messages, live content updates, and more.
 
-> **Warning:** Many of these widgets were later incorporated into HTML5, and **developers should prefer using the correct semantic HTML element over using ARIA**, if such an element exists. For instance, native elements have built-in [keyboard accessibility](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), roles and states. However, if you choose to use ARIA, you are responsible for mimicking the equivalent browser behavior in script.
+> **Warning:** Many of these widgets are fully supported in modern browseres. **Developers should prefer using the correct semantic HTML element over using ARIA**, if such an element exists. For instance, native elements have built-in [keyboard accessibility](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), roles and states. However, if you choose to use ARIA, you are responsible for mimicking the equivalent browser behavior in script.
 
 [The first rule of ARIA](https://www.w3.org/TR/using-aria/#rule1) use is "If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, then do so."
 
@@ -57,7 +57,7 @@ It would have been much simpler to use the native {{HTMLElement('progress')}} el
 
 > **Note:** The `min` attribute is not allowed for the {{HTMLElement('progress')}} element; its minimum value is always `0`.
 
-> **Note:** HTML landmark elements ({{HTMLElement("main")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}} etc.) have built-in implicit ARIA roles, so there is no need to duplicate them.
+> **Note:** HTML landmark elements ({{HTMLElement("main")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}}, etc.) have built-in implicit ARIA roles, so there is no need to duplicate them.
 
 ## Support
 
@@ -84,7 +84,7 @@ It is also important to test your authored ARIA with actual assistive technology
 ## ARIA for scripted widgets
 
 - [Writing keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : Built-in elements like {{HTMLElement("input")}}, {{HTMLElement("button")}} etc have built-in keyboard accessibility. If you 'fake' these with {{HTMLElement("div")}}s and ARIA, you must ensure your widgets are keyboard accessible.
+  - : Built-in elements like {{HTMLElement("input")}}, {{HTMLElement("button")}}, etc. have built-in keyboard accessibility. If you 'fake' these with {{HTMLElement("div")}}s and ARIA, you must ensure your widgets are keyboard accessible.
 - [Live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : Live regions provide suggestions to screen readers about how to handle changes to the contents of a page.
 

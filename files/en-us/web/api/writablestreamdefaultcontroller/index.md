@@ -4,7 +4,6 @@ slug: Web/API/WritableStreamDefaultController
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Fetch
   - Interface
   - Reference

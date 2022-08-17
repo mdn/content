@@ -143,7 +143,7 @@ Many JavaScript frameworks and libraries add inline styles. Using `!important` w
 ```
 
 ```css
-p[style*="purple"] { color: rebeccapurple; }
+p[style*="purple"] { color: rebeccapurple !important; }
 ```
 
 Make sure to include a comment with every inclusion of the important flag so code maintainers understand why a CSS anti-pattern was used.

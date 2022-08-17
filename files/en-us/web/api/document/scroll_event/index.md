@@ -40,9 +40,9 @@ Since `scroll` events can fire at a high rate, the event handler shouldn't execu
 
 Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the `scroll` event for `requestAnimationFrame`.
 
-```js
-// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
+<!--Reference: http://www.html5rocks.com/en/tutorials/speed/animations/ no longer exists. -->
 
+```js
 let lastKnownScrollPosition = 0;
 let ticking = false;
 

@@ -62,7 +62,7 @@ This example logs the IDs of all bookmarks:
 
 ```js
 function onFulfilled(bookmarkItems) {
-  for (item of bookmarkItems) {
+  for (const item of bookmarkItems) {
     console.log(item.id);
   }
 }
@@ -71,9 +71,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-let searching = browser.bookmarks.search({});
-
-searching.then(onFulfilled, onRejected);
+browser.bookmarks.search({}).then(onFulfilled, onRejected);
 ```
 
 This example looks to see if the currently active tab is bookmarked:
@@ -92,8 +90,7 @@ function onRejected(error) {
 }
 
 function checkActiveTab(tab) {
-  let searching = browser.bookmarks.search({url: tab.url});
-  searching.then(onFulfilled, onRejected);
+  browser.bookmarks.search({ url: tab.url }).then(onFulfilled, onRejected);
 }
 
 browser.browserAction.onClicked.addListener(checkActiveTab);

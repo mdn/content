@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionResult/length
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionResult
@@ -14,7 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResult.length
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}
 
 The **`length`** read-only property of the
 {{domxref("SpeechRecognitionResult")}} interface returns the length of the "array"

@@ -4,7 +4,6 @@ slug: Web/API/WebGLQuery
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Reference
   - WebGL
   - WebGL2

@@ -33,7 +33,7 @@ onperiodicsync = (event) => { };
 
 ## Event type
 
-An {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PushEvent")}}
 

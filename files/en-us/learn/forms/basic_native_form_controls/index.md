@@ -43,7 +43,7 @@ You've already met some form elements, including {{HTMLelement('form')}}, {{HTML
 - The common input types {{HTMLelement('input/button', 'button')}}, {{HTMLelement('input/checkbox', 'checkbox')}}, {{HTMLelement('input/file', 'file')}}, {{HTMLelement('input/hidden', 'hidden')}}, {{HTMLelement('input/image', 'image')}}, {{HTMLelement('input/password', 'password')}}, {{HTMLelement('input/radio', 'radio')}}, {{HTMLelement('input/reset', 'reset')}}, {{HTMLelement('input/submit', 'submit')}}, and {{HTMLelement('input/text', 'text')}}.
 - Some of the attributes that are common to all form controls.
 
-> **Note:** The features discussed in this article are supported in all browsers, which is not the case for all form controls. We cover newer form controls added in HTML5 in the next two articles. If you want a more advanced reference, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [\<input> types](/en-US/docs/Web/HTML/Element/input) reference.
+> **Note:** We cover additional, more powerful form controls in the next two articles. If you want a more advanced reference, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [`<input>` types](/en-US/docs/Web/HTML/Element/input) reference.
 
 ## Text input fields
 
@@ -78,7 +78,7 @@ _The following screenshot shows default, focused and disabled text input types i
 
 ![Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge.](disabled.png)
 
-> **Note:** HTML5 enhanced the basic original single line text field by adding special values for the {{htmlattrxref("type","input")}} attribute that enforce specific validation constraints and other features, for example specific to entering URLs or numbers. We'll cover those in the next article, [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
+> **Note:** We discuss values for the {{htmlattrxref("type","input")}} attribute that enforce specific validation constraints including color, email, and url input types, in the next article, [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
 #### Password field
 

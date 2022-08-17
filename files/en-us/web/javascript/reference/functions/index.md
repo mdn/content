@@ -374,37 +374,34 @@ body. Attempting to use it outside the function's body results in an error (or g
 
 ```js
 const y = function x() {};
-alert(x); // throws an error
+console.log(x); // ReferenceError: x is not defined
 ```
 
-The function name also appears when the function is serialized via
-[`Function`'s toString method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
+The function name also appears when the function is serialized via its
+[`toString()` method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
 
 On the other hand, the variable the function is assigned to is limited only by its
 scope, which is guaranteed to include the scope in which the function is declared.
 
-As the 4th example shows, the function name can be different from the variable the
+As the `const y = function x() {}` example shows, the function name can be different from the variable the
 function is assigned to. They have no relation to each other. A function declaration
 also creates a variable with the same name as the function name. Thus, unlike those
 defined by function expressions, functions defined by function declarations can be
-accessed by their name in the scope they were defined in:
+accessed by their name in the scope they were defined in, as well as in their own body.
 
-A function defined by `new Function` does not have a function name.
-However, the serialized form of the function shows as if it has the name "anonymous".
-For example, `alert(new Function())` outputs:
+A function defined by `new Function` will dynamically have its source assembled, which is observable when you serialize it. For example, `console.log(new Function().toString())` gives:
 
 ```js
-function anonymous() {
+function anonymous(
+) {
+
 }
 ```
 
-Since the function actually does not have a name, `anonymous` is not a
-variable that can be accessed within the function. For example, the following would
-result in an error:
+This is the actual source used to compile the function. However, although the `Function()` constructor will create the function with name `anonymous`, this name is not added to the scope of the body. The body only ever has access to global variables. For example, the following would result in an error:
 
 ```js
-const foo = new Function("alert(anonymous);");
-foo();
+new Function("alert(anonymous);")();
 ```
 
 Unlike functions defined by function expressions or by the `Function`

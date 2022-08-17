@@ -77,6 +77,15 @@ These resources are created by forward-thinking companies and web developers who
   - : This module carries on where [CSS first steps](/en-US/docs/Learn/CSS/First_steps) left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, its time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
 
     The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
+  
+- [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+  - : Target HTML elements, including based on element state, with CSS.
+
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - : Understanding the browerser algorithm to determine which CSS declarations get applied to element when there are compting declarations, with a [specificity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
+
+- [Cascade & Inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+  - : The cascade, specificity, and inheritance control how CSS is applied to HTML and how conflicts between style declarations are resolved.
 
 - [Styling text](/en-US/docs/Learn/CSS/Styling_text)
   - : Here we look at text styling fundamentals, including setting font, boldness, and italics, line and letter spacing, and drop shadows and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
@@ -103,20 +112,8 @@ These resources are created by forward-thinking companies and web developers who
   - : Apply rotation, skewing, scaling, and translation using CSS.
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
   - : CSS transitions provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
-
-<!---->
-
-- [Quick Guide to Implement Web Fonts  (with @font-face)](https://www.html5rocks.com/en/tutorials/webfonts/quick/)
-  - : The CSS @font-face feature allows you to use custom typefaces on the web in an accessible, manipulatable, and scalable way.
-- [Starting to Write CSS](https://davidwalsh.name/starting-css)
-  - : An introduction to tools and methodologies to write more succinct, maintainable, and scalable CSS.
-
-<!---->
-
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn how to draw graphics using scripting using the canvas element.
-- [HTML5 Doctor](https://html5doctor.com/)
-  - : Articles about using HTML right now.
 
 ## JavaScript Tutorials
 

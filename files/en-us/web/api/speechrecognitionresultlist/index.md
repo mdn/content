@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionResultList
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - SpeechRecognitionResultList
@@ -13,7 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResultList
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionResultList`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a list of {{domxref("SpeechRecognitionResult")}} objects, or a single one if results are being captured in {{domxref("SpeechRecognition.continuous","continuous")}} mode.
 

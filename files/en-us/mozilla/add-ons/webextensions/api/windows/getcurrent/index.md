@@ -56,18 +56,17 @@ When the user clicks a browser action's icon, this example gets the current wind
 
 ```js
 function logTabs(windowInfo) {
-  for (let tabInfo of windowInfo.tabs) {
+  for (const tabInfo of windowInfo.tabs) {
     console.log(tabInfo.url);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  let getting = browser.windows.getCurrent({populate: true});
-  getting.then(logTabs, onError);
+  browser.windows.getCurrent({ populate: true }).then(logTabs, onError);
 });
 ```
 

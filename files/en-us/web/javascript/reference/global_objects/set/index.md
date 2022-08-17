@@ -238,7 +238,7 @@ const mySet = new Set(myArray);
 
 mySet.has('value1')     // returns true
 
-// Use the spread operator to transform a set into an Array.
+// Use the spread syntax to transform a set into an Array.
 console.log([...mySet]); // Will show you exactly the same Array as myArray
 ```
 

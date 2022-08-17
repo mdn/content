@@ -10,6 +10,7 @@ tags:
   - Method
   - Reference
   - removeListener
+  - Deprecated
 browser-compat: api.MediaQueryList.removeListener
 ---
 {{APIRef("CSSOM")}}{{Deprecated_Header}}
