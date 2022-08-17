@@ -164,7 +164,7 @@ Here is an example:
 
 ```js
 Modernizr.load({
-  // This tests if your browser supports the form validation API
+  // This tests if your browser supports the Form validation API
   test : Modernizr.formvalidation,
 
   // If the browser does not support it, the following polyfill is loaded
