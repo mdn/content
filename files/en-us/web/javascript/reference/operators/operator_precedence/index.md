@@ -166,9 +166,9 @@ If you are familiar with binary trees, think about it as a [post-order traversal
 
 ```
                 /
-       ┌────────┴───────┐
-echo("left", 4)        **
-                ┌───────┴────────┐
+       ┌────────┴────────┐
+echo("left", 4)         **
+                ┌────────┴────────┐
         echo("middle", 3)  echo("right", 2)
 ```
 
