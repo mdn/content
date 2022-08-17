@@ -449,7 +449,7 @@ for (const i in arr) {
 }
 
 for (const i of arr) {
-  console.log(i); // logs 3, 5, 7
+  console.log(i); // logs 3, 5, 7, "hello"
 }
 ```
 
