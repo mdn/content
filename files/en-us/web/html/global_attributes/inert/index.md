@@ -1,6 +1,6 @@
 ---
 title: inert
-slug: Web/HTML/Global_attributes/inputmode
+slug: Web/HTML/Global_attributes/inert
 tags:
   - Attribute
   - Global attributes
