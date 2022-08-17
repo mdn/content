@@ -55,6 +55,17 @@ For example, if you rotate a `100px`/`100px` square `45deg`, the diamond it crea
 ```html hidden
 <div class="original-square"></div>
 <div class="rotated-diamond"></div>
+<div class="rotated-scaled-diamond"></div>
+```
+
+```css hiden
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
 ```
 
 ```css
@@ -65,6 +76,13 @@ div.original-square {
 }
 
 div.rotated-diamond {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transform: rotate(45deg);
+}
+
+div.rotated-scaled-diamond {
   width: calc( 100px * cos(45deg) );
   height: calc( 100px * cos(45deg) );
   margin-block-start: calc( 100px / 4 * cos(45deg) );
@@ -77,7 +95,7 @@ div.rotated-diamond {
 }
 ```
 
-{{EmbedLiveSample('keep_rotated_element_size', '100%', '300px')}}
+{{EmbedLiveSample('keep_rotated_element_size', '100%', '200px')}}
 
 ## Specifications
 
