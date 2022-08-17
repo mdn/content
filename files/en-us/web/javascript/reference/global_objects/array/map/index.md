@@ -165,8 +165,7 @@ const doubles = numbers.map((num) => num * 2);
 
 ### Using map generically
 
-This example shows how to use map on a {{jsxref("String")}} to get an array of bytes in
-the ASCII encoding representing the character values:
+This example shows how to use map on a {{jsxref("String")}} to get an array of numbers representing the string's characters in UTF-16 code units:
 
 ```js
 const map = Array.prototype.map;

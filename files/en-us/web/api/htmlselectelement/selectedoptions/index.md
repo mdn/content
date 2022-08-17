@@ -85,7 +85,7 @@ orderButton.addEventListener("click", () => {
   let collection = itemList.selectedOptions;
   let output = "";
 
-  for (let i=0; i<collection.length; i++) {
+  for (let i = 0; i < collection.length; i++) {
     if (output === "") {
       output = "Your order for the following items has been placed: ";
     }

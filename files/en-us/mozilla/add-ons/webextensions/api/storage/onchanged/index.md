@@ -62,16 +62,14 @@ then for each item changed,
 log its old value and its new value.
 */
 function logStorageChange(changes, area) {
-  console.log("Change in storage area: " + area);
+  console.log(`Change in storage area: ${area}`);
 
-  let changedItems = Object.keys(changes);
+  const changedItems = Object.keys(changes);
 
-  for (let item of changedItems) {
-    console.log(item + " has changed:");
-    console.log("Old value: ");
-    console.log(changes[item].oldValue);
-    console.log("New value: ");
-    console.log(changes[item].newValue);
+  for (const item of changedItems) {
+    console.log(`${item} has changed:`);
+    console.log("Old value: ", changes[item].oldValue);
+    console.log("New value: ", changes[item].newValue);
   }
 }
 

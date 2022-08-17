@@ -33,7 +33,7 @@ date, according to local time: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so
 ### Using getDay()
 
 The second statement below assigns the value 1 to `weekday`, based on the
-value of the {{jsxref("Date")}} object `Xmas95`. December 25, 1995, is a
+value of the [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object `Xmas95`. December 25, 1995, is a
 Monday.
 
 ```js
@@ -44,7 +44,7 @@ console.log(weekday); // 1
 ```
 
 > **Note:** If needed, the full name of a day (`"Monday"` for
-> example) can be obtained by using {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
+> example) can be obtained by using [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
 > with an `options` parameter. Using this method, the internationalization is
 > made easier:
 >

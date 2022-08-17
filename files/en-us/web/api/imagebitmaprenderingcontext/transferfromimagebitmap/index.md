@@ -4,7 +4,6 @@ slug: Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - ImageBitmapRenderingContext
   - Method
   - OffscreenCanvas
@@ -12,7 +11,7 @@ tags:
   - transferFromImageBitmap
 browser-compat: api.ImageBitmapRenderingContext.transferFromImageBitmap
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 The **`ImageBitmapRenderingContext.transferFromImageBitmap()`**
 method displays the given {{domxref("ImageBitmap")}} in the canvas associated with this

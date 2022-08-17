@@ -12,11 +12,11 @@ The creation of web forms has always been a complex task. While marking up the f
 
 For a basic introduction to these concepts, with examples, see the [Form validation tutorial](/en-US/docs/Learn/Forms/Form_validation).
 
-> **Note:** HTML5 Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent by non-compliant browsers (for instance, browsers without HTML5 and without JavaScript) or by bad people trying to trick your web application. Therefore, like with HTML4, you need to also validate input constraints on the server side, in a way that is consistent with what is done on the client side.
+> **Note:** HTML Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent by non-compliant browsers (for instance, browsers without HTML5 and without JavaScript) or by bad people trying to trick your web application. Therefore, like with HTML4, you need to also validate input constraints on the server side, in a way that is consistent with what is done on the client side.
 
 ## Intrinsic and basic constraints
 
-In HTML5, basic constraints are declared in two ways:
+In HTML, basic constraints are declared in two ways:
 
 - By choosing the most semantically appropriate value for the {{ htmlattrxref("type", "input") }} attribute of the {{ HTMLElement("input") }} element, e.g., choosing the `email` type automatically creates a constraint that checks whether the value is a valid e-mail address.
 - By setting values on validation-related attributes, allowing basic constraints to be described in a simple way, without the need for JavaScript.

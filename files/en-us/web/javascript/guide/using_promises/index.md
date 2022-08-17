@@ -235,7 +235,7 @@ try {
 }
 ```
 
-This symmetry with asynchronous code culminates in the [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) syntactic sugar in ECMAScript 2017:
+This symmetry with asynchronous code culminates in the [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) syntax:
 
 ```js
 async function foo() {
@@ -354,7 +354,7 @@ const transformData = composeAsync(func1, func2, func3);
 const result3 = transformData(data);
 ```
 
-In ECMAScript 2017, sequential composition can be done more with async/await:
+Sequential composition can also be done more succinctly with async/await:
 
 ```js
 let result;

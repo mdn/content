@@ -82,8 +82,6 @@ On UTF-8 encoded pages, `<wbr>` behaves like the `U+200B ZERO-WIDTH SPACE` code 
 
 For the same reason, the `<wbr>` element does not introduce a hyphen at the line break point. To make a hyphen appear only at the end of a line, use the soft hyphen character entity (`&shy;`) instead.
 
-This element was first implemented in Internet Explorer 5.5 and was officially defined in HTML5.
-
 ## Example
 
 _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://styleguide.yahoo.com/)_ recommends [breaking a URL _before_ punctuation](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses), to avoid leaving a punctuation mark at the end of the line, which the reader might mistake for the end of the URL.

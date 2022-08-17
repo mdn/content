@@ -4,14 +4,12 @@ slug: Web/API/Navigator/mediaCapabilities
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Media
   - Media Capabilities API
   - MediaCapabilities
   - Navigator
 browser-compat: api.Navigator.mediaCapabilities
 ---
-{{SeeCompatTable}}
 
 The **`Navigator.mediaCapabilities`** read-only property
 returns a {{domxref("MediaCapabilities")}} object that can expose information about the

@@ -4,7 +4,6 @@ slug: Web/API/RTCPeerConnectionIceEvent
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - RTCIceCandidateEvent
   - Reference

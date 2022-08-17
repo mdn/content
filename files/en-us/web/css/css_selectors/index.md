@@ -76,7 +76,7 @@ spec-urls: https://drafts.csswg.org/selectors/
     **Syntax:** `A || B`
     **Example:** `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
 
-## Pseudo
+## Pseudo-classes and pseudo-elements
 
 - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
   - : The `:` pseudo allow the selection of elements based on state information that is not contained in the document tree.

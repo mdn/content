@@ -1,5 +1,5 @@
 ---
-title: Flow Layout and Overflow
+title: Flow layout and overflow
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
 tags:
   - CSS

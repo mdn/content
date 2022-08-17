@@ -17,7 +17,7 @@ However, the umbrella term "JavaScript" as understood in a web browser context c
 
 ## JavaScript, the core language (ECMAScript)
 
-The core language of JavaScript is standardized by the ECMA TC39 committee as a language named [ECMAScript](/en-US/docs/Web/JavaScript/Language_Resources). "ECMAScript" is the term for the language standard, but "ECMAScript" and "JavaScript" can be used interchangeably.
+The core language of JavaScript is standardized by the ECMA TC39 committee as a language named ECMAScript. "ECMAScript" is the term for the language standard, but "ECMAScript" and "JavaScript" can be used interchangeably.
 
 This core language is also used in non-browser environments, for example in [Node.js](https://nodejs.org).
 
@@ -74,7 +74,7 @@ The Document Object Model (DOM) is a cross-platform, **language-independent conv
 
 - The document structure, a tree model, and the DOM Event architecture in [DOM core](https://dom.spec.whatwg.org/): [`Node`](/en-US/docs/Web/API/Node), [`Element`](/en-US/docs/Web/API/Element), [`DocumentFragment`](/en-US/docs/Web/API/DocumentFragment), [`Document`](/en-US/docs/Web/API/Document), [`DOMImplementation`](/en-US/docs/Web/API/DOMImplementation), [`Event`](/en-US/docs/Web/API/Event), [`EventTarget`](/en-US/docs/Web/API/EventTarget), …
 - A less rigorous definition of the DOM Event Architecture, as well as specific events in [DOM events](https://w3c.github.io/uievents/).
-- Other things such as [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) and [DOM Range](https://html5.org/specs/dom-range.html).
+- Other things such as [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) and [DOM Range](https://dom.spec.whatwg.org/#ranges).
 
 From the ECMAScript point of view, objects defined in the DOM specification are called "host objects".
 

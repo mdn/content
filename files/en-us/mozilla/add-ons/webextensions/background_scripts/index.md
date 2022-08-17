@@ -60,7 +60,7 @@ In your extension, you include a background script using the  [`"background"`](/
 
 You can specify multiple background scripts. If you do, they run in the same context, just like scripts loaded into a web page.
 
-Instead of specifying background scripts, you can specify a background page. This has the added advantage of support for ES6 modules:
+Instead of specifying background scripts, you can specify a background page. This has the added advantage of support for ES modules:
 
 **manifest.json**
 
@@ -118,7 +118,6 @@ browser.runtime.onInstalled.addListener(() => {
 browser.bookmarks.onCreated.addListener(() => {
   // do something
 });
-
 ```
 
 Do not register listeners asynchronously, as they will not be properly triggered. So, rather than:

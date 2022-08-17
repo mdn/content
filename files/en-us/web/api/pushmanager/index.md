@@ -4,7 +4,6 @@ slug: Web/API/PushManager
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Push
   - Push API

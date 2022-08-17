@@ -402,7 +402,7 @@ _Learn more about CORS [here](CORS)._
 
 ## Contributing
 
-You can help by [writing new entries](/en-US/docs/MDN/Contribute/Howto/Document_an_HTTP_header) or improving the existing ones.
+You can help by [writing new entries](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header) or improving the existing ones.
 
 ## See also
 

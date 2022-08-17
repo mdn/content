@@ -66,15 +66,15 @@ For example:
 
 Implementing controls for web-based audio/video shouldn't be a problem, right? Let's investigate.
 
-### The problem with native HTML5 controls
+### The problem with native HTML controls
 
-HTML5 video and audio instances even come with a set of inbuilt controls that allow you to control the media straight out of the box. For example (see `native-controls.html` [source code](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/native-controls.html) and [live](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
+HTML video and audio instances even come with a set of inbuilt controls that allow you to control the media straight out of the box. For example (see `native-controls.html` [source code](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/native-controls.html) and [live](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
 
 ```html
 <audio controls>
   <source src="viper.mp3" type="audio/mp3">
   <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <p>Your browser doesn't support HTML audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
 </audio>
 
 <br>
@@ -82,7 +82,7 @@ HTML5 video and audio instances even come with a set of inbuilt controls that al
 <video controls>
   <source src="rabbit320.mp4" type="video/mp4">
   <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
 </video>
 ```
 
@@ -101,7 +101,7 @@ To remedy this, we can create our own custom controls. Let's look at how.
 
 ### Creating custom audio and video controls
 
-HTML5 video and audio share an API — HTML Media Element — which allows you to map custom functionality to buttons and other controls — both of which you define yourself.
+HTML video and audio share an API — HTML Media Element — which allows you to map custom functionality to buttons and other controls — both of which you define yourself.
 
 Let's take the video example from above and add custom controls to them.
 
@@ -118,7 +118,7 @@ First of all, let's look at the HTML for the video player, in the HTML:
   <video controls>
     <source src="rabbit320.mp4" type="video/mp4">
     <source src="rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
   </video>
 
   <div class="controls">
@@ -216,22 +216,10 @@ Last of all, add the following to the end of the code, to control the time elaps
 player.ontimeupdate = () => {
   const minutes = Math.floor(player.currentTime / 60);
   const seconds = Math.floor(player.currentTime - minutes * 60);
-  let minuteValue;
-  let secondValue;
+  const minuteValue = minutes < 10 ? `0${minutes}` : minutes;
+  const secondValue = seconds < 10 ? `0${seconds}` : seconds;
 
-  if (minutes < 10) {
-    minuteValue = "0" + minutes;
-  } else {
-    minuteValue = minutes;
-  }
-
-  if (seconds < 10) {
-    secondValue = "0" + seconds;
-  } else {
-    secondValue = seconds;
-  }
-
-  const mediaTime = minuteValue + ":" + secondValue;
+  const mediaTime = `${minuteValue}:${secondValue}`;
   timeLabel.textContent = mediaTime;
 };
 ```
@@ -299,9 +287,9 @@ There are different types of text tracks for different purposes. The main ones y
 - Descriptions — These include descriptions for visually impaired people who can't see the video, for example, what the scene looks like.
 - Chapter titles — Chapter markers intended to help the user navigate the media resource
 
-### Implementing HTML5 video text tracks
+### Implementing HTML video text tracks
 
-Text tracks for displaying with HTML5 video need to be written in WebVTT, a text format containing multiple strings of text along with metadata such as what time in the video you want each text string to be displayed, and even limited styling/positioning information. These text strings are called cues.
+Text tracks for displaying with HTML video need to be written in WebVTT, a text format containing multiple strings of text along with metadata such as what time in the video you want each text string to be displayed, and even limited styling/positioning information. These text strings are called cues.
 
 A typical WebVTT file will look something like this:
 
@@ -338,7 +326,7 @@ This will result in a video that has subtitles displayed, kind of like this:
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-For more details, see [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
+For more details, see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 
 > **Note:** Text tracks and transcriptions also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 

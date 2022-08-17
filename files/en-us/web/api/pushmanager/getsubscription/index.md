@@ -4,14 +4,13 @@ slug: Web/API/PushManager/getSubscription
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - PushManager
   - Reference
   - Service Workers
 browser-compat: api.PushManager.getSubscription
 ---
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}
 
 The **`PushManager.getSubscription()`** method of the {{domxref("PushManager")}} interface retrieves an existing push subscription.
 

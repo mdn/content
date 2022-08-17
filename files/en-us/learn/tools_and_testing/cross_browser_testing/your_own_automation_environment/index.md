@@ -112,26 +112,26 @@ OK, let's try a quick test to make sure everything is working.
 2. Give it the following contents, then save it:
 
     ```js
-    const webdriver = require('selenium-webdriver'),
-        By = webdriver.By,
-        until = webdriver.until;
+    const webdriver = require('selenium-webdriver');
+    const By = webdriver.By;
+    const until = webdriver.until;
 
     const driver = new webdriver.Builder()
-        .forBrowser('firefox')
-        .build();
+      .forBrowser('firefox')
+      .build();
 
     driver.get('http://www.google.com');
 
     driver.findElement(By.name('q')).sendKeys('webdriver');
 
-    driver.sleep(1000).then(function() {
+    driver.sleep(1000).then(() => {
       driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
     });
 
     driver.findElement(By.name('btnK')).click();
 
-    driver.sleep(2000).then(function() {
-      driver.getTitle().then(function(title) {
+    driver.sleep(2000).then(() => {
+      driver.getTitle().then((title) => {
         if (title === 'webdriver - Google Search') {
           console.log('Test passed');
         } else {
@@ -158,17 +158,17 @@ There is also nothing to stop you running the test on multiple browsers simultan
 2. Give it the following contents, then save it:
 
     ```js
-    const webdriver = require('selenium-webdriver'),
-        By = webdriver.By,
-        until = webdriver.until;
+    const webdriver = require('selenium-webdriver');
+    const By = webdriver.By;
+    const until = webdriver.until;
 
     let driver_fx = new webdriver.Builder()
-        .forBrowser('firefox')
-        .build();
+      .forBrowser('firefox')
+      .build();
 
     let driver_chr = new webdriver.Builder()
-        .forBrowser('chrome')
-        .build();
+      .forBrowser('chrome')
+      .build();
 
     searchTest(driver_fx);
     searchTest(driver_chr);
@@ -177,14 +177,15 @@ There is also nothing to stop you running the test on multiple browsers simultan
       driver.get('http://www.google.com');
       driver.findElement(By.name('q')).sendKeys('webdriver');
 
-      driver.sleep(1000).then(function() {
+      driver.sleep(1000).then(() => {
         driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
       });
 
       driver.findElement(By.name('btnK')).click();
 
-      driver.sleep(2000).then(function() {
-        driver.getTitle().then(function(title) {
+      driver.sleep(2000).then(() => {
+        driver.getTitle().then((title) => {
+
           if (title === 'webdriver - Google Search') {
             console.log('Test passed');
           } else {
@@ -218,25 +219,25 @@ Let's have a look at a few key features of the webdriver syntax. For more comple
 To start up a new test, you need to include the `selenium-webdriver` module like this:
 
 ```js
-const webdriver = require('selenium-webdriver'),
-    By = webdriver.By,
-    until = webdriver.until;
+const webdriver = require('selenium-webdriver');
+const By = webdriver.By;
+const until = webdriver.until;
 ```
 
 Next, you need to create a new instance of a driver, using the `new webdriver.Builder()` constructor. This needs to have the `forBrowser()` method chained onto it to specify what browser you want to test with this builder, and the `build()` method to actually build it (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html) for detailed information on these features).
 
 ```js
 let driver = new webdriver.Builder()
-    .forBrowser('firefox')
-    .build();
+  .forBrowser('firefox')
+  .build();
 ```
 
 Note that it is possible to set specific configuration options for browsers to be tested, for example you can set a specific version and OS to test in the `forBrowser()` method:
 
 ```js
 let driver = new webdriver.Builder()
-    .forBrowser('firefox', '46', 'MAC')
-    .build();
+  .forBrowser('firefox', '46', 'MAC')
+  .build();
 ```
 
 You could also set these options using an environment variable, for example:
@@ -248,13 +249,13 @@ SELENIUM_BROWSER=firefox:46:MAC
 Let's create a new test to allow us to explore this code as we talk about it. Inside your selenium test project directory, create a new file called `quick_test.js`, and add the following code to it:
 
 ```js
-var webdriver = require('selenium-webdriver'),
-    By = webdriver.By,
-    until = webdriver.until;
+const webdriver = require('selenium-webdriver');
+const By = webdriver.By;
+const until = webdriver.until;
 
-var driver = new webdriver.Builder()
-    .forBrowser('firefox')
-    .build();
+const driver = new webdriver.Builder()
+  .forBrowser('firefox')
+  .build();
 ```
 
 ### Getting the document you want to test
@@ -310,8 +311,8 @@ There are many ways to interact with your web documents and elements on them. Yo
 If we wanted to get the text inside our button, we could do this:
 
 ```js
-button.getText().then(function(text) {
-  console.log('Button text is \'' + text + '\'');
+button.getText().then((text) => {
+  console.log(`Button text is '${text}'`);
 });
 ```
 
@@ -336,10 +337,10 @@ Try running your test again; the button will be clicked, and the `alert()` popup
 You can interact with the popup too. Add the following to the bottom of the code, and try testing it again:
 
 ```js
-let alert = driver.switchTo().alert();
+const alert = driver.switchTo().alert();
 
-alert.getText().then(function(text) {
-  console.log('Alert text is \'' + text + '\'');
+alert.getText().then((text) => {
+  console.log(`Alert text is '${text}'`);
 });
 
 alert.accept();
@@ -355,7 +356,7 @@ input.sendKeys('Filling in my form');
 You can submit key presses that can't be represented by normal characters using properties of the `webdriver.Key` object. For example, above we used this construct to tab out of the form input before submitting it:
 
 ```js
-driver.sleep(1000).then(function() {
+driver.sleep(1000).then(() => {
   driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
 });
 ```
@@ -367,8 +368,8 @@ There are times where you'll want to make WebDriver wait for something to comple
 In our `google_test.js` test for example, we included this block:
 
 ```js
-driver.sleep(2000).then(function() {
-  driver.getTitle().then(function(title) {
+driver.sleep(2000).then(() => {
+  driver.getTitle().then((title) => {
     if (title === 'webdriver - Google Search') {
       console.log('Test passed');
     } else {
@@ -383,9 +384,9 @@ The `sleep()` method accepts a value that specifies the time to wait in millisec
 We could add a `sleep()` method to our `quick_test.js` test too — try wrapping your last line of code in a block like this:
 
 ```js
-driver.sleep(2000).then(function() {
+driver.sleep(2000).then(() => {
   input.sendKeys('Filling in my form');
-  input.getAttribute("value").then(function(value) {
+  input.getAttribute("value").then((value) => {
     if (value !== '') {
       console.log('Form input editable');
     }
@@ -449,8 +450,8 @@ Let's write an example:
 
     ```js
     const webdriver = require('selenium-webdriver');
-        By = webdriver.By,
-        until = webdriver.until;
+    const By = webdriver.By;
+    const until = webdriver.until;
 
     // username: Username can be found at automation dashboard
     const USERNAME = '{username}';
@@ -462,42 +463,41 @@ Let's write an example:
     const GRID_HOST = 'hub.lambdatest.com/wd/hub';
 
     function searchTextOnGoogle() {
-    // Setup Input capabilities
-        const capabilities = {
-           platform: 'windows 10',
-           browserName: 'chrome',
-           version: '67.0',
-           resolution: '1280x800',
-           network: true,
-           visual: true,
-           console: true,
-           video: true,
-           name: 'Test 1', // name of the test
-           build: 'NodeJS build' // name of the build
-         };
+      // Setup Input capabilities
+      const capabilities = {
+        platform: 'windows 10',
+        browserName: 'chrome',
+        version: '67.0',
+        resolution: '1280x800',
+        network: true,
+        visual: true,
+        console: true,
+        video: true,
+        name: 'Test 1', // name of the test
+        build: 'NodeJS build' // name of the build
+        };
 
-    // URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub
+      // URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub
+      const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
 
-    const gridUrl = 'https://' + USERNAME + ':' + KEY + '@' + GRID_HOST;
+      // setup and build selenium driver object
+      const driver = new webdriver.Builder()
+        .usingServer(gridUrl)
+        .withCapabilities(capabilities)
+        .build();
 
-    // setup and build selenium driver object
-         const driver = new webdriver.Builder()
-         .usingServer(gridUrl)
-         .withCapabilities(capabilities)
-         .build();
-
-    // navigate to a URL, search for a text and get title of page
-    driver.get('https://www.google.com/ncr').then(function() {
+      // navigate to a URL, search for a text and get title of page
+      driver.get('https://www.google.com/ncr').then(function() {
         driver.findElement(webdriver.By.name('q')).sendKeys('LambdaTest\n').then(function() {
-             driver.getTitle().then(function(title) {
-                   setTimeout(function() {
-                   console.log(title);
-                   driver.quit();
-                   }, 5000);
-                });
-             });
+          driver.getTitle().then((title) => {
+            setTimeout(() => {
+              console.log(title);
+              driver.quit();
+              }, 5000);
+            });
           });
-       }
+        });
+      }
 
     searchTextOnGoogle();
     ```
@@ -545,39 +545,39 @@ Let's write an example:
 2. Give it the following contents:
 
     ```js
-    const webdriver = require('selenium-webdriver'),
-        By = webdriver.By,
-        until = webdriver.until;
+    const webdriver = require('selenium-webdriver');
+    const By = webdriver.By;
+    const until = webdriver.until;
 
     // Input capabilities
-    let capabilities = {
-       'browserName' : 'Firefox',
-       'browser_version' : '56.0 beta',
-       'os' : 'OS X',
-       'os_version' : 'Sierra',
-       'resolution' : '1280x1024',
-       'browserstack.user' : 'YOUR-USER-NAME',
-       'browserstack.key' : 'YOUR-ACCESS-KEY',
-       'browserstack.debug' : 'true',
-       'build' : 'First build'
+    const capabilities = {
+      'browserName' : 'Firefox',
+      'browser_version' : '56.0 beta',
+      'os' : 'OS X',
+      'os_version' : 'Sierra',
+      'resolution' : '1280x1024',
+      'browserstack.user' : 'YOUR-USER-NAME',
+      'browserstack.key' : 'YOUR-ACCESS-KEY',
+      'browserstack.debug' : 'true',
+      'build' : 'First build'
     };
 
-    let driver = new webdriver.Builder().
-      usingServer('http://hub-cloud.browserstack.com/wd/hub').
-      withCapabilities(capabilities).
-      build();
+    const driver = new webdriver.Builder()
+      .usingServer('http://hub-cloud.browserstack.com/wd/hub')
+      .withCapabilities(capabilities)
+      .build();
 
     driver.get('http://www.google.com');
     driver.findElement(By.name('q')).sendKeys('webdriver');
 
-    driver.sleep(1000).then(function() {
+    driver.sleep(1000).then(() => {
       driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
     });
 
     driver.findElement(By.name('btnK')).click();
 
-    driver.sleep(2000).then(function() {
-      driver.getTitle().then(function(title) {
+    driver.sleep(2000).then(() => {
+      driver.getTitle().then((title) => {
         if (title === 'webdriver - Google Search') {
           console.log('Test passed');
         } else {
@@ -630,22 +630,30 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
     ```js
     let sessionId;
 
-    driver.session_.then(function(sessionData) {
-        sessionId = sessionData.id_;
+    driver.session_.then((sessionData) =>{
+      sessionId = sessionData.id_;
     });
     ```
 
 4. Finally, update the `driver.sleep(2000)` block near the bottom of the code to add REST API calls (again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values):
 
     ```js
-    driver.sleep(2000).then(function() {
-      driver.getTitle().then(function(title) {
+    driver.sleep(2000).then(() => {
+      driver.getTitle().then((title) => {
         if (title === 'webdriver - Google Search') {
           console.log('Test passed');
-          request({uri: "https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/" + sessionId + ".json", method:"PUT", form:{"status":"passed","reason":"Google results showed correct title"}});
+          request({ 
+            uri: `https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/${sessionId}.json`,
+            method: "PUT",
+            form: { "status": "passed", "reason": "Google results showed correct title" }
+          });
         } else {
           console.log('Test failed');
-          request({uri: "https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/" + sessionId + ".json", method:"PUT", form:{"status":"failed","reason":"Google results showed wrong title"}});
+          request({
+            uri: `https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/${sessionId}.json`,
+            method: "PUT",
+            form: { "status": "failed", "reason": "Google results showed wrong title" }
+          });
         }
       });
     });
@@ -667,22 +675,22 @@ Let's write an example:
 2. Give it the following contents:
 
     ```js
-    const webdriver = require('selenium-webdriver'),
-        By = webdriver.By,
-        until = webdriver.until,
-        username = "YOUR-USER-NAME",
-        accessKey = "YOUR-ACCESS-KEY";
+    const webdriver = require('selenium-webdriver');
+    const By = webdriver.By;
+    const until = webdriver.until;
+    const username = "YOUR-USER-NAME";
+    const accessKey = "YOUR-ACCESS-KEY";
 
     const driver = new webdriver.Builder()
-        .withCapabilities({
-          browserName: 'chrome',
-          platform: 'Windows XP',
-          version: '43.0',
-          username,
-          accessKey,
-        })
-        .usingServer(`https://${username}:${accessKey}@ondemand.saucelabs.com:443/wd/hub`)
-        .build();
+      .withCapabilities({
+        browserName: 'chrome',
+        platform: 'Windows XP',
+        version: '43.0',
+        username,
+        accessKey,
+      })
+      .usingServer(`https://${username}:${accessKey}@ondemand.saucelabs.com:443/wd/hub`)
+      .build();
 
     driver.get('http://www.google.com');
 
@@ -744,9 +752,9 @@ To do this, you need to:
 3. Create a new instance of SauceLabs, by adding the following just below that:
 
     ```js
-    let saucelabs = new SauceLabs({
-        username : "YOUR-USER-NAME",
-        password : "YOUR-ACCESS-KEY"
+    const saucelabs = new SauceLabs({
+      username : "YOUR-USER-NAME",
+      password : "YOUR-ACCESS-KEY"
     });
     ```
 
@@ -755,22 +763,22 @@ To do this, you need to:
 4. Below the block where you define the `driver` variable (just below the `build()` line), add the following block — this gets the correct driver `sessionID` that we need to write data to the job (you can see it action in the next code block):
 
     ```js
-    driver.getSession().then(function (sessionid){
-          driver.sessionID = sessionid.id_;
+    driver.getSession().then((sessionid) => {
+      driver.sessionID = sessionid.id_;
     });
     ```
 
 5. Finally, replace the `driver.sleep(2000)` block near the bottom of the code with the following:
 
     ```js
-    driver.sleep(2000).then(function() {
-      driver.getTitle().then(function(title) {
+    driver.sleep(2000).then(() => {
+      driver.getTitle().then((title) => {
+        let testPassed = false;
         if (title === 'webdriver - Google Search') {
           console.log('Test passed');
-          let testPassed = true;
+          testPassed = true;
         } else {
-          console.log('Test failed');
-          let testPassed = false;
+          console.error('Test failed');
         }
 
         saucelabs.updateJob(driver.sessionID, {
@@ -810,9 +818,9 @@ Now we've got the server running, let's create a demo test that will run on the 
 
     ```js
     let driver = new webdriver.Builder()
-        .forBrowser('firefox')
-        .usingServer('http://localhost:4444/wd/hub')
-        .build();
+      .forBrowser('firefox')
+      .usingServer('http://localhost:4444/wd/hub')
+      .build();
     ```
 
 3. Run your test, and you should see it run as expected; this time however you will be running it on the standalone server:

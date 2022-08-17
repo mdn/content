@@ -184,7 +184,7 @@ function alertContents() {
       }
     }
   } catch (e) {
-    alert('Caught Exception: ' + e.description);
+    alert(`Caught Exception: ${e.description}`);
   }
 }
 ```

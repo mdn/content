@@ -5,7 +5,7 @@ page-type: web-api-constructor
 tags:
   - API
   - CSS
-  - CSS3 Transitions
+  - CSS Transitions
   - CSSOM
   - Constructor
   - Reference

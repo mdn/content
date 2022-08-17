@@ -9,7 +9,6 @@ tags:
   - Media
   - Media Source Extensions
   - Method
-  - Experimental
   - Non-standard
   - Reference
   - SourceBuffer
@@ -17,7 +16,7 @@ tags:
   - removeAsync
 browser-compat: api.SourceBuffer.removeAsync
 ---
-{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{non-standard_header}}
 
 The **`removeAsync()`** method of the
 {{domxref("SourceBuffer")}} interface starts the process of asynchronously removing

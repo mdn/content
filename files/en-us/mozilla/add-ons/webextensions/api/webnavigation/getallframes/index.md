@@ -63,29 +63,30 @@ This code logs the URLs of all frames in the active tab, when the user clicks a 
 
 ```js
 function logFrameInfo(framesInfo) {
-  for (frameInfo of framesInfo) {
+  for (const frameInfo of framesInfo) {
     console.log(frameInfo);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 function logAllFrames(tabs) {
-  let gettingAllFrames = browser.webNavigation.getAllFrames({tabId: tabs[0].id});
-  gettingAllFrames.then(logFrameInfo, onError);
+  browser.webNavigation
+    .getAllFrames({
+      tabId: tabs[0].id,
+    })
+    .then(logFrameInfo, onError);
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
-  let querying = browser.tabs.query({
-    currentWindow: true,
-    active: true
-  });
-
-  querying.then(logAllFrames, onError);
-
+  browser.tabs
+    .query({
+      currentWindow: true,
+      active: true,
+    })
+    .then(logAllFrames, onError);
 });
 ```
 

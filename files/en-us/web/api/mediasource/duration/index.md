@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - MediaSource
@@ -15,7 +14,7 @@ tags:
   - duration
 browser-compat: api.MediaSource.duration
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`duration`** property of the {{domxref("MediaSource")}}
 interface gets and sets the duration of the current media being presented.

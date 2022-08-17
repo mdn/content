@@ -21,7 +21,7 @@ req.onload = (event) => {
   const arrayBuffer = req.response; // Note: not req.responseText
   if (arrayBuffer) {
     const byteArray = new Uint8Array(arrayBuffer);
-    for (let i = 0; i < byteArray.byteLength; i++) {
+    byteArray.forEach((element, index)) => {
       // do something with each byte in the array
     }
   }
@@ -97,12 +97,8 @@ You can send JavaScript typed arrays as binary data as well.
 
 ```js
 const array = new ArrayBuffer(512);
-const longInt8View = new Uint8Array(array);
-
-// generate some data
-for (let i=0; i< longInt8View.length; i++) {
-  longInt8View[i] = i % 256;
-}
+// Create a new array with fake data (Consecutive numbers (0 - 255), looping back to 0) 
+const longInt8View = Uint8Array.from(array, (v, i) => i % 256);
 
 const xhr = new XMLHttpRequest;
 xhr.open("POST", url, false);

@@ -52,7 +52,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{htmlattrdef("disableremoteplayback")}} {{experimental_inline}}
 
-  - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc). See [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) for more information.
+  - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.). See [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) for more information.
 
     > **Note:** In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
@@ -243,7 +243,7 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Formats/C
 <audio controls>
   <source src="myAudio.mp3" type="audio/mpeg">
   <source src="myAudio.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is
+  <p>Your browser doesn't support HTML audio. Here is
      a <a href="myAudio.mp3">link to the audio</a> instead.</p>
 </audio>
 ```
@@ -373,7 +373,7 @@ Also it's a good practice to provide some content (such as the direct download l
   <source src="myAudio.mp3" type="audio/mpeg">
   <source src="myAudio.ogg" type="audio/ogg">
   <p>
-    Your browser doesn't support HTML5 audio.
+    Your browser doesn't support HTML audio.
     Here is a <a href="myAudio.mp3">link to download the audio</a> instead.
   </p>
 </audio>

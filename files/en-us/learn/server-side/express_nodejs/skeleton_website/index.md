@@ -48,7 +48,7 @@ The following sections show you how to call the application generator, and provi
 
 ## Using the application generator
 
-You should already have installed the generator as part of [setting up a Node development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment). As a quick reminder, you install the generator tool site-wide using the NPM package manager, as shown:
+You should already have installed the generator as part of [setting up a Node development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment). As a quick reminder, you install the generator tool site-wide using the npm package manager, as shown:
 
 ```bash
 npm install express-generator -g
@@ -253,7 +253,7 @@ If you open your project's **package.json** file you'll now see a new section wi
 }
 ```
 
-Because the tool isn't installed globally we can't launch it from the command line (unless we add it to the path) but we can call it from an NPM script because NPM knows all about the installed packages. Find the `scripts` section of your package.json. Initially, it will contain one line, which begins with `"start"`. Update it by putting a comma at the end of that line, and adding the `"devstart"` and `"serverstart"` lines:
+Because the tool isn't installed globally we can't launch it from the command line (unless we add it to the path) but we can call it from an npm script because npm knows all about the installed packages. Find the `scripts` section of your package.json. Initially, it will contain one line, which begins with `"start"`. Update it by putting a comma at the end of that line, and adding the `"devstart"` and `"serverstart"` lines:
 
 - On Linux and macOS, the scripts section will look like this:
 
@@ -275,7 +275,7 @@ We can now start the server in almost exactly the same way as previously, but us
 
 > **Note:** Now if you edit any file in the project the server will restart (or you can restart it by typing `rs` on the command prompt at any time). You will still need to reload the browser to refresh the page.
 >
-> We now have to call "`npm run <scriptname>`" rather than just `npm start`, because "start" is actually an NPM command that is mapped to the named script. We could have replaced the command in the _start_ script but we only want to use _nodemon_ during development, so it makes sense to create a new script command.
+> We now have to call "`npm run <scriptname>`" rather than just `npm start`, because "start" is actually an npm command that is mapped to the named script. We could have replaced the command in the _start_ script but we only want to use _nodemon_ during development, so it makes sense to create a new script command.
 >
 > The `serverstart` command added to the scripts in the **package.json** above is a very good example. Using this approach means you no longer have to type a long command to start the server. Note that the particular command added to the script works for macOS or Linux only.
 
@@ -373,7 +373,7 @@ The file **/bin/www** is the application entry point! The very first thing this 
  * Module dependencies.
  */
 
-var app = require('../app');
+const app = require('../app');
 ```
 
 > **Note:** `require()` is a global node function that is used to import modules into the current file. Here we specify **app.js** module using a relative path and omitting the optional (.**js**) file extension.
@@ -385,29 +385,29 @@ The remainder of the code in this file sets up a node HTTP server with `app` set
 This file creates an `express` application object (named `app`, by convention), sets up the application with various settings and middleware, and then exports the app from the module. The code below shows just the parts of the file that create and export the app object:
 
 ```js
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 // …
 module.exports = app;
 ```
 
 Back in the **www** entry point file above, it is this `module.exports` object that is supplied to the caller when this file is imported.
 
-Let's work through the **app.js** file in detail. First, we import some useful node libraries into the file using `require()`, including _http-errors_, *express*, *morgan* and _cookie-parser_ that we previously downloaded for our application using NPM; and _path_, which is a core Node library for parsing file and directory paths.
+Let's work through the **app.js** file in detail. First, we import some useful node libraries into the file using `require()`, including _http-errors_, *express*, *morgan* and _cookie-parser_ that we previously downloaded for our application using npm; and _path_, which is a core Node library for parsing file and directory paths.
 
 ```js
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 ```
 
 Then we `require()` modules from our routes directory. These modules/files contain code for handling particular sets of related "routes" (URL paths). When we extend the skeleton application, for example to list all books in the library, we will add a new file for dealing with book-related routes.
 
 ```js
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 ```
 
 > **Note:** At this point, we have just _imported_ the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
@@ -415,7 +415,7 @@ var usersRouter = require('./routes/users');
 Next, we create the `app` object using our imported _express_ module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First, we set the '`views`' value to specify the folder where the templates will be stored (in this case the subfolder **/views**). Then we set the '`view engine`' value to specify the template library (in this case "pug").
 
 ```js
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -449,12 +449,12 @@ The last middleware in the file adds handler methods for errors and HTTP 404 res
 
 ```js
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -478,11 +478,11 @@ First, it loads the _express_ module and uses it to get an `express.Router` obje
 Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into **app.js**).
 
 ```js
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
   res.send('respond with a resource');
 });
 
@@ -501,7 +501,7 @@ The views (templates) are stored in the **/views** directory (as specified in **
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
   res.render('index', { title: 'Express' });
 });
 ```

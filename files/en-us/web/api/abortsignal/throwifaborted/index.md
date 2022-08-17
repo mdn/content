@@ -41,7 +41,7 @@ The examples below come from the specification.
 
 This example demonstrates how you can use `throwIfAborted()` to abort a polling operation.
 
-Consider an asynchronous `waitForCondition()` function that is called with another asynchronous function "`func`", a target value "`targetValue`, and an `AbortSignal`.
+Consider an asynchronous `waitForCondition()` function that is called with another asynchronous function `func`, a target value `targetValue`, and an `AbortSignal`.
 The method compares the result of `func` with `targetValue` in a loop, returning when they match.
 
 ```js

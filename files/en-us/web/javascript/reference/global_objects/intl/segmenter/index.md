@@ -44,7 +44,6 @@ const str = "吾輩は猫である。名前はたぬき。";
 console.table(str.split(" "));
 // ['吾輩は猫である。名前はたぬき。']
 // The two sentences are not correctly segmented.
-
 ```
 
 ```js example-good

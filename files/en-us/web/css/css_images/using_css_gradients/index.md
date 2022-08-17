@@ -823,5 +823,5 @@ div {
 - Gradient-related CSS data types: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
 - Gradient-related CSS properties: {{cssxref("background")}}, {{cssxref("background-image")}}
 - [CSS Gradients Patterns Gallery, by Lea Verou](https://projects.verou.me/css3patterns/)
-- [CSS3 Gradients Library, by Estelle Weyl](http://standardista.com/cssgradients/)
+- [CSS Gradients Library, by Estelle Weyl](http://standardista.com/cssgradients/)
 - [Gradient CSS Generator](https://cssgenerator.org/gradient-css-generator.html)

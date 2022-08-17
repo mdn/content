@@ -71,7 +71,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.
 - {{htmlattrdef("disableremoteplayback")}} {{experimental_inline}}
 
-  - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc).
+  - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.).
 
     In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
@@ -282,7 +282,7 @@ Browsers don't all support the same video formats; you can provide multiple sour
 <video controls>
   <source src="myVideo.webm" type="video/webm">
   <source src="myVideo.mp4" type="video/mp4">
-  <p>Your browser doesn't support HTML5 video. Here is
+  <p>Your browser doesn't support HTML video. Here is
      a <a href="myVideo.mp4">link to the video</a> instead.</p>
 </video>
 ```
@@ -294,7 +294,7 @@ Other usage notes:
 - If you don't specify the `controls` attribute, the video won't include the browser's default controls; you can create your own custom controls using JavaScript and the {{domxref("HTMLMediaElement")}} API. See [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) for more details.
 - To allow precise control over your video (and audio) content, `HTMLMediaElement`s fire many different [events](/en-US/docs/Web/API/HTMLMediaElement#events). In addition to providing controllability, these events let you monitor the progress of both download and playback of the media, as well as the playback state and position.
 - You can use the {{cssxref("object-position")}} property to adjust the positioning of the video within the element's frame, and the {{cssxref("object-fit")}} property to control how the video's size is adjusted to fit within the frame.
-- To show subtitles/captions along with your video, you can use some JavaScript along with the {{htmlelement("track")}} element and the [WebVTT](/en-US/docs/Web/API/WebVTT_API) format. See [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information.
+- To show subtitles/captions along with your video, you can use some JavaScript along with the {{htmlelement("track")}} element and the [WebVTT](/en-US/docs/Web/API/WebVTT_API) format. See [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information.
 - You can play audio files using a `<video>` element. This can be useful if, for example, you need to perform audio with a [WebVTT](/en-US/docs/Web/API/WebVTT_API) transcript, since the {{HTMLElement("audio")}} element doesn't allow captions using WebVTT.
 - To test the fallback content on browsers that support the element, you can replace `<video>` with a non-existing element like `<notavideo>`.
 
@@ -407,7 +407,7 @@ This example builds on the last one, offering three different sources for the me
     src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     type="video/mp4">
 
-  Your browser doesn't support HTML5 video tag.
+  Your browser doesn't support HTML video tag.
 </video>
 ```
 
@@ -421,7 +421,7 @@ Some media file types let you provide more specific information using the [`code
 
 ## Accessibility concerns
 
-Videos should provide both captions and transcripts that accurately describe its content (see [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
+Videos should provide both captions and transcripts that accurately describe its content (see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
 
 It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a {{HTMLElement("video")}} element, since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
 
@@ -536,6 +536,6 @@ Captions should not obstruct the main subject of the video. They can be position
 
 - Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - {{htmlelement("audio")}}
-- [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Configuring servers for Ogg media](/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media)

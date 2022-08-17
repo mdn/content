@@ -21,7 +21,7 @@ The {{ domxref("Touch.radiusX") }}, {{ domxref("Touch.radiusY") }}, and {{ domxr
 
 ## Constructor
 
-- {{domxref("Touch.Touch", "Touch()")}} {{experimental_inline}}
+- {{domxref("Touch.Touch", "Touch()")}}
   - : Creates a Touch object.
 
 ## Properties
@@ -49,15 +49,13 @@ _This interface has no parent, and doesn't inherit or implement other properties
 
 ### Touch area
 
-{{SeeCompatTable}}
-
-- {{domxref("Touch.radiusX")}} {{readonlyInline}} {{experimental_inline}}
+- {{domxref("Touch.radiusX")}} {{readonlyInline}}
   - : Returns the X radius of the ellipse that most closely circumscribes the area of contact with the screen. The value is in pixels of the same scale as `screenX`.
-- {{domxref("Touch.radiusY")}} {{readonlyInline}} {{experimental_inline}}
+- {{domxref("Touch.radiusY")}} {{readonlyInline}}
   - : Returns the Y radius of the ellipse that most closely circumscribes the area of contact with the screen. The value is in pixels of the same scale as `screenY`.
-- {{domxref("Touch.rotationAngle")}} {{readonlyInline}} {{experimental_inline}}
+- {{domxref("Touch.rotationAngle")}} {{readonlyInline}}
   - : Returns the angle (in degrees) that the ellipse described by radiusX and radiusY must be rotated, clockwise, to most accurately cover the area of contact between the user and the surface.
-- {{domxref("Touch.force")}} {{readonlyInline}} {{experimental_inline}}
+- {{domxref("Touch.force")}} {{readonlyInline}}
   - : Returns the amount of pressure being applied to the surface by the user, as a `float` between `0.0` (no pressure) and `1.0` (maximum pressure).
 
 ## Methods

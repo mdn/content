@@ -382,6 +382,6 @@ When the game over screen is visible, the `Start` button restarts the game while
 
 That's it! We have successfully implemented gamepad controls in our game — try connecting any popular controller like the XBox 360 one and see for yourself how fun it is to avoid the asteroids and shoot the aliens with a gamepad.
 
-Now we can move on and explore new, even more unconventional ways to control the HTML5 game like waving your hand in front of the laptop or screaming into your microphone.
+Now we can move on and explore new, even more unconventional ways to control the HTML game like waving your hand in front of the laptop or screaming into your microphone.
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms/Other", "Games/Techniques/Control_mechanisms")}}

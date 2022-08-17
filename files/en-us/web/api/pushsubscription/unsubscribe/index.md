@@ -4,7 +4,6 @@ slug: Web/API/PushSubscription/unsubscribe
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Push
   - Push API
@@ -14,7 +13,7 @@ tags:
   - unsubscribe
 browser-compat: api.PushSubscription.unsubscribe
 ---
-{{SeeCompatTable}}{{APIRef("Push API")}}
+{{APIRef("Push API")}}
 
 The `unsubscribe()` method of the {{domxref("PushSubscription")}} interface
 returns a {{jsxref("Promise")}} that resolves to a boolean value when the

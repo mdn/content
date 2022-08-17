@@ -51,7 +51,7 @@ It can also be converted with using an array literal. This method is shorter tha
 const args2 = [].slice.call(arguments);
 ```
 
-As you can do with any Array-like object, you can use ES2015's {{jsxref("Array.from()")}} method or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to convert `arguments` to a real Array:
+As you can do with any Array-like object, you can use {{jsxref("Array.from()")}} method or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to convert `arguments` to a real Array:
 
 ```js
 const args = Array.from(arguments);

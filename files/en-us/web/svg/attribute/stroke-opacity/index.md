@@ -8,7 +8,7 @@ browser-compat: svg.attributes.presentation.stroke-opacity
 ---
 {{SVGRef}}
 
-The **`stroke-opacity`** attribute is a presentation attribute defining the opacity of the paint server (*color*, *gradient*, *pattern*, etc) applied to the stroke of a shape.
+The **`stroke-opacity`** attribute is a presentation attribute defining the opacity of the paint server (*color*, *gradient*, *pattern*, etc.) applied to the stroke of a shape.
 
 > **Note:** As a presentation attribute `stroke-opacity` can be used as a CSS property.
 

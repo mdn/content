@@ -12,7 +12,7 @@ tags:
 
 ## Syntax
 
-```js
+```plain
 str:concat(nodeSet)
 ```
 

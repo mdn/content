@@ -218,41 +218,40 @@ For greater specificity in checking types, here we present a custom `type(value)
 
 ```js
 function type(value) {
-  if (typeof value !== "object" && typeof value !== "function") {
-    return typeof value;
-  }
   if (value === null) {
     return "null";
   }
+  const baseType = typeof value;
+  // Primitive types
+  if (!["object", "function"].includes(baseType)) {
+    return baseType;
+  }
 
+  // Symbol.toStringTag often specifies the "display name" of the
+  // object's class. It's used in Object.prototype.toString().
+  const tag = value[Symbol.toStringTag];
+  if (typeof tag === "string") {
+    return tag;
+  }
+
+  // If it's a function whose source code starts with the "class" keyword
   if (
-    Object.getPrototypeOf(value) === Function.prototype &&
-    /^class/.test(String(value))
+    baseType === "function" &&
+    Function.prototype.toString.call(value).startsWith("class")
   ) {
     return "class";
   }
 
-  // Symbol.toStringTag often specifies the "display name" of the
-  // object's class.
-  if (
-    Symbol.toStringTag in value &&
-    typeof value[Symbol.toStringTag] === "string"
-  ) {
-    return value[Symbol.toStringTag];
-  }
-
   // The name of the constructor; for example `Array`, `GeneratorFunction`,
-  // `Number`, `String`, `Boolean` or `MyCustomObject`
-  if (
-    typeof value.constructor.name === "string" &&
-    value.constructor.name !== ""
-  ) {
-    return value.constructor.name;
+  // `Number`, `String`, `Boolean` or `MyCustomClass`
+  const className = value.constructor.name;
+  if (typeof className === "string" && className !== "") {
+    return className;
   }
 
   // At this point there's no robust way to get the type of value,
   // so we use the base implementation.
-  return typeof value;
+  return baseType;
 }
 ```
 

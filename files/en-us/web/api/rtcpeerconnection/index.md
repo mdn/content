@@ -138,7 +138,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCPeerConnection.close", "close()")}}
   - : Closes the current peer connection.
 - {{DOMxRef("RTCPeerConnection.createAnswer", "createAnswer()")}}
-  - : Initiates the creation an {{Glossary("SDP")}} answer
+  - : Initiates the creation of an {{Glossary("SDP")}} answer
     to an offer received from a remote peer
     during the offer/answer negotiation of a WebRTC connection.
     The answer contains information
@@ -300,5 +300,5 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 ## See also
 
 - <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
-- [http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple](https://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple)
-- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML5 video capture, peer-to-peer video and filesharing application ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
+- [Get started with WebRTC](https://web.dev/webrtc-basics/)
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML video capture, peer-to-peer video and filesharing application ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))

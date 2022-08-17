@@ -69,7 +69,7 @@ There's also a [small online demo](https://end3r.github.io/JavaScript-Game-Contr
 
 ## The articles
 
-JavaScript is the perfect choice for mobile gaming because of HTML5 being truly multiplatform; all of the following articles focus on the APIs provided for interfacing with different control mechanisms:
+JavaScript is the perfect choice for mobile gaming because of HTML being truly multiplatform; all of the following articles focus on the APIs provided for interfacing with different control mechanisms:
 
 1. [Mobile touch controls](/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch) — The first article will kick off with touch, as the mobile first approach is very popular.
 2. [Desktop mouse and keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) — When playing on a desktop/laptop computer, providing keyboard and mouse controls is essential to provide an acceptable level of accessibility for the game.

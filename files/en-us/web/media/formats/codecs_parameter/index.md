@@ -25,7 +25,7 @@ This guide briefly examines the syntax of the media type `codecs` parameter and 
 
 ## General syntax
 
-A basic MIME media type is expressed by stating the type of media (`audio`, `video`, etc), then a slash character (`/`), then the container format used to contain the media:
+A basic MIME media type is expressed by stating the type of media (`audio`, `video`, etc.), then a slash character (`/`), then the container format used to contain the media:
 
 - `audio/mpeg`
   - : An audio file using the [MPEG](/en-US/docs/Web/Media/Formats/Containers#mpeg) file type, such as an MP3.

@@ -58,8 +58,8 @@ This expression represents an HTML [`<header>`](/en-US/docs/Web/HTML/Element/hea
 When used with React, the JSX from the previous snippet would be compiled into this:
 
 ```js
-var subject = "World";
-var header = React.createElement("header", null,
+const subject = "World";
+const header = React.createElement("header", null,
   React.createElement("h1", null, "Hello, ", subject, "!")
 );
 ```

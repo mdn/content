@@ -107,7 +107,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
           </li>
           <li>
             Blog posts and comments need only display plain text.
-            There is no need to support any sort of HTML markup (e.g. links, images, bold/italic, etc).
+            There is no need to support any sort of HTML markup (e.g. links, images, bold/italic, etc.).
           </li>
         </ul>
       </td>

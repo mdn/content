@@ -217,26 +217,26 @@ function addgamepad(gamepad) {
 
   const b = document.createElement("div");
   b.className = "buttons";
-  for (let i = 0; i < gamepad.buttons.length; i++) {
+  gamepad.buttons.forEach((button, i) => {
     const e = document.createElement("span");
     e.className = "button";
     e.textContent = i;
     b.appendChild(e);
-  }
+  });
 
   d.appendChild(b);
 
   const a = document.createElement("div");
   a.className = "axes";
 
-  for (let i = 0; i < gamepad.axes.length; i++) {
+  gamepad.axes.forEach((axis, i) => {
     const p = document.createElement("progress");
     p.className = "axis";
     p.setAttribute("max", "2");
     p.setAttribute("value", "1");
     p.textContent = i;
     a.appendChild(p);
-  }
+  });
 
   d.appendChild(a);
 
@@ -265,37 +265,32 @@ function updateStatus() {
     scangamepads();
   }
 
-  for (const j in controllers) {
-    const controller = controllers[j];
-    const d = document.getElementById(`controller${j}`);
+  controllers.forEach((controller, i) => {
+    const d = document.getElementById(`controller${i}`);
     const buttons = d.getElementsByClassName("button");
 
-    for (let i = 0; i < controller.buttons.length; i++) {
+    controller.buttons.forEach((button, i) => {
       const b = buttons[i];
-      let val = controller.buttons[i];
-      let pressed = val === 1.0;
-      if (typeof val === "object") {
+      let pressed = button === 1.0;
+      let val = button;
+
+      if (typeof button === "object") {
         pressed = val.pressed;
         val = val.value;
       }
 
       const pct = `${Math.round(val * 100)}%`;
       b.style.backgroundSize = `${pct} ${pct}`;
-
-      if (pressed) {
-        b.className = "button pressed";
-      } else {
-        b.className = "button";
-      }
-    }
+      b.className = pressed ? "button pressed" : "button";
+    });
 
     const axes = d.getElementsByClassName("axis");
-    for (let i = 0; i < controller.axes.length; i++) {
+    controller.axes.forEach((axis, i) => {
       const a = axes[i];
-      a.textContent = `${i}: ${controller.axes[i].toFixed(4)}`;
-      a.setAttribute("value", controller.axes[i] + 1);
-    }
-  }
+      a.textContent = `${i}: ${controller.axis.toFixed(4)}`;
+      a.setAttribute("value", controller.axis + 1);
+    });
+  });
 
   requestAnimationFrame(updateStatus);
 }

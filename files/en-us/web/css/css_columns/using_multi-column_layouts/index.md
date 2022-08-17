@@ -59,7 +59,7 @@ The `column-count` property sets the number of columns to a particular number. E
 
 ### Result
 
-Will display the content in two columns (if you're using a multi-column compliant browser):
+The content will be displayed in two columns (if you're using a multi-column compliant browser):
 
 {{EmbedLiveSample("Example_1", "100%")}}
 
@@ -195,7 +195,7 @@ The two CSS declarations `column-width: 8em` and `column-count: 12` can be repla
 
 ### Height Balancing
 
-The CSS3 Column specification requires that the column heights must be balanced: that is, the browser automatically sets the maximum column height so that the heights of the content in each column are approximately equal. Firefox does this.
+CSS columns require that the column heights must be balanced: that is, the browser automatically sets the maximum column height so that the heights of the content in each column are approximately equal. Firefox does this.
 
 However, in some situations it is also useful to set the maximum height of the columns explicitly, and then lay out content starting at the first column and creating as many columns as necessary, possibly overflowing to the right. Therefore, if the height is constrained, by setting the CSS {{cssxref("height")}} or {{cssxref("max-height")}} properties on a multi-column block, each column is allowed to grow to that height and no further before adding new column. This mode is also much more efficient for layout.
 
@@ -239,4 +239,4 @@ The column properties will just be ignored by non-columns-supporting browsers. T
 
 ## Conclusion
 
-CSS3 columns are a layout primitive that will help Web developers make the best use of screen real estate. Imaginative developers may find many uses for them, especially with the automatic height balancing feature.
+CSS columns are a layout primitive that will help Web developers make the best use of screen real estate. Imaginative developers may find many uses for them, especially with the automatic height balancing feature.

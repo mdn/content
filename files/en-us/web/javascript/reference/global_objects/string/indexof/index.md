@@ -107,7 +107,7 @@ The following example uses `indexOf()` to locate substrings in the string
 const str = 'Brave new world';
 
 console.log(`Index of first w from start is ${str.indexOf('w')}`); // logs 8
-console.log(`Index of "new" from start is ${ str.indexOf('new')}`); // logs 6
+console.log(`Index of "new" from start is ${str.indexOf('new')}`); // logs 6
 ```
 
 ### indexOf() and case-sensitivity

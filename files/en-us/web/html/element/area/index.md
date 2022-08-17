@@ -144,7 +144,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : Indicates that no hyperlink exists for the associated area.
 
-    > **Note:** Since HTML5, omitting the `href` attribute is sufficient.
+    > **Note:** The `nohref` attribute is not necessary, as omitting the `href` attribute is sufficient.
 
 - {{htmlattrdef("type")}} {{deprecated_inline}}
   - : Hint for the type of the referenced resource. Ignored by browsers.

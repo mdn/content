@@ -626,9 +626,9 @@ This is explained further on the {{jsxref("Array.length")}} page.
 
 ### Creating an array using the result of a match
 
-The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array that has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.exec()")}} and {{jsxref("String.match()")}}.
+The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array that has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}}.
 
-To help explain these properties and elements, see the following example and then refer to the table below:
+For example:
 
 ```js
 // Match one d followed by one or more b's followed by one d
@@ -636,50 +636,14 @@ To help explain these properties and elements, see the following example and the
 // Ignore case
 
 const myRe = /d(b+)(d)/i;
-const myArray = myRe.exec('cdbBdbsbz');
+const execResult = myRe.exec('cdbBdbsbz');
+
+console.log(execResult.input); // 'cdbBdbsbz'
+console.log(execResult.index); // 1
+console.log(execResult); // Array(3) [ "dbBd", "bB", "d" ]
 ```
 
-The properties and elements returned from this match are as follows:
-
-<table class="fullwidth-table standard-table">
-  <thead>
-    <tr>
-      <th class="header" scope="col">Property/Element</th>
-      <th class="header" scope="col">Description</th>
-      <th class="header" scope="col">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>input</code><br />{{ReadOnlyInline}}</td>
-      <td>
-        The original string against which the regular expression was matched.
-      </td>
-      <td><code>"cdbBdbsbz"</code></td>
-    </tr>
-    <tr>
-      <td><code>index</code><br />{{ReadOnlyInline}}</td>
-      <td>The zero-based index of the match in the string.</td>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <td><code>[0]</code><br />{{ReadOnlyInline}}</td>
-      <td>The last matched characters.</td>
-      <td><code>"dbBd"</code></td>
-    </tr>
-    <tr>
-      <td><code>[1], …[n]</code><br />{{ReadOnlyInline}}</td>
-      <td>
-        Elements that specify the parenthesized substring matches (if included)
-        in the regular expression. The number of possible parenthesized
-        substrings is unlimited.
-      </td>
-      <td>
-        <code>[1]: "bB"<br />[2]: "d"</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+For more information about the result of a match, see the {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}} pages.
 
 ## Specifications
 

@@ -254,7 +254,6 @@ Here we first create an {{HTMLElement("h1")}} element with [`createElement()`](/
 Next, add the following function at the bottom of the code, which creates and displays the superhero cards:
 
 ```js
-
 function populateHeroes(obj) {
   const section = document.querySelector('section');
   const heroes = obj.members;

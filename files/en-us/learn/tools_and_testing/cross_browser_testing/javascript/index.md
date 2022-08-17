@@ -128,7 +128,7 @@ If you look at the console, you'll see the error message "Uncaught TypeError: ca
 function showHeroes(jsonObj) {
   let heroes = jsonObj['members'];
 
-  for(i = 0; i < heroes.length; i++) {
+  for (const hero of heroes) {
     // …
    }
 
@@ -158,7 +158,7 @@ You may already know what is wrong with this code, but let's explore it some mor
 Try inserting the following line just below line 31 (bolded above):
 
 ```js
-console.log('Response value: ' + superHeroes);
+console.log('Response value: ', superHeroes);
 ```
 
 Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before
@@ -277,7 +277,7 @@ The idea behind feature detection is that you can run a test to determine whethe
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.getCurrentPosition((position) => {
     // show the location on a map, perhaps using the Google Maps API
   });
 } else {
@@ -302,7 +302,7 @@ JavaScript libraries tend to come in a few main varieties (some libraries will s
 - Utility libraries: Provide a bunch of functions to make mundane tasks easier and less boring to manage. [jQuery](https://jquery.com/) for example provides its own fully-featured selectors and DOM manipulation libraries, to allow CSS-selector type selecting of elements in JavaScript and easier DOM building. It is not so important now we have modern features like {{domxref("Document.querySelector()")}}/{{domxref("Document.querySelectorAll()")}}/{{domxref("Node")}} methods available across browsers, but it can still be useful when older browsers need supporting.
 - Convenience libraries: Make difficult things easier to do. For example, the [WebGL API](/en-US/docs/Web/API/WebGL_API) is really complex and challenging to use when you write it directly, so the [Three.js](https://threejs.org/) library (and others) is built on top of WebGL and provides a much easier API for creating common 3D objects, lighting, textures, etc.
   The [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) is also very complex to use, so code libraries have started appearing to make common Service Worker uses-cases much easier to implement (see the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) for several useful code samples).
-- Effects libraries: These libraries are designed to allow you to easily add special effects to your websites. This was more useful back when "DHTML" was a popular buzzword, and implementing an effect involved a lot of complex JavaScript, but these days browsers have a lot of built in CSS3 features and APIs to implementing effects more easily.
+- Effects libraries: These libraries are designed to allow you to easily add special effects to your websites. This was more useful back when "DHTML" was a popular buzzword, and implementing an effect involved a lot of complex JavaScript, but these days browsers have a lot of built in CSS features and APIs to implementing effects more easily.
 - UI libraries: Provide methods for implementing complex UI features that would otherwise be challenging to implement and get working cross browser, for example [Foundation](https://get.foundation/), [Bootstrap](https://getbootstrap.com/), and [Material-UI](https://mui.com/) (the latter is a set of components for use with the React framework). These tend to be used as the basis of an entire site layout; it is often difficult to drop them in just for one UI feature.
 - Normalization libraries: Give you a simple syntax that allows you to easily complete a task without having to worry about cross browser differences. The library will manipulate appropriate APIs in the background so the functionality will work whatever the browser (in theory). For example, [LocalForage](https://github.com/localForage/localForage) is a library for client-side data storage, which provides a simple syntax for storing and retrieving data. In the background, it uses the best API the browser has available for storing the data, whether that is [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), or even WebSQL (which is now deprecated, but is still supported in some older versions of Safari/IE). As another example, jQuery
 
@@ -333,11 +333,11 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
 4. Inside the original {{htmlelement("script")}}, add the following code:
 
 5. ```js
-    var myImage = document.querySelector('.my-image');
+    const myImage = document.querySelector('.my-image');
 
-    fetch('flowers.jpg').then(function(response) {
-      response.blob().then(function(myBlob) {
-        var objectURL = URL.createObjectURL(myBlob);
+    fetch('flowers.jpg').then((response) => {
+      response.blob().then((myBlob) => {
+        const objectURL = URL.createObjectURL(myBlob);
         myImage.src = objectURL;
       });
     });
@@ -380,11 +380,11 @@ Here we are testing whether the [`Promise`](/en-US/docs/Web/JavaScript/Reference
 function loadScript(src, done) {
   const js = document.createElement('script');
   js.src = src;
-  js.onload = function() {
+  js.onload = () => {
     done();
   };
-  js.onerror = function() {
-    done(new Error('Failed to load script ' + src));
+  js.onerror = () => {
+    done(new Error(`Failed to load script ${src}`));
   };
   document.head.appendChild(js);
 }

@@ -23,8 +23,8 @@ A string containing the version of the port.
 The following example loops through all input ports and prints the version of each to the console.
 
 ```js
-for (let entry of midiAccess.inputs) {
-  let input = entry[1];
+for (const entry of midiAccess.inputs) {
+  const input = entry[1];
   console.log(input.version);
 }
 ```

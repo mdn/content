@@ -462,15 +462,15 @@ You can alternatively manually construct a test URL like this — `http://127.0.
 
 If you are successful, the default form will look like this:
 
-![](forms_example_renew_default.png)
+![Default form which displays the book details, due date, renewal date and a submit button appears in case the link works successfully](forms_example_renew_default.png)
 
 The form with an invalid value entered will look like this:
 
-![](forms_example_renew_invalid.png)
+![Same form as above with an error message: invalid date - renewal in the past](forms_example_renew_invalid.png)
 
 The list of all books with renew links will look like this:
 
-![](forms_example_renew_allbooks.png)
+![Displays list of all renewed books along with their details. Past due is in red.](forms_example_renew_allbooks.png)
 
 ## ModelForms
 
@@ -652,13 +652,13 @@ You can test editing records by appending _/update/_ to the end of the detail vi
 
 Finally, we can delete the page by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press "**Yes, delete.**" to remove the record and be taken to the list of all authors.
 
-![](forms_example_delete_author.png)
+![Form with option to delete author](forms_example_delete_author.png)
 
 ## Challenge yourself
 
 Create some forms to create, edit, and delete `Book` records. You can use exactly the same structure as for `Authors`. If your **book_form.html** template is just a copy-renamed version of the **author_form.html** template, then the new "create book" page will look like the screenshot below:
 
-![](forms_example_create_book.png)
+![Screenshot displaying various fields in the form like title, author, summary, ISBN, genre and language](forms_example_create_book.png)
 
 ## Summary
 

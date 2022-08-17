@@ -52,6 +52,6 @@ Now our users can make a call, but they can't answer one. Let's add the next pie
 
 3. The code you have now is enough for you to create a call and answer it. Refresh your browsers and test it out. You'll want to make sure that both browsers have the console open or else you won't get the prompt to answer the call. Click call, submit the peer ID for the other browser and then answer the call. The final page should look like this:
 
-    ![Two screens side by side both have a cream background with the words 'phone a friend' in bold, dark green font as the heading. 'You're connected.' is immediately below that and 'please use headphones!' and 'You're automatically muted, please unmute yourself!' below that. Following on, a big dark red button with 'Hang up' written in the same cream color of the background.](1kbts6k_efhtujwuundg2cq.png)
+    ![Two screens side by side both have a cream background with the words 'phone a friend' in bold, dark green font as the heading. 'You're connected' is immediately below that and 'please use headphones!' and 'You're automatically muted, please unmute yourself!' below that. Following on, a big dark red button with 'Hang up' written in the same cream color of the background.](1kbts6k_efhtujwuundg2cq.png)
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}

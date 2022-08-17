@@ -71,11 +71,11 @@ Events have three functions:
 
 ```js
 function handleMoved(id, moveInfo) {
-  console.log("Item: " + id + " moved");
-  console.log("Old index: " + moveInfo.oldIndex);
-  console.log("New index: " + moveInfo.index);
-  console.log("Old folder: " + moveInfo.oldParentId);
-  console.log("New folder: " + moveInfo.parentId);
+  console.log(`Item: ${id} moved`);
+  console.log(`Old index: ${moveInfo.oldIndex}`);
+  console.log(`New index: ${moveInfo.index}`);
+  console.log(`Old folder: ${moveInfo.oldParentId}`);
+  console.log(`New folder: ${moveInfo.parentId}`);
 }
 
 function handleClick() {

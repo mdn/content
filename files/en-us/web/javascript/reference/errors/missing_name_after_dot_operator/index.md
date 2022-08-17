@@ -61,6 +61,8 @@ obj["foo"]["bar"]; // "baz"
 
 // computed properties require square brackets
 obj.foo["bar" + i]; // "baz2"
+// or as template literal
+obj.foo[`bar${i}`]; // "baz2"
 ```
 
 ### Property access vs. concatenation

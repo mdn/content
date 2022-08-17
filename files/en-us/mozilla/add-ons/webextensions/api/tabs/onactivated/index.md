@@ -62,8 +62,7 @@ Listen for and log tab activation events:
 
 ```js
 function handleActivated(activeInfo) {
-  console.log("Tab " + activeInfo.tabId +
-              " was activated");
+  console.log(`Tab ${activeInfo.tabId} was activated`);
 }
 
 browser.tabs.onActivated.addListener(handleActivated);

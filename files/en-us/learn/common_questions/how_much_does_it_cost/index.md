@@ -21,8 +21,8 @@ Getting involved on the Web isn't as cheap as it looks. In this article we discu
         >, the difference between
         <a
           href="/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines"
-          >a webpage, a website, etc</a
-        >., and what
+          >a webpage, a website, etc.</a
+        >, and what
         <a href="/en-US/docs/Learn/Common_questions/What_is_a_domain_name"
           >a domain name is</a
         >.
