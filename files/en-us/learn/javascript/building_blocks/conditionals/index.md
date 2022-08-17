@@ -43,7 +43,7 @@ Human beings (and other animals) make decisions all the time that affect their l
 
 Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made (for example, "one cookie or two"), to the resulting outcome of those choices (perhaps the outcome of "ate one cookie" might be "still felt hungry", and the outcome of "ate two cookies" might be "felt full, but mom scolded me for eating all the cookies".)
 
-![The illustrations of a cartoon charactrer resembling a person and it is holding a cookie jar. The jar has a label that reads 'Cookies'. There is a question mark little above the top of the head of the character. There are two talk bubbles. The talk bubble on the left-hand side top corner has the illustration of one cookie. The talk bubble on the right-hand side top corner has an illustration of two cookies. All of these together imply that the character is trying to make a decision if it wants to eat one cookie or two cookies.](cookie-choice-small.png)
+![A cartoon character resembling a person holding a cookie jar labeled 'Cookies'. There is a question mark above the head of the character. There are two speech bubbles. The left speech bubble has one cookie. The right speech bubble has two cookies. Together it implies the character is trying to decide if it wants to one cookie or two cookies.](cookie-choice-small.png)
 
 ## if...else statements
 
