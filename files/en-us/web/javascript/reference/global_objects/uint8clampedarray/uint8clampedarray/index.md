@@ -31,6 +31,8 @@ new Uint8ClampedArray(buffer, byteOffset)
 new Uint8ClampedArray(buffer, byteOffset, length)
 ```
 
+> **Note:** `Uint8ClampedArray()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `length`
@@ -99,23 +101,6 @@ console.log(uintc8FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Uint8ClampedArray` constructors require to
-be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Uint8ClampedArray` constructor as a function without `new`, will
-throw a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Uint8ClampedArray([1, 2, 3]);
-// TypeError: calling a builtin Uint8ClampedArray constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Uint8ClampedArray([1, 2, 3]);
-```
 
 ## See also
 

@@ -31,15 +31,7 @@ new Int16Array(buffer, byteOffset)
 new Int16Array(buffer, byteOffset, length)
 ```
 
-## Description
-
-The `Int16Array` constructor requires being constructed with a {{jsxref("Operators/new", "new")}} operator. Calling the `Int16Array` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
-
-```js example-bad
-const dv = Int16Array([1, 2, 3]);
-// TypeError: calling a builtin Int16Array constructor
-// without new is forbidden
-```
+> **Note:** `Int16Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
