@@ -149,7 +149,7 @@ In our example:
 
   ```html
   <label for="guessField">Enter a guess: </label>
-  <input type="text" id="guessField" class="guessField">
+  <input type="number" id="guessField" class="guessField">
   <input type="submit" value="Submit guess" class="guessSubmit">
   ```
 
