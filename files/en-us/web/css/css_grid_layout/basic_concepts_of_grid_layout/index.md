@@ -17,7 +17,7 @@ A grid is a set of intersecting horizontal and vertical lines defining columns a
 
 ### Fixed and flexible track sizes
 
-You can create a grid with fixed track sizes – using pixels for example. This sets the grid to the specified pixel which fits to the layout you desire. You can also create a grid using flexible sizes with percentages or with the new `fr` unit designed for this purpose.
+You can create a grid with fixed track sizes – using pixels for example. This sets the grid to the specified pixel which fits to the layout you desire. You can also create a grid using flexible sizes with percentages or with the `fr` unit designed for this purpose.
 
 ### Item placement
 
