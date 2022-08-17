@@ -114,8 +114,6 @@ These resources are created by forward-thinking companies and web developers who
   - : CSS transitions provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn how to draw graphics using scripting using the canvas element.
-- [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
-  - How to control the cascade, specificity, and inheritance within developer styles using cascade layers.
 
 ## JavaScript Tutorials
 
