@@ -101,7 +101,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 
 ### Extensions for HTMLDocument
 
-_The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDocument")}} interface or, since HTML5, is extended for such documents._
+_The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDocument")}} interface or is extended for such documents._
 
 - {{DOMxRef("Document.cookie")}}
   - : Returns a semicolon-separated list of the cookies for that document or sets a single cookie.
@@ -275,7 +275,7 @@ The `Document` interface is extended with the {{DOMxRef("XPathEvaluator")}} inte
 
 ### Extension for HTML documents
 
-The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocument")}} interface or, since HTML5, is extended for such documents:
+The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocument")}} interface or is extended for such documents:
 
 - {{DOMxRef("Document.clear()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : In majority of modern browsers, including recent versions of Firefox and Internet Explorer, this method does nothing.
