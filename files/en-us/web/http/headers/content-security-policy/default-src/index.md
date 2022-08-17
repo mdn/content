@@ -75,16 +75,7 @@ Content-Security-Policy: default-src 'self'; script-src https://example.com
 is the same as:
 
 ```
-Content-Security-Policy: connect-src 'self';
-                         font-src 'self';
-                         frame-src 'self';
-                         img-src 'self';
-                         manifest-src 'self';
-                         media-src 'self';
-                         object-src 'self';
-                         script-src https://example.com;
-                         style-src 'self';
-                         worker-src 'self'
+Content-Security-Policy: connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; object-src 'self'; script-src https://example.com; style-src 'self'; worker-src 'self'
 ```
 
 ## Specifications
