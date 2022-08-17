@@ -36,7 +36,7 @@ onnotificationclose = (event) => { };
 
 ## Event type
 
-An {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("NotificationEvent")}}
 

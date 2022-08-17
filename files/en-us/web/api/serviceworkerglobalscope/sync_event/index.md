@@ -28,7 +28,7 @@ onsync = (event) => { };
 
 ## Event type
 
-An {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SyncEvent")}}
 

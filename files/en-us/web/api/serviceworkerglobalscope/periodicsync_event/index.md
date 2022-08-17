@@ -28,7 +28,7 @@ onperiodicsync = (event) => { };
 
 ## Event type
 
-An {{domxref("PeriodicSyncEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PeriodicSyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PeriodicSyncEvent")}}
 
