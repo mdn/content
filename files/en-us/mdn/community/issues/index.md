@@ -31,7 +31,7 @@ We should therefore replace all instances of the `\{{ warning }}` macro with the
 
 ### Actionable outcome
 
-- [ ] There are no more instances of the ``\{{ warning }}` macro in the `mdn/content` repository.
+- [ ] There are no more instances of the `\{{ warning }}` macro in the `mdn/content` repository.
 - [ ] Deprecate `\{{ warning }}` macro
 - [ ] Notify localization team leads of the change.
 ```
