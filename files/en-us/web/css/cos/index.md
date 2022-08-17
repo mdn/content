@@ -38,7 +38,7 @@ width: calc(cos(e / 2) * 100px);
 The `cos(A)` function accepts only one expression as its argument.
 
 - `A`
-  - : The argument specified as a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}. If `A` is `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
+  - : A {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}. When specifying `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
 
 ### Formal syntax
 
