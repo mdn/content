@@ -51,7 +51,7 @@ const gainNode = audioCtx.createGain();
 
 // Create variables to store mouse pointer Y coordinate
 // and HEIGHT of screen
-let CurY;
+let curY;
 const HEIGHT = window.innerHeight;
 
 // Get new mouse pointer coordinates when mouse is moved
@@ -60,9 +60,8 @@ const HEIGHT = window.innerHeight;
 document.onmousemove = updatePage;
 
 function updatePage(e) {
-    CurY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ?? document.body.scrollTop);
-
-    gainNode.gain.value = CurY/HEIGHT;
+  curY = e.pageY;
+  gainNode.gain.value = curY / HEIGHT;
 }
 
 // connect the AudioBufferSourceNode to the gainNode
