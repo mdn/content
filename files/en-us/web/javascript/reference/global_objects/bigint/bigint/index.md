@@ -18,7 +18,7 @@ The **`BigInt()`** function returns a value of type **bigint**.
 BigInt(value)
 ```
 
-> **Note:** `BigInt()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) — attempting to construct it with `new` would throw a {{jsxref("TypeError")}}.
+> **Note:** `BigInt()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -27,7 +27,7 @@ BigInt(value)
 
 ### Return value
 
-A {{jsxref("BigInt")}} value. Number values must be integers and are converted to BigInts. `true` becomes `1n`, and `false` becomes `0n`. Strings are parsed as if they are source text for integer literals, which means they can have leading and trailing whitespaces, and can be prefixed with `0b`, `0o`, or `0x`.
+A {{jsxref("BigInt")}} value. Number values must be integers and are converted to BigInts. The boolean value `true` becomes `1n`, and `false` becomes `0n`. Strings are parsed as if they are source text for integer literals, which means they can have leading and trailing whitespaces and can be prefixed with `0b`, `0o`, or `0x`.
 
 ### Exceptions
 

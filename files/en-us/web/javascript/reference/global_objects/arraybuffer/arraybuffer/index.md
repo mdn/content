@@ -22,7 +22,7 @@ The **`ArrayBuffer()`** constructor is used to create {{jsxref("ArrayBuffer")}} 
 new ArrayBuffer(length)
 ```
 
-> **Note:** `ArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) — attempting to call it without `new` would throw a {{jsxref("TypeError")}}.
+> **Note:** `ArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
