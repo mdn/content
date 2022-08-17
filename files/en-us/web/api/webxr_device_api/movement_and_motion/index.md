@@ -262,11 +262,8 @@ function sessionStarted(session) {
     baseLayer: new XRWebGLLayer(xrSession, gl)
   });
 
-  if (SESSION_TYPE === "immersive-vr") {
-    refSpaceType = "local";
-  } else {
-    refSpaceType = "viewer";
-  }
+  const isImmersiveVr = SESSION_TYPE === "immersive-vr";
+  refSpaceType = isImmersiveVr ? "local" : "viewer";
 
   mat4.fromTranslation(cubeMatrix, viewerStartPosition);
 
