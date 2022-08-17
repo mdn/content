@@ -81,7 +81,7 @@ body {
 }
 ```
 
- {{EmbedLiveSample('example', '100%', '450px')}}
+ {{EmbedLiveSample('example', '100%', '250px')}}
 
 ## Specifications
 
