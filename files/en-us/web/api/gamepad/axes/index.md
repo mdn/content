@@ -29,7 +29,7 @@ An array.
 
 ```js
 function gameLoop() {
-  const gp = navigator.webkitGetGamepads ? navigator.webkitGetGamepads()[0] : navigator.getGamepads()[0];
+  const [gp] = navigator.getGamepads();
 
   let a = 0;
   let b = 0;
