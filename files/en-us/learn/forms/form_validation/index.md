@@ -533,7 +533,6 @@ p * {
 }
 
 input[type=email]{
-  -webkit-appearance: none;
   appearance: none;
 
   width: 100%;
@@ -710,8 +709,7 @@ p * {
 }
 
 input.mail {
-  -webkit-appearance: none;
-
+  appearance: none;
   width: 100%;
   border: 1px solid #333;
   margin: 0;

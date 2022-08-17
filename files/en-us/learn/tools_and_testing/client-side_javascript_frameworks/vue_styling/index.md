@@ -100,7 +100,7 @@ button {
   line-height: normal;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
+  appearance: none;
 }
 button::-moz-focus-inner {
   border: 0;
@@ -374,8 +374,6 @@ Next, copy the following CSS into the newly created `<style>` element:
   padding: 5px;
   border: 2px solid #0b0c0c;
   border-radius: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 .custom-checkbox > input:focus {

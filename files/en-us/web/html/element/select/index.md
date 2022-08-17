@@ -250,11 +250,7 @@ html body form fieldset#custom div.select[data-multiple] div.header {
 
 html body form fieldset#custom div.select div.header {
   content: '↓';
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 0;
   position: relative;
@@ -276,8 +272,6 @@ html body form fieldset#custom div.select div.header:hover:after {
 }
 
 .select .header select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   font-family: inherit;
   font-size: inherit;
@@ -326,8 +320,6 @@ html body form fieldset#custom div.select[data-open] datalist {
 }
 
 html body form fieldset#custom div.select datalist {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   position: absolute;
   border-style: solid;

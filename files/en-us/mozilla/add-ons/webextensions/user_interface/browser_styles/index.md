@@ -322,8 +322,6 @@ button.panel-section-tabs-button {
   background-color: unset;
   font: inherit;
   text-shadow: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   border: none;
 }
