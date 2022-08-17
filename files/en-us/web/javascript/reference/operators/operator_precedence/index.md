@@ -53,7 +53,7 @@ const a = 4 ** 3 ** 2; // Same as 4 ** (3 ** 2); evaluates to 262144
 const b = 4 / 3 / 2; // Same as (4 / 3) / 2; evaluates to 0.6666...
 ```
 
-Associativity is a weaker order than precedence. Operators are first grouped by precedence, and then, for adjacent operators that have the same precedence, by associativity. So, mixing division and exponentiation, the exponentiation always comes before the division. For example, `2 ** 3 / 3 ** 2` results in 0.8888888888888888 because it is the same as `(2 ** 3) / (3 ** 2)`.
+Operators are first grouped by precedence, and then, for adjacent operators that have the same precedence, by associativity. So, when mixing division and exponentiation, the exponentiation always comes before the division. For example, `2 ** 3 / 3 ** 2` results in 0.8888888888888888 because it is the same as `(2 ** 3) / (3 ** 2)`.
 
 For prefix unary operators, suppose we have the following pattern:
 
