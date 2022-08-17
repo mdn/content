@@ -16,13 +16,13 @@ tags:
 If the issue you are filing is not to report a bug, please ensure that it lists actionable tasks or a clear outcome. For example:
 
 ```markdown
-## Remove {{ warning }} macro from documents
+## Remove \{{ warning }} macro from documents
 
-We should no longer be using the `{{ warning }}` macro in our documentation.
+We should no longer be using the `\{{ warning }}` macro in our documentation.
 
 ### Task description
 
-We should therefore replace all instances of the `{{ warning }}` macro with the following:
+We should therefore replace all instances of the `\{{ warning }}` macro with the following:
 
 > **Warning:** Main subject line
 >
@@ -31,8 +31,8 @@ We should therefore replace all instances of the `{{ warning }}` macro with the 
 
 ### Actionable outcome
 
-- [ ] There are no more instances of the ``{{ warning }}` macro in the `mdn/content` repository.
-- [ ] Deprecate `{{ warning }}` macro
+- [ ] There are no more instances of the ``\{{ warning }}` macro in the `mdn/content` repository.
+- [ ] Deprecate `\{{ warning }}` macro
 - [ ] Notify localization team leads of the change.
 ```
 
