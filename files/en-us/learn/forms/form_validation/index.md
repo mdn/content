@@ -710,7 +710,6 @@ p * {
 
 input.mail {
   appearance: none;
-  
   width: 100%;
   border: 1px solid #333;
   margin: 0;
