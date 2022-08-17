@@ -22,4 +22,17 @@ Specifically, it prevents the following actions to happens:
 
 - It prevents the {{domxref("Element/click_event", "click")}} event from being thrown when the user clicks on the element.
 - It prevents the {{domxref("Element/focus_event", "focus")}} event to be raised, by preventing the focus to be given to the element.
-- It prevents assistive technologies raised on this element.
+- It hides the element and its content from assistive technologies by excluding them from the accessibility tree.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Introducing inert](https://developer.chrome.com/articles/inert/)
+- [The "inert" attribute is finally coming to the web](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)
