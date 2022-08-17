@@ -417,8 +417,6 @@ This is especially useful in a three-dimensional environment rendered using WebG
 
 - [Web Audio API on MDN](/en-US/docs/Web/API/Web_Audio_API)
 - [`<audio>` on MDN](/en-US/docs/Web/HTML/Element/audio)
-- [Developing Game Audio with the Web Audio API (HTML5Rocks)](https://www.html5rocks.com/en/tutorials/webaudio/games/)
-- [Mixing Positional Audio and WebGL (HTML5Rocks)](https://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
 - [Songs of Diridum: Pushing the Web Audio API to Its Limits](https://hacks.mozilla.org/2013/10/songs-of-diridum-pushing-the-web-audio-api-to-its-limits/)
 - [Making HTML5 Audio Actually Work on Mobile](https://pupunzi.open-lab.com/2013/03/13/making-html5-audio-actually-work-on-mobile/)
 - [Audio Sprites (and fixes for iOS)](https://remysharp.com/2010/12/23/audio-sprites/)

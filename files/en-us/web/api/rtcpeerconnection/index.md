@@ -300,5 +300,5 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 ## See also
 
 - <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
-- [http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple](https://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple)
-- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML5 video capture, peer-to-peer video and filesharing application ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
+- [Get started with WebRTC](https://web.dev/webrtc-basics/)
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML video capture, peer-to-peer video and filesharing application ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
