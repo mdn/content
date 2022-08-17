@@ -28,7 +28,7 @@ Function(arg0, arg1, functionBody)
 Function(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
 
-> **Note:** `Function()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) — they have the same effect of constructing `Function` instances.
+> **Note:** `Function()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Function` instance.
 
 ### Parameters
 

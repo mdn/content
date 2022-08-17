@@ -28,7 +28,7 @@ InternalError(message, fileName)
 InternalError(message, fileName, lineNumber)
 ```
 
-> **Note:** `InternalError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) — they have the same effect of constructing `InternalError` instances.
+> **Note:** `InternalError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `InternalError` instance.
 
 ### Parameters
 
