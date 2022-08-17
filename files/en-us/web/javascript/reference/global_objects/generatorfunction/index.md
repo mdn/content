@@ -25,7 +25,14 @@ new GeneratorFunction(functionBody)
 new GeneratorFunction(arg0, functionBody)
 new GeneratorFunction(arg0, arg1, functionBody)
 new GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+
+GeneratorFunction(functionBody)
+GeneratorFunction(arg0, functionBody)
+GeneratorFunction(arg0, arg1, functionBody)
+GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
+
+> **Note:** `AsyncGeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncGeneratorFunction` instance.
 
 ### Parameters
 
