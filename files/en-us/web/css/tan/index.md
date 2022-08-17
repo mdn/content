@@ -44,9 +44,22 @@ The `tan(angle)` function accepts only one value as its parameter.
 
 {{CSSSyntax}}
 
-## Examples
+## Example
 
-### Drawing Parallelogram
+The `tan()` function can be used draw a parallelogram.
+
+```html hidden
+<div class="parallelogram"></div>
+```
+
+```css hidden
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
 
 ```css
 .parallelogram {
@@ -67,6 +80,8 @@ The `tan(angle)` function accepts only one value as its parameter.
   background-color: red;
 }
 ```
+
+ {{EmbedLiveSample('example', '100%', '450px')}}
 
 ## Specifications
 
