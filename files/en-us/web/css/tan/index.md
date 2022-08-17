@@ -14,20 +14,31 @@ spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 {{CSSRef}}
 
-The **`tan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the tangent of a number, which is a value between `−∞` and `∞`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. 
+The **`tan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the tangent of a number, which is a value between `−infinity` and `infinity`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. 
 
 ## Syntax
 
 ```css
-width: calc( tan(45deg) * 1px );
+/* Single <angle> values */
+width: calc(tan(45deg) * 100px);
+width: calc(tan(0.125turn) * 100px);
+width: calc(tan(0.785398163rad) * 100px);
+
+/* Single <number> values */
+width: calc(tan(0.5773502) * 100px);
+width: calc(tan(1.732 – 1) * 100px);
+
+/* Other values */
+width: calc(tan(pi / 3) * 100px);
+width: calc(tan(e) * 100px);
 ```
 
-### Argument
+### Parameter
 
-The `tan(A)` function accepts only one expression as its argument.
+The `tan(angle)` function accepts only one value as its parameter.
 
-- `A`
-  - : The argument specified as a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. If `A` is `infinite`, the result is `NaN`. if `A` is one of the asymptote values (such as `90deg`, `270deg`, etc), the result must be `+∞` for `90deg` and all values a multiple of `360deg` from that (such as `-270deg` or `450deg`), and `−∞` for `-90deg` and all values a multiple of `360deg` from that (such as `-450deg` or `270deg`).
+- `angle`
+  - : A {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}. When specifying `infinity`, `-infinity`, or `NaN`, the result is `NaN`. When specifying one of the asymptote values (such as `90deg`, `270deg`, etc), the result must be `infinity` for `90deg` and all values a multiple of `360deg` from that (such as `-270deg` or `450deg`), and `−infinity` for `-90deg` and all values a multiple of `360deg` from that (such as `-450deg` or `270deg`).
 
 ### Formal syntax
 
