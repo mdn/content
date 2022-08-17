@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise
 ---
+
 {{JSRef}}
 
 The **`Promise`** object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
@@ -211,11 +212,15 @@ If we change this so that the `<iframe>` in the document is listening to post me
 <!-- x.html -->
 <!DOCTYPE html>
 <script>
-  window.addEventListener("message", (event) => {
-    document.querySelector("#text").textContent = "hello";
-    // this code will only run in browsers that track the incumbent settings object
-    console.log(event);
-  }, false);
+  window.addEventListener(
+    "message",
+    (event) => {
+      document.querySelector("#text").textContent = "hello";
+      // this code will only run in browsers that track the incumbent settings object
+      console.log(event);
+    },
+    false
+  );
 </script>
 ```
 
@@ -333,11 +338,11 @@ function troubleWithGetNumber(reason) {
 
 function promiseGetWord(parityInfo) {
   return new Promise((resolve, reject) => {
-    const { value } = parityInfo;
+    const { value, isOdd } = parityInfo;
     if (value >= THRESHOLD_A - 1) {
       reject(`Still too large: ${value}`);
     } else {
-      parityInfo.wordEvenOdd = parityInfo.isOdd ? "odd" : "even";
+      parityInfo.wordEvenOdd = isOdd ? "odd" : "even";
       resolve(parityInfo);
     }
   });
