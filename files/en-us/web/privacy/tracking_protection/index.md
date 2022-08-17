@@ -1,6 +1,6 @@
 ---
-title: Firefox Tracking Protection
-slug: Web/Privacy/Firefox_Tracking_Protection
+title: Tracking Protection
+slug: Web/Privacy/Tracking_Protection
 tags:
   - Privacy
   - Private browsing
