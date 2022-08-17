@@ -42,7 +42,6 @@ This example creates a small checkbox for users with fine primary pointers and a
 ```css
 input[type="checkbox"] {
   -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
   border: solid;
   margin: 0;
