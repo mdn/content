@@ -621,4 +621,4 @@ The following tables list basic audio support across desktop and mobile browsers
 - [Event reference > Media](/en-US/docs/Web/Events#media)
 - [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
-- [jPlayer](https://jPlayer.org): An open source audio and video library for jQuery and Zepto.
+- [jPlayer](https://jplayer.org): An open source audio and video library for jQuery and Zepto.
