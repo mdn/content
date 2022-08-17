@@ -16,7 +16,8 @@ The **`load`** event is fired when the whole page has loaded, including all depe
 
 This event is not cancelable and does not bubble.
 
-> **Note:** The `load` event that is dispatched on the `Document` when the main document has finished loading will propagate to `Window`. However, _all other events named `load` will not propagate to `Window`_, including load events for resources inside the document (such as images) and custom events with `bubbles` initialized to `true`.
+> **Note:** _All events named `load` will not propagate to `Window`_, even with `bubbles` initialized to `true`. To catch `load` events on the `window`, that `load` event must be dispatched directly to the `window`.
+> **Note:** The `load` event that is dispatched when the main document has loaded _is_ dispatched on the `window`, but has two mutated properties: `target` is `document`, and `path` is `undefined`. These two properties are mutated due to legacy conformance.
 
 ## Syntax
 
