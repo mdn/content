@@ -8,7 +8,7 @@ browser-compat: svg.attributes.presentation.fill-opacity
 ---
 {{SVGRef}}
 
-The **`fill-opacity`** attribute is a presentation attribute defining the opacity of the paint server (*color*, *gradient*, *pattern*, etc) applied to a shape.
+The **`fill-opacity`** attribute is a presentation attribute defining the opacity of the paint server (*color*, *gradient*, *pattern*, etc.) applied to a shape.
 
 > **Note:** As a presentation attribute `fill-opacity` can be used as a CSS property.
 

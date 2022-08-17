@@ -146,7 +146,7 @@ subsequent accesses return the cached value without recalculating it. This is us
 the following situations:
 
 - If the calculation of a property value is expensive (takes much RAM or CPU time,
-  spawns worker threads, retrieves remote file, etc).
+  spawns worker threads, retrieves remote file, etc.).
 - If the value isn't needed just now. It will be used later, or in some case it's not
   used at all.
 - If it's used, it will be accessed several times, and there is no need to

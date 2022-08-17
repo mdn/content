@@ -308,7 +308,7 @@ privilegedInvoker();
 
 ## Strict mode in browsers
 
-The major browsers have fully implemented strict mode since approximately 2012, including [IE since version 10, Firefox since version 4. Chrome since version 13, etc](https://caniuse.com/use-strict). If you still support very old JS environments prior to the roll-outs of strict mode support, be careful to test any of your code that declares strict mode code to verify that its expected behaviors aren't violated when running in non-strict mode conforming JS engines.
+The major browsers have fully implemented strict mode since approximately 2012, including [IE since version 10, Firefox since version 4. Chrome since version 13, etc.](https://caniuse.com/use-strict). If you still support very old JS environments prior to the roll-outs of strict mode support, be careful to test any of your code that declares strict mode code to verify that its expected behaviors aren't violated when running in non-strict mode conforming JS engines.
 
 There are however some nuances to consider with how strict mode behaves in browsers.
 
