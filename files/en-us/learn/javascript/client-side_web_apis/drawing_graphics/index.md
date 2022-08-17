@@ -144,7 +144,7 @@ OK, our template is done and it's time to move on.
 
 As we said above, all drawing operations are done by manipulating a {{domxref("CanvasRenderingContext2D")}} object (in our case, `ctx`). Many operations need to be given coordinates to pinpoint exactly where to draw something — the top left of the canvas is point (0, 0), the horizontal (x) axis runs from left to right, and the vertical (y) axis runs from top to bottom.
 
-![](canvas_default_grid.png)
+![A graph with small squares covering it's area which is considered as a canvas that has x axis and y axis. The top left corner of the canvas is point (0, 0). The horizontal (x) axis runs from left to right, and the vertical (y) axis runs from top to bottom. The center of the canvas has a quadrilateral filled with steelblue color. The top left corner of the quadrilateral is distanced at x units from y axis and y units from x axis. The height is along the y axis and the width is along the x axis.](canvas_default_grid.png)
 
 Drawing shapes tends to be done using the rectangle shape primitive, or by tracing a line along a certain path and then filling in the shape. Below we'll show how to do both.
 
@@ -267,7 +267,7 @@ Let's draw an equilateral triangle on the canvas.
     - The side next to the 60 degree angle is called the **adjacent** — which we know is 50 pixels, as it is half of the line we just drew.
     - The side opposite the 60 degree angle is called the **opposite**, which is the height of the triangle we want to calculate.
 
-    ![](trigonometry.png)
+    ![A triangle pointing downwards. A dotted line splits the triangle into two equal right-angled triangles. The angle between the top and and right side of the triangle is 60 degrees. The dotted line perpendicular to the top side of the inverted triangle and opposite to the 60 degrees angle intersects the bottom vertice of the inverted triangle. This line is called as the opposite side. A section of the side of the triangle joining the point of intersection of the opposite line with the top side of the triangle to the 60 degrees angle is called adjacent side. The right side of the triangle is called as hypotenuse and it is the longest side.](trigonometry.png)
 
     One of the basic trigonometric formulae states that the length of the adjacent multiplied by the tangent of the angle is equal to the opposite, hence we come up with `50 * Math.tan(degToRad(60))`. We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.
 
@@ -545,7 +545,7 @@ Now let's create our own simple animation — we'll get a character from a certa
 
     Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' [Walking cycle using CSS animation](https://codepen.io/mikethomas/pen/kQjKLW) CodePen). The image looks like this:
 
-    ![](walk-right.png)
+    ![There are six images of a pixel character resembling a walking person from his/her right side at different instances of a single step forward. The character wears a white shirt with sky blue buttons, black trousers and black shoes. The whole sheet is called a sprite sheet. Each image is called a sprite. Each sprite is 102 pixels wide and 148 pixels high.](walk-right.png)
 
     It contains six sprites that make up the whole walking sequence — each one is 102 pixels wide and 148 pixels high. To display each sprite cleanly we will have to use `drawImage()` to chop out a single sprite image from the spritesheet and display only that part, like we did above with the Firefox logo. The X coordinate of the slice will have to be a multiple of 102, and the Y coordinate will always be 0. The slice size will always be 102 by 148 pixels.
 

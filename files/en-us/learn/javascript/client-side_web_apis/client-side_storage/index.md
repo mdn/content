@@ -154,7 +154,7 @@ Let's apply this new-found knowledge by writing a working example to give you an
 
 You can find the example HTML at [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) — this contains a website with a header, content, and footer, and a form for entering your name.
 
-![](web-storage-demo.png)
+![A Screenshot of a website that has a header, content and footer sections. The header has a welcome text to the left-hand side and a button labelled 'forget' to the right-hand side. The content has an heading followed by a two paragraphs of dummy text. The footer reads 'Copyright nobody. Use the code as you like'.](web-storage-demo.png)
 
 Let's build up the example, so you can understand how it works.
 
@@ -255,7 +255,7 @@ Here we'll run you through an example that allows you to store notes in your bro
 
 The app looks something like this:
 
-![](idb-demo.png)
+![A screenshot of a website that has 4 sections. The first section is the header that reads 'IndexedDB notes demo' which is the name of the exercise. The second section lists all the notes that are created. It has two notes and each note has a delete button. The third section has 2 input fields with labels 'Note title' and 'Note text' respectively and a button that is labelled 'Create new note'. The last section is a footer that reads 'Copyright nobody. Use the code as you like'.](idb-demo.png)
 
 Each note has a title and some body text, each individually editable. The JavaScript code we'll go through below has detailed comments to help you understand what's going on.
 
@@ -645,7 +645,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
 The above example already shows how to create an app that will store large assets in an IndexedDB database, avoiding the need to download them more than once. This is already a great improvement to the user experience, but there is still one thing missing — the main HTML, CSS, and JavaScript files still need to be downloaded each time the site is accessed, meaning that it won't work when there is no network connection.
 
-![](ff-offline.png)
+![There is an illustration of a fictious cartoon character to the left-hand side. The character is holding a two pin plug in it's right hand and a two pin plug holder in it's left hand. The right-hand side displays a message saying that the user is in offline mode and there is a button to the right-hand bottom corner that is labelled 'Try again'.](ff-offline.png)
 
 This is where [Service workers](/en-US/docs/Web/API/Service_Worker_API) and the closely-related [Cache API](/en-US/docs/Web/API/Cache) come in.
 
