@@ -49,11 +49,7 @@ You can use the `vrdisplaypresentchange` event in an [`addEventListener`](/en-US
 
 ```js
 window.addEventListener('vrdisplaypresentchange', () => {
-  if (vrDisplay.isPresenting) {
-    info.textContent = 'Display has started presenting.';
-  } else {
-    info.textContent = 'Display has stopped presenting.';
-  }
+  info.textContent = vrDisplay.isPresenting ? 'Display has started presenting.' : 'Display has stopped presenting.';
   reportDisplays();
 });
 ```
@@ -62,11 +58,7 @@ Or use the `onvrdisplaypresentchange` event handler property:
 
 ```js
 window.onvrdisplaypresentchange = () => {
-  if (vrDisplay.isPresenting) {
-    info.textContent = 'Display has started presenting.';
-  } else {
-    info.textContent = 'Display has stopped presenting.';
-  }
+  info.textContent = vrDisplay.isPresenting ? 'Display has started presenting.' : 'Display has stopped presenting.';
   reportDisplays();
 };
 ```

@@ -94,11 +94,7 @@ For example, to return an {{jsxref("Array")}} instead of an [iterator](/en-US/do
 class MyRegExp extends RegExp {
   [Symbol.matchAll](str) {
     const result = RegExp.prototype[Symbol.matchAll].call(this, str);
-    if (!result) {
-      return null;
-    } else {
-      return Array.from(result);
-    }
+    return result ? Array.from(result) : null;
   }
 }
 

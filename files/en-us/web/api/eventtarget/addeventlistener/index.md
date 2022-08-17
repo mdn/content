@@ -229,11 +229,8 @@ clicks on an element.
 // Function to change the content of t2
 function modifyText() {
   const t2 = document.getElementById("t2");
-  if (t2.firstChild.nodeValue === "three") {
-    t2.firstChild.nodeValue = "two";
-  } else {
-    t2.firstChild.nodeValue = "three";
-  }
+  const isNodeThree = t2.firstChild.nodeValue === "three";
+  t2.firstChild.nodeValue = isNodeThree ? "two" : "three";
 }
 
 // Add event listener to table

@@ -29,13 +29,8 @@ An array.
 
 ```js
 function gameLoop() {
-  let gp;
-  if (navigator.webkitGetGamepads) {
-    gp = navigator.webkitGetGamepads()[0];
-  } else {
-    gp = navigator.getGamepads()[0];
-  }
-  
+  const [gp] = navigator.getGamepads();
+
   let a = 0;
   let b = 0;
   if (gp.axes[0] !== 0) {

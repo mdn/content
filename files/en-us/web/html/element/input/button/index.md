@@ -294,8 +294,8 @@ let pressed = false;
 
 // update mouse pointer coordinates
 document.onmousemove = (e) => {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+  curX = e.pageX;
+  curY = e.pageY;
 }
 
 canvas.onmousedown = () => {

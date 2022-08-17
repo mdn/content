@@ -273,7 +273,7 @@ function updateStatus() {
       const b = buttons[i];
       let pressed = button === 1.0;
       let val = button;
-      
+
       if (typeof button === "object") {
         pressed = val.pressed;
         val = val.value;
@@ -281,12 +281,7 @@ function updateStatus() {
 
       const pct = `${Math.round(val * 100)}%`;
       b.style.backgroundSize = `${pct} ${pct}`;
-
-      if (pressed) {
-        b.className = "button pressed";
-      } else {
-        b.className = "button";
-      }
+      b.className = pressed ? "button pressed" : "button";
     });
 
     const axes = d.getElementsByClassName("axis");
