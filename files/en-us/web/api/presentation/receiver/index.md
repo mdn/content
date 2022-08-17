@@ -41,7 +41,7 @@ the context is indeed receiving a presentation. If it's `null`, there's no
 incoming presentation.
 
 ```js
-footer.innerHTML = navigator.receiver ? "Receiving presentation" : "(idle)";
+footer.textContent = navigator.receiver ? "Receiving presentation" : "(idle)";
 ```
 
 ### Accessing the connection list
