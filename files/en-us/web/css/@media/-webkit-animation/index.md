@@ -11,7 +11,9 @@ browser-compat: css.at-rules.media.-webkit-animation
 ---
 {{ CSSRef }} {{ Non-standard_header }}
 
-The **`-webkit-animation`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [Chrome extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if vendor-prefixed CSS {{cssxref("animation")}}s are supported.
+> **Note:** All browsers support the [`animation`](g/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-animation` media feature. No browsers support `animation`, without the prefix, as a media query. Use the [`@supports (animation)`](/en-US/docs/Web/CSS/@supports) feature query instead.
+
+The **`-webkit-animation`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if vendor-prefixed CSS {{cssxref("animation")}}s are supported.
 
 Apple has [a description in Safari CSS Reference](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
 
@@ -19,12 +21,12 @@ Apple has [a description in Safari CSS Reference](https://developer.apple.com/li
 
 ## Syntax
 
-The `-webkit-animation` media feature is a Boolean whose value is `true` if the vendor-prefixed CSS animation properties are supported.
+The `-webkit-animation` media feature is a Boolean whose value is `true` if the vendor-prefixed CSS animation properties are supported AND the browser supports prefixed property media queries.
 
 ### Values
 
 - `true`
-  - : The browser supports `-webkit` prefixed CSS {{cssxref("animation")}}s.
+  - : The browser supports `-webkit` prefixed CSS {{cssxref("animation")}}.
 - `false`
   - : The browser doesn't support these prefixed CSS animations.
 
@@ -34,7 +36,7 @@ The `-webkit-animation` media feature is a Boolean whose value is `true` if the 
 
 ```css
 @media (-webkit-animation) {
-  /* CSS to use if animations are supported */
+  /* CSS to use if -webkit- prefixed animations are supported AND the browser supports prefixed properties as media queries */
 }
 ```
 
@@ -49,6 +51,6 @@ Not part of any standard.
 ## See also
 
 - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d)
-- [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d)
+- [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d) 
 - [`-webkit-transition`](/en-US/docs/Web/CSS/@media/-webkit-transition)
 - [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
