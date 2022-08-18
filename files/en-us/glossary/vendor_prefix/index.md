@@ -7,7 +7,7 @@ tags:
 ---
 Browser vendors used to add prefixes to experimental or nonstandard CSS properties and JavaScript APIs, so developers could experiment with new ideas. This, in theory, helped to prevent their experiments from being relied upon and then breaking web developers' code during the standardization process. 
 
-Web developers included prefixed features on production websites, despite their experimental nature. This made it more difficult for browser vendors to ensure compatibility while working on new features. Including prefixed features also harmed smaller browsers who ended up having to add other browsers' prefixes to load popular websites.
+Web developers included prefixed features on production websites, despite their experimental nature. This made it more difficult for browser vendors to ensure compatibility while working on new features. Including prefixed features also harmed smaller browser vendors who ended up having to add other browsers' prefixes to load popular websites.
 
 Now, experimental features in browsers are "put behind a flag". This allows developers to change browser configurations to test upcoming features. Browsers now add experimental features behind user-controlled flags or preferences. Flags can be added for smaller specifications enabling reaching a stable state much more quickly.
 
