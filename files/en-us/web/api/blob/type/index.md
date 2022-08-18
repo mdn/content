@@ -41,7 +41,7 @@ output {
 ### JavaScript
 
 ```js
-// our application only allows GIF, PNG, and JPEG images
+// Our application only allows GIF, PNG, and JPEG images
 const allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
 
 const input = document.getElementById('input');
