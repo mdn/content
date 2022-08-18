@@ -21,7 +21,7 @@ Apple has [a description in Safari CSS Reference](https://developer.apple.com/li
 
 ## Syntax
 
-The `-webkit-animation` media feature is a Boolean whose value is `true` if the vendor-prefixed CSS animation properties are supported AND the browser supports prefixed property media queries.
+The `-webkit-animation` media feature is a Boolean whose value is `true` if the vendor-prefixed CSS animation properties are supported _and_ the browser supports prefixed property media queries.
 
 ### Values
 
