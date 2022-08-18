@@ -226,7 +226,7 @@ Another set of problems comes with CSS prefixes — these are a mechanism origin
 
 - Mozilla uses `-moz-`
 - Chrome/Opera/Safari use `-webkit-`
-- Microsoft uses `-ms-`
+- Internet Explorer uses `-ms-`
 
 Here's some examples:
 
