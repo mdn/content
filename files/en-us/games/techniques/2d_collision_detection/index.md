@@ -32,16 +32,16 @@ const rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
 const rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
 
 rect2.bind("EnterFrame", function () {
-    if (rect1.x < rect2.x + rect2.w &&
-        rect1.x + rect1.w > rect2.x &&
-        rect1.y < rect2.y + rect2.h &&
-        rect1.h + rect1.y > rect2.y) {
-        // collision detected!
-        this.color("green");
-    } else {
-        // no collision
-        this.color("blue");
-    }
+  if (rect1.x < rect2.x + rect2.w &&
+      rect1.x + rect1.w > rect2.x &&
+      rect1.y < rect2.y + rect2.h &&
+      rect1.h + rect1.y > rect2.y) {
+    // Collision detected!
+    this.color("green");
+  } else {
+    // No collision
+    this.color("blue");
+  }
 });
 ```
 
@@ -61,8 +61,8 @@ Another simple shape for collision detection is between two circles. This algori
 
 ```css hidden
 #cr-stage {
-    position: static !important;
-    height: 200px !important;
+  position: static !important;
+  height: 200px !important;
 }
 ```
 
@@ -73,31 +73,31 @@ const dim1 = {x: 5, y: 5}
 const dim2 = {x: 20, y: 20}
 
 Crafty.c("Circle", {
-   circle(radius, color) {
-        this.radius = radius;
-        this.w = this.h = radius * 2;
-        this.color = color || "#000000";
+  circle(radius, color) {
+    this.radius = radius;
+    this.w = this.h = radius * 2;
+    this.color = color || "#000000";
 
-        this.bind("Move", Crafty.DrawManager.drawAll)
-        return this;
-   },
+    this.bind("Move", Crafty.DrawManager.drawAll)
+    return this;
+  },
 
-   draw() {
-       const ctx = Crafty.canvas.context;
-       ctx.save();
-       ctx.fillStyle = this.color;
-       ctx.beginPath();
-       ctx.arc(
-           this.x + this.radius,
-           this.y + this.radius,
-           this.radius,
-           0,
-           Math.PI * 2
-       );
-       ctx.closePath();
-       ctx.fill();
-       ctx.restore();
-    }
+  draw() {
+    const ctx = Crafty.canvas.context;
+    ctx.save();
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(
+      this.x + this.radius,
+      this.y + this.radius,
+      this.radius,
+      0,
+      Math.PI * 2
+    );
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  }
 });
 
 const circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
