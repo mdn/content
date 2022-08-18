@@ -51,7 +51,7 @@ To suppress WebXR select events ({{domxref("XRSession/select_event", "select")}}
 
 ```js
 document.getElementById('xr-overlay').addEventListener(
-  'beforexrselect', ev => ev.preventDefault());
+  'beforexrselect', (ev) => ev.preventDefault());
 ```
 
 ## Specifications
