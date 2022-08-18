@@ -26,7 +26,7 @@ The **`addAll()`** method of the {{domxref("Cache")}} interface takes an array o
 ## Syntax
 
 ```js
-addAll(requests);
+addAll(requests)
 ```
 
 ### Parameters
