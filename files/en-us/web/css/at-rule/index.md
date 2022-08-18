@@ -74,13 +74,13 @@ Since each conditional group may also contain nested statements, there may be an
 - {{cssxref("@font-feature-values")}}
 - {{cssxref("@import")}}
 - {{cssxref("@keyframes")}}
+- {{cssxref("@layer")}}
 - {{cssxref("@media")}}
 - {{cssxref("@namespace")}}
 - {{cssxref("@page")}}
 - {{cssxref("@property")}} {{experimental_inline}}
 - {{cssxref("@supports")}}
 - {{cssxref("@viewport")}} {{deprecated_inline}}
-- {{cssxref("@layer")}}
 
 ## Specifications
 
