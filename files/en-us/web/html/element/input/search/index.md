@@ -284,13 +284,13 @@ The result is this wider input box:
 There are useful pseudo-classes available for styling valid/invalid form elements: {{cssxref(":valid")}} and {{cssxref(":invalid")}}. In this section, we'll use the following CSS, which will place a check (tick) next to inputs containing valid values, and a cross next to inputs containing invalid values.
 
 ```css
-input:invalid ~ span:after {
+input:invalid ~ span::after {
     content: '✖';
     padding-left: 5px;
     position: absolute;
 }
 
-input:valid ~ span:after {
+input:valid ~ span::after {
     content: '✓';
     padding-left: 5px;
     position: absolute;
@@ -319,13 +319,13 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
+input:invalid ~ span::after {
     content: '✖';
     padding-left: 5px;
     position: absolute;
 }
 
-input:valid ~ span:after {
+input:valid ~ span::after {
     content: '✓';
     padding-left: 5px;
     position: absolute;
@@ -366,13 +366,13 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
+input:invalid ~ span::after {
     content: '✖';
     padding-left: 5px;
     position: absolute;
 }
 
-input:valid ~ span:after {
+input:valid ~ span::after {
     content: '✓';
     padding-left: 5px;
     position: absolute;
@@ -409,13 +409,13 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
+input:invalid ~ span::after {
     content: '✖';
     padding-left: 5px;
     position: absolute;
 }
 
-input:valid ~ span:after {
+input:valid ~ span::after {
     content: '✓';
     padding-left: 5px;
     position: absolute;
