@@ -688,7 +688,7 @@ class MockUnderlyingFileHandle {
 
   // Dummy close function
   close() {
-    return
+    return;
   }
 
   // Return random character string
