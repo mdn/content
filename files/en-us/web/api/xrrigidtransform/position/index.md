@@ -45,7 +45,7 @@ function onSessionStarted(xrSession) {
 
   gl = initGraphics(xrSession);
 
-  let glLayer = new XRWebGLLayer(xrSession, gl);
+  const glLayer = new XRWebGLLayer(xrSession, gl);
   xrSession.updateRenderState({ baseLayer: glLayer });
 
   if (immersiveSession) {

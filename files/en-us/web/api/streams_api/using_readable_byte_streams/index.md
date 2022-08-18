@@ -105,7 +105,7 @@ class MockHypotheticalSocket {
     this.socketdata = null;
   }
 
-  /* Method returning promise when this socket is readable. */
+  // Method returning promise when this socket is readable.
   select2() {
     // Object used to resolve promise
     const resultobj = {};
@@ -144,12 +144,12 @@ class MockHypotheticalSocket {
     return length_data;
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
     return
   }
 
-  /* Return random number bytes in this call of socket */
+  // Return random number bytes in this call of socket
   getNumberRandomBytesSocket() {
     // Capped to remaining data and the max min return-per-read range
     const remaining_data = this.max_data - this.data_read;
@@ -159,14 +159,14 @@ class MockHypotheticalSocket {
     return numberBytesReceived;
   }
 
-  /* Return random number between two values */
+  // Return random number between two values
   getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -425,7 +425,7 @@ class MockUnderlyingFileHandle {
     this.position = 0;
   }
 
-  /* Read data from "file" at position/length into specified buffer offset */
+  // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
     // Object used to resolve promise
     const resultobj = {};
@@ -453,12 +453,12 @@ class MockUnderlyingFileHandle {
     });
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
     return
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -469,7 +469,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  /* Return random Uint8Array of bytes */
+  // Return random Uint8Array of bytes
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));
@@ -666,7 +666,7 @@ class MockUnderlyingFileHandle {
     resultobj["bytesRead"] = 0;
 
     return new Promise((resolve/*, reject*/) => {
-      if (position >= this.maxdata) { //out of data
+      if (position >= this.maxdata) { // out of data
         resolve(resultobj);
         return;
       }
@@ -686,12 +686,12 @@ class MockUnderlyingFileHandle {
     });
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
     return
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -702,7 +702,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  /* Return random Uint8Array of bytes */
+  // Return random Uint8Array of bytes
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));
@@ -872,7 +872,7 @@ class MockUnderlyingFileHandle {
     this.position = 0;
   }
 
-  /* Read data from "file" at position/length into specified buffer offset */
+  // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
     // Object used to resolve promise
     const resultobj = {};
@@ -900,12 +900,12 @@ class MockUnderlyingFileHandle {
     });
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
     return
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -916,7 +916,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  /* Return random Uint8Array of bytes */
+  // Return random Uint8Array of bytes
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));

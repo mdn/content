@@ -56,7 +56,7 @@ window.addEventListener("load", () => {
 
     // Get WebGLRenderingContext from canvas element.
     const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-    const isSupported = gl && gl instanceof WebGLRenderingContext;
+    const isSupported = gl instanceof WebGLRenderingContext;
 
     // Report the result.
     paragraph.textContent = isSupported
