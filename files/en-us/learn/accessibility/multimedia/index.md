@@ -216,20 +216,8 @@ Last of all, add the following to the end of the code, to control the time elaps
 player.ontimeupdate = () => {
   const minutes = Math.floor(player.currentTime / 60);
   const seconds = Math.floor(player.currentTime - minutes * 60);
-  let minuteValue;
-  let secondValue;
-
-  if (minutes < 10) {
-    minuteValue = `0${minutes}`;
-  } else {
-    minuteValue = minutes;
-  }
-
-  if (seconds < 10) {
-    secondValue = `0${seconds}`;
-  } else {
-    secondValue = seconds;
-  }
+  const minuteValue = minutes < 10 ? `0${minutes}` : minutes;
+  const secondValue = seconds < 10 ? `0${seconds}` : seconds;
 
   const mediaTime = `${minuteValue}:${secondValue}`;
   timeLabel.textContent = mediaTime;

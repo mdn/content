@@ -48,13 +48,9 @@ This example displays whether or not your browser supports the `autoGainControl`
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().autoGainControl) {
-    result.textContent = "Supported!";
-} else {
-    result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().autoGainControl;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result

@@ -46,11 +46,7 @@ const allowDrinksCheckbox = document.getElementById("allow-drinks");
 const drinkSelect = document.getElementById("drink-select");
 
 allowDrinksCheckbox.addEventListener("change", (event) => {
-  if (event.target.checked) {
-    drinkSelect.disabled = false;
-  } else {
-    drinkSelect.disabled = true;
-  }
+  drinkSelect.disabled = !event.target.checked;
 }, false);
 ```
 

@@ -145,12 +145,8 @@ applyAnimation.addEventListener('click', () => {
   animation.classList.toggle('active');
   animationEventLog.textContent = '';
   iterationCount = 0;
-  let active = animation.classList.contains('active');
-  if (active) {
-    applyAnimation.textContent = "Cancel animation";
-  } else {
-    applyAnimation.textContent = "Activate animation";
-  }
+  const active = animation.classList.contains('active');
+  applyAnimation.textContent = active ? "Cancel animation" : "Activate animation";
 });
 ```
 

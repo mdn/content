@@ -94,11 +94,7 @@ Regular expressions can help:
 
 ```js
 function filterInt(value) {
-  if (/^[-+]?(\d+|Infinity)$/.test(value)) {
-    return Number(value)
-  } else {
-    return NaN
-  }
+  return /^[-+]?(\d+|Infinity)$/.test(value) ? Number(value) : NaN;
 }
 
 console.log(filterInt('421'))                // 421

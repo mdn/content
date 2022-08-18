@@ -163,11 +163,7 @@ if (window.PaymentRequest) {
     buildShoppingCartDetails()
   );
   request.canMakePayment().then((canMakeAFastPayment) => {
-    if (canMakeAFastPayment) {
-      checkoutButton.textContent = "Fast Checkout with W3C";
-    } else {
-      checkoutButton.textContent = "Setup W3C Checkout";
-    }
+    checkoutButton.textContent = canMakeAFastPayment ? "Fast Checkout with W3C" : "Setup W3C Checkout";
   }).catch((error) => {
     // The user may have turned off the querying functionality in their
     // privacy settings. The website does not know whether they can make

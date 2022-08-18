@@ -62,11 +62,7 @@ const bottomBar = document.getElementById('bottombar');
 const viewport = window.visualViewport;
 
 function resizeHandler() {
-  if (viewport.scale > 1.3) {
-    bottomBar.style.display = "none";
-  } else {
-    bottomBar.style.display = "block";
-  }
+  bottomBar.style.display = viewport.scale > 1.3 ? "none" : "block";
 }
 
 window.visualViewport.addEventListener('resize', resizeHandler);
