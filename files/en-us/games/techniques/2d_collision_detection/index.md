@@ -109,8 +109,8 @@ circle2.bind("EnterFrame", () => {
   const dy = circle1.y - circle2.y;
   const distance = Math.sqrt(dx * dx + dy * dy);
 
-  const collision = distance < circle1.radius + circle2.radius;
-  this.color = collision ? "green" : "blue";
+  const colliding = distance < circle1.radius + circle2.radius;
+  this.color = colliding ? "green" : "blue";
 });
 ```
 
