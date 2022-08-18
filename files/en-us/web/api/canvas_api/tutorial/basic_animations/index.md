@@ -173,7 +173,7 @@ function clock() {
 
   ctx.fillStyle = 'black';
 
-  // write Hours
+  // Write Hours
   ctx.save();
   ctx.rotate((Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec);
   ctx.lineWidth = 14;
@@ -183,7 +183,7 @@ function clock() {
   ctx.stroke();
   ctx.restore();
 
-  // write Minutes
+  // Write Minutes
   ctx.save();
   ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec);
   ctx.lineWidth = 10;
@@ -251,7 +251,6 @@ const img = new Image();
 
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
-
 img.src = 'capitan_meadows_yosemite_national_park.jpg';
 const CanvasXSize = 800;
 const CanvasYSize = 200;
@@ -260,7 +259,6 @@ const scale = 1.05;
 const y = -4.5; // vertical offset
 
 // Main program
-
 const dx = 0.75;
 let imgW;
 let imgH;
@@ -274,52 +272,57 @@ img.onload = () => {
   imgH = img.height * scale;
 
   if (imgW > CanvasXSize) {
-    // image larger than canvas
+    // Image larger than canvas
     x = CanvasXSize - imgW;
   }
 
-  // check if image dimension is larger than canvas
+  // Check if image dimension is larger than canvas
   clearX = imgW > CanvasXSize ? imgW : CanvasXSize;
   clearY = imgH > CanvasYSize ? imgH : CanvasYSize;
 
-  // get canvas context
+  // Get canvas context
   ctx = document.getElementById('canvas').getContext('2d');
 
-  // set refresh rate
+  // Set refresh rate
   return setInterval(draw, speed);
 }
 
 function draw() {
   ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-  // if image is <= Canvas Size
+  // If image is <= canvas size
   if (imgW <= CanvasXSize) {
-    // reset, start from beginning
+    // Reset, start from beginning
     if (x > CanvasXSize) {
       x = -imgW + x;
     }
-    // draw additional image1
+    
+    // Draw additional image1
     if (x > 0) {
       ctx.drawImage(img, -imgW + x, y, imgW, imgH);
     }
-    // draw additional image2
+    
+    // Draw additional image2
     if (x - imgW > 0) {
       ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
     }
   } else {
-    // image is > Canvas Size
-    // reset, start from beginning
+    // Image is > canvas size
+    // Reset, start from beginning
     if (x > (CanvasXSize)) {
       x = CanvasXSize - imgW;
     }
-    // draw additional image
+    
+    // Draw additional image
     if (x > (CanvasXSize-imgW)) {
       ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
     }
   }
-  // draw image
+  
+  // Draw image
   ctx.drawImage(img, x, y,imgW, imgH);
-  // amount to move
+  
+  // Amount to move
   x += dx;
 }
 ```
