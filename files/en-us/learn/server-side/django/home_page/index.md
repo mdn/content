@@ -43,7 +43,7 @@ The following diagram describes the main data flow, and the components required 
 - View functions to get the requested data from the models, create HTML pages that display the data, and return the pages to the user to view in the browser.
 - Templates to use when rendering data in the views.
 
-![](basic-django.png)
+![A diagram that represents the main data flow and the four components namely URL, Model, View & Template required when handling HTTP requests and responses in a Django application. Any HTTP request that hits a Django server is forwarded to the 'urls.py' file of the URLS component. The request is then forwarded the appropriate view. The view can read and write data from the Models. 'models.py' file contains the code related to models. The view can access the template component which is an HTML file and it returns the response back to the user.](basic-django.png)
 
 As you'll see in the next section, we have 5 pages to display, which is too much information to document in a single article. Therefore, this article will focus on how to implement the home page, and we'll cover the other pages in a subsequent article. This should give you a good end-to-end understanding of how URL mappers, views, and models work in practice.
 

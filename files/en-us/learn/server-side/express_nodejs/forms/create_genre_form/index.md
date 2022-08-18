@@ -211,7 +211,7 @@ Run the application, open your browser to `http://localhost:3000/`, then select 
 
 The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).
 
-![](locallibary_express_genre_create_error.png)
+![A screen snippet of a page of the Local library application. The page is divided into two columns. The left column has a vertical navigation bar with 10 links to different pages in the application. The navbar is seperated into two parts by a light colored horizontal line. The links in the top section direct to the already created data and the links in the bottom section direct to pages to create new data. The right column has a form to create a new Genre. The form has an heading that reads 'Create Genre'.There is one mandatory input field labelled 'Genre'. There is a submit button at the bottom. If the form is submitted with an empty genre field, the server returns a form with an error message that reads 'Genre name required' right below the Submit button in the response. ](locallibary_express_genre_create_error.png)
 
 > **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
 >

@@ -101,7 +101,7 @@ exports.bookinstance_create_post = [
       if (err) {
         return next(err);
       }
-      
+
       // Successful: redirect to new record.
       res.redirect(bookinstance.url);
     });
@@ -160,7 +160,7 @@ The view structure and behavior is almost the same as for the **book_form.pug** 
 
 Run the application and open your browser to `http://localhost:3000/`. Then select the _Create new book instance (copy)_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid `BookInstance`, it should be saved and you'll be taken to the detail page.
 
-![](locallibary_express_bookinstance_create_empty.png)
+![A screenshot of a page of the Local library application. The page is divided into two columns. The left column has a vertical navigation bar with 10 links to different pages in the application. The navbar is seperated into two parts by a light colored horizontal line. The links in the top section direct to the already created data and the links in the bottom section direct to pages to create new data. The right column has a form to create a Book instance. The form has an heading that reads 'Create BookInstance' and four input fields labelled 'Book', 'Imprint', 'Date when book available' and 'Status'. There is a 'Submit' button at the bottom of the form.](locallibary_express_bookinstance_create_empty.png)
 
 ## Next steps
 

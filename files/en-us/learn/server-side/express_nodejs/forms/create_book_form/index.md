@@ -138,7 +138,7 @@ exports.book_create_post = [
       if (err) {
         return next(err);
       }
-      
+
       // Successful: redirect to new book record.
       res.redirect(book.url);
     });
@@ -243,7 +243,7 @@ The main differences are in how we implement the selection-type fields: `Author`
 
 Run the application, open your browser to `http://localhost:3000/`, then select the _Create new book_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid book, it should be saved and you'll be taken to the book detail page.
 
-![](locallibary_express_book_create_empty.png)
+![A screenshot of a page of the Local library application. The page is divided into two columns. The left column has a vertical navigation bar with 10 links to different pages in the application. The navbar is seperated into two parts by a light colored horizontal line. The links in the top section direct to the already created data and the links in the bottom section direct to pages to create new data. The right column has a form to create 'Book' objects(new books). The form has an heading that reads 'Create Book' and five input fields labelled 'Title', 'Author', 'Summary', 'ISBN' and 'Genre'. The fifth input field is a checkbox with four options. There is a 'Submit' button at the bottom of the form.](locallibary_express_book_create_empty.png)
 
 ## Next steps
 
