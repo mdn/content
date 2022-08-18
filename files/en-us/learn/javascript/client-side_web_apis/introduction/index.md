@@ -63,7 +63,7 @@ Client-side JavaScript, in particular, has many APIs available to it — these a
 - **Browser APIs** are built into your web browser and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. For example, the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) provides JavaScript constructs for manipulating audio in the browser — taking an audio track, altering its volume, applying effects to it, etc. In the background, the browser is actually using some complex lower-level code (e.g. C++ or Rust) to do the actual audio processing. But again, this complexity is abstracted away from you by the API.
 - **Third-party APIs** are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the [Twitter API](https://developer.twitter.com/en/docs) allows you to do things like displaying your latest tweets on your website. It provides a special set of constructs you can use to query the Twitter service and return specific information.
 
-![A sreenshot of the browser with the home page of firefox browser open. There are APIs built into the browser by default. Thrid party APIs are not built into the browser by default. Their code and information has to be retreived from somewhere on the web to utilise them.](browser.png)
+![A screenshot of the browser with the home page of firefox browser open. There are APIs built into the browser by default. Third party APIs are not built into the browser by default. Their code and information has to be retrieved from somewhere on the web to utilize them.](browser.png)
 
 ### Relationship between JavaScript, APIs, and other JavaScript tools
 
