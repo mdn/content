@@ -309,12 +309,12 @@ function draw() {
   } else {
     // Image is > canvas size
     // Reset, start from beginning
-    if (x > (CanvasXSize)) {
+    if (x > CanvasXSize) {
       x = CanvasXSize - imgW;
     }
     
     // Draw additional image
-    if (x > (CanvasXSize-imgW)) {
+    if (x > CanvasXSize - imgW) {
       ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
     }
   }

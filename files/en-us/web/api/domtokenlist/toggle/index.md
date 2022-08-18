@@ -58,7 +58,7 @@ const classes = span.classList;
 span.addEventListener('click', () => {
   const result = classes.toggle("c");
 
-  span.textContent = result ? `'c' added; classList is now "${classes}".` : `'c' removed; classList is now "${classes}".`;
+  span.textContent = `'c' ${result ? "added" : "removed"}; classList is now "${classes}".`;
 })
 ```
 
