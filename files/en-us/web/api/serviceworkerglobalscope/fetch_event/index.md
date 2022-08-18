@@ -37,9 +37,7 @@ A generic {{domxref("Event")}}.
 ## Syntax
 
 ```js
-serviceWorkerGlobalScope.onfetch = (fetchEvent) => {
-  /* … */
-};
+serviceWorkerGlobalScope.onfetch = (fetchEvent) => { /* … */ }
 ```
 
 ## Example
