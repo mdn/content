@@ -72,7 +72,7 @@ body {
 div.original-square {
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: blue;
 }
 
 div.rotated-diamond {
@@ -88,7 +88,7 @@ div.rotated-scaled-diamond {
   margin: calc( 100px / 4 * cos(45deg) );
   transform: rotate(45deg);
   transform-origin: center;
-  background-color: red;
+  background-color: green;
 }
 ```
 
