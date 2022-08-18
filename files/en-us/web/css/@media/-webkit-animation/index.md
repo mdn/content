@@ -11,7 +11,7 @@ browser-compat: css.at-rules.media.-webkit-animation
 ---
 {{ CSSRef }} {{ Non-standard_header }}
 
-> **Note:** All browsers support the [`animation`](g/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-animation` media feature. No browsers support `animation`, without the prefix, as a media query. Use the [`@supports (animation)`](/en-US/docs/Web/CSS/@supports) feature query instead.
+> **Note:** All browsers support the [`animation`](/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-animation` media feature. No browsers support `animation`, without the prefix, as a media query. Use the [`@supports (animation)`](/en-US/docs/Web/CSS/@supports) feature query instead.
 
 The **`-webkit-animation`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if vendor-prefixed CSS {{cssxref("animation")}}s are supported.
 
