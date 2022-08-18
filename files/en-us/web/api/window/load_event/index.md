@@ -96,7 +96,7 @@ label, button {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const log = document.querySelector('.event-log-contents');
