@@ -22,8 +22,10 @@ Values of this type are objects. They contain these properties:
 
 - `allFrames` {{optional_inline}}
   - : `boolean`. Whether the script or CSS is injected into all frames within the tab. Defaults to `false`. Cannot be `true` if `frameIds` is specified.
+
 - `frameIds` {{optional_inline}}
-  - : `array` of `string`. Array of the IDs of the frames to inject into.
+  - : `array` of `number`. Array of the IDs of the frames to inject into.
+
 - `tabId`
   - : `number`. The ID of the tab to inject into.
 

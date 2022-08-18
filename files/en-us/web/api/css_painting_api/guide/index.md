@@ -498,11 +498,7 @@ registerPaint('hollowHighlights', class {
     const strokeWidth = parseInt(args[1]);
 
     // set the stroke width
-    if (strokeWidth) {
-      ctx.lineWidth = strokeWidth;
-    } else {
-      ctx.lineWidth = 1.0;
-    }
+    ctx.lineWidth = strokeWidth ?? 1.0;
     // set the fill type
     if (strokeType === 'stroke') {
       ctx.fillStyle = 'transparent';

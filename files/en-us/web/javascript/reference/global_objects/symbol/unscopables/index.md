@@ -20,6 +20,8 @@ The `@@unscopables` symbol (`Symbol.unscopables`) can be defined on any object t
 
 Setting a property to `true` in an `unscopables` object will make it _unscopable_ and therefore it won't appear in lexical scope variables. Setting a property to `false` will make it `scopable` and thus it will appear in lexical scope variables.
 
+This protocol is also utilized by DOM APIs, such as [`Element.append()`](/en-US/docs/Web/API/Element/append).
+
 {{js_property_attributes(0,0,0)}}
 
 ## Examples
@@ -73,3 +75,4 @@ with (obj) {
 
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
 - [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))
+- [`Element.append()`](/en-US/docs/Web/API/Element/append)

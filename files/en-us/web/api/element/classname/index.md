@@ -23,13 +23,8 @@ A string variable representing the class or space-separated classes of the curre
 ## Examples
 
 ```js
-let el = document.getElementById('item');
-
-if (el.className === 'active'){
-  el.className = 'inactive';
-} else {
-  el.className = 'active';
-}
+const el = document.getElementById('item');
+el.className = el.className === 'active' ? 'inactive' : 'active';
 ```
 
 ## Notes

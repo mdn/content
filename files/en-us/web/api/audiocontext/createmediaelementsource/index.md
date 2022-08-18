@@ -60,7 +60,7 @@ const HEIGHT = window.innerHeight;
 document.onmousemove = updatePage;
 
 function updatePage(e) {
-    CurY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+    CurY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ?? document.body.scrollTop);
 
     gainNode.gain.value = CurY/HEIGHT;
 }

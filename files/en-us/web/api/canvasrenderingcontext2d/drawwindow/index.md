@@ -120,5 +120,4 @@ only API.
 ## See also
 
 - The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.drawWidgetAsOnScreen()")}}
 - [Using images](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images)
