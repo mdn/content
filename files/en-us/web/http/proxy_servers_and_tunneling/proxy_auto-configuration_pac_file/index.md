@@ -202,9 +202,9 @@ Is true if the hostname matches _exactly_ the specified hostname, or if there is
 #### Examples
 
 ```js
-localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
-localHostOrDomainIs("www"             , "www.mozilla.org") // true (hostname match, domain not specified)
-localHostOrDomainIs("www.google.com"  , "www.mozilla.org") // false (domain name mismatch)
+localHostOrDomainIs("www.mozilla.org", "www.mozilla.org")  // true (exact match)
+localHostOrDomainIs("www", "www.mozilla.org")              // true (hostname match, domain not specified)
+localHostOrDomainIs("www.google.com", "www.mozilla.org")   // false (domain name mismatch)
 localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
 ```
 
@@ -253,9 +253,11 @@ Pattern and mask specification is done the same way as for SOCKS configuration.
 #### Examples
 
 ```js
-function alert_eval(str) { alert(`${str} is ${eval(str)}`) }
+function alertEval(str) {
+  alert(`${str} is ${eval(str)}`);
+}
 function FindProxyForURL(url, host) {
-  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
+  alertEval('isInNet(host, "63.245.213.24", "255.255.255.255")');
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
 }
 ```
@@ -487,7 +489,7 @@ dateRange(1995, 1997);
 
 #### Syntax
 
-```html
+```
 // The full range of expansions is analogous to dateRange.
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
@@ -552,8 +554,11 @@ All hosts which aren't fully qualified, or the ones that are in local domain, wi
 
 ```js
 function FindProxyForURL(url, host) {
-  const useDirect = isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org");
-  return useDirect ? "DIRECT" : "PROXY w3proxy.mozilla.org:8080; DIRECT";
+  if (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) {
+    return "DIRECT";
+  } else {
+    return "PROXY w3proxy.mozilla.org:8080; DIRECT";
+  }
 }
 ```
 
@@ -567,9 +572,15 @@ If there are hosts (such as the main Web server) that belong to the local domain
 
 ```js
 function FindProxyForURL(url, host) {
-  const useDirect = isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org");
-  const isException = localHostOrDomainIs(host, "www.mozilla.org") || localHostOrDomainIs(host, "merchant.mozilla.org");
-  return useDirect && !isException ? "DIRECT" : "PROXY w3proxy.mozilla.org:8080; DIRECT";
+  if (
+    (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) &&
+    !localHostOrDomainIs(host, "www.mozilla.org") &&
+    !localHostOrDomainIs(host, "merchant.mozilla.org")
+  ) {
+    return "DIRECT";
+  } else {
+    return "PROXY w3proxy.mozilla.org:8080; DIRECT";
+  }
 }
 ```
 
@@ -585,7 +596,10 @@ This example will work in an environment where the internal DNS server is set up
 
 ```js
 function FindProxyForURL(url, host) {
-  return isResolvable(host) ? "DIRECT" : "PROXY proxy.mydomain.com:8080";
+  if (isResolvable(host)) {
+    return "DIRECT";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -593,8 +607,14 @@ The above requires consulting the DNS every time; it can be grouped intelligentl
 
 ```js
 function FindProxyForURL(url, host) {
-  const useDirect = isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com") || isResolvable(host);
-  return useDirect ? "DIRECT" : "PROXY proxy.mydomain.com:8080";
+  if (
+    isPlainHostName(host) ||
+    dnsDomainIs(host, ".mydomain.com") ||
+    isResolvable(host)
+  ) {
+    return "DIRECT";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -606,8 +626,10 @@ In this example all of the hosts in a given subnet are connected-to directly, ot
 
 ```js
 function FindProxyForURL(url, host) {
-  const useDirect = isInNet(host, "198.95.0.0", "255.255.0.0");
-  return useDirect ? "DIRECT" : "PROXY proxy.mydomain.com:8080";
+  if (isInNet(host, "198.95.0.0", "255.255.0.0")) {
+    return "DIRECT";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -615,8 +637,15 @@ Again, use of the DNS server in the above can be minimized by adding redundant r
 
 ```js
 function FindProxyForURL(url, host) {
-  const useDirect = isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com") || isInNet(host, "198.95.0.0", "255.255.0.0");
-  return useDirect ? "DIRECT" : "PROXY proxy.mydomain.com:8080";
+  if (
+    isPlainHostName(host) ||
+    dnsDomainIs(host, ".mydomain.com") ||
+    isInNet(host, "198.95.0.0", "255.255.0.0")
+  ) {
+    return "DIRECT";
+  } else {
+    return "PROXY proxy.mydomain.com:8080";
+  }
 }
 ```
 
