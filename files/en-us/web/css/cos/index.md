@@ -85,11 +85,8 @@ div.rotated-diamond {
 div.rotated-scaled-diamond {
   width: calc( 100px * cos(45deg) );
   height: calc( 100px * cos(45deg) );
-  margin-block-start: calc( 100px / 4 * cos(45deg) );
-  margin-block-end: calc( 100px / 4 * cos(45deg) );
-  transform:
-    translate( calc( 100px / 4 * cos(45deg) ) )
-    rotate(45deg);
+  margin: calc( 100px / 4 * cos(45deg) );
+  transform: rotate(45deg);
   transform-origin: center;
   background-color: red;
 }
