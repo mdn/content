@@ -53,3 +53,7 @@ if (session.domOverlayState) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.beforexrselect_event", "beforexrselect")}}
