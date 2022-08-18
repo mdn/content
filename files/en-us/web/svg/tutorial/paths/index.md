@@ -213,7 +213,6 @@ For a given x-radius and y-radius, there are two ellipses that can connect any t
 
 Because of that, arcs require quite a few parameters:
 
-```plain
  A rx ry x-axis-rotation large-arc-flag sweep-flag x y
  a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
 ```
