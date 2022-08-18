@@ -29,7 +29,7 @@ See [compositing examples](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/E
 
 A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image below. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.
 
-![](canvas_clipping_path.png)
+![A canvas co-ordinate with a star outlined in red color. The grid squares lying inside the star are clearly visible whereas the grid squares lying outside the star are blurred. The center of the canvas is at the left-hand side top corner. X-axis is the horizontal line at the top. Y-axis is the horizontal line at the left.](canvas_clipping_path.png)
 
 If we compare clipping paths to the `globalCompositeOperation` property we've seen above, we see two compositing modes that achieve more or less the same effect in `source-in` and `source-atop`. The most important differences between the two are that clipping paths are never actually drawn to the canvas and the clipping path is never affected by adding new shapes. This makes clipping paths ideal for drawing multiple shapes in a restricted area.
 

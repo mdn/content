@@ -248,7 +248,7 @@ draw();
 
 Obtaining crisp lines requires understanding how paths are stroked. In the images below, the grid represents the canvas coordinate grid. The squares between gridlines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.
 
-![](canvas-grid.png)
+![Three canvas co-ordinate grids. The center of all the three images is at the left-hand top corner. The squares between the grid lines are actual pixels on the screen. In the first grid, a rectangle from (2,1) to (5,5) is filled. The rectangle area is highlighted in light-red color. In the second grid, (3,1) to (3,5) is joined with a line of 1 pixel thickness. The line is filled  in royal-blue color. The actual area filled with royal-blue only extends halfway into the pixels on either side of the path. To avoid the extension of the line in second image on either side of the path, the path in the third image is created from (3.5,1) to (3.5,5). The 1 pixel line width ends up completely and precisely filling a single pixel vertical line.](canvas-grid.png)
 
 If you consider a path from (3,1) to (3,5) with a line thickness of `1.0`, you end up with the situation in the second image. The actual area to be filled (dark blue) only extends halfway into the pixels on either side of the path. An approximation of this has to be rendered, which means that those pixels being only partially shaded, and results in the entire area (the light blue and dark blue) being filled in with a color only half as dark as the actual stroke color. This is what happens with the `1.0` width line in the previous example code.
 
