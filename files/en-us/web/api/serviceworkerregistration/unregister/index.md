@@ -28,7 +28,7 @@ unregistered.
 ## Syntax
 
 ```js
-unregister();
+unregister()
 ```
 
 ### Parameters
