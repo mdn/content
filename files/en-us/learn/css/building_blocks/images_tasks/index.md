@@ -48,7 +48,7 @@ Your final result should look like the image below:
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/images/form.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/blob/main/learn/tasks/images/form.html", '100%', 600)}}
 
 > **Callout:**
 >
