@@ -81,3 +81,4 @@ See the [`selectstart`](/en-US/docs/Web/API/XRSession/selectstart_event#examples
 ## See also
 
 - {{domxref("XRSession.select_event", "select")}} and {{domxref("XRSession.selectstart_event", "selectstart")}}
+- {{domxref("Element.beforexrselect_event", "beforexrselect")}}
