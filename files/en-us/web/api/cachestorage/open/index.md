@@ -30,7 +30,7 @@ You can access `CacheStorage` through the global
 ## Syntax
 
 ```js
-open(cacheName);
+open(cacheName)
 ```
 
 ### Parameters
