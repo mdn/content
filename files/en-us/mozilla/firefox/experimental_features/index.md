@@ -471,7 +471,7 @@ For more information see {{bug(1676791)}} and {{bug(1676782)}}.
   </tbody>
 </table>
 
-### Linear Easing Function
+### linear() easing function
 `linear(...)` [easing function](/en-US/docs/Web/CSS/easing-function) defines a piecewise linear function, allowing you to approximate more complex animations.
 (See {{bug(1764126)}} for more details.)
 
