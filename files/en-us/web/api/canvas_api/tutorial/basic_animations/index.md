@@ -277,8 +277,8 @@ img.onload = () => {
   }
 
   // Check if image dimension is larger than canvas
-  clearX = imgW > CanvasXSize ? imgW : CanvasXSize;
-  clearY = imgH > CanvasYSize ? imgH : CanvasYSize;
+  clearX = Math.max(imgW, CanvasXSize);
+  clearY = Math.max(imgH, CanvasYSize);
 
   // Get canvas context
   ctx = document.getElementById('canvas').getContext('2d');
