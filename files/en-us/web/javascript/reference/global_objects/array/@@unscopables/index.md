@@ -17,17 +17,23 @@ The **`@@unscopables`** data property contains property names that were not incl
 
 The default `Array` properties that are ignored for `with` statement-binding purposes are:
 
-- {{jsxref("Array.prototype.at()", "at()")}}
-- {{jsxref("Array.prototype.copyWithin()", "copyWithin()")}}
-- {{jsxref("Array.prototype.entries()", "entries()")}}
-- {{jsxref("Array.prototype.fill()", "fill()")}}
-- {{jsxref("Array.prototype.find()", "find()")}}
-- {{jsxref("Array.prototype.findIndex()", "findIndex()")}}
-- {{jsxref("Array.prototype.includes()", "includes()")}}
-- {{jsxref("Array.prototype.keys()", "keys()")}}
-- {{jsxref("Array.prototype.values()", "values()")}}
+- [`at()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at)
+- [`copyWithin()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin)
+- [`entries()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries)
+- [`fill()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
+- [`find()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+- [`findIndex()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+- [`findLast()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
+- [`findLastIndex()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
+- [`flat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
+- [`flatMap()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
+- [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+- [`keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys)
+- [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
 
-See {{jsxref("Symbol.unscopables")}} for how to set `unscopables` for your own objects.
+`Array.prototype[@@unscopables]` is an object with `null` prototype, where all the above property names have value `true`.
+
+See {{jsxref("Symbol.unscopables")}} for how to set unscopable properties for your own objects.
 
 {{js_property_attributes(0,0,1)}}
 
