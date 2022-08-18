@@ -16,7 +16,7 @@ The **`msContentZoom`** event fires when a user zooms the element (changes the s
 
 It is a proprietary event specific to Microsoft Edge and Internet Explorer.
 
-Zoomed elements can expose their zoom level through `msContentZoom` (ie. scrollTop/Left). The zoom level can be reset with {{DOMxRef("Element.msZoomTo()")}}.
+Zoomed elements can expose their zoom level through `msContentZoom` (i.e. scrollTop/Left). The zoom level can be reset with {{DOMxRef("Element.msZoomTo()")}}.
 
 <table class="properties">
   <tbody>

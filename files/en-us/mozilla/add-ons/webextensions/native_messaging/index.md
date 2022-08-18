@@ -268,7 +268,7 @@ You can quickly get started sending and receiving messages with this NodeJS code
         // The browser will emit the size as a header of the payload,
         // if it hasn't been read yet, do it.
         // The next time we'll need to read the payload size is when all of the data
-        // of the current payload has been read (ie. data.length >= payloadSize + 4)
+        // of the current payload has been read (i.e. data.length >= payloadSize + 4)
         if (!sizeHasBeenRead()) {
             payloadSize = stringData.readUInt32LE(0);
         }
