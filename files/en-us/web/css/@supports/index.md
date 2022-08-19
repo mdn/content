@@ -99,11 +99,9 @@ The `or` operator creates a new expression from the disjunction of two shorter e
 Multiple disjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
-          (-o-transform-style: preserve) or (-webkit-transform-style: preserve) {}
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) or(-webkit-transform-style: preserve) {}
 
-@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or
-          ((-o-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
+@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or(-webkit-transform-style: preserve-3d))) {}
 ```
 
 > **Note:** When using both `and` and `or` operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.
@@ -132,8 +130,7 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 ### Testing for the support of a given CSS property or a prefixed version
 
 ```css
-@supports ((perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
-         (-ms-perspective: 10px) or (-o-perspective: 10px)) {
+@supports ((perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) {
   /* CSS applied when 3D transforms, prefixed or not, are supported */
 }
 ```

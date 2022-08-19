@@ -214,17 +214,17 @@ div { color: black; }
 <div id="orange" class="green" style="color: red;">This is red</div>
 ```
 
-The rules are more complicated when the selector has multiple parts. More detailed information about how selector specificity is calculated can be found in the [CSS 2.1 Specification chapter 6.4.3](https://www.w3.org/TR/CSS21/cascade.html#specificity).
+The rules are more complicated when the selector has multiple parts. A more detailed explanation about how selector specificity is calculated can be found in the [CSS specifity documentation](/en-US/docs/Web/CSS/Specificity).
 
 ## What do the -moz-\*, -ms-\*, -webkit-\*, -o-\* and -khtml-\* properties do?
 
-These properties, called _prefixed properties_, are extensions to the CSS standard. They allow use of experimental and non-standard features in browsers without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.
+These properties, called _prefixed properties_, are extensions to the CSS standard. They were used to allow use of experimental and non-standard features in browsers without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.
 
-The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using the `-webkit-` prefixed version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in non-webkit-based browsers, completely needlessly. This problem got so bad that other browsers started to implement `-webkit-` prefixed aliases to improve web compatibility, as specified in the [Compatibility Living Standard](https://compat.spec.whatwg.org/).
+The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only use the `-webkit-` prefixed version of a property when the non-prefixed version is fully supported across all browsers. This means a feature relying on that property not work in  non-webkit-based browsers, when it could. This became a great enough problem that other browsers implement `-webkit-` prefixed aliases to improve web compatibility, as specified in the [Compatibility Living Standard](https://compat.spec.whatwg.org/).
 
-In fact most browsers now do not use CSS prefixes when implementing experimental features, instead implementing those features only on Nightly browser versions or similar.
+Browsers no longer use CSS prefixes when implementing new experimental features. Rather, they test new features behind configurable experimental flags or only on Nightly browser versions or similar.
 
-If you need to use prefixes in your work, you are advised to write your code in a way that uses the prefixed versions first, but then includes a non-prefixed standard version afterwards so it can automatically override the prefixed versions where supported. For example:
+If you are required to use prefixes in your work, write the prefixed versions first followed by the non-prefixed standard version. This way the standard version will automatically override the prefixed versions when supported. For example:
 
 ```css
 -ms-transform: rotate(90deg);
@@ -234,7 +234,7 @@ transform: rotate(90deg);
 
 > **Note:** For more information on dealing with prefixed properties, see [Handling common HTML and CSS problems — Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes) from our [Cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
-> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) page for more information on the Mozilla-prefixed CSS properties.
+> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions), [Microsoft CSS Extensions](/en-US/docs/Web/CSS/Microsoft_Extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions) for lists of browser-prefixed CSS properties.
 
 ## How does z-index relate to positioning?
 
