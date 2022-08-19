@@ -232,17 +232,13 @@ Here's some examples:
 
 ```css
 -webkit-transform: rotate(90deg);
-
-background-image: -moz-linear-gradient(left ,green, yellow);
-background-image: -webkit-gradient(linear, left center, right center, from(green), to(yellow));
-background-image: linear-gradient(to right, green, yellow);
+-moz-transform: rotate(90deg);
+transform: rotate(90deg);
 ```
 
-While none of these properties requires a prefix, you may encounter this old CSS in a codebase. The first line shows a {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in older versions of Safari and Chrome until the prefix-free feature was supported.
+While the transform propert does not require a prefix, you may encounter this old CSS in a codebase. The first line shows a {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in older versions of Safari and Chrome until the prefix-free feature was supported.
 
-The last three lines show three different versions of the [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient) function, which is originally how linear gradient were written:
-
-The first one has a `-moz-` prefix, the second a `-webkit-` prefix, and the third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
+The second line has a `-moz-` prefix. Also no longer needed. The third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
 
 Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. This is particularly a problem when developers decide to only use say, the `-webkit-` version of a property — meaning that the site won't work in other browsers. This actually happened so much that other browsers implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so developers can test them during development.
 
