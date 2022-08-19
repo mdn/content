@@ -89,6 +89,8 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 
 ## Examples
 
+See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role definition.
+
 ## Accessibility Concerns
 
 ## Best Practices
