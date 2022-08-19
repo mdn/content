@@ -55,7 +55,7 @@ forEach(function(currentValue, index, array) { /* … */ }, thisArg)
         on.
 
 - `thisArg` {{Optional_inline}}
-  - : Value to use as **`this`** (i.e the reference
+  - : Value to use as **`this`** (i.e. the reference
     `Object`) when executing `callback`.
 
 ### Return value
