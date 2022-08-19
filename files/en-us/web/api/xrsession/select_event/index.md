@@ -15,6 +15,8 @@ browser-compat: api.XRSession.select_event
 
 The WebXR **`select`** event is sent to an {{domxref("XRSession")}} when one of the session's input sources has completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action).
 
+The {{domxref("Element.beforexrselect_event", "beforexrselect")}} is fired before this event and can prevent this event from being raised.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
@@ -95,3 +97,4 @@ xrSession.onselect = (event) => {
 ## See also
 
 - {{domxref("XRSession.selectstart_event", "selectstart")}} and {{domxref("XRSession.selectend_event", "selectend")}}
+- {{domxref("Element.beforexrselect_event", "beforexrselect")}}

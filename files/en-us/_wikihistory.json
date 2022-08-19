@@ -28852,14 +28852,6 @@
       "lukasolson"
     ]
   },
-  "Web/API/CanvasRenderingContext2D/drawWidgetAsOnScreen": {
-    "modified": "2020-10-15T21:38:40.063Z",
-    "contributors": [
-      "teoli",
-      "fscholz",
-      "Jedipedia"
-    ]
-  },
   "Web/API/CanvasRenderingContext2D/drawWindow": {
     "modified": "2020-10-15T21:31:12.089Z",
     "contributors": [

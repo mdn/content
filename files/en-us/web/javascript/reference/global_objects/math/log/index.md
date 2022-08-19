@@ -93,7 +93,7 @@ Math.log(10); // 2.302585092994046
 ### Using Math.log() with a different base
 
 The following function returns the logarithm of `y` with base
-`x` (ie. <math><semantics><mrow><msub><mo>log</mo>
+`x` (i.e. <math><semantics><mrow><msub><mo>log</mo>
 <mi>x</mi>
 </msub><mi>y</mi>
 </mrow><annotation encoding="TeX">\log_x y</annotation>
