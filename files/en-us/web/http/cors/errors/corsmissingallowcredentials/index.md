@@ -39,7 +39,7 @@ credentials.
   default value).
 - If using the [Fetch API](/en-US/docs/Web/API/Fetch_API), make sure
   {{domxref("Request.credentials")}} is `"omit"`.
-- If using the [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) make sure you're setting the {{domxref("HTMLImageElement.crossOrigin")}} attribute to `anonymous`.
+- If using the [HTMLImageElement](/en-US/docs/Web/API/HTMLImageElement) make sure you're setting the {{domxref("HTMLImageElement.crossOrigin")}} attribute to `anonymous`.
 
 To eliminate this error by changing the server's configuration, adjust the server's
 configuration to set the `Access-Control-Allow-Credentials` header's value to
