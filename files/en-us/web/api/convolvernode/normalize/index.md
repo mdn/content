@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode.normalize
 slug: Web/API/ConvolverNode/normalize
+page-type: web-api-instance-property
 tags:
   - API
   - ConvolverNode
@@ -30,31 +31,32 @@ A boolean.
 ## Examples
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var convolver = audioCtx.createConvolver();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const convolver = audioCtx.createConvolver();
 
-  ...
+// …
 
 // grab audio track via XHR for convolver node
 
-var soundSource, concertHallBuffer;
+let soundSource;
+let concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
 ajaxRequest.open('GET', 'concert-crowd.ogg', true);
 ajaxRequest.responseType = 'arraybuffer';
 
-ajaxRequest.onload = function() {
-  var audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(audioData, function(buffer) {
+ajaxRequest.onload = () => {
+  let audioData = ajaxRequest.response;
+  audioCtx.decodeAudioData(audioData, (buffer) => {
       concertHallBuffer = buffer;
       soundSource = audioCtx.createBufferSource();
       soundSource.buffer = concertHallBuffer;
-    }, function(e){"Error with decoding audio data" + e.err});
+    }, (e) => console.error(`Error with decoding audio data: ${e.err}`));
 }
 
 ajaxRequest.send();
 
-  ...
+// …
 
 convolver.normalize = false; // must be set before the buffer, to take effect
 convolver.buffer = concertHallBuffer;

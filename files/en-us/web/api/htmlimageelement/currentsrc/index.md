@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.currentSrc
 slug: Web/API/HTMLImageElement/currentSrc
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLImageElement
@@ -20,7 +21,7 @@ currently presented in the {{HTMLElement("img")}} element it represents.
 
 ## Value
 
-A {{domxref("USVString")}} indicating the full URL of the image currently visible in
+A string indicating the full URL of the image currently visible in
 the {{HTMLElement("img")}} element represented by the `HTMLImageElement`.
 This is useful when you provide multiple image options using the
 {{domxref("HTMLImageElement.sizes", "sizes")}} and/or
@@ -47,7 +48,7 @@ document.
 ### JavaScript
 
 ```js
-var clockImage = document.querySelector("img");
+const clockImage = document.querySelector("img");
 let p = document.createElement("p");
 
 if (!clockImage.currentSrc.endsWith("200px.png")) {
@@ -60,7 +61,7 @@ document.body.appendChild(p);
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 370)}}
+{{EmbedLiveSample("Examples", 640, 370)}}
 
 ## Specifications
 

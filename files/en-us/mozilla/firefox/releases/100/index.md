@@ -19,7 +19,7 @@ No notable changes.
 
 ### CSS
 
-- CSS media features for [`dynamic-range`](en-US/docs/Web/CSS/@media/dynamic-range) and [`video-dynamic-range`](en-US/docs/Web/CSS/@media/video-dynamic-range) are now supported. You can now test whether a user agent or an output device supports the combination of brightness, contrast ratio, and color depth by using `dynamic-range` and in the video plane by using `video-dynamic-range` ({{bug(1751217)}}).
+- CSS media features for [`dynamic-range`](/en-US/docs/Web/CSS/@media/dynamic-range) and [`video-dynamic-range`](/en-US/docs/Web/CSS/@media/video-dynamic-range) are now supported. You can now test whether a user agent or an output device supports the combination of brightness, contrast ratio, and color depth by using `dynamic-range` and in the video plane by using `video-dynamic-range` ({{bug(1751217)}}).
 
 ### JavaScript
 
@@ -48,6 +48,11 @@ No notable changes.
 ### WebDriver conformance (Marionette)
 
 - Added support for user prompts (e.g. `alert`) on Android ({{bug(1708105)}}).
+
+## Changes for add-on developers
+
+- The `color_scheme` and `content_color_scheme` properties are added to [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key and available in the {{WebExtAPIRef("theme")}} API. These properties enable a theme to override whether a light or dark color scheme is automatically applied to the chrome or content ({{bug(1708105)}}).
+- You can now create a muted tab using {{WebExtAPIRef("tabs.create()")}} with the new `muted` property in the `createProperties` object ({{bug(1372100)}}).
 
 ## Older versions
 

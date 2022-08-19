@@ -1,6 +1,7 @@
 ---
 title: CSSStyleValue.parse()
 slug: Web/API/CSSStyleValue/parse
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -26,9 +27,9 @@ parse(property, cssText)
 
 ### Parameters
 
-- property
+- `property`
   - : A CSS property to set.
-- cssText
+- `cssText`
   - : A comma-separated string containing one or more values to apply to the provided
     property.
 

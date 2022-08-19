@@ -1,6 +1,7 @@
 ---
 title: DeprecationReportBody
 slug: Web/API/DeprecationReportBody
+page-type: web-api-interface
 tags:
   - API
   - DeprecationReportBody
@@ -10,7 +11,7 @@ tags:
   - Reporting API
 browser-compat: api.DeprecationReportBody
 ---
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `DeprecationReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of a deprecation report.
 
@@ -26,24 +27,24 @@ An instance of `DeprecationReportBody` is returned as the value of {{domxref("Re
 
 This interface also inherits properties from {{domxref("ReportBody")}}.
 
-- {{domxref("DeprecationReportBody.id")}}
+- {{domxref("DeprecationReportBody.id")}} {{experimental_inline}}
   - : A string representing the feature or API that is deprecated, for example `NavigatorGetUserMedia`. This can be used to group reports by deprecated feature.
 - {{domxref("DeprecationReportBody.anticipatedRemoval")}}
   - : A {{jsxref("Date")}} object (rendered as a string) representing the date when the feature is expected to be removed from the current browser. If the date is not known, this property will return `null`.
-- {{domxref("DeprecationReportBody.message")}}
+- {{domxref("DeprecationReportBody.message")}} {{experimental_inline}}
   - : A string containing a human-readable description of the deprecation, including information such as what newer feature has superseded it, if any. This typically matches the message a browser will display in its DevTools console when a deprecated feature is used, if one is available.
-- {{domxref("DeprecationReportBody.sourceFile")}}
+- {{domxref("DeprecationReportBody.sourceFile")}} {{experimental_inline}}
   - : A string containing the path to the source file where the deprecated feature was used, if known, or `null` otherwise.
-- {{domxref("DeprecationReportBody.lineNumber")}}
+- {{domxref("DeprecationReportBody.lineNumber")}} {{experimental_inline}}
   - : A number representing the line in the source file in which the deprecated feature was used, if known, or `null` otherwise.
-- {{domxref("DeprecationReportBody.columnNumber")}}
+- {{domxref("DeprecationReportBody.columnNumber")}} {{experimental_inline}}
   - : A number representing the column in the source file in which the deprecated feature was used, if known, or `null` otherwise.
 
 ## Methods
 
 This interface also inherits methods from {{domxref("ReportBody")}}.
 
-- {{domxref("DeprecationReportBody.toJSON()")}}
+- {{domxref("DeprecationReportBody.toJSON()")}} {{experimental_inline}}
   - : A _serializer_ which returns a JSON representation of the `InterventionReportBody` object.
 
 ## Examples
@@ -56,7 +57,7 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```
@@ -79,18 +80,18 @@ function displayReports(reports) {
   const list = document.createElement('ul');
   outputElem.appendChild(list);
 
-  for(let i = 0; i < reports.length; i++) {
-    let listItem = document.createElement('li');
-    let textNode = document.createTextNode('Report ' + (i + 1) + ', type: ' + reports[i].type);
+  for (let i = 0; i < reports.length; i++) {
+    const listItem = document.createElement('li');
+    const textNode = document.createTextNode(`Report ${i + 1}, type: ${reports[i].type}`);
     listItem.appendChild(textNode);
-    let innerList = document.createElement('ul');
+    const innerList = document.createElement('ul');
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
-    for (let key in reports[i].body) {
-      let innerListItem = document.createElement('li');
-      let keyValue = reports[i].body[key];
-      innerListItem.textContent = key + ': ' + keyValue;
+    for (const key in reports[i].body) {
+      const innerListItem = document.createElement('li');
+      const keyValue = reports[i].body[key];
+      innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);
     }
   }

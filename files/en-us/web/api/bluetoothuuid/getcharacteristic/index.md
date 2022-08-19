@@ -1,6 +1,7 @@
 ---
 title: BluetoothUUID.getCharacteristic()
 slug: Web/API/BluetoothUUID/getCharacteristic
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ getCharacteristic(name)
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString","string")}} containing the name of the characteristic.
+  - : A string containing the name of the characteristic.
 
 ### Return value
 

@@ -1,6 +1,7 @@
 ---
 title: console
 slug: Web/API/console
+page-type: web-api-interface
 tags:
   - API
   - Debugging
@@ -48,7 +49,7 @@ gives a few [Usage](#usage) examples.
   - : Displays an XML/HTML Element representation of the specified object if possible or the JavaScript Object view if it is not possible.
 - {{domxref("console.error()")}}
   - : Outputs an error message. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
-- {{domxref("console.exception()")}} {{Non-standard_inline}} {{deprecated_inline}}
+- `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
   - : An alias for `error()`.
 - {{domxref("console.group()")}}
   - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. To move back out a level, call `groupEnd()`.
@@ -73,7 +74,7 @@ gives a few [Usage](#usage) examples.
 - {{domxref("console.timeLog()")}}
   - : Logs the value of the specified [timer](#timers) to the console.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Adds a marker to the browser's [Timeline](https://developer.chrome.com/devtools/docs/timeline) or [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html) tool.
+  - : Adds a marker to the browser performance tool's timeline ([Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) or [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)).
 - {{domxref("console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
 - {{domxref("console.warn()")}}
@@ -83,7 +84,7 @@ gives a few [Usage](#usage) examples.
 
 ### Outputting text to the console
 
-The most frequently-used feature of the console is logging of text and other data. There are four categories of output you can generate, using the {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, and {{domxref("console.error()")}} methods respectively. Each of these results in output styled differently in the log, and you can use the filtering controls provided by your browser to only view the kinds of output that interest you.
+The most frequently-used feature of the console is logging of text and other data. There are several categories of output you can generate, using the {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}}, or {{domxref("console.debug()")}} methods. Each of these results in output styled differently in the log, and you can use the filtering controls provided by your browser to only view the kinds of output that interest you.
 
 There are two ways to use each of the output methods; you can pass in a list of objects whose string representations get concatenated into one string, then output to the console, or you can pass in a string containing zero or more substitution strings followed by a list of objects to replace them.
 
@@ -92,14 +93,14 @@ There are two ways to use each of the output methods; you can pass in a list of 
 The simplest way to use the logging methods is to output a single object:
 
 ```js
-var someObject = { str: "Some text", id: 5 };
+const someObject = { str: "Some text", id: 5 };
 console.log(someObject);
 ```
 
 The output looks something like this:
 
 ```bash
-[09:27:13.475] ({str:"Some text", id:5})
+{str:"Some text", id:5}
 ```
 
 #### Outputting multiple objects
@@ -107,15 +108,15 @@ The output looks something like this:
 You can also output multiple objects by listing them when calling the logging method, like this:
 
 ```js
-var car = "Dodge Charger";
-var someObject = { str: "Some text", id: 5 };
+const car = "Dodge Charger";
+const someObject = { str: "Some text", id: 5 };
 console.info("My first car was a", car, ". The object is:", someObject);
 ```
 
-This output will look like this:
+The output will look like this:
 
 ```bash
-[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
 ```
 
 #### Using string substitutions
@@ -125,30 +126,30 @@ When passing a string to one of the `console` object's methods that accepts a st
 - `%o` or `%O`
   - : Outputs a JavaScript object. Clicking the object name opens more information about it in the inspector.
 - `%d` or `%i`
-  - : Outputs an integer. Number formatting is supported, for example `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`
+  - : Outputs an integer. Number formatting is supported, for example `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
 - `%s`
   - : Outputs a string.
 - `%f`
-  - : Outputs a floating-point value. Formatting is supported, for example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`
+  - : Outputs a floating-point value. Formatting is supported, for example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`.
 
-> **Note:** Precision formatting doesn't work in Chrome
+> **Note:** Precision formatting doesn't work in Chrome.
 
 Each of these pulls the next argument after the format string off the parameter list. For example:
 
 ```js
-for (var i=0; i<5; i++) {
+for (let i=0; i<5; i++) {
   console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
 }
 ```
 
 The output looks like this:
 
-```bash
-[13:14:13.481] Hello, Bob. You've called me 1 times.
-[13:14:13.483] Hello, Bob. You've called me 2 times.
-[13:14:13.485] Hello, Bob. You've called me 3 times.
-[13:14:13.487] Hello, Bob. You've called me 4 times.
-[13:14:13.488] Hello, Bob. You've called me 5 times.
+```
+Hello, Bob. You've called me 1 times.
+Hello, Bob. You've called me 2 times.
+Hello, Bob. You've called me 3 times.
+Hello, Bob. You've called me 4 times.
+Hello, Bob. You've called me 5 times.
 ```
 
 #### Styling console output
@@ -171,7 +172,7 @@ console.log("Multiple styles: %cred %corange", "color: red", "color: orange", "A
 
 The properties usable along with the `%c` syntax are as follows (at least, in Firefox — they may differ in other browsers):
 
-- {{cssxref("background")}} and its longhand equivalents.
+- {{cssxref("background")}} and its longhand equivalents
 - {{cssxref("border")}} and its longhand equivalents
 - {{cssxref("border-radius")}}
 - {{cssxref("box-decoration-break")}}
@@ -225,7 +226,7 @@ For example, given this code:
 console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
-alert("Do a bunch of other stuff...");
+alert("Do a bunch of other stuff…");
 console.timeEnd("answer time");
 ```
 
@@ -273,7 +274,7 @@ The output in the console looks something like this:
 
 - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
 - [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web console in Firefox handles console API calls
-- [Remote Debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — how to see console output when the debugging target is a mobile device
+- [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) — how to see console output when the debugging target is a mobile device
 
 ### Other implementations
 

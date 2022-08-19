@@ -1,6 +1,7 @@
 ---
 title: ImageData.height
 slug: Web/API/ImageData/height
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

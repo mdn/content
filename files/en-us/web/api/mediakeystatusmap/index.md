@@ -1,6 +1,7 @@
 ---
 title: MediaKeyStatusMap
 slug: Web/API/MediaKeyStatusMap
+page-type: web-api-interface
 tags:
   - API
   - EncryptedMediaExtensions
@@ -9,14 +10,14 @@ tags:
   - Reference
 browser-compat: api.MediaKeyStatusMap
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+{{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeyStatusMap`** interface of the [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) is a read-only map of media key statuses by key IDs.
 
 ## Properties
 
 - {{domxref("MediaKeyStatusMap.size")}} {{readonlyinline}}
-  - : Returns the number of key/value pars in the status map.
+  - : Returns the number of key/value pairs in the status map.
 
 ## Methods
 

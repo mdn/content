@@ -1,6 +1,7 @@
 ---
-title: TextEncode.encode()
+title: TextEncoder.encode()
 slug: Web/API/TextEncoder/encode
+page-type: web-api-instance-method
 tags:
   - API
   - Encoding
@@ -26,7 +27,7 @@ encode(string)
 ### Parameters
 
 - `string`
-  - : Is a string containing the text to encode.
+  - : A string containing the text to encode.
 
 ### Return value
 

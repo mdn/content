@@ -45,7 +45,7 @@ console.log(browser.runtime.getManifest().version);
 
 If the manifest contains:
 
-```js
+```json
 "version": "0.1"
 ```
 

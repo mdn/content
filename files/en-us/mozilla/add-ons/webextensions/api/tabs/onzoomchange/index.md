@@ -64,9 +64,9 @@ Listen for zoom events and log the info:
 
 ```js
 function handleZoomed(zoomChangeInfo) {
-  console.log("Tab: " + zoomChangeInfo.tabId + " zoomed");
-  console.log("Old zoom: " + zoomChangeInfo.oldZoomFactor);
-  console.log("New zoom: " + zoomChangeInfo.newZoomFactor);
+  console.log(`Tab: ${zoomChangeInfo.tabId} zoomed`);
+  console.log(`Old zoom: ${zoomChangeInfo.oldZoomFactor}`);
+  console.log(`New zoom: ${zoomChangeInfo.newZoomFactor}`);
 }
 
 browser.tabs.onZoomChange.addListener(handleZoomed);
@@ -78,7 +78,7 @@ browser.tabs.onZoomChange.addListener(handleZoomed);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onZoomChange) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onZoomChange) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

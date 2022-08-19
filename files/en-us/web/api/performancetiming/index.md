@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
+page-type: web-api-interface
 tags:
   - API
   - Backwards compatibility
@@ -27,16 +28,16 @@ _The `PerformanceTiming` interface doesn't inherit any properties._
 
 These properties each describe the time at which a particular point in the page loading process was reached. Some correspond to DOM events; others describe the time at which internal browser operations of interest took place.
 
-Each time is provided as a {{interwiki("wikipedia", "Unix_time", "Unix time")}} (`unsigned long long`) representing the moment, in milliseconds since the UNIX epoch.
+Each time is provided as a number representing the moment, in milliseconds since the UNIX epoch.
 
 These properties are listed in the order in which they occur during the navigation process.
 
 - {{domxref("PerformanceTiming.navigationStart")}} {{readonlyInline}} {{deprecated_inline}}
   - : When the prompt for unload terminates on the previous document in the same browsing context. If there is no previous document, this value will be the same as `PerformanceTiming.fetchStart`.
 - {{domxref("PerformanceTiming.unloadEventStart")}} {{readonlyInline}} {{deprecated_inline}}
-  - : When the {{event("unload")}} event has been thrown, indicating the time at which the previous document in the window began to unload. If there is no previous document, or if the previous document or one of the needed redirects is not of the same origin, the value returned is `0`.
+  - : When the {{domxref("Window/unload_event", "unload")}} event has been thrown, indicating the time at which the previous document in the window began to unload. If there is no previous document, or if the previous document or one of the needed redirects is not of the same origin, the value returned is `0`.
 - {{domxref("PerformanceTiming.unloadEventEnd")}} {{readonlyInline}} {{deprecated_inline}}
-  - : When the {{event("unload")}} event handler finishes. If there is no previous document, or if the previous document, or one of the needed redirects, is not of the same origin, the value returned is `0`.
+  - : When the {{domxref("Window/unload_event", "unload")}} event handler finishes. If there is no previous document, or if the previous document, or one of the needed redirects, is not of the same origin, the value returned is `0`.
 - {{domxref("PerformanceTiming.redirectStart")}} {{readonlyInline}} {{deprecated_inline}}
   - : When the first HTTP redirect starts. If there is no redirect, or if one of the redirects is not of the same origin, the value returned is `0`.
 - {{domxref("PerformanceTiming.redirectEnd")}} {{readonlyInline}} {{deprecated_inline}}
@@ -60,19 +61,19 @@ These properties are listed in the order in which they occur during the navigati
 - {{domxref("PerformanceTiming.responseEnd")}} {{readonlyInline}} {{deprecated_inline}}
   - : When the browser received the last byte of the response, or when the connection is closed if this happened first, from the server, the cache, or from a local resource.
 - {{domxref("PerformanceTiming.domLoading")}} {{readonlyInline}} {{deprecated_inline}}
-  - : When the parser started its work, that is when its {{domxref("Document.readyState")}} changes to `'loading'` and the corresponding {{event("readystatechange")}} event is thrown.
+  - : When the parser started its work, that is when its {{domxref("Document.readyState")}} changes to `'loading'` and the corresponding {{domxref("Document/readystatechange_event", "readystatechange")}} event is thrown.
 - {{domxref("PerformanceTiming.domInteractive")}} {{readonlyInline}} {{deprecated_inline}}
-  - : When the parser finished its work on the main document, that is when its {{domxref("Document.readyState")}} changes to `'interactive'` and the corresponding {{event("readystatechange")}} event is thrown.
+  - : When the parser finished its work on the main document, that is when its {{domxref("Document.readyState")}} changes to `'interactive'` and the corresponding {{domxref("Document/readystatechange_event", "readystatechange")}} event is thrown.
 - {{domxref("PerformanceTiming.domContentLoadedEventStart")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Right before the parser sent the {{event("DOMContentLoaded")}} event, that is right after all the scripts that need to be executed right after parsing have been executed.
+  - : Right before the parser sent the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event, that is right after all the scripts that need to be executed right after parsing have been executed.
 - {{domxref("PerformanceTiming.domContentLoadedEventEnd")}} {{readonlyInline}} {{deprecated_inline}}
   - : Right after all the scripts that need to be executed as soon as possible, in order or not, have been executed.
 - {{domxref("PerformanceTiming.domComplete")}} {{readonlyInline}} {{deprecated_inline}}
-  - : When the parser finished its work on the main document, that is when its {{domxref("Document.readyState")}} changes to `'complete'` and the corresponding {{event("readystatechange")}} event is thrown.
+  - : When the parser finished its work on the main document, that is when its {{domxref("Document.readyState")}} changes to `'complete'` and the corresponding {{domxref("Document/readystatechange_event", "readystatechange")}} event is thrown.
 - {{domxref("PerformanceTiming.loadEventStart")}} {{readonlyInline}} {{deprecated_inline}}
-  - : When the {{event("load")}} event was sent for the current document. If this event has not yet been sent, it returns `0.`
+  - : When the {{domxref("Window/load_event", "load")}} event was sent for the current document. If this event has not yet been sent, it returns `0.`
 - {{domxref("PerformanceTiming.loadEventEnd")}} {{readonlyInline}} {{deprecated_inline}}
-  - : When the {{event("load")}} event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns `0.`
+  - : When the {{domxref("Window/load_event", "load")}} event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns `0.`
 
 ## Methods
 

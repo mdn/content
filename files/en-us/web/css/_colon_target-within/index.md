@@ -16,7 +16,9 @@ div:target-within {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:target-within
+```
 
 ## Examples
 

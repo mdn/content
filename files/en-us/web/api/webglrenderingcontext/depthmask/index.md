@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.depthMask()
 slug: Web/API/WebGLRenderingContext/depthMask
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -28,7 +29,7 @@ depthMask(flag)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

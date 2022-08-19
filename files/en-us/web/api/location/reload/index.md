@@ -1,6 +1,7 @@
 ---
 title: location.reload()
 slug: Web/API/Location/reload
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

@@ -44,7 +44,7 @@ This element implements the {{domxref("SVGFEImageElement")}} interface.
     xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="image">
-      <feImage xlink:href="/files/6457/mdn_logo_only_color.png"/>
+      <feImage xlink:href="mdn_logo_only_color.png"/>
     </filter>
   </defs>
 

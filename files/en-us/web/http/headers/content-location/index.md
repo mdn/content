@@ -11,8 +11,7 @@ browser-compat: http.headers.Content-Location
 
 The **`Content-Location`** header indicates an alternate
 location for the returned data. The principal use is to indicate the URL of a resource
-transmitted as the result of [content
-negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 
 {{HTTPHeader("Location")}} and `Content-Location` are different.
 `Location` indicates the URL of a redirect, while
@@ -52,7 +51,7 @@ Content-Location: <url>
 ### Requesting data from a server in different formats
 
 Let's say a site's API can return data in {{glossary("JSON")}}, {{glossary("XML")}}, or
-[CSV](https://en.wikipedia.org/wiki/Comma-separated_values "Comma-separated values") formats. If the URL for a particular document
+[CSV](https://en.wikipedia.org/wiki/Comma-separated_values) formats. If the URL for a particular document
 is at `https://example.com/documents/foo`, the site could return different
 URLs for `Content-Location` depending on the request's
 {{HTTPHeader("Accept")}} header:
@@ -64,8 +63,7 @@ URLs for `Content-Location` depending on the request's
 | `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
 
 These URLs are examples — the site could serve the different filetypes with any URL
-patterns it wishes, such as a [query string
-parameter](/en-US/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`,
+patterns it wishes, such as a [query string parameter](/en-US/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`,
 `/documents/foo?format=xml`, and so on.
 
 Then the client could remember that the JSON version is available at that particular

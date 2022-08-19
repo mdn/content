@@ -1,6 +1,7 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -30,8 +31,8 @@ A string representing the local part of the element's qualified name.
 <head>
   <script type="application/javascript"><![CDATA[
   function test() {
-    var text = document.getElementById('text');
-    var circle = document.getElementById('circle');
+    const text = document.getElementById('text');
+    const circle = document.getElementById('circle');
 
     text.value = "<svg:circle> has:\n" +
                  "localName = '" + circle.localName + "'\n" +
@@ -67,13 +68,7 @@ particular XML documents. For example, in the qualified name
 </ecomm:business>
 ```
 
-> **Note:** In {{Gecko("1.9.2")}} and earlier, the property returns the
-> upper-cased version of the local name for HTML elements in HTML DOMs (as opposed to
-> XHTML elements in XML DOMs). In later versions, in compliance with HTML5, the property
-> returns in the case of the internal DOM storage, which is lower case for both HTML
-> elements in HTML DOMs and XHTML elements in XML DOMs. The
-> {{domxref("element.tagName","tagName")}} property continues to return in the upper
-> case for HTML elements in HTML DOMs.
+> **Note:** While the property returns the case of the internal DOM storage, which is lower case, not that {{domxref("element.tagName","tagName")}} property returns upper case for HTML elements in HTML DOMs.
 
 ## Specifications
 

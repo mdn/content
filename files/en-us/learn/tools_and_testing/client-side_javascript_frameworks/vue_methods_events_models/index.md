@@ -12,7 +12,7 @@ tags:
   - client-side
   - events
   - models
-  - vue
+  - Vue
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -96,7 +96,7 @@ We now have an app that displays a list of to-do items. However, we can't update
     import ToDoForm from './components/ToDoForm';
     ```
 
-5. You also need to register the new component in your App component — update the `components` property of the component object so that it looks like this:
+5. You also need to register the new component in your `App` component — update the `components` property of the component object so that it looks like this:
 
     ```js
     components: {
@@ -105,7 +105,7 @@ We now have an app that displays a list of to-do items. However, we can't update
     }
     ```
 
-6. Finally for this section, render your `ToDoForm` component inside your App by adding the `<to-do-form />` element inside your `App`'s `<template>`, like so:
+6. Finally for this section, render your `ToDoForm` component inside your app by adding the `<to-do-form />` element inside your `App`'s `<template>`, like so:
 
     ```html
     <template>
@@ -160,7 +160,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
     - `.stop`: Stops the event from propagating. Equivalent to [`Event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) in regular JavaScript events.
     - `.prevent`: Prevents the event's default behavior. Equivalent to [`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
     - `.self`: Triggers the handler only if the event was dispatched from this exact element.
-    - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/KeyboardEvent/key/Key_Values); multi-word keys just need to be converted to kebab case (e.g. `page-down`).
+    - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values); multi-word keys just need to be converted to kebab case (e.g. `page-down`).
     - `.native`: Listens for a native event on the root (outer-most wrapping) element on your component.
     - `.once`: Listens for the event until it's been triggered once, and then no more.
     - `.left`: Only triggers the handler via the left mouse button event.
@@ -168,9 +168,9 @@ To make a method available to the `ToDoForm` component, we need to add it to the
     - `.middle`: Only triggers the handler via the middle mouse button event.
     - `.passive`: Equivalent to using the `{ passive: true }` parameter when creating an event listener in vanilla JavaScript using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
 
-    In this case, we need to use the `.prevent` handler to stop the browser's default submit action. Add `.prevent` to the `@submit` handler in your template like so:
+    In this case, we need to use the `.prevent` modifier to stop the browser's default submit action. Add `.prevent` to the `@submit` handler in your template like so:
 
-    ```js
+    ```html
     <form @submit.prevent="onSubmit">
     ```
 
@@ -201,11 +201,11 @@ The first thing we need is a `data` property in our form to track the value of t
     };
     ```
 
-2. We now need some way to attach the value of the `new-todo-input` `<input>` field to the `label` field. Vue has a special directive for this: [`v-model`](https://v2.vuejs.org/v2/api/#v-model). `v-model` binds to the data property you set on it and keeps it in sync with the `<input>`. `v-model` works across all the various input types, including check boxes, radios, and select inputs. To use `v-model`, you add an attribute with the structure `v-model="variable"` to the `<input>`.
+2. We now need some way to attach the value of the `new-todo-input` `<input>` field to the `label` field. Vue has a special directive for this: [`v-model`](https://v2.vuejs.org/v2/api/#v-model). `v-model` binds to the data property you set on it and keeps it in sync with the `<input>`. `v-model` works across all the various input types, including checkboxes, radios, and select inputs. To use `v-model`, you add an attribute with the structure `v-model="variable"` to the `<input>`.
 
     So in our case, we would add it to our `new-todo-input` field as seen below. Do this now:
 
-    ```js
+    ```html
     <input
       type="text"
       id="new-todo-input"
@@ -234,7 +234,7 @@ The first thing we need is a `data` property in our form to track the value of t
     Label value: My value
     ```
 
-## Changing `v-model` behavior with modifiers
+## Changing v-model behavior with modifiers
 
 In a similar fashion to event modifiers, we can also add modifiers to change the behavior of `v-model`. In our case, there are two worth considering. The first, `.trim`, will remove whitespace from before or after the input. We can add the modifier to our `v-model` statement like so: `v-model.trim="label"`.
 
@@ -248,7 +248,7 @@ Update your `v-model` attribute to chain `lazy` and `trim` as shown above, and t
 
 We now are very close to being able to add new to-do items to our list. The next thing we need to be able to do is pass the newly-created to-do item to our `App` component. To do that, we can have our `ToDoForm` emit a custom event that passes the data, and have `App` listen for it. This works very similarly to native events on HTML elements: a child component can emit an event which can be listened to via `v-on`.
 
-In the `onSubmit` event of our `ToDoForm`, let's add a `todo-added` event. Custom events are emitted like this: `this.$emit("event-name")`. It's important to know that event handlers are case sensitive and cannot include spaces. Vue templates also get converted to lowercase, which means Vue templates cannot listen for events named with capital letters.
+In the `onSubmit` event handler of our `ToDoForm`, let's add a `todo-added` event. Custom events are emitted like this: `this.$emit("event-name")`. It's important to know that event handlers are case sensitive and cannot include spaces. Vue templates also get converted to lowercase, which means Vue templates cannot listen for events named with capital letters.
 
 1. Replace the `console.log()` in the `onSubmit()` method with the following:
 
@@ -291,7 +291,7 @@ In the `onSubmit` event of our `ToDoForm`, let's add a `todo-added` event. Custo
 
 4. When you submit your `ToDoForm`, you should see the console log from the `addToDo()` method. This is good, but we're still not passing any data back into the `App.vue` component. We can do that by passing additional arguments to the `this.$emit()` function back in the `ToDoForm` component.
 
-    In this case, when we fire the event we want to pass the `label` data along with it. this is done by including the data you want to pass as another parameter in the `$emit()` method: `this.$emit("todo-added", this.label)`. This is similar to how native JavaScript events include data, except custom Vue events include no event object by default. This means that the emitted event will directly match whatever object you submit. So in our case, our event object will just be a string.
+    In this case, when we fire the event we want to pass the `label` data along with it. This is done by including the data you want to pass as another parameter in the `$emit()` method: `this.$emit("todo-added", this.label)`. This is similar to how native JavaScript events include data, except custom Vue events include no event object by default. This means that the emitted event will directly match whatever object you submit. So in our case, our event object will just be a string.
 
     Update your `onSubmit()` method like so:
 
@@ -328,13 +328,13 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
     ```
 
 2. Try testing your form again, and you should see new to-do items get appended to the end of the list.
-3. Let's make a further improvement before we move on. If you submit the form while the input is empty, todo items with no text still get added to the list. To fix that, we can prevent the todo-added event from firing when name is empty. Since name is already being trimmed by the `.trim` directive, we only need to test for the empty string.
+3. Let's make a further improvement before we move on. If you submit the form while the input is empty, todo items with no text still get added to the list. To fix that, we can prevent the todo-added event from firing when name is empty. Since name is already being trimmed by the `.trim` modifier, we only need to test for the empty string.
 
     Go back to your `ToDoForm` component, and update the `onSubmit()` method like so. If the label value is empty, let's not emit the `todo-added` event.
 
     ```js
     onSubmit() {
-      if(this.label === "") {
+      if (this.label === "") {
         return;
       }
       this.$emit('todo-added', this.label);
@@ -345,7 +345,7 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
 
 ![Our todo list app rendered with a text input to enter new todos](rendered-form-with-new-items.png)
 
-## Using `v-model` to update an input value
+## Using v-model to update an input value
 
 There's one more thing to fix in our `ToDoForm` component — after submitting, the `<input>` still contains the old value. But this is easy to fix — because we're using `v-model` to bind the data to the `<input>` in `ToDoForm`, if we set the name parameter to equal an empty string, the input will update as well.
 
@@ -353,7 +353,7 @@ Update your `ToDoForm` component's `onSubmit()` method to this:
 
 ```js
 onSubmit() {
-  if(this.label === "") {
+  if (this.label === "") {
     return;
   }
   this.$emit('todo-added', this.label);

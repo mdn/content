@@ -77,9 +77,9 @@ We're going to add the build command to our `package.json` file as an npm script
 1. Open the `package.json` file in your project's root directory, and find the `scripts` property.
 2. We'll add a `build` command that we can run to build our code. Add the following line to your project now:
 
-    ```bash
+    ```json
     "scripts": {
-      ...
+      // …
       "build": "parcel build src/index.html"
     }
     ```
@@ -188,7 +188,7 @@ So with our project committed in git and pushed to our GitHub repository, the ne
 
 Deploying from GitHub to Netlify is surprisingly simple once you know the steps, particularly with "static websites" such as this project.
 
-> **Note:** There are also a lot of [guides and tutorials on Netlify](https://www.netlify.com/tags/tutorial/) to help you improve your development workflow.
+> **Note:** There are also a lot of [guides and tutorials on Netlify](https://www.netlify.com/blog/tags/tutorial/) to help you improve your development workflow.
 
 Let's get this done:
 

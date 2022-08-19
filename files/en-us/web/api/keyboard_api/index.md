@@ -1,6 +1,7 @@
 ---
 title: Keyboard API
 slug: Web/API/Keyboard_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -9,6 +10,9 @@ tags:
   - Keyboard Map
   - Overview
   - Reference
+browser-compat:
+  - api.Keyboard
+  - api.KeyboardLayoutMap
 ---
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
@@ -28,11 +32,11 @@ The following example demonstrates how to get the location-specific or layout-sp
 
 ```js
 if (navigator.keyboard) {
-  var keyboard = navigator.keyboard;
+  const keyboard = navigator.keyboard;
   keyboard.getLayoutMap()
-  .then(keyboardLayoutMap => {
-    var upKey = keyboardLayoutMap.get('KeyW');
-    window.alert('Press ' + upKey + ' to move up.');
+  .then((keyboardLayoutMap) => {
+    const upKey = keyboardLayoutMap.get('KeyW');
+    window.alert(`Press ${upKey} to move up.`);
   });
 } else {
   // Do something else.
@@ -70,17 +74,8 @@ The codes passed {{domxref('Keyboard.lock')}} and the various methods of the {{d
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Keyboard Map')}}     | {{Spec2('Keyboard Map')}}     | Initial definition. |
-| {{SpecName('Keyboard Lock')}} | {{Spec2('Keyboard Lock')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Keyboard API
-
-{{Compat("api.Keyboard")}}
-
-### Keyboard lock API
-
-{{Compat("api.KeyboardLayoutMap")}}
+{{Compat}}

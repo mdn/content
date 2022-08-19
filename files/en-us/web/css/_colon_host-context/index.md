@@ -45,13 +45,15 @@ p {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:host-context( <compound-selector> )
+```
 
 ## Examples
 
 ### Selectively styling shadow hosts
 
-The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
+The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
 In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
 
@@ -92,4 +94,4 @@ The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { c
 
 - [Web components](/en-US/docs/Web/Web_Components)
 - {{cssxref(":host")}}
-- {{cssxref(":host", ":host()")}}
+- {{cssxref(":host_function", ":host()")}}

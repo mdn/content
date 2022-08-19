@@ -27,7 +27,7 @@ browser.browserAction.disable(
 
 ### Parameters
 
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. The id of the tab for which you want to disable the browser action.
 
 ## Browser compatibility

@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent.paymentRequestOrigin
 slug: Web/API/PaymentRequestEvent/paymentRequestOrigin
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request API
@@ -19,7 +20,7 @@ The **`paymentRequestOrigin`** read-only property of the
 
 ## Value
 
-A USVString.
+A string.
 
 ## Specifications
 

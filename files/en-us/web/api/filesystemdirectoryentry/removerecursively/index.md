@@ -1,9 +1,9 @@
 ---
 title: FileSystemDirectoryEntry.removeRecursively()
 slug: Web/API/FileSystemDirectoryEntry/removeRecursively
+page-type: web-api-instance-method
 tags:
   - API
-  - File System API
   - File and Directory Entries API
   - FileSystemDirectoryEntry
   - Files
@@ -14,7 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemDirectoryEntry.removeRecursively
 ---
-{{APIRef("File System API")}}{{deprecated_header}}{{SeeCompatTable}}
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemDirectoryEntry")}} interface's method
 **`removeRecursively()`** removes
@@ -78,9 +78,9 @@ a single parameter: a {{domxref("FileError")}} object describing the error. The
 ## Examples
 
 ```js
-directory.removeRecursively(function() {
+directory.removeRecursively(() => {
   /* The directory was removed successfully */
-}, function() {
+}, () => {
   /* an error occurred while removing the directory */
 });
 ```
@@ -91,9 +91,7 @@ directory.removeRecursively(function() {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystemEntry.remove()")}}

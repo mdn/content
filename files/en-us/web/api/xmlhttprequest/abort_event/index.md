@@ -1,6 +1,7 @@
 ---
 title: 'XMLHttpRequest: abort event'
 slug: Web/API/XMLHttpRequest/abort_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -19,14 +20,14 @@ The `abort` event is fired when a request has been aborted, for example because 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('abort', event => { })
+addEventListener('abort', (event) => { })
 
-onabort = event => { }
+onabort = (event) => { }
 ```
 
 ## Event type
 
-An {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ProgressEvent")}}
 
@@ -81,7 +82,7 @@ const xhrButtonAbort = document.querySelector('.xhr.abort');
 const log = document.querySelector('.event-log');
 
 function handleEvent(e) {
-    log.textContent = log.textContent + `${e.type}: ${e.loaded} bytes transferred\n`;
+    log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
 }
 
 function addListeners(xhr) {

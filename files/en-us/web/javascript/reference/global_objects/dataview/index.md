@@ -20,8 +20,8 @@ The **`DataView`** view provides a low-level interface for reading and writing m
 Multi-byte number formats are represented in memory differently depending on machine architecture — see [Endianness](/en-US/docs/Glossary/Endianness) for an explanation. `DataView` accessors provide explicit control of how data is accessed, regardless of the executing computer's endianness.
 
 ```js
-var littleEndian = (function() {
-  var buffer = new ArrayBuffer(2);
+const littleEndian = (() => {
+  const buffer = new ArrayBuffer(2);
   new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array uses the platform's endianness.
   return new Int16Array(buffer)[0] === 256;
@@ -125,8 +125,8 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 ### Using DataView
 
 ```js
-var buffer = new ArrayBuffer(16);
-var view = new DataView(buffer, 0);
+const buffer = new ArrayBuffer(16);
+const view = new DataView(buffer, 0);
 
 view.setInt16(1, 42);
 view.getInt16(1); // 42

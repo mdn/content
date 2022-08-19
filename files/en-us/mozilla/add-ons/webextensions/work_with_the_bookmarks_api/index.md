@@ -140,7 +140,7 @@ As with any background script, [background.js](https://github.com/mdn/webextensi
     let supportedProtocols = ["https:", "http:", "file:"];
     let url = document.createElement('a');
     url.href = urlString;
-    return supportedProtocols.indexOf(url.protocol) != -1;
+    return supportedProtocols.includes(url.protocol);
   }
 ```
 

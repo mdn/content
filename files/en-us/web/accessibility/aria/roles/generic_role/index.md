@@ -8,6 +8,7 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
+spec-urls: https://w3c.github.io/aria/#generic
 ---
 
 The `generic` role creates a nameless container element which has no semantic meaning on its own.
@@ -36,9 +37,7 @@ This role is for use by user agents and not by developers. As such, no appropria
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#generic","ARIA: generic role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

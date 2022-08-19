@@ -11,5 +11,5 @@ tags:
 
 ## See also
 
-- {{interwiki("wikipedia", "metadata", "metadata")}} on Wikipedia
+- [metadata](https://en.wikipedia.org/wiki/Metadata) on Wikipedia
 - The {{htmlelement("meta")}} element on MDN

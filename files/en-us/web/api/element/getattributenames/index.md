@@ -1,6 +1,7 @@
 ---
 title: Element.getAttributeNames()
 slug: Web/API/Element/getAttributeNames
+page-type: web-api-instance-method
 tags:
   - API
   - Attribute
@@ -62,8 +63,8 @@ element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'https://ex
 element.setAttributeNS('http://www.w3.org/1999/xlink', 'show', 'new')
 
 // Iterate over element's attributes
-for (let name of element.getAttributeNames()) {
-  let value = element.getAttribute(name);
+for (const name of element.getAttributeNames()) {
+  const value = element.getAttribute(name);
   console.log(name, value);
 }
 
@@ -71,22 +72,6 @@ for (let name of element.getAttributeNames()) {
 // href https://example.com
 // xlink:href https://example.com
 // show new
-```
-
-## Polyfill
-
-```js
-if (Element.prototype.getAttributeNames == undefined) {
-  Element.prototype.getAttributeNames = function () {
-    var attributes = this.attributes;
-    var length = attributes.length;
-    var result = new Array(length);
-    for (var i = 0; i < length; i++) {
-      result[i] = attributes[i].name;
-    }
-    return result;
-  };
-}
 ```
 
 ## Specifications

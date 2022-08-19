@@ -1,6 +1,7 @@
 ---
 title: XRLayerEvent.layer
 slug: Web/API/XRLayerEvent/layer
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -27,7 +28,7 @@ An {{domxref("XRLayer")}}.
 In this example, the `layer` property is used to obtain the {{domxref("XRLayer")}} object that sent the event.
 
 ```js
-myLayer.addEventListener("redraw", e => {
+myLayer.addEventListener("redraw", (e) => {
   if (typeof e.layer === "XRQuadLayer") {
     // redraw quad layer
   }

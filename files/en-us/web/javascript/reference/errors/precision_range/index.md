@@ -15,13 +15,11 @@ outside of the range of 0 and 20 (or 21) was passed into `toFixed` or
 
 ## Message
 
-```js
-RangeError: The number of fractional digits is out of range (Edge)
-RangeError: The precision is out of range (Edge)
-RangeError: precision {0} out of range (Firefox)
-RangeError: toExponential() argument must be between 0 and 20 (Chrome)
-RangeError: toFixed() digits argument must be between 0 and 20 (Chrome)
-RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
+```
+RangeError: toExponential() argument must be between 0 and 100 (V8-based & Safari)
+RangeError: toFixed() digits argument must be between 0 and 100 (V8-based & Safari)
+RangeError: toPrecision() argument must be between 1 and 100 (V8-based & Safari)
+RangeError: precision -1 out of range (Firefox)
 ```
 
 ## Error type
@@ -32,18 +30,9 @@ RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
 
 There was an out of range precision argument in one of these methods:
 
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toPrecision()")}}
-
-The allowed range for these methods is usually between 0 and 20 (or 21). However, the
-ECMAScript specification allows to extend this range.
-
-| Method                                                       | Firefox (SpiderMonkey) | Chrome, Opera (V8) |
-| ------------------------------------------------------------ | ---------------------- | ------------------ |
-| {{jsxref("Number.prototype.toExponential()")}} | 0 to 100               | 0 to 20            |
-| {{jsxref("Number.prototype.toFixed()")}}         | -20 to 100             | 0 to 20            |
-| {{jsxref("Number.prototype.toPrecision()")}} | 1 to 100               | 1 to 21            |
+- {{jsxref("Number.prototype.toExponential()")}}, which requires the arguments to be between 0 and 100, inclusive.
+- {{jsxref("Number.prototype.toFixed()")}}, which requires the arguments to be between 0 and 100, inclusive.
+- {{jsxref("Number.prototype.toPrecision()")}}, which requires the arguments to be between 1 and 100, inclusive.
 
 ## Examples
 

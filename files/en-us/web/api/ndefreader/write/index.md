@@ -1,6 +1,7 @@
 ---
 title: NDEFReader.write()
 slug: Web/API/NDEFReader/write
+page-type: web-api-instance-method
 tags:
   - NDEF
   - Reference
@@ -23,11 +24,12 @@ NDEFReader.write(message);
 
 - `message`
 
-  - : The message to be written, one of {{DOMxRef("DOMString")}},
-    {{DOMxRef("BufferSource")}}, or an array of records. A record has the following members:
+  - : The message to be written, either a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+    a {{jsxref("DataView")}}, or an array of records. A record has the following members:
 
     - `data` {{optional_inline}}
-      - : Contains the data to be transmitted, one of a string, a {{domxref("BufferSource")}}, or an array of nested records.
+      - : Contains the data to be transmitted,a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+        a {{jsxref("DataView")}}, or an array of nested records
     - `encoding` {{optional_inline}}
       - : A string specifying the record's encoding.
     - `id` {{optional_inline}}
@@ -59,9 +61,10 @@ NDEFReader.write(message);
 
   - : An object with the following properties:
 
-    - `overwrite` -- A {{JSxRef("Boolean")}} specifying whether or not
-      existing records should be overwritten, if such exists.
-    - `signal` -- An optional {{DOMxRef("AbortSignal")}} that allows the current write operation to be canceled.
+    - `overwrite`
+      - : A boolean value specifying whether or not existing records should be overwritten, if such exists.
+    - `signal` {{optional_inline}}
+      - : An {{DOMxRef("AbortSignal")}} that allows the current write operation to be canceled.
 
 ### Return value
 
@@ -92,7 +95,7 @@ following:
 
 ### Write a text string
 
-The following example shows how to write a {{DOMxRef("DOMString")}} to an NFC tag and process any errors that occur.
+The following example shows how to write a string to an NFC tag and process any errors that occur.
 
 ```js
 const ndef = new NDEFReader();
@@ -100,7 +103,7 @@ ndef.write(
   "Hello World"
 ).then(() => {
   console.log("Message written.");
-}).catch(error => {
+}).catch((error) => {
   console.log(`Write failed :-( try again: ${error}.`);
 });
 ```
@@ -134,7 +137,7 @@ function write(data, { timeout } = {}) {
     ctlr.signal.onabort = () => reject("Time is up, bailing out!");
     setTimeout(() => ctlr.abort(), timeout);
 
-    ndef.addEventListener("reading", event => {
+    ndef.addEventListener("reading", (event) => {
       ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
     }, { once: true });
   });
@@ -144,7 +147,7 @@ await ndef.scan();
 try {
   // Let's wait for 5 seconds only.
   await write("Hello World", { timeout: 5_000 });
-} catch(err) {
+} catch (err) {
   console.error("Something went wrong", err);
 } finally {
   console.log("We wrote to a tag!");

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.texImage3D()
 slug: Web/API/WebGL2RenderingContext/texImage3D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -84,8 +85,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the width of the border. Must be 0.
 - `format`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the texel data. The correct
-    combinations with `internalformat` are listed in [this
-    table](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
+    combinations with `internalformat` are listed in [this table](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
 - `type`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the texel data. Possible values:
@@ -108,7 +108,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
     - `gl.UNSIGNED_INT_5_9_9_9_REV`
     - `gl.UNSIGNED_INT_24_8`
     - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
-      {{jsxref("null")}})
+      [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `source`
   - : One of the following objects can be used as a pixel source for the texture:
@@ -120,16 +120,16 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
     - {{domxref("HTMLVideoElement")}}.
 
 - `srcData`
-- :{{domxref("ArrayBufferView")}}
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
-- offset
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data
     store. Used to upload data to the currently bound {{domxref("WebGLTexture")}} from the
     `WebGLBuffer` bound to the `PIXEL_UNPACK_BUFFER` target.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: VRLayerInit.source
 slug: Web/API/VRLayerInit/source
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

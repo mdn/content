@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.copyTexImage2D()
 slug: Web/API/WebGLRenderingContext/copyTexImage2D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -76,7 +77,7 @@ copyTexImage2D(target, level, internalformat, x, y, width, height, border)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

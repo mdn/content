@@ -1,6 +1,7 @@
 ---
 title: VRPose.position
 slug: Web/API/VRPose/position
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

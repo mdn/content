@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.lang
 slug: Web/API/HTMLElement/lang
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

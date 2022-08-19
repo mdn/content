@@ -1,6 +1,7 @@
 ---
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
+page-type: web-api-instance-method
 tags:
   - API
   - Cross-origin Communication
@@ -40,13 +41,13 @@ postMessage(message, targetOrigin, transfer)
 - `message`
   - : Data to be sent to the other window. The data is serialized using
     {{domxref("Web_Workers_API/Structured_clone_algorithm", "the structured clone
-    algorithm")}}. This means you can pass a broad variety of data objects safely to the
+    algorithm", "", 1)}}. This means you can pass a broad variety of data objects safely to the
     destination window without having to serialize them yourself.
 - `targetOrigin`
-  - : Specifies what the origin of `targetWindow` must be for the event to be
+  - : Specifies what the origin of this window must be for the event to be
     dispatched, either as the literal string `"*"` (indicating no preference)
     or as a URI. If at the time the event is scheduled to be dispatched the scheme,
-    hostname, or port of `targetWindow`'s document does not match that provided
+    hostname, or port of this window's document does not match that provided
     in `targetOrigin`, the event will not be dispatched; only if all three
     match will the event be dispatched. This mechanism provides control over where
     messages are sent; for example, if `postMessage()` was used to transmit a
@@ -57,12 +58,12 @@ postMessage(message, targetOrigin, transfer)
     window's document should be located. Failing to provide a specific target discloses
     the data you send to any interested malicious site.**
 - `transfer` {{optional_Inline}}
-  - : Is a sequence of {{Glossary("transferable objects")}} that are transferred with the message.
+  - : A sequence of {{Glossary("transferable objects")}} that are transferred with the message.
     The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## The dispatched event
 
@@ -74,7 +75,7 @@ window.addEventListener("message", (event) => {
   if (event.origin !== "http://example.org:8080")
     return;
 
-  // ...
+  // …
 }, false);
 ```
 
@@ -156,7 +157,7 @@ example).
  * In window A's scripts, with A being on http://example.com:8080:
  */
 
-var popup = window.open(/* popup details */);
+const popup = window.open(/* popup details */);
 
 // When the popup has fully loaded, if not blocked by a popup blocker:
 
@@ -200,7 +201,7 @@ window.addEventListener("message", (event) => {
   event.source.postMessage("hi there yourself!  the secret response " +
                            "is: rheeeeet!",
                            event.origin);
-}, false);
+});
 ```
 
 ### Notes

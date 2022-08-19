@@ -1,6 +1,7 @@
 ---
 title: 'BatteryManager: chargingtimechange event'
 slug: Web/API/BatteryManager/chargingtimechange_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -16,9 +17,9 @@ The **`chargingtimechange`** event of the [Battery Status API](/en-US/docs/Web/A
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('chargingtimechange', event => { });
+addEventListener('chargingtimechange', (event) => { });
 
-onchargingtimechange = event => { };
+onchargingtimechange = (event) => { };
 ```
 
 ## Event type
@@ -37,7 +38,7 @@ _A generic {{domxref("Event")}}._
 ### JavaScript Content
 
 ```js
-navigator.getBattery().then(battery => {
+navigator.getBattery().then((battery) => {
     battery.onchargingtimechange = () => {
         document.querySelector('#level').textContent = battery.level;
         document.querySelector('#chargingTime').textContent = battery.chargingTime;

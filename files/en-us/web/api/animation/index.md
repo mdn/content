@@ -1,6 +1,7 @@
 ---
 title: Animation
 slug: Web/API/Animation
+page-type: web-api-interface
 tags:
   - API
   - Animations

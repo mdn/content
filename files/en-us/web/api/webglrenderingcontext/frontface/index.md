@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.frontFace()
 slug: Web/API/WebGLRenderingContext/frontFace
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,7 +23,7 @@ frontFace(mode)
 
 ### Parameters
 
-- mode
+- `mode`
 
   - : A [GLenum](/en-US/docs/Web/API/WebGL_API/Types) type winding orientation.
     The default value is `gl.CCW`. Possible values:
@@ -32,7 +33,7 @@ frontFace(mode)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

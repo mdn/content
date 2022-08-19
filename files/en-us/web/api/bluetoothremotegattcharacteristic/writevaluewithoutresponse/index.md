@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValueWithoutResponse
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -24,7 +25,7 @@ writeValueWithoutResponse(value)
 
 ### Parameters
 
-- value
+- `value`
   - : An {{jsxref("ArrayBuffer")}}.
 
 ### Return value

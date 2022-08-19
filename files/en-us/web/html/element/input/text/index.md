@@ -12,7 +12,7 @@ tags:
   - Text
   - text entry
   - text input
-browser-compat: html.elements.input.input-text
+browser-compat: html.elements.input.type_text
 ---
 {{HTMLRef("Input_types")}}
 
@@ -25,7 +25,7 @@ browser-compat: html.elements.input.input-text
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the text contained in
+        A string representing the text contained in
         the text field.
       </td>
     </tr>
@@ -72,7 +72,7 @@ browser-compat: html.elements.input.input-text
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} `value` property in JavaScript.
+The {{htmlattrxref("value", "input")}} attribute is a string that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} `value` property in JavaScript.
 
 ```js
 let theText = myTextInput.value;
@@ -251,14 +251,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute; content: '✖';
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid + span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -290,14 +291,14 @@ div {
 input + span {
   padding-right: 30px;
 }
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -337,14 +338,14 @@ div {
 input + span {
   padding-right: 30px;
 }
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -393,15 +394,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```

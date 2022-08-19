@@ -1,12 +1,14 @@
 ---
 title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
+page-type: web-api-overview
 tags:
   - HTML Sanitizer API
   - Experimental
   - Landing
   - Web API
   - sanitize
+browser-compat: api.Sanitizer
 ---
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
@@ -74,13 +76,13 @@ The code below demonstrates how {{domxref('Element/setHTML','Element.setHTML()')
 The `script` element is disallowed by the default sanitizer so the alert is removed.
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
 
 const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Get the Element with id "target" and set it with the sanitized string.
 const target = document.getElementById("target");
-target.setHTML(unsanitized_string, {sanitizer: sanitizer});
+target.setHTML(unsanitized_string, { sanitizer });
 
 console.log(target.innerHTML);
 // "abc  def"
@@ -91,19 +93,19 @@ console.log(target.innerHTML);
 The example below shows the same sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method, with the intent of later inserting the returned element into a `<div>` element:
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
 const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Sanitize the string
-let sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
+const sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
 
 //We can verify the returned element type, and view sanitized HTML in string form:
-console.log( (sanitizedDiv instanceof HTMLDivElement) );
+console.log(sanitizedDiv instanceof HTMLDivElement);
 // true
 console.log(sanitizedDiv.innerHTML)
 // "abc  def"
 
-// At some point later ...
+// At some point later…
 
 // Get the element to update. This must be a div to match our sanitizeFor() context.
 // Set its content to be the children of our sanitized element.
@@ -114,8 +116,8 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 > but you must remember to use the correct context when the string is applied:
 >
 > ```js
-> const unsanitized_string = "abc <script>alert(1)</script> def";
-> let sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
+> const unsanitized_string = "abc <script>alert(1)<" + "/script> def";
+> const sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
 > ```
 
 ### Sanitize a frame
@@ -136,23 +138,8 @@ frame_element.replaceChildren(sanitized_frame_tree);
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML Sanitizer API','#sanitizer-api')}}
-      </td>
-      <td>{{Spec2('HTML Sanitizer API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Sanitizer")}}
+{{Compat}}

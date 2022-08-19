@@ -8,7 +8,7 @@ tags:
   - HTTP
   - Reference
   - prefetch-src
-browser-compat: http.headers.csp.Content-Security-Policy.prefetch-src
+browser-compat: http.headers.Content-Security-Policy.prefetch-src
 ---
 {{HTTPSidebar}}
 

@@ -111,7 +111,7 @@ tags:
 #### WebGL
 
 - The {{domxref("EXT_color_buffer_float")}} {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} extension has been implemented ({{bug(1129332)}}).
-- The {{Event("webglcontextcreationerror")}} event, which is sent when a WebGL context creation attempt fails, has been implemented ({{bug(1271478)}}). Use this to help understand what went wrong, both for debugging and for production error handling.
+- The {{domxref("HTMLCanvasElement/webglcontextcreationerror_event", "webglcontextcreationerror")}} event, which is sent when a WebGL context creation attempt fails, has been implemented ({{bug(1271478)}}). Use this to help understand what went wrong, both for debugging and for production error handling.
 
 #### IndexedDB
 

@@ -1,9 +1,9 @@
 ---
 title: CanvasCaptureMediaStreamTrack
 slug: Web/API/CanvasCaptureMediaStreamTrack
+page-type: web-api-interface
 tags:
   - CanvasCaptureMediaStreamTrack
-  - Experimental
   - Frame Capture
   - Interface
   - Media

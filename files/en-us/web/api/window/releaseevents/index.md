@@ -1,18 +1,19 @@
 ---
 title: Window.releaseEvents()
 slug: Web/API/Window/releaseEvents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
   - DOM_0
   - Method
-  - Non-standard
   - Reference
   - Window
   - releaseEvents
+  - Deprecated
 browser-compat: api.Window.releaseEvents
 ---
-{{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}
+{{APIRef}}{{Deprecated_Header}}
 
 Releases the window from trapping events of a specific type.
 
@@ -51,8 +52,8 @@ window.releaseEvents(Event.KEYPRESS)
 Note that you can pass a list of events to this method using the following syntax:
 `window.releaseEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)`.
 
-See also [`window.captureEvents`](/en-US/docs/Web/API/window.captureEvents)
-({{deprecated_inline}}).
+See also [`window.captureEvents`](/en-US/docs/Web/API/Window/captureEvents)
+({{Deprecated_Inline}}).
 
 ## Specifications
 

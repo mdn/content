@@ -1,6 +1,7 @@
 ---
 title: Matrix math for the web
 slug: Web/API/WebGL_API/Matrix_math_for_the_web
+page-type: guide
 tags:
   - 3D
   - 3D2D
@@ -178,7 +179,7 @@ A really easy way to start using a matrix is to use the CSS {{cssxref("transform
 ```html
 <div id='move-me' class='transformable'>
   <h2>Move me with a matrix</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</p>
 </div>
 ```
 
@@ -187,7 +188,7 @@ Finally, for each of the examples we will generate a 4x4 matrix, then update the
 ```js
 // Create the matrix3d style property from a matrix array
 function matrixArrayToCssMatrix(array) {
-  return 'matrix3d(' + array.join(',') + ')';
+  return `matrix3d(${array.join(',')})`;
 }
 
 // Grab the DOM element
@@ -200,7 +201,7 @@ let matrix3dRule = matrixArrayToCssMatrix(translationMatrix);
 moveMe.style.transform = matrix3dRule;
 ```
 
-[View on JSFiddle](https://jsfiddle.net/g24mgw6y)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/g24mgw6y/)
 
 ![An example of matrix translation](matrix-translation.jpg)
 
@@ -223,7 +224,7 @@ let scaleMatrix = [
 ];
 ```
 
-[View on JSFiddle](https://jsfiddle.net/fndd6e1b)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/fndd6e1b/)
 
 ![An example of matrix scaling](matrix-scale.jpg)
 
@@ -269,7 +270,7 @@ let rotateZMatrix = [
 ];
 ```
 
-[View on JSFiddle](https://jsfiddle.net/9vr2dorz)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/9vr2dorz/)
 
 ![](matrix-rotation.jpg)
 
@@ -304,7 +305,7 @@ function rotateAroundZAxis(a) {
 }
 ```
 
-[View on JSFiddle](https://jsfiddle.net/tk072doc)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/tk072doc/)
 
 ## Matrix composition
 
@@ -330,7 +331,7 @@ let transformMatrix = MDN.multiplyArrayOfMatrices([
 ]);
 ```
 
-[View on JSFiddle](https://jsfiddle.net/qxxg3yvc)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/qxxg3yvc/)
 
 ![An example of matrix composition](matrix-composition.jpg)
 

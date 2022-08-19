@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaRowIndex
 slug: Web/API/ElementInternals/ariaRowIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -39,4 +40,4 @@ this.internals_.ariaRowIndex = "1";
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

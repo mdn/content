@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.sdpMid
 slug: Web/API/RTCIceCandidate/sdpMid
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -19,7 +20,7 @@ browser-compat: api.RTCIceCandidate.sdpMid
 ---
 {{APIRef("WebRTC")}}
 
-The read-only property **`sdpMid`** on the {{domxref("RTCIceCandidate")}} interface returns a {{domxref("DOMString")}}
+The read-only property **`sdpMid`** on the {{domxref("RTCIceCandidate")}} interface returns a string
 specifying the media stream identification tag of the media component with which the candidate is associated.
 This ID uniquely identifies a given stream for the component with which the candidate is associated.
 
@@ -28,17 +29,13 @@ If you call the constructor with an m-line string instead of the options object,
 
 ## Value
 
-A {{domxref("DOMString")}} which uniquely identifies the source media component from
+A string which uniquely identifies the source media component from
 which the candidate draws data, or `null` if no such association exists for the candidate.
 
 > **Note:** Attempting to add a candidate (using {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}) that has a
 > value of `null` for both `sdpMid` and `sdpMLineIndex` will throw a {{jsxref("TypeError")}} exception.
 
-## Examples
-
-...
-
-## Specifications
+ ## Specifications
 
 {{Specifications}}
 

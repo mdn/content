@@ -1,6 +1,7 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
+page-type: web-api-overview
 tags:
   - API
   - Fetch
@@ -9,6 +10,7 @@ tags:
   - Response
   - XMLHttpRequest
   - request
+browser-compat: api.fetch
 ---
 {{DefaultAPISidebar("Fetch API")}}
 
@@ -59,13 +61,11 @@ Browsers have started to add experimental support for the {{DOMxRef("AbortContro
 
 ## Specifications
 
-| Specification                | Status                   | Comment            |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName("Fetch")}} | {{Spec2("Fetch")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.ctrlKey
 slug: Web/API/KeyboardEvent/ctrlKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.ctrlKey
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.ctrlKey`** read-only property returns a
 boolean value that indicates if the <kbd>control</kbd> key was pressed
@@ -18,16 +19,16 @@ boolean value that indicates if the <kbd>control</kbd> key was pressed
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Examples
 
-```js
+```html
 <html>
 <head>
 <title>ctrlKey example</title>
 
-<script type="text/javascript">
+<script>
 
 function showChar(e){
   alert(

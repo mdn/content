@@ -1,6 +1,7 @@
 ---
 title: NDEFRecord.mediaType
 slug: Web/API/NDEFRecord/mediaType
+page-type: web-api-instance-property
 tags:
   - NDEF
   - Reference
@@ -20,7 +21,7 @@ NDEFRecord.mediaType
 
 ### Value
 
-A {{DOMxRef("USVString")}}, containing the {{Glossary("MIME type")}} of the record
+A string, containing the {{Glossary("MIME type")}} of the record
 payload.
 
 ## Examples

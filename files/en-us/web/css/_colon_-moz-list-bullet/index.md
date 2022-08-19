@@ -22,7 +22,9 @@ li::-moz-list-bullet
 
 ## Examples
 
-### HTML
+### Styling list item markers
+
+#### HTML
 
 ```html
 <ul>
@@ -32,7 +34,7 @@ li::-moz-list-bullet
 </ul>
 ```
 
-### CSS
+#### CSS
 
 ```css
 ::-moz-list-bullet {
@@ -41,9 +43,9 @@ li::-moz-list-bullet
 }
 ```
 
-### Result
+#### Result
 
-{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/:-moz-list-bullet') }}
+{{ EmbedLiveSample('Styling list item markers') }}
 
 ## Specifications
 

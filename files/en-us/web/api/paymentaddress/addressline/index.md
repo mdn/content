@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.addressLine
 slug: Web/API/PaymentAddress/addressLine
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -12,13 +13,15 @@ tags:
   - Reference
   - payment
   - paymentAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.addressLine
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`addressLine`** read-only
 property of the {{domxref('PaymentAddress')}} interface is an array of
-{{domxref("DOMString")}} objects, each specifying a line of the address that is not
+strings, each specifying a line of the address that is not
 covered by one of the other properties of `PaymentAddress`.
 
 These
@@ -27,7 +30,7 @@ descriptive instructions, or post office box.
 
 ## Value
 
-An array of {{domxref("DOMString")}} objects, each containing one line of the address.
+An array of strings, each containing one line of the address.
 For example, the `addressLine` array for the Mozilla Space in London would
 have the following entries:
 

@@ -68,13 +68,13 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/autoplay','autoplay')}}
   - : Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a {{domxref("DOMException")}}. The autoplay attribute on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
 - {{httpheader('Feature-Policy/battery','battery')}}
-  - : Controls whether the use of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.
+  - : Controls whether the use of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a `NotAllowedError` {{DOMxRef("DOMException")}}.
 - {{httpheader('Feature-Policy/camera', 'camera')}}
-  - : Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.
+  - : Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a `NotAllowedError` {{DOMxRef("DOMException")}}.
 - {{HTTPHeader('Feature-Policy/display-capture', 'display-capture')}}
-  - : Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by `getDisplayMedia()` will reject with a {{Exception("NotAllowedError")}} if permission is not obtained to capture the display's contents.
+  - : Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by `getDisplayMedia()` will reject with a `NotAllowedError` if permission is not obtained to capture the display's contents.
 - {{httpheader('Feature-Policy/document-domain','document-domain')}}
-  - : Controls whether the current document is allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting to set {{domxref("document.domain")}} will fail and cause a {{Exception("SecurityError")}} {{domxref("DOMException")}} to be thrown.
+  - : Controls whether the current document is allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting to set {{domxref("document.domain")}} will fail and cause a `SecurityError` {{domxref("DOMException")}} to be thrown.
 - {{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}
   - : Controls whether the current document is allowed to use the [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) API (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}.
 - {{httpheader('Feature-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}
@@ -97,7 +97,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/magnetometer','magnetometer')}}
   - : Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Magnetometer")}} interface.
 - {{httpheader('Feature-Policy/microphone','microphone')}}
-  - : Controls whether the current document is allowed to use audio input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia()")}} will reject with a {{Exception("NotAllowedError")}}.
+  - : Controls whether the current document is allowed to use audio input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia()")}} will reject with a `NotAllowedError` {{domxref("DOMException")}}.
 - {{httpheader('Feature-Policy/midi', 'midi')}}
   - : Controls whether the current document is allowed to use the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMIDIAccess()")}} will reject with a {{domxref("DOMException")}}.
 - {{httpheader('Feature-Policy/navigation-override','navigation-override')}}
@@ -105,7 +105,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/oversized-images','oversized-images')}}
   - : Controls whether the current document is allowed to download and display large images.
 - {{httpheader('Feature-Policy/payment', 'payment')}}
-  - : Controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API). When this policy is enabled, the {{domxref("PaymentRequest","PaymentRequest()")}} constructor will throw a {{Exception("SecurityError")}} {{domxref("DOMException")}}.
+  - : Controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API). When this policy is enabled, the {{domxref("PaymentRequest","PaymentRequest()")}} constructor will throw a `SecurityError` {{domxref("DOMException")}}.
 - {{httpheader('Feature-Policy/picture-in-picture', 'picture-in-picture')}}
   - : Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
 - {{httpheader("Feature-Policy/publickey-credentials-get", "publickey-credentials-get")}}
@@ -114,9 +114,9 @@ Feature-Policy: <directive> <allowlist>
   - : Controls whether the current document is allowed to use the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) to list and select speakers.
 - {{httpheader('Feature-Policy/sync-xhr', 'sync-xhr')}}
   - : Controls whether the current document is allowed to make synchronous {{DOMxRef("XMLHttpRequest")}} requests.
-- {{httpheader('Feature-Policy/unoptimized-images', 'unoptimized-images')}} {{experimental_inline}}{{Non-standard_Inline}}
+- {{httpheader('Feature-Policy/unoptimized-images', 'unoptimized-images')}} {{experimental_inline}} {{Non-standard_Inline}}
   - : Controls whether the current document is allowed to download and display unoptimized images.
-- {{httpheader('Feature-Policy/unsized-media', 'unsized-media')}} {{experimental_inline}}{{Non-standard_Inline}}
+- {{httpheader('Feature-Policy/unsized-media', 'unsized-media')}} {{experimental_inline}} {{Non-standard_Inline}}
   - : Controls whether the current document is allowed to change the size of media elements after the initial layout is complete.
 - {{httpheader('Feature-Policy/usb', 'usb')}}
   - : Controls whether the current document is allowed to use the [WebUSB API](https://wicg.github.io/webusb/).

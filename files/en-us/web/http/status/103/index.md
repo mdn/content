@@ -24,9 +24,7 @@ user agent to start preloading resources while the server is still preparing a r
 
 ## Specifications
 
-| Specification                                | Status   | Comments           |
-| -------------------------------------------- | -------- | ------------------ |
-| {{RFC(8297, "103 Early Hints")}} | IETF RFC | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

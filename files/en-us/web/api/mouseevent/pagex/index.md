@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -15,7 +16,7 @@ tags:
   - pageX
 browser-compat: api.MouseEvent.pageX
 ---
-{{APIRef("CSSOM View")}}
+{{APIRef("UI Events")}}
 
 The **`pageX`** read-only property of the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.
 This includes any portion of the document not currently visible.
@@ -84,9 +85,9 @@ The CSS used for this example is shown below.
 #### JavaScript
 
 ```js
-var box = document.querySelector(".box");
-var pageX = document.getElementById("x");
-var pageY = document.getElementById("y");
+const box = document.querySelector(".box");
+const pageX = document.getElementById("x");
+const pageY = document.getElementById("y");
 
 function updateDisplay(event) {
   pageX.innerText = event.pageX;

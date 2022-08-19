@@ -1,10 +1,10 @@
 ---
 title: Range.getClientRects()
 slug: Web/API/Range/getClientRects
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
-  - Experimental
   - Method
   - Range
   - Reference

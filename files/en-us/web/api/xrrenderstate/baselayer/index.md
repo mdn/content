@@ -1,6 +1,7 @@
 ---
 title: XRRenderState.baseLayer
 slug: Web/API/XRRenderState/baseLayer
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -52,7 +53,7 @@ function setNewWebGLLayer(gl) {
   }
 
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl);
+    baseLayer: new XRWebGLLayer(xrSession, gl)
   });
 };
 ```

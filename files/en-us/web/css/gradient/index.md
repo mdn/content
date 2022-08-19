@@ -43,6 +43,10 @@ Conic gradients transition colors progressively around a circle. They are genera
 
 As with any interpolation involving colors, gradients are calculated in the alpha-premultiplied color space. This prevents unexpected shades of gray from appearing when both the color and the opacity are changing. (Be aware that older browsers may not use this behavior when using the [transparent keyword](/en-US/docs/Web/CSS/color_value#transparent_keyword).)
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Linear gradient example

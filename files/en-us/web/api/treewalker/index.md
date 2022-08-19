@@ -1,6 +1,7 @@
 ---
 title: TreeWalker
 slug: Web/API/TreeWalker
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -67,7 +68,11 @@ _This interface doesn't inherit any method._
     ```js
     let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ALL);
     let node = walker.firstChild(); // nodeName: "#text"
-    // But if we do:
+    ```
+
+    But if we do:
+
+    ```js
     let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
     let node = walker.firstChild(); // nodeName: "DIV"
     ```

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.clear()
 slug: Web/API/WebGLRenderingContext/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -39,7 +40,7 @@ clear(mask)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

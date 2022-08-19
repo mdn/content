@@ -14,7 +14,7 @@ Google Chrome is a free Web {{glossary("browser")}} developed by Google. It's ba
 
 ## See also
 
-- {{interwiki("wikipedia", "Google Chrome", "Google Chrome")}} on Wikipedia
+- [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome) on Wikipedia
 
 ### For Chrome Users
 
@@ -29,4 +29,4 @@ Use one of these links if you're an everyday user.
 If you want to try the latest Chrome features, install one of the pre-stable builds. Google pushes updates frequently and has designed the distributions to run side-by-side with the stable version. Visit the [Chrome Releases Blog](https://chromereleases.googleblog.com) to learn what's new.
 
 - [Chrome Dev for Android](https://play.google.com/store/apps/details?id=com.chrome.dev)
-- [Chrome Canary for desktop](https://www.google.com/chrome/browser/canary.html).
+- [Chrome Canary for desktop](https://www.google.com/chrome/canary/).

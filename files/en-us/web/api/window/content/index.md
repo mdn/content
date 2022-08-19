@@ -1,6 +1,7 @@
 ---
 title: Window.content
 slug: Web/API/Window/content
+page-type: web-api-instance-property
 ---
 {{APIRef}}{{non-standard_header}}
 
@@ -15,7 +16,7 @@ In unprivileged content (webpages), `content` is normally equivalent to [top](/e
 ### Syntax
 
 ```js
-var windowObject = window.content;
+const windowObject = window.content;
 ```
 
 ### Example

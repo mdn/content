@@ -97,7 +97,7 @@ The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSO
 To ensure compatibility with both Firefox 3 and Firefox 3.5, you can do the following:
 
 ```js
-if (typeof(JSON) == "undefined") {
+if (typeof JSON === "undefined") {
   Components.utils.import("resource://gre/modules/JSON.jsm");
   JSON.parse = JSON.fromString;
   JSON.stringify = JSON.toString;
@@ -148,20 +148,20 @@ Another Javascript example if the above does not work:
 
 function getWindowForRequest(request){
   if (request instanceof Components.interfaces.nsIRequest){
-    try{
+    try {
       if (request.notificationCallbacks){
         return request.notificationCallbacks
                       .getInterface(Components.interfaces.nsILoadContext)
                       .associatedWindow;
       }
-    } catch(e) {}
-    try{
+    } catch (e) {}
+    try {
       if (request.loadGroup && request.loadGroup.notificationCallbacks){
         return request.loadGroup.notificationCallbacks
                       .getInterface(Components.interfaces.nsILoadContext)
                       .associatedWindow;
       }
-    } catch(e) {}
+    } catch (e) {}
   }
   return null;
 }
@@ -196,4 +196,4 @@ Firefox 3.5 introduces support for adding and removing progress listeners that l
 ## For Theme developers:
 
 - Check [Theme changes in Firefox 3.1](/en-US/Theme_changes_in_Firefox_3.1).
-- Go to the Mozillazine forum [Theme changes for FF3.1](https://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).
+- Go to the Mozillazine forum [Theme changes for FF3.1](https://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc.), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).

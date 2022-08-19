@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.border
 slug: Web/API/HTMLImageElement/border
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -37,7 +38,7 @@ For compatibility (or perhaps other) reasons, you can use the older properties i
 
 ## Value
 
-A {{domxref("DOMString")}} containing an integer value specifying the thickness of the
+A string containing an integer value specifying the thickness of the
 border that should surround the image, in CSS pixels. A value of `0`, or an
 empty string, indicates that there should be no border drawn. The default value of
 `border` is `0`

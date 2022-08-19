@@ -1,6 +1,7 @@
 ---
 title: console.trace()
 slug: Web/API/console/trace
+page-type: web-api-instance-method
 tags:
   - API
   - Chrome
@@ -29,7 +30,7 @@ See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the
 
 ```js
 trace()
-trace(object1, /* ..., */ objectN)
+trace(object1, /* …, */ objectN)
 ```
 
 ### Parameters

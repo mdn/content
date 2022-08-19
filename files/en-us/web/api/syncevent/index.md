@@ -1,6 +1,7 @@
 ---
 title: SyncEvent
 slug: Web/API/SyncEvent
+page-type: web-api-interface
 tags:
   - API
   - Background Sync

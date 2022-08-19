@@ -1,6 +1,7 @@
 ---
 title: WindowControlsOverlayGeometryChangeEvent
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("Window Controls Overlay API")}}
 
 The **`WindowControlsOverlayGeometryChangeEvent`** interface of the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) is passed to [`geometrychange`](/en-US/docs/Web/API/WindowControlsOverlay/geometrychange_event) when the size or visibility of a desktop Progress Web App's title bar region changes.
 
@@ -35,7 +36,7 @@ event handler on the {{domxref("Navigator.windowControlsOverlay")}} property, to
 
 ```js
 if ('windowControlsOverlay' in navigator) {
-  navigator.windowControlsOverlay.addEventListener('geometrychange', event => {
+  navigator.windowControlsOverlay.addEventListener('geometrychange', (event) => {
     if (event.visible) {
       const rect = event.titlebarAreaRect;
       // Do something with the coordinates of the title bar area.

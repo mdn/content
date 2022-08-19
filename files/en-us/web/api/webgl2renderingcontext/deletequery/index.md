@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.deleteQuery()
 slug: Web/API/WebGL2RenderingContext/deleteQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -27,7 +28,7 @@ deleteQuery(query)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -35,9 +36,9 @@ None.
 `WebGLQuery` objects are not available in WebGL 1.
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 
-// ...
+// …
 
 gl.deleteQuery(query);
 ```

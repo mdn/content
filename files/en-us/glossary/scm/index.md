@@ -12,4 +12,4 @@ Some SCM systems include CVS, SVN, GIT.
 
 ## See also
 
-- {{Interwiki("wikipedia", "Revision control")}} on Wikipedia
+- [Revision control](https://en.wikipedia.org/wiki/Revision_control) on Wikipedia

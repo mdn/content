@@ -1,6 +1,7 @@
 ---
 title: Window.parent
 slug: Web/API/Window/parent
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -29,7 +30,7 @@ A `Window` or {{htmlelement("iframe")}} object.
 ## Examples
 
 ```js
-if (window.parent != window.top) {
+if (window.parent !== window.top) {
   // We're deeper than one down
 }
 ```

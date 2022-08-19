@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.pliCount
 slug: Web/API/RTCInboundRtpStreamStats/pliCount
+page-type: web-api-instance-property
 tags:
   - API
   - Media

@@ -1,6 +1,7 @@
 ---
 title: SVGAElement.target
 slug: Web/API/SVGAElement/target
+page-type: web-api-instance-property
 tags:
   - API
   - NeedsBrowserCompatibility
@@ -25,13 +26,13 @@ Sample values can be found [here](https://www.w3.org/TR/2011/REC-SVG11-20110816/
 
 ## Examples
 
-The code is taken from the ["SVGAElement example code"](/en-US/docs/Web/API/SVGAElement#Example)
+The code is taken from the ["SVGAElement example code"](/en-US/docs/Web/API/SVGAElement#example)
 
 ```js
-...
-var linkRef = document.querySelector('a');
+// ...
+const linkRef = document.querySelector('a');
 linkRef.target ='_blank';
-...
+// ...
 ```
 
 ## Specifications

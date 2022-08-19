@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaLevel
 slug: Web/API/ElementInternals/ariaLevel
+page-type: web-api-instance-property
 tags:
   - API
   - Property

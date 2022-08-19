@@ -54,7 +54,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
   - Alpha values can now be specified as percentages as well as numbers, e.g. `rgb(255 0 0 / 50%)`.
   - The hue component in `hsl()` colors can now be specified as an angle, as well as a number, e.g. `hsl(120deg, 60%, 70%)`.
 
-- Firefox's implementation of child-indexed pseudo-classes (such as {{cssxref(":nth-child")}}, {{cssxref(":first-child")}}, and so forth) has been updated to match the CSS4 specification: these pseudo-classes now match the appropriate sibling elements rather than the children of their parent element. This allows these pseudo-classes to be used when there is no parent, or the parent is not an {{domxref("Element")}} ({{bug(1300374)}}.
+- Firefox's implementation of child-indexed pseudo-classes (such as {{cssxref(":nth-child")}}, {{cssxref(":first-child")}}, and so forth) has been updated to match the CSS selectors level 4 specification: these pseudo-classes now match the appropriate sibling elements rather than the children of their parent element. This allows these pseudo-classes to be used when there is no parent, or the parent is not an {{domxref("Element")}} ({{bug(1300374)}}.
 
 #### CSS Grids
 
@@ -98,15 +98,15 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### DOM
 
-- The [Selection API](/en-US/docs/Web/API/Selection) has fully shipped, including the new {{Event("selectstart")}} and {{Event("selectionchange")}} events (see also {{domxref("GlobalEventHandlers.onselectstart")}} and {{domxref("GlobalEventHandlers.onselectionchange")}}) ({{bug(1309612)}}).
+- The [Selection API](/en-US/docs/Web/API/Selection) has fully shipped, including the new {{domxref("Document/selectstart_event", "selectstart")}} and {{domxref("Document/selectionchange_event", "selectionchange")}} events ({{bug(1309612)}}).
 - The property {{domxref("Event.composed")}} is now supported; this Boolean value indicates whether or not the event can bubble through the shadow root into the standard DOM ({{bug(1292063)}}).
-- Only HTML elements, plus the {{HTMLElement("svg")}} and {{HTMLElement("math")}} elements, can be put into full-screen mode by calling {{domxref("Element.requestFullscreen()")}} ({{bug(1305928)}}).
+- Only HTML elements, plus the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements, can be put into full-screen mode by calling {{domxref("Element.requestFullscreen()")}} ({{bug(1305928)}}).
 - [Touch events](/en-US/docs/Web/API/Touch_events) have been reenabled on Windows desktop platforms — see {{bug(1244402)}}. (They were disabled in Firefox 24 because they broke a number of major sites; see {{bug(888304)}}.)
-- The {{event("focusin")}} and {{event("focusout")}} events are now implemented ({{bug("687787")}}).
+- The {{domxref("Element/focusin_event", "focusin")}} and {{domxref("Element/focusout_event", "focusout")}} events are now implemented ({{bug("687787")}}).
 - The {{domxref("isSecureContext")}} property has been implemented (see {{bug(1269052)}}).
 - The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed appinstalled (see {{domxref("Window.appinstalled_event")}}, {{domxref("Window.appinstalled", "appinstalled")}}) to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}}). See {{bug(1309099)}} for more details about this update.
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of strings rather than a {{domxref("DOMStringList")}} (see {{bug(1298243)}}).
-- The {{Event("loadstart")}} and {{Event("loadend")}} events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}, and also see {{domxref("GlobalEventHandlers.onloadstart")}} and {{domxref("GlobalEventHandlers.onloadend")}}).
+- The `loadstart` and `loadend` events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see {{bug(862395)}}.)
 - The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see {{bug(1267339)}}), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Link_types).
 - The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/Web_Components) has been implemented (see {{bug(1275838)}}).
@@ -118,10 +118,10 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 - The Firefox OS APIs that deal with managing phone calls (Contacts, MobileConnection, Icc, etc.) have been removed ({{bug(1311206)}}).
 - The Firefox OS `Identity` interface has been removed ({{bug(1309030)}}).
-- The Firefox OS Voicemail API [`MozVoicemail`](/en-US/docs/Archive/B2G_OS/API/MozVoicemail), [`MozVoicemailEvent`](/en-US/docs/Archive/B2G_OS/API/MozVoicemailEvent), [`MozVoicemailStatus`](/en-US/docs/Archive/B2G_OS/API/MozVoicemailStatus), [`Navigator.mozVoicemail`](/en-US/docs/Archive/B2G_OS/API/Navigator/mozVoicemail)) has been removed ({{bug(1309723)}}).
+- The Firefox OS Voicemail API (`MozVoicemail`, `MozVoicemailEvent`, `MozVoicemailStatus`, `Navigator.mozVoicemail`) has been removed ({{bug(1309723)}}).
 - The Firefox OS Cell Broadcast API (`MozCellBroadcast`, `MozCellBroadcastEvent`, `MozCellBroadcastMessage`, `Navigator.mozCellBroadcast`) has been removed ({{bug(1306772)}}).
 - The Firefox OS TV broadcast-related APIs have been removed ({{bug(1306778)}}).
-- The Firefox OS FM Radio API ([`FMRadio`](/en-US/docs/Archive/B2G_OS/API/FMRadio), [`Navigator.mozFMRadio`](/en-US/docs/Archive/B2G_OS/API/Navigator/mozFMRadio)) has been removed ({{bug(1306779)}}).
+- The Firefox OS FM Radio API (`FMRadio`, `Navigator.mozFMRadio`) has been removed ({{bug(1306779)}}).
 
 ### Service Workers and Fetch
 
@@ -137,7 +137,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The {{domxref("MediaDevices.devicechange_event")}} event and its corresponding handler, which were implemented but disabled by default on Mac only in Firefox 51, have been implemented on Windows and Linux and are now enabled by default on all platforms.
 - The {{domxref("MediaStream.active")}} property is now supported. This read-only Boolean property indicates whether or not at least one track on the stream is currently playing.
 - Prior to Firefox 52, the {{domxref("MediaStreamTrack.stop()")}} method could only stop local tracks (that is, tracks obtained through {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}). Now a variety of tracks can be stopped, including those on a {{domxref("MediaStream")}} associated with a [WebRTC](/en-US/docs/Glossary/WebRTC) connection, [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) stream, or {{domxref("CanvasCaptureMediaStreamTrack", "CanvasCaptureMediaStream")}}.
-- Previously, changing a {{domxref("TextTrack")}}'s {{domxref("TextTrack.mode", "mode")}} repeatedly during a single pass through the Firefox event loop would result in multiple {{event("change")}} events being delivered to the {{domxref("TextTrackList")}} specified by the parent media element's {{domxref("HTMLMediaElement.textTracks", "textTracks")}} property. Now these changes are consolidated into one event ({{bug(882674)}}).
+- Previously, changing a {{domxref("TextTrack")}}'s {{domxref("TextTrack.mode", "mode")}} repeatedly during a single pass through the Firefox event loop would result in multiple {{domxref("HTMLElement/change_event", "change")}} events being delivered to the {{domxref("TextTrackList")}} specified by the parent media element's {{domxref("HTMLMediaElement.textTracks", "textTracks")}} property. Now these changes are consolidated into one event ({{bug(882674)}}).
 
 ### Audio/Video/Media
 
@@ -146,9 +146,9 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 ### Other APIs
 
 - The method {{domxref("FileSystemFileEntry.createWriter()")}}, which was added (but always returned an error) in Firefox 50 has been removed ({{bug(1315185)}}.
-- The proprietary Firefox OS [Apps installation/management APIs](/en-US/docs/Archive/Marketplace/API/App_installation_and_management_APIs) have been removed from the platform (see {{bug(1261019)}}).
-- The proprietary Firefox OS [Web Telephony API](/en-US/docs/Archive/Firefox_OS/Web_Telephony_API) has been removed from the platform (see {{bug(1309719)}}).
-- The proprietary Firefox OS [Web Bluetooth API](/en-US/docs/Archive/Firefox_OS/Bluetooth_API) has been removed from the platform (see {{bug(1310020)}}).
+- The proprietary Firefox OS `Apps installation/management APIs` have been removed from the platform (see {{bug(1261019)}}).
+- The proprietary Firefox OS `Web Telephony API` has been removed from the platform (see {{bug(1309719)}}).
+- The proprietary Firefox OS `Web Bluetooth API` has been removed from the platform (see {{bug(1310020)}}).
 - The [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is now available only to chrome/privileged code (see {{bug(1313580)}}).
 - `ImageBitmapRenderingContext.transferImageBitmap()` has been renamed to {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} (see {{bug(1304767)}}).
 - The `mozDash` and `mozDashOffset` members have been removed from {{domxref("CanvasRenderingContext2D")}} (see {{bug(931389)}}).
@@ -167,12 +167,12 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### Security
 
-- When login pages (i.e those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ({{bug(1319119)}}). Autofill is also disabled on insecure login forms ({{bug(1217152)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
-- Support for SHA-1 SSL certificates has been removed; navigating to a secure page that uses a SHA-1 certificate will now result in an [Untrusted Connection](https://support.mozilla.org/t5/Documents-Archive/quot-This-Connection-is-Untrusted-quot-error-message-appears/ta-p/589) error ({{bug(1330043)}}).
+- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ({{bug(1319119)}}). Autofill is also disabled on insecure login forms ({{bug(1217152)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
+- Support for SHA-1 SSL certificates has been removed; navigating to a secure page that uses a SHA-1 certificate will now result in an `Untrusted Connection` error ({{bug(1330043)}}).
 
 ## Plugins
 
-All NPAPI [plugin](/en-US/docs/Mozilla/Add-ons/Plugins) support except Flash has been dropped. Flash usage is also set to be phased out in the future.
+All NPAPI plugin support except Flash has been dropped. Flash usage is also set to be phased out in the future.
 
 ## Changes for add-on and Mozilla developers
 

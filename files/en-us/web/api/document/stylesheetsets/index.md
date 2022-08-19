@@ -1,6 +1,7 @@
 ---
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -9,9 +10,10 @@ tags:
   - Reference
   - Stylesheets
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.styleSheetSets
 ---
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`styleSheetSets`** read-only property returns a live list of all of the currently-available style sheet sets.
 

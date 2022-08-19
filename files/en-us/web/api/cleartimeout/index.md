@@ -1,6 +1,7 @@
 ---
 title: clearTimeout()
 slug: Web/API/clearTimeout
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
@@ -13,6 +14,9 @@ browser-compat: api.clearTimeout
 
 The global **`clearTimeout()`** method cancels a timeout previously established
 by calling {{domxref("setTimeout()")}}.
+
+If the parameter provided does not identify a previously established action,
+this method does nothing.
 
 ## Syntax
 
@@ -45,26 +49,26 @@ one second, the alert only appears once.
 
 ```js
 const alarm = {
-  remind: function(aMessage) {
+  remind(aMessage) {
     alert(aMessage);
     this.timeoutID = undefined;
   },
 
-  setup: function() {
+  setup() {
     if (typeof this.timeoutID === 'number') {
       this.cancel();
     }
 
-    this.timeoutID = setTimeout(function(msg) {
+    this.timeoutID = setTimeout((msg) => {
       this.remind(msg);
-    }.bind(this), 1000, 'Wake up!');
+    }, 1000, 'Wake up!');
   },
 
-  cancel: function() {
+  cancel() {
     clearTimeout(this.timeoutID);
   }
 };
-window.addEventListener('click', () => alarm.setup() );
+window.addEventListener('click', () => alarm.setup());
 ```
 
 ## Notes
@@ -86,4 +90,3 @@ exception is thrown.
 - {{domxref("setInterval()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)

@@ -1,6 +1,7 @@
 ---
 title: 'XMLHttpRequest: timeout event'
 slug: Web/API/XMLHttpRequest/timeout_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -20,14 +21,14 @@ The **`timeout`** event is fired when progression is terminated due to preset ti
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('timeout', event => { })
+addEventListener('timeout', (event) => { })
 
-ontimeout = event => { }
+ontimeout = (event) => { }
 ```
 
 ## Event type
 
-An {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ProgressEvent")}}
 

@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.postalCode
 slug: Web/API/AddressErrors/postalCode
+page-type: web-api-instance-property
 tags:
   - API
   - Address

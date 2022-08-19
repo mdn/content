@@ -1,6 +1,7 @@
 ---
 title: IdleDetector.requestPermission()
 slug: Web/API/IdleDetector/requestPermission
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -36,7 +37,7 @@ The following example uses a `click` event on a button to trigger requesting the
 
 ```js
 startButton.addEventListener('click', async () => {
-  if (await IdleDetector.requestPermission() != "granted") {
+  if (await IdleDetector.requestPermission() !== "granted") {
     console.error("Idle detection permission denied.");
     return;
   }

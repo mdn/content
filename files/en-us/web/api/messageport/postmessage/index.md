@@ -1,6 +1,7 @@
 ---
 title: MessagePort.postMessage()
 slug: Web/API/MessagePort/postMessage
+page-type: web-api-instance-method
 tags:
   - API
   - Channel messaging
@@ -26,10 +27,10 @@ postMessage(message, transferList)
 
 ### Parameters
 
-- message
+- `message`
   - : The message you want to send through the channel. This can be of any basic data
     type. Multiple data items can be sent as an array.
-- transferList {{optional_inline}}
+- `transferList` {{optional_inline}}
   - : {{Glossary("Transferable Objects")}} to be transferred — these objects have their
     ownership transferred to the receiving browsing context, so are no longer usable by
     the sending browsing context.
@@ -50,11 +51,11 @@ The `handleMessage` handler then responds to a message being sent back from the 
 {{domxref("MessageChannel.port1")}} is listened to, to check when the message arrives.
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector('p');
+const channel = new MessageChannel();
+const para = document.querySelector('p');
 
-var ifr = document.querySelector('iframe');
-var otherWindow = ifr.contentWindow;
+const ifr = document.querySelector('iframe');
+const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
@@ -67,17 +68,15 @@ function handleMessage(e) {
   para.innerHTML = e.data;
 }
 
-// in the iframe...
+// in the iframe…
 
-window.addEventListener('message', function (event) {
+window.addEventListener('message', (event) => {
   const messagePort = event.ports?.[0];
   messagePort.postMessage("Hello from the iframe!");
 });
 ```
 
-For a full working example, see our [channel
-messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live
-too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications
 
@@ -89,5 +88,4 @@ too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## See also
 
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

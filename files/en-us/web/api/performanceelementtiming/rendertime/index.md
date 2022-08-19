@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.renderTime
 slug: Web/API/PerformanceElementTiming/renderTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -31,7 +32,7 @@ In this example calling `entry.renderTime` returns the render time of the image 
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.renderTime);
     }

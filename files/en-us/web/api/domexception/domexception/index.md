@@ -1,6 +1,7 @@
 ---
 title: DOMException()
 slug: Web/API/DOMException/DOMException
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -12,14 +13,14 @@ browser-compat: api.DOMException.DOMException
 {{ APIRef("DOM") }}
 
 The **`DOMException()`** constructor returns a
-`{{domxref("DOMException")}}` object with a specified message and name.
+{{domxref("DOMException")}} object with a specified message and name.
 
 ## Syntax
 
 ```js
-new DOMException();
-new DOMException(message);
-new DOMException(message, name);
+new DOMException()
+new DOMException(message)
+new DOMException(message, name)
 ```
 
 ### Parameters
@@ -51,10 +52,10 @@ In this example, pressing the button causes a custom `DOMException` to be thrown
 ```js
 const button = document.querySelector('button');
 
-button.onclick = function() {
+button.onclick = () => {
     try {
         throw new DOMException("Custom DOM Exception Triggered.");
-    } catch(error) {
+    } catch (error) {
         document.querySelector("#output").textContent = `Error: ${error.message}`;
     }
 }

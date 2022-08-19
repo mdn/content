@@ -1,10 +1,10 @@
 ---
 title: SecurityPolicyViolationEvent.statusCode
 slug: Web/API/SecurityPolicyViolationEvent/statusCode
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
-  - Experimental
   - HTTP
   - Property
   - Reference
@@ -13,7 +13,7 @@ tags:
   - statusCode
 browser-compat: api.SecurityPolicyViolationEvent.statusCode
 ---
-{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
+{{HTTPSidebar}}
 
 The **`statusCode`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a number representing the HTTP

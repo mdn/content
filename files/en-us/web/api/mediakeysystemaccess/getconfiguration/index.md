@@ -1,6 +1,7 @@
 ---
 title: MediaKeySystemAccess.getConfiguration()
 slug: Web/API/MediaKeySystemAccess/getConfiguration
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -14,7 +15,7 @@ tags:
   - getConfiguration
 browser-compat: api.MediaKeySystemAccess.getConfiguration
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+{{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySystemAccess.getConfiguration()` method returns an object with the supported combination of
 the following configuration options:

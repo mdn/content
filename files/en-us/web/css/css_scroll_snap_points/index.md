@@ -17,7 +17,7 @@ spec-urls: https://drafts.csswg.org/css-scroll-snap/
 
 ## Reference
 
-### CSS properties
+### Properties
 
 - {{cssxref("scroll-snap-coordinate")}}
 - {{cssxref("scroll-snap-destination")}}

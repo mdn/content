@@ -28,7 +28,7 @@ The **`Access-Control-Request-Headers`** request header is used by browsers when
 ## Syntax
 
 ```
-Access-Control-Request-Headers: <header-name>, <header-name>, ...
+Access-Control-Request-Headers: <header-name>, <header-name>, …
 ```
 
 ## Directives

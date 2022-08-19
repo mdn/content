@@ -30,8 +30,6 @@ By setting its value to `ignore`, you can disable focusing the element, which me
 
 {{cssinfo}}
 
-> **Note:** This property doesn't work for XUL {{XULElem("textbox")}} elements, because the `textbox` itself never takes focus. Instead, XBL creates an anonymous HTML {{HTMLElement("input")}} element inside the `textbox`, and that element is what receives focus. You can stop the `textbox` from taking keyboard focus by setting its tab index to `-1`, and from taking mouse focus by preventing the default action of `mousedown` events.
-
 ## Syntax
 
 ### Values
@@ -79,7 +77,7 @@ By setting its value to `ignore`, you can disable focusing the element, which me
 
 ## Specifications
 
-Not part of any standard. A similar property, `user-focus`, was proposed in [early drafts of a predecessor of the CSS3 UI specification](https://www.w3.org/TR/2000/WD-css3-userint-20000216), but was rejected by the working group.
+Not part of any standard. A similar property, `user-focus`, was proposed in [early drafts of a predecessor of the User Interface for CSS3 specification](https://www.w3.org/TR/2000/WD-css3-userint-20000216), but was rejected by the working group.
 
 ## Browser compatibility
 

@@ -12,12 +12,12 @@ tags:
   - Input Type
   - Reference
   - Type
-browser-compat: html.elements.input.input-file
+browser-compat: html.elements.input.type_file
 ---
 
 {{HTMLRef("Input_types")}}
 
-{{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using [form submission](/en-US/docs/Learn/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File/Using_files_from_web_applications).
+{{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using [form submission](/en-US/docs/Learn/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
@@ -26,7 +26,7 @@ browser-compat: html.elements.input.input-file
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the path to the selected
+        A string representing the path to the selected
         file.
       </td>
     </tr>
@@ -44,9 +44,9 @@ browser-compat: html.elements.input.input-file
     <tr>
       <td><strong>Additional Attributes</strong></td>
       <td>
-        {{htmlattrxref("accept", "input/file")}},
-        {{htmlattrxref("capture", "input/file")}},
-        {{htmlattrxref("multiple", "input/file")}}
+        <a href="#accept" aria-current="page"><code>accept</code></a>,
+        <a href="#capture" aria-current="page"><code>capture</code></a>,
+        <a href="#multiple" aria-current="page"><code>multiple</code></a>
       </td>
     </tr>
     <tr>
@@ -68,13 +68,9 @@ browser-compat: html.elements.input.input-file
 
 ## Value
 
-A file input's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that represents the path to the selected file(s). If the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the input's `HTMLInputElement.files` property.
+A file input's {{htmlattrxref("value", "input")}} attribute contains a string that represents the path to the selected file(s). If no file is selected yet, the value is an empty string (`""`). When the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the [input's `HTMLInputElement.files` property](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
 
-> **Note:**
->
-> 1. If multiple files are selected, the string represents the first selected file. JavaScript can access the other files [through the input's `files` property](/en-US/docs/Web/API/File/Using_files_from_web_applications#getting_information_about_selected_files).
-> 2. If no file is yet selected, the string is `""` (empty).
-> 3. The string [is prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), to prevent malicious software from guessing the user's file structure.
+> **Note:** The value is [always the file's name prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), which isn't the real path of the file. This is to prevent malicious software from guessing the user's file structure.
 
 ## Additional attributes
 
@@ -121,7 +117,7 @@ A **unique file type specifier** is a string that describes a type of file that 
 - The string `video/*` meaning "any video file".
 - The string `image/*` meaning "any image file".
 
-The `accept` attribute takes as its value a string containing one or more of these unique file type specifiers, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
+The `accept` attribute takes a string containing one or more of these unique file type specifiers as its value, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
 
 ```html
 <input type="file" accept="image/*,.pdf">
@@ -356,7 +352,7 @@ function updateImageDisplay() {
   }
 
   const curFiles = input.files;
-  if(curFiles.length === 0) {
+  if (curFiles.length === 0) {
     const para = document.createElement('p');
     para.textContent = 'No files currently selected for upload';
     preview.appendChild(para);
@@ -364,10 +360,10 @@ function updateImageDisplay() {
     const list = document.createElement('ol');
     preview.appendChild(list);
 
-    for(const file of curFiles) {
+    for (const file of curFiles) {
       const listItem = document.createElement('li');
       const para = document.createElement('p');
-      if(validFileType(file)) {
+      if (validFileType(file)) {
         para.textContent = `File name ${file.name}, file size ${returnFileSize(file.size)}.`;
         const image = document.createElement('img');
         image.src = URL.createObjectURL(file);
@@ -411,12 +407,12 @@ The `returnFileSize()` function takes a number (of bytes, taken from the current
 
 ```js
 function returnFileSize(number) {
-  if(number < 1024) {
-    return number + 'bytes';
-  } else if(number >= 1024 && number < 1048576) {
-    return (number/1024).toFixed(1) + 'KB';
-  } else if(number >= 1048576) {
-    return (number/1048576).toFixed(1) + 'MB';
+  if (number < 1024) {
+    return `${number} bytes`;
+  } else if (number >= 1024 && number < 1048576) {
+    return `${(number / 1024).toFixed(1)} KB`;
+  } else if (number >= 1048576) {
+    return `${(number / 1048576).toFixed(1)} MB`;
   }
 }
 ```
@@ -435,5 +431,5 @@ The example looks like this; have a play:
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications) — contains a number of other useful examples related to `<input type="file">` and the [File API](/en-US/docs/Web/API/File).
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications) — contains a number of other useful examples related to `<input type="file">` and the [File API](/en-US/docs/Web/API/File).
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

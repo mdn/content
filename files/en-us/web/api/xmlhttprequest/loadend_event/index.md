@@ -1,6 +1,7 @@
 ---
 title: 'XMLHttpRequest: loadend event'
 slug: Web/API/XMLHttpRequest/loadend_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -22,14 +23,14 @@ The **`loadend`** event is fired when a request has completed, whether successfu
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('loadend', event => { })
+addEventListener('loadend', (event) => { })
 
-onloadend = event => { }
+onloadend = (event) => { }
 ```
 
 ## Event type
 
-An {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ProgressEvent")}}
 
@@ -84,7 +85,7 @@ const xhrButtonAbort = document.querySelector('.xhr.abort');
 const log = document.querySelector('.event-log');
 
 function handleEvent(e) {
-    log.textContent = log.textContent + `${e.type}: ${e.loaded} bytes transferred\n`;
+    log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
 }
 
 function addListeners(xhr) {

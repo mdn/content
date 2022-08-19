@@ -7,6 +7,7 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-4
 ---
 {{HTTPSidebar}}
 
@@ -30,9 +31,7 @@ Retry-After: 3600
 
 ## Specifications
 
-| Specification                                                | Title                        |
-| ------------------------------------------------------------ | ---------------------------- |
-| {{RFC("6585", "429 Too Many Requests" , "4")}} | Additional HTTP Status Codes |
+{{Specifications}}
 
 ## See also
 

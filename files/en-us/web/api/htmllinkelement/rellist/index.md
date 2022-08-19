@@ -1,6 +1,7 @@
 ---
 title: HTMLLinkElement.relList
 slug: Web/API/HTMLLinkElement/relList
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -24,20 +25,19 @@ changed.
 
 ## Value
 
-A live {{domxref("DOMTokenList")}}.
+A live {{domxref("DOMTokenList")}} of strings.
 
 ## Examples
 
 ```js
-var links = document.getElementsByTagName("link");
-var length = links.length;
-for (var i = 0; i < length; i++) {
-  var list = links[i].relList;
-  var listLength = list.length;
+const links = document.getElementsByTagName("link");
+const length = links.length;
+for (const link of links) {
+  const listLength = list.length;
   console.log("New link found.");
-  for (var j = 0; j < listLength; j++) {
-    console.log(list[j]);
-  }
+  relList.forEach((relEntry) => {
+    console.log(relEntry);
+  });
 }
 ```
 
@@ -53,5 +53,5 @@ for (var i = 0; i < length; i++) {
 
 - The equivalent property on {{HTMLElement("a")}} and {{HTMLElement("area")}},
   {{domxref("HTMLAnchorElement.relList")}} and {{domxref("HTMLAreaElement.relList")}}.
-- The very same list but as a space-separated tokens in a {{domxref("DOMString")}}:
+- The very same list but as a space-separated tokens in a string:
   {{domxref("HTMLLinkElement.rel")}}

@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletNode()
 slug: Web/API/AudioWorkletNode/AudioWorkletNode
+page-type: web-api-constructor
 tags:
   - API
   - AudioWorkletNode
@@ -19,8 +20,8 @@ processing.
 ## Syntax
 
 ```js
-new AudioWorkletNode(context, name);
-new AudioWorkletNode(context, name, options);
+new AudioWorkletNode(context, name)
+new AudioWorkletNode(context, name, options)
 ```
 
 ### Parameters
@@ -51,10 +52,6 @@ new AudioWorkletNode(context, name, options);
       - : An object containing the initial values of custom {{domxref("AudioParam")}} objects on this node (in its {{domxref("AudioWorkletNode.parameters", "parameters")}} property), with `key` being the name of a custom parameter and `value` being its initial value.
     - `processorOptions` {{optional_inline}}
       - : Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.
-
-### Return value
-
-The newly constructed {{domxref("AudioWorkletNode")}} instance.
 
 ### Exceptions
 

@@ -57,9 +57,9 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function onLanguageDetected(langInfo) {
-  for (lang of langInfo.languages) {
-    console.log("Language is: " + lang.language);
-    console.log("Percentage is: " + lang.percentage);
+  for (const lang of langInfo.languages) {
+    console.log(`Language is: ${lang.language}`);
+    console.log(`Percentage is: ${lang.percentage}`);
   }
 }
 
@@ -71,7 +71,7 @@ detecting.then(onLanguageDetected);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-detectLanguage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/i18n/#method-detectLanguage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

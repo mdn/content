@@ -1,6 +1,7 @@
 ---
 title: 'Document: selectionchange event'
 slug: Web/API/Document/selectionchange_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -14,33 +15,25 @@ browser-compat: api.Document.selectionchange_event
 
 The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the current {{domxref("Selection")}} of a {{domxref("Document")}} is changed.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onselectionchange", "onselectionchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
 
-The event can be handled by adding an event listener for `selectionchange` or using the global {{domxref("GlobalEventHandlers.onselectionchange","onselectionchange")}} event handler.
+The event can be handled by adding an event listener for `selectionchange` or using the `onselectionchange` event handler.
 
-> **Note:** This event is not quite the same as the `selectionchange` events fired when the text selection in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is changed.
-> See {{domxref("GlobalEventHandlers.onselectionchange")}} for more information.
+> **Note:** This event is not quite the same as the `selectionchange` events fired when the text selection in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is changed. See {{domxref("HTMLInputElement.selectionchange_event")}} for more details.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('selectionchange', (event) => {});
+
+onselectionchange = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

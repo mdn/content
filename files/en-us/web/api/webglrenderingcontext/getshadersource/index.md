@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getShaderSource()
 slug: Web/API/WebGLRenderingContext/getShaderSource
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ getShaderSource(shader)
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} object to get the source code from.
 
 ### Return value
@@ -33,10 +34,10 @@ A string containing the source code of the shader.
 ## Examples
 
 ```js
-var shader = gl.createShader(gl.VERTEX_SHADER);
+const shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, originalSource);
 
-var source = gl.getShaderSource(shader);
+const source = gl.getShaderSource(shader);
 ```
 
 ## Specifications

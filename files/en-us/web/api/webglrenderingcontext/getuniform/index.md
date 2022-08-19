@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getUniform()
 slug: Web/API/WebGLRenderingContext/getUniform
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,9 +23,9 @@ getUniform(program, location)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} containing the uniform attribute.
-- location
+- `location`
   - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
     attribute to get.
 
@@ -176,7 +177,7 @@ The returned type depends on the uniform type:
 ## Examples
 
 ```js
-var loc = gl.getUniformLocation(program, 'u_foobar');
+const loc = gl.getUniformLocation(program, 'u_foobar');
 gl.getUniform(program, loc);
 ```
 

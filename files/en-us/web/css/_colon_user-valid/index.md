@@ -26,7 +26,9 @@ The result is that if the control was valid when the user started interacting wi
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:user-valid
+```
 
 ## Examples
 

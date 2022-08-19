@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.changeType()
 slug: Web/API/SourceBuffer/changeType
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -9,13 +10,12 @@ tags:
   - Media Source
   - Media Source Extensions
   - Method
-  - Non-standard
   - SourceBuffer
   - Video
   - changeType
 browser-compat: api.SourceBuffer.changeType
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{Non-standard_Header}}
+{{APIRef("Media Source Extensions")}}
 
 The **`changeType()`** method of the
 {{domxref("SourceBuffer")}} interface sets the MIME type that future calls to

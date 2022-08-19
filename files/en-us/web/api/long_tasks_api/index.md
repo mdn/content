@@ -1,6 +1,7 @@
 ---
 title: Long Tasks API
 slug: Web/API/Long_Tasks_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -13,6 +14,9 @@ tags:
   - Reference
   - TaskAttributionTiming
   - Web Performance
+browser-compat:
+  - api.PerformanceLongTaskTiming
+  - api.TaskAttributionTiming
 ---
 {{DefaultAPISidebar("Long Tasks")}}
 
@@ -51,15 +55,15 @@ A list of containers that the task occurred within. For tasks that don't occur w
 ## Usage
 
 ```js
-var observer = new PerformanceObserver(function(list) {
-    var perfEntries = list.getEntries();
-    for (var i = 0; i < perfEntries.length; i++) {
-        // Process long task notifications:
-        // report back for analytics and monitoring
-        // ...
-    }
+const observer = new PerformanceObserver((list) => {
+    const perfEntries = list.getEntries();
+    perfEntries.forEach((entry) => {
+      // Process long task notifications:
+      // report back for analytics and monitoring
+    });
 });
-// register observer for long task notifications
+
+// Register observer for long task notifications
 observer.observe({entryTypes: ["longtask"]});
 // Long script execution after this will result in queueing
 // and receiving "longtask" entries in the observer.
@@ -74,19 +78,11 @@ observer.observe({entryTypes: ["longtask"]});
 
 ## Specifications
 
-| Specification                        | Status                           | Comment             |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Long Tasks')}} | {{Spec2('Long Tasks')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `PerformanceLongTaskTiming`
-
-{{Compat("api.PerformanceLongTaskTiming")}}
-
-### `TaskAttributionTiming`
-
-{{Compat("api.TaskAttributionTiming")}}
+{{Compat}}
 
 ## See also
 

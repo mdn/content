@@ -1,10 +1,10 @@
 ---
 title: SourceBuffer.remove()
 slug: Web/API/SourceBuffer/remove
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - Method
@@ -14,7 +14,7 @@ tags:
   - remove
 browser-compat: api.SourceBuffer.remove
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`remove()`** method of the {{domxref("SourceBuffer")}}
 interface removes media segments within a specific time range from the
@@ -31,9 +31,9 @@ remove(start, end)
 
 ### Parameters
 
-- start
+- `start`
   - : A double representing the start of the time range, in seconds.
-- end
+- `end`
   - : A double representing the end of the time range, in seconds.
 
 ### Return value

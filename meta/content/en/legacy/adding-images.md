@@ -58,7 +58,7 @@ It's as easy as that. Let's walk through an example:
     ```
 
 1. Now you're ready to create your
-    [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+    [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ## Compressing images
 

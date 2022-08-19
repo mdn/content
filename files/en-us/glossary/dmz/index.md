@@ -12,4 +12,4 @@ It exposes only certain defined endpoints, while denying access to the internal 
 
 ## See also
 
-- {{Interwiki("wikipedia", "DMZ (computing)", "DMZ")}} on Wikipedia
+- [DMZ](https://en.wikipedia.org/wiki/DMZ_(computing)) on Wikipedia

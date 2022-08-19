@@ -38,11 +38,11 @@ otherwise `false`.
 ### Using has()
 
 ```js
-let myMap = new Map()
-myMap.set('bar', "foo")
+const myMap = new Map();
+myMap.set('bar', "foo");
 
-myMap.has('bar')   // returns true
-myMap.has('baz')   // returns false
+myMap.has('bar'); // returns true
+myMap.has('baz'); // returns false
 ```
 
 ## Specifications

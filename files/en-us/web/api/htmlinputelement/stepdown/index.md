@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.stepDown()
 slug: Web/API/HTMLInputElement/stepDown
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -26,7 +27,7 @@ defaults to 1 if not specified, and
 default value for `step` if not specified.
 
 Valid on all numeric, date, and time input types that support the step attribute,
-including{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
+including {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
 {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}},
 {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number",
   "number")}}, and {{HTMLElement("input/range", "range")}}.
@@ -113,7 +114,7 @@ stepDown(stepDecrement)
 
 ### Parameters
 
-- _`stepDecrement`_ {{optional_inline}}
+- `stepDecrement` {{optional_inline}}
 
   - : A numeric value.  If no parameter is passed, _stepDecrement_ defaults to 1.
 
@@ -152,17 +153,17 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
 ```js
 /* make the button call the function */
 let button = document.getElementById('theButton');
-button.addEventListener('click', function() {
-  stepondown();}
-);
+button.addEventListener('click', () => {
+  stepondown();
+});
 
 function stepondown() {
   let input = document.getElementById('theNumber');
   let val = document.getElementById('decrementer').value;
 
-  if (val) {  /* decrement with a parameter */
+  if (val) {  // decrement with a parameter
     input.stepDown(val);
-  } else {    /* or without a parameter. Try it with 0, 5, -2, etc. */
+  } else {    // or without a parameter. Try it with 0, 5, -2, etc.
     input.stepDown();
   }
 }
@@ -182,7 +183,7 @@ input:invalid {
 
 Note if you don't pass a parameter to the `stepDown()` method, it defaults
 to 1. Any other value is a multiplier of the `step` attribute value, which in
-this case is 5. If we pass `4` as the _`stepDecrement`_, the input will `stepDown` by
+this case is 5. If we pass `4` as the `stepDecrement`, the input will `stepDown` by
 `4 * 5`, or `20`. If the parameter is `0`, the number will not be
 decremented. The `stepDown()` method will not allow the input to go out of range, in this
 case stopping when it reaches 0 and rounding down and floats that are passed as a

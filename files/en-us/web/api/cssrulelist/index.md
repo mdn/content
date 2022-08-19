@@ -1,6 +1,7 @@
 ---
 title: CSSRuleList
 slug: Web/API/CSSRuleList
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -20,7 +21,7 @@ The interface has no constructor. An instance of `CSSRuleList` is returned by {{
 
 ## Properties
 
-- {{domxref("CSSRuleList.length")}}{{ReadOnlyInline}}
+- {{domxref("CSSRuleList.length")}} {{ReadOnlyInline}}
   - : Returns an integer representing the number of {{domxref("CSSRule")}} objects in the collection.
 
 ## Methods

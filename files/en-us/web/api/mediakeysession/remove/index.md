@@ -1,10 +1,10 @@
 ---
 title: MediaKeySession.remove()
 slug: Web/API/MediaKeySession/remove
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeySession
   - Method
   - NeedsExample

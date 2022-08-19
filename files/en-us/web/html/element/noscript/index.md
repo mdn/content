@@ -95,7 +95,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ```html
 <noscript>
   <!-- anchor linking to external file -->
-  <a href="https://www.mozilla.com/">External Link</a>
+  <a href="https://www.mozilla.org/">External Link</a>
 </noscript>
 <p>Rocks!</p>
 ```
@@ -106,7 +106,7 @@ Rocks!
 
 ### Result with scripting disabled
 
-[External Link](https://www.mozilla.com/)
+[External Link](https://www.mozilla.org/)
 
 Rocks!
 

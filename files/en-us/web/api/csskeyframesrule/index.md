@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule
 slug: Web/API/CSSKeyframesRule
+page-type: web-api-interface
 tags:
   - API
   - CSS Animations
@@ -11,7 +12,7 @@ browser-compat: api.CSSKeyframesRule
 ---
 {{APIRef("CSSOM")}}
 
-The **`CSSKeyframesRule`** interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole {{cssxref("@keyframes")}} {{cssxref("at-rule")}}.
+The **`CSSKeyframesRule`** interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole {{cssxref("@keyframes")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 {{InheritanceDiagram}}
 

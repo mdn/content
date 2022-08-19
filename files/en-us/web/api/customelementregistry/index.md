@@ -1,14 +1,13 @@
 ---
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
+page-type: web-api-interface
 tags:
   - API
   - CustomElementRegistry
-  - Experimental
   - Interface
   - Reference
   - Web Components
-  - custom elements
 browser-compat: api.CustomElementRegistry
 ---
 {{DefaultAPISidebar("Web Components")}}
@@ -24,11 +23,11 @@ The **`CustomElementRegistry`** interface provides methods for registering custo
 - {{domxref("CustomElementRegistry.upgrade()")}}
   - : Upgrades a custom element directly, even before it is connected to its shadow root.
 - {{domxref("CustomElementRegistry.whenDefined()")}}
-  - : Returns an empty {{jsxref("Promise", "promise")}} that resolves when a custom element becomes defined with the given name. If such a custom element is already defined, the returned promise is immediately fulfilled.
+  - : Returns an empty {{jsxref("Promise")}} that resolves when a custom element becomes defined with the given name. If such a custom element is already defined, the returned promise is immediately fulfilled.
 
 ## Examples
 
-The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)). Note how we use the {{domxref("CustomElementRegistry.define()")}} method to define the custom element after creating its class.
+The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)). Note how we use the {{domxref("CustomElementRegistry.define()")}} method to define the custom element after creating its class.
 
 ```js
 // Create a class for the element
@@ -42,7 +41,7 @@ class WordCount extends HTMLParagraphElement {
 
     function countWords(node){
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter(a => a.trim().length > 0).length;
+      return text.trim().split(/\s+/g).filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Words: ${countWords(wcParent)}`;
@@ -58,7 +57,7 @@ class WordCount extends HTMLParagraphElement {
     shadow.appendChild(text);
 
     // Update count when element content changes
-    setInterval(function() {
+    setInterval(() => {
       const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
     }, 200);

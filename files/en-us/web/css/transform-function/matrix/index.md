@@ -124,7 +124,7 @@ matrix(a, b, c, d, tx, ty)
 </table>
 
 The values represent the following functions:
-`matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )`
+`matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())`
 
 ## Examples
 
@@ -166,6 +166,5 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d())
-- [Understanding the CSS Transforms
-  Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)
+- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d)
+- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

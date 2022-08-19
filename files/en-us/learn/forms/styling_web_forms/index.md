@@ -53,7 +53,7 @@ Some elements can be styled with few if any problems across platforms. These inc
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} and {{HTMLElement("legend")}}
-3. Single-line text {{HTMLElement("input")}}s (e.g. type text, url, email...), except for [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search).
+3. Single-line text {{HTMLElement("input")}}s (e.g. type text, url, email), except for [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search).
 4. Multi-line {{HTMLElement("textarea")}}
 5. Buttons (both {{HTMLElement("input")}} and {{HTMLElement("button")}})
 6. {{HTMLElement("label")}}
@@ -368,11 +368,11 @@ button:focus {
 
 And voila! Your form should now look like this:
 
-![](updated-form-screenshot.jpg)
+![The final look and layout of the form after applying all styling and tweaking to it as described above](updated-form-screenshot.jpg)
 
 > **Note:** If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
 
-## Test your skills!
+## Test your skills
 
 You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Styling basics](/en-US/docs/Learn/Forms/Test_your_skills:_Styling_basics).
 

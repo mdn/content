@@ -63,7 +63,8 @@ jobs:
           path: yari
 
       - name: Install Python
-        uses: actions/setup-python@v3
+        id: setup-python
+        uses: actions/setup-python@v4
         with:
           python-version: "3.8"
 
@@ -72,7 +73,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.local
-          key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
+          # the trailing number is used to increase for getting
+          # a different cache key when this file changes
+          key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install Python poetry
         uses: snok/install-poetry@v1.3
@@ -85,7 +88,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: yari/deployer/.venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
+          # the trailing number is used to increase for getting
+          # a different cache key when this file changes
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install poetry dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
@@ -117,7 +122,6 @@ jobs:
 
           poetry run deployer upload \
             --prefix="pr$PR_NUMBER" \
-            --no-redirects \
             --default-cache-control 0 \
             "$BUILD_OUT_ROOT"
 

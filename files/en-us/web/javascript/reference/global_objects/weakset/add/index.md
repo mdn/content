@@ -36,7 +36,7 @@ The `WeakSet` object.
 ### Using add
 
 ```js
-var ws = new WeakSet();
+const ws = new WeakSet();
 
 ws.add(window); // add the window object to the WeakSet
 

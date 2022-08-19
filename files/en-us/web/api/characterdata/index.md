@@ -1,6 +1,7 @@
 ---
 title: CharacterData
 slug: Web/API/CharacterData
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -17,7 +18,7 @@ The **`CharacterData`** abstract interface represents a {{domxref("Node")}} obje
 _This interface also inherits properties from its parents, {{domxref("Node")}} and {{domxref("EventTarget")}}._
 
 - {{domxref("CharacterData.data")}}
-  - : Is a string representing the textual data contained in this object.
+  - : A string representing the textual data contained in this object.
 - {{domxref("CharacterData.length")}} {{readonlyInline}}
   - : Returns a number representing the size of the string contained in the object.
 - {{domxref("CharacterData.nextElementSibling")}} {{readonlyInline}}

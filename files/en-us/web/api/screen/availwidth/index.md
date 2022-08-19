@@ -1,6 +1,7 @@
 ---
 title: Screen.availWidth
 slug: Web/API/Screen/availWidth
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -20,7 +21,7 @@ A number.
 ## Examples
 
 ```js
-var screenAvailWidth = window.screen.availWidth;
+const screenAvailWidth = window.screen.availWidth;
 
 console.log(screenAvailWidth);
 ```

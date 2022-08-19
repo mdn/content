@@ -9,7 +9,7 @@ A *codec* (a blend word derived from "**co**der-**dec**oder") is a program, algo
 
 ## See also
 
-- {{Interwiki("wikipedia", "Codec")}} on Wikipedia
+- [Codec](https://en.wikipedia.org/wiki/Codec) on Wikipedia
 - [Web video codec guide](/en-US/docs/Web/Media/Formats/Video_codecs)
 - [Web audio codec guide](/en-US/docs/Web/Media/Formats/Audio_codecs)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)

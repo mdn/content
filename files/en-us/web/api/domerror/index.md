@@ -1,6 +1,7 @@
 ---
 title: DOMError
 slug: Web/API/DOMError
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -10,16 +11,16 @@ tags:
   - Reference
 browser-compat: api.DOMError
 ---
-{{ APIRef("DOM") }}{{deprecated_header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The **`DOMError`** interface describes an error object that contains an error name.
 
 ## Properties
 
-- {{domxref("DOMError.name")}} {{readOnlyInline}}
-  - : Returns a {{ domxref("DOMString") }} representing one of the error type names (see below).
-- {{domxref("DOMError.message")}} {{readOnlyInline}}
-  - : Returns a {{ domxref("DOMString") }} representing a message or description associated with the given error type name.
+- {{domxref("DOMError.name")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Returns a string representing one of the error type names (see below).
+- {{domxref("DOMError.message")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Returns a string representing a message or description associated with the given error type name.
 
 ## Error types
 

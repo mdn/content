@@ -1,6 +1,7 @@
 ---
 title: 'Window: unload event'
 slug: Web/API/Window/unload_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -33,8 +34,8 @@ Please note that the unload event also follows the document tree: parent frame u
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('unload', event => { });
-onunload = event => { };
+addEventListener('unload', (event) => { });
+onunload = (event) => { };
 ```
 
 ## Event type
@@ -71,14 +72,15 @@ See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-ap
 
 ```html
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Parent Frame</title>
+<html lang="en-US">
+   <head>
+     <meta charset="UTF-8">
+     <title>Parent Frame</title>
     <script>
-      window.addEventListener('beforeunload', function(event) {
+      window.addEventListener('beforeunload', (event) => {
         console.log('I am the 1st one.');
       });
-      window.addEventListener('unload', function(event) {
+      window.addEventListener('unload', (event) => {
         console.log('I am the 3rd one.');
       });
     </script>
@@ -93,14 +95,15 @@ Below, the content of `child-frame.html`:
 
 ```html
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Child Frame</title>
+<html lang="en-US">
+   <head>
+     <meta charset="UTF-8">
+     <title>Child Frame</title>
     <script>
-      window.addEventListener('beforeunload', function(event) {
+      window.addEventListener('beforeunload', (event) => {
         console.log('I am the 2nd one.');
       });
-      window.addEventListener('unload', function(event) {
+      window.addEventListener('unload', (event) => {
         console.log('I am the 4th and last one…');
       });
     </script>
@@ -126,12 +129,10 @@ When the parent frame is unloaded, events will be fired in the order described b
 - Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}
 - [Unloading Documents — unload a document](https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents)
 - The [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event.
-- [Don't
-  lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in
+- [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in
   detail why you should use `visibilitychange`, not
   `beforeunload`/`unload`.
-- [Page
-  Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling
+- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling
   page lifecycle behavior in your web applications.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
 - [Back/forward cache](https://web.dev/bfcache/) explains what the back/forward cache is, and its implications for various page lifecycle events.

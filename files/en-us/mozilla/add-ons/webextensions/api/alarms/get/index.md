@@ -29,7 +29,7 @@ let getAlarm = browser.alarms.get(
 
 ### Parameters
 
-- `name`{{optional_inline}}
+- `name` {{optional_inline}}
   - : `string`. The name of the alarm to get. If you don't supply this, the empty string "" will be used.
 
 ### Return value

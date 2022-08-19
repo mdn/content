@@ -1,6 +1,7 @@
 ---
 title: Getting started with WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
+page-type: guide
 tags:
   - Tutorial
   - WebGL
@@ -13,9 +14,9 @@ WebGL programs consist of control code written in JavaScript and shader code (GL
 
 This article will introduce you to the basics of using WebGL. It's assumed that you already have an understanding of the mathematics involved in 3D graphics, and this article doesn't pretend to try to teach you 3D graphics concepts itself.
 
-The code examples in this tutorial can also be found in the [webgl-examples GitHub repository](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial).
+The code examples in this tutorial can also be found in the [webgl-examples folder on GitHub](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial).
 
-It's worth noting here that this series of articles introduces WebGL itself; however, there are a number of frameworks available that encapsulate WebGL's capabilities, making it easier to build 3D applications and games, such as [THREE.js](https://threejs.org/) and [BABYLON.js.](https://www.babylonjs.com/)
+It's worth noting here that this series of articles introduces WebGL itself; however, there are a number of frameworks available that encapsulate WebGL's capabilities, making it easier to build 3D applications and games, such as [THREE.js](https://threejs.org/) and [BABYLON.js](https://www.babylonjs.com/).
 
 ## Preparing to render in 3D
 
@@ -63,9 +64,9 @@ If the context is successfully initialized, the variable `gl` is our reference t
 
 At this point, you have enough code that the WebGL context should successfully initialize, and you should wind up with a big black, empty box, ready and waiting to receive content.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample1) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample1/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample1) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## See also
 

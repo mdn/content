@@ -136,11 +136,7 @@ const cube = document.getElementById('example-element');
 const checkbox = document.getElementById('preserve');
 
 checkbox.addEventListener('change', () => {
-  if(checkbox.checked) {
-    cube.style.transformStyle = 'preserve-3d';
-  } else {
-    cube.style.transformStyle = 'flat';
-  }
+  cube.style.transformStyle = checkbox.checked ? 'preserve-3d' : 'flat';
 })
 ```
 
@@ -158,4 +154,4 @@ checkbox.addEventListener('change', () => {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

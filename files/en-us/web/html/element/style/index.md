@@ -47,9 +47,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 In the following example, we apply a very simple stylesheet to a document:
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
+  <title>Test page</title>
   <style>
     p {
       color: red;
@@ -62,16 +64,18 @@ In the following example, we apply a very simple stylesheet to a document:
 </html>
 ```
 
-{{EmbedLiveSample('A_simple_stylesheet', '100%', '60')}}
+{{EmbedLiveSample('A_simple_stylesheet', '100%', '100')}}
 
 ### Multiple style elements
 
 In this example we've included two `<style>` elements — notice how the conflicting declarations in the later `<style>` element override those in the earlier one, if they have equal [specificity](/en-US/docs/Web/CSS/Specificity).
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
+  <title>Test page</title>
   <style>
     p {
       color: white;
@@ -93,16 +97,18 @@ In this example we've included two `<style>` elements — notice how the conflic
 </html>
 ```
 
-{{EmbedLiveSample('Multiple_style_elements', '100%', '60')}}
+{{EmbedLiveSample('Multiple_style_elements', '100%', '100')}}
 
 ### Including a media query
 
 In this example we build on the previous one, including a `media` attribute on the second `<style>` element so it is only applied when the viewport is less than 500px in width.
 
 ```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
+  <title>Test page</title>
   <style>
     p {
       color: white;
@@ -124,7 +130,7 @@ In this example we build on the previous one, including a `media` attribute on t
 </html>
 ```
 
-{{EmbedLiveSample('Including_a_media_query', '100%', '60')}}
+{{EmbedLiveSample('Including_a_media_query', '100%', '100')}}
 
 ## Technical summary
 

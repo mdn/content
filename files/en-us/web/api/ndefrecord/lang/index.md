@@ -1,6 +1,7 @@
 ---
 title: NDEFRecord.lang
 slug: Web/API/NDEFRecord/lang
+page-type: web-api-instance-property
 tags:
   - NDEF
   - Reference
@@ -24,7 +25,7 @@ NDEFRecord.lang
 
 ### Value
 
-A {{DOMxRef("USVString")}}.
+A string.
 
 ## Specifications
 

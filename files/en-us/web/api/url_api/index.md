@@ -1,6 +1,7 @@
 ---
 title: URL API
 slug: Web/API/URL_API
+page-type: web-api-overview
 tags:
   - API
   - Address
@@ -13,6 +14,7 @@ tags:
   - URL API
   - Web
   - hostname
+browser-compat: api.URL
 ---
 {{DefaultAPISidebar("URL API")}}
 
@@ -57,7 +59,7 @@ let addr = new URL("https://example.com/login?user=someguy&page=news");
 try {
   loginUser(addr.searchParams.get("user"));
   gotoPage(addr.searchParams.get("page"));
-} catch(err) {
+} catch (err) {
   showErrorMessage(err);
 }
 ```
@@ -81,21 +83,21 @@ Note the call to {{domxref("URLSearchParams.sort()")}} to sort the parameter lis
 
 ```js
 function fillTableWithParameters(tbl) {
-  let url = new URL(document.location.href);
+  const url = new URL(document.location.href);
   url.searchParams.sort();
-  let keys = url.searchParams.keys();
+  const keys = url.searchParams.keys();
 
-  for (let key of keys) {
-    let val = url.searchParams.get(key);
-    let row = document.createElement("tr");
-    let cell = document.createElement("td");
-    cell.innerText = key;
-    row.appendChild(cell);
-    cell = document.createElement("td");
-    cell.innerText = val;
-    row.appendChild(cell);
+  for (const key of keys) {
+    const val = url.searchParams.get(key);
+    const row = document.createElement("tr");
+    const cell1 = document.createElement("td");
+    cell1.innerText = key;
+    row.appendChild(cell1);
+    const cell2 = document.createElement("td");
+    cell2.innerText = val;
+    row.appendChild(cell2);
     tbl.appendChild(row);
-  };
+  }
 }
 ```
 
@@ -103,13 +105,11 @@ A working version of this example can be [found on Glitch](https://url-api.glitc
 
 ## Specifications
 
-| Specification                                       |
-| --------------------------------------------------- |
-| [URL Living Standard](https://url.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## See also
 

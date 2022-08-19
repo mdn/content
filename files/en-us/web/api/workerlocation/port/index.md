@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.port
 slug: Web/API/WorkerLocation/port
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -21,7 +22,7 @@ A string.
 
 ```js
 // In a Web worker, on the page http://localhost:8080/
-var result = location.port; // Returns '8080'
+const result = location.port; // Returns '8080'
 ```
 
 ## Specifications

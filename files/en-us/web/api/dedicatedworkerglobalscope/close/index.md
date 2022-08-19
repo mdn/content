@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope.close()
 slug: Web/API/DedicatedWorkerGlobalScope/close
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

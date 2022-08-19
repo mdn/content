@@ -1,6 +1,7 @@
 ---
 title: XRSession.requestAnimationFrame()
 slug: Web/API/XRSession/requestAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -85,11 +86,11 @@ const XR = navigator.xr
 // Request a new XRSession
 XR.requestSession("inline").then((xrSession) => {
   xrSession.requestAnimationFrame((time, xrFrame) => {
-    let viewer = xrFrame.getViewerPose(xrReferenceSpace)
+    const viewer = xrFrame.getViewerPose(xrReferenceSpace)
 
     gl.bindFramebuffer(xrWebGLLayer.framebuffer)
-    for (xrView of viewer.views) {
-      let xrViewport = xrWebGLLayer.getViewport(xrView)
+    for (const xrView of viewer.views) {
+      const xrViewport = xrWebGLLayer.getViewport(xrView)
       gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height)
 
     // WebGL draw calls will now be rendered into the appropriate viewport.

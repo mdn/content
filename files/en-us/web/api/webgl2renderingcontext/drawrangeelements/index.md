@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.drawRangeElements()
 slug: Web/API/WebGL2RenderingContext/drawRangeElements
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -43,9 +44,9 @@ drawRangeElements(mode, start, end, count, type, offset)
 - `end`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the maximum array index contained in
     `offset`.
-- count
+- `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements to be rendered.
-- type
+- `type`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array
     buffer. Possible values are:
@@ -54,13 +55,13 @@ drawRangeElements(mode, start, end, count, type, offset)
     - `gl.UNSIGNED_SHORT`
     - `gl.UNSIGNED_INT`
 
-- offset
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in the element array buffer. Must be
     a valid multiple of the size of the given `type`.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

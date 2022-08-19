@@ -1,6 +1,7 @@
 ---
 title: RTCCertificate
 slug: Web/API/RTCCertificate
+page-type: web-api-interface
 tags:
   - API
   - Interface

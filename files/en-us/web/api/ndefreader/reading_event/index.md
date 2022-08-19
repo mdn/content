@@ -1,6 +1,7 @@
 ---
 title: 'NDEFReader: reading event'
 slug: Web/API/NDEFReader/reading_event
+page-type: web-api-event
 tags:
   - NDEF
   - Reference
@@ -17,9 +18,9 @@ The `reading` event of the {{DOMxRef("NDEFReader")}} interface is fired whenever
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('reading', event => { });
+addEventListener('reading', (event) => { });
 
-onreading = event => { };
+onreading = (event) => { };
 ```
 
 ## Event type
@@ -40,10 +41,9 @@ const ndef = new NDEFReader();
     ndef.onreading = (event) => {
       console.log("NDEF message read.");
     };
-  }).catch(error => {
+  }).catch((error) => {
     console.log(`Error! Scan failed to start: ${error}.`);
   });
-
 ```
 
 ## Specifications

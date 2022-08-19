@@ -1,6 +1,7 @@
 ---
 title: CharacterData.before()
 slug: Web/API/CharacterData/before
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -17,7 +18,7 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 ## Syntax
 
 ```js
-before(... nodes)
+before(...nodes)
 ```
 
 ### Parameters

@@ -1,6 +1,7 @@
 ---
 title: XRLightEstimate.sphericalHarmonicsCoefficients
 slug: Web/API/XRLightEstimate/sphericalHarmonicsCoefficients
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -36,7 +37,7 @@ const lightProbe = await xrSession.requestLightProbe();
 function onXRFrame(time, xrFrame) {
   let lightEstimate = xrFrame.getLightEstimate(lightProbe);
 
-  // Render lights using lightEstimate.sphericalHarmonicsCoefficients ...
+  // Render lights using lightEstimate.sphericalHarmonicsCoefficients
 }
 ```
 

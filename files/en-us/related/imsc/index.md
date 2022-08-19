@@ -21,7 +21,7 @@ Each IMSC document is self-contained and combines content, timing, layout and st
 IMSC differs from HTML in a number of ways:
 
 - IMSC uses [namespaces](/en-US/docs/Related/IMSC/Namespaces), so that `tts:fontSize` is not the same as `fontSize`, and namespace declarations are required, like
-  `<tt xmlns="http://www.w3.org/ns/ttml" xmlns:tts="http://www.w3.org/ns/ttml#styling" ...>`
+  `<tt xmlns="http://www.w3.org/ns/ttml" xmlns:tts="http://www.w3.org/ns/ttml#styling" …>`
 - IMSC has stricter rules, for instance `<p>` elements can only be present within `<div>` elements, and cannot be direct children of `<body>` elements.
 
 While attributes names and syntax are similar, styling differs from CSS in a couple of ways:
@@ -87,7 +87,7 @@ Below is an example that uses `tts:fillLineGap`:
 
 {{EmbedGHLiveSample("imsc/fillLineGap/fillLineGap.html", '100%', '256px')}}
 
-... and an example that uses `ebutts:linePadding`:
+… and an example that uses `ebutts:linePadding`:
 
 {{EmbedGHLiveSample("imsc/linePadding/linePadding.html", '100%', '256px')}}
 
@@ -112,7 +112,7 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 - [Mapping video time codes to IMSC](/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC)
   - : Mapping the time or time code value that is seen within a video track or video editor timeline to an IMSC document can be a little tricky. There are a few different issues that you'll need to be aware of, which we'll cover in this article.
 - [IMSC and other standards](/en-US/docs/Related/IMSC/IMSC_and_other_standards)
-  - : IMSC is the result of an international effort to bring together popular profiles of [TTML](https://www.w3.org/TR/ttml/), like [EBU-TT-D](https://tech.ebu.ch/publications/tech3380) and [SMPTE-TT](https://doi.org/10.5594/SMPTE.ST2052-1.2013). This article provides an overview how IMSC is related to these other subtitle standards, and explains the differences between the versions of IMSC.
+  - : IMSC is the result of an international effort to bring together popular profiles of [TTML](https://www.w3.org/TR/ttml/), like [EBU-TT-D](https://tech.ebu.ch/publications/tech3380) and [SMPTE-TT](https://ieeexplore.ieee.org/document/7291854/). This article provides an overview how IMSC is related to these other subtitle standards, and explains the differences between the versions of IMSC.
 
 ## Reference
 

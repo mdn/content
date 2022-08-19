@@ -1,11 +1,13 @@
 ---
 title: WebHID API
 slug: Web/API/WebHID_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced
   - WebHID
   - WebHID API
+browser-compat: api.HID
 ---
 {{DefaultAPISidebar("WebHID API")}}{{SeeCompatTable}}
 
@@ -45,7 +47,7 @@ We can retrieve all the devices the website has been granted access to previousl
 
 ```js
 let devices = await navigator.hid.getDevices();
-devices.forEach(device => {
+devices.forEach((device) => {
     console.log(`HID: ${device.productName}`);
 });
 ```
@@ -82,10 +84,8 @@ navigator.hid.addEventListener('disconnect', (event) => {
 
 ## Specifications
 
-| Specification                | Status                   | Comment             |
-| ---------------------------- | ------------------------ | ------------------- |
-| {{SpecName('WebHID')}} | {{Spec2('WebHID')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.HID")}}
+{{Compat}}

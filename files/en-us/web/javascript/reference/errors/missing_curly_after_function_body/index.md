@@ -15,8 +15,7 @@ parenthesis are in the correct order.
 
 ## Message
 
-```js
-SyntaxError: Expected '}' (Edge)
+```
 SyntaxError: missing } after function body (Firefox)
 ```
 
@@ -37,7 +36,7 @@ a bit nicer might also help you to see through the jungle.
 Oftentimes, there is a missing curly bracket in your function code:
 
 ```js example-bad
-var charge = function() {
+const charge = function () {
   if (sunny) {
     useSolarCells();
   } else {
@@ -48,7 +47,7 @@ var charge = function() {
 Correct would be:
 
 ```js example-good
-var charge = function() {
+const charge = function () {
   if (sunny) {
     useSolarCells();
   } else {
@@ -61,14 +60,14 @@ It can be more obscure when using [IIFE](/en-US/docs/Glossary/IIFE), [Closures](
 a lot of different parenthesis and curly brackets, for example.
 
 ```js example-bad
-(function() { if (true) { return false; } );
+(function () { if (true) { return false; } );
 ```
 
 Oftentimes, indenting differently or double checking indentation helps to spot these
 errors.
 
 ```js example-good
-(function() {
+(function () {
   if (true) {
     return false;
   }

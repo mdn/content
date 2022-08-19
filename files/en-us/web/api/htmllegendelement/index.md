@@ -1,6 +1,7 @@
 ---
 title: HTMLLegendElement
 slug: Web/API/HTMLLegendElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -20,11 +21,11 @@ The **`HTMLLegendElement`** is an interface allowing to access properties of the
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLLegendElement.form")}} {{readonlyInline}}
-  - : Is a {{domxref("HTMLFormElement")}} representing the form that this legend belongs to. If the legend has a fieldset element as its parent, then this attribute returns the same value as the **form** attribute on the parent fieldset element. Otherwise, it returns null.
+  - : A {{domxref("HTMLFormElement")}} representing the form that this legend belongs to. If the legend has a fieldset element as its parent, then this attribute returns the same value as the **form** attribute on the parent fieldset element. Otherwise, it returns null.
 - {{domxref("HTMLLegendElement.accessKey")}}
-  - : Is a {{domxref("DOMString")}} representing a single-character access key to give access to the element.
+  - : A string representing a single-character access key to give access to the element.
 - {{domxref("HTMLLegendElement.align")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the alignment relative to the form set
+  - : A string representing the alignment relative to the form set
 
 ## Methods
 

@@ -88,7 +88,7 @@ This kind of problem didn't exist when the web first existed, in the early to mi
 
 ## How do you create responsive images?
 
-In this section, we'll look at the two problems illustrated above and show how to solve them using HTML's responsive image features. You should note that we will be focusing on {{htmlelement("img")}} elements for this section, as seen in the content area of the example above — the image in the site header is only for decoration, and therefore implemented using CSS background images. [CSS arguably has better tools for responsive design](https://blog.cloudfour.com/responsive-images-101-part-8-css-images/) than HTML, and we'll talk about those in a future CSS module.
+In this section, we'll look at the two problems illustrated above and show how to solve them using HTML's responsive image features. You should note that we will be focusing on {{htmlelement("img")}} elements for this section, as seen in the content area of the example above — the image in the site header is only for decoration, and therefore implemented using CSS background images. [CSS arguably has better tools for responsive design](https://cloudfour.com/thinks/responsive-images-101-part-8-css-images/) than HTML, and we'll talk about those in a future CSS module.
 
 ### Resolution switching: Different sizes
 
@@ -226,7 +226,7 @@ New image formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_ima
 
 ## Active learning: Implementing your own responsive images
 
-For this active learning, we're expecting you to be brave and go it alone ... mostly. We want you to implement your own suitable art directed narrow screen/wide screen shot using `<picture>`, and a resolution switching example that uses `srcset`.
+For this active learning, we're expecting you to be brave and do it alone, mostly. We want you to implement your own suitable art-directed narrow screen/wide screenshot using `<picture>`, and a resolution switching example that uses `srcset`.
 
 1. Write some simple HTML to contain your code (use `not-responsive.html` as a starting point, if you like).
 2. Find a nice wide screen landscape image with some kind of detail contained in it somewhere. Create a web-sized version of it using a graphics editor, then crop it to show a smaller part that zooms in on the detail, and create a second image (about 480px wide is good for this).
@@ -245,7 +245,7 @@ This also draws to a close the entire [Multimedia and embedding](/en-US/docs/Lea
 
 ## See also
 
-- [Jason Grigsby's excellent introduction to responsive images](https://blog.cloudfour.com/responsive-images-101-definitions)
+- [Jason Grigsby's excellent introduction to responsive images](https://cloudfour.com/thinks/responsive-images-101-definitions/)
 - [Responsive Images: If you're just changing resolutions, use srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — includes more explanation of how the browser works out which image to use
 - {{htmlelement("img")}}
 - {{htmlelement("picture")}}

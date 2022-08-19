@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteFramebuffer()
 slug: Web/API/WebGLRenderingContext/deleteFramebuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,23 +25,23 @@ deleteFramebuffer(framebuffer)
 
 ### Parameters
 
-- framebuffer
+- `framebuffer`
   - : A {{domxref("WebGLFramebuffer")}} object to delete.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ### Deleting a frame buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var framebuffer = gl.createFramebuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const framebuffer = gl.createFramebuffer();
 
-// ...
+// …
 
 gl.deleteFramebuffer(framebuffer);
 ```

@@ -1,6 +1,7 @@
 ---
 title: Element.ariaAtomic
 slug: Web/API/Element/ariaAtomic
+page-type: web-api-instance-property
 tags:
   - API
   - Property

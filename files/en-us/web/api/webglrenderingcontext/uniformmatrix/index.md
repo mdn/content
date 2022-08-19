@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.uniformMatrix[234]fv()
 slug: Web/API/WebGLRenderingContext/uniformMatrix
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -51,7 +52,7 @@ uniformMatrix4fv(location, transpose, value)
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

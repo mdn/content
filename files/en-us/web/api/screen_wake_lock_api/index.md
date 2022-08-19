@@ -1,6 +1,7 @@
 ---
 title: Screen Wake Lock API
 slug: Web/API/Screen_Wake_Lock_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
@@ -9,6 +10,7 @@ tags:
   - Wake Lock
   - WakeLock
   - screen
+browser-compat: api.WakeLock
 ---
 {{DefaultAPISidebar("Screen Wake Lock API")}}
 
@@ -122,13 +124,11 @@ Access to Screen Wake Lock API is controlled by [Feature Policy](/en-US/docs/Web
 
 ## Specifications
 
-| Specification                                                   |
-| --------------------------------------------------------------- |
-| [Screen Wake Lock API](https://w3c.github.io/screen-wake-lock/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.WakeLock")}}
+{{Compat}}
 
 ## See also
 

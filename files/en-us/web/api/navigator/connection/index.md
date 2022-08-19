@@ -1,6 +1,7 @@
 ---
 title: Navigator.connection
 slug: Web/API/Navigator/connection
+page-type: web-api-instance-property
 tags:
   - API
   - Connection
@@ -31,4 +32,4 @@ A {{domxref("NetworkInformation")}} object.
 
 ## See also
 
-- [Online and offline events](/en-US/docs/Web/API/Navigator/Online_and_offline_events)
+- [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)

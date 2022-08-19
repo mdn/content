@@ -1,6 +1,7 @@
 ---
 title: VRDisplayCapabilities
 slug: Web/API/VRDisplayCapabilities
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -22,36 +23,36 @@ This interface is accessible through the {{domxref("VRDisplay.capabilities")}} p
 
 ## Properties
 
-- {{domxref("VRDisplayCapabilities.canPresent")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.canPresent")}} {{deprecated_inline}} {{readonlyInline}}
   - : Returns a boolean value stating whether the VR display is capable of presenting content (e.g. through an HMD).
-- {{domxref("VRDisplayCapabilities.hasExternalDisplay")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.hasExternalDisplay")}} {{deprecated_inline}} {{readonlyInline}}
   - : Returns a boolean value stating whether the VR display is separate from the device's primary display.
-- {{domxref("VRDisplayCapabilities.hasOrientation")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.hasOrientation")}} {{deprecated_inline}} {{readonlyInline}}
   - : Returns a boolean value stating whether the VR display can track and return orientation information.
-- {{domxref("VRDisplayCapabilities.hasPosition")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.hasPosition")}} {{deprecated_inline}} {{readonlyInline}}
   - : Returns a boolean value stating whether the VR display can track and return position information.
-- {{domxref("VRDisplayCapabilities.maxLayers")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.maxLayers")}} {{deprecated_inline}} {{readonlyInline}}
   - : Returns a number indicating the maximum number of {{domxref("VRLayerInit")}}s that the VR display can present at once (e.g. the maximum length of the array that {{domxref("VRDisplay.requestPresent()")}} can accept.)
 
 ## Examples
 
 ```js
 function reportDisplays() {
-  navigator.getVRDisplays().then(function(displays) {
-    for(var i = 0; i < displays.length; i++) {
-      var cap = displays[i].capabilities;
+  navigator.getVRDisplays().then((displays) => {
+    displays.forEach((display, i) => {
+      const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
-      var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>Display ' + (i+1) + '</strong>'
-                   + '<br>VR Display ID: ' + displays[i].displayId
-                   + '<br>VR Display Name: ' + displays[i].displayName
-                   + '<br>Display can present content: ' + cap.canPresent
-                   + '<br>Display is separate from the computer\'s main display: ' + cap.hasExternalDisplay
-                   + '<br>Display can return position info: ' + cap.hasPosition
-                   + '<br>Display can return orientation info: ' + cap.hasOrientation
-                   + '<br>Display max layers: ' + cap.maxLayers;
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `<strong>Display ${i + 1}</strong><br>` +
+        `VR Display ID: ${display.displayId}<br>` +
+        `VR Display Name: ${display.displayName}<br>` +
+        `Display can present content: ${cap.canPresent}<br>` +
+        `Display is separate from the computer's main display: ${cap.hasExternalDisplay}<br>` +
+        `Display can return position info: ${cap.hasPosition}<br>` +
+        `Display can return orientation info: ${cap.hasOrientation}<br>` +
+        `Display max layers: ${cap.maxLayers}`;
       list.appendChild(listItem);
-    }
+    });
   });
 }
 ```

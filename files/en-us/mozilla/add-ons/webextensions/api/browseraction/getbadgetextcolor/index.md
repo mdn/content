@@ -36,9 +36,9 @@ browser.browserAction.getBadgeTextColor(
 
   - : `object`.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab to get the badge text color from.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Specifies the window from which to get the badge text color.
 
 <!---->

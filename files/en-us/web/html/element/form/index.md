@@ -103,7 +103,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > **Note:** **This attribute was removed in HTML5 and should not be used.** Instead, use the {{htmlattrxref("accept", "input")}} attribute on `<input type=file>` elements.
 
 - {{htmlattrdef("accept-charset")}}
-  - : Space-separated [character encodings](/en-US/docs/Web/Guide/Localizations_and_character_encodings) the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
+  - : Space-separated {{Glossary("character encoding", "character encodings")}} the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
     (In previous versions of HTML, character encodings could also be delimited by commas.)
 - {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
 
@@ -144,7 +144,8 @@ The following attributes control behavior during form submission.
 
 - {{htmlattrdef("method")}}
 
-  - : The [HTTP](/en-US/docs/Web/HTTP) method to submit the form with. Possible (case insensitive) values:
+  - : The [HTTP](/en-US/docs/Web/HTTP) method to submit the form with.
+    The only allowed methods/values are (case insensitive):
 
     - `post`: The [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data sent as the [request body](/en-US/docs/Web/API/Request/body).
     - `get`: The [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side-effects](/en-US/docs/Glossary/Idempotent).
@@ -156,7 +157,7 @@ The following attributes control behavior during form submission.
   - : This Boolean attribute indicates that the form shouldn't be validated when submitted. If this attribute is not set (and therefore the form **_is_** validated), it can be overridden by a {{htmlattrxref("formnovalidate", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element belonging to the form.
 - {{htmlattrdef("target")}}
 
-  - : Indicates where to display the response after submitting the form. In HTML 4, this is the name/keyword for a frame. In HTML5, it is a name/keyword for a _browsing context_ (for example, tab, window, or iframe). The following keywords have special meanings:
+  - : Indicates where to display the response after submitting the form. It is a name/keyword for a _browsing context_ (for example, tab, window, or iframe). The following keywords have special meanings:
 
     - `_self` (default): Load into the same browsing context as the current one.
     - `_blank`: Load into a new unnamed browsing context.

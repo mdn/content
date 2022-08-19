@@ -1,6 +1,7 @@
 ---
 title: Document.referrer
 slug: Web/API/Document/referrer
+page-type: web-api-instance-property
 tags:
   - API
   - Document

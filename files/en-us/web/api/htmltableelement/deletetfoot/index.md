@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.deleteTFoot()
 slug: Web/API/HTMLTableElement/deleteTFoot
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

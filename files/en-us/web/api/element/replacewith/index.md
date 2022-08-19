@@ -1,6 +1,7 @@
 ---
 title: Element.replaceWith()
 slug: Web/API/Element/replaceWith
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -21,7 +22,7 @@ objects are inserted as equivalent {{domxref("Text")}} nodes.
 ```js
 replaceWith(param1)
 replaceWith(param1, param2)
-replaceWith(param1, param2, /* ... ,*/ paramN)
+replaceWith(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

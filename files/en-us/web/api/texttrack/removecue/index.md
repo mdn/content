@@ -1,6 +1,7 @@
 ---
 title: TextTrack.removeCue()
 slug: Web/API/TextTrack/removeCue
+page-type: web-api-instance-method
 tags:
   - API
   - Method

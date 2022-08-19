@@ -1,6 +1,7 @@
 ---
 title: 'SVGAnimationElement: beginEvent event'
 slug: Web/API/SVGAnimationElement/beginEvent_event
+page-type: web-api-event
 tags:
   - API
   - Reference
@@ -23,9 +24,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beginEvent', event => { });
+addEventListener('beginEvent', (event) => { });
 
-onbegin = event => { };
+onbegin = (event) => { };
 ```
 
 ## Event type
@@ -37,9 +38,9 @@ An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 ## Event properties
 
 - {{domxref("TimeEvent.detail")}} {{ReadOnlyInline}}
-  - : Is a `long` that specifies some detail information about the Event, depending on the type of the event. For this event type, indicates the repeat number for the animation.
+  - : A `long` that specifies some detail information about the Event, depending on the type of the event. For this event type, indicates the repeat number for the animation.
 - {{domxref("TimeEvent.view")}} {{ReadOnlyInline}}
-  - : Is a {{domxref("WindowProxy")}} that identifies the Window from which the event was generated.
+  - : A {{domxref("WindowProxy")}} that identifies the Window from which the event was generated.
 
 ## Examples
 
@@ -85,8 +86,8 @@ animateElem.addEventListener('beginEvent', () => {
 animateElem.addEventListener('repeatEvent', (e) => {
   let listItem = document.createElement('li');
   let msg = 'repeatEvent fired';
-  if(e.detail) {
-    msg += '; repeat number: ' + e.detail;
+  if (e.detail) {
+    msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;
   list.appendChild(listItem);

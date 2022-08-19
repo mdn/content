@@ -1,6 +1,7 @@
 ---
 title: MediaSource.clearLiveSeekableRange()
 slug: Web/API/MediaSource/clearLiveSeekableRange
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -14,7 +15,7 @@ tags:
   - clearLiveSeekableRange()
 browser-compat: api.MediaSource.clearLiveSeekableRange
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`clearLiveSeekableRange()`** method of the
 {{domxref("MediaSource")}} interface clears a seekable range previously set with a call

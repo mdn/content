@@ -1,5 +1,5 @@
 ---
-title: 'aria-rowindex'
+title: aria-rowindex
 slug: Web/Accessibility/ARIA/Attributes/aria-rowindex
 tags:
   - Accessibility
@@ -8,8 +8,8 @@ tags:
   - ARIA property
   - aria-rowindex
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-rowindex
 ---
-
 The `aria-rowindex` attribute defines an element's position with respect to the total number of rows within a table, grid, or treegrid.
 
 ## Description
@@ -22,11 +22,11 @@ Included on the {{HTMLElement('tr')}} element or on an element with a role of [`
 
 The value for `aria-rowindex` is an integer greater than or equal to `1`, greater than the `aria-rowindex` value of any previous rows, and less than or equal to the number of rows in the full table.
 
-If all of the rows are loaded and in the DOM, you don't need to include `aria-rowindex` as browsers automatically calculate the index of each row. However, when only a subset of the rows are present in the DOM, `aria-rowindex` is needed to indicate each row's position with respect to the full table. If only a subset of rows are loaded, you also need to include [`aria-rowcount`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowcount) on the table ancestor, even if you don't know the total rowcount.
+If all of the rows are loaded and in the DOM, you don't need to include `aria-rowindex` as browsers automatically calculate the index of each row. However, when only a subset of the rows are present in the DOM, `aria-rowindex` is needed to indicate each row's position with respect to the full table. If only a subset of rows are loaded, you also need to include [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) on the table ancestor, even if you don't know the total rowcount.
 
 If the table with only a subset of rows has a cell that spans more than one row, both the row and cell need to have the `aria-rowspan`  set. If a cell spans more than one row－when a cell role includes the `aria-rowspan` attribute or HTML cell has a `rowspan` attribute set to a value greater than 1－include the row's `aria-rowindex` value on the spanning cell in addition to the appropriate row spanning attribute. The value should be the row index of the row where the span starts.
 
-> **Note**: The `aria-rowindex` must be added to each row, but is optional on the cells, except for cells that span rows: the `aria-rowindex` attribute is required on all spanning cells.
+> **Note:** The `aria-rowindex` must be added to each row, but is optional on the cells, except for cells that span rows: the `aria-rowindex` attribute is required on all spanning cells.
 
 ## Examples
 
@@ -71,7 +71,7 @@ Note both  `aria-rowspan` and `aria-rowindex` are present on the Goalkeeper cell
 ## Values
 
 - `<integer>`
-  - : An integer greater than or equal to 1, greater than the `aria-rowindex` of the previous row, if any, and less than or equal to the value of [`aria-rowcount`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowcount).
+  - : An integer greater than or equal to 1, greater than the `aria-rowindex` of the previous row, if any, and less than or equal to the value of [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount).
 
 ## ARIAMixin API
 
@@ -95,16 +95,14 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------ |
-| {{SpecName("ARIA","#aria-rowindex","ARIA: aria-rowindex Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 
-- [`aria-rowindextext`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowindextext)
-- [`aria-rowcount`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowcount)
-- [`aria-rowspan`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowspan)
-- [`aria-colindex`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-colindex)
+- [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)
+- [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
+- [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
+- [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 - The [`rowspan`](/en-US/docs/Web/HTML/Element/td#attr-rowspan) attribute on {{HTMLElement('td')}}
 
 <section id="Quick_links">

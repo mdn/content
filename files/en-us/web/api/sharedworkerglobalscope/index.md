@@ -1,6 +1,7 @@
 ---
 title: SharedWorkerGlobalScope
 slug: Web/API/SharedWorkerGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -86,4 +87,4 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 - {{domxref("SharedWorker")}}
 - {{domxref("WorkerGlobalScope")}}
 - [Using Web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [Functions available to workers](/en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers)
+- [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)

@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.getAttributeType()
 slug: Web/API/TrustedTypePolicyFactory/getAttributeType
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,17 +25,17 @@ getAttributeType(tagName, attribute, elementNS, attrNS)
 ### Parameters
 
 - `tagName`
-  - : A {{domxref("DOMString","string")}} containing the name of an HTML tag.
+  - : A string containing the name of an HTML tag.
 - `attribute`
-  - : A {{domxref("DOMString","string")}} containing an attribute.
-- `elementNS`{{optional_inline}}
-  - : A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to the HTML namespace.
-- `attrNS`{{optional_inline}}
-  - : A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to null.
+  - : A string containing an attribute.
+- `elementNS` {{optional_inline}}
+  - : A string containing a namespace, if empty defaults to the HTML namespace.
+- `attrNS` {{optional_inline}}
+  - : A string containing a namespace, if empty defaults to null.
 
 ### Return value
 
-A {{domxref("DOMString","string")}} with one of:
+A string with one of:
 
 - `"TrustedHTML"`
 - `"TrustedScript"`

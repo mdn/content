@@ -48,7 +48,7 @@ function onRemoved() {
 }
 
 function onError() {
-  console.log("error removing item:" + browser.runtime.lastError);
+  console.log("error removing item:", browser.runtime.lastError);
 }
 
 browser.menus.create({
@@ -57,8 +57,8 @@ browser.menus.create({
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "remove-me") {
+browser.menus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "remove-me") {
     let removing = browser.menus.remove(info.menuItemId);
     removing.then(onRemoved, onError);
   }
@@ -71,7 +71,7 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#method-remove) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#method-remove) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

@@ -1,6 +1,7 @@
 ---
 title: XRRenderState
 slug: Web/API/XRRenderState
+page-type: web-api-interface
 tags:
   - API
   - AR

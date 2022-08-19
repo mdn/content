@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.clearBuffer[fiuv]()
 slug: Web/API/WebGL2RenderingContext/clearBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -56,7 +57,7 @@ clearBufferfi(buffer, drawbuffer, depth, stencil)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

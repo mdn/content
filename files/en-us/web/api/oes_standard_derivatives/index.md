@@ -1,6 +1,7 @@
 ---
 title: OES_standard_derivatives
 slug: Web/API/OES_standard_derivatives
+page-type: webgl-extension
 tags:
   - API
   - Reference

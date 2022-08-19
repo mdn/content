@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.enable()
 slug: Web/API/WebGLRenderingContext/enable
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -48,7 +49,7 @@ enable(cap)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

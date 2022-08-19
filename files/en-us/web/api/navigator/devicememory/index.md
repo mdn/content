@@ -1,6 +1,7 @@
 ---
 title: Navigator.deviceMemory
 slug: Web/API/Navigator/deviceMemory
+page-type: web-api-instance-property
 tags:
   - API
   - Device Memory API

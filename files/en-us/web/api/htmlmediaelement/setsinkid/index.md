@@ -1,10 +1,10 @@
 ---
 title: HTMLMediaElement.setSinkId()
 slug: Web/API/HTMLMediaElement/setSinkId
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - HTMLMediaElement
   - Media
   - Method
@@ -12,7 +12,7 @@ tags:
   - setSinkId
 browser-compat: api.HTMLMediaElement.setSinkId
 ---
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.setSinkId()`** method sets the ID of
 the audio device to use for output and returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -26,7 +26,7 @@ setSinkId(sinkId)
 
 ### Parameters
 
-- sinkId
+- `sinkId`
   - : The {{domxref("MediaDeviceInfo.deviceId")}} of the audio output device.
 
 ### Return value
@@ -46,10 +46,10 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 ```js
 const devices = await navigator.mediaDevices.enumerateDevices();
-const audioDevices = devices.filter(device => device.kind === 'audiooutput');
+const audioDevice = devices.find((device) => device.kind === 'audiooutput');
 const audio = document.createElement('audio');
-await audio.setSinkId(audioDevices[0].deviceId);
-console.log('Audio is being played on ' + audio.sinkId);
+await audio.setSinkId(audioDevice.deviceId);
+console.log(`Audio is being played on ${audio.sinkId}`);
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: BarProp
 slug: Web/API/BarProp
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -29,7 +30,7 @@ The `BarProp` interface is not accessed directly, but via one of these elements.
 
 ## Properties
 
-- {{domxref("BarProp.visible")}}{{ReadOnlyInline}}
+- {{domxref("BarProp.visible")}} {{ReadOnlyInline}}
   - : A {{jsxref("Boolean")}}, which is true if the bar represented by the used interface element is visible.
 
 ## Examples

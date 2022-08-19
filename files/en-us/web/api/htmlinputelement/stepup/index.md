@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.stepUp()
 slug: Web/API/HTMLInputElement/stepUp
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -125,8 +126,8 @@ stepUp(stepIncrement)
 
 ### Parameters
 
-- _`stepIncrement`_ {{optional_inline}}
-  - : A numeric value.  If no parameter is passed, `stepIncrement` defaults to `1`.
+- `stepIncrement` {{optional_inline}}
+  - : A numeric value. If no parameter is passed, `stepIncrement` defaults to `1`.
 
 ### Return value
 
@@ -157,8 +158,8 @@ Click the button in this example to increment the {{HTMLElement("input/number",
 
 ```js
 /* make the button call the function */
-let button = document.getElementById('theButton')
-button.addEventListener('click', function() {
+const button = document.getElementById('theButton');
+button.addEventListener('click', () => {
   steponup()
 })
 

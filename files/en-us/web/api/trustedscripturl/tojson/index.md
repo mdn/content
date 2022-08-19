@@ -1,6 +1,7 @@
 ---
 title: TrustedScriptURL.toJSON()
 slug: Web/API/TrustedScriptURL/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,7 +26,7 @@ None.
 
 ### Return value
 
-A {{domxref("DOMString","string")}} containing a JSON representation of the stored data.
+A string containing a JSON representation of the stored data.
 
 ## Examples
 

@@ -1,10 +1,10 @@
 ---
 title: Client
 slug: Web/API/Client
+page-type: web-api-interface
 tags:
   - API
   - Client
-  - Experimental
   - Interface
   - Reference
   - Service Workers

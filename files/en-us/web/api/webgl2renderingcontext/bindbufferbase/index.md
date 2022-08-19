@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.bindBufferBase()
 slug: Web/API/WebGL2RenderingContext/bindBufferBase
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -40,7 +41,7 @@ bindBufferBase(target, index, buffer)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

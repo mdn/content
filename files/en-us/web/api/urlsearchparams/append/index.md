@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.append()
 slug: Web/API/URLSearchParams/append
+page-type: web-api-instance-method
 tags:
   - API
   - Append
@@ -27,14 +28,14 @@ append(name, value)
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to append.
-- value
+- `value`
   - : The value of the parameter to append.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -59,5 +60,4 @@ params.append('foo', 4);
 
 - Other URL-related interfaces: {{domxref("URL")}},
   {{domxref("HTMLHyperlinkElementUtils")}}.
-- [Google
-  Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)
+- [Google Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)

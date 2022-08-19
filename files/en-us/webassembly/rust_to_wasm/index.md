@@ -192,7 +192,7 @@ This does a number of things (and they take a lot of time, especially the first 
 
 1. Compiles your Rust code to WebAssembly.
 2. Runs `wasm-bindgen` on that WebAssembly, generating a JavaScript file that wraps up that WebAssembly file into a module the browser can understand.
-3. Creates a `pkg` directory and move that JavaScript file and your WebAssembly code into it.
+3. Creates a `pkg` directory and moves that JavaScript file and your WebAssembly code into it.
 4. Reads your `Cargo.toml` and produces an equivalent `package.json`.
 5. Copies your `README.md` (if you have one) into the package.
 
@@ -210,7 +210,7 @@ Let's start by creating a file named `index.html` in the root of the project, an
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>hello-wasm example</title>
@@ -309,7 +309,7 @@ Next, create a file named `index.js`, and give it these contents:
 
 ```js
 import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
-  js.greet("WebAssembly with NPM");
+  js.greet("WebAssembly with npm");
 });
 ```
 
@@ -319,7 +319,7 @@ Finally, we need to modify the HTML file; open the `index.html` file and replace
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>hello-wasm example</title>
@@ -337,7 +337,7 @@ $ npm install
 $ npm run serve
 ```
 
-This starts a web server. Load `http://localhost:8080` and an alert box appears on the screen, with `Hello, WebAssembly with NPM!` in it. We've successfully used the Rust module with npm.
+This starts a web server. Load `http://localhost:8080` and an alert box appears on the screen, with `Hello, WebAssembly with npm!` in it. We've successfully used the Rust module with npm.
 
 ## Conclusion
 

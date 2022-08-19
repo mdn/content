@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.stencilMaskSeparate()
 slug: Web/API/WebGLRenderingContext/stencilMaskSeparate
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,7 +27,7 @@ stencilMaskSeparate(face, mask)
 
 ### Parameters
 
-- face
+- `face`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil writemask
     is updated. The possible values are:
@@ -41,7 +42,7 @@ stencilMaskSeparate(face, mask)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

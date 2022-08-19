@@ -20,6 +20,8 @@ The `@@unscopables` symbol (`Symbol.unscopables`) can be defined on any object t
 
 Setting a property to `true` in an `unscopables` object will make it _unscopable_ and therefore it won't appear in lexical scope variables. Setting a property to `false` will make it `scopable` and thus it will appear in lexical scope variables.
 
+This protocol is also utilized by DOM APIs, such as [`Element.append()`](/en-US/docs/Web/API/Element/append).
+
 {{js_property_attributes(0,0,0)}}
 
 ## Examples
@@ -29,7 +31,7 @@ Setting a property to `true` in an `unscopables` object will make it _unscopable
 The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside `with` environment "keys" would now be the method and not the variable. That's when the `unscopable`s symbol was introduced. A built-in `unscopables` setting is implemented as {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} to prevent that some of the Array methods are being scoped into the `with` statement.
 
 ```js
-var keys = [];
+const keys = [];
 
 with (Array.prototype) {
   keys.push('something');
@@ -45,7 +47,7 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 You can also set `unscopables` for your own objects.
 
 ```js
-var obj = {
+const obj = {
   foo: 1,
   bar: 2
 };
@@ -73,3 +75,4 @@ with (obj) {
 
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
 - [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))
+- [`Element.append()`](/en-US/docs/Web/API/Element/append)

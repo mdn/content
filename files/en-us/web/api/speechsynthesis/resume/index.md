@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.resume()
 slug: Web/API/SpeechSynthesis/resume
+page-type: web-api-instance-method
 tags:
   - API
   - Method

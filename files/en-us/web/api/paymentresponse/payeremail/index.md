@@ -1,9 +1,9 @@
 ---
 title: PaymentResponse.payerEmail
 slug: Web/API/PaymentResponse/payerEmail
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentResponse
@@ -11,6 +11,8 @@ tags:
   - Reference
   - Secure context
   - payerEmail
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentResponse.payerEmail
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}

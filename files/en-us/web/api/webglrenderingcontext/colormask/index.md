@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.colorMask()
 slug: Web/API/WebGLRenderingContext/colorMask
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -37,7 +38,7 @@ colorMask(red, green, blue, alpha)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

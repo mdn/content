@@ -8,6 +8,9 @@ tags:
   - Guide
   - card
   - css layout
+browser-compat:
+  - css.properties.grid-template-columns
+  - css.properties.grid-template-rows
 ---
 {{CSSRef}}
 
@@ -62,15 +65,7 @@ Depending on the content of your card there may be things you could, or should d
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### grid-template-columns
-
-{{Compat("css.properties.grid-template-columns")}}
-
-### grid-template-rows
-
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 ## See also
 

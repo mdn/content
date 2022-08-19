@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.responseXML
 slug: Web/API/XMLHttpRequest/responseXML
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API
@@ -32,7 +33,7 @@ Usually, the response is parsed as "`text/xml`". If the
 {{domxref("XMLHttpRequest.responseType", "responseType")}} is set to
 "`document`" and the request was made asynchronously, instead the response is
 parsed as "`text/html`". `responseXML` is `null` for
-any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 
 If the server doesn't specify the {{HTTPHeader("Content-Type")}} as
 "`text/xml`" or "`application/xml`", you can use
@@ -55,7 +56,7 @@ data is not XML/HTML.
 ## Examples
 
 ```js
-var xhr = new XMLHttpRequest;
+const xhr = new XMLHttpRequest;
 xhr.open('GET', '/server');
 
 // If specified, responseType must be empty string or "document"
@@ -64,7 +65,7 @@ xhr.responseType = 'document';
 // Force the response to be parsed as XML
 xhr.overrideMimeType('text/xml');
 
-xhr.onload = function () {
+xhr.onload = () => {
   if (xhr.readyState === xhr.DONE && xhr.status === 200) {
     console.log(xhr.response, xhr.responseXML);
   }
@@ -86,8 +87,7 @@ xhr.send();
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLHttpRequest.response")}}
 - {{domxref("XMLHttpRequest.responseType")}}
-- [Parsing and serializing
-  XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
 - Parsing XML into a DOM tree: {{domxref("DOMParser")}}
 - Serializing a DOM tree into XML: {{domxref("XMLSerializer")}} (specifically, the
   {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method)

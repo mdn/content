@@ -52,9 +52,8 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  let detecting = browser.tabs.detectLanguage();
-  detecting.then(onLanguageDetected, onError);
+browser.browserAction.onClicked.addListener(() => {
+  browser.tabs.detectLanguage().then(onLanguageDetected, onError);
 });
 ```
 
@@ -70,16 +69,15 @@ function onError(error) {
 }
 
 function detectLanguages(tabs) {
-  for (tab of tabs) {
-    let onFulfilled = onLanguageDetected.bind(null, tab.url);
-    let detecting = browser.tabs.detectLanguage(tab.id);
-    detecting.then(onFulfilled, onError);
+  for (const tab of tabs) {
+    browser.tabs
+      .detectLanguage(tab.id)
+      .then((lang) => onLanguageDetected(tab.url, lang), onError);
   }
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  let querying = browser.tabs.query({});
-  querying.then(detectLanguages, onError);
+browser.browserAction.onClicked.addListener(() => {
+  browser.tabs.query({}).then(detectLanguages, onError);
 });
 ```
 
@@ -89,7 +87,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-detectLanguage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-detectLanguage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

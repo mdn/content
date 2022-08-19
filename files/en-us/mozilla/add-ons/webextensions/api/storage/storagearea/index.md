@@ -34,13 +34,18 @@ Values of this type are objects.
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Removes all items from the storage area.
 
+## Events
+
+- {{WebExtAPIRef("storage.StorageArea.onChanged")}}
+  - : Fires when one or more items in the storage area change.
+
 ## Browser compatibility
 
 {{Compat}}
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#type-StorageArea) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#type-StorageArea) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

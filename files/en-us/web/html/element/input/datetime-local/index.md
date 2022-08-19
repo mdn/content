@@ -14,9 +14,8 @@ tags:
   - Reference
   - Time
   - datetime-local
-browser-compat: html.elements.input.input-datetime-local
+browser-compat: html.elements.input.type_datetime-local
 ---
-
 {{HTMLRef("Input_types")}}
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.
@@ -36,7 +35,7 @@ Some browsers may resort to a text-only input element that validates that the re
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a date and time (in the
+        A string representing a date and time (in the
         local time zone), or empty.
       </td>
     </tr>
@@ -79,7 +78,7 @@ Some browsers may resort to a text-only input element that validates that the re
 
 ## Value
 
-A {{domxref("DOMString")}} representing the value of the date entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Local date and time strings")}}.
+A string representing the value of the date entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Local date and time strings")}}.
 
 You can set a default value for the input by including a date and time inside the {{htmlattrxref("value", "input")}} attribute, like so:
 
@@ -97,11 +96,11 @@ One thing to note is that the displayed date and time formats differ from the ac
 You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} `value` property, for example:
 
 ```js
-var dateControl = document.querySelector('input[type="datetime-local"]');
+const dateControl = document.querySelector('input[type="datetime-local"]');
 dateControl.value = '2017-06-01T08:30';
 ```
 
-There are several methods provided by JavaScript's {{jsxref("Date")}} that can be used to convert numeric date information into a properly-formatted string, or you can do it manually. For example, the {{jsxref("Date.toISOString()")}} method can be used for this purpose.
+There are several methods provided by JavaScript's {{jsxref("Date")}} that can be used to convert numeric date information into a properly-formatted string. For example, the {{jsxref("Date.toISOString()")}} method returns the date/time in UTC with the suffix "`Z`" denoting that timezone; removing the "`Z`" would provide a value in the format expected by a `datetime-local` input.
 
 ## Additional attributes
 
@@ -176,7 +175,7 @@ The result here is that:
 
 ### Setting timezones
 
-One thing the `datetime-local` input type doesn't provide is a way to set the time zone and/or locale of the date/time control. This was available in the [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
+One thing the `datetime-local` input type doesn't provide is a way to set the time zone and/or locale of the date/time control. This was available in the [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime-local) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
 
 For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden) input type. For example:
 
@@ -237,18 +236,18 @@ label {
   width: 300px;
 }
 
-input:invalid+span:after {
-    content: '✖';
-    padding-left: 5px;
+input:invalid + span::after {
+  content: "✖";
+  padding-left: 5px;
 }
 
-input:valid+span:after {
-    content: '✓';
-    padding-left: 5px;
+input:valid + span::after {
+  content: "✓";
+  padding-left: 5px;
 }
 ```
 
-> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
+> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
 ## Handling browser support
 
@@ -300,7 +299,7 @@ input:invalid + span {
   position: relative;
 }
 
-input:invalid + span:after {
+input:invalid + span::after {
   content: '✖';
   position: absolute;
   right: -18px;
@@ -310,7 +309,7 @@ input:valid + span {
   position: relative;
 }
 
-input:valid + span:after {
+input:valid + span::after {
   content: '✓';
   position: absolute;
   right: -18px;
@@ -340,8 +339,8 @@ It's that simple. Just prepare your code for any number of digits. Do not only p
 
 ```js
 function setValue(element, date) {
-    var isoString = date.toISOString()
-    element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
+  const isoString = date.toISOString()
+  element.value = isoString.substring(0, isoString.indexOf("T") + 6);
 }
 ```
 
@@ -425,13 +424,13 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
   content: '✖';
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
@@ -441,23 +440,23 @@ input:valid+span:after {
 The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports `<input type="datetime-local">`, we create a new {{htmlelement("input")}} element, try setting its `type` to `datetime-local`, then immediately check what its type is set to. Browsers that don't support `datetime-local` return `text`, since that's what `datetime-local` falls back to. If `<input type="datetime-local">` is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}) instead.
 
 ```js
-// define variables
-var nativePicker = document.querySelector('.nativeDateTimePicker');
-var fallbackPicker = document.querySelector('.fallbackDateTimePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+// Obtain UI widgets
+const nativePicker = document.querySelector('.nativeDateTimePicker');
+const fallbackPicker = document.querySelector('.fallbackDateTimePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var yearSelect = document.querySelector('#year');
-var monthSelect = document.querySelector('#month');
-var daySelect = document.querySelector('#day');
-var hourSelect = document.querySelector('#hour');
-var minuteSelect = document.querySelector('#minute');
+const yearSelect = document.querySelector('#year');
+const monthSelect = document.querySelector('#month');
+const daySelect = document.querySelector('#day');
+const hourSelect = document.querySelector('#hour');
+const minuteSelect = document.querySelector('#minute');
 
 // hide fallback initially
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
 // test whether a new datetime-local input falls back to a text input or not
-var test = document.createElement('input');
+const test = document.createElement('input');
 
 try {
   test.type = 'datetime-local';
@@ -465,8 +464,8 @@ try {
   console.log(e.description);
 }
 
-// if it does, run the code inside the if() {} block
-if(test.type === 'text') {
+// if it does, run the code inside the if () {} block
+if (test.type === 'text') {
   // hide the native picker and show the fallback
   nativePicker.style.display = 'none';
   fallbackPicker.style.display = 'block';
@@ -483,28 +482,28 @@ if(test.type === 'text') {
 function populateDays(month) {
   // delete the current set of <option> elements out of the
   // day <select>, ready for the next set to be injected
-  while(daySelect.firstChild){
+  while (daySelect.firstChild) {
     daySelect.removeChild(daySelect.firstChild);
   }
 
   // Create variable to hold new number of days to inject
-  var dayNum;
+  let dayNum;
 
   // 31 or 30 days?
-  if(month === 'January' || month === 'March' || month === 'May' || month === 'July' || month === 'August' || month === 'October' || month === 'December') {
+  if (['January', 'March', 'May', 'July', 'August', 'October', 'December'].includes(month)) {
     dayNum = 31;
-  } else if(month === 'April' || month === 'June' || month === 'September' || month === 'November') {
+  } else if (['April', 'June', 'September', 'November'].includes(month)) {
     dayNum = 30;
   } else {
   // If month is February, calculate whether it is a leap year or not
-    var year = yearSelect.value;
-    var isLeap = new Date(year, 1, 29).getMonth() == 1;
-    isLeap ? dayNum = 29 : dayNum = 28;
+    const year = yearSelect.value;
+    const isLeap = new Date(year, 1, 29).getMonth() === 1;
+    dayNum = isLeap ? 29 : 28;
   }
 
   // inject the right number of new <option> elements into the day <select>
-  for(i = 1; i <= dayNum; i++) {
-    var option = document.createElement('option');
+  for (let i = 1; i <= dayNum; i++) {
+    const option = document.createElement('option');
     option.textContent = i;
     daySelect.appendChild(option);
   }
@@ -512,22 +511,22 @@ function populateDays(month) {
   // if previous day has already been set, set daySelect's value
   // to that day, to avoid the day jumping back to 1 when you
   // change the year
-  if(previousDay) {
+  if (previousDay) {
     daySelect.value = previousDay;
 
     // If the previous day was set to a high number, say 31, and then
     // you chose a month with less total days in it (e.g. February),
     // this part of the code ensures that the highest day available
     // is selected, rather than showing a blank daySelect
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 1;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 2;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 3;
     }
   }
@@ -535,51 +534,51 @@ function populateDays(month) {
 
 function populateYears() {
   // get this year as a number
-  var date = new Date();
-  var year = date.getFullYear();
+  const date = new Date();
+  const year = date.getFullYear();
 
   // Make this year, and the 100 years before it available in the year <select>
-  for(var i = 0; i <= 100; i++) {
-    var option = document.createElement('option');
-    option.textContent = year-i;
+  for (let i = 0; i <= 100; i++) {
+    const option = document.createElement('option');
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }
 
 function populateHours() {
   // populate the hours <select> with the 24 hours of the day
-  for(var i = 0; i <= 23; i++) {
-    var option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 0; i <= 23; i++) {
+    const option = document.createElement('option');
+    option.textContent = (i < 10) ? `0${i}` : i;
     hourSelect.appendChild(option);
   }
 }
 
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
-  for(var i = 0; i <= 59; i++) {
-    var option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 0; i <= 59; i++) {
+    const option = document.createElement('option');
+    option.textContent = (i < 10) ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }
 
 // when the month or year <select> values are changed, rerun populateDays()
 // in case the change affected the number of available days
-yearSelect.onchange = function() {
+yearSelect.onchange = () => {
   populateDays(monthSelect.value);
 }
 
-monthSelect.onchange = function() {
+monthSelect.onchange = () => {
   populateDays(monthSelect.value);
 }
 
 //preserve day selection
-var previousDay;
+let previousDay;
 
 // update what day has been set to previously
 // see end of populateDays() for usage
-daySelect.onchange = function() {
+daySelect.onchange = () => {
   previousDay = daySelect.value;
 }
 ```

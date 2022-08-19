@@ -11,6 +11,9 @@ tags:
   - searchbox
   - listbox
   - NeedsExample
+spec-urls:
+  - https://w3c.github.io/aria/#aria-autocomplete,
+  - https://w3c.github.io/aria-practices/#combobox
 ---
 
 The  `aria-autocomplete` attribute indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role), or [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) and specifies how predictions will be presented if they are made.
@@ -57,10 +60,7 @@ Used in roles:
 
 ## Specifications
 
-| Specification         | Status            |
-| ---------------- | ---------------- |
-| {{SpecName("ARIA","#aria-autocomplete","ARIA: aria-autocomplete Attribute")}}              | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2", "#combobox", "using aria-autocomplete in a combobox")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## See Also
 

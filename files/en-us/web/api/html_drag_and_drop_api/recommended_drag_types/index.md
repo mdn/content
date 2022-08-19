@@ -1,6 +1,7 @@
 ---
 title: Recommended Drag Types
 slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
+page-type: guide
 tags:
   - Guide
   - drag and drop
@@ -30,7 +31,7 @@ Note: In older code, you may find `text/unicode` or the `Text` types. These are 
 Dragged hyperlinks should include data of two types: `text/uri-list`, and `text/plain`. _Both_ types should use the link's URL for their data. For example:
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.setData("text/uri-list", "https://www.mozilla.org");
 dt.setData("text/plain", "https://www.mozilla.org");
 ```
@@ -56,7 +57,7 @@ When retrieving a dropped link, ensure you handle when multiple links are dragge
 > **Warning:** Do not add data with the `URL` type — attempting to do so will set the value of the `text/uri-list` type instead.
 
 ```js
-var url = event.dataTransfer.getData("URL");
+const url = event.dataTransfer.getData("URL");
 ```
 
 You may also see data with the Mozilla-specific type `text/x-moz-url`. If it appears, it should appear before the `text/uri-list` type. It holds the URLs of links followed by their titles, separated by a linebreak. For example:
@@ -70,14 +71,14 @@ Example
 
 ## Dragging HTML and XML
 
-HTML content may use the `text/html` type. The data for this type should be serialized HTML source code. For example, it would be suitable to set its data to the value of the `{{domxref("Element.innerHTML","innerHTML")}}` property of an element.
+HTML content may use the `text/html` type. The data for this type should be serialized HTML source code. For example, it would be suitable to set its data to the value of the {{domxref("Element.innerHTML","innerHTML")}} property of an element.
 
 XML content may use the `text/xml` type, but ensure that the data is well-formed XML.
 
 You may also include a plain text representation of the HTML or XML data using the `text/plain` type. The data should be just the text without any of the source tags or attributes. For instance:
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.setData("text/html", "Hello there, <strong>stranger</strong>");
 dt.setData("text/plain", "Hello there, stranger");
 ```
@@ -109,7 +110,7 @@ function checkDrag(event) {
 }
 
 function doDrop(event) {
-  var file = event.dataTransfer.mozGetDataAt("application/x-moz-file", 0);
+  const file = event.dataTransfer.mozGetDataAt("application/x-moz-file", 0);
   if (file instanceof Components.interfaces.nsIFile) {
     event.currentTarget.appendItem(file.leafName);
   }
@@ -121,7 +122,7 @@ In this example, the event returns false only if the data transfer contains the 
 
 ### Updates to DataTransfer.types
 
-The latest spec dictates that {{domxref("DataTransfer.types")}} should return a frozen array of {{domxref("DOMString")}}s rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).
+The latest spec dictates that {{domxref("DataTransfer.types")}} should return a frozen array of strings rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).
 
 As a result, the [contains](/en-US/docs/Web/API/Node/contains) method no longer works; the [includes](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method should be used instead to check if a specific type of data is provided, using code like the following:
 
@@ -135,7 +136,7 @@ You could use feature detection to determine which method is supported on `types
 
 ## Dragging Images
 
-Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URLs. The data should be the URL of the image, or a [`data:` URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) if the image is not stored on a web site or disk.
+Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URLs. The data should be the URL of the image, or a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) if the image is not stored on a web site or disk.
 
 As with links, the data for the `text/plain` type should also contain the URL. However, a `data:` URL is not usually useful in a text context, so you may wish to exclude the `text/plain` data in this situation.
 
@@ -146,7 +147,7 @@ You should also include the `application/x-moz-file` type if the image is locate
 It is important to set the data in the right order, from most-specific to least-specific. The standard image type, such as `image/jpeg`, should come first, followed by the `application/x-moz-file` type. Next, you should set the `text/uri-list` data, and finally the `text/plain` data. For example:
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.mozSetDataAt("image/png", stream, 0);
 dt.mozSetDataAt("application/x-moz-file", file, 0);
 dt.setData("text/uri-list", imageurl);
@@ -182,39 +183,39 @@ currentEvent.dataTransfer.mozSetDataAt('application/x-moz-file-promise',
 function dataProvider(){}
 
 dataProvider.prototype = {
-  QueryInterface : function(iid) {
+  QueryInterface(iid) {
     if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
                   || iid.equals(Components.interfaces.nsISupports))
       return this;
     throw Components.results.NS_NOINTERFACE;
   },
-  getFlavorData : function(aTransferable, aFlavor, aData, aDataLen) {
-    if (aFlavor == 'application/x-moz-file-promise') {
+  getFlavorData(aTransferable, aFlavor, aData, aDataLen) {
+    if (aFlavor === 'application/x-moz-file-promise') {
 
-       var urlPrimitive = {};
-       var dataSize = {};
+       const urlPrimitive = {};
+       const dataSize = {};
 
        aTransferable.getTransferData('application/x-moz-file-promise-url', urlPrimitive, dataSize);
-       var url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
-       console.log("URL file original is = " + url);
+       const url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
+       console.log(`URL file original is = ${url}`);
 
-       var namePrimitive = {};
+       const namePrimitive = {};
        aTransferable.getTransferData('application/x-moz-file-promise-dest-filename', namePrimitive, dataSize);
-       var name = namePrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
+       const name = namePrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
 
-       console.log("target filename is = " + name);
+       console.log(`target filename is = ${name}`);
 
-       var dirPrimitive = {};
+       const dirPrimitive = {};
        aTransferable.getTransferData('application/x-moz-file-promise-dir', dirPrimitive, dataSize);
-       var dir = dirPrimitive.value.QueryInterface(Components.interfaces.nsILocalFile);
+       const dir = dirPrimitive.value.QueryInterface(Components.interfaces.nsILocalFile);
 
-       console.log("target folder is = " + dir.path);
+       console.log(`target folder is = ${dir.path}`);
 
-       var file = Cc['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
+       const file = Cc['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
        file.initWithPath(dir.path);
        file.appendRelativePath(name);
 
-       console.log("output final path is =" + file.path);
+       console.log(`output final path is = ${file.path}`);
 
        // now you can write or copy the file yourself…
     }

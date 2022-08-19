@@ -1,6 +1,7 @@
 ---
 title: Gamepad.timestamp
 slug: Web/API/Gamepad/timestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -20,7 +21,7 @@ representing the last time the data for this gamepad was updated.
 The idea behind this is to allow developers to determine if the `axes` and
 `button` data have been updated from the hardware. The value must be
 relative to the `navigationStart` attribute of the
-`{{domxref("PerformanceTiming")}}` interface. Values are monotonically
+{{domxref("PerformanceTiming")}} interface. Values are monotonically
 increasing, meaning that they can be compared to determine the ordering of updates, as
 newer values will always be greater than or equal to older values.
 
@@ -33,7 +34,7 @@ A {{domxref("DOMHighResTimeStamp")}} object.
 ## Examples
 
 ```js
-var gp = navigator.getGamepads()[0];
+const gp = navigator.getGamepads()[0];
 console.log(gp.timestamp);
 ```
 

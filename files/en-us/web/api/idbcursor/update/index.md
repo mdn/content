@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.update()
 slug: Web/API/IDBCursor/update
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -34,7 +35,7 @@ update(value)
 
 ### Parameters
 
-- value
+- `value`
   - : The new value to be stored at the current position.
 
 ### Return value
@@ -75,7 +76,7 @@ intermediary `updateData` variable.
 
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,
-you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
+you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function updateResult() {
@@ -83,7 +84,7 @@ function updateResult() {
   const transaction = db.transaction(['rushAlbumList'], 'readwrite');
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
       if (cursor.value.albumTitle === 'A farewell to kings') {
@@ -91,13 +92,13 @@ function updateResult() {
 
         updateData.year = 2050;
         const request = cursor.update(updateData);
-        request.onsuccess = function() {
+        request.onsuccess = () => {
           console.log('A better album year?');
         };
       };
 
       const listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
       cursor.continue();
     } else {
@@ -123,5 +124,4 @@ function updateResult() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).

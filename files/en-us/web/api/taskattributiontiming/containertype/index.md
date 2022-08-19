@@ -1,6 +1,7 @@
 ---
 title: TaskAttributionTiming.containerType
 slug: Web/API/TaskAttributionTiming/containerType
+page-type: web-api-instance-property
 tags:
   - API
   - Long Tasks API
@@ -18,7 +19,7 @@ of `iframe`, `embed`, or `object`.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the container's type, one of `iframe`,
+A string containing the container's type, one of `iframe`,
 `embed`, or `object`.
 
 ## Specifications

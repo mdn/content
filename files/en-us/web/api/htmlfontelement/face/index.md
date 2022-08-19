@@ -1,6 +1,7 @@
 ---
 title: HTMLFontElement.face
 slug: Web/API/HTMLFontElement/face
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -14,7 +15,7 @@ browser-compat: api.HTMLFontElement.face
 
 The obsolete
 **`HTMLFontElement.face`**
-property is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("face",
+property is a string that reflects the {{ htmlattrxref("face",
     "font") }} HTML attribute, containing a comma-separated list of one or more font
 names.
 
@@ -37,7 +38,7 @@ A string.
 ```js
 // Assumes there is <font id="f"> element in the HTML
 
-var f = document.getElementById("f");
+const f = document.getElementById("f");
 f.face = "arial";
 ```
 

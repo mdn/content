@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.retry()
 slug: Web/API/PaymentResponse/retry
+page-type: web-api-instance-method
 tags:
   - API
   - Commerce
@@ -34,9 +35,11 @@ retry(errorFields)
 
 - `errorFields`
 
-  - : A {{domxref("PaymentValidationErrors")}} object, with the following properties:
-
-    {{page("/en-US/docs/Web/API/PaymentValidationErrors", "Properties")}}
+  - : An object, with the following properties:
+    - `error` {{optional_inline}}
+      - : A general description of a payment error from which the user may attempt to recover by retrying the payment, possibly after correcting mistakes in the payment information. `error` can be provided all by itself to provide only a generic error message, or in concert with the other properties to serve as an overview while other properties' values guide the user to errors in specific fields in the payment form.
+    - `paymentMethod {{optional_inline}}
+      - : Any payment-method-specific errors which may have occurred. This object's contents will vary depending on the payment method used.
 
 ### Return value
 
@@ -57,7 +60,7 @@ concept, in outline form, is:
     (`new` {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
 2. Display the payment request ({{domxref("PaymentRequest.show()")}}
 3. If `show()` resolves, the returned {{domxref("PaymentResponse")}}
-    describes the requested payment and the options chosen by the user. Continue by...
+    describes the requested payment and the options chosen by the user. Continue with the following steps:
 
     1. Validate the returned response; if there are any fields whose values are not
         acceptable, call the response's {{domxref("PaymentResponse.complete",
@@ -68,8 +71,7 @@ concept, in outline form, is:
 4. If `show()` is rejected, the payment request failed, usually because
     either there's already one being processed, because the {{Glossary("user agent")}}
     doesn't support any of the specified payment methods, or because of a security issue.
-    See the [list of
-    exceptions](/en-US/docs/Web/API/PaymentRequest/show#exceptions) for `show()` for further details. Call
+    See the [list of exceptions](/en-US/docs/Web/API/PaymentRequest/show#exceptions) for `show()` for further details. Call
     `complete("fail")` to close the payment request.
 
 ```js
@@ -79,13 +81,13 @@ async function handlePayment() {
   try {
     let payResponse = await payRequest.show();
 
-    while (payResponse has errors) {
+    while (validate(payResponse)) {
       /* let the user edit the payment information,
          wait until they submit */
       await response.retry();
     }
     await payResponse.complete("success");
-  } catch(err) {
+  } catch (err) {
     /* handle the exception */
   }
 }
@@ -123,7 +125,7 @@ async function recursiveValidate(request, response) {
 }
 
 function fixField(requestOrResponse, event, validator) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     // Browser keeps calling this until promise resolves.
     requestOrResponse.addEventListener(event, async function listener(ev) {
       const promiseToValidate = validator(requestOrResponse);

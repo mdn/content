@@ -16,5 +16,5 @@ RTP is rarely used alone; instead, it is used in conjunction with other protocol
 ## See also
 
 - [Introduction to the Real-time Transport Protocol](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
-- {{Interwiki("wikipedia", "Real-time_Transport_Protocol","RTP")}} on Wikipedia
+- [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol) on Wikipedia
 - {{RFC(3550)}} (one of the documents that specify precisely how the protocol works)

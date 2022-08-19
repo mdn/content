@@ -1,13 +1,16 @@
 ---
 title: WebUSB API
 slug: Web/API/WebUSB_API
+page-type: web-api-overview
 tags:
   - API
   - Web USB
   - Overview
   - Reference
+  - Experimental
+spec-urls: https://wicg.github.io/webusb/
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Web USB API")}}
+{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}{{SeeCompatTable}}
 
 The **WebUSB API** provides a way to expose non-standard Universal Serial Bus (USB) compatible devices services to the web, to make USB safer and easier to use.
 
@@ -56,11 +59,11 @@ The following example demonstrates how to access a connected Arduino device usin
 
 ```js
 navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
-  .then(device => {
+  .then((device) => {
     console.log(device.productName);      // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   })
-  .catch(error => { console.error(error); });
+  .catch((error) => { console.error(error); });
 ```
 
 ### Finding all connected devices
@@ -68,8 +71,8 @@ navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
 You can find all connected devices with {{domxref("USB.getDevices()")}}. In the following example, with the Arduino device connected, product and manufacturer name are printed to the console.
 
 ```js
-navigator.usb.getDevices().then(devices => {
-  devices.forEach(device => {
+navigator.usb.getDevices().then((devices) => {
+  devices.forEach((device) => {
     console.log(device.productName);      // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   });
@@ -78,11 +81,7 @@ navigator.usb.getDevices().then(devices => {
 
 ## Specifications
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Web USB')}} | {{Spec2('Web USB')}} | Initial definition. |
-
-## Browser compatibility
+{{Specifications}}
 
 ## See also
 

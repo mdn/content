@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,7 +20,7 @@ The **`importScripts()`** method of the {{domxref("WorkerGlobalScope")}} interfa
 ```js
 importScripts(path0)
 importScripts(path0, path1)
-importScripts(path0, path1, /* ... ,*/ pathN)
+importScripts(path0, path1, /* … ,*/ pathN)
 ```
 
 ### Parameters
@@ -28,7 +29,7 @@ A comma-separated list of string objects representing the scripts to be imported
 
 ### Return value
 
-_None._
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

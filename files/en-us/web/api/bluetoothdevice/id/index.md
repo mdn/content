@@ -1,6 +1,7 @@
 ---
 title: BluetoothDevice.id
 slug: Web/API/BluetoothDevice/id
+page-type: web-api-instance-property
 tags:
   - API
   - BluetoothDevice

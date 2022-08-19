@@ -1,9 +1,9 @@
 ---
 title: MediaMetadata()
 slug: Web/API/MediaMetadata/MediaMetadata
+page-type: web-api-constructor
 tags:
   - Audio
-  - Experimental
   - Media
   - Media Session API
   - MediaMetadata
@@ -14,7 +14,7 @@ tags:
   - artwork
 browser-compat: api.MediaMetadata.MediaMetadata
 ---
-{{APIRef("Media Session API")}}{{SeeCompatTable}}
+{{APIRef("Media Session API")}}
 
 The **`MediaMetadata()`** constructor creates a new
 {{domxref("MediaMetadata")}} object.
@@ -28,7 +28,7 @@ new MediaMetadata(metadata)
 
 ### Parameters
 
-- _metadata_ {{optional_inline}}
+- `metadata` {{optional_inline}}
 
   - : The metadata parameters are as follows:
 

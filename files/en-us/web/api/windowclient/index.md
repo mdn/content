@@ -1,10 +1,10 @@
 ---
 title: WindowClient
 slug: Web/API/WindowClient
+page-type: web-api-interface
 tags:
   - API
   - Client
-  - Experimental
   - Interface
   - Reference
   - Service Workers
@@ -14,7 +14,7 @@ browser-compat: api.WindowClient
 ---
 {{APIRef("Service Workers API")}}
 
-The `WindowClient` interface of the [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API) represents the scope of a service worker client that is a document in a browsing context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources.
+The `WindowClient` interface of the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API) represents the scope of a service worker client that is a document in a browsing context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources.
 
 {{InheritanceDiagram}}
 
@@ -39,7 +39,7 @@ _`WindowClient` inherits properties from its parent interface, {{domxref("Client
 ## Example
 
 ```js
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -47,10 +47,9 @@ self.addEventListener('notificationclick', function(event) {
   // focuses if it is
   event.waitUntil(clients.matchAll({
     type: "window"
-  }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client) {
+  }).then((clientList) => {
+    for (const client of clientList) {
+      if (client.url === '/' && 'focus' in client) {
         client.focus();
         break;
       }
@@ -71,9 +70,9 @@ self.addEventListener('notificationclick', function(event) {
 
 ## See also
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API)

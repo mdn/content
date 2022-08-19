@@ -1,6 +1,7 @@
 ---
 title: SVGGeometryElement.getTotalLength()
 slug: Web/API/SVGGeometryElement/getTotalLength
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

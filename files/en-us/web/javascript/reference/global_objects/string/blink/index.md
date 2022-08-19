@@ -33,17 +33,16 @@ A string containing a {{HTMLElement("blink")}} HTML element.
 
 ## Description
 
-The `blink()` method embeds a string in a `<blink>`
-element: "`<blink>str</blink>`".
+The `blink()` method embeds a string in a `<blink>` element: `"<blink>str</blink>"`.
 
 ## Examples
 
 ### Using blink()
 
-The following example uses string methods to change the formatting of a string:
+The following example uses deprecated string methods to change the formatting of a string:
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 
 console.log(worldString.blink());   // <blink>Hello, world</blink>
 console.log(worldString.bold());    // <b>Hello, world</b>

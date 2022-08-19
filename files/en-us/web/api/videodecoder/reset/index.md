@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.reset()
 slug: Web/API/VideoDecoder/reset
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,7 +26,7 @@ None.
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

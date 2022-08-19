@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer
 slug: Web/API/XRWebGLLayer
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -42,7 +43,7 @@ Although `XRWebGLLayer` is currently the only type of framebuffer layer supporte
 - {{domxref('XRWebGLLayer.framebufferHeight', "framebufferHeight")}} {{ReadOnlyInline}}
   - : Returns the height of the layer's framebuffer.
 - {{domxref('XRWebGLLayer.ignoreDepthValues', "ignoreDepthValues")}} {{ReadOnlyInline}}
-  - : A Boolean which Indicates whether or not the [WebXR compositor](en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor) should make use of the contents of the layer's depth buffer while compositing the scene.
+  - : A Boolean which Indicates whether or not the [WebXR compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) should make use of the contents of the layer's depth buffer while compositing the scene.
 
 ## Methods
 
@@ -75,11 +76,11 @@ That function receives as input an {{domxref("XRFrame")}} which encapsulates the
 let pose = xrFrame.getViewerPose(xrReferenceSpace);
 
 if (pose) {
-  let glLayer = xrSession.renderState.baseLayer;
+  const glLayer = xrSession.renderState.baseLayer;
   gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.Framebffer);
 
-  for (let view of pose.views) {
-    let viewport = glLayer.getViewport(view);
+  for (const view of pose.views) {
+    const viewport = glLayer.getViewport(view);
     gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
     /* Render the view */

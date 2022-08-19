@@ -70,7 +70,7 @@ When animated, if both the beginning and end filters have a function list of the
 
 The `filter` property is specified as `none` or one or more of the functions listed below. If the parameter for any function is invalid, the function returns `none`. Except where noted, the functions that take a value expressed with a percent sign (as in `34%`) also accept the value expressed as decimal (as in `0.34`).
 
-When a single `filter` property has two or more functions it's results will be different from when two or more `filter` properties are separately applied with the same functions.
+When a `filter` property has two or more functions, its results are different from the same functions applied separately using multiple `filter` properties.
 
 ### SVG filter
 
@@ -135,8 +135,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -webkit-filter:blur(5px);
-  -ms-filter:blur(5px);
   filter:blur(5px); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -239,9 +237,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter:brightness(2);
-  -webkit-filter:brightness(2);
-  -ms-filter:brightness(2);
   filter:brightness(2); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -336,9 +331,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter:contrast(200%);
-  -webkit-filter:contrast(200%);
-  -ms-filter:contrast(200%);
   filter:contrast(200%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -472,17 +464,11 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: drop-shadow(16px 16px 10px black);
-  -webkit-filter: drop-shadow(16px 16px 10px black);
-  -ms-filter: drop-shadow(16px 16px 10px black);
   filter: drop-shadow(16px 16px 10px black);
 }
 #img12 {
   width:100%;
   height:auto;
-  -moz-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -webkit-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -ms-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
   filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
 }
 table.standard-table {
@@ -570,9 +556,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter:grayscale(100%);
-  -webkit-filter:grayscale(100%);
-  -ms-filter:grayscale(100%);
   filter:grayscale(100%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -652,9 +635,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter:hue-rotate(90deg);
-  -webkit-filter:hue-rotate(90deg);
-  -ms-filter:hue-rotate(90deg);
   filter:hue-rotate(90deg); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -687,7 +667,7 @@ table.standard-table td {
 ```html
 <svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg">
   <filter id="svgHueRotate">
-    <feColorMatrix type="hueRotate" values="[angle]"/>
+    <feColorMatrix type="hueRotate" values="90"/>
   </filter>
 </svg>
 ```
@@ -745,9 +725,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: invert(100%);
-  -webkit-filter: invert(100%);
-  -ms-filter: invert(100%);
   filter: invert(100%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -828,9 +805,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: opacity(50%);
-  -webkit-filter: opacity(50%);
-  -ms-filter: opacity(50%);
   filter: opacity(50%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -910,9 +884,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: saturate(200%);
-  -webkit-filter: saturate(200%);
-  -ms-filter: saturate(200%);
   filter: saturate(200%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -995,9 +966,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: sepia(100%);
-  -webkit-filter: sepia(100%);
-  -ms-filter: sepia(100%);
   filter: sepia(100%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -1069,9 +1037,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: contrast(175%) brightness(103%);
-  -webkit-filter: contrast(175%) brightness(103%);
-  -ms-filter: contrast(175%) brightness(103%);
   filter: contrast(175%) brightness(103%);
 }
 table.standard-table {

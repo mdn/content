@@ -31,7 +31,7 @@ Highlights:
 - The {{cssxref(":unresolved")}} pseudo-class has been implemented for custom elements ({{bug(1111633)}}).
 - The predefined style {{cssxref("list-style-type", "ethiopic-numeric")}} now uses a space, instead of a dot, as the suffix to match a recent change to the spec ({{bug(1120721)}}).
 - CSS transitions on generated content (with {{cssxref("::before")}} and {{cssxref("::after")}}) on both an inline and the block that splits them now start as expected by the specification ({{bug(1110277)}}).
-- The implementation of CSS Logical Properties made big progress. The following properties are available behind the {{pref("layout.css.vertical-text.enabled")}} flag (`false` by default):
+- The implementation of CSS Logical Properties made big progress. The following properties are available behind the `layout.css.vertical-text.enabled` flag (`false` by default):
 
   - Direction-independent equivalents of {{cssxref("width")}} and {{cssxref("height")}}: {{cssxref("block-size")}} and {{cssxref("inline-size")}} ({{bug(1117983)}}).
   - Direction-independent equivalents of {{cssxref("min-width")}} and {{cssxref("min-height")}}: {{cssxref("min-block-size")}} and {{cssxref("min-inline-size")}} ({{bug(1117983)}}).
@@ -83,10 +83,10 @@ Highlights:
 - Constants of {{domxref("KeyboardEvent.location")}}, `DOM_KEY_LOCATION_MOBILE` and DOM_KEY_LOCATION_JOYSTICK, have been removed, since they were removed from the DOM Level 3 Spec ({{bug(936313)}}.
 - {{domxref("KeyboardEvent.code")}} is now available; previously it was only available in prerelease builds. ({{bug(1126673)}})
 - {{domxref("KeyboardEvent.code")}} now supports special keys on Sun keyboards on Linux, Android, and Firefox OS. ({{bug(1020139)}})
-- The {{domxref("TextEncoder.TextEncoder", "TextEncoder()")}} constructor has been changed to match the spec: when an invalid parameter is passed, the {{exception("RangeError")}} exception is now raised, rather than the erroneous {{exception("TypeError")}} ({{bug(1125766)}}).
+- The {{domxref("TextEncoder.TextEncoder", "TextEncoder()")}} constructor has been changed to match the spec: when an invalid parameter is passed, the `RangeError` {{domxref("DOMException")}} is now raised, rather than the erroneous {{jsxref("TypeError")}} ({{bug(1125766)}}).
 - The User Timing API, adding {{domxref("Performance.mark()")}}, {{domxref("Performance.clearMarks()")}}, {{domxref("Performance.measure()")}}, and {{domxref("Performance.clearMeasures()")}} has been implemented ({{bug(782751)}}).
 - The prefixed version of {{domxref("indexedDB")}}, `mozIndexedDB` has been removed ({{bug(975699)}}).
-- The {{event("DOMContentLoaded")}} event is no longer cancelable ({{bug(1134559)}}).
+- The {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event is no longer cancelable ({{bug(1134559)}}).
 - You can now use [WebSockets](/en-US/docs/Web/API/WebSockets_API) in [Workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(504553)}}).
 - The {{domxref("XMLHttpRequest.responseType")}} and {{domxref("XMLHttpRequest.withCredentials")}} properties can now be set before calling {{domxref("XMLHttpRequest.open()")}} ({{bug(707484)}}).
 
@@ -110,7 +110,7 @@ _No change._
 
 - In Firefox, the {{htmlattrxref("autocomplete", "input")}}`=false` attribute is now ignored when dealing with a login form ({{bug(1025703)}}). This is intended to encourage the use of more secure passwords by allowing password manager tools to work more reliably.
 - RC4 is now disabled when using TLS, except for a few specifically whitelisted Web sites. This whitelist is an interim measure until those sites are fixed ({{bug(1124039)}}). This fallback is controlled by the `security.tls.unrestricted_rc4_fallback` preference, `true` by default for the moment ({{bug(1138882)}}).
-- Web sites needing to fall back to an insecure version of TLS in order to work are now in a hardcoded whitelist which will shrink over time ({{bug(1114816)}}). The whitelist can be disabled by setting {{pref("security.tls.insecure_fallback_hosts.use_static_list")}}  to `false`.
+- Web sites needing to fall back to an insecure version of TLS in order to work are now in a hardcoded whitelist which will shrink over time ({{bug(1114816)}}). The whitelist can be disabled by setting `security.tls.insecure_fallback_hosts.use_static_list` to `false`.
 
 ## Changes for add-on and Mozilla developers
 
@@ -142,12 +142,12 @@ _No change._
 
 #### Downloads.jsm
 
-- [`DownloadTarget`](/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget) objects now have `exists` and `size` properties, allowing you to determine the existence of and the size of the download's target file on disk, as well as a new [`refresh()`](</en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget#refresh()>) method, which asks that these values be updated.
+- [`DownloadTarget`](/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget) objects now have `exists` and `size` properties, allowing you to determine the existence of and the size of the download's target file on disk, as well as a new `refresh()` method, which asks that these values be updated.
 
 ### XPCOM
 
 - `"@mozilla.org/network/atomic-file-output-stream;1"` and `"@mozilla.org/network/safe-file-output-stream;1"` now throw an exception if `PR_APPEND` is passed without `PR_TRUNCATE` ({{bug(1117580)}}).
-- `nsICompositionStringSynthesizer` and {{ifmethod("nsIDOMWindowUtils", "sendCompositionEvent")}} have been removed. Instead, use `nsITextInputProcessor`. ({{bug(917322)}})
+- `nsICompositionStringSynthesizer` and `nsIDOMWindowUtils.sendCompositionEvent()` have been removed. Instead, use `nsITextInputProcessor`. ({{bug(917322)}})
 - `nsIDOMWindowUtils.sendKeyEvent()` is now deprecated. Instead, use `nsITextInputProcessor` ({{bug(1119609)}}).
 
 ## Older versions

@@ -49,7 +49,7 @@ A grid is a collection of horizontal and vertical lines creating a pattern again
 
 A grid will typically have **columns**, **rows**, and then gaps between each row and column. The gaps are commonly referred to as **gutters**.
 
-![](grid.png)
+![CSS grid with parts labelled as rows, columns and gutters. Rows are the horizontal segments of the grid and Columns are the vertical segments of the grid. The space between two rows is called as 'row gutter' and the space between 2 columns is called as 'column gutter'.](grid.png)
 
 ## Creating your grid in CSS
 
@@ -198,7 +198,6 @@ body {
   background-color: rgb(207,232,220);
   border: 2px solid rgb(79,185,227);
 }
-
 ```
 
 ```html hidden
@@ -440,7 +439,7 @@ aside {
 
 {{ EmbedLiveSample('Line-based_placement', '100%', 600) }}
 
-> **Note:** you can also use the value `-1` to target the end column or row line, then count inwards from the end using negative values. Note also that lines count always from the edges of the explicit grid, not the [implicit grid](/en-US/docs/Glossary/Grid).
+> **Note:** You can also use the value `-1` to target the end column or row line, then count inwards from the end using negative values. Note also that lines count always from the edges of the explicit grid, not the [implicit grid](/en-US/docs/Glossary/Grid).
 
 ## Positioning with grid-template-areas
 
@@ -606,7 +605,7 @@ If you use the [Firefox Grid Inspector](https://firefox-source-docs.mozilla.org/
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grids](/en-US/docs/Learn/CSS/CSS_layout/Grid_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grid](/en-US/docs/Learn/CSS/CSS_layout/Grid_skills).
 
 ## Summary
 

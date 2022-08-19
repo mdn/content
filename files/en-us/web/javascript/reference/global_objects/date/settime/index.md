@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Date.setTime
 The **`setTime()`** method sets the {{jsxref("Date")}} object
 to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC.
 
-{{EmbedInteractiveExample("pages/js/date-settime.html")}}
+{{EmbedInteractiveExample("pages/js/date-settime.html", "taller")}}
 
 ## Syntax
 
@@ -43,8 +43,8 @@ Use the `setTime()` method to help assign a date and time to another
 ### Using setTime()
 
 ```js
-var theBigDay = new Date('July 1, 1999');
-var sameAsBigDay = new Date();
+const theBigDay = new Date('July 1, 1999');
+const sameAsBigDay = new Date();
 sameAsBigDay.setTime(theBigDay.getTime());
 ```
 

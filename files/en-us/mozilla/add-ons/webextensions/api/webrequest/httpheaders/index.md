@@ -23,9 +23,9 @@ An `array` of `object`s. Each object has the following properties:
 
 - `name`
   - : `string`. Name of the HTTP header.
-- `value`{{optional_inline}}
+- `value` {{optional_inline}}
   - : `string`. Value of the HTTP header if it can be represented by UTF-8. Either this property or `binaryValue` must be present.
-- `binaryValue`{{optional_inline}}
+- `binaryValue` {{optional_inline}}
   - : `array` of `integer`. Value of the HTTP header if it cannot be represented by UTF-8, represented as bytes (0..255). Either this property or `value` must be present.
 
 ## Browser compatibility
@@ -34,7 +34,7 @@ An `array` of `object`s. Each object has the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#type-HttpHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#type-HttpHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: 'Window: message event'
 slug: Web/API/Window/message_event
+page-type: web-api-event
 tags:
   - Event
 browser-compat: api.Window.message_event
@@ -16,9 +17,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type
@@ -34,9 +35,9 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.data")}} {{readonlyInline}}
   - : The data sent by the message emitter.
 - {{domxref("MessageEvent.origin")}} {{readonlyInline}}
-  - : A {{domxref("USVString")}} representing the origin of the message emitter.
+  - : A string representing the origin of the message emitter.
 - {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} representing a unique ID for the event.
+  - : A string representing a unique ID for the event.
 - {{domxref("MessageEvent.source")}} {{readonlyInline}}
   - : A `MessageEventSource` (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{readonlyInline}}

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.translate()
 slug: Web/API/CanvasRenderingContext2D/translate
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

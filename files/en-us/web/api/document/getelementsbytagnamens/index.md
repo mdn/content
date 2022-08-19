@@ -1,6 +1,7 @@
 ---
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -24,11 +25,13 @@ getElementsByTagNameNS(namespace, name)
 
 ### Parameters
 
-- _namespace_ is the namespace URI of elements to look for (see
-  {{domxref("Element.namespaceURI", "element.namespaceURI")}}).
-- _name_ is either the local name of elements to look for or the special
-  value `*`, which matches all elements (see {{domxref("Element.localName",
-    "element.localName")}}).
+- `namespace`
+  - : The namespace URI of elements to look for (see
+    {{domxref("Element.namespaceURI", "element.namespaceURI")}}).
+- `name`
+  - : Either the local name of elements to look for or the special
+    value `*`, which matches all elements (see {{domxref("Element.localName",
+      "element.localName")}}).
 
 ### Return value
 
@@ -61,33 +64,33 @@ extension.
 <head>
 <title>getElementsByTagNameNS example</title>
 
-<script type="text/javascript">
+<script>
 
 function getAllParaElems()
 {
-  var allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+  const allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-  var num = allParas.length;
+  const num = allParas.length;
 
   alert("There are " + num + " &lt;p&gt; elements in this document");
 }
 
 function div1ParaElems()
 {
-  var div1 = document.getElementById("div1")
-  var div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+  const div1 = document.getElementById("div1")
+  const div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-  var num = div1Paras.length;
+  const num = div1Paras.length;
 
   alert("There are " + num + " &lt;p&gt; elements in div1 element");
 }
 
 function div2ParaElems()
 {
-  var div2 = document.getElementById("div2")
-  var div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+  const div2 = document.getElementById("div2")
+  const div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-  var num = div2Paras.length;
+  const num = div2Paras.length;
 
   alert("There are " + num + " &lt;p&gt; elements in div2 element");
 }

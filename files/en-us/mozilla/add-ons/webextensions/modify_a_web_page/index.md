@@ -60,7 +60,7 @@ document.body.appendChild(header);
 
 Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), and visit [https://developer.mozilla.org/](/). The page should look like this:
 
-![developer.mozilla.org page "eaten" by the script](eaten_page.png )
+![developer.mozilla.org page "eaten" by the script](eaten_page.png)
 
 ## Modifying pages programmatically
 
@@ -100,8 +100,8 @@ browser.contextMenus.create({
   title: "Eat this page"
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "eat-page") {
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "eat-page") {
     browser.tabs.executeScript({
       file: "page-eater.js"
     });
@@ -202,8 +202,8 @@ function onExecuted(result) {
     querying.then(messageTab);
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "eat-page") {
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "eat-page") {
     let executing = browser.tabs.executeScript({
       file: "page-eater.js"
     });

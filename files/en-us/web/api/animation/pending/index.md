@@ -1,6 +1,7 @@
 ---
 title: Animation.pending
 slug: Web/API/Animation/pending
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

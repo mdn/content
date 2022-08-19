@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement.contentWindow
 slug: Web/API/HTMLIFrameElement/contentWindow
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -22,10 +23,10 @@ A [Window](/en-US/docs/Web/API/Window) object.
 ## Examples
 
 ```js
-var x = document.getElementsByTagName("iframe")[0].contentWindow;
+const x = document.querySelector("iframe").contentWindow;
 //x = window.frames[0];
 
-x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+x.document.querySelector("body").style.backgroundColor = "blue";
 // this would turn the 1st iframe in document blue.
 ```
 

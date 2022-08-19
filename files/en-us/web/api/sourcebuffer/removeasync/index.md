@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.removeAsync()
 slug: Web/API/SourceBuffer/removeAsync
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -8,7 +9,6 @@ tags:
   - Media
   - Media Source Extensions
   - Method
-  - Experimental
   - Non-standard
   - Reference
   - SourceBuffer
@@ -16,7 +16,7 @@ tags:
   - removeAsync
 browser-compat: api.SourceBuffer.removeAsync
 ---
-{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{non-standard_header}}
 
 The **`removeAsync()`** method of the
 {{domxref("SourceBuffer")}} interface starts the process of asynchronously removing
@@ -53,9 +53,9 @@ which clears the contents of the specified `SourceBuffer`.
 
 ```js
 async function emptySourceBuffer(msBuffer) {
-  await msBuffer.removeAsync(0, Infinity).catch(function(e) {
+  await msBuffer.removeAsync(0, Infinity).catch((e) => {
     handleException(e);
-  }
+  });
 }
 ```
 
@@ -69,8 +69,7 @@ This feature is not part of any specification. It is not on track to become a st
 
 ## See also
 
-- [Media Source Extensions
-  API](/en-US/docs/Web/API/Media_Source_Extensions_API)
+- [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API)
 - {{domxref("SourceBuffer.remove()")}}
 - {{domxref("MediaSource")}}
 - {{domxref("SourceBufferList")}}

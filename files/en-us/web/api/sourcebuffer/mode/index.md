@@ -1,10 +1,10 @@
 ---
 title: SourceBuffer.mode
 slug: Web/API/SourceBuffer/mode
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - Property
@@ -14,7 +14,7 @@ tags:
   - mode
 browser-compat: api.SourceBuffer.mode
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`mode`** property of the {{domxref("SourceBuffer")}}
 interface controls whether media segments can be appended to the
@@ -46,7 +46,7 @@ processing either an {{domxref("SourceBuffer.appendBuffer","appendBuffer()")}} o
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ### Exceptions
 
@@ -70,8 +70,8 @@ is currently set to `'segments'`, thus setting the play order to the sequence
 in which media segments are appended.
 
 ```js
-var curMode = sourceBuffer.mode;
-if (curMode == 'segments') {
+const curMode = sourceBuffer.mode;
+if (curMode === 'segments') {
   sourceBuffer.mode = 'sequence';
 }
 ```

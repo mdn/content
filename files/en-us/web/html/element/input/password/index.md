@@ -14,7 +14,7 @@ tags:
   - Reference
   - Web
   - password
-browser-compat: html.elements.input.input-password
+browser-compat: html.elements.input.type_password
 ---
 
 {{HTMLRef("Input_types")}}
@@ -38,7 +38,7 @@ Both approaches help a user check that they entered the intended password, which
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a password, or empty
+        A string representing a password, or empty
       </td>
     </tr>
     <tr>
@@ -87,7 +87,7 @@ Both approaches help a user check that they entered the intended password, which
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the {{htmlattrxref("required")}} property is specified, then the password edit box must contain a value other than an empty string to be valid.
+The {{htmlattrxref("value", "input")}} attribute contains a string whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the {{htmlattrxref("required")}} property is specified, then the password edit box must contain a value other than an empty string to be valid.
 
 If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content of a `password` control is only considered valid if the value passes validation; see [Validation](#validation) for more information.
 
@@ -224,7 +224,7 @@ As with other textual entry controls, you can use the {{domxref("HTMLInputElemen
 #### JavaScript
 
 ```js
-document.getElementById("selectAll").onclick = function() {
+document.getElementById("selectAll").onclick = () => {
   document.getElementById("userPassword").select();
 }
 ```
@@ -277,10 +277,10 @@ The {{htmlattrxref("inputmode", "input")}} is set to `numeric` to encourage devi
 This is just some simple code to display the entered SSN onscreen so you can see it. Obviously this defeats the purpose of a password field, but it's helpful for experimenting with the `pattern`.
 
 ```js
-var ssn = document.getElementById("ssn");
-var current = document.getElementById("current");
+const ssn = document.getElementById("ssn");
+const current = document.getElementById("current");
 
-ssn.oninput = function(event) {
+ssn.oninput = (event) => {
   current.textContent = ssn.value;
 }
 ```

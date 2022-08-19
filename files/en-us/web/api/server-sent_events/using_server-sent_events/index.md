@@ -1,6 +1,7 @@
 ---
 title: Using server-sent events
 slug: Web/API/Server-sent_events/Using_server-sent_events
+page-type: guide
 tags:
   - Advanced
   - Communication
@@ -10,6 +11,7 @@ tags:
   - Server Sent Events
   - Server-sent events
   - messaging
+browser-compat: api.EventSource
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
@@ -32,11 +34,11 @@ const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredent
 Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{domxref("EventSource.message_event", "message")}} event:
 
 ```js
-evtSource.onmessage = function(event) {
+evtSource.onmessage = (event) => {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
-  newElement.textContent = "message: " + event.data;
+  newElement.textContent = `message: ${event.data}`;
   eventList.appendChild(newElement);
 }
 ```
@@ -46,18 +48,18 @@ This code listens for incoming messages (that is, notices from the server that d
 You can also listen for events with `addEventListener()`:
 
 ```js
-evtSource.addEventListener("ping", function(event) {
+evtSource.addEventListener("ping", (event) => {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
   const time = JSON.parse(event.data).time;
-  newElement.textContent = "ping at " + time;
+  newElement.textContent = `ping at ${time}`;
   eventList.appendChild(newElement);
 });
 ```
 
 This code is similar, except that it will be called automatically whenever the server sends a message with the `event` field set to "ping"; it then parses the JSON in the `data` field and outputs that information.
 
-> **Warning:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is _per browser_ and is set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (per [Stackoverflow](https://stackoverflow.com/a/5326159/1905229)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
+> **Warning:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is _per browser_ and is set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (per [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
 
 ## Sending events from the server
 
@@ -93,7 +95,7 @@ while (true) {
 
   // Break the loop if the client aborted the connection (closed the page)
 
-  if ( connection_aborted() ) break;
+  if (connection_aborted()) break;
 
   sleep(1);
 }
@@ -103,14 +105,14 @@ The code above generates an event every second, with the event type "ping". Each
 The loop will keep running independent of the connection status, so a check is included
 to break the loop if the connection has been closed (e.g. client closes the page).
 
-> **Note:** You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> **Note:** You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
 
 ## Error handling
 
 When problems occur (such as a network timeout or issues pertaining to [access control](/en-US/docs/Web/HTTP/CORS)), an error event is generated. You can take action on this programmatically by implementing the `onerror` callback on the `EventSource` object:
 
 ```js
-evtSource.onerror = function(err) {
+evtSource.onerror = (err) => {
   console.error("EventSource failed:", err);
 };
 ```
@@ -200,6 +202,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ## Browser compatibility
 
-### `EventSource`
-
-{{Compat("api.EventSource")}}
+{{Compat}}

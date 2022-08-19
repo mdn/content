@@ -1,6 +1,7 @@
 ---
 title: TextTrackCueList.getCueById()
 slug: Web/API/TextTrackCueList/getCueById
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ getCueById(id)
 
 ### Parameters
 
-- id
+- `id`
   - : A string which is an identifier for the cue.
 
 ### Return value
@@ -47,8 +48,8 @@ How are you?
 ```
 
 ```js
-let video = document.getElementById("video");
-video.onplay = function () {
+const video = document.getElementById("video");
+video.onplay = () => {
   console.log(video.textTracks[0].cues.getCueById("second")) // a VTTCue object;
 }
 ```

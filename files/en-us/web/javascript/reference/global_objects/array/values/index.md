@@ -39,12 +39,12 @@ A new {{jsxref("Array")}} iterator object.
 const arr = ['a', 'b', 'c', 'd', 'e'];
 const iterator = arr.values();
 
-for (let letter of iterator) {
+for (const letter of iterator) {
   console.log(letter);
 }  //"a" "b" "c" "d" "e"
 ```
 
-**Array.prototype.values** is default implementation of
+**Array.prototype.values** is the default implementation of
 **Array.prototype\[Symbol.iterator]**.
 
 ```js
@@ -72,10 +72,10 @@ example:
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];
 const iterator = arr.values();
-for (let letter of iterator) {
+for (const letter of iterator) {
   console.log(letter);
 } //"a" "b" "c" "d" "e"
-for (let letter of iterator) {
+for (const letter of iterator) {
   console.log(letter);
 } // undefined
 ```

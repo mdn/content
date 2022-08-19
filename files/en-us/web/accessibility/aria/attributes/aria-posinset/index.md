@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-posinset
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-posinset
 ---
 
 The `aria-posinset` attribute defines an element's number or position in the current set of listitems or treeitems when not all items are present in the DOM.
@@ -74,9 +75,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-posinset","ARIA: aria-posinset Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

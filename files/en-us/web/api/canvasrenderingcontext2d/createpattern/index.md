@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createPattern()
 slug: Web/API/CanvasRenderingContext2D/createPattern
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -31,7 +32,7 @@ createPattern(image, repetition)
 
 - `image`
 
-  - : A {{domxref("CanvasImageSource")}} to be used as the pattern's image. It can be any
+  - : An image to be used as the pattern's image. It can be any
     of the following:
 
     - {{domxref("HTMLImageElement")}} ({{HTMLElement("img")}})
@@ -41,6 +42,7 @@ createPattern(image, repetition)
     - {{domxref("HTMLCanvasElement")}} ({{HTMLElement("canvas")}})
     - {{domxref("ImageBitmap")}}
     - {{domxref("OffscreenCanvas")}}
+    - {{domxref("VideoFrame")}}
 
 - `repetition`
 
@@ -53,7 +55,7 @@ createPattern(image, repetition)
     - `"no-repeat"` (neither direction)
 
     If `repetition` is specified as an empty string (`""`) or
-    {{jsxref("null")}} (but not {{jsxref("undefined")}}), a value of `"repeat"`
+    [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (but not {{jsxref("undefined")}}), a value of `"repeat"`
     will be used.
 
 ### Return value
@@ -82,13 +84,13 @@ The original image looks like this:
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-var img = new Image();
+const img = new Image();
 img.src = 'canvas_createpattern.png';
-img.onload = function() {
-  var pattern = ctx.createPattern(img, 'repeat');
+img.onload = () => {
+  const pattern = ctx.createPattern(img, 'repeat');
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 300, 300);
 };

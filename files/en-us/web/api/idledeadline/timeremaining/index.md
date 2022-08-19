@@ -1,6 +1,7 @@
 ---
 title: IdleDeadline.timeRemaining()
 slug: Web/API/IdleDeadline/timeRemaining
+page-type: web-api-instance-method
 tags:
   - API
   - Background Tasks API
@@ -10,7 +11,7 @@ tags:
   - timeRemaining
 browser-compat: api.IdleDeadline.timeRemaining
 ---
-{{APIRef("Background Tasks")}}{{SeeCompatTable}}
+{{APIRef("Background Tasks")}}
 
 The **`timeRemaining()`** method
 on the {{domxref("IdleDeadline")}} interface returns the estimated number of
@@ -46,8 +47,7 @@ If the {{domxref("IdleDeadline")}} object's {{domxref("IdleDeadline.didTimeout",
 ## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
-in the article [Cooperative Scheduling
-of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
+in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## Specifications
 
@@ -59,8 +59,7 @@ of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## See also
 
-- [Collaborative Scheduling of
-  Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
+- [Collaborative Scheduling of Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
 - {{domxref("IdleDeadline")}}
 - {{domxref("Window.requestIdleCallback()")}}
 - {{domxref("Window.cancelIdleCallback()")}}

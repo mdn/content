@@ -1,6 +1,7 @@
 ---
 title: Range.setStartAfter()
 slug: Web/API/Range/setStartAfter
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -23,7 +24,7 @@ setStartAfter(referenceNode)
 
 ### Parameters
 
-- _referenceNode_
+- `referenceNode`
   - : The {{domxref("Node")}} to start the {{domxref("Range")}} after.
 
 ### Return value
@@ -33,8 +34,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var range = document.createRange();
-var referenceNode = document.getElementsByTagName("div").item(0);
+const range = document.createRange();
+const referenceNode = document.getElementsByTagName("div").item(0);
 
 range.setStartAfter(referenceNode);
 ```

@@ -1,6 +1,7 @@
 ---
 title: FontFace.descentOverride
 slug: Web/API/FontFace/descentOverride
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,15 +16,19 @@ The **`descentOverride`** property of the {{domxref("FontFace")}} interface retu
 
 ## Value
 
-A {{domxref("CSSOMString","string")}}.
+A string.
 
 ## Examples
 
-```css
-let fontFace = new FontFace('Roboto', 'url(https://fonts.example.com/roboto.woff2)', {'descentOverride':'90%'});
-  console.log(fontFace.descentOverride); // 90%
-  fontFace.descentOverride = 'normal';
-  console.log(fontFace.descentOverride); // 'normal'
+```js
+let fontFace = new FontFace(
+  "Roboto",
+  "url(https://fonts.example.com/roboto.woff2)",
+  { descentOverride: "90%" }
+);
+console.log(fontFace.descentOverride); // 90%
+fontFace.descentOverride = "normal";
+console.log(fontFace.descentOverride); // 'normal'
 ```
 
 ## Specifications

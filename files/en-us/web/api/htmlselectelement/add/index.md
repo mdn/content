@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.add()
 slug: Web/API/HTMLSelectElement/add
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -23,10 +24,10 @@ add(item, before)
 
 ### Parameters
 
-- _item_
+- `item`
   - : An {{domxref("HTMLOptionElement")}} or
     {{domxref("HTMLOptGroupElement")}}
-- _before_ {{optional_inline}}
+- `before` {{optional_inline}}
   - : An element of the collection, or an index of type
     _long_, representing the _item_ should be inserted before. If this
     parameter is `null` (or the index does not exist), the new element is
@@ -39,16 +40,16 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : Thrown if the _item_ passed to the method is an ancestor of the`{{domxref("HTMLSelectElement")}}`.
+  - : Thrown if the _item_ passed to the method is an ancestor of the {{domxref("HTMLSelectElement")}}.
 
 ## Examples
 
 ### Creating Elements from Scratch
 
 ```js
-var sel = document.createElement("select");
-var opt1 = document.createElement("option");
-var opt2 = document.createElement("option");
+const sel = document.createElement("select");
+const opt1 = document.createElement("option");
+const opt2 = document.createElement("option");
 
 opt1.value = "1";
 opt1.text = "Option: Value 1";
@@ -72,18 +73,16 @@ sel.add(opt2, null);
 The before parameter is optional. So the following is accepted.
 
 ```js
-...
 sel.add(opt1);
 sel.add(opt2);
-...
 ```
 
 ### Append to an Existing Collection
 
 ```js
-var sel = document.getElementById("existingList");
+const sel = document.getElementById("existingList");
 
-var opt = document.createElement("option");
+const opt = document.createElement("option");
 opt.value = "3";
 opt.text = "Option: Value 3";
 
@@ -110,17 +109,15 @@ sel.add(opt, null);
 The before parameter is optional. So the following is accepted.
 
 ```js
-...
 sel.add(opt);
-...
 ```
 
 ### Inserting to an Existing Collection
 
 ```js
-var sel = document.getElementById("existingList");
+const sel = document.getElementById("existingList");
 
-var opt = document.createElement("option");
+const opt = document.createElement("option");
 opt.value = "3";
 opt.text = "Option: Value 3";
 

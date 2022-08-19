@@ -1,6 +1,7 @@
 ---
 title: SpeechGrammarList.addFromURI()
 slug: Web/API/SpeechGrammarList/addFromURI
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -32,9 +33,9 @@ addFromURI(src, weight)
 
 ### Parameters
 
-- src
+- `src`
   - : A string representing the URI of the grammar to be added.
-- weight {{optional_inline}}
+- `weight` {{optional_inline}}
   - : A float representing the weight of the grammar relative to other grammars present in
     the {{domxref("SpeechGrammarList")}}. The weight means the importance of this grammar,
     or the likelihood that it will be recognized by the speech recognition service. The
@@ -48,9 +49,9 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
-var recognition = new SpeechRecognition();
-var speechRecognitionList = new SpeechGrammarList();
+const grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+const recognition = new SpeechRecognition();
+const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 

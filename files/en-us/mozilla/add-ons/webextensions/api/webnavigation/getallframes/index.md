@@ -63,35 +63,36 @@ This code logs the URLs of all frames in the active tab, when the user clicks a 
 
 ```js
 function logFrameInfo(framesInfo) {
-  for (frameInfo of framesInfo) {
+  for (const frameInfo of framesInfo) {
     console.log(frameInfo);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 function logAllFrames(tabs) {
-  let gettingAllFrames = browser.webNavigation.getAllFrames({tabId: tabs[0].id});
-  gettingAllFrames.then(logFrameInfo, onError);
+  browser.webNavigation
+    .getAllFrames({
+      tabId: tabs[0].id,
+    })
+    .then(logFrameInfo, onError);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-
-  let querying = browser.tabs.query({
-    currentWindow: true,
-    active: true
-  });
-
-  querying.then(logAllFrames, onError);
-
+browser.browserAction.onClicked.addListener(() => {
+  browser.tabs
+    .query({
+      currentWindow: true,
+      active: true,
+    })
+    .then(logAllFrames, onError);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#method-getAllFrames) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#method-getAllFrames) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.fenceSync()
 slug: Web/API/WebGL2RenderingContext/fenceSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,7 +26,7 @@ fenceSync(condition, flags)
 - `condition`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the condition that must be met to set the sync
     object's state to signaled. Must be `gl.SYNC_GPU_COMMANDS_COMPLETE`.
-- flags
+- `flags`
   - : A {{domxref("WebGL_API/Types", "GLbitfield")}} specifying a bitwise combination of flags controlling
     the behavior of the sync object. Must be `0` (exists for extensions only).
 
@@ -39,7 +40,7 @@ A {{domxref("WebGLSync")}} object.
 objects are not available in WebGL 1.
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 ```
 
 ## Specifications

@@ -48,7 +48,7 @@ The request includes a URL identifying the affected resource, a method that defi
 
 Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an **HTTP response** message. The response contains a status line indicating whether or not the request succeeded (e.g. "HTTP/1.1 200 OK" for success).
 
-The body of a successful response to a request would contain the requested resource (e.g. a new HTML page, or an image, etc...), which could then be displayed by the web browser.
+The body of a successful response to a request would contain the requested resource (e.g. a new HTML page, or an image), which could then be displayed by the web browser.
 
 ### Static sites
 
@@ -68,7 +68,7 @@ Most of the code to support a dynamic website must run on the server. Creating t
 
 The diagram below shows a simple architecture for a _dynamic website_. As in the previous diagram, browsers send HTTP requests to the server, then the server processes the requests and returns appropriate HTTP responses.
 
-Requests for _static_ resources are handled in the same way as for static sites (static resources are any files that don't change —typically: CSS, JavaScript, Images, pre-created PDF files etc).
+Requests for _static_ resources are handled in the same way as for static sites (static resources are any files that don't change —typically: CSS, JavaScript, Images, pre-created PDF files, etc.).
 
 ![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](web_application_with_html_and_steps.png)
 
@@ -146,10 +146,7 @@ A deeper analysis of user habits can be used to anticipate their interests and f
 
 Server-side programming allows sites to restrict access to authorized users and serve only the information that a user is permitted to see.
 
-Real world examples include:
-
-- Social networks like Facebook allow users to fully control their own data but only allow their friends to view or comment on it. The user determines who can see their data, and by extension, whose data appears in their feed —  authorization is a central part of the user experience!
-- The site you are on right now controls access to content: articles are visible to everyone, but only users who have logged in can edit them. To try this, click on the **Edit** button at the top of this page — if you are logged in you will be shown the edit view; if you are not logged in you will be taken to the sign-up page.
+Real-world examples include social-networking sites which allow users to determine who can see the content they post to the site, and whose content appears in their feed.
 
 > **Note:** Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log in to your account — what additional information can you see and modify? What information can you see that only the bank can change?
 

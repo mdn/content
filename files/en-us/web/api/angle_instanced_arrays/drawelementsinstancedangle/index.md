@@ -1,6 +1,7 @@
 ---
 title: ANGLE_instanced_arrays.drawElementsInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawElementsInstancedANGLE
+page-type: web-api-instance-method
 tags:
   - ANGLE_instanced_arrays
   - API
@@ -36,21 +37,19 @@ drawElementsInstancedANGLE(mode, count, type, offset, primcount)
     - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
     - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-- count
+- `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements to be rendered.
-- type
+- `type`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array buffer. Possible values are:
 
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
-    - When using the {{domxref("OES_element_index_uint")}} extension:
+    - `gl.UNSIGNED_INT` when using the {{domxref("OES_element_index_uint")}} extension.
 
-      - `gl.UNSIGNED_INT`
-
-- offset
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in the element array buffer. Must be a valid multiple of the size of the given `type`.
-- primcount
+- `primcount`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of instances of the set of elements to execute.
 
 ### Return value
@@ -66,7 +65,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension('ANGLE_instanced_arrays');
 ext.drawElementsInstancedANGLE(gl.POINTS, 2, gl.UNSIGNED_SHORT, 0, 4);
 ```
 

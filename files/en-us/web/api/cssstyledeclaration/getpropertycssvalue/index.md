@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.getPropertyCSSValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -22,7 +23,7 @@ shorthand property.
 > To achieve your purpose, you can use:
 >
 > - {{domxref("CSSStyleDeclaration.getPropertyValue()")}} of the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
-> - {{domxref("Element.computedStyleMap()")}} of the modern [CSS Typed Object Model API](/en-US/docs/Web/CSS_Typed_OM_API), less supported and considered experimental.
+> - {{domxref("Element.computedStyleMap()")}} of the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
 ## Syntax
 
@@ -32,13 +33,12 @@ getPropertyCSSValue(property)
 
 ### Parameters
 
-- *`property`* is a {{domxref('DOMString')}} representing the
-  property name to be retrieved.
+- `property`
+  - : A string representing the property name to be retrieved.
 
 ### Return value
 
-- `value` is a {{domxref('CSSValue')}} containing the CSS value
-  for a property. If none exists, returns `null`.
+A {{domxref('CSSValue')}} containing the CSS value for a property. If none exists, returns `null`.
 
 ## Examples
 
@@ -46,8 +46,8 @@ The following JavaScript code gets an object containing the computed RGB values 
 the `color` CSS property:
 
 ```js
-var style = window.getComputedStyle(elem, null);
-var rgbObj = style.getPropertyCSSValue('color').getRGBColorValue();
+const style = window.getComputedStyle(elem, null);
+const rgbObj = style.getPropertyCSSValue('color').getRGBColorValue();
 ```
 
 ## Specifications

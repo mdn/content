@@ -1,6 +1,7 @@
 ---
 title: HTMLFontElement.color
 slug: Web/API/HTMLFontElement/color
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -14,7 +15,7 @@ browser-compat: api.HTMLFontElement.color
 
 The obsolete
 **`HTMLFontElement.color`**
-property is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("color",
+property is a string that reflects the {{htmlattrxref("color",
     "font")}} HTML attribute, containing either a named color or a color specified in the
 hexadecimal #RRGGBB format.
 
@@ -35,7 +36,7 @@ A string.
 ```js
 // Assumes there is <font id="f"> element in the HTML
 
-var f = document.getElementById("f");
+const f = document.getElementById("f");
 f.color = "green";
 ```
 

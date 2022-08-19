@@ -1,6 +1,7 @@
 ---
 title: History.forward()
 slug: Web/API/History/forward
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -47,7 +48,7 @@ history.
 ### JavaScript
 
 ```js
-document.getElementById('go-forward').addEventListener('click', e => {
+document.getElementById('go-forward').addEventListener('click', (e) => {
   window.history.forward();
 })
 ```
@@ -63,5 +64,4 @@ document.getElementById('go-forward').addEventListener('click', e => {
 ## See also
 
 - {{domxref("History")}}
-- [Working with
-  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

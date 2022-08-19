@@ -62,7 +62,7 @@ Listen for highlighting events, and log the IDs of highlighted tabs:
 
 ```js
 function handleHighlighted(highlightInfo) {
-  console.log("Highlighted tabs: " + highlightInfo.tabIds);
+  console.log(`Highlighted tabs: ${highlightInfo.tabIds}`);
 }
 
 browser.tabs.onHighlighted.addListener(handleHighlighted);
@@ -74,7 +74,7 @@ browser.tabs.onHighlighted.addListener(handleHighlighted);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onHighlighted) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onHighlighted) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

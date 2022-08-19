@@ -41,7 +41,7 @@ translate: unset;
 ### Values
 
 - Single {{cssxref("&lt;length-percentage&gt;")}} value
-  - : A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} that specifies a 2D translation, with the same translation along both the X and Y axes. Equivalent to a `translate()` (2D translation) function with a single value specified.
+  - : A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} that specifies a translation along the X-axis. Equivalent to a `translate()` (2D translation) function with a single value specified.
 - Two {{cssxref("&lt;length-percentage&gt;")}} values
   - : Two {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} that specify the X and Y axis translation values (respectively) of a 2D translation. Equivalent to a `translate()` (2D translation) function with two values specified.
 - Three values

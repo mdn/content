@@ -15,7 +15,7 @@ tags:
   - Text
   - URL
   - control
-browser-compat: html.elements.input.input-url
+browser-compat: html.elements.input.type_url
 ---
 
 {{HTMLRef("Input_types")}}
@@ -32,7 +32,7 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
   <tbody>
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
-      <td>A {{domxref("DOMString")}} representing a URL, or empty</td>
+      <td>A string representing a URL, or empty</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
@@ -80,7 +80,7 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a string which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
 
 1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
 2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
@@ -328,26 +328,27 @@ Since inputs of type `url` validate against both the standard URL validation _an
 div {
   margin-bottom: 10px;
   position: relative;
-  }
+}
 
-  input[type="number"] {
-    width: 100px;
-  }
+input[type="number"] {
+  width: 100px;
+}
 
-  input + span {
-    padding-right: 30px;
-  }
+input + span {
+  padding-right: 30px;
+}
 
-  input:invalid+span:after {
-    position: absolute; content: '✖';
-    padding-left: 5px;
-  }
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
 
-  input:valid+span:after {
-    position: absolute;
-    content: '✓';
-    padding-left: 5px;
-  }
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
 ```
 
 ```html

@@ -86,8 +86,6 @@ Let's run through an example to get you started with using a package manager and
 
 [Parcel](https://parceljs.org/) is another tool that developers commonly use in their development process. Parcel is clever in that it can watch the contents of our code for calls to dependencies and automatically installs any dependencies it sees that our code needs. It can also automatically build our code.
 
-In our previous chapter we installed Prettier as a global tool. Here however, let's use npm to install Parcel as a local tool, as best practices dictate. We'll install it as part of an experimental app.
-
 ### Setting up the app as an npm package
 
 First of all, create a new directory to store our experimental app in, somewhere sensible that you'll find again. We'll call it parcel-experiment, but you can call it whatever you like:
@@ -239,7 +237,7 @@ In the `index.js` file, add the following code and save it:
 import { formatDistanceToNow } from 'date-fns'
 
 const date = '1996-09-13 10:00:00';
-document.body.textContent = formatDistanceToNow(new Date(date)) + ' ago';
+document.body.textContent = `${formatDistanceToNow(new Date(date))} ago`;
 ```
 
 Go back to `http://localhost:1234` and you'll see how long ago it is since the author turned 18.
@@ -335,7 +333,7 @@ The list will grow over time, but at the time of writing, the following main pac
 
 - npm at [npmjs.org](https://www.npmjs.com/)
 - pnpm at [pnpm.js.org](https://pnpm.js.org/)
-- yarn at [yarnpkg.com](https://yarnpkg.com/)
+- Yarn at [yarnpkg.com](https://yarnpkg.com/)
 
 npm and pnpm are similar from a command line point of view — in fact pnpm aims to have full parity over the argument options that npm offers. It differs in that it uses a different method for downloading and storing the packages on your computer, aiming to reduce the overall disk space required.
 
@@ -419,7 +417,7 @@ npm run dev
 
 This would run a custom script for starting our project in "development mode". In fact, we regularly include this in all projects as the local development setup tends to run slightly differently to how it would run in production.
 
-If you tried running this in your Parcel test project from earlier it would (likely) claim the "dev script is missing". This is because npm, yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
+If you tried running this in your Parcel test project from earlier it would (likely) claim the "dev script is missing". This is because npm, Yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
 
 Parcel can run a development server using the command `parcel serve filename.html`, and we'd like to use that often during our development.
 
@@ -470,7 +468,7 @@ This brings us to the end of our tour of package managers. Our next move is to b
 ## See also
 
 - [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
-- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
+- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
 
 ## In this module
 

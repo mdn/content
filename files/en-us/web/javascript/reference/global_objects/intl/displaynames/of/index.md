@@ -39,7 +39,7 @@ of(code)
     - If the type is "language", code should be a _languageCode_ \["-"
       _scriptCode_] \["-" _regionCode_ ] \*("-" _variant_ )
       subsequence of the unicode_language_id grammar in
-      [UTS 35's Unicode Language and Locale Identifiers grammar](http://unicode.org/reports/tr35/#Unicode_language_identifier).
+      [UTS 35's Unicode Language and Locale Identifiers grammar](https://unicode.org/reports/tr35/#Unicode_language_identifier).
       _languageCode_ is either a two letters ISO 639-1 language code or a three letters ISO 639-2 language code.
     - If the type is "currency", code should be a [3-letter ISO 4217 currency code](https://www.iso.org/iso-4217-currency-codes.html).
 
@@ -52,13 +52,13 @@ A language-specific formatted string.
 ### Using the of method
 
 ```js
-let regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
+const regionNames = new Intl.DisplayNames('en', { type: 'region'} );
 regionNames.of('419'); // "Latin America"
 
-let languageNames = new Intl.DisplayNames(['en'], {type: 'language'});
+const languageNames = new Intl.DisplayNames('en', { type: 'language' });
 languageNames.of('fr'); // "French"
 
-let currencyNames = new Intl.DisplayNames(['en'], {type: 'currency'});
+const currencyNames = new Intl.DisplayNames('en', { type: 'currency' });
 currencyNames.of('EUR'); // "Euro"
 ```
 

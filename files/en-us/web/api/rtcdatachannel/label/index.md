@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.label
 slug: Web/API/RTCDataChannel/label
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -13,7 +14,7 @@ browser-compat: api.RTCDataChannel.label
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property **`label`**
-returns a {{domxref("DOMString")}} containing a name describing the data channel. These
+returns a string containing a name describing the data channel. These
 labels are not required to be unique.
 
 You may use the label as you wish; you could use it to identify all the channels that
@@ -26,13 +27,7 @@ A unique ID can be found in the {{domxref("RTCDataChannel.id", "id")}} property.
 > **Note:** A data channel's label is set when the channel is created by calling
 > {{domxref("RTCPeerConnection.createDataChannel()")}}. It cannot be changed after that.
 
-## Syntax
-
-```js
-var name = aDataChannel.label;
-```
-
-### Value
+## Value
 
 A string identifier assigned by the Web site or app when the data channel was created,
 as specified when {{domxref("RTCPeerConnection.createDataChannel()")}} was called to
@@ -44,13 +39,12 @@ This sample creates a data channel on an {{domxref("RTCPeerConnection")}}, then,
 time later, sets the content of a UI element to display the channel's name.
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
-/* ... */
+// …
 
-document.getElementById("channel-name").innerHTML =
-          "<span class='channelName'>" + dc.label + "</span>";
+document.getElementById("channel-name").innerHTML = `<span class='channelName'>${dc.label}</span>`;
 ```
 
 ## Specifications

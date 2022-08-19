@@ -379,5 +379,4 @@ And here's the live output.
 ## See also
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [Detecting CSS animation support](/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)

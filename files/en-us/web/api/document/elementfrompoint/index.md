@@ -1,6 +1,7 @@
 ---
 title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - Coordinates

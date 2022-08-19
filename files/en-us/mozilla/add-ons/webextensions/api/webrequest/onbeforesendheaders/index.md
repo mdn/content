@@ -32,7 +32,7 @@ Not all headers actually sent are always included in `requestHeaders`. In partic
 According to the specification, header names are case-insensitive. This means that be to sure of matching a particular header, the listener should lowercase the name before comparing it:
 
 ```js
-for (let header of e.requestHeaders) {
+for (const header of e.requestHeaders) {
   if (header.name.toLowerCase() === desiredHeader) {
     // process header
   }
@@ -77,7 +77,7 @@ Events have three functions:
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that will be sent to this listener.
-- `extraInfoSpec`{{optional_inline}}
+- `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:
 
@@ -132,7 +132,7 @@ Events have three functions:
     - `failoverTimeout`
       - : `integer`. Failover timeout in seconds. If the proxy connection fails, the proxy will not be used again for this period.
 
-- `requestHeaders`{{optional_inline}}
+- `requestHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP request headers that will be sent with this request.
 - `requestId`
   - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.
@@ -178,23 +178,23 @@ This code changes the "User-Agent" header so the browser identifies itself as Op
 /*
 This is the page for which we want to rewrite the User-Agent header.
 */
-let targetPage = "https://httpbin.org/*";
+const targetPage = "https://httpbin.org/*";
 
 /*
 Set UA string to Opera 12
 */
-let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+const ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
 */
 function rewriteUserAgentHeader(e) {
-  for (let header of e.requestHeaders) {
+  for (const header of e.requestHeaders) {
     if (header.name.toLowerCase() === "user-agent") {
       header.value = ua;
     }
   }
-  return {requestHeaders: e.requestHeaders};
+  return { requestHeaders: e.requestHeaders };
 }
 
 /*
@@ -205,7 +205,7 @@ Make it "blocking" so we can modify the headers.
 */
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
-  {urls: [targetPage]},
+  { urls: [targetPage] },
   ["blocking", "requestHeaders"]
 );
 ```
@@ -218,25 +218,25 @@ This code is exactly like the previous example, except that the listener is asyn
 /*
 This is the page for which we want to rewrite the User-Agent header.
 */
-let targetPage = "https://httpbin.org/*";
+const targetPage = "https://httpbin.org/*";
 
 /*
 Set UA string to Opera 12
 */
-let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+const ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
 */
 function rewriteUserAgentHeaderAsync(e) {
-  let asyncRewrite = new Promise((resolve, reject) => {
-    window.setTimeout(() => {
-      for (let header of e.requestHeaders) {
+  const asyncRewrite = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      for (const header of e.requestHeaders) {
         if (header.name.toLowerCase() === "user-agent") {
           header.value = ua;
         }
       }
-      resolve({requestHeaders: e.requestHeaders});
+      resolve({ requestHeaders: e.requestHeaders });
     }, 2000);
   });
 
@@ -251,14 +251,14 @@ Make it "blocking" so we can modify the headers.
 */
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeaderAsync,
-  {urls: [targetPage]},
+  { urls: [targetPage] },
   ["blocking", "requestHeaders"]
 );
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onBeforeSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onBeforeSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

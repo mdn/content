@@ -1,6 +1,7 @@
 ---
 title: 'MediaRecorder: error event'
 slug: Web/API/MediaRecorder/error_event
+page-type: web-api-event
 tags:
   - Event
 browser-compat: api.MediaRecorder.error_event
@@ -16,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('event', event => { });
+addEventListener('event', (event) => { });
 
-onevent = event => { };
+onevent = (event) => { };
 ```
 
 ## Event type
@@ -62,7 +63,7 @@ the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name"
     Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state",
     "state")}} becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is
     sent to the `MediaRecorder` with the remaining received data, and finally a
-    {{event("stop")}} event is sent.
+    {{domxref("MediaRecorder/stop_event", "stop")}} event is sent.
 
 These errors may occur either directly because of a call to a
 `MediaRecorder` method, or indirectly due to a problem arising during the

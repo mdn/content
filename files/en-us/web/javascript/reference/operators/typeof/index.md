@@ -18,11 +18,8 @@ of the unevaluated operand.
 
 ## Syntax
 
-The `typeof` operator is followed by its operand:
-
 ```js
 typeof operand
-typeof(operand)
 ```
 
 ### Parameters
@@ -37,14 +34,14 @@ more information about types and primitives, see also the [JavaScript data struc
 
 | Type                                                                                     | Result                                 |
 | ---------------------------------------------------------------------------------------- | -------------------------------------- |
-| [Undefined](/en-US/docs/Glossary/Undefined)                                              | `"undefined"`                          |
+| [Undefined](/en-US/docs/Glossary/undefined)                                              | `"undefined"`                          |
 | [Null](/en-US/docs/Glossary/Null)                                                        | `"object"` (see [below](#typeof_null)) |
 | [Boolean](/en-US/docs/Glossary/Boolean)                                                  | `"boolean"`                            |
 | [Number](/en-US/docs/Glossary/Number)                                                    | `"number"`                             |
-| [BigInt](/en-US/docs/Glossary/BigInt) (new in ECMAScript 2020)                           | `"bigint"`                             |
+| [BigInt](/en-US/docs/Glossary/BigInt)                                                    | `"bigint"`                             |
 | [String](/en-US/docs/Glossary/String)                                                    | `"string"`                             |
-| [Symbol](/en-US/docs/Glossary/Symbol) (new in ECMAScript 2015)                           | `"symbol"`                             |
-| [Function](/en-US/docs/Glossary/Function) object (implements [[Call]] in ECMA-262 terms) | `"function"`                           |
+| [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)                     | `"symbol"`                             |
+| [Function](/en-US/docs/Glossary/Function) (implements [[Call]] in ECMA-262 terms; [classes](/en-US/docs/Web/JavaScript/Reference/Statements/class) are functions as well) | `"function"`                           |
 | Any other object                                                                         | `"object"`                             |
 
 > **Note:** ECMAScript 2019 and older permitted implementations to have
@@ -62,7 +59,7 @@ more information about types and primitives, see also the [JavaScript data struc
 // Numbers
 typeof 37 === 'number';
 typeof 3.14 === 'number';
-typeof(42) === 'number';
+typeof 42 === 'number';
 typeof Math.LN2 === 'number';
 typeof Infinity === 'number';
 typeof NaN === 'number'; // Despite being "Not-A-Number"
@@ -96,7 +93,7 @@ typeof declaredButUndefinedVariable === 'undefined';
 typeof undeclaredVariable === 'undefined';
 
 // Objects
-typeof {a: 1} === 'object';
+typeof { a: 1 } === 'object';
 
 // use Array.isArray or Object.prototype.toString.call
 // to differentiate regular objects from arrays
@@ -111,12 +108,12 @@ typeof new Number(1) === 'object';
 typeof new String('abc') === 'object';
 
 // Functions
-typeof function() {} === 'function';
+typeof function () {} === 'function';
 typeof class C {} === 'function';
 typeof Math.sin === 'function';
 ```
 
-### `typeof null`
+### typeof null
 
 ```js
 // This stands since the beginning of JavaScript
@@ -133,29 +130,31 @@ A fix was proposed for ECMAScript (via an opt-in), but
 [was rejected](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null).
 It would have resulted in `typeof null === 'null'`.
 
-### Using `new` operator
+### Using new operator
 
 ```js
 // All constructor functions, with the exception of the Function constructor, will always be typeof 'object'
-let str = new String('String');
-let num = new Number(100);
+const str = new String('String');
+const num = new Number(100);
 
 typeof str; // It will return 'object'
 typeof num; // It will return 'object'
 
-let func = new Function();
+const func = new Function();
 
 typeof func; // It will return 'function'
 ```
 
 ### Need for parentheses in Syntax
 
+The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) than binary operators like addition (`+`). Therefore, parentheses are needed to evaluate the type of an addition result.
+
 ```js
 // Parentheses can be used for determining the data type of expressions.
-let iData = 99;
+const someData = 99;
 
-typeof iData + ' Wisen'; // 'number Wisen'
-typeof (iData + ' Wisen'); // 'string'
+typeof someData + ' Wisen'; // 'number Wisen'
+typeof (someData + ' Wisen'); // 'string'
 ```
 
 ### Regular expressions
@@ -192,7 +191,7 @@ typeof newClass; // ReferenceError
 
 let newLetVariable;
 const newConstVariable = 'hello';
-class newClass{};
+class newClass{}
 ```
 
 ### Exceptions
@@ -209,34 +208,51 @@ requires those type tags to be different from the predefined ones. The case of
 `document.all` having type `'undefined'` is classified in the web
 standards as a "willful violation" of the original ECMA JavaScript standard.
 
-### Real-world usage
+### Custom method that gets a more specific type
 
 `typeof` is very useful, but it's not as versatile as might be required. For
-example, `typeof([])` , is `'object'`, as well as
-`typeof(new Date())`, `typeof(/abc/)`, etc.
+example, `typeof []` , is `'object'`, as well as
+`typeof new Date()`, `typeof /abc/`, etc.
 
-For greater specificity in checking types, a `typeof` wrapper for usage in
-production-level code would be as follows (provided `obj` exists):
+For greater specificity in checking types, here we present a custom `type(value)` function, which mostly mimics the behavior of `typeof`, but for non-primitives (i.e. objects and functions), it returns a more granular type name where possible.
 
 ```js
-  function type(obj, showFullClass) {
-
-    // get toPrototypeString() of obj (handles all types)
-    if (showFullClass && typeof obj === "object") {
-        return Object.prototype.toString.call(obj);
-    }
-    if (obj == null) { return (obj + '').toLowerCase(); } // implicit toString() conversion
-
-    var deepType = Object.prototype.toString.call(obj).slice(8,-1).toLowerCase();
-    if (deepType === 'generatorfunction') { return 'function' }
-
-    // Prevent overspecificity (for example, [object HTMLDivElement], etc).
-    // Account for functionish Regexp (Android <=2.3), functionish <object> element (Chrome <=57, Firefox <=52), etc.
-    // String.prototype.match is universally supported.
-
-    return deepType.match(/^(array|bigint|date|error|function|generator|regexp|symbol)$/) ? deepType :
-       (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
+function type(value) {
+  if (value === null) {
+    return "null";
   }
+  const baseType = typeof value;
+  // Primitive types
+  if (!["object", "function"].includes(baseType)) {
+    return baseType;
+  }
+
+  // Symbol.toStringTag often specifies the "display name" of the
+  // object's class. It's used in Object.prototype.toString().
+  const tag = value[Symbol.toStringTag];
+  if (typeof tag === "string") {
+    return tag;
+  }
+
+  // If it's a function whose source code starts with the "class" keyword
+  if (
+    baseType === "function" &&
+    Function.prototype.toString.call(value).startsWith("class")
+  ) {
+    return "class";
+  }
+
+  // The name of the constructor; for example `Array`, `GeneratorFunction`,
+  // `Number`, `String`, `Boolean` or `MyCustomClass`
+  const className = value.constructor.name;
+  if (typeof className === "string" && className !== "") {
+    return className;
+  }
+
+  // At this point there's no robust way to get the type of value,
+  // so we use the base implementation.
+  return baseType;
+}
 ```
 
 For checking non-existent variables that would otherwise throw

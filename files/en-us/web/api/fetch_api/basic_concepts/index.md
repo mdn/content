@@ -1,6 +1,7 @@
 ---
 title: Fetch basic concepts
 slug: Web/API/Fetch_API/Basic_concepts
+page-type: guide
 tags:
   - API
   - Fetch
@@ -14,7 +15,7 @@ tags:
 
 The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used {{domxref("XMLHttpRequest")}}, but it provides a more powerful and flexible feature set. This article explains some of the basic concepts of the Fetch API.
 
-> **Note:** This article will be added to over time. If you find a Fetch concept that you feel needs explaining better, let someone know on the [MDN discussion forum](https://discourse.mozilla.org/c/mdn), or [MDN Web Docs room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
+> **Note:** This article will be added to over time. If you find a Fetch concept that you feel needs explaining better, let someone know on the [MDN discussion forum](https://discourse.mozilla.org/c/mdn/236), or [MDN Web Docs room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
 
 ## In a nutshell
 

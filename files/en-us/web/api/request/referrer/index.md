@@ -1,6 +1,7 @@
 ---
 title: Request.referrer
 slug: Web/API/Request/referrer
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -21,7 +22,7 @@ Request. (e.g., `client`, `no-referrer`, or a URL.)
 
 ## Value
 
-A {{domxref("DOMString")}} representing the request's referrer.
+A string representing the request's referrer.
 
 ## Examples
 
@@ -30,8 +31,8 @@ In the following snippet, we create a new request using the
 the script), then save the request referrer in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myReferrer = myRequest.referrer; // returns "about:client" by default
+const myRequest = new Request('flowers.jpg');
+const myReferrer = myRequest.referrer; // returns "about:client" by default
 ```
 
 ## Specifications

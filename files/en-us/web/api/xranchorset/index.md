@@ -1,6 +1,7 @@
 ---
 title: XRAnchorSet
 slug: Web/API/XRAnchorSet
+page-type: web-api-interface
 tags:
   - API
   - Interface

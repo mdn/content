@@ -66,7 +66,7 @@ of rounding in the description of the {{jsxref("Number.prototype.toFixed",
 ### Using toExponential
 
 ```js
-var numObj = 77.1234;
+const numObj = 77.1234;
 
 console.log(numObj.toExponential());  // logs 7.71234e+1
 console.log(numObj.toExponential(4)); // logs 7.7123e+1

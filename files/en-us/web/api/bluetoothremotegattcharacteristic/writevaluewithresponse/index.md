@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.writeValueWithResponse()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValueWithResponse
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -22,14 +23,14 @@ The **`BluetoothRemoteGATTCharacteristic.writeValueWithResponse()`** method sets
 writeValueWithResponse(value)
 ```
 
+### Parameters
+
+- `value`
+  - : An {{jsxref("ArrayBuffer")}}.
+
 ### Return value
 
 A {{jsxref("Promise")}}.
-
-### Parameters
-
-- value
-  - : An {{jsxref("ArrayBuffer")}}.
 
 ## Specifications
 

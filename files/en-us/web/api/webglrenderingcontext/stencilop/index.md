@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.stencilOp()
 slug: Web/API/WebGLRenderingContext/stencilOp
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -37,7 +38,7 @@ All three parameters accept all constants listed below.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Constants
 

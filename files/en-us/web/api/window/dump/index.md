@@ -1,6 +1,7 @@
 ---
 title: Window.dump()
 slug: Web/API/Window/dump
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

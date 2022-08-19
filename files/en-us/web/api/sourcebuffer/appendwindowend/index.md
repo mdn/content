@@ -1,10 +1,10 @@
 ---
 title: SourceBuffer.appendWindowEnd
 slug: Web/API/SourceBuffer/appendWindowEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - Property
@@ -14,7 +14,7 @@ tags:
   - appendWindowEnd
 browser-compat: api.SourceBuffer.appendWindowEnd
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`appendWindowEnd`** property of the
 {{domxref("SourceBuffer")}} interface controls the timestamp for the end of the [append window](https://w3c.github.io/media-source/#append-window), a

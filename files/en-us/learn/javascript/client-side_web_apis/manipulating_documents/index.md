@@ -32,7 +32,7 @@ When writing web pages and apps, one of the most common things you'll want to do
       <th scope="row">Objective:</th>
       <td>
         To gain familiarity with the core DOM APIs, and the other APIs commonly
-        associated with DOM and document manipulation
+        associated with DOM and document manipulation.
       </td>
     </tr>
   </tbody>
@@ -60,7 +60,7 @@ We have created a simple example page at [dom-example.html](https://github.com/m
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>Simple DOM example</title>

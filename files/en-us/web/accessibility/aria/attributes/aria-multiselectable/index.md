@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-multiselectable
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-multiselectable
 ---
 
 The `aria-multiselectable` attribute indicates that the user may select more than one item from the current selectable descendants.
@@ -170,13 +171,12 @@ If the above isn't stylable to your liking, you can also create a list of select
 </fieldset>
 ```
 
-Instead of `aria-selected="true"`, include the [`checked`](en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute. The browser does the rest.
+Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute. The browser does the rest.
 
 ## Values
 
 - `true`
   - : More than one item in the widget may be selected at a time
-  -
 - `false`
   - : Only one item can be selected
 
@@ -202,9 +202,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-multiselectable","ARIA: aria-multiselectable Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

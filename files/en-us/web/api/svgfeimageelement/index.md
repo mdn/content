@@ -1,6 +1,7 @@
 ---
 title: SVGFEImageElement
 slug: Web/API/SVGFEImageElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

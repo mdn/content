@@ -20,6 +20,10 @@ browser-compat: webextensions.manifest.version_name
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td><pre class="brush: json">"version_name": "0.1 beta"</pre></td>
     </tr>

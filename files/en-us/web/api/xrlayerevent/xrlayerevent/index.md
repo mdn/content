@@ -1,6 +1,7 @@
 ---
 title: XRLayerEvent()
 slug: Web/API/XRLayerEvent/XRLayerEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -19,21 +20,22 @@ The **`XRLayerEvent`** constructor creates and returns a new {{domxref("XRLayerE
 ## Syntax
 
 ```js
-new XRLayerEvent(type, eventInitDict)
+new XRLayerEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} indicating which of the events represented by objects of
-    type `XRLayerEvent` this particular object represents. See [`Event types`](/en-US/docs/Web/API/XRLayerEvent#event_types) for a list of the permitted values.
-- `eventInitDict`
-  - : An object with the following values:
-    - `layer`: Required. The {{domxref("XRLayer")}} to which the event is to be delivered.
+  - :  A string with the name of the event.
+    It is case-sensitive and browsers always set it to `redraw`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `layer`
+      - : The {{domxref("XRLayer")}} to which the event is to be delivered.
 
 ### Return value
 
-A newly-created {{domxref("XRLayer")}} object representing an object of the
+A new {{domxref("XRLayer")}} object representing an object of the
 specified type and configured as described by the `eventInitDict` parameter.
 
 ## Examples
@@ -45,7 +47,7 @@ In this example, a new `redraw` event is created for an {{domxref("XRQuadLayer")
 ```js
 const redrawEvent = new XRLayerEvent("redraw", {
   layer: quadLayer
-}):
+});
 
 quadLayer.dispatchEvent();
 ```

@@ -13,7 +13,7 @@ The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) f
 ## See also
 
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) on MDN
-- {{Interwiki("wikipedia", "Cross-origin resource sharing")}} on Wikipedia
+- [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia
 - [Fetch specification](https://fetch.spec.whatwg.org)
 
 ### CORS headers

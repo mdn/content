@@ -15,7 +15,7 @@ tags:
   - Number
   - Reference
   - month
-browser-compat: html.elements.input.input-month
+browser-compat: html.elements.input.type_month
 ---
 
 {{HTMLRef("Input_types")}}
@@ -42,7 +42,7 @@ The Microsoft Edge `month` control looks like this:
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a month and year, or
+        A string representing a month and year, or
         empty.
       </td>
     </tr>
@@ -83,7 +83,7 @@ The Microsoft Edge `month` control looks like this:
 
 ## Value
 
-A {{domxref("DOMString")}} representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month).
+A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month).
 The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.
 
 ### Setting a default value
@@ -111,7 +111,7 @@ You can also get and set the date value in JavaScript using the {{domxref("HTMLI
 ```
 
 ```js
-var monthControl = document.querySelector('input[type="month"]');
+const monthControl = document.querySelector('input[type="month"]');
 monthControl.value = '2001-06';
 ```
 
@@ -259,13 +259,13 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
   content: '✖';
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
@@ -296,7 +296,7 @@ For example:
 - `mm-yyyy` (07-2022)
 - `yyyy-mm` (2022-07)
 - `Month yyyy` (July 2022)
-- ... and so forth.
+- and so forth…
 
 One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `month` input.
 Even though the `month` input doesn't use it, if the browser falls back to treating it like a `text` input, the pattern will be used.
@@ -339,13 +339,13 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
   content: '✖';
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
@@ -422,13 +422,13 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
   content: '✖';
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
@@ -445,20 +445,20 @@ Browsers that don't support type `month` will return `text`, since that's What m
 If `<input type="month">` is not supported, we hide the native picker and show the fallback picker UI instead.
 
 ```js
-// define variables
-var nativePicker = document.querySelector('.nativeDatePicker');
-var fallbackPicker = document.querySelector('.fallbackDatePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+// Get UI elements
+const nativePicker = document.querySelector('.nativeDatePicker');
+const fallbackPicker = document.querySelector('.fallbackDatePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var yearSelect = document.querySelector('#year');
-var monthSelect = document.querySelector('#month');
+const yearSelect = document.querySelector('#year');
+const monthSelect = document.querySelector('#month');
 
-// hide fallback initially
+// Hide fallback initially
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
-// test whether a new date input falls back to a text input or not
-var test = document.createElement('input');
+// Test whether a new date input falls back to a text input or not
+const test = document.createElement('input');
 
 try {
   test.type = 'month';
@@ -466,27 +466,27 @@ try {
   console.log(e.description);
 }
 
-// if it does, run the code inside the if() {} block
-if(test.type === 'text') {
-  // hide the native picker and show the fallback
+// If it does, run the code inside the if () {} block
+if (test.type === 'text') {
+  // Hide the native picker and show the fallback
   nativePicker.style.display = 'none';
   fallbackPicker.style.display = 'block';
   fallbackLabel.style.display = 'block';
 
-  // populate the years dynamically
+  // Populate the years dynamically
   // (the months are always the same, therefore hardcoded)
   populateYears();
 }
 
 function populateYears() {
-  // get the current year as a number
-  var date = new Date();
-  var year = date.getFullYear();
+  // Get the current year as a number
+  const date = new Date();
+  const year = date.getFullYear();
 
   // Make this year, and the 100 years before it available in the year <select>
-  for(var i = 0; i <= 100; i++) {
-    var option = document.createElement('option');
-    option.textContent = year-i;
+  for (let i = 0; i <= 100; i++) {
+    const option = document.createElement('option');
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }

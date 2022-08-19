@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.scrollPathIntoView()
 slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -71,28 +72,34 @@ Edit the code below to see your changes update live in the canvas:
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.rect(10, 10, 30, 30);
-ctx.scrollPathIntoView();</textarea>
+ctx.fill();
+if (ctx.scrollPathIntoView) {
+  ctx.scrollPathIntoView();
+} else {
+  ctx.fillText("Your browser does not support 'scrollPathIntoView()'.", 0, 150);
+}
+</textarea>
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
+const code = textarea.value;
 
 function drawCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", () => {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", () => {
   textarea.focus();
 })
 

@@ -1,9 +1,9 @@
 ---
 title: VideoPlaybackQuality
 slug: Web/API/VideoPlaybackQuality
+page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Frames
   - HTML DOM
   - Interface
@@ -34,9 +34,9 @@ _The `VideoPlaybackQuality` interface doesn't inherit properties from any other 
 
 ### Obsolete properties
 
-- {{domxref("VideoPlaybackQuality.corruptedVideoFrames", "corruptedVideoFrames")}} {{readonlyInline}}
+- {{domxref("VideoPlaybackQuality.corruptedVideoFrames", "corruptedVideoFrames")}} {{readonlyInline}} {{Deprecated_Inline}}
   - : An `unsigned long` giving the number of video frames corrupted since the creation of the associated {{domxref("HTMLVideoElement")}}. A corrupted frame may be created or dropped.
-- {{domxref("VideoPlaybackQuality.totalFrameDelay", "totalFrameDelay")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxref("VideoPlaybackQuality.totalFrameDelay", "totalFrameDelay")}} {{readonlyInline}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : A `double` containing the sum of the frame delay since the creation of the associated {{domxref("HTMLVideoElement")}}. The frame delay is the difference between a frame's theoretical presentation time and its effective display time.
 
 ## Methods

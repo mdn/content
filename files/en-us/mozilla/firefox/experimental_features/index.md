@@ -64,7 +64,7 @@ The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{
 
 ### Layout for input type="search"
 
-Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See {{bug(558594)}} for more details)
+Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See {{bug(558594)}} for more details.)
 
 <table>
   <thead>
@@ -389,48 +389,6 @@ Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Ma
   </tbody>
 </table>
 
-### Media feature: prefers-contrast
-
-The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feature is used to detect whether the user has specified a preference for higher (or lower) contrast in the presentation of web content. Refer to {{bug("1506364")}} for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>80</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>80</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>80</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>80</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <p><code>layout.css.prefers-contrast.enabled</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ### Property: math-style
 
 The {{cssxref("math-style")}} property indicates whether MathML equations should render with normal or compact height. (See {{bug(1665975)}} for more details.)
@@ -475,7 +433,7 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
 
 The {{cssxref('@scroll-timeline')}} at-rule and {{cssxref('animation-timeline')}} property allow you to define animations that are linked to container scroll progress (rather than time).
 Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
-For more information see {{bug(1676791)}} and {{bug(1676782)}}
+For more information see {{bug(1676791)}} and {{bug(1676782)}}.
 
 <table>
   <thead>
@@ -509,6 +467,47 @@ For more information see {{bug(1676791)}} and {{bug(1676782)}}
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.scroll-linked-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### linear() easing function
+
+The `linear(...)` [easing function](/en-US/docs/Web/CSS/easing-function) defines a piecewise linear function, allowing you to approximate more complex animations.
+(See {{bug(1764126)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>104</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.linear-easing-function.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -561,7 +560,7 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ### Array grouping methods
 
-The {{jsxref("Array.prototype.groupBy()")}} and {{jsxref("Array.prototype.groupByToMap()")}} methods are used to group the elements of an array using a string or value, respectively, returned by a test function.
+The {{jsxref("Array.prototype.group()")}} and {{jsxref("Array.prototype.groupToMap()")}} methods are used to group the elements of an array using a string or value, respectively, returned by a test function.
 The `groupBy` method should be used when strings can be used to represent element groups, while `groupByToMap()` should be used in cases where it makes sense to use a value as the key.
 (See {{bug(1739648)}} for more details.)
 
@@ -691,7 +690,7 @@ When this preference is enabled, any WebGL extensions currently in "draft" statu
 
 #### WebGPU API
 
-This new API provides low-level support for performing computation and graphics rendering using the {{interwiki("wikipedia", "Graphics Processing Unit")}} (GPU) of the user's device or computer. The [specification](https://gpuweb.github.io/gpuweb/) is still a work-in-progress. See {{bug(1602129)}} for our progress on this API.
+This new API provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer. The [specification](https://gpuweb.github.io/gpuweb/) is still a work-in-progress. See {{bug(1602129)}} for our progress on this API.
 
 <table>
   <thead>
@@ -904,7 +903,7 @@ This feature allows Firefox on Android to use [AV1 format media](/en-US/docs/Web
 
 #### JPEG XL support
 
-With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images, see {{bug(1539075)}} for more details. This feature is available in nightly builds effective in Firefox 90 or later.
+With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images, see {{bug(1539075)}} for more details.
 
 <table>
   <thead>
@@ -937,7 +936,7 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2">image.jxl.enabled</td>
+      <td colspan="2"><code>image.jxl.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1152,7 +1151,7 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
 
 #### ClipboardRead
 
-The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See ({{bug(1701512)}}) for more details.)
+The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See {{bug(1701512)}} for more details.)
 
 <table>
   <thead>
@@ -1192,7 +1191,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
 
 #### HTML Sanitizer API
 
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.
+The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See {{bug('1673309')}} for more details.
 
 <table>
   <thead>
@@ -1352,12 +1351,12 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 
 #### ElementInternals: Form associated custom element methods and properties
 
-New {{domxref("ElementInternals")}} properties and methods that allow a custom elements to interact with a form:
+New {{domxref("ElementInternals")}} properties and methods that allow custom elements to interact with a form:
 
-- property: {{domxref("ElementInternals.form","form")}} gets the form associated with the element
-- property: {{domxref("ElementInternals.labels","labels")}} gets the list of labels associated with the element
-- property: {{domxref("ElementInternals.willValidate", "willValidate")}} checks if a custom form element will be validated.
-- method: {{domxref("ElementInternals.setFormValue()","setFormValue()")}} set the sanitized value and user-entered data, if needed.
+- The {{domxref("ElementInternals.form","form")}} property gets the form associated with the element.
+- The {{domxref("ElementInternals.labels","labels")}} property gets the list of labels associated with the element.
+- The {{domxref("ElementInternals.willValidate", "willValidate")}} property checks if a custom form element will be validated.
+- The {{domxref("ElementInternals.setFormValue()","setFormValue()")}} method sets the sanitized value and user-entered data, if needed.
 
 See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}, {{bug(1556449)}}.
 
@@ -1438,48 +1437,6 @@ The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides supp
         <code>dom.payments.request.enabled</code> and<br /><code
           >dom.payments.request.supportedRegions</code
         >
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### Constructable stylesheets
-
-The addition of a constructor to the {{domxref("CSSStyleSheet")}} interface as well as a variety of related changes makes it possible to directly create new stylesheets without having to add the sheet to the HTML. This makes it much easier to create reusable stylesheets for use with [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM). Our implementation is not yet complete; see {{bug(1520690)}} for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>layout.css.constructable-stylesheets.enabled</code>
       </td>
     </tr>
   </tbody>
@@ -1571,6 +1528,13 @@ Note that since locking the screen orientation isn't typically supported on desk
     </tr>
   </tbody>
 </table>
+
+### Prioritized Task Scheduling API
+
+The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
+
+This is enabled on Firefox Nightly (only) from Firefox 101.
+No preference is provided to allow it to be enabled in other releases.
 
 ## Security and privacy
 

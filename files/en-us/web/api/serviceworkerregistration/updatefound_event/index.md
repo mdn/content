@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerRegistration: updatefound event'
 slug: Web/API/ServiceWorkerRegistration/updatefound_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -19,9 +20,9 @@ The **`updatefound`** event of the
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('updatefound', event => { });
+addEventListener('updatefound', (event) => { });
 
-onupdatefound = event => { };
+onupdatefound = (event) => { };
 ```
 
 ## Event type

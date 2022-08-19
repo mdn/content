@@ -1,6 +1,7 @@
 ---
 title: performance.mark()
 slug: Web/API/Performance/mark
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -34,7 +35,7 @@ mark(name, markOptions)
 
 ### Parameters
 
-- name
+- `name`
   - : A string representing the name of the mark. If the
     `name` given to this method already exists in the
     {{domxref("PerformanceTiming")}} interface, {{jsxref("SyntaxError")}} is

@@ -74,8 +74,9 @@ If the alignment is set using the element's `align` attribute, then the style is
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+<meta charset="UTF-8">
 <title>CSS box-align example</title>
 <style>
 div.example {

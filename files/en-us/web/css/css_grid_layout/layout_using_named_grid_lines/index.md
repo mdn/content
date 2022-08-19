@@ -1,5 +1,5 @@
 ---
-title: Layout using named grid lines
+title: Grid layout using named grid lines
 slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 tags:
   - CSS
@@ -315,7 +315,7 @@ If we write this definition out without using repeat notation it would look like
 
 ```css
 .wrapper {
-  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr  [col-end col-start] 1fr [col-end];
+  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end];
 }
 ```
 
@@ -412,7 +412,7 @@ I could then place this on my grid layout framework like this.
 
 ```css
 .main-header,
-.main-footer  {
+.main-footer {
   grid-column: col-start / span 12;
 }
 

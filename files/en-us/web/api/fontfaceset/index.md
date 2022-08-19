@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet
 slug: Web/API/FontFaceSet
+page-type: web-api-interface
 tags:
   - API
   - CSS Font Loading API

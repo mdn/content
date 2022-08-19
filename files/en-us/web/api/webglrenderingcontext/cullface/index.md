@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.cullFace()
 slug: Web/API/WebGLRenderingContext/cullFace
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -34,7 +35,7 @@ cullFace(mode)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

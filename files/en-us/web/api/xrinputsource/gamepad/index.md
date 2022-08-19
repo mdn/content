@@ -1,6 +1,7 @@
 ---
 title: XRInputSource.gamepad
 slug: Web/API/XRInputSource/gamepad
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -32,8 +33,8 @@ The {{domxref("Gamepad")}} instance returned behaves as described by the [Gamepa
 ### Using a gamepad input source
 
 ```js
-for (let source of frame.session.inputSources) {
-  let gamepad = source.gamepad;
+for (const source of frame.session.inputSources) {
+  const gamepad = source.gamepad;
   if (gamepad) {
     if (gamepad.buttons[2].pressed) {
       // do something

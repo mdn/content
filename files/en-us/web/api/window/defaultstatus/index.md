@@ -1,6 +1,7 @@
 ---
 title: Window.defaultStatus
 slug: Web/API/Window/defaultStatus
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

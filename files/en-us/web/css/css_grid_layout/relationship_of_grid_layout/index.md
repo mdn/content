@@ -230,7 +230,7 @@ In comparison, the grid version always has three column tracks. The tracks thems
 
 #### Auto-filling grid tracks
 
-We can create a similar effect to flexbox, while still keeping the content arranged in strict rows and columns, by creating our track listing using repeat notation and the `auto-fill` and `auto-fit` properties.
+We can use grid to create a similar effect to flexbox, while still keeping the content arranged in strict rows and columns, by creating our track listing using repeat notation and the `auto-fill` and `auto-fit` properties.
 
 In this next example, I have used the `auto-fill` keyword in place of an integer in the repeat notation and set the track listing to 200 pixels. This means that grid will create as many 200 pixels column tracks as will fit in the container.
 
@@ -372,11 +372,11 @@ In the below example I have a wrapper containing four child items. Item three is
 
 You can see that the item is taking the area from grid column line 2 to 4, and starting after line 1. Then it is offset in that area using the top and left properties. However, it has been taken out of flow as is usual for absolutely positioned items and so the auto-placement rules now place items into the same space. The item also doesn't cause the additional row to be created to span to row line 3.
 
-If we remove `position:` `absolute` from the rules for `.box3` you can see how it would display without the positioning.
+If we remove `position: absolute` from the rules for `.box3` you can see how it would display without the positioning.
 
 ### A grid container as parent
 
-If the absolutely positioned child has a grid container as a parent but that container does not create a new positioning context, then it is taken out of flow as in the previous example. The positioning context will be whatever element creates a positioning context as is common to other layout methods. In our case, if we remove `position:` `relative` from the wrapper above, positioning context is from the viewport, as shown in this image.
+If the absolutely positioned child has a grid container as a parent but that container does not create a new positioning context, then it is taken out of flow as in the previous example. The positioning context will be whatever element creates a positioning context as is common to other layout methods. In our case, if we remove `position: relative` from the wrapper above, positioning context is from the viewport, as shown in this image.
 
 ![Image of grid container as parent](2_abspos_example.png)
 
@@ -446,13 +446,13 @@ I have given `.box3` position relative and then positioned the sub-item with the
 
 {{ EmbedLiveSample('With_a_grid_area_as_the_parent', '500', '460') }}
 
-## Grid and `display: contents`
+## Grid and display: contents
 
 A final interaction with another layout specification that is worth noting is the interaction between CSS Grid Layout and `display: contents`. The `contents` value of the display property is a new value that is described in the [Display specification](https://drafts.csswg.org/css-display/#box-generation) as follows:
 
 > "The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree."
 
-If you set an item to `display:` `contents` the box it would normally create disappears, and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is a simple example.
+If you set an item to `display: contents`, the box it would normally create disappears and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is a simple example.
 
 ### Grid layout with nested child elements
 
@@ -510,9 +510,9 @@ In the following markup, I have a grid and the first item on the grid is set to 
 
 {{ EmbedLiveSample('Grid_layout_with_nested_child_elements', '400', '440') }}
 
-### Using `display: contents`
+### Using display: contents
 
-If I now add `display:` `contents` to the rules for `box1`, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.
+If I now add `display: contents` to the rules for `box1`, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -567,11 +567,11 @@ If I now add `display:` `contents` to the rules for `box1`, the box for that ite
 
 {{ EmbedLiveSample('Using_display_contents', '400', '350') }}
 
-This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use `display:` `contents` in a similar way with flexbox to enable nested items to become flex items.
+This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use `display: contents` in a similar way with flexbox to enable nested items to become flex items.
 
 As you can see from this guide, CSS Grid Layout is just one part of your toolkit. Don't be afraid to mix it with other methods of doing layout to get the different effects you need.
 
 ## See also
 
-- [Flexbox Guides](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Multiple-column Layout Guides](/en-US/docs/Web/CSS/CSS_Columns)
+- [Flexbox guides](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Multiple-column layout guides](/en-US/docs/Web/CSS/CSS_Columns)

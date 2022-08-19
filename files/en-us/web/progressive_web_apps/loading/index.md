@@ -10,7 +10,7 @@ tags:
 ---
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
-In previous articles we covered APIs that help us make our [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) example a Progressive Web App: [Service Workers](en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs), [Notifications and Push](/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push). In this article we will go even further and improve the performance of the app by progressively loading its resources.
+In previous articles we covered APIs that help us make our [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) example a Progressive Web App: [Service Workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs), [Notifications and Push](/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push). In this article we will go even further and improve the performance of the app by progressively loading its resources.
 
 ## First meaningful paint
 
@@ -117,10 +117,10 @@ This is a progressive enhancement to the previously working example — [Interse
 Here's what the relevant code looks like:
 
 ```js
-if('IntersectionObserver' in window) {
+if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((items, observer) => {
     items.forEach((item) => {
-      if(item.isIntersecting) {
+      if (item.isIntersecting) {
         loadImages(item.target);
         observer.unobserve(item.target);
       }

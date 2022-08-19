@@ -32,7 +32,7 @@ let gettingPanel = browser.sidebarAction.getPanel(
 
   - : `object`. An object with the following properties:
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Get the panel for the sidebar specific to the given tab.
     - `windowId` {{optional_inline}}
       - : `integer`. Get the panel for the sidebar specific to the given window.

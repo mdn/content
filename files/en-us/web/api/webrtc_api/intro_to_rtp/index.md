@@ -1,6 +1,7 @@
 ---
 title: Introduction to the Real-time Transport Protocol (RTP)
 slug: Web/API/WebRTC_API/Intro_to_RTP
+page-type: guide
 tags:
   - API
   - Connectivity
@@ -43,7 +44,7 @@ RTP's primary benefits in terms of WebRTC include:
 
 RTP itself doesn't provide every possible feature, which is why other protocols are also used by WebRTC. Some of the more noteworthy things RTP doesn't include:
 
-- RTP does _not_ guarantee **{{interwiki("wikipedia", "quality-of-service")}}** (**QoS**).
+- RTP does _not_ guarantee **[quality-of-service](https://en.wikipedia.org/wiki/Quality-of-service)** (**QoS**).
 - While RTP is intended for use in latency-critical scenarios, it doesn't inherently offer any features that ensure QoS. Instead, it only offers the information necessary to allow QoS to be implemented elsewhere in the stack.
 - RTP doesn't handle allocation or reservation of resources that may be needed.
 
@@ -80,7 +81,7 @@ async function enableHold(audioStream) {
     await audioTransceiver.sender.replaceTrack(audioStream.getAudioTracks()[0]);
     audioTransceiver.receiver.track.enabled = false;
     audioTransceiver.direction = "sendonly";
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -107,7 +108,7 @@ async function holdRequested(offer) {
     await audioTransceiver.sender.replaceTrack(null);
     audioTransceiver.direction = "recvonly";
     await sendAnswer();
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -153,7 +154,7 @@ async function holdEnded(offer, micStream) {
     await audioTransceiver.sender.replaceTrack(micStream.getAudioTracks()[0]);
     audioTransceiver.direction = "sendrecv";
     await sendAnswer();
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }

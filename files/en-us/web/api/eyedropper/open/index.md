@@ -1,6 +1,7 @@
 ---
 title: EyeDropper.open()
 slug: Web/API/EyeDropper/open
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,7 @@ The **`EyeDropper.open()`** method starts the eyedropper mode, returning a promi
 
 ```js
 open()
-open( options )
+open(options)
 ```
 
 ### Parameters

@@ -21,8 +21,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ### Canvas
 
-- [Blob Sallad: an interactive blob using JavaScript and canvas](https://www.blobsallad.se/) ([code demos)](https://blobsallad.se/article/)
-- [3D RayCaster](https://mdn.github.io/canvas-raycaster/index.html)
+- [Blob Sallad: an interactive blob using JavaScript and canvas](https://www.blobsallad.se/) ([code demos)](https://web.archive.org/web/20190807191003/https://blobsallad.se/article/)
 - [miniPaint: Image editor](https://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
 - [Zen Photon Garden](https://zenphoton.com) ([source code](https://github.com/scanlime/zenphoton))
 - [Multi touch in canvas demo](https://maximumroulette.com/) ([source code](https://github.com/zlatnaspirala/multi-touch-canvas-handler))
@@ -55,7 +54,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ## CSS
 
-- [CSS floating logo "mozilla"](https://codepen.io/SoftwareRVG/pen/OXkOWj/)
+- [CSS floating logo "mozilla"](https://codepen.io/SoftwareRVGdesignS/pen/OXZOWj)
 - [CSS Blockout](https://ondras.github.io/blockout/)
 - [Rubik's cube](https://ondras.github.io/rubik/)
 - [Loader with blend modes](https://codepen.io/equinusocio/full/qjyXPP/)
@@ -75,7 +74,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ### Notifications API
 
-- [HTML5 Notifications](https://elfoxero.github.io/html5notifications/) ([source code](https://github.com/elfoxero/html5notifications))
+- [HTML Notifications](https://elfoxero.github.io/html5notifications/) ([source code](https://github.com/elfoxero/html5notifications))
 
 ### Web Audio API
 

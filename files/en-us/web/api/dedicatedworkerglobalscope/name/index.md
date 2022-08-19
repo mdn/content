@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope.name
 slug: Web/API/DedicatedWorkerGlobalScope/name
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -28,7 +29,7 @@ A string.
 If a worker is created using a constructor with a `name` option:
 
 ```js
-var myWorker = new Worker("worker.js", { name : "myWorker" });
+const myWorker = new Worker("worker.js", { name : "myWorker" });
 ```
 
 the {{domxref("DedicatedWorkerGlobalScope")}} will now have a name of "myWorker",

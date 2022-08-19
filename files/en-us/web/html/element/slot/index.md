@@ -44,7 +44,7 @@ The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element—part of the [Web Compone
     </tr>
     <tr>
       <th scope="row">Events</th>
-      <td>{{event("slotchange")}}</td>
+      <td>{{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -109,7 +109,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   <details>
     <summary>
       <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
-      <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+      <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
     </summary>
     <div class="attributes">
       <h4>Attributes</h4>
@@ -120,7 +120,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 </template>
 ```
 
-> **Note:** You can see this complete example in action at [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/)). In addition, you can find an explanation at [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots).
+> **Note:** You can see this complete example in action at [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/)). In addition, you can find an explanation at [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots).
 
 ## Specifications
 

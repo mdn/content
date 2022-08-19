@@ -1,10 +1,10 @@
 ---
 title: MediaKeySession.close()
 slug: Web/API/MediaKeySession/close
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeySession
   - Method
   - NeedsExample

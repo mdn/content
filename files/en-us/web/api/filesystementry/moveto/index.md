@@ -1,9 +1,9 @@
 ---
 title: FileSystemEntry.moveTo()
 slug: Web/API/FileSystemEntry/moveTo
+page-type: web-api-instance-method
 tags:
   - API
-  - File System API
   - File and Directory Entries API
   - FileSystemEntry
   - Files
@@ -14,7 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.moveTo
 ---
-{{APIRef("File System API")}}{{SeeCompatTable}}{{deprecated_header}}
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`moveTo()`** moves the file
@@ -78,10 +78,10 @@ This example shows how a temporary log file might be moved into a more permanent
 directory when it exceeds a megabyte in size.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
-  fileEntry.getMetadata(function(metadata) {
+workingDirectory.getFile("tmp/log.txt", {}, (fileEntry) => {
+  fileEntry.getMetadata((metadata) => {
     if (metadata.size > 1048576) {
-      workingDirectory.getDirectory("log", {}, function(dirEntry) {
+      workingDirectory.getDirectory("log", {}, (dirEntry) => {
         fileEntry.moveTo(dirEntry);
       }, handleError);
     }
@@ -95,8 +95,6 @@ workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry.copyTo()")}}

@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.firCount
 slug: Web/API/RTCRtpStreamStats/firCount
+page-type: web-api-instance-property
 tags:
   - API
   - Dropped Frames

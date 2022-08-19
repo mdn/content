@@ -1,6 +1,7 @@
 ---
 title: Document.hidden
 slug: Web/API/Document/hidden
+page-type: web-api-instance-property
 tags:
   - DOM
   - Document
@@ -16,22 +17,21 @@ browser-compat: api.Document.hidden
 The **`Document.hidden`** read-only property returns a Boolean
 value indicating if the page is considered hidden or not.
 
-> **Note:** This property is described as "historical" in the [Page Visibility Level 2
-> specification](https://www.w3.org/TR/page-visibility-2/). Consider using the {{domxref("Document.visibilityState")}}
+> **Note:** This property is described as "historical" in the [Page Visibility Level 2 specification](https://www.w3.org/TR/page-visibility-2/). Consider using the {{domxref("Document.visibilityState")}}
 > property instead.
 
 ## Syntax
 
 ```js
-var boolean = document.hidden
+document.hidden
 ```
 
 ## Examples
 
 ```js
-document.addEventListener("visibilitychange", function() {
-  console.log( document.hidden );
-  // Modify behavior...
+document.addEventListener("visibilitychange", () => {
+  console.log(document.hidden);
+  // Modify behavior…
 });
 ```
 

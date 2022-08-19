@@ -1,6 +1,7 @@
 ---
 title: AudioParam.setValueCurveAtTime()
 slug: Web/API/AudioParam/setValueCurveAtTime
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -74,33 +75,26 @@ parameter.
 
 ## Examples
 
-In this example, we have a media source with a single button (see the [webaudio-examples
-repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example
-live](https://mdn.github.io/webaudio-examples/audio-param/).) When this button is pressed, `setValueCurveAtTime()` is used to
+In this example, we have a media source with a single button (see the [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When this button is pressed, `setValueCurveAtTime()` is used to
 change the gain value between the values contained in the waveArray array:
 
 ```js
 // create audio context
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
 // set basic variables for example
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+const myAudio = document.querySelector('audio');
 
-pre.innerHTML = myScript.innerHTML;
-
-var valueCurve = document.querySelector('.value-curve');
+const valueCurve = document.querySelector('.value-curve');
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
-var source = audioCtx.createMediaElementSource(myAudio);
+const source = audioCtx.createMediaElementSource(myAudio);
 
 // Create a gain node and set it's gain value to 0.5
-var gainNode = audioCtx.createGain();
+const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.5;
-var currGain = gainNode.gain.value;
+const currGain = gainNode.gain.value;
 
 // connect the AudioBufferSourceNode to the gainNode
 // and the gainNode to the destination
@@ -109,7 +103,7 @@ gainNode.connect(audioCtx.destination);
 
 // set button to do something onclick
 
-var waveArray = new Float32Array(9);
+const waveArray = new Float32Array(9);
 waveArray[0] = 0.5;
 waveArray[1] = 1;
 waveArray[2] = 0.5;
@@ -120,7 +114,7 @@ waveArray[6] = 0.5;
 waveArray[7] = 0;
 waveArray[8] = 0.5;
 
-valueCurve.onclick = function() {
+valueCurve.onclick = () => {
   gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2);
 }
 ```

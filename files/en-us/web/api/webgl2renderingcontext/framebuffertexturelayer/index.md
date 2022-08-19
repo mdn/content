@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.framebufferTextureLayer()
 slug: Web/API/WebGL2RenderingContext/framebufferTextureLayer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -57,7 +58,7 @@ framebufferTextureLayer(target, attachment, texture, level, layer)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: AbstractRange.collapsed
 slug: Web/API/AbstractRange/collapsed
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

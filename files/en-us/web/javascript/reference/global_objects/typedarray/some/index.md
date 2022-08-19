@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.TypedArray.some
 The **`some()`** method tests whether some element in the typed
 array passes the test implemented by the provided function. This method has the same
 algorithm as {{jsxref("Array.prototype.some()")}}_._ _TypedArray_ is one
-of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
 
@@ -59,7 +59,7 @@ some(function(element, index, array) { /* ... */ }, thisArg)
 
 ### Return value
 
-**`true`** if the callback function returns a [truthy](/en-US/docs/Glossary/truthy) value for any array element; otherwise,
+**`true`** if the callback function returns a [truthy](/en-US/docs/Glossary/Truthy) value for any array element; otherwise,
 **`false`**.
 
 ## Description
@@ -81,25 +81,6 @@ Otherwise, the value `undefined` will be passed for use as its
 
 `some` does not mutate the typed array on which it is called.
 
-## Polyfill
-
-Since there is no global object with the name _TypedArray_, polyfilling must be
-done on an "as needed" basis.
-
-```js
-// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some
-if (!Uint8Array.prototype.some) {
-  Object.defineProperty(Uint8Array.prototype, 'some', {
-    value: Array.prototype.some
-  });
-}
-```
-
-If you need to support truly obsolete JavaScript engines that don't support
-[`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty),
-it's best not to polyfill `Array.prototype` methods at all, as you can't make
-them non-enumerable.
-
 ## Examples
 
 ### Testing size of all typed array elements
@@ -119,8 +100,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
-new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+new Uint8Array([2, 5, 8, 1, 4]).some((elem) => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some((elem) => elem > 10); // true
 ```
 
 ## Specifications

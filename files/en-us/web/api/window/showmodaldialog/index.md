@@ -1,6 +1,7 @@
 ---
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -31,9 +32,7 @@ showModalDialog(uri, arguments, options)
 - `uri`
   - : Is the URL of the document to display in the dialog.
 - `arguments` {{optional_inline}}
-  - : Values passed to the dialog; these are made available in the
-    [`window`](/en-US/docs/Web/API/Window) object's
-    [`window.dialogArguments`](/en-US/docs/Web/API/Window/dialogArguments)
+  - : Values passed to the dialog.
     property.
 - `options` {{optional_inline}}
   - : A string specifying window ornamentation for the
@@ -101,15 +100,9 @@ showModalDialog(uri, arguments, options)
 
  Holds the `returnValue` property as set by the document specified by `uri`.
 
-## Notes
-
-`showModalDialog()` was briefly standardized as part of HTML5. The third
-argument for additional options was not present in the HTML5 version.
-
 ## Specifications
 
-- [MSDN page
-  for `showModalDialog`](<https://msdn.microsoft.com/library/ms536759(VS.85).aspx>)
+- [MSDN page for `showModalDialog`](<https://msdn.microsoft.com/library/ms536759(VS.85).aspx>)
 
 ## Browser compatibility
 

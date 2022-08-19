@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -94,5 +95,4 @@ source.start(audioCtx.currentTime + 1,3,10);
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

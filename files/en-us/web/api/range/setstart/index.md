@@ -1,6 +1,7 @@
 ---
 title: Range.setStart()
 slug: Web/API/Range/setStart
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -30,9 +31,9 @@ setStart(startNode, startOffset)
 
 ### Parameters
 
-- _startNode_
+- `startNode`
   - : The {{ domxref("Node") }} where the {{ domxref("Range") }} should start.
-- _startOffset_
+- `startOffset`
   - : An integer greater than or equal to zero representing the offset for the start of
     the {{ domxref("Range") }} from the start of `startNode`.
 
@@ -72,7 +73,7 @@ const address = document.getElementById('address');
 const log = document.getElementById('log');
 
 // Log info
-address.childNodes.forEach(node => {
+address.childNodes.forEach((node) => {
   const li = document.createElement('li');
   li.textContent = `${node.nodeName}, ${node.nodeValue}`;
   log.appendChild(li);

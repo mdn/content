@@ -8,6 +8,9 @@ tags:
   - Reference
   - ARIA roles
   - treeitem
+spec-urls:
+  - https://w3c.github.io/aria/#treeitem
+  - https://w3c.github.io/aria-practices/#TreeView
 ---
 
 A `treeitem` is an item in a `tree`.
@@ -236,10 +239,7 @@ If the tree has more than 7 tree items, including type ahead functionality is re
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#treeitem","ARIA: treeitem role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_treeitem_role","treeitem role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

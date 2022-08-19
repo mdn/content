@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.transform()
 slug: Web/API/CanvasRenderingContext2D/transform
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

@@ -79,7 +79,7 @@ p.para2 {
 
 #### Result
 
-{{ EmbedLiveSample('Using_Danish_glyphs', '600', '', '', 'Web/CSS/font-language-override') }}
+{{ EmbedLiveSample('Using Danish glyphs') }}
 
 ## Specifications
 

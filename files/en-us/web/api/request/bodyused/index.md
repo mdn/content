@@ -1,6 +1,7 @@
 ---
 title: Request.bodyUsed
 slug: Web/API/Request/bodyUsed
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -30,7 +31,7 @@ const request = new Request('/myEndpoint', {
 
 request.bodyUsed; // false
 
-request.text().then(function(bodyAsText) {
+request.text().then((bodyAsText) => {
   console.log(request.bodyUsed); // true
 });
 ```

@@ -1,6 +1,7 @@
 ---
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View

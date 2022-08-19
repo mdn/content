@@ -10,6 +10,7 @@ tags:
   - range role
   - spinbutton role
   - spinbutton
+spec-urls: https://w3c.github.io/aria/#spinbutton
 ---
 
 The `spinbutton` role defines a type of range that expects the user to select a value from among discrete choices.
@@ -38,7 +39,8 @@ The `slider` role, similar to HTML's `input` of type `range`, [`<input type="ran
 
 While all three of these ranges have the same ARIA states and properties, the `spinbutton` role is the only read-write range: it is the only one whose value changes via user interaction. As such, it must be able to receive focus. In addition, keyboard interaction, mouse clicks, and touch interaction must be supported.
 
-> **Warning** To change the spinbutton value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events. Fully test spinbutton widgets using assistive technologies on devices where touch is a primary input mechanism before using the `spinbutton` role (and all range widgets).
+> **Warning:** To change the spinbutton value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.
+> Fully test spinbutton widgets using assistive technologies on devices where touch is a primary input mechanism before using the `spinbutton` role (and all range widgets).
 
 #### Common attributes
 
@@ -69,7 +71,7 @@ There are some types of user interface components that, when represented in a pl
 
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
   - : Assistive technologies often present the value of `aria-valuenow` as a number. If `aria-valuenow` cannot be accurate, use `aria-valuetext` to provide the spinbutton with a more understandable value.
-  
+
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
   - : Set to a decimal value representing the minimum value and less than `aria-valuemax`. If not present, there is no default value.
 
@@ -145,9 +147,7 @@ It is recommended to use the native {{HTMLElement("input")}} element of type `nu
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#spinbutton","ARIA: spinbutton role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See also
 
@@ -163,7 +163,7 @@ It is recommended to use the native {{HTMLElement("input")}} element of type `nu
 - Working examples:
   - [Date picker spin button example](https://www.w3.org/TR/wai-aria-practices/examples/spinbutton/datepicker-spinbuttons.html)
   - [Toolbar example: font-size picker](https://www.w3.org/TR/wai-aria-practices/examples/toolbar/toolbar.html)
-  
+
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)

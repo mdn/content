@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore
 slug: Web/API/IDBObjectStore
+page-type: web-api-interface
 tags:
   - API
   - IDBObjectStore
@@ -65,9 +66,9 @@ This example shows a variety of different uses of object stores, from updating t
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in db.
@@ -78,16 +79,16 @@ DBOpenRequest.onsuccess = function(event) {
 // the database needs to be created Either one has not
 // been created before, or a new version number has been
 // submitted via the window.indexedDB.open line above
-DBOpenRequest.onupgradeneeded = function(event) {
-  var db = event.target.result;
+DBOpenRequest.onupgradeneeded = (event) => {
+  const db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = (event) => {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 
   // Create an objectStore for this database
 
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // define what data items the objectStore will contain
 
@@ -103,28 +104,28 @@ DBOpenRequest.onupgradeneeded = function(event) {
 };
 
 // Create a new item to add in to the object store
-var newItem = [
+const newItem = [
   { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: 'December', year: 2013, notified: "no" }
 ];
 
 // open a read/write db transaction, ready for adding the data
-var transaction = db.transaction(["toDoList"], "readwrite");
+const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of the transaction completing, when everything is done
-transaction.oncomplete = function(event) {
+transaction.oncomplete = (event) => {
   note.innerHTML += '<li>Transaction completed.</li>';
 };
 
-transaction.onerror = function(event) {
+transaction.onerror = (event) => {
   note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
 };
 
 // create an object store on the transaction
-var objectStore = transaction.objectStore("toDoList");
+const objectStore = transaction.objectStore("toDoList");
 // make a request to add our newItem object to the object store
-var objectStoreRequest = objectStore.add(newItem[0]);
+const objectStoreRequest = objectStore.add(newItem[0]);
 
-objectStoreRequest.onsuccess = function(event) {
+objectStoreRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Request successful .</li>';
 }
 ```

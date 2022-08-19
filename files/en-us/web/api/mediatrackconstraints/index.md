@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
+page-type: web-api-interface
 tags:
   - API
   - Constraints
@@ -55,9 +56,9 @@ The `ConstrainDouble` constraint type is used to specify a constraint for a prop
 The `ConstrainDOMString` constraint type is used to specify a constraint for a property whose value is a string. Its value may either be set to a string, an array of strings, or an object containing the following properties:
 
 - `exact`
-  - : A {{domxref("DOMString")}}, or an array of `DOMString`s, one of which must be the value of the property. If the property can't be set to one of the listed values, matching will fail.
+  - : A string or an array of strings, one of which must be the value of the property. If the property can't be set to one of the listed values, matching will fail.
 - `ideal`
-  - : A {{domxref("DOMString")}}, or an array of `DOMString`s, specifying ideal values for the property. If possible, one of the listed values will be used, but if it's not possible, the user agent will use the closest possible match.
+  - : A string or an array of strings, specifying ideal values for the property. If possible, one of the listed values will be used, but if it's not possible, the user agent will use the closest possible match.
 
 ### ConstrainULong
 
@@ -99,7 +100,7 @@ Some combination—but not necessarily all—of the following properties will ex
   - : A [`ConstrainULong`](#constrainulong) specifying the sample rate or range of sample rates which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.sampleSize", "sampleSize")}}
   - : A [`ConstrainULong`](#constrainulong) specifying the sample size or range of sample sizes which are acceptable and/or required.
-- {{domxref("MediaTrackConstraints.volume", "volume")}}
+- {{domxref("MediaTrackConstraints.volume", "volume")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A [`ConstrainDouble`](#constraindouble) specifying the volume or range of volumes which are acceptable and/or required.
 
 ### Properties of image tracks

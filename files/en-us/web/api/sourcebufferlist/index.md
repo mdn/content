@@ -1,10 +1,10 @@
 ---
 title: SourceBufferList
 slug: Web/API/SourceBufferList
+page-type: web-api-interface
 tags:
   - API
   - Audio
-  - Experimental
   - Interface
   - MSE
   - Media Source Extensions
@@ -13,7 +13,7 @@ tags:
   - Video
 browser-compat: api.SourceBufferList
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`SourceBufferList`** interface represents a simple container list for multiple {{domxref("SourceBuffer")}} objects.
 
@@ -45,11 +45,10 @@ This example shows how to access the active source buffers of the {{domxref("Med
 
 ```js
 // Video is an already playing video using a MediaSource srcObject
-var video = document.querySelector('video');
-var mediaSource = video.srcObject;
-var sourceBufferList = mediaSource.activeSourceBuffers;
-for (var i = 0; i < sourceBufferList.length; i++) {
-  var sourceBuffer = sourceBufferList[i];
+const video = document.querySelector('video');
+const mediaSource = video.srcObject;
+const sourceBufferList = mediaSource.activeSourceBuffers;
+for (const sourceBuffer of sourceBufferList) {
   // Do something with each SourceBuffer, such as call abort()
   sourceBuffer.abort();
 }

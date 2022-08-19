@@ -1,6 +1,7 @@
 ---
 title: Event
 slug: Web/API/Event
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -27,7 +28,7 @@ Below is a list of interfaces which are based on the main `Event` interface, wit
 Note that all event interfaces have names which end in "Event".
 
 - {{domxref("AnimationEvent")}}
-- {{domxref("AudioProcessingEvent")}}
+- {{domxref("AudioProcessingEvent")}} {{Deprecated_Inline}}
 - {{domxref("BeforeUnloadEvent")}}
 - {{domxref("BlobEvent")}}
 - {{domxref("ClipboardEvent")}}
@@ -36,7 +37,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("CustomEvent")}}
 - {{domxref("DeviceMotionEvent")}}
 - {{domxref("DeviceOrientationEvent")}}
-- {{domxref("DeviceProximityEvent")}}
+- {{domxref("DeviceProximityEvent")}} {{Deprecated_Inline}}
 - {{domxref("DragEvent")}}
 - {{domxref("ErrorEvent")}}
 - {{domxref("FetchEvent")}}
@@ -48,10 +49,10 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("IDBVersionChangeEvent")}}
 - {{domxref("InputEvent")}}
 - {{domxref("KeyboardEvent")}}
-- {{domxref("MediaStreamEvent")}}
+- {{domxref("MediaStreamEvent")}} {{Deprecated_Inline}}
 - {{domxref("MessageEvent")}}
 - {{domxref("MouseEvent")}}
-- {{domxref("MutationEvent")}}
+- {{domxref("MutationEvent")}} {{Deprecated_Inline}}
 - {{domxref("OfflineAudioCompletionEvent")}}
 - {{domxref("PageTransitionEvent")}}
 - {{domxref("PaymentRequestUpdateEvent")}}
@@ -62,13 +63,13 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("RTCPeerConnectionIceEvent")}}
 - {{domxref("StorageEvent")}}
 - {{domxref("SubmitEvent")}}
-- {{domxref("SVGEvent")}}
+- {{domxref("SVGEvent")}} {{Deprecated_Inline}}
 - {{domxref("TimeEvent")}}
 - {{domxref("TouchEvent")}}
 - {{domxref("TrackEvent")}}
 - {{domxref("TransitionEvent")}}
 - {{domxref("UIEvent")}}
-- {{domxref("UserProximityEvent")}}
+- {{domxref("UserProximityEvent")}} {{Deprecated_Inline}}
 - {{domxref("WebGLContextEvent")}}
 - {{domxref("WheelEvent")}}
 

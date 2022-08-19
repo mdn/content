@@ -1,6 +1,7 @@
 ---
 title: Element.ariaColIndex
 slug: Web/API/Element/ariaColIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -70,4 +71,4 @@ console.log(el.ariaColIndex); // 2
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

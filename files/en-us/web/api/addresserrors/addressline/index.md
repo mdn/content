@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.addressLine
 slug: Web/API/AddressErrors/addressLine
+page-type: web-api-instance-property
 tags:
   - API
   - AddressErrors

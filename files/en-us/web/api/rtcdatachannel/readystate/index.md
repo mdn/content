@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.readyState
 slug: Web/API/RTCDataChannel/readyState
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -14,13 +15,7 @@ browser-compat: api.RTCDataChannel.readyState
 
 The read-only `RTCDataChannel` property **`readyState`** returns a string which indicates the state of the data channel's underlying data connection.
 
-## Syntax
-
-```js
-var state = aDataChannel.readyState;
-```
-
-### Values
+## Values
 
 A string indicating the current state of the underlying data transport, which is one of the following values:
 
@@ -47,20 +42,20 @@ A string indicating the current state of the underlying data transport, which is
 ## Example
 
 ```js
-var dataChannel = peerConnection.createDataChannel("File Transfer");
-var sendQueue = [];
+const dataChannel = peerConnection.createDataChannel("File Transfer");
+const sendQueue = [];
 
 function sendMessage(msg) {
   switch(dataChannel.readyState) {
     case "connecting":
-      console.log("Connection not open; queueing: " + msg);
+      console.log(`Connection not open; queueing: ${msg}`);
       sendQueue.push(msg);
       break;
     case "open":
       sendQueue.forEach((msg) => dataChannel.send(msg));
       break;
     case "closing":
-      console.log("Attempted to send message while closing: " + msg);
+      console.log(`Attempted to send message while closing: ${msg}`);
       break;
     case "closed":
       console.log("Error! Attempt to send while connection closed.");

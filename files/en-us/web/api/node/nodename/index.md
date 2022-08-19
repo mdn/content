@@ -1,6 +1,7 @@
 ---
 title: Node.nodeName
 slug: Web/API/Node/nodeName
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only
@@ -58,7 +59,7 @@ and the following script:
 let node = document.getElementsByTagName("body")[0].firstChild;
 let result = "Node names are:<br/>";
 while (node) {
-  result += node.nodeName + "<br/>";
+  result += `${node.nodeName}<br/>`;
   node = node.nextSibling
 }
 

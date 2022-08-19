@@ -1,6 +1,7 @@
 ---
 title: AudioParam
 slug: Web/API/AudioParam
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -22,7 +23,7 @@ Each `AudioParam` has a list of events, initially empty, that define when and ho
 
 ## AudioParam types
 
-There are two kinds of `AudioParam`: _a-rate_ and _k-rate_ parameters. Each {{domxref("AudioNode")}} defines which of its parameters are _a-rate_ or _k-rate_ in the spec.
+There are two `AudioParam` kinds: _a-rate_ and _k-rate_ parameters. Each {{domxref("AudioNode")}} defines which of its parameters are _a-rate_ or _k-rate_ in the spec.
 
 ### a-rate
 
@@ -62,20 +63,19 @@ A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whol
 
 ## Examples
 
-First, a basic example showing a {{domxref("GainNode")}} having its `gain` value set. `gain` is an example of an a-rate AudioParam, as the value can potentially be set differently for each sample frame of the audio.
+First, a basic example showing a {{domxref("GainNode")}} having its `gain` value set. `gain` is an example of an _a-rate_ `AudioParam`, as the value can potentially be set differently for each sample frame of the audio.
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
-var gainNode = audioCtx.createGain();
+const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0;
 ```
 
-Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values manipulated. These are examples of k-rate AudioParam's, as the values are set for the entire audio block at once.
+Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values manipulated. These are examples of _k-rate_ `AudioParam` types, as the values are set for the entire audio block at once.
 
 ```js
-var compressor = audioCtx.createDynamicsCompressor();
+const compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.setValueAtTime(-50, audioCtx.currentTime);
 compressor.knee.setValueAtTime(40, audioCtx.currentTime);
 compressor.ratio.setValueAtTime(12, audioCtx.currentTime);

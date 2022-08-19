@@ -17,7 +17,7 @@ browser-compat: javascript.builtins.String.big
 The **`big()`** method creates a {{HTMLElement("big")}} HTML
 element that causes a string to be displayed in a big font.
 
-> **Note:** The \<big> element has been removed in [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore.
+> **Note:** The \<big> element has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore.
 > Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
 
 ## Syntax
@@ -42,7 +42,7 @@ The `big()` method embeds a string in a `<big>` element:
 The following example uses string methods to change the size of a string:
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 
 console.log(worldString.small());     // <small>Hello, world</small>
 console.log(worldString.big());       // <big>Hello, world</big>

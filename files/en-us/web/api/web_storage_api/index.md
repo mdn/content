@@ -1,6 +1,7 @@
 ---
 title: Web Storage API
 slug: Web/API/Web_Storage_API
+page-type: web-api-overview
 tags:
   - API
   - Reference
@@ -9,6 +10,9 @@ tags:
   - Web Storage API
   - localStorage
   - sessionStorage
+browser-compat:
+  - api.Window.localStorage
+  - api.Window.sessionStorage
 ---
 {{DefaultAPISidebar("Web Storage API")}}
 
@@ -54,25 +58,17 @@ In addition, we have provided an [event output page](https://mdn.github.io/dom-e
 
 ## Specifications
 
-| Specification                                                                                          |
-| ------------------------------------------------------------------------------------------------------ |
-| [HTML Living Standard # webstorage](https://html.spec.whatwg.org/multipage/webstorage.html#webstorage) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## Private Browsing / Incognito modes
 
 Most modern browsers support a privacy option called 'Incognito', 'Private Browsing' or something similar that doesn't store data like history and cookies. This is fundamentally incompatible with Web Storage for obvious reasons. As such, browser vendors are experimenting with different scenarios for how to deal with this incompatibility.
 
-Most browsers have opted for a strategy where storage APIs are still available and seemingly fully functional, with the one big difference that all stored data is wiped after the browser is closed. For these browsers there are still different interpretations of what should be done with existing stored data (from a regular browsing session). Should it be available to read when in Private mode? Then there are some browsers, most notably Safari, that have opted for a solution where storage is available, but is empty and has a quota of 0 bytes assigned, effectively making it impossible to write data to it.
+Most browsers have opted for a strategy where storage APIs are still available and seemingly fully functional, with the one big difference that all stored data is wiped after the browser is closed. For these browsers there are still different interpretations of what should be done with existing stored data (from a regular browsing session). Should it be available to read when in Private mode? Then there are some browsers, most notably old versions of Safari, that have opted for a solution where storage is available, but is empty and has a quota of 0 bytes assigned, effectively making it impossible to write data to it.
 
 Developers should be aware of these different implementations and take them into account when developing websites depending on Web Storage APIs. For more information please have a look at [this WHATWG blog post](https://blog.whatwg.org/this-week-in-html-5-episode-30) that specifically deals with this topic.
 

@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.version
 slug: Web/API/MIDIPort/version
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,15 +16,15 @@ The **`version`** read-only property of the {{domxref("MIDIPort")}} interface re
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the version of the port.
+A string containing the version of the port.
 
 ## Examples
 
 The following example loops through all input ports and prints the version of each to the console.
 
 ```js
-for (let entry of midiAccess.inputs) {
-  let input = entry[1];
+for (const entry of midiAccess.inputs) {
+  const input = entry[1];
   console.log(input.version);
 }
 ```

@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
+page-type: web-api-interface
 tags:
   - AJAX
   - API
@@ -39,9 +40,9 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}
   - : Returns a number representing the state of the request.
 - {{domxref("XMLHttpRequest.response")}} {{readonlyinline}}
-  - : Returns an {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}}, JavaScript object, or a {{domxref("DOMString")}}, depending on the value of {{domxref("XMLHttpRequest.responseType")}}, that contains the response entity body.
+  - : Returns an {{jsxref("ArrayBuffer")}}, a {{domxref("Blob")}}, a {{domxref("Document")}}, a JavaScript object, or a string, depending on the value of {{domxref("XMLHttpRequest.responseType")}}, that contains the response entity body.
 - {{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}
-  - : Returns a {{domxref("DOMString")}} that contains the response to the request as text, or `null` if the request was unsuccessful or has not yet been sent.
+  - : Returns a string that contains the response to the request as text, or `null` if the request was unsuccessful or has not yet been sent.
 - {{domxref("XMLHttpRequest.responseType")}}
   - : Specifies the type of the response.
 - {{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}
@@ -51,7 +52,7 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
   - : Returns the [HTTP response status code](/en-US/docs/Web/HTTP/Status) of the request.
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
-  - : Returns a {{domxref("DOMString")}} containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message ("`OK`", for example).
+  - : Returns a string containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message ("`OK`", for example).
 
     > **Note:** According to the HTTP/2 specification {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}}, HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
 
@@ -64,14 +65,14 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 
 ### Non-standard properties
 
-- {{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.channel")}} {{ReadOnlyInline}}
   - : The channel used by the object when performing the request.
-- {{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}
-  - : Is a boolean. If true, the request will be sent without cookie and authentication headers.
-- {{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}
-  - : Is a boolean. If true, the same origin policy will not be enforced on the request.
+- {{domxref("XMLHttpRequest.mozAnon")}} {{ReadOnlyInline}}
+  - : A boolean. If true, the request will be sent without cookie and authentication headers.
+- {{domxref("XMLHttpRequest.mozSystem")}} {{ReadOnlyInline}}
+  - : A boolean. If true, the same origin policy will not be enforced on the request.
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
-  - : Is a boolean. It indicates whether or not the object represents a background service request.
+  - : A boolean. It indicates whether or not the object represents a background service request.
 
 ## Methods
 
@@ -135,5 +136,5 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
   - [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
   - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 
-- [HTML5 Rocks — New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)
+- [New Tricks in XMLHttpRequest2 (2011)](https://web.dev/xhr2/)
 - Feature-Policy directive {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}

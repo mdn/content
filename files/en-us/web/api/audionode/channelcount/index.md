@@ -1,6 +1,7 @@
 ---
 title: AudioNode.channelCount
 slug: Web/API/AudioNode/channelCount
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode
@@ -27,12 +28,10 @@ An integer.
 ## Examples
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
-var audioCtx = new AudioContext();
-
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+const oscillator = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
 
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);

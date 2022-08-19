@@ -115,6 +115,6 @@ Trying to instead set it with just `header('application/pdf')` won't work.
 - [MIME types (IANA media types)](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 - [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
 - [Migrate Apache .htaccess to Nginx server block](https://barryvanveen.nl/articles/56-migrate-apache-htaccess-to-nginx-server-block)
-- [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](https://support.microsoft.com/?sd=msdn&scid=kb;en-us;293336)
+- [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](https://mskb.pkisolutions.com/kb/293336)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

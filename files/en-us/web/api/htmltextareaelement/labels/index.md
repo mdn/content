@@ -1,6 +1,7 @@
 ---
 title: HTMLTextAreaElement.labels
 slug: Web/API/HTMLTextAreaElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -33,15 +34,15 @@ with the `<textArea>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const textArea = document.getElementById("test");
-  for(var i = 0; i < textArea.labels.length; i++) {
-    console.log(textArea.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of textArea.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 60)}}
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## Specifications
 

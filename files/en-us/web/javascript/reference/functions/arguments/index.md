@@ -42,25 +42,29 @@ The `arguments` object is not an {{jsxref("Array")}}. It is similar, but lacks a
 However, it can be converted to a real `Array`:
 
 ```js
-var args = Array.prototype.slice.call(arguments);
-// Using an array literal is shorter than above but allocates an empty array
-var args = [].slice.call(arguments);
+const args = Array.prototype.slice.call(arguments);
 ```
 
-As you can do with any Array-like object, you can use ES2015's {{jsxref("Array.from()")}} method or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to convert `arguments` to a real Array:
+It can also be converted with using an array literal. This method is shorter than above but allocates an empty array.
 
 ```js
-let args = Array.from(arguments);
+const args2 = [].slice.call(arguments);
+```
+
+As you can do with any Array-like object, you can use {{jsxref("Array.from()")}} method or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to convert `arguments` to a real Array:
+
+```js
+const args = Array.from(arguments);
 // or
-let args = [...arguments];
+const args = [...arguments];
 ```
 
 The `arguments` object is useful for functions called with more arguments than they are formally declared to accept. This technique is useful for functions that can be passed a variable number of arguments, such as {{jsxref("Math.min()")}}. This example function accepts any number of string arguments and returns the longest one:
 
 ```js
 function longestString() {
-  var longest = '';
-  for (var i=0; i < arguments.length; i++) {
+  let longest = '';
+  for (let i = 0; i < arguments.length; i++) {
     if (arguments[i].length > longest.length) {
       longest = arguments[i];
     }
@@ -102,7 +106,7 @@ This example defines a function that concatenates several strings. The function'
 
 ```js
 function myConcat(separator) {
-  let args = Array.prototype.slice.call(arguments, 1);
+  const args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
 }
 ```
@@ -122,14 +126,14 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 
 ### Defining a function that creates HTML lists
 
-This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is "`u`" if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Element/ul), or "`o`" if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Element/ol). The function is defined as follows:
+This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is `"u"` if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Element/ul), or `"o"` if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Element/ol). The function is defined as follows:
 
 ```js
 function list(type) {
-  var html = '<' + type + 'l><li>';
-  var args = Array.prototype.slice.call(arguments, 1);
+  let html = `<${type}l><li>`;
+  const args = Array.prototype.slice.call(arguments, 1);
   html += args.join('</li><li>');
-  html += '</li></' + type + 'l>'; // end list
+  html += `</li></${type}l>`; // end list
   return html;
 }
 ```
@@ -137,7 +141,7 @@ function list(type) {
 You can pass any number of arguments to this function, and it adds each argument as a list item to a list of the type indicated. For example:
 
 ```js
-let listHTML = list('u', 'One', 'Two', 'Three');
+const listHTML = list('u', 'One', 'Two', 'Three');
 
 /* listHTML is:
 "<ul><li>One</li><li>Two</li><li>Three</li></ul>"
@@ -155,7 +159,7 @@ function foo(...args) {
 foo(1, 2, 3); // [1, 2, 3]
 ```
 
-While the presence of rest, default, or destructured parameters does not alter [the behavior of the `arguments` object in strict mode code](/en-US/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler), there are subtle differences for non-strict code.
+While the presence of rest, default, or destructured parameters does not alter [the behavior of the `arguments` object in strict mode code](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), there are subtle differences for non-strict code.
 
 In strict-mode code, the `arguments` object behaves the same whether or not a function is passed rest, default, or destructured parameters. That is, assigning new values to variables in the body of the function will not affect the `arguments` object. Nor will assigning new variables to the `arguments` object affect the value of variables.
 

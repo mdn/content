@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming
 slug: Web/API/PerformanceElementTiming
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -16,24 +17,24 @@ The **`PerformanceElementTiming`** interface of the {{domxref('Element Timing AP
 
 ## Properties
 
-- {{domxref("PerformanceElementTiming.element")}}{{ReadOnlyInline}}
+- {{domxref("PerformanceElementTiming.element")}} {{ReadOnlyInline}}
   - : An {{domxref("Element")}} representing the element we are returning information about.
-- {{domxref("PerformanceElementTiming.id")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} which is the {{htmlattrxref("id")}} of the element.
-- {{domxref("PerformanceElementTiming.identifier")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} which is the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/for) attribute on the element.
-- {{domxref("PerformanceElementTiming.intersectionRect")}}{{ReadOnlyInline}}
+- {{domxref("PerformanceElementTiming.id")}} {{ReadOnlyInline}}
+  - : A string which is the {{htmlattrxref("id")}} of the element.
+- {{domxref("PerformanceElementTiming.identifier")}} {{ReadOnlyInline}}
+  - : A string which is the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/for) attribute on the element.
+- {{domxref("PerformanceElementTiming.intersectionRect")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMRectReadOnly")}} which is the rectangle of the element within the viewport.
-- {{domxref("PerformanceElementTiming.loadTime")}}{{ReadOnlyInline}}
+- {{domxref("PerformanceElementTiming.loadTime")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} with the loadTime of the element.
-- {{domxref("PerformanceElementTiming.naturalHeight")}}{{ReadOnlyInline}}
+- {{domxref("PerformanceElementTiming.naturalHeight")}} {{ReadOnlyInline}}
   - : An unsigned 32-bit integer (unsigned long) which is the intrinsic height of the image if this is applied to an image, 0 for text.
-- {{domxref("PerformanceElementTiming.naturalWidth")}}{{ReadOnlyInline}}
+- {{domxref("PerformanceElementTiming.naturalWidth")}} {{ReadOnlyInline}}
   - : An unsigned 32-bit integer (unsigned long) which is the intrinsic width of the image if this is applied to an image, 0 for text.
-- {{domxref("PerformanceElementTiming.renderTime")}}{{ReadOnlyInline}}
+- {{domxref("PerformanceElementTiming.renderTime")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} with the renderTime of the element.
-- {{domxref("PerformanceElementTiming.url")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} which is the initial URL of the resources request for images, 0 for text.
+- {{domxref("PerformanceElementTiming.url")}} {{ReadOnlyInline}}
+  - : A string which is the initial URL of the resources request for images, 0 for text.
 
 ## Methods
 
@@ -53,7 +54,7 @@ Two entries will be output to the console. The first containing details of the i
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
       console.log(entry);
   });
 });

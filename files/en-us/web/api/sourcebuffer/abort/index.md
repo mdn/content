@@ -1,10 +1,10 @@
 ---
 title: SourceBuffer.abort()
 slug: Web/API/SourceBuffer/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - Method
@@ -14,7 +14,7 @@ tags:
   - abort
 browser-compat: api.SourceBuffer.abort
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`abort()`** method of the {{domxref("SourceBuffer")}}
 interface aborts the current segment and resets the segment parser.
@@ -44,8 +44,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 The spec description of `abort()` is somewhat confusing — consider for
-example step 1 of [reset
-parser state](https://w3c.github.io/media-source/index.html#sourcebuffer-reset-parser-state). The MSE API is fully asynchronous, but this step seems to suggest a
+example step 1 of [reset parser state](https://w3c.github.io/media-source/index.html#sourcebuffer-reset-parser-state). The MSE API is fully asynchronous, but this step seems to suggest a
 synchronous (blocking) operation, which doesn't make sense.
 
 Saying that, current implementations can be useful in certain situations, when you want
@@ -53,8 +52,8 @@ to stop the current append (or whatever) operation occurring on a sourcebuffer, 
 immediately start performing operations on it again. For example, consider this code:
 
 ```js
-sourceBuffer.addEventListener('updateend', function (_) {
-  ...
+sourceBuffer.addEventListener('updateend', (ev) => {
+  // ...
 });
 
 sourceBuffer.appendBuffer(buf);
@@ -67,11 +66,8 @@ this case you would want to manually call `abort()` on the source buffer to
 stop the decoding of the current buffer, then fetch and append the newly requested
 segment that relates to the current new position of the video.
 
-You can see something similar in action in Nick Desaulnier's [bufferWhenNeeded
-demo](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html) — in [line
-48, an event listener is added to the playing video](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L48) so a function called
-`seek()` is run when the `seeking` event fires. In [lines
-92-101, the seek() function is defined](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L92-L101) — note that `abort()` is called
+You can see something similar in action in Nick Desaulnier's [bufferWhenNeeded demo](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html) — in [line 48, an event listener is added to the playing video](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L48) so a function called
+`seek()` is run when the `seeking` event fires. In [lines 92-101, the seek() function is defined](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L92-L101) — note that `abort()` is called
 if {{domxref("MediaSource.readyState")}} is set to `open`, which means that
 it is ready to receive new source buffers — at this point it is worth aborting the
 current segment and just getting the one for the new seek position (see

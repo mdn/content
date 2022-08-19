@@ -1,6 +1,7 @@
 ---
 title: PannerNode.panningModel
 slug: Web/API/PannerNode/panningModel
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -12,7 +13,7 @@ browser-compat: api.PannerNode.panningModel
 ---
 {{ APIRef("Web Audio API") }}
 
-The `panningModel` property of the {{ domxref("PannerNode") }} interface is an enumerated value determining which spatialisation algorithm to use to position the audio in 3D space.
+The `panningModel` property of the {{ domxref("PannerNode") }} interface is an enumerated value determining which spatialization algorithm to use to position the audio in 3D space.
 
 The possible values are:
 

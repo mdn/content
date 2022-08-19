@@ -70,7 +70,7 @@ React DevTools is available in a number of forms:
 - A [Chrome browser extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
 - A [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/).
 - A [Microsoft Edge browser extension](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil).
-- A [stand-alone application you can install with NPM or Yarn](https://www.npmjs.com/package/react-devtools).
+- A [stand-alone application you can install with npm or Yarn](https://www.npmjs.com/package/react-devtools).
 
 Try installing one of these, then using it to inspect the app you've just built!
 
@@ -86,7 +86,7 @@ If you'd like to try this API for yourself, Smashing Magazine has written an [in
 
 ## Class components
 
-Although this tutorial doesn't mention them, it is possible to build React components using ES6 classes – these are called class components. Until the arrival of hooks, ES6 classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain other, more edge-case features, and they're very common in legacy React projects. The official React docs are a great place to start learning about them.
+Although this tutorial doesn't mention them, it is possible to build React components using classes – these are called class components. Until the arrival of hooks, classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain other, more edge-case features, and they're very common in legacy React projects. The official React docs are a great place to start learning about them.
 
 - [State and Lifecycle in the React Docs](https://reactjs.org/docs/state-and-lifecycle.html)
 - [Intro To React in the React Docs](https://reactjs.org/tutorial/tutorial.html)
@@ -100,7 +100,7 @@ Although this tutorial doesn't mention them, it is possible to build React compo
 
 While routing is traditionally handled by a server and not an application on the user's computer, it is possible to configure a web application to read and update the browser's location, and render certain user interfaces. This is called client-side routing. It's possible to create many unique routes for your application (such as `/home`, `/dashboard`, or `login/`).
 
-The React community has produced two major libraries for client-side routing: [React Router](https://reacttraining.com/react-router/) and [Reach Router](https://reach.tech/router/).
+The React community has produced two major libraries for client-side routing: [React Router](https://reactrouter.com/) and [Reach Router](https://reach.tech/router/).
 
 - React Router is well-suited to applications with complex routing needs, and it meets some edge cases better than Reach Router. React Router is a larger library, however.
 - Reach Router is well-suited to simpler applications, and automatically manages focus as the user navigates from page to page.

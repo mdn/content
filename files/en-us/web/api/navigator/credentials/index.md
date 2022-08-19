@@ -1,6 +1,7 @@
 ---
 title: Navigator.credentials
 slug: Web/API/Navigator/credentials
+page-type: web-api-instance-property
 tags:
   - API
   - CredentialsContainer
@@ -26,7 +27,7 @@ The {{domxref("CredentialsContainer")}} interface.
 ```js
 if ('credentials' in navigator) {
   navigator.credentials.get({password: true})
-  .then(function(creds) {
+  .then((creds) => {
     //Do something with the credentials.
   });
 } else {

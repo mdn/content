@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.clearDepth()
 slug: Web/API/WebGLRenderingContext/clearDepth
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -32,7 +33,7 @@ clearDepth(depth)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

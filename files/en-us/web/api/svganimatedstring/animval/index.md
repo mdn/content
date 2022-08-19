@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedString.animVal
 slug: Web/API/SVGAnimatedString/animVal
+page-type: web-api-instance-property
 browser-compat: api.SVGAnimatedString.animVal
 ---
 {{APIRef("SVG")}}
@@ -12,7 +13,7 @@ AnimVal attribute or animVal property contains the same value as the {{domxref("
 ## Syntax
 
 ```js
-var = object.animVal
+const currentValue = object.animVal
 ```
 
 ## Specifications

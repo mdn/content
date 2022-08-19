@@ -8,10 +8,10 @@ tags:
   - Link
   - form
   - rel
-spec-urls:
-  - https://html.spec.whatwg.org/multipage/links.html#linkTypes
-  - https://w3c.github.io/preload/#x2.link-type-preload
-  - https://www.w3.org/TR/resource-hints/#dfn-preconnect
+browser-compat:
+  - html.elements.link.rel
+  - html.elements.a.rel
+  - html.elements.area.rel
 ---
 
 {{HTMLSidebar}}
@@ -44,7 +44,7 @@ The following table lists some of the most important existing keywords. Every ke
 | [`pingback`](#attr-pingback)                          | Gives the address of the pingback server that handles pingbacks to the current document.                                                                                                                                                              | External Resource         | Not allowed                                          | Not allowed               |
 | [`preconnect`](/en-US/docs/Web/HTML/Link_types/preconnect)       | Specifies that the user agent should preemptively connect to the target resource's origin.                                                                                                                                                            | External Resource         | Not allowed                                          | Not allowed               |
 | [`prefetch`](/en-US/docs/Web/HTML/Link_types/prefetch)           | Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation.                                                                                                       | External Resource         | Not allowed                                          | Not allowed               |
-| [`preload`](/en-US/docs/Web/HTML/Link_types/preload)             | Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](as) attribute (and the priority associated with the corresponding destination). | External Resource         | Not allowed                                          | Not allowed               |
+| [`preload`](/en-US/docs/Web/HTML/Link_types/preload)             | Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#attr-as) attribute (and the priority associated with the corresponding destination). | External Resource         | Not allowed                                          | Not allowed               |
 | [`prerender`](/en-US/docs/Web/HTML/Link_types/prerender)         | Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future.                                                                                               | External Resource         | Not allowed                                          | Not allowed               |
 | [`prev`](#attr-prev)                                  | Indicates that the current document is a part of a series and that the previous document in the series is the referenced document.                                                                                                                    | Link                      | Link                                                 | Link                      |
 | [`search`](#attr-search)                              | Gives a link to a resource that can be used to search through the current document and its related pages.                                                                                                                                             | Link                      | Link                                                 | Link                      |
@@ -113,7 +113,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
     > **Note:** Prior to Firefox 83 the [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
 
     > **Note:** Apple's iOS does not use this link type, nor the [`sizes`](sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder.
-    > Instead it uses the non-standard [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectively.
+    > Instead it uses the non-standard [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and [`apple-touch-startup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectively.
 
     > **Note:** The `shortcut` link type is often seen before `icon`, but this link type is non-conforming, ignored and **web authors must not use it anymore**.
 
@@ -193,19 +193,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
 ## Browser compatibility
 
-### `rel` attribute for the `link` element
-
-{{Compat("html.elements.link.rel")}}
-
-### `rel` attribute for the `a` element
-
-{{Compat("html.elements.a.rel")}}
-
-### `rel` attribute for the `area` element
-
-{{Compat("html.elements.area.rel")}}
-
-## Accessibility concerns
+{{Compat}}
 
 ## See also
 

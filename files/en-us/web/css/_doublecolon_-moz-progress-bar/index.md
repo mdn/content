@@ -18,7 +18,9 @@ If you want to select the unfinished part of {{HTMLElement("progress")}} in Mozi
 
 ## Syntax
 
-{{csssyntax}}
+```
+::-moz-progress-bar
+```
 
 ## Examples
 

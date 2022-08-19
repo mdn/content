@@ -26,9 +26,9 @@ We will use a separate variable for storing the score and Phaser's `text()` meth
 Add two new variables right after the previously defined ones:
 
 ```js
-// ...
-var scoreText;
-var score = 0;
+// …
+let scoreText;
+let score = 0;
 ```
 
 ## Adding score text to the game display
@@ -53,9 +53,9 @@ We will increase the number of points every time the ball hits a brick and updat
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText(`Points: ${score}`);
 }
 ```
 

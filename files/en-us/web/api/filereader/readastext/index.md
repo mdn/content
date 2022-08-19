@@ -1,6 +1,7 @@
 ---
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
+page-type: web-api-instance-method
 tags:
   - API
   - File API

@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.iceGatheringState
 slug: Web/API/RTCPeerConnection/iceGatheringState
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCPeerConnection
@@ -36,8 +37,8 @@ The possible values are:
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var state = pc.iceGatheringState;
+const pc = new RTCPeerConnection();
+const state = pc.iceGatheringState;
 ```
 
 ## Specifications

@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - contextMenus
   - menus
+browser-compat: webextensions.api.menus
 ---
 {{AddonSidebar}}
 
@@ -153,9 +154,9 @@ browser.menus.create({
 
 ## Browser compatibility
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
-
 {{WebExtExamples("h2")}}
+
+{{Compat}}
 
 > **Note:**
 >

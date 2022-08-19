@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getUniformLocation()
 slug: Web/API/WebGLRenderingContext/getUniformLocation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,8 +17,7 @@ browser-compat: api.WebGLRenderingContext.getUniformLocation
 ---
 {{APIRef("WebGL")}}
 
-Part of the [WebGL
-API](/en-US/docs/Web/API/WebGL_API), the {{domxref("WebGLRenderingContext")}} method
+Part of the [WebGL API](/en-US/docs/Web/API/WebGL_API), the {{domxref("WebGLRenderingContext")}} method
 **`getUniformLocation()`** returns the location of a
 specific **uniform** variable which is part of a given
 {{domxref("WebGLProgram")}}.
@@ -79,7 +79,7 @@ getUniformLocation(program, name)
 ### Return value
 
 A {{domxref("WebGLUniformLocation")}} value indicating the location of the named
-variable, if it exists. If the specified variable doesn't exist, {{jsxref("null")}} is
+variable, if it exists. If the specified variable doesn't exist, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is
 returned instead.
 
 The `WebGLUniformLocation` is an opaque value used to uniquely identify the
@@ -104,8 +104,7 @@ The following errors may occur; to check for errors after
 
 ## Examples
 
-In this example, taken from the `animateScene()` method in the article [A
-basic 2D WebGL animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene), obtains the locations of three uniforms from
+In this example, taken from the `animateScene()` method in the article [A basic 2D WebGL animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene), obtains the locations of three uniforms from
 the shading program, then sets the value of each of the three uniforms.
 
 ```js
@@ -123,8 +122,7 @@ gl.uniform2fv(uRotationVector, currentRotation);
 gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);
 ```
 
-> **Note:** This code snippet is taken from [the
-> function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene) in "A basic 2D WebGL animation example."
+> **Note:** This code snippet is taken from [the function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) in "A basic 2D WebGL animation example."
 > See that article for the full sample and to see the resulting animation in action.
 
 After setting the current shading program to `shaderProgram`, this code

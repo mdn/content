@@ -3,6 +3,7 @@ title: image-orientation
 slug: Web/CSS/image-orientation
 tags:
   - CSS
+  - CSS Property
   - Reference
   - image-orientation
   - recipe:css-property
@@ -30,7 +31,7 @@ image-orientation: unset;
 - `none`
   - : Does not apply any additional image rotation; the image is oriented as encoded or as other CSS property values dictate.
 - `from-image`
-  - : Default initial value. The {{interwiki("wikipedia", "EXIF")}} information contained in the image is used to rotate the image appropriately.
+  - : Default initial value. The [EXIF](https://en.wikipedia.org/wiki/EXIF) information contained in the image is used to rotate the image appropriately.
 
 ## Description
 
@@ -50,7 +51,7 @@ If used in conjunction with other CSS properties, such as a {{cssxref("&lt;trans
 
 ### Orienting image from image data
 
-The following image has been rotated through 180 degrees, and the `image-orientation` property is used to correct its orientation based on the  EXIF data in the image. By changing the `image-orientation` to `none` you can see the effect of the property.
+The following image has been rotated through 180 degrees, and the `image-orientation` property is used to correct its orientation based on the EXIF data in the image. By changing the `image-orientation` to `none` you can see the effect of the property.
 
 #### CSS
 
@@ -87,7 +88,7 @@ label {
 ```
 
 ```js hidden
-document.addEventListener('change', evt => {
+document.addEventListener('change', (evt) => {
   document.getElementById("image").style.imageOrientation = evt.target.value;
 });
 ```

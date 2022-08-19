@@ -26,7 +26,7 @@ tags:
 - [Mozilla-specific media features](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#mozilla-specific_media_features)
   - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) can be used to more safely check on the availability of features such as touch support.
 - [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
-  - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](https://dev.w3.org/csswg/css3-background/) is now supported under the name `-moz-background-size`.
+  - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](https://drafts.csswg.org/css-backgrounds-3/) is now supported under the name `-moz-background-size`.
 - [WOFF font support](/en-US/docs/Web/Guide/WOFF)
   - : {{cssxref("@font-face")}} now supports the WOFF downloadable font file format.
 - [Pointer events](/en-US/docs/Web/CSS/pointer-events)
@@ -44,14 +44,14 @@ tags:
 
 ### HTML
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
   - : Support for the new HTML5 File API has been added to Gecko, making it possible for web applications to access local files selected by the user. This includes support for selecting multiple files using the `input type="file"` HTML element's new `multiple` attribute.
 - HTML5 video supports poster frames
   - : The `poster` attribute is now supported for the [`video`](/en-US/docs/Web/HTML/Element/video) element, allowing content to specify a poster frame to be displayed until the video begins to play.
 - Checkboxes and radio buttons support the `indeterminate` property
   - : HTML [`input`](/en-US/docs/Web/HTML/Element/input) elements of types `checkbox` and `radio` now support the indeterminate property, which allows a third, "indeterminate" state.
 - Canvas image smoothing can be controlled
-  - : The new [`mozImageSmoothingEnabled`](/en-US/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior) property can be used to turn on and off image smoothing when scaling in [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements.
+  - : The new [`mozImageSmoothingEnabled`](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#controlling_image_scaling_behavior) property can be used to turn on and off image smoothing when scaling in [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements.
 - Asynchronous script execution
   - : By setting the `async` attribute on a [`script`](/en-US/docs/Web/HTML/Element/script) element, the `script` will not block loading or display of the rest of the page. Instead the `script` executes as soon as it is downloaded.
 
@@ -65,12 +65,12 @@ Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language feature
 ### DOM
 
 - Web workers can now self-terminate
-  - : [Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) now support the {{ifmethod("nsIWorkerScope", "close")}} method, which allows them to terminate themselves.
+  - : [Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) now support the `nsIWorkerScope.close()` method, which allows them to terminate themselves.
 - Drag and drop now supports files
   - : The [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) object provided to drag listeners now includes a list of files that were dragged.
 - Checking to see if an element matches a specified CSS selector
   - : The new {{domxref("Node.mozMatchesSelector", "element.mozMatchesSelector")}} method lets you determine whether or not an element matches a specified CSS selector. See {{bug(518003)}}.
-- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation)
+- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
   - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/DOM/MozOrientation) event. Firefox 3.6 supports the accelerometer in Mac laptops.
 - [Detecting document width and height changes](/en-US/docs/DOM/Detecting_document_width_and_height_changes)
   - : The new `MozScrollAreaChanged` event is dispatched whenever the document's `scrollWidth` and/or `scrollHeight` properties change.
@@ -99,7 +99,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 ### New features
 
-- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation)
+- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
   - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/DOM/MozOrientation) event. Firefox 3.6 supports the accelerometer in Mac laptops.
 - [Monitoring HTTP activity](/en-US/docs/Monitoring_HTTP_activity)
   - : You can now monitor HTTP transactions to observe requests and responses in real time.
@@ -109,13 +109,13 @@ If you're an extension developer, you should start by reading [Updating extensio
 ### Places
 
 - Places queries can now use the `redirectsMode` attribute on the `nsINavHistoryQueryOptions` interface to specify whether or not to include redirected pages in results.
-- Added the new {{ifmethod("nsIFaviconService", "expireAllFavicons")}} method to the `nsIFaviconService` interface.
+- Added the new `nsIFaviconService.expireAllFavicons()` method to the `nsIFaviconService` interface.
 
 ### Storage
 
 - [Locale-aware collation of data is now supported by the Storage API](</en-US/docs/Storage#Collation_(sorting)>)
   - : Gecko 1.9.2 added several new collation methods to provide optimized collation (sorting) of results using locale-aware techniques.
-- [Properties on a statement can now be enumerated](/en-US/docs/mozIStorageStatementParams#Enumeration_of_properties)
+- [Properties on a statement can now be enumerated](/en-US/docs/mozIStorageStatementParams#enumeration_of_properties)
   - : You can now use a [`for..in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) enumeration to enumerate all the properties on a statement.
 - mozIStorageStatement's getParameterIndex changed behavior between 3.5 and 3.6.
   - : See {{bug(528166)}} for details.
@@ -124,7 +124,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 ### Preferences
 
-- The `nsIContentPrefService` interface has two new methods: {{ifmethod("nsIContentPrefService", "getPrefsByName")}} and {{ifmethod("nsIContentPrefService", "removePrefsByName")}}.
+- The `nsIContentPrefService` interface has two new methods: `nsIContentPrefService.getPrefsByName()` and `nsIContentPrefService.removePrefsByName()`.
 
 ### Themes
 
@@ -141,8 +141,8 @@ See [Updating themes for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/U
 - Added support for the `container-live-role` attribute to objects. See {{bug(391829)}}.
 - The `tabs-closebutton` binding has been removed. See {{bug(500971)}}.
 - Added support to `nsISound` for playing sounds based on events that have occurred. See {{bug(502799)}}.
-- The syntax for the `nsITreeView` methods {{ifmethod("nsITreeView", "canDrop")}} and {{ifmethod("nsITreeView", "drop")}} has changed to support the new drag & drop API introduced in Gecko 1.9. See {{bug(455590)}}.
-- Added support to snap the mouse cursor to the default button of dialog or wizard on Windows, see {{bug(76053)}}. This is processed automatically by dialog and wizard element. But if a XUL application creates a window using the `window` element and it has a default button, it needs to call {{ifmethod("nsIDOMChromeWindow", "notifyDefaultButtonLoaded")}} during the window's `onload` event handler.
+- The syntax for the `nsITreeView` methods `nsITreeView.canDrop()` and `nsITreeView.drop()` has changed to support the new drag & drop API introduced in Gecko 1.9. See {{bug(455590)}}.
+- Added support to snap the mouse cursor to the default button of dialog or wizard on Windows, see {{bug(76053)}}. This is processed automatically by dialog and wizard element. But if a XUL application creates a window using the `window` element and it has a default button, it needs to call `nsIDOMChromeWindow.notifyDefaultButtonLoaded` during the window's `onload` event handler.
 - The `nsILocalFileMac` interface has had two methods removed: `setFileTypeAndCreatorFromMIMEType()` and `setFileTypeAndCreatorFromExtension()`.
 - The new [`NetUtils.jsm`](/en-US/docs/JavaScript_code_modules/NetUtil.jsm) code module provides an easy-to-use method for asynchronously copying data from an input stream to an output stream.
 - The new [`openLocationLastURL.jsm`](/en-US/docs/JavaScript_code_modules/openLocationLastURL.jsm) code module makes it easy to read and change the value of the "Open Location" dialog box's remembered URL while properly taking private browsing mode into account.
@@ -151,7 +151,7 @@ See [Updating themes for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/U
 - The [`loadOneTab`](/en-US/docs/Mozilla/Tech/XUL/Method/loadOneTab) and [`addTab`](/en-US/docs/Mozilla/Tech/XUL/Method/addTab) methods now accept a new `relatedToCurrent` parameter and, in addition, allow the parameters to be specified by name, since nearly all of the parameters are optional.
 - The "[hidden](/en-US/docs/Install_Manifests#hidden)" property is no longer supported in install manifests; it's no longer possible to prevent the user from seeing add-ons in the add-on manager window.
 - The `@mozilla.org/webshell;1` component no longer exists; you need to use `@mozilla.org/docshell;1` instead.
-- You can now register with the update-timer category to schedule timer events without having to instantiate the object that the timer will eventually call into; it will instead be instantiated when it's needed. See {{ifmethod("nsIUpdateTimerManager", "registerTimer")}} for details.
+- You can now register with the update-timer category to schedule timer events without having to instantiate the object that the timer will eventually call into; it will instead be instantiated when it's needed. See `nsIUpdateTimerManager.registerTimer()` for details.
 - The [`NPN_GetValue()`](/en-US/docs/NPN_GetValue) function no longer provides access to XPCOM through the variable values `NPNVserviceManager`, `NPNVDOMelement`, and `NPNVDOMWindow`. This is part of the work toward making plugins run in separate processes in a future version of Gecko.
 - Plugins are no longer scriptable through XPCOM (IDL) interfaces, [NPRuntime](/en-US/docs/Gecko_Plugin_API_Reference/Scripting_plugins) is the API to use for making plugins scriptable, and [`NPP_GetValue()`](/en-US/docs/NPP_GetValue) is no longer called to with the value `NPPVpluginScriptableInstance` or `NPPVpluginScriptableIID`. This is part of the work toward making plugins run in separate processes in a future version of Gecko.
 
@@ -206,7 +206,7 @@ The following assorted changes have been made:
 ### Changes in accessibility code
 
 - The `EVENT_REORDER`[accessibility event](/en-US/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) is now sent when the children of frames and iframes change, as well as when the main document's children change. See {{bug(420845)}}.
-- The {{ifmethod("nsIAccessibleTable", "selectRow")}} now correctly removes any current selection before selecting the specified row.
+- The `nsIAccessibleTable.selectRow()` now correctly removes any current selection before selecting the specified row.
 
 ## See also
 

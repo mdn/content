@@ -1,6 +1,7 @@
 ---
 title: BarProp.visible
 slug: Web/API/BarProp/visible
+page-type: web-api-instance-property
 tags:
   - API
   - Property

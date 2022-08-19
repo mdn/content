@@ -7,7 +7,7 @@ tags:
   - Document directive
   - HTTP
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.base-uri
+browser-compat: http.headers.Content-Security-Policy.base-uri
 ---
 {{HTTPSidebar}}
 

@@ -1,6 +1,7 @@
 ---
 title: PannerNode.refDistance
 slug: Web/API/PannerNode/refDistance
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -79,4 +80,4 @@ After running this code, the resulting waveforms should look something like this
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

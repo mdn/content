@@ -1,6 +1,7 @@
 ---
 title: OVR_multiview2
 slug: Web/API/OVR_multiview2
+page-type: webgl-extension
 tags:
   - API
   - WebGL
@@ -16,7 +17,7 @@ For more information, see also:
 - [Multiview on WebXR](https://blog.mozvr.com/multiview-on-webxr/)
 - [three.js multiview demo](https://threejs.org/examples/webgl_multiple_views.html)
 - [Multiview in babylon.js](https://doc.babylonjs.com/divingDeeper/cameras/multiViewsPart1)
-- [Optimizing Virtual Reality: Understanding Multiview](https://community.arm.com/developer/tools-software/graphics/b/blog/posts/optimizing-virtual-reality-understanding-multiview)
+- [Optimizing Virtual Reality: Understanding Multiview](https://community.arm.com/arm-community-blogs/b/graphics-gaming-and-vr-blog/posts/optimizing-virtual-reality-understanding-multiview)
 - [Multiview WebGL Rendering for Oculus Browser 6.0+](https://developer.oculus.com/documentation/oculus-browser/latest/concepts/browser-multiview/)
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
@@ -47,10 +48,10 @@ This extension exposes 4 constants that can be used in [`getParameter()`](/en-US
 
 ## Examples
 
-This example is taken from the [specification](https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/). See also this [three.js](https://threejs.org/examples/webvr_multiview.html) demo for a live multiview example.
+This example is taken from the [specification](https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/).
 
 ```js
-const gl = document.createElement('canvas').getContext( 'webgl2', { antialias: false } );
+const gl = document.createElement('canvas').getContext('webgl2', { antialias: false });
 const ext = gl.getExtension('OVR_multiview2');
 const fb = gl.createFramebuffer();
 gl.bindFramebuffer(gl.DRAW_FRAMEBUFFER, fb);
@@ -65,7 +66,7 @@ gl.bindTexture(gl.TEXTURE_2D_ARRAY, depthStencilTex);
 gl.texStorage3D(gl.TEXTURE_2D_ARRAY, 1, gl.DEPTH32F_STENCIL8, 512, 512, 2);
 
 ext.framebufferTextureMultiviewOVR(gl.DRAW_FRAMEBUFFER, gl.DEPTH_STENCIL_ATTACHMENT, depthStencilTex, 0, 0, 2);
-gl.drawElements(...);  // draw will be broadcasted to the layers of colorTex and depthStencilTex.
+gl.drawElements(/* … */);  // draw will be broadcasted to the layers of colorTex and depthStencilTex.
 ```
 
 Shader code
@@ -81,6 +82,8 @@ void main() {
   gl_Position = u_viewMatrices[gl_ViewID_OVR] * inPos;
 }
 ```
+
+Also, see this [three.js](https://threejs.org/examples/?q=mult#webgl_multiple_views) demo for a live multiview example.
 
 ## Specifications
 

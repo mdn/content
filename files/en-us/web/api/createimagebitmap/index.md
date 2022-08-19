@@ -1,6 +1,7 @@
 ---
 title: createImageBitmap()
 slug: Web/API/createImageBitmap
+page-type: web-api-global-function
 tags:
   - API
   - Canvas
@@ -52,21 +53,27 @@ createImageBitmap(image, sx, sy, sw, sh, options)
 
   - : An object that sets options for the image's extraction. The available options are:
 
-    - `imageOrientation`: Specifies whether the image should be presented
-      as is or flipped vertically. Either `none` (default) or
-      `flipY`.
-    - `premultiplyAlpha`: Specifies whether the bitmap's color channels
-      should be premultiplied by the alpha channel. One of `none`,
-      `premultiply`, or `default` (default).
-    - `colorSpaceConversion`: Specifies whether the image should be decoded
-      using color space conversion. Either `none` or `default`
-      (default). The value `default` indicates that implementation-specific
-      behavior is used.
-    - `resizeWidth`: A long integer that indicates the output width.
-    - `resizeHeight`: A long integer that indicates the output height.
-    - `resizeQuality`: Specifies the algorithm to be used for resizing the
-      input to match the output dimensions. One of `pixelated`,
-      `low` (default), `medium`, or `high`.
+    - `imageOrientation`
+      - : Specifies whether the image should be presented
+        as is or flipped vertically. Either `none` (default) or
+        `flipY`.
+    - `premultiplyAlpha`
+      - : Specifies whether the bitmap's color channels
+        should be premultiplied by the alpha channel. One of `none`,
+        `premultiply`, or `default` (default).
+    - `colorSpaceConversion`
+      - : Specifies whether the image should be decoded
+        using color space conversion. Either `none` or `default`
+        (default). The value `default` indicates that implementation-specific
+        behavior is used.
+    - `resizeWidth`
+      - : A long integer that indicates the output width.
+    - `resizeHeight`
+      - : A long integer that indicates the output height.
+    - `resizeQuality`
+      - : Specifies the algorithm to be used for resizing the
+        input to match the output dimensions. One of `pixelated`,
+        `low` (default), `medium`, or `high`.
 
 ### Return value
 
@@ -87,12 +94,12 @@ ctx = canvas.getContext('2d'),
 image = new Image();
 
 // Wait for the sprite sheet to load
-image.onload = function() {
+image.onload = () => {
   Promise.all([
     // Cut out two sprites from the sprite sheet
     createImageBitmap(image, 0, 0, 32, 32),
     createImageBitmap(image, 32, 0, 32, 32)
-  ]).then(function(sprites) {
+  ]).then((sprites) => {
     // Draw each sprite onto the canvas
     ctx.drawImage(sprites[0], 0, 0);
     ctx.drawImage(sprites[1], 32, 32);

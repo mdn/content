@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -11,9 +12,10 @@ tags:
   - Virtual Display
   - WebVR
   - requestPresent()
+  - Non-standard
 browser-compat: api.VRDisplay.requestPresent
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`requestPresent()`** method of the {{domxref("VRDisplay")}} interface starts the `VRDisplay` presenting a scene.
 
@@ -27,7 +29,7 @@ requestPresent(layers)
 
 ### Parameters
 
-- layers
+- `layers`
   - : An array of {{domxref("VRLayerInit")}} objects representing the scene you want to present. At the moment, this can be a minimum of 0 and a maximum of 1.
 
 ### Return value
@@ -42,24 +44,24 @@ A promise that resolves once the presentation has begun. there are a number of r
 ## Examples
 
 ```js
-if(navigator.getVRDisplays) {
+if (navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene
-    if(displays.length > 0) {
+    if (displays.length > 0) {
       vrDisplay = displays[0];
       console.log('Display found');
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-      btn.addEventListener('click', function() {
-        if(btn.textContent === 'Start VR display') {
-          vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+      btn.addEventListener('click', () => {
+        if (btn.textContent === 'Start VR display') {
+          vrDisplay.requestPresent([{ source: canvas }]).then(() => {
             console.log('Presenting to WebVR display');
 
             // Set the canvas size to the size of the vrDisplay viewport
 
-            var leftEye = vrDisplay.getEyeParameters('left');
-            var rightEye = vrDisplay.getEyeParameters('right');
+            const leftEye = vrDisplay.getEyeParameters('left');
+            const rightEye = vrDisplay.getEyeParameters('right');
 
             canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
             canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);

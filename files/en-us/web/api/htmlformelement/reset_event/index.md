@@ -1,6 +1,7 @@
 ---
 title: 'HTMLFormElement: reset event'
 slug: Web/API/HTMLFormElement/reset_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -14,26 +15,19 @@ browser-compat: api.HTMLFormElement.reset_event
 
 The **`reset`** event fires when a {{HTMLElement("form")}} is reset.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes (although specified as a simple event that doesn't bubble)</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onreset")}}</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('reset', (event) => {});
+
+onreset = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

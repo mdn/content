@@ -11,7 +11,7 @@ tags:
 ---
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
 
-Starting with ECMAScript 2015, JavaScript gains support for the {{jsxref("Proxy")}} and {{jsxref("Reflect")}} objects allowing you to intercept and define custom behavior for fundamental language operations (e.g. property lookup, assignment, enumeration, function invocation, etc). With the help of these two objects you are able to program at the meta level of JavaScript.
+The {{jsxref("Proxy")}} and {{jsxref("Reflect")}} objects allow you to intercept and define custom behavior for fundamental language operations (e.g. property lookup, assignment, enumeration, function invocation, etc.). With the help of these two objects you are able to program at the meta level of JavaScript.
 
 ## Proxies
 
@@ -20,15 +20,15 @@ Introduced in ECMAScript 6, {{jsxref("Proxy")}} objects allow you to intercept c
 For example, getting a property on an object:
 
 ```js
-let handler = {
-  get: function(target, name) {
-    return name in target ? target[name] : 42
-  }
-}
+const handler = {
+  get(target, name) {
+    return name in target ? target[name] : 42;
+  },
+};
 
-let p = new Proxy({}, handler)
-p.a = 1
-console.log(p.a, p.b) // 1, 42
+const p = new Proxy({}, handler);
+p.a = 1;
+console.log(p.a, p.b); // 1, 42
 ```
 
 The `Proxy` object defines a _`target`_ (an empty object here) and a _`handler`_ object, in which a `get` _trap_ is implemented. Here, an object that is proxied will not return `undefined` when getting undefined properties, but will instead return the number `42`.
@@ -336,21 +336,6 @@ The following table summarizes the available traps available to `Proxy` objects.
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/enumerate", "handler.enumerate()")}}
-      </td>
-      <td>
-        <dl>
-          <dt>Property enumeration / <code>for...in</code>:</dt>
-          <dd>
-            <code>for (let name in <var>proxy</var>) {...}</code
-            ><br />{{jsxref("Reflect.enumerate()")}}
-          </dd>
-        </dl>
-      </td>
-      <td>The <code>enumerate</code> method must return an object.</td>
-    </tr>
-    <tr>
-      <td>
         {{jsxref("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
       </td>
       <td>
@@ -411,20 +396,20 @@ The {{jsxref("Proxy.revocable()")}} method is used to create a revocable `Proxy`
 Afterwards, any operation on the proxy leads to a {{jsxref("TypeError")}}.
 
 ```js
-let revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return '[[' + name + ']]'
-  }
-})
-let proxy = revocable.proxy
-console.log(proxy.foo)  // "[[foo]]"
+const revocable = Proxy.revocable({}, {
+  get(target, name) {
+    return `[[${name}]]`
+  },
+});
+const proxy = revocable.proxy;
+console.log(proxy.foo); // "[[foo]]"
 
-revocable.revoke()
+revocable.revoke();
 
-console.log(proxy.foo)  // TypeError is thrown
-proxy.foo = 1           // TypeError again
-delete proxy.foo        // still TypeError
-typeof proxy            // "object", typeof doesn't trigger any trap
+console.log(proxy.foo); // TypeError: Cannot perform 'get' on a proxy that has been revoked
+proxy.foo = 1; // TypeError: Cannot perform 'set' on a proxy that has been revoked
+delete proxy.foo; // TypeError: Cannot perform 'deleteProperty' on a proxy that has been revoked
+console.log(typeof proxy); // "object", typeof doesn't trigger any trap
 ```
 
 ## Reflection

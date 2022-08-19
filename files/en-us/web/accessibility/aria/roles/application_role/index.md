@@ -8,18 +8,21 @@ tags:
   - Reference
   - Role application
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#application
+  - https://w3c.github.io/aria-practices/#application
 ---
 The `application` role indicates to assistive technologies that an element _and all of its children_ should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications. Most mobile and desktop web apps _are not_ considered applications for this purpose.
 
 ```html
-<div role="application" aria-label="...">...</div>
+<div role="application" aria-label="…">…</div>
 ```
 
 By specifying the `application` role, it indicates this `div` element and all of its descendants are to be treated like they are part of a desktop application.
 
 ## Description
 
-The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#Document_structure_roles), indicates to assistive technologies that this part of the web content contains elements that do not conform to any other known HTML element or WAI-ARIA widget. Any sort of special interpretation of HTML structures and widgets should be suspended, and control should be completely handed over to the browser and web application to handle mouse, keyboard, or touch interaction.
+The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#document_structure_roles), indicates to assistive technologies that this part of the web content contains elements that do not conform to any other known HTML element or WAI-ARIA widget. Any sort of special interpretation of HTML structures and widgets should be suspended, and control should be completely handed over to the browser and web application to handle mouse, keyboard, or touch interaction.
 
 In this mode, the web author is completely responsible for handling any and all keyboard input, focus management, and other interactions and cannot assume assistive technologies would do any processing on their end.
 
@@ -89,10 +92,7 @@ If used, the application role should be added to the lowest common container pos
 
 ## Specifications
 
-| Specification                                                    | Status                   |
-| ---------------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#application","application")}} | {{Spec2('ARIA')}} |
-| {{SpecName("ARIA Authoring Practices 1.2","#application","application")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## Precedence order
 
@@ -100,7 +100,7 @@ Applying the `application` role will cause this and all of the descendant elemen
 
 ## See also
 
-- [If you use the WAI-ARIA role `application`, please do so wisely](https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
+- [If you use the WAI-ARIA role `application`, please do so wisely](https://www.marcozehe.de/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
 - [Using the ARIA `application` role](https://tink.uk/using-the-aria-application-role/) - by Léonie Watson
 
 <section id="Quick_links">

@@ -90,15 +90,15 @@ paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
 If you go to the live example now and investigate the list elements using [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), you'll notice a couple of styling defaults:
 
-- The {{htmlelement("ul")}} and {{htmlelement("ol")}} elements have a top and bottom {{cssxref("margin")}} of `16px` (`1em`) and a {{cssxref("padding-left")}} of `40px` (`2.5em`.)
+- The {{htmlelement("ul")}} and {{htmlelement("ol")}} elements have a top and bottom {{cssxref("margin")}} of `16px` (`1em`) and a {{cssxref("padding-left")}} of `40px` (`2.5em`).
 - The list items ({{htmlelement("li")}} elements) have no set defaults for spacing.
 - The {{htmlelement("dl")}} element has a top and bottom {{cssxref("margin")}} of `16px` (`1em`), but no padding set.
-- The {{htmlelement("dd")}} elements have {{cssxref("margin-left")}} of `40px` (`2.5em`.)
+- The {{htmlelement("dd")}} elements have {{cssxref("margin-left")}} of `40px` (`2.5em`).
 - The {{htmlelement("p")}} elements we've included for reference have a top and bottom {{cssxref("margin")}} of `16px` (`1em`) — the same as the different list types.
 
 ## Handling list spacing
 
-When styling lists, you need to adjust their styles so they keep the same vertical spacing as their surrounding elements (such as paragraphs and images; sometimes called vertical rhythm), and the same horizontal spacing as each other (you can see the [finished styled example](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) on GitHub, and [find the source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/index.html) too.)
+When styling lists, you need to adjust their styles so they keep the same vertical spacing as their surrounding elements (such as paragraphs and images; sometimes called vertical rhythm), and the same horizontal spacing as each other (you can see the [finished styled example](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) on GitHub, and [find the source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/index.html) too).
 
 The CSS used for the text styling and spacing is as follows:
 
@@ -341,16 +341,16 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 ```
 
 ```js hidden
-var htmlInput = document.querySelector(".html-input");
-var cssInput = document.querySelector(".css-input");
-var reset = document.getElementById("reset");
-var htmlCode = htmlInput.value;
-var cssCode = cssInput.value;
-var output = document.querySelector(".output");
-var solution = document.getElementById("solution");
+const htmlInput = document.querySelector(".html-input");
+const cssInput = document.querySelector(".css-input");
+const reset = document.getElementById("reset");
+const htmlCode = htmlInput.value;
+const cssCode = cssInput.value;
+const output = document.querySelector(".output");
+const solution = document.getElementById("solution");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+const styleElem = document.createElement('style');
+const headElem = document.querySelector('head');
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -358,15 +358,26 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", () => {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
+solution.addEventListener("click", () => {
   htmlInput.value = htmlCode;
-  cssInput.value = 'ul {\n  list-style-type: square;\n}\n\nul li, ol li {\n  line-height: 1.5;\n}\n\nol {\n  list-style-type: lower-alpha\n}';
+  cssInput.value = `ul {
+  list-style-type: square;
+}
+
+ul li,
+ol li {
+  line-height: 1.5;
+}
+
+ol {
+  list-style-type: lower-alpha;
+}`;
   drawOutput();
 });
 

@@ -1,6 +1,7 @@
 ---
 title: Using Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
+page-type: guide
 tags:
   - Guide
   - Service
@@ -18,7 +19,7 @@ One overriding problem that web users have suffered with for years is loss of co
 
 The previous attempt, _AppCache_, seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn't follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag/) for more details.
 
-> **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chromium 90, and is deprecated in Safari.
+> **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also has been [removed](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) from Chromium 95, and is deprecated in Safari.
 
 Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade-off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as [Offline First](https://offlinefirst.org/)). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.
 
@@ -79,7 +80,7 @@ const registerServiceWorker = async () => {
   }
 };
 
-// ...
+// …
 
 registerServiceWorker();
 ```
@@ -185,7 +186,7 @@ self.addEventListener('fetch', (event) => {
 
 Let's look at a few other options we have when defining our magic (see our [Fetch API documentation](/en-US/docs/Web/API/Fetch_API) for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)
 
-1. The `{{domxref("Response.Response","Response()")}}` constructor allows you to create a custom response. In this case, we are just returning a simple text string:
+1. The {{domxref("Response.Response","Response()")}} constructor allows you to create a custom response. In this case, we are just returning a simple text string:
 
     ```js
     new Response('Hello from your friendly neighborhood service worker!');
@@ -466,9 +467,9 @@ self.addEventListener('install', (event) => {
       './sw-test/app.js',
       './sw-test/image-list.js',
 
-      …
+      // ...
 
-      // include other new resources for the new version...
+      // include other new resources for the new version…
     ]
   ));
 });
@@ -485,14 +486,14 @@ You also get an `activate` event. This is generally used to do stuff that would 
 Promises passed into `waitUntil()` will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first `fetch` event on the new service worker.
 
 ```js
-const deleteCache = async key => {
+const deleteCache = async (key) => {
   await caches.delete(key)
 }
 
 const deleteOldCaches = async () => {
    const cacheKeepList = ['v2'];
    const keyList = await caches.keys()
-   const cachesToDelete = keyList.filter(key => !cacheKeepList.includes(key))
+   const cachesToDelete = keyList.filter((key) => !cacheKeepList.includes(key))
    await Promise.all(cachesToDelete.map(deleteCache));
 }
 
@@ -515,7 +516,6 @@ Firefox has also started to implement some useful tools related to service worke
 
 ## See also
 
-- [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/)
 - [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Download the [Service Workers 101 cheatsheet](sw101.png).

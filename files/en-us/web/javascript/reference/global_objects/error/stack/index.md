@@ -39,7 +39,7 @@ function trace() {
   try {
     throw new Error('myError');
   }
-  catch(e) {
+  catch (e) {
     alert(e.stack);
   }
 }
@@ -120,7 +120,6 @@ Not part of any standard.
 
 ## See also
 
-- [Components.stack](/en-US/docs/Components.stack)
 - External projects: [TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/stacktracejs/stacktrace.js)
 - MSDN: [archived error.stack docs](https://web.archive.org/web/20220312071445/https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
-- [Overview of the V8 JavaScript stack trace API](https://github.com/v8/v8/wiki/Stack%20Trace%20API)
+- [Overview of the V8 JavaScript stack trace API](https://v8.dev/docs/stack-trace-api)

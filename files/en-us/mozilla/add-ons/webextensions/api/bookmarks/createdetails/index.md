@@ -27,7 +27,7 @@ An {{jsxref("object")}} containing some combination of the following fields:
   - : A {{jsxref("string")}} which indicates the ID of the parent folder into which to place the new bookmark or bookmark folder. On Chrome and Firefox, the default is the "Other Bookmarks" folder on the Bookmarks menu.
 - `title` {{optional_inline}}
   - : A {{jsxref("string")}} which specifies the title for the bookmark or the name of the folder to be created. If this isn't specified, the title is `""`.
-- `type`{{optional_inline}}
+- `type` {{optional_inline}}
   - : A {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} object indicating whether this is a bookmark, a folder, or a separator. Defaults to `"bookmark"` unless `url` is omitted, in which case it defaults to `"folder"`.
 - `url` {{optional_inline}}
   - : `string`. A {{jsxref("string")}} which specifies the URL of the page to bookmark. If this is omitted or is `null`, a folder is created instead of a bookmark.

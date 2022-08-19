@@ -59,7 +59,7 @@ This system works well, but traditionally web developers' font choices were limi
 
 ## Web fonts
 
-But there is an alternative that works very well. (It's even supported by such older browsers as IE version 6). CSS allows you to specify font files, available on the web, to be downloaded along with your website as it's accessed. This means that any browser supporting this CSS feature can display the fonts you've specifically chosen. Amazing! The syntax required looks something like this:
+But there is an alternative that works very well. (It's even supported by such older browsers as IE version 6.) CSS allows you to specify font files, available on the web, to be downloaded along with your website as it's accessed. This means that any browser supporting this CSS feature can display the fonts you've specifically chosen. Amazing! The syntax required looks something like this:
 
 First of all, you have a {{cssxref("@font-face")}} ruleset at the start of the CSS, which specifies the font file(s) to download:
 
@@ -132,8 +132,8 @@ Web services for font generation typically limit file sizes. In such a case, con
 
 1. [sfnt2woff-zopfli](https://github.com/bramstein/sfnt2woff-zopfli) for converting ttf to woff
 2. [fontforge](https://fontforge.org/) for converting from ttf to svg
-3. [batik ttf2svf](https://people.apache.org/~clay/batik/ttf2svg.html)for converting from ttf to svg
-4. [woff2](https://github.com/google/woff2)for converting from ttf to woff2
+3. [batik ttf2svf](https://people.apache.org/~clay/batik/ttf2svg.html) for converting from ttf to svg
+4. [woff2](https://github.com/google/woff2) for converting from ttf to woff2
 
 ### Implementing the code in your demo
 
@@ -166,7 +166,7 @@ To implement these fonts in your demo, follow these steps:
 
 You should end up with a demo page with some nice fonts implemented on them. Because different fonts are created at different sizes, you may have to adjust the size, spacing, etc., to sort out the look and feel.
 
-![](web-font-example.png)
+![The finished design of a Web font active learning exercise. The page has two headings and three paragraphs. The page contains different fonts and text at different sizes.](web-font-example.png)
 
 > **Note:** If you have any problems getting this to work, feel free to compare your version to our finished files — see [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) and [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css). You can also download the [code from GitHub](https://github.com/mdn/learning-area/tree/main/css/styling-text/web-fonts) or [run the finished example live](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html).
 
@@ -187,7 +187,7 @@ Most of these services are easy to use, so we won't cover them in great detail. 
 
 ## @font-face in more detail
 
-Let's explore that `@font-face` syntax generated for you by fontsquirrel. This is what one of the rulesets looks like:
+Let's explore that `@font-face` syntax generated for you by Fontsquirrel. This is what one of the rulesets looks like:
 
 ```css
 @font-face {

@@ -1,6 +1,7 @@
 ---
 title: Request.priority
 slug: Web/API/Request/priority
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -18,15 +19,16 @@ requests.
 
 ## Value
 
-A {{domxref("USVString")}} indicating the hinted priority of the request.
+A string indicating the hinted priority of the request.
 Possible values are:
 
-- **`high`**: Fetch the request at a high priority relative to other
-  requests of a similar type.
-- **`low`**: Fetch the request at a low priority relative to other
-  requests of a similar type.
-- **`auto`**: Default mode, which indicates no preference for
-  the fetch priority. The browser decides what is best for the user.
+- `high`
+  - : The request is at a high priority relative to the other requests of a similar type.
+- `low`
+  - : The request is at a low priority relative to other requests of a similar type.
+- `auto`
+  - : Default mode, which indicates no preference for the fetch priority.
+    The browser decides what is best for the user.
 
 ## Examples
 
@@ -35,8 +37,8 @@ In the following snippet, we create a new request using the
 at a low priority, then save the priority of the request in a variable:
 
 ```js
-var myRequest = new Request('/background-api-call', {priority: 'low'});
-var myPriority = myRequest.priority; // "low"
+const myRequest = new Request('/background-api-call', { priority: 'low' });
+const myPriority = myRequest.priority; // "low"
 ```
 
 ## Specifications

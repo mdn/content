@@ -1,11 +1,13 @@
 ---
 title: CSS Declaration
 slug: Web/API/CSS_Object_Model/CSS_Declaration
+page-type: guide
 tags:
   - CSS
   - CSS Object Model
   - CSS Declaration
   - Reference
+spec-urls: https://drafts.csswg.org/cssom/#css-declarations
 ---
 {{ APIRef("CSSOM") }}
 
@@ -35,6 +37,4 @@ h1 {
 
 ## Specifications
 
-| Specification                                                                        | Status                   | Comment |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------- |
-| {{SpecName('CSSOM', '#css-declarations', 'CSS Declarations')}} | {{Spec2('CSSOM')}} |         |
+{{Specifications}}

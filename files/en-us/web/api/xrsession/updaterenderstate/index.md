@@ -1,6 +1,7 @@
 ---
 title: XRSession.updateRenderState()
 slug: Web/API/XRSession/updateRenderState
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -38,7 +39,7 @@ updateRenderState(state)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -91,7 +92,7 @@ Layers will be presented in the order they are given in the `layers` array, with
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
   optionalFeatures: ["layers"]
-}
+});
 
 function onXRSessionStarted(xrSession) {
   const glCanvas = document.createElement("canvas");

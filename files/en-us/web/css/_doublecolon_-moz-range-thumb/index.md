@@ -18,7 +18,9 @@ The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-{{csssyntax}}
+```
+::-moz-range-thumb
+```
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -31,7 +32,7 @@ alert(message)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -42,7 +43,7 @@ alert("Hello world!");
 
 Both produce:
 
-![](alerthelloworld.png)
+![Black alert dialog box. At the top left small circle icon follow by white open and close brackets containing this white text: Javascript application. Below on the left, a Hello world! white text. And on the bottom right a small blue button. The button's text is: ok in black.](alerthelloworld.png)
 
 ## Notes
 
@@ -69,6 +70,3 @@ Alternatively {{HTMLElement("dialog")}} element can be used to display alerts.
 - {{HTMLElement("dialog")}} element
 - {{domxref("window.confirm","confirm")}}
 - {{domxref("window.prompt","prompt")}}
-- For [Mozilla Chrome](/en-US/docs/Glossary/Chrome) see
-  {{ifmethod("nsIPromptService","alert")}} and
-  {{ifmethod("nsIPromptService","alertCheck")}}

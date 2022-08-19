@@ -1,6 +1,7 @@
 ---
 title: Element.ariaReadOnly
 slug: Web/API/Element/ariaReadOnly
+page-type: web-api-instance-property
 tags:
   - API
   - Property

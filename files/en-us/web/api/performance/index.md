@@ -1,6 +1,7 @@
 ---
 title: Performance
 slug: Web/API/Performance
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -16,7 +17,7 @@ The **`Performance`** interface provides access to performance-related informati
 
 An object of this type can be obtained by calling the {{domxref("window.performance")}} read-only attribute.
 
-> **Note:** This interface and its members are available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) via [`WorkerGlobalScope.performance`](/en-US/docs/Web/API/WorkerGlobalScope/performance) , except where indicated below. Also, note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
+> **Note:** This interface and its members are available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) via [`WorkerGlobalScope.performance`](/en-US/docs/Web/API/performance_property) , except where indicated below. Also, note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
 
 {{InheritanceDiagram}}
 
@@ -66,7 +67,7 @@ _The `Performance` interface doesn't inherit any methods._
 - {{domxref("Performance.setResourceTimingBufferSize()")}}
   - : Sets the browser's resource timing buffer size to the specified number of "`resource`" {{domxref("PerformanceEntry.entryType","type")}} {{domxref("PerformanceEntry","performance entry")}} objects.
 - {{domxref("Performance.toJSON()")}}
-  - : Is a jsonizer returning a JSON object representing the `Performance` object.
+  - : A jsonizer returning a JSON object representing the `Performance` object.
 
 ## Events
 

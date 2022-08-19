@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.packetsReceived
 slug: Web/API/RTCIceCandidatePairStats/packetsReceived
+page-type: web-api-instance-property
 tags:
   - API
   - Communication

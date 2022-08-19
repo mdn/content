@@ -1,6 +1,7 @@
 ---
 title: window.cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -12,7 +13,7 @@ tags:
   - polyfill
 browser-compat: api.Window.cancelIdleCallback
 ---
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 ## Summary
 
@@ -33,13 +34,12 @@ cancelIdleCallback(handle)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
-in the article [Cooperative Scheduling
-of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
+in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## Specifications
 

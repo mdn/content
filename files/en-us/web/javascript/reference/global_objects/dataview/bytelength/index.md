@@ -24,14 +24,14 @@ The `byteLength` property is an accessor property whose set accessor function is
 ### Using the byteLength property
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.byteLength; // 8 (matches the byteLength of the buffer)
 
-var dataview2 = new DataView(buffer, 1, 5);
+const dataview2 = new DataView(buffer, 1, 5);
 dataview2.byteLength; // 5 (as specified when constructing the DataView)
 
-var dataview3 = new DataView(buffer, 2);
+const dataview3 = new DataView(buffer, 2);
 dataview3.byteLength; // 6 (due to the offset of the constructed DataView)
 ```
 

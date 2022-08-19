@@ -1,6 +1,7 @@
 ---
 title: KeyframeEffect()
 slug: Web/API/KeyframeEffect/KeyframeEffect
+page-type: web-api-constructor
 tags:
   - API
   - Animation
@@ -13,25 +14,25 @@ browser-compat: api.KeyframeEffect.KeyframeEffect
 ---
 {{ APIRef("Web Animations API") }}
 
-The **`KeyframeEffect()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new `{{domxref("KeyframeEffect")}}` object instance, and also allows you to clone an existing keyframe effect object instance.
+The **`KeyframeEffect()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new {{domxref("KeyframeEffect")}} object instance, and also allows you to clone an existing keyframe effect object instance.
 
 ## Syntax
 
 ```js
-new KeyframeEffect(target, keyframes);
+new KeyframeEffect(target, keyframes)
 new KeyframeEffect(target, keyframes, options)
-new KeyframeEffect(source)
+new KeyframeEffect(sourceKeyFrames)
 ```
 
 ### Parameters
 
 The multi-argument constructor (see above) creates a completely new {{domxref("KeyframeEffect")}} object instance. Its parameters are:
 
-- target
+- `target`
   - : The DOM element to be animated, or `null`.
-- keyframes
+- `keyframes`
   - : A [keyframes object](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) or `null`.
-- options {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Either an integer representing the animation's duration (in milliseconds), or an object containing one or more of the following:
 
@@ -73,7 +74,7 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
 
 The single argument constructor (see above) creates a clone of an existing {{domxref("KeyframeEffect")}} object instance. Its parameter is as follows:
 
-- sourceKeyFrames
+- `sourceKeyFrames`
   - : A {{domxref("KeyframeEffect")}} object that you want to clone.
 
 ## Examples
