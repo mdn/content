@@ -5,9 +5,10 @@ page-type: web-api-interface
 tags:
   - API
   - Reference
+  - Non-standard
 browser-compat: api.DirectoryReaderSync
 ---
-{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 The `DirectoryReaderSync` interface lets you read the entries in a directory.
 
