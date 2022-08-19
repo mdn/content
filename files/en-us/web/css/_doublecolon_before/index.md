@@ -24,7 +24,7 @@ In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 ::before
 ```
 
-> **Note:** [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) introduced the double-colon notaion `::before` to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept single-colon notation`:before`, introduced in CSS2.
+> **Note:** [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) introduced the double-colon notation `::before` to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept single-colon notation`:before`, introduced in CSS2.
 
 ## Examples
 
