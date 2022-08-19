@@ -146,7 +146,7 @@ This guideline focuses on making text content as understandable as possible.
           of words where they are is needed to understand the content fully.
         </p>
         <p>
-          The HTML5 {{htmlelement("audio")}} element can be used to
+          The HTML {{htmlelement("audio")}} element can be used to
           create a control that allows the reader to play back an audio file
           containing the correct pronunciation, and it also makes sense to
           include a textual pronunciation guide after difficult words, in the
@@ -326,7 +326,7 @@ This guideline centers around helping users enter correct information when requi
         </p>
         <p>
           It is advisable to implement client-side error detection and handling,
-          via HTML5 form validation features, and/or JavaScript, whatever is
+          via HTML form validation features, and/or JavaScript, whatever is
           best for your situation. When an error is detected, an intuitive error
           message should be shown next to the form input that is at fault to
           help the user correct their inputs. For screenreader users, you can

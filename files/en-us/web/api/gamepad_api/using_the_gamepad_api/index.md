@@ -12,7 +12,7 @@ browser-compat: api.Gamepad
 ---
 {{DefaultAPISidebar("Gamepad API")}}
 
-HTML5 introduced many of the necessary components for rich, interactive game development. Technologies like `<canvas>`, WebGL, `<audio>`, and `<video>`, along with JavaScript implementations, have matured to the point where they can now support many tasks previously requiring native code. The Gamepad API is a way for developers and designers to access and use gamepads and other game controllers.
+HTML provies the necessary components for rich, interactive game development. Technologies like `<canvas>`, WebGL, `<audio>`, and `<video>`, along with JavaScript implementations support tasks that provide similar, if not the same, features as native code. The Gamepad API is a way for developers and designers to access and use gamepads and other game controllers.
 
 The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) introduces new events on the {{ domxref("Window") }} object for reading gamepad and controller (hereby referred to as *gamepad*) state. In addition to these events, the API also adds a {{ domxref("Gamepad") }} object, which you can use to query the state of a connected gamepad, and a {{ domxref("navigator.getGamepads()") }} method which you can use to get a list of gamepads known to the page.
 

@@ -30,7 +30,7 @@ A very simple first shader program.
 
 ```html hidden
 <canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+    HTML canvas.</canvas>
 ```
 
 ```css hidden
