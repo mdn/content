@@ -129,16 +129,9 @@ Transactions can have one of three modes:
       <td>"versionchange" (2 in Chrome)</td>
       <td>
         Allows any operation to be performed, including ones that delete and
-        create object stores and indexes. This mode is for updating the version
-        number of transactions that were started using the
-        <a href="/en-US/docs/Web/API/IDBDatabase#setversion"
-          ><code>setVersion()</code></a
-        >
-        method of
-        <a href="/en-US/docs/Web/API/IDBDatabase">IDBDatabase</a> objects.
-        Transactions of this mode cannot run concurrently with other
-        transactions. Transactions in this mode are known as "upgrade
-        transactions."
+        create object stores and indexes. Transactions of this mode cannot run
+        concurrently with other transactions. Transactions in this mode are
+        known as "upgrade transactions."
       </td>
     </tr>
   </tbody>
