@@ -17,7 +17,7 @@ Firefox 17 shipped on November 20, 2012. This article lists key changes that are
 
 ### CSS
 
-- Support for {{cssxref("@supports")}} at-rule defined in [CSS3 Conditional Rules specification](https://drafts.csswg.org/css-conditional-3/) has been landed. It is disabled by default. Developers can try it by setting `layout.css.supports-rule.enabled` to true ([bug 649740](https://bugzilla.mozilla.org/show_bug.cgi?id=649740)).
+- Support for {{cssxref("@supports")}} at-rule defined in [CSS Conditional Rules Module Level 3](https://drafts.csswg.org/css-conditional-3/) has been landed. It is disabled by default. Developers can try it by setting `layout.css.supports-rule.enabled` to true ([bug 649740](https://bugzilla.mozilla.org/show_bug.cgi?id=649740)).
 - Support for the CSS Selectors Level 4 pseudo-class {{cssxref(":dir", ":dir()")}} allowing selection of elements based on their directionality has landed. ([bug 562169](https://bugzilla.mozilla.org/show_bug.cgi?id=562169))
 - Support for the newly specified `isolate-override` value of the CSS {{cssxref("unicode-bidi")}} value has landed ({{bug("774335")}})
 - Our prefixed implementation of {{cssxref("box-sizing")}} now takes into account {{cssxref("min-height")}} and {{cssxref("max-height")}}. One step closer to its unprefixing ({{bug("308801")}})
