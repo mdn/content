@@ -267,7 +267,7 @@ html body form fieldset#custom div.select div.header::after {
   padding: .5em;
 }
 
-html body form fieldset#custom div.select div.header:hover:after {
+html body form fieldset#custom div.select div.header:hover::after {
   background-color: blue;
 }
 

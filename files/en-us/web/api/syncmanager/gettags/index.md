@@ -12,7 +12,7 @@ tags:
   - getTags
 browser-compat: api.SyncManager.getTags
 ---
-{{APIRef("Service Workers API")}}{{Non-standard_header}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`SyncManager.getTags`** method of the
 {{domxref("SyncManager")}} interface returns a list of developer-defined identifiers for

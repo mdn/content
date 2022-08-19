@@ -9,9 +9,10 @@ tags:
   - Offline
   - Reference
   - filesystem
+  - Non-standard
 browser-compat: api.DirectoryEntrySync
 ---
-{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 The `DirectoryEntrySync` interface represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.
 

@@ -450,10 +450,10 @@ html,body {
 .container {
   display: inline-block;
   border: 1px dotted grey;
-  position:relative;
+  position: relative;
 }
 
-.container:before {
+.container::before {
   content: 'margin';
   position: absolute;
   top: 2px;
@@ -465,7 +465,7 @@ html,body {
   box-shadow: 1rem 1rem 0 #EFEFEF inset, -1rem -1rem 0 #EFEFEF inset;
 }
 
-.container.viewbox:after {
+.container.viewbox::after {
   content: 'viewbox';
   position: absolute;
   left: 1.1rem;
