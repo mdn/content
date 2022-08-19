@@ -39,7 +39,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("HTMLElement.transitionend_event", "transitionend")}}
   - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has finished playing.
 - {{domxref("HTMLElement.transitionrun_event", "transitionrun")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is created (i.e, when it is added to a set of running transitions), though not necessarily started.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
 - {{domxref("HTMLElement.transitionstart_event", "transitionstart")}}
   - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has started transitioning.
 
