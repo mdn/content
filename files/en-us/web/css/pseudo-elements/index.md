@@ -94,7 +94,7 @@ T
     <tr>
       <th>Browser</th>
       <th>Lowest Version</th>
-      <th>Support of</th>
+      <th>Support of </th>
     </tr>
     <tr>
       <td rowspan="2">Internet Explorer</td>
