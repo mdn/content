@@ -681,7 +681,7 @@
   },
   "CSSOM View": {
     "name": "CSS Object Model (CSSOM) View Module",
-    "url": "https://drafts.csswg.org/cssom-view/",
+    "url": "https://www.w3.org/TR/cssom-view-1/",
     "status": "WD"
   },
   "Custom Scroll Restoration": {
