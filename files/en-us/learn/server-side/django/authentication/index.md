@@ -178,7 +178,7 @@ The next step is to create a registration directory on the search path and then 
 
 The URLs (and implicitly, views) that we just added expect to find their associated templates in a directory **/registration/** somewhere in the templates search path.
 
-For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, i.e. the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
+For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, that is, the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
 
 > **Note:** Your folder structure should now look like the below:
 >
