@@ -72,7 +72,16 @@ This article provides information about the changes in Firefox 104 that will aff
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Removals
+#### WebDriver BiDi
+
+- Added support for `source` to the `log.entryAdded` event ({{bug(1770792)}}).
+- Updated the `url` sent for `browsingContext.contextCreated` events to be `about:blank` for newly opened browsing contexts ({{bug(1775141)}}).
+
+#### Marionette
+
+- Improved stability and performance when minimizing or restoring windows on Linux ({{bug(1780212)}}).
+- Added support for `touch` actions ({{bug(1543337)}}).
+
 
 ## Changes for add-on developers
 
