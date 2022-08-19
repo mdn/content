@@ -14,7 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.copyTo
 ---
-{{APIRef("File and Directory Entries API")}}{{deprecated_header}}
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`copyTo()`** copies the file
