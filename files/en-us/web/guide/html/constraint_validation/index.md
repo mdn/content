@@ -64,13 +64,8 @@ In addition to the `type` attribute described above, the following attributes ar
         <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"
           >JavaScript regular expression</a
         >
-        (compiled with the
-        <a
-          href="http://www.ecma-international.org/publications/standards/Ecma-262.htm"
-          >ECMAScript 5</a
-        >
-        <code>global</code>, <code>ignoreCase</code>, and
-        <code>multiline</code> flags <em>disabled)</em>
+        (compiled with the {{jsxref("RegExp.global", "global")}}, {{jsxref("RegExp.ignoreCase", "ignoreCase")}}, and
+        {{jsxref("RegExp.multiline", "multiline")}} flags <em>disabled</em>)
       </td>
       <td>The value must match the pattern.</td>
       <td>

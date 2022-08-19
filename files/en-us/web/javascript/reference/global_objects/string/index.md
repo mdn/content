@@ -55,8 +55,7 @@ There are two ways to access an individual character in a string. The first is t
 'cat'.charAt(1) // gives value "a"
 ```
 
-The other way (introduced in ECMAScript 5) is to treat the string as an array-like
-object, where individual characters correspond to a numerical index:
+The other way is to treat the string as an array-like object, where individual characters correspond to a numerical index:
 
 ```js
 'cat'[1] // gives value "a"
