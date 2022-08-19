@@ -35,7 +35,7 @@ user-select: revert-layer;
 user-select: unset;
 ```
 
-> **Note:** `user-select` is not an inherited property, though the initial `auto` value makes it behave like it is inherited most of the time. WebKit/Chromium-based browsers _do_ implement the property as inherited, which violates the behavior described in the spec, and this will bring some issues. Until now, Chromium chooses to [fix the issues](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de), make the final behavior meets the specifications.
+> **Note:** `user-select` is not an inherited property, though the initial `auto` value makes it behave like it is inherited most of the time. WebKit/Chromium-based browsers _do_ implement the property as inherited, which violates the behavior described in the spec, and this will bring some issues. Until now, Chromium has chosen to [fix the issues](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de) to make the final behavior meet the specifications.
 
 ### Values
 
@@ -96,7 +96,7 @@ user-select: unset;
 }
 ```
 
-> **Note:** `-webkit-user-select: all;` doesn't work in Safari; use only "none" or "text", or else it will allow typing in the `<html>` container. See the [browser compatability table](#browser-compatibility) for up to date information.
+> **Note:** `-webkit-user-select: all;` doesn't work in Safari; use only "none" or "text", or else it will allow typing in the `<html>` container. See the [browser compatability table](#browser-compatibility) for up-to-date information.
 
 ### Result
 
