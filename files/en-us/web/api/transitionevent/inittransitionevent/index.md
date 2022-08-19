@@ -11,9 +11,10 @@ tags:
   - Method
   - Reference
   - TransitionEvent
+  - Non-standard
 browser-compat: api.TransitionEvent.initTransitionEvent
 ---
-{{ apiref("CSSOM") }} {{deprecated_header}}{{non-standard_header}}
+{{ apiref("CSSOM") }}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`TransitionEvent.initTransitionEvent()`** method
 Initializes a transition event created using the deprecated
