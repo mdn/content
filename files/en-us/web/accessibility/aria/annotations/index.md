@@ -33,7 +33,7 @@ ARIA annotation roles and objects are currently exposed in:
 - Firefox from version 75 onwards, on Windows and Linux (on macOS, we are first waiting for Apple to define what Safari will expose as Apple-dialect attributes to VoiceOver, and will then follow suit.)
 - Chrome from version 81 onwards, currently behind the `#enable-accessibility-expose-aria-annotations` flag (go to `chrome://flags` to enable this.)
 
-Unfortunately, you won't be able to use any of these yet, as screenreader support is currently not there. For the moment, you can see the annotations data being exposed with tools like [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html). The annotations should just work once screenreader support is added.
+Unfortunately, you won't be able to use any of these yet, as screen reader support is currently not there. For the moment, you can see the annotations data being exposed with tools like [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html). The annotations should just work once screen reader support is added.
 
 ## Associating annotated elements with their details
 
@@ -73,7 +73,7 @@ We have already alluded to the difference between these two above — `aria-desc
 </div>
 ```
 
-This difference becomes apparent when you get to how the content is interpreted in the accessibility layer and presented by screenreaders, both in interaction guidance and through the [accessible name and description computation](https://www.w3.org/TR/accname/).
+This difference becomes apparent when you get to how the content is interpreted in the accessibility layer and presented by screen readers, both in interaction guidance and through the [accessible name and description computation](https://www.w3.org/TR/accname/).
 
 Content associated via `aria-describedby` becomes part of the accessible description and is flattened into a simple string (lists, links, etc. are not exposed). Generally it is announced after the accessible name. ARIA 1.3 also identifies [which roles _disallow_ its use](https://w3c.github.io/aria/#namefromprohibited) (such as `generic`, which maps to `<div>`).
 
@@ -135,7 +135,7 @@ With the new additions, you now have new roles available to provide the same sem
 <p>Freida's pet is a <span role="deletion">black Cat called Luna</span><span role="insertion">purple Tyrannosaurus Rex called Tiny</span>.</p>
 ```
 
-However, this often isn't enough — when you've got a content change like the one above that involves an insertion _and_ a deletion, there is no way for a screenreader user to work out if the two are related or not. This is the job of `role="suggestion"`, which should be set on an element wrapping both of them like so:
+However, this often isn't enough — when you've got a content change like the one above that involves an insertion _and_ a deletion, there is no way for a screen reader user to work out if the two are related or not. This is the job of `role="suggestion"`, which should be set on an element wrapping both of them like so:
 
 ```html
 <p>Freida's pet is a

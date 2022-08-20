@@ -59,15 +59,15 @@ The text is difficult to read because of the current color scheme. Can you do a 
 
 ### Semantic HTML
 
-1. The content is still not very accessible — report on what happens when you try to navigate it using a screenreader.
-2. Can you update the article text to make it easier for screenreader users to navigate?
+1. The content is still not very accessible — report on what happens when you try to navigate it using a screen reader.
+2. Can you update the article text to make it easier for screen reader users to navigate?
 3. The navigation menu part of the site (wrapped in `<div class="nav"></div>`) could be made more accessible by putting it in a proper HTML semantic element. Which one should it be updated to? Make the update.
 
 > **Note:** You'll need to update the CSS rule selectors that style the tags to their proper equivalents for the semantic headings. Once you add paragraph elements, you'll notice the styling looking better.
 
 ### The images
 
-The images are currently inaccessible to screenreader users. Can you fix this?
+The images are currently inaccessible to screen reader users. Can you fix this?
 
 ### The audio player
 
@@ -76,7 +76,7 @@ The images are currently inaccessible to screenreader users. Can you fix this?
 
 ### The forms
 
-1. The `<input>` element in the search form at the top could do with a label, but we don't want to add a visible text label that would potentially spoil the design and isn't really needed by sighted users. How can you add a label that is only accessible to screenreaders?
+1. The `<input>` element in the search form at the top could do with a label, but we don't want to add a visible text label that would potentially spoil the design and isn't really needed by sighted users. How can you add a label that is only accessible to screen readers?
 2. The two `<input>` elements in the comment form have visible text labels, but they are not unambiguously associated with their labels — how do you achieve this? Note that you'll need to update some of the CSS rule as well.
 
 ### The show/hide comment control
@@ -85,7 +85,7 @@ The show/hide comment control button is not current keyboard-accessible. Can you
 
 ### The table
 
-The data table is not currently very accessible — it is hard for screenreader users to associate data rows and columns together, and the table also has no kind of summary to make it clear what it shows. Can you add some features to your HTML to fix this problem?
+The data table is not currently very accessible — it is hard for screen reader users to associate data rows and columns together, and the table also has no kind of summary to make it clear what it shows. Can you add some features to your HTML to fix this problem?
 
 ### Other considerations?
 

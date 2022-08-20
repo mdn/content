@@ -47,13 +47,13 @@ Another category of content that can create accessibility problems is multimedia
 
 So far in this module, we have looked at a variety of content and what needs to be done to ensure its accessibility, ranging from simple text content to data tables, images, native controls such as form elements and buttons, and even more complex markup structures (with [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) attributes).
 
-This article on the other hand looks at another general class of content that arguably isn't as easy to ensure accessibility for — multimedia. Images, audio tracks, videos, {{htmlelement("canvas")}} elements, etc., aren't as easily understood by screenreaders or navigated by the keyboard, and we need to give them a helping hand.
+This article on the other hand looks at another general class of content that arguably isn't as easy to ensure accessibility for — multimedia. Images, audio tracks, videos, {{htmlelement("canvas")}} elements, etc., aren't as easily understood by screen readers or navigated by the keyboard, and we need to give them a helping hand.
 
 But don't despair — here we will help you navigate through the techniques available for making multimedia more accessible.
 
 ## Simple images
 
-We already covered simple text alternatives for HTML images in our [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML) article — you can refer back to there for the full details. In short, you should ensure that where possible visual content has an alternative text available for screenreaders to pick up and read to their users.
+We already covered simple text alternatives for HTML images in our [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML) article — you can refer back to there for the full details. In short, you should ensure that where possible visual content has an alternative text available for screen readers to pick up and read to their users.
 
 For example:
 
