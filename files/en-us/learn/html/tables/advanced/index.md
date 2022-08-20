@@ -56,11 +56,11 @@ You can give your table a caption by putting it inside a {{htmlelement("caption"
 </table>
 ```
 
-As you can infer from the brief example above, the caption is meant to contain a description of the table contents. This is useful for all readers wishing to get a quick idea of whether the table is useful to them as they scan the page, but particularly for blind users. Rather than have a screenreader read out the contents of many cells just to find out what the table is about, the user can rely on a caption and then decide whether or not to read the table in greater detail.
+As you can infer from the brief example above, the caption is meant to contain a description of the table contents. This is useful for all readers wishing to get a quick idea of whether the table is useful to them as they scan the page, but particularly for blind users. Rather than have a screen reader read out the contents of many cells just to find out what the table is about, the user can rely on a caption and then decide whether or not to read the table in greater detail.
 
 A caption is placed directly beneath the `<table>` tag.
 
-> **Note:** The {{htmlattrxref("summary","table")}} attribute can also be used on the `<table>` element to provide a description — this is also read out by screenreaders. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated and can't be read by sighted users (it doesn't appear on the page).
+> **Note:** The {{htmlattrxref("summary","table")}} attribute can also be used on the `<table>` element to provide a description — this is also read out by screen readers. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated and can't be read by sighted users (it doesn't appear on the page).
 
 ### Active learning: Adding a caption
 
@@ -76,7 +76,7 @@ Let's try this out, revisiting an example we first met in the previous article.
 
 As your tables get a bit more complex in structure, it is useful to give them more structural definition. One clear way to do this is by using {{htmlelement("thead")}}, {{htmlelement("tfoot")}}, and {{htmlelement("tbody")}}, which allow you to mark up a header, footer, and body section for the table.
 
-These elements don't make the table any more accessible to screenreader users, and don't result in any visual enhancement on their own. They are however very useful for styling and layout — acting as useful hooks for adding CSS to your table. To give you some interesting examples, in the case of a long table you could make the table header and footer repeat on every printed page, and you could make the table body display on a single page and have the contents available by scrolling up and down.
+These elements don't make the table any more accessible to screen reader users, and don't result in any visual enhancement on their own. They are however very useful for styling and layout — acting as useful hooks for adding CSS to your table. To give you some interesting examples, in the case of a long table you could make the table header and footer repeat on every printed page, and you could make the table body display on a single page and have the contents available by scrolling up and down.
 
 To use them:
 
@@ -228,7 +228,7 @@ Your finished table should look something like the following:
 
 ## Nesting Tables
 
-It is possible to nest a table inside another one, as long as you include the complete structure, including the `<table>` element. This is generally not really advised, as it makes the markup more confusing and less accessible to screenreader users, and in many cases you might as well just insert extra cells/rows/columns into the existing table. It is however sometimes necessary, for example if you want to import content easily from other sources.
+It is possible to nest a table inside another one, as long as you include the complete structure, including the `<table>` element. This is generally not really advised, as it makes the markup more confusing and less accessible to screen reader users, and in many cases you might as well just insert extra cells/rows/columns into the existing table. It is however sometimes necessary, for example if you want to import content easily from other sources.
 
 The following markup shows a simple nested table:
 
@@ -340,7 +340,7 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
   </tbody>
 </table>
 
-But what if you cannot make those visual associations? How then can you read a table like the above? Visually impaired people often use a screenreader that reads out information on web pages to them. This is no problem when you're reading plain text but interpreting a table can be quite a challenge for a blind person. Nevertheless, with the proper markup we can replace visual associations by programmatic ones.
+But what if you cannot make those visual associations? How then can you read a table like the above? Visually impaired people often use a screen reader that reads out information on web pages to them. This is no problem when you're reading plain text but interpreting a table can be quite a challenge for a blind person. Nevertheless, with the proper markup we can replace visual associations by programmatic ones.
 
 > **Note:** There are around 253 Million people living with Visual Impairment according to [WHO data in 2017](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment).
 
@@ -348,13 +348,13 @@ This section of the article provides further techniques for making tables as acc
 
 ### Using column and row headers
 
-Screenreaders will identify all headers and use them to make programmatic associations between those headers and the cells they relate to. The combination of column and row headers will identify and interpret the data in each cell so that screenreader users can interpret the table similarly to how a sighted user does.
+screen readers will identify all headers and use them to make programmatic associations between those headers and the cells they relate to. The combination of column and row headers will identify and interpret the data in each cell so that screen reader users can interpret the table similarly to how a sighted user does.
 
 We already covered headers in our previous article — see [Adding headers with \<th> elements](/en-US/docs/Learn/HTML/Tables/Basics#adding_headers_with_th_elements).
 
 ### The scope attribute
 
-A new topic for this article is the {{htmlattrxref("scope","th")}} attribute, which can be added to the `<th>` element to tell screenreaders exactly what cells the header is a header for — is it a header for the row it is in, or the column, for example? Looking back to our spending record example from earlier on, you could unambiguously define the column headers as column headers like this:
+A new topic for this article is the {{htmlattrxref("scope","th")}} attribute, which can be added to the `<th>` element to tell screen readers exactly what cells the header is a header for — is it a header for the row it is in, or the column, for example? Looking back to our spending record example from earlier on, you could unambiguously define the column headers as column headers like this:
 
 ```html
 <thead>
@@ -380,7 +380,7 @@ And each row could have a header defined like this (if we added row headers as w
 </tr>
 ```
 
-Screenreaders will recognize markup structured like this, and allow their users to read out the entire column or row at once, for example.
+screen readers will recognize markup structured like this, and allow their users to read out the entire column or row at once, for example.
 
 `scope` has two more possible values — `colgroup` and `rowgroup`. These are used for headings that sit over the top of multiple columns or rows. If you look back at the "Items Sold August 2016" table at the start of this section of the article, you'll see that the "Clothes" cell sits above the "Trousers", "Skirts", and "Dresses" cells. All of these cells should be marked up as headers (`<th>`), but "Clothes" is a heading that sits over the top and defines the other three subheadings. "Clothes" therefore should get an attribute of `scope="colgroup"`, whereas the others would get an attribute of `scope="col"`.
 

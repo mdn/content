@@ -229,7 +229,7 @@ function change(event) {
 };
 ```
 
-Without `aria-atomic="true"` the screenreader announces only the changed value of year. With `aria-atomic="true"`, the screenreader announces "The set year is: _changed value_"
+Without `aria-atomic="true"` the screen reader announces only the changed value of year. With `aria-atomic="true"`, the screen reader announces "The set year is: _changed value_"
 
 ### Basic example: `aria-relevant`
 

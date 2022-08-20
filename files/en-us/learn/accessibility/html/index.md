@@ -72,7 +72,7 @@ Semantic HTML doesn't take any longer to write than non-semantic (bad) markup if
 
 Let's get on and look at accessible HTML in more detail.
 
-> **Note:** It is a good idea to have a screen reader set up on your local computer so that you can do some testing of the examples shown below. See our [Screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) for more details.
+> **Note:** It is a good idea to have a screen reader set up on your local computer so that you can do some testing of the examples shown below. See our [Screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen readers) for more details.
 
 ## Good semantics
 

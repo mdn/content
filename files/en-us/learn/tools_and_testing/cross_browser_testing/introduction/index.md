@@ -40,7 +40,7 @@ Cross browser testing is the practice of making sure that the web sites and web 
 
 - Different browsers other than the one or two that you use regularly on your devices, including slightly older browsers that some people might still be using, which don't support all the latest, shiniest CSS and JavaScript features.
 - Different devices with different capabilities, from the latest greatest tablets and smartphones, through smart TVs, right down to cheap tablets and even older feature phones that may run browsers with limited capabilities.
-- People with disabilities, who use the Web with the aid of assistive technologies like screenreaders, or don't use a mouse (some people use only the keyboard).
+- People with disabilities, who use the Web with the aid of assistive technologies like screen readers, or don't use a mouse (some people use only the keyboard).
 
 Remember that you are not your users — just because your site works on your MacBook Pro or high-end Galaxy Nexus, doesn't mean it will work for all your users — there's a whole lot of testing to be done!
 
