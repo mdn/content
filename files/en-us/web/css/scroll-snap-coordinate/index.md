@@ -45,7 +45,10 @@ If the element has been transformed, the snap coordinates are likewise transform
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+scroll-snap-coordinate =
+  none | <position>
+```
 
 ## Examples
 

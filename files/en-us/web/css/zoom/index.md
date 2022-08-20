@@ -55,7 +55,10 @@ zoom: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+zoom =
+ auto | none | [ [ pan-x | pan-left | pan-right ] || [ pan-y | pan-up | pan-down ] || pinch-zoom ] | manipulation
+```
 
 ## Examples
 
