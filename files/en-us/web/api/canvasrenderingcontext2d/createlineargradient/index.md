@@ -51,8 +51,12 @@ the start and end points of the gradient line.
 
 ### Return value
 
-- {{domxref("CanvasGradient")}}
-  - : A linear `CanvasGradient` initialized with the specified line.
+A linear {{domxref("CanvasGradient")}} initialized with the specified line.
+
+### Exceptions
+
+- `NotSupportedError` {{domxref("DOMException)}}
+  - : Thrown when non-finite values are passed as parameters.
 
 ## Examples
 
@@ -101,11 +105,6 @@ ctx.fillRect(20, 20, 200, 100);
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with Gecko 2.0 {{geckoRelease("2.0")}}, specifying non-finite values now
-  throws `NOT_SUPPORTED_ERR` instead of `SYNTAX_ERR`.
 
 ## See also
 
