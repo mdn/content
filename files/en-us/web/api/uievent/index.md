@@ -33,18 +33,18 @@ _This interface also inherits properties of its parent, {{domxref("Event")}}._
 
 - {{domxref("UIEvent.detail")}} {{ReadOnlyInline}}
   - : Returns a `long` with details about the event, depending on the event type.
-- {{domxref("UIEvent.sourceCapabilities")}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref("UIEvent.sourceCapabilities")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns an instance of the `InputDeviceCapabilities` interface, which provides information about the physical device responsible for generating a touch event.
 - {{domxref("UIEvent.view")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WindowProxy")}} that contains the view that generated the event.
-- {{domxref("UIEvent.which")}} {{deprecated_inline}} {{Non-standard_inline}} {{ReadOnlyInline}}
+- {{domxref("UIEvent.which")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the numeric `keyCode` of the key pressed, or the character code (`charCode`) for an alphanumeric key pressed.
 
 ## Methods
 
 _This interface also inherits methods of its parent, {{domxref("Event")}}._
 
-- {{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}
+- {{domxref("UIEvent.initUIEvent()")}} {{Deprecated_Inline}}
   - : Initializes a `UIEvent` object. If the event has already being dispatched, this method does nothing.
 
 ## Specifications

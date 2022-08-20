@@ -32,7 +32,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : The element that's currently in full screen mode for this shadow tree.
 - {{domxref("ShadowRoot.host")}} {{ReadOnlyInline}}
   - : Returns a reference to the DOM element the `ShadowRoot` is attached to.
-- {{domxref("ShadowRoot.innerHTML")}} {{non-standard_inline}}
+- {{domxref("ShadowRoot.innerHTML")}}
   - : Sets or returns a reference to the DOM tree inside the `ShadowRoot`.
 - {{domxref("ShadowRoot.mode")}} {{ReadOnlyInline}}
   - : The mode of the `ShadowRoot` — either `open` or `closed`.
@@ -54,7 +54,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 
 - {{DOMxRef("ShadowRoot.getAnimations()")}}
   - : Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the shadow tree.
-- {{domxref("ShadowRoot.getSelection()")}}
+- {{domxref("ShadowRoot.getSelection()")}} {{Non-standard_Inline}}
   - : Returns a {{domxref('Selection')}} object representing the range of text selected by the user, or the current position of the caret.
 - {{domxref("ShadowRoot.elementFromPoint()")}}
   - : Returns the topmost element at the specified coordinates.

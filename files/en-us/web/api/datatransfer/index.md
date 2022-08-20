@@ -45,16 +45,16 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
 
 > **Note:** All of the properties in this section are Gecko-specific.
 
-- {{domxref("DataTransfer.mozCursor")}}
+- {{domxref("DataTransfer.mozCursor")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Gives the drag cursor's state. This is primarily used to control the cursor during tab drags.
-- {{domxref("DataTransfer.mozSourceNode")}} {{ReadOnlyInline}}
+- {{domxref("DataTransfer.mozSourceNode")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : The {{ domxref("Node") }} over which the mouse cursor was located when the button was pressed to initiate the drag operation. This value is `null` for external drags or if the caller can't access the node.
-- {{domxref("DataTransfer.mozUserCancelled")}} {{ReadOnlyInline}}
+- {{domxref("DataTransfer.mozUserCancelled")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : This property applies only to the `dragend` event, and is `true` if the user canceled the drag operation by pressing escape. It will be `false` in all other cases, including if the drag failed for any other reason, for instance due to a drop over an invalid location.
 
 ### Deprecated properties
 
-- {{domxref("DataTransfer.mozItemCount")}} {{ReadOnlyInline}} {{deprecated_inline}}
+- {{domxref("DataTransfer.mozItemCount")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Gives the number of items in the drag operation. Removed in Firefox 71.
 
 ## Methods
@@ -72,22 +72,22 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
 
 ### Gecko methods
 
-{{Non-standard_header()}}
+{{Non-standard_Header}}
 
 > **Note:** All of the methods in this section are Gecko-specific.
 
-- {{domxref("DataTransfer.addElement()")}}
+- {{domxref("DataTransfer.addElement()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Sets the drag source to the given element.
 
 ### Deprecated methods
 
-- {{domxref("DataTransfer.mozClearDataAt()")}} {{deprecated_inline}}
+- {{domxref("DataTransfer.mozClearDataAt()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Removes the data associated with the given format for an item at the specified index. The index is in the range from zero to the number of items minus one. Removed in Firefox 71.
-- {{domxref("DataTransfer.mozGetDataAt()")}} {{deprecated_inline}}
+- {{domxref("DataTransfer.mozGetDataAt()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Retrieves the data associated with the given format for an item at the specified index, or null if it does not exist. The index should be in the range from zero to the number of items minus one. Removed in Firefox 71.
-- {{domxref("DataTransfer.mozSetDataAt()")}} {{deprecated_inline}}
+- {{domxref("DataTransfer.mozSetDataAt()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A data transfer may store multiple items, each at a given zero-based index. `mozSetDataAt()` may only be called with an index argument less than `mozItemCount` in which case an existing item is modified, or equal to `mozItemCount` in which case a new item is added, and the `mozItemCount` is incremented by one. Removed in Firefox 71.
-- {{domxref("DataTransfer.mozTypesAt()")}} {{deprecated_inline}}
+- {{domxref("DataTransfer.mozTypesAt()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Holds a list of the format types of the data that is stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned. Removed in Firefox 71.
 
 ## Examples
