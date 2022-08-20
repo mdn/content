@@ -120,7 +120,7 @@ But again, only use it when necessary!
 
 In the next section, we'll look at the four areas in more detail, along with practical examples. Before you continue, you should get a screen reader testing setup put in place, so you can test some of the examples as you go through.
 
-See our section on [testing screen readers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen readers) for more information.
+See our section on [testing screen readers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) for more information.
 
 ### Signposts/Landmarks
 
