@@ -100,7 +100,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Comma-separated [content types](/en-US/docs/Web/SVG/Content_type) the server accepts.
 
-    > **Note:** **This attribute has been depecated and should not be used.** Instead, use the {{htmlattrxref("accept", "input")}} attribute on `<input type=file>` elements.
+    > **Note:** **This attribute has been deprecated and should not be used.** Instead, use the {{htmlattrxref("accept", "input")}} attribute on `<input type=file>` elements.
 
 - {{htmlattrdef("accept-charset")}}
   - : Space-separated {{Glossary("character encoding", "character encodings")}} the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
