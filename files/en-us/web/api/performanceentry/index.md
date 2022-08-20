@@ -28,13 +28,13 @@ The **`PerformanceEntry`** object encapsulates a single performance metric that 
 
 ## Properties
 
-- {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : A value that further specifies the value returned by the {{domxref("PerformanceEntry.entryType")}} property. The value of both depends on the subtype. See property page for valid values.
-- {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : A string representing the type of performance metric such as, for example, "`mark`". See property page for valid values.
-- {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the starting time for the performance metric.
-- {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time value of the duration of the performance event.
 
 ## Methods

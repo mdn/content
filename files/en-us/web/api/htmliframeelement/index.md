@@ -27,9 +27,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : A boolean value indicating whether the inline frame is willing to be placed into full screen mode. See [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API) for details.
 - {{domxref("HTMLIFrameElement.allowPaymentRequest")}} {{deprecated_inline}}
   - : A boolean value indicating whether the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) may be invoked inside a cross-origin iframe.
-- {{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}
+- {{domxref("HTMLIFrameElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}}, the active document in the inline frame's nested browsing context.
-- {{domxref("HTMLIFrameElement.contentWindow")}} {{readonlyInline}}
+- {{domxref("HTMLIFrameElement.contentWindow")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WindowProxy")}}, the window proxy for the nested browsing context.
 - {{domxref("HTMLIFrameElement.csp")}}
   - : Specifies the Content Security Policy that an embedded document must agree to enforce upon itself.
@@ -47,7 +47,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : A string being the width of the frame margin.
 - {{domxref("HTMLIFrameElement.name")}}
   - : A string that reflects the {{htmlattrxref("name", "iframe")}} HTML attribute, containing a name by which to refer to the frame.
-- {{domxref("HTMLIFrameElement.featurePolicy")}} {{readonlyinline}} {{experimental_inline}}
+- {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}} {{experimental_inline}}
   - : A string that reflects the {{htmlattrxref("referrerPolicy", "iframe")}} HTML attribute indicating which referrer to use when fetching the linked resource.

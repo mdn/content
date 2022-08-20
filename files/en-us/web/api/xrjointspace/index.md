@@ -20,7 +20,7 @@ The **`XRJointSpace`** interface is an {{domxref("XRSpace")}} and represents the
 
 ## Properties
 
-- {{domxref("XRJointSpace.jointName")}} {{readonlyInline}}
+- {{domxref("XRJointSpace.jointName")}} {{ReadOnlyInline}}
   - : The name of the joint that is tracked. See {{domxref("XRHand")}} for possible hand joint names.
 
 ## Examples

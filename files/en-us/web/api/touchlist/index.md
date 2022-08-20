@@ -19,7 +19,7 @@ The **`TouchList`** interface represents a list of contact points on a touch sur
 
 ## Properties
 
-- {{domxref("TouchList.length")}} {{readonlyInline}}
+- {{domxref("TouchList.length")}} {{ReadOnlyInline}}
   - : The number of {{domxref("Touch")}} objects in the `TouchList`.
 
 ## Methods

@@ -23,7 +23,7 @@ The GamepadEvent interface of the Gamepad API contains references to gamepads co
 
 ## Properties
 
-- {{ domxref("GamepadEvent.gamepad") }} {{readonlyInline}}
+- {{ domxref("GamepadEvent.gamepad") }} {{ReadOnlyInline}}
   - : Returns a {{ domxref("Gamepad") }} object, providing access to the associated gamepad data for the event fired.
 
 ## Examples

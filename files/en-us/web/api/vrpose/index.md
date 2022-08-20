@@ -23,22 +23,22 @@ This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and 
 
 ## Properties
 
-- {{domxref("VRPose.position")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRPose.position")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Returns the position of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}} as a 3D vector
-- {{domxref("VRPose.linearVelocity")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRPose.linearVelocity")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Returns the linear velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.
-- {{domxref("VRPose.linearAcceleration")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRPose.linearAcceleration")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Returns the linear acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
-- {{domxref("VRPose.orientation")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRPose.orientation")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Returns the orientation of the sensor at the current {{domxref("VRPose.timestamp")}}, as a quarternion value.
-- {{domxref("VRPose.angularVelocity")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRPose.angularVelocity")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Returns the angular velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in radians per second.
-- {{domxref("VRPose.angularAcceleration")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRPose.angularAcceleration")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Returns the angular acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
 
 ### Obsolete properties
 
-- {{domxref("VRPose.timeStamp")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRPose.timeStamp")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Returns the current time stamp of the system — a monotonically increasing value useful for determining if position data has been updated, and what order updates have occurred in. **This version of `timestamp` has been removed from the spec — instead, timestamps are now returned when {{domxref("VRDisplay.getFrameData()")}} is called — see {{domxref("VRFrameData.timestamp")}}.**
 
 ## Examples

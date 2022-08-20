@@ -23,11 +23,11 @@ Reports can be accessed in a number of ways:
 
 ## Properties
 
-- {{domxref("Report.body")}} {{experimental_inline}} {{readonlyinline}}
+- {{domxref("Report.body")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : The body of the report, which is a `ReportBody` object containing the detailed report information.
-- {{domxref("Report.type")}} {{experimental_inline}} {{readonlyinline}}
+- {{domxref("Report.type")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : The type of report generated, e.g. `deprecation` or `intervention`.
-- {{domxref("Report.url")}} {{experimental_inline}} {{readonlyinline}}
+- {{domxref("Report.url")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : The URL of the document that generated the report.
 
 ## Methods

@@ -25,7 +25,7 @@ The individual source buffers can be accessed using the [array operator](/en-US/
 
 ## Properties
 
-- {{domxref("SourceBufferList.length")}} {{readonlyInline}}
+- {{domxref("SourceBufferList.length")}} {{ReadOnlyInline}}
   - : Returns the number of {{domxref("SourceBuffer")}} objects in the list.
 
 ## Methods

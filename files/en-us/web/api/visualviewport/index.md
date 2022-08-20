@@ -25,19 +25,19 @@ You can get a window's visual viewport using {{domxref("Window.visualViewport")}
 
 _`VisualViewport` also inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("VisualViewport.offsetLeft")}} {{readonlyinline}}
+- {{domxref("VisualViewport.offsetLeft")}} {{ReadOnlyInline}}
   - : Returns the offset of the left edge of the visual viewport from the left edge of the layout viewport in CSS pixels.
-- {{domxref("VisualViewport.offsetTop")}} {{readonlyinline}}
+- {{domxref("VisualViewport.offsetTop")}} {{ReadOnlyInline}}
   - : Returns the offset of the top edge of the visual viewport from the top edge of the layout viewport in CSS pixels.
-- {{domxref("VisualViewport.pageLeft")}} {{readonlyinline}}
+- {{domxref("VisualViewport.pageLeft")}} {{ReadOnlyInline}}
   - : Returns the x coordinate of the visual viewport relative to the initial containing block origin of the top edge in CSS pixels.
-- {{domxref("VisualViewport.pageTop")}} {{readonlyinline}}
+- {{domxref("VisualViewport.pageTop")}} {{ReadOnlyInline}}
   - : Returns the y coordinate of the visual viewport relative to the initial containing block origin of the top edge in CSS pixels.
-- {{domxref("VisualViewport.width")}} {{readonlyinline}}
+- {{domxref("VisualViewport.width")}} {{ReadOnlyInline}}
   - : Returns the width of the visual viewport in CSS pixels.
-- {{domxref("VisualViewport.height")}} {{readonlyinline}}
+- {{domxref("VisualViewport.height")}} {{ReadOnlyInline}}
   - : Returns the height of the visual viewport in CSS pixels.
-- {{domxref("VisualViewport.scale")}} {{readonlyinline}}
+- {{domxref("VisualViewport.scale")}} {{ReadOnlyInline}}
   - : Returns the pinch-zoom scaling factor applied to the visual viewport.
 
 ## Events

@@ -20,9 +20,9 @@ This interface has no constructor.
 
 ## Properties
 
-- {{domxref("DataTransferItem.kind")}} {{readonlyInline}}
+- {{domxref("DataTransferItem.kind")}} {{ReadOnlyInline}}
   - : The _kind_ of drag data item, `string` or `file`.
-- {{domxref("DataTransferItem.type")}} {{readonlyInline}}
+- {{domxref("DataTransferItem.type")}} {{ReadOnlyInline}}
   - : The drag data item's type, typically a MIME type.
 
 ## Methods

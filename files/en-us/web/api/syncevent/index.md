@@ -31,9 +31,9 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("SyncEvent.tag")}} {{readonlyinline}}
+- {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}}
   - : Returns the developer-defined identifier for this `SyncEvent`.
-- {{domxref("SyncEvent.lastChance")}} {{readonlyinline}}
+- {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}}
   - : Returns `true` if the user agent will not make further synchronization attempts after the current attempt.
 
 ## Methods

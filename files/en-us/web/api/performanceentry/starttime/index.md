@@ -34,7 +34,7 @@ The value returned by this property depends on the performance entry's
   immediately before the browser {{domxref("PerformanceResourceTiming/fetchStart","starts
     fetching the resource")}}.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 
