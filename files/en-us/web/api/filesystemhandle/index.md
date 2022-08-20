@@ -27,9 +27,9 @@ Below is a list of interfaces based on the FileSystemHandle interface.
 
 ## Properties
 
-- {{domxref('FileSystemHandle.kind','kind')}} {{readonlyInline}}
+- {{domxref('FileSystemHandle.kind','kind')}} {{ReadOnlyInline}}
   - : Returns the type of entry. This is `'file'` if the associated entry is a file or `'directory'`.
-- {{domxref('FileSystemHandle.name', 'name')}} {{readonlyInline}}
+- {{domxref('FileSystemHandle.name', 'name')}} {{ReadOnlyInline}}
   - : Returns the name of the associated entry.
 
 ## Methods

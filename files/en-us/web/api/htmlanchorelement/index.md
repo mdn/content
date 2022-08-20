@@ -33,7 +33,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string that is the result of parsing the {{htmlattrxref("href", "a")}} HTML attribute relative to the document, containing a valid URL of a linked resource.
 - {{domxref("HTMLAnchorElement.hreflang")}}
   - : A string that reflects the {{htmlattrxref("hreflang", "a")}} HTML attribute, indicating the language of the linked resource.
-- {{domxref("HTMLAnchorElement.origin")}} {{readonlyInline}}
+- {{domxref("HTMLAnchorElement.origin")}} {{ReadOnlyInline}}
   - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
 - {{domxref("HTMLAnchorElement.password")}}
   - : A string containing the password specified before the domain name.
@@ -47,7 +47,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string that reflects the {{htmlattrxref("referrerpolicy", "a")}} HTML attribute indicating which referrer to use.
 - {{domxref("HTMLAnchorElement.rel")}}
   - : A string that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, specifying the relationship of the target object to the linked object.
-- {{domxref("HTMLAnchorElement.relList")}} {{readonlyInline}}
+- {{domxref("HTMLAnchorElement.relList")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, as a list of tokens.
 - {{domxref("HTMLAnchorElement.search")}}
   - : A string representing the search element, including leading question mark ('`?`'), if any, of the referenced URL.

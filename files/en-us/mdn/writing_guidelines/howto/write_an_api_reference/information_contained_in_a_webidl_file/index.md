@@ -297,14 +297,14 @@ _The **`HTMLMediaElement.buffered`** read-only property returns a new \\{{domxre
 
 and
 
-- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{readonlyinline}}_
+- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{ReadOnlyInline}}_
   - : _Returns a new \\{{domxref("TimeRanges")}} object that …_
 
 In the case of a reference to a collection object (like `HTMLCollection`, `HTMLFormElementsCollection`, or `HTMLOptionsCollection`, always without `[NewObject]`), we make it explicit that changes to the underlying object will be available via the returned reference. To mark this, we qualify the collection as a **live** `HTMLCollection` (or `HTMLFormElementsCollections`, or `HTMLOptionsCollection`), both in the interface description and in the subpage.
 
 E.g.
 
-- \\{{domxref("HTMLFormElement.elements")}}\\{{readonlyinline}}
+- \\{{domxref("HTMLFormElement.elements")}}\\{{ReadOnlyInline}}
   - : Returns a live \\{{domxref("HTMLFormControlsCollection")}} containing…
 
 ### Availability in workers

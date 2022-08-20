@@ -34,9 +34,9 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
   - : Provides all of the types of operations that are possible. Must be one of `none`, `copy`, `copyLink`, `copyMove`, `link`, `linkMove`, `move`, `all` or `uninitialized`.
 - {{domxref("DataTransfer.files")}}
   - : Contains a list of all the local files available on the data transfer. If the drag operation doesn't involve dragging files, this property is an empty list.
-- {{domxref("DataTransfer.items")}} {{readonlyInline}}
+- {{domxref("DataTransfer.items")}} {{ReadOnlyInline}}
   - : Gives a {{domxref("DataTransferItemList")}} object which is a list of all of the drag data.
-- {{domxref("DataTransfer.types")}} {{readonlyInline}}
+- {{domxref("DataTransfer.types")}} {{ReadOnlyInline}}
   - : An array of strings giving the formats that were set in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event.
 
 ### Gecko properties
@@ -47,14 +47,14 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
 
 - {{domxref("DataTransfer.mozCursor")}}
   - : Gives the drag cursor's state. This is primarily used to control the cursor during tab drags.
-- {{domxref("DataTransfer.mozSourceNode")}} {{readonlyInline}}
+- {{domxref("DataTransfer.mozSourceNode")}} {{ReadOnlyInline}}
   - : The {{ domxref("Node") }} over which the mouse cursor was located when the button was pressed to initiate the drag operation. This value is `null` for external drags or if the caller can't access the node.
-- {{domxref("DataTransfer.mozUserCancelled")}} {{readonlyInline}}
+- {{domxref("DataTransfer.mozUserCancelled")}} {{ReadOnlyInline}}
   - : This property applies only to the `dragend` event, and is `true` if the user canceled the drag operation by pressing escape. It will be `false` in all other cases, including if the drag failed for any other reason, for instance due to a drop over an invalid location.
 
 ### Deprecated properties
 
-- {{domxref("DataTransfer.mozItemCount")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxref("DataTransfer.mozItemCount")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Gives the number of items in the drag operation. Removed in Firefox 71.
 
 ## Methods

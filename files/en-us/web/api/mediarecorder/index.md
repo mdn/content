@@ -28,15 +28,15 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
 
 ## Properties
 
-- {{domxref("MediaRecorder.mimeType")}} {{readonlyInline}}
+- {{domxref("MediaRecorder.mimeType")}} {{ReadOnlyInline}}
   - : Returns the MIME type that was selected as the recording container for the `MediaRecorder` object when it was created.
-- {{domxref("MediaRecorder.state")}} {{readonlyInline}}
+- {{domxref("MediaRecorder.state")}} {{ReadOnlyInline}}
   - : Returns the current state of the `MediaRecorder` object (`inactive`, `recording`, or `paused`.)
-- {{domxref("MediaRecorder.stream")}} {{readonlyInline}}
+- {{domxref("MediaRecorder.stream")}} {{ReadOnlyInline}}
   - : Returns the stream that was passed into the constructor when the `MediaRecorder` was created.
-- {{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}
+- {{domxref("MediaRecorder.videoBitsPerSecond")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns the video encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).
-- {{domxref("MediaRecorder.audioBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}
+- {{domxref("MediaRecorder.audioBitsPerSecond")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns the audio encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).
 
 ## Methods

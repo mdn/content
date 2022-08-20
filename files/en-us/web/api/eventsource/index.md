@@ -36,11 +36,11 @@ Unlike [WebSockets](/en-US/docs/Web/API/WebSockets_API), server-sent events are 
 
 _This interface also inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("EventSource.readyState")}} {{readonlyinline}}
+- {{domxref("EventSource.readyState")}} {{ReadOnlyInline}}
   - : A number representing the state of the connection. Possible values are `CONNECTING` (`0`), `OPEN` (`1`), or `CLOSED` (`2`).
-- {{domxref("EventSource.url")}} {{readonlyinline}}
+- {{domxref("EventSource.url")}} {{ReadOnlyInline}}
   - : A string representing the URL of the source.
-- {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
+- {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the `EventSource` object was instantiated with cross-origin ([CORS](/en-US/docs/Web/HTTP/CORS)) credentials set (`true`), or not (`false`, the default).
 
 ## Methods

@@ -21,9 +21,9 @@ Instances of this interface may be obtained by calling methods of the {{domxref(
 
 ## Properties
 
-- {{domxref("SerialPort.readable")}} {{readonlyInline}}
+- {{domxref("SerialPort.readable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port.
-- {{domxref("SerialPort.writable")}} {{readonlyInline}}
+- {{domxref("SerialPort.writable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WritableStream")}} for sending data to the device connected to the port.
 
 ## Methods

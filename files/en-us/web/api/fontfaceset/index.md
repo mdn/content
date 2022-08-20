@@ -19,11 +19,11 @@ The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/AP
 
 ## Properties
 
-- {{domxref("FontFaceSet.status")}} {{readonlyinline}}
+- {{domxref("FontFaceSet.status")}} {{ReadOnlyInline}}
   - : Indicates the font-face's loading status. It will be one of `'loading'` or `'loaded'`.
-- {{domxref("FontFaceSet.ready")}} {{readonlyinline}}
+- {{domxref("FontFaceSet.ready")}} {{ReadOnlyInline}}
   - : {{jsxref("Promise")}} which resolves once font loading and layout operations have completed.
-- {{domxref("FontFaceSet.size")}} {{readonlyinline}}
+- {{domxref("FontFaceSet.size")}} {{ReadOnlyInline}}
   - : Returns the number of values in the `FontFaceSet`.
 
 ### Events

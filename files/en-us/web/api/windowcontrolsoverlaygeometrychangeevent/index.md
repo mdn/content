@@ -24,9 +24,9 @@ The **`WindowControlsOverlayGeometryChangeEvent`** interface of the [Window Cont
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("WindowControlsOverlayGeometryChangeEvent.titlebarAreaRect")}} {{readonlyInline}}
+- {{domxref("WindowControlsOverlayGeometryChangeEvent.titlebarAreaRect")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMRect")}} representing the position and size of the title bar region.
-- {{domxref("WindowControlsOverlayGeometryChangeEvent.visible")}} {{readonlyInline}}
+- {{domxref("WindowControlsOverlayGeometryChangeEvent.visible")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 
 ## Examples

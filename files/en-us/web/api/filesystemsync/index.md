@@ -24,9 +24,9 @@ The `FileSystemSync` object is your gateway to the entire API and you will use i
 
 ## Properties
 
-- `name` {{Readonlyinline}}
+- `name` {{ReadOnlyInline}}
   - : A string that represents the name of the file system. The name must be unique across the list of exposed file systems.
-- `root` {{Readonlyinline}}
+- `root` {{ReadOnlyInline}}
   - : A `DirectoryEntry` that is the root directory of the file system.
 
 ## Specifications

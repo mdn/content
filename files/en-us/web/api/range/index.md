@@ -21,17 +21,17 @@ There also is the {{domxref("Range.Range()", "Range()")}} constructor available.
 
 _There are no inherited properties._
 
-- {{domxref("Range.collapsed")}} {{readonlyInline}}
+- {{domxref("Range.collapsed")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the range's start and end points are at the same position.
-- {{domxref("Range.commonAncestorContainer")}} {{readonlyInline}}
+- {{domxref("Range.commonAncestorContainer")}} {{ReadOnlyInline}}
   - : Returns the deepest {{ domxref("Node") }} that contains the `startContainer` and `endContainer` nodes.
-- {{domxref("Range.endContainer")}} {{readonlyInline}}
+- {{domxref("Range.endContainer")}} {{ReadOnlyInline}}
   - : Returns the {{ domxref("Node") }} within which the `Range` ends.
-- {{domxref("Range.endOffset")}} {{readonlyInline}}
+- {{domxref("Range.endOffset")}} {{ReadOnlyInline}}
   - : Returns a number representing where in the `endContainer` the `Range` ends.
-- {{domxref("Range.startContainer")}} {{readonlyInline}}
+- {{domxref("Range.startContainer")}} {{ReadOnlyInline}}
   - : Returns the {{ domxref("Node") }} within which the `Range` starts.
-- {{domxref("Range.startOffset")}} {{readonlyInline}}
+- {{domxref("Range.startOffset")}} {{ReadOnlyInline}}
   - : Returns a number representing where in the `startContainer` the `Range` starts.
 
 ## Constructor

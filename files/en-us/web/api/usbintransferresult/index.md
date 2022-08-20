@@ -24,9 +24,9 @@ The `USBInTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/WebU
 
 ## Properties
 
-- {{domxref("USBInTransferResult.data")}} {{readonlyInline}}
+- {{domxref("USBInTransferResult.data")}} {{ReadOnlyInline}}
   - : Returns a `DataView` object containing the data received from the USB device, if any.
-- {{domxref("USBInTransferResult.status")}} {{readonlyInline}}
+- {{domxref("USBInTransferResult.status")}} {{ReadOnlyInline}}
 
   - : Returns the status of the transfer request, one of:
 

@@ -21,7 +21,7 @@ An `HTMLCollection` in the HTML DOM is live; it is automatically updated when th
 
 ## Properties
 
-- {{domxref("HTMLCollection.length")}} {{readonlyInline}}
+- {{domxref("HTMLCollection.length")}} {{ReadOnlyInline}}
   - : Returns the number of items in the collection.
 
 ## Methods
