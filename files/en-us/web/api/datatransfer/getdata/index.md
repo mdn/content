@@ -37,7 +37,7 @@ A string representing the drag data for the specified `format`. If the drag oper
 ### Caveats
 
 - Data availability
-  - : The [HTML5 Drag and Drop Specification](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) dictates a `drag data store mode`.
+  - : The [HTML Drag and Drop Specification](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) dictates a `drag data store mode`.
     This may result in unexpected behavior, being
     **`DataTransfer.getData()`** not returning an expected
     value, because not all browsers enforce this restriction.

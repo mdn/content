@@ -266,7 +266,7 @@ Browser default styling will render this as normal text put in quotes to indicat
 
 ### Citations
 
-The content of the {{htmlattrxref("cite","blockquote")}} attribute sounds useful, but unfortunately browsers, screenreaders, etc. don't really do much with it. There is no way to get the browser to display the contents of `cite`, without writing your own solution using JavaScript or CSS. If you want to make the source of the quotation available on the page you need to make it available in the text via a link or some other appropriate way.
+The content of the {{htmlattrxref("cite","blockquote")}} attribute sounds useful, but unfortunately browsers, screen readers, etc. don't really do much with it. There is no way to get the browser to display the contents of `cite`, without writing your own solution using JavaScript or CSS. If you want to make the source of the quotation available on the page you need to make it available in the text via a link or some other appropriate way.
 
 There is a {{htmlelement("cite")}} element, but this is meant to contain the title of the resource being quoted, e.g. the name of the book. There is no reason, however, why you couldn't link the text inside `<cite>` to the quote source in some way:
 

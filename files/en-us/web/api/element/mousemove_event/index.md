@@ -92,7 +92,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 ## Examples
 
-The following example uses the {{domxref("Element/mousedown_event", "mousedown")}}, `mousemove`, and {{domxref("Element/mouseup_event", "mouseup")}} events to allow the user to draw on an HTML5 [canvas](/en-US/docs/Web/API/Canvas_API). Its functionality is simple: the thickness of the line is set to 1, and the color is always black.
+The following example uses the {{domxref("Element/mousedown_event", "mousedown")}}, `mousemove`, and {{domxref("Element/mouseup_event", "mouseup")}} events to allow the user to draw on an HTML [canvas](/en-US/docs/Web/API/Canvas_API). Its functionality is simple: the thickness of the line is set to 1, and the color is always black.
 
 When the page loads, constants `myPics` and `context` are created to store a reference to the canvas and the 2d context we will use to draw.
 
