@@ -17,7 +17,7 @@ This article provides practical advice on how to write your web content so that 
 
 ## Guideline 1.1 — Providing text alternatives for non-text content
 
-The key here is that text can be converted to other forms that people with disabilities can use. For example, it can be spoken by a screenreader, converted to large print, or represented on a braille display. Non-text content refers to multimedia such as images, audio, and video.
+The key here is that text can be converted to other forms that people with disabilities can use. For example, it can be spoken by a screen reader, converted to large print, or represented on a braille display. Non-text content refers to multimedia such as images, audio, and video.
 
 <table class="standard-table">
   <thead>
@@ -114,7 +114,7 @@ The key here is that text can be converted to other forms that people with disab
             >Backgrounds</a
           >). If you have to include an image via an
           {{htmlelement("img")}} element, give it a blank alt
-          (`alt=""`). Otherwise, screenreaders may try to read out
+          (`alt=""`). Otherwise, screen readers may try to read out
           the filepath, etc.
         </p>
         <p>
@@ -215,7 +215,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           <li>
             Text labels and the form elements they describe. These are
             associated unambiguously using the {{htmlelement("label")}}
-            element, which can be picked up by screenreaders, etc.
+            element, which can be picked up by screen readers, etc.
           </li>
           <li>
             Image alt text. Content images should have text available that
@@ -287,7 +287,7 @@ This guideline refers to the ability of content to be consumed by users in multi
             "Listen to the audio instructions for guidance"<br />This is
             obviously problematic—audio will be inaccessible to those with
             hearing impairments, whereas text can be read, but also spoken by a
-            screenreader if required.
+            screen reader if required.
           </li>
           <li>
             "Swipe from the right-hand side of the screen to reveal the menu"<br />Some

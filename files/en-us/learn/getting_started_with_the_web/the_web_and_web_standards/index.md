@@ -66,7 +66,7 @@ There are a number of technologies to learn if you want to be a front-end web de
 
 ### Browsers
 
-You are probably reading these words inside a web browser in this very moment (unless you've printed it out, or are using assistive technology, such as a screenreader to read it out to you). Web browsers are the software programs people use to consume the web, and include [Firefox](https://www.mozilla.org/en-US/firefox/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), and [Edge](https://www.microsoft.com/en-us/edge).
+You are probably reading these words inside a web browser in this very moment (unless you've printed it out, or are using assistive technology, such as a screen reader to read it out to you). Web browsers are the software programs people use to consume the web, and include [Firefox](https://www.mozilla.org/en-US/firefox/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), and [Edge](https://www.microsoft.com/en-us/edge).
 
 ### HTTP
 
@@ -143,7 +143,7 @@ When doing web development, the main cause of uncertainty comes from the fact th
 
 - User 1 might be looking at it on an iPhone, with a small, narrow screen.
 - User 2 might be looking at it on a Windows laptop with a widescreen monitor attached to it.
-- User 3 might be blind, and using a screenreader to read the web page out to them.
+- User 3 might be blind, and using a screen reader to read the web page out to them.
 - User 4 might be using a really old desktop machine that can't run modern browsers.
 
 Because you don't know exactly what your users will use, you need to design defensively — make your web site as flexible as possible, so that all of the above users can make use of it, even if they might not all get the same experience. In short, we are trying to make the web work for all, as much as possible.
