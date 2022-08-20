@@ -90,7 +90,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAnchorElement.toString()")}}
   - : Returns a string containing the whole URL. It is a synonym for {{domxref("HTMLAnchorElement.href")}}, though it can't be used to modify the value.
 
-The `blur()` and `focus()` methods are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on `HTMLAnchorElement` in DOM Level 2 HTML and earlier specifications.
+The `blur()` and `focus()` methods are inherited from {{domxref("HTMLElement")}}.
 
 ## Specifications
 

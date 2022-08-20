@@ -258,7 +258,7 @@ The `HTMLMediaElement.controls` property reflects the `controls` HTML attribute,
 
 ##### Video
 
-To ensure that a video has controls that a user can access, ensure that you add the word "controls" to HTML5 video and audio elements.
+To ensure that a video has controls that a user can access, ensure that you add the word "controls" to HTML video and audio elements.
 
 `<video controls>`
 
@@ -266,7 +266,7 @@ To ensure that a video has controls that a user can access, ensure that you add 
 <video controls>
   <source src="myVideo.mp4" type="video/mp4">
   <source src="myVideo.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is
+  <p>Your browser doesn't support HTML video. Here is
      a <a href="myVideo.mp4">link to the video</a> instead.</p>
 </video>
 ```
@@ -327,7 +327,7 @@ The animation property is already powerful on its own, but combined with other p
 
 ### JavaScript animation
 
-JavaScript is often used to control {{HTMLElement('canvas')}} elements and SVGs. Most JavaScript code that applies to HTML5 video also applies to audio. `HTMLMediaElement.playbackRate` is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: `HTMLMediaElement.playbackRate = playbackspeed`.
+JavaScript is often used to control {{HTMLElement('canvas')}} elements and SVGs. Most JavaScript code that applies to HTML video also applies to audio. `HTMLMediaElement.playbackRate` is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: `HTMLMediaElement.playbackRate = playbackspeed`.
 
 [document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) is an experimental technology, and includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API). The MDN page on [Document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) provides the following code sample of how to slow down all animations on a page to half speed:
 

@@ -253,7 +253,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
   </tbody>
 </table>
 
-The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on `HTMLTextAreaElement` in DOM Level 2 HTML and earlier specifications.
+The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}}.
 
 ## Methods
 
@@ -323,7 +323,7 @@ The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTML
   </tbody>
 </table>
 
-The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on `HTMLTextAreaElement` in DOM Level 2 HTML and earlier specifications.
+The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}}.
 
 ## Events
 
