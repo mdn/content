@@ -62,7 +62,7 @@ If we wanted the text to stand by itself, we could specify that it is a paragrap
 
 Let's further explore our paragraph element from the previous section:
 
-![](grumpy-cat-small.png)
+![A sample code snippet demonstrating the structure of an html element._<p> My cat is very grumpy </p>_](grumpy-cat-small.png)
 
 The anatomy of our element is:
 
