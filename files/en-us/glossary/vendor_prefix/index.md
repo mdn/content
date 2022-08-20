@@ -5,7 +5,7 @@ tags:
   - CodingScripting
   - Glossary
 ---
-Browser vendors used to add prefixes to experimental or nonstandard CSS properties and JavaScript APIs, so developers could experiment with new ideas. This, in theory, helped to prevent their experiments from being relied upon and then breaking web developers' code during the standardization process. 
+Browser vendors used to add prefixes to experimental or nonstandard CSS properties and JavaScript APIs, so developers could experiment with new ideas. This, in theory, helped to prevent their experiments from being relied upon and then breaking web developers' code during the standardization process.
 
 Web developers included prefixed features on production websites, despite their experimental nature. This made it more difficult for browser vendors to ensure compatibility while working on new features. Including prefixed features also harmed smaller browser vendors who ended up having to add other browsers' prefixes in order to render popular websites.
 

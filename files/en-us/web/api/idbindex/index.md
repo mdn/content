@@ -26,19 +26,19 @@ You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyR
 
 ## Properties
 
-- {{domxref("IDBIndex.isAutoLocale")}} {{readonlyInline}} {{ Non-Standard_inline() }}
+- {{domxref("IDBIndex.isAutoLocale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }}
   - : Returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
-- {{domxref("IDBIndex.locale")}} {{readonlyInline}} {{ Non-Standard_inline() }}
+- {{domxref("IDBIndex.locale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }}
   - : Returns the locale of the index (for example `en-US`, or `pl`) if it had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
 - {{domxref("IDBIndex.name")}}
   - : The name of this index.
-- {{domxref("IDBIndex.objectStore")}} {{readonlyInline}}
+- {{domxref("IDBIndex.objectStore")}} {{ReadOnlyInline}}
   - : The name of the object store referenced by this index.
-- {{domxref("IDBIndex.keyPath")}} {{readonlyInline}}
+- {{domxref("IDBIndex.keyPath")}} {{ReadOnlyInline}}
   - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of this index. If null, this index is not auto-populated.
-- {{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}
+- {{domxref("IDBIndex.multiEntry")}} {{ReadOnlyInline}}
   - : Affects how the index behaves when the result of evaluating the index's key path yields an array. If `true`, there is one record in the index for each item in an array of keys. If `false`, then there is one record for each key that is an array.
-- {{domxref("IDBIndex.unique")}} {{readonlyInline}}
+- {{domxref("IDBIndex.unique")}} {{ReadOnlyInline}}
   - : If `true`, this index does not allow duplicate values for a key.
 
 ## Methods

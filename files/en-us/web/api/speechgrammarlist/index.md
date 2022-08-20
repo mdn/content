@@ -26,7 +26,7 @@ Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (
 
 ## Properties
 
-- {{domxref("SpeechGrammarList.length")}} {{readonlyinline}}
+- {{domxref("SpeechGrammarList.length")}} {{ReadOnlyInline}}
   - : Returns the number of {{domxref("SpeechGrammar")}} objects contained in the `SpeechGrammarList`.
 
 ## Methods

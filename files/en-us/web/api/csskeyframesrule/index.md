@@ -22,7 +22,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSKeyframesRule.name")}}
   - : Represents the name of the keyframes, used by the {{cssxref("animation-name")}} property.
-- {{domxref("CSSKeyframesRule.cssRules")}} {{readOnlyInline}}
+- {{domxref("CSSKeyframesRule.cssRules")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSRuleList")}} of the keyframes in the list.
 
 ## Methods

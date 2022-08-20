@@ -19,9 +19,9 @@ The **`MessageChannel`** interface of the [Channel Messaging API](/en-US/docs/We
 
 ## Properties
 
-- {{domxref("MessageChannel.port1")}} {{readonlyInline}}
+- {{domxref("MessageChannel.port1")}} {{ReadOnlyInline}}
   - : Returns port1 of the channel.
-- {{domxref("MessageChannel.port2")}} {{readonlyInline}}
+- {{domxref("MessageChannel.port2")}} {{ReadOnlyInline}}
   - : Returns port2 of the channel.
 
 ## Constructor

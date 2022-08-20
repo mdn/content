@@ -27,9 +27,9 @@ In addition to providing a reference to the {{domxref("XRSession")}} for which t
 
 ## Properties
 
-- {{DOMxRef("XRFrame.session", "session")}} {{ReadonlyInline}}
+- {{DOMxRef("XRFrame.session", "session")}} {{ReadOnlyInline}}
   - : The {{DOMxRef("XRSession")}} that for which this `XRFrame` describes the tracking details for all objects. The information about a specific object can be obtained by calling one of the methods on the object.
-- {{DOMxRef("XRFrame.trackedAnchors", "trackedAnchors")}} {{ReadonlyInline}}
+- {{DOMxRef("XRFrame.trackedAnchors", "trackedAnchors")}} {{ReadOnlyInline}}
   - : An {{domxref("XRAnchorSet")}} containing all anchors still tracked in the frame.
 
 ## Methods

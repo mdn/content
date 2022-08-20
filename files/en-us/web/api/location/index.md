@@ -72,7 +72,7 @@ document.body.addEventListener('click', (evt) => {
   - : A string containing a `'?'` followed by the parameters or "querystring" of the URL. Modern browsers provide [URLSearchParams](/en-US/docs/Web/API/URLSearchParams/get#example) and [URL.searchParams](/en-US/docs/Web/API/URL/searchParams#example) to make it easy to parse out the parameters from the querystring.
 - {{domxref("Location.hash")}}
   - : A string containing a `'#'` followed by the fragment identifier of the URL.
-- {{domxref("Location.origin")}} {{readOnlyInline}}
+- {{domxref("Location.origin")}} {{ReadOnlyInline}}
   - : Returns a string containing the canonical form of the origin of the specific location.
 
 ## Methods
