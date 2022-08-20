@@ -656,7 +656,7 @@ AuthorSchema
 // Virtual for author's URL
 AuthorSchema
   .virtual('url')
-  .get(() => {
+  .get(function() { // We don't use an arrow function as we'll need the this object
     return `/catalog/author/${this._id}`;
   });
 
@@ -695,7 +695,7 @@ const BookSchema = new Schema(
 // Virtual for book's URL
 BookSchema
   .virtual('url')
-  .get(() => {
+  .get(function() { // We don't use an arrow function as we'll need the this object
     return '/catalog/book/' + this._id;
   });
 
@@ -730,7 +730,7 @@ const BookInstanceSchema = new Schema(
 // Virtual for bookinstance's URL
 BookInstanceSchema
   .virtual('url')
-  .get(() => {
+  .get(function() { // We don't use an arrow function as we'll need the this object
     return `/catalog/bookinstance/${this._id}`;
   });
 
