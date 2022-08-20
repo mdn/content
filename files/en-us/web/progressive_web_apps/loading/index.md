@@ -108,7 +108,15 @@ This will remove the blur effect within half a second, which looks good enough f
 
 The image loading mechanism discussed in the above section works OK — it loads the images after rendering the HTML structure, and applies a nice transition effect in the process. The problem is that it still loads _all_ the images at once, even though the user will only see the first two or three upon page load.
 
-This problem can be solved with the new [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) — using this we can ensure that images will be loaded only when they appear in the viewport.
+This problem can be solved by loading the images only when needed: this is called _lazy loading_. [Lazy loading](https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading) is a technique to load images only when they appear in the viewport. There are several ways to tell the browser to lazy load images.
+
+### The loading attribute on \<img>
+
+The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Element/img#attr-loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
+
+```html
+<img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME' loading='lazy'>
+```
 
 ### Intersection Observer
 
