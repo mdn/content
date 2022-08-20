@@ -10,7 +10,7 @@ tags:
   - Event
 browser-compat: api.Window.deviceorientationabsolute_event
 ---
-{{ ApiRef() }}{{Non-standard_header}}
+{{ApiRef}}
 
 The **`deviceorientationabsolute`** event is sent to the `ondeviceorientationabsolute` event handler on a {{domxref('Window')}} event when absolute device orientation changes.
 
@@ -42,9 +42,9 @@ An {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
   - : A number representing the motion of the device around the x axis, expressed in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents a front to back motion of the device.
 - {{domxref("DeviceOrientationEvent.gamma")}} {{ReadOnlyInline}}
   - : A number representing the motion of the device around the y axis, expressed in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents a left to right motion of the device.
-- `DeviceOrientationEvent.webkitCompassHeading` {{Non-Standard_Inline}} {{ReadOnlyInline}}
+- `DeviceOrientationEvent.webkitCompassHeading` {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : A number represents the difference between the motion of the device around the z axis of the world system and the direction of north, expressed in degrees with values ranging from 0 to 360.
-- `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{ReadOnlyInline}}
+- `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : The accuracy of the compass given as a positive or negative deviation. It's usually 10.
 
 ## Specifications

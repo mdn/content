@@ -14,7 +14,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement
 ---
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement`** interface provides special properties and methods for manipulating the options, layout, and presentation of {{HtmlElement("input")}} elements.
 
@@ -24,10 +24,10 @@ The **`HTMLInputElement`** interface provides special properties and methods for
 
 Some properties only apply to input element types that support the corresponding attributes.
 
-- {{domxref("HTMLInputElement.align", "align")}} {{deprecated_inline}}
+- {{domxref("HTMLInputElement.align", "align")}} {{Deprecated_Inline}}
   - : `string`: **Represents** the alignment of the element. _Use CSS instead._
 
-- {{domxref("HTMLInputElement.autocapitalize", "autocapitalize")}} {{experimental_inline}}
+- {{domxref("HTMLInputElement.autocapitalize", "autocapitalize")}} {{Experimental_Inline}}
   - : `string`: **Defines** the capitalization behavior for user input. Valid values are `none`, `off`, `characters`, `words` or `sentences`.
 
 - {{domxref("HTMLInputElement.defaultValue", "defaultValue")}}
@@ -57,7 +57,7 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.type", "type")}}
   - : `string`: **Returns / Sets** the element's [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute, indicating the type of control to display. For possible values, see the documentation for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute.
 
-- {{domxref("HTMLInputElement.useMap", "useMap")}} {{deprecated_inline}}
+- {{domxref("HTMLInputElement.useMap", "useMap")}} {{Deprecated_Inline}}
   - : `string`: **Represents** a client-side image map.
 
 - {{domxref("HTMLInputElement.value", "value")}}
@@ -139,16 +139,16 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.accept", "accept")}}
   - : `string`: **Returns / Sets** the element's [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute, containing comma-separated list of file types that can be selected.
 
-- {{domxref("HTMLInputElement.allowdirs", "allowdirs")}} {{non-standard_inline}}
+- {{domxref("HTMLInputElement.allowdirs", "allowdirs")}} {{Non-standard_Inline}}
   - : `boolean`: Part of the non-standard Directory Upload API. Indicates whether or not to allow directories and files both to be selected in the file list. Implemented only in Firefox and is hidden behind a preference.
 
 - {{domxref("HTMLInputElement.files", "files")}}
   - : {{domxref("FileList")}}: **Returns / Sets** a list of {{domxref("File")}} objects representing the files selected for upload.
 
-- {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} {{Non-standard_inline}}
+- {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}}
   - : `boolean`: **Returns** the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute. If `true`, the file-system-picker interface only accepts directories instead of files.
 
-- {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} {{Non-standard_inline}}
+- {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}}
   - : {{domxref("FileSystemEntry")}} array: **Describes** the currently selected files or directories.
 
 ### Properties that apply only to visible elements containing text or numbers
@@ -243,9 +243,9 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed. Note that this is actually fired on the {{domxref("HTMLElement")}} interface and also applies to [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements, but we've listed it here because it is most commonly used with form input elements.
 - [`invalid`](/en-US/docs/Web/API/HTMLInputElement/invalid_event)
   - : Fired when an element does not satisfy its constraints during constraint validation.
-- [`search`](/en-US/docs/Web/API/HTMLInputElement/search_event)
+- [`search`](/en-US/docs/Web/API/HTMLInputElement/search_event) {{Non-standard_Inline}}
   - : Fired when a search is initiated on an {{HTMLElement("input")}} of `type="search"`.
-- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event {{experimental_inline}}
+- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event {{Experimental_Inline}}
   - : Fires when the text selection in a {{HTMLElement("input")}} element has been changed.
 
 ## Specifications

@@ -60,7 +60,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : Returns a {{domxref("MediaError")}} object for the most recent error, or `null` if there has not been an error.
 - {{domxref("HTMLMediaElement.loop")}}
   - : A boolean that reflects the {{htmlattrxref("loop", "video")}} HTML attribute, which indicates whether the media element should start over when it reaches the end.
-- {{domxref("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MediaKeys")}} object or `null`. MediaKeys is a set of keys that an associated HTMLMediaElement can use for decryption of media data during playback.
 - {{domxref("HTMLMediaElement.muted")}}
   - : A boolean that determines whether audio is muted. `true` if the audio is muted and `false` otherwise.
@@ -82,7 +82,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : Returns a {{domxref('TimeRanges')}} object that contains the time ranges that the user is able to seek to, if any.
 - {{domxref("HTMLMediaElement.seeking")}} {{ReadOnlyInline}}
   - : Returns a boolean that indicates whether the media is in the process of seeking to a new position.
-- {{domxref("HTMLMediaElement.sinkId")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("HTMLMediaElement.sinkId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string that is the unique ID of the audio device delivering output, or an empty string if it is using the user agent default. This ID should be one of the `MediaDeviceInfo.deviceid` values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
 - {{domxref("HTMLMediaElement.src")}}
   - : A string that reflects the {{htmlattrxref("src", "video")}} HTML attribute, which contains the URL of a media resource to use.
@@ -106,13 +106,13 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 
 These properties are obsolete and should not be used, even if a browser still supports them.
 
-- {{domxref("HTMLMediaElement.controller")}} {{deprecated_inline}}
+- {{domxref("HTMLMediaElement.controller")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A {{domxref("MediaController")}} object that represents the media controller assigned to the element, or `null` if none is assigned.
-- {{domxref("HTMLMediaElement.mediaGroup")}} {{deprecated_inline}}
+- {{domxref("HTMLMediaElement.mediaGroup")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A string that reflects the {{ htmlattrxref("mediagroup", "video")}} HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
-- {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{ReadOnlyInline}} {{non-standard_inline}} {{deprecated_inline}}
+- {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns a boolean. Related to audio stream capture.
-- {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}} {{deprecated_inline}}
+- {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : A `double` that provides access to the fragment end time if the media element has a fragment URI for `currentSrc`, otherwise it is equal to the media duration.
 
 ## Methods
@@ -121,11 +121,11 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 
 - {{domxref("HTMLMediaElement.addTextTrack()")}}
   - : Adds a new {{domxref("TextTrack")}} object (such as a track for subtitles) to a media element. This is a programmatic interface only and does not affect the DOM.
-- {{domxref("HTMLMediaElement.captureStream()")}} {{experimental_inline}}
+- {{domxref("HTMLMediaElement.captureStream()")}}
   - : Returns {{domxref("MediaStream")}}, captures a stream of the media content.
 - {{domxref("HTMLMediaElement.canPlayType()")}}
   - : Given a string specifying a MIME media type (potentially with the [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) included), `canPlayType()` returns the string `probably` if the media should be playable, `maybe` if there's not enough information to determine whether the media will play or not, or an empty string if the media cannot be played.
-- {{domxref("HTMLMediaElement.fastSeek()")}} {{experimental_inline}}
+- {{domxref("HTMLMediaElement.fastSeek()")}}
   - : Quickly seeks to the given time with low precision.
 - {{domxref("HTMLMediaElement.load()")}}
   - : Resets the media to the beginning and selects the best available source from the sources provided using the {{htmlattrxref("src", "video")}} attribute or the {{HTMLElement("source")}} element.
@@ -133,22 +133,22 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
   - : Pauses the media playback.
 - {{domxref("HTMLMediaElement.play()")}}
   - : Begins playback of the media.
-- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{non-standard_inline}} {{experimental_inline}} {{deprecated_inline}}
+- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{Deprecated_Inline}}
   - : Seeks to the next frame in the media. This non-standard, experimental method makes it possible to manually drive reading and rendering of media at a custom speed, or to move through the media frame-by-frame to perform filtering or other operations.
-- {{domxref("HTMLMediaElement.setMediaKeys()")}} {{experimental_inline}}
+- {{domxref("HTMLMediaElement.setMediaKeys()")}}
   - : Returns {{jsxref("Promise")}}. Sets the {{domxref("MediaKeys")}} keys to use when decrypting media during playback.
-- {{domxref("HTMLMediaElement.setSinkId()")}} {{experimental_inline}}
+- {{domxref("HTMLMediaElement.setSinkId()")}}
   - : Sets the ID of the audio device to use for output and returns a {{jsxref("Promise")}}. This only works when the application is authorized to use the specified device.
 
 ## Obsolete methods
 
 _These methods are obsolete and should not be used, even if a browser still supports them._
 
-- {{domxref("HTMLMediaElement.mozCaptureStream()")}} {{non-standard_inline}}
+- {{domxref("HTMLMediaElement.mozCaptureStream()")}} {{Non-standard_Inline}}
   - : \[enter description]
-- {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}} {{deprecated_inline}}
+- {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : \[enter description]
-- {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}} {{deprecated_inline}}
+- {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as `{key: value}` pairs. A separate copy of the data is returned each time the method is called. This method must be called after the [loadedmetadata](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires.
 
 ## Events
