@@ -307,7 +307,7 @@ These add an accessibility tab to the browser developer tools. For example, we i
 
 aXe is also installable using `npm`, and can be integrated with task runners like [Grunt](https://gruntjs.com/) and [Gulp](https://gulpjs.com/), automation frameworks like [Selenium](https://www.selenium.dev/) and [Cucumber](https://cucumber.io/), unit testing frameworks like [Jasmine](https://jasmine.github.io/), and more besides (again, see the [main aXe page](https://www.deque.com/axe/) for details).
 
-### screen readers
+### Screen readers
 
 It is definitely worth testing with a screen reader to get used to how severely visually impaired people use the Web. There are a number of screen readers available:
 
@@ -445,7 +445,7 @@ VO has many keyboard commands, and we won't list them all here. The basic ones y
   </tbody>
 </table>
 
-This seems like a lot of commands, but it isn't so bad when you get used to it, and VO regularly gives you reminders of what commands to use in certain places. Have a play with VO now; you can then go on to play with some of our examples in the [screen reader testing](#screen reader_testing) section.
+This seems like a lot of commands, but it isn't so bad when you get used to it, and VO regularly gives you reminders of what commands to use in certain places. Have a play with VO now; you can then go on to play with some of our examples in the [Screen reader testing](#screen reader_testing) section.
 
 #### NVDA
 
@@ -568,7 +568,7 @@ NVDA has many keyboard commands, and we won't list them all here. The basic ones
   </tbody>
 </table>
 
-#### screen reader testing
+#### Screen reader testing
 
 Now you've gotten used to using a screen reader, we'd like you to use it to do some quick accessibility tests, to get an idea of how screen readers deal with good and bad webpage features:
 
