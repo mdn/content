@@ -44,7 +44,7 @@ Web browsers are very complicated pieces of software with a lot of moving parts,
 
 Despite the limitations, Web APIs still give us access to a lot of functionality that enable us to do a great many things with web pages. There are a few really obvious bits you'll reference regularly in your code — consider the following diagram, which represents the main parts of a browser directly involved in viewing web pages:
 
-![](document-window-navigator.png)
+![Important parts of web browser such as window, navigator, document](document-window-navigator.png)
 
 - The window is the browser tab that a web page is loaded into; this is represented in JavaScript by the {{domxref("Window")}} object. Using methods available on this object you can do things like return the window's size (see {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}), manipulate the document loaded into that window, store data specific to that document on the client-side (for example using a local database or other storage mechanism), attach an [event handler](/en-US/docs/Learn/JavaScript/Building_blocks/Events#a_series_of_fortunate_events) to the current window, and more.
 - The navigator represents the state and identity of the browser (i.e. the user-agent) as it exists on the web. In JavaScript, this is represented by the {{domxref("Navigator")}} object. You can use this object to retrieve things like the user's preferred language, a media stream from the user's webcam, etc.
@@ -76,7 +76,7 @@ We have created a simple example page at [dom-example.html](https://github.com/m
 
 The DOM on the other hand looks like this:
 
-![](dom-screenshot.png)
+![Tree structure representation of Document Object Model](dom-screenshot.png)
 
 > **Note:** This DOM tree diagram was created using Ian Hickson's [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/).
 
@@ -264,7 +264,7 @@ In this challenge we want to make a simple shopping list example that allows you
 
 The finished demo will look something like this:
 
-![](shopping-list.png)
+![Demo layout of a shopping list with input field](shopping-list.png)
 
 To complete the exercise, follow the steps below, and make sure that the list behaves as described above.
 
