@@ -54,7 +54,10 @@ HTML DOM elements lay out their contents along the inline-axis by default. This 
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+box-orient =
+ horizontal | vertical | inline-axis | block-axis | inherit
+```
 
 ## Examples
 

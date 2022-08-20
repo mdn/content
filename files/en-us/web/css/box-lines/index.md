@@ -49,7 +49,10 @@ The `box-lines` property is specified as one of the keyword values listed below.
 
 ## Formal definition
 
-{{CSSInfo}}
+```plain
+box-lines =
+ single | multiple
+```
 
 ## Formal syntax
 
