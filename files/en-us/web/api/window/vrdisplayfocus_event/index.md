@@ -8,9 +8,10 @@ tags:
   - Event
   - Deprecated
   - vrdisplayfocus
+  - Non-standard
 browser-compat: api.Window.vrdisplayfocus_event
 ---
-{{APIRef("Window")}}{{Deprecated_Header}}
+{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`vrdisplayfocus`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when presentation to a VR display has resumed after being blurred.
 
@@ -38,9 +39,9 @@ An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
 
-- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}} {{ReadOnlyInline}}
+- {{domxref("VRDisplayEvent.display")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}} {{ReadOnlyInline}}
+- {{domxref("VRDisplayEvent.reason")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : A human-readable reason why the event was fired.
 
 ## Examples
