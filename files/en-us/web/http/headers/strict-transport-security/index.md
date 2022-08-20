@@ -56,6 +56,7 @@ The HTTP Strict Transport Security header informs the browser that it should nev
 
 > **Note:** The `Strict-Transport-Security` header is **ignored** by the browser when your site has only been accessed using HTTP.
 > Once your site is accessed over HTTPS with no certificate errors, the browser knows your site is HTTPS capable and will honor the `Strict-Transport-Security` header.
+> Browsers do this as attackers may intercept HTTP connections to the site and inject or remove the header.
 
 ### An example scenario
 
