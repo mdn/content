@@ -35,7 +35,7 @@ onresize = (event) => {};
 
 ## Event type
 
-An {{domxref("UIEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("UIEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("UIEvent")}}
 
