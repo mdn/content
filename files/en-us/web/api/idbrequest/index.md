@@ -32,15 +32,15 @@ The interface {{domxref("IDBOpenDBRequest")}} is derived from `IDBRequest`.
 
 _Also inherits properties from {{domxref("EventTarget")}}._
 
-- {{domxref("IDBRequest.error")}} {{readonlyInline}}
+- {{domxref("IDBRequest.error")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMException")}} in the event of an unsuccessful request, indicating what went wrong.
-- {{domxref("IDBRequest.result")}} {{readonlyInline}}
+- {{domxref("IDBRequest.result")}} {{ReadOnlyInline}}
   - : Returns the result of the request. If the request failed and the result is not available, an InvalidStateError exception is thrown.
-- {{domxref("IDBRequest.source")}} {{readonlyInline}}
+- {{domxref("IDBRequest.source")}} {{ReadOnlyInline}}
   - : The source of the request, such as an {{domxref("IDBIndex")}} or an {{domxref("IDBObjectStore")}}. If no source exists (such as when calling {{domxref("IDBFactory.open")}}), it returns null.
-- {{domxref("IDBRequest.readyState")}} {{readonlyInline}}
+- {{domxref("IDBRequest.readyState")}} {{ReadOnlyInline}}
   - : The state of the request. Every request starts in the `pending` state. The state changes to `done` when the request completes successfully or when an error occurs.
-- {{domxref("IDBRequest.transaction")}} {{readonlyInline}}
+- {{domxref("IDBRequest.transaction")}} {{ReadOnlyInline}}
   - : The transaction for the request. This property can be null for certain requests, for example those returned from {{domxref("IDBFactory.open")}} unless an upgrade is needed. (You're just connecting to a database, so there is no transaction to return).
 
 ## Methods

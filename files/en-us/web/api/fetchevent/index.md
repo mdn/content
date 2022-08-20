@@ -27,15 +27,15 @@ This is the event type for `fetch` events dispatched on the {{domxref("ServiceWo
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("FetchEvent.clientId")}} {{readonlyInline}}
+- {{domxref("FetchEvent.clientId")}} {{ReadOnlyInline}}
   - : The {{domxref("Client.id", "id")}} of the same-origin {{domxref("Client", "client")}} that initiated the fetch.
-- {{domxref("FetchEvent.preloadResponse")}} {{readonlyinline}}
+- {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} for a {{domxref("Response")}}, or `undefined` if this fetch is not a navigation, or [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) is not enabled.
-- {{domxref("FetchEvent.replacesClientId")}} {{readonlyInline}}
+- {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}
   - : The {{domxref("Client.id", "id")}} of the {{domxref("Client", "client")}} that is being replaced during a page navigation.
-- {{domxref("FetchEvent.resultingClientId")}} {{readonlyInline}}
+- {{domxref("FetchEvent.resultingClientId")}} {{ReadOnlyInline}}
   - : The {{domxref("Client.id", "id")}} of the {{domxref("Client", "client")}} that replaces the previous client during a page navigation.
-- {{domxref("FetchEvent.request")}} {{readonlyInline}}
+- {{domxref("FetchEvent.request")}} {{ReadOnlyInline}}
   - : The {{domxref("Request")}} the browser intends to make.
 
 ## Methods

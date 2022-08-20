@@ -54,9 +54,9 @@ The redirect could be exploited to direct visitors to a malicious site instead o
 
 The HTTP Strict Transport Security header informs the browser that it should never load a site using HTTP and should automatically convert all attempts to access the site using HTTP to HTTPS requests instead.
 
-> **Note:** The `Strict-Transport-Security` header is **ignored** by the browser when your site is accessed using HTTP;
-> this is because an attacker may intercept HTTP connections and inject the header or remove it.
-> When your site is accessed over HTTPS with no certificate errors, the browser knows your site is HTTPS capable and will honor the `Strict-Transport-Security` header.
+> **Note:** The `Strict-Transport-Security` header is _ignored_ by the browser when your site has only been accessed using HTTP.
+> Once your site is accessed over HTTPS with no certificate errors, the browser knows your site is HTTPS capable and will honor the `Strict-Transport-Security` header.
+> Browsers do this as attackers may intercept HTTP connections to the site and inject or remove the header.
 
 ### An example scenario
 

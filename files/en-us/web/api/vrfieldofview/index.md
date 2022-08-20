@@ -22,13 +22,13 @@ The **`VRFieldOfView`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_A
 
 ## Properties
 
-- {{domxref("VRFieldOfView.upDegrees")}} {{deprecated_inline}} {{readonlyInline}} {{Non-standard_Inline}}
+- {{domxref("VRFieldOfView.upDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees upwards that the field of view extends in.
-- {{domxref("VRFieldOfView.rightDegrees")}} {{deprecated_inline}} {{readonlyInline}} {{Non-standard_Inline}}
+- {{domxref("VRFieldOfView.rightDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees to the right that the field of view extends in.
-- {{domxref("VRFieldOfView.downDegrees")}} {{deprecated_inline}} {{readonlyInline}} {{Non-standard_Inline}}
+- {{domxref("VRFieldOfView.downDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees downwards that the field of view extends in.
-- {{domxref("VRFieldOfView.leftDegrees")}} {{deprecated_inline}} {{readonlyInline}} {{Non-standard_Inline}}
+- {{domxref("VRFieldOfView.leftDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees to the left that the field of view extends in.
 
 ## Examples

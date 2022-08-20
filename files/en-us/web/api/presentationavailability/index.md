@@ -23,7 +23,7 @@ The _`onchange`_ attribute is an [event handler](https://www.w3.org/TR/presentat
 
 ## Properties
 
-- {{domxref("PresentationAvailability.value")}} {{readonlyinline}}
+- {{domxref("PresentationAvailability.value")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the given presentation display is available. The _`value`_ attribute _MUST_ return the last value it was set to.
 
 ### Event

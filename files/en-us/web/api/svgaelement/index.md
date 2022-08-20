@@ -33,7 +33,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
   - : See {{domxref("HTMLAnchorElement.rel")}}.
 - {{domxref("SVGAElement.relList")}}
   - : See {{domxref("HTMLAnchorElement.relList")}}.
-- {{domxref("SVGAElement.target")}} {{readonlyInline}}
+- {{domxref("SVGAElement.target")}} {{ReadOnlyInline}}
   - : It corresponds to the {{SVGAttr("target")}} attribute of the given element.
 - {{domxref("SVGAElement.text")}}
   - : A string being a synonym for the {{domxref("Node.textContent")}} property.

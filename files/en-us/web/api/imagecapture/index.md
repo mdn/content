@@ -25,7 +25,7 @@ The **`ImageCapture`** interface of the [MediaStream Image Capture API](/en-US/d
 
 ## Properties
 
-- {{domxref("ImageCapture.track")}} {{readonlyinline}}
+- {{domxref("ImageCapture.track")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("MediaStreamTrack")}} passed to the constructor.
 
 ## Methods

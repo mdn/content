@@ -26,7 +26,7 @@ The `OfflineAudioContext` interface is an {{domxref("AudioContext")}} interface 
 
 _Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}._
 
-- {{domxref('OfflineAudioContext.length')}} {{readonlyinline}}
+- {{domxref('OfflineAudioContext.length')}} {{ReadOnlyInline}}
   - : An integer representing the size of the buffer in sample-frames.
 
 ## Methods

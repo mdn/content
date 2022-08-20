@@ -32,9 +32,9 @@ An {{domxref("SpeechRecognitionErrorEvent")}}. Inherits from {{domxref("Event")}
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("SpeechRecognitionErrorEvent.error")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionErrorEvent.error")}} {{ReadOnlyInline}}
   - : Returns the type of error raised.
-- {{domxref("SpeechRecognitionErrorEvent.message")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionErrorEvent.message")}} {{ReadOnlyInline}}
   - : Returns a message describing the error in more detail.
 
 ## Examples

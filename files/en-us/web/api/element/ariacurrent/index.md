@@ -37,7 +37,7 @@ A string with one of the following values:
 
 ## Examples
 
-In this example a set of links are used for site navigation. The `aria-current` attribute indicates the current page. The value `page` is incorporated into the screenreader announcement. Using `ariaCurrent` we can update that value.
+In this example a set of links are used for site navigation. The `aria-current` attribute indicates the current page. The value `page` is incorporated into the screen reader announcement. Using `ariaCurrent` we can update that value.
 
 ```html
 <nav>

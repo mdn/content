@@ -42,7 +42,7 @@ With web access on mobile devices being so popular and renowned platforms such a
 
 The state of accessibility — and support for web standards in general — is good in modern mobile devices. Long gone are the days when mobile devices ran completely different web technologies to desktop browsers, forcing developers to use browser sniffing and serve them completely separate sites (although quite a few companies still detect usage of mobile devices and serve them a separate mobile domain).
 
-These days, mobile devices can usually handle fully-featured websites, and the main platforms even have screenreaders built in to enable visually impaired users to use them successfully. Modern mobile browsers tend to have good support for [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics), too.
+These days, mobile devices can usually handle fully-featured websites, and the main platforms even have screen readers built in to enable visually impaired users to use them successfully. Modern mobile browsers tend to have good support for [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics), too.
 
 To make a website accessible and usable on mobile, you just need to follow general good web design and accessibility best practices.
 
@@ -52,9 +52,9 @@ There are some exceptions that need special consideration for mobile; the main o
 - User input — Make user input requirements as painless as possible on mobile (e.g., in forms, keep typing to a minimum).
 - Responsive design — Make sure layouts work on mobile, conserve image download sizes, and think about the provision of images for high-resolution screens.
 
-## Summary of screenreader testing on Android and iOS
+## Summary of screen reader testing on Android and iOS
 
-The most common mobile platforms have fully functional screen readers. These function in much the same way as desktop screenreaders, except they are largely operated using touch gestures rather than key combinations.
+The most common mobile platforms have fully functional screen readers. These function in much the same way as desktop screen readers, except they are largely operated using touch gestures rather than key combinations.
 
 Let's look at the main two: TalkBack on Android and VoiceOver on iOS.
 
@@ -272,7 +272,7 @@ If you want to provide a different solution for desktops, you could always serve
 
 ## Summary
 
-In this article, we have provided you with some details about common mobile accessibility-specific issues and how to overcome them. We also took you through the usage of the most common screenreaders to aid you in accessibility testing.
+In this article, we have provided you with some details about common mobile accessibility-specific issues and how to overcome them. We also took you through the usage of the most common screen readers to aid you in accessibility testing.
 
 ## See also
 

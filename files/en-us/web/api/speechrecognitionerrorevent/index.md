@@ -14,9 +14,9 @@ The **`SpeechRecognitionErrorEvent`** interface of the [Web Speech API](/en-US/d
 
 _`SpeechRecognitionErrorEvent` also inherits properties from its parent interface, {{domxref("Event")}}._
 
-- {{domxref("SpeechRecognitionErrorEvent.error")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionErrorEvent.error")}} {{ReadOnlyInline}}
   - : Returns the type of error raised.
-- {{domxref("SpeechRecognitionErrorEvent.message")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionErrorEvent.message")}} {{ReadOnlyInline}}
   - : Returns a message describing the error in more detail.
 
 ## Examples

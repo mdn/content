@@ -19,7 +19,7 @@ dragged.
 
 > **Note:** This property is Gecko-specific.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 

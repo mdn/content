@@ -5,7 +5,6 @@ tags:
   - Advanced
   - CSS
   - CSS Transitions
-  - CSS3 Transitions
   - Guide
 spec-urls: https://drafts.csswg.org/css-transitions/
 ---
