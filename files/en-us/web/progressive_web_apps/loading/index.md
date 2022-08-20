@@ -112,9 +112,7 @@ This problem can be solved by lazy loading the images. Lazy loading is a techinq
 
 ### The HTML {{htmlattrdef("loading")}} attribute
 
-This is a way to lazy load images without JavaScript.
-
-Just add the attribute with the `lazy` value as shown:
+The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Element/img#attr-loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
 
 ```html
 <img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME' loading='lazy'>
