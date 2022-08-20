@@ -110,7 +110,7 @@ The image loading mechanism discussed in the above section works OK — it loads
 
 This problem can be solved by loading the images only when needed: this is called _lazy loading_. [Lazy loading](https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading) is a technique to load images only when they appear in the viewport. There are several ways to tell the browser to lazy load images.
 
-### The HTML {{htmlattrdef("loading")}} attribute
+### The loading attribute on \<img>
 
 The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Element/img#attr-loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
 
