@@ -55,7 +55,7 @@ A linear {{domxref("CanvasGradient")}} initialized with the specified line.
 
 ### Exceptions
 
-- `NotSupportedError` {{domxref("DOMException)}}
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown when non-finite values are passed as parameters.
 
 ## Examples
