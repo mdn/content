@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionResultList/item
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Getter
   - Method
   - Reference
@@ -15,7 +14,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResultList.item
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}
 
 The **`item`** getter of the
 {{domxref("SpeechRecognitionResultList")}} interface is a standard getter — it allows

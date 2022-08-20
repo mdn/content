@@ -57,7 +57,7 @@ In this simple example we add a listener to the {{WebExtAPIRef("notifications.on
 
 ```js
 browser.notifications.onClosed.addListener((notificationId) => {
-  console.log('Notification ' + notificationId + ' has closed.');
+  console.log(`Notification ${notificationId} has closed.`);
 });
 ```
 

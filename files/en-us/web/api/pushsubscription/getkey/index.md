@@ -4,7 +4,6 @@ slug: Web/API/PushSubscription/getKey
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Push
   - Push API
@@ -14,7 +13,7 @@ tags:
   - getKey
 browser-compat: api.PushSubscription.getKey
 ---
-{{SeeCompatTable}}{{APIRef("Push API")}}
+{{APIRef("Push API")}}
 
 The `getKey()` method of the {{domxref("PushSubscription")}} interface
 returns an {{jsxref("ArrayBuffer")}} representing a client public key, which can then

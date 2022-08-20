@@ -73,7 +73,7 @@ The `-moz-user-modify` property is specified as one of the keyword values from t
 
 ## Specifications
 
-Not part of any standard. A similar property, `user-focus`, was proposed in [early drafts of a predecessor of the CSS3 UI specification](https://www.w3.org/TR/2000/WD-css3-userint-20000216), but was rejected by the working group.
+Not part of any standard. 
 
 ## Browser compatibility
 

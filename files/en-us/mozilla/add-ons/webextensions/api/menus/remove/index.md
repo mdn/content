@@ -48,7 +48,7 @@ function onRemoved() {
 }
 
 function onError() {
-  console.log("error removing item:" + browser.runtime.lastError);
+  console.log("error removing item:", browser.runtime.lastError);
 }
 
 browser.menus.create({

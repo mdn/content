@@ -75,7 +75,7 @@ To create a smooth gradient, the `radial-gradient()` function draws a series of 
 
 Color-stop points are positioned on a _virtual gradient ray_ that extends horizontally from the center towards the right. Percentage-based color-stop positions are relative to the intersection between the ending shape and this gradient ray, which represents `100%`. Each shape is a single color determined by the color on the gradient ray it intersects.
 
-### Formal syntax
+## Formal syntax
 
 {{csssyntax}}
 

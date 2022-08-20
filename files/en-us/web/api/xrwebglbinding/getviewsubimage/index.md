@@ -57,13 +57,13 @@ function onXRFrame(time, xrFrame) {
 
   gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
 
-  for (let view in xrViewerPose.views) {
-    let subImage = xrGlBinding.getViewSubImage(layer, view);
+  for (const view in xrViewerPose.views) {
+    const subImage = xrGlBinding.getViewSubImage(layer, view);
     gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
       gl.TEXTURE_2D, subImage.colorTexture, 0);
     gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT,
       gl.TEXTURE_2D, subImage.depthStencilTexture, 0);
-    let viewport = subImage.viewport;
+    const viewport = subImage.viewport;
     gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
     // Render from the viewpoint of xrView

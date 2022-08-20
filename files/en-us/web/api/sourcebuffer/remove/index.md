@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - Method
@@ -15,7 +14,7 @@ tags:
   - remove
 browser-compat: api.SourceBuffer.remove
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
 The **`remove()`** method of the {{domxref("SourceBuffer")}}
 interface removes media segments within a specific time range from the

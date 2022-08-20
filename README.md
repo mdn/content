@@ -8,7 +8,7 @@ The following is a set of guidelines for contributing to the
 hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
 > **Note:** Just want to find a task and jump in?
-  See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started)
+  See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started)
   for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
   for a filtered list of tasks.
 
@@ -105,7 +105,7 @@ document takes precedence and the redirect is ignored.
 - **A document's `index.html` or `index.md` starts with "front-matter"** — Each
 document's `index.html` or `index.md` file must begin with some [YAML](https://en.wikipedia.org/wiki/YAML)
 called front-matter that defines some important information about the
-document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
+document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag)
 (if any). Here's an example that shows the front-matter from the
 [JavaScript landing page](files/en-us/web/javascript/index.md):
 
@@ -258,7 +258,7 @@ it's important to keep the following in mind:**
     including the
     [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).**
     - **If you're editing a Markdown file, see the
-    [guide to writing Markdown for MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN).**
+    [guide to writing Markdown for MDN](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN).**
     - **Large chunks of work can be difficult to review, so try to group your
     changes into the smallest logical chunks that make sense, and create a
     separate pull request for each logical chunk.**
@@ -374,7 +374,7 @@ There are only a few things to keep in mind:
   `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.md` file.
 - Remember that a document's `index.html` or `index.md` file must start with
   front-matter that defines the `title`, `slug`, and
-  [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
+  [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag)
   (if any) for the document. You might find it helpful to refer
   to the front-matter within a similar document's `index.html` or `index.md`.
 

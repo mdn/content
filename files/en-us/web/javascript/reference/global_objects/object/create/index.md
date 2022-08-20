@@ -235,7 +235,7 @@ for (const prop in o) {
 delete o.p;
 // false
 
-// to specify an ES3 property
+// to specify a property with the same attributes as in an initializer
 o2 = Object.create({}, {
   p: {
     value: 42,
@@ -244,9 +244,9 @@ o2 = Object.create({}, {
     configurable: true
   }
 });
-/* is not equivalent to:
-This will create an object with prototype : {p: 42 }
-o2 = Object.create({p: 42}) */
+// This is not equivalent to:
+// o2 = Object.create({ p: 42 })
+// which will create an object with prototype { p: 42 }
 ```
 
 ## Specifications

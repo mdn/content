@@ -4,12 +4,12 @@ slug: Web/API/Permissions/revoke
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Permissions
   - Permissions API
   - Reference
   - revoke
+  - Deprecated
 browser-compat: api.Permissions.revoke
 ---
 {{APIRef("Permissions API")}}{{deprecated_header}}
@@ -53,7 +53,7 @@ revoke(descriptor)
 > `notifications` and `push`.
 
 > **Note:** The `persistent-storage` permission allows an
-> origin to use a persistent box (i.e [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its
+> origin to use a persistent box (i.e., [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its
 > storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 
 ### Return value

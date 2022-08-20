@@ -41,8 +41,6 @@ Enough theory — let's see some source code!
 
 We'll start by looking at the code that registers a new Service Worker, in the app.js file:
 
-> **Note:** We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation
-
 ```js
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./pwa-examples/js13kpwa/sw.js');

@@ -75,7 +75,7 @@ You can sell rights to use your game for branding, or do it yourself. In the fir
 
 ## Other non-game focused monetization strategies
 
-There are other ways you can earn money when building HTML5 games, and it doesn't even have to be game-related.
+There are other ways you can earn money when building HTML games, and it doesn't even have to be game-related.
 
 ### Selling resources
 
@@ -95,4 +95,4 @@ When all else fails you can try putting a donate button on your game's page and 
 
 ## Summary
 
-There are many ways to earn money — everything that applies to the "normal" AAA gaming world can be, more or less, applied to casual HTML5 games. You might however also focus on selling licenses, doing branding, or earning on a revenue share basis from the advertisements. It's totally up to you which path you're going to follow.
+There are many ways to earn money — everything that applies to the "normal" AAA gaming world can be, more or less, applied to casual HTML games. You might however also focus on selling licenses, doing branding, or earning on a revenue share basis from the advertisements. It's totally up to you which path you're going to follow.

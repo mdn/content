@@ -25,6 +25,10 @@ If given as a number, the useful range is 0 (fully transparent) to 1.0 (fully op
 
 If the alpha value is given as a percentage, 0% corresponds to fully transparent while 100% indicates fully opaque.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Interpolation
 
 When animated, values of the `<alpha-value>` CSS data type are {{Glossary("interpolation", "interpolated")}} as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.

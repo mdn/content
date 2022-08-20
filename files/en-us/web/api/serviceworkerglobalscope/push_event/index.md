@@ -33,7 +33,7 @@ onperiodicsync = (event) => { };
 
 ## Event type
 
-An {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PushEvent")}}
 
@@ -41,7 +41,7 @@ An {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Inherits properties from its parent, {{domxref("PushEvent")}}. Additional properties:_
 
-- {{domxref("PushEvent.data")}} {{readonlyinline}}
+- {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
   - : Returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
 ## Example

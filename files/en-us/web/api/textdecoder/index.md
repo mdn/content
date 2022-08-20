@@ -6,7 +6,6 @@ tags:
   - API
   - DOM
   - Encoding
-  - Experimental
   - Interface
   - Reference
   - TextDecoder

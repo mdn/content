@@ -210,7 +210,7 @@ All image types are potentially dangerous, however, animated gifs deserve specia
 
 #### Detect if a GIF is animated
 
-- [NPM's animated-gif-detector](https://www.npmjs.com/package/animated-gif-detector) allows for the ability to determine animate _as early as possible_ in a given HTTP request.
+- [npm's animated-gif-detector](https://www.npmjs.com/package/animated-gif-detector) allows for the ability to determine animate _as early as possible_ in a given HTTP request.
 - Zakirt provides a gist for [animated-gif-detect.js](https://gist.github.com/zakirt/faa4a58cec5a7505b10e3686a226f285)
 
 With animated GIFs, ensure animation is inactive until the user chooses to activate it. For example, the user must push a button or check a box in order to start the animation.
@@ -258,7 +258,7 @@ The `HTMLMediaElement.controls` property reflects the `controls` HTML attribute,
 
 ##### Video
 
-To ensure that a video has controls that a user can access, ensure that you add the word "controls" to HTML5 video and audio elements.
+To ensure that a video has controls that a user can access, ensure that you add the word "controls" to HTML video and audio elements.
 
 `<video controls>`
 
@@ -266,7 +266,7 @@ To ensure that a video has controls that a user can access, ensure that you add 
 <video controls>
   <source src="myVideo.mp4" type="video/mp4">
   <source src="myVideo.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is
+  <p>Your browser doesn't support HTML video. Here is
      a <a href="myVideo.mp4">link to the video</a> instead.</p>
 </video>
 ```
@@ -313,7 +313,7 @@ The methods for sniffing them out is not a casual exercise. You may be intereste
 
 #### Text can also be animated
 
-Translations and transformations can animate text in a div, and do harm. Although it is experimental technology, [`CSSKeyframe.keyText`](/en-US/docs/Web/API/CSSKeyframeRule/keyText) is being developed. Moving text can induce seizures for the same reasons that moving images do, so avoid animating your text. It's a good idea to avoid using moving text anyhow, as many screenreaders cannot read moving text and it's bad user experience even for those with no vision or vestibular issues.
+Translations and transformations can animate text in a div, and do harm. Although it is experimental technology, [`CSSKeyframe.keyText`](/en-US/docs/Web/API/CSSKeyframeRule/keyText) is being developed. Moving text can induce seizures for the same reasons that moving images do, so avoid animating your text. It's a good idea to avoid using moving text anyhow, as many screen readers cannot read moving text and it's bad user experience even for those with no vision or vestibular issues.
 
 ### CSS for animation
 
@@ -327,7 +327,7 @@ The animation property is already powerful on its own, but combined with other p
 
 ### JavaScript animation
 
-JavaScript is often used to control {{HTMLElement('canvas')}} elements and SVGs. Most JavaScript code that applies to HTML5 video also applies to audio. `HTMLMediaElement.playbackRate` is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: `HTMLMediaElement.playbackRate = playbackspeed`.
+JavaScript is often used to control {{HTMLElement('canvas')}} elements and SVGs. Most JavaScript code that applies to HTML video also applies to audio. `HTMLMediaElement.playbackRate` is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: `HTMLMediaElement.playbackRate = playbackspeed`.
 
 [document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) is an experimental technology, and includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API). The MDN page on [Document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) provides the following code sample of how to slow down all animations on a page to half speed:
 

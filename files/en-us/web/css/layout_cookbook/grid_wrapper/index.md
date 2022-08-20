@@ -38,7 +38,7 @@ When using this recipe at page level it can be useful to set a `max-width` along
 ```css
 .grid {
   max-width: 1200px;
-  margin: 0 auto; // horizontally centers the container
+  margin: 0 auto; /* horizontally centers the container */
 }
 
 /* Remove the max-width and margins if the browser supports Grid */

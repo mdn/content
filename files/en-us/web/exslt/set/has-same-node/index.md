@@ -12,7 +12,7 @@ tags:
 
 ## Syntax
 
-```js
+```plain
 set:has-same-node(nodeSet1, nodeSet2)
 ```
 

@@ -10,9 +10,7 @@ browser-compat: javascript.builtins.InternalError.InternalError
 ---
 {{JSRef}} {{non-standard_header}}
 
-The **`InternalError()`** constructor creates an error that
-indicates an error that occurred internally in the JavaScript engine. For example:
-"**InternalError**: too much recursion".
+The **`InternalError()`** constructor creates an error that indicates an error that occurred internally in the JavaScript engine.
 
 ## Syntax
 
@@ -22,7 +20,15 @@ new InternalError(message)
 new InternalError(message, options)
 new InternalError(message, fileName)
 new InternalError(message, fileName, lineNumber)
+
+InternalError()
+InternalError(message)
+InternalError(message, options)
+InternalError(message, fileName)
+InternalError(message, fileName, lineNumber)
 ```
+
+> **Note:** `InternalError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `InternalError` instance.
 
 ### Parameters
 

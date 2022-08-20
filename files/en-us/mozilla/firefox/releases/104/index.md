@@ -47,6 +47,10 @@ This article provides information about the changes in Firefox 104 that will aff
 
 #### DOM
 
+- [`HTMLElement.focus()`](/en-US/docs/Web/API/HTMLElement/focus) now supports the parameter [`option.focusVisible`](/en-US/docs/Web/API/HTMLElement/focus#focusvisible), which can be used force a browser to display visual indication after the element is focused.
+  Note that browsers may automatically provide visual indication on focused elements if the implementation determines that it will improve accessibility.
+  (See {{bug(1765083)}} for more details.)
+
 #### Media, WebRTC, and Web Audio
 
 #### SVG
@@ -57,13 +61,26 @@ This article provides information about the changes in Firefox 104 that will aff
 
 #### Removals
 
+- The `options` argument to the [`IDBFactory.open()`](/en-US/docs/Web/API/IDBFactory/open) method has been removed.
+  This this option provided a non-standard, and Firefox-only way to make the indicated database persistent.
+  The option was previously deprecated, and users that need this functionality should already have migrated to {{domxref("StorageManager.persist()")}}.
+  (See {{bug(1354500)}} for more details.)
+
 ### WebAssembly
 
 #### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Removals
+#### WebDriver BiDi
+
+- Added support for `source` to the `log.entryAdded` event ({{bug(1770792)}}).
+- Updated the `url` sent for `browsingContext.contextCreated` events to be `about:blank` for newly opened browsing contexts ({{bug(1775141)}}).
+
+#### Marionette
+
+- Improved stability and performance when minimizing or restoring windows on Linux ({{bug(1780212)}}).
+- Added support for `touch` actions ({{bug(1543337)}}).
 
 ## Changes for add-on developers
 

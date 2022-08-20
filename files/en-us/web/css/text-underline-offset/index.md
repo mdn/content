@@ -4,7 +4,7 @@ slug: Web/CSS/text-underline-offset
 tags:
   - CSS
   - CSS Text Decoration
-  - Property
+  - CSS Property
   - Reference
   - recipe:css-property
   - text-decoration

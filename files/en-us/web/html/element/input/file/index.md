@@ -408,11 +408,11 @@ The `returnFileSize()` function takes a number (of bytes, taken from the current
 ```js
 function returnFileSize(number) {
   if (number < 1024) {
-    return number + 'bytes';
+    return `${number} bytes`;
   } else if (number >= 1024 && number < 1048576) {
-    return (number/1024).toFixed(1) + 'KB';
+    return `${(number / 1024).toFixed(1)} KB`;
   } else if (number >= 1048576) {
-    return (number/1048576).toFixed(1) + 'MB';
+    return `${(number / 1048576).toFixed(1)} MB`;
   }
 }
 ```

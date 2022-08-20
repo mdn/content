@@ -7,6 +7,7 @@ tags:
   - InputDeviceCapabilities
   - Overview
   - Reference
+  - Experimental
 browser-compat: api.InputDeviceCapabilities
 ---
 {{DefaultAPISidebar("InputDeviceCapabilities API")}}{{SeeCompatTable}}

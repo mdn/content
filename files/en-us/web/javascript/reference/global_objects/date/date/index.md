@@ -10,10 +10,7 @@ browser-compat: javascript.builtins.Date.Date
 ---
 {{JSRef}}
 
-Creates a JavaScript **`Date`**
-instance that represents a single moment in time in a platform-independent
-format. `Date` objects contain a `Number` that represents
-milliseconds since 1 January 1970 UTC.
+The **`Date()`** constructor can create a {{jsxref("Date")}} instance or return a string representing the current time.
 
 {{EmbedInteractiveExample("pages/js/date-constructor.html")}}
 
@@ -31,12 +28,11 @@ new Date(year, monthIndex, day, hours)
 new Date(year, monthIndex, day, hours, minutes)
 new Date(year, monthIndex, day, hours, minutes, seconds)
 new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+
+Date()
 ```
 
-> **Note:** The only correct way to instantiate a new `Date`
-> object is by using the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. If you call the `Date`
-> object directly, such as `now = Date()`, the returned value is a string
-> rather than a `Date` object.
+> **Note:** `Date()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
 
 ### Parameters
 

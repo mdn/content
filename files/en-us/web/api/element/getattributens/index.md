@@ -92,7 +92,7 @@ namespaces are not supported.
 
 ## Notes
 
-Namespaces are only supported in XML documents. HTML5 documents have to use
+Namespaces are only supported in XML documents. HTML documents have to use
 `getAttribute()` instead.
 
 `getAttributeNS()` differs from {{domxref("element.getAttribute()",

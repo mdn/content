@@ -4,7 +4,6 @@ slug: Web/API/NotificationEvent/action
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - NotificationEvent
   - Notifications
   - Property

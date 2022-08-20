@@ -4,7 +4,6 @@ slug: Web/API/PaymentResponse/shippingOption
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Payment Request
   - PaymentResponse
   - Property
@@ -12,6 +11,8 @@ tags:
   - Request Payment API
   - Secure context
   - shippingOption
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentResponse.shippingOption
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}

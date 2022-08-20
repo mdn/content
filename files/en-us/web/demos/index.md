@@ -74,7 +74,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ### Notifications API
 
-- [HTML5 Notifications](https://elfoxero.github.io/html5notifications/) ([source code](https://github.com/elfoxero/html5notifications))
+- [HTML Notifications](https://elfoxero.github.io/html5notifications/) ([source code](https://github.com/elfoxero/html5notifications))
 
 ### Web Audio API
 

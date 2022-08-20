@@ -286,11 +286,7 @@ function displayResults(json) {
 
   const articles = json.response.docs;
 
-  if (articles.length === 10) {
-    nav.style.display = 'block';
-  } else {
-    nav.style.display = 'none';
-  }
+  nav.style.display = articles.length === 10 ? 'block' : 'none';
 
   if (articles.length === 0) {
     const para = document.createElement('p');

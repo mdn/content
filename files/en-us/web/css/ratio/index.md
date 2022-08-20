@@ -20,6 +20,10 @@ In Media Queries Level 3, the `<ratio>` data type consisted of a strictly positi
 
 In Media Queries Level 4, the `<ratio>` date type is updated to consist of a strictly positive {{cssxref("&lt;number&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second strictly positive {{cssxref("&lt;number&gt;")}}. In addition a single {{cssxref("&lt;number&gt;")}} as a value is allowable.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Use in a media query

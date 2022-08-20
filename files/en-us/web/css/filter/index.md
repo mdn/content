@@ -135,8 +135,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -webkit-filter:blur(5px);
-  -ms-filter:blur(5px);
   filter:blur(5px); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -239,9 +237,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter:brightness(2);
-  -webkit-filter:brightness(2);
-  -ms-filter:brightness(2);
   filter:brightness(2); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -336,9 +331,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter:contrast(200%);
-  -webkit-filter:contrast(200%);
-  -ms-filter:contrast(200%);
   filter:contrast(200%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -372,7 +364,7 @@ table.standard-table td {
 
 #### drop-shadow()
 
-The {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} function applies a drop shadow effect to the input image. A drop shadow is effectively a blurred, offset version of the input image's alpha mask drawn in a particular color, composited below the image. The function accepts a parameter of type `<shadow>` (defined in [CSS3 Backgrounds](https://www.w3.org/TR/css-backgrounds-3/#typedef-shadow)), with the exception that the `inset` keyword and `spread` parameter are not allowed. This function is similar to the more established {{cssxref("box-shadow")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance. The parameters of the `<shadow>` parameter are as follows:
+The {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} function applies a drop shadow effect to the input image. A drop shadow is effectively a blurred, offset version of the input image's alpha mask drawn in a particular color, composited below the image. The function accepts a parameter of type `<shadow>` (defined in [CSS Backgrounds and Borders Module Level 3](https://www.w3.org/TR/css-backgrounds-3/#typedef-shadow)), with the exception that the `inset` keyword and `spread` parameter are not allowed. This function is similar to the more established {{cssxref("box-shadow")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance. The parameters of the `<shadow>` parameter are as follows:
 
 - `<offset-x>` `<offset-y>` (required)
   - : These are two {{cssxref("&lt;length&gt;")}} values to set the shadow offset. `<offset-x>` specifies the horizontal distance. Negative values place the shadow to the left of the element. `<offset-y>` specifies the vertical distance. Negative values place the shadow above the element. See {{cssxref("&lt;length&gt;")}} for possible units.
@@ -472,17 +464,11 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: drop-shadow(16px 16px 10px black);
-  -webkit-filter: drop-shadow(16px 16px 10px black);
-  -ms-filter: drop-shadow(16px 16px 10px black);
   filter: drop-shadow(16px 16px 10px black);
 }
 #img12 {
   width:100%;
   height:auto;
-  -moz-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -webkit-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -ms-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
   filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
 }
 table.standard-table {
@@ -570,9 +556,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter:grayscale(100%);
-  -webkit-filter:grayscale(100%);
-  -ms-filter:grayscale(100%);
   filter:grayscale(100%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -652,9 +635,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter:hue-rotate(90deg);
-  -webkit-filter:hue-rotate(90deg);
-  -ms-filter:hue-rotate(90deg);
   filter:hue-rotate(90deg); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -745,9 +725,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: invert(100%);
-  -webkit-filter: invert(100%);
-  -ms-filter: invert(100%);
   filter: invert(100%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -828,9 +805,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: opacity(50%);
-  -webkit-filter: opacity(50%);
-  -ms-filter: opacity(50%);
   filter: opacity(50%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -910,9 +884,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: saturate(200%);
-  -webkit-filter: saturate(200%);
-  -ms-filter: saturate(200%);
   filter: saturate(200%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -995,9 +966,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: sepia(100%);
-  -webkit-filter: sepia(100%);
-  -ms-filter: sepia(100%);
   filter: sepia(100%); }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -1069,9 +1037,6 @@ body {
 #img2 {
   width:100%;
   height:auto;
-  -moz-filter: contrast(175%) brightness(103%);
-  -webkit-filter: contrast(175%) brightness(103%);
-  -ms-filter: contrast(175%) brightness(103%);
   filter: contrast(175%) brightness(103%);
 }
 table.standard-table {

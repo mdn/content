@@ -4,7 +4,7 @@ slug: Web/CSS/masonry-auto-flow
 tags:
   - CSS
   - Experimental
-  - Property
+  - CSS Property
   - Reference
   - grid
   - masonry

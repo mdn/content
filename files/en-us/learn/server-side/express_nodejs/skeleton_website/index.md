@@ -48,7 +48,7 @@ The following sections show you how to call the application generator, and provi
 
 ## Using the application generator
 
-You should already have installed the generator as part of [setting up a Node development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment). As a quick reminder, you install the generator tool site-wide using the NPM package manager, as shown:
+You should already have installed the generator as part of [setting up a Node development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment). As a quick reminder, you install the generator tool site-wide using the npm package manager, as shown:
 
 ```bash
 npm install express-generator -g
@@ -253,7 +253,7 @@ If you open your project's **package.json** file you'll now see a new section wi
 }
 ```
 
-Because the tool isn't installed globally we can't launch it from the command line (unless we add it to the path) but we can call it from an NPM script because NPM knows all about the installed packages. Find the `scripts` section of your package.json. Initially, it will contain one line, which begins with `"start"`. Update it by putting a comma at the end of that line, and adding the `"devstart"` and `"serverstart"` lines:
+Because the tool isn't installed globally we can't launch it from the command line (unless we add it to the path) but we can call it from an npm script because npm knows all about the installed packages. Find the `scripts` section of your package.json. Initially, it will contain one line, which begins with `"start"`. Update it by putting a comma at the end of that line, and adding the `"devstart"` and `"serverstart"` lines:
 
 - On Linux and macOS, the scripts section will look like this:
 
@@ -275,7 +275,7 @@ We can now start the server in almost exactly the same way as previously, but us
 
 > **Note:** Now if you edit any file in the project the server will restart (or you can restart it by typing `rs` on the command prompt at any time). You will still need to reload the browser to refresh the page.
 >
-> We now have to call "`npm run <scriptname>`" rather than just `npm start`, because "start" is actually an NPM command that is mapped to the named script. We could have replaced the command in the _start_ script but we only want to use _nodemon_ during development, so it makes sense to create a new script command.
+> We now have to call "`npm run <scriptname>`" rather than just `npm start`, because "start" is actually an npm command that is mapped to the named script. We could have replaced the command in the _start_ script but we only want to use _nodemon_ during development, so it makes sense to create a new script command.
 >
 > The `serverstart` command added to the scripts in the **package.json** above is a very good example. Using this approach means you no longer have to type a long command to start the server. Note that the particular command added to the script works for macOS or Linux only.
 
@@ -393,7 +393,7 @@ module.exports = app;
 
 Back in the **www** entry point file above, it is this `module.exports` object that is supplied to the caller when this file is imported.
 
-Let's work through the **app.js** file in detail. First, we import some useful node libraries into the file using `require()`, including _http-errors_, *express*, *morgan* and _cookie-parser_ that we previously downloaded for our application using NPM; and _path_, which is a core Node library for parsing file and directory paths.
+Let's work through the **app.js** file in detail. First, we import some useful node libraries into the file using `require()`, including _http-errors_, *express*, *morgan* and _cookie-parser_ that we previously downloaded for our application using npm; and _path_, which is a core Node library for parsing file and directory paths.
 
 ```js
 const createError = require('http-errors');

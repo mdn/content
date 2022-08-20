@@ -3,6 +3,7 @@ title: paint-order
 slug: Web/CSS/paint-order
 tags:
   - CSS
+  - CSS Property
   - Reference
   - SVG
   - Web

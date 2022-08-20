@@ -62,7 +62,7 @@ The benefit of using an ORM is that programmers can continue to think in terms o
 
 ### What ORM/ODM should I use?
 
-There are many ODM/ORM solutions available on the NPM package manager site (check out the [odm](https://www.npmjs.com/search?q=keywords:odm) and [orm](https://www.npmjs.com/search?q=keywords:orm) tags for a subset!).
+There are many ODM/ORM solutions available on the npm package manager site (check out the [odm](https://www.npmjs.com/search?q=keywords:odm) and [orm](https://www.npmjs.com/search?q=keywords:orm) tags for a subset!).
 
 A few solutions that were popular at the time of writing are:
 
@@ -116,7 +116,7 @@ This section provides an overview of how to connect Mongoose to a MongoDB databa
 
 ### Installing Mongoose and MongoDB
 
-Mongoose is installed in your project (**package.json**) like any other dependency — using NPM. To install it, use the following command inside your project folder:
+Mongoose is installed in your project (**package.json**) like any other dependency — using npm. To install it, use the following command inside your project folder:
 
 ```bash
 npm install mongoose
@@ -147,7 +147,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 You can get the default `Connection` object with `mongoose.connection`. Once connected, the open event is fired on the `Connection` instance.
 
-> **Note:** If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options etc.) as `connect()` and returns a `Connection` object).
+> **Note:** If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options, etc.) as `connect()` and returns a `Connection` object).
 
 ### Defining and creating models
 
@@ -656,7 +656,7 @@ AuthorSchema
 // Virtual for author's URL
 AuthorSchema
   .virtual('url')
-  .get(() => {
+  .get(function() { // We don't use an arrow function as we'll need the this object
     return `/catalog/author/${this._id}`;
   });
 
@@ -695,7 +695,7 @@ const BookSchema = new Schema(
 // Virtual for book's URL
 BookSchema
   .virtual('url')
-  .get(() => {
+  .get(function() { // We don't use an arrow function as we'll need the this object
     return '/catalog/book/' + this._id;
   });
 
@@ -730,7 +730,7 @@ const BookInstanceSchema = new Schema(
 // Virtual for bookinstance's URL
 BookInstanceSchema
   .virtual('url')
-  .get(() => {
+  .get(function() { // We don't use an arrow function as we'll need the this object
     return `/catalog/bookinstance/${this._id}`;
   });
 
@@ -747,7 +747,7 @@ Everything else should be familiar from our previous schema.
 
 ### Genre model - challenge!
 
-Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc).
+Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc.).
 
 The definition will be very similar to the other models:
 

@@ -229,7 +229,7 @@ After running that command, a file `output.html` containing the following HTML o
 There are more sophisticated tools that aim at converting an arbitrary LaTeX document into a document with MathML content. For example, using [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) the following commands will convert `foo.tex` into a HTML or EPUB document:
 
 ```bash
-latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
+latexmlc --dest foo.html foo.tex # Generate a HTML document foo.html
 latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub
 ```
 

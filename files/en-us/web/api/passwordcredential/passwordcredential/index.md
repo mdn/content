@@ -9,9 +9,10 @@ tags:
   - PasswordCredential
   - Reference
   - credential management
+  - Experimental
 browser-compat: api.PasswordCredential.PasswordCredential
 ---
-{{APIRef("Credential Management API")}}{{Non-standard_header}}
+{{APIRef("Credential Management API")}}{{SeeCompatTable}}
 
 The **`PasswordCredential()`**
 constructor creates a new {{domxref("PasswordCredential")}} object. In

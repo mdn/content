@@ -41,7 +41,6 @@ while (node) {
 }
 
 document.getElementsByTagName('pre')[0].textContent = result;
-
 ```
 
 {{EmbedLiveSample("Example", "100%", "200")}}

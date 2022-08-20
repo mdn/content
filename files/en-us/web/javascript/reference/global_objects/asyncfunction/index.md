@@ -27,7 +27,14 @@ new AsyncFunction(functionBody)
 new AsyncFunction(arg0, functionBody)
 new AsyncFunction(arg0, arg1, functionBody)
 new AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+
+AsyncFunction(functionBody)
+AsyncFunction(arg0, functionBody)
+AsyncFunction(arg0, arg1, functionBody)
+AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
+
+> **Note:** `AsyncFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncFunction` instance.
 
 ### Parameters
 

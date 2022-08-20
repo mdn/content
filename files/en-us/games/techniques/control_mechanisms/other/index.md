@@ -18,7 +18,7 @@ Having different control mechanisms in your game helps reach broader audiences. 
 
 ## TV remote
 
-Playing games on a TV screen doesn't always have to be done through consoles. There's already a Gamepad API working on the desktop computers, so we can imitate the experience, but we can go even further. Modern smart TVs can handle HTML5 games, because they have a built-in browser that can be used as a gaming platform. Smart TVs are shipped with remote controls, which can be used to control your games if you know how.
+Playing games on a TV screen doesn't always have to be done through consoles. There's already a Gamepad API working on the desktop computers, so we can imitate the experience, but we can go even further. Modern smart TVs can handle HTML games, because they have a built-in browser that can be used as a gaming platform. Smart TVs are shipped with remote controls, which can be used to control your games if you know how.
 
 The earliest demo of [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) was adjusted to work on a huge TV. Interestingly enough, the first Captain Rogers game (Asteroid Belt of Sirius) was optimized for low-end, small-screen, cheap smartphones running Firefox OS, so you can see the difference three years can make — you can read the whole story in our [Building games for Firefox OS TV](https://hacks.mozilla.org/2016/01/building-games-for-firefox-os-tv/) Hacks post.
 
@@ -96,10 +96,10 @@ Leap.loop({
     horizontalDegree = Math.round(hand.roll() * toDegrees);
     verticalDegree = Math.round(hand.pitch() * toDegrees);
     grabStrength = hand.grabStrength;
-    output.innerHTML = 'Leap Motion: <br />'
-      + ' roll: ' + horizontalDegree + '° <br />'
-      + ' pitch: ' + verticalDegree + '° <br />'
-      + ' strength: ' + grabStrength + '';
+    output.innerHTML = `Leap Motion: <br />`
+      + ` roll: ${horizontalDegree}° <br />`
+      + ` pitch: ${verticalDegree}° <br />`
+      + ` strength: ${grabStrength}`;
   }
 });
 ```

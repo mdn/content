@@ -33,7 +33,7 @@ indexOf(searchString, position)
 
   - : The method returns the index of the first occurrence of the specified substring at a position greater than or equal to `position`, which defaults to `0`. If `position` is greater than the length of the calling string, the method doesn't search the calling string at all. If `position` is less than zero, the method behaves as it would if `position` were `0`.
 
-    - `'hello world hello'.indexOf('o', -5)` returns `4` — because it causes the method to behave as if the second argument were `0`, and the first occurrence of `hello` at a position greater or equal to `0` is at position `4`.
+    - `'hello world hello'.indexOf('o', -5)` returns `4` — because it causes the method to behave as if the second argument were `0`, and the first occurrence of `o` at a position greater or equal to `0` is at position `4`.
 
     - `'hello world hello'.indexOf('world', 12)` returns `-1` — because, while it's true the substring `world` occurs at index `6`, that position is not greater than or equal to `12`.
 
@@ -107,7 +107,7 @@ The following example uses `indexOf()` to locate substrings in the string
 const str = 'Brave new world';
 
 console.log(`Index of first w from start is ${str.indexOf('w')}`); // logs 8
-console.log(`Index of "new" from start is ${ str.indexOf('new')}`); // logs 6
+console.log(`Index of "new" from start is ${str.indexOf('new')}`); // logs 6
 ```
 
 ### indexOf() and case-sensitivity

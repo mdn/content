@@ -57,9 +57,9 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function onLanguageDetected(langInfo) {
-  for (lang of langInfo.languages) {
-    console.log("Language is: " + lang.language);
-    console.log("Percentage is: " + lang.percentage);
+  for (const lang of langInfo.languages) {
+    console.log(`Language is: ${lang.language}`);
+    console.log(`Percentage is: ${lang.percentage}`);
   }
 }
 

@@ -1,5 +1,5 @@
 ---
-title: CSS grids, logical values, and writing modes
+title: Grids, logical values, and writing modes
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 tags:
   - CSS

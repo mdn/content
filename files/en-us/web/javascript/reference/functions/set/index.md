@@ -20,8 +20,8 @@ property.
 ## Syntax
 
 ```js
-{ set prop() { /* … */ } }
-{ set [expression]() { /* … */ } }
+{ set prop(val) { /* … */ } }
+{ set [expression](val) { /* … */ } }
 ```
 
 ### Parameters
@@ -32,8 +32,7 @@ property.
   - : An alias for the variable that holds the value attempted to be assigned to
     `prop`.
 - `expression`
-  - : Starting with ECMAScript 2015, you can also use expressions for a computed property
-    name to bind to the given function.
+  - : You can also use expressions for a computed property name to bind to the given function.
 
 ## Description
 

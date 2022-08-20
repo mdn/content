@@ -9,7 +9,7 @@ tags:
   - Reference
   - Report
   - Reporting API
-spec-urls: https://w3c.github.io/reporting/#dom-report
+browser-compat: api.Report
 ---
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
@@ -23,11 +23,11 @@ Reports can be accessed in a number of ways:
 
 ## Properties
 
-- {{domxref("Report.body")}} {{experimental_inline}} {{readonlyinline}}
+- {{domxref("Report.body")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : The body of the report, which is a `ReportBody` object containing the detailed report information.
-- {{domxref("Report.type")}} {{experimental_inline}} {{readonlyinline}}
+- {{domxref("Report.type")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : The type of report generated, e.g. `deprecation` or `intervention`.
-- {{domxref("Report.url")}} {{experimental_inline}} {{readonlyinline}}
+- {{domxref("Report.url")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : The URL of the document that generated the report.
 
 ## Methods
@@ -97,7 +97,7 @@ The `reports` parameter contains an array of all the reports in the observer's r
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}
 
 ## See also
 

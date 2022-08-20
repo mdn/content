@@ -28,7 +28,7 @@ onsync = (event) => { };
 
 ## Event type
 
-An {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SyncEvent")}}
 
@@ -36,9 +36,9 @@ An {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("SyncEvent.tag")}} {{readonlyinline}}
+- {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}}
   - : Returns the developer-defined identifier for this `SyncEvent`.
-- {{domxref("SyncEvent.lastChance")}} {{readonlyinline}}
+- {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}}
   - : Returns `true` if the user agent will not make further synchronization attempts after the current attempt.
 
 ## Examples

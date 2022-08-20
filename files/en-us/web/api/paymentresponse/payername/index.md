@@ -4,13 +4,14 @@ slug: Web/API/PaymentResponse/payerName
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentResponse
   - Property
   - Reference
   - Secure context
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentResponse.payerName
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}

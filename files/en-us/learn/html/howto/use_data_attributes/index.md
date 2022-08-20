@@ -86,4 +86,4 @@ In Firefox 49.0.2 (and perhaps earlier/later versions), the data attributes that
 
 - This article is adapted from [Using data attributes in JavaScript and CSS on hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
 - Custom attributes are also supported in SVG 2; see {{domxref("SVGElement.dataset")}} and {{SVGAttr("data-*")}} for more information.
-- [How to use HTML5 data attributes](https://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)
+- [How to use HTML data attributes](https://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)

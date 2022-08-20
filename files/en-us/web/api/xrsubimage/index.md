@@ -24,7 +24,7 @@ Below is a list of interfaces based on the <code>XRSubImage</code> interface.
 
 ## Properties
 
-- {{domxref("XRSubImage.viewport")}} {{readonlyInline}}
+- {{domxref("XRSubImage.viewport")}} {{ReadOnlyInline}}
   - : The {{domxref("XRViewport")}} used when rendering the sub image.
 
 ## Specifications

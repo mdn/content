@@ -280,8 +280,6 @@ label {
 }
 
 input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 
   border-radius: 50%;

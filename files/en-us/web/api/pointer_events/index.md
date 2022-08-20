@@ -66,7 +66,7 @@ The following sub-sections contain short descriptions of each interface and prop
 
 ### PointerEvent interface
 
-The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} interface and has the following properties. (All of the following properties are {{readonlyInline}}.)
+The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} interface and has the following properties. (All of the following properties are {{ReadOnlyInline}}.)
 
 - {{ domxref('PointerEvent.pointerId','pointerId')}}
   - : A unique identifier for the pointer causing the event.

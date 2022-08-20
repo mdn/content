@@ -4,7 +4,6 @@ slug: Web/API/Visual_Viewport_API
 page-type: web-api-overview
 tags:
   - API
-  - Experimental
   - Layout
   - Overview
   - Reference

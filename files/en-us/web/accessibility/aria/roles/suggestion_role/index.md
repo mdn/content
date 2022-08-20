@@ -12,7 +12,7 @@ The `suggestion` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniq
 
 ## Examples
 
-When you've got a content change that involves an insertion _and_ a deletion, there is no way for a screenreader user to work out if the two are related or not. This is the job of `role="suggestion"`, which should be set on an element wrapping both of them like so:
+When you've got a content change that involves an insertion _and_ a deletion, there is no way for a screen reader user to work out if the two are related or not. This is the job of `role="suggestion"`, which should be set on an element wrapping both of them like so:
 
 ```html
 <p>Freida's pet is a

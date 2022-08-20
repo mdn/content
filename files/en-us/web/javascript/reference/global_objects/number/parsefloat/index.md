@@ -42,7 +42,7 @@ This method has the same functionality as the global {{jsxref("parseFloat", "par
 Number.parseFloat === parseFloat; // true
 ```
 
-This method is also part of ECMAScript 2015. (Its purpose is modularization of globals.)
+Its purpose is modularization of globals.
 
 See {{jsxref("parseFloat", "parseFloat()")}} for more detail and examples.
 

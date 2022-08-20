@@ -269,7 +269,6 @@ const clearBtn = document.querySelector('#clear');
 
 calculateBtn.addEventListener('click', calculate);
 clearBtn.addEventListener('click', () => results.textContent = '');
-
 ```
 
 This gives us the following output:
@@ -405,7 +404,7 @@ btn.addEventListener('click', () => {
   for (const contact of contacts) {
     const splitContact = contact.split(':');
     if (splitContact[0].toLowerCase() === searchName) {
-      para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+      para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
       break;
     }
   }
