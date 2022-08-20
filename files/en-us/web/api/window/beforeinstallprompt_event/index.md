@@ -27,7 +27,7 @@ onbeforeinstallprompt = (event) => { };
 
 ## Event type
 
-An {{domxref("BeforeInstallPromptEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("BeforeInstallPromptEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("BeforeInstallPromptEvent")}}
 

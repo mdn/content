@@ -29,7 +29,7 @@ ondeviceorientation = (event) => { };
 
 ## Event type
 
-An {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DeviceOrientationEvent")}}
 

@@ -31,7 +31,7 @@ onvrdisplayactivate = (event) => { };
 
 ## Event type
 
-An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("VRDisplayEvent")}}
 
