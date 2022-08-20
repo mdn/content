@@ -29,7 +29,7 @@ event's `state` property contains a copy of the history entry's state object.
 
 _This interface also inherits the properties of its parent, {{domxref("Event")}}._
 
-- {{domxref("PopStateEvent.state")}} {{readonlyInline}}
+- {{domxref("PopStateEvent.state")}} {{ReadOnlyInline}}
   - : Returns a copy of the information that was provided to `pushState()` or `replaceState()`.
 
 ## Methods

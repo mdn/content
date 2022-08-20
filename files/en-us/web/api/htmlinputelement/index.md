@@ -39,10 +39,10 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.inputmode", "inputmode")}}
   - : Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents.
 
-- {{domxref("HTMLInputElement.labels", "labels")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.labels", "labels")}} {{ReadOnlyInline}}
   - : {{domxref("NodeList")}} array: **Returns** a list of {{ HTMLElement("label") }} elements that are labels for this element.
 
-- {{domxref("HTMLInputElement.list", "list")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.list", "list")}} {{ReadOnlyInline}}
   - : {{domxref("HTMLElement")}}: **Returns** the element pointed to by the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute. The property may be `null` if no HTML element is found in the same tree.
 
 - {{domxref("HTMLInputElement.multiple", "multiple")}}
@@ -71,7 +71,7 @@ Some properties only apply to input element types that support the corresponding
 
 ### Properties related to the parent form
 
-- {{domxref("HTMLInputElement.form", "form")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.form", "form")}} {{ReadOnlyInline}}
   - : {{domxref("HTMLFormElement")}}: **Returns** a reference to the parent {{HtmlElement("form")}} element.
 
 - {{domxref("HTMLInputElement.formAction", "formAction")}}
@@ -100,13 +100,13 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.required", "required")}}
   - : `boolean`: **Returns / Sets** the element's [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, indicating that the user must fill in a value before submitting a form.
 
-- {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
   - : `string`: **Returns** a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ([`willValidate`](/en-US/docs/Web/API/HTMLObjectElement/willValidate) is `false`), or it satisfies its constraints. This value can be set by the {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} method.
 
-- {{domxref("HTMLInputElement.validity", "validity")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.validity", "validity")}} {{ReadOnlyInline}}
   - : {{domxref("ValidityState")}}: **Returns** the element's current validity state.
 
-- {{domxref("HTMLInputElement.willValidate", "willValidate")}} {{readonlyInline}}
+- {{domxref("HTMLInputElement.willValidate", "willValidate")}} {{ReadOnlyInline}}
   - : `boolean`: **Returns** whether the element is a candidate for constraint validation. It is `false` if any conditions bar it from constraint validation, including: its `type` is one of `hidden`, `reset` or `button`, it has a {{HTMLElement("datalist")}} ancestor or its `disabled` property is `true`.
 
 ### Properties that apply only to elements of type checkbox or radio

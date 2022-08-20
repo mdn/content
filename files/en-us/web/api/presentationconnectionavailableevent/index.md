@@ -27,7 +27,7 @@ A [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlli
 
 ## Properties
 
-- {{domxref("PresentationConnectionAvailableEvent.connection")}} {{readonlyinline}}
+- {{domxref("PresentationConnectionAvailableEvent.connection")}} {{ReadOnlyInline}}
   - : Returns a references to the {{domxref("PresentationConnection")}} object that fired the event.
 
 ## Specifications

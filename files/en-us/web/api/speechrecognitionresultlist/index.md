@@ -18,7 +18,7 @@ The **`SpeechRecognitionResultList`** interface of the [Web Speech API](/en-US/d
 
 ## Properties
 
-- {{domxref("SpeechRecognitionResultList.length")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionResultList.length")}} {{ReadOnlyInline}}
   - : Returns the length of the "array" — the number of {{domxref("SpeechRecognitionResult")}} objects in the list.
 
 ## Methods

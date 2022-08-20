@@ -44,7 +44,7 @@ As this API relies on service workers, functionality provided by this API is onl
 
 The following additions to the {{domxref('Service Worker API')}} are specified in the Background Sync specification to provide an entry point for using Background Sync.
 
-- {{domxref("ServiceWorkerRegistration.sync")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run with network connectivity.
 - {{domxref("ServiceWorkerGlobalScope.sync_event", "onsync")}}
   - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}} event occurs. This happens either immediately if the network is available or as soon as the network becomes available.

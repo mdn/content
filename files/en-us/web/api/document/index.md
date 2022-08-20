@@ -38,9 +38,9 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the {{HTMLElement("body")}} or {{htmlelement("frameset")}} node of the current document.
 - {{DOMxRef("Document.characterSet")}} {{ReadOnlyInline}}
   - : Returns the character set being used by the document.
-- {{domxref("Document.childElementCount")}} {{readonlyInline}}
+- {{domxref("Document.childElementCount")}} {{ReadOnlyInline}}
   - : Returns the number of child elements of the current document.
-- {{domxref("Document.children")}} {{readonlyInline}}
+- {{domxref("Document.children")}} {{ReadOnlyInline}}
   - : Returns the child elements of the current document.
 - {{DOMxRef("Document.compatMode")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Indicates whether the document is rendered in _quirks_ or _strict_ mode.
@@ -56,7 +56,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the document location as a string.
 - {{DOMxRef("Document.embeds")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the embedded {{HTMLElement('embed')}} elements in the document.
-- {{domxref("Document.firstElementChild")}} {{readonlyInline}}
+- {{domxref("Document.firstElementChild")}} {{ReadOnlyInline}}
   - : Returns the first child element of the current document.
 - {{DOMxRef("Document.fonts")}}
   - : Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.
@@ -72,7 +72,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns an {{DOMxRef("HTMLCollection")}} of the images in the document.
 - {{DOMxRef("Document.implementation")}} {{ReadOnlyInline}}
   - : Returns the DOM implementation associated with the current document.
-- {{domxref("Document.lastElementChild")}} {{readonlyInline}}
+- {{domxref("Document.lastElementChild")}} {{ReadOnlyInline}}
   - : Returns the last child element of the current document.
 - {{DOMxRef("Document.links")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the hyperlinks in the document.

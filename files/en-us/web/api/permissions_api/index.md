@@ -43,7 +43,7 @@ Read more about how it works in our article [Using the Permissions API](/en-US/d
 
 ## Interfaces
 
-- {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{readonlyinline}}
+- {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{ReadOnlyInline}}
   - : Provides access to the {{domxref("Permissions")}} object from the main context and worker context respectively.
 - {{domxref("Permissions")}}
   - : Provides the core Permission API functionality, such as methods for querying and revoking permissions.

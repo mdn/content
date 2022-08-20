@@ -15,11 +15,11 @@ The **`DeviceMotionEventAcceleration`** object provides information about the am
 
 ## Properties
 
-- {{domxref("DeviceMotionEventAcceleration.x")}} {{readonlyInline}}
+- {{domxref("DeviceMotionEventAcceleration.x")}} {{ReadOnlyInline}}
   - : The amount of acceleration along the X axis.
-- {{domxref("DeviceMotionEventAcceleration.y")}} {{readonlyInline}}
+- {{domxref("DeviceMotionEventAcceleration.y")}} {{ReadOnlyInline}}
   - : The amount of acceleration along the Y axis.
-- {{domxref("DeviceMotionEventAcceleration.z")}} {{readonlyInline}}
+- {{domxref("DeviceMotionEventAcceleration.z")}} {{ReadOnlyInline}}
   - : The amount of acceleration along the Z axis.
 
 ## Specifications

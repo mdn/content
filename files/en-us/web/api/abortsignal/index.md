@@ -20,9 +20,9 @@ The **`AbortSignal`** interface represents a signal object that allows you to co
 
 _The AbortSignal interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-- {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
+- {{domxref("AbortSignal.aborted")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the request(s) the signal is communicating with is/are aborted (`true`) or not (`false`).
-- {{domxref("AbortSignal.reason")}} {{readonlyInline}}
+- {{domxref("AbortSignal.reason")}} {{ReadOnlyInline}}
   - : A JavaScript value providing the abort reason, once the signal has aborted.
 
 ## Methods

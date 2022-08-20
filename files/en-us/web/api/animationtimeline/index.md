@@ -19,7 +19,7 @@ The `AnimationTimeline` interface of the [Web Animations API](/en-US/docs/Web/AP
 
 ## Properties
 
-- {{domxref("AnimationTimeline.currentTime")}} {{readonlyInline}}
+- {{domxref("AnimationTimeline.currentTime")}} {{ReadOnlyInline}}
   - : Returns the time value in milliseconds for this timeline or `null` if this timeline is inactive.
 
 ## Specifications

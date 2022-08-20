@@ -28,7 +28,7 @@ An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.p
 
 ## Properties
 
-- {{domxref('PeriodicSyncEvent.tag')}} {{readonlyInline}}
+- {{domxref('PeriodicSyncEvent.tag')}} {{ReadOnlyInline}}
   - : Returns the developer-defined identifier for this `PeriodicSyncEvent`. Multiple tags can be used by the web app to run different periodic tasks at different frequencies.
 
 ## Methods
