@@ -11,9 +11,10 @@ tags:
   - Property
   - Reference
   - Window
+  - Non-standard
 browser-compat: api.Window.mozInnerScreenX
 ---
-{{APIRef}}
+{{APIRef}}{{Non-standard_Header}}
 
 ## Summary
 

@@ -20,22 +20,22 @@ The **`SharedWorkerGlobalScope`** object (the {{domxref("SharedWorker")}} global
 
 _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
-- {{domxref("SharedWorkerGlobalScope.name")}} {{readOnlyinline}}
+- {{domxref("SharedWorkerGlobalScope.name")}} {{ReadOnlyInline}}
   - : The name that the {{domxref("SharedWorker")}} was (optionally) given when it was created using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. This is mainly useful for debugging purposes.
-- {{domxref("SharedWorkerGlobalScope.applicationCache")}} {{readOnlyinline}} {{deprecated_inline}}
+- {{domxref("SharedWorkerGlobalScope.applicationCache")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : This property returns the {{domxref("ApplicationCache")}} object for the worker.
 
 ### Properties inherited from WorkerGlobalScope
 
 - {{domxref("WorkerGlobalScope.self")}}
   - : Returns an object reference to the `DedicatedWorkerGlobalScope` object itself.
-- {{domxref("WorkerGlobalScope.console")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.console")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("console")}} object associated with the worker.
-- {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. `WorkerLocation` is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
-- {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. `WorkerNavigator` is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
-- {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
+- {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
 
 ## Methods
@@ -47,7 +47,7 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 
 ### Inherited from WorkerGlobalScope
 
-- {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
+- {{domxref("WorkerGlobalScope.dump()")}} {{Non-standard_Inline}}
   - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
   - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`

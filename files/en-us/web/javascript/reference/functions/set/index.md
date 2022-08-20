@@ -20,8 +20,8 @@ property.
 ## Syntax
 
 ```js
-{ set prop() { /* … */ } }
-{ set [expression]() { /* … */ } }
+{ set prop(val) { /* … */ } }
+{ set [expression](val) { /* … */ } }
 ```
 
 ### Parameters

@@ -17,10 +17,10 @@ This may be a newly requested lock that is received in the callback to {{domxref
 
 ## Properties
 
-- {{domxref('Lock.mode')}} {{readonlyinline}}
+- {{domxref('Lock.mode')}} {{ReadOnlyInline}}
   - : Returns the access mode passed to {{domxref('LockManager.request()')}} when the lock was requested.
     The mode is either `"exclusive"` (the default) or `"shared"`.
-- {{domxref('Lock.name')}} {{readonlyinline}}
+- {{domxref('Lock.name')}} {{ReadOnlyInline}}
   - : Returns the name passed to {{domxref('LockManager.request()')}} when the lock was requested.
 
 ## Examples

@@ -15,7 +15,7 @@ browser-compat: api.DragEvent.dataTransfer
 The **`DragEvent.dataTransfer`** property holds the drag
 operation's data (as a {{domxref("DataTransfer")}} object).
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 

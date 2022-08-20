@@ -26,9 +26,9 @@ The **`MediaKeyMessageEvent`** interface of the [EncryptedMediaExtensions API](/
 
 Inherits properties from its parent, {{domxref("Event")}}.
 
-- {{domxref("MediaKeyMessageEvent.message")}} {{readonlyinline}}
+- {{domxref("MediaKeyMessageEvent.message")}} {{ReadOnlyInline}}
   - : Returns an {{jsxref("ArrayBuffer")}} with a message from the content decryption module. Messages vary by key system.
-- {{domxref("MediaKeyMessageEvent.messageType")}} {{readonlyinline}}
+- {{domxref("MediaKeyMessageEvent.messageType")}} {{ReadOnlyInline}}
   - : Indicates the type of message. May be one of `license-request`, `license-renewal`, `license-release`, or `individualization-request`.
 
 ## Methods

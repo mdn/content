@@ -34,11 +34,11 @@ If a feature policy blocks the use of a feature, it is because your code is inco
 
 _In addition to the properties listed below, `Accelerometer` inherits properties from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 
-- {{domxref('Accelerometer.x')}} {{readonlyinline}} {{Experimental_Inline}}
+- {{domxref('Accelerometer.x')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the acceleration of the device along the device's x axis.
-- {{domxref('Accelerometer.y')}} {{readonlyinline}} {{Experimental_Inline}}
+- {{domxref('Accelerometer.y')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the acceleration of the device along the device's y axis.
-- {{domxref('Accelerometer.z')}} {{readonlyinline}} {{Experimental_Inline}}
+- {{domxref('Accelerometer.z')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the acceleration of the device along the device's z axis.
 
 ## Methods

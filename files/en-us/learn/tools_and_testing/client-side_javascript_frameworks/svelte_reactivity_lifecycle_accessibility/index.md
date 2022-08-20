@@ -285,7 +285,7 @@ We will add one usability detail to our component. We'll disable the buttons whe
 
 ## Working with the DOM: focusing on the details
 
-Now that we have completed all of the app's required functionality, we'll concentrate on some accessibility features that will improve the usability of our app for both keyboard-only and screenreader users.
+Now that we have completed all of the app's required functionality, we'll concentrate on some accessibility features that will improve the usability of our app for both keyboard-only and screen reader users.
 
 In its current state our app has a couple of keyboard accessibility problems involving focus management. Let's have a look at these issues.
 
@@ -715,7 +715,7 @@ There's still one accessibility annoyance left. When the user presses the _Delet
 
 The last feature we will be looking at in this article involves setting the focus on the status heading after a to-do has been deleted.
 
-Why the status heading? In this case, the element that had the focus has been deleted, so there's not a clear candidate to receive focus. We've picked the status heading because it's near the list of to-dos, and it's a way to give a visual feedback about the removal of the task, as well as indicating what's happened to screenreader users.
+Why the status heading? In this case, the element that had the focus has been deleted, so there's not a clear candidate to receive focus. We've picked the status heading because it's near the list of to-dos, and it's a way to give a visual feedback about the removal of the task, as well as indicating what's happened to screen reader users.
 
 First we'll extract the status heading to its own component.
 
@@ -827,7 +827,7 @@ With this in mind, let's go back to our use case. We'll create a function called
     }
     ```
 
-5. Go back to your app. Now if you delete any to-do, the status heading will be focussed. This is useful to highlight the change in numbers of to-dos, both to sighted users and screenreader users.
+5. Go back to your app. Now if you delete any to-do, the status heading will be focussed. This is useful to highlight the change in numbers of to-dos, both to sighted users and screen reader users.
 
 > **Note:** You might be wondering why we need to declare a new variable for component binding. Why can't we just call `TodosStatus.focus()`? You might have multiple `TodosStatus` instances active, so you need a way to reference each particular instance. That's why you have to specify a variable to bind each specific instance to.
 

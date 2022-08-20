@@ -31,7 +31,7 @@ Firefox 14 shipped on July 17, 2012. This article lists key changes that are use
 - The `GeoPositionAddress` interface, an obsolete part of the [Geolocation](/en-US/docs/Web/API/Geolocation_API) API, has been removed.
 - {{domxref("Storage", "localStorage/sessionStorage")}} now correctly return `undefined` instead of `null` for undeclared keys through property access.ff
 - The {{domxref("ImageData")}} object has been implemented ({{bug(550309)}}).
-- Attributes and methods related to child nodes on {{domxref("Attr")}} interface where obsoleted ({{bug(737122)}}).
+- Attributes and methods related to child nodes on {{domxref("Attr")}} interface were obsoleted ({{bug(737122)}}).
 
 ### CSS
 
