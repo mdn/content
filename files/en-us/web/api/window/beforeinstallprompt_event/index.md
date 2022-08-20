@@ -35,9 +35,9 @@ An {{domxref("BeforeInstallPromptEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("BeforeInstallPromptEvent.platforms")}} {{readonlyinline}}
+- {{domxref("BeforeInstallPromptEvent.platforms")}} {{ReadOnlyInline}}
   - : Returns an array of strings containing the platforms on which the event was dispatched. This is provided for user agents that want to present a choice of versions to the user such as, for example, "web" or "play" which would allow the user to choose between a web version or an Android version.
-- {{domxref("BeforeInstallPromptEvent.userChoice")}} {{readonlyinline}}
+- {{domxref("BeforeInstallPromptEvent.userChoice")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves to a string containing either "accepted" or "dismissed".
 
 ## Example

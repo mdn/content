@@ -35,7 +35,7 @@ A {{domxref("PageTransitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("PageTransitionEvent.persisted")}} {{readonlyInline}}
+- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
   - : Indicates if the document is loading from a cache.
 
 ## Event handler aliases

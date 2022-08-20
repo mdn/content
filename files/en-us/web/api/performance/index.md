@@ -26,13 +26,11 @@ An object of this type can be obtained by calling the {{domxref("window.performa
 _The `Performance` interface doesn't inherit any properties._
 
 - {{domxref("Performance.navigation")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-
   - : A legacy {{domxref("PerformanceNavigation")}} object that provides useful context about the operations included in the times listed in `timing`, including whether the page was a load or a refresh, how many redirections occurred, and so forth.
 
     > **Note:** Not available in workers.
 
 - {{domxref("Performance.timing")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-
   - : A legacy {{domxref("PerformanceTiming")}} object containing latency-related performance information.
 
     > **Note:** Not available in workers.

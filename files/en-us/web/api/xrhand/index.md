@@ -20,7 +20,7 @@ The **`XRHand`** interface is pair iterator (an ordered map) with the key being 
 
 ## Properties
 
-- `size` {{readonlyInline}}
+- `size` {{ReadOnlyInline}}
   - : Returns `25`, the size of the pair iterator.
 
 ## Methods

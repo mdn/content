@@ -37,7 +37,7 @@ A {{domxref("PopStateEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("PopStateEvent.state")}} {{readonlyInline}}
+- {{domxref("PopStateEvent.state")}} {{ReadOnlyInline}}
   - : Returns a copy of the information that was provided to `pushState()` or `replaceState()`.
 
 ## Event handler aliases

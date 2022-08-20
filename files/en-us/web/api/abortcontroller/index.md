@@ -22,7 +22,7 @@ You can create a new `AbortController` object using the {{domxref("AbortControll
 
 ## Properties
 
-- {{domxref("AbortController.signal")}} {{readonlyInline}}
+- {{domxref("AbortController.signal")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with, or to abort, a DOM request.
 
 ## Methods

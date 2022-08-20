@@ -24,7 +24,7 @@ This object comes with built-in backpressure and queuing.
 
 ## Properties
 
-- {{domxref("WritableStream.locked")}} {{readonlyinline}}
+- {{domxref("WritableStream.locked")}} {{ReadOnlyInline}}
   - : A boolean indicating whether the `WritableStream` is locked to a writer.
 
 ## Methods

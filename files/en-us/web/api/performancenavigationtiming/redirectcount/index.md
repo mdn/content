@@ -15,7 +15,7 @@ The **`redirectCount`** property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the number of redirects
 since the last non-redirect navigation under the current browsing context.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 

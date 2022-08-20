@@ -22,21 +22,21 @@ This interface is accessible through the {{domxref("Gamepad.pose")}} property.
 
 ## Properties
 
-- {{domxref("GamepadPose.hasOrientation")}} {{readonlyInline}}
+- {{domxref("GamepadPose.hasOrientation")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the gamepad is capable of returning orientation information (`true`) or not (`false`).
-- {{domxref("GamepadPose.hasPosition")}} {{readonlyInline}}
+- {{domxref("GamepadPose.hasPosition")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the gamepad is capable of returning position information (`true`) or not (`false`).
-- {{domxref("GamepadPose.position")}} {{readonlyInline}}
+- {{domxref("GamepadPose.position")}} {{ReadOnlyInline}}
   - : Returns the position of the {{domxref("Gamepad")}} as a 3D vector.
-- {{domxref("GamepadPose.linearVelocity")}} {{readonlyInline}}
+- {{domxref("GamepadPose.linearVelocity")}} {{ReadOnlyInline}}
   - : Returns the linear velocity of the {{domxref("Gamepad")}}, in meters per second.
-- {{domxref("GamepadPose.linearAcceleration")}} {{readonlyInline}}
+- {{domxref("GamepadPose.linearAcceleration")}} {{ReadOnlyInline}}
   - : Returns the linear acceleration of the {{domxref("Gamepad")}}, in meters per second per second.
-- {{domxref("GamepadPose.orientation")}} {{readonlyInline}}
+- {{domxref("GamepadPose.orientation")}} {{ReadOnlyInline}}
   - : Returns the orientation of the {{domxref("Gamepad")}}, as a quarternion value.
-- {{domxref("GamepadPose.angularVelocity")}} {{readonlyInline}}
+- {{domxref("GamepadPose.angularVelocity")}} {{ReadOnlyInline}}
   - : Returns the angular velocity of the {{domxref("Gamepad")}}, in radians per second.
-- {{domxref("GamepadPose.angularAcceleration")}} {{readonlyInline}}
+- {{domxref("GamepadPose.angularAcceleration")}} {{ReadOnlyInline}}
   - : Returns the angular acceleration of the {{domxref("Gamepad")}}, in meters per second per second.
 
 ## Examples

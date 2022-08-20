@@ -52,13 +52,13 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 > **Note:** Though the `AudioParam` objects returned are read-only, the values they represent are not.
 
-- {{domxref("BiquadFilterNode.frequency")}} {{readonlyInline}}
+- {{domxref("BiquadFilterNode.frequency")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a frequency in the current filtering algorithm measured in hertz (Hz).
-- {{domxref("BiquadFilterNode.detune")}} {{readonlyInline}}
+- {{domxref("BiquadFilterNode.detune")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of the frequency in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
-- {{domxref("BiquadFilterNode.Q")}} {{readonlyInline}}
+- {{domxref("BiquadFilterNode.Q")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a [Q factor](https://en.wikipedia.org/wiki/Q_factor), or _quality factor_.
-- {{domxref("BiquadFilterNode.gain")}} {{readonlyInline}}
+- {{domxref("BiquadFilterNode.gain")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](https://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
 - {{domxref("BiquadFilterNode.type")}}
 

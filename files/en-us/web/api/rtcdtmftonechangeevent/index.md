@@ -21,7 +21,7 @@ The **`RTCDTMFToneChangeEvent`** interface represents events sent to indicate th
 
 _In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
 
-- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{readOnlyInline}}
+- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{ReadOnlyInline}}
   - : A string specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
 
 ## Constructors

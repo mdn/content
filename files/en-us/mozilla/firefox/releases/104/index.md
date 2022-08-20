@@ -82,7 +82,6 @@ This article provides information about the changes in Firefox 104 that will aff
 - Improved stability and performance when minimizing or restoring windows on Linux ({{bug(1780212)}}).
 - Added support for `touch` actions ({{bug(1543337)}}).
 
-
 ## Changes for add-on developers
 
 #### Removals
