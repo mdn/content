@@ -31,7 +31,7 @@ onbeforeunload = (event) => { };
 
 ## Event type
 
-A generic {{domxref("Event")}}.
+A {{domxref("BeforeUnloadEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event handler aliases
 
