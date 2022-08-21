@@ -30,7 +30,7 @@ myButton.addEventListener('mousedown', (e) => {
 
 ## Interfaces
 
-- {{DOMxRef("InputDeviceCapabilities")}}
+- {{DOMxRef("InputDeviceCapabilities")}} {{Experimental_Inline}}
   - : Provides logical information about an input device.
 
 ## Specifications

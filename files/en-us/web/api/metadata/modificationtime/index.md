@@ -12,9 +12,10 @@ tags:
   - Reference
   - metadata
   - modificationTime
+  - Experimental
 browser-compat: api.Metadata.modificationTime
 ---
-{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}{{SeeCompatTable}}
 
 The read-only **`modificationTime`**
 property of the {{domxref("Metadata")}} interface is a {{jsxref("Date")}} object which
