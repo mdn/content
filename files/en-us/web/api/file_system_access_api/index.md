@@ -17,6 +17,7 @@ browser-compat:
   - api.FileSystemFileHandle
   - api.FileSystemDirectoryHandle
   - api.FileSystemWritableFileStream
+  - api.Window.showOpenFilePicker
 ---
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
