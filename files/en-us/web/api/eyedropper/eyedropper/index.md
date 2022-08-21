@@ -7,6 +7,7 @@ tags:
   - Constructor
   - Reference
   - EyeDropper
+  - Experimental
 browser-compat: api.EyeDropper.EyeDropper
 ---
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}
