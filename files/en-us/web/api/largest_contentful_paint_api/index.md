@@ -7,9 +7,10 @@ tags:
   - LargestContentfulPaint
   - Overview
   - Reference
+  - Experimental
 browser-compat: api.LargestContentfulPaint
 ---
-{{DefaultAPISidebar("Largest Contentful Paint API")}}
+{{DefaultAPISidebar("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
 The **Largest Contentful Paint (LCP) API** enables monitoring the largest paint element triggered on screen.
 
