@@ -67,6 +67,28 @@ Array.prototype.reverse.call(obj); //same syntax for using apply()
 console.log(obj); // {0: 3, 1: 2, 2: 1, length: 3}
 ```
 
+### The revert() method returns the reference to the same array
+
+The `revert()` method returns reference to the original array, so mutating the returned array will mutate the original array as well.
+
+```js
+const numbers = [3, 2, 4, 1, 5];
+const reversed = numbers.reverse();
+// numbers and reversed are both in reversed order [5, 1, 4, 2, 3]
+reversed[0] = 5;
+console.log(numbers[0]); // 5
+```
+
+In case you want `revert()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, you can do a shallow copy before calling `revert()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+
+```js
+const numbers = [3, 2, 4, 1, 5];
+// [...numbers] creates a shallow copy, so revert() does not mutate the original
+const reverted = [...numbers].revert();
+reverted[0] = 5;
+console.log(numbers[0]); // 3
+```
+
 ## Specifications
 
 {{Specifications}}
