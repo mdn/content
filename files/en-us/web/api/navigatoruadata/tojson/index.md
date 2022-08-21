@@ -11,7 +11,7 @@ tags:
   - Experimental
 browser-compat: api.NavigatorUAData.toJSON
 ---
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("NavigatorUAData")}} interface is a _serializer_ that returns a JSON representation of the _low entropy_ properties of the `NavigatorUAData` object.
 
